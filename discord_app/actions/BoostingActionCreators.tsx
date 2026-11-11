@@ -1,11 +1,11 @@
-// === Module 8542: actions/BoostingActionCreators ===
+// === Module 9172: actions/BoostingActionCreators ===
 
-// Module 8542 (actions/BoostingActionCreators)
+// Module 9172 (actions/BoostingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 8543 */;
-import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 8544 */;
+import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 9173 */;
+import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 9174 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
 
 require = fn;

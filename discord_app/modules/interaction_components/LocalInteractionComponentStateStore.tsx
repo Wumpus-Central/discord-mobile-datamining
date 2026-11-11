@@ -1,9 +1,9 @@
-// === Module 8774: LocalInteractionComponentStateStore ===
+// === Module 12283: LocalInteractionComponentStateStore ===
 
-// Module 8774 (LocalInteractionComponentStateStore)
+// Module 12283 (LocalInteractionComponentStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import LimitedMapDefault from "LimitedMap" /* 8775 */;
+import LimitedMapDefault from "LimitedMap" /* 12284 */;
 
 let closure_0 = new LimitedMapDefault(196606);
 let closure_1 = 0;
@@ -25,7 +25,7 @@ prototype["getInteractionComponentState"] = function getInteractionComponentStat
   value = closure_0.get(customId);
   let tmp = null;
   if (null != value) {
-    value2 = value.get(id);
+    let value2 = value.get(id);
     if (value2 == null) {
       value2 = null;
     }
@@ -121,7 +121,7 @@ const localInteractionComponentStateStore = new LocalInteractionComponentStateSt
         return false;
       } else {
         ({ componentId, messageId } = value);
-        value2 = closure_0.get(messageId);
+        const value2 = closure_0.get(messageId);
         if (null != value2) {
           if (value2.has(componentId)) {
             value2.delete(componentId);

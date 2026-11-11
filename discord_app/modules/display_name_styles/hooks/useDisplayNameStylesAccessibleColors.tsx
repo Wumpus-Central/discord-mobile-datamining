@@ -1,8 +1,8 @@
-// === Module 10902: useDisplayNameStylesAccessibleColors ===
+// === Module 10001: useDisplayNameStylesAccessibleColors ===
 
-// Module 10902 (useDisplayNameStylesAccessibleColors)
+// Module 10001 (useDisplayNameStylesAccessibleColors)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 
 const require = fn;
 const size = fn(2);
@@ -35,7 +35,7 @@ export function useDisplayNameStylesAccessibleColors(displayNameStyles) {
     if (null == displayNameStyles) {
       items = [];
     } else {
-      const colors = tmp.colors;
+      colors = tmp.colors;
       items = colors.map((item) => {
         const obj2 = { foreground: backgroundColor(stateFromStores[6])(item), background: null, ratio: null, saturationFactor: null };
         if (effectId === displayNameStyles(stateFromStores[3]).DisplayNameEffect.TOON) {

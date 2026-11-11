@@ -1,9 +1,9 @@
-// === Module 18603: ChannelsUnreadBar ===
+// === Module 18775: ChannelsUnreadBar ===
 
-// Module 18603 (ChannelsUnreadBar)
+// Module 18775 (ChannelsUnreadBar)
 import nativeDefault from "native" /* 575 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5891 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9918 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8995 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import module_1652 from "module_1652" /* 1652 */;
@@ -11,13 +11,13 @@ import module_1652 from "module_1652" /* 1652 */;
 const require = globalThis.__r;
 
 const require = fn;
-const RedesignChannelListConstants = fn(5884);
+const RedesignChannelListConstants = fn(5997);
 ({ getScaledSearchBarHeight: hasOwnProperty, VIEWABILITY_CONFIG: closure_6 } = RedesignChannelListConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = module_1652.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_11 = createStyles.createStyles((arg0, arg1) => {
   let num = 5;
   if (arg0) {
@@ -28,7 +28,7 @@ let closure_11 = createStyles.createStyles((arg0, arg1) => {
   if (arg0) {
     let RED_400 = tmp3.unsafe_rawColors.RED_400;
   } else {
-    const colors = tmp3.colors;
+    colors = tmp3.colors;
     RED_400 = arg1 ? colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT : colors.BACKGROUND_SURFACE_HIGHEST;
   }
   const obj2 = { unreadBar: null, text: null };
@@ -267,11 +267,11 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   ChannelsUnreadBarTsx1.__initData = tmp25;
   const animatedStyle = require("module_1652").useAnimatedStyle(ChannelsUnreadBarTsx1);
   if (first) {
-    let ArrowSmallUpIcon = tmp7(8739).AtIcon;
+    let ArrowSmallUpIcon = tmp7(8022).AtIcon;
   } else if ("bottom" === position) {
-    ArrowSmallUpIcon = tmp7(13284).ArrowSmallDownIcon;
+    ArrowSmallUpIcon = tmp7(13932).ArrowSmallDownIcon;
   } else {
-    ArrowSmallUpIcon = tmp7(13282).ArrowSmallUpIcon;
+    ArrowSmallUpIcon = tmp7(13930).ArrowSmallUpIcon;
   }
   const tmp4Result = nativeDefault;
   if (first) {

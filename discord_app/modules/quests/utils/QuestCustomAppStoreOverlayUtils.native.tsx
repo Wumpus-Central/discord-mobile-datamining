@@ -1,9 +1,9 @@
-// === Module 17281: QuestCustomAppStoreOverlayUtils ===
+// === Module 17444: QuestCustomAppStoreOverlayUtils ===
 
-// Module 17281 (QuestCustomAppStoreOverlayUtils)
-import apexExperiment from "apexExperiment" /* 9811 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9815 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 14924 */;
+// Module 17444 (QuestCustomAppStoreOverlayUtils)
+import apexExperiment from "apexExperiment" /* 10098 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10102 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 10104 */;
 import size from "module_2" /* 2 */;
 
 function fetchCustomAppStoreOverlayContent(cta) {

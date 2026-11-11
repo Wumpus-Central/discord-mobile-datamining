@@ -1,10 +1,10 @@
-// === Module 12242: handleConjureRoute ===
+// === Module 13034: handleConjureRoute ===
 
-// Module 12242 (handleConjureRoute)
-import ChannelConstants from "ChannelConstants" /* 4998 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5316 */;
-import useChatLayout from "useChatLayout" /* 5319 */;
-import openConjureModalDefault from "openConjureModal" /* 12243 */;
+// Module 13034 (handleConjureRoute)
+import ChannelConstants from "ChannelConstants" /* 5099 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5429 */;
+import useChatLayout from "useChatLayout" /* 5432 */;
+import openConjureModalDefault from "openConjureModal" /* 13035 */;
 import size from "module_2" /* 2 */;
 
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;

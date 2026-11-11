@@ -1,14 +1,14 @@
-// === Module 12872: conjureSettingsAsks ===
+// === Module 13544: conjureSettingsAsks ===
 
-// Module 12872 (conjureSettingsAsks)
-import conjureChatTurns from "conjureChatTurns" /* 10980 */;
-import conjureSettingsRequest from "conjureSettingsRequest" /* 12834 */;
-import conjureSettingsSummary from "conjureSettingsSummary" /* 12873 */;
+// Module 13544 (conjureSettingsAsks)
+import conjureChatTurns from "conjureChatTurns" /* 7258 */;
+import conjureSettingsRequest from "conjureSettingsRequest" /* 13506 */;
+import conjureSettingsSummary from "conjureSettingsSummary" /* 13545 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import ConjureChatStore from "ConjureChatStore" /* 10979 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10998 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import ConjureChatStore from "ConjureChatStore" /* 7257 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 7315 */;
 
 const require = globalThis.__r;
 

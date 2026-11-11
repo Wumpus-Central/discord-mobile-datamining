@@ -1,7 +1,7 @@
-// === Module 13935: useSidekickLeave ===
+// === Module 14412: useSidekickLeave ===
 
-// Module 13935 (useSidekickLeave)
-import CheckpointNavigation from "CheckpointNavigation" /* 6569 */;
+// Module 14412 (useSidekickLeave)
+import CheckpointNavigation from "CheckpointNavigation" /* 6682 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

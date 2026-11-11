@@ -1,6 +1,6 @@
-// === Module 13554: useExplicitMediaActions ===
+// === Module 11161: useExplicitMediaActions ===
 
-// Module 13554 (useExplicitMediaActions)
+// Module 11161 (useExplicitMediaActions)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

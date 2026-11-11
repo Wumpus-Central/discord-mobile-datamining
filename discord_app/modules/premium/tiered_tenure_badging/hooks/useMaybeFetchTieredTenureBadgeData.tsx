@@ -1,14 +1,13 @@
-// === Module 15658: useMaybeFetchTieredTenureBadgeData ===
+// === Module 15216: useMaybeFetchTieredTenureBadgeData ===
 
-// Module 15658 (useMaybeFetchTieredTenureBadgeData)
-import useMountEffectDefault from "useMountEffect" /* 5723 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8835 */;
+// Module 15216 (useMaybeFetchTieredTenureBadgeData)
+import useMountEffectDefault from "useMountEffect" /* 5836 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8417 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PremiumTypes = fn(1387).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useMaybeFetchTieredTenureBadgeData.tsx");
 
@@ -16,7 +15,7 @@ export function useMaybeFetchTieredTenureBadgeData() {
   items = [UserStore];
   _require = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = require("initialize");
-  importDefault = require("useIsPremiumSubscriber").useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  importDefault = require("useCanUseTenureBadge").useCanUseTenureBadge();
   useMountEffectDefault(() => {
     let id;
     if (user != null) {

@@ -1,16 +1,16 @@
-// === Module 20447: useInviteAssignableRoles ===
+// === Module 20642: useInviteAssignableRoles ===
 
-// Module 20447 (useInviteAssignableRoles)
-import PermissionUtilsAll from "PermissionUtils" /* 5079 */;
+// Module 20642 (useInviteAssignableRoles)
+import PermissionUtilsAll from "PermissionUtils" /* 5180 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 5048 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
+import GuildRoleStore from "GuildRoleStore" /* 5149 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isEveryoneRole = fn(5049).isEveryoneRole;
+const isEveryoneRole = fn(5150).isEveryoneRole;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");

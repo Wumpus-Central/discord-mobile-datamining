@@ -1,15 +1,15 @@
-// === Module 12853: ConjureMessageAuthor ===
+// === Module 13525: ConjureMessageAuthor ===
 
-// Module 12853 (ConjureMessageAuthor)
+// Module 13525 (ConjureMessageAuthor)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4028 from "module_4028" /* 4028 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import FastImageDefault from "FastImage" /* 5844 */;
-import Pressables from "Pressables" /* 7046 */;
-import ConjureMessageTime from "ConjureMessageTime" /* 12854 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12855 */;
-import _modDef12858 from "module_12858" /* 12858 */;
+import _modDef4079 from "module_4079" /* 4079 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import FastImageDefault from "FastImage" /* 5957 */;
+import Pressables from "Pressables" /* 7364 */;
+import ConjureMessageTime from "ConjureMessageTime" /* 13526 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 13527 */;
+import _modDef13530 from "module_13530" /* 13530 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,9 +58,9 @@ class ConjureMessageHeader {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, agentAvatar: null };
-let size = { width: fn(12841).MESSAGE_AVATAR_SIZE, height: fn(12841).MESSAGE_AVATAR_SIZE, borderRadius: fn(12841).MESSAGE_AVATAR_SIZE / 2 };
+let size = { width: fn(13513).MESSAGE_AVATAR_SIZE, height: fn(13513).MESSAGE_AVATAR_SIZE, borderRadius: fn(13513).MESSAGE_AVATAR_SIZE / 2 };
 obj2.agentAvatar = size;
 const metroImportDefault = createStyles.createStyles(obj2);
 size = fn(2);
@@ -70,9 +70,9 @@ export { ConjureMessageHeader };
 export function ConjureUserHeader(arg0) {
   let messageAuthorUser;
   ({ userId, at } = arg0);
-  messageAuthorUser = messageAuthorUser(11729).useMessageAuthorUser(userId);
-  let obj = messageAuthorUser(11729);
-  const name = messageAuthorUser(5196).useName(messageAuthorUser);
+  messageAuthorUser = messageAuthorUser(12357).useMessageAuthorUser(userId);
+  let obj = messageAuthorUser(12357);
+  const name = messageAuthorUser(5309).useName(messageAuthorUser);
   [][0] = messageAuthorUser;
   let tmp4 = null;
   if (null != messageAuthorUser) {
@@ -87,7 +87,7 @@ export function ConjureUserHeader(arg0) {
 export function ConjureHeader(arg0) {
   const obj = { name: null, color: "text-brand", at: null };
   const intl = util.intl;
-  obj.name = intl.string(_modDef4028.uk6jhJ);
+  obj.name = intl.string(_modDef4079.uk6jhJ);
   obj.at = arg0.at;
   return hasOwnProperty(ConjureMessageHeader, obj);
 }
@@ -97,7 +97,7 @@ export function ConjureUserAvatar(size) {
     NORMAL = messageAuthorUser(1187).AvatarSizes.NORMAL;
   }
   messageAuthorUser = undefined;
-  messageAuthorUser = messageAuthorUser(11729).useMessageAuthorUser(size.userId);
+  messageAuthorUser = messageAuthorUser(12357).useMessageAuthorUser(size.userId);
   items = [messageAuthorUser];
   const callback = noop.useCallback(() => {
     if (null != messageAuthorUser) {
@@ -109,16 +109,16 @@ export function ConjureUserAvatar(size) {
     const obj2 = { onPress: callback, onLongPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = tmp3(1113).intl;
     obj2.accessibilityLabel = intl.string(tmp3(1113).t.iXAna6);
-    const obj3 = { size: NORMAL, user: messageAuthorUser, guildId: "r" };
+    const obj3 = { size: NORMAL, user: messageAuthorUser, guildId: "Array" };
     obj2.children = closure_5(tmp3(1187).Avatar, obj3);
-    tmp7 = closure_5(tmp3(7046).PressableOpacity, obj2);
+    tmp7 = closure_5(tmp3(7364).PressableOpacity, obj2);
   }
   return tmp7;
 }
 export function ConjureAvatar() {
   const obj = { source: null, style: null };
   const tmp = closure_7();
-  obj.source = _modDef12858;
+  obj.source = _modDef13530;
   obj.style = tmp.agentAvatar;
   return hasOwnProperty(FastImageDefault, obj);
 }

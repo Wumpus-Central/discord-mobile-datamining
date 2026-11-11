@@ -1,16 +1,16 @@
-// === Module 17376: OrbsArcadeGameTile ===
+// === Module 17542: OrbsArcadeGameTile ===
 
-// Module 17376 (OrbsArcadeGameTile)
+// Module 17542 (OrbsArcadeGameTile)
 import nativeDefault from "native" /* 575 */;
-import ColorUtils from "ColorUtils" /* 5139 */;
-import native from "native" /* 5201 */;
-import AssetUtils from "AssetUtils" /* 9791 */;
-import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 17378 */;
-import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 17379 */;
+import ColorUtils from "ColorUtils" /* 5240 */;
+import native from "native" /* 5314 */;
+import AssetUtils from "AssetUtils" /* 10078 */;
+import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 17544 */;
+import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 17545 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17368 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17534 */;
 
 require = fn;
 function OrbsArcadeGameTileContent(game) {
@@ -97,7 +97,7 @@ function OrbsArcadeGameTileContent(game) {
   const items4 = [game, surface];
   const callback1 = obj.useCallback(() => {
     const result = OrbsArcadeAnalytics.trackOrbsArcadeCtaClicked(game, OrbsArcadeAnalytics.OrbsArcadeCta.HOW_TO_PLAY, OrbsArcadeAnalytics.OrbsArcadeCtaLocation.GAME_TILE, surface);
-    const result1 = openOrbsArcadeSheets.openOrbsArcadeHowToPlaySheet(game.id, surface);
+    const result1 = openOrbsArcadeSheets.openOrbsArcadeInfoSheet(game.id, surface);
   }, items4);
   const obj4 = { style: tmp3.card, radius: 12, border: "faint", children: null };
   const obj5 = { ref: containerRef, style: tmp3.hero, onLayout: callback, children: null };
@@ -192,25 +192,25 @@ function OrbsArcadeGameTileContent(game) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const OrbsArcadeNativeConstants = fn(17371);
+const OrbsArcadeNativeConstants = fn(17537);
 ({ ORBS_ARCADE_GAME_TILE_MAX_WIDTH: closure_9, ORBS_ARCADE_GAME_TILE_MIN_HEIGHT: closure_10 } = OrbsArcadeNativeConstants);
 const ThemeTypes = fn(1072).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let result = createStyles.experimental_createToken((theme) => {
   const internal = nativeDefault.internal;
   const semanticColor = internal.resolveSemanticColor(theme.theme, nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
   return ColorUtils.hexOpacityToRgba(semanticColor, 0);
 });
-createStyles = fn(5142);
+createStyles = fn(5243);
 let result1 = createStyles.experimental_createToken((theme) => {
   const internal = nativeDefault.internal;
   return internal.resolveSemanticColor(theme.theme, nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
 });
-createStyles = fn(5142);
+createStyles = fn(5243);
 let closure_14 = createStyles.createStyleProperties({ gradientStart: result, gradientEnd: result1 });
-createStyles = fn(5142);
+createStyles = fn(5243);
 let closure_15 = createStyles.createStyles((aspectRatio) => {
   const obj = { minHeight, width: "100%", maxWidth: null, alignSelf: "center", padding: 0, overflow: "hidden", backgroundColor: null };
   let result = React6;

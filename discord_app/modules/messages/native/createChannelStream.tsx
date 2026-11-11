@@ -1,18 +1,18 @@
-// === Module 13972: createChannelStream ===
+// === Module 14451: createChannelStream ===
 
-// Module 13972 (createChannelStream)
+// Module 14451 (createChannelStream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import UnlinkedGamePlayerPlaceholders from "UnlinkedGamePlayerPlaceholders" /* 8492 */;
-import isNewMessageGroupDefault from "isNewMessageGroup" /* 10247 */;
-import tryInjectMessage from "tryInjectMessage" /* 13973 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 11519 */;
-import EditMessageStore from "EditMessageStore" /* 7903 */;
-import UploadStore from "UploadStore" /* 8467 */;
+import UnlinkedGamePlayerPlaceholders from "UnlinkedGamePlayerPlaceholders" /* 9121 */;
+import isNewMessageGroupDefault from "isNewMessageGroup" /* 14452 */;
+import tryInjectMessage from "tryInjectMessage" /* 14453 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 12288 */;
+import EditMessageStore from "EditMessageStore" /* 8719 */;
+import UploadStore from "UploadStore" /* 8955 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const RowGeneratorConstants = fn(8453);
+const RowGeneratorConstants = fn(9094);
 ({ Changeset: closure_6, LoadingType: metroImportDefault, RowType: closure_8, SeparatorType: closure_9 } = RowGeneratorConstants);
 const MessageFlags = fn(1072).MessageFlags;
 const size = fn(2);
@@ -25,7 +25,7 @@ export default function createChannelStream(roleStyle) {
   const forceRender = roleStyle.forceRender;
   ({ updateMessageIds: closure_11, isResourceChannel: closure_12, unloadableContentEntryMessageIds: closure_13 } = roleStyle);
   let items1;
-  let length;
+  length = undefined;
   function unreadFilter(id) {
     if (require.isForumPost()) {
       let tmp4 = tmp2;

@@ -1,18 +1,18 @@
-// === Module 16126: GameOrganizationInviteActionSheet ===
+// === Module 16288: GameOrganizationInviteActionSheet ===
 
-// Module 16126 (GameOrganizationInviteActionSheet)
+// Module 16288 (GameOrganizationInviteActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2530 from "module_2530" /* 2530 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import Stack_Stack from "Stack/Stack" /* 6161 */;
-import Search_SearchBar from "Search/SearchBar" /* 7285 */;
-import ActionSheet from "ActionSheet" /* 7429 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9214 */;
-import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 16127 */;
-import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 16128 */;
-import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 16129 */;
-import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 16130 */;
+import _modDef2549 from "module_2549" /* 2549 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import Stack_Stack from "Stack/Stack" /* 6274 */;
+import Search_SearchBar from "Search/SearchBar" /* 7759 */;
+import ActionSheet from "ActionSheet" /* 7885 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8408 */;
+import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 16289 */;
+import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 16290 */;
+import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 16291 */;
+import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 16292 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ function Loading() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -41,7 +41,7 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   const tmp4 = useGameOrganizationInviteSuggestionsDefault();
   ({ getSendState, handleInvite } = useLinkedGameOrganizationInviteSenderDefault(guildId.guildId));
   const intl = util.intl;
-  const stringResult = intl.string(_modDef2530.nVMqjA);
+  const stringResult = intl.string(_modDef2549.nVMqjA);
   const obj = { scrollable: true, startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
   const intl2 = util.intl;
   obj.dismissAccessibilityLabel = intl2.string(util.t.cpT0Cq);
@@ -49,17 +49,17 @@ export default function GameOrganizationInviteActionSheet(guildId) {
   const obj3 = { spacing: nativeDefault.space.PX_4, children: null };
   const obj4 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centeredText, children: null };
   const intl3 = util.intl;
-  obj4.children = intl3.formatToPlainString(_modDef2530.EnTIIr, { noun: stringResult });
+  obj4.children = intl3.formatToPlainString(_modDef2549.EnTIIr, { noun: stringResult });
   items = [React4(Text_Text.Heading, obj4), ];
   const obj5 = { variant: "body-sm/medium", color: "text-muted", style: tmp.centeredText, children: null };
   const intl4 = util.intl;
-  obj5.children = intl4.formatToPlainString(_modDef2530.BBk7Qw, { noun: stringResult });
+  obj5.children = intl4.formatToPlainString(_modDef2549.BBk7Qw, { noun: stringResult });
   items[1] = React4(Text_Text.Text, obj5);
   obj3.children = items;
   const items1 = [hasOwnProperty(Stack_Stack.Stack, obj3), ];
   const obj6 = { size: "md", round: true, onChange: search, placeholder: null };
   const intl5 = util.intl;
-  obj6.placeholder = intl5.formatToPlainString(_modDef2530.cRK6SQ, { noun: stringResult });
+  obj6.placeholder = intl5.formatToPlainString(_modDef2549.cRK6SQ, { noun: stringResult });
   items1[1] = React4(Search_SearchBar.SearchBar, obj6);
   obj2.children = items1;
   obj.header = hasOwnProperty(Stack_Stack.Stack, obj2);

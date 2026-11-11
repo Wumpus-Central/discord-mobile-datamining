@@ -1,14 +1,14 @@
-// === Module 15458: SafetyPolicyNoticeEmbed ===
+// === Module 15497: SafetyPolicyNoticeEmbed ===
 
-// Module 15458 (SafetyPolicyNoticeEmbed)
+// Module 15497 (SafetyPolicyNoticeEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 8043 */;
-import _modDef8101 from "module_8101" /* 8101 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8471 */;
-import SafetyWarningAgeUtils from "SafetyWarningAgeUtils" /* 15459 */;
-import SafetyWarningAgeTextExperiment from "SafetyWarningAgeTextExperiment" /* 15460 */;
+import _modDef8096 from "module_8096" /* 8096 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 8140 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8588 */;
+import SafetyWarningAgeUtils from "SafetyWarningAgeUtils" /* 15498 */;
+import SafetyWarningAgeTextExperiment from "SafetyWarningAgeTextExperiment" /* 15499 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -56,7 +56,7 @@ export function createSafetyPolicyNoticeEmbed(message) {
             const obj = { titleText: null, titleIcon: null, subtitleText: null, descriptionText: null, ctaText: null, classificationId: null };
             const intl = util.intl;
             obj.titleText = intl.string(util.t["4CxGXi"]);
-            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8101));
+            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef8096));
             const obj3 = SafetyWarningAgeUtils;
             const daysAgo = SafetyWarningAgeUtils.getDaysAgo(parsed);
             obj.subtitleText = obj3.formatSafetyWarningAge(daysAgo, SafetyWarningAgeTextExperiment.getIsSafetyWarningAgeTextEnabled("safety_warning_system_message"));

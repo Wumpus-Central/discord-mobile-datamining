@@ -1,9 +1,9 @@
-// === Module 9006: WaterwheelsDiscoverExperiment ===
+// === Module 10147: WaterwheelsDiscoverExperiment ===
 
-// Module 9006 (WaterwheelsDiscoverExperiment)
-import ICYMILabFeature from "ICYMILabFeature" /* 9007 */;
+// Module 10147 (WaterwheelsDiscoverExperiment)
+import ICYMILabFeature from "ICYMILabFeature" /* 10148 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import LabFeatureStore from "LabFeatureStore" /* 8639 */;
+import LabFeatureStore from "LabFeatureStore" /* 9280 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -36,10 +36,10 @@ export function getWaterwheelsDiscoverEnabled(fetchDehydrated) {
   }
   return enabled;
 }
-export function useWaterwheelsDiscoverEnabled(guilds_bar) {
-  _require = guilds_bar;
+export function useWaterwheelsDiscoverEnabled(WaterwheelsDiscoverPanel) {
+  _require = WaterwheelsDiscoverPanel;
   items = [ApexExperimentStore, AuthenticationStore, LabFeatureStore, UserStore];
-  const items1 = [guilds_bar];
+  const items1 = [WaterwheelsDiscoverPanel];
   return require("initialize").useStateFromStores(items, () => {
     const currentUser = UserStore.getCurrentUser();
     let flag;

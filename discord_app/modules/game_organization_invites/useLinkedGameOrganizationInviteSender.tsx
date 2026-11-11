@@ -1,16 +1,16 @@
-// === Module 16128: useLinkedGameOrganizationInviteSender ===
+// === Module 16290: useLinkedGameOrganizationInviteSender ===
 
-// Module 16128 (useLinkedGameOrganizationInviteSender)
-import getGameOrganizationInviteSendStateKeyDefault from "getGameOrganizationInviteSendStateKey" /* 11819 */;
-import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 11827 */;
-import showGameOrganizationInviteErrorToastDefault from "showGameOrganizationInviteErrorToast" /* 11830 */;
+// Module 16290 (useLinkedGameOrganizationInviteSender)
+import getGameOrganizationInviteSendStateKeyDefault from "getGameOrganizationInviteSendStateKey" /* 12476 */;
+import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 12480 */;
+import showGameOrganizationInviteErrorToastDefault from "showGameOrganizationInviteErrorToast" /* 12483 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5013 */;
+import GuildStore from "GuildStore" /* 5114 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(9285).useInstantInviteSendStates;
+let closure_4 = fn(12475).useInstantInviteSendStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/useLinkedGameOrganizationInviteSender.tsx");
 
@@ -30,7 +30,7 @@ export default function useLinkedGameOrganizationInviteSender(arg0) {
   });
   let tmp3 = null;
   if (null != stateFromStores) {
-    tmp3 = stateFromStores(11819)(stateFromStores);
+    tmp3 = stateFromStores(12476)(stateFromStores);
   }
   dependencyMap = tmp3;
   let tmp5 = closure_4((arg0) => {

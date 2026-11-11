@@ -1,17 +1,18 @@
-// === Module 11711: useDrawerWidth ===
+// === Module 12334: useDrawerWidth ===
 
-// Module 11711 (useDrawerWidth)
-import useChatLayoutDefault from "useChatLayout" /* 5319 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5321 */;
-import useFoldSeamDefault from "useFoldSeam" /* 11712 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5173 */;
+// Module 12334 (useDrawerWidth)
+import useChatLayoutDefault from "useChatLayout" /* 5432 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5434 */;
+import useFoldSeamDefault from "useFoldSeam" /* 12335 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
 
 const require = fn;
 const Constants = fn(1072);
 const DM_WIDTH = Constants.DM_WIDTH;
-const MOBILE_GUILD_UPSELL_LIST = Constants.MOBILE_GUILD_UPSELL_LIST;
+({ MOBILE_GUILD_UPSELL_LIST: hasOwnProperty, WATERWHEELS: closure_6 } = Constants);
 const sum = 260 + DM_WIDTH;
-let closure_7 = 300 + DM_WIDTH;
+const metroImportDefault = sum;
+let closure_8 = 300 + DM_WIDTH;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/screen/native/drawer/useDrawerWidth.tsx");
 
@@ -24,11 +25,18 @@ export function useDrawerWidth(arg0) {
   const whileSliding = obj.whileSliding;
   const width = useBaseAppContainerDimensionsDefault().width;
   ({ isChatLockedOpen, isChatBesideChannelList } = useChatLayoutDefault());
-  const tmp2 = useFoldSeamDefault();
+  let tmp2 = useFoldSeamDefault();
   const tmp = useChatLayoutDefault();
   items = [SelectedGuildStore];
   if (isChatBesideChannelList) {
-    if (!obj2.useStateFromStores(items, () => guildId.getGuildId() === MOBILE_GUILD_UPSELL_LIST)) {
+    if (!obj2.useStateFromStores(items, () => {
+      guildId = guildId.getGuildId();
+      let tmp2 = guildId === closure_1_5;
+      if (!tmp2) {
+        tmp2 = guildId === closure_1_6;
+      }
+      return tmp2;
+    })) {
       let seam;
       if (tmp2 != null) {
         seam = tmp2.seam;
@@ -67,7 +75,7 @@ export function useDrawerWidth(arg0) {
                 let bound1 = sum;
               } else {
                 const _Math2 = Math;
-                bound1 = Math.min(closure_7, width - 32);
+                bound1 = Math.min(closure_8, width - 32);
               }
             }
           }
@@ -77,7 +85,7 @@ export function useDrawerWidth(arg0) {
         let bound2 = sum;
       } else {
         const _Math = Math;
-        bound2 = Math.min(closure_7, width - 32);
+        bound2 = Math.min(closure_8, width - 32);
       }
     }
   }

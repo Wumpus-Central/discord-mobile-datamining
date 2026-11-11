@@ -57,7 +57,7 @@ const items = [
       obj = {};
     }
     const Storage2 = Storage4.Storage;
-    value2 = Storage2.get("UserSettingsStore");
+    let value2 = Storage2.get("UserSettingsStore");
     if (value2 == null) {
       value2 = {};
     }

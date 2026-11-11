@@ -1,15 +1,15 @@
-// === Module 17146: FamilyCenterTopUsersBottomSheet ===
+// === Module 17309: FamilyCenterTopUsersBottomSheet ===
 
-// Module 17146 (FamilyCenterTopUsersBottomSheet)
+// Module 17309 (FamilyCenterTopUsersBottomSheet)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import _modDef2664 from "module_2664" /* 2664 */;
-import UserUtilsDefault from "UserUtils" /* 5196 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import TableRow from "TableRow" /* 7041 */;
-import TableRowGroup from "TableRowGroup" /* 7129 */;
-import ActionSheet from "ActionSheet" /* 7429 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8447 */;
+import _modDef2685 from "module_2685" /* 2685 */;
+import UserUtilsDefault from "UserUtils" /* 5309 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import TableRow from "TableRow" /* 7379 */;
+import TableRowGroup from "TableRowGroup" /* 7680 */;
+import ActionSheet from "ActionSheet" /* 7885 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 9553 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -24,14 +24,14 @@ function UserRow(userActivity) {
     const obj2 = { label: null, subLabel: null, icon: null };
     obj2.label = UserUtilsDefault.getName(user);
     obj2.subLabel = topUserOrGuildDescription;
-    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
     obj2.icon = React4(native.Avatar, obj4);
     return React4(TableRow.TableRow, obj2);
   }
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");
@@ -41,7 +41,7 @@ export default function FamilyCenterTopUsersBottomSheet(topUserActivities) {
   const obj = { children: null };
   const obj2 = { variant: "body-md/semibold", style: closure_6().header, children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2664.BxbvS7);
+  obj2.children = intl.string(_modDef2685.BxbvS7);
   items = [React4(Text_Text.Text, obj2), ];
   const tmp = closure_6();
   items[1] = React4(TableRowGroup.TableRowGroup, { hasIcons: true, children: topUserActivities.map((userActivity) => closure_1_4(UserRow, { userActivity }, userActivity.user_id)) });

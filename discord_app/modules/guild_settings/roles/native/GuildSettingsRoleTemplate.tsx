@@ -1,34 +1,34 @@
-// === Module 20214: GuildSettingsRoleTemplate ===
+// === Module 20409: GuildSettingsRoleTemplate ===
 
-// Module 20214 (GuildSettingsRoleTemplate)
+// Module 20409 (GuildSettingsRoleTemplate)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5891 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7186 */;
-import _modDef8932 from "module_8932" /* 8932 */;
-import PaginationDefault from "Pagination" /* 10757 */;
-import _modDef11759 from "module_11759" /* 11759 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7705 */;
+import PaginationDefault from "Pagination" /* 11629 */;
+import _modDef12392 from "module_12392" /* 12392 */;
+import _modDef12917 from "module_12917" /* 12917 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
-import GuildStore from "GuildStore" /* 5013 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import GuildStore from "GuildStore" /* 5114 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: closure_6 } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(20210);
+const GuildSettingsRoleConstants = fn(20405);
 ({ PermissionTemplateTypes: closure_9, PermissionTemplates: closure_10, DEFAULT_TEMPLATE_TYPE: closure_11 } = GuildSettingsRoleConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, carousel: { flex: 1 }, cardWrapper: { width: 300, alignSelf: "center", paddingHorizontal: 10, flex: 1 }, card: null, templateTitle: null, templateSubtitle: null, templateContentWrapper: null, templateContent: null, templateContentText: null, templateButton: null, sliderContainer: null, slider: null, sliderLabels: null, sliderLabel: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 obj2.card = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm, borderStyle: "solid", borderWidth: 1, flex: 1, flexDirection: "column", marginVertical: 16, padding: 16, paddingTop: 20 };
@@ -141,7 +141,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
   const values = Object.values(closure_10);
   let obj3 = { ref, style: tmp.container, children: null };
   let obj4 = { style: tmp.sliderContainer, children: null };
-  let obj5 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(_modDef8932, { maximumValue: values.length - 1, minimumTrackTintColor: values[value].color, minimumValue: constants.COSMETIC, onSlidingComplete: updateLevel, style: tmp.slider, thumbTintColor: values[value].color, value, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" }) };
+  let obj5 = { accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(_modDef12917, { maximumValue: values.length - 1, minimumTrackTintColor: values[value].color, minimumValue: constants.COSMETIC, onSlidingComplete: updateLevel, style: tmp.slider, thumbTintColor: values[value].color, value, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" }) };
   const items4 = [closure_14(ref1, obj5), ];
   let obj2 = require("useIsScreenReaderEnabled");
   let obj6 = { maximumValue: values.length - 1, minimumTrackTintColor: values[value].color, minimumValue: constants.COSMETIC, onSlidingComplete: updateLevel, style: tmp.slider, thumbTintColor: values[value].color, value, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no" };
@@ -206,9 +206,9 @@ export default function GuildSettingsRoleTemplate(arg0) {
         const obj4 = { style: _undefined3.templateSubtitle, variant: "body-sm/medium", children: item.description() };
         obj8.children = item.contents().map((children, index) => {
           const obj = { style: c3.templateContent, children: null };
-          items = [gesture(native.Icon, { source: _modDef11759, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), gesture(Text_Text.Text, { style: c3.templateContentText, variant: "body-sm/medium", children })];
+          items = [gesture(native.Icon, { source: _modDef12392, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), gesture(Text_Text.Text, { style: c3.templateContentText, variant: "body-sm/medium", children })];
           obj.children = items;
-          return closure_3_15(hasOwnProperty, obj, "" + item.key + "_content_" + index);
+          return colors(hasOwnProperty, obj, "" + item.key + "_content_" + index);
         });
         items1[1] = closure_1_14(ref1, obj8);
         obj5.children = items1;

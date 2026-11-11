@@ -8,7 +8,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/debug/LogAggregator.tsx");
 
 export function report(category) {
-  let length;
   const tmp = (function stringifyMessage(arg0) {
     let str = "";
     const iter = arg0[Symbol.iterator]();

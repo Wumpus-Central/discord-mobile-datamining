@@ -1,14 +1,14 @@
-// === Module 12301: ConjureSettingsSheet ===
+// === Module 13101: ConjureSettingsSheet ===
 
-// Module 12301 (ConjureSettingsSheet)
+// Module 13101 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 575 */;
-import _modDef4028 from "module_4028" /* 4028 */;
+import _modDef4079 from "module_4079" /* 4079 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10978 */;
-import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10994 */;
-import ConjureProjectStore_mod from "ConjureProjectStore" /* 6902 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 7301 */;
+import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 7311 */;
+import ConjureProjectStore_mod from "ConjureProjectStore" /* 6954 */;
 
 const require = fn;
 function SettingsTabStrip(tabs) {
@@ -61,13 +61,13 @@ function SettingsTabStrip(tabs) {
   return closure_12(View, obj3);
 }
 const View = fn(17).View;
-let ConjureProjectStore = fn(6902);
+let ConjureProjectStore = fn(6954);
 ({ canPublishProject: closure_9, isProjectOwner: closure_10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let obj = { project: _modDef4028.W0eQfN, app: _modDef4028.lFaJYF, secrets: _modDef4028.vDpCPU, model: _modDef4028.Rs3qc9, linked: _modDef4028.fBEHdq, experimental: _modDef4028["0Pe9uw"] };
-const createStyles = fn(5142);
+let obj = { project: _modDef4079.W0eQfN, app: _modDef4079.lFaJYF, secrets: _modDef4079.vDpCPU, model: _modDef4079.Rs3qc9, linked: _modDef4079.fBEHdq, experimental: _modDef4079["0Pe9uw"] };
+const createStyles = fn(5243);
 let obj3 = { container: { gap: nativeDefault.space.PX_16 } };
 let closure_15 = createStyles.createStyles(obj3);
 const size = fn(2);

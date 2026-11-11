@@ -1,15 +1,15 @@
-// === Module 14930: AppStoreOverlayStatsCarousel ===
+// === Module 10110: AppStoreOverlayStatsCarousel ===
 
-// Module 14930 (AppStoreOverlayStatsCarousel)
+// Module 10110 (AppStoreOverlayStatsCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5422 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import AnalyticsActions from "AnalyticsActions" /* 7943 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7952 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 14931 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 14932 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import AnalyticsActions from "AnalyticsActions" /* 8759 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8768 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 10111 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 10112 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -118,7 +118,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = 130 + nativeDefault.space.PX_16;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, statCard: null, statCardExpanded: null, expandedCarouselContent: null, secondaryRow: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.carouselContent = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16 };
@@ -135,7 +135,7 @@ let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/A
 
 export default function AppStoreOverlayStatsCarousel(arg0) {
   ({ stats, onRatingPress: require, onCarouselScroll } = arg0);
-  let length;
+  length = undefined;
   let map = closure_11();
   const nativeGesture = LegacyBaseButton.useNativeGesture({ disallowInterruption: true });
   dependencyMap = length.useRef(0);

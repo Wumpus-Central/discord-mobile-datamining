@@ -1,16 +1,16 @@
-// === Module 7846: ReferencedMessageStore ===
+// === Module 8677: ReferencedMessageStore ===
 
-// Module 7846 (ReferencedMessageStore)
+// Module 8677 (ReferencedMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1453 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
-import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7851 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6311 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 8682 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7847 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7850 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import MessageStore from "MessageStore" /* 6196 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 8678 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 8681 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import MessageStore from "MessageStore" /* 6309 */;
 
 require = fn;
 function processMessage(message) {
@@ -177,7 +177,7 @@ prototype2["has"] = function has(arg0, arg1) {
 prototype2["get"] = function get(arg0, arg1) {
   const _channelCaches = this._channelCaches;
   value = _channelCaches.get(arg0);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(arg1);
   }

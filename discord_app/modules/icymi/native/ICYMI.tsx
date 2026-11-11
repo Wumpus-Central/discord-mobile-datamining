@@ -1,51 +1,51 @@
-// === Module 18905: ICYMI ===
+// === Module 19095: ICYMI ===
 
-// Module 18905 (ICYMI)
+// Module 19095 (ICYMI)
 import nativeDefault from "native" /* 575 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5310 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5312 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5861 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7186 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7358 */;
-import IconButton from "IconButton" /* 8102 */;
-import ICYMITypes from "ICYMITypes" /* 8999 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9004 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10864 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 13034 */;
-import NativeICYMIUtils from "NativeICYMIUtils" /* 18920 */;
-import ICYMIStoreUtils from "ICYMIStoreUtils" /* 18938 */;
-import AnnouncementMessageRowDefault from "AnnouncementMessageRow" /* 18947 */;
-import ICYMIMessageRowDefault from "ICYMIMessageRow" /* 18953 */;
-import ContentInventoryEntryRowDefault from "ContentInventoryEntryRow" /* 18958 */;
-import ICYMILoading from "ICYMILoading" /* 18969 */;
-import ICYMIBottomLoading from "ICYMIBottomLoading" /* 18970 */;
-import CaughtUpRowDefault from "CaughtUpRow" /* 18971 */;
-import ICYMIGuildEventRowDefault from "ICYMIGuildEventRow" /* 18972 */;
-import ICYMIServerRecommendationRow from "ICYMIServerRecommendationRow" /* 18973 */;
-import ICYMIWaterwheelsRowDefault from "ICYMIWaterwheelsRow" /* 18974 */;
-import ICYMIHeaderDefault from "ICYMIHeader" /* 18976 */;
-import ICYMIForumThreadRow from "ICYMIForumThreadRow" /* 18977 */;
-import CardHeightMeasurer from "CardHeightMeasurer" /* 18978 */;
-import AppFreezerDefault from "AppFreezer" /* 18980 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5423 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5425 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5974 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7351 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7705 */;
+import IconButton from "IconButton" /* 7922 */;
+import ICYMITypes from "ICYMITypes" /* 10142 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10150 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10204 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 13700 */;
+import NativeICYMIUtils from "NativeICYMIUtils" /* 19110 */;
+import ICYMIStoreUtils from "ICYMIStoreUtils" /* 19128 */;
+import AnnouncementMessageRowDefault from "AnnouncementMessageRow" /* 19134 */;
+import ICYMIMessageRowDefault from "ICYMIMessageRow" /* 19140 */;
+import ContentInventoryEntryRowDefault from "ContentInventoryEntryRow" /* 19145 */;
+import ICYMILoading from "ICYMILoading" /* 19156 */;
+import ICYMIBottomLoading from "ICYMIBottomLoading" /* 19157 */;
+import CaughtUpRowDefault from "CaughtUpRow" /* 19158 */;
+import ICYMIGuildEventRowDefault from "ICYMIGuildEventRow" /* 19159 */;
+import ICYMIServerRecommendationRow from "ICYMIServerRecommendationRow" /* 19160 */;
+import ICYMIWaterwheelsRowDefault from "ICYMIWaterwheelsRow" /* 19161 */;
+import ICYMIHeaderDefault from "ICYMIHeader" /* 19162 */;
+import ICYMIForumThreadRow from "ICYMIForumThreadRow" /* 19163 */;
+import CardHeightMeasurer from "CardHeightMeasurer" /* 19164 */;
+import AppFreezerDefault from "AppFreezer" /* 19166 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 5013 */;
-import ICYMIFiltersStore from "ICYMIFiltersStore" /* 8998 */;
-import ICYMIStore from "ICYMIStore" /* 8986 */;
+import GuildStore from "GuildStore" /* 5114 */;
+import ICYMIFiltersStore from "ICYMIFiltersStore" /* 10141 */;
+import ICYMIStore from "ICYMIStore" /* 10137 */;
 
 const require = globalThis.__r;
 
 const util = LeftBackIconWithBadge(1113);
-const Pressables = LeftBackIconWithBadge(7046);
-const XSmallIcon = LeftBackIconWithBadge(7123);
-const BackIconWithBadge = LeftBackIconWithBadge(16918);
-const notifications_Notifications = LeftBackIconWithBadge(18856);
+const Pressables = LeftBackIconWithBadge(7364);
+const XSmallIcon = LeftBackIconWithBadge(7483);
+const BackIconWithBadge = LeftBackIconWithBadge(17081);
+const notifications_Notifications = LeftBackIconWithBadge(19046);
 require = fn;
 function SettingsButton() {
   return gesture(IconButton.IconButton, {
@@ -155,7 +155,7 @@ function ICYMI(inNestedNavigator) {
       hasOpenedEnoughTimesResult = ICYMIStore.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18930, dependencyMap.paths), "ICYMIFeedbackSheet", {});
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19120, dependencyMap.paths), "ICYMIFeedbackSheet", {});
     }
   }, items6);
   const ref = handleOnRefresh.useRef(null);
@@ -199,7 +199,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       let obj = {
         scrollToTop() {
-            isFocused(11291).showForLaterModal(isFocused(10317).SavedMessageSortTypes.BOOKMARK);
+            isFocused(11844).showForLaterModal(isFocused(11845).SavedMessageSortTypes.BOOKMARK);
           }
       };
       ref1.current = obj;
@@ -336,16 +336,16 @@ function keyExtractor(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, RefreshControl: closure_6 } = get_ActivityIndicator);
-let closure_12 = fn(18906).NUM_GUILDS_EXTENDED_ONBOARDING;
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
+let closure_12 = fn(19096).NUM_GUILDS_EXTENDED_ONBOARDING;
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_17 = createStyles.createStyles((paddingTop) => {
   const obj = { containerOuterTablet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, overflow: "hidden", flex: 1, paddingTop } };
   return obj;
 });
-const createICYMIStyles = fn(18907);
+const createICYMIStyles = fn(19097);
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, flexShrink: 1, flexGrow: 1 }, containerInPanels: { flex: 1, flexShrink: 1, flexGrow: 1, overflow: "hidden", borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm }, containerBackground: null, flashListWrapper: null, refreshing: null, header: null, headerLeft: null, headerClose: null, headerTitle: null, headerText: null, headerActions: null, notificationBadge: null, loading: null, headerBorder: null };
   const obj2 = { flex: 1, flexShrink: 1, flexGrow: 1, overflow: "hidden", borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
@@ -389,17 +389,17 @@ let closure_22 = noop.memo(function Header(inNestedNavigator) {
     if (!inNestedNavigator) {
       const items1 = [null, gesture(ICYMIHeaderTextWrapper, {})];
       obj6.children = items1;
-      const items2 = [value2(hasOwnProperty, obj6), ];
+      const items2 = [closure_1_16(hasOwnProperty, obj6), ];
       const obj7 = { style: tmp.headerActions, children: null };
       const items3 = [gesture(InfoButton, {}), gesture(SettingsButton, {})];
       obj7.children = items3;
-      items2[1] = value2(hasOwnProperty, obj7);
+      items2[1] = closure_1_16(hasOwnProperty, obj7);
       obj5.children = items2;
-      items[1] = value2(hasOwnProperty, obj5);
+      items[1] = closure_1_16(hasOwnProperty, obj5);
       const obj8 = { style: tmp.headerBorder };
       items[2] = gesture(hasOwnProperty, obj8);
       obj2.children = items;
-      return value2(common_SafeAreaView.SafeAreaPaddingView, obj2);
+      return closure_1_16(common_SafeAreaView.SafeAreaPaddingView, obj2);
     }
   }
   const obj9 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };

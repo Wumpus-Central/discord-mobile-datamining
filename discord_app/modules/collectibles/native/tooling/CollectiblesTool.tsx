@@ -1,18 +1,18 @@
-// === Module 18080: CollectiblesTool ===
+// === Module 18251: CollectiblesTool ===
 
-// Module 18080 (CollectiblesTool)
+// Module 18251 (CollectiblesTool)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import BaseTextButton from "BaseTextButton" /* 5761 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9546 */;
-import actions_GiftCodeActionCreators from "actions/GiftCodeActionCreators" /* 11523 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 14757 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import BaseTextButton from "BaseTextButton" /* 5874 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 9954 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 10349 */;
+import actions_GiftCodeActionCreators from "actions/GiftCodeActionCreators" /* 12292 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10691 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 11604 */;
 import UserStore from "UserStore" /* 1385 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7799 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7814 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8419 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8434 */;
 
 const require = globalThis.__r;
 
@@ -98,7 +98,7 @@ function FramePreviewOverrideSection() {
     }
     items[4] = tmp13Result;
     obj.children = items;
-    return closure_1_15(timestampProducer, obj);
+    return colors(timestampProducer, obj);
   } else if (tmp5) {
     if (str == null) {
       str = "Failed to load";
@@ -119,12 +119,12 @@ function FramePreviewOverrideSection() {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_11 = fn(8853).useFramePreviewOverrideStore;
+let closure_11 = fn(8497).useFramePreviewOverrideStore;
 const application_id = fn(1072).COLLECTIBLES_APPLICATION_ID;
 const PremiumGiftStyles = fn(1387).PremiumGiftStyles;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollContainer: null, contentContainer: null, section: null, sectionHeader: null, sectionTitle: null, inputContainer: null, inputWrapper: null, inputLabel: null, statusText: null, statusSuccess: null, statusError: null, statusLoading: null, previewContainer: null, previewButton: null, secondaryButton: null, description: null, placeholder: null, placeholderText: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };

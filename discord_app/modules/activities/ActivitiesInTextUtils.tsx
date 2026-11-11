@@ -1,9 +1,9 @@
-// === Module 9046: ActivitiesInTextUtils ===
+// === Module 7798: ActivitiesInTextUtils ===
 
-// Module 9046 (ActivitiesInTextUtils)
+// Module 7798 (ActivitiesInTextUtils)
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
 
 const require = globalThis.__r;
 

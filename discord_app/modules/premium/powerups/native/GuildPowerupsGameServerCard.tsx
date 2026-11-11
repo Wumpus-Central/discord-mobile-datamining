@@ -1,18 +1,18 @@
-// === Module 14417: GuildPowerupsGameServerCard ===
+// === Module 10722: GuildPowerupsGameServerCard ===
 
-// Module 14417 (GuildPowerupsGameServerCard)
+// Module 10722 (GuildPowerupsGameServerCard)
 import nativeDefault from "native" /* 575 */;
-import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 14414 */;
-import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 14418 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 14419 */;
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 10719 */;
+import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 10723 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 10724 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
-import GameServerStore from "GameServerStore" /* 8546 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import GameServerStore from "GameServerStore" /* 9176 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const obj2 = { riveContainer: { flex: 1, paddingVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -39,7 +39,7 @@ export default function GuildPowerupsGameServerCard(guildId) {
       const obj6 = { stateMachine: "SM_Auto", dataBinding: null };
       const obj10 = { reducedMotion: stateFromStores1 };
       obj6.dataBinding = obj10;
-      obj5.children = jsx(tmp2(5287).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
+      obj5.children = jsx(tmp2(5400).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: null });
       obj4.riveComponent = <View style={tmp.riveContainer}>{null}</View>;
       obj4.status = tmp6;
       obj4.onPress = tmp9;

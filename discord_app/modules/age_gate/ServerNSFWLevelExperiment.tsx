@@ -1,6 +1,6 @@
-// === Module 5010: ServerNSFWLevelExperiment ===
+// === Module 5111: ServerNSFWLevelExperiment ===
 
-// Module 5010 (ServerNSFWLevelExperiment)
+// Module 5111 (ServerNSFWLevelExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

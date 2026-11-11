@@ -1,7 +1,7 @@
-// === Module 15380: EditCollectiblesPickerList ===
+// === Module 15420: EditCollectiblesPickerList ===
 
-// Module 15380 (EditCollectiblesPickerList)
-import Text_Text from "Text/Text" /* 5753 */;
+// Module 15420 (EditCollectiblesPickerList)
+import Text_Text from "Text/Text" /* 5866 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,8 +10,8 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
-let obj = { list: { flex: 1 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(15375).GUTTER_SIZE, paddingBottom: 5 } };
+const createStyles = fn(5243);
+let obj = { list: { flex: 1 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: { paddingHorizontal: fn(15415).GUTTER_SIZE, paddingBottom: 5 } };
 let closure_9 = createStyles.createStyles(obj);
 let closure_10 = noop.memo(function DefaultHeader(children) {
   return timestampProducer(hasOwnProperty, { style: closure_9().header, children: timestampProducer(Text_Text.Heading, { variant: "heading-xs/medium", color: "mobile-text-heading-primary", children: children.header }) });
@@ -51,7 +51,7 @@ export function EditCollectiblesPickerList(sections) {
         items.push({ type: "header", key: "header-" + header.section, header: header.header });
         const obj = { type: "header", key: "header-" + header.section, header: header.header };
         const obj2 = items(12);
-        const item = items(12).chunk(header.items, items(15375).ROW_SIZE).forEach((items, index) => {
+        const item = items(12).chunk(header.items, items(15415).ROW_SIZE).forEach((items, index) => {
           items.push({ type: "row", key: "row-" + header.section + "-" + index, items });
         });
       });

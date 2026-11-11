@@ -1,6 +1,6 @@
-// === Module 9161: GuildSettingsStore ===
+// === Module 8339: GuildSettingsStore ===
 
-// Module 9161 (GuildSettingsStore)
+// Module 8339 (GuildSettingsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -8,22 +8,22 @@ import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import ChannelRecord from "ChannelRecord" /* 4995 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5005 */;
-import PlainRecord from "PlainRecord" /* 5006 */;
-import GuildRecord from "GuildRecord" /* 5009 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9162 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9163 */;
-import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 9164 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9165 */;
-import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9166 */;
-import GuildProfileStore from "GuildProfileStore" /* 9132 */;
-import InviteRecord from "InviteRecord" /* 8274 */;
+import ChannelRecord from "ChannelRecord" /* 5096 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5106 */;
+import PlainRecord from "PlainRecord" /* 5107 */;
+import GuildRecord from "GuildRecord" /* 5110 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 8340 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 8342 */;
+import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 8345 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 8346 */;
+import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 8347 */;
+import GuildProfileStore from "GuildProfileStore" /* 8091 */;
+import InviteRecord from "InviteRecord" /* 7598 */;
 import UserRecord from "UserRecord" /* 1404 */;
-import GuildStore from "GuildStore" /* 5013 */;
+import GuildStore from "GuildStore" /* 5114 */;
 import UserStore from "UserStore" /* 1385 */;
 import Constants from "Constants" /* 1072 */;
-import PublicGuildsConstants from "PublicGuildsConstants" /* 8580 */;
+import PublicGuildsConstants from "PublicGuildsConstants" /* 8341 */;
 import size from "module_2" /* 2 */;
 
 function handleFormInit(type) {
@@ -165,7 +165,7 @@ let c47 = null;
 let c48 = 0;
 let NONE = MFALevels.NONE;
 let _location = null;
-let obj = { primaryCategoryId: DEFAULT_DISCOVERY_CATEGORY_ID, secondaryCategoryIds: [], keywords: [], emojiDiscoverabilityEnabled: true, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: false, reasonsToJoin: [], socialLinks: [], about: "" };
+let obj = { primaryCategoryId: DEFAULT_DISCOVERY_CATEGORY_ID, secondaryCategoryIds: [], keywords: [], emojiDiscoverabilityEnabled: true, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: false, automaticPages: false, reasonsToJoin: [], socialLinks: [], about: "" };
 let c52 = false;
 let obj2 = obj;
 let c55 = null;
@@ -880,7 +880,7 @@ obj2 = {
       if (primaryCategoryId == null) {
         primaryCategoryId = DEFAULT_DISCOVERY_CATEGORY_ID;
       }
-      obj = { primaryCategoryId, secondaryCategoryIds: null, keywords: null, emojiDiscoverabilityEnabled: null, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: null, reasonsToJoin: null, socialLinks: null, about: null };
+      obj = { primaryCategoryId, secondaryCategoryIds: null, keywords: null, emojiDiscoverabilityEnabled: null, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: null, automaticPages: null, reasonsToJoin: null, socialLinks: null, about: null };
       let secondaryCategoryIds = metadata.secondaryCategoryIds;
       if (secondaryCategoryIds == null) {
         secondaryCategoryIds = [];
@@ -911,6 +911,11 @@ obj2 = {
         flag3 = false;
       }
       obj.isPublished = flag3;
+      let flag4 = metadata.automaticPages;
+      if (flag4 == null) {
+        flag4 = false;
+      }
+      obj.automaticPages = flag4;
       let reasonsToJoin = metadata.reasonsToJoin;
       if (reasonsToJoin == null) {
         reasonsToJoin = [];

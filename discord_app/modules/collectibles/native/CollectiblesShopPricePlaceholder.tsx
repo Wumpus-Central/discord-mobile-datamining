@@ -1,9 +1,9 @@
-// === Module 9658: CollectiblesShopPricePlaceholder ===
+// === Module 10377: CollectiblesShopPricePlaceholder ===
 
-// Module 9658 (CollectiblesShopPricePlaceholder)
+// Module 10377 (CollectiblesShopPricePlaceholder)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5372 */;
+import timing_timing from "timing/timing" /* 5485 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,8 +11,8 @@ const _modDef1652 = _mod1652;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
-const obj2 = { skeletonContainer: { height: 16, flex: 1, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND } };
+const createStyles = fn(5243);
+const obj2 = { skeletonContainer: { height: 16, flex: 1, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_5 = createStyles.createStyles(obj2);
 let closure_6 = { code: "(function CollectiblesShopPricePlaceholderTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})" };
 const size = fn(2);

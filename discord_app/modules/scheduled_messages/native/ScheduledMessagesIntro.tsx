@@ -1,16 +1,16 @@
-// === Module 14857: ScheduledMessagesIntro ===
+// === Module 15547: ScheduledMessagesIntro ===
 
-// Module 14857 (ScheduledMessagesIntro)
+// Module 15547 (ScheduledMessagesIntro)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import AttachmentIcon from "AttachmentIcon" /* 10663 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10956 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12777 */;
-import ScheduleMessageSpotIllustration from "ScheduleMessageSpotIllustration" /* 14267 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10878 */;
+import AttachmentIcon from "AttachmentIcon" /* 10985 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 13452 */;
+import ScheduleMessageSpotIllustration from "ScheduleMessageSpotIllustration" /* 14750 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5142 */;
+import createStyles from "createStyles" /* 5243 */;
 import size_mod from "module_2" /* 2 */;
 
 function MenuRow(arg0) {

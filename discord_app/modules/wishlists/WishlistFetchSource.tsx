@@ -1,6 +1,6 @@
-// === Module 9567: WishlistFetchSource ===
+// === Module 9403: WishlistFetchSource ===
 
-// Module 9567 (WishlistFetchSource)
+// Module 9403 (WishlistFetchSource)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/wishlists/WishlistFetchSource.tsx");

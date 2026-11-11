@@ -1,9 +1,9 @@
-// === Module 9959: PhoneCallIcon ===
+// === Module 9036: PhoneCallIcon ===
 
-// Module 9959 (PhoneCallIcon)
+// Module 9036 (PhoneCallIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod9960 from "module_9960" /* 9960 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod9037 from "module_9037" /* 9037 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function PhoneCallIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9960, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9037, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

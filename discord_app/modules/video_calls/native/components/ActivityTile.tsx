@@ -1,15 +1,15 @@
-// === Module 11959: ActivityTile ===
+// === Module 12751: ActivityTile ===
 
-// Module 11959 (ActivityTile)
+// Module 12751 (ActivityTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import native2 from "native" /* 5201 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 11965 */;
+import native2 from "native" /* 5314 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 12757 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4990 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -64,7 +64,7 @@ function ActivityTileInner(participant) {
               const obj4 = { applicationId: stateFromStores.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(11869)(obj4), done: false };
+              const obj5 = { value: v1(12621)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -74,8 +74,8 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(11964).setOrientationLockState(closure_128_3);
-          const obj = tmp2(11964);
+          const result = tmp2(12756).setOrientationLockState(closure_128_3);
+          const obj = tmp2(12756);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };
@@ -243,12 +243,12 @@ function ActivityTileInner(participant) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ ThemeTypes: closure_8, Fonts } = Constants);
-let ActivityLayoutMode = fn(11864).ActivityLayoutMode;
+let ActivityLayoutMode = fn(12616).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const XSMALL = fn(1187).AvatarSizes.XSMALL;
 const androidRippleConfig = fn(1191).getThemedRippleConfig({ foreground: true });
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { pressableOpacity: null, activityPreview: null, activityViewContainer: null, titleText: null, subtitleText: null, overflow: null, buttonWrapper: null, buttonPill: null };
 let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center" };
 obj2.pressableOpacity = size;

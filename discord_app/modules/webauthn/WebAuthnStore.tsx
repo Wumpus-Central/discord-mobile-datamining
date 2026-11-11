@@ -1,6 +1,6 @@
-// === Module 16925: WebAuthnStore ===
+// === Module 17088: WebAuthnStore ===
 
-// Module 16925 (WebAuthnStore)
+// Module 17088 (WebAuthnStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Server from "Server" /* 2116 */;

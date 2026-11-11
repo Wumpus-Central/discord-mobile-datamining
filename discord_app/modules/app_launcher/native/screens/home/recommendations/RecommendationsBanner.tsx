@@ -1,12 +1,12 @@
-// === Module 12637: RecommendationsBanner ===
+// === Module 13324: RecommendationsBanner ===
 
-// Module 12637 (RecommendationsBanner)
+// Module 13324 (RecommendationsBanner)
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import FastImageDefault from "FastImage" /* 5844 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8792 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8834 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8899 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12014 */;
+import FastImageDefault from "FastImage" /* 5957 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8416 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8472 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8545 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12808 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1404 */;
 
@@ -15,12 +15,12 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ BANNER_HEIGHT: closure_6, EMPTY_STRING_SNOWFLAKE_ID: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_9 = createStyles.createStyles({ imageContainer: { width: "100%", height: "100%" }, image: { width: "100%", height: "100%" } });
 let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(11655);
-  heroMediaDimensions = heroMediaDimensions(12628).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
+  let obj = heroMediaDimensions(12488);
+  heroMediaDimensions = heroMediaDimensions(13316).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   const tmp4 = useEmbeddedActivityBackgroundDefault({ applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] });
   importDefault = tmp4;
   items = [heroMediaDimensions, tmp4];

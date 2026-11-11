@@ -1,10 +1,10 @@
-// === Module 7485: OrderActionCreators ===
+// === Module 7195: OrderActionCreators ===
 
-// Module 7485 (OrderActionCreators)
+// Module 7195 (OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BillingError_mod from "BillingError" /* 4962 */;
+import BillingError_mod from "BillingError" /* 5063 */;
 
 require = fn;
 let closure_6 = async function _signOrder(arg0) {
@@ -406,7 +406,7 @@ let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0) {
             };
             closure_2 = closure_136_10;
             closure_2 = closure_136_10;
-            const length = closure_136_10[Symbol.iterator]();
+            length = closure_136_10[Symbol.iterator]();
             if (length !== undefined) {
               c9 = 1;
               closure_135_3 = tmp35;

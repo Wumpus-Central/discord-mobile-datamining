@@ -1,11 +1,11 @@
-// === Module 8033: NativePermissionStore ===
+// === Module 8130: NativePermissionStore ===
 
-// Module 8033 (NativePermissionStore)
+// Module 8130 (NativePermissionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import NativePermissionConstants from "NativePermissionConstants" /* 8013 */;
+import NativePermissionConstants from "NativePermissionConstants" /* 6839 */;
 import size from "module_2" /* 2 */;
 
 const NativePermissionStates = NativePermissionConstants.NativePermissionStates;

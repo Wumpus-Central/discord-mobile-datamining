@@ -1,13 +1,13 @@
-// === Module 10733: GiftingPromotionUtils ===
+// === Module 11609: GiftingPromotionUtils ===
 
-// Module 10733 (GiftingPromotionUtils)
-import dismissible_content from "dismissible_content" /* 4975 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5172 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10738 */;
-import MarketingComponentType from "MarketingComponentType" /* 10739 */;
+// Module 11609 (GiftingPromotionUtils)
+import dismissible_content from "dismissible_content" /* 5076 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5285 */;
+import MarketingSurfaceType from "MarketingSurfaceType" /* 9561 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 11611 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 9720 */;
+import PromotionsStore from "PromotionsStore" /* 9557 */;
 
 const require = globalThis.__r;
 
@@ -178,7 +178,7 @@ export function combinePromotionStyles(backgroundImage, background) {
 export function shouldShowGiftPromotionReminderNotice() {
   const GiftPromotionReminderExperiment = GiftPromotionReminderExperiment2.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
-    if (null == PromotionsStore.getMarketingComponentByType(MarketingComponentType.MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
+    if (null == PromotionsStore.getMarketingComponentBySurface(MarketingSurfaceType.MarketingSurfaceType.GIFT_REMINDER_NAGBAR)) {
       return false;
     } else {
       const giftPromotion = PromotionsStore.getGiftPromotion();

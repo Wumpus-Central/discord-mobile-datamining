@@ -374,7 +374,6 @@ export const invert = tmp2 ? (function flagNotBigInt() {
 });
 export const equals = tmp10;
 export function combine() {
-  let length;
   items = [...arguments];
   let first = items[0];
   let num = 1;

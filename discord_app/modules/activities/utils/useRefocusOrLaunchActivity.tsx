@@ -1,13 +1,13 @@
-// === Module 14951: useRefocusOrLaunchActivity ===
+// === Module 15143: useRefocusOrLaunchActivity ===
 
-// Module 14951 (useRefocusOrLaunchActivity)
+// Module 15143 (useRefocusOrLaunchActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6904 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4990 */;
+import FramesStore from "FramesStore" /* 6956 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
 
 const require = fn;
-const FrameLayoutModes = fn(6905).FrameLayoutModes;
+const FrameLayoutModes = fn(6957).FrameLayoutModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
 

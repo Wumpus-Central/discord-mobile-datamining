@@ -1,6 +1,6 @@
-// === Module 19585: SoundboardSoundPreviewMenuExperiment ===
+// === Module 19774: SoundboardSoundPreviewMenuExperiment ===
 
-// Module 19585 (SoundboardSoundPreviewMenuExperiment)
+// Module 19774 (SoundboardSoundPreviewMenuExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

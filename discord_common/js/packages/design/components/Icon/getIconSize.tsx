@@ -1,9 +1,9 @@
-// === Module 14976: getIconSize ===
+// === Module 10459: getIconSize ===
 
-// Module 14976 (getIconSize)
+// Module 10459 (getIconSize)
 import size from "module_2" /* 2 */;
 
-const ICON_SIZE = { xxs: 12, xs: 16, sm: 18, md: 24, lg: 32, custom: "description", refresh_sm: true };
+const ICON_SIZE = { xxs: 12, xs: 16, sm: 18, md: 24, lg: 32, custom: "delete", refresh_sm: true };
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Icon/getIconSize.tsx");
 
 export function getIconSize(arg0) {

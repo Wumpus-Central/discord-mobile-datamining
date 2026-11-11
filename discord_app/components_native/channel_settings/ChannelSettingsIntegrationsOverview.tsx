@@ -1,19 +1,19 @@
-// === Module 19325: ChannelSettingsIntegrationsOverview ===
+// === Module 19516: ChannelSettingsIntegrationsOverview ===
 
-// Module 19325 (ChannelSettingsIntegrationsOverview)
+// Module 19516 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useNavigation from "useNavigation" /* 1499 */;
-import Stack_Stack from "Stack/Stack" /* 6161 */;
-import TableRow from "TableRow" /* 7041 */;
-import TableRowGroup from "TableRowGroup" /* 7129 */;
-import Form from "Form" /* 8250 */;
-import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 9127 */;
-import WebhookIcon from "WebhookIcon" /* 19196 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 19326 */;
+import Stack_Stack from "Stack/Stack" /* 6274 */;
+import TableRow from "TableRow" /* 7379 */;
+import TableRowGroup from "TableRowGroup" /* 7680 */;
+import Form from "Form" /* 8041 */;
+import TableRowApplicationIconDefault from "TableRowApplicationIcon" /* 8086 */;
+import WebhookIcon from "WebhookIcon" /* 19383 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 19517 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
 
 require = fn;
 function LinkedLobbyFormSection(channel) {
@@ -25,7 +25,7 @@ function LinkedLobbyFormSection(channel) {
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(7394).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(7196).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
@@ -37,16 +37,16 @@ function LinkedLobbyFormSection(channel) {
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(7041).TableRow, obj4);
-    tmp5 = closure_6(tmp(7129).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(7379).TableRow, obj4);
+    tmp5 = closure_6(tmp(7680).TableRowGroup, obj3);
   }
   return tmp5;
 }
-fn(4995).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+fn(5096).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
 const ChannelSettingsSections = fn(1072).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

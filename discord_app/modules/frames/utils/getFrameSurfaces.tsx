@@ -1,11 +1,11 @@
-// === Module 11859: getFrameSurfaces ===
+// === Module 12607: getFrameSurfaces ===
 
-// Module 11859 (getFrameSurfaces)
+// Module 12607 (getFrameSurfaces)
 import Constants from "Constants" /* 1072 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2148 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5801 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6941 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9857 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5914 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6994 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 12608 */;
 import size from "module_2" /* 2 */;
 
 function getFrameSurfaces(application) {
@@ -45,8 +45,8 @@ export { getFrameSurfaces };
 export function isFrameApp(application) {
   return getFrameSurfaces(application).size > 0;
 }
-export function canOpenFrame(app) {
-  const obj = getFrameSurfaces(app);
+export function canOpenFrame(application) {
+  const obj = getFrameSurfaces(application);
   let hasItem = obj.has(EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN);
   if (!hasItem) {
     hasItem = obj.has(EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL);

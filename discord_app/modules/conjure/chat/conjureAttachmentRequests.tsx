@@ -1,7 +1,7 @@
-// === Module 12323: conjureAttachmentRequests ===
+// === Module 13128: conjureAttachmentRequests ===
 
-// Module 12323 (conjureAttachmentRequests)
-import conjureWorkerFetch from "conjureWorkerFetch" /* 11090 */;
+// Module 13128 (conjureAttachmentRequests)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 13119 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

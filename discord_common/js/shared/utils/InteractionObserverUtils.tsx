@@ -1,13 +1,13 @@
-// === Module 7921: InteractionObserverUtils ===
+// === Module 8737: InteractionObserverUtils ===
 
-// Module 7921 (InteractionObserverUtils)
+// Module 8737 (InteractionObserverUtils)
 import size from "module_2" /* 2 */;
 
 function __handleIntersections(arr, arg1) {
   closure_0 = arg1;
   const item = arr.forEach((target) => {
     value = weakMap1.get(closure_0);
-    value2 = undefined;
+    let value2;
     if (value != null) {
       value2 = value.get(target.target);
     }

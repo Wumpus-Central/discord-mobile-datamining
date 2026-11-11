@@ -1,6 +1,6 @@
-// === Module 5806: VoiceStateRecord ===
+// === Module 5919: VoiceStateRecord ===
 
-// Module 5806 (VoiceStateRecord)
+// Module 5919 (VoiceStateRecord)
 import Record from "Record" /* 1405 */;
 
 const size = fn(2);

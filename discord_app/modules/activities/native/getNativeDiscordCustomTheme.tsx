@@ -1,12 +1,12 @@
-// === Module 16722: getNativeDiscordCustomTheme ===
+// === Module 16883: getNativeDiscordCustomTheme ===
 
-// Module 16722 (getNativeDiscordCustomTheme)
+// Module 16883 (getNativeDiscordCustomTheme)
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import ColorUtils from "ColorUtils" /* 5139 */;
-import shared from "shared" /* 5149 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5310 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5368 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5166 */;
+import ColorUtils from "ColorUtils" /* 5240 */;
+import shared from "shared" /* 5250 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5423 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5481 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5267 */;
 
 require = fn;
 const size = fn(2);
@@ -25,7 +25,7 @@ export default function getNativeDiscordCustomTheme() {
     if (tmp16) {
       let gradientColorStops = gradientPreset.customThemeSettings.gradientColorStops;
     } else {
-      const colors = gradientPreset.colors;
+      colors = gradientPreset.colors;
       gradientColorStops = colors.map((stop) => stop.stop);
     }
     const mapped = gradientHexColors.map((item, index) => {

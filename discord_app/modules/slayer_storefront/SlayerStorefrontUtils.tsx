@@ -1,17 +1,17 @@
-// === Module 7471: SlayerStorefrontUtils ===
+// === Module 7181: SlayerStorefrontUtils ===
 
-// Module 7471 (SlayerStorefrontUtils)
+// Module 7181 (SlayerStorefrontUtils)
 import applyDefault from "apply" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
-import StoreUtils from "StoreUtils" /* 6590 */;
-import keysSorter from "keysSorter" /* 6851 */;
-import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 7475 */;
-import StorefrontUtils from "StorefrontUtils" /* 7476 */;
+import StoreUtils from "StoreUtils" /* 6703 */;
+import keysSorter from "keysSorter" /* 6903 */;
+import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 7185 */;
+import StorefrontUtils from "StorefrontUtils" /* 7186 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import ApplicationRecord from "ApplicationRecord" /* 2140 */;
-import GuildStore from "GuildStore" /* 5013 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5173 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7473 */;
+import GuildStore from "GuildStore" /* 5114 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7183 */;
 
 const require = globalThis.__r;
 
@@ -25,7 +25,7 @@ function hasSocialLayerStorefront(guild) {
   } else {
     let applicationIdFromGuildId = SocialLayerStorefrontStore.getApplicationIdFromGuildId(guild.id);
     if (applicationIdFromGuildId == null) {
-      let length;
+      length = undefined;
       if (guild != null) {
         const gameApplicationIds = guild.gameApplicationIds;
         if (gameApplicationIds != null) {
@@ -159,14 +159,14 @@ function getSKUShareURL(guildId, applicationId) {
   }
   combined = "" + location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT + gesture.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(7472).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(7474);
+let closure_4 = fn(7182).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(7184);
 ({ BLOONS_TD6_SPLIT_TENDER_PROMOTION_ID: closure_9, getChannelsGameShopPrefix: closure_10, STOREFRONT_MARKETING_GUILD_ID: closure_11, STOREFRONT_MARKETING_GUILD_ID_TEST: closure_12 } = SocialLayerStorefrontConstants);
 const Constants = fn(1072);
 ({ GuildFeatures: map1, Routes: closure_14, SKUProductLines: closure_15 } = Constants);
 const CollectibleShopTab = fn(1074).CollectibleShopTab;
 let str = "jpg";
-if (fn(6590).SUPPORTS_WEBP) {
+if (fn(6703).SUPPORTS_WEBP) {
   str = "webp";
 }
 function getRequiredSubscriptionPlanIds(arr) {
@@ -677,7 +677,7 @@ export function getSocialLayerStorefrontApplicationId(guildId) {
   let applicationIdFromGuildId = SocialLayerStorefrontStore.getApplicationIdFromGuildId(guildId);
   guild = GuildStore.getGuild(guildId);
   if (applicationIdFromGuildId == null) {
-    let length;
+    length = undefined;
     if (guild != null) {
       const gameApplicationIds = guild.gameApplicationIds;
       if (gameApplicationIds != null) {
@@ -701,7 +701,7 @@ export function useGetSocialLayerStorefrontApplicationId(arg0) {
   const items2 = [arg0];
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => GuildStore.getGuild(closure_0), items2);
   if (stateFromStores == null) {
-    let length;
+    length = undefined;
     if (stateFromStores1 != null) {
       const gameApplicationIds = stateFromStores1.gameApplicationIds;
       if (gameApplicationIds != null) {

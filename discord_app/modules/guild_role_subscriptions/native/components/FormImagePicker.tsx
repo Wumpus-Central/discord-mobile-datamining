@@ -1,11 +1,11 @@
-// === Module 20384: FormImagePicker ===
+// === Module 20579: FormImagePicker ===
 
-// Module 20384 (FormImagePicker)
+// Module 20579 (FormImagePicker)
 import nativeDefault from "native" /* 575 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
-import FastImageDefault from "FastImage" /* 5844 */;
-import utils_UploadUtilsDefault from "utils/UploadUtils" /* 8294 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9195 */;
+import FastImageDefault from "FastImage" /* 5957 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8385 */;
+import utils_UploadUtilsDefault from "utils/UploadUtils" /* 8813 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -184,7 +184,7 @@ class ImagePickerIcon {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { imageSelectionRow: { flexDirection: "row", justifyContent: "space-between" }, buttonColumn: { flex: 1, flexDirection: "column", marginEnd: nativeDefault.space.PX_16 }, imageDescription: null, image: null, imageCentered: null, imageCircle: null, imageSquircle: null, imageContainerEmpty: null, editImageIcon: null, standaloneIcon: null, disabled: null };
 let obj3 = { flex: 1, flexDirection: "column", marginEnd: nativeDefault.space.PX_16 };
 obj2.imageDescription = { flexWrap: "wrap", marginBottom: nativeDefault.space.PX_16 };
@@ -222,8 +222,8 @@ export default function FormImagePicker(children) {
   const obj = { style: tmp2.imageSelectionRow, children: null };
   const obj2 = { style: tmp2.buttonColumn, children: null };
   items = [
-    closure_6(tmp6(5753).Text, { style: tmp2.imageDescription, variant: "body-sm/medium", color: "text-default", children: children.description }),
-    closure_6(tmp6(5760).Button, {
+    closure_6(tmp6(5866).Text, { style: tmp2.imageDescription, variant: "body-sm/medium", color: "text-default", children: children.description }),
+    closure_6(tmp6(5873).Button, {
       text: stringResult,
       variant: "secondary",
       onPress: function handleSelectImage() {

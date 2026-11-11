@@ -1,8 +1,8 @@
-// === Module 12120: useIsVideoBackgroundSupported ===
+// === Module 12914: useIsVideoBackgroundSupported ===
 
-// Module 12120 (useIsVideoBackgroundSupported)
+// Module 12914 (useIsVideoBackgroundSupported)
 import initialize from "initialize" /* 504 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 6074 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 6187 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
 
 require = fn;

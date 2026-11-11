@@ -1,19 +1,19 @@
-// === Module 7870: GuildBasicChannels ===
+// === Module 8688: GuildBasicChannels ===
 
-// Module 7870 (GuildBasicChannels)
+// Module 8688 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 5020 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 5083 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5121 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 5184 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6625 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import GuildRoleStore from "GuildRoleStore" /* 5048 */;
-import GuildStore from "GuildStore" /* 5013 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4992 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import GuildRoleStore from "GuildRoleStore" /* 5149 */;
+import GuildStore from "GuildStore" /* 5114 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 5093 */;
 
 const require = fn;
 function hasBasicChannelChanged(basicChannel, nextResult) {
@@ -31,8 +31,8 @@ function hasBasicChannelChanged(basicChannel, nextResult) {
   }
   return tmp;
 }
-let closure_7 = fn(4995).createChannelRecordFromServer;
-const ChannelLoader = fn(4991).ChannelLoader;
+let closure_7 = fn(5096).createChannelRecordFromServer;
+const ChannelLoader = fn(5092).ChannelLoader;
 let closure_15 = new LoggerDefault("GuildBasicChannels");
 class GuildBasicChannels {
   constructor() {
@@ -88,9 +88,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    items = [tmp3(5020).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(5020).basicChannels(closure_0);
-    items[1] = tmp3(5020).syncedBasicChannels(closure_0).getKvEntries();
+    items = [tmp3(5121).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(5121).basicChannels(closure_0);
+    items[1] = tmp3(5121).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);
@@ -304,7 +304,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_15.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj5 = { value: { v: "r" }, done: true };
+                            const obj5 = { value: { v: "Array" }, done: true };
                             return obj5;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {

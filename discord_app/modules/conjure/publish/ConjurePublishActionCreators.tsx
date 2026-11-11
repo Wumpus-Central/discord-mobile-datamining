@@ -1,16 +1,16 @@
-// === Module 11084: ConjurePublishActionCreators ===
+// === Module 13069: ConjurePublishActionCreators ===
 
-// Module 11084 (ConjurePublishActionCreators)
+// Module 13069 (ConjurePublishActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 11002 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11005 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 11035 */;
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 11085 */;
-import conjureLiveRelaunch from "conjureLiveRelaunch" /* 11087 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7265 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 7319 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 7330 */;
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 12181 */;
+import conjureLiveRelaunch from "conjureLiveRelaunch" /* 13070 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10996 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7313 */;
 
 require = fn;
 function unpublishProject() {
@@ -52,8 +52,9 @@ let closure_9 = async function _unpublishProject(arg0) {
           closure_2 = tmp5;
           closure_130_1 = undefined;
           closure_130_2 = undefined;
+          closure_130_3 = undefined;
           closure_130_0 = closure_0;
-          ({ guildId: closure_130_1, alsoRemovePreviewBot: closure_130_2 } = closure_1);
+          ({ guildId: closure_130_1, alsoRemovePreviewBot: closure_130_2, deleteChannels: closure_130_3 } = closure_1);
           c6 = 1;
           c7 = 1;
           return { value: "flexDirection", done: true };
@@ -70,7 +71,7 @@ let closure_9 = async function _unpublishProject(arg0) {
           c5 = 1;
           const HTTP = closure_131_0(closure_131_2[6]).HTTP;
           const request = { url: closure_131_7.CONJURE_PROJECT_UNPUBLISH(closure_130_0), body: null, rejectWithError: false };
-          const obj7 = { guild_id: closure_130_1, also_remove_preview_bot: closure_130_2 };
+          const obj7 = { guild_id: closure_130_1, also_remove_preview_bot: closure_130_2, delete_channels: closure_130_3 };
           request.body = obj7;
           c6 = 3;
           c7 = 1;

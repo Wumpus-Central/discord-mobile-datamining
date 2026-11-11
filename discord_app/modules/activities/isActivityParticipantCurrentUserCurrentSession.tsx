@@ -1,6 +1,6 @@
-// === Module 5802: isActivityParticipantCurrentUserCurrentSession ===
+// === Module 5915: isActivityParticipantCurrentUserCurrentSession ===
 
-// Module 5802 (isActivityParticipantCurrentUserCurrentSession)
+// Module 5915 (isActivityParticipantCurrentUserCurrentSession)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const size = fn(2);

@@ -1,13 +1,13 @@
-// === Module 11025: conjureAppInServer ===
+// === Module 7287: conjureAppInServer ===
 
-// Module 11025 (conjureAppInServer)
-import ConjureUtils from "ConjureUtils" /* 7486 */;
+// Module 7287 (conjureAppInServer)
+import ConjureUtils from "ConjureUtils" /* 7197 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
-import UserProfileStore from "UserProfileStore" /* 7852 */;
-import GuildChannelStore from "GuildChannelStore" /* 5072 */;
-import GuildStore from "GuildStore" /* 5013 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
+import UserProfileStore from "UserProfileStore" /* 7288 */;
+import GuildChannelStore from "GuildChannelStore" /* 5173 */;
+import GuildStore from "GuildStore" /* 5114 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
 
 require = fn;
 function conjureProductionBotUserId(project) {
@@ -143,7 +143,7 @@ let closure_12 = async function _fetchConjureAppInGuild() {
   }
   return hasItem;
 };
-let closure_6 = fn(5072).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_6 = fn(5173).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureAppInServer.tsx");
@@ -184,10 +184,10 @@ export function fetchConjureAppInGuild() {
   }
   return applyArgumentsResult;
 }
-export function canRemoveConjureBot(guild, id1) {
-  let canManageUserResult = null != id1;
+export function canRemoveConjureBot(guild, found1) {
+  let canManageUserResult = null != found1;
   if (canManageUserResult) {
-    canManageUserResult = PermissionStore.canManageUser(Permissions.KICK_MEMBERS, id1, guild);
+    canManageUserResult = PermissionStore.canManageUser(Permissions.KICK_MEMBERS, found1, guild);
   }
   if (!canManageUserResult) {
     canManageUserResult = PermissionStore.can(Permissions.MANAGE_GUILD, guild);
@@ -248,7 +248,7 @@ export function readConjureAppServerPresence(install_scope) {
               } else {
                 tmp7 = null;
               }
-              obj2 = application_id(6903);
+              obj2 = application_id(6955);
             }
             str2 = tmp7;
           }

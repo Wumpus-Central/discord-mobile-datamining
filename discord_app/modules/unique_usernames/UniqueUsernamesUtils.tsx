@@ -1,18 +1,18 @@
-// === Module 16955: UniqueUsernamesUtils ===
+// === Module 17118: UniqueUsernamesUtils ===
 
-// Module 16955 (UniqueUsernamesUtils)
+// Module 17118 (UniqueUsernamesUtils)
 import util from "util" /* 1113 */;
-import _mod6613 from "module_6613" /* 6613 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 16950 */;
+import _mod6725 from "module_6725" /* 6725 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 17113 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
 
 export function formatUsernameLiveCheckValidation(config) {
-  const match = _mod6613.match(config);
+  const match = _mod6725.match(config);
   let obj = { error: null };
-  const P = _mod6613.P;
-  obj.error = P.not(_mod6613.P.nullish);
+  const P = _mod6725.P;
+  obj.error = P.not(_mod6725.P.nullish);
   const withResult = match.with({ rateLimited: true }, () => {
     const obj = { type: UniqueUsernamesTypes.NameValidationState.RATE_LIMIT, message: null };
     const intl = util.intl;
@@ -52,8 +52,8 @@ export function formatUsernameLiveCheckValidation(config) {
     obj.message = intl.string(util.t.mCrAUb);
     return obj;
   });
-  const obj2 = { error: _mod6613.P.nullish };
-  return withResult3.with({ error: _mod6613.P.nullish }, () => ({ type: UniqueUsernamesTypes.NameValidationState.INTERNAL_ERROR, message: "" })).otherwise(() => {
+  const obj2 = { error: _mod6725.P.nullish };
+  return withResult3.with({ error: _mod6725.P.nullish }, () => ({ type: UniqueUsernamesTypes.NameValidationState.INTERNAL_ERROR, message: "" })).otherwise(() => {
 
   });
 }

@@ -1,19 +1,19 @@
-// === Module 13018: ConjureSharedProjectCover ===
+// === Module 13684: ConjureSharedProjectCover ===
 
-// Module 13018 (ConjureSharedProjectCover)
+// Module 13684 (ConjureSharedProjectCover)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import components_Button_Button from "components/Button/Button" /* 5760 */;
-import FastImageDefault from "FastImage" /* 5844 */;
-import PlayIcon from "PlayIcon" /* 8928 */;
-import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 13019 */;
+import components_Button_Button from "components/Button/Button" /* 5873 */;
+import FastImageDefault from "FastImage" /* 5957 */;
+import PlayIcon from "PlayIcon" /* 7540 */;
+import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 13685 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { frame: { width: "100%", aspectRatio: 1.7777777777777777, borderRadius: nativeDefault.radii.lg, overflow: "hidden", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST }, cover: { position: "absolute", top: 0, right: 0, bottom: 0, left: 0 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -58,7 +58,7 @@ export default function ConjureSharedProjectCover(onPress) {
       const intl = util.intl;
       const string = intl.string;
       if ("launch" === action) {
-        v1cF7L4 = tmp10(4028)["1cF7L4"];
+        v1cF7L4 = tmp10(4079)["1cF7L4"];
         let stringResult = string(v1cF7L4);
       } else {
         stringResult = string(util.t["3xjX0U"]);

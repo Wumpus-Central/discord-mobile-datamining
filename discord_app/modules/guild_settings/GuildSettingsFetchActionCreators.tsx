@@ -1,6 +1,6 @@
-// === Module 9166: GuildSettingsFetchActionCreators ===
+// === Module 8347: GuildSettingsFetchActionCreators ===
 
-// Module 9166 (GuildSettingsFetchActionCreators)
+// Module 8347 (GuildSettingsFetchActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,6 +1,6 @@
-// === Module 7477: SKUPricesStore ===
+// === Module 7187: SKUPricesStore ===
 
-// Module 7477 (SKUPricesStore)
+// Module 7187 (SKUPricesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
@@ -56,10 +56,10 @@ prototype["getFetchStateForApplicationId"] = function getFetchStateForApplicatio
     return obj4[combined];
   }
 };
-prototype["getPromotionIdsForSkuId"] = function getPromotionIdsForSkuId(arg0) {
-  if (null != arg0) {
+prototype["getPromotionIdsForSkuId"] = function getPromotionIdsForSkuId(skuId) {
+  if (null != skuId) {
     let prop;
-    if (obj5[arg0] != null) {
+    if (obj5[skuId] != null) {
       prop = tmp2.storefrontPromotionIds;
     }
     return prop;

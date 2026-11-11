@@ -1,6 +1,6 @@
-// === Module 7436: getHigherContrastColor ===
+// === Module 7892: getHigherContrastColor ===
 
-// Module 7436 (getHigherContrastColor)
+// Module 7892 (getHigherContrastColor)
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 

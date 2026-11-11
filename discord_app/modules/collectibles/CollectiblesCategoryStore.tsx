@@ -1,14 +1,14 @@
-// === Module 7799: CollectiblesCategoryStore ===
+// === Module 8419: CollectiblesCategoryStore ===
 
-// Module 7799 (CollectiblesCategoryStore)
+// Module 8419 (CollectiblesCategoryStore)
 import apply from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7811 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 8431 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7800 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 8420 */;
 
 require = fn;
 function updateCategoriesAndProducts(map) {
@@ -281,7 +281,7 @@ const collectiblesCategoryStore = new CollectiblesCategoryStore(DispatcherDefaul
             }));
             const bundledProducts = product.bundledProducts;
             for (const item10012 of bundledProducts) {
-              value2 = map.get(item10012.skuId);
+              let value2 = map.get(item10012.skuId);
               let tmp6 = null != value2;
               let tmp5 = value2;
               if (tmp6) {

@@ -1,29 +1,29 @@
-// === Module 17061: SettingsScreenNotices ===
+// === Module 17224: SettingsScreenNotices ===
 
-// Module 17061 (SettingsScreenNotices)
+// Module 17224 (SettingsScreenNotices)
 import nativeDefault from "native" /* 575 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5819 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6783 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6788 */;
-import FamilyCenterSettingsNoticeDefault from "FamilyCenterSettingsNotice" /* 17062 */;
-import AgeConfirmationNoticeDefault from "AgeConfirmationNotice" /* 17071 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5932 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6767 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6772 */;
+import FamilyCenterSettingsNoticeDefault from "FamilyCenterSettingsNotice" /* 17225 */;
+import AgeConfirmationNoticeDefault from "AgeConfirmationNotice" /* 17234 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const obj2 = { noticeContainer: { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_16 }, listHeaderNoticeContainer: null };
 const obj3 = { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_16 };
 obj2.listHeaderNoticeContainer = { marginTop: nativeDefault.space.PX_16 };
 let closure_6 = createStyles.createStyles(obj2);
 const obj5 = { SENSITIVE_CONTENT_FILTERS: null, CONTENT_AND_SOCIAL: null, DATA_AND_PRIVACY: null };
 const obj4 = { marginTop: nativeDefault.space.PX_16 };
-let items = [{ order: 100, predicate: fn(8447).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }, , , ];
-const obj6 = { order: 100, predicate: fn(8447).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
-items[1] = { order: 150, predicate: fn(17063).shouldShowAgeNoticeUnconfirmedNotice, Component: fn(17063).ContentFiltersUnconfirmedNotice };
-const obj7 = { order: 150, predicate: fn(17063).shouldShowAgeNoticeUnconfirmedNotice, Component: fn(17063).ContentFiltersUnconfirmedNotice };
+let items = [{ order: 100, predicate: fn(9553).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }, , , ];
+const obj6 = { order: 100, predicate: fn(9553).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
+items[1] = { order: 150, predicate: fn(17226).shouldShowAgeNoticeUnconfirmedNotice, Component: fn(17226).ContentFiltersUnconfirmedNotice };
+const obj7 = { order: 150, predicate: fn(17226).shouldShowAgeNoticeUnconfirmedNotice, Component: fn(17226).ContentFiltersUnconfirmedNotice };
 items[2] = {
   order: 200,
   predicate() {
@@ -58,7 +58,7 @@ items[3] = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(17072).SensitiveContentFiltersTeenNotice
+  Component: fn(17235).SensitiveContentFiltersTeenNotice
 };
 obj5.SENSITIVE_CONTENT_FILTERS = items;
 const obj9 = {
@@ -71,10 +71,10 @@ const obj9 = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(17072).SensitiveContentFiltersTeenNotice
+  Component: fn(17235).SensitiveContentFiltersTeenNotice
 };
-const items1 = [{ order: 100, predicate: fn(8447).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }, ];
-const obj10 = { order: 100, predicate: fn(8447).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
+const items1 = [{ order: 100, predicate: fn(9553).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }, ];
+const obj10 = { order: 100, predicate: fn(9553).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
 items1[1] = {
   order: 200,
   predicate() {
@@ -100,7 +100,7 @@ const obj11 = {
   },
   Component: AgeConfirmationNoticeDefault
 };
-const items2 = [{ order: 100, predicate: fn(8447).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }];
+const items2 = [{ order: 100, predicate: fn(9553).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault }];
 obj5.DATA_AND_PRIVACY = items2;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsScreenNotices.tsx");

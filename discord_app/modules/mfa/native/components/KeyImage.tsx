@@ -1,11 +1,11 @@
-// === Module 17034: KeyImage ===
+// === Module 17197: KeyImage ===
 
-// Module 17034 (KeyImage)
+// Module 17197 (KeyImage)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import SecurityKeySpotIllustration from "SecurityKeySpotIllustration" /* 17035 */;
-import createStyles from "createStyles" /* 5142 */;
+import SecurityKeySpotIllustration from "SecurityKeySpotIllustration" /* 17198 */;
+import createStyles from "createStyles" /* 5243 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

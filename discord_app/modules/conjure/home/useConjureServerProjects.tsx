@@ -1,7 +1,7 @@
-// === Module 13213: useConjureServerProjects ===
+// === Module 13879: useConjureServerProjects ===
 
-// Module 13213 (useConjureServerProjects)
-import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
+// Module 13879 (useConjureServerProjects)
+import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
 
 const require = globalThis.__r;
 

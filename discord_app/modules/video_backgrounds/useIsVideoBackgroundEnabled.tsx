@@ -1,8 +1,8 @@
-// === Module 12119: useIsVideoBackgroundEnabled ===
+// === Module 12913: useIsVideoBackgroundEnabled ===
 
-// Module 12119 (useIsVideoBackgroundEnabled)
+// Module 12913 (useIsVideoBackgroundEnabled)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import useIsVideoBackgroundSupportedDefault from "useIsVideoBackgroundSupported" /* 12120 */;
+import useIsVideoBackgroundSupportedDefault from "useIsVideoBackgroundSupported" /* 12914 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/video_backgrounds/useIsVideoBackgroundEnabled.tsx");

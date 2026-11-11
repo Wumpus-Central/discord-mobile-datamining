@@ -1,23 +1,23 @@
-// === Module 9168: EditGuildEventDetails ===
+// === Module 8349: EditGuildEventDetails ===
 
-// Module 9168 (EditGuildEventDetails)
+// Module 8349 (EditGuildEventDetails)
 import util from "util" /* 1113 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2017 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5151 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9053 */;
-import ScheduleUtils from "ScheduleUtils" /* 9054 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5252 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 7905 */;
+import ScheduleUtils from "ScheduleUtils" /* 7906 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(6913).isGuildScheduledEventActive;
-let constants = fn(4997).GuildScheduledEventEntityTypes;
+let closure_6 = fn(6966).isGuildScheduledEventActive;
+let constants = fn(5098).GuildScheduledEventEntityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_11 = createStyles.createStyles({ error: { paddingVertical: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx");

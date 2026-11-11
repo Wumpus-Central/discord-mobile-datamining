@@ -1,10 +1,10 @@
-// === Module 10231: MessagePreviewReactions ===
+// === Module 11818: MessagePreviewReactions ===
 
-// Module 10231 (MessagePreviewReactions)
+// Module 11818 (MessagePreviewReactions)
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7847 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7850 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 9015 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 8678 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 8681 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 10161 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -27,13 +27,13 @@ export default function MessagePreviewReactions(emoji) {
     return null != message ? message.reactions : closure_7;
   }, items1);
   const obj = channelId(504);
-  const obj2 = { value: messageId(7390)(messageId(7415).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
+  const obj2 = { value: messageId(7852)(messageId(7871).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {
     const obj3 = { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores };
-    let tmp4Result = jsx(channelId(10221).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores });
+    let tmp4Result = jsx(channelId(11808).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores });
   } else {
-    tmp4Result = jsx(channelId(10221).MessageReactionsEmpty, {});
+    tmp4Result = jsx(channelId(11808).MessageReactionsEmpty, {});
   }
   obj2.children = tmp4Result;
-  return jsx(channelId(7390).AnalyticsLocationProvider, { value: messageId(7390)(messageId(7415).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });
+  return jsx(channelId(7852).AnalyticsLocationProvider, { value: messageId(7852)(messageId(7871).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });
 };

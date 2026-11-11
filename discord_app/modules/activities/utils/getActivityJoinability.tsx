@@ -1,17 +1,17 @@
-// === Module 15151: getActivityJoinability ===
+// === Module 15640: getActivityJoinability ===
 
-// Module 15151 (getActivityJoinability)
+// Module 15640 (getActivityJoinability)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5801 */;
-import hasFlagDefault from "hasFlag" /* 7550 */;
-import getPartySize from "getPartySize" /* 11852 */;
-import isPartyFull from "isPartyFull" /* 11854 */;
-import getIsInParty from "getIsInParty" /* 11855 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11858 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11859 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11892 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11962 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 15152 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5914 */;
+import hasFlagDefault from "hasFlag" /* 8404 */;
+import getPartySize from "getPartySize" /* 12599 */;
+import isPartyFull from "isPartyFull" /* 12601 */;
+import getIsInParty from "getIsInParty" /* 12602 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12606 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 12607 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 12644 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 12754 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 15484 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -36,48 +36,47 @@ export default function getActivityJoinability(arg0) {
     if (null == user) {
       return obj.CANNOT_JOIN;
     } else {
-      const frameSurfaces = getFrameSurfaces.getFrameSurfaces(application);
       if (isEmbedded) {
         if (null != application) {
+          const frameSurfaces = getFrameSurfaces.getFrameSurfaces(application);
           if (frameSurfaces.has(EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL)) {
-            if (!frameSurfaces.has(EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN)) {
-              if (!frameSurfaces.has(EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL)) {
-                const voiceStateForUser = VoiceStateStore.getVoiceStateForUser(user.id);
-                let channelId1;
-                if (voiceStateForUser != null) {
-                  channelId1 = voiceStateForUser.channelId;
-                }
-                let flag = false;
-                if (null != channelId1) {
-                  const channel = ChannelStore.getChannel(channelId1);
-                  let tmp21 = null == channel;
-                  if (!tmp21) {
-                    let canResult = channel.type === constants2.GUILD_VOICE && channel.application_id === application.id;
-                    if (canResult) {
-                      canResult = PermissionStore.can(constants4.CONNECT, channel);
-                    }
-                    tmp21 = canResult;
+            if (!tmp57Result.canOpenFrame(application)) {
+              const voiceStateForUser = VoiceStateStore.getVoiceStateForUser(user.id);
+              let channelId1;
+              if (voiceStateForUser != null) {
+                channelId1 = voiceStateForUser.channelId;
+              }
+              let flag = false;
+              if (null != channelId1) {
+                const channel = ChannelStore.getChannel(channelId1);
+                let tmp21 = null == channel;
+                if (!tmp21) {
+                  let canResult = channel.type === constants2.GUILD_VOICE && channel.application_id === application.id;
+                  if (canResult) {
+                    canResult = PermissionStore.can(constants4.CONNECT, channel);
                   }
-                  flag = tmp21;
+                  tmp21 = canResult;
                 }
-                if (!flag) {
-                  return obj.CANNOT_JOIN;
-                }
+                flag = tmp21;
+              }
+              if (!flag) {
+                return obj.CANNOT_JOIN;
               }
             }
+            tmp57Result = getFrameSurfaces;
           }
         }
       }
       if (isEmbedded) {
         if (null != channelId) {
-          if (!tmp51Result.isFrameApp(application)) {
+          if (!obj13.isFrameApp(application)) {
             const obj2 = { userId: user.id, activity, channelId, currentUser: tmp, application, isContentGated: tmp2, isActivitiesEnabledForCurrentPlatform: null, ChannelStore: null, VoiceStateStore: null, PermissionStore: null, GuildStore: null };
             obj2.isActivitiesEnabledForCurrentPlatform = useIsActivitiesEnabledForCurrentPlatform.getIsActivitiesEnabledForCurrentPlatform();
             obj2.ChannelStore = ChannelStore;
             obj2.VoiceStateStore = VoiceStateStore;
             obj2.PermissionStore = PermissionStore;
             obj2.GuildStore = GuildStore;
-            const tmp51Result7 = useIsActivitiesEnabledForCurrentPlatform;
+            const tmp59Result = useIsActivitiesEnabledForCurrentPlatform;
             if (tmp27Result === getEmbeddedActivityJoinability.EmbeddedActivityJoinability.CAN_JOIN) {
               let CANNOT_JOIN = obj.CAN_JOIN;
             } else {
@@ -85,16 +84,16 @@ export default function getActivityJoinability(arg0) {
             }
             return CANNOT_JOIN;
           }
-          tmp51Result = getFrameSurfaces;
+          obj13 = getFrameSurfaces;
         }
       }
       if (isEmbedded) {
         if (null == channelId) {
           if (!hasFlagDefault(activity, constants.CONTEXTLESS)) {
-            if (!tmp51Result8.isFrameApp(application)) {
+            if (!obj5.isFrameApp(application)) {
               return obj.CANNOT_JOIN;
             }
-            tmp51Result8 = getFrameSurfaces;
+            obj5 = getFrameSurfaces;
           }
         }
       }
@@ -105,9 +104,8 @@ export default function getActivityJoinability(arg0) {
         return obj.CANNOT_JOIN;
       }
       const partySize = getPartySize.getPartySize(activity);
-      const tmp51Result10 = getPartySize;
-      if (tmp51Result11.hasPartySize(partySize)) {
-        if (!tmp51Result12.isPartyFull(partySize)) {
+      if (obj8.hasPartySize(partySize)) {
+        if (!tmp40Result.isPartyFull(partySize)) {
           if (hasFlagDefault(activity, constants.PARTY_PRIVACY_FRIENDS)) {
             if (RelationshipStore.isFriend(user.id)) {
               return obj.CAN_JOIN;
@@ -145,7 +143,7 @@ export default function getActivityJoinability(arg0) {
             return obj.CANNOT_JOIN;
           }
         }
-        tmp51Result12 = isPartyFull;
+        tmp40Result = isPartyFull;
       }
       return obj.CANNOT_JOIN;
     }

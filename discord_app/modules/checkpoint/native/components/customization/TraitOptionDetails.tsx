@@ -1,10 +1,10 @@
-// === Module 13946: TraitOptionDetails ===
+// === Module 14423: TraitOptionDetails ===
 
-// Module 13946 (TraitOptionDetails)
+// Module 14423 (TraitOptionDetails)
 import nativeDefault from "native" /* 575 */;
-import _modDef3248 from "module_3248" /* 3248 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import RarityBadgeDefault from "RarityBadge" /* 13947 */;
+import _modDef3269 from "module_3269" /* 3269 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import RarityBadgeDefault from "RarityBadge" /* 14424 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,26 +28,26 @@ function AssetDescription(asset) {
                 style: subscribeLink.subscribeLink,
                 onPress() {
                   const obj = { analyticsLocations: null };
-                  items = [closure_1_1(7415).CHECKPOINT, closure_1_1(7415).CHECKPOINT_TRAIT];
+                  items = [closure_1_1(7871).CHECKPOINT, closure_1_1(7871).CHECKPOINT_TRAIT];
                   obj.analyticsLocations = items;
-                  return closure_1_1(10033)(obj);
+                  return closure_1_1(9513)(obj);
                 },
                 accessibilityRole: "link",
                 children
               }, arg1);
             }
       };
-      let formatResult = format(_modDef3248.E6AfCb, obj);
+      let formatResult = format(_modDef3269.E6AfCb, obj);
     } else {
-      formatResult = format(6568).getPlaintextAssetDescription(asset);
-      const formatResult1 = format(6568);
+      formatResult = format(6681).getPlaintextAssetDescription(asset);
+      const formatResult1 = format(6681);
     }
   }
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, title: { textTransform: "capitalize" }, subscribeLink: { textDecorationLine: "underline" } };
 let closure_7 = createStyles.createStyles(obj2);
 let obj4 = { VISIBLE: 0, [0]: "VISIBLE", INVISIBLE: 1, [1]: "INVISIBLE", GONE: 2, [2]: "GONE" };

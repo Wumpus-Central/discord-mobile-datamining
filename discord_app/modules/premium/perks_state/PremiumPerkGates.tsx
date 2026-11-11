@@ -1,12 +1,12 @@
-// === Module 16214: PremiumPerkGates ===
+// === Module 10015: PremiumPerkGates ===
 
-// Module 16214 (PremiumPerkGates)
+// Module 10015 (PremiumPerkGates)
 import PerksStateUtils from "PerksStateUtils" /* 1391 */;
 import user2 from "user" /* 1398 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
-import FileSizeUtils from "FileSizeUtils" /* 6586 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8286 */;
-import ProductCatalog from "ProductCatalog" /* 16215 */;
+import FileSizeUtils from "FileSizeUtils" /* 6699 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8781 */;
+import ProductCatalog from "ProductCatalog" /* 10016 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;
 import size from "module_2" /* 2 */;
 
@@ -108,6 +108,9 @@ export function canUseCustomBackgrounds(currentUser) {
 }
 export function canUseCollectibles(user) {
   return ProductCatalog.canUserUse(user2.Perk.PREMIUM_COLLECTIBLES, user);
+}
+export function canUseTenureBadge(currentUser) {
+  return ProductCatalog.canUserUse(user2.Perk.PREMIUM_TENURE_BADGE, currentUser);
 }
 export function canUseMonthlyOrbs(stateFromStores) {
   let perks;

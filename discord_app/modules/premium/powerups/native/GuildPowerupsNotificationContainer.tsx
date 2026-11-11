@@ -1,16 +1,16 @@
-// === Module 14398: GuildPowerupsNotificationContainer ===
+// === Module 10699: GuildPowerupsNotificationContainer ===
 
-// Module 14398 (GuildPowerupsNotificationContainer)
+// Module 10699 (GuildPowerupsNotificationContainer)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2696 from "module_2696" /* 2696 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 14399 */;
-import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 14400 */;
-import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 14403 */;
+import _modDef2717 from "module_2717" /* 2717 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 10700 */;
+import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 10701 */;
+import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 10704 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5142 */;
+import createStyles from "createStyles" /* 5243 */;
 import size from "module_2" /* 2 */;
 
 function Tier3OverrideNotice(children) {
@@ -32,7 +32,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { color: "text-strong", variant: "heading-lg/semibold", children: null };
     const intl = util.intl;
-    obj2.children = intl.string(_modDef2696["3FRirU"]);
+    obj2.children = intl.string(_modDef2717["3FRirU"]);
     items = [React4(Text_Text.Text, obj2), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {

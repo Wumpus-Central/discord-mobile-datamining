@@ -1,6 +1,6 @@
-// === Module 5369: SavedCustomThemeStore ===
+// === Module 5482: SavedCustomThemeStore ===
 
-// Module 5369 (SavedCustomThemeStore)
+// Module 5482 (SavedCustomThemeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
@@ -48,7 +48,7 @@ prototype["getState"] = function getState() {
   return { savedCustomThemes };
 };
 prototype["getSavedCustomTheme"] = function getSavedCustomTheme() {
-  let length;
+  length = undefined;
   if (closure_4 != null) {
     length = closure_4.length;
   }
@@ -65,7 +65,7 @@ prototype["getFetchState"] = function getFetchState() {
   return ERROR;
 };
 prototype["hasSavedCustomThemes"] = function hasSavedCustomThemes() {
-  let length;
+  length = undefined;
   if (closure_4 != null) {
     length = closure_4.length;
   }

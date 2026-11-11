@@ -1,9 +1,9 @@
-// === Module 15012: generateDynamicLink ===
+// === Module 15829: generateDynamicLink ===
 
-// Module 15012 (generateDynamicLink)
+// Module 15829 (generateDynamicLink)
 import v1 from "v1" /* 1266 */;
 import formatDefault from "format" /* 1353 */;
-import getDescriptionDefault from "getDescription" /* 15013 */;
+import getDescriptionDefault from "getDescription" /* 15830 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -96,7 +96,7 @@ export function parseDynamicLink(str) {
         const _URL2 = URL;
         const uRL1 = new URL(decodeURIComponent(value));
         const searchParams2 = uRL1.searchParams;
-        value2 = obj.get("pid");
+        const value2 = obj.get("pid");
         const obj2 = { utmSource: value2 };
         const entries = searchParams2.entries();
         const tmp16 = entries[Symbol.iterator]();

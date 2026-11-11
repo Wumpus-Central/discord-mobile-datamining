@@ -1,9 +1,9 @@
-// === Module 19196: WebhookIcon ===
+// === Module 19383: WebhookIcon ===
 
-// Module 19196 (WebhookIcon)
+// Module 19383 (WebhookIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod19197 from "module_19197" /* 19197 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod19384 from "module_19384" /* 19384 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function WebhookIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod19197, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod19384, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

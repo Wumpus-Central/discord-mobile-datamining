@@ -1,19 +1,19 @@
-// === Module 20368: MarketStallSpotIllustration ===
+// === Module 20563: MarketStallSpotIllustration ===
 
-// Module 20368 (MarketStallSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7138 */;
-import _modDef20369 from "module_20369" /* 20369 */;
-import _modDef20370 from "module_20370" /* 20370 */;
-import _modDef20371 from "module_20371" /* 20371 */;
+// Module 20563 (MarketStallSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7689 */;
+import _modDef20564 from "module_20564" /* 20564 */;
+import _modDef20565 from "module_20565" /* 20565 */;
+import _modDef20566 from "module_20566" /* 20566 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef20369 }, 3: null };
-let obj2 = { uri: _modDef20369 };
-obj[2] = { uri: _modDef20370 };
-const obj3 = { uri: _modDef20370 };
-obj[3] = { uri: _modDef20371 };
+let obj = { 1: null, 2: { uri: _modDef20564 }, 3: null };
+let obj2 = { uri: _modDef20564 };
+obj[2] = { uri: _modDef20565 };
+const obj3 = { uri: _modDef20565 };
+obj[3] = { uri: _modDef20566 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MarketStallSpotIllustration.native.tsx");
 

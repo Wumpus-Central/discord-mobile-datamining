@@ -1,24 +1,24 @@
-// === Module 8018: StageChannelActionCreators ===
+// === Module 6846: StageChannelActionCreators ===
 
-// Module 8018 (StageChannelActionCreators)
+// Module 6846 (StageChannelActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import Server from "Server" /* 2116 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5079 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6182 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6960 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7552 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7571 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8023 */;
-import StageInstanceActionCreators from "StageInstanceActionCreators" /* 8026 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5180 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6295 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6852 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7612 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
+import StageInstanceActionCreators from "StageInstanceActionCreators" /* 8375 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
-import VoiceStateStore from "VoiceStateStore" /* 5805 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
+import VoiceStateStore from "VoiceStateStore" /* 5918 */;
 
 const HTTPUtils = obj(1282);
-const AppAnalyticsUtils = obj(5891);
-const useStageSpeakingForCurrentUser = obj(6816);
-const StageChannelUtils = obj(8019);
+const AppAnalyticsUtils = obj(6004);
+const useStageSpeakingForCurrentUser = obj(6845);
+const StageChannelUtils = obj(6848);
 require = fn;
 function audienceAckRequestToSpeak(channel, suppress) {
   let flag = arg2;
@@ -240,7 +240,7 @@ let closure_14 = async function _endStage(arg0) {
 };
 const Constants = fn(1072);
 ({ AbortCodes: metroImportDefault, AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
-const SafetyToastType = fn(7557).SafetyToastType;
+const SafetyToastType = fn(6847).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
 

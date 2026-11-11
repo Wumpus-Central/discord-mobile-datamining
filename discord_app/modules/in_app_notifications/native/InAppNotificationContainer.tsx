@@ -1,24 +1,24 @@
-// === Module 11176: InAppNotificationContainer ===
+// === Module 10977: InAppNotificationContainer ===
 
-// Module 11176 (InAppNotificationContainer)
+// Module 10977 (InAppNotificationContainer)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5372 */;
-import useMountEffectDefault from "useMountEffect" /* 5723 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 11161 */;
-import MessageNotificationDefault from "MessageNotification" /* 11177 */;
-import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 11223 */;
-import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 11226 */;
-import BugReporterNotification from "BugReporterNotification" /* 11227 */;
-import AlertNotificationDefault from "AlertNotification" /* 11270 */;
-import ReactionNotificationDefault from "ReactionNotification" /* 11271 */;
-import ReminderNotificationDefault from "ReminderNotification" /* 11290 */;
-import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification" /* 11329 */;
-import MessageRequestNotificationDefault from "MessageRequestNotification" /* 11332 */;
-import StageSpeakInviteNotificationDefault from "StageSpeakInviteNotification" /* 11333 */;
+import timing_timing from "timing/timing" /* 5485 */;
+import useMountEffectDefault from "useMountEffect" /* 5836 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10962 */;
+import MessageNotificationDefault from "MessageNotification" /* 10979 */;
+import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 11033 */;
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 11036 */;
+import BugReporterNotification from "BugReporterNotification" /* 11037 */;
+import AlertNotificationDefault from "AlertNotification" /* 11081 */;
+import ReactionNotificationDefault from "ReactionNotification" /* 11082 */;
+import ReminderNotificationDefault from "ReminderNotification" /* 11843 */;
+import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification" /* 11884 */;
+import MessageRequestNotificationDefault from "MessageRequestNotification" /* 11887 */;
+import StageSpeakInviteNotificationDefault from "StageSpeakInviteNotification" /* 11888 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10329 */;
+import NativeMenuStore from "NativeMenuStore" /* 10978 */;
 
 const require = globalThis.__r;
 
@@ -67,7 +67,7 @@ function NotificationWrapper(notification) {
   }
 }
 let StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(11162);
+const InAppNotificationConstants = fn(10963);
 ({ DEFAULT_ANIMATION_TIMING: metroImportDefault, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: closure_9, MIN_SWIPE_VELOCITY: closure_10, PAN_INPUT_RANGE: closure_11, NOTIFICATION_CONTAINER_MARGIN } = InAppNotificationConstants);
 const Constants = fn(1072);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = Constants);
@@ -75,7 +75,7 @@ const jsx = fn(21).jsx;
 let obj = { duration: 200, easing: null };
 const Easing = fn(1652).Easing;
 obj.easing = Easing.in(fn(1652).Easing.ease);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_16 = createStyles.createStyles({ safeAreaContainer: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8, top: 0, bottom: 0 }, animatedContainer: { marginLeft: NOTIFICATION_CONTAINER_MARGIN, marginRight: NOTIFICATION_CONTAINER_MARGIN } });
 let closure_18 = { code: "(function InAppNotificationContainerTsx1(){let[scheduleOnRN,setInitialized]=this.__closure;return scheduleOnRN(setInitialized,true);})" };
 let closure_19 = { code: "(function InAppNotificationContainerTsx2(){let[startY,notificationGestureY,velocityY,scheduleOnRN,setPanning]=this.__closure;startY.set(notificationGestureY.get());velocityY.set(0);scheduleOnRN(setPanning,true);})" };
@@ -104,8 +104,8 @@ export default function InAppNotificationContainer(notification) {
   const tmp = closure_16();
   let isIOSResult = require("utils/PlatformUtils").isIOS();
   if (isIOSResult) {
-    isIOSResult = tmp2(11340).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
-    const tmp2Result = tmp2(11340);
+    isIOSResult = tmp2(11895).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
+    const tmp2Result = tmp2(11895);
   }
   items = [notification];
   const memo = noop.useMemo(() => InAppNotificationUtils.extractMetadataFromNotification(c0), items);
@@ -175,7 +175,7 @@ export default function InAppNotificationContainer(notification) {
       AnalyticsUtilsDefault.track(constants2.IN_APP_NOTIFICATION_SHOWN, obj2);
     }
   }, items3);
-  const Gesture = tmp2(5422).Gesture;
+  const Gesture = tmp2(5535).Gesture;
   const tmp2Result11 = require("initialize");
   const items4 = [closure_19, sharedValue2, sharedValue, sharedValue1, require("module_1705").scheduleOnRN, tmp12[1]];
   _require = undefined;

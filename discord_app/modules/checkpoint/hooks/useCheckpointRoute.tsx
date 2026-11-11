@@ -1,12 +1,12 @@
-// === Module 13704: useCheckpointRoute ===
+// === Module 14186: useCheckpointRoute ===
 
-// Module 13704 (useCheckpointRoute)
-import CheckpointNavigation from "CheckpointNavigation" /* 6569 */;
-import CheckpointActionCreators from "CheckpointActionCreators" /* 13684 */;
-import CheckpointFlows from "CheckpointFlows" /* 13701 */;
+// Module 14186 (useCheckpointRoute)
+import CheckpointNavigation from "CheckpointNavigation" /* 6682 */;
+import CheckpointActionCreators from "CheckpointActionCreators" /* 14154 */;
+import CheckpointFlows from "CheckpointFlows" /* 14183 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13681 */;
+import CheckpointStore from "CheckpointStore" /* 14150 */;
 
 require = fn;
 const size = fn(2);
@@ -16,14 +16,20 @@ export default function useCheckpointRoute(arg0) {
   closure_0 = arg0;
   const tmp = _slicedToArray(noop.useState(() => {
     const progress = CheckpointStore.progress;
-    if (null != CheckpointStore.character) {
-      let stage = CheckpointNavigation.CheckpointCharacterStage.SUMMARY;
-    } else if (progress != null) {
-      stage = progress.stage;
-    }
-    const checkpointRoutes = CheckpointFlows.getCheckpointRoutes({ flow: stage, stats: CheckpointStore.stats });
-    let HOME = checkpointRoutes.find((item) => stage(first[3]).getCheckpointRoutePresentation(item).characterStage === stage);
-    if (HOME == null) {
+    if (CheckpointStore.isCharacterCreatorEnabled) {
+      if (null != tmp2) {
+        let stage = CheckpointNavigation.CheckpointCharacterStage.SUMMARY;
+      } else if (progress != null) {
+        stage = progress.stage;
+      }
+      const obj2 = { flow: tmp, stats: tmp3 };
+      const checkpointRoutes = CheckpointFlows.getCheckpointRoutes(obj2);
+      let HOME2 = checkpointRoutes.find((item) => stage(first[3]).getCheckpointRoutePresentation(item).characterStage === stage);
+      if (HOME2 == null) {
+        HOME2 = CheckpointNavigation.CheckpointRoute.HOME;
+      }
+      let HOME = HOME2;
+    } else {
       HOME = CheckpointNavigation.CheckpointRoute.HOME;
     }
     return HOME;
@@ -31,8 +37,10 @@ export default function useCheckpointRoute(arg0) {
   const first = tmp[0];
   items = [first];
   const effect = noop.useEffect(() => {
-    const obj = CheckpointNavigation;
-    const result = CheckpointActionCreators.saveCheckpointProgress(obj.getCheckpointRoutePresentation(first).characterStage);
+    if (CheckpointStore.isCharacterCreatorEnabled) {
+      const obj = CheckpointNavigation;
+      const result = CheckpointActionCreators.saveCheckpointProgress(obj.getCheckpointRoutePresentation(first).characterStage);
+    }
   }, items);
   const items1 = [first, tmp[1]];
   return items1;

@@ -1,18 +1,18 @@
-// === Module 17382: OrbsArcadeSheetActions ===
+// === Module 17554: OrbsArcadeSheetActions ===
 
-// Module 17382 (OrbsArcadeSheetActions)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
-import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17375 */;
-import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 17379 */;
-import OrbsArcadeClaimRewardButtonDefault from "OrbsArcadeClaimRewardButton" /* 17383 */;
-import OrbsArcadePlayButtonDefault from "OrbsArcadePlayButton" /* 17387 */;
+// Module 17554 (OrbsArcadeSheetActions)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
+import OrbsArcadeRewardUtils from "OrbsArcadeRewardUtils" /* 17541 */;
+import openOrbsArcadeSheets from "openOrbsArcadeSheets" /* 17545 */;
+import OrbsArcadeClaimRewardButtonDefault from "OrbsArcadeClaimRewardButton" /* 17555 */;
+import OrbsArcadePlayButtonDefault from "OrbsArcadePlayButton" /* 17558 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17368 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17534 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_6 = createStyles.createStyles({ buttonGroup: { paddingVertical: 0 } });
 let obj2 = { PLAY: "PLAY", CLAIM: "CLAIM" };
 let obj3 = { CLOSE: "CLOSE", HOW_TO_PLAY: "HOW_TO_PLAY" };
@@ -47,7 +47,7 @@ export default function OrbsArcadeSheetActions(game) {
         const intl = game(1113).intl;
         obj.text = intl.string(game(1113).t["uz4M/z"]);
         obj.onPress = function onPress() {
-          return openOrbsArcadeSheets.openOrbsArcadeHowToPlaySheet(game.id, dependencyMap);
+          return openOrbsArcadeSheets.openOrbsArcadeInfoSheet(game.id, dependencyMap);
         };
         tmp4 = obj;
       }
@@ -74,7 +74,7 @@ export default function OrbsArcadeSheetActions(game) {
       let tmp19 = null;
       if (null != tmp7) {
         ({ text: obj6.text, onPress: obj6.onPress } = tmp7);
-        tmp19 = closure_4(tmp10(5760).Button, { grow: true, size: "lg", variant: "secondary", text: null, onPress: null });
+        tmp19 = closure_4(tmp10(5873).Button, { grow: true, size: "lg", variant: "secondary", text: null, onPress: null });
         const obj5 = { grow: true, size: "lg", variant: "secondary", text: null, onPress: null };
       }
       items3[1] = tmp19;

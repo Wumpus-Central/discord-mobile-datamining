@@ -1,12 +1,12 @@
-// === Module 11101: conjureSettingsConnection ===
+// === Module 13118: conjureSettingsConnection ===
 
-// Module 11101 (conjureSettingsConnection)
+// Module 13118 (conjureSettingsConnection)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 11035 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 11090 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 7330 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 13119 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10998 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 7315 */;
 
 require = fn;
 function noteSettingsWrite(arg0) {
@@ -99,7 +99,7 @@ let closure_8 = async function _fetchProjectSettings(arg0) {
         return obj7;
       } else {
         closure_133_3 = value;
-        value2 = closure_134_5.get(closure_133_0);
+        const value2 = closure_134_5.get(closure_133_0);
         c2 = value2;
         let tmp35 = null;
         if (value2 == null) {

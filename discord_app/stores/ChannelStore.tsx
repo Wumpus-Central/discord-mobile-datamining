@@ -1,21 +1,21 @@
-// === Module 4991: ChannelStore ===
+// === Module 5092: ChannelStore ===
 
-// Module 4991 (ChannelStore)
+// Module 5092 (ChannelStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 5020 */;
-import ChannelReaderDefault from "ChannelReader" /* 5041 */;
-import deserializeChannels from "deserializeChannels" /* 5042 */;
-import isChangelogUserDefault from "isChangelogUser" /* 5043 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5121 */;
+import ChannelReaderDefault from "ChannelReader" /* 5142 */;
+import deserializeChannels from "deserializeChannels" /* 5143 */;
+import isChangelogUserDefault from "isChangelogUser" /* 5144 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 4992 */;
-import FavoriteStore from "FavoriteStore" /* 4994 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 5093 */;
+import FavoriteStore from "FavoriteStore" /* 5095 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 5013 */;
+import GuildStore from "GuildStore" /* 5114 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const deserializeChannelsDefault = deserializeChannels;
@@ -41,7 +41,7 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               closure_18.log("load returned null; early returning (guild: " + guild_id + ", database: " + databaseResult + ")");
             } else {
               [arr, tmp41] = result;
-              tmp4(5042)(arr);
+              tmp4(5143)(arr);
               if (Full !== tmp2.Basic) {
                 closure_35 = closure_35 + 1;
               }
@@ -490,17 +490,17 @@ function handleFavoritesUpdate() {
   }
 }
 function guildChannelCount(id) {
-  let length = null;
+  length = null;
   if (null != dependencyMap3[id]) {
     const _Object = Object;
     length = Object.keys(dependencyMap3[id]).length;
   }
   return length;
 }
-const ChannelRecord = fn(4995);
+const ChannelRecord = fn(5096);
 ({ createChannelRecordFromServer: metroImportDefault, isPrivate: closure_8, GUILD_CHANNEL_TYPES: closure_9, THREAD_CHANNEL_TYPES: closure_10, ALL_CHANNEL_TYPES: closure_11, castChannelRecord: closure_12 } = ChannelRecord);
 const ChannelTypes = fn(1072).ChannelTypes;
-const ChannelFlags = fn(4998).ChannelFlags;
+const ChannelFlags = fn(5099).ChannelFlags;
 let closure_18 = new LoggerDefault("ChannelStore");
 let closure_19 = {};
 let dependencyMap2 = {};
@@ -550,7 +550,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((item) => !set.has(item))) {
       dependencyMap = closure_32;
-      return tmp(5040).tryLoadOrResetCacheGatewayAsync("loadChannels", asyncGeneratorStep(async () => {
+      return tmp(5141).tryLoadOrResetCacheGatewayAsync("loadChannels", asyncGeneratorStep(async () => {
         if (c7 === 2) {
           c7 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -813,7 +813,7 @@ prototype2["getDebugInfo"] = function getDebugInfo() {
   const keys1 = Object.keys(dependencyMap);
   const sorted = keys1.sort(SnowflakeUtilsDefault.compare);
   obj.guildSizes = sorted.map((item) => {
-    let length = null;
+    length = null;
     if (null != dependencyMap[item]) {
       const _Object = Object;
       length = Object.keys(dependencyMap[item]).length;
@@ -835,7 +835,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
       dependencyMap = data_mode;
       if ("unavailable" === data_mode.data_mode) {
         const id2 = data_mode.id;
-        let length = null;
+        length = null;
         if (null != dependencyMap2[id2]) {
           const _Object2 = Object;
           length = Object.keys(dependencyMap2[id2]).length;

@@ -1,6 +1,6 @@
-// === Module 4972: UserSettingsProtoActionCreators ===
+// === Module 5073: UserSettingsProtoActionCreators ===
 
-// Module 4972 (UserSettingsProtoActionCreators)
+// Module 5073 (UserSettingsProtoActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import DurationsDefault from "Durations" /* 1089 */;
@@ -11,8 +11,8 @@ import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
 let obj2 = fn;
-function updateUserGuildSettings(guildId, arg1, INFREQUENT_USER_ACTION) {
-  closure_0 = guildId;
+function updateUserGuildSettings(id, arg1, INFREQUENT_USER_ACTION) {
+  closure_0 = id;
   closure_1 = arg1;
   return obj.updateAsync("guilds", async (guilds) => obj2(1233).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1), INFREQUENT_USER_ACTION);
 }
@@ -302,9 +302,9 @@ prototype["updateAsync"] = function updateAsync(favorites, update, INFREQUENT_US
           const obj = { value, done: true };
           return obj;
         } else {
-          protoFieldClass = tmp2(4973).getProtoFieldClass(closure_129_4.ProtoClass, closure_129_0);
+          protoFieldClass = tmp2(5074).getProtoFieldClass(closure_129_4.ProtoClass, closure_129_0);
           closure_128_1 = closure_129_4.getCurrentValue()[closure_129_0];
-          const obj6 = tmp2(4973);
+          const obj6 = tmp2(5074);
           closure_128_2 = obj6.createModifiedProto(closure_128_1, closure_129_1, protoFieldClass, closure_129_4.ProtoClass, closure_129_0);
           if (null != closure_128_2) {
             const logger = closure_129_4.logger;
@@ -573,11 +573,11 @@ prototype["scheduleSaveFromOfflineEdit"] = function scheduleSaveFromOfflineEdit(
 };
 function updateUserAllGuildSettings(arg0, INFREQUENT_USER_ACTION) {
   closure_0 = arg0;
-  return obj.updateAsync("guilds", async (arg0) => f88182(arg0), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f89065(arg0), INFREQUENT_USER_ACTION);
 }
 function setGuildThemeSourcePreferenceOverride(id, arg1) {
   closure_0 = id;
-  const f88171 = (arg0) => {
+  const f89054 = (arg0) => {
     arg0.guildThemeSourcePreference = guildThemeSourcePreference;
   };
   return obj.updateAsync("guilds", async (guilds) => obj2(1233).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1), UserSettingsDelay.INFREQUENT_USER_ACTION);
@@ -918,7 +918,7 @@ export { setGuildThemeSourcePreferenceOverride };
 export function clearGuildThemeSourcePreferenceOverride(guildThemeSourcePreference) {
   obj2(1196).GuildThemeSourcePreference.UNSPECIFIED;
   obj2 = guildThemeSourcePreference;
-  const f88171 = (arg0) => {
+  const f89054 = (arg0) => {
     arg0.guildThemeSourcePreference = guildThemeSourcePreference;
   };
   return obj.updateAsync("guilds", async (guilds) => obj2(1233).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1), UserSettingsDelay.INFREQUENT_USER_ACTION);
@@ -940,12 +940,12 @@ export function addDismissedContent(CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PRO
     }
     let hasBitResult = null != dismissedContents;
     if (hasBitResult) {
-      let obj = obj2(4974);
+      let obj = obj2(5075);
       hasBitResult = obj.hasBit(dismissedContents, CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE);
     }
     if (!hasBitResult) {
       obj2 = AnalyticsUtilsDefault;
-      const obj3 = { content_type: obj2(4975).DismissibleContent[CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE] };
+      const obj3 = { content_type: obj2(5076).DismissibleContent[CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE] };
       obj2.track(constants.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, obj3);
     }
   }
@@ -953,10 +953,10 @@ export function addDismissedContent(CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PRO
     if (obj.hasBit(dismissedContents.dismissedContents, closure_0)) {
       return false;
     } else {
-      dismissedContents.dismissedContents = obj2(4974).addBit(dismissedContents.dismissedContents, closure_0);
-      const tmpResult = obj2(4974);
+      dismissedContents.dismissedContents = obj2(5075).addBit(dismissedContents.dismissedContents, closure_0);
+      const tmpResult = obj2(5075);
     }
-    obj = obj2(4974);
+    obj = obj2(5075);
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 export { updateRecurringDismissibleContentState };
@@ -974,19 +974,19 @@ export function removeDismissedContent(DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL) {
   closure_0 = DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL;
   return obj.updateAsync("userContent", async (dismissedContents) => {
     if (obj.hasBit(dismissedContents.dismissedContents, closure_0)) {
-      dismissedContents.dismissedContents = obj2(4974).removeBit(dismissedContents.dismissedContents, closure_0);
-      const tmpResult = obj2(4974);
+      dismissedContents.dismissedContents = obj2(5075).removeBit(dismissedContents.dismissedContents, closure_0);
+      const tmpResult = obj2(5075);
     } else {
       return false;
     }
-    obj = obj2(4974);
+    obj = obj2(5075);
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 export function removeDismissedRecurringContent(GUILD_POWERUP_NOTIFICATION) {
   return updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
 }
 export function clearGuildDismissedContents() {
-  const f88182 = (guilds) => {
+  const f89065 = (guilds) => {
     if (null != guilds.guilds) {
       const _Object = Object;
       const values = Object.values(guilds.guilds);
@@ -1003,7 +1003,7 @@ export function clearGuildDismissedContents() {
       }
     }
   };
-  return obj.updateAsync("guilds", async (arg0) => f88182(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f89065(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 export function clearDismissedContents() {
   return obj.updateAsync("userContent", async (arg0) => {

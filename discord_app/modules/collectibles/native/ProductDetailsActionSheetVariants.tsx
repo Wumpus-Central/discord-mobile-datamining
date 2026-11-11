@@ -1,12 +1,12 @@
-// === Module 15348: ProductDetailsActionSheetVariants ===
+// === Module 15388: ProductDetailsActionSheetVariants ===
 
-// Module 15348 (ProductDetailsActionSheetVariants)
+// Module 15388 (ProductDetailsActionSheetVariants)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Pressables from "Pressables" /* 7046 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7369 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9627 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9664 */;
+import Pressables from "Pressables" /* 7364 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7831 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9452 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 10381 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,14 +39,14 @@ function VariantOption(arg0) {
   return React4(Pressables.PressableOpacity, obj2);
 }
 function VariantCheckmark(variant) {
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   const tmp = useIsVariantColorLightDefault(variant.variant);
   return React4(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE, size: "md" });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let obj2 = { container: { flex: 1, display: "flex", flexDirection: "column", marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 }, headerRow: null, variantsContainer: null, text: null };
 let obj3 = { flex: 1, display: "flex", flexDirection: "column", marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.headerRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -54,10 +54,10 @@ let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 obj2.variantsContainer = { display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj2.text = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
 let closure_6 = createStyles.createStyles(obj2);
-createStyles = fn(5142);
+createStyles = fn(5243);
 let closure_7 = createStyles.createStyles((arg0) => {
   const size = { width: 28, height: 28, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: null };
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   const obj = { variantOption: size, variantOptionInner: null };
   size.borderColor = arg0 ? colors.BUTTON_OUTLINE_PRIMARY_TEXT : colors.BORDER_STRONG;
   const size1 = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

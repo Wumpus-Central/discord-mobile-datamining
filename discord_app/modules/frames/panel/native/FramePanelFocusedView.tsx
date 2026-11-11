@@ -1,19 +1,19 @@
-// === Module 19558: FramePanelFocusedView ===
+// === Module 19747: FramePanelFocusedView ===
 
-// Module 19558 (FramePanelFocusedView)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11070 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 12450 */;
-import FrameStackLevel from "FrameStackLevel" /* 12454 */;
-import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 19061 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19538 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19555 */;
+// Module 19747 (FramePanelFocusedView)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 12653 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 13256 */;
+import FrameStackLevel from "FrameStackLevel" /* 13260 */;
+import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 19247 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19727 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19744 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6904 */;
+import FramesStore from "FramesStore" /* 6956 */;
 
 require = fn;
-const FramesConstants = fn(6905);
+const FramesConstants = fn(6957);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6 } = FramesConstants);
-const ActivityPanelModes = fn(5783).ActivityPanelModes;
+const ActivityPanelModes = fn(5896).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelFocusedView.tsx");

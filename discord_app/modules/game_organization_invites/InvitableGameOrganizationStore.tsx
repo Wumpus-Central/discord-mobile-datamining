@@ -1,11 +1,11 @@
-// === Module 11822: InvitableGameOrganizationStore ===
+// === Module 12445: InvitableGameOrganizationStore ===
 
-// Module 11822 (InvitableGameOrganizationStore)
+// Module 12445 (InvitableGameOrganizationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
-import GameOrganizationModels from "GameOrganizationModels" /* 11514 */;
-import fromServerGameOrganization from "fromServerGameOrganization" /* 11515 */;
+import GameOrganizationModels from "GameOrganizationModels" /* 12281 */;
+import fromServerGameOrganization from "fromServerGameOrganization" /* 12282 */;
 import size from "module_2" /* 2 */;
 
 function fromServerInvitableGameOrganization(game_organization) {

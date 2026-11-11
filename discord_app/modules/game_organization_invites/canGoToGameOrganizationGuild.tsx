@@ -1,6 +1,6 @@
-// === Module 13448: canGoToGameOrganizationGuild ===
+// === Module 13962: canGoToGameOrganizationGuild ===
 
-// Module 13448 (canGoToGameOrganizationGuild)
+// Module 13962 (canGoToGameOrganizationGuild)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/canGoToGameOrganizationGuild.tsx");

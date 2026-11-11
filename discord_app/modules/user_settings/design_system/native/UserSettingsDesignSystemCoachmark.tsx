@@ -1,9 +1,9 @@
-// === Module 18153: UserSettingsDesignSystemCoachmark ===
+// === Module 18324: UserSettingsDesignSystemCoachmark ===
 
-// Module 18153 (UserSettingsDesignSystemCoachmark)
-import LayerScope from "LayerScope" /* 5740 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7358 */;
-import _modDef18154 from "module_18154" /* 18154 */;
+// Module 18324 (UserSettingsDesignSystemCoachmark)
+import LayerScope from "LayerScope" /* 5853 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7351 */;
+import _modDef18325 from "module_18325" /* 18325 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -53,7 +53,7 @@ function Content() {
       buttonVariant: null,
       gradientColor: null
     };
-    const obj2 = { type: "image", src: { uri: _modDef18154 }, aspectRatio: first5 };
+    const obj2 = { type: "image", src: { uri: _modDef18325 }, aspectRatio: first5 };
     obj.graphic = obj2;
     obj.experimental_withBlurBackground = first1;
     let str2;
@@ -139,7 +139,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_10 = createStyles.createStyles({ container: { paddingTop: 240, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1, padding: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx");

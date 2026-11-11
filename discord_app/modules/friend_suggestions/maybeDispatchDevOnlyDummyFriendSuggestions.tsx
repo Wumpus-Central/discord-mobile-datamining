@@ -1,6 +1,6 @@
-// === Module 7886: maybeDispatchDevOnlyDummyFriendSuggestions ===
+// === Module 8702: maybeDispatchDevOnlyDummyFriendSuggestions ===
 
-// Module 7886 (maybeDispatchDevOnlyDummyFriendSuggestions)
+// Module 8702 (maybeDispatchDevOnlyDummyFriendSuggestions)
 import UserStore from "UserStore" /* 1385 */;
 
 const size = fn(2);

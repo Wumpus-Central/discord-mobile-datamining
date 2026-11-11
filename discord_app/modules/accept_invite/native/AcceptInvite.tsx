@@ -1,18 +1,18 @@
-// === Module 14589: AcceptInvite ===
+// === Module 14967: AcceptInvite ===
 
-// Module 14589 (AcceptInvite)
+// Module 14967 (AcceptInvite)
 import nativeDefault from "native" /* 575 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import useToken from "useToken" /* 5726 */;
-import FastImageDefault from "FastImage" /* 5844 */;
-import useEaseInEaseOutLayoutAnimationsDefault from "useEaseInEaseOutLayoutAnimations" /* 7661 */;
-import InviteDetailsDefault from "InviteDetails" /* 14590 */;
-import InviteErrorDefault from "InviteError" /* 14593 */;
-import _modDef14598 from "module_14598" /* 14598 */;
+import useToken from "useToken" /* 5839 */;
+import FastImageDefault from "FastImage" /* 5957 */;
+import useEaseInEaseOutLayoutAnimationsDefault from "useEaseInEaseOutLayoutAnimations" /* 14968 */;
+import InviteDetailsDefault from "InviteDetails" /* 14969 */;
+import InviteErrorDefault from "InviteError" /* 14972 */;
+import _modDef14977 from "module_14977" /* 14977 */;
 import noop from "module_19" /* 19 */;
 
 const module_1652 = _mod1652;
@@ -102,7 +102,7 @@ get_ActivityIndicator = fn(17);
 const InviteStates = fn(1072).InviteStates;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { parentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" }, imageStyle: null, cardContainer: null, cardContent: null, cardState: null, resolvingContainer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -115,7 +115,7 @@ obj2.cardContent = { padding: 16, flex: 1, justifyContent: "center", alignItems:
 obj2.cardState = { alignSelf: "stretch", alignItems: "center", justifyContent: "center" };
 obj2.resolvingContainer = { padding: 64 };
 let closure_8 = createStyles.createStyles(obj2);
-let closure_9 = module_1652.createAnimatedComponent(fn(7043).Card);
+let closure_9 = module_1652.createAnimatedComponent(fn(7381).Card);
 const constants = { LOADING: 0, [0]: "LOADING", DETAILS: 1, [1]: "DETAILS", ERROR: 2, [2]: "ERROR" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/accept_invite/native/AcceptInvite.tsx");
@@ -135,7 +135,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef14598;
+    let guildSplashSource = _modDef14977;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);

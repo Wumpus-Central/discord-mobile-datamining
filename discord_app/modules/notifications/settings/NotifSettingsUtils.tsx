@@ -1,18 +1,20 @@
-// === Module 15887: settings/NotifSettingsUtils ===
+// === Module 16046: settings/NotifSettingsUtils ===
 
-// Module 15887 (settings/NotifSettingsUtils)
+// Module 16046 (settings/NotifSettingsUtils)
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
-import notification_settings from "notification_settings" /* 15889 */;
+import notification_settings from "notification_settings" /* 16048 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15888 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 16047 */;
 
 const require = globalThis.__r;
 
 require = fn;
+let c5 = "no-radio-selection";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/NotifSettingsUtils.tsx");
 
+export const NO_RADIO_SELECTION = "no-radio-selection";
 export function b64ToDeclarativeSettingsProto(declarative_settings_proto) {
   return user_settings_UserSettingsUtils.b64ToProto(notification_settings.DeclarativeSettings, declarative_settings_proto);
 }
@@ -30,7 +32,11 @@ export function getNotifSettingToggleValue(arg0, result) {
         return optimisticSetting.toggle;
       } else {
         const iter = NotifSettingsProtoStore.getEffectiveSetting(arg0);
-        if (null != iter) {
+        value = undefined;
+        if (iter != null) {
+          value = iter.value;
+        }
+        if (typeof value === "boolean") {
           return iter.value;
         }
       }
@@ -69,7 +75,11 @@ export function useNotifSettingToggleValue(CALLS) {
         flag = optimisticSetting.toggle;
       } else {
         const iter = NotifSettingsProtoStore.getEffectiveSetting(closure_0);
-        if (null != iter) {
+        value = undefined;
+        if (iter != null) {
+          value = iter.value;
+        }
+        if (typeof value === "boolean") {
           flag = iter.value;
         }
       }
@@ -80,17 +90,75 @@ export function useNotifSettingToggleValue(CALLS) {
     return flag;
   }, items1);
 }
-export function useNotifSettingRadioValue(arg0) {
-  _require = arg0;
-  items = [NotifSettingsProtoStore];
-  const items1 = [arg0];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => NotifSettingsProtoStore.getSetting(closure_0), items1);
-  let num;
-  if (stateFromStores != null) {
-    num = stateFromStores.radio;
+export function getNotifSettingRadioValue(arg0, arg1) {
+  if (arg1) {
+    if (NotifSettingsProtoStore.hasValidEffectiveSettings) {
+      const setting = NotifSettingsProtoStore.getSetting(arg0);
+      if (null != setting) {
+        return setting.radio;
+      } else {
+        const iter = NotifSettingsProtoStore.getEffectiveSetting(arg0);
+        value = undefined;
+        if (iter != null) {
+          value = iter.value;
+        }
+        let value2;
+        if (typeof value === "number") {
+          value2 = iter.value;
+        }
+        return value2;
+      }
+    }
+  } else {
+    const setting1 = NotifSettingsProtoStore.getSetting(arg0);
+    let num;
+    if (setting1 != null) {
+      num = setting1.radio;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    return num;
   }
-  if (num == null) {
-    num = 0;
-  }
-  return num;
+}
+export function useNotifSettingRadioValue(REACTIONS_CHOICE) {
+  _require = REACTIONS_CHOICE;
+  isDeclarativeNotificationSettingsRedesignEnabled = require("DeclarativeNotificationSettingsRedesignExperiment").useIsDeclarativeNotificationSettingsRedesignEnabled("useNotifSettingRadioValue");
+  const obj = require("DeclarativeNotificationSettingsRedesignExperiment");
+  items = [NotifSettingsProtoStore, AuthenticationStore, UserSettingsProtoStore];
+  const items1 = [REACTIONS_CHOICE, isDeclarativeNotificationSettingsRedesignEnabled];
+  return require("initialize").useStateFromStores(items, () => {
+    if (isDeclarativeNotificationSettingsRedesignEnabled) {
+      if (NotifSettingsProtoStore.hasValidEffectiveSettings) {
+        const setting = NotifSettingsProtoStore.getSetting(closure_0);
+        if (null != setting) {
+          let num = setting.radio;
+        } else {
+          const iter = NotifSettingsProtoStore.getEffectiveSetting(closure_0);
+          value = undefined;
+          if (iter != null) {
+            value = iter.value;
+          }
+          let value2;
+          if (typeof value === "number") {
+            value2 = iter.value;
+          }
+          num = value2;
+        }
+      }
+    } else {
+      const setting1 = NotifSettingsProtoStore.getSetting(closure_0);
+      num = undefined;
+      if (setting1 != null) {
+        num = setting1.radio;
+      }
+      if (num == null) {
+        num = 0;
+      }
+    }
+    if (num == null) {
+      num = c5;
+    }
+    return num;
+  }, items1);
 }

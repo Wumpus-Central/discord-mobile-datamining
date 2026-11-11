@@ -1,8 +1,8 @@
-// === Module 5295: OrbsIllustration_HandsRive ===
+// === Module 5408: OrbsIllustration_HandsRive ===
 
-// Module 5295 (OrbsIllustration_HandsRive)
-import BaseRive from "BaseRive" /* 5209 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5262 */;
+// Module 5408 (OrbsIllustration_HandsRive)
+import BaseRive from "BaseRive" /* 5322 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5375 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

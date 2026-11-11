@@ -1,28 +1,28 @@
-// === Module 11563: UserProfilePrimaryInfo ===
+// === Module 15356: UserProfilePrimaryInfo ===
 
-// Module 11563 (UserProfilePrimaryInfo)
+// Module 15356 (UserProfilePrimaryInfo)
 import nativeDefault from "native" /* 575 */;
-import UserUtilsDefault from "UserUtils" /* 5196 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5839 */;
-import QuestTypes from "QuestTypes" /* 6842 */;
-import Pressables from "Pressables" /* 7046 */;
-import openUserSettings from "openUserSettings" /* 7638 */;
-import GuildTagUtils from "GuildTagUtils" /* 8813 */;
-import BadgeId from "BadgeId" /* 8832 */;
-import useBadges from "useBadges" /* 8895 */;
-import BotTagDefault from "BotTag" /* 9288 */;
-import GuildTagDefault from "GuildTag" /* 9381 */;
-import ClipView from "ClipView" /* 9599 */;
-import captureAdUserAction from "captureAdUserAction" /* 9781 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9784 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10900 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 11606 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11607 */;
-import BadgeUtils from "BadgeUtils" /* 11611 */;
+import QuestTypes from "QuestTypes" /* 5278 */;
+import UserUtilsDefault from "UserUtils" /* 5309 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
+import Pressables from "Pressables" /* 7364 */;
+import GuildTagUtils from "GuildTagUtils" /* 8343 */;
+import BadgeId from "BadgeId" /* 8414 */;
+import openUserSettings from "openUserSettings" /* 8537 */;
+import useBadges from "useBadges" /* 8541 */;
+import ClipView from "ClipView" /* 9437 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9998 */;
+import BadgeUtils from "BadgeUtils" /* 10046 */;
+import captureAdUserAction from "captureAdUserAction" /* 10068 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 10071 */;
+import GuildTagDefault from "GuildTag" /* 10587 */;
+import BotTagDefault from "BotTag" /* 10807 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 15161 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 15162 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8840 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8481 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -48,12 +48,12 @@ class DisplayName {
     renderBotTag = function renderBotTag() {
       if (user.isSystemUser()) {
         const obj2 = { style: closure_1.botTag, type: BotTagDefault.Types.SYSTEM_DM, verified: user.isVerifiedBot() };
-        let tmp = closure_2_15(BotTagDefault, obj2);
+        let tmp = colors(BotTagDefault, obj2);
       } else {
         tmp = null;
         if (user.bot) {
           const obj3 = { style: closure_1.botTag, type: BotTagDefault.Types.BOT, verified: user.isVerifiedBot() };
-          tmp = closure_2_15(BotTagDefault, obj3);
+          tmp = colors(BotTagDefault, obj3);
         }
       }
       return tmp;
@@ -160,13 +160,13 @@ class UserTagAndPronouns {
         return null;
       } else {
         const obj2 = { variant: textVariant, color: "mobile-text-heading-primary", lineClamp: 2, style: _undefined.text, children: userTag };
-        const tmp10 = closure_2_15(Text_Text.Text, obj2);
+        const tmp10 = colors(Text_Text.Text, obj2);
         if (null != onPressUserTag) {
           const obj3 = { onPress: tmp11, accessibilityRole: "button", accessibilityLabel: userTag, accessibilityHint: userTagAccessibilityHint, children: tmp10 };
-          let tmp5Result = closure_2_15(Pressables.PressableOpacity, obj3);
+          let tmp5Result = colors(Pressables.PressableOpacity, obj3);
         } else {
           const obj = { children: tmp10 };
-          tmp5Result = closure_2_15(timestampProducer, obj);
+          tmp5Result = colors(timestampProducer, obj);
         }
         return tmp5Result;
       }
@@ -395,7 +395,7 @@ function UnreadDotCutoutLayer(showDot) {
   const items1 = [tmp.cutoutLayerFill, showDot.style];
   obj2.style = items1;
   obj.children = closure_15(closure_6, obj2);
-  return closure_15(first(9599), obj);
+  return closure_15(first(9437), obj);
 }
 class ProfileBadgeRows {
   constructor(arg0) {
@@ -528,7 +528,7 @@ class ProfileBadgeRows {
       obj.badgeSize = badgeSize;
       obj.themeType = themeType;
       obj.showToastOnPress = flag;
-      return closure_2_15(ProfileBadge, obj, id.id);
+      return colors(ProfileBadge, obj, id.id);
     });
     closure_17 = mapped;
     if (isTryItOut) {
@@ -598,7 +598,7 @@ class ProfileBadgeRows {
           obj2.badgeSize = badgeSize;
           obj2.themeType = themeType;
           obj2.showToastOnPress = flag;
-          return closure_2_15(ProfileBadge, obj2, badge_id.badge_id);
+          return colors(ProfileBadge, obj2, badge_id.badge_id);
         });
       }
       if (mapped1 == null) {
@@ -753,7 +753,7 @@ class ProfileBadgeRows {
         const obj = { style: null, children };
         items = [badgeRow.badgeRow, { paddingHorizontal: badgeRowHorizontalPadding }, Text];
         obj.style = items;
-        return closure_2_15(timestampProducer, obj, index);
+        return colors(timestampProducer, obj, index);
       });
       return closure_15(badgeSize, obj37);
     }
@@ -799,25 +799,25 @@ function GuildTag(primaryGuildOverride) {
       obj4.textStyle = obj5;
       obj4.badgeSize = guildTagBadgeSize;
       obj4.textVariant = guildTagTextVariant;
-      obj2.children = closure_1_15(GuildTagDefault, obj4);
-      tmp10 = closure_1_15(timestampProducer, obj2);
+      obj2.children = colors(GuildTagDefault, obj4);
+      tmp10 = colors(timestampProducer, obj2);
     }
   }
   return tmp10;
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: closure_6, StyleSheet } = get_ActivityIndicator);
-const getBadgeName = fn(8831).getBadgeName;
-const Constants = fn(7440);
+const getBadgeName = fn(8413).getBadgeName;
+const Constants = fn(7896);
 ({ DIVIDER_DOT: closure_10, PROFILE_SIDE_PADDING: closure_11, UserProfileThemeTypes } = Constants);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const GuildTagBadgeSize = fn(8468).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8842).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8344).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8483).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
 let closure_19 = PX_6 + 4;
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let obj2 = { container: { flexDirection: "column" }, displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, displayNameText: { flexShrink: 1, minWidth: 0 }, details: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, detailsText: { flexDirection: "row", flexWrap: "wrap", alignContent: "center", paddingVertical: 2 }, botTag: { marginLeft: 4 }, guildTag: { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, columnGap: 4 }, transparentBackground: { backgroundColor: "transparent" }, badge: { resizeMode: "contain" }, badges: { alignSelf: "center", flexDirection: "column", justifyContent: "flex-start", rowGap: 8 }, badgeRow: null, limitedBadgeRow: null, unreadDot: null, cutoutEntry: null, cutoutLayer: null, cutoutLayerFill: null, addBadgesChip: null };
 let obj3 = { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, columnGap: 4 };
 obj2.badgeRow = { borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };
@@ -836,7 +836,7 @@ obj2.addBadgesChip = { flexDirection: "row", alignItems: "center", alignSelf: "c
 const dependencyMap = createStyles.createStyles(obj2);
 let closure_21 = { headingVariant: "heading-xl/semibold", textVariant: "body-md/normal", badgeSize: 20, badgeRowHorizontalPadding: 7, guildTagBadgeSize: GuildTagBadgeSize.SIZE_16, guildTagTextVariant: "body-sm/medium", guildTagHorizontalPadding: 8 };
 let dependencyMap2 = { [UserProfileThemeTypes.PREVIEW]: { headingVariant: "heading-lg/semibold", textVariant: "body-sm/normal", badgeSize: 16, badgeRowHorizontalPadding: 6, guildTagBadgeSize: GuildTagBadgeSize.SIZE_12, guildTagTextVariant: "body-xs/medium", guildTagHorizontalPadding: 6 } };
-createStyles = fn(5142);
+createStyles = fn(5243);
 dependencyMap2 = createStyles.createStyles((arg0) => {
   let sum = arg0;
   if (obj.isIOS()) {
@@ -875,23 +875,23 @@ export default function UserProfilePrimaryInfo(arg0) {
   obj5.displayNameAccessibilityRole = displayNameAccessibilityRole;
   obj5.showChevron = showChevron;
   obj5.pendingDisplayNameStyles = pendingDisplayNameStyles;
-  const items1 = [closure_1_15(DisplayName, obj5), ];
+  const items1 = [colors(DisplayName, obj5), ];
   const obj6 = { style: tmp.details, children: null };
   let tmp11 = null;
   if (!user.isProvisional) {
     tmp11 = userTag;
   }
-  const items2 = [closure_1_15(UserTagAndPronouns, { userTag: tmp11, pronouns, themeType, onPressUserTag, userTagAccessibilityHint, onPressPronouns, pronounsAccessibilityHint }), closure_1_15(GuildTag, { user, themeType, style: obj, showToastOnPress: showBadgeToastOnPress, primaryGuildOverride }), ];
+  const items2 = [colors(UserTagAndPronouns, { userTag: tmp11, pronouns, themeType, onPressUserTag, userTagAccessibilityHint, onPressPronouns, pronounsAccessibilityHint }), colors(GuildTag, { user, themeType, style: obj, showToastOnPress: showBadgeToastOnPress, primaryGuildOverride }), ];
   let tmp6Result = !hideBadges;
   if (!hideBadges) {
     const obj7 = { userId: user.id, badges, catalogBadges, canOpenBadgeDirectory, badgeDirectoryEntryPointRef, onOpenBadgeDirectory, style: obj, themeType, showToastOnPress: showBadgeToastOnPress };
-    tmp6Result = closure_1_15(ProfileBadgeRows, obj7);
+    tmp6Result = colors(ProfileBadgeRows, obj7);
   }
   items2[2] = tmp6Result;
   obj6.children = items2;
-  items1[1] = value2(timestampProducer, obj6);
+  items1[1] = closure_1_16(timestampProducer, obj6);
   obj4.children = items1;
-  return value2(timestampProducer, obj4);
+  return closure_1_16(timestampProducer, obj4);
 };
 export { DisplayName };
 export { UserTagAndPronouns };

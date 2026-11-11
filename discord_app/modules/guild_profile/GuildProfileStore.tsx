@@ -1,11 +1,11 @@
-// === Module 9132: GuildProfileStore ===
+// === Module 8091: GuildProfileStore ===
 
-// Module 9132 (GuildProfileStore)
+// Module 8091 (GuildProfileStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
-import GuildProfileBuilders from "GuildProfileBuilders" /* 6981 */;
+import GuildProfileBuilders from "GuildProfileBuilders" /* 7621 */;
 import size from "module_2" /* 2 */;
 
 function handleUpdateStart(guildId) {
@@ -189,7 +189,7 @@ const guildProfileStore = new GuildProfileStore(DispatcherDefault, {
       value.succeed();
     }
     map1.delete(guildId);
-    value2 = map.get(guildId);
+    const value2 = map.get(guildId);
     if (null == value2) {
       const obj2 = {};
       const merged = Object.assign(closure_7);
@@ -219,7 +219,7 @@ const guildProfileStore = new GuildProfileStore(DispatcherDefault, {
       value = tmp5;
     }
     const sum = Date.now() + value.fail();
-    value2 = map.get(guildId);
+    const value2 = map.get(guildId);
     if (null == value2) {
       const obj2 = {};
       const merged = Object.assign(closure_7);

@@ -1,17 +1,17 @@
-// === Module 10153: EmojiPickerListRow ===
+// === Module 11213: EmojiPickerListRow ===
 
-// Module 10153 (EmojiPickerListRow)
+// Module 11213 (EmojiPickerListRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import native from "native" /* 1187 */;
 import PlatformUtils2 from "PlatformUtils" /* 1377 */;
-import shared from "shared" /* 5149 */;
-import FastImageDefault from "FastImage" /* 5844 */;
-import Pressables from "Pressables" /* 7046 */;
-import _modDef7368 from "module_7368" /* 7368 */;
-import LockIcon from "LockIcon" /* 8744 */;
-import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 10154 */;
-import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 10155 */;
+import shared from "shared" /* 5250 */;
+import FastImageDefault from "FastImage" /* 5957 */;
+import Pressables from "Pressables" /* 7364 */;
+import _modDef7830 from "module_7830" /* 7830 */;
+import LockIcon from "LockIcon" /* 8027 */;
+import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 11214 */;
+import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 11215 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -92,12 +92,12 @@ class EmojiItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(10070);
+const EmojiPickerListConstants = fn(9480);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1228).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, surrogates: null, row: null, lockContainer: null, lock: null };
 const PlatformUtils = fn(1377);
 let num = 28;

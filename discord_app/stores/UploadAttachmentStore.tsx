@@ -1,12 +1,12 @@
-// === Module 8281: UploadAttachmentStore ===
+// === Module 8806: UploadAttachmentStore ===
 
-// Module 8281 (UploadAttachmentStore)
+// Module 8806 (UploadAttachmentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import DraftStore from "DraftStore" /* 7780 */;
-import CloudUpload from "CloudUpload" /* 8282 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8292 */;
+import DraftStore from "DraftStore" /* 8658 */;
+import CloudUpload from "CloudUpload" /* 8807 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8811 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -26,7 +26,7 @@ prototype["getFirstUpload"] = function getFirstUpload(arg0, arg1) {
     const _Map = Map;
     map = new Map();
   }
-  value2 = undefined;
+  let value2;
   if (map != null) {
     value2 = map.get(arg1);
   }
@@ -45,7 +45,7 @@ prototype["hasAdditionalUploads"] = function hasAdditionalUploads(arg0, arg1) {
     const _Map = Map;
     map = new Map();
   }
-  value2 = undefined;
+  let value2;
   if (map != null) {
     value2 = map.get(arg1);
   }
@@ -64,7 +64,7 @@ prototype["getUploads"] = function getUploads(id, ChannelMessage) {
     const _Map = Map;
     map = new Map();
   }
-  value2 = undefined;
+  let value2;
   if (map != null) {
     value2 = map.get(ChannelMessage);
   }
@@ -79,7 +79,7 @@ prototype["getUploadCount"] = function getUploadCount(c0, ChannelMessage) {
     const _Map = Map;
     map = new Map();
   }
-  value2 = undefined;
+  let value2;
   if (map != null) {
     value2 = map.get(ChannelMessage);
   }
@@ -99,7 +99,7 @@ prototype["getUpload"] = function getUpload(channelId, id, ChannelMessage) {
     const _Map = Map;
     map = new Map();
   }
-  value2 = undefined;
+  let value2;
   if (map != null) {
     value2 = map.get(ChannelMessage);
   }
@@ -114,7 +114,7 @@ prototype["findUpload"] = function findUpload(id, ChannelMessage, arg2) {
     const _Map = Map;
     map = new Map();
   }
-  value2 = undefined;
+  let value2;
   if (map != null) {
     value2 = map.get(ChannelMessage);
   }

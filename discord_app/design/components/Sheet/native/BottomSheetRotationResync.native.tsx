@@ -1,8 +1,8 @@
-// === Module 5739: BottomSheetRotationResync ===
+// === Module 5852: BottomSheetRotationResync ===
 
-// Module 5739 (BottomSheetRotationResync)
-import BottomSheetSnapPoints from "BottomSheetSnapPoints" /* 5393 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5422 */;
+// Module 5852 (BottomSheetRotationResync)
+import BottomSheetSnapPoints from "BottomSheetSnapPoints" /* 5506 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -42,7 +42,7 @@ export function BottomSheetRotationResync(bottomSheetRef) {
     if (!_undefined2.current) {
       value = _undefined4.get();
       if (value !== LegacyBaseButton.State.ACTIVE) {
-        value2 = animatedHandleGestureState.get();
+        const value2 = animatedHandleGestureState.get();
         if (value2 !== LegacyBaseButton.State.ACTIVE) {
           const obj = { settledIndex: sharedValue.get(), wasAtHighestSnapPoint: sharedValue1.get(), snapPointCount: _undefined3.get().length };
           const rotationResyncIndex = BottomSheetSnapPoints.getRotationResyncIndex(obj);

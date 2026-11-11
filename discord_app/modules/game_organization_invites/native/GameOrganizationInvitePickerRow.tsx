@@ -1,27 +1,27 @@
-// === Module 11818: GameOrganizationInvitePickerRow ===
+// === Module 12474: GameOrganizationInvitePickerRow ===
 
-// Module 11818 (GameOrganizationInvitePickerRow)
+// Module 12474 (GameOrganizationInvitePickerRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2530 from "module_2530" /* 2530 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import FastImageDefault from "FastImage" /* 5844 */;
-import Stack_Stack from "Stack/Stack" /* 6161 */;
-import TableRow from "TableRow" /* 7041 */;
-import _modDef7402 from "module_7402" /* 7402 */;
-import GroupIcon from "GroupIcon" /* 8738 */;
-import InviteButtonDefault from "InviteButton" /* 9290 */;
-import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 11819 */;
+import _modDef2549 from "module_2549" /* 2549 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import FastImageDefault from "FastImage" /* 5957 */;
+import Stack_Stack from "Stack/Stack" /* 6274 */;
+import GroupIcon from "GroupIcon" /* 7372 */;
+import TableRow from "TableRow" /* 7379 */;
+import _modDef7862 from "module_7862" /* 7862 */;
+import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 12476 */;
+import InviteButtonDefault from "InviteButton" /* 12477 */;
 import noop from "module_19" /* 19 */;
 
 const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSendStateKey;
 
 require = fn;
-let closure_4 = fn(9285).useInstantInviteSendStates;
-const InviteSendStates = fn(7960).InviteSendStates;
+let closure_4 = fn(12475).useInstantInviteSendStates;
+const InviteSendStates = fn(8776).InviteSendStates;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { icon: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, borderRadius: nativeDefault.radii.md };
 obj.icon = size;
@@ -52,7 +52,7 @@ export default noop.memo(function GameOrganizationInvitePickerRow(organization) 
     const obj2 = { uri: organization.iconUrl };
     let tmp2Result = obj2;
   } else {
-    tmp2Result = _modDef7402;
+    tmp2Result = _modDef7862;
   }
   const obj3 = { icon: timestampProducer(FastImageDefault, { source: tmp2Result, style: tmp.icon }), label: organization.name, subLabel: null, trailing: null, onPress: null, disabled: null };
   let tmp11;
@@ -64,7 +64,7 @@ export default noop.memo(function GameOrganizationInvitePickerRow(organization) 
       const obj7 = { variant: "body-xs/medium", color: "text-muted", children: null };
       const intl = util.intl;
       const obj8 = { count: memberCount, max: maxMembers };
-      obj7.children = intl.formatToPlainString(_modDef2530.VuENGl, obj8);
+      obj7.children = intl.formatToPlainString(_modDef2549.VuENGl, obj8);
       items1[1] = timestampProducer(Text_Text.Text, obj7);
       obj5.children = items1;
       tmp11 = metroImportDefault(Stack_Stack.Stack, obj5);

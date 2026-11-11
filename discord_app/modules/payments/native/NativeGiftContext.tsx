@@ -1,31 +1,31 @@
-// === Module 10690: NativeGiftContext ===
+// === Module 11603: NativeGiftContext ===
 
-// Module 10690 (NativeGiftContext)
+// Module 11603 (NativeGiftContext)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import BillingUtils from "BillingUtils" /* 4955 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6093 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7415 */;
-import ContextUtilsDefault from "ContextUtils" /* 7692 */;
-import BadgeId from "BadgeId" /* 8832 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8845 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10688 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10741 */;
+import BillingUtils from "BillingUtils" /* 5055 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6206 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
+import BadgeId from "BadgeId" /* 8414 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8486 */;
+import ContextUtilsDefault from "ContextUtils" /* 9530 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 9618 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 11613 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8840 */;
-import PromotionsStore from "PromotionsStore" /* 9720 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10691 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8481 */;
+import PromotionsStore from "PromotionsStore" /* 9557 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 11604 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-fn(7677).GPlayBillingResult;
+fn(9237).GPlayBillingResult;
 const PremiumConstants = fn(1387);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 const PaymentGateways = fn(1083).PaymentGateways;
@@ -278,7 +278,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     closure_130_10 = tmp5;
     closure_130_11 = tmp9;
     closure_130_12 = tmp26;
-    let obj6 = { orderId: "a", planId: "flexDirection", planSelection: "container", giftInfo: "conjure.town" };
+    let obj6 = { orderId: "a", planId: "flexDirection", planSelection: "st", giftInfo: "192px" };
     let obj7 = { premiumType, planInterval: first1 };
     obj6.planSelection = obj7;
     closure_130_13 = obj.useRef(obj6);
@@ -961,10 +961,10 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
         obj7.title = intl.string(closure_0(1113).t.R0RpRX);
         const intl2 = closure_0(1113).intl;
         obj7.body = intl2.string(closure_0(1113).t.CKsXk3);
-        tmp3(6093).show(obj7);
+        tmp3(6206).show(obj7);
         closure_129_2();
         c4 = 3;
-        tmp3(6093);
+        tmp3(6206);
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
@@ -1112,7 +1112,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                             closure_1 = closure_1_27;
                             c6 = 2;
                             c7 = 1;
-                            return { value: closure_2_0(7693).cancelOrderSigning(closure_2_1), done: false };
+                            return { value: closure_2_0(9531).cancelOrderSigning(closure_2_1), done: false };
                           }
                         }
                       }
@@ -1124,9 +1124,9 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                       closure_130_0 = closure_5;
                       const obj8 = { tags: { source: "NativeGiftContext_cancelOrderSigning" }, extra: null };
                       obj8.extra = { skuId, orderId: closure_131_1 };
-                      const result = closure_2_0(4955).captureBillingException(closure_130_0, obj8);
+                      const result = closure_2_0(5055).captureBillingException(closure_130_0, obj8);
                       logger.error("Failed to cancel order signing", { error: closure_130_0, skuId, orderId: closure_131_1 });
-                      closure_2_0(4955);
+                      closure_2_0(5055);
                     } else if (arg0 === 1) {
                       c7 = 3;
                       throw value;

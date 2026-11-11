@@ -1,15 +1,15 @@
-// === Module 7391: useStartAuthorize ===
+// === Module 7853: useStartAuthorize ===
 
-// Module 7391 (useStartAuthorize)
+// Module 7853 (useStartAuthorize)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import LinkingDefault from "Linking" /* 5836 */;
+import LinkingDefault from "Linking" /* 5949 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AuthorizeFlow = fn(7392).AuthorizeFlow;
+const AuthorizeFlow = fn(7854).AuthorizeFlow;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");
@@ -114,7 +114,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
           const obj8 = { location_stack: closure_129_0.analyticsLocations, application_id: closure_0.id, flow_type: constants.WEB };
           AnalyticsUtilsDefault.track(constants2.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj8);
           const obj9 = { onSuccess: closure_129_0.onSuccess, onError: closure_129_0.onError };
-          const result = closure_0(7397).accountLinkAuthorizationStarted(closure_0.id, obj9);
+          const result = closure_0(7857).accountLinkAuthorizationStarted(closure_0.id, obj9);
           c4 = 0;
           c6 = 3;
           return { value: true, done: true };

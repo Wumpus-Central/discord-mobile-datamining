@@ -1,6 +1,6 @@
-// === Module 17369: OrbsArcadeTypes ===
+// === Module 17535: OrbsArcadeTypes ===
 
-// Module 17369 (OrbsArcadeTypes)
+// Module 17535 (OrbsArcadeTypes)
 import _slicedToArray from "module_32" /* 32 */;
 
 function _rewardFromServer(type) {
@@ -16,7 +16,7 @@ function _rewardFromServer(type) {
   }
 }
 function orbsArcadeGameFromServer(game) {
-  obj = { id: game.id, versionId: game.version_id, applicationId: game.application_id, name: game.name, instructions: game.instructions, startsAt: game.starts_at, endsAt: game.ends_at, orbCost: game.orb_cost, numFreePlays: game.num_free_plays, windowDurationHours: game.window_duration_hours, windowStartsAt: game.window_starts_at, windowEndsAt: game.window_ends_at, enrollmentClosesAt: game.enrollment_closes_at, asset: game.asset, heroVideoAsset: null, rewards: null };
+  obj = { id: game.id, versionId: game.version_id, applicationId: game.application_id, name: game.name, instructions: game.instructions, startsAt: game.starts_at, endsAt: game.ends_at, orbCost: game.orb_cost, numFreePlays: game.num_free_plays, windowDurationHours: game.window_duration_hours, windowStartsAt: game.window_starts_at, windowEndsAt: game.window_ends_at, enrollmentClosesAt: game.enrollment_closes_at, asset: game.asset, heroVideoAsset: null, sheetVideoAsset: null, rewards: null };
   let tmp = null;
   if (null != game.hero_video_asset) {
     const size = { url: null, altText: null, mimeType: null, width: null, height: null };
@@ -24,6 +24,13 @@ function orbsArcadeGameFromServer(game) {
     tmp = size;
   }
   obj.heroVideoAsset = tmp;
+  let tmp2 = null;
+  if (null != game.sheet_video_asset) {
+    const size1 = { url: null, altText: null, mimeType: null, width: null, height: null };
+    ({ url: obj3.url, alt_text: obj3.altText, mime_type: obj3.mimeType, width: obj3.width, height: obj3.height } = game.sheet_video_asset);
+    tmp2 = size1;
+  }
+  obj.sheetVideoAsset = tmp2;
   const rewards = game.rewards;
   obj.rewards = rewards.map(_rewardFromServer);
   return obj;

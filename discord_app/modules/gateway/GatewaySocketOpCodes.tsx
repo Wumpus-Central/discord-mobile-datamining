@@ -1,9 +1,9 @@
-// === Module 15848: GatewaySocketOpCodes ===
+// === Module 16007: GatewaySocketOpCodes ===
 
-// Module 15848 (GatewaySocketOpCodes)
+// Module 16007 (GatewaySocketOpCodes)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import GatewaySocketOpcode from "GatewaySocketOpcode" /* 2128 */;
-import RTCRegionStore from "RTCRegionStore" /* 5994 */;
+import RTCRegionStore from "RTCRegionStore" /* 6107 */;
 
 require = fn;
 const EventEmitter = fn(568).EventEmitter;
@@ -96,7 +96,7 @@ prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscr
   const keys = SnowflakeUtilsDefault.keys(subscriptions);
   const item = keys.forEach((item) => {
     items = [item, subscriptions[item]];
-    const length = JSON.stringify(items).length;
+    length = JSON.stringify(items).length;
     if (closure_0 + length > 15360) {
       const obj = { subscriptions: subscriptions2 };
       self.send(GatewaySocketOpcode.Opcode.GUILD_SUBSCRIPTIONS_BULK, obj);

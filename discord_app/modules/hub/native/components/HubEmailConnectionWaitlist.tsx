@@ -1,6 +1,6 @@
-// === Module 14610: HubEmailConnectionWaitlist ===
+// === Module 14989: HubEmailConnectionWaitlist ===
 
-// Module 14610 (HubEmailConnectionWaitlist)
+// Module 14989 (HubEmailConnectionWaitlist)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 16 }, title: { fontFamily: fn(1072).Fonts.PRIMARY_BOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 16 }, redesignButton: { paddingHorizontal: 16, width: "100%" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -26,16 +26,16 @@ export default function HubEmailConnectionWaitlist(school) {
         const intl = onClose(1113).intl;
         obj.text = intl.string(onClose(1113).t.cpT0Cq);
         obj.onPress = onPress;
-        return closure_2_5(onClose(7633).HeaderActionButton, obj);
+        return closure_2_5(onClose(7363).HeaderActionButton, obj);
       }
     });
   }, items);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null };
   let obj = onClose(1499);
-  obj3.source = navigation(14611);
+  obj3.source = navigation(14990);
   obj3.style = tmp.header;
-  const items1 = [closure_5(navigation(5844), obj3), , , ];
+  const items1 = [closure_5(navigation(5957), obj3), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1113).intl;
   obj4.children = intl.string(onClose(1113).t.OaloU5);
@@ -43,13 +43,13 @@ export default function HubEmailConnectionWaitlist(school) {
   const obj5 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
   const intl2 = onClose(1113).intl;
   obj5.children = intl2.format(onClose(1113).t.Rs7MXJ, { school: school.school });
-  items1[2] = closure_5(onClose(5753).Text, obj5);
+  items1[2] = closure_5(onClose(5866).Text, obj5);
   const obj6 = { style: tmp.redesignButton, children: null };
   const obj7 = { size: "lg", text: null, onPress: null };
   const intl3 = onClose(1113).intl;
   obj7.text = intl3.string(onClose(1113).t.i4jeWR);
   obj7.onPress = onClose;
-  obj6.children = closure_5(onClose(5760).Button, obj7);
+  obj6.children = closure_5(onClose(5873).Button, obj7);
   items1[3] = closure_5(View, obj6);
   obj2.children = items1;
   return closure_6(View, obj2);

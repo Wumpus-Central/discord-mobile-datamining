@@ -1,6 +1,6 @@
-// === Module 6535: ? ===
+// === Module 6648: ? ===
 
-// Module 6535
+// Module 6648
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/wearable/cat_backpack.png.js");

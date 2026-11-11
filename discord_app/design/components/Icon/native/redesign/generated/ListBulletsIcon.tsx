@@ -1,9 +1,9 @@
-// === Module 20150: ListBulletsIcon ===
+// === Module 20345: ListBulletsIcon ===
 
-// Module 20150 (ListBulletsIcon)
+// Module 20345 (ListBulletsIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod20151 from "module_20151" /* 20151 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod20346 from "module_20346" /* 20346 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ListBulletsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod20151, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod20346, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

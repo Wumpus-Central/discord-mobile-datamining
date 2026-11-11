@@ -1,9 +1,9 @@
-// === Module 18190: useFeedBlockSkuIds ===
+// === Module 18361: useFeedBlockSkuIds ===
 
-// Module 18190 (useFeedBlockSkuIds)
-import ShopHomeSortType from "ShopHomeSortType" /* 18191 */;
+// Module 18361 (useFeedBlockSkuIds)
+import ShopHomeSortType from "ShopHomeSortType" /* 18362 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6799 */;
+import ConsentStore from "ConsentStore" /* 6783 */;
 
 const require = globalThis.__r;
 

@@ -1,10 +1,10 @@
-// === Module 13926: EmojiCube ===
+// === Module 14403: EmojiCube ===
 
-// Module 13926 (EmojiCube)
+// Module 14403 (EmojiCube)
 import nativeDefault from "native" /* 575 */;
-import EmojiDefault from "Emoji" /* 7366 */;
+import EmojiDefault from "Emoji" /* 7828 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 
 const require = fn;
 function createFaceTransforms(items, items2, items1) {
@@ -40,8 +40,8 @@ const importDefaultResultResult = _slicedToArray(createFaceTransforms(items, ite
 [tmp7, tmp8] = createFaceTransforms(items1, items2, items4);
 const importDefaultResultResult1 = _slicedToArray(createFaceTransforms(items1, items2, items4), 2);
 [tmp10, tmp11] = createFaceTransforms(items, items2, items1);
-const createStyles = fn(5142);
-let obj2 = { container: { position: "relative", width: 200, height: 200 }, face: { position: "absolute", top: 0, left: 0, width: 200, height: 200 }, emoji: { position: "absolute", top: 0, left: 0, width: 200, height: 200, borderWidth: 2, borderColor: fn(6201).CHECKPOINT_PRIMARY, overflow: "hidden" }, customEmoji: { width: 196, height: 196 }, textEmoji: null, topFace: null, leftFace: null, rightFace: null, topEmoji: null, leftEmoji: null, rightEmoji: null };
+const createStyles = fn(5243);
+let obj2 = { container: { position: "relative", width: 200, height: 200 }, face: { position: "absolute", top: 0, left: 0, width: 200, height: 200 }, emoji: { position: "absolute", top: 0, left: 0, width: 200, height: 200, borderWidth: 2, borderColor: fn(6314).CHECKPOINT_PRIMARY, overflow: "hidden" }, customEmoji: { width: 196, height: 196 }, textEmoji: null, topFace: null, leftFace: null, rightFace: null, topEmoji: null, leftEmoji: null, rightEmoji: null };
 let PlatformUtils = fn(1357);
 let num = 196;
 if (PlatformUtils.isIOS()) {
@@ -72,7 +72,7 @@ export default function EmojiCube(emoji) {
   items = [AccessibilityStore];
   const stateFromStores = emoji(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = emoji(504);
-  const result = emoji(13895).useCheckpointScreenFrame().width / 392;
+  const result = emoji(14163).useCheckpointScreenFrame().width / 392;
   let emojiURL;
   if (null != emoji.id) {
     const obj4 = { id: emoji.id, animated: null, size: null };

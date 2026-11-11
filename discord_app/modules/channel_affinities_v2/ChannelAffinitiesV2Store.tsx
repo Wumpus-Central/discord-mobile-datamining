@@ -1,9 +1,9 @@
-// === Module 18715: ChannelAffinitiesV2Store ===
+// === Module 18905: ChannelAffinitiesV2Store ===
 
-// Module 18715 (ChannelAffinitiesV2Store)
+// Module 18905 (ChannelAffinitiesV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelAffinitiesV2Constants from "ChannelAffinitiesV2Constants" /* 18716 */;
+import ChannelAffinitiesV2Constants from "ChannelAffinitiesV2Constants" /* 18906 */;
 import size from "module_2" /* 2 */;
 
 const CHANNEL_AFFINITY_V2_TTL = ChannelAffinitiesV2Constants.CHANNEL_AFFINITY_V2_TTL;
@@ -55,7 +55,7 @@ prototype["compare"] = function compare(arg0, arg1) {
   if (num == null) {
     num = 0;
   }
-  value2 = map.get(arg0);
+  const value2 = map.get(arg0);
   let num2;
   if (value2 != null) {
     num2 = value2.score;

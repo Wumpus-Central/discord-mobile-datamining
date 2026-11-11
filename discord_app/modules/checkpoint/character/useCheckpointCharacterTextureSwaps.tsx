@@ -1,6 +1,6 @@
-// === Module 13889: useCheckpointCharacterTextureSwaps ===
+// === Module 14370: useCheckpointCharacterTextureSwaps ===
 
-// Module 13889 (useCheckpointCharacterTextureSwaps)
+// Module 14370 (useCheckpointCharacterTextureSwaps)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

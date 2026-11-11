@@ -1,16 +1,16 @@
-// === Module 10668: MediaKeyboardList ===
+// === Module 11582: MediaKeyboardList ===
 
-// Module 10668 (MediaKeyboardList)
+// Module 11582 (MediaKeyboardList)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8036 */;
-import openPrivacySettingsDefault from "openPrivacySettings" /* 8037 */;
-import DeviceMediaDefault from "DeviceMedia" /* 10669 */;
-import MediaKeyboardItem from "MediaKeyboardItem" /* 10673 */;
-import MediaKeyboardFooterDefault from "MediaKeyboardFooter" /* 10680 */;
-import MediaKeyboardLimitedPickerNoticeDefault from "MediaKeyboardLimitedPickerNotice" /* 10682 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8133 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 8134 */;
+import DeviceMediaDefault from "DeviceMedia" /* 11583 */;
+import MediaKeyboardItem from "MediaKeyboardItem" /* 11587 */;
+import MediaKeyboardFooterDefault from "MediaKeyboardFooter" /* 11594 */;
+import MediaKeyboardLimitedPickerNoticeDefault from "MediaKeyboardLimitedPickerNotice" /* 11596 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DimensionsStore from "DimensionsStore" /* 1494 */;
@@ -22,11 +22,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 let closure_6 = fn(1623).InAppCameraUsedCameraPreviewTypes;
-let closure_7 = fn(5391).ACTION_SHEET_START_HEIGHT_RATIO;
-const NativePermissionStatus = fn(8013).NativePermissionStatus;
+let closure_7 = fn(5504).ACTION_SHEET_START_HEIGHT_RATIO;
+const NativePermissionStatus = fn(6839).NativePermissionStatus;
 const jsx = fn(21).jsx;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PhotoLibraryHelper);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { listContainer: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, marginTop: 8, paddingTop: 8 } };
 let closure_11 = createStyles.createStyles(obj);
 let closure_12 = { code: "(function MediaKeyboardListTsx1(){let[animatedIndex]=this.__closure;return animatedIndex.get();})" };
@@ -217,8 +217,8 @@ export default noop.memo(function MediaKeyboardList(channel) {
   const animatedReaction1 = require("module_1652").useAnimatedReaction(MediaKeyboardListTsx1, MediaKeyboardListTsx2);
   const tmp9Result5 = require("module_1652");
   if (flag) {
-    flag = tmp9(8296).isImageCaptureIntentSupported();
-    const tmp9Result6 = tmp9(8296);
+    flag = tmp9(8815).isImageCaptureIntentSupported();
+    const tmp9Result6 = tmp9(8815);
   }
   let num;
   if (assets != null) {
@@ -351,16 +351,16 @@ export default noop.memo(function MediaKeyboardList(channel) {
     obj8.onScroll = callback;
     const intl = tmp9(1113).intl;
     obj8.accessibilityLabel = intl.string(tmp9(1113).t.XONG6A);
-    obj8.footerSize = tmp9(10680).FOOTER_HEIGHT;
+    obj8.footerSize = tmp9(11594).FOOTER_HEIGHT;
     obj8.renderFooter = callback4;
     obj8.chunkBase = minimum;
     let prop;
     if (!tmp28) {
-      prop = tmp9(7307).MINIMUM_BATCHES_TO_RENDER;
+      prop = tmp9(7781).MINIMUM_BATCHES_TO_RENDER;
     }
     obj8.batchesToRender = prop;
-    mediaEmptyStateComponentOrNull = extensions(tmp6(7307), obj8);
-    let tmp6Result = tmp6(7307);
+    mediaEmptyStateComponentOrNull = extensions(tmp6(7781), obj8);
+    let tmp6Result = tmp6(7781);
   }
   return mediaEmptyStateComponentOrNull;
 });

@@ -1,15 +1,15 @@
-// === Module 15620: PremiumMarketingButtonActions ===
+// === Module 9950: PremiumMarketingButtonActions ===
 
-// Module 15620 (PremiumMarketingButtonActions)
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7415 */;
-import openUserSettings from "openUserSettings" /* 7638 */;
-import ProductIds from "ProductIds" /* 7672 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7686 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7798 */;
-import cta_button from "cta_button" /* 9729 */;
-import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 15621 */;
-import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 15622 */;
-import PromotionsStore from "PromotionsStore" /* 9720 */;
+// Module 9950 (PremiumMarketingButtonActions)
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8418 */;
+import ProductIds from "ProductIds" /* 8514 */;
+import openUserSettings from "openUserSettings" /* 8537 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9524 */;
+import cta_button from "cta_button" /* 9566 */;
+import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 9951 */;
+import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 9953 */;
+import PromotionsStore from "PromotionsStore" /* 9557 */;
 
 const require = globalThis.__r;
 

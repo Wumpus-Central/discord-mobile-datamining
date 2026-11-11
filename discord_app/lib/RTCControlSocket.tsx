@@ -6,25 +6,54 @@ import _modDef38 from "module_38" /* 38 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import TimeUtils from "TimeUtils" /* 5903 */;
-import DaveMessageValidator from "DaveMessageValidator" /* 6091 */;
+import TimeUtils from "TimeUtils" /* 6016 */;
+import DaveMessageValidator from "DaveMessageValidator" /* 6204 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1359 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 5923 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 6036 */;
 
 require = fn;
 function noop() {
 
 }
-const Constants = fn(5899);
+function convertStreamParametersFromWire(streams) {
+  let mapped;
+  if (streams != null) {
+    mapped = streams.map((rid) => {
+      const type = rid.type;
+      if ("audio" === type) {
+        let VIDEO = constants.AUDIO;
+      } else if ("test" === type) {
+        VIDEO = constants.TEST;
+      } else if ("screen" === type) {
+        VIDEO = constants.SCREEN;
+      } else {
+        VIDEO = constants.VIDEO;
+      }
+      const obj = { type: VIDEO, rid: rid.rid, ssrc: rid.ssrc, rtxSsrc: rid.rtx_ssrc, active: rid.active, quality: rid.quality, maxBitrate: rid.max_bitrate, maxFrameRate: rid.max_framerate, maxResolution: null };
+      let tmp5;
+      if (null != rid.max_resolution) {
+        const size = { type: rid.max_resolution.type, width: rid.max_resolution.width, height: rid.max_resolution.height };
+        tmp5 = size;
+      }
+      obj.maxResolution = tmp5;
+      return obj;
+    });
+  }
+  if (mapped == null) {
+    mapped = [];
+  }
+  return mapped;
+}
+const Constants = fn(6012);
 ({ Features: hasOwnProperty, MediaEngineContextTypes: closure_6, MediaTypes: metroImportDefault, SpeakingFlags: closure_8 } = Constants);
-const RTCSocketOpcode = { IDENTIFY: 0, [0]: "IDENTIFY", SELECT_PROTOCOL: 1, [1]: "SELECT_PROTOCOL", READY: 2, [2]: "READY", HEARTBEAT: 3, [3]: "HEARTBEAT", SELECT_PROTOCOL_ACK: 4, [4]: "SELECT_PROTOCOL_ACK", SPEAKING: 5, [5]: "SPEAKING", HEARTBEAT_ACK: 6, [6]: "HEARTBEAT_ACK", RESUME: 7, [7]: "RESUME", HELLO: 8, [8]: "HELLO", RESUMED: 9, [9]: "RESUMED", CLIENT_CONNECT: 11, [11]: "CLIENT_CONNECT", VIDEO: 12, [12]: "VIDEO", CLIENT_DISCONNECT: 13, [13]: "CLIENT_DISCONNECT", SESSION_UPDATE: 14, [14]: "SESSION_UPDATE", MEDIA_SINK_WANTS: 15, [15]: "MEDIA_SINK_WANTS", VOICE_BACKEND_VERSION: 16, [16]: "VOICE_BACKEND_VERSION", CHANNEL_OPTIONS_UPDATE: 17, [17]: "CHANNEL_OPTIONS_UPDATE", FLAGS: 18, [18]: "FLAGS", PLATFORM: 20, [20]: "PLATFORM", DAVE_PROTOCOL_PREPARE_TRANSITION: 21, [21]: "DAVE_PROTOCOL_PREPARE_TRANSITION", DAVE_PROTOCOL_EXECUTE_TRANSITION: 22, [22]: "DAVE_PROTOCOL_EXECUTE_TRANSITION", DAVE_PROTOCOL_READY_FOR_TRANSITION: 23, [23]: "DAVE_PROTOCOL_READY_FOR_TRANSITION", DAVE_PROTOCOL_PREPARE_EPOCH: 24, [24]: "DAVE_PROTOCOL_PREPARE_EPOCH", MLS_EXTERNAL_SENDER_PACKAGE: 25, [25]: "MLS_EXTERNAL_SENDER_PACKAGE", MLS_KEY_PACKAGE: 26, [26]: "MLS_KEY_PACKAGE", MLS_PROPOSALS: 27, [27]: "MLS_PROPOSALS", MLS_COMMIT_WELCOME: 28, [28]: "MLS_COMMIT_WELCOME", MLS_PREPARE_COMMIT_TRANSITION: 29, [29]: "MLS_PREPARE_COMMIT_TRANSITION", MLS_WELCOME: 30, [30]: "MLS_WELCOME", MLS_INVALID_COMMIT_WELCOME: 31, [31]: "MLS_INVALID_COMMIT_WELCOME", CLIENT_CANNOT_REACH_RTC_SERVER: 32, [32]: "CLIENT_CANNOT_REACH_RTC_SERVER", SFU_UPDATE: 33, [33]: "SFU_UPDATE" };
+const RTCSocketOpcode = { IDENTIFY: 0, [0]: "IDENTIFY", SELECT_PROTOCOL: 1, [1]: "SELECT_PROTOCOL", READY: 2, [2]: "READY", HEARTBEAT: 3, [3]: "HEARTBEAT", SELECT_PROTOCOL_ACK: 4, [4]: "SELECT_PROTOCOL_ACK", SPEAKING: 5, [5]: "SPEAKING", HEARTBEAT_ACK: 6, [6]: "HEARTBEAT_ACK", RESUME: 7, [7]: "RESUME", HELLO: 8, [8]: "HELLO", RESUMED: 9, [9]: "RESUMED", CLIENT_CONNECT: 11, [11]: "CLIENT_CONNECT", VIDEO: 12, [12]: "VIDEO", CLIENT_DISCONNECT: 13, [13]: "CLIENT_DISCONNECT", SESSION_UPDATE: 14, [14]: "SESSION_UPDATE", MEDIA_SINK_WANTS: 15, [15]: "MEDIA_SINK_WANTS", VOICE_BACKEND_VERSION: 16, [16]: "VOICE_BACKEND_VERSION", CHANNEL_OPTIONS_UPDATE: 17, [17]: "CHANNEL_OPTIONS_UPDATE", FLAGS: 18, [18]: "FLAGS", PLATFORM: 20, [20]: "PLATFORM", DAVE_PROTOCOL_PREPARE_TRANSITION: 21, [21]: "DAVE_PROTOCOL_PREPARE_TRANSITION", DAVE_PROTOCOL_EXECUTE_TRANSITION: 22, [22]: "DAVE_PROTOCOL_EXECUTE_TRANSITION", DAVE_PROTOCOL_READY_FOR_TRANSITION: 23, [23]: "DAVE_PROTOCOL_READY_FOR_TRANSITION", DAVE_PROTOCOL_PREPARE_EPOCH: 24, [24]: "DAVE_PROTOCOL_PREPARE_EPOCH", MLS_EXTERNAL_SENDER_PACKAGE: 25, [25]: "MLS_EXTERNAL_SENDER_PACKAGE", MLS_KEY_PACKAGE: 26, [26]: "MLS_KEY_PACKAGE", MLS_PROPOSALS: 27, [27]: "MLS_PROPOSALS", MLS_COMMIT_WELCOME: 28, [28]: "MLS_COMMIT_WELCOME", MLS_PREPARE_COMMIT_TRANSITION: 29, [29]: "MLS_PREPARE_COMMIT_TRANSITION", MLS_WELCOME: 30, [30]: "MLS_WELCOME", MLS_INVALID_COMMIT_WELCOME: 31, [31]: "MLS_INVALID_COMMIT_WELCOME", CLIENT_CANNOT_REACH_RTC_SERVER: 32, [32]: "CLIENT_CANNOT_REACH_RTC_SERVER", SFU_UPDATE: 33, [33]: "SFU_UPDATE", WEBTRANSPORT_START_SESSION: 34, [34]: "WEBTRANSPORT_START_SESSION", WEBTRANSPORT_START_SESSION_ACK: 35, [35]: "WEBTRANSPORT_START_SESSION_ACK" };
 let obj2 = { AUTHENTICATION_FAILED: 4004, [4004]: "AUTHENTICATION_FAILED", INVALID_SESSION: 4006, [4006]: "INVALID_SESSION", SERVER_NOT_FOUND: 4011, [4011]: "SERVER_NOT_FOUND", SERVER_CRASH: 4015, [4015]: "SERVER_CRASH", CANCELED: 4016, [4016]: "CANCELED", HEARTBEAT_TIMEOUT: 4800, [4800]: "HEARTBEAT_TIMEOUT", UNRESUMABLE: 4801, [4801]: "UNRESUMABLE", RESET_BACKOFF: 4802, [4802]: "RESET_BACKOFF", REPEATED_MLS_INVALID_MESSAGES: 4803, [4803]: "REPEATED_MLS_INVALID_MESSAGES", DAVE_DOWNGRADE_REFUSED: 4804, [4804]: "DAVE_DOWNGRADE_REFUSED", DAVE_INVALID_MESSAGE: 4805, [4805]: "DAVE_INVALID_MESSAGE" };
 const application_id = { DISCONNECTED: 0, [0]: "DISCONNECTED", CONNECTING: 1, [1]: "CONNECTING", IDENTIFYING: 2, [2]: "IDENTIFYING", RESUMING: 3, [3]: "RESUMING", CONNECTED: 4, [4]: "CONNECTED", RECONNECTING: 5, [5]: "RECONNECTING" };
 let closure_13 = 20 * DurationsDefault.Millis.SECOND;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let closure_15 = 5 * DurationsDefault.Millis.SECOND;
-let obj3 = { Connecting: "connecting", Connect: "connect", Disconnect: "disconnect", Resuming: "resuming", Ready: "ready", SelectProtocolAck: "select-protocol-ack", SfuUpdate: "sfu-update", Speaking: "speaking", Video: "video", Ping: "ping", ClientConnect: "client-connect", ClientDisconnect: "client-disconnect", Codecs: "codecs", MediaSessionId: "media-session-id", MediaSinkWants: "media-sink-wants", VoiceBackendVersion: "voice-backend-version", KeyframeInterval: "keyframe-interval", ChannelOptionsUpdateSecureFramesProtocol: "update-secure-frames-protocol", Flags: "flags", Platform: "platform", SDP: "sdp", Encryption: "encryption", BandwidthEstimationExperiment: "bandwidth-estimation-experiment", SecureFramesInit: "secure-frames-init", SecureFramesPrepareTransition: "secure-frames-prepare-transition", SecureFramesExecuteTransition: "secure-frames-execute-transition", SecureFramesPrepareEpoch: "secure-frames-prepare-epoch", MLSExternalSenderPackage: "mls-external-sender-package", MLSProposals: "mls-proposals", MLSPrepareCommitTransition: "mls-prepare-commit-transition", MLSWelcome: "mls-welcome", ReceiveMessage: "receive-message", SendMessage: "send-message" };
+let obj3 = { Connecting: "connecting", Connect: "connect", Disconnect: "disconnect", Resuming: "resuming", Ready: "ready", SelectProtocolAck: "select-protocol-ack", SfuUpdate: "sfu-update", Speaking: "speaking", Video: "video", Ping: "ping", ClientConnect: "client-connect", ClientDisconnect: "client-disconnect", Codecs: "codecs", MediaSessionId: "media-session-id", MediaSinkWants: "media-sink-wants", VoiceBackendVersion: "voice-backend-version", KeyframeInterval: "keyframe-interval", ChannelOptionsUpdateSecureFramesProtocol: "update-secure-frames-protocol", Flags: "flags", Platform: "platform", SDP: "sdp", Encryption: "encryption", BandwidthEstimationExperiment: "bandwidth-estimation-experiment", SecureFramesInit: "secure-frames-init", SecureFramesPrepareTransition: "secure-frames-prepare-transition", SecureFramesExecuteTransition: "secure-frames-execute-transition", SecureFramesPrepareEpoch: "secure-frames-prepare-epoch", MLSExternalSenderPackage: "mls-external-sender-package", MLSProposals: "mls-proposals", MLSPrepareCommitTransition: "mls-prepare-commit-transition", MLSWelcome: "mls-welcome", ReceiveMessage: "receive-message", SendMessage: "send-message", WebTransportAck: "web-transport-ack" };
 class RTCControlSocket extends tmp3 {
   constructor(arg0) {
     DEFAULT = fn;
@@ -71,12 +100,12 @@ prototype["createWebSocket"] = function createWebSocket() {
     logger2.error("Connect called with already existing websocket");
     self.cleanupWebSocket((close) => close.close(4000));
   }
-  self.connectionStartTime = self(5903).now();
+  self.connectionStartTime = self(6016).now();
   self.helloTimeout = setTimeout(() => {
     self.handleClose(false, 0, "The connection timed out after " + TimeUtils.now() - self.connectionStartTime + " ms - did not receive OP_HELLO in time.");
   }, closure_13);
-  let obj = self(5903);
-  obj2 = self(16302);
+  const obj = self(6016);
+  obj2 = self(16463);
   const webSocket = new WebSocket("" + self.url + "?v=" + obj2.getVoiceGatewayProtocolVersion({ location: "RTCControlSocket", supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE) }));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";
@@ -129,112 +158,86 @@ prototype["createWebSocket"] = function createWebSocket() {
     } else if (self.READY === op) {
       self.handleReady(d);
     } else if (self.SFU_UPDATE === op) {
-      self.emit(obj3.SfuUpdate, d);
+      self.emit(tmp3.SfuUpdate, d);
     } else if (self.RESUMED === op) {
       self.handleResumed(d);
     } else if (self.SELECT_PROTOCOL_ACK === op) {
-      self.emit(obj3.SelectProtocolAck);
+      self.emit(tmp3.SelectProtocolAck);
       if (d.bandwidth_estimation_experiment) {
-        self.emit(obj3.BandwidthEstimationExperiment, d.bandwidth_estimation_experiment);
+        self.emit(tmp3.BandwidthEstimationExperiment, d.bandwidth_estimation_experiment);
       }
-      self.emit(obj3.Codecs, d.audio_codec, d.video_codec);
+      self.emit(tmp3.Codecs, d.audio_codec, d.video_codec);
       if (d.media_session_id) {
-        self.emit(obj3.MediaSessionId, d.media_session_id);
+        self.emit(tmp3.MediaSessionId, d.media_session_id);
       }
       if (d.sdp) {
-        self.emit(obj3.SDP, d.sdp);
+        self.emit(tmp3.SDP, d.sdp);
       } else if (d.mode) {
-        self.emit(obj3.Encryption, d.mode, d.secret_key);
+        self.emit(tmp3.Encryption, d.mode, d.secret_key);
       }
       if (d.keyframe_interval) {
-        self.emit(obj3.KeyframeInterval, d.keyframe_interval);
+        self.emit(tmp3.KeyframeInterval, d.keyframe_interval);
       }
       const parseDaveInitResult = DaveMessageValidator.parseDaveInit(d);
       if (null == parseDaveInitResult) {
         const _HermesInternal9 = HermesInternal;
         const result1 = self.disconnectForInvalidDaveMessage("op " + op + " dave_protocol_version");
       } else {
-        self.emit(obj3.SecureFramesInit, parseDaveInitResult);
+        self.emit(tmp3.SecureFramesInit, parseDaveInitResult);
         self.resumable = true;
       }
     } else if (self.SPEAKING === op) {
       const speaking = d.speaking;
       if (typeof speaking !== "boolean") {
-        self.emit(obj3.Speaking, d.user_id, d.ssrc, tmp71);
+        self.emit(tmp3.Speaking, d.user_id, d.ssrc, tmp77);
       }
     } else if (self.HEARTBEAT === op) {
       self.sendHeartbeat();
     } else if (self.HEARTBEAT_ACK === op) {
       self.handleHeartbeatAck(d);
     } else if (self.VIDEO === op) {
-      const Video = obj3.Video;
-      ({ user_id, audio_ssrc, video_ssrc, streams } = d);
-      let mapped1;
-      if (streams != null) {
-        mapped1 = streams.map((rid) => {
-          const type = rid.type;
-          if ("audio" === type) {
-            let VIDEO = constants.AUDIO;
-          } else if ("test" === type) {
-            VIDEO = constants.TEST;
-          } else if ("screen" === type) {
-            VIDEO = constants.SCREEN;
-          } else {
-            VIDEO = constants.VIDEO;
-          }
-          const obj = { type: VIDEO, rid: rid.rid, ssrc: rid.ssrc, rtxSsrc: rid.rtx_ssrc, active: rid.active, quality: rid.quality, maxBitrate: rid.max_bitrate, maxFrameRate: rid.max_framerate, maxResolution: null };
-          let tmp5;
-          if (null != rid.max_resolution) {
-            const size = { type: rid.max_resolution.type, width: rid.max_resolution.width, height: rid.max_resolution.height };
-            tmp5 = size;
-          }
-          obj.maxResolution = tmp5;
-          return obj;
-        });
-      }
-      if (mapped1 == null) {
-        mapped1 = [];
-      }
-      self.emit(Video, user_id, audio_ssrc, video_ssrc, mapped1);
+      const Video = tmp3.Video;
+      ({ user_id, audio_ssrc, video_ssrc } = d);
+      self.emit(Video, user_id, audio_ssrc, video_ssrc, convertStreamParametersFromWire(d.streams));
     } else if (self.CLIENT_CONNECT === op) {
-      self.emit(obj3.ClientConnect, d.user_ids);
+      self.emit(tmp3.ClientConnect, d.user_ids);
     } else if (self.CLIENT_DISCONNECT === op) {
-      self.emit(obj3.ClientDisconnect, d.user_id);
+      self.emit(tmp3.ClientDisconnect, d.user_id);
     } else if (self.SESSION_UPDATE === op) {
-      if (!tmp55) {
-        self.emit(obj3.Codecs, d.audio_codec, d.video_codec);
+      if (!tmp65) {
+        self.emit(tmp3.Codecs, d.audio_codec, d.video_codec);
       }
       if (null != d.media_session_id) {
-        self.emit(obj3.MediaSessionId, d.media_session_id);
+        self.emit(tmp3.MediaSessionId, d.media_session_id);
       }
       if (d.keyframe_interval) {
-        self.emit(obj3.KeyframeInterval, d.keyframe_interval);
+        self.emit(tmp3.KeyframeInterval, d.keyframe_interval);
       }
-      tmp55 = null == d.audio_codec && null == d.video_codec;
+      tmp65 = null == d.audio_codec && null == d.video_codec;
     } else if (self.MEDIA_SINK_WANTS === op) {
-      self.emit(obj3.MediaSinkWants, d);
+      self.emit(tmp3.MediaSinkWants, d);
     } else if (self.VOICE_BACKEND_VERSION === op) {
-      if (tmp51) {
-        self.emit(obj3.VoiceBackendVersion, d.voice, d.rtc_worker);
+      if (tmp61) {
+        self.emit(tmp3.VoiceBackendVersion, d.voice, d.rtc_worker);
       }
-      tmp51 = null != d.voice && null != d.rtc_worker;
+      tmp61 = null != d.voice && null != d.rtc_worker;
     } else if (self.FLAGS === op) {
-      if (tmp48) {
-        self.emit(obj3.Flags, d.user_id, d.flags);
+      if (tmp58) {
+        self.emit(tmp3.Flags, d.user_id, d.flags);
       }
-      tmp48 = null != d.flags && null != d.user_id;
+      tmp58 = null != d.flags && null != d.user_id;
     } else if (self.PLATFORM === op) {
-      if (tmp45) {
-        self.emit(obj3.Platform, d.user_id, d.platform);
+      if (tmp55) {
+        self.emit(tmp3.Platform, d.user_id, d.platform);
       }
-      tmp45 = null != d.platform && null != d.user_id;
+      tmp55 = null != d.platform && null != d.user_id;
     } else if (self.DAVE_PROTOCOL_PREPARE_TRANSITION === op) {
       const result2 = DaveMessageValidator.parseDavePrepareTransition(d);
       if (null == result2) {
         const _HermesInternal8 = HermesInternal;
         const result3 = self.disconnectForInvalidDaveMessage("op " + op);
       } else {
-        self.emit(obj3.SecureFramesPrepareTransition, result2.transitionId, result2.protocolVersion);
+        self.emit(tmp3.SecureFramesPrepareTransition, result2.transitionId, result2.protocolVersion);
       }
     } else if (self.DAVE_PROTOCOL_EXECUTE_TRANSITION === op) {
       const result4 = DaveMessageValidator.parseDaveExecuteTransition(d);
@@ -242,7 +245,7 @@ prototype["createWebSocket"] = function createWebSocket() {
         const _HermesInternal7 = HermesInternal;
         const result5 = self.disconnectForInvalidDaveMessage("op " + op);
       } else {
-        self.emit(obj3.SecureFramesExecuteTransition, result4);
+        self.emit(tmp3.SecureFramesExecuteTransition, result4);
       }
     } else if (self.DAVE_PROTOCOL_PREPARE_EPOCH === op) {
       const result6 = DaveMessageValidator.parseDavePrepareEpoch(d);
@@ -250,19 +253,19 @@ prototype["createWebSocket"] = function createWebSocket() {
         const _HermesInternal6 = HermesInternal;
         const result7 = self.disconnectForInvalidDaveMessage("op " + op);
       } else {
-        self.emit(obj3.SecureFramesPrepareEpoch, result6.epoch, result6.protocolVersion);
+        self.emit(tmp3.SecureFramesPrepareEpoch, result6.epoch, result6.protocolVersion);
       }
     } else if (self.MLS_EXTERNAL_SENDER_PACKAGE === op) {
-      self.emit(obj3.MLSExternalSenderPackage, d);
+      self.emit(tmp3.MLSExternalSenderPackage, d);
     } else if (self.MLS_PROPOSALS === op) {
-      self.emit(obj3.MLSProposals, d);
+      self.emit(tmp3.MLSProposals, d);
     } else if (self.MLS_PREPARE_COMMIT_TRANSITION === op) {
       const result8 = DaveMessageValidator.parseMLSTransitionFrame(d);
       if (null == result8) {
         const _HermesInternal5 = HermesInternal;
         const result9 = self.disconnectForInvalidDaveMessage("op " + op);
       } else {
-        self.emit(obj3.MLSPrepareCommitTransition, result8.transitionId, result8.message);
+        self.emit(tmp3.MLSPrepareCommitTransition, result8.transitionId, result8.message);
       }
     } else if (self.MLS_WELCOME === op) {
       const result10 = DaveMessageValidator.parseMLSTransitionFrame(d);
@@ -270,7 +273,29 @@ prototype["createWebSocket"] = function createWebSocket() {
         const _HermesInternal4 = HermesInternal;
         const result11 = self.disconnectForInvalidDaveMessage("op " + op);
       } else {
-        self.emit(obj3.MLSWelcome, result10.transitionId, result10.message);
+        self.emit(tmp3.MLSWelcome, result10.transitionId, result10.message);
+      }
+    } else if (self.WEBTRANSPORT_START_SESSION_ACK === op) {
+      if (null != d.certificates) {
+        if (null != d.token) {
+          const items1 = [];
+          const certificates = d.certificates;
+          for (const item10069 of certificates) {
+            let tmp15 = null != item10069.algorithm;
+            if (tmp15) {
+              tmp15 = null != item10069.hash;
+            }
+            if (tmp15) {
+              obj3 = { algorithm: item10069.algorithm, value: null };
+              let _Uint8Array2 = Uint8Array;
+              let _atob = atob;
+              obj3.value = Uint8Array.from(atob(item10069.hash), (str) => str.charCodeAt(0));
+              let arr = items1.push(obj3);
+            }
+            continue;
+          }
+          self.emit(obj3.WebTransportAck, d.token, items1);
+        }
       }
     } else {
       const logger3 = self.logger;
@@ -390,20 +415,20 @@ prototype["handleHello"] = function handleHello(d) {
       tmp4 = require;
     }
   }
-  const diff = tmp4(5903).now() - self.connectionStartTime;
+  const diff = tmp4(6016).now() - self.connectionStartTime;
   ({ logger, heartbeatInterval } = self);
   if (heartbeatInterval == null) {
     heartbeatInterval = "??";
   }
   logger.info("[HELLO] heartbeat interval: " + heartbeatInterval + ", version: " + self.serverVersion + ", took " + diff + " ms");
   self.startHeartbeater();
-  const tmp4Result = tmp4(5903);
+  const tmp4Result = tmp4(6016);
 };
 prototype["handleReady"] = function handleReady(experiments) {
   const self = this;
   const backoff = this.backoff;
   backoff.succeed();
-  const obj = TimeUtils;
+  let obj = TimeUtils;
   const logger = this.logger;
   logger.info("[READY] took " + obj.now() - this.connectionStartTime + " ms");
   if (this.serverVersion >= 6) {
@@ -871,6 +896,9 @@ prototype["noRoute"] = function noRoute() {
 };
 prototype["setHeartbeatIntervalModifier"] = function setHeartbeatIntervalModifier(heartbeatIntervalModifier) {
   this.heartbeatIntervalModifier = heartbeatIntervalModifier;
+};
+prototype["startWebTransport"] = function startWebTransport() {
+  this.send(obj.WEBTRANSPORT_START_SESSION, {});
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("lib/RTCControlSocket.tsx");

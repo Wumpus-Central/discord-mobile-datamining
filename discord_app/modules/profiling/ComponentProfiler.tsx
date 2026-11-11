@@ -1,6 +1,6 @@
-// === Module 11237: ComponentProfiler ===
+// === Module 11048: ComponentProfiler ===
 
-// Module 11237 (ComponentProfiler)
+// Module 11048 (ComponentProfiler)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

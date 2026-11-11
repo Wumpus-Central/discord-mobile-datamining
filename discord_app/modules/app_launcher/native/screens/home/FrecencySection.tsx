@@ -1,21 +1,21 @@
-// === Module 12596: FrecencySection ===
+// === Module 13285: FrecencySection ===
 
-// Module 12596 (FrecencySection)
+// Module 13285 (FrecencySection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5891 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9857 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11564 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11656 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12598 */;
-import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12599 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10493 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 12489 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 12608 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 13287 */;
+import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 13288 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4990 */;
-import FrecencySectionStore from "FrecencySectionStore" /* 12597 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
+import FrecencySectionStore from "FrecencySectionStore" /* 13286 */;
 
 const require = globalThis.__r;
 
@@ -104,7 +104,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12595).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(13284).getAppLauncherIconSource(app.section.application);
     let obj = { style: disabled ? tmp.appContainerDisabled : tmp.appContainer, disabled, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
     const application = app.section.application;
     let name;
@@ -125,22 +125,22 @@ function FrecentApp(app) {
     let tmp3 = null != appLauncherIconSource;
     if (tmp3) {
       const obj2 = { style: tmp.appIcon, source: appLauncherIconSource };
-      tmp3 = closure_11(onAppSelected(5844), obj2);
+      tmp3 = closure_11(onAppSelected(5957), obj2);
     }
     items = [tmp3, ];
     const obj3 = { submitting, style: tmp.submittingOverlay };
-    items[1] = closure_11(app(12604).SubmittingOverlay, obj3);
+    items[1] = closure_11(app(13293).SubmittingOverlay, obj3);
     obj.children = items;
-    return closure_12(app(7046).PressableOpacity, obj, app.applicationId);
+    return closure_12(app(7364).PressableOpacity, obj, app.applicationId);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-let FrecencySectionSelection = fn(12597).FrecencySectionSelection;
+let FrecencySectionSelection = fn(13286).FrecencySectionSelection;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_16 }, headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, header: null, scrollView: null, scrollViewContentContainer: null, contextMenuIcon: null, appContainer: null, appContainerDisabled: null, commandContainer: null, appIcon: null, loadingCommandIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, submittingOverlay: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.header = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -216,7 +216,7 @@ export default function FrecencySection(loading) {
       if (!tmp) {
         let HOME = dependencyMap;
         if (first === obj11.APPS) {
-          let length = apps.length;
+          length = apps.length;
         } else {
           length = commands.length;
         }

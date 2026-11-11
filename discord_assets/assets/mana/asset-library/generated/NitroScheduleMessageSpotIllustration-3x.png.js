@@ -1,6 +1,6 @@
-// === Module 14865: ? ===
+// === Module 15553: ? ===
 
-// Module 14865
+// Module 15553
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroScheduleMessageSpotIllustration-3x.png.js");

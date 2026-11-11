@@ -1,15 +1,17 @@
-// === Module 5169: HexagonCampaignUtils ===
+// === Module 5271: HexagonCampaignUtils ===
 
-// Module 5169 (HexagonCampaignUtils)
+// Module 5271 (HexagonCampaignUtils)
 import PerksStateUtils from "PerksStateUtils" /* 1391 */;
 import DisplayNameFont from "DisplayNameFont" /* 1395 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1396 */;
 import user from "user" /* 1398 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
-import HexagonCampaignConstants from "HexagonCampaignConstants" /* 5167 */;
+import AppIconTypes from "AppIconTypes" /* 5269 */;
+import QuestHomeHeroFeatures from "QuestHomeHeroFeatures" /* 5272 */;
+import HexagonCampaignConstants from "HexagonCampaignConstants" /* 5268 */;
 import size from "module_2" /* 2 */;
 
-({ HEXAGON_CAMPAIGN_CLIENT_THEME_PRESET_IDS: c2, HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: c3, HEXAGON_CAMPAIGN_END_AT_MS: closure_4, HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: hasOwnProperty, HEXAGON_CAMPAIGN_PERK_MINIMUM_PREMIUM_TYPE: closure_6, HEXAGON_CAMPAIGN_PERK_TO_PERK: metroImportDefault, HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: closure_8, HexagonCampaignPerkAvailability: closure_9 } = HexagonCampaignConstants);
+({ HEXAGON_CAMPAIGN_CLIENT_THEME_PRESET_IDS: c2, HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: c3, HEXAGON_CAMPAIGN_END_AT_MS: closure_4, HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: hasOwnProperty, HEXAGON_CAMPAIGN_PERK_MINIMUM_PREMIUM_TYPE: closure_6, HEXAGON_CAMPAIGN_PERK_TO_PERK: metroImportDefault, HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: closure_8, HEXAGON_CAMPAIGN_QUEST_HOME_HERO_ID: closure_9, HexagonCampaignPerkAvailability: closure_10 } = HexagonCampaignConstants);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampaignUtils.tsx");
 
 export function getHexagonCampaignPerkCutoffMs(item, stateFromStores) {
@@ -69,6 +71,9 @@ export function isHexagonCampaignPerkPremiumOnly(APP_ICON) {
     timestamp = Date.now();
   }
   return timestamp >= hasOwnProperty;
+}
+export function isHexagonCampaignAppIcon(id) {
+  return id === AppIconTypes.LimitedTimeAppIconIds.HEXAGON;
 }
 export function hasHexagonCampaignDisplayNameFont(displayNameStyles) {
   let fontId;
@@ -155,6 +160,17 @@ export function isEnrolledInHexagonCampaign(currentUser, CLIENT_THEME) {
   let hasItem = null != perkSource;
   if (hasItem) {
     hasItem = perkSource.includes(user.PerkSource.SOURCE_HEXAGON_CAMPAIGN);
+  }
+  return hasItem;
+}
+export function isHexagonCampaignHero(id) {
+  let hasItem = null != id;
+  if (hasItem) {
+    hasItem = id.id === React6;
+  }
+  if (hasItem) {
+    const features = id.features;
+    hasItem = features.includes(QuestHomeHeroFeatures.QuestHomeHeroFeatures.CUSTOM_INTRO_CARD);
   }
   return hasItem;
 }

@@ -1,20 +1,20 @@
-// === Module 8434: NodeView ===
+// === Module 12009: NodeView ===
 
-// Module 8434 (NodeView)
+// Module 12009 (NodeView)
 import nativeDefault from "native" /* 575 */;
-import ColorUtils from "ColorUtils" /* 5139 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5861 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5891 */;
-import CustomMarkupAll from "CustomMarkup" /* 6165 */;
-import MenuTypes from "MenuTypes" /* 8427 */;
-import InAppReportsOptionRowDefault from "InAppReportsOptionRow" /* 8436 */;
-import ArrowDefault from "Arrow" /* 8437 */;
+import ColorUtils from "ColorUtils" /* 5240 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5974 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
+import CustomMarkupAll from "CustomMarkup" /* 6278 */;
+import MenuTypes from "MenuTypes" /* 12003 */;
+import InAppReportsOptionRowDefault from "InAppReportsOptionRow" /* 12011 */;
+import ArrowDefault from "Arrow" /* 12012 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5756 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
+import DevSettingsStore from "DevSettingsStore" /* 5869 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
 
 require = fn;
 function HeaderView(node) {
@@ -27,7 +27,7 @@ function HeaderView(node) {
   }
   if (tmp6) {
     const obj2 = { ref: node.headerRef, style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: header };
-    tmp6 = value2(Text_Text.Text, obj2);
+    tmp6 = closure_1_16(Text_Text.Text, obj2);
   }
   items = [tmp6, , ];
   let tmp9 = null;
@@ -35,7 +35,7 @@ function HeaderView(node) {
     tmp9 = null;
     if (subheader.length > 0) {
       const obj3 = { style: tmp.subheader, variant: "body-md/medium", color: "text-default", children: tmp3(subheader) };
-      tmp9 = value2(Text_Text.Text, obj3);
+      tmp9 = closure_1_16(Text_Text.Text, obj3);
     }
   }
   items[1] = tmp9;
@@ -44,7 +44,7 @@ function HeaderView(node) {
     tmp12 = null;
     if (description.length > 0) {
       const obj4 = { style: tmp.description, variant: "body-xs/medium", color: "text-default", children: description };
-      tmp12 = value2(Text_Text.Text, obj4);
+      tmp12 = closure_1_16(Text_Text.Text, obj4);
     }
   }
   items[2] = tmp12;
@@ -62,11 +62,11 @@ function InfoView(node) {
     items[1] = obj2;
     obj.style = items;
     const obj4 = { size: "md", color: tmp.infoBox.backgroundColor };
-    const items1 = [value2(CircleInformationIcon.CircleInformationIcon, obj4), ];
+    const items1 = [closure_1_16(CircleInformationIcon.CircleInformationIcon, obj4), ];
     const obj5 = { style: tmp.infoBoxText, children: null };
     const obj6 = { variant: "body-sm/normal", color: "interactive-text-active", includeFontPadding: true, children: tmp3(info) };
-    obj5.children = value2(Text_Text.Text, obj6);
-    items1[1] = value2(timestampProducer, obj5);
+    obj5.children = closure_1_16(Text_Text.Text, obj6);
+    items1[1] = closure_1_16(timestampProducer, obj5);
     obj.children = items1;
     tmp4 = closure_1_17(timestampProducer, obj);
   }
@@ -93,7 +93,7 @@ function ChildItem(child) {
   }
   if (stateFromStores) {
     const obj3 = { style: tmp.debugText, variant: "body-xs/normal", color: "text-muted", children: report_type };
-    stateFromStores = closure_16(tmp5(5753).Text, obj3);
+    stateFromStores = closure_16(tmp5(5866).Text, obj3);
   }
   obj2.children = stateFromStores;
   return closure_16(InAppReportsOptionRowDefault, obj2);
@@ -109,7 +109,7 @@ function ChildrenView(node) {
         style: tmp.childrenContainer,
         children: children.map((child) => {
               const tmp = _slicedToArray(child, 2);
-              return value2(ChildItem, { child, nodeMap, onPress }, "" + tmp[0] + "+" + tmp[1]);
+              return closure_2_16(ChildItem, { child, nodeMap, onPress }, "" + tmp[0] + "+" + tmp[1]);
             })
       };
       tmp2 = closure_16(closure_6, obj);
@@ -122,14 +122,14 @@ function NullComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(8435).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(8432).IN_APP_REPORTS_NODE;
+const REMEDIATION_ELEMENT_TYPES = fn(12010).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(12008).IN_APP_REPORTS_NODE;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = Constants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 }, scrollView: { flex: 1, alignSelf: "stretch", marginTop: 24 }, childrenContainer: null, headerContainer: null, header: null, subheader: null, description: null, infoBox: null, infoBoxText: null, debugText: null };
 let obj3 = { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 };
 obj2.childrenContainer = { flex: 1, alignSelf: "stretch", paddingHorizontal: 16, gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8 };

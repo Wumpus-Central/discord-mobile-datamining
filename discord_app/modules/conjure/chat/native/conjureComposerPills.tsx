@@ -1,14 +1,14 @@
-// === Module 13026: conjureComposerPills ===
+// === Module 13691: conjureComposerPills ===
 
-// Module 13026 (conjureComposerPills)
+// Module 13691 (conjureComposerPills)
 import util from "util" /* 1113 */;
-import _modDef4028 from "module_4028" /* 4028 */;
-import UserUtils from "UserUtils" /* 5196 */;
-import _modDef11204 from "module_11204" /* 11204 */;
-import ChatInputParser from "ChatInputParser" /* 13027 */;
+import _modDef4079 from "module_4079" /* 4079 */;
+import UserUtils from "UserUtils" /* 5309 */;
+import _modDef11011 from "module_11011" /* 11011 */;
+import ChatInputParser from "ChatInputParser" /* 13692 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 12322 */;
+import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 13127 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/conjureComposerPills.tsx");
 
 export function conjureFilePillIcon() {
-  return Image.resolveAssetSource(_modDef11204).uri;
+  return Image.resolveAssetSource(_modDef11011).uri;
 }
 export function conjurePillText(current, name, combined) {
   combined = "\u2060" + name;
@@ -34,7 +34,7 @@ export function conjurePillText(current, name, combined) {
       const combined1 = "\u2060" + tmp7;
       tmp2 = combined1;
       while (current.has(combined1)) {
-        value2 = current.get(combined1);
+        let value2 = current.get(combined1);
         let raw1;
         if (value2 != null) {
           raw1 = value2.raw;
@@ -60,7 +60,7 @@ export function conjureUserPillLabel(id) {
 export function decodeConjurePills(draft) {
   const map = new Map();
   return {
-    text: draft.replace(map(12852).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
+    text: draft.replace(map(13524).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
       if (null != arg1) {
         const user = UserStore.getUser(arg1);
         let name = arg1;
@@ -77,7 +77,7 @@ export function decodeConjurePills(draft) {
         }
         if (combined == null) {
           const intl = util.intl;
-          combined = intl.string(_modDef4028.ff9Q4C);
+          combined = intl.string(_modDef4079.ff9Q4C);
         }
       }
       const combined1 = "\u2060" + combined;
@@ -95,7 +95,7 @@ export function decodeConjurePills(draft) {
           const combined2 = "\u2060" + tmp19;
           tmp16 = combined2;
           while (map.has(combined2)) {
-            value2 = map.get(combined2);
+            let value2 = map.get(combined2);
             let raw1;
             if (value2 != null) {
               raw1 = value2.raw;
@@ -111,7 +111,7 @@ export function decodeConjurePills(draft) {
       const obj3 = { raw, icon: null };
       let uri = null;
       if (null == arg1) {
-        uri = Image.resolveAssetSource(_modDef11204).uri;
+        uri = Image.resolveAssetSource(_modDef11011).uri;
       }
       obj3.icon = uri;
       const result = map.set(tmp16, obj3);

@@ -1,10 +1,11 @@
-// === Module 9005: InterestPickerSessionStore ===
+// === Module 10151: InterestPickerSessionStore ===
 
-// Module 9005 (InterestPickerSessionStore)
+// Module 10151 (InterestPickerSessionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
 let c1 = false;
+let c2 = false;
 let id = null;
 const Store = initializeDefault.Store;
 class InterestPickerSessionStore extends Store {
@@ -21,6 +22,9 @@ prototype["hasSeenPicker"] = function hasSeenPicker() {
   }
   return tmp;
 };
+prototype["isPickerOpen"] = function isPickerOpen() {
+  return c2;
+};
 InterestPickerSessionStore.displayName = "InterestPickerSessionStore";
 const interestPickerSessionStore = new InterestPickerSessionStore(DispatcherDefault, {
   WATERWHEELS_INTEREST_PICKER_SET_PICKS: function handleSetPicks(gameIds) {
@@ -30,9 +34,18 @@ const interestPickerSessionStore = new InterestPickerSessionStore(DispatcherDefa
   WATERWHEELS_INTEREST_PICKER_SEEN: function handleSeen() {
     c1 = true;
   },
+  WATERWHEELS_INTEREST_PICKER_OPEN_CHANGE: function handleOpenChange(open) {
+    open = open.open;
+    if (c2 === open) {
+      return false;
+    } else {
+      c2 = open;
+    }
+  },
   LOGOUT: function handleLogout() {
     closure_0 = [];
     c1 = false;
+    c2 = false;
     id = null;
   },
   CONNECTION_OPEN: function handleConnectionOpen(user) {
@@ -44,6 +57,7 @@ const interestPickerSessionStore = new InterestPickerSessionStore(DispatcherDefa
     if (tmp) {
       closure_0 = [];
       c1 = false;
+      c2 = false;
     }
     id = user.id;
   }

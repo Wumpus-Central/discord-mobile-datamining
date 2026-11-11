@@ -1,18 +1,18 @@
-// === Module 9011: ForumPostMediaUtils ===
+// === Module 9045: ForumPostMediaUtils ===
 
-// Module 9011 (ForumPostMediaUtils)
+// Module 9045 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import UserSettings from "UserSettings" /* 4967 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6185 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6200 */;
+import UserSettings from "UserSettings" /* 5068 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6298 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6313 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7544 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import MessageStore from "MessageStore" /* 6196 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 8805 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import MessageStore from "MessageStore" /* 6309 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -137,8 +137,8 @@ function getForumPostMedia(attachments) {
     return [];
   }
 }
-function useForumPostEmbeds(embeds, hasSpoilerEmbeds) {
-  _require = hasSpoilerEmbeds;
+function useForumPostEmbeds(embeds, flag) {
+  _require = flag;
   const InlineEmbedMedia = require("UserSettings").InlineEmbedMedia;
   const setting = InlineEmbedMedia.useSetting();
   const RenderEmbeds = require("UserSettings").RenderEmbeds;

@@ -1,6 +1,6 @@
-// === Module 9842: applications ===
+// === Module 7342: applications ===
 
-// Module 9842 (applications)
+// Module 7342 (applications)
 import _mod1197 from "module_1197" /* 1197 */;
 import timestamp from "timestamp" /* 1226 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -342,7 +342,6 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype3["internalBinaryWrite"] = function internalBinaryWrite(ackedDisclosures, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < ackedDisclosures.ackedDisclosures.length) {
     do {

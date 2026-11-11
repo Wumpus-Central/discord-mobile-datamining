@@ -1,10 +1,10 @@
-// === Module 12410: openConjureMakePersonalAlert ===
+// === Module 13217: openConjureMakePersonalAlert ===
 
-// Module 12410 (openConjureMakePersonalAlert)
-import _modDef4028 from "module_4028" /* 4028 */;
-import useAlertStore from "useAlertStore" /* 6094 */;
-import useConjureMakePersonalDefault from "useConjureMakePersonal" /* 12408 */;
-import ConjureChangeListDefault from "ConjureChangeList" /* 12411 */;
+// Module 13217 (openConjureMakePersonalAlert)
+import _modDef4079 from "module_4079" /* 4079 */;
+import useAlertStore from "useAlertStore" /* 6207 */;
+import useConjureMakePersonalDefault from "useConjureMakePersonal" /* 13215 */;
+import ConjureChangeListDefault from "ConjureChangeList" /* 13218 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -74,25 +74,25 @@ function ConjureMakePersonalAlert(project) {
   ({ appName, rows } = tmp3);
   const obj = { title: null, extraContent: null, actions: null };
   const intl = require("util").intl;
-  obj.title = intl.formatToPlainString(_modDef4028.cAxBIL, { app: appName });
+  obj.title = intl.formatToPlainString(_modDef4079.cAxBIL, { app: appName });
   items = [closure_4(ConjureChangeListDefault, { rows }), , ];
   let tmp4Result = null;
   if (null != keptChannels) {
     let obj2 = { variant: "body-sm/normal", color: "text-muted", children: keptChannels };
-    tmp4Result = closure_4(tmp5(5753).Text, obj2);
+    tmp4Result = closure_4(tmp5(5866).Text, obj2);
   }
   items[1] = tmp4Result;
   let tmp4Result2 = null;
   if (null != error) {
     let obj3 = { variant: "body-sm/medium", color: "text-feedback-critical", accessibilityRole: "alert", children: error };
-    tmp4Result2 = closure_4(tmp5(5753).Text, obj3);
+    tmp4Result2 = closure_4(tmp5(5866).Text, obj3);
   }
   items[2] = tmp4Result2;
   obj.extraContent = closure_5(require("Stack/Stack").Stack, { spacing: 12, children: items });
   let obj4 = { children: null };
   let obj5 = { variant: "destructive", text: null, onPress: null };
   const intl2 = tmp5(1113).intl;
-  obj5.text = intl2.string(_modDef4028.VAb6aE);
+  obj5.text = intl2.string(_modDef4079.VAb6aE);
   obj5.onPress = function submit() {
     const self = this;
     const apply = closure_1.apply;

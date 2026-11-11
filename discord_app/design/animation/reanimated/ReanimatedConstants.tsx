@@ -1,6 +1,6 @@
-// === Module 5373: ReanimatedConstants ===
+// === Module 5486: ReanimatedConstants ===
 
-// Module 5373 (ReanimatedConstants)
+// Module 5486 (ReanimatedConstants)
 import _mod1652 from "module_1652" /* 1652 */;
 import size from "module_2" /* 2 */;
 

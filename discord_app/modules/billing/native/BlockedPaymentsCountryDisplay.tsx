@@ -1,14 +1,14 @@
-// === Module 11526: BlockedPaymentsCountryDisplay ===
+// === Module 9652: BlockedPaymentsCountryDisplay ===
 
-// Module 11526 (BlockedPaymentsCountryDisplay)
+// Module 9652 (BlockedPaymentsCountryDisplay)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import useThemeDefault from "useTheme" /* 5371 */;
-import FastImageDefault from "FastImage" /* 5844 */;
-import _modDef11527 from "module_11527" /* 11527 */;
-import _modDef11528 from "module_11528" /* 11528 */;
+import useThemeDefault from "useTheme" /* 5484 */;
+import FastImageDefault from "FastImage" /* 5957 */;
+import _modDef9653 from "module_9653" /* 9653 */;
+import _modDef9654 from "module_9654" /* 9654 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { alignItems: "center" }, header: { fontSize: 20, fontWeight: "700", color: nativeDefault.colors.TEXT_SUBTLE, marginBottom: 16 }, image: { marginTop: 38 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -39,9 +39,9 @@ export default function BlockedPaymentsCountryDisplay() {
   const obj6 = { style: tmp.image, source: null };
   const tmp8 = FastImageDefault;
   if (obj7.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef11527;
+    let tmp2Result = _modDef9653;
   } else {
-    tmp2Result = _modDef11528;
+    tmp2Result = _modDef9654;
   }
   obj6.source = tmp2Result;
   items[2] = hasOwnProperty(tmp8, obj6);

@@ -1,12 +1,12 @@
-// === Module 19523: ConjureAppPictureInPictureCloseTarget ===
+// === Module 19712: ConjureAppPictureInPictureCloseTarget ===
 
-// Module 19523 (ConjureAppPictureInPictureCloseTarget)
+// Module 19712 (ConjureAppPictureInPictureCloseTarget)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5372 */;
-import spring_spring from "spring/spring" /* 5763 */;
-import DoorExitIcon from "DoorExitIcon" /* 12055 */;
-import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19520 */;
+import timing_timing from "timing/timing" /* 5485 */;
+import spring_spring from "spring/spring" /* 5876 */;
+import DoorExitIcon from "DoorExitIcon" /* 12206 */;
+import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout" /* 19709 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -16,12 +16,12 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let closure_5 = { mass: 0.4, damping: 18, stiffness: 300 };
 let closure_6 = { duration: 150 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { target: null, fill: null };
-let size = { position: "absolute", top: 0, left: 0, width: fn(19520).CLOSE_TARGET_SIZE, height: fn(19520).CLOSE_TARGET_SIZE, borderRadius: fn(19520).CLOSE_TARGET_SIZE / 2, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+let size = { position: "absolute", top: 0, left: 0, width: fn(19709).CLOSE_TARGET_SIZE, height: fn(19709).CLOSE_TARGET_SIZE, borderRadius: fn(19709).CLOSE_TARGET_SIZE / 2, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj2.target = size;
-const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: fn(19520).CLOSE_TARGET_SIZE / 2, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.STATUS_DANGER };
+const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderRadius: fn(19709).CLOSE_TARGET_SIZE / 2, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.STATUS_DANGER };
 obj2.fill = rect;
 let closure_7 = createStyles.createStyles(obj2);
 let closure_8 = { code: "(function ConjureAppPictureInPictureCloseTargetTsx1(){let[withTiming,shown,FADE,x,CLOSE_TARGET_SIZE,withSpring,y,SPRING,hovered,HOVERED_SCALE]=this.__closure;return{opacity:withTiming(shown.get()?1:0,FADE),transform:[{translateX:x-CLOSE_TARGET_SIZE/2},{translateY:withSpring(y-CLOSE_TARGET_SIZE/2+(shown.get()?0:CLOSE_TARGET_SIZE),SPRING)},{scale:withSpring(hovered.get()?HOVERED_SCALE:1,SPRING)}]};})" };

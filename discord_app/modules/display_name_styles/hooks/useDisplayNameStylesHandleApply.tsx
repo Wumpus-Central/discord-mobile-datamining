@@ -1,6 +1,6 @@
-// === Module 17676: useDisplayNameStylesHandleApply ===
+// === Module 17841: useDisplayNameStylesHandleApply ===
 
-// Module 17676 (useDisplayNameStylesHandleApply)
+// Module 17841 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const HexagonCampaignConstants = fn(5167);
+const HexagonCampaignConstants = fn(5268);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: closure_8, HexagonCampaignPerk: closure_9 } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
@@ -81,7 +81,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                   if (c5 === 2) {
                     c5 = 3;
                     throw new TypeError("Generator functions may not be called on executing generators");
-                  } else if (tmp7 === 3) {
+                  } else if (tmp8 === 3) {
                     if (arg0 === 1) {
                       throw value;
                     } else if (arg0 === 2) {
@@ -103,34 +103,46 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                           return obj3;
                         } else {
                           const entry_point = tmp4;
-                          closure_0 = tmp8;
+                          closure_0 = tmp6;
                           closure_128_0 = undefined;
+                          closure_128_1 = undefined;
                           if (closure_2_1) {
-                            const result = displayNameStyles(16805).saveHexagonCampaignPreviousDisplayNameStyles();
-                            const obj4 = displayNameStyles(16805);
+                            const result = displayNameStyles(16966).saveHexagonCampaignPreviousDisplayNameStyles();
+                            const obj6 = displayNameStyles(16966);
                           }
                           if (closure_1_10) {
                             closure_1_12.current = true;
+                            let tmp70 = closure_2_1;
+                            if (closure_2_1) {
+                              currentUser = currentUser.getCurrentUser();
+                              displayNameStyles = undefined;
+                              if (currentUser != null) {
+                                displayNameStyles = currentUser.displayNameStyles;
+                              }
+                              tmp70 = !displayNameStyles(5271).hasHexagonCampaignDisplayNameFont(displayNameStyles);
+                              const obj13 = displayNameStyles(5271);
+                            }
+                            closure_128_0 = tmp70;
                             c3 = 2;
-                            const obj5 = { displayNameStyles };
+                            const obj4 = { displayNameStyles };
                             colors = 3;
                             c5 = 1;
-                            const obj6 = { value: displayNameStyles(7217).saveProfileAndAccountChanges(obj5), done: false };
-                            return obj6;
+                            const obj5 = { value: displayNameStyles(7734).saveProfileAndAccountChanges(obj4), done: false };
+                            return obj5;
                           } else if (closure_1_7) {
-                            const result1 = displayNameStyles(8815).setTryItOutDisplayNameStyles(displayNameStyles);
-                            const tmp31Result = displayNameStyles(8815);
+                            const result1 = tmp41(9333).setTryItOutDisplayNameStyles(displayNameStyles);
+                            const tmp41Result = tmp41(9333);
                           } else {
                             const obj7 = { guildId, displayNameStyles };
-                            displayNameStyles(8812).setPendingChanges(obj7);
-                            const tmp31Result2 = displayNameStyles(8812);
+                            tmp41(9332).setPendingChanges(obj7);
+                            const tmp41Result2 = tmp41(9332);
                           }
                         }
-                      } else if (1 === tmp8) {
+                      } else if (1 === tmp9) {
                         c3 = 0;
                         closure_1_12.current = false;
                         throw closure_2;
-                      } else if (2 === tmp8) {
+                      } else if (2 === tmp9) {
                         c3 = 1;
                         if (closure_1_11 != null) {
                           closure_1_11();
@@ -138,8 +150,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                         c3 = 0;
                         closure_1_12.current = false;
                         c5 = 3;
-                        const obj9 = { value: undefined, done: true };
-                        return obj9;
+                        const obj8 = { value: undefined, done: true };
+                        return obj8;
                       } else if (arg0 === 1) {
                         c5 = 3;
                         throw value;
@@ -147,13 +159,13 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                         c3 = 0;
                         closure_1_12.current = false;
                         c5 = 3;
-                        const obj12 = { value, done: true };
-                        return obj12;
+                        const obj9 = { value, done: true };
+                        return obj9;
                       } else {
-                        closure_128_0 = value;
+                        closure_128_1 = value;
                         let ok;
-                        if (closure_128_0 != null) {
-                          ok = closure_128_0.ok;
+                        if (closure_128_1 != null) {
+                          ok = closure_128_1.ok;
                         }
                         if (true !== ok) {
                           if (closure_1_11 != null) {
@@ -162,30 +174,39 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                           c3 = 0;
                           closure_1_12.current = false;
                           c5 = 3;
-                          const obj = { value: undefined, done: true };
-                          return obj;
+                          const obj11 = { value: undefined, done: true };
+                          return obj11;
                         } else {
+                          if (closure_128_0) {
+                            const obj15 = { perks: null, content: null, contentSurface: null };
+                            items = [constants2.DISPLAY_NAME_STYLE];
+                            obj15.perks = items;
+                            obj15.content = displayNameStyles(5278).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
+                            obj15.contentSurface = displayNameStyles(16967).HexagonCampaignContentSurface.USER_PROFILE;
+                            const result2 = displayNameStyles(16967).trackHexagonCampaignPerkAction(obj15);
+                            const obj = displayNameStyles(16967);
+                          }
                           c3 = 0;
                           closure_1_12.current = false;
                         }
                       }
-                      const obj13 = { font_name: displayNameStyles(1395).DisplayNameFont[closure_2], effect_name: displayNameStyles(1396).DisplayNameEffect[c3], colors, entry_point };
-                      closure_2_1(1252).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
+                      const obj16 = { font_name: displayNameStyles(1395).DisplayNameFont[closure_2], effect_name: displayNameStyles(1396).DisplayNameEffect[c3], colors, entry_point };
+                      closure_2_1(1252).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj16);
                       if (closure_129_1) {
-                        const result2 = displayNameStyles(16805).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
-                        const obj10 = displayNameStyles(16805);
+                        const result3 = displayNameStyles(16966).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
+                        const obj12 = displayNameStyles(16966);
                       }
                       if (closure_1_8 != null) {
                         closure_1_8();
                       }
                       c5 = 3;
                       return { value: "HermesInternal", done: null };
-                    } catch (tmp63) {
-                      closure_2 = tmp63;
+                    } catch (tmp79) {
+                      closure_2 = tmp79;
                       if (tmp5 === c3) {
                         c5 = tmp3;
-                        throw tmp63;
-                      } else if (tmp2 === tmp65) {
+                        throw tmp79;
+                      } else if (tmp2 === tmp81) {
                         colors = tmp2;
                       } else {
                         colors = tmp;
@@ -223,7 +244,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                       let obj6 = { value: tmp5(tmp23[7]).ensureHexagonCampaignEnrollment(constants.DISPLAY_NAME_STYLE), done: false };
                       return obj6;
                     }
-                    tmp22Result = tmp5(tmp23[14]);
+                    tmp22Result = tmp5(tmp23[8]);
                   }
                   c3 = 2;
                   c4 = 1;
@@ -249,7 +270,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
               throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj8 = { value, done: true };
+              let obj8 = { value, done: true };
               return obj8;
             }
           } else if (3 === tmp8) {
@@ -275,7 +296,7 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
           }
           c3 = 4;
           c4 = 1;
-          let obj10 = { value: closure_128_3(), done: false };
+          const obj10 = { value: closure_128_3(), done: false };
           return obj10;
         } catch (tmp37) {
           if (tmp4 === selectedFontId) {

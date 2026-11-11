@@ -1,10 +1,10 @@
-// === Module 19632: VoicePanelDockStatusDisplay ===
+// === Module 19821: VoicePanelDockStatusDisplay ===
 
-// Module 19632 (VoicePanelDockStatusDisplay)
+// Module 19821 (VoicePanelDockStatusDisplay)
 import _mod1652 from "module_1652" /* 1652 */;
-import _modDef3184 from "module_3184" /* 3184 */;
-import timing_timing from "timing/timing" /* 5372 */;
-import spring_spring from "spring/spring" /* 5763 */;
+import _modDef3205 from "module_3205" /* 3205 */;
+import timing_timing from "timing/timing" /* 5485 */;
+import spring_spring from "spring/spring" /* 5876 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,6 +15,8 @@ function StatusText(status) {
   status = status.status;
   _require = undefined;
   importDefault = undefined;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
   const kind = status.kind;
   let stringResult = null;
   if ("channel" !== kind) {
@@ -22,13 +24,13 @@ function StatusText(status) {
     if ("speaker" !== kind) {
       if ("joined" === kind) {
         const intl3 = require("util").intl;
-        stringResult = intl3.string(_modDef3184.f9Cdb5);
+        stringResult = intl3.string(_modDef3205.f9Cdb5);
       } else if ("left" === kind) {
         const intl2 = require("util").intl;
-        stringResult = intl2.string(_modDef3184.aZoM2c);
+        stringResult = intl2.string(_modDef3205.aZoM2c);
       } else if ("streaming" === kind) {
         const intl = require("util").intl;
-        stringResult = intl.string(_modDef3184.syN59i);
+        stringResult = intl.string(_modDef3205.syN59i);
       }
     }
   }
@@ -51,24 +53,24 @@ function StatusText(status) {
     if ("speaker" !== kind2) {
       if ("joined" === kind2) {
         const intl6 = require("util").intl;
-        stringResult1 = intl6.string(_modDef3184.f9Cdb5);
+        stringResult1 = intl6.string(_modDef3205.f9Cdb5);
       } else if ("left" === kind2) {
         const intl5 = require("util").intl;
-        stringResult1 = intl5.string(_modDef3184.aZoM2c);
+        stringResult1 = intl5.string(_modDef3205.aZoM2c);
       } else if ("streaming" === kind2) {
         const intl4 = require("util").intl;
-        stringResult1 = intl4.string(_modDef3184.syN59i);
+        stringResult1 = intl4.string(_modDef3205.syN59i);
       }
     }
   }
-  const tmp = closure_12();
+  const tmp = closure_13();
   let num = 0;
   if (null != stringResult) {
     num = 1;
   }
   const sharedValue = require("module_1652").useSharedValue(num);
   items = [sharedValue, null != stringResult];
-  const effect = noop.useEffect(() => {
+  const effect = obj.useEffect(() => {
     if (c0) {
       const tmp2Result = _mod1652;
       let withDelayResult = tmp2Result.withDelay(70, timing_timing.withTiming(1, { duration: 175 }));
@@ -78,73 +80,91 @@ function StatusText(status) {
     }
     const result = _undefined2.set(withDelayResult);
   }, items);
-  const obj2 = require("module_1652");
-  const items1 = [closure_14, sharedValue, closure_11];
+  let obj2 = require("module_1652");
+  const sharedValue1 = require("module_1652").useSharedValue(lineHeight);
+  const tmp26Result = require("module_1652");
+  const sharedValue2 = require("module_1652").useSharedValue(lineHeight);
+  const items1 = [sharedValue1];
+  const items2 = [sharedValue2];
+  const callback = obj.useCallback((nativeEvent) => _undefined3.set(nativeEvent.nativeEvent.layout.height), items1);
+  const callback1 = obj.useCallback((nativeEvent) => _undefined4.set(nativeEvent.nativeEvent.layout.height), items2);
+  const tmp26Result4 = require("module_1652");
+  const items3 = [closure_15, 1, sharedValue1, lineHeight, sharedValue, sharedValue2];
   _require = undefined;
   importDefault = undefined;
-  [tmp30, tmp31, tmp32] = items1;
+  dependencyMap = undefined;
+  _slicedToArray = undefined;
+  noop = undefined;
+  [tmp35, tmp36, tmp37, tmp38, tmp39, tmp40] = items3;
   class VoicePanelDockStatusDisplayTsx1 {
     constructor() {
       obj = { transform: null };
-      obj1 = { translateY: -closure_0.get() * closure_1 };
+      obj1 = { translateY: null };
+      result = closure_0 * closure_1.get() / closure_2;
+      tmp2 = -closure_3.get();
+      obj1.translateY = tmp2 * (closure_4.get() + result) / 2;
       items = [];
       items[0] = obj1;
       obj.transform = items;
       return obj;
     }
   }
-  const items2 = [tmp31, tmp32];
-  VoicePanelDockStatusDisplayTsx1.__closure = items2;
-  VoicePanelDockStatusDisplayTsx1.__workletHash = 2314057210930;
-  VoicePanelDockStatusDisplayTsx1.__initData = tmp30;
+  const items4 = [tmp36, tmp37, tmp38, tmp39, tmp40];
+  VoicePanelDockStatusDisplayTsx1.__closure = items4;
+  VoicePanelDockStatusDisplayTsx1.__workletHash = 4330268106479;
+  VoicePanelDockStatusDisplayTsx1.__initData = tmp35;
   const animatedStyle = require("module_1652").useAnimatedStyle(VoicePanelDockStatusDisplayTsx1);
-  const tmp26Result = require("module_1652");
-  const items3 = [closure_15, require("module_1652").interpolate, sharedValue, 0.5, require("module_1652").Extrapolation];
+  const tmp26Result5 = require("module_1652");
+  const items5 = [closure_16, sharedValue1, 1, lineHeight, require("module_1652").interpolate, sharedValue, 0.5, require("module_1652").Extrapolation];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
   _slicedToArray = undefined;
-  [tmp34, tmp35, tmp36, tmp37, tmp38] = items3;
+  noop = undefined;
+  c5 = undefined;
+  c6 = undefined;
+  [tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49] = items5;
   class VoicePanelDockStatusDisplayTsx2 {
     constructor() {
-      obj = { opacity: null };
+      obj = { top: closure_0.get() * (1 + closure_1 / closure_2), opacity: null };
       items = [, ];
-      items[0] = closure_2;
+      items[0] = closure_5;
       items[1] = 1;
-      obj.opacity = closure_0(closure_1.get(), items, [0, 1], closure_3.CLAMP);
+      obj.opacity = closure_3(closure_4.get(), items, [0, 1], closure_6.CLAMP);
       return obj;
     }
   }
-  const items4 = [tmp35, tmp36, tmp37, tmp38];
-  VoicePanelDockStatusDisplayTsx2.__closure = items4;
-  VoicePanelDockStatusDisplayTsx2.__workletHash = 6670936502342;
-  VoicePanelDockStatusDisplayTsx2.__initData = tmp34;
+  const items6 = [tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49];
+  VoicePanelDockStatusDisplayTsx2.__closure = items6;
+  VoicePanelDockStatusDisplayTsx2.__workletHash = 5280168993712;
+  VoicePanelDockStatusDisplayTsx2.__initData = tmp42;
   const animatedStyle1 = require("module_1652").useAnimatedStyle(VoicePanelDockStatusDisplayTsx2);
   let obj3 = { style: animatedStyle, children: null };
+  const obj4 = { onLayout: callback, children: null };
   if (null != status.userId) {
-    const obj4 = { userId: status.userId, dimmed: "left" === status.kind };
-    let tmp43 = closure_8(tmp26(19633).DockUserTitle, obj4);
-    let tmp44 = closure_8;
+    const obj5 = { userId: status.userId, dimmed: "left" === status.kind };
+    let tmp53Result = closure_8(tmp26(19822).DockUserTitle, obj5);
   } else {
-    tmp43 = closure_8(tmp26(19633).DockChannelTitle, {});
-    tmp44 = closure_8;
+    tmp53Result = closure_8(tmp26(19822).DockChannelTitle, {});
   }
-  const items5 = [tmp43, ];
-  let tmp44Result = null != stringResult1;
-  if (tmp44Result) {
-    const obj5 = { style: null, children: null };
-    const items6 = [tmp.subtext, animatedStyle1];
-    obj5.style = items6;
+  obj4.children = tmp53Result;
+  const items7 = [closure_8(c5, obj4), ];
+  let tmp53Result2 = null != stringResult1;
+  if (tmp53Result2) {
+    const obj6 = { style: null, onLayout: null, children: null };
+    const items8 = [tmp.subtext, animatedStyle1];
+    obj6.style = items8;
+    obj6.onLayout = callback1;
     let str4 = "text-voice-connected";
     if ("left" === kind2) {
       str4 = "text-muted";
     }
-    const obj6 = { variant: "body-xs/medium", color: str4, lineClamp: 1, children: stringResult1 };
-    obj5.children = tmp44(tmp26(5753).Text, obj6);
-    tmp44Result = tmp44(_modDef1652.View, obj5);
+    const obj7 = { variant: "body-xs/medium", color: str4, lineClamp: 1, children: stringResult1 };
+    obj6.children = closure_8(tmp26(5866).Text, obj7);
+    tmp53Result2 = closure_8(_modDef1652.View, obj6);
   }
-  items5[1] = tmp44Result;
-  obj3.children = items5;
+  items7[1] = tmp53Result2;
+  obj3.children = items7;
   return closure_9(_modDef1652.View, obj3);
 }
 function StatusLayer(exit) {
@@ -155,7 +175,7 @@ function StatusLayer(exit) {
   state = exit.state;
   dependencyMap = state;
   const cleanUp = exit.cleanUp;
-  let _slicedToArray = cleanUp;
+  _slicedToArray = cleanUp;
   const onExited = exit.onExited;
   noop = onExited;
   c5 = undefined;
@@ -167,7 +187,7 @@ function StatusLayer(exit) {
   let sharedValue5;
   let sharedValue6;
   closure_13 = undefined;
-  const tmp = sharedValue6();
+  const tmp = closure_13();
   let str = status.userId;
   if (str == null) {
     str = "channel";
@@ -223,7 +243,7 @@ function StatusLayer(exit) {
   const tmp2Result11 = require("module_1652");
   let tmp10 = enter;
   if (enter == null) {
-    tmp10 = closure_13;
+    tmp10 = point;
   }
   sharedValue6 = require("module_1652").useSharedValue(tmp10.fadeStartProgress);
   let tmp12 = _slicedToArray(noop.useState(null == enter), 2);
@@ -236,7 +256,7 @@ function StatusLayer(exit) {
     } else {
       tmp4 = _undefined;
       if (_undefined == null) {
-        tmp4 = closure_13;
+        tmp4 = closure_1_14;
       }
     }
     _undefined = tmp4;
@@ -260,7 +280,7 @@ function StatusLayer(exit) {
     let tmp9 = value === num;
     if (tmp9) {
       let num2;
-      value2 = sharedValue2.get();
+      const value2 = sharedValue2.get();
       if (point != null) {
         num2 = point.y;
       }
@@ -294,7 +314,7 @@ function StatusLayer(exit) {
     let result = sharedValue6.set(tmp4.fadeStartProgress);
     if (tmp3) {
       items = [
-        closure_1_17,
+        closure_1_18,
         tmp(_undefined3[15]).scheduleOnRN,
         function finishExit() {
             closure_3();
@@ -331,7 +351,7 @@ function StatusLayer(exit) {
       }
       animateView(sharedValue1, sharedValue3, sharedValue5, textLagMs, tmp47);
     } else {
-      const items2 = [closure_1_18, tmp(_undefined3[15]).scheduleOnRN, closure_13];
+      const items2 = [closure_1_19, tmp(_undefined3[15]).scheduleOnRN, closure_13];
       _undefined = undefined;
       c1 = undefined;
       class VoicePanelDockStatusDisplayTsx3 {
@@ -363,7 +383,7 @@ function StatusLayer(exit) {
     }
   }, items);
   const tmp2Result12 = require("module_1652");
-  let items1 = [closure_19, require("module_1652").interpolate, sharedValue4, sharedValue6, require("module_1652").Extrapolation, sharedValue, sharedValue2];
+  let items1 = [closure_20, require("module_1652").interpolate, sharedValue4, sharedValue6, require("module_1652").Extrapolation, sharedValue, sharedValue2];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -394,7 +414,7 @@ function StatusLayer(exit) {
   VoicePanelDockStatusDisplayTsx5.__initData = tmp14;
   const animatedStyle = require("module_1652").useAnimatedStyle(VoicePanelDockStatusDisplayTsx5);
   const tmp2Result13 = require("module_1652");
-  let items3 = [closure_20, require("module_1652").interpolate, sharedValue5, sharedValue6, require("module_1652").Extrapolation, sharedValue1, sharedValue3];
+  let items3 = [closure_21, require("module_1652").interpolate, sharedValue5, sharedValue6, require("module_1652").Extrapolation, sharedValue1, sharedValue3];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -430,10 +450,10 @@ function StatusLayer(exit) {
   obj3.style = items5;
   if (null != status.userId) {
     let obj4 = { userId: status.userId, dimmed: "left" === status.kind, entered: tmp12[0] };
-    let tmp32Result = tmp32(tmp2(19633).DockFace, obj4);
+    let tmp32Result = tmp32(tmp2(19822).DockFace, obj4);
   } else {
     let obj5 = { streaming: status.streaming };
-    tmp32Result = tmp32(tmp2(19633).DockChannelIcon, obj5);
+    tmp32Result = tmp32(tmp2(19822).DockChannelIcon, obj5);
   }
   obj3.children = tmp32Result;
   const items6 = [sharedValue2(_modDef1652.View, obj3), ];
@@ -453,17 +473,16 @@ function getStatusItemKey(status) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockStatusStore = fn(19630);
+const VoicePanelDockStatusStore = fn(19819);
 ({ useDockHasStreamers: closure_6, useDockSubject: metroImportDefault } = VoicePanelDockStatusStore);
-const VoicePanelDockConstants = fn(11390);
+const VoicePanelDockConstants = fn(11948);
 ({ DOCK_TILE_SIZE, DOCK_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const spring = { mass: 0.6, stiffness: 560, damping: 24 };
-const lineHeight = fn(5753).TextStyleSheet["body-xs/medium"].lineHeight;
-let closure_11 = (lineHeight + 1) / 2;
-const sum = fn(5753).TextStyleSheet["body-md/medium"].lineHeight + 1;
-const createStyles = fn(5142);
+fn(5866).TextStyleSheet["body-md/medium"].lineHeight;
+const lineHeight = fn(5866).TextStyleSheet["body-xs/medium"].lineHeight;
+const createStyles = fn(5243);
 let obj = { display: { flexGrow: 1, flexShrink: 1, height: DOCK_TILE_SIZE }, layer: null, tile: null, textSlot: null, subtext: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -473,18 +492,18 @@ obj3.gap = DOCK_GAP;
 obj.layer = obj3;
 obj.tile = { width: DOCK_TILE_SIZE, height: DOCK_TILE_SIZE, alignItems: "center", justifyContent: "center" };
 obj.textSlot = { flexGrow: 1, flexShrink: 1, alignSelf: "stretch", justifyContent: "center" };
-obj.subtext = { position: "absolute", top: sum, left: 0, right: 0, height: lineHeight, justifyContent: "center" };
-let closure_12 = createStyles.createStyles(obj);
+obj.subtext = { position: "absolute", left: 0, right: 0, justifyContent: "center" };
+let closure_13 = createStyles.createStyles(obj);
 let point = { x: 0, y: 0, delayMs: 0, faceLagMs: 0, textLagMs: 0, fadeStartProgress: 0.5, fadeMs: 120, fadeDelayMs: 0, fadeEasing: null, spring: null };
 let Easing = fn(1652).Easing;
 point.fadeEasing = Easing.inOut(fn(1652).Easing.quad);
 point.spring = { mass: 0.5, stiffness: 300, damping: 15 };
-let closure_14 = { code: "(function VoicePanelDockStatusDisplayTsx1(){let[progress,SUBTEXT_SHIFT]=this.__closure;return{transform:[{translateY:-progress.get()*SUBTEXT_SHIFT}]};})" };
-let closure_15 = { code: "(function VoicePanelDockStatusDisplayTsx2(){let[interpolate,progress,SUBTEXT_FADE_START,Extrapolation]=this.__closure;return{opacity:interpolate(progress.get(),[SUBTEXT_FADE_START,1],[0,1],Extrapolation.CLAMP)};})" };
-let closure_17 = { code: "(function VoicePanelDockStatusDisplayTsx3(finished){let[scheduleOnRN,finishExit]=this.__closure;if(finished===true){scheduleOnRN(finishExit);}})" };
-let closure_18 = { code: "(function VoicePanelDockStatusDisplayTsx4(finished){let[scheduleOnRN,setFaceEntered]=this.__closure;if(finished===true){scheduleOnRN(setFaceEntered,true);}})" };
-let closure_19 = { code: "(function VoicePanelDockStatusDisplayTsx5(){let[interpolate,faceFade,fadeStartProgress,Extrapolation,faceX,faceY]=this.__closure;return{opacity:interpolate(faceFade.get(),[fadeStartProgress.get(),1],[0,1],Extrapolation.CLAMP),transform:[{translateX:faceX.get()},{translateY:faceY.get()}]};})" };
-let closure_20 = { code: "(function VoicePanelDockStatusDisplayTsx6(){let[interpolate,textFade,fadeStartProgress,Extrapolation,textX,textY]=this.__closure;return{opacity:interpolate(textFade.get(),[fadeStartProgress.get(),1],[0,1],Extrapolation.CLAMP),transform:[{translateX:textX.get()},{translateY:textY.get()}]};})" };
+let closure_15 = { code: "(function VoicePanelDockStatusDisplayTsx1(){let[SUBTEXT_GAP,nameHeight,NAME_LINE_HEIGHT,progress,subtextHeight]=this.__closure;const gap=SUBTEXT_GAP*nameHeight.get()/NAME_LINE_HEIGHT;return{transform:[{translateY:-progress.get()*(subtextHeight.get()+gap)/2}]};})" };
+let closure_16 = { code: "(function VoicePanelDockStatusDisplayTsx2(){let[nameHeight,SUBTEXT_GAP,NAME_LINE_HEIGHT,interpolate,progress,SUBTEXT_FADE_START,Extrapolation]=this.__closure;return{top:nameHeight.get()*(1+SUBTEXT_GAP/NAME_LINE_HEIGHT),opacity:interpolate(progress.get(),[SUBTEXT_FADE_START,1],[0,1],Extrapolation.CLAMP)};})" };
+let closure_18 = { code: "(function VoicePanelDockStatusDisplayTsx3(finished){let[scheduleOnRN,finishExit]=this.__closure;if(finished===true){scheduleOnRN(finishExit);}})" };
+let closure_19 = { code: "(function VoicePanelDockStatusDisplayTsx4(finished){let[scheduleOnRN,setFaceEntered]=this.__closure;if(finished===true){scheduleOnRN(setFaceEntered,true);}})" };
+let closure_20 = { code: "(function VoicePanelDockStatusDisplayTsx5(){let[interpolate,faceFade,fadeStartProgress,Extrapolation,faceX,faceY]=this.__closure;return{opacity:interpolate(faceFade.get(),[fadeStartProgress.get(),1],[0,1],Extrapolation.CLAMP),transform:[{translateX:faceX.get()},{translateY:faceY.get()}]};})" };
+let closure_21 = { code: "(function VoicePanelDockStatusDisplayTsx6(){let[interpolate,textFade,fadeStartProgress,Extrapolation,textX,textY]=this.__closure;return{opacity:interpolate(textFade.get(),[fadeStartProgress.get(),1],[0,1],Extrapolation.CLAMP),transform:[{translateX:textX.get()},{translateY:textY.get()}]};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockStatusDisplay.tsx");
 
@@ -492,7 +511,7 @@ export default noop.memo(function VoicePanelDockStatusDisplay() {
   const channelId = onExited.useContext(first(first1[16])).channelId;
   const tmp3 = closure_7(channelId);
   let str;
-  const tmp = closure_12();
+  const tmp = closure_13();
   if (tmp3 != null) {
     str = tmp3.kind;
   }
@@ -524,7 +543,7 @@ export default noop.memo(function VoicePanelDockStatusDisplay() {
     return items;
   });
   [first1] = onExited.useState(() => new Map());
-  const _slicedToArray = tmp13;
+  _slicedToArray = tmp13;
   onExited = obj.useCallback((arg0) => {
     closure_0 = arg0;
     closure_3((arg0) => {

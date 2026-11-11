@@ -1,14 +1,14 @@
-// === Module 10646: verifyGuildMembers ===
+// === Module 11562: verifyGuildMembers ===
 
-// Module 10646 (verifyGuildMembers)
+// Module 11562 (verifyGuildMembers)
 import BackoffDefault from "Backoff" /* 559 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6960 */;
-import createMessage from "createMessage" /* 10444 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
+import createMessage from "createMessage" /* 8785 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6625 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 5054 */;
+import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import UserStore from "UserStore" /* 1385 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
@@ -26,7 +26,7 @@ function isVerifiableMember(trueMember) {
 }
 function getInFlightNonce(guildId, arg1) {
   value = map3.get(guildId);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(arg1);
   }
@@ -34,7 +34,7 @@ function getInFlightNonce(guildId, arg1) {
 }
 function clearInFlightMember(guildId, nextResult, arg2) {
   value = map3.get(guildId);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(nextResult);
   }
@@ -87,7 +87,7 @@ function expireRequest(arg0) {
   if (null != value) {
     map2.delete(arg0);
     const guildId = value.guildId;
-    value2 = map4.get(guildId);
+    let value2 = map4.get(guildId);
     if (null == value2) {
       const _Map = Map;
       map = new Map();
@@ -278,8 +278,8 @@ function clearRetryBackoffs() {
   }
   map5.clear();
 }
-let closure_5 = fn(6625).MAX_GUILD_MEMBER_REQUEST_SIZE;
-const GuildMemberFlags = fn(5060).GuildMemberFlags;
+let closure_5 = fn(6737).MAX_GUILD_MEMBER_REQUEST_SIZE;
+const GuildMemberFlags = fn(5161).GuildMemberFlags;
 let c10 = 300000;
 let map = new Map();
 let map1 = new Map();
@@ -291,7 +291,7 @@ const map6 = new Map();
 let c18 = null;
 let Infinity = Infinity;
 let c20 = 0;
-const delayedCall = new fn(4986).DelayedCall(500, () => {
+const delayedCall = new fn(5087).DelayedCall(500, () => {
   (function pruneExpired(arg0) {
     closure_0 = arg0;
     let item = set.forEach((size, index) => {
@@ -343,7 +343,7 @@ const subscription = Dispatcher.subscribe("GUILD_MEMBERS_CHUNK_BATCH", (arg0) =>
           clearTimeout(value.timeout);
           map.delete(nonce);
           let guildId = iter.guildId;
-          value2 = map2.get(guildId);
+          const value2 = map2.get(guildId);
           if (value2 != null) {
             value2.cancel();
           }
@@ -537,7 +537,7 @@ export function verifyGuildMembers(guildId, arg1) {
     if (nextResult !== id) {
       if (null == getInFlightNonce(guildId, tmp4)) {
         if (isVerifiableMember(GuildMemberStore.getTrueMember(guildId, tmp4))) {
-          value2 = undefined;
+          let value2;
           if (value != null) {
             value2 = value.get(tmp4);
           }

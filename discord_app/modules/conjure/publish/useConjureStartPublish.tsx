@@ -1,7 +1,7 @@
-// === Module 12275: publish/useConjureStartPublish ===
+// === Module 13079: publish/useConjureStartPublish ===
 
-// Module 12275 (publish/useConjureStartPublish)
-import ConjurePublishTypes from "ConjurePublishTypes" /* 11003 */;
+// Module 13079 (publish/useConjureStartPublish)
+import ConjurePublishTypes from "ConjurePublishTypes" /* 7320 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

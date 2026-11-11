@@ -1,11 +1,11 @@
-// === Module 16821: HexagonCampaignDisplayNameStylePromo ===
+// === Module 16982: HexagonCampaignDisplayNameStylePromo ===
 
-// Module 16821 (HexagonCampaignDisplayNameStylePromo)
+// Module 16982 (HexagonCampaignDisplayNameStylePromo)
 import nativeDefault from "native" /* 575 */;
-import _modDef4413 from "module_4413" /* 4413 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 16823 */;
-import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 16825 */;
+import _modDef4464 from "module_4464" /* 4464 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient" /* 16984 */;
+import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 16986 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { promo: { height: 32, justifyContent: "center", paddingBottom: 2, paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_8 }, link: { textDecorationLine: "underline" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -37,9 +37,9 @@ export default function HexagonCampaignDisplayNameStylePromo(showLearnMore) {
           return React4(Text_Text.Text, { variant: "footnote/medium", color: "text-strong", style: link.link, accessibilityRole: "link", onPress: openHexagonCampaignLearnMore.openHexagonCampaignLearnMore, children }, arg1);
         }
     };
-    let formatResult = intl.format(_modDef4413.eb99JA, obj3);
+    let formatResult = intl.format(_modDef4464.eb99JA, obj3);
   } else {
-    formatResult = intl.string(_modDef4413.WyZOg3);
+    formatResult = intl.string(_modDef4464.WyZOg3);
   }
   items[1] = closure_4(require("Text/Text").Text, { variant: "footnote/medium", color: "text-default", lineClamp: 1, children: formatResult });
   obj2.children = items;

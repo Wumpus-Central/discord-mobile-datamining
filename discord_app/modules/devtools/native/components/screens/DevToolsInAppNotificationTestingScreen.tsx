@@ -1,21 +1,21 @@
-// === Module 18092: DevToolsInAppNotificationTestingScreen ===
+// === Module 18263: DevToolsInAppNotificationTestingScreen ===
 
-// Module 18092 (DevToolsInAppNotificationTestingScreen)
+// Module 18263 (DevToolsInAppNotificationTestingScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5839 */;
-import StickersTypes from "StickersTypes" /* 6618 */;
-import TableRowGroup from "TableRowGroup" /* 7129 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 11161 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 11163 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
+import StickersTypes from "StickersTypes" /* 6730 */;
+import TableRowGroup from "TableRowGroup" /* 7680 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10962 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10964 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6895 */;
-import MessageRecord from "MessageRecord" /* 5085 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import GuildStore from "GuildStore" /* 5013 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import StickersStore from "StickersStore" /* 6947 */;
+import MessageRecord from "MessageRecord" /* 5186 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import GuildStore from "GuildStore" /* 5114 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -178,12 +178,12 @@ function buildReactionNotification(arg0) {
   }
 }
 const ScrollView = fn(17).ScrollView;
-const createChannelRecord = fn(4995).createChannelRecord;
+const createChannelRecord = fn(5096).createChannelRecord;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_12, InAppNotificationTypes } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -495,19 +495,19 @@ export default function DevToolsInAppNotificationTestingScreen() {
       const options = title.options;
       obj2.children = options.map((label) => {
         closure_0 = label;
-        return closure_1_14(closure_1_0(7041).TableRow, {
+        return closure_1_14(closure_1_0(7379).TableRow, {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(closure_1_0(12412).BeakerIcon, {}),
+          icon: closure_1_14(closure_1_0(13219).BeakerIcon, {}),
           onPress() {
             return closure_2_0(closure_0);
           },
-          trailing: closure_1_14(closure_1_0(7050).TableRowArrow, {})
+          trailing: closure_1_14(closure_1_0(7388).TableRowArrow, {})
         }, label.label);
       });
       items = [gesture(TableRowGroup.TableRowGroup, obj2), gesture(native.Spacer, { size: nativeDefault.space.PX_16 })];
       obj.children = items;
-      return closure_2_15(noop.Fragment, obj, title.title);
+      return colors(noop.Fragment, obj, title.title);
     }),
 
   ];
@@ -515,14 +515,14 @@ export default function DevToolsInAppNotificationTestingScreen() {
   items1[2] = closure_14(require("TableRowGroup").TableRowGroup, {
     title: "Other Notification Types",
     hasIcons: true,
-    children: items3.map((label) => closure_1_14(label(7041).TableRow, {
+    children: items3.map((label) => closure_1_14(label(7379).TableRow, {
       label: label.label,
       subLabel: label.subLabel,
-      icon: closure_1_14(label(12412).BeakerIcon, {}),
+      icon: closure_1_14(label(13219).BeakerIcon, {}),
       onPress() {
         return label(label);
       },
-      trailing: closure_1_14(label(7050).TableRowArrow, {})
+      trailing: closure_1_14(label(7388).TableRowArrow, {})
     }, label.label))
   });
   obj.children = items1;

@@ -1,15 +1,15 @@
-// === Module 8603: PremiumSubscriptionOfferUtil ===
+// === Module 9243: PremiumSubscriptionOfferUtil ===
 
-// Module 8603 (PremiumSubscriptionOfferUtil)
+// Module 9243 (PremiumSubscriptionOfferUtil)
 import initialize from "initialize" /* 504 */;
 import Server from "Server" /* 2116 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7706 */;
-import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8604 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8605 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 8606 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8607 */;
-import ReverseTrialUtils from "ReverseTrialUtils" /* 8610 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9244 */;
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 9246 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 9247 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 9248 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 9249 */;
+import ReverseTrialUtils from "ReverseTrialUtils" /* 9251 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
@@ -29,7 +29,7 @@ function getDiscountInfo(active_discount_id) {
       } else {
         if (closure_1_11 !== active_discount_id) {
           if (gesture !== active_discount_id) {
-            if (closure_1_15 !== active_discount_id) {
+            if (colors !== active_discount_id) {
               if (state !== active_discount_id) {
                 if (dependencyMap !== active_discount_id) {
                   if (timestampProducer === active_discount_id) {
@@ -44,7 +44,7 @@ function getDiscountInfo(active_discount_id) {
                   } else if (React6 === active_discount_id) {
                     const obj7 = { duration: 12, percentage: 30, discountId: active_discount_id };
                     return obj7;
-                  } else if (value2 === active_discount_id) {
+                  } else if (closure_1_16 === active_discount_id) {
                     const obj8 = { duration: 1, percentage: 40, discountId: active_discount_id };
                     return obj8;
                   } else if (closure_1_17 === active_discount_id) {

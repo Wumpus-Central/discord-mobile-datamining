@@ -1,17 +1,17 @@
-// === Module 17247: OrbWalletActionSheet ===
+// === Module 17410: OrbWalletActionSheet ===
 
-// Module 17247 (OrbWalletActionSheet)
+// Module 17410 (OrbWalletActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import _modDef2298 from "module_2298" /* 2298 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7415 */;
-import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 15969 */;
-import OrbWalletCards from "OrbWalletCards" /* 17259 */;
+import _modDef2317 from "module_2317" /* 2317 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
+import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 16128 */;
+import OrbWalletCards from "OrbWalletCards" /* 17422 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import OrbChallengesStore from "OrbChallengesStore" /* 15967 */;
+import OrbChallengesStore from "OrbChallengesStore" /* 16126 */;
 
 require = fn;
 function StatefulOrbChallengesCard(reopenWallet) {
@@ -42,7 +42,7 @@ function StatefulOrbChallengesCard(reopenWallet) {
     if (null != orbChallengesDisplayError) {
       if (orbChallengesDisplayError.errorType === orbChallengesDisplayError.CLAIM_CHALLENGE) {
         const intl3 = util.intl;
-        let stringResult = intl3.string(_modDef2298.FYb5rH);
+        let stringResult = intl3.string(_modDef2317.FYb5rH);
       } else {
         const intl2 = util.intl;
         const obj2 = {
@@ -59,7 +59,7 @@ function StatefulOrbChallengesCard(reopenWallet) {
                 });
               }
         };
-        stringResult = intl2.format(_modDef2298.ggLzeg, obj2);
+        stringResult = intl2.format(_modDef2317.ggLzeg, obj2);
       }
       const obj3 = { type: "warning", message: stringResult, role: "status" };
     } else {
@@ -103,7 +103,7 @@ function StatefulOrbChallengesCard(reopenWallet) {
   }), items4);
   const obj6 = { title: null, isLoading: null, inlineNoticeProps: null, challenges: null, onClaim: null };
   let intl = reopenWallet(orbWalletAnalyticsPage[15]).intl;
-  obj6.title = intl.string(require("module_2298").H6Ny8N);
+  obj6.title = intl.string(require("module_2317").H6Ny8N);
   obj6.isLoading = !fetchOrbChallenges.hasFetchedChallenges;
   obj6.inlineNoticeProps = memo;
   obj6.challenges = memo1;
@@ -160,13 +160,13 @@ function OrbWalletContent(reopenWallet) {
   return closure_12(challengesForOrbWallet, obj4);
 }
 const View = fn(17).View;
-let closure_7 = fn(15967).OrbChallengesDisplayErrorType;
-let closure_8 = fn(17246).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_7 = fn(16126).OrbChallengesDisplayErrorType;
+let closure_8 = fn(17409).ORB_WALLET_ACTION_SHEET_KEY;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { width: "100%", paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, section: null, tryAgainLink: null, divider: null };
 let obj3 = { width: "100%", paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj2.section = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };

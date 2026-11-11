@@ -1,7 +1,7 @@
-// === Module 11063: conjureMediaTickets ===
+// === Module 13120: conjureMediaTickets ===
 
-// Module 11063 (conjureMediaTickets)
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11011 */;
+// Module 13120 (conjureMediaTickets)
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7272 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ export function getMediaTicket(projectId) {
       return Promise.resolve(value.ticket);
     }
   }
-  value2 = map1.get(projectId);
+  const value2 = map1.get(projectId);
   if (null != value2) {
     return value2;
   } else {

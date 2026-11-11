@@ -1,28 +1,28 @@
-// === Module 18955: ICYMIMediaMosaic ===
+// === Module 19142: ICYMIMediaMosaic ===
 
-// Module 18955 (ICYMIMediaMosaic)
+// Module 19142 (ICYMIMediaMosaic)
 import apply from "apply" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import useChannelName from "useChannelName" /* 5778 */;
-import FastImageDefault from "FastImage" /* 5844 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7345 */;
-import openMediaModal from "openMediaModal" /* 8913 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8919 */;
-import common_VideoDefault from "common/Video" /* 8953 */;
-import ICYMITypes from "ICYMITypes" /* 8999 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 9004 */;
-import ICYMIContext from "ICYMIContext" /* 18908 */;
-import ThumbhashUtils from "ThumbhashUtils" /* 18956 */;
+import useChannelName from "useChannelName" /* 5891 */;
+import FastImageDefault from "FastImage" /* 5957 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7808 */;
+import openMediaModal from "openMediaModal" /* 8560 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8566 */;
+import common_VideoDefault from "common/Video" /* 9664 */;
+import ICYMITypes from "ICYMITypes" /* 10142 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10150 */;
+import ICYMIContext from "ICYMIContext" /* 19098 */;
+import ThumbhashUtils from "ThumbhashUtils" /* 19143 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import RelationshipStore from "RelationshipStore" /* 5084 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import RelationshipStore from "RelationshipStore" /* 5185 */;
 import UserStore from "UserStore" /* 1385 */;
-import ICYMIStore from "ICYMIStore" /* 8986 */;
+import ICYMIStore from "ICYMIStore" /* 10137 */;
 
 require = fn;
 function MediaMosaicVideo(source) {
@@ -45,7 +45,7 @@ function MediaMosaicVideo(source) {
     isGIFV = source.isGIFV;
   }
   size.disableFocus = isGIFV;
-  return closure_1_15(common_VideoDefault, size);
+  return colors(common_VideoDefault, size);
 }
 function MediaMosaicImage(source) {
   source = source.source;
@@ -248,8 +248,8 @@ function OneImageRow(widthOverride) {
   const obj2 = { handlePressMedia, initialIndex: 0, source, dimensions: null };
   const size = { width: widthOverride, height: widthOverride / 1.5 };
   obj2.dimensions = size;
-  obj.children = closure_1_15(Media, obj2);
-  return closure_1_15(timestampProducer, obj);
+  obj.children = colors(Media, obj2);
+  return colors(timestampProducer, obj);
 }
 function ThreeImagesRow(arg0) {
   ({ sources, start, end, offset: require, handlePressMedia: importDefault, widthOverride } = arg0);
@@ -278,7 +278,7 @@ function ThreeImagesRow(arg0) {
       const obj = { handlePressMedia, initialIndex: _require + index, source, dimensions: null };
       const size = { width: (widthOverride - 8) / 3, height: (widthOverride - 8) / 3 };
       obj.dimensions = size;
-      return closure_2_15(Media, obj, _require + index);
+      return colors(Media, obj, _require + index);
     })
   });
 }
@@ -301,7 +301,7 @@ function TwoImagesRow(arg0) {
     end = tmp.bottomRow;
   }
   items[2] = end;
-  return closure_15(closure_6, { style: items, children: sources.map((source, initialIndex) => closure_2_15(Media, { handlePressMedia, initialIndex, source, dimensions: size }, initialIndex)) });
+  return closure_15(closure_6, { style: items, children: sources.map((source, initialIndex) => colors(Media, { handlePressMedia, initialIndex, source, dimensions: size }, initialIndex)) });
 }
 function ThreeImages(arg0) {
   ({ sources, handlePressMedia, widthOverride } = arg0);
@@ -322,10 +322,10 @@ function ThreeImages(arg0) {
   const obj3 = { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: null };
   const size = { width: 2 * widthOverride / 3 - 4, height: 2 * widthOverride / 3 };
   obj3.dimensions = size;
-  obj2.children = closure_1_15(Media, obj3);
-  const items1 = [closure_1_15(timestampProducer, obj2), ];
+  obj2.children = colors(Media, obj3);
+  const items1 = [colors(timestampProducer, obj2), ];
   const obj4 = { style: tmp.rightColumn, children: null };
-  const items2 = [closure_1_15(Media, { handlePressMedia, initialIndex: 1, source: sources[1], dimensions: { width: widthOverride / 3, height: widthOverride / 3 } }), closure_1_15(Media, { handlePressMedia, initialIndex: 2, source: sources[2], dimensions: { width: widthOverride / 3, height: widthOverride / 3 } })];
+  const items2 = [colors(Media, { handlePressMedia, initialIndex: 1, source: sources[1], dimensions: { width: widthOverride / 3, height: widthOverride / 3 } }), colors(Media, { handlePressMedia, initialIndex: 2, source: sources[2], dimensions: { width: widthOverride / 3, height: widthOverride / 3 } })];
   obj4.children = items2;
   items1[1] = closure_1_17(timestampProducer, obj4);
   obj.children = items1;
@@ -348,14 +348,14 @@ function FourImages(arg0) {
   items = [, ];
   ({ imageRow: arr[0], topRow: arr[1] } = tmp);
   obj2.style = items;
-  const items1 = [closure_1_15(Media, { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: size }), closure_1_15(Media, { handlePressMedia, initialIndex: 1, source: sources[1], dimensions: size })];
+  const items1 = [colors(Media, { handlePressMedia, initialIndex: 0, source: sources[0], dimensions: size }), colors(Media, { handlePressMedia, initialIndex: 1, source: sources[1], dimensions: size })];
   obj2.children = items1;
   const items2 = [closure_1_17(timestampProducer, obj2), ];
   const obj5 = { style: null, children: null };
   const items3 = [, ];
   ({ imageRow: arr4[0], bottomRow: arr4[1] } = tmp);
   obj5.style = items3;
-  const items4 = [closure_1_15(Media, { handlePressMedia, initialIndex: 2, source: sources[2], dimensions: size }), closure_1_15(Media, { handlePressMedia, initialIndex: 3, source: sources[3], dimensions: size })];
+  const items4 = [colors(Media, { handlePressMedia, initialIndex: 2, source: sources[2], dimensions: size }), colors(Media, { handlePressMedia, initialIndex: 3, source: sources[3], dimensions: size })];
   obj5.children = items4;
   items2[1] = closure_1_17(timestampProducer, obj5);
   obj.children = items2;
@@ -379,7 +379,7 @@ function SingleImage(source) {
   items[2] = widthOverride;
   const obj2 = {
     style: tmp.imagesContainer,
-    children: closure_1_15(Media, {
+    children: colors(Media, {
       handlePressMedia,
       initialIndex,
       source,
@@ -408,7 +408,7 @@ function SingleImage(source) {
       visible
     })
   };
-  return closure_1_15(timestampProducer, obj2);
+  return colors(timestampProducer, obj2);
 }
 class GravityAttachmentMediaMosaic {
   constructor(arg0) {
@@ -483,17 +483,17 @@ class GravityAttachmentMediaMosaic {
             obj.children = memo.map((sources, index) => {
               if (1 === sources.length) {
                 const obj2 = { handlePressMedia, source: sources[0] };
-                return closure_2_15(OneImageRow, obj2, index);
+                return colors(OneImageRow, obj2, index);
               } else if (2 === sources.length) {
                 const obj3 = { widthOverride, sources, handlePressMedia, end: index === memo.length - 1 };
-                return closure_2_15(TwoImagesRow, obj3, index);
+                return colors(TwoImagesRow, obj3, index);
               } else {
                 let num = 0;
                 if (0 !== index) {
                   num = memo[0].length + 3 * (index - 1);
                 }
                 const obj = { widthOverride, handlePressMedia, offset: num, sources, start: 0 === index, end: index === memo.length - 1 };
-                return closure_2_15(ThreeImagesRow, obj, index);
+                return colors(ThreeImagesRow, obj, index);
               }
             });
             tmp4 = jsx(View, obj);
@@ -511,7 +511,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_12, AnalyticsObjects: map1, AnalyticsPages: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const collapsedCategories = createStyles.createStyles(() => {
   const obj = { media: { borderRadius: nativeDefault.radii.xs }, video: null, thumbhashMedia: null, container: null, imagesContainer: null, imageRow: null, topRow: null, bottomRow: null, videoIcon: null, muteIcon: null, spoilerText: null, leftColumn: null, rightColumn: null, singleImage: null, centerContainer: null, absoluteContainer: null, iconBg: null, iconBgSelected: null };
   const obj2 = { borderRadius: nativeDefault.radii.xs };
@@ -608,7 +608,7 @@ export default function ICYMIMediaMosaic(message) {
     const items3 = [closure_15(GravityAttachmentMediaMosaic, obj4), ];
     let mapped;
     if (embedSources != null) {
-      mapped = embedSources.map((source, index) => closure_2_15(SingleImage, { widthOverride, handlePressMedia, initialIndex: index + nonEmbedSources.length, source, visible }, "gif-" + index));
+      mapped = embedSources.map((source, index) => colors(SingleImage, { widthOverride, handlePressMedia, initialIndex: index + nonEmbedSources.length, source, visible }, "gif-" + index));
     }
     items3[1] = mapped;
     obj3.children = items3;

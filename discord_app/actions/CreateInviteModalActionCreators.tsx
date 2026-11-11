@@ -1,10 +1,10 @@
-// === Module 9211: CreateInviteModalActionCreators ===
+// === Module 8405: CreateInviteModalActionCreators ===
 
-// Module 9211 (CreateInviteModalActionCreators)
+// Module 8405 (CreateInviteModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 9031 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9205 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7594 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 8396 */;
 
 const require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;

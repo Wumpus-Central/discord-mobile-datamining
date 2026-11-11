@@ -1,19 +1,19 @@
-// === Module 19217: FriendsScreen ===
+// === Module 19404: FriendsScreen ===
 
-// Module 19217 (FriendsScreen)
+// Module 19404 (FriendsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
-import components_Button_Button from "components/Button/Button" /* 5760 */;
-import SendMessageIcon from "SendMessageIcon" /* 5855 */;
-import TableRow from "TableRow" /* 7041 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8827 */;
-import NoResultsDefault from "NoResults" /* 13648 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 17439 */;
-import _modDef18895 from "module_18895" /* 18895 */;
+import components_Button_Button from "components/Button/Button" /* 5873 */;
+import SendMessageIcon from "SendMessageIcon" /* 5968 */;
+import TableRow from "TableRow" /* 7379 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
+import NoResultsDefault from "NoResults" /* 11728 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 17604 */;
+import _modDef19085 from "module_19085" /* 19085 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7880 */;
-import RelationshipStore from "RelationshipStore" /* 5084 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 8698 */;
+import RelationshipStore from "RelationshipStore" /* 5185 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_8, flex: 1 }, requestsButtonContainer: null, emptyContainer: null, buttonContainer: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8, flex: 1 };
 obj2.requestsButtonContainer = { marginHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
@@ -80,7 +80,7 @@ export default function FriendsScreen() {
     }
     items = [];
     if (tmp2) {
-      const obj = { icon: _modDef18895, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
+      const obj = { icon: _modDef19085, IconComponent: SendMessageIcon.SendMessageIcon, iconVariant: "default", label: null, subLabel: null, onPress: null };
       const intl = util.intl;
       obj.label = intl.string(util.t.fyA115);
       const intl2 = util.intl;
@@ -123,7 +123,7 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef18895 };
+      const obj8 = { source: _modDef19085 };
       obj7.icon = metroImportDefault(TableRow.TableRow.Icon, obj8);
       obj7.trailing = metroImportDefault(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

@@ -1,29 +1,29 @@
-// === Module 12283: useConjurePublishPanel ===
+// === Module 13085: useConjurePublishPanel ===
 
-// Module 12283 (useConjurePublishPanel)
-import _modDef4028 from "module_4028" /* 4028 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9117 */;
+// Module 13085 (useConjurePublishPanel)
+import _modDef4079 from "module_4079" /* 4079 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8066 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5013 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
+import GuildStore from "GuildStore" /* 5114 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let isProjectOwner = fn(6902).isProjectOwner;
+let isProjectOwner = fn(6954).isProjectOwner;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_9, Permissions: closure_10 } = Constants);
-let items = [fn(6903).ConjureSupportedSurface.BOT, _modDef4028.UnoAgo];
+let items = [fn(6955).ConjureSupportedSurface.BOT, _modDef4079.UnoAgo];
 let items1 = [items, , , , ];
-let items2 = [fn(6903).ConjureSupportedSurface.ACTIVITY, _modDef4028["I88/iG"]];
+let items2 = [fn(6955).ConjureSupportedSurface.ACTIVITY, _modDef4079["I88/iG"]];
 items1[1] = items2;
-let items3 = [fn(6903).ConjureSupportedSurface.VOICE_CHANNEL, _modDef4028.skjf5I];
+let items3 = [fn(6955).ConjureSupportedSurface.VOICE_CHANNEL, _modDef4079.skjf5I];
 items1[2] = items3;
-let items4 = [fn(6903).ConjureSupportedSurface.PROFILE_WIDGET, _modDef4028.gXY1x1];
+let items4 = [fn(6955).ConjureSupportedSurface.PROFILE_WIDGET, _modDef4079.gXY1x1];
 items1[3] = items4;
-const items5 = [fn(6903).ConjureSupportedSurface.AUTOMOD, _modDef4028.Q9ruoM];
+const items5 = [fn(6955).ConjureSupportedSurface.AUTOMOD, _modDef4079.Q9ruoM];
 items1[4] = items5;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishPanel.tsx");
@@ -286,4 +286,4 @@ export function conjurePublishComponents(arg0) {
     return obj;
   });
 }
-export const CONJURE_PUBLISH_PERMISSION_LABELS = { screen_capture: _modDef4028["8/7kE7"], connect_user_to_voice: _modDef4028.uvDWXa };
+export const CONJURE_PUBLISH_PERMISSION_LABELS = { screen_capture: _modDef4079["8/7kE7"], connect_user_to_voice: _modDef4079.uvDWXa };

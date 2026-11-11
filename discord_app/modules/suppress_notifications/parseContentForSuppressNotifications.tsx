@@ -1,6 +1,6 @@
-// === Module 7906: parseContentForSuppressNotifications ===
+// === Module 8722: parseContentForSuppressNotifications ===
 
-// Module 7906 (parseContentForSuppressNotifications)
+// Module 8722 (parseContentForSuppressNotifications)
 import size from "module_2" /* 2 */;
 
 const regExp = new RegExp("^" + "@silent" + "(\\s|$)");

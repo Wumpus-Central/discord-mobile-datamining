@@ -1,20 +1,20 @@
-// === Module 12923: BeeIllocon ===
+// === Module 13595: BeeIllocon ===
 
-// Module 12923 (BeeIllocon)
-import FastImageDefault from "FastImage" /* 5844 */;
-import assetHelpers from "assetHelpers" /* 7138 */;
-import _modDef12924 from "module_12924" /* 12924 */;
-import _modDef12925 from "module_12925" /* 12925 */;
-import _modDef12926 from "module_12926" /* 12926 */;
+// Module 13595 (BeeIllocon)
+import FastImageDefault from "FastImage" /* 5957 */;
+import assetHelpers from "assetHelpers" /* 7689 */;
+import _modDef13596 from "module_13596" /* 13596 */;
+import _modDef13597 from "module_13597" /* 13597 */;
+import _modDef13598 from "module_13598" /* 13598 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12924 }, 3: null };
-const obj2 = { uri: _modDef12924 };
-obj[2] = { uri: _modDef12925 };
-const obj3 = { uri: _modDef12925 };
-obj[3] = { uri: _modDef12926 };
+let obj = { 1: null, 2: { uri: _modDef13596 }, 3: null };
+const obj2 = { uri: _modDef13596 };
+obj[2] = { uri: _modDef13597 };
+const obj3 = { uri: _modDef13597 };
+obj[3] = { uri: _modDef13598 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BeeIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function BeeIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7138).getAssetSource(obj);
+  obj.source = num(7689).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

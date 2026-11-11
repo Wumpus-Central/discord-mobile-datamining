@@ -1,10 +1,10 @@
-// === Module 13669: Pile ===
+// === Module 14837: Pile ===
 
-// Module 13669 (Pile)
+// Module 14837 (Pile)
 import apply from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ClipView from "ClipView" /* 9599 */;
-import PileOverflow from "PileOverflow" /* 13670 */;
+import ClipView from "ClipView" /* 9437 */;
+import PileOverflow from "PileOverflow" /* 14838 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -12,7 +12,7 @@ const ClipViewDefault = ClipView;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_6 = createStyles.createStyles({ pile: { flexDirection: "row" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/Pile/native/Pile.native.tsx");
@@ -22,7 +22,7 @@ export function Pile(aria_label) {
   ({ gap: dependencyMap, depthX: noop, depthY: View, children } = aria_label);
   const Children = noop.Children;
   const tmp = closure_6();
-  const length = Children.toArray(children).filter(GlobalUtils.isNotNullish).length;
+  length = Children.toArray(children).filter(GlobalUtils.isNotNullish).length;
   const toArrayResult = Children.toArray(children);
   if (obj.isArray(size)) {
     if (size.length !== length) {

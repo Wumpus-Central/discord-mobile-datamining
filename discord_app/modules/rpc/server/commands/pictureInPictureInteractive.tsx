@@ -1,14 +1,14 @@
-// === Module 16708: pictureInPictureInteractive ===
+// === Module 16869: pictureInPictureInteractive ===
 
-// Module 16708 (pictureInPictureInteractive)
+// Module 16869 (pictureInPictureInteractive)
 import Constants2 from "Constants" /* 1072 */;
-import FramesConstants from "FramesConstants" /* 6905 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11070 */;
-import Constants3 from "Constants" /* 11864 */;
-import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 16635 */;
-import conjureBackgroundFrames from "conjureBackgroundFrames" /* 16709 */;
-import Constants from "Constants" /* 6585 */;
-import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 16643 */;
+import FramesConstants from "FramesConstants" /* 6957 */;
+import Constants3 from "Constants" /* 12616 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 12653 */;
+import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 16796 */;
+import conjureBackgroundFrames from "conjureBackgroundFrames" /* 16870 */;
+import Constants from "Constants" /* 6698 */;
+import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 16804 */;
 import size from "module_2" /* 2 */;
 
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);

@@ -1,20 +1,20 @@
-// === Module 16032: QRScannerModal ===
+// === Module 16191: QRScannerModal ===
 
-// Module 16032 (QRScannerModal)
+// Module 16191 (QRScannerModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import LinkingDefault from "Linking" /* 5836 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6093 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6801 */;
-import _modDef7323 from "module_7323" /* 7323 */;
-import openUserSettings from "openUserSettings" /* 7638 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9195 */;
-import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 13601 */;
-import QRLoginUtils from "QRLoginUtils" /* 16008 */;
-import QRScannerNativeComponentDefault from "QRScannerNativeComponent" /* 16033 */;
+import LinkingDefault from "Linking" /* 5949 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6206 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
+import _modDef7797 from "module_7797" /* 7797 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8385 */;
+import openUserSettings from "openUserSettings" /* 8537 */;
+import FamilyCenterNativeUtils from "FamilyCenterNativeUtils" /* 14118 */;
+import QRLoginUtils from "QRLoginUtils" /* 16167 */;
+import QRScannerNativeComponentDefault from "QRScannerNativeComponent" /* 16192 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ function DCDQRScanner(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, requireNativeComponent } = get_ActivityIndicator);
 const UserSettingsSections = fn(1072).UserSettingsSections;
-let closure_7 = fn(7795).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_7 = fn(8674).FAMILY_CENTER_LINK_REQUEST_REGEX;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PlatformUtils = fn(1377);
@@ -86,7 +86,7 @@ export default function QRScannerModal(showHelp) {
             ModalActionCreatorsDefault.pop();
             const tmp21Result = ModalActionCreatorsDefault;
             obj2 = { remoteAuthFingerprint: result };
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16023, dependencyMap.paths), obj2);
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16182, dependencyMap.paths), obj2);
             const tmp21Result4 = ModalActionCreatorsDefault;
           } else {
             let match;
@@ -119,8 +119,8 @@ export default function QRScannerModal(showHelp) {
         actions_AlertActionCreatorsDefault.show(obj4);
         tmp9 = importDefault;
       }
-      tmp9(6801).pop();
-      const tmp9Result = tmp9(6801);
+      tmp9(6785).pop();
+      const tmp9Result = tmp9(6785);
     };
     tmp10Result = closure_8(DCDQRScanner, obj3);
     tmp14 = closure_8;
@@ -130,7 +130,7 @@ export default function QRScannerModal(showHelp) {
   const tmp7 = useSafeAreaInsetsDefault();
   let intl = onScanSuccess(1113).intl;
   obj4.accessibilityLabel = intl.string(onScanSuccess(1113).t.cpT0Cq);
-  obj4.source = _modDef7323;
+  obj4.source = _modDef7797;
   const items2 = [tmp12.closeButton, { marginTop: top }];
   obj4.style = items2;
   obj4.onPress = ModalActionCreatorsDefault.pop;

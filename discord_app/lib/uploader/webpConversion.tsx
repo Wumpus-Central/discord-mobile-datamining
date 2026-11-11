@@ -1,6 +1,6 @@
-// === Module 8321: webpConversion ===
+// === Module 8840: webpConversion ===
 
-// Module 8321 (webpConversion)
+// Module 8840 (webpConversion)
 import LoggerDefault from "Logger" /* 3 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

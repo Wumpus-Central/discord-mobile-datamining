@@ -1,6 +1,6 @@
-// === Module 8845: BadgeDirectoryActionCreators ===
+// === Module 8486: BadgeDirectoryActionCreators ===
 
-// Module 8845 (BadgeDirectoryActionCreators)
+// Module 8486 (BadgeDirectoryActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -430,7 +430,7 @@ export function fetchBadgeSummary(GIFTING, id) {
     if (null != value) {
       return value;
     } else {
-      value2 = map1.get(combined);
+      const value2 = map1.get(combined);
       let num;
       if (value2 != null) {
         num = value2.gateUntil;

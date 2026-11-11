@@ -1,8 +1,8 @@
-// === Module 6819: GuildMemberRequester ===
+// === Module 6882: GuildMemberRequester ===
 
-// Module 6819 (GuildMemberRequester)
+// Module 6882 (GuildMemberRequester)
 import applyDefault from "apply" /* 12 */;
-import Timers from "Timers" /* 4986 */;
+import Timers from "Timers" /* 5087 */;
 import size from "module_2" /* 2 */;
 
 class GuildMemberRequestState {

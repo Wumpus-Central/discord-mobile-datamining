@@ -1,9 +1,9 @@
-// === Module 15303: UserProfileTabPages ===
+// === Module 15753: UserProfileTabPages ===
 
-// Module 15303 (UserProfileTabPages)
+// Module 15753 (UserProfileTabPages)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5392 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5505 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -321,7 +321,7 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   const callback2 = obj.useCallback(UserProfileTabPagesTsx6, items14);
   const callback3 = obj.useCallback(UserProfileTabPagesTsx7, items17);
   const tmp7Result2 = require("module_1652");
-  return jsx(_modDef1652.View, { ref, onLayout: callback, style: animatedStyle, children: jsx(require("SegmentedControlPages").SegmentedControlPages, { state, onBeginDragWorklet: callback2, onEndDragWorklet: callback3 }) });
+  return jsx(_modDef1652.View, { ref, onLayout: callback, style: animatedStyle, children: jsx(require("SegmentedControlPages").SegmentedControlPages, { state, bounces: false, onBeginDragWorklet: callback2, onEndDragWorklet: callback3 }) });
 });
 export function useMeasuredTabItems(memo) {
   _require = memo;

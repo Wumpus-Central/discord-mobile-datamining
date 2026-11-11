@@ -1,13 +1,13 @@
-// === Module 6050: SpatialAudioStore ===
+// === Module 6163: SpatialAudioStore ===
 
-// Module 6050 (SpatialAudioStore)
+// Module 6163 (SpatialAudioStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 6052 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 6165 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
 import apply from "apply" /* 12 */;
 
 require = fn;
@@ -80,10 +80,10 @@ function handleExperimentChange() {
   }
   return tmp;
 }
-const SpatialAudioConstants = fn(6051);
+const SpatialAudioConstants = fn(6164);
 const DEFAULT_SPATIAL_AUDIO_OPTIONS = SpatialAudioConstants.DEFAULT_SPATIAL_AUDIO_OPTIONS;
 let closure_7 = SpatialAudioConstants.MIN_POSITIONING_SPATIAL_AUDIO_VERSION;
-const Constants = fn(5899);
+const Constants = fn(6012);
 ({ Features: closure_8, MediaEngineContextTypes: closure_9, SpatialAudioStatus } = Constants);
 let obj = {};
 let isSpatial = {};
@@ -105,8 +105,8 @@ prototype["initialize"] = function initialize(enabled) {
   items = [ApexExperimentStore];
   self.syncWith(items, handleExperimentChange);
   const mediaEngine = MediaEngineStore.getMediaEngine();
-  mediaEngine.on(self(5920).MediaEngineEvent.Connection, (setSpatialAudioEnabled) => setSpatialAudioEnabled.setSpatialAudioEnabled(isSpatial.isSpatial));
-  mediaEngine.on(self(5920).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
+  mediaEngine.on(self(6033).MediaEngineEvent.Connection, (setSpatialAudioEnabled) => setSpatialAudioEnabled.setSpatialAudioEnabled(isSpatial.isSpatial));
+  mediaEngine.on(self(6033).MediaEngineEvent.SpatialAudioStatus, (arg0) => {
     let flag = arg0 !== global;
     if (flag) {
       global = arg0;

@@ -1,11 +1,11 @@
-// === Module 11316: ForLaterCardStatusHeader ===
+// === Module 11871: ForLaterCardStatusHeader ===
 
-// Module 11316 (ForLaterCardStatusHeader)
+// Module 11871 (ForLaterCardStatusHeader)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5753 */;
+import Text_Text from "Text/Text" /* 5866 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5142 */;
+import createStyles from "createStyles" /* 5243 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -28,7 +28,7 @@ export function ForLaterCardStatusHeader(isCritical) {
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.icon, children: null };
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   if (flag) {
     let INTERACTIVE_TEXT_DEFAULT = colors.TEXT_FEEDBACK_CRITICAL;
   } else {

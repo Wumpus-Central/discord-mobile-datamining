@@ -1,6 +1,6 @@
-// === Module 11485: PinotDraft ===
+// === Module 12256: PinotDraft ===
 
-// Module 11485 (PinotDraft)
+// Module 12256 (PinotDraft)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/pinot/PinotDraft.tsx");

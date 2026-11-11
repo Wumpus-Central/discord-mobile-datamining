@@ -1,8 +1,8 @@
-// === Module 12024: useCurrentUserStageRoles ===
+// === Module 12818: useCurrentUserStageRoles ===
 
-// Module 12024 (useCurrentUserStageRoles)
+// Module 12818 (useCurrentUserStageRoles)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6815 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6879 */;
 
 const require = globalThis.__r;
 

@@ -1,12 +1,12 @@
-// === Module 14785: AddImageDescriptionModal ===
+// === Module 11789: AddImageDescriptionModal ===
 
-// Module 14785 (AddImageDescriptionModal)
+// Module 11789 (AddImageDescriptionModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10270 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10844 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8281 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8806 */;
 
 require = fn;
 function AddDescription(id) {
@@ -66,9 +66,9 @@ function AddDescription(id) {
           const obj2 = {};
           const merged = Object.assign(dependencyMap);
           obj2.description = ref.current;
-          id(9874).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-          const obj = id(9874);
-          id(14784).close();
+          id(11092).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+          const obj = id(11092);
+          id(11788).close();
         });
         let merged = Object.assign(arg0);
         return renderHeaderTextButton({});
@@ -101,11 +101,11 @@ function AddDescription(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const DraftType = fn(7780).DraftType;
-const maxLength = fn(14786).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+const DraftType = fn(8658).DraftType;
+const maxLength = fn(11790).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, imageContainer: null, image: null, placeholderText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.imageContainer = { alignItems: "center", borderRadius: nativeDefault.radii.sm };

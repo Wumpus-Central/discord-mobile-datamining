@@ -1,9 +1,9 @@
-// === Module 7270: NavigatorScreen ===
+// === Module 7518: NavigatorScreen ===
 
-// Module 7270 (NavigatorScreen)
-import config from "config" /* 7271 */;
-import PostponeRender from "PostponeRender" /* 7272 */;
-import NavigatorGradientContext from "NavigatorGradientContext" /* 7275 */;
+// Module 7518 (NavigatorScreen)
+import config from "config" /* 7519 */;
+import PostponeRender from "PostponeRender" /* 7520 */;
+import NavigatorGradientContext from "NavigatorGradientContext" /* 7523 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

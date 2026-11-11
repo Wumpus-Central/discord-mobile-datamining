@@ -1,17 +1,17 @@
-// === Module 12340: useConjurePublishSchedule ===
+// === Module 13147: useConjurePublishSchedule ===
 
-// Module 12340 (useConjurePublishSchedule)
+// Module 13147 (useConjurePublishSchedule)
 import util from "util" /* 1113 */;
-import _modDef4028 from "module_4028" /* 4028 */;
+import _modDef4079 from "module_4079" /* 4079 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10978 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 7301 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ensureConnection = fn(10978).ensureConnection;
+const ensureConnection = fn(7301).ensureConnection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_schedule/useConjurePublishSchedule.tsx");
 
@@ -60,7 +60,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
         }).catch(() => {
           if (ref.current.value === sum) {
             const intl = util.intl;
-            closure_2_8(intl.string(_modDef4028.n25haz));
+            closure_2_8(intl.string(_modDef4079.n25haz));
             closure_4(false);
           }
         });

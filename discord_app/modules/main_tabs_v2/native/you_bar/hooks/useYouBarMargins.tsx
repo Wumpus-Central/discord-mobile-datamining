@@ -1,13 +1,13 @@
-// === Module 17422: useYouBarMargins ===
+// === Module 17587: useYouBarMargins ===
 
-// Module 17422 (useYouBarMargins)
+// Module 17587 (useYouBarMargins)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import useChatLayoutDefault from "useChatLayout" /* 5319 */;
-import useToken from "useToken" /* 5726 */;
-import useVoicePanelDockHeightDefault from "useVoicePanelDockHeight" /* 11389 */;
-import YouBarConstants from "YouBarConstants" /* 17423 */;
+import useChatLayoutDefault from "useChatLayout" /* 5432 */;
+import useToken from "useToken" /* 5839 */;
+import useVoicePanelDockHeightDefault from "useVoicePanelDockHeight" /* 11947 */;
+import YouBarConstants from "YouBarConstants" /* 17588 */;
 import size from "module_2" /* 2 */;
 
 ({ YOU_BAR_MARGIN_IOS: c3, YOU_BAR_MARGIN: closure_4 } = YouBarConstants);
@@ -17,9 +17,11 @@ export function useYouBarHorizontalMargin() {
   if (useChatLayoutDefault().isChatBesideChannelList) {
     let tmp4 = React4;
   } else {
-    if (tmp2 > 0) {
+    if (useSafeAreaInsetsDefault().bottom > 0) {
       if (obj.isIOS()) {
-        tmp4 = React3;
+        if (!tmp2) {
+          tmp4 = React3;
+        }
       }
       obj = utils_PlatformUtils;
     }

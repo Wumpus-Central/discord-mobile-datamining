@@ -1,14 +1,14 @@
-// === Module 18323: RedesignSettingsNotificationScreen ===
+// === Module 18494: RedesignSettingsNotificationScreen ===
 
-// Module 18323 (RedesignSettingsNotificationScreen)
+// Module 18494 (RedesignSettingsNotificationScreen)
 import util from "util" /* 1113 */;
-import _modDef2992 from "module_2992" /* 2992 */;
-import useMountEffectDefault from "useMountEffect" /* 5723 */;
-import SettingBuilders from "SettingBuilders" /* 11694 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 17825 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 17827 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18324 */;
-import EffectiveNotifSettingsLayoutDefault from "EffectiveNotifSettingsLayout" /* 18329 */;
+import _modDef3013 from "module_3013" /* 3013 */;
+import useMountEffectDefault from "useMountEffect" /* 5836 */;
+import SettingBuilders from "SettingBuilders" /* 12317 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 17991 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 17993 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18495 */;
+import EffectiveNotifSettingsLayoutDefault from "EffectiveNotifSettingsLayout" /* 18500 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ function getNotificationSettings() {
   items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection(), , , ];
   const obj2 = { label: null, settings: null };
   const intl = util.intl;
-  obj2.label = intl.string(_modDef2992.nvBHcD);
+  obj2.label = intl.string(_modDef3013.nvBHcD);
   const items1 = [, , , , , , ];
   ({ REDESIGN_IN_APP_NOTIFICATIONS: arr2[0], REDESIGN_IN_APP_MESSAGE_SOUNDS: arr2[1], REDESIGN_ANDROID_MESSAGE_NOTIFICATIONS: arr2[2], REDESIGN_IOS_NATIVE_PHONE_INTEGRATION: arr2[3], REDESIGN_ANDROID_NOTIFICATION_LIGHTS: arr2[4], REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS: arr2[5], REDESIGN_ANDROID_NOTIFICATION_SOUNDS: arr2[6] } = MobileUserSettings);
   obj2.settings = items1;
@@ -27,15 +27,15 @@ function getNotificationSettings() {
   items[2] = obj3;
   const obj4 = { label: null, settings: null };
   const intl2 = util.intl;
-  obj4.label = intl2.string(_modDef2992["1S8d9h"]);
-  const items3 = [, , , , ];
-  ({ REACTION_NOTIFICATIONS: arr4[0], HIGHLIGHT_NOTIFICATIONS: arr4[1], FRIEND_ANNIVERSARY_NOTIFICATIONS: arr4[2], UPCOMING_SERVER_EVENT_NOTIFICATIONS: arr4[3], SUMMARY_REMINDER_NOTIFICATIONS: arr4[4] } = MobileUserSettings);
+  obj4.label = intl2.string(_modDef3013["1S8d9h"]);
+  const items3 = [, , , ];
+  ({ HIGHLIGHT_NOTIFICATIONS: arr4[0], FRIEND_ANNIVERSARY_NOTIFICATIONS: arr4[1], UPCOMING_SERVER_EVENT_NOTIFICATIONS: arr4[2], SUMMARY_REMINDER_NOTIFICATIONS: arr4[3] } = MobileUserSettings);
   obj4.settings = items3;
   items[3] = obj4;
   return items;
 }
-let closure_4 = fn(17824).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8507).MobileUserSettings;
+let closure_4 = fn(17990).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(9136).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx");

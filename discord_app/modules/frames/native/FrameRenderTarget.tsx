@@ -1,7 +1,7 @@
-// === Module 12450: FrameRenderTarget ===
+// === Module 13256: FrameRenderTarget ===
 
-// Module 12450 (FrameRenderTarget)
-import FramePoolManagerDefault from "FramePoolManager" /* 12452 */;
+// Module 13256 (FrameRenderTarget)
+import FramePoolManagerDefault from "FramePoolManager" /* 13258 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { target: { flex: 1 }, loading: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

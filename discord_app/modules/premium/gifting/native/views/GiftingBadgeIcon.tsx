@@ -1,7 +1,7 @@
-// === Module 10747: GiftingBadgeIcon ===
+// === Module 11619: GiftingBadgeIcon ===
 
-// Module 10747 (GiftingBadgeIcon)
-import FastImageDefault from "FastImage" /* 5844 */;
+// Module 11619 (GiftingBadgeIcon)
+import FastImageDefault from "FastImage" /* 5957 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

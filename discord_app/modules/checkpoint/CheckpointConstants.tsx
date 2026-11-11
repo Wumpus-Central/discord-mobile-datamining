@@ -1,26 +1,26 @@
-// === Module 6201: CheckpointConstants ===
+// === Module 6314: CheckpointConstants ===
 
-// Module 6201 (CheckpointConstants)
-import _modDef3248 from "module_3248" /* 3248 */;
+// Module 6314 (CheckpointConstants)
+import _modDef3269 from "module_3269" /* 3269 */;
 
-const items = [{ list: "gamesByPlayers", label: _modDef3248.b4s18j }, , , ];
-const obj = { list: "gamesByPlayers", label: _modDef3248.b4s18j };
-items[1] = { list: "newGamesByPlayers", label: _modDef3248.DcxpNj };
-const obj2 = { list: "newGamesByPlayers", label: _modDef3248.DcxpNj };
-items[2] = { list: "indieGamesByPlayers", label: _modDef3248.OAUTki };
-const obj3 = { list: "indieGamesByPlayers", label: _modDef3248.OAUTki };
-items[3] = { list: "gamesByStreamWatchMinutes", label: _modDef3248.M1L00s };
-const obj5 = { [fn(6202).CheckpointTraitRarity.DEFAULT]: "#FFE047", [fn(6202).CheckpointTraitRarity.COMMON]: "#35ED7E", [fn(6202).CheckpointTraitRarity.RARE]: "#EF3054", [fn(6202).CheckpointTraitRarity.EPIC]: "#7D53DE", [fn(6202).CheckpointTraitRarity.ULTRA]: "#FC7A1E" };
-obj5[fn(6202).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
+const items = [{ list: "gamesByPlayers", label: _modDef3269.b4s18j }, , , ];
+const obj = { list: "gamesByPlayers", label: _modDef3269.b4s18j };
+items[1] = { list: "newGamesByPlayers", label: _modDef3269.DcxpNj };
+const obj2 = { list: "newGamesByPlayers", label: _modDef3269.DcxpNj };
+items[2] = { list: "indieGamesByPlayers", label: _modDef3269.OAUTki };
+const obj3 = { list: "indieGamesByPlayers", label: _modDef3269.OAUTki };
+items[3] = { list: "gamesByStreamWatchMinutes", label: _modDef3269.M1L00s };
+const obj5 = { [fn(6315).CheckpointTraitRarity.DEFAULT]: "#FFE047", [fn(6315).CheckpointTraitRarity.COMMON]: "#35ED7E", [fn(6315).CheckpointTraitRarity.RARE]: "#EF3054", [fn(6315).CheckpointTraitRarity.EPIC]: "#7D53DE", [fn(6315).CheckpointTraitRarity.ULTRA]: "#FC7A1E" };
+obj5[fn(6315).CheckpointTraitRarity.NITRO] = "url(#" + "checkpointRarityBadgeNitroGradient" + ")";
 const obj6 = {};
-obj6[fn(6202).CheckpointTraitRarity.DEFAULT] = _modDef3248.bP4GV1;
-obj6[fn(6202).CheckpointTraitRarity.COMMON] = _modDef3248.QwkKWr;
-obj6[fn(6202).CheckpointTraitRarity.RARE] = _modDef3248.KLmNgL;
-obj6[fn(6202).CheckpointTraitRarity.EPIC] = _modDef3248.hAmdLZ;
-obj6[fn(6202).CheckpointTraitRarity.ULTRA] = _modDef3248.Tv4xyf;
-obj6[fn(6202).CheckpointTraitRarity.NITRO] = _modDef3248["0ModIv"];
-const items1 = [fn(6202).CheckpointTraitRarity.ULTRA, fn(6202).CheckpointTraitRarity.EPIC, fn(6202).CheckpointTraitRarity.RARE, fn(6202).CheckpointTraitRarity.COMMON, fn(6202).CheckpointTraitRarity.DEFAULT, fn(6202).CheckpointTraitRarity.NITRO];
-const items2 = [fn(6202).CheckpointTraitRarity.DEFAULT, fn(6202).CheckpointTraitRarity.COMMON, fn(6202).CheckpointTraitRarity.RARE, fn(6202).CheckpointTraitRarity.EPIC, fn(6202).CheckpointTraitRarity.ULTRA, fn(6202).CheckpointTraitRarity.NITRO];
+obj6[fn(6315).CheckpointTraitRarity.DEFAULT] = _modDef3269.bP4GV1;
+obj6[fn(6315).CheckpointTraitRarity.COMMON] = _modDef3269.QwkKWr;
+obj6[fn(6315).CheckpointTraitRarity.RARE] = _modDef3269.KLmNgL;
+obj6[fn(6315).CheckpointTraitRarity.EPIC] = _modDef3269.hAmdLZ;
+obj6[fn(6315).CheckpointTraitRarity.ULTRA] = _modDef3269.Tv4xyf;
+obj6[fn(6315).CheckpointTraitRarity.NITRO] = _modDef3269["0ModIv"];
+const items1 = [fn(6315).CheckpointTraitRarity.ULTRA, fn(6315).CheckpointTraitRarity.EPIC, fn(6315).CheckpointTraitRarity.RARE, fn(6315).CheckpointTraitRarity.COMMON, fn(6315).CheckpointTraitRarity.DEFAULT, fn(6315).CheckpointTraitRarity.NITRO];
+const items2 = [fn(6315).CheckpointTraitRarity.DEFAULT, fn(6315).CheckpointTraitRarity.COMMON, fn(6315).CheckpointTraitRarity.RARE, fn(6315).CheckpointTraitRarity.EPIC, fn(6315).CheckpointTraitRarity.ULTRA, fn(6315).CheckpointTraitRarity.NITRO];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointConstants.tsx");
 

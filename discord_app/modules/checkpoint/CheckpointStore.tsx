@@ -1,11 +1,11 @@
-// === Module 13681: CheckpointStore ===
+// === Module 14150: CheckpointStore ===
 
-// Module 13681 (CheckpointStore)
+// Module 14150 (CheckpointStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6245 */;
-import CheckpointTrait from "CheckpointTrait" /* 6246 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6358 */;
+import CheckpointTrait from "CheckpointTrait" /* 6359 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -18,9 +18,10 @@ let c7 = null;
 let c8 = null;
 let c9 = null;
 let c10 = false;
+let c11 = null;
 let INIT = obj.INIT;
-let c12 = null;
-let c13 = false;
+let c13 = null;
+let c14 = false;
 const PersistedStore = initializeDefault.PersistedStore;
 class CheckpointStore extends PersistedStore {
 }
@@ -72,6 +73,18 @@ Object.defineProperty(prototype, "compactAssets", {
   },
   set: undefined
 });
+Object.defineProperty(prototype, "availability", {
+  get: function availability() {
+    return c11;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "isCharacterCreatorEnabled", {
+  get: function isCharacterCreatorEnabled() {
+    return c11 === require("CheckpointAvailability").CheckpointAvailability.FULL;
+  },
+  set: undefined
+});
 Object.defineProperty(prototype, "fetchState", {
   get: function fetchState() {
     return INIT;
@@ -86,7 +99,7 @@ Object.defineProperty(prototype, "isFetching", {
 });
 Object.defineProperty(prototype, "isSaving", {
   get: function isSaving() {
-    return c13;
+    return c14;
   },
   set: undefined
 });
@@ -98,8 +111,8 @@ Object.defineProperty(prototype, "progress", {
 });
 Object.defineProperty(prototype, "selectedCharacterTraits", {
   get: function selectedCharacterTraits() {
-    let tmp = c12;
-    if (c12 == null) {
+    let tmp = c13;
+    if (c13 == null) {
       tmp = c9;
     }
     if (tmp == null) {
@@ -142,36 +155,38 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
     INIT = obj.FETCHING;
   },
   CHECKPOINT_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    ({ stats: c7, globalStats: c8, character: c9, compactAssets: c10 } = arg0);
+    ({ stats: c7, globalStats: c8, character: c9, compactAssets: c10, availability: c11 } = arg0);
     INIT = obj.SUCCESS;
-    if (null == c9) {
-      if (null != obj.progress) {
-        selectedCharacterTraits = (function getUnlockedTraits(selectedCharacterTraits) {
-          obj2 = {};
-          const values = Object.values(CheckpointTrait.CheckpointTrait);
-          const iter = values[Symbol.iterator]();
-          const nextResult = iter.next();
-          while (iter !== undefined) {
-            let tmp4 = nextResult;
-            let tmp5 = selectedCharacterTraits[nextResult];
-            let tmp6 = tmp5;
-            let result = null == tmp5;
-            if (!result) {
-              let obj3 = CheckpointCharacterTraits;
-              let obj4 = { stats, hasNitro: isPremiumResult, savedCharacter };
-              result = obj3.isTraitSelectionLocked(tmp4, tmp6, obj4);
+    if (c11 === require("CheckpointAvailability").CheckpointAvailability.FULL) {
+      if (null == c9) {
+        if (null != obj.progress) {
+          selectedCharacterTraits = (function getUnlockedTraits(selectedCharacterTraits) {
+            obj2 = {};
+            const values = Object.values(CheckpointTrait.CheckpointTrait);
+            const iter = values[Symbol.iterator]();
+            const nextResult = iter.next();
+            while (iter !== undefined) {
+              let tmp4 = nextResult;
+              let tmp5 = selectedCharacterTraits[nextResult];
+              let tmp6 = tmp5;
+              let result = null == tmp5;
+              if (!result) {
+                let obj3 = CheckpointCharacterTraits;
+                let obj4 = { stats, hasNitro: isPremiumResult, savedCharacter };
+                result = obj3.isTraitSelectionLocked(tmp4, tmp6, obj4);
+              }
+              if (!result) {
+                obj2[tmp4] = tmp6;
+              }
+              continue;
             }
-            if (!result) {
-              obj2[tmp4] = tmp6;
-            }
-            continue;
-          }
-          return obj2;
-        })(obj.progress.selectedCharacterTraits);
-        obj = {};
-        const merged = Object.assign(obj.progress);
-        obj.selectedCharacterTraits = selectedCharacterTraits;
-        obj.progress = obj;
+            return obj2;
+          })(obj.progress.selectedCharacterTraits);
+          obj = {};
+          const merged = Object.assign(obj.progress);
+          obj.selectedCharacterTraits = selectedCharacterTraits;
+          obj.progress = obj;
+        }
       }
     }
     selectedCharacterTraits = null;
@@ -180,19 +195,19 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
     INIT = obj.ERROR;
   },
   CHECKPOINT_COMPLETE_START: function handleCompleteStart() {
-    c13 = true;
+    c14 = true;
   },
   CHECKPOINT_COMPLETE_SUCCESS: function handleCompleteSuccess(character) {
     character = character.character;
-    c12 = null;
-    c13 = false;
+    c13 = null;
+    c14 = false;
   },
   CHECKPOINT_COMPLETE_FAILED: function handleCompleteFailed() {
-    c13 = false;
+    c14 = false;
   },
   CHECKPOINT_RESET_SUCCESS: function handleResetSuccess() {
     c9 = null;
-    c12 = null;
+    c13 = null;
     obj.progress = null;
   },
   CHECKPOINT_SELECT_CHARACTER_TRAIT: function handleSelectCharacterTrait(trait) {
@@ -216,8 +231,8 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
   },
   CHECKPOINT_SAVE_PROGRESS: function handleSaveProgress(stage) {
     stage = stage.stage;
-    let tmp = c12;
-    if (c12 == null) {
+    let tmp = c13;
+    if (c13 == null) {
       tmp = c9;
     }
     if (tmp == null) {
@@ -242,9 +257,10 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
     c8 = null;
     c9 = null;
     c10 = false;
+    c11 = null;
     INIT = obj.INIT;
-    c12 = null;
-    c13 = false;
+    c13 = null;
+    c14 = false;
   }
 });
 const size = fn(2);

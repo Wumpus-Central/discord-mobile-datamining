@@ -1,14 +1,14 @@
-// === Module 6596: MonitoringAgent ===
+// === Module 6708: MonitoringAgent ===
 
-// Module 6596 (MonitoringAgent)
+// Module 6708 (MonitoringAgent)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1072 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6597 */;
-import ReleaseChannels from "ReleaseChannels" /* 6598 */;
-import NativeMetricMonitorModule from "NativeMetricMonitorModule" /* 6599 */;
-import MonitoringAgentUtils from "MonitoringAgentUtils" /* 6600 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 6709 */;
+import ReleaseChannels from "ReleaseChannels" /* 6710 */;
+import NativeMetricMonitorModule from "NativeMetricMonitorModule" /* 6711 */;
+import MonitoringAgentUtils from "MonitoringAgentUtils" /* 6712 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;
@@ -110,7 +110,7 @@ prototype["_flush"] = function _flush() {
     HermesBuiltin.arraySpread(self._metrics, 0);
     const HTTP = HTTPUtils.HTTP;
     const request = { url: Endpoints.METRICS_V2, body: null, retries: 1, rejectWithError: true };
-    const body = { metrics: items, client_info: { built_at: "1794291662174", build_number: "35520100000000" } };
+    const body = { metrics: items, client_info: { built_at: "1794378042870", build_number: "35520200000000" } };
     request.body = body;
     HTTP.post(request).catch(() => {
       if (self._metrics.length + items.length < 100) {

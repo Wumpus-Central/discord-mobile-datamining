@@ -1,15 +1,15 @@
-// === Module 10199: EmojiPickerCategoriesItem ===
+// === Module 11255: EmojiPickerCategoriesItem ===
 
-// Module 10199 (EmojiPickerCategoriesItem)
+// Module 11255 (EmojiPickerCategoriesItem)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5372 */;
-import timingPresets from "timingPresets" /* 5375 */;
-import GuildIcon from "GuildIcon" /* 7023 */;
-import Pressables from "Pressables" /* 7046 */;
-import LockIcon from "LockIcon" /* 8744 */;
-import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 10200 */;
+import timing_timing from "timing/timing" /* 5485 */;
+import timingPresets from "timingPresets" /* 5488 */;
+import Pressables from "Pressables" /* 7364 */;
+import GuildIcon from "GuildIcon" /* 7654 */;
+import LockIcon from "LockIcon" /* 8027 */;
+import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 11256 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,12 +18,12 @@ const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const EmojiCategoryTypes = fn(6857).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6909).EmojiCategoryTypes;
 const Constants = fn(1072);
 ({ CATEGORY_ICON_RIPPLE_CONFIG: metroImportDefault, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { itemInner: null, fadedItem: { backgroundColor: nativeDefault.colors.ICON_TRANSPARENT }, activeItem: null, guildItem: null, lockContainer: null, lock: null };
 let size = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
 obj.itemInner = size;

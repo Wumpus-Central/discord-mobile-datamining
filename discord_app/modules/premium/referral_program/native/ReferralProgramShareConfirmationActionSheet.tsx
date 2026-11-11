@@ -1,23 +1,23 @@
-// === Module 15640: ReferralProgramShareConfirmationActionSheet ===
+// === Module 15190: ReferralProgramShareConfirmationActionSheet ===
 
-// Module 15640 (ReferralProgramShareConfirmationActionSheet)
+// Module 15190 (ReferralProgramShareConfirmationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import UserUtilsDefault from "UserUtils" /* 5196 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7552 */;
+import UserUtilsDefault from "UserUtils" /* 5309 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5142 */;
+import createStyles from "createStyles" /* 5243 */;
 import size from "module_2" /* 2 */;
 
 function SharedUser(user) {
   user = user.user;
   const tmp = closure_8();
   const name = UserUtilsDefault.getName(user);
-  const tmp6 = user.trialCreationResult === user(7712).CreateReferralStatus.FAIL;
+  const tmp6 = user.trialCreationResult === user(9228).CreateReferralStatus.FAIL;
   const obj2 = { style: tmp.recipientRow, children: null };
   items = [tmp.avatarContainer, ];
   let erroredAvatar = tmp6;
@@ -25,33 +25,33 @@ function SharedUser(user) {
     erroredAvatar = tmp.erroredAvatar;
   }
   items[1] = erroredAvatar;
-  const items1 = [closure_5(user(1187).Avatar, { style: items, size: user(1187).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" }), , ];
+  const items1 = [closure_5(user(1187).Avatar, { style: items, size: user(1187).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" }), , ];
   if (tmp6) {
     const obj4 = { children: null };
     const obj5 = { variant: "body-md/medium", color: "text-muted", style: tmp.recipientDisplayName, children: name };
-    const items2 = [closure_5(tmp5(5753).Text, obj5), ];
+    const items2 = [closure_5(tmp5(5866).Text, obj5), ];
     const obj6 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl = tmp5(1113).intl;
     const obj7 = { userName: name };
     obj6.children = intl.format(tmp5(1113).t.RO3T4B, obj7);
-    items2[1] = closure_5(tmp5(5753).Text, obj6);
+    items2[1] = closure_5(tmp5(5866).Text, obj6);
     obj4.children = items2;
     let tmp9Result = closure_7(closure_6, obj4);
   } else {
     const obj8 = { variant: "body-md/medium", color: "text-strong", style: tmp.recipientDisplayName, children: name };
-    tmp9Result = closure_5(tmp5(5753).Text, obj8);
+    tmp9Result = closure_5(tmp5(5866).Text, obj8);
   }
   items1[1] = tmp9Result;
   const obj9 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
   const intl2 = tmp5(1113).intl;
   obj9.text = intl2.string(user(1113).t["g33r/P"]);
-  const obj3 = { style: items, size: user(1187).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" };
-  obj9.icon = closure_5(user(8720).ChatIcon, { size: "xs", color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
+  const obj3 = { style: items, size: user(1187).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" };
+  obj9.icon = closure_5(user(8004).ChatIcon, { size: "xs", color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT });
   obj9.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: user.id });
   };
-  items1[2] = closure_5(user(5760).Button, obj9);
+  items1[2] = closure_5(user(5873).Button, obj9);
   obj2.children = items1;
   return closure_7(View, obj2);
 }
@@ -89,17 +89,17 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   const obj = { helpdeskArticle: null };
   arr = Array.from(trialCreationResult.trialCreationResult.values());
   obj.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.REFERRAL_PROGRAM);
-  const obj3 = { startExpanded: true, contentStyles: tmp.content, header: closure_5(tmp5(7385).BottomSheetTitleHeader, { title: null }), children: null };
+  const obj3 = { startExpanded: true, contentStyles: tmp.content, header: closure_5(tmp5(7847).BottomSheetTitleHeader, { title: null }), children: null };
   const obj4 = { children: null };
   const formatResult = intl3.format(tmp5(1113).t.AwGSWl, obj);
-  items = [closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(15641).FistBumpSpotIllustration, {}) }), closure_5(tmp5(5753).Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), closure_5(tmp5(5753).Text, { variant: "body-md/medium", color: "text-default", style: tmp.subheader, children: formatResult }), ];
+  items = [closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(15191).FistBumpSpotIllustration, {}) }), closure_5(tmp5(5866).Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult }), closure_5(tmp5(5866).Text, { variant: "body-md/medium", color: "text-default", style: tmp.subheader, children: formatResult }), ];
   const obj8 = { style: tmp.recipientContainer, children: null };
-  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(15641).FistBumpSpotIllustration, {}) };
+  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(15191).FistBumpSpotIllustration, {}) };
   const obj6 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.header, children: stringResult };
   const obj7 = { variant: "body-md/medium", color: "text-default", style: tmp.subheader, children: formatResult };
   obj8.children = Array.from(trialCreationResult.trialCreationResult.trialCreationResult.selectedUsers).map((user) => hasOwnProperty(SharedUser, { user, trialCreationResult: trialCreationResult.get(user.id) }, user.id));
   items[3] = closure_5(View, obj8);
   obj4.children = items;
-  obj3.children = closure_7(tmp5(6161).Stack, obj4);
-  return closure_5(tmp5(5390).BottomSheet, obj3);
+  obj3.children = closure_7(tmp5(6274).Stack, obj4);
+  return closure_5(tmp5(5503).BottomSheet, obj3);
 };

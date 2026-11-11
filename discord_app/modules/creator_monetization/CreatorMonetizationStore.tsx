@@ -1,6 +1,6 @@
-// === Module 15917: CreatorMonetizationStore ===
+// === Module 16076: CreatorMonetizationStore ===
 
-// Module 15917 (CreatorMonetizationStore)
+// Module 16076 (CreatorMonetizationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -13,7 +13,7 @@ class CreatorMonetizationStore extends Store {
 const prototype = CreatorMonetizationStore.prototype;
 prototype["getPriceTiersFetchStateForGuildAndType"] = function getPriceTiersFetchStateForGuildAndType(arg0, arg1) {
   value = map1.get(arg0);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(arg1);
   }
@@ -24,7 +24,7 @@ prototype["getPriceTiersFetchStateForGuildAndType"] = function getPriceTiersFetc
 };
 prototype["getPriceTiersForGuildAndType"] = function getPriceTiersForGuildAndType(arg0, arg1) {
   value = map.get(arg0);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(arg1);
   }
@@ -60,7 +60,7 @@ const creatorMonetizationStore = new CreatorMonetizationStore(DispatcherDefault,
       map1 = new Map();
       const result2 = obj3.set(guildId, map1);
     }
-    value2 = obj3.get(guildId);
+    const value2 = obj3.get(guildId);
     const result3 = value2.set(priceTierType, priceTiers.priceTiers);
   },
   CREATOR_MONETIZATION_PRICE_TIERS_FETCH_FAILURE: function handleFetchPriceTiersFailure(guildId) {

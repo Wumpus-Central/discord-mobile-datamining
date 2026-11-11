@@ -1,11 +1,11 @@
-// === Module 9404: useShouldOpenGameProfileModal ===
+// === Module 10394: useShouldOpenGameProfileModal ===
 
-// Module 9404 (useShouldOpenGameProfileModal)
+// Module 10394 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import FlagUtilsAll from "FlagUtils" /* 1403 */;
-import utils from "utils" /* 5786 */;
-import GameFlags from "GameFlags" /* 9405 */;
+import utils from "utils" /* 5899 */;
+import GameFlags from "GameFlags" /* 10395 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2138 */;
 
@@ -89,8 +89,8 @@ export function trackEntryPoint(game_profile_available, id) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE, { game_profile_available, application_id: id, rejection_reason: items, source: CallTile });
 }
-export function isGameDisabled(gameFlags) {
-  return FlagUtilsAll.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_DISABLED);
+export function isGameDisabled(game) {
+  return FlagUtilsAll.hasFlag(game.gameFlags, GameFlags.GameFlags.GAME_DISABLED);
 }
 export function gameIsAcceptable(gameFlags) {
   if (null == gameFlags) {

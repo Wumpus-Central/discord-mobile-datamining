@@ -1,6 +1,6 @@
-// === Module 10040: GPlayAnalyticsStore ===
+// === Module 9547: GPlayAnalyticsStore ===
 
-// Module 10040 (GPlayAnalyticsStore)
+// Module 9547 (GPlayAnalyticsStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

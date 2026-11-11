@@ -1,6 +1,6 @@
-// === Module 8554: ApplicationCommands ===
+// === Module 9184: ApplicationCommands ===
 
-// Module 8554 (ApplicationCommands)
+// Module 9184 (ApplicationCommands)
 import _slicedToArray from "module_32" /* 32 */;
 
 const re1 = /<\/([^\s]+):(\d+)>(?:\s?(.*))?/;

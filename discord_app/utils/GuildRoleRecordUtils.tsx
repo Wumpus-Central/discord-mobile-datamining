@@ -1,11 +1,11 @@
-// === Module 5050: GuildRoleRecordUtils ===
+// === Module 5151: GuildRoleRecordUtils ===
 
-// Module 5050 (GuildRoleRecordUtils)
+// Module 5151 (GuildRoleRecordUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 5049 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 5051 */;
-import PlainRecord from "PlainRecord" /* 5006 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 5150 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 5152 */;
+import PlainRecord from "PlainRecord" /* 5107 */;
 import size from "module_2" /* 2 */;
 
 function fromServerArray(id, roles) {
@@ -28,7 +28,7 @@ function fromServer(guildId, id) {
     int2hexResult = utils_ColorUtils.int2hex(id.color);
   }
   obj.colorString = int2hexResult;
-  let colors = id.colors;
+  colors = id.colors;
   if (colors == null) {
     colors = null;
   }
@@ -74,7 +74,7 @@ function fromSerialized(guildId, id) {
     }
   }
   obj.colorString = int2hexResult;
-  let colors = id.colors;
+  colors = id.colors;
   if (colors == null) {
     colors = null;
   }

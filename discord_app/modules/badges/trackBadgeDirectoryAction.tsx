@@ -1,9 +1,9 @@
-// === Module 11606: trackBadgeDirectoryAction ===
+// === Module 15161: trackBadgeDirectoryAction ===
 
-// Module 11606 (trackBadgeDirectoryAction)
+// Module 15161 (trackBadgeDirectoryAction)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserStore from "UserStore" /* 1385 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8840 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8481 */;
 
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -28,7 +28,7 @@ export default function trackBadgeDirectoryAction(arg0) {
       remainingToNextTier = BadgeDirectoryStore.getRemainingToNextTier(badge.badge_id, id);
     }
   }
-  let length;
+  length = undefined;
   if (null != displayedUserId) {
     const badges = BadgeDirectoryStore.getBadges(displayedUserId);
     length = badges.filter((owned) => owned.owned).length;

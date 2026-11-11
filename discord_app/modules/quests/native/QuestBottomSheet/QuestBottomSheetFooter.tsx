@@ -1,30 +1,30 @@
-// === Module 17450: QuestBottomSheetFooter ===
+// === Module 17615: QuestBottomSheetFooter ===
 
-// Module 17450 (QuestBottomSheetFooter)
+// Module 17615 (QuestBottomSheetFooter)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5372 */;
-import components_Button_Button from "components/Button/Button" /* 5760 */;
-import QuestTypes from "QuestTypes" /* 6842 */;
-import AdCreativeType from "AdCreativeType" /* 6846 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7952 */;
-import QuestUtils from "QuestUtils" /* 9775 */;
-import captureAdUserAction from "captureAdUserAction" /* 9781 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9784 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9801 */;
-import ContentImpressionTrackerHooks from "ContentImpressionTrackerHooks" /* 9813 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9815 */;
-import RefreshIcon from "RefreshIcon" /* 12400 */;
-import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 14947 */;
-import QuestBottomSheetHooks from "QuestBottomSheetHooks" /* 17451 */;
+import QuestTypes from "QuestTypes" /* 5278 */;
+import AdCreativeType from "AdCreativeType" /* 5282 */;
+import timing_timing from "timing/timing" /* 5485 */;
+import components_Button_Button from "components/Button/Button" /* 5873 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8768 */;
+import QuestUtils from "QuestUtils" /* 10061 */;
+import captureAdUserAction from "captureAdUserAction" /* 10068 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 10071 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 10088 */;
+import ContentImpressionTrackerHooks from "ContentImpressionTrackerHooks" /* 10100 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10102 */;
+import RefreshIcon from "RefreshIcon" /* 13206 */;
+import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 15139 */;
+import QuestBottomSheetHooks from "QuestBottomSheetHooks" /* 17616 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import UserStore from "UserStore" /* 1385 */;
-import QuestStore from "QuestStore" /* 7926 */;
+import QuestStore from "QuestStore" /* 8742 */;
 
 require = fn;
 function useQuestRewardClaimHandler(quest) {
@@ -281,11 +281,11 @@ function AnimatedFooter(arg0) {
   return closure_11(View, obj4);
 }
 const View = fn(17).View;
-let closure_9 = fn(5391).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_9 = fn(5504).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { display: "flex", flexGrow: 1, flexShrink: 1, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_13 = createStyles.createStyles(obj2);
 let closure_19 = { code: "(function QuestBottomSheetFooterTsx1(){let[animation,H_PADDING_PX]=this.__closure;return{opacity:animation.get(),position:'absolute',top:0,left:0,transform:[{translateX:H_PADDING_PX}]};})" };
@@ -302,28 +302,28 @@ export default function QuestBottomSheetFooter(quest) {
   ({ onBack, sourceQuestContent } = quest);
   ({ onConnectConsoleNext, onDefib, style, withSafeArea } = quest);
   const tmp = useQuestRewardClaimHandler({ quest, sourceQuestContent });
-  const questTaskDetails = quest(9778).useQuestTaskDetails(quest);
-  let obj = quest(9778);
-  const isQuestProgressing = quest(9778).useIsQuestProgressing(quest);
-  const obj2 = quest(9778);
-  const obj3 = quest(9778);
-  const xboxAndPlaystationAccounts = quest(9778).useConnectedAccounts().xboxAndPlaystationAccounts;
+  const questTaskDetails = quest(10064).useQuestTaskDetails(quest);
+  let obj = quest(10064);
+  const isQuestProgressing = quest(10064).useIsQuestProgressing(quest);
+  const obj2 = quest(10064);
+  const obj3 = quest(10064);
+  const xboxAndPlaystationAccounts = quest(10064).useConnectedAccounts().xboxAndPlaystationAccounts;
   items = [quest, xboxAndPlaystationAccounts];
   const memo = noop.useMemo(() => QuestPlatformUtils.supportedConsoles(quest).filter((item) => {
     closure_0 = item;
     return null != xboxAndPlaystationAccounts.find((type) => type.type === closure_0);
   }), items);
-  const obj4 = quest(9778);
-  const hasWatchVideoOnMobileTasks = quest(17415).useHasWatchVideoOnMobileTasks(quest.config);
-  const obj5 = quest(17415);
-  const mobileActivityQuest = quest(17415).useMobileActivityQuest(quest);
+  const obj4 = quest(10064);
+  const hasWatchVideoOnMobileTasks = quest(17580).useHasWatchVideoOnMobileTasks(quest.config);
+  const obj5 = quest(17580);
+  const mobileActivityQuest = quest(17580).useMobileActivityQuest(quest);
   ({ isMobileActivityQuest, launchMobileActivity, questApplication } = mobileActivityQuest);
-  const obj6 = quest(17415);
-  const primaryCtaCopy = quest(14958).usePrimaryCtaCopy({ quest, application: questApplication });
-  const obj7 = quest(14958);
+  const obj6 = quest(17580);
+  const primaryCtaCopy = quest(15150).usePrimaryCtaCopy({ quest, application: questApplication });
+  const obj7 = quest(15150);
   const userStatus = quest.userStatus;
   let completedAt;
-  const obj8 = quest(17451);
+  const obj8 = quest(17616);
   const obj9 = { questId: quest.id, sourceQuestContent, launchMobileActivity };
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
@@ -333,19 +333,19 @@ export default function QuestBottomSheetFooter(quest) {
   if (userStatus2 != null) {
     claimedAt = userStatus2.claimedAt;
   }
-  const mobileActivityPressHandler = quest(17451).useMobileActivityPressHandler({ questId: quest.id, sourceQuestContent, launchMobileActivity });
+  const mobileActivityPressHandler = quest(17616).useMobileActivityPressHandler({ questId: quest.id, sourceQuestContent, launchMobileActivity });
   const tmp11 = null != completedAt;
-  const isQuestAccessSuspended = quest(9778).useIsQuestAccessSuspended();
-  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(17445) };
+  const isQuestAccessSuspended = quest(10064).useIsQuestAccessSuspended();
+  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(17610) };
   let tmp40Result6 = null;
-  if (step !== quest(17447).QuestBottomSheetStep.TASK_SELECT) {
+  if (step !== quest(17612).QuestBottomSheetStep.TASK_SELECT) {
     const obj11 = { onLayout: quest.onLayout, ctaButton: null, backButton: null, style: null, withSafeArea: null };
-    if (tmp2(17447).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
+    if (tmp2(17612).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
       const obj12 = { onPress: onConnectConsoleNext, disabled: 0 === memo.length };
       let tmp40Result = closure_10(NextButton, obj12);
     } else {
       tmp40Result = null;
-      if (tmp2(17447).QuestBottomSheetStep.TASK_STATUS === step) {
+      if (tmp2(17612).QuestBottomSheetStep.TASK_STATUS === step) {
         if (tmp11) {
           const obj13 = { questId: quest.id, onPress: tmp.claim, disabled: tmp13, loading: null, sourceQuestContent: null };
           let isClaiming = tmp.isLoading;
@@ -372,16 +372,16 @@ export default function QuestBottomSheetFooter(quest) {
           const merged1 = Object.assign(tmp28);
           tmp40Result4 = closure_10(WatchTaskButton, obj14);
         } else if (isMobileActivityQuest) {
-          const obj15 = { grow: true, size: "lg", onPress: mobileActivityPressHandler, text: primaryCtaCopy, icon: tmp2(9775).getPrimaryCtaIcon(quest) };
+          const obj15 = { grow: true, size: "lg", onPress: mobileActivityPressHandler, text: primaryCtaCopy, icon: tmp2(10061).getPrimaryCtaIcon(quest) };
           let tmp23 = null;
           if (isQuestAccessSuspended) {
             tmp23 = obj10;
           }
           const merged2 = Object.assign(tmp23);
-          tmp40Result4 = closure_10(tmp2(5760).Button, obj15);
-          const tmp2Result2 = tmp2(9775);
+          tmp40Result4 = closure_10(tmp2(5873).Button, obj15);
+          const tmp2Result2 = tmp2(10061);
         } else {
-          if (_slicedToArray(obj3.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] === tmp2(6842).TaskPlatformScreen.CONSOLE) {
+          if (_slicedToArray(obj3.useTaskPlatformScreen(quest, questTaskDetails), 1)[0] === tmp2(5278).TaskPlatformScreen.CONSOLE) {
             if (!isQuestProgressing) {
               const obj16 = { questId: quest.id, loading: isDefibrilating, disabled: isDefibrilating, onPress: onDefib, sourceQuestContent };
               let tmp17 = null;
@@ -404,9 +404,9 @@ export default function QuestBottomSheetFooter(quest) {
       const obj18 = { accessibilityLabel: null, variant: "secondary", icon: null, onPress: null, size: "lg" };
       const intl = tmp2(1113).intl;
       obj18.accessibilityLabel = intl.string(tmp2(1113).t["13/7kX"]);
-      obj18.icon = closure_10(tmp2(7071).ArrowLargeLeftIcon, {});
+      obj18.icon = closure_10(tmp2(7431).ArrowLargeLeftIcon, {});
       obj18.onPress = onBack;
-      tmp40Result5 = closure_10(tmp2(8102).IconButton, obj18);
+      tmp40Result5 = closure_10(tmp2(7922).IconButton, obj18);
     }
     obj11.backButton = tmp40Result5;
     obj11.style = style;

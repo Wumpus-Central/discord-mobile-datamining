@@ -1,10 +1,10 @@
-// === Module 5139: ColorUtils ===
+// === Module 5240: ColorUtils ===
 
-// Module 5139 (ColorUtils)
+// Module 5240 (ColorUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
-import utils_ColorDefault from "utils/Color" /* 5140 */;
+import utils_ColorDefault from "utils/Color" /* 5241 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -608,7 +608,7 @@ export function getSaturatedColorHex(arg0) {
     return colorRGB;
   } else {
     value = colorRGB.get("rgb.r");
-    value2 = colorRGB.get("rgb.g");
+    const value2 = colorRGB.get("rgb.g");
     const tmp4 = rawRgbToHsl(value, value2, colorRGB.get("rgb.b"));
     return rawHslToRgb(tmp4.hue, tmp4.saturation * saturationFactor, tmp4.lightness).toHexString();
   }

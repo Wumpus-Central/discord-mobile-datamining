@@ -1,11 +1,11 @@
-// === Module 10235: NativeChatUtils ===
+// === Module 11822: NativeChatUtils ===
 
-// Module 10235 (NativeChatUtils)
+// Module 11822 (NativeChatUtils)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import NativeChatModuleDefault from "NativeChatModule" /* 8770 */;
-import ChatNativeComponent from "ChatNativeComponent" /* 10236 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 10237 */;
+import NativeChatModuleDefault from "NativeChatModule" /* 9324 */;
+import ChatNativeComponent from "ChatNativeComponent" /* 11823 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11824 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

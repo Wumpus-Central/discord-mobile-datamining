@@ -1,6 +1,6 @@
-// === Module 9735: gradient ===
+// === Module 9572: gradient ===
 
-// Module 9735 (gradient)
+// Module 9572 (gradient)
 import _mod1197 from "module_1197" /* 1197 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -38,7 +38,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        let colors = obj.colors;
+        colors = obj.colors;
         let arr = colors.push(pos.string());
       } else if (2 === tmp5) {
         obj.angle = pos.float();
@@ -70,7 +70,6 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   return obj;
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < colors.colors.length) {
     do {

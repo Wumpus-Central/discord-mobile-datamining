@@ -1,9 +1,9 @@
-// === Module 11009: ConjureCreateErrors ===
+// === Module 7269: ConjureCreateErrors ===
 
-// Module 11009 (ConjureCreateErrors)
+// Module 7269 (ConjureCreateErrors)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import _modDef4028 from "module_4028" /* 4028 */;
+import _modDef4079 from "module_4079" /* 4079 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;
@@ -62,12 +62,12 @@ export function getConjureCreateErrorMessage(reason) {
   }
   if ("project_limit" === str) {
     const intl3 = util.intl;
-    return intl3.string(_modDef4028["lh+h/p"]);
+    return intl3.string(_modDef4079["lh+h/p"]);
   } else if ("rate_limited" === str) {
     const intl2 = util.intl;
-    return intl2.string(_modDef4028.zBENJU);
+    return intl2.string(_modDef4079.zBENJU);
   } else {
     const intl = util.intl;
-    return intl.string(_modDef4028["9m86fn"]);
+    return intl.string(_modDef4079["9m86fn"]);
   }
 }

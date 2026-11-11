@@ -1,22 +1,22 @@
-// === Module 14309: ChannelAccessInfo ===
+// === Module 14792: ChannelAccessInfo ===
 
-// Module 14309 (ChannelAccessInfo)
+// Module 14792 (ChannelAccessInfo)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9117 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11812 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8066 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 12468 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5054 */;
-import GuildRoleStore from "GuildRoleStore" /* 5048 */;
+import GuildMemberStore from "GuildMemberStore" /* 5155 */;
+import GuildRoleStore from "GuildRoleStore" /* 5149 */;
 
 require = fn;
 const View = fn(17).View;
-const isGuildOwner = fn(5009).isGuildOwner;
+const isGuildOwner = fn(5110).isGuildOwner;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let c11 = 100;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { section: { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, color: nativeDefault.colors.TEXT_DEFAULT, flexDirection: "row", marginBottom: 8, marginTop: 8, padding: 16 }, sectionContent: { alignItems: "center", flexDirection: "row", flexGrow: 1 }, avatar: { marginRight: 8 }, labelDetail: { marginRight: 12 }, sectionIcon: { marginRight: 6 } };
 let closure_12 = createStyles.createStyles(obj2);
 const constants = { MEMBERS: 0, [0]: "MEMBERS", ROLES: 1, [1]: "ROLES" };
@@ -39,7 +39,7 @@ export default function ChannelAccessInfo(guild) {
   }
   const memberIds = GuildMemberStore.getMemberIds(id);
   let obj = guild(504);
-  const existingMembers = guild(9117).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
+  const existingMembers = guild(8066).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
   let tmp8 = 0 === stateFromStoresArray.length;
   if (tmp8) {
     tmp8 = 1 === existingMembers.length;
@@ -51,7 +51,7 @@ export default function ChannelAccessInfo(guild) {
   if (tmp8) {
     first = existingMembers[0];
   }
-  const items2 = [closure_8(guild(5753).Text, { variant: "body-sm/medium", children: stringResult }), ];
+  const items2 = [closure_8(guild(5866).Text, { variant: "body-sm/medium", children: stringResult }), ];
   let obj2 = {
     accessibilityLabel: stringResult,
     accessibilityRole: "button",
@@ -68,11 +68,11 @@ export default function ChannelAccessInfo(guild) {
     const items3 = [closure_8(tmp2(1187).Avatar, obj5), ];
     let obj6 = { children: null };
     let obj7 = { variant: "body-sm/semibold", children: first.tag };
-    const items4 = [closure_8(tmp2(5753).Text, obj7), ];
+    const items4 = [closure_8(tmp2(5866).Text, obj7), ];
     let obj8 = { variant: "body-xs/medium", children: null };
     let intl2 = tmp2(1113).intl;
     obj8.children = intl2.string(tmp2(1113).t.rt0ERW);
-    items4[1] = closure_8(tmp2(5753).Text, obj8);
+    items4[1] = closure_8(tmp2(5866).Text, obj8);
     obj6.children = items4;
     items3[1] = closure_9(View, obj6);
     obj4.children = items3;
@@ -114,27 +114,27 @@ export default function ChannelAccessInfo(guild) {
         const obj7 = { size: "sm", style: closure_2.sectionIcon };
         items = [React5(GroupIcon, obj7), ];
         const obj8 = { style: closure_2.labelDetail, variant: "body-sm/medium", children: tmp5 };
-        items[1] = React5(tmp4(5753).Text, obj8);
+        items[1] = React5(tmp4(5866).Text, obj8);
         obj6.children = items;
         return React6(noop.Fragment, obj6);
       }
     }
     obj9 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(14308);
-    const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(8738).GroupIcon), ];
+    channel(14791);
+    const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(7372).GroupIcon), ];
     const ROLES = constants.ROLES;
-    channel(9147);
-    items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(9145).ShieldUserIcon);
+    channel(8110);
+    items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(8107).ShieldUserIcon);
     obj9.children = items5;
   }
   const obj10 = { children: null };
   obj3.children = closure_9(closure_10, obj9);
   const items6 = [closure_8(View, obj3), ];
-  const tmp2Result = guild(9117);
-  items6[1] = closure_8(guild(1187).Icon, { source: channel(12086), size: guild(1187).Icon.Sizes.SMALL });
+  const tmp2Result = guild(8066);
+  items6[1] = closure_8(guild(1187).Icon, { source: channel(12883), size: guild(1187).Icon.Sizes.SMALL });
   obj2.children = items6;
-  items2[1] = closure_9(guild(7046).PressableOpacity, obj2);
+  items2[1] = closure_9(guild(7364).PressableOpacity, obj2);
   obj10.children = items2;
   return closure_9(closure_10, obj10);
 };

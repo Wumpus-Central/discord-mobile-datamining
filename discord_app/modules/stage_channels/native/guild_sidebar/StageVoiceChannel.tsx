@@ -1,36 +1,36 @@
-// === Module 18661: StageVoiceChannel ===
+// === Module 18833: StageVoiceChannel ===
 
-// Module 18661 (StageVoiceChannel)
+// Module 18833 (StageVoiceChannel)
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2017 */;
-import useChannelNameDefault from "useChannelName" /* 5778 */;
-import StageMediaHooks from "StageMediaHooks" /* 6769 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7002 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8012 */;
-import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 8709 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10930 */;
-import ChannelItemDefault from "ChannelItem" /* 18540 */;
-import VoiceUsersDefault from "VoiceUsers" /* 18545 */;
-import ChannelInfoDefault from "ChannelInfo" /* 18651 */;
-import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 18662 */;
+import useChannelNameDefault from "useChannelName" /* 5891 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6837 */;
+import StageMediaHooks from "StageMediaHooks" /* 6876 */;
+import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 7617 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7618 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10831 */;
+import ChannelItemDefault from "ChannelItem" /* 18712 */;
+import VoiceUsersDefault from "VoiceUsers" /* 18717 */;
+import ChannelInfoDefault from "ChannelInfo" /* 18823 */;
+import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 18834 */;
 import noop from "module_19" /* 19 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7785 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
-import ReadStateStore from "ReadStateStore" /* 6900 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6833 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5898 */;
-import StageInstanceStore from "StageInstanceStore" /* 4996 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 8663 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
+import ReadStateStore from "ReadStateStore" /* 6952 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6011 */;
+import StageInstanceStore from "StageInstanceStore" /* 5097 */;
 
 require = fn;
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(5898).NO_VOICE_STATES;
+const NO_VOICE_STATES = fn(6011).NO_VOICE_STATES;
 const Constants = fn(1072);
 ({ MAX_STAGE_VOICE_USER_LIMIT: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
-let obj = { voiceStates: { marginLeft: 36, marginBottom: 8 }, container: { marginVertical: fn(5884).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(5243);
+let obj = { voiceStates: { marginLeft: 36, marginBottom: 8 }, container: { marginVertical: fn(5997).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_16 = createStyles.createStyles(obj);
-let obj3 = { marginVertical: fn(5884).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(5997).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx");
 
@@ -51,7 +51,7 @@ export default noop.memo(function StageVoiceChannel(channel) {
     arr3 = NO_VOICE_STATES;
   }
   let obj = channel(504);
-  const stageParticipantsCount = channel(6823).useStageParticipantsCount(channel.id, tmp2(6817).StageChannelParticipantNamedIndex.AUDIENCE);
+  const stageParticipantsCount = channel(6886).useStageParticipantsCount(channel.id, tmp2(6880).StageChannelParticipantNamedIndex.AUDIENCE);
   const sum = stageParticipantsCount + arr3.length;
   const items2 = [channel];
   const items3 = [channel.id];
@@ -70,12 +70,12 @@ export default noop.memo(function StageVoiceChannel(channel) {
     const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
   }, items3);
   const tmp10 = useChannelNameDefault(channel, false);
-  const tmp2Result = channel(6823);
-  const isConnectedToVoiceChannel = channel(11143).useIsConnectedToVoiceChannel(channel);
+  const tmp2Result = channel(6886);
+  const isConnectedToVoiceChannel = channel(10944).useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  const tmp2Result2 = channel(11143);
+  const tmp2Result2 = channel(10944);
   const intl = tmp2(1113).intl;
   const tmp5Result = ChannelItemDefault;
   if (null != channel.userLimit) {

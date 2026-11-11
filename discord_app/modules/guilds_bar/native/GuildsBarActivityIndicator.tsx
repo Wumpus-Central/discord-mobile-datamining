@@ -1,53 +1,53 @@
-// === Module 18768: GuildsBarActivityIndicator ===
+// === Module 18957: GuildsBarActivityIndicator ===
 
-// Module 18768 (GuildsBarActivityIndicator)
+// Module 18957 (GuildsBarActivityIndicator)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useToken from "useToken" /* 5726 */;
-import NativeViewDefault from "NativeView" /* 7026 */;
-import _modDef8269 from "module_8269" /* 8269 */;
-import _modDef8685 from "module_8685" /* 8685 */;
-import StageIcon from "StageIcon" /* 8746 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8750 */;
-import AppsIcon from "AppsIcon" /* 8755 */;
-import CalendarIcon from "CalendarIcon" /* 9201 */;
-import _modDef9298 from "module_9298" /* 9298 */;
-import ScreenIcon from "ScreenIcon" /* 9681 */;
-import VideoIcon from "VideoIcon" /* 11181 */;
-import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 18767 */;
-import _modDef18769 from "module_18769" /* 18769 */;
-import _modDef18770 from "module_18770" /* 18770 */;
-import _modDef18771 from "module_18771" /* 18771 */;
+import useToken from "useToken" /* 5839 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 7368 */;
+import NativeViewDefault from "NativeView" /* 7656 */;
+import _modDef7951 from "module_7951" /* 7951 */;
+import StageIcon from "StageIcon" /* 7952 */;
+import _modDef7973 from "module_7973" /* 7973 */;
+import AppsIcon from "AppsIcon" /* 8036 */;
+import CalendarIcon from "CalendarIcon" /* 8391 */;
+import ScreenIcon from "ScreenIcon" /* 10400 */;
+import VideoIcon from "VideoIcon" /* 10983 */;
+import _modDef12843 from "module_12843" /* 12843 */;
+import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 18956 */;
+import _modDef18958 from "module_18958" /* 18958 */;
+import _modDef18959 from "module_18959" /* 18959 */;
+import _modDef18960 from "module_18960" /* 18960 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function getMediaIcon(activeEvent) {
   if (activeEvent.activeEvent) {
-    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef9298 };
+    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef12843 };
     let tmp6 = obj2;
   } else if (tmp4) {
-    const obj3 = { icon: StageIcon.StageIcon, source: _modDef8269 };
+    const obj3 = { icon: StageIcon.StageIcon, source: _modDef7951 };
     tmp6 = obj3;
   } else if (tmp3) {
-    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18769 };
+    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18958 };
     tmp6 = obj4;
   } else if (tmp2) {
-    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18770 };
+    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18959 };
     tmp6 = obj5;
   } else if (tmp) {
-    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18771 };
+    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18960 };
     tmp6 = obj6;
   } else {
     tmp6 = null;
     if (tmp5) {
-      const obj = { icon: AppsIcon.AppsIcon, source: _modDef8685 };
+      const obj = { icon: AppsIcon.AppsIcon, source: _modDef7973 };
       tmp6 = obj;
     }
   }
   return tmp6;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { activityWrapper: null, activityIconWrapper: null, activityIconWrapperActive: null, activityIcon: null };
 let size = { position: "absolute", top: -3, right: -3, justifyContent: "center", width: 22, height: 22, padding: 3, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj.activityWrapper = size;
@@ -73,7 +73,7 @@ const memoResult = noop.memo(function GuildsBarActivityIndicatorBase(arg0) {
   const obj3 = { style: items1, children: null };
   items1[1] = prop;
   if (null != IconComponent) {
-    const colors = { color: null, size: "xxs", style: null };
+    colors = { color: null, size: "xxs", style: null };
     colors.color = isCurrentUserConnected ? colors.WHITE : colors.ICON_DEFAULT;
     activityIcon = activityIcon.activityIcon;
     colors.style = activityIcon;

@@ -1,14 +1,14 @@
-// === Module 20525: UpdateAppScreen ===
+// === Module 20720: UpdateAppScreen ===
 
-// Module 20525 (UpdateAppScreen)
+// Module 20720 (UpdateAppScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2960 from "module_2960" /* 2960 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import components_Button_Button from "components/Button/Button" /* 5760 */;
+import _modDef2981 from "module_2981" /* 2981 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import components_Button_Button from "components/Button/Button" /* 5873 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5142 */;
+import createStyles from "createStyles" /* 5243 */;
 import size from "module_2" /* 2 */;
 
 ({ NativeModules: c3, View: closure_4 } = get_ActivityIndicator);
@@ -24,11 +24,11 @@ export default function UpdateAppScreen() {
   const obj = { style: tmp.container, children: null };
   const obj2 = { variant: "heading-lg/semibold", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2960.yxqMCD);
+  obj2.children = intl.string(_modDef2981.yxqMCD);
   items = [hasOwnProperty(Text_Text.Text, obj2), , ];
   const obj3 = { variant: "body-md/normal", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.string(_modDef2960.VBZJJg);
+  obj3.children = intl2.string(_modDef2981.VBZJJg);
   items[1] = hasOwnProperty(Text_Text.Text, obj3);
   const obj4 = { style: tmp.buttonContainer, children: null };
   const obj5 = {
@@ -41,7 +41,7 @@ export default function UpdateAppScreen() {
     size: "md"
   };
   const intl3 = util.intl;
-  obj5.text = intl3.string(_modDef2960.o4D6fm);
+  obj5.text = intl3.string(_modDef2981.o4D6fm);
   obj4.children = hasOwnProperty(components_Button_Button.Button, obj5);
   items[2] = hasOwnProperty(React4, obj4);
   obj.children = items;

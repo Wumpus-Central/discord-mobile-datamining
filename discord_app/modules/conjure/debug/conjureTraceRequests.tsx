@@ -1,6 +1,6 @@
-// === Module 12258: conjureTraceRequests ===
+// === Module 13049: conjureTraceRequests ===
 
-// Module 12258 (conjureTraceRequests)
+// Module 13049 (conjureTraceRequests)
 import noop from "module_19" /* 19 */;
 
 const set = new Set();

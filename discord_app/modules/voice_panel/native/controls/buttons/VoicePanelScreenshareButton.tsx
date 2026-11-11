@@ -1,23 +1,23 @@
-// === Module 19752: VoicePanelScreenshareButton ===
+// === Module 19944: VoicePanelScreenshareButton ===
 
-// Module 19752 (VoicePanelScreenshareButton)
+// Module 19944 (VoicePanelScreenshareButton)
 import _modDef38 from "module_38" /* 38 */;
-import NativeViewDefault from "NativeView" /* 7026 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11371 */;
-import useVoicePanelScreenshareToggleDefault from "useVoicePanelScreenshareToggle" /* 19612 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19740 */;
+import NativeViewDefault from "NativeView" /* 7656 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11924 */;
+import useVoicePanelScreenshareToggleDefault from "useVoicePanelScreenshareToggle" /* 19801 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19932 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
 const MetaQuestUtils = fn(1624);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(14375).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(10669).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(19618).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(19807).MobilePhoneShareIcon;
 }
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_7 = createStyles.createStyles({ iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");
@@ -26,8 +26,8 @@ export default function ScreenshareButton(arg0) {
   ({ props, wrapperSpecs } = arg0);
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp3 = closure_7();
-  const voicePanelButtonStyles = channelId(19739).useVoicePanelButtonStyles(wrapperSpecs);
-  const obj = channelId(19739);
+  const voicePanelButtonStyles = channelId(19931).useVoicePanelButtonStyles(wrapperSpecs);
+  const obj = channelId(19931);
   items = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   _modDef38(null != stateFromStores, "null channel in VoicePanelScreenshareButton");
@@ -46,7 +46,7 @@ export default function ScreenshareButton(arg0) {
     color = voicePanelButtonStyles.iconFillSelected.color;
   }
   if (videoBlocked) {
-    let MobilePhoneDenyIcon = tmp4(19753).MobilePhoneDenyIcon;
+    let MobilePhoneDenyIcon = tmp4(19945).MobilePhoneDenyIcon;
   } else {
     MobilePhoneDenyIcon = MobilePhoneShareIcon;
   }

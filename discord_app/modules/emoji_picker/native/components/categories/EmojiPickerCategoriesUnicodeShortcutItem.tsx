@@ -1,12 +1,12 @@
-// === Module 10215: EmojiPickerCategoriesUnicodeShortcutItem ===
+// === Module 11271: EmojiPickerCategoriesUnicodeShortcutItem ===
 
-// Module 10215 (EmojiPickerCategoriesUnicodeShortcutItem)
+// Module 11271 (EmojiPickerCategoriesUnicodeShortcutItem)
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import Pressables from "Pressables" /* 7046 */;
-import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 10200 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10216 */;
+import Pressables from "Pressables" /* 7364 */;
+import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 11256 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 11272 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const Constants = fn(1072);
 ({ EXPRESSION_FOOTER_HEIGHT: closure_6, NODE_SIZE } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };
 let size = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
 obj2.itemInner = size;

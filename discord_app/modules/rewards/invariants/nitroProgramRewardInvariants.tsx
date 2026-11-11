@@ -1,8 +1,8 @@
-// === Module 17255: nitroProgramRewardInvariants ===
+// === Module 17418: nitroProgramRewardInvariants ===
 
-// Module 17255 (nitroProgramRewardInvariants)
-import differenceInCalendarDaysDefault from "differenceInCalendarDays" /* 4584 */;
-import ProgramRewardsTypes from "ProgramRewardsTypes" /* 15956 */;
+// Module 17418 (nitroProgramRewardInvariants)
+import differenceInCalendarDaysDefault from "differenceInCalendarDays" /* 4684 */;
+import ProgramRewardsTypes from "ProgramRewardsTypes" /* 16115 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rewards/invariants/nitroProgramRewardInvariants.tsx");

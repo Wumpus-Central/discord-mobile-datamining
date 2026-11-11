@@ -1,7 +1,7 @@
-// === Module 14288: useLongestChannelMessageBeforeReply ===
+// === Module 14770: useLongestChannelMessageBeforeReply ===
 
-// Module 14288 (useLongestChannelMessageBeforeReply)
-import MessageStore from "MessageStore" /* 6196 */;
+// Module 14770 (useLongestChannelMessageBeforeReply)
+import MessageStore from "MessageStore" /* 6309 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ export function useLongestChannelMessageBeforeReply(id, recipientId) {
             obj2.return();
             break;
           } else {
-            let length;
+            length = undefined;
             if (tmp4 != null) {
               length = tmp4.content.length;
             }

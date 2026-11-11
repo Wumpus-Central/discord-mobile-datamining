@@ -1,8 +1,8 @@
-// === Module 10155: EmojiPickerListRowView ===
+// === Module 11215: EmojiPickerListRowView ===
 
-// Module 10155 (EmojiPickerListRowView)
+// Module 11215 (EmojiPickerListRowView)
 import _mod17 from "module_17" /* 17 */;
-import EmojiPickerRowViewNativeComponentDefault from "EmojiPickerRowViewNativeComponent" /* 10156 */;
+import EmojiPickerRowViewNativeComponentDefault from "EmojiPickerRowViewNativeComponent" /* 11216 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;
 

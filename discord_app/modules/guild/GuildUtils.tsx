@@ -1,21 +1,21 @@
-// === Module 10193: guild/GuildUtils ===
+// === Module 11249: guild/GuildUtils ===
 
-// Module 10193 (guild/GuildUtils)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6960 */;
+// Module 11249 (guild/GuildUtils)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 let result = size.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 
-export function handleJoinGuild(id) {
-  _require = id;
-  if (null != id) {
-    const joinGuildResult = GuildActionCreatorsDefault.joinGuild(id);
-    GuildActionCreatorsDefault.joinGuild(id).then(() => {
+export function handleJoinGuild(guildId) {
+  _require = guildId;
+  if (null != guildId) {
+    const joinGuildResult = GuildActionCreatorsDefault.joinGuild(guildId);
+    GuildActionCreatorsDefault.joinGuild(guildId).then(() => {
       const result = GuildActionCreatorsDefault.transitionToGuildSync(closure_0);
     }).catch(require("JoinGuildRefusedError").ignoreJoinGuildRefused);
-    const nextPromise = GuildActionCreatorsDefault.joinGuild(id).then(() => {
+    const nextPromise = GuildActionCreatorsDefault.joinGuild(guildId).then(() => {
       const result = GuildActionCreatorsDefault.transitionToGuildSync(closure_0);
     });
   }

@@ -1,10 +1,10 @@
-// === Module 9760: nitro_perk_card ===
+// === Module 9597: nitro_perk_card ===
 
-// Module 9760 (nitro_perk_card)
+// Module 9597 (nitro_perk_card)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9727 */;
-import cta_button from "cta_button" /* 9729 */;
-import theme_aware_asset from "theme_aware_asset" /* 9737 */;
+import localized_string from "localized_string" /* 9564 */;
+import cta_button from "cta_button" /* 9566 */;
+import theme_aware_asset from "theme_aware_asset" /* 9574 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -164,7 +164,6 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   return obj;
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(headerLocalized, tag, writeUnknownFields) {
-  let length;
   if (headerLocalized.headerLocalized) {
     const LocalizedString = localized_string.LocalizedString;
     const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);

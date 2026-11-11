@@ -1,6 +1,6 @@
-// === Module 14474: PortalAccessibilityWorkaroundView ===
+// === Module 14848: PortalAccessibilityWorkaroundView ===
 
-// Module 14474 (PortalAccessibilityWorkaroundView)
+// Module 14848 (PortalAccessibilityWorkaroundView)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -8,7 +8,7 @@ let _default = fn(17).View;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1377);
 if (PlatformUtils.isIOS()) {
-  _default = fn(14475).default;
+  _default = fn(14849).default;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");

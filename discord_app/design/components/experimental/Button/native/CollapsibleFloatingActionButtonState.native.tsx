@@ -1,6 +1,6 @@
-// === Module 9086: CollapsibleFloatingActionButtonState ===
+// === Module 7940: CollapsibleFloatingActionButtonState ===
 
-// Module 9086 (CollapsibleFloatingActionButtonState)
+// Module 7940 (CollapsibleFloatingActionButtonState)
 import _mod1652 from "module_1652" /* 1652 */;
 import noop from "module_19" /* 19 */;
 

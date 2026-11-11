@@ -1,6 +1,6 @@
-// === Module 16626: NativeNotifSettingsModule ===
+// === Module 16787: NativeNotifSettingsModule ===
 
-// Module 16626 (NativeNotifSettingsModule)
+// Module 16787 (NativeNotifSettingsModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

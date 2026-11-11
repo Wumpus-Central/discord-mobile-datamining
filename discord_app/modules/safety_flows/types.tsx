@@ -1,8 +1,8 @@
-// === Module 20513: types ===
+// === Module 20708: types ===
 
-// Module 20513 (types)
+// Module 20708 (types)
 import util from "util" /* 1113 */;
-import _modDef2960 from "module_2960" /* 2960 */;
+import _modDef2981 from "module_2981" /* 2981 */;
 import size from "module_2" /* 2 */;
 
 const obj = { REFRESH_APP: -1, [-1]: "REFRESH_APP", EMAIL_VERIFICATION: 3, [3]: "EMAIL_VERIFICATION", AGE_VERIFICATION: 9, [9]: "AGE_VERIFICATION", PARENTAL_CONSENT_CONNECTION: 10, [10]: "PARENTAL_CONSENT_CONNECTION", APP_STORE_PARENTAL_REVOCATION: 11, [11]: "APP_STORE_PARENTAL_REVOCATION" };
@@ -19,13 +19,13 @@ const items4 = [obj3.PARENTAL_CONSENT_CONNECTION];
 const items5 = [obj3.APP_STORE_PARENTAL_REVOCATION];
 const obj4 = {};
 const intl = util.intl;
-obj4[obj.EMAIL_VERIFICATION] = intl.string(_modDef2960["Qm6K/s"]);
+obj4[obj.EMAIL_VERIFICATION] = intl.string(_modDef2981["Qm6K/s"]);
 const intl2 = util.intl;
-obj4[obj.AGE_VERIFICATION] = intl2.string(_modDef2960["dSkE/A"]);
+obj4[obj.AGE_VERIFICATION] = intl2.string(_modDef2981["dSkE/A"]);
 const intl3 = util.intl;
-obj4[obj.PARENTAL_CONSENT_CONNECTION] = intl3.string(_modDef2960.dMMSA0);
+obj4[obj.PARENTAL_CONSENT_CONNECTION] = intl3.string(_modDef2981.dMMSA0);
 const intl4 = util.intl;
-obj4[obj.APP_STORE_PARENTAL_REVOCATION] = intl4.string(_modDef2960.Z87TFb);
+obj4[obj.APP_STORE_PARENTAL_REVOCATION] = intl4.string(_modDef2981.Z87TFb);
 const result = size.fileFinishedImporting("modules/safety_flows/types.tsx");
 
 export const TaskType = obj;

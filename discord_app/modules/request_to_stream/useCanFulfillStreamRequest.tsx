@@ -1,15 +1,15 @@
-// === Module 13429: useCanFulfillStreamRequest ===
+// === Module 13943: useCanFulfillStreamRequest ===
 
-// Module 13429 (useCanFulfillStreamRequest)
-import ActivityTypes from "ActivityTypes" /* 5893 */;
+// Module 13943 (useCanFulfillStreamRequest)
+import ActivityTypes from "ActivityTypes" /* 6006 */;
 import RunningGameStore from "RunningGameStore" /* 2137 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6771 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import GuildStore from "GuildStore" /* 5013 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
-import PresenceStore from "PresenceStore" /* 5892 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import GuildStore from "GuildStore" /* 5114 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
+import PresenceStore from "PresenceStore" /* 6005 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
 
 const require = globalThis.__r;
 
@@ -45,18 +45,18 @@ function canFulfillStreamRequest(channel_id) {
     const tmp18 = null != obj.getCurrentUserActiveStream();
     const application = channel_id.application;
     id = undefined;
-    const videoPermission = flag(12090).getVideoPermission(channel);
+    const videoPermission = flag(12887).getVideoPermission(channel);
     if (application != null) {
       id = application.id;
     }
-    tmp19(9834).ActivityGamePlatforms.DESKTOP;
-    const obj8 = flag(12090);
+    tmp19(7406).ActivityGamePlatforms.DESKTOP;
+    const obj8 = flag(12887);
     const tmp19Result = flag(1377);
-    const ActivityGamePlatforms = tmp19(9834).ActivityGamePlatforms;
+    const ActivityGamePlatforms = tmp19(7406).ActivityGamePlatforms;
     dependencyMap = flag(1377).isAndroid() ? ActivityGamePlatforms.ANDROID : ActivityGamePlatforms.IOS;
     const isAndroidResult = flag(1377).isAndroid();
     const obj5 = { guildId: channel.guild_id, location: "canFulfillStreamRequest" };
-    const tmp5 = id(11851).getConfig(obj5).enabled && null == id;
+    const tmp5 = id(8953).getConfig(obj5).enabled && null == id;
     if (null == id) {
       if (!tmp5) {
         const items1 = [false, obj.NOT_RUNNING_GAME];

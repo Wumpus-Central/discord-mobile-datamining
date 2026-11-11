@@ -1,13 +1,13 @@
-// === Module 13961: useMaybeFetchCheckpointData ===
+// === Module 14440: useMaybeFetchCheckpointData ===
 
-// Module 13961 (useMaybeFetchCheckpointData)
-import GameActionCreators from "GameActionCreators" /* 7548 */;
+// Module 14440 (useMaybeFetchCheckpointData)
+import GameActionCreators from "GameActionCreators" /* 9468 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13681 */;
+import CheckpointStore from "CheckpointStore" /* 14150 */;
 
 require = fn;
-const CheckpointFetchStates = fn(13681).CheckpointFetchStates;
-let closure_5 = fn(6201).CHECKPOINT_GLOBAL_GAME_CATEGORIES;
+const CheckpointFetchStates = fn(14150).CheckpointFetchStates;
+let closure_5 = fn(6314).CHECKPOINT_GLOBAL_GAME_CATEGORIES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/useMaybeFetchCheckpointData.tsx");
 
@@ -50,8 +50,8 @@ export function useMaybeFetchCheckpointData() {
   const effect = noop.useEffect(() => {
     const fetchState = CheckpointStore.fetchState;
     if (!tmp) {
-      const checkpointData = stateFromStoresArray(13684).fetchCheckpointData();
-      const obj = stateFromStoresArray(13684);
+      const checkpointData = stateFromStoresArray(14154).fetchCheckpointData();
+      const obj = stateFromStoresArray(14154);
     }
     tmp = fetchState !== constants.INIT && fetchState !== constants.ERROR;
   }, []);

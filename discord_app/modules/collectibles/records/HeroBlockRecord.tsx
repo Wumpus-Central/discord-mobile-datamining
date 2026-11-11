@@ -1,9 +1,9 @@
-// === Module 7827: HeroBlockRecord ===
+// === Module 8447: HeroBlockRecord ===
 
-// Module 7827 (HeroBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 5815 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7811 */;
-import ShopBlockRecordFactory from "ShopBlockRecordFactory" /* 7828 */;
+// Module 8447 (HeroBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 5928 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 8431 */;
+import ShopBlockRecordFactory from "ShopBlockRecordFactory" /* 8448 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function HeroBlockRecord(foreground_block) {

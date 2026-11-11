@@ -1,6 +1,6 @@
-// === Module 6954: SKUStore ===
+// === Module 7007: SKUStore ===
 
-// Module 6954 (SKUStore)
+// Module 7007 (SKUStore)
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SKURecord from "SKURecord" /* 2164 */;
@@ -46,7 +46,7 @@ function addSku(sku) {
     set = new Set();
     const result1 = map2.set(sku.application_id, set);
   }
-  value2 = map2.get(sku.application_id);
+  const value2 = map2.get(sku.application_id);
   value2.add(sku.id);
 }
 function skuFetchSuccess(sku) {

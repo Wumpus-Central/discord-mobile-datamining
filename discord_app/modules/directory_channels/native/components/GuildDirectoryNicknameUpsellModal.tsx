@@ -1,23 +1,23 @@
-// === Module 14500: GuildDirectoryNicknameUpsellModal ===
+// === Module 14874: GuildDirectoryNicknameUpsellModal ===
 
-// Module 14500 (GuildDirectoryNicknameUpsellModal)
+// Module 14874 (GuildDirectoryNicknameUpsellModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5737 */;
-import useInitialValueDefault from "useInitialValue" /* 5741 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import components_Button_Button from "components/Button/Button" /* 5760 */;
-import GuildIcon from "GuildIcon" /* 7023 */;
-import NavigatorHeader from "NavigatorHeader" /* 7067 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7150 */;
-import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 14491 */;
-import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 14499 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5850 */;
+import useInitialValueDefault from "useInitialValue" /* 5854 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import components_Button_Button from "components/Button/Button" /* 5873 */;
+import NavigatorHeader from "NavigatorHeader" /* 7427 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7551 */;
+import GuildIcon from "GuildIcon" /* 7654 */;
+import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 14865 */;
+import GuildDirectoryNicknameUpsellModalActionCreatorsDefault from "GuildDirectoryNicknameUpsellModalActionCreators" /* 14873 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5013 */;
+import GuildStore from "GuildStore" /* 5114 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -131,12 +131,12 @@ function GuildDirectoryNicknameUpsell(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const GuildPrompts = fn(14490).GuildPrompts;
+const GuildPrompts = fn(14864).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5142);
-let obj2 = { container: { flex: 1, flexGrow: 2, marginTop: fn(5716).NAV_BAR_HEIGHT }, guildIcon: { alignSelf: "center", marginTop: 16 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, input: { marginHorizontal: 16 }, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
-let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5716).NAV_BAR_HEIGHT };
+const createStyles = fn(5243);
+let obj2 = { container: { flex: 1, flexGrow: 2, marginTop: fn(5829).NAV_BAR_HEIGHT }, guildIcon: { alignSelf: "center", marginTop: 16 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, input: { marginHorizontal: 16 }, redesignTextInput: null, redesignGrowSpacing: null, redesignButtonContainer: null };
+let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5829).NAV_BAR_HEIGHT };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };

@@ -1,7 +1,7 @@
-// === Module 12325: useConjureAttachmentImage ===
+// === Module 13130: useConjureAttachmentImage ===
 
-// Module 12325 (useConjureAttachmentImage)
-import conjureAttachmentRequests from "conjureAttachmentRequests" /* 12323 */;
+// Module 13130 (useConjureAttachmentImage)
+import conjureAttachmentRequests from "conjureAttachmentRequests" /* 13128 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

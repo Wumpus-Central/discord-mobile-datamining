@@ -1,6 +1,6 @@
-// === Module 13215: conjureHomeProjectOrder ===
+// === Module 10456: conjureHomeProjectOrder ===
 
-// Module 13215 (conjureHomeProjectOrder)
+// Module 10456 (conjureHomeProjectOrder)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 

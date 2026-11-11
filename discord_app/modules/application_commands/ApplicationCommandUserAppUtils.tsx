@@ -1,8 +1,8 @@
-// === Module 8629: ApplicationCommandUserAppUtils ===
+// === Module 9270: ApplicationCommandUserAppUtils ===
 
-// Module 8629 (ApplicationCommandUserAppUtils)
+// Module 9270 (ApplicationCommandUserAppUtils)
 import util from "util" /* 1113 */;
-import EphemeralMessageReason from "EphemeralMessageReason" /* 8630 */;
+import EphemeralMessageReason from "EphemeralMessageReason" /* 9271 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");

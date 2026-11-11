@@ -1,6 +1,6 @@
-// === Module 5081: AppChannelPermissions ===
+// === Module 5182: AppChannelPermissions ===
 
-// Module 5081 (AppChannelPermissions)
+// Module 5182 (AppChannelPermissions)
 import Constants from "Constants" /* 1072 */;
 import "BigFlagUtils";
 import BigFlagUtils from "BigFlagUtils" /* 1084 */;

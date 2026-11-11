@@ -1,6 +1,6 @@
-// === Module 6382: ? ===
+// === Module 6495: ? ===
 
-// Module 6382
+// Module 6495
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/cowpoke_denim.png.js");

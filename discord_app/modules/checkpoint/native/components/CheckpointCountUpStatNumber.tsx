@@ -1,9 +1,9 @@
-// === Module 13910: CheckpointCountUpStatNumber ===
+// === Module 14386: CheckpointCountUpStatNumber ===
 
-// Module 13910 (CheckpointCountUpStatNumber)
-import CheckpointStatNumber from "CheckpointStatNumber" /* 13900 */;
+// Module 14386 (CheckpointCountUpStatNumber)
+import CheckpointStatNumber from "CheckpointStatNumber" /* 14377 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 
 require = fn;
 const noop = fn(19);
@@ -11,26 +11,25 @@ const noop = fn(19);
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointCountUpStatNumber.tsx");
+let result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointCountUpStatNumber.tsx");
 
 export default function CheckpointCountUpStatNumber(start) {
   let num = start.start;
   if (num === undefined) {
     num = 0;
   }
-  const end = start.end;
-  let num2 = start.size;
-  if (num2 === undefined) {
-    num2 = 100;
+  ({ end, size } = start);
+  if (size === undefined) {
+    size = 100;
   }
   closure_129_0 = end;
   closure_129_1 = num;
   closure_129_3 = undefined;
   items = [AccessibilityStore];
-  const stateFromStores = end(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = size(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   closure_129_2 = stateFromStores;
-  let obj = end(504);
-  [tmp4, closure_129_3] = closure_6(num);
+  let obj = size(504);
+  [tmp5, closure_129_3] = closure_6(num);
   const items1 = [end, stateFromStores, num];
   closure_4(() => {
     if (!closure_2) {
@@ -40,10 +39,10 @@ export default function CheckpointCountUpStatNumber(start) {
       const interval = setInterval(() => {
         const bound = Math.min((Date.now() - closure_0) / 500, 1);
         if (1 === bound) {
-          let rounded = end;
+          let rounded = size;
         } else {
           const _Math = Math;
-          rounded = Math.round((end - num2) * bound + num2);
+          rounded = Math.round((size - c1) * bound + c1);
         }
         _slicedToArray(rounded);
         if (1 === bound) {
@@ -54,13 +53,24 @@ export default function CheckpointCountUpStatNumber(start) {
       return () => clearInterval(closure_1);
     }
   }, items1);
-  if (stateFromStores) {
-    tmp4 = end;
-  }
-  const items2 = [end, num2];
-  const tmp3 = _slicedToArray(closure_6(num), 2);
+  const tmp4 = _slicedToArray(closure_6(num), 2);
+  const result = size(14387).formatCheckpointStatNumber(end);
+  importDefault = result;
+  const items2 = [result, size];
+  const obj2 = {
+    style: closure_5(() => {
+      const obj = { width: CheckpointStatNumber.getCheckpointStatNumberWidth(c1, size) };
+      return obj;
+    }, items2),
+    children: null
+  };
+  const obj3 = { value: null, size: null };
+  const tmpResult = size(14387);
+  obj3.value = size(14387).formatCheckpointStatNumber(end);
+  obj3.size = size;
+  obj2.children = <tmp8 value={null} size={null} />;
   return <View style={closure_5(() => {
-    const obj = { width: CheckpointStatNumber.getCheckpointStatNumberWidth(end, num2) };
+    const obj = { width: CheckpointStatNumber.getCheckpointStatNumberWidth(c1, size) };
     return obj;
-  }, items2)}>{jsx(num2(13900), { value: tmp4, size: num2 })}</View>;
+  }, items2)}>{null}</View>;
 };

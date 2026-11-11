@@ -1,235 +1,507 @@
-// === Module 9004: ICYMIActionCreators ===
+// === Module 10150: ICYMIActionCreators ===
 
-// Module 9004 (ICYMIActionCreators)
+// Module 10150 (ICYMIActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import UserSettings from "UserSettings" /* 4967 */;
-import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 9006 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 9008 */;
+import UserSettings from "UserSettings" /* 5068 */;
+import DiscoverRequestState from "DiscoverRequestState" /* 10146 */;
+import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 10147 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 10153 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import InterestPickerSessionStore from "InterestPickerSessionStore" /* 9005 */;
+import InterestPickerSessionStore from "InterestPickerSessionStore" /* 10151 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1385 */;
 import Dispatcher_mod from "Dispatcher" /* 572 */;
 
 require = fn;
+function notifyDiscoverRequestListeners() {
+  for (const item10005 of set) {
+    let item10005Result = item10005();
+    continue;
+  }
+}
 function setDiscoverUser(arg0) {
   if (id !== arg0) {
-    c9 = null;
-    closure_8 = {};
+    c13 = null;
     closure_12 = {};
+    if (_null != null) {
+      _null.abort();
+    }
+    closure_16 = {};
+    const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
+    discoverRequestGuard.resetSession();
     id = arg0;
     authSessionIdHash = null;
   }
 }
+function setDiscoverAuthSessionIdHash(arg0) {
+  if (null != arg0) {
+    let tmp2 = null != authSessionIdHash;
+    if (tmp2) {
+      tmp2 = authSessionIdHash !== arg0;
+    }
+    if (tmp2) {
+      c13 = null;
+      closure_12 = {};
+      if (_null != null) {
+        _null.abort();
+      }
+      closure_16 = {};
+      const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
+      discoverRequestGuard.resetSession();
+    }
+    authSessionIdHash = arg0;
+  }
+}
+let closure_20 = async function _dispatchDiscoverPickerCommit() {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0) => {
+    closure_2 = tmp3;
+    await Dispatcher.dispatch({ type: "DISCOVER_PICKER_COMMIT", identity });
+    if (1 === tmp7) {
+      c4 = 0;
+      closure_129_0 = closure_3;
+      closure_130_1(closure_130_2[7]).captureException(closure_129_0);
+      c6 = 3;
+      closure_130_1(closure_130_2[7]);
+    } else if (arg0 === 1) {
+      c6 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      c4 = 0;
+    }
+    return value;
+  })();
+};
 function fetchDiscoverDehydrated(arg0) {
   ({ isInitialLoad: require, isReloading: importDefault, isDiscoverPickerCommit } = arg0);
   closure_4 = undefined;
+  AuthenticationStore = undefined;
   UserStore = undefined;
-  closure_6 = undefined;
-  closure_9 = undefined;
-  closure_7 = function isSameUser() {
-    let tmp = closure_6 === closure_12;
-    if (tmp) {
-      tmp = null != id;
+  authSessionIdHash = undefined;
+  closure_8 = undefined;
+  c9 = undefined;
+  closure_13 = undefined;
+  closure_10 = function isSameUser() {
+    let isAuthenticatedResult = closure_6 === closure_16;
+    if (isAuthenticatedResult) {
+      isAuthenticatedResult = null != id;
     }
-    if (tmp) {
+    if (isAuthenticatedResult) {
+      isAuthenticatedResult = AuthenticationStore.isAuthenticated();
+    }
+    if (isAuthenticatedResult) {
+      isAuthenticatedResult = AuthenticationStore.getId() === id;
+    }
+    if (isAuthenticatedResult) {
       const currentUser = UserStore.getCurrentUser();
       id = undefined;
       if (currentUser != null) {
         id = currentUser.id;
       }
-      tmp = id === id;
+      isAuthenticatedResult = id === id;
     }
-    return tmp;
+    if (isAuthenticatedResult) {
+      authSessionIdHash = AuthenticationStore.getAuthSessionIdHash();
+      if (authSessionIdHash == null) {
+        authSessionIdHash = null;
+      }
+      isAuthenticatedResult = authSessionIdHash === authSessionIdHash.authSessionIdHash;
+    }
+    return isAuthenticatedResult;
   };
-  function canApply() {
-    let waterwheelsDiscoverEnabled = closure_6 === closure_12;
-    if (waterwheelsDiscoverEnabled) {
-      waterwheelsDiscoverEnabled = null != id;
+  function canRun() {
+    let canRunResult = closure_10();
+    if (canRunResult) {
+      const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
+      canRunResult = discoverRequestGuard.canRun(closure_7, WaterwheelsDiscoverExperiment.getWaterwheelsDiscoverEnabled("fetchDehydrated"));
     }
-    if (waterwheelsDiscoverEnabled) {
-      const currentUser = UserStore.getCurrentUser();
-      id = undefined;
-      if (currentUser != null) {
-        id = currentUser.id;
-      }
-      waterwheelsDiscoverEnabled = id === id;
-    }
-    if (waterwheelsDiscoverEnabled) {
-      waterwheelsDiscoverEnabled = WaterwheelsDiscoverExperiment.getWaterwheelsDiscoverEnabled("fetchDehydrated");
-    }
-    return waterwheelsDiscoverEnabled;
+    return canRunResult;
   }
-  closure_10 = async function _runRequest() {
-    closure_5 = tmp4;
-    await value;
-    if (1 === tmp8) {
+  function canApply() {
+    let canRunResult = closure_10();
+    if (canRunResult) {
+      const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
+      canRunResult = discoverRequestGuard.canRun(closure_7, WaterwheelsDiscoverExperiment.getWaterwheelsDiscoverEnabled("fetchDehydrated"));
+    }
+    if (canRunResult) {
+      canRunResult = closure_5 === closure_12;
+    }
+    if (canRunResult) {
+      const discoverRequestGuard2 = DiscoverRequestState.discoverRequestGuard;
+      canRunResult = discoverRequestGuard2.matches(closure_7);
+    }
+    return canRunResult;
+  }
+  closure_14 = async function _runRequest() {
+    if (c9 === 2) {
+      c9 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
-        c9 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c9 = 3;
-        return { value, done: true };
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        if (closure_133_8()) {
-          closure_0 = closure_133_4;
-          if (closure_133_4 == null) {
-            closure_0 = c9;
-          }
-          closure_132_0 = closure_0;
-          if (closure_133_1) {
-            dependencyMap(isDiscoverPickerCommit[5]).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: true });
-            dependencyMap(isDiscoverPickerCommit[5]);
-          }
-          c7 = 1;
-          const _URLSearchParams = URLSearchParams;
-          const uRLSearchParams = new URLSearchParams();
-          closure_132_1 = uRLSearchParams;
-          let picks;
-          if (closure_132_0 != null) {
-            picks = closure_132_0.picks;
-          }
-          dependencyMap = picks;
-          if (picks == null) {
-            dependencyMap = picks.getPicks();
-          }
-          closure_3 = dependencyMap;
-          isDiscoverPickerCommit = dependencyMap[Symbol.iterator]();
-          while (isDiscoverPickerCommit !== undefined) {
-            closure_132_2 = tmp89;
-            let appendResult = closure_132_1.append("game_ids", closure_132_2);
-            c7 = 1;
-            continue;
-          }
-          if (null != closure_132_0) {
-            closure_132_1.append("refresh", "true");
-          }
-          const _Date = Date;
-          closure_132_3 = Date.now();
-          const HTTP = closure_0(isDiscoverPickerCommit[7]).HTTP;
-          const request = { url: tmp105.GRAVITY_ITEMS_DEHYDRATED, query: closure_132_1.toString(), rejectWithError: false };
-          c8 = 4;
-          c9 = 1;
-          return { value: HTTP.get(request), done: false };
-        }
-        c9 = 3;
-      }
-    } else if (2 === tmp8) {
-      c7 = 0;
-      let tmp57 = closure_133_1;
-      if (closure_133_1) {
-        tmp57 = closure_133_7();
-      }
-      if (tmp57) {
-        dependencyMap(isDiscoverPickerCommit[5]).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
-        dependencyMap(isDiscoverPickerCommit[5]);
-      }
-      throw tmp105;
-    } else if (3 === tmp8) {
-      c7 = 1;
-      isDiscoverPickerCommit.return();
-      throw tmp105;
-    } else if (4 === tmp8) {
-      if (arg0 === 1) {
-        c9 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 0;
-        let tmp45 = closure_133_1;
-        if (closure_133_1) {
-          tmp45 = closure_133_7();
-        }
-        if (tmp45) {
-          dependencyMap(isDiscoverPickerCommit[5]).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
-          dependencyMap(isDiscoverPickerCommit[5]);
-        }
-        c9 = 3;
-        return { value, done: true };
-      } else {
-        closure_132_4 = value;
-        if (closure_133_8()) {
-          if (closure_133_5 === c8) {
-            const obj13 = { type: "LOAD_ICYMI_DEHYDRATED", items: closure_132_4.body.items, loadId: closure_132_4.body.load_id, startTime: closure_132_3, isReloading: closure_133_1, isInitialLoad: null };
-            let tmp36 = null != closure_132_0;
-            if (!tmp36) {
-              tmp36 = closure_133_0;
-            }
-            obj13.isInitialLoad = tmp36;
-            c8 = 5;
-            c9 = 1;
-            return { value: dependencyMap(isDiscoverPickerCommit[5]).dispatch(obj13), done: false };
-          }
-        }
-        c7 = 0;
-        let tmp38 = closure_133_1;
-        if (closure_133_1) {
-          tmp38 = closure_133_7();
-        }
-        if (tmp38) {
-          dependencyMap(isDiscoverPickerCommit[5]).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
-          dependencyMap(isDiscoverPickerCommit[5]);
-        }
-        c9 = 3;
         return { value: "HermesInternal", done: null };
       }
-    } else if (arg0 === 1) {
-      c9 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      let tmp12 = closure_133_8();
-      if (tmp12) {
-        tmp12 = closure_133_5 === c8;
-      }
-      if (tmp12) {
-        tmp12 = c9 === closure_132_0;
-      }
-      if (tmp12) {
-        c9 = null;
-      }
-      c7 = 0;
-      let tmp19 = closure_133_1;
-      if (closure_133_1) {
-        tmp19 = closure_133_7();
-      }
-      if (tmp19) {
-        dependencyMap(isDiscoverPickerCommit[5]).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
-        dependencyMap(isDiscoverPickerCommit[5]);
+    } else {
+      try {
+        c9 = 2;
+        if (0 === c8) {
+          if (arg0 === 1) {
+            c9 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c9 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            closure_5 = tmp3;
+            let picks = tmp8;
+            closure_132_0 = undefined;
+            closure_132_1 = undefined;
+            closure_132_2 = undefined;
+            closure_132_3 = undefined;
+            let signal;
+            closure_132_5 = undefined;
+            c8 = 1;
+            c9 = 1;
+            const obj7 = { value, done: false };
+            return obj7;
+          }
+        } else {
+          if (1 === tmp8) {
+            if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 3;
+              const obj9 = { value, done: true };
+              return obj9;
+            } else {
+              if (closure_133_11()) {
+                if (closure_133_2) {
+                  closure_0 = closure_133_4;
+                  if (closure_133_4 == null) {
+                    closure_0 = c13;
+                  }
+                  closure_132_0 = closure_0;
+                  if (closure_133_12()) {
+                    const obj11 = { type: "DISCOVER_REQUEST_STARTED", identity: closure_133_7 };
+                    c8 = 2;
+                    c9 = 1;
+                    const obj14 = { value: dependencyMap(572).dispatch(obj11), done: false };
+                    return obj14;
+                  }
+                }
+              }
+              c9 = 3;
+              c7 = 0;
+              if (c9 === closure_133_9) {
+                c9 = null;
+              }
+              let tmp27 = closure_133_1;
+              if (closure_133_1) {
+                tmp27 = closure_133_10();
+              }
+              if (tmp27) {
+                dependencyMap(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
+                const obj2 = dependencyMap(572);
+              }
+              c9 = 3;
+              const obj16 = { value, done: true };
+              return obj16;
+            }
+          } else if (2 === tmp8) {
+            if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 3;
+              const obj17 = { value, done: true };
+              return obj17;
+            } else {
+              closure_133_8 = true;
+            }
+          } else if (3 === tmp8) {
+            c7 = 0;
+            if (c9 === closure_133_9) {
+              c9 = null;
+            }
+            let tmp80 = closure_133_1;
+            if (closure_133_1) {
+              tmp80 = closure_133_10();
+            }
+            if (tmp80) {
+              dependencyMap(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
+              const obj10 = dependencyMap(572);
+            }
+            throw closure_6;
+          } else if (4 === tmp8) {
+            c7 = 1;
+            dependencyMap.return();
+            throw closure_6;
+          } else if (5 === tmp8) {
+            if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 0;
+              if (c9 === closure_133_9) {
+                c9 = null;
+              }
+              let tmp66 = closure_133_1;
+              if (closure_133_1) {
+                tmp66 = closure_133_10();
+              }
+              if (tmp66) {
+                dependencyMap(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
+                const obj8 = dependencyMap(572);
+              }
+              c9 = 3;
+              const obj18 = { value, done: true };
+              return obj18;
+            } else {
+              closure_132_5 = value;
+              if (closure_133_12()) {
+                if (null != closure_132_0) {
+                  if (null != closure_132_5.body.error_code) {
+                    const _Error = Error;
+                    const error = new Error("Discover refresh failed");
+                    throw error;
+                  }
+                }
+                const obj19 = { type: "LOAD_ICYMI_DEHYDRATED", items: closure_132_5.body.items, loadId: closure_132_5.body.load_id, startTime: closure_132_3, isReloading: closure_133_1, isInitialLoad: null, discoverRequest: null };
+                let tmp55 = null != closure_132_0;
+                if (!tmp55) {
+                  tmp55 = closure_133_0;
+                }
+                obj19.isInitialLoad = tmp55;
+                obj19.discoverRequest = closure_133_7;
+                c8 = 6;
+                c9 = 1;
+                const obj20 = { value: dependencyMap(572).dispatch(obj19), done: false };
+                return obj20;
+              } else {
+                c7 = 0;
+                if (c9 === closure_133_9) {
+                  c9 = null;
+                }
+                let tmp36 = closure_133_1;
+                if (closure_133_1) {
+                  tmp36 = closure_133_10();
+                }
+                if (tmp36) {
+                  dependencyMap(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
+                  const obj4 = dependencyMap(572);
+                }
+                c9 = 3;
+                return { value: "HermesInternal", done: null };
+              }
+            }
+          } else if (arg0 === 1) {
+            c9 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            let tmp13 = closure_133_12();
+            if (tmp13) {
+              tmp13 = c13 === closure_132_0;
+            }
+            if (tmp13) {
+              c13 = null;
+            }
+            c7 = 0;
+            if (c9 === closure_133_9) {
+              c9 = null;
+            }
+            let tmp18 = closure_133_1;
+            if (closure_133_1) {
+              tmp18 = closure_133_10();
+            }
+            if (tmp18) {
+              dependencyMap(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
+              const obj = dependencyMap(572);
+            }
+          }
+          if (closure_133_11()) {
+            if (closure_133_1) {
+              dependencyMap(572).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: true });
+              const obj12 = dependencyMap(572);
+            }
+            c7 = 1;
+            const _URLSearchParams = URLSearchParams;
+            const uRLSearchParams = new URLSearchParams();
+            closure_132_1 = uRLSearchParams;
+            picks = undefined;
+            if (closure_132_0 != null) {
+              picks = closure_132_0.picks;
+            }
+            dependencyMap = picks;
+            if (picks == null) {
+              dependencyMap = picks.getPicks();
+            }
+            closure_3 = dependencyMap;
+            closure_3 = dependencyMap;
+            dependencyMap = dependencyMap[Symbol.iterator]();
+            while (dependencyMap !== undefined) {
+              c7 = 2;
+              closure_132_2 = tmp120;
+              let appendResult = closure_132_1.append("game_ids", closure_132_2);
+              c7 = 1;
+              continue;
+            }
+            if (null != closure_132_0) {
+              closure_132_1.append("refresh", "true");
+            }
+            const _Date = Date;
+            closure_132_3 = Date.now();
+            const _AbortController = AbortController;
+            const abortController = new AbortController();
+            closure_133_9 = abortController;
+            c9 = closure_133_9;
+            signal = closure_133_9.signal;
+            c8 = 5;
+            c9 = 1;
+            const obj21 = {
+              value: closure_0(10152).withDiscoverRequestDeadline(closure_133_9, () => {
+                        const HTTP = closure_0(1282).HTTP;
+                        const request = { url: constants.GRAVITY_ITEMS_DEHYDRATED, query: dependencyMap.toString(), rejectWithError: false, signal, timeout: { deadline: closure_0(10152).DISCOVER_REQUEST_DEADLINE_MS } };
+                        return HTTP.get(request);
+                      }),
+              done: false
+            };
+            return obj21;
+          }
+        }
+      } catch (tmp145) {
+        closure_6 = tmp145;
+        if (tmp4 === c7) {
+          c9 = tmp2;
+          throw tmp145;
+        } else if (tmp === tmp147) {
+          c8 = tmp2;
+        } else {
+          c8 = tmp5;
+        }
       }
     }
-    let tmp26 = closure_133_1;
-    if (closure_133_1) {
-      tmp26 = closure_133_7();
-    }
-    if (tmp26) {
-      dependencyMap(isDiscoverPickerCommit[5]).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: false });
-      dependencyMap(isDiscoverPickerCommit[5]);
-    }
-    return value;
   };
-  closure_11 = async function _captureRequestErrors() {
-    await (function runRequest() {
-      const self = this;
-      const apply = closure_1_10.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  closure_15 = async function _captureRequestErrors() {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp8 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        applyArgumentsResult = apply(self, arguments);
+        return { value: "HermesInternal", done: null };
       }
-      return applyArgumentsResult;
-    })();
-    if (1 === tmp7) {
-      c3 = 0;
-      closure_128_0 = tmp16;
-      tmp3(tmp16[8]).captureException(closure_128_0);
-      c5 = 3;
-      tmp3(tmp16[8]);
-    } else if (arg0 === 1) {
-      c5 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      c3 = 0;
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_0 = tmp9;
+            c3 = 2;
+            c4 = 3;
+            c5 = 1;
+            const obj6 = {
+              value: (function runRequest() {
+                        const self = this;
+                        const apply = closure_1_14.apply;
+                        if (typeof apply === "unknown") {
+                          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                        } else {
+                          applyArgumentsResult = apply(self, arguments);
+                        }
+                        return applyArgumentsResult;
+                      })(),
+              done: false
+            };
+            return obj6;
+          }
+        } else if (1 === tmp9) {
+          c3 = 0;
+          closure_10 = closure_10 - 1;
+          notifyDiscoverRequestListeners();
+          throw tmp44;
+        } else {
+          if (2 === tmp9) {
+            c3 = 1;
+            if (closure_129_8) {
+              if (closure_129_12()) {
+                c3 = 3;
+                const obj7 = { type: "DISCOVER_REQUEST_FAILED", identity: closure_129_7 };
+                c4 = 5;
+                c5 = 1;
+                const obj8 = { value: tmp4(tmp44[6]).dispatch(obj7), done: false };
+                return obj8;
+              }
+            }
+          } else if (3 === tmp9) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              closure_10 = closure_10 - 1;
+              notifyDiscoverRequestListeners();
+              c5 = 3;
+              const obj9 = { value, done: true };
+              return obj9;
+            } else {
+              c3 = 1;
+            }
+          } else {
+            if (4 === tmp9) {
+              c3 = 1;
+              closure_128_0 = tmp44;
+              tmp4(tmp44[7]).captureException(closure_128_0);
+              const obj2 = tmp4(tmp44[7]);
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              c3 = 1;
+            }
+            c3 = 0;
+            closure_10 = closure_10 - 1;
+            notifyDiscoverRequestListeners();
+            c5 = 3;
+            const obj = { value, done: true };
+            return obj;
+          }
+          c3 = 0;
+          closure_10 = closure_10 - 1;
+          notifyDiscoverRequestListeners();
+          c5 = 3;
+        }
+      } catch (tmp44) {
+        if (tmp5 === c3) {
+          c5 = tmp3;
+          throw tmp44;
+        } else if (tmp2 === tmp46) {
+          c4 = tmp2;
+        } else if (tmp === tmp46) {
+          c4 = tmp;
+        } else {
+          c4 = tmp6;
+        }
+      }
     }
-    return value;
   };
   let currentUser = UserStore.getCurrentUser();
   id = undefined;
@@ -238,15 +510,29 @@ function fetchDiscoverDehydrated(arg0) {
   }
   let tmp3 = null;
   if (isDiscoverPickerCommit) {
-    tmp3 = closure_9;
+    tmp3 = closure_13;
   }
   closure_4 = tmp3;
-  UserStore = canApply;
-  closure_6 = closure_12;
-  closure_9 = closure_7;
-  const tmp4 = (function captureRequestErrors() {
+  AuthenticationStore = canApply;
+  UserStore = closure_16;
+  let discoverRequestGuard = require("DiscoverRequestState").discoverRequestGuard;
+  discoverRequestGuard.observeGate(require("WaterwheelsDiscoverExperiment").getWaterwheelsDiscoverEnabled("fetchDehydrated"));
+  let discoverRequestGuard2 = require("DiscoverRequestState").discoverRequestGuard;
+  if (id == null) {
+    id = null;
+  }
+  authSessionIdHash = AuthenticationStore.getAuthSessionIdHash();
+  if (authSessionIdHash == null) {
+    authSessionIdHash = null;
+  }
+  authSessionIdHash = discoverRequestGuard2.capture(id, authSessionIdHash);
+  closure_8 = false;
+  c9 = null;
+  closure_13 = closure_8;
+  closure_10 = closure_10 + 1;
+  const tmp6 = (function captureRequestErrors() {
     const self = this;
-    const apply = closure_11.apply;
+    const apply = closure_15.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -254,39 +540,48 @@ function fetchDiscoverDehydrated(arg0) {
     }
     return applyArgumentsResult;
   })();
-  closure_7 = tmp4;
-  return tmp4;
+  closure_8 = tmp6;
+  notifyDiscoverRequestListeners();
+  return tmp6;
 }
 const Endpoints = fn(1072).Endpoints;
-let closure_7 = Promise.resolve();
-let closure_8 = {};
+let closure_8 = Promise.resolve();
 let c9 = null;
-let tmp2 = null;
+let c10 = 0;
+const set = new Set();
+let closure_12 = {};
+let c13 = null;
+let tmp3 = null;
 if (AuthenticationStore.isAuthenticated()) {
   let id = AuthenticationStore.getId();
   if (id == null) {
     id = null;
   }
-  tmp2 = id;
+  tmp3 = id;
 }
-id = tmp2;
-let tmp4 = null;
-if (null != tmp2) {
+id = tmp3;
+let tmp5 = null;
+if (null != tmp3) {
   let authSessionIdHash = AuthenticationStore.getAuthSessionIdHash();
   if (authSessionIdHash == null) {
     authSessionIdHash = null;
   }
-  tmp4 = authSessionIdHash;
+  tmp5 = authSessionIdHash;
 }
 function resetDiscoverAccount() {
-  c9 = null;
-  closure_8 = {};
+  c13 = null;
   closure_12 = {};
+  if (_null != null) {
+    _null.abort();
+  }
+  closure_16 = {};
+  const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
+  discoverRequestGuard.resetSession();
   id = null;
   authSessionIdHash = null;
 }
-authSessionIdHash = tmp4;
-let closure_12 = {};
+authSessionIdHash = tmp5;
+let closure_16 = {};
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", resetDiscoverAccount);
 let Dispatcher = Dispatcher_mod;
@@ -294,9 +589,14 @@ const subscription1 = Dispatcher.subscribe("LOGIN_SUCCESS", resetDiscoverAccount
 let Dispatcher = Dispatcher_mod;
 const subscription2 = Dispatcher.subscribe("LOGIN_RESET", (isMultiAccount) => {
   if (!isMultiAccount.isMultiAccount) {
-    c9 = null;
-    closure_8 = {};
+    c13 = null;
     closure_12 = {};
+    if (_null != null) {
+      _null.abort();
+    }
+    closure_16 = {};
+    const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
+    discoverRequestGuard.resetSession();
     id = null;
     authSessionIdHash = null;
   }
@@ -308,9 +608,14 @@ const subscription4 = Dispatcher.subscribe("CLOSE_SUSPENDED_USER", resetDiscover
 let Dispatcher = Dispatcher_mod;
 const subscription5 = Dispatcher.subscribe("CONNECTION_CLOSED", (code) => {
   if (4004 === code.code) {
-    c9 = null;
-    closure_8 = {};
+    c13 = null;
     closure_12 = {};
+    if (_null != null) {
+      _null.abort();
+    }
+    closure_16 = {};
+    const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
+    discoverRequestGuard.resetSession();
     id = null;
     authSessionIdHash = null;
   }
@@ -320,20 +625,30 @@ const subscription6 = Dispatcher.subscribe("CONNECTION_OPEN", (authSessionIdHash
   authSessionIdHash = authSessionIdHash.authSessionIdHash;
   id = authSessionIdHash.user.id;
   if (id !== id) {
-    c9 = null;
-    closure_8 = {};
+    c13 = null;
     closure_12 = {};
+    if (_null != null) {
+      _null.abort();
+    }
+    closure_16 = {};
+    const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
+    discoverRequestGuard.resetSession();
     authSessionIdHash = null;
   }
   if (null != authSessionIdHash) {
-    let tmp3 = null != authSessionIdHash;
-    if (tmp3) {
-      tmp3 = authSessionIdHash !== authSessionIdHash;
+    let tmp7 = null != authSessionIdHash;
+    if (tmp7) {
+      tmp7 = authSessionIdHash !== authSessionIdHash;
     }
-    if (tmp3) {
-      c9 = null;
-      closure_8 = {};
+    if (tmp7) {
+      c13 = null;
       closure_12 = {};
+      if (_null != null) {
+        _null.abort();
+      }
+      closure_16 = {};
+      const discoverRequestGuard2 = DiscoverRequestState.discoverRequestGuard;
+      discoverRequestGuard2.resetSession();
     }
   }
 });
@@ -346,14 +661,19 @@ const subscription7 = Dispatcher.subscribe("AUTH_SESSION_CHANGE", (authSessionId
       tmp2 = authSessionIdHash !== authSessionIdHash;
     }
     if (tmp2) {
-      c9 = null;
-      closure_8 = {};
+      c13 = null;
       closure_12 = {};
+      if (_null != null) {
+        _null.abort();
+      }
+      closure_16 = {};
+      const discoverRequestGuard = DiscoverRequestState.discoverRequestGuard;
+      discoverRequestGuard.resetSession();
     }
   }
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/icymi/ICYMIActionCreators.tsx");
+let result = size.fileFinishedImporting("modules/icymi/ICYMIActionCreators.tsx");
 
 export default {
   fetchPopularGuildsFromCategories(stateFromStoresArray1, sum) {
@@ -388,7 +708,7 @@ export default {
               const category_ids = tmp7;
               let guilds;
               c3 = 1;
-              const HTTP = category_ids(tmp24[7]).HTTP;
+              const HTTP = category_ids(tmp24[10]).HTTP;
               const request = { url: constants.GRAVITY_TOPIC_GUILDS, body: null, rejectWithError: false };
               const obj5 = { category_ids, offset };
               request.body = obj5;
@@ -400,7 +720,7 @@ export default {
           } else if (1 === tmp7) {
             c3 = 0;
             closure_128_1 = tmp24;
-            offset(tmp24[8]).captureException(closure_128_1);
+            offset(tmp24[7]).captureException(closure_128_1);
             c5 = 3;
             return { value: false, done: true };
           } else if (arg0 === 1) {
@@ -414,7 +734,7 @@ export default {
           } else {
             guilds = value.body.guilds;
             const obj8 = { type: "LOAD_ICYMI_POPULAR_GUILDS", categoryIds: closure_129_0, guilds, offset: closure_129_1 };
-            offset(tmp24[5]).dispatch(obj8);
+            offset(tmp24[6]).dispatch(obj8);
             c3 = 0;
             c5 = 3;
             return { value: true, done: true };
@@ -429,6 +749,16 @@ export default {
         }
       }
     })();
+  },
+  subscribeDiscoverRequests(arg0) {
+    closure_0 = arg0;
+    set.add(arg0);
+    return () => {
+      set.delete(closure_0);
+    };
+  },
+  hasDiscoverRequestInFlight() {
+    return c10 > 0;
   },
   fetchDehydrated(arg0) {
     if (arg0 === undefined) {
@@ -459,97 +789,124 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              closure_129_0 = undefined;
-              closure_129_1 = undefined;
-              closure_129_2 = undefined;
-              closure_129_3 = undefined;
-              ({ isInitialLoad: closure_129_0, isReloading } = obj);
-              closure_129_1 = isReloading;
+              closure_3 = tmp3;
+              closure_130_0 = undefined;
+              closure_130_1 = undefined;
+              closure_130_2 = undefined;
+              closure_130_3 = undefined;
+              ({ isInitialLoad: closure_130_0, isReloading } = obj);
+              closure_130_1 = isReloading;
               currentUser = currentUser.getCurrentUser();
               id = undefined;
               if (currentUser != null) {
                 id = currentUser.id;
               }
-              let _null = id;
+              _null = id;
               if (id == null) {
                 _null = null;
               }
               setDiscoverUser(_null);
-              let isDiscoverPickerCommit = tmp49.isDiscoverPickerCommit;
+              setDiscoverAuthSessionIdHash(authSessionIdHash.getAuthSessionIdHash());
+              let isDiscoverPickerCommit = tmp63.isDiscoverPickerCommit;
               if (isDiscoverPickerCommit) {
-                isDiscoverPickerCommit = null != closure_1_10;
+                isDiscoverPickerCommit = null != closure_1_14;
               }
               if (isDiscoverPickerCommit) {
-                closure_8 = {};
-                { picks: null }.picks = picks.getPicks();
-                const obj5 = { picks: null };
-              }
-              if (obj6.icymiEnabled("fetchDehydrated")) {
-                if (tmp22Result.getWaterwheelsDiscoverEnabled("fetchDehydrated")) {
-                  constants = 3;
-                  const obj7 = { value: fetchDiscoverDehydrated(tmp49), done: true };
-                  return obj7;
-                } else if (!tmp49.isDiscoverPickerCommit) {
-                  if (isReloading) {
-                    tmp5(tmp3[5]).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: true });
-                    const obj8 = tmp5(tmp3[5]);
+                if (closure_1_9 != null) {
+                  closure_1_9.abort();
+                }
+                closure_12 = {};
+                { picks: null }.picks = tmp45.getPicks();
+                const discoverRequestGuard = _null(tmp5[5]).discoverRequestGuard;
+                discoverRequestGuard.observeGate(_null(tmp5[8]).getWaterwheelsDiscoverEnabled("fetchDehydrated"));
+                const discoverRequestGuard2 = _null(tmp5[5]).discoverRequestGuard;
+                discoverRequestGuard2.commitPicker();
+                const discoverRequestGuard3 = _null(tmp5[5]).discoverRequestGuard;
+                authSessionIdHash = obj5.getAuthSessionIdHash();
+                let _null2 = authSessionIdHash;
+                if (authSessionIdHash == null) {
+                  _null2 = null;
+                }
+                function dispatchDiscoverPickerCommit() {
+                  const self = this;
+                  const apply = closure_1_20.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
                   }
-                  picks = 1;
+                  return applyArgumentsResult;
+                }
+                const result = dispatchDiscoverPickerCommit(discoverRequestGuard3.capture(closure_1_14, _null2));
+                const obj7 = { picks: null };
+                const obj8 = _null(tmp5[8]);
+              }
+              if (obj9.icymiEnabled("fetchDehydrated")) {
+                if (tmp36Result.getWaterwheelsDiscoverEnabled("fetchDehydrated")) {
+                  constants = 3;
+                  const obj10 = { value: fetchDiscoverDehydrated(tmp63), done: true };
+                  return obj10;
+                } else if (!tmp63.isDiscoverPickerCommit) {
+                  if (isReloading) {
+                    _null2(tmp5[6]).dispatch({ type: "ICYMI_SET_REFRESHING", refreshing: true });
+                    const obj11 = _null2(tmp5[6]);
+                  }
+                  authSessionIdHash = 1;
                   const _Date = Date;
-                  closure_129_2 = Date.now();
-                  const HTTP = tmp22(tmp3[7]).HTTP;
+                  closure_130_2 = Date.now();
+                  const HTTP = tmp36(tmp5[10]).HTTP;
                   const request = { url: constants.GRAVITY_ITEMS_DEHYDRATED, query: null, rejectWithError: false };
-                  const obj9 = { refresh: obj.forceRefresh };
-                  request.query = obj9;
+                  const obj12 = { refresh: obj.forceRefresh };
+                  request.query = obj12;
                   currentUser = 2;
                   constants = 1;
-                  const obj10 = { value: HTTP.get(request), done: false };
-                  return obj10;
+                  const obj13 = { value: HTTP.get(request), done: false };
+                  return obj13;
                 }
-                tmp22Result = tmp22(tmp3[6]);
+                tmp36Result = tmp36(tmp5[8]);
               }
-              obj6 = _null(tmp3[9]);
+              obj5 = authSessionIdHash;
+              obj9 = _null(tmp5[11]);
             }
           } else {
             if (1 === tmp8) {
-              picks = 0;
-              closure_129_4 = closure_3;
-              tmp5(tmp3[8]).captureException(closure_129_4);
-              const obj4 = tmp5(tmp3[8]);
+              authSessionIdHash = 0;
+              closure_130_4 = tmp45;
+              _null2(tmp5[7]).captureException(closure_130_4);
+              const obj4 = _null2(tmp5[7]);
             } else if (2 === tmp8) {
               if (arg0 === 1) {
                 constants = 3;
                 throw value;
               } else if (arg0 === 2) {
-                picks = 0;
+                authSessionIdHash = 0;
                 constants = 3;
-                const obj11 = { value, done: true };
-                return obj11;
+                const obj14 = { value, done: true };
+                return obj14;
               } else {
-                closure_129_3 = value;
-                const obj12 = { type: "LOAD_ICYMI_DEHYDRATED", items: closure_129_3.body.items, loadId: closure_129_3.body.load_id, startTime: closure_129_2, isReloading: closure_129_1, isInitialLoad: closure_129_0 };
+                closure_130_3 = value;
+                const obj15 = { type: "LOAD_ICYMI_DEHYDRATED", items: closure_130_3.body.items, loadId: closure_130_3.body.load_id, startTime: closure_130_2, isReloading: closure_130_1, isInitialLoad: closure_130_0 };
                 currentUser = 3;
                 constants = 1;
-                const obj13 = { value: tmp5(tmp3[5]).dispatch(obj12), done: false };
-                return obj13;
+                const obj16 = { value: _null2(tmp5[6]).dispatch(obj15), done: false };
+                return obj16;
               }
             } else if (arg0 === 1) {
               constants = 3;
               throw value;
             } else if (arg0 !== 2) {
-              picks = 0;
+              authSessionIdHash = 0;
             }
-            picks = 0;
+            authSessionIdHash = 0;
             constants = 3;
             obj = { value, done: true };
             return obj;
           }
           constants = 3;
-        } catch (tmp31) {
-          closure_3 = tmp31;
-          if (tmp4 === picks) {
+        } catch (tmp45) {
+          if (tmp4 === authSessionIdHash) {
             constants = tmp2;
-            throw tmp31;
+            throw tmp45;
           } else {
             currentUser = tmp;
           }
@@ -589,7 +946,7 @@ export default {
               if (obj8.icymiEnabled("gravityJoinGuild")) {
                 if (0 !== items.length) {
                   c3 = 1;
-                  const HTTP = items(tmp20[7]).HTTP;
+                  const HTTP = items(tmp20[10]).HTTP;
                   const request = { url: constants.GRAVITY_JOIN_GUILD, body: null, rejectWithError: false };
                   const obj5 = { guild_ids: tmp16, location: _location };
                   request.body = obj5;
@@ -605,7 +962,7 @@ export default {
           } else if (1 === tmp7) {
             c3 = 0;
             closure_128_0 = tmp20;
-            _location(tmp20[8]).captureException(closure_128_0);
+            _location(tmp20[7]).captureException(closure_128_0);
             c5 = 3;
             return { value: false, done: true };
           } else if (arg0 === 1) {
@@ -665,7 +1022,7 @@ export default {
               closure_128_0 = undefined;
               if (obj11.icymiEnabled("fetchInitial")) {
                 c3 = 1;
-                const HTTP = tmp35(tmp26[7]).HTTP;
+                const HTTP = tmp35(tmp26[10]).HTTP;
                 const request = { url: constants.GRAVITY_ITEMS_HYDRATE, body: null, rejectWithError: false };
                 const obj5 = { message_items: null, activity_items: null };
                 const obj6 = { channel_id, message_id };
@@ -678,15 +1035,15 @@ export default {
                 const obj7 = { value: HTTP.post(request), done: false };
                 return obj7;
               }
-              obj11 = channel_id(tmp26[9]);
+              obj11 = channel_id(tmp26[11]);
               tmp35 = channel_id;
             }
           } else {
             if (1 === tmp7) {
               c3 = 0;
               closure_128_1 = tmp26;
-              message_id(tmp26[8]).captureException(closure_128_1);
-              const obj4 = message_id(tmp26[8]);
+              message_id(tmp26[7]).captureException(closure_128_1);
+              const obj4 = message_id(tmp26[7]);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -699,9 +1056,9 @@ export default {
               closure_128_0 = value;
               if (0 !== closure_128_0.body.message_items.length) {
                 const obj9 = { type: "LOAD_ICYMI_FROM_NOTIFICATION", messageItem: closure_128_0.body.message_items[0] };
-                message_id(tmp26[5]).dispatch(obj9);
+                message_id(tmp26[6]).dispatch(obj9);
                 c3 = 0;
-                const obj = message_id(tmp26[5]);
+                const obj = message_id(tmp26[6]);
               }
             }
             c3 = 0;
@@ -770,12 +1127,12 @@ export default {
                 if (0 === messageItems.length) {
                   if (0 === activityItems.length) {
                     const obj8 = { type: "LOAD_ICYMI_HYDRATED", requestMessageItems: [], requestActivityItems: [], messageItems: [], activityItems: [], startingIndex, endingIndex };
-                    endingIndex(tmp33[5]).dispatch(obj8);
-                    const obj6 = endingIndex(tmp33[5]);
+                    endingIndex(tmp33[6]).dispatch(obj8);
+                    const obj6 = endingIndex(tmp33[6]);
                   }
                 }
                 c3 = 1;
-                const HTTP = startingIndex(tmp33[7]).HTTP;
+                const HTTP = startingIndex(tmp33[10]).HTTP;
                 const request = { url: constants.GRAVITY_ITEMS_HYDRATE, body: null, rejectWithError: false };
                 const obj9 = { message_items: messageItems, activity_items: activityItems };
                 request.body = obj9;
@@ -784,28 +1141,28 @@ export default {
                 const obj10 = { value: HTTP.post(request), done: false };
                 return obj10;
               }
-              obj15 = startingIndex(tmp33[9]);
+              obj15 = startingIndex(tmp33[11]);
             }
           } else {
             if (1 === tmp7) {
               c3 = 0;
               closure_128_4 = tmp33;
-              endingIndex(tmp33[8]).captureException(closure_128_4);
-              const obj2 = endingIndex(tmp33[8]);
-              closure_128_3 = startingIndex(tmp33[10]).generateHydrationId(closure_129_0, closure_129_1);
-              const obj3 = startingIndex(tmp33[10]);
+              endingIndex(tmp33[7]).captureException(closure_128_4);
+              const obj2 = endingIndex(tmp33[7]);
+              closure_128_3 = startingIndex(tmp33[12]).generateHydrationId(closure_129_0, closure_129_1);
+              const obj3 = startingIndex(tmp33[12]);
               const obj11 = { type: "LOAD_ICYMI_HYDRATED_FAILED", hydrationId: closure_128_3 };
-              endingIndex(tmp33[5]).dispatch(obj11);
-              const obj4 = endingIndex(tmp33[5]);
+              endingIndex(tmp33[6]).dispatch(obj11);
+              const obj4 = endingIndex(tmp33[6]);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 !== 2) {
               closure_128_2 = value;
               const obj12 = { type: "LOAD_ICYMI_HYDRATED", requestMessageItems: closure_128_0, requestActivityItems: closure_128_1, messageItems: closure_128_2.body.message_items, activityItems: closure_128_2.body.activity_items, startingIndex: closure_129_0, endingIndex: closure_129_1 };
-              endingIndex(tmp33[5]).dispatch(obj12);
+              endingIndex(tmp33[6]).dispatch(obj12);
               c3 = 0;
-              const obj13 = endingIndex(tmp33[5]);
+              const obj13 = endingIndex(tmp33[6]);
             }
             c3 = 0;
             c5 = 3;
@@ -868,17 +1225,17 @@ export default {
             if (1 === tmp7) {
               c3 = 0;
               closure_128_1 = closure_2;
-              closure_129_1(closure_129_2[8]).captureException(closure_128_1);
-              const obj4 = closure_129_1(closure_129_2[8]);
+              closure_129_1(closure_129_2[7]).captureException(closure_128_1);
+              const obj4 = closure_129_1(closure_129_2[7]);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 !== 2) {
               closure_128_0 = value;
               const obj7 = { type: "LOAD_ICYMI_CUSTOM_SCORES", scores: closure_128_0.body };
-              closure_129_1(closure_129_2[5]).dispatch(obj7);
+              closure_129_1(closure_129_2[6]).dispatch(obj7);
               c3 = 0;
-              const obj = closure_129_1(closure_129_2[5]);
+              const obj = closure_129_1(closure_129_2[6]);
             }
             c3 = 0;
             c5 = 3;
@@ -942,17 +1299,17 @@ export default {
             if (1 === tmp7) {
               c3 = 0;
               closure_128_1 = closure_2;
-              closure_129_1(closure_129_2[8]).captureException(closure_128_1);
-              const obj4 = closure_129_1(closure_129_2[8]);
+              closure_129_1(closure_129_2[7]).captureException(closure_128_1);
+              const obj4 = closure_129_1(closure_129_2[7]);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
             } else if (arg0 !== 2) {
               closure_128_0 = value;
               const obj7 = { type: "LOAD_ICYMI_RECOMMENDED_GUILDS", guilds: closure_128_0.body.guilds };
-              closure_129_1(closure_129_2[5]).dispatch(obj7);
+              closure_129_1(closure_129_2[6]).dispatch(obj7);
               c3 = 0;
-              const obj = closure_129_1(closure_129_2[5]);
+              const obj = closure_129_1(closure_129_2[6]);
             }
             c3 = 0;
             c5 = 3;
@@ -1024,8 +1381,8 @@ export default {
             if (1 === tmp8) {
               c3 = 0;
               closure_128_2 = closure_2;
-              closure_129_1(closure_129_2[8]).captureException(closure_128_2);
-              const obj4 = closure_129_1(closure_129_2[8]);
+              closure_129_1(closure_129_2[7]).captureException(closure_128_2);
+              const obj4 = closure_129_1(closure_129_2[7]);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -1034,9 +1391,9 @@ export default {
               const obj7 = { type: "LOAD_ICYMI_CURRENT_STATUS_MEDIA", attachments: closure_128_1.body.attachments, createdAtMs: null };
               const _Number = Number;
               obj7.createdAtMs = Number(closure_128_0.createdAtMs);
-              closure_129_1(closure_129_2[5]).dispatch(obj7);
+              closure_129_1(closure_129_2[6]).dispatch(obj7);
               c3 = 0;
-              const obj = closure_129_1(closure_129_2[5]);
+              const obj = closure_129_1(closure_129_2[6]);
             }
             c3 = 0;
             c5 = 3;

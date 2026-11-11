@@ -1,14 +1,14 @@
-// === Module 5013: GuildStore ===
+// === Module 5114: GuildStore ===
 
-// Module 5013 (GuildStore)
+// Module 5114 (GuildStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import FavoritesConstants from "FavoritesConstants" /* 5004 */;
-import GuildRecordUtilsAll from "GuildRecordUtils" /* 5005 */;
-import SetUtils from "SetUtils" /* 5008 */;
-import LibdiscoreStore2 from "LibdiscoreStore" /* 5014 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 5017 */;
-import PlainRecord from "PlainRecord" /* 5006 */;
-import GuildRecord from "GuildRecord" /* 5009 */;
+import FavoritesConstants from "FavoritesConstants" /* 5105 */;
+import GuildRecordUtilsAll from "GuildRecordUtils" /* 5106 */;
+import SetUtils from "SetUtils" /* 5109 */;
+import LibdiscoreStore2 from "LibdiscoreStore" /* 5115 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 5118 */;
+import PlainRecord from "PlainRecord" /* 5107 */;
+import GuildRecord from "GuildRecord" /* 5110 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 

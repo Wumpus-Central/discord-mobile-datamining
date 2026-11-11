@@ -1,7 +1,7 @@
-// === Module 8673: transformNativeMarkupNode ===
+// === Module 9304: transformNativeMarkupNode ===
 
-// Module 8673 (transformNativeMarkupNode)
-import MarkupTypes from "MarkupTypes" /* 6166 */;
+// Module 9304 (transformNativeMarkupNode)
+import MarkupTypes from "MarkupTypes" /* 6279 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -73,7 +73,7 @@ function transformNode(type, channelId) {
         obj18.inQuote = true;
         let arr2 = transformNativeBlocks(type.value, obj18, "quote");
         if (arr2.length <= 0) {
-          const obj19 = { type: tmp52(6166).AST_KEY.TEXT, content: " " };
+          const obj19 = { type: tmp52(6279).AST_KEY.TEXT, content: " " };
           const items1 = [obj19];
           arr2 = items1;
         }

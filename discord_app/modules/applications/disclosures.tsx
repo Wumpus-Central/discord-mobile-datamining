@@ -1,9 +1,9 @@
-// === Module 9841: disclosures ===
+// === Module 7341: disclosures ===
 
-// Module 9841 (disclosures)
+// Module 7341 (disclosures)
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import applications from "applications" /* 9842 */;
+import applications from "applications" /* 7342 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -77,7 +77,7 @@ const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/disclosures.tsx");
 
-export const ApplicationDisclosure = fn(9842).ApplicationDisclosureType;
+export const ApplicationDisclosure = fn(7342).ApplicationDisclosureType;
 export function getDisclosures() {
   const self = this;
   const apply = closure_4.apply;

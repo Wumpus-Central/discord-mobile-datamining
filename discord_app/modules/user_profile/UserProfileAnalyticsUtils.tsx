@@ -1,21 +1,21 @@
-// === Module 8839: UserProfileAnalyticsUtils ===
+// === Module 8480: UserProfileAnalyticsUtils ===
 
-// Module 8839 (UserProfileAnalyticsUtils)
+// Module 8480 (UserProfileAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5891 */;
-import ActivityTypes from "ActivityTypes" /* 5893 */;
-import useDisplayProfile from "useDisplayProfile" /* 8834 */;
-import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8846 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8840 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7342 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7881 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6771 */;
-import GuildMemberStore from "GuildMemberStore" /* 5054 */;
-import PresenceStore from "PresenceStore" /* 5892 */;
-import RelationshipStore from "RelationshipStore" /* 5084 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
+import ActivityTypes from "ActivityTypes" /* 6006 */;
+import useDisplayProfile from "useDisplayProfile" /* 8416 */;
+import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8489 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8481 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7158 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8487 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
+import GuildMemberStore from "GuildMemberStore" /* 5155 */;
+import PresenceStore from "PresenceStore" /* 6005 */;
+import RelationshipStore from "RelationshipStore" /* 5185 */;
 import UserStore from "UserStore" /* 1385 */;
-import UserProfileStore from "UserProfileStore" /* 7852 */;
+import UserProfileStore from "UserProfileStore" /* 7288 */;
 
 require = fn;
 function getProfileProperties(guildMemberProfile) {
@@ -225,7 +225,7 @@ function trackUserProfileAction(dependencyMap) {
     const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
     obj5 = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-    let length;
+    length = undefined;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
@@ -260,8 +260,8 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(AnalyticEvents.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(7342).FetchState;
-const constants = fn(8831).TrackUserProfileProperties;
+const FetchState = fn(7158).FetchState;
+const constants = fn(8413).TrackUserProfileProperties;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const StatusTypes = fn(1083).StatusTypes;
 const size = fn(2);
@@ -306,7 +306,7 @@ export function getTrackUserRelationshipProperties(userId) {
     const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
     const obj = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-    let length;
+    length = undefined;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
@@ -362,7 +362,7 @@ export function maybeTrackUserProfileUiViewed(userId) {
         const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
         obj4 = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: null, communication_probability: null, communication_rank: null };
         const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-        let length;
+        length = undefined;
         if (mutualGuilds != null) {
           length = mutualGuilds.length;
         }
@@ -407,7 +407,7 @@ export function trackUserProfileActivityJoined(userId) {
     const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
     obj5 = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-    let length;
+    length = undefined;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
@@ -464,7 +464,7 @@ export function trackUserProfileActivityAction(userId) {
     const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
     obj5 = { related_user_id: userId, relationship_type: RelationshipStore.getRelationshipType(userId), related_since: RelationshipStore.getSince(userId), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId), num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId);
-    let length;
+    length = undefined;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }
@@ -573,7 +573,7 @@ export function trackUserProfileBadgeAction(userId) {
     const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId2);
     obj5 = { related_user_id: userId2, relationship_type: RelationshipStore.getRelationshipType(userId2), related_since: RelationshipStore.getSince(userId2), num_mutual_friends: UserProfileStore.getMutualFriendsCount(userId2), num_mutual_guilds: null, communication_probability: null, communication_rank: null };
     const mutualGuilds = UserProfileStore.getMutualGuilds(userId2);
-    let length;
+    length = undefined;
     if (mutualGuilds != null) {
       length = mutualGuilds.length;
     }

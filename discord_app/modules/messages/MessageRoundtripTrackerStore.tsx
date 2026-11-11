@@ -1,15 +1,15 @@
-// === Module 7717: MessageRoundtripTrackerStore ===
+// === Module 8595: MessageRoundtripTrackerStore ===
 
-// Module 7717 (MessageRoundtripTrackerStore)
+// Module 8595 (MessageRoundtripTrackerStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import NetStats from "NetStats" /* 7718 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7899 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5360 */;
-import NetworkStore from "NetworkStore" /* 6034 */;
+import NetStats from "NetStats" /* 8596 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 8715 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5473 */;
+import NetworkStore from "NetworkStore" /* 6147 */;
 
 require = fn;
 function trackRoundtrip(channelId) {
@@ -97,10 +97,10 @@ prototype["recordMessageSendAttempt"] = function recordMessageSendAttempt(channe
     }
   }, 30000);
 };
-prototype["recordMessageSendApiResponse"] = function recordMessageSendApiResponse(stickerById) {
+prototype["recordMessageSendApiResponse"] = function recordMessageSendApiResponse(arg0) {
   const self = this;
   const pendingMessages = this.pendingMessages;
-  value = pendingMessages.get(stickerById);
+  value = pendingMessages.get(arg0);
   if (null != value) {
     const obj = {};
     const merged = Object.assign(value);
@@ -109,10 +109,10 @@ prototype["recordMessageSendApiResponse"] = function recordMessageSendApiRespons
     if (tmp6) {
       trackRoundtrip(obj);
       const pendingMessages3 = self.pendingMessages;
-      pendingMessages3.delete(stickerById);
+      pendingMessages3.delete(arg0);
     } else {
       const pendingMessages2 = self.pendingMessages;
-      const result = pendingMessages2.set(stickerById, obj);
+      const result = pendingMessages2.set(arg0, obj);
     }
     tmp6 = null != obj.apiResponseTimestamp && null != obj.gatewaySeenTimestamp;
   }

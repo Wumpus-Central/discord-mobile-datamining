@@ -1,23 +1,23 @@
-// === Module 11924: PictureInPictureVideo ===
+// === Module 12692: PictureInPictureVideo ===
 
-// Module 11924 (PictureInPictureVideo)
+// Module 12692 (PictureInPictureVideo)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5890 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11870 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 11880 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 11883 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 11884 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
+import transitionToActivityDefault from "transitionToActivity" /* 12622 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 12632 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 12635 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 12636 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4990 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6901 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
-import SpeakingStore from "SpeakingStore" /* 6814 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11877 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
+import SpeakingStore from "SpeakingStore" /* 6878 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 12629 */;
 
 require = fn;
 function areParticipantsEqual(arg0, arg1) {
@@ -27,12 +27,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(11139);
+const ChannelCallStore = fn(10940);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(5807).ParticipantTypes;
+const ParticipantTypes = fn(5920).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { elevationShadow: null, background: null, backgroundPipFab: null, pip: null, pipFab: null, avatarContainer: null, activityPipContainer: null, thermalAlertIconContainer: null, thermalAlertIcon: null };
 const native = fn(1187);
 obj.elevationShadow = native.generateBoxShadowStyle(fn(1187).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
@@ -344,15 +344,15 @@ export default noop.memo(function PipctureInPictureVideoContainer(arg0) {
   if (isViewingActivity) {
     const obj7 = { pointerEvents: "none", style: tmp.activityPipContainer, children: null };
     const obj8 = { channel, pipParticipant, selfParticipant };
-    obj7.children = value2(closure_22, obj8);
-    let tmp8Result = value2(hasOwnProperty, obj7);
+    obj7.children = closure_1_16(closure_22, obj8);
+    let tmp8Result = closure_1_16(hasOwnProperty, obj7);
   } else {
     const obj9 = { channel, pipParticipant, selfParticipant };
-    tmp8Result = value2(closure_20, obj9);
+    tmp8Result = closure_1_16(closure_20, obj9);
   }
   tmp2Result = PlatformUtils;
   obj6.children = tmp8Result;
-  obj5.children = value2(React4, { activeOpacity: 0.7, children: value2(hasOwnProperty, obj6) });
-  return value2(hasOwnProperty, obj5);
+  obj5.children = closure_1_16(React4, { activeOpacity: 0.7, children: closure_1_16(hasOwnProperty, obj6) });
+  return closure_1_16(hasOwnProperty, obj5);
 });
 export { areParticipantsEqual };

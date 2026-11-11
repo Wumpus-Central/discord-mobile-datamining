@@ -1,8 +1,8 @@
-// === Module 10052: useDiscountedPremiumProductInfo ===
+// === Module 9645: useDiscountedPremiumProductInfo ===
 
-// Module 10052 (useDiscountedPremiumProductInfo)
-import PriceUtils from "PriceUtils" /* 7480 */;
-import ProductIds from "ProductIds" /* 7672 */;
+// Module 9645 (useDiscountedPremiumProductInfo)
+import PriceUtils from "PriceUtils" /* 7190 */;
+import ProductIds from "ProductIds" /* 8514 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

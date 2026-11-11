@@ -1,6 +1,6 @@
-// === Module 7933: QuestExpirationUtils ===
+// === Module 8749: QuestExpirationUtils ===
 
-// Module 7933 (QuestExpirationUtils)
+// Module 8749 (QuestExpirationUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/utils/QuestExpirationUtils.tsx");

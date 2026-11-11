@@ -1,35 +1,35 @@
-// === Module 16613: SystemTelecomManager ===
+// === Module 16774: SystemTelecomManager ===
 
-// Module 16613 (SystemTelecomManager)
+// Module 16774 (SystemTelecomManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import v1 from "v1" /* 1266 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import useChannelName from "useChannelName" /* 5778 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5891 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6049 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6763 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7415 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7552 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7554 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10337 */;
-import SystemTelecomPlatform from "SystemTelecomPlatform" /* 16615 */;
-import SystemTelecomUtils from "SystemTelecomUtils" /* 16616 */;
+import useChannelName from "useChannelName" /* 5891 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6162 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6872 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 8071 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 8792 */;
+import SystemTelecomPlatform from "SystemTelecomPlatform" /* 16776 */;
+import SystemTelecomUtils from "SystemTelecomUtils" /* 16777 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6625 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
-import RelationshipStore from "RelationshipStore" /* 5084 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
+import RelationshipStore from "RelationshipStore" /* 5185 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5805 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5898 */;
-import NativeSystemTelecomModule from "NativeSystemTelecomModule" /* 16614 */;
+import VoiceStateStore from "VoiceStateStore" /* 5918 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6011 */;
+import NativeSystemTelecomModule from "NativeSystemTelecomModule" /* 16775 */;
 import LifecycleManager from "LifecycleManager" /* 2120 */;
 
 require = fn;
@@ -57,10 +57,10 @@ function toHandle(getGuildId) {
   return combined;
 }
 const AppState = fn(17).AppState;
-const isMultiUserDM = fn(4995).isMultiUserDM;
+const isMultiUserDM = fn(5096).isMultiUserDM;
 let Constants = fn(1072);
 ({ AnalyticEvents: closure_18, ChannelTypes: closure_19, AppStates: closure_20, ME: closure_21, RTCConnectionStates: closure_22 } = Constants);
-Constants = fn(5899);
+Constants = fn(6012);
 ({ Features: closure_23, MediaEngineContextTypes: closure_24 } = Constants);
 let obj = new LoggerDefault("SystemTelecomManager");
 obj.enableNativeLogger(true);
@@ -238,7 +238,7 @@ class SystemTelecomManager {
                     if (null != recipientId) {
                       dependencyMap = 2;
                       c4 = 1;
-                      const obj7 = { value: v0(7552).ensurePrivateChannel(recipientId), done: false };
+                      const obj7 = { value: v0(8069).ensurePrivateChannel(recipientId), done: false };
                       return obj7;
                     }
                   }
@@ -247,7 +247,7 @@ class SystemTelecomManager {
                     hasChannelResult = ChannelStore.hasChannel(channelId);
                   }
                   if (hasChannelResult) {
-                    const tmp55 = v0(7554);
+                    const tmp55 = v0(8071);
                     const call2 = tmp55.call;
                     if (typeof call2 === "unknown") {
                       tmp55(tmp57, true);
@@ -258,9 +258,9 @@ class SystemTelecomManager {
                     tmp56 = channelId;
                   }
                 } else {
-                  v0(6049).setVideoEnabled(closure_129_2);
+                  v0(6162).setVideoEnabled(closure_129_2);
                   closure_129_7();
-                  const obj2 = v0(6049);
+                  const obj2 = v0(6162);
                 }
                 c4 = 3;
               }
@@ -268,7 +268,7 @@ class SystemTelecomManager {
               c4 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              const tmp9 = v0(7554);
+              const tmp9 = v0(8071);
               const call = tmp9.call;
               if (typeof call === "unknown") {
                 tmp9(tmp11, true);
@@ -309,7 +309,7 @@ class SystemTelecomManager {
       }
     };
     obj.handleSessionStart = function handleSessionStart() {
-      obj = obj(16615);
+      obj = obj(16776);
       obj.flushCallPushToken();
     };
     obj.handleConnectionOpen = function handleConnectionOpen(user) {
@@ -398,7 +398,7 @@ class SystemTelecomManager {
       const item = voiceStates.forEach((channelId) => {
         channelId = channelId.channelId;
         ({ guildId, userId, sessionId, selfVideo } = channelId);
-        obj = obj(16616);
+        obj = obj(16777);
         if (obj.isSystemTelecomEnabledForChannel(guildId, channelId)) {
           if (null != channelId) {
             if (userId === currentUserId.currentUserId) {
@@ -563,21 +563,21 @@ prototype["startCall"] = function startCall(arg0) {
                 const result = self.updateActiveCallStatus();
                 const obj9 = tmp5(1266);
                 const _HermesInternal = HermesInternal;
-                tmp29(10337).setRequestedBy("call:" + obj6.uuid);
-                const obj10 = tmp29(10337);
+                tmp29(8792).setRequestedBy("call:" + obj6.uuid);
+                const obj10 = tmp29(8792);
                 if (obj11.isSystemTelecomEnabled()) {
-                  const obj2 = tmp3(16614);
+                  const obj2 = tmp3(16775);
                   ({ uuid, handle } = obj6);
-                  const tmp42Result = tmp5(5778);
-                  const startOutgoingCallResult = obj2.startOutgoingCall(uuid, handle, tmp5(5778).computeChannelName(obj6.channel, UserStore, RelationshipStore), obj6.video);
-                  tmp3(16614).setCallMuted(obj6.uuid, obj6.muted);
+                  const tmp42Result = tmp5(5891);
+                  const startOutgoingCallResult = obj2.startOutgoingCall(uuid, handle, tmp5(5891).computeChannelName(obj6.channel, UserStore, RelationshipStore), obj6.video);
+                  tmp3(16775).setCallMuted(obj6.uuid, obj6.muted);
                   dependencyMap = 1;
                   c4 = 2;
                   c5 = 1;
                   const obj7 = { value: startOutgoingCallResult, done: false };
                   return obj7;
                 }
-                obj11 = tmp5(16616);
+                obj11 = tmp5(16777);
               }
             }
           }

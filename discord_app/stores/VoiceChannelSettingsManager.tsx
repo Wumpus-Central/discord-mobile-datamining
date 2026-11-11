@@ -1,13 +1,13 @@
-// === Module 20071: VoiceChannelSettingsManager ===
+// === Module 20266: VoiceChannelSettingsManager ===
 
-// Module 20071 (VoiceChannelSettingsManager)
+// Module 20266 (VoiceChannelSettingsManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import BitRateStore from "BitRateStore" /* 16224 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
-import VideoQualityModeStore from "VideoQualityModeStore" /* 16225 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
+import BitRateStore from "BitRateStore" /* 16386 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
+import VideoQualityModeStore from "VideoQualityModeStore" /* 16387 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 function updateVoiceSettings() {
   const voiceChannelId = SelectedChannelStore.getVoiceChannelId();

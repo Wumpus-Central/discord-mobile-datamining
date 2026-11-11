@@ -1,9 +1,9 @@
-// === Module 8747: VoiceLockIcon ===
+// === Module 8029: VoiceLockIcon ===
 
-// Module 8747 (VoiceLockIcon)
+// Module 8029 (VoiceLockIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod8692 from "module_8692" /* 8692 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod7977 from "module_7977" /* 7977 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function VoiceLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8692, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7977, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,13 +1,13 @@
-// === Module 7596: GuildDiscoveryUtils ===
+// === Module 7167: GuildDiscoveryUtils ===
 
-// Module 7596 (GuildDiscoveryUtils)
+// Module 7167 (GuildDiscoveryUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef1487 from "module_1487" /* 1487 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 5075 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5360 */;
-import GuildStore from "GuildStore" /* 5013 */;
+import LurkingStore from "LurkingStore" /* 5176 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5473 */;
+import GuildStore from "GuildStore" /* 5114 */;
 
 require = fn;
 let closure_11 = async function _startLurking(arg0) {
@@ -382,7 +382,7 @@ export function trackGuildDiscoveryGetFeaturedGuildsFailed(category_id) {
 export function trackSearchResultsViewed(guildResults) {
   ({ loadId, searchId, query, analyticsContext, categoryId, isTagSearch } = guildResults.guildResults);
   const obj2 = { search_type: isTagSearch ? constants2.GUILD_DISCOVERY_TAG : constants2.GUILD_DISCOVERY, load_id: loadId, search_id: searchId, total_results: null, guild_ids: null, query: null, location: null, category_id: null };
-  let length = null;
+  length = null;
   if (undefined !== guildResults.guildResults) {
     length = guildResults.length;
   }

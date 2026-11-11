@@ -1,20 +1,20 @@
-// === Module 19929: FileUploadActionComponent ===
+// === Module 20121: FileUploadActionComponent ===
 
-// Module 19929 (FileUploadActionComponent)
+// Module 20121 (FileUploadActionComponent)
 import util from "util" /* 1113 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6200 */;
-import FileSizeUtils from "FileSizeUtils" /* 6586 */;
-import TableRow from "TableRow" /* 7041 */;
-import XSmallIcon from "XSmallIcon" /* 7123 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7404 */;
-import IconButton from "IconButton" /* 8102 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9874 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10658 */;
-import AttachmentPreview from "AttachmentPreview" /* 11252 */;
-import FileUpIcon from "FileUpIcon" /* 12406 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6313 */;
+import FileSizeUtils from "FileSizeUtils" /* 6699 */;
+import TableRow from "TableRow" /* 7379 */;
+import XSmallIcon from "XSmallIcon" /* 7483 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7864 */;
+import IconButton from "IconButton" /* 7922 */;
+import AttachmentPreview from "AttachmentPreview" /* 11063 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 11092 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11574 */;
+import FileUpIcon from "FileUpIcon" /* 13213 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
 
 const require = globalThis.__r;
 const AttachmentPreviewDefault = AttachmentPreview;
@@ -71,11 +71,11 @@ function File(upload) {
   return React6(TableRow.TableRow, obj);
 }
 const View = fn(17).View;
-const DraftType = fn(7780).DraftType;
+const DraftType = fn(8658).DraftType;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_11 = createStyles.createStyles({ defaultAttachmentIconWrapper: { width: 32, alignItems: "center" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/actions/FileUploadActionComponent.tsx");
@@ -259,7 +259,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(10659).hideMediaKeyboardActionSheet();
+        return InteractionModal(11575).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveUploadLimit,
       onSelectFiles(arg0) {
@@ -291,7 +291,7 @@ export default function FileUploadActionComponent(maxValues) {
             item = item.item;
             const result = InteractionModal(customId[29]).hideMediaKeyboardActionSheet();
             if (item.isIncluded) {
-              const found = currentUploads.find((item) => InteractionModal(8292).doesImageMatchUpload(item.node.image, item));
+              const found = currentUploads.find((item) => InteractionModal(8811).doesImageMatchUpload(item.node.image, item));
               if (null != found) {
                 callback1(found.id);
               }
@@ -311,8 +311,8 @@ export default function FileUploadActionComponent(maxValues) {
             obj.handleViewAllDialog(obj2);
           },
         onManageLimited() {
-            obj = InteractionModal(10658);
-            const result = obj.handleLimitedPickerDialog({ onDismissKeyboard: InteractionModal(10659).hideMediaKeyboardActionSheet, onRestoreKeyboard });
+            obj = InteractionModal(11574);
+            const result = obj.handleLimitedPickerDialog({ onDismissKeyboard: InteractionModal(11575).hideMediaKeyboardActionSheet, onRestoreKeyboard });
           },
         onClose: tmp4(customId[29]).hideMediaKeyboardActionSheet,
         onBack: tmp4(customId[29]).hideMediaKeyboardActionSheet

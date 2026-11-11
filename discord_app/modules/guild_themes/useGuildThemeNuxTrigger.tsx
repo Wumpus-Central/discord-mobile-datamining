@@ -1,14 +1,14 @@
-// === Module 18586: guild_themes/useGuildThemeNuxTrigger ===
+// === Module 18758: guild_themes/useGuildThemeNuxTrigger ===
 
-// Module 18586 (guild_themes/useGuildThemeNuxTrigger)
-import dismissible_content from "dismissible_content" /* 4975 */;
-import GuildThemeResolver from "GuildThemeResolver" /* 5343 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7644 */;
+// Module 18758 (guild_themes/useGuildThemeNuxTrigger)
+import dismissible_content from "dismissible_content" /* 5076 */;
+import GuildThemeResolver from "GuildThemeResolver" /* 5456 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9494 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let constants = fn(4988).DismissibleContentGroupName;
+let constants = fn(5089).DismissibleContentGroupName;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_themes/useGuildThemeNuxTrigger.tsx");
 

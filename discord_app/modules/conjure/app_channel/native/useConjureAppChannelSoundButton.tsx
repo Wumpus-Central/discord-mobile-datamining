@@ -1,19 +1,19 @@
-// === Module 14814: useConjureAppChannelSoundButton ===
+// === Module 15507: useConjureAppChannelSoundButton ===
 
-// Module 14814 (useConjureAppChannelSoundButton)
+// Module 15507 (useConjureAppChannelSoundButton)
 import util from "util" /* 1113 */;
-import _modDef4028 from "module_4028" /* 4028 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5801 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5839 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 11070 */;
-import VoiceXIcon from "VoiceXIcon" /* 12125 */;
+import _modDef4079 from "module_4079" /* 4079 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5914 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 12653 */;
+import VoiceXIcon from "VoiceXIcon" /* 12928 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6904 */;
+import FramesStore from "FramesStore" /* 6956 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isLaunched = fn(6905).isLaunched;
+const isLaunched = fn(6957).isLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/app_channel/native/useConjureAppChannelSoundButton.tsx");
 
@@ -62,7 +62,7 @@ export default function useConjureAppChannelSoundButton(application_id, arg1) {
           if (stateFromStores) {
             const obj = { text: null, icon: null };
             const intl = util.intl;
-            obj.text = intl.string(_modDef4028.W8Q9fy);
+            obj.text = intl.string(_modDef4079.W8Q9fy);
             obj.icon = VoiceXIcon.VoiceXIcon;
             ToastActionCreatorsDefault.open("CONJURE_APP_CHANNEL_DEVICE_SILENCED", obj);
             const tmpResult = ToastActionCreatorsDefault;

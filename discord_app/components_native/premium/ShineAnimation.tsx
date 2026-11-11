@@ -1,11 +1,11 @@
-// === Module 10731: ShineAnimation ===
+// === Module 9644: ShineAnimation ===
 
-// Module 10731 (ShineAnimation)
+// Module 9644 (ShineAnimation)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5372 */;
-import FastImageDefault from "FastImage" /* 5844 */;
+import timing_timing from "timing/timing" /* 5485 */;
+import FastImageDefault from "FastImage" /* 5957 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = Object.freeze({ FLASH_TIME_PERCENT: 0.72, FLASH_DURATION_PERCENT: 0.08 });
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { container: { overflow: "hidden" }, shineContainer: null, shine: null, shineInner: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.shineContainer = {};

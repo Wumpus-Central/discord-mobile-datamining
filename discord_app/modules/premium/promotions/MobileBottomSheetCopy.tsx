@@ -1,19 +1,19 @@
-// === Module 19457: MobileBottomSheetCopy ===
+// === Module 18237: MobileBottomSheetCopy ===
 
-// Module 19457 (MobileBottomSheetCopy)
+// Module 18237 (MobileBottomSheetCopy)
 import util from "util" /* 1113 */;
-import PromotionStringUtils from "PromotionStringUtils" /* 15623 */;
-import MarketingStringFormat from "MarketingStringFormat" /* 17231 */;
+import MarketingStringFormat from "MarketingStringFormat" /* 9610 */;
+import PromotionStringUtils from "PromotionStringUtils" /* 10007 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/premium/promotions/MobileBottomSheetCopy.tsx");
 
-export function getMobileBottomSheetCopy(promotionMarketingComponent) {
-  if ("mobileBottomSheet" !== promotionMarketingComponent.properties.properties.oneofKind) {
+export function getMobileBottomSheetCopy(component) {
+  if ("mobileBottomSheet" !== component.properties.properties.oneofKind) {
     return null;
   } else {
-    const mobileBottomSheet = promotionMarketingComponent.properties.properties.mobileBottomSheet;
-    const formatVariableValues = promotionMarketingComponent.getFormatVariableValues(util.intl.currentLocale);
+    const mobileBottomSheet = component.properties.properties.mobileBottomSheet;
+    const formatVariableValues = component.getFormatVariableValues(util.intl.currentLocale);
     const result = MarketingStringFormat.formatMarketingPlainString(mobileBottomSheet.header, formatVariableValues);
     if (result.ok) {
       const result1 = MarketingStringFormat.formatMarketingPlainString(mobileBottomSheet.body, formatVariableValues);

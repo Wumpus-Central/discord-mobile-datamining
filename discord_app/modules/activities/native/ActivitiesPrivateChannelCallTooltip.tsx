@@ -1,14 +1,14 @@
-// === Module 14655: ActivitiesPrivateChannelCallTooltip ===
+// === Module 15035: ActivitiesPrivateChannelCallTooltip ===
 
-// Module 14655 (ActivitiesPrivateChannelCallTooltip)
+// Module 15035 (ActivitiesPrivateChannelCallTooltip)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5372 */;
-import components_Button_Button from "components/Button/Button" /* 5760 */;
+import timing_timing from "timing/timing" /* 5485 */;
+import components_Button_Button from "components/Button/Button" /* 5873 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 
 const _modDef1652 = _mod1652;
 
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const helpdeskUrl = fn(2142).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
 const jsx = fn(21).jsx;
 let closure_7 = { duration: 500 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { arrow: null, tooltip: { padding: 16 }, tooltipContainer: { position: "absolute", width: 280, zIndex: 2, right: -48, top: -8 }, tooltipText: { textAlign: "center", fontSize: 14 }, closeButtonWrapper: { marginTop: 14 } };
 let obj3 = { marginLeft: 200, top: 9, position: "relative", borderTopWidth: 0, borderRightWidth: 0, borderBottomWidth: 16, borderLeftWidth: 16, transform: null };
 let items = [{ rotateZ: "225deg" }];

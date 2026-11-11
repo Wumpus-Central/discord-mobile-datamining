@@ -1,27 +1,27 @@
-// === Module 16912: GuildProfileEditForm ===
+// === Module 17075: GuildProfileEditForm ===
 
-// Module 16912 (GuildProfileEditForm)
+// Module 17075 (GuildProfileEditForm)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7390 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7415 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8812 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8814 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9881 */;
-import openPremiumModalDefault from "openPremiumModal" /* 10033 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10034 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16801 */;
-import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 16809 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16833 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 16893 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8475 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 9332 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9513 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10891 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 11109 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16962 */;
+import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 16970 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16996 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 17056 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5054 */;
-import UserProfileStore from "UserProfileStore" /* 7852 */;
+import GuildMemberStore from "GuildMemberStore" /* 5155 */;
+import UserProfileStore from "UserProfileStore" /* 7288 */;
 
 require = fn;
 function EditGuildProfileBanner(user) {
@@ -41,7 +41,7 @@ function EditGuildProfileBanner(user) {
     if (c4) {
       let obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null, onGifBannerSelect: null };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(16789, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(16950, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -77,7 +77,7 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1113).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_16(UserProfileEditBannerButtonDefault, obj3);
-  return closure_16(user(7390).AnalyticsLocationProvider, obj2);
+  return closure_16(user(7852).AnalyticsLocationProvider, obj2);
 }
 function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
   onButtonPress = onButtonPress.onButtonPress;
@@ -90,7 +90,7 @@ function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
     obj2.buttonText = intl4.string(util.t.pj0XBN);
     obj2.onButtonPress = onButtonPress;
     obj2.onLayout = onButtonPress.onLayout;
-    let tmp6Result = value2(UserProfileFloatingUpsellDefault, obj2);
+    let tmp6Result = closure_1_16(UserProfileFloatingUpsellDefault, obj2);
     const tmp3Result = UserProfileFloatingUpsellDefault;
   } else {
     const obj3 = { style: null, ctaText: null, onPress: null, children: null };
@@ -104,8 +104,8 @@ function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
     const obj5 = { variant: "body-sm/normal", children: null };
     const intl2 = util.intl;
     obj5.children = intl2.string(util.t.YIZS5B);
-    obj3.children = value2(Text_Text.Text, obj5);
-    tmp6Result = value2(UserProfileUpsellCardDefault, obj3);
+    obj3.children = closure_1_16(Text_Text.Text, obj5);
+    tmp6Result = closure_1_16(UserProfileUpsellCardDefault, obj3);
     const tmp3Result2 = UserProfileUpsellCardDefault;
   }
   return tmp6Result;

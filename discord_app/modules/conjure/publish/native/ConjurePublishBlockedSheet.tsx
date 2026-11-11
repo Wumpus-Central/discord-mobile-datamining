@@ -1,8 +1,8 @@
-// === Module 11095: ConjurePublishBlockedSheet ===
+// === Module 13057: ConjurePublishBlockedSheet ===
 
-// Module 11095 (ConjurePublishBlockedSheet)
+// Module 13057 (ConjurePublishBlockedSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5376 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5489 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -13,12 +13,12 @@ function ConjurePublishBlockedSheet(onConfirm) {
   ({ reason, message } = onConfirm);
   const tmp = closure_7();
   const tmp2 = onConfirm;
-  const conjurePublishBlockedCopy = onConfirm(11096).getConjurePublishBlockedCopy(reason, message);
-  const obj2 = { header: closure_4(onConfirm(7385).BottomSheetTitleHeader, { title: conjurePublishBlockedCopy.title }), children: null };
+  const conjurePublishBlockedCopy = onConfirm(13058).getConjurePublishBlockedCopy(reason, message);
+  const obj2 = { header: closure_4(onConfirm(7847).BottomSheetTitleHeader, { title: conjurePublishBlockedCopy.title }), children: null };
   const obj4 = { style: tmp.content, children: null };
   items = [
-    closure_4(onConfirm(5753).Text, { variant: "body-md/normal", color: "text-muted", children: conjurePublishBlockedCopy.body }),
-    closure_4(onConfirm(5760).Button, {
+    closure_4(onConfirm(5866).Text, { variant: "body-md/normal", color: "text-muted", children: conjurePublishBlockedCopy.body }),
+    closure_4(onConfirm(5873).Button, {
       variant: "primary",
       text: conjurePublishBlockedCopy.action,
       onPress() {
@@ -36,18 +36,18 @@ function ConjurePublishBlockedSheet(onConfirm) {
       ActionSheetActionCreatorsDefault.hideActionSheet(ConjurePublishBlockedSheet);
     }
     const obj7 = { variant: "secondary", text: conjurePublishBlockedCopy.cancel, onPress: close };
-    tmp5Result = closure_4(tmp2(5760).Button, obj7);
+    tmp5Result = closure_4(tmp2(5873).Button, obj7);
   }
   items[2] = tmp5Result;
   obj4.children = items;
   obj2.children = closure_5(View, obj4);
-  return closure_4(onConfirm(7429).ActionSheet, obj2);
+  return closure_4(onConfirm(7885).ActionSheet, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 ConjurePublishBlockedSheet = "ConjurePublishBlockedSheet";
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,7 +1,7 @@
-// === Module 8616: maybeSortByProbability ===
+// === Module 9257: maybeSortByProbability ===
 
-// Module 8616 (maybeSortByProbability)
-import VoiceUserAffinityExperiment from "VoiceUserAffinityExperiment" /* 8617 */;
+// Module 9257 (maybeSortByProbability)
+import VoiceUserAffinityExperiment from "VoiceUserAffinityExperiment" /* 9258 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
@@ -24,7 +24,7 @@ export function maybeSortByProbability(reduced, userAffinitiesMap, location) {
       if (num == null) {
         num = 0;
       }
-      value2 = userAffinitiesMap.get(id.id);
+      const value2 = userAffinitiesMap.get(id.id);
       let num2;
       if (value2 != null) {
         num2 = value2.vcProbability;
@@ -46,7 +46,7 @@ export function maybeSortByProbability(reduced, userAffinitiesMap, location) {
       if (num == null) {
         num = 0;
       }
-      value2 = userAffinitiesMap.get(id.id);
+      const value2 = userAffinitiesMap.get(id.id);
       let num2;
       if (value2 != null) {
         num2 = value2.communicationProbability;

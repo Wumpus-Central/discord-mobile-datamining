@@ -1,9 +1,9 @@
-// === Module 15081: useSheetDismissPointerEvents ===
+// === Module 15571: useSheetDismissPointerEvents ===
 
-// Module 15081 (useSheetDismissPointerEvents)
+// Module 15571 (useSheetDismissPointerEvents)
 import _mod1652 from "module_1652" /* 1652 */;
-import BottomSheetModal from "BottomSheetModal" /* 5394 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5422 */;
+import BottomSheetModal from "BottomSheetModal" /* 5507 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = { code: "(function useSheetDismissPointerEventsTsx1(){let[contentGestureState,State,handleGestureState]=this.__closure;var _contentGestureState,_handleGestureState;const isDragging=((_contentGestureState=contentGestureState)===null||_contentGestureState===void 0?void 0:_contentGestureState.get())===State.ACTIVE||((_handleGestureState=handleGestureState)===null||_handleGestureState===void 0?void 0:_handleGestureState.get())===State.ACTIVE;return{pointerEvents:isDragging?'none':'box-none'};})" };
@@ -32,7 +32,7 @@ export default function useSheetDismissPointerEvents() {
     if (value === _undefined.ACTIVE) {
       let pointerEvents = "none";
     } else {
-      value2 = undefined;
+      let value2;
       if (_undefined2 != null) {
         value2 = _undefined2.get();
       }

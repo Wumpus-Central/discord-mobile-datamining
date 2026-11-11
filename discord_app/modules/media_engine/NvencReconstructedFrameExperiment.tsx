@@ -1,6 +1,6 @@
-// === Module 16300: NvencReconstructedFrameExperiment ===
+// === Module 16461: NvencReconstructedFrameExperiment ===
 
-// Module 16300 (NvencReconstructedFrameExperiment)
+// Module 16461 (NvencReconstructedFrameExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1450 */;
 
 const obj = { kind: "user", name: "2026-07-nvenc-reconstructed-frames", defaultConfig: { enabled: false }, variations: null };

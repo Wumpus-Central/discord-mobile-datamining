@@ -1,46 +1,46 @@
-// === Module 12679: AppDetailsOverflowMenu ===
+// === Module 13365: AppDetailsOverflowMenu ===
 
-// Module 12679 (AppDetailsOverflowMenu)
-import ToastUtils from "ToastUtils" /* 5838 */;
-import ClipboardUtils from "ClipboardUtils" /* 7421 */;
+// Module 13365 (AppDetailsOverflowMenu)
+import ToastUtils from "ToastUtils" /* 5951 */;
+import ClipboardUtils from "ClipboardUtils" /* 7877 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/AppDetailsOverflowMenu.tsx");
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/AppDetailsOverflowMenu.tsx");
 
 export default function AppDetailsOverflowMenu(application) {
   application = application.application;
   const onAddAppMenuClick = application.onAddAppMenuClick;
-  let installAppProps;
-  installAppProps = application(installAppProps[2]).getInstallAppProps(application);
-  let obj = application(installAppProps[2]);
-  let result = application(installAppProps[3]).canInstallApplication(installAppProps);
-  if (result) {
-    result = null != onAddAppMenuClick;
+  dependencyMap = application(12608).getInstallAppProps(application);
+  let obj = application(12608);
+  const tmp3 = onAddAppMenuClick(13366);
+  let tmp3Result = tmp3(application(12608).getInstallableApplication(application));
+  if (tmp3Result) {
+    tmp3Result = null != onAddAppMenuClick;
   }
   items = [];
-  if (result) {
+  if (tmp3Result) {
     const obj3 = { label: null, action: null, IconComponent: null };
-    let intl = tmp(tmp2[4]).intl;
-    obj3.label = intl.string(tmp(tmp2[4]).t.NgXl3C);
+    let intl = tmp(1113).intl;
+    obj3.label = intl.string(tmp(1113).t.NgXl3C);
     obj3.action = function action() {
       return onAddAppMenuClick({ installAppProps });
     };
-    obj3.IconComponent = tmp(tmp2[5]).CirclePlusIcon;
+    obj3.IconComponent = tmp(13367).CirclePlusIcon;
     items.push(obj3);
   }
-  const DeveloperMode = tmp(tmp2[6]).DeveloperMode;
+  const DeveloperMode = tmp(5068).DeveloperMode;
   if (DeveloperMode.getSetting()) {
     const obj4 = { label: null, action: null, IconComponent: null };
-    const intl2 = tmp(tmp2[4]).intl;
-    obj4.label = intl2.string(tmp(tmp2[4]).t["+NP/b2"]);
+    const intl2 = tmp(1113).intl;
+    obj4.label = intl2.string(tmp(1113).t["+NP/b2"]);
     obj4.action = function action() {
       ClipboardUtils.copy(application.id);
       ToastUtils.presentIdCopied();
     };
-    obj4.IconComponent = tmp(tmp2[9]).IdIcon;
+    obj4.IconComponent = tmp(11568).IdIcon;
     items.push(obj4);
   }
   let tmp8 = null;
@@ -57,7 +57,7 @@ export default function AppDetailsOverflowMenu(application) {
           return jsx(application(installAppProps[11]).IconButton, { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: onAddAppMenuClick(installAppProps[12]) });
         }
     };
-    tmp8 = jsx(tmp(tmp2[10]).ContextMenu, {
+    tmp8 = jsx(tmp(9082).ContextMenu, {
       items,
       children(ref) {
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));

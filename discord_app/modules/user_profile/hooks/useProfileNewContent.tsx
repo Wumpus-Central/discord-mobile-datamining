@@ -1,11 +1,11 @@
-// === Module 15273: useProfileNewContent ===
+// === Module 15723: useProfileNewContent ===
 
-// Module 15273 (useProfileNewContent)
-import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7863 */;
-import ProfileReadStateSection from "ProfileReadStateSection" /* 7864 */;
-import WishlistStore from "WishlistStore" /* 9561 */;
+// Module 15723 (useProfileNewContent)
+import ProfileReadStateUtils from "ProfileReadStateUtils" /* 7299 */;
+import ProfileReadStateSection from "ProfileReadStateSection" /* 7300 */;
+import WishlistStore from "WishlistStore" /* 9397 */;
 import UserStore from "UserStore" /* 1385 */;
-import UserProfileStore from "UserProfileStore" /* 7852 */;
+import UserProfileStore from "UserProfileStore" /* 7288 */;
 
 const require = globalThis.__r;
 
@@ -87,7 +87,7 @@ export default function useProfileNewContent(id) {
           } else {
             items1 = [];
           }
-          const length = items1.filter((addedAt) => {
+          length = items1.filter((addedAt) => {
             let flag;
             if (isItemShown != null) {
               flag = isItemShown(addedAt);

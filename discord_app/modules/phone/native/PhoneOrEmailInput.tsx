@@ -1,6 +1,6 @@
-// === Module 7203: PhoneOrEmailInput ===
+// === Module 7722: PhoneOrEmailInput ===
 
-// Module 7203 (PhoneOrEmailInput)
+// Module 7722 (PhoneOrEmailInput)
 import util from "util" /* 1113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -130,7 +130,7 @@ export default function PhoneOrEmailInput(onChange) {
   }
   const items2 = [combined, onPressCountrySelector];
   const memo = obj.useMemo(() => {
-    const obj = { onPress: onPressCountrySelector, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null };
+    const obj = { onPress: onPressCountrySelector, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, hitSlop: null };
     let str = combined;
     if (combined == null) {
       str = "";
@@ -138,6 +138,7 @@ export default function PhoneOrEmailInput(onChange) {
     obj.accessibilityLabel = str;
     const intl = util.intl;
     obj.accessibilityHint = intl.string(util.t.GwAW3k);
+    obj.hitSlop = { top: 8, bottom: 8 };
     return obj;
   }, items2);
   const obj3 = {};
@@ -146,5 +147,5 @@ export default function PhoneOrEmailInput(onChange) {
   obj3.onChange = callback;
   obj3.leadingText = combined;
   obj3.leadingPressableProps = memo;
-  return ref(tmp6(tmp7[6]).SplitTextInput, obj3);
+  return ref(tmp6(tmp7[6]).TextInput, obj3);
 };

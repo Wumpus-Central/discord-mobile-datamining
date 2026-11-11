@@ -1,14 +1,14 @@
-// === Module 18807: GuildsBarUnreadBars ===
+// === Module 18997: GuildsBarUnreadBars ===
 
-// Module 18807 (GuildsBarUnreadBars)
+// Module 18997 (GuildsBarUnreadBars)
 import initialize from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
-import FastList from "FastList" /* 7307 */;
+import FastList from "FastList" /* 7781 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6944 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5173 */;
-import SortedGuildStore from "SortedGuildStore" /* 6830 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6997 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
+import SortedGuildStore from "SortedGuildStore" /* 6893 */;
 
 const require = globalThis.__r;
 
@@ -204,7 +204,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               }
               return tmp37;
             }
-            let obj6 = { beforeItem: null, afterItem: "r" };
+            let obj6 = { beforeItem: null, afterItem: "Array" };
             let obj7 = { section: sum, row: tmp32.item, mention: true };
             obj6.beforeItem = obj7;
             return obj6;
@@ -216,16 +216,16 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(6830).GuildsNodeType;
-const GuildsBarConstants = fn(18721);
+const GuildsNodeType = fn(6893).GuildsNodeType;
+const GuildsBarConstants = fn(18911);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(17423);
+const YouBarConstants = fn(17588);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_15 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH } });
 let closure_17 = { beforeItem: "Array", afterItem: "flexDirection" };
-let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "r" };
+let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };
 let closure_20 = { code: "(function GuildsBarUnreadBarsTsx1(){let[scrollPosValue]=this.__closure;return scrollPosValue.get();})" };
 let closure_21 = { code: "(function GuildsBarUnreadBarsTsx2(position,lastPosition){let[scheduleOnRN,debouncedUpdate]=this.__closure;if(position!==lastPosition){scheduleOnRN(debouncedUpdate);}})" };
 const size = fn(2);

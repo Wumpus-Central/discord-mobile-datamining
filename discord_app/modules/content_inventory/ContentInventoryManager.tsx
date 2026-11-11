@@ -1,18 +1,18 @@
-// === Module 20461: ContentInventoryManager ===
+// === Module 20656: ContentInventoryManager ===
 
-// Module 20461 (ContentInventoryManager)
+// Module 20656 (ContentInventoryManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import ContentInventoryExperiments from "ContentInventoryExperiments" /* 15921 */;
-import ContentInventoryFeature from "ContentInventoryFeature" /* 20462 */;
+import ContentInventoryExperiments from "ContentInventoryExperiments" /* 16080 */;
+import ContentInventoryFeature from "ContentInventoryFeature" /* 20657 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6625 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6629 */;
-import IdleStore from "IdleStore" /* 6762 */;
-import WindowStore from "WindowStore" /* 6925 */;
-import ContentInventoryPersistedStore from "ContentInventoryPersistedStore" /* 13676 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 8987 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7022 */;
+import IdleStore from "IdleStore" /* 6978 */;
+import WindowStore from "WindowStore" /* 6979 */;
+import ContentInventoryPersistedStore from "ContentInventoryPersistedStore" /* 14145 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 10138 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 require = fn;
 function getBackoffJitter() {
@@ -363,7 +363,7 @@ function handleFetchGameProfileFeed() {
     fetchInventory(obj);
   }
 }
-const ContentInventoryFeedKey = fn(9002).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(10145).ContentInventoryFeedKey;
 const PlatformTypes = fn(1072).PlatformTypes;
 let closure_11 = 2 * DurationsDefault.Millis.MINUTE;
 const GLOBAL_FEED = ContentInventoryFeedKey.GLOBAL_FEED;
@@ -373,7 +373,7 @@ const set = new Set();
 const map1 = new Map();
 let closure_17 = null;
 let apply = fn(12);
-let closure_18 = apply.debounce(fn(15270).postTrackToContentInventory, 3000, { trailing: true });
+let closure_18 = apply.debounce(fn(15720).postTrackToContentInventory, 3000, { trailing: true });
 const prototype = function ContentInventoryManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: handlePostConnectionOpen, CONNECTION_CLOSED: handleConnectionClosed, WINDOW_FOCUS: handleUpdatePollingState, IDLE: handleUpdatePollingState, CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: handleUpdatePollingState, CONTENT_INVENTORY_MANUAL_REFRESH: handleManualRefresh, CONTENT_INVENTORY_INBOX_STALE: handleInboxStale, SPOTIFY_NEW_TRACK: handleSpotifyNewTrack, GAME_PROFILE_OPEN: handleFetchGameProfileFeed };

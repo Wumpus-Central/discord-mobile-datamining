@@ -1,11 +1,11 @@
-// === Module 12561: UserProfileWidgetEditOptionsActionSheet ===
+// === Module 12038: UserProfileWidgetEditOptionsActionSheet ===
 
-// Module 12561 (UserProfileWidgetEditOptionsActionSheet)
+// Module 12038 (UserProfileWidgetEditOptionsActionSheet)
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = fn;
-let closure_5 = fn(8831).TrackUserProfileEditActions;
+let closure_5 = fn(8413).TrackUserProfileEditActions;
 const jsx = fn(21).jsx;
 const constants = { REMOVE: "remove-widget" };
 const size = fn(2);
@@ -49,26 +49,26 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
         onPress() {
           if (label.key === constants2.REMOVE) {
             closure_3.current = false;
-            returnFocusRef(5376).hideActionSheet(label(12560).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-            let obj = returnFocusRef(5376);
+            returnFocusRef(5489).hideActionSheet(label(12037).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+            let obj = returnFocusRef(5489);
             const obj3 = {
               widgetName: header,
               onConfirm() {
-                  const result = profileEditAnalyticsOptions(12562).removeWidgetFromPending(profileEditAnalyticsOptions);
-                  const obj = profileEditAnalyticsOptions(12562);
-                  const obj2 = profileEditAnalyticsOptions(8839);
+                  const result = profileEditAnalyticsOptions(12029).removeWidgetFromPending(profileEditAnalyticsOptions);
+                  const obj = profileEditAnalyticsOptions(12029);
+                  const obj2 = profileEditAnalyticsOptions(8480);
                   const merged = Object.assign(profileEditAnalyticsOptions.getProfileEditAnalyticsOptions());
                   const result1 = obj2.trackUserProfileEditAction({ userId: id.getId(), action: constants.WIDGET_REMOVED });
-                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5151).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5252).AccessibilityAnnouncer;
                   const intl = profileEditAnalyticsOptions(1113).intl;
                   AccessibilityAnnouncer.announce(intl.string(profileEditAnalyticsOptions(1113).t.zzsK7h));
                 },
               onDismissWithoutRemoving() {
-                  return profileEditAnalyticsOptions(6155).setAccessibilityFocus({ ref, delay: 100 });
+                  return profileEditAnalyticsOptions(6268).setAccessibilityFocus({ ref, delay: 100 });
                 }
             };
-            label(12567).confirmRemoveWidget(obj3);
-            let obj2 = label(12567);
+            label(12039).confirmRemoveWidget(obj3);
+            let obj2 = label(12039);
           }
         }
       };
@@ -79,26 +79,26 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
         onPress() {
           if (label.key === constants2.REMOVE) {
             closure_3.current = false;
-            returnFocusRef(5376).hideActionSheet(label(12560).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-            let obj = returnFocusRef(5376);
+            returnFocusRef(5489).hideActionSheet(label(12037).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+            let obj = returnFocusRef(5489);
             const obj3 = {
               widgetName: header,
               onConfirm() {
-                  const result = profileEditAnalyticsOptions(12562).removeWidgetFromPending(profileEditAnalyticsOptions);
-                  const obj = profileEditAnalyticsOptions(12562);
-                  const obj2 = profileEditAnalyticsOptions(8839);
+                  const result = profileEditAnalyticsOptions(12029).removeWidgetFromPending(profileEditAnalyticsOptions);
+                  const obj = profileEditAnalyticsOptions(12029);
+                  const obj2 = profileEditAnalyticsOptions(8480);
                   const merged = Object.assign(profileEditAnalyticsOptions.getProfileEditAnalyticsOptions());
                   const result1 = obj2.trackUserProfileEditAction({ userId: id.getId(), action: constants.WIDGET_REMOVED });
-                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5151).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5252).AccessibilityAnnouncer;
                   const intl = profileEditAnalyticsOptions(1113).intl;
                   AccessibilityAnnouncer.announce(intl.string(profileEditAnalyticsOptions(1113).t.zzsK7h));
                 },
               onDismissWithoutRemoving() {
-                  return profileEditAnalyticsOptions(6155).setAccessibilityFocus({ ref, delay: 100 });
+                  return profileEditAnalyticsOptions(6268).setAccessibilityFocus({ ref, delay: 100 });
                 }
             };
-            label(12567).confirmRemoveWidget(obj3);
-            let obj2 = label(12567);
+            label(12039).confirmRemoveWidget(obj3);
+            let obj2 = label(12039);
           }
         }
       }, label.key);

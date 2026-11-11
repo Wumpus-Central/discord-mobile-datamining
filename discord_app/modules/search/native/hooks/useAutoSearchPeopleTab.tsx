@@ -1,15 +1,15 @@
-// === Module 19191: useAutoSearchPeopleTab ===
+// === Module 19378: useAutoSearchPeopleTab ===
 
-// Module 19191 (useAutoSearchPeopleTab)
+// Module 19378 (useAutoSearchPeopleTab)
 import apply from "apply" /* 12 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9237 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14146 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14171 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 11723 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14631 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14656 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 14160 */;
+import SearchQueryStore from "SearchQueryStore" /* 14645 */;
 
 require = fn;
-let closure_5 = fn(14162).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_5 = fn(14647).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchPeopleTab.tsx");
 
@@ -28,8 +28,8 @@ export function useAutoSearchPeopleTab(searchContext, arg1) {
     if (!closure_1) {
       const debounceResult = apply.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          closure_1(14171).searchPeopleTab(searchContext, searchQueryString);
-          const obj = closure_1(14171);
+          closure_1(14656).searchPeopleTab(searchContext, searchQueryString);
+          const obj = closure_1(14656);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
@@ -37,6 +37,6 @@ export function useAutoSearchPeopleTab(searchContext, arg1) {
   }, items1);
   const items2 = [searchContext];
   const effect2 = noop.useEffect(() => () => {
-    closure_1(14171).cleanupPeopleTab(searchContext);
+    closure_1(14656).cleanupPeopleTab(searchContext);
   }, items2);
 }

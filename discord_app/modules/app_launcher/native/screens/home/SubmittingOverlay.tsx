@@ -1,13 +1,13 @@
-// === Module 12604: SubmittingOverlay ===
+// === Module 13293: SubmittingOverlay ===
 
-// Module 12604 (SubmittingOverlay)
+// Module 13293 (SubmittingOverlay)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5763 */;
-import springPresets from "springPresets" /* 5764 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5773 */;
-import createStyles from "createStyles" /* 5142 */;
+import spring_spring from "spring/spring" /* 5876 */;
+import springPresets from "springPresets" /* 5877 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5886 */;
+import createStyles from "createStyles" /* 5243 */;
 import size from "module_2" /* 2 */;
 
 const _modDef1652 = _mod1652;

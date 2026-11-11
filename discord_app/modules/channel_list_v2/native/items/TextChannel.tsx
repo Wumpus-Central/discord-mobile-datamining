@@ -1,28 +1,28 @@
-// === Module 18646: TextChannel ===
+// === Module 18818: TextChannel ===
 
-// Module 18646 (TextChannel)
+// Module 18818 (TextChannel)
 import nativeDefault from "native" /* 575 */;
 import RoutingSourcesDefault from "RoutingSources" /* 1111 */;
-import transitionToChannel from "transitionToChannel" /* 5887 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 6179 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7552 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10930 */;
-import preloadChannelAppFrame from "preloadChannelAppFrame" /* 18647 */;
+import transitionToChannel from "transitionToChannel" /* 6000 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 6292 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10831 */;
+import preloadChannelAppFrame from "preloadChannelAppFrame" /* 18819 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4990 */;
-import GatedChannelStore from "GatedChannelStore" /* 5046 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
-import ReadStateStore from "ReadStateStore" /* 6900 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6833 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
+import GatedChannelStore from "GatedChannelStore" /* 5147 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
+import ReadStateStore from "ReadStateStore" /* 6952 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(5884);
+const RedesignChannelListConstants = fn(5997);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_15 = createStyles.createStyles((arg0, arg1) => {
   const obj = { container: { position: "relative", marginVertical, marginHorizontal: 8, borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 }, selected: null, selectedBorder: null, row: null, rowWithSubtitle: null, appSoundIcon: null, channelLabel: null, channelLabelText: null };
   const obj2 = { position: "relative", marginVertical, marginHorizontal: 8, borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, flexGrow: 1 };
@@ -200,7 +200,7 @@ export default noop.memo(function TextChannel(channel) {
     return closure_14(tmp10Result4, obj9);
   } else {
     isSuggestedSection(tmp2[11]).colors;
-    const colors = { size: "xs", color: null, style: null };
+    colors = { size: "xs", color: null, style: null };
     colors.color = userMuted ? colors.ICON_MUTED : colors.STATUS_POSITIVE;
     appSoundIcon = appSoundIcon.appSoundIcon;
     colors.style = appSoundIcon;

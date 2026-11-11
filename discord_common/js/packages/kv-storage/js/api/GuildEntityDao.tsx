@@ -1,8 +1,8 @@
-// === Module 5033: GuildEntityDao ===
+// === Module 5134: GuildEntityDao ===
 
-// Module 5033 (GuildEntityDao)
-import Table from "Table" /* 5025 */;
-import TableId from "TableId" /* 5027 */;
+// Module 5134 (GuildEntityDao)
+import Table from "Table" /* 5126 */;
+import TableId from "TableId" /* 5128 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -206,7 +206,7 @@ prototype2["replaceAll"] = function replaceAll(arg0, arg1) {
   this.putAll(arg0, arg1);
 };
 prototype2["delete"] = function delete(arg0, arg1) {
-  const length = arguments.length;
+  length = arguments.length;
   const self = this;
   if (0 === length) {
     const transaction3 = self.transaction;

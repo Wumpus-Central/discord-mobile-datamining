@@ -1,14 +1,14 @@
-// === Module 18577: GuildHeaderCoachmarks ===
+// === Module 18749: GuildHeaderCoachmarks ===
 
-// Module 18577 (GuildHeaderCoachmarks)
-import dismissible_content from "dismissible_content" /* 4975 */;
+// Module 18749 (GuildHeaderCoachmarks)
+import dismissible_content from "dismissible_content" /* 5076 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
 
 require = fn;
 const Permissions = fn(1072).Permissions;
-const constants = fn(4988).DismissibleContentGroupName;
+const constants = fn(5089).DismissibleContentGroupName;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/GuildHeaderCoachmarks.tsx");
@@ -18,13 +18,13 @@ export default function GuildHeaderCoachmarks(arg0) {
   items = [PermissionStore];
   const items1 = [guild];
   const stateFromStores = guild(504).useStateFromStores(items, () => PermissionStore.can(Permissions.MANAGE_GUILD, guild), items1);
-  const tmp5 = stateFromStores(18578)(guild.id);
+  const tmp5 = stateFromStores(18750)(guild.id);
   dependencyMap = tmp5;
-  stateFromStores(18580)(guild.id);
+  stateFromStores(18752)(guild.id);
   const obj = guild(504);
-  const tmp7 = stateFromStores(14356)(guild.id);
-  const tmp9 = stateFromStores(14349)(guild.id);
-  const tmp8 = stateFromStores(18587)();
+  const tmp7 = stateFromStores(10609)(guild.id);
+  const tmp9 = stateFromStores(10642)(guild.id);
+  const tmp8 = stateFromStores(18759)();
   let num = 0;
   if (null != tmp9) {
     num = tmp9.cost - tmp11;
@@ -44,11 +44,11 @@ export default function GuildHeaderCoachmarks(arg0) {
     }
     return items;
   }, items2);
-  const tmp10 = stateFromStores(14350)();
+  const tmp10 = stateFromStores(10643)();
   const obj2 = { groupName: constants.GUILD_HEADER_TOOLTIPS };
-  const tmpResult = guild(7644);
-  [tmp16, tmp17] = guild(7644).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS });
-  const tmp15 = _slicedToArray(guild(7644).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS }), 2);
+  const tmpResult = guild(9494);
+  [tmp16, tmp17] = guild(9494).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS });
+  const tmp15 = _slicedToArray(guild(9494).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS }), 2);
   let tmp18 = false === tmp7;
   if (tmp18) {
     tmp18 = tmp8;
@@ -59,25 +59,25 @@ export default function GuildHeaderCoachmarks(arg0) {
   if (tmp18) {
     tmp18 = tmp10;
   }
-  const tmp14Result = _slicedToArray(guild(14342).useBoostToUnlockCoachmarkDCF(tmp18, guild.id, num, constants.GUILD_HEADER_TOOLTIPS), 2);
+  const tmp14Result = _slicedToArray(guild(10634).useBoostToUnlockCoachmarkDCF(tmp18, guild.id, num, constants.GUILD_HEADER_TOOLTIPS), 2);
   if (first == null) {
     first = tmp14Result[0];
   }
-  if (guild(4975).DismissibleContent.BOOST_PROGRESS_BAR_MOBILE_COACHMARK === first) {
+  if (guild(5076).DismissibleContent.BOOST_PROGRESS_BAR_MOBILE_COACHMARK === first) {
     const obj3 = { targetRef, guild, markAsDismissed: tmp17 };
-    return jsx(tmp4(18588), { targetRef, guild, markAsDismissed: tmp17 });
-  } else if (guild(4975).DismissibleContent.GUILD_THEME_MEMBER_COACHMARK === first) {
+    return jsx(tmp4(18760), { targetRef, guild, markAsDismissed: tmp17 });
+  } else if (guild(5076).DismissibleContent.GUILD_THEME_MEMBER_COACHMARK === first) {
     const obj4 = { guildId: guild.id, targetRef, markAsDismissed: tmp17 };
-    return jsx(tmp4(18589), { guildId: guild.id, targetRef, markAsDismissed: tmp17 });
-  } else if (guild(4975).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK === first) {
+    return jsx(tmp4(18761), { guildId: guild.id, targetRef, markAsDismissed: tmp17 });
+  } else if (guild(5076).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK === first) {
     let tmp20 = null;
     if (null != tmp9) {
       const obj5 = { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp14Result[1] };
-      tmp20 = jsx(tmp4(18591), { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp14Result[1] });
+      tmp20 = jsx(tmp4(18763), { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp14Result[1] });
     }
     return tmp20;
   } else {
     return null;
   }
-  const tmpResult2 = guild(14342);
+  const tmpResult2 = guild(10634);
 };

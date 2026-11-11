@@ -1,9 +1,9 @@
-// === Module 8081: VideoSelfieIcon ===
+// === Module 8178: VideoSelfieIcon ===
 
-// Module 8081 (VideoSelfieIcon)
+// Module 8178 (VideoSelfieIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod8082 from "module_8082" /* 8082 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod8179 from "module_8179" /* 8179 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function VideoSelfieIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8082, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8179, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

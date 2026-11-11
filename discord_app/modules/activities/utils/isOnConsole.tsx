@@ -1,8 +1,8 @@
-// === Module 15154: isOnConsole ===
+// === Module 15642: isOnConsole ===
 
-// Module 15154 (isOnConsole)
-import isOnXboxDefault from "isOnXbox" /* 15113 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 15114 */;
+// Module 15642 (isOnConsole)
+import isOnXboxDefault from "isOnXbox" /* 15603 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 15604 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/isOnConsole.tsx");

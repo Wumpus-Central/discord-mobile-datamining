@@ -1,11 +1,11 @@
-// === Module 14147: SuggestedSearchStore ===
+// === Module 14632: SuggestedSearchStore ===
 
-// Module 14147 (SuggestedSearchStore)
+// Module 14632 (SuggestedSearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1453 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 14149 */;
-import SmartSearchConstants from "SmartSearchConstants" /* 14148 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 14634 */;
+import SmartSearchConstants from "SmartSearchConstants" /* 14633 */;
 import size from "module_2" /* 2 */;
 
 function handleReset() {
@@ -133,7 +133,7 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
         const result = closure_3.set(guildId, obj3);
         value = obj3;
       }
-      value2 = value;
+      let value2 = value;
     } else {
       const channelFilterKey = SmartSearchUtils.getChannelFilterKey(channelIds);
       value2 = closure_4.get(channelFilterKey);
@@ -156,7 +156,7 @@ const suggestedSearchStore = new SuggestedSearchStore(DispatcherDefault, {
         const result = closure_3.set(guildId, obj3);
         value = obj3;
       }
-      value2 = value;
+      let value2 = value;
     } else {
       const channelFilterKey = SmartSearchUtils.getChannelFilterKey(channelIds);
       value2 = closure_4.get(channelFilterKey);

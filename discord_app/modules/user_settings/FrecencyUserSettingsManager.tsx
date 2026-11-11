@@ -1,19 +1,19 @@
-// === Module 19903: FrecencyUserSettingsManager ===
+// === Module 20095: FrecencyUserSettingsManager ===
 
-// Module 19903 (FrecencyUserSettingsManager)
+// Module 20095 (FrecencyUserSettingsManager)
 import DurationsDefault from "Durations" /* 1089 */;
 import frecency_user_settings from "frecency_user_settings" /* 1232 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4972 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5073 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9860 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9859 */;
-import EmojiStore from "EmojiStore" /* 6854 */;
-import SoundboardStore from "SoundboardStore" /* 6193 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 6894 */;
-import FrecencyStore from "FrecencyStore" /* 6953 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 11347 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 11346 */;
+import EmojiStore from "EmojiStore" /* 6906 */;
+import SoundboardStore from "SoundboardStore" /* 6306 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 6946 */;
+import FrecencyStore from "FrecencyStore" /* 7006 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -91,7 +91,7 @@ let closure_23 = async function _saveProtos(arg0) {
             c5 = 3;
             return { value: "HermesInternal", done: null };
           } else {
-            resetTimer(closure_2_15, false);
+            resetTimer(colors, false);
             if (!UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS)) {
               let result = UserSettingsProtoActionCreators.markUserSettingsLoadOkayForDevelopment();
               c3 = 1;
@@ -139,7 +139,7 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6953).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(7006).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 const FREQUENCY_ITEM_LIMIT = fn(1362).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();

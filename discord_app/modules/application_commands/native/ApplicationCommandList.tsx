@@ -1,11 +1,11 @@
-// === Module 14225: ApplicationCommandList ===
+// === Module 14708: ApplicationCommandList ===
 
-// Module 14225 (ApplicationCommandList)
+// Module 14708 (ApplicationCommandList)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-let closure_6 = 3 * fn(10350).AUTOCOMPLETE_ROW_HEIGHT;
+let closure_6 = 3 * fn(11173).AUTOCOMPLETE_ROW_HEIGHT;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandList.tsx");
 
@@ -26,7 +26,7 @@ export default function ApplicationCommandList(channel) {
   const sections = query1.sections;
   const scrollDown = query1.scrollDown;
   const items1 = [sections, channel.guild_id, onPressCommandItem];
-  let length;
+  length = undefined;
   const callback = sections.useCallback((item) => {
     item = item.item;
     let found;

@@ -1,13 +1,13 @@
-// === Module 8945: useMediaViewerSyncer ===
+// === Module 10125: useMediaViewerSyncer ===
 
-// Module 8945 (useMediaViewerSyncer)
+// Module 10125 (useMediaViewerSyncer)
 import _mod1652 from "module_1652" /* 1652 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8919 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8566 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(8946);
+const Constants = fn(10126);
 ({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: closure_6, THUMBNAIL_MAX_WIDTH: metroImportDefault, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
 const PlatformUtils = fn(1377);
 let closure_10 = PlatformUtils.isAndroid();
@@ -218,7 +218,7 @@ export function useMediaViewerSyncer(sources) {
             }
             let tmp11 = "thumbnails" === _undefined4.get() && tmp10;
             if (tmp11) {
-              value2 = _undefined6.get();
+              const value2 = _undefined6.get();
               tmp11 = value2 !== _undefined8.get();
             }
             if (tmp11) {
@@ -436,7 +436,7 @@ export function useMediaViewerSyncer(sources) {
               value = _undefined2.get();
             } else {
               const obj = {};
-              value2 = _undefined2.get();
+              const value2 = _undefined2.get();
               const merged = Object.assign(c3);
               obj.overshootClamping = true;
               value = _undefined3(value2, obj);

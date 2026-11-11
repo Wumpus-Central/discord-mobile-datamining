@@ -1,21 +1,21 @@
-// === Module 17523: QuestDockVideoBackground ===
+// === Module 17688: QuestDockVideoBackground ===
 
-// Module 17523 (QuestDockVideoBackground)
+// Module 17688 (QuestDockVideoBackground)
 import _modDef671 from "module_671" /* 671 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2022 */;
-import LinearGradientDefault from "LinearGradient" /* 5717 */;
-import spring_spring from "spring/spring" /* 5763 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8921 */;
-import QuestDockUtils from "QuestDockUtils" /* 17419 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 17421 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17503 */;
-import useIsQuestDockModeActiveOrExitingDefault from "useIsQuestDockModeActiveOrExiting" /* 17524 */;
+import LinearGradientDefault from "LinearGradient" /* 5830 */;
+import spring_spring from "spring/spring" /* 5876 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11192 */;
+import QuestDockUtils from "QuestDockUtils" /* 17584 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 17586 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17668 */;
+import useIsQuestDockModeActiveOrExitingDefault from "useIsQuestDockModeActiveOrExiting" /* 17689 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 
 const require = globalThis.__r;
 const _modDef1652 = _mod1652;
@@ -53,8 +53,8 @@ function QuestDockBackgroundMediaFade(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-let QuestDockMode = fn(6839).QuestDockMode;
-const QuestDockConstants = fn(17420);
+let QuestDockMode = fn(5275).QuestDockMode;
+const QuestDockConstants = fn(17585);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_10 } = QuestDockConstants);
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
@@ -62,7 +62,7 @@ const jsxProd = fn(21);
 let closure_14 = [0, 0.1, 0.8, 1];
 const locations = [0, 0.33, 0.76, 1];
 const QuestDockBackgroundCollapsedMediaMode = { PAUSED: "paused", HIDDEN: "hidden" };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { backgroundWrapper: null, backgroundImage: null, backgroundImageWrapper: null, backgroundVideo: null, media: null, backgroundGradient: null, backdrop: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -204,8 +204,8 @@ export default noop.memo(function QuestDockVideoBackground(imageUrl) {
     const tmp4Result = tmp4(1377);
   }
   if (isRendered) {
-    isRendered = tmp4(9775).isHeroVideoSupported(imageUrl.videoMimetype);
-    const tmp4Result3 = tmp4(9775);
+    isRendered = tmp4(10061).isHeroVideoSupported(imageUrl.videoMimetype);
+    const tmp4Result3 = tmp4(10061);
   }
   if (isRendered) {
     let tmp28 = !tmp2;
@@ -281,7 +281,7 @@ export default noop.memo(function QuestDockVideoBackground(imageUrl) {
     const obj5 = { uri: videoUrl };
     obj4.source = obj5;
     obj4.paused = tmp8 !== tmp12.EXPANDED;
-    tmp46 = closure_12(tmp4(8953).VideoComponent, obj4);
+    tmp46 = closure_12(tmp4(9664).VideoComponent, obj4);
   }
   const items9 = [tmp46, ];
   let tmp48 = null;
@@ -295,7 +295,7 @@ export default noop.memo(function QuestDockVideoBackground(imageUrl) {
       obj7.style = items11;
       const obj8 = { uri: imageUrl };
       obj7.source = obj8;
-      obj6.children = closure_12(tmp7(5844), obj7);
+      obj6.children = closure_12(tmp7(5957), obj7);
       tmp48 = closure_12(tmp7(1652).View, obj6);
     } else {
       tmp48 = null;

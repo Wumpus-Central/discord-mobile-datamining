@@ -1,11 +1,11 @@
-// === Module 13246: useConjureProjectGroupState ===
+// === Module 10488: useConjureProjectGroupState ===
 
-// Module 13246 (useConjureProjectGroupState)
-import conjureRailActivity2 from "conjureRailActivity" /* 13249 */;
-import ConjureProjectGroupsActionCreators from "ConjureProjectGroupsActionCreators" /* 13250 */;
+// Module 10488 (useConjureProjectGroupState)
+import conjureRailActivity2 from "conjureRailActivity" /* 10491 */;
+import ConjureProjectGroupsActionCreators from "ConjureProjectGroupsActionCreators" /* 10492 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectGroupsCollapseStore from "ConjureProjectGroupsCollapseStore" /* 13247 */;
+import ConjureProjectGroupsCollapseStore from "ConjureProjectGroupsCollapseStore" /* 10489 */;
 
 const require = globalThis.__r;
 

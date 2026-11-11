@@ -1,13 +1,13 @@
-// === Module 8814: ProfileCustomizationUtils ===
+// === Module 8475: ProfileCustomizationUtils ===
 
-// Module 8814 (ProfileCustomizationUtils)
+// Module 8475 (ProfileCustomizationUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import shared from "shared" /* 5149 */;
+import shared from "shared" /* 5250 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8808 */;
-import UserProfileStore from "UserProfileStore" /* 7852 */;
-import GuildMemberStore from "GuildMemberStore" /* 5054 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8476 */;
+import UserProfileStore from "UserProfileStore" /* 7288 */;
+import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 
 const require = globalThis.__r;
 
@@ -71,11 +71,11 @@ export function useGuildMemberAndUserPendingNameplate(user, guildId) {
   obj3.pendingErrors = pendingErrors;
   return obj3;
 }
-export function useGuildMemberOrUserPendingDisplayNameStyles(user, guildId) {
-  _require = user;
+export function useGuildMemberOrUserPendingDisplayNameStyles(stateFromStores, guildId) {
+  _require = stateFromStores;
   dependencyMap = guildId;
   items = [GuildMemberStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     let member = null;
     if (undefined !== closure_1) {
       member = null;
@@ -90,8 +90,8 @@ export function useGuildMemberOrUserPendingDisplayNameStyles(user, guildId) {
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({ pendingDisplayNameStyles: UserProfileSettingsStore.getPendingChanges(closure_1).pendingDisplayNameStyles, tryItOutDisplayNameStyles: UserProfileSettingsStore.getTryItOutChanges().tryItOutDisplayNameStyles, pendingErrors: UserProfileSettingsStore.getErrors(closure_1).displayNameStyles }));
   let displayNameStyles;
   ({ pendingDisplayNameStyles, tryItOutDisplayNameStyles, pendingErrors } = stateFromStoresObject);
-  if (user != null) {
-    displayNameStyles = user.displayNameStyles;
+  if (stateFromStores != null) {
+    displayNameStyles = stateFromStores.displayNameStyles;
   }
   const obj3 = { userDisplayNameStyles: displayNameStyles, guildDisplayNameStyles: null, pendingDisplayNameStyles: null, tryItOutDisplayNameStyles: null, pendingErrors: null };
   let displayNameStyles1;

@@ -1,12 +1,13 @@
-// === Module 18337: NotifSettingsActionCreators ===
+// === Module 18509: NotifSettingsActionCreators ===
 
-// Module 18337 (NotifSettingsActionCreators)
+// Module 18509 (NotifSettingsActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import settings_NotifSettingsUtils from "settings/NotifSettingsUtils" /* 15887 */;
-import notification_settings from "notification_settings" /* 15889 */;
+import settings_NotifSettingsUtils from "settings/NotifSettingsUtils" /* 16046 */;
+import notification_settings from "notification_settings" /* 16048 */;
+import DeclarativeNotificationSettingsRedesignExperiment from "DeclarativeNotificationSettingsRedesignExperiment" /* 16061 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 15888 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 16047 */;
 
 const require = globalThis.__r;
 
@@ -451,11 +452,29 @@ export function updateNotifSettingToggleValue(CALLS, toggle) {
     }
   };
 }
-export function updateNotifSettingRadioValue(updatedSettingId, radio) {
-  updateNotifSettingValue(updatedSettingId, {
-    update(radio) {
-      radio.radio = radio;
-      return radio.radio !== radio;
+export function updateNotifSettingRadioValue(REACTIONS_CHOICE, scrollLength) {
+  const radio = scrollLength;
+  if (Number.isFinite(scrollLength)) {
+    const result = DeclarativeNotificationSettingsRedesignExperiment.isDeclarativeNotificationSettingsRedesignEnabled("updateNotifSettingRadioValue");
+    importDefault = result;
+    closure_2 = null != NotifSettingsProtoStore.getSetting(REACTIONS_CHOICE);
+    const obj2 = {
+      update(radio) {
+          radio.radio = radio;
+          let tmp2 = result;
+          if (result) {
+            tmp2 = !closure_2;
+          }
+          if (!tmp2) {
+            tmp2 = radio.radio !== radio;
+          }
+          return tmp2;
+        }
+    };
+    let effectiveDataVersion;
+    if (result) {
+      effectiveDataVersion = NotifSettingsProtoStore.effectiveDataVersion;
     }
-  });
+    updateNotifSettingValue(REACTIONS_CHOICE, obj2, effectiveDataVersion);
+  }
 }

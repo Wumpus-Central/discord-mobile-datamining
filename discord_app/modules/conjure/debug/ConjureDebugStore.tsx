@@ -1,10 +1,10 @@
-// === Module 10985: ConjureDebugStore ===
+// === Module 7302: ConjureDebugStore ===
 
-// Module 10985 (ConjureDebugStore)
+// Module 7302 (ConjureDebugStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjurePerfTraceBatches from "ConjurePerfTraceBatches" /* 10986 */;
-import ConjureUsageTypes from "ConjureUsageTypes" /* 10987 */;
+import ConjurePerfTraceBatches from "ConjurePerfTraceBatches" /* 7303 */;
+import ConjureUsageTypes from "ConjureUsageTypes" /* 7304 */;
 
 require = fn;
 let closure_2 = { pending: false, info: null, error: null, observedAt: null };
@@ -192,7 +192,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
         const result3 = map4.set(projectId, obj4);
       }
       map6.delete(projectId);
-      value2 = map5.get(projectId);
+      const value2 = map5.get(projectId);
       let phase;
       if (value2 != null) {
         phase = value2.phase;
@@ -282,7 +282,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
       obj3.observedAt = observedAt;
     }
     const result = map4.set(projectId, obj3);
-    value2 = map5.get(projectId);
+    const value2 = map5.get(projectId);
     let phase;
     if (value2 != null) {
       phase = value2.phase;

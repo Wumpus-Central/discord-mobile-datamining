@@ -1,6 +1,6 @@
-// === Module 16156: Easing/Easing ===
+// === Module 16318: Easing/Easing ===
 
-// Module 16156 (Easing/Easing)
+// Module 16318 (Easing/Easing)
 import _mod1652 from "module_1652" /* 1652 */;
 import size from "module_2" /* 2 */;
 

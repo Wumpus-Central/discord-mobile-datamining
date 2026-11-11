@@ -1,14 +1,14 @@
-// === Module 10852: SelectedUserField ===
+// === Module 11718: SelectedUserField ===
 
-// Module 10852 (SelectedUserField)
+// Module 11718 (SelectedUserField)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5196 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import CircleXIcon from "CircleXIcon" /* 7161 */;
-import InputFieldContainer from "InputFieldContainer" /* 7171 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7286 */;
+import UserUtilsDefault from "UserUtils" /* 5309 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import CircleXIcon from "CircleXIcon" /* 7563 */;
+import InputFieldContainer from "InputFieldContainer" /* 7573 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7760 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_16 }, content: { flexDirection: "row", overflow: "hidden", alignItems: "center", display: "flex" }, opener: null, openerWithClearButton: null, searchIcon: null, userPill: null, userPillText: null, clearButton: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.opener = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: 6 };

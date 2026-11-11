@@ -1,12 +1,12 @@
-// === Module 15152: isActivityJoinableOnCurrentPlatform ===
+// === Module 15484: isActivityJoinableOnCurrentPlatform ===
 
-// Module 15152 (isActivityJoinableOnCurrentPlatform)
+// Module 15484 (isActivityJoinableOnCurrentPlatform)
 import Constants from "Constants" /* 1072 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
-import ActivityTypes from "ActivityTypes" /* 5893 */;
-import hasFlagDefault from "hasFlag" /* 7550 */;
-import ActivityGamePlatforms2 from "ActivityGamePlatforms" /* 9834 */;
+import ActivityTypes from "ActivityTypes" /* 6006 */;
+import ActivityGamePlatforms2 from "ActivityGamePlatforms" /* 7406 */;
+import hasFlagDefault from "hasFlag" /* 8404 */;
 import size from "module_2" /* 2 */;
 
 const ActivityFlags = Constants.ActivityFlags;

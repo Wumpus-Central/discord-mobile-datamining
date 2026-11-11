@@ -1,14 +1,14 @@
-// === Module 15245: UserProfileAddGameCoverButton ===
+// === Module 12061: UserProfileAddGameCoverButton ===
 
-// Module 15245 (UserProfileAddGameCoverButton)
+// Module 12061 (UserProfileAddGameCoverButton)
 import nativeDefault from "native" /* 575 */;
-import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 15237 */;
+import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 12052 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
-const obj2 = { button: { aspectRatio: fn(15233).GAME_COVER_ASPECT_RATIO, borderRadius: fn(15233).GAME_COVER_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" } };
+const createStyles = fn(5243);
+const obj2 = { button: { aspectRatio: fn(12048).GAME_COVER_ASPECT_RATIO, borderRadius: fn(12048).GAME_COVER_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAddGameCoverButton.tsx");
@@ -31,8 +31,8 @@ export default function UserProfileAddGameCoverButton(ref) {
   items = [closure_4().button, { width: ref.coverWidth }];
   obj.style = items;
   const tmp = closure_4();
-  obj.children = jsx(ref(10956).PlusLargeIcon, { size: "md", color: widgetType(575).colors.ICON_MUTED });
-  return jsx(ref(7046).PressableOpacity, {
+  obj.children = jsx(ref(10878).PlusLargeIcon, { size: "md", color: widgetType(575).colors.ICON_MUTED });
+  return jsx(ref(7364).PressableOpacity, {
     ref,
     onPress() {
       return openUserProfileAddGameActionSheetDefault({ widgetType, returnFocusRef: ref });

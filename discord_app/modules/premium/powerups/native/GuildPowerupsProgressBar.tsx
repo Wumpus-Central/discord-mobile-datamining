@@ -1,15 +1,15 @@
-// === Module 18642: GuildPowerupsProgressBar ===
+// === Module 18814: GuildPowerupsProgressBar ===
 
-// Module 18642 (GuildPowerupsProgressBar)
+// Module 18814 (GuildPowerupsProgressBar)
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5372 */;
-import LinearGradientDefault from "LinearGradient" /* 5717 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7415 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 14320 */;
-import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 18645 */;
+import timing_timing from "timing/timing" /* 5485 */;
+import LinearGradientDefault from "LinearGradient" /* 5830 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 10612 */;
+import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 18817 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 18643 */;
-import GuildStore from "GuildStore" /* 5013 */;
+import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 18815 */;
+import GuildStore from "GuildStore" /* 5114 */;
 import module_1652 from "module_1652" /* 1652 */;
 
 const require = globalThis.__r;
@@ -22,7 +22,7 @@ const jsxProd = fn(21);
 const colors = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
 let result = 2 * nativeDefault.space.PX_4;
 const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { container: { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 }, track: null, fillContainer: null, fill: null, fillShadow: null, textContainer: null, headerText: null, rightContent: null, descriptionText: null };
 const obj3 = { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.track = { height: 30, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, justifyContent: "center" };
@@ -139,7 +139,7 @@ export default function GuildPowerupsProgressBar(guildId) {
   }
   const obj6 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityValue: null, onPress: null, style: null, children: null };
   const intl3 = tmp2(tmp3[15]).intl;
-  obj6.accessibilityLabel = intl3.string(require("module_2696").NI6Ihe);
+  obj6.accessibilityLabel = intl3.string(require("module_2717").NI6Ihe);
   obj6.accessibilityValue = { text: formatToPlainStringResult };
   obj6.onPress = callback;
   obj6.style = tmp.container;

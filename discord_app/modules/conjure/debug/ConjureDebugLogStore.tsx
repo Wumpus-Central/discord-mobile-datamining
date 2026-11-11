@@ -1,9 +1,9 @@
-// === Module 10990: ConjureDebugLogStore ===
+// === Module 7307: ConjureDebugLogStore ===
 
-// Module 10990 (ConjureDebugLogStore)
+// Module 7307 (ConjureDebugLogStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureSequencedBuffer from "ConjureSequencedBuffer" /* 10991 */;
+import ConjureSequencedBuffer from "ConjureSequencedBuffer" /* 7308 */;
 
 require = fn;
 function logSeq(log) {
@@ -96,7 +96,7 @@ prototype["getLogs"] = function getLogs(projectId) {
 };
 prototype["getHistoryState"] = function getHistoryState(arg0, arg1) {
   value = map1.get(arg0);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(arg1);
   }

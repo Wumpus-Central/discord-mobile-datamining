@@ -1,7 +1,7 @@
-// === Module 13450: openGameOrganizationJoinModal ===
+// === Module 13964: openGameOrganizationJoinModal ===
 
-// Module 13450 (openGameOrganizationJoinModal)
-import checkGameOrganizationJoinEligibilityDefault from "checkGameOrganizationJoinEligibility" /* 13451 */;
+// Module 13964 (openGameOrganizationJoinModal)
+import checkGameOrganizationJoinEligibilityDefault from "checkGameOrganizationJoinEligibility" /* 13965 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

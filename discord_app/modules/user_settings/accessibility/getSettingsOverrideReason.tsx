@@ -1,9 +1,9 @@
-// === Module 17671: getSettingsOverrideReason ===
+// === Module 17836: getSettingsOverrideReason ===
 
-// Module 17671 (getSettingsOverrideReason)
+// Module 17836 (getSettingsOverrideReason)
 import util from "util" /* 1113 */;
-import _modDef4189 from "module_4189" /* 4189 */;
-import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 4968 */;
+import _modDef4240 from "module_4240" /* 4240 */;
+import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 5069 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ export default function getSettingsOverrideReason(arg0) {
     return intl2.string(util.t["2ExvRu"]);
   } else if (constants.GAME_MODE === arg0) {
     const intl = util.intl;
-    return intl.string(_modDef4189.VGcdxP);
+    return intl.string(_modDef4240.VGcdxP);
   }
 };
 export function useSettingsOverrideReason(arg0) {
@@ -37,7 +37,7 @@ export function useSettingsOverrideReason(arg0) {
       formatResult = intl.string(util.t["2ExvRu"]);
     } else if (constants.GAME_MODE === appliedOverrideReasonKey) {
       const intl3 = util.intl;
-      formatResult = intl3.string(_modDef4189.VGcdxP);
+      formatResult = intl3.string(_modDef4240.VGcdxP);
     }
     return formatResult;
   });

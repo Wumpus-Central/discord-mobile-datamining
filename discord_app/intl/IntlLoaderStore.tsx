@@ -3,9 +3,9 @@
 // Module 2187 (IntlLoaderStore)
 import util from "util" /* 1113 */;
 import _modDef2188 from "module_2188" /* 2188 */;
-import bg from "bg" /* 4417 */;
-import formatjs from "formatjs" /* 4892 */;
-import moment from "moment" /* 4923 */;
+import bg from "bg" /* 4517 */;
+import formatjs from "formatjs" /* 4992 */;
+import moment from "moment" /* 5023 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import module_2025 from "module_2025" /* 2025 */;
 
@@ -273,7 +273,6 @@ let closure_8 = async function _loadFormatJsLocale(arg0) {
   }
 };
 let closure_9 = async function _setMomentLocale(arg0) {
-  let length;
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -349,14 +348,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "channel",
+    error: "channelId",
     localeData: _modDef2188,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "channel" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "channelId" });
       }
     },
     setLoadingFailed(error, arg1) {

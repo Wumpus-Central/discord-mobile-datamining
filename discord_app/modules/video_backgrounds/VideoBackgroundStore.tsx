@@ -1,13 +1,13 @@
-// === Module 6060: VideoBackgroundStore ===
+// === Module 6173: VideoBackgroundStore ===
 
-// Module 6060 (VideoBackgroundStore)
+// Module 6173 (VideoBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5920 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 6033 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;

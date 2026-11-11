@@ -1,7 +1,7 @@
-// === Module 15538: ErrorUtils ===
+// === Module 9724: ErrorUtils ===
 
-// Module 15538 (ErrorUtils)
-import _mod15539 from "module_15539" /* 15539 */;
+// Module 9724 (ErrorUtils)
+import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 9725 */;
 import size from "module_2" /* 2 */;
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
@@ -38,5 +38,5 @@ export function serializeError(arg0) {
     const _String = String;
     error1 = new Error(String(error));
   }
-  return JSON.stringify(_mod15539.normalizeToSize(error1));
+  return JSON.stringify(BAGGAGE_HEADER_NAME.normalizeToSize(error1));
 }

@@ -1,20 +1,20 @@
-// === Module 13986: TypingIndicator ===
+// === Module 14466: TypingIndicator ===
 
-// Module 13986 (TypingIndicator)
+// Module 14466 (TypingIndicator)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import native from "native" /* 5201 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6175 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7390 */;
-import useTypingTextDefault from "useTypingText" /* 13990 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 13991 */;
-import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 13992 */;
-import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 13993 */;
+import native from "native" /* 5314 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
+import useTypingTextDefault from "useTypingText" /* 14470 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14471 */;
+import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 14472 */;
+import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 14473 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5756 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6855 */;
-import TypingStore from "TypingStore" /* 13987 */;
+import DevSettingsStore from "DevSettingsStore" /* 5869 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6907 */;
+import TypingStore from "TypingStore" /* 14467 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -93,7 +93,7 @@ function TypingIndicatorInner(channel) {
     }
   }, items3);
   const tmpResult = require("initialize");
-  analyticsLocations = useAnalyticsLocationsDefault(tmp5(7415).CHAT_TYPING_INDICATOR).analyticsLocations;
+  analyticsLocations = useAnalyticsLocationsDefault(tmp5(7871).CHAT_TYPING_INDICATOR).analyticsLocations;
   const items4 = [stateFromStoresObject, style_owner_user_id, , , ];
   ({ id: arr5[2], type: arr5[3] } = channel);
   items4[4] = analyticsLocations;
@@ -226,8 +226,8 @@ function TypingIndicatorInner(channel) {
       tmp39 = callback;
     }
     obj7.onPress = tmp39;
-    let tmp33Result = closure_12(tmp5(14003), obj7);
-    const tmp5Result2 = tmp5(14003);
+    let tmp33Result = closure_12(tmp5(14483), obj7);
+    const tmp5Result2 = tmp5(14483);
   } else {
     let tmp32Result3 = null;
     if (null != tmp6Result) {
@@ -236,7 +236,7 @@ function TypingIndicatorInner(channel) {
     const obj8 = { children: null };
     const items14 = [tmp32Result3, ];
     const obj9 = { style: tmp16.text, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "body-xs/medium", color: "interactive-text-default", includeFontPadding: true, ellipsizeMode: "tail", children: tmp6Result };
-    items14[1] = closure_12(tmp(5753).Text, obj9);
+    items14[1] = closure_12(tmp(5866).Text, obj9);
     obj8.children = items14;
     tmp33Result = closure_14(closure_13, obj8);
   }
@@ -245,7 +245,7 @@ function TypingIndicatorInner(channel) {
   let tmp32Result4 = null;
   if (channel.rateLimitPerUser > 0) {
     const obj10 = { channel, hasTypingText: null != tmp6Result, slowmodeType: analyticsLocations.SendMessage };
-    tmp32Result4 = closure_12(tmp5(14007), obj10);
+    tmp32Result4 = closure_12(tmp5(14487), obj10);
   }
   items15[1] = tmp32Result4;
   obj5.children = items15;
@@ -260,12 +260,12 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return application_id(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(10023).useChatShowingAutoComplete;
-const SlowmodeType = fn(7910).SlowmodeType;
+let closure_5 = fn(11805).useChatShowingAutoComplete;
+const SlowmodeType = fn(8726).SlowmodeType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { typingWrapper: { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 }, wrapperHoriz: { justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, horiz: null, text: null };
   const obj2 = { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 };

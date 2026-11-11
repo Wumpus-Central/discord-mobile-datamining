@@ -1,9 +1,9 @@
-// === Module 17434: UnsendIcon ===
+// === Module 17599: UnsendIcon ===
 
-// Module 17434 (UnsendIcon)
+// Module 17599 (UnsendIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod17435 from "module_17435" /* 17435 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod17600 from "module_17600" /* 17600 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function UnsendIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17435, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17600, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

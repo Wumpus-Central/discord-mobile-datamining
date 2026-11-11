@@ -1,7 +1,7 @@
-// === Module 13236: conjureProjectGroups ===
+// === Module 10467: conjureProjectGroups ===
 
-// Module 13236 (conjureProjectGroups)
-import conjureServerProject from "conjureServerProject" /* 7459 */;
+// Module 10467 (conjureProjectGroups)
+import conjureServerProject from "conjureServerProject" /* 7173 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/project_groups/conjureProjectGroups.tsx");
@@ -44,7 +44,7 @@ export function groupConjureProjects(arg0, stateFromStoresArray, stateFromStores
     return { guildId, projects };
   });
   const sorted = arr5.sort((guildId, guildId2) => {
-    let length = map1.get(guildId.guildId);
+    length = map1.get(guildId.guildId);
     if (length == null) {
       length = stateFromStoresArray.length;
     }

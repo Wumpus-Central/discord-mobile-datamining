@@ -1,6 +1,6 @@
-// === Module 18617: VoiceCategoryActionCreators ===
+// === Module 18789: VoiceCategoryActionCreators ===
 
-// Module 18617 (VoiceCategoryActionCreators)
+// Module 18789 (VoiceCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

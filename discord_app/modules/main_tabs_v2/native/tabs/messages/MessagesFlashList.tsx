@@ -1,15 +1,15 @@
-// === Module 18525: MessagesFlashList ===
+// === Module 18697: MessagesFlashList ===
 
-// Module 18525 (MessagesFlashList)
-import MessagesItemChannel from "MessagesItemChannel" /* 18454 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18464 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18465 */;
-import useMessagesData from "useMessagesData" /* 18468 */;
-import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 18483 */;
-import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 18520 */;
-import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 18521 */;
-import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 18522 */;
-import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 18523 */;
+// Module 18697 (MessagesFlashList)
+import MessagesItemChannel from "MessagesItemChannel" /* 18626 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18636 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18637 */;
+import useMessagesData from "useMessagesData" /* 18640 */;
+import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 18655 */;
+import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 18692 */;
+import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 18693 */;
+import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 18694 */;
+import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 18695 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

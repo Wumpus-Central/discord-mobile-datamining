@@ -1,10 +1,10 @@
-// === Module 20463: OrbsArcadeFetchManager ===
+// === Module 20658: OrbsArcadeFetchManager ===
 
-// Module 20463 (OrbsArcadeFetchManager)
+// Module 20658 (OrbsArcadeFetchManager)
 import DurationsDefault from "Durations" /* 1089 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17374 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17368 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17540 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17534 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 require = fn;
 const MINUTE = DurationsDefault.Millis.MINUTE;
@@ -62,13 +62,13 @@ class OrbsArcadeFetchManager extends tmp2 {
         }
         let result = !tmp4;
         if (!tmp4) {
-          const obj = applyArgumentsResult(17375);
-          result = obj.isOrbsArcadeEnrollmentOver(applyArgumentsResult(17369).orbsArcadeGameStateFromServer(game_state));
-          const obj2 = applyArgumentsResult(17369);
+          const obj = applyArgumentsResult(17541);
+          result = obj.isOrbsArcadeEnrollmentOver(applyArgumentsResult(17535).orbsArcadeGameStateFromServer(game_state));
+          const obj2 = applyArgumentsResult(17535);
         }
         if (tmp8) {
-          const orbsArcadeGames = applyArgumentsResult(17374).fetchOrbsArcadeGames();
-          const obj3 = applyArgumentsResult(17374);
+          const orbsArcadeGames = applyArgumentsResult(17540).fetchOrbsArcadeGames();
+          const obj3 = applyArgumentsResult(17540);
         }
         tmp8 = game.versionId !== game_state.game_version_id || result;
       }
@@ -123,7 +123,7 @@ class OrbsArcadeFetchManager extends tmp2 {
           applyArgumentsResult.boundaryRefetchTimerId = window.setTimeout(() => {
             closure_0.boundaryRefetchTimerId = null;
             closure_0.scheduledBoundaryAt = null;
-            const orbsArcadeGames = applyArgumentsResult(17374).fetchOrbsArcadeGames();
+            const orbsArcadeGames = applyArgumentsResult(17540).fetchOrbsArcadeGames();
           }, Math.min(diff + Math.floor(Math.random() * closure_5), DAY));
         }
       }

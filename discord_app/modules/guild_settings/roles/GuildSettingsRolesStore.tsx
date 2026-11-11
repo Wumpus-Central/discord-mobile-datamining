@@ -1,23 +1,23 @@
-// === Module 20211: GuildSettingsRolesStore ===
+// === Module 20406: GuildSettingsRolesStore ===
 
-// Module 20211 (GuildSettingsRolesStore)
+// Module 20406 (GuildSettingsRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import PlainRecord from "PlainRecord" /* 5006 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 5049 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 5051 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5079 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6174 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 14240 */;
-import GuildSettingsConstants from "GuildSettingsConstants" /* 20206 */;
-import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 20212 */;
-import GuildRoleStore from "GuildRoleStore" /* 5048 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9161 */;
+import PlainRecord from "PlainRecord" /* 5107 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 5150 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 5152 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5180 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6287 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 14723 */;
+import GuildSettingsConstants from "GuildSettingsConstants" /* 20401 */;
+import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 20407 */;
+import GuildRoleStore from "GuildRoleStore" /* 5149 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8339 */;
 import Constants from "Constants" /* 1072 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 20213 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 20408 */;
 import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -837,7 +837,7 @@ const guildSettingsRolesStore = new GuildSettingsRolesStore(DispatcherDefault, {
     }));
     let result = map.set(role.id, role);
     let id = map;
-    let length;
+    length = undefined;
     const mapped = roles.map((item) => id.get(item));
     const found = mapped.filter(id(length[10]).isNotNullish);
     new Set(roles);

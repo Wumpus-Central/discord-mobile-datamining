@@ -1,6 +1,6 @@
-// === Module 14346: canBoostGuildFromMobile ===
+// === Module 10638: canBoostGuildFromMobile ===
 
-// Module 14346 (canBoostGuildFromMobile)
+// Module 10638 (canBoostGuildFromMobile)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/native/utils/canBoostGuildFromMobile.tsx");

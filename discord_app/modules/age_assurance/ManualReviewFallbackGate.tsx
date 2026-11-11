@@ -1,9 +1,9 @@
-// === Module 8073: ManualReviewFallbackGate ===
+// === Module 8170: ManualReviewFallbackGate ===
 
-// Module 8073 (ManualReviewFallbackGate)
-import SafetyHubUtils from "SafetyHubUtils" /* 8042 */;
-import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 8074 */;
-import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2" /* 8075 */;
+// Module 8170 (ManualReviewFallbackGate)
+import SafetyHubUtils from "SafetyHubUtils" /* 8139 */;
+import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 8171 */;
+import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2" /* 8172 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

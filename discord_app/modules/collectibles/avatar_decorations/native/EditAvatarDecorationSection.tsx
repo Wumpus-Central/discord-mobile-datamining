@@ -1,23 +1,23 @@
-// === Module 15374: EditAvatarDecorationSection ===
+// === Module 15414: EditAvatarDecorationSection ===
 
-// Module 15374 (EditAvatarDecorationSection)
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7415 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9598 */;
-import useAvatarDecorationSections from "useAvatarDecorationSections" /* 15368 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 15375 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 15376 */;
+// Module 15414 (EditAvatarDecorationSection)
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9436 */;
+import useAvatarDecorationSections from "useAvatarDecorationSections" /* 15408 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 15415 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 15416 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7804).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(8424).isAvatarDecorationRecord;
 const AVATAR_DECORATION_SIZE = fn(1412).AVATAR_DECORATION_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5142);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15375).GUTTER_SIZE }, rowSpacer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15375).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(15375).GUTTER_SIZE };
+const createStyles = fn(5243);
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15415).GUTTER_SIZE }, rowSpacer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(15415).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(15415).GUTTER_SIZE };
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo((size) => {
   ({ items, selectedSkuId: require, setSelectedAvatarDecoration } = size);

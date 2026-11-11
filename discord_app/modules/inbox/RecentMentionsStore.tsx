@@ -1,23 +1,23 @@
-// === Module 6945: RecentMentionsStore ===
+// === Module 6998: RecentMentionsStore ===
 
-// Module 6945 (RecentMentionsStore)
+// Module 6998 (RecentMentionsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import TimeUtils from "TimeUtils" /* 5903 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
-import isMessageMentioned from "isMessageMentioned" /* 6578 */;
-import AgeGateUtils from "AgeGateUtils" /* 6791 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6946 */;
-import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 6947 */;
-import MessageRecord from "MessageRecord" /* 5085 */;
+import TimeUtils from "TimeUtils" /* 6016 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6311 */;
+import isMessageMentioned from "isMessageMentioned" /* 6691 */;
+import AgeGateUtils from "AgeGateUtils" /* 6775 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6999 */;
+import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 7000 */;
+import MessageRecord from "MessageRecord" /* 5186 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import MessageStore from "MessageStore" /* 6196 */;
-import ReadStateStore from "ReadStateStore" /* 6900 */;
-import RelationshipStore from "RelationshipStore" /* 5084 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5173 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6833 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import MessageStore from "MessageStore" /* 6309 */;
+import ReadStateStore from "ReadStateStore" /* 6952 */;
+import RelationshipStore from "RelationshipStore" /* 5185 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const isMessageMentionedDefault = isMessageMentioned;
@@ -455,7 +455,6 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
     closure_19 = {};
   },
   TRUNCATE_MENTIONS: function handleTruncateMentions(size) {
-    let length;
     size = size.size;
     ({ addedMessages, deletedMessages } = { deletedMessages: substr.slice(size) });
     if (null != addedMessages) {

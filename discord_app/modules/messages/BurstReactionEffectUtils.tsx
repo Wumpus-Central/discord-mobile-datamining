@@ -1,7 +1,7 @@
-// === Module 5138: BurstReactionEffectUtils ===
+// === Module 5239: BurstReactionEffectUtils ===
 
-// Module 5138 (BurstReactionEffectUtils)
-import ColorUtils from "ColorUtils" /* 5139 */;
+// Module 5239 (BurstReactionEffectUtils)
+import ColorUtils from "ColorUtils" /* 5240 */;
 import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -15,7 +15,6 @@ export function replaceAnimationColors(str, arg1) {
   return str.replace(/\[0,0,1,/g, "[" + complimentaryPaletteForColor[1][0] / 255 + "," + complimentaryPaletteForColor[1][1] / 255 + "," + complimentaryPaletteForColor[1][2] / 255 + ",");
 }
 export const getBurstAnimationHash = apply.memoize((str) => {
-  let length;
   let num = 0;
   let num2 = 0;
   let num3 = 0;

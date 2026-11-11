@@ -1,6 +1,6 @@
-// === Module 16235: AudioFidelityExperiment ===
+// === Module 16396: AudioFidelityExperiment ===
 
-// Module 16235 (AudioFidelityExperiment)
+// Module 16396 (AudioFidelityExperiment)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;

@@ -1,20 +1,20 @@
-// === Module 14839: ChatLoadingIndicator ===
+// === Module 15532: ChatLoadingIndicator ===
 
-// Module 14839 (ChatLoadingIndicator)
+// Module 15532 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5372 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6093 */;
-import Pressables from "Pressables" /* 7046 */;
+import timing_timing from "timing/timing" /* 5485 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6206 */;
+import Pressables from "Pressables" /* 7364 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6625 */;
-import MessageStore from "MessageStore" /* 6196 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
+import MessageStore from "MessageStore" /* 6309 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 import UserStore from "UserStore" /* 1385 */;
 import AppStateStore from "AppStateStore" /* 2117 */;
 
@@ -58,7 +58,7 @@ const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = { height: 8, width: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.pulse = size;
@@ -102,7 +102,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
     tmp4Result = gesture(Text_Text.Text, obj3);
   }
   items1[4] = tmp4Result;
-  const items3 = [gesture(closure_1_15, { children: items1 }), "\n", , , , , ];
+  const items3 = [gesture(colors, { children: items1 }), "\n", , , , , ];
   const items4 = ["messages.ready", ":", " ", , ];
   let str6 = str;
   if (messagesReady) {
@@ -123,7 +123,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
     tmp4Result3 = gesture(Text_Text.Text, obj5);
   }
   items4[4] = tmp4Result3;
-  items3[2] = gesture(closure_1_15, { children: items4 });
+  items3[2] = gesture(colors, { children: items4 });
   items3[3] = "\n";
   const items6 = ["connected", ":", " ", , ];
   let str10 = str;
@@ -145,7 +145,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
     tmp4Result4 = gesture(Text_Text.Text, obj7);
   }
   items6[4] = tmp4Result4;
-  items3[4] = gesture(closure_1_15, { children: items6 });
+  items3[4] = gesture(colors, { children: items6 });
   items3[5] = "\n";
   if (!messagesCached) {
     messagesCached = !messagesReady;
@@ -165,7 +165,7 @@ let closure_18 = noop.memo(function LoadingIndicatorDebugBody() {
   items8[3] = state(Text_Text.Text, obj8);
   const obj9 = { variant: "body-md/normal", color: "text-default", children: null };
   items8[4] = null;
-  items3[6] = gesture(closure_1_15, { children: items8 });
+  items3[6] = gesture(colors, { children: items8 });
   obj9.children = items3;
   return gesture(Text_Text.Text, obj9);
 });

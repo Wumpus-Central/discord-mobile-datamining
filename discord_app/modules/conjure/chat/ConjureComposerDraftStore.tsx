@@ -1,6 +1,6 @@
-// === Module 12801: ConjureComposerDraftStore ===
+// === Module 13484: ConjureComposerDraftStore ===
 
-// Module 12801 (ConjureComposerDraftStore)
+// Module 13484 (ConjureComposerDraftStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -44,7 +44,7 @@ ConjureComposerDraftStore.prototype["getDraft"] = function getDraft(arg0) {
   value = map.get(arg0);
   if (null == value) {
     const Storage = Storage2.Storage;
-    value2 = Storage.get(ConjureComposerDrafts);
+    let value2 = Storage.get(ConjureComposerDrafts);
     if (value2 == null) {
       value2 = {};
     }

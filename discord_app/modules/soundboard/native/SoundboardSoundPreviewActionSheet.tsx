@@ -1,16 +1,16 @@
-// === Module 19587: SoundboardSoundPreviewActionSheet ===
+// === Module 19776: SoundboardSoundPreviewActionSheet ===
 
-// Module 19587 (SoundboardSoundPreviewActionSheet)
+// Module 19776 (SoundboardSoundPreviewActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7592 */;
-import SoundboardUtils from "SoundboardUtils" /* 7600 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19571 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7163 */;
+import SoundboardUtils from "SoundboardUtils" /* 12931 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19760 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
 import UserStore from "UserStore" /* 1385 */;
-import SoundboardStore from "SoundboardStore" /* 6193 */;
+import SoundboardStore from "SoundboardStore" /* 6306 */;
 
 require = fn;
 const View = fn(17).View;
@@ -18,7 +18,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { soundPresentation: { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 }, soundPresentationPlaying: null, emoji: null, emojiFastImage: null, emojiText: null, text: null, buttonContainer: null, star: null, primaryIcon: null };
 let obj3 = { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 };
 obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.STATUS_SPEAKING };

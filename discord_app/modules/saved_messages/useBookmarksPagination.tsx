@@ -1,10 +1,10 @@
-// === Module 11298: useBookmarksPagination ===
+// === Module 11853: useBookmarksPagination ===
 
-// Module 11298 (useBookmarksPagination)
-import SavedMessagesTypes from "SavedMessagesTypes" /* 10317 */;
-import SavedMessagesActions from "SavedMessagesActions" /* 11297 */;
+// Module 11853 (useBookmarksPagination)
+import SavedMessagesTypes from "SavedMessagesTypes" /* 11845 */;
+import SavedMessagesActions from "SavedMessagesActions" /* 11852 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 10316 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11849 */;
 
 require = fn;
 function loadMoreBookmarks() {

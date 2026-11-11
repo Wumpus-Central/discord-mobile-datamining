@@ -1,7 +1,7 @@
-// === Module 11199: MessagePreviewParagraph ===
+// === Module 11001: MessagePreviewParagraph ===
 
-// Module 11199 (MessagePreviewParagraph)
-import Text_Text from "Text/Text" /* 5753 */;
+// Module 11001 (MessagePreviewParagraph)
+import Text_Text from "Text/Text" /* 5866 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -141,9 +141,9 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_6, jsx: metroImportDefault } = jsxProd);
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let closure_8 = createStyles.createStyles({ paragraph: { width: "100%", minWidth: 0, flexShrink: 1 } });
-createStyles = fn(5142);
+createStyles = fn(5243);
 let closure_9 = createStyles.createStyles((width) => {
   const obj = { probes: null };
   const size = { position: "absolute", width, height: 0, overflow: "hidden", opacity: 0 };

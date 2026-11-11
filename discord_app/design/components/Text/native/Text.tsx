@@ -1,14 +1,14 @@
-// === Module 5753: Text/Text ===
+// === Module 5866: Text/Text ===
 
-// Module 5753 (Text/Text)
+// Module 5866 (Text/Text)
 import applyDefault from "apply" /* 12 */;
 import NativeText2 from "NativeText" /* 299 */;
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
-import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 5755 */;
-import PlainTextExperimentContext from "PlainTextExperimentContext" /* 5757 */;
-import PlainTextEligibility from "PlainTextEligibility" /* 5758 */;
-import _modDef5759 from "module_5759" /* 5759 */;
+import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight" /* 5868 */;
+import PlainTextExperimentContext from "PlainTextExperimentContext" /* 5870 */;
+import PlainTextEligibility from "PlainTextEligibility" /* 5871 */;
+import _modDef5872 from "module_5872" /* 5872 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import module_1652 from "module_1652" /* 1652 */;
@@ -152,7 +152,7 @@ obj3[700] = Fonts.GINTO_DISCORD_NORD_BOLD;
 ({ GINTO_DISCORD_NORD_BOLD_ITALIC: obj5[700], GINTO_DISCORD_NORD_BLACK_ITALIC: obj5[900] } = Fonts);
 const dependencyMap = { nitro: obj3, primary: { 400: null, 500: null, 600: null, 700: null, 800: null }, code: { 400: null, 700: null } };
 let closure_14 = { nitro: { 700: null, 900: null } };
-const TextVariantsFlat = fn(5754).TextVariantsFlat;
+const TextVariantsFlat = fn(5867).TextVariantsFlat;
 const mapped = TextVariantsFlat.map((fontSize) => {
   const letterSpacing = fontSize.letterSpacing;
   items = [fontSize.name, ];
@@ -188,9 +188,9 @@ const mapped = TextVariantsFlat.map((fontSize) => {
   }
 });
 const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
-const useManaTextMigrationHighlight = fn(5755);
+const useManaTextMigrationHighlight = fn(5868);
 let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEntriesResult);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_16 = createStyles.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {

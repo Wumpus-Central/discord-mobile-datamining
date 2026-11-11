@@ -1,13 +1,13 @@
-// === Module 14817: IconActionButton ===
+// === Module 15510: IconActionButton ===
 
-// Module 14817 (IconActionButton)
+// Module 15510 (IconActionButton)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import useFontScale from "useFontScale" /* 5768 */;
-import Pressables from "Pressables" /* 7046 */;
-import shared_components_Badge from "shared_components/Badge" /* 9914 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import useFontScale from "useFontScale" /* 5881 */;
+import Pressables from "Pressables" /* 7364 */;
+import shared_components_Badge from "shared_components/Badge" /* 8991 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,7 +29,7 @@ class ButtonBadge {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 const timestampProducer = createStyles.createStyles(() => {
   const obj = { actionIconButtonPressable: { minWidth: 32, minHeight: 32, borderRadius: 20, marginEnd: 12, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 12 }, withoutMargin: { marginEnd: 0 }, filled: {}, outlined: null, roundButton: null, actionIcon: null, actionText: null, unreadBadgeLeft: null, unreadBadgeRight: null, unreadBadgeMask: null, countStyle: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);

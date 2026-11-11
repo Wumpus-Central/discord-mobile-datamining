@@ -1,8 +1,8 @@
-// === Module 7276: useNavigationTheme ===
+// === Module 7524: useNavigationTheme ===
 
-// Module 7276 (useNavigationTheme)
+// Module 7524 (useNavigationTheme)
 import Link from "Link" /* 1500 */;
-import shared from "shared" /* 5149 */;
+import shared from "shared" /* 5250 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

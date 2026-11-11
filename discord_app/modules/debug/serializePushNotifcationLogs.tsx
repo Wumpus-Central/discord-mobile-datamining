@@ -1,6 +1,6 @@
-// === Module 11235: serializePushNotifcationLogs ===
+// === Module 11046: serializePushNotifcationLogs ===
 
-// Module 11235 (serializePushNotifcationLogs)
+// Module 11046 (serializePushNotifcationLogs)
 import Storage3 from "Storage" /* 510 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -16,7 +16,7 @@ export default function serializePushNotificationLogs(arr, arg1) {
     const Storage = Storage3.Storage;
     value = Storage.get(React2);
     const Storage2 = Storage3.Storage;
-    value2 = Storage2.get(React3);
+    const value2 = Storage2.get(React3);
     let str2 = "";
     if (null != value) {
       let _HermesInternal = HermesInternal;

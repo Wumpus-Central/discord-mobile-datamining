@@ -1,6 +1,6 @@
-// === Module 7337: LandingAssetUtils ===
+// === Module 7804: LandingAssetUtils ===
 
-// Module 7337 (LandingAssetUtils)
+// Module 7804 (LandingAssetUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_onboarding/LandingAssetUtils.tsx");

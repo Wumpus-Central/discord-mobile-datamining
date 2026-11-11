@@ -1,15 +1,15 @@
-// === Module 18545: VoiceUsers ===
+// === Module 18717: VoiceUsers ===
 
-// Module 18545 (VoiceUsers)
+// Module 18717 (VoiceUsers)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5885 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9918 */;
-import ChannelListLayout from "ChannelListLayout" /* 11185 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 14373 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5998 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8995 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 10667 */;
+import ChannelListLayout from "ChannelListLayout" /* 10987 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5054 */;
+import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 
 require = fn;
 function AudienceItem(arg0) {
@@ -33,9 +33,9 @@ const jsxProd = fn(21);
 let closure_8 = {};
 let closure_9 = [];
 let c10 = "body-sm/medium";
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_11 = createStyles.createStyles((arg0) => {
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   if (arg0) {
     let BACKGROUND_BASE_LOWEST = colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT;
     let tmp4 = importDefault;
@@ -60,10 +60,10 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   const tmp = channel;
-  const tmp3 = closure_11(channel(9918)());
-  const obj = user(9321);
-  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(9321).useLocalSelfMuteDeaf());
-  const obj2 = user(9321);
+  const tmp3 = closure_11(channel(8995)());
+  const obj = user(10530);
+  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(10530).useLocalSelfMuteDeaf());
+  const obj2 = user(10530);
   items = [GuildMemberStore];
   const items1 = [channel.guild_id, user.id];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({ storeMember: GuildMemberStore.getMember(channel.guild_id, user.id), isGuest: GuildMemberStore.isGuestOrLurker(channel.guild_id, user.id) }), items1);
@@ -87,7 +87,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   obj7.sessionId = result.sessionId;
   obj7.channel = channel;
   obj7.isGuest = isGuest;
-  obj4.children = closure_6(tmp(18546), obj7, user.id);
+  obj4.children = closure_6(tmp(18718), obj7, user.id);
   return closure_6(View, obj4);
 });
 const size = fn(2);

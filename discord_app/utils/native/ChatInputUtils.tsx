@@ -1,12 +1,12 @@
-// === Module 5325: ChatInputUtils ===
+// === Module 5438: ChatInputUtils ===
 
-// Module 5325 (ChatInputUtils)
+// Module 5438 (ChatInputUtils)
 import KeyboardUIStore from "KeyboardUIStore" /* 1497 */;
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
-import ScreenIndexFrozen from "ScreenIndexFrozen" /* 5326 */;
-import useKeyboardType from "useKeyboardType" /* 5327 */;
-import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 5328 */;
+import ScreenIndexFrozen from "ScreenIndexFrozen" /* 5439 */;
+import useKeyboardType from "useKeyboardType" /* 5440 */;
+import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 5441 */;
 import size from "module_2" /* 2 */;
 
 function getHighestIndexForScreenIndexMap(map1) {
@@ -76,7 +76,7 @@ export function createInputRefTracker(id, screenIndex) {
         }
       } else if (null == obj) {
         obj = { current };
-        value2 = map.get(id);
+        let value2 = map.get(id);
         if (value2 == null) {
           const _Map = Map;
           value2 = new Map();
@@ -104,7 +104,7 @@ export function createInputRefTracker(id, screenIndex) {
           map1.delete(closure_0);
         }
         const current = obj.current;
-        value2 = map.get(current);
+        let value2 = map.get(current);
         if (value2 == null) {
           const _Map = Map;
           value2 = new Map();
@@ -174,7 +174,7 @@ export function getChatInputRef(id, screenIndex) {
     value = map.get(id);
     let current;
     if (value != null) {
-      value2 = value.get(screenIndex);
+      const value2 = value.get(screenIndex);
       if (value2 != null) {
         current = value2.current;
       }

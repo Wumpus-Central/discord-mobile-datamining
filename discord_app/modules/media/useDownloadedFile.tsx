@@ -1,8 +1,8 @@
-// === Module 11786: useDownloadedFile ===
+// === Module 12424: useDownloadedFile ===
 
-// Module 11786 (useDownloadedFile)
+// Module 12424 (useDownloadedFile)
 import util from "util" /* 1113 */;
-import FileSizeUtils from "FileSizeUtils" /* 6586 */;
+import FileSizeUtils from "FileSizeUtils" /* 6699 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -99,7 +99,7 @@ export function useDownloadedFile(url, arg1) {
         }
         closure_132_3 = c0;
         const headers = closure_132_0.headers;
-        value2 = headers.get("content-length");
+        const value2 = headers.get("content-length");
         c1 = value2;
         if (value2 == null) {
           c1 = "1";

@@ -1,23 +1,23 @@
-// === Module 17642: SettingsAppearanceChannelListPreviewNitroUpsell ===
+// === Module 17807: SettingsAppearanceChannelListPreviewNitroUpsell ===
 
-// Module 17642 (SettingsAppearanceChannelListPreviewNitroUpsell)
+// Module 17807 (SettingsAppearanceChannelListPreviewNitroUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5717 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7390 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7415 */;
-import openPremiumModalDefault from "openPremiumModal" /* 10033 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10034 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10088 */;
+import LinearGradientDefault from "LinearGradient" /* 5830 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9364 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9513 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10891 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import module_1652 from "module_1652" /* 1652 */;
 
 require = fn;
 function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   let analyticsLocations;
   const tmp = closure_16();
-  items = [closure_17, theme.theme, closure_9, c4, analyticsLocations(5763).withSpring, analyticsLocations(5764).springStandard];
+  items = [closure_17, theme.theme, closure_9, c4, analyticsLocations(5876).withSpring, analyticsLocations(5877).springStandard];
   analyticsLocations = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -55,7 +55,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   obj4.text = intl.string(analyticsLocations(1113).t.pj0XBN);
   obj4.icon = closure_10(analyticsLocations(1187).NitroWheel, { style: tmp.nitroWheelIcon });
   obj4.onPress = callback;
-  items3[1] = closure_10(analyticsLocations(5760).Button, obj4);
+  items3[1] = closure_10(analyticsLocations(5873).Button, obj4);
   obj2.children = items3;
   return closure_11(View, obj2);
 }
@@ -68,7 +68,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
 const colors = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"];
-let items = [{ code: "(function animationEntering_SettingsAppearanceChannelListPreviewNitroUpsellTsx1(visible){let[withSpring,springStandard]=this.__closure;return{opacity:withSpring(visible,springStandard)};})" }, fn(5763).withSpring, fn(5764).springStandard];
+let items = [{ code: "(function animationEntering_SettingsAppearanceChannelListPreviewNitroUpsellTsx1(visible){let[withSpring,springStandard]=this.__closure;return{opacity:withSpring(visible,springStandard)};})" }, fn(5876).withSpring, fn(5877).springStandard];
 let closure_129_0;
 let closure_129_1;
 [tmp5, tmp6, tmp7] = items;
@@ -79,7 +79,7 @@ let items1 = [tmp6, tmp7];
 animationEntering.__closure = items1;
 animationEntering.__workletHash = 2802270631824;
 animationEntering.__initData = tmp5;
-let items2 = [{ code: "(function animationExiting_SettingsAppearanceChannelListPreviewNitroUpsellTsx3(visible,cleanUp){let[withSpring,springStandard,_worklet_1236385840160_init_data]=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function animationExiting_SettingsAppearanceChannelListPreviewNitroUpsellTsx3([_worklet_1236385840160_init_data,cleanUp]){const SettingsAppearanceChannelListPreviewNitroUpsellTsx2=function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);};SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__closure=[cleanUp];SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__workletHash=1236385840160;SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__initData=_worklet_1236385840160_init_data;return SettingsAppearanceChannelListPreviewNitroUpsellTsx2;}([_worklet_1236385840160_init_data,cleanUp]))};})" }, fn(5763).withSpring, fn(5764).springStandard, { code: "(function SettingsAppearanceChannelListPreviewNitroUpsellTsx2(finished){let[cleanUp]=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);})" }];
+let items2 = [{ code: "(function animationExiting_SettingsAppearanceChannelListPreviewNitroUpsellTsx3(visible,cleanUp){let[withSpring,springStandard,_worklet_1236385840160_init_data]=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function animationExiting_SettingsAppearanceChannelListPreviewNitroUpsellTsx3([_worklet_1236385840160_init_data,cleanUp]){const SettingsAppearanceChannelListPreviewNitroUpsellTsx2=function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);};SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__closure=[cleanUp];SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__workletHash=1236385840160;SettingsAppearanceChannelListPreviewNitroUpsellTsx2.__initData=_worklet_1236385840160_init_data;return SettingsAppearanceChannelListPreviewNitroUpsellTsx2;}([_worklet_1236385840160_init_data,cleanUp]))};})" }, fn(5876).withSpring, fn(5877).springStandard, { code: "(function SettingsAppearanceChannelListPreviewNitroUpsellTsx2(finished){let[cleanUp]=this.__closure;var _cleanUp;(_cleanUp=cleanUp)===null||_cleanUp===void 0||_cleanUp(finished);})" }];
 let closure_130_0;
 let closure_130_1;
 let closure_130_2;
@@ -108,7 +108,7 @@ let items3 = [tmp9, tmp10, tmp11];
 animationExiting.__closure = items3;
 animationExiting.__workletHash = 2573458161713;
 animationExiting.__initData = tmp8;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { nitroUpsell: null, nitroWheelIcon: null };
 let obj2 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

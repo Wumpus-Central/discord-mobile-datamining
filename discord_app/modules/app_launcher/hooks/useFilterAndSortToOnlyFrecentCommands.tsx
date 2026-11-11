@@ -1,8 +1,8 @@
-// === Module 12695: useFilterAndSortToOnlyFrecentCommands ===
+// === Module 13385: useFilterAndSortToOnlyFrecentCommands ===
 
-// Module 12695 (useFilterAndSortToOnlyFrecentCommands)
+// Module 13385 (useFilterAndSortToOnlyFrecentCommands)
 import noop from "module_19" /* 19 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9860 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 11347 */;
 
 const require = fn;
 const size = fn(2);
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/hooks/useFilterA
 
 export default function useFilterAndSortToOnlyFrecentCommands(commands) {
   commands = commands.commands;
-  let length = commands.limit;
+  length = commands.limit;
   if (length === undefined) {
     length = commands.length;
   }

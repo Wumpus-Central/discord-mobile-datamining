@@ -1,6 +1,6 @@
-// === Module 18596: ? ===
+// === Module 18768: ? ===
 
-// Module 18596
+// Module 18768
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/powerups/guild_tag_badge_packs_wave_two_powerup_2x.png.js");

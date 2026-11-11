@@ -1,20 +1,20 @@
-// === Module 19629: useVoicePanelDockStatus ===
+// === Module 19818: useVoicePanelDockStatus ===
 
-// Module 19629 (useVoicePanelDockStatus)
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11371 */;
+// Module 19818 (useVoicePanelDockStatus)
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11924 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6901 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
-import SpeakingStore from "SpeakingStore" /* 6814 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
+import SpeakingStore from "SpeakingStore" /* 6878 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5805 */;
+import VoiceStateStore from "VoiceStateStore" /* 5918 */;
 
 const require = fn;
-const VoicePanelDockStatusStore = fn(19630);
+const VoicePanelDockStatusStore = fn(19819);
 ({ releaseDockStatus: closure_11, initDockStatus: closure_12, setDockHasStreamers: map1, setDockSpeakingIds: closure_14, showVoiceMoment: closure_15 } = VoicePanelDockStatusStore);
-const ParticipantTypes = fn(5807).ParticipantTypes;
+const ParticipantTypes = fn(5920).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/useVoicePanelDockStatus.tsx");
 
@@ -81,7 +81,7 @@ export default function useVoicePanelDockStatus() {
           while (iter2 !== undefined) {
             let tmp5 = nextResult;
             if (!set.has(nextResult)) {
-              let tmp10 = closure_3_15(channelId, tmp5, "joined");
+              let tmp10 = colors(channelId, tmp5, "joined");
             }
             continue;
           }
@@ -90,7 +90,7 @@ export default function useVoicePanelDockStatus() {
           while (iter !== undefined) {
             let tmp16 = nextResult1;
             if (!set.has(nextResult1)) {
-              let tmp20 = closure_3_15(channelId, tmp16, "left");
+              let tmp20 = colors(channelId, tmp16, "left");
             }
             continue;
           }
@@ -126,7 +126,7 @@ export default function useVoicePanelDockStatus() {
           while (iter !== undefined) {
             let tmp7 = nextResult;
             if (!set.has(nextResult)) {
-              let tmp12 = closure_3_15(channelId, tmp7, "streaming");
+              let tmp12 = colors(channelId, tmp7, "streaming");
             }
             continue;
           }

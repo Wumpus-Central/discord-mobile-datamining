@@ -1,6 +1,6 @@
-// === Module 7538: SensitiveMediaRedactionSettingUtils ===
+// === Module 8575: SensitiveMediaRedactionSettingUtils ===
 
-// Module 7538 (SensitiveMediaRedactionSettingUtils)
+// Module 8575 (SensitiveMediaRedactionSettingUtils)
 import apply from "apply" /* 12 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import size from "module_2" /* 2 */;

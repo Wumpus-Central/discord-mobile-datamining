@@ -1,9 +1,9 @@
-// === Module 10207: BicycleIcon ===
+// === Module 11263: BicycleIcon ===
 
-// Module 10207 (BicycleIcon)
+// Module 11263 (BicycleIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod10208 from "module_10208" /* 10208 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod11264 from "module_11264" /* 11264 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BicycleIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10208, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11264, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

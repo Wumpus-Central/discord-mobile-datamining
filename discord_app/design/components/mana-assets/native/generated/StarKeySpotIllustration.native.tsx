@@ -1,19 +1,19 @@
-// === Module 20350: StarKeySpotIllustration ===
+// === Module 20545: StarKeySpotIllustration ===
 
-// Module 20350 (StarKeySpotIllustration)
-import assetHelpers from "assetHelpers" /* 7138 */;
-import _modDef20351 from "module_20351" /* 20351 */;
-import _modDef20352 from "module_20352" /* 20352 */;
-import _modDef20353 from "module_20353" /* 20353 */;
+// Module 20545 (StarKeySpotIllustration)
+import assetHelpers from "assetHelpers" /* 7689 */;
+import _modDef20546 from "module_20546" /* 20546 */;
+import _modDef20547 from "module_20547" /* 20547 */;
+import _modDef20548 from "module_20548" /* 20548 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef20351 }, 3: null };
-let obj2 = { uri: _modDef20351 };
-obj[2] = { uri: _modDef20352 };
-const obj3 = { uri: _modDef20352 };
-obj[3] = { uri: _modDef20353 };
+let obj = { 1: null, 2: { uri: _modDef20546 }, 3: null };
+let obj2 = { uri: _modDef20546 };
+obj[2] = { uri: _modDef20547 };
+const obj3 = { uri: _modDef20547 };
+obj[3] = { uri: _modDef20548 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/StarKeySpotIllustration.native.tsx");
 

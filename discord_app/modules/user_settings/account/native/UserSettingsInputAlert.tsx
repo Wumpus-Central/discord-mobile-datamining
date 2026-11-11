@@ -1,18 +1,18 @@
-// === Module 17018: UserSettingsInputAlert ===
+// === Module 17181: UserSettingsInputAlert ===
 
-// Module 17018 (UserSettingsInputAlert)
+// Module 17181 (UserSettingsInputAlert)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import Stack_Stack from "Stack/Stack" /* 6161 */;
-import common_AlertDefault from "common/Alert" /* 6164 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7019 */;
-import TextInput from "TextInput" /* 7151 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import Stack_Stack from "Stack/Stack" /* 6274 */;
+import common_AlertDefault from "common/Alert" /* 6277 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7408 */;
+import TextInput from "TextInput" /* 7553 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const hasOwnProperty = { input: "", error: "add" };
+const hasOwnProperty = { input: "", error: "paddingHorizontal" };
 const PureComponent = noop.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {

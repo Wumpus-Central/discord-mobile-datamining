@@ -1,12 +1,12 @@
-// === Module 10319: useShouldHideMediaOptions ===
+// === Module 12544: useShouldHideMediaOptions ===
 
-// Module 10319 (useShouldHideMediaOptions)
-import ChannelStore from "ChannelStore" /* 4991 */;
+// Module 12544 (useShouldHideMediaOptions)
+import ChannelStore from "ChannelStore" /* 5092 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelFlags = fn(4998).ChannelFlags;
+const ChannelFlags = fn(5099).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
 

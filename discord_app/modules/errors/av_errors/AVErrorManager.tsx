@@ -1,17 +1,17 @@
-// === Module 20480: AVErrorManager ===
+// === Module 20675: AVErrorManager ===
 
-// Module 20480 (AVErrorManager)
+// Module 20675 (AVErrorManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AVError from "AVError" /* 6081 */;
-import ErrorDefinitions from "ErrorDefinitions" /* 20481 */;
-import AVErrorAnalytics from "AVErrorAnalytics" /* 20501 */;
+import AVError from "AVError" /* 6194 */;
+import ErrorDefinitions from "ErrorDefinitions" /* 20676 */;
+import AVErrorAnalytics from "AVErrorAnalytics" /* 20696 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6771 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
-import VoiceStateStore from "VoiceStateStore" /* 5805 */;
-import AVErrorStore from "AVErrorStore" /* 11931 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
+import VoiceStateStore from "VoiceStateStore" /* 5918 */;
+import AVErrorStore from "AVErrorStore" /* 12699 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 require = fn;
 function setDifference(set, set2) {
@@ -95,7 +95,7 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
         const tmp47 = setDifference(set1, set);
         const tmp49 = tmp47[Symbol.iterator]();
         while (tmp49 !== undefined) {
-          value2 = activeErrors1.get(tmp34);
+          let value2 = activeErrors1.get(tmp34);
           let tmp37 = value2;
           if (null != value2) {
             let _JSON = JSON;

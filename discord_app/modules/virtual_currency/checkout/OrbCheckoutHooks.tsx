@@ -1,11 +1,11 @@
-// === Module 15352: OrbCheckoutHooks ===
+// === Module 15392: OrbCheckoutHooks ===
 
-// Module 15352 (OrbCheckoutHooks)
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7810 */;
-import useRedeemVirtualCurrency from "useRedeemVirtualCurrency" /* 9653 */;
+// Module 15392 (OrbCheckoutHooks)
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8430 */;
+import useRedeemVirtualCurrency from "useRedeemVirtualCurrency" /* 10372 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import SKUStore from "SKUStore" /* 6954 */;
+import SKUStore from "SKUStore" /* 7007 */;
 import size from "module_2" /* 2 */;
 
 ({ useCallback: c3, useMemo: closure_4 } = noop);

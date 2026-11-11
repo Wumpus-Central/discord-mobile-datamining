@@ -1,10 +1,10 @@
-// === Module 10073: TopEmojisUtils ===
+// === Module 9483: TopEmojisUtils ===
 
-// Module 10073 (TopEmojisUtils)
-import TopEmojisActionCreators from "TopEmojisActionCreators" /* 10074 */;
+// Module 9483 (TopEmojisUtils)
+import TopEmojisActionCreators from "TopEmojisActionCreators" /* 9484 */;
 import UserStore from "UserStore" /* 1385 */;
-import EmojiStore from "EmojiStore" /* 6854 */;
-import TopEmojiStore from "TopEmojiStore" /* 6856 */;
+import EmojiStore from "EmojiStore" /* 6906 */;
+import TopEmojiStore from "TopEmojiStore" /* 6908 */;
 
 require = fn;
 const size = fn(2);

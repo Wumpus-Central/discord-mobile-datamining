@@ -1,9 +1,9 @@
-// === Module 13661: ExperimentalCheckpointIcon ===
+// === Module 15079: ExperimentalCheckpointIcon ===
 
-// Module 13661 (ExperimentalCheckpointIcon)
+// Module 15079 (ExperimentalCheckpointIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod13662 from "module_13662" /* 13662 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod15080 from "module_15080" /* 15080 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ExperimentalCheckpointIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13662, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15080, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

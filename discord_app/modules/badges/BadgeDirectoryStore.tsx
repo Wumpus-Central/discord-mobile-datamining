@@ -1,13 +1,13 @@
-// === Module 8840: BadgeDirectoryStore ===
+// === Module 8481: BadgeDirectoryStore ===
 
-// Module 8840 (BadgeDirectoryStore)
+// Module 8481 (BadgeDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import privDefault from "priv" /* 1453 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8841 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8845 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8482 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8486 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -129,7 +129,7 @@ prototype["getBadgeById"] = function getBadgeById(GIFTING, displayedUserId) {
   let tmp5;
   if (null != tmp) {
     value = closure_5.get(tmp);
-    value2 = undefined;
+    let value2;
     if (value != null) {
       const badges = value.badges;
       value2 = badges.get(GIFTING);
@@ -231,7 +231,7 @@ const badgeDirectoryStore = new BadgeDirectoryStore(DispatcherDefault, {
     peekResult.badges = new Map(badges.map((badge_id) => {
       const acks = _undefined.acks;
       value = acks.get(badge_id.badge_id);
-      value2 = null;
+      let value2 = null;
       if (tmp4) {
         const badges = _undefined.badges;
         value2 = badges.get(badge_id.badge_id);
@@ -250,7 +250,7 @@ const badgeDirectoryStore = new BadgeDirectoryStore(DispatcherDefault, {
     const map2 = new Map(badges.map((badge_id) => {
       const acks = _undefined.acks;
       value = acks.get(badge_id.badge_id);
-      value2 = null;
+      let value2 = null;
       if (tmp4) {
         const badges = _undefined.badges;
         value2 = badges.get(badge_id.badge_id);
@@ -322,7 +322,7 @@ const badgeDirectoryStore = new BadgeDirectoryStore(DispatcherDefault, {
       return false;
     } else {
       const badges = peekResult.badges;
-      value2 = badges.get(badge.badge_id);
+      const value2 = badges.get(badge.badge_id);
       const badges2 = peekResult.badges;
       const obj3 = {};
       const merged = Object.assign(badge);

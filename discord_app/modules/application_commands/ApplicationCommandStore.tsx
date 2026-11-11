@@ -1,12 +1,12 @@
-// === Module 8420: ApplicationCommandStore ===
+// === Module 8941: ApplicationCommandStore ===
 
-// Module 8420 (ApplicationCommandStore)
+// Module 8941 (ApplicationCommandStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7779 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8657 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6920 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6973 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 
 require = fn;
 function handleInit() {
@@ -110,7 +110,7 @@ function handleUpdateOptionStates(channelId) {
           _location = arr2.location;
         }
         obj2.location = _location;
-        let length = arr.length;
+        length = arr.length;
         if (length == null) {
           length = arr2.length;
         }

@@ -1,8 +1,8 @@
-// === Module 12631: useViewableAppLauncherHomeItems ===
+// === Module 13319: useViewableAppLauncherHomeItems ===
 
-// Module 12631 (useViewableAppLauncherHomeItems)
+// Module 13319 (useViewableAppLauncherHomeItems)
 import noop from "module_19" /* 19 */;
-import AppLauncherStore from "AppLauncherStore" /* 12632 */;
+import AppLauncherStore from "AppLauncherStore" /* 12609 */;
 
 const require = fn;
 const size = fn(2);
@@ -26,7 +26,7 @@ export function useViewableAppLauncherHomeItems() {
       if (!value) {
         const result = closure_1_0.set(true);
       }
-      value2 = item.type !== sharedValue(sharedValue1[3]).AppLauncherHomeListItemType.LEARN_MORE;
+      let value2 = item.type !== sharedValue(sharedValue1[3]).AppLauncherHomeListItemType.LEARN_MORE;
       if (!value2) {
         value2 = closure_1_1.get();
       }

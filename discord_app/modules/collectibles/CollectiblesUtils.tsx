@@ -1,6 +1,6 @@
-// === Module 7811: CollectiblesUtils ===
+// === Module 8431: CollectiblesUtils ===
 
-// Module 7811 (CollectiblesUtils)
+// Module 8431 (CollectiblesUtils)
 import apply from "apply" /* 12 */;
 import Constants2 from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
@@ -11,12 +11,12 @@ import NameplateRecord from "NameplateRecord" /* 2109 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
 import EntitlementTypes from "EntitlementTypes" /* 2170 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import PriceUtils from "PriceUtils" /* 7480 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7804 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7805 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7806 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7810 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7812 */;
+import PriceUtils from "PriceUtils" /* 7190 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 8424 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 8425 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 8426 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8430 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 8432 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1074 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -625,7 +625,12 @@ export function getLogoSize(arg0) {
   return 3.8 * arg0;
 }
 export function getDaysRemaining(date) {
-  date = new Date();
+  let timestamp = arg1;
+  if (arg1 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  date = new Date(timestamp);
   const fullYear = date.getFullYear();
   const month = date.getMonth();
   const fullYear1 = date.getFullYear();
@@ -636,11 +641,12 @@ export function shouldShowLimitedTimeBadge(categoryWillUnpublishAt) {
   let tmp = null != categoryWillUnpublishAt;
   if (tmp) {
     const _Date = Date;
-    const date = new Date();
     const _Date2 = Date;
+    const date = new Date(Date.now());
+    const _Date3 = Date;
     const fullYear = date.getFullYear();
     const month = date.getMonth();
-    const _Date3 = Date;
+    const _Date4 = Date;
     const fullYear1 = categoryWillUnpublishAt.getFullYear();
     const month1 = categoryWillUnpublishAt.getMonth();
     const _Math = Math;

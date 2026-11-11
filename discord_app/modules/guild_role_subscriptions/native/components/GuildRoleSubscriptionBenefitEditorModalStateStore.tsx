@@ -1,12 +1,12 @@
-// === Module 20403: GuildRoleSubscriptionBenefitEditorModalStateStore ===
+// === Module 20598: GuildRoleSubscriptionBenefitEditorModalStateStore ===
 
-// Module 20403 (GuildRoleSubscriptionBenefitEditorModalStateStore)
+// Module 20598 (GuildRoleSubscriptionBenefitEditorModalStateStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import _mod5057 from "module_5057" /* 5057 */;
+import _mod5158 from "module_5158" /* 5158 */;
 import identity from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "cix", emojiName: "get", description: "find", refId: "push" });
+let closure_2 = Object.freeze({ name: "", emojiId: "HermesInternal", emojiName: "channel", description: "default", refId: "isArray" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};
@@ -59,33 +59,33 @@ export function useDescriptionState() {
     items = [, ];
     ({ description: arr[0], setDescription: arr[1] } = arg0);
     return items;
-  }, _mod5057.shallow);
+  }, _mod5158.shallow);
 }
 export function useEmojiIdState() {
   return closure_3((arg0) => {
     items = [, ];
     ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
     return items;
-  }, _mod5057.shallow);
+  }, _mod5158.shallow);
 }
 export function useEmojiNameState() {
   return closure_3((arg0) => {
     items = [, ];
     ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
     return items;
-  }, _mod5057.shallow);
+  }, _mod5158.shallow);
 }
 export function useNameState() {
   return closure_3((arg0) => {
     items = [, ];
     ({ name: arr[0], setName: arr[1] } = arg0);
     return items;
-  }, _mod5057.shallow);
+  }, _mod5158.shallow);
 }
 export function useRefIdState() {
   return closure_3((arg0) => {
     items = [, ];
     ({ refId: arr[0], setRefId: arr[1] } = arg0);
     return items;
-  }, _mod5057.shallow);
+  }, _mod5158.shallow);
 }

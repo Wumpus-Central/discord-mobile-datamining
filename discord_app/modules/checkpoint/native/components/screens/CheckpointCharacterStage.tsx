@@ -1,25 +1,14 @@
-// === Module 13716: CheckpointCharacterStage ===
+// === Module 14198: CheckpointCharacterStage ===
 
-// Module 13716 (CheckpointCharacterStage)
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13718 */;
-import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 13884 */;
+// Module 14198 (CheckpointCharacterStage)
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 14199 */;
+import CheckpointCharacterDataBinding from "CheckpointCharacterDataBinding" /* 14365 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13681 */;
+import CheckpointStore from "CheckpointStore" /* 14150 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(5142);
-let obj2 = { container: { flexGrow: 1 }, rive: null };
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.rive = {};
-let closure_8 = createStyles.createStyles(obj2);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/CheckpointCharacterStage.tsx");
-
-export default function CheckpointCharacterStage(stage) {
+function CheckpointCharacterStage(stage) {
   stage = stage.stage;
   const layout = stage.layout;
   const isHidden = stage.isHidden;
@@ -101,4 +90,25 @@ export default function CheckpointCharacterStage(stage) {
   obj8.accessibilityLabel = stage(isHidden[16]).getCheckpointCharacterAccessibilityLabel(stateFromStores);
   obj8.children = textureScale(stage(isHidden[17]).CheckpointCharacterRive, { ref, artboard: "AB_Master", stateMachine: "SM_Master", fit: "layout", alignment: "center", referencedAssets: tmp13, onRiveFileChange: tmp16, dataBinding, onDataBindingChange, style: tmp.rive });
   return textureScale(tmp23, obj8);
+}
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(5243);
+let obj2 = { container: { flexGrow: 1 }, rive: null };
+let merged = Object.assign(StyleSheet.absoluteFillObject);
+obj2.rive = {};
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/CheckpointCharacterStage.tsx");
+
+export default function CheckpointCharacterStageGate(arg0) {
+  items = [CheckpointStore];
+  let tmp = null;
+  if (obj.useStateFromStores(items, () => CheckpointStore.isCharacterCreatorEnabled)) {
+    const obj2 = {};
+    const merged = Object.assign(arg0);
+    tmp = <CheckpointCharacterStage />;
+  }
+  return tmp;
 };

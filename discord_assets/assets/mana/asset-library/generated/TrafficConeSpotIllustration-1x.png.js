@@ -1,6 +1,6 @@
-// === Module 7135: ? ===
+// === Module 7686: ? ===
 
-// Module 7135
+// Module 7686
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TrafficConeSpotIllustration-1x.png.js");

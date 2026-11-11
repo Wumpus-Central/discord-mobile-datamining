@@ -1,7 +1,7 @@
-// === Module 12816: conjureSendToProject ===
+// === Module 13488: conjureSendToProject ===
 
-// Module 12816 (conjureSendToProject)
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11011 */;
+// Module 13488 (conjureSendToProject)
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

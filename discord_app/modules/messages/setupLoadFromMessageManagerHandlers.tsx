@@ -1,9 +1,9 @@
-// === Module 19960: setupLoadFromMessageManagerHandlers ===
+// === Module 20154: setupLoadFromMessageManagerHandlers ===
 
-// Module 19960 (setupLoadFromMessageManagerHandlers)
+// Module 20154 (setupLoadFromMessageManagerHandlers)
 import DurationsDefault from "Durations" /* 1089 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6920 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6973 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 
 let closure_2 = 5 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
@@ -25,7 +25,7 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
         clearTimeout(value);
         map1.delete(channelId);
       }
-      value2 = map.get(channelId);
+      const value2 = map.get(channelId);
       if (null != value2) {
         map.delete(channelId);
         if (set.has(channelId)) {
@@ -78,7 +78,7 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
                   clearTimeout(value);
                   map1.delete(channel_id);
                 }
-                value2 = map.get(channel_id);
+                const value2 = map.get(channel_id);
                 if (null != value2) {
                   map.delete(channel_id);
                   if (set.has(channel_id)) {

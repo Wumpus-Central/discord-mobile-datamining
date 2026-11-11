@@ -1,17 +1,17 @@
-// === Module 12408: useConjureMakePersonal ===
+// === Module 13215: useConjureMakePersonal ===
 
-// Module 12408 (useConjureMakePersonal)
-import ConjureActionCreators from "ConjureActionCreators" /* 11005 */;
-import conjureChangeRows from "conjureChangeRows" /* 12409 */;
+// Module 13215 (useConjureMakePersonal)
+import ConjureActionCreators from "ConjureActionCreators" /* 7265 */;
+import conjureChangeRows from "conjureChangeRows" /* 13216 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(6902).isProjectOwner;
+const isProjectOwner = fn(6954).isProjectOwner;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/server_share/useConjureMakePersonal.tsx");
 
@@ -76,13 +76,13 @@ export default function useConjureMakePersonal(id) {
             dependencyMap = 1;
             c3 = 2;
             c4 = 1;
-            const obj5 = { value: id(11005).makeConjureProjectPersonal(id.id), done: false };
+            const obj5 = { value: id(7265).makeConjureProjectPersonal(id.id), done: false };
             return obj5;
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;
           const intl2 = id(1113).intl;
-          closure_129_2(intl2.string(tmp3(4028)["d+wTRF"]));
+          closure_129_2(intl2.string(tmp3(4079)["d+wTRF"]));
           closure_129_4(null);
           closure_129_1(false);
           c4 = 3;
@@ -105,7 +105,7 @@ export default function useConjureMakePersonal(id) {
           }
           closure_128_0 = true === prop;
           const intl = id(1113).intl;
-          let obj = tmp3(4028);
+          let obj = tmp3(4079);
           if (closure_128_0) {
             let TWYUzf = obj.tOu7uv;
           } else {
@@ -126,8 +126,8 @@ export default function useConjureMakePersonal(id) {
     }
   }), items2);
   if (null != target) {
-    result = tmp4(12393).conjureRemoveAppKeptChannels(target);
-    const tmp4Result = tmp4(12393);
+    result = tmp4(13199).conjureRemoveAppKeptChannels(target);
+    const tmp4Result = tmp4(13199);
   }
   obj3.keptChannels = result;
   obj3.error = tmp2[0];
@@ -136,12 +136,6 @@ export default function useConjureMakePersonal(id) {
 };
 export function canMakeConjureProjectPersonal(project) {
   let tmp = "guild" === project.install_scope;
-  if (tmp) {
-    tmp = null == project.install_scope_setup;
-  }
-  if (tmp) {
-    tmp = null != project.guild_id;
-  }
   if (tmp) {
     tmp = isProjectOwner(project);
   }

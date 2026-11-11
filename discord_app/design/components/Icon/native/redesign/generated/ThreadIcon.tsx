@@ -1,9 +1,9 @@
-// === Module 8722: ThreadIcon ===
+// === Module 8006: ThreadIcon ===
 
-// Module 8722 (ThreadIcon)
+// Module 8006 (ThreadIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod8682 from "module_8682" /* 8682 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod7970 from "module_7970" /* 7970 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ThreadIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8682, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7970, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,6 +1,6 @@
-// === Module 5014: LibdiscoreStore ===
+// === Module 5115: LibdiscoreStore ===
 
-// Module 5014 (LibdiscoreStore)
+// Module 5115 (LibdiscoreStore)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -479,7 +479,7 @@ prototype3["setPartition"] = function setPartition(id, filterRoleDeletesResult, 
     nextVersionResult = self.nextVersion();
   }
   self.removePartition(id, nextVersionResult);
-  const length = Object.keys(filterRoleDeletesResult).length;
+  length = Object.keys(filterRoleDeletesResult).length;
   if (0 === length) {
     return true;
   } else {

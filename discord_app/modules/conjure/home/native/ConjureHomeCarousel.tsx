@@ -1,24 +1,24 @@
-// === Module 13048: ConjureHomeCarousel ===
+// === Module 13714: ConjureHomeCarousel ===
 
-// Module 13048 (ConjureHomeCarousel)
+// Module 13714 (ConjureHomeCarousel)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import FastImageDefault from "FastImage" /* 5844 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 9075 */;
-import conjureHomeCarouselFan from "conjureHomeCarouselFan" /* 13051 */;
-import SvgCss from "SvgCss" /* 13052 */;
-import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt" /* 13195 */;
-import conjureHomeInspirationEntries from "conjureHomeInspirationEntries" /* 13203 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import FastImageDefault from "FastImage" /* 5957 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7929 */;
+import conjureHomeCarouselFan from "conjureHomeCarouselFan" /* 13717 */;
+import SvgCss from "SvgCss" /* 13718 */;
+import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt" /* 13861 */;
+import conjureHomeInspirationEntries from "conjureHomeInspirationEntries" /* 13869 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import AppStateStore from "AppStateStore" /* 2117 */;
 
 const require = globalThis.__r;
 const _modDef1652 = _mod1652;
 
-const _modDef4028 = tmp7(4028);
+const _modDef4079 = tmp7(4079);
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
@@ -28,8 +28,8 @@ let closure_10 = 240 + nativeDefault.space.PX_24;
 const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
-let obj = { games: fn(9823).GameControllerIcon, apps: fn(8755).AppsIcon, profile_widget: fn(13049).WidgetsIcon, overlay_widget: fn(9681).ScreenIcon, automod: fn(11430).ShieldIcon, chat_bot: fn(12277).RobotIcon };
-const createStyles = fn(5142);
+let obj = { games: fn(7374).GameControllerIcon, apps: fn(8036).AppsIcon, profile_widget: fn(13715).WidgetsIcon, overlay_widget: fn(10400).ScreenIcon, automod: fn(11163).ShieldIcon, chat_bot: fn(12592).RobotIcon };
+const createStyles = fn(5243);
 let obj2 = { carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" }, item: null, promptRow: null, avatar: null, bubble: null, card: null, thumbnail: null, footer: null, categoryIcon: null, footerText: null };
 const rect = { position: "absolute", top: 0, left: 0, width: 240, gap: nativeDefault.space.PX_12 };
 obj2.item = rect;
@@ -198,7 +198,7 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
   }, items4);
   const obj5 = { style: tmp.carousel, accessible: true, accessibilityLabel: null, ref: null, onLayout: null, children: null };
   const intl = tmp2(1113).intl;
-  obj5.accessibilityLabel = intl.string(_modDef4028.Qc4S39);
+  obj5.accessibilityLabel = intl.string(_modDef4079.Qc4S39);
   obj5.ref = ref;
   obj5.onLayout = onLayout;
   let mapped = null;

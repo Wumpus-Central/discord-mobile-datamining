@@ -1,20 +1,20 @@
-// === Module 11005: ConjureActionCreators ===
+// === Module 7265: ConjureActionCreators ===
 
-// Module 11005 (ConjureActionCreators)
+// Module 7265 (ConjureActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5801 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 11004 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 11011 */;
-import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 11013 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 11014 */;
-import createProxyTicket from "createProxyTicket" /* 11016 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5914 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7271 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7272 */;
+import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 7274 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 7275 */;
+import createProxyTicket from "createProxyTicket" /* 7277 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReadStateStore from "ReadStateStore" /* 6900 */;
+import ReadStateStore from "ReadStateStore" /* 6952 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 11006 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 7266 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
 
 require = fn;
 function listProjects() {
@@ -849,7 +849,7 @@ function applyProjectChange(projectId, project) {
   obj2.started = obj2.started + 1;
   const result = map1.set(projectId, obj2);
   const started = obj2.started;
-  value2 = map1.get(projectId);
+  const value2 = map1.get(projectId);
   if (!tmp3) {
     value2.applied = started;
     const obj4 = { type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: project.project };
@@ -1539,7 +1539,7 @@ function refreshConjureInstallState(id) {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1072).Endpoints;
-const ReadStateTypes = fn(6834).ReadStateTypes;
+const ReadStateTypes = fn(6896).ReadStateTypes;
 const logger = new fn(4).Logger("ConjureActionCreators");
 let c14 = null;
 let c15 = null;

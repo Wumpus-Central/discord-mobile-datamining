@@ -1,16 +1,16 @@
-// === Module 16630: PreloadedUserSettingsMigrations ===
+// === Module 16791: PreloadedUserSettingsMigrations ===
 
-// Module 16630 (PreloadedUserSettingsMigrations)
+// Module 16791 (PreloadedUserSettingsMigrations)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import wrappers from "wrappers" /* 1227 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 4974 */;
-import dismissible_content from "dismissible_content" /* 4975 */;
-import HotspotStore2 from "HotspotStore" /* 7444 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7779 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 5075 */;
+import dismissible_content from "dismissible_content" /* 5076 */;
+import HotspotStore2 from "HotspotStore" /* 8381 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8657 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
 
 require = fn;
 function migrateHotspotLocation(userContent, HUB_LINK_CHANNEL_NOTICE, CHANNEL_NOTICE_HUBLINK) {
@@ -58,7 +58,7 @@ let items = [
         value = Storage.get("recentsButtonTab2");
         if (null == value) {
           const Storage2 = Storage4.Storage;
-          value2 = Storage2.get("unread-messages-collapsed-channels");
+          let value2 = Storage2.get("unread-messages-collapsed-channels");
           if (value2 == null) {
             value2 = {};
           }
@@ -406,7 +406,7 @@ let items = [
         flag2 = true;
       }
       const Storage2 = Storage4.Storage;
-      value2 = Storage2.get("hideConnectSpotify");
+      let value2 = Storage2.get("hideConnectSpotify");
       if (value2) {
         const NAGBAR_NOTICE_CONNECT_SPOTIFY = dismissible_content.DismissibleContent.NAGBAR_NOTICE_CONNECT_SPOTIFY;
         if (null == userContent.userContent) {

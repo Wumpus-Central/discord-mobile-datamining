@@ -1,6 +1,6 @@
-// === Module 10286: PushFeedbackActions ===
+// === Module 12507: PushFeedbackActions ===
 
-// Module 10286 (PushFeedbackActions)
+// Module 12507 (PushFeedbackActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

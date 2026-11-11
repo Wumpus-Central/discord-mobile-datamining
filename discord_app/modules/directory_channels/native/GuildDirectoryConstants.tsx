@@ -1,6 +1,6 @@
-// === Module 14118: directory_channels/GuildDirectoryConstants ===
+// === Module 14598: directory_channels/GuildDirectoryConstants ===
 
-// Module 14118 (directory_channels/GuildDirectoryConstants)
+// Module 14598 (directory_channels/GuildDirectoryConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryConstants.tsx");

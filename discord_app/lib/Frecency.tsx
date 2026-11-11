@@ -1,6 +1,6 @@
-// === Module 5911: Frecency ===
+// === Module 6024: Frecency ===
 
-// Module 5911 (Frecency)
+// Module 6024 (Frecency)
 import applyDefault from "apply" /* 12 */;
 import _modDef2166 from "module_2166" /* 2166 */;
 import size from "module_2" /* 2 */;
@@ -92,7 +92,6 @@ prototype["isDirty"] = function isDirty() {
   return this.dirty;
 };
 prototype["track"] = function track(arg0) {
-  let length;
   let maxSamples;
   let obj = arg1;
   if (arg1 === undefined) {

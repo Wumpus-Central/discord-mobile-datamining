@@ -1,6 +1,6 @@
-// === Module 15630: Constants ===
+// === Module 15180: Constants ===
 
-// Module 15630 (Constants)
+// Module 15180 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/referral_program/Constants.tsx");

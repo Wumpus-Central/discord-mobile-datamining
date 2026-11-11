@@ -21,13 +21,16 @@ function getSrcWithWidthAndHeight(animated) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = _slicedToArray(src.split("?"), 2);
-  items = [tmp[0], _modDef1487.parse(tmp[1])];
-  [tmp5, tmp6] = items;
-  if (re7.test(tmp5)) {
-    tmp6.format = "webp";
+  [tmp4, tmp5] = src.split("?");
+  const tmp3 = _slicedToArray(src.split("?"), 2);
+  const parsed = _modDef1487.parse(tmp5);
+  delete tmp2[tmp];
+  items = [tmp4, parsed];
+  [tmp10, tmp11] = items;
+  if (re7.test(tmp10)) {
+    tmp11.format = "webp";
   } else if (null != format) {
-    tmp6.format = format;
+    tmp11.format = format;
   }
   if (targetWidth > closure_5) {
     targetWidth = closure_5;
@@ -36,7 +39,7 @@ function getSrcWithWidthAndHeight(animated) {
     targetHeight = closure_5;
   }
   if (targetWidth !== sourceWidth) {
-    const tmp9 = (function getAttachmentLadderConfig(arg0) {
+    const tmp14 = (function getAttachmentLadderConfig(arg0) {
       try {
         const obj = { location: "native/ImageUtils.getSrcWithWidthAndHeight" };
         const attachmentImageLadderConfig = AttachmentImageLadderExperiment.getAttachmentImageLadderConfig(obj);
@@ -50,27 +53,27 @@ function getSrcWithWidthAndHeight(animated) {
       }
     })("native/ImageUtils.getSrcWithWidthAndHeight");
     let size = { width: targetWidth, height: targetHeight };
-    if (null != tmp9) {
+    if (null != tmp14) {
       const obj3 = { targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale: null, ladder: null };
       const obj2 = AttachmentImageLadder;
-      obj3.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp9, getDevicePixelRatioDefault());
-      obj3.ladder = tmp9.ladder;
+      obj3.maxUpscale = AttachmentImageLadder.getSnapDownMaxUpscale(tmp14, getDevicePixelRatioDefault());
+      obj3.ladder = tmp14.ladder;
       size = obj2.snapAttachmentDimensions(obj3);
     }
-    if (!tmp12) {
-      tmp6.width = size.width | 0;
-      tmp6.height = size.height | 0;
+    if (!tmp17) {
+      tmp11.width = size.width | 0;
+      tmp11.height = size.height | 0;
     }
-    tmp12 = size.width === sourceWidth && size.height === sourceHeight;
+    tmp17 = size.width === sourceWidth && size.height === sourceHeight;
   }
   if (flag) {
-    tmp6.animated = true;
+    tmp11.animated = true;
   }
-  const tmp4 = _slicedToArray(items, 2);
-  let text = tmp5;
-  if (!tmp2Result.isEmpty(tmp6)) {
+  const tmp9 = _slicedToArray(items, 2);
+  let text = tmp10;
+  if (!tmp6Result.isEmpty(tmp11)) {
     _modDef1487;
-    text = `${tmp5}?${obj6.stringify(tmp6)}`;
+    text = `${tmp10}?${obj6.stringify(tmp11)}`;
   }
   return text;
 }
@@ -105,7 +108,7 @@ const PixelRatio = fn(17).PixelRatio;
 let closure_5 = fn(1072).MEDIA_PROXY_MAX_TARGET_RESOLUTION;
 const tmp2 = /\.(gif)$/i;
 const re6 = tmp2;
-const tmp3 = /\.(avif)$/i;
+let tmp3 = /\.(avif)$/i;
 const re7 = tmp3;
 let size = fn(2);
 let result = size.fileFinishedImporting("utils/native/ImageUtils.tsx");

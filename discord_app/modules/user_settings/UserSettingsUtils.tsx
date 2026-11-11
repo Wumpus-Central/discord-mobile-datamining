@@ -178,7 +178,6 @@ export function runMigrations(proto, arg1) {
   return { proto, isDirty: flag, cleanupFuncs: items };
 }
 export function serializeUsageHistory(usageHistory, FREQUENCY_ITEM_LIMIT) {
-  let length;
   const entries = Object.entries(usageHistory);
   if (entries.length > FREQUENCY_ITEM_LIMIT) {
     const reversed = applyDefault.sortBy(entries, (arg0) => {

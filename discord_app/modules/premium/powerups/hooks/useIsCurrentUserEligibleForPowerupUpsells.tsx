@@ -1,10 +1,10 @@
-// === Module 18587: useIsCurrentUserEligibleForPowerupUpsells ===
+// === Module 18759: useIsCurrentUserEligibleForPowerupUpsells ===
 
-// Module 18587 (useIsCurrentUserEligibleForPowerupUpsells)
-import GuildMemberStore from "GuildMemberStore" /* 5054 */;
-import SortedGuildStore from "SortedGuildStore" /* 6830 */;
+// Module 18759 (useIsCurrentUserEligibleForPowerupUpsells)
+import GuildMemberStore from "GuildMemberStore" /* 5155 */;
+import SortedGuildStore from "SortedGuildStore" /* 6893 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7664 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 9170 */;
 
 const require = fn;
 const PremiumTypes = fn(1387).PremiumTypes;

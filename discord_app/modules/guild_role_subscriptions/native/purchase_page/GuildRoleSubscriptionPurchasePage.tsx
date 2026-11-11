@@ -1,18 +1,18 @@
-// === Module 19002: GuildRoleSubscriptionPurchasePage ===
+// === Module 19188: GuildRoleSubscriptionPurchasePage ===
 
-// Module 19002 (GuildRoleSubscriptionPurchasePage)
+// Module 19188 (GuildRoleSubscriptionPurchasePage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import LinkingDefault from "Linking" /* 5836 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8680 */;
-import _modDef12086 from "module_12086" /* 12086 */;
-import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 19012 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import LinkingDefault from "Linking" /* 5949 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 7968 */;
+import _modDef12883 from "module_12883" /* 12883 */;
+import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 19198 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import GuildStore from "GuildStore" /* 5013 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import GuildStore from "GuildStore" /* 5114 */;
 
 const require = globalThis.__r;
 
@@ -40,12 +40,12 @@ function SocialBadge(onPress) {
   obj.onPress = onPress;
   items = [gesture(native.Icon, { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true }), gesture(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
-    const obj3 = { source: _modDef12086, style: tmp.socialBadgeArrow };
+    const obj3 = { source: _modDef12883, style: tmp.socialBadgeArrow };
     tmp5Result = gesture(native.Icon, obj3);
   }
   items[2] = tmp5Result;
   obj.children = items;
-  return closure_1_15(hasOwnProperty, obj);
+  return colors(hasOwnProperty, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, TouchableOpacity: hasOwnProperty, View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
@@ -53,7 +53,7 @@ const Constants = fn(1072);
 ({ AnalyticsLocations: closure_11, GuildFeatures: closure_12, MarketingURLs: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, heroImage: { aspectRatio: 4, width: "100%" }, guildIconContainer: null, guildIcon: null, contentCard: null, loadingContainer: null, socialBadge: null, socialBadgeIcon: null, socialBadgeArrow: null, separator: null, moneyBirbPlaceholder: null, gatedChannel: null, gatedChannelIcon: null };
 const rect = { borderWidth: 3, borderRadius: nativeDefault.radii.md, alignSelf: "flex-start", top: -35, left: 16, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute" };
 obj2.guildIconContainer = rect;
@@ -140,7 +140,7 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
                               const obj2 = { size: native.Icon.Sizes.SMALL_20, style: closure_2.gatedChannelIcon, source: utils_ChannelUtils.getChannelIcon(stateFromStores1) };
                               items = [gesture(native.Icon, obj2), gesture(Text_Text.Text, { variant: "body-xs/semibold", color: "text-default", children })];
                               obj.children = items;
-                              return closure_2_15(timestampProducer, obj);
+                              return colors(timestampProducer, obj);
                             }
               };
               let formatResult = intl2.format(tmp5(tmp3[10]).t.A1L1hU, obj7);

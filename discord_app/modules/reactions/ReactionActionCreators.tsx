@@ -1,18 +1,18 @@
-// === Module 8480: ReactionActionCreators ===
+// === Module 8797: ReactionActionCreators ===
 
-// Module 8480 (ReactionActionCreators)
+// Module 8797 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
-import EmojiUtils from "EmojiUtils" /* 5092 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5744 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6092 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8275 */;
+import EmojiUtils from "EmojiUtils" /* 5193 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5857 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8798 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import MessageStore from "MessageStore" /* 6196 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import MessageStore from "MessageStore" /* 6309 */;
 
 require = fn;
 function checkReactionResponse(arg0, fn, isRetry) {
@@ -64,7 +64,7 @@ function optimisticDispatch(type, channelId, messageId, emoji, userId) {
   }
   obj2.userId = userId;
   obj2.emoji = emoji;
-  let colors = userId.colors;
+  colors = userId.colors;
   if (colors == null) {
     colors = [];
   }
@@ -388,7 +388,7 @@ let closure_17 = async function _addReaction(arg0) {
             }
             obj4.userId = userId;
             obj4.emoji = emoji;
-            let colors = obj2.colors;
+            colors = obj2.colors;
             if (colors == null) {
               colors = [];
             }
@@ -786,7 +786,7 @@ let closure_23 = async function _removeReaction(arg0) {
                   if (burst != null) {
                     burst = burst.burst;
                   }
-                  const AccessibilityAnnouncer = channelId(5149).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = channelId(5250).AccessibilityAnnouncer;
                   intl = channelId(1113).intl;
                   if (!burst) {
                     const obj6 = { name: tmp2.name };

@@ -1,9 +1,9 @@
-// === Module 15594: useIsUserEligibleForThirdPartyPerks ===
+// === Module 9922: useIsUserEligibleForThirdPartyPerks ===
 
-// Module 15594 (useIsUserEligibleForThirdPartyPerks)
+// Module 9922 (useIsUserEligibleForThirdPartyPerks)
 import initialize from "initialize" /* 504 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
-import ThirdPartyPerkUtils from "ThirdPartyPerkUtils" /* 15595 */;
+import ThirdPartyPerkUtils from "ThirdPartyPerkUtils" /* 9923 */;
 import UserStore from "UserStore" /* 1385 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
 

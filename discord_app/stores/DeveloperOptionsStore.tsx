@@ -78,7 +78,7 @@ prototype["initialize"] = function initialize() {
     const merged1 = Object.assign(value);
   }
   const Storage2 = url(refreshSourceMapCookie[6]).Storage;
-  value2 = Storage2.get(DeveloperOptionsRoutingKey);
+  const value2 = Storage2.get(DeveloperOptionsRoutingKey);
   if (null != value2) {
     tags = value2;
   }

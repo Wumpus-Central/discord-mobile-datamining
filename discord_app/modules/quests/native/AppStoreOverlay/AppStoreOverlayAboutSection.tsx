@@ -1,9 +1,8 @@
-// === Module 14938: AppStoreOverlayAboutSection ===
+// === Module 15130: AppStoreOverlayAboutSection ===
 
-// Module 14938 (AppStoreOverlayAboutSection)
+// Module 15130 (AppStoreOverlayAboutSection)
 import nativeDefault from "native" /* 575 */;
-import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5753 */;
+import findTextStart from "findTextStart" /* 10283 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,28 +12,31 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const rect = { top: nativeDefault.space.PX_12, bottom: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12 };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { aboutSection: { borderRadius: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 } };
 let closure_9 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayAboutSection.tsx");
 
-export default function AppStoreOverlayAboutSection(children) {
-  const onSeeMorePress = children.onSeeMorePress;
-  c1 = undefined;
+export default function AppStoreOverlayAboutSection(description) {
+  description = description.description;
+  const onSeeMorePress = description.onSeeMorePress;
+  _slicedToArray = undefined;
   first = undefined;
-  closure_3 = undefined;
+  closure_4 = undefined;
   const tmp = closure_9();
-  [tmp3, c1] = noop.useState(false);
-  [first, closure_3] = noop.useState(null);
-  items = [first];
-  const items1 = [onSeeMorePress];
-  const callback = noop.useCallback((nativeEvent) => {
+  [tmp3, c2] = first.useState(false);
+  [first, closure_4] = first.useState(null);
+  items = [description];
+  const memo = first.useMemo(() => findTextStart.parseHTMLFromText(description, { parseTextLinks: true }), items);
+  const items1 = [first];
+  const items2 = [onSeeMorePress];
+  const callback = first.useCallback((nativeEvent) => {
     if (null == first) {
-      closure_3(nativeEvent.nativeEvent.lines.length > 3);
+      closure_4(nativeEvent.nativeEvent.lines.length > 3);
     }
-  }, items);
-  const callback1 = noop.useCallback(() => {
+  }, items1);
+  const callback1 = first.useCallback(() => {
     _undefined((arg0) => {
       if (!arg0) {
         if (onSeeMorePress != null) {
@@ -43,26 +45,34 @@ export default function AppStoreOverlayAboutSection(children) {
       }
       return !arg0;
     });
-  }, items1);
-  const intl = util.intl;
-  const t = util.t;
+  }, items2);
+  const intl = description(onSeeMorePress[7]).intl;
+  const t = description(onSeeMorePress[7]).t;
   const stringResult = intl.string(tmp3 ? t["6MwJo/"] : t.lBeKY2);
-  const obj = { style: tmp.aboutSection, children: null };
-  const obj2 = { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl2 = util.intl;
-  obj2.children = intl2.string(util.t.CI0vSJ);
-  const items2 = [timestampProducer(Text_Text.Text, obj2), timestampProducer(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", lineClamp: num, onTextLayout: callback, children: children.description }), ];
-  let tmp13Result = true === first;
-  if (tmp13Result) {
-    const obj3 = { hitSlop: rect, accessibilityRole: "button", accessibilityLabel: stringResult, accessibilityState: null, onPress: null, children: null };
-    const obj4 = { expanded: tmp3 };
-    obj3.accessibilityState = obj4;
-    obj3.onPress = callback1;
-    const obj5 = { variant: "body-sm/medium", color: "text-link", children: stringResult };
-    obj3.children = timestampProducer(Text_Text.Text, obj5);
-    tmp13Result = timestampProducer(React4, obj3);
+  let tmp15Result = null;
+  if (0 !== memo.length) {
+    const obj2 = { style: tmp.aboutSection, children: null };
+    const obj3 = { variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: null };
+    const intl2 = tmp8(tmp9[7]).intl;
+    obj3.children = intl2.string(tmp8(tmp9[7]).t.CI0vSJ);
+    const items3 = [closure_6(tmp8(tmp9[8]).Text, obj3), , ];
+    const obj = { variant: "body-sm/medium", color: "text-default", lineClamp: num, onTextLayout: callback, children: null };
+    const obj4 = { runs: memo, textVariant: "body-sm/medium", boldTextVariant: "body-sm/semibold" };
+    obj.children = closure_6(tmp8(tmp9[9]).HTMLText, obj4);
+    items3[1] = closure_6(tmp8(tmp9[8]).Text, obj);
+    let tmp17Result = true === first;
+    if (tmp17Result) {
+      const obj5 = { hitSlop: rect, accessibilityRole: "button", accessibilityLabel: stringResult, accessibilityState: null, onPress: null, children: null };
+      const obj6 = { expanded: tmp3 };
+      obj5.accessibilityState = obj6;
+      obj5.onPress = callback1;
+      const obj7 = { variant: "body-sm/medium", color: "text-link", children: stringResult };
+      obj5.children = closure_6(tmp8(tmp9[8]).Text, obj7);
+      tmp17Result = closure_6(closure_4, obj5);
+    }
+    items3[2] = tmp17Result;
+    obj2.children = items3;
+    tmp15Result = closure_7(closure_5, obj2);
   }
-  items2[2] = tmp13Result;
-  obj.children = items2;
-  return metroImportDefault(hasOwnProperty, obj);
+  return tmp15Result;
 };

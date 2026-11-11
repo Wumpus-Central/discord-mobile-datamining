@@ -1,6 +1,6 @@
-// === Module 11108: ConjureWebSocket ===
+// === Module 13489: ConjureWebSocket ===
 
-// Module 11108 (ConjureWebSocket)
+// Module 13489 (ConjureWebSocket)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/connection/ConjureWebSocket.tsx");
@@ -108,19 +108,6 @@ prototype["sendRetryRemix"] = function sendRetryRemix() {
       const socket = self.socket;
       const _JSON = JSON;
       socket.send(JSON.stringify({ type: "retry_remix" }));
-    }
-  }
-  const error = new Error("WebSocket not open");
-  throw error;
-};
-prototype["sendKeepInstallScope"] = function sendKeepInstallScope() {
-  const self = this;
-  if (null != this.socket) {
-    const _WebSocket = WebSocket;
-    if (self.socket.readyState === WebSocket.OPEN) {
-      const socket = self.socket;
-      const _JSON = JSON;
-      socket.send(JSON.stringify({ type: "keep_install_scope" }));
     }
   }
   const error = new Error("WebSocket not open");

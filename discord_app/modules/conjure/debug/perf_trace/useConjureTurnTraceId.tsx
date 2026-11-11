@@ -1,7 +1,7 @@
-// === Module 12861: useConjureTurnTraceId ===
+// === Module 13533: useConjureTurnTraceId ===
 
-// Module 12861 (useConjureTurnTraceId)
-import ConjureDebugStore from "ConjureDebugStore" /* 10985 */;
+// Module 13533 (useConjureTurnTraceId)
+import ConjureDebugStore from "ConjureDebugStore" /* 7302 */;
 
 const require = globalThis.__r;
 

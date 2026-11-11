@@ -1,18 +1,18 @@
-// === Module 18340: VEVOO ===
+// === Module 18512: VEVOO ===
 
-// Module 18340 (VEVOO)
+// Module 18512 (VEVOO)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5763 */;
-import springPresets from "springPresets" /* 5764 */;
-import XSmallIcon from "XSmallIcon" /* 7123 */;
-import Form from "Form" /* 8250 */;
-import ActionButtonDefault from "ActionButton" /* 10895 */;
-import VEVOOPropBlurAmountDefault from "VEVOOPropBlurAmount" /* 18341 */;
-import VEVOOPropTintColorDefault from "VEVOOPropTintColor" /* 18343 */;
-import VEVOOPropBlurEffectNameDefault from "VEVOOPropBlurEffectName" /* 18344 */;
+import spring_spring from "spring/spring" /* 5876 */;
+import springPresets from "springPresets" /* 5877 */;
+import XSmallIcon from "XSmallIcon" /* 7483 */;
+import Form from "Form" /* 8041 */;
+import ActionButtonDefault from "ActionButton" /* 10802 */;
+import VEVOOPropBlurAmountDefault from "VEVOOPropBlurAmount" /* 18513 */;
+import VEVOOPropTintColorDefault from "VEVOOPropTintColor" /* 18515 */;
+import VEVOOPropBlurEffectNameDefault from "VEVOOPropBlurEffectName" /* 18516 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5756 */;
+import DevSettingsStore from "DevSettingsStore" /* 5869 */;
 
 const require = globalThis.__r;
 const _modDef1652 = _mod1652;
@@ -60,9 +60,9 @@ const ScrollView = fn(17).ScrollView;
 const DEV_WIDGET_SIZE = fn(573).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 const styles = createStyles.createStyles({ zeroPadding: { paddingVertical: 0, paddingHorizontal: 0 }, zeroPaddingVertical: { paddingVertical: 0 }, zeroPaddingHorizontal: { paddingHorizontal: 0 }, zeroHeight: { height: 0 }, enabledSwitchStyle: { alignSelf: "flex-start" } });
-createStyles = fn(5142);
+createStyles = fn(5243);
 let obj = { wrapper: null, scrollView: null, scrollViewContent: null, close: null };
 let size = { borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_660, borderRadius: nativeDefault.radii.lg, position: "absolute", top: 0, left: 0, width: 300, height: 400 };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);

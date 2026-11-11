@@ -1,6 +1,6 @@
-// === Module 19143: SmartSearchTip ===
+// === Module 19330: SmartSearchTip ===
 
-// Module 19143 (SmartSearchTip)
+// Module 19330 (SmartSearchTip)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { container: { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_12 }, header: null, titleContainer: null, title: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_12 };
 obj.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_20 };
@@ -46,12 +46,12 @@ export default noop.memo(function SmartSearchTip(children) {
   const obj3 = { style: tmp.titleContainer, children: null };
   const obj4 = { variant: "body-sm/semibold", color: "text-subtle", lineClamp: 1, style: tmp.title, accessibilityRole: "header", children: null };
   const intl = citations(1113).intl;
-  obj4.children = intl.string(guildId(4251).ydAwWi);
-  const items1 = [closure_5(citations(5753).Text, obj4), ];
+  obj4.children = intl.string(guildId(4302).ydAwWi);
+  const items1 = [closure_5(citations(5866).Text, obj4), ];
   const obj5 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
   const intl2 = citations(1113).intl;
-  obj5.children = intl2.string(guildId(4251).QIdSmb);
-  items1[1] = closure_5(citations(5753).Text, obj5);
+  obj5.children = intl2.string(guildId(4302).QIdSmb);
+  items1[1] = closure_5(citations(5866).Text, obj5);
   obj3.children = items1;
   const items2 = [closure_6(View, obj3), ];
   let tmp4Result = memo.length > 0;
@@ -62,11 +62,11 @@ export default noop.memo(function SmartSearchTip(children) {
       const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
       return hasOwnProperty(native.Avatar, obj, user.id);
     });
-    tmp4Result = closure_5(tmp5(15144).AvatarPile, obj6);
+    tmp4Result = closure_5(tmp5(15634).AvatarPile, obj6);
   }
   items2[1] = tmp4Result;
   obj2.children = items2;
-  const items3 = [closure_6(View, obj2), closure_5(citations(5753).Text, { variant: "body-md/normal", color: "text-default", children: children.answerText })];
+  const items3 = [closure_6(View, obj2), closure_5(citations(5866).Text, { variant: "body-md/normal", color: "text-default", children: children.answerText })];
   obj.children = items3;
   return closure_6(View, obj);
 });

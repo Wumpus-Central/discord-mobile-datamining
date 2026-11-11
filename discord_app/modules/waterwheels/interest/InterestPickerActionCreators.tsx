@@ -1,6 +1,6 @@
-// === Module 18792: InterestPickerActionCreators ===
+// === Module 18978: InterestPickerActionCreators ===
 
-// Module 18792 (InterestPickerActionCreators)
+// Module 18978 (InterestPickerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 
@@ -11,4 +11,7 @@ export function setInterestPickerPicks(gameIds) {
 }
 export function markInterestPickerSeen() {
   DispatcherDefault.dispatch({ type: "WATERWHEELS_INTEREST_PICKER_SEEN" });
+}
+export function setInterestPickerOpen(open) {
+  DispatcherDefault.dispatch({ type: "WATERWHEELS_INTEREST_PICKER_OPEN_CHANGE", open });
 }

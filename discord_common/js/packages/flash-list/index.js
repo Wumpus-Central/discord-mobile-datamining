@@ -1,8 +1,8 @@
-// === Module 7360: ? ===
+// === Module 7822: ? ===
 
-// Module 7360
+// Module 7822
 import PlatformUtils2 from "PlatformUtils" /* 1377 */;
-import _mod5630 from "module_5630" /* 5630 */;
+import _mod5743 from "module_5743" /* 5743 */;
 import noop_mod from "module_19" /* 19 */;
 import module_1652_mod from "module_1652" /* 1652 */;
 
@@ -19,13 +19,13 @@ noop = function noop() {
 
 };
 let module_1652 = module_1652_mod;
-let closure_8 = module_1652.createAnimatedComponent(fn(5630).FlashList);
+let closure_8 = module_1652.createAnimatedComponent(fn(5743).FlashList);
 let module_1652 = module_1652_mod;
-let closure_9 = module_1652.createAnimatedComponent(fn(5630).FlashList);
+let closure_9 = module_1652.createAnimatedComponent(fn(5743).FlashList);
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/flash-list/index.js");
-for (const key10048 in require("module_5630")) {
-  arg5[key10048] = require("module_5630")[key10048];
+for (const key10048 in require("module_5743")) {
+  arg5[key10048] = require("module_5743")[key10048];
   continue;
 }
 
@@ -33,7 +33,7 @@ export const defaultMVCPConfig = obj2;
 export (ref) => {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(_mod5630.FlashList, { maintainVisibleContentPosition: obj2, ref: ref.ref });
+  return jsx(_mod5743.FlashList, { maintainVisibleContentPosition: obj2, ref: ref.ref });
 }
 export (ref) => {
   const merged = Object.assign(Object.assign(ref, Object.assign({ ref: 0 })));
@@ -42,7 +42,7 @@ export (ref) => {
 export (ref) => {
   const merged = Object.assign(ref, Object.assign({ preventNativeModalDismiss: 0, ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(_mod5630.FlashList, { ref: ref.ref, maintainVisibleContentPosition: obj2, masonry: true });
+  return jsx(_mod5743.FlashList, { ref: ref.ref, maintainVisibleContentPosition: obj2, masonry: true });
 }
 export (ref) => {
   ({ preventNativeModalDismiss, refreshControl } = ref);
@@ -66,7 +66,7 @@ export (ref) => {
   const obj = { ref: ref.ref, maintainVisibleContentPosition: obj2 };
   const merged1 = Object.assign(merged);
   obj.refreshControl = memo;
-  return jsx(refreshControl(5629), { ref: ref.ref, maintainVisibleContentPosition: obj2 });
+  return jsx(refreshControl(5742), { ref: ref.ref, maintainVisibleContentPosition: obj2 });
 }
 export (ref) => {
   ({ preventNativeModalDismiss, refreshControl } = ref);
@@ -88,7 +88,7 @@ export (ref) => {
     }
     return tmp2;
   }, items);
-  obj.renderScrollComponent = preventNativeModalDismiss(5394).BottomSheetScrollView;
+  obj.renderScrollComponent = preventNativeModalDismiss(5507).BottomSheetScrollView;
   const merged1 = Object.assign(merged);
   obj.refreshControl = memo;
   return <closure_9 ref={ref.ref} maintainVisibleContentPosition={obj2} masonry renderScrollComponent={null} />;

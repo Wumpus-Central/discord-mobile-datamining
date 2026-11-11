@@ -1,15 +1,16 @@
-// === Module 11783: PlaintextFilePreviewModal ===
+// === Module 12419: PlaintextFilePreviewModal ===
 
-// Module 11783 (PlaintextFilePreviewModal)
+// Module 12419 (PlaintextFilePreviewModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6801 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7018 */;
-import NavigatorHeader from "NavigatorHeader" /* 7067 */;
-import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7369 */;
-import openPlaintextFilePreview from "openPlaintextFilePreview" /* 11782 */;
-import useDownloadedFile from "useDownloadedFile" /* 11786 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7354 */;
+import NavigatorHeader from "NavigatorHeader" /* 7427 */;
+import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7831 */;
+import openPlaintextFilePreview from "openPlaintextFilePreview" /* 12418 */;
+import useDownloadedFile from "useDownloadedFile" /* 12424 */;
+import PlaintextFileMarkdownPreviewDefault from "PlaintextFileMarkdownPreview" /* 12425 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +19,7 @@ function closeModal() {
   ModalActionCreatorsDefault.popWithKey(openPlaintextFilePreview.PLAINTEXT_FILE_PREVIEW_MODAL_KEY);
 }
 function PlaintextFilePreviewContent(arg0) {
-  ({ url, wordWrap } = arg0);
+  ({ url, wordWrap, renderMarkdown } = arg0);
   const tmp = closure_9();
   const downloadedFile = useDownloadedFile.useDownloadedFile(url, undefined);
   const fileContents = downloadedFile.fileContents;
@@ -34,31 +35,40 @@ function PlaintextFilePreviewContent(arg0) {
     return <timestampProducer style={tmp.loadingContainer}>{jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, {})}</timestampProducer>;
   } else {
     const bytesLeftNotice = useDownloadedFile.getBytesLeftNotice(tmp5);
-    let combined = fileContents;
-    if ("" !== bytesLeftNotice) {
-      const _HermesInternal = HermesInternal;
-      combined = "" + fileContents + "\n" + bytesLeftNotice;
-    }
-    const obj6 = { variant: "body-sm/normal", color: "text-default", style: tmp.code, selectable: true, children: combined };
-    const tmp10 = jsx(Text_Text.Text, { variant: "body-sm/normal", color: "text-default", style: tmp.code, selectable: true, children: combined });
-    if (wordWrap) {
+    if (renderMarkdown) {
       const obj7 = { style: null, contentContainerStyle: null, children: null };
-      ({ scroller: obj5.style, scrollerContent: obj5.contentContainerStyle } = tmp);
-      obj7.children = tmp10;
-      let obj8 = obj7;
+      ({ scroller: obj6.style, scrollerContent: obj6.contentContainerStyle } = tmp);
+      const obj8 = { text: fileContents, notice: bytesLeftNotice };
+      obj7.children = jsx(PlaintextFileMarkdownPreviewDefault, { text: fileContents, notice: bytesLeftNotice });
+      return <hasOwnProperty style={null} contentContainerStyle={null}>{null}</hasOwnProperty>;
     } else {
-      obj8 = { style: tmp.scroller, children: null };
-      const obj9 = { horizontal: true, contentContainerStyle: tmp.scrollerContent, children: tmp10 };
-      obj8.children = <hasOwnProperty horizontal contentContainerStyle={tmp.scrollerContent}>{tmp10}</hasOwnProperty>;
+      let combined = fileContents;
+      if ("" !== bytesLeftNotice) {
+        const _HermesInternal = HermesInternal;
+        combined = "" + fileContents + "\n" + bytesLeftNotice;
+      }
+      const obj9 = { variant: "body-sm/normal", color: "text-default", style: tmp.code, selectable: true, children: combined };
+      const tmp10 = jsx(Text_Text.Text, { variant: "body-sm/normal", color: "text-default", style: tmp.code, selectable: true, children: combined });
+      if (wordWrap) {
+        const obj10 = { style: null, contentContainerStyle: null, children: null };
+        ({ scroller: obj5.style, scrollerContent: obj5.contentContainerStyle } = tmp);
+        obj10.children = tmp10;
+        let obj11 = obj10;
+      } else {
+        obj11 = { style: tmp.scroller, children: null };
+        const obj20 = { horizontal: true, contentContainerStyle: tmp.scrollerContent, children: tmp10 };
+        obj11.children = <hasOwnProperty horizontal contentContainerStyle={tmp.scrollerContent}>{tmp10}</hasOwnProperty>;
+      }
+      return <hasOwnProperty {...obj11} />;
     }
-    return <hasOwnProperty {...obj8} />;
+    const tmp2Result = useDownloadedFile;
   }
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const constants = { PREVIEW: "PREVIEW" };
-const createStyles = fn(5142);
+let closure_8 = { PREVIEW: "PREVIEW" };
+const createStyles = fn(5243);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, loadingContainer: { flex: 1, alignItems: "center", justifyContent: "center" }, scroller: { flex: 1 }, scrollerContent: null, code: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollerContent = { padding: nativeDefault.space.PX_16 };
@@ -71,71 +81,103 @@ const result = size.fileFinishedImporting("modules/media/native/PlaintextFilePre
 
 export default function PlaintextFilePreviewModal(url) {
   url = url.url;
-  const fileName = url.fileName;
+  const str = url.fileName;
   let first;
   noop = undefined;
+  let memo;
   const tmp = closure_9();
   dependencyMap = tmp;
   const tmp2 = first(noop.useState(true), 2);
   first = tmp2[0];
   noop = tmp2[1];
-  items = [url, first];
-  const memo = noop.useMemo(() => {
-    let obj = { label: null, trailingIndicator: null, action: null };
-    const intl = util.intl;
-    obj.label = intl.string(util.t.AMKNT1);
-    let CheckmarkSmallIcon;
-    if (first) {
-      CheckmarkSmallIcon = CheckmarkSmallIcon2.CheckmarkSmallIcon;
+  const MARKDOWN_LANGUAGES = url(12433).MARKDOWN_LANGUAGES;
+  const parts = str.split(".");
+  const hasItem = MARKDOWN_LANGUAGES.has(parts.slice(-1)[0]);
+  const tmp7 = first(noop.useState(true), 2);
+  closure_6 = tmp7[1];
+  let first1 = hasItem;
+  if (hasItem) {
+    first1 = tmp7[0];
+  }
+  items = [hasItem, first1, url, first];
+  memo = obj.useMemo(() => {
+    if (hasItem) {
+      let obj = { label: null, trailingIndicator: null, action: null };
+      const intl = util.intl;
+      obj.label = intl.string(util.t.zstmkn);
+      let CheckmarkSmallIcon;
+      if (first1) {
+        CheckmarkSmallIcon = CheckmarkSmallIcon2.CheckmarkSmallIcon;
+      }
+      obj.trailingIndicator = CheckmarkSmallIcon;
+      obj.action = function action() {
+        return closure_1_6((arg0) => !arg0);
+      };
+      items = [obj];
+      let items1 = items;
+    } else {
+      items1 = [];
     }
-    obj.trailingIndicator = CheckmarkSmallIcon;
-    obj.action = function action() {
-      return closure_1_4((arg0) => !arg0);
-    };
-    items = [obj, ];
-    let obj2 = { label: null, action: null };
-    const intl2 = util.intl;
-    obj2.label = intl2.string(util.t["1WjMbC"]);
-    obj2.action = function action() {
+    const items2 = [...items1];
+    if (first1) {
+      let items3 = [];
+    } else {
+      let obj2 = { label: null, trailingIndicator: null, action: null };
+      const intl2 = util.intl;
+      obj2.label = intl2.string(util.t.AMKNT1);
+      let CheckmarkSmallIcon1;
+      if (first) {
+        CheckmarkSmallIcon1 = CheckmarkSmallIcon2.CheckmarkSmallIcon;
+      }
+      obj2.trailingIndicator = CheckmarkSmallIcon1;
+      obj2.action = function action() {
+        return closure_1_4((arg0) => !arg0);
+      };
+      items3 = [obj2];
+    }
+    let obj3 = { label: null, action: null };
+    const intl3 = util.intl;
+    obj3.label = intl3.string(util.t["1WjMbC"]);
+    obj3.action = function action() {
       if (null == obj.isSuspiciousDownload(closure_1_0)) {
-        fileName(dependencyMap[11]).openURL(closure_1_0);
-        const obj3 = fileName(dependencyMap[11]);
+        str(dependencyMap[11]).openURL(closure_1_0);
+        const obj3 = str(dependencyMap[11]);
       } else {
-        fileName(dependencyMap[10]).show(closure_1_0);
-        const obj2 = fileName(dependencyMap[10]);
+        str(dependencyMap[10]).show(closure_1_0);
+        const obj2 = str(dependencyMap[10]);
       }
       obj = url(dependencyMap[9]);
     };
-    items[1] = obj2;
-    return items;
+    items2[HermesBuiltin.arraySpread(items3, tmp9)] = obj3;
+    return items2;
   }, items);
-  const items1 = [fileName, memo, tmp.container, url, first];
-  const memo1 = noop.useMemo(() => {
+  let items1 = [str, memo, first1, tmp.container, url, first];
+  const memo1 = obj.useMemo(() => {
     let obj = {};
     const obj2 = {
-      title: fileName,
+      title: str,
       headerLeft: NavigatorHeader.getHeaderCloseButton(closeModal),
       headerRight() {
-        return jsx(url(container[18]).ContextMenu, {
+        return first1(url(container[20]).ContextMenu, {
           items,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { IconComponent: url(9852).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
+            const obj = { IconComponent: url(7356).MoreHorizontalIcon, accessibilityLabel: null, ref: null };
             const intl = url(1113).intl;
             obj.accessibilityLabel = intl.string(url(1113).t.PdRCRg);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_7(url(7633).HeaderActionButton, obj);
+            return renderMarkdown(url(7363).HeaderActionButton, obj);
           }
         });
       },
       render() {
-        const obj = { style: container.container, children: <PlaintextFilePreviewContent url={url} wordWrap={wordWrap} /> };
-        return <closure_2_6 style={container.container}><PlaintextFilePreviewContent url={url} wordWrap={wordWrap} /></closure_2_6>;
+        const obj = { style: container.container, children: first1(PlaintextFilePreviewContent, { url, wordWrap, renderMarkdown }) };
+        return first1(closure_6, obj);
       }
     };
-    obj[constants.PREVIEW] = obj2;
+    obj[memo.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return jsx(url(11636).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
+  return first1(url(12434).Modal, { screens: memo1, initialRouteName: memo.PREVIEW });
 };

@@ -1,9 +1,9 @@
-// === Module 7925: BountyStore ===
+// === Module 8741: BountyStore ===
 
-// Module 7925 (BountyStore)
+// Module 8741 (BountyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AdCreativeType from "AdCreativeType" /* 6846 */;
+import AdCreativeType from "AdCreativeType" /* 5282 */;
 
 require = fn;
 function resetStateForDeliveredBounties(items) {
@@ -63,7 +63,7 @@ prototype["areAllBountiesCompleted"] = function areAllBountiesCompleted() {
 };
 prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByPlacementAndAdCreativeId(questPlacementFromQuestContent, bountyId) {
   value = map.get(questPlacementFromQuestContent);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(bountyId);
   }

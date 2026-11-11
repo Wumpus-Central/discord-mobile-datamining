@@ -1,17 +1,17 @@
-// === Module 18858: ForLaterOpenActionButton ===
+// === Module 19048: ForLaterOpenActionButton ===
 
-// Module 18858 (ForLaterOpenActionButton)
+// Module 19048 (ForLaterOpenActionButton)
 import nativeDefault from "native" /* 575 */;
-import useThemeDefault from "useTheme" /* 5371 */;
-import useToken from "useToken" /* 5726 */;
-import ButtonHooks from "ButtonHooks" /* 5767 */;
-import ClockIcon from "ClockIcon" /* 5866 */;
-import ClipViewDefault from "ClipView" /* 9599 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 10317 */;
-import showForLaterModal from "showForLaterModal" /* 11291 */;
-import BookmarkIcon2 from "BookmarkIcon" /* 11302 */;
+import useThemeDefault from "useTheme" /* 5484 */;
+import useToken from "useToken" /* 5839 */;
+import ButtonHooks from "ButtonHooks" /* 5880 */;
+import ClockIcon from "ClockIcon" /* 5979 */;
+import ClipViewDefault from "ClipView" /* 9437 */;
+import showForLaterModal from "showForLaterModal" /* 11844 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 11845 */;
+import BookmarkIcon2 from "BookmarkIcon" /* 11857 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 10316 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11849 */;
 
 require = fn;
 function BadgedIcon(arg0) {
@@ -51,10 +51,10 @@ function BadgedIcon(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const point = { shape: fn(9599).CutoutShape.Circle, x: fn(14976).ICON_SIZE.sm - 7, y: fn(14976).ICON_SIZE.sm - 8, size: 10 };
-const createStyles = fn(5142);
+const point = { shape: fn(9437).CutoutShape.Circle, x: fn(10459).ICON_SIZE.sm - 7, y: fn(10459).ICON_SIZE.sm - 8, size: 10 };
+const createStyles = fn(5243);
 let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
-let size = { width: fn(14976).ICON_SIZE.sm, height: fn(14976).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(10459).ICON_SIZE.sm, height: fn(10459).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.lg, right: -2, bottom: -0.5 };
 obj.dot = size1;
@@ -65,25 +65,34 @@ const result = size.fileFinishedImporting("modules/saved_messages/native/ForLate
 export default function ForLaterActionButton(ref) {
   const type = ref.type;
   const onOpen = ref.onOpen;
+  const tmp3 = type === type(11845).SavedMessageSortTypes.REMINDER;
+  dependencyMap = tmp3;
   items = [SavedMessagesStore];
-  const items1 = [onOpen, type];
-  const stateFromStores = type(504).useStateFromStores(items, () => SavedMessagesStore.hasOverdueReminder(), []);
-  const obj2 = { ref: ref.ref, children: null };
+  const items1 = [tmp3];
+  const stateFromStores = type(504).useStateFromStores(items, () => {
+    let num = 0;
+    if (closure_2) {
+      num = SavedMessagesStore.getOverdueMessageReminderCount();
+    }
+    return num;
+  }, items1);
+  const items2 = [onOpen, type];
   const callback = noop.useCallback(() => {
     onOpen();
     showForLaterModal.showForLaterModal(type);
-  }, items1);
-  const obj3 = { type, showRedDot: null };
-  const obj = type(504);
-  const obj4 = { variant: "tertiary", size: "sm", icon: closure_6(BadgedIcon, obj3), onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 2 };
-  obj3.showRedDot = type === type(10317).SavedMessageSortTypes.REMINDER && stateFromStores;
-  const intl = tmp(1113).intl;
-  if (type === type(10317).SavedMessageSortTypes.REMINDER) {
-    let aUXxzT = tmp(1113).t.aUXxzT;
-  } else {
-    aUXxzT = tmp(1113).t["2pAkDA"];
+  }, items2);
+  const intl = type(1113).intl;
+  const t = type(1113).t;
+  const stringResult = intl.string(tmp3 ? t.aUXxzT : t["2pAkDA"]);
+  let combined = stringResult;
+  if (stateFromStores > 0) {
+    const intl2 = tmp(1113).intl;
+    const obj2 = { count: stateFromStores };
+    const _HermesInternal = HermesInternal;
+    combined = "" + stringResult + ", " + intl2.formatToPlainString(tmp(1113).t.yBmFPA, obj2);
   }
-  obj4.accessibilityLabel = intl.string(aUXxzT);
-  obj2.children = closure_6(type(8102).IconButton, obj4);
-  return closure_6(View, obj2);
+  const obj3 = { ref: ref.ref, children: null };
+  const obj = type(504);
+  obj3.children = closure_6(type(7922).IconButton, { variant: "tertiary", size: "sm", icon: closure_6(BadgedIcon, { type, showRedDot: stateFromStores > 0 }), onPress: callback, accessibilityLabel: combined, maxFontSizeMultiplier: 2 });
+  return closure_6(View, obj3);
 };

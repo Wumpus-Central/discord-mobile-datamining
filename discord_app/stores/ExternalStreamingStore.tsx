@@ -1,15 +1,15 @@
-// === Module 11685: ExternalStreamingStore ===
+// === Module 15871: ExternalStreamingStore ===
 
-// Module 11685 (ExternalStreamingStore)
+// Module 15871 (ExternalStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7411 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7400 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6629 */;
-import StreamerModeStore from "StreamerModeStore" /* 5197 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7022 */;
+import StreamerModeStore from "StreamerModeStore" /* 5310 */;
 
 require = fn;
 function makeTwitchRequest(arg0, query, arg2) {

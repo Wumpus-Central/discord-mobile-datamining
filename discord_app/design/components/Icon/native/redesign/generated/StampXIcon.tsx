@@ -1,9 +1,9 @@
-// === Module 14810: StampXIcon ===
+// === Module 12588: StampXIcon ===
 
-// Module 14810 (StampXIcon)
+// Module 12588 (StampXIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod14811 from "module_14811" /* 14811 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod12589 from "module_12589" /* 12589 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function StampXIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14811, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12589, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

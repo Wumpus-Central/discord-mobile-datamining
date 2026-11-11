@@ -1,6 +1,6 @@
-// === Module 8547: getPowerupEntitlementPrice ===
+// === Module 9177: getPowerupEntitlementPrice ===
 
-// Module 8547 (getPowerupEntitlementPrice)
+// Module 9177 (getPowerupEntitlementPrice)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/getPowerupEntitlementPrice.tsx");

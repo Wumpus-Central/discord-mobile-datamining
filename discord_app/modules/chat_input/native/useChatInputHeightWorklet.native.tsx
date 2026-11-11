@@ -1,9 +1,9 @@
-// === Module 14051: useChatInputHeightWorklet ===
+// === Module 14531: useChatInputHeightWorklet ===
 
-// Module 14051 (useChatInputHeightWorklet)
+// Module 14531 (useChatInputHeightWorklet)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import useKeyboardStateSharedValueDefault from "useKeyboardStateSharedValue" /* 13041 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13042 */;
+import useKeyboardStateSharedValueDefault from "useKeyboardStateSharedValue" /* 13707 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13708 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -43,7 +43,7 @@ export default function useChatInputHeightWorklet(arg0) {
   [tmp13, tmp14, tmp15, tmp16] = items2;
   function useChatInputHeightWorkletNativeTsx2() {
     value = _undefined.get();
-    value2 = _undefined2.get();
+    const value2 = _undefined2.get();
     return _undefined3();
   }
   const items3 = [tmp14, tmp15, tmp16];

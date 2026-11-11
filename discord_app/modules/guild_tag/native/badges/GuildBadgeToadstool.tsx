@@ -1,8 +1,8 @@
-// === Module 16085: GuildBadgeToadstool ===
+// === Module 16244: GuildBadgeToadstool ===
 
-// Module 16085 (GuildBadgeToadstool)
-import inlineStyles from "inlineStyles" /* 8105 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 16081 */;
+// Module 16244 (GuildBadgeToadstool)
+import inlineStyles from "inlineStyles" /* 8197 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 16240 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

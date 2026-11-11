@@ -1,45 +1,61 @@
-// === Module 14603: HubEmailConnectionContent ===
+// === Module 14982: HubEmailConnectionContent ===
 
-// Module 14603 (HubEmailConnectionContent)
+// Module 14982 (HubEmailConnectionContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import useNavigation from "useNavigation" /* 1499 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import components_Button_Button from "components/Button/Button" /* 5760 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 14599 */;
-import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 14605 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5257 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import components_Button_Button from "components/Button/Button" /* 5873 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 14978 */;
+import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 14985 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const HubConstants = fn(14591);
+const HubConstants = fn(14970);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: closure_10 } = HubConstants);
 const MarketingURLs = fn(1072).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5142);
-let obj2 = { container: { paddingHorizontal: 16 }, header: { marginTop: 16, marginBottom: 16, alignSelf: "center" }, scrollViewContainer: { flexGrow: 2 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 24 }, input: { marginBottom: 32 }, textInput: { borderRadius: nativeDefault.radii.lg }, growSpacing: null, buttonContainer: null };
-let obj3 = { borderRadius: nativeDefault.radii.lg };
-obj2.growSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
-let obj4 = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
-obj2.buttonContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
-let closure_14 = createStyles.createStyles(obj2);
+const createStyles = fn(5243);
+let closure_14 = createStyles.createStyles((arg0) => {
+  const obj = { container: { paddingHorizontal: 16 }, header: { marginTop: 16, marginBottom: 16, alignSelf: "center" }, scrollViewContainer: { flexGrow: 2 }, title: { textAlign: "center", marginBottom: 8 }, description: { alignItems: "center", marginBottom: 24 }, descriptionText: { textAlign: "center" }, learnMore: null, input: null, textInput: null, placeholder: null, growSpacing: null, buttonContainer: null };
+  let str = "none";
+  if (arg0) {
+    str = "underline";
+  }
+  obj.learnMore = { alignSelf: "center", textDecorationLine: str };
+  obj.input = { marginBottom: 32 };
+  obj.textInput = { borderRadius: nativeDefault.radii.lg };
+  const obj2 = { borderRadius: nativeDefault.radii.lg };
+  obj.placeholder = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+  const obj3 = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+  obj.growSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
+  const obj4 = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
+  obj.buttonContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
+  return obj;
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionContent.tsx");
 
 export default function HubEmailConnectionContent(arg0) {
   ({ onClose: require, invite } = arg0);
   value = undefined;
-  _slicedToArray = undefined;
   noop = undefined;
-  closure_7 = async function _signup() {
+  c6 = undefined;
+  let obj4;
+  function handleLearnMore() {
+    invite(closure_2[13]).openLazy(require("asyncRequireImpl")(closure_2[14], closure_2.paths), "HubEmailConnectionDescriptionActionsheet");
+  }
+  closure_9 = async function _signup() {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -68,8 +84,8 @@ export default function HubEmailConnectionContent(arg0) {
             closure_130_0 = undefined;
             closure_130_1 = undefined;
             let guilds_info;
-            noop(null);
-            _slicedToArray(true);
+            timestampProducer(null);
+            noop(true);
             c5 = 2;
             let id;
             if (invite != null) {
@@ -98,26 +114,26 @@ export default function HubEmailConnectionContent(arg0) {
               _undefined = undefined;
             }
             closure_130_0 = _undefined;
-            if (_undefined === closure_1_10) {
+            if (_undefined === obj4) {
               closure_130_0 = undefined;
             }
             c6 = 3;
             c7 = 1;
-            const obj5 = { value: guildId(tmp6[12]).sendVerificationEmail(asyncGeneratorStep, true, _undefined), done: false };
+            const obj5 = { value: guildId(tmp6[16]).sendVerificationEmail(_slicedToArray, true, _undefined), done: false };
             return obj5;
           }
         } else if (1 === tmp9) {
           c5 = 0;
-          closure_131_4(false);
+          closure_131_5(false);
           throw closure_4;
         } else {
           if (2 === tmp9) {
             c5 = 1;
             closure_130_3 = closure_4;
-            const aPIError = new _undefined(tmp6[13]).APIError(closure_130_3);
-            closure_131_5(aPIError);
+            const aPIError = new _undefined(tmp6[17]).APIError(closure_130_3);
+            closure_131_6(aPIError);
             c5 = 0;
-            closure_131_4(false);
+            closure_131_5(false);
             c7 = 3;
           } else {
             if (3 === tmp9) {
@@ -129,21 +145,21 @@ export default function HubEmailConnectionContent(arg0) {
                 guilds_info = closure_130_1.guilds_info;
                 if (closure_130_1.has_matching_guild) {
                   if (null != closure_130_0) {
-                    const obj6 = { email: closure_131_3, onClose: closure_131_0, guildId: closure_130_0 };
-                    closure_131_2.push(constants.VERIFY_PIN, obj6);
+                    const obj6 = { email: closure_131_4, onClose: closure_131_0, guildId: closure_130_0 };
+                    closure_131_3.push(constants.VERIFY_PIN, obj6);
                   }
                 }
                 if (0 === guilds_info.length) {
-                  const obj7 = { email: closure_131_3, onClose: closure_131_0 };
-                  closure_131_2.push(constants.SUBMIT_SCHOOL, obj7);
+                  const obj7 = { email: closure_131_4, onClose: closure_131_0 };
+                  closure_131_3.push(constants.SUBMIT_SCHOOL, obj7);
                 } else if (1 === guilds_info.length) {
                   c6 = 4;
                   c7 = 1;
-                  const obj8 = { value: guildId(tmp6[12]).sendVerificationEmail(closure_131_3, true, guilds_info[0].id), done: false };
+                  const obj8 = { value: guildId(tmp6[16]).sendVerificationEmail(closure_131_4, true, guilds_info[0].id), done: false };
                   return obj8;
                 } else {
-                  const obj9 = { email: closure_131_3, onClose: closure_131_0, guildsInfo: guilds_info };
-                  closure_131_2.push(constants.SELECT_SCHOOL, obj9);
+                  const obj9 = { email: closure_131_4, onClose: closure_131_0, guildsInfo: guilds_info };
+                  closure_131_3.push(constants.SELECT_SCHOOL, obj9);
                 }
               }
             } else if (arg0 === 1) {
@@ -151,18 +167,18 @@ export default function HubEmailConnectionContent(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 0;
-              closure_131_4(false);
+              closure_131_5(false);
               c7 = 3;
               const obj11 = { value, done: true };
               return obj11;
             } else {
-              const obj = { email: closure_131_3, onClose: closure_131_0, guildId: guilds_info[0].id };
-              closure_131_2.push(constants.VERIFY_PIN, obj);
+              const obj = { email: closure_131_4, onClose: closure_131_0, guildId: guilds_info[0].id };
+              closure_131_3.push(constants.VERIFY_PIN, obj);
             }
             c5 = 1;
           }
           c5 = 0;
-          closure_131_4(false);
+          closure_131_5(false);
           c7 = 3;
           const obj12 = { value, done: true };
           return obj12;
@@ -180,14 +196,16 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }
   };
-  const tmp = closure_14();
-  dependencyMap = useNavigation.useNavigation();
-  [value, obj11.onChangeText] = noop.useState("");
-  const tmp6 = _slicedToArray(noop.useState(false), 2);
-  _slicedToArray = tmp6[1];
-  [obj2, c5] = _slicedToArray(noop.useState(null), 2);
+  const tmp3 = closure_14(noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  dependencyMap = tmp3;
+  closure_3 = useNavigation.useNavigation();
+  const tmp4 = value(noop.useState(""), 2);
+  value = tmp4[0];
+  const tmp6 = value(noop.useState(false), 2);
+  noop = tmp6[1];
+  [obj2, c6] = value(noop.useState(null), 2);
   const ref = noop.useRef(null);
-  const intl = util.intl;
+  let intl = util.intl;
   const stringResult = intl.string(util.t.H1jCHH);
   guild = undefined;
   if (invite != null) {
@@ -196,7 +214,7 @@ export default function HubEmailConnectionContent(arg0) {
   let formatToPlainStringResult = stringResult;
   if (null != guild) {
     formatToPlainStringResult = stringResult;
-    if (invite.guild.id !== closure_10) {
+    if (invite.guild.id !== obj4) {
       let prop;
       if (invite != null) {
         prop = invite.approximate_member_count;
@@ -209,48 +227,84 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }
   }
-  const obj4 = { ref, contentContainerStyle: null, children: null };
-  items = [tmp.scrollViewContainer, ];
-  const tmp7 = _slicedToArray(noop.useState(null), 2);
-  items[1] = { paddingBottom: invite(5737)().insets.bottom + invite(575).space.PX_16 };
-  obj4.contentContainerStyle = items;
-  let obj6 = { style: tmp.container, children: null };
-  let obj5 = { paddingBottom: invite(5737)().insets.bottom + invite(575).space.PX_16 };
-  const tmp16 = closure_7;
-  const items1 = [closure_12(ref, { style: tmp.header, children: closure_12(InkQuillSpotIllustration.InkQuillSpotIllustration, { scale: 0.75 }) }), closure_12(Text_Text.Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: formatToPlainStringResult }), , ];
-  let obj9 = { style: tmp.description, variant: "body-sm/medium", color: "text-default", children: null };
+  obj4 = { usesLearnMoreHook: false };
   const intl3 = util.intl;
-  obj9.children = intl3.format(util.t["6kzaqs"], {
-    onClick() {
-      invite(paths[18]).openLazy(require("asyncRequireImpl")(paths[19], paths.paths), "HubEmailConnectionDescriptionActionsheet");
-    }
+  const formatResult = intl3.format(util.t["6kzaqs"], {
+    learnMoreHook(children, arg1) {
+      obj4.usesLearnMoreHook = true;
+      const obj = { variant: "body-sm/medium", color: "text-link", style: closure_2.learnMore, accessible: true, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.vRWrrr);
+      obj.onPress = handleLearnMore;
+      obj.children = children;
+      return application_id(Text_Text.Text, obj, arg1);
+    },
+    onClick: handleLearnMore
   });
-  items1[2] = closure_12(Text_Text.Text, obj9);
-  let obj11 = { label: null, placeholder: null, value: null, textContentType: "emailAddress", autoCapitalize: "none", keyboardType: "email-address", hint: null, textStyle: null, onChangeText: null, style: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
-  const obj10 = {
-    onClick() {
-      invite(paths[18]).openLazy(require("asyncRequireImpl")(paths[19], paths.paths), "HubEmailConnectionDescriptionActionsheet");
-    }
+  let arr = formatResult;
+  if (!Array.isArray(formatResult)) {
+    items = [formatResult];
+    arr = items;
+  }
+  let obj6 = { ref, contentContainerStyle: null, children: null };
+  const items1 = [tmp3.scrollViewContainer, ];
+  let obj5 = {
+    learnMoreHook(children, arg1) {
+      obj4.usesLearnMoreHook = true;
+      const obj = { variant: "body-sm/medium", color: "text-link", style: closure_2.learnMore, accessible: true, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.vRWrrr);
+      obj.onPress = handleLearnMore;
+      obj.children = children;
+      return application_id(Text_Text.Text, obj, arg1);
+    },
+    onClick: handleLearnMore
   };
-  let obj7 = { style: tmp.header, children: closure_12(InkQuillSpotIllustration.InkQuillSpotIllustration, { scale: 0.75 }) };
-  let obj8 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: formatToPlainStringResult };
+  const tmp7 = value(noop.useState(null), 2);
+  items1[1] = { paddingBottom: invite(5850)().insets.bottom + invite(575).space.PX_16 };
+  obj6.contentContainerStyle = items1;
+  let obj8 = { style: tmp3.container, children: null };
+  let obj7 = { paddingBottom: invite(5850)().insets.bottom + invite(575).space.PX_16 };
+  const tmp17 = ref;
+  const items2 = [closure_12(c6, { style: tmp3.header, children: closure_12(InkQuillSpotIllustration.InkQuillSpotIllustration, { scale: 0.75 }) }), closure_12(Text_Text.Text, { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp3.title, accessibilityRole: "header", children: formatToPlainStringResult }), , ];
+  let obj11 = { style: tmp3.description, children: null };
+  if (obj4.usesLearnMoreHook) {
+    let mapped = arr.map((item, index) => {
+      let tmp = item;
+      if (typeof item === "string") {
+        const obj = { style: closure_2.descriptionText, variant: "body-sm/medium", color: "text-default", children: item.trimEnd() };
+        tmp = application_id(Text_Text.Text, obj, index);
+      }
+      return tmp;
+    });
+  } else {
+    let obj12 = { style: tmp3.descriptionText, variant: "body-sm/medium", color: "text-default", children: formatResult };
+    mapped = closure_12(Text_Text.Text, obj12);
+  }
+  obj11.children = mapped;
+  items2[2] = closure_12(c6, obj11);
+  const obj13 = { label: null, placeholder: null, placeholderTextColor: null, value: null, textContentType: "emailAddress", autoCapitalize: "none", keyboardType: "email-address", hint: null, textStyle: null, onChangeText: null, style: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
+  const obj10 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp3.title, accessibilityRole: "header", children: formatToPlainStringResult };
+  let obj9 = { style: tmp3.header, children: closure_12(InkQuillSpotIllustration.InkQuillSpotIllustration, { scale: 0.75 }) };
   const intl4 = util.intl;
-  obj11.label = intl4.string(util.t["K/7rLI"]);
+  obj13.label = intl4.string(util.t["K/7rLI"]);
   const intl5 = util.intl;
-  obj11.placeholder = intl5.string(util.t.ImAOh5);
-  obj11.value = value;
+  obj13.placeholder = intl5.string(util.t.ImAOh5);
+  obj13.placeholderTextColor = tmp3.placeholder.color;
+  obj13.value = value;
   const intl6 = util.intl;
-  obj11.hint = intl6.format(util.t.RPT0vj, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
-  obj11.textStyle = tmp.textInput;
-  obj11.style = tmp.input;
-  obj11.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
+  obj13.hint = intl6.format(util.t.RPT0vj, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
+  obj13.textStyle = tmp3.textInput;
+  obj13.onChangeText = tmp4[1];
+  obj13.style = tmp3.input;
+  obj13.clearButtonVisibility = native.ClearButtonVisibility.WITH_CONTENT;
   let anyErrorMessage;
   if (obj2 != null) {
     anyErrorMessage = obj2.getAnyErrorMessage();
   }
-  const obj13 = { children: null };
-  obj11.error = anyErrorMessage;
-  obj11.onFocus = function onFocus() {
+  const obj15 = { children: null };
+  obj13.error = anyErrorMessage;
+  obj13.onFocus = function onFocus() {
     const timerId = setTimeout(() => {
       const current = ref.current;
       if (current != null) {
@@ -258,7 +312,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  obj11.onBlur = function onBlur() {
+  obj13.onBlur = function onBlur() {
     const timerId = setTimeout(() => {
       const current = ref.current;
       if (current != null) {
@@ -266,16 +320,16 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items1[3] = closure_12(invite(7150), obj11);
-  obj6.children = items1;
-  const items2 = [closure_13(ref, obj6), closure_12(ref, { style: tmp.growSpacing }), ];
-  const obj15 = { style: tmp.buttonContainer, children: null };
-  const obj16 = { size: "lg", text: null, onPress: null, loading: null };
+  items2[3] = closure_12(invite(7551), obj13);
+  obj8.children = items2;
+  const items3 = [closure_13(c6, obj8), closure_12(c6, { style: tmp3.growSpacing }), ];
+  const obj17 = { style: tmp3.buttonContainer, children: null };
+  const obj18 = { size: "lg", text: null, onPress: null, loading: null };
   const intl7 = util.intl;
-  obj16.text = intl7.string(util.t["8vmKO0"]);
-  obj16.onPress = function signup() {
+  obj18.text = intl7.string(util.t["8vmKO0"]);
+  obj18.onPress = function signup() {
     const self = this;
-    const apply = closure_7.apply;
+    const apply = closure_9.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -283,10 +337,10 @@ export default function HubEmailConnectionContent(arg0) {
     }
     return applyArgumentsResult;
   };
-  obj16.loading = tmp6[0];
-  obj15.children = closure_12(components_Button_Button.Button, obj16);
-  items2[2] = closure_12(ref, obj15);
-  obj4.children = items2;
-  obj13.children = closure_13(tmp16, obj4);
-  return closure_12(HubEmailConnectionModal.HubEmailConnectionScreen, obj13);
+  obj18.loading = tmp6[0];
+  obj17.children = closure_12(components_Button_Button.Button, obj18);
+  items3[2] = closure_12(c6, obj17);
+  obj6.children = items3;
+  obj15.children = closure_13(tmp17, obj6);
+  return closure_12(HubEmailConnectionModal.HubEmailConnectionScreen, obj15);
 };

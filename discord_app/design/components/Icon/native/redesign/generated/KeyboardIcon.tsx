@@ -1,9 +1,9 @@
-// === Module 14791: KeyboardIcon ===
+// === Module 11798: KeyboardIcon ===
 
-// Module 14791 (KeyboardIcon)
+// Module 11798 (KeyboardIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod12723 from "module_12723" /* 12723 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod11799 from "module_11799" /* 11799 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function KeyboardIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12723, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11799, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

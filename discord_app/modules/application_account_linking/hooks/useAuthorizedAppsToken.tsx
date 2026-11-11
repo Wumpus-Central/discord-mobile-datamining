@@ -1,10 +1,10 @@
-// === Module 7395: useAuthorizedAppsToken ===
+// === Module 7856: useAuthorizedAppsToken ===
 
-// Module 7395 (useAuthorizedAppsToken)
+// Module 7856 (useAuthorizedAppsToken)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7396 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7346 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7342 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7158 */;
 
 require = fn;
 function useAuthorizedAppsTokens(noop, arg1) {
@@ -66,7 +66,7 @@ function useAuthorizedAppsTokens(noop, arg1) {
   }, items6);
   return { tokens, fetched };
 }
-const FetchState = fn(7342).FetchState;
+const FetchState = fn(7158).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx");
 

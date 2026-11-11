@@ -1,16 +1,16 @@
-// === Module 12159: game_console/GameConsoleAlertUtils ===
+// === Module 10763: game_console/GameConsoleAlertUtils ===
 
-// Module 12159 (game_console/GameConsoleAlertUtils)
+// Module 10763 (game_console/GameConsoleAlertUtils)
 import util from "util" /* 1113 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6093 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9816 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6206 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 7358 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(9833).GAME_CONSOLE_ALERT_MODAL_LOCATION;
+let closure_4 = fn(7405).GAME_CONSOLE_ALERT_MODAL_LOCATION;
 const Constants = fn(1072);
 ({ InputModes: hasOwnProperty, PlatformTypes: closure_6 } = Constants);
 const jsx = fn(21).jsx;
@@ -38,7 +38,7 @@ export default {
             const intl = util.intl;
             obj2.body = intl.string(util.t.bL21zs);
             obj2.onConfirm = function onConfirm() {
-              const result = closure_0(5172).UNSAFE_markDismissibleContentAsDismissed(closure_0(4975).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT);
+              const result = closure_0(5285).UNSAFE_markDismissibleContentAsDismissed(closure_0(5076).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT);
               closure_0();
             };
             actions_AlertActionCreatorsDefault.show(obj2);
@@ -55,7 +55,7 @@ export default {
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
     const obj2 = { title, body: null, onConfirm: null, isDismissable: false };
     let obj = actions_AlertActionCreatorsDefault;
-    obj2.body = jsx(reconnectPlatformType(12160).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: actions_AlertActionCreatorsDefault.close });
+    obj2.body = jsx(reconnectPlatformType(10764).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: actions_AlertActionCreatorsDefault.close });
     obj2.onConfirm = function handleConfirm() {
       if (null != reconnectPlatformType) {
         const obj = { platformType: tmp, location: _location };

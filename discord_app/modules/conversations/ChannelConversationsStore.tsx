@@ -1,16 +1,16 @@
-// === Module 7847: ChannelConversationsStore ===
+// === Module 8678: ChannelConversationsStore ===
 
-// Module 7847 (ChannelConversationsStore)
+// Module 8678 (ChannelConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import privDefault from "priv" /* 1453 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7848 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6311 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 8679 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import RelationshipStore from "RelationshipStore" /* 5084 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import RelationshipStore from "RelationshipStore" /* 5185 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -87,7 +87,7 @@ function handleReaction(messageId) {
         let tmp7 = null;
         if (null != value.conversationId) {
           const conversationMetadataById = peekResult.conversationMetadataById;
-          value2 = conversationMetadataById.get(value.conversationId);
+          let value2 = conversationMetadataById.get(value.conversationId);
           if (value2 == null) {
             value2 = null;
           }
@@ -141,7 +141,7 @@ function removeMessage(arg0, id) {
       let tmp2 = null;
       if (null != value.conversationId) {
         const conversationMetadataById = peekResult.conversationMetadataById;
-        value2 = conversationMetadataById.get(value.conversationId);
+        let value2 = conversationMetadataById.get(value.conversationId);
         if (value2 == null) {
           value2 = null;
         }
@@ -162,7 +162,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(5781);
+const ConversationConstants = fn(5894);
 ({ CONVERSATION_COLORS: closure_8, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: closure_9, MAX_CONVERSATIONS_PER_CHANNEL: closure_10, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
 const navigation = new privDefault({
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
@@ -392,7 +392,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
       c1 = peekResult;
       if (null != peekResult) {
         const conversationMetadataById = peekResult.conversationMetadataById;
-        value2 = conversationMetadataById.get(conversationId);
+        const value2 = conversationMetadataById.get(conversationId);
         if (null != value2) {
           const obj2 = {
             meta: value2,
@@ -461,7 +461,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7849).mapConversation);
+      const mapped = rawConversations.map(set(8680).mapConversation);
       const found = mapped.filter(set(1380).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
@@ -863,7 +863,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
             let tmp9 = null;
             if (null != value.conversationId) {
               const conversationMetadataById = peekResult.conversationMetadataById;
-              value2 = conversationMetadataById.get(value.conversationId);
+              let value2 = conversationMetadataById.get(value.conversationId);
               if (value2 == null) {
                 value2 = null;
               }
@@ -903,7 +903,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
           let tmp8 = null;
           if (null != value.conversationId) {
             const conversationMetadataById = peekResult.conversationMetadataById;
-            value2 = conversationMetadataById.get(value.conversationId);
+            let value2 = conversationMetadataById.get(value.conversationId);
             if (value2 == null) {
               value2 = null;
             }
@@ -938,7 +938,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
           let tmp7 = null;
           if (null != value.conversationId) {
             const conversationMetadataById = peekResult.conversationMetadataById;
-            value2 = conversationMetadataById.get(value.conversationId);
+            let value2 = conversationMetadataById.get(value.conversationId);
             if (value2 == null) {
               value2 = null;
             }
@@ -973,7 +973,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
           let tmp7 = null;
           if (null != value.conversationId) {
             const conversationMetadataById = peekResult.conversationMetadataById;
-            value2 = conversationMetadataById.get(value.conversationId);
+            let value2 = conversationMetadataById.get(value.conversationId);
             if (value2 == null) {
               value2 = null;
             }
@@ -999,7 +999,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
         let tmp4 = null;
         if (null != value.conversationId) {
           const conversationMetadataById = peekResult.conversationMetadataById;
-          value2 = conversationMetadataById.get(value.conversationId);
+          let value2 = conversationMetadataById.get(value.conversationId);
           if (value2 == null) {
             value2 = null;
           }

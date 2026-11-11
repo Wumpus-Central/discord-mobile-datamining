@@ -1,21 +1,21 @@
-// === Module 9890: PremiumUpsellActionSheet ===
+// === Module 8970: PremiumUpsellActionSheet ===
 
-// Module 9890 (PremiumUpsellActionSheet)
+// Module 8970 (PremiumUpsellActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import PremiumUtils from "PremiumUtils" /* 2171 */;
-import ChatInputUtils from "ChatInputUtils" /* 5325 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
-import LinearGradientDefault from "LinearGradient" /* 5717 */;
-import FastImageDefault from "FastImage" /* 5844 */;
-import APNGPlayer from "APNGPlayer" /* 9594 */;
-import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 9889 */;
+import ChatInputUtils from "ChatInputUtils" /* 5438 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
+import LinearGradientDefault from "LinearGradient" /* 5830 */;
+import FastImageDefault from "FastImage" /* 5957 */;
+import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 8969 */;
+import APNGPlayer from "APNGPlayer" /* 9432 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5173 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -70,11 +70,11 @@ const PremiumConstants = fn(1387);
 ({ PremiumSubscriptionSKUs: closure_10, PremiumTypes: closure_11, PremiumUpsellTypes: closure_12 } = PremiumConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
-const ApplicationStreamFPS = fn(5995).ApplicationStreamFPS;
-const premiumMax = fn(9891).MAX_SCHEDULED_MESSAGES_PER_USER;
+const ApplicationStreamFPS = fn(6108).ApplicationStreamFPS;
+const premiumMax = fn(8965).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { hero: { alignSelf: "center", marginTop: nativeDefault.space.PX_16 }, image: { width: 240, height: 144 }, text: { alignSelf: "center", textAlign: "center" }, betaTag: { marginLeft: 0 }, description: null, textContainer: null, buttonContainer: null, imageGradientBackgroundContainer: null, imageGradientBackground: null, imageInGradientBackground: null };
 let obj3 = { alignSelf: "center", marginTop: nativeDefault.space.PX_16 };
 obj2.description = { marginHorizontal: nativeDefault.space.PX_16 };

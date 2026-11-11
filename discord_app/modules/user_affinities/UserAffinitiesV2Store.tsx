@@ -1,9 +1,9 @@
-// === Module 7881: UserAffinitiesV2Store ===
+// === Module 8487: UserAffinitiesV2Store ===
 
-// Module 7881 (UserAffinitiesV2Store)
+// Module 8487 (UserAffinitiesV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import RelationshipStore from "RelationshipStore" /* 5084 */;
+import RelationshipStore from "RelationshipStore" /* 5185 */;
 
 function recomputeAffinities() {
   const userAffinities = obj.userAffinities;
@@ -21,7 +21,7 @@ function recomputeAffinities() {
     const result = map.set(_null.otherUserId, _null);
   }
 }
-const USER_AFFINITY_TTL = fn(7882).USER_AFFINITY_TTL;
+const USER_AFFINITY_TTL = fn(8488).USER_AFFINITY_TTL;
 let map = new Map();
 let c3 = false;
 let c4 = null;
@@ -89,7 +89,7 @@ prototype["compare"] = function compare(arg0, arg1) {
   if (num == null) {
     num = 0;
   }
-  value2 = map.get(arg0);
+  const value2 = map.get(arg0);
   let num2;
   if (value2 != null) {
     num2 = value2.communicationProbability;
@@ -108,7 +108,7 @@ prototype["compareByDmProbability"] = function compareByDmProbability(arg0, arg1
   if (num == null) {
     num = 0;
   }
-  value2 = map.get(arg0);
+  const value2 = map.get(arg0);
   let num2;
   if (value2 != null) {
     num2 = value2.dmProbability;

@@ -1,15 +1,15 @@
-// === Module 8287: clipPayloadUtils ===
+// === Module 8782: clipPayloadUtils ===
 
-// Module 8287 (clipPayloadUtils)
+// Module 8782 (clipPayloadUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ClipsConstants = fn(8288);
+const ClipsConstants = fn(8779);
 ({ CLIPS_MAX_PARTICIPANTS: closure_4, CLIPS_MAX_TIMELINE_EVENTS: hasOwnProperty, ClipSignalTypes: closure_6, GameEventType: metroImportDefault, CLIP_RUNTIME: closure_8 } = ClipsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SpeakingFlags = fn(5899).SpeakingFlags;
+const SpeakingFlags = fn(6012).SpeakingFlags;
 const ServerClipGameEventType = { UNKNOWN: 0, [0]: "UNKNOWN", KILL: 1, [1]: "KILL", MULTIKILL: 2, [2]: "MULTIKILL", DEATH: 3, [3]: "DEATH" };
 let obj2 = { UNKNOWN: 0, [0]: "UNKNOWN", LAUGHTER: 1, [1]: "LAUGHTER", SHOUTING: 2, [2]: "SHOUTING" };
 const size = fn(2);
@@ -26,7 +26,7 @@ export function getClipSyncTimestamp(clip) {
       end = editMetadata.end;
     }
     if (null != end) {
-      let length = 1000 * clip.editMetadata.end;
+      length = 1000 * clip.editMetadata.end;
     } else {
       length = clip.length;
     }

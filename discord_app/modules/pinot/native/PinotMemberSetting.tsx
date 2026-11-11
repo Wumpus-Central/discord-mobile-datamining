@@ -1,20 +1,20 @@
-// === Module 18261: PinotMemberSetting ===
+// === Module 18432: PinotMemberSetting ===
 
-// Module 18261 (PinotMemberSetting)
+// Module 18432 (PinotMemberSetting)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import _modDef3316 from "module_3316" /* 3316 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import InlineNotice from "InlineNotice" /* 8099 */;
-import SettingsConstants from "SettingsConstants" /* 8507 */;
-import PinotExperiment from "PinotExperiment" /* 9141 */;
-import PinotMemberSettingState from "PinotMemberSettingState" /* 11476 */;
+import _modDef3337 from "module_3337" /* 3337 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import InlineNotice from "InlineNotice" /* 8094 */;
+import PinotExperiment from "PinotExperiment" /* 8103 */;
+import SettingsConstants from "SettingsConstants" /* 9136 */;
+import PinotMemberSettingState from "PinotMemberSettingState" /* 12247 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5142 */;
-import SettingBuilders from "SettingBuilders" /* 11694 */;
+import createStyles from "createStyles" /* 5243 */;
+import SettingBuilders from "SettingBuilders" /* 12317 */;
 import size from "module_2" /* 2 */;
 
 function PinotMemberSettingFooter() {
@@ -24,14 +24,14 @@ function PinotMemberSettingFooter() {
   const obj3 = { style: tmp.footer, children: null };
   const obj4 = { variant: "body-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj4.children = intl.format(_modDef3316.V0EPTo, { learnMoreURL: articleURL });
+  obj4.children = intl.format(_modDef3337.V0EPTo, { learnMoreURL: articleURL });
   items = [timestampProducer(Text_Text.Text, obj4), ];
   let tmp8Result = null;
   if (obj.usePinotMemberSettingState().locked) {
     const obj5 = { type: "info", message: null, role: "none" };
     const intl2 = util.intl;
     const obj6 = { learnMoreURL: articleURL };
-    obj5.message = intl2.format(_modDef3316.Z9bKIJ, obj6);
+    obj5.message = intl2.format(_modDef3337.Z9bKIJ, obj6);
     tmp8Result = timestampProducer(InlineNotice.InlineNotice, obj5);
   }
   items[1] = tmp8Result;
@@ -48,7 +48,7 @@ let closure_9 = createStyles.createStyles(obj);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3316.M33rl6);
+    return intl.string(_modDef3337.M33rl6);
   },
   parent: MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate() {

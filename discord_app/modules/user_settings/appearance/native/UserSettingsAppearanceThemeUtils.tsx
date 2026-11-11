@@ -1,15 +1,15 @@
-// === Module 17354: UserSettingsAppearanceThemeUtils ===
+// === Module 17518: UserSettingsAppearanceThemeUtils ===
 
-// Module 17354 (UserSettingsAppearanceThemeUtils)
+// Module 17518 (UserSettingsAppearanceThemeUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5200 */;
-import UserSettingsActionCreators from "UserSettingsActionCreators" /* 6066 */;
-import CustomThemeMobileActionCreators from "CustomThemeMobileActionCreators" /* 13969 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17355 */;
-import SameAsDeviceThemeUtils from "SameAsDeviceThemeUtils" /* 17356 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5313 */;
+import UserSettingsActionCreators from "UserSettingsActionCreators" /* 6179 */;
+import CustomThemeMobileActionCreators from "CustomThemeMobileActionCreators" /* 14448 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17519 */;
+import SameAsDeviceThemeUtils from "SameAsDeviceThemeUtils" /* 17520 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -68,44 +68,44 @@ export function handleSaveTheme(found, analyticsLocations, c3) {
     combined = "default " + found.theme;
   }
 }
-export function handleSaveSyncedModeTheme(theme, systemTheme, c10) {
-  if ("system" !== theme.theme) {
-    if (theme.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-      const obj2 = { feature_name: constants.CLIENT_THEME, theme_name: "custom theme", is_persisted: true, is_synced: false, location_stack };
+export function handleSaveSyncedModeTheme(hexagonCampaignClientThemeItem, item10084, analyticsLocations) {
+  if ("system" !== hexagonCampaignClientThemeItem.theme) {
+    if (hexagonCampaignClientThemeItem.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+      const obj2 = { feature_name: constants.CLIENT_THEME, theme_name: "custom theme", is_persisted: true, is_synced: false, location_stack: analyticsLocations };
       AnalyticsUtilsDefault.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj2);
-      if (theme.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-        theme = ClientThemesUtils.getCustomThemeBaseTheme(theme.theme);
+      if (hexagonCampaignClientThemeItem.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+        let theme = ClientThemesUtils.getCustomThemeBaseTheme(hexagonCampaignClientThemeItem.theme);
         const tmp14Result = ClientThemesUtils;
       } else {
-        theme = theme.theme;
+        theme = hexagonCampaignClientThemeItem.theme;
       }
       const obj3 = {};
-      obj3[systemTheme] = theme;
+      obj3[item10084] = theme;
       const result = ThemeActionCreators.updateThemePreferences(obj3);
-      if (theme.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-        const obj4 = { customUserThemeSettings: theme.customThemeSettings };
-        const result1 = ThemeActionCreators.updateSyncedClientTheme(systemTheme, obj4);
+      if (hexagonCampaignClientThemeItem.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+        const obj4 = { customUserThemeSettings: hexagonCampaignClientThemeItem.customThemeSettings };
+        const result1 = ThemeActionCreators.updateSyncedClientTheme(item10084, obj4);
         const tmp14Result6 = ThemeActionCreators;
-      } else if (theme.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
-        const obj5 = { backgroundGradientPresetId: theme.id };
-        const result2 = ThemeActionCreators.updateSyncedClientTheme(systemTheme, obj5);
+      } else if (hexagonCampaignClientThemeItem.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+        const obj5 = { backgroundGradientPresetId: hexagonCampaignClientThemeItem.id };
+        const result2 = ThemeActionCreators.updateSyncedClientTheme(item10084, obj5);
         const tmp14Result7 = ThemeActionCreators;
       } else {
-        const obj6 = { theme: theme.theme };
-        const result3 = ThemeActionCreators.updateSyncedClientTheme(systemTheme, obj6);
+        const obj6 = { theme: hexagonCampaignClientThemeItem.theme };
+        const result3 = ThemeActionCreators.updateSyncedClientTheme(item10084, obj6);
         const tmp14Result8 = ThemeActionCreators;
       }
       const tmp14Result5 = ThemeActionCreators;
-    } else if (theme.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
-      let combined = preloaded_user_settings.BackgroundGradientPresetId[theme.id];
+    } else if (hexagonCampaignClientThemeItem.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+      let combined = preloaded_user_settings.BackgroundGradientPresetId[hexagonCampaignClientThemeItem.id];
     } else {
       const _HermesInternal = HermesInternal;
-      combined = "default " + theme.theme;
+      combined = "default " + hexagonCampaignClientThemeItem.theme;
     }
   }
 }
-export function getSyncedModeThemeIndex(memo2, systemTheme) {
-  const syncedClientTheme = ThemeStore.getSyncedClientTheme(systemTheme);
+export function getSyncedModeThemeIndex(memo2, item10084) {
+  const syncedClientTheme = ThemeStore.getSyncedClientTheme(item10084);
   let prop;
   if (syncedClientTheme != null) {
     prop = syncedClientTheme.customUserThemeSettings;
@@ -132,7 +132,7 @@ export function getSyncedModeThemeIndex(memo2, systemTheme) {
       return findIndexResult1;
     }
   }
-  closure_1 = ThemeStore.themePreferenceForSystemTheme(systemTheme);
+  closure_1 = ThemeStore.themePreferenceForSystemTheme(item10084);
   const findIndexResult2 = memo2.findIndex((theme) => theme.theme === closure_1);
   let num3 = 0;
   if (findIndexResult2 >= 0) {

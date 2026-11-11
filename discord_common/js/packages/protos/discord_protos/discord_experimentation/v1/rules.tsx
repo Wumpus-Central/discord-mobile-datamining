@@ -1,6 +1,6 @@
-// === Module 8666: rules ===
+// === Module 8586: rules ===
 
-// Module 8666 (rules)
+// Module 8586 (rules)
 import _mod1197 from "module_1197" /* 1197 */;
 import wrappers from "wrappers" /* 1227 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -128,7 +128,6 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   return obj;
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(type, tag, writeUnknownFields) {
-  let length;
   if (0 !== type.type) {
     tag.tag(1, _mod1197.WireType.Varint).int32(type.type);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);
@@ -568,7 +567,7 @@ class Filter$Type extends MessageType3 {
 }
 const prototype3 = Filter$Type.prototype;
 prototype3["create"] = function create(partialSettings) {
-  obj = { filter: { oneofKind: "r" }, negate: false };
+  obj = { filter: { oneofKind: "Array" }, negate: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -909,7 +908,6 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype5["internalBinaryWrite"] = function internalBinaryWrite(guildIds, tag, writeUnknownFields) {
-  let length;
   if (guildIds.guildIds.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -1010,7 +1008,6 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype6["internalBinaryWrite"] = function internalBinaryWrite(userIds, tag, writeUnknownFields) {
-  let length;
   if (userIds.userIds.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -1098,7 +1095,6 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype7["internalBinaryWrite"] = function internalBinaryWrite(locales, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < locales.locales.length) {
     do {
@@ -1182,7 +1178,6 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype8["internalBinaryWrite"] = function internalBinaryWrite(locales, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < locales.locales.length) {
     do {
@@ -1266,7 +1261,6 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype9["internalBinaryWrite"] = function internalBinaryWrite(locales, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < locales.locales.length) {
     do {
@@ -1359,7 +1353,6 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype10["internalBinaryWrite"] = function internalBinaryWrite(locations, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < locations.locations.length) {
     do {
@@ -1598,7 +1591,7 @@ class ClientLocation_Location$Type extends MessageType13 {
 }
 const prototype13 = ClientLocation_Location$Type.prototype;
 prototype13["create"] = function create(partialSettings) {
-  obj = { location: { oneofKind: "r" } };
+  obj = { location: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -1777,7 +1770,6 @@ prototype14["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype14["internalBinaryWrite"] = function internalBinaryWrite(locations, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < locations.locations.length) {
     do {
@@ -1877,7 +1869,6 @@ prototype15["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype15["internalBinaryWrite"] = function internalBinaryWrite(isoCountries, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < isoCountries.isoCountries.length) {
     do {
@@ -1961,7 +1952,6 @@ prototype16["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype16["internalBinaryWrite"] = function internalBinaryWrite(blocks, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < blocks.blocks.length) {
     do {
@@ -2048,7 +2038,6 @@ prototype17["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype17["internalBinaryWrite"] = function internalBinaryWrite(blocks, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < blocks.blocks.length) {
     do {
@@ -2395,7 +2384,6 @@ prototype19["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype19["internalBinaryWrite"] = function internalBinaryWrite(ranges, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < ranges.ranges.length) {
     do {
@@ -2522,7 +2510,6 @@ prototype20["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype20["internalBinaryWrite"] = function internalBinaryWrite(ranges, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < ranges.ranges.length) {
     do {
@@ -3325,7 +3312,6 @@ prototype27["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype27["internalBinaryWrite"] = function internalBinaryWrite(ranges, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < ranges.ranges.length) {
     do {
@@ -3790,7 +3776,6 @@ prototype31["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype31["internalBinaryWrite"] = function internalBinaryWrite(commitHashes, tag, writeUnknownFields) {
-  let length;
   let length2;
   let num = 0;
   if (0 < commitHashes.commitHashes.length) {
@@ -4453,7 +4438,6 @@ prototype38["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype38["internalBinaryWrite"] = function internalBinaryWrite(releaseChannels, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < releaseChannels.releaseChannels.length) {
     do {
@@ -4548,7 +4532,6 @@ prototype39["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype39["internalBinaryWrite"] = function internalBinaryWrite(designIds, tag, writeUnknownFields) {
-  let length;
   if (designIds.designIds.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -4728,7 +4711,6 @@ prototype41["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype41["internalBinaryWrite"] = function internalBinaryWrite(experimentId, tag, writeUnknownFields) {
-  let length;
   if ("0" !== experimentId.experimentId) {
     tag.tag(1, _mod1197.WireType.Bit64).fixed64(experimentId.experimentId);
     const tagResult = tag.tag(1, _mod1197.WireType.Bit64);
@@ -4831,7 +4813,6 @@ prototype42["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype42["internalBinaryWrite"] = function internalBinaryWrite(premiumTypes, tag, writeUnknownFields) {
-  let length;
   if (premiumTypes.premiumTypes.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -4935,7 +4916,6 @@ prototype43["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype43["internalBinaryWrite"] = function internalBinaryWrite(filterSnapshotName, tag, writeUnknownFields) {
-  let length;
   if ("" !== filterSnapshotName.filterSnapshotName) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).string(filterSnapshotName.filterSnapshotName);
     const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
@@ -5040,7 +5020,6 @@ prototype44["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype44["internalBinaryWrite"] = function internalBinaryWrite(guildIds, tag, writeUnknownFields) {
-  let length;
   if (guildIds.guildIds.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -5370,7 +5349,6 @@ prototype47["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype47["internalBinaryWrite"] = function internalBinaryWrite(features, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < features.features.length) {
     do {
@@ -5469,7 +5447,6 @@ prototype48["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype48["internalBinaryWrite"] = function internalBinaryWrite(installationIds, tag, writeUnknownFields) {
-  let length;
   if (installationIds.installationIds.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;

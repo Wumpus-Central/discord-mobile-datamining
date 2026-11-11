@@ -1,6 +1,6 @@
-// === Module 13579: NavigationSpanTypes ===
+// === Module 14099: NavigationSpanTypes ===
 
-// Module 13579 (NavigationSpanTypes)
+// Module 14099 (NavigationSpanTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationSpanTypes.tsx");

@@ -1,13 +1,13 @@
-// === Module 11724: conjureProjectLinkCard ===
+// === Module 12352: conjureProjectLinkCard ===
 
-// Module 11724 (conjureProjectLinkCard)
-import UserUtils from "UserUtils" /* 5196 */;
-import ConjureMobileExperiment from "ConjureMobileExperiment" /* 9773 */;
-import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 11725 */;
+// Module 12352 (conjureProjectLinkCard)
+import UserUtils from "UserUtils" /* 5309 */;
+import ConjureMobileExperiment from "ConjureMobileExperiment" /* 10449 */;
+import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 12353 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import UserStore from "UserStore" /* 1385 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 11722 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 12350 */;
 
 require = fn;
 function readConjureProjectLinkCard(applicationId, ticket, memo2) {
@@ -65,7 +65,7 @@ function readConjureProjectLinkCard(applicationId, ticket, memo2) {
   }
   return null;
 }
-const canRemixProject = fn(6902).canRemixProject;
+const canRemixProject = fn(6954).canRemixProject;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/native/conjureProjectLinkCard.tsx");
 

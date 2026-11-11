@@ -1,6 +1,6 @@
-// === Module 8652: MarkupSubtextRule ===
+// === Module 9292: MarkupSubtextRule ===
 
-// Module 8652 (MarkupSubtextRule)
+// Module 9292 (MarkupSubtextRule)
 import _mod2067 from "module_2067" /* 2067 */;
 import size from "module_2" /* 2 */;
 
@@ -26,13 +26,13 @@ export default {
     }
     return tmp;
   },
-  parse(arg0, fn, arg2) {
+  parse(arg0, arg1, arg2) {
     const obj = { content: null };
     const obj3 = {};
     const trimmed = arg0[1].trim();
     const merged = Object.assign(arg2);
     obj3.allowSubtext = false;
-    obj.content = _mod2067.parseInline(fn, trimmed, obj3);
+    obj.content = _mod2067.parseInline(arg1, trimmed, obj3);
     return obj;
   }
 };

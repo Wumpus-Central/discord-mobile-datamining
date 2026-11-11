@@ -1,7 +1,7 @@
-// === Module 12453: AbstractFramePoolManager ===
+// === Module 13259: AbstractFramePoolManager ===
 
-// Module 12453 (AbstractFramePoolManager)
-import FrameStackLevel from "FrameStackLevel" /* 12454 */;
+// Module 13259 (AbstractFramePoolManager)
+import FrameStackLevel from "FrameStackLevel" /* 13260 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -84,7 +84,7 @@ prototype["updateFrameTargetState"] = function updateFrameTargetState(arg0, arg1
   const self = this;
   const targets = this.targets;
   value = targets.get(arg0);
-  value2 = undefined;
+  let value2;
   if (value != null) {
     value2 = value.get(arg1);
   }

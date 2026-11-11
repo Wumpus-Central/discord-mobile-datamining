@@ -1,7 +1,7 @@
-// === Module 9655: OrderSigningDeferral ===
+// === Module 10374: OrderSigningDeferral ===
 
-// Module 9655 (OrderSigningDeferral)
-import Stripe3DSChallenge from "Stripe3DSChallenge" /* 9656 */;
+// Module 10374 (OrderSigningDeferral)
+import Stripe3DSChallenge from "Stripe3DSChallenge" /* 10375 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

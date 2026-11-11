@@ -1,6 +1,6 @@
-// === Module 7174: NativeTextInput ===
+// === Module 7576: NativeTextInput ===
 
-// Module 7174 (NativeTextInput)
+// Module 7576 (NativeTextInput)
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1495 */;
 

@@ -1,28 +1,28 @@
-// === Module 14153: SearchUtils ===
+// === Module 14638: SearchUtils ===
 
-// Module 14153 (SearchUtils)
+// Module 14638 (SearchUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import UserUtilsDefault from "UserUtils" /* 5196 */;
-import useChannelName from "useChannelName" /* 5778 */;
-import QueryTokenizerDefault from "QueryTokenizer" /* 14152 */;
-import SearchTokens from "SearchTokens" /* 14154 */;
+import UserUtilsDefault from "UserUtils" /* 5309 */;
+import useChannelName from "useChannelName" /* 5891 */;
+import QueryTokenizerDefault from "QueryTokenizer" /* 14637 */;
+import SearchTokens from "SearchTokens" /* 14639 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import GuildChannelStore from "GuildChannelStore" /* 5072 */;
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6792 */;
-import GuildStore from "GuildStore" /* 5013 */;
-import RelationshipStore from "RelationshipStore" /* 5084 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import GuildChannelStore from "GuildChannelStore" /* 5173 */;
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 6776 */;
+import GuildStore from "GuildStore" /* 5114 */;
+import RelationshipStore from "RelationshipStore" /* 5185 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(9923).SearchTabs;
+const SearchTabs = fn(9000).SearchTabs;
 const Constants = fn(1072);
 ({ SearchTypes: closure_11, SearchTokenTypes } = Constants);
 ({ SearchPopoutModes: map1, IS_SEARCH_ANSWER_TOKEN: closure_14, IS_SEARCH_FILTER_TOKEN: closure_15, SearchModes: closure_16, ME, GuildFeatures: closure_17 } = Constants);

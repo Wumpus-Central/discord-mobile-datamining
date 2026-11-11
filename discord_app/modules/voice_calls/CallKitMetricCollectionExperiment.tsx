@@ -1,6 +1,6 @@
-// === Module 17835: CallKitMetricCollectionExperiment ===
+// === Module 18001: CallKitMetricCollectionExperiment ===
 
-// Module 17835 (CallKitMetricCollectionExperiment)
+// Module 18001 (CallKitMetricCollectionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

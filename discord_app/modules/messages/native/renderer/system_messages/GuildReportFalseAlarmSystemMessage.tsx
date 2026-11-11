@@ -1,16 +1,16 @@
-// === Module 8585: GuildReportFalseAlarmSystemMessage ===
+// === Module 9214: GuildReportFalseAlarmSystemMessage ===
 
-// Module 8585 (GuildReportFalseAlarmSystemMessage)
+// Module 9214 (GuildReportFalseAlarmSystemMessage)
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1414 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8486 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8493 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8495 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8497 */;
-import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8577 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8578 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 9115 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9122 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9124 */;
+import createCommonMessageDefault from "createCommonMessage" /* 9126 */;
+import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 9207 */;
+import getTagPropertiesDefault from "getTagProperties" /* 9208 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
 
 require = fn;
 const size = fn(2);

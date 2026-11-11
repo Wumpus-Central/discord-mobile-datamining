@@ -1,9 +1,9 @@
-// === Module 9854: ServerIcon ===
+// === Module 10876: ServerIcon ===
 
-// Module 9854 (ServerIcon)
+// Module 10876 (ServerIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod9855 from "module_9855" /* 9855 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod10877 from "module_10877" /* 10877 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ServerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9855, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10877, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

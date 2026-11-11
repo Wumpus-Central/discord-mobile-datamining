@@ -1,10 +1,10 @@
-// === Module 11688: ActivityFlagUtils ===
+// === Module 12605: ActivityFlagUtils ===
 
-// Module 11688 (ActivityFlagUtils)
+// Module 12605 (ActivityFlagUtils)
 import Storage2 from "Storage" /* 510 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import UserSettings from "UserSettings" /* 4967 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7964 */;
+import UserSettings from "UserSettings" /* 5068 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8403 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -92,17 +92,17 @@ export function computeActivityFlags(secrets) {
     }
   }
 }
-export function isContextlessEmbeddedActivity(remoteApplicationActivity) {
+export function isContextlessEmbeddedActivity(activity) {
   let num;
-  if (remoteApplicationActivity != null) {
-    num = remoteApplicationActivity.flags;
+  if (activity != null) {
+    num = activity.flags;
   }
   if (num == null) {
     num = 0;
   }
   let hasFlagResult = FlagUtils.hasFlag(num, constants.CONTEXTLESS);
   if (hasFlagResult) {
-    hasFlagResult = isEmbeddedActivityDefault(remoteApplicationActivity);
+    hasFlagResult = isEmbeddedActivityDefault(activity);
   }
   return hasFlagResult;
 }

@@ -1,7 +1,7 @@
-// === Module 15521: isClipsEnabled ===
+// === Module 15993: isClipsEnabled ===
 
-// Module 15521 (isClipsEnabled)
-import ClipsExperiment from "ClipsExperiment" /* 15210 */;
+// Module 15993 (isClipsEnabled)
+import ClipsExperiment from "ClipsExperiment" /* 15696 */;
 import ClipsStore from "ClipsStore" /* 2136 */;
 
 require = fn;

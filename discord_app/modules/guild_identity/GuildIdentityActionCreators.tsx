@@ -1,6 +1,6 @@
-// === Module 11674: GuildIdentityActionCreators ===
+// === Module 9971: GuildIdentityActionCreators ===
 
-// Module 11674 (GuildIdentityActionCreators)
+// Module 9971 (GuildIdentityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -110,7 +110,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
           obj7.display_name_effect_id = tmp51;
           let tmp57;
           if (undefined !== closure_131_7) {
-            let colors = null;
+            colors = null;
             if (null !== closure_131_7) {
               colors = closure_131_7.colors;
             }

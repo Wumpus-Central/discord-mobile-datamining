@@ -1,11 +1,11 @@
-// === Module 10157: EmojiPickerPremiumSearchUpsell ===
+// === Module 11217: EmojiPickerPremiumSearchUpsell ===
 
-// Module 10157 (EmojiPickerPremiumSearchUpsell)
+// Module 11217 (EmojiPickerPremiumSearchUpsell)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10158 */;
-import PremiumExpressionPickerSearchUpsellDefault from "PremiumExpressionPickerSearchUpsell" /* 10159 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 11218 */;
+import PremiumExpressionPickerSearchUpsellDefault from "PremiumExpressionPickerSearchUpsell" /* 11219 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -15,7 +15,7 @@ const Constants = fn(1072);
 const PremiumConstants = fn(1387);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumUpsellTypes: closure_9, SubscriptionPlans: closure_10 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_12 = createStyles.createStyles({ nitroIcon: { marginRight: 8, alignSelf: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerPremiumSearchUpsell.tsx");
@@ -47,8 +47,8 @@ export function useEmojiPickerPremiumSearchUpsellViewed(guildId) {
 export function useEmojiPickerPremiumSearchUpsellClick(arg0) {
   let onPress;
   ({ analyticsLocations, useTier0UpsellContent } = arg0);
-  const obj = onPress(9881);
-  const tmp = usePremiumFeatureUpsellGetNitroDefault(useTier0UpsellContent, obj.usePremiumUpsellConfig(onPress(10100).getUpsellType(onPress(9892).EntitlementFeatureNames.EMOJIS_EVERYWHERE), analyticsLocations).onViewAllPerks, constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE);
+  const obj = onPress(11109);
+  const tmp = usePremiumFeatureUpsellGetNitroDefault(useTier0UpsellContent, obj.usePremiumUpsellConfig(onPress(11199).getUpsellType(onPress(8971).EntitlementFeatureNames.EMOJIS_EVERYWHERE), analyticsLocations).onViewAllPerks, constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE);
   onPress = tmp.onPress;
   const obj3 = { loading: tmp.loading, onPress: null };
   items = [onPress];
@@ -68,8 +68,8 @@ export const PremiumSearchUpsell = noop.memo(function EmojiPickerListPremiumSear
   let onPress;
   ({ analyticsLocations, useTier0UpsellContent } = guildId);
   const tmp = closure_12();
-  let obj = onPress(9881);
-  const tmp5 = usePremiumFeatureUpsellGetNitroDefault(useTier0UpsellContent, obj.usePremiumUpsellConfig(onPress(10100).getUpsellType(onPress(9892).EntitlementFeatureNames.EMOJIS_EVERYWHERE), analyticsLocations).onViewAllPerks, constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE);
+  let obj = onPress(11109);
+  const tmp5 = usePremiumFeatureUpsellGetNitroDefault(useTier0UpsellContent, obj.usePremiumUpsellConfig(onPress(11199).getUpsellType(onPress(8971).EntitlementFeatureNames.EMOJIS_EVERYWHERE), analyticsLocations).onViewAllPerks, constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE);
   onPress = tmp5.onPress;
   items = [onPress];
   guildId = guildId.guildId;
@@ -107,7 +107,7 @@ export const PremiumSearchUpsell = noop.memo(function EmojiPickerListPremiumSear
       obj2 = AnalyticsUtilsDefault.track(constants.PREMIUM_UPSELL_VIEWED, obj2);
     }
   }, items1);
-  let obj2 = onPress(10100);
+  let obj2 = onPress(11199);
   const intl = onPress(1113).intl;
   if (guildId.useTier0UpsellContent) {
     let obj3 = { planName: tmp2(2171).getTierDisplayNameByPlanId(PREMIUM_MONTH_TIER_0.PREMIUM_MONTH_TIER_0) };
@@ -126,7 +126,7 @@ export const PremiumSearchUpsell = noop.memo(function EmojiPickerListPremiumSear
     stringResult = string(t.pj0XBN);
   }
   obj4.ctaText = stringResult;
-  obj4.icon = jsx(onPress(9618).NitroWheelIcon, { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: tmp.nitroIcon });
+  obj4.icon = jsx(onPress(9369).NitroWheelIcon, { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: tmp.nitroIcon });
   obj4.loading = tmp5.loading;
   obj4.onPress = callback;
   return <tmp10 body={formatToPlainStringResult} ctaText={null} icon={null} loading={null} onPress={null} />;

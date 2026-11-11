@@ -1,7 +1,7 @@
-// === Module 7499: GuildProductsEligibility ===
+// === Module 7210: GuildProductsEligibility ===
 
-// Module 7499 (GuildProductsEligibility)
-import GuildStore from "GuildStore" /* 5013 */;
+// Module 7210 (GuildProductsEligibility)
+import GuildStore from "GuildStore" /* 5114 */;
 
 const require = globalThis.__r;
 

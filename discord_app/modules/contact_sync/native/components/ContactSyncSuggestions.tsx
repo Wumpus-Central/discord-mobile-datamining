@@ -1,15 +1,15 @@
-// === Module 14532: ContactSyncSuggestions ===
+// === Module 14906: ContactSyncSuggestions ===
 
-// Module 14532 (ContactSyncSuggestions)
+// Module 14906 (ContactSyncSuggestions)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import UserUtils from "UserUtils" /* 5196 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7040 */;
-import Form from "Form" /* 8250 */;
+import UserUtils from "UserUtils" /* 5309 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7667 */;
+import Form from "Form" /* 8041 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -57,12 +57,12 @@ function SuggestionRow(suggestion) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SuggestedFriendSource = fn(14533).SuggestedFriendSource;
+const SuggestedFriendSource = fn(14907).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5142);
-let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: fn(5716).NAV_BAR_HEIGHT + 32, justifyContent: "center" }, header: null, title: null, subtitle: null, list: null, divider: null, linearGradient: null, redesignButton: null, sectionHeader: null };
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: fn(5716).NAV_BAR_HEIGHT + 32, justifyContent: "center" };
+const createStyles = fn(5243);
+let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: fn(5829).NAV_BAR_HEIGHT + 32, justifyContent: "center" }, header: null, title: null, subtitle: null, list: null, divider: null, linearGradient: null, redesignButton: null, sectionHeader: null };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: fn(5829).NAV_BAR_HEIGHT + 32, justifyContent: "center" };
 obj2.header = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
 obj2.title = { marginBottom: 8, textAlign: "center" };
 obj2.subtitle = { lineHeight: 18, textAlign: "center" };
@@ -90,16 +90,16 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     acc[suggested_user.suggested_user.id] = true;
     return acc;
   }, {});
-  const token = friendSuggestions(5726).useToken(onSubmit(575).colors.BACKGROUND_BASE_LOW);
-  let obj = friendSuggestions(5726);
-  items = [friendSuggestions(5139).hexOpacityToRgba(token, 0), ];
-  let obj2 = friendSuggestions(5139);
-  items[1] = friendSuggestions(5139).hexOpacityToRgba(token, 100);
+  const token = friendSuggestions(5839).useToken(onSubmit(575).colors.BACKGROUND_BASE_LOW);
+  let obj = friendSuggestions(5839);
+  items = [friendSuggestions(5240).hexOpacityToRgba(token, 0), ];
+  let obj2 = friendSuggestions(5240);
+  items[1] = friendSuggestions(5240).hexOpacityToRgba(token, 100);
   const tmp4 = first(noop.useState(reduced), 2);
   first = tmp4[0];
   noop = tmp4[1];
-  let obj3 = friendSuggestions(5139);
-  const fontScale = friendSuggestions(5768).useFontScale();
+  let obj3 = friendSuggestions(5240);
+  const fontScale = friendSuggestions(5881).useFontScale();
   const sum = onSubmit(575).space.PX_16 + onSubmit(575).space.PX_32 + 40;
   let items1 = [first];
   const sum1 = sum + Math.max(18 * Math.min(fontScale, 2) - 18, 0);
@@ -109,7 +109,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     obj[arg0] = !first[arg0];
     closure_4(obj);
   }, items1);
-  let obj4 = friendSuggestions(5768);
+  let obj4 = friendSuggestions(5881);
   let keys = onSubmit(11).keys(first);
   let items2 = [friendSuggestions, first];
   let obj5 = onSubmit(11);
@@ -170,13 +170,13 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   obj7.contentContainerStyle = { paddingHorizontal: onSubmit(575).space.PX_16, paddingBottom: sum1 };
   obj7.data = memo;
   obj7.renderItem = callback1;
-  const items5 = [closure_8(friendSuggestions(7360).FlashList, obj7), , ];
+  const items5 = [closure_8(friendSuggestions(7822).FlashList, obj7), , ];
   const obj9 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
   let obj8 = { paddingHorizontal: onSubmit(575).space.PX_16, paddingBottom: sum1 };
   obj9.start = friendSuggestions(1092).VerticalGradient.START;
   obj9.end = friendSuggestions(1092).VerticalGradient.END;
   obj9.colors = items;
-  items5[1] = closure_8(onSubmit(5717), obj9);
+  items5[1] = closure_8(onSubmit(5830), obj9);
   const obj10 = { style: tmp.redesignButton, children: null };
   const obj11 = { variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   let intl = friendSuggestions(1113).intl;
@@ -190,7 +190,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
     });
   };
   obj11.disabled = !someResult;
-  obj10.children = closure_8(friendSuggestions(5760).Button, obj11);
+  obj10.children = closure_8(friendSuggestions(5873).Button, obj11);
   items5[2] = closure_8(onSelect, obj10);
   obj6.children = items5;
   return closure_10(onSelect, obj6);

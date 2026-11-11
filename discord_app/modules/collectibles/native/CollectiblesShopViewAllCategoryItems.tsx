@@ -1,19 +1,19 @@
-// === Module 18244: CollectiblesShopViewAllCategoryItems ===
+// === Module 18415: CollectiblesShopViewAllCategoryItems ===
 
-// Module 18244 (CollectiblesShopViewAllCategoryItems)
+// Module 18415 (CollectiblesShopViewAllCategoryItems)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import spring_spring from "spring/spring" /* 5763 */;
-import springPresets from "springPresets" /* 5764 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7415 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7843 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9641 */;
+import spring_spring from "spring/spring" /* 5876 */;
+import springPresets from "springPresets" /* 5877 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 8468 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10366 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5756 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9674 */;
-import IAPStore from "IAPStore" /* 7676 */;
+import DevSettingsStore from "DevSettingsStore" /* 5869 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9384 */;
+import IAPStore from "IAPStore" /* 9236 */;
 
 require = fn;
 function CategoryItemsBySku(categorySkuId) {
@@ -216,7 +216,7 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj7 = { logoUrl, buttonColor: "Array", categoryName: "png" };
+  const obj7 = { logoUrl, buttonColor: "Array", categoryName: "Array" };
   let name;
   if (category != null) {
     name = category.name;
@@ -361,7 +361,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: map1, UserSettingsSections: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, border: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.border = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -376,12 +376,12 @@ let result = size.fileFinishedImporting("modules/collectibles/native/Collectible
 export default noop.memo(function CollectiblesShopViewAllCategoryItems(category) {
   if (null != category.category) {
     ({ category: obj2.category, analyticsContext: obj2.analyticsContext } = category);
-    let tmp6 = closure_1_15(CategoryItemsContent, { category: null, analyticsContext: null });
+    let tmp6 = colors(CategoryItemsContent, { category: null, analyticsContext: null });
     const obj3 = { category: null, analyticsContext: null };
   } else {
     const obj = {};
     const merged = Object.assign(category);
-    tmp6 = closure_1_15(CategoryItemsBySku, obj);
+    tmp6 = colors(CategoryItemsBySku, obj);
   }
   return tmp6;
 });

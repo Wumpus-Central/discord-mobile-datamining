@@ -1,6 +1,6 @@
-// === Module 7226: UserSettingsModalActionCreators ===
+// === Module 7743: UserSettingsModalActionCreators ===
 
-// Module 7226 (UserSettingsModalActionCreators)
+// Module 7743 (UserSettingsModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 11713: useLoadMessageContentEntries ===
+// === Module 12336: useLoadMessageContentEntries ===
 
-// Module 11713 (useLoadMessageContentEntries)
+// Module 12336 (useLoadMessageContentEntries)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 2116 */;
-import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 8790 */;
-import useAvatarColor from "useAvatarColor" /* 8792 */;
+import useAvatarColor from "useAvatarColor" /* 8472 */;
+import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 12337 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -688,9 +688,9 @@ function isMessageRenderable(message) {
   return true;
 }
 const ImageSizes = fn(2142).ImageSizes;
-const promiseDeduper = new fn(5260).PromiseDeduper();
-const promiseDeduper3 = new fn(5260).PromiseDeduper();
-const promiseDeduper4 = new fn(5260).PromiseDeduper();
+const promiseDeduper = new fn(5373).PromiseDeduper();
+const promiseDeduper3 = new fn(5373).PromiseDeduper();
+const promiseDeduper4 = new fn(5373).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx");
 

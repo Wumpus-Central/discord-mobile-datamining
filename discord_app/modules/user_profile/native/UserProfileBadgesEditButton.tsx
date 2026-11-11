@@ -1,23 +1,23 @@
-// === Module 16829: UserProfileBadgesEditButton ===
+// === Module 16992: UserProfileBadgesEditButton ===
 
-// Module 16829 (UserProfileBadgesEditButton)
+// Module 16992 (UserProfileBadgesEditButton)
 import nativeDefault from "native" /* 575 */;
-import FastImageDefault from "FastImage" /* 5844 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11600 */;
-import BadgeUtils from "BadgeUtils" /* 11611 */;
-import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 16830 */;
+import FastImageDefault from "FastImage" /* 5957 */;
+import BadgeUtils from "BadgeUtils" /* 10046 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 15165 */;
+import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 16993 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11610 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9969 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4988).ContentDismissActionType;
+const ContentDismissActionType = fn(5089).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { content: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, badge: { width: 32, height: 32 }, overflowCount: { marginLeft: 2 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -42,7 +42,7 @@ export default function UserProfileBadgesEditButton(arg0) {
   let obj = autoOpen(isBadgeManagementEnabled[8]);
   const isBadgeDirectoryUpdatesEnabled = autoOpen(isBadgeManagementEnabled[9]).useIsBadgeDirectoryUpdatesEnabled({ location: "UserProfileBadgesEditButton" });
   const analyticsLocations = require("useAnalyticsLocations")().analyticsLocations;
-  let length;
+  length = undefined;
   if (catalogBadges != null) {
     length = catalogBadges.length;
   }

@@ -1,8 +1,8 @@
-// === Module 9126: useGuildEmbeddedApplications ===
+// === Module 8085: useGuildEmbeddedApplications ===
 
-// Module 9126 (useGuildEmbeddedApplications)
+// Module 8085 (useGuildEmbeddedApplications)
 import DurationsDefault from "Durations" /* 1089 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6939 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6992 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;

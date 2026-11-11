@@ -1,7 +1,7 @@
-// === Module 15100: useIsUserProfileObfuscated ===
+// === Module 15590: useIsUserProfileObfuscated ===
 
-// Module 15100 (useIsUserProfileObfuscated)
-import UserProfileStore from "UserProfileStore" /* 7852 */;
+// Module 15590 (useIsUserProfileObfuscated)
+import UserProfileStore from "UserProfileStore" /* 7288 */;
 
 const require = globalThis.__r;
 
@@ -49,7 +49,7 @@ export default function useIsUserProfileObfuscated(flags) {
     }
     let tmp8 = null == badges;
     if (!tmp8) {
-      let length;
+      length = undefined;
       if (stateFromStores != null) {
         const badges1 = stateFromStores.badges;
         if (badges1 != null) {

@@ -1,9 +1,9 @@
-// === Module 17425: useYouBarTotalHeight ===
+// === Module 17590: useYouBarTotalHeight ===
 
-// Module 17425 (useYouBarTotalHeight)
-import useYouBarMargins from "useYouBarMargins" /* 17422 */;
-import YouBarConstants from "YouBarConstants" /* 17423 */;
-import useConnectionBannerHeight from "useConnectionBannerHeight" /* 17426 */;
+// Module 17590 (useYouBarTotalHeight)
+import useYouBarMargins from "useYouBarMargins" /* 17587 */;
+import YouBarConstants from "YouBarConstants" /* 17588 */;
+import useConnectionBannerHeight from "useConnectionBannerHeight" /* 17591 */;
 import size from "module_2" /* 2 */;
 
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;

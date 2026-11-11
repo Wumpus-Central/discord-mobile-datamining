@@ -1,7 +1,7 @@
-// === Module 7759: MemberSafetyStoreSupplemental ===
+// === Module 8637: MemberSafetyStoreSupplemental ===
 
-// Module 7759 (MemberSafetyStoreSupplemental)
-import MemberSafetySupplementalUtils from "MemberSafetySupplementalUtils" /* 7760 */;
+// Module 8637 (MemberSafetyStoreSupplemental)
+import MemberSafetySupplementalUtils from "MemberSafetySupplementalUtils" /* 8638 */;
 import size from "module_2" /* 2 */;
 
 const dependencyMap = {};

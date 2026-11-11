@@ -1,11 +1,11 @@
-// === Module 10909: LeaderboardWinnerBadge ===
+// === Module 10810: LeaderboardWinnerBadge ===
 
-// Module 10909 (LeaderboardWinnerBadge)
-import useActiveLeaderboardWinnerData from "useActiveLeaderboardWinnerData" /* 10910 */;
-import GuildLeaderboardUtils from "GuildLeaderboardUtils" /* 10911 */;
-import MedalFirstBadge from "MedalFirstBadge" /* 10913 */;
-import StreakTrophyBadge from "StreakTrophyBadge" /* 10917 */;
-import WinnerTrophyBadge2 from "WinnerTrophyBadge" /* 10921 */;
+// Module 10810 (LeaderboardWinnerBadge)
+import useActiveLeaderboardWinnerData from "useActiveLeaderboardWinnerData" /* 10811 */;
+import GuildLeaderboardUtils from "GuildLeaderboardUtils" /* 10812 */;
+import MedalFirstBadge from "MedalFirstBadge" /* 10814 */;
+import StreakTrophyBadge from "StreakTrophyBadge" /* 10818 */;
+import WinnerTrophyBadge2 from "WinnerTrophyBadge" /* 10822 */;
 import noop from "module_19" /* 19 */;
 
 const useActiveLeaderboardWinnerDataDefault = useActiveLeaderboardWinnerData;
@@ -13,7 +13,7 @@ const useActiveLeaderboardWinnerDataDefault = useActiveLeaderboardWinnerData;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_5 = createStyles.createStyles({ container: { marginLeft: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/native/LeaderboardWinnerBadge.tsx");

@@ -1,13 +1,13 @@
-// === Module 13263: ConjureDebugLogsTab ===
+// === Module 13911: ConjureDebugLogsTab ===
 
-// Module 13263 (ConjureDebugLogsTab)
+// Module 13911 (ConjureDebugLogsTab)
 import nativeDefault from "native" /* 575 */;
-import _modDef4028 from "module_4028" /* 4028 */;
-import ConjureDebugJson from "ConjureDebugJson" /* 13264 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 13265 */;
+import _modDef4079 from "module_4079" /* 4079 */;
+import ConjureDebugJson from "ConjureDebugJson" /* 13912 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 13913 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugLogStore from "ConjureDebugLogStore" /* 10990 */;
+import ConjureDebugLogStore from "ConjureDebugLogStore" /* 7307 */;
 
 require = fn;
 function keyOf(key) {
@@ -16,7 +16,7 @@ function keyOf(key) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { list: { paddingHorizontal: nativeDefault.space.PX_16 }, header: null, row: null, rowHead: null, badge: null, jsonToggle: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj.header = { gap: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_12 };
@@ -39,19 +39,19 @@ let closure_11 = noop.memo(function LogRow(entry) {
     str = "text-feedback-critical";
   }
   if (expanded) {
-    let ChevronSmallRightIcon = tmp3(11564).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp3(10493).ChevronSmallDownIcon;
     let tmp6 = tmp3;
   } else {
-    ChevronSmallRightIcon = tmp3(7441).ChevronSmallRightIcon;
+    ChevronSmallRightIcon = tmp3(7897).ChevronSmallRightIcon;
     tmp6 = tmp3;
   }
   const obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.rowHead, children: null };
-  let ts = tmp6(13257).formatClockTime(entry.ts);
+  let ts = tmp6(13905).formatClockTime(entry.ts);
   if (ts == null) {
     ts = entry.ts;
   }
-  const items1 = [closure_7(tmp6(5753).Text, { variant: "body-xs/normal", color: "text-subtle", children: ts }), , , ];
+  const items1 = [closure_7(tmp6(5866).Text, { variant: "body-xs/normal", color: "text-subtle", children: ts }), , , ];
   const level = entry.level;
   let str2 = "text-feedback-critical";
   if ("error" !== level) {
@@ -61,13 +61,13 @@ let closure_11 = noop.memo(function LogRow(entry) {
     }
     str2 = str3;
   }
-  items1[1] = closure_7(tmp6(5753).Text, { variant: "footnote/semibold", color: str2, style: tmp.badge, children: entry.level });
+  items1[1] = closure_7(tmp6(5866).Text, { variant: "footnote/semibold", color: str2, style: tmp.badge, children: entry.level });
   let tmp9Result = null;
   if (entry.showSource) {
     tmp9Result = null;
     if (null != entry.source) {
       const obj4 = { variant: "footnote/semibold", color: "text-subtle", style: tmp.badge, children: entry.source };
-      tmp9Result = closure_7(tmp6(5753).Text, obj4);
+      tmp9Result = closure_7(tmp6(5866).Text, obj4);
     }
   }
   items1[2] = tmp9Result;
@@ -75,8 +75,8 @@ let closure_11 = noop.memo(function LogRow(entry) {
   if (null != entry.kind) {
     const obj5 = { variant: "footnote/semibold", color: "text-feedback-critical", style: tmp.badge, children: null };
     const intl = tmp6(1113).intl;
-    obj5.children = intl.string(_modDef4028.TrC9c8);
-    tmp9Result4 = closure_7(tmp6(5753).Text, obj5);
+    obj5.children = intl.string(_modDef4079.TrC9c8);
+    tmp9Result4 = closure_7(tmp6(5866).Text, obj5);
   }
   items1[3] = tmp9Result4;
   obj2.children = items1;
@@ -85,14 +85,14 @@ let closure_11 = noop.memo(function LogRow(entry) {
     let tmp9Result5 = null;
     if ("" !== memo.prefix) {
       const obj6 = { variant: "body-xs/normal", color: str, selectable: true, children: memo.prefix };
-      tmp9Result5 = closure_7(tmp6(5753).Text, obj6);
+      tmp9Result5 = closure_7(tmp6(5866).Text, obj6);
     }
     const items3 = [tmp9Result5, , ];
     const obj7 = { style: tmp.jsonToggle, accessibilityRole: "button", accessibilityState: null, accessibilityLabel: null, onPress: null, children: null };
     const obj8 = { expanded };
     obj7.accessibilityState = obj8;
     const intl2 = tmp6(1113).intl;
-    obj7.accessibilityLabel = intl2.string(_modDef4028["9CTzyV"]);
+    obj7.accessibilityLabel = intl2.string(_modDef4079["9CTzyV"]);
     obj7.onPress = function onPress() {
       return dependencyMap(importDefault);
     };
@@ -101,23 +101,23 @@ let closure_11 = noop.memo(function LogRow(entry) {
     const items5 = [memo.marker, " ", ];
     const intl3 = tmp6(1113).intl;
     if ("[\u2026]" === memo.marker) {
-      let kUhyUv = _modDef4028.kUhyUv;
+      let kUhyUv = _modDef4079.kUhyUv;
     } else {
-      kUhyUv = _modDef4028["N+fphl"];
+      kUhyUv = _modDef4079["N+fphl"];
     }
     const obj10 = { variant: "body-xs/medium", color: "text-muted", children: null };
     const obj11 = { count: memo.size };
     items5[2] = intl3.formatToPlainString(kUhyUv, obj11);
     obj10.children = items5;
-    items4[1] = closure_8(tmp6(5753).Text, obj10);
+    items4[1] = closure_8(tmp6(5866).Text, obj10);
     obj7.children = items4;
-    items3[1] = closure_8(tmp6(7046).PressableOpacity, obj7);
+    items3[1] = closure_8(tmp6(7364).PressableOpacity, obj7);
     let tmp9Result6 = null;
     if (expanded) {
       const obj12 = { variant: "primary", children: null };
       const obj13 = { variant: "body-xs/normal", color: str, selectable: true, children: memo.pretty };
-      obj12.children = closure_7(tmp6(5753).Text, obj13);
-      tmp9Result6 = closure_7(tmp6(7043).Card, obj12);
+      obj12.children = closure_7(tmp6(5866).Text, obj13);
+      tmp9Result6 = closure_7(tmp6(7381).Card, obj12);
     }
     const obj14 = { children: null };
     items3[2] = tmp9Result6;
@@ -125,7 +125,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
     let tmp9Result7 = closure_8(closure_9, obj14);
   } else {
     const obj15 = { variant: "body-xs/normal", color: str, selectable: true, children: entry.message };
-    tmp9Result7 = closure_7(tmp6(5753).Text, obj15);
+    tmp9Result7 = closure_7(tmp6(5866).Text, obj15);
   }
   items2[1] = tmp9Result7;
   obj.children = items2;

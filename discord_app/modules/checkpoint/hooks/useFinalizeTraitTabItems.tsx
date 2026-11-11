@@ -1,14 +1,14 @@
-// === Module 13952: useFinalizeTraitTabItems ===
+// === Module 14429: useFinalizeTraitTabItems ===
 
-// Module 13952 (useFinalizeTraitTabItems)
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6568 */;
+// Module 14429 (useFinalizeTraitTabItems)
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6681 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 13681 */;
+import CheckpointStore from "CheckpointStore" /* 14150 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let items = [fn(6568).CheckpointCustomizationOption.BASE, fn(6568).CheckpointCustomizationOption.OUTFIT_COLOR];
+let items = [fn(6681).CheckpointCustomizationOption.BASE, fn(6681).CheckpointCustomizationOption.OUTFIT_COLOR];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/hooks/useFinalizeTraitTabItems.tsx");
 

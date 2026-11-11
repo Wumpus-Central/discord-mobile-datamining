@@ -1,9 +1,10 @@
-// === Module 16572: ICYMIAnalytics ===
+// === Module 16733: ICYMIAnalytics ===
 
-// Module 16572 (ICYMIAnalytics)
+// Module 16733 (ICYMIAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8791 */;
-import ICYMIStore from "ICYMIStore" /* 8986 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8355 */;
+import ICYMIAnalyticsItemId from "ICYMIAnalyticsItemId" /* 10159 */;
+import ICYMIStore from "ICYMIStore" /* 10137 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -22,7 +23,7 @@ export const ICYMIAnalytics = {
     obj.track(hasOwnProperty.FEED_ITEM_SEEN_BATCH, {
       load_id: ICYMIStore.getLoadId(),
       home_session_id: "gravity",
-      feed_item_ids: viewableItems.map((item) => item.item.id),
+      feed_item_ids: viewableItems.map((item) => ICYMIAnalyticsItemId.getListAnalyticsItemId(item.item)),
       feed_item_types: viewableItems.map((item) => {
         item = item.item;
         const kind = item.data.kind;
@@ -74,7 +75,7 @@ export const ICYMIAnalytics = {
     obj.track(hasOwnProperty.FEED_ITEM_SEEN_LONG, {
       load_id: ICYMIStore.getLoadId(),
       home_session_id: "gravity",
-      feed_item_ids: viewableItems.map((item) => item.item.id),
+      feed_item_ids: viewableItems.map((item) => ICYMIAnalyticsItemId.getListAnalyticsItemId(item.item)),
       feed_item_types: viewableItems.map((item) => {
         item = item.item;
         const kind = item.data.kind;

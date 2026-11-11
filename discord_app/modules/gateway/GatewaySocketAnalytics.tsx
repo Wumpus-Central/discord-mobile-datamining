@@ -1,6 +1,6 @@
-// === Module 15854: GatewaySocketAnalytics ===
+// === Module 16013: GatewaySocketAnalytics ===
 
-// Module 15854 (GatewaySocketAnalytics)
+// Module 16013 (GatewaySocketAnalytics)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -8,7 +8,6 @@ import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import UserStore from "UserStore" /* 1385 */;
 
 function prettyPrintTrace_(calls, arg1) {
-  let length;
   if (null == calls) {
     return "";
   } else {
@@ -32,7 +31,6 @@ function prettyPrintTrace_(calls, arg1) {
   }
 }
 function eachTraceCall(calls, fn) {
-  let length;
   if (null != calls) {
     if (calls.length > 0) {
       let num4 = 0;

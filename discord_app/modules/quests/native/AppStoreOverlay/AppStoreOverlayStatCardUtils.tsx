@@ -1,6 +1,6 @@
-// === Module 14931: AppStoreOverlayStatCardUtils ===
+// === Module 10111: AppStoreOverlayStatCardUtils ===
 
-// Module 14931 (AppStoreOverlayStatCardUtils)
+// Module 10111 (AppStoreOverlayStatCardUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatCardUtils.tsx");
@@ -18,7 +18,7 @@ export function getAppStoreStarFillAmounts(rating, arg1) {
   if (arg1 === undefined) {
     num = 5;
   }
-  const length = Math.max(1, num);
+  length = Math.max(1, num);
   closure_0 = Math.max(0, Math.min(rating, length));
   return Array.from({ length }, (arg0, arg1) => Math.min(1, Math.max(0, closure_0 - arg1)));
 }

@@ -1,20 +1,20 @@
-// === Module 5079: PermissionUtils ===
+// === Module 5180: PermissionUtils ===
 
-// Module 5079 (PermissionUtils)
+// Module 5180 (PermissionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Server from "Server" /* 2116 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 5052 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5061 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 5080 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 5081 */;
-import ImpersonateStore from "ImpersonateStore" /* 5047 */;
-import LurkingStore from "LurkingStore" /* 5075 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5076 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 5153 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5162 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 5181 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 5182 */;
+import ImpersonateStore from "ImpersonateStore" /* 5148 */;
+import LurkingStore from "LurkingStore" /* 5176 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5177 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import GuildMemberStore from "GuildMemberStore" /* 5054 */;
-import GuildRoleStore from "GuildRoleStore" /* 5048 */;
-import GuildStore from "GuildStore" /* 5013 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import GuildMemberStore from "GuildMemberStore" /* 5155 */;
+import GuildRoleStore from "GuildRoleStore" /* 5149 */;
+import GuildStore from "GuildStore" /* 5114 */;
 import UserStore from "UserStore" /* 1385 */;
 import BigFlagUtils_mod from "BigFlagUtils" /* 1084 */;
 import apply from "apply" /* 12 */;
@@ -351,11 +351,11 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(4995);
+const ChannelRecord = fn(5096);
 ({ THREAD_CHANNEL_TYPES: metroImportDefault, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(5009);
+const GuildRecord = fn(5110);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: closure_10 } = GuildRecord);
-const hasPermission = fn(5049).hasPermission;
+const hasPermission = fn(5150).hasPermission;
 const Constants = fn(1072);
 const Permissions = Constants.Permissions;
 ({ ElevatedPermissions: closure_19, MFALevels: closure_20, ChannelTypes: closure_21, EMPTY_STRING_SNOWFLAKE_ID: closure_22 } = Constants);

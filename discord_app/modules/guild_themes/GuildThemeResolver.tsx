@@ -1,16 +1,16 @@
-// === Module 5343: GuildThemeResolver ===
+// === Module 5456: GuildThemeResolver ===
 
-// Module 5343 (GuildThemeResolver)
+// Module 5456 (GuildThemeResolver)
 import initialize from "initialize" /* 504 */;
-import GuildThemePresets from "GuildThemePresets" /* 5313 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5352 */;
-import Client from "Client" /* 5367 */;
+import GuildThemePresets from "GuildThemePresets" /* 5426 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5465 */;
+import Client from "Client" /* 5480 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import GuildStore from "GuildStore" /* 5013 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5173 */;
-import GuildThemePreviewStore from "GuildThemePreviewStore" /* 5344 */;
-import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 5346 */;
+import GuildStore from "GuildStore" /* 5114 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
+import GuildThemePreviewStore from "GuildThemePreviewStore" /* 5457 */;
+import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 5459 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ function resolveSavedActiveGuildTheme(stateFromStores) {
     let tmp5 = null;
     if (null != themeSettings) {
       const customUserThemeSettings = themeSettings.customUserThemeSettings;
-      let colors;
+      colors = undefined;
       if (customUserThemeSettings != null) {
         colors = customUserThemeSettings.colors;
       }
@@ -117,7 +117,7 @@ function useActiveGuildThemeForGuildId(context) {
       let tmp7 = null;
       if (null != stateFromStores) {
         const customUserThemeSettings = stateFromStores.customUserThemeSettings;
-        let colors;
+        colors = undefined;
         if (customUserThemeSettings != null) {
           colors = customUserThemeSettings.colors;
         }
@@ -163,7 +163,7 @@ export function resolveRenderableGuildThemeSettings(customUserThemeSettings) {
     return null;
   } else {
     customUserThemeSettings = customUserThemeSettings.customUserThemeSettings;
-    let colors;
+    colors = undefined;
     if (customUserThemeSettings != null) {
       colors = customUserThemeSettings.colors;
     }
@@ -196,7 +196,7 @@ export function isRenderableGuildThemeSettings(customUserThemeSettings) {
   let tmp = null;
   if (null != customUserThemeSettings) {
     customUserThemeSettings = customUserThemeSettings.customUserThemeSettings;
-    let colors;
+    colors = undefined;
     if (customUserThemeSettings != null) {
       colors = customUserThemeSettings.colors;
     }

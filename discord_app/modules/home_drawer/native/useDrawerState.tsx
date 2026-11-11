@@ -1,7 +1,7 @@
-// === Module 18449: useDrawerState ===
+// === Module 18621: useDrawerState ===
 
-// Module 18449 (useDrawerState)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5316 */;
+// Module 18621 (useDrawerState)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5429 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

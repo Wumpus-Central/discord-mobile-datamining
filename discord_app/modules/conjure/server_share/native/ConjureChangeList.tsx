@@ -1,10 +1,10 @@
-// === Module 12411: ConjureChangeList ===
+// === Module 13218: ConjureChangeList ===
 
-// Module 12411 (ConjureChangeList)
+// Module 13218 (ConjureChangeList)
 import nativeDefault from "native" /* 575 */;
-import _modDef4028 from "module_4028" /* 4028 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import Stack_Stack from "Stack/Stack" /* 6161 */;
+import _modDef4079 from "module_4079" /* 4079 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import Stack_Stack from "Stack/Stack" /* 6274 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,8 +13,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { bots: fn(12277).RobotIcon, channels: fn(8755).AppsIcon, test_app: fn(12412).BeakerIcon, profile_widget: fn(8083).IdCardIcon, overlay: fn(9823).GameControllerIcon, collaboration: fn(8738).GroupIcon, only_you: fn(12295).UserIcon };
-const createStyles = fn(5142);
+let obj = { bots: fn(12592).RobotIcon, channels: fn(8036).AppsIcon, test_app: fn(13219).BeakerIcon, profile_widget: fn(8180).IdCardIcon, overlay: fn(7374).GameControllerIcon, collaboration: fn(7372).GroupIcon, only_you: fn(10486).UserIcon };
+const createStyles = fn(5243);
 let obj3 = { box: { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, rowText: { flex: 1 } };
 let closure_7 = createStyles.createStyles(obj3);
 const size = fn(2);
@@ -27,7 +27,7 @@ export default function ConjureChangeList(rows) {
   obj = { spacing: 8, children: null };
   const obj2 = { variant: "body-md/semibold", color: "text-strong", children: null };
   const intl = require("util").intl;
-  obj2.children = intl.string(_modDef4028["kG/2e8"]);
+  obj2.children = intl.string(_modDef4079["kG/2e8"]);
   items = [closure_4(require("Text/Text").Text, obj2), ];
   const obj3 = {
     style: tmp.box,

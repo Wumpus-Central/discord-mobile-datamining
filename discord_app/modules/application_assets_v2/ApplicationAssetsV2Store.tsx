@@ -1,6 +1,6 @@
-// === Module 12556: ApplicationAssetsV2Store ===
+// === Module 12176: ApplicationAssetsV2Store ===
 
-// Module 12556 (ApplicationAssetsV2Store)
+// Module 12176 (ApplicationAssetsV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

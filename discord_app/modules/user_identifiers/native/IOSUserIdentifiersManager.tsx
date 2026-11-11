@@ -1,11 +1,11 @@
-// === Module 19938: IOSUserIdentifiersManager ===
+// === Module 20130: IOSUserIdentifiersManager ===
 
-// Module 19938 (IOSUserIdentifiersManager)
+// Module 20130 (IOSUserIdentifiersManager)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1385 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 let require = fn;
 const NativeModules = fn(17).NativeModules;

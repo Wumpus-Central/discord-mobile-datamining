@@ -1,13 +1,13 @@
-// === Module 5841: ? ===
+// === Module 5954: ? ===
 
-// Module 5841
-import module_5153 from "module_5153" /* 5153 */;
+// Module 5954
+import module_5254 from "module_5254" /* 5254 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 let c2 = 1;
-const useToastStore = module_5153.create(() => {
+const useToastStore = module_5254.create(() => {
   const obj = { currentToastMap: new Map(), queuedToastsMap: null };
   const map = new Map();
   obj.queuedToastsMap = new Map();
@@ -35,7 +35,7 @@ export function showToast(surface) {
       if (null != value) {
         const _Map = Map;
         const map = new Map(currentToastMap.queuedToastsMap);
-        value2 = map.get(str);
+        let value2 = map.get(str);
         if (value2 == null) {
           value2 = [];
         }
@@ -90,7 +90,7 @@ export function popToast(arg0) {
         const map1 = new Map(queuedToastsMap.currentToastMap);
         const _Map3 = Map;
         const map2 = new Map(queuedToastsMap.queuedToastsMap);
-        value2 = map2.get(str);
+        let value2 = map2.get(str);
         if (value2 == null) {
           value2 = [];
         }

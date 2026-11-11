@@ -1,10 +1,10 @@
-// === Module 15142: usePersonalizedVoiceChannelUsers ===
+// === Module 15632: usePersonalizedVoiceChannelUsers ===
 
-// Module 15142 (usePersonalizedVoiceChannelUsers)
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7881 */;
-import ConsentStore from "ConsentStore" /* 6799 */;
+// Module 15632 (usePersonalizedVoiceChannelUsers)
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8487 */;
+import ConsentStore from "ConsentStore" /* 6783 */;
 import UserStore from "UserStore" /* 1385 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5898 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6011 */;
 
 const require = globalThis.__r;
 
@@ -42,7 +42,7 @@ export default function usePersonalizedVoiceChannelUsers(arg0) {
         if (num == null) {
           num = 0;
         }
-        value2 = stateFromStores.get(arg0);
+        const value2 = stateFromStores.get(arg0);
         let num2;
         if (value2 != null) {
           num2 = value2.vcProbability;

@@ -1,6 +1,6 @@
-// === Module 13844: ? ===
+// === Module 14325: ? ===
 
-// Module 13844
+// Module 14325
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_13_knight_glacier.webp.js");

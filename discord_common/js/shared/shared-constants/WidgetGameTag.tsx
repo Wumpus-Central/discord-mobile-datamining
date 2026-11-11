@@ -1,6 +1,6 @@
-// === Module 12566: WidgetGameTag ===
+// === Module 12033: WidgetGameTag ===
 
-// Module 12566 (WidgetGameTag)
+// Module 12033 (WidgetGameTag)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/WidgetGameTag.tsx");

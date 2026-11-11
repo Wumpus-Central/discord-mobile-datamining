@@ -1,14 +1,14 @@
-// === Module 13944: TraitOptionList ===
+// === Module 14421: TraitOptionList ===
 
-// Module 13944 (TraitOptionList)
+// Module 14421 (TraitOptionList)
 import nativeDefault from "native" /* 575 */;
-import HapticUtils from "HapticUtils" /* 5378 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6568 */;
-import inlineStyles from "inlineStyles" /* 8105 */;
-import TraitOptionItem from "TraitOptionItem" /* 13945 */;
+import HapticUtils from "HapticUtils" /* 5491 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6681 */;
+import inlineStyles from "inlineStyles" /* 8197 */;
+import TraitOptionItem from "TraitOptionItem" /* 14422 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5143 */;
+import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 
 const inlineStylesDefault = inlineStyles;
 
@@ -23,12 +23,12 @@ function SelectedWindow(size) {
   return React5(tmp2, size1);
 }
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6201).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6314).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_12 = createStyles.createStyles({ assetList: { paddingHorizontal: PX_16 }, radioGroup: { flexDirection: "row", gap: PX_12 }, selectorOverlay: { position: "absolute", left: PX_16, top: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/TraitOptionList.tsx");
@@ -69,18 +69,18 @@ export default function TraitOptionList(size) {
   useReducedMotion = size(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = size(504);
   let tmp2 = size;
-  closure_7 = options(13922)(options(13923));
-  const tmp4 = options(13922);
-  const isScreenReaderEnabled = size(5392).useIsScreenReaderEnabled();
-  let obj2 = size(5392);
+  closure_7 = options(14399)(options(14400));
+  const tmp4 = options(14399);
+  const isScreenReaderEnabled = size(5505).useIsScreenReaderEnabled();
+  let obj2 = size(5505);
   const animatedRef = size(1652).useAnimatedRef();
   const ref = noop.useRef(false);
   closure_11 = noop.useRef(null);
   const bound = Math.max(options.findIndex((optionId) => optionId.optionId === dependencyMap), 0);
   const obj3 = size(1652);
-  const tmp8 = options(5741)(bound);
+  const tmp8 = options(5854)(bound);
   [tmp10, c12] = disabled(noop.useState(options(1493)().width), 2);
-  const width = size(13945).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
+  const width = size(14422).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
   const sum = width + ref;
   c13 = sum;
   const items1 = [disabled, isScreenReaderEnabled];
@@ -135,13 +135,13 @@ export default function TraitOptionList(size) {
   const obj5 = { style: tmp.radioGroup, accessibilityRole: "radiogroup", accessibilityLabel: null, children: null };
   const tmp14 = animatedRef;
   const tmp9 = disabled(noop.useState(options(1493)().width), 2);
-  obj5.accessibilityLabel = tmp2(6568).getCustomizationOptionName(size.customizationOption);
+  obj5.accessibilityLabel = tmp2(6681).getCustomizationOptionName(size.customizationOption);
   obj5.children = options.map((traitOption, index) => {
     size = traitOption;
     closure_1 = index;
     let obj = { size, traitOption, accessibilityLabel: null, isSelected: null, showSelectedBorder: null, hideCornerFlag: null, disabled: null, onPress: null };
-    const tmp2 = options(13945);
-    obj.accessibilityLabel = size(6568).getAssetAccessibilityLabel(traitOption, { skipRarity: skipDescription, skipDescription });
+    const tmp2 = options(14422);
+    obj.accessibilityLabel = size(6681).getAssetAccessibilityLabel(traitOption, { skipRarity: skipDescription, skipDescription });
     obj.isSelected = traitOption.optionId === dependencyMap;
     let tmp5 = isScreenReaderEnabled;
     if (isScreenReaderEnabled) {
@@ -159,9 +159,9 @@ export default function TraitOptionList(size) {
       closure_10.current = false;
       if (traitOption.optionId !== dependencyMap) {
         View(traitOption.trait, traitOption.optionId);
-        const result = traitOption(5378).triggerHapticFeedback(traitOption(5378).HapticFeedbackTypes.IMPACT_LIGHT);
+        const result = traitOption(5491).triggerHapticFeedback(traitOption(5491).HapticFeedbackTypes.IMPACT_LIGHT);
         closure_7();
-        const obj = traitOption(5378);
+        const obj = traitOption(5491);
       }
       if (!isScreenReaderEnabled) {
         const current = animatedRef.current;

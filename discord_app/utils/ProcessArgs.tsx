@@ -1,7 +1,7 @@
-// === Module 7446: ProcessArgs ===
+// === Module 8127: ProcessArgs ===
 
-// Module 7446 (ProcessArgs)
-import DiscordNativeDefault from "DiscordNative" /* 4953 */;
+// Module 8127 (ProcessArgs)
+import DiscordNativeDefault from "DiscordNative" /* 5053 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function ProcessArgs() {

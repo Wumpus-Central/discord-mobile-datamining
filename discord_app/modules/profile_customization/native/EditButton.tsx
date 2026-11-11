@@ -1,8 +1,8 @@
-// === Module 16802: EditButton ===
+// === Module 16963: EditButton ===
 
-// Module 16802 (EditButton)
-import IconButton from "IconButton" /* 8102 */;
-import _modDef8499 from "module_8499" /* 8499 */;
+// Module 16963 (EditButton)
+import IconButton from "IconButton" /* 7922 */;
+import _modDef9128 from "module_9128" /* 9128 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,6 +17,6 @@ export default function EditButton(disabled) {
   if (str === undefined) {
     str = "primary-overlay";
   }
-  const obj = { style, children: jsx(IconButton.IconButton, { icon: _modDef8499, variant: str, size: "sm", onPress, accessibilityLabel, disabled: disabled.disabled }) };
-  return <View style={style}>{jsx(IconButton.IconButton, { icon: _modDef8499, variant: str, size: "sm", onPress, accessibilityLabel, disabled: disabled.disabled })}</View>;
+  const obj = { style, children: jsx(IconButton.IconButton, { icon: _modDef9128, variant: str, size: "sm", onPress, accessibilityLabel, disabled: disabled.disabled }) };
+  return <View style={style}>{jsx(IconButton.IconButton, { icon: _modDef9128, variant: str, size: "sm", onPress, accessibilityLabel, disabled: disabled.disabled })}</View>;
 };

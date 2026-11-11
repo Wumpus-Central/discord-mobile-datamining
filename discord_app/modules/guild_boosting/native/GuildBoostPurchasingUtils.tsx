@@ -1,8 +1,8 @@
-// === Module 7665: GuildBoostPurchasingUtils ===
+// === Module 10639: GuildBoostPurchasingUtils ===
 
-// Module 7665 (GuildBoostPurchasingUtils)
+// Module 10639 (GuildBoostPurchasingUtils)
 import util from "util" /* 1113 */;
-import PremiumManagementUtils from "PremiumManagementUtils" /* 7666 */;
+import PremiumManagementUtils from "PremiumManagementUtils" /* 9912 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
 
@@ -90,8 +90,8 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
                 const intl = closure_1_0(1113).intl;
                 obj2.title = intl.string(closure_1_0(1113).t["8P7MX0"]);
                 obj2.body = body;
-                closure_1_1(6093).show(obj2);
-                const obj = closure_1_1(6093);
+                closure_1_1(6206).show(obj2);
+                const obj = closure_1_1(6206);
                 closure_1_1(1252).track(constants.OPEN_MODAL, { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source });
               })(closure_130_7, closure_130_0);
             } else {

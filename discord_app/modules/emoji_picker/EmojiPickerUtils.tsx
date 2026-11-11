@@ -1,24 +1,24 @@
-// === Module 10071: EmojiPickerUtils ===
+// === Module 9481: EmojiPickerUtils ===
 
-// Module 10071 (EmojiPickerUtils)
+// Module 9481 (EmojiPickerUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import v1 from "v1" /* 1266 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5088 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 5092 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5891 */;
-import ExpressionPickerGridStores from "ExpressionPickerGridStores" /* 10072 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5189 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 5193 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
+import ExpressionPickerGridStores from "ExpressionPickerGridStores" /* 9482 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6854 */;
-import GuildStore from "GuildStore" /* 5013 */;
-import SortedGuildStore from "SortedGuildStore" /* 6830 */;
+import EmojiStore from "EmojiStore" /* 6906 */;
+import GuildStore from "GuildStore" /* 5114 */;
+import SortedGuildStore from "SortedGuildStore" /* 6893 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const EmojiPickerConstants = fn(6857);
+const EmojiPickerConstants = fn(6909);
 ({ EmojiCategories: closure_8, EmojiCategoryTypes: closure_9, EmojiSubCategory: closure_10 } = EmojiPickerConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1, AutoCompleteResultTypes: closure_14, SearchTypes: closure_15 } = Constants);
@@ -382,7 +382,7 @@ export function trackEmojiSearchSelect(tmp2Result2) {
       let obj4 = obj3;
     }
     const merged = Object.assign(obj4);
-    let length;
+    length = undefined;
     if (emojiSuggestions != null) {
       const results = emojiSuggestions.results;
       if (results != null) {

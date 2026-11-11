@@ -1,6 +1,6 @@
-// === Module 18466: FriendSuggestionUtils ===
+// === Module 18638: FriendSuggestionUtils ===
 
-// Module 18466 (FriendSuggestionUtils)
+// Module 18638 (FriendSuggestionUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");
@@ -12,7 +12,7 @@ export function getSuggestedContactNameForSuggestion(friendSuggestionName, sugge
   }
   let tmp2;
   if (null != contactNames) {
-    let length;
+    length = undefined;
     if (suggestedFriend != null) {
       length = suggestedFriend.contactNames.length;
     }

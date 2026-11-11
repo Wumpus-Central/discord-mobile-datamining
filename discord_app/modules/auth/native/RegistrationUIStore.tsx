@@ -1,6 +1,6 @@
-// === Module 18352: RegistrationUIStore ===
+// === Module 18524: RegistrationUIStore ===
 
-// Module 18352 (RegistrationUIStore)
+// Module 18524 (RegistrationUIStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;

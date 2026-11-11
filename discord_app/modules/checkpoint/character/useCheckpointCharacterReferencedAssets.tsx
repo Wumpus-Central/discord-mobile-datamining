@@ -1,13 +1,13 @@
-// === Module 13886: useCheckpointCharacterReferencedAssets ===
+// === Module 14367: useCheckpointCharacterReferencedAssets ===
 
-// Module 13886 (useCheckpointCharacterReferencedAssets)
-import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 13718 */;
-import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13719 */;
+// Module 14367 (useCheckpointCharacterReferencedAssets)
+import CheckpointCharacterTextureUtils from "CheckpointCharacterTextureUtils" /* 14199 */;
+import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 14200 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let set = new Set([1]);
-const keys = Object.keys(fn(13719).CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET);
+const keys = Object.keys(fn(14200).CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET);
 let closure_4 = keys.map((name) => {
   const obj = { name, role: CheckpointCharacterTextureUtils.getCheckpointCharacterTextureRole(name), swapKey: null };
   let combined = name;

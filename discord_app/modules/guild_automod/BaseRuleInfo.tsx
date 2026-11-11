@@ -1,10 +1,10 @@
-// === Module 20121: BaseRuleInfo ===
+// === Module 20316: BaseRuleInfo ===
 
-// Module 20121 (BaseRuleInfo)
+// Module 20316 (BaseRuleInfo)
 import util from "util" /* 1113 */;
-import Constants from "Constants" /* 13538 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 20108 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 20109 */;
+import Constants from "Constants" /* 14063 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 20303 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 20304 */;
 import size from "module_2" /* 2 */;
 
 const AutomodTriggerType = Constants.AutomodTriggerType;
@@ -23,7 +23,7 @@ export function getBaseRuleInfo(triggerType, rule) {
               }
               tmp = null;
               if (flag) {
-                let length = rule;
+                length = rule;
                 let str;
                 if (rule != null) {
                   str = length.name;

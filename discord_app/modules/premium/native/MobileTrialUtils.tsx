@@ -1,13 +1,12 @@
-// === Module 7705: MobileTrialUtils ===
+// === Module 9540: MobileTrialUtils ===
 
-// Module 7705 (MobileTrialUtils)
+// Module 9540 (MobileTrialUtils)
 import util from "util" /* 1113 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;
 import PremiumUtils from "PremiumUtils" /* 2171 */;
-import dismissible_content from "dismissible_content" /* 4975 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5172 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7706 */;
-import AndroidTwoWeekTrialsExperiment from "AndroidTwoWeekTrialsExperiment" /* 15530 */;
+import dismissible_content from "dismissible_content" /* 5076 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5285 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9244 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = PremiumConstants.PremiumSubscriptionSKUToPremiumType;
@@ -40,7 +39,7 @@ export function usePremiumTrialOfferPremiumType() {
   }
   return closure_2[skuId];
 }
-export function useNitroTrialCtaOverride(user_profile_premium_upsell_card) {
+export function useNitroTrialCtaOverride() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let subscriptionTrial;
   if (premiumTrialOffer != null) {
@@ -49,16 +48,10 @@ export function useNitroTrialCtaOverride(user_profile_premium_upsell_card) {
   if (null == subscriptionTrial) {
     return null;
   } else {
-    const obj2 = { location: user_profile_premium_upsell_card };
-    if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj2)) {
-      ({ interval: obj3.intervalType, intervalCount: obj3.intervalCount } = subscriptionTrial);
-      const result = PremiumUtils.formatIntervalDuration({ intervalType: null, intervalCount: null });
-      const intl = util.intl;
-      const obj5 = { duration: result };
-      return intl.formatToPlainString(util.t["6xpY54"], obj5);
-    } else {
-      return null;
-    }
-    tmpResult = AndroidTwoWeekTrialsExperiment;
+    ({ interval: obj3.intervalType, intervalCount: obj3.intervalCount } = subscriptionTrial);
+    const result = PremiumUtils.formatIntervalDuration({ intervalType: null, intervalCount: null });
+    const intl = util.intl;
+    const obj4 = { duration: result };
+    return intl.formatToPlainString(util.t["6xpY54"], obj4);
   }
 }

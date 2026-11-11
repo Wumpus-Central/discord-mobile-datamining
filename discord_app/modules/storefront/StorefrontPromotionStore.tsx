@@ -1,6 +1,6 @@
-// === Module 9572: StorefrontPromotionStore ===
+// === Module 9349: StorefrontPromotionStore ===
 
-// Module 9572 (StorefrontPromotionStore)
+// Module 9349 (StorefrontPromotionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -32,9 +32,9 @@ prototype["getFetchedAt"] = function getFetchedAt(arg0) {
   }
   return obj[arg0].fetchedAt;
 };
-prototype["getPromotionsForApplication"] = function getPromotionsForApplication(arg0) {
+prototype["getPromotionsForApplication"] = function getPromotionsForApplication(timestampProducer) {
   state = undefined;
-  if (obj[arg0] != null) {
+  if (obj[timestampProducer] != null) {
     state = tmp.state;
   }
   if ("success" === state) {

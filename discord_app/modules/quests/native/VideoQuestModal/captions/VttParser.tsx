@@ -1,6 +1,6 @@
-// === Module 17473: VttParser ===
+// === Module 17638: VttParser ===
 
-// Module 17473 (VttParser)
+// Module 17638 (VttParser)
 import size from "module_2" /* 2 */;
 
 const prototype = function VttParserError(arg0, error) {
@@ -74,7 +74,7 @@ export function parseVtt(text) {
         return (function parseCue(item, index, arg2) {
           const parts = item.split("\n");
           const found = parts.filter(Boolean);
-          let length = found.length;
+          length = found.length;
           if (length > 0) {
             const trimmed = found[0].trim();
             length = trimmed.startsWith("NOTE");

@@ -1,8 +1,8 @@
-// === Module 11545: UserProfileGradientContainer ===
+// === Module 9464: UserProfileGradientContainer ===
 
-// Module 11545 (UserProfileGradientContainer)
-import LinearGradientDefault from "LinearGradient" /* 5717 */;
-import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8892 */;
+// Module 9464 (UserProfileGradientContainer)
+import LinearGradientDefault from "LinearGradient" /* 5830 */;
+import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8536 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,6 +12,6 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default noop.memo(function UserProfileGradientContainer(arg0) {
   ({ primaryColor, secondaryColor, fallbackBackground, containerStyle, children } = arg0);
-  const colors = useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground);
+  colors = useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground);
   return jsx(LinearGradientDefault, { colors, style, children });
 });

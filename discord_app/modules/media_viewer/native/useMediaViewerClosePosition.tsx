@@ -1,7 +1,7 @@
-// === Module 15067: useMediaViewerClosePosition ===
+// === Module 15125: useMediaViewerClosePosition ===
 
-// Module 15067 (useMediaViewerClosePosition)
-import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 15063 */;
+// Module 15125 (useMediaViewerClosePosition)
+import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 15121 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,14 +1,14 @@
-// === Module 19582: useSoundboardSoundPlayer ===
+// === Module 19771: useSoundboardSoundPlayer ===
 
-// Module 19582 (useSoundboardSoundPlayer)
-import SoundboardUtils from "SoundboardUtils" /* 7600 */;
+// Module 19771 (useSoundboardSoundPlayer)
+import SoundboardUtils from "SoundboardUtils" /* 12931 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 6193 */;
+import SoundboardStore from "SoundboardStore" /* 6306 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SoundOutputChannel = fn(6054).SoundOutputChannel;
+const SoundOutputChannel = fn(6167).SoundOutputChannel;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/useSoundboardSoundPlayer.native.tsx");
 

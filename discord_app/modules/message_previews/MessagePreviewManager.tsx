@@ -1,19 +1,19 @@
-// === Module 17660: MessagePreviewManager ===
+// === Module 17825: MessagePreviewManager ===
 
-// Module 17660 (MessagePreviewManager)
+// Module 17825 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 17661 */;
+import RemoteFetchData from "RemoteFetchData" /* 17826 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6625 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 15945 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 16104 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 require = fn;
-const isThread = fn(4995).isThread;
+const isThread = fn(5096).isThread;
 const Endpoints = fn(1072).Endpoints;
 let closure_11 = new LoggerDefault("MessagePreviewManager");
 class MessagePreviewManager extends tmp3 {

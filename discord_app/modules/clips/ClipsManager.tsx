@@ -1,26 +1,26 @@
-// === Module 20452: clips/ClipsManager ===
+// === Module 20647: clips/ClipsManager ===
 
-// Module 20452 (clips/ClipsManager)
+// Module 20647 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettings from "UserSettings" /* 4967 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5920 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6774 */;
-import ClipsExperiment from "ClipsExperiment" /* 15210 */;
-import isClipsEnabled from "isClipsEnabled" /* 15521 */;
-import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20454 */;
-import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20455 */;
+import UserSettings from "UserSettings" /* 5068 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 6033 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6745 */;
+import ClipsExperiment from "ClipsExperiment" /* 15696 */;
+import isClipsEnabled from "isClipsEnabled" /* 15993 */;
+import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20649 */;
+import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7966 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6739 */;
 import UserStore from "UserStore" /* 1385 */;
 import ClipsStore from "ClipsStore" /* 2136 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 const StreamKeyUtilsAll = StreamKeyUtils;
 
@@ -144,13 +144,13 @@ let closure_26 = async function _probeHardware() {
   closure_131_6 = closure_2;
   return { classification: closure_132_0(closure_132_3[15]).classifyClipsHardware(closure_131_6, closure_131_4), gpuModels: closure_131_5, videoEncoders: closure_131_6 };
 };
-const getSystemAnalyticsInfo = fn(5914).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8288);
+const getSystemAnalyticsInfo = fn(6027).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8779);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15, CLIPS_DEFAULT_SETTINGS_VERSION: closure_16, ClipsHardwareClassification: closure_17, ClipsLogger: closure_18, CLIP_RUNTIME: closure_19 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6772).StreamTypes;
-const Features = fn(5899).Features;
+const StreamTypes = fn(6740).StreamTypes;
+const Features = fn(6012).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -271,19 +271,29 @@ prototype["maybeShowClipsWarning"] = function maybeShowClipsWarning(userId) {
   const channelId = RTCConnectionStore.getChannelId();
   if (null != channelId) {
     if (!ClipsStore.getClipsWarningShown(channelId)) {
-      let setting = userId !== AuthenticationStore.getId() && ClipsStore.isClipsEnabledForUser(userId);
-      if (setting) {
-        const ClipsAllowVoiceRecording = UserSettings.ClipsAllowVoiceRecording;
-        setting = ClipsAllowVoiceRecording.getSetting();
-      }
-      if (setting) {
-        const self = this;
-        const obj2 = { type: "CLIPS_SHOW_CALL_WARNING", channelId };
-        DispatcherDefault.dispatch(obj2);
-        this.showClipsToast();
+      if (userId !== AuthenticationStore.getId()) {
+        if (ClipsStore.isClipsEnabledForUser(userId)) {
+          const self = this;
+          const result = this.shouldUseClipsInUseNotice();
+          let setting = result;
+          if (!result) {
+            const ClipsAllowVoiceRecording = UserSettings.ClipsAllowVoiceRecording;
+            setting = ClipsAllowVoiceRecording.getSetting();
+          }
+          if (setting) {
+            const obj2 = { type: "CLIPS_SHOW_CALL_WARNING", channelId };
+            DispatcherDefault.dispatch(obj2);
+            if (!result) {
+              self.showClipsToast();
+            }
+          }
+        }
       }
     }
   }
+};
+prototype["shouldUseClipsInUseNotice"] = function shouldUseClipsInUseNotice() {
+  return false;
 };
 prototype["handleClipsAllowVoiceRecordingUpdate"] = function handleClipsAllowVoiceRecordingUpdate() {
   const self = this;
@@ -364,7 +374,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(clas
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(4967).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(5068).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -426,7 +436,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(4967).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(5068).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };
@@ -454,7 +464,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
 prototype["getClipsDefaultSettingsDecision"] = function getClipsDefaultSettingsDecision(classification) {
   if (classification === constants.UNKNOWN) {
     return null;
-  } else if (ClipsStore.getClipsDefaultSettingsState().version >= value2) {
+  } else if (ClipsStore.getClipsDefaultSettingsState().version >= closure_1_16) {
     return null;
   } else {
     const currentUser = UserStore.getCurrentUser();

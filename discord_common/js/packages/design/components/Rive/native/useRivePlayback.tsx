@@ -1,6 +1,6 @@
-// === Module 5258: useRivePlayback ===
+// === Module 5371: useRivePlayback ===
 
-// Module 5258 (useRivePlayback)
+// Module 5371 (useRivePlayback)
 import noop from "module_19" /* 19 */;
 
 const AppState = fn(17).AppState;

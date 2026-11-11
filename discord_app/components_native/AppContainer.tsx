@@ -1,6 +1,6 @@
-// === Module 16757: AppContainer ===
+// === Module 16918: AppContainer ===
 
-// Module 16757 (AppContainer)
+// Module 16918 (AppContainer)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
@@ -10,35 +10,35 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1496 */;
 import Link from "Link" /* 1500 */;
-import ManaContext from "ManaContext" /* 5257 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5316 */;
-import RootNavigationRef from "RootNavigationRef" /* 5317 */;
-import getInitialNavigationStateDefault from "getInitialNavigationState" /* 5318 */;
-import Portal from "Portal" /* 5332 */;
-import useThemeDefault from "useTheme" /* 5371 */;
-import BackPressTracking from "BackPressTracking" /* 6159 */;
-import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 6803 */;
-import getChannelDetailsFromRouteDefault from "getChannelDetailsFromRoute" /* 6934 */;
-import useNavigationTheme from "useNavigationTheme" /* 7276 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8850 */;
-import StartupProfiler from "StartupProfiler" /* 11730 */;
-import WebViewContext from "WebViewContext" /* 11995 */;
-import MemoryRouter from "MemoryRouter" /* 12233 */;
-import RouteManagerDefault from "RouteManager" /* 12239 */;
-import AnimatedKeyboardProviderDefault from "AnimatedKeyboardProvider" /* 12248 */;
-import DiscordGestureHandlerRootViewDefault from "DiscordGestureHandlerRootView" /* 16758 */;
-import MainNavigationLoggerDefault from "MainNavigationLogger" /* 16761 */;
-import ReanimatedScreenProvider from "ReanimatedScreenProvider" /* 16763 */;
-import RootThemeContextProvider from "RootThemeContextProvider" /* 16771 */;
-import AccessibilityPreferencesContextProviderDefault from "AccessibilityPreferencesContextProvider" /* 16773 */;
-import ErrorBoundaryDefault from "ErrorBoundary" /* 16774 */;
-import ThemedStatusBarDefault from "ThemedStatusBar" /* 16775 */;
-import SafeAreaProvider from "SafeAreaProvider" /* 16776 */;
-import DevToolsLazyDefault from "DevToolsLazy" /* 16777 */;
+import ManaContext from "ManaContext" /* 5370 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5429 */;
+import RootNavigationRef from "RootNavigationRef" /* 5430 */;
+import getInitialNavigationStateDefault from "getInitialNavigationState" /* 5431 */;
+import Portal from "Portal" /* 5445 */;
+import useThemeDefault from "useTheme" /* 5484 */;
+import BackPressTracking from "BackPressTracking" /* 6272 */;
+import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 6787 */;
+import getChannelDetailsFromRouteDefault from "getChannelDetailsFromRoute" /* 6987 */;
+import useNavigationTheme from "useNavigationTheme" /* 7524 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8494 */;
+import StartupProfiler from "StartupProfiler" /* 12358 */;
+import WebViewContext from "WebViewContext" /* 12789 */;
+import MemoryRouter from "MemoryRouter" /* 13025 */;
+import RouteManagerDefault from "RouteManager" /* 13031 */;
+import AnimatedKeyboardProviderDefault from "AnimatedKeyboardProvider" /* 13040 */;
+import DiscordGestureHandlerRootViewDefault from "DiscordGestureHandlerRootView" /* 16919 */;
+import MainNavigationLoggerDefault from "MainNavigationLogger" /* 16922 */;
+import ReanimatedScreenProvider from "ReanimatedScreenProvider" /* 16924 */;
+import RootThemeContextProvider from "RootThemeContextProvider" /* 16932 */;
+import AccessibilityPreferencesContextProviderDefault from "AccessibilityPreferencesContextProvider" /* 16934 */;
+import ErrorBoundaryDefault from "ErrorBoundary" /* 16935 */;
+import ThemedStatusBarDefault from "ThemedStatusBar" /* 16936 */;
+import SafeAreaProvider from "SafeAreaProvider" /* 16937 */;
+import DevToolsLazyDefault from "DevToolsLazy" /* 16938 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 
 const StartupProfilerDefault = StartupProfiler;
 
@@ -170,30 +170,30 @@ function AppNavigationContainerOrEmpty(arg0) {
   }
 }
 const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(6932).handleHistoryStoreNavigationChange;
+let closure_7 = fn(6986).handleHistoryStoreNavigationChange;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11, Routes: closure_12 } = Constants);
-const isStaticChannelRoute = fn(4998).isStaticChannelRoute;
+const isStaticChannelRoute = fn(5099).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { flex: { flex: 1 }, rootBackgroundColor: { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND } };
 let closure_16 = createStyles.createStyles(obj2);
 const module_1652 = fn(1652);
 let obj3 = { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
 let result = module_1652.configureReanimatedLogger({ level: fn(1652).ReanimatedLogLevel.error, strict: false });
 try {
-  fn(6100).enableFreeze();
-  let obj6 = fn(6100);
-  let obj8 = { useTrackNavigatorScreenImpression: fn(16760).useTrackNavigatorScreenImpression };
-  fn(7271).setDesignConfig(obj8);
+  fn(6213).enableFreeze();
+  let obj6 = fn(6213);
+  let obj8 = { useTrackNavigatorScreenImpression: fn(16921).useTrackNavigatorScreenImpression };
+  fn(7519).setDesignConfig(obj8);
   let c22 = false;
   let closure_23 = { code: "(function AppContainerTsx1(){let[RNScreensTurboModule]=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;})" };
-  let obj7 = fn(7271);
+  let obj7 = fn(7519);
   const result1 = SentryUtilsDefault.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     const appEntryKey = children.appEntryKey;
-    const requestGatewaySocket = appEntryKey(16762).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = appEntryKey(16923).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = noop.useEffect(() => {
       if (!c22) {
         items = [closure_23, RNScreensTurboModule.RNScreensTurboModule];
@@ -225,8 +225,8 @@ try {
       }
       const obj = appEntryKey(1377);
     }, []);
-    let obj = appEntryKey(16762);
-    const riveAppStatePlaybackExperiment = appEntryKey(18345).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = appEntryKey(16923);
+    const riveAppStatePlaybackExperiment = appEntryKey(18517).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {
@@ -269,9 +269,9 @@ try {
       const obj15 = { children: null };
       const items1 = [children, gesture(SafeAreaProvider.SafeAreaReporter, {}), gesture(DevToolsLazyDefault, {})];
       obj15.children = items1;
-      items[1] = closure_2_15(SafeAreaProvider.SafeAreaProvider, obj15);
+      items[1] = colors(SafeAreaProvider.SafeAreaProvider, obj15);
       obj14.children = items;
-      obj13.children = closure_2_15(AnimatedKeyboardProviderDefault.Component, obj14);
+      obj13.children = colors(AnimatedKeyboardProviderDefault.Component, obj14);
       obj12.children = gesture(Portal.PortalProvider, obj13);
       obj11.children = gesture(ErrorBoundaryDefault, obj12);
       obj9.children = gesture(GestureWrapper, obj11);

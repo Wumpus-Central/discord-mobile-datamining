@@ -1,12 +1,12 @@
-// === Module 15157: useUserProfileActivity ===
+// === Module 15645: useUserProfileActivity ===
 
-// Module 15157 (useUserProfileActivity)
+// Module 15645 (useUserProfileActivity)
 import _mod19 from "module_19" /* 19 */;
-import Constants from "Constants" /* 5899 */;
-import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 15158 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9577 */;
+import Constants from "Constants" /* 6012 */;
+import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 15646 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9408 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import PresenceStore from "PresenceStore" /* 5892 */;
+import PresenceStore from "PresenceStore" /* 6005 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -43,7 +43,7 @@ export default function useUserProfileActivity(arg0) {
     if (stateFromStores2 != null) {
       const entries = stateFromStores2.entries;
       found = entries.filter((item) => {
-        let length = item;
+        length = item;
         userProfileLiveActivities = item;
         const isEntryLiveResult = userProfileLiveActivities(stateFromStores2[8]).isEntryLive(item);
         if (isEntryLiveResult) {
@@ -57,8 +57,8 @@ export default function useUserProfileActivity(arg0) {
               tmp6 = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(8988).isMatchingListeningActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(8988);
+                  result = userProfileLiveActivities(9409).isMatchingListeningActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(9409);
                 }
                 return result;
               });
@@ -69,8 +69,8 @@ export default function useUserProfileActivity(arg0) {
               result = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(8988).isMatchingWatchActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(8988);
+                  result = userProfileLiveActivities(9409).isMatchingWatchActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(9409);
                 }
                 return result;
               });

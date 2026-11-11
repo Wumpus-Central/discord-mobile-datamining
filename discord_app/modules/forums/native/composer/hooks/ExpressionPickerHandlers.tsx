@@ -1,6 +1,6 @@
-// === Module 10347: ExpressionPickerHandlers ===
+// === Module 11170: ExpressionPickerHandlers ===
 
-// Module 10347 (ExpressionPickerHandlers)
+// Module 11170 (ExpressionPickerHandlers)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -29,7 +29,7 @@ export function usePressEmojiHandler(selection) {
     if (null == id.id) {
       if (null != id.surrogates) {
         handleTextChange(substr + id.surrogates + substr1);
-        let length = substr + id.surrogates.length;
+        length = substr + id.surrogates.length;
       }
       const obj = { start: length, end: length };
       setSelection(obj);
@@ -66,7 +66,7 @@ export function usePressGIFHandler(selection) {
     const substr1 = draftContent.substring(start);
     if (substr.endsWith(" ")) {
       handleTextChange(substr + url + substr1);
-      let length = substr + url.length;
+      length = substr + url.length;
     } else {
       const _HermesInternal = HermesInternal;
       handleTextChange(substr + " " + url + substr1);

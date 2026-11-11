@@ -1,6 +1,6 @@
-// === Module 11058: conjurePreviewControlLease ===
+// === Module 13053: conjurePreviewControlLease ===
 
-// Module 11058 (conjurePreviewControlLease)
+// Module 13053 (conjurePreviewControlLease)
 import noop from "module_19" /* 19 */;
 
 function emit() {
@@ -255,7 +255,7 @@ export function releaseConjureControlLeases(projectId) {
     const _clearTimeout = clearTimeout;
     clearTimeout(value.timer);
   }
-  value2 = map.get(projectId);
+  const value2 = map.get(projectId);
   if (null != value2) {
     const timers = value2.timers;
     const tmp8 = timers[Symbol.iterator]();

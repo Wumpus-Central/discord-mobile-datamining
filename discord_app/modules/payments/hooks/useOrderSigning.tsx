@@ -1,15 +1,15 @@
-// === Module 9654: useOrderSigning ===
+// === Module 10373: useOrderSigning ===
 
-// Module 9654 (useOrderSigning)
-import BillingUtils from "BillingUtils" /* 4955 */;
-import BillingErrorDefault from "BillingError" /* 4962 */;
+// Module 10373 (useOrderSigning)
+import BillingUtils from "BillingUtils" /* 5055 */;
+import BillingErrorDefault from "BillingError" /* 5063 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const noop = fn(19);
 ({ useCallback: hasOwnProperty, useState: closure_6 } = noop);
-const OrderStatus = fn(5874).OrderStatus;
+const OrderStatus = fn(5987).OrderStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/hooks/useOrderSigning.tsx");
 

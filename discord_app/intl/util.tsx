@@ -73,8 +73,8 @@ export function getNormalizedLocale(Language, arg1) {
   }
   const arr = require("module_1174");
 }
-export function parseRuntimeIcuAsIntlMessage(acknowledgedBadgeLabel, currentLocale) {
-  const parsed = _Parser.parse(acknowledgedBadgeLabel, { ignoreTag: true });
+export function parseRuntimeIcuAsIntlMessage(header, currentLocale) {
+  const parsed = _Parser.parse(header, { ignoreTag: true });
   const internalIntlMessage = new _mod1152.InternalIntlMessage(parsed, currentLocale);
   return internalIntlMessage;
 }

@@ -1,17 +1,17 @@
-// === Module 18628: GuildHomeChannelRow ===
+// === Module 18800: GuildHomeChannelRow ===
 
-// Module 18628 (GuildHomeChannelRow)
+// Module 18800 (GuildHomeChannelRow)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 14197 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 14680 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Routes = fn(1072).Routes;
-const StaticChannelRoute = fn(4998).StaticChannelRoute;
+const StaticChannelRoute = fn(5099).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
-let obj2 = { container: { marginVertical: fn(5884).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(5243);
+let obj2 = { container: { marginVertical: fn(5997).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx");
@@ -23,7 +23,7 @@ export default function GuildHomeChannelRow(selected) {
   const callback = noop.useCallback(() => {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
   }, items);
-  const ChannelModes = id(14197).ChannelModes;
+  const ChannelModes = id(14680).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp5 = tmp3;
@@ -41,7 +41,7 @@ export default function GuildHomeChannelRow(selected) {
   const intl2 = tmp5(1113).intl;
   obj2.name = intl2.string(tmp5(1113).t.VbpLyU);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp5(14197).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp5(14197).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(16000).SignPostIcon });
+  obj.name = jsx(tmp5(14680).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp5(14680).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(16159).SignPostIcon });
   return <tmp7 onPress={callback} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 };

@@ -1,13 +1,13 @@
-// === Module 6839: QuestConstants ===
+// === Module 5275: QuestConstants ===
 
-// Module 6839 (QuestConstants)
+// Module 5275 (QuestConstants)
 import DurationsDefault from "Durations" /* 1089 */;
-import QuestVariants from "QuestVariants" /* 6840 */;
-import Quests from "Quests" /* 6841 */;
-import QuestTypes from "QuestTypes" /* 6842 */;
-import AdCreativeType from "AdCreativeType" /* 6846 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 6847 */;
-import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 6848 */;
+import QuestVariants from "QuestVariants" /* 5276 */;
+import Quests from "Quests" /* 5277 */;
+import QuestTypes from "QuestTypes" /* 5278 */;
+import AdCreativeType from "AdCreativeType" /* 5282 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5283 */;
+import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 5284 */;
 import HTTPUtils_mod from "HTTPUtils" /* 1282 */;
 import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;

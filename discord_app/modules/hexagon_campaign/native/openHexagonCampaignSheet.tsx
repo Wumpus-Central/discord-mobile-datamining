@@ -1,8 +1,8 @@
-// === Module 17350: openHexagonCampaignSheet ===
+// === Module 17513: openHexagonCampaignSheet ===
 
-// Module 17350 (openHexagonCampaignSheet)
+// Module 17513 (openHexagonCampaignSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import size from "module_2" /* 2 */;
 
 const HexagonCampaignSheet = "HexagonCampaignSheet";
@@ -10,5 +10,5 @@ const result = size.fileFinishedImporting("modules/hexagon_campaign/native/openH
 
 export const HEXAGON_CAMPAIGN_SHEET_KEY = "HexagonCampaignSheet";
 export function openHexagonCampaignSheet() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17351, dependencyMap.paths), HexagonCampaignSheet);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17514, dependencyMap.paths), HexagonCampaignSheet);
 }

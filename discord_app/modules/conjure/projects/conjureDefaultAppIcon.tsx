@@ -1,10 +1,10 @@
-// === Module 11491: conjureDefaultAppIcon ===
+// === Module 10481: conjureDefaultAppIcon ===
 
-// Module 11491 (conjureDefaultAppIcon)
+// Module 10481 (conjureDefaultAppIcon)
 import _modDef671 from "module_671" /* 671 */;
-import ColorUtils from "ColorUtils" /* 5139 */;
-import GuildProfileConstants from "GuildProfileConstants" /* 9384 */;
-import rawDefault from "raw" /* 10906 */;
+import ColorUtils from "ColorUtils" /* 5240 */;
+import rawDefault from "raw" /* 10005 */;
+import GuildProfileConstants from "GuildProfileConstants" /* 10482 */;
 import size from "module_2" /* 2 */;
 
 const BANNER_PALETTE_PRESETS = GuildProfileConstants.BANNER_PALETTE_PRESETS;
@@ -12,7 +12,6 @@ let c4 = 0.12156862745098039;
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureDefaultAppIcon.tsx");
 
 export function getConjureDefaultAppIcon(str, str2) {
-  let length;
   let num = 0;
   let num2 = 0;
   if (0 < str.length) {

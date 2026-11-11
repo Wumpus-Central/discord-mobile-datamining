@@ -1,15 +1,15 @@
-// === Module 17183: FamilyCenterParentalControlsDataAndPrivacy ===
+// === Module 17347: FamilyCenterParentalControlsDataAndPrivacy ===
 
-// Module 17183 (FamilyCenterParentalControlsDataAndPrivacy)
+// Module 17347 (FamilyCenterParentalControlsDataAndPrivacy)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import _modDef2664 from "module_2664" /* 2664 */;
-import SettingBuilders from "SettingBuilders" /* 11694 */;
-import SettingLayoutDefault from "SettingLayout" /* 16932 */;
+import _modDef2685 from "module_2685" /* 2685 */;
+import SettingBuilders from "SettingBuilders" /* 12317 */;
+import SettingLayoutDefault from "SettingLayout" /* 17095 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
-const MobileUserSettings = fn(8507).MobileUserSettings;
+const MobileUserSettings = fn(9136).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx");
@@ -21,7 +21,7 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     obj.settings = items;
     const intl = memo(1113).intl;
     const obj2 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(constants.DATA_PRIVACY_CONTROLS) };
-    obj.subLabel = intl.format(_modDef2664.Z5yJZy, obj2);
+    obj.subLabel = intl.format(_modDef2685.Z5yJZy, obj2);
     const items1 = [obj, , , ];
     const obj4 = { settings: null, subLabel: null };
     const items2 = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION];
@@ -29,7 +29,7 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     const intl2 = memo(1113).intl;
     const obj5 = { helpdeskArticle: null };
     obj5.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
-    obj4.subLabel = intl2.format(_modDef2664.Imp6Ns, obj5);
+    obj4.subLabel = intl2.format(_modDef2685.Imp6Ns, obj5);
     items1[1] = obj4;
     const obj7 = { settings: null, subLabel: null };
     const items3 = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_QUESTS];
@@ -37,7 +37,7 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     const intl3 = memo(1113).intl;
     const obj8 = { helpdeskArticle: null };
     obj8.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
-    obj7.subLabel = intl3.format(_modDef2664.cnCK6b, obj8);
+    obj7.subLabel = intl3.format(_modDef2685.cnCK6b, obj8);
     items1[2] = obj7;
     const obj10 = { settings: null, subLabel: null };
     const items4 = [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P];
@@ -45,7 +45,7 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     const intl4 = memo(1113).intl;
     const obj11 = { helpdeskArticle: null };
     obj11.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
-    obj10.subLabel = intl4.format(_modDef2664["6mK5Pz"], obj11);
+    obj10.subLabel = intl4.format(_modDef2685["6mK5Pz"], obj11);
     items1[3] = obj10;
     return items1;
   }, []);

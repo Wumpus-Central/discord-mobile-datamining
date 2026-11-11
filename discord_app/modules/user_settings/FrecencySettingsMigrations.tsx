@@ -1,6 +1,6 @@
-// === Module 16631: FrecencySettingsMigrations ===
+// === Module 16792: FrecencySettingsMigrations ===
 
-// Module 16631 (FrecencySettingsMigrations)
+// Module 16792 (FrecencySettingsMigrations)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -220,7 +220,7 @@ let items = [
           return sum;
         });
         const FavoriteGIFs4 = frecency_user_settings.FavoriteGIFs;
-        let length = FavoriteGIFs4.toBinary(favoriteGifs.favoriteGifs).length;
+        length = FavoriteGIFs4.toBinary(favoriteGifs.favoriteGifs).length;
         let num = 0;
         const iter = arr[Symbol.iterator]();
         const nextResult = iter.next();

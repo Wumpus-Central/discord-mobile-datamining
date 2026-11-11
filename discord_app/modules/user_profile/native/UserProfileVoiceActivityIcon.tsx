@@ -1,9 +1,9 @@
-// === Module 10893: UserProfileVoiceActivityIcon ===
+// === Module 10800: UserProfileVoiceActivityIcon ===
 
-// Module 10893 (UserProfileVoiceActivityIcon)
-import isRoleRequiredDefault from "isRoleRequired" /* 7341 */;
+// Module 10800 (UserProfileVoiceActivityIcon)
+import isRoleRequiredDefault from "isRoleRequired" /* 7156 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
 
 const require = fn;
 const Permissions = fn(1083).Permissions;
@@ -33,23 +33,23 @@ export default function UserProfileVoiceActivityIcon(channel) {
         if (tmp6) {
           const obj2 = {};
           const merged1 = Object.assign(merged);
-          let tmp8Result = jsx(tmp2(8745).StageLockIcon, {});
+          let tmp8Result = jsx(tmp2(8028).StageLockIcon, {});
         }
         return tmp8Result;
       }
       if (isGuildStageVoiceResult) {
         const obj3 = {};
         const merged2 = Object.assign(merged);
-        tmp8Result = jsx(tmp2(8746).StageIcon, {});
+        tmp8Result = jsx(tmp2(7952).StageIcon, {});
       } else if (channel.isNSFW()) {
         const obj4 = {};
         const merged3 = Object.assign(merged);
-        tmp8Result = jsx(tmp2(8748).VoiceWarningIcon, {});
+        tmp8Result = jsx(tmp2(8030).VoiceWarningIcon, {});
       } else {
         if (tmp6) {
-          let VoiceNormalIcon = tmp2(8747).VoiceLockIcon;
+          let VoiceNormalIcon = tmp2(8029).VoiceLockIcon;
         } else {
-          VoiceNormalIcon = tmp2(8750).VoiceNormalIcon;
+          VoiceNormalIcon = tmp2(7368).VoiceNormalIcon;
         }
         const obj5 = {};
         const merged4 = Object.assign(merged);
@@ -58,5 +58,5 @@ export default function UserProfileVoiceActivityIcon(channel) {
     }
   }
   const merged5 = Object.assign(merged);
-  return jsx(channel(9959).PhoneCallIcon, {});
+  return jsx(channel(9036).PhoneCallIcon, {});
 };

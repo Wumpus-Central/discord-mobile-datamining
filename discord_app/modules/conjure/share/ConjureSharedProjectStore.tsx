@@ -1,9 +1,9 @@
-// === Module 11722: ConjureSharedProjectStore ===
+// === Module 12350: ConjureSharedProjectStore ===
 
-// Module 11722 (ConjureSharedProjectStore)
+// Module 12350 (ConjureSharedProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectLink from "conjureProjectLink" /* 11723 */;
+import conjureProjectLink from "conjureProjectLink" /* 12351 */;
 
 require = fn;
 const map = new Map();

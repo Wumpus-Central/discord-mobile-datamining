@@ -1,16 +1,16 @@
-// === Module 19739: VoicePanelStyles ===
+// === Module 19931: VoicePanelStyles ===
 
-// Module 19739 (VoicePanelStyles)
+// Module 19931 (VoicePanelStyles)
 import nativeDefault from "native" /* 575 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 8921 */;
-import createStyles from "createStyles" /* 5142 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 11192 */;
+import createStyles from "createStyles" /* 5243 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = createStyles.createStyles((arg0) => {
   const obj = { iconBg: { backgroundColor: "transparent" }, iconBgSelected: { backgroundColor: nativeDefault.colors.WHITE }, iconBgVoiceMuted: null, iconFill: null, iconFillMuted: null, iconFillRed: null, iconFillSelected: null, iconBadgeIndicator: null };
   const obj2 = { backgroundColor: nativeDefault.colors.WHITE };
   obj.iconBgVoiceMuted = { borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED };
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   obj.iconFill = { color: arg0 ? colors.INTERACTIVE_TEXT_DEFAULT : colors.ICON_STRONG };
   const obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_VOICE_MUTED };
   obj.iconFillMuted = { color: nativeDefault.colors.ICON_MUTED };

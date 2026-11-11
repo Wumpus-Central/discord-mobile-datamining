@@ -1,6 +1,6 @@
-// === Module 5831: intlFormatDate ===
+// === Module 5944: intlFormatDate ===
 
-// Module 5831 (intlFormatDate)
+// Module 5944 (intlFormatDate)
 import LocaleStore from "LocaleStore" /* 2186 */;
 
 const require = fn;

@@ -1,19 +1,19 @@
-// === Module 14513: ContactSyncUtils ===
+// === Module 14887: ContactSyncUtils ===
 
-// Module 14513 (ContactSyncUtils)
+// Module 14887 (ContactSyncUtils)
 import initialize from "initialize" /* 504 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import UserSettings from "UserSettings" /* 4967 */;
-import LinkingDefault from "Linking" /* 5836 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6801 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6804 */;
-import ContactSyncManager from "ContactSyncManager" /* 14514 */;
+import UserSettings from "UserSettings" /* 5068 */;
+import LinkingDefault from "Linking" /* 5949 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6788 */;
+import ContactSyncManager from "ContactSyncManager" /* 14888 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6629 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7022 */;
 
 require = fn;
 let closure_18 = async function _uploadContacts(arg0) {
@@ -99,9 +99,9 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(14512);
+const ContactSyncPersistedStore = fn(14886);
 ({ useContactSyncStore: closure_6, clearDismissState: metroImportDefault, deleteStoredContacts: closure_8 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(14511);
+const ContactSyncConstants = fn(14885);
 ({ CONTACT_SYNC_MODAL_KEY: closure_9, ContactPermissions: closure_10, ContactSyncSuggestionsSetting: closure_11 } = ContactSyncConstants);
 const Constants = fn(1072);
 ({ Endpoints: closure_12, PlatformTypes: map1, FriendDiscoveryFlags: closure_14, HelpdeskArticles: closure_15 } = Constants);

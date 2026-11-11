@@ -1,6 +1,6 @@
-// === Module 11111: conjureLinkEmbeds ===
+// === Module 13693: conjureLinkEmbeds ===
 
-// Module 11111 (conjureLinkEmbeds)
+// Module 13693 (conjureLinkEmbeds)
 import URLUtilsDefault from "URLUtils" /* 1378 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -111,7 +111,7 @@ let closure_10 = async function _prefetchConjureLinkEmbeds(arg0) {
               closure_135_2 = tmp13;
               if (null != closure_135_2.url) {
                 closure_4 = 0;
-                value2 = closure_135_1.get(closure_135_2.url);
+                let value2 = closure_135_1.get(closure_135_2.url);
                 closure_5 = value2;
                 if (value2 == null) {
                   closure_5 = [];

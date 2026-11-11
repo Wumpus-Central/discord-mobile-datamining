@@ -1,15 +1,15 @@
-// === Module 7053: Badge ===
+// === Module 7391: Badge ===
 
-// Module 7053 (Badge)
+// Module 7391 (Badge)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import LinearGradientDefault from "LinearGradient" /* 5717 */;
-import useToken from "useToken" /* 5726 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import BadgeShared from "BadgeShared" /* 7054 */;
+import LinearGradientDefault from "LinearGradient" /* 5830 */;
+import useToken from "useToken" /* 5839 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import BadgeShared from "BadgeShared" /* 7392 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5142 */;
+import createStyles from "createStyles" /* 5243 */;
 import size from "module_2" /* 2 */;
 
 function getBadgeColors(variant) {
@@ -57,7 +57,7 @@ function getBadgeColors(variant) {
   }
 }
 function PremiumGradient(style) {
-  const colors = [useToken.useToken(nativeDefault.colors.BADGE_PREMIUM_BACKGROUND_GRADIENT_START), , ];
+  colors = [useToken.useToken(nativeDefault.colors.BADGE_PREMIUM_BACKGROUND_GRADIENT_START), , ];
   colors[1] = useToken.useToken(nativeDefault.colors.BADGE_PREMIUM_BACKGROUND_GRADIENT_MID);
   colors[2] = useToken.useToken(nativeDefault.colors.BADGE_PREMIUM_BACKGROUND_GRADIENT_END);
   return React4(LinearGradientDefault, { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, colors, style: style.style });

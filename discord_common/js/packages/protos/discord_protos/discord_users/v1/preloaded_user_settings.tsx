@@ -2064,7 +2064,7 @@ class VoiceAndVideoSettings$Type extends MessageType13 {
 }
 const prototype13 = VoiceAndVideoSettings$Type.prototype;
 prototype13["create"] = function create(partialSettings) {
-  const obj = { videoBackgroundFilterDesktop: { oneofKind: "r" } };
+  const obj = { videoBackgroundFilterDesktop: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -3150,7 +3150,6 @@ prototype18["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2,
   return obj;
 };
 prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurrogate, tag, writeUnknownFields) {
-  let length;
   let length2;
   let length3;
   if (diversitySurrogate.diversitySurrogate) {
@@ -4062,7 +4061,6 @@ prototype20["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2,
   return obj;
 };
 prototype20["internalBinaryWrite"] = function internalBinaryWrite(allowActivityPartyPrivacyFriends, tag, writeUnknownFields) {
-  let length;
   let length2;
   let length3;
   let length4;
@@ -5382,7 +5380,7 @@ prototype28["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        let colors = obj.colors;
+        colors = obj.colors;
         let arr = colors.push(pos.string());
       } else if (2 === tmp5) {
         if (tmp6 === _mod1197.WireType.LengthDelimited) {
@@ -5430,7 +5428,6 @@ prototype28["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype28["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, writeUnknownFields) {
-  let length;
   let length2;
   let num = 0;
   if (0 < colors.colors.length) {
@@ -5684,7 +5681,6 @@ prototype30["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype30["internalBinaryWrite"] = function internalBinaryWrite(folders, tag, writeUnknownFields) {
-  let length;
   let length2;
   let num = 0;
   if (0 < folders.folders.length) {
@@ -5841,7 +5837,6 @@ prototype31["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype31["internalBinaryWrite"] = function internalBinaryWrite(guildIds, tag, writeUnknownFields) {
-  let length;
   if (guildIds.guildIds.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -7005,7 +7000,6 @@ prototype39["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype39["internalBinaryWrite"] = function internalBinaryWrite(allowFriends, tag, writeUnknownFields) {
-  let length;
   let length2;
   if (allowFriends.allowFriends) {
     const BoolValue = wrappers.BoolValue;

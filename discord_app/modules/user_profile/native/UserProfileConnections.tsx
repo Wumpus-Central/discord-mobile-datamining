@@ -1,27 +1,27 @@
-// === Module 15286: UserProfileConnections ===
+// === Module 15736: UserProfileConnections ===
 
-// Module 15286 (UserProfileConnections)
+// Module 15736 (UserProfileConnections)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native2 from "native" /* 1187 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import shared from "shared" /* 5149 */;
-import HapticUtils from "HapticUtils" /* 5378 */;
-import useToken from "useToken" /* 5726 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import ToastUtils from "ToastUtils" /* 5838 */;
-import TableRow from "TableRow" /* 7041 */;
-import TableRowGroup from "TableRowGroup" /* 7129 */;
-import ClipboardUtils from "ClipboardUtils" /* 7421 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7439 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 9025 */;
-import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11772 */;
-import _modDef11777 from "module_11777" /* 11777 */;
-import _modDef11778 from "module_11778" /* 11778 */;
-import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 15290 */;
+import shared from "shared" /* 5250 */;
+import HapticUtils from "HapticUtils" /* 5491 */;
+import useToken from "useToken" /* 5839 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import ToastUtils from "ToastUtils" /* 5951 */;
+import TableRow from "TableRow" /* 7379 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 7587 */;
+import TableRowGroup from "TableRowGroup" /* 7680 */;
+import ClipboardUtils from "ClipboardUtils" /* 7877 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7895 */;
+import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 12405 */;
+import _modDef12410 from "module_12410" /* 12410 */;
+import _modDef12411 from "module_12411" /* 12411 */;
+import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 15740 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
-import StreamerModeStore from "StreamerModeStore" /* 5197 */;
+import StreamerModeStore from "StreamerModeStore" /* 5310 */;
 
 require = fn;
 function VerifiedIcon(arg0) {
@@ -40,10 +40,10 @@ function VerifiedIcon(arg0) {
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11777, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef12410, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     items = [application_id(native2.Icon, obj4), ];
-    const obj5 = { source: _modDef11778, color: WHITE };
+    const obj5 = { source: _modDef12411, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = application_id(native2.Icon, obj5);
     obj3.children = items;
@@ -53,17 +53,17 @@ function VerifiedIcon(arg0) {
   tmp2Result = shared;
 }
 const View = fn(17).View;
-let Constants = fn(7440);
+let Constants = fn(7896);
 ({ CARD_ROWS_ICON_SIZE: metroImportDefault, CARD_ROWS_ICON_SIZE_VARIANT: closure_8 } = Constants);
 Constants = fn(1072);
 ({ AnalyticEvents: closure_9, PlatformTypes: closure_10 } = Constants);
-const MetadataFields = fn(7413).MetadataFields;
+const MetadataFields = fn(7359).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = fn(1187).Icon.Sizes.REFRESH_SMALL_16;
 let native = fn(1187);
 const iconSize = native.getIconSize(REFRESH_SMALL_16);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 }, connectedAccountName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, linkIcon: { marginEnd: 4 }, connectedAccountNameText: { flexShrink: 1 }, verifiedIconContainer: { height: iconSize, width: iconSize }, verifiedIcon: { position: "absolute", left: 0, top: 0 }, connectionMetadata: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" }, metadataItem: null, poweredByContainer: null, applicationIcon: null };
 let obj4 = { marginBottom: nativeDefault.space.PX_8 };
 obj.metadataItem = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
@@ -393,8 +393,8 @@ export const ApplicationRoleConnection = memoResult;
 export function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   const tmp = closure_16();
-  const theme = userId(5201).useThemeContext().theme;
-  const obj = userId(5201);
+  const theme = userId(5314).useThemeContext().theme;
+  const obj = userId(5314);
   items = [LocaleStore];
   dependencyMap = userId(504).useStateFromStores(items, () => locale2.locale);
   const obj2 = userId(504);
@@ -402,7 +402,7 @@ export function UserProfileAccountConnectionsCard(userId) {
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(15287)(userId));
+  ({ connections, appIdentities } = theme(15737)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {
@@ -416,8 +416,8 @@ export function UserProfileAccountConnectionsCard(userId) {
     obj4.style = userId.style;
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(7129).TableRowGroup, obj5);
-    return closure_12(tmp5(7439), obj4);
+    obj4.children = closure_12(tmp2(7680).TableRowGroup, obj5);
+    return closure_12(tmp5(7895), obj4);
   }
   return null;
 }

@@ -1,6 +1,6 @@
-// === Module 9612: DominantColorUtils ===
+// === Module 9450: DominantColorUtils ===
 
-// Module 9612 (DominantColorUtils)
+// Module 9450 (DominantColorUtils)
 import nativeDefault from "native" /* 575 */;
 import privDefault from "priv" /* 1453 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -61,7 +61,7 @@ export function useDominantRGBFromImage(arg0) {
     closure_0 = value;
     if (null != closure_0) {
       if (null == value) {
-        value2 = closure_1_7.get(str);
+        let value2 = closure_1_7.get(str);
         if (value2 == null) {
           let tmp6 = str;
           if (typeof str !== "number") {
@@ -142,7 +142,7 @@ export function useDominantColorFromImage(avatarURI) {
     closure_0 = value;
     if (null != closure_0) {
       if (null == value) {
-        value2 = closure_1_7.get(str);
+        let value2 = closure_1_7.get(str);
         if (value2 == null) {
           let tmp6 = str;
           if (typeof str !== "number") {

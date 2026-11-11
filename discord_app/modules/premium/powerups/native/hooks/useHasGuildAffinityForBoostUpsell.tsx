@@ -1,9 +1,9 @@
-// === Module 14343: useHasGuildAffinityForBoostUpsell ===
+// === Module 10635: useHasGuildAffinityForBoostUpsell ===
 
-// Module 14343 (useHasGuildAffinityForBoostUpsell)
-import hasGuildAffinityForBoostUpsellDefault from "hasGuildAffinityForBoostUpsell" /* 14344 */;
-import ConsentStore from "ConsentStore" /* 6799 */;
-import GuildAffinitiesStore from "GuildAffinitiesStore" /* 8996 */;
+// Module 10635 (useHasGuildAffinityForBoostUpsell)
+import hasGuildAffinityForBoostUpsellDefault from "hasGuildAffinityForBoostUpsell" /* 10636 */;
+import ConsentStore from "ConsentStore" /* 6783 */;
+import GuildAffinitiesStore from "GuildAffinitiesStore" /* 10139 */;
 
 const require = globalThis.__r;
 

@@ -9,14 +9,14 @@ import util from "util" /* 1113 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
 import _modDef2166 from "module_2166" /* 2166 */;
 import PremiumSubscription from "PremiumSubscription" /* 2182 */;
-import _modDef2728 from "module_2728" /* 2728 */;
-import _modDef3444 from "module_3444" /* 3444 */;
-import BillingUtils from "BillingUtils" /* 4955 */;
-import DateUtils from "DateUtils" /* 4964 */;
-import openURLDefault from "openURL" /* 5832 */;
-import PriceUtils from "PriceUtils" /* 7480 */;
-import CheckoutError from "CheckoutError" /* 11533 */;
-import useFPDurationLeft from "useFPDurationLeft" /* 15659 */;
+import _modDef2749 from "module_2749" /* 2749 */;
+import _modDef3465 from "module_3465" /* 3465 */;
+import BillingUtils from "BillingUtils" /* 5055 */;
+import DateUtils from "DateUtils" /* 5065 */;
+import openURLDefault from "openURL" /* 5945 */;
+import PriceUtils from "PriceUtils" /* 7190 */;
+import CheckoutError from "CheckoutError" /* 12297 */;
+import useFPDurationLeft from "useFPDurationLeft" /* 15217 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -313,7 +313,7 @@ function getIntervalString(interval, arg1, arg2) {
       const formatToPlainString = intl9.formatToPlainString;
       if (flag) {
         const obj2 = { intervalCount: num };
-        let formatToPlainStringResult1 = formatToPlainString(_modDef2728.G1Q40N, obj2);
+        let formatToPlainStringResult1 = formatToPlainString(_modDef2749.G1Q40N, obj2);
       } else {
         const obj3 = { intervalCount: num };
         formatToPlainStringResult1 = formatToPlainString(util.t["0UlZnH"], obj3);
@@ -464,7 +464,7 @@ function getDisplayName(planId, arg1, arg2) {
       let stringResult = intl10.string(util.t.SmVbHc);
     } else {
       const obj5 = { premiumGroupProductName: closure_46() };
-      stringResult = intl10.formatToPlainString(_modDef3444["8bPDtb"], obj5);
+      stringResult = intl10.formatToPlainString(_modDef3465["8bPDtb"], obj5);
     }
     return stringResult;
   } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === planId) {
@@ -803,7 +803,7 @@ function getPlanDescription(arg0) {
                     percentage = activeDiscountInfo.percentage;
                   }
                   if (percentage == null) {
-                    percentage = value2;
+                    percentage = closure_1_16;
                   }
                   activeDiscountInfo = { percent: percentage, regularPrice: combined, renewalDate: null };
                   combined = getExpectedRenewalDate(subscription, fractionalPremiumInfo);
@@ -1735,7 +1735,7 @@ function getBillingReviewSubheader(arg0, id, arg2) {
   } else if (SubscriptionPlans.PREMIUM_GROUP_MONTH === id) {
     const intl4 = util.intl;
     const obj2 = { premiumGroupProductName: closure_46() };
-    return intl4.formatToPlainString(_modDef3444.LwdrNi, obj2);
+    return intl4.formatToPlainString(_modDef3465.LwdrNi, obj2);
   } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === id) {
     const intl3 = util.intl;
     const string = intl3.string;
@@ -2181,7 +2181,7 @@ const frozen = Object.freeze({
     return skuId === regex.TIER_0 || skuId === regex.TIER_1 || skuId === regex.TIER_2;
   },
   getIntervalMonths,
-  getUserMaxFileSize: fn(10142).getUserMaxFileSize,
+  getUserMaxFileSize: fn(11152).getUserMaxFileSize,
   getSkuIdForPlan(planId) {
     if (null == dependencyMap2[planId]) {
       const _Error = Error;
@@ -2296,35 +2296,35 @@ const frozen = Object.freeze({
   calculateYearlyPlanMonthlyRateAmount,
   getDaysSincePremium,
   getDaysRemainingUntilSubscriptionCurrentPeriodEnds,
-  canUseAnimatedEmojis: fn(16214).canUseAnimatedEmojis,
-  canUseEmojisEverywhere: fn(16214).canUseEmojisEverywhere,
-  canUseSoundboardEverywhere: fn(16214).canUseSoundboardEverywhere,
-  canUseCustomCallSounds: fn(16214).canUseCustomCallSounds,
-  canUploadLargeFiles: fn(16214).canUploadLargeFiles,
-  canUseBadges: fn(16214).canUseBadges,
-  canUseHighVideoUploadQuality: fn(16214).canUseHighVideoUploadQuality,
-  canEditDiscriminator: fn(16214).canEditDiscriminator,
-  hasBoostDiscount: fn(16214).hasBoostDiscount,
-  canUseAnimatedAvatar: fn(16214).canUseAnimatedAvatar,
-  canInstallPremiumApplications: fn(16214).canInstallPremiumApplications,
-  canUseIncreasedMessageLength: fn(16214).canUseIncreasedMessageLength,
-  canUseIncreasedGuildCap: fn(16214).canUseIncreasedGuildCap,
-  canRedeemPremiumPerks: fn(16214).canRedeemPremiumPerks,
-  canUsePremiumProfileCustomization: fn(16214).canUsePremiumProfileCustomization,
-  canUsePremiumAppIcons: fn(16214).canUsePremiumAppIcons,
-  canUsePremiumGuildMemberProfile: fn(16214).canUsePremiumGuildMemberProfile,
-  canUseClientThemes: fn(16214).canUseClientThemes,
-  canStreamQuality: fn(16214).canStreamQuality,
-  canUseQuestOrbMultiplier: fn(16214).canUseQuestOrbMultiplier,
-  hasFreeBoosts: fn(16214).hasFreeBoosts,
-  canUseCustomStickersEverywhere: fn(16214).canUseCustomStickersEverywhere,
-  canUseCustomBackgrounds: fn(16214).canUseCustomBackgrounds,
-  canUseCollectibles: fn(16214).canUseCollectibles,
-  canUseMonthlyOrbs: fn(16214).canUseMonthlyOrbs,
-  canUseShopDiscounts: fn(16214).canUseShopDiscounts,
-  canUseMoreQuestOrbs: fn(16214).canUseMoreQuestOrbs,
+  canUseAnimatedEmojis: fn(10015).canUseAnimatedEmojis,
+  canUseEmojisEverywhere: fn(10015).canUseEmojisEverywhere,
+  canUseSoundboardEverywhere: fn(10015).canUseSoundboardEverywhere,
+  canUseCustomCallSounds: fn(10015).canUseCustomCallSounds,
+  canUploadLargeFiles: fn(10015).canUploadLargeFiles,
+  canUseBadges: fn(10015).canUseBadges,
+  canUseHighVideoUploadQuality: fn(10015).canUseHighVideoUploadQuality,
+  canEditDiscriminator: fn(10015).canEditDiscriminator,
+  hasBoostDiscount: fn(10015).hasBoostDiscount,
+  canUseAnimatedAvatar: fn(10015).canUseAnimatedAvatar,
+  canInstallPremiumApplications: fn(10015).canInstallPremiumApplications,
+  canUseIncreasedMessageLength: fn(10015).canUseIncreasedMessageLength,
+  canUseIncreasedGuildCap: fn(10015).canUseIncreasedGuildCap,
+  canRedeemPremiumPerks: fn(10015).canRedeemPremiumPerks,
+  canUsePremiumProfileCustomization: fn(10015).canUsePremiumProfileCustomization,
+  canUsePremiumAppIcons: fn(10015).canUsePremiumAppIcons,
+  canUsePremiumGuildMemberProfile: fn(10015).canUsePremiumGuildMemberProfile,
+  canUseClientThemes: fn(10015).canUseClientThemes,
+  canStreamQuality: fn(10015).canStreamQuality,
+  canUseQuestOrbMultiplier: fn(10015).canUseQuestOrbMultiplier,
+  hasFreeBoosts: fn(10015).hasFreeBoosts,
+  canUseCustomStickersEverywhere: fn(10015).canUseCustomStickersEverywhere,
+  canUseCustomBackgrounds: fn(10015).canUseCustomBackgrounds,
+  canUseCollectibles: fn(10015).canUseCollectibles,
+  canUseMonthlyOrbs: fn(10015).canUseMonthlyOrbs,
+  canUseShopDiscounts: fn(10015).canUseShopDiscounts,
+  canUseMoreQuestOrbs: fn(10015).canUseMoreQuestOrbs,
   formatPriceString,
-  StreamQuality: fn(16214).StreamQuality
+  StreamQuality: fn(10015).StreamQuality
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/PremiumUtils.tsx");
@@ -3290,8 +3290,8 @@ export const isPremiumAtLeast = fn(2107).isPremiumAtLeast;
 export const isPremiumAtMost = fn(2107).isPremiumAtMost;
 export const isPremium = fn(2107).isPremium;
 export const isPremiumExactly = fn(2107).isPremiumExactly;
-export const getMaxFileSizeForPremiumType = fn(16214).getMaxFileSizeForPremiumType;
-export const StreamQuality = fn(16214).StreamQuality;
+export const getMaxFileSizeForPremiumType = fn(10015).getMaxFileSizeForPremiumType;
+export const StreamQuality = fn(10015).StreamQuality;
 export function useHasTier2Premium() {
   items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());

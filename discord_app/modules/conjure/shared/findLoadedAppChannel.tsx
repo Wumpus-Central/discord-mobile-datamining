@@ -1,8 +1,8 @@
-// === Module 11727: findLoadedAppChannel ===
+// === Module 12355: findLoadedAppChannel ===
 
-// Module 11727 (findLoadedAppChannel)
-import ChannelStore from "ChannelStore" /* 4991 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
+// Module 12355 (findLoadedAppChannel)
+import ChannelStore from "ChannelStore" /* 5092 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
 
 function isViewableAppChannel(channel, arg1) {
   let canResult = null != channel;

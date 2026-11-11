@@ -1,7 +1,7 @@
-// === Module 10443: isApplicationAgeRestricted ===
+// === Module 11360: isApplicationAgeRestricted ===
 
-// Module 10443 (isApplicationAgeRestricted)
-import utils from "utils" /* 5786 */;
+// Module 11360 (isApplicationAgeRestricted)
+import utils from "utils" /* 5899 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 
 require = fn;

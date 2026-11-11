@@ -1,9 +1,9 @@
-// === Module 10357: PencilIcon ===
+// === Module 10838: PencilIcon ===
 
-// Module 10357 (PencilIcon)
+// Module 10838 (PencilIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod8499 from "module_8499" /* 8499 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod9128 from "module_9128" /* 9128 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function PencilIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8499, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9128, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

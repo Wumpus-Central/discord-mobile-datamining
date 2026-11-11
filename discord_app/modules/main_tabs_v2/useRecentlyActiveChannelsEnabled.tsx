@@ -1,8 +1,8 @@
-// === Module 7793: useRecentlyActiveChannelsEnabled ===
+// === Module 8672: useRecentlyActiveChannelsEnabled ===
 
-// Module 7793 (useRecentlyActiveChannelsEnabled)
-import useDesignToggleDefault from "useDesignToggle" /* 7069 */;
-import DesignTogglesStore from "DesignTogglesStore" /* 7070 */;
+// Module 8672 (useRecentlyActiveChannelsEnabled)
+import useDesignToggleDefault from "useDesignToggle" /* 7429 */;
+import DesignTogglesStore from "DesignTogglesStore" /* 7430 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/useRecentlyActiveChannelsEnabled.tsx");

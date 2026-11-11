@@ -1,12 +1,12 @@
-// === Module 8646: utils/ChangeLogUtils ===
+// === Module 9287: utils/ChangeLogUtils ===
 
-// Module 8646 (utils/ChangeLogUtils)
+// Module 9287 (utils/ChangeLogUtils)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import MarkupRulesUtils from "MarkupRulesUtils" /* 8648 */;
-import ChangelogInlineImageDefault from "ChangelogInlineImage" /* 8649 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 9289 */;
+import ChangelogInlineImageDefault from "ChangelogInlineImage" /* 9290 */;
 import noop from "module_19" /* 19 */;
-import CustomMarkup from "CustomMarkup" /* 6165 */;
+import CustomMarkup from "CustomMarkup" /* 6278 */;
 
 require = fn;
 function ChangeLogLink(arg0) {
@@ -78,9 +78,9 @@ function ChangeLogParagraph(state) {
     Paragraph = components.Paragraph;
   }
   if (Paragraph == null) {
-    Paragraph = output(5753).Text;
+    Paragraph = output(5866).Text;
   }
-  const result = output(8647).splitParagraphAtImages(node.content);
+  const result = output(9288).splitParagraphAtImages(node.content);
   if (true !== state.changelogImagesDisabled) {
     if (tmp5Result.hasImageSegment(result)) {
       let obj2 = {
@@ -118,7 +118,7 @@ function ChangeLogParagraph(state) {
     }
     return tmp7;
   }
-  let obj = output(8647);
+  let obj = output(9288);
   tmp7 = <Paragraph key={state.key} variant="body-sm/normal" style={tmp.text}>{output(node.content, state)}</Paragraph>;
   let obj3 = { variant: "body-sm/normal", style: tmp.text, children: output(node.content, state) };
 }
@@ -150,11 +150,11 @@ function ChangeLogBlockQuote(state) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, container: null, text: null };
 let obj3 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6836).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6836).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6898).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(6898).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});
@@ -163,25 +163,26 @@ let result = size.fileFinishedImporting("utils/native/ChangeLogUtils.tsx");
 
 export const baseRules = rules;
 export const customRules = {
-  link(inlineStoreParams) {
-    const styling = inlineStoreParams;
+  link(styling) {
     return {
       react(node, output, state) {
         return <ChangeLogLink key={state.key} accessibilityRole="link" node={node} output={output} state={state} styling={styling} />;
       }
     };
   },
-  lheading(dependencyMap) {
+  lheading(arg0) {
+    const components = arg0;
     return {
       react(className, fn, key) {
-        return jsx(dependencyMap.components.LHeading, { className: className.className, children: fn(className.content, key) }, key.key);
+        return jsx(components.components.LHeading, { className: className.className, children: fn(className.content, key) }, key.key);
       }
     };
   },
-  heading(dependencyMap) {
+  heading(arg0) {
+    const components = arg0;
     return {
       react(className, fn, key) {
-        return jsx(dependencyMap.components.Heading, { className: className.className, level: className.level, children: fn(className.content, key) }, key.key);
+        return jsx(components.components.Heading, { className: className.className, level: className.level, children: fn(className.content, key) }, key.key);
       }
     };
   },
@@ -213,10 +214,10 @@ export const customRules = {
       return <ChangeLogStrong key={state.key} node={node} output={output} state={state} />;
     }
   },
-  paragraph(dependencyMap) {
+  paragraph(styling) {
     return {
       react(node, output, state) {
-        return <ChangeLogParagraph key={state.key} node={node} output={output} state={state} styling={dependencyMap} />;
+        return <ChangeLogParagraph key={state.key} node={node} output={output} state={state} styling={styling} />;
       }
     };
   }

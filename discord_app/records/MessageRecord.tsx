@@ -1,11 +1,11 @@
-// === Module 5085: MessageRecord ===
+// === Module 5186: MessageRecord ===
 
-// Module 5085 (MessageRecord)
+// Module 5186 (MessageRecord)
 import FlagUtils from "FlagUtils" /* 1403 */;
-import ReactionUtils from "ReactionUtils" /* 5086 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5744 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5776 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5777 */;
+import ReactionUtils from "ReactionUtils" /* 5187 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5857 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5889 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5890 */;
 import Record from "Record" /* 1405 */;
 
 require = fn;
@@ -234,7 +234,7 @@ prototype["addReaction"] = function addReaction(emoji) {
   let NORMAL;
   closure_4 = undefined;
   closure_5 = undefined;
-  let colors = obj.colors;
+  colors = obj.colors;
   if (undefined === colors) {
     colors = [];
   }

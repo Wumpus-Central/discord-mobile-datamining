@@ -1,10 +1,10 @@
-// === Module 20430: SelectEmojiRolesActionSheet ===
+// === Module 20625: SelectEmojiRolesActionSheet ===
 
-// Module 20430 (SelectEmojiRolesActionSheet)
+// Module 20625 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 5048 */;
+import GuildRoleStore from "GuildRoleStore" /* 5149 */;
 
 const require = globalThis.__r;
 
@@ -12,7 +12,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { list: { flex: 1 }, row: { paddingHorizontal: nativeDefault.space.PX_16 }, label: null, roleName: null, saveButtonDisabled: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.label = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };

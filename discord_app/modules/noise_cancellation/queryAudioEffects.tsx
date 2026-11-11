@@ -1,9 +1,9 @@
-// === Module 16294: queryAudioEffects ===
+// === Module 16455: queryAudioEffects ===
 
-// Module 16294 (queryAudioEffects)
+// Module 16455 (queryAudioEffects)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
-import DiscordNativeDefault from "DiscordNative" /* 4953 */;
-import _modDef16237 from "module_16237" /* 16237 */;
+import DiscordNativeDefault from "DiscordNative" /* 5053 */;
+import _modDef16398 from "module_16398" /* 16398 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -57,7 +57,7 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
                 const obj7 = { value: Promise.reject(error), done: true };
                 return obj7;
               }
-              obj5 = _modDef16237;
+              obj5 = _modDef16398;
             } else {
               const _Error = Error;
               const error1 = new Error("Audio effects querying not supported on non-Windows platforms");

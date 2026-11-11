@@ -1,9 +1,9 @@
-// === Module 14163: TiktokNeutralIcon ===
+// === Module 14648: TiktokNeutralIcon ===
 
-// Module 14163 (TiktokNeutralIcon)
+// Module 14648 (TiktokNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod14164 from "module_14164" /* 14164 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod14649 from "module_14649" /* 14649 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function TiktokNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14164, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14649, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

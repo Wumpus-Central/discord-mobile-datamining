@@ -1,6 +1,6 @@
-// === Module 8997: GuildAffinitiesActionCreators ===
+// === Module 10140: GuildAffinitiesActionCreators ===
 
-// Module 8997 (GuildAffinitiesActionCreators)
+// Module 10140 (GuildAffinitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;

@@ -1,6 +1,6 @@
-// === Module 8927: MediaViewerVideoPerfExperiment ===
+// === Module 15113: MediaViewerVideoPerfExperiment ===
 
-// Module 8927 (MediaViewerVideoPerfExperiment)
+// Module 15113 (MediaViewerVideoPerfExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import size from "module_2" /* 2 */;

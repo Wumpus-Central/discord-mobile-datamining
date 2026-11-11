@@ -1,6 +1,6 @@
-// === Module 9702: GameProfileGameClaimCta ===
+// === Module 10421: GameProfileGameClaimCta ===
 
-// Module 9702 (GameProfileGameClaimCta)
+// Module 10421 (GameProfileGameClaimCta)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -40,10 +40,10 @@ export default function GameProfileGameClaimCta(trackAction) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            trackAction(v3(9427).GameProfileTrackActionActions.ClaimGame);
+            trackAction(v3(10219).GameProfileTrackActionActions.ClaimGame);
             v1 = 1;
             v3 = 1;
-            const obj4 = { value: v1(7578).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7582).LoginHandoffSource.GAME_CLAIM), done: false };
+            const obj4 = { value: v1(10422).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(10426).LoginHandoffSource.GAME_CLAIM), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -71,7 +71,7 @@ export default function GameProfileGameClaimCta(trackAction) {
     const intl = trackAction(1113).intl;
     obj.text = intl.string(trackAction(1113).t["mqg+to"]);
     obj.onPress = callback;
-    let tmp3 = jsx(trackAction(5760).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+    let tmp3 = jsx(trackAction(5873).Button, { variant: "secondary", size: "md", text: null, onPress: null });
   } else {
     tmp3 = null;
   }

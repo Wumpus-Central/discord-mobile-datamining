@@ -1,22 +1,22 @@
-// === Module 9857: AppLauncherUtils ===
+// === Module 12608: AppLauncherUtils ===
 
-// Module 9857 (AppLauncherUtils)
+// Module 12608 (AppLauncherUtils)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import Server from "Server" /* 2116 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2148 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5801 */;
-import getPlatformDefault from "getPlatform" /* 5808 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6941 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7779 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11656 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11910 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5914 */;
+import getPlatformDefault from "getPlatform" /* 5921 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6994 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8657 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 12489 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 12611 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9858 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 11345 */;
 import ApplicationRecord from "ApplicationRecord" /* 2140 */;
-import AppLauncherStore from "AppLauncherStore" /* 12632 */;
+import AppLauncherStore from "AppLauncherStore" /* 12609 */;
 
 const require = globalThis.__r;
 
@@ -67,14 +67,17 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1072).ApplicationFlags;
-const BuiltInSectionId = fn(6169).BuiltInSectionId;
-const MessageSendLocation = fn(5147).MessageSendLocation;
+const BuiltInSectionId = fn(6282).BuiltInSectionId;
+const MessageSendLocation = fn(5248).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
 export const FAKE_BUILT_IN_APP = { id: BuiltInSectionId.BUILT_IN };
 export function isRealApplication(application) {
   return application.id !== BuiltInSectionId.BUILT_IN;
+}
+export function getConjureProjectId(conjureProjectId) {
+  return conjureProjectId instanceof ApplicationRecord ? conjureProjectId.conjureProjectId : conjureProjectId.conjure_project_id;
 }
 export function isConjureAppWithoutIcon(icon, arg1) {
   let tmp = null == icon.icon;
@@ -347,6 +350,21 @@ export function ensureRecommendationSectionsOnlyContainActivities(entrypoint) {
 }
 export function getInstallAppPropsFromProfileApplication(application) {
   return { applicationId: application.id, customInstallUrl: application.customInstallUrl, installParams: application.installParams, integrationTypesConfig: application.integrationTypesConfig };
+}
+export function getInstallableApplication(application) {
+  const obj = { applicationId: application.id, customInstallUrl: null, installParams: null, integrationTypesConfig: null };
+  if (application instanceof ApplicationRecord) {
+    ({ customInstallUrl: obj.customInstallUrl, installParams: obj.installParams, integrationTypesConfig: obj.integrationTypesConfig } = application);
+    let tmp2 = obj;
+  } else {
+    ({ custom_install_url: obj.customInstallUrl, install_params: obj.installParams, integration_types_config: obj.integrationTypesConfig } = application);
+    tmp2 = obj;
+  }
+  const obj2 = {};
+  const merged = Object.assign(tmp2);
+  obj2.id = application.id;
+  obj2.conjureProjectId = application instanceof ApplicationRecord ? application.conjureProjectId : application.conjure_project_id;
+  return obj2;
 }
 export function getInstallAppProps(application) {
   const obj = { applicationId: application.id, customInstallUrl: null, installParams: null, integrationTypesConfig: null };

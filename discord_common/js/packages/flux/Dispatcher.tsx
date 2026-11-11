@@ -101,7 +101,7 @@ prototype["addDependencies"] = function addDependencies(arg0, arg1) {
         throw error1;
       } else {
         let _nodes2 = self._nodes;
-        value2 = _nodes2.get(tmp5);
+        let value2 = _nodes2.get(tmp5);
         if (null == value2) {
           let tmp11 = globalThis;
           let _Error2 = Error;
@@ -213,7 +213,7 @@ prototype["_computeCallbackTokenPositions"] = function _computeCallbackTokenPosi
 let result = size.fileFinishedImporting("../discord_common/js/packages/flux/Dispatcher.tsx");
 class Dispatcher {
   constructor(arg0, arg1) {
-    merged = Object.assign({ _interceptors: null, _subscriptions: null, _waitQueue: null, _processingWaitQueue: false, _currentDispatchActionType: null, _actionHandlers: null, _sentryUtils: "Array", functionCache: 7026918 });
+    merged = Object.assign({ _interceptors: null, _subscriptions: null, _waitQueue: null, _processingWaitQueue: false, _currentDispatchActionType: null, _actionHandlers: null, _sentryUtils: "Array", functionCache: 6945754 });
     merged[0] = [];
     merged[1] = {};
     merged[2] = [];
@@ -412,7 +412,7 @@ prototype2["_dispatch"] = function _dispatch(type, fn) {
     }
   }
   c3 = 0;
-  const length = self._actionHandlers.getOrderedActionHandlers(type).length;
+  length = self._actionHandlers.getOrderedActionHandlers(type).length;
   let num = 0;
   if (0 < length) {
     do {

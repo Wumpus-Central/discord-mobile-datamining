@@ -1,11 +1,11 @@
-// === Module 15061: useMediaViewerPanGesture ===
+// === Module 15119: useMediaViewerPanGesture ===
 
-// Module 15061 (useMediaViewerPanGesture)
+// Module 15119 (useMediaViewerPanGesture)
 import _mod1705 from "module_1705" /* 1705 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5422 */;
-import spring_spring from "spring/spring" /* 5763 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8915 */;
-import useVideoControls from "useVideoControls" /* 8916 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
+import spring_spring from "spring/spring" /* 5876 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8562 */;
+import useVideoControls from "useVideoControls" /* 8563 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

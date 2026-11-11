@@ -1,31 +1,31 @@
-// === Module 11985: RPCHelpers ===
+// === Module 12779: RPCHelpers ===
 
-// Module 11985 (RPCHelpers)
+// Module 12779 (RPCHelpers)
 import applyDefault from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import UrlDefault from "Url" /* 1381 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 5798 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6175 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7715 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8990 */;
-import transformUserDefault from "transformUser" /* 9418 */;
-import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 9419 */;
-import RPCErrorDefault from "RPCError" /* 9420 */;
-import transformMessage from "transformMessage" /* 11986 */;
-import LeakyBucketDefault from "LeakyBucket" /* 11988 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 5911 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
+import transformUserDefault from "transformUser" /* 7237 */;
+import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 7238 */;
+import RPCErrorDefault from "RPCError" /* 7239 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 7243 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
+import transformMessage from "transformMessage" /* 12780 */;
+import LeakyBucketDefault from "LeakyBucket" /* 12782 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import ApplicationRecord from "ApplicationRecord" /* 2140 */;
-import GuildStore from "GuildStore" /* 5013 */;
+import GuildStore from "GuildStore" /* 5114 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import MessageStore from "MessageStore" /* 6196 */;
-import PresenceStore from "PresenceStore" /* 5892 */;
+import MessageStore from "MessageStore" /* 6309 */;
+import PresenceStore from "PresenceStore" /* 6005 */;
 import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5805 */;
+import VoiceStateStore from "VoiceStateStore" /* 5918 */;
 import URLUtils from "URLUtils" /* 1378 */;
 import "RegexUtils";
-import RegexUtils from "RegexUtils" /* 5782 */;
+import RegexUtils from "RegexUtils" /* 5895 */;
 
 require = fn;
 function validateOrigin(arg0) {
@@ -244,8 +244,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4995).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6585);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(5096).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6698);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1072);
 ({ ActivityActionTypes: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, MAX_MESSAGES_PER_CHANNEL: closure_18, RPCCloseCodes: closure_19, RPCErrors: closure_20, RTCConnectionStates: closure_21 } = Constants);
@@ -310,7 +310,7 @@ export { validateOrigin };
 export { transformBigFlag };
 export function transformRole(id) {
   const obj = { id: id.id, name: id.name, color: id.color, colors: null, hoist: null, position: null, permissions: null, managed: null, mentionable: null, icon: null, unicode_emoji: null, tags: null, flags: null };
-  let colors = id.colors;
+  colors = id.colors;
   if (colors == null) {
     const obj2 = { primary_color: id.color, secondary_color: null, tertiary_color: null };
     colors = obj2;
@@ -417,10 +417,10 @@ export function transformChannel(channel, result, arg2) {
           const error = new Error("Invalid user id: " + userId);
           throw error;
         } else {
-          const obj = { nick: closure_1(6175).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
+          const obj = { nick: closure_1(6288).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9418)(user);
+          obj.user = closure_1(7237)(user);
           return obj;
         }
       });

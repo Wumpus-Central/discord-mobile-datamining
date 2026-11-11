@@ -1,19 +1,19 @@
-// === Module 5072: GuildChannelStore ===
+// === Module 5173: GuildChannelStore ===
 
-// Module 5072 (GuildChannelStore)
+// Module 5173 (GuildChannelStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5079 */;
-import useChannelName from "useChannelName" /* 5778 */;
-import GatedChannelStore from "GatedChannelStore" /* 5046 */;
-import FavoriteStore from "FavoriteStore" /* 4994 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5180 */;
+import useChannelName from "useChannelName" /* 5891 */;
+import GatedChannelStore from "GatedChannelStore" /* 5147 */;
+import FavoriteStore from "FavoriteStore" /* 5095 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import GuildMemberStore from "GuildMemberStore" /* 5054 */;
-import GuildStore from "GuildStore" /* 5013 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
-import RelationshipStore from "RelationshipStore" /* 5084 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import GuildMemberStore from "GuildMemberStore" /* 5155 */;
+import GuildStore from "GuildStore" /* 5114 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
+import RelationshipStore from "RelationshipStore" /* 5185 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -72,7 +72,7 @@ function rebuildGuildChannels(guildId) {
       }
     }
   }
-  obj2 = obj(5016);
+  obj2 = obj(5117);
   const item = id(12).forEach(tmp7, (channel) => {
     channel = channel.channel;
     obj.count = obj.count + 1;
@@ -189,8 +189,8 @@ function hasElevatedPermissions(user, context) {
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_1_17);
 }
-let closure_6 = fn(5073).createFavoritesGuildChannelRecord;
-const ChannelRecord = fn(4995);
+let closure_6 = fn(5174).createFavoritesGuildChannelRecord;
+const ChannelRecord = fn(5096);
 ({ isGuildSelectableChannelType: metroImportDefault, GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8, isGuildVocalChannelType: closure_9, createChannelRecord } = ChannelRecord);
 const Constants = fn(1072);
 ({ FAVORITES: closure_17, ChannelTypes } = Constants);

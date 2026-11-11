@@ -1,10 +1,10 @@
-// === Module 13622: handleForwardBreadcrumb ===
+// === Module 14138: handleForwardBreadcrumb ===
 
-// Module 13622 (handleForwardBreadcrumb)
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7596 */;
+// Module 14138 (handleForwardBreadcrumb)
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7167 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import GuildStore from "GuildStore" /* 5013 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import GuildStore from "GuildStore" /* 5114 */;
 
 require = fn;
 let closure_9 = async function _handleForwardBreadcrumb(arg0) {

@@ -1,6 +1,6 @@
-// === Module 9026: BlockedDomainStore ===
+// === Module 7588: BlockedDomainStore ===
 
-// Module 9026 (BlockedDomainStore)
+// Module 7588 (BlockedDomainStore)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import js_shim_shim from "js_shim/shim" /* 1363 */;

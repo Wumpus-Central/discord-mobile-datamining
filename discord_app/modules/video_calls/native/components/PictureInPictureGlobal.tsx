@@ -1,22 +1,22 @@
-// === Module 19403: PictureInPictureGlobal ===
+// === Module 19594: PictureInPictureGlobal ===
 
-// Module 19403 (PictureInPictureGlobal)
+// Module 19594 (PictureInPictureGlobal)
 import nativeDefault from "native" /* 575 */;
 import native2 from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5372 */;
-import NavigatorConstants from "NavigatorConstants" /* 5716 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6909 */;
-import isChannelFocused from "isChannelFocused" /* 6931 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 8012 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11870 */;
-import PictureInPictureDefault from "PictureInPicture" /* 11879 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 19404 */;
+import timing_timing from "timing/timing" /* 5485 */;
+import NavigatorConstants from "NavigatorConstants" /* 5829 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6837 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6962 */;
+import isChannelFocused from "isChannelFocused" /* 6985 */;
+import transitionToActivityDefault from "transitionToActivity" /* 12622 */;
+import PictureInPictureDefault from "PictureInPicture" /* 12631 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 19595 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4990 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6901 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
 
@@ -25,12 +25,12 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, TouchableOpacity: metroImportDefault } = get_ActivityIndicator);
-let closure_10 = fn(10023).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(11805).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1072).PictureInPicturePositions;
-const ParticipantTypes = fn(5807).ParticipantTypes;
+const ParticipantTypes = fn(5920).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: null, pip: null, background: null };
 const native = fn(1187);
 obj.elevationShadow = native.generateBoxShadowStyle(fn(1187).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
@@ -210,8 +210,8 @@ let closure_19 = noop.memo(function PIPContentContainer(channel) {
   [tmp2, tmp3] = noop.useState(() => constants.TOP_RIGHT);
   const obj = { channel, preferredPosition: tmp2, onMove: tmp3, children: null };
   const tmp = _slicedToArray(noop.useState(() => constants.TOP_RIGHT), 2);
-  obj.children = closure_1_15(closure_18, { channel });
-  return closure_1_15(PictureInPictureDefault, obj);
+  obj.children = colors(closure_18, { channel });
+  return colors(PictureInPictureDefault, obj);
 });
 let closure_20 = { code: "(function PictureInPictureGlobalTsx1(){let[withTiming,drawerState,STANDARD_EASING]=this.__closure;return withTiming(drawerState,{easing:STANDARD_EASING,duration:250});})" };
 let closure_21 = { code: "(function PictureInPictureGlobalTsx2(){let[interpolate,animatedDrawerState,NAV_BAR_HEIGHT,PADDING,chatInputContainerHeight,PIP_AVOIDANCE_TAB_BAR_HEIGHT]=this.__closure;return{marginTop:interpolate(animatedDrawerState.get(),[0,1],[NAV_BAR_HEIGHT+PADDING,PADDING]),marginBottom:interpolate(animatedDrawerState.get(),[0,1],[chatInputContainerHeight+PADDING,PIP_AVOIDANCE_TAB_BAR_HEIGHT+PADDING])};})" };
@@ -274,9 +274,9 @@ export default function PictureInPictureGlobal(channel) {
   const obj2 = { style: null, pointerEvents: "box-none", children: null };
   const items4 = [absoluteFill.absoluteFill, { paddingLeft: rect.left, paddingRight: rect.right }];
   obj2.style = items4;
-  const obj3 = { style: null, pointerEvents: "box-none", children: closure_1_15(closure_19, { channel: channel.channel }) };
+  const obj3 = { style: null, pointerEvents: "box-none", children: colors(closure_19, { channel: channel.channel }) };
   const items5 = [tmp.container, animatedStyle];
   obj3.style = items5;
-  obj2.children = closure_1_15(_modDef1652.View, obj3);
-  return closure_1_15(hasOwnProperty, obj2);
+  obj2.children = colors(_modDef1652.View, obj3);
+  return colors(hasOwnProperty, obj2);
 };

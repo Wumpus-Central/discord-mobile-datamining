@@ -1,12 +1,12 @@
-// === Module 11520: GiftCodeStore ===
+// === Module 12289: GiftCodeStore ===
 
-// Module 11520 (GiftCodeStore)
+// Module 12289 (GiftCodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6579 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11521 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10691 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6692 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 12290 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 11604 */;
 
 require = fn;
 function updateGiftCode(giftCode) {
@@ -18,9 +18,9 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4986).Timeout();
+      const timeout = new code(5087).Timeout();
       dependencyMap[code] = timeout;
-      value2 = map.get(code);
+      const value2 = map.get(code);
       if (null != value2) {
         if (null != value2.expiresAt) {
           const expiresAt = value2.expiresAt;
@@ -88,7 +88,7 @@ function updateGiftCode(giftCode) {
                                             closure_2_18.emitChange();
                                           } else if (null != closure_2_7[closure_1_0]) {
                                             let _Math = Math;
-                                            obj2.start(Math.min(closure_2_5, diff), /* F101064 */ function() { ... });
+                                            obj2.start(Math.min(closure_2_5, diff), /* F103689 */ function() { ... });
                                           }
                                           let obj3 = closure_2_1(closure_2_2[3])();
                                         }

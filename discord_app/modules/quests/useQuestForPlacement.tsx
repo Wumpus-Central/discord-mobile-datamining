@@ -1,15 +1,15 @@
-// === Module 17443: useQuestForPlacement ===
+// === Module 17608: useQuestForPlacement ===
 
-// Module 17443 (useQuestForPlacement)
+// Module 17608 (useQuestForPlacement)
 import DurationsDefault from "Durations" /* 1089 */;
-import AdCreativeType from "AdCreativeType" /* 6846 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6930 */;
-import QuestsEligibility from "QuestsEligibility" /* 9770 */;
-import QuestActionCreators from "QuestActionCreators" /* 9779 */;
-import ReturnFullQuestStatusInDecisionExperiment from "ReturnFullQuestStatusInDecisionExperiment" /* 17444 */;
+import AdCreativeType from "AdCreativeType" /* 5282 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6984 */;
+import QuestsEligibility from "QuestsEligibility" /* 10065 */;
+import QuestActionCreators from "QuestActionCreators" /* 10066 */;
+import ReturnFullQuestStatusInDecisionExperiment from "ReturnFullQuestStatusInDecisionExperiment" /* 17609 */;
 import noop from "module_19" /* 19 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7923 */;
-import QuestStore from "QuestStore" /* 7926 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8739 */;
+import QuestStore from "QuestStore" /* 8742 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

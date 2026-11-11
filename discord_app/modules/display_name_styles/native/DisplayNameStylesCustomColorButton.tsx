@@ -1,12 +1,12 @@
-// === Module 17689: DisplayNameStylesCustomColorButton ===
+// === Module 17855: DisplayNameStylesCustomColorButton ===
 
-// Module 17689 (DisplayNameStylesCustomColorButton)
+// Module 17855 (DisplayNameStylesCustomColorButton)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
-import GummyStripesDefault from "GummyStripes" /* 16819 */;
-import useCustomSwatchA11yDefault from "useCustomSwatchA11y" /* 17690 */;
-import EyeDropperIcon from "EyeDropperIcon" /* 17691 */;
+import GummyStripesDefault from "GummyStripes" /* 16980 */;
+import useCustomSwatchA11yDefault from "useCustomSwatchA11y" /* 17856 */;
+import EyeDropperIcon from "EyeDropperIcon" /* 17857 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_8 = createStyles.createStyles((color) => {
   const size = { width: nativeDefault.space.PX_40, height: nativeDefault.space.PX_40, borderRadius: nativeDefault.radii.sm, overflow: "hidden", flexDirection: "row", backgroundColor: null };
   if (null != color) {

@@ -1,9 +1,9 @@
-// === Module 10020: ChatManager ===
+// === Module 12363: ChatManager ===
 
-// Module 10020 (ChatManager)
+// Module 12363 (ChatManager)
 import _modDef1342 from "module_1342" /* 1342 */;
-import getEmbeddedActivityKeyDefault from "getEmbeddedActivityKey" /* 10021 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8453 */;
+import getEmbeddedActivityKeyDefault from "getEmbeddedActivityKey" /* 12364 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 9094 */;
 import size from "module_2" /* 2 */;
 
 ({ Changeset: c2, RowType: c3 } = RowGeneratorConstants);
@@ -85,7 +85,7 @@ prototype["setup"] = function setup(messages) {
   this.rows = [];
   this.rowIndex = 0;
   const _messages = this._messages;
-  let length;
+  length = undefined;
   if (_messages != null) {
     length = _messages.length;
   }
@@ -95,7 +95,7 @@ prototype["determineChangeTypeForUploadProgress"] = function determineChangeType
   let self = this;
   if (null != this.uploadProgressIds[compressionProgress.id]) {
     items = tmp.items;
-    let length;
+    length = undefined;
     if (items != null) {
       length = items.length;
     }

@@ -1,8 +1,8 @@
-// === Module 8077: AppStoreAgeSignalSupport ===
+// === Module 8174: AppStoreAgeSignalSupport ===
 
-// Module 8077 (AppStoreAgeSignalSupport)
+// Module 8174 (AppStoreAgeSignalSupport)
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
-import DeviceUtils from "DeviceUtils" /* 5099 */;
+import DeviceUtils from "DeviceUtils" /* 5200 */;
 import size from "module_2" /* 2 */;
 
 let c2 = 26;

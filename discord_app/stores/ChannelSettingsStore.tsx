@@ -1,20 +1,20 @@
-// === Module 8273: ChannelSettingsStore ===
+// === Module 10852: ChannelSettingsStore ===
 
-// Module 8273 (ChannelSettingsStore)
+// Module 10852 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ThreadConstants from "ThreadConstants" /* 1112 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import ChannelRecord from "ChannelRecord" /* 4995 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 5000 */;
-import ForumLayout from "ForumLayout" /* 5001 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5005 */;
-import ReactionUtils from "ReactionUtils" /* 5086 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5088 */;
-import InviteRecord from "InviteRecord" /* 8274 */;
+import ChannelRecord from "ChannelRecord" /* 5096 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 5101 */;
+import ForumLayout from "ForumLayout" /* 5102 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5106 */;
+import ReactionUtils from "ReactionUtils" /* 5187 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5189 */;
+import InviteRecord from "InviteRecord" /* 7598 */;
 import UserRecord from "UserRecord" /* 1404 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
 import Constants from "Constants" /* 1072 */;
 import apply from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
@@ -275,7 +275,7 @@ invites = {
       if (tmp15) {
         c21 = true;
         const HTTP = HTTPUtils.HTTP;
-        const obj2 = { url: closure_1_15.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
+        const obj2 = { url: colors.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
         value = HTTP.get(obj2);
         value.then((body) => {
           c21 = false;
@@ -423,7 +423,7 @@ invites = {
     if (tmp) {
       c21 = true;
       const HTTP = HTTPUtils.HTTP;
-      const obj = { url: closure_1_15.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
+      const obj = { url: colors.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
       value = HTTP.get(obj);
       value.then((body) => {
         c21 = false;

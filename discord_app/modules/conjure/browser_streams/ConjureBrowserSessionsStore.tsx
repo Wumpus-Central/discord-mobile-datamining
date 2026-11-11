@@ -1,6 +1,6 @@
-// === Module 10988: ConjureBrowserSessionsStore ===
+// === Module 7305: ConjureBrowserSessionsStore ===
 
-// Module 10988 (ConjureBrowserSessionsStore)
+// Module 7305 (ConjureBrowserSessionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 
@@ -52,7 +52,7 @@ const conjureBrowserSessionsStore = new ConjureBrowserSessionsStore(DispatcherDe
       const sorted = items.sort((started_at, started_at2) => started_at.started_at - started_at2.started_at);
       const _Set = Set;
       set = new Set(sorted.map((id) => id.id));
-      value2 = map1.get(projectId);
+      let value2 = map1.get(projectId);
       if (value2 == null) {
         value2 = closure_1;
       }

@@ -1,17 +1,17 @@
-// === Module 12849: ConjureMessageRow ===
+// === Module 13521: ConjureMessageRow ===
 
-// Module 12849 (ConjureMessageRow)
+// Module 13521 (ConjureMessageRow)
 import nativeDefault from "native" /* 575 */;
-import conjureChatTurns from "conjureChatTurns" /* 10980 */;
-import ConjureVersionRestoreConfirm from "ConjureVersionRestoreConfirm" /* 12370 */;
-import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 12378 */;
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 12396 */;
-import conjureQueuedMessage from "conjureQueuedMessage" /* 12797 */;
-import ConjureTimelineTree from "ConjureTimelineTree" /* 12807 */;
-import ConjureTodoAgents from "ConjureTodoAgents" /* 12820 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12855 */;
-import ConjureChatRestore from "ConjureChatRestore" /* 12860 */;
-import ConjureActivityBox from "ConjureActivityBox" /* 12885 */;
+import conjureChatTurns from "conjureChatTurns" /* 7258 */;
+import ConjureVersionRestoreConfirm from "ConjureVersionRestoreConfirm" /* 13179 */;
+import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 13187 */;
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 13202 */;
+import conjureQueuedMessage from "conjureQueuedMessage" /* 13472 */;
+import ConjureTimelineTree from "ConjureTimelineTree" /* 13477 */;
+import ConjureTodoAgents from "ConjureTodoAgents" /* 13492 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 13527 */;
+import ConjureChatRestore from "ConjureChatRestore" /* 13532 */;
+import ConjureActivityBox from "ConjureActivityBox" /* 13557 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -22,26 +22,26 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5142);
-let obj = { row: { position: "relative", paddingLeft: fn(12841).MESSAGE_CONTENT_INSET, paddingRight: fn(12841).MESSAGE_EDGE_INSET, paddingVertical: fn(12850).ROW_PAD, gap: fn(12850).BLOCK_GAP }, rowGroupStart: null, boundaryRow: null, avatar: null, spoken: null, avatarSpoken: null, avatarSpokenReplying: null, header: null, activityBox: null };
-let obj3 = { position: "relative", paddingLeft: fn(12841).MESSAGE_CONTENT_INSET, paddingRight: fn(12841).MESSAGE_EDGE_INSET, paddingVertical: fn(12850).ROW_PAD, gap: fn(12850).BLOCK_GAP };
-obj.rowGroupStart = { marginTop: fn(12850).GROUP_GAP };
-let obj4 = { marginTop: fn(12850).GROUP_GAP };
-obj.boundaryRow = { paddingHorizontal: fn(12841).MESSAGE_EDGE_INSET, paddingVertical: fn(12850).ROW_PAD };
-const rect = { position: "absolute", left: fn(12841).MESSAGE_EDGE_INSET, top: fn(12850).ROW_PAD };
+const createStyles = fn(5243);
+let obj = { row: { position: "relative", paddingLeft: fn(13513).MESSAGE_CONTENT_INSET, paddingRight: fn(13513).MESSAGE_EDGE_INSET, paddingVertical: fn(13522).ROW_PAD, gap: fn(13522).BLOCK_GAP }, rowGroupStart: null, boundaryRow: null, avatar: null, spoken: null, avatarSpoken: null, avatarSpokenReplying: null, header: null, activityBox: null };
+let obj3 = { position: "relative", paddingLeft: fn(13513).MESSAGE_CONTENT_INSET, paddingRight: fn(13513).MESSAGE_EDGE_INSET, paddingVertical: fn(13522).ROW_PAD, gap: fn(13522).BLOCK_GAP };
+obj.rowGroupStart = { marginTop: fn(13522).GROUP_GAP };
+let obj4 = { marginTop: fn(13522).GROUP_GAP };
+obj.boundaryRow = { paddingHorizontal: fn(13513).MESSAGE_EDGE_INSET, paddingVertical: fn(13522).ROW_PAD };
+const rect = { position: "absolute", left: fn(13513).MESSAGE_EDGE_INSET, top: fn(13522).ROW_PAD };
 obj.avatar = rect;
-let obj5 = { paddingHorizontal: fn(12841).MESSAGE_EDGE_INSET, paddingVertical: fn(12850).ROW_PAD };
-obj.spoken = { position: "relative", gap: fn(12850).BLOCK_GAP };
-const rect1 = { left: fn(12841).MESSAGE_EDGE_INSET - fn(12841).MESSAGE_CONTENT_INSET, top: 0 };
+let obj5 = { paddingHorizontal: fn(13513).MESSAGE_EDGE_INSET, paddingVertical: fn(13522).ROW_PAD };
+obj.spoken = { position: "relative", gap: fn(13522).BLOCK_GAP };
+const rect1 = { left: fn(13513).MESSAGE_EDGE_INSET - fn(13513).MESSAGE_CONTENT_INSET, top: 0 };
 obj.avatarSpoken = rect1;
-let obj6 = { position: "relative", gap: fn(12850).BLOCK_GAP };
-obj.avatarSpokenReplying = { top: fn(12851).REPLY_PREVIEW_HEIGHT + fn(12850).BLOCK_GAP };
-let obj7 = { top: fn(12851).REPLY_PREVIEW_HEIGHT + fn(12850).BLOCK_GAP };
+let obj6 = { position: "relative", gap: fn(13522).BLOCK_GAP };
+obj.avatarSpokenReplying = { top: fn(13523).REPLY_PREVIEW_HEIGHT + fn(13522).BLOCK_GAP };
+let obj7 = { top: fn(13523).REPLY_PREVIEW_HEIGHT + fn(13522).BLOCK_GAP };
 obj.header = { marginBottom: -nativeDefault.space.PX_4 };
 let obj8 = { marginBottom: -nativeDefault.space.PX_4 };
-obj.activityBox = { marginLeft: -fn(12850).RAIL_INDENT };
+obj.activityBox = { marginLeft: -fn(13522).RAIL_INDENT };
 let closure_10 = createStyles.createStyles(obj);
-let obj9 = { marginLeft: -fn(12850).RAIL_INDENT };
+let obj9 = { marginLeft: -fn(13522).RAIL_INDENT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMessageRow.tsx");
 
@@ -188,28 +188,28 @@ export default noop.memo(function ConjureMessageRow(projectId) {
       if ("user" === message.role) {
         if ("" === trimmed) {
           if (null == memo4) {
-            let tmp90Result2 = null;
+            let tmp88Result2 = null;
           }
-          return tmp90Result2;
+          return tmp88Result2;
         }
         let obj3 = { style: items8, onLongPress: tmp22, accessible: false, children: null };
-        let tmp92 = null;
+        let tmp90 = null;
         if (groupStart) {
           let obj4 = { style: tmp.avatar, children: null };
           const obj5 = { userId: message.user_id };
           obj4.children = replied(tmp11(tmp12[22]).ConjureUserAvatar, obj5);
-          tmp92 = replied(planSuperseded, obj4);
+          tmp90 = replied(planSuperseded, obj4);
         }
-        const items12 = [tmp92, , , , ];
-        let tmp95 = null;
+        const items12 = [tmp90, , , , ];
+        let tmp93 = null;
         if (groupStart) {
           const obj6 = { style: tmp.header, children: null };
-          ({ user_id: obj56.userId, created_at: obj56.at } = message);
+          ({ user_id: obj55.userId, created_at: obj55.at } = message);
           obj6.children = replied(tmp11(tmp12[22]).ConjureUserHeader, { userId: null, at: null });
-          tmp95 = replied(planSuperseded, obj6);
+          tmp93 = replied(planSuperseded, obj6);
           const obj7 = { userId: null, at: null };
         }
-        items12[1] = tmp95;
+        items12[1] = tmp93;
         if (tmp21) {
           let combined;
           if (!groupStart) {
@@ -218,12 +218,12 @@ export default noop.memo(function ConjureMessageRow(projectId) {
             combined = "" + intl3.string(tmp11(tmp12[24]).t.KD6OJJ) + ": " + conjureMentionNames;
           }
           const obj8 = { variant: "body-md/normal", color: "text-default", accessibilityLabel: combined, children: null };
-          let tmp101 = null;
+          let tmp99 = null;
           if (null != memo4) {
             const obj9 = { label: memo4.label, variant: "body-md/medium" };
-            tmp101 = replied(tmp18(tmp12[25]), obj9);
+            tmp99 = replied(tmp18(tmp12[25]), obj9);
           }
-          const items13 = [tmp101, , ];
+          const items13 = [tmp99, , ];
           let str5 = null;
           if (null != memo4) {
             str5 = null;
@@ -235,34 +235,34 @@ export default noop.memo(function ConjureMessageRow(projectId) {
           const obj10 = { text: trimmed, variant: "body-md/normal" };
           items13[2] = replied(tmp18(tmp12[26]), obj10);
           obj8.children = items13;
-          let tmp90Result = tmp90(tmp11(tmp12[23]).Text, obj8);
+          let tmp88Result = tmp88(tmp11(tmp12[23]).Text, obj8);
         } else {
-          tmp90Result = null;
+          tmp88Result = null;
         }
-        items12[2] = tmp90Result;
-        let tmp104 = null;
+        items12[2] = tmp88Result;
+        let tmp102 = null;
         if (null != tmp14) {
           const obj11 = { projectId, attachments: tmp14 };
-          tmp104 = replied(tmp18(tmp12[27]), obj11);
+          tmp102 = replied(tmp18(tmp12[27]), obj11);
         }
-        items12[3] = tmp104;
-        let tmp106 = null;
+        items12[3] = tmp102;
+        let tmp104 = null;
         if (null != message.agentReaction) {
           const obj12 = { reaction: message.agentReaction };
-          tmp106 = replied(tmp18(tmp12[28]), obj12);
+          tmp104 = replied(tmp18(tmp12[28]), obj12);
         }
-        items12[4] = tmp106;
+        items12[4] = tmp104;
         obj3.children = items12;
-        tmp90Result2 = tmp90(onToggleChecklist, obj3);
+        tmp88Result2 = tmp88(onToggleChecklist, obj3);
       } else if ("context_boundary" === message.kind) {
-        let tmp86 = null;
+        let tmp84 = null;
         if (null != message.contextSwitch) {
           const obj13 = { style: tmp.boundaryRow, children: null };
           const obj14 = { projectId, contextSwitch: message.contextSwitch };
           obj13.children = replied(tmp18(tmp12[29]), obj14);
-          tmp86 = replied(planSuperseded, obj13);
+          tmp84 = replied(planSuperseded, obj13);
         }
-        return tmp86;
+        return tmp84;
       } else {
         if ("project_event" === message.kind) {
           if (null != message.projectEvent) {
@@ -625,90 +625,9 @@ export default noop.memo(function ConjureMessageRow(projectId) {
             tmp52Result20 = tmp52(tmp18(tmp12[42]), obj40);
           }
           items17[5] = tmp52Result20;
-          if (null == clarification) {
-            items17[6] = null;
-            let tmp52Result21 = null;
-            if (null != tmp37) {
-              const obj41 = {
-                projectId,
-                request: tmp37,
-                canSend,
-                onDismiss() {
-                              return closure_1_10(appBuildRequest.id);
-                            },
-                onInputFocusChange: onCardInputFocusChange
-              };
-              tmp52Result21 = tmp52(tmp18(tmp12[45]), obj41);
-            }
-            items17[7] = tmp52Result21;
-            let tmp52Result22 = null;
-            if (null != tmp28) {
-              const obj42 = { projectId, cardId: message.render_id, request: tmp28, status: secretRequestStatus, awaiting: tmp30 };
-              tmp52Result22 = tmp52(tmp18(tmp12[46]), obj42);
-            }
-            items17[8] = tmp52Result22;
-            let tmp52Result23 = null;
-            if (null != tmp32) {
-              const obj43 = { projectId, request: tmp32, askId: message.id };
-              tmp52Result23 = tmp52(tmp18(tmp12[47]), obj43);
-            }
-            items17[9] = tmp52Result23;
-            let tmp52Result24 = null;
-            if (null != tmp26) {
-              const obj44 = { projectId, turnId: null, cta: null };
-              const tmp18Result9 = tmp18(tmp12[48]);
-              obj44.turnId = tmp11(tmp12[10]).turnIdOfSegment(message);
-              obj44.cta = tmp26;
-              tmp52Result24 = tmp52(tmp18Result9, obj44);
-              const tmp11Result20 = tmp11(tmp12[10]);
-            }
-            items17[10] = tmp52Result24;
-            let tmp52Result25 = null;
-            if (null != ideas) {
-              const obj45 = { ideas, onPick: onPickIdea };
-              tmp52Result25 = tmp52(tmp18(tmp12[49]), obj45);
-            }
-            items17[11] = tmp52Result25;
-            let tmp52Result26 = null;
-            if (null != restoreProposal) {
-              const obj46 = { proposal: restoreProposal, onRestore: null };
-              let fn;
-              if (isNewest) {
-                if (null != onRestoreVersion) {
-                  fn = () => ConjureVersionRestoreConfirm.confirmRestoreVersion({
-                    onConfirm() {
-                      return onRestoreVersion(projectId(groupStart[16]).proposalRestoreEntry(restoreProposal));
-                    }
-                  });
-                }
-              }
-              obj46.onRestore = fn;
-              tmp52Result26 = tmp52(tmp18(tmp12[50]), obj46);
-              const tmp18Result10 = tmp18(tmp12[50]);
-            }
-            items17[12] = tmp52Result26;
-            let tmp52Result27 = null;
-            if (null != prop) {
-              const obj47 = { projectId, proposal: prop, current: isNewest };
-              tmp52Result27 = tmp52(tmp18(tmp12[51]), obj47);
-            }
-            items17[13] = tmp52Result27;
-            obj34.children = items17;
-            tmp46Result2 = tmp46(tmp53, obj34);
-          } else if (null != clarification.install_scope_switch) {
-            const obj48 = {
-              projectId,
-              clarification,
-              offer: clarification.install_scope_switch,
-              onKept() {
-                          return closure_1_9(clarification.id);
-                        },
-              onInputFocusChange: onCardInputFocusChange
-            };
-            clarification = clarification.id;
-            let tmp52Result28 = tmp52(tmp18(tmp12[43]), obj48, clarification);
-          } else {
-            const obj49 = {
+          let tmp52Result21 = null;
+          if (null != clarification) {
+            const obj41 = {
               projectId,
               clarification,
               onSubmit: onAnswerClarification,
@@ -717,8 +636,77 @@ export default noop.memo(function ConjureMessageRow(projectId) {
                         },
               onInputFocusChange: onCardInputFocusChange
             };
-            tmp52Result28 = tmp52(tmp18(tmp12[44]), obj49);
+            tmp52Result21 = tmp52(tmp18(tmp12[43]), obj41);
           }
+          items17[6] = tmp52Result21;
+          let tmp52Result22 = null;
+          if (null != tmp37) {
+            const obj42 = {
+              projectId,
+              request: tmp37,
+              canSend,
+              onDismiss() {
+                          return closure_1_10(appBuildRequest.id);
+                        },
+              onInputFocusChange: onCardInputFocusChange
+            };
+            tmp52Result22 = tmp52(tmp18(tmp12[44]), obj42);
+          }
+          items17[7] = tmp52Result22;
+          let tmp52Result23 = null;
+          if (null != tmp28) {
+            const obj43 = { projectId, cardId: message.render_id, request: tmp28, status: secretRequestStatus, awaiting: tmp30 };
+            tmp52Result23 = tmp52(tmp18(tmp12[45]), obj43);
+          }
+          items17[8] = tmp52Result23;
+          let tmp52Result24 = null;
+          if (null != tmp32) {
+            const obj44 = { projectId, request: tmp32, askId: message.id };
+            tmp52Result24 = tmp52(tmp18(tmp12[46]), obj44);
+          }
+          items17[9] = tmp52Result24;
+          let tmp52Result25 = null;
+          if (null != tmp26) {
+            const obj45 = { projectId, turnId: null, cta: null };
+            const tmp18Result9 = tmp18(tmp12[47]);
+            obj45.turnId = tmp11(tmp12[10]).turnIdOfSegment(message);
+            obj45.cta = tmp26;
+            tmp52Result25 = tmp52(tmp18Result9, obj45);
+            const tmp11Result20 = tmp11(tmp12[10]);
+          }
+          items17[10] = tmp52Result25;
+          let tmp52Result26 = null;
+          if (null != ideas) {
+            const obj46 = { ideas, onPick: onPickIdea };
+            tmp52Result26 = tmp52(tmp18(tmp12[48]), obj46);
+          }
+          items17[11] = tmp52Result26;
+          let tmp52Result27 = null;
+          if (null != restoreProposal) {
+            const obj47 = { proposal: restoreProposal, onRestore: null };
+            let fn;
+            if (isNewest) {
+              if (null != onRestoreVersion) {
+                fn = () => ConjureVersionRestoreConfirm.confirmRestoreVersion({
+                  onConfirm() {
+                    return onRestoreVersion(projectId(groupStart[16]).proposalRestoreEntry(restoreProposal));
+                  }
+                });
+              }
+            }
+            obj47.onRestore = fn;
+            tmp52Result27 = tmp52(tmp18(tmp12[49]), obj47);
+            const tmp18Result10 = tmp18(tmp12[49]);
+          }
+          items17[12] = tmp52Result27;
+          let tmp52Result28 = null;
+          if (null != prop) {
+            const obj48 = { projectId, proposal: prop, current: isNewest };
+            tmp52Result28 = tmp52(tmp18(tmp12[50]), obj48);
+          }
+          items17[13] = tmp52Result28;
+          obj34.children = items17;
+          tmp46Result2 = tmp46(tmp53, obj34);
           const tmp11Result17 = tmp11(tmp12[9]);
         }
       }

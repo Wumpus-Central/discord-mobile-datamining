@@ -1,6 +1,6 @@
-// === Module 14803: useEmojisForReactionRow ===
+// === Module 12579: useEmojisForReactionRow ===
 
-// Module 14803 (useEmojisForReactionRow)
+// Module 12579 (useEmojisForReactionRow)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,6 @@ export function useEmojisForReactionRow(channel, emojiLineHeight, arg2) {
   rounded = Math.floor(Math.min(frequentlyUsedReactionEmojis(rounded[3])().width, emojiLineHeight) / arg2);
   items = [frequentlyUsedReactionEmojis, channel, rounded];
   const memo = noop.useMemo(() => {
-    let length;
     const found = frequentlyUsedReactionEmojis.filter((emoji) => !frequentlyUsedReactionEmojis(rounded[4]).isEmojiFilteredOrLocked({ emoji, channel, intention: constants.REACTION }));
     if (found.length < rounded) {
       do {

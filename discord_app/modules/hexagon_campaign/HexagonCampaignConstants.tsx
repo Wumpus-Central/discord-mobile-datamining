@@ -1,19 +1,20 @@
-// === Module 5167: HexagonCampaignConstants ===
+// === Module 5268: HexagonCampaignConstants ===
 
-// Module 5167 (HexagonCampaignConstants)
+// Module 5268 (HexagonCampaignConstants)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;
 import DisplayNameFont from "DisplayNameFont" /* 1395 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1396 */;
 import user from "user" /* 1398 */;
-import HexagonCampaignDates from "HexagonCampaignDates" /* 5168 */;
+import AppIconTypes from "AppIconTypes" /* 5269 */;
+import HexagonCampaignDates from "HexagonCampaignDates" /* 5270 */;
 import size from "module_2" /* 2 */;
 
 const PremiumTypes = PremiumConstants.PremiumTypes;
 const combined = "/quests/special-events/" + "1549285425984831508" + "/enroll";
 const HEXAGON = DisplayNameFont.DisplayNameFont.HEXAGON;
-const obj2 = { DISPLAY_NAME_STYLE: "display_name_style", CLIENT_THEME: "client_theme", APP_ICON: "app_icon" };
 const frozen = Object.freeze({ fontId: HEXAGON, effectId: DisplayNameEffect.DisplayNameEffect.SOLID, colors: [] });
+const obj2 = { DISPLAY_NAME_STYLE: "display_name_style", CLIENT_THEME: "client_theme", APP_ICON: "app_icon" };
 const obj3 = {};
 const frozen1 = Object.freeze({ [obj2.CLIENT_THEME]: "client_theme", [obj2.DISPLAY_NAME_STYLE]: "display_name_font", [obj2.APP_ICON]: "app_icon" });
 obj3[obj2.DISPLAY_NAME_STYLE] = user.Perk.DISPLAY_NAME_STYLES;
@@ -34,7 +35,11 @@ export const HEXAGON_CAMPAIGN_ENROLL_ENDPOINT = combined;
 export const HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT = HEXAGON;
 export const HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES = frozen;
 export const HEXAGON_CAMPAIGN_LEARN_MORE_URL = "https://dis.gd/vice-city-theme-available-in-discord";
-export const HEXAGON_CAMPAIGN_AD_CONTENT_ID = "1549285425984831508";
+export const HEXAGON_CAMPAIGN_QUEST_HOME_HERO_ID = "1560067021281042513";
+export const HEXAGON_CAMPAIGN_AD_CONTENT_ID = "1560067021281042513";
+export const HEXAGON_CAMPAIGN_QUEST_HOME_REDIRECT_UTM_CONTENT = "app_open";
+export const DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = { theme: "system" };
+export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = AppIconTypes.FreemiumAppIconIds.DEFAULT;
 export const HexagonCampaignPerk = obj2;
 export const HexagonCampaignPerkAvailability = { HIDDEN: "hidden", LOCKED: "locked", SELECTABLE: "selectable" };
 export const HEXAGON_CAMPAIGN_PERK_ANALYTICS_ACTION = frozen1;

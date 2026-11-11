@@ -1,10 +1,10 @@
-// === Module 9008: ICYMIExperiment ===
+// === Module 10153: ICYMIExperiment ===
 
-// Module 9008 (ICYMIExperiment)
-import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 9006 */;
-import ICYMILabFeature from "ICYMILabFeature" /* 9007 */;
+// Module 10153 (ICYMIExperiment)
+import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 10147 */;
+import ICYMILabFeature from "ICYMILabFeature" /* 10148 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import LabFeatureStore from "LabFeatureStore" /* 8639 */;
+import LabFeatureStore from "LabFeatureStore" /* 9280 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/ICYMIExperiment.tsx");
 
-export const ICYMI_LAB_FEATURE = fn(9007).ICYMI_LAB_FEATURE;
+export const ICYMI_LAB_FEATURE = fn(10148).ICYMI_LAB_FEATURE;
 export function useICYMIEnabled(TabsNavigator) {
   _require = TabsNavigator;
   items = [ApexExperimentStore, AuthenticationStore, LabFeatureStore, UserStore];

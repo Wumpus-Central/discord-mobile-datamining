@@ -1,9 +1,9 @@
-// === Module 8753: AppsSpoilerIcon ===
+// === Module 8034: AppsSpoilerIcon ===
 
-// Module 8753 (AppsSpoilerIcon)
+// Module 8034 (AppsSpoilerIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod8708 from "module_8708" /* 8708 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod7993 from "module_7993" /* 7993 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function AppsSpoilerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8708, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7993, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

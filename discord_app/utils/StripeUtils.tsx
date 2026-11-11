@@ -1,6 +1,6 @@
-// === Module 6606: StripeUtils ===
+// === Module 6718: StripeUtils ===
 
-// Module 6606 (StripeUtils)
+// Module 6718 (StripeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -13,7 +13,7 @@ function getStripe(payment_gateway_merchant_account_id) {
     let tmp = null;
     if (null != payment_gateway_merchant_account_id) {
       let tmp4;
-      const KEYS_BY_MERCHANT_ACCOUNT_ID = closure_0(6607).StripePaymentSettings.KEYS_BY_MERCHANT_ACCOUNT_ID;
+      const KEYS_BY_MERCHANT_ACCOUNT_ID = closure_0(6719).StripePaymentSettings.KEYS_BY_MERCHANT_ACCOUNT_ID;
       if (KEYS_BY_MERCHANT_ACCOUNT_ID != null) {
         tmp4 = KEYS_BY_MERCHANT_ACCOUNT_ID[payment_gateway_merchant_account_id];
       }
@@ -52,7 +52,7 @@ function getStripe(payment_gateway_merchant_account_id) {
   if (null != value) {
     return value;
   } else {
-    closure_1 = require("module_6608").loadStripe(tmp);
+    closure_1 = require("module_6720").loadStripe(tmp);
     const tmp6 = (async () => {
       if (c5 === 2) {
         c5 = 3;

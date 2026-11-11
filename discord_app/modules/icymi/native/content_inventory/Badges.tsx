@@ -1,20 +1,20 @@
-// === Module 15119: Badges ===
+// === Module 15609: Badges ===
 
-// Module 15119 (Badges)
+// Module 15609 (Badges)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import utils from "utils" /* 8795 */;
-import TrophyIcon from "TrophyIcon" /* 9465 */;
-import GameControllerIcon from "GameControllerIcon" /* 9823 */;
-import RetryIcon from "RetryIcon" /* 11224 */;
-import TimerIcon from "TimerIcon" /* 11809 */;
-import FireIcon from "FireIcon" /* 14987 */;
-import NewUserIcon from "NewUserIcon" /* 15120 */;
-import FlashIcon from "FlashIcon" /* 15122 */;
-import TrendingType from "TrendingType" /* 15124 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import GameControllerIcon from "GameControllerIcon" /* 7374 */;
+import utils from "utils" /* 8353 */;
+import TrophyIcon from "TrophyIcon" /* 10257 */;
+import FireIcon from "FireIcon" /* 10600 */;
+import RetryIcon from "RetryIcon" /* 11034 */;
+import TimerIcon from "TimerIcon" /* 12465 */;
+import NewUserIcon from "NewUserIcon" /* 15610 */;
+import FlashIcon from "FlashIcon" /* 15612 */;
+import TrendingType from "TrendingType" /* 15614 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 
@@ -62,7 +62,7 @@ const jsxProd = fn(21);
 let obj = { overlay: { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY }, "user-profile": null };
 let obj2 = { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;

@@ -1,10 +1,10 @@
-// === Module 9726: announcement_modal_variant_1_properties ===
+// === Module 9563: announcement_modal_variant_1_properties ===
 
-// Module 9726 (announcement_modal_variant_1_properties)
+// Module 9563 (announcement_modal_variant_1_properties)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9727 */;
-import help_article from "help_article" /* 9728 */;
-import cta_button from "cta_button" /* 9729 */;
+import localized_string from "localized_string" /* 9564 */;
+import help_article from "help_article" /* 9565 */;
+import cta_button from "cta_button" /* 9566 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -774,7 +774,6 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, 
   return obj;
 };
 prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, writeUnknownFields) {
-  let length;
   let length2;
   if ("" !== header.header) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).string(header.header);

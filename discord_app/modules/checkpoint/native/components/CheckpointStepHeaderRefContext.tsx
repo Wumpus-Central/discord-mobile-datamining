@@ -1,9 +1,8 @@
-// === Module 13717: CheckpointStepHeaderRefContext ===
+// === Module 14159: CheckpointStepHeaderRefContext ===
 
-// Module 13717 (CheckpointStepHeaderRefContext)
+// Module 14159 (CheckpointStepHeaderRefContext)
+import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-
-const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -15,17 +14,32 @@ export default context;
 export function CheckpointStepFocusProvider(arg0) {
   let isScreenReaderEnabled;
   ({ route, children } = arg0);
-  _require = noop.useRef(null);
-  value = noop.useCallback((current) => {
-    closure_0.current = current;
+  let tmp = isScreenReaderEnabled(noop.useState(null), 2);
+  const first = tmp[0];
+  dependencyMap = tmp[1];
+  value = noop.useCallback((arg0) => {
+    closure_0 = arg0;
+    closure_1(arg0);
+    return () => closure_1((arg0) => {
+      let tmp = null;
+      if (arg0 !== closure_1_0) {
+        tmp = arg0;
+      }
+      return tmp;
+    });
   }, []);
-  isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
-  items = [route, isScreenReaderEnabled];
+  isScreenReaderEnabled = first(5505).useIsScreenReaderEnabled();
+  items = [route, first, isScreenReaderEnabled];
   const effect = noop.useEffect(() => {
     if (isScreenReaderEnabled) {
-      const _setTimeout = setTimeout;
-      setTimeout(() => ref(isScreenReaderEnabled[3]).setAccessibilityFocus({ ref }), 100);
-      return () => clearTimeout(closure_0);
+      if (null != current) {
+        const _setTimeout = setTimeout;
+        current = setTimeout(() => {
+          const obj2 = { ref: { current } };
+          return first(closure_1[4]).setAccessibilityFocus(obj2);
+        }, 100);
+        return () => clearTimeout(closure_0);
+      }
     }
   }, items);
   return <context.Provider value={value}>{children}</context.Provider>;

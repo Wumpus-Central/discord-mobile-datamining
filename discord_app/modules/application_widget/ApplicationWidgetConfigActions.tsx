@@ -1,10 +1,10 @@
-// === Module 11085: ApplicationWidgetConfigActions ===
+// === Module 12181: ApplicationWidgetConfigActions ===
 
-// Module 11085 (ApplicationWidgetConfigActions)
+// Module 12181 (ApplicationWidgetConfigActions)
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11086 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 12180 */;
 import Backoff from "Backoff" /* 559 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
@@ -40,8 +40,8 @@ let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj4 = { value, done: true };
-      return obj4;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -54,8 +54,8 @@ let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp3;
           closure_0 = tmp7;
@@ -66,8 +66,8 @@ let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
           const obj6 = { url: constants.WIDGET_CONFIGS_FEATURED, rejectWithError: true };
           c4 = 2;
           c5 = 1;
-          const obj8 = { value: HTTP.get(obj6), done: false };
-          return obj8;
+          const obj7 = { value: HTTP.get(obj6), done: false };
+          return obj7;
         }
       } else if (1 === tmp7) {
         c3 = 0;
@@ -80,7 +80,7 @@ let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
             });
           });
         }
-        const obj2 = closure_129_1(closure_129_2[6]);
+        const obj4 = closure_129_1(closure_129_2[6]);
         closure_129_1(closure_129_2[8]).captureException(closure_128_1);
         throw closure_128_1;
       } else if (arg0 === 1) {
@@ -89,8 +89,8 @@ let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        const obj = { value, done: true };
-        return obj;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         closure_128_0 = value;
         const obj10 = { type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS", applications: closure_128_0.body.applications, configs: closure_128_0.body.configs };
@@ -100,11 +100,11 @@ let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
         c5 = 3;
         return { value: "HermesInternal", done: null };
       }
-    } catch (tmp27) {
-      closure_2 = tmp27;
+    } catch (tmp36) {
+      closure_2 = tmp36;
       if (tmp4 === c3) {
         c5 = tmp2;
-        throw tmp27;
+        throw tmp36;
       } else {
         c4 = tmp;
       }
@@ -271,13 +271,13 @@ let closure_15 = async function _fetchWidgetConfigsFromApi() {
     }
   })();
 };
-const FetchState = fn(11086).FetchState;
+const FetchState = fn(12180).FetchState;
 const Endpoints = fn(1072).Endpoints;
-const promiseDeduper = new fn(5260).PromiseDeduper();
+const promiseDeduper = new fn(5373).PromiseDeduper();
 const importDefaultResult2 = new Backoff(DurationsDefault.Millis.SECOND, DurationsDefault.Millis.MINUTE, true);
 const subscription = Dispatcher.subscribe("LOGOUT", () => importDefaultResult2.succeed());
-const promiseDeduper3 = new fn(5260).PromiseDeduper();
-const promiseDeduper4 = new fn(5260).PromiseDeduper();
+const promiseDeduper3 = new fn(5373).PromiseDeduper();
+const promiseDeduper4 = new fn(5373).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_widget/ApplicationWidgetConfigActions.tsx");
 

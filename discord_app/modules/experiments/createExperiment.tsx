@@ -1,17 +1,17 @@
-// === Module 5355: createExperiment ===
+// === Module 5468: createExperiment ===
 
-// Module 5355 (createExperiment)
-import ExperimentManager from "ExperimentManager" /* 5361 */;
+// Module 5468 (createExperiment)
+import ExperimentManager from "ExperimentManager" /* 5474 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ExperimentStore from "ExperimentStore" /* 5356 */;
+import ExperimentStore from "ExperimentStore" /* 5469 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty } = noop);
-const ExperimentConstants = fn(5357);
+const ExperimentConstants = fn(5470);
 ({ ExperimentBuckets: closure_8, ExposureTypes: closure_9 } = ExperimentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/createExperiment.tsx");
@@ -370,7 +370,7 @@ export default function createExperiment(config) {
       if (aaMode1) {
         let defaultConfig1 = user.defaultConfig;
       } else {
-        value2 = map.get(constants.NOT_ELIGIBLE);
+        const value2 = map.get(constants.NOT_ELIGIBLE);
         defaultConfig1 = undefined;
         if (value2 != null) {
           defaultConfig1 = value2.config;

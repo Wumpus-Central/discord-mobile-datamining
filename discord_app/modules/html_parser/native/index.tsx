@@ -1,7 +1,7 @@
-// === Module 9519: HTMLText ===
+// === Module 10311: HTMLText ===
 
-// Module 9519 (HTMLText)
-import html_parser_HTMLText from "html_parser/HTMLText" /* 9520 */;
+// Module 10311 (HTMLText)
+import html_parser_HTMLText from "html_parser/HTMLText" /* 10312 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/html_parser/native/index.tsx");

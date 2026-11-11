@@ -1,12 +1,12 @@
-// === Module 7171: InputFieldContainer ===
+// === Module 7573: InputFieldContainer ===
 
-// Module 7171 (InputFieldContainer)
+// Module 7573 (InputFieldContainer)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import useToken from "useToken" /* 5726 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import spring_spring from "spring/spring" /* 5763 */;
-import InputTypes from "InputTypes" /* 7172 */;
+import useToken from "useToken" /* 5839 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import spring_spring from "spring/spring" /* 5876 */;
+import InputTypes from "InputTypes" /* 7574 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -57,7 +57,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -104,7 +104,7 @@ let closure_9 = createStyles.createStyles(() => {
   if (flag2) {
     num3 = 1;
   }
-  const obj9 = { container: obj8, background: null, placeholderText: null, minHeight: null, radius: null, padding: null, text: null, leadingText: null, trailingText: null, leadingIcon: null, trailingIcon: null, splitBorder: null };
+  const obj9 = { container: obj8, background: null, placeholderText: null, minHeight: null, radius: null, padding: null, text: null, leadingText: null, trailingText: null, leadingIcon: null, trailingIcon: null, splitBorder: null, leadingDivider: null, leadingDividerText: null };
   obj8.flexGrow = num3;
   const obj7 = { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_8 + 2 };
   obj9.background = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.INPUT_FIELD_BORDER_WIDTH, borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT };
@@ -116,7 +116,7 @@ let closure_9 = createStyles.createStyles(() => {
   const obj12 = {};
   const merged = Object.assign(Text_Text.TextStyleSheet[str2]);
   obj12.lineHeight = undefined;
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   obj12.color = flag ? colors.TEXT_MUTED : colors.TEXT_DEFAULT;
   obj12.flexGrow = 1;
   obj9.text = obj12;
@@ -139,9 +139,12 @@ let closure_9 = createStyles.createStyles(() => {
   obj15.borderRightWidth = 1;
   obj15.borderRightColor = nativeDefault.colors.BORDER_STRONG;
   obj9.splitBorder = obj15;
+  const rect = { top: 0, bottom: 0, justifyContent: "center", paddingVertical: 0, paddingEnd: tmp6.paddingHorizontal, borderRightWidth: 1, borderRightColor: nativeDefault.colors.BORDER_STRONG };
+  obj9.leadingDivider = rect;
+  obj9.leadingDividerText = { flexGrow: 0 };
   return obj9;
 });
-createStyles = fn(5142);
+createStyles = fn(5243);
 let closure_10 = createStyles.createStyleProperties({ error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT, default: "transparent", focused: nativeDefault.colors.INPUT_BORDER_ACTIVE });
 let closure_11 = { code: "(function InputFieldContainerNativeTsx1(){let[status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG]=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};})" };
 const size = fn(2);

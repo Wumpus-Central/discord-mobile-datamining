@@ -1,9 +1,9 @@
-// === Module 10266: ChatGDMCustomizeActionSheet ===
+// === Module 10840: ChatGDMCustomizeActionSheet ===
 
-// Module 10266 (ChatGDMCustomizeActionSheet)
-import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10267 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10270 */;
-import ChatGDMCustomizeDefault from "ChatGDMCustomize" /* 10272 */;
+// Module 10840 (ChatGDMCustomizeActionSheet)
+import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10841 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10844 */;
+import ChatGDMCustomizeDefault from "ChatGDMCustomize" /* 10846 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

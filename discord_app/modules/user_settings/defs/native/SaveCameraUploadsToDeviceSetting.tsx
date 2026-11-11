@@ -1,19 +1,19 @@
-// === Module 17807: SaveCameraUploadsToDeviceSetting ===
+// === Module 17973: SaveCameraUploadsToDeviceSetting ===
 
-// Module 17807 (SaveCameraUploadsToDeviceSetting)
+// Module 17973 (SaveCameraUploadsToDeviceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6066 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 6179 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
 require = fn;
-const SettingBuilders = fn(11694);
+const SettingBuilders = fn(12317);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["99tBAC"]);
   },
-  parent: fn(8507).MobileUserSettings.CHAT,
+  parent: fn(9136).MobileUserSettings.CHAT,
   useValue: function useSaveCameraUploadsToDeviceValue() {
     items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => UnsyncedUserSettingsStore.saveCameraUploadsToDevice);

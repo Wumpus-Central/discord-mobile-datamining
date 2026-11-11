@@ -1,6 +1,6 @@
-// === Module 8309: AttachmentQualityMetricsExperiment ===
+// === Module 8828: AttachmentQualityMetricsExperiment ===
 
-// Module 8309 (AttachmentQualityMetricsExperiment)
+// Module 8828 (AttachmentQualityMetricsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

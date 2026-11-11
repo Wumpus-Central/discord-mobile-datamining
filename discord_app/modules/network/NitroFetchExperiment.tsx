@@ -1,8 +1,8 @@
-// === Module 9928: NitroFetchExperiment ===
+// === Module 9005: NitroFetchExperiment ===
 
-// Module 9928 (NitroFetchExperiment)
+// Module 9005 (NitroFetchExperiment)
 import ApexExperiment2 from "ApexExperiment" /* 1449 */;
-import _mod9929 from "module_9929" /* 9929 */;
+import _mod9006 from "module_9006" /* 9006 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -11,7 +11,7 @@ function synchronizeNetworkLayer() {
   if (tmp !== closure_7) {
     if (tmp) {
       if (null == closure_8) {
-        closure_8 = _mod9929;
+        closure_8 = _mod9006;
       }
       global.XMLHttpRequest = closure_8.XMLHttpRequest;
     } else {
@@ -41,7 +41,7 @@ export function initializeNitroFetchExperiment() {
     if (tmp5 !== closure_7) {
       if (tmp5) {
         if (null == closure_8) {
-          closure_8 = tmp(9929);
+          closure_8 = tmp(9006);
         }
         tmp = global;
         _XMLHttpRequest = closure_8.XMLHttpRequest;

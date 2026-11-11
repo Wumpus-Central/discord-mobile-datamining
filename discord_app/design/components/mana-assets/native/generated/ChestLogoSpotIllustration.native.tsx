@@ -1,19 +1,19 @@
-// === Module 17406: ChestLogoSpotIllustration ===
+// === Module 17571: ChestLogoSpotIllustration ===
 
-// Module 17406 (ChestLogoSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7138 */;
-import _modDef17407 from "module_17407" /* 17407 */;
-import _modDef17408 from "module_17408" /* 17408 */;
-import _modDef17409 from "module_17409" /* 17409 */;
+// Module 17571 (ChestLogoSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7689 */;
+import _modDef17572 from "module_17572" /* 17572 */;
+import _modDef17573 from "module_17573" /* 17573 */;
+import _modDef17574 from "module_17574" /* 17574 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17407 }, 3: null };
-let obj2 = { uri: _modDef17407 };
-obj[2] = { uri: _modDef17408 };
-const obj3 = { uri: _modDef17408 };
-obj[3] = { uri: _modDef17409 };
+let obj = { 1: null, 2: { uri: _modDef17572 }, 3: null };
+let obj2 = { uri: _modDef17572 };
+obj[2] = { uri: _modDef17573 };
+const obj3 = { uri: _modDef17573 };
+obj[3] = { uri: _modDef17574 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ChestLogoSpotIllustration.native.tsx");
 

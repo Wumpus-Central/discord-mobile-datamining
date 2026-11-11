@@ -1,15 +1,15 @@
-// === Module 16062: ShareScreen ===
+// === Module 16221: ShareScreen ===
 
-// Module 16062 (ShareScreen)
+// Module 16221 (ShareScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 16066 */;
-import ShareEmbedDefault from "ShareEmbed" /* 16067 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 16225 */;
+import ShareEmbedDefault from "ShareEmbed" /* 16226 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import PermissionStore from "PermissionStore" /* 5074 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import PermissionStore from "PermissionStore" /* 5175 */;
 
 require = fn;
 function getAttachmentsRestriction(type) {
@@ -27,15 +27,15 @@ function getAttachmentsRestriction(type) {
   }
 }
 const View = fn(17).View;
-const ChannelRecord = fn(4995);
+const ChannelRecord = fn(5096);
 ({ ChannelRecordBase: metroImportDefault, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(13628).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10855).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(10176).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10177).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -399,14 +399,14 @@ export default function ShareScreen(appEntryKey) {
   const memo = obj.useMemo(() => {
     if (null != embed) {
       const obj = { attachments: sharedContent.attachments, isRevamp: true };
-      items = [value2(ShareAttachmentsDefault, obj), ];
+      items = [closure_2_16(ShareAttachmentsDefault, obj), ];
       embed = undefined;
       if (tmp != null) {
         embed = tmp.embed;
       }
       const obj2 = { children: null };
       const obj3 = { embed, isLoadingEmbed: isLoading, isRevamp: true };
-      items[1] = value2(ShareEmbedDefault, obj3);
+      items[1] = closure_2_16(ShareEmbedDefault, obj3);
       obj2.children = items;
       let tmp4Result = collapsedCategories(closure_2_17, obj2);
     } else {

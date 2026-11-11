@@ -1,14 +1,14 @@
-// === Module 9308: AudioManagerStore ===
+// === Module 10517: AudioManagerStore ===
 
-// Module 9308 (AudioManagerStore)
+// Module 10517 (AudioManagerStore)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import NativeAudioManagerModule2 from "NativeAudioManagerModule" /* 9309 */;
+import NativeAudioManagerModule2 from "NativeAudioManagerModule" /* 10518 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5045 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 
 const NativeAudioManagerModuleDefault = NativeAudioManagerModule2;
 
@@ -147,13 +147,13 @@ let closure_17 = async function _setActiveAudioDevice() {
   })();
 };
 const RTCConnectionStates = fn(1072).RTCConnectionStates;
-const MediaEngineContextTypes = fn(5899).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(6012).MediaEngineContextTypes;
 const nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAudioManagerModuleDefault);
 let closure_8 = new LoggerDefault("AudioManagerStore");
 let global = [];
-let NativeAudioManagerModule = fn(9309);
+let NativeAudioManagerModule = fn(10518);
 global = NativeAudioManagerModule.getInvalidAndroidDevice();
-NativeAudioManagerModule = fn(9309);
+NativeAudioManagerModule = fn(10518);
 let device = NativeAudioManagerModule.getInvalidAndroidDevice();
 let c12 = false;
 const Store = initializeDefault.Store;

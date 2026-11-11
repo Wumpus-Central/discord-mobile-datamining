@@ -1,9 +1,9 @@
-// === Module 9449: XboxNeutralIcon ===
+// === Module 10241: XboxNeutralIcon ===
 
-// Module 9449 (XboxNeutralIcon)
+// Module 10241 (XboxNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5843 */;
-import _mod9450 from "module_9450" /* 9450 */;
+import BaseIconImage from "BaseIconImage" /* 5956 */;
+import _mod10242 from "module_10242" /* 10242 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function XboxNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9450, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10242, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

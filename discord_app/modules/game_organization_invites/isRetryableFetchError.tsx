@@ -1,6 +1,6 @@
-// === Module 11823: isRetryableFetchError ===
+// === Module 12446: isRetryableFetchError ===
 
-// Module 11823 (isRetryableFetchError)
+// Module 12446 (isRetryableFetchError)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/isRetryableFetchError.tsx");

@@ -1,6 +1,6 @@
-// === Module 11516: MediaPostEmbedStore ===
+// === Module 12285: MediaPostEmbedStore ===
 
-// Module 11516 (MediaPostEmbedStore)
+// Module 12285 (MediaPostEmbedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

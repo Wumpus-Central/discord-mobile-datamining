@@ -1,12 +1,12 @@
-// === Module 17819: SelectWebBrowserSetting ===
+// === Module 17985: SelectWebBrowserSetting ===
 
-// Module 17819 (SelectWebBrowserSetting)
+// Module 17985 (SelectWebBrowserSetting)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import BrowserManager from "BrowserManager" /* 5868 */;
-import SettingsConstants from "SettingsConstants" /* 8507 */;
-import SettingBuilders from "SettingBuilders" /* 11694 */;
+import BrowserManager from "BrowserManager" /* 5981 */;
+import SettingsConstants from "SettingsConstants" /* 9136 */;
+import SettingBuilders from "SettingBuilders" /* 12317 */;
 import size from "module_2" /* 2 */;
 
 function useWebBrowserSettingOptions() {
@@ -49,6 +49,7 @@ function useWebBrowserSettingOptions() {
   tmpResult = PlatformUtils;
 }
 const radio = SettingBuilders.createRadio({
+  hideTitle: true,
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["C+DkPu"]);

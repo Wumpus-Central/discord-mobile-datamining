@@ -1,17 +1,17 @@
-// === Module 19664: VoicePanelCardView ===
+// === Module 19856: VoicePanelCardView ===
 
-// Module 19664 (VoicePanelCardView)
+// Module 19856 (VoicePanelCardView)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1113 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5151 */;
-import native from "native" /* 5201 */;
-import Suspender from "Suspender" /* 6123 */;
-import VoicePanelCardDefault from "VoicePanelCard" /* 19665 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5252 */;
+import native from "native" /* 5314 */;
+import Suspender from "Suspender" /* 6236 */;
+import VoicePanelCardDefault from "VoicePanelCard" /* 19857 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6901 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
 
 const require = globalThis.__r;
 
@@ -270,12 +270,12 @@ function CardContentFreezer(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11372);
+const VoicePanelConstants = fn(11925);
 ({ LAYOUT_PHYSICS: closure_9, VoicePanelModes: closure_10, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11370).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19515).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11375).EDGE_GUTTER;
-const isUserParticipant = fn(5807).isUserParticipant;
+const VoicePanelControlsModes = fn(11923).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19704).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11928).EDGE_GUTTER;
+const isUserParticipant = fn(5920).isUserParticipant;
 const jsx = fn(21).jsx;
 let obj = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);

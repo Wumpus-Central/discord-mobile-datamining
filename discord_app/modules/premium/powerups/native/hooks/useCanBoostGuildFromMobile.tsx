@@ -1,12 +1,12 @@
-// === Module 14345: useCanBoostGuildFromMobile ===
+// === Module 10637: useCanBoostGuildFromMobile ===
 
-// Module 14345 (useCanBoostGuildFromMobile)
+// Module 10637 (useCanBoostGuildFromMobile)
 import initialize from "initialize" /* 504 */;
-import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 7665 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7668 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 8540 */;
-import canBoostGuildFromMobileDefault from "canBoostGuildFromMobile" /* 14346 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7664 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 9169 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 9647 */;
+import canBoostGuildFromMobileDefault from "canBoostGuildFromMobile" /* 10638 */;
+import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 10639 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 9170 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
 
 require = fn;

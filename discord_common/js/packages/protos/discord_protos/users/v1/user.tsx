@@ -905,7 +905,7 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let sum1 = pos.int32() + pos.pos;
           if (pos.pos < sum1) {
             do {
-              let colors = obj.colors;
+              colors = obj.colors;
               let arr = colors.push(pos.uint32());
               pos = pos.pos;
             } while (pos < sum1);
@@ -945,7 +945,6 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype6["internalBinaryWrite"] = function internalBinaryWrite(fontId, tag, writeUnknownFields) {
-  let length;
   if (0 !== fontId.fontId) {
     tag.tag(1, _mod1197.WireType.Varint).int32(fontId.fontId);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);
@@ -1108,7 +1107,6 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   return obj;
 };
 prototype7["internalBinaryWrite"] = function internalBinaryWrite(emojis, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < emojis.emojis.length) {
     do {
@@ -1180,7 +1178,7 @@ class TypingIndicatorEmoji$Type extends MessageType8 {
 }
 const prototype8 = TypingIndicatorEmoji$Type.prototype;
 prototype8["create"] = function create(partialSettings) {
-  obj = { emoji: { oneofKind: "r" }, animated: false };
+  obj = { emoji: { oneofKind: "Array" }, animated: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -1640,7 +1638,6 @@ prototype11["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype11["internalBinaryWrite"] = function internalBinaryWrite(ruleId, tag, writeUnknownFields) {
-  let length;
   if ("" !== ruleId.ruleId) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).string(ruleId.ruleId);
     const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
@@ -1789,7 +1786,6 @@ prototype12["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype12["internalBinaryWrite"] = function internalBinaryWrite(rules, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < rules.rules.length) {
     do {
@@ -2156,7 +2152,7 @@ class Badge$Type extends MessageType16 {
 }
 const prototype16 = Badge$Type.prototype;
 prototype16["create"] = function create(partialSettings) {
-  obj = { badge: { oneofKind: "r" } };
+  obj = { badge: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -2306,7 +2302,6 @@ prototype17["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype17["internalBinaryWrite"] = function internalBinaryWrite(badges, tag, writeUnknownFields) {
-  let length;
   let num = 0;
   if (0 < badges.badges.length) {
     do {
@@ -3801,7 +3796,6 @@ prototype25["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype25["internalBinaryWrite"] = function internalBinaryWrite(shards, tag, writeUnknownFields) {
-  let length;
   if (shards.shards.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -4244,7 +4238,7 @@ class PerkConfig$Type extends MessageType29 {
 }
 const prototype29 = PerkConfig$Type.prototype;
 prototype29["create"] = function create(partialSettings) {
-  obj = { source: [], kind: { oneofKind: "r" } };
+  obj = { source: [], kind: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -4326,7 +4320,6 @@ prototype29["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj2;
 };
 prototype29["internalBinaryWrite"] = function internalBinaryWrite(source, tag, writeUnknownFields) {
-  let length;
   if (source.source.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -4661,7 +4654,6 @@ prototype32["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype32["internalBinaryWrite"] = function internalBinaryWrite(isRestrictedToAllowedOptions, tag, writeUnknownFields) {
-  let length;
   if (false !== isRestrictedToAllowedOptions.isRestrictedToAllowedOptions) {
     tag.tag(1, _mod1197.WireType.Varint).bool(isRestrictedToAllowedOptions.isRestrictedToAllowedOptions);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);
@@ -4775,7 +4767,6 @@ prototype33["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype33["internalBinaryWrite"] = function internalBinaryWrite(isRestrictedToAllowedOptions, tag, writeUnknownFields) {
-  let length;
   if (false !== isRestrictedToAllowedOptions.isRestrictedToAllowedOptions) {
     tag.tag(1, _mod1197.WireType.Varint).bool(isRestrictedToAllowedOptions.isRestrictedToAllowedOptions);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);
@@ -4870,7 +4861,6 @@ prototype34["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype34["internalBinaryWrite"] = function internalBinaryWrite(isRestrictedToAllowedOptions, tag, writeUnknownFields) {
-  let length;
   if (false !== isRestrictedToAllowedOptions.isRestrictedToAllowedOptions) {
     tag.tag(1, _mod1197.WireType.Varint).bool(isRestrictedToAllowedOptions.isRestrictedToAllowedOptions);
     const tagResult = tag.tag(1, _mod1197.WireType.Varint);
@@ -5031,7 +5021,6 @@ prototype35["binaryReadMap2"] = function binaryReadMap2(arg0, pos, arg2) {
   arg0[num] = obj;
 };
 prototype35["internalBinaryWrite"] = function internalBinaryWrite(activePerksBitmask, tag, writeUnknownFields) {
-  let length;
   if (activePerksBitmask.activePerksBitmask.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -5345,7 +5334,7 @@ prototype37["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
           let sum1 = pos.int32() + pos.pos;
           if (pos.pos < sum1) {
             do {
-              let colors = obj.colors;
+              colors = obj.colors;
               let arr = colors.push(pos.uint32());
               pos = pos.pos;
             } while (pos < sum1);
@@ -5382,7 +5371,6 @@ prototype37["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype37["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, writeUnknownFields) {
-  let length;
   if (colors.colors.length) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).fork();
     let num2 = 0;
@@ -5617,7 +5605,6 @@ prototype39["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   return obj;
 };
 prototype39["internalBinaryWrite"] = function internalBinaryWrite(terms, tag, writeUnknownFields) {
-  let length;
   let length2;
   let num = 0;
   if (0 < terms.terms.length) {

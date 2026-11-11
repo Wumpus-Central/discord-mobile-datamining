@@ -1,12 +1,12 @@
-// === Module 14796: ChannelPinActionCreators ===
+// === Module 12556: ChannelPinActionCreators ===
 
-// Module 14796 (ChannelPinActionCreators)
+// Module 12556 (ChannelPinActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelPinsStore from "ChannelPinsStore" /* 14797 */;
+import ChannelPinsStore from "ChannelPinsStore" /* 12557 */;
 
 const require = fn;
-const FetchState = fn(14797).FetchState;
+const FetchState = fn(12557).FetchState;
 const Constants = fn(1072);
 ({ AbortCodes: closure_6, Endpoints: metroImportDefault, MAX_PINS_PER_CHANNEL: closure_8 } = Constants);
 let obj = {
@@ -21,8 +21,8 @@ let obj = {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
+          let obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -43,7 +43,7 @@ let obj = {
               ({ id: closure_128_0, name: closure_128_1 } = tmp3);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(8275).unarchiveThreadIfNecessary(tmp3.id), done: false };
+              const obj5 = { value: tmp2(8798).unarchiveThreadIfNecessary(tmp3.id), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -51,13 +51,13 @@ let obj = {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value, done: true };
-            return obj;
+            const obj6 = { value, done: true };
+            return obj6;
           } else {
             const HTTP = tmp3(1282).HTTP;
-            const obj6 = { url: closure_1_7.PIN(closure_128_0, closure_129_1), rejectWithError: true };
-            HTTP.put(obj6).catch((error) => {
-              const aPIError = new _private(6581).APIError(error);
+            obj = { url: closure_1_7.PIN(closure_128_0, closure_129_1), rejectWithError: true };
+            HTTP.put(obj).catch((error) => {
+              const aPIError = new _private(6694).APIError(error);
               const code = aPIError.code;
               const intl = _private(1113).intl;
               const intl2 = _private(1113).intl;
@@ -119,15 +119,15 @@ let obj = {
               const obj2 = { title: stringResult3, body: stringResult1, confirmText: null };
               const intl17 = _private(1113).intl;
               obj2.confirmText = intl17.string(_private(1113).t.BddRzS);
-              channelName(6092).show(obj2);
-              const obj4 = channelName(6092);
+              channelName(6205).show(obj2);
+              const obj4 = channelName(6205);
             });
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp10) {
+        } catch (tmp18) {
           c3 = tmp;
-          throw tmp10;
+          throw tmp18;
         }
       }
     })();
@@ -162,7 +162,7 @@ let obj = {
               channel = tmp4;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: id(8275).unarchiveThreadIfNecessary(channel.id), done: false };
+              const obj5 = { value: id(8798).unarchiveThreadIfNecessary(channel.id), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -187,7 +187,7 @@ let obj = {
               obj2.cancelText = intl4.string(closure_0(1113).t["ETE/oC"]);
               unpinMessage = unpinMessage.unpinMessage;
               obj2.onConfirm = unpinMessage.bind(unpinMessage, closure_1_0, closure_1_1);
-              return closure_1(6092).show(obj2);
+              return closure_1(6205).show(obj2);
             });
             c3 = 3;
             return { value: "HermesInternal", done: null };
@@ -223,7 +223,7 @@ let obj = {
     }
     let tmp = flag;
     if (!flag) {
-      let length = ChannelPinsStore.getPins(channelId);
+      length = ChannelPinsStore.getPins(channelId);
       let flag2 = true;
       if (null != length) {
         state = length.state;

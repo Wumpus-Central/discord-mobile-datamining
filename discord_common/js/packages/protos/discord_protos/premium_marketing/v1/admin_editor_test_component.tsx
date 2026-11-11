@@ -1,12 +1,12 @@
-// === Module 9749: admin_editor_test_component ===
+// === Module 9586: admin_editor_test_component ===
 
-// Module 9749 (admin_editor_test_component)
+// Module 9586 (admin_editor_test_component)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9727 */;
-import help_article from "help_article" /* 9728 */;
-import cta_button from "cta_button" /* 9729 */;
-import gradient from "gradient" /* 9735 */;
-import theme_aware_asset from "theme_aware_asset" /* 9737 */;
+import localized_string from "localized_string" /* 9564 */;
+import help_article from "help_article" /* 9565 */;
+import cta_button from "cta_button" /* 9566 */;
+import gradient from "gradient" /* 9572 */;
+import theme_aware_asset from "theme_aware_asset" /* 9574 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -116,7 +116,6 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, a
   return obj;
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField, tag, writeUnknownFields) {
-  let length;
   if ("" !== deprecatedField.deprecatedField) {
     tag.tag(1, _mod1197.WireType.LengthDelimited).string(deprecatedField.deprecatedField);
     const tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);

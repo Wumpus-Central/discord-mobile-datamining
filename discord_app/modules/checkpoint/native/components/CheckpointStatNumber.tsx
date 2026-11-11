@@ -1,8 +1,8 @@
-// === Module 13900: CheckpointStatNumber ===
+// === Module 14377: CheckpointStatNumber ===
 
-// Module 13900 (CheckpointStatNumber)
-import CheckpointNumbersRive from "CheckpointNumbersRive" /* 5283 */;
-import CheckpointTextDefault from "CheckpointText" /* 13897 */;
+// Module 14377 (CheckpointStatNumber)
+import CheckpointNumbersRive from "CheckpointNumbersRive" /* 5396 */;
+import CheckpointTextDefault from "CheckpointText" /* 14164 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,11 +20,11 @@ function getTextPixels(value) {
   return Math.max(num - 1, 0);
 }
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6201).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6314).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
 let c7 = 28.7;
-let closure_8 = { 1: 3, 2: 4, 3: 4, 5: 4, 7: 4, ".": 2, ",": 2, ":": 2, A: 4, M: 6, P: 4, a: 4, m: 6, p: 4 };
-const createStyles = fn(5142);
+let closure_8 = { 1: 3, 2: 4, 3: 4, 5: 4, 7: 4, ".": 2, ",": 2, " ": 2, " ": 2, ":": 2, A: 4, M: 6, P: 4, a: 4, m: 6, p: 4 };
+const createStyles = fn(5243);
 let closure_9 = createStyles.createStyles({ rive: { position: "absolute", top: 0, left: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointStatNumber.tsx");
@@ -75,18 +75,18 @@ export default function CheckpointStatNumber(isStepHeading) {
   obj.children = <View style={null}>{null}</View>;
   return <View style={memo}>{null}</View>;
 };
-export function isCheckpointStatNumberShrunk(value) {
-  const tmp = getTextPixels(value);
+export function isCheckpointStatNumberShrunk(result) {
+  const tmp = getTextPixels(result);
   let num = 1;
   if (tmp > c7) {
     num = c7 / tmp;
   }
   return num < 1;
 }
-export function getCheckpointStatNumberWidth(end, arg1) {
-  let num = arg1;
-  if (arg1 === undefined) {
+export function getCheckpointStatNumberWidth(c1) {
+  let num = size;
+  if (size === undefined) {
     num = 40;
   }
-  return Math.min(getTextPixels(end), c7) * num * 0.08675000000000001;
+  return Math.min(getTextPixels(c1), c7) * num * 0.08675000000000001;
 }

@@ -1,7 +1,7 @@
-// === Module 7919: useIntersectionObserver ===
+// === Module 8735: useIntersectionObserver ===
 
-// Module 7919 (useIntersectionObserver)
-import InteractionObserverUtils from "InteractionObserverUtils" /* 7921 */;
+// Module 8735 (useIntersectionObserver)
+import InteractionObserverUtils from "InteractionObserverUtils" /* 8737 */;
 import noop from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 
@@ -26,7 +26,7 @@ export function useIntersectionObserver(arg0, arg1) {
   if (arg1 == null) {
     tmp4 = closure_7;
   }
-  const tmp3Result = flag(7920)(tmp4);
+  const tmp3Result = flag(8736)(tmp4);
   closure_3 = tmp3Result;
   closure_4 = closure_5(null);
   items = [flag, arg0, tmp3Result];
@@ -79,7 +79,7 @@ export function useIsVisible(arg0, arg1) {
     }
     return value;
   }, items);
-  let current = num(7920)((isIntersecting) => {
+  let current = num(8736)((isIntersecting) => {
     closure_0(isIntersecting.isIntersecting);
   }).current;
   closure_129_1 = undefined;
@@ -93,13 +93,13 @@ export function useIsVisible(arg0, arg1) {
   const tmp6 = closure_5(null);
   closure_129_2 = tmp6;
   let tmp8 = tmp4;
-  const tmp3 = num(7920)((isIntersecting) => {
+  const tmp3 = num(8736)((isIntersecting) => {
     closure_0(isIntersecting.isIntersecting);
   });
   if (tmp4 == null) {
     tmp8 = closure_7;
   }
-  const tmpResultResult = num(7920)(tmp8);
+  const tmpResultResult = num(8736)(tmp8);
   closure_129_3 = tmpResultResult;
   closure_129_4 = closure_5(null);
   const items1 = [flag, current, tmpResultResult];

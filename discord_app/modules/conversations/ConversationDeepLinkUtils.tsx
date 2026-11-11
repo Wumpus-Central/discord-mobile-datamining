@@ -1,9 +1,9 @@
-// === Module 10000: ConversationDeepLinkUtils ===
+// === Module 9080: ConversationDeepLinkUtils ===
 
-// Module 10000 (ConversationDeepLinkUtils)
-import ChannelUtils from "ChannelUtils" /* 6180 */;
+// Module 9080 (ConversationDeepLinkUtils)
+import ChannelUtils from "ChannelUtils" /* 6293 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7850 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 8681 */;
 
 require = fn;
 function resolveConversationFocusLink() {
@@ -100,8 +100,8 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
     }
   }
 };
-fn(6988).addPostConnectionCallback;
-const CONVERSATION_QUERY_PARAM = fn(5781).CONVERSATION_QUERY_PARAM;
+fn(7595).addPostConnectionCallback;
+const CONVERSATION_QUERY_PARAM = fn(5894).CONVERSATION_QUERY_PARAM;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationDeepLinkUtils.tsx");
 
@@ -168,7 +168,7 @@ export function consumeConversationFocusParam(state) {
                       channelId = tmp4;
                       v2 = 1;
                       dependencyMap = 1;
-                      const obj4 = { value: v2(10001)(guildId), done: false };
+                      const obj4 = { value: v2(9081)(guildId), done: false };
                       return obj4;
                     }
                   } else if (1 === tmp4) {
@@ -195,8 +195,8 @@ export function consumeConversationFocusParam(state) {
                     return obj8;
                   } else {
                     if (value) {
-                      const conversationFocus = channelId(9975).requestConversationFocus();
-                      const obj = channelId(9975);
+                      const conversationFocus = channelId(9055).requestConversationFocus();
+                      const obj = channelId(9055);
                     }
                     dependencyMap = 3;
                     return { value: "HermesInternal", done: null };

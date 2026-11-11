@@ -1,6 +1,6 @@
-// === Module 6964: JoinGuildRefusedError ===
+// === Module 6859: JoinGuildRefusedError ===
 
-// Module 6964 (JoinGuildRefusedError)
+// Module 6859 (JoinGuildRefusedError)
 import size from "module_2" /* 2 */;
 
 const prototype = function JoinGuildRefusedError(arg0) {

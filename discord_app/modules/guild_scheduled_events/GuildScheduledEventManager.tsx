@@ -1,11 +1,11 @@
-// === Module 9051: GuildScheduledEventManager ===
+// === Module 7903: GuildScheduledEventManager ===
 
-// Module 9051 (GuildScheduledEventManager)
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9052 */;
+// Module 7903 (GuildScheduledEventManager)
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 7904 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5173 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6913 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7353 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6966 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 let require = fn;
 function getGuildEventsForCurrentUser() {
@@ -126,7 +126,7 @@ prototype["getGuildEventUserCountsForEmbed"] = function getGuildEventUserCountsF
   } else {
     const _HermesInternal = HermesInternal;
     const combined = "" + guild_id + "-" + id;
-    value2 = map.get(combined);
+    let value2 = map.get(combined);
     if (null == value2) {
       const obj = { startedAt: null, ids: null };
       const _Date2 = Date;

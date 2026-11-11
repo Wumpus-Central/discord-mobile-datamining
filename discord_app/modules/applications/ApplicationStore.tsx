@@ -181,7 +181,7 @@ prototype["getGuildApplicationIds"] = function getGuildApplicationIds(arg0) {
 prototype["getGuildEmbeddedApplications"] = function getGuildEmbeddedApplications(arg0, arg1) {
   if (null != arg0) {
     value = map2.get(arg0);
-    value2 = undefined;
+    let value2;
     if (value != null) {
       value2 = value.get(arg1);
     }

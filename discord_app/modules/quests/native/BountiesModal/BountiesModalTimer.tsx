@@ -1,9 +1,9 @@
-// === Module 17310: BountiesModalTimer ===
+// === Module 17473: BountiesModalTimer ===
 
-// Module 17310 (BountiesModalTimer)
+// Module 17473 (BountiesModalTimer)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5372 */;
+import timing_timing from "timing/timing" /* 5485 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = "#2ECC71";
-let result = (fn(5766).SMALL_BUTTON_HEIGHT - 4) / 2;
+let result = (fn(5879).SMALL_BUTTON_HEIGHT - 4) / 2;
 const strokeDasharray = 2 * Math.PI * result;
 const Easing = fn(1652).Easing;
 let closure_10 = Easing.bezier(0.15, 0.21, 0.58, 1);
@@ -22,10 +22,10 @@ const Easing2 = fn(1652).Easing;
 let closure_11 = Easing2.bezier(0.61, 0, 0.58, 1);
 const Easing3 = fn(1652).Easing;
 let closure_12 = Easing3.bezier(0.42, 0, 0.58, 1);
-let closure_13 = module_1652.createAnimatedComponent(fn(8105).Circle);
-const createStyles = fn(5142);
+let closure_13 = module_1652.createAnimatedComponent(fn(8197).Circle);
+const createStyles = fn(5243);
 let obj = { progress: null, ring: null, trackPath: null, countdownText: null, checkmarkLayer: null, checkmarkBackground: null, checkmarkIcon: null };
-let size = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round, width: fn(5766).SMALL_BUTTON_HEIGHT, height: fn(5766).SMALL_BUTTON_HEIGHT };
+let size = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round, width: fn(5879).SMALL_BUTTON_HEIGHT, height: fn(5879).SMALL_BUTTON_HEIGHT };
 obj.progress = size;
 let obj3 = { position: "absolute", transform: null };
 let items = [{ rotate: "-90deg" }];

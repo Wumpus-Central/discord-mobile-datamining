@@ -1,18 +1,18 @@
-// === Module 7544: ThreadMessageStore ===
+// === Module 8805: ThreadMessageStore ===
 
-// Module 7544 (ThreadMessageStore)
+// Module 8805 (ThreadMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import ThreadConstants from "ThreadConstants" /* 1112 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
-import ChannelRecord from "ChannelRecord" /* 4995 */;
-import MessageRecord from "MessageRecord" /* 5085 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6311 */;
+import ChannelRecord from "ChannelRecord" /* 5096 */;
+import MessageRecord from "MessageRecord" /* 5186 */;
 import UserRecord from "UserRecord" /* 1404 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import MessageStore from "MessageStore" /* 6196 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import MessageStore from "MessageStore" /* 6309 */;
 import size from "module_2" /* 2 */;
 
 function updateState(type, fn) {
@@ -560,7 +560,7 @@ const threadMessageStore = new ThreadMessageStore(DispatcherDefault, {
     if (null == dependencyMap[channelId]) {
       return false;
     } else {
-      const length = ids.filter((item) => {
+      length = ids.filter((item) => {
         let tmp = SnowflakeUtilsDefault.castChannelIdAsMessageId(channelId) !== item;
         if (tmp) {
           tmp = !set.has(item);

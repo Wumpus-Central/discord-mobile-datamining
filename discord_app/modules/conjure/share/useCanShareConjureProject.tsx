@@ -1,8 +1,8 @@
-// === Module 12300: useCanShareConjureProject ===
+// === Module 13100: useCanShareConjureProject ===
 
-// Module 12300 (useCanShareConjureProject)
-import ConjurePublishTypes from "ConjurePublishTypes" /* 11003 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10996 */;
+// Module 13100 (useCanShareConjureProject)
+import ConjurePublishTypes from "ConjurePublishTypes" /* 7320 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7313 */;
 
 const require = globalThis.__r;
 

@@ -1,18 +1,18 @@
-// === Module 12344: ConjureModelSettingsSheet ===
+// === Module 13153: ConjureModelSettingsSheet ===
 
-// Module 12344 (ConjureModelSettingsSheet)
+// Module 13153 (ConjureModelSettingsSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4028 from "module_4028" /* 4028 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7385 */;
-import ActionSheet from "ActionSheet" /* 7429 */;
-import conjureModelSettingsConnection from "conjureModelSettingsConnection" /* 11033 */;
-import useConjureModelSettingsDraftDefault from "useConjureModelSettingsDraft" /* 12345 */;
-import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 12346 */;
+import _modDef4079 from "module_4079" /* 4079 */;
+import conjureModelSettingsConnection from "conjureModelSettingsConnection" /* 7328 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7847 */;
+import ActionSheet from "ActionSheet" /* 7885 */;
+import useConjureModelSettingsDraftDefault from "useConjureModelSettingsDraft" /* 13154 */;
+import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 13155 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10978 */;
-import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10994 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 7301 */;
+import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 7311 */;
 
 require = fn;
 class ConjureModelSettingsContent {
@@ -55,15 +55,15 @@ function ModelSettingsPicker(projectId) {
   const items3 = [closure_8(ConjureEffortPickerDefault, { settings: tmp4, tiers: modelSettings.tiers, choices: modelSettings.choices, disabled: tmp, onChange: tmp5 }), ];
   const intl = projectId(1113).intl;
   const string = intl.string;
-  const tmp8 = _modDef4028;
+  const tmp8 = _modDef4079;
   if (tmp) {
     let stringResult = string(tmp8.GxpdUR);
   } else {
     stringResult = string(tmp8["/rJzr6"]);
   }
-  items3[1] = closure_8(projectId(5753).Text, { variant: "body-xs/normal", color: "text-muted", children: stringResult });
+  items3[1] = closure_8(projectId(5866).Text, { variant: "body-xs/normal", color: "text-muted", children: stringResult });
   obj2.children = items3;
-  return closure_9(projectId(6161).Stack, obj2);
+  return closure_9(projectId(6274).Stack, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -75,7 +75,7 @@ export default function ConjureModelSettingsSheet(projectId) {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef4028["3E7Yc0"]);
+  obj2.title = intl.string(_modDef4079["3E7Yc0"]);
   obj.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = React5(View, { children: React5(ConjureModelSettingsContent, { projectId: projectId.projectId }) });
   return React5(ActionSheet.ActionSheet, obj);

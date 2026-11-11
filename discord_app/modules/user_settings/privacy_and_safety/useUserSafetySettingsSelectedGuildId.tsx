@@ -1,10 +1,10 @@
-// === Module 18276: useUserSafetySettingsSelectedGuildId ===
+// === Module 18447: useUserSafetySettingsSelectedGuildId ===
 
-// Module 18276 (useUserSafetySettingsSelectedGuildId)
-import GuildStore from "GuildStore" /* 5013 */;
+// Module 18447 (useUserSafetySettingsSelectedGuildId)
+import GuildStore from "GuildStore" /* 5114 */;
 
 const require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(18272);
+const UserSettingsSafetySelectedGuildStore = fn(18443);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: c3, useUserSafetySettingsSelectedGuildStore: closure_4 } = UserSettingsSafetySelectedGuildStore);
 const GuildFeatures = fn(1072).GuildFeatures;
 const size = fn(2);

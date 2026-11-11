@@ -1,16 +1,16 @@
-// === Module 16145: GuildProgressOverview ===
+// === Module 16307: GuildProgressOverview ===
 
-// Module 16145 (GuildProgressOverview)
+// Module 16307 (GuildProgressOverview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import Pressables from "Pressables" /* 7046 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7426 */;
-import _modDef12086 from "module_12086" /* 12086 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 14312 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14315 */;
-import GuildProgressBarDefault from "GuildProgressBar" /* 16146 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import Pressables from "Pressables" /* 7364 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7882 */;
+import _modDef12883 from "module_12883" /* 12883 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 14795 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 14798 */;
+import GuildProgressBarDefault from "GuildProgressBar" /* 16308 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,7 +47,7 @@ class GuildProgressOverviewView {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5142);
+const createStyles = fn(5243);
 let obj2 = { container: { padding: 16 }, horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, title: { fontSize: 16, lineHeight: 20, fontFamily: fn(1072).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 }, step: { lineHeight: 16 }, progressBar: { marginTop: 8 } };
 const metroImportDefault = createStyles.createStyles(obj2);
 const size = fn(2);

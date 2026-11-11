@@ -1,32 +1,32 @@
-// === Module 18149: UserSettingsDesignSystemTextInput ===
+// === Module 18320: UserSettingsDesignSystemTextInput ===
 
-// Module 18149 (UserSettingsDesignSystemTextInput)
+// Module 18320 (UserSettingsDesignSystemTextInput)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5376 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5390 */;
-import Text_Text from "Text/Text" /* 5753 */;
-import components_Button_Button from "components/Button/Button" /* 5760 */;
-import Stack_Stack from "Stack/Stack" /* 6161 */;
-import Card from "Card" /* 7043 */;
-import TextInput from "TextInput" /* 7151 */;
-import Input from "Input" /* 7152 */;
-import TextField from "TextField" /* 7158 */;
-import SplitTextInput from "SplitTextInput" /* 7207 */;
-import Search_SearchBar from "Search/SearchBar" /* 7285 */;
-import TextArea from "TextArea" /* 7319 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7385 */;
-import SettingsIcon from "SettingsIcon" /* 7636 */;
-import IconButton from "IconButton" /* 8102 */;
-import TextIcon from "TextIcon" /* 8729 */;
-import AtIcon from "AtIcon" /* 8739 */;
-import GhostInput from "GhostInput" /* 16207 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5503 */;
+import Text_Text from "Text/Text" /* 5866 */;
+import components_Button_Button from "components/Button/Button" /* 5873 */;
+import Stack_Stack from "Stack/Stack" /* 6274 */;
+import Card from "Card" /* 7381 */;
+import TextInput from "TextInput" /* 7553 */;
+import Input from "Input" /* 7554 */;
+import TextField from "TextField" /* 7560 */;
+import Search_SearchBar from "Search/SearchBar" /* 7759 */;
+import TextArea from "TextArea" /* 7793 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7847 */;
+import IconButton from "IconButton" /* 7922 */;
+import TextIcon from "TextIcon" /* 8013 */;
+import AtIcon from "AtIcon" /* 8022 */;
+import SettingsIcon from "SettingsIcon" /* 10502 */;
+import GhostInput from "GhostInput" /* 16369 */;
+import SplitTextInput from "SplitTextInput" /* 16370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function Sample(children) {
-  const tmp = closure_8();
-  return timestampProducer(Card.Card, { shadow: "low", style: closure_8().sample, children: timestampProducer(Stack_Stack.Stack, { spacing: 24, children: children.children }) });
+  const tmp = closure_9();
+  return timestampProducer(Card.Card, { shadow: "low", style: closure_9().sample, children: timestampProducer(Stack_Stack.Stack, { spacing: 24, children: children.children }) });
 }
 function InputUsername(defaultValue) {
   defaultValue = defaultValue.defaultValue;
@@ -54,7 +54,7 @@ function InputUsername(defaultValue) {
     if (arr.includes(" ")) {
       str = "error";
     }
-    require(str);
+    _require(str);
   };
   return timestampProducer(TextInput.TextInput, obj);
 }
@@ -82,7 +82,7 @@ function GhostInputUsername(defaultValue) {
     if (arr.includes(" ")) {
       str = "error";
     }
-    require(str);
+    _require(str);
   };
   return timestampProducer(GhostInput.GhostInput, obj);
 }
@@ -126,26 +126,77 @@ function CustomAttachmentExample() {
     if (arr.includes(" ")) {
       str = "error";
     }
-    require(str);
+    _require(str);
   };
   return timestampProducer(TextInput.TextInput, obj);
+}
+function CountryCodeExample(label) {
+  const tmp = _slicedToArray(noop.useState("US +1"), 2);
+  _require = tmp[1];
+  items = [
+    tmp[0],
+    noop.useCallback(() => {
+      closure_0((arg0) => {
+        let tmp = closure_1_8[(closure_1_8.indexOf(closure_1_8, arg0) + 1) % closure_1_8.length];
+        if (tmp == null) {
+          tmp = arg0;
+        }
+        return tmp;
+      });
+    }, [])
+  ];
+  const tmp2 = _slicedToArray(items, 2);
+  const first = tmp2[0];
+  const obj = { label: label.label, description: "Tap the country code to cycle through a few examples.", placeholder: "Phone number", keyboardType: "phone-pad", leadingText: first, leadingPressableProps: { accessibilityLabel: "Country code " + first, onPress: tmp2[1] } };
+  return closure_6(require("TextInput").TextInput, obj);
+}
+function PhoneOrEmailExample() {
+  let tmp = _slicedToArray(noop.useState("US +1"), 2);
+  _require = tmp[1];
+  items = [
+    tmp[0],
+    noop.useCallback(() => {
+      closure_0((arg0) => {
+        let tmp = closure_1_8[(closure_1_8.indexOf(closure_1_8, arg0) + 1) % closure_1_8.length];
+        if (tmp == null) {
+          tmp = arg0;
+        }
+        return tmp;
+      });
+    }, [])
+  ];
+  const tmp2 = _slicedToArray(items, 2);
+  const first = tmp2[0];
+  [tmp5, tmp6] = noop.useState("");
+  const tmp4 = _slicedToArray(noop.useState(""), 2);
+  const result = require("PhoneOrEmailUtils").shouldShowCountryCodeSelector(undefined, tmp5);
+  const obj2 = { label: "Switches like login", description: "Type three or more digits to show the country code, or an email to hide it.", placeholder: "Email or phone number", autoCapitalize: "none", onChange: tmp6, leadingText: null, leadingPressableProps: null };
+  let tmp9;
+  if (result) {
+    tmp9 = first;
+  }
+  obj2.leadingText = tmp9;
+  const obj = require("PhoneOrEmailUtils");
+  obj2.leadingPressableProps = { accessibilityLabel: "Country code " + first, onPress: tmp2[1] };
+  return closure_6(require("TextInput").TextInput, obj2);
 }
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5142);
+let closure_8 = ["US +1", "CA +1", "GB +44", "JP +81"];
+const createStyles = fn(5243);
 let obj2 = { container: { padding: 16 }, sample: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.xl } };
-let closure_8 = createStyles.createStyles(obj2);
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTextInput.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTextInput.tsx");
 
 export default function UserSettingsDesignSystemTextInput() {
   const obj = { children: null };
-  const obj2 = { spacing: 24, style: closure_8().container, children: null };
+  const obj2 = { spacing: 24, style: closure_9().container, children: null };
   const obj3 = { children: null };
   items = [timestampProducer(TextInput.TextInput, { label: "Input Label", placeholder: "Placeholder text", description: "Descriptions give context for the input.", errorMessage: "Error messages communicate invalid states." }), timestampProducer(TextArea.TextArea, { label: "Text Area", maxLength: 100, placeholder: "Multiline inputs use TextArea" }), timestampProducer(TextInput.TextInput, { label: "Password", secureTextEntry: true, placeholder: "Password", clearable: true }), timestampProducer(TextInput.TextInput, { label: "Required Field", placeholder: "Placeholder", description: "Required inputs are indicated with an asterisk.", required: true })];
   obj3.children = items;
-  const items1 = [metroImportDefault(Sample, obj3), timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Sizing" }), timestampProducer(Text_Text.Text, { variant: "body-md/normal", children: "All inputs except TextArea accept a size prop, either sm, md, or lg. By default, inputs will use the large variant." }), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
+  const items1 = [metroImportDefault(Sample, obj3), timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Sizing" }), timestampProducer(Text_Text.Text, { variant: "body-md/normal", children: "All inputs except TextArea accept a size prop, either sm, md, or lg. By default, inputs will use the large variant." }), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
   const obj4 = { children: null };
   const items2 = [timestampProducer(TextInput.TextInput, { label: "Small", size: "sm" }), timestampProducer(TextInput.TextInput, { label: "Medium", size: "md" }), timestampProducer(TextInput.TextInput, { label: "Large (default)" })];
   obj4.children = items2;
@@ -153,7 +204,7 @@ export default function UserSettingsDesignSystemTextInput() {
   items1[4] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Attachments" });
   items1[5] = timestampProducer(Text_Text.Text, { variant: "body-md/normal", children: "Inputs can have either text and icon attachments, either on the leading or trailing edge. If both text and icon are given for a single side, the icon will take precedence." });
   const obj5 = { children: null };
-  const tmp = closure_8();
+  const tmp = closure_9();
   const items3 = [timestampProducer(TextInput.TextInput, { label: "Leading icon", leadingIcon: TextIcon.TextIcon }), , , ];
   const obj6 = { label: "Leading icon", leadingIcon: TextIcon.TextIcon };
   items3[1] = timestampProducer(TextInput.TextInput, { label: "Trailing icon", trailingIcon: TextIcon.TextIcon });
@@ -222,7 +273,7 @@ export default function UserSettingsDesignSystemTextInput() {
   const obj18 = {
     children: timestampProducer(components_Button_Button.Button, {
       onPress() {
-        ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_12), "ghost-input-sheet");
+        ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_13), "ghost-input-sheet");
       },
       text: "Show example"
     })
@@ -232,20 +283,53 @@ export default function UserSettingsDesignSystemTextInput() {
   const obj20 = {
     children: timestampProducer(components_Button_Button.Button, {
       onPress() {
-        ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_13), "ghost-input-sheet-left");
+        ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_14), "ghost-input-sheet-left");
       },
       text: "Show left-aligned example"
     })
   };
   items1[37] = timestampProducer(Sample, obj20);
-  items1[38] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Split Text Input" });
-  items1[39] = timestampProducer(Text_Text.Text, { variant: "body-md/normal", children: "SplitTextInput is a special TextInput extension that is primarily used for inputs that require selecting a prefix value." });
+  items1[38] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Static and Pressable Leading Attachments" });
+  items1[39] = timestampProducer(Text_Text.Text, { variant: "body-md/normal", children: "Static leading attachments are muted. Passing leadingPressableProps gives them the value color, and pressable leading text is also separated from the value by a divider. Compare the pressable text with the deprecated SplitTextInput below." });
   const obj22 = { children: null };
-  const items6 = [timestampProducer(SplitTextInput.SplitTextInput, { label: "Small", size: "sm", placeholder: "Placeholder", leadingText: "Click", leadingPressableProps: { accessibilityLabel: "Click" } }), timestampProducer(SplitTextInput.SplitTextInput, { label: "Medium", size: "md", placeholder: "Placeholder", leadingText: "Me", leadingPressableProps: { accessibilityLabel: "Me" } }), timestampProducer(SplitTextInput.SplitTextInput, { label: "Large", size: "lg", placeholder: "Placeholder", leadingText: "Here", leadingPressableProps: { accessibilityLabel: "Here" } })];
+  const items6 = [timestampProducer(TextInput.TextInput, { label: "TextInput: static leading text", leadingText: "https://", placeholder: "discord.com" }), timestampProducer(CountryCodeExample, { label: "TextInput: pressable leading text" }), , , ];
+  const obj17 = { children: timestampProducer(TextArea.TextArea, { label: "Limited length", maxLength: 124 }) };
+  const obj19 = {
+    onPress() {
+      ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_13), "ghost-input-sheet");
+    },
+    text: "Show example"
+  };
+  const obj21 = {
+    onPress() {
+      ActionSheetActionCreatorsDefault.openLazy(() => Promise.resolve(closure_1_14), "ghost-input-sheet-left");
+    },
+    text: "Show left-aligned example"
+  };
+  items6[2] = timestampProducer(TextInput.TextInput, { label: "TextInput: static leading icon", leadingIcon: AtIcon.AtIcon, placeholder: "username" });
+  const obj23 = { label: "TextInput: static leading icon", leadingIcon: AtIcon.AtIcon, placeholder: "username" };
+  items6[3] = timestampProducer(TextInput.TextInput, {
+    label: "TextInput: pressable leading icon",
+    leadingIcon: AtIcon.AtIcon,
+    leadingPressableProps: {
+      accessibilityLabel: "Mention",
+      onPress() {
+        return null;
+      }
+    },
+    placeholder: "username"
+  });
+  items6[4] = timestampProducer(PhoneOrEmailExample, {});
   obj22.children = items6;
   items1[40] = metroImportDefault(Sample, obj22);
-  items1[41] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Data Types" });
-  items1[42] = timestampProducer(Text_Text.Text, { variant: "body-md/normal", children: "Many special input types will have their own components. All inputs use a similar interface and support roughly the same set of props for styling and functionality. Examples will be added as these different types get implemented." });
+  items1[41] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Split Text Input (Deprecated)" });
+  items1[42] = timestampProducer(Text_Text.Text, { variant: "body-md/normal", children: "SplitTextInput is deprecated and should not be used in new work; use TextInput with pressable leading text instead. It's kept here for comparison." });
+  const obj25 = { children: null };
+  const items7 = [timestampProducer(SplitTextInput.SplitTextInput, { label: "SplitTextInput (deprecated)", placeholder: "Phone number", leadingText: "US +1", leadingPressableProps: { accessibilityLabel: "Country code US +1" } }), timestampProducer(SplitTextInput.SplitTextInput, { label: "Small", size: "sm", placeholder: "Placeholder", leadingText: "Click", leadingPressableProps: { accessibilityLabel: "Click" } }), timestampProducer(SplitTextInput.SplitTextInput, { label: "Medium", size: "md", placeholder: "Placeholder", leadingText: "Me", leadingPressableProps: { accessibilityLabel: "Me" } }), timestampProducer(SplitTextInput.SplitTextInput, { label: "Large", size: "lg", placeholder: "Placeholder", leadingText: "Here", leadingPressableProps: { accessibilityLabel: "Here" } })];
+  obj25.children = items7;
+  items1[43] = metroImportDefault(Sample, obj25);
+  items1[44] = timestampProducer(Text_Text.Text, { variant: "heading-lg/semibold", children: "Data Types" });
+  items1[45] = timestampProducer(Text_Text.Text, { variant: "body-md/normal", children: "Many special input types will have their own components. All inputs use a similar interface and support roughly the same set of props for styling and functionality. Examples will be added as these different types get implemented." });
   obj2.children = items1;
   obj.children = metroImportDefault(Stack_Stack.Stack, obj2);
   return timestampProducer(ScrollView, obj);

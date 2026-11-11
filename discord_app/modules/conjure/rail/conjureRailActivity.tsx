@@ -1,15 +1,15 @@
-// === Module 13249: conjureRailActivity ===
+// === Module 10491: conjureRailActivity ===
 
-// Module 13249 (conjureRailActivity)
-import conjureUnread from "conjureUnread" /* 11007 */;
-import conjureProjectMute from "conjureProjectMute" /* 11008 */;
+// Module 10491 (conjureRailActivity)
+import conjureUnread from "conjureUnread" /* 7267 */;
+import conjureProjectMute from "conjureProjectMute" /* 7268 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ReadStateStore from "ReadStateStore" /* 6900 */;
-import ConjureChatStore from "ConjureChatStore" /* 10979 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6902 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10996 */;
+import ReadStateStore from "ReadStateStore" /* 6952 */;
+import ConjureChatStore from "ConjureChatStore" /* 7257 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7313 */;
 
 const require = globalThis.__r;
 
@@ -34,30 +34,18 @@ function readConjureRailActivity(id, arg1) {
           }
           str2 = "working";
           if (true !== publishing) {
-            let str4 = "unread";
+            let str3 = "unread";
             if (!tmp2Result.isConjureProjectUnread(id)) {
-              const project = ConjureProjectStore.getProject(id);
-              let install_scope_setup;
-              if (project != null) {
-                install_scope_setup = project.install_scope_setup;
-              }
-              let tmp10 = null != install_scope_setup;
-              if (tmp10) {
-                tmp10 = isProjectOwner(project);
-              }
-              str4 = "unread";
-              if (!tmp10) {
-                let str5 = null;
-                if (flag) {
-                  str5 = null;
-                  if (null != ConjureChatStore.getFinishedAt(id)) {
-                    str5 = "working";
-                  }
+              let str4 = null;
+              if (flag) {
+                str4 = null;
+                if (null != ConjureChatStore.getFinishedAt(id)) {
+                  str4 = "working";
                 }
-                str4 = str5;
               }
+              str3 = str4;
             }
-            str2 = str4;
+            str2 = str3;
             tmp2Result = conjureUnread;
           }
         }
@@ -68,7 +56,6 @@ function readConjureRailActivity(id, arg1) {
   }
   return tmp;
 }
-const isProjectOwner = fn(6902).isProjectOwner;
 let items = [ConjureProjectStore, ConjureChatStore, ConjurePublishStatusStore, ReadStateStore, UserSettingsProtoStore];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/rail/conjureRailActivity.tsx");

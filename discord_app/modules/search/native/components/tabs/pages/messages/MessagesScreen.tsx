@@ -1,13 +1,13 @@
-// === Module 19182: MessagesScreen ===
+// === Module 19369: MessagesScreen ===
 
-// Module 19182 (MessagesScreen)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 19145 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 19168 */;
+// Module 19369 (MessagesScreen)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 19332 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 19355 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 14160 */;
+import SearchQueryStore from "SearchQueryStore" /* 14645 */;
 
 require = fn;
-const SearchConstants = fn(9923);
+const SearchConstants = fn(9000);
 ({ SEARCH_FILTERS_BY_TAB: hasOwnProperty, SearchFilter: closure_6, SEARCH_PINNED_MESSAGES_LINE_CLAMP: metroImportDefault, SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: closure_8, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_9, SearchListItemTypes: closure_10 } = SearchConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -44,7 +44,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
   const searchMessagesLoadingState = searchContext(stateFromStores[9]).useSearchMessagesLoadingState({ searchContext, tab, placeholderHeight: item, numColumns: 1 });
   placeholderCount = searchMessagesLoadingState.placeholderCount;
   const isFirstPageLoading = searchMessagesLoadingState.isFirstPageLoading;
-  let length;
+  length = undefined;
   if (searchMessages != null) {
     length = searchMessages.length;
   }

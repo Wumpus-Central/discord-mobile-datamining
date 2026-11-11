@@ -1,9 +1,9 @@
-// === Module 13005: createWaveTransition ===
+// === Module 13671: createWaveTransition ===
 
-// Module 13005 (createWaveTransition)
+// Module 13671 (createWaveTransition)
 import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5372 */;
-import waveTransition from "waveTransition" /* 13003 */;
+import timing_timing from "timing/timing" /* 5485 */;
+import waveTransition from "waveTransition" /* 13669 */;
 import size from "module_2" /* 2 */;
 
 let items = [{ code: "(function incomingSlotForPass_createWaveTransitionNativeTsx1(passIndex){return passIndex%2===0?'B':'A';})" }];
@@ -33,7 +33,7 @@ export function createWaveTransition(duration) {
   }
   let DEFAULT_PASS_DURATION = duration.duration;
   if (DEFAULT_PASS_DURATION == null) {
-    DEFAULT_PASS_DURATION = obj(13003).DEFAULT_PASS_DURATION;
+    DEFAULT_PASS_DURATION = obj(13669).DEFAULT_PASS_DURATION;
   }
   obj = { duration: DEFAULT_PASS_DURATION, random: null, reducedMotion: null, respectReducedMotion: null, animationProgress: null, crossFadeOpacity: null, glyphCount: null, onPass: null, onStart: null, onComplete: null };
   let random = duration.rng;
@@ -67,7 +67,7 @@ export function createWaveTransition(duration) {
   let str2 = "";
   if (0 < glyphCountResult) {
     do {
-      let GLYPH_PEAK = obj(13003).GLYPH_PEAK;
+      let GLYPH_PEAK = obj(13669).GLYPH_PEAK;
       let tmp5Result = tmp5();
       str = `${tmp8(tmp9 * obj(c1[0]).GLYPH_PEAK.length | 0)}`;
       num = num + 1;

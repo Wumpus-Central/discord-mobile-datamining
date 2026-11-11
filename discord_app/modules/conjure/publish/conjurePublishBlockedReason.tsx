@@ -1,8 +1,8 @@
-// === Module 11096: conjurePublishBlockedReason ===
+// === Module 13058: conjurePublishBlockedReason ===
 
-// Module 11096 (conjurePublishBlockedReason)
+// Module 13058 (conjurePublishBlockedReason)
 import util from "util" /* 1113 */;
-import _modDef4028 from "module_4028" /* 4028 */;
+import _modDef4079 from "module_4079" /* 4079 */;
 import size from "module_2" /* 2 */;
 
 const ConjurePublishBlockedReason = { PUBLISH_APPROVAL_REQUIRED: "publish-approval-required", NO_PREVIEW: "no-preview", MISSING_MANAGE_SERVER: "missing-manage-server", MISSING_MANAGE_CHANNELS: "missing-manage-channels" };
@@ -13,29 +13,29 @@ export function getConjurePublishBlockedCopy(reason, message) {
   if (obj.PUBLISH_APPROVAL_REQUIRED === reason) {
     const obj2 = { title: null, body: null, action: null, cancel: null };
     const intl9 = util.intl;
-    obj2.title = intl9.string(_modDef4028["5qiUbF"]);
+    obj2.title = intl9.string(_modDef4079["5qiUbF"]);
     const intl10 = util.intl;
-    obj2.body = intl10.string(_modDef4028["8kdvyn"]);
+    obj2.body = intl10.string(_modDef4079["8kdvyn"]);
     const intl11 = util.intl;
-    obj2.action = intl11.string(_modDef4028.z25acw);
+    obj2.action = intl11.string(_modDef4079.z25acw);
     const intl12 = util.intl;
     obj2.cancel = intl12.string(util.t["ETE/oC"]);
     return obj2;
   } else if (tmp.NO_PREVIEW === reason) {
     const obj3 = { title: null, body: null, action: null };
     const intl6 = util.intl;
-    obj3.title = intl6.string(_modDef4028.ZNGLFE);
+    obj3.title = intl6.string(_modDef4079.ZNGLFE);
     const intl7 = util.intl;
-    obj3.body = intl7.string(_modDef4028.ffxKGK);
+    obj3.body = intl7.string(_modDef4079.ffxKGK);
     const intl8 = util.intl;
-    obj3.action = intl8.string(_modDef4028["/omTNx"]);
+    obj3.action = intl8.string(_modDef4079["/omTNx"]);
     return obj3;
   } else {
     let str2 = message;
     if (tmp.MISSING_MANAGE_SERVER === reason) {
       const obj4 = { title: null, body: null, action: null };
       const intl4 = util.intl;
-      obj4.title = intl4.string(_modDef4028.qpffbI);
+      obj4.title = intl4.string(_modDef4079.qpffbI);
       if (str2 == null) {
         str2 = "";
       }
@@ -46,14 +46,14 @@ export function getConjurePublishBlockedCopy(reason, message) {
     } else if (tmp.MISSING_MANAGE_CHANNELS === reason) {
       obj = { title: null, body: null, action: null, cancel: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef4028.qpffbI);
+      obj.title = intl.string(_modDef4079.qpffbI);
       let str = str2;
       if (str2 == null) {
         str = "";
       }
       obj.body = str;
       const intl2 = util.intl;
-      obj.action = intl2.string(_modDef4028.dVtQRH);
+      obj.action = intl2.string(_modDef4079.dVtQRH);
       const intl3 = util.intl;
       obj.cancel = intl3.string(util.t["ETE/oC"]);
       return obj;

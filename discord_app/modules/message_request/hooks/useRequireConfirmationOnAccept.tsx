@@ -1,7 +1,7 @@
-// === Module 14282: useRequireConfirmationOnAccept ===
+// === Module 14764: useRequireConfirmationOnAccept ===
 
-// Module 14282 (useRequireConfirmationOnAccept)
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 14283 */;
+// Module 14764 (useRequireConfirmationOnAccept)
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 14765 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/message_request/hooks/useRequireConfirmationOnAccept.tsx");

@@ -1,10 +1,10 @@
-// === Module 9142: useIsPinotNewChannelPrivate ===
+// === Module 8104: useIsPinotNewChannelPrivate ===
 
-// Module 9142 (useIsPinotNewChannelPrivate)
-import PinotEligibility from "PinotEligibility" /* 9139 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import GuildRoleStore from "GuildRoleStore" /* 5048 */;
-import GuildStore from "GuildStore" /* 5013 */;
+// Module 8104 (useIsPinotNewChannelPrivate)
+import PinotEligibility from "PinotEligibility" /* 8101 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import GuildRoleStore from "GuildRoleStore" /* 5149 */;
+import GuildStore from "GuildStore" /* 5114 */;
 
 const require = globalThis.__r;
 

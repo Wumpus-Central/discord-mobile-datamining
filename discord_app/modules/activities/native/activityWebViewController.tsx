@@ -1,14 +1,14 @@
-// === Module 11970: activityWebViewController ===
+// === Module 12762: activityWebViewController ===
 
-// Module 11970 (activityWebViewController)
+// Module 12762 (activityWebViewController)
 import util from "util" /* 1113 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6093 */;
-import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6906 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 11074 */;
-import makeIframeIdDefault from "makeIframeId" /* 11971 */;
-import createWebViewControllerDefault from "createWebViewController" /* 11972 */;
-import makeShellBridgeSecretDefault from "makeShellBridgeSecret" /* 11992 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4990 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6206 */;
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6958 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12657 */;
+import makeIframeIdDefault from "makeIframeId" /* 12763 */;
+import createWebViewControllerDefault from "createWebViewController" /* 12764 */;
+import makeShellBridgeSecretDefault from "makeShellBridgeSecret" /* 12786 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
 
 require = fn;
 const size = fn(2);

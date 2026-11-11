@@ -1,9 +1,9 @@
-// === Module 8908: UserProfileAvatar ===
+// === Module 8555: UserProfileAvatar ===
 
-// Module 8908 (UserProfileAvatar)
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8894 */;
-import HeaderAvatarDefault from "HeaderAvatar" /* 8909 */;
-import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 8912 */;
+// Module 8555 (UserProfileAvatar)
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8540 */;
+import HeaderAvatarDefault from "HeaderAvatar" /* 8556 */;
+import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 8559 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -35,8 +35,8 @@ class UserProfileAvatar {
   }
 }
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8831).TrackUserProfileActions;
-const AVATAR_SIZE_VARIANT = fn(7440).AVATAR_SIZE_VARIANT;
+const TrackUserProfileActions = fn(8413).TrackUserProfileActions;
+const AVATAR_SIZE_VARIANT = fn(7896).AVATAR_SIZE_VARIANT;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 let size = fn(2);

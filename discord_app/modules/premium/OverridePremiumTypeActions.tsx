@@ -1,16 +1,16 @@
-// === Module 18039: OverridePremiumTypeActions ===
+// === Module 18205: OverridePremiumTypeActions ===
 
-// Module 18039 (OverridePremiumTypeActions)
+// Module 18205 (OverridePremiumTypeActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import createMessage from "createMessage" /* 10444 */;
+import createMessage from "createMessage" /* 8785 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/OverridePremiumTypeActions.tsx");
 
-export function updateClientPremiumTypeOverride(premiumType, currentUser) {
-  DispatcherDefault.dispatch({ type: "SET_PREMIUM_TYPE_OVERRIDE", premiumType });
+export function updateClientPremiumTypeOverride(value, currentUser) {
+  DispatcherDefault.dispatch({ type: "SET_PREMIUM_TYPE_OVERRIDE", premiumType: value });
   if (currentUser == null) {
     currentUser = UserStore.getCurrentUser();
   }
@@ -23,7 +23,7 @@ export function updateClientPremiumTypeOverride(premiumType, currentUser) {
     obj4.user = createMessage.userRecordToServer(currentUser);
     tmp2Result2.dispatch(obj4);
   }
-  const obj2 = { type: "SET_PREMIUM_TYPE_OVERRIDE", premiumType };
+  const obj2 = { type: "SET_PREMIUM_TYPE_OVERRIDE", premiumType: value };
 }
 export function updateClientCreatedAtOverride(createdAt) {
   DispatcherDefault.dispatch({ type: "SET_CREATED_AT_OVERRIDE", createdAt });

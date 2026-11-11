@@ -1,11 +1,11 @@
-// === Module 9663: CollectiblesShopCardVariants ===
+// === Module 10380: CollectiblesShopCardVariants ===
 
-// Module 9663 (CollectiblesShopCardVariants)
+// Module 10380 (CollectiblesShopCardVariants)
 import nativeDefault from "native" /* 575 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7369 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9627 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9664 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 9665 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7831 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9452 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 10381 */;
+import PlusSmallIcon from "PlusSmallIcon" /* 10382 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ function VariantOption(variant) {
   return React4(View, obj2);
 }
 function VariantCheckmark(variant) {
-  const colors = nativeDefault.colors;
+  colors = nativeDefault.colors;
   const tmp = useIsVariantColorLightDefault(variant.variant);
   return React4(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: useIsVariantColorLightDefault(variant.variant) ? colors.BLACK : colors.WHITE, size: "xxs" });
 }
@@ -47,10 +47,10 @@ function VariantOverflowOption(isSelected) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5142);
+let createStyles = fn(5243);
 let obj = { variantsContainer: { display: "flex", flexDirection: "row", alignItems: "center", paddingStart: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj);
-createStyles = fn(5142);
+createStyles = fn(5243);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { variantOption: null, variantOptionInner: null, variantOverflowInner: null };
   const size = { marginStart: -nativeDefault.space.PX_4, width: 14, height: 14, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center" };
@@ -74,8 +74,8 @@ export default noop.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
   const tmp = closure_6();
-  defaultVariantIndex = defaultVariantIndex(9547).useDefaultVariantIndex(product);
-  const obj = defaultVariantIndex(9547);
+  defaultVariantIndex = defaultVariantIndex(10350).useDefaultVariantIndex(product);
+  const obj = defaultVariantIndex(10350);
   if (obj2.getIsVariantProduct(product)) {
     let num3 = 3;
     if (product.variants.length <= 4) {
@@ -101,5 +101,5 @@ export default noop.memo(function CardProductVariants(product) {
   } else {
     return null;
   }
-  obj2 = defaultVariantIndex(7810);
+  obj2 = defaultVariantIndex(8430);
 });

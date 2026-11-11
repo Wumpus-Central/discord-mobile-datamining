@@ -1,19 +1,19 @@
-// === Module 11978: PostMessageTransport ===
+// === Module 12772: PostMessageTransport ===
 
-// Module 11978 (PostMessageTransport)
+// Module 12772 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1089 */;
-import RPCErrorDefault from "RPCError" /* 9420 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 11979 */;
+import RPCErrorDefault from "RPCError" /* 7239 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 12773 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4990 */;
-import FramesStore from "FramesStore" /* 6904 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
+import FramesStore from "FramesStore" /* 6956 */;
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(6585).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(6698).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, ComponentActions: closure_9, RPCCloseCodes: closure_10, RPCErrors: closure_11, RPCCommands: closure_12 } = Constants);
-const asLaunched = fn(6905).asLaunched;
+const asLaunched = fn(6957).asLaunched;
 let closure_14 = 10 * DurationsDefault.Millis.SECOND;
 const map = new Map();
 const map1 = new Map();
@@ -58,9 +58,9 @@ class PostMessageTransport extends EventEmitter {
           [tmp, tmp2] = item;
           const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
           const obj = closure_1_1(1252);
-          obj2.channel_id = closure_1_0(5063).getEmbeddedActivityLocationChannelId(tmp2.location);
-          const obj3 = closure_1_0(5063);
-          obj2.guild_id = closure_1_0(5063).getEmbeddedActivityLocationGuildId(tmp2.location);
+          obj2.channel_id = closure_1_0(5164).getEmbeddedActivityLocationChannelId(tmp2.location);
+          const obj3 = closure_1_0(5164);
+          obj2.guild_id = closure_1_0(5164).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj2.timeout_ms = timeout_ms;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj2);
         });
@@ -528,7 +528,7 @@ prototype["handleFrameTicketRefresh"] = function handleFrameTicketRefresh(contex
                     asyncGeneratorStep = tmp16;
                     const tmp18 = require("buildEmbeddedContext")(source);
                     closure_4 = tmp18;
-                    value2 = map2.get(iframeId.iframeId);
+                    const value2 = map2.get(iframeId.iframeId);
                     if (null != tmp16) {
                       if (null != tmp18) {
                         if (null != value2) {

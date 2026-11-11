@@ -1,18 +1,18 @@
-// === Module 6921: SearchMessageStore ===
+// === Module 6974: SearchMessageStore ===
 
-// Module 6921 (SearchMessageStore)
+// Module 6974 (SearchMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ReactionUtils from "ReactionUtils" /* 5086 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6198 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6581 */;
+import ReactionUtils from "ReactionUtils" /* 5187 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6311 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6694 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4991 */;
-import RelationshipStore from "RelationshipStore" /* 5084 */;
+import ChannelStore from "ChannelStore" /* 5092 */;
+import RelationshipStore from "RelationshipStore" /* 5185 */;
 
 require = fn;
 function handleReaction(optimistic) {
-  let colors = optimistic;
+  colors = optimistic;
   ({ messageId, emoji } = optimistic);
   ({ type, userId, channelId } = optimistic);
   if (obj.shouldApplyReaction(optimistic)) {

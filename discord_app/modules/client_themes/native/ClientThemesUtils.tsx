@@ -1,20 +1,20 @@
-// === Module 5310: client_themes/ClientThemesUtils ===
+// === Module 5423: client_themes/ClientThemesUtils ===
 
-// Module 5310 (client_themes/ClientThemesUtils)
+// Module 5423 (client_themes/ClientThemesUtils)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import ColorUtils from "ColorUtils" /* 5139 */;
-import utils_ColorDefault from "utils/Color" /* 5140 */;
-import shared from "shared" /* 5149 */;
-import OverlayOpacityMultiplier from "OverlayOpacityMultiplier" /* 5311 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5312 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5368 */;
-import useThemeDefault from "useTheme" /* 5371 */;
+import ColorUtils from "ColorUtils" /* 5240 */;
+import utils_ColorDefault from "utils/Color" /* 5241 */;
+import shared from "shared" /* 5250 */;
+import OverlayOpacityMultiplier from "OverlayOpacityMultiplier" /* 5424 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5425 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5481 */;
+import useThemeDefault from "useTheme" /* 5484 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5166 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5267 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 
 require = fn;
@@ -187,7 +187,7 @@ export function getClientThemesGradientHexColors(colors) {
 export function getGradientHexColors(gradientPreset) {
   if (gradientPreset.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
     const colors1 = gradientPreset.colors;
-    let colors = colors1.map((item) => nativeDefault.unsafe_rawColors[item.token]);
+    colors = colors1.map((item) => nativeDefault.unsafe_rawColors[item.token]);
   } else {
     colors = gradientPreset.customThemeSettings.colors;
   }
@@ -220,7 +220,7 @@ export function getGradientThemeMetadata(gradientThemeFromFlags, gradient) {
         tmp3 = tmp16;
       }
       if (gradient.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
-        const colors = gradient.colors;
+        colors = gradient.colors;
         let mapped = colors.map((item) => nativeDefault.unsafe_rawColors[item.token]);
       } else {
         mapped = gradient.customThemeSettings.colors;

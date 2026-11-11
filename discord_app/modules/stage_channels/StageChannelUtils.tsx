@@ -1,17 +1,17 @@
-// === Module 8019: StageChannelUtils ===
+// === Module 6848: StageChannelUtils ===
 
-// Module 8019 (StageChannelUtils)
+// Module 6848 (StageChannelUtils)
 import apply from "apply" /* 12 */;
 import util from "util" /* 1113 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5079 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6175 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5895 */;
-import StageInstanceStore from "StageInstanceStore" /* 4996 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5180 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
+import StageInstanceStore from "StageInstanceStore" /* 5097 */;
 
 require = fn;
-const constants = fn(6766).RequestToSpeakPermissionStates;
+const constants = fn(6843).RequestToSpeakPermissionStates;
 const Permissions = fn(1072).Permissions;
-const RowType = fn(8020).RowType;
+const RowType = fn(6849).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");
 
@@ -38,7 +38,7 @@ export function fillChunk(arg0, arg1, arg2) {
   }, []);
 }
 export function summarizeUsernamesParticipating(arg0, arg1, arg2, arg3) {
-  let length = arg3;
+  length = arg3;
   const first = arg1[0];
   let obj = dependencyMap;
   const name = NicknameUtilsDefault.getName(arg0, arg2, first);
@@ -61,7 +61,7 @@ export function summarizeUsernamesParticipating(arg0, arg1, arg2, arg3) {
   }
 }
 export function summarizeUsernamesParticipatingWithSpeakerNickname(arg0, name, arg2) {
-  let length = arg2;
+  length = arg2;
   if (arg2 == null) {
     length = arg0.length;
   }

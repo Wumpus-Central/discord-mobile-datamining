@@ -1,6 +1,6 @@
-// === Module 14899: PlayStationLinkConstants ===
+// === Module 7527: PlayStationLinkConstants ===
 
-// Module 14899 (PlayStationLinkConstants)
+// Module 7527 (PlayStationLinkConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkConstants.tsx");
