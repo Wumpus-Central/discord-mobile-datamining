@@ -291,7 +291,7 @@ if (tmp6) {
     closure_9 = platform.model || "";
     closure_6 = platform.platformVersion || "";
     const fullVersionList = platform.fullVersionList;
-    let length;
+    length = undefined;
     if (fullVersionList != null) {
       length = fullVersionList.length;
     }
@@ -308,7 +308,7 @@ if (tmp6) {
     closure_9 = platform.model || "";
     closure_6 = platform.platformVersion || "";
     const fullVersionList = platform.fullVersionList;
-    let length;
+    length = undefined;
     if (fullVersionList != null) {
       length = fullVersionList.length;
     }

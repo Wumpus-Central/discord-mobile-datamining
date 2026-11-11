@@ -1,127 +1,26 @@
 // === Module 4569: ? ===
 
 // Module 4569
-import module_4570_mod from "module_4570" /* 4570 */;
-import module_4571_mod from "module_4571" /* 4571 */;
-import _typeof_mod from "module_4422" /* 4422 */;
-import requiredArgs_mod from "requiredArgs" /* 4423 */;
-import module_4426_mod from "module_4426" /* 4426 */;
+let closure_0 = { lessThanXSeconds: { one: "moins d\u2019une seconde", other: "moins de {{count}} secondes" }, xSeconds: { one: "1 seconde", other: "{{count}} secondes" }, halfAMinute: "30 secondes", lessThanXMinutes: { one: "moins d\u2019une minute", other: "moins de {{count}} minutes" }, xMinutes: { one: "1 minute", other: "{{count}} minutes" }, aboutXHours: { one: "environ 1 heure", other: "environ {{count}} heures" }, xHours: { one: "1 heure", other: "{{count}} heures" }, xDays: { one: "1 jour", other: "{{count}} jours" }, aboutXWeeks: { one: "environ 1 semaine", other: "environ {{count}} semaines" }, xWeeks: { one: "1 semaine", other: "{{count}} semaines" }, aboutXMonths: { one: "environ 1 mois", other: "environ {{count}} mois" }, xMonths: { one: "1 mois", other: "{{count}} mois" }, aboutXYears: { one: "environ 1 an", other: "environ {{count}} ans" }, xYears: { one: "1 an", other: "{{count}} ans" }, overXYears: { one: "plus d\u2019un an", other: "plus de {{count}} ans" }, almostXYears: { one: "presqu\u2019un an", other: "presque {{count}} ans" } };
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `il y a ${tmp}`;
         }
-        return str;
+        text = `dans ${tmp}`;
       }
     }
-    str = typeof arg0;
-  };
-}
-let module_4570 = module_4570_mod;
-if (!module_4570) {
-  const obj = { default: module_4570 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4570;
-}
-module_4570 = tmp3;
-let module_4571 = module_4571_mod;
-if (!module_4571) {
-  const obj2 = { default: module_4571 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4571;
-}
-module_4571 = tmp5;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj3 = { default: _typeof };
-  let tmp7 = obj3;
-} else {
-  tmp7 = _typeof;
-}
-_typeof = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-let module_4426 = module_4426_mod;
-if (!module_4426) {
-  const obj5 = { default: module_4426 };
-  let tmp11 = obj5;
-} else {
-  tmp11 = module_4426;
-}
-module_4426 = tmp11;
-
-export default function add(arg0, years) {
-  requiredArgs.default(2, arguments);
-  if (years) {
-    if ("object" === _typeof(years)) {
-      let num = 0;
-      if (years.years) {
-        num = module_4426.default(years.years);
-      }
-      let num2 = 0;
-      if (years.months) {
-        num2 = module_4426.default(years.months);
-      }
-      let num3 = 0;
-      if (years.weeks) {
-        num3 = module_4426.default(years.weeks);
-      }
-      let num4 = 0;
-      if (years.days) {
-        num4 = module_4426.default(years.days);
-      }
-      let num5 = 0;
-      if (years.hours) {
-        num5 = module_4426.default(years.hours);
-      }
-      let num6 = 0;
-      if (years.minutes) {
-        num6 = module_4426.default(years.minutes);
-      }
-      let num7 = 0;
-      if (years.seconds) {
-        num7 = module_4426.default(years.seconds);
-      }
-      const defaultResult1 = _typeof.default(arg0);
-      if (num2) {
-        let defaultResult2 = module_4571.default(defaultResult1, num2 + 12 * num);
-      } else {
-        defaultResult2 = defaultResult1;
-      }
-      if (num4) {
-        let defaultResult3 = module_4570.default(defaultResult2, num4 + 7 * num3);
-      } else {
-        defaultResult3 = defaultResult2;
-      }
-      const _Date = Date;
-      const sum = num7 + 60 * (num6 + 60 * num5);
-      const date = new Date(defaultResult3.getTime() + 1000 * sum);
-      return date;
-    }
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
   }
-  return new Date(NaN);
 };
 export default exports.default;

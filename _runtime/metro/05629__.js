@@ -1,40 +1,19 @@
 // === Module 5629: ? ===
 
 // Module 5629
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop_mod from "module_19" /* 19 */;
+import ComposedGestureName from "ComposedGestureName" /* 5597 */;
+import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5606 */;
+import _mod5623 from "module_5623" /* 5623 */;
 
-let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
-let noop = fn(19);
-const forwardRef = noop.forwardRef;
-({ useMemo: closure_6, memo } = noop);
-let noop = noop_mod;
-const jsx = fn(21).jsx;
-try {
-  const FlashList = fn(5630);
-  const memoResult = memo(forwardRef((focusHook, ref) => {
-    focusHook = focusHook.focusHook;
-    const scrollEventsHandlersHook = focusHook.scrollEventsHandlersHook;
-    const enableFooterMarginAdjustment = focusHook.enableFooterMarginAdjustment;
-    closure_6(() => {
-      if (!FlashList) {
-        throw "You need to install FlashList first, `yarn install @shopify/flash-list`";
-      }
-    }, []);
-    items = [focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment];
-    const tmp = _objectWithoutProperties(focusHook, enableFooterMarginAdjustment);
-    let merged = Object.assign(tmp);
-    return <FlashList.FlashList ref={ref} renderScrollComponent={closure_6(() => forwardRef((arg0, ref) => {
-      const merged = Object.assign(arg0, Object.assign({ data: 0 }));
-      const obj = { ref };
-      const merged1 = Object.assign(merged);
-      obj.focusHook = focusHook;
-      obj.scrollEventsHandlersHook = scrollEventsHandlersHook;
-      obj.enableFooterMarginAdjustment = enableFooterMarginAdjustment;
-      return jsx(focusHook(scrollEventsHandlersHook[4]), { ref });
-    }), items)} />;
-  }));
-  exports.default = memoResult;
-  exports.BottomSheetFlashList = memoResult;
-} catch (err) {
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
+
+export function useFlingGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5623.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
 }

@@ -148,8 +148,8 @@ let obj = {
                                   if (charCodeAtResult >= 55296) {
                                     if (charCodeAtResult < 57344) {
                                       sum = num + 1;
-                                      let tmp18 = 1023 & charCodeAtResult;
-                                      let sum1 = 65536 + (tmp18 << 10 | 1023 & substr.charCodeAt(sum));
+                                      let tmp12 = 1023 & charCodeAtResult;
+                                      let sum1 = 65536 + (tmp12 << 10 | 1023 & substr.charCodeAt(sum));
                                       items[items.length] = items[240 | sum1 >> 18] + items[128 | sum1 >> 12 & 63] + items[128 | sum1 >> 6 & 63] + items[128 | 63 & sum1];
                                     }
                                   }
@@ -202,7 +202,6 @@ let obj = {
     return "[object RegExp]" === (typeof call === "unknown" ? toString() : call(arg0));
   },
   maybeMap(parts1, fn) {
-    let length;
     if (isArray(parts1)) {
       items = [];
       let num = 0;

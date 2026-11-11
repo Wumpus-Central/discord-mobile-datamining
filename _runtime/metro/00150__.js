@@ -110,7 +110,7 @@ const items = [
         const typeError1 = new TypeError("Failed to execute 'substringData' on 'CharacterData': The offset " + arg0 + " is greater than the node's length (" + data.length + ").");
         throw typeError1;
       } else {
-        let length = arg1;
+        length = arg1;
         if (arg1 < 0) {
           length = data.length;
         }

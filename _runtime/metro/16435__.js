@@ -1,49 +1,84 @@
 // === Module 16435: ? ===
 
 // Module 16435
-import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 16436 */;
-import compareKV from "compareKV" /* 16437 */;
-import likelySubtags from "likelySubtags" /* 16440 */;
-import _mod16441 from "module_16441" /* 16441 */;
-import e_mod from "e" /* 1159 */;
+import _mod16400 from "module_16400" /* 16400 */;
+import _mod16420 from "module_16420" /* 16420 */;
 
-const require = globalThis.__r;
 
-let e = e_mod;
-e.__exportStar(emitUnicodeLanguageId, exports);
-let e = e_mod;
-e.__exportStar(_mod16441, exports);
-let e = e_mod;
-e.__exportStar(likelySubtags, exports);
-
-export function getCanonicalLocales(items) {
-  if (undefined === items) {
-    items = [];
+export default (arg0, arg1) => {
+  obj = new obj(16429)(arg0, arg1);
+  const tmp3 = new obj(16400)("0.0.0");
+  if (obj.test(tmp3)) {
+    return tmp3;
   } else {
-    let arr3 = items;
-    if (typeof items === "string") {
-      const items1 = [items];
-      arr3 = items1;
-    }
-    const items2 = [];
-    let num3 = 0;
-    items = items2;
-    if (0 < arr3.length) {
-      do {
-        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require("module_16439").parseUnicodeLocaleId(arr3[num3])));
-        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
-          let arr = items2.push(emitUnicodeLocaleIdResult);
+    const tmp6 = new tmp(16400)("0.0.0-0");
+    if (obj.test(tmp6)) {
+      return tmp6;
+    } else {
+      let num = 0;
+      let num3 = 0;
+      let tmp9 = null;
+      let tmp10 = null;
+      if (0 < obj.set.length) {
+        do {
+          let arr = obj.set[num3];
+          obj = null;
+          let item = arr.forEach((semver) => {
+            obj = new _mod16400(semver.semver.version);
+            const operator = semver.operator;
+            if (">" === operator) {
+              if (0 === obj.prerelease.length) {
+                obj.patch = obj.patch + 1;
+              } else {
+                const prerelease = obj.prerelease;
+                prerelease.push(0);
+              }
+              obj.raw = obj.format();
+            } else {
+              if ("" !== operator) {
+                if (">=" !== operator) {
+                  if ("<" !== operator) {
+                    if ("<=" !== operator) {
+                      const _Error = Error;
+                      const _HermesInternal = HermesInternal;
+                      const error = new Error("Unexpected operation: " + semver.operator);
+                      throw error;
+                    }
+                  }
+                }
+              }
+              if (obj) {
+                !_mod16420(obj, obj);
+              }
+            }
+          });
+          let tmp13 = !obj;
+          let tmp14 = tmp9;
+          if (obj) {
+            let tmp16 = tmp14;
+            if (tmp14) {
+              tmp16 = !obj(16420)(tmp14, obj);
+            }
+            tmp13 = tmp16;
+          }
+          if (!tmp13) {
+            tmp14 = obj;
+          }
+          num3 = num + 1;
+          tmp9 = tmp14;
+          tmp10 = tmp14;
+          num = num3;
+        } while (num3 < obj.set.length);
+      }
+      let tmp20 = null;
+      if (tmp10) {
+        tmp20 = null;
+        if (obj.test(tmp10)) {
+          tmp20 = tmp10;
         }
-        num3 = num3 + 1;
-        items = items2;
-      } while (num3 < arr3.length);
+      }
+      return tmp20;
     }
   }
-  return items;
-}
-export const isStructurallyValidLanguageTag = require("module_16439").isStructurallyValidLanguageTag;
-export const isUnicodeLanguageSubtag = require("module_16439").isUnicodeLanguageSubtag;
-export const isUnicodeRegionSubtag = require("module_16439").isUnicodeRegionSubtag;
-export const isUnicodeScriptSubtag = require("module_16439").isUnicodeScriptSubtag;
-export const parseUnicodeLanguageId = require("module_16439").parseUnicodeLanguageId;
-export const parseUnicodeLocaleId = require("module_16439").parseUnicodeLocaleId;
+  tmp = obj;
+};

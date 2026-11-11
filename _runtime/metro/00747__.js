@@ -22,7 +22,7 @@ function isAttributeObject(value) {
 function attributeValueToTypedAttributeValue(value, flag) {
   let tmp = value;
   if (!isAttributeObject(value)) {
-    let obj = { value, unit: "r" };
+    let obj = { value, unit: "Array" };
     tmp = obj;
   }
   ({ value, unit } = tmp);

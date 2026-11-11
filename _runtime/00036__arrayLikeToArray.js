@@ -3,7 +3,7 @@
 // Module 36 (_arrayLikeToArray)
 
 export default function _arrayLikeToArray(arg0, arg1) {
-  let length = arg1;
+  length = arg1;
   if (tmp) {
     length = arg0.length;
   }

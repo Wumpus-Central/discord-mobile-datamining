@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 30, height: 30, scales: [2, 3], hash: "565bfab9e414d3cdf97ad89eaffbf2b3", name: "member_list_icon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 60, height: 60, scales: [2, 3], hash: "032ba055130436392254ce3ba39e9456", name: "gmail", type: "png" });

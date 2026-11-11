@@ -1,49 +1,71 @@
 // === Module 4621: ? ===
 
 // Module 4621
-import _typeof_mod from "module_4422" /* 4422 */;
-import endOfDay_mod from "endOfDay" /* 4622 */;
-import endOfMonth_mod from "endOfMonth" /* 4623 */;
-import requiredArgs_mod from "requiredArgs" /* 4423 */;
+import module_2196 from "module_2196" /* 2196 */;
+import module_2197 from "module_2197" /* 2197 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+if (!module_2196) {
+  const obj2 = { default: module_2196 };
+  let obj = obj2;
 } else {
-  tmp3 = _typeof;
+  obj = module_2196;
 }
-_typeof = tmp3;
-let endOfDay = endOfDay_mod;
-if (!endOfDay) {
-  const obj2 = { default: endOfDay };
-  let tmp5 = obj2;
+if (!module_2197) {
+  const obj4 = { default: module_2197 };
+  let obj3 = obj4;
 } else {
-  tmp5 = endOfDay;
+  obj3 = module_2197;
 }
-endOfDay = tmp5;
-let endOfMonth = endOfMonth_mod;
-if (!endOfMonth) {
-  const obj3 = { default: endOfMonth };
-  let tmp7 = obj3;
-} else {
-  tmp7 = endOfMonth;
-}
-endOfMonth = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-
-export default function isLastDayOfMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = endOfDay.default(defaultResult1).getTime();
-  const defaultResult2 = endOfDay.default(defaultResult1);
-  return time === endOfMonth.default(defaultResult1).getTime();
+const date = {
+  ordinalNumber: obj3.default({
+    matchPattern: /^(\d+)\.?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
+    }
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
 };
+const obj6 = { matchPatterns: { narrow: /^(f\.? ?Kr\.?|fvt\.?|e\.? ?Kr\.?|evt\.?)/i, abbreviated: /^(f\.? ?Kr\.?|fvt\.?|e\.? ?Kr\.?|evt\.?)/i, wide: /^(før Kristus|før vår tid|etter Kristus|vår tid)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items = [/^f/i, /^e/i];
+obj7.any = items;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](\.)? kvartal/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
+  }
+};
+const obj9 = { any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj9.any = items1;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[jfmasond]/i, abbreviated: /^(jan|feb|mars?|apr|mai|juni?|juli?|aug|sep|okt|nov|des)\.?/i, wide: /^(januar|februar|mars|april|mai|juni|juli|august|september|oktober|november|desember)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.narrow = items2;
+const items3 = [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^mai/i, /^jun/i, /^jul/i, /^aug/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.any = items3;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[smtofl]/i, short: /^(sø|ma|ti|on|to|fr|lø)/i, abbreviated: /^(søn|man|tir|ons|tor|fre|lør)/i, wide: /^(søndag|mandag|tirsdag|onsdag|torsdag|fredag|lørdag)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { any: null };
+const items4 = [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i];
+obj13.any = items4;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { narrow: /^(midnatt|middag|(på) (morgenen|ettermiddagen|kvelden|natten)|[ap])/i, any: /^([ap]\.?\s?m\.?|midnatt|middag|(på) (morgenen|ettermiddagen|kvelden|natten))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^a(\.?\s?m\.?)?$/i, pm: /^p(\.?\s?m\.?)?$/i, midnight: /^midn/i, noon: /^midd/i, morning: /morgen/i, afternoon: /ettermiddag/i, evening: /kveld/i, night: /natt/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
+
+export default date;
 export default exports.default;

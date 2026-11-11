@@ -9,7 +9,7 @@ export function parseCookie(arr) {
   if (0 < arr.length) {
     let index = arr.indexOf("=", num);
     while (-1 !== index) {
-      let length = arr.indexOf(";", num);
+      length = arr.indexOf(";", num);
       if (-1 === length) {
         length = arr.length;
       } else if (length < index) {

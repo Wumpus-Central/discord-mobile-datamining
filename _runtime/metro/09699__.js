@@ -1,7 +1,33 @@
 // === Module 9699: ? ===
 
 // Module 9699
-import registerAsset from "module_1119" /* 1119 */;
+const require = globalThis.__r;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c4c151d6ead96957c93181e4a41ea4b6", name: "ItchNeutralIcon", type: "png" });
+for (const key10013 in require("module_9700")) {
+  arg5[key10013] = require("module_9700")[key10013];
+  continue;
+}
+for (const key10017 in require("ReplacementModesAndroid")) {
+  arg5[key10017] = require("ReplacementModesAndroid")[key10017];
+  continue;
+}
+for (const key10021 in require("purchaseUpdatedListener")) {
+  arg5[key10021] = require("purchaseUpdatedListener")[key10021];
+  continue;
+}
+for (const key10025 in require("module_9714")) {
+  arg5[key10025] = require("module_9714")[key10025];
+  continue;
+}
+for (const key10029 in require("module_9715")) {
+  arg5[key10029] = require("module_9715")[key10029];
+  continue;
+}
+for (const key10033 in require("PurchaseError")) {
+  arg5[key10033] = require("PurchaseError")[key10033];
+  continue;
+}
+for (const key10037 in require("module_9716")) {
+  arg5[key10037] = require("module_9716")[key10037];
+  continue;
+}

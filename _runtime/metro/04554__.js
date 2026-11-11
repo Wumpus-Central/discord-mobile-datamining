@@ -1,14 +1,44 @@
 // === Module 4554: ? ===
 
 // Module 4554
-import module_2191 from "module_2191" /* 2191 */;
+import module_2189 from "module_2189" /* 2189 */;
+import module_2192 from "module_2192" /* 2192 */;
+import date_mod from "module_2193" /* 2193 */;
+import date_mod from "module_2195" /* 2195 */;
+import module_4555 from "module_4555" /* 4555 */;
 
-if (!module_2191) {
-  const obj2 = { default: module_2191 };
-  let obj = obj2;
+if (!module_2189) {
+  const obj = { default: module_2189 };
+  let tmp3 = obj;
 } else {
-  obj = module_2191;
+  tmp3 = module_2189;
+}
+if (!module_2192) {
+  const obj2 = { default: module_2192 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_2192;
+}
+let date = date_mod;
+if (!date) {
+  const obj3 = { default: date };
+  let tmp7 = obj3;
+} else {
+  tmp7 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+if (!module_4555) {
+  const obj5 = { default: module_4555 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_4555;
 }
 
-export default { date: obj.default({ formats: { full: "\u0E27\u0E31\u0E19EEEE\u0E17\u0E35\u0E48 do MMMM y", long: "do MMMM y", medium: "d MMM y", short: "dd/MM/yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss \u0E19. zzzz", long: "H:mm:ss \u0E19. z", medium: "H:mm:ss \u0E19.", short: "H:mm \u0E19." }, defaultWidth: "medium" }), dateTime: obj.default({ formats: { full: "{{date}} '\u0E40\u0E27\u0E25\u0E32' {{time}}", long: "{{date}} '\u0E40\u0E27\u0E25\u0E32' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
+export default { code: "en-GB", formatDistance: tmp3.default, formatLong: tmp11.default, formatRelative: tmp5.default, localize: tmp7.default, match: tmp9.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

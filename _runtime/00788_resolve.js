@@ -200,7 +200,6 @@ export function join() {
 }
 export { normalizePath };
 export function relative(root, replaced) {
-  let length;
   const arr = resolve(root);
   const str = resolve(root).slice(1);
   const arr2 = resolve(replaced);

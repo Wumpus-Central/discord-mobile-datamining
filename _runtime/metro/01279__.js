@@ -3,7 +3,6 @@
 // Module 1279
 
 export default function sha1(str) {
-  let length;
   if (typeof str === "string") {
     const _unescape = unescape;
     const _encodeURIComponent = encodeURIComponent;

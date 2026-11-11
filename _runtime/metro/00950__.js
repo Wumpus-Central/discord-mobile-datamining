@@ -3009,7 +3009,7 @@ function initInputObserver(sampling) {
               ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
               const _Object2 = window.Object;
               _Object2.defineProperty(closure_0, closure_1, obj);
-              return /* F81058 */ function() { ... };
+              return /* F81843 */ function() { ... };
             };
           };
         };
@@ -3191,7 +3191,7 @@ function initObservers(doc) {
       ({ mousemoveCb: drag, sampling, doc, mirror: fn3 } = doc);
       closure_2 = undefined;
       closure_3 = undefined;
-      let f81056;
+      let f81841;
       items = undefined;
       if (false === sampling.mousemove) {
         return () => {
@@ -3242,7 +3242,7 @@ function initObservers(doc) {
           closure_130_2 = {};
           closure_130_3 = null;
           closure_130_4 = 0;
-          f81056 = function() {
+          f81841 = function() {
             items = [...arguments];
             let self;
             const timestamp = Date.now();
@@ -4540,7 +4540,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F122795 */ function() { ... };
+                            return /* F124042 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -4606,7 +4606,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F122795 */ function() { ... };
+                            return /* F124042 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -5443,7 +5443,7 @@ function addBreadcrumbEvent(triggerUserActivity, category) {
       }
       obj.timestamp = 1000 * num;
       const obj2 = { tag: "breadcrumb", payload: null };
-      const normalizer = f122837(map[8]);
+      const normalizer = f124084(map[8]);
       obj2.payload = normalizer.normalize(_null, 10, 1000);
       obj.data = obj2;
       obj.throttledAddEvent(obj);
@@ -5607,7 +5607,7 @@ function getLargestContentfulPaint(arg0) {
   ({ value, rating } = arg0);
   const result = ((_mod681.browserPerformanceTimeOrigin() || _mod681.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   const obj2 = { type: "web-vital", name: "largest-contentful-paint", start: result, end: result, data: null };
-  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "fileBytes" };
+  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "exports" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((item) => {
@@ -5665,7 +5665,7 @@ function getInteractionToNextPaint(arg0) {
   ({ value, rating } = arg0);
   const result = ((_mod681.browserPerformanceTimeOrigin() || _mod681.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   const obj2 = { type: "web-vital", name: "interaction-to-next-paint", start: result, end: result, data: null };
-  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "fileBytes" };
+  const obj3 = { value, size: value, rating, nodeIds: null, attributions: "exports" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((item) => {
@@ -6173,7 +6173,7 @@ function mergeWarning(_meta, arg1) {
     _meta._meta = headers;
     return _meta;
   } else {
-    const obj2 = { headers, size: "Array", _meta: "png" };
+    const obj2 = { headers, size: "Array", _meta: "Array" };
     const obj3 = { warnings: null };
     const items1 = [arg1];
     obj3.warnings = items1;
@@ -6251,7 +6251,7 @@ function buildNetworkRequestOrResponse(headers, size, body) {
         }
         return { body };
       })(body));
-      let length;
+      length = undefined;
       if (warnings != null) {
         length = warnings.length;
       }
@@ -6532,7 +6532,7 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                             }
                             return { body };
                           })(tmp20));
-                          let length;
+                          length = undefined;
                           if (warnings != null) {
                             length = warnings.length;
                           }
@@ -6612,7 +6612,7 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                         tmp23._meta = obj11;
                         let obj14 = tmp23;
                       } else {
-                        obj14 = { headers: obj11, size: "Array", _meta: "png" };
+                        obj14 = { headers: obj11, size: "Array", _meta: "Array" };
                         const obj16 = { warnings: null };
                         const items1 = [tmp21];
                         obj16.warnings = items1;
@@ -6782,7 +6782,7 @@ let closure_160 = async function _getResponseInfo2(arg0) {
         closure_132_10 = (function getResponseData(arg0, responseBodySize) {
           responseBodySize = responseBodySize.responseBodySize;
           try {
-            let length;
+            length = undefined;
             if (arg0 != null) {
               length = arg0.length;
             }
@@ -7182,7 +7182,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                               }
                               return { body };
                             })(tmp13));
-                            let length;
+                            length = undefined;
                             if (warnings != null) {
                               length = warnings.length;
                             }
@@ -7390,7 +7390,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                             tmp22._meta = obj9;
                             let obj10 = tmp22;
                           } else {
-                            obj10 = { headers: obj9, size: "Array", _meta: "png" };
+                            obj10 = { headers: obj9, size: "Array", _meta: "Array" };
                             const obj11 = { warnings: null };
                             let items2 = [tmp17];
                             obj11.warnings = items2;
@@ -7408,7 +7408,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                           tmp18._meta = obj12;
                           let obj13 = tmp18;
                         } else {
-                          obj13 = { headers: obj12, size: "Array", _meta: "png" };
+                          obj13 = { headers: obj12, size: "Array", _meta: "Array" };
                           const obj14 = { warnings: null };
                           let items4 = [tmp14];
                           obj14.warnings = items4;
@@ -8031,7 +8031,7 @@ let closure_171 = async function _sendReplayRequest(arg0) {
               if (typeof str === "string") {
                 const _TextEncoder = TextEncoder;
                 const encoder = new TextEncoder();
-                let length = encoder.encode(str).length;
+                length = encoder.encode(str).length;
               } else {
                 length = str.length;
               }
@@ -8839,7 +8839,6 @@ let closure_82 = (() => {
       };
       this.emit = () => {
         let head;
-        let length;
         let tmp = items;
         if (!items.frozen) {
           if (!tmp.locked) {
@@ -9276,7 +9275,7 @@ let closure_82 = (() => {
                     addedSet2.delete(childNodes);
                     childNodes = childNodes.childNodes;
                     if (childNodes != null) {
-                      let item = childNodes.forEach(/* F81062 */ function() { ... });
+                      let item = childNodes.forEach(/* F81847 */ function() { ... });
                     }
                     const droppedSet = arr2.droppedSet;
                     droppedSet.add(childNodes);
@@ -9389,7 +9388,7 @@ let closure_82 = (() => {
                     movedSet2.delete(childNodes);
                     const childNodes1 = childNodes.childNodes;
                     if (childNodes1 != null) {
-                      const item1 = childNodes1.forEach(/* F81062 */ function() { ... });
+                      const item1 = childNodes1.forEach(/* F81847 */ function() { ... });
                     }
                   }
                   const mapRemoves = arr2.mapRemoves;

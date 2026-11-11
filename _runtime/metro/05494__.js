@@ -1,135 +1,177 @@
 // === Module 5494: ? ===
 
 // Module 5494
-import tagMessage from "tagMessage" /* 5426 */;
-import validateHitSlop from "validateHitSlop" /* 5454 */;
-import reanimatedWrapper from "reanimatedWrapper" /* 5466 */;
-import reanimatedUtils from "reanimatedUtils" /* 5482 */;
-import allowedNativeProps2 from "allowedNativeProps" /* 5483 */;
-import eventUtils from "eventUtils" /* 5495 */;
-import _slicedToArray from "module_32" /* 32 */;
+import HapticFeedbackTypes from "HapticFeedbackTypes" /* 5495 */;
+import RNHapticFeedbackDefault from "RNHapticFeedback" /* 5496 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = fn;
-function resolveInternalConfigProps(disableReanimated) {
-  if (tmp3) {
-    disableReanimated.disableReanimated = true;
-  }
-  let useAnimated = disableReanimated.useAnimated;
-  if (!useAnimated) {
-    useAnimated = eventUtils.isNativeAnimatedEvent(disableReanimated.onUpdate);
-    const tmpResult = eventUtils;
-  }
-  disableReanimated.dispatchesAnimatedEvents = useAnimated;
-  if (disableReanimated.dispatchesAnimatedEvents) {
-    disableReanimated.disableReanimated = true;
-  }
-  disableReanimated = disableReanimated.disableReanimated;
-  let result = !disableReanimated;
-  if (!disableReanimated) {
-    result = undefined !== reanimatedWrapper.Reanimated;
-  }
-  if (result) {
-    result = reanimatedUtils.hasWorkletEventHandlers(disableReanimated);
-    const tmpResult3 = reanimatedUtils;
-  }
-  if (result) {
-    result = !disableReanimated.dispatchesAnimatedEvents;
-  }
-  disableReanimated.shouldUseReanimatedDetector = result;
-  tmp3 = tagMessage.isTestEnv() && undefined === disableReanimated.disableReanimated;
-  disableReanimated.needsPointerData = eventUtils.shouldHandleTouchEvents(disableReanimated);
-  const tmpResult4 = eventUtils;
-}
-const useMemo = fn(19).useMemo;
-const map = new Map();
-function DEFAULT_PROPS_TRANSFORMER(arg0) {
-  return arg0;
-}
-function isGestureEnabled(gestures) {
-  if (obj.isComposedGesture(gestures)) {
-    gestures = gestures.gestures;
-    let someResult = gestures.some(isGestureEnabled);
-  } else {
-    someResult = false !== reanimatedUtils.maybeUnpackValue(gestures.config.enabled);
-    const tmpResult = reanimatedUtils;
-  }
-  return someResult;
-}
+require = arg1;
+let closure_4 = { [arg1(5495).HapticFeedbackTypes.impactLight]: 0.3, [arg1(5495).HapticFeedbackTypes.impactMedium]: 0.6, [arg1(5495).HapticFeedbackTypes.impactHeavy]: 0.8, [arg1(5495).HapticFeedbackTypes.rigid]: 1, [arg1(5495).HapticFeedbackTypes.soft]: 0.1, [arg1(5495).HapticFeedbackTypes.selection]: 0.3 };
+let closure_5 = { enableVibrateFallback: false, ignoreAndroidSystemSettings: false };
+let global = true;
 
-export { isGestureEnabled };
-export { resolveInternalConfigProps };
-export function prepareConfigForNativeSide(c0, shouldUseReanimatedDetector) {
-  const result = allowedNativeProps2.applyProductionTestIDFilter();
-  shouldUseReanimatedDetector = shouldUseReanimatedDetector.shouldUseReanimatedDetector;
-  if (shouldUseReanimatedDetector) {
-    shouldUseReanimatedDetector = !reanimatedUtils.maybeUnpackValue(shouldUseReanimatedDetector.runOnJS);
-    const tmp2Result = reanimatedUtils;
-  }
-  const obj2 = { dispatchesReanimatedEvents: shouldUseReanimatedDetector };
-  const PropsWhiteLists = allowedNativeProps2.PropsWhiteLists;
-  let EMPTY_WHITE_LIST = PropsWhiteLists.get(c0);
-  if (EMPTY_WHITE_LIST == null) {
-    EMPTY_WHITE_LIST = allowedNativeProps2.EMPTY_WHITE_LIST;
-  }
-  const entries = Object.entries(shouldUseReanimatedDetector);
-  while (tmp11 !== undefined) {
-    [first, tmp17] = tmp12;
-    let tmp16 = first;
-    let allowedNativeProps = allowedNativeProps2.allowedNativeProps;
-    if (!allowedNativeProps.has(first)) {
-      if (!EMPTY_WHITE_LIST.has(tmp16)) {
-        let PropsToFilter = allowedNativeProps2.PropsToFilter;
-        if (PropsToFilter.has(tmp16)) {
-          continue;
-        } else {
-          let _console = console;
-          let tmp19Result = tagMessage;
-          let _HermesInternal = HermesInternal;
-          let str = "";
-          let str2 = " is not a valid property for ";
-          let str3 = " and will be ignored.";
-          let warnResult = console.warn(tmp19Result.tagMessage("" + tmp16 + " is not a valid property for " + c0 + " and will be ignored."));
-          continue;
-        }
-        continue;
+export default {
+  setEnabled(arg0) {
+    global = arg0;
+  },
+  isEnabled() {
+    return global;
+  },
+  trigger() {
+    let selection = arg0;
+    if (arg0 === undefined) {
+      selection = HapticFeedbackTypes.HapticFeedbackTypes.selection;
+    }
+    let obj = arg1;
+    if (arg1 === undefined) {
+      obj = {};
+    }
+    if (global) {
+      try {
+        const obj3 = {};
+        const merged = Object.assign(closure_5);
+        const merged1 = Object.assign(obj);
+        RNHapticFeedbackDefault.trigger(selection, obj3);
+      } catch (tmp12) {
+        const _console = console;
+        console.warn("RNReactNativeHapticFeedback: trigger failed \u2013", tmp12);
       }
     }
-    let tmp19Result3 = reanimatedUtils;
-    let maybeUnpackValueResult = tmp19Result3.maybeUnpackValue(tmp17);
-    if ("hitSlop" === tmp16) {
-      let tmp19Result4 = validateHitSlop;
-      let normalizeHitSlopResult = tmp19Result4.normalizeHitSlop(maybeUnpackValueResult);
+  },
+  stop() {
+    if (global) {
+      try {
+        RNHapticFeedbackDefault.stop();
+      } catch (tmp4) {
+        const _console = console;
+        console.warn("RNReactNativeHapticFeedback: stop failed \u2013", tmp4);
+      }
+    }
+  },
+  isSupported() {
+    try {
+      return RNHapticFeedbackDefault.isSupported();
+    } catch (err) {
+      return false;
+    }
+  },
+  triggerPattern(arg0) {
+    let obj = arg1;
+    if (arg1 === undefined) {
+      obj = {};
+    }
+    if (global) {
+      try {
+        const obj3 = {};
+        const merged = Object.assign(closure_5);
+        const merged1 = Object.assign(obj);
+        RNHapticFeedbackDefault.triggerPattern(arg0, obj3);
+      } catch (tmp11) {
+        const _console = console;
+        console.warn("RNReactNativeHapticFeedback: triggerPattern failed \u2013", tmp11);
+      }
+    }
+  },
+  playAHAP(arg0) {
+    if (global) {
+      try {
+        return RNHapticFeedbackDefault.playAHAP(arg0);
+      } catch (err) {
+        return Promise.resolve();
+      }
     } else {
-      normalizeHitSlopResult = maybeUnpackValueResult;
+      return Promise.resolve();
     }
-    obj2[tmp16] = normalizeHitSlopResult;
-  }
-  return obj2;
-}
-export function useClonedAndRemappedConfig(gestureHandlerProps) {
-  closure_0 = gestureHandlerProps;
-  let tmp = map;
-  if (map === undefined) {
-    tmp = map;
-  }
-  closure_1 = tmp;
-  let tmp2 = transformHoverProps;
-  if (transformHoverProps === undefined) {
-    tmp2 = DEFAULT_PROPS_TRANSFORMER;
-  }
-  closure_2 = tmp2;
-  items = [gestureHandlerProps, tmp, tmp2];
-  return useMemo(() => {
-    const obj = {};
-    const merged = Object.assign(closure_0);
-    const item = closure_1.forEach((item, index) => {
-      if (index in obj) {
-        obj[item] = obj[index];
-        delete tmp[tmp2];
+  },
+  impact() {
+    let impactMedium = arg0;
+    if (arg0 === undefined) {
+      impactMedium = HapticFeedbackTypes.HapticFeedbackTypes.impactMedium;
+    }
+    let obj = arg2;
+    if (arg2 === undefined) {
+      obj = {};
+    }
+    if (global) {
+      let num2 = closure_4[impactMedium];
+      if (num2 == null) {
+        num2 = 0.5;
       }
-    });
-    const tmp3 = closure_2(obj);
-    resolveInternalConfigProps(tmp3);
-    return tmp3;
-  }, items);
-}
+      const _Math = Math;
+      const _Math2 = Math;
+      try {
+        const obj3 = { time: 0, intensity: tmp7, sharpness: num2 };
+        items = [obj3];
+        const obj4 = {};
+        const merged = Object.assign(closure_5);
+        const merged1 = Object.assign(obj);
+        RNHapticFeedbackDefault.triggerPattern(items, obj4);
+      } catch (tmp17) {
+        const _console = tmp.console;
+        _console.warn("RNReactNativeHapticFeedback: impact failed \u2013", tmp17);
+      }
+    }
+  },
+  getSystemHapticStatus() {
+    return (async () => {
+      if (c0 === 2) {
+        c0 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp5 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c0 = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              c0 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c0 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              c2 = 1;
+              c1 = 2;
+              c0 = 1;
+              const obj5 = { value: RNHapticFeedbackDefault.getSystemHapticStatus(), done: false };
+              return obj5;
+            }
+          } else if (1 === tmp6) {
+            c2 = 0;
+            c0 = 3;
+            const obj6 = { value: { vibrationEnabled: false, ringerMode: null }, done: true };
+            return obj6;
+          } else if (arg0 === 1) {
+            c0 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c2 = 0;
+            c0 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            c2 = 0;
+            c0 = 3;
+            const obj = { value, done: true };
+            return obj;
+          }
+        } catch (tmp9) {
+          if (tmp3 === c2) {
+            c0 = tmp2;
+            throw tmp9;
+          } else {
+            c1 = tmp;
+          }
+        }
+      }
+    })();
+  }
+};

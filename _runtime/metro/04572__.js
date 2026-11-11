@@ -1,119 +1,50 @@
 // === Module 4572: ? ===
 
 // Module 4572
-import module_4573_mod from "module_4573" /* 4573 */;
-import _typeof_mod from "module_4422" /* 4422 */;
-import module_4426_mod from "module_4426" /* 4426 */;
-import requiredArgs_mod from "requiredArgs" /* 4423 */;
-import module_4574_mod from "module_4574" /* 4574 */;
-import module_4575_mod from "module_4575" /* 4575 */;
+import module_2194 from "module_2194" /* 2194 */;
 
-let module_4573 = module_4573_mod;
-if (!module_4573) {
-  const obj = { default: module_4573 };
-  let tmp3 = obj;
+if (!module_2194) {
+  const obj2 = { default: module_2194 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4573;
+  obj = module_2194;
 }
-module_4573 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  let obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let module_4426 = module_4426_mod;
-if (!module_4426) {
-  const obj3 = { default: module_4426 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4426;
-}
-module_4426 = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-let module_4574 = module_4574_mod;
-if (!module_4574) {
-  const obj5 = { default: module_4574 };
-  let tmp11 = obj5;
-} else {
-  tmp11 = module_4574;
-}
-module_4574 = tmp11;
-let module_4575 = module_4575_mod;
-if (!module_4575) {
-  const obj6 = { default: module_4575 };
-  let tmp13 = obj6;
-} else {
-  tmp13 = module_4575;
-}
-module_4575 = tmp13;
-
-export default function addBusinessDays(arg0, arg1) {
-  let diff;
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  let obj2 = module_4573;
-  let defaultResult2 = module_4573.default(defaultResult1);
-  const defaultResult3 = module_4426.default(arg1);
-  if (isNaN(defaultResult3)) {
-    const _Date = Date;
-    const date = new Date(NaN);
-    return date;
-  } else {
-    let num3 = 1;
-    const hours = defaultResult1.getHours();
-    if (defaultResult3 < 0) {
-      num3 = -1;
+const date = {
+  ordinalNumber(arg0, unit) {
+    const NumberResult = Number(arg0);
+    if (null != unit) {
+      unit = unit.unit;
     }
-    defaultResult1.setDate(defaultResult1.getDate() + 7 * module_4426.default(defaultResult3 / 5));
-    const _Math = Math;
-    let absolute = Math.abs(defaultResult3 % 5);
-    if (absolute > 0) {
-      do {
-        let setDateResult1 = defaultResult1.setDate(defaultResult1.getDate() + num3);
-        diff = absolute;
-        if (!module_4573.default(defaultResult1)) {
-          diff = absolute - 1;
+    if (0 === NumberResult) {
+      return "0";
+    } else {
+      let str = "\u00E8me";
+      if (1 === NumberResult) {
+        let str3 = "er";
+        if (unit) {
+          items = ["year", "week", "hour", "minute", "second"];
+          str3 = "er";
+          if (items.includes(unit)) {
+            str3 = "\u00E8re";
+          }
         }
-        absolute = diff;
-        obj2 = module_4573;
-      } while (diff > 0);
-    }
-    if (defaultResult2) {
-      defaultResult2 = obj2.default(defaultResult1);
-    }
-    if (defaultResult2) {
-      defaultResult2 = 0 !== defaultResult3;
-    }
-    if (defaultResult2) {
-      if (module_4575.default(defaultResult1)) {
-        let num6 = -1;
-        if (num3 < 0) {
-          num6 = 2;
-        }
-        defaultResult1.setDate(defaultResult1.getDate() + num6);
-        const date1 = defaultResult1.getDate();
+        str = str3;
       }
-      if (module_4574.default(defaultResult1)) {
-        let num7 = -2;
-        if (num3 < 0) {
-          num7 = 1;
-        }
-        defaultResult1.setDate(defaultResult1.getDate() + num7);
-        const date2 = defaultResult1.getDate();
-      }
+      return NumberResult + str;
     }
-    defaultResult1.setHours(hours);
-    return defaultResult1;
-  }
+  },
+  era: obj.default({ values: { narrow: ["av. J.-C", "ap. J.-C"], abbreviated: ["av. J.-C", "ap. J.-C"], wide: ["avant J\u00E9sus-Christ", "apr\u00E8s J\u00E9sus-Christ"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["T1", "T2", "T3", "T4"], abbreviated: ["1er trim.", "2\u00E8me trim.", "3\u00E8me trim.", "4\u00E8me trim."], wide: ["1er trimestre", "2\u00E8me trimestre", "3\u00E8me trimestre", "4\u00E8me trimestre"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    }
+  }),
+  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["janv.", "f\u00E9vr.", "mars", "avr.", "mai", "juin", "juil.", "ao\u00FBt", "sept.", "oct.", "nov.", "d\u00E9c."], wide: ["janvier", "f\u00E9vrier", "mars", "avril", "mai", "juin", "juillet", "ao\u00FBt", "septembre", "octobre", "novembre", "d\u00E9cembre"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["D", "L", "M", "M", "J", "V", "S"], short: ["di", "lu", "ma", "me", "je", "ve", "sa"], abbreviated: ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."], wide: ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "AM", pm: "PM", midnight: "minuit", noon: "midi", morning: "mat.", afternoon: "ap.m.", evening: "soir", night: "mat." }, abbreviated: { am: "AM", pm: "PM", midnight: "minuit", noon: "midi", morning: "matin", afternoon: "apr\u00E8s-midi", evening: "soir", night: "matin" }, wide: { am: "AM", pm: "PM", midnight: "minuit", noon: "midi", morning: "du matin", afternoon: "de l\u2019apr\u00E8s-midi", evening: "du soir", night: "du matin" } }, defaultWidth: "wide" })
 };
+
+export default date;
 export default exports.default;

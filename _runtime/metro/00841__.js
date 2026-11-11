@@ -889,7 +889,7 @@ let closure_6 = async function _instrumentStream(arg0) {
                   const _JSON = JSON;
                   closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(closure_136_2.finishReasons);
                 }
-                let length = closure_136_1;
+                length = closure_136_1;
                 if (closure_136_1) {
                   length = closure_136_2.responseTexts.length;
                 }

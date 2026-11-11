@@ -1,9 +1,7 @@
 // === Module 4513: ? ===
 
 // Module 4513
-let closure_0 = { lastWeek: "'afgelopen' eeee 'om' p", yesterday: "'gisteren om' p", today: "'vandaag om' p", tomorrow: "'morgen om' p", nextWeek: "eeee 'om' p", other: "P" };
+import registerAsset from "module_1119" /* 1119 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
-export default exports.default;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2Nvbm5lY3RlZF9hcHBz", scales: [1], hash: "9f3e725a81738595b34c0491084c0bf1", name: "vi.messages.9f3e725a81738595b34c0491084c0bf1.compiled.messages", type: "jsona" });

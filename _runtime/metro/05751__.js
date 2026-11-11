@@ -1,33 +1,33 @@
 // === Module 5751: ? ===
 
 // Module 5751
-import _mod17 from "module_17" /* 17 */;
+import _mod5752 from "module_5752" /* 5752 */;
 
-const Image = _mod17.Image;
 
-export function parsePossibleSources(source) {
-  const uri = source.uri;
-  if (typeof source === "string") {
-    const obj2 = { sourceName: source };
-    let obj = obj2;
-  } else {
-    if (typeof source === "object") {
-      if (!uri) {
-        obj = { sourceJson: null };
-        const _JSON = JSON;
-        obj.sourceJson = JSON.stringify(source);
-      }
-    }
-    if (typeof source !== "object") {
-      if (typeof source === "number") {
-        const obj3 = { sourceDotLottieURI: Image.resolveAssetSource(source).uri };
-      }
-    }
-    if (uri.includes(".lottie")) {
-      const obj4 = { sourceDotLottieURI: uri };
+export default function _unsupportedIterableToArray(str, arg1) {
+  if (str) {
+    if (typeof str === "string") {
+      return _mod5752(str, arg1);
     } else {
-      const obj5 = { sourceURL: uri };
+      const toString = {}.toString;
+      const call = toString.call;
+      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
+      let name = substr;
+      if (tmp3) {
+        name = str.constructor.name;
+      }
+      if ("Map" !== name) {
+        if ("Set" !== name) {
+          if ("Arguments" === name) {
+            let arr2 = _mod5752(str, arg1);
+          }
+        }
+        return arr2;
+      }
+      const _Array = Array;
+      arr2 = Array.from(str);
+      const arr = typeof call === "unknown" ? toString() : call(str);
+      tmp3 = "Object" === substr && "Object".constructor;
     }
   }
-  return obj;
-}
+};

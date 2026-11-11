@@ -13,7 +13,7 @@ let length;
 let str2 = require;
 let _exports = exports;
 function _createForOfIteratorHelper(iterable, arg1) {
-  let length = iterable;
+  length = iterable;
   let prop = typeof Symbol !== "undefined";
   if (typeof Symbol !== "undefined") {
     const _Symbol = Symbol;

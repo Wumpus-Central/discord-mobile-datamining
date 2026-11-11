@@ -1,19 +1,29 @@
 // === Module 5546: ? ===
 
 // Module 5546
-import nativeViewGestureHandlerProps from "nativeViewGestureHandlerProps" /* 5465 */;
-import "module_19";
+import GestureDetectorType from "GestureDetectorType" /* 5547 */;
+import NativeDetector2 from "NativeDetector" /* 5593 */;
+import VirtualDetector from "VirtualDetector" /* 5618 */;
+import transformTapProps from "transformTapProps" /* 5621 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
-const noop = fn(19);
-({ useImperativeHandle: c2, useRef: c3 } = noop);
+let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
+const useEffect = fn(19).useEffect;
 const jsx = fn(21).jsx;
-let items = [...fn(5465).nativeViewProps, "onGestureHandlerEvent", "onGestureHandlerStateChange"];
 
 export default function createNativeWrapper(displayName, arg1) {
   _require = displayName;
+  let obj = arg1;
   if (arg1 === undefined) {
-    let obj = {};
+    obj = {};
+  }
+  let Native = Intercepting;
+  if (Intercepting === undefined) {
+    Native = require("GestureDetectorType").GestureDetectorType.Native;
   }
   let str;
   if (displayName != null) {
@@ -30,11 +40,11 @@ export default function createNativeWrapper(displayName, arg1) {
     str = name;
   }
   if (!str) {
-    let tmp2 = typeof displayName === "string";
+    let tmp4 = typeof displayName === "string";
     if (typeof displayName === "string") {
-      tmp2 = displayName;
+      tmp4 = displayName;
     }
-    str = tmp2;
+    str = tmp4;
   }
   if (!str) {
     str = "ComponentWrapper";
@@ -42,30 +52,43 @@ export default function createNativeWrapper(displayName, arg1) {
   class ComponentWrapper {
     constructor(arg0) {
       closure_0 = displayName;
-      keys = Object.keys(displayName);
+      onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER = displayName.onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      closure_1 = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      keys = Object.keys(closure_3(displayName, closure_2));
       obj = { gestureHandlerProps: null, childProps: null };
       obj1 = {};
       merged = Object.assign(closure_1);
       obj.gestureHandlerProps = obj1;
       obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
-      reduced = keys.reduce(/* F125000 */ function() { ... }, obj);
+      reduced = keys.reduce(/* F126165 */ function() { ... }, obj);
       ({ gestureHandlerProps, childProps } = reduced);
-      tmp3 = useRef(null);
-      closure_1 = tmp3;
-      tmp4 = useRef(null);
-      closure_2 = tmp4;
+      if (undefined === gestureHandlerProps.disableReanimated) {
+        flag = true;
+        gestureHandlerProps.disableReanimated = true;
+      }
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      obj3 = closure_0(closure_1[5]);
+      nativeGesture = obj3.useNativeGesture(gestureHandlerProps);
+      closure_2 = nativeGesture;
       items = [, ];
-      items[0] = tmp3;
-      items[1] = tmp4;
-      tmp5 = useImperativeHandle(displayName.ref, /* F125001 */ function() { ... }, items);
-      obj5 = {};
-      merged1 = Object.assign(gestureHandlerProps);
-      obj5.ref = tmp4;
-      obj6 = {};
-      merged2 = Object.assign(childProps);
-      obj6.ref = tmp3;
-      obj5.children = jsx(closure_0, obj6);
-      return jsx(closure_0(closure_1[2]).NativeViewGestureHandler, obj5);
+      items[0] = nativeGesture;
+      items[1] = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      tmp6 = useEffect(/* F126166 */ function() { ... }, items);
+      tmp7 = Native;
+      if (Native === closure_0(closure_1[3]).GestureDetectorType.Intercepting) {
+        NativeDetector = tmp3(tmp4[3]).InterceptingGestureDetector;
+      } else if (tmp7 === tmp3(tmp4[3]).GestureDetectorType.Virtual) {
+        NativeDetector = tmp3(tmp4[6]).VirtualDetector;
+      } else {
+        NativeDetector = tmp3(tmp4[7]).NativeDetector;
+      }
+      obj6 = { gesture: nativeGesture, children: null };
+      obj7 = {};
+      merged1 = Object.assign(childProps);
+      obj7.ref = displayName.ref;
+      obj6.children = jsx(closure_0, obj7);
+      return jsx(NativeDetector, obj6);
     }
   }
   ComponentWrapper.displayName = str;

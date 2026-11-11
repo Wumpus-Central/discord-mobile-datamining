@@ -163,7 +163,7 @@ noop.all = (arg0) => {
     if (0 === closure_0.length) {
       return fn([]);
     } else {
-      let length = arr.length;
+      length = arr.length;
       let num2 = 0;
       if (0 < arr.length) {
         do {

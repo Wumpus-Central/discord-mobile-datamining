@@ -1,14 +1,7 @@
 // === Module 16520: ? ===
 
 // Module 16520
-import _mod16493 from "module_16493" /* 16493 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default (arg0) => {
-  if (_mod16493(arg0)) {
-    return arg0;
-  } else {
-    const tmp5 = new TypeError(String(arg0) + " is not an object");
-    throw tmp5;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/intl/messages", scales: [1], hash: "b076f35cb059256a96b9ed5a60c93c6b", name: "international.compiled.messages", type: "jsona" });

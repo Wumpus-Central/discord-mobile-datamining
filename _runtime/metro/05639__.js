@@ -1,15 +1,35 @@
 // === Module 5639: ? ===
 
 // Module 5639
+import _mod17 from "module_17" /* 17 */;
 
-export default function _arrayLikeToArray(arg0, arg1) {
-  let length = arg1;
-  if (tmp) {
-    length = arg0.length;
+const Platform = _mod17.Platform;
+
+export function getTVProps(focusable) {
+  if (Platform.isTV) {
+    let flag = focusable.focusable;
+    if (flag == null) {
+      flag = focusable.isTVSelectable;
+    }
+    if (flag == null) {
+      flag = true;
+    }
+    const obj2 = { isTVSelectable: flag };
+    let obj = obj2;
+  } else {
+    obj = {};
   }
-  const ArrayResult = Array(length);
-  for (let num = 0; num < length; num = num + 1) {
-    ArrayResult[num] = arg0[num];
+  return obj;
+}
+export function applyRelationProp(arg0, arg1, arg2) {
+  if (arg2) {
+    const _Array = Array;
+    if (Array.isArray(arg2)) {
+      items = [];
+      HermesBuiltin.arraySpread(arg2, 0);
+      HermesBuiltin.apply(items, arg0);
+    } else {
+      tmp4(arg2);
+    }
   }
-  return ArrayResult;
-};
+}

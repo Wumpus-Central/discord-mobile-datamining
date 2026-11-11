@@ -719,7 +719,7 @@ function trim(self) {
             iter = prev;
           }
         }
-        value2 = iter.value;
+        let value2 = iter.value;
         let removeNodeResult = priv;
         if (!priv(self, "dispose")) {
           removeNodeResult(self, "length", removeNodeResult(self, "length") - value2.length);

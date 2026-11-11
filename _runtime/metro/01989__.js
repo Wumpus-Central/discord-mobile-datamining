@@ -204,7 +204,7 @@ export default forwardRef((bottomOffset, arg1) => {
         return 0;
       } else {
         const diff = c3 - _undefined5.value;
-        value2 = _undefined2.value;
+        const value2 = _undefined2.value;
         let num2;
         if (value2 != null) {
           num2 = value2.layout.absoluteY;
@@ -307,7 +307,7 @@ export default forwardRef((bottomOffset, arg1) => {
     if (value != null) {
       const y = value.selection.end.y;
     }
-    value2 = _undefined2.value;
+    const value2 = _undefined2.value;
     let layout;
     if (value2 != null) {
       layout = value2.layout;
@@ -374,7 +374,7 @@ export default forwardRef((bottomOffset, arg1) => {
     if (value != null) {
       target = value.target;
     }
-    value2 = _undefined.value;
+    const value2 = _undefined.value;
     if (value2 != null) {
       const selection = value2.selection;
     }
@@ -484,7 +484,7 @@ export default forwardRef((bottomOffset, arg1) => {
         target = value.target;
       }
       if (target !== height.target) {
-        value2 = _undefined10.value;
+        const value2 = _undefined10.value;
         let target1;
         if (value2 != null) {
           target1 = value2.target;

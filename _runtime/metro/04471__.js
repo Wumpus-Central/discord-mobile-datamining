@@ -1,9 +1,7 @@
 // === Module 4471: ? ===
 
 // Module 4471
-let closure_0 = { lastWeek: "eeee 'dernier \u00E0' p", yesterday: "'hier \u00E0' p", today: "'aujourd\u2019hui \u00E0' p", tomorrow: "'demain \u00E0' p'", nextWeek: "eeee 'prochain \u00E0' p", other: "P" };
+import registerAsset from "module_1119" /* 1119 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
-export default exports.default;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9oZXhhZ29uX2NhbXBhaWdu", scales: [1], hash: "f8d3ef1a3e2bd950170f5c47139fbea8", name: "es-419.messages.f8d3ef1a3e2bd950170f5c47139fbea8.compiled.messages", type: "jsona" });

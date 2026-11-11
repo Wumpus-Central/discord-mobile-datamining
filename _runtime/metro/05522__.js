@@ -1,19 +1,17 @@
 // === Module 5522: ? ===
 
 // Module 5522
-import ComposedGestureName from "ComposedGestureName" /* 5484 */;
-import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5493 */;
-import _mod5510 from "module_5510" /* 5510 */;
+import _mod19 from "module_19" /* 19 */;
+import BottomSheetContext from "BottomSheetContext" /* 5518 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
+const useContext = _mod19.useContext;
 
-export function useNativeGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
+export function useBottomSheetModalInternal(arg0) {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'BottomSheetModalInternalContext' cannot be null!";
+    }
   }
-  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
-  return _mod5510.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
+  return tmp;
 }

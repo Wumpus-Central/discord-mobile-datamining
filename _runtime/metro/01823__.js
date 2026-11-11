@@ -126,7 +126,7 @@ const entry = {
       }
     }
     const _options = self._options;
-    let length;
+    length = undefined;
     if (_options != null) {
       const jsProps = _options.jsProps;
       if (jsProps != null) {
@@ -182,7 +182,7 @@ let items = [
         }
       }
       const _options = self._options;
-      let length;
+      length = undefined;
       if (_options != null) {
         const jsProps = _options.jsProps;
         if (jsProps != null) {
@@ -273,7 +273,7 @@ let items = [
         PropsRegistryGarbageCollector.unregisterView(viewTag);
       }
       const _options = self._options;
-      let length;
+      length = undefined;
       if (_options != null) {
         const jsProps = _options.jsProps;
         if (jsProps != null) {
@@ -301,7 +301,7 @@ let items = [
         }
       }
       const _options = self._options;
-      let length;
+      length = undefined;
       if (_options != null) {
         const jsProps = _options.jsProps;
         if (jsProps != null) {
@@ -639,8 +639,8 @@ let items = [
                                           } else {
                                             const _Array = Array;
                                             if (Array.isArray(viewDescriptors)) {
-                                              const found = viewDescriptors.filter(/* F83656 */ function() { ... });
-                                              let mapped = found.map(/* F83657 */ function() { ... });
+                                              const found = viewDescriptors.filter(/* F84441 */ function() { ... });
+                                              let mapped = found.map(/* F84442 */ function() { ... });
                                             } else {
                                               viewDescriptors = undefined;
                                               if (viewDescriptors != null) {

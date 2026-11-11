@@ -213,7 +213,6 @@ function diffNestedProperty(arr, arr, arg2, arg3) {
   tmp33Result = tmp;
 }
 function clearNestedProperty(arr, arr2, arg2) {
-  let length;
   if (arr2) {
     const _Array = Array;
     if (Array.isArray(arr2)) {
@@ -498,7 +497,6 @@ function diffProperties(arr, arr, arg2, arg3) {
   return tmp32;
 }
 function addNestedProperty(arr, arg1, arg2) {
-  let length;
   if (Array.isArray(arg1)) {
     let num4 = 0;
     let tmp11 = arr;

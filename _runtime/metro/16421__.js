@@ -1,7 +1,7 @@
 // === Module 16421: ? ===
 
 // Module 16421
+import _mod16414 from "module_16414" /* 16414 */;
 
-export function CanonicalizeLocaleList(items) {
-  return Intl.getCanonicalLocales(items);
-}
+
+export default (arg0, arg1, arg2) => _mod16414(arg0, arg1, arg2) < 0;

@@ -86,7 +86,7 @@ class FlatList {
           }
           if (num > 1) {
             const _Math = Math;
-            let length = Math.ceil(arg0.length / num);
+            length = Math.ceil(arg0.length / num);
           } else {
             length = arg0.length;
           }

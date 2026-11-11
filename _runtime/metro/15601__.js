@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300, height: 175, scales: [2, 3], hash: "fe4737c3dd5ab570ff8c05c7dd4152ca", name: "custom_icons", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/conjure/presence/native/images", width: 80, height: 80, scales: [1, 2, 3], hash: "d0ac2ff8bbd27dac2fa6efc885f4d1a1", name: "conjure_activity_light", type: "png" });

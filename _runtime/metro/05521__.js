@@ -1,19 +1,9 @@
 // === Module 5521: ? ===
 
 // Module 5521
-import ComposedGestureName from "ComposedGestureName" /* 5484 */;
-import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5493 */;
-import _mod5510 from "module_5510" /* 5510 */;
+import _mod19 from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
+const context = _mod19.createContext(null);
 
-export function useManualGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
-  }
-  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
-  return _mod5510.useGesture(ComposedGestureName.SingleGestureName.Manual, clonedAndRemappedConfig);
-}
+export const BottomSheetModalInternalContext = context;
+export const BottomSheetModalInternalProvider = context.Provider;

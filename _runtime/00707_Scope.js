@@ -133,7 +133,7 @@ let items = [
     key: "setUser",
     value: function setUser(user) {
       if (!user) {
-        user = { email: "channel", id: "borderRadius", ip_address: "opacity", username: "Array" };
+        user = { email: "Array", id: "Path", ip_address: "channel", username: "ip" };
       }
       const self = this;
       this._user = user;
@@ -323,7 +323,7 @@ let items = [
         const merged6 = Object.assign(self._contexts);
         const merged7 = Object.assign(contexts);
         self._contexts = obj6;
-        let length = user;
+        length = user;
         if (user) {
           const _Object = Object;
           length = Object.keys(user).length;

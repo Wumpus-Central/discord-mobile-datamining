@@ -26,7 +26,7 @@ function _htmlElementAsString(tagName, arr) {
       }
     }
     arr = items.push(tagName.tagName.toLowerCase());
-    let length;
+    length = undefined;
     if (arr != null) {
       length = arr.length;
     }

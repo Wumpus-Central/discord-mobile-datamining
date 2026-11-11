@@ -1,14 +1,28 @@
 // === Module 4889: ? ===
 
 // Module 4889
-import module_2191 from "module_2191" /* 2191 */;
+import _typeof_mod from "module_4522" /* 4522 */;
+import requiredArgs_mod from "requiredArgs" /* 4523 */;
 
-if (!module_2191) {
-  const obj2 = { default: module_2191 };
-  let obj = obj2;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  obj = module_2191;
+  tmp3 = _typeof;
 }
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
 
-export default { date: obj.default({ formats: { full: "EEEE, do MMMM, y", long: "do MMMM, y", medium: "d MMM, y", short: "dd/MM/yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "h:mm:ss a zzzz", long: "h:mm:ss a z", medium: "h:mm:ss a", short: "h:mm a" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} '\u0915\u094B' {{time}}", long: "{{date}} '\u0915\u094B' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
+export default function isTuesday(arg0) {
+  requiredArgs.default(1, arguments);
+  return 2 === _typeof.default(arg0).getDay();
+};
 export default exports.default;

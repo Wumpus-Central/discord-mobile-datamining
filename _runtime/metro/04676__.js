@@ -1,77 +1,38 @@
 // === Module 4676: ? ===
 
 // Module 4676
-import _mod4427 from "module_4427" /* 4427 */;
-import code_mod from "module_4668" /* 4668 */;
+import module_4526_mod from "module_4526" /* 4526 */;
+import module_4677_mod from "module_4677" /* 4677 */;
+import requiredArgs_mod from "requiredArgs" /* 4523 */;
 
-let code = code_mod;
-if (!code) {
-  const obj = { default: code };
+let module_4526 = module_4526_mod;
+if (!module_4526) {
+  const obj = { default: module_4526 };
   let tmp3 = obj;
 } else {
-  tmp3 = code;
+  tmp3 = module_4526;
 }
-code = tmp3;
-let closure_3 = ["years", "months", "weeks", "days", "hours", "minutes", "seconds"];
+module_4526 = tmp3;
+let module_4677 = module_4677_mod;
+if (!module_4677) {
+  const obj2 = { default: module_4677 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4677;
+}
+module_4677 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+let c3 = 3600000;
 
-export default function formatDuration(arg0, locale) {
-  closure_0 = arg0;
-  if (arguments.length < 1) {
-    const _TypeError = TypeError;
-    const concat = "1 argument required, but only ".concat;
-    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
-    throw typeError;
-  } else {
-    locale = undefined;
-    const defaultOptions = _mod4427.getDefaultOptions();
-    if (null != locale) {
-      locale = locale.locale;
-    }
-    if (null === locale) {
-      locale = defaultOptions.locale;
-    }
-    if (null === locale) {
-      locale = code.default;
-    }
-    let format;
-    if (null != locale) {
-      format = locale.format;
-    }
-    if (null === format) {
-      format = closure_3;
-    }
-    let zero;
-    if (null != locale) {
-      zero = locale.zero;
-    }
-    closure_2 = null !== zero && undefined !== zero && zero;
-    let delimiter;
-    if (null != locale) {
-      delimiter = locale.delimiter;
-    }
-    let str2 = " ";
-    if (null !== delimiter) {
-      str2 = " ";
-      if (undefined !== delimiter) {
-        str2 = delimiter;
-      }
-    }
-    if (locale.formatDistance) {
-      const reduced = format.reduce((arr, item) => {
-        let combined = arr;
-        if (typeof closure_0[item] === "number") {
-          if (closure_2) {
-            combined = arr.concat(locale.formatDistance(tmp, tmp3));
-          } else {
-            combined = arr;
-          }
-        }
-        return combined;
-      }, []);
-      return reduced.join(str2);
-    } else {
-      return "";
-    }
-  }
+export default function addHours(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4677.default(interval, module_4526.default(arg1) * c3);
 };
 export default exports.default;

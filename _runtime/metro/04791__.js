@@ -1,40 +1,19 @@
 // === Module 4791: ? ===
 
 // Module 4791
-import _typeof_mod from "module_4422" /* 4422 */;
-import requiredArgs_mod from "requiredArgs" /* 4423 */;
+import _mod4527 from "module_4527" /* 4527 */;
+import assign_mod from "assign" /* 4772 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let assign = assign_mod;
+if (!assign) {
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = assign;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+assign = tmp3;
 
-export default function isWithinInterval(arg0, start) {
-  requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  const time1 = _typeof.default(start.start).getTime();
-  const defaultResult2 = _typeof.default(start.start);
-  const time2 = _typeof.default(start.end).getTime();
-  if (time1 <= time2) {
-    return time >= time1 && time <= time2;
-  } else {
-    const _RangeError = RangeError;
-    const rangeError = new RangeError("Invalid interval");
-    throw rangeError;
-  }
-  const defaultResult3 = _typeof.default(start.end);
+export default function getDefaultOptions() {
+  return assign.default({}, _mod4527.getDefaultOptions());
 };
 export default exports.default;

@@ -1,37 +1,28 @@
 // === Module 4792: ? ===
 
 // Module 4792
-import module_4603_mod from "module_4603" /* 4603 */;
-import subDays_mod from "subDays" /* 4793 */;
-import requiredArgs_mod from "requiredArgs" /* 4423 */;
+import _typeof_mod from "module_4522" /* 4522 */;
+import requiredArgs_mod from "requiredArgs" /* 4523 */;
 
-let module_4603 = module_4603_mod;
-if (!module_4603) {
-  const obj = { default: module_4603 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4603;
+  tmp3 = _typeof;
 }
-module_4603 = tmp3;
-let subDays = subDays_mod;
-if (!subDays) {
-  const obj2 = { default: subDays };
-  let tmp5 = obj2;
-} else {
-  tmp5 = subDays;
-}
-subDays = tmp5;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isYesterday(arg0) {
+export default function getHours(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4603.default(arg0, subDays.default(Date.now(), 1));
+  return _typeof.default(arg0).getHours();
 };
 export default exports.default;

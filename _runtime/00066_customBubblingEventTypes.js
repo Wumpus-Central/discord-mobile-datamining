@@ -25,7 +25,7 @@ export function register(APNGDecorationView, fn) {
 export function get(arg0) {
   value = map1.get(arg0);
   if (null == value) {
-    value2 = map.get(arg0);
+    const value2 = map.get(arg0);
     if (typeof value2 !== "function") {
       let str = "null";
       if (null !== value2) {

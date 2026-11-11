@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 23, scales: [2, 3], hash: "dad967f4b91a8b9097664b2a63d76758", name: "ic_verified_guild_icon_black_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "2eaff20be2a75be7ccdd4c6f19f0eb36", name: "img_account_sync_youtube_white", type: "png" });

@@ -148,7 +148,6 @@ function lowbyte(str) {
   return text;
 }
 function arrObjKeys(cause, inspect) {
-  let length;
   const call = toString.call;
   let tmp2 = "[object Array]" === (typeof call === "unknown" ? toString() : call(cause));
   if (tmp2) {

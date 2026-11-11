@@ -2357,7 +2357,7 @@ function divModAny(self, items1) {
     return items;
   } else {
     let result6 = self.value;
-    value2 = iter.value;
+    let value2 = iter.value;
     if (0 === value2) {
       const _Error = Error;
       const error = new Error("Cannot divide by zero");
@@ -3001,7 +3001,7 @@ function gcd(absResult, absResult1) {
           } else {
             tmp9 = value[0] + value[1] * 10000000 | 1073758208;
           }
-          value2 = iter.value;
+          let value2 = iter.value;
           let tmp11 = tmp9 & -tmp9;
           if (typeof value2 === "number") {
             let tmp13 = value2 | c21;

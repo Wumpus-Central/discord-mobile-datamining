@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "8e1cf1f1cf2a1a917002b8b583270c32", name: "tr", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 161, scales: [1], hash: "1b6a1fd726ebdfc69d47b037085b4f19", name: "graggle_2", type: "png" });

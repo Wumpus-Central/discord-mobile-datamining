@@ -104,10 +104,10 @@ let fn = function t() {
   function unescapeUrl(match) {
     return match.replace(re18, "$1");
   }
-  function parseInline(fn, formatted, inline) {
+  function parseInline(fn, value, inline) {
     inline.inline = true;
     inline.inline = inline.inline || false;
-    return fn(formatted, inline);
+    return fn(value, inline);
   }
   let regExp = new RegExp("^( *)((?:[*+-]|\\d+\\.)) +");
   const regExp1 = new RegExp("( *)((?:[*+-]|\\d+\\.)) +[^\\n]*(?:\\n(?!\\1(?:[*+-]|\\d+\\.) )[^\\n]*)*(\n|$)", "gm");
@@ -1722,7 +1722,7 @@ let fn = function t() {
                       obj = {};
                     }
                     if (Array.isArray(arr)) {
-                      let mapped = arr.map(/* F137319 */ function() { ... });
+                      let mapped = arr.map(/* F138654 */ function() { ... });
                       let joined = mapped.join("");
                     } else {
                       joined = closure_2_0(arr, closure_2_1, obj);

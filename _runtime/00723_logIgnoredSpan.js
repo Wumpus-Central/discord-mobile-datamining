@@ -27,7 +27,7 @@ export function reparentChildSpans(spans, parent_span_id) {
   }
 }
 export function shouldIgnoreSpan(timestamp, ignoreSpans) {
-  let length;
+  length = undefined;
   if (ignoreSpans != null) {
     length = ignoreSpans.length;
   }

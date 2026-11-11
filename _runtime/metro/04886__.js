@@ -1,44 +1,28 @@
 // === Module 4886: ? ===
 
 // Module 4886
-import localeToNumber_mod from "localeToNumber" /* 4887 */;
-import module_4889 from "module_4889" /* 4889 */;
-import module_4890 from "module_4890" /* 4890 */;
-import localeToNumber_mod from "module_4888" /* 4888 */;
-import date from "module_4891" /* 4891 */;
+import _typeof_mod from "module_4522" /* 4522 */;
+import requiredArgs_mod from "requiredArgs" /* 4523 */;
 
-let localeToNumber = localeToNumber_mod;
-if (!localeToNumber) {
-  const obj = { default: localeToNumber };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = localeToNumber;
+  tmp3 = _typeof;
 }
-if (!module_4889) {
-  const obj2 = { default: module_4889 };
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4889;
+  tmp5 = requiredArgs;
 }
-if (!module_4890) {
-  const obj3 = { default: module_4890 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4890;
-}
-let localeToNumber = localeToNumber_mod;
-if (!localeToNumber) {
-  const obj4 = { default: localeToNumber };
-  let tmp9 = obj4;
-} else {
-  tmp9 = localeToNumber;
-}
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp5;
 
-export default { code: "hi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 4 } };
+export default function isThursday(arg0) {
+  requiredArgs.default(1, arguments);
+  return 4 === _typeof.default(arg0).getDay();
+};
 export default exports.default;

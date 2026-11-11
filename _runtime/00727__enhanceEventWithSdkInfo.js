@@ -151,7 +151,7 @@ export function createSpanEnvelope(arr, getDsn) {
   }
   beforeSendSpan = options.beforeSendSpan;
   ignoreSpans = options.ignoreSpans;
-  let length;
+  length = undefined;
   if (ignoreSpans != null) {
     length = ignoreSpans.length;
   }

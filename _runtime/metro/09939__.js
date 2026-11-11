@@ -1,41 +1,7 @@
 // === Module 9939: ? ===
 
 // Module 9939
+import registerAsset from "module_1119" /* 1119 */;
 
-export function isHttpUrl(url) {
-  if (!url.startsWith("http://")) {
-    if (!url.startsWith("https://")) {
-      const charCodeAtResult = url.charCodeAt(0);
-      let isMatch = 104 === charCodeAtResult;
-      if (!isMatch) {
-        isMatch = 72 === charCodeAtResult;
-      }
-      if (isMatch) {
-        isMatch = /^https?:/i.test(url);
-        const obj = /^https?:/i;
-      }
-      return isMatch;
-    }
-  }
-  return true;
-}
-export function getUrlString(url) {
-  if (typeof url === "string") {
-    return url;
-  } else {
-    const _URL = URL;
-    if (url instanceof URL) {
-      return url.toString();
-    } else {
-      url = undefined;
-      if (url != null) {
-        url = url.url;
-      }
-      if (typeof url !== "string") {
-        const _String = String;
-        url = String(url);
-      }
-      return url;
-    }
-  }
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300, height: 175, scales: [2, 3], hash: "7d09a15a2a5682035199dcfee2a26d08", name: "badge", type: "png" });

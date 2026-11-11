@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "76ffb1082b31aab78c81ab7517722ab5", name: "ic_volume_locked", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/channel/header/images", width: 24, height: 24, scales: [2, 3, 4], hash: "259a63e8af8c5f3885215d3c5505af89", name: "icon-search", type: "png" });

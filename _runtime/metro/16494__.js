@@ -1,21 +1,7 @@
 // === Module 16494: ? ===
 
 // Module 16494
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
-  }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+import registerAsset from "module_1119" /* 1119 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "b452f17f7046013be582dffe125561c0", name: "StatusIdle", type: "png" });

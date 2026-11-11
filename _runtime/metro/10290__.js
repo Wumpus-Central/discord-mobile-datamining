@@ -1,7 +1,7 @@
 // === Module 10290: ? ===
 
 // Module 10290
-import registerAsset from "module_1119" /* 1119 */;
+const parts = "\u0200aglq\t\u0015\u0018\u001B\u026D\u000F\0\0\u0012p;\u4026os;\u4027t;\u403Et;\u403Cuot;\u4022".split("");
+const uint16Array = new Uint16Array(parts.map((item) => item.charCodeAt(0)));
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback", width: 72, height: 72, scales: [1, 2, 3], hash: "4c77a93db477bc03f2ffe1ca6854a9fa", name: "feedback-modal-sad", type: "png" });
+export default uint16Array;

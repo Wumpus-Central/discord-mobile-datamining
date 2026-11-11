@@ -84,10 +84,10 @@ function pnpm_decayTs3(arg0, arg1) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "ip",
+      current: "description",
       lastTimestamp: null,
-      startTimestamp: "AttributeSelector",
-      reduceMotion: null
+      startTimestamp: "2026-02-go-live-hdr",
+      reduceMotion: "user"
     };
     let num = obj.velocity;
     if (num == null) {

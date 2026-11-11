@@ -1,9 +1,30 @@
 // === Module 4871: ? ===
 
 // Module 4871
-let closure_0 = { lastWeek: "eeee 'tu\u1EA7n tr\u01B0\u1EDBc v\u00E0o l\u00FAc' p", yesterday: "'h\u00F4m qua v\u00E0o l\u00FAc' p", today: "'h\u00F4m nay v\u00E0o l\u00FAc' p", tomorrow: "'ng\u00E0y mai v\u00E0o l\u00FAc' p", nextWeek: "eeee 't\u1EDBi v\u00E0o l\u00FAc' p", other: "P" };
+import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4683 */;
+import requiredArgs_mod from "requiredArgs" /* 4523 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj = { default: startOfISOWeekYear };
+  let tmp3 = obj;
+} else {
+  tmp3 = startOfISOWeekYear;
+}
+startOfISOWeekYear = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+
+export default function isSameISOWeekYear(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfISOWeekYear.default(arg1).getTime();
 };
 export default exports.default;

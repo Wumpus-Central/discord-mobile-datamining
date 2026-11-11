@@ -1,44 +1,7 @@
 // === Module 4516: ? ===
 
 // Module 4516
-import module_4517 from "module_4517" /* 4517 */;
-import module_4518 from "module_4518" /* 4518 */;
-import module_4519 from "module_4519" /* 4519 */;
-import date_mod from "module_4520" /* 4520 */;
-import date_mod from "module_4521" /* 4521 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-if (!module_4517) {
-  const obj = { default: module_4517 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4517;
-}
-if (!module_4518) {
-  const obj2 = { default: module_4518 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4518;
-}
-if (!module_4519) {
-  const obj3 = { default: module_4519 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4519;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
 
-export default { code: "nb", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
-export default exports.default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/user_settings/connected_apps", scales: [1], hash: "b50ef845a3f41f3a92290f7873930c0e", name: "ConnectedApps.compiled.messages", type: "jsona" });

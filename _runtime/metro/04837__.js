@@ -1,111 +1,266 @@
 // === Module 4837: ? ===
 
 // Module 4837
-import _mod4427 from "module_4427" /* 4427 */;
-import module_4570_mod from "module_4570" /* 4570 */;
-import _typeof_mod from "module_4422" /* 4422 */;
-import module_4426_mod from "module_4426" /* 4426 */;
-import requiredArgs_mod from "requiredArgs" /* 4423 */;
+import _mod4828 from "module_4828" /* 4828 */;
 
-let module_4570 = module_4570_mod;
-if (!module_4570) {
-  const obj = { default: module_4570 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4570;
-}
-module_4570 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let module_4426 = module_4426_mod;
-if (!module_4426) {
-  const obj3 = { default: module_4426 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4426;
-}
-module_4426 = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-
-export default function setDay(arg0, arg1, weekStartsOn) {
-  requiredArgs.default(2, arguments);
-  const defaultOptions = _mod4427.getDefaultOptions();
-  weekStartsOn = undefined;
-  if (null != weekStartsOn) {
-    weekStartsOn = weekStartsOn.weekStartsOn;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
   }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != weekStartsOn) {
-      const locale = weekStartsOn.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+function _setPrototypeOf(MonthParser, Parser) {
+  _setPrototypeOf = Object.setPrototypeOf;
+  if (!_setPrototypeOf) {
+    _setPrototypeOf = function _setPrototypeOf(MonthParser, Parser) {
+      MonthParser.__proto__ = Parser;
+      return MonthParser;
+    };
+  }
+  return _setPrototypeOf(MonthParser, Parser);
+}
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    _getPrototypeOf = Object.getPrototypeOf;
+  } else {
+    _getPrototypeOf = function _getPrototypeOf(arg0) {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
+    };
+  }
+  return _getPrototypeOf(arg0);
+}
+const Parser = _mod4828.Parser;
+let _createSuperInternal;
+class MonthParser {
+  constructor() {
+    if (this instanceof closure_1) {
+      length = arguments.length;
+      _Array = Array;
+      tmp6 = new.target;
+      tmp7 = new.target;
+      tmp8 = length;
+      array = new Array(length);
+      tmp10 = array;
+      num = 0;
+      num2 = 1;
+      if (0 < length) {
+        do {
+          array[num] = arguments[num];
+          num = num + 1;
+        } while (num < length);
+      }
+      tmp11 = _createSuperInternal;
+      call = _createSuperInternal.call;
+      items = [];
+      items[0] = tmp;
+      applyResult = call.apply(_createSuperInternal, items.concat(array));
+      tmp13 = undefined === applyResult;
+      if (tmp13) {
+        _ReferenceError2 = ReferenceError;
+        tmp20 = new.target;
+        str5 = "this hasn't been initialised - super() hasn't been called";
+        tmp21 = new.target;
+        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        tmp23 = referenceError;
+        throw referenceError;
+      } else {
+        items1 = ["Y", "R", "q", "Q", "L", "w", "I", "D", "i", "e", "c", "t", "T"];
+        str2 = "incompatibleTokens";
+        if ("incompatibleTokens" in applyResult) {
+          _Object = Object;
+          obj = { value: null, enumerable: true, configurable: true, writable: true };
+          obj.value = items1;
+          definePropertyResult = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+        } else {
+          applyResult.incompatibleTokens = items1;
+        }
+        if (tmp13) {
+          _ReferenceError = ReferenceError;
+          tmp16 = new.target;
+          str4 = "this hasn't been initialised - super() hasn't been called";
+          tmp17 = new.target;
+          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+          tmp19 = referenceError1;
+          throw referenceError1;
+        } else {
+          str3 = "priority";
+          if ("priority" in applyResult) {
+            _Object2 = Object;
+            definePropertyResult1 = Object.defineProperty(applyResult, "priority", { value: 110, enumerable: true, configurable: true, writable: true });
+          } else {
+            num3 = 110;
+            applyResult.priority = 110;
+          }
+          return applyResult;
+        }
+      }
+    } else {
+      _TypeError = TypeError;
+      tmp2 = new.target;
+      str = "Cannot call a class as a function";
+      tmp3 = new.target;
+      typeError = new TypeError("Cannot call a class as a function");
+      tmp5 = typeError;
+      throw typeError;
+    }
+  }
+}
+let dependencyMap = MonthParser;
+if (typeof Parser !== "function") {
+  if (null !== Parser) {
+    let _TypeError = TypeError;
+    let typeError = new TypeError("Super expression must either be null or a function");
+    throw typeError;
+  }
+}
+let prototype = Parser;
+if (Parser) {
+  prototype = Parser.prototype;
+}
+MonthParser.prototype = Object.create(prototype, { constructor: { value: MonthParser, writable: true, configurable: true } });
+if (Parser) {
+  _setPrototypeOf(MonthParser, Parser);
+}
+let num = 0;
+dependencyMap = (function _isNativeReflectConstruct() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect3 = Reflect;
+    if (Reflect.construct) {
+      const _Reflect = Reflect;
+      if (Reflect.construct.sham) {
+        return false;
+      } else {
+        const _Proxy = Proxy;
+        if (typeof Proxy === "function") {
+          return true;
+        } else {
+          try {
+            const _Boolean = Boolean;
+            const call = valueOf.call;
+            const _Reflect2 = Reflect;
+            const _Boolean2 = Boolean;
+            if (typeof call === "unknown") {
+              valueOf();
+            } else {
+              call(constructResult);
             }
+            return true;
+          } catch (err) {
+            return false;
           }
         }
       }
     }
-    weekStartsOn = weekStartsOn1;
   }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
+  return false;
+})();
+_createSuperInternal = function _createSuperInternal() {
+  const self = this;
+  const obj = _getPrototypeOf(_createSuperInternal);
+  if (closure_1) {
+    const _Reflect = Reflect;
+    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+  } else {
+    constructResult = obj(...arguments);
   }
-  if (null === weekStartsOn) {
-    const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
-          }
-        }
-      }
+  if (!constructResult) {
+    let tmp8 = self;
+    if (undefined === self) {
+      const _ReferenceError = ReferenceError;
+      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      throw referenceError;
     }
-    weekStartsOn = weekStartsOn2;
-  }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
+  } else {
+    tmp8 = constructResult;
+    if ("object" !== _typeof(constructResult)) {
+      tmp8 = constructResult;
     }
   }
-  const defaultResult1 = module_4426.default(num);
-  if (defaultResult1 >= 0) {
-    if (defaultResult1 <= 6) {
-      const defaultResult2 = _typeof.default(arg0);
-      const defaultResult3 = module_4426.default(arg1);
-      const day = defaultResult2.getDay();
-      const diff = 7 - defaultResult1;
-      if (defaultResult3 >= 0) {
-        if (defaultResult3 <= 6) {
-          let diff1 = ((defaultResult3 % 7 + 7) % 7 + diff) % 7 - (day + diff) % 7;
-        }
-        return module_4570.default(defaultResult2, diff1);
-      }
-      diff1 = defaultResult3 - (day + diff) % 7;
-    }
-  }
-  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-  throw rangeError;
+  return tmp8;
 };
-export default exports.default;
+const entry = {
+  key: "parse",
+  value: function parse(arg0, arg1, ordinalNumber) {
+    function valueCallback(arg0) {
+      return arg0 - 1;
+    }
+    if ("M" === arg1) {
+      return _createSuperInternal(4830).mapValue(_createSuperInternal(4830).parseNumericPattern(_createSuperInternal(4831).numericPatterns.month, arg0), valueCallback);
+    } else if ("MM" === arg1) {
+      return _createSuperInternal(4830).mapValue(_createSuperInternal(4830).parseNDigits(2, arg0), valueCallback);
+    } else if ("Mo" === arg1) {
+      return _createSuperInternal(4830).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "month" }), valueCallback);
+    } else if ("MMM" === arg1) {
+      return ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
+    } else if ("MMMMM" === arg1) {
+      return ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
+    } else {
+      return ordinalNumber.month(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.month(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.month(arg0, { width: "narrow", context: "formatting" });
+    }
+  }
+};
+let items = [
+  entry,
+  {
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 0;
+      if (tmp) {
+        tmp = arg1 <= 11;
+      }
+      return tmp;
+    }
+  },
+  {
+    key: "set",
+    value: function set(setUTCMonth, arg1, arg2) {
+      setUTCMonth.setUTCMonth(arg2, 1);
+      setUTCMonth.setUTCHours(0, 0, 0, 0);
+      return setUTCMonth;
+    }
+  }
+];
+if (0 < items.length) {
+  do {
+    let tmp5 = items[num];
+    let flag = tmp5.enumerable;
+    if (!flag) {
+      flag = false;
+    }
+    tmp5.enumerable = flag;
+    tmp5.configurable = true;
+    if ("value" in tmp5) {
+      tmp5.writable = true;
+    }
+    let _Object = Object;
+    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    num = num + 1;
+  } while (num < items.length);
+}
+
+export { MonthParser };

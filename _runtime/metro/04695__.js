@@ -1,40 +1,80 @@
 // === Module 4695: ? ===
 
 // Module 4695
-import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4583 */;
-import module_4590_mod from "module_4590" /* 4590 */;
-import requiredArgs_mod from "requiredArgs" /* 4423 */;
+import _typeof_mod from "module_4522" /* 4522 */;
+import requiredArgs_mod from "requiredArgs" /* 4523 */;
 
-let startOfISOWeekYear = startOfISOWeekYear_mod;
-if (!startOfISOWeekYear) {
-  const obj = { default: startOfISOWeekYear };
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfISOWeekYear;
+  tmp3 = _typeof;
 }
-startOfISOWeekYear = tmp3;
-let module_4590 = module_4590_mod;
-if (!module_4590) {
-  const obj2 = { default: module_4590 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4590;
-}
-module_4590 = tmp5;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
-let c3 = 604800000;
+requiredArgs = tmp5;
 
-export default function getISOWeeksInYear(arg0) {
+export default function min(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = startOfISOWeekYear.default(arg0);
-  const defaultResult2 = startOfISOWeekYear.default(module_4590.default(defaultResult1, 60));
-  return Math.round((startOfISOWeekYear.default(module_4590.default(defaultResult1, 60)).valueOf() - defaultResult1.valueOf()) / c3);
+  if (!arg0) {
+    if ("object" === _typeof(arg0)) {
+      if (null !== arg0) {
+        const _Array = Array;
+        const call = slice.call;
+        let arr = typeof call === "unknown" ? slice() : call(arg0);
+      }
+    }
+    const _Date = Date;
+    const date = new Date(NaN);
+    return date;
+  } else {
+    arr = arg0;
+  }
+  const item = arr.forEach((item) => {
+    defaultResult = _typeof.default(item);
+    let isNaNResult = undefined === defaultResult || defaultResult > defaultResult;
+    if (!isNaNResult) {
+      const _isNaN = isNaN;
+      isNaNResult = isNaN(defaultResult.getDate());
+    }
+  });
+  let date1 = _typeof;
+  if (!_typeof) {
+    const _Date2 = Date;
+    date1 = new Date(NaN);
+  }
+  return date1;
 };
 export default exports.default;

@@ -1,16 +1,7 @@
 // === Module 9985: ? ===
 
 // Module 9985
+import registerAsset from "module_1119" /* 1119 */;
 
-export function debounce(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return function() {
-    const self = this;
-    closure_0 = [...arguments];
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      closure_0.apply(self, closure_0);
-    }, self);
-  };
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "3712e3aa74966ab918e86302cf0f502f", name: "SpendEarnOrbs", type: "lottie" });

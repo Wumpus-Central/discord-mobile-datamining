@@ -728,7 +728,6 @@ function accumulateDirectDispatchesSingle$1(dispatchConfig) {
 }
 function accumulateTwoPhaseDispatchesSingleSkipTarget(dispatchConfig) {
   let _return1;
-  let length;
   let tmp10;
   if (dispatchConfig) {
     if (dispatchConfig.dispatchConfig.phasedRegistrationNames) {
@@ -785,7 +784,6 @@ function accumulateTwoPhaseDispatchesSingleSkipTarget(dispatchConfig) {
   }
 }
 function accumulateTwoPhaseDispatchesSingle$1(dispatchConfig) {
-  let length;
   let tmp8;
   let phasedRegistrationNames = dispatchConfig;
   if (dispatchConfig) {
@@ -905,7 +903,6 @@ function accumulateDirectionalDispatches(stateNode, bubbled, _dispatchListeners)
   }
 }
 function accumulateTwoPhaseDispatchesSingle(dispatchConfig) {
-  let length;
   let tmp8;
   let phasedRegistrationNames = dispatchConfig;
   if (dispatchConfig) {
@@ -2250,7 +2247,6 @@ function performWorkOnRootViaSchedulerTask(callbackNode, arg1) {
   return tmp8;
 }
 function pingEngtangledActionScope() {
-  let length;
   const diff = closure_123 - 1;
   closure_123 = diff;
   if (0 === diff) {
@@ -3477,12 +3473,10 @@ function runActionStateAction(state, next) {
   }
 }
 function handleActionReturnValue(pending, listeners, actionResult) {
-  let length;
   if (null !== actionResult) {
     if (typeof actionResult === "object") {
       if (typeof actionResult.then === "function") {
         actionResult.then((value) => {
-          let length;
           listeners.status = "fulfilled";
           listeners.value = value;
           listeners = listeners.listeners;
@@ -3593,7 +3587,7 @@ function updateActionStateImpl(queue, c166, memoizedState) {
       queue = tmp6.queue;
       if (memoizedState !== tmp6.memoizedState) {
         _null.flags = _null.flags | 2048;
-        pushSimpleEffect(9, { destroy: "r" }, actionStateActionEffect.bind(null, queue, memoizedState), null);
+        pushSimpleEffect(9, { destroy: "Array" }, actionStateActionEffect.bind(null, queue, memoizedState), null);
       }
       items = [tmp2, queue.dispatch, tmp];
       return items;
@@ -3806,7 +3800,6 @@ function startTransition(alternate, pending, action, action, fn) {
               }
             };
             promise.then(() => {
-              let length;
               obj.status = "fulfilled";
               obj.value = value;
               num = 0;
@@ -3818,7 +3811,6 @@ function startTransition(alternate, pending, action, action, fn) {
                 } while (num < length);
               }
             }, (reason) => {
-              let length;
               obj.status = "rejected";
               obj.reason = reason;
               num = 0;
@@ -3844,7 +3836,6 @@ function startTransition(alternate, pending, action, action, fn) {
               }
             };
             promise.then(() => {
-              let length;
               obj.status = "fulfilled";
               obj.value = value;
               num = 0;
@@ -3856,7 +3847,6 @@ function startTransition(alternate, pending, action, action, fn) {
                 } while (num < length);
               }
             }, (reason) => {
-              let length;
               obj.status = "rejected";
               obj.reason = reason;
               num = 0;
@@ -5903,7 +5893,7 @@ function updateSuspenseListComponent(child, pendingProps, current) {
           if ("together" === revealOrder) {
             memoizedState = pendingProps.memoizedState;
             if (null === memoizedState) {
-              pendingProps.memoizedState = { isBackwards: false, rendering: null, renderingStartTime: 0, last: null, tail: null, tailMode: "description", treeForkCount: false };
+              pendingProps.memoizedState = { isBackwards: false, rendering: null, renderingStartTime: 0, last: null, tail: null, tailMode: "delete", treeForkCount: false };
             } else {
               memoizedState.isBackwards = false;
               memoizedState.rendering = null;
@@ -8621,7 +8611,6 @@ function recursivelyTraverseDisappearLayoutEffects(sibling) {
   }
 }
 function recursivelyTraverseReappearLayoutEffects(arg0, sibling, arg2) {
-  let length;
   let tmp3 = arg2;
   if (arg2) {
     tmp3 = 8772 & sibling.subtreeFlags;
@@ -9223,7 +9212,6 @@ function accumulateSuspenseyCommitOnFiber(sibling) {
   }
 }
 function commitPassiveUnmountOnFiber(current) {
-  let length;
   let length2;
   let length3;
   const tag = current.tag;
@@ -9356,7 +9344,6 @@ function commitPassiveUnmountOnFiber(current) {
   }
 }
 function recursivelyTraverseDisconnectPassiveEffects(sibling2) {
-  let length;
   const deletions = sibling2.deletions;
   if (16 & sibling2.flags) {
     if (null !== deletions) {
@@ -9895,7 +9882,6 @@ function commitRootWhenReady(current, subtreeFlags, arg2, arg3, arg4, arg5, arg6
             closure_277 = closure_277 | 4;
             try {
               (function commitBeforeMutationEffects(arg0, lanes) {
-                let length;
                 _return = lanes;
                 if (null !== lanes) {
                   const child = _return.child;
@@ -12638,7 +12624,6 @@ function flushLayoutEffects() {
   }
 }
 function flushSpawnedWork() {
-  let length;
   c300 = 0;
   const result = peek.unstable_requestPaint();
   let tmp5 = c301;
@@ -16262,7 +16247,7 @@ function updateSyncExternalStore(serializer, getSnapshot) {
     return tmp3;
   }
   _null.flags = _null.flags | 2048;
-  const lastEffect = { tag: 9, create: updateStoreInstance.bind(null, _null, queue, tmp3, getSnapshot), deps: null, inst: { destroy: "r" }, next: null };
+  const lastEffect = { tag: 9, create: updateStoreInstance.bind(null, _null, queue, tmp3, getSnapshot), deps: null, inst: { destroy: "Array" }, next: null };
   let updateQueue = _null.updateQueue;
   if (null === updateQueue) {
     obj2 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16541,10 +16526,10 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) 
         tmp5 = tmp6;
       }
       c124 = tmp5;
-      { status: "pending", value: "Array", then: 6923673 }.then = function then(arg0) {
+      { status: "pending", value: "Array", then: 7115194 }.then = function then(arg0) {
         items.push(arg0);
       };
-      obj2 = { status: "pending", value: "Array", then: 6923673 };
+      obj2 = { status: "pending", value: "Array", then: 7115194 };
     }
     closure_123 = closure_123 + 1;
     obj.then(pingEngtangledActionScope, pingEngtangledActionScope);
@@ -16599,7 +16584,7 @@ function mountEffect(create, arg1) {
   if (undefined !== arg1) {
     tmp4 = arg1;
   }
-  obj2 = { tag: 9, create, deps: tmp4, inst: { destroy: "r" }, next: null };
+  obj2 = { tag: 9, create, deps: tmp4, inst: { destroy: "Array" }, next: null };
   let updateQueue = _null.updateQueue;
   if (null === updateQueue) {
     const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16689,7 +16674,7 @@ let closure_210 = {
     if (undefined !== combined) {
       tmp6 = combined;
     }
-    obj2 = { tag: 5, create: imperativeHandleEffect.bind(null, c165, cache), deps: tmp6, inst: { destroy: "r" }, next: null };
+    obj2 = { tag: 5, create: imperativeHandleEffect.bind(null, c165, cache), deps: tmp6, inst: { destroy: "Array" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
       const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16719,7 +16704,7 @@ let closure_210 = {
     if (undefined !== arg1) {
       tmp4 = arg1;
     }
-    obj2 = { tag: 5, create, deps: tmp4, inst: { destroy: "r" }, next: null };
+    obj2 = { tag: 5, create, deps: tmp4, inst: { destroy: "Array" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
       const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16748,7 +16733,7 @@ let closure_210 = {
     if (undefined !== arg1) {
       tmp4 = arg1;
     }
-    obj2 = { tag: 3, create, deps: tmp4, inst: { destroy: "r" }, next: null };
+    obj2 = { tag: 3, create, deps: tmp4, inst: { destroy: "Array" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
       const obj3 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16924,7 +16909,7 @@ let closure_210 = {
         next = obj5;
       }
       _null.flags = _null.flags | 8390656;
-      obj6 = { tag: 9, create: subscribeToStore.bind(null, _null, obj4, serializer), deps: items2, inst: { destroy: "r" }, next: null };
+      obj6 = { tag: 9, create: subscribeToStore.bind(null, _null, obj4, serializer), deps: items2, inst: { destroy: "Array" }, next: null };
       let updateQueue2 = _null.updateQueue;
       if (null === updateQueue2) {
         obj7 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16941,7 +16926,7 @@ let closure_210 = {
       }
       next.memoizedState = obj6;
       _null.flags = _null.flags | 2048;
-      const obj8 = { tag: 9, create: updateStoreInstance.bind(null, _null, obj4, tmp4, getSnapshot), deps: null, inst: { destroy: "r" }, next: null };
+      const obj8 = { tag: 9, create: updateStoreInstance.bind(null, _null, obj4, tmp4, getSnapshot), deps: null, inst: { destroy: "Array" }, next: null };
       let updateQueue3 = _null.updateQueue;
       if (null === updateQueue3) {
         obj9 = { lastEffect: null, events: null, stores: null, memoCache: null };

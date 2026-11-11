@@ -1,127 +1,49 @@
 // === Module 4942: ? ===
 
 // Module 4942
-import _mod2166 from "module_2166" /* 2166 */;
+import module_4526_mod from "module_4526" /* 4526 */;
+import _typeof_mod from "module_4522" /* 4522 */;
+import module_4794_mod from "module_4794" /* 4794 */;
+import requiredArgs_mod from "requiredArgs" /* 4523 */;
 
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    if (typeof require === "function") {
-      const _module = _mod2166;
-      const obj2 = { months: null, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, weekdaysParseExact: true, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: "%d\u00BA", invalidDate: "Data inv\u00E1lida" };
-      const split = "janeiro_fevereiro_mar\u00E7o_abril_maio_junho_julho_agosto_setembro_outubro_novembro_dezembro".split;
-      obj2.months = "janeiro_fevereiro_mar\u00E7o_abril_maio_junho_julho_agosto_setembro_outubro_novembro_dezembro".split("_");
-      const split2 = "jan_fev_mar_abr_mai_jun_jul_ago_set_out_nov_dez".split;
-      obj2.monthsShort = "jan_fev_mar_abr_mai_jun_jul_ago_set_out_nov_dez".split("_");
-      const split3 = "domingo_segunda-feira_ter\u00E7a-feira_quarta-feira_quinta-feira_sexta-feira_s\u00E1bado".split;
-      obj2.weekdays = "domingo_segunda-feira_ter\u00E7a-feira_quarta-feira_quinta-feira_sexta-feira_s\u00E1bado".split("_");
-      const split4 = "dom_seg_ter_qua_qui_sex_s\u00E1b".split;
-      obj2.weekdaysShort = "dom_seg_ter_qua_qui_sex_s\u00E1b".split("_");
-      const split5 = "do_2\u00AA_3\u00AA_4\u00AA_5\u00AA_6\u00AA_s\u00E1".split;
-      obj2.weekdaysMin = "do_2\u00AA_3\u00AA_4\u00AA_5\u00AA_6\u00AA_s\u00E1".split("_");
-      obj2.longDateFormat = { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD/MM/YYYY", LL: "D [de] MMMM [de] YYYY", LLL: "D [de] MMMM [de] YYYY [\u00E0s] HH:mm", LLLL: "dddd, D [de] MMMM [de] YYYY [\u00E0s] HH:mm" };
-      const obj3 = {
-        sameDay: "[Hoje \u00E0s] LT",
-        nextDay: "[Amanh\u00E3 \u00E0s] LT",
-        nextWeek: "dddd [\u00E0s] LT",
-        lastDay: "[Ontem \u00E0s] LT",
-        lastWeek() {
-                const self = this;
-                if (0 === this.day()) {
-                  let str = "[\u00DAltimo] dddd [\u00E0s] LT";
-                } else {
-                  str = "[\u00DAltima] dddd [\u00E0s] LT";
-                }
-                return str;
-              },
-        sameElse: "L"
-      };
-      obj2.calendar = obj3;
-      obj2.relativeTime = { future: "em %s", past: "h\u00E1 %s", s: "poucos segundos", ss: "%d segundos", m: "um minuto", mm: "%d minutos", h: "uma hora", hh: "%d horas", d: "um dia", dd: "%d dias", M: "um m\u00EAs", MM: "%d meses", y: "um ano", yy: "%d anos" };
-      obj2.dayOfMonthOrdinalParse = /\d{1,2}º/;
-      _module.defineLocale("pt-br", obj2);
-    }
-  }
+let module_4526 = module_4526_mod;
+if (!module_4526) {
+  const obj = { default: module_4526 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4526;
 }
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], function t(defineLocale) {
-      const obj = {
-        months: "janeiro_fevereiro_mar\u00E7o_abril_maio_junho_julho_agosto_setembro_outubro_novembro_dezembro".split("_"),
-        monthsShort: "jan_fev_mar_abr_mai_jun_jul_ago_set_out_nov_dez".split("_"),
-        weekdays: "domingo_segunda-feira_ter\u00E7a-feira_quarta-feira_quinta-feira_sexta-feira_s\u00E1bado".split("_"),
-        weekdaysShort: "dom_seg_ter_qua_qui_sex_s\u00E1b".split("_"),
-        weekdaysMin: "do_2\u00AA_3\u00AA_4\u00AA_5\u00AA_6\u00AA_s\u00E1".split("_"),
-        weekdaysParseExact: true,
-        longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD/MM/YYYY", LL: "D [de] MMMM [de] YYYY", LLL: "D [de] MMMM [de] YYYY [\u00E0s] HH:mm", LLLL: "dddd, D [de] MMMM [de] YYYY [\u00E0s] HH:mm" },
-        calendar: {
-          sameDay: "[Hoje \u00E0s] LT",
-          nextDay: "[Amanh\u00E3 \u00E0s] LT",
-          nextWeek: "dddd [\u00E0s] LT",
-          lastDay: "[Ontem \u00E0s] LT",
-          lastWeek() {
-            const self = this;
-            if (0 === this.day()) {
-              let str = "[\u00DAltimo] dddd [\u00E0s] LT";
-            } else {
-              str = "[\u00DAltima] dddd [\u00E0s] LT";
-            }
-            return str;
-          },
-          sameElse: "L"
-        },
-        relativeTime: { future: "em %s", past: "h\u00E1 %s", s: "poucos segundos", ss: "%d segundos", m: "um minuto", mm: "%d minutos", h: "uma hora", hh: "%d horas", d: "um dia", dd: "%d dias", M: "um m\u00EAs", MM: "%d meses", y: "um ano", yy: "%d anos" },
-        dayOfMonthOrdinalParse: /\d{1,2}º/,
-        ordinal: "%d\u00BA",
-        invalidDate: "Data inv\u00E1lida"
-      };
-      return defineLocale.defineLocale("pt-br", obj);
-    });
-  }
+module_4526 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
 }
-const moment = this.moment;
-let obj = {
-  months: "janeiro_fevereiro_mar\u00E7o_abril_maio_junho_julho_agosto_setembro_outubro_novembro_dezembro".split("_"),
-  monthsShort: "jan_fev_mar_abr_mai_jun_jul_ago_set_out_nov_dez".split("_"),
-  weekdays: "domingo_segunda-feira_ter\u00E7a-feira_quarta-feira_quinta-feira_sexta-feira_s\u00E1bado".split("_"),
-  weekdaysShort: "dom_seg_ter_qua_qui_sex_s\u00E1b".split("_"),
-  weekdaysMin: "do_2\u00AA_3\u00AA_4\u00AA_5\u00AA_6\u00AA_s\u00E1".split("_"),
-  weekdaysParseExact: true,
-  longDateFormat: { LT: "HH:mm", LTS: "HH:mm:ss", L: "DD/MM/YYYY", LL: "D [de] MMMM [de] YYYY", LLL: "D [de] MMMM [de] YYYY [\u00E0s] HH:mm", LLLL: "dddd, D [de] MMMM [de] YYYY [\u00E0s] HH:mm" },
-  calendar: {
-    sameDay: "[Hoje \u00E0s] LT",
-    nextDay: "[Amanh\u00E3 \u00E0s] LT",
-    nextWeek: "dddd [\u00E0s] LT",
-    lastDay: "[Ontem \u00E0s] LT",
-    lastWeek() {
-      const self = this;
-      if (0 === this.day()) {
-        let str = "[\u00DAltimo] dddd [\u00E0s] LT";
-      } else {
-        str = "[\u00DAltima] dddd [\u00E0s] LT";
-      }
-      return str;
-    },
-    sameElse: "L"
-  },
-  relativeTime: { future: "em %s", past: "h\u00E1 %s", s: "poucos segundos", ss: "%d segundos", m: "um minuto", mm: "%d minutos", h: "uma hora", hh: "%d horas", d: "um dia", dd: "%d dias", M: "um m\u00EAs", MM: "%d meses", y: "um ano", yy: "%d anos" },
-  dayOfMonthOrdinalParse: /\d{1,2}º/,
-  ordinal: "%d\u00BA",
-  invalidDate: "Data inv\u00E1lida"
+_typeof = tmp5;
+let module_4794 = module_4794_mod;
+if (!module_4794) {
+  const obj3 = { default: module_4794 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4794;
+}
+module_4794 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+
+export default function setISOWeek(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_4794.default(defaultResult1) - module_4526.default(arg1);
+  defaultResult1.setDate(defaultResult1.getDate() - 7 * diff);
+  return defaultResult1;
 };
-moment.defineLocale("pt-br", obj);
-const obj4 = {
-  sameDay: "[Hoje \u00E0s] LT",
-  nextDay: "[Amanh\u00E3 \u00E0s] LT",
-  nextWeek: "dddd [\u00E0s] LT",
-  lastDay: "[Ontem \u00E0s] LT",
-  lastWeek() {
-    const self = this;
-    if (0 === this.day()) {
-      let str = "[\u00DAltimo] dddd [\u00E0s] LT";
-    } else {
-      str = "[\u00DAltima] dddd [\u00E0s] LT";
-    }
-    return str;
-  },
-  sameElse: "L"
-};
+export default exports.default;

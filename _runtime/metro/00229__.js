@@ -289,7 +289,7 @@ class EventTarget {
                   const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
                   throw typeError;
                 } else {
-                  value2 = value.get(closure_0);
+                  const value2 = value.get(closure_0);
                   let iter = value2;
                   let tmp11 = null;
                   let tmp12 = null;
@@ -421,7 +421,7 @@ class EventTarget {
                 const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
                 throw typeError;
               } else {
-                value2 = value.get(closure_0);
+                const value2 = value.get(closure_0);
                 let iter = value2;
                 let tmp11 = null;
                 let tmp12 = null;
@@ -813,7 +813,7 @@ EventTarget.prototype = {
           BooleanResult1 = Boolean(capture.once);
         }
         obj.once = BooleanResult1;
-        value2 = value.get(arg0);
+        const value2 = value.get(arg0);
         if (undefined !== value2) {
           let iter = value2;
           let tmp15 = null;
@@ -855,7 +855,7 @@ EventTarget.prototype = {
         if (_BooleanResult) {
           num = 1;
         }
-        value2 = value.get(arg0);
+        const value2 = value.get(arg0);
         let iter = value2;
         let tmp6 = null;
         if (null != value2) {
@@ -1086,7 +1086,7 @@ function defineEventAttribute(prototype, abort) {
         const typeError = new TypeError("'this' is expected an EventTarget object, but got another value.");
         throw typeError;
       } else {
-        value2 = value.get(closure_0);
+        const value2 = value.get(closure_0);
         let iter = value2;
         let tmp11 = null;
         let tmp12 = null;

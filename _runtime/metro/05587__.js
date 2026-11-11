@@ -1,29 +1,76 @@
 // === Module 5587: ? ===
 
 // Module 5587
-import _mod1652 from "module_1652" /* 1652 */;
-import value2 from "value2" /* 5395 */;
-import _mod5399 from "module_5399" /* 5399 */;
-import BottomSheetContext from "BottomSheetContext" /* 5405 */;
-import noop from "module_19" /* 19 */;
+import handlerIDToTag from "handlerIDToTag" /* 5538 */;
+import convertToHandlerTag from "convertToHandlerTag" /* 5559 */;
+import RNGestureHandlerModuleDefault from "RNGestureHandlerModule" /* 5564 */;
+import transformIntoHandlerTags from "transformIntoHandlerTags" /* 5566 */;
 
-require = fn;
-const useMemo = fn(19).useMemo;
-const jsx = fn(21).jsx;
+const require = globalThis.__r;
 
-export default function _default(children) {
-  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
-  if (useGestureEventsHandlersDefault === undefined) {
-    useGestureEventsHandlersDefault = _mod5399.useGestureEventsHandlersDefault;
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export function updateHandlers(attachedGestures, prepare, gesturesToAttach) {
+  _require = attachedGestures;
+  prepare.prepare();
+  for (let num = 0; num < gesturesToAttach.length; num = num + 1) {
+    let tmp2 = attachedGestures.attachedGestures[num];
+    let obj = require("convertToHandlerTag");
+    let result = obj.checkGestureCallbacksForWorklets(tmp2);
+    if (gesturesToAttach[num].handlerTag !== tmp2.handlerTag) {
+      ({ handlerTag: gesturesToAttach[num].handlerTag, handlerTag: gesturesToAttach[num].handlers.handlerTag } = tmp2);
+    }
   }
-  const sharedValue = _mod1652.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
-  const bottomSheetInternal = _mod5399.useBottomSheetInternal();
-  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
-  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
-  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
-  const gestureHandler = _mod5399.useGestureHandler(value2.GESTURE_SOURCE.CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
-  const gestureHandler1 = _mod5399.useGestureHandler(value2.GESTURE_SOURCE.HANDLE, animatedHandleGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
-  items = [gestureHandler, gestureHandler1, sharedValue];
-  value = useMemo(() => ({ contentPanGestureHandler: gestureHandler, handlePanGestureHandler: gestureHandler1, animatedGestureSource: sharedValue }), items);
-  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
-};
+  attachedGestures = attachedGestures.attachedGestures;
+  attachedGestures.hasExternalRelations = true;
+  require("ghQueueMicrotask").ghQueueMicrotask(() => {
+    if (attachedGestures.isMounted) {
+      let arr = attachedGestures;
+      if (attachedGestures === tmp.attachedGestures) {
+        let tmp23 = gesturesToAttach;
+        let tmp21 = arr.length !== gesturesToAttach.length;
+        let num = 0;
+        let tmp22 = tmp21;
+        if (0 < gesturesToAttach.length) {
+          do {
+            let tmp3 = attachedGestures[num];
+            let tmp4 = tmp3.handlers.gestureId !== gesturesToAttach[num].handlers.gestureId;
+            let flag = tmp21;
+            if (tmp4) {
+              let tmp6 = gesturesToAttach[num].shouldUseReanimated || tmp3.shouldUseReanimated;
+              tmp4 = tmp6;
+            }
+            if (tmp4) {
+              flag = true;
+            }
+            tmp3.config = gesturesToAttach[num].config;
+            tmp3.handlers = gesturesToAttach[num].handlers;
+            let obj = RNGestureHandlerModuleDefault;
+            let obj2 = transformIntoHandlerTags;
+            let result = obj.setGestureHandlerConfig(tmp3.handlerTag, obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS));
+            let obj3 = RNGestureHandlerModuleDefault;
+            let obj4 = convertToHandlerTag;
+            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
+            let obj5 = handlerIDToTag;
+            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
+            num = num + 1;
+            tmp21 = flag;
+            tmp22 = flag;
+            tmp23 = gesturesToAttach;
+            arr = attachedGestures;
+          } while (num < gesturesToAttach.length);
+        }
+        attachedGestures.hasExternalRelations = convertToHandlerTag.hasExternalRelations(tmp23);
+        if (attachedGestures.animatedHandlers) {
+          if (tmp22) {
+            const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
+            attachedGestures.animatedHandlers.value = found.map((handlers) => handlers.handlers);
+          }
+        }
+        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
+      }
+    }
+  });
+}

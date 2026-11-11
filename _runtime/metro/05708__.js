@@ -1,7 +1,8 @@
 // === Module 5708: ? ===
 
 // Module 5708
-import _modDef5709 from "module_5709" /* 5709 */;
+import _mod17 from "module_17" /* 17 */;
 
+const StyleSheet = _mod17.StyleSheet;
 
-export default _modDef5709;
+export const styles = StyleSheet.create({ container: StyleSheet.absoluteFillObject, background: { backgroundColor: "white", borderRadius: 15 } });

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_scheduled_events/native/images", width: 20, height: 20, scales: [1, 2, 3], hash: "3db3f02153afc41647b2d1efd43e1f34", name: "ic_event_calendar", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "2a4178fd61be5173c63df5a107198d76", name: "InstagramNeutralIcon", type: "png" });

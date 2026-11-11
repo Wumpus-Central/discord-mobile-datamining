@@ -19,7 +19,6 @@ export default function useLatestCallback(current) {
     closure_1.current = current;
   });
   return noop.useRef(function latestCallback() {
-    let length;
     items = [];
     let num = 0;
     if (0 < arguments.length) {

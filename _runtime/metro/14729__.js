@@ -1,33 +1,7 @@
 // === Module 14729: ? ===
 
 // Module 14729
-const require = globalThis.__r;
+import registerAsset from "module_1119" /* 1119 */;
 
-for (const key10013 in require("module_14730")) {
-  arg5[key10013] = require("module_14730")[key10013];
-  continue;
-}
-for (const key10017 in require("ReplacementModesAndroid")) {
-  arg5[key10017] = require("ReplacementModesAndroid")[key10017];
-  continue;
-}
-for (const key10021 in require("purchaseUpdatedListener")) {
-  arg5[key10021] = require("purchaseUpdatedListener")[key10021];
-  continue;
-}
-for (const key10025 in require("module_14744")) {
-  arg5[key10025] = require("module_14744")[key10025];
-  continue;
-}
-for (const key10029 in require("module_14745")) {
-  arg5[key10029] = require("module_14745")[key10029];
-  continue;
-}
-for (const key10033 in require("PurchaseError")) {
-  arg5[key10033] = require("PurchaseError")[key10033];
-  continue;
-}
-for (const key10037 in require("module_14746")) {
-  arg5[key10037] = require("module_14746")[key10037];
-  continue;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "0cbd606a7d77f46a42c156cab0771b02", name: "ic_mention_24px", type: "png" });

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 189, height: 225, scales: [2, 3], hash: "a6de2d9a12ce42b0ce36333de4aed4c3", name: "img_verify_email_sent", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 256, height: 256, scales: [1], hash: "85e85e0480cc3ad94f292bfe35b1a958", name: "img_amazon_music", type: "svg" });

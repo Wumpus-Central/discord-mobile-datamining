@@ -1,8 +1,7 @@
 // === Module 16473: ? ===
 
 // Module 16473
-import _mod16474 from "module_16474" /* 16474 */;
-import _mod16478 from "module_16478" /* 16478 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default (arg0) => _mod16474(_mod16478(arg0));
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "4d498b99244dd74c9e2dd5b1de10ead7", name: "ic_radio_square_checked_24px", type: "png" });

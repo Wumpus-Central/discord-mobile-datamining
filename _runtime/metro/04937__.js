@@ -1,190 +1,111 @@
 // === Module 4937: ? ===
 
 // Module 4937
-import _mod2166 from "module_2166" /* 2166 */;
+import _mod4527 from "module_4527" /* 4527 */;
+import module_4670_mod from "module_4670" /* 4670 */;
+import _typeof_mod from "module_4522" /* 4522 */;
+import module_4526_mod from "module_4526" /* 4526 */;
+import requiredArgs_mod from "requiredArgs" /* 4523 */;
 
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    if (typeof require === "function") {
-      const _module = _mod2166;
-      const obj2 = { months: null, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: null, meridiemParse: null, isPM: null, meridiem: null };
-      const split3 = "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split;
-      obj2.months = "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_");
-      const split4 = "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split;
-      obj2.monthsShort = "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_");
-      const split5 = "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split;
-      obj2.weekdays = "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split("_");
-      const split6 = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split;
-      obj2.weekdaysShort = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_");
-      const split7 = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split;
-      obj2.weekdaysMin = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_");
-      obj2.longDateFormat = { LT: "A h:mm", LTS: "A h:mm:ss", L: "YYYY.MM.DD.", LL: "YYYY\uB144 MMMM D\uC77C", LLL: "YYYY\uB144 MMMM D\uC77C A h:mm", LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm", l: "YYYY.MM.DD.", ll: "YYYY\uB144 MMMM D\uC77C", lll: "YYYY\uB144 MMMM D\uC77C A h:mm", llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm" };
-      obj2.calendar = { sameDay: "\uC624\uB298 LT", nextDay: "\uB0B4\uC77C LT", nextWeek: "dddd LT", lastDay: "\uC5B4\uC81C LT", lastWeek: "\uC9C0\uB09C\uC8FC dddd LT", sameElse: "L" };
-      obj2.relativeTime = { future: "%s \uD6C4", past: "%s \uC804", s: "\uBA87 \uCD08", ss: "%d\uCD08", m: "1\uBD84", mm: "%d\uBD84", h: "\uD55C \uC2DC\uAC04", hh: "%d\uC2DC\uAC04", d: "\uD558\uB8E8", dd: "%d\uC77C", M: "\uD55C \uB2EC", MM: "%d\uB2EC", y: "\uC77C \uB144", yy: "%d\uB144" };
-      obj2.dayOfMonthOrdinalParse = /\d{1,2}(일|월|주)/;
-      obj2.ordinal = function ordinal(arg0, arg1) {
-        if ("d" !== arg1) {
-          if ("D" !== arg1) {
-            if ("DDD" !== arg1) {
-              if ("M" === arg1) {
-                return arg0 + "\uC6D4";
-              } else {
-                if ("w" !== arg1) {
-                  if ("W" !== arg1) {
-                    return arg0;
-                  }
-                }
-                return arg0 + "\uC8FC";
-              }
-            }
-          }
-        }
-        return arg0 + "\uC77C";
-      };
-      obj2.meridiemParse = /오전|오후/;
-      obj2.isPM = function isPM(arg0) {
-        return "\uC624\uD6C4" === arg0;
-      };
-      obj2.meridiem = function meridiem(arg0, arg1, arg2) {
-        let str = "\uC624\uD6C4";
-        if (arg0 < 12) {
-          str = "\uC624\uC804";
-        }
-        return str;
-      };
-      _module.defineLocale("ko", obj2);
-    }
-  }
+let module_4670 = module_4670_mod;
+if (!module_4670) {
+  const obj = { default: module_4670 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4670;
 }
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], function t(defineLocale) {
-      ({ split, split: split2 } = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0");
-      return defineLocale.defineLocale("ko", {
-        months: "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_"),
-        monthsShort: "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_"),
-        weekdays: "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split("_"),
-        weekdaysShort: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
-        weekdaysMin: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
-        longDateFormat: { LT: "A h:mm", LTS: "A h:mm:ss", L: "YYYY.MM.DD.", LL: "YYYY\uB144 MMMM D\uC77C", LLL: "YYYY\uB144 MMMM D\uC77C A h:mm", LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm", l: "YYYY.MM.DD.", ll: "YYYY\uB144 MMMM D\uC77C", lll: "YYYY\uB144 MMMM D\uC77C A h:mm", llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm" },
-        calendar: { sameDay: "\uC624\uB298 LT", nextDay: "\uB0B4\uC77C LT", nextWeek: "dddd LT", lastDay: "\uC5B4\uC81C LT", lastWeek: "\uC9C0\uB09C\uC8FC dddd LT", sameElse: "L" },
-        relativeTime: { future: "%s \uD6C4", past: "%s \uC804", s: "\uBA87 \uCD08", ss: "%d\uCD08", m: "1\uBD84", mm: "%d\uBD84", h: "\uD55C \uC2DC\uAC04", hh: "%d\uC2DC\uAC04", d: "\uD558\uB8E8", dd: "%d\uC77C", M: "\uD55C \uB2EC", MM: "%d\uB2EC", y: "\uC77C \uB144", yy: "%d\uB144" },
-        dayOfMonthOrdinalParse: /\d{1,2}(일|월|주)/,
-        ordinal(arg0, arg1) {
-          if ("d" !== arg1) {
-            if ("D" !== arg1) {
-              if ("DDD" !== arg1) {
-                if ("M" === arg1) {
-                  return arg0 + "\uC6D4";
-                } else {
-                  if ("w" !== arg1) {
-                    if ("W" !== arg1) {
-                      return arg0;
-                    }
-                  }
-                  return arg0 + "\uC8FC";
-                }
-              }
-            }
-          }
-          return arg0 + "\uC77C";
-        },
-        meridiemParse: /오전|오후/,
-        isPM(arg0) {
-          return "\uC624\uD6C4" === arg0;
-        },
-        meridiem(arg0, arg1, arg2) {
-          let str = "\uC624\uD6C4";
-          if (arg0 < 12) {
-            str = "\uC624\uC804";
-          }
-          return str;
-        }
-      });
-    });
-  }
+module_4670 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
 }
-const moment = this.moment;
-({ split, split: split2 } = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0");
-moment.defineLocale("ko", {
-  months: "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_"),
-  monthsShort: "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_"),
-  weekdays: "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split("_"),
-  weekdaysShort: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
-  weekdaysMin: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
-  longDateFormat: { LT: "A h:mm", LTS: "A h:mm:ss", L: "YYYY.MM.DD.", LL: "YYYY\uB144 MMMM D\uC77C", LLL: "YYYY\uB144 MMMM D\uC77C A h:mm", LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm", l: "YYYY.MM.DD.", ll: "YYYY\uB144 MMMM D\uC77C", lll: "YYYY\uB144 MMMM D\uC77C A h:mm", llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm" },
-  calendar: { sameDay: "\uC624\uB298 LT", nextDay: "\uB0B4\uC77C LT", nextWeek: "dddd LT", lastDay: "\uC5B4\uC81C LT", lastWeek: "\uC9C0\uB09C\uC8FC dddd LT", sameElse: "L" },
-  relativeTime: { future: "%s \uD6C4", past: "%s \uC804", s: "\uBA87 \uCD08", ss: "%d\uCD08", m: "1\uBD84", mm: "%d\uBD84", h: "\uD55C \uC2DC\uAC04", hh: "%d\uC2DC\uAC04", d: "\uD558\uB8E8", dd: "%d\uC77C", M: "\uD55C \uB2EC", MM: "%d\uB2EC", y: "\uC77C \uB144", yy: "%d\uB144" },
-  dayOfMonthOrdinalParse: /\d{1,2}(일|월|주)/,
-  ordinal(arg0, arg1) {
-    if ("d" !== arg1) {
-      if ("D" !== arg1) {
-        if ("DDD" !== arg1) {
-          if ("M" === arg1) {
-            return arg0 + "\uC6D4";
-          } else {
-            if ("w" !== arg1) {
-              if ("W" !== arg1) {
-                return arg0;
-              }
+_typeof = tmp5;
+let module_4526 = module_4526_mod;
+if (!module_4526) {
+  const obj3 = { default: module_4526 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4526;
+}
+module_4526 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+
+export default function setDay(arg0, arg1, weekStartsOn) {
+  requiredArgs.default(2, arguments);
+  const defaultOptions = _mod4527.getDefaultOptions();
+  weekStartsOn = undefined;
+  if (null != weekStartsOn) {
+    weekStartsOn = weekStartsOn.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    let weekStartsOn1;
+    if (null != weekStartsOn) {
+      const locale = weekStartsOn.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              weekStartsOn1 = options.weekStartsOn;
             }
-            return arg0 + "\uC8FC";
           }
         }
       }
     }
-    return arg0 + "\uC77C";
-  },
-  meridiemParse: /오전|오후/,
-  isPM(arg0) {
-    return "\uC624\uD6C4" === arg0;
-  },
-  meridiem(arg0, arg1, arg2) {
-    let str = "\uC624\uD6C4";
-    if (arg0 < 12) {
-      str = "\uC624\uC804";
-    }
-    return str;
+    weekStartsOn = weekStartsOn1;
   }
-});
-const obj = {
-  months: "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_"),
-  monthsShort: "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_"),
-  weekdays: "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split("_"),
-  weekdaysShort: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
-  weekdaysMin: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
-  longDateFormat: { LT: "A h:mm", LTS: "A h:mm:ss", L: "YYYY.MM.DD.", LL: "YYYY\uB144 MMMM D\uC77C", LLL: "YYYY\uB144 MMMM D\uC77C A h:mm", LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm", l: "YYYY.MM.DD.", ll: "YYYY\uB144 MMMM D\uC77C", lll: "YYYY\uB144 MMMM D\uC77C A h:mm", llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm" },
-  calendar: { sameDay: "\uC624\uB298 LT", nextDay: "\uB0B4\uC77C LT", nextWeek: "dddd LT", lastDay: "\uC5B4\uC81C LT", lastWeek: "\uC9C0\uB09C\uC8FC dddd LT", sameElse: "L" },
-  relativeTime: { future: "%s \uD6C4", past: "%s \uC804", s: "\uBA87 \uCD08", ss: "%d\uCD08", m: "1\uBD84", mm: "%d\uBD84", h: "\uD55C \uC2DC\uAC04", hh: "%d\uC2DC\uAC04", d: "\uD558\uB8E8", dd: "%d\uC77C", M: "\uD55C \uB2EC", MM: "%d\uB2EC", y: "\uC77C \uB144", yy: "%d\uB144" },
-  dayOfMonthOrdinalParse: /\d{1,2}(일|월|주)/,
-  ordinal(arg0, arg1) {
-    if ("d" !== arg1) {
-      if ("D" !== arg1) {
-        if ("DDD" !== arg1) {
-          if ("M" === arg1) {
-            return arg0 + "\uC6D4";
-          } else {
-            if ("w" !== arg1) {
-              if ("W" !== arg1) {
-                return arg0;
-              }
-            }
-            return arg0 + "\uC8FC";
+  if (null === weekStartsOn) {
+    weekStartsOn = defaultOptions.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    const locale2 = defaultOptions.locale;
+    let weekStartsOn2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            weekStartsOn2 = options2.weekStartsOn;
           }
         }
       }
     }
-    return arg0 + "\uC77C";
-  },
-  meridiemParse: /오전|오후/,
-  isPM(arg0) {
-    return "\uC624\uD6C4" === arg0;
-  },
-  meridiem(arg0, arg1, arg2) {
-    let str = "\uC624\uD6C4";
-    if (arg0 < 12) {
-      str = "\uC624\uC804";
-    }
-    return str;
+    weekStartsOn = weekStartsOn2;
   }
+  let num = 0;
+  if (null !== weekStartsOn) {
+    num = 0;
+    if (undefined !== weekStartsOn) {
+      num = weekStartsOn;
+    }
+  }
+  const defaultResult1 = module_4526.default(num);
+  if (defaultResult1 >= 0) {
+    if (defaultResult1 <= 6) {
+      const defaultResult2 = _typeof.default(arg0);
+      const defaultResult3 = module_4526.default(arg1);
+      const day = defaultResult2.getDay();
+      const diff = 7 - defaultResult1;
+      if (defaultResult3 >= 0) {
+        if (defaultResult3 <= 6) {
+          let diff1 = ((defaultResult3 % 7 + 7) % 7 + diff) % 7 - (day + diff) % 7;
+        }
+        return module_4670.default(defaultResult2, diff1);
+      }
+      diff1 = defaultResult3 - (day + diff) % 7;
+    }
+  }
+  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  throw rangeError;
 };
+export default exports.default;

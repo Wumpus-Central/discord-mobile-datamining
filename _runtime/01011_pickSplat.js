@@ -22,7 +22,7 @@ function pathIsWildcardAndHasChildren(str, route) {
   flag = str.endsWith("*");
   if (flag) {
     const children = route.route.children;
-    let length;
+    length = undefined;
     if (children != null) {
       length = children.length;
     }

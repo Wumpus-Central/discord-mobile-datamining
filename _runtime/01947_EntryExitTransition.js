@@ -171,7 +171,7 @@ class EntryExitTransition {
         const obj3 = {};
         const combined = transform2.concat(transform3.map((item) => {
           const keys = Object.keys(item);
-          let length;
+          length = undefined;
           if (keys != null) {
             length = keys.length;
           }

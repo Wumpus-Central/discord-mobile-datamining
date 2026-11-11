@@ -1,9 +1,7 @@
 // === Module 4501: ? ===
 
 // Module 4501
-let closure_0 = { lastWeek: "'\uC9C0\uB09C' eeee p", yesterday: "'\uC5B4\uC81C' p", today: "'\uC624\uB298' p", tomorrow: "'\uB0B4\uC77C' p", nextWeek: "'\uB2E4\uC74C' eeee p", other: "P" };
+import registerAsset from "module_1119" /* 1119 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
-export default exports.default;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2Nvbm5lY3RlZF9hcHBz", scales: [1], hash: "862452f80837801189f6ec764dffed8d", name: "es-ES.messages.862452f80837801189f6ec764dffed8d.compiled.messages", type: "jsona" });

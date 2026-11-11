@@ -1,33 +1,14 @@
 // === Module 5653: ? ===
 
 // Module 5653
-import _mod5654 from "module_5654" /* 5654 */;
-import _slicedToArray from "module_5635" /* 5635 */;
+import ComposedGestureName from "ComposedGestureName" /* 5597 */;
+import _mod5651 from "module_5651" /* 5651 */;
 
-require = fn;
-const noop = fn(19);
-({ useState: c3, useCallback: closure_4 } = noop);
+require = arg1;
+const dependencyMap = arg6;
 
-export function useLayoutState(arg0) {
-  const tmp = _slicedToArray(React3(arg0), 2);
-  closure_0 = tmp[1];
-  const recyclerViewContext = _mod5654.useRecyclerViewContext();
-  items = [tmp[0], ];
-  const items1 = [recyclerViewContext];
-  items[1] = React4((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_0((arg0) => {
-      let tmpResult = closure_0;
-      if (typeof closure_0 === "function") {
-        tmpResult = tmp(arg0);
-      }
-      return tmpResult;
-    });
-    if (!arg1) {
-      if (recyclerViewContext != null) {
-        recyclerViewContext.layout();
-      }
-    }
-  }, items1);
-  return items;
+export function useSimultaneousGestures() {
+  items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
+  return _mod5651.useComposedGesture.apply(items1);
 }

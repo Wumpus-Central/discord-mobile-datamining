@@ -447,7 +447,7 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, parentScreens, arr3) {
     if (typeof tmp3 !== "string") {
       if (typeof tmp3.path !== "string") {
         const alias1 = tmp3.alias;
-        let length;
+        length = undefined;
         if (alias1 != null) {
           length = alias1.length;
         }

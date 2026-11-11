@@ -6,7 +6,6 @@ function concatty(arg0, arg1) {
 }
 
 export default function bind(self) {
-  let length;
   let sum;
   self = this;
   toString = self;
@@ -44,7 +43,6 @@ export default function bind(self) {
       }
       const _HermesInternal = HermesInternal;
       const tmp7 = Function("binder", "return function (" + str4 + "){ return binder.apply(this,arguments); }")(function() {
-        let length;
         let length2;
         let length3;
         let length4;

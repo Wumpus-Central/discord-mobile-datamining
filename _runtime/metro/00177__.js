@@ -154,7 +154,6 @@ function handle(promise, _A) {
     _z = _A;
     const _setImmediate = setImmediate;
     setImmediate(() => {
-      let length;
       let length2;
       if (1 === _z._y) {
         let onRejected = _z.onFulfilled;
@@ -225,7 +224,6 @@ function handle(promise, _A) {
   }
 }
 function resolve(_x, _z) {
-  let length;
   let length2;
   let length3;
   let length4;
@@ -346,7 +344,6 @@ function Handler(fn, fn2, promise) {
   obj.promise = promise;
 }
 function doResolve(fn, self) {
-  let length;
   const _self = self;
   _z = false;
   let tmp2 = _z;

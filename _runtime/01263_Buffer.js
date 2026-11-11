@@ -2895,7 +2895,7 @@ function slowToString(arg0, arg1, arg2) {
   if (num > this.length) {
     return "";
   } else {
-    let length = arg2;
+    length = arg2;
     if (tmp2) {
       length = self.length;
     }

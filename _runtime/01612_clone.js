@@ -65,7 +65,7 @@ function clone(screen, arg1) {
         while (iter !== undefined) {
           let _Reflect = Reflect;
           let tmp21 = nextResult;
-          value2 = Reflect.get(screen, nextResult);
+          let value2 = Reflect.get(screen, nextResult);
           let tmp23 = value2;
           if ("params" === nextResult) {
             let tmp25 = closure_5;

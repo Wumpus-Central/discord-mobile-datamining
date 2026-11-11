@@ -9,7 +9,7 @@ let c0;
 function mutableHostDecorator(value, arg1) {
   closure_1 = arg1;
   const map = new Map();
-  value2 = value.value;
+  const value2 = value.value;
   c4 = false;
   function setDirtyFlag(arg0) {
     if (closure_1 != null) {

@@ -385,7 +385,7 @@ let items = [
           const merged = Object.assign(tmp14);
           const tmp3Result7 = tmp3(721);
           const result = tmp3(726).timedEventsToMeasurements(self._events);
-          let length = result;
+          length = result;
           if (result) {
             const _Object = Object;
             length = Object.keys(result).length;

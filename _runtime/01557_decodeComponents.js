@@ -73,7 +73,6 @@ export default (str) => {
       return decodeURIComponent(replaced);
     } catch (err) {
       return (function customDecodeURIComponent(arg0) {
-        let length;
         const obj = { "%FE%FF": "\uFFFD\uFFFD", "%FF%FE": "\uFFFD\uFFFD" };
         let match = regex.exec(arg0);
         if (match) {

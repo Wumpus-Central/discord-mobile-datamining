@@ -1,9 +1,33 @@
 // === Module 8158: ? ===
 
 // Module 8158
-import module_65 from "module_65" /* 65 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeOffset", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, dx: true, dy: true } };
+const NativeModules = get_ActivityIndicator.NativeModules;
+const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(undefined);
+class WebViewProxy {
+  constructor(arg0) {
+    this.webViewKey = global;
+    return;
+  }
+  injectJavaScript(arg0) {
+    RNCWebView = NativeModules.RNCWebView;
+    return RNCWebView.injectJavaScriptWithWebViewKey(this.webViewKey, global);
+  }
+  addOnMessageListener(arg0) {
+    closure_0 = global;
+    self = this;
+    return closure_1.addListener("ReactNativeWebViewOnMessageWithWebViewKey", (webViewKey) => {
+      if (webViewKey.webViewKey === self.webViewKey) {
+        closure_0(webViewKey);
+      }
+    });
+  }
+  releaseWebView() {
+    RNCWebView = NativeModules.RNCWebView;
+    releaseWebViewResult = RNCWebView.releaseWebView(this.webViewKey);
+    return;
+  }
+}
 
-export default module_65.get("RNSVGFeOffset", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default WebViewProxy;

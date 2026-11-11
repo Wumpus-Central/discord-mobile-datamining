@@ -48,7 +48,7 @@ function _getEventFilterUrl(exception) {
       let tmp2 = undefined === parent_id;
       if (tmp2) {
         const stacktrace = mechanism.stacktrace;
-        let length;
+        length = undefined;
         if (stacktrace != null) {
           const frames = stacktrace.frames;
           if (frames != null) {
@@ -127,7 +127,7 @@ const defineIntegrationResult = setupIntegration.defineIntegration(() => {
         let flag5 = false;
         if ("transaction" === type.type) {
           const ignoreTransactions = tmp.ignoreTransactions;
-          let length;
+          length = undefined;
           if (ignoreTransactions != null) {
             length = ignoreTransactions.length;
           }

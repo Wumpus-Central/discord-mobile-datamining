@@ -1,22 +1,7 @@
 // === Module 5961: ? ===
 
 // Module 5961
-import _mod523 from "module_523" /* 523 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-let prototype;
-if (_mod523) {
-  prototype = _mod523.prototype;
-}
-let valueOf;
-if (prototype) {
-  valueOf = prototype.valueOf;
-}
 
-export default function cloneSymbol(arg0) {
-  if (valueOf) {
-    const call = valueOf.call;
-    Object(typeof call === "unknown" ? valueOf() : call(arg0));
-  } else {
-    return {};
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d66ecc5b57601bd45d541b2c12ca7702", name: "UserPlusIcon", type: "png" });

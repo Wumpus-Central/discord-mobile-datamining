@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = arg1;
 let dependencyMap = arg6;
 function triggerHandlers(arg0, arg1) {
-  let length;
+  length = undefined;
   if (closure_6[arg0] != null) {
     length = arr.length;
   }

@@ -1,18 +1,7 @@
 // === Module 16495: ? ===
 
 // Module 16495
-import _mod16486 from "module_16486" /* 16486 */;
-import _mod16494 from "module_16494" /* 16494 */;
-import _mod16496 from "module_16496" /* 16496 */;
-import _mod16497 from "module_16497" /* 16497 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default _mod16486 ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
-  const tmp3 = _mod16496("Symbol");
-  let tmpResultResult = _mod16494(tmp3);
-  if (tmpResultResult) {
-    tmpResultResult = _mod16497(tmp3.prototype, Object(arg0));
-    const tmpResult = _mod16497;
-  }
-  return tmpResultResult;
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "89ef758cad16b0f89bf10bf57ab078db", name: "StatusDND", type: "png" });

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 375, height: 152, scales: [2, 3], hash: "bd0899bbe9025729a8e812d462104779", name: "img_bundle_subheader_mobile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3ee579776b13459d07461b433997e652", name: "ChevronLargeRightIcon", type: "png" });

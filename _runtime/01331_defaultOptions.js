@@ -51,7 +51,6 @@ function setReplace(c0, toJSON, arg2, toJSON) {
   }
 }
 function decirc(obj, arg1, arg2, arr, arg4, sum, depthLimit) {
-  let length;
   let length2;
   sum = sum + 1;
   if (typeof obj === "object") {
@@ -193,7 +192,6 @@ function deterministicStringify(toJSON, arg1, arg2, depthLimit) {
   }
 }
 function deterministicDecirc(toJSON, arg1, arg2, arr, toJSON, sum, depthLimit) {
-  let length;
   let length2;
   sum = sum + 1;
   if (typeof toJSON === "object") {

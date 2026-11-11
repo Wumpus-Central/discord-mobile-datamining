@@ -34,7 +34,7 @@ function notifyMutationObservers() {
         while (obj !== undefined) {
           let tmp17 = _slicedToArray(tmp14, 2);
           let tmp18 = tmp17[1];
-          value2 = closure_1_8.get(tmp17[0]);
+          let value2 = closure_1_8.get(tmp17[0]);
           let tmp21 = value2;
           if (value2) {
             ({ observer, callback } = tmp21);

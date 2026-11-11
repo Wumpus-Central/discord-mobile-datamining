@@ -15,7 +15,7 @@ export default function equalArrays(key, value, arg2, fn, fn2, get) {
     return false;
   }
   value = get.get(key);
-  value2 = get.get(value);
+  const value2 = get.get(value);
   if (value) {
     if (value2) {
       return value == value && value2 == key;

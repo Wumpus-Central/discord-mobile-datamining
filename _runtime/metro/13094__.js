@@ -1,77 +1,7 @@
 // === Module 13094: ? ===
 
 // Module 13094
-import _mod13066 from "module_13066" /* 13066 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-function getFirstMatchNode(node) {
-  if ("node" in node) {
-    node = node.node;
-  } else {
-    node = getFirstMatchNode(node.match[0]);
-  }
-  return node;
-}
-function getLastMatchNode(node) {
-  if ("node" in node) {
-    node = node.node;
-  } else {
-    node = getLastMatchNode(node.match[node.match.length - 1]);
-  }
-  return node;
-}
 
-export default {
-  matchFragments(arg0, value, matched, arg3, arg4) {
-    closure_0 = arg0;
-    closure_1 = value;
-    closure_2 = arg3;
-    closure_3 = arg4;
-    items = [];
-    if (null !== matched.matched) {
-      function findFragments(matched) {
-        if (null !== matched.syntax) {
-          if (matched.syntax.type === closure_2) {
-            if (matched.syntax.name === closure_3) {
-              if ("node" in matched) {
-                let node = matched.node;
-              } else if ("node" in matched.match[0]) {
-                node = str.node;
-              } else {
-                node = closure_2(str.match[0]);
-              }
-              if ("node" in matched) {
-                let node2 = matched.node;
-              } else if ("node" in matched.match[matched.match.length - 1]) {
-                node2 = str2.node;
-              } else {
-                node2 = closure_3(str2.match[str2.match.length - 1]);
-              }
-              const syntax = node.syntax;
-              syntax.walk(node2, (arg0, arg1, parent) => {
-                if (arg0 === node) {
-                  let iter = arg1;
-                  const obj2 = new _mod13066();
-                  obj2.appendData(iter.data);
-                  while (iter.data !== node2) {
-                    iter = iter.next;
-                    if (null === iter) {
-                      break;
-                    }
-                  }
-                  const obj = { parent, nodes: obj2 };
-                  items.push(obj);
-                }
-              });
-            }
-          }
-        }
-        if (Array.isArray(matched.match)) {
-          const match = matched.match;
-          const item = match.forEach(findFragments);
-        }
-      }
-      findFragments(matched.matched);
-    }
-    return items;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3ef4b3974aa9916e2392a41f76914807", name: "ImagePlusIcon", type: "png" });

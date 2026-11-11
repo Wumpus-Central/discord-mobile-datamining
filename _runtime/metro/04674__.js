@@ -1,17 +1,17 @@
 // === Module 4674: ? ===
 
 // Module 4674
-import module_4670_mod from "module_4670" /* 4670 */;
-import requiredArgs_mod from "requiredArgs" /* 4423 */;
+import _typeof_mod from "module_4522" /* 4522 */;
+import requiredArgs_mod from "requiredArgs" /* 4523 */;
 
-let module_4670 = module_4670_mod;
-if (!module_4670) {
-  const obj = { default: module_4670 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4670;
+  tmp3 = _typeof;
 }
-module_4670 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function formatDistanceToNow(arg0, arg1) {
+export default function isSunday(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4670.default(arg0, Date.now(), arg1);
+  return 0 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

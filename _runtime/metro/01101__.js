@@ -451,7 +451,7 @@ export function createBrowserHistory(props) {
       };
     },
     notifyListeners() {
-      const length = arguments.length;
+      length = arguments.length;
       const array = new Array(length);
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
@@ -969,7 +969,7 @@ export function createHashHistory(props) {
       };
     },
     notifyListeners() {
-      const length = arguments.length;
+      length = arguments.length;
       const array = new Array(length);
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
@@ -1381,7 +1381,7 @@ export function createMemoryHistory(props) {
       };
     },
     notifyListeners() {
-      const length = arguments.length;
+      length = arguments.length;
       const array = new Array(length);
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];

@@ -91,7 +91,7 @@ function advanceTimers(arg0) {
       } else {
         let tmp13 = pop(closure_7);
         first.sortIndex = first.expirationTime;
-        let length = closure_6.length;
+        length = closure_6.length;
         let arr2 = closure_6.push(first);
         arr = closure_7;
         if (0 < length) {
@@ -409,7 +409,7 @@ if (typeof performance === "object") {
         }
       } else {
         obj.sortIndex = sum1;
-        let length = closure_6.length;
+        length = closure_6.length;
         closure_6.push(obj);
         if (0 < length) {
           while (true) {

@@ -1,14 +1,7 @@
 // === Module 16516: ? ===
 
 // Module 16516
-import _mod16517 from "module_16517" /* 16517 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default (arg0) => {
-  const tmp = _mod16517(arg0);
-  let num = 0;
-  if (tmp > 0) {
-    num = min(tmp, 9007199254740991);
-  }
-  return num;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/intl/messages", scales: [1], hash: "56049e6a573d48ca62b67583f3aa20ab", name: "llm-pilot.compiled.messages", type: "jsona" });

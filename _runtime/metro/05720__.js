@@ -1,31 +1,12 @@
 // === Module 5720: ? ===
 
 // Module 5720
-import pointsDiffer_mod from "pointsDiffer" /* 78 */;
-import processColorElement_mod from "processColorElement" /* 80 */;
-import module_65 from "module_65" /* 65 */;
+import _mod17 from "module_17" /* 17 */;
+import value2 from "value2" /* 5508 */;
 
-let pointsDiffer = pointsDiffer_mod;
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-const obj = { startPoint: { diff: pointsDiffer }, endPoint: null, colors: null, locations: true, useAngle: true, angleCenter: null, angle: true, borderRadii: true };
-let pointsDiffer = pointsDiffer_mod;
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-obj.endPoint = { diff: pointsDiffer };
-let processColorElement = processColorElement_mod;
-if ("default" in processColorElement) {
-  processColorElement = processColorElement.default;
-}
-obj.colors = { process: processColorElement };
-let pointsDiffer = pointsDiffer_mod;
-if ("default" in pointsDiffer) {
-  pointsDiffer = pointsDiffer.default;
-}
-const obj2 = { uiViewClassName: "RNLinearGradient", validAttributes: obj };
-obj.angleCenter = { diff: pointsDiffer };
+const StyleSheet = _mod17.StyleSheet;
+const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
+const size = { alignSelf: "center", width: 7.5 * value2.WINDOW_WIDTH / 100, height: 4, borderRadius: 4, backgroundColor: "rgba(0, 0, 0, 0.75)" };
+obj.indicator = size;
 
-export default module_65.get("RNLinearGradient", () => obj2);
-export const __INTERNAL_VIEW_CONFIG = obj2;
+export const styles = StyleSheet.create(obj);

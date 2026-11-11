@@ -1,48 +1,14 @@
 // === Module 4570: ? ===
 
 // Module 4570
-import module_4426_mod from "module_4426" /* 4426 */;
-import _typeof_mod from "module_4422" /* 4422 */;
-import requiredArgs_mod from "requiredArgs" /* 4423 */;
+import module_2191 from "module_2191" /* 2191 */;
 
-let module_4426 = module_4426_mod;
-if (!module_4426) {
-  const obj = { default: module_4426 };
-  let tmp3 = obj;
+if (!module_2191) {
+  const obj2 = { default: module_2191 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4426;
+  obj = module_2191;
 }
-module_4426 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
 
-export default function addDays(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = module_4426.default(arg1);
-  if (isNaN(defaultResult2)) {
-    const _Date = Date;
-    const date = new Date(NaN);
-    return date;
-  } else if (defaultResult2) {
-    defaultResult1.setDate(defaultResult1.getDate() + defaultResult2);
-    return defaultResult1;
-  } else {
-    return defaultResult1;
-  }
-};
+export default { date: obj.default({ formats: { full: "EEEE d MMMM y", long: "d MMMM y", medium: "d MMM y", short: "dd/MM/y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} '\u00E0' {{time}}", long: "{{date}} '\u00E0' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

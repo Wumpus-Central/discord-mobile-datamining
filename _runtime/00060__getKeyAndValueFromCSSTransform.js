@@ -47,7 +47,7 @@ export default function processTransform(str) {
                 }
               }
               let match2 = regExp1.exec(str);
-              let length;
+              length = undefined;
               if (match2 != null) {
                 length = match2.length;
               }
@@ -56,7 +56,7 @@ export default function processTransform(str) {
                 let entry2 = { key: tmp3, value: Number(match2[1]) };
                 entry1 = entry2;
               } else {
-                let entry3 = { key: tmp3, value: "r" };
+                let entry3 = { key: tmp3, value: "Array" };
                 entry1 = entry3;
               }
             }

@@ -1,10 +1,7 @@
 // === Module 7422: ? ===
 
 // Module 7422
-import _mod7424 from "module_7424" /* 7424 */;
-
-const require = globalThis.__r;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export const useClipboard = require("module_7423").useClipboard;
-export default _mod7424.Clipboard;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/consoles", width: 254, height: 127, scales: [2, 3], hash: "4d6a15fbe9eb4d6c66e3d9151f9a0183", name: "link_failure", type: "png" });

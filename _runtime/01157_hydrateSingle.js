@@ -4,7 +4,6 @@
 import _slicedToArray from "module_32" /* 32 */;
 
 function hydrateSingle(arr) {
-  let length;
   let length2;
   if (typeof arr === "string") {
     const obj = { type: 0, value: arr };
@@ -168,7 +167,6 @@ FormatJsNodeType.Tag = 8;
 FormatJsNodeType[8] = "Tag";
 
 export function hydrateFormatJsAst(arr) {
-  let length;
   let length2;
   if (typeof arr === "string") {
     return hydrateSingle(arr);

@@ -1,13 +1,26 @@
 // === Module 5590: ? ===
 
 // Module 5590
-import _mod17 from "module_17" /* 17 */;
+import noop from "module_19" /* 19 */;
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { container: null };
-const obj2 = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.pointerEvents = "box-none";
-obj.container = obj2;
-
-export const styles = StyleSheet.create(obj);
+let tmp3 = typeof window === "undefined";
+if (typeof window !== "undefined") {
+  const _window2 = window;
+  tmp3 = undefined === window.document;
+}
+if (!tmp3) {
+  const _window = window;
+  tmp3 = undefined === window.document.createElement;
+}
+let tmp4 = typeof navigator !== "undefined";
+if (typeof navigator !== "undefined") {
+  const _navigator = navigator;
+  tmp4 = "ReactNative" === navigator.product;
+}
+if (tmp3) {
+  if (!tmp4) {
+    let useLayoutEffect = noop.useEffect;
+  }
+  exports.useIsomorphicLayoutEffect = useLayoutEffect;
+}
+useLayoutEffect = noop.useLayoutEffect;

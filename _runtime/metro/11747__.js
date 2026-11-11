@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/community", width: 120, height: 80, scales: [2, 3], hash: "4ca23515516a1452487c5deb66a2aa5c", name: "customize_empty_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images", width: 216, height: 115, scales: [1], hash: "ac18ecef6a4188530e3bbe95eefb7a2b", name: "gift_chest", type: "png" });

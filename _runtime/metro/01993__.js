@@ -190,7 +190,7 @@ export default fn(19).forwardRef((arg0, ref) => {
     obj.scrollIndicatorInsets = rect1;
     ({ bottom: obj.contentInsetBottom, top: obj.contentInsetTop } = value.dynamic);
     if (_undefined3) {
-      value2 = _undefined3.value;
+      const value2 = _undefined3.value;
       if (value2 !== _undefined4.value) {
         _undefined4.value = value2;
         const point = { x: 0, y: value2 };

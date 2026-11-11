@@ -1,5 +1,165 @@
 // === Module 16538: ? ===
 
 // Module 16538
+import e from "e" /* 1159 */;
+import monadic from "monadic" /* 16539 */;
 
-export default { name: "react-native-url-polyfill", version: "2.0.0", description: "A lightweight and trustworthy URL polyfill for React Native", keywords: ["URL", "URLSearchParams", "polyfill", "react native", "whatwg-url"], bugs: { url: "https://github.com/charpeni/react-native-url-polyfill/issues" }, homepage: "https://github.com/charpeni/react-native-url-polyfill", readme: "https://github.com/charpeni/react-native-url-polyfill#readme", repository: { type: "git", url: "https://github.com/charpeni/react-native-url-polyfill.git" }, main: "index.js", types: "index.d.ts", scripts: { test: "jest", lint: "eslint .", prepare: "husky install", "bundle-size": "node scripts/bundle-size" }, author: "Nicolas Charpentier <nicolas.charpentier079@gmail.com>", license: "MIT", dependencies: { "whatwg-url-without-unicode": "8.0.0-3" }, devDependencies: { "@react-native-community/eslint-config": "3.2.0", detox: "20.9.1", eslint: "8.44.0", "eslint-plugin-prettier": "4.2.1", husky: "8.0.3", jest: "29.5.0", "lint-staged": "13.2.3", "metro-react-native-babel-preset": "0.76.7", nanoid: "3.3.6", prettier: "2.8.8", react: "18.2.0", "react-native": "0.72.1", "react-native-bundle-scale": "1.1.0", typescript: "5.1.6" }, peerDependencies: { "react-native": "*" }, jest: { preset: "react-native", testPathIgnorePatterns: ["/node_modules/", "./platforms/"] }, "lint-staged": { "*.js": ["eslint --fix"] } };
+function getMultiInternalSlots(get, arg1) {
+  items = [];
+  let num = 2;
+  if (2 < arguments.length) {
+    do {
+      items[num - 2] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  value = get.get(arg1);
+  require = value;
+  if (value) {
+    const _Object = Object;
+    return items.reduce((acc, item) => {
+      acc[item] = value[item];
+      return acc;
+    }, Object.create(null));
+  } else {
+    const _TypeError = TypeError;
+    const concat = "".concat;
+    const typeError = new TypeError("".concat(arg1, " InternalSlot has not been initialized"));
+    throw typeError;
+  }
+}
+let obj = { strategy: monadic.strategies.variadic };
+const obj2 = { strategy: monadic.strategies.variadic };
+const obj3 = { strategy: monadic.strategies.variadic };
+const obj4 = { strategy: monadic.strategies.variadic };
+
+export function repeat(str, arg1) {
+  if (typeof str.repeat === "function") {
+    return str.repeat(arg1);
+  } else {
+    const _Array = Array;
+    const arr = new Array(arg1);
+    let num = 0;
+    if (0 < arr.length) {
+      do {
+        arr[num] = str;
+        num = num + 1;
+        length = arr.length;
+      } while (num < length);
+    }
+    return arr.join("");
+  }
+}
+export function setInternalSlot(get, arg1, arg2, arg3) {
+  if (!get.get(arg1)) {
+    const _Object = Object;
+    const result = get.set(arg1, Object.create(null));
+  }
+  get.get(arg1)[arg2] = arg3;
+}
+export function setMultiInternalSlots(get, arg1, arg2) {
+  const keys = Object.keys(arg2);
+  for (let num = 0; num < keys.length; num = num + 1) {
+    let tmp = keys[num];
+    if (!get.get(arg1)) {
+      let _Object = Object;
+      let result = get.set(arg1, Object.create(null));
+    }
+    get.get(arg1)[tmp] = arg2[tmp];
+  }
+}
+export function getInternalSlot(arg0, arg1, arg2) {
+  return getMultiInternalSlots(arg0, arg1, arg2)[arg2];
+}
+export { getMultiInternalSlots };
+export function isLiteralPart(type) {
+  return "literal" === type.type;
+}
+export function defineProperty(arg0, arg1, value) {
+  Object.defineProperty(arg0, arg1, { configurable: true, enumerable: false, writable: true, value: value.value });
+}
+export function createDataProperty(arg0, direction, firstDay) {
+  Object.defineProperty(arg0, direction, { configurable: true, enumerable: true, writable: true, value: firstDay });
+}
+export function invariant(arg0, arg1, arg2) {
+  let _Error = arg2;
+  if (undefined === arg2) {
+    _Error = Error;
+  }
+  if (!arg0) {
+    const _Error1 = new _Error(arg1);
+    throw _Error1;
+  }
+}
+export const UNICODE_EXTENSION_SEQUENCE_REGEX = /-u(?:-[0-9a-z]{2,8})+/gi;
+export const createMemoizedNumberFormat = monadic.memoize(() => {
+  items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = NumberFormat.bind;
+  const items1 = [undefined];
+  return new bind.apply(NumberFormat, e.__spreadArray(items1, items, false))();
+}, { strategy: monadic.strategies.variadic });
+export const createMemoizedDateTimeFormat = monadic.memoize(() => {
+  items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = DateTimeFormat.bind;
+  const items1 = [undefined];
+  return new bind.apply(DateTimeFormat, e.__spreadArray(items1, items, false))();
+}, { strategy: monadic.strategies.variadic });
+export const createMemoizedPluralRules = monadic.memoize(() => {
+  items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = PluralRules.bind;
+  const items1 = [undefined];
+  return new bind.apply(PluralRules, e.__spreadArray(items1, items, false))();
+}, { strategy: monadic.strategies.variadic });
+export const createMemoizedLocale = monadic.memoize(() => {
+  items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = Locale.bind;
+  const items1 = [undefined];
+  return new bind.apply(Locale, e.__spreadArray(items1, items, false))();
+}, { strategy: monadic.strategies.variadic });
+export const createMemoizedListFormat = monadic.memoize(() => {
+  items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = ListFormat.bind;
+  const items1 = [undefined];
+  return new bind.apply(ListFormat, e.__spreadArray(items1, items, false))();
+}, { strategy: monadic.strategies.variadic });
