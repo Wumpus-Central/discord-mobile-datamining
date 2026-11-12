@@ -1,6 +1,6 @@
-// === Module 10911: LazyLoadedThreadManager ===
+// === Module 10905: LazyLoadedThreadManager ===
 
-// Module 10911 (LazyLoadedThreadManager)
+// Module 10905 (LazyLoadedThreadManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
 import ChannelStore from "ChannelStore" /* 5092 */;

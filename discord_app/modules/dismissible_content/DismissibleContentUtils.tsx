@@ -46,7 +46,7 @@ function markDismissibleContentAsDismissedPreProcessing(content, forceTrack) {
   if (tmp) {
     trackDismissibleContentDismissed(content, forceTrack);
   }
-  tmp = closure_1_10(content) || forceTrack.forceTrack;
+  tmp = refs(content) || forceTrack.forceTrack;
   const guildId = forceTrack.guildId;
   DismissibleContentFrameworkActionCreators.handleDCDismissed(content, guildId);
 }
@@ -445,7 +445,7 @@ const DismissibleContentShownStateStore = fn(5084);
 const ContentDismissActionType = fn(5089).ContentDismissActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let c14 = 2592000000;
-let items = [fn(5076).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(5076).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION];
+let items = [fn(5076).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(5076).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION, fn(5076).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");

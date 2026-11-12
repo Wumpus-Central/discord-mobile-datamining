@@ -1,15 +1,15 @@
-// === Module 17453: BountyVideo ===
+// === Module 17448: BountyVideo ===
 
-// Module 17453 (BountyVideo)
+// Module 17448 (BountyVideo)
 import nativeDefault from "native" /* 575 */;
 import timing_timing from "timing/timing" /* 5485 */;
 import timingPresets from "timingPresets" /* 5488 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
-import AssetUtils from "AssetUtils" /* 10078 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 17454 */;
-import pickBountyVideoRendition from "pickBountyVideoRendition" /* 17455 */;
-import BountiesModalAdvertiserCtaDefault from "BountiesModalAdvertiserCta" /* 17471 */;
-import BountiesModalTimerDefault from "BountiesModalTimer" /* 17473 */;
+import AssetUtils from "AssetUtils" /* 10077 */;
+import BountiesModalProgress from "BountiesModalProgress" /* 17449 */;
+import pickBountyVideoRendition from "pickBountyVideoRendition" /* 17450 */;
+import BountiesModalAdvertiserCtaDefault from "BountiesModalAdvertiserCta" /* 17466 */;
+import BountiesModalTimerDefault from "BountiesModalTimer" /* 17468 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import module_1652 from "module_1652" /* 1652 */;
@@ -21,7 +21,7 @@ const BountiesModalProgressDefault = BountiesModalProgress;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, ActivityIndicator: metroImportDefault, Pressable: closure_8 } = get_ActivityIndicator);
-const BountiesModalConstants = fn(17433);
+const BountiesModalConstants = fn(17428);
 ({ getBountyVideoEndPeekClipHeight: closure_9, getBountyVideoEndPeekScale: closure_10 } = BountiesModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
@@ -374,17 +374,17 @@ export function BountyVideo(handleVideoProgress) {
     obj7.source = obj8;
     let prop3;
     if (flag2) {
-      prop3 = tmp7(17468).SOFT_CAP_PRELOAD_MAX_BITRATE;
+      prop3 = tmp7(17463).SOFT_CAP_PRELOAD_MAX_BITRATE;
     }
     obj7.maxBitRate = prop3;
     let prop4;
     if (flag2) {
-      prop4 = tmp7(17468).SOFT_CAP_PRELOAD_BUFFER_CONFIG;
+      prop4 = tmp7(17463).SOFT_CAP_PRELOAD_BUFFER_CONFIG;
     }
     obj7.bufferConfig = prop4;
     let prop5;
     if (flag2) {
-      prop5 = tmp7(17468).SOFT_CAP_PRELOAD_FORWARD_BUFFER_SEC;
+      prop5 = tmp7(17463).SOFT_CAP_PRELOAD_FORWARD_BUFFER_SEC;
     }
     obj7.preferredForwardBufferDuration = prop5;
     obj7.initialProgress = initialProgress;
@@ -410,7 +410,7 @@ export function BountyVideo(handleVideoProgress) {
     obj7.hideControls = isEndCardVisible;
     obj7.repeat = repeat;
     obj7.onPlayerStateChange = onPlayerStateChange;
-    tmp60Result = tmp60(tmp7(17456).AdVideoPlayer, obj7);
+    tmp60Result = tmp60(tmp7(17451).AdVideoPlayer, obj7);
   }
   const items15 = [tmp60Result, , , , , , ];
   if (null != memo1) {
@@ -462,8 +462,8 @@ export function BountyVideo(handleVideoProgress) {
     }
     obj16.enabled = isActive;
     obj16.isEndCardVisible = isEndCardVisible;
-    isScrollIndicatorEnabled = tmp60(tmp11(17469), obj16);
-    const tmp11Result = tmp11(17469);
+    isScrollIndicatorEnabled = tmp60(tmp11(17464), obj16);
+    const tmp11Result = tmp11(17464);
   }
   items15[5] = isScrollIndicatorEnabled;
   const obj17 = { style: null, pointerEvents: "box-none", children: null };

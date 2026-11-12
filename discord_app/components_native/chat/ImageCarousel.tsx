@@ -1,6 +1,6 @@
-// === Module 11570: ImageCarousel ===
+// === Module 11564: ImageCarousel ===
 
-// Module 11570 (ImageCarousel)
+// Module 11564 (ImageCarousel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -10,13 +10,13 @@ import timing_timing from "timing/timing" /* 5485 */;
 import spring_spring from "spring/spring" /* 5876 */;
 import Pressables from "Pressables" /* 7364 */;
 import _modDef7582 from "module_7582" /* 7582 */;
-import Upload from "Upload" /* 8808 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11063 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 11092 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 11572 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11574 */;
+import Upload from "Upload" /* 8807 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 11057 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 11086 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 11566 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11568 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8806 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8805 */;
 
 require = fn;
 function useTileEntranceAnimatedStyle(itemKey) {
@@ -330,7 +330,7 @@ class ImageCarouselRow {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const DraftType = fn(8658).DraftType;
-const ImageCarouselConstants = fn(11571);
+const ImageCarouselConstants = fn(11565);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;

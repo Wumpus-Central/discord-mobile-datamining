@@ -1,13 +1,13 @@
-// === Module 12343: SocialLayerStorefrontEmbedStore ===
+// === Module 12337: SocialLayerStorefrontEmbedStore ===
 
-// Module 12343 (SocialLayerStorefrontEmbedStore)
+// Module 12337 (SocialLayerStorefrontEmbedStore)
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 12344 */;
+import socialLayerStorefrontEmbedPrice2 from "socialLayerStorefrontEmbedPrice" /* 12338 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserProfileStore from "UserProfileStore" /* 7288 */;
-import WishlistStore from "WishlistStore" /* 9397 */;
+import WishlistStore from "WishlistStore" /* 9396 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SKUStore from "SKUStore" /* 7007 */;
 

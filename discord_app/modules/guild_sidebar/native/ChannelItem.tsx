@@ -1,14 +1,14 @@
-// === Module 18712: ChannelItem ===
+// === Module 18707: ChannelItem ===
 
-// Module 18712 (ChannelItem)
+// Module 18707 (ChannelItem)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7968 */;
 import BookCheckIcon2 from "BookCheckIcon" /* 8008 */;
-import BaseChannelItem from "BaseChannelItem" /* 14680 */;
-import _modDef18713 from "module_18713" /* 18713 */;
+import BaseChannelItem from "BaseChannelItem" /* 14676 */;
+import _modDef18708 from "module_18708" /* 18708 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 6005 */;
@@ -65,7 +65,7 @@ function ChannelIcon(arg0) {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef18713;
+      let tmp12 = _modDef18708;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -89,7 +89,7 @@ function ChannelIcon(arg0) {
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return state(tmp9(14680).BaseChannelIcon, obj10);
+    return state(tmp9(14676).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
@@ -104,7 +104,7 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(504).useStateFromStoresObject(items2, () => ({ status: PresenceStore.getStatus(userId), isMobileOnline: PresenceStore.isMobileOnline(userId), isVROnline: PresenceStore.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1187).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: "hash" };
+  const obj3 = { user: stateFromStores, guildId: "o", size: userId(1187).AvatarSizes.XSMALL_20, style: tmp.dmAvatar, status, isMobileOnline, isVROnline, statusStyle: "RouteManager.handleRouteChange: A route rewrite is replacing the current route" };
   const items4 = [tmp.avatarStatus, ];
   if (avatarStatusSelected) {
     avatarStatusSelected = tmp.avatarStatusSelected;

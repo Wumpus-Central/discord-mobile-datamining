@@ -1,20 +1,20 @@
-// === Module 19351: ChannelsScreen ===
+// === Module 19346: ChannelsScreen ===
 
-// Module 19351 (ChannelsScreen)
+// Module 19346 (ChannelsScreen)
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5252 */;
-import TrackingDefault from "Tracking" /* 14652 */;
+import TrackingDefault from "Tracking" /* 14648 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6011 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 14658 */;
-import SearchQueryStore from "SearchQueryStore" /* 14645 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 14654 */;
+import SearchQueryStore from "SearchQueryStore" /* 14641 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9000);
+const SearchConstants = fn(8999);
 ({ EMPTY_VOICE_STATES: metroImportDefault, SearchListItemTypes: closure_8, CHANNELS_ESTIMATED_ITEM_SIZE: closure_9 } = SearchConstants);
-let closure_10 = fn(8999).SearchResultContentEntityTypes;
+let closure_10 = fn(8998).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/ChannelsScreen.tsx");

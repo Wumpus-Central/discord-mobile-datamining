@@ -1,6 +1,6 @@
-// === Module 18618: useHomeDrawerGesture ===
+// === Module 18613: useHomeDrawerGesture ===
 
-// Module 18618 (useHomeDrawerGesture)
+// Module 18613 (useHomeDrawerGesture)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
@@ -10,22 +10,22 @@ import useChatLayoutDefault from "useChatLayout" /* 5432 */;
 import timing_timing from "timing/timing" /* 5485 */;
 import HapticUtils from "HapticUtils" /* 5491 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 12314 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18613 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 12308 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18608 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 18612 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 18619 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 18607 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 18614 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let computeMaxX = fn(18612).computeMaxX;
+let computeMaxX = fn(18607).computeMaxX;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const GestureConstants = fn(11949);
+const GestureConstants = fn(11943);
 ({ FLING_MIN_DISTANCE: closure_9, FLING_MIN_VELOCITY: closure_10, PULL_GESTURE_ACTIVATION_DISTANCE: closure_11, PULL_GESTURE_RESISTANCE } = GestureConstants);
 ({ PULL_GESTURE_SNAP_TIMING: map1, PULL_GESTURE_UNSNAP_TIMING: closure_14 } = GestureConstants);
-const LaunchPadTypes = fn(12313).LaunchPadTypes;
+const LaunchPadTypes = fn(12307).LaunchPadTypes;
 let c16 = 144;
 let result = 144 * (1 - 1 / PULL_GESTURE_RESISTANCE);
 let closure_18 = 48 + result;
@@ -651,7 +651,7 @@ export function useHomeGesture() {
     useHomeDrawerGestureTsx18.__workletHash = 17074708416812;
     useHomeDrawerGestureTsx18.__initData = tmp75;
     const onTouchesMoveResult = result.maxPointers(1).onBegin(useHomeDrawerGestureTsx16).onTouchesMove(useHomeDrawerGestureTsx17);
-    const items16 = [closure_38, c11, c10, closure_2_10, React6, sharedValue6, fireThrow, c16, _mod1705.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, shouldOpenFromPosition, settleDrawer, c12, c4, callback, closure_19];
+    const items16 = [closure_38, c11, c10, refs, React6, sharedValue6, fireThrow, c16, _mod1705.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, shouldOpenFromPosition, settleDrawer, c12, c4, callback, closure_19];
     c4 = undefined;
     c9 = undefined;
     c10 = undefined;

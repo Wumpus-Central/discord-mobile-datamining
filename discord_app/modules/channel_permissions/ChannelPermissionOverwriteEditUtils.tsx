@@ -1,6 +1,6 @@
-// === Module 19506: ChannelPermissionOverwriteEditUtils ===
+// === Module 19501: ChannelPermissionOverwriteEditUtils ===
 
-// Module 19506 (ChannelPermissionOverwriteEditUtils)
+// Module 19501 (ChannelPermissionOverwriteEditUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import PermissionUtils from "PermissionUtils" /* 5180 */;
 import size from "module_2" /* 2 */;

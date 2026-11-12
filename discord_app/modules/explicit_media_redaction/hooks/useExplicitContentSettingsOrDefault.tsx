@@ -1,6 +1,6 @@
-// === Module 17237: useExplicitContentSettingsOrDefault ===
+// === Module 17232: useExplicitContentSettingsOrDefault ===
 
-// Module 17237 (useExplicitContentSettingsOrDefault)
+// Module 17232 (useExplicitContentSettingsOrDefault)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 8574 */;
 import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 8576 */;

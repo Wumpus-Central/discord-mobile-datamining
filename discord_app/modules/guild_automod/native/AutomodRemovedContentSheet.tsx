@@ -1,10 +1,10 @@
-// === Module 20024: AutomodRemovedContentSheet ===
+// === Module 20019: AutomodRemovedContentSheet ===
 
-// Module 20024 (AutomodRemovedContentSheet)
+// Module 20019 (AutomodRemovedContentSheet)
 import nativeDefault from "native" /* 575 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 6311 */;
-import RowGeneratorDefault from "RowGenerator" /* 9093 */;
-import ChatItemDefault from "ChatItem" /* 11002 */;
+import RowGeneratorDefault from "RowGenerator" /* 9092 */;
+import ChatItemDefault from "ChatItem" /* 10996 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 20192: InterestGuildsResource ===
+// === Module 20187: InterestGuildsResource ===
 
-// Module 20192 (InterestGuildsResource)
+// Module 20187 (InterestGuildsResource)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function availableInterestGuilds(guilds) {
@@ -20,7 +20,7 @@ function availableInterestGuilds(guilds) {
   });
   return found.slice(0, 15);
 }
-const MAX_SELECTIONS = fn(18984).MAX_SELECTIONS;
+const MAX_SELECTIONS = fn(18979).MAX_SELECTIONS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGuildsResource.tsx");
 class InterestGuildsResource {

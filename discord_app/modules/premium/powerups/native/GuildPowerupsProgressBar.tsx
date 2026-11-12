@@ -1,14 +1,14 @@
-// === Module 18814: GuildPowerupsProgressBar ===
+// === Module 18809: GuildPowerupsProgressBar ===
 
-// Module 18814 (GuildPowerupsProgressBar)
+// Module 18809 (GuildPowerupsProgressBar)
 import nativeDefault from "native" /* 575 */;
 import timing_timing from "timing/timing" /* 5485 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 10612 */;
-import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 18817 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 10610 */;
+import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 18812 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 18815 */;
+import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 18810 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import module_1652 from "module_1652" /* 1652 */;
 

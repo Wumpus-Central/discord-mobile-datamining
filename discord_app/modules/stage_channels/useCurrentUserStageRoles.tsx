@@ -1,6 +1,6 @@
-// === Module 12818: useCurrentUserStageRoles ===
+// === Module 12812: useCurrentUserStageRoles ===
 
-// Module 12818 (useCurrentUserStageRoles)
+// Module 12812 (useCurrentUserStageRoles)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 6879 */;
 

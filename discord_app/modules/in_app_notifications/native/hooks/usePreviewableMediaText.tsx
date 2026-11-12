@@ -1,8 +1,8 @@
-// === Module 11012: usePreviewableMediaText ===
+// === Module 11006: usePreviewableMediaText ===
 
-// Module 11012 (usePreviewableMediaText)
+// Module 11006 (usePreviewableMediaText)
 import util from "util" /* 1113 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 11007 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 11001 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

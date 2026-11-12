@@ -1,10 +1,10 @@
-// === Module 17510: QuestHomeOrbShopRewardCard ===
+// === Module 17505: QuestHomeOrbShopRewardCard ===
 
-// Module 17510 (QuestHomeOrbShopRewardCard)
+// Module 17505 (QuestHomeOrbShopRewardCard)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8430 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 9341 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 9340 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 

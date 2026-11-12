@@ -1,10 +1,10 @@
-// === Module 16358: Slider ===
+// === Module 16353: Slider ===
 
-// Module 16358 (Slider)
+// Module 16353 (Slider)
 import nativeDefault from "native" /* 575 */;
 import HapticUtils from "HapticUtils" /* 5491 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5492 */;
-import _modDef12917 from "module_12917" /* 12917 */;
+import _modDef12911 from "module_12911" /* 12911 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -117,7 +117,7 @@ export function Slider(maxValue) {
   }
   obj4.accessibilityValue = tmp19;
   obj4.testID = testID;
-  const tmp18 = _modDef12917;
+  const tmp18 = _modDef12911;
   let fn;
   if (obj6.isAndroid()) {
     fn = () => true;

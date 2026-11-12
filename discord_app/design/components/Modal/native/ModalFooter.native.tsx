@@ -1,6 +1,6 @@
-// === Module 13979: ModalFooter ===
+// === Module 13975: ModalFooter ===
 
-// Module 13979 (ModalFooter)
+// Module 13975 (ModalFooter)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5850 */;
 import noop from "module_19" /* 19 */;

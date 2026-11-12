@@ -1,6 +1,6 @@
-// === Module 12204: InAppReportsDeleteMessageElement ===
+// === Module 12198: InAppReportsDeleteMessageElement ===
 
-// Module 12204 (InAppReportsDeleteMessageElement)
+// Module 12198 (InAppReportsDeleteMessageElement)
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -44,5 +44,5 @@ export default function DeleteMessageElement(message) {
   obj2.disabled = tmp[0];
   obj2.onPress = callback;
   obj2.icon = jsx(message(5977).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(12198), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
+  return jsx(reportId(12192), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
 };

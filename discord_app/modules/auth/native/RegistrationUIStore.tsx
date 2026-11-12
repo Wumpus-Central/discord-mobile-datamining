@@ -1,13 +1,13 @@
-// === Module 18524: RegistrationUIStore ===
+// === Module 18519: RegistrationUIStore ===
 
-// Module 18524 (RegistrationUIStore)
+// Module 18519 (RegistrationUIStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "add" }));
+const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "ip" }));
 const result = size.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export { useRegistrationUIStore };

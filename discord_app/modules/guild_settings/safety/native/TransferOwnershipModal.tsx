@@ -1,10 +1,10 @@
-// === Module 14043: TransferOwnershipModal ===
+// === Module 14039: TransferOwnershipModal ===
 
-// Module 14043 (TransferOwnershipModal)
+// Module 14039 (TransferOwnershipModal)
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import NavigatorHeader from "NavigatorHeader" /* 7427 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 14042 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 14038 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 function closeModal() {
   TransferOwnershipModalActionCreatorsDefault.close();
 }
-const TransferOwnershipConstants = fn(14044);
+const TransferOwnershipConstants = fn(14040);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: closure_6 } = TransferOwnershipConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -63,8 +63,8 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj.onSuccess = function onSuccess() {
-        toUser(14042).close();
-        const obj = toUser(14042);
+        toUser(14038).close();
+        const obj = toUser(14038);
         toUser(8338).close();
         const obj2 = toUser(8338);
         const result = closure_0(5951).showTransferOwnershipSuccess();

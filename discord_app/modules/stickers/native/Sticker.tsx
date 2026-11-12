@@ -1,14 +1,14 @@
-// === Module 11030: Sticker ===
+// === Module 11024: Sticker ===
 
-// Module 11030 (Sticker)
+// Module 11024 (Sticker)
 import util from "util" /* 1113 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import StickersUtils from "StickersUtils" /* 6729 */;
 import StickersTypes from "StickersTypes" /* 6730 */;
 import _modDef7829 from "module_7829" /* 7829 */;
 import _modDef7830 from "module_7830" /* 7830 */;
-import NativeLottieView from "NativeLottieView" /* 9162 */;
-import NativeAPNGViewDefault from "NativeAPNGView" /* 11031 */;
+import NativeLottieView from "NativeLottieView" /* 9161 */;
+import NativeAPNGViewDefault from "NativeAPNGView" /* 11025 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 

@@ -1,7 +1,7 @@
-// === Module 17305: useSelectedTeenUser ===
+// === Module 17300: useSelectedTeenUser ===
 
-// Module 17305 (useSelectedTeenUser)
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9551 */;
+// Module 17300 (useSelectedTeenUser)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9550 */;
 import UserStore from "UserStore" /* 1385 */;
 import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 8676 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 8673 */;

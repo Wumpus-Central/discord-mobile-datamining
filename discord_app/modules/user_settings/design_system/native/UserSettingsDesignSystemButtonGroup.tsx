@@ -1,12 +1,12 @@
-// === Module 18298: UserSettingsDesignSystemButtonGroup ===
+// === Module 18293: UserSettingsDesignSystemButtonGroup ===
 
-// Module 18298 (UserSettingsDesignSystemButtonGroup)
+// Module 18293 (UserSettingsDesignSystemButtonGroup)
 import Text_Text from "Text/Text" /* 5866 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
 import Stack_Stack from "Stack/Stack" /* 6274 */;
 import ButtonGroup from "ButtonGroup" /* 6888 */;
 import IconButton from "IconButton" /* 7922 */;
-import _modDef10503 from "module_10503" /* 10503 */;
+import _modDef10501 from "module_10501" /* 10501 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -56,7 +56,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
     hasOwnProperty(IconButton.IconButton, {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef10503,
+      icon: _modDef10501,
       onPress() {
 
       }
@@ -66,7 +66,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj12 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     onPress() {
 
     }
@@ -88,7 +88,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items4[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     onPress() {
 
     }
@@ -116,7 +116,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj13 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     onPress() {
 
     }
@@ -132,7 +132,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items6[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Cancel",
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     onPress() {
 
     }

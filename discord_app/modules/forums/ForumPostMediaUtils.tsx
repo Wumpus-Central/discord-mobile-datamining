@@ -1,6 +1,6 @@
-// === Module 9045: ForumPostMediaUtils ===
+// === Module 9044: ForumPostMediaUtils ===
 
-// Module 9045 (ForumPostMediaUtils)
+// Module 9044 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
@@ -10,7 +10,7 @@ import UserSettings from "UserSettings" /* 5068 */;
 import MediaFormatTesters from "MediaFormatTesters" /* 6298 */;
 import InteractionComponentUtils from "InteractionComponentUtils" /* 6313 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 8805 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 8804 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import MessageStore from "MessageStore" /* 6309 */;
 import UserStore from "UserStore" /* 1385 */;

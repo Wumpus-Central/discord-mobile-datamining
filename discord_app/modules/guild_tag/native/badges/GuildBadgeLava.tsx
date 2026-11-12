@@ -1,8 +1,8 @@
-// === Module 16255: GuildBadgeLava ===
+// === Module 16250: GuildBadgeLava ===
 
-// Module 16255 (GuildBadgeLava)
+// Module 16250 (GuildBadgeLava)
 import inlineStyles from "inlineStyles" /* 8197 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 16240 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 16235 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

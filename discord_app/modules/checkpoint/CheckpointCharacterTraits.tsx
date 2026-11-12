@@ -106,10 +106,10 @@ function getVisibleTraitRarities(item, c4) {
   }));
 }
 let closure_129_0 = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
-let f91321 = (arg0) => require.has(arg0);
+let f91332 = (arg0) => require.has(arg0);
 const set = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
 let closure_130_0 = new Set(Object.values(CheckpointTrait.CheckpointTrait));
-f91321 = (arg0) => require.has(arg0);
+f91332 = (arg0) => require.has(arg0);
 let obj = {};
 obj[CheckpointTrait.CheckpointTrait.FACE] = CheckpointTraitConfig.CHECKPOINT_FACE_OPTION_TO_RARITY;
 obj[CheckpointTrait.CheckpointTrait.OUTFIT] = CheckpointTraitConfig.CHECKPOINT_OUTFIT_OPTION_TO_RARITY;
@@ -240,7 +240,7 @@ export function getCharacterLayerOrdering(wearable) {
   const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = CheckpointTraitConfig.CHECKPOINT_WEARABLE_LAYER_BACKGROUND;
   const hasItem = CHECKPOINT_WEARABLE_LAYER_BACKGROUND.has(wearable);
   const tmp2 = CheckpointTraitConfig;
-  return hasItem ? tmp2.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f91321);
+  return hasItem ? tmp2.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f91332);
 }
 export const CHECKPOINT_TRAIT_TO_OPTION_ASSETS = obj2;
 export const CHECKPOINT_TRAIT_TO_OPTION_IDS = obj3;
@@ -256,7 +256,7 @@ export function getOutfitDefaultOptionId(character) {
 export function getTraitOptionRarity(item10034, item10034) {
   let tmp2;
   if (null != obj[item10034][item10034]) {
-    if (typeof f91321 === "function") {
+    if (typeof f91332 === "function") {
       if (closure_131_0.has(tmp)) {
         tmp2 = tmp;
       }
@@ -278,7 +278,7 @@ export function isTraitSelectionLocked(item, arg1, savedCharacter) {
   } else {
     let tmp4;
     if (null != obj[item][arg1]) {
-      if (typeof f91321 === "function") {
+      if (typeof f91332 === "function") {
         if (closure_131_0.has(tmp11)) {
           tmp4 = tmp11;
         }
@@ -309,38 +309,38 @@ export function getOutfitColorOptionIds(NONE) {
   }
   return items1;
 }
-export function getCharacterFromTraits(traits) {
-  let ICY = traits[CheckpointTrait.CheckpointTrait.BASE];
+export function getCharacterFromTraits(selectedCharacterTraits) {
+  let ICY = selectedCharacterTraits[CheckpointTrait.CheckpointTrait.BASE];
   if (ICY == null) {
     ICY = CheckpointCharacterBase.CheckpointCharacterBase.ICY;
   }
   obj = { base: ICY, shoes: null, outfit: null, face: null, hat: null, wearable: null, aura: null };
-  let NONE = traits[CheckpointTrait.CheckpointTrait.SHOES];
+  let NONE = selectedCharacterTraits[CheckpointTrait.CheckpointTrait.SHOES];
   if (NONE == null) {
     NONE = CheckpointCharacterShoes.CheckpointCharacterShoes.NONE;
   }
   obj.shoes = NONE;
-  let NONE2 = traits[CheckpointTrait.CheckpointTrait.OUTFIT];
+  let NONE2 = selectedCharacterTraits[CheckpointTrait.CheckpointTrait.OUTFIT];
   if (NONE2 == null) {
     NONE2 = CheckpointCharacterOutfit.CheckpointCharacterOutfit.NONE;
   }
   obj.outfit = NONE2;
-  let CHILL = traits[CheckpointTrait.CheckpointTrait.FACE];
+  let CHILL = selectedCharacterTraits[CheckpointTrait.CheckpointTrait.FACE];
   if (CHILL == null) {
     CHILL = CheckpointCharacterFace.CheckpointCharacterFace.CHILL;
   }
   obj.face = CHILL;
-  let NONE3 = traits[CheckpointTrait.CheckpointTrait.HAT];
+  let NONE3 = selectedCharacterTraits[CheckpointTrait.CheckpointTrait.HAT];
   if (NONE3 == null) {
     NONE3 = CheckpointCharacterHat.CheckpointCharacterHat.NONE;
   }
   obj.hat = NONE3;
-  let NONE4 = traits[CheckpointTrait.CheckpointTrait.WEARABLE];
+  let NONE4 = selectedCharacterTraits[CheckpointTrait.CheckpointTrait.WEARABLE];
   if (NONE4 == null) {
     NONE4 = CheckpointCharacterWearable.CheckpointCharacterWearable.NONE;
   }
   obj.wearable = NONE4;
-  let NONE5 = traits[CheckpointTrait.CheckpointTrait.AURA];
+  let NONE5 = selectedCharacterTraits[CheckpointTrait.CheckpointTrait.AURA];
   if (NONE5 == null) {
     NONE5 = CheckpointCharacterAura.CheckpointCharacterAura.NONE;
   }

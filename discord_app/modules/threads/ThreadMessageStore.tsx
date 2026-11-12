@@ -1,6 +1,6 @@
-// === Module 8805: ThreadMessageStore ===
+// === Module 8804: ThreadMessageStore ===
 
-// Module 8805 (ThreadMessageStore)
+// Module 8804 (ThreadMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;

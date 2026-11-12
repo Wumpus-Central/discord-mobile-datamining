@@ -1,6 +1,6 @@
-// === Module 13099: useConjureManagedCopy ===
+// === Module 13093: useConjureManagedCopy ===
 
-// Module 13099 (useConjureManagedCopy)
+// Module 13093 (useConjureManagedCopy)
 import ConjureManagedCopyStore from "ConjureManagedCopyStore" /* 7310 */;
 
 const require = globalThis.__r;

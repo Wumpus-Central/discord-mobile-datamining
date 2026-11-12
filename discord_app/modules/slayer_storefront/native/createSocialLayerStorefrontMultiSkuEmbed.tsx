@@ -1,25 +1,25 @@
-// === Module 15465: createSocialLayerStorefrontMultiSkuEmbed ===
+// === Module 15462: createSocialLayerStorefrontMultiSkuEmbed ===
 
-// Module 15465 (createSocialLayerStorefrontMultiSkuEmbed)
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9104 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 14814 */;
-import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails" /* 15466 */;
+// Module 15462 (createSocialLayerStorefrontMultiSkuEmbed)
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9103 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 14810 */;
+import getSocialLayerStorefrontSkuEmbedDetails from "getSocialLayerStorefrontSkuEmbedDetails" /* 15463 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import SKUStore from "SKUStore" /* 7007 */;
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7183 */;
 
 require = fn;
 const ThemeTypes = fn(1072).ThemeTypes;
-const InviteTypes = fn(8776).InviteTypes;
-const CodedLinkExtendedType = fn(11831).CodedLinkExtendedType;
+const InviteTypes = fn(8775).InviteTypes;
+const CodedLinkExtendedType = fn(11825).CodedLinkExtendedType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontMultiSkuEmbed.tsx");
 
 export function createSocialLayerStorefrontMultiSkuEmbed(arg0) {
   let application;
   ({ skuIds, guildOrApplication } = arg0);
-  const isEligibleForSocialLayerStorefrontMobileEmbed = application(12346).getIsEligibleForSocialLayerStorefrontMobileEmbed({ location: "create_coded_link_embeds", autoTrackExposure: true });
-  let obj = application(12346);
+  const isEligibleForSocialLayerStorefrontMobileEmbed = application(12340).getIsEligibleForSocialLayerStorefrontMobileEmbed({ location: "create_coded_link_embeds", autoTrackExposure: true });
+  let obj = application(12340);
   if (isEligibleForSocialLayerStorefrontMobileEmbed) {
     if (obj2.getIsEligibleForSocialLayerStorefrontMobileMultiSkuEmbed({ location: "create_coded_link_embeds", autoTrackExposure: true })) {
       const storefrontFetchState = SocialLayerStorefrontStore.getStorefrontFetchState(guildOrApplication);
@@ -33,7 +33,7 @@ export function createSocialLayerStorefrontMultiSkuEmbed(arg0) {
         application = ApplicationStore.getApplication(storefront.applicationId);
         if (null != application) {
           if (isSocialLayerApplicationDefault(application)) {
-            const result = tmp(12345).normalizeStorefrontSkuIds(skuIds);
+            const result = tmp(12339).normalizeStorefrontSkuIds(skuIds);
             const flatMapResult = result.flatMap((skuId) => {
               value = SKUStore.get(skuId);
               if (null != value) {
@@ -55,7 +55,7 @@ export function createSocialLayerStorefrontMultiSkuEmbed(arg0) {
               }
               const obj3 = {};
               let merged = Object.assign(getEmbedThemeColorsDefault(ThemeTypes.DARK).baseColors);
-              obj3.backgroundColor = tmp(15467).getSocialLayerStorefrontEmbedColors(ThemeTypes.DARK).backgroundColor;
+              obj3.backgroundColor = tmp(15464).getSocialLayerStorefrontEmbedColors(ThemeTypes.DARK).backgroundColor;
               obj3.extendedType = CodedLinkExtendedType.SOCIAL_LAYER_STOREFRONT_MULTI_SKU_EMBED;
               obj3.type = InviteTypes.GUILD;
               obj3.headerText = storefront.title;
@@ -65,7 +65,7 @@ export function createSocialLayerStorefrontMultiSkuEmbed(arg0) {
                 const tmpResult5 = tmp(6703);
               }
               obj3.headerLogoUrl = assetURL;
-              const tmpResult4 = tmp(15467);
+              const tmpResult4 = tmp(15464);
               const socialLayerStorefrontBackgroundImageURL = tmp(7181).getSocialLayerStorefrontBackgroundImageURL(storefront);
               obj3.headerBackgroundImageUrl = socialLayerStorefrontBackgroundImageURL;
               const _HermesInternal = HermesInternal;
@@ -75,7 +75,7 @@ export function createSocialLayerStorefrontMultiSkuEmbed(arg0) {
               obj3.embedCanBeTapped = true;
               return obj3;
             }
-            const tmpResult = tmp(12345);
+            const tmpResult = tmp(12339);
           }
         }
         return null;

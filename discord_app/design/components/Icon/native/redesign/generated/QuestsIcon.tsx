@@ -1,9 +1,9 @@
-// === Module 10495: QuestsIcon ===
+// === Module 10493: QuestsIcon ===
 
-// Module 10495 (QuestsIcon)
+// Module 10493 (QuestsIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod10496 from "module_10496" /* 10496 */;
+import _mod10494 from "module_10494" /* 10494 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function QuestsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10496, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10494, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

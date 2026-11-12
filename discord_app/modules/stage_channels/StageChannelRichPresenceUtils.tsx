@@ -1,6 +1,6 @@
-// === Module 10798: StageChannelRichPresenceUtils ===
+// === Module 10792: StageChannelRichPresenceUtils ===
 
-// Module 10798 (StageChannelRichPresenceUtils)
+// Module 10792 (StageChannelRichPresenceUtils)
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5092 */;

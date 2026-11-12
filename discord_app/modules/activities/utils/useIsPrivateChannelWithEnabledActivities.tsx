@@ -1,6 +1,6 @@
-// === Module 12645: useIsPrivateChannelWithEnabledActivities ===
+// === Module 12639: useIsPrivateChannelWithEnabledActivities ===
 
-// Module 12645 (useIsPrivateChannelWithEnabledActivities)
+// Module 12639 (useIsPrivateChannelWithEnabledActivities)
 import ChannelStore from "ChannelStore" /* 5092 */;
 
 const require = globalThis.__r;

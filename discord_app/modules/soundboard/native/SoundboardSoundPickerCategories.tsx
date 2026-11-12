@@ -1,6 +1,6 @@
-// === Module 19779: SoundboardSoundPickerCategories ===
+// === Module 19774: SoundboardSoundPickerCategories ===
 
-// Module 19779 (SoundboardSoundPickerCategories)
+// Module 19774 (SoundboardSoundPickerCategories)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -12,10 +12,10 @@ import SoundboardTypes from "SoundboardTypes" /* 7164 */;
 import Pressables from "Pressables" /* 7364 */;
 import GuildIconDefault from "GuildIcon" /* 7654 */;
 import LockIcon from "LockIcon" /* 8027 */;
-import TrophyIcon from "TrophyIcon" /* 10257 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 11199 */;
-import _modDef11301 from "module_11301" /* 11301 */;
-import _modDef19777 from "module_19777" /* 19777 */;
+import TrophyIcon from "TrophyIcon" /* 10255 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 11193 */;
+import _modDef11295 from "module_11295" /* 11295 */;
+import _modDef19772 from "module_19772" /* 19772 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -31,32 +31,32 @@ function SoundCategoryItem(style) {
     guild = category.categoryInfo.guild;
     let name = guild.name;
     const obj2 = { guild, style: tmp.guildItem };
-    let tmp14Result = closure_1_10(GuildIconDefault, obj2);
+    let tmp14Result = refs(GuildIconDefault, obj2);
     let tmp6 = null;
     let tmp7 = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl4 = util.intl;
     name = intl4.string(util.t.y3LQCG);
-    tmp6 = _modDef11301;
+    tmp6 = _modDef11295;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
     const intl3 = util.intl;
     name = intl3.string(util.t["+cGVV6"]);
     const obj = { style: tmp.keyboardItem };
-    tmp7 = closure_1_10(ClockIcon.ClockIcon, obj);
+    tmp7 = refs(ClockIcon.ClockIcon, obj);
     tmp6 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef19777;
+    tmp6 = _modDef19772;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef19777;
+    tmp6 = _modDef19772;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -69,7 +69,7 @@ function SoundCategoryItem(style) {
       const obj3 = { guildName: category.categoryInfo.guild.name };
       name = intl5.formatToPlainString(util.t.GXs41w, obj3);
       const obj4 = { style: tmp.keyboardItem };
-      tmp7 = closure_1_10(TrophyIcon.TrophyIcon, obj4);
+      tmp7 = refs(TrophyIcon.TrophyIcon, obj4);
       tmp6 = null;
       tmp14Result = null;
     }
@@ -90,19 +90,19 @@ function SoundCategoryItem(style) {
   }
   if (tmp14Result == null) {
     const obj7 = { style: tmp.keyboardItem, source: tmp6 };
-    tmp14Result = closure_1_10(native.Icon, obj7);
+    tmp14Result = refs(native.Icon, obj7);
   }
   const items1 = [tmp14Result, ];
   if (locked) {
     const obj8 = { style: tmp.lockContainer, children: null };
     const obj9 = { style: tmp.lock };
-    obj8.children = closure_1_10(LockIcon.LockIcon, obj9);
-    locked = closure_1_10(View, obj8);
+    obj8.children = refs(LockIcon.LockIcon, obj9);
+    locked = refs(View, obj8);
   }
   items1[1] = locked;
   obj6.children = items1;
   obj5.children = closure_1_11(View, obj6);
-  return closure_1_10(Pressables.PressableOpacity, obj5);
+  return refs(Pressables.PressableOpacity, obj5);
 }
 function SoundboardCategoryScrollView(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
@@ -111,13 +111,13 @@ function SoundboardCategoryScrollView(ref) {
   const obj3 = { ref: ref.ref };
   const merged1 = Object.assign(merged);
   obj3.nestedScrollEnabled = true;
-  obj2.children = closure_1_10(React4, obj3);
-  return closure_1_10(LegacyBaseButton.GestureDetector, obj2);
+  obj2.children = refs(React4, obj3);
+  return refs(LegacyBaseButton.GestureDetector, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const setSearchQuery = fn(19762).setSearchQuery;
+const setSearchQuery = fn(19757).setSearchQuery;
 const Constants = fn(1072);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
 ({ NODE_SIZE, NODE_MARGIN } = Constants);

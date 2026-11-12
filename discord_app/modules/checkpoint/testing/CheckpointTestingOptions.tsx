@@ -1,6 +1,6 @@
-// === Module 19469: CheckpointTestingOptions ===
+// === Module 19464: CheckpointTestingOptions ===
 
-// Module 19469 (CheckpointTestingOptions)
+// Module 19464 (CheckpointTestingOptions)
 import _modDef3271 from "module_3271" /* 3271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -9,7 +9,7 @@ const items = [
     id: "open",
     label: _modDef3271.yLZjcu,
     action() {
-      return ZERO_DATA(14152).openCheckpoint("qa_menu", ZERO_DATA !== ZERO_DATA(14155).CheckpointMockStats.NO_PERSONAL_DATA, ZERO_DATA);
+      return ZERO_DATA(14148).openCheckpoint("qa_menu", ZERO_DATA !== ZERO_DATA(14151).CheckpointMockStats.NO_PERSONAL_DATA, ZERO_DATA);
     }
   },
 ,
@@ -46,7 +46,7 @@ let closure_2 = asyncGeneratorStep(async () => {
           closure_0 = tmp4;
           c1 = 1;
           c2 = 1;
-          const obj5 = { value: ZERO_DATA(14154).resetCheckpoint(), done: false };
+          const obj5 = { value: ZERO_DATA(14150).resetCheckpoint(), done: false };
           return obj5;
         }
       } else if (arg0 === 1) {
@@ -87,28 +87,28 @@ obj2.action = function action() {
   return applyArgumentsResult;
 };
 items[1] = obj2;
-fn(14155).CheckpointMockStats.DEFAULT;
+fn(14151).CheckpointMockStats.DEFAULT;
 items[2] = {
   id: "open-fake-data",
   label: _modDef3271.kPBZ5M,
   action() {
-    return ZERO_DATA(14152).openCheckpoint("qa_menu", ZERO_DATA !== ZERO_DATA(14155).CheckpointMockStats.NO_PERSONAL_DATA, ZERO_DATA);
+    return ZERO_DATA(14148).openCheckpoint("qa_menu", ZERO_DATA !== ZERO_DATA(14151).CheckpointMockStats.NO_PERSONAL_DATA, ZERO_DATA);
   }
 };
-fn(14155).CheckpointMockStats.NO_PERSONAL_DATA;
+fn(14151).CheckpointMockStats.NO_PERSONAL_DATA;
 items[3] = {
   id: "open-global-stats",
   label: _modDef3271.UwiUbM,
   action() {
-    return ZERO_DATA(14152).openCheckpoint("qa_menu", ZERO_DATA !== ZERO_DATA(14155).CheckpointMockStats.NO_PERSONAL_DATA, ZERO_DATA);
+    return ZERO_DATA(14148).openCheckpoint("qa_menu", ZERO_DATA !== ZERO_DATA(14151).CheckpointMockStats.NO_PERSONAL_DATA, ZERO_DATA);
   }
 };
-const ZERO_DATA = fn(14155).CheckpointMockStats.ZERO_DATA;
+const ZERO_DATA = fn(14151).CheckpointMockStats.ZERO_DATA;
 items[4] = {
   id: "open-zero-stats",
   label: _modDef3271.BYW9oX,
   action() {
-    return ZERO_DATA(14152).openCheckpoint("qa_menu", ZERO_DATA !== ZERO_DATA(14155).CheckpointMockStats.NO_PERSONAL_DATA, ZERO_DATA);
+    return ZERO_DATA(14148).openCheckpoint("qa_menu", ZERO_DATA !== ZERO_DATA(14151).CheckpointMockStats.NO_PERSONAL_DATA, ZERO_DATA);
   }
 };
 let closure_4 = ["reset"];

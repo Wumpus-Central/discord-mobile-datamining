@@ -1,6 +1,6 @@
-// === Module 13878: ConjureProjectList ===
+// === Module 13874: ConjureProjectList ===
 
-// Module 13878 (ConjureProjectList)
+// Module 13874 (ConjureProjectList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
@@ -8,13 +8,13 @@ import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5489 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 7265 */;
 import TableRowGroup from "TableRowGroup" /* 7680 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 10476 */;
-import ConjureRemixSheet from "ConjureRemixSheet" /* 10915 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 13050 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 13101 */;
-import ConjureHeaderIconButtonDefault from "ConjureHeaderIconButton" /* 13228 */;
-import ConjureCreateSheet from "ConjureCreateSheet" /* 13881 */;
-import ConjureNumberBadgeDefault from "ConjureNumberBadge" /* 13899 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 10474 */;
+import ConjureRemixSheet from "ConjureRemixSheet" /* 10909 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 13044 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 13095 */;
+import ConjureHeaderIconButtonDefault from "ConjureHeaderIconButton" /* 13222 */;
+import ConjureCreateSheet from "ConjureCreateSheet" /* 13877 */;
+import ConjureNumberBadgeDefault from "ConjureNumberBadge" /* 13895 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
@@ -237,7 +237,7 @@ export default function ConjureProjectList(guildId) {
         }, project.id));
         items[1] = React6(TableRowGroup.TableRowGroup, obj3);
         obj.children = items;
-        tmp = closure_2_10(timestampProducer, obj, projects.key);
+        tmp = refs(timestampProducer, obj, projects.key);
       }
       return tmp;
     });

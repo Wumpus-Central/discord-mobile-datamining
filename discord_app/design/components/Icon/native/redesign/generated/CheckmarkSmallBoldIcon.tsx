@@ -1,6 +1,6 @@
-// === Module 10808: CheckmarkSmallBoldIcon ===
+// === Module 10802: CheckmarkSmallBoldIcon ===
 
-// Module 10808 (CheckmarkSmallBoldIcon)
+// Module 10802 (CheckmarkSmallBoldIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
 import _mod7669 from "module_7669" /* 7669 */;

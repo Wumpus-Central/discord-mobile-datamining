@@ -1,9 +1,9 @@
-// === Module 9120: UnlinkedGamePlayersSystemMessage ===
+// === Module 9119: UnlinkedGamePlayersSystemMessage ===
 
-// Module 9120 (UnlinkedGamePlayersSystemMessage)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9122 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9124 */;
-import createCommonMessageDefault from "createCommonMessage" /* 9126 */;
+// Module 9119 (UnlinkedGamePlayersSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9121 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9123 */;
+import createCommonMessageDefault from "createCommonMessage" /* 9125 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -13,13 +13,13 @@ const result = size.fileFinishedImporting("modules/messages/native/renderer/syst
 
 export function createUnlinkedGamePlayersSystemMessage(roleStyle, unlinkedGamePlayerPlaceholders) {
   roleStyle = roleStyle.roleStyle;
-  const firstMessagePerAuthor = roleStyle(9121).getFirstMessagePerAuthor(unlinkedGamePlayerPlaceholders);
+  const firstMessagePerAuthor = roleStyle(9120).getFirstMessagePerAuthor(unlinkedGamePlayerPlaceholders);
   const mapped = firstMessagePerAuthor.map((message) => {
     const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
     const obj2 = { name: messageAuthorWithProcessedColor.nick, onClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }) };
     return obj2;
   });
-  const obj = roleStyle(9121);
+  const obj = roleStyle(9120);
   [tmp4, tmp5] = mapped;
   if (mapped.length <= 1) {
     const intl2 = tmp(1113).intl;
@@ -35,7 +35,7 @@ export function createUnlinkedGamePlayersSystemMessage(roleStyle, unlinkedGamePl
     obj3.aOnClick = onClick;
     obj3.count = unlinkedGamePlayerPlaceholders.length;
     let formatToPartsResult = intl2.formatToParts(tmp(1113).t.DbQxMP, obj3);
-  } else if (mapped.length <= tmp(9121).MAX_NAMED_PLAYERS) {
+  } else if (mapped.length <= tmp(9120).MAX_NAMED_PLAYERS) {
     const intl = tmp(1113).intl;
     ({ name: obj2.a, onClick: obj2.aOnClick } = tmp4);
     ({ name: obj2.b, onClick: obj2.bOnClick } = tmp5);
@@ -46,7 +46,7 @@ export function createUnlinkedGamePlayersSystemMessage(roleStyle, unlinkedGamePl
     const obj9 = { a: null, aOnClick: null, b: null, bOnClick: null, count: null };
     ({ name: obj5.a, onClick: obj5.aOnClick } = tmp4);
     ({ name: obj5.b, onClick: obj5.bOnClick } = tmp5);
-    obj9.count = mapped.length - tmp(9121).MAX_NAMED_PLAYERS;
+    obj9.count = mapped.length - tmp(9120).MAX_NAMED_PLAYERS;
     formatToPartsResult = intl3.formatToParts(tmp(1113).t.Mb0AX6, obj9);
   }
   const obj10 = { content: formatToPartsResult };

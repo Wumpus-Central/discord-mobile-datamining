@@ -1,6 +1,6 @@
-// === Module 19840: VoicePanelTitleButton ===
+// === Module 19835: VoicePanelTitleButton ===
 
-// Module 19840 (VoicePanelTitleButton)
+// Module 19835 (VoicePanelTitleButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
@@ -14,13 +14,13 @@ import _modDef7840 from "module_7840" /* 7840 */;
 import native from "native" /* 7932 */;
 import _modDef7953 from "module_7953" /* 7953 */;
 import _modDef7973 from "module_7973" /* 7973 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 10752 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11924 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 12958 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 19735 */;
-import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19809 */;
-import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 19838 */;
-import _modDef19841 from "module_19841" /* 19841 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 10746 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11918 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 12952 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 19730 */;
+import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators" /* 19804 */;
+import VoicePanelHeaderUserState from "VoicePanelHeaderUserState" /* 19833 */;
+import _modDef19836 from "module_19836" /* 19836 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import StageInstanceStore from "StageInstanceStore" /* 5097 */;
@@ -34,7 +34,7 @@ function ChannelButtonIcons() {
   obj2.accessibilityLabel = intl.string(util.t.VHXh8a);
   items = [React6(ShieldLockIcon.ShieldLockIcon, obj2), React6(BaseTextButton.BaseTextButton.Icon, { source: _modDef7840 })];
   obj.children = items;
-  return closure_1_10(View, obj);
+  return refs(View, obj);
 }
 function ChannelButton(channelId) {
   channelId = channelId.channelId;
@@ -42,7 +42,7 @@ function ChannelButton(channelId) {
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let str = useChannelNameDefault(stateFromStores);
   const obj = channelId(504);
-  const isCallSecureFramesVerified = channelId(10541).useIsCallSecureFramesVerified({ channelId });
+  const isCallSecureFramesVerified = channelId(10539).useIsCallSecureFramesVerified({ channelId });
   const obj3 = { accessibilityRole: "button", accessibilityHint: null, text: null, icon: null, iconOpticalOffsetMargin: null, iconPosition: "end", onPress: null, maxFontSizeMultiplier: 2 };
   const intl = channelId(1113).intl;
   obj3.accessibilityHint = intl.string(channelId(1113).t["Y2b7+e"]);
@@ -71,7 +71,7 @@ function StreamButton(arg0) {
   const intl2 = util.intl;
   obj2.accessibilityLabel = intl2.formatToPlainString(util.t.I0mOAs, { username: name });
   obj2.text = name;
-  obj2.icon = _modDef19841;
+  obj2.icon = _modDef19836;
   obj2.onPress = onPress;
   return React6(native.HeaderButton, obj2);
 }
@@ -129,7 +129,7 @@ function StageCounts(channelId) {
   items[2] = React6(GroupIcon.GroupIcon, { size: "xs", color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, style: tmp.stageCountsGroupIcon });
   items[3] = React6(Text_Text.Text, { variant: "body-sm/medium", color: "none", style: tmp.stageCountsText, children: stageParticipantsCount });
   obj3.children = items;
-  return closure_1_10(View, obj3);
+  return refs(View, obj3);
 }
 function StageButton(channelId) {
   channelId = channelId.channelId;
@@ -142,9 +142,9 @@ function StageButton(channelId) {
   const stateFromStores1 = channelId(504).useStateFromStores(items2, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
   const tmp6 = useChannelNameDefault(stateFromStores1);
-  const isStageUnifiedCall = channelId(11891).useIsStageUnifiedCall(stateFromStores1, "VoicePanelTitleButton");
+  const isStageUnifiedCall = channelId(11885).useIsStageUnifiedCall(stateFromStores1, "VoicePanelTitleButton");
   let topic;
-  const obj3 = channelId(11891);
+  const obj3 = channelId(11885);
   if (stateFromStores != null) {
     topic = stateFromStores.topic;
   }
@@ -192,18 +192,18 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelTitleButton.tsx");
 
 export default noop.memo(function VoicePanelTitleButton() {
-  const context = noop.useContext(channelId(11924));
+  const context = noop.useContext(channelId(11918));
   const guildId = context.guildId;
   channelId = context.channelId;
   ({ channelType, focused } = context);
-  const derivedStateFromSharedValue = guildId(11192).useDerivedStateFromSharedValue(focused, (id) => {
+  const derivedStateFromSharedValue = guildId(11186).useDerivedStateFromSharedValue(focused, (id) => {
     id = undefined;
     if (id != null) {
       id = id.id;
     }
     return id;
   });
-  const tmp3 = channelId(19837)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp3 = channelId(19832)(derivedStateFromSharedValue, channelId, guildId);
   items = [guildId, channelId];
   const onPress = noop.useCallback(() => {
     const result = VoicePanelSettingsActionCreators.openVoicePanelSettingsActionSheet(guildId, channelId);

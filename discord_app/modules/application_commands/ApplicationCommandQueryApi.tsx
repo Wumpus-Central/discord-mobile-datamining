@@ -1,16 +1,16 @@
-// === Module 11344: ApplicationCommandQueryApi ===
+// === Module 11338: ApplicationCommandQueryApi ===
 
-// Module 11344 (ApplicationCommandQueryApi)
+// Module 11338 (ApplicationCommandQueryApi)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5922 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8657 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 11351 */;
-import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 11353 */;
-import CommandPermissionUtils from "CommandPermissionUtils" /* 11359 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 11345 */;
+import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 11347 */;
+import CommandPermissionUtils from "CommandPermissionUtils" /* 11353 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 11345 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 11339 */;
 
 const require = globalThis.__r;
 const CommandPermissionUtilsAll = CommandPermissionUtils;
@@ -54,7 +54,7 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(11345);
+let ApplicationCommandIndexStore = fn(11339);
 ({ useContextIndexState: closure_6, useDiscoveryState: metroImportDefault, useQueryState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 const BuiltInSectionId = fn(6282).BuiltInSectionId;
@@ -67,7 +67,7 @@ let result = size.fileFinishedImporting("modules/application_commands/Applicatio
 export function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "delete", command: "isArray", section: "isArray" };
+    return { application: "a", command: "isArray", section: "isArray" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -114,7 +114,7 @@ export function getCachedCommand(type, commandId, applicationId) {
         }
       }
     }
-    return { application: "delete", command: "isArray", section: "isArray" };
+    return { application: "a", command: "isArray", section: "isArray" };
   }
 }
 export function getCachedApplicationSection(type, CHAT, applicationId) {

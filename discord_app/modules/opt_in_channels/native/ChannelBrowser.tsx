@@ -1,9 +1,9 @@
-// === Module 12384: ChannelBrowser ===
+// === Module 12378: ChannelBrowser ===
 
-// Module 12384 (ChannelBrowser)
+// Module 12378 (ChannelBrowser)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import MarkupInlineChannelMentionRules from "MarkupInlineChannelMentionRules" /* 10998 */;
+import MarkupInlineChannelMentionRules from "MarkupInlineChannelMentionRules" /* 10992 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import NewChannelsStore from "NewChannelsStore" /* 8668 */;
@@ -44,9 +44,9 @@ if (PlatformUtils) {
     return application_id(ChannelTopicMention, obj, key.key);
   };
   obj.channelMention = obj3;
-  let obj4 = { react: fn(9289).smartOutput };
+  let obj4 = { react: fn(9288).smartOutput };
   obj.guild = obj4;
-  let obj5 = { react: fn(10998).inlineChannelReact };
+  let obj5 = { react: fn(10992).inlineChannelReact };
   obj.channel = obj5;
   let parseTopic = MarkupUtils.reactParserFor(obj);
 } else {

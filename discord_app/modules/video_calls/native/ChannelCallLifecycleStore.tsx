@@ -1,20 +1,20 @@
-// === Module 12629: ChannelCallLifecycleStore ===
+// === Module 12623: ChannelCallLifecycleStore ===
 
-// Module 12629 (ChannelCallLifecycleStore)
+// Module 12623 (ChannelCallLifecycleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _modDef1342 from "module_1342" /* 1342 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 
-const VoiceCallOverlayType = fn(10941).VoiceCallOverlayType;
+const VoiceCallOverlayType = fn(10935).VoiceCallOverlayType;
 let c4 = false;
 let c5 = false;
 let c6 = false;
 let visible = false;
 let obj = {};
-let size = { x: "Array", y: "Path", width: "channel", height: "ip", screenOrientation: fn(9975).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "FAMILY_CENTER", isInitialized: "isArray", isVisible: "<string:74596320>" };
+let size = { x: "Array", y: "Path", width: "channel", height: "values", screenOrientation: fn(9974).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "computeEmojiItems", isInitialized: "r", isVisible: "WireType" };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
-const size1 = { x: "Array", y: "Path", width: "channel", height: "ip", screenOrientation: fn(9975).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "FAMILY_CENTER", isInitialized: "isArray", isVisible: "<string:74596320>" };
+const size1 = { x: "Array", y: "Path", width: "channel", height: "values", screenOrientation: fn(9974).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "computeEmojiItems", isInitialized: "r", isVisible: "WireType" };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 let c10 = true;
 const Store = initializeDefault.Store;

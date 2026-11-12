@@ -299,7 +299,7 @@ prototype["getLocalWant"] = function getLocalWant(arg0) {
   let someResult = videoStreamParameters.some((ssrc) => {
     let tmp = ssrc.ssrc === closure_0;
     if (tmp) {
-      tmp = ssrc.quality === closure_2_10;
+      tmp = ssrc.quality === refs;
     }
     return tmp;
   });

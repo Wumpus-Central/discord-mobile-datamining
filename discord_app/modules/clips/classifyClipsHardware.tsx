@@ -1,7 +1,7 @@
-// === Module 20648: classifyClipsHardware ===
+// === Module 20643: classifyClipsHardware ===
 
-// Module 20648 (classifyClipsHardware)
-import ClipsConstants from "ClipsConstants" /* 8779 */;
+// Module 20643 (classifyClipsHardware)
+import ClipsConstants from "ClipsConstants" /* 8778 */;
 import size from "module_2" /* 2 */;
 
 function isHardwareH264Encoder(arr) {

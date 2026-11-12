@@ -1,6 +1,6 @@
-// === Module 18032: SummaryReminderNotificationUtils ===
+// === Module 18027: SummaryReminderNotificationUtils ===
 
-// Module 18032 (SummaryReminderNotificationUtils)
+// Module 18027 (SummaryReminderNotificationUtils)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserSettings from "UserSettings" /* 5068 */;

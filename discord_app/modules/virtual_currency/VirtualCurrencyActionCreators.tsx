@@ -1,6 +1,6 @@
-// === Module 9974: VirtualCurrencyActionCreators ===
+// === Module 9973: VirtualCurrencyActionCreators ===
 
-// Module 9974 (VirtualCurrencyActionCreators)
+// Module 9973 (VirtualCurrencyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;

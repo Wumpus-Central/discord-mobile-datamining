@@ -1,12 +1,12 @@
-// === Module 15842: IntegrationTypeSelector ===
+// === Module 15837: IntegrationTypeSelector ===
 
-// Module 15842 (IntegrationTypeSelector)
+// Module 15837 (IntegrationTypeSelector)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5890 */;
 import UserPlusIcon from "UserPlusIcon" /* 5960 */;
-import ServerIcon from "ServerIcon" /* 10876 */;
+import ServerIcon from "ServerIcon" /* 10870 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

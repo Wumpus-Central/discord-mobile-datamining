@@ -1,6 +1,6 @@
-// === Module 19831: useVoicePanelDockMicLive ===
+// === Module 19826: useVoicePanelDockMicLive ===
 
-// Module 19831 (useVoicePanelDockMicLive)
+// Module 19826 (useVoicePanelDockMicLive)
 import timing_timing from "timing/timing" /* 5485 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;

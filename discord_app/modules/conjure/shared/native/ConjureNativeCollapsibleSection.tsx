@@ -1,10 +1,10 @@
-// === Module 13608: ConjureNativeCollapsibleSection ===
+// === Module 13602: ConjureNativeCollapsibleSection ===
 
-// Module 13608 (ConjureNativeCollapsibleSection)
+// Module 13602 (ConjureNativeCollapsibleSection)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 7897 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10493 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10491 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

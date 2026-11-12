@@ -1,13 +1,13 @@
-// === Module 18177: DevToolsProfilingScreen ===
+// === Module 18172: DevToolsProfilingScreen ===
 
-// Module 18177 (DevToolsProfilingScreen)
+// Module 18172 (DevToolsProfilingScreen)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import Stack_Stack from "Stack/Stack" /* 6274 */;
 import TableRow from "TableRow" /* 7379 */;
 import TableRowGroup from "TableRowGroup" /* 7680 */;
-import ComponentProfiler from "ComponentProfiler" /* 11048 */;
-import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 18178 */;
+import ComponentProfiler from "ComponentProfiler" /* 11042 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 18173 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

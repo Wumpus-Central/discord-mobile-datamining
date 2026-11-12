@@ -1,11 +1,11 @@
-// === Module 19031: YouBarAvatarDefault ===
+// === Module 19026: YouBarAvatarDefault ===
 
-// Module 19031 (YouBarAvatarDefault)
+// Module 19026 (YouBarAvatarDefault)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useToken from "useToken" /* 5839 */;
-import ClipView from "ClipView" /* 9437 */;
-import ReactionIcon from "ReactionIcon" /* 10342 */;
+import ClipView from "ClipView" /* 9436 */;
+import ReactionIcon from "ReactionIcon" /* 10340 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -51,7 +51,7 @@ function AvatarDefaultLarge() {
   const result = size / 2;
   const sum = result + native.STATUS_PADDING;
   const diff = tmp3 - sum - size / 4 * 2;
-  const point = { shape: ClipView.CutoutShape.Circle, x: diff + closure_1_10, y: diff + closure_1_10, size: 2 * sum };
+  const point = { shape: ClipView.CutoutShape.Circle, x: diff + refs, y: diff + refs, size: 2 * sum };
   const obj2 = { style: null, children: null };
   size = { height: native.AVATAR_SIZE_MAP[hasOwnProperty], width: native.AVATAR_SIZE_MAP[hasOwnProperty], position: "relative" };
   obj2.style = size;
@@ -77,7 +77,7 @@ function AvatarDefaultLarge() {
   obj4.children = state(View, obj5);
   const items4 = [application_id(ClipViewDefault, obj4), ];
   const obj8 = { size, status: StatusTypes.OFFLINE, isMobileOnline: false, isVROnline: false, streaming: false, style: null };
-  const rect = { position: "absolute", right: timestampProducer - closure_1_10, bottom: timestampProducer - closure_1_10 };
+  const rect = { position: "absolute", right: timestampProducer - refs, bottom: timestampProducer - refs };
   obj8.style = rect;
   items4[1] = application_id(native.Status, obj8);
   obj3.children = items4;
@@ -85,7 +85,7 @@ function AvatarDefaultLarge() {
   return application_id(View, obj2);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17588);
+const YouBarConstants = fn(17583);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_4, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty, YOU_BAR_STATUS_INSET: closure_6, YOU_BAR_HEIGHT: metroImportDefault, YOU_BAR_LARGE_STATUS_SIZE: closure_8, YOU_BAR_PADDING: closure_9, YOU_BAR_STATUS_OFFSET: closure_10 } = YouBarConstants);
 const StatusTypes = fn(1072).StatusTypes;
 const jsxProd = fn(21);

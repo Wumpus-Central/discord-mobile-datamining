@@ -1,6 +1,6 @@
-// === Module 11185: PortalKeyboardFooterIOS ===
+// === Module 11179: PortalKeyboardFooterIOS ===
 
-// Module 11185 (PortalKeyboardFooterIOS)
+// Module 11179 (PortalKeyboardFooterIOS)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;

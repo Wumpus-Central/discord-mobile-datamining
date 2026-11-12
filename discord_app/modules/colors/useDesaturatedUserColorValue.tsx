@@ -1,6 +1,6 @@
-// === Module 17061: useDesaturatedUserColorValue ===
+// === Module 17056: useDesaturatedUserColorValue ===
 
-// Module 17061 (useDesaturatedUserColorValue)
+// Module 17056 (useDesaturatedUserColorValue)
 import _mod19 from "module_19" /* 19 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import tinycolorDefault from "tinycolor" /* 8429 */;

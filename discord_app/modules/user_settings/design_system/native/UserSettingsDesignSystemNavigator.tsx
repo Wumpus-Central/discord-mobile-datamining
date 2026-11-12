@@ -1,6 +1,6 @@
-// === Module 18333: UserSettingsDesignSystemNavigator ===
+// === Module 18328: UserSettingsDesignSystemNavigator ===
 
-// Module 18333 (UserSettingsDesignSystemNavigator)
+// Module 18328 (UserSettingsDesignSystemNavigator)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
@@ -13,8 +13,8 @@ import _mod7434 from "module_7434" /* 7434 */;
 import TableRowGroup from "TableRowGroup" /* 7680 */;
 import ModalScreen from "ModalScreen" /* 8142 */;
 import ModalContent from "ModalContent" /* 8144 */;
-import ModalFooter from "ModalFooter" /* 13979 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 16376 */;
+import ModalFooter from "ModalFooter" /* 13975 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 16371 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -135,7 +135,7 @@ function DemoNavigator(arg0) {
     obj7.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj7.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj7.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(7427).NavigatorHeader, { title: constants.ICON, icon: closure_1_7(closure_1_0(13254).SparklesIcon, { size: "sm" }) });
+      return closure_1_7(closure_1_0(7427).NavigatorHeader, { title: constants.ICON, icon: closure_1_7(closure_1_0(13248).SparklesIcon, { size: "sm" }) });
     };
     obj7.render = function render() {
       return closure_1_7(closure_1_15, { title: constants.ICON, description: "The icon sits before the title." });

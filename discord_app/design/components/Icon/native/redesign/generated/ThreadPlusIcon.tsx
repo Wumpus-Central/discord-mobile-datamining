@@ -1,9 +1,9 @@
-// === Module 14537: ThreadPlusIcon ===
+// === Module 14533: ThreadPlusIcon ===
 
-// Module 14537 (ThreadPlusIcon)
+// Module 14533 (ThreadPlusIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod14538 from "module_14538" /* 14538 */;
+import _mod14534 from "module_14534" /* 14534 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ThreadPlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14538, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14534, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

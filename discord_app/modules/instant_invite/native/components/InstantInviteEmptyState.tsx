@@ -1,10 +1,10 @@
-// === Module 15775: InstantInviteEmptyState ===
+// === Module 15770: InstantInviteEmptyState ===
 
-// Module 15775 (InstantInviteEmptyState)
+// Module 15770 (InstantInviteEmptyState)
 import nativeDefault from "native" /* 575 */;
 import FreeFormTextInputDefault from "FreeFormTextInput" /* 7581 */;
 import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8397 */;
-import _modDef15776 from "module_15776" /* 15776 */;
+import _modDef15771 from "module_15771" /* 15771 */;
 import noop from "module_19" /* 19 */;
 import CreateInviteModalStore from "CreateInviteModalStore" /* 8396 */;
 
@@ -28,7 +28,7 @@ export default function InstantInviteEmptyState(link) {
   items = [CreateInviteModalStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => inviteSettings.getInviteSettings());
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef15776, title: null, body: null };
+  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef15771, title: null, body: null };
   const intl = stateFromStores(1113).intl;
   obj3.title = intl.string(stateFromStores(1113).t.tQc0l8);
   const intl2 = stateFromStores(1113).intl;
@@ -49,7 +49,7 @@ export default function InstantInviteEmptyState(link) {
   obj6.accessibilityLabel = intl3.string(stateFromStores(1113).t["3D5yo/"]);
   obj6.onPress = onPressSettings;
   obj6.style = tmp.settingsButton;
-  obj6.children = closure_5(stateFromStores(10502).SettingsIcon, {});
+  obj6.children = closure_5(stateFromStores(10500).SettingsIcon, {});
   items2[1] = closure_5(stateFromStores(7364).PressableOpacity, obj6);
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);

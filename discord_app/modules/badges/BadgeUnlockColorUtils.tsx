@@ -1,6 +1,6 @@
-// === Module 15171: BadgeUnlockColorUtils ===
+// === Module 15168: BadgeUnlockColorUtils ===
 
-// Module 15171 (BadgeUnlockColorUtils)
+// Module 15168 (BadgeUnlockColorUtils)
 import ColorUtils from "ColorUtils" /* 5240 */;
 import size from "module_2" /* 2 */;
 

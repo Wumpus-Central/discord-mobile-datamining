@@ -1,6 +1,6 @@
-// === Module 18304: UserSettingsDesignSystemTableRow ===
+// === Module 18299: UserSettingsDesignSystemTableRow ===
 
-// Module 18304 (UserSettingsDesignSystemTableRow)
+// Module 18299 (UserSettingsDesignSystemTableRow)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 1187 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
@@ -17,11 +17,11 @@ import TableRowGroup from "TableRowGroup" /* 7680 */;
 import TableRadioRow from "TableRadioRow" /* 7681 */;
 import TableSwitchRow from "TableSwitchRow" /* 7888 */;
 import RowButton from "RowButton" /* 8043 */;
-import SettingsIcon from "SettingsIcon" /* 10502 */;
-import _modDef16494 from "module_16494" /* 16494 */;
-import _modDef16495 from "module_16495" /* 16495 */;
-import _modDef16496 from "module_16496" /* 16496 */;
-import _modDef16497 from "module_16497" /* 16497 */;
+import SettingsIcon from "SettingsIcon" /* 10500 */;
+import _modDef16489 from "module_16489" /* 16489 */;
+import _modDef16490 from "module_16490" /* 16490 */;
+import _modDef16491 from "module_16491" /* 16491 */;
+import _modDef16492 from "module_16492" /* 16492 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
@@ -217,26 +217,26 @@ export default function UserSettingsDesignSystemTableRow() {
   const obj65 = { title: "Online Status", hasIcons: true, defaultValue: "option1", onChange: onPress, children: null };
   const obj66 = { icon: null, label: "Online", value: "option1" };
   const obj63 = { IconComponent: SettingsIcon.SettingsIcon };
-  obj66.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-online", source: _modDef16497 });
+  obj66.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-online", source: _modDef16492 });
   const items9 = [closure_11(TableRadioRow.TableRadioRow, obj66), , , ];
   const obj68 = { icon: null, label: "Idle", value: "option2" };
-  const obj67 = { variant: "text-status-online", source: _modDef16497 };
-  obj68.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-idle", source: _modDef16494 });
+  const obj67 = { variant: "text-status-online", source: _modDef16492 };
+  obj68.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-idle", source: _modDef16489 });
   items9[1] = closure_11(TableRadioRow.TableRadioRow, obj68);
   const obj70 = { icon: null, label: "Do Not Disturb", value: "option3" };
-  const obj69 = { variant: "text-status-idle", source: _modDef16494 };
-  obj70.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-dnd", source: _modDef16495 });
+  const obj69 = { variant: "text-status-idle", source: _modDef16489 };
+  obj70.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-dnd", source: _modDef16490 });
   items9[2] = closure_11(TableRadioRow.TableRadioRow, obj70);
   const obj72 = { icon: null, label: "Invisible", value: "option4" };
-  const obj71 = { variant: "text-status-dnd", source: _modDef16495 };
-  obj72.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-offline", source: _modDef16496 });
+  const obj71 = { variant: "text-status-dnd", source: _modDef16490 };
+  obj72.icon = closure_11(TableRowIcon.TableRowIcon, { variant: "text-status-offline", source: _modDef16491 });
   items9[3] = closure_11(TableRadioRow.TableRadioRow, obj72);
   obj65.children = items9;
   items3[6] = closure_12(TableRadioGroup.TableRadioGroup, obj65);
   const obj74 = { spacing: 12, children: null };
   const items10 = [closure_11(Text_Text.Text, { variant: "heading-xs/semibold", children: "Row buttons" }), , , ];
   const obj75 = { icon: null, label: "Boost your server", onPress: null };
-  const obj73 = { variant: "text-status-offline", source: _modDef16496 };
+  const obj73 = { variant: "text-status-offline", source: _modDef16491 };
   obj75.icon = closure_11(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
   obj75.onPress = onPress;
   items10[1] = closure_11(RowButton.RowButton, obj75);

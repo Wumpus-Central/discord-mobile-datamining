@@ -1,10 +1,10 @@
-// === Module 18627: MessagesItemChannelBase ===
+// === Module 18622: MessagesItemChannelBase ===
 
-// Module 18627 (MessagesItemChannelBase)
+// Module 18622 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 575 */;
 import transitionToChannel from "transitionToChannel" /* 6000 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10831 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10825 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 6005 */;
 import ReadStateStore from "ReadStateStore" /* 6952 */;

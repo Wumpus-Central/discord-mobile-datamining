@@ -1,6 +1,6 @@
-// === Module 13898: ConjureStaffAccess ===
+// === Module 13894: ConjureStaffAccess ===
 
-// Module 13898 (ConjureStaffAccess)
+// Module 13894 (ConjureStaffAccess)
 import initialize from "initialize" /* 504 */;
 import GuildChannelStore from "GuildChannelStore" /* 5173 */;
 import GuildStore from "GuildStore" /* 5114 */;

@@ -1,6 +1,6 @@
-// === Module 18879: WaterwheelsDiscoverJoinAttribution ===
+// === Module 18874: WaterwheelsDiscoverJoinAttribution ===
 
-// Module 18879 (WaterwheelsDiscoverJoinAttribution)
+// Module 18874 (WaterwheelsDiscoverJoinAttribution)
 import size from "module_2" /* 2 */;
 
 let closure_0 = ["CONNECTION_OPEN", "OVERLAY_INITIALIZE", "CONNECTION_CLOSED", "AUTH_SESSION_CHANGE", "LOGIN_SUCCESS", "LOGIN_RESET", "LOGOUT", "REGISTER_SUCCESS", "UPDATE_TOKEN", "CURRENT_USER_UPDATE", "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER", "CLOSE_SUSPENDED_USER"];

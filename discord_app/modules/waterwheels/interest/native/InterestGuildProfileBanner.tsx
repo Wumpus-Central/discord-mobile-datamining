@@ -1,12 +1,12 @@
-// === Module 20196: InterestGuildProfileBanner ===
+// === Module 20191: InterestGuildProfileBanner ===
 
-// Module 20196 (InterestGuildProfileBanner)
+// Module 20191 (InterestGuildProfileBanner)
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5106 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import VideoBackground from "VideoBackground" /* 8547 */;
-import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 10592 */;
+import utils_getDevicePixelRatioDefault from "utils/getDevicePixelRatio" /* 10590 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
 

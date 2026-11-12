@@ -1,9 +1,9 @@
-// === Module 12595: UploadActionCreators ===
+// === Module 12589: UploadActionCreators ===
 
-// Module 12595 (UploadActionCreators)
+// Module 12589 (UploadActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DraftStore from "DraftStore" /* 8658 */;
-import UploadStore from "UploadStore" /* 8955 */;
+import UploadStore from "UploadStore" /* 8954 */;
 
 const DraftType = fn(8658).DraftType;
 const size = fn(2);

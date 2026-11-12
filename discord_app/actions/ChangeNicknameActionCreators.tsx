@@ -1,6 +1,6 @@
-// === Module 11356: ChangeNicknameActionCreators ===
+// === Module 11350: ChangeNicknameActionCreators ===
 
-// Module 11356 (ChangeNicknameActionCreators)
+// Module 11350 (ChangeNicknameActionCreators)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;

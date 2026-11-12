@@ -1,10 +1,10 @@
-// === Module 20385: GuildSettingsServerTagColorPickerActionSheet ===
+// === Module 20380: GuildSettingsServerTagColorPickerActionSheet ===
 
-// Module 20385 (GuildSettingsServerTagColorPickerActionSheet)
+// Module 20380 (GuildSettingsServerTagColorPickerActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ColorUtils from "ColorUtils" /* 5240 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 16956 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 16951 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

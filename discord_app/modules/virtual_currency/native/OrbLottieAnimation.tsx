@@ -1,10 +1,10 @@
-// === Module 9980: OrbLottieAnimation ===
+// === Module 9979: OrbLottieAnimation ===
 
-// Module 9980 (OrbLottieAnimation)
+// Module 9979 (OrbLottieAnimation)
 import shared from "shared" /* 5250 */;
 import useTheme from "useTheme" /* 5484 */;
-import SpendEarnOrbsLightThemeLottie from "SpendEarnOrbsLightThemeLottie" /* 9981 */;
-import SpendEarnOrbsLottie2 from "SpendEarnOrbsLottie" /* 9984 */;
+import SpendEarnOrbsLightThemeLottie from "SpendEarnOrbsLightThemeLottie" /* 9980 */;
+import SpendEarnOrbsLottie2 from "SpendEarnOrbsLottie" /* 9983 */;
 import "module_19";
 
 require = fn;

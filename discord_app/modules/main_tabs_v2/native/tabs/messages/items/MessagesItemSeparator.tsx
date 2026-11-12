@@ -1,6 +1,6 @@
-// === Module 18693: MessagesItemSeparator ===
+// === Module 18688: MessagesItemSeparator ===
 
-// Module 18693 (MessagesItemSeparator)
+// Module 18688 (MessagesItemSeparator)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 

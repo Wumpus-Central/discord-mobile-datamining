@@ -1,6 +1,6 @@
-// === Module 11244: EmojiActionCreators ===
+// === Module 11238: EmojiActionCreators ===
 
-// Module 11244 (EmojiActionCreators)
+// Module 11238 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import wrappers from "wrappers" /* 1227 */;

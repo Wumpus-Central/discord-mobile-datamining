@@ -1,10 +1,10 @@
-// === Module 10283: findTextStart ===
+// === Module 10281: findTextStart ===
 
-// Module 10283 (findTextStart)
-import _mod10285 from "module_10285" /* 10285 */;
-import HTMLParserRunUtils from "HTMLParserRunUtils" /* 10309 */;
-import HTMLParserLinkUtils from "HTMLParserLinkUtils" /* 10310 */;
-import HTMLParserConstants from "HTMLParserConstants" /* 10284 */;
+// Module 10281 (findTextStart)
+import _mod10283 from "module_10283" /* 10283 */;
+import HTMLParserRunUtils from "HTMLParserRunUtils" /* 10307 */;
+import HTMLParserLinkUtils from "HTMLParserLinkUtils" /* 10308 */;
+import HTMLParserConstants from "HTMLParserConstants" /* 10282 */;
 import size from "module_2" /* 2 */;
 
 function findTextStart(arr) {
@@ -332,7 +332,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
   obj.links = [];
   obj.lists = [];
   obj.held = [];
-  const Parser = obj(10285).Parser;
+  const Parser = obj(10283).Parser;
   const fn = () => HermesBuiltin.applyArguments(new.target, new.target);
   class fn extends Parser {
     onclosetag(arg0, arg1) {
@@ -511,7 +511,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
                                       const str = markup.slice(startIndex, startIndex + arg0.length + 2);
                                     }
                     };
-                    const parser = new _mod10285.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
+                    const parser = new _mod10283.Parser(obj, { decodeEntities: true, recognizeSelfClosing: true });
                     parser.end(markup);
                     let map1 = map;
                   } else {
@@ -613,7 +613,7 @@ function parseMarkupRuns(markup, keepInvalidAnchors) {
           appendText(obj, substr);
         }
     };
-    let parser = new obj(10285).Parser(obj3, { decodeEntities: true });
+    let parser = new obj(10283).Parser(obj3, { decodeEntities: true });
     parser.end(str.replace(/</g, "&lt;"));
   }
   const runs = obj.runs;

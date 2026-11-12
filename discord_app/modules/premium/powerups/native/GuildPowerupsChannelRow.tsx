@@ -1,15 +1,15 @@
-// === Module 18811: GuildPowerupsChannelRow ===
+// === Module 18806: GuildPowerupsChannelRow ===
 
-// Module 18811 (GuildPowerupsChannelRow)
+// Module 18806 (GuildPowerupsChannelRow)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import LayerContext from "LayerContext" /* 5855 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7557 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 10612 */;
-import GuildPowerupsNotification from "GuildPowerupsNotification" /* 10628 */;
-import SidebarCoachmarkOverlay from "SidebarCoachmarkOverlay" /* 18606 */;
-import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 18764 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 10610 */;
+import GuildPowerupsNotification from "GuildPowerupsNotification" /* 10626 */;
+import SidebarCoachmarkOverlay from "SidebarCoachmarkOverlay" /* 18601 */;
+import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 18759 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -59,7 +59,7 @@ export default function GuildPowerupsChannelRow(guildId) {
   guildId = guildId.guildId;
   let dismissNewBadgeIfShown;
   const ref = noop.useRef(null);
-  const tmp5 = dismissNewBadgeIfShown(10624)(guildId);
+  const tmp5 = dismissNewBadgeIfShown(10622)(guildId);
   let indicator;
   const tmp = closure_8();
   if (tmp5 != null) {
@@ -73,13 +73,13 @@ export default function GuildPowerupsChannelRow(guildId) {
     }
     tmp8 = null != popout;
   }
-  const tmp6Result = dismissNewBadgeIfShown(10646)(guildId, tmp8);
+  const tmp6Result = dismissNewBadgeIfShown(10639)(guildId, tmp8);
   dismissNewBadgeIfShown = tmp6Result.dismissNewBadgeIfShown;
   let showUnread;
   if (tmp5 != null) {
     showUnread = tmp5.showUnread;
   }
-  const ChannelModes = guildId(14680).ChannelModes;
+  const ChannelModes = guildId(14676).ChannelModes;
   if (true === showUnread) {
     let DEFAULT = ChannelModes.UNREAD_IMPORTANT;
     let tmp14 = tmp13;
@@ -102,7 +102,7 @@ export default function GuildPowerupsChannelRow(guildId) {
   obj3.popout = popout1;
   const items1 = [closure_5(GuildPowerupsCoachmark, obj3), ];
   const obj4 = { onPress: callback, style: tmp.container, accessible: true, mode: DEFAULT, unread: true === showUnread, accessibilityLabel: null, accessibilityState: null, name: null, icon: null, channelInfo: null };
-  const tmp6 = dismissNewBadgeIfShown(10646);
+  const tmp6 = dismissNewBadgeIfShown(10639);
   const intl = tmp14(1113).intl;
   obj4.accessibilityLabel = intl.string(dismissNewBadgeIfShown(2717).yv3DJJ);
   obj4.accessibilityState = { selected: false };
@@ -110,11 +110,11 @@ export default function GuildPowerupsChannelRow(guildId) {
   const intl2 = tmp14(1113).intl;
   obj5.name = intl2.string(dismissNewBadgeIfShown(2717).yv3DJJ);
   obj5.mode = DEFAULT;
-  obj4.name = closure_5(tmp14(14680).BaseChannelName, obj5);
-  const tmp3Result = dismissNewBadgeIfShown(14680);
-  obj4.icon = closure_5(tmp14(14680).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(18812).BoostTier2Icon });
+  obj4.name = closure_5(tmp14(14676).BaseChannelName, obj5);
+  const tmp3Result = dismissNewBadgeIfShown(14676);
+  obj4.icon = closure_5(tmp14(14676).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(18807).BoostTier2Icon });
   if (tmp6Result.showNewBadgeOnRow) {
-    let tmp16Result = closure_5(tmp14(14579).NewBadge, {});
+    let tmp16Result = closure_5(tmp14(14575).NewBadge, {});
   } else {
     let indicator1;
     if (tmp5 != null) {

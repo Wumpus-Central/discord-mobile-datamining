@@ -1,6 +1,6 @@
-// === Module 8802: ForumSearchStore ===
+// === Module 8801: ForumSearchStore ===
 
-// Module 8802 (ForumSearchStore)
+// Module 8801 (ForumSearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ChannelStore from "ChannelStore" /* 5092 */;

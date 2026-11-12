@@ -1,13 +1,13 @@
-// === Module 12580: EmojiReactionRowButton ===
+// === Module 12574: EmojiReactionRowButton ===
 
-// Module 12580 (EmojiReactionRowButton)
+// Module 12574 (EmojiReactionRowButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import EmojiTypes from "EmojiTypes" /* 5192 */;
 import shared from "shared" /* 5250 */;
 import Pressables from "Pressables" /* 7364 */;
 import EmojiDefault from "Emoji" /* 7828 */;
-import ReactionIcon from "ReactionIcon" /* 10342 */;
+import ReactionIcon from "ReactionIcon" /* 10340 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

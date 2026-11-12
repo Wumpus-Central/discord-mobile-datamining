@@ -1,6 +1,6 @@
-// === Module 10485: useConjureProjectShareTarget ===
+// === Module 10483: useConjureProjectShareTarget ===
 
-// Module 10485 (useConjureProjectShareTarget)
+// Module 10483 (useConjureProjectShareTarget)
 import _modDef4079 from "module_4079" /* 4079 */;
 import GuildStore from "GuildStore" /* 5114 */;
 

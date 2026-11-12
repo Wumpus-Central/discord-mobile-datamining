@@ -1,6 +1,6 @@
-// === Module 11567: ForumTagContextMenu ===
+// === Module 11561: ForumTagContextMenu ===
 
-// Module 11567 (ForumTagContextMenu)
+// Module 11561 (ForumTagContextMenu)
 import jsxProd from "jsxProd" /* 21 */;
 import ToastUtils from "ToastUtils" /* 5951 */;
 import ClipboardUtils from "ClipboardUtils" /* 7877 */;
@@ -16,11 +16,11 @@ export default function ForumTagContextMenu(children) {
   const enabled = DeveloperMode.useSetting();
   const intl = tagId(1113).intl;
   obj.label = intl.string(tagId(1113).t["8VG6IY"]);
-  obj.IconComponent = tagId(11568).IdIcon;
+  obj.IconComponent = tagId(11562).IdIcon;
   obj.action = function action() {
     ClipboardUtils.copy(tagId);
     ToastUtils.presentIdCopied();
   };
   items = [obj];
-  return jsx(tagId(9082).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
+  return jsx(tagId(9081).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
 };

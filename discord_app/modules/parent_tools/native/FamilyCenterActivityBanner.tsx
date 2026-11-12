@@ -1,15 +1,15 @@
-// === Module 17287: FamilyCenterActivityBanner ===
+// === Module 17282: FamilyCenterActivityBanner ===
 
-// Module 17287 (FamilyCenterActivityBanner)
+// Module 17282 (FamilyCenterActivityBanner)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2685 from "module_2685" /* 2685 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import useUserLinks from "useUserLinks" /* 9550 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9551 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 14124 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 17288 */;
+import useUserLinks from "useUserLinks" /* 9549 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9550 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 14120 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 17283 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -62,7 +62,7 @@ export default function FamilyCenterActivityBanner() {
   const ageSpecificText1 = obj3.useAgeSpecificText(intl3.format(_modDef2685.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(_modDef2685.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
   const obj5 = { source: null, style: null };
   const formatResult = intl3.format(_modDef2685.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" });
-  obj5.source = importDefault(tmp3 ? 17295 : 17296);
+  obj5.source = importDefault(tmp3 ? 17290 : 17291);
   obj5.style = tmp4.art;
   items = [React4(FastImageDefault, obj5), React4(Text_Text.Text, { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText }), React4(Text_Text.Text, { style: tmp4.description, variant: "body-sm/medium", color: "text-muted", children: ageSpecificText1 }), ];
   let tmp13Result = null;

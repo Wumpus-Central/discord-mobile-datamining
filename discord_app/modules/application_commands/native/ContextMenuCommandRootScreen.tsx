@@ -1,10 +1,10 @@
-// === Module 19547: ContextMenuCommandRootScreen ===
+// === Module 19542: ContextMenuCommandRootScreen ===
 
-// Module 19547 (ContextMenuCommandRootScreen)
+// Module 19542 (ContextMenuCommandRootScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import executeCommandDefault from "executeCommand" /* 11336 */;
+import executeCommandDefault from "executeCommand" /* 11330 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -181,7 +181,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
               let stringResult = intl2.string(util.t.V0w2ap);
             }
             const obj = { variant, color: "text-default", style: closure_18.sectionHeader, children: stringResult };
-            return closure_2_10(Text_Text.Text, obj);
+            return refs(Text_Text.Text, obj);
           }
           const intl = util.intl;
           stringResult = intl.string(util.t.PHjkRE);

@@ -1,6 +1,6 @@
-// === Module 20627: GuildRoleSubscriptionTierTemplatePreviewCard ===
+// === Module 20622: GuildRoleSubscriptionTierTemplatePreviewCard ===
 
-// Module 20627 (GuildRoleSubscriptionTierTemplatePreviewCard)
+// Module 20622 (GuildRoleSubscriptionTierTemplatePreviewCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -9,9 +9,9 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
-import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 15348 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 20631 */;
-import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 20633 */;
+import ChevronSmallUpIcon from "ChevronSmallUpIcon" /* 15345 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 20626 */;
+import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 20628 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ function ContentHeader(arg0) {
   const obj = { variant: "body-sm/medium", color: "text-muted", children: null };
   items = [React6(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: count }), " ", title];
   obj.children = items;
-  return closure_1_10(Text_Text.Text, obj);
+  return refs(Text_Text.Text, obj);
 }
 function Separator() {
   return React6(timestampProducer, { style: closure_11().separator });
@@ -35,7 +35,7 @@ function BenefitShowCase(children) {
   const obj = { children: null };
   items = [tmp3, React6(native.Spacer, { size: 2 }), React6(Text_Text.Text, { variant: "body-sm/medium", color: "interactive-text-default", children: children.description })];
   obj.children = items;
-  return closure_1_10(timestampProducer, obj);
+  return refs(timestampProducer, obj);
 }
 function ChannelBenefitShowCase(channel) {
   ({ description, type, name } = channel.channel);
@@ -43,7 +43,7 @@ function ChannelBenefitShowCase(channel) {
   const obj2 = { style: tmp.channelTitle, children: null };
   items = [React6(GuildRoleSubscriptionTierTemplateUtils.getPrivateChannelIconComponent(type), { size: "xs" }), React6(Text_Text.Text, { variant: "body-md/semibold", color: "text-default", children: name })];
   obj2.children = items;
-  return React6(BenefitShowCase, { title: closure_1_10(timestampProducer, obj2), description });
+  return React6(BenefitShowCase, { title: refs(timestampProducer, obj2), description });
 }
 function ViewEntireTemplateFooter() {
   const tmp = closure_11();
@@ -54,9 +54,9 @@ function ViewEntireTemplateFooter() {
   obj3.children = intl.string(util.t.kejaOD);
   items = [React6(Text_Text.Text, obj3), React6(native.Spacer, { size: 3 }), React6(timestampProducer, { style: tmp.viewEntireTemplateFooterUnderline })];
   obj2.children = items;
-  const items1 = [closure_1_10(timestampProducer, obj2), React6(timestampProducer, { children: React6(ChevronSmallUpIcon.ChevronSmallUpIcon, { size: "xs" }) })];
+  const items1 = [refs(timestampProducer, obj2), React6(timestampProducer, { children: React6(ChevronSmallUpIcon.ChevronSmallUpIcon, { size: "xs" }) })];
   obj.children = items1;
-  return closure_1_10(timestampProducer, obj);
+  return refs(timestampProducer, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
@@ -126,7 +126,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   callback1 = obj3.useCallback((selectedTemplate, arg1) => {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20632, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20627, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
     } else {
       handleCreateFromTemplate(selectedTemplate, arg1);
     }
@@ -136,7 +136,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const obj7 = {
     style: tmp.contentContainer,
     onPress: function handleViewEntireTemplate() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20628, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20623, dependencyMap.paths), "TierTemplateCard", { template, guildId, handleSelectTemplateInPreview: callback1 });
     },
     children: null
   };

@@ -1,8 +1,8 @@
-// === Module 11168: MentionGuardUtils ===
+// === Module 11162: MentionGuardUtils ===
 
-// Module 11168 (MentionGuardUtils)
+// Module 11162 (MentionGuardUtils)
 import _modDef38 from "module_38" /* 38 */;
-import MessageParserDefault from "MessageParser" /* 8720 */;
+import MessageParserDefault from "MessageParser" /* 8719 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelMemberStore from "ChannelMemberStore" /* 7251 */;
 import PermissionStore from "PermissionStore" /* 5175 */;

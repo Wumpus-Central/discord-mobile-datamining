@@ -1,16 +1,16 @@
-// === Module 10430: GameProfileCommunities ===
+// === Module 10428: GameProfileCommunities ===
 
-// Module 10430 (GameProfileCommunities)
+// Module 10428 (GameProfileCommunities)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5106 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5489 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 10214 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10219 */;
-import GameProfileNavTypes from "GameProfileNavTypes" /* 10244 */;
-import useGameProfileCommunitiesDefault from "useGameProfileCommunities" /* 10431 */;
-import useGameProfileCommunitiesLocaleFilterDefault from "useGameProfileCommunitiesLocaleFilter" /* 10434 */;
-import GameProfileCommunitiesLocaleFilterActionSheet from "GameProfileCommunitiesLocaleFilterActionSheet" /* 10436 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 10212 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10217 */;
+import GameProfileNavTypes from "GameProfileNavTypes" /* 10242 */;
+import useGameProfileCommunitiesDefault from "useGameProfileCommunities" /* 10429 */;
+import useGameProfileCommunitiesLocaleFilterDefault from "useGameProfileCommunitiesLocaleFilter" /* 10432 */;
+import GameProfileCommunitiesLocaleFilterActionSheet from "GameProfileCommunitiesLocaleFilterActionSheet" /* 10434 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -26,8 +26,8 @@ const isStaticChannelRoute = fn(5099).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5243);
-let obj = { container: { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(10249).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%", gap: nativeDefault.space.PX_8 }, header: null, heading: null, list: null };
-let obj3 = { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(10249).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%", gap: nativeDefault.space.PX_8 };
+let obj = { container: { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(10247).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%", gap: nativeDefault.space.PX_8 }, header: null, heading: null, list: null };
+let obj3 = { marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, padding: nativeDefault.space.PX_16, maxWidth: fn(10247).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%", gap: nativeDefault.space.PX_8 };
 obj.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_8 };
 obj.heading = { flexShrink: 1 };
 let obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, minHeight: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_8 };
@@ -217,7 +217,7 @@ export default function GameProfileCommunities(game) {
   obj3.children = intl.string(game(1113).t.r6bvTh);
   const items1 = [closure_11(game(5866).Heading, obj3), ];
   if (showLocaleFilter) {
-    const obj4 = { size: "sm", variant: "secondary", icon: closure_11(tmp12(10438).LanguageIcon, { size: "sm" }), accessibilityLabel: null, onPress: null };
+    const obj4 = { size: "sm", variant: "secondary", icon: closure_11(tmp12(10436).LanguageIcon, { size: "sm" }), accessibilityLabel: null, onPress: null };
     const intl2 = tmp12(1113).intl;
     obj4.accessibilityLabel = intl2.string(tmp12(1113).t.OlOHDH);
     obj4.onPress = callback;

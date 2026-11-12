@@ -1,6 +1,6 @@
-// === Module 11937: SummaryActionCreators ===
+// === Module 11931: SummaryActionCreators ===
 
-// Module 11937 (SummaryActionCreators)
+// Module 11931 (SummaryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
@@ -8,7 +8,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
-import SummaryStore from "SummaryStore" /* 11938 */;
+import SummaryStore from "SummaryStore" /* 11932 */;
 
 require = fn;
 function fetchSummary() {

@@ -1,6 +1,6 @@
-// === Module 9082: ContextMenu ===
+// === Module 9081: ContextMenu ===
 
-// Module 9082 (ContextMenu)
+// Module 9081 (ContextMenu)
 import util from "util" /* 1113 */;
 import PlatformUtils2 from "PlatformUtils" /* 1377 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -10,9 +10,9 @@ import HapticUtils from "HapticUtils" /* 5491 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5505 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 6268 */;
-import ContextMenuState from "ContextMenuState" /* 9083 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9084 */;
-import UID from "UID" /* 9085 */;
+import ContextMenuState from "ContextMenuState" /* 9082 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9083 */;
+import UID from "UID" /* 9084 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -140,9 +140,9 @@ export function ContextMenu(triggerOnLongPress) {
   const tmpResult8 = require("useFontScale");
   const isContextMenuActive = require("ContextMenuState").useIsContextMenuActive(contextMenuState);
   const tmpResult9 = require("ContextMenuState");
-  let result = (tmp(9084).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(9084).CONTEXT_MENU_ITEM_PADDING) * fontScale;
-  const result1 = 2 * tmp(9084).CONTEXT_MENU_ITEM_PADDING;
-  const sharedValue1 = require("module_1652").useSharedValue(Math.max(result + result1, tmp(9084).CONTEXT_MENU_ITEM_BASE_HEIGHT));
+  let result = (tmp(9083).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(9083).CONTEXT_MENU_ITEM_PADDING) * fontScale;
+  const result1 = 2 * tmp(9083).CONTEXT_MENU_ITEM_PADDING;
+  const sharedValue1 = require("module_1652").useSharedValue(Math.max(result + result1, tmp(9083).CONTEXT_MENU_ITEM_BASE_HEIGHT));
   obj3.useRef(items3);
   let items4 = [items3];
   const layoutEffect = obj3.useLayoutEffect(() => {

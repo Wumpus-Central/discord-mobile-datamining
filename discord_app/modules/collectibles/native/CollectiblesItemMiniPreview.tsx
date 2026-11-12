@@ -1,14 +1,14 @@
-// === Module 9459: CollectiblesItemMiniPreview ===
+// === Module 9458: CollectiblesItemMiniPreview ===
 
-// Module 9459 (CollectiblesItemMiniPreview)
+// Module 9458 (CollectiblesItemMiniPreview)
 import nativeDefault from "native" /* 575 */;
 import utils from "utils" /* 2108 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import ProfileEffectDefault from "ProfileEffect" /* 9425 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9434 */;
-import NameplateDefault from "Nameplate" /* 9442 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9446 */;
-import _modDef9447 from "module_9447" /* 9447 */;
+import ProfileEffectDefault from "ProfileEffect" /* 9424 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9433 */;
+import NameplateDefault from "Nameplate" /* 9441 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9445 */;
+import _modDef9446 from "module_9446" /* 9446 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ const createStyles = fn(5243);
 const obj = { tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" }, framePreview: { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" }, profileEffect: null, sampleProfile: null, nameplate: null, nameplateTile: null, nameplateStrip: null };
 let size = { overflow: "hidden", width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
 obj.profileEffect = size;
-obj.sampleProfile = { aspectRatio: fn(9422).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9421).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.nameplate = { overflow: "hidden", borderTopRightRadius: nativeDefault.radii.xs, borderBottomRightRadius: nativeDefault.radii.xs };
 obj.nameplateTile = { alignItems: "flex-start" };
 obj.nameplateStrip = { width: "90%", aspectRatio: 1.6, position: "relative" };
@@ -54,14 +54,14 @@ export default noop.memo(function CollectiblesItemMiniPreview(arg0) {
     const obj7 = { style: items, children: null };
     const obj8 = { style: tmp.profileEffect, accessible: false, importantForAccessibility: "no", children: null };
     const obj9 = { source: null, style: null, resizeMode: "cover" };
-    const obj10 = { uri: _modDef9447 };
+    const obj10 = { uri: _modDef9446 };
     obj9.source = obj10;
     obj9.style = tmp.sampleProfile;
     const items1 = [React6(FastImageDefault, obj9), ];
     const obj11 = { skuId: item.skuId, bannerAdjustment: 0, useThumbnail: true };
     items1[1] = React6(ProfileEffectDefault, obj11);
     obj8.children = items1;
-    obj7.children = closure_1_10(View, obj8);
+    obj7.children = refs(View, obj8);
     return React6(View, obj7);
   } else if (isNameplateRecord(item)) {
     const obj12 = { style: null, children: null };

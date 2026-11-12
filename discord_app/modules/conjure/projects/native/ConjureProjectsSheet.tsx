@@ -1,6 +1,6 @@
-// === Module 10470: ConjureProjectsSheet ===
+// === Module 10468: ConjureProjectsSheet ===
 
-// Module 10470 (ConjureProjectsSheet)
+// Module 10468 (ConjureProjectsSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -14,12 +14,12 @@ import Search_SearchBar from "Search/SearchBar" /* 7759 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7847 */;
 import ActionSheet from "ActionSheet" /* 7885 */;
 import IconButton from "IconButton" /* 7922 */;
-import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 10447 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10469 */;
-import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin" /* 10471 */;
-import _modDef10473 from "module_10473" /* 10473 */;
-import ConjureProjectIcon from "ConjureProjectIcon" /* 10476 */;
-import ConjureProjectGroupListDefault from "ConjureProjectGroupList" /* 10483 */;
+import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 10445 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10467 */;
+import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin" /* 10469 */;
+import _modDef10471 from "module_10471" /* 10471 */;
+import ConjureProjectIcon from "ConjureProjectIcon" /* 10474 */;
+import ConjureProjectGroupListDefault from "ConjureProjectGroupList" /* 10481 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -54,7 +54,7 @@ export default function ConjureProjectsSheet() {
   obj.title = intl.string(_modDef4079.uk6jhJ);
   let tmp10Result;
   if ("you_screen" === placement) {
-    const obj2 = { icon: _modDef10473, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
+    const obj2 = { icon: _modDef10471, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
     const intl2 = util.intl;
     obj2.accessibilityLabel = intl2.string(_modDef4079.qCBh6V);
     obj2.onPress = confirmPin;

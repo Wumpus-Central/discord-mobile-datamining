@@ -7,7 +7,7 @@ import useMountEffectDefault from "useMountEffect" /* 5836 */;
 import InteractionTypes from "InteractionTypes" /* 6318 */;
 import interactions_InteractionTypes from "interactions/InteractionTypes" /* 6319 */;
 import InteractionComponentTypes from "InteractionComponentTypes" /* 6321 */;
-import InteractionUtils from "InteractionUtils" /* 11342 */;
+import InteractionUtils from "InteractionUtils" /* 11336 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import InteractionStore from "InteractionStore" /* 8592 */;
@@ -16,7 +16,7 @@ import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 6874 */;
 import UserStore from "UserStore" /* 1385 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 12283 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 12277 */;
 
 require = fn;
 function isInteractionComponent(type) {
@@ -132,7 +132,7 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const obj5 = channel(9138);
+  const obj5 = channel(9137);
   const isThreadModerator = channel(7223).useIsThreadModerator(channel);
   const tmpResult = channel(7223);
   let tmp9 = !stateFromStores;

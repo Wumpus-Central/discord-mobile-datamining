@@ -1,6 +1,6 @@
-// === Module 18591: useChannelScreensFromNavigation ===
+// === Module 18586: useChannelScreensFromNavigation ===
 
-// Module 18591 (useChannelScreensFromNavigation)
+// Module 18586 (useChannelScreensFromNavigation)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 5429 */;
 import RootNavigationRef from "RootNavigationRef" /* 5430 */;
 import useChatLayoutDefault from "useChatLayout" /* 5432 */;

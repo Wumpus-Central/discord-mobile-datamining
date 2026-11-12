@@ -1,6 +1,6 @@
-// === Module 10866: DetailedGuildIdentityUserRow ===
+// === Module 10860: DetailedGuildIdentityUserRow ===
 
-// Module 10866 (DetailedGuildIdentityUserRow)
+// Module 10860 (DetailedGuildIdentityUserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
@@ -8,7 +8,7 @@ import UserUtilsDefault from "UserUtils" /* 5309 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
 import TableRow from "TableRow" /* 7379 */;
 import Form from "Form" /* 8041 */;
-import DiscordTagDefault from "DiscordTag" /* 10867 */;
+import DiscordTagDefault from "DiscordTag" /* 10861 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -36,7 +36,7 @@ const memoResult = noop.memo(function DetailedGuildIdentityUser(height) {
     const obj3 = { style: tmp.mainIdentity, children: null };
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
-      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "Array" };
+      const obj4 = { size: native.AvatarSizes.SIZE_16, style: tmp.primaryAvatar, user, guildId: "a" };
       tmp8Result = hasOwnProperty(native.Avatar, obj4);
     }
     const items1 = [tmp8Result, ];

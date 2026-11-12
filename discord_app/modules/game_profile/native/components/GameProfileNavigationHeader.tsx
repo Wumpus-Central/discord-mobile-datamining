@@ -1,6 +1,6 @@
-// === Module 10440: GameProfileNavigationHeader ===
+// === Module 10438: GameProfileNavigationHeader ===
 
-// Module 10440 (GameProfileNavigationHeader)
+// Module 10438 (GameProfileNavigationHeader)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import timing_timing from "timing/timing" /* 5485 */;
@@ -146,12 +146,12 @@ export default function GameProfileNavigationHeader(game) {
     if (tmp19Result) {
       const obj11 = { style: tmp.rankPillContainer, children: null };
       const obj12 = { rank: game.l30Rank, compact: true };
-      const items9 = [closure_6(tmp4(10256), obj12), ];
+      const items9 = [closure_6(tmp4(10254), obj12), ];
       const obj13 = { style: null, children: null };
       const items10 = [StyleSheet.absoluteFill, animatedStyle1];
       obj13.style = items10;
       const obj14 = { rank: game.l30Rank };
-      obj13.children = closure_6(tmp4(10256), obj14);
+      obj13.children = closure_6(tmp4(10254), obj14);
       items9[1] = closure_6(tmp4(1652).View, obj13);
       obj11.children = items9;
       tmp19Result = closure_7(closure_4, obj11);

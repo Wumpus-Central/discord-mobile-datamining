@@ -1,10 +1,10 @@
-// === Module 15818: EndEventActionSheet ===
+// === Module 15813: EndEventActionSheet ===
 
-// Module 15818 (EndEventActionSheet)
+// Module 15813 (EndEventActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 7904 */;
-import CallsUtils from "CallsUtils" /* 10516 */;
+import CallsUtils from "CallsUtils" /* 10514 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,7 +61,7 @@ export default function EndEventActionSheet(channel) {
     items[3] = closure_5(View, obj8);
     obj3.children = items;
     obj2.children = closure_6(View, obj3);
-    return closure_5(activeEvent(15819), obj2);
+    return closure_5(activeEvent(15814), obj2);
   }
   let obj = channel(8360);
 };

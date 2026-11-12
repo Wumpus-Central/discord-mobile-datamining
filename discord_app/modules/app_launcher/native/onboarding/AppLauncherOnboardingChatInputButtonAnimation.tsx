@@ -1,6 +1,6 @@
-// === Module 14541: AppLauncherOnboardingChatInputButtonAnimation ===
+// === Module 14537: AppLauncherOnboardingChatInputButtonAnimation ===
 
-// Module 14541 (AppLauncherOnboardingChatInputButtonAnimation)
+// Module 14537 (AppLauncherOnboardingChatInputButtonAnimation)
 import Discord from "Discord" /* 0 */;
 import logAppStart from "logAppStart" /* 1 */;
 import initialize from "initialize" /* 504 */;
@@ -8,10 +8,10 @@ import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import LottieAnimationViewDefault from "LottieAnimationView" /* 5860 */;
 import ButtonConstants from "ButtonConstants" /* 5879 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 8994 */;
-import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 13270 */;
-import _mod13295 from "module_13295" /* 13295 */;
-import _mod14542 from "module_14542" /* 14542 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 8993 */;
+import useAppLauncherOnboardingContentDefault from "useAppLauncherOnboardingContent" /* 13264 */;
+import _mod13289 from "module_13289" /* 13289 */;
+import _mod14538 from "module_14538" /* 14538 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 
@@ -80,7 +80,7 @@ export function AppLauncherOnboardingChatInputButtonAnimation(channelId) {
   const items1 = [absoluteFill.absoluteFill, tmp.glowAnimation];
   obj4.style = items1;
   const obj5 = { collapsable: false, style: tmp.glowLottie, source: null, autoPlay: null };
-  obj5.source = _mod14542;
+  obj5.source = _mod14538;
   obj5.autoPlay = !stateFromStores;
   const items2 = [timestampProducer(LottieAnimationViewDefault, obj5), , ];
   const obj6 = { collapsable: false, style: null };
@@ -92,7 +92,7 @@ export function AppLauncherOnboardingChatInputButtonAnimation(channelId) {
   const items4 = [metroImportDefault(_modDef1652.View, obj4), ];
   const obj8 = { collapsable: false, style: tmp.trinketsLottie, source: null, autoPlay: null };
   const obj7 = { collapsable: false, style: tmp.fakeButton };
-  obj8.source = _mod13295;
+  obj8.source = _mod13289;
   obj8.autoPlay = !stateFromStores;
   items4[1] = timestampProducer(LottieAnimationViewDefault, obj8);
   obj3.children = items4;

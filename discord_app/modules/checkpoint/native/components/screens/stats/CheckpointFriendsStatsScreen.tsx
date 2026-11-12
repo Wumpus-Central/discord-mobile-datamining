@@ -1,6 +1,6 @@
-// === Module 14410: CheckpointFriendsStatsScreen ===
+// === Module 14406: CheckpointFriendsStatsScreen ===
 
-// Module 14410 (CheckpointFriendsStatsScreen)
+// Module 14406 (CheckpointFriendsStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -9,20 +9,20 @@ import _modDef3269 from "module_3269" /* 3269 */;
 import FriendsIcon from "FriendsIcon" /* 5955 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
 import ChatIcon from "ChatIcon" /* 8004 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 11600 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 12958 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 13039 */;
-import Tracking from "Tracking" /* 14148 */;
-import CheckpointTextDefault from "CheckpointText" /* 14164 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 14377 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 14387 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 14393 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 11594 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 12952 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 13033 */;
+import Tracking from "Tracking" /* 14144 */;
+import CheckpointTextDefault from "CheckpointText" /* 14161 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 14373 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 14383 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 14389 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import UserStore from "UserStore" /* 1385 */;
-import CheckpointStore from "CheckpointStore" /* 14150 */;
+import CheckpointStore from "CheckpointStore" /* 14146 */;
 
 const require = globalThis.__r;
 
@@ -290,7 +290,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp9(1113).intl;
     obj12.accessibilityLabel = intl2.string(tmp9(1113).t.Ve9Ge6);
     const obj13 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj12.children = closure_13(tmp9(11757).GiftIcon, obj13);
+    obj12.children = closure_13(tmp9(11751).GiftIcon, obj13);
     const items7 = [closure_13(sharedValue, obj12), ];
     const obj14 = {
       onPress: function handleSend() {

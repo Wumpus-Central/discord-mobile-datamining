@@ -1,16 +1,16 @@
-// === Module 14376: CheckpointIntroScreen ===
+// === Module 14372: CheckpointIntroScreen ===
 
-// Module 14376 (CheckpointIntroScreen)
+// Module 14372 (CheckpointIntroScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef3269 from "module_3269" /* 3269 */;
-import CheckpointStore2 from "CheckpointStore" /* 14150 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 14163 */;
-import CheckpointTextDefault from "CheckpointText" /* 14164 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 14377 */;
-import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 14378 */;
+import CheckpointStore2 from "CheckpointStore" /* 14146 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 14160 */;
+import CheckpointTextDefault from "CheckpointText" /* 14161 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 14373 */;
+import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 14374 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5243 */;
 import size from "module_2" /* 2 */;

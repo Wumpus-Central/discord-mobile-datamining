@@ -1,6 +1,6 @@
-// === Module 14661: NewMessageUserList ===
+// === Module 14657: NewMessageUserList ===
 
-// Module 14661 (NewMessageUserList)
+// Module 14657 (NewMessageUserList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import UserUtilsDefault from "UserUtils" /* 5309 */;
@@ -95,7 +95,7 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10177).UserRowModes;
+const UserRowModes = fn(10175).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
@@ -290,7 +290,7 @@ export default function NewMessageUserList(selectedUserIds) {
         const element = { type: "user", props: null };
         obj.mode = TOGGLE;
         const obj2 = { variant: "body-xs/medium", color: "text-muted", children: UserUtilsDefault.getUserTag(user) };
-        obj.subLabel = closure_2_10(Text_Text.Text, obj2);
+        obj.subLabel = refs(Text_Text.Text, obj2);
         obj.arrow = !RelationshipStore.isFriend(user.id);
         obj.start = tmp2;
         obj.end = tmp3;

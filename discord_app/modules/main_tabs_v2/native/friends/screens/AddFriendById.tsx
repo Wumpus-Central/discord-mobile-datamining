@@ -1,6 +1,6 @@
-// === Module 16174: AddFriendById ===
+// === Module 16169: AddFriendById ===
 
-// Module 16174 (AddFriendById)
+// Module 16169 (AddFriendById)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -101,7 +101,7 @@ function AddFriendByIdInput(arg0) {
   }
   items1[2] = tmp9Result;
   obj.children = items1;
-  return closure_1_10(hasOwnProperty, obj);
+  return refs(hasOwnProperty, obj);
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/AddFriendById.tsx");

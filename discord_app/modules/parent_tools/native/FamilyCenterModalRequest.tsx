@@ -1,6 +1,6 @@
-// === Module 14119: FamilyCenterModalRequest ===
+// === Module 14115: FamilyCenterModalRequest ===
 
-// Module 14119 (FamilyCenterModalRequest)
+// Module 14115 (FamilyCenterModalRequest)
 import _modDef38 from "module_38" /* 38 */;
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
@@ -18,12 +18,12 @@ import NavigatorHeader2 from "NavigatorHeader" /* 7427 */;
 import ModalScreen from "ModalScreen" /* 8142 */;
 import ModalContent from "ModalContent" /* 8144 */;
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8675 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9551 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 9553 */;
-import _modDef12392 from "module_12392" /* 12392 */;
-import ModalFooter from "ModalFooter" /* 13979 */;
-import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 14120 */;
-import EnvelopeSpotIllustration from "EnvelopeSpotIllustration" /* 14129 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9550 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 9552 */;
+import _modDef12386 from "module_12386" /* 12386 */;
+import ModalFooter from "ModalFooter" /* 13975 */;
+import FamilyCenterModalRequestRouting from "FamilyCenterModalRequestRouting" /* 14116 */;
+import EnvelopeSpotIllustration from "EnvelopeSpotIllustration" /* 14125 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -478,7 +478,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   }, []);
   const obj3 = { style: tmp.content, children: null };
   const obj2 = navigation(563);
-  const items2 = [closure_11(View, { style: tmp.art, children: closure_11(navigation(14133).FamilyShieldSpotIllustration, {}) }), , ];
+  const items2 = [closure_11(View, { style: tmp.art, children: closure_11(navigation(14129).FamilyShieldSpotIllustration, {}) }), , ];
   const obj5 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl = navigation(1113).intl;
   let str;
@@ -520,7 +520,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   items4[1] = closure_11(navigation(5873).Button, obj11);
   obj9.children = items4;
   obj8.children = closure_12(navigation(6888).ButtonGroup, obj9);
-  items3[1] = closure_11(navigation(13979).ModalFooter, obj8);
+  items3[1] = closure_11(navigation(13975).ModalFooter, obj8);
   obj6.children = items3;
   return closure_12(navigation(8142).ModalScreen, obj6);
 }
@@ -768,10 +768,10 @@ export default function FamilyCenterRequestModal(userId) {
     obj[FamilyCenterModalRequestRouting.FamilyCenterModalRequestSections.ERROR] = obj11;
     return obj;
   }, items);
-  let obj = { initialRouteName: userId(14120).FamilyCenterModalRequestSections.PREREQ_LOADING, screens: memo, headerBackTitle: null };
+  let obj = { initialRouteName: userId(14116).FamilyCenterModalRequestSections.PREREQ_LOADING, screens: memo, headerBackTitle: null };
   const intl = userId(1113).intl;
   obj.headerBackTitle = intl.string(userId(1113).t["13/7kX"]);
-  return closure_11(userId(12434).Modal, obj);
+  return closure_11(userId(12428).Modal, obj);
 };
 export { FamilyCenterModalRequestConfirm };
 export { FamilyCenterModalRequestSuccess };

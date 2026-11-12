@@ -1,6 +1,6 @@
-// === Module 11830: VoiceChannelStartTimeStore ===
+// === Module 11824: VoiceChannelStartTimeStore ===
 
-// Module 11830 (VoiceChannelStartTimeStore)
+// Module 11824 (VoiceChannelStartTimeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;

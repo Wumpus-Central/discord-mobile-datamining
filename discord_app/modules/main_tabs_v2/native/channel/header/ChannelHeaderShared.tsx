@@ -1,6 +1,6 @@
-// === Module 12257: ChannelHeaderShared ===
+// === Module 12251: ChannelHeaderShared ===
 
-// Module 12257 (ChannelHeaderShared)
+// Module 12251 (ChannelHeaderShared)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -12,12 +12,12 @@ import useChannelName from "useChannelName" /* 5891 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import Pressables from "Pressables" /* 7364 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7968 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9998 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 10479 */;
-import BotTagDefault from "BotTag" /* 10807 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10828 */;
-import _modDef12258 from "module_12258" /* 12258 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 12259 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9997 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 10477 */;
+import BotTagDefault from "BotTag" /* 10801 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10822 */;
+import _modDef12252 from "module_12252" /* 12252 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 12253 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
@@ -75,7 +75,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef12258, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef12252, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -97,7 +97,7 @@ function GroupDMIcon(channel) {
 function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: null, isMobileOnline: null, isVROnline: null, style: null, autoStatusCutout: null };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: "done", isMobileOnline: true, isVROnline: null, style: "primary", autoStatusCutout: null };
   let tmp3 = null;
   if (!user.isSystemUser()) {
     tmp3 = status;
@@ -142,7 +142,7 @@ function MemberCountText(arg0) {
     tmp4Result = React5(Text_Text.Text, { variant: "body-xs/normal", color: "text-subtle", children: "\u2022" });
   }
   children[1] = tmp4Result;
-  return React6(closure_1_10, { children });
+  return React6(refs, { children });
 }
 class SubtitleText {
   constructor(arg0) {

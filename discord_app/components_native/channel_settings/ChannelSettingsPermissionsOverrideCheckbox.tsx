@@ -1,6 +1,6 @@
-// === Module 19507: ChannelSettingsPermissionsOverrideCheckbox ===
+// === Module 19502: ChannelSettingsPermissionsOverrideCheckbox ===
 
-// Module 19507 (ChannelSettingsPermissionsOverrideCheckbox)
+// Module 19502 (ChannelSettingsPermissionsOverrideCheckbox)
 import nativeDefault from "native" /* 575 */;
 import PermissionUtils from "PermissionUtils" /* 5180 */;
 import noop from "module_19" /* 19 */;

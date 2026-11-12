@@ -1,6 +1,6 @@
-// === Module 17866: CustomTypingIndicatorEditScreen ===
+// === Module 17861: CustomTypingIndicatorEditScreen ===
 
-// Module 17866 (CustomTypingIndicatorEditScreen)
+// Module 17861 (CustomTypingIndicatorEditScreen)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import user from "user" /* 1398 */;
@@ -11,8 +11,8 @@ import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /*
 import dismissible_content from "dismissible_content" /* 5076 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7852 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9513 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14471 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9512 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14467 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -108,7 +108,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const callback2 = noop.useCallback(() => {
     const obj2 = { initialValue: first2, presets: null, onChange: null, highlightedPresets: null, onDismiss: null };
     const obj = ActionSheetActionCreatorsDefault;
-    const tmp3 = asyncRequireImpl(17867, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(17862, dependencyMap.paths);
     obj2.presets = CustomTypingIndicatorUtils.getCustomTypingIndicatorSuggestionPresets(enabled);
     obj2.onChange = onChange;
     let prop;
@@ -124,7 +124,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
     obj.openLazy(tmp3, "CustomTypingIndicatorTypingSuggestionPickerSheet", obj2);
   }, items5);
   const callback3 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17868, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17863, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
   }, items6);
   noop.useRef(null);
   const items7 = [analyticsLocations, enabled];

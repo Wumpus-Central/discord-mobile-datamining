@@ -1,8 +1,8 @@
-// === Module 13215: useConjureMakePersonal ===
+// === Module 13209: useConjureMakePersonal ===
 
-// Module 13215 (useConjureMakePersonal)
+// Module 13209 (useConjureMakePersonal)
 import ConjureActionCreators from "ConjureActionCreators" /* 7265 */;
-import conjureChangeRows from "conjureChangeRows" /* 13216 */;
+import conjureChangeRows from "conjureChangeRows" /* 13210 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -126,8 +126,8 @@ export default function useConjureMakePersonal(id) {
     }
   }), items2);
   if (null != target) {
-    result = tmp4(13199).conjureRemoveAppKeptChannels(target);
-    const tmp4Result = tmp4(13199);
+    result = tmp4(13193).conjureRemoveAppKeptChannels(target);
+    const tmp4Result = tmp4(13193);
   }
   obj3.keptChannels = result;
   obj3.error = tmp2[0];

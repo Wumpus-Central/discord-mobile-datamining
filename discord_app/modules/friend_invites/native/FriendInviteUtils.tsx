@@ -1,6 +1,6 @@
-// === Module 20009: FriendInviteUtils ===
+// === Module 20004: FriendInviteUtils ===
 
-// Module 20009 (FriendInviteUtils)
+// Module 20004 (FriendInviteUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;

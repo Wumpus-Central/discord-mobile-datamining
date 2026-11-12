@@ -1,6 +1,6 @@
-// === Module 9169: GuildBoostingUtils ===
+// === Module 9168: GuildBoostingUtils ===
 
-// Module 9169 (GuildBoostingUtils)
+// Module 9168 (GuildBoostingUtils)
 import util from "util" /* 1113 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
@@ -9,13 +9,13 @@ import PremiumUtilsAll from "PremiumUtils" /* 2171 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import _modDef3465 from "module_3465" /* 3465 */;
 import FileSizeUtils from "FileSizeUtils" /* 6699 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 9171 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 9172 */;
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 9175 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 9170 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 9171 */;
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 9174 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 9170 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 9169 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
 import apply from "apply" /* 12 */;
 
@@ -758,7 +758,7 @@ export function getNextPremiumTierForSubscriberCount(arg0) {
 }
 export const TierMarkerPositions = obj3;
 export function getGuildBoostingProgressBarFillFactor(c0) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(9179).getGuildPowerupBoostLevelProgress(_require.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(9178).getGuildPowerupBoostLevelProgress(_require.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

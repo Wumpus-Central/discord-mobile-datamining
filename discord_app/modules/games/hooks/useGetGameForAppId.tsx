@@ -1,9 +1,9 @@
-// === Module 10585: useGetGameForAppId ===
+// === Module 10583: useGetGameForAppId ===
 
-// Module 10585 (useGetGameForAppId)
+// Module 10583 (useGetGameForAppId)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7196 */;
-import useGame from "useGame" /* 9467 */;
+import useGame from "useGame" /* 9466 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2138 */;
 

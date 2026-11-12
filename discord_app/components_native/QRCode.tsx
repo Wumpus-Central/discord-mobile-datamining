@@ -1,12 +1,12 @@
-// === Module 15782: components_native/QRCode ===
+// === Module 15777: components_native/QRCode ===
 
-// Module 15782 (components_native/QRCode)
+// Module 15777 (components_native/QRCode)
 import nativeDefault from "native" /* 575 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5843 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8544 */;
-import QRCodeDefault from "QRCode" /* 15783 */;
-import _mod15797 from "module_15797" /* 15797 */;
+import QRCodeDefault from "QRCode" /* 15778 */;
+import _mod15792 from "module_15792" /* 15792 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -67,7 +67,7 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   const obj3 = { style: null, children: null };
   const items1 = [tmp.qrCodeOverlay, timestampProducer.absoluteFill];
   obj3.style = items1;
-  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod15797 };
+  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod15792 };
   obj3.children = metroImportDefault(FastImageDefault, obj4);
   items[1] = metroImportDefault(hasOwnProperty, obj3);
   let tmp6Result = null;

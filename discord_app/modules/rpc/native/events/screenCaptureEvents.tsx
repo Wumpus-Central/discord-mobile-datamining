@@ -1,8 +1,8 @@
-// === Module 16884: screenCaptureEvents ===
+// === Module 16879: screenCaptureEvents ===
 
-// Module 16884 (screenCaptureEvents)
+// Module 16879 (screenCaptureEvents)
 import Constants2 from "Constants" /* 1072 */;
-import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 16796 */;
+import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 16791 */;
 import Constants from "Constants" /* 6698 */;
 import size from "module_2" /* 2 */;
 

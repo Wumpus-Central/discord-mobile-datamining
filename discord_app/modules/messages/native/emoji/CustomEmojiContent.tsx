@@ -1,6 +1,6 @@
-// === Module 11246: CustomEmojiContent ===
+// === Module 11240: CustomEmojiContent ===
 
-// Module 11246 (CustomEmojiContent)
+// Module 11240 (CustomEmojiContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -10,11 +10,11 @@ import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 5197 *
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
 import openUserSettings from "openUserSettings" /* 8537 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9513 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 10113 */;
-import StarIcon from "StarIcon" /* 10115 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 11244 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 11249 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9512 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 10112 */;
+import StarIcon from "StarIcon" /* 10114 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 11238 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 11243 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5198 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
@@ -277,7 +277,7 @@ export default function CustomEmojiContent(emojiNode) {
       if (sourceType !== isFavoriteEmoji.PACK) {
         const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
         function handleOpenEmojiOptionsMenu() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11248, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11242, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
         }
         const intl5 = tmp2(nonce[28]).intl;
         obj22.accessibilityLabel = intl5.string(tmp2(nonce[28]).t.PdRCRg);

@@ -1,9 +1,9 @@
-// === Module 12238: notficationSettingsChannelFlagUtils ===
+// === Module 12232: notficationSettingsChannelFlagUtils ===
 
-// Module 12238 (notficationSettingsChannelFlagUtils)
+// Module 12232 (notficationSettingsChannelFlagUtils)
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7812 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7817 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 11017 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 11011 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 
 require = fn;

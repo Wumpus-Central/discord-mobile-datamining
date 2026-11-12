@@ -1,9 +1,9 @@
-// === Module 13068: conjureVoiceChannelPin ===
+// === Module 13062: conjureVoiceChannelPin ===
 
-// Module 13068 (conjureVoiceChannelPin)
+// Module 13062 (conjureVoiceChannelPin)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 7271 */;
-import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 10856 */;
+import ChannelSettingsActionCreators from "ChannelSettingsActionCreators" /* 10850 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import PermissionStore from "PermissionStore" /* 5175 */;

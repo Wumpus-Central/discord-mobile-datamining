@@ -1,14 +1,14 @@
-// === Module 14710: ApplicationCommandBar ===
+// === Module 14706: ApplicationCommandBar ===
 
-// Module 14710 (ApplicationCommandBar)
+// Module 14706 (ApplicationCommandBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import usePreviousDefault from "usePrevious" /* 6773 */;
 import Pressables from "Pressables" /* 7364 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14532 */;
-import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 14711 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 14528 */;
+import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 14707 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
@@ -204,7 +204,7 @@ function ApplicationCommandOptionDescription(option) {
   }
   items2[1] = tmp15Result;
   obj2.children = items2;
-  obj.children = closure_1_10(hasOwnProperty, obj2);
+  obj.children = refs(hasOwnProperty, obj2);
   return React5(Pressables.PressableOpacity, obj);
 }
 size = fn(2);

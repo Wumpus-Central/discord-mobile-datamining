@@ -1,8 +1,8 @@
-// === Module 10049: useShowBadgePersonalizationNotice ===
+// === Module 10048: useShowBadgePersonalizationNotice ===
 
-// Module 10049 (useShowBadgePersonalizationNotice)
+// Module 10048 (useShowBadgePersonalizationNotice)
 import initialize from "initialize" /* 504 */;
-import BadgeUtils from "BadgeUtils" /* 10046 */;
+import BadgeUtils from "BadgeUtils" /* 10045 */;
 import ConsentStore from "ConsentStore" /* 6783 */;
 
 require = fn;

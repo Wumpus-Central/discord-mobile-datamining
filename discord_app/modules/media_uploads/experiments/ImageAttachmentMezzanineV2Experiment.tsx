@@ -1,6 +1,6 @@
-// === Module 8839: ImageAttachmentMezzanineV2Experiment ===
+// === Module 8838: ImageAttachmentMezzanineV2Experiment ===
 
-// Module 8839 (ImageAttachmentMezzanineV2Experiment)
+// Module 8838 (ImageAttachmentMezzanineV2Experiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 20668: ForwardGuildBreadcrumbManager ===
+// === Module 20663: ForwardGuildBreadcrumbManager ===
 
-// Module 20668 (ForwardGuildBreadcrumbManager)
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 20154 */;
-import BasicGuildActionCreators from "BasicGuildActionCreators" /* 20669 */;
-import BasicGuildStore from "BasicGuildStore" /* 9117 */;
+// Module 20663 (ForwardGuildBreadcrumbManager)
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 20149 */;
+import BasicGuildActionCreators from "BasicGuildActionCreators" /* 20664 */;
+import BasicGuildStore from "BasicGuildStore" /* 9116 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
@@ -24,8 +24,8 @@ function fetchForwardReferencedGuilds(message_reference) {
       tmp2 = null == BasicGuildStore.getGuildOrStatus(guild_id);
     }
     if (tmp2) {
-      const result = guild_id(20143).queueMessageLinkFetch(() => BasicGuildActionCreators.fetchBasicGuild(guild_id));
-      const obj = guild_id(20143);
+      const result = guild_id(20138).queueMessageLinkFetch(() => BasicGuildActionCreators.fetchBasicGuild(guild_id));
+      const obj = guild_id(20138);
     }
   }
 }

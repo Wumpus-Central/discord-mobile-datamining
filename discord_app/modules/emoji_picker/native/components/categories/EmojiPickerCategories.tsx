@@ -1,14 +1,14 @@
-// === Module 11254: EmojiPickerCategories ===
+// === Module 11248: EmojiPickerCategories ===
 
-// Module 11254 (EmojiPickerCategories)
+// Module 11248 (EmojiPickerCategories)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HapticUtils from "HapticUtils" /* 5491 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5492 */;
 import FastestListDefault from "FastestList" /* 7764 */;
-import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 11255 */;
-import useExpressionPickerCategoriesPlaceholderConfigDefault from "useExpressionPickerCategoriesPlaceholderConfig" /* 11269 */;
-import ExpressionPickerCategoriesDefault from "ExpressionPickerCategories" /* 11270 */;
+import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 11249 */;
+import useExpressionPickerCategoriesPlaceholderConfigDefault from "useExpressionPickerCategoriesPlaceholderConfig" /* 11263 */;
+import ExpressionPickerCategoriesDefault from "ExpressionPickerCategories" /* 11264 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -317,7 +317,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   let tmp37Result = null;
   if (null != firstUnicodeCategory) {
     const obj7 = { blockRef: sharedValue, category: firstUnicodeCategory, categoryIndex: firstUnicodeCategoryIndex, onPress: callback4, style: tmp.item };
-    tmp37Result = tmp37(tmp34(11271), obj7);
+    tmp37Result = tmp37(tmp34(11265), obj7);
   }
   items18[1] = tmp37Result;
   let tmp37Result2 = null;
@@ -325,7 +325,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     const obj8 = { style: null, iconStyle: null, onBackspace: null };
     ({ item: obj10.style, keyboardItem: obj10.iconStyle } = tmp);
     obj8.onBackspace = onBackspace;
-    tmp37Result2 = tmp37(tmp34(11273), obj8);
+    tmp37Result2 = tmp37(tmp34(11267), obj8);
   }
   items18[2] = tmp37Result2;
   obj4.children = callback(ref, { children: items18 });

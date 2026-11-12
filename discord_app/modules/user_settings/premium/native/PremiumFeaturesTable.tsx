@@ -1,6 +1,6 @@
-// === Module 15238: PremiumFeaturesTable ===
+// === Module 15235: PremiumFeaturesTable ===
 
-// Module 15238 (PremiumFeaturesTable)
+// Module 15235 (PremiumFeaturesTable)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -8,8 +8,8 @@ import shared from "shared" /* 5250 */;
 import useThemeDefault from "useTheme" /* 5484 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import _modDef15239 from "module_15239" /* 15239 */;
-import _modDef15240 from "module_15240" /* 15240 */;
+import _modDef15236 from "module_15236" /* 15236 */;
+import _modDef15237 from "module_15237" /* 15237 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,11 +19,11 @@ function CheckIcon() {
   const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   const isThemeDarkResult = shared.isThemeDark(tmp3);
   const tmp6 = shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
-  return closure_1_11(native.Icon, { source: _modDef15239, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef15236, color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: native.IconSizes.SMALL });
 }
 function CloseIcon() {
   const tmp = closure_16();
-  return closure_1_11(native.Icon, { source: _modDef15240, style: closure_16().icon, size: native.IconSizes.SMALL });
+  return closure_1_11(native.Icon, { source: _modDef15237, style: closure_16().icon, size: native.IconSizes.SMALL });
 }
 function CellText(arg0) {
   ({ text, style } = arg0);

@@ -1,6 +1,6 @@
-// === Module 14017: ConnectionsRoleMessageBadgeActionSheet ===
+// === Module 14013: ConnectionsRoleMessageBadgeActionSheet ===
 
-// Module 14017 (ConnectionsRoleMessageBadgeActionSheet)
+// Module 14013 (ConnectionsRoleMessageBadgeActionSheet)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -17,9 +17,9 @@ import PlatformsDefault from "Platforms" /* 7024 */;
 import ConnectionsUtils from "ConnectionsUtils" /* 7401 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7672 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import BotTagDefault from "BotTag" /* 10807 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 12394 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 12398 */;
+import BotTagDefault from "BotTag" /* 10801 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 12388 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 12392 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1404 */;
@@ -27,7 +27,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import GuildRoleStore from "GuildRoleStore" /* 5149 */;
 import GuildStore from "GuildStore" /* 5114 */;
-import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 14018 */;
+import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 14014 */;
 
 require = fn;
 function PopoutCheck(arg0) {
@@ -137,7 +137,7 @@ class PopoutChecks {
               const items1 = [null, , , ];
               let tmp26 = null;
               if (null != tmp7) {
-                const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+                const obj6 = { style: closure_1.popoutCheckGroupPlatformIcon, user: tmp7, size: native.AvatarSizes.XSMALL, guildId: "a" };
                 tmp26 = closure_2_16(native.Avatar, obj6);
               }
               items1[1] = tmp26;

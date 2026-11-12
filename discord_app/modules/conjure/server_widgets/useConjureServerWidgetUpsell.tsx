@@ -1,8 +1,8 @@
-// === Module 15691: useConjureServerWidgetUpsell ===
+// === Module 15688: useConjureServerWidgetUpsell ===
 
-// Module 15691 (useConjureServerWidgetUpsell)
+// Module 15688 (useConjureServerWidgetUpsell)
 import Storage3 from "Storage" /* 510 */;
-import useConjureServerWidgetOffersDefault from "useConjureServerWidgetOffers" /* 15692 */;
+import useConjureServerWidgetOffersDefault from "useConjureServerWidgetOffers" /* 15689 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -69,7 +69,7 @@ export function useConjureServerWidgetUpsellDetails(userId, widget, guildId) {
   }, items2);
   const obj3 = require("initialize");
   const messageAuthorUser = require("conjureMessageAuthors").useMessageAuthorUser(stateFromStores1);
-  const tmp5 = applicationId(12175)(userId, applicationId);
+  const tmp5 = applicationId(12169)(userId, applicationId);
   dependencyMap = tmp5;
   [][0] = tmp5;
   let tmp7 = null;

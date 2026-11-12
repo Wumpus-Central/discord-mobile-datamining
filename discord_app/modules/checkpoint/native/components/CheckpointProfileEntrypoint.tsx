@@ -1,13 +1,13 @@
-// === Module 19467: CheckpointProfileEntrypoint ===
+// === Module 19462: CheckpointProfileEntrypoint ===
 
-// Module 19467 (CheckpointProfileEntrypoint)
+// Module 19462 (CheckpointProfileEntrypoint)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import _modDef3269 from "module_3269" /* 3269 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import openCheckpoint from "openCheckpoint" /* 14152 */;
-import CheckpointStore from "CheckpointStore" /* 14150 */;
+import openCheckpoint from "openCheckpoint" /* 14148 */;
+import CheckpointStore from "CheckpointStore" /* 14146 */;
 import size from "module_2" /* 2 */;
 
 function handlePress() {
@@ -26,15 +26,15 @@ function CheckpointProfileEntrypointRow() {
   if (stateFromStores) {
     let tmp5Result = <ActivityIndicator />;
   } else {
-    const obj4 = { IconComponent: tmp(15079).ExperimentalCheckpointIcon };
-    tmp5Result = jsx(tmp(7379).TableRow.Icon, { IconComponent: tmp(15079).ExperimentalCheckpointIcon });
+    const obj4 = { IconComponent: tmp(15076).ExperimentalCheckpointIcon };
+    tmp5Result = jsx(tmp(7379).TableRow.Icon, { IconComponent: tmp(15076).ExperimentalCheckpointIcon });
   }
   obj3.icon = tmp5Result;
   obj3.onPress = handlePress;
   let fn;
   if ("off" !== checkpointQAMode) {
     fn = () => {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19468, dependencyMap.paths), "CheckpointTestingActionSheet", { mode: checkpointQAMode });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19463, dependencyMap.paths), "CheckpointTestingActionSheet", { mode: checkpointQAMode });
     };
   }
   obj3.onLongPress = fn;

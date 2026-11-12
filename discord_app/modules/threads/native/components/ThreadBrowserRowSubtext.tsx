@@ -1,6 +1,6 @@
-// === Module 19366: ThreadBrowserRowSubtext ===
+// === Module 19361: ThreadBrowserRowSubtext ===
 
-// Module 19366 (ThreadBrowserRowSubtext)
+// Module 19361 (ThreadBrowserRowSubtext)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
@@ -10,12 +10,12 @@ import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 6287 *
 import useMessageAuthorDefault from "useMessageAuthor" /* 6686 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
 import renderMessageMarkupDefault from "renderMessageMarkup" /* 8579 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9123 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 9122 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import UserStore from "UserStore" /* 1385 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 8805 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 8804 */;
 
 require = fn;
 function MessageContent(arg0) {
@@ -26,8 +26,8 @@ function MessageContent(arg0) {
   let roleStyle;
   const tmp = closure_13();
   items = [message.author.id];
-  const subscribeGuildMembers = message(14047).useSubscribeGuildMembers({ [thread.guild_id]: items }, "ThreadBrowserRowSubtext");
-  let obj = message(14047);
+  const subscribeGuildMembers = message(14043).useSubscribeGuildMembers({ [thread.guild_id]: items }, "ThreadBrowserRowSubtext");
+  let obj = message(14043);
   const items1 = [UserStore];
   const stateFromStores = message(504).useStateFromStores(items1, () => {
     let author = UserStore.getUser(message.author.id);
@@ -43,9 +43,9 @@ function MessageContent(arg0) {
   ({ nick: c2, colorString: c3, colorStrings: c4 } = useMessageAuthorDefault(message));
   let tmp4 = useMessageAuthorDefault(message);
   const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
-  const timestampString = message(8942).getTimestampString(extractTimestampResult);
-  const obj5 = message(8942);
-  const timestampAccessibilityLabel = message(8942).getTimestampAccessibilityLabel(extractTimestampResult);
+  const timestampString = message(8941).getTimestampString(extractTimestampResult);
+  const obj5 = message(8941);
+  const timestampAccessibilityLabel = message(8941).getTimestampAccessibilityLabel(extractTimestampResult);
   roleStyle = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
   const obj7 = { user: stateFromStores, timestamp: timestampString, accessibilityLabel: timestampAccessibilityLabel, children: null };
   const obj8 = { lineClamp: 1, ellipsizeMode: "tail", lineBreakMode: "tail", style: tmp.subtextContent, variant: "body-sm/medium", color: "text-default", children: null };
@@ -97,7 +97,7 @@ function SubstringRow(arg0) {
     obj5.children = "" + timestamp;
     items[2] = React6(Text_Text.Text, obj5);
     obj3.children = items;
-    tmp6 = closure_1_10(View, obj3);
+    tmp6 = refs(View, obj3);
   }
   return tmp6;
 }
@@ -136,7 +136,7 @@ function Username(usernameColor) {
   const obj3 = { children: null };
   items1[1] = React6(Text_Text.Text, { variant: "body-sm/semibold", color: "mobile-text-heading-primary", gradientColors: tmp10, style: memo, children: nickname });
   obj3.children = items1;
-  return closure_1_10(closure_1_11, obj3);
+  return refs(closure_1_11, obj3);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -240,7 +240,7 @@ export function ThreadSubtext(thread) {
   const items1 = [id];
   const stateFromStores = id(504).useStateFromStores(items, () => ThreadMessageStore.getMostRecentMessage(id), items1);
   const obj = id(504);
-  const lastMessageTimestamp = id(8942).useLastMessageTimestamp(thread);
+  const lastMessageTimestamp = id(8941).useLastMessageTimestamp(thread);
   if (null != stateFromStores) {
     if (!items.includes(stateFromStores.type)) {
       if (!thread.isArchivedThread()) {
@@ -249,9 +249,9 @@ export function ThreadSubtext(thread) {
       }
     }
   }
-  const obj2 = id(8942);
-  const timestampString = id(8942).getTimestampString(lastMessageTimestamp);
-  const tmpResult = id(8942);
-  const tmpResult2 = id(8942);
-  return closure_9(closure_14, { thread, timestamp: timestampString, accessibilityLabel: id(8942).getTimestampAccessibilityLabel(lastMessageTimestamp) });
+  const obj2 = id(8941);
+  const timestampString = id(8941).getTimestampString(lastMessageTimestamp);
+  const tmpResult = id(8941);
+  const tmpResult2 = id(8941);
+  return closure_9(closure_14, { thread, timestamp: timestampString, accessibilityLabel: id(8941).getTimestampAccessibilityLabel(lastMessageTimestamp) });
 }

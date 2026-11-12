@@ -1,13 +1,13 @@
-// === Module 20019: AgeVerificationManager ===
+// === Module 20014: AgeVerificationManager ===
 
-// Module 20019 (AgeVerificationManager)
+// Module 20014 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1094 */;
 import ChannelMessagesDefault from "ChannelMessages" /* 6732 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 6767 */;
 import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8337 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
-import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 14117 */;
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 14113 */;
 import ChannelSectionStore from "ChannelSectionStore" /* 6973 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import MessageStore from "MessageStore" /* 6309 */;
@@ -107,8 +107,8 @@ const prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              closure_1_0(11836).preloadForumThreads(channel);
-              const obj = closure_1_0(11836);
+              closure_1_0(11830).preloadForumThreads(channel);
+              const obj = closure_1_0(11830);
             }
           })(tmp17);
           const currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(tmp17);

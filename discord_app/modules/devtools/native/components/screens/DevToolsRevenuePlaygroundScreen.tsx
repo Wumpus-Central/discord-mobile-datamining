@@ -1,6 +1,6 @@
-// === Module 18210: DevToolsRevenuePlaygroundScreen ===
+// === Module 18205: DevToolsRevenuePlaygroundScreen ===
 
-// Module 18210 (DevToolsRevenuePlaygroundScreen)
+// Module 18205 (DevToolsRevenuePlaygroundScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
@@ -11,12 +11,12 @@ import TableRowArrow from "TableRowArrow" /* 7388 */;
 import TableRowGroup from "TableRowGroup" /* 7680 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7883 */;
 import TableSwitchRow from "TableSwitchRow" /* 7888 */;
-import IAPUtils from "IAPUtils" /* 9697 */;
-import BundleUpdaterDefault from "BundleUpdater" /* 13960 */;
+import IAPUtils from "IAPUtils" /* 9696 */;
+import BundleUpdaterDefault from "BundleUpdater" /* 13956 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 9263 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 9262 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8487 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -651,7 +651,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(9244).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(9243).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -665,7 +665,7 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18211, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18206, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   };
@@ -684,7 +684,7 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18211, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18206, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   });

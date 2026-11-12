@@ -1,6 +1,6 @@
-// === Module 10210: ChannelTabPinScope ===
+// === Module 10208: ChannelTabPinScope ===
 
-// Module 10210 (ChannelTabPinScope)
+// Module 10208 (ChannelTabPinScope)
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

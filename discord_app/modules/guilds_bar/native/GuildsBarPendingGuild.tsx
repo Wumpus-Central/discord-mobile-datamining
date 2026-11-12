@@ -1,9 +1,9 @@
-// === Module 18970: GuildsBarPendingGuild ===
+// === Module 18965: GuildsBarPendingGuild ===
 
-// Module 18970 (GuildsBarPendingGuild)
+// Module 18965 (GuildsBarPendingGuild)
 import nativeDefault from "native" /* 575 */;
 import GuildIcon from "GuildIcon" /* 7654 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 18915 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 18910 */;
 import noop from "module_19" /* 19 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5287 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;

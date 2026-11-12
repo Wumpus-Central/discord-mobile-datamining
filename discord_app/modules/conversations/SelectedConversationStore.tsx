@@ -1,6 +1,6 @@
-// === Module 9056: SelectedConversationStore ===
+// === Module 9055: SelectedConversationStore ===
 
-// Module 9056 (SelectedConversationStore)
+// Module 9055 (SelectedConversationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ChannelConversationsStore from "ChannelConversationsStore" /* 8678 */;

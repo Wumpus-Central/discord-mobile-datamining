@@ -1,6 +1,6 @@
-// === Module 20638: InviteSettingsModal ===
+// === Module 20633: InviteSettingsModal ===
 
-// Module 20638 (InviteSettingsModal)
+// Module 20633 (InviteSettingsModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
@@ -8,7 +8,7 @@ import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
 import Navigator from "Navigator" /* 7424 */;
 import NavigatorHeader from "NavigatorHeader" /* 7427 */;
 import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 8405 */;
-import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 20639 */;
+import CreateInstantInviteUtils from "CreateInstantInviteUtils" /* 20634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -130,7 +130,7 @@ function AdvancedInstantInviteScreen() {
   obj5.onChangeTemporary = callback3;
   obj5.onChangeFlags = callback4;
   obj5.onChangeRoleIds = callback5;
-  obj4.children = jsx(channel(20640), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
+  obj4.children = jsx(channel(20635), { style: tmp.formContent, channel: first, guild, maxAge: settings.maxAge, maxUses: settings.maxUses, maxUsesOptions: null, temporary: null, flags: null, roleIds: null, onChangeMaxAge: null, onChangeMaxUses: null, onChangeTemporary: null, onChangeFlags: null, onChangeRoleIds: null });
   return jsx(navigation(8041).Form, { contentContainerStyle: tmp.formContainer, children: null });
 }
 const Constants = fn(1072);

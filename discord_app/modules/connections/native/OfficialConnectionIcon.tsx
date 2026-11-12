@@ -1,13 +1,13 @@
-// === Module 12394: OfficialConnectionIcon ===
+// === Module 12388: OfficialConnectionIcon ===
 
-// Module 12394 (OfficialConnectionIcon)
+// Module 12388 (OfficialConnectionIcon)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import native from "native" /* 1187 */;
 import useRoleIconProps from "useRoleIconProps" /* 7875 */;
 import RoleIconDefault from "RoleIcon" /* 7893 */;
-import _modDef12395 from "module_12395" /* 12395 */;
-import _modDef12396 from "module_12396" /* 12396 */;
+import _modDef12389 from "module_12389" /* 12389 */;
+import _modDef12390 from "module_12390" /* 12390 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -70,11 +70,11 @@ export default function OfficialConnectionIcon(arg0) {
   const obj5 = { style: null, children: null };
   const items1 = [style, size1];
   obj5.style = items1;
-  const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef12395, color: roleColor };
+  const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef12389, color: roleColor };
   const items2 = [tmp.verifiedCheck, size1];
   obj6.style = items2;
   const items3 = [timestampProducer(native.Icon, obj6), ];
-  const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef12396, color: PRIMARY_630 };
+  const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef12390, color: PRIMARY_630 };
   const items4 = [tmp.verifiedCheck, size1];
   obj7.style = items4;
   items3[1] = timestampProducer(native.Icon, obj7);

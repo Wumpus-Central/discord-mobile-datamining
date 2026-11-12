@@ -1,9 +1,9 @@
-// === Module 18262: DevToolsPerformanceTestingScreen ===
+// === Module 18257: DevToolsPerformanceTestingScreen ===
 
-// Module 18262 (DevToolsPerformanceTestingScreen)
+// Module 18257 (DevToolsPerformanceTestingScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 16939 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 16934 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

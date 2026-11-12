@@ -1,6 +1,6 @@
-// === Module 13899: ConjureNumberBadge ===
+// === Module 13895: ConjureNumberBadge ===
 
-// Module 13899 (ConjureNumberBadge)
+// Module 13895 (ConjureNumberBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;

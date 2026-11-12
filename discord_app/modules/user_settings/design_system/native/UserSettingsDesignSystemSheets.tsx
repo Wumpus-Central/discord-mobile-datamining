@@ -1,6 +1,6 @@
-// === Module 18341: UserSettingsDesignSystemSheets ===
+// === Module 18336: UserSettingsDesignSystemSheets ===
 
-// Module 18341 (UserSettingsDesignSystemSheets)
+// Module 18336 (UserSettingsDesignSystemSheets)
 import util from "util" /* 1113 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import Text_Text from "Text/Text" /* 5866 */;
@@ -11,8 +11,8 @@ import TextInput from "TextInput" /* 7553 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7847 */;
 import ActionSheet from "ActionSheet" /* 7885 */;
 import ActionSheetRow from "ActionSheetRow" /* 7887 */;
-import PromoSheet from "PromoSheet" /* 10651 */;
-import _modDef18342 from "module_18342" /* 18342 */;
+import PromoSheet from "PromoSheet" /* 10644 */;
+import _modDef18337 from "module_18337" /* 18337 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -99,7 +99,7 @@ function DemoPromoSheet() {
   const obj2 = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
   const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
   const tmp = metroImportDefault(components_Button_Button.Button, obj);
-  obj3.src = { uri: _modDef18342 };
+  obj3.src = { uri: _modDef18337 };
   obj2.graphic = obj3;
   obj2.actions = tmp;
   return metroImportDefault(PromoSheet.PromoSheet, obj2);

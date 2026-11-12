@@ -1,7 +1,7 @@
-// === Module 10566: useSecureFramesPairwiseFingerprint ===
+// === Module 10564: useSecureFramesPairwiseFingerprint ===
 
-// Module 10566 (useSecureFramesPairwiseFingerprint)
-import SecureFramesBoundPairwiseFingerprint from "SecureFramesBoundPairwiseFingerprint" /* 10567 */;
+// Module 10564 (useSecureFramesPairwiseFingerprint)
+import SecureFramesBoundPairwiseFingerprint from "SecureFramesBoundPairwiseFingerprint" /* 10565 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

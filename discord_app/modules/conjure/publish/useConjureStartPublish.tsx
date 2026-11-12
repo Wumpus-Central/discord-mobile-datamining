@@ -1,6 +1,6 @@
-// === Module 13079: publish/useConjureStartPublish ===
+// === Module 13073: publish/useConjureStartPublish ===
 
-// Module 13079 (publish/useConjureStartPublish)
+// Module 13073 (publish/useConjureStartPublish)
 import ConjurePublishTypes from "ConjurePublishTypes" /* 7320 */;
 import noop from "module_19" /* 19 */;
 

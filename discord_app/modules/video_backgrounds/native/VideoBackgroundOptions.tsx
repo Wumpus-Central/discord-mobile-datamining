@@ -1,6 +1,6 @@
-// === Module 12950: VideoBackgroundOptions ===
+// === Module 12944: VideoBackgroundOptions ===
 
-// Module 12950 (VideoBackgroundOptions)
+// Module 12944 (VideoBackgroundOptions)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 6180 */;

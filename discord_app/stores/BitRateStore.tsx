@@ -1,6 +1,6 @@
-// === Module 16386: BitRateStore ===
+// === Module 16381: BitRateStore ===
 
-// Module 16386 (BitRateStore)
+// Module 16381 (BitRateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 6012 */;

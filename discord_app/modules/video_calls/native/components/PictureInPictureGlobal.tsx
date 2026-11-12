@@ -1,6 +1,6 @@
-// === Module 19594: PictureInPictureGlobal ===
+// === Module 19589: PictureInPictureGlobal ===
 
-// Module 19594 (PictureInPictureGlobal)
+// Module 19589 (PictureInPictureGlobal)
 import nativeDefault from "native" /* 575 */;
 import native2 from "native" /* 1187 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -10,9 +10,9 @@ import NavigatorConstants from "NavigatorConstants" /* 5829 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6837 */;
 import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6962 */;
 import isChannelFocused from "isChannelFocused" /* 6985 */;
-import transitionToActivityDefault from "transitionToActivity" /* 12622 */;
-import PictureInPictureDefault from "PictureInPicture" /* 12631 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 19595 */;
+import transitionToActivityDefault from "transitionToActivity" /* 12616 */;
+import PictureInPictureDefault from "PictureInPicture" /* 12625 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 19590 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
@@ -25,7 +25,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, TouchableOpacity: metroImportDefault } = get_ActivityIndicator);
-let closure_10 = fn(11805).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(11799).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1072).PictureInPicturePositions;
 const ParticipantTypes = fn(5920).ParticipantTypes;
 const jsxProd = fn(21);

@@ -1,6 +1,6 @@
-// === Module 17319: ChangeSpendingLimitModal ===
+// === Module 17314: ChangeSpendingLimitModal ===
 
-// Module 17319 (ChangeSpendingLimitModal)
+// Module 17314 (ChangeSpendingLimitModal)
 import nativeDefault from "native" /* 575 */;
 import _modDef2685 from "module_2685" /* 2685 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
@@ -135,7 +135,7 @@ function ChangeSpendingLimitScreen(teenId) {
       items4[1] = closure_7(tmp2(5873).Button, obj15);
       obj14.children = items4;
       obj13.children = closure_8(tmp2(6888).ButtonGroup, obj14);
-      items3[1] = closure_7(tmp2(13979).ModalFooter, obj13);
+      items3[1] = closure_7(tmp2(13975).ModalFooter, obj13);
       obj12.children = items3;
       return closure_8(tmp2(8142).ModalScreen, obj12);
     } else if (isOverspending) {
@@ -170,7 +170,7 @@ function ChangeSpendingLimitScreen(teenId) {
     obj26.text = intl.string(tmp2(1113).t["ETE/oC"]);
     obj26.onPress = ModalActionCreatorsDefault.pop;
     obj25.children = closure_7(tmp2(5873).Button, obj26);
-    items6[1] = closure_7(tmp2(13979).ModalFooter, obj25);
+    items6[1] = closure_7(tmp2(13975).ModalFooter, obj25);
     obj22.children = items6;
     return closure_8(tmp2(8142).ModalScreen, obj22);
   }
@@ -223,5 +223,5 @@ export default function ChangeSpendingLimitModal(teenId) {
   let obj = { initialRouteName: "CHANGE_SPENDING_LIMIT", screens: memo, headerBackTitle: null };
   let intl = teenId(1113).intl;
   obj.headerBackTitle = intl.string(teenId(1113).t["13/7kX"]);
-  return closure_7(teenId(12434).Modal, obj);
+  return closure_7(teenId(12428).Modal, obj);
 };

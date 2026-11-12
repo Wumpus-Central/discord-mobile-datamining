@@ -1,8 +1,8 @@
-// === Module 15765: usePrivateChannelCall ===
+// === Module 15760: usePrivateChannelCall ===
 
-// Module 15765 (usePrivateChannelCall)
+// Module 15760 (usePrivateChannelCall)
 import util from "util" /* 1113 */;
-import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10515 */;
+import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10513 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -104,8 +104,8 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
           isPrivateResult = channel.isPrivate();
         }
         if (isPrivateResult) {
-          tmp3(10515)(channel, closure_129_1).onPress();
-          const obj3 = tmp3(10515)(channel, closure_129_1);
+          tmp3(10513)(channel, closure_129_1).onPress();
+          const obj3 = tmp3(10513)(channel, closure_129_1);
         }
         if (closure_129_2 != null) {
           closure_129_2();

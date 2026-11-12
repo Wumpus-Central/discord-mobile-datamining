@@ -1,10 +1,10 @@
-// === Module 12369: useRelativeTimestampUpdates ===
+// === Module 12363: useRelativeTimestampUpdates ===
 
-// Module 12369 (useRelativeTimestampUpdates)
+// Module 12363 (useRelativeTimestampUpdates)
 import DurationsDefault from "Durations" /* 1089 */;
 import MarkupTypes from "MarkupTypes" /* 6279 */;
-import TimestampUtils from "TimestampUtils" /* 9308 */;
-import useFormattedTimestamp from "useFormattedTimestamp" /* 11000 */;
+import TimestampUtils from "TimestampUtils" /* 9307 */;
+import useFormattedTimestamp from "useFormattedTimestamp" /* 10994 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,7 +61,7 @@ function getRowId(type) {
   }
   return context;
 }
-const RowGeneratorConstants = fn(9094);
+const RowGeneratorConstants = fn(9093);
 ({ Changeset: closure_4, RowType: hasOwnProperty } = RowGeneratorConstants);
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();

@@ -1,13 +1,13 @@
-// === Module 10208: ChannelTabsStore ===
+// === Module 10206: ChannelTabsStore ===
 
-// Module 10208 (ChannelTabsStore)
+// Module 10206 (ChannelTabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import FavoritesUtils from "FavoritesUtils" /* 5117 */;
-import TabsExperimentDefault from "TabsExperiment" /* 10209 */;
-import ChannelTabPinScope from "ChannelTabPinScope" /* 10210 */;
-import ChannelTabRoutes from "ChannelTabRoutes" /* 10211 */;
+import TabsExperimentDefault from "TabsExperiment" /* 10207 */;
+import ChannelTabPinScope from "ChannelTabPinScope" /* 10208 */;
+import ChannelTabRoutes from "ChannelTabRoutes" /* 10209 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 import DefaultRouteStore from "DefaultRouteStore" /* 5290 */;
@@ -130,7 +130,7 @@ function landNavigationAroundPinnedTab(items2) {
         } else {
           const entries = id.entries;
           items = [];
-          items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = f98888;
+          items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = f98899;
           const obj = { id: null, pinned: null, pinScope: null };
           ({ id: obj.id, pinned: obj.pinned, pinScope } = id);
           const diff = items.length - 1;
@@ -138,7 +138,7 @@ function landNavigationAroundPinnedTab(items2) {
             pinScope = null;
           }
           obj.pinScope = pinScope;
-          const merged = Object.assign(f98888);
+          const merged = Object.assign(f98899);
           obj.entries = items;
           obj.index = diff;
           return obj;
@@ -714,7 +714,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
               } else {
                 const entries = id.entries;
                 items = [];
-                items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = f98888;
+                items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = f98899;
                 const obj = { id: null, pinned: null, pinScope: null };
                 ({ id: obj.id, pinned: obj.pinned, pinScope } = id);
                 const diff = items.length - 1;
@@ -722,14 +722,14 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                   pinScope = null;
                 }
                 obj.pinScope = pinScope;
-                const merged = Object.assign(f98888);
+                const merged = Object.assign(f98899);
                 obj.entries = items;
                 obj.index = diff;
                 return obj;
               }
             });
           }
-          obj4 = obj3(10210);
+          obj4 = obj3(10208);
         }
         return tmp7;
       }
@@ -780,7 +780,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                   } else {
                     const entries = id.entries;
                     items = [];
-                    items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = f98888;
+                    items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = f98899;
                     const obj = { id: null, pinned: null, pinScope: null };
                     ({ id: obj.id, pinned: obj.pinned, pinScope } = id);
                     const diff = items.length - 1;
@@ -788,14 +788,14 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                       pinScope = null;
                     }
                     obj.pinScope = pinScope;
-                    const merged = Object.assign(f98888);
+                    const merged = Object.assign(f98899);
                     obj.entries = items;
                     obj.index = diff;
                     return obj;
                   }
                 });
               }
-              obj4 = obj3(10210);
+              obj4 = obj3(10208);
             }
             return tmp7;
           }
@@ -809,7 +809,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
   CHANNEL_DELETE: handleChannelDelete,
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
-    let f98887 = guild;
+    let f98898 = guild;
     if (enabled) {
       enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
@@ -822,7 +822,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
     }
     let tmp6 = !tmp5;
     if (!tmp5) {
-      f98887 = (arg0) => arg0 !== f98887.id;
+      f98898 = (arg0) => arg0 !== f98898.id;
       const found = tabs.filter((pinScope) => {
         pinScope = pinScope.pinScope;
         let kind;
@@ -831,7 +831,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         }
         let tmp2 = "guild" === kind;
         if (tmp2) {
-          tmp2 = !f98888(pinScope.pinScope.guildId);
+          tmp2 = !f98899(pinScope.pinScope.guildId);
         }
         return tmp2;
       });
@@ -867,15 +867,15 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
     return tmp6;
   },
   CONNECTION_OPEN: function handleConnectionOpen(unavailableGuilds) {
-    let f98888 = unavailableGuilds.unavailableGuilds;
+    let f98899 = unavailableGuilds.unavailableGuilds;
     c17 = true;
     if (enabled) {
-      enabled = found1(10209).getConfig({ location: "ChannelTabsStore" }).enabled;
-      let obj = found1(10209);
+      enabled = found1(10207).getConfig({ location: "ChannelTabsStore" }).enabled;
+      let obj = found1(10207);
     }
     if (enabled) {
-      enabled = f98888(1357).isDesktop();
-      const obj2 = f98888(1357);
+      enabled = f98899(1357).isDesktop();
+      const obj2 = f98899(1357);
     }
     if (enabled) {
       let tmp6 = !tmp;
@@ -902,20 +902,20 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         const substr = found.slice(-diff);
         const set = new Set(substr.map((id) => id.id));
         closure_129_0 = set;
-        items2 = items2.filter((id) => !f98888.has(id.id));
+        items2 = items2.filter((id) => !f98899.has(id.id));
         closure_13 = closure_13.filter((item) => {
           closure_0 = item;
           return items2.some((id) => id.id === closure_0);
         });
         flag2 = true;
       }
-      f98888 = (dependencyMap) => {
+      f98899 = (dependencyMap) => {
         let isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(dependencyMap);
         if (!isFavoritesGuildIdResult) {
           isFavoritesGuildIdResult = null != GuildStore.getGuild(dependencyMap);
         }
         if (!isFavoritesGuildIdResult) {
-          isFavoritesGuildIdResult = f98888.includes(dependencyMap);
+          isFavoritesGuildIdResult = f98899.includes(dependencyMap);
         }
         return isFavoritesGuildIdResult;
       };
@@ -927,7 +927,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         }
         let tmp2 = "guild" === kind;
         if (tmp2) {
-          tmp2 = !f98888(pinScope.pinScope.guildId);
+          tmp2 = !f98899(pinScope.pinScope.guildId);
         }
         return tmp2;
       });
@@ -968,11 +968,11 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         return tmp6;
       } else {
         const obj4 = { pathname: DefaultRouteStore.defaultRoute };
-        const routeTabForLocation = f98888(10211).getRouteTabForLocation(obj4);
-        const obj5 = f98888(10211);
-        const tmp23 = f98888;
+        const routeTabForLocation = f98899(10209).getRouteTabForLocation(obj4);
+        const obj5 = f98899(10209);
+        const tmp23 = f98899;
         const _window = window;
-        const routeTabForLocation1 = f98888(10211).getRouteTabForLocation(window.location);
+        const routeTabForLocation1 = f98899(10209).getRouteTabForLocation(window.location);
         if (tmp10 != routeTabForLocation1) {
           const obj6 = { kind: "route" };
           let merged = Object.assign(routeTabForLocation1);
@@ -1005,14 +1005,14 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         let flag4 = false;
         if (tmp10 != items2) {
           const atResult = items2.at(-1);
-          f98888 = atResult;
+          f98899 = atResult;
           if (tmp10 != atResult) {
             if (!atResult.pinned) {
               activateTab(atResult.id);
               if (atResult.pinned) {
                 const mapped1 = items2.map((id) => {
                   let tmp = id;
-                  if (id.id === f98888.id) {
+                  if (id.id === f98899.id) {
                     const obj = {};
                     const merged = Object.assign(id);
                     obj.pinned = false;
@@ -1038,7 +1038,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                   } else {
                     const entries = id.entries;
                     items = [];
-                    items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = f98888;
+                    items[HermesBuiltin.arraySpread(entries.slice(0, id.index + 1), 0)] = f98899;
                     const obj = { id: null, pinned: null, pinScope: null };
                     ({ id: obj.id, pinned: obj.pinned, pinScope } = id);
                     const diff = items.length - 1;
@@ -1046,7 +1046,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                       pinScope = null;
                     }
                     obj.pinScope = pinScope;
-                    const merged = Object.assign(f98888);
+                    const merged = Object.assign(f98899);
                     obj.entries = items;
                     obj.index = diff;
                     return obj;
@@ -1054,7 +1054,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                 });
                 flag4 = true;
               }
-              tmp23Result = tmp23(10210);
+              tmp23Result = tmp23(10208);
             } else {
               const currentUser1 = UserStore.getCurrentUser();
               let isStaffResult1;
@@ -1069,7 +1069,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         items2[HermesBuiltin.arraySpread(items2, 0)] = tmp56;
         tmp10 = activateTab(tmp56.id);
         flag4 = true;
-        const obj7 = f98888(10211);
+        const obj7 = f98899(10209);
       }
     } else {
       return false;

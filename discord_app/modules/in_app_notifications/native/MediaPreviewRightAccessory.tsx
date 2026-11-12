@@ -1,6 +1,6 @@
-// === Module 11028: MediaPreviewRightAccessory ===
+// === Module 11022: MediaPreviewRightAccessory ===
 
-// Module 11028 (MediaPreviewRightAccessory)
+// Module 11022 (MediaPreviewRightAccessory)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
@@ -15,13 +15,13 @@ import ImageWarningIcon from "ImageWarningIcon" /* 8014 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8566 */;
 import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8567 */;
 import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8573 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8787 */;
-import ClipView from "ClipView" /* 9437 */;
-import common_VideoDefault from "common/Video" /* 9664 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 10162 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 11007 */;
-import useContentHarmTypes from "useContentHarmTypes" /* 11029 */;
-import StickerDefault from "Sticker" /* 11030 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8786 */;
+import ClipView from "ClipView" /* 9436 */;
+import common_VideoDefault from "common/Video" /* 9663 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 10160 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 11001 */;
+import useContentHarmTypes from "useContentHarmTypes" /* 11023 */;
+import StickerDefault from "Sticker" /* 11024 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 
@@ -73,7 +73,7 @@ function ObscuredMediaOverlay(isSpoiler) {
   obj4.children = tmp14Result;
   items[3] = React5(View, obj4);
   obj6.children = items;
-  return closure_1_10(React6, obj6);
+  return refs(React6, obj6);
 }
 function SinglePreviewableMedia(arg0) {
   ({ previewableMedia, size, message } = arg0);
@@ -196,7 +196,7 @@ function SinglePreviewableMedia(arg0) {
                 }
                 items4[1] = tmp24Result;
                 obj16.children = items4;
-                obj15.children = closure_1_10(ObscuredMediaOverlay, obj16);
+                obj15.children = refs(ObscuredMediaOverlay, obj16);
                 return React5(View, obj15);
               }
             }
@@ -231,7 +231,7 @@ function MultiplePreviewableMedia(arg0) {
   obj2.children = React5(SinglePreviewableMedia, { previewableMedia, size: 56, message });
   const items1 = [React5(ClipViewDefault, obj2), React5(CountBadge, { total: totalMediaCount })];
   obj.children = items1;
-  return closure_1_10(View, obj);
+  return refs(View, obj);
 }
 function MediaPreviewRightAccessoryContent(arg0) {
   ({ totalMediaCount, message } = arg0);
@@ -281,7 +281,7 @@ createStyles = fn(5243);
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
 createStyles = fn(5243);
 let obj11 = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
-let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(10963).RIGHT_ACCESSORY_LEFT_MARGIN } });
+let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(10957).RIGHT_ACCESSORY_LEFT_MARGIN } });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 

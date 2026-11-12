@@ -1,6 +1,6 @@
-// === Module 12030: WidgetStore ===
+// === Module 12024: WidgetStore ===
 
-// Module 12030 (WidgetStore)
+// Module 12024 (WidgetStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

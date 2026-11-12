@@ -1,6 +1,6 @@
-// === Module 10045: BadgeDetailsSheet ===
+// === Module 10044: BadgeDetailsSheet ===
 
-// Module 10045 (BadgeDetailsSheet)
+// Module 10044 (BadgeDetailsSheet)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5485 */;
@@ -8,9 +8,9 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489
 import Text_Text from "Text/Text" /* 5866 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5974 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8486 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10044 */;
-import BadgeUtils from "BadgeUtils" /* 10046 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 15161 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10043 */;
+import BadgeUtils from "BadgeUtils" /* 10045 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 15158 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

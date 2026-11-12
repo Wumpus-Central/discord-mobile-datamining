@@ -1,11 +1,11 @@
-// === Module 17930: UserSettingsLocale ===
+// === Module 17925: UserSettingsLocale ===
 
-// Module 17930 (UserSettingsLocale)
+// Module 17925 (UserSettingsLocale)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import TableRadioRow from "TableRadioRow" /* 7681 */;
-import flags from "flags" /* 17931 */;
+import flags from "flags" /* 17926 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2186 */;

@@ -1,16 +1,16 @@
-// === Module 10451: ConjureYouScreenButton ===
+// === Module 10449: ConjureYouScreenButton ===
 
-// Module 10451 (ConjureYouScreenButton)
+// Module 10449 (ConjureYouScreenButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Link from "Link" /* 1500 */;
 import _modDef4079 from "module_4079" /* 4079 */;
-import useConjureWandStatusDefault from "useConjureWandStatus" /* 10452 */;
-import YouScreenNavIconDefault from "YouScreenNavIcon" /* 10458 */;
-import getIconSize from "getIconSize" /* 10459 */;
-import MagicWandIcon from "MagicWandIcon" /* 10461 */;
-import ConjureWorkingWandDefault from "ConjureWorkingWand" /* 10463 */;
-import openConjureProjectsSheetDefault from "openConjureProjectsSheet" /* 10465 */;
+import useConjureWandStatusDefault from "useConjureWandStatus" /* 10450 */;
+import YouScreenNavIconDefault from "YouScreenNavIcon" /* 10456 */;
+import getIconSize from "getIconSize" /* 10457 */;
+import MagicWandIcon from "MagicWandIcon" /* 10459 */;
+import ConjureWorkingWandDefault from "ConjureWorkingWand" /* 10461 */;
+import openConjureProjectsSheetDefault from "openConjureProjectsSheet" /* 10463 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

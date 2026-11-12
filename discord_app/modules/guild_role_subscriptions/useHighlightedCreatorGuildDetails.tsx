@@ -1,8 +1,8 @@
-// === Module 20554: useHighlightedCreatorGuildDetails ===
+// === Module 20549: useHighlightedCreatorGuildDetails ===
 
-// Module 20554 (useHighlightedCreatorGuildDetails)
+// Module 20549 (useHighlightedCreatorGuildDetails)
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 20555 */;
+import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 20550 */;
 import noop from "module_19" /* 19 */;
 
 const MarketingURLs = fn(1072).MarketingURLs;

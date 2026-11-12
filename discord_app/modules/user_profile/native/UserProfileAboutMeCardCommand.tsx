@@ -1,14 +1,14 @@
-// === Module 15371: UserProfileAboutMeCardCommand ===
+// === Module 15368: UserProfileAboutMeCardCommand ===
 
-// Module 15371 (UserProfileAboutMeCardCommand)
+// Module 15368 (UserProfileAboutMeCardCommand)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5922 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8657 */;
-import MarkupReactCommandRule from "MarkupReactCommandRule" /* 12485 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 12491 */;
+import MarkupReactCommandRule from "MarkupReactCommandRule" /* 12479 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 12485 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,13 +1,13 @@
-// === Module 14706: ApplicationCommandLoadingItem ===
+// === Module 14702: ApplicationCommandLoadingItem ===
 
-// Module 14706 (ApplicationCommandLoadingItem)
+// Module 14702 (ApplicationCommandLoadingItem)
 import nativeDefault from "native" /* 575 */;
 import useFontScale from "useFontScale" /* 5881 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(11173).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(11167).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = 16;

@@ -1,6 +1,6 @@
-// === Module 14688: Autocomplete ===
+// === Module 14684: Autocomplete ===
 
-// Module 14688 (Autocomplete)
+// Module 14684 (Autocomplete)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -15,13 +15,13 @@ import TableRowTrailingText from "TableRowTrailingText" /* 7390 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7968 */;
 import Form from "Form" /* 8041 */;
 import UnknownGameIcon from "UnknownGameIcon" /* 8309 */;
-import TimestampUtils from "TimestampUtils" /* 9308 */;
-import StickerDefault from "Sticker" /* 11030 */;
-import StickersHooks from "StickersHooks" /* 11296 */;
-import _modDef11564 from "module_11564" /* 11564 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 14689 */;
-import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 14690 */;
-import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 14691 */;
+import TimestampUtils from "TimestampUtils" /* 9307 */;
+import StickerDefault from "Sticker" /* 11024 */;
+import StickersHooks from "StickersHooks" /* 11290 */;
+import _modDef11558 from "module_11558" /* 11558 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 14685 */;
+import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 14686 */;
+import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 14687 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
@@ -38,8 +38,8 @@ const Constants = fn(1072);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5243);
-let obj2 = { row: { height: fn(11173).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, gameIconBackground: null, labelRow: null };
-let obj3 = { height: fn(11173).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj2 = { row: { height: fn(11167).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, gameIconBackground: null, labelRow: null };
+let obj3 = { height: fn(11167).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.leading = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 let obj4 = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 obj2.trailing = { fontSize: 14, color: nativeDefault.colors.TEXT_MUTED };
@@ -94,7 +94,7 @@ export default {
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
     obj5.usernameStyle = items1;
-    obj2.trailing = closure_9(guildId(10867), obj5);
+    obj2.trailing = closure_9(guildId(10861), obj5);
     return closure_9(user(8041).FormRow, obj2);
   },
   Global(arg0) {
@@ -106,7 +106,7 @@ export default {
       const obj3 = { text };
       items = [React6(AutocompleteLabel, obj3), badge];
       obj2.children = items;
-      let tmp2Result = closure_1_10(View, obj2);
+      let tmp2Result = refs(View, obj2);
     } else {
       const obj4 = { text };
       tmp2Result = React6(AutocompleteLabel, obj4);
@@ -140,7 +140,7 @@ export default {
     ({ channel, category } = onPress);
     const tmp = closure_11();
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef11564;
+      let channelIconWithGuild = _modDef11558;
     } else {
       channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
     }

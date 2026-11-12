@@ -1,6 +1,6 @@
-// === Module 20290: GuildSettingsModalOverview ===
+// === Module 20285: GuildSettingsModalOverview ===
 
-// Module 20290 (GuildSettingsModalOverview)
+// Module 20285 (GuildSettingsModalOverview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
@@ -23,9 +23,9 @@ import TextArea from "TextArea" /* 7793 */;
 import TableSwitchRow from "TableSwitchRow" /* 7888 */;
 import Form from "Form" /* 8041 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8338 */;
-import openChannelPickerDefault from "openChannelPicker" /* 11903 */;
-import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11940 */;
-import AssetChooserDefault from "AssetChooser" /* 20295 */;
+import openChannelPickerDefault from "openChannelPicker" /* 11897 */;
+import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11934 */;
+import AssetChooserDefault from "AssetChooser" /* 20290 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5473 */;
@@ -138,8 +138,8 @@ class GuildSettingsModalOverview extends PureComponent {
         }
         GuildSettingsActionCreatorsDefault.updateGuild({ systemChannelId: id });
         if (null != systemChannel !== null != id) {
-          const result = applyArgumentsResult(20291).trackServerHubToggleSetting(guild.id, applyArgumentsResult(20291).ServerHubSettingType.ALL_SYSTEM_MESSAGES, tmp);
-          const obj2 = applyArgumentsResult(20291);
+          const result = applyArgumentsResult(20286).trackServerHubToggleSetting(guild.id, applyArgumentsResult(20286).ServerHubSettingType.ALL_SYSTEM_MESSAGES, tmp);
+          const obj2 = applyArgumentsResult(20286);
         }
       };
       if (systemChannel == null) {
@@ -360,7 +360,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     const intl = util.intl;
     channelName = intl.string(util.t.ibUhoa);
   }
-  const result = tmp(9155).isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild);
+  const result = tmp(9154).isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild);
   let hasFlagResult = result;
   if (!result) {
     hasFlagResult = tmp(1403).hasFlag(guild.systemChannelFlags, constants6.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS);
@@ -371,13 +371,13 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     hasFlagResult1 = tmp(1403).hasFlag(guild.systemChannelFlags, constants6.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
     const tmpResult14 = tmp(1403);
   }
-  const tmpResult = tmp(9155);
-  let result1 = tmp(20047).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
+  const tmpResult = tmp(9154);
+  let result1 = tmp(20042).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
   if (!result1) {
     result1 = tmp(1403).hasFlag(guild.systemChannelFlags, constants6.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     const tmpResult16 = tmp(1403);
   }
-  const tmpResult15 = tmp(20047);
+  const tmpResult15 = tmp(20042);
   let guildSpaceExperimentEnabled = tmp(7180).getGuildSpaceExperimentEnabled(guild.id, "GuildSettingsModalOverview");
   const obj2 = { title: null, description: null, hasIcons: false, children: null };
   const intl2 = tmp(1113).intl;

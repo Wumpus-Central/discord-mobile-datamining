@@ -1,6 +1,6 @@
-// === Module 12765: EmbeddedAppConstants ===
+// === Module 12759: EmbeddedAppConstants ===
 
-// Module 12765 (EmbeddedAppConstants)
+// Module 12759 (EmbeddedAppConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/EmbeddedAppConstants.tsx");

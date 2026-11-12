@@ -1,6 +1,6 @@
-// === Module 8943: ThreadNotificationSettingsToast ===
+// === Module 8942: ThreadNotificationSettingsToast ===
 
-// Module 8943 (ThreadNotificationSettingsToast)
+// Module 8942 (ThreadNotificationSettingsToast)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
 import size from "module_2" /* 2 */;
 

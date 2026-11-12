@@ -1,6 +1,6 @@
-// === Module 15741: UserProfileWishlistGrid ===
+// === Module 15736: UserProfileWishlistGrid ===
 
-// Module 15741 (UserProfileWishlistGrid)
+// Module 15736 (UserProfileWishlistGrid)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -14,8 +14,8 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8419 */;
-import SentGiftsStore from "SentGiftsStore" /* 11763 */;
-import WishlistStore from "WishlistStore" /* 9397 */;
+import SentGiftsStore from "SentGiftsStore" /* 11757 */;
+import WishlistStore from "WishlistStore" /* 9396 */;
 import UserStore from "UserStore" /* 1385 */;
 import SKUStore from "SKUStore" /* 7007 */;
 import UserProfileStore from "UserProfileStore" /* 7288 */;
@@ -49,8 +49,8 @@ class WishlistEmptyState {
   }
 }
 const View = fn(17).View;
-let closure_10 = fn(9400).isCollectiblesWishlistItemRecord;
-const getWishlistProductLines = fn(9398).getWishlistProductLines;
+let closure_10 = fn(9399).isCollectiblesWishlistItemRecord;
+const getWishlistProductLines = fn(9397).getWishlistProductLines;
 let Constants = fn(8413);
 ({ TrackUserProfileWishlistActions: closure_15, UserProfileSections: closure_16 } = Constants);
 Constants = fn(1072);
@@ -558,7 +558,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     }
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15746, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15741, dependencyMap.paths), "EditWishlistActionSheet", { wishlistId, analyticsContext: context, analyticsLocations }, "stack");
     const obj3 = { wishlistId, analyticsContext: context, analyticsLocations };
   }, items14);
   const callback1 = obj12.useCallback(() => {

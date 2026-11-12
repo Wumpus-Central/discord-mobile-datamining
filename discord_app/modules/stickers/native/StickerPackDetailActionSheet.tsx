@@ -1,13 +1,13 @@
-// === Module 11305: StickerPackDetailActionSheet ===
+// === Module 11299: StickerPackDetailActionSheet ===
 
-// Module 11305 (StickerPackDetailActionSheet)
+// Module 11299 (StickerPackDetailActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 11311 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 11305 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const StickerPickerConstants = fn(11183);
+const StickerPickerConstants = fn(11177);
 ({ MIN_MARGIN: hasOwnProperty, STICKER_SIZE: closure_6 } = StickerPickerConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const ACTION_SHEET_MAX_WIDTH = fn(5504).ACTION_SHEET_MAX_WIDTH;

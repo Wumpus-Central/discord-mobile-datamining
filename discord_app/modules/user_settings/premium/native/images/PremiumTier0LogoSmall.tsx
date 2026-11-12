@@ -1,6 +1,6 @@
-// === Module 15241: PremiumTier0LogoSmall ===
+// === Module 15238: PremiumTier0LogoSmall ===
 
-// Module 15241 (PremiumTier0LogoSmall)
+// Module 15238 (PremiumTier0LogoSmall)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5839 */;
 import inlineStyles from "inlineStyles" /* 8197 */;

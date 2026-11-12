@@ -1,6 +1,6 @@
-// === Module 10917: conjureRemixConnection ===
+// === Module 10911: conjureRemixConnection ===
 
-// Module 10917 (conjureRemixConnection)
+// Module 10911 (conjureRemixConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import conjureProjectSockets from "conjureProjectSockets" /* 7271 */;
 import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7272 */;

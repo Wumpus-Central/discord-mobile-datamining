@@ -1,6 +1,6 @@
-// === Module 14292: ? ===
+// === Module 14288: ? ===
 
-// Module 14292
+// Module 14288
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_06_cowpoke_onyx.webp.js");

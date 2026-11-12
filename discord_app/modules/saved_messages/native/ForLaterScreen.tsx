@@ -1,17 +1,17 @@
-// === Module 11848: ForLaterScreen ===
+// === Module 11842: ForLaterScreen ===
 
-// Module 11848 (ForLaterScreen)
+// Module 11842 (ForLaterScreen)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import spring_spring from "spring/spring" /* 5876 */;
 import springPresets from "springPresets" /* 5877 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 6275 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 11850 */;
-import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 11854 */;
+import useSavedMessagesForPageDefault from "useSavedMessagesForPage" /* 11844 */;
+import ForLaterMessageCardDefault from "ForLaterMessageCard" /* 11848 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11849 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11843 */;
 
 const require = globalThis.__r;
 
@@ -29,10 +29,10 @@ function ForLaterPage(type) {
   items = [SavedMessagesStore];
   const stateFromStoresObject = throttledNow(504).useStateFromStoresObject(items, () => ({ overdueReminderCount: SavedMessagesStore.getOverdueMessageReminderCount(), bookmarkCount: SavedMessagesStore.getBookmarkCount() }));
   ({ overdueReminderCount, bookmarkCount } = stateFromStoresObject);
-  if (type !== throttledNow(11845).SavedMessageSortTypes.BOOKMARK) {
+  if (type !== throttledNow(11839).SavedMessageSortTypes.BOOKMARK) {
     bookmarkCount = savedMessages.length;
   }
-  const tmp6 = fetchState === throttledNow(11845).BookmarksFetchState.LOADING;
+  const tmp6 = fetchState === throttledNow(11839).BookmarksFetchState.LOADING;
   const obj = throttledNow(504);
   const analyticsLocations = useAnalyticsLocationsDefault(tmp(7871).FOR_LATER_POPOUT).analyticsLocations;
   const obj2 = { type: null, name: null, properties: null };
@@ -53,10 +53,10 @@ function ForLaterPage(type) {
   [][0] = throttledNow;
   if (0 === savedMessages.length) {
     if (!tmp6) {
-      if (fetchState !== tmp4(11845).BookmarksFetchState.LOADED_HAS_MORE) {
+      if (fetchState !== tmp4(11839).BookmarksFetchState.LOADED_HAS_MORE) {
         const obj3 = { value: analyticsLocations, children: null };
         const obj4 = { type };
-        obj3.children = closure_8(tmp(11874), obj4);
+        obj3.children = closure_8(tmp(11868), obj4);
         let tmp18 = closure_8(tmp4(7852).AnalyticsLocationProvider, obj3);
       }
     }

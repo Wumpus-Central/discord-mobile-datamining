@@ -1,12 +1,12 @@
-// === Module 14623: InviteSuggestionsStore ===
+// === Module 14619: InviteSuggestionsStore ===
 
-// Module 14623 (InviteSuggestionsStore)
+// Module 14619 (InviteSuggestionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 7011 */;
 import InviteTargetTypes from "InviteTargetTypes" /* 7599 */;
 import InstantInviteUtils from "InstantInviteUtils" /* 8397 */;
-import QuickSwitcherStore from "QuickSwitcherStore" /* 10179 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 10177 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 8487 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6881 */;

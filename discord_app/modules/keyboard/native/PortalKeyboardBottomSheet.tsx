@@ -1,6 +1,6 @@
-// === Module 13311: PortalKeyboardBottomSheet ===
+// === Module 13305: PortalKeyboardBottomSheet ===
 
-// Module 13311 (PortalKeyboardBottomSheet)
+// Module 13305 (PortalKeyboardBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -12,11 +12,11 @@ import BottomSheetModal from "BottomSheetModal" /* 5507 */;
 import useMountEffectDefault from "useMountEffect" /* 5836 */;
 import isChannelFocused from "isChannelFocused" /* 6985 */;
 import native from "native" /* 7932 */;
-import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 13312 */;
-import useAndroidOrientationSheetResyncDefault from "useAndroidOrientationSheetResync" /* 13313 */;
+import useCustomKeyboardBottomSheetConfigDefault from "useCustomKeyboardBottomSheetConfig" /* 13306 */;
+import useAndroidOrientationSheetResyncDefault from "useAndroidOrientationSheetResync" /* 13307 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10978 */;
+import NativeMenuStore from "NativeMenuStore" /* 10972 */;
 
 const require = globalThis.__r;
 const BottomSheetModalDefault = BottomSheetModal;
@@ -408,7 +408,7 @@ export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
   }
   if (tmp51Result) {
     const obj9 = { animatedSheetIndex: animatedIndex };
-    tmp51Result = tmp51(tmp3(11185), obj9);
+    tmp51Result = tmp51(tmp3(11179), obj9);
   }
   items19[1] = tmp51Result;
   items19[2] = closure_7(require("NavScrim").NavScrim, {});

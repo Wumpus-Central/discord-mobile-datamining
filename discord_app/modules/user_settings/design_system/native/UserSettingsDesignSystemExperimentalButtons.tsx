@@ -1,6 +1,6 @@
-// === Module 18302: UserSettingsDesignSystemExperimentalButtons ===
+// === Module 18297: UserSettingsDesignSystemExperimentalButtons ===
 
-// Module 18302 (UserSettingsDesignSystemExperimentalButtons)
+// Module 18297 (UserSettingsDesignSystemExperimentalButtons)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 5314 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
@@ -14,7 +14,7 @@ import TableRowGroup from "TableRowGroup" /* 7680 */;
 import _modDef7761 from "module_7761" /* 7761 */;
 import native2 from "native" /* 7932 */;
 import RowButton from "RowButton" /* 8043 */;
-import _modDef10503 from "module_10503" /* 10503 */;
+import _modDef10501 from "module_10501" /* 10501 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -154,7 +154,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   const obj23 = { title: "Experimental Blur Background Row Button", description: "Row Button Row Buttons are full-width, high-emphasis buttons that are used as primary CTAs in a page.", hasIcons: false, children: timestampProducer(React3, {}) };
   const tmp3 = LinearGradientDefault;
   obj25.children = timestampProducer(RowButton.RowButton, {
-    icon: _modDef10503,
+    icon: _modDef10501,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
@@ -165,7 +165,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   obj24.children = timestampProducer(tmp3, obj25);
   items[5] = timestampProducer(native.ThemeContextProvider, obj24);
   const obj26 = {
-    icon: _modDef10503,
+    icon: _modDef10501,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
@@ -179,7 +179,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   const items3 = [timestampProducer(React4, obj5), ];
   const obj27 = { title: "Collapsible Floating Action Button", description: "A variation of the FloatingActionButton which will display some text until the user scrolls. We currently recommend the use of the FloatingActionButton over the CollapsibleFloatingActionButton, as a singular icon button without animation is more compact, understandable, and predictable.", hasIcons: false, children: timestampProducer(React3, { style: { padding: 48 } }) };
   items3[1] = timestampProducer(native2.CollapsibleFloatingActionButton, {
-    icon: _modDef10503,
+    icon: _modDef10501,
     onPress() {
 
     },

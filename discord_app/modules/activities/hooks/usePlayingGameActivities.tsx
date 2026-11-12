@@ -1,7 +1,7 @@
-// === Module 10583: usePlayingGameActivities ===
+// === Module 10581: usePlayingGameActivities ===
 
-// Module 10583 (usePlayingGameActivities)
-import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 10584 */;
+// Module 10581 (usePlayingGameActivities)
+import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 10582 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import PresenceStore from "PresenceStore" /* 6005 */;

@@ -1,6 +1,6 @@
-// === Module 15474: GameOrganizationInviteEmbed ===
+// === Module 15471: GameOrganizationInviteEmbed ===
 
-// Module 15474 (GameOrganizationInviteEmbed)
+// Module 15471 (GameOrganizationInviteEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2549 from "module_2549" /* 2549 */;
@@ -8,19 +8,19 @@ import ColorUtils from "ColorUtils" /* 5240 */;
 import _modDef7373 from "module_7373" /* 7373 */;
 import _modDef7790 from "module_7790" /* 7790 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8588 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 9097 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9104 */;
-import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 12449 */;
-import canGoToGameOrganizationGuildDefault from "canGoToGameOrganizationGuild" /* 13962 */;
-import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 13972 */;
-import getGameOrganizationInviteCtaStateDefault from "getGameOrganizationInviteCtaState" /* 15475 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 12279 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 9096 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9103 */;
+import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 12443 */;
+import canGoToGameOrganizationGuildDefault from "canGoToGameOrganizationGuild" /* 13958 */;
+import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 13968 */;
+import getGameOrganizationInviteCtaStateDefault from "getGameOrganizationInviteCtaState" /* 15472 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 12273 */;
 import GuildStore from "GuildStore" /* 5114 */;
 
 require = fn;
-const CodedLinkExtendedType = fn(11831).CodedLinkExtendedType;
-const constants = fn(12280).GameOrganizationInviteStates;
-const InviteTypes = fn(8776).InviteTypes;
+const CodedLinkExtendedType = fn(11825).CodedLinkExtendedType;
+const constants = fn(12274).GameOrganizationInviteStates;
+const InviteTypes = fn(8775).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx");
 

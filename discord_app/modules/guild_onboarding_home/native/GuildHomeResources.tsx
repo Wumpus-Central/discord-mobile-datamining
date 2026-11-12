@@ -1,13 +1,13 @@
-// === Module 19217: GuildHomeResources ===
+// === Module 19212: GuildHomeResources ===
 
-// Module 19217 (GuildHomeResources)
+// Module 19212 (GuildHomeResources)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 14573 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 19211 */;
-import _modDef19219 from "module_19219" /* 19219 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 14569 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 19206 */;
+import _modDef19214 from "module_19214" /* 19214 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildChannelStore from "GuildChannelStore" /* 5173 */;
@@ -30,10 +30,10 @@ function ResourceChannelRow(channelId) {
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => MessageStore.getMessages(channelId));
   const firstResult = stateFromStores2.first();
   const obj3 = channelId(504);
-  const forumPostMediaProperties = channelId(9045).useForumPostMediaProperties(firstResult, false);
-  const obj5 = channelId(9045);
+  const forumPostMediaProperties = channelId(9044).useForumPostMediaProperties(firstResult, false);
+  const obj5 = channelId(9044);
   length = undefined;
-  const firstMediaIsEmbed = channelId(9045).useFirstMediaIsEmbed(firstResult, false);
+  const firstMediaIsEmbed = channelId(9044).useFirstMediaIsEmbed(firstResult, false);
   if (forumPostMediaProperties != null) {
     length = forumPostMediaProperties.length;
   }
@@ -41,9 +41,9 @@ function ResourceChannelRow(channelId) {
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  const obj6 = channelId(9045);
-  let flag = channelId(14510).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(19218)(firstResult);
+  const obj6 = channelId(9044);
+  let flag = channelId(14506).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
+  const tmp11 = stateFromStores(19213)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -115,15 +115,15 @@ function ResourceChannelRow(channelId) {
               if (flag == null) {
                 flag = false;
               }
-              obj17.embedLeftBorderColor = tmp2(9045).getEmbedColor(firstResult, flag);
+              obj17.embedLeftBorderColor = tmp2(9044).getEmbedColor(firstResult, flag);
               let id;
               if (firstResult != null) {
                 id = firstResult.id;
               }
               obj17.firstMessageId = id;
               obj17.containerStyle = tmp.thumbnail;
-              tmp19Result6 = closure_11(tmp2(14510).ForumPostMediaThumbnail, obj17);
-              const tmp2Result2 = tmp2(9045);
+              tmp19Result6 = closure_11(tmp2(14506).ForumPostMediaThumbnail, obj17);
+              const tmp2Result2 = tmp2(9044);
             }
           }
         }
@@ -156,13 +156,13 @@ export default function GuildHomeResources(guildId) {
     const intl = guildId(1113).intl;
     obj3.children = intl.string(guildId(1113).t.owvC9U);
     items = [closure_11(guildId(5866).Text, obj3), , ];
-    const obj4 = { style: tmp.emptyStateImage, source: _modDef19219 };
+    const obj4 = { style: tmp.emptyStateImage, source: _modDef19214 };
     items[1] = closure_11(FastImageDefault, obj4);
     const obj5 = {
       onPress() {
           const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
           if (null != defaultChannel) {
-            router_utils.transitionTo(closure_2_10.CHANNEL(guildId, defaultChannel.id));
+            router_utils.transitionTo(refs.CHANNEL(guildId, defaultChannel.id));
           }
         },
       text: null

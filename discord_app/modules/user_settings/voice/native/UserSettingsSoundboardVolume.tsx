@@ -1,10 +1,10 @@
-// === Module 12930: UserSettingsSoundboardVolume ===
+// === Module 12924: UserSettingsSoundboardVolume ===
 
-// Module 12930 (UserSettingsSoundboardVolume)
+// Module 12924 (UserSettingsSoundboardVolume)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import SoundboardActionCreators from "SoundboardActionCreators" /* 7163 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import VolumeSliderDefault from "VolumeSlider" /* 12927 */;
+import VolumeSliderDefault from "VolumeSlider" /* 12921 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/user_settings/voice/native/Us
 
 export default function SoundboardVolume() {
   const tmp = closure_8();
-  const amplitudinalSoundboardVolume = analyticsLocations(12931).getAmplitudinalSoundboardVolume();
+  const amplitudinalSoundboardVolume = analyticsLocations(12925).getAmplitudinalSoundboardVolume();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = analyticsLocations(1113).intl;
@@ -37,7 +37,7 @@ export default function SoundboardVolume() {
     },
     accessibilityLabel: null
   };
-  const obj = analyticsLocations(12931);
+  const obj = analyticsLocations(12925);
   const intl3 = analyticsLocations(1113).intl;
   obj6.accessibilityLabel = intl3.string(analyticsLocations(1113).t.kbFsAD);
   obj5.children = closure_5(VolumeSliderDefault, obj6);
@@ -51,5 +51,5 @@ export default function SoundboardVolume() {
   obj4.children = items;
   obj3.subLabel = closure_7(closure_6, obj4);
   obj2.children = closure_5(analyticsLocations(7379).TableRow, obj3);
-  return closure_5(analyticsLocations(12909).UserSettingsTableRowGroup, obj2);
+  return closure_5(analyticsLocations(12903).UserSettingsTableRowGroup, obj2);
 };

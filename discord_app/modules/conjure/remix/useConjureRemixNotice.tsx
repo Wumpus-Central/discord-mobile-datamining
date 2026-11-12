@@ -1,8 +1,8 @@
-// === Module 13470: useConjureRemixNotice ===
+// === Module 13464: useConjureRemixNotice ===
 
-// Module 13470 (useConjureRemixNotice)
+// Module 13464 (useConjureRemixNotice)
 import _modDef4079 from "module_4079" /* 4079 */;
-import conjureRemixConnection from "conjureRemixConnection" /* 10917 */;
+import conjureRemixConnection from "conjureRemixConnection" /* 10911 */;
 import noop from "module_19" /* 19 */;
 import ConjureRemixStore from "ConjureRemixStore" /* 7314 */;
 

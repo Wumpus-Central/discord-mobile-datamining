@@ -1,6 +1,6 @@
-// === Module 19759: useChannelFloatingCTAContent ===
+// === Module 19754: useChannelFloatingCTAContent ===
 
-// Module 19759 (useChannelFloatingCTAContent)
+// Module 19754 (useChannelFloatingCTAContent)
 import dismissible_content from "dismissible_content" /* 5076 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;

@@ -1,9 +1,9 @@
-// === Module 10743: NsfwGateGuildAlert ===
+// === Module 10737: NsfwGateGuildAlert ===
 
-// Module 10743 (NsfwGateGuildAlert)
+// Module 10737 (NsfwGateGuildAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useAlertStore from "useAlertStore" /* 6207 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 10745 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 10739 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -63,7 +63,7 @@ class NsfwGateGuildAlert {
     return jsx(guildId(closure_2[8]).AlertModal, obj);
   }
 }
-const NsfwGateSource = fn(10744).NsfwGateSource;
+const NsfwGateSource = fn(10738).NsfwGateSource;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, HelpdeskArticles: closure_8 } = Constants);
 const jsx = fn(21).jsx;

@@ -1,6 +1,6 @@
-// === Module 18339: UserSettingsDesignSystemBadge ===
+// === Module 18334: UserSettingsDesignSystemBadge ===
 
-// Module 18339 (UserSettingsDesignSystemBadge)
+// Module 18334 (UserSettingsDesignSystemBadge)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5866 */;
@@ -11,12 +11,12 @@ import TextInput from "TextInput" /* 7553 */;
 import TableRadioGroup from "TableRadioGroup" /* 7679 */;
 import TableSwitchRow from "TableSwitchRow" /* 7888 */;
 import LockIcon from "LockIcon" /* 8027 */;
-import TagIcon from "TagIcon" /* 9455 */;
-import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 10052 */;
-import ExperimentalRareIcon from "ExperimentalRareIcon" /* 10054 */;
-import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 10056 */;
-import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 10058 */;
-import StarIcon3 from "StarIcon" /* 10115 */;
+import TagIcon from "TagIcon" /* 9454 */;
+import ExperimentalCommonIcon from "ExperimentalCommonIcon" /* 10051 */;
+import ExperimentalRareIcon from "ExperimentalRareIcon" /* 10053 */;
+import ExperimentalEpicIcon from "ExperimentalEpicIcon" /* 10055 */;
+import ExperimentalMythicIcon2 from "ExperimentalMythicIcon" /* 10057 */;
+import StarIcon3 from "StarIcon" /* 10114 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

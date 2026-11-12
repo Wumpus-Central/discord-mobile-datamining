@@ -1,6 +1,6 @@
-// === Module 17772: SettingsAppearanceThemePickerScreen ===
+// === Module 17767: SettingsAppearanceThemePickerScreen ===
 
-// Module 17772 (SettingsAppearanceThemePickerScreen)
+// Module 17767 (SettingsAppearanceThemePickerScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
@@ -14,16 +14,16 @@ import Pressables from "Pressables" /* 7364 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7929 */;
-import StatusBarDefault from "StatusBar" /* 11767 */;
-import ThemeDarkIcon from "ThemeDarkIcon" /* 11885 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 16966 */;
-import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16967 */;
-import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 17517 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17518 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17519 */;
-import ThemeLightIcon from "ThemeLightIcon" /* 17773 */;
-import ThemeMidnightIcon from "ThemeMidnightIcon" /* 17775 */;
-import SettingsAppearanceChannelListDefault from "SettingsAppearanceChannelList" /* 17795 */;
+import StatusBarDefault from "StatusBar" /* 11761 */;
+import ThemeDarkIcon from "ThemeDarkIcon" /* 11879 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 16961 */;
+import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16962 */;
+import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 17512 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17513 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17514 */;
+import ThemeLightIcon from "ThemeLightIcon" /* 17768 */;
+import ThemeMidnightIcon from "ThemeMidnightIcon" /* 17770 */;
+import SettingsAppearanceChannelListDefault from "SettingsAppearanceChannelList" /* 17790 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -681,7 +681,7 @@ function ThemePicker(defaultIndex) {
           }
           const obj = { theme: tmp4, children: null };
           const obj2 = { navigation };
-          obj.children = obj4(dependencyMap(8992), obj2);
+          obj.children = obj4(dependencyMap(8991), obj2);
           return obj4(closure_0(5314).ThemeContextProvider, obj);
         } else {
           return null;
@@ -744,7 +744,7 @@ function ThemePicker(defaultIndex) {
   }
   if ("nitro" === themeSelector) {
     const obj5 = { themes: mobileThemes, currentThemeIndex: themeIndex, isPreview, isSynced, defaultIndex, deviceWidth: rounded, animatedStyles: obj4, hasOnyxNux, onThemeSelected: callback4 };
-    let tmp62 = obj4(tmp6(17777), obj5);
+    let tmp62 = obj4(tmp6(17772), obj5);
     let tmp63 = obj4;
   } else {
     let tmp58;
@@ -758,7 +758,7 @@ function ThemePicker(defaultIndex) {
     let obj6 = { style: tmp.segmentedControlContainer, ref, onLayout, children: null };
     let obj7 = { theme: tmp58, children: null };
     let obj8 = { variant: "experimental_Large", state: segmentedControlState };
-    obj7.children = obj4(tmp3(11190).SegmentedControl, obj8);
+    obj7.children = obj4(tmp3(11184).SegmentedControl, obj8);
     const items15 = [obj4(tmp3(5314).ThemeContextProvider, obj7), ];
     const obj9 = { animated: true, variant: "body-xs/medium", style: null, children: null };
     const items16 = [obj4.headerSecondary, tmp.textCentered];
@@ -788,7 +788,7 @@ function ThemePicker(defaultIndex) {
     }
     _undefined(str);
   }, items17);
-  const memo3 = obj2.useMemo(tmp6(17783), []);
+  const memo3 = obj2.useMemo(tmp6(17778), []);
   const obj10 = { themes: mobileThemes, themeIndex, animatedStyles: obj4, data: memo3, useGradientBackground: "nitro" === themeSelector, isNitroLocked: null };
   let result = tmp14;
   const tmp3Result15 = require("useNavigatorBackPressHandler");
@@ -811,7 +811,7 @@ function ThemePicker(defaultIndex) {
   let tmp63Result2 = null;
   if ("nitro" === themeSelector) {
     const obj12 = { themes: mobileThemes, themeIndex, isDimmed: true };
-    tmp63Result2 = tmp63(tmp6(17804), obj12);
+    tmp63Result2 = tmp63(tmp6(17799), obj12);
   }
   const items19 = [tmp63Result2, ];
   const items20 = [tmp.container, , ];

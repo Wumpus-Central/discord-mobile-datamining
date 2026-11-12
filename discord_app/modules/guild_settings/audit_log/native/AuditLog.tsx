@@ -1,6 +1,6 @@
-// === Module 20352: AuditLog ===
+// === Module 20347: AuditLog ===
 
-// Module 20352 (AuditLog)
+// Module 20347 (AuditLog)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -14,8 +14,8 @@ import PlatformsDefault from "Platforms" /* 7024 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7196 */;
 import EmojiDefault from "Emoji" /* 7828 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import AppliedForumTag from "AppliedForumTag" /* 11566 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 20340 */;
+import AppliedForumTag from "AppliedForumTag" /* 11560 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 20335 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UserRecord from "UserRecord" /* 1404 */;
@@ -574,7 +574,7 @@ prototype["render"] = function render() {
   obj4.border = str3;
   obj4.onPress = onHeaderClick;
   const obj5 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(20344), { action: log.action }), , , ];
+  const items2 = [closure_14(user(20339), { action: log.action }), , , ];
   const obj7 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
   const intl = tmp10(1113).intl;
   obj7.accessibilityLabel = intl.string(tmp10(1113).t.iXAna6);
@@ -634,7 +634,7 @@ prototype["render"] = function render() {
           const items4 = [tmp.arrow, rotate90];
           obj11.style = items4;
           obj11.size = tmp10(1187).Icon.Sizes.CUSTOM;
-          obj11.source = tmp18(16960);
+          obj11.source = tmp18(16955);
           tmp17Result = closure_14(tmp10(1187).Icon, obj11);
         }
         items2[3] = tmp17Result;

@@ -1,6 +1,6 @@
-// === Module 14992: HubEmailConnectionGuildSelect ===
+// === Module 14988: HubEmailConnectionGuildSelect ===
 
-// Module 14992 (HubEmailConnectionGuildSelect)
+// Module 14988 (HubEmailConnectionGuildSelect)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -70,7 +70,7 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(14970).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(14966).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5243);
@@ -85,7 +85,7 @@ obj2.footerSafeAreaContainer = { backgroundColor: nativeDefault.colors.BACKGROUN
 obj2.footerContainer = { paddingHorizontal: 16, height: 110, justifyContent: "center", alignItems: "center" };
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute", bottom: 0, width: "100%" };
 obj2.error = { color: nativeDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginVertical: 8 };
-let closure_10 = createStyles.createStyles(obj2);
+const refs = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionGuildSelect.tsx");
 
@@ -168,7 +168,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   c3 = 2;
                   c4 = 3;
                   v3 = 1;
-                  const obj5 = { value: email(14984).sendVerificationEmail(email, true, id), done: false };
+                  const obj5 = { value: email(14980).sendVerificationEmail(email, true, id), done: false };
                   return obj5;
                 }
               } else if (1 === tmp8) {

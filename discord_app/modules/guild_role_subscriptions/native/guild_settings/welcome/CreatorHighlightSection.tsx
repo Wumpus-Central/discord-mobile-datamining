@@ -1,14 +1,14 @@
-// === Module 20553: CreatorHighlightSection ===
+// === Module 20548: CreatorHighlightSection ===
 
-// Module 20553 (CreatorHighlightSection)
+// Module 20548 (CreatorHighlightSection)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import LinkingDefault from "Linking" /* 5949 */;
 import _mod7822 from "module_7822" /* 7822 */;
-import _modDef11204 from "module_11204" /* 11204 */;
-import EmojiIconDefault from "EmojiIcon" /* 17743 */;
+import _modDef11198 from "module_11198" /* 11198 */;
+import EmojiIconDefault from "EmojiIcon" /* 17738 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ function GuildServerSubscriberCount(arg0) {
   ({ horizontalContainer: arr[0], subscriberCountContainer: arr[1] } = tmp);
   items[2] = style;
   obj.style = items;
-  const items1 = [hasOwnProperty(Text_Text.Text, { style: tmp.subscriberCount, variant: "body-sm/medium", color: "text-overlay-light", children: subscriberCount }), hasOwnProperty(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef11204 }), ];
+  const items1 = [hasOwnProperty(Text_Text.Text, { style: tmp.subscriberCount, variant: "body-sm/medium", color: "text-overlay-light", children: subscriberCount }), hasOwnProperty(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef11198 }), ];
   const obj4 = { variant: "body-sm/normal", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["3NNXPW"]);
@@ -35,12 +35,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp4 = guild_id(20554)(guild_id, 3, 60);
+  const tmp4 = guild_id(20549)(guild_id, 3, 60);
   dependencyMap = tmp4;
   const hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
   items = [hasAllImperativeDetails, tmp4];
   if (tmp4.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_5(tmp2(20503), {}) };
+    const obj2 = { style: tmp.cardContainer, children: closure_5(tmp2(20498), {}) };
     return closure_5(View, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp4.details;

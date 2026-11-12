@@ -1,6 +1,6 @@
-// === Module 20340: AuditLogUtils ===
+// === Module 20335: AuditLogUtils ===
 
-// Module 20340 (AuditLogUtils)
+// Module 20335 (AuditLogUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import IntegerDefault from "Integer" /* 14 */;
@@ -13,8 +13,8 @@ import UserUtilsDefault from "UserUtils" /* 5309 */;
 import useChannelName from "useChannelName" /* 5891 */;
 import TimeUtils from "TimeUtils" /* 6016 */;
 import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8397 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 20303 */;
-import GuildFeedItemTypes from "GuildFeedItemTypes" /* 20341 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 20298 */;
+import GuildFeedItemTypes from "GuildFeedItemTypes" /* 20336 */;
 import EmojiStore from "EmojiStore" /* 6906 */;
 import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7803 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7017 */;
@@ -24,7 +24,7 @@ import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildRoleStore from "GuildRoleStore" /* 5149 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
 import UserStore from "UserStore" /* 1385 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 20338 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 20333 */;
 
 require = fn;
 function getPermissionChanges(oldValue, newValue) {
@@ -241,14 +241,14 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(20339).AuditLogChange;
+const AuditLogChange = fn(20334).AuditLogChange;
 const Constants = fn(1072);
 const AuditLogActions = Constants.AuditLogActions;
 const AuditLogChangeKeys = Constants.AuditLogChangeKeys;
 const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
 ({ MFALevels: closure_18, VerificationLevels: closure_19, UserNotificationSettings: closure_20, GuildExplicitContentFilterTypes: closure_21, ChannelTypes: closure_22, Permissions: closure_23, NOOP_NULL: closure_24, VideoQualityMode: closure_25, ApplicationCommandPermissionTypes: closure_26, AuditLogSubtargetTypes: closure_27, SystemChannelFlags: closure_28, AuditLogActionTypes: closure_29 } = Constants);
 const ChannelFlags = fn(5099).ChannelFlags;
-const AutomodTriggerType = fn(14063).AutomodTriggerType;
+const AutomodTriggerType = fn(14059).AutomodTriggerType;
 const GuildOnboardingMode = fn(7155).GuildOnboardingMode;
 const GuildScheduledEventsConstants = fn(5098);
 ({ GuildScheduledEventEntityTypes: items, GuildScheduledEventStatus: closure_34, GuildScheduledEventPrivacyLevel: closure_35 } = GuildScheduledEventsConstants);

@@ -1,6 +1,6 @@
-// === Module 18086: CacheActionsSetting ===
+// === Module 18081: CacheActionsSetting ===
 
-// Module 18086 (CacheActionsSetting)
+// Module 18081 (CacheActionsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5068 */;
@@ -13,12 +13,12 @@ import TableRow from "TableRow" /* 7379 */;
 import TableRowGroup from "TableRowGroup" /* 7680 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7847 */;
 import ActionSheet from "ActionSheet" /* 7885 */;
-import FileIcon from "FileIcon" /* 11010 */;
-import FileUpIcon from "FileUpIcon" /* 13213 */;
-import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 18087 */;
-import DiskUsageManagerDefault from "DiskUsageManager" /* 18088 */;
-import CacheActionCreators from "CacheActionCreators" /* 18091 */;
-import FileWarningIcon from "FileWarningIcon" /* 18092 */;
+import FileIcon from "FileIcon" /* 11004 */;
+import FileUpIcon from "FileUpIcon" /* 13207 */;
+import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 18082 */;
+import DiskUsageManagerDefault from "DiskUsageManager" /* 18083 */;
+import CacheActionCreators from "CacheActionCreators" /* 18086 */;
+import FileWarningIcon from "FileWarningIcon" /* 18087 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
@@ -193,14 +193,14 @@ const useState = fn(19).useState;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 CacheActionsActionSheet = "CacheActionsActionSheet";
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const pressable = SettingBuilders.createPressable({
   useTitle: function useCacheActionsTitle() {
     const intl = util.intl;
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(18092).FileWarningIcon,
+  IconComponent: fn(18087).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: CacheActionsActionSheet }), CacheActionsActionSheet);
   },

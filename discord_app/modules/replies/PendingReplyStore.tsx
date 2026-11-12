@@ -1,6 +1,6 @@
-// === Module 8718: PendingReplyStore ===
+// === Module 8717: PendingReplyStore ===
 
-// Module 8718 (PendingReplyStore)
+// Module 8717 (PendingReplyStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

@@ -1,11 +1,11 @@
-// === Module 18974: GuildsBarItemUnavailableGuilds ===
+// === Module 18969: GuildsBarItemUnavailableGuilds ===
 
-// Module 18974 (GuildsBarItemUnavailableGuilds)
+// Module 18969 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
-import _modDef18965 from "module_18965" /* 18965 */;
+import _modDef18960 from "module_18960" /* 18960 */;
 import noop from "module_19" /* 19 */;
 import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6894 */;
 
@@ -40,8 +40,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       AlertActionCreatorsDefault.show(obj2);
     };
     obj2.style = tmp.unavailableGuilds;
-    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef18965 };
-    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef18965 });
+    const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef18960 };
+    obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef18960 });
     tmp5 = <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>{null}</Pressable>;
   }
   return tmp5;

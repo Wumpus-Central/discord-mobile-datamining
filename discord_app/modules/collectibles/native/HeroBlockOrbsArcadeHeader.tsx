@@ -1,6 +1,6 @@
-// === Module 18377: HeroBlockOrbsArcadeHeader ===
+// === Module 18372: HeroBlockOrbsArcadeHeader ===
 
-// Module 18377 (HeroBlockOrbsArcadeHeader)
+// Module 18372 (HeroBlockOrbsArcadeHeader)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import shared from "shared" /* 5250 */;
@@ -10,8 +10,8 @@ import useThemeDefault from "useTheme" /* 5484 */;
 import useToken from "useToken" /* 5839 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import inlineStyles from "inlineStyles" /* 8197 */;
-import QuestUtils from "QuestUtils" /* 10061 */;
-import _modDef18378 from "module_18378" /* 18378 */;
+import QuestUtils from "QuestUtils" /* 10060 */;
+import _modDef18373 from "module_18373" /* 18373 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
@@ -62,14 +62,14 @@ function RadialGradientLayer(color) {
       const obj6 = { offset: 1, stopColor: color, stopOpacity: 0 };
       items[1] = React6(inlineStyles.Stop, obj6);
       obj3.children = items;
-      obj4.children = closure_1_10(inlineStyles.RadialGradient, obj3);
+      obj4.children = refs(inlineStyles.RadialGradient, obj3);
       const items1 = [React6(inlineStyles.Defs, obj4), ];
       const size2 = { width: "100%", height: "100%", fill: null };
       const _HermesInternal3 = HermesInternal;
       size2.fill = "url(#" + id + ")";
       items1[1] = React6(inlineStyles.Rect, size2);
       size1.children = items1;
-      tmp6Result = closure_1_10(inlineStylesDefault, size1);
+      tmp6Result = refs(inlineStylesDefault, size1);
     }
   }
   obj.children = tmp6Result;
@@ -219,7 +219,7 @@ function HeroBlockOrbsArcadeHeaderContent(bleedsOntoPage) {
   const obj22 = { source: null, style: null, accessible: false };
   const obj23 = { uri: null };
   const tmp2Result2 = require("useFontScale");
-  obj23.uri = require("module_18379");
+  obj23.uri = require("module_18374");
   obj22.source = obj23;
   obj22.style = tmp.image;
   tmp25Result = closure_9(require("FastImage"), obj22);
@@ -233,8 +233,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let c12 = 289;
 const PX_16 = nativeDefault.space.PX_16;
-const AssetUtils = fn(10078);
-const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef18378);
+const AssetUtils = fn(10077);
+const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef18373);
 const PX_48 = nativeDefault.space.PX_48;
 const ellipse = { cx: 85.5, cy: 267.5, rx: 329, ry: 217, rotation: 63 };
 const ellipse2 = { cx: 67, cy: 231, rx: 185, ry: 155 };
@@ -280,5 +280,5 @@ export default function HeroBlockOrbsArcadeHeader(productsTitle) {
     }
   }
   children[1] = tmp8Result;
-  return closure_1_10(closure_1_11, { children });
+  return refs(closure_1_11, { children });
 };

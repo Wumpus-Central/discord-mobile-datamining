@@ -1,9 +1,9 @@
-// === Module 13121: conjureSettingsSaved ===
+// === Module 13115: conjureSettingsSaved ===
 
-// Module 13121 (conjureSettingsSaved)
+// Module 13115 (conjureSettingsSaved)
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
-import conjureSettingsConnection from "conjureSettingsConnection" /* 13118 */;
+import conjureSettingsConnection from "conjureSettingsConnection" /* 13112 */;
 import ConjureChatStore from "ConjureChatStore" /* 7257 */;
 
 require = fn;

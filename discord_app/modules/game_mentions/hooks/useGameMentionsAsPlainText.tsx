@@ -1,6 +1,6 @@
-// === Module 9466: useGameMentionsAsPlainText ===
+// === Module 9465: useGameMentionsAsPlainText ===
 
-// Module 9466 (useGameMentionsAsPlainText)
+// Module 9465 (useGameMentionsAsPlainText)
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2138 */;
 import UserStore from "UserStore" /* 1385 */;

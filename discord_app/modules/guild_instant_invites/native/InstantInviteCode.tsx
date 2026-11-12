@@ -1,6 +1,6 @@
-// === Module 10864: InstantInviteCode ===
+// === Module 10858: InstantInviteCode ===
 
-// Module 10864 (InstantInviteCode)
+// Module 10858 (InstantInviteCode)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
@@ -9,7 +9,7 @@ import ClockIcon from "ClockIcon" /* 5979 */;
 import Stack_Stack from "Stack/Stack" /* 6274 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7968 */;
 import TextIcon2 from "TextIcon" /* 8013 */;
-import CountDownDefault from "CountDown" /* 10850 */;
+import CountDownDefault from "CountDown" /* 10844 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -65,7 +65,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5243);
 let obj2 = { flex: { flex: 1 }, channel: { flex: 0 }, time: { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE } };
-let closure_10 = createStyles.createStyles(obj2);
+const refs = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteCode.tsx");
 

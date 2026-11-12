@@ -1,6 +1,6 @@
-// === Module 15815: EventDetailRsvpSheet ===
+// === Module 15810: EventDetailRsvpSheet ===
 
-// Module 15815 (EventDetailRsvpSheet)
+// Module 15810 (EventDetailRsvpSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import BottomSheetModal from "BottomSheetModal" /* 5507 */;
@@ -9,7 +9,7 @@ import FastImageDefault from "FastImage" /* 5957 */;
 import Form from "Form" /* 8041 */;
 import StageSparkleDefault from "StageSparkle" /* 8378 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import _modDef15816 from "module_15816" /* 15816 */;
+import _modDef15811 from "module_15811" /* 15811 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 6005 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -21,7 +21,7 @@ function EmptyDisplay(arg0) {
   const obj = { style: null, children: null };
   items = [closure_9().emptyDisplayContainer, style];
   obj.style = items;
-  const obj2 = { icon: _modDef15816 };
+  const obj2 = { icon: _modDef15811 };
   const items1 = [metroImportDefault(StageSparkleDefault, obj2), children];
   obj.children = items1;
   return React5(View, obj);
@@ -46,7 +46,7 @@ function RemainingUsersRow(remainingUsersGroup) {
   const tmp = closure_9();
   const obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
   const obj2 = { style: tmp.remainingUsersIconContainer, children: null };
-  const obj3 = { source: _modDef15816, style: tmp.remainingUsersIcon };
+  const obj3 = { source: _modDef15811, style: tmp.remainingUsersIcon };
   obj2.children = metroImportDefault(FastImageDefault, obj3);
   obj.leading = metroImportDefault(View, obj2);
   const intl = util.intl;
@@ -109,7 +109,7 @@ const memoResult = noop.memo(function UserRow(eventUser) {
   }
   obj6.nick = nick;
   ({ userName: obj5.usernameStyle, userName: obj5.nicknameStyle } = tmp);
-  obj3.label = closure_7(analyticsLocations(10867), obj6);
+  obj3.label = closure_7(analyticsLocations(10861), obj6);
   obj3.onPress = function onPress() {
     showUserProfileActionSheetDefault({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };

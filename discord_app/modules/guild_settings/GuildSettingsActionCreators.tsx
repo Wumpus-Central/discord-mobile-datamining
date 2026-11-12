@@ -135,7 +135,7 @@ let body = {
   updateMFALevel(arg0) {
     ({ guildId, level } = arg0);
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_MFA(guildId), body: { level }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: refs.GUILD_MFA(guildId), body: { level }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.post(request).then((body) => DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SET_MFA_SUCCESS", level: body.body.level }));
   },
   updateIcon(id, icon) {
@@ -246,7 +246,7 @@ let body = {
     if (id3 === undefined) {
       tmp2 = null;
     }
-    const request = { url: closure_1_10.GUILD(id), body: { owner_id: id2, code: tmp2 }, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    const request = { url: refs.GUILD(id), body: { owner_id: id2, code: tmp2 }, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const obj = TrackedHTTPUtilsDefault;
     request.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: { guild_id: id, verification_type: tmp } };
     const obj2 = { event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: { guild_id: id, verification_type: tmp } };
@@ -258,7 +258,7 @@ let body = {
     if (arg1 === undefined) {
       flag = false;
     }
-    const obj2 = { url: closure_1_10.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
+    const obj2 = { url: refs.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const obj = TrackedHTTPUtilsDefault;
     obj2.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE, properties: { guild_id: id, is_resend: flag } };
     const obj3 = { event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE, properties: { guild_id: id, is_resend: flag } };
@@ -267,7 +267,7 @@ let body = {
   },
   deleteGuild(arg0) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: closure_1_10.GUILD_DELETE(arg0), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { url: refs.GUILD_DELETE(arg0), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.post(obj).then(() => {
       body.close();
     });
@@ -437,26 +437,26 @@ let body = {
   },
   enableIntegration(id, type, id2) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_INTEGRATIONS(id), body: null, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: refs.GUILD_INTEGRATIONS(id), body: null, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     body = { type, id: id2 };
     request.body = body;
     return HTTP.post(request);
   },
   disableIntegration(id, id2) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: closure_1_10.GUILD_INTEGRATION(id, id2), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { url: refs.GUILD_INTEGRATION(id, id2), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(obj);
   },
   updateIntegration(guildId, id, expire_behavior, expire_grace_period, enable_emoticons) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_INTEGRATION(guildId, id), body: null, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: refs.GUILD_INTEGRATION(guildId, id), body: null, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     body = { expire_behavior, expire_grace_period, enable_emoticons };
     request.body = body;
     return HTTP.patch(request);
   },
   syncIntegration(guildId, id) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: closure_1_10.GUILD_INTEGRATION_SYNC(guildId, id), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { url: refs.GUILD_INTEGRATION_SYNC(guildId, id), oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     HTTP.post(obj);
   },
   migratePinPermission(arg0) {

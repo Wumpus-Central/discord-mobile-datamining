@@ -1,7 +1,7 @@
-// === Module 19818: useVoicePanelDockStatus ===
+// === Module 19813: useVoicePanelDockStatus ===
 
-// Module 19818 (useVoicePanelDockStatus)
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11924 */;
+// Module 19813 (useVoicePanelDockStatus)
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11918 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1385 */;
 import VoiceStateStore from "VoiceStateStore" /* 5918 */;
 
 const require = fn;
-const VoicePanelDockStatusStore = fn(19819);
+const VoicePanelDockStatusStore = fn(19814);
 ({ releaseDockStatus: closure_11, initDockStatus: closure_12, setDockHasStreamers: map1, setDockSpeakingIds: closure_14, showVoiceMoment: closure_15 } = VoicePanelDockStatusStore);
 const ParticipantTypes = fn(5920).ParticipantTypes;
 const size = fn(2);

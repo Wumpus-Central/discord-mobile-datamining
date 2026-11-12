@@ -1,14 +1,14 @@
-// === Module 12023: InAppReportsWidgetPreviewElement ===
+// === Module 12017: InAppReportsWidgetPreviewElement ===
 
-// Module 12023 (InAppReportsWidgetPreviewElement)
+// Module 12017 (InAppReportsWidgetPreviewElement)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7290 */;
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7294 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8540 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 12024 */;
-import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 12047 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 12018 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 12041 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

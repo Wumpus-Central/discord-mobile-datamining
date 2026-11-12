@@ -1,7 +1,7 @@
-// === Module 13683: useConjureSharedProjectAppChannel ===
+// === Module 13677: useConjureSharedProjectAppChannel ===
 
-// Module 13683 (useConjureSharedProjectAppChannel)
-import findLoadedAppChannelDefault from "findLoadedAppChannel" /* 12355 */;
+// Module 13677 (useConjureSharedProjectAppChannel)
+import findLoadedAppChannelDefault from "findLoadedAppChannel" /* 12349 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import PermissionStore from "PermissionStore" /* 5175 */;

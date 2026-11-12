@@ -1,6 +1,6 @@
-// === Module 10847: useAnnounceAsyncCompletion ===
+// === Module 10841: useAnnounceAsyncCompletion ===
 
-// Module 10847 (useAnnounceAsyncCompletion)
+// Module 10841 (useAnnounceAsyncCompletion)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

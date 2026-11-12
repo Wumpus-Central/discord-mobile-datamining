@@ -1,6 +1,6 @@
-// === Module 12185: refreshApplicationWidget ===
+// === Module 12179: refreshApplicationWidget ===
 
-// Module 12185 (refreshApplicationWidget)
+// Module 12179 (refreshApplicationWidget)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

@@ -1,12 +1,12 @@
-// === Module 12548: useReportToModHooks ===
+// === Module 12542: useReportToModHooks ===
 
-// Module 12548 (useReportToModHooks)
+// Module 12542 (useReportToModHooks)
 import _mod19 from "module_19" /* 19 */;
 import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7220 */;
 import UserActionCreators from "UserActionCreators" /* 7286 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
 import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 8671 */;
-import ReportToModUtils from "ReportToModUtils" /* 11098 */;
+import ReportToModUtils from "ReportToModUtils" /* 11092 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import MessageStore from "MessageStore" /* 6309 */;
 import size from "module_2" /* 2 */;

@@ -1,11 +1,11 @@
-// === Module 16103: LocalPushNotificationStore ===
+// === Module 16098: LocalPushNotificationStore ===
 
-// Module 16103 (LocalPushNotificationStore)
+// Module 16098 (LocalPushNotificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import PushNotificationDefault from "PushNotification" /* 12830 */;
+import PushNotificationDefault from "PushNotification" /* 12824 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 6874 */;
 
@@ -41,11 +41,11 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
               set.add(userInfo);
             }
           }
-          const result = closure_1_1(12830).cancelLocalNotifications(userInfo);
-          const obj = closure_1_1(12830);
-          const result1 = closure_1_1(12830).cancelLocalNotifications(userInfo);
+          const result = closure_1_1(12824).cancelLocalNotifications(userInfo);
+          const obj = closure_1_1(12824);
+          const result1 = closure_1_1(12824).cancelLocalNotifications(userInfo);
           set.delete(userInfo);
-          const obj2 = closure_1_1(12830);
+          const obj2 = closure_1_1(12824);
         }
       });
     });

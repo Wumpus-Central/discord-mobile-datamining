@@ -1,16 +1,16 @@
-// === Module 9275: GuildSpaceMusicSystemMessage ===
+// === Module 9274: GuildSpaceMusicSystemMessage ===
 
-// Module 9275 (GuildSpaceMusicSystemMessage)
+// Module 9274 (GuildSpaceMusicSystemMessage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8588 */;
-import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 9112 */;
-import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 9113 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9122 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9124 */;
-import createCommonMessageDefault from "createCommonMessage" /* 9126 */;
-import _modDef9276 from "module_9276" /* 9276 */;
+import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 9111 */;
+import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 9112 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9121 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9123 */;
+import createCommonMessageDefault from "createCommonMessage" /* 9125 */;
+import _modDef9275 from "module_9275" /* 9275 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6881 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -65,7 +65,7 @@ export function createGuildSpaceMusicSystemMessage(message) {
             const obj5 = { content: null, iconUrl: null, iconTintColor: null };
             obj2.usernameOnClick = obj6;
             obj5.content = intl.formatToParts(mobileMusicSystemMessage.message, obj2);
-            obj5.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9276);
+            obj5.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9275);
             obj5.iconTintColor = tmp15.iconTintColor;
             const merged1 = Object.assign(createCommonMessageDefault(message));
             return obj5;

@@ -1,6 +1,6 @@
-// === Module 18007: EmailTrackingNoticeExperiment ===
+// === Module 18002: EmailTrackingNoticeExperiment ===
 
-// Module 18007 (EmailTrackingNoticeExperiment)
+// Module 18002 (EmailTrackingNoticeExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

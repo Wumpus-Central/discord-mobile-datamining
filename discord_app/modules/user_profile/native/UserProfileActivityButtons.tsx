@@ -1,6 +1,6 @@
-// === Module 15638: UserProfileActivityButtons ===
+// === Module 15635: UserProfileActivityButtons ===
 
-// Module 15638 (UserProfileActivityButtons)
+// Module 15635 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -16,10 +16,10 @@ import authorizeConnectionDefault from "authorizeConnection" /* 7358 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7612 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
 import isStreamingDefault from "isStreaming" /* 8558 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 12615 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 15639 */;
-import getActivityJoinability from "getActivityJoinability" /* 15640 */;
-import getStreamURLDefault from "getStreamURL" /* 15641 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 12609 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 15636 */;
+import getActivityJoinability from "getActivityJoinability" /* 15637 */;
+import getStreamURLDefault from "getStreamURL" /* 15638 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
@@ -158,15 +158,15 @@ export function PlayOnSpotifyButton(arg0) {
   ({ activity, onAction: require } = arg0);
   const sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(10797)(activity)) {
+  if (sync_id(10791)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
       const intl = util.intl;
       let obj2 = { platform: activity.name };
       obj.text = intl.formatToPlainString(util.t.LEgD7t, obj2);
-      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(12341), disableColor: true, style: tmp.icon };
-      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(12341), disableColor: true, style: tmp.icon });
+      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(12335), disableColor: true, style: tmp.icon };
+      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(12335), disableColor: true, style: tmp.icon });
       obj.onPress = asyncGeneratorStep(async () => {
         if (c5 === 2) {
           c5 = 3;

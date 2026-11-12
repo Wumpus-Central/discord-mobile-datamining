@@ -1,9 +1,9 @@
-// === Module 13372: BillIcon ===
+// === Module 13366: BillIcon ===
 
-// Module 13372 (BillIcon)
+// Module 13366 (BillIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod13373 from "module_13373" /* 13373 */;
+import _mod13367 from "module_13367" /* 13367 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BillIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13373, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13367, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

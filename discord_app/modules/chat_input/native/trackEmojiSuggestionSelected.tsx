@@ -1,6 +1,6 @@
-// === Module 11205: trackEmojiSuggestionSelected ===
+// === Module 11199: trackEmojiSuggestionSelected ===
 
-// Module 11205 (trackEmojiSuggestionSelected)
+// Module 11199 (trackEmojiSuggestionSelected)
 import Constants from "Constants" /* 1072 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
 import size from "module_2" /* 2 */;

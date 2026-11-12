@@ -1,12 +1,12 @@
-// === Module 9218: InGameMessageNuxSystemMessage ===
+// === Module 9217: InGameMessageNuxSystemMessage ===
 
-// Module 9218 (InGameMessageNuxSystemMessage)
+// Module 9217 (InGameMessageNuxSystemMessage)
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 9115 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9122 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9124 */;
-import createCommonMessageDefault from "createCommonMessage" /* 9126 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 9114 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9121 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9123 */;
+import createCommonMessageDefault from "createCommonMessage" /* 9125 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 
 require = fn;

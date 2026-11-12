@@ -1,6 +1,6 @@
-// === Module 9644: ShineAnimation ===
+// === Module 9643: ShineAnimation ===
 
-// Module 9644 (ShineAnimation)
+// Module 9643 (ShineAnimation)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import _mod1652 from "module_1652" /* 1652 */;

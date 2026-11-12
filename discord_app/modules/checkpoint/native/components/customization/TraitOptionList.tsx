@@ -1,11 +1,11 @@
-// === Module 14421: TraitOptionList ===
+// === Module 14417: TraitOptionList ===
 
-// Module 14421 (TraitOptionList)
+// Module 14417 (TraitOptionList)
 import nativeDefault from "native" /* 575 */;
 import HapticUtils from "HapticUtils" /* 5491 */;
 import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6681 */;
 import inlineStyles from "inlineStyles" /* 8197 */;
-import TraitOptionItem from "TraitOptionItem" /* 14422 */;
+import TraitOptionItem from "TraitOptionItem" /* 14418 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
@@ -69,8 +69,8 @@ export default function TraitOptionList(size) {
   useReducedMotion = size(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = size(504);
   let tmp2 = size;
-  closure_7 = options(14399)(options(14400));
-  const tmp4 = options(14399);
+  closure_7 = options(14395)(options(14396));
+  const tmp4 = options(14395);
   const isScreenReaderEnabled = size(5505).useIsScreenReaderEnabled();
   let obj2 = size(5505);
   const animatedRef = size(1652).useAnimatedRef();
@@ -80,7 +80,7 @@ export default function TraitOptionList(size) {
   const obj3 = size(1652);
   const tmp8 = options(5854)(bound);
   [tmp10, c12] = disabled(noop.useState(options(1493)().width), 2);
-  const width = size(14422).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
+  const width = size(14418).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
   const sum = width + ref;
   c13 = sum;
   const items1 = [disabled, isScreenReaderEnabled];
@@ -140,7 +140,7 @@ export default function TraitOptionList(size) {
     size = traitOption;
     closure_1 = index;
     let obj = { size, traitOption, accessibilityLabel: null, isSelected: null, showSelectedBorder: null, hideCornerFlag: null, disabled: null, onPress: null };
-    const tmp2 = options(14422);
+    const tmp2 = options(14418);
     obj.accessibilityLabel = size(6681).getAssetAccessibilityLabel(traitOption, { skipRarity: skipDescription, skipDescription });
     obj.isSelected = traitOption.optionId === dependencyMap;
     let tmp5 = isScreenReaderEnabled;

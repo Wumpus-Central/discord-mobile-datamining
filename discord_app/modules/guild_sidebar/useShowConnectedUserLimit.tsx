@@ -1,8 +1,8 @@
-// === Module 14582: useShowConnectedUserLimit ===
+// === Module 14578: useShowConnectedUserLimit ===
 
-// Module 14582 (useShowConnectedUserLimit)
+// Module 14578 (useShowConnectedUserLimit)
 import Constants from "Constants" /* 1072 */;
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 10519 */;
+import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 10517 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = Constants.MAX_STAGE_VOICE_USER_LIMIT;

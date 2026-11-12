@@ -1,14 +1,14 @@
-// === Module 17807: SettingsAppearanceChannelListPreviewNitroUpsell ===
+// === Module 17802: SettingsAppearanceChannelListPreviewNitroUpsell ===
 
-// Module 17807 (SettingsAppearanceChannelListPreviewNitroUpsell)
+// Module 17802 (SettingsAppearanceChannelListPreviewNitroUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9364 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9513 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10891 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9363 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9512 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10885 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import module_1652 from "module_1652" /* 1652 */;
@@ -150,5 +150,5 @@ export default noop.memo(function SettingsAppearanceChannelListPreviewNitroUpsel
   obj2.entering = animationEntering;
   obj2.exiting = animationExiting;
   obj2.renderItem = callback;
-  return closure_1_10(AnimatedEnterExitItemDefault, obj2);
+  return refs(AnimatedEnterExitItemDefault, obj2);
 });

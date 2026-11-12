@@ -1,17 +1,17 @@
-// === Module 16935: ErrorBoundary ===
+// === Module 16930: ErrorBoundary ===
 
-// Module 16935 (ErrorBoundary)
+// Module 16930 (ErrorBoundary)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
-import AppCrash from "AppCrash" /* 15771 */;
+import AppCrash from "AppCrash" /* 15766 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 12278 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 12272 */;
 
 require = fn;
 function MaybeClearBuildOverride() {
@@ -149,10 +149,10 @@ prototype["render"] = function render() {
     obj4.onPress = self.handleReload;
     items1[1] = React6(components_Button_Button.Button, obj4);
     obj3.children = items1;
-    items[1] = closure_1_10(metroImportDefault, obj3);
+    items[1] = refs(metroImportDefault, obj3);
     items[2] = null;
     obj.children = items;
-    let children = closure_1_10(native.EmptyState, obj);
+    let children = refs(native.EmptyState, obj);
   } else {
     children = self.props.children;
   }

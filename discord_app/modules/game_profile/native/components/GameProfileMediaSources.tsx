@@ -1,6 +1,6 @@
-// === Module 10260: GameProfileMediaSources ===
+// === Module 10258: GameProfileMediaSources ===
 
-// Module 10260 (GameProfileMediaSources)
+// Module 10258 (GameProfileMediaSources)
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
 import ImageProxyUtils from "ImageProxyUtils" /* 2154 */;
 import StoreUtils from "StoreUtils" /* 6703 */;

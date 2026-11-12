@@ -1,9 +1,9 @@
-// === Module 13698: useConjureMentionCandidates ===
+// === Module 13694: useConjureMentionCandidates ===
 
-// Module 13698 (useConjureMentionCandidates)
+// Module 13694 (useConjureMentionCandidates)
 import PermissionUtilsAll from "PermissionUtils" /* 5180 */;
 import GuildUtilsDefault from "GuildUtils" /* 7012 */;
-import conjureMentions from "conjureMentions" /* 13524 */;
+import conjureMentions from "conjureMentions" /* 13518 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;

@@ -1,16 +1,16 @@
-// === Module 15460: GuildTemplateEmbed ===
+// === Module 15457: GuildTemplateEmbed ===
 
-// Module 15460 (GuildTemplateEmbed)
+// Module 15457 (GuildTemplateEmbed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GuildTemplatesConstants from "GuildTemplatesConstants" /* 8065 */;
-import Constants from "Constants" /* 8776 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 9097 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9104 */;
-import _modDef14002 from "module_14002" /* 14002 */;
-import _modDef14003 from "module_14003" /* 14003 */;
-import _modDef15461 from "module_15461" /* 15461 */;
+import Constants from "Constants" /* 8775 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 9096 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9103 */;
+import _modDef13998 from "module_13998" /* 13998 */;
+import _modDef13999 from "module_13999" /* 13999 */;
+import _modDef15458 from "module_15458" /* 15458 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 8395 */;
 import size from "module_2" /* 2 */;
 
@@ -42,9 +42,9 @@ export function createGuildTemplateEmbed(code, theme) {
     const intl2 = util.intl;
     obj.titleText = intl2.string(util.t.A6MwXE);
     if (obj3.isThemeDark(theme)) {
-      let tmpResult = _modDef14002;
+      let tmpResult = _modDef13998;
     } else {
-      tmpResult = _modDef14003;
+      tmpResult = _modDef13999;
     }
     obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -63,7 +63,7 @@ export function createGuildTemplateEmbed(code, theme) {
     obj10.titleColor = colors.titleColor;
     obj10.subtitle = formatToPlainStringResult;
     obj10.subtitleColor = colors.subtitleColor;
-    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef15461).uri;
+    obj10.thumbnailUrl = Image.resolveAssetSource(_modDef15458).uri;
     ({ acceptLabelGreenColor: obj6.acceptLabelColor, acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor } = colors);
     const intl6 = util.intl;
     obj10.acceptLabelText = intl6.string(util.t["a3Gl+e"]);

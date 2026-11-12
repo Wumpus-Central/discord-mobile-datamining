@@ -1,6 +1,6 @@
-// === Module 12788: useEmbeddedAppCSP ===
+// === Module 12782: useEmbeddedAppCSP ===
 
-// Module 12788 (useEmbeddedAppCSP)
+// Module 12782 (useEmbeddedAppCSP)
 import getURLForApplication from "getURLForApplication" /* 5911 */;
 import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 7280 */;
 import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 7281 */;

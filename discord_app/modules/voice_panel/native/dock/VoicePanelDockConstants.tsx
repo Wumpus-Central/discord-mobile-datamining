@@ -1,6 +1,6 @@
-// === Module 11948: VoicePanelDockConstants ===
+// === Module 11942: VoicePanelDockConstants ===
 
-// Module 11948 (VoicePanelDockConstants)
+// Module 11942 (VoicePanelDockConstants)
 import nativeDefault from "native" /* 575 */;
 
 let sum = nativeDefault.space.PX_24 + nativeDefault.space.PX_4;
@@ -17,7 +17,7 @@ getDockInset.__workletHash = 14543646828628;
 getDockInset.__initData = tmp3;
 const diff = nativeDefault.space.PX_16 - 4;
 let closure_129_0 = diff;
-const items2 = [{ code: "(function getVoicePanelDockPaddingBottom_VoicePanelDockConstantsTsx2(safeAreaBottom){let[IS_IOS,DOCK_PADDING_BOTTOM_MIN]=this.__closure;return IS_IOS?DOCK_PADDING_BOTTOM_MIN:Math.max(DOCK_PADDING_BOTTOM_MIN,safeAreaBottom);})" }, fn(11925).IS_IOS, nativeDefault.space.PX_24];
+const items2 = [{ code: "(function getVoicePanelDockPaddingBottom_VoicePanelDockConstantsTsx2(safeAreaBottom){let[IS_IOS,DOCK_PADDING_BOTTOM_MIN]=this.__closure;return IS_IOS?DOCK_PADDING_BOTTOM_MIN:Math.max(DOCK_PADDING_BOTTOM_MIN,safeAreaBottom);})" }, fn(11919).IS_IOS, nativeDefault.space.PX_24];
 let closure_130_0;
 let closure_130_1;
 [tmp7, tmp8, tmp9] = items2;
@@ -47,7 +47,7 @@ const items5 = [tmp11, tmp12, tmp13];
 getVoicePanelDockHeight.__closure = items5;
 getVoicePanelDockHeight.__workletHash = 8239861783104;
 getVoicePanelDockHeight.__initData = tmp10;
-const result = 1 / fn(11949).PULL_GESTURE_RESISTANCE;
+const result = 1 / fn(11943).PULL_GESTURE_RESISTANCE;
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockConstants.tsx");
 

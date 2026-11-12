@@ -1,6 +1,6 @@
-// === Module 17853: DisplayNameStylesGummyCustomColorSheet ===
+// === Module 17848: DisplayNameStylesGummyCustomColorSheet ===
 
-// Module 17853 (DisplayNameStylesGummyCustomColorSheet)
+// Module 17848 (DisplayNameStylesGummyCustomColorSheet)
 import nativeDefault from "native" /* 575 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1393 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
@@ -49,13 +49,13 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   obj6.text = intl2.string(onSelect(1113).t.XqMe3N);
   obj6.onPress = callback1;
   obj5.trailing = closure_7(onSelect(5873).Button, obj6);
-  obj4.header = closure_7(sharedValue(17846), obj5);
+  obj4.header = closure_7(sharedValue(17841), obj5);
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.previewWrapper, children: null };
-  const tmp5 = sharedValue(17846);
-  obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(17854), { hue: sharedValue }) });
+  const tmp5 = sharedValue(17841);
+  obj8.children = closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(17849), { hue: sharedValue }) });
   const items1 = [closure_7(View, obj8), ];
-  const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(16959), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
+  const obj10 = { style: tmp.huePickerInset, children: closure_7(sharedValue(16954), { hue: sharedValue, onPanFinalize: callback, saturation, lightness, fullWidth: true }) };
   items1[1] = closure_7(View, obj10);
   obj7.children = items1;
   obj4.children = closure_8(View, obj7);

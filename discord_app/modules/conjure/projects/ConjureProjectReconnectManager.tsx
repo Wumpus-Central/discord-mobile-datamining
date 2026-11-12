@@ -1,6 +1,6 @@
-// === Module 20050: ConjureProjectReconnectManager ===
+// === Module 20045: ConjureProjectReconnectManager ===
 
-// Module 20050 (ConjureProjectReconnectManager)
+// Module 20045 (ConjureProjectReconnectManager)
 import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6990 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 7265 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;

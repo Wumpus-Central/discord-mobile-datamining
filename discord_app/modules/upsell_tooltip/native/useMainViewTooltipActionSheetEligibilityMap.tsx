@@ -1,31 +1,31 @@
-// === Module 19643: useMainViewTooltipActionSheetEligibilityMap ===
+// === Module 19638: useMainViewTooltipActionSheetEligibilityMap ===
 
-// Module 19643 (useMainViewTooltipActionSheetEligibilityMap)
+// Module 19638 (useMainViewTooltipActionSheetEligibilityMap)
 import initialize from "initialize" /* 504 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
 import dismissible_content from "dismissible_content" /* 5076 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5285 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 9241 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9244 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 9247 */;
-import MarketingSurfaceType from "MarketingSurfaceType" /* 9561 */;
-import usePromotionMarketingSurface from "usePromotionMarketingSurface" /* 9944 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 11611 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11617 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 14469 */;
-import CustomTypingIndicatorNewPresetsExperiment from "CustomTypingIndicatorNewPresetsExperiment" /* 17863 */;
-import MobileBottomSheetCopy from "MobileBottomSheetCopy" /* 18237 */;
-import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 19616 */;
-import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 19644 */;
-import RecurringReferralReminderExperiment2 from "RecurringReferralReminderExperiment" /* 19645 */;
-import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 19646 */;
-import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 19647 */;
-import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 19648 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 9240 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9243 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 9246 */;
+import MarketingSurfaceType from "MarketingSurfaceType" /* 9560 */;
+import usePromotionMarketingSurface from "usePromotionMarketingSurface" /* 9943 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 11605 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11611 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 14465 */;
+import CustomTypingIndicatorNewPresetsExperiment from "CustomTypingIndicatorNewPresetsExperiment" /* 17858 */;
+import MobileBottomSheetCopy from "MobileBottomSheetCopy" /* 18232 */;
+import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 19611 */;
+import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 19639 */;
+import RecurringReferralReminderExperiment2 from "RecurringReferralReminderExperiment" /* 19640 */;
+import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 19641 */;
+import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 19642 */;
+import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 19643 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 9227 */;
-import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 19618 */;
-import PromotionsStore from "PromotionsStore" /* 9557 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 9226 */;
+import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 19613 */;
+import PromotionsStore from "PromotionsStore" /* 9556 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 5086 */;
 

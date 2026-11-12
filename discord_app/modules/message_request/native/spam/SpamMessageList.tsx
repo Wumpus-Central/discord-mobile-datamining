@@ -1,6 +1,6 @@
-// === Module 19570: SpamMessageList ===
+// === Module 19565: SpamMessageList ===
 
-// Module 19570 (SpamMessageList)
+// Module 19565 (SpamMessageList)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import transitionToChannel from "transitionToChannel" /* 6000 */;

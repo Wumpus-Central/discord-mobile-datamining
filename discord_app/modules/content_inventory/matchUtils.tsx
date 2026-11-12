@@ -1,11 +1,11 @@
-// === Module 9409: matchUtils ===
+// === Module 9408: matchUtils ===
 
-// Module 9409 (matchUtils)
+// Module 9408 (matchUtils)
 import SpotifyConstants from "SpotifyConstants" /* 7227 */;
 import CrunchyrollConnectionConstants from "CrunchyrollConnectionConstants" /* 7544 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 9410 */;
-import ContentInventoryListenedMediaProvider from "ContentInventoryListenedMediaProvider" /* 9412 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 9413 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 9409 */;
+import ContentInventoryListenedMediaProvider from "ContentInventoryListenedMediaProvider" /* 9411 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 9412 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -108,7 +108,7 @@ export function findMatchingEntry(entries, activity) {
   _require = activity;
   const found = entries.filter(require("utils").isEntryActive);
   if (activity.type === require("ActivityTypes").ActivityTypes.PLAYING) {
-    const found1 = found.filter(tmp(9410).isGamingLikeEntry);
+    const found1 = found.filter(tmp(9409).isGamingLikeEntry);
     let found2 = found1.find((extra) => {
       let name = closure_0;
       let game_name = extra.extra;
@@ -127,10 +127,10 @@ export function findMatchingEntry(entries, activity) {
       return tmp;
     });
   } else if (activity.type === tmp(6006).ActivityTypes.LISTENING) {
-    const found3 = found.filter(tmp(9410).isListenedSessionEntry);
+    const found3 = found.filter(tmp(9409).isListenedSessionEntry);
     found2 = found3.find((item) => isMatchingListeningActivity(item, closure_0));
   } else if (activity.type === tmp(6006).ActivityTypes.WATCHING) {
-    const found4 = entries.filter(tmp(9410).isWatchedMediaEntry);
+    const found4 = entries.filter(tmp(9409).isWatchedMediaEntry);
     found2 = found4.find((extra) => {
       const tmp3 = isCrunchyrollActivityDefault(activity);
       let tmp4 = !tmp3;

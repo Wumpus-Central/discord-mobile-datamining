@@ -1,6 +1,6 @@
-// === Module 10334: DisplayedInviteActionCreators ===
+// === Module 10332: DisplayedInviteActionCreators ===
 
-// Module 10334 (DisplayedInviteActionCreators)
+// Module 10332 (DisplayedInviteActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7594 */;
 import DisplayedInviteStore from "DisplayedInviteStore" /* 8400 */;

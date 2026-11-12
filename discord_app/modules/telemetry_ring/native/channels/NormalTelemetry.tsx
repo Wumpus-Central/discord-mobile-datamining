@@ -1,6 +1,6 @@
-// === Module 16465: NormalTelemetry ===
+// === Module 16460: NormalTelemetry ===
 
-// Module 16465 (NormalTelemetry)
+// Module 16460 (NormalTelemetry)
 import TelemetryRingNative2 from "TelemetryRingNative" /* 2125 */;
 import BaseTelemetryChannel from "BaseTelemetryChannel" /* 2124 */;
 

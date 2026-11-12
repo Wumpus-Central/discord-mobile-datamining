@@ -1,6 +1,6 @@
-// === Module 14009: GuildCapUpsellHooks ===
+// === Module 14005: GuildCapUpsellHooks ===
 
-// Module 14009 (GuildCapUpsellHooks)
+// Module 14005 (GuildCapUpsellHooks)
 import initialize from "initialize" /* 504 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
 import HotspotStore2 from "HotspotStore" /* 8381 */;

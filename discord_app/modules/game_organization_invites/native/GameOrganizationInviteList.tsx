@@ -1,8 +1,8 @@
-// === Module 16292: GameOrganizationInviteList ===
+// === Module 16287: GameOrganizationInviteList ===
 
-// Module 16292 (GameOrganizationInviteList)
+// Module 16287 (GameOrganizationInviteList)
 import nativeDefault from "native" /* 575 */;
-import GameOrganizationInviteRowDefault from "GameOrganizationInviteRow" /* 16293 */;
+import GameOrganizationInviteRowDefault from "GameOrganizationInviteRow" /* 16288 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

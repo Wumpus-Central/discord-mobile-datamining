@@ -1,6 +1,6 @@
-// === Module 18833: StageVoiceChannel ===
+// === Module 18828: StageVoiceChannel ===
 
-// Module 18833 (StageVoiceChannel)
+// Module 18828 (StageVoiceChannel)
 import nativeDefault from "native" /* 575 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2017 */;
 import useChannelNameDefault from "useChannelName" /* 5891 */;
@@ -8,11 +8,11 @@ import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6837 */;
 import StageMediaHooks from "StageMediaHooks" /* 6876 */;
 import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 7617 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7618 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10831 */;
-import ChannelItemDefault from "ChannelItem" /* 18712 */;
-import VoiceUsersDefault from "VoiceUsers" /* 18717 */;
-import ChannelInfoDefault from "ChannelInfo" /* 18823 */;
-import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 18834 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10825 */;
+import ChannelItemDefault from "ChannelItem" /* 18707 */;
+import VoiceUsersDefault from "VoiceUsers" /* 18712 */;
+import ChannelInfoDefault from "ChannelInfo" /* 18818 */;
+import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 18829 */;
 import noop from "module_19" /* 19 */;
 import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 8663 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
@@ -71,11 +71,11 @@ export default noop.memo(function StageVoiceChannel(channel) {
   }, items3);
   const tmp10 = useChannelNameDefault(channel, false);
   const tmp2Result = channel(6886);
-  const isConnectedToVoiceChannel = channel(10944).useIsConnectedToVoiceChannel(channel);
+  const isConnectedToVoiceChannel = channel(10938).useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  const tmp2Result2 = channel(10944);
+  const tmp2Result2 = channel(10938);
   const intl = tmp2(1113).intl;
   const tmp5Result = ChannelItemDefault;
   if (null != channel.userLimit) {

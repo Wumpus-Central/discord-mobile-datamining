@@ -1,6 +1,6 @@
-// === Module 12935: trackSoundPlayed ===
+// === Module 12929: trackSoundPlayed ===
 
-// Module 12935 (trackSoundPlayed)
+// Module 12929 (trackSoundPlayed)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import SoundboardTypes from "SoundboardTypes" /* 7164 */;
 import RunningGameStore from "RunningGameStore" /* 2137 */;
@@ -44,7 +44,7 @@ export default function trackSoundPlayed(location_stack, in_overlay, guildId, so
   if (tmp6) {
     tmp6 = sound_type !== SoundboardTypes.AnalyticsSoundType.ECHO;
   }
-  const obj = { feature_name: constants.SOUNDBOARD_PLAY, feature_tier: tmp6 ? constants.PREMIUM_STANDARD : constants.FREE, guild_id: guildId, home_guild_id: guildId.guildId, location_stack, rtc_connection_id: rTCConnectionId, media_session_id: mediaSessionId, in_overlay, application_name: name, emoji_count: null, feature_selection: null, feature_selection_id: null, sound_type: null, sequence_number: null };
+  const obj = { feature_name: constants.SOUNDBOARD_PLAY, feature_tier: tmp6 ? refs.PREMIUM_STANDARD : refs.FREE, guild_id: guildId, home_guild_id: guildId.guildId, location_stack, rtc_connection_id: rTCConnectionId, media_session_id: mediaSessionId, in_overlay, application_name: name, emoji_count: null, feature_selection: null, feature_selection_id: null, sound_type: null, sequence_number: null };
   if (null != guildId.emojiId) {
     let num = 1;
   } else {

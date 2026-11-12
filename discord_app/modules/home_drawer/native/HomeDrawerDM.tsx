@@ -1,14 +1,14 @@
-// === Module 18967: HomeDrawerDM ===
+// === Module 18962: HomeDrawerDM ===
 
-// Module 18967 (HomeDrawerDM)
+// Module 18962 (HomeDrawerDM)
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5435 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import useChannelName from "useChannelName" /* 5891 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5931 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10931 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 10982 */;
-import BellZIcon from "BellZIcon" /* 11868 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 17823 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10925 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 10976 */;
+import BellZIcon from "BellZIcon" /* 11862 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 17818 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
@@ -37,9 +37,9 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   let obj2 = channel(504);
-  const tmp3 = useMessagePreviewsDefault(channel, { unread: channel(18968).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = useMessagePreviewsDefault(channel, { unread: channel(18963).useBaseChannelUnreadBadgeState(channel, false).unread });
   closure_4 = tmp3;
-  const obj3 = channel(18968);
+  const obj3 = channel(18963);
   const items2 = [UserGuildSettingsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items2, () => UserGuildSettingsStore.getChannelMuteConfig(channel.guild_id, channel.id));
   const items3 = [stateFromStores1];
@@ -82,7 +82,7 @@ function HomeDrawerDMExpandedChildren(channel) {
     } else {
       const obj = { style: closure_1.title, children: null };
       const obj2 = { variant: "body-md/medium", style: closure_1.titleText, lineClamp: 1, color: "text-default", children: stateFromStores };
-      items = [closure_2_10(Text_Text.Text, obj2), closure_2_10(NOOP, { size: "xs" })];
+      items = [refs(Text_Text.Text, obj2), refs(NOOP, { size: "xs" })];
       obj.children = items;
       return closure_2_11(View, obj);
     }
@@ -91,11 +91,11 @@ function HomeDrawerDMExpandedChildren(channel) {
     let tmp2 = null;
     if (null != closure_4) {
       const obj = { channel, message: tmp, variant: "body-xs/medium", color: "text-strong", layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COZY, muted: memo.isMuted };
-      tmp2 = closure_2_10(ChannelRowPreview.ChannelRowPreview, obj);
+      tmp2 = refs(ChannelRowPreview.ChannelRowPreview, obj);
     }
     return tmp2;
   }, items5);
-  return closure_10(channel(18935).HomeDrawerSharedItem, { title, subtitle });
+  return closure_10(channel(18930).HomeDrawerSharedItem, { title, subtitle });
 }
 const View = fn(17).View;
 const isMultiUserDM = fn(5096).isMultiUserDM;
@@ -114,7 +114,7 @@ export default function HomeDrawerDMExpandedChildrenWrapper(channel) {
     tmp2 = null;
     if (!tmp) {
       const obj = { channel: channel.channel };
-      tmp2 = closure_1_10(HomeDrawerDMExpandedChildren, obj);
+      tmp2 = refs(HomeDrawerDMExpandedChildren, obj);
     }
   }
   return tmp2;

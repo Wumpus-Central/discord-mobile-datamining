@@ -1,6 +1,6 @@
-// === Module 18783: GameClaimCoachmark ===
+// === Module 18778: GameClaimCoachmark ===
 
-// Module 18783 (GameClaimCoachmark)
+// Module 18778 (GameClaimCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
@@ -11,9 +11,9 @@ import Pressables from "Pressables" /* 7364 */;
 import Card from "Card" /* 7381 */;
 import XSmallIcon from "XSmallIcon" /* 7483 */;
 import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8327 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 12065 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 18784 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 18785 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 12059 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 18779 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 18780 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -122,7 +122,7 @@ export default noop.memo(function GameClaimCoachmark(arg0) {
               require(constants2.TAKE_ACTION);
               v1 = 1;
               v3 = 1;
-              const obj5 = { value: v1(10422).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(10426).LoginHandoffSource.GAME_CLAIM), done: false };
+              const obj5 = { value: v1(10420).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(10424).LoginHandoffSource.GAME_CLAIM), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {

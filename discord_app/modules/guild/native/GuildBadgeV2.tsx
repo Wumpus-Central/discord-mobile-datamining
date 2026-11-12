@@ -1,13 +1,13 @@
-// === Module 10323: GuildBadgeV2 ===
+// === Module 10321: GuildBadgeV2 ===
 
-// Module 10323 (GuildBadgeV2)
+// Module 10321 (GuildBadgeV2)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import shared from "shared" /* 5250 */;
-import BadgeCategory from "BadgeCategory" /* 10324 */;
-import GuildTraits from "GuildTraits" /* 10325 */;
-import ExperimentalWebBadgeIcon from "ExperimentalWebBadgeIcon" /* 10326 */;
-import GuildBadgeImageSource from "GuildBadgeImageSource" /* 10329 */;
+import BadgeCategory from "BadgeCategory" /* 10322 */;
+import GuildTraits from "GuildTraits" /* 10323 */;
+import ExperimentalWebBadgeIcon from "ExperimentalWebBadgeIcon" /* 10324 */;
+import GuildBadgeImageSource from "GuildBadgeImageSource" /* 10327 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

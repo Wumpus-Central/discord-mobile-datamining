@@ -1,6 +1,6 @@
-// === Module 16096: GuildProductsStore ===
+// === Module 16091: GuildProductsStore ===
 
-// Module 16096 (GuildProductsStore)
+// Module 16091 (GuildProductsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

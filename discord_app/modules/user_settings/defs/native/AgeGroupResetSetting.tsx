@@ -1,14 +1,14 @@
-// === Module 17140: AgeGroupResetSetting ===
+// === Module 17135: AgeGroupResetSetting ===
 
-// Module 17140 (AgeGroupResetSetting)
+// Module 17135 (AgeGroupResetSetting)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1113 */;
 import _modDef3273 from "module_3273" /* 3273 */;
 import useAlertStore from "useAlertStore" /* 6207 */;
-import SettingsConstants from "SettingsConstants" /* 9136 */;
-import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 17137 */;
-import SettingsAgeGroupResetAlert from "SettingsAgeGroupResetAlert" /* 17141 */;
-import SettingBuilders from "SettingBuilders" /* 12317 */;
+import SettingsConstants from "SettingsConstants" /* 9135 */;
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 17132 */;
+import SettingsAgeGroupResetAlert from "SettingsAgeGroupResetAlert" /* 17136 */;
+import SettingBuilders from "SettingBuilders" /* 12311 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

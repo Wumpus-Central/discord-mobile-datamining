@@ -1,9 +1,9 @@
-// === Module 10417: ItchNeutralIcon ===
+// === Module 10415: ItchNeutralIcon ===
 
-// Module 10417 (ItchNeutralIcon)
+// Module 10415 (ItchNeutralIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod10418 from "module_10418" /* 10418 */;
+import _mod10416 from "module_10416" /* 10416 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ItchNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10418, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10416, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

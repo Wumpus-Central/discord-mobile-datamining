@@ -1,12 +1,12 @@
-// === Module 18803: NewMemberActionsProgress ===
+// === Module 18798: NewMemberActionsProgress ===
 
-// Module 18803 (NewMemberActionsProgress)
+// Module 18798 (NewMemberActionsProgress)
 import nativeDefault from "native" /* 575 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7017 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8935 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8934 */;
 
 const require = fn;
 function ProgressBar(percent) {
@@ -18,8 +18,8 @@ function ProgressBar(percent) {
   items[1] = obj3;
   obj2.style = items;
   obj2.colors = ["rgba(103, 203, 134, 1)", "rgba(59, 165, 92, 1)"];
-  obj.children = closure_1_10(LinearGradientDefault, obj2);
-  return closure_1_10(View, obj);
+  obj.children = refs(LinearGradientDefault, obj2);
+  return refs(View, obj);
 }
 const View = fn(17).View;
 const StaticChannelRoute = fn(5099).StaticChannelRoute;

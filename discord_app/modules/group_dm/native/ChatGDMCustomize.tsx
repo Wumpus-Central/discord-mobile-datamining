@@ -1,6 +1,6 @@
-// === Module 10846: ChatGDMCustomize ===
+// === Module 10840: ChatGDMCustomize ===
 
-// Module 10846 (ChatGDMCustomize)
+// Module 10840 (ChatGDMCustomize)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

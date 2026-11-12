@@ -1,6 +1,6 @@
-// === Module 18412: DebugLogView ===
+// === Module 18407: DebugLogView ===
 
-// Module 18412 (DebugLogView)
+// Module 18407 (DebugLogView)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import noop from "module_19" /* 19 */;
@@ -59,7 +59,7 @@ export default function DebugLogView() {
       items3[1] = closure_10(closure_5, obj6);
       obj3.children = items3;
       const items4 = [closure_9(stateFromStores, obj3), ];
-      const obj8 = { children: substr.map((children, index) => closure_2_10(Text_Text.Text, { variant: "body-xs/normal", style: debugLogText.debugLogText, children }, index)) };
+      const obj8 = { children: substr.map((children, index) => refs(Text_Text.Text, { variant: "body-xs/normal", style: debugLogText.debugLogText, children }, index)) };
       items4[1] = closure_10(closure_4, obj8);
       obj2.children = items4;
       return closure_9(stateFromStores, obj2);

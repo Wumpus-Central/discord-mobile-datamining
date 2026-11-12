@@ -1,15 +1,15 @@
-// === Module 18695: MessagesItemAddFriendsWidget ===
+// === Module 18690: MessagesItemAddFriendsWidget ===
 
-// Module 18695 (MessagesItemAddFriendsWidget)
+// Module 18690 (MessagesItemAddFriendsWidget)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import RootNavigationRef from "RootNavigationRef" /* 5430 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import Pressables from "Pressables" /* 7364 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7594 */;
-import IconActionButtonDefault from "IconActionButton" /* 15510 */;
-import _modDef16173 from "module_16173" /* 16173 */;
-import _modDef18696 from "module_18696" /* 18696 */;
+import IconActionButtonDefault from "IconActionButton" /* 15507 */;
+import _modDef16168 from "module_16168" /* 16168 */;
+import _modDef18691 from "module_18691" /* 18691 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -222,7 +222,7 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1072).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const sum = fn(15510).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const sum = fn(15507).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
 const createStyles = fn(5243);
 let obj = { container: { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, title: null, actions: null, actionIcon: null };
 let obj3 = { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
@@ -260,12 +260,12 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj2.children = metroImportDefault(Text_Text.Text, obj3);
   items = [metroImportDefault(Pressables.PressableHighlight, obj2), ];
   const obj4 = { style: tmp.actions, children: null };
-  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef16173, onPress: handleShare, accessibilityLabel: null };
+  const obj5 = { style: tmp.actionIcon, variant: "filled", source: _modDef16168, onPress: handleShare, accessibilityLabel: null };
   const intl3 = util.intl;
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [metroImportDefault(IconActionButtonDefault, obj5), ];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef18696;
+  obj6.source = _modDef18691;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

@@ -1,6 +1,6 @@
-// === Module 14784: CommunicationDisabledManager ===
+// === Module 14780: CommunicationDisabledManager ===
 
-// Module 14784 (CommunicationDisabledManager)
+// Module 14780 (CommunicationDisabledManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5162 */;
 import GuildMemberStore_mod from "GuildMemberStore" /* 5155 */;

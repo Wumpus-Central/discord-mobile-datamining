@@ -1,6 +1,6 @@
-// === Module 11332: HorizontalAutocompleteWrapper ===
+// === Module 11326: HorizontalAutocompleteWrapper ===
 
-// Module 11332 (HorizontalAutocompleteWrapper)
+// Module 11326 (HorizontalAutocompleteWrapper)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,13 +1,13 @@
-// === Module 11573: UploadPreviewActionSheet ===
+// === Module 11567: UploadPreviewActionSheet ===
 
-// Module 11573 (UploadPreviewActionSheet)
+// Module 11567 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8813 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 11092 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11574 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11788 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8812 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 11086 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11568 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 11782 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

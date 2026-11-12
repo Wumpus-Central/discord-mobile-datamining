@@ -1,6 +1,6 @@
-// === Module 10763: game_console/GameConsoleAlertUtils ===
+// === Module 10757: game_console/GameConsoleAlertUtils ===
 
-// Module 10763 (game_console/GameConsoleAlertUtils)
+// Module 10757 (game_console/GameConsoleAlertUtils)
 import util from "util" /* 1113 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6206 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 7358 */;
@@ -55,7 +55,7 @@ export default {
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
     const obj2 = { title, body: null, onConfirm: null, isDismissable: false };
     let obj = actions_AlertActionCreatorsDefault;
-    obj2.body = jsx(reconnectPlatformType(10764).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: actions_AlertActionCreatorsDefault.close });
+    obj2.body = jsx(reconnectPlatformType(10758).SelfDismissibleAlertBody, { body, errorCodeMessage, dismissCallback: actions_AlertActionCreatorsDefault.close });
     obj2.onConfirm = function handleConfirm() {
       if (null != reconnectPlatformType) {
         const obj = { platformType: tmp, location: _location };

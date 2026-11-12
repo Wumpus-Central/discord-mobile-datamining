@@ -1,13 +1,13 @@
-// === Module 20007: AcceptInviteManager ===
+// === Module 20002: AcceptInviteManager ===
 
-// Module 20007 (AcceptInviteManager)
+// Module 20002 (AcceptInviteManager)
 import router_utils from "router_utils" /* 1099 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 8775 */;
-import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 10334 */;
-import FriendInviteUtils from "FriendInviteUtils" /* 20009 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 8774 */;
+import DisplayedInviteActionCreators from "DisplayedInviteActionCreators" /* 10332 */;
+import FriendInviteUtils from "FriendInviteUtils" /* 20004 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
@@ -17,7 +17,7 @@ import PermissionStore from "PermissionStore" /* 5175 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(8709).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(8708).ACCEPT_INVITE_MODAL_KEY;
 const Constants = fn(1072);
 ({ InviteStates: closure_10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const prototype = function AcceptInviteManager() {
@@ -135,7 +135,7 @@ const prototype = function AcceptInviteManager() {
         } else {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           const obj4 = { code, isRegistration: applyArgumentsResult._isRegistration, deeplinkAttemptId, inviteInstanceId };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20008, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20003, dependencyMap.paths), obj4, ACCEPT_INVITE_MODAL_KEY);
           flag = false;
         }
       }

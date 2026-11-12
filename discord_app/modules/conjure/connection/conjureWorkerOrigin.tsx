@@ -1,6 +1,6 @@
-// === Module 15703: conjureWorkerOrigin ===
+// === Module 15698: conjureWorkerOrigin ===
 
-// Module 15703 (conjureWorkerOrigin)
+// Module 15698 (conjureWorkerOrigin)
 import conjureLocalDev from "conjureLocalDev" /* 7273 */;
 import size from "module_2" /* 2 */;
 

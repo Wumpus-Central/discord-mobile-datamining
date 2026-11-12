@@ -1,6 +1,6 @@
-// === Module 12502: NativeCommandClipboardModule ===
+// === Module 12496: NativeCommandClipboardModule ===
 
-// Module 12502 (NativeCommandClipboardModule)
+// Module 12496 (NativeCommandClipboardModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

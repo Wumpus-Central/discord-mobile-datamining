@@ -1,15 +1,15 @@
-// === Module 8738: QuestDataUtils ===
+// === Module 8737: QuestDataUtils ===
 
-// Module 8738 (QuestDataUtils)
+// Module 8737 (QuestDataUtils)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import QuestTypes from "QuestTypes" /* 5278 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 8740 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 8749 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 8739 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 8739 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 8748 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8738 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
-import BountyStore from "BountyStore" /* 8741 */;
-import QuestStore from "QuestStore" /* 8742 */;
+import BountyStore from "BountyStore" /* 8740 */;
+import QuestStore from "QuestStore" /* 8741 */;
 
 require = fn;
 function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) {
@@ -208,7 +208,7 @@ export function getBountyByPlacementAndId(questPlacementFromQuestContent, bounty
 }
 export function getAdDecisionData(adContentId, questContent) {
   if (null == obj[questContent]) {
-    return closure_1_10;
+    return refs;
   } else {
     obj = getQuestDeliveryDataForPlacement(tmp, adContentId);
     if (obj == null) {
@@ -216,7 +216,7 @@ export function getAdDecisionData(adContentId, questContent) {
     }
     const adDecisionData = obj.adDecisionData;
     if (null == adDecisionData) {
-      let tmp6 = closure_1_10;
+      let tmp6 = refs;
     } else {
       tmp6 = adDecisionData;
       if (tmp4 !== adContentId) {

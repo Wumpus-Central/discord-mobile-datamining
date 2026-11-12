@@ -1,18 +1,18 @@
-// === Module 13401: AppLauncherCommandOption ===
+// === Module 13395: AppLauncherCommandOption ===
 
-// Module 13401 (AppLauncherCommandOption)
+// Module 13395 (AppLauncherCommandOption)
 import nativeDefault from "native" /* 575 */;
 import utils_AutocompleteUtilsDefault from "utils/AutocompleteUtils" /* 7009 */;
-import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 13402 */;
-import AppLauncherAutocompleteOptionDefault from "AppLauncherAutocompleteOption" /* 13408 */;
-import AppLauncherTextInputOptionDefault from "AppLauncherTextInputOption" /* 13410 */;
-import AppLauncherAttachmentOptionDefault from "AppLauncherAttachmentOption" /* 13413 */;
-import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 13415 */;
-import AppLauncherMentionableOptionDefault from "AppLauncherMentionableOption" /* 13416 */;
-import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 13418 */;
-import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 13422 */;
-import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 13423 */;
-import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 13429 */;
+import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 13396 */;
+import AppLauncherAutocompleteOptionDefault from "AppLauncherAutocompleteOption" /* 13402 */;
+import AppLauncherTextInputOptionDefault from "AppLauncherTextInputOption" /* 13404 */;
+import AppLauncherAttachmentOptionDefault from "AppLauncherAttachmentOption" /* 13407 */;
+import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 13409 */;
+import AppLauncherMentionableOptionDefault from "AppLauncherMentionableOption" /* 13410 */;
+import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 13412 */;
+import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 13416 */;
+import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 13417 */;
+import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 13423 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

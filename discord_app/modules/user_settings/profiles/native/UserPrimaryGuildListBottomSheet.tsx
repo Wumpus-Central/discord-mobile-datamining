@@ -1,6 +1,6 @@
-// === Module 17019: UserPrimaryGuildListBottomSheet ===
+// === Module 17014: UserPrimaryGuildListBottomSheet ===
 
-// Module 17019 (UserPrimaryGuildListBottomSheet)
+// Module 17014 (UserPrimaryGuildListBottomSheet)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489
 import GuildIconDefault from "GuildIcon" /* 7654 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
 import Form from "Form" /* 8041 */;
-import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 10611 */;
+import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 10609 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -100,7 +100,7 @@ let closure_11 = noop.memo(function Item(item) {
     obj10.guildTag = tag;
     obj10.guildBadge = guildTagBadgeUrl;
     obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp10Result2 = closure_7(tmp7(10587).BaseGuildTagChiplet, obj10);
+    tmp10Result2 = closure_7(tmp7(10585).BaseGuildTagChiplet, obj10);
   }
   items = [tmp10Result2, closure_7(item(7682).FormRadio, { selected })];
   obj5.children = items;

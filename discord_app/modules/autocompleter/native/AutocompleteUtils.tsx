@@ -1,11 +1,11 @@
-// === Module 11172: autocompleter/AutocompleteUtils ===
+// === Module 11166: autocompleter/AutocompleteUtils ===
 
-// Module 11172 (autocompleter/AutocompleteUtils)
+// Module 11166 (autocompleter/AutocompleteUtils)
 import nativeDefault from "native" /* 575 */;
 import UserUtilsDefault from "UserUtils" /* 5309 */;
 import useChannelName from "useChannelName" /* 5891 */;
 import FormDividerDefault from "FormDivider" /* 8045 */;
-import TimestampUtils from "TimestampUtils" /* 9308 */;
+import TimestampUtils from "TimestampUtils" /* 9307 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 5173 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
@@ -19,7 +19,7 @@ function AutocompleteFormDivider() {
 let closure_3 = fn(5096).isGuildSelectableChannelType;
 const Constants = fn(1072);
 ({ AutoCompleteResultTypes: metroImportDefault, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(11173);
+const ApplicationCommandsConstants = fn(11167);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: closure_10 } = ApplicationCommandsConstants);
 const ChannelAutocompleteConstants = fn(6283);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
@@ -39,7 +39,7 @@ export function getItemLayout(arg0, index) {
       type = tmp2.type;
     }
   }
-  const tmp3 = type === constants.EMOJI ? React6 : closure_1_10;
+  const tmp3 = type === constants.EMOJI ? React6 : refs;
   const obj = { length: tmp3, offset: null, index };
   const result = index * tmp3;
   obj.offset = result + Math.max(0, (index - 1) * hairlineWidth);

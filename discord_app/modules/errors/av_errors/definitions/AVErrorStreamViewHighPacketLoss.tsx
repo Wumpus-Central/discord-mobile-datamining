@@ -1,10 +1,10 @@
-// === Module 20682: AVErrorStreamViewHighPacketLoss ===
+// === Module 20677: AVErrorStreamViewHighPacketLoss ===
 
-// Module 20682 (AVErrorStreamViewHighPacketLoss)
+// Module 20677 (AVErrorStreamViewHighPacketLoss)
 import AVError from "AVError" /* 6194 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6745 */;
-import AVErrorContext from "AVErrorContext" /* 20678 */;
-import AVErrorUtils from "AVErrorUtils" /* 20681 */;
+import AVErrorContext from "AVErrorContext" /* 20673 */;
+import AVErrorUtils from "AVErrorUtils" /* 20676 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6739 */;

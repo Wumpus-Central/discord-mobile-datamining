@@ -1,6 +1,6 @@
-// === Module 11039: BugReporterModal ===
+// === Module 11033: BugReporterModal ===
 
-// Module 11039 (BugReporterModal)
+// Module 11033 (BugReporterModal)
 import nativeDefault from "native" /* 575 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
@@ -12,13 +12,13 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
 import HeaderActionButton from "HeaderActionButton" /* 7363 */;
 import NavigatorHeader from "NavigatorHeader" /* 7427 */;
 import TableRadioRow from "TableRadioRow" /* 7681 */;
-import UploadPlatform from "UploadPlatform" /* 8784 */;
-import UploadDefault from "Upload" /* 8808 */;
+import UploadPlatform from "UploadPlatform" /* 8783 */;
+import UploadDefault from "Upload" /* 8807 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
-import BugReportStore from "BugReportStore" /* 11038 */;
+import BugReportStore from "BugReportStore" /* 11032 */;
 import n from "module_671" /* 671 */;
 
 require = fn;
@@ -501,7 +501,7 @@ class BugCreateScreen {
                         }
                         c5 = 1;
                         c6 = 1;
-                        const obj11 = { value: closure_2_0(11041).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
+                        const obj11 = { value: closure_2_0(11035).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
                         return obj11;
                       } catch (tmp46) {
                         c6 = tmp;
@@ -544,7 +544,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(11040).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(11034).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -661,7 +661,7 @@ class BugCreateScreen {
             tmp8 = tmp12;
           }
           obj.disabled = tmp8;
-          return closure_3_10(HeaderActionButton.HeaderActionButton, obj);
+          return refs(HeaderActionButton.HeaderActionButton, obj);
         }
       });
     }, items3);
@@ -825,8 +825,8 @@ class BugCreateScreen {
         const tmp = FastImageDefault;
         obj3.uri = AvatarUtils.getEmojiURL({ id: emoji, animated: true, size: 48 });
         obj2.source = obj3;
-        obj.icon = closure_2_10(tmp, obj2);
-        return closure_2_10(TableRadioRow.TableRadioRow, obj, value);
+        obj.icon = refs(tmp, obj2);
+        return refs(TableRadioRow.TableRadioRow, obj, value);
       });
       items8[3] = tmp33(tmp21(tmp22[45]).TableRadioGroup, obj27);
       obj28 = { label: null, placeholder: null, onChange: null, autoCorrect: true, autoCapitalize: "sentences" };
@@ -893,7 +893,7 @@ class BugCreateScreen {
       obj34 = { disabled: null, onPress: null, label: null, arrow: true };
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
-        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11078, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
+        return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11072, dependencyMap.paths), "BugReporterFeatureActionSheet", { features: null != first7 ? first7.features : [], feature: first8, setFeature });
       };
       if (null != first8) {
         name = first8.name;

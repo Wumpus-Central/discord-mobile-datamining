@@ -1,6 +1,6 @@
-// === Module 10064: hooks/QuestHooks ===
+// === Module 10063: hooks/QuestHooks ===
 
-// Module 10064 (hooks/QuestHooks)
+// Module 10063 (hooks/QuestHooks)
 import initialize from "initialize" /* 504 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
@@ -17,31 +17,31 @@ import QualtricsActionCreators from "QualtricsActionCreators" /* 6826 */;
 import SurveyActionTypes from "SurveyActionTypes" /* 6833 */;
 import DiscordAppStateDefault from "DiscordAppState" /* 6984 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7196 */;
-import QuestDataUtils from "QuestDataUtils" /* 8738 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 8749 */;
-import AnalyticsActions from "AnalyticsActions" /* 8759 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 8763 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8765 */;
-import QuestType from "QuestType" /* 8767 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8768 */;
-import QuestActionCreators from "QuestActionCreators" /* 10066 */;
-import AssetUtils from "AssetUtils" /* 10078 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 10083 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10102 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 15138 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 15141 */;
-import QuestConsoleStartError from "QuestConsoleStartError" /* 15142 */;
-import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 15143 */;
+import QuestDataUtils from "QuestDataUtils" /* 8737 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 8748 */;
+import AnalyticsActions from "AnalyticsActions" /* 8758 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 8762 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8764 */;
+import QuestType from "QuestType" /* 8766 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8767 */;
+import QuestActionCreators from "QuestActionCreators" /* 10065 */;
+import AssetUtils from "AssetUtils" /* 10077 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 10082 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10101 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 15135 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 15138 */;
+import QuestConsoleStartError from "QuestConsoleStartError" /* 15139 */;
+import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 15140 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 8739 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8738 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7022 */;
 import UserStore from "UserStore" /* 1385 */;
-import BountyStore from "BountyStore" /* 8741 */;
-import QuestStore from "QuestStore" /* 8742 */;
+import BountyStore from "BountyStore" /* 8740 */;
+import QuestStore from "QuestStore" /* 8741 */;
 
 const require = globalThis.__r;
 
@@ -75,7 +75,7 @@ function useQuests(arg0) {
   const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
   lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
   const obj4 = obj(504);
-  isEligibleForQuests = obj(10065).getIsEligibleForQuests();
+  isEligibleForQuests = obj(10064).getIsEligibleForQuests();
   const items3 = [obj.fetchPolicy, isEligibleForQuests, hasFetched, isFetchingCurrentQuests, lastFetchedCurrentQuests, obj.callerSource];
   const effect = isEligibleForQuests.useEffect(() => {
     const fetchPolicy = obj.fetchPolicy;
@@ -736,7 +736,7 @@ function useTaskPlatformScreen(quest, questTaskDetails) {
   ];
   return items8;
 }
-const useConsoleQuestUIStore = fn(8743).useConsoleQuestUIStore;
+const useConsoleQuestUIStore = fn(8742).useConsoleQuestUIStore;
 const QuestConstants = fn(5275);
 ({ QuestTaskPlatform: closure_14, QuestsExperimentLocations: closure_15, MEMBER_LIST_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES: closure_16, QuestHomeSortMethods: closure_17, SORTED_QUEST_HOME_FILTER_GROUPS: closure_18, TaskFilterTypes: closure_19, RewardFilterTypes: closure_20, MOBILE_ORBS_INTRO_QUEST_ID: closure_21, ORBS_INTRO_QUEST_ID: closure_22, QuestVariants: closure_23 } = QuestConstants);
 const Constants = fn(1072);
@@ -1117,7 +1117,7 @@ export function useConnectedConsoleLinkOnClick(quest) {
   let obj = quest(504);
   const tmp = quest;
   const tmp5 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = quest(8765).isConsoleQuest(quest);
+  let isConsoleQuestResult = quest(8764).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1125,8 +1125,8 @@ export function useConnectedConsoleLinkOnClick(quest) {
     isConsoleQuestResult = !tmp5;
   }
   c3 = isConsoleQuestResult;
-  obj2 = quest(8765);
-  closure_4 = tmp(10100).useGetQuestImpressionId();
+  obj2 = quest(8764);
+  closure_4 = tmp(10099).useGetQuestImpressionId();
   return () => {
     const obj = QuestPlatformUtils;
     if (c3) {
@@ -1202,23 +1202,23 @@ export function useQuestPreviewActions(id) {
   items = [id];
   return noop.useMemo(() => ({
     handleComplete() {
-      return closure_0(10066).completeQuestPreview(id);
+      return closure_0(10065).completeQuestPreview(id);
     },
     handleProgress(random) {
-      return closure_0(10066).completeQuestPreview(id, random);
+      return closure_0(10065).completeQuestPreview(id, random);
     },
     handleResetStatusClick() {
-      return closure_0(10066).resetQuestPreviewStatus(id);
+      return closure_0(10065).resetQuestPreviewStatus(id);
     },
     handleResetDismissibilityClick() {
-      return closure_0(10066).resetQuestDismissibilityStatus(id);
+      return closure_0(10065).resetQuestDismissibilityStatus(id);
     },
     handleOverridePreviewClick(placement) {
-      return closure_0(10066).overrideQuestForPlacement(placement, id);
+      return closure_0(10065).overrideQuestForPlacement(placement, id);
     },
     handleResetHasBeenSeenClick() {
       items = [id];
-      return closure_0(10066).markAdContentUnseen(closure_0(5282).AdCreativeType.QUEST, items);
+      return closure_0(10065).markAdContentUnseen(closure_0(5282).AdCreativeType.QUEST, items);
     }
   }), items);
 }
@@ -1358,7 +1358,7 @@ export function useWaitingForConsoleConnection(quest) {
   ({ xboxAccounts, playstationAccounts } = memo);
   const obj = accounts(504);
   const tmp3 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = accounts(8765).isConsoleQuest(quest);
+  let isConsoleQuestResult = accounts(8764).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1664,8 +1664,8 @@ export function useQuestWarningTips(userStatus) {
     tmp19 = null != completedAt;
     let tmp22 = require("PlatformUtils").isWeb() && tmp17;
     if (tmp22) {
-      tmp22 = !tmp11(10102).isQuestSupportedOnWeb(userStatus);
-      const tmp11Result3 = tmp11(10102);
+      tmp22 = !tmp11(10101).isQuestSupportedOnWeb(userStatus);
+      const tmp11Result3 = tmp11(10101);
     }
     const tmp11Result = require("PlatformUtils");
     let isMacResult = require("PlatformUtils").isMac();
@@ -2067,13 +2067,13 @@ export function useFetchQuestHomeBounties(arg0) {
                 if (arr.length > 0) {
                   c1 = 3;
                   c4 = 1;
-                  const obj6 = { value: previewAdCreativeIds(15145).fetchBountyPreview(arr, previewAdCreativeIds(5278).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+                  const obj6 = { value: previewAdCreativeIds(15142).fetchBountyPreview(arr, previewAdCreativeIds(5278).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
                   return obj6;
                 }
               }
               c1 = 2;
               c4 = 1;
-              const obj7 = { value: previewAdCreativeIds(15145).fetchQuestHomeBounties(previewAdCreativeIds(5278).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+              const obj7 = { value: previewAdCreativeIds(15142).fetchQuestHomeBounties(previewAdCreativeIds(5278).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
               return obj7;
             }
           } else if (1 === tmp7) {

@@ -1,16 +1,16 @@
-// === Module 10251: GameProfileHeader ===
+// === Module 10249: GameProfileHeader ===
 
-// Module 10251 (GameProfileHeader)
+// Module 10249 (GameProfileHeader)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import SKUUtils from "SKUUtils" /* 10252 */;
-import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 10253 */;
-import GameCoverArt from "GameCoverArt" /* 10254 */;
-import GameProfileRankPillDefault from "GameProfileRankPill" /* 10256 */;
-import _modDef10258 from "module_10258" /* 10258 */;
+import SKUUtils from "SKUUtils" /* 10250 */;
+import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 10251 */;
+import GameCoverArt from "GameCoverArt" /* 10252 */;
+import GameProfileRankPillDefault from "GameProfileRankPill" /* 10254 */;
+import _modDef10256 from "module_10256" /* 10256 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -18,7 +18,7 @@ const GameCoverArtDefault = GameCoverArt;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(10249);
+const GameProfileConstants = fn(10247);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
@@ -123,7 +123,7 @@ export default function GameProfileHeader(arg0) {
   const items10 = [timestampProducer(Text_Text.Text, obj14), ];
   let tmp15Result3 = game.id === hasOwnProperty;
   if (tmp15Result3) {
-    const obj15 = { source: _modDef10258, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    const obj15 = { source: _modDef10256, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
     tmp15Result3 = timestampProducer(FastImageDefault, obj15);
     const tmp9Result2 = FastImageDefault;
   }

@@ -1,6 +1,6 @@
-// === Module 10797: isListeningOnSpotify ===
+// === Module 10791: isListeningOnSpotify ===
 
-// Module 10797 (isListeningOnSpotify)
+// Module 10791 (isListeningOnSpotify)
 import Constants from "Constants" /* 1072 */;
 import ActivityTypes from "ActivityTypes" /* 6006 */;
 import PlatformsDefault from "Platforms" /* 7024 */;

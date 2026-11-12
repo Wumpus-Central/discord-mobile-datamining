@@ -1,6 +1,6 @@
-// === Module 12618: fetchDetectableGames ===
+// === Module 12612: fetchDetectableGames ===
 
-// Module 12618 (fetchDetectableGames)
+// Module 12612 (fetchDetectableGames)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
@@ -107,7 +107,7 @@ let closure_6 = async function _fetchDetectableGames() {
     }
   }
 };
-let closure_5 = fn(12619).detectableGamesPayloadCdnUrl;
+let closure_5 = fn(12613).detectableGamesPayloadCdnUrl;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_detection/fetchDetectableGames.tsx");
 

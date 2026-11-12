@@ -1,6 +1,6 @@
-// === Module 11587: MediaKeyboardItem ===
+// === Module 11581: MediaKeyboardItem ===
 
-// Module 11587 (MediaKeyboardItem)
+// Module 11581 (MediaKeyboardItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -9,11 +9,11 @@ import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5485 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import ImageIcon from "ImageIcon" /* 8020 */;
-import AttachmentIcon from "AttachmentIcon" /* 10985 */;
-import _modDef11307 from "module_11307" /* 11307 */;
-import CameraIcon from "CameraIcon" /* 11592 */;
+import AttachmentIcon from "AttachmentIcon" /* 10979 */;
+import _modDef11301 from "module_11301" /* 11301 */;
+import CameraIcon from "CameraIcon" /* 11586 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8806 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8805 */;
 
 const module_1652 = _mod1652;
 
@@ -24,9 +24,9 @@ function NewCaption(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.labelContainer, style];
   obj.style = items;
-  const items1 = [React6(native.Icon, { source: _modDef11307, style: tmp.icon }), React6(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "body-xs/semibold", children: label })];
+  const items1 = [React6(native.Icon, { source: _modDef11301, style: tmp.icon }), React6(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "body-xs/semibold", children: label })];
   obj.children = items1;
-  return closure_1_10(React4, obj);
+  return refs(React4, obj);
 }
 function MediaKeyboardImage(draftType) {
   draftType = draftType.draftType;
@@ -333,7 +333,7 @@ function MediaKeyboardSpecialButton(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(11588);
+const DeviceConstants = fn(11582);
 ({ ALAssetsType: metroImportDefault, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

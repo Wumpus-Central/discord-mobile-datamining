@@ -1,8 +1,8 @@
-// === Module 11280: GIFPickerUtils ===
+// === Module 11274: GIFPickerUtils ===
 
-// Module 11280 (GIFPickerUtils)
+// Module 11274 (GIFPickerUtils)
 import Constants from "Constants" /* 1072 */;
-import GifProvider from "GifProvider" /* 11279 */;
+import GifProvider from "GifProvider" /* 11273 */;
 import size from "module_2" /* 2 */;
 
 const SearchTypes = Constants.SearchTypes;

@@ -1,6 +1,6 @@
-// === Module 15879: isSoundValid ===
+// === Module 15874: isSoundValid ===
 
-// Module 15879 (isSoundValid)
+// Module 15874 (isSoundValid)
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import PermissionStore from "PermissionStore" /* 5175 */;

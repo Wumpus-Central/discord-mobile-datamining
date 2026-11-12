@@ -1,6 +1,6 @@
-// === Module 8792: RequestGatewaySocket ===
+// === Module 8791: RequestGatewaySocket ===
 
-// Module 8792 (RequestGatewaySocket)
+// Module 8791 (RequestGatewaySocket)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

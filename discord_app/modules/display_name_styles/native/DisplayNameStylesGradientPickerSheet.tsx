@@ -1,6 +1,6 @@
-// === Module 17859: DisplayNameStylesGradientPickerSheet ===
+// === Module 17854: DisplayNameStylesGradientPickerSheet ===
 
-// Module 17859 (DisplayNameStylesGradientPickerSheet)
+// Module 17854 (DisplayNameStylesGradientPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6, StyleSheet: metroImportDefault } = get_ActivityIndicator);
-const SHEET_CONTENT_MAX_WIDTH = fn(17850).SHEET_CONTENT_MAX_WIDTH;
+const SHEET_CONTENT_MAX_WIDTH = fn(17845).SHEET_CONTENT_MAX_WIDTH;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

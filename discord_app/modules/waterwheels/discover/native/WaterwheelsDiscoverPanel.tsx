@@ -1,9 +1,9 @@
-// === Module 18877: WaterwheelsDiscoverPanel ===
+// === Module 18872: WaterwheelsDiscoverPanel ===
 
-// Module 18877 (WaterwheelsDiscoverPanel)
+// Module 18872 (WaterwheelsDiscoverPanel)
 import nativeDefault from "native" /* 575 */;
-import WaterwheelsDiscoverCardDefault from "WaterwheelsDiscoverCard" /* 18889 */;
-import WaterwheelsDiscoverNavigation from "WaterwheelsDiscoverNavigation" /* 18892 */;
+import WaterwheelsDiscoverCardDefault from "WaterwheelsDiscoverCard" /* 18884 */;
+import WaterwheelsDiscoverNavigation from "WaterwheelsDiscoverNavigation" /* 18887 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
@@ -18,14 +18,14 @@ function getItemType(card) {
   return card.card.layout.type;
 }
 function RowSeparator() {
-  return React6(View, { style: closure_13().separator });
+  return React6(View, { style: closure_12().separator });
 }
 function WaterwheelsDiscoverFeed(enabled) {
   enabled = enabled.enabled;
   _require = undefined;
   let trackAction;
   let onAction;
-  const tmp = closure_13();
+  const tmp = closure_12();
   const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
   _require = youBarTotalHeight;
   let obj = require("useYouBarTotalHeight");
@@ -174,18 +174,19 @@ function WaterwheelsDiscoverFeed(enabled) {
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
+({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const WaterwheelsDiscoverPanel = "WaterwheelsDiscoverPanel";
 const createStyles = fn(5243);
-let obj2 = { feed: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, separator: { height: 1 } };
-let closure_13 = createStyles.createStyles(obj2);
+let obj2 = { content: { flex: 1 }, feed: { flex: 1 }, separator: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/discover/native/WaterwheelsDiscoverPanel.tsx");
 
 export default function WaterwheelsDiscoverPanel(style) {
   let waterwheelsDiscoverEnabled;
-  waterwheelsDiscoverEnabled = waterwheelsDiscoverEnabled(10147).useWaterwheelsDiscoverEnabled(WaterwheelsDiscoverPanel);
-  let obj = waterwheelsDiscoverEnabled(10147);
+  let tmp = closure_12();
+  waterwheelsDiscoverEnabled = waterwheelsDiscoverEnabled(10146).useWaterwheelsDiscoverEnabled(WaterwheelsDiscoverPanel);
+  let obj = waterwheelsDiscoverEnabled(10146);
   items = [AuthenticationStore, UserStore, ApexExperimentStore];
   const stateFromStoresObject = waterwheelsDiscoverEnabled(504).useStateFromStoresObject(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -209,17 +210,17 @@ export default function WaterwheelsDiscoverPanel(style) {
     }
   }, items1);
   const obj3 = { style: style.style, children: null };
-  let tmp8 = null;
+  let tmp9 = null;
   const obj2 = waterwheelsDiscoverEnabled(504);
-  const tmp6 = gateReady;
+  const tmp7 = gateReady;
   if (waterwheelsDiscoverEnabled) {
-    const obj4 = { children: null };
-    const items2 = [closure_9(tmp6(18894), {}), ];
+    const obj4 = { style: tmp.content, children: null };
+    const items2 = [closure_9(tmp7(18889), {}), ];
     const obj5 = { enabled: waterwheelsDiscoverEnabled };
     items2[1] = closure_9(WaterwheelsDiscoverFeed, obj5, stateFromStoresObject.userId);
     obj4.children = items2;
-    tmp8 = closure_11(closure_10, obj4);
+    tmp9 = closure_10(View, obj4);
   }
-  obj3.children = tmp8;
-  return closure_9(gateReady(18646), obj3);
+  obj3.children = tmp9;
+  return closure_9(gateReady(18641), obj3);
 };

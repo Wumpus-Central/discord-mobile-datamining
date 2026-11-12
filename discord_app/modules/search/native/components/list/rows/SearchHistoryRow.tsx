@@ -1,11 +1,11 @@
-// === Module 19292: SearchHistoryRow ===
+// === Module 19287: SearchHistoryRow ===
 
-// Module 19292 (SearchHistoryRow)
+// Module 19287 (SearchHistoryRow)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import UserActionCreators from "UserActionCreators" /* 7286 */;
-import TrackingDefault from "Tracking" /* 14652 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14656 */;
+import TrackingDefault from "Tracking" /* 14648 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14652 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -27,7 +27,7 @@ function SearchHistoryTextRow(searchContext) {
   const searchHistoryItem = searchContext.searchHistoryItem;
   const tmp = closure_12();
   dependencyMap = tmp;
-  const onPressSearchHistoryText = searchContext(19281).useOnPressSearchHistoryText({ searchContext });
+  const onPressSearchHistoryText = searchContext(19276).useOnPressSearchHistoryText({ searchContext });
   items = [onPressSearchHistoryText, searchContext, , , ];
   ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
   const callback = noop.useCallback(() => {
@@ -39,8 +39,8 @@ function SearchHistoryTextRow(searchContext) {
   let mapped;
   if (tags != null) {
     mapped = tags.map((children) => {
-      const obj = { accessibilityRole: "button", style: tag.tag, children: closure_2_10(Text_Text.Text, { lineClamp: 1, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: children.text }) };
-      return closure_2_10(View, obj, children.text);
+      const obj = { accessibilityRole: "button", style: tag.tag, children: refs(Text_Text.Text, { lineClamp: 1, variant: "body-sm/semibold", color: "mobile-text-heading-primary", children: children.text }) };
+      return refs(View, obj, children.text);
     });
   }
   const obj3 = { label: null, onPress: null, trailing: null, iconContainerStyle: null, icon: null };
@@ -50,10 +50,10 @@ function SearchHistoryTextRow(searchContext) {
   obj3.onPress = callback;
   obj3.trailing = closure_10(SearchHistoryRemoveIcon, { searchContext, searchHistoryItem });
   obj3.iconContainerStyle = tmp.textIconContainer;
-  let obj = searchContext(19281);
+  let obj = searchContext(19276);
   const obj4 = { lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: searchHistoryItem.text };
   obj3.icon = closure_10(View, { style: tmp.iconContainer, children: closure_10(searchContext(7760).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }) });
-  return closure_10(searchContext(19275).SearchListRow, obj3);
+  return closure_10(searchContext(19270).SearchListRow, obj3);
 }
 function SearchHistoryGroupDMRow(searchContext) {
   searchContext = searchContext.searchContext;
@@ -287,7 +287,7 @@ function SearchHistoryGuildTextChannelRow(searchContext) {
   return tmp9Result;
 }
 const View = fn(17).View;
-const SearchHistoryItemTypes = fn(9000).SearchHistoryItemTypes;
+const SearchHistoryItemTypes = fn(8999).SearchHistoryItemTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5243);
@@ -312,27 +312,27 @@ export default noop.memo(function SearchHistoryRow(searchHistoryItem) {
     const obj2 = {};
     const merged1 = Object.assign(merged);
     obj2.searchHistoryItem = searchHistoryItem;
-    return closure_1_10(SearchHistoryGroupDMRow, obj2);
+    return refs(SearchHistoryGroupDMRow, obj2);
   } else if (SearchHistoryItemTypes.DM === type) {
     const obj3 = {};
     const merged2 = Object.assign(merged);
     obj3.searchHistoryItem = searchHistoryItem;
-    return closure_1_10(SearchHistoryDMRow, obj3);
+    return refs(SearchHistoryDMRow, obj3);
   } else if (SearchHistoryItemTypes.TEXT === type) {
     const obj4 = {};
     const merged3 = Object.assign(merged);
     obj4.searchHistoryItem = searchHistoryItem;
-    return closure_1_10(SearchHistoryTextRow, obj4);
+    return refs(SearchHistoryTextRow, obj4);
   } else if (SearchHistoryItemTypes.GUILD_TEXT_CHANNEL === type) {
     const obj5 = {};
     const merged4 = Object.assign(merged);
     obj5.searchHistoryItem = searchHistoryItem;
-    return closure_1_10(SearchHistoryGuildTextChannelRow, obj5);
+    return refs(SearchHistoryGuildTextChannelRow, obj5);
   } else if (SearchHistoryItemTypes.GUILD_VOICE_CHANNEL === type) {
     const obj = {};
     const merged5 = Object.assign(merged);
     obj.searchHistoryItem = searchHistoryItem;
-    return closure_1_10(SearchHistoryGuildVoiceChannelRow, obj);
+    return refs(SearchHistoryGuildVoiceChannelRow, obj);
   } else {
     return null;
   }

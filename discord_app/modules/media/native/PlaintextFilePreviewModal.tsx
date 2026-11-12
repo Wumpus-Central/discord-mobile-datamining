@@ -1,6 +1,6 @@
-// === Module 12419: PlaintextFilePreviewModal ===
+// === Module 12413: PlaintextFilePreviewModal ===
 
-// Module 12419 (PlaintextFilePreviewModal)
+// Module 12413 (PlaintextFilePreviewModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
@@ -8,9 +8,9 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7354 */;
 import NavigatorHeader from "NavigatorHeader" /* 7427 */;
 import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 7831 */;
-import openPlaintextFilePreview from "openPlaintextFilePreview" /* 12418 */;
-import useDownloadedFile from "useDownloadedFile" /* 12424 */;
-import PlaintextFileMarkdownPreviewDefault from "PlaintextFileMarkdownPreview" /* 12425 */;
+import openPlaintextFilePreview from "openPlaintextFilePreview" /* 12412 */;
+import useDownloadedFile from "useDownloadedFile" /* 12418 */;
+import PlaintextFileMarkdownPreviewDefault from "PlaintextFileMarkdownPreview" /* 12419 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -90,7 +90,7 @@ export default function PlaintextFilePreviewModal(url) {
   const tmp2 = first(noop.useState(true), 2);
   first = tmp2[0];
   noop = tmp2[1];
-  const MARKDOWN_LANGUAGES = url(12433).MARKDOWN_LANGUAGES;
+  const MARKDOWN_LANGUAGES = url(12427).MARKDOWN_LANGUAGES;
   const parts = str.split(".");
   const hasItem = MARKDOWN_LANGUAGES.has(parts.slice(-1)[0]);
   const tmp7 = first(noop.useState(true), 2);
@@ -179,5 +179,5 @@ export default function PlaintextFilePreviewModal(url) {
     obj[memo.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return first1(url(12434).Modal, { screens: memo1, initialRouteName: memo.PREVIEW });
+  return first1(url(12428).Modal, { screens: memo1, initialRouteName: memo.PREVIEW });
 };

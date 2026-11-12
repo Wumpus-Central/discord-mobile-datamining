@@ -1,6 +1,6 @@
-// === Module 9041: ForumHooks ===
+// === Module 9040: ForumHooks ===
 
-// Module 9041 (ForumHooks)
+// Module 9040 (ForumHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -9,29 +9,29 @@ import ThreadSortOrder from "ThreadSortOrder" /* 5101 */;
 import useMessageAuthor from "useMessageAuthor" /* 6686 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7808 */;
 import renderMessageMarkupDefault from "renderMessageMarkup" /* 8579 */;
-import ForumUtils from "ForumUtils" /* 8929 */;
-import ThreadUtils from "ThreadUtils" /* 8942 */;
+import ForumUtils from "ForumUtils" /* 8928 */;
+import ThreadUtils from "ThreadUtils" /* 8941 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 6906 */;
 import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6951 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 6972 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 8805 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 8804 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6881 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
 import ReadStateStore from "ReadStateStore" /* 6952 */;
 import UserStore from "UserStore" /* 1385 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 9042 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8801 */;
-import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 9043 */;
-import ForumSearchStore from "ForumSearchStore" /* 8802 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 9041 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8800 */;
+import ForumPostUnreadCountStore from "ForumPostUnreadCountStore" /* 9042 */;
+import ForumSearchStore from "ForumSearchStore" /* 8801 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ForumTimestampFormats = fn(8930).ForumTimestampFormats;
+const ForumTimestampFormats = fn(8929).ForumTimestampFormats;
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_20, AnalyticsObjects: closure_21, EMPTY_STRING_SNOWFLAKE_ID: closure_22, Permissions: closure_23 } = Constants);
 const ChannelFlags = fn(5099).ChannelFlags;

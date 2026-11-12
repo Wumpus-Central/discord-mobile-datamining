@@ -1,11 +1,11 @@
-// === Module 18435: ManageSponsoredContentSetting ===
+// === Module 18430: ManageSponsoredContentSetting ===
 
-// Module 18435 (ManageSponsoredContentSetting)
+// Module 18430 (ManageSponsoredContentSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import _modDef2231 from "module_2231" /* 2231 */;
-import SettingsConstants from "SettingsConstants" /* 9136 */;
-import SettingBuilders from "SettingBuilders" /* 12317 */;
+import SettingsConstants from "SettingsConstants" /* 9135 */;
+import SettingBuilders from "SettingBuilders" /* 12311 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

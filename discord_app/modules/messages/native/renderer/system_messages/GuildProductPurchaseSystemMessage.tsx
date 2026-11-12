@@ -1,14 +1,14 @@
-// === Module 9199: GuildProductPurchaseSystemMessage ===
+// === Module 9198: GuildProductPurchaseSystemMessage ===
 
-// Module 9199 (GuildProductPurchaseSystemMessage)
+// Module 9198 (GuildProductPurchaseSystemMessage)
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1414 */;
 import useMessageAuthor from "useMessageAuthor" /* 6686 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9122 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9124 */;
-import createCommonMessageDefault from "createCommonMessage" /* 9126 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 9157 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9121 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9123 */;
+import createCommonMessageDefault from "createCommonMessage" /* 9125 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 9156 */;
 import MessageRecord from "MessageRecord" /* 5186 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 

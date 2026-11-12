@@ -1,11 +1,11 @@
-// === Module 16990: HexagonCampaignDaysLeftBadge ===
+// === Module 16985: HexagonCampaignDaysLeftBadge ===
 
-// Module 16990 (HexagonCampaignDaysLeftBadge)
+// Module 16985 (HexagonCampaignDaysLeftBadge)
 import util from "util" /* 1113 */;
 import _modDef4464 from "module_4464" /* 4464 */;
 import ClockIcon from "ClockIcon" /* 5979 */;
 import Badge from "Badge" /* 7391 */;
-import useHexagonCampaignDaysLeft from "useHexagonCampaignDaysLeft" /* 16991 */;
+import useHexagonCampaignDaysLeft from "useHexagonCampaignDaysLeft" /* 16986 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

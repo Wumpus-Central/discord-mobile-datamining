@@ -1,12 +1,12 @@
-// === Module 10851: GroupDMInviteManagementScreen ===
+// === Module 10845: GroupDMInviteManagementScreen ===
 
-// Module 10851 (GroupDMInviteManagementScreen)
+// Module 10845 (GroupDMInviteManagementScreen)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import NavigatorHeader from "NavigatorHeader" /* 7427 */;
-import InstantInviteDefault from "InstantInvite" /* 10853 */;
+import InstantInviteDefault from "InstantInvite" /* 10847 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -113,12 +113,12 @@ function GroupDMInviteManagement(channelId) {
   if (tmp3[0]) {
     let tmp12 = jsx(channelId(7522).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(10874), darkSource: tmp4(10875), title: null, body: null };
+    let obj2 = { lightSource: tmp4(10868), darkSource: tmp4(10869), title: null, body: null };
     const intl = channelId(1113).intl;
     obj2.title = intl.string(channelId(1113).t["+nLJkZ"]);
     const intl2 = channelId(1113).intl;
     obj2.body = intl2.string(channelId(1113).t.F53CAc);
-    tmp12 = jsx(channelId(1187).EmptyState, { lightSource: tmp4(10874), darkSource: tmp4(10875), title: null, body: null });
+    tmp12 = jsx(channelId(1187).EmptyState, { lightSource: tmp4(10868), darkSource: tmp4(10869), title: null, body: null });
   } else {
     let obj = { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 };
     tmp12 = jsx(channelId(7822).FlashList, { contentContainerStyle: tmp.listContent, data: memo, keyExtractor: callback, renderItem: tmp9 });
@@ -127,7 +127,7 @@ function GroupDMInviteManagement(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_6 } = get_ActivityIndicator);
-const ChannelSettingsStore = fn(10852);
+const ChannelSettingsStore = fn(10846);
 const Constants = fn(1072);
 ({ ChannelSettingsSections: closure_8, Endpoints: closure_9 } = Constants);
 const jsx = fn(21).jsx;

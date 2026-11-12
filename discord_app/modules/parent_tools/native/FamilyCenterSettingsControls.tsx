@@ -1,6 +1,6 @@
-// === Module 17318: FamilyCenterSettingsControls ===
+// === Module 17313: FamilyCenterSettingsControls ===
 
-// Module 17318 (FamilyCenterSettingsControls)
+// Module 17313 (FamilyCenterSettingsControls)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import _modDef2685 from "module_2685" /* 2685 */;
@@ -8,9 +8,9 @@ import Text_Text from "Text/Text" /* 5866 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
 import LayerActionCreators from "LayerActionCreators" /* 8460 */;
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 8675 */;
-import useUserLinks from "useUserLinks" /* 9550 */;
-import openLinkedUsersChannelDefault from "openLinkedUsersChannel" /* 9554 */;
-import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 17324 */;
+import useUserLinks from "useUserLinks" /* 9549 */;
+import openLinkedUsersChannelDefault from "openLinkedUsersChannel" /* 9553 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 17319 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ function SpendingLimitRow(teenId) {
     flag = true;
   }
   const tmp = closure_10();
-  const spendingLimitDisplayState = teenId(17322).useSpendingLimitDisplayState(teenId.cap);
+  const spendingLimitDisplayState = teenId(17317).useSpendingLimitDisplayState(teenId.cap);
   const kind = spendingLimitDisplayState.kind;
   if ("off" === kind) {
     const obj2 = { trailing: null };
@@ -80,7 +80,7 @@ function SpendingLimitRow(teenId) {
   let fn;
   if (null != teenId) {
     fn = () => {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17319, dependencyMap.paths), { teenId }, hasOwnProperty, { animation: "slide_from_right" });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17314, dependencyMap.paths), { teenId }, hasOwnProperty, { animation: "slide_from_right" });
     };
   }
   obj15.onPress = fn;
@@ -164,10 +164,10 @@ function FamilyCenterSettingsTeenControls() {
 }
 function FamilyCenterSettingsParentalControls() {
   const tmp = closure_10();
-  selectedTeenUser = selectedTeenUser(17305).useSelectedTeenUser();
-  let obj = selectedTeenUser(17305);
-  const shouldLoadSettingsForSelectedTeenUser = selectedTeenUser(17305).useShouldLoadSettingsForSelectedTeenUser();
-  const obj2 = selectedTeenUser(17305);
+  selectedTeenUser = selectedTeenUser(17300).useSelectedTeenUser();
+  let obj = selectedTeenUser(17300);
+  const shouldLoadSettingsForSelectedTeenUser = selectedTeenUser(17300).useShouldLoadSettingsForSelectedTeenUser();
+  const obj2 = selectedTeenUser(17300);
   dependencyMap = selectedTeenUser(1499).useNavigation();
   let rules;
   if (selectedTeenUser != null) {
@@ -179,7 +179,7 @@ function FamilyCenterSettingsParentalControls() {
   if (rules == null) {
     rules = [];
   }
-  const ParentalControlledSpendingLimit = tmp2(17229).ParentalControlledSpendingLimit;
+  const ParentalControlledSpendingLimit = tmp2(17224).ParentalControlledSpendingLimit;
   let id;
   if (selectedTeenUser != null) {
     id = selectedTeenUser.id;
@@ -191,7 +191,7 @@ function FamilyCenterSettingsParentalControls() {
     id1 = selectedTeenUser.id;
   }
   let id2;
-  const hasLoadedSettingsForTeen = selectedTeenUser(17305).useHasLoadedSettingsForTeen(id1);
+  const hasLoadedSettingsForTeen = selectedTeenUser(17300).useHasLoadedSettingsForTeen(id1);
   if (selectedTeenUser != null) {
     id2 = selectedTeenUser.id;
   }
@@ -207,8 +207,8 @@ function FamilyCenterSettingsParentalControls() {
     tmp3 = null != id && shouldLoadSettingsForSelectedTeenUser;
   }, items);
   const tmp13 = shouldLoadSettingsForSelectedTeenUser;
-  const tmp2Result = selectedTeenUser(17305);
-  ({ subLabel, trailing } = shouldLoadSettingsForSelectedTeenUser(17323)(rules));
+  const tmp2Result = selectedTeenUser(17300);
+  ({ subLabel, trailing } = shouldLoadSettingsForSelectedTeenUser(17318)(rules));
   const obj4 = { style: tmp.parentalControlsContainer, children: null };
   const obj5 = { variant: "body-sm/semibold", children: null };
   const intl = tmp2(1113).intl;

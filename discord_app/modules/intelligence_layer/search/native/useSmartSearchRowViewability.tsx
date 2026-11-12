@@ -1,9 +1,9 @@
-// === Module 19326: useSmartSearchRowViewability ===
+// === Module 19321: useSmartSearchRowViewability ===
 
-// Module 19326 (useSmartSearchRowViewability)
+// Module 19321 (useSmartSearchRowViewability)
 import useChatLayoutDefault from "useChatLayout" /* 5432 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14653 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14655 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 14649 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 14651 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 2117 */;
 
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/intelligence_layer/search/nativ
 
 export function useSmartSearchRowViewability() {
   const currentNavigationRouteName = stateFromStores(5429).useCurrentNavigationRouteName();
-  const context = noop.useContext(stateFromStores(14741).SwipeForMemberListContext);
+  const context = noop.useContext(stateFromStores(14737).SwipeForMemberListContext);
   const obj = stateFromStores(5429);
   const isFocused = stateFromStores(1500).useIsFocused();
   let isChatLockedOpen = useChatLayoutDefault().isChatLockedOpen;
@@ -48,7 +48,7 @@ export function useSmartSearchRowViewability() {
     SmartSearchAnalyticsManagerDefault.setIsAppActive(stateFromStores, SearchSessionAnalyticsManagerDefault);
   }, items2);
   const effect2 = noop.useEffect(() => () => {
-    closure_1_1(14655).setIsRowViewable(false, closure_1_1(14653));
+    closure_1_1(14651).setIsRowViewable(false, closure_1_1(14649));
   }, []);
   const tmpResult2 = stateFromStores(504);
 }

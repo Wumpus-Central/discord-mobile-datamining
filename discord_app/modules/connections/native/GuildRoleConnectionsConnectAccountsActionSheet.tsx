@@ -1,6 +1,6 @@
-// === Module 12390: GuildRoleConnectionsConnectAccountsActionSheet ===
+// === Module 12384: GuildRoleConnectionsConnectAccountsActionSheet ===
 
-// Module 12390 (GuildRoleConnectionsConnectAccountsActionSheet)
+// Module 12384 (GuildRoleConnectionsConnectAccountsActionSheet)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -26,12 +26,12 @@ import ConnectionsUtils from "ConnectionsUtils" /* 7401 */;
 import getConnectionsRolesDefault from "getConnectionsRoles" /* 7402 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7968 */;
 import openUserSettings from "openUserSettings" /* 8537 */;
-import BotTagDefault from "BotTag" /* 10807 */;
-import _modDef12392 from "module_12392" /* 12392 */;
-import _modDef12393 from "module_12393" /* 12393 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 12394 */;
-import _modDef12397 from "module_12397" /* 12397 */;
-import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 12403 */;
+import BotTagDefault from "BotTag" /* 10801 */;
+import _modDef12386 from "module_12386" /* 12386 */;
+import _modDef12387 from "module_12387" /* 12387 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 12388 */;
+import _modDef12391 from "module_12391" /* 12391 */;
+import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 12397 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -267,7 +267,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     obj7.onPress = callback;
     let tmp15Result = null;
     if (null != memo) {
-      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[21]).AvatarSizes.XSMALL, guildId: "Array" };
+      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[21]).AvatarSizes.XSMALL, guildId: "a" };
       tmp15Result = tmp15(tmp2(tmp3[21]).Avatar, obj8);
     }
     const items3 = [tmp15Result, , ];
@@ -453,7 +453,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp20 = tmp19 <= c8;
     }
     if (tmp3) {
-      const obj3 = { source: _modDef12392, style: closure_5.connectionsChecksGroupCheckmark };
+      const obj3 = { source: _modDef12386, style: closure_5.connectionsChecksGroupCheckmark };
       let tmp22Result = closure_1_29(tmp15(1187).Icon, obj3);
       let tmp24 = closure_1_29;
     } else if (tmp20) {
@@ -463,7 +463,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp22Result = closure_1_29(tmp15(5866).Text, obj4);
       tmp24 = closure_1_29;
     } else if (tmp8) {
-      const obj5 = { source: _modDef12393, style: closure_5.connectionsChecksGroupCaret };
+      const obj5 = { source: _modDef12387, style: closure_5.connectionsChecksGroupCaret };
       tmp22Result = closure_1_29(tmp15(1187).Icon, obj5);
       tmp24 = closure_1_29;
     } else {
@@ -558,7 +558,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     items1[1] = tmp24Result6;
     let tmp24Result7 = null;
     if (null != tmp11) {
-      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1187).AvatarSizes.XSMALL, guildId: "Array" };
+      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1187).AvatarSizes.XSMALL, guildId: "a" };
       tmp24Result7 = tmp24(tmp15(1187).Avatar, obj13);
     }
     items1[2] = tmp24Result7;
@@ -586,7 +586,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
           },
         children: null
       };
-      const obj17 = { source: _modDef12397, size: tmp15(1187).Icon.Sizes.SMALL_20, style: closure_5.connectionsChecksGroupTextNameInfoIcon };
+      const obj17 = { source: _modDef12391, size: tmp15(1187).Icon.Sizes.SMALL_20, style: closure_5.connectionsChecksGroupTextNameInfoIcon };
       obj16.children = tmp24(tmp15(1187).Icon, obj17);
       tmp24Result8 = tmp24(c7, obj16);
     }
@@ -1072,7 +1072,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 const obj2 = { default: closure_1_40 };
                 const obj4 = { role, guildId, initialAttemptedPlatformType: platformType, initialAttemptedApplicationId: null, overrideUrl: null, onCloseModal: null };
                 let tmp7 = null;
-                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(12398).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
+                const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(12392).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != platformType) {
                   tmp7 = id;
                 }
@@ -1080,7 +1080,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj4.overrideUrl = { overrideUrl: prop }.overrideUrl;
                 obj4.onCloseModal = onCloseModal;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj4);
-                const obj3 = platformType(12398);
+                const obj3 = platformType(12392);
               },
               overrideUrl: null
             };

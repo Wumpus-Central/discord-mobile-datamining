@@ -252,7 +252,7 @@ function computePermissions(excludeGuildPermissions) {
         id2 = currentUser1.id;
       }
       if (id !== id2) {
-        if (closure_1_10(tmp4, id)) {
+        if (refs(tmp4, id)) {
           let flag2 = checkElevated;
           if (checkElevated === undefined) {
             flag2 = true;
@@ -503,7 +503,7 @@ export function getGuildVisualOwnerId(guild) {
 export function isRoleHigher(guild, id, guildId, id) {
   let tmp = null == id;
   if (!tmp) {
-    tmp = !closure_1_10(guild, id);
+    tmp = !refs(guild, id);
   }
   let tmp4 = !tmp;
   if (tmp) {

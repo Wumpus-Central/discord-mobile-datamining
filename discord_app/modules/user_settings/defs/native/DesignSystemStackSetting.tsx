@@ -1,9 +1,9 @@
-// === Module 18326: DesignSystemStackSetting ===
+// === Module 18321: DesignSystemStackSetting ===
 
-// Module 18326 (DesignSystemStackSetting)
+// Module 18321 (DesignSystemStackSetting)
 import Constants from "Constants" /* 1072 */;
-import SettingsConstants from "SettingsConstants" /* 9136 */;
-import SettingBuilders from "SettingBuilders" /* 12317 */;
+import SettingsConstants from "SettingsConstants" /* 9135 */;
+import SettingBuilders from "SettingBuilders" /* 12311 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,12 +1,12 @@
-// === Module 15166: BadgeArtImage ===
+// === Module 15163: BadgeArtImage ===
 
-// Module 15166 (BadgeArtImage)
+// Module 15163 (BadgeArtImage)
 import DurationsDefault from "Durations" /* 1089 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import TimeUtils from "TimeUtils" /* 6016 */;
 import inlineStyles from "inlineStyles" /* 8197 */;
-import APNGPlayer2 from "APNGPlayer" /* 9432 */;
+import APNGPlayer2 from "APNGPlayer" /* 9431 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -218,7 +218,7 @@ export default function BadgeArtImage(style) {
         let APNGPlayer = require;
         PlatformUtils;
       }
-      APNGPlayer = APNGPlayer(9432).APNGPlayer;
+      APNGPlayer = APNGPlayer(9431).APNGPlayer;
       const obj4 = { url: fallbackUrl, style: size, autoplay: true, onLoad };
       tmp12 = <APNGPlayer url={fallbackUrl} style={size} autoplay onLoad={onLoad} />;
     }

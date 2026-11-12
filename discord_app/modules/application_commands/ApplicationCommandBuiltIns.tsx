@@ -1,12 +1,12 @@
-// === Module 11353: ApplicationCommandBuiltIns ===
+// === Module 11347: ApplicationCommandBuiltIns ===
 
-// Module 11353 (ApplicationCommandBuiltIns)
+// Module 11347 (ApplicationCommandBuiltIns)
 import UserSettings from "UserSettings" /* 5068 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5922 */;
 import DiceRollActionCreators from "DiceRollActionCreators" /* 7200 */;
 import ThreadHooks from "ThreadHooks" /* 7223 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 11356 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 11350 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
@@ -27,7 +27,7 @@ function getOptionValue(arr, arg1) {
 const BuiltInSectionId = fn(6282).BuiltInSectionId;
 const Constants = fn(1072);
 ({ Permissions: metroImportDefault, MARKDOWN_SPOILER_WRAPPER: closure_8, ME: closure_9, DISPLAY_NAME_MAX_LENGTH, MAX_CHANNEL_NAME_LENGTH } = Constants);
-const DiceRollConstants = fn(11354);
+const DiceRollConstants = fn(11348);
 ({ ALLOWED_DICE_SIDES, MAX_DICE_COUNT } = DiceRollConstants);
 let closure_11 = fn(5157).getDisableCommunicationDurationOptions;
 const MessageSendLocation = fn(5248).MessageSendLocation;
@@ -50,7 +50,7 @@ Object.defineProperty(obj3, "name", {
   set: undefined
 });
 obj[BuiltInSectionId.FRECENCY] = obj3;
-let items = [...fn(11355).default];
+let items = [...fn(11349).default];
 let obj4 = { id: "-1", untranslatedName: "shrug", displayName: "shrug", type: fn(2116).ApplicationCommandType.CHAT, inputType: fn(5922).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj4, "untranslatedDescription", {
   get: () => {
@@ -1260,7 +1260,7 @@ obj32.execute = function execute(arr, channel) {
           const obj7 = tmp2(8593);
           const id = channel2.id;
           const obj9 = { location: constants.PRIVATE_MESSAGE_COMMAND };
-          obj7.sendMessage(id, tmp2(8720).parse(channel2, closure_129_2), true, obj9);
+          obj7.sendMessage(id, tmp2(8719).parse(channel2, closure_129_2), true, obj9);
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -1398,7 +1398,7 @@ const found = items.filter((untranslatedName) => {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
 
-export const PLATFORM_COMMANDS = fn(11355).default;
+export const PLATFORM_COMMANDS = fn(11349).default;
 export const BUILT_IN_SECTIONS = obj;
 export const BUILT_IN_COMMANDS = items;
 export const BUILT_IN_COMMANDS_ORIGINAL = found;

@@ -1,15 +1,15 @@
-// === Module 17440: BountiesScrollVideoItem ===
+// === Module 17435: BountiesScrollVideoItem ===
 
-// Module 17440 (BountiesScrollVideoItem)
+// Module 17435 (BountiesScrollVideoItem)
 import QuestContent from "QuestContent" /* 5280 */;
 import AdCreativeType from "AdCreativeType" /* 5282 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 15153 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 17441 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 15150 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 17436 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9973 */;
-import BountyStore from "BountyStore" /* 8741 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9972 */;
+import BountyStore from "BountyStore" /* 8740 */;
 
 require = fn;
 function BountiesScrollVideoItemInner(bounty) {
@@ -310,7 +310,7 @@ export function BountiesScrollVideoItem(bounty) {
   if (flag4 === undefined) {
     flag4 = false;
   }
-  return flag3(bounty(15153).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(15150).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
     adCreativeType: bounty(5282).AdCreativeType.BOUNTY,
     questContent: bounty(5280).QuestContent.VIDEO_MODAL_MOBILE,

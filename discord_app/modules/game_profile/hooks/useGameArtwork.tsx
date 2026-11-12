@@ -1,6 +1,6 @@
-// === Module 10255: useGameArtwork ===
+// === Module 10253: useGameArtwork ===
 
-// Module 10255 (useGameArtwork)
+// Module 10253 (useGameArtwork)
 import getGameMediaRefURL from "getGameMediaRefURL" /* 2149 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

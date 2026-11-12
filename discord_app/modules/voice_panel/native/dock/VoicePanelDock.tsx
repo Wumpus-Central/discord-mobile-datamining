@@ -1,6 +1,6 @@
-// === Module 19798: VoicePanelDock ===
+// === Module 19793: VoicePanelDock ===
 
-// Module 19798 (VoicePanelDock)
+// Module 19793 (VoicePanelDock)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
@@ -9,16 +9,16 @@ import timing_timing from "timing/timing" /* 5485 */;
 import HapticUtils from "HapticUtils" /* 5491 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
 import ExternalPipDefault from "ExternalPip" /* 6118 */;
-import ContextMenu from "ContextMenu" /* 9082 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9084 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11924 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11929 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11956 */;
-import useVoicePanelDockContextMenuItemsDefault from "useVoicePanelDockContextMenuItems" /* 19799 */;
-import useVoicePanelDockStatusDefault from "useVoicePanelDockStatus" /* 19818 */;
-import useMeasureDockGlowOffsetDefault from "useMeasureDockGlowOffset" /* 19820 */;
-import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 19821 */;
-import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19825 */;
+import ContextMenu from "ContextMenu" /* 9081 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9083 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11918 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11923 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11950 */;
+import useVoicePanelDockContextMenuItemsDefault from "useVoicePanelDockContextMenuItems" /* 19794 */;
+import useVoicePanelDockStatusDefault from "useVoicePanelDockStatus" /* 19813 */;
+import useMeasureDockGlowOffsetDefault from "useMeasureDockGlowOffset" /* 19815 */;
+import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 19816 */;
+import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19820 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 
@@ -78,10 +78,10 @@ function DockPressTargetGuard(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(11925).VoicePanelModes;
-const VoicePanelDockConstants = fn(11948);
+const VoicePanelModes = fn(11919).VoicePanelModes;
+const VoicePanelDockConstants = fn(11942);
 ({ DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: closure_8, DOCK_PULL_SNAP_DISTANCE: closure_9, DOCK_PULL_SNAP_GIVE: closure_10, DOCK_TAP_MAX_MOVEMENT: closure_11, getDockInset: closure_12, DOCK_DRAG_HANDLE_TOP, DOCK_DRAG_HANDLE_WIDTH, DOCK_GAP, DOCK_PADDING_TOP, DOCK_ROW_HEIGHT } = VoicePanelDockConstants);
-const GestureConstants = fn(11949);
+const GestureConstants = fn(11943);
 ({ FLING_MIN_DISTANCE: map1, FLING_MIN_VELOCITY: closure_14, PULL_GESTURE_ACTIVATION_DISTANCE: closure_15, PULL_GESTURE_RESISTANCE: closure_16, PULL_GESTURE_SNAP_TIMING: closure_17, PULL_GESTURE_UNSNAP_TIMING: closure_18 } = GestureConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
@@ -368,7 +368,7 @@ export default noop.memo(function VoicePanelDock() {
     VoicePanelDockTsx8.__initData = tmp20;
     const onTouchesMoveResult = Gesture.Pan().hitSlop({ bottom: -c0 }).activeOffsetY(-colors).failOffsetY(colors).failOffsetX(items).onBegin(VoicePanelDockTsx6).onTouchesMove(VoicePanelDockTsx7);
     const tmp19 = c8;
-    const items7 = [closure_32, React6, sharedValue5, c2, timing_timing.withTiming, VoicePanelSheetMorph.DOCK_CONTENT_SWAP_TIMING, sharedValue4, closure_2_10, closure_2_17, _mod1705.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, collapsedCategories, sharedValue3];
+    const items7 = [closure_32, React6, sharedValue5, c2, timing_timing.withTiming, VoicePanelSheetMorph.DOCK_CONTENT_SWAP_TIMING, sharedValue4, refs, closure_2_17, _mod1705.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, collapsedCategories, sharedValue3];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;

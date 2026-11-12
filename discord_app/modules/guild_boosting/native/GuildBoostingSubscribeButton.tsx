@@ -1,10 +1,10 @@
-// === Module 10736: GuildBoostingSubscribeButton ===
+// === Module 10730: GuildBoostingSubscribeButton ===
 
-// Module 10736 (GuildBoostingSubscribeButton)
-import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 10639 */;
+// Module 10730 (GuildBoostingSubscribeButton)
+import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 10676 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 9170 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 9169 */;
 
 require = fn;
 let closure_14 = async function _handleBoostPress() {
@@ -126,7 +126,7 @@ export default function GuildBoostingSubscribeButton(guild) {
   const items2 = [tmp3, shouldUseMobileWebRedirectCheckout, handleMobileWebRedirectCheckout, guild.id, analyticsSection, stateFromStores, previousGuildSubscriptionSlot, analyticsLocations, callback];
   jsx = intent.useCallback(() => {
     if (closure_6) {
-      let tmp8 = closure_2_10;
+      let tmp8 = refs;
     } else if (stateFromStores) {
       tmp8 = callback(guild.id, previousGuildSubscriptionSlot);
     } else {

@@ -1,15 +1,15 @@
-// === Module 12829: GlobalStageChannelStatus ===
+// === Module 12823: GlobalStageChannelStatus ===
 
-// Module 12829 (GlobalStageChannelStatus)
+// Module 12823 (GlobalStageChannelStatus)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useMountEffectDefault from "useMountEffect" /* 5836 */;
 import useChannelNameDefault from "useChannelName" /* 5891 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 6846 */;
-import StatusBarDefault from "StatusBar" /* 11767 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11889 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11896 */;
-import PushNotificationDefault from "PushNotification" /* 12830 */;
+import StatusBarDefault from "StatusBar" /* 11761 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11883 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11890 */;
+import PushNotificationDefault from "PushNotification" /* 12824 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

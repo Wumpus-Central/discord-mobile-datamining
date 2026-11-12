@@ -1,15 +1,15 @@
-// === Module 13210: openConjureRemoveAppAlert ===
+// === Module 13204: openConjureRemoveAppAlert ===
 
-// Module 13210 (openConjureRemoveAppAlert)
+// Module 13204 (openConjureRemoveAppAlert)
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import useAlertStore from "useAlertStore" /* 6207 */;
 import AlertModal from "AlertModal" /* 6211 */;
 import Stack_Stack from "Stack/Stack" /* 6274 */;
-import conjureRemoveApp from "conjureRemoveApp" /* 13199 */;
-import useConjureRemoveFromServer from "useConjureRemoveFromServer" /* 13211 */;
-import ConjureRemovedItemsDefault from "ConjureRemovedItems" /* 13212 */;
+import conjureRemoveApp from "conjureRemoveApp" /* 13193 */;
+import useConjureRemoveFromServer from "useConjureRemoveFromServer" /* 13205 */;
+import ConjureRemovedItemsDefault from "ConjureRemovedItems" /* 13206 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -89,7 +89,7 @@ function ConjureRemoveFromServerAlert(target) {
   let tmp5Result = null;
   if (optionalItems.length > 0) {
     let obj5 = { items: [], optionalItems };
-    tmp5Result = closure_6(tmp(13212), obj5);
+    tmp5Result = closure_6(tmp(13206), obj5);
   }
   items = [tmp5Result, notes.map((children) => closure_1_6(_undefined(dependencyMap[12]).Text, { variant: "body-sm/normal", color: "text-muted", children }, children)), ];
   let tmp5Result2 = null;

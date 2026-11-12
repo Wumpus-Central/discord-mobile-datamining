@@ -1,6 +1,6 @@
-// === Module 12501: ExecutedApplicationCommandPopout ===
+// === Module 12495: ExecutedApplicationCommandPopout ===
 
-// Module 12501 (ExecutedApplicationCommandPopout)
+// Module 12495 (ExecutedApplicationCommandPopout)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1414 */;
@@ -14,8 +14,8 @@ import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5922 */;
 import ToastUtils from "ToastUtils" /* 5951 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import InteractionActionCreatorsAll from "InteractionActionCreators" /* 11341 */;
-import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 12502 */;
+import InteractionActionCreatorsAll from "InteractionActionCreators" /* 11335 */;
+import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 12496 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -24,7 +24,7 @@ import GuildStore from "GuildStore" /* 5114 */;
 import MessageStore from "MessageStore" /* 6309 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
 import UserStore from "UserStore" /* 1385 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 11345 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 11339 */;
 
 require = fn;
 function getCommandOptionComponents(option) {

@@ -1,13 +1,13 @@
-// === Module 20060: DmSettingsUpsellActionSheet ===
+// === Module 20055: DmSettingsUpsellActionSheet ===
 
-// Module 20060 (DmSettingsUpsellActionSheet)
+// Module 20055 (DmSettingsUpsellActionSheet)
 import nativeDefault from "native" /* 575 */;
 import UserSettings from "UserSettings" /* 5068 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7747 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 16229 */;
-import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 20057 */;
-import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 20061 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 16224 */;
+import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 20052 */;
+import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 20056 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
 
@@ -41,7 +41,7 @@ export default function DmSettingsUpsellActionSheet(guildId) {
   if (null != stateFromStores) {
     let obj2 = { startExpanded: true, children: null };
     let obj3 = { style: tmp.container, children: null };
-    const obj4 = { source: stateFromStores(11981), style: tmp.headerImage };
+    const obj4 = { source: stateFromStores(11975), style: tmp.headerImage };
     const items2 = [closure_6(stateFromStores(5957), obj4), , , , , , ];
     const obj5 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
     let intl = tmp2(1113).intl;

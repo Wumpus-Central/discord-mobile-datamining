@@ -1,6 +1,6 @@
-// === Module 12032: WidgetActionCreators ===
+// === Module 12026: WidgetActionCreators ===
 
-// Module 12032 (WidgetActionCreators)
+// Module 12026 (WidgetActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

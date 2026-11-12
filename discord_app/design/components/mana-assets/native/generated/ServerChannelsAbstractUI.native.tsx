@@ -1,19 +1,19 @@
-// === Module 15965: ServerChannelsAbstractUI ===
+// === Module 15960: ServerChannelsAbstractUI ===
 
-// Module 15965 (ServerChannelsAbstractUI)
+// Module 15960 (ServerChannelsAbstractUI)
 import assetHelpers from "assetHelpers" /* 7689 */;
-import _modDef15966 from "module_15966" /* 15966 */;
-import _modDef15967 from "module_15967" /* 15967 */;
-import _modDef15968 from "module_15968" /* 15968 */;
+import _modDef15961 from "module_15961" /* 15961 */;
+import _modDef15962 from "module_15962" /* 15962 */;
+import _modDef15963 from "module_15963" /* 15963 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15966 }, 3: null };
-let obj2 = { uri: _modDef15966 };
-obj[2] = { uri: _modDef15967 };
-const obj3 = { uri: _modDef15967 };
-obj[3] = { uri: _modDef15968 };
+let obj = { 1: null, 2: { uri: _modDef15961 }, 3: null };
+let obj2 = { uri: _modDef15961 };
+obj[2] = { uri: _modDef15962 };
+const obj3 = { uri: _modDef15962 };
+obj[3] = { uri: _modDef15963 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ServerChannelsAbstractUI.native.tsx");
 

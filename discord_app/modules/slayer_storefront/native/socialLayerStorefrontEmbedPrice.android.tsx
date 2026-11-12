@@ -1,8 +1,8 @@
-// === Module 12344: socialLayerStorefrontEmbedPrice ===
+// === Module 12338: socialLayerStorefrontEmbedPrice ===
 
-// Module 12344 (socialLayerStorefrontEmbedPrice)
-import IAPStoreDefault from "IAPStore" /* 9236 */;
-import GPlayActionCreators from "GPlayActionCreators" /* 9620 */;
+// Module 12338 (socialLayerStorefrontEmbedPrice)
+import IAPStoreDefault from "IAPStore" /* 9235 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 9619 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SKUStore from "SKUStore" /* 7007 */;

@@ -1,19 +1,19 @@
-// === Module 17580: QuestHooks ===
+// === Module 17575: QuestHooks ===
 
-// Module 17580 (QuestHooks)
+// Module 17575 (QuestHooks)
 import QuestTypes from "QuestTypes" /* 5278 */;
 import AdCreativeType from "AdCreativeType" /* 5282 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6992 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8765 */;
-import AssetUtils from "AssetUtils" /* 10078 */;
-import useQuestForPlacement from "useQuestForPlacement" /* 17608 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8764 */;
+import AssetUtils from "AssetUtils" /* 10077 */;
+import useQuestForPlacement from "useQuestForPlacement" /* 17603 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 5490 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
-import BountyStore from "BountyStore" /* 8741 */;
-import QuestStore from "QuestStore" /* 8742 */;
-import PlayableStore from "PlayableStore" /* 17581 */;
+import BountyStore from "BountyStore" /* 8740 */;
+import QuestStore from "QuestStore" /* 8741 */;
+import PlayableStore from "PlayableStore" /* 17576 */;
 
 const require = globalThis.__r;
 
@@ -31,8 +31,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus1;
   if (isDismissedResult) {
-    isDismissedResult = tmp(8738).isDismissed(questDockQuest.userStatus, tmp(5278).QuestContent.QUEST_BAR_MOBILE);
-    const tmpResult = tmp(8738);
+    isDismissedResult = tmp(8737).isDismissed(questDockQuest.userStatus, tmp(5278).QuestContent.QUEST_BAR_MOBILE);
+    const tmpResult = tmp(8737);
   }
   let claimedAt;
   if (questDockQuest != null) {

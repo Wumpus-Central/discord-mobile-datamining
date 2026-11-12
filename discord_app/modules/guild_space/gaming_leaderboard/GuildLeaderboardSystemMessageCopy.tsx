@@ -1,6 +1,6 @@
-// === Module 9114: GuildLeaderboardSystemMessageCopy ===
+// === Module 9113: GuildLeaderboardSystemMessageCopy ===
 
-// Module 9114 (GuildLeaderboardSystemMessageCopy)
+// Module 9113 (GuildLeaderboardSystemMessageCopy)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import _modDef2587 from "module_2587" /* 2587 */;

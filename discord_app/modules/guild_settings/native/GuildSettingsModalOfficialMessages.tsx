@@ -1,6 +1,6 @@
-// === Module 20634: GuildSettingsModalOfficialMessages ===
+// === Module 20629: GuildSettingsModalOfficialMessages ===
 
-// Module 20634 (GuildSettingsModalOfficialMessages)
+// Module 20629 (GuildSettingsModalOfficialMessages)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
@@ -11,7 +11,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489
 import Text_Text from "Text/Text" /* 5866 */;
 import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7221 */;
 import HeaderActionButton from "HeaderActionButton" /* 7363 */;
-import _modDef17788 from "module_17788" /* 17788 */;
+import _modDef17783 from "module_17783" /* 17783 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
@@ -37,16 +37,16 @@ function MessagePreview(theme) {
   const accessibleGuildOfficialTextColor = GuildOfficialMessageUtils.getAccessibleGuildOfficialTextColor(selectedColor, semanticColor, num);
   const hexResult = accessibleGuildOfficialTextColor.hex();
   const obj3 = _modDef671(selectedColor);
-  const alphaResult = _modDef671(selectedColor).alpha(closure_1_10);
+  const alphaResult = _modDef671(selectedColor).alpha(refs);
   const obj2 = { style: null, pointerEvents: "none", children: null };
   items = [tmp.chatContainer, , ];
   ({ borderStrong: arr[1], bgBaseLow: arr[2] } = animatedStyles);
   obj2.style = items;
   const obj4 = { style: null, children: null };
-  const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef671(selectedColor).alpha(closure_1_10).hex() }];
+  const items1 = [tmp.chatContainerInner, { backgroundColor: _modDef671(selectedColor).alpha(refs).hex() }];
   obj4.style = items1;
-  const hexResult1 = _modDef671(selectedColor).alpha(closure_1_10).hex();
-  const items2 = [application_id(native.Avatar, { source: _modDef17788 }), ];
+  const hexResult1 = _modDef671(selectedColor).alpha(refs).hex();
+  const items2 = [application_id(native.Avatar, { source: _modDef17783 }), ];
   const obj6 = { style: tmp.chatContent, children: null };
   const obj7 = { style: tmp.chatHeader, children: null };
   const obj8 = { animated: true, style: animatedStyles.textStrong, variant: "body-md/semibold", lineClamp: 1, children: null };
@@ -181,7 +181,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
     obj2.onSelect = function onSelect(officialMessageColor) {
       _undefined2(submitting[18]).updateGuild({ officialMessageColor });
     };
-    obj.openLazy(asyncRequireImpl(18920, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequireImpl(18915, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items5);
   const tmp14 = require("useMeasuredLayout")();
   const width = tmp14.width;

@@ -1,9 +1,9 @@
-// === Module 20122: useFileUploadComponentState ===
+// === Module 20117: useFileUploadComponentState ===
 
-// Module 20122 (useFileUploadComponentState)
+// Module 20117 (useFileUploadComponentState)
 import Server from "Server" /* 2116 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8806 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8805 */;
 
 require = fn;
 const DraftType = fn(8658).DraftType;

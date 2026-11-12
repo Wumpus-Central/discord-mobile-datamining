@@ -1,6 +1,6 @@
-// === Module 11874: ForLaterIntro ===
+// === Module 11868: ForLaterIntro ===
 
-// Module 11874 (ForLaterIntro)
+// Module 11868 (ForLaterIntro)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ActionSheetConstants from "ActionSheetConstants" /* 5504 */;
@@ -8,11 +8,11 @@ import Text_Text from "Text/Text" /* 5866 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import ClockIcon from "ClockIcon" /* 5979 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7897 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 11845 */;
-import BookmarkIcon from "BookmarkIcon" /* 11857 */;
-import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 11875 */;
-import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 11879 */;
-import _modDef11883 from "module_11883" /* 11883 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 11839 */;
+import BookmarkIcon from "BookmarkIcon" /* 11851 */;
+import ReminderWatchSpotIllustration from "ReminderWatchSpotIllustration" /* 11869 */;
+import BookmarksSpotIllustration2 from "BookmarksSpotIllustration" /* 11873 */;
+import _modDef11877 from "module_11877" /* 11877 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5243 */;
@@ -24,7 +24,7 @@ function IntroDemo(isReminder) {
   const obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const obj2 = { style: tmp.messages, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef11883 };
+  const obj4 = { uri: _modDef11877 };
   obj3.source = obj4;
   obj3.style = tmp.avatar;
   items = [hasOwnProperty(FastImageDefault, obj3), ];

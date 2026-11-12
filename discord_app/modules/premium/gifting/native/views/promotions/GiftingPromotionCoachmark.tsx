@@ -1,15 +1,15 @@
-// === Module 19615: GiftingPromotionCoachmark ===
+// === Module 19610: GiftingPromotionCoachmark ===
 
-// Module 19615 (GiftingPromotionCoachmark)
+// Module 19610 (GiftingPromotionCoachmark)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import usePreviousDefault from "usePrevious" /* 6773 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 11600 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 11594 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
-import PromotionsStore from "PromotionsStore" /* 9557 */;
+import PromotionsStore from "PromotionsStore" /* 9556 */;
 
 require = fn;
 const View = fn(17).View;
@@ -47,10 +47,10 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(11623).useThemeAndReducedMotionAwareAssetUrl(asset);
-  const GiftPromotionReminderExperiment = markAsDismissed(11611).GiftPromotionReminderExperiment;
+  const themeAndReducedMotionAwareAssetUrl = markAsDismissed(11617).useThemeAndReducedMotionAwareAssetUrl(asset);
+  const GiftPromotionReminderExperiment = markAsDismissed(11605).GiftPromotionReminderExperiment;
   let enabled = GiftPromotionReminderExperiment.useConfig({ location: "GiftingPromotionCoachmarkActionSheet" }).enabled;
-  let obj2 = markAsDismissed(11623);
+  let obj2 = markAsDismissed(11617);
   const items1 = [PromotionsStore];
   const stateFromStores1 = markAsDismissed(504).useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
   const tmp2Result = markAsDismissed(504);
@@ -58,7 +58,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
   }
-  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(11624).useTickingFormattedLimitedOfferTimeLeft(endDate);
+  const tickingFormattedLimitedOfferTimeLeft = markAsDismissed(11618).useTickingFormattedLimitedOfferTimeLeft(endDate);
   importDefault = tmp10;
   const tmp12 = usePreviousDefault(null != stateFromStores1);
   dependencyMap = tmp12;
@@ -81,7 +81,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       markAsDismissed(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items2);
-  const tmp2Result3 = markAsDismissed(11624);
+  const tmp2Result3 = markAsDismissed(11618);
   analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.GIFTING_PROMOTION_COACHMARK).analyticsLocations;
   const items3 = [analyticsLocations, markAsDismissed];
   let tmp19Result = null;
@@ -101,7 +101,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       }
       if (enabled) {
         const obj5 = { text: tickingFormattedLimitedOfferTimeLeft, style: tmp.countdownBadge };
-        enabled = closure_11(tmp11(11627), obj5);
+        enabled = closure_11(tmp11(11621), obj5);
       }
       items4[1] = enabled;
       const obj6 = { style: tmp.textContainer, children: null };
@@ -113,7 +113,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       items4[2] = closure_12(tmp22, obj6);
       const obj9 = { grow: true, icon: null, text: null, onPress: null };
       const obj10 = { size: "sm", color: tmp11(575).colors.WHITE };
-      obj9.icon = closure_11(markAsDismissed(11757).GiftIcon, obj10);
+      obj9.icon = closure_11(markAsDismissed(11751).GiftIcon, obj10);
       const intl = markAsDismissed(1113).intl;
       obj9.text = intl.string(markAsDismissed(1113).t.Ve9Ge6);
       obj9.onPress = tmp17;
@@ -129,7 +129,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
           ({ imageShared: arr5[0], imageWrapperAndroid: arr5[1] } = tmp);
           obj11.style = items6;
           const obj12 = { url: themeAndReducedMotionAwareAssetUrl, style: tmp.imageShared, autoplay: true };
-          obj11.children = closure_11(markAsDismissed(9432).APNGPlayer, obj12);
+          obj11.children = closure_11(markAsDismissed(9431).APNGPlayer, obj12);
           let tmp19Result2 = closure_11(tmp22, obj11);
         }
       }

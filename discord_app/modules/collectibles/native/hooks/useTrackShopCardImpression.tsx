@@ -1,6 +1,6 @@
-// === Module 10351: useTrackShopCardImpression ===
+// === Module 10349: useTrackShopCardImpression ===
 
-// Module 10351 (useTrackShopCardImpression)
+// Module 10349 (useTrackShopCardImpression)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import useTrackImpression from "useTrackImpression" /* 6275 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8430 */;

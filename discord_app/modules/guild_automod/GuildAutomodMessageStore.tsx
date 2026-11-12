@@ -1,13 +1,13 @@
-// === Module 9099: GuildAutomodMessageStore ===
+// === Module 9098: GuildAutomodMessageStore ===
 
-// Module 9099 (GuildAutomodMessageStore)
+// Module 9098 (GuildAutomodMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 6311 */;
 import AutomodMessageUtils from "AutomodMessageUtils" /* 8644 */;
-import MessageQueue from "MessageQueue" /* 8950 */;
-import AutomodErrorUtils from "AutomodErrorUtils" /* 9100 */;
+import MessageQueue from "MessageQueue" /* 8949 */;
+import AutomodErrorUtils from "AutomodErrorUtils" /* 9099 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import MessageStore from "MessageStore" /* 6309 */;
 

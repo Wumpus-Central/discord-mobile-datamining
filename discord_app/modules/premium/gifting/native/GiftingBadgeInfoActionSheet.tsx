@@ -1,13 +1,13 @@
-// === Module 11616: GiftingBadgeInfoActionSheet ===
+// === Module 11610: GiftingBadgeInfoActionSheet ===
 
-// Module 11616 (GiftingBadgeInfoActionSheet)
+// Module 11610 (GiftingBadgeInfoActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef2781 from "module_2781" /* 2781 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11617 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11619 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11611 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11613 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8481 */;
@@ -106,7 +106,7 @@ export default function GiftingBadgeInfoActionSheet() {
         }
         items[2] = tmp12Result;
         obj.children = items;
-        return closure_2_10(View, obj, children.key);
+        return refs(View, obj, children.key);
       });
     }
   }

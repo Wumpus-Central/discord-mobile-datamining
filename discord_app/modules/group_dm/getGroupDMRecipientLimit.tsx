@@ -1,12 +1,12 @@
-// === Module 12452: getGroupDMRecipientLimit ===
+// === Module 12446: getGroupDMRecipientLimit ===
 
-// Module 12452 (getGroupDMRecipientLimit)
+// Module 12446 (getGroupDMRecipientLimit)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
-import GroupDMNitroCapExperiment from "GroupDMNitroCapExperiment" /* 12454 */;
+import GroupDMNitroCapExperiment from "GroupDMNitroCapExperiment" /* 12448 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
-let closure_3 = fn(12453).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+let closure_3 = fn(12447).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const Constants = fn(1072);
 ({ MAX_GROUP_DM_PARTICIPANTS: closure_4, MAX_GROUP_DM_STAFF_PARTICIPANTS: hasOwnProperty } = Constants);
 const PremiumTypes = fn(1387).PremiumTypes;

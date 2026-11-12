@@ -1,6 +1,6 @@
-// === Module 9497: DismissibleContentScope ===
+// === Module 9496: DismissibleContentScope ===
 
-// Module 9497 (DismissibleContentScope)
+// Module 9496 (DismissibleContentScope)
 import LoggerDefault from "Logger" /* 3 */;
 import DismissibleContentTypes from "DismissibleContentTypes" /* 5083 */;
 

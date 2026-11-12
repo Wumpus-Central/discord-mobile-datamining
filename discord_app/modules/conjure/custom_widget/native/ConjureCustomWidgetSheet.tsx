@@ -1,6 +1,6 @@
-// === Module 15711: ConjureCustomWidgetSheet ===
+// === Module 15706: ConjureCustomWidgetSheet ===
 
-// Module 15711 (ConjureCustomWidgetSheet)
+// Module 15706 (ConjureCustomWidgetSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef4079 from "module_4079" /* 4079 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -153,7 +153,7 @@ export default function ConjureCustomWidgetSheet() {
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(15709).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(15704).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
   const items1 = [closure_9(value(7793).TextArea, obj4), ];
   let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };

@@ -1,17 +1,17 @@
-// === Module 16820: guilds ===
+// === Module 16815: guilds ===
 
-// Module 16820 (guilds)
+// Module 16815 (guilds)
 import GuildRecord from "GuildRecord" /* 5110 */;
 import Constants2 from "Constants" /* 6698 */;
 import RPCErrorDefault from "RPCError" /* 7239 */;
 import botScopedAccess from "botScopedAccess" /* 7242 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 7243 */;
-import RPCHelpers from "RPCHelpers" /* 12779 */;
+import RPCHelpers from "RPCHelpers" /* 12773 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import GuildRoleStore from "GuildRoleStore" /* 5149 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import Constants from "Constants" /* 1072 */;
-import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 16804 */;
+import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 16799 */;
 import size from "module_2" /* 2 */;
 
 const getGuildIconURL = GuildRecord.getGuildIconURL;

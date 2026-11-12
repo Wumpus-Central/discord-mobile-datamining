@@ -1,6 +1,6 @@
-// === Module 17688: QuestDockVideoBackground ===
+// === Module 17683: QuestDockVideoBackground ===
 
-// Module 17688 (QuestDockVideoBackground)
+// Module 17683 (QuestDockVideoBackground)
 import _modDef671 from "module_671" /* 671 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -8,11 +8,11 @@ import _mod1652 from "module_1652" /* 1652 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2022 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import spring_spring from "spring/spring" /* 5876 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11192 */;
-import QuestDockUtils from "QuestDockUtils" /* 17584 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 17586 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17668 */;
-import useIsQuestDockModeActiveOrExitingDefault from "useIsQuestDockModeActiveOrExiting" /* 17689 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11186 */;
+import QuestDockUtils from "QuestDockUtils" /* 17579 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 17581 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 17663 */;
+import useIsQuestDockModeActiveOrExitingDefault from "useIsQuestDockModeActiveOrExiting" /* 17684 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
@@ -54,7 +54,7 @@ function QuestDockBackgroundMediaFade(arg0) {
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
 let QuestDockMode = fn(5275).QuestDockMode;
-const QuestDockConstants = fn(17585);
+const QuestDockConstants = fn(17580);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_10 } = QuestDockConstants);
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
@@ -204,8 +204,8 @@ export default noop.memo(function QuestDockVideoBackground(imageUrl) {
     const tmp4Result = tmp4(1377);
   }
   if (isRendered) {
-    isRendered = tmp4(10061).isHeroVideoSupported(imageUrl.videoMimetype);
-    const tmp4Result3 = tmp4(10061);
+    isRendered = tmp4(10060).isHeroVideoSupported(imageUrl.videoMimetype);
+    const tmp4Result3 = tmp4(10060);
   }
   if (isRendered) {
     let tmp28 = !tmp2;
@@ -281,7 +281,7 @@ export default noop.memo(function QuestDockVideoBackground(imageUrl) {
     const obj5 = { uri: videoUrl };
     obj4.source = obj5;
     obj4.paused = tmp8 !== tmp12.EXPANDED;
-    tmp46 = closure_12(tmp4(9664).VideoComponent, obj4);
+    tmp46 = closure_12(tmp4(9663).VideoComponent, obj4);
   }
   const items9 = [tmp46, ];
   let tmp48 = null;

@@ -1,6 +1,6 @@
-// === Module 10589: GuildProfileSheetBody ===
+// === Module 10587: GuildProfileSheetBody ===
 
-// Module 10589 (GuildProfileSheetBody)
+// Module 10587 (GuildProfileSheetBody)
 import nativeDefault from "native" /* 575 */;
 import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8093 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const GuildProfileFetchStatus = fn(8091).GuildProfileFetchStatus;
-const INVALID_ACCESS_ERROR_CODE = fn(10482).INVALID_ACCESS_ERROR_CODE;
+const INVALID_ACCESS_ERROR_CODE = fn(10480).INVALID_ACCESS_ERROR_CODE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5243);

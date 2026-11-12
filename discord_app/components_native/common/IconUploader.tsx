@@ -1,12 +1,12 @@
-// === Module 10848: IconUploader ===
+// === Module 10842: IconUploader ===
 
-// Module 10848 (IconUploader)
+// Module 10842 (IconUploader)
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import Pressables from "Pressables" /* 7364 */;
 import GuildIcon from "GuildIcon" /* 7654 */;
-import _modDef10849 from "module_10849" /* 10849 */;
+import _modDef10843 from "module_10843" /* 10843 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -124,7 +124,7 @@ export default function IconUploader(disabled) {
   const items1 = [tmp8, ];
   let tmp17 = null;
   if (!flag) {
-    let obj5 = { style: tmp.uploadIcon, source: _modDef10849 };
+    let obj5 = { style: tmp.uploadIcon, source: _modDef10843 };
     tmp17 = closure_7(FastImageDefault, obj5);
   }
   items1[1] = tmp17;

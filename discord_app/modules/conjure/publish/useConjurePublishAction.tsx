@@ -1,6 +1,6 @@
-// === Module 13073: useConjurePublishAction ===
+// === Module 13067: useConjurePublishAction ===
 
-// Module 13073 (useConjurePublishAction)
+// Module 13067 (useConjurePublishAction)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6955 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 6992 */;
@@ -8,7 +8,7 @@ import ConjureUtils from "ConjureUtils" /* 7197 */;
 import UserActionCreators from "UserActionCreators" /* 7286 */;
 import conjureAppInServer from "conjureAppInServer" /* 7287 */;
 import ConjurePublishTypes from "ConjurePublishTypes" /* 7320 */;
-import conjurePublishAction2 from "conjurePublishAction" /* 13075 */;
+import conjurePublishAction2 from "conjurePublishAction" /* 13069 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
@@ -434,7 +434,7 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                 if (true === ok.ok) {
                   return ok;
                 } else {
-                  if (ok.code === closure_0(13074).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                  if (ok.code === closure_0(13068).PREVIEW_BOT_NOT_INSTALLED_CODE) {
                     project = closure_0(7265).getProject(projectId);
                     project.catch(() => {
 
@@ -442,7 +442,7 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                     const tmp9Result = closure_0(7265);
                   }
                   const _Error = Error;
-                  const error = new Error(closure_1(13074)(ok));
+                  const error = new Error(closure_1(13068)(ok));
                   throw error;
                 }
               }).then((result) => {
@@ -457,8 +457,8 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                   });
                   const tmpResult3 = project(7287);
                 }
-                result = project(13069).refreshPublishedProject(projectId, { isPreview: false });
-                const tmpResult4 = project(13069);
+                result = project(13063).refreshPublishedProject(projectId, { isPreview: false });
+                const tmpResult4 = project(13063);
                 const catchPromise1 = result.catch(() => {
 
                 });
@@ -546,7 +546,7 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                 if (true === ok.ok) {
                   return ok;
                 } else {
-                  if (ok.code === closure_0(13074).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                  if (ok.code === closure_0(13068).PREVIEW_BOT_NOT_INSTALLED_CODE) {
                     project = closure_0(7265).getProject(projectId);
                     project.catch(() => {
 
@@ -554,7 +554,7 @@ let closure_22 = async function _startPublish(arg0, arg1, arg2, arg3) {
                     const tmp9Result = closure_0(7265);
                   }
                   const _Error = Error;
-                  const error = new Error(closure_1(13074)(ok));
+                  const error = new Error(closure_1(13068)(ok));
                   throw error;
                 }
               });
@@ -948,13 +948,13 @@ let closure_29 = async function _continuePublish(arg0, arg1, arg2, arg3) {
                   set.add(closure_0);
                   c10 = 1;
                   const requestConsent = closure_2.platform.requestConsent;
-                  f141103 = requestConsent;
+                  f141120 = requestConsent;
                   if (requestConsent == null) {
-                    f141103 = (arg0) => closure_2_19(arg0, closure_1_4);
+                    f141120 = (arg0) => closure_2_19(arg0, closure_1_4);
                   }
                   c11 = 3;
                   c12 = 1;
-                  const obj5 = { value: f141103(closure_0), done: false };
+                  const obj5 = { value: f141120(closure_0), done: false };
                   return obj5;
                 }
               }

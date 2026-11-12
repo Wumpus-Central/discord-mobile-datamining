@@ -1,6 +1,6 @@
-// === Module 12194: InAppReportsGuildDiscoveryPreviewElement ===
+// === Module 12188: InAppReportsGuildDiscoveryPreviewElement ===
 
-// Module 12194 (InAppReportsGuildDiscoveryPreviewElement)
+// Module 12188 (InAppReportsGuildDiscoveryPreviewElement)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;

@@ -1,6 +1,6 @@
-// === Module 20598: GuildRoleSubscriptionBenefitEditorModalStateStore ===
+// === Module 20593: GuildRoleSubscriptionBenefitEditorModalStateStore ===
 
-// Module 20598 (GuildRoleSubscriptionBenefitEditorModalStateStore)
+// Module 20593 (GuildRoleSubscriptionBenefitEditorModalStateStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import _mod5158 from "module_5158" /* 5158 */;
 import identity from "module_1254" /* 1254 */;

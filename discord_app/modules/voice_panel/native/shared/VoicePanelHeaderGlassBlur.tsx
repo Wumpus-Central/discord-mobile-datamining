@@ -1,6 +1,6 @@
-// === Module 14570: VoicePanelHeaderGlassBlur ===
+// === Module 14566: VoicePanelHeaderGlassBlur ===
 
-// Module 14570 (VoicePanelHeaderGlassBlur)
+// Module 14566 (VoicePanelHeaderGlassBlur)
 import _mod1652 from "module_1652" /* 1652 */;
 import shared from "shared" /* 5250 */;
 import useThemeDefault from "useTheme" /* 5484 */;

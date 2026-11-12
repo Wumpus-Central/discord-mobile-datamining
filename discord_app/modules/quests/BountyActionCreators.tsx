@@ -1,19 +1,19 @@
-// === Module 15145: BountyActionCreators ===
+// === Module 15142: BountyActionCreators ===
 
-// Module 15145 (BountyActionCreators)
+// Module 15142 (BountyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import QuestTypes from "QuestTypes" /* 5278 */;
 import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8598 */;
-import QuestDataUtils from "QuestDataUtils" /* 8738 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 8762 */;
-import BountiesDesktopQuestBarExperiment2 from "BountiesDesktopQuestBarExperiment" /* 10075 */;
+import QuestDataUtils from "QuestDataUtils" /* 8737 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 8761 */;
+import BountiesDesktopQuestBarExperiment2 from "BountiesDesktopQuestBarExperiment" /* 10074 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 8739 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8738 */;
 import NetworkStore from "NetworkStore" /* 6147 */;
-import BountyStore from "BountyStore" /* 8741 */;
-import QuestStore from "QuestStore" /* 8742 */;
+import BountyStore from "BountyStore" /* 8740 */;
+import QuestStore from "QuestStore" /* 8741 */;
 
 require = fn;
 function fetchBountiesAndDispatch() {
@@ -104,7 +104,7 @@ let closure_13 = async function _fetchQuestHomeBounties(arg0) {
             value: fetchBountiesAndDispatch(tmp5, asyncGeneratorStep(async () => {
                       await tmp2(8598).getSession();
                       closure_128_0 = value;
-                      const orRefreshAdSession = tmp2(8762).getOrRefreshAdSession();
+                      const orRefreshAdSession = tmp2(8761).getOrRefreshAdSession();
                       const HTTP = tmp2(1282).HTTP;
                       const request = { url: constants.QUESTS_GET_DECISIONS, query: null, rejectWithError: false, context: null };
                       const obj7 = { placement: closure_129_0, client_ad_session_id: orRefreshAdSession.uuid, client_heartbeat_session_id: null, num_decisions_requested: 5 };

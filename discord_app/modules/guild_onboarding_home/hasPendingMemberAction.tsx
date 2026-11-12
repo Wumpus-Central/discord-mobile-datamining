@@ -1,13 +1,13 @@
-// === Module 8934: hasPendingMemberAction ===
+// === Module 8933: hasPendingMemberAction ===
 
-// Module 8934 (hasPendingMemberAction)
+// Module 8933 (hasPendingMemberAction)
 import FlagUtilsAll from "FlagUtils" /* 1403 */;
 import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7020 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7017 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8935 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8934 */;
 
 const GuildFeatures = fn(1072).GuildFeatures;
 const GuildMemberFlags = fn(5161).GuildMemberFlags;

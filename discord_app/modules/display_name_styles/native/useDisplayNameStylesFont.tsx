@@ -1,6 +1,6 @@
-// === Module 10000: useDisplayNameStylesFont ===
+// === Module 9999: useDisplayNameStylesFont ===
 
-// Module 10000 (useDisplayNameStylesFont)
+// Module 9999 (useDisplayNameStylesFont)
 import DisplayNameFont from "DisplayNameFont" /* 1395 */;
 import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 6688 */;
 import size from "module_2" /* 2 */;

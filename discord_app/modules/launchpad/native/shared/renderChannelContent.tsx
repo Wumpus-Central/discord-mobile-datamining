@@ -1,13 +1,13 @@
-// === Module 19304: renderChannelContent ===
+// === Module 19299: renderChannelContent ===
 
-// Module 19304 (renderChannelContent)
+// Module 19299 (renderChannelContent)
 import Text_Text from "Text/Text" /* 5866 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 7156 */;
 import LockIcon from "LockIcon" /* 8027 */;
 import WarningIcon from "WarningIcon" /* 8095 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18714 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 19301 */;
-import ChannelTitleDefault from "ChannelTitle" /* 19305 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18709 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 19296 */;
+import ChannelTitleDefault from "ChannelTitle" /* 19300 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

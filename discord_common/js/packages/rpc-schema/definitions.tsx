@@ -1,6 +1,6 @@
-// === Module 16805: definitions ===
+// === Module 16800: definitions ===
 
-// Module 16805 (definitions)
+// Module 16800 (definitions)
 import Constants2 from "Constants" /* 1083 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
 import EmbeddedActivityOrientationLockState2 from "EmbeddedActivityOrientationLockState" /* 2143 */;
@@ -10,13 +10,13 @@ import ActivityTypes from "ActivityTypes" /* 6006 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 7243 */;
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7406 */;
 import InviteTargetTypes from "InviteTargetTypes" /* 7599 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10795 */;
-import ActivityPlatform from "ActivityPlatform" /* 12775 */;
-import ThermalStates from "ThermalStates" /* 16802 */;
-import SKUTypes from "SKUTypes" /* 16806 */;
-import discord_common_helpers from "discord_common/helpers" /* 16807 */;
-import contextMenuIcons from "contextMenuIcons" /* 16808 */;
-import Constants from "Constants" /* 12616 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10789 */;
+import ActivityPlatform from "ActivityPlatform" /* 12769 */;
+import ThermalStates from "ThermalStates" /* 16797 */;
+import SKUTypes from "SKUTypes" /* 16801 */;
+import discord_common_helpers from "discord_common/helpers" /* 16802 */;
+import contextMenuIcons from "contextMenuIcons" /* 16803 */;
+import Constants from "Constants" /* 12610 */;
 import size from "module_2" /* 2 */;
 
 function joiEnum(number, EmbeddedActivityOrientationLockState, arg2) {

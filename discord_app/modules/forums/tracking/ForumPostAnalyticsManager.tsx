@@ -1,6 +1,6 @@
-// === Module 8928: ForumPostAnalyticsManager ===
+// === Module 8927: ForumPostAnalyticsManager ===
 
-// Module 8928 (ForumPostAnalyticsManager)
+// Module 8927 (ForumPostAnalyticsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 6972 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

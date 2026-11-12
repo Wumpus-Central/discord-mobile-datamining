@@ -1,11 +1,11 @@
-// === Module 10679: useGuildPowerupOnActivate ===
+// === Module 10672: useGuildPowerupOnActivate ===
 
-// Module 10679 (useGuildPowerupOnActivate)
+// Module 10672 (useGuildPowerupOnActivate)
 import BoostingActionCreators from "BoostingActionCreators" /* 6889 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 9169 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 9168 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 9170 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 9169 */;
 
 const require = globalThis.__r;
 
@@ -68,7 +68,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                        return PERK(6785).popWithKey(diff(9514).PREMIUM_KEY);
+                        return PERK(6785).popWithKey(diff(9513).PREMIUM_KEY);
                       },
               onPaymentSuccess() {
                         const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(GuildBoostSlotStore.boostSlots);
@@ -88,7 +88,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
                         }
                       },
               onPaymentDismiss() {
-                        return PERK(6785).popWithKey(diff(9514).PREMIUM_KEY);
+                        return PERK(6785).popWithKey(diff(9513).PREMIUM_KEY);
                       }
             };
             const result = tmp17(onToggle[13]).launchGuildBoostFlowOrAlert(obj3);

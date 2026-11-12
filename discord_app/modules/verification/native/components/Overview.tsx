@@ -1,6 +1,6 @@
-// === Module 20276: Overview ===
+// === Module 20271: Overview ===
 
-// Module 20276 (Overview)
+// Module 20271 (Overview)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 5086 */;
@@ -44,7 +44,7 @@ export default function Overview() {
   const items1 = [navigation, stateFromStores, tmp.verificationType];
   let obj3 = { style: tmp.container, children: null };
   let obj4 = { style: tmp.containerInner, children: null };
-  const callback = noop.useCallback(() => closure_2_10(closure_2_11, {
+  const callback = noop.useCallback(() => refs(closure_2_11, {
     children: stateFromStores.map((item) => {
       if (item === constants.CAPTCHA) {
         let obj = { text: null, onPress: null, grow: true };

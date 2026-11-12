@@ -1,7 +1,7 @@
-// === Module 12036: UserProfileWidgetEditOptionsButton ===
+// === Module 12030: UserProfileWidgetEditOptionsButton ===
 
-// Module 12036 (UserProfileWidgetEditOptionsButton)
-import openUserProfileWidgetEditOptionsActionSheetDefault from "openUserProfileWidgetEditOptionsActionSheet" /* 12037 */;
+// Module 12030 (UserProfileWidgetEditOptionsButton)
+import openUserProfileWidgetEditOptionsActionSheetDefault from "openUserProfileWidgetEditOptionsActionSheet" /* 12031 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

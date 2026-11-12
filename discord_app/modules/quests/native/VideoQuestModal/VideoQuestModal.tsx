@@ -1,21 +1,21 @@
-// === Module 17618: VideoQuestModal ===
+// === Module 17613: VideoQuestModal ===
 
-// Module 17618 (VideoQuestModal)
+// Module 17613 (VideoQuestModal)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import AnalyticsActions from "AnalyticsActions" /* 8759 */;
-import QuestUtils from "QuestUtils" /* 10061 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11192 */;
-import applyOrientationLock2 from "applyOrientationLock" /* 15159 */;
-import QuestModalContentCloudBackgroundDefault from "QuestModalContentCloudBackground" /* 17620 */;
+import AnalyticsActions from "AnalyticsActions" /* 8758 */;
+import QuestUtils from "QuestUtils" /* 10060 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11186 */;
+import applyOrientationLock2 from "applyOrientationLock" /* 15156 */;
+import QuestModalContentCloudBackgroundDefault from "QuestModalContentCloudBackground" /* 17615 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(17585).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+let closure_6 = fn(17580).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -75,7 +75,7 @@ let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
     }, items);
     const tmp15 = closure_12();
     const pillarboxed = tmp15;
-    const tmp17 = useStateFromSharedValueDefault(obj2.useContext(tmp(17586).QuestDockGestureContext).windowDimensions);
+    const tmp17 = useStateFromSharedValueDefault(obj2.useContext(tmp(17581).QuestDockGestureContext).windowDimensions);
     ({ width, height } = tmp17);
     let bound = null;
     if (tmp17.landscape) {
@@ -222,14 +222,14 @@ let closure_15 = noop.memo(function VideoQuestModalContent(sourceQuestContent) {
         bound = width;
       }
       const obj14 = { contentWidth: bound, isFullscreen: tmp12, onNavigateToPostWatchVideo: callback2, onClose, onEnd: callback2, setIsFullscreen, sourceQuestContent };
-      tmp48Result = tmp48(tmp16(17623), obj14);
-      const tmp16Result = tmp16(17623);
+      tmp48Result = tmp48(tmp16(17618), obj14);
+      const tmp16Result = tmp16(17618);
     }
     const items16 = [tmp48Result, ];
     let tmp48Result2 = first === tmp24.POST_WATCH_VIDEO;
     if (tmp48Result2) {
       const obj15 = { onClose, onRestartVideo: callback1, sourceQuestContent };
-      tmp48Result2 = tmp48(tmp16(17648), obj15);
+      tmp48Result2 = tmp48(tmp16(17643), obj15);
     }
     items16[1] = tmp48Result2;
     obj13.children = items16;

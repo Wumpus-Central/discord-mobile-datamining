@@ -1,16 +1,16 @@
-// === Module 9273: GuildSpaceLeaderboardSystemMessage ===
+// === Module 9272: GuildSpaceLeaderboardSystemMessage ===
 
-// Module 9273 (GuildSpaceLeaderboardSystemMessage)
+// Module 9272 (GuildSpaceLeaderboardSystemMessage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5163 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8588 */;
-import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 9114 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9122 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9124 */;
-import createCommonMessageDefault from "createCommonMessage" /* 9126 */;
-import _modDef9274 from "module_9274" /* 9274 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 9113 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9121 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9123 */;
+import createCommonMessageDefault from "createCommonMessage" /* 9125 */;
+import _modDef9273 from "module_9273" /* 9273 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -103,7 +103,7 @@ export function createGuildSpaceLeaderboardSystemMessage(theme) {
           obj4.previousUsernameOnClick = tmp22Result2Result;
           obj7.content = intl.formatToParts(mobileLeaderboardSystemMessage.message, obj4);
           const tmp22Result3 = formatUsernameOnClickDefault;
-          obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9274);
+          obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9273);
           obj7.iconTintColor = tmp13.iconTintColor;
           const merged1 = Object.assign(createCommonMessageDefault(theme));
           return obj7;

@@ -1,6 +1,6 @@
-// === Module 15452: GuildScheduledEventEmbed ===
+// === Module 15449: GuildScheduledEventEmbed ===
 
-// Module 15452 (GuildScheduledEventEmbed)
+// Module 15449 (GuildScheduledEventEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5106 */;
@@ -13,13 +13,13 @@ import useEventSchedule from "useEventSchedule" /* 7914 */;
 import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 7919 */;
 import GuildEventUtils from "GuildEventUtils" /* 8351 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8588 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 9097 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9104 */;
-import _modDef9107 from "module_9107" /* 9107 */;
-import icons_ShareDefault from "icons/Share" /* 12536 */;
-import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 15453 */;
-import _modDef15455 from "module_15455" /* 15455 */;
-import _modDef15456 from "module_15456" /* 15456 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 9096 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9103 */;
+import _modDef9106 from "module_9106" /* 9106 */;
+import icons_ShareDefault from "icons/Share" /* 12530 */;
+import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 15450 */;
+import _modDef15452 from "module_15452" /* 15452 */;
+import _modDef15453 from "module_15453" /* 15453 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6966 */;
@@ -63,7 +63,7 @@ function createGuildScheduledEventEmbed(type) {
   const stringResult = intl.string(util.t.DlcqlU);
   const obj5 = { titleColor: colors.titleColor, borderColor: colors.borderColor, backgroundColor: colors.backgroundColor, thumbnailCornerRadius: 15, embedCanBeTapped: null != guild };
   const tmp7Result = GuildScheduledEventHeaderUtils;
-  const assetUriForEmbed1 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9107);
+  const assetUriForEmbed1 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9106);
   const tmp7Result12 = renderer_EmbedUtils;
   const assetUriForEmbed2 = renderer_EmbedUtils.getAssetUriForEmbed(icons_ShareDefault);
   if (null != guild) {
@@ -79,7 +79,7 @@ function createGuildScheduledEventEmbed(type) {
       const acceptLabelActiveBackgroundColor2 = colors.acceptLabelActiveBackgroundColor;
     } else if (result1) {
       acceptLabelActiveBackgroundColor = colors.backgroundColor;
-      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15455);
+      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15452);
       acceptLabelGreenColor = colors.acceptLabelDisabledTextColor;
       let tmp21 = assetUriForEmbed2;
       let stringResult2 = stringResult;
@@ -153,7 +153,7 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj8.badgeCount = toLocaleStringResult;
   const tmpResult4 = GuildScheduledEventManagerDefault;
-  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15456);
+  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15453);
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
     assetUriForEmbed4 = renderer_EmbedUtils.getAssetUriForEmbed(eventLocationIconSource);
@@ -206,9 +206,9 @@ let GuildScheduledEventStore = fn(6966);
 ({ isGuildEventEnded: closure_6, isGuildScheduledEventActive: metroImportDefault } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const getGuildIconSource = fn(5110).getGuildIconSource;
-const CodedLinkExtendedType = fn(11831).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11825).CodedLinkExtendedType;
 const constants = fn(5098).GuildScheduledEventEntityTypes;
-const InviteTypes = fn(8776).InviteTypes;
+const InviteTypes = fn(8775).InviteTypes;
 let closure_17 = MarkupUtils.astParserFor(MarkupUtils.guildEventLocationRules);
 const map = new Map();
 const size = fn(2);

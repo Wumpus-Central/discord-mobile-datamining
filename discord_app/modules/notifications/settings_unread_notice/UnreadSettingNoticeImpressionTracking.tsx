@@ -1,6 +1,6 @@
-// === Module 12270: UnreadSettingNoticeImpressionTracking ===
+// === Module 12264: UnreadSettingNoticeImpressionTracking ===
 
-// Module 12270 (UnreadSettingNoticeImpressionTracking)
+// Module 12264 (UnreadSettingNoticeImpressionTracking)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 6275 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 11804: messages/MessagesUtils ===
+// === Module 11798: messages/MessagesUtils ===
 
-// Module 11804 (messages/MessagesUtils)
+// Module 11798 (messages/MessagesUtils)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
@@ -32,16 +32,16 @@ import ClipboardUtils from "ClipboardUtils" /* 7877 */;
 import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8573 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8657 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8797 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8798 */;
-import Tracking from "Tracking" /* 8800 */;
-import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 9112 */;
-import QuestActionCreators from "QuestActionCreators" /* 10066 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11806 */;
-import computeScrollData from "computeScrollData" /* 11821 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11822 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 11825 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11826 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8796 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8797 */;
+import Tracking from "Tracking" /* 8799 */;
+import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 9111 */;
+import QuestActionCreators from "QuestActionCreators" /* 10065 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11800 */;
+import computeScrollData from "computeScrollData" /* 11815 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11816 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 11819 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11820 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 8677 */;
@@ -182,9 +182,9 @@ let closure_24 = async function _handleTapNavBar(arg0) {
       c3 = 3;
       const obj = { value, done: true };
       return obj;
-    } catch (tmp18) {
+    } catch (tmp17) {
       c3 = tmp;
-      throw tmp18;
+      throw tmp17;
     }
   }
 };
@@ -211,8 +211,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(11805).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(9094);
+let closure_5 = fn(11799).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(9093);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_17, MessageEmbedTypes: closure_18, MessageTypes: closure_19, Permissions: closure_20, MAX_MESSAGES_PER_CHANNEL: closure_21 } = Constants);

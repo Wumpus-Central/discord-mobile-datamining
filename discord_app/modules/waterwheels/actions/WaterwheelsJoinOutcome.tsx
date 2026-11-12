@@ -1,6 +1,6 @@
-// === Module 18880: WaterwheelsJoinOutcome ===
+// === Module 18875: WaterwheelsJoinOutcome ===
 
-// Module 18880 (WaterwheelsJoinOutcome)
+// Module 18875 (WaterwheelsJoinOutcome)
 import Constants from "Constants" /* 1072 */;
 import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6859 */;
 import size from "module_2" /* 2 */;

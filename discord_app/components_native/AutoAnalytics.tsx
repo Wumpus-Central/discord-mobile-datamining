@@ -1,16 +1,16 @@
-// === Module 19396: AutoAnalytics ===
+// === Module 19391: AutoAnalytics ===
 
-// Module 19396 (AutoAnalytics)
+// Module 19391 (AutoAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import FavoritesUtils from "FavoritesUtils" /* 5117 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
-import getChannelOpenedMetadata from "getChannelOpenedMetadata" /* 8932 */;
-import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 8936 */;
-import GuildThemeAnalyticsUtils from "GuildThemeAnalyticsUtils" /* 19397 */;
-import trackGuildViewedClickstreamDefault from "trackGuildViewedClickstream" /* 19398 */;
-import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 19399 */;
-import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 19400 */;
+import getChannelOpenedMetadata from "getChannelOpenedMetadata" /* 8931 */;
+import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 8935 */;
+import GuildThemeAnalyticsUtils from "GuildThemeAnalyticsUtils" /* 19392 */;
+import trackGuildViewedClickstreamDefault from "trackGuildViewedClickstream" /* 19393 */;
+import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 19394 */;
+import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 19395 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;

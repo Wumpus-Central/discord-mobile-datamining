@@ -1,6 +1,6 @@
-// === Module 11182: ExpressionPickerActionSheet ===
+// === Module 11176: ExpressionPickerActionSheet ===
 
-// Module 11182 (ExpressionPickerActionSheet)
+// Module 11176 (ExpressionPickerActionSheet)
 import initialize from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -11,15 +11,15 @@ import useKeyboardType from "useKeyboardType" /* 5440 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5503 */;
 import NavigatorConstants from "NavigatorConstants" /* 5829 */;
-import KeyboardUtils from "KeyboardUtils" /* 11184 */;
-import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 11185 */;
-import ExpressionPickerDefault from "ExpressionPicker" /* 11186 */;
+import KeyboardUtils from "KeyboardUtils" /* 11178 */;
+import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 11179 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 11180 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 
 require = fn;
 let closure_5 = fn(5504).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(11183).STICKER_FORMATS;
+const STICKER_FORMATS = fn(11177).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);

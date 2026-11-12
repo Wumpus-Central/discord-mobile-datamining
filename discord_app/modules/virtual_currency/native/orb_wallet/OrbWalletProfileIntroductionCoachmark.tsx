@@ -1,8 +1,8 @@
-// === Module 19462: OrbWalletProfileIntroductionCoachmark ===
+// === Module 19457: OrbWalletProfileIntroductionCoachmark ===
 
-// Module 19462 (OrbWalletProfileIntroductionCoachmark)
+// Module 19457 (OrbWalletProfileIntroductionCoachmark)
 import util from "util" /* 1113 */;
-import _modDef19463 from "module_19463" /* 19463 */;
+import _modDef19458 from "module_19458" /* 19458 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ export default function OrbWalletProfileIntroductionCoachmark(visible) {
     const intl2 = util.intl;
     obj.description = intl2.string(util.t.YKJw4W);
     obj.visible = visible;
-    const obj2 = { type: "image", src: { uri: _modDef19463 }, aspectRatio: "16/9" };
+    const obj2 = { type: "image", src: { uri: _modDef19458 }, aspectRatio: "16/9" };
     obj.graphic = obj2;
     obj.onDismiss = function onDismiss() {
       return markAsDismissed(constants.USER_DISMISS);

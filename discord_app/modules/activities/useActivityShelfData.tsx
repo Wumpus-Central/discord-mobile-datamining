@@ -1,6 +1,6 @@
-// === Module 13273: useActivityShelfData ===
+// === Module 13267: useActivityShelfData ===
 
-// Module 13273 (useActivityShelfData)
+// Module 13267 (useActivityShelfData)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5914 */;
 import noop from "module_19" /* 19 */;

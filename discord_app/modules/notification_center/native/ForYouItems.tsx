@@ -1,6 +1,6 @@
-// === Module 19061: ForYouItems ===
+// === Module 19056: ForYouItems ===
 
-// Module 19061 (ForYouItems)
+// Module 19056 (ForYouItems)
 import nativeDefault from "native" /* 575 */;
 import _mod674 from "module_674" /* 674 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -10,18 +10,18 @@ import Text_Text from "Text/Text" /* 5866 */;
 import parseURLDefault from "parseURL" /* 5985 */;
 import CustomMarkupAll from "CustomMarkup" /* 6278 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6970 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14840 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 16169 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 19059 */;
-import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 19060 */;
-import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 19076 */;
-import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 19077 */;
-import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 19078 */;
-import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 19079 */;
-import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 19080 */;
-import ForYouShowAllRow from "ForYouShowAllRow" /* 19086 */;
-import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 19087 */;
-import ForYouLoadMore from "ForYouLoadMore" /* 19088 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 14836 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 16164 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 19054 */;
+import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 19055 */;
+import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 19071 */;
+import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 19072 */;
+import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 19073 */;
+import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 19074 */;
+import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 19075 */;
+import ForYouShowAllRow from "ForYouShowAllRow" /* 19081 */;
+import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 19082 */;
+import ForYouLoadMore from "ForYouLoadMore" /* 19083 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -30,7 +30,7 @@ import ApplicationStore from "ApplicationStore" /* 2162 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import UserStore from "UserStore" /* 1385 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 19055 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 19050 */;
 
 require = fn;
 function ForYouFooter(loading) {
@@ -120,11 +120,11 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(9216)(first);
+    const tmp15 = guild_id(9215)(first);
     let result = stringResult;
     if (null != tmp15) {
-      result = tmp2(8795).formatPollResultNotificationCenterText(tmp15);
-      const tmp2Result = tmp2(8795);
+      result = tmp2(8794).formatPollResultNotificationCenterText(tmp15);
+      const tmp2Result = tmp2(8794);
     }
   } else if (stickers.length > 0) {
     const intl6 = tmp2(1113).intl;
@@ -240,7 +240,7 @@ function ForYouMessagePreviewV2(item) {
   } else {
     const obj7 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(11797);
+      let tmp29 = guild_id(11791);
       const obj8 = { source: tmp29, size: null, style: null };
       SMALL = tmp2(1187).IconSizes.SMALL;
       obj8.size = SMALL;
@@ -251,10 +251,10 @@ function ForYouMessagePreviewV2(item) {
     } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (constants4.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(12982);
+        tmp29 = guild_id(12976);
       }
     }
-    tmp29 = guild_id(11331);
+    tmp29 = guild_id(11325);
   }
   const tmp2Result10 = item(8579);
 }
@@ -481,7 +481,7 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function*() {
-        yield tmp3(19057).deleteNotificationCenterItem(tmp3);
+        yield tmp3(19052).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };

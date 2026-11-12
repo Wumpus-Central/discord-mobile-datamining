@@ -1,6 +1,6 @@
-// === Module 18637: MessagesItemSuggestedFriend ===
+// === Module 18632: MessagesItemSuggestedFriend ===
 
-// Module 18637 (MessagesItemSuggestedFriend)
+// Module 18632 (MessagesItemSuggestedFriend)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -8,9 +8,9 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import UserUtilsDefault from "UserUtils" /* 5309 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5998 */;
 import _mod7822 from "module_7822" /* 7822 */;
-import _mod15067 from "module_15067" /* 15067 */;
-import FriendSuggestionUtils from "FriendSuggestionUtils" /* 18638 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18639 */;
+import _mod15064 from "module_15064" /* 15064 */;
+import FriendSuggestionUtils from "FriendSuggestionUtils" /* 18633 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
@@ -150,7 +150,7 @@ export const MessagesItemSuggestedFriendFast = memoResult;
 export const MessagesItemSuggestedFriendFlash = memoResult1;
 export const MessagesItemSuggestedFriendLegend = noop.memo(function MessagesItemSuggestedFriendLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod15067.useRecyclingState(false);
+  [tmp2, tmp3] = _mod15064.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.addedPressed = tmp2;
   obj2.setAddedPressed = tmp3;

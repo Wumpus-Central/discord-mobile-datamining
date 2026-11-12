@@ -1,6 +1,6 @@
-// === Module 20672: GlobalDiscoveryServersUtils ===
+// === Module 20667: GlobalDiscoveryServersUtils ===
 
-// Module 20672 (GlobalDiscoveryServersUtils)
+// Module 20667 (GlobalDiscoveryServersUtils)
 import util from "util" /* 1113 */;
 import v1 from "v1" /* 1266 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
@@ -164,7 +164,7 @@ export function fromDiscoverableGuildServer(id) {
   return obj;
 }
 export function fromDiscoverableGuildSearchResult(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "Icon", discoverySplash: null, emojis: [] };
+  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "description", discoverySplash: null, emojis: [] };
   ({ approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, discovery_splash: obj.discoverySplash } = id);
   return obj;
 }
@@ -175,7 +175,7 @@ export function getLanguageCodeFallback() {
     tmp = items;
   }
   [tmp3] = tmp;
-  const arr2 = closure_1_10();
+  const arr2 = refs();
   const locale = tmp3.locale;
   let found = arr2.find((code) => code.code === locale);
   if (found == null) {

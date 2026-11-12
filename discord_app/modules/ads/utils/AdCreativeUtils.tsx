@@ -1,6 +1,6 @@
-// === Module 17592: AdCreativeUtils ===
+// === Module 17587: AdCreativeUtils ===
 
-// Module 17592 (AdCreativeUtils)
+// Module 17587 (AdCreativeUtils)
 import AdCreativeType from "AdCreativeType" /* 5282 */;
 import size from "module_2" /* 2 */;
 

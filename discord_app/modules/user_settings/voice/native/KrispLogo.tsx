@@ -1,6 +1,6 @@
-// === Module 12946: KrispLogo ===
+// === Module 12940: KrispLogo ===
 
-// Module 12946 (KrispLogo)
+// Module 12940 (KrispLogo)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -8,8 +8,8 @@ import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import shared from "shared" /* 5250 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import LinkingDefault from "Linking" /* 5949 */;
-import _modDef12947 from "module_12947" /* 12947 */;
-import _modDef12948 from "module_12948" /* 12948 */;
+import _modDef12941 from "module_12941" /* 12941 */;
+import _modDef12942 from "module_12942" /* 12942 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -39,10 +39,10 @@ export default function KrispLogo() {
   items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   if (obj2.isThemeLight(stateFromStores)) {
-    let tmp4Result = _modDef12947;
+    let tmp4Result = _modDef12941;
     let tmp6 = importDefault;
   } else {
-    tmp4Result = _modDef12948;
+    tmp4Result = _modDef12942;
     tmp6 = importDefault;
   }
   const obj3 = { style: closure_12.detailsView, children: null };
@@ -50,7 +50,7 @@ export default function KrispLogo() {
   obj2 = shared;
   const intl = util.intl;
   obj4.accessibilityLabel = intl.string(util.t.vFiCSx);
-  const items1 = [closure_1_10(tmp6(5957), obj4), ];
+  const items1 = [refs(tmp6(5957), obj4), ];
   const obj5 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = util.intl;
   obj5.accessibilityLabel = intl2.string(util.t.hvVgAZ);
@@ -58,8 +58,8 @@ export default function KrispLogo() {
   const obj6 = { variant: "body-sm/medium", color: "text-link", children: null };
   const intl3 = util.intl;
   obj6.children = intl3.string(util.t.hvVgAZ);
-  obj5.children = closure_1_10(Text_Text.Text, obj6);
-  items1[1] = closure_1_10(React4, obj5);
+  obj5.children = refs(Text_Text.Text, obj6);
+  items1[1] = refs(React4, obj5);
   obj3.children = items1;
   return closure_1_11(React3, obj3);
 };

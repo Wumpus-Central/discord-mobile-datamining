@@ -1,13 +1,13 @@
-// === Module 17303: FamilyCenterModalDataTooltip ===
+// === Module 17298: FamilyCenterModalDataTooltip ===
 
-// Module 17303 (FamilyCenterModalDataTooltip)
+// Module 17298 (FamilyCenterModalDataTooltip)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2685 from "module_2685" /* 2685 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9551 */;
-import Modal from "Modal" /* 12434 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 9550 */;
+import Modal from "Modal" /* 12428 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -62,7 +62,7 @@ function FamilyCenterModalDataTooltipScreen() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(8004).ChatIcon, [USER_CALLED]: fn(14125).PhoneIcon, [USER_ADD]: fn(5955).FriendsIcon, [GUILD_ADD]: fn(15898).ServerGridIcon, [GUILD_INTERACTION]: fn(8006).ThreadIcon, [PURCHASES]: fn(8186).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5979).ClockIcon, [GIFTS]: fn(11757).GiftIcon };
+let obj = { [USER_INTERACTION]: fn(8004).ChatIcon, [USER_CALLED]: fn(14121).PhoneIcon, [USER_ADD]: fn(5955).FriendsIcon, [GUILD_ADD]: fn(15893).ServerGridIcon, [GUILD_INTERACTION]: fn(8006).ThreadIcon, [PURCHASES]: fn(8186).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5979).ClockIcon, [GIFTS]: fn(11751).GiftIcon };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(8674).TeenActionDisplayType);
 let createStyles = fn(5243);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };

@@ -1,14 +1,14 @@
-// === Module 20251: StageSpeakInviteNotificationManager ===
+// === Module 20246: StageSpeakInviteNotificationManager ===
 
-// Module 20251 (StageSpeakInviteNotificationManager)
+// Module 20246 (StageSpeakInviteNotificationManager)
 import util from "util" /* 1113 */;
 import useChannelName from "useChannelName" /* 5891 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6295 */;
-import NotificationTextUtils from "NotificationTextUtils" /* 10955 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10962 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10964 */;
-import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 11891 */;
-import PushNotificationDefault from "PushNotification" /* 12830 */;
+import NotificationTextUtils from "NotificationTextUtils" /* 10949 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10956 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10958 */;
+import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 11885 */;
+import PushNotificationDefault from "PushNotification" /* 12824 */;
 import VoicePanelStore from "VoicePanelStore" /* 6838 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5092 */;

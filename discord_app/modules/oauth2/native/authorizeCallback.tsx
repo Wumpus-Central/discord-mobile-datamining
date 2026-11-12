@@ -1,13 +1,13 @@
-// === Module 12676: authorizeCallback ===
+// === Module 12670: authorizeCallback ===
 
-// Module 12676 (authorizeCallback)
+// Module 12670 (authorizeCallback)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import LinkingDefault from "Linking" /* 5949 */;
 import BrowserManager from "BrowserManager" /* 5981 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
-import Constants from "Constants" /* 12675 */;
+import Constants from "Constants" /* 12669 */;
 import size from "module_2" /* 2 */;
 
 ({ OAUTH2_SUCCESS_RESULT_MODAL_KEY: c3, OAUTH2_ERROR_RESULT_MODAL_KEY: closure_4 } = Constants);
@@ -28,7 +28,7 @@ export default function authorizeCallback(arg0) {
         if (null != pathname) {
           if (null != pathname.match(re5)) {
             const obj3 = { application: tmp, guild: tmp2 };
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12677, dependencyMap.paths), obj3, React3);
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12671, dependencyMap.paths), obj3, React3);
             const tmp8Result4 = ModalActionCreatorsDefault;
           } else if (null != pathname.match(re6)) {
             if (!canceled) {

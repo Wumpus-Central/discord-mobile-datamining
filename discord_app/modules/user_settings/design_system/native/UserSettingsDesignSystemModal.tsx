@@ -1,6 +1,6 @@
-// === Module 18331: UserSettingsDesignSystemModal ===
+// === Module 18326: UserSettingsDesignSystemModal ===
 
-// Module 18331 (UserSettingsDesignSystemModal)
+// Module 18326 (UserSettingsDesignSystemModal)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
@@ -9,11 +9,11 @@ import Navigator from "Navigator" /* 7424 */;
 import NavigatorHeader from "NavigatorHeader" /* 7427 */;
 import ModalScreen from "ModalScreen" /* 8142 */;
 import ModalContent from "ModalContent" /* 8144 */;
-import Modal from "Modal" /* 12434 */;
-import ModalFooter from "ModalFooter" /* 13979 */;
-import StepModal from "StepModal" /* 13995 */;
-import ModalActionButton from "ModalActionButton" /* 15049 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 16376 */;
+import Modal from "Modal" /* 12428 */;
+import ModalFooter from "ModalFooter" /* 13975 */;
+import StepModal from "StepModal" /* 13991 */;
+import ModalActionButton from "ModalActionButton" /* 15045 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 16371 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -516,7 +516,7 @@ function SwitchesScreen(onAction) {
   [arr2, c1] = noop.useState(parts.map(() => false));
   const obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
   const tmp2 = _slicedToArray(noop.useState(parts.map(() => false)), 2);
-  obj.footer = closure_7(parts(15048).ModalFloatingAction, { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction });
+  obj.footer = closure_7(parts(15044).ModalFloatingAction, { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction });
   const obj3 = { style: tmp.tableRows, children: null };
   const obj2 = { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction };
   obj3.children = closure_7(parts(7680).TableRowGroup, {
@@ -539,7 +539,7 @@ function SwitchesScreen(onAction) {
       }, index);
     })
   });
-  items = [closure_7(closure_5, obj3), closure_7(parts(15048).ModalFloatingActionSpacer, {})];
+  items = [closure_7(closure_5, obj3), closure_7(parts(15044).ModalFloatingActionSpacer, {})];
   obj.children = items;
   return closure_8(DemoScreen, obj);
 }

@@ -1,7 +1,7 @@
-// === Module 14038: GuildDisableCommunicationModal ===
+// === Module 14034: GuildDisableCommunicationModal ===
 
-// Module 14038 (GuildDisableCommunicationModal)
-import GuildDisableCommunicationDefault from "GuildDisableCommunication" /* 14039 */;
+// Module 14034 (GuildDisableCommunicationModal)
+import GuildDisableCommunicationDefault from "GuildDisableCommunication" /* 14035 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

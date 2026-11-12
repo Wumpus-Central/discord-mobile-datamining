@@ -1,6 +1,6 @@
-// === Module 20027: VoicePermissionManager ===
+// === Module 20022: VoicePermissionManager ===
 
-// Module 20027 (VoicePermissionManager)
+// Module 20022 (VoicePermissionManager)
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6295 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 8126 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 6879 */;

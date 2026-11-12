@@ -1,10 +1,10 @@
-// === Module 15505: ConversationFocusView ===
+// === Module 15502: ConversationFocusView ===
 
-// Module 15505 (ConversationFocusView)
+// Module 15502 (ConversationFocusView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9058 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 9073 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9057 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 9072 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

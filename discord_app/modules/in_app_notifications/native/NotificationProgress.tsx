@@ -1,6 +1,6 @@
-// === Module 11027: NotificationProgress ===
+// === Module 11021: NotificationProgress ===
 
-// Module 11027 (NotificationProgress)
+// Module 11021 (NotificationProgress)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,6 +1,6 @@
-// === Module 15569: useCanInviteToAnyLinkedGameOrganization ===
+// === Module 15566: useCanInviteToAnyLinkedGameOrganization ===
 
-// Module 15569 (useCanInviteToAnyLinkedGameOrganization)
+// Module 15566 (useCanInviteToAnyLinkedGameOrganization)
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import GuildRoleStore from "GuildRoleStore" /* 5149 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -11,8 +11,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/useCanInviteToAnyLinkedGameOrganization.tsx");
 
 export default function useCanInviteToAnyLinkedGameOrganization(location) {
-  linkedGameOrgInvitesEnabled = linkedGameOrgInvitesEnabled(12442).useLinkedGameOrgInvitesEnabled(location);
-  const obj = linkedGameOrgInvitesEnabled(12442);
+  linkedGameOrgInvitesEnabled = linkedGameOrgInvitesEnabled(12436).useLinkedGameOrgInvitesEnabled(location);
+  const obj = linkedGameOrgInvitesEnabled(12436);
   items = [GuildStore, GuildMemberStore, GuildRoleStore, PermissionStore];
   const items1 = [linkedGameOrgInvitesEnabled];
   return linkedGameOrgInvitesEnabled(504).useStateFromStores(items, () => {

@@ -1,6 +1,6 @@
-// === Module 16288: GameOrganizationInviteActionSheet ===
+// === Module 16283: GameOrganizationInviteActionSheet ===
 
-// Module 16288 (GameOrganizationInviteActionSheet)
+// Module 16283 (GameOrganizationInviteActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2549 from "module_2549" /* 2549 */;
@@ -9,10 +9,10 @@ import Stack_Stack from "Stack/Stack" /* 6274 */;
 import Search_SearchBar from "Search/SearchBar" /* 7759 */;
 import ActionSheet from "ActionSheet" /* 7885 */;
 import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8408 */;
-import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 16289 */;
-import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 16290 */;
-import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 16291 */;
-import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 16292 */;
+import useGameOrganizationInviteSuggestionsDefault from "useGameOrganizationInviteSuggestions" /* 16284 */;
+import useLinkedGameOrganizationInviteSenderDefault from "useLinkedGameOrganizationInviteSender" /* 16285 */;
+import GameOrganizationInviteNoFriendsDefault from "GameOrganizationInviteNoFriends" /* 16286 */;
+import GameOrganizationInviteListDefault from "GameOrganizationInviteList" /* 16287 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

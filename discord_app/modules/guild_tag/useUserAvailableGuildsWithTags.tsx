@@ -1,6 +1,6 @@
-// === Module 17018: useUserAvailableGuildsWithTags ===
+// === Module 17013: useUserAvailableGuildsWithTags ===
 
-// Module 17018 (useUserAvailableGuildsWithTags)
+// Module 17013 (useUserAvailableGuildsWithTags)
 import initialize from "initialize" /* 504 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5114 */;

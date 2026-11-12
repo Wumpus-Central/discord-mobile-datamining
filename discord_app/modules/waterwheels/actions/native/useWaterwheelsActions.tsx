@@ -1,21 +1,21 @@
-// === Module 18878: useWaterwheelsActions ===
+// === Module 18873: useWaterwheelsActions ===
 
-// Module 18878 (useWaterwheelsActions)
+// Module 18873 (useWaterwheelsActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
 import authorizeConnectionDefault from "authorizeConnection" /* 7358 */;
 import openPrivacySettingsDefault from "openPrivacySettings" /* 8134 */;
-import GameActionCreators from "GameActionCreators" /* 9468 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10158 */;
-import NotificationUtilsDefault from "NotificationUtils" /* 14725 */;
-import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 18879 */;
+import GameActionCreators from "GameActionCreators" /* 9467 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10156 */;
+import NotificationUtilsDefault from "NotificationUtils" /* 14721 */;
+import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 18874 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2138 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 5114 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14716 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14712 */;
 
 require = fn;
 function openErrorToast(text) {
@@ -1333,7 +1333,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                                                 const HTTP = closure_0(1282).HTTP;
                                                 const obj = { url: closure_9.GUILD_MEMBER_REQUEST_TO_JOIN(closure_1_1), rejectWithError: closure_0(1282).rejectWithMigratedError(), signal: signal.signal, timeout: null };
                                                 const obj2 = closure_0(1282);
-                                                obj.timeout = { deadline: closure_0(10152).DISCOVER_REQUEST_DEADLINE_MS };
+                                                obj.timeout = { deadline: closure_0(10150).DISCOVER_REQUEST_DEADLINE_MS };
                                                 return HTTP.get(obj);
                                               }),
                           done: false

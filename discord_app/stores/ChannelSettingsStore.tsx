@@ -1,6 +1,6 @@
-// === Module 10852: ChannelSettingsStore ===
+// === Module 10846: ChannelSettingsStore ===
 
-// Module 10852 (ChannelSettingsStore)
+// Module 10846 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ThreadConstants from "ThreadConstants" /* 1112 */;

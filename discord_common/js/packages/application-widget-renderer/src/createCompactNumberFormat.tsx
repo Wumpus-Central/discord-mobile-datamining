@@ -1,6 +1,6 @@
-// === Module 12081: createCompactNumberFormat ===
+// === Module 12075: createCompactNumberFormat ===
 
-// Module 12081 (createCompactNumberFormat)
+// Module 12075 (createCompactNumberFormat)
 import size from "module_2" /* 2 */;
 
 function toAsciiDigits(arg0, get) {

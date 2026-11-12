@@ -1,12 +1,12 @@
-// === Module 17966: SettingsChatScreen ===
+// === Module 17961: SettingsChatScreen ===
 
-// Module 17966 (SettingsChatScreen)
+// Module 17961 (SettingsChatScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7743 */;
-import _modDef11308 from "module_11308" /* 11308 */;
-import SettingBuilders from "SettingBuilders" /* 12317 */;
-import SettingLayoutDefault from "SettingLayout" /* 17095 */;
+import _modDef11302 from "module_11302" /* 11302 */;
+import SettingBuilders from "SettingBuilders" /* 12311 */;
+import SettingLayoutDefault from "SettingLayout" /* 17090 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
@@ -31,7 +31,7 @@ function VideoUploadQualityNitroUpsell() {
     const obj4 = { style: tmp3.card, children: null };
     const obj5 = { border: "none", shadow: "none", children: null };
     const obj6 = { style: tmp3.cardContent, children: null };
-    const obj7 = { style: tmp3.cardIcon, source: _modDef11308, size: tmp(1187).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+    const obj7 = { style: tmp3.cardIcon, source: _modDef11302, size: tmp(1187).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
     const items2 = [closure_9(tmp(1187).Icon, obj7), ];
     const obj8 = { variant: "body-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp(1113).intl;
@@ -52,7 +52,7 @@ function VideoUploadQualityNitroUpsell() {
   return closure_10(View, { children });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(9136).MobileUserSettings;
+const MobileUserSettings = fn(9135).MobileUserSettings;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

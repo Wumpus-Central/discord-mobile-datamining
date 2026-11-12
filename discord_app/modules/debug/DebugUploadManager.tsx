@@ -1,6 +1,6 @@
-// === Module 11042: DebugUploadManager ===
+// === Module 11036: DebugUploadManager ===
 
-// Module 11042 (DebugUploadManager)
+// Module 11036 (DebugUploadManager)
 import LoggerDefault from "Logger" /* 3 */;
 import LogAggregatorAll from "LogAggregator" /* 7 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

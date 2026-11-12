@@ -1,12 +1,12 @@
-// === Module 10259: GameProfileMedia ===
+// === Module 10257: GameProfileMedia ===
 
-// Module 10259 (GameProfileMedia)
+// Module 10257 (GameProfileMedia)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import openMediaModal from "openMediaModal" /* 8560 */;
 import useMediaViewerSources from "useMediaViewerSources" /* 8561 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10219 */;
-import GameProfileMediaSources from "GameProfileMediaSources" /* 10260 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10217 */;
+import GameProfileMediaSources from "GameProfileMediaSources" /* 10258 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
@@ -37,12 +37,12 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-let closure_14 = 2 * (fn(10260).MEDIA_ITEM_MAX_WIDTH + PX_12);
+let closure_14 = 2 * (fn(10258).MEDIA_ITEM_MAX_WIDTH + PX_12);
 const createStyles = fn(5243);
 let obj = { container: { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 }, list: { overflow: "visible" }, separator: { width: PX_12 }, listPadding: { width: PX_16 }, mediaItem: null, mediaImage: null, portraitImage: null, imageBackdrop: null, mediaVideo: null, reducedMotionPoster: null, playIconWrapper: null };
 let obj3 = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj.mediaItem = { maxWidth: fn(10260).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(10260).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
+obj.mediaItem = { maxWidth: fn(10258).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(10258).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj.mediaImage = { width: "100%", height: "100%", resizeMode: "cover" };
 obj.portraitImage = { resizeMode: "contain" };
 let obj5 = {};

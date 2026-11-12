@@ -1,9 +1,9 @@
-// === Module 12592: RobotIcon ===
+// === Module 12586: RobotIcon ===
 
-// Module 12592 (RobotIcon)
+// Module 12586 (RobotIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod12593 from "module_12593" /* 12593 */;
+import _mod12587 from "module_12587" /* 12587 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function RobotIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12593, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12587, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

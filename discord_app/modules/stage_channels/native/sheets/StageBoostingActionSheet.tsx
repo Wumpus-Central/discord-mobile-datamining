@@ -146,15 +146,15 @@ export default function StageBoostingActionSheet(channel) {
     }
     const obj8 = { title: string3Result1, description: stringResult, illustration: null, actions: null };
     if (tmp9) {
-      let tmp24Result2 = tmp24(tmp(15939).HoldingGemSpotIllustration, { accessible: false });
+      let tmp24Result2 = tmp24(tmp(15934).HoldingGemSpotIllustration, { accessible: false });
     } else {
-      const obj9 = { source: tmp22(15943) };
+      const obj9 = { source: tmp22(15938) };
       tmp24Result2 = tmp24(tmp22(5957), obj9);
       const tmp22Result = tmp22(5957);
     }
     obj8.illustration = tmp24Result2;
     obj8.actions = tmp24Result;
-    return tmp24(tmp(10651).PromoSheet, obj8);
+    return tmp24(tmp(10644).PromoSheet, obj8);
   }
   const tmpResult = channel(504);
 };

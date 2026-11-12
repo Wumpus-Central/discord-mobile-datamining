@@ -1,14 +1,14 @@
-// === Module 11002: ChatItem ===
+// === Module 10996: ChatItem ===
 
-// Module 11002 (ChatItem)
+// Module 10996 (ChatItem)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import MessageTypes2 from "MessageTypes" /* 1088 */;
 import isSystemMessageDefault from "isSystemMessage" /* 6999 */;
-import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 11003 */;
-import MessageViewNativeComponent from "MessageViewNativeComponent" /* 11004 */;
-import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 11005 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 11006 */;
+import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 10997 */;
+import MessageViewNativeComponent from "MessageViewNativeComponent" /* 10998 */;
+import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 10999 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 11000 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
@@ -20,28 +20,28 @@ function DCDChatItem(message) {
   if (message.type === MessageTypes.AUTO_MODERATION_ACTION) {
     const obj2 = {};
     const merged1 = Object.assign(merged);
-    let tmp3Result = closure_1_10(AutoModerationSystemMessageViewNativeComponent.default, obj2);
+    let tmp3Result = refs(AutoModerationSystemMessageViewNativeComponent.default, obj2);
   } else {
     const AUTOMOD_INCIDENT_ACTIONS = MessageTypes2.MessageTypesSets.AUTOMOD_INCIDENT_ACTIONS;
     if (AUTOMOD_INCIDENT_ACTIONS.has(message.type)) {
       const obj3 = {};
       const merged2 = Object.assign(merged);
-      tmp3Result = closure_1_10(MessageViewNativeComponent.default, obj3);
+      tmp3Result = refs(MessageViewNativeComponent.default, obj3);
     } else if (isSystemMessageDefault(message)) {
       const obj4 = {};
       const merged3 = Object.assign(merged);
-      tmp3Result = closure_1_10(SystemMessageViewNativeComponent.default, obj4);
+      tmp3Result = refs(SystemMessageViewNativeComponent.default, obj4);
     } else {
       const obj = {};
       const merged4 = Object.assign(merged);
-      tmp3Result = closure_1_10(MessageViewNativeComponent.default, obj);
+      tmp3Result = refs(MessageViewNativeComponent.default, obj);
     }
   }
   return tmp3Result;
 }
 const View = fn(17).View;
 const MessageTypes = fn(1072).MessageTypes;
-const RowGeneratorConstants = fn(9094);
+const RowGeneratorConstants = fn(9093);
 ({ RowType: closure_8, Changeset: closure_9 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -195,6 +195,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = onLayout(messageSizeCacheRef.useState(0), 2);
 };
-export const DCDMessageView = fn(11004).default;
-export const DCDSystemMessageView = fn(11005).default;
-export const DCDAutoModerationSystemMessageView = fn(11003).default;
+export const DCDMessageView = fn(10998).default;
+export const DCDSystemMessageView = fn(10999).default;
+export const DCDAutoModerationSystemMessageView = fn(10997).default;

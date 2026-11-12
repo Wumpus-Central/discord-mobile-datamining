@@ -1,8 +1,8 @@
-// === Module 10281: GameProfileSummary ===
+// === Module 10279: GameProfileSummary ===
 
-// Module 10281 (GameProfileSummary)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10219 */;
-import findTextStart from "findTextStart" /* 10283 */;
+// Module 10279 (GameProfileSummary)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10217 */;
+import findTextStart from "findTextStart" /* 10281 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

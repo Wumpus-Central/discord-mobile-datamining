@@ -1,6 +1,6 @@
-// === Module 14369: useCheckpointCharacterTextureManager ===
+// === Module 14365: useCheckpointCharacterTextureManager ===
 
-// Module 14369 (useCheckpointCharacterTextureManager)
+// Module 14365 (useCheckpointCharacterTextureManager)
 import DataBindByName from "DataBindByName" /* 5323 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

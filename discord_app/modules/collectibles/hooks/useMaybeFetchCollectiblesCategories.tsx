@@ -1,9 +1,9 @@
-// === Module 9960: useMaybeFetchCollectiblesCategories ===
+// === Module 9959: useMaybeFetchCollectiblesCategories ===
 
-// Module 9960 (useMaybeFetchCollectiblesCategories)
-import _modDef9961 from "module_9961" /* 9961 */;
+// Module 9959 (useMaybeFetchCollectiblesCategories)
+import _modDef9960 from "module_9960" /* 9960 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.tsx");
 
-export default _modDef9961;
+export default _modDef9960;

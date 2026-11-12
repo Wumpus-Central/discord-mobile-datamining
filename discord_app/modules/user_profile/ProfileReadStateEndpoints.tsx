@@ -1,6 +1,6 @@
-// === Module 15744: ProfileReadStateEndpoints ===
+// === Module 15739: ProfileReadStateEndpoints ===
 
-// Module 15744 (ProfileReadStateEndpoints)
+// Module 15739 (ProfileReadStateEndpoints)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({

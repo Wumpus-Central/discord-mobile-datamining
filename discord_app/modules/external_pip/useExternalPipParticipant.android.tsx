@@ -1,11 +1,11 @@
-// === Module 19702: useExternalPipParticipant ===
+// === Module 19697: useExternalPipParticipant ===
 
-// Module 19702 (useExternalPipParticipant)
-import participantHasVideo from "participantHasVideo" /* 11930 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19703 */;
+// Module 19697 (useExternalPipParticipant)
+import participantHasVideo from "participantHasVideo" /* 11924 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 19698 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 16129 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 16124 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
@@ -44,7 +44,7 @@ function getExternalPipSelectedParticipant(batchedStoreListener, selectedPartici
   }
 }
 const ParticipantTypes = fn(5920).ParticipantTypes;
-const VoicePanelModes = fn(11925).VoicePanelModes;
+const VoicePanelModes = fn(11919).VoicePanelModes;
 let closure_9 = { participantType: "flexDirection", selectedParticipantId: "container", selectedParticipantSpeaking: null, selectedParticipantStreamId: null, selectedParticipantUserId: null };
 let items = [ChannelRTCStore, ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
 const size = fn(2);

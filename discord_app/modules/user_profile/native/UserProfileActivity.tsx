@@ -1,6 +1,6 @@
-// === Module 15593: UserProfileActivity ===
+// === Module 15590: UserProfileActivity ===
 
-// Module 15593 (UserProfileActivity)
+// Module 15590 (UserProfileActivity)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import Text_Text from "Text/Text" /* 5866 */;
@@ -12,13 +12,13 @@ import transitionToGuild from "transitionToGuild" /* 7168 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 7587 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8403 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8480 */;
-import UserActivitySpotify from "UserActivitySpotify" /* 12596 */;
-import closeVoicePanelsDefault from "closeVoicePanels" /* 12654 */;
-import UserProfileActivityButtons from "UserProfileActivityButtons" /* 15638 */;
+import UserActivitySpotify from "UserActivitySpotify" /* 12590 */;
+import closeVoicePanelsDefault from "closeVoicePanels" /* 12648 */;
+import UserProfileActivityButtons from "UserProfileActivityButtons" /* 15635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
-import RequestToStreamStore from "RequestToStreamStore" /* 15594 */;
+import RequestToStreamStore from "RequestToStreamStore" /* 15591 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -748,7 +748,7 @@ function VoiceCallActivityCard(arg0) {
   ({ isInChannel, style } = arg0);
   const tmp = closure_25();
   const tmp5 = stateFromStores(5891)(channel);
-  const tmp4 = stateFromStores(15632)(channel);
+  const tmp4 = stateFromStores(15629)(channel);
   items = [GuildStore];
   stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   let obj = channel(504);
@@ -763,9 +763,9 @@ function VoiceCallActivityCard(arg0) {
   let obj2 = channel(504);
   const tmp9 = stateFromStores(7852);
   ({ newestAnalyticsLocation: c2, analyticsLocations } = stateFromStores(7852)(stateFromStores(7871).USER_PROFILE_VOICE_ACTIVITY_CARD));
-  const tmp11 = stateFromStores(15621)({ display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations });
+  const tmp11 = stateFromStores(15618)({ display: "voice", activity: { type: "VOICE" }, voiceChannelId: channel.id, user, analyticsLocations });
   closure_3 = tmp11;
-  stateFromStores(15622)({ userId: user.id, onAction: tmp11 });
+  stateFromStores(15619)({ userId: user.id, onAction: tmp11 });
   const obj5 = { style: null, title: null, titleStyle: null, children: null };
   const items2 = [tmp.card, style];
   obj5.style = items2;
@@ -793,7 +793,7 @@ function VoiceCallActivityCard(arg0) {
       id = stateFromStores.id;
     }
     obj7.guildId = id;
-    const items3 = [closure_22(tmp2(15644), obj7), ];
+    const items3 = [closure_22(tmp2(15641), obj7), ];
     const obj8 = { style: tmp.voiceCallContent, children: null };
     if (stateFromStores1) {
       const obj9 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
@@ -810,7 +810,7 @@ function VoiceCallActivityCard(arg0) {
       const obj11 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj12 = { style: tmp.voiceCallNameIconWrapper, children: null };
       const obj13 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-      obj12.children = closure_22(tmp2(10800), obj13);
+      obj12.children = closure_22(tmp2(10794), obj13);
       const items4 = [closure_22(closure_7, obj12), tmp5];
       obj11.children = items4;
       obj9.children = closure_23(channel(5866).Text, obj11);
@@ -819,7 +819,7 @@ function VoiceCallActivityCard(arg0) {
       const obj14 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
       const obj15 = { style: tmp.voiceCallNameIconWrapper, children: null };
       const obj16 = { channel, size: "sm", color: "mobile-text-heading-primary" };
-      obj15.children = closure_22(tmp2(10800), obj16);
+      obj15.children = closure_22(tmp2(10794), obj16);
       const items5 = [closure_22(closure_7, obj15), tmp5];
       obj14.children = items5;
       tmp13Result = closure_23(channel(5866).Text, obj14);
@@ -852,7 +852,7 @@ function VoiceCallActivityCard(arg0) {
     obj6.children = items3;
     const items7 = [closure_23(closure_7, obj6), ];
     const obj21 = { channel, isInChannel, onAction: tmp11 };
-    items7[1] = closure_22(channel(15638).VoiceChannelButtons, obj21);
+    items7[1] = closure_22(channel(15635).VoiceChannelButtons, obj21);
     obj5.children = items7;
     return closure_23(tmp14, obj5);
   }

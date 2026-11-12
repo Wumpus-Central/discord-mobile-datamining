@@ -1,9 +1,9 @@
-// === Module 16363: Toast ===
+// === Module 16358: Toast ===
 
-// Module 16363 (Toast)
+// Module 16358 (Toast)
 import nativeDefault from "native" /* 575 */;
-import _mod16364 from "module_16364" /* 16364 */;
-import ToastEntity from "ToastEntity" /* 16365 */;
+import _mod16359 from "module_16359" /* 16359 */;
+import ToastEntity from "ToastEntity" /* 16360 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -59,7 +59,7 @@ export function Toast(variant) {
   obj3.style = items1;
   const memo = secondaryIconColor.useMemo(() => {
     if (null == obj[str]) {
-      obj = _mod16364;
+      obj = _mod16359;
       if (obj.isToastEntity(icon)) {
         const obj3 = { entity: tmp4 };
         return timestampProducer(ToastEntity.ToastEntity, obj3);
@@ -76,7 +76,7 @@ export function Toast(variant) {
         tmp9 = tmp8;
       }
       icon = tmp9;
-      obj2 = _mod16364;
+      obj2 = _mod16359;
       tmp8 = icon;
     }
     if (null == icon) {

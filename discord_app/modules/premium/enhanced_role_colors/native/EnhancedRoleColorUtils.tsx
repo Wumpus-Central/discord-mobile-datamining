@@ -1,6 +1,6 @@
-// === Module 9123: enhanced_role_colors/EnhancedRoleColorUtils ===
+// === Module 9122: enhanced_role_colors/EnhancedRoleColorUtils ===
 
-// Module 9123 (enhanced_role_colors/EnhancedRoleColorUtils)
+// Module 9122 (enhanced_role_colors/EnhancedRoleColorUtils)
 import _modDef671 from "module_671" /* 671 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 6287 */;

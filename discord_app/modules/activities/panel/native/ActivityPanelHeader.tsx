@@ -1,18 +1,18 @@
-// === Module 19728: ActivityPanelHeader ===
+// === Module 19723: ActivityPanelHeader ===
 
-// Module 19728 (ActivityPanelHeader)
+// Module 19723 (ActivityPanelHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import native from "native" /* 5314 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7196 */;
-import LeaveActivityButtonDefault from "LeaveActivityButton" /* 19592 */;
-import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19725 */;
-import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 19729 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 19730 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19734 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 19735 */;
+import LeaveActivityButtonDefault from "LeaveActivityButton" /* 19587 */;
+import useMorphablePanelGestureDefault from "useMorphablePanelGesture" /* 19720 */;
+import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 19724 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 19725 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 19729 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 19730 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
@@ -227,7 +227,7 @@ export default noop.memo(function ActivityPanelHeader() {
   let wrapperDimensions;
   const tmp2 = closure_14();
   const headerContainer = tmp2;
-  const context = noop.useContext(wrapperDimensions(19720));
+  const context = noop.useContext(wrapperDimensions(19715));
   wrapperDimensions = context.wrapperDimensions;
   items = [tmp2.headerContainer, wrapperDimensions.isWindowLandscape];
   ({ setMode, wrapperOffset, pipState } = context);

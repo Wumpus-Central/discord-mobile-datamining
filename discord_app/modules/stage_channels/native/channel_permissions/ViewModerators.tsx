@@ -1,6 +1,6 @@
-// === Module 19498: ViewModerators ===
+// === Module 19493: ViewModerators ===
 
-// Module 19498 (ViewModerators)
+// Module 19493 (ViewModerators)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
@@ -176,8 +176,8 @@ export default function ViewModerators(channel) {
             const _HermesInternal = HermesInternal;
             const obj2 = ActionSheetActionCreatorsDefault;
             const obj3 = { channel, canSkip: false };
-            obj2.openLazy(asyncRequireImpl(19499, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
-            const tmp7 = asyncRequireImpl(19499, dependencyMap.paths);
+            obj2.openLazy(asyncRequireImpl(19494, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
+            const tmp7 = asyncRequireImpl(19494, dependencyMap.paths);
           }
         };
         obj9.disabled = !canUpdateStageChannelModerators;
@@ -186,12 +186,12 @@ export default function ViewModerators(channel) {
         let obj10 = { title: null, hasIcons: true, children: null };
         let intl3 = tmp(tmp2[19]).intl;
         obj10.title = intl3.string(tmp(tmp2[19]).t.ghdVJL);
-        obj10.children = existingRolesRowWithPermissionDisabled.map((item) => closure_2_10(ChannelOverwritesItemDefault, { guildId: channel.guild_id, item, channelId: channel.id, showType: true, showRemove: canUpdateStageChannelModerators, onRemove: handleRemovePermission }, item.id));
+        obj10.children = existingRolesRowWithPermissionDisabled.map((item) => refs(ChannelOverwritesItemDefault, { guildId: channel.guild_id, item, channelId: channel.id, showType: true, showRemove: canUpdateStageChannelModerators, onRemove: handleRemovePermission }, item.id));
         items2[1] = closure_10(tmp(tmp2[26]).TableRowGroup, obj10);
         let obj11 = { title: null, hasIcons: true, children: null };
         let intl4 = tmp(tmp2[19]).intl;
         obj11.title = intl4.string(tmp(tmp2[19]).t.ghdVJL);
-        obj11.children = existingMembersRows.map((item) => closure_2_10(ChannelOverwritesItemDefault, { guildId: channel.guild_id, item, channelId: channel.id, showType: true, showRemove: canUpdateStageChannelModerators, onRemove: handleRemovePermission }, item.id));
+        obj11.children = existingMembersRows.map((item) => refs(ChannelOverwritesItemDefault, { guildId: channel.guild_id, item, channelId: channel.id, showType: true, showRemove: canUpdateStageChannelModerators, onRemove: handleRemovePermission }, item.id));
         items2[2] = closure_10(tmp(tmp2[26]).TableRowGroup, obj11);
         obj3.children = items2;
         isGuildStageVoiceResult = closure_11(tmp(tmp2[25]).Stack, obj3);
@@ -208,5 +208,5 @@ export function openAddModeratorsActionSheet(channel) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(19499, dependencyMap.paths), "channel-add-moderators-" + channel.id, { channel, canSkip: flag });
+  obj2.openLazy(asyncRequireImpl(19494, dependencyMap.paths), "channel-add-moderators-" + channel.id, { channel, canSkip: flag });
 }

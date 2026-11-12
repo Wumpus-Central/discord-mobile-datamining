@@ -1,6 +1,6 @@
-// === Module 10980: MessagePreviewText ===
+// === Module 10974: MessagePreviewText ===
 
-// Module 10980 (MessagePreviewText)
+// Module 10974 (MessagePreviewText)
 import nativeDefault from "native" /* 575 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1094 */;
@@ -10,12 +10,12 @@ import isForwardMessageDefault from "isForwardMessage" /* 5889 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5931 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import useMessageAuthor from "useMessageAuthor" /* 6686 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10962 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10981 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 10982 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 11007 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 11012 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 11013 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10956 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10975 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 10976 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 11001 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 11006 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 11007 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 
@@ -133,7 +133,7 @@ function EmbedCard(embed) {
   return React6(View, obj2);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10963);
+const InAppNotificationConstants = fn(10957);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: metroImportDefault } = InAppNotificationConstants);
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
@@ -141,7 +141,7 @@ const jsxProd = fn(21);
 let createStyles = fn(5243);
 const PlatformUtils = fn(1357);
 let obj3 = { italic: { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC } };
-let closure_10 = createStyles.createStyles(obj3);
+const refs = createStyles.createStyles(obj3);
 createStyles = fn(5243);
 let obj6 = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 let obj4 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };

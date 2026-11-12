@@ -1,11 +1,11 @@
-// === Module 17265: BaseUpsellActionSheet ===
+// === Module 17260: BaseUpsellActionSheet ===
 
-// Module 17265 (BaseUpsellActionSheet)
+// Module 17260 (BaseUpsellActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
 import GuildIconDefault from "GuildIcon" /* 7654 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 17263 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 17258 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
 

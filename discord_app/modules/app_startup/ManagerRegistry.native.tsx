@@ -1,8 +1,8 @@
-// === Module 20006: ManagerRegistry ===
+// === Module 20001: ManagerRegistry ===
 
-// Module 20006 (ManagerRegistry)
+// Module 20001 (ManagerRegistry)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import ManagerRegistryShared from "ManagerRegistryShared" /* 20743 */;
+import ManagerRegistryShared from "ManagerRegistryShared" /* 20738 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

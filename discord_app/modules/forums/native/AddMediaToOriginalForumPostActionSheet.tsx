@@ -1,11 +1,11 @@
-// === Module 14499: AddMediaToOriginalForumPostActionSheet ===
+// === Module 14495: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 14499 (AddMediaToOriginalForumPostActionSheet)
+// Module 14495 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import Tracking from "Tracking" /* 8800 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8813 */;
+import Tracking from "Tracking" /* 8799 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8812 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -72,18 +72,18 @@ let closure_16 = async function _upload2(arg0) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            const maxFileSizeResult = closure_0(8809).maxFileSize(id.id);
-            const obj = closure_0(8809);
-            const effectiveUploadLimit = closure_0(8824).getEffectiveUploadLimit(maxFileSizeResult);
+            const maxFileSizeResult = closure_0(8808).maxFileSize(id.id);
+            const obj = closure_0(8808);
+            const effectiveUploadLimit = closure_0(8823).getEffectiveUploadLimit(maxFileSizeResult);
             if (currentSize.currentSize > effectiveUploadLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
               closure_1(5489).hideActionSheet();
               const obj4 = { file: currentSize, maxSize: effectiveUploadLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
-              closure_1(11106)(obj4);
+              closure_1(11100)(obj4);
               const obj3 = closure_1(5489);
             }
-            const obj2 = closure_0(8824);
+            const obj2 = closure_0(8823);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
@@ -91,8 +91,8 @@ let closure_16 = async function _upload2(arg0) {
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(11092).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(11092);
+            closure_1(11086).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(11086);
             closure_1(5489).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
@@ -141,7 +141,7 @@ let closure_16 = async function _upload2(arg0) {
           closure_1 = 0;
           items = [];
           closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(8780).getAttachmentPayload(item, index));
+          const mapped = closure_132_9.map((item, index) => closure_1_0(8779).getAttachmentPayload(item, index));
           dependencyMap = mapped;
           if (mapped == null) {
             dependencyMap = [];

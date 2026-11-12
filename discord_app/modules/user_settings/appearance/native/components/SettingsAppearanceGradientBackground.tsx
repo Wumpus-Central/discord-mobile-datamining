@@ -1,13 +1,13 @@
-// === Module 17804: SettingsAppearanceGradientBackground ===
+// === Module 17799: SettingsAppearanceGradientBackground ===
 
-// Module 17804 (SettingsAppearanceGradientBackground)
+// Module 17799 (SettingsAppearanceGradientBackground)
 import nativeDefault from "native" /* 575 */;
 import timing_timing from "timing/timing" /* 5485 */;
 import timingPresets from "timingPresets" /* 5488 */;
-import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 17805 */;
-import getGradientStartPontDefault from "getGradientStartPont" /* 17806 */;
+import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 17800 */;
+import getGradientStartPontDefault from "getGradientStartPont" /* 17801 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17778 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17773 */;
 import module_1652_mod from "module_1652" /* 1652 */;
 
 const require = globalThis.__r;

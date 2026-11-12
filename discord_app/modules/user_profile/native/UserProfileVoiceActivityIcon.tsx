@@ -1,6 +1,6 @@
-// === Module 10800: UserProfileVoiceActivityIcon ===
+// === Module 10794: UserProfileVoiceActivityIcon ===
 
-// Module 10800 (UserProfileVoiceActivityIcon)
+// Module 10794 (UserProfileVoiceActivityIcon)
 import isRoleRequiredDefault from "isRoleRequired" /* 7156 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
@@ -58,5 +58,5 @@ export default function UserProfileVoiceActivityIcon(channel) {
     }
   }
   const merged5 = Object.assign(merged);
-  return jsx(channel(9036).PhoneCallIcon, {});
+  return jsx(channel(9035).PhoneCallIcon, {});
 };

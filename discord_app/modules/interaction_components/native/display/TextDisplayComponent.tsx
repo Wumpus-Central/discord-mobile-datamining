@@ -1,9 +1,9 @@
-// === Module 18248: TextDisplayComponent ===
+// === Module 18243: TextDisplayComponent ===
 
-// Module 18248 (TextDisplayComponent)
+// Module 18243 (TextDisplayComponent)
 import MarkupUtilsDefault from "MarkupUtils" /* 5994 */;
 import renderMessageMarkup from "renderMessageMarkup" /* 8579 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 12496 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 12490 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;

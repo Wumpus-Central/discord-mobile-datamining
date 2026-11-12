@@ -1,6 +1,6 @@
-// === Module 20374: showGuildSettingsStickerCreateModal ===
+// === Module 20369: showGuildSettingsStickerCreateModal ===
 
-// Module 20374 (showGuildSettingsStickerCreateModal)
+// Module 20369 (showGuildSettingsStickerCreateModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
@@ -10,5 +10,5 @@ const result = size.fileFinishedImporting("modules/guild_settings/server_monetiz
 
 export default function showGuildSettingsStickerCreateModal(merged) {
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20375, dependencyMap.paths), merged, "guild-settings-sticker-create", { presentation: "modal" });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20370, dependencyMap.paths), merged, "guild-settings-sticker-create", { presentation: "modal" });
 };

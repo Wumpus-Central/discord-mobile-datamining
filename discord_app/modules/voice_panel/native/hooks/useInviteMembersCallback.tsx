@@ -1,8 +1,8 @@
-// === Module 19758: useInviteMembersCallback ===
+// === Module 19753: useInviteMembersCallback ===
 
-// Module 19758 (useInviteMembersCallback)
+// Module 19753 (useInviteMembersCallback)
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8394 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 12450 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 12444 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 

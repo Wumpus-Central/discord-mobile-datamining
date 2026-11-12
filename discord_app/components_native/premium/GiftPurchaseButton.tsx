@@ -1,10 +1,10 @@
-// === Module 15344: GiftPurchaseButton ===
+// === Module 15341: GiftPurchaseButton ===
 
-// Module 15344 (GiftPurchaseButton)
+// Module 15341 (GiftPurchaseButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
-import IAPStore from "IAPStore" /* 9236 */;
+import IAPStore from "IAPStore" /* 9235 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -57,7 +57,7 @@ export default function GiftPurchaseButton(style) {
     const premiumTypeFromPlanId = planId(2171).getPremiumTypeFromPlanId(closure_129_0);
     const premiumType = premiumTypeFromPlanId.premiumType;
     const planInterval = premiumTypeFromPlanId.planInterval;
-    planId(11600).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
+    planId(11594).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
     yield "HermesInternal";
     const obj7 = { title: null, body: null };
     const intl = planId(1113).intl;

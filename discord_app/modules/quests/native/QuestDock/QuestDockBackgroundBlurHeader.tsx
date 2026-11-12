@@ -1,9 +1,9 @@
-// === Module 17678: QuestDockBackgroundBlurHeader ===
+// === Module 17673: QuestDockBackgroundBlurHeader ===
 
-// Module 17678 (QuestDockBackgroundBlurHeader)
+// Module 17673 (QuestDockBackgroundBlurHeader)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
-import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 17670 */;
+import useQuestDockAnimatedBorderRadiusDefault from "useQuestDockAnimatedBorderRadius" /* 17665 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const QuestDockMode = fn(5275).QuestDockMode;
-const QuestDockConstants = fn(17585);
+const QuestDockConstants = fn(17580);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({ QUEST_DOCK_CONTENT_BORDER_RADII: closure_9, QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED: closure_10, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_11, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT, QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT } = QuestDockConstants);
 const jsxProd = fn(21);
@@ -340,7 +340,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     obj5.children = intl2.string(tmp(1113).t.o6FLcF);
     const items17 = [closure_12(tmp(5866).Text, obj5), ];
     const obj6 = { color: tmp7(575).colors.INTERACTIVE_TEXT_ACTIVE, style: tmp67.actionDisclosuresIcon };
-    items17[1] = closure_12(tmp(9993).CircleQuestionIcon, obj6);
+    items17[1] = closure_12(tmp(9992).CircleQuestionIcon, obj6);
     obj4.children = items17;
     obj3.children = closure_14(closure_13, obj4);
     let tmp68Result = closure_12(tmp(7364).PressableOpacity, obj3);
@@ -364,7 +364,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
   if (tmpResult14.isAndroid()) {
     if (null != blurHash) {
       const obj10 = { placeholder: blurHash, layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation };
-      let tmp71Result = tmp71(tmp7(17679), obj10);
+      let tmp71Result = tmp71(tmp7(17674), obj10);
     }
     const items20 = [tmp71Result, , ];
     let tmp71Result2 = children;
@@ -406,7 +406,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     let tmp74Result = !flag;
     if (!flag) {
       const obj18 = { children: null };
-      const items27 = [tmp68Result, tmp71(tmp7(17681), {})];
+      const items27 = [tmp68Result, tmp71(tmp7(17676), {})];
       obj18.children = items27;
       tmp74Result = closure_14(closure_13, obj18);
     }
@@ -478,6 +478,6 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(promotedLabelLea
     obj9.children = items20;
     return closure_14(tmp7(1652).View, obj9);
   }
-  tmp71Result = tmp71(tmp7(17650), { layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation });
+  tmp71Result = tmp71(tmp7(17645), { layoutAnimatedStyle: animatedStyle5, opacityAnimatedStyle: animatedStyle6, layoutAnimation: questDockHeaderLayoutAnimation });
   tmpResult14 = require("utils/PlatformUtils");
 });

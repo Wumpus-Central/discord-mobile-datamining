@@ -1,12 +1,12 @@
-// === Module 13139: SelectComponentActionSheet ===
+// === Module 13133: SelectComponentActionSheet ===
 
-// Module 13139 (SelectComponentActionSheet)
+// Module 13133 (SelectComponentActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5315 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import TableRow from "TableRow" /* 7379 */;
 import FormCheckbox from "FormCheckbox" /* 7668 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 10808 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 10802 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
@@ -175,7 +175,7 @@ function SelectionOptionItem(item) {
   }
   items1[1] = tmp6Result2;
   obj4.children = items1;
-  obj2.trailing = closure_1_10(View, obj4);
+  obj2.trailing = refs(View, obj4);
   return React5(TableRow.TableRow, obj2);
 }
 const View = fn(17).View;

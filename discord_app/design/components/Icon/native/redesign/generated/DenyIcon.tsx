@@ -1,6 +1,6 @@
-// === Module 9091: DenyIcon ===
+// === Module 9090: DenyIcon ===
 
-// Module 9091 (DenyIcon)
+// Module 9090 (DenyIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
 import _mod8491 from "module_8491" /* 8491 */;

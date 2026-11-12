@@ -1,23 +1,23 @@
-// === Module 17485: BountiesModalContent ===
+// === Module 17480: BountiesModalContent ===
 
-// Module 17485 (BountiesModalContent)
+// Module 17480 (BountiesModalContent)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import QuestContent from "QuestContent" /* 5280 */;
 import AdCreativeType from "AdCreativeType" /* 5282 */;
 import timing_timing from "timing/timing" /* 5485 */;
 import timingPresets from "timingPresets" /* 5488 */;
-import QuestDataUtils from "QuestDataUtils" /* 8738 */;
-import AnalyticsActions from "AnalyticsActions" /* 8759 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8768 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10103 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 15138 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 15153 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17429 */;
+import QuestDataUtils from "QuestDataUtils" /* 8737 */;
+import AnalyticsActions from "AnalyticsActions" /* 8758 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8767 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10102 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 15135 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 15150 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17424 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 8741 */;
+import BountyStore from "BountyStore" /* 8740 */;
 
 require = fn;
 function BountiesModalContentInner(bounty) {
@@ -188,7 +188,7 @@ function BountiesModalContentInner(bounty) {
                 do {
                   let _Math = Math;
                   let result = arr[num3] / tmp4;
-                  let rounded = Math.round(result * (closure_1_0(9987).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100));
+                  let rounded = Math.round(result * (closure_1_0(9986).EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS - 100));
                   let obj2 = { time: num4, type: "continuous", duration: rounded, intensity: num + tmp5 * (num3 / 5), sharpness: 0.5 };
                   let arr4 = items.push(obj2);
                   sum = num4 + rounded;
@@ -373,7 +373,7 @@ function BountiesModalContentWithAppStore(arg0) {
   const memo1 = noop.useMemo(() => closure_2_11({ windowHeight: height, videoTop: memo.top, videoWidth: memo.width, videoHeight: memo.height }), items1);
   const items2 = [height];
   const items3 = [sharedValue];
-  const memo2 = noop.useMemo(() => closure_2_10(height), items2);
+  const memo2 = noop.useMemo(() => refs(height), items2);
   const showVideoEndAppStoreOverlay = noop.useCallback((current) => {
     closure_5.current = Date.now();
     closure_4.current = current;
@@ -414,7 +414,7 @@ function BountiesModalContentWithAppStore(arg0) {
 const View = fn(17).View;
 const QuestConstants = fn(5275);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(17433);
+const BountiesModalConstants = fn(17428);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);

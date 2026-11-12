@@ -1,6 +1,6 @@
-// === Module 10955: NotificationTextUtils ===
+// === Module 10949: NotificationTextUtils ===
 
-// Module 10955 (NotificationTextUtils)
+// Module 10949 (NotificationTextUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
@@ -18,11 +18,11 @@ import isChannelFocused from "isChannelFocused" /* 6985 */;
 import isSystemMessageDefault from "isSystemMessage" /* 6999 */;
 import ThreadNotificationSettings from "ThreadNotificationSettings" /* 7003 */;
 import getDisplayFilenameDefault from "getDisplayFilename" /* 8578 */;
-import MessageParserDefault from "MessageParser" /* 8720 */;
-import IsolateString from "IsolateString" /* 8724 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 9149 */;
-import ChannelVisibilityUtils from "ChannelVisibilityUtils" /* 10957 */;
-import FocusModeUtils from "FocusModeUtils" /* 10958 */;
+import MessageParserDefault from "MessageParser" /* 8719 */;
+import IsolateString from "IsolateString" /* 8723 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 9148 */;
+import ChannelVisibilityUtils from "ChannelVisibilityUtils" /* 10951 */;
+import FocusModeUtils from "FocusModeUtils" /* 10952 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
 import LurkingStore from "LurkingStore" /* 5176 */;
 import MessageRequestStore from "MessageRequestStore" /* 6967 */;
@@ -38,7 +38,7 @@ import SelfPresenceStore from "SelfPresenceStore" /* 7252 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 5086 */;
 import UserStore from "UserStore" /* 1385 */;
-import RpcNotificationSettingsStore from "RpcNotificationSettingsStore" /* 10956 */;
+import RpcNotificationSettingsStore from "RpcNotificationSettingsStore" /* 10950 */;
 
 const isForwardMessageDefault = isForwardMessage;
 

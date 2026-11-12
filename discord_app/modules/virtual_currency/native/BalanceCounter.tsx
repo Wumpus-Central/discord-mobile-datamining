@@ -1,6 +1,6 @@
-// === Module 9986: BalanceCounter ===
+// === Module 9985: BalanceCounter ===
 
-// Module 9986 (BalanceCounter)
+// Module 9985 (BalanceCounter)
 import _modDef1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import spring_spring from "spring/spring" /* 5876 */;

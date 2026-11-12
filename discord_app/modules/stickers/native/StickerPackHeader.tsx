@@ -1,20 +1,20 @@
-// === Module 11306: StickerPackHeader ===
+// === Module 11300: StickerPackHeader ===
 
-// Module 11306 (StickerPackHeader)
+// Module 11300 (StickerPackHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import StickersUtils from "StickersUtils" /* 6729 */;
 import Pressables from "Pressables" /* 7364 */;
-import _modDef11307 from "module_11307" /* 11307 */;
-import _modDef11308 from "module_11308" /* 11308 */;
-import StickerPackBannerDefault from "StickerPackBanner" /* 11309 */;
+import _modDef11301 from "module_11301" /* 11301 */;
+import _modDef11302 from "module_11302" /* 11302 */;
+import StickerPackBannerDefault from "StickerPackBanner" /* 11303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const StickerPickerConstants = fn(11183);
+const StickerPickerConstants = fn(11177);
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
@@ -48,14 +48,14 @@ export default noop.memo(function StickerPackHeader(withDescription) {
   let result = StickersUtils.isStickerPackAnimated(stickerPack);
   if (result) {
     const obj5 = { style: tmp.iconContainer, children: null };
-    const obj6 = { source: _modDef11307, style: tmp.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
+    const obj6 = { source: _modDef11301, style: tmp.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
     obj5.children = React4(native.Icon, obj6);
     result = React4(View, obj5);
   }
   items[1] = result;
   const obj7 = { style: tmp.iconContainer, children: null };
   const obj3 = { style: tmp.label, lineClamp: 1, variant: "body-md/semibold", color: "mobile-text-heading-primary", children: stickerPack.name };
-  obj7.children = React4(native.Icon, { source: _modDef11308, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color });
+  obj7.children = React4(native.Icon, { source: _modDef11302, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color });
   items[2] = React4(View, obj7);
   obj2.children = items;
   obj.children = hasOwnProperty(View, obj2);

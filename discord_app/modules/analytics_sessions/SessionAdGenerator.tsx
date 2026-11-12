@@ -1,6 +1,6 @@
-// === Module 8762: SessionAdGenerator ===
+// === Module 8761: SessionAdGenerator ===
 
-// Module 8762 (SessionAdGenerator)
+// Module 8761 (SessionAdGenerator)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;

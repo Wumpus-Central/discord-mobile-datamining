@@ -1,12 +1,12 @@
-// === Module 19658: useLaunchPadAnimatedStyles ===
+// === Module 19653: useLaunchPadAnimatedStyles ===
 
-// Module 19658 (useLaunchPadAnimatedStyles)
+// Module 19653 (useLaunchPadAnimatedStyles)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import spring_spring from "spring/spring" /* 5876 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 12313 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 13039 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13708 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 12307 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 13033 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13704 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import createStyles from "createStyles" /* 5243 */;
 import size from "module_2" /* 2 */;

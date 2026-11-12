@@ -1,15 +1,13 @@
-// === Module 10147: WaterwheelsDiscoverExperiment ===
+// === Module 10146: WaterwheelsDiscoverExperiment ===
 
-// Module 10147 (WaterwheelsDiscoverExperiment)
-import ICYMILabFeature from "ICYMILabFeature" /* 10148 */;
+// Module 10146 (WaterwheelsDiscoverExperiment)
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import LabFeatureStore from "LabFeatureStore" /* 9280 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
-require = fn;
+const require = fn;
 const ApexExperiment = fn(1449);
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-11-waterwheels-discover", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const size = fn(2);
@@ -25,12 +23,8 @@ export function getWaterwheelsDiscoverEnabled(fetchDehydrated) {
   if (flag == null) {
     flag = false;
   }
-  value = !flag;
-  if (flag) {
-    value = LabFeatureStore.get(ICYMILabFeature.ICYMI_LAB_FEATURE);
-  }
-  let enabled = !value;
-  if (!value) {
+  let enabled = flag;
+  if (enabled) {
     const obj = { location: fetchDehydrated };
     enabled = apexExperiment.getConfig(obj).enabled;
   }
@@ -38,7 +32,7 @@ export function getWaterwheelsDiscoverEnabled(fetchDehydrated) {
 }
 export function useWaterwheelsDiscoverEnabled(WaterwheelsDiscoverPanel) {
   _require = WaterwheelsDiscoverPanel;
-  items = [ApexExperimentStore, AuthenticationStore, LabFeatureStore, UserStore];
+  items = [ApexExperimentStore, AuthenticationStore, UserStore];
   const items1 = [WaterwheelsDiscoverPanel];
   return require("initialize").useStateFromStores(items, () => {
     const currentUser = UserStore.getCurrentUser();
@@ -49,12 +43,8 @@ export function useWaterwheelsDiscoverEnabled(WaterwheelsDiscoverPanel) {
     if (flag == null) {
       flag = false;
     }
-    value = !flag;
-    if (flag) {
-      value = LabFeatureStore.get(ICYMILabFeature.ICYMI_LAB_FEATURE);
-    }
-    let enabled = !value;
-    if (!value) {
+    let enabled = flag;
+    if (enabled) {
       const obj = { location: _location };
       enabled = apexExperiment.getConfig(obj).enabled;
     }

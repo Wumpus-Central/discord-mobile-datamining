@@ -1,6 +1,6 @@
-// === Module 10136: MediaShareActions ===
+// === Module 10135: MediaShareActions ===
 
-// Module 10136 (MediaShareActions)
+// Module 10135 (MediaShareActions)
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import useChatLayout from "useChatLayout" /* 5432 */;
@@ -17,17 +17,17 @@ import ActionSheetRow from "ActionSheetRow" /* 7887 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 8014 */;
 import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8562 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8566 */;
-import showShareActionSheet from "showShareActionSheet" /* 10163 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 10172 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 10200 */;
-import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11866 */;
-import ShareIcon from "ShareIcon" /* 12200 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 15084 */;
+import showShareActionSheet from "showShareActionSheet" /* 10161 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 10170 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 10198 */;
+import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11860 */;
+import ShareIcon from "ShareIcon" /* 12194 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 15081 */;
 import noop from "module_19" /* 19 */;
-import ICYMIStore from "ICYMIStore" /* 10137 */;
+import ICYMIStore from "ICYMIStore" /* 10136 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import MessageStore from "MessageStore" /* 6309 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 10161 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 10159 */;
 
 require = fn;
 function useMediaShareActions(source) {
@@ -162,7 +162,7 @@ function useMediaShareActions(source) {
       const obj2 = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj2.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12559, dependencyMap.paths), closure_11, obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12553, dependencyMap.paths), closure_11, obj2);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;

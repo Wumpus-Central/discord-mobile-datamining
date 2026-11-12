@@ -1,9 +1,9 @@
-// === Module 9375: OrbsIcon ===
+// === Module 9374: OrbsIcon ===
 
-// Module 9375 (OrbsIcon)
+// Module 9374 (OrbsIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod9376 from "module_9376" /* 9376 */;
+import _mod9375 from "module_9375" /* 9375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function OrbsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9376, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9375, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

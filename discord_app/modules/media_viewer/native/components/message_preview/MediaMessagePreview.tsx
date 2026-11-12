@@ -1,26 +1,26 @@
-// === Module 15101: MediaMessagePreview ===
+// === Module 15098: MediaMessagePreview ===
 
-// Module 15101 (MediaMessagePreview)
+// Module 15098 (MediaMessagePreview)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8797 */;
-import RowGeneratorDefault from "RowGenerator" /* 9093 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 11006 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11804 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 12374 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 12496 */;
-import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 15103 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8796 */;
+import RowGeneratorDefault from "RowGenerator" /* 9092 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 11000 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11798 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 12368 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 12490 */;
+import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 15100 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8801 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 8800 */;
 import SearchMessageStore from "SearchMessageStore" /* 6974 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import MessageStore from "MessageStore" /* 6309 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 10161 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 10159 */;
 
 require = fn;
 function MeasureMessage(message) {

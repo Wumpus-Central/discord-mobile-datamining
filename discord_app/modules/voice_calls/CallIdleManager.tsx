@@ -1,11 +1,11 @@
-// === Module 20033: CallIdleManager ===
+// === Module 20028: CallIdleManager ===
 
-// Module 20033 (CallIdleManager)
+// Module 20028 (CallIdleManager)
 import util from "util" /* 1113 */;
 import Timers from "Timers" /* 5087 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6872 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
-import CampInDmExperiment from "CampInDmExperiment" /* 20034 */;
+import CampInDmExperiment from "CampInDmExperiment" /* 20029 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import VoiceStateStore from "VoiceStateStore" /* 5918 */;

@@ -20,8 +20,8 @@ import ScheduleUtils from "ScheduleUtils" /* 7906 */;
 import useCanInviteForGuildEventDefault from "useCanInviteForGuildEvent" /* 7919 */;
 import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 7924 */;
 import guildEventDetailsParser from "guildEventDetailsParser" /* 8356 */;
-import getGuildEventImageDefault from "getGuildEventImage" /* 15811 */;
-import ThrottledButtonDefault from "ThrottledButton" /* 15812 */;
+import getGuildEventImageDefault from "getGuildEventImage" /* 15806 */;
+import ThrottledButtonDefault from "ThrottledButton" /* 15807 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -391,7 +391,7 @@ export function GuildEventShareAction(event) {
       ToastUtils.presentLinkCopied();
     }
   };
-  obj3.icon = importDefault(tmp3 ? 12201 : 5967);
+  obj3.icon = importDefault(tmp3 ? 12195 : 5967);
   return closure_21(event(7922).IconButton, obj3);
 }
 export function GuildEventModeratorAction(event) {
@@ -451,7 +451,7 @@ export function GuildEventIndicateInterestAction(event) {
   if (first) {
     let BellIcon = tmp(7672).CheckmarkLargeIcon;
   } else {
-    BellIcon = tmp(10933).BellIcon;
+    BellIcon = tmp(10927).BellIcon;
   }
   const obj2 = { accessibilityRole: "togglebutton", accessibilityState: { checked: first }, accessibilityLabel: null, variant: null, icon: null, text: null, onPress: null, grow: true };
   const obj = event(504);

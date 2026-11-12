@@ -1,15 +1,15 @@
-// === Module 17421: OrbChallengeListItem ===
+// === Module 17416: OrbChallengeListItem ===
 
-// Module 17421 (OrbChallengeListItem)
+// Module 17416 (OrbChallengeListItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2317 from "module_2317" /* 2317 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7897 */;
-import OrbsIcon from "OrbsIcon" /* 9375 */;
-import _modDef10090 from "module_10090" /* 10090 */;
-import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 15147 */;
-import OrbChallengeTypes from "OrbChallengeTypes" /* 16127 */;
+import OrbsIcon from "OrbsIcon" /* 9374 */;
+import _modDef10089 from "module_10089" /* 10089 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 15144 */;
+import OrbChallengeTypes from "OrbChallengeTypes" /* 16122 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ function OrbChallengeAsset(achievementStatus) {
   const tmp = closure_12();
   if (achievementStatus !== OrbChallengeTypes.UserAchievementStatus.COMPLETED) {
     if (achievementStatus !== OrbChallengeTypes.UserAchievementStatus.CLAIMED) {
-      const size = { assetUrl: _modDef10090, isAnimatedAsset, height: 40, width: 40 };
+      const size = { assetUrl: _modDef10089, isAnimatedAsset, height: 40, width: 40 };
       let tmp8 = React5(QuestDockRewardTileDefault, size);
     }
     return tmp8;
@@ -28,7 +28,7 @@ function OrbChallengeAsset(achievementStatus) {
   const obj = { style: tmp.completedRing, accessible: true, accessibilityLabel: null, children: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(_modDef2317.k6h2J3);
-  const size1 = { assetUrl: _modDef10090, isAnimatedAsset, height: 32, width: 32, style: tmp.completedTile };
+  const size1 = { assetUrl: _modDef10089, isAnimatedAsset, height: 32, width: 32, style: tmp.completedTile };
   obj.children = React5(QuestDockRewardTileDefault, size1);
   tmp8 = React5(metroImportDefault, obj);
 }

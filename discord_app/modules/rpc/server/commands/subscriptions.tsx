@@ -1,6 +1,6 @@
-// === Module 16846: subscriptions ===
+// === Module 16841: subscriptions ===
 
-// Module 16846 (subscriptions)
+// Module 16841 (subscriptions)
 import applyDefault from "apply" /* 12 */;
 import RPCErrorDefault from "RPCError" /* 7239 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

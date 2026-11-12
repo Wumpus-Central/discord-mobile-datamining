@@ -1,6 +1,6 @@
-// === Module 19729: BlurVisualEffectView ===
+// === Module 19724: BlurVisualEffectView ===
 
-// Module 19729 (BlurVisualEffectView)
+// Module 19724 (BlurVisualEffectView)
 import nativeDefault from "native" /* 575 */;
 import useToken from "useToken" /* 5839 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5843 */;

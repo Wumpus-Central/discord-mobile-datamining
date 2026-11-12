@@ -1,6 +1,6 @@
-// === Module 10388: SkeletonCard ===
+// === Module 10386: SkeletonCard ===
 
-// Module 10388 (SkeletonCard)
+// Module 10386 (SkeletonCard)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5485 */;

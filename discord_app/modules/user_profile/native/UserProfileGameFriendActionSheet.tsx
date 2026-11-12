@@ -1,9 +1,9 @@
-// === Module 15666: UserProfileGameFriendActionSheet ===
+// === Module 15663: UserProfileGameFriendActionSheet ===
 
-// Module 15666 (UserProfileGameFriendActionSheet)
+// Module 15663 (UserProfileGameFriendActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12039 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12033 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -164,7 +164,7 @@ export default function UserProfileGameFriendActionSheet(user) {
     let tmp = null != application;
     if (tmp) {
       const obj = { application, userDisplayName, userId: user.id };
-      tmp = closure_2_10(GameFriendApplicationRow, obj, application.id);
+      tmp = refs(GameFriendApplicationRow, obj, application.id);
     }
     return tmp;
   });

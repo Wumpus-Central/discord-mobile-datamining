@@ -1,6 +1,6 @@
-// === Module 18356: CollectiblesShopV2 ===
+// === Module 18351: CollectiblesShopV2 ===
 
-// Module 18356 (CollectiblesShopV2)
+// Module 18351 (CollectiblesShopV2)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 2183 */;
@@ -8,15 +8,15 @@ import dismissible_content from "dismissible_content" /* 5076 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5285 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8417 */;
 import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 8468 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9657 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10366 */;
-import ImprovedMobileShopLoadingExperiment from "ImprovedMobileShopLoadingExperiment" /* 10379 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 10391 */;
-import takeWhileDefault from "takeWhile" /* 18363 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 18366 */;
-import ShopCategory from "ShopCategory" /* 18368 */;
-import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 18370 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 18371 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9656 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10364 */;
+import ImprovedMobileShopLoadingExperiment from "ImprovedMobileShopLoadingExperiment" /* 10377 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 10389 */;
+import takeWhileDefault from "takeWhile" /* 18358 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 18361 */;
+import ShopCategory from "ShopCategory" /* 18363 */;
+import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 18365 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 18366 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5869 */;

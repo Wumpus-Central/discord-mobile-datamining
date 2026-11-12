@@ -1,9 +1,9 @@
-// === Module 10732: BoostGemSlashIcon ===
+// === Module 10726: BoostGemSlashIcon ===
 
-// Module 10732 (BoostGemSlashIcon)
+// Module 10726 (BoostGemSlashIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod10733 from "module_10733" /* 10733 */;
+import _mod10727 from "module_10727" /* 10727 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BoostGemSlashIcon(c2) {
   }
   const merged = Object.assign(dependencyMap, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10733, color: INTERACTIVE_ICON_DEFAULT, style: dependencyMap.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10727, color: INTERACTIVE_ICON_DEFAULT, style: dependencyMap.style });
 }

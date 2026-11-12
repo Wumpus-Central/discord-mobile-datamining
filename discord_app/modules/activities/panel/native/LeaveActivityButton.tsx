@@ -1,10 +1,10 @@
-// === Module 19592: LeaveActivityButton ===
+// === Module 19587: LeaveActivityButton ===
 
-// Module 19592 (LeaveActivityButton)
+// Module 19587 (LeaveActivityButton)
 import util from "util" /* 1113 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
-import _modDef12207 from "module_12207" /* 12207 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12657 */;
+import _modDef12201 from "module_12201" /* 12201 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12651 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 14858: VoiceMessageOverlay ===
+// === Module 14854: VoiceMessageOverlay ===
 
-// Module 14858 (VoiceMessageOverlay)
+// Module 14854 (VoiceMessageOverlay)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
@@ -16,9 +16,9 @@ import LegacyTokens from "LegacyTokens" /* 6898 */;
 import useRefValueDefault from "useRefValue" /* 7352 */;
 import useKeyboardAnimatedValueDefault from "useKeyboardAnimatedValue" /* 7409 */;
 import inlineStyles from "inlineStyles" /* 8197 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13699 */;
-import _modDef14859 from "module_14859" /* 14859 */;
-import VoiceMessageChatDefault from "VoiceMessageChat" /* 14860 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13695 */;
+import _modDef14855 from "module_14855" /* 14855 */;
+import VoiceMessageChatDefault from "VoiceMessageChat" /* 14856 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
@@ -276,7 +276,7 @@ function LockPill(voiceMessageAnimationState) {
   VoiceMessageOverlayTsx13.__initData = tmp57;
   const animatedStyle3 = require("module_1652").useAnimatedStyle(VoiceMessageOverlayTsx13);
   const tmp5Result21 = require("module_1652");
-  const tmp14Result = importDefault(tmp3 ? 8001 : 11089);
+  const tmp14Result = importDefault(tmp3 ? 8001 : 11083);
   const tmp63 = useKeyboardAnimatedValueDefault(safeAreaBottom);
   const items16 = [closure_38, initialAnimation, tmp63, CHAT_INPUT_HEIGHT, 32, 8];
   _require = undefined;
@@ -305,7 +305,7 @@ function LockPill(voiceMessageAnimationState) {
   const items19 = [tmp.lockContainer, animatedStyle1];
   obj3.style = items19;
   const items20 = [closure_13(closure_16, { style: animatedStyle2, source: tmp14Result }), ];
-  const obj4 = { style: null, source: _modDef14859 };
+  const obj4 = { style: null, source: _modDef14855 };
   const items21 = [tmp.chevon, animatedStyle3];
   obj4.style = items21;
   items20[1] = closure_13(closure_16, obj4);
@@ -315,10 +315,10 @@ function LockPill(voiceMessageAnimationState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: closure_6 } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(14462).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(14463).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(14458).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(14459).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1072).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(13703).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(13699).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let module_1652 = module_1652_mod;
@@ -616,7 +616,7 @@ let closure_43 = noop.memo(function VoiceMessageOverlay(channelId) {
   ({ floatingSendButton: obj14.style, floatingSendButtonActive: obj14.activeStyle, floatingSendButtonIconActive: obj14.activeIconStyle } = tmp5);
   if (!tmp8) {
     if (!exiting) {
-      let SendMessageIcon = tmp(12958).MicrophoneIcon;
+      let SendMessageIcon = tmp(12952).MicrophoneIcon;
     }
     const obj13 = { children: null };
     obj12.IconComponent = SendMessageIcon;

@@ -1,23 +1,23 @@
-// === Module 15016: ThreadBrowserHooks ===
+// === Module 15012: ThreadBrowserHooks ===
 
-// Module 15016 (ThreadBrowserHooks)
+// Module 15012 (ThreadBrowserHooks)
 import applyDefault from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8798 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9046 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8797 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9045 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
 import ReadStateStore from "ReadStateStore" /* 6952 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 6972 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8799 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8798 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5177 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(15017).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(15013).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1083).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");

@@ -1,6 +1,6 @@
-// === Module 14488: useTextareaPlaceholderAndLabels ===
+// === Module 14484: useTextareaPlaceholderAndLabels ===
 
-// Module 14488 (useTextareaPlaceholderAndLabels)
+// Module 14484 (useTextareaPlaceholderAndLabels)
 import util from "util" /* 1113 */;
 import useChannelNameDefault from "useChannelName" /* 5891 */;
 import Constants from "Constants" /* 1072 */;

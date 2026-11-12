@@ -1,16 +1,16 @@
-// === Module 13226: ConjureChatHeader ===
+// === Module 13220: ConjureChatHeader ===
 
-// Module 13226 (ConjureChatHeader)
+// Module 13220 (ConjureChatHeader)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 8987 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 8994 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 8986 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 8993 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(8986).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(8985).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5243);

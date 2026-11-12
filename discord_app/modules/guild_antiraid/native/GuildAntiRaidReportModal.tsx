@@ -1,6 +1,6 @@
-// === Module 16296: GuildAntiRaidReportModal ===
+// === Module 16291: GuildAntiRaidReportModal ===
 
-// Module 16296 (GuildAntiRaidReportModal)
+// Module 16291 (GuildAntiRaidReportModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -18,7 +18,7 @@ function ReportModal(onSubmit) {
   const tmp = closure_13();
   dependencyMap = tmp;
   items = [tmp];
-  closure_3 = noop.useCallback((arg0) => closure_2_10(Text_Text.Text, { style: formRow.formRow, variant: "body-md/semibold", color: "interactive-text-active", children: React5(arg0) }), items);
+  closure_3 = noop.useCallback((arg0) => refs(Text_Text.Text, { style: formRow.formRow, variant: "body-md/semibold", color: "interactive-text-active", children: React5(arg0) }), items);
   const obj = { style: tmp.container, children: null };
   const callback = noop.useCallback(() => {
     require("Linking").openURL(closure_1_7());
@@ -75,7 +75,7 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(16297);
+const GuildReportRaidModalConstants = fn(16292);
 ({ getReportRaidHelpArticleURL: metroImportDefault, getReportRaidTypeLabel: closure_8, REPORT_RAID_OPTIONS: closure_9 } = GuildReportRaidModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -125,9 +125,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
             dependencyMap = 3;
           } else {
             tmp21.current = true;
-            const result = tmp2(14028).trackReportRaidViewed(guildId, first);
-            const obj2 = tmp2(14028);
-            tmp2(14028).handleReportRaid(guildId);
+            const result = tmp2(14024).trackReportRaidViewed(guildId, first);
+            const obj2 = tmp2(14024);
+            tmp2(14024).handleReportRaid(guildId);
             const intl = tmp2(1113).intl;
             c1 = 1;
             dependencyMap = 1;

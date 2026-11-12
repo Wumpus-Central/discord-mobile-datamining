@@ -1,6 +1,6 @@
-// === Module 8795: PollsUtils ===
+// === Module 8794: PollsUtils ===
 
-// Module 8795 (PollsUtils)
+// Module 8794 (PollsUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import v1 from "v1" /* 1266 */;
@@ -9,7 +9,7 @@ import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
 import useMessageAuthor from "useMessageAuthor" /* 6686 */;
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7178 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 8796 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 8795 */;
 import MessageStore from "MessageStore" /* 6309 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
@@ -94,7 +94,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(8945);
+const PollsConstants = fn(8944);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1072);
 ({ ChannelTypesSets: closure_10, Permissions: closure_11 } = Constants);

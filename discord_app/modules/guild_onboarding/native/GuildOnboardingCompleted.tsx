@@ -255,8 +255,8 @@ export default function GuildOnboardingCompleted(guildId) {
       const substr = stateFromStoresArray.slice(0, 3);
       const items16 = [
         substr.map((role) => {
-              const obj = { style: duration.role, children: closure_2_10(UserProfileRolesCard.RoleItem, { role, guildId: _undefined5.id, disableInteraction: true }) };
-              return closure_2_10(React4, obj, role.id);
+              const obj = { style: duration.role, children: refs(UserProfileRolesCard.RoleItem, { role, guildId: _undefined5.id, disableInteraction: true }) };
+              return refs(React4, obj, role.id);
             }),
 
       ];

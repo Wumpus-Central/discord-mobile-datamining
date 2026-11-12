@@ -1,8 +1,8 @@
-// === Module 20265: UserOfferManager ===
+// === Module 20260: UserOfferManager ===
 
-// Module 20265 (UserOfferManager)
+// Module 20260 (UserOfferManager)
 import UserStore from "UserStore" /* 1385 */;
-import UserOfferStore from "UserOfferStore" /* 9232 */;
+import UserOfferStore from "UserOfferStore" /* 9231 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 let require = fn;

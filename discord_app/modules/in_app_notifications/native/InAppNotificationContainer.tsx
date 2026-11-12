@@ -1,24 +1,24 @@
-// === Module 10977: InAppNotificationContainer ===
+// === Module 10971: InAppNotificationContainer ===
 
-// Module 10977 (InAppNotificationContainer)
+// Module 10971 (InAppNotificationContainer)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import timing_timing from "timing/timing" /* 5485 */;
 import useMountEffectDefault from "useMountEffect" /* 5836 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10962 */;
-import MessageNotificationDefault from "MessageNotification" /* 10979 */;
-import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 11033 */;
-import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 11036 */;
-import BugReporterNotification from "BugReporterNotification" /* 11037 */;
-import AlertNotificationDefault from "AlertNotification" /* 11081 */;
-import ReactionNotificationDefault from "ReactionNotification" /* 11082 */;
-import ReminderNotificationDefault from "ReminderNotification" /* 11843 */;
-import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification" /* 11884 */;
-import MessageRequestNotificationDefault from "MessageRequestNotification" /* 11887 */;
-import StageSpeakInviteNotificationDefault from "StageSpeakInviteNotification" /* 11888 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10956 */;
+import MessageNotificationDefault from "MessageNotification" /* 10973 */;
+import MessageFailedToSendNotificationDefault from "MessageFailedToSendNotification" /* 11027 */;
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 11030 */;
+import BugReporterNotification from "BugReporterNotification" /* 11031 */;
+import AlertNotificationDefault from "AlertNotification" /* 11075 */;
+import ReactionNotificationDefault from "ReactionNotification" /* 11076 */;
+import ReminderNotificationDefault from "ReminderNotification" /* 11837 */;
+import RestrictedHoursWarningNotificationDefault from "RestrictedHoursWarningNotification" /* 11878 */;
+import MessageRequestNotificationDefault from "MessageRequestNotification" /* 11881 */;
+import StageSpeakInviteNotificationDefault from "StageSpeakInviteNotification" /* 11882 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10978 */;
+import NativeMenuStore from "NativeMenuStore" /* 10972 */;
 
 const require = globalThis.__r;
 
@@ -67,7 +67,7 @@ function NotificationWrapper(notification) {
   }
 }
 let StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(10963);
+const InAppNotificationConstants = fn(10957);
 ({ DEFAULT_ANIMATION_TIMING: metroImportDefault, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: closure_9, MIN_SWIPE_VELOCITY: closure_10, PAN_INPUT_RANGE: closure_11, NOTIFICATION_CONTAINER_MARGIN } = InAppNotificationConstants);
 const Constants = fn(1072);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = Constants);
@@ -104,8 +104,8 @@ export default function InAppNotificationContainer(notification) {
   const tmp = closure_16();
   let isIOSResult = require("utils/PlatformUtils").isIOS();
   if (isIOSResult) {
-    isIOSResult = tmp2(11895).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
-    const tmp2Result = tmp2(11895);
+    isIOSResult = tmp2(11889).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
+    const tmp2Result = tmp2(11889);
   }
   items = [notification];
   const memo = noop.useMemo(() => InAppNotificationUtils.extractMetadataFromNotification(c0), items);

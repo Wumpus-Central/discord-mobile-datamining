@@ -1,6 +1,6 @@
-// === Module 15953: StageBlockedUsersActionSheet ===
+// === Module 15948: StageBlockedUsersActionSheet ===
 
-// Module 15953 (StageBlockedUsersActionSheet)
+// Module 15948 (StageBlockedUsersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -39,7 +39,7 @@ function RestrictedUser(guildId) {
   const items2 = [closure_9(native.CutoutableAvatarImage, { source: avatarSource, size: native.AvatarSizes.REFRESH_MEDIUM_32, style: tmp.avatar }), ];
   if (speaker) {
     const obj6 = { style: tmp.iconContainer, children: null };
-    const obj7 = { style: tmp.icon, source: user(12982), color: user(575).unsafe_rawColors.WHITE };
+    const obj7 = { style: tmp.icon, source: user(12976), color: user(575).unsafe_rawColors.WHITE };
     obj6.children = closure_9(native.Icon, obj7);
     speaker = closure_9(View, obj6);
   }
@@ -158,9 +158,9 @@ export default function StageBlockedUsersActionSheet(channel) {
   const tmp = closure_11();
   const tmp2 = items1(noop.useState(0), 2);
   dependencyMap = tmp2[1];
-  const stageBlockedUsers = channel(12822).useStageBlockedUsers(channel.id);
-  const obj = channel(12822);
-  const stageIgnoredUsers = channel(12822).useStageIgnoredUsers(channel.id);
+  const stageBlockedUsers = channel(12816).useStageBlockedUsers(channel.id);
+  const obj = channel(12816);
+  const stageIgnoredUsers = channel(12816).useStageIgnoredUsers(channel.id);
   const callback = noop.useCallback((nativeEvent) => {
     dependencyMap(nativeEvent.nativeEvent.layout.height);
   }, []);
@@ -182,7 +182,7 @@ export default function StageBlockedUsersActionSheet(channel) {
   items[1] = closure_9(channel(5873).Button, obj5);
   obj3.children = items;
   items1 = [];
-  const obj2 = channel(12822);
+  const obj2 = channel(12816);
   HermesBuiltin.arraySpread(stageIgnoredUsers, HermesBuiltin.arraySpread(stageBlockedUsers, 0));
   const obj6 = { scrollable: true, header: closure_9(StageBlockedUsersActionSheetHeader, { blockedUserCount: stageBlockedUsers.length, ignoredUserCount: stageIgnoredUsers.length }), footer: closure_10(channel(7351).SafeAreaPaddingView, obj3), children: null };
   const obj7 = { inActionSheet: true, contentContainerStyle: tmp.container, accessibilityLabel: null, sections: null, renderItem: null, itemSize: null };

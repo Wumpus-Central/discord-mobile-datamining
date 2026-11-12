@@ -1,6 +1,6 @@
-// === Module 12700: VideoEmptyState ===
+// === Module 12694: VideoEmptyState ===
 
-// Module 12700 (VideoEmptyState)
+// Module 12694 (VideoEmptyState)
 import nativeDefault from "native" /* 575 */;
 import useMountEffectDefault from "useMountEffect" /* 5836 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6745 */;
@@ -32,7 +32,7 @@ export default function VideoEmptyState(style) {
   if (obj.STREAM_ENDED === type) {
     let tmp10 = !removeSplashImage;
     if (!removeSplashImage) {
-      let obj2 = { style: tmp2.placeholderImage, children: closure_5(stream(12701).CouchSpotIllustration, { accessible: false, width: "100%", height: "100%" }) };
+      let obj2 = { style: tmp2.placeholderImage, children: closure_5(stream(12695).CouchSpotIllustration, { accessible: false, width: "100%", height: "100%" }) };
       tmp10 = closure_5(View, obj2);
     }
     let obj3 = { children: null };

@@ -1,14 +1,14 @@
-// === Module 11775: PremiumGiftDuration ===
+// === Module 11769: PremiumGiftDuration ===
 
-// Module 11775 (PremiumGiftDuration)
+// Module 11769 (PremiumGiftDuration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5315 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import TableRow from "TableRow" /* 7379 */;
 import RowButton2 from "RowButton" /* 8043 */;
-import NativeGiftContext from "NativeGiftContext" /* 11603 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 11621 */;
+import NativeGiftContext from "NativeGiftContext" /* 11597 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 11615 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -100,7 +100,7 @@ const result = size.fileFinishedImporting("modules/premium/native/gifting/Premiu
 
 export default function PremiumGiftDuration() {
   const tmp = closure_11();
-  planInterval = planInterval(11603).useNativeGiftContext().planInterval;
+  planInterval = planInterval(11597).useNativeGiftContext().planInterval;
   const obj2 = { style: tmp.durationContainer, children: null };
   const obj3 = { style: tmp.durationTitle, variant: "body-sm/semibold", children: null };
   const intl = planInterval(1113).intl;

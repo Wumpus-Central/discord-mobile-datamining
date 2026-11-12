@@ -1,16 +1,16 @@
-// === Module 15824: NsfwGateGuild ===
+// === Module 15819: NsfwGateGuild ===
 
-// Module 15824 (NsfwGateGuild)
+// Module 15819 (NsfwGateGuild)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 10745 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 10739 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(10744).NsfwGateSource;
+const NsfwGateSource = fn(10738).NsfwGateSource;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, HelpdeskArticles: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -62,7 +62,7 @@ export default function NsfwGateGuild(guildId) {
   const items1 = [closure_10(currentUser(7648), {}), , , , , ];
   const obj4 = { source: null, style: null };
   const formatResult = intl3.format(guildId(1113).t.Z12LNW, obj);
-  obj4.source = currentUser(15825);
+  obj4.source = currentUser(15820);
   obj4.style = tmp.image;
   items1[1] = closure_10(currentUser(5957), obj4);
   items1[2] = closure_10(guildId(5866).Heading, { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: stringResult });

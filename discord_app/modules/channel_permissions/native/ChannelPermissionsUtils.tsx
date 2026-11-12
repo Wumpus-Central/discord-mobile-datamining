@@ -1,6 +1,6 @@
-// === Module 12468: channel_permissions/ChannelPermissionsUtils ===
+// === Module 12462: channel_permissions/ChannelPermissionsUtils ===
 
-// Module 12468 (channel_permissions/ChannelPermissionsUtils)
+// Module 12462 (channel_permissions/ChannelPermissionsUtils)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
@@ -22,5 +22,5 @@ export function openAddMembersActionSheet(stateFromStores) {
 export function openChannelMembersActionSheet(id, guild_id) {
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Manage Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(12469, dependencyMap.paths), "channel-members-" + id, { channelId: id, guildId: guild_id });
+  obj2.openLazy(asyncRequireImpl(12463, dependencyMap.paths), "channel-members-" + id, { channelId: id, guildId: guild_id });
 }

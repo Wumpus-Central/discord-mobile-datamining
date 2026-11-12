@@ -1,11 +1,11 @@
-// === Module 10088: QuestCopyUtils ===
+// === Module 10087: QuestCopyUtils ===
 
-// Module 10088 (QuestCopyUtils)
+// Module 10087 (QuestCopyUtils)
 import util from "util" /* 1113 */;
 import AdCreativeType from "AdCreativeType" /* 5282 */;
 import ClipboardUtils from "ClipboardUtils" /* 7877 */;
-import captureAdUserAction from "captureAdUserAction" /* 10068 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 10071 */;
+import captureAdUserAction from "captureAdUserAction" /* 10067 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 10070 */;
 import QuestConstants from "QuestConstants" /* 5275 */;
 import size from "module_2" /* 2 */;
 

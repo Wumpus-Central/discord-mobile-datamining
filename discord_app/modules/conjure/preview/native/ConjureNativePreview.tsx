@@ -1,6 +1,6 @@
-// === Module 13244: ConjureNativePreview ===
+// === Module 13238: ConjureNativePreview ===
 
-// Module 13244 (ConjureNativePreview)
+// Module 13238 (ConjureNativePreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
@@ -13,10 +13,10 @@ import ConjurePlatformUtils from "ConjurePlatformUtils" /* 7332 */;
 import Card from "Card" /* 7381 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7808 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12077 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 12653 */;
-import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 13245 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 13246 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12071 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 12647 */;
+import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 13239 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 13240 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FramesStore from "FramesStore" /* 6956 */;
@@ -400,10 +400,10 @@ function PreviewBot(projectId) {
   } else {
     const obj6 = { style: tmp.dm, children: null };
     const obj7 = { guildId, channelId: stateFromStores.id, chatInputRef: tmp19, screenIndex: "conjure-preview", alwaysRespectKeyboard: true, disableGradient: true };
-    const items8 = [closure_22(previewApplicationId(11916), obj7, stateFromStores.id), ];
+    const items8 = [closure_22(previewApplicationId(11910), obj7, stateFromStores.id), ];
     let tmp30Result = null;
     if (tmp7Result4.isAndroid()) {
-      tmp30Result = closure_22(tmp7(13266).PortalKeyboardRenderer, { portal: true });
+      tmp30Result = closure_22(tmp7(13260).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp30Result;
     obj6.children = items8;
@@ -414,7 +414,7 @@ function PreviewBot(projectId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(13201);
+const conjureDesignFeedbackStore = fn(13195);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_16, AnalyticsObjectTypes: closure_17, AnalyticsSections: closure_18, AppStates: closure_19, ME: closure_20 } = Constants);

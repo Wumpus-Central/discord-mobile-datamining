@@ -1,6 +1,6 @@
-// === Module 9406: useDisplayProfileSocialLayerStorefrontApplicationIds ===
+// === Module 9405: useDisplayProfileSocialLayerStorefrontApplicationIds ===
 
-// Module 9406 (useDisplayProfileSocialLayerStorefrontApplicationIds)
+// Module 9405 (useDisplayProfileSocialLayerStorefrontApplicationIds)
 import apply from "apply" /* 12 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7290 */;
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7293 */;

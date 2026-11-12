@@ -1,11 +1,11 @@
-// === Module 11730: SocialLayerStorefrontGiftPurchaseSection ===
+// === Module 11724: SocialLayerStorefrontGiftPurchaseSection ===
 
-// Module 11730 (SocialLayerStorefrontGiftPurchaseSection)
+// Module 11724 (SocialLayerStorefrontGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 11669 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 11663 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const View = fn(17).View;
-let useNativeCheckoutStore = fn(9526).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(9525).useNativeCheckoutStore;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const GiftingOrigin = fn(1387).GiftingOrigin;
 const jsxProd = fn(21);

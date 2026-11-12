@@ -1,9 +1,9 @@
-// === Module 9002: openChannelSecondaryViewChat ===
+// === Module 9001: openChannelSecondaryViewChat ===
 
-// Module 9002 (openChannelSecondaryViewChat)
+// Module 9001 (openChannelSecondaryViewChat)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import RootNavigationRef from "RootNavigationRef" /* 5430 */;
-import MessageManagerDefault from "MessageManager" /* 9003 */;
+import MessageManagerDefault from "MessageManager" /* 9002 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

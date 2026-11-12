@@ -1,6 +1,6 @@
-// === Module 9499: markScopedDismissibleContentAsDismissed ===
+// === Module 9498: markScopedDismissibleContentAsDismissed ===
 
-// Module 9499 (markScopedDismissibleContentAsDismissed)
+// Module 9498 (markScopedDismissibleContentAsDismissed)
 import DismissibleContentUtils from "DismissibleContentUtils" /* 5077 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5285 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 12842: GuildScheduledEventPrompts ===
+// === Module 12836: GuildScheduledEventPrompts ===
 
-// Module 12842 (GuildScheduledEventPrompts)
+// Module 12836 (GuildScheduledEventPrompts)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 7924 */;
@@ -69,7 +69,7 @@ export function StartEventPrompt(event) {
       onPress: function handleStartEvent() {
           const result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
         },
-      iconSource: recurrenceId(12843),
+      iconSource: recurrenceId(12837),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
@@ -91,7 +91,7 @@ export function StartEventPrompt(event) {
       onPress: function handleStartEvent() {
           const result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
         },
-      iconSource: recurrenceId(12843),
+      iconSource: recurrenceId(12837),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,

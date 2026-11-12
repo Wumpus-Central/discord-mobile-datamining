@@ -1,6 +1,6 @@
-// === Module 19847: activityPlatformToConnectedAccountType ===
+// === Module 19842: activityPlatformToConnectedAccountType ===
 
-// Module 19847 (activityPlatformToConnectedAccountType)
+// Module 19842 (activityPlatformToConnectedAccountType)
 import Constants from "Constants" /* 1072 */;
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7406 */;
 import size from "module_2" /* 2 */;

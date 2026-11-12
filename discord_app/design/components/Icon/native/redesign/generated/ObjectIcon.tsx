@@ -1,9 +1,9 @@
-// === Module 11265: ObjectIcon ===
+// === Module 11259: ObjectIcon ===
 
-// Module 11265 (ObjectIcon)
+// Module 11259 (ObjectIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod11266 from "module_11266" /* 11266 */;
+import _mod11260 from "module_11260" /* 11260 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ObjectIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11266, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11260, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

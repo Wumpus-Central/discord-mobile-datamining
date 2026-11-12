@@ -1,10 +1,10 @@
-// === Module 15694: useAddableWidgets ===
+// === Module 15691: useAddableWidgets ===
 
-// Module 15694 (useAddableWidgets)
-import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 12163 */;
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 12181 */;
+// Module 15691 (useAddableWidgets)
+import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 12157 */;
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 12175 */;
 import noop from "module_19" /* 19 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 12180 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 12174 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -73,7 +73,7 @@ export default function useAddableWidgets() {
     let set = new Set(found.map((applicationId) => applicationId.applicationId));
     set1 = new Set(set1.map((type) => type.type));
     let found1 = closure_6.filter((item) => {
-      const ADDABLE_WIDGET_TYPES = set(15698).ADDABLE_WIDGET_TYPES;
+      const ADDABLE_WIDGET_TYPES = set(15695).ADDABLE_WIDGET_TYPES;
       return ADDABLE_WIDGET_TYPES.has(item);
     });
     return found1.flatMap((type) => {

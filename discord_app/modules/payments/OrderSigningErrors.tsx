@@ -1,6 +1,6 @@
-// === Module 10376: OrderSigningErrors ===
+// === Module 10374: OrderSigningErrors ===
 
-// Module 10376 (OrderSigningErrors)
+// Module 10374 (OrderSigningErrors)
 import BillingErrorDefault from "BillingError" /* 5063 */;
 import PaymentConstants from "PaymentConstants" /* 5987 */;
 import size from "module_2" /* 2 */;

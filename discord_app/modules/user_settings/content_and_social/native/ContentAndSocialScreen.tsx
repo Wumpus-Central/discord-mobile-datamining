@@ -1,23 +1,23 @@
-// === Module 18441: ContentAndSocialScreen ===
+// === Module 18436: ContentAndSocialScreen ===
 
-// Module 18441 (ContentAndSocialScreen)
+// Module 18436 (ContentAndSocialScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import SettingBuilders from "SettingBuilders" /* 12317 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14887 */;
-import SettingLayoutDefault from "SettingLayout" /* 17095 */;
-import AgeNoticeSettingsNoticesLazy from "AgeNoticeSettingsNoticesLazy" /* 17226 */;
-import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 18442 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 18448 */;
+import SettingBuilders from "SettingBuilders" /* 12311 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14883 */;
+import SettingLayoutDefault from "SettingLayout" /* 17090 */;
+import AgeNoticeSettingsNoticesLazy from "AgeNoticeSettingsNoticesLazy" /* 17221 */;
+import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 18437 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 18443 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const MobileUserSettings = fn(9136).MobileUserSettings;
+const MobileUserSettings = fn(9135).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);

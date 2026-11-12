@@ -1,6 +1,6 @@
-// === Module 17651: QuestBottomSheetTaskSelect ===
+// === Module 17646: QuestBottomSheetTaskSelect ===
 
-// Module 17651 (QuestBottomSheetTaskSelect)
+// Module 17646 (QuestBottomSheetTaskSelect)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestBottomShee
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
   const obj = { hasIcons: true, children: null };
-  const obj2 = { arrow: true, icon: closure_3(onTaskSelect(10400).ScreenIcon, {}), label: null, onPress: null };
+  const obj2 = { arrow: true, icon: closure_3(onTaskSelect(10398).ScreenIcon, {}), label: null, onPress: null };
   const intl = onTaskSelect(1113).intl;
   obj2.label = intl.string(onTaskSelect(1113).t["QXc01+"]);
   obj2.onPress = function onPress() {

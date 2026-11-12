@@ -1,22 +1,22 @@
-// === Module 19168: GuildOpenNotificationNudge ===
+// === Module 19163: GuildOpenNotificationNudge ===
 
-// Module 19168 (GuildOpenNotificationNudge)
+// Module 19163 (GuildOpenNotificationNudge)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7021 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 14719 */;
-import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 19169 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 14715 */;
+import NotificationNudgeBottomSheetDefault from "NotificationNudgeBottomSheet" /* 19164 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14716 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14712 */;
 
 require = fn;
-const PermissionPromptType = fn(14716).PermissionPromptType;
-const NotificationPermissionConstants = fn(14717);
+const PermissionPromptType = fn(14712).PermissionPromptType;
+const NotificationPermissionConstants = fn(14713);
 ({ EventActionLocation: closure_11, NotificationNudgeSurface: closure_12 } = NotificationPermissionConstants);
 const Constants = fn(1072);
 ({ UserNotificationSettings: map1, ZERO_STRING_GUILD_ID: closure_14 } = Constants);
@@ -64,9 +64,9 @@ export function useGuildOpenNudge() {
     return guildId;
   });
   let obj = stateFromStores(504);
-  let obj2 = stateFromStores3(17991);
-  const canSeePushNotificationNudge = stateFromStores(14718).useCanSeePushNotificationNudge();
-  let obj3 = stateFromStores(14718);
+  let obj2 = stateFromStores3(17986);
+  const canSeePushNotificationNudge = stateFromStores(14714).useCanSeePushNotificationNudge();
+  let obj3 = stateFromStores(14714);
   const items1 = [UserGuildSettingsStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => {
     let isMutedResult = null == stateFromStores;
@@ -155,7 +155,7 @@ export function useGuildOpenNudge() {
   if (stateFromStores == null) {
     tmp15 = closure_14;
   }
-  const tmp8Result = tmp8(stateFromStores(9494).useSelectedTimeRecurringGuildDismissibleContent(prop, tmp15, closure_17), 2);
+  const tmp8Result = tmp8(stateFromStores(9493).useSelectedTimeRecurringGuildDismissibleContent(prop, tmp15, closure_17), 2);
   first = tmp8Result[0];
   markAsDismissed = tmp18;
   const items6 = [stateFromStores, tmp8Result[1], first];
@@ -167,8 +167,8 @@ export function useGuildOpenNudge() {
     if (tmp2) {
       const result = PushNotificationActionCreators.setPushPermissionReactivationSeen(PermissionPromptType.GUILD_OPEN_BOTTOM_SHEET);
       const obj3 = { guildId: stateFromStores, markAsDismissed };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19168, dependencyMap.paths), c16, obj3);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19163, dependencyMap.paths), c16, obj3);
     }
   }, items6);
-  const tmpResult2 = stateFromStores(9494);
+  const tmpResult2 = stateFromStores(9493);
 }

@@ -1,6 +1,6 @@
-// === Module 17127: AgeNoticePromoSheet ===
+// === Module 17122: AgeNoticePromoSheet ===
 
-// Module 17127 (AgeNoticePromoSheet)
+// Module 17122 (AgeNoticePromoSheet)
 import nativeDefault from "native" /* 575 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import _modDef3305 from "module_3305" /* 3305 */;
@@ -8,7 +8,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6770 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8124 */;
 import openUserSettings from "openUserSettings" /* 8537 */;
-import openAgeNoticePromoSheet from "openAgeNoticePromoSheet" /* 17126 */;
+import openAgeNoticePromoSheet from "openAgeNoticePromoSheet" /* 17121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   const tmp = closure_10();
   const isVerifiedTeen = dismissOnce(6767).useIsVerifiedTeen();
   let obj = dismissOnce(6767);
-  dismissOnce = dismissOnce(17128).useDismissOnce(markAsDismissed.markAsDismissed);
+  dismissOnce = dismissOnce(17123).useDismissOnce(markAsDismissed.markAsDismissed);
   items = [dismissOnce];
   const items1 = [dismissOnce];
   const callback = noop.useCallback(() => {
@@ -82,8 +82,8 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   }
   const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
   const obj5 = { source: null, style: null, resizeMode: "contain" };
-  let obj2 = dismissOnce(17128);
-  obj5.source = tmp14(17129);
+  let obj2 = dismissOnce(17123);
+  obj5.source = tmp14(17124);
   obj5.style = tmp.illustration;
   obj4.illustration = closure_8(tmp14(5957), obj5);
   const intl2 = tmp2(1113).intl;
@@ -109,5 +109,5 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   items5[1] = closure_8(dismissOnce(5873).Button, obj10);
   obj8.children = items5;
   obj4.actions = closure_9(dismissOnce(6888).ButtonGroup, obj8);
-  return closure_8(dismissOnce(10651).PromoSheet, obj4);
+  return closure_8(dismissOnce(10644).PromoSheet, obj4);
 };

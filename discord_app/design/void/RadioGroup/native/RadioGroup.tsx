@@ -1,6 +1,6 @@
-// === Module 16480: RadioGroup ===
+// === Module 16475: RadioGroup ===
 
-// Module 16480 (RadioGroup)
+// Module 16475 (RadioGroup)
 import nativeDefault from "native" /* 575 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 5315 */;
 import FormRowDefault from "FormRow" /* 7835 */;
@@ -282,7 +282,7 @@ obj3.collapsibleBackgroundSelected = { backgroundColor: nativeDefault.colors.BAC
 const obj9 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj3.collapsibleBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj3.collapsibleContainer = { paddingVertical: 4, paddingHorizontal: 12 };
-let closure_10 = createStyles.createStyles(obj3);
+const refs = createStyles.createStyles(obj3);
 RadioIndicator.Sizes = Sizes;
 RadioGroup.Sizes = Sizes;
 let size = fn(2);

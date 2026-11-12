@@ -1,16 +1,16 @@
-// === Module 17561: launchOrbsArcadeGame ===
+// === Module 17556: launchOrbsArcadeGame ===
 
-// Module 17561 (launchOrbsArcadeGame)
+// Module 17556 (launchOrbsArcadeGame)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6992 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17540 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17535 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import FramesStore from "FramesStore" /* 6956 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17534 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17529 */;
 
 require = fn;
 function showLaunchError() {

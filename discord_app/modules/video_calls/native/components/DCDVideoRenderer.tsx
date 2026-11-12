@@ -1,7 +1,7 @@
-// === Module 12713: DCDVideoRenderer ===
+// === Module 12707: DCDVideoRenderer ===
 
-// Module 12713 (DCDVideoRenderer)
-import VideoRendererNativeComponentDefault from "VideoRendererNativeComponent" /* 12714 */;
+// Module 12707 (DCDVideoRenderer)
+import VideoRendererNativeComponentDefault from "VideoRendererNativeComponent" /* 12708 */;
 import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 5846 */;
 
 const obj = { componentName: "DCDVideoRenderer", componentFoundInstance: null };

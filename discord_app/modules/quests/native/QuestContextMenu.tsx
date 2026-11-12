@@ -1,6 +1,6 @@
-// === Module 17643: QuestContextMenu ===
+// === Module 17638: QuestContextMenu ===
 
-// Module 17643 (QuestContextMenu)
+// Module 17638 (QuestContextMenu)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5252 */;
@@ -12,18 +12,18 @@ import _modDef7357 from "module_7357" /* 7357 */;
 import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 7672 */;
 import IconButton from "IconButton" /* 7922 */;
 import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8327 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8768 */;
-import QuestUtils from "QuestUtils" /* 10061 */;
-import QuestActionCreators from "QuestActionCreators" /* 10066 */;
-import captureAdUserAction from "captureAdUserAction" /* 10068 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 10071 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 10088 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10102 */;
-import _modDef17575 from "module_17575" /* 17575 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 17601 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8767 */;
+import QuestUtils from "QuestUtils" /* 10060 */;
+import QuestActionCreators from "QuestActionCreators" /* 10065 */;
+import captureAdUserAction from "captureAdUserAction" /* 10067 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 10070 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 10087 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10101 */;
+import _modDef17570 from "module_17570" /* 17570 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 17596 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 8742 */;
+import QuestStore from "QuestStore" /* 8741 */;
 
 require = fn;
 function renderDefaultButton(ref) {
@@ -133,7 +133,7 @@ export default noop.memo(function QuestContextMenu(children) {
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef17575;
+    obj2.iconSource = _modDef17570;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };

@@ -1,6 +1,6 @@
-// === Module 10658: BoostGem ===
+// === Module 10651: BoostGem ===
 
-// Module 10658 (BoostGem)
+// Module 10651 (BoostGem)
 import inlineStyles from "inlineStyles" /* 8197 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 8797: ReactionActionCreators ===
+// === Module 8796: ReactionActionCreators ===
 
-// Module 8797 (ReactionActionCreators)
+// Module 8796 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
@@ -8,7 +8,7 @@ import util from "util" /* 1113 */;
 import EmojiUtils from "EmojiUtils" /* 5193 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 5857 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8798 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8797 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -89,11 +89,11 @@ function makeURL(type) {
     name = emoji.name;
   }
   if (null == userId) {
-    let REACTIONSResult = closure_1_10.REACTIONS(channelId, messageId, name);
+    let REACTIONSResult = refs.REACTIONS(channelId, messageId, name);
   } else if (useTypeEndpoint) {
-    REACTIONSResult = closure_1_10.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
+    REACTIONSResult = refs.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
   } else {
-    REACTIONSResult = closure_1_10.REACTION(channelId, messageId, name, userId);
+    REACTIONSResult = refs.REACTION(channelId, messageId, name, userId);
   }
   return REACTIONSResult;
 }

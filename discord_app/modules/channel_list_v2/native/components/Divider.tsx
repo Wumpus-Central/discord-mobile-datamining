@@ -1,6 +1,6 @@
-// === Module 14583: Divider ===
+// === Module 14579: Divider ===
 
-// Module 14583 (Divider)
+// Module 14579 (Divider)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,11 +1,11 @@
-// === Module 20457: GuildSettingsModalCommunityIntro ===
+// === Module 20452: GuildSettingsModalCommunityIntro ===
 
-// Module 20457 (GuildSettingsModalCommunityIntro)
+// Module 20452 (GuildSettingsModalCommunityIntro)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import ToastUtils from "ToastUtils" /* 5951 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8338 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 20462 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 20457 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import PermissionStore from "PermissionStore" /* 5175 */;

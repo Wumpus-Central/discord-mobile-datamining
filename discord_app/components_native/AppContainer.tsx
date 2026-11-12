@@ -1,6 +1,6 @@
-// === Module 16918: AppContainer ===
+// === Module 16913: AppContainer ===
 
-// Module 16918 (AppContainer)
+// Module 16913 (AppContainer)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
@@ -21,20 +21,20 @@ import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 6787 */;
 import getChannelDetailsFromRouteDefault from "getChannelDetailsFromRoute" /* 6987 */;
 import useNavigationTheme from "useNavigationTheme" /* 7524 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 8494 */;
-import StartupProfiler from "StartupProfiler" /* 12358 */;
-import WebViewContext from "WebViewContext" /* 12789 */;
-import MemoryRouter from "MemoryRouter" /* 13025 */;
-import RouteManagerDefault from "RouteManager" /* 13031 */;
-import AnimatedKeyboardProviderDefault from "AnimatedKeyboardProvider" /* 13040 */;
-import DiscordGestureHandlerRootViewDefault from "DiscordGestureHandlerRootView" /* 16919 */;
-import MainNavigationLoggerDefault from "MainNavigationLogger" /* 16922 */;
-import ReanimatedScreenProvider from "ReanimatedScreenProvider" /* 16924 */;
-import RootThemeContextProvider from "RootThemeContextProvider" /* 16932 */;
-import AccessibilityPreferencesContextProviderDefault from "AccessibilityPreferencesContextProvider" /* 16934 */;
-import ErrorBoundaryDefault from "ErrorBoundary" /* 16935 */;
-import ThemedStatusBarDefault from "ThemedStatusBar" /* 16936 */;
-import SafeAreaProvider from "SafeAreaProvider" /* 16937 */;
-import DevToolsLazyDefault from "DevToolsLazy" /* 16938 */;
+import StartupProfiler from "StartupProfiler" /* 12352 */;
+import WebViewContext from "WebViewContext" /* 12783 */;
+import MemoryRouter from "MemoryRouter" /* 13019 */;
+import RouteManagerDefault from "RouteManager" /* 13025 */;
+import AnimatedKeyboardProviderDefault from "AnimatedKeyboardProvider" /* 13034 */;
+import DiscordGestureHandlerRootViewDefault from "DiscordGestureHandlerRootView" /* 16914 */;
+import MainNavigationLoggerDefault from "MainNavigationLogger" /* 16917 */;
+import ReanimatedScreenProvider from "ReanimatedScreenProvider" /* 16919 */;
+import RootThemeContextProvider from "RootThemeContextProvider" /* 16927 */;
+import AccessibilityPreferencesContextProviderDefault from "AccessibilityPreferencesContextProvider" /* 16929 */;
+import ErrorBoundaryDefault from "ErrorBoundary" /* 16930 */;
+import ThemedStatusBarDefault from "ThemedStatusBar" /* 16931 */;
+import SafeAreaProvider from "SafeAreaProvider" /* 16932 */;
+import DevToolsLazyDefault from "DevToolsLazy" /* 16933 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -185,7 +185,7 @@ let result = module_1652.configureReanimatedLogger({ level: fn(1652).ReanimatedL
 try {
   fn(6213).enableFreeze();
   let obj6 = fn(6213);
-  let obj8 = { useTrackNavigatorScreenImpression: fn(16921).useTrackNavigatorScreenImpression };
+  let obj8 = { useTrackNavigatorScreenImpression: fn(16916).useTrackNavigatorScreenImpression };
   fn(7519).setDesignConfig(obj8);
   let c22 = false;
   let closure_23 = { code: "(function AppContainerTsx1(){let[RNScreensTurboModule]=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;})" };
@@ -193,7 +193,7 @@ try {
   const result1 = SentryUtilsDefault.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     const appEntryKey = children.appEntryKey;
-    const requestGatewaySocket = appEntryKey(16923).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = appEntryKey(16918).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = noop.useEffect(() => {
       if (!c22) {
         items = [closure_23, RNScreensTurboModule.RNScreensTurboModule];
@@ -225,8 +225,8 @@ try {
       }
       const obj = appEntryKey(1377);
     }, []);
-    let obj = appEntryKey(16923);
-    const riveAppStatePlaybackExperiment = appEntryKey(18517).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = appEntryKey(16918);
+    const riveAppStatePlaybackExperiment = appEntryKey(18512).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {

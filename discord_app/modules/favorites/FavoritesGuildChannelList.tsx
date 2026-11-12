@@ -1,9 +1,9 @@
-// === Module 18901: FavoritesGuildChannelList ===
+// === Module 18896: FavoritesGuildChannelList ===
 
-// Module 18901 (FavoritesGuildChannelList)
+// Module 18896 (FavoritesGuildChannelList)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import ChannelListState from "ChannelListState" /* 8664 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 10911 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 10905 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
@@ -98,7 +98,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
   if (favoriteChannels == null) {
     favoriteChannels = FavoriteStore.getFavoriteChannels();
   }
-  new Set(favoriteChannels(10910).getAutoAddedThreadsCategoryIds(favoriteChannels));
+  new Set(favoriteChannels(10904).getAutoAddedThreadsCategoryIds(favoriteChannels));
   const isGuildCollapsedResult = UserGuildSettingsStore.isGuildCollapsed(id);
   dependencyMap = isGuildCollapsedResult;
   channel2 = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
@@ -252,8 +252,8 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined
   });
-  let obj2 = favoriteChannels(10910);
-  const favoritesCategories = favoriteChannels(10882).getFavoritesCategories(favoriteChannels);
+  let obj2 = favoriteChannels(10904);
+  const favoritesCategories = favoriteChannels(10876).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;

@@ -1,7 +1,7 @@
-// === Module 20603: FormEmojiPicker ===
+// === Module 20598: FormEmojiPicker ===
 
-// Module 20603 (FormEmojiPicker)
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9477 */;
+// Module 20598 (FormEmojiPicker)
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9476 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,22 +21,22 @@ export default function FormEmojiPicker(emoji) {
     emojiId = onChange(5189).convertSurrogateToName(emojiName, false);
     let obj = onChange(5189);
   }
-  const emojiByIdOrName = guildId(17744).useEmojiByIdOrName(guildId, emojiId);
+  const emojiByIdOrName = guildId(17739).useEmojiByIdOrName(guildId, emojiId);
   let allEmojiNamesString = null;
   if (null != emojiByIdOrName) {
     allEmojiNamesString = tmp3(5193).getAllEmojiNamesString(emojiByIdOrName);
     const tmp3Result = tmp3(5193);
   }
   const intl = tmp3(1113).intl;
-  let obj2 = guildId(17744);
+  let obj2 = guildId(17739);
   if (null != emojiId) {
     const obj3 = { guildId, id: emojiId };
-    let tmp9 = jsx(onChange(17743), { guildId, id: emojiId });
+    let tmp9 = jsx(onChange(17738), { guildId, id: emojiId });
     let tmp8 = jsx;
   } else {
     tmp8 = jsx;
-    const obj4 = { IconComponent: tmp3(10342).ReactionIcon };
-    tmp9 = jsx(tmp3(7379).TableRow.Icon, { IconComponent: tmp3(10342).ReactionIcon });
+    const obj4 = { IconComponent: tmp3(10340).ReactionIcon };
+    tmp9 = jsx(tmp3(7379).TableRow.Icon, { IconComponent: tmp3(10340).ReactionIcon });
   }
   const obj5 = { icon: tmp9, label: null, arrow: true, onPress: null };
   if (allEmojiNamesString == null) {

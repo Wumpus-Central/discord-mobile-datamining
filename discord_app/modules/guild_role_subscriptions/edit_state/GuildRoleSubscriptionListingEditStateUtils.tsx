@@ -1,14 +1,14 @@
-// === Module 17729: GuildRoleSubscriptionListingEditStateUtils ===
+// === Module 17724: GuildRoleSubscriptionListingEditStateUtils ===
 
-// Module 17729 (GuildRoleSubscriptionListingEditStateUtils)
+// Module 17724 (GuildRoleSubscriptionListingEditStateUtils)
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import v1 from "v1" /* 1266 */;
 import RolePermissionUtils from "RolePermissionUtils" /* 5166 */;
 import StoreUtils from "StoreUtils" /* 6703 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17716 */;
-import useSubscriptionRoleDefault from "useSubscriptionRole" /* 17731 */;
-import Contants from "Contants" /* 17732 */;
-import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 17734 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17711 */;
+import useSubscriptionRoleDefault from "useSubscriptionRole" /* 17726 */;
+import Contants from "Contants" /* 17727 */;
+import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 17729 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -180,7 +180,7 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
                   items = [];
                   items[HermesBuiltin.arraySpread(customEmojiById.roles, 0)] = dependencyMap;
                   obj2.roles = items;
-                  return guildId(11244).updateEmoji(obj2);
+                  return guildId(11238).updateEmoji(obj2);
                 }
               });
               closure_129_16 = closure_129_14.map((item) => {
@@ -190,11 +190,11 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
                   const found = roles.filter((item) => item !== dependencyMap);
                   if (found.length > 0) {
                     const obj3 = { guildId, emojiId: customEmojiById.id, roles: found };
-                    let updateEmojiResult = guildId(11244).updateEmoji(obj3);
-                    const obj2 = guildId(11244);
+                    let updateEmojiResult = guildId(11238).updateEmoji(obj3);
+                    const obj2 = guildId(11238);
                   } else {
-                    updateEmojiResult = guildId(11244).deleteEmoji(guildId, customEmojiById.id);
-                    const obj = guildId(11244);
+                    updateEmojiResult = guildId(11238).deleteEmoji(guildId, customEmojiById.id);
+                    const obj = guildId(11238);
                   }
                   return updateEmojiResult;
                 }
@@ -380,9 +380,9 @@ let closure_21 = async function _createListingFromEditState(arg0) {
     }
   }
 };
-const GuildRoleSubscriptionEditStore = fn(17730);
+const GuildRoleSubscriptionEditStore = fn(17725);
 ({ AllChannelAccessOptions: closure_9, useEditStateStore: closure_10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(17709).GuildRoleSubscriptionBenefitTypes;
+let closure_11 = fn(17704).GuildRoleSubscriptionBenefitTypes;
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
 const SubscriptionIntervalTypes = fn(1387).SubscriptionIntervalTypes;
@@ -397,7 +397,7 @@ export function useListingEditState(arg0, arg1, arg2) {
   closure_1 = arg1;
   let tmp = arg2;
   closure_2 = arg2;
-  const tmp2 = closure_1_10((setListing) => setListing.setListing);
+  const tmp2 = refs((setListing) => setListing.setListing);
   closure_3 = tmp2;
   items = [tmp2, arg0, arg1, arg2];
   const callback = noop.useCallback((arg0) => {
@@ -419,7 +419,7 @@ export function useListingEditState(arg0, arg1, arg2) {
       return Object.assign({}, arg0, obj);
     });
   }, items);
-  const tmp4 = closure_1_10((arg0) => {
+  const tmp4 = refs((arg0) => {
     let tmp2;
     if (arg0.listings[closure_0] != null) {
       tmp2 = tmp[first];
@@ -669,7 +669,7 @@ export function useImage(editStateId, arg1) {
 }
 export function useApplicationId(listingId) {
   _require = listingId;
-  const f115187 = (application_id) => {
+  const f115196 = (application_id) => {
     application_id = undefined;
     if (application_id != null) {
       application_id = application_id.application_id;
@@ -678,7 +678,7 @@ export function useApplicationId(listingId) {
   };
   items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0));
-  const tmp2 = f115187(5854)(() => first);
+  const tmp2 = f115196(5854)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   return noop.useMemo(() => closure_3(c2), items1);
@@ -701,7 +701,7 @@ export function useRoleIcon(editStateId, guildId) {
     return obj;
   }, items);
   const roleIcon = "roleIcon";
-  const tmp3 = closure_1_10((setListing) => setListing.setListing);
+  const tmp3 = refs((setListing) => setListing.setListing);
   closure_3 = tmp3;
   const items1 = [tmp3, editStateId, "roleIcon", memo];
   const callback = noop.useCallback((arg0) => {
@@ -723,7 +723,7 @@ export function useRoleIcon(editStateId, guildId) {
       return Object.assign({}, arg0, obj);
     });
   }, items1);
-  const tmp5 = closure_1_10((arg0) => {
+  const tmp5 = refs((arg0) => {
     let tmp2;
     if (arg0.listings[closure_0] != null) {
       tmp2 = tmp[first];
@@ -784,7 +784,7 @@ export function useRole(listingId, guildId) {
   }, items);
 }
 export function useRoleColor(editStateId, guildId) {
-  const tmp = roleColor(17731)(guildId, editStateId);
+  const tmp = roleColor(17726)(guildId, editStateId);
   editStateId = tmp;
   items = [tmp];
   let memo = noop.useMemo(() => {
@@ -834,7 +834,7 @@ export function useRoleColor(editStateId, guildId) {
   return items2;
 }
 export function useChannelAccessFormat(editStateId, guildId) {
-  const tmp = channelAccessFormat(17731)(guildId, editStateId);
+  const tmp = channelAccessFormat(17726)(guildId, editStateId);
   items = [tmp];
   let memo = noop.useMemo(() => {
     if (null == closure_0) {
@@ -989,7 +989,7 @@ export function useIntangibleBenefits(listingId) {
 }
 export function useTierEmojiIds(listingId, guildId) {
   _require = guildId;
-  const tmp = tierEmojiIds(17731)(guildId, listingId);
+  const tmp = tierEmojiIds(17726)(guildId, listingId);
   items = [EmojiStore];
   const items1 = [guildId];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => EmojiStore.getGuildEmoji(closure_0), items1);
@@ -1060,7 +1060,7 @@ export function useTrialInterval(editStateId) {
   }
   closure_0 = editStateId;
   const trialInterval = "trialInterval";
-  const tmp5 = closure_1_10((setListing) => setListing.setListing);
+  const tmp5 = refs((setListing) => setListing.setListing);
   closure_3 = tmp5;
   items = [tmp5, editStateId, "trialInterval", selectedOption];
   const callback = noop.useCallback((arg0) => {
@@ -1082,7 +1082,7 @@ export function useTrialInterval(editStateId) {
       return Object.assign({}, arg0, obj);
     });
   }, items);
-  const tmp7 = closure_1_10((arg0) => {
+  const tmp7 = refs((arg0) => {
     let tmp2;
     if (arg0.listings[closure_0] != null) {
       tmp2 = tmp[first];
@@ -1106,7 +1106,7 @@ export function useTrialLimit(editStateId) {
   }
   closure_0 = editStateId;
   const trialLimit = "trialLimit";
-  const tmp3 = closure_1_10((setListing) => setListing.setListing);
+  const tmp3 = refs((setListing) => setListing.setListing);
   closure_3 = tmp3;
   items = [tmp3, editStateId, "trialLimit", prop];
   const callback = noop.useCallback((arg0) => {
@@ -1128,7 +1128,7 @@ export function useTrialLimit(editStateId) {
       return Object.assign({}, arg0, obj);
     });
   }, items);
-  const tmp5 = closure_1_10((arg0) => {
+  const tmp5 = refs((arg0) => {
     let tmp2;
     if (arg0.listings[closure_0] != null) {
       tmp2 = tmp[first];
@@ -1143,11 +1143,11 @@ export function useTrialLimit(editStateId) {
 }
 export function useHasChanges(editStateId) {
   closure_0 = editStateId;
-  return closure_1_10((arg0) => undefined !== arg0.listings[closure_0]);
+  return refs((arg0) => undefined !== arg0.listings[closure_0]);
 }
 export function useHasChangesForEditStateIds(arg0) {
   closure_0 = arg0;
-  return closure_1_10((arg0) => {
+  return refs((arg0) => {
     for (const item10006 of closure_0) {
       if (undefined !== arg0.listings[item10006]) {
         obj.return();
@@ -1361,8 +1361,8 @@ export function useCreateOrUpdateListingFromEditState() {
                             if (null != channelBenefits) {
                               const benefits = subscriptionListing.role_benefits.benefits;
                               const benefits1 = subscriptionListing.role_benefits.benefits;
-                              const found = benefits.filter(closure_1_0(17733).isChannelBenefit);
-                              const found1 = benefits1.filter(closure_1_0(17733).isIntangibleBenefit);
+                              const found = benefits.filter(closure_1_0(17728).isChannelBenefit);
+                              const found1 = benefits1.filter(closure_1_0(17728).isIntangibleBenefit);
                               if (channelBenefits == null) {
                                 channelBenefits = found;
                               }

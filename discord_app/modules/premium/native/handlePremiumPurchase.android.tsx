@@ -1,12 +1,12 @@
-// === Module 9546: handlePremiumPurchase ===
+// === Module 9545: handlePremiumPurchase ===
 
-// Module 9546 (handlePremiumPurchase)
+// Module 9545 (handlePremiumPurchase)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
-import IAPStore from "IAPStore" /* 9236 */;
+import IAPStore from "IAPStore" /* 9235 */;
 
 const require = globalThis.__r;
 
@@ -116,7 +116,7 @@ let closure_15 = async function _validatePurchase(arg0) {
   }
 };
 let closure_3 = ["succeededOnlyFields"];
-const setGPlayAnalytics = fn(9547).setGPlayAnalytics;
+const setGPlayAnalytics = fn(9546).setGPlayAnalytics;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12 } = Constants);
 const PaymentGateways = fn(1083).PaymentGateways;
@@ -343,8 +343,8 @@ export function useHandlePremiumPurchase() {
           billingError = new premiumSubscription(6694).BillingError(message);
         }
         if (tmpResult.isSpendingLimitError(billingError)) {
-          const result = premiumSubscription(9549).showSpendingLimitReachedAlert();
-          const tmpResult2 = premiumSubscription(9549);
+          const result = premiumSubscription(9548).showSpendingLimitReachedAlert();
+          const tmpResult2 = premiumSubscription(9548);
         } else {
           const intl = premiumSubscription(1113).intl;
           let tmp8 = billingError.code !== premiumSubscription(5063).ErrorCodes.UNKNOWN;
@@ -366,7 +366,7 @@ export function useHandlePremiumPurchase() {
           price1(6205).show(obj);
           const obj2 = price1(6205);
         }
-        tmpResult = premiumSubscription(9549);
+        tmpResult = premiumSubscription(9548);
       })(closure_132_26);
       if (closure_132_26 instanceof premiumTrialOffer(premiumDiscountOffer[10])) {
         throw closure_132_26;

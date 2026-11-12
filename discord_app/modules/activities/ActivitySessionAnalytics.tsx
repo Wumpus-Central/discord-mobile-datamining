@@ -1,6 +1,6 @@
-// === Module 16813: ActivitySessionAnalytics ===
+// === Module 16808: ActivitySessionAnalytics ===
 
-// Module 16813 (ActivitySessionAnalytics)
+// Module 16808 (ActivitySessionAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import v1 from "v1" /* 1266 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -9,20 +9,20 @@ import ThermalUtilsDefault from "ThermalUtils" /* 6201 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 6708 */;
 import MetricEvents from "MetricEvents" /* 6713 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6994 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 11350 */;
-import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 12658 */;
-import pendingFrameLaunch from "pendingFrameLaunch" /* 12669 */;
-import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 12670 */;
-import getShelfItemDataDefault from "getShelfItemData" /* 12681 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 15141 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 11344 */;
+import activityLaunchErrorUtils from "activityLaunchErrorUtils" /* 12652 */;
+import pendingFrameLaunch from "pendingFrameLaunch" /* 12663 */;
+import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 12664 */;
+import getShelfItemDataDefault from "getShelfItemData" /* 12675 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 15138 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
-import QuestStore from "QuestStore" /* 8742 */;
+import QuestStore from "QuestStore" /* 8741 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
 import UserStore from "UserStore" /* 1385 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 16814 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 16809 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 20434: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 20429: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 20434 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 20429 (GuildSettingsRoleEditConnectionConfiguration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -13,8 +13,8 @@ import Pressables from "Pressables" /* 7364 */;
 import TableRow from "TableRow" /* 7379 */;
 import XSmallIcon from "XSmallIcon" /* 7483 */;
 import TableRowGroup from "TableRowGroup" /* 7680 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 12391 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 20435 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 12385 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 20430 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -118,7 +118,7 @@ function BooleanConfigRule(metadataField) {
         type = type.type;
       }
       if (type == null) {
-        type = closure_2_10;
+        type = refs;
       }
       const obj = { connectionType: type, applicationId, connectionMetadataField: metadataField, operator, value: "1" };
       tmp = obj;
@@ -161,7 +161,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
         type = dependencyMap.type;
       }
       if (type == null) {
-        type = closure_2_10;
+        type = refs;
       }
       const obj = { connectionType: type, applicationId, connectionMetadataField: metadataField, operator, value: RoleConnectionRequirementUtils.storedValueFor(TableSwitchRow, operator) };
       _slicedToArray(obj, num);
@@ -175,7 +175,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(20435).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(20430).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -183,9 +183,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(20435);
-  const tmpResult = metadataField(20435);
-  str1 = metadataField(20435).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(20430);
+  const tmpResult = metadataField(20430);
+  str1 = metadataField(20430).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -282,7 +282,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
               type = dependencyMap.type;
             }
             if (type == null) {
-              type = closure_2_10;
+              type = refs;
             }
             const obj = { connectionType: type, applicationId, connectionMetadataField: metadataField, operator, value: RoleConnectionRequirementUtils.storedValueFor(tmp, operator) };
             tmp3 = obj;
@@ -299,7 +299,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
     };
     return onInputValueChange(metadataField(7888).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(20435).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(20430).displayedValueFor(value, realizedOperatorForResult);
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);

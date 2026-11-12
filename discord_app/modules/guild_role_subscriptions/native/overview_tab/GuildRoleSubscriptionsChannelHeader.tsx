@@ -1,11 +1,11 @@
-// === Module 15528: GuildRoleSubscriptionsChannelHeader ===
+// === Module 15525: GuildRoleSubscriptionsChannelHeader ===
 
-// Module 15528 (GuildRoleSubscriptionsChannelHeader)
+// Module 15525 (GuildRoleSubscriptionsChannelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import _modDef15034 from "module_15034" /* 15034 */;
+import _modDef15030 from "module_15030" /* 15030 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 
 export default noop.memo(function GuildRoleSubscriptionsChannelHeader() {
   const obj = { style: closure_6().header, children: null };
-  items = [React4(native.Icon, { source: _modDef15034, size: native.Icon.Sizes.MEDIUM, disableColor: true }), ];
+  items = [React4(native.Icon, { source: _modDef15030, size: native.Icon.Sizes.MEDIUM, disableColor: true }), ];
   const obj3 = { variant: "heading-lg/semibold", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["KzCF/6"]);

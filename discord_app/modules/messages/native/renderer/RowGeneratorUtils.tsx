@@ -1,6 +1,6 @@
-// === Module 9321: RowGeneratorUtils ===
+// === Module 9320: RowGeneratorUtils ===
 
-// Module 9321 (RowGeneratorUtils)
+// Module 9320 (RowGeneratorUtils)
 import nativeDefault from "native" /* 575 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1492 */;
 import ColorUtils from "ColorUtils" /* 5240 */;
@@ -14,7 +14,7 @@ import NativeMediaManagerModule from "NativeMediaManagerModule" /* 1441 */;
 require = fn;
 const MessageConstants = fn(5248);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_6, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: metroImportDefault } = MessageConstants);
-const SwipeActionsType = fn(9094).SwipeActionsType;
+const SwipeActionsType = fn(9093).SwipeActionsType;
 const Constants = fn(1072);
 ({ MessageFlags: closure_9, MessageTypes: closure_10 } = Constants);
 let createStyles = fn(5243);

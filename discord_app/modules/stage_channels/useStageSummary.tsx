@@ -1,6 +1,6 @@
-// === Module 12865: useStageSummary ===
+// === Module 12859: useStageSummary ===
 
-// Module 12865 (useStageSummary)
+// Module 12859 (useStageSummary)
 import util from "util" /* 1113 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 6880 */;
 import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6886 */;

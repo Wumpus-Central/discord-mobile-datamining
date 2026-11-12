@@ -1,7 +1,7 @@
-// === Module 10006: ? ===
+// === Module 10005: ? ===
 
-// Module 10006
-import rawDefault from "raw" /* 10005 */;
+// Module 10005
+import rawDefault from "raw" /* 10004 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/native/StringUtils.tsx");

@@ -1,11 +1,11 @@
-// === Module 9140: AddRecipientSystemMessage ===
+// === Module 9139: AddRecipientSystemMessage ===
 
-// Module 9140 (AddRecipientSystemMessage)
+// Module 9139 (AddRecipientSystemMessage)
 import util from "util" /* 1113 */;
 import ChannelRecord from "ChannelRecord" /* 5096 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9122 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9124 */;
-import createCommonMessageDefault from "createCommonMessage" /* 9126 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9121 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9123 */;
+import createCommonMessageDefault from "createCommonMessage" /* 9125 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import UserStore from "UserStore" /* 1385 */;
 import size from "module_2" /* 2 */;

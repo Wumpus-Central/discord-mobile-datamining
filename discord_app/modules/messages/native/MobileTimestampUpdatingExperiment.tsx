@@ -1,6 +1,6 @@
-// === Module 12368: MobileTimestampUpdatingExperiment ===
+// === Module 12362: MobileTimestampUpdatingExperiment ===
 
-// Module 12368 (MobileTimestampUpdatingExperiment)
+// Module 12362 (MobileTimestampUpdatingExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

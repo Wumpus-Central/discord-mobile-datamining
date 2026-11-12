@@ -1,12 +1,12 @@
-// === Module 14513: MessageAttachmentUtils ===
+// === Module 14509: MessageAttachmentUtils ===
 
-// Module 14513 (MessageAttachmentUtils)
+// Module 14509 (MessageAttachmentUtils)
 import util from "util" /* 1113 */;
 import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8567 */;
 import ObscureMediaModels from "ObscureMediaModels" /* 8572 */;
 import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8573 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 9045 */;
-import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 12331 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 9044 */;
+import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 12325 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
 
 require = fn;

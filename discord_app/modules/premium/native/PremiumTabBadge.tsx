@@ -1,6 +1,6 @@
-// === Module 17392: PremiumTabBadge ===
+// === Module 17387: PremiumTabBadge ===
 
-// Module 17392 (PremiumTabBadge)
+// Module 17387 (PremiumTabBadge)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
@@ -16,15 +16,15 @@ import useThemeDefault from "useTheme" /* 5484 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import useTrackImpressionDefault from "useTrackImpression" /* 6275 */;
-import ReferralProgramUtils from "ReferralProgramUtils" /* 9240 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 9241 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9244 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 9247 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9494 */;
-import MarketingSurfaceType from "MarketingSurfaceType" /* 9561 */;
-import usePromotionMarketingSurface from "usePromotionMarketingSurface" /* 9944 */;
-import _modDef17393 from "module_17393" /* 17393 */;
-import PremiumTabBadgeCopy from "PremiumTabBadgeCopy" /* 17394 */;
+import ReferralProgramUtils from "ReferralProgramUtils" /* 9239 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 9240 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9243 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 9246 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9493 */;
+import MarketingSurfaceType from "MarketingSurfaceType" /* 9560 */;
+import usePromotionMarketingSurface from "usePromotionMarketingSurface" /* 9943 */;
+import _modDef17388 from "module_17388" /* 17388 */;
+import PremiumTabBadgeCopy from "PremiumTabBadgeCopy" /* 17389 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
@@ -55,7 +55,7 @@ function OfferBadge(componentId) {
   useTrackImpressionDefault(obj, { disableTrack: null == componentId });
   if (acked) {
     const obj3 = { style: tmp.acked, children: null };
-    const obj4 = { source: _modDef17393, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
+    const obj4 = { source: _modDef17388, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
     items = [React5(native.Icon, obj4), ];
     const obj5 = { variant: "body-xs/semibold", color: "interactive-text-default", style: null, children: null };
     const items1 = [, ];
@@ -73,7 +73,7 @@ function OfferBadge(componentId) {
 }
 const View = fn(17).View;
 let closure_6 = fn(1387).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-const Gradients = fn(9368).Gradients;
+const Gradients = fn(9367).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5243);
@@ -214,7 +214,7 @@ export default function PremiumTabBadge() {
           const items4 = [, ];
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = tmp);
           obj10.style = items4;
-          const obj11 = { source: _modDef17393, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
+          const obj11 = { source: _modDef17388, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
           const items5 = [React5(native.Icon, obj11), ];
           const obj12 = { variant: "body-xs/semibold", color: "interactive-text-default", style: null, children: null };
           const items6 = [, ];

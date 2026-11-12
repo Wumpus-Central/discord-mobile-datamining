@@ -1,6 +1,6 @@
-// === Module 10426: LoginHandoffSource ===
+// === Module 10424: LoginHandoffSource ===
 
-// Module 10426 (LoginHandoffSource)
+// Module 10424 (LoginHandoffSource)
 import UserSettingsConstants from "UserSettingsConstants" /* 1082 */;
 import ChannelConstants from "ChannelConstants" /* 5099 */;
 import LinkUtils from "LinkUtils" /* 5893 */;

@@ -1,6 +1,6 @@
-// === Module 15580: UserProfileOverflowMenuItems ===
+// === Module 15577: UserProfileOverflowMenuItems ===
 
-// Module 15580 (UserProfileOverflowMenuItems)
+// Module 15577 (UserProfileOverflowMenuItems)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
@@ -11,11 +11,11 @@ import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 68
 import ClipboardUtils from "ClipboardUtils" /* 7877 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7883 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8072 */;
-import ReportModals from "ReportModals" /* 12002 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12039 */;
-import BotReportChooser from "BotReportChooser" /* 15581 */;
+import ReportModals from "ReportModals" /* 11996 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12033 */;
+import BotReportChooser from "BotReportChooser" /* 15578 */;
 import Constants from "Constants" /* 1072 */;
-import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 11993 */;
+import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 11987 */;
 import size from "module_2" /* 2 */;
 
 ({ AnalyticEvents: c3, AVATAR_MAX_SIZE: closure_4, NOOP: hasOwnProperty } = Constants);
@@ -43,7 +43,7 @@ export function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(11995, dependencyMap.paths);
+        const tmp = asyncRequireImpl(11989, dependencyMap.paths);
         obj.openLazy(tmp, metroImportDefault, {
           userId: user.id,
           channelId,
@@ -81,7 +81,7 @@ export function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(11994, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11988, dependencyMap.paths);
       obj.openLazy(tmp, timestampProducer, {
         userId: user.id,
         channelId,
@@ -111,7 +111,7 @@ export function getReportMenuItem(user, isInIarUserReportingExperiment) {
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(15581, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(15578, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {

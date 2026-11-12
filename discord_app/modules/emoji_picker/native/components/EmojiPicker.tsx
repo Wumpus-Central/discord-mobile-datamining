@@ -1,6 +1,6 @@
-// === Module 11193: EmojiPicker ===
+// === Module 11187: EmojiPicker ===
 
-// Module 11193 (EmojiPicker)
+// Module 11187 (EmojiPicker)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import noop from "module_19" /* 19 */;

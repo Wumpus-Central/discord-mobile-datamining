@@ -1,10 +1,10 @@
-// === Module 13676: ConjureManagedCopyBanner ===
+// === Module 13670: ConjureManagedCopyBanner ===
 
-// Module 13676 (ConjureManagedCopyBanner)
+// Module 13670 (ConjureManagedCopyBanner)
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
-import useConjureManagedCopyDefault from "useConjureManagedCopy" /* 13099 */;
-import openConjureProjectAboutSheetDefault from "openConjureProjectAboutSheet" /* 13677 */;
+import useConjureManagedCopyDefault from "useConjureManagedCopy" /* 13093 */;
+import openConjureProjectAboutSheetDefault from "openConjureProjectAboutSheet" /* 13671 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

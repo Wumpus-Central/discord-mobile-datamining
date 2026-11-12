@@ -1,10 +1,10 @@
-// === Module 12426: PlaintextFileMarkdownParser ===
+// === Module 12420: PlaintextFileMarkdownParser ===
 
-// Module 12426 (PlaintextFileMarkdownParser)
+// Module 12420 (PlaintextFileMarkdownParser)
 import findCodedLinks from "findCodedLinks" /* 5988 */;
 import MarkupLinkRule from "MarkupLinkRule" /* 6284 */;
 import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 6285 */;
-import _modDef12427 from "module_12427" /* 12427 */;
+import _modDef12421 from "module_12421" /* 12421 */;
 
 require = fn;
 function createLinkNode(arr) {
@@ -356,7 +356,7 @@ function parseMarkdownTokens(children1, remaining) {
   }
   return items[0].children;
 }
-let closure_2 = new _modDef12427({ html: false, linkify: false, typographer: false }).use(fn(12432).dollarmathPlugin, { allow_space: false, allow_digits: false, allow_labels: false });
+let closure_2 = new _modDef12421({ html: false, linkify: false, typographer: false }).use(fn(12426).dollarmathPlugin, { allow_space: false, allow_digits: false, allow_labels: false });
 const set = new Set(["h1", "h2", "h3", "h4", "h5", "h6", "p", "ul", "ol", "li", "em", "strong", "s", "blockquote", "table", "thead", "tbody", "tr", "th", "td"]);
 const re4 = /(?:https?|steam):\/\/[^\s<]/i;
 const size = fn(2);

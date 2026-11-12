@@ -1,12 +1,12 @@
-// === Module 13999: handleTapConjureProjectEmbed ===
+// === Module 13995: handleTapConjureProjectEmbed ===
 
-// Module 13999 (handleTapConjureProjectEmbed)
-import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 12353 */;
-import openFrameDefault from "openFrame" /* 12667 */;
-import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 13682 */;
+// Module 13995 (handleTapConjureProjectEmbed)
+import conjureSharedProjectCoverTargetDefault from "conjureSharedProjectCoverTarget" /* 12347 */;
+import openFrameDefault from "openFrame" /* 12661 */;
+import launchConjureSharedProjectDefault from "launchConjureSharedProject" /* 13676 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 12350 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 12344 */;
 
 const require = fn;
 function runConjureSharedProjectCoverAction(applicationId, arg1, arg2) {

@@ -1,6 +1,6 @@
-// === Module 13229: showConjureShareToServerSheet ===
+// === Module 13223: showConjureShareToServerSheet ===
 
-// Module 13229 (showConjureShareToServerSheet)
+// Module 13223 (showConjureShareToServerSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5489 */;
 import TableRadioRow from "TableRadioRow" /* 7681 */;
@@ -123,7 +123,7 @@ function ShareToServerSheet(projectId) {
   if (str == null) {
     str = "";
   }
-  const tmp6 = str(13096)(projectId, guildId, publishOptions);
+  const tmp6 = str(13090)(projectId, guildId, publishOptions);
   dependencyMap = tmp6;
   ({ guilds, guild } = tmp6);
   sharing = tmp6.sharing;
@@ -156,8 +156,8 @@ function ShareToServerSheet(projectId) {
   let obj5 = { rows: null };
   const formatToPlainStringResult = intl.formatToPlainString(str(4079).N3Ryqz, { app: str });
   const tmp11 = closure_5;
-  const tmp5Result = str(13218);
-  obj5.rows = projectId(13216).conjureShareRows(stateFromStores);
+  const tmp5Result = str(13212);
+  obj5.rows = projectId(13210).conjureShareRows(stateFromStores);
   items2[1] = closure_7(tmp5Result, obj5);
   let tmp9Result2 = null;
   if (null != error) {

@@ -1,12 +1,12 @@
-// === Module 17322: SpendingLimitDisplay ===
+// === Module 17317: SpendingLimitDisplay ===
 
-// Module 17322 (SpendingLimitDisplay)
+// Module 17317 (SpendingLimitDisplay)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import _modDef2685 from "module_2685" /* 2685 */;
 import PriceUtils from "PriceUtils" /* 7190 */;
 import utils_PriceUtils from "utils/PriceUtils" /* 7191 */;
-import SpendingLimitUtils from "SpendingLimitUtils" /* 17231 */;
+import SpendingLimitUtils from "SpendingLimitUtils" /* 17226 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 8673 */;
 

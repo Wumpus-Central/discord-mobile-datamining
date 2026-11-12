@@ -1,6 +1,6 @@
-// === Module 15626: useCanRequestStreamFromUser ===
+// === Module 15623: useCanRequestStreamFromUser ===
 
-// Module 15626 (useCanRequestStreamFromUser)
+// Module 15623 (useCanRequestStreamFromUser)
 import applyDefault from "apply" /* 12 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;

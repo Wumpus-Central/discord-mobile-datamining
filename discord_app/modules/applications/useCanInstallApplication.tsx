@@ -1,7 +1,7 @@
-// === Module 13366: useCanInstallApplication ===
+// === Module 13360: useCanInstallApplication ===
 
-// Module 13366 (useCanInstallApplication)
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 12611 */;
+// Module 13360 (useCanInstallApplication)
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 12605 */;
 import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 

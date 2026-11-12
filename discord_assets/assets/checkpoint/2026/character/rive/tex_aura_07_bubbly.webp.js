@@ -1,6 +1,6 @@
-// === Module 14207: ? ===
+// === Module 14203: ? ===
 
-// Module 14207
+// Module 14203
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_aura_07_bubbly.webp.js");

@@ -1,8 +1,8 @@
-// === Module 19094: ICYMINavigator ===
+// === Module 19089: ICYMINavigator ===
 
-// Module 19094 (ICYMINavigator)
+// Module 19089 (ICYMINavigator)
 import jsxProd from "jsxProd" /* 21 */;
-import NativeStackNavigator from "NativeStackNavigator" /* 9062 */;
+import NativeStackNavigator from "NativeStackNavigator" /* 9061 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -25,13 +25,13 @@ export default function ICYMINavigator() {
     closure_2(closure_4.Screen, {
       name: "icymi-screen",
       getComponent() {
-        return closure_0(19095).ICYMITab;
+        return closure_0(19090).ICYMITab;
       }
     }),
     closure_2(closure_4.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return closure_0(19046).ThemedNotificationsModal;
+        return closure_0(19041).ThemedNotificationsModal;
       }
     })
   ];

@@ -1,6 +1,6 @@
-// === Module 15447: invite/GuildInvite ===
+// === Module 15444: invite/GuildInvite ===
 
-// Module 15447 (invite/GuildInvite)
+// Module 15444 (invite/GuildInvite)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -15,18 +15,18 @@ import InviteTargetTypes from "InviteTargetTypes" /* 7599 */;
 import GuildInviteFlags from "GuildInviteFlags" /* 7611 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7968 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8588 */;
-import Constants2 from "Constants" /* 8776 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 9097 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9104 */;
-import GuildBadgeImageSource from "GuildBadgeImageSource" /* 10329 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 11831 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11832 */;
-import GuestUtilsDefault from "GuestUtils" /* 11833 */;
-import _modDef14002 from "module_14002" /* 14002 */;
-import _modDef14003 from "module_14003" /* 14003 */;
-import InviteErrorUtils from "InviteErrorUtils" /* 14975 */;
-import _modDef14976 from "module_14976" /* 14976 */;
-import getHeaderTextForInvite from "getHeaderTextForInvite" /* 15448 */;
+import Constants2 from "Constants" /* 8775 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 9096 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9103 */;
+import GuildBadgeImageSource from "GuildBadgeImageSource" /* 10327 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 11825 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11826 */;
+import GuestUtilsDefault from "GuestUtils" /* 11827 */;
+import _modDef13998 from "module_13998" /* 13998 */;
+import _modDef13999 from "module_13999" /* 13999 */;
+import InviteErrorUtils from "InviteErrorUtils" /* 14971 */;
+import _modDef14972 from "module_14972" /* 14972 */;
+import getHeaderTextForInvite from "getHeaderTextForInvite" /* 15445 */;
 import GuildRecord from "GuildRecord" /* 5110 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -70,7 +70,7 @@ export function createExpiredGuildInvite(author, arg1, theme) {
     tmp6 = require;
   }
   obj.headerText = str.toUpperCase();
-  obj.titleColor = tmp6(9097).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
+  obj.titleColor = tmp6(9096).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
   if (arg1) {
     const intl4 = tmp6(1113).intl;
     let stringResult = intl4.string(tmp6(1113).t["F/OLvL"]);
@@ -93,11 +93,11 @@ export function createExpiredGuildInvite(author, arg1, theme) {
   obj.subtitle = stringResult;
   const intl5 = tmp6(1113).intl;
   obj.titleText = intl5.string(tmp6(1113).t["Jhx/ud"]);
-  const tmp6Result = tmp6(9097);
+  const tmp6Result = tmp6(9096);
   if (tmp6Result2.isThemeDark(theme)) {
-    let tmpResult2 = _modDef14002;
+    let tmpResult2 = _modDef13998;
   } else {
-    tmpResult2 = _modDef14003;
+    tmpResult2 = _modDef13999;
   }
   obj.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
   ({ thumbnailBackgroundColor: obj.thumbnailBackgroundColor, subtitleColor: obj.subtitleColor } = tmp3.colors);
@@ -150,7 +150,7 @@ export function createDisabledGuildInvite(invite, theme) {
   obj2.helpCenterArticleURL = HelpdeskUtilsDefault.getArticleURL(constants.INVITE_DISABLED);
   obj2.guildIcon = tmp11;
   const tmpResult = HelpdeskUtilsDefault;
-  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14976);
+  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14972);
   let tmp17;
   if (null == tmp11) {
     let tmp18;
@@ -208,9 +208,9 @@ export function createErroredGuildInvite(code, arg1, theme) {
   obj3.titleText = title;
   const tmp5Result = RowGeneratorStyleSheet;
   if (tmp5Result2.isThemeDark(theme)) {
-    let tmpResult = _modDef14002;
+    let tmpResult = _modDef13998;
   } else {
-    tmpResult = _modDef14003;
+    tmpResult = _modDef13999;
   }
   obj3.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   ({ thumbnailBackgroundColor: obj2.thumbnailBackgroundColor, subtitleColor: obj2.subtitleColor } = colors);

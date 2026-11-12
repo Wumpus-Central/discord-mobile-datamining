@@ -1,11 +1,11 @@
-// === Module 13517: ConjureIdeasIntroTip ===
+// === Module 13511: ConjureIdeasIntroTip ===
 
-// Module 13517 (ConjureIdeasIntroTip)
+// Module 13511 (ConjureIdeasIntroTip)
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
-import LightbulbIcon from "LightbulbIcon" /* 11257 */;
-import ConjureTipCallout from "ConjureTipCallout" /* 13519 */;
+import LightbulbIcon from "LightbulbIcon" /* 11251 */;
+import ConjureTipCallout from "ConjureTipCallout" /* 13513 */;
 import noop from "module_19" /* 19 */;
 
 const ConjureTipCalloutDefault = ConjureTipCallout;
@@ -14,7 +14,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let obj = {};
-const merged = Object.assign(fn(13518).CONJURE_IDEAS_INTRO_TIP_BASE);
+const merged = Object.assign(fn(13512).CONJURE_IDEAS_INTRO_TIP_BASE);
 obj.render = function render(arg0, context) {
   const onAskForIdeas = context.context.onAskForIdeas;
   const dismiss = context.dismiss;

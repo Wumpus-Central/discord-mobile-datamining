@@ -1,13 +1,13 @@
-// === Module 18626: MessagesItemChannel ===
+// === Module 18621: MessagesItemChannel ===
 
-// Module 18626 (MessagesItemChannel)
+// Module 18621 (MessagesItemChannel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5998 */;
 import _mod7822 from "module_7822" /* 7822 */;
-import _mod15067 from "module_15067" /* 15067 */;
-import MessagesItemChannelBase from "MessagesItemChannelBase" /* 18627 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18636 */;
+import _mod15064 from "module_15064" /* 15064 */;
+import MessagesItemChannelBase from "MessagesItemChannelBase" /* 18622 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18631 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -74,7 +74,7 @@ export const MessagesItemChannelFast = memoResult;
 export const MessagesItemChannelFlash = memoResult1;
 export const MessagesItemChannelLegend = noop.memo(function MessagesItemChannelLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod15067.useRecyclingState(false);
+  [tmp2, tmp3] = _mod15064.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.isPressed = tmp2;
   obj2.setIsPressed = tmp3;

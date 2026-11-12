@@ -1,12 +1,12 @@
-// === Module 15592: AddOrOpenAppButton ===
+// === Module 15589: AddOrOpenAppButton ===
 
-// Module 15592 (AddOrOpenAppButton)
+// Module 15589 (AddOrOpenAppButton)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import ToastUtils from "ToastUtils" /* 5951 */;
 import ClipboardUtils from "ClipboardUtils" /* 7877 */;
-import ApplicationUtils from "ApplicationUtils" /* 12674 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 13364 */;
-import useIsAppDMDefault from "useIsAppDM" /* 13380 */;
+import ApplicationUtils from "ApplicationUtils" /* 12668 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 13358 */;
+import useIsAppDMDefault from "useIsAppDM" /* 13374 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -56,7 +56,7 @@ function AddAppButton(application) {
     obj3.icon = <PlusSmallIcon size="sm" color={guildId(575).colors.WHITE} />;
     return jsx(tmp6(5873).Button, { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null });
   }
-  PlusSmallIcon = application(10382).PlusSmallIcon;
+  PlusSmallIcon = application(10380).PlusSmallIcon;
   tmp6 = application;
 }
 function OpenAppButton(profileApplication) {
@@ -183,7 +183,7 @@ function OpenAppButton(profileApplication) {
   obj.onPress = callback;
   return jsx(profileApplication(channel[17]).Button, { text: null, loading: null, onPress: null });
 }
-const getSection = fn(11345).getSection;
+const getSection = fn(11339).getSection;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
 const jsx = fn(21).jsx;

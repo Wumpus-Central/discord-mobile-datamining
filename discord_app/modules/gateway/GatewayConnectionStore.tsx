@@ -7,10 +7,10 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import DiscordAppStateDefault from "DiscordAppState" /* 6984 */;
-import GatewaySocketSingleton from "GatewaySocketSingleton" /* 16001 */;
-import ConnectionStateDefault from "ConnectionState" /* 16015 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 16036 */;
-import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 16044 */;
+import GatewaySocketSingleton from "GatewaySocketSingleton" /* 15996 */;
+import ConnectionStateDefault from "ConnectionState" /* 16010 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 16031 */;
+import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 16039 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import PassTheControllerStore from "PassTheControllerStore" /* 6738 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
@@ -186,7 +186,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1072);
 ({ RTCConnectionStates: closure_16, AppStates: closure_17 } = Constants);
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
-fn(16001).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(15996).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_20 = new LoggerDefault("ConnectionStore");
 let closure_21 = 0;
 let c22 = null;
@@ -520,9 +520,9 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(16001).socket;
+          const socket = closure_0(15996).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(16001).socket;
+            const socket2 = closure_0(15996).socket;
             socket2.streamDelete(item);
           }
         });

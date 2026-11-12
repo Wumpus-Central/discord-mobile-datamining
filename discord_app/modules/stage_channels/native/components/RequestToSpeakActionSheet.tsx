@@ -1,6 +1,6 @@
-// === Module 12855: RequestToSpeakActionSheet ===
+// === Module 12849: RequestToSpeakActionSheet ===
 
-// Module 12855 (RequestToSpeakActionSheet)
+// Module 12849 (RequestToSpeakActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 6295 */;
@@ -13,7 +13,7 @@ import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 
-const _modDef12860 = tmp4(12860);
+const _modDef12854 = tmp4(12854);
 require = fn;
 function ManageSelfSpeakerRow(channel) {
   channel = channel.channel;
@@ -36,9 +36,9 @@ function ManageSelfSpeakerRow(channel) {
     stringResult = string(t["8Joh+p"]);
   }
   if (tmp8) {
-    let MicrophoneArrowRightIcon = tmp(12856).GroupArrowDownIcon;
+    let MicrophoneArrowRightIcon = tmp(12850).GroupArrowDownIcon;
   } else {
-    MicrophoneArrowRightIcon = tmp(12858).MicrophoneArrowRightIcon;
+    MicrophoneArrowRightIcon = tmp(12852).MicrophoneArrowRightIcon;
   }
   let obj2 = {
     onPress: function handleSetSelfSpeaker() {
@@ -58,7 +58,7 @@ function ManageSelfSpeakerRow(channel) {
     trailing: null
   };
   const tmp5Result = useAudienceRequestToSpeakStateDefault(stateFromStores, id);
-  obj2.trailing = closure_9(channel(1187).Icon, { source: _modDef12860 });
+  obj2.trailing = closure_9(channel(1187).Icon, { source: _modDef12854 });
   return closure_9(channel(7379).TableRow, obj2);
 }
 const View = fn(17).View;
@@ -129,7 +129,7 @@ export default function RequestToSpeakActionSheet(channelId) {
     };
     const obj9 = { hasIcons: true, children: null };
     const obj10 = { channel: stateFromStores };
-    const items2 = [closure_9(tmp(12861).RequestToSpeakSwitchRow, obj10), ];
+    const items2 = [closure_9(tmp(12855).RequestToSpeakSwitchRow, obj10), ];
     const obj11 = { channel: stateFromStores };
     items2[1] = closure_9(ManageSelfSpeakerRow, obj11);
     obj9.children = items2;
@@ -150,13 +150,13 @@ export default function RequestToSpeakActionSheet(channelId) {
     const obj16 = { channel: stateFromStores, height: null };
     const _Math = Math;
     obj16.height = Math.max(first1 - first - 8, 0);
-    items4[1] = closure_9(tmp3(12866), obj16);
+    items4[1] = closure_9(tmp3(12860), obj16);
     obj7.children = items4;
     obj6.children = closure_10(tmp(6274).Stack, obj7);
     obj5.children = closure_9(tmp(5507).BottomSheetScrollView, obj6);
     obj4.children = closure_9(tmp(5503).BottomSheet, obj5);
     tmp14 = closure_9(tmp(7852).AnalyticsLocationProvider, obj4);
-    const tmp3Result = tmp3(12866);
+    const tmp3Result = tmp3(12860);
   }
   return tmp14;
 };

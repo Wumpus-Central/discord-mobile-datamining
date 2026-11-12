@@ -1,6 +1,6 @@
-// === Module 16361: ContextMenuPopout ===
+// === Module 16356: ContextMenuPopout ===
 
-// Module 16361 (ContextMenuPopout)
+// Module 16356 (ContextMenuPopout)
 import logAppStart from "logAppStart" /* 1 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -14,8 +14,8 @@ import Backdrop from "Backdrop" /* 5841 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5850 */;
 import spring_spring from "spring/spring" /* 5876 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 6269 */;
-import ContextMenuState from "ContextMenuState" /* 9083 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9084 */;
+import ContextMenuState from "ContextMenuState" /* 9082 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9083 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -69,13 +69,13 @@ const jsxProd = fn(21);
 let createStyles = fn(5243);
 let obj2 = { container: null, titleContainer: null, divider: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj2.container = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(9084).CONTEXT_MENU_MIN_WIDTH };
-let obj3 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(9084).CONTEXT_MENU_MIN_WIDTH };
-obj2.titleContainer = { padding: fn(9084).CONTEXT_MENU_ITEM_PADDING };
-let obj4 = { padding: fn(9084).CONTEXT_MENU_ITEM_PADDING };
-obj2.divider = { borderBottomWidth: fn(9084).CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+obj2.container = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(9083).CONTEXT_MENU_MIN_WIDTH };
+let obj3 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.lg, minWidth: fn(9083).CONTEXT_MENU_MIN_WIDTH };
+obj2.titleContainer = { padding: fn(9083).CONTEXT_MENU_ITEM_PADDING };
+let obj4 = { padding: fn(9083).CONTEXT_MENU_ITEM_PADDING };
+obj2.divider = { borderBottomWidth: fn(9083).CONTEXT_MENU_DIVIDER_HEIGHT, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
 let closure_10 = createStyles.createStyles(obj2);
-let items = [{ code: "(function getCollapsedOffset_ContextMenuPopoutNativeTsx1(width,height,positionX,positionY){let[CONTEXT_MENU_MIN_SCALE]=this.__closure;const scaleOffset=1-CONTEXT_MENU_MIN_SCALE;return{translateX:(positionX==='left'?-1:1)*(width/2)*scaleOffset,translateY:(positionY==='below'?-1:1)*(height/2)*scaleOffset};})" }, fn(9084).CONTEXT_MENU_MIN_SCALE];
+let items = [{ code: "(function getCollapsedOffset_ContextMenuPopoutNativeTsx1(width,height,positionX,positionY){let[CONTEXT_MENU_MIN_SCALE]=this.__closure;const scaleOffset=1-CONTEXT_MENU_MIN_SCALE;return{translateX:(positionX==='left'?-1:1)*(width/2)*scaleOffset,translateY:(positionY==='below'?-1:1)*(height/2)*scaleOffset};})" }, fn(9083).CONTEXT_MENU_MIN_SCALE];
 let closure_129_0;
 [tmp5, tmp6] = items;
 function getCollapsedOffset(arg0, arg1, arg2, arg3) {
@@ -110,7 +110,7 @@ const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj8.height = "auto";
 obj7.accessibleDismiss = obj8;
 let closure_18 = createStyles.createStyles(obj7);
-let items2 = [{ code: "(function backdropEnteringAnimation_ContextMenuPopoutNativeTsx7(){let[withSpring,CONTEXT_MENU_SPRING]=this.__closure;return{initialValues:{opacity:0},animations:{opacity:withSpring(1,CONTEXT_MENU_SPRING)}};})" }, fn(5876).withSpring, fn(9084).CONTEXT_MENU_SPRING];
+let items2 = [{ code: "(function backdropEnteringAnimation_ContextMenuPopoutNativeTsx7(){let[withSpring,CONTEXT_MENU_SPRING]=this.__closure;return{initialValues:{opacity:0},animations:{opacity:withSpring(1,CONTEXT_MENU_SPRING)}};})" }, fn(5876).withSpring, fn(9083).CONTEXT_MENU_SPRING];
 let closure_130_0;
 let closure_130_1;
 [tmp8, tmp9, tmp10] = items2;
@@ -193,10 +193,10 @@ export function ContextMenuPopout(cleanUp) {
   const callback = noop.useCallback(ContextMenuPopoutNativeTsx2, items4);
   if ("below" === positionY) {
     const diff1 = diff - bottom;
-    let diff2 = diff1 - tmp6(9084).CONTEXT_MENU_EDGE_OFFSET;
+    let diff2 = diff1 - tmp6(9083).CONTEXT_MENU_EDGE_OFFSET;
   } else {
     const diff3 = diff - top;
-    diff2 = diff3 - tmp6(9084).CONTEXT_MENU_EDGE_OFFSET;
+    diff2 = diff3 - tmp6(9083).CONTEXT_MENU_EDGE_OFFSET;
   }
   c7 = diff2;
   const tmp20 = scale(noop.useState(menu.height >= diff2), 2);

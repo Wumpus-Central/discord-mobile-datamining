@@ -1,6 +1,6 @@
-// === Module 14989: HubEmailConnectionWaitlist ===
+// === Module 14985: HubEmailConnectionWaitlist ===
 
-// Module 14989 (HubEmailConnectionWaitlist)
+// Module 14985 (HubEmailConnectionWaitlist)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,7 +33,7 @@ export default function HubEmailConnectionWaitlist(school) {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null };
   let obj = onClose(1499);
-  obj3.source = navigation(14990);
+  obj3.source = navigation(14986);
   obj3.style = tmp.header;
   const items1 = [closure_5(navigation(5957), obj3), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };

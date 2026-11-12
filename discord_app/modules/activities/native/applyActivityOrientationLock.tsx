@@ -1,8 +1,8 @@
-// === Module 19717: applyActivityOrientationLock ===
+// === Module 19712: applyActivityOrientationLock ===
 
-// Module 19717 (applyActivityOrientationLock)
+// Module 19712 (applyActivityOrientationLock)
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2143 */;
-import applyOrientationLock from "applyOrientationLock" /* 15159 */;
+import applyOrientationLock from "applyOrientationLock" /* 15156 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/activities/native/applyActivityOrientationLock.tsx");

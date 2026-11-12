@@ -1,6 +1,6 @@
-// === Module 11300: StickerCategoryUtils ===
+// === Module 11294: StickerCategoryUtils ===
 
-// Module 11300 (StickerCategoryUtils)
+// Module 11294 (StickerCategoryUtils)
 import StickersTypes from "StickersTypes" /* 6730 */;
 import size from "module_2" /* 2 */;
 

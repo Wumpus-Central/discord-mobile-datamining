@@ -1,13 +1,13 @@
-// === Module 17450: useBountiesModalVideoAnalytics ===
+// === Module 17445: useBountiesModalVideoAnalytics ===
 
-// Module 17450 (useBountiesModalVideoAnalytics)
+// Module 17445 (useBountiesModalVideoAnalytics)
 import AdCreativeType from "AdCreativeType" /* 5282 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 6708 */;
 import MetricEvents from "MetricEvents" /* 6713 */;
-import AnalyticsActions from "AnalyticsActions" /* 8759 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 15138 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 17441 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 17452 */;
+import AnalyticsActions from "AnalyticsActions" /* 8758 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 15135 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 17436 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 17447 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -133,7 +133,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
           } else if (1 === tmp8) {
             c4 = 0;
             closure_129_6 = closure_3;
-            const questLogger = closure_0(8750).getQuestLogger();
+            const questLogger = closure_0(8749).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_129_6);
             throw closure_129_6;
           } else if (arg0 === 1) {
@@ -148,9 +148,9 @@ export function useBountiesModalVideoAnalytics(bountyId) {
             closure_129_5 = value;
             const obj8 = { adContentId: closure_129_2, adCreativeType: closure_0(5282).AdCreativeType.BOUNTY, event: constants.QUEST_CONTENT_ENGAGED_VIEWED, properties: null, sourceQuestContent: null };
             const obj10 = {};
-            const obj9 = closure_0(8759);
-            const merged = Object.assign(closure_0(8768).getContentProperties(VIDEO_MODAL_MOBILE));
-            const merged1 = Object.assign(sourceQuestContent(8715)());
+            const obj9 = closure_0(8758);
+            const merged = Object.assign(closure_0(8767).getContentProperties(VIDEO_MODAL_MOBILE));
+            const merged1 = Object.assign(sourceQuestContent(8714)());
             obj10.impression_id = impressionId;
             obj10.video_watch_seconds = closure_129_0.video_watch_seconds;
             obj10.video_position_seconds = closure_129_0.video_position_seconds;

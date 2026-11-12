@@ -1,13 +1,13 @@
-// === Module 17602: QuestDisclosureModal ===
+// === Module 17597: QuestDisclosureModal ===
 
-// Module 17602 (QuestDisclosureModal)
+// Module 17597 (QuestDisclosureModal)
 import jsxProd from "jsxProd" /* 21 */;
 import util from "util" /* 1113 */;
 import HeaderActionButton from "HeaderActionButton" /* 7363 */;
 import _modDef7366 from "module_7366" /* 7366 */;
 import Navigator from "Navigator" /* 7424 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 17601 */;
-import QuestDisclosureModalInnerDefault from "QuestDisclosureModalInner" /* 17603 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 17596 */;
+import QuestDisclosureModalInnerDefault from "QuestDisclosureModalInner" /* 17598 */;
 import size from "module_2" /* 2 */;
 
 function CloseButton() {

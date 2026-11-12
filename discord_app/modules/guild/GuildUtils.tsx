@@ -1,6 +1,6 @@
-// === Module 11249: guild/GuildUtils ===
+// === Module 11243: guild/GuildUtils ===
 
-// Module 11249 (guild/GuildUtils)
+// Module 11243 (guild/GuildUtils)
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
 import size from "module_2" /* 2 */;
 

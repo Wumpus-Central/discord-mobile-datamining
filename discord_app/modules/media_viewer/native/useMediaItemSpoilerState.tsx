@@ -1,6 +1,6 @@
-// === Module 15092: useMediaItemSpoilerState ===
+// === Module 15089: useMediaItemSpoilerState ===
 
-// Module 15092 (useMediaItemSpoilerState)
+// Module 15089 (useMediaItemSpoilerState)
 import native from "native" /* 1187 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import timing_timing from "timing/timing" /* 5485 */;

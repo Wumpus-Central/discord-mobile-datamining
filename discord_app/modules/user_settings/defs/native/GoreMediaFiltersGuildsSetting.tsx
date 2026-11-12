@@ -1,15 +1,15 @@
-// === Module 17245: GoreMediaFiltersGuildsSetting ===
+// === Module 17240: GoreMediaFiltersGuildsSetting ===
 
-// Module 17245 (GoreMediaFiltersGuildsSetting)
+// Module 17240 (GoreMediaFiltersGuildsSetting)
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 8576 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8787 */;
-import SettingsConstants from "SettingsConstants" /* 9136 */;
-import useUserIsTeen from "useUserIsTeen" /* 11968 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 17237 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 17238 */;
-import SettingBuilders from "SettingBuilders" /* 12317 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8786 */;
+import SettingsConstants from "SettingsConstants" /* 9135 */;
+import useUserIsTeen from "useUserIsTeen" /* 11962 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 17232 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 17233 */;
+import SettingBuilders from "SettingBuilders" /* 12311 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({

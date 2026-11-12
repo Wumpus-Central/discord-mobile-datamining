@@ -1,8 +1,8 @@
-// === Module 9961: ? ===
+// === Module 9960: ? ===
 
-// Module 9961
+// Module 9960
 import initialize from "initialize" /* 504 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 9962 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 9961 */;
 import DevSettingsStore from "DevSettingsStore" /* 5869 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 10454: conjureHomeProjectState ===
+// === Module 10452: conjureHomeProjectState ===
 
-// Module 10454 (conjureHomeProjectState)
+// Module 10452 (conjureHomeProjectState)
 import conjureUnread from "conjureUnread" /* 7267 */;
 import conjureProjectMute from "conjureProjectMute" /* 7268 */;
 import ConjurePublishTypes from "ConjurePublishTypes" /* 7320 */;

@@ -1,6 +1,6 @@
-// === Module 10171: MediaViewerOverlayButton ===
+// === Module 10169: MediaViewerOverlayButton ===
 
-// Module 10171 (MediaViewerOverlayButton)
+// Module 10169 (MediaViewerOverlayButton)
 import IconButton from "IconButton" /* 7922 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,9 +1,9 @@
-// === Module 10157: parseWaterwheelsCard ===
+// === Module 10155: parseWaterwheelsCard ===
 
-// Module 10157 (parseWaterwheelsCard)
+// Module 10155 (parseWaterwheelsCard)
 import LoggerDefault from "Logger" /* 3 */;
 import apply from "apply" /* 12 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10158 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10156 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;

@@ -1,19 +1,19 @@
-// === Module 20520: AnnouncementMegaphoneSpotIllustration ===
+// === Module 20515: AnnouncementMegaphoneSpotIllustration ===
 
-// Module 20520 (AnnouncementMegaphoneSpotIllustration)
+// Module 20515 (AnnouncementMegaphoneSpotIllustration)
 import assetHelpers from "assetHelpers" /* 7689 */;
-import _modDef20521 from "module_20521" /* 20521 */;
-import _modDef20522 from "module_20522" /* 20522 */;
-import _modDef20523 from "module_20523" /* 20523 */;
+import _modDef20516 from "module_20516" /* 20516 */;
+import _modDef20517 from "module_20517" /* 20517 */;
+import _modDef20518 from "module_20518" /* 20518 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef20521 }, 3: null };
-let obj2 = { uri: _modDef20521 };
-obj[2] = { uri: _modDef20522 };
-const obj3 = { uri: _modDef20522 };
-obj[3] = { uri: _modDef20523 };
+let obj = { 1: null, 2: { uri: _modDef20516 }, 3: null };
+let obj2 = { uri: _modDef20516 };
+obj[2] = { uri: _modDef20517 };
+const obj3 = { uri: _modDef20517 };
+obj[3] = { uri: _modDef20518 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AnnouncementMegaphoneSpotIllustration.native.tsx");
 

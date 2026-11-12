@@ -1,11 +1,11 @@
-// === Module 13413: AppLauncherAttachmentOption ===
+// === Module 13407: AppLauncherAttachmentOption ===
 
-// Module 13413 (AppLauncherAttachmentOption)
+// Module 13407 (AppLauncherAttachmentOption)
 import nativeDefault from "native" /* 575 */;
-import FileIcon from "FileIcon" /* 11010 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11063 */;
+import FileIcon from "FileIcon" /* 11004 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 11057 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8806 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8805 */;
 
 require = fn;
 function AttachmentPreviewAppLauncher(arg0) {

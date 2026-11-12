@@ -1,10 +1,10 @@
-// === Module 19179: ChannelScreenFrameContainer ===
+// === Module 19174: ChannelScreenFrameContainer ===
 
-// Module 19179 (ChannelScreenFrameContainer)
+// Module 19174 (ChannelScreenFrameContainer)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import useToken from "useToken" /* 5839 */;
-import useAppFrameDefault from "useAppFrame" /* 18589 */;
+import useAppFrameDefault from "useAppFrame" /* 18584 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;

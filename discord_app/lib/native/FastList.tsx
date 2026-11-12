@@ -1114,7 +1114,7 @@ let closure_20 = noop.memo(function FastListStickySectionRendererComponent(child
   }
   const items5 = [cloneElementResult, false];
   obj4.children = items5;
-  return closure_1_10(module_1652.View, obj4);
+  return refs(module_1652.View, obj4);
 });
 let closure_21 = noop.memo(function _FastListSectionRenderer(disableWrapper) {
   ({ layoutSize, children, fastListInstance, section, recyclerKey, horizontal } = disableWrapper);
@@ -1134,7 +1134,7 @@ let closure_21 = noop.memo(function _FastListSectionRenderer(disableWrapper) {
   fastListInstance = children(section, fastListInstance);
   section = [fastListInstance, false];
   obj4.children = section;
-  closure_1_10(NativeViewDefault, obj4);
+  refs(NativeViewDefault, obj4);
 });
 let closure_22 = noop.memo(function _FastListSectionFooterRenderer(disableWrapper) {
   ({ layoutSize, fastListInstance, children, section, recyclerKey, horizontal } = disableWrapper);
@@ -1154,7 +1154,7 @@ let closure_22 = noop.memo(function _FastListSectionFooterRenderer(disableWrappe
   children = children(section, fastListInstance);
   section = [children, false];
   obj4.children = section;
-  closure_1_10(NativeViewDefault, obj4);
+  refs(NativeViewDefault, obj4);
 });
 let closure_23 = noop.memo(function _FastListItemRenderer(disableWrapper) {
   ({ layoutSize, children, section, fastListInstance, item, recyclerKey, horizontal } = disableWrapper);
@@ -1179,7 +1179,7 @@ let closure_23 = noop.memo(function _FastListItemRenderer(disableWrapper) {
   }
   items = [childrenResult1, false];
   obj3.children = items;
-  childrenResult = closure_1_10(NativeViewDefault, obj3);
+  childrenResult = refs(NativeViewDefault, obj3);
 });
 let closure_24 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper) {
   ({ layoutSize, children, fastListInstance, recyclerKey, horizontal } = disableWrapper);
@@ -1199,7 +1199,7 @@ let closure_24 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper
   children = children(fastListInstance);
   fastListInstance = [children, false];
   obj4.children = fastListInstance;
-  closure_1_10(NativeViewDefault, obj4);
+  refs(NativeViewDefault, obj4);
 });
 let closure_25 = noop.memo(function _FastListSpacer(layoutSize) {
   layoutSize = layoutSize.layoutSize;
@@ -2265,7 +2265,7 @@ prototype4["render"] = function render() {
     renderAccessoryResult = renderAccessory(self);
   }
   children[2] = renderAccessoryResult;
-  return closure_1_10(application_id, { children });
+  return refs(application_id, { children });
 };
 FastList.defaultProps = { batchesToRender: 12, contentInset: { top: 0, right: 0, left: 0, bottom: 0 }, disableLegacyGestureHandling: false, disableRecyclingOnFullCompute: false, stickyHeaderFooter: false };
 let closure_29 = { code: "(function FastListTsx2(event){let[horizontal,workletMounted,scrollPosValue,onScrollWorklet]=this.__closure;const scrollPosition=!horizontal?event.contentOffset.y:event.contentOffset.x;const contentSize=!horizontal?event.contentSize.height:event.contentSize.width;if(contentSize===0&&!workletMounted.get())return;workletMounted.set(true);scrollPosValue.set(Math.min(scrollPosition,contentSize));if(onScrollWorklet!=null){const layoutSize=!horizontal?event.layoutMeasurement.height:event.layoutMeasurement.width;onScrollWorklet(scrollPosition,contentSize,layoutSize);}})" };

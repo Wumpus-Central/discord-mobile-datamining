@@ -1,10 +1,10 @@
-// === Module 13911: ConjureDebugLogsTab ===
+// === Module 13907: ConjureDebugLogsTab ===
 
-// Module 13911 (ConjureDebugLogsTab)
+// Module 13907 (ConjureDebugLogsTab)
 import nativeDefault from "native" /* 575 */;
 import _modDef4079 from "module_4079" /* 4079 */;
-import ConjureDebugJson from "ConjureDebugJson" /* 13912 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 13913 */;
+import ConjureDebugJson from "ConjureDebugJson" /* 13908 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 13909 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConjureDebugLogStore from "ConjureDebugLogStore" /* 7307 */;
@@ -39,7 +39,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
     str = "text-feedback-critical";
   }
   if (expanded) {
-    let ChevronSmallRightIcon = tmp3(10493).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp3(10491).ChevronSmallDownIcon;
     let tmp6 = tmp3;
   } else {
     ChevronSmallRightIcon = tmp3(7897).ChevronSmallRightIcon;
@@ -47,7 +47,7 @@ let closure_11 = noop.memo(function LogRow(entry) {
   }
   const obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.rowHead, children: null };
-  let ts = tmp6(13905).formatClockTime(entry.ts);
+  let ts = tmp6(13901).formatClockTime(entry.ts);
   if (ts == null) {
     ts = entry.ts;
   }

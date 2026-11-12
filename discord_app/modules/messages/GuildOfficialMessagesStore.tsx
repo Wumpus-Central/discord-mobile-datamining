@@ -1,6 +1,6 @@
-// === Module 16106: GuildOfficialMessagesStore ===
+// === Module 16101: GuildOfficialMessagesStore ===
 
-// Module 16106 (GuildOfficialMessagesStore)
+// Module 16101 (GuildOfficialMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtils from "FlagUtils" /* 1403 */;

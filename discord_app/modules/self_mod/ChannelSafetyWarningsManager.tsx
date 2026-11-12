@@ -1,9 +1,9 @@
-// === Module 20042: ChannelSafetyWarningsManager ===
+// === Module 20037: ChannelSafetyWarningsManager ===
 
-// Module 20042 (ChannelSafetyWarningsManager)
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11971 */;
-import InappropriateConversationUtils from "InappropriateConversationUtils" /* 12220 */;
-import showTakeoverModal from "showTakeoverModal" /* 20043 */;
+// Module 20037 (ChannelSafetyWarningsManager)
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11965 */;
+import InappropriateConversationUtils from "InappropriateConversationUtils" /* 12214 */;
+import showTakeoverModal from "showTakeoverModal" /* 20038 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;

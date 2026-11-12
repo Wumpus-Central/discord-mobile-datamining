@@ -1,23 +1,23 @@
-// === Module 17920: ContrastModeSetting ===
+// === Module 17915: ContrastModeSetting ===
 
-// Module 17920 (ContrastModeSetting)
+// Module 17915 (ContrastModeSetting)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 13367 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16771 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17818 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 13361 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16766 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17813 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["TYyfO/"]);
   },
-  parent: fn(9136).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(9135).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },

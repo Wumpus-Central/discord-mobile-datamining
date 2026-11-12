@@ -1,10 +1,10 @@
-// === Module 10180: sortByMatchScore ===
+// === Module 10178: sortByMatchScore ===
 
-// Module 10180 (sortByMatchScore)
+// Module 10178 (sortByMatchScore)
 import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 7011 */;
-import AutocompleterDefault from "Autocompleter" /* 10181 */;
-import AutocompleterConstants2 from "AutocompleterConstants" /* 10190 */;
-import _modDef10191 from "module_10191" /* 10191 */;
+import AutocompleterDefault from "Autocompleter" /* 10179 */;
+import AutocompleterConstants2 from "AutocompleterConstants" /* 10188 */;
+import _modDef10189 from "module_10189" /* 10189 */;
 import size from "module_2" /* 2 */;
 import AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 7008 */;
 
@@ -16,5 +16,5 @@ for (const key10022 in _module1) {
 
 export default AutocompleterDefault;
 export const createHeaderResult = AutocompleterConstants2.createHeaderResult;
-export const findNextSelectedResult = _modDef10191;
+export const findNextSelectedResult = _modDef10189;
 export const sortByMatchScore = autocompleter_sortByMatchScoreDefault;

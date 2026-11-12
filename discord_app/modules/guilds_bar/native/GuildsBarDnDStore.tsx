@@ -1,6 +1,6 @@
-// === Module 18914: GuildsBarDnDStore ===
+// === Module 18909: GuildsBarDnDStore ===
 
-// Module 18914 (GuildsBarDnDStore)
+// Module 18909 (GuildsBarDnDStore)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
 import _mod5158 from "module_5158" /* 5158 */;
@@ -16,7 +16,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "delete", dropSpecs: "isArray", dragRegion: require("module_1652").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "teapot", scrollPosition: "performURLNavigation", windowSize: "attribution_framework", setStateShallow: "\u{1F935}\u{1F3FD}", dropStart: "Jmwzdx", dropComplete: "escapeText" };
+  let obj = { dragSpecs: "Boolean", overSpecs: "delete", dropSpecs: "isArray", dragRegion: require("module_1652").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "kiss_woman_man", scrollPosition: "description", windowSize: "r", setStateShallow: "Map", dropStart: "error", dropComplete: "isArray" };
   let obj2 = require("module_1652");
   obj.gestureState = require("module_1652").makeMutable(obj);
   let obj3 = require("module_1652");
@@ -55,7 +55,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "onPress" }));
+      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "isArray" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -80,7 +80,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "Array" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {

@@ -1,8 +1,8 @@
-// === Module 15661: UserProfileEditNote ===
+// === Module 15658: UserProfileEditNote ===
 
-// Module 15661 (UserProfileEditNote)
+// Module 15658 (UserProfileEditNote)
 import NavigatorHeader from "NavigatorHeader" /* 7427 */;
-import NoteActionCreatorsDefault from "NoteActionCreators" /* 15662 */;
+import NoteActionCreatorsDefault from "NoteActionCreators" /* 15659 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -65,7 +65,7 @@ export default function UserProfileEditNote(userId) {
         if (closure_5 == null) {
           str = "";
         }
-        closure_1_1(15351)({
+        closure_1_1(15348)({
           location: "UserProfileEditNote",
           hasUnsavedChanges: str !== closure_6,
           onReset() {

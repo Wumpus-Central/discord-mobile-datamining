@@ -1,6 +1,6 @@
-// === Module 17310: FamilyCenterTopServersBottomSheet ===
+// === Module 17305: FamilyCenterTopServersBottomSheet ===
 
-// Module 17310 (FamilyCenterTopServersBottomSheet)
+// Module 17305 (FamilyCenterTopServersBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2685 from "module_2685" /* 2685 */;
@@ -19,7 +19,7 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(9553).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(9552).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
     obj2.icon = closure_4(GuildIconDefault, obj3);

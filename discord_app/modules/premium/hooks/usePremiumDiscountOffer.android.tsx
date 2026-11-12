@@ -1,10 +1,10 @@
-// === Module 9247: usePremiumDiscountOffer ===
+// === Module 9246: usePremiumDiscountOffer ===
 
-// Module 9247 (usePremiumDiscountOffer)
+// Module 9246 (usePremiumDiscountOffer)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import ProductIds from "ProductIds" /* 8514 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 9248 */;
-import IAPStore from "IAPStore" /* 9236 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 9247 */;
+import IAPStore from "IAPStore" /* 9235 */;
 
 require = fn;
 const PremiumConstants = fn(1387);

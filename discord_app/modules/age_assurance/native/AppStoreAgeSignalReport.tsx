@@ -352,7 +352,7 @@ let closure_19 = async function _settleAppStoreAgeSignalReport() {
           c0 = 3;
           const obj4 = { value, done: true };
           return obj4;
-        } else if (null != closure_2_10) {
+        } else if (null != refs) {
           items = [tmp13, require("TimeUtils").sleep(15000)];
           c1 = 1;
           c0 = 1;

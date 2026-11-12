@@ -1,6 +1,6 @@
-// === Module 12892: MobileGoLiveActionSheet ===
+// === Module 12886: MobileGoLiveActionSheet ===
 
-// Module 12892 (MobileGoLiveActionSheet)
+// Module 12886 (MobileGoLiveActionSheet)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
@@ -15,11 +15,11 @@ import StreamActionCreators from "StreamActionCreators" /* 6799 */;
 import NativeViewDefault from "NativeView" /* 7656 */;
 import TableRadioRow from "TableRadioRow" /* 7681 */;
 import MobilePhoneIcon from "MobilePhoneIcon" /* 7720 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 11109 */;
-import _modDef11235 from "module_11235" /* 11235 */;
-import getStreamSettingsForPreset from "getStreamSettingsForPreset" /* 12893 */;
-import SpeedometerIcon from "SpeedometerIcon" /* 12898 */;
-import ImageSparkleIcon from "ImageSparkleIcon" /* 12900 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 11103 */;
+import _modDef11229 from "module_11229" /* 11229 */;
+import getStreamSettingsForPreset from "getStreamSettingsForPreset" /* 12887 */;
+import SpeedometerIcon from "SpeedometerIcon" /* 12892 */;
+import ImageSparkleIcon from "ImageSparkleIcon" /* 12894 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6190 */;
@@ -211,7 +211,7 @@ export default noop.memo(function MobileGoLiveActionSheet() {
           obj10.children = intl5.string(_modDef2485.nMcXo1);
           items = [gesture(Text_Text.Text, obj10), ];
           const tmp8Result = NativeViewDefault;
-          items[1] = gesture(BaseIconImage.BaseIconImage, { source: _modDef11235, size: "xs" });
+          items[1] = gesture(BaseIconImage.BaseIconImage, { source: _modDef11229, size: "xs" });
           obj9.children = items;
           obj8.label = colors(tmp8Result, obj9);
           if (null != maxSettingsForPreset2) {
@@ -312,5 +312,5 @@ export function showMobileGoLiveActionSheet(location_stack) {
   const obj = ActionSheetActionCreatorsDefault;
   obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj2.impressionProperties = { location_stack };
-  obj.openLazy(asyncRequireImpl(12892, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
+  obj.openLazy(asyncRequireImpl(12886, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
 }

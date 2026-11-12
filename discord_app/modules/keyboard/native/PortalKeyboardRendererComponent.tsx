@@ -1,6 +1,6 @@
-// === Module 13267: PortalKeyboardRendererComponent ===
+// === Module 13261: PortalKeyboardRendererComponent ===
 
-// Module 13267 (PortalKeyboardRendererComponent)
+// Module 13261 (PortalKeyboardRendererComponent)
 import useBackPressHandler from "useBackPressHandler" /* 6269 */;
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7178 */;
 import noop from "module_19" /* 19 */;
@@ -53,14 +53,14 @@ export default noop.memo(function PortalKeyboardRendererComponent(item) {
   if (null != memo) {
     if (undefined !== memo1) {
       if (tmp(1625).KeyboardTypes.APP_LAUNCHER === type) {
-        const obj2 = { context: memo1, chatInputRef, onClose: cleanUp, transitionState: state, entrypoint: tmp(12489).AppLauncherEntrypoint.TEXT };
-        return jsx(chatInputRef(13268), { context: memo1, chatInputRef, onClose: cleanUp, transitionState: state, entrypoint: tmp(12489).AppLauncherEntrypoint.TEXT });
+        const obj2 = { context: memo1, chatInputRef, onClose: cleanUp, transitionState: state, entrypoint: tmp(12483).AppLauncherEntrypoint.TEXT };
+        return jsx(chatInputRef(13262), { context: memo1, chatInputRef, onClose: cleanUp, transitionState: state, entrypoint: tmp(12483).AppLauncherEntrypoint.TEXT });
       } else if (tmp(1625).KeyboardTypes.MEDIA === type) {
         const obj3 = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
-        return jsx(chatInputRef(13435), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
+        return jsx(chatInputRef(13429), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
       } else if (tmp(1625).KeyboardTypes.EXPRESSION === type) {
         let obj = { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state };
-        return jsx(chatInputRef(13465), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
+        return jsx(chatInputRef(13459), { channel: memo, chatInputRef, onClose: cleanUp, transitionState: state });
       } else {
         return null;
       }

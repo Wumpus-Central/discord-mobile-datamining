@@ -1,6 +1,6 @@
-// === Module 9310: PlatformMarkupRules ===
+// === Module 9309: PlatformMarkupRules ===
 
-// Module 9310 (PlatformMarkupRules)
+// Module 9309 (PlatformMarkupRules)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
@@ -11,8 +11,8 @@ import MarkupTextRuleDefault from "MarkupTextRule" /* 6290 */;
 import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 6291 */;
 import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 6303 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7968 */;
-import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 9305 */;
-import useGameMentionData from "useGameMentionData" /* 9311 */;
+import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 9304 */;
+import useGameMentionData from "useGameMentionData" /* 9310 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;

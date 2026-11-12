@@ -1,6 +1,6 @@
-// === Module 18841: IAPUpsellActionSheet ===
+// === Module 18836: IAPUpsellActionSheet ===
 
-// Module 18841 (IAPUpsellActionSheet)
+// Module 18836 (IAPUpsellActionSheet)
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/guild_role_subscriptions/nati
 
 export default function IAPUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed } = arg0);
-  const obj = { imageSource: markAsDismissed(18843), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
+  const obj = { imageSource: markAsDismissed(18838), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
   const intl = util.intl;
   obj.header = intl.string(util.t.rBw4cE);
   const intl2 = util.intl;
@@ -27,5 +27,5 @@ export default function IAPUpsellActionSheet(arg0) {
     markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
   obj.markAsDismissed = markAsDismissed;
-  return jsx(markAsDismissed(18842), { imageSource: markAsDismissed(18843), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
+  return jsx(markAsDismissed(18837), { imageSource: markAsDismissed(18838), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
 };

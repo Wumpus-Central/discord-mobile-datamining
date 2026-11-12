@@ -1,14 +1,14 @@
-// === Module 13705: chat_input/ChatInputNativeComponent ===
+// === Module 13701: chat_input/ChatInputNativeComponent ===
 
-// Module 13705 (chat_input/ChatInputNativeComponent)
+// Module 13701 (chat_input/ChatInputNativeComponent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import ColorUtils from "ColorUtils" /* 5240 */;
 import shared from "shared" /* 5250 */;
 import useTheme from "useTheme" /* 5484 */;
-import ChatInputNativeComponent2 from "ChatInputNativeComponent" /* 13697 */;
-import MobileMarkdownFormatMenuExperiment from "MobileMarkdownFormatMenuExperiment" /* 13710 */;
+import ChatInputNativeComponent2 from "ChatInputNativeComponent" /* 13693 */;
+import MobileMarkdownFormatMenuExperiment from "MobileMarkdownFormatMenuExperiment" /* 13706 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5267 */;
 

@@ -1,15 +1,15 @@
-// === Module 12510: RatingSelector ===
+// === Module 12504: RatingSelector ===
 
-// Module 12510 (RatingSelector)
+// Module 12504 (RatingSelector)
 import FastImageDefault from "FastImage" /* 5957 */;
-import _modDef12511 from "module_12511" /* 12511 */;
-import _modDef12516 from "module_12516" /* 12516 */;
-import _modDef12521 from "module_12521" /* 12521 */;
+import _modDef12505 from "module_12505" /* 12505 */;
+import _modDef12510 from "module_12510" /* 12510 */;
+import _modDef12515 from "module_12515" /* 12515 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(12506);
+const Constants = fn(12500);
 ({ DEFAULT_RATINGS: closure_4, FeedbackRating: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
 let createStyles = fn(5243);
@@ -34,9 +34,9 @@ export default function RatingSelector(ratingOptions) {
   closure_3 = tmp2;
   let obj = {};
   let obj2 = { source: null, getLabel: null, rating: null };
-  let obj3 = { selected: _modDef12511, normal: null };
+  let obj3 = { selected: _modDef12505, normal: null };
   tmp = closure_8();
-  obj3.normal = textLabels(12512).useFeedbackModalSadDesaturatedSource();
+  obj3.normal = textLabels(12506).useFeedbackModalSadDesaturatedSource();
   obj2.source = obj3;
   obj2.getLabel = function getLabel() {
     const intl = textLabels(1113).intl;
@@ -45,9 +45,9 @@ export default function RatingSelector(ratingOptions) {
   obj2.rating = constants.BAD;
   obj[constants.BAD] = obj2;
   let obj5 = { source: null, getLabel: null, rating: null };
-  let obj6 = { selected: _modDef12516, normal: null };
-  let obj4 = textLabels(12512);
-  obj6.normal = textLabels(12517).useFeedbackModalNeutralDesaturatedSource();
+  let obj6 = { selected: _modDef12510, normal: null };
+  let obj4 = textLabels(12506);
+  obj6.normal = textLabels(12511).useFeedbackModalNeutralDesaturatedSource();
   obj5.source = obj6;
   obj5.getLabel = function getLabel() {
     const intl = textLabels(1113).intl;
@@ -56,9 +56,9 @@ export default function RatingSelector(ratingOptions) {
   obj5.rating = constants.NEUTRAL;
   obj[constants.NEUTRAL] = obj5;
   const obj8 = { source: null, getLabel: null, rating: null };
-  const obj9 = { selected: _modDef12521, normal: null };
-  let obj7 = textLabels(12517);
-  obj9.normal = textLabels(12522).useFeedbackModalHappyDesaturatedSource();
+  const obj9 = { selected: _modDef12515, normal: null };
+  let obj7 = textLabels(12511);
+  obj9.normal = textLabels(12516).useFeedbackModalHappyDesaturatedSource();
   obj8.source = obj9;
   obj8.getLabel = function getLabel() {
     const intl = textLabels(1113).intl;
@@ -68,7 +68,7 @@ export default function RatingSelector(ratingOptions) {
   obj[constants.GOOD] = obj8;
   closure_129_0 = obj;
   const mapped = ratingOptions.map((item) => textLabels[item]);
-  const obj10 = textLabels(12522);
+  const obj10 = textLabels(12516);
   return <closure_3 style={tmp2.ratings}>{mapped.map((rating) => {
     rating = rating.rating;
     ({ selected, normal } = rating.source);

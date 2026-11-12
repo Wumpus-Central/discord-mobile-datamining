@@ -1,6 +1,6 @@
-// === Module 11154: Carousel ===
+// === Module 11148: Carousel ===
 
-// Module 11154 (Carousel)
+// Module 11148 (Carousel)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;

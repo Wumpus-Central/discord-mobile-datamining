@@ -1,10 +1,10 @@
-// === Module 10994: MarkupReactGameMentionRule ===
+// === Module 10988: MarkupReactGameMentionRule ===
 
-// Module 10994 (MarkupReactGameMentionRule)
+// Module 10988 (MarkupReactGameMentionRule)
 import nativeDefault from "native" /* 575 */;
-import useGame from "useGame" /* 9467 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 10214 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10219 */;
+import useGame from "useGame" /* 9466 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 10212 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10217 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -177,7 +177,7 @@ const jsxProd = fn(21);
 let closure_8 = nativeDefault.space.PX_4 / 2;
 let c9 = "body-sm/semibold";
 const createStyles = fn(5243);
-let closure_10 = createStyles.createStyles((width, arg1) => {
+const refs = createStyles.createStyles((width, arg1) => {
   const obj = { inlineRoot: { flexDirection: "row" }, pill: { width: "auto", minWidth: 0, flexShrink: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MENTION_BACKGROUND, borderRadius: nativeDefault.radii.xs, paddingHorizontal: gap, gap }, name: { minWidth: 0, flexShrink: 1 }, icon: null };
   const size = { width, height: width, borderRadius: nativeDefault.radii.xs, opacity: null };
   let num = 1;

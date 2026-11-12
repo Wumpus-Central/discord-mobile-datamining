@@ -1,7 +1,7 @@
-// === Module 19788: useSelfHasVideo ===
+// === Module 19783: useSelfHasVideo ===
 
-// Module 19788 (useSelfHasVideo)
-import participantHasVideo from "participantHasVideo" /* 11930 */;
+// Module 19783 (useSelfHasVideo)
+import participantHasVideo from "participantHasVideo" /* 11924 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;

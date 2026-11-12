@@ -1,6 +1,6 @@
-// === Module 18132: DevToolsDismissableContentsScreen ===
+// === Module 18127: DevToolsDismissableContentsScreen ===
 
-// Module 18132 (DevToolsDismissableContentsScreen)
+// Module 18127 (DevToolsDismissableContentsScreen)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5073 */;
@@ -14,9 +14,9 @@ import TableRowArrow from "TableRowArrow" /* 7388 */;
 import TableRowGroup from "TableRowGroup" /* 7680 */;
 import Search_SearchBar from "Search/SearchBar" /* 7759 */;
 import TableSwitchRow from "TableSwitchRow" /* 7888 */;
-import SearchEmpty from "SearchEmpty" /* 11222 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 18133 */;
-import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 18134 */;
+import SearchEmpty from "SearchEmpty" /* 11216 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 18128 */;
+import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 18129 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 5079 */;
@@ -88,8 +88,8 @@ export default function DevToolsDismissableContentsScreen() {
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
   const tmp2 = useSafeAreaInsetsDefault();
-  let obj = ref(12875);
-  [dependencyMap, tmp5] = ref(12875).useLocalStorageState("devtools-dc-search", "");
+  let obj = ref(12869);
+  [dependencyMap, tmp5] = ref(12869).useLocalStorageState("devtools-dc-search", "");
   _slicedToArray = tmp5;
   initialSearchQuery = _slicedToArray(initialSearchQuery.useState(() => {
     let str = dependencyMap;
@@ -127,7 +127,7 @@ export default function DevToolsDismissableContentsScreen() {
     const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
     return items;
   });
-  let tmp4 = _slicedToArray(ref(12875).useLocalStorageState("devtools-dc-search", ""), 2);
+  let tmp4 = _slicedToArray(ref(12869).useLocalStorageState("devtools-dc-search", ""), 2);
   items = [closure_6];
   const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({ dailyCapOverridden: closure_6.dailyCapOverridden, newUserMinAgeRequiredOverridden: closure_6.newUserMinAgeRequiredOverridden }));
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;

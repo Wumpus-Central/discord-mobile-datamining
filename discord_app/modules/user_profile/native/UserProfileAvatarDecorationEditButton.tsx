@@ -1,8 +1,8 @@
-// === Module 17002: UserProfileAvatarDecorationEditButton ===
+// === Module 16997: UserProfileAvatarDecorationEditButton ===
 
-// Module 17002 (UserProfileAvatarDecorationEditButton)
+// Module 16997 (UserProfileAvatarDecorationEditButton)
 import nativeDefault from "native" /* 575 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 9328 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 9327 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 

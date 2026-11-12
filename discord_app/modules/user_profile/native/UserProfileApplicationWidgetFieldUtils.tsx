@@ -1,6 +1,6 @@
-// === Module 12167: UserProfileApplicationWidgetFieldUtils ===
+// === Module 12161: UserProfileApplicationWidgetFieldUtils ===
 
-// Module 12167 (UserProfileApplicationWidgetFieldUtils)
+// Module 12161 (UserProfileApplicationWidgetFieldUtils)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -9,8 +9,8 @@ import useFontScale from "useFontScale" /* 5881 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfileApplicationWidgetSkeletons = TextSkeleton(12168);
-const ApplicationWidgetMarkupUtils = TextSkeleton(12169);
+const UserProfileApplicationWidgetSkeletons = TextSkeleton(12162);
+const ApplicationWidgetMarkupUtils = TextSkeleton(12163);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, View: closure_4 } = get_ActivityIndicator);

@@ -1,6 +1,6 @@
-// === Module 14865: GuildPromptsActionCreators ===
+// === Module 14861: GuildPromptsActionCreators ===
 
-// Module 14865 (GuildPromptsActionCreators)
+// Module 14861 (GuildPromptsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

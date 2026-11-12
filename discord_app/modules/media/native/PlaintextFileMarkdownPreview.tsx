@@ -1,11 +1,11 @@
-// === Module 12425: PlaintextFileMarkdownPreview ===
+// === Module 12419: PlaintextFileMarkdownPreview ===
 
-// Module 12425 (PlaintextFileMarkdownPreview)
+// Module 12419 (PlaintextFileMarkdownPreview)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 7587 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 12415 */;
-import PlaintextFileMarkdownParser from "PlaintextFileMarkdownParser" /* 12426 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 12409 */;
+import PlaintextFileMarkdownParser from "PlaintextFileMarkdownParser" /* 12420 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -125,24 +125,24 @@ function MarkdownLink(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -191,24 +191,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -257,24 +257,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -322,24 +322,24 @@ function MarkdownLink(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -431,24 +431,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -497,24 +497,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -563,24 +563,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -628,24 +628,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -737,24 +737,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -803,24 +803,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -869,24 +869,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -934,24 +934,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -1042,24 +1042,24 @@ function MarkdownLink(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -1108,24 +1108,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -1174,24 +1174,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -1239,24 +1239,24 @@ function MarkdownLink(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -1391,24 +1391,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -1457,24 +1457,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -1523,24 +1523,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -1588,24 +1588,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -1697,24 +1697,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -1763,24 +1763,24 @@ function MarkdownLink(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -1829,24 +1829,24 @@ function MarkdownLink(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -1894,24 +1894,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -2003,24 +2003,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -2069,24 +2069,24 @@ function MarkdownLink(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -2135,24 +2135,24 @@ function MarkdownLink(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -2200,24 +2200,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -2308,24 +2308,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -2374,24 +2374,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -2440,24 +2440,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -2505,24 +2505,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -2657,24 +2657,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -2723,24 +2723,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -2789,24 +2789,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -2854,24 +2854,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -2963,24 +2963,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -3029,24 +3029,24 @@ function MarkdownLink(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -3095,24 +3095,24 @@ function MarkdownLink(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -3160,24 +3160,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -3269,24 +3269,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -3335,24 +3335,24 @@ function MarkdownLink(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -3401,24 +3401,24 @@ function MarkdownLink(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -3466,24 +3466,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -3574,24 +3574,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -3640,24 +3640,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -3706,24 +3706,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -3771,24 +3771,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -3922,24 +3922,24 @@ function MarkdownLink(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -3988,24 +3988,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -4054,24 +4054,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -4119,24 +4119,24 @@ function MarkdownLink(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -4228,24 +4228,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -4294,24 +4294,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -4360,24 +4360,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -4425,24 +4425,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -4534,24 +4534,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -4600,24 +4600,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -4666,24 +4666,24 @@ function MarkdownLink(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -4731,24 +4731,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -4839,24 +4839,24 @@ function MarkdownLink(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -4905,24 +4905,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -4971,24 +4971,24 @@ function MarkdownLink(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -5036,24 +5036,24 @@ function MarkdownLink(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -5208,7 +5208,7 @@ function InlineText(arg0) {
                                   let someResult = "element" === type.type;
                                   if (someResult) {
                                     let children = type.children;
-                                    someResult = children.some(/* F104170 */ function() { ... });
+                                    someResult = children.some(/* F104177 */ function() { ... });
                                   }
                                   tmp3 = someResult;
                                 }
@@ -5303,24 +5303,24 @@ function InlineText(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -5369,24 +5369,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -5435,24 +5435,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -5500,24 +5500,24 @@ function InlineText(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -5609,24 +5609,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -5675,24 +5675,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -5741,24 +5741,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -5806,24 +5806,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -5915,24 +5915,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -5981,24 +5981,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -6047,24 +6047,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -6112,24 +6112,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -6220,24 +6220,24 @@ function InlineText(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -6286,24 +6286,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -6352,24 +6352,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -6417,24 +6417,24 @@ function InlineText(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -6569,24 +6569,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -6635,24 +6635,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -6701,24 +6701,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -6766,24 +6766,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -6875,24 +6875,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -6941,24 +6941,24 @@ function InlineText(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -7007,24 +7007,24 @@ function InlineText(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -7072,24 +7072,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -7181,24 +7181,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -7247,24 +7247,24 @@ function InlineText(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -7313,24 +7313,24 @@ function InlineText(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -7378,24 +7378,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -7486,24 +7486,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -7552,24 +7552,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -7618,24 +7618,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -7683,24 +7683,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -7835,24 +7835,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -7901,24 +7901,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -7967,24 +7967,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -8032,24 +8032,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -8141,24 +8141,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -8207,24 +8207,24 @@ function InlineText(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -8273,24 +8273,24 @@ function InlineText(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -8338,24 +8338,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -8447,24 +8447,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -8513,24 +8513,24 @@ function InlineText(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -8579,24 +8579,24 @@ function InlineText(arg0) {
                                         context = { variant: obj2.variant, color: "none", children: null };
                                         children = children.children;
                                         context = obj2;
-                                        context.children = children.map(/* F104171 */ function() { ... });
+                                        context.children = children.map(/* F104178 */ function() { ... });
                                         let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                       } else {
                                         if ("em" === tag) {
                                           let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                           let children1 = children.children;
-                                          styles = children1.map(/* F104171 */ function() { ... });
+                                          styles = children1.map(/* F104178 */ function() { ... });
                                           obj3.children = styles;
                                           tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                         } else if ("s" !== tag) {
                                           let obj4 = { children: null };
                                           let children2 = children.children;
-                                          obj4.children = children2.map(/* F104171 */ function() { ... });
+                                          obj4.children = children2.map(/* F104178 */ function() { ... });
                                           tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                         }
                                         let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                         let children3 = children.children;
-                                        obj5.children = children3.map(/* F104171 */ function() { ... });
+                                        obj5.children = children3.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                       }
                                     } else if ("link" === type) {
@@ -8644,24 +8644,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -8752,24 +8752,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -8818,24 +8818,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -8884,24 +8884,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -8949,24 +8949,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -9100,24 +9100,24 @@ function InlineText(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -9166,24 +9166,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -9232,24 +9232,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -9297,24 +9297,24 @@ function InlineText(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -9406,24 +9406,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -9472,24 +9472,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -9538,24 +9538,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -9603,24 +9603,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -9712,24 +9712,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -9778,24 +9778,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -9844,24 +9844,24 @@ function InlineText(arg0) {
                                       context = { variant: obj2.variant, color: "none", children: null };
                                       children = children.children;
                                       context = obj2;
-                                      context.children = children.map(/* F104171 */ function() { ... });
+                                      context.children = children.map(/* F104178 */ function() { ... });
                                       let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                     } else {
                                       if ("em" === tag) {
                                         let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                         let children1 = children.children;
-                                        styles = children1.map(/* F104171 */ function() { ... });
+                                        styles = children1.map(/* F104178 */ function() { ... });
                                         obj3.children = styles;
                                         tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                       } else if ("s" !== tag) {
                                         let obj4 = { children: null };
                                         let children2 = children.children;
-                                        obj4.children = children2.map(/* F104171 */ function() { ... });
+                                        obj4.children = children2.map(/* F104178 */ function() { ... });
                                         tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                       }
                                       let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                       let children3 = children.children;
-                                      obj5.children = children3.map(/* F104171 */ function() { ... });
+                                      obj5.children = children3.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                     }
                                   } else if ("link" === type) {
@@ -9909,24 +9909,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -10017,24 +10017,24 @@ function InlineText(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -10083,24 +10083,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -10149,24 +10149,24 @@ function InlineText(arg0) {
                                     context = { variant: obj2.variant, color: "none", children: null };
                                     children = children.children;
                                     context = obj2;
-                                    context.children = children.map(/* F104171 */ function() { ... });
+                                    context.children = children.map(/* F104178 */ function() { ... });
                                     let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                   } else {
                                     if ("em" === tag) {
                                       let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                       let children1 = children.children;
-                                      styles = children1.map(/* F104171 */ function() { ... });
+                                      styles = children1.map(/* F104178 */ function() { ... });
                                       obj3.children = styles;
                                       tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                     } else if ("s" !== tag) {
                                       let obj4 = { children: null };
                                       let children2 = children.children;
-                                      obj4.children = children2.map(/* F104171 */ function() { ... });
+                                      obj4.children = children2.map(/* F104178 */ function() { ... });
                                       tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                     }
                                     let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                     let children3 = children.children;
-                                    obj5.children = children3.map(/* F104171 */ function() { ... });
+                                    obj5.children = children3.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                   }
                                 } else if ("link" === type) {
@@ -10214,24 +10214,24 @@ function InlineText(arg0) {
                                   context = { variant: obj2.variant, color: "none", children: null };
                                   children = children.children;
                                   context = obj2;
-                                  context.children = children.map(/* F104171 */ function() { ... });
+                                  context.children = children.map(/* F104178 */ function() { ... });
                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                 } else {
                                   if ("em" === tag) {
                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                     let children1 = children.children;
-                                    styles = children1.map(/* F104171 */ function() { ... });
+                                    styles = children1.map(/* F104178 */ function() { ... });
                                     obj3.children = styles;
                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                   } else if ("s" !== tag) {
                                     let obj4 = { children: null };
                                     let children2 = children.children;
-                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                   }
                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                   let children3 = children.children;
-                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                 }
                               } else if ("link" === type) {
@@ -10523,7 +10523,7 @@ function renderBlock(type, length, styles) {
                                             let someResult = "element" === type.type;
                                             if (someResult) {
                                               let children = type.children;
-                                              someResult = children.some(/* F104170 */ function() { ... });
+                                              someResult = children.some(/* F104177 */ function() { ... });
                                             }
                                             tmp3 = someResult;
                                           }
@@ -10619,24 +10619,24 @@ function renderBlock(type, length, styles) {
                                             context = { variant: obj2.variant, color: "none", children: null };
                                             children = children.children;
                                             context = obj2;
-                                            context.children = children.map(/* F104171 */ function() { ... });
+                                            context.children = children.map(/* F104178 */ function() { ... });
                                             let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                           } else {
                                             if ("em" === tag) {
                                               let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                               let children1 = children.children;
-                                              styles = children1.map(/* F104171 */ function() { ... });
+                                              styles = children1.map(/* F104178 */ function() { ... });
                                               obj3.children = styles;
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                             } else if ("s" !== tag) {
                                               let obj4 = { children: null };
                                               let children2 = children.children;
-                                              obj4.children = children2.map(/* F104171 */ function() { ... });
+                                              obj4.children = children2.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                             }
                                             let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                             let children3 = children.children;
-                                            obj5.children = children3.map(/* F104171 */ function() { ... });
+                                            obj5.children = children3.map(/* F104178 */ function() { ... });
                                             tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                           }
                                         } else if ("link" === type) {
@@ -10685,24 +10685,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -10751,24 +10751,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -10816,24 +10816,24 @@ function renderBlock(type, length, styles) {
                                             context = { variant: obj2.variant, color: "none", children: null };
                                             children = children.children;
                                             context = obj2;
-                                            context.children = children.map(/* F104171 */ function() { ... });
+                                            context.children = children.map(/* F104178 */ function() { ... });
                                             let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                           } else {
                                             if ("em" === tag) {
                                               let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                               let children1 = children.children;
-                                              styles = children1.map(/* F104171 */ function() { ... });
+                                              styles = children1.map(/* F104178 */ function() { ... });
                                               obj3.children = styles;
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                             } else if ("s" !== tag) {
                                               let obj4 = { children: null };
                                               let children2 = children.children;
-                                              obj4.children = children2.map(/* F104171 */ function() { ... });
+                                              obj4.children = children2.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                             }
                                             let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                             let children3 = children.children;
-                                            obj5.children = children3.map(/* F104171 */ function() { ... });
+                                            obj5.children = children3.map(/* F104178 */ function() { ... });
                                             tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                           }
                                         } else if ("link" === type) {
@@ -10925,24 +10925,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -10991,24 +10991,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -11057,24 +11057,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -11122,24 +11122,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -11231,24 +11231,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -11297,24 +11297,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -11363,24 +11363,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -11428,24 +11428,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -11536,24 +11536,24 @@ function renderBlock(type, length, styles) {
                                             context = { variant: obj2.variant, color: "none", children: null };
                                             children = children.children;
                                             context = obj2;
-                                            context.children = children.map(/* F104171 */ function() { ... });
+                                            context.children = children.map(/* F104178 */ function() { ... });
                                             let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                           } else {
                                             if ("em" === tag) {
                                               let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                               let children1 = children.children;
-                                              styles = children1.map(/* F104171 */ function() { ... });
+                                              styles = children1.map(/* F104178 */ function() { ... });
                                               obj3.children = styles;
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                             } else if ("s" !== tag) {
                                               let obj4 = { children: null };
                                               let children2 = children.children;
-                                              obj4.children = children2.map(/* F104171 */ function() { ... });
+                                              obj4.children = children2.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                             }
                                             let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                             let children3 = children.children;
-                                            obj5.children = children3.map(/* F104171 */ function() { ... });
+                                            obj5.children = children3.map(/* F104178 */ function() { ... });
                                             tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                           }
                                         } else if ("link" === type) {
@@ -11602,24 +11602,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -11668,24 +11668,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -11733,24 +11733,24 @@ function renderBlock(type, length, styles) {
                                             context = { variant: obj2.variant, color: "none", children: null };
                                             children = children.children;
                                             context = obj2;
-                                            context.children = children.map(/* F104171 */ function() { ... });
+                                            context.children = children.map(/* F104178 */ function() { ... });
                                             let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                           } else {
                                             if ("em" === tag) {
                                               let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                               let children1 = children.children;
-                                              styles = children1.map(/* F104171 */ function() { ... });
+                                              styles = children1.map(/* F104178 */ function() { ... });
                                               obj3.children = styles;
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                             } else if ("s" !== tag) {
                                               let obj4 = { children: null };
                                               let children2 = children.children;
-                                              obj4.children = children2.map(/* F104171 */ function() { ... });
+                                              obj4.children = children2.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                             }
                                             let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                             let children3 = children.children;
-                                            obj5.children = children3.map(/* F104171 */ function() { ... });
+                                            obj5.children = children3.map(/* F104178 */ function() { ... });
                                             tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                           }
                                         } else if ("link" === type) {
@@ -11885,24 +11885,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -11951,24 +11951,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -12017,24 +12017,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -12082,24 +12082,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -12191,24 +12191,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -12257,24 +12257,24 @@ function renderBlock(type, length, styles) {
                                                   context = { variant: obj2.variant, color: "none", children: null };
                                                   children = children.children;
                                                   context = obj2;
-                                                  context.children = children.map(/* F104171 */ function() { ... });
+                                                  context.children = children.map(/* F104178 */ function() { ... });
                                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                                 } else {
                                                   if ("em" === tag) {
                                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                     let children1 = children.children;
-                                                    styles = children1.map(/* F104171 */ function() { ... });
+                                                    styles = children1.map(/* F104178 */ function() { ... });
                                                     obj3.children = styles;
                                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                   } else if ("s" !== tag) {
                                                     let obj4 = { children: null };
                                                     let children2 = children.children;
-                                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                   }
                                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                   let children3 = children.children;
-                                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                                 }
                                               } else if ("link" === type) {
@@ -12323,24 +12323,24 @@ function renderBlock(type, length, styles) {
                                                   context = { variant: obj2.variant, color: "none", children: null };
                                                   children = children.children;
                                                   context = obj2;
-                                                  context.children = children.map(/* F104171 */ function() { ... });
+                                                  context.children = children.map(/* F104178 */ function() { ... });
                                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                                 } else {
                                                   if ("em" === tag) {
                                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                     let children1 = children.children;
-                                                    styles = children1.map(/* F104171 */ function() { ... });
+                                                    styles = children1.map(/* F104178 */ function() { ... });
                                                     obj3.children = styles;
                                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                   } else if ("s" !== tag) {
                                                     let obj4 = { children: null };
                                                     let children2 = children.children;
-                                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                   }
                                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                   let children3 = children.children;
-                                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                                 }
                                               } else if ("link" === type) {
@@ -12388,24 +12388,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -12497,24 +12497,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -12563,24 +12563,24 @@ function renderBlock(type, length, styles) {
                                                   context = { variant: obj2.variant, color: "none", children: null };
                                                   children = children.children;
                                                   context = obj2;
-                                                  context.children = children.map(/* F104171 */ function() { ... });
+                                                  context.children = children.map(/* F104178 */ function() { ... });
                                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                                 } else {
                                                   if ("em" === tag) {
                                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                     let children1 = children.children;
-                                                    styles = children1.map(/* F104171 */ function() { ... });
+                                                    styles = children1.map(/* F104178 */ function() { ... });
                                                     obj3.children = styles;
                                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                   } else if ("s" !== tag) {
                                                     let obj4 = { children: null };
                                                     let children2 = children.children;
-                                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                   }
                                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                   let children3 = children.children;
-                                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                                 }
                                               } else if ("link" === type) {
@@ -12629,24 +12629,24 @@ function renderBlock(type, length, styles) {
                                                   context = { variant: obj2.variant, color: "none", children: null };
                                                   children = children.children;
                                                   context = obj2;
-                                                  context.children = children.map(/* F104171 */ function() { ... });
+                                                  context.children = children.map(/* F104178 */ function() { ... });
                                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                                 } else {
                                                   if ("em" === tag) {
                                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                     let children1 = children.children;
-                                                    styles = children1.map(/* F104171 */ function() { ... });
+                                                    styles = children1.map(/* F104178 */ function() { ... });
                                                     obj3.children = styles;
                                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                   } else if ("s" !== tag) {
                                                     let obj4 = { children: null };
                                                     let children2 = children.children;
-                                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                   }
                                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                   let children3 = children.children;
-                                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                                 }
                                               } else if ("link" === type) {
@@ -12694,24 +12694,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -12802,24 +12802,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -12868,24 +12868,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -12934,24 +12934,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -12999,24 +12999,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -13151,24 +13151,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -13217,24 +13217,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -13283,24 +13283,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -13348,24 +13348,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -13457,24 +13457,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -13523,24 +13523,24 @@ function renderBlock(type, length, styles) {
                                                   context = { variant: obj2.variant, color: "none", children: null };
                                                   children = children.children;
                                                   context = obj2;
-                                                  context.children = children.map(/* F104171 */ function() { ... });
+                                                  context.children = children.map(/* F104178 */ function() { ... });
                                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                                 } else {
                                                   if ("em" === tag) {
                                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                     let children1 = children.children;
-                                                    styles = children1.map(/* F104171 */ function() { ... });
+                                                    styles = children1.map(/* F104178 */ function() { ... });
                                                     obj3.children = styles;
                                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                   } else if ("s" !== tag) {
                                                     let obj4 = { children: null };
                                                     let children2 = children.children;
-                                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                   }
                                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                   let children3 = children.children;
-                                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                                 }
                                               } else if ("link" === type) {
@@ -13589,24 +13589,24 @@ function renderBlock(type, length, styles) {
                                                   context = { variant: obj2.variant, color: "none", children: null };
                                                   children = children.children;
                                                   context = obj2;
-                                                  context.children = children.map(/* F104171 */ function() { ... });
+                                                  context.children = children.map(/* F104178 */ function() { ... });
                                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                                 } else {
                                                   if ("em" === tag) {
                                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                     let children1 = children.children;
-                                                    styles = children1.map(/* F104171 */ function() { ... });
+                                                    styles = children1.map(/* F104178 */ function() { ... });
                                                     obj3.children = styles;
                                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                   } else if ("s" !== tag) {
                                                     let obj4 = { children: null };
                                                     let children2 = children.children;
-                                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                   }
                                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                   let children3 = children.children;
-                                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                                 }
                                               } else if ("link" === type) {
@@ -13654,24 +13654,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -13763,24 +13763,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -13829,24 +13829,24 @@ function renderBlock(type, length, styles) {
                                                   context = { variant: obj2.variant, color: "none", children: null };
                                                   children = children.children;
                                                   context = obj2;
-                                                  context.children = children.map(/* F104171 */ function() { ... });
+                                                  context.children = children.map(/* F104178 */ function() { ... });
                                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                                 } else {
                                                   if ("em" === tag) {
                                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                     let children1 = children.children;
-                                                    styles = children1.map(/* F104171 */ function() { ... });
+                                                    styles = children1.map(/* F104178 */ function() { ... });
                                                     obj3.children = styles;
                                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                   } else if ("s" !== tag) {
                                                     let obj4 = { children: null };
                                                     let children2 = children.children;
-                                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                   }
                                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                   let children3 = children.children;
-                                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                                 }
                                               } else if ("link" === type) {
@@ -13895,24 +13895,24 @@ function renderBlock(type, length, styles) {
                                                   context = { variant: obj2.variant, color: "none", children: null };
                                                   children = children.children;
                                                   context = obj2;
-                                                  context.children = children.map(/* F104171 */ function() { ... });
+                                                  context.children = children.map(/* F104178 */ function() { ... });
                                                   let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                                 } else {
                                                   if ("em" === tag) {
                                                     let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                     let children1 = children.children;
-                                                    styles = children1.map(/* F104171 */ function() { ... });
+                                                    styles = children1.map(/* F104178 */ function() { ... });
                                                     obj3.children = styles;
                                                     tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                   } else if ("s" !== tag) {
                                                     let obj4 = { children: null };
                                                     let children2 = children.children;
-                                                    obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                    obj4.children = children2.map(/* F104178 */ function() { ... });
                                                     tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                   }
                                                   let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                   let children3 = children.children;
-                                                  obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                  obj5.children = children3.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                                 }
                                               } else if ("link" === type) {
@@ -13960,24 +13960,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -14068,24 +14068,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -14134,24 +14134,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -14200,24 +14200,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -14265,24 +14265,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -14416,24 +14416,24 @@ function renderBlock(type, length, styles) {
                                             context = { variant: obj2.variant, color: "none", children: null };
                                             children = children.children;
                                             context = obj2;
-                                            context.children = children.map(/* F104171 */ function() { ... });
+                                            context.children = children.map(/* F104178 */ function() { ... });
                                             let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                           } else {
                                             if ("em" === tag) {
                                               let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                               let children1 = children.children;
-                                              styles = children1.map(/* F104171 */ function() { ... });
+                                              styles = children1.map(/* F104178 */ function() { ... });
                                               obj3.children = styles;
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                             } else if ("s" !== tag) {
                                               let obj4 = { children: null };
                                               let children2 = children.children;
-                                              obj4.children = children2.map(/* F104171 */ function() { ... });
+                                              obj4.children = children2.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                             }
                                             let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                             let children3 = children.children;
-                                            obj5.children = children3.map(/* F104171 */ function() { ... });
+                                            obj5.children = children3.map(/* F104178 */ function() { ... });
                                             tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                           }
                                         } else if ("link" === type) {
@@ -14482,24 +14482,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -14548,24 +14548,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -14613,24 +14613,24 @@ function renderBlock(type, length, styles) {
                                             context = { variant: obj2.variant, color: "none", children: null };
                                             children = children.children;
                                             context = obj2;
-                                            context.children = children.map(/* F104171 */ function() { ... });
+                                            context.children = children.map(/* F104178 */ function() { ... });
                                             let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                           } else {
                                             if ("em" === tag) {
                                               let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                               let children1 = children.children;
-                                              styles = children1.map(/* F104171 */ function() { ... });
+                                              styles = children1.map(/* F104178 */ function() { ... });
                                               obj3.children = styles;
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                             } else if ("s" !== tag) {
                                               let obj4 = { children: null };
                                               let children2 = children.children;
-                                              obj4.children = children2.map(/* F104171 */ function() { ... });
+                                              obj4.children = children2.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                             }
                                             let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                             let children3 = children.children;
-                                            obj5.children = children3.map(/* F104171 */ function() { ... });
+                                            obj5.children = children3.map(/* F104178 */ function() { ... });
                                             tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                           }
                                         } else if ("link" === type) {
@@ -14722,24 +14722,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -14788,24 +14788,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -14854,24 +14854,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -14919,24 +14919,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -15028,24 +15028,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -15094,24 +15094,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -15160,24 +15160,24 @@ function renderBlock(type, length, styles) {
                                                 context = { variant: obj2.variant, color: "none", children: null };
                                                 children = children.children;
                                                 context = obj2;
-                                                context.children = children.map(/* F104171 */ function() { ... });
+                                                context.children = children.map(/* F104178 */ function() { ... });
                                                 let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                               } else {
                                                 if ("em" === tag) {
                                                   let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                   let children1 = children.children;
-                                                  styles = children1.map(/* F104171 */ function() { ... });
+                                                  styles = children1.map(/* F104178 */ function() { ... });
                                                   obj3.children = styles;
                                                   tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                                 } else if ("s" !== tag) {
                                                   let obj4 = { children: null };
                                                   let children2 = children.children;
-                                                  obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                  obj4.children = children2.map(/* F104178 */ function() { ... });
                                                   tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                                 }
                                                 let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                                 let children3 = children.children;
-                                                obj5.children = children3.map(/* F104171 */ function() { ... });
+                                                obj5.children = children3.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                               }
                                             } else if ("link" === type) {
@@ -15225,24 +15225,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -15333,24 +15333,24 @@ function renderBlock(type, length, styles) {
                                             context = { variant: obj2.variant, color: "none", children: null };
                                             children = children.children;
                                             context = obj2;
-                                            context.children = children.map(/* F104171 */ function() { ... });
+                                            context.children = children.map(/* F104178 */ function() { ... });
                                             let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                           } else {
                                             if ("em" === tag) {
                                               let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                               let children1 = children.children;
-                                              styles = children1.map(/* F104171 */ function() { ... });
+                                              styles = children1.map(/* F104178 */ function() { ... });
                                               obj3.children = styles;
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                             } else if ("s" !== tag) {
                                               let obj4 = { children: null };
                                               let children2 = children.children;
-                                              obj4.children = children2.map(/* F104171 */ function() { ... });
+                                              obj4.children = children2.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                             }
                                             let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                             let children3 = children.children;
-                                            obj5.children = children3.map(/* F104171 */ function() { ... });
+                                            obj5.children = children3.map(/* F104178 */ function() { ... });
                                             tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                           }
                                         } else if ("link" === type) {
@@ -15399,24 +15399,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -15465,24 +15465,24 @@ function renderBlock(type, length, styles) {
                                               context = { variant: obj2.variant, color: "none", children: null };
                                               children = children.children;
                                               context = obj2;
-                                              context.children = children.map(/* F104171 */ function() { ... });
+                                              context.children = children.map(/* F104178 */ function() { ... });
                                               let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                             } else {
                                               if ("em" === tag) {
                                                 let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                                 let children1 = children.children;
-                                                styles = children1.map(/* F104171 */ function() { ... });
+                                                styles = children1.map(/* F104178 */ function() { ... });
                                                 obj3.children = styles;
                                                 tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                               } else if ("s" !== tag) {
                                                 let obj4 = { children: null };
                                                 let children2 = children.children;
-                                                obj4.children = children2.map(/* F104171 */ function() { ... });
+                                                obj4.children = children2.map(/* F104178 */ function() { ... });
                                                 tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                               }
                                               let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                               let children3 = children.children;
-                                              obj5.children = children3.map(/* F104171 */ function() { ... });
+                                              obj5.children = children3.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                             }
                                           } else if ("link" === type) {
@@ -15530,24 +15530,24 @@ function renderBlock(type, length, styles) {
                                             context = { variant: obj2.variant, color: "none", children: null };
                                             children = children.children;
                                             context = obj2;
-                                            context.children = children.map(/* F104171 */ function() { ... });
+                                            context.children = children.map(/* F104178 */ function() { ... });
                                             let tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, context, index);
                                           } else {
                                             if ("em" === tag) {
                                               let obj3 = { variant: context.variant, color: "none", style: styles.italic, children: null };
                                               let children1 = children.children;
-                                              styles = children1.map(/* F104171 */ function() { ... });
+                                              styles = children1.map(/* F104178 */ function() { ... });
                                               obj3.children = styles;
                                               tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj3, index);
                                             } else if ("s" !== tag) {
                                               let obj4 = { children: null };
                                               let children2 = children.children;
-                                              obj4.children = children2.map(/* F104171 */ function() { ... });
+                                              obj4.children = children2.map(/* F104178 */ function() { ... });
                                               tmp9 = closure_2_7(closure_2_4.Fragment, obj4, index);
                                             }
                                             let obj5 = { variant: context.variant, color: "none", style: styles.strikethrough, children: null };
                                             let children3 = children.children;
-                                            obj5.children = children3.map(/* F104171 */ function() { ... });
+                                            obj5.children = children3.map(/* F104178 */ function() { ... });
                                             tmp9 = closure_2_7(closure_2_0(closure_2_2[7]).Text, obj5, index);
                                           }
                                         } else if ("link" === type) {

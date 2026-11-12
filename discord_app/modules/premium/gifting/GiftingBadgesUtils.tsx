@@ -1,11 +1,11 @@
-// === Module 11617: GiftingBadgesUtils ===
+// === Module 11611: GiftingBadgesUtils ===
 
-// Module 11617 (GiftingBadgesUtils)
+// Module 11611 (GiftingBadgesUtils)
 import util from "util" /* 1113 */;
 import _modDef2781 from "module_2781" /* 2781 */;
 import BadgeId from "BadgeId" /* 8414 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8486 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 11612 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 11606 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8481 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -74,9 +74,9 @@ export function useGiftingBadgeCoachmarkVariant(arg0) {
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeExperiment = stateFromStores(11612).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = stateFromStores(11606).GiftingBadgeExperiment;
   let enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(11618).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(11612).GiftingBadgeCoachmarkAudienceExperiment;
   let str = "-DISABLED";
   if (enabled2) {
     str = "";

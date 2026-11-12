@@ -1,6 +1,6 @@
-// === Module 15949: MemberVerificationAlertIncomplete ===
+// === Module 15944: MemberVerificationAlertIncomplete ===
 
-// Module 15949 (MemberVerificationAlertIncomplete)
+// Module 15944 (MemberVerificationAlertIncomplete)
 import util from "util" /* 1113 */;
 import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6861 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7618 */;
@@ -54,7 +54,7 @@ export default function MemberVerificationAlertIncomplete(guildId) {
   const obj3 = {};
   const obj = guildId(563);
   const merged1 = Object.assign(merged);
-  obj3.icon = guildId(15950).ListViewIcon;
+  obj3.icon = guildId(15945).ListViewIcon;
   obj3.header = formatToPlainStringResult;
   const obj4 = { children: null };
   const obj5 = { variant: "secondary", text: null, onPress: null };

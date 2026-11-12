@@ -1,6 +1,6 @@
-// === Module 15579: AddFriendNicknameModal ===
+// === Module 15576: AddFriendNicknameModal ===
 
-// Module 15579 (AddFriendNicknameModal)
+// Module 15576 (AddFriendNicknameModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -127,7 +127,7 @@ export default function AddFriendNicknameModal(arg0) {
   };
   const tmp = closure_11();
   [c2, c3] = noop.useState(false);
-  _slicedToArray = showUserProfile(10847)();
+  _slicedToArray = showUserProfile(10841)();
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   items = [closure_7];
   const stateFromStores = initialize.useStateFromStores(items, () => RelationshipStore.getNickname(require));

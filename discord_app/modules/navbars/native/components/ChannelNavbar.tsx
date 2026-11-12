@@ -1,6 +1,6 @@
-// === Module 15029: ChannelNavbar ===
+// === Module 15025: ChannelNavbar ===
 
-// Module 15029 (ChannelNavbar)
+// Module 15025 (ChannelNavbar)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -13,7 +13,7 @@ import useChannelName from "useChannelName" /* 5891 */;
 import Pressables from "Pressables" /* 7364 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7968 */;
 import isStreamingDefault from "isStreaming" /* 8558 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10782 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10776 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -440,8 +440,8 @@ export function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = closure_16(closure_1(10501), obj2);
-        const tmp4Result = closure_1(10501);
+        tmp3Result = closure_16(closure_1(10499), obj2);
+        const tmp4Result = closure_1(10499);
       }
       children1[1] = tmp3Result;
       return closure_17(closure_4, { children: children1 }, index);

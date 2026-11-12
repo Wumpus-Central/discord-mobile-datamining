@@ -1,6 +1,6 @@
-// === Module 20616: FormPriceTier ===
+// === Module 20611: FormPriceTier ===
 
-// Module 20616 (FormPriceTier)
+// Module 20611 (FormPriceTier)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
@@ -8,7 +8,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const RoleTierEditStore = fn(20577);
+const RoleTierEditStore = fn(20572);
 ({ LoadingState: c3, usePriceTiersAvailableInGuild: closure_4 } = RoleTierEditStore);
 const CurrencyCodes = fn(1072).CurrencyCodes;
 const jsx = fn(21).jsx;

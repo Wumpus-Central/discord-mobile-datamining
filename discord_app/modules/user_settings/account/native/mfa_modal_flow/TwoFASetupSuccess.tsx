@@ -1,14 +1,14 @@
-// === Module 17174: TwoFASetupSuccess ===
+// === Module 17169: TwoFASetupSuccess ===
 
-// Module 17174 (TwoFASetupSuccess)
+// Module 17169 (TwoFASetupSuccess)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 17164 */;
-import _mod17175 from "module_17175" /* 17175 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 17159 */;
+import _mod17170 from "module_17170" /* 17170 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -94,9 +94,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(17163).close();
+              setError(17158).close();
               c4 = 0;
-              const obj = setError(17163);
+              const obj = setError(17158);
             }
             c4 = 0;
             c6 = 3;
@@ -134,7 +134,7 @@ export default function TwoFASetupSuccess() {
   let obj3 = { source: null, style: null };
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  obj3.source = _mod17175;
+  obj3.source = _mod17170;
   obj3.style = tmp.image;
   items[1] = closure_7(FastImageDefault, obj3);
   let obj4 = { style: tmp.success, variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };

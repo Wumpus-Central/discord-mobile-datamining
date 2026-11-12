@@ -1,22 +1,22 @@
-// === Module 13678: ConjureProjectAboutSheet ===
+// === Module 13672: ConjureProjectAboutSheet ===
 
-// Module 13678 (ConjureProjectAboutSheet)
+// Module 13672 (ConjureProjectAboutSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
-import UserUtils from "UserUtils" /* 5309 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import Stack_Stack from "Stack/Stack" /* 6274 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7929 */;
-import openConjureProjectAboutSheet from "openConjureProjectAboutSheet" /* 13677 */;
-import useConjureSharedProjectDefault from "useConjureSharedProject" /* 13679 */;
-import useConjureSharedProjectCoverActionDefault from "useConjureSharedProjectCoverAction" /* 13680 */;
-import ConjureSharedProjectCoverDefault from "ConjureSharedProjectCover" /* 13684 */;
-import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 13685 */;
-import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 13686 */;
-import useConjureProjectCreator from "useConjureProjectCreator" /* 13687 */;
-import openConjureSharedProjectRemixSheetDefault from "openConjureSharedProjectRemixSheet" /* 13689 */;
+import openConjureProjectAboutSheet from "openConjureProjectAboutSheet" /* 13671 */;
+import useConjureSharedProjectDefault from "useConjureSharedProject" /* 13673 */;
+import useConjureSharedProjectCoverActionDefault from "useConjureSharedProjectCoverAction" /* 13674 */;
+import ConjureSharedProjectCoverDefault from "ConjureSharedProjectCover" /* 13678 */;
+import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 13679 */;
+import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 13680 */;
+import useConjureProjectCreator from "useConjureProjectCreator" /* 13681 */;
+import ConjureCreatorBylineDefault from "ConjureCreatorByline" /* 13683 */;
+import openConjureSharedProjectRemixSheetDefault from "openConjureSharedProjectRemixSheet" /* 13685 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -41,18 +41,15 @@ function Surfaces(project) {
   }
   return tmp3;
 }
-function Creator(project) {
-  const creator = useConjureProjectCreator.useConjureProjectPeople(project.project).creator;
-  let tmp3 = null;
+function Creator(arg0) {
+  ({ project, guildId } = arg0);
+  const creator = useConjureProjectCreator.useConjureProjectPeople(project).creator;
+  let tmp2 = null;
   if (null != creator) {
-    const obj2 = { variant: "body-sm/normal", color: "text-muted", lineClamp: 1, children: null };
-    const intl = util.intl;
-    const obj3 = { name: UserUtils.getName(creator) };
-    obj2.children = intl.formatToPlainString(_modDef4079["6/x9LD"], obj3);
-    tmp3 = timestampProducer(Text_Text.Text, obj2);
-    const tmpResult = UserUtils;
+    const obj2 = { creator, guildId };
+    tmp2 = timestampProducer(ConjureCreatorBylineDefault, obj2);
   }
-  return tmp3;
+  return tmp2;
 }
 function RemixActions(project) {
   project = project.project;
@@ -176,7 +173,7 @@ export default function ConjureProjectAboutSheet(arg0) {
           return obj5;
         } else {
           if (value) {
-            v1(5489).hideActionSheet(tmp4(13677).CONJURE_PROJECT_ABOUT_SHEET_KEY);
+            v1(5489).hideActionSheet(tmp4(13671).CONJURE_PROJECT_ABOUT_SHEET_KEY);
             const obj = v1(5489);
           }
           dependencyMap = 3;
@@ -257,7 +254,7 @@ export default function ConjureProjectAboutSheet(arg0) {
     const obj15 = { children: null };
     const obj16 = { project: tmp3.project };
     const items5 = [closure_6(Surfaces, obj16), ];
-    const obj17 = { project: tmp3.project };
+    const obj17 = { project: tmp3.project, guildId: source.guildId };
     items5[1] = closure_6(Creator, obj17);
     obj15.children = items5;
     tmp18Result2 = closure_7(closure_8, obj15);

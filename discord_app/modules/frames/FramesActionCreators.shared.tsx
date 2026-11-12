@@ -1,11 +1,11 @@
-// === Module 12655: _launchFrame ===
+// === Module 12649: _launchFrame ===
 
-// Module 12655 (_launchFrame)
+// Module 12649 (_launchFrame)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6959 */;
 import createProxyTicket from "createProxyTicket" /* 7277 */;
 import leaveFrame from "leaveFrame" /* 7285 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 12656 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 12650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import FramesStore from "FramesStore" /* 6956 */;

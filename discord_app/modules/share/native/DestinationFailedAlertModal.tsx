@@ -1,6 +1,6 @@
-// === Module 15083: DestinationFailedAlertModal ===
+// === Module 15080: DestinationFailedAlertModal ===
 
-// Module 15083 (DestinationFailedAlertModal)
+// Module 15080 (DestinationFailedAlertModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -8,7 +8,7 @@ import UserUtilsDefault from "UserUtils" /* 5309 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import useChannelNameDefault from "useChannelName" /* 5891 */;
 import AlertModal from "AlertModal" /* 6211 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10828 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10822 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -25,7 +25,7 @@ function FailedGroupDMRow(channel) {
   const tmp2 = useChannelNameDefault(channel);
   obj2.size = native.AvatarSizes.REFRESH_MEDIUM_32;
   obj2.channel = channel;
-  items = [closure_1_10(GroupDMAvatarDefault, obj2), closure_1_10(Text_Text.Text, { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp2 })];
+  items = [refs(GroupDMAvatarDefault, obj2), refs(Text_Text.Text, { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp2 })];
   obj.children = items;
   return closure_1_11(View, obj);
 }
@@ -41,7 +41,7 @@ function FailedUserRow(user) {
   let tmp9Result = null;
   if (null != user) {
     const obj3 = { style: tmp.row, children: null };
-    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: false, isVROnline: null, size: true, avatarDecoration: 1, autoStatusCutout: null };
+    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: 0, isVROnline: "CONJURE_CHAT_CONN_STATE", size: null, avatarDecoration: "closed", autoStatusCutout: "clothing" };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
       tmp13 = status;
@@ -77,7 +77,7 @@ function FailedChannelRow(channel) {
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(15063).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(15063).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5866).Text, { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(15060).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(15060).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(5866).Text, { style: tmp.label, variant: "body-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 }
@@ -135,25 +135,25 @@ export default function DestinationFailedAlertModal(arg0) {
   ({ title, content } = arg0);
   const obj = { title, content, extraContent: null, actions: null };
   const tmp = closure_13();
-  obj.extraContent = closure_1_10(View, { style: closure_13().container, children: failedDestinations.map((destination, index) => closure_1_10(FailedDestinationRow, { destination }, index)) });
+  obj.extraContent = refs(View, { style: closure_13().container, children: failedDestinations.map((destination, index) => closure_1_10(FailedDestinationRow, { destination }, index)) });
   if (null != onRetry) {
     const obj3 = { children: null };
     const obj4 = { variant: "primary", onPress: onRetry, text: null };
     const intl2 = util.intl;
     obj4.text = intl2.string(util.t["5911Lb"]);
-    items = [closure_1_10(AlertModal.AlertActionButton, obj4, "confirm"), ];
+    items = [refs(AlertModal.AlertActionButton, obj4, "confirm"), ];
     const obj5 = { variant: "secondary", text: null };
     const intl3 = util.intl;
     obj5.text = intl3.string(util.t.WAI6xu);
-    items[1] = closure_1_10(AlertModal.AlertActionButton, obj5, "cancel");
+    items[1] = refs(AlertModal.AlertActionButton, obj5, "cancel");
     obj3.children = items;
     let tmp2Result = closure_1_11(application_id, obj3);
   } else {
     const obj6 = { variant: "primary", text: null };
     const intl = util.intl;
     obj6.text = intl.string(util.t.BddRzS);
-    tmp2Result = closure_1_10(AlertModal.AlertActionButton, obj6, "confirm");
+    tmp2Result = refs(AlertModal.AlertActionButton, obj6, "confirm");
   }
-  obj.actions = closure_1_10(AlertModal.AlertActions, { children: tmp2Result });
-  return closure_1_10(AlertModal.AlertModal, obj);
+  obj.actions = refs(AlertModal.AlertActions, { children: tmp2Result });
+  return refs(AlertModal.AlertModal, obj);
 };

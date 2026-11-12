@@ -1,6 +1,6 @@
-// === Module 16224: ShareUtils ===
+// === Module 16219: ShareUtils ===
 
-// Module 16224 (ShareUtils)
+// Module 16219 (ShareUtils)
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5974 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -56,8 +56,8 @@ let closure_6 = async function _sendShareMessage(arg0) {
         } else {
           id = closure_130_1.id;
           closure_130_4 = closure_130_0.map((uri) => {
-            const size = { uri: uri.uri, originalUri: uri.uri, mimeType: uri.mimeType, filename: uri.name, platform: closure_0(8784).UploadPlatform.REACT_NATIVE, width: uri.width, height: uri.height, preTranscodeSourceSize: uri.originalSize };
-            const cloudUpload = new closure_0(8807).CloudUpload(size, guildId.id);
+            const size = { uri: uri.uri, originalUri: uri.uri, mimeType: uri.mimeType, filename: uri.name, platform: closure_0(8783).UploadPlatform.REACT_NATIVE, width: uri.width, height: uri.height, preTranscodeSourceSize: uri.originalSize };
+            const cloudUpload = new closure_0(8806).CloudUpload(size, guildId.id);
             return cloudUpload;
           });
           c1 = closure_130_2;
@@ -80,10 +80,10 @@ let closure_6 = async function _sendShareMessage(arg0) {
                       const obj = { uploadError: { file, guildId: guildId.getGuildId(), code, reason } };
                       closure_1_6.reject(obj);
                       const obj2 = { file, guildId: guildId.getGuildId(), code, reason };
-                      guildId(11092).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
-                      const obj3 = guildId(11092);
+                      guildId(11086).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
+                      const obj3 = guildId(11086);
                       const obj4 = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
-                      guildId(8938).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
+                      guildId(8937).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
                     }
           };
           c4 = 2;

@@ -1,6 +1,6 @@
-// === Module 18521: Auth ===
+// === Module 18516: Auth ===
 
-// Module 18521 (Auth)
+// Module 18516 (Auth)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
@@ -10,16 +10,16 @@ import StackNavigator from "StackNavigator" /* 7485 */;
 import BackgroundImageDefault from "BackgroundImage" /* 7648 */;
 import useWideAuthViewDefault from "useWideAuthView" /* 7704 */;
 import WideAuthScrollContext from "WideAuthScrollContext" /* 7727 */;
-import RegistrationHandoff from "RegistrationHandoff" /* 18522 */;
-import useShouldShowChooseAccountDefault from "useShouldShowChooseAccount" /* 18528 */;
-import RegistrationUtils from "RegistrationUtils" /* 18533 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 18576 */;
-import _mod18577 from "module_18577" /* 18577 */;
-import AuthManagerDefault from "AuthManager" /* 18578 */;
-import useOrientationLockDefault from "useOrientationLock" /* 18587 */;
+import RegistrationHandoff from "RegistrationHandoff" /* 18517 */;
+import useShouldShowChooseAccountDefault from "useShouldShowChooseAccount" /* 18523 */;
+import RegistrationUtils from "RegistrationUtils" /* 18528 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 18571 */;
+import _mod18572 from "module_18572" /* 18572 */;
+import AuthManagerDefault from "AuthManager" /* 18573 */;
+import useOrientationLockDefault from "useOrientationLock" /* 18582 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 14720 */;
+import MultiAccountStore from "MultiAccountStore" /* 14716 */;
 
 require = fn;
 function getInitialAuthRouteStack() {
@@ -64,7 +64,7 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod18577;
+  obj3.backgroundImageSource = _mod18572;
   const children = [closure_9(BackgroundImageDefault, obj3), , ];
   let tmp18Result = null;
   if (tmp5) {
@@ -145,7 +145,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1072).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(18523);
+let RegistrationStepsUtils = fn(18518);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {

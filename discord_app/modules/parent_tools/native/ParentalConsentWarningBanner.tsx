@@ -1,6 +1,6 @@
-// === Module 19684: ParentalConsentWarningBanner ===
+// === Module 19679: ParentalConsentWarningBanner ===
 
-// Module 19684 (ParentalConsentWarningBanner)
+// Module 19679 (ParentalConsentWarningBanner)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import Text_Text from "Text/Text" /* 5866 */;

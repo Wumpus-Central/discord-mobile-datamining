@@ -1,6 +1,6 @@
-// === Module 16832: getFrameChannelId ===
+// === Module 16827: getFrameChannelId ===
 
-// Module 16832 (getFrameChannelId)
+// Module 16827 (getFrameChannelId)
 import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6959 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 

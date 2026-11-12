@@ -1,13 +1,13 @@
-// === Module 10349: CollectiblesShopCardV2 ===
+// === Module 10347: CollectiblesShopCardV2 ===
 
-// Module 10349 (CollectiblesShopCardV2)
+// Module 10347 (CollectiblesShopCardV2)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import v1 from "v1" /* 1266 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 9341 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9353 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 9340 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9352 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8419 */;

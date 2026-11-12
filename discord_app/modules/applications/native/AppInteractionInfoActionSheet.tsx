@@ -1,6 +1,6 @@
-// === Module 12576: AppInteractionInfoActionSheet ===
+// === Module 12570: AppInteractionInfoActionSheet ===
 
-// Module 12576 (AppInteractionInfoActionSheet)
+// Module 12570 (AppInteractionInfoActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import UserActionCreators from "UserActionCreators" /* 7286 */;

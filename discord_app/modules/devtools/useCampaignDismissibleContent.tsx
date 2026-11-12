@@ -1,7 +1,7 @@
-// === Module 18236: useCampaignDismissibleContent ===
+// === Module 18231: useCampaignDismissibleContent ===
 
-// Module 18236 (useCampaignDismissibleContent)
-import CampaignDevToolsUtils from "CampaignDevToolsUtils" /* 9604 */;
+// Module 18231 (useCampaignDismissibleContent)
+import CampaignDevToolsUtils from "CampaignDevToolsUtils" /* 9603 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -156,7 +156,7 @@ export default function useCampaignDismissibleContent(arg0, arg1) {
                         return obj3;
                       } else if (dependencyMap !== ref.current) {
                         c1 = 3;
-                        const obj4 = { value: { v: "Array" }, done: true };
+                        const obj4 = { value: { v: "r" }, done: true };
                         return obj4;
                       } else if (next.some((content) => content.content === closure_0)) {
                         c2 = 1;

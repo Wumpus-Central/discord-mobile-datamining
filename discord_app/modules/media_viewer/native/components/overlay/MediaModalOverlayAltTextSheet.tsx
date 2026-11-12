@@ -1,12 +1,12 @@
-// === Module 12361: MediaModalOverlayAltTextSheet ===
+// === Module 12355: MediaModalOverlayAltTextSheet ===
 
-// Module 12361 (MediaModalOverlayAltTextSheet)
+// Module 12355 (MediaModalOverlayAltTextSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5503 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7847 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 12362 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 12356 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

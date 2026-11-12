@@ -1,18 +1,18 @@
-// === Module 20504: GuildSettingsRoleSubscriptionWelcomeView ===
+// === Module 20499: GuildSettingsRoleSubscriptionWelcomeView ===
 
-// Module 20504 (GuildSettingsRoleSubscriptionWelcomeView)
+// Module 20499 (GuildSettingsRoleSubscriptionWelcomeView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import NavigatorConstants from "NavigatorConstants" /* 5829 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import ErrorBlockDefault from "ErrorBlock" /* 13454 */;
-import WarningNoticeDefault from "WarningNotice" /* 20506 */;
-import EligibilityActionSheet from "EligibilityActionSheet" /* 20509 */;
-import HowItWorksSectionDefault from "HowItWorksSection" /* 20515 */;
-import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 20528 */;
-import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 20553 */;
+import ErrorBlockDefault from "ErrorBlock" /* 13448 */;
+import WarningNoticeDefault from "WarningNotice" /* 20501 */;
+import EligibilityActionSheet from "EligibilityActionSheet" /* 20504 */;
+import HowItWorksSectionDefault from "HowItWorksSection" /* 20510 */;
+import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 20523 */;
+import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 20548 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -101,7 +101,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback = noop.useCallback(() => submitAcceptTermsRequest(), items);
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(20509, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
+    return obj.openLazy(asyncRequireImpl(20504, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
       eligibility,
       onRequireModeratorMFAClick() {
         navigation.push(constants.SECURITY);
@@ -233,9 +233,9 @@ class MarketingSections {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const React5 = fn(17709).CREATOR_REVENUE_PORTAL_URL;
+const React5 = fn(17704).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
-const constants = fn(20505).CreatorMonetizationOnboardingMarketingSection;
+const refs = fn(20500).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const createStyles = fn(5243);

@@ -1,11 +1,11 @@
-// === Module 16198: ActivateDevice ===
+// === Module 16193: ActivateDevice ===
 
-// Module 16198 (ActivateDevice)
+// Module 16193 (ActivateDevice)
 import nativeDefault from "native" /* 575 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2022 */;
 import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 7411 */;
-import _modDef16202 from "module_16202" /* 16202 */;
-import _modDef16203 from "module_16203" /* 16203 */;
+import _modDef16197 from "module_16197" /* 16197 */;
+import _modDef16198 from "module_16198" /* 16198 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -81,11 +81,11 @@ export (onClose) => {
       const userCodeData = first.userCodeData;
       items = [ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
       if (items.includes(userCodeData.clientId)) {
-        closure_3(_modDef16202);
+        closure_3(_modDef16197);
       } else {
         const scopes = userCodeData.scopes;
         if (scopes.some((item) => first(first1[11]).isSocialLayerUmbrellaScope(item))) {
-          closure_3(_modDef16203);
+          closure_3(_modDef16198);
         }
       }
     }
@@ -121,7 +121,7 @@ export (onClose) => {
   const obj7 = { source: null, style: null };
   let obj2 = first(first1[7]);
   const tmp23 = require("FastImage");
-  obj7.source = first(first1[18]).makeSource(require("module_16210"));
+  obj7.source = first(first1[18]).makeSource(require("module_16205"));
   obj7.style = tmp.imageStyle;
   const items6 = [closure_8(tmp23, obj7), ];
   const rect = { bottom: true, top: true, style: tmp.safeArea, children: null };

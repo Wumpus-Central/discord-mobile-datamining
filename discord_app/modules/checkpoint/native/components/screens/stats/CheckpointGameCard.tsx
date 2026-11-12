@@ -1,11 +1,11 @@
-// === Module 14406: CheckpointGameCard ===
+// === Module 14402: CheckpointGameCard ===
 
-// Module 14406 (CheckpointGameCard)
+// Module 14402 (CheckpointGameCard)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import CheckpointTextDefault from "CheckpointText" /* 14164 */;
+import CheckpointTextDefault from "CheckpointText" /* 14161 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2138 */;
 

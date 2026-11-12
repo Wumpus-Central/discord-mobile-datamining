@@ -6,12 +6,12 @@ import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5890 */;
 import conjurePreviewSurface from "conjurePreviewSurface" /* 7275 */;
-import ApplicationUtils from "ApplicationUtils" /* 12674 */;
-import PushNotificationDefault from "PushNotification" /* 12830 */;
-import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 13053 */;
-import restartFrames from "restartFrames" /* 13195 */;
-import conjurePreviewCall from "conjurePreviewCall" /* 13265 */;
-import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 15857 */;
+import ApplicationUtils from "ApplicationUtils" /* 12668 */;
+import PushNotificationDefault from "PushNotification" /* 12824 */;
+import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 13047 */;
+import restartFrames from "restartFrames" /* 13189 */;
+import conjurePreviewCall from "conjurePreviewCall" /* 13259 */;
+import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 15852 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ActionSheetStore from "ActionSheetStore" /* 5490 */;
 import AppStateStore from "AppStateStore" /* 2117 */;
@@ -300,7 +300,7 @@ let closure_16 = async function _relayPreviewCapture(arg0) {
               const obj9 = { value: { status: "unavailable" }, done: true };
               return obj9;
             } else if (null == onAccepted) {
-              let obj10 = { uploadToken: "Array" };
+              let obj10 = { uploadToken: "r" };
             } else {
               c7 = 2;
               c8 = 1;
@@ -640,7 +640,7 @@ const ConjureAppInstallSheet = "ConjureAppInstallSheet";
 let c17 = 0;
 let c18 = 0;
 let c21 = 0;
-const conjurePreviewControlLease = fn(13053);
+const conjurePreviewControlLease = fn(13047);
 let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -743,7 +743,7 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
     const obj4 = require("WebView");
   }
 });
-const conjurePreviewOperationSurfaces = fn(15861);
+const conjurePreviewOperationSurfaces = fn(15856);
 let closure_22 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;

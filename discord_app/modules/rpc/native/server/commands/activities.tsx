@@ -1,9 +1,9 @@
-// === Module 16862: commands/activities ===
+// === Module 16857: commands/activities ===
 
-// Module 16862 (commands/activities)
+// Module 16857 (commands/activities)
 import RPCErrorDefault from "RPCError" /* 7239 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8394 */;
-import validateOpenInviteDialog from "validateOpenInviteDialog" /* 16823 */;
+import validateOpenInviteDialog from "validateOpenInviteDialog" /* 16818 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -13,7 +13,7 @@ Constants = fn(1072);
 ({ InstantInviteSources: closure_4, RPCCommands, RPCErrors: hasOwnProperty } = Constants);
 const NativePermissionTypes = fn(6839).NativePermissionTypes;
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(16804);
+let CONTEXT_MENU_ICON_NAMES = fn(16799);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
 const items = [fn(7243).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
@@ -35,7 +35,7 @@ obj3.handler = function handler(socket) {
   }
 };
 obj[RPCCommands.OPEN_INVITE_DIALOG] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_INVITE_DIALOG, obj3);
-CONTEXT_MENU_ICON_NAMES = fn(16804);
+CONTEXT_MENU_ICON_NAMES = fn(16799);
 let obj6 = { scope: null, handler: null };
 let obj7 = {};
 const items1 = [fn(7243).OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
@@ -101,7 +101,7 @@ obj6.handler = function handler(socket) {
                   const obj7 = { value: tmp3(8126).requestPermission(constants2.PHOTOS), done: false };
                   return obj7;
                 }
-                obj22 = tmp3(8814);
+                obj22 = tmp3(8813);
               }
             }
           }
@@ -128,7 +128,7 @@ obj6.handler = function handler(socket) {
               const obj12 = { name: closure_128_4.fileName, type: closure_128_4.type, uri: closure_128_4.uri };
               c3 = 4;
               c4 = 1;
-              const obj14 = { value: socket(12651).uploadImageAttachment(closure_128_0, closure_128_1, obj12), done: false };
+              const obj14 = { value: socket(12645).uploadImageAttachment(closure_128_0, closure_128_1, obj12), done: false };
               return obj14;
             }
           }
@@ -176,7 +176,7 @@ obj6.handler = function handler(socket) {
         }
         c3 = 2;
         c4 = 1;
-        const obj21 = { value: tmp3(8814).launchImageLibraryAsync(closure_128_2), done: false };
+        const obj21 = { value: tmp3(8813).launchImageLibraryAsync(closure_128_2), done: false };
         return obj21;
       } catch (tmp87) {
         if (tmp4 === dependencyMap) {

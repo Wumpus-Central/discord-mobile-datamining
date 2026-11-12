@@ -1,6 +1,6 @@
-// === Module 8829: IosJpegliExperiment ===
+// === Module 8828: IosJpegliExperiment ===
 
-// Module 8829 (IosJpegliExperiment)
+// Module 8828 (IosJpegliExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 20241: SelectedChannelManager ===
+// === Module 20236: SelectedChannelManager ===
 
-// Module 20241 (SelectedChannelManager)
+// Module 20236 (SelectedChannelManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6872 */;
@@ -44,7 +44,7 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   channel = channel.channel;
   if (channel.type === constants.GROUP_DM) {
     const originChannelId = channel.originChannelId;
-    const channelId = SelectedChannelStore.getChannelId(closure_1_10);
+    const channelId = SelectedChannelStore.getChannelId(refs);
     if (tmp) {
       router_utils.transitionTo(React5.CHANNEL(React6, channel.id));
     }

@@ -1,6 +1,6 @@
-// === Module 17306: useFamilyCenterActivities ===
+// === Module 17301: useFamilyCenterActivities ===
 
-// Module 17306 (useFamilyCenterActivities)
+// Module 17301 (useFamilyCenterActivities)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 8673 */;
 
@@ -36,7 +36,7 @@ export function useFormattedTotalForDisplayType(displayType) {
     num = 0;
   }
   if (displayType === TeenActionDisplayType.TOTAL_VOICE_MINUTES) {
-    return tmp(9553).formatTotalTime(num);
+    return tmp(9552).formatTotalTime(num);
   } else if (displayType === TeenActionDisplayType.PURCHASES) {
     const totalSpendAmount = FamilyCenterStore.getTotalSpendAmount();
     const totalSpendCurrency = FamilyCenterStore.getTotalSpendCurrency();

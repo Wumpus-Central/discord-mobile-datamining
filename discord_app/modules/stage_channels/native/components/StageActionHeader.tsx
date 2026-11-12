@@ -1,6 +1,6 @@
-// === Module 12980: StageActionHeader ===
+// === Module 12974: StageActionHeader ===
 
-// Module 12980 (StageActionHeader)
+// Module 12974 (StageActionHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -20,22 +20,22 @@ import StageChannelParticipants from "StageChannelParticipants" /* 6880 */;
 import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6886 */;
 import _modDef7951 from "module_7951" /* 7951 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8394 */;
-import StatusBarDefault from "StatusBar" /* 11767 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 12852 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 12868 */;
-import _modDef12981 from "module_12981" /* 12981 */;
-import _modDef12982 from "module_12982" /* 12982 */;
-import _modDef12983 from "module_12983" /* 12983 */;
-import _modDef12984 from "module_12984" /* 12984 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12985 */;
-import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 12986 */;
+import StatusBarDefault from "StatusBar" /* 11761 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 12846 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 12862 */;
+import _modDef12975 from "module_12975" /* 12975 */;
+import _modDef12976 from "module_12976" /* 12976 */;
+import _modDef12977 from "module_12977" /* 12977 */;
+import _modDef12978 from "module_12978" /* 12978 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12979 */;
+import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 12980 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6997 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import StageInstanceStore from "StageInstanceStore" /* 5097 */;
-import StageMusicStore from "StageMusicStore" /* 12845 */;
+import StageMusicStore from "StageMusicStore" /* 12839 */;
 
 require = fn;
 function HideStageChannelCallIcon(channel) {
@@ -45,7 +45,7 @@ function HideStageChannelCallIcon(channel) {
   const stateFromStores = channel(504).useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   let obj2 = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
   let obj = channel(504);
-  obj2.source = _modDef12981;
+  obj2.source = _modDef12975;
   const intl = channel(1113).intl;
   obj2.accessibilityLabel = intl.string(channel(1113).t.cpT0Cq);
   obj2.onPress = function handleClose() {
@@ -69,9 +69,9 @@ function StageParticipantCounts(channelId) {
   const stageParticipantsCount = StageChannelParticipantStoreHooks.useStageParticipantsCount(channelId, StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE);
   const intl = util.intl;
   const obj3 = { style: tmp.counts, pointerEvents: "none", accessible: true, accessibilityLabel: intl.formatToPlainString(_modDef4209.TdMGe4, { speakerCount: actualStageSpeakerCount, audienceCount: stageParticipantsCount }), children: null };
-  items = [state(native.Icon, { source: _modDef12982, size: native.Icon.Sizes.SMALL, style: tmp.icon }), state(Text_Text.Text, { variant: "body-xs/normal", children: actualStageSpeakerCount }), , ];
-  const obj4 = { source: _modDef12982, size: native.Icon.Sizes.SMALL, style: tmp.icon };
-  items[2] = state(native.Icon, { source: _modDef12983, size: native.Icon.Sizes.SMALL, style: tmp.icon });
+  items = [state(native.Icon, { source: _modDef12976, size: native.Icon.Sizes.SMALL, style: tmp.icon }), state(Text_Text.Text, { variant: "body-xs/normal", children: actualStageSpeakerCount }), , ];
+  const obj4 = { source: _modDef12976, size: native.Icon.Sizes.SMALL, style: tmp.icon };
+  items[2] = state(native.Icon, { source: _modDef12977, size: native.Icon.Sizes.SMALL, style: tmp.icon });
   items[3] = state(Text_Text.Text, { variant: "body-xs/normal", children: stageParticipantsCount });
   obj3.children = items;
   return gesture(React4, obj3);

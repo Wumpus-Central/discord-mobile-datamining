@@ -1,11 +1,11 @@
-// === Module 14792: ChannelAccessInfo ===
+// === Module 14788: ChannelAccessInfo ===
 
-// Module 14792 (ChannelAccessInfo)
+// Module 14788 (ChannelAccessInfo)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8066 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 12468 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 12462 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import GuildRoleStore from "GuildRoleStore" /* 5149 */;
@@ -121,7 +121,7 @@ export default function ChannelAccessInfo(guild) {
     }
     obj9 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(14791);
+    channel(14787);
     const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(7372).GroupIcon), ];
     const ROLES = constants.ROLES;
     channel(8110);
@@ -132,7 +132,7 @@ export default function ChannelAccessInfo(guild) {
   obj3.children = closure_9(closure_10, obj9);
   const items6 = [closure_8(View, obj3), ];
   const tmp2Result = guild(8066);
-  items6[1] = closure_8(guild(1187).Icon, { source: channel(12883), size: guild(1187).Icon.Sizes.SMALL });
+  items6[1] = closure_8(guild(1187).Icon, { source: channel(12877), size: guild(1187).Icon.Sizes.SMALL });
   obj2.children = items6;
   items2[1] = closure_9(guild(7364).PressableOpacity, obj2);
   obj10.children = items2;

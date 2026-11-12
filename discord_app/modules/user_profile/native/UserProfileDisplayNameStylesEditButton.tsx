@@ -1,14 +1,14 @@
-// === Module 16974: UserProfileDisplayNameStylesEditButton ===
+// === Module 16969: UserProfileDisplayNameStylesEditButton ===
 
-// Module 16974 (UserProfileDisplayNameStylesEditButton)
+// Module 16969 (UserProfileDisplayNameStylesEditButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9998 */;
-import _modDef15417 from "module_15417" /* 15417 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 16978 */;
-import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 16979 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9997 */;
+import _modDef15414 from "module_15414" /* 15414 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 16973 */;
+import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 16974 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -87,8 +87,8 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   }, items1);
   const tmp16 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      const obj2 = { source: _modDef15417, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef15417, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef15414, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef15414, style: closure_3.noneIcon });
     } else {
       const obj = { style: closure_3.ggContainer, children: null };
       const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };

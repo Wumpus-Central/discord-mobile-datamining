@@ -1,6 +1,6 @@
-// === Module 13102: useConjureProjectSettingsForm ===
+// === Module 13096: useConjureProjectSettingsForm ===
 
-// Module 13102 (useConjureProjectSettingsForm)
+// Module 13096 (useConjureProjectSettingsForm)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6955 */;
@@ -194,7 +194,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   dependencyMap = undefined;
   handleRoleSelectionChange = undefined;
   const tmp = closure_12();
-  const tmp4 = selectedRoleIds(13103)(projectId, arg1);
+  const tmp4 = selectedRoleIds(13097)(projectId, arg1);
   ({ liveReload, isGuildCollaboration, selectedRoleIds } = tmp4);
   ({ supportsVisibility, saving, saveError, experimentalError, handleFlagChange: c2, handleRoleSelectionChange } = tmp4);
   const ensureAppInGuild = tmp4.ensureAppInGuild;
@@ -294,11 +294,11 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   const items1 = [tmp11, , , , , , , , ];
   if (isConjureManagedCopy) {
     let obj5 = { projectId };
-    let tmp13Result = closure_9(tmp2(13109), obj5);
+    let tmp13Result = closure_9(tmp2(13103), obj5);
     let tmp15 = closure_9;
   } else {
     let obj6 = { iconURL, onIconChange: handleIconChange, name, nameError, onNameChange: handleNameChange, description, onDescriptionChange: handleDescriptionChange, disabled: tmp5 };
-    tmp13Result = closure_9(tmp6(13091).ConjureAppIdentitySection, obj6);
+    tmp13Result = closure_9(tmp6(13085).ConjureAppIdentitySection, obj6);
     tmp15 = closure_9;
   }
   items1[1] = tmp13Result;
@@ -325,7 +325,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   let tmp15Result8 = null;
   if (!flag) {
     const obj9 = { projectId };
-    tmp15Result8 = tmp15(tmp2(13111), obj9);
+    tmp15Result8 = tmp15(tmp2(13105), obj9);
   }
   items1[3] = tmp15Result8;
   let tmp15Result9 = null;

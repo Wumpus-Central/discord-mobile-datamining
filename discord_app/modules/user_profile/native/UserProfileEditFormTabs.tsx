@@ -1,17 +1,17 @@
-// === Module 17065: UserProfileEditFormTabs ===
+// === Module 17060: UserProfileEditFormTabs ===
 
-// Module 17065 (UserProfileEditFormTabs)
+// Module 17060 (UserProfileEditFormTabs)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import ChatInputUtils from "ChatInputUtils" /* 5438 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7290 */;
 import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7929 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8540 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 12047 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15704 */;
-import UserProfileTabPagesDefault from "UserProfileTabPages" /* 15753 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 17064 */;
-import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 17066 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 12041 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15699 */;
+import UserProfileTabPagesDefault from "UserProfileTabPages" /* 15748 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 17059 */;
+import UserProfileWidgetEditingHeaderDefault from "UserProfileWidgetEditingHeader" /* 17061 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -63,7 +63,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     num2 = 1;
   }
   [first, closure_5] = first.useState(num2);
-  arr = tmp2(12054)(userId);
+  arr = tmp2(12048)(userId);
   closure_7 = tmp8;
   let items1 = [arr];
   const memo = first.useMemo(() => arr.filter(UserProfileGameWidgetTypes.isGameWidget), items1);
@@ -143,7 +143,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     str = "overlay";
   }
   obj6.variant = str;
-  const items7 = [arr(tmp10(13159).Tabs, obj6), arr(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
+  const items7 = [arr(tmp10(13153).Tabs, obj6), arr(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef })];
   obj5.children = items7;
   return closure_8(closure_5, obj5);
 });

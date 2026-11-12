@@ -1,6 +1,6 @@
-// === Module 10586: GameActivityIcon ===
+// === Module 10584: GameActivityIcon ===
 
-// Module 10586 (GameActivityIcon)
+// Module 10584 (GameActivityIcon)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import shared from "shared" /* 5250 */;

@@ -1,10 +1,10 @@
-// === Module 11785: useSetMediaPostThumbnail ===
+// === Module 11779: useSetMediaPostThumbnail ===
 
-// Module 11785 (useSetMediaPostThumbnail)
+// Module 11779 (useSetMediaPostThumbnail)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 11092 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 11086 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8806 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8805 */;
 
 const require = globalThis.__r;
 

@@ -1,6 +1,6 @@
-// === Module 10377: CollectiblesShopPricePlaceholder ===
+// === Module 10375: CollectiblesShopPricePlaceholder ===
 
-// Module 10377 (CollectiblesShopPricePlaceholder)
+// Module 10375 (CollectiblesShopPricePlaceholder)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5485 */;

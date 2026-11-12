@@ -1,6 +1,6 @@
-// === Module 8726: SlowmodeStore ===
+// === Module 8725: SlowmodeStore ===
 
-// Module 8726 (SlowmodeStore)
+// Module 8725 (SlowmodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;

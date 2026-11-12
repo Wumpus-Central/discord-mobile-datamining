@@ -1,6 +1,6 @@
-// === Module 12029: WidgetUtils ===
+// === Module 12023: WidgetUtils ===
 
-// Module 12029 (WidgetUtils)
+// Module 12023 (WidgetUtils)
 import util from "util" /* 1113 */;
 import dismissible_content from "dismissible_content" /* 5076 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5285 */;
@@ -10,13 +10,13 @@ import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7290 */;
 import GameWidgetLimits from "GameWidgetLimits" /* 7292 */;
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7294 */;
 import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7296 */;
-import useGame2 from "useGame" /* 9467 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12032 */;
-import WidgetGameTag from "WidgetGameTag" /* 12033 */;
+import useGame2 from "useGame" /* 9466 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12026 */;
+import WidgetGameTag from "WidgetGameTag" /* 12027 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1385 */;
 import UserProfileStore from "UserProfileStore" /* 7288 */;
-import WidgetStore from "WidgetStore" /* 12030 */;
+import WidgetStore from "WidgetStore" /* 12024 */;
 
 require = fn;
 function findGameWidget(widgetType) {
@@ -87,7 +87,7 @@ function replaceWidgetInList(clipsGalleryWidget) {
 }
 const WIDGET_TITLES_BY_TYPE = fn(7291).WIDGET_TITLES_BY_TYPE;
 const ContentDismissActionType = fn(5089).ContentDismissActionType;
-let closure_9 = fn(12031).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_9 = fn(12025).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 

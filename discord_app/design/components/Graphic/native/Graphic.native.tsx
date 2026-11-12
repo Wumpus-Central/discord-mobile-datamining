@@ -1,6 +1,6 @@
-// === Module 9504: Graphic ===
+// === Module 9503: Graphic ===
 
-// Module 9504 (Graphic)
+// Module 9503 (Graphic)
 import GraphicTypes from "GraphicTypes" /* 5416 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import noop from "module_19" /* 19 */;

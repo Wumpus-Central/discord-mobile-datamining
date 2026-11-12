@@ -1,14 +1,14 @@
-// === Module 19223: GuildSettingsModalMembers ===
+// === Module 19218: GuildSettingsModalMembers ===
 
-// Module 19223 (GuildSettingsModalMembers)
+// Module 19218 (GuildSettingsModalMembers)
 import apply from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5252 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
 import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7219 */;
-import sortByMatchScore from "sortByMatchScore" /* 10180 */;
-import RolePillDefault from "RolePill" /* 10872 */;
+import sortByMatchScore from "sortByMatchScore" /* 10178 */;
+import RolePillDefault from "RolePill" /* 10866 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -27,7 +27,7 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let items = [fn(10180).AutocompleterResultTypes.USER];
+let items = [fn(10178).AutocompleterResultTypes.USER];
 const createStyles = fn(5243);
 let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, searchFieldContainer: null, roleList: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
@@ -92,7 +92,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_15(guildMember(10866), obj4);
+    return closure_15(guildMember(10860), obj4);
   }
   const obj = guild(1499);
 });

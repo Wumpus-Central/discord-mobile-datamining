@@ -14,7 +14,7 @@ import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8402 
 import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 8405 */;
 import openInstantInviteActionSheetDefault from "openInstantInviteActionSheet" /* 8406 */;
 import getInviteURLDefault from "getInviteURL" /* 8409 */;
-import showShareActionSheet from "showShareActionSheet" /* 10163 */;
+import showShareActionSheet from "showShareActionSheet" /* 10161 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 8395 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import CreateInviteModalStore from "CreateInviteModalStore" /* 8396 */;

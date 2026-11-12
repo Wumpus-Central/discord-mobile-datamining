@@ -1,12 +1,12 @@
-// === Module 11594: MediaKeyboardFooter ===
+// === Module 11588: MediaKeyboardFooter ===
 
-// Module 11594 (MediaKeyboardFooter)
+// Module 11588 (MediaKeyboardFooter)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import _modDef11595 from "module_11595" /* 11595 */;
+import _modDef11589 from "module_11589" /* 11589 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ export default noop.memo(function MediaKeyboardFooter(arg0) {
     obj5.disabled = disabled;
     obj4.children = hasOwnProperty(components_Button_Button.Button, obj5);
     items[1] = hasOwnProperty(React3, obj4);
-    const obj6 = { source: _modDef11595 };
+    const obj6 = { source: _modDef11589 };
     items[2] = hasOwnProperty(FastImageDefault, obj6);
     obj2.children = items;
     let tmp6 = timestampProducer(React3, obj2);

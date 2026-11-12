@@ -1,6 +1,6 @@
-// === Module 15517: openAppChannelReportModal ===
+// === Module 15514: openAppChannelReportModal ===
 
-// Module 15517 (openAppChannelReportModal)
+// Module 15514 (openAppChannelReportModal)
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6992 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;

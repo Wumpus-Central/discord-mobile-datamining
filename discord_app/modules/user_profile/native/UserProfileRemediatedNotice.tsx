@@ -1,6 +1,6 @@
-// === Module 15761: UserProfileRemediatedNotice ===
+// === Module 15756: UserProfileRemediatedNotice ===
 
-// Module 15761 (UserProfileRemediatedNotice)
+// Module 15756 (UserProfileRemediatedNotice)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8072 */;

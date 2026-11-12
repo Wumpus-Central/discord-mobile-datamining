@@ -1,12 +1,12 @@
-// === Module 13980: AcceptStep ===
+// === Module 13976: AcceptStep ===
 
-// Module 13980 (AcceptStep)
+// Module 13976 (AcceptStep)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const GameOrganizationJoinModalConstants = fn(13974);
+const GameOrganizationJoinModalConstants = fn(13970);
 ({ closeGameOrganizationJoinModal: closure_6, GameOrganizationJoinScenes: metroImportDefault } = GameOrganizationJoinModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

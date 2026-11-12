@@ -1,9 +1,9 @@
-// === Module 13544: conjureSettingsAsks ===
+// === Module 13538: conjureSettingsAsks ===
 
-// Module 13544 (conjureSettingsAsks)
+// Module 13538 (conjureSettingsAsks)
 import conjureChatTurns from "conjureChatTurns" /* 7258 */;
-import conjureSettingsRequest from "conjureSettingsRequest" /* 13506 */;
-import conjureSettingsSummary from "conjureSettingsSummary" /* 13545 */;
+import conjureSettingsRequest from "conjureSettingsRequest" /* 13500 */;
+import conjureSettingsSummary from "conjureSettingsSummary" /* 13539 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;

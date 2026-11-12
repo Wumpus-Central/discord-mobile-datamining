@@ -1,11 +1,11 @@
-// === Module 10117: AppStoreOverlayMediaCarousel ===
+// === Module 10116: AppStoreOverlayMediaCarousel ===
 
-// Module 10117 (AppStoreOverlayMediaCarousel)
+// Module 10116 (AppStoreOverlayMediaCarousel)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsActions from "AnalyticsActions" /* 8759 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8768 */;
-import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 10118 */;
-import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 10119 */;
+import AnalyticsActions from "AnalyticsActions" /* 8758 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8767 */;
+import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 10117 */;
+import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 10118 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
@@ -109,10 +109,10 @@ function AppStoreOverlayMediaCarouselItem(arg0) {
   const type = media.type;
   if ("screenshot" === type) {
     const obj2 = { media, index, mediaViewerSources, tileSize, recordMediaSize: tmp, onGetGamePress };
-    return closure_1_10(AppStoreOverlayScreenshotItem, obj2);
+    return refs(AppStoreOverlayScreenshotItem, obj2);
   } else if ("trailer" === type) {
     const obj = { media, index, mediaViewerSources, tileSize, onGetGamePress };
-    return closure_1_10(AppStoreOverlayTrailerItem, obj);
+    return refs(AppStoreOverlayTrailerItem, obj);
   }
 }
 get_ActivityIndicator = fn(17);
@@ -320,7 +320,7 @@ export default function AppStoreOverlayMediaCarousel(media) {
       obj.tileSize = AppStoreOverlayMediaSize.getMediaTileSize(value);
       obj.recordMediaSize = recordMediaSize;
       obj.onGetGamePress = onGetGamePress;
-      return closure_2_10(AppStoreOverlayMediaCarouselItem, obj, "" + media.type + "-" + index);
+      return refs(AppStoreOverlayMediaCarouselItem, obj, "" + media.type + "-" + index);
     });
     obj2.children = length(memo1, obj5);
     tmp15 = length(tmp3(tmp4[17]).GestureDetector, obj2);

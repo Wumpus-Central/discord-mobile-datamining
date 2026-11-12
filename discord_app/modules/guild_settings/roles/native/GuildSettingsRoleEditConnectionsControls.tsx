@@ -1,6 +1,6 @@
-// === Module 20433: GuildSettingsRoleEditConnectionsControls ===
+// === Module 20428: GuildSettingsRoleEditConnectionsControls ===
 
-// Module 20433 (GuildSettingsRoleEditConnectionsControls)
+// Module 20428 (GuildSettingsRoleEditConnectionsControls)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -15,12 +15,12 @@ import ConnectionsUtils from "ConnectionsUtils" /* 7401 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7557 */;
 import TableRadioGroup from "TableRadioGroup" /* 7679 */;
 import TableRadioRow from "TableRadioRow" /* 7681 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 13367 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20420 */;
-import GuildSettingsRoleEditConnectionConfigurationDefault from "GuildSettingsRoleEditConnectionConfiguration" /* 20434 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 13361 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20415 */;
+import GuildSettingsRoleEditConnectionConfigurationDefault from "GuildSettingsRoleEditConnectionConfiguration" /* 20429 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7826 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20406 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20401 */;
 
 require = fn;
 function HeaderSection(arg0) {
@@ -30,11 +30,11 @@ function HeaderSection(arg0) {
   if (hasMembers) {
     const obj = { style: tmp.warningContainer, children: null };
     const obj2 = { color: nativeDefault.colors.STATUS_WARNING, size: "sm" };
-    items = [closure_1_10(CircleErrorIcon.CircleErrorIcon, obj2), ];
+    items = [refs(CircleErrorIcon.CircleErrorIcon, obj2), ];
     const obj3 = { variant: "body-xs/medium", style: tmp.warningText, children: null };
     const intl = util.intl;
     obj3.children = intl.string(util.t["2aFeef"]);
-    items[1] = closure_1_10(Text_Text.Text, obj3);
+    items[1] = refs(Text_Text.Text, obj3);
     obj.children = items;
     tmp2Result = closure_1_11(View, obj);
   }
@@ -43,15 +43,15 @@ function HeaderSection(arg0) {
   const obj5 = { variant: "body-md/semibold", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.nMir27);
-  const items2 = [closure_1_10(Text_Text.Text, obj5), ];
+  const items2 = [refs(Text_Text.Text, obj5), ];
   let tmp13Result;
   if (hasConnections) {
     const obj6 = { hitSlop: 8, onPress: clearConnections, disabled: locked, children: null };
     const obj7 = { variant: "body-sm/medium", color: "text-feedback-critical", children: null };
     const intl3 = util.intl;
     obj7.children = intl3.string(util.t.ntW1cc);
-    obj6.children = closure_1_10(Text_Text.Text, obj7);
-    tmp13Result = closure_1_10(Pressables.PressableOpacity, obj6);
+    obj6.children = refs(Text_Text.Text, obj7);
+    tmp13Result = refs(Pressables.PressableOpacity, obj6);
   }
   const obj8 = { children: null };
   const obj9 = { children: null };
@@ -62,7 +62,7 @@ function HeaderSection(arg0) {
   const intl4 = util.intl;
   const obj11 = { helpdeskArticleUrl: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.CONNECTION_DETAILS_ADMIN) };
   obj10.children = intl4.format(util.t.q5f7tK, obj11);
-  items3[1] = closure_1_10(Text_Text.Text, obj10);
+  items3[1] = refs(Text_Text.Text, obj10);
   obj9.children = items3;
   items1[1] = closure_1_11(Stack_Stack.Stack, obj9);
   obj8.children = items1;
@@ -97,12 +97,12 @@ function AndOrRadios(setPendingRoleConfigurations) {
       tmp11 = values.length < 2;
     }
     obj3.disabled = tmp11;
-    const items2 = [closure_1_10(TableRadioRow.TableRadioRow, obj3), ];
+    const items2 = [refs(TableRadioRow.TableRadioRow, obj3), ];
     const obj4 = { value: ConnectionsUtils.ConnectionConfigurationRuleOperator.AND, label: null, disabled: null };
     const intl3 = util.intl;
     obj4.label = intl3.string(util.t.gHXS9A);
     obj4.disabled = locked;
-    items2[1] = closure_1_10(TableRadioRow.TableRadioRow, obj4);
+    items2[1] = refs(TableRadioRow.TableRadioRow, obj4);
     obj2.children = items2;
     return closure_1_11(TableRadioGroup.TableRadioGroup, obj2);
   }
@@ -181,7 +181,7 @@ function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integratio
     }
     continue;
   }
-  let obj3 = { spacing: nativeDefault.space.PX_24, children: Array.from(map.values()).map((configurationItems) => closure_2_10(GuildSettingsRoleEditConnectionConfigurationDefault, { configurationItems, onConfigurationChange: handleConfigurationChange, locked, integrations }, configurationItems[0].configuration.connectionType + ":" + configurationItems[0].index)) };
+  let obj3 = { spacing: nativeDefault.space.PX_24, children: Array.from(map.values()).map((configurationItems) => refs(GuildSettingsRoleEditConnectionConfigurationDefault, { configurationItems, onConfigurationChange: handleConfigurationChange, locked, integrations }, configurationItems[0].configuration.connectionType + ":" + configurationItems[0].index)) };
   return closure_10(require("Stack/Stack").Stack, obj3);
 }
 function AddConnectionButton(locked) {
@@ -215,7 +215,7 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(20436, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(20431, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
@@ -361,7 +361,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   const obj9 = {
     handleConnectionTapped(connectionType, applicationId) {
       items = [...memo];
-      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "string", value: true };
+      const obj = { connectionType, connectionMetadataField: "Array", applicationId, operator: "parent", value: true };
       items.push(obj);
       if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {
         if (0 === items.length) {

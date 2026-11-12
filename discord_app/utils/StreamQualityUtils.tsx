@@ -30,12 +30,12 @@ export function isPremiumResolution(maxQuality) {
       height = maxQuality.maxResolution.height;
     }
     closure_0 = closure_14(height);
-    let tmp6 = closure_13(maxQuality.maxFrameRate) !== closure_10.FPS_5;
+    let tmp6 = closure_13(maxQuality.maxFrameRate) !== FPS_5.FPS_5;
     if (tmp6) {
       tmp6 = null == closure_12.find((resolution) => {
         let tmp = resolution.resolution === closure_0;
         if (tmp) {
-          tmp = resolution.fps !== closure_2_10.FPS_5;
+          tmp = resolution.fps !== refs.FPS_5;
         }
         if (tmp) {
           tmp = !(null != resolution.quality || null != resolution.guildPremiumTier);

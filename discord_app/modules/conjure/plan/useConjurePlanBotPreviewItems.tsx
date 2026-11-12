@@ -1,10 +1,10 @@
-// === Module 13623: useConjurePlanBotPreviewItems ===
+// === Module 13617: useConjurePlanBotPreviewItems ===
 
-// Module 13623 (useConjurePlanBotPreviewItems)
+// Module 13617 (useConjurePlanBotPreviewItems)
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
 import UserActionCreators from "UserActionCreators" /* 7286 */;
-import conjurePlanBot from "conjurePlanBot" /* 13624 */;
+import conjurePlanBot from "conjurePlanBot" /* 13618 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import UserRecord from "UserRecord" /* 1404 */;
@@ -214,20 +214,20 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                 }
                 const obj4 = {};
                 obj3.type = messageType;
-                const merged = Object.assign(exchanges(8785)(obj3));
+                const merged = Object.assign(exchanges(8784)(obj3));
                 obj4.id = StringResult;
                 obj4.state = constants.SENT;
                 if (null != interactionName) {
                   const obj5 = { interaction: null };
-                  obj6 = { id: StringResult, name: interactionName, type: projectId(6318).InteractionTypes.APPLICATION_COMMAND, user: projectId(8785).userRecordToServer(currentUser) };
+                  obj6 = { id: StringResult, name: interactionName, type: projectId(6318).InteractionTypes.APPLICATION_COMMAND, user: projectId(8784).userRecordToServer(currentUser) };
                   obj5.interaction = obj6;
                   let obj7 = obj5;
-                  const tmp2Result = projectId(8785);
+                  const tmp2Result = projectId(8784);
                 } else {
                   obj7 = {};
                 }
                 const merged1 = Object.assign(obj7);
-                const tmp4 = exchanges(8785);
+                const tmp4 = exchanges(8784);
                 items.push({ key: StringResult, record: obj2.createMessageRecord(obj4), isCommandReply: null != interactionName, menu: obj.menu });
                 const obj8 = { key: StringResult, record: obj2.createMessageRecord(obj4), isCommandReply: null != interactionName, menu: obj.menu };
               }

@@ -1,21 +1,21 @@
-// === Module 16490: Status ===
+// === Module 16485: Status ===
 
-// Module 16490 (Status)
+// Module 16485 (Status)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import spring_spring from "spring/spring" /* 5876 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import EllipsisDefault from "Ellipsis" /* 16476 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 16488 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 16489 */;
+import EllipsisDefault from "Ellipsis" /* 16471 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 16483 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 16484 */;
+import _modDef16486 from "module_16486" /* 16486 */;
+import _modDef16487 from "module_16487" /* 16487 */;
+import _modDef16488 from "module_16488" /* 16488 */;
+import _modDef16489 from "module_16489" /* 16489 */;
+import _modDef16490 from "module_16490" /* 16490 */;
 import _modDef16491 from "module_16491" /* 16491 */;
 import _modDef16492 from "module_16492" /* 16492 */;
-import _modDef16493 from "module_16493" /* 16493 */;
-import _modDef16494 from "module_16494" /* 16494 */;
-import _modDef16495 from "module_16495" /* 16495 */;
-import _modDef16496 from "module_16496" /* 16496 */;
-import _modDef16497 from "module_16497" /* 16497 */;
-import useFlashListAnimationDisabler from "useFlashListAnimationDisabler" /* 16498 */;
+import useFlashListAnimationDisabler from "useFlashListAnimationDisabler" /* 16493 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ require = fn;
 const View = fn(17).View;
 const STATUS_PADDING = fn(1188).STATUS_PADDING;
 const StatusTypes = fn(1072).StatusTypes;
-const ChannelAnimationConstants = fn(15636);
+const ChannelAnimationConstants = fn(15633);
 ({ TYPING_ENTERING: metroImportDefault, TYPING_EXITING: closure_8, CHANNEL_SPRING_CONFIG: closure_9 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
@@ -85,27 +85,27 @@ export default function Status(isMobileOnline) {
   const obj2 = { style: closure_12().statusIcon, source: null, resizeMode: "stretch" };
   const tmp = closure_12();
   if (streaming) {
-    let tmp4Result = _modDef16491;
+    let tmp4Result = _modDef16486;
   } else if (flag2) {
-    tmp4Result = _modDef16492;
+    tmp4Result = _modDef16487;
   } else if (flag) {
-    tmp4Result = _modDef16493;
+    tmp4Result = _modDef16488;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef16494;
+    tmp4Result = _modDef16489;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef16495;
+    tmp4Result = _modDef16490;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef16497;
+        tmp4Result = _modDef16492;
       }
     }
-    tmp4Result = _modDef16496;
+    tmp4Result = _modDef16491;
   }
   obj2.source = tmp4Result;
-  obj.children = closure_1_10(FastImageDefault, obj2);
-  return closure_1_10(View, obj);
+  obj.children = refs(FastImageDefault, obj2);
+  return refs(View, obj);
 };
 export function StatusWithTyping(status) {
   let flag = status.isMobileOnline;
@@ -203,8 +203,8 @@ export function StatusWithTyping(status) {
     const rect = { position: "absolute", left: STATUS_PADDING, top: STATUS_PADDING };
     obj3.style = rect;
     ({ ellipsis: obj8.style, ellipsisDot: obj8.dotStyle } = tmp2);
-    obj3.children = closure_1_10(EllipsisDefault, { style: null, dotStyle: null, disableScale: true });
-    typing = closure_1_10(_modDef1652.View, obj3);
+    obj3.children = refs(EllipsisDefault, { style: null, dotStyle: null, disableScale: true });
+    typing = refs(_modDef1652.View, obj3);
     const obj4 = { style: null, dotStyle: null, disableScale: true };
   }
   const items5 = [typing, ];
@@ -212,27 +212,27 @@ export function StatusWithTyping(status) {
   const obj6 = { style: tmp.statusIcon, source: null, resizeMode: "stretch" };
   const tmp5Result4 = _mod1652;
   if (streaming) {
-    let tmp3Result2 = _modDef16491;
+    let tmp3Result2 = _modDef16486;
   } else if (flag2) {
-    tmp3Result2 = _modDef16492;
+    tmp3Result2 = _modDef16487;
   } else if (flag) {
-    tmp3Result2 = _modDef16493;
+    tmp3Result2 = _modDef16488;
   } else if (StatusTypes.IDLE === status) {
-    tmp3Result2 = _modDef16494;
+    tmp3Result2 = _modDef16489;
   } else if (StatusTypes.DND === status) {
-    tmp3Result2 = _modDef16495;
+    tmp3Result2 = _modDef16490;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp3Result2 = _modDef16497;
+        tmp3Result2 = _modDef16492;
       }
     }
-    tmp3Result2 = _modDef16496;
+    tmp3Result2 = _modDef16491;
   }
   obj6.source = tmp3Result2;
-  obj5.children = closure_1_10(FastImageDefault, obj6);
-  items5[1] = closure_1_10(_modDef1652.View, obj5);
+  obj5.children = refs(FastImageDefault, obj6);
+  items5[1] = refs(_modDef1652.View, obj5);
   obj2.children = items5;
   return closure_1_11(_modDef1652.View, obj2);
 }

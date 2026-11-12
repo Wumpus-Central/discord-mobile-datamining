@@ -1,6 +1,6 @@
-// === Module 11740: CollectiblesShopGiftPurchaseSection ===
+// === Module 11734: CollectiblesShopGiftPurchaseSection ===
 
-// Module 11740 (CollectiblesShopGiftPurchaseSection)
+// Module 11734 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -14,7 +14,7 @@ import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8481 */;
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(9526).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(9525).useNativeCheckoutStore;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, MarketingURLs: closure_10 } = Constants);
 const PremiumConstants = fn(1387);

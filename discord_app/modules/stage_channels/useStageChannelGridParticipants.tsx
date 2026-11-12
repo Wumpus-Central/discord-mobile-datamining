@@ -1,6 +1,6 @@
-// === Module 12863: useStageChannelGridParticipants ===
+// === Module 12857: useStageChannelGridParticipants ===
 
-// Module 12863 (useStageChannelGridParticipants)
+// Module 12857 (useStageChannelGridParticipants)
 import apply from "apply" /* 12 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 6880 */;
 import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 6886 */;
@@ -240,7 +240,7 @@ export function useThrottledStageAudience(id) {
   }, items2);
   const obj = stageParticipantsCount(504);
   stageParticipantsCount = undefined;
-  const obj2 = stageParticipantsCount(12864);
+  const obj2 = stageParticipantsCount(12858);
   stageParticipantsCount = stageParticipantsCount(6886).useStageParticipantsCount(id, stageParticipantsCount(6880).StageChannelParticipantNamedIndex.AUDIENCE);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp4[1];

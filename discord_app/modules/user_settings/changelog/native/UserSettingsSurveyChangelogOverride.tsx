@@ -1,6 +1,6 @@
-// === Module 18239: UserSettingsSurveyChangelogOverride ===
+// === Module 18234: UserSettingsSurveyChangelogOverride ===
 
-// Module 18239 (UserSettingsSurveyChangelogOverride)
+// Module 18234 (UserSettingsSurveyChangelogOverride)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import Text_Text from "Text/Text" /* 5866 */;
@@ -11,8 +11,8 @@ import TableRowGroup from "TableRowGroup" /* 7680 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7847 */;
 import ActionSheet from "ActionSheet" /* 7885 */;
 import ActionSheetRow from "ActionSheetRow" /* 7887 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 9285 */;
-import SurveyActionCreatorsAll from "SurveyActionCreators" /* 18240 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 9284 */;
+import SurveyActionCreatorsAll from "SurveyActionCreators" /* 18235 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChangelogStore from "ChangelogStore" /* 8070 */;
@@ -171,7 +171,7 @@ function ChangelogInfo() {
     })
   ];
   obj.children = items;
-  return closure_1_10(TableRowGroup.TableRowGroup, obj);
+  return refs(TableRowGroup.TableRowGroup, obj);
 }
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
@@ -188,6 +188,6 @@ export default noop.memo(function UserSettingsSurveyChangelogOverride() {
   const obj2 = { spacing: 16, children: null };
   items = [React6(SurveyInfo, {}), React6(ChangelogInfo, {})];
   obj2.children = items;
-  obj.children = closure_1_10(Stack_Stack.Stack, obj2);
+  obj.children = refs(Stack_Stack.Stack, obj2);
   return React6(ScrollView, obj);
 });

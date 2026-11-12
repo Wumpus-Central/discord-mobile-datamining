@@ -1,6 +1,6 @@
-// === Module 9611: MobileBottomSheetDismissibleContent ===
+// === Module 9610: MobileBottomSheetDismissibleContent ===
 
-// Module 9611 (MobileBottomSheetDismissibleContent)
+// Module 9610 (MobileBottomSheetDismissibleContent)
 import dismissible_content from "dismissible_content" /* 5076 */;
 import size from "module_2" /* 2 */;
 

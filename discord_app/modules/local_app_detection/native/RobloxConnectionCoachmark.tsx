@@ -1,6 +1,6 @@
-// === Module 19616: RobloxConnectionCoachmark ===
+// === Module 19611: RobloxConnectionCoachmark ===
 
-// Module 19616 (RobloxConnectionCoachmark)
+// Module 19611 (RobloxConnectionCoachmark)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
@@ -19,7 +19,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7022 */;
 import UserStore from "UserStore" /* 1385 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 16100 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 16095 */;
 
 require = fn;
 function RobloxIcon(theme) {
@@ -132,7 +132,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1113).intl;
   obj10.text = intl3.string(markAsDismissed(1113).t.ItuabN);
   let obj3 = { title: null, leading: closure_13(markAsDismissed(7886).ActionSheetCloseButton, { onPress: handleCancel }) };
-  obj10.icon = closure_13(markAsDismissed(15084).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+  obj10.icon = closure_13(markAsDismissed(15081).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
   obj10.onPress = function handleConnect() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     if (markAsDismissed != null) {
@@ -158,7 +158,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
 export { UnionIcon };
 export function useShouldShowRobloxConnectionCoachmark() {
   items = [LocalAppDetectionStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(16101).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(16096).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];

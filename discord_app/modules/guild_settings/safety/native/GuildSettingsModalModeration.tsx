@@ -1,6 +1,6 @@
-// === Module 20298: GuildSettingsModalModeration ===
+// === Module 20293: GuildSettingsModalModeration ===
 
-// Module 20298 (GuildSettingsModalModeration)
+// Module 20293 (GuildSettingsModalModeration)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
@@ -13,7 +13,7 @@ import TableRadioRow from "TableRadioRow" /* 7681 */;
 import TableSwitchRow from "TableSwitchRow" /* 7888 */;
 import Form from "Form" /* 8041 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8338 */;
-import useUserIsTeen from "useUserIsTeen" /* 11968 */;
+import useUserIsTeen from "useUserIsTeen" /* 11962 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 8339 */;
@@ -48,8 +48,8 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
     obj5.value = DEFAULT2 === constants4.AGE_RESTRICTED;
     obj5.onValueChange = tmp8;
     obj5.disabled = tmp7;
-    obj2.children = closure_1_10(TableSwitchRow.TableSwitchRow, obj5);
-    tmp9 = closure_1_10(TableRowGroup.TableRowGroup, obj2, "filter-section");
+    obj2.children = refs(TableSwitchRow.TableSwitchRow, obj5);
+    tmp9 = refs(TableRowGroup.TableRowGroup, obj2, "filter-section");
   }
   return tmp9;
 }
@@ -95,7 +95,7 @@ prototype["updateNavigation"] = function updateNavigation(submitting) {
         const obj = { onPress: self.handleSaveChanges, text: null };
         const intl = util.intl;
         obj.text = intl.string(util.t["R3BPH+"]);
-        return closure_2_10(HeaderActionButton.HeaderActionButton, obj);
+        return refs(HeaderActionButton.HeaderActionButton, obj);
       };
     }
     setOptionsResult.headerRight = fn2;
@@ -115,7 +115,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(17249).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(17244).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj.children = verificationLevelOptions.map((item) => {
     ({ name, color, value } = item);
     ({ desc, disabled } = item);
@@ -126,7 +126,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
       const obj3 = { color };
       obj2.style = obj3;
       obj2.children = name;
-      tmpResult = closure_2_10(Text_Text.Text, obj2);
+      tmpResult = refs(Text_Text.Text, obj2);
     }
     obj.label = tmpResult;
     obj.subLabel = desc;
@@ -136,7 +136,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
       tmp5 = disabled;
     }
     obj.disabled = tmp5;
-    return closure_2_10(TableRadioRow.TableRadioRow, obj, "level-" + value);
+    return refs(TableRadioRow.TableRadioRow, obj, "level-" + value);
   });
   return closure_10(self(7679).TableRadioGroup, obj, "level-section");
 };
@@ -154,7 +154,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
   const features = guild.features;
-  const contentFilterOptions = self(17249).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(17244).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj.children = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);
@@ -165,7 +165,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
       tmp2 = disabled;
     }
     obj.disabled = tmp2;
-    return closure_2_10(TableRadioRow.TableRadioRow, obj, "filter-" + value);
+    return refs(TableRadioRow.TableRadioRow, obj, "filter-" + value);
   });
   return closure_10(self(7679).TableRadioGroup, obj, "filter-section");
 };
@@ -180,13 +180,13 @@ prototype["render"] = function render() {
   const items1 = [this.renderVerificationLevelSection(), this.renderExplicitContentFilter(), ];
   if (canManageGuild) {
     const obj3 = { guild, hasChanges };
-    canManageGuild = closure_1_10(GuildSettingsOwnerConfiguredContentLevel, obj3);
+    canManageGuild = refs(GuildSettingsOwnerConfiguredContentLevel, obj3);
   }
   const obj4 = { children: null };
   items1[2] = canManageGuild;
   obj2.children = items1;
   obj.children = closure_1_11(Stack_Stack.Stack, obj2);
-  const items2 = [closure_1_10(Form.Form, obj), closure_1_10(NavScrim.NavScrim, {})];
+  const items2 = [refs(Form.Form, obj), refs(NavScrim.NavScrim, {})];
   obj4.children = items2;
   return closure_1_11(application_id, obj4);
 };

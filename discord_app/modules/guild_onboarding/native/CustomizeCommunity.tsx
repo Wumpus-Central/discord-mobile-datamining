@@ -1,6 +1,6 @@
-// === Module 12378: CustomizeCommunity ===
+// === Module 12372: CustomizeCommunity ===
 
-// Module 12378 (CustomizeCommunity)
+// Module 12372 (CustomizeCommunity)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _modDef1652 from "module_1652" /* 1652 */;
@@ -15,7 +15,7 @@ import EmojiDefault from "Emoji" /* 7828 */;
 import _modDef7848 from "module_7848" /* 7848 */;
 import ConnectionCardDefault from "ConnectionCard" /* 7850 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import useBatchUpdateSelectOptionDefault from "useBatchUpdateSelectOption" /* 12382 */;
+import useBatchUpdateSelectOptionDefault from "useBatchUpdateSelectOption" /* 12376 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 6906 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -37,7 +37,7 @@ function EmptyCustomizeCommunity(setTab) {
   const obj3 = { style: tmp.emptyContainer, children: null };
   const obj4 = { style: tmp.emptyContainerImage, source: null };
   const obj2 = setTab(504);
-  obj4.source = tmp4(isThemeDarkResult ? 12379 : 12380);
+  obj4.source = tmp4(isThemeDarkResult ? 12373 : 12374);
   const items1 = [closure_15(FastImageDefault, obj4), , ];
   const obj5 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1113).intl;
@@ -278,7 +278,7 @@ function DropdownPrompt(guildId) {
   CustomizeCommunityTsx1.__workletHash = 9001393483162;
   CustomizeCommunityTsx1.__initData = tmp6;
   const animatedStyle = require("module_1652").useAnimatedStyle(CustomizeCommunityTsx1);
-  handleSelectOption = tmp4(12382)(guildId).handleSelectOption;
+  handleSelectOption = tmp4(12376)(guildId).handleSelectOption;
   const items3 = [guildId, _prompt, handleSelectOption, stateFromStoresArray.length];
   const callback = handleSelectOption.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7833, dependencyMap.paths), "DropdownOptions", {
@@ -500,7 +500,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(12381)(guildId);
+  const tmp7 = stateFromStores(12375)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);

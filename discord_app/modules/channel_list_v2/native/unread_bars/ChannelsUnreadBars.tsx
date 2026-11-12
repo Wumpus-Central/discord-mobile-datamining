@@ -1,6 +1,6 @@
-// === Module 18774: ChannelsUnreadBars ===
+// === Module 18769: ChannelsUnreadBars ===
 
-// Module 18774 (ChannelsUnreadBars)
+// Module 18769 (ChannelsUnreadBars)
 import debounceDefault from "debounce" /* 551 */;
 import HapticUtils from "HapticUtils" /* 5491 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5492 */;

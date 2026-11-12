@@ -1,6 +1,6 @@
-// === Module 15700: conjureCreatorByline ===
+// === Module 13684: conjureCreatorByline ===
 
-// Module 15700 (conjureCreatorByline)
+// Module 13684 (conjureCreatorByline)
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
 import UserUtils from "UserUtils" /* 5309 */;

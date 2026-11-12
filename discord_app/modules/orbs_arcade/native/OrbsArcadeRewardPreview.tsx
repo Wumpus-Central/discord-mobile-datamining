@@ -1,13 +1,13 @@
-// === Module 17550: OrbsArcadeRewardPreview ===
+// === Module 17545: OrbsArcadeRewardPreview ===
 
-// Module 17550 (OrbsArcadeRewardPreview)
+// Module 17545 (OrbsArcadeRewardPreview)
 import nativeDefault from "native" /* 575 */;
 import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 2105 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9434 */;
-import _modDef9435 from "module_9435" /* 9435 */;
-import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 10357 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17535 */;
+import AvatarDecorationSampleV2 from "AvatarDecorationSampleV2" /* 9433 */;
+import _modDef9434 from "module_9434" /* 9434 */;
+import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 10355 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 17530 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ function CollectibleRewardPreview(size) {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.avatar, resizeMode: "contain", source: null, accessible: false };
   const obj2 = { skuId: size.reward.skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.STATIC };
-  obj4.source = _modDef9435;
+  obj4.source = _modDef9434;
   items = [React4(FastImageDefault, obj4), ];
   let tmp6Result = null;
   if (null != collectiblesItemAssetUrl) {

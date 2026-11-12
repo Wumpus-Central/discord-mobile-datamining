@@ -1,6 +1,6 @@
-// === Module 13100: useCanShareConjureProject ===
+// === Module 13094: useCanShareConjureProject ===
 
-// Module 13100 (useCanShareConjureProject)
+// Module 13094 (useCanShareConjureProject)
 import ConjurePublishTypes from "ConjurePublishTypes" /* 7320 */;
 import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7313 */;
 

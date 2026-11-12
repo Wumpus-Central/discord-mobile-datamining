@@ -1,13 +1,13 @@
-// === Module 18889: WaterwheelsDiscoverCard ===
+// === Module 18884: WaterwheelsDiscoverCard ===
 
-// Module 18889 (WaterwheelsDiscoverCard)
+// Module 18884 (WaterwheelsDiscoverCard)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10158 */;
-import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 18884 */;
-import selectDiscoverServerAction from "selectDiscoverServerAction" /* 18890 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10156 */;
+import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 18879 */;
+import selectDiscoverServerAction from "selectDiscoverServerAction" /* 18885 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -83,7 +83,7 @@ function ServerIdentity(server) {
     const obj13 = { style: tmp4.metaItem, children: null };
     const obj14 = { style: tmp4.dot };
     const items7 = [tmp9(closure_7, obj14), ];
-    const obj15 = { variant: "body-xs/medium", color: "text-muted", style: tmp4.metaText, children: null };
+    const obj15 = { variant: "body-xs/medium", color: "text-subtle", style: tmp4.metaText, children: null };
     const intl = tmp(1113).intl;
     const obj16 = { membersOnline: server.online };
     obj15.children = intl.format(tmp(1113).t["LC+S+m"], obj16);
@@ -98,7 +98,7 @@ function ServerIdentity(server) {
       ({ dot: arr12[0], mutedDot: arr12[1] } = tmp4);
       obj18.style = items9;
       const items10 = [tmp9(closure_7, obj18), ];
-      const obj19 = { variant: "body-xs/medium", color: "text-muted", style: tmp4.metaText, children: null };
+      const obj19 = { variant: "body-xs/medium", color: "text-subtle", style: tmp4.metaText, children: null };
       const intl2 = tmp(1113).intl;
       const obj20 = { count: server.members };
       obj19.children = intl2.format(tmp(1113).t.zRl6XR, obj20);
@@ -190,10 +190,10 @@ function ServerRowCard(arg0) {
   const tmp = closure_15();
   const obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.identityRow, children: null };
-  items = [closure_1_10(ServerIdentity, { server, onAction }), closure_1_10(ServerActionButton, { server, variant: "primary", onAction })];
+  items = [refs(ServerIdentity, { server, onAction }), refs(ServerActionButton, { server, variant: "primary", onAction })];
   obj2.children = items;
   obj.children = closure_1_11(metroImportDefault, obj2);
-  return closure_1_10(metroImportDefault, obj);
+  return refs(metroImportDefault, obj);
 }
 function GameHero(game) {
   game = game.game;
@@ -237,7 +237,7 @@ function GameHero(game) {
   }
   items2[1] = tmp5Result;
   obj3.children = items2;
-  const items3 = [closure_11(closure_7, obj3), closure_10(game(onAction[13]).Text, { variant: "body-sm/normal", color: "text-muted", lineClamp: 2, children: game.description })];
+  const items3 = [closure_11(closure_7, obj3), closure_10(game(onAction[13]).Text, { variant: "body-sm/normal", color: "text-subtle", lineClamp: 2, children: game.description })];
   obj2.children = items3;
   const items4 = [closure_11(closure_5, obj2), ];
   let tmp2Result = null;
@@ -276,7 +276,7 @@ function CarouselCard(arg0) {
   }
   items = [tmp9, ];
   const obj5 = { style: tmp.identityCopy, children: null };
-  const items1 = [closure_10(require("Text/Text").Heading, { variant: "heading-sm/semibold", color: "text-strong", children: carousel.header.title }), closure_10(require("Text/Text").Text, { variant: "body-sm/medium", color: "text-muted", children: carousel.header.subtitle })];
+  const items1 = [closure_10(require("Text/Text").Heading, { variant: "heading-sm/semibold", color: "text-strong", children: carousel.header.title }), closure_10(require("Text/Text").Text, { variant: "body-sm/medium", color: "text-subtle", children: carousel.header.subtitle })];
   obj5.children = items1;
   items[1] = closure_11(closure_7, obj5);
   obj2.children = items;
@@ -291,7 +291,7 @@ function CarouselCard(arg0) {
     children: null
   };
   const items3 = carousel.items;
-  obj8.children = items3.map((game) => closure_2_10(GameHero, { game, width: num, onAction }, game.gameId));
+  obj8.children = items3.map((game) => refs(GameHero, { game, width: num, onAction }, game.gameId));
   items2[1] = closure_10(closure_6, obj8);
   obj.children = items2;
   return closure_11(closure_7, obj);
@@ -301,13 +301,13 @@ function PostCard(onAction) {
   onAction = onAction.onAction;
   const tmp = closure_15();
   const obj = { style: tmp.row, children: null };
-  items = [closure_1_10(Text_Text.Heading, { variant: "heading-sm/semibold", color: "text-strong", children: post.title }), closure_1_10(Text_Text.Text, { variant: "body-md/normal", color: "text-default", lineClamp: 4, children: post.body }), , ];
+  items = [refs(Text_Text.Heading, { variant: "heading-sm/semibold", color: "text-strong", children: post.title }), refs(Text_Text.Text, { variant: "body-md/normal", color: "text-default", lineClamp: 4, children: post.body }), , ];
   let tmp4Result = null;
   if (null != post.imageUrl) {
     const obj4 = { style: tmp.media, source: null };
     const obj5 = { uri: post.imageUrl };
     obj4.source = obj5;
-    tmp4Result = closure_1_10(FastImageDefault, obj4);
+    tmp4Result = refs(FastImageDefault, obj4);
   }
   items[2] = tmp4Result;
   let tmp4Result2 = null;
@@ -323,8 +323,8 @@ function PostCard(onAction) {
               return onAction(action, "button");
             }
       };
-      obj6.children = closure_1_10(components_Button_Button.Button, obj7);
-      tmp4Result2 = closure_1_10(metroImportDefault, obj6);
+      obj6.children = refs(components_Button_Button.Button, obj7);
+      tmp4Result2 = refs(metroImportDefault, obj6);
     }
   }
   items[3] = tmp4Result2;
@@ -341,13 +341,13 @@ function WaterwheelsDiscoverCardContent(entry) {
   const type = layout.type;
   if ("server_row" === type) {
     const obj2 = { server: layout, onAction: callback };
-    return closure_1_10(ServerRowCard, obj2);
+    return refs(ServerRowCard, obj2);
   } else if ("carousel" === type) {
     const obj3 = { carousel: layout, onAction: callback };
-    return closure_1_10(CarouselCard, obj3);
+    return refs(CarouselCard, obj3);
   } else if ("post" === type) {
     const obj = { post: layout, action: card.actions[0], onAction: callback };
-    return closure_1_10(PostCard, obj);
+    return refs(PostCard, obj);
   }
 }
 get_ActivityIndicator = fn(17);
@@ -360,10 +360,10 @@ const PX_12 = nativeDefault.space.PX_12;
 const sum = PX_40 + PX_12;
 const PX_32 = nativeDefault.space.PX_32;
 let createStyles = fn(5243);
-let obj2 = { row: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, carouselSection: null, carouselHeader: null, carouselContent: null, identityRow: null, identity: null, identityCompact: null, identityCopy: null, nameRow: null, name: null, icon: null, iconCompact: null, meta: null, metaItem: null, metaText: null, dot: null, mutedDot: null, hero: null, heroBody: null, heroTop: null, heroTitle: null, cover: null, heroServer: null, media: null, postAction: null };
-let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-obj2.carouselSection = { paddingTop: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-let obj4 = { paddingTop: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+let obj2 = { row: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 }, carouselSection: null, carouselHeader: null, carouselContent: null, identityRow: null, identity: null, identityCompact: null, identityCopy: null, nameRow: null, name: null, icon: null, iconCompact: null, meta: null, metaItem: null, metaText: null, dot: null, mutedDot: null, hero: null, heroBody: null, heroTop: null, heroTitle: null, cover: null, heroServer: null, media: null, postAction: null };
+let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
+obj2.carouselSection = { paddingTop: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
+let obj4 = { paddingTop: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
 obj2.carouselHeader = { flexDirection: "row", alignItems: "center", gap: PX_12, paddingRight: nativeDefault.space.PX_16 };
 let obj5 = { flexDirection: "row", alignItems: "center", gap: PX_12, paddingRight: nativeDefault.space.PX_16 };
 obj2.carouselContent = { paddingTop: nativeDefault.space.PX_4, paddingLeft: sum, paddingRight: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
@@ -391,8 +391,8 @@ obj2.dot = size2;
 let obj12 = { flexDirection: "row", maxWidth: "100%", flexShrink: 1, alignItems: "center", gap: nativeDefault.space.PX_4 };
 obj2.mutedDot = { backgroundColor: nativeDefault.colors.ICON_STATUS_OFFLINE };
 let obj13 = { backgroundColor: nativeDefault.colors.ICON_STATUS_OFFLINE };
-obj2.hero = { borderRadius: nativeDefault.radii.md, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-let obj14 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj2.hero = { borderRadius: nativeDefault.radii.md, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj14 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj2.heroBody = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 let obj15 = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.heroTop = { flexDirection: "row", gap: nativeDefault.space.PX_12 };
@@ -420,6 +420,6 @@ const result = size.fileFinishedImporting("modules/waterwheels/discover/native/W
 export default function WaterwheelsDiscoverCard(entry) {
   const obj = { fallback: null, children: null };
   const merged = Object.assign(entry);
-  obj.children = closure_1_10(WaterwheelsDiscoverCardContent, {});
-  return closure_1_10(entry_data_ErrorBoundary.ErrorBoundary, obj, entry.entry.key);
+  obj.children = refs(WaterwheelsDiscoverCardContent, {});
+  return refs(entry_data_ErrorBoundary.ErrorBoundary, obj, entry.entry.key);
 };

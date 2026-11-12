@@ -1,6 +1,6 @@
-// === Module 11814: SwipeableFastList ===
+// === Module 11808: SwipeableFastList ===
 
-// Module 11814 (SwipeableFastList)
+// Module 11808 (SwipeableFastList)
 import FastListDefault from "FastList" /* 7781 */;
 import noop from "module_19" /* 19 */;
 

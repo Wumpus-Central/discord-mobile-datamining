@@ -1,6 +1,6 @@
-// === Module 19650: useNativeThemeUpdater ===
+// === Module 19645: useNativeThemeUpdater ===
 
-// Module 19650 (useNativeThemeUpdater)
+// Module 19645 (useNativeThemeUpdater)
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -11,18 +11,18 @@ const result = size.fileFinishedImporting("modules/themes/native/useNativeThemeU
 export default function useNativeThemeUpdater() {
   closure_0 = noop.useRef(ThemeStore.theme);
   const layoutEffect = noop.useLayoutEffect(() => {
-    closure_0(19651).updateVisualRefresh(true);
+    closure_0(19646).updateVisualRefresh(true);
   }, []);
   const layoutEffect1 = noop.useLayoutEffect(() => {
     function handleThemeUpdate() {
       const theme = ThemeStore.theme;
       if (theme !== handleThemeUpdate.current) {
         handleThemeUpdate.current = theme;
-        handleThemeUpdate(19652).updateTheme(theme);
-        const obj = handleThemeUpdate(19652);
+        handleThemeUpdate(19647).updateTheme(theme);
+        const obj = handleThemeUpdate(19647);
       }
     }
-    handleThemeUpdate(19652).updateTheme(ThemeStore.theme);
+    handleThemeUpdate(19647).updateTheme(ThemeStore.theme);
     ThemeStore.addChangeListener(handleThemeUpdate);
     return () => {
       ThemeStore.removeChangeListener(handleThemeUpdate);

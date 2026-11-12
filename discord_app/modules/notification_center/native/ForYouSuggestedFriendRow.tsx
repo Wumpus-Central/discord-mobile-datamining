@@ -1,12 +1,12 @@
-// === Module 19080: ForYouSuggestedFriendRow ===
+// === Module 19075: ForYouSuggestedFriendRow ===
 
-// Module 19080 (ForYouSuggestedFriendRow)
+// Module 19075 (ForYouSuggestedFriendRow)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import UserUtilsDefault from "UserUtils" /* 5309 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import ChannelListLayout from "ChannelListLayout" /* 10987 */;
+import ChannelListLayout from "ChannelListLayout" /* 10981 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
@@ -49,12 +49,12 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
   }
   let sharedValue;
   let stateFromStores;
-  const messagesTabLayout = suggestedFriend(10987).useMessagesTabLayout(panelVariant);
+  const messagesTabLayout = suggestedFriend(10981).useMessagesTabLayout(panelVariant);
   const tmp4 = closure_12(messagesTabLayout);
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  const obj = suggestedFriend(10987);
-  const layoutStyles = suggestedFriend(10987).getLayoutStyles(messagesTabLayout);
-  const obj2 = suggestedFriend(10987);
+  const obj = suggestedFriend(10981);
+  const layoutStyles = suggestedFriend(10981).getLayoutStyles(messagesTabLayout);
+  const obj2 = suggestedFriend(10981);
   const fontScale = suggestedFriend(5881).useFontScale();
   const obj3 = suggestedFriend(5881);
   items = [stateFromStores];
@@ -64,7 +64,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
     if (suggestedFriend.friendSuggestionName.length > 0) {
       let friendSuggestionName = suggestedFriend.friendSuggestionName;
     }
-    const suggestedContactNameForSuggestion = tmp(18638).getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend);
+    const suggestedContactNameForSuggestion = tmp(18633).getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend);
     let str2 = "";
     if (null != suggestedContactNameForSuggestion) {
       const _HermesInternal = HermesInternal;
@@ -92,7 +92,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       const obj8 = { borderRadius: layoutStyles.container.borderRadius };
       items4[1] = obj8;
       obj7.style = items4;
-      const tmpResult10 = tmp(19081);
+      const tmpResult10 = tmp(19076);
       const obj9 = { style: tmp4.avatar, children: null };
       const obj10 = { user: suggestedFriend.user, guildId: "r", size: layoutStyles.icon.avatarSize, animate: !stateFromStoresObject };
       obj9.children = closure_9(tmp(1187).Avatar, obj10);
@@ -100,7 +100,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       const obj11 = { style: tmp4.textContainer, children: null };
       const obj12 = { lineClamp: 1, variant: layoutStyles.channelName.text.variant, color: "text-default", style: tmp4.nameText, children: friendSuggestionName };
       const items6 = [closure_9(tmp(5866).Text, obj12), ];
-      const tmpResult11 = tmp(19082);
+      const tmpResult11 = tmp(19077);
       let num3 = 0;
       if (tmpResult12.isAndroid()) {
         num3 = -2;
@@ -119,7 +119,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       const intl2 = tmp(1113).intl;
       obj15.actionStatus = intl2.string(tmp(1113).t.Kzyxm9);
       obj15.animate = !stateFromStoresObject;
-      obj13.children = closure_9(tmp(19083).ActionStatusSubLabel, obj15);
+      obj13.children = closure_9(tmp(19078).ActionStatusSubLabel, obj15);
       items6[1] = closure_9(sharedValue, obj13);
       obj11.children = items6;
       items5[1] = closure_10(sharedValue, obj11);
@@ -139,14 +139,14 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
         dependencyMap(suggestedFriend);
       };
       obj16.animate = !stateFromStoresObject;
-      items5[2] = closure_9(tmp(19084).ContactSuggestionActions, obj16);
+      items5[2] = closure_9(tmp(19079).ContactSuggestionActions, obj16);
       obj17.children = items5;
       const obj18 = { layout: messagesTabLayout, fontScale, panelVariant };
       obj7.children = tmpResult11.renderChannelWrapper(closure_10(closure_11, obj17), obj18);
       const obj19 = { layout: messagesTabLayout, panelVariant };
       return tmpResult10.renderChannelPressableWrapper(closure_9(tmp(7364).PressableHighlight, obj7), obj19);
     }
-    const tmpResult = tmp(18638);
+    const tmpResult = tmp(18633);
     formatToPlainStringResult = UserUtilsDefault.getName(suggestedFriend.user);
     const tmp5Result = UserUtilsDefault;
   }

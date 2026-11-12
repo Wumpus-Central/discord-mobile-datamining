@@ -1,14 +1,14 @@
-// === Module 18043: AppIconRows ===
+// === Module 18038: AppIconRows ===
 
-// Module 18043 (AppIconRows)
+// Module 18038 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
 import AppIconTypes from "AppIconTypes" /* 5269 */;
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5271 */;
-import AppIconUtils from "AppIconUtils" /* 15203 */;
-import AppIconRowDefault from "AppIconRow" /* 18044 */;
-import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 18045 */;
+import AppIconUtils from "AppIconUtils" /* 15200 */;
+import AppIconRowDefault from "AppIconRow" /* 18039 */;
+import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 18040 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -103,5 +103,5 @@ export default function AppIconRows(onSelect) {
   const obj6 = { children: null };
   items1[2] = React5(View, { style: bottomUpsellPadding, children: React5(BackwardsCompatibleAppIconRows, { hasNitro: isPremiumResult, icons: officialAppIcons, currentAppIcon, title: stringResult, onSelect }) });
   obj6.children = items1;
-  return closure_1_10(React6, obj6);
+  return refs(React6, obj6);
 };

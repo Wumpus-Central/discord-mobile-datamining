@@ -1,6 +1,6 @@
-// === Module 18358: useMaybeFetchShopHome ===
+// === Module 18353: useMaybeFetchShopHome ===
 
-// Module 18358 (useMaybeFetchShopHome)
+// Module 18353 (useMaybeFetchShopHome)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8418 */;
 import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 8462 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -118,7 +118,7 @@ export function useMaybeFetchCollectiblesShopHome(HOME, arg1, memo) {
               const collectiblesShopHome = CollectiblesActionCreators.fetchCollectiblesShopHome(closure_0, closure_13, closure_2);
             }
           }
-          tmp8 = null != closure_9 && Date.now() - closure_7 < closure_2_10;
+          tmp8 = null != closure_9 && Date.now() - closure_7 < refs;
         }
       }
     }

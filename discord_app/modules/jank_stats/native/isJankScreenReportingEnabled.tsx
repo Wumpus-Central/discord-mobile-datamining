@@ -1,6 +1,6 @@
-// === Module 18598: isJankScreenReportingEnabled ===
+// === Module 18593: isJankScreenReportingEnabled ===
 
-// Module 18598 (isJankScreenReportingEnabled)
+// Module 18593 (isJankScreenReportingEnabled)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import libdiscoreExperiments from "libdiscoreExperiments" /* 5118 */;
 import DeviceUtils from "DeviceUtils" /* 5200 */;

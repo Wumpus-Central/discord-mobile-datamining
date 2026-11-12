@@ -1,6 +1,6 @@
-// === Module 15393: OrbCheckoutModalComponents ===
+// === Module 15390: OrbCheckoutModalComponents ===
 
-// Module 15393 (OrbCheckoutModalComponents)
+// Module 15390 (OrbCheckoutModalComponents)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import shared from "shared" /* 5250 */;
@@ -10,12 +10,12 @@ import components_Button_Button from "components/Button/Button" /* 5873 */;
 import Stack_Stack from "Stack/Stack" /* 6274 */;
 import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7193 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7557 */;
-import OrbsIcon from "OrbsIcon" /* 9375 */;
-import SKUPreviewDefault from "SKUPreview" /* 9394 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11737 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 11739 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 15391 */;
-import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 15395 */;
+import OrbsIcon from "OrbsIcon" /* 9374 */;
+import SKUPreviewDefault from "SKUPreview" /* 9393 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11731 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 11733 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 15388 */;
+import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 15392 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8419 */;
 import SKUStore from "SKUStore" /* 7007 */;
@@ -34,10 +34,10 @@ function GenericOrbCheckoutPurchaseItem(arg0) {
   ({ rowDetailsContainer: arr[0], skuDetailsContainer: arr[1] } = tmp);
   obj.style = items;
   const obj2 = { sku, size: nativeDefault.space.PX_64 };
-  const items1 = [closure_1_10(SKUPreviewDefault, obj2), , ];
-  const obj3 = { style: tmp.skuDetails, children: closure_1_10(Text_Text.Text, { variant: "body-md/semibold", children: sku.name }) };
-  items1[1] = closure_1_10(React4, obj3);
-  items1[2] = closure_1_10(OrbCheckoutAmountTagDefault, { orbAmount: orbPriceAmount });
+  const items1 = [refs(SKUPreviewDefault, obj2), , ];
+  const obj3 = { style: tmp.skuDetails, children: refs(Text_Text.Text, { variant: "body-md/semibold", children: sku.name }) };
+  items1[1] = refs(React4, obj3);
+  items1[2] = refs(OrbCheckoutAmountTagDefault, { orbAmount: orbPriceAmount });
   obj.children = items1;
   return closure_1_11(React4, obj);
 }
@@ -66,10 +66,10 @@ const result = size.fileFinishedImporting("modules/virtual_currency/checkout/nat
 export function OrbCheckoutErrorCard(children) {
   const obj = { style: closure_12().errorCard, children: null };
   const obj2 = { direction: "horizontal", spacing: 8, align: "flex-start", children: null };
-  items = [closure_1_10(CircleErrorIcon.CircleErrorIcon, { size: "sm", color: "mobile-text-heading-primary" }), closure_1_10(Text_Text.Text, { variant: "body-sm/medium", color: "mobile-text-heading-primary", children: children.error })];
+  items = [refs(CircleErrorIcon.CircleErrorIcon, { size: "sm", color: "mobile-text-heading-primary" }), refs(Text_Text.Text, { variant: "body-sm/medium", color: "mobile-text-heading-primary", children: children.error })];
   obj2.children = items;
   obj.children = closure_1_11(Stack_Stack.Stack, obj2);
-  return closure_1_10(React4, obj);
+  return refs(React4, obj);
 }
 export function OrbCheckoutOrderSummary(skuId) {
   skuId = skuId.skuId;
@@ -78,7 +78,7 @@ export function OrbCheckoutOrderSummary(skuId) {
   if (obj.useOrbCheckoutModalContext().isOrdersCheckout) {
     const tmp4 = orbPriceAmount;
   }
-  obj = skuId(15391);
+  obj = skuId(15388);
   items = [SKUStore];
   const items1 = [skuId];
   const stateFromStores = skuId(563).useStateFromStores(items, () => SKUStore.get(skuId), items1);
@@ -95,7 +95,7 @@ export function OrbCheckoutOrderSummary(skuId) {
     tmp8 = isFractionalPremiumSku(skuId);
   }
   const tmp2Result3 = skuId(563);
-  const mobileCheckoutFlow = skuId(15394).getMobileCheckoutFlow({ sku: stateFromStores, product: stateFromStores1, usesCollectiblesDetails: tmp8 });
+  const mobileCheckoutFlow = skuId(15391).getMobileCheckoutFlow({ sku: stateFromStores, product: stateFromStores1, usesCollectiblesDetails: tmp8 });
   const obj2 = { style: tmp.topRowWrapper, children: null };
   const obj3 = { variant: "heading-xs/semibold", color: "mobile-text-heading-primary", style: tmp.sectionTitle, children: null };
   const intl = tmp2(1113).intl;
@@ -129,7 +129,7 @@ export function OrbCheckoutPaymentSourceDetails(orbAmount) {
   const obj2 = { variant: "heading-xs/semibold", color: "mobile-text-heading-primary", style: tmp.sectionTitle, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["zLch/S"]);
-  items = [closure_1_10(Text_Text.Text, obj2), ];
+  items = [refs(Text_Text.Text, obj2), ];
   const obj3 = { style: null, children: null };
   const items1 = [, ];
   ({ rowDetailsContainer: arr2[0], orbPaymentSourceDetails: arr2[1] } = tmp);
@@ -137,7 +137,7 @@ export function OrbCheckoutPaymentSourceDetails(orbAmount) {
   const obj4 = { variant: "body-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.y0WGqP);
-  const items2 = [closure_1_10(Text_Text.Text, obj4), closure_1_10(OrbCheckoutAmountTagDefault, { orbAmount: orbAmount.orbBalance })];
+  const items2 = [refs(Text_Text.Text, obj4), refs(OrbCheckoutAmountTagDefault, { orbAmount: orbAmount.orbBalance })];
   obj3.children = items2;
   items[1] = closure_1_11(React4, obj3);
   obj.children = items;
@@ -145,7 +145,7 @@ export function OrbCheckoutPaymentSourceDetails(orbAmount) {
 }
 export function OrbCheckoutLegalFinePrint() {
   const tmp = closure_12();
-  skuId = skuId(15391).useOrbCheckoutModalContext().skuId;
+  skuId = skuId(15388).useOrbCheckoutModalContext().skuId;
   items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
   return closure_10(skuId(5866).Text, { style: tmp.disclaimer, variant: "footnote/normal", color: "interactive-text-active", children: memo });
@@ -170,7 +170,7 @@ export function OrbCheckoutPurchaseButton(onPress) {
   if (tmp3Result2.isThemeDark(tmp2)) {
     str2 = "control-overlay-primary-text-default";
   }
-  obj3.icon = closure_1_10(OrbsIcon.OrbsIcon, { size: "md", color: str2 });
+  obj3.icon = refs(OrbsIcon.OrbsIcon, { size: "md", color: str2 });
   obj3.loading = isRedeeming;
   obj3.onPress = onPress.onPress;
   if (!isRedeeming) {
@@ -183,5 +183,5 @@ export function OrbCheckoutPurchaseButton(onPress) {
     isRedeeming = virtualCurrencyBalance < orbChargeAmount;
   }
   obj3.disabled = isRedeeming;
-  return closure_1_10(components_Button_Button.Button, obj3);
+  return refs(components_Button_Button.Button, obj3);
 }

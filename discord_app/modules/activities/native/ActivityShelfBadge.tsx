@@ -1,6 +1,6 @@
-// === Module 13318: ActivityShelfBadge ===
+// === Module 13312: ActivityShelfBadge ===
 
-// Module 13318 (ActivityShelfBadge)
+// Module 13312 (ActivityShelfBadge)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Server from "Server" /* 2116 */;

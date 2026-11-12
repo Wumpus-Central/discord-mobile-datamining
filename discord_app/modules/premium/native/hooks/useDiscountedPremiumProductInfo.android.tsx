@@ -1,6 +1,6 @@
-// === Module 9645: useDiscountedPremiumProductInfo ===
+// === Module 9644: useDiscountedPremiumProductInfo ===
 
-// Module 9645 (useDiscountedPremiumProductInfo)
+// Module 9644 (useDiscountedPremiumProductInfo)
 import PriceUtils from "PriceUtils" /* 7190 */;
 import ProductIds from "ProductIds" /* 8514 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 11957: useChannelSafeAreaBottomStyles ===
+// === Module 11951: useChannelSafeAreaBottomStyles ===
 
-// Module 11957 (useChannelSafeAreaBottomStyles)
+// Module 11951 (useChannelSafeAreaBottomStyles)
 import nativeDefault from "native" /* 575 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;

@@ -1,9 +1,9 @@
-// === Module 15836: URLCallout ===
+// === Module 15831: URLCallout ===
 
-// Module 15836 (URLCallout)
+// Module 15831 (URLCallout)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import SharedStateUtils from "SharedStateUtils" /* 15837 */;
+import SharedStateUtils from "SharedStateUtils" /* 15832 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

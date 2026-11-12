@@ -1,11 +1,11 @@
-// === Module 11323: StickerPickerEmptyState ===
+// === Module 11317: StickerPickerEmptyState ===
 
-// Module 11323 (StickerPickerEmptyState)
+// Module 11317 (StickerPickerEmptyState)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HapticUtils from "HapticUtils" /* 5491 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5492 */;
-import StickerDefault from "Sticker" /* 11030 */;
-import StickersHooks from "StickersHooks" /* 11296 */;
+import StickerDefault from "Sticker" /* 11024 */;
+import StickersHooks from "StickersHooks" /* 11290 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import StickersStore from "StickersStore" /* 6947 */;
@@ -104,13 +104,13 @@ export default function _default() {
       return closure_1_11(sticker(7364).PressableOpacity, obj, id);
     })
   };
-  obj9.source = analyticsLocations(11153);
+  obj9.source = analyticsLocations(11147);
   obj9.style = tmp.nitroWheel;
   obj8.icon = closure_11(analyticsLocations(5957), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {
-    return analyticsLocations(11317)({ section: constants.EXPRESSION_PICKER });
+    return analyticsLocations(11311)({ section: constants.EXPRESSION_PICKER });
   };
   obj7.children = closure_11(require("components/Button/Button").Button, obj8);
   items2[3] = closure_11(View, obj7);

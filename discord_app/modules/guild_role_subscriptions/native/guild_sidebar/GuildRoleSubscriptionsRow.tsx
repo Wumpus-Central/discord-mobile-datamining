@@ -1,12 +1,12 @@
-// === Module 18798: GuildRoleSubscriptionsRow ===
+// === Module 18793: GuildRoleSubscriptionsRow ===
 
-// Module 18798 (GuildRoleSubscriptionsRow)
+// Module 18793 (GuildRoleSubscriptionsRow)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 14680 */;
-import _modDef15034 from "module_15034" /* 15034 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 14676 */;
+import _modDef15030 from "module_15030" /* 15030 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,14 +29,14 @@ export default function GuildRoleSubscriptionsRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   }, items);
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18799, dependencyMap.paths), c1, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18794, dependencyMap.paths), c1, {
       guildId: id,
       onClose() {
         c1(dependencyMap[8]).hideActionSheet(closure_1_1);
       }
     });
   }, items1);
-  const ChannelModes = id(14680).ChannelModes;
+  const ChannelModes = id(14676).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -54,7 +54,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1113).intl;
   obj2.name = intl2.string(tmp6(1113).t["KzCF/6"]);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp6(14680).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp6(14680).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef15034 });
+  obj.name = jsx(tmp6(14676).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp6(14676).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef15030 });
   return <tmp8 onPress={callback} onLongPress={callback1} style={closure_7().container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} />;
 };

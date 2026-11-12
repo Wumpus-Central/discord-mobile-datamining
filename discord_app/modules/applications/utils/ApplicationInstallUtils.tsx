@@ -1,9 +1,9 @@
-// === Module 12611: ApplicationInstallUtils ===
+// === Module 12605: ApplicationInstallUtils ===
 
-// Module 12611 (ApplicationInstallUtils)
+// Module 12605 (ApplicationInstallUtils)
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5890 */;
 import isConjureApplicationDefault from "isConjureApplication" /* 6965 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 11345 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 11339 */;
 
 require = fn;
 const BuiltInSectionId = fn(6282).BuiltInSectionId;

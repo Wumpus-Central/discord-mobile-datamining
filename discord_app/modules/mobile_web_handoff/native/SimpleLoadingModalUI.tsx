@@ -1,6 +1,6 @@
-// === Module 10424: SimpleLoadingModalUI ===
+// === Module 10422: SimpleLoadingModalUI ===
 
-// Module 10424 (SimpleLoadingModalUI)
+// Module 10422 (SimpleLoadingModalUI)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

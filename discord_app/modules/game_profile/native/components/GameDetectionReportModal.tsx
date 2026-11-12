@@ -1,11 +1,11 @@
-// === Module 10428: GameDetectionReportModal ===
+// === Module 10426: GameDetectionReportModal ===
 
-// Module 10428 (GameDetectionReportModal)
+// Module 10426 (GameDetectionReportModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Navigator from "Navigator" /* 7424 */;
 import NavigatorHeader from "NavigatorHeader" /* 7427 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10219 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10217 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -124,7 +124,7 @@ function ReportContent(applicationId) {
           }, 100);
         },
       hasIcons: null,
-      children: "35520200000000"
+      children: "35520300000000"
     };
     const obj8 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[12]).intl;

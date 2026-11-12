@@ -1,16 +1,16 @@
-// === Module 19300: renderChannelItem ===
+// === Module 19295: renderChannelItem ===
 
-// Module 19300 (renderChannelItem)
+// Module 19295 (renderChannelItem)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useChannelName from "useChannelName" /* 5891 */;
 import NotificationCenterUtils from "NotificationCenterUtils" /* 6971 */;
 import GuildIconDefault from "GuildIcon" /* 7654 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8352 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10828 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 19301 */;
-import renderChannelWrapperDefault from "renderChannelWrapper" /* 19302 */;
-import renderChannelContentDefault from "renderChannelContent" /* 19304 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10822 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 19296 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 19297 */;
+import renderChannelContentDefault from "renderChannelContent" /* 19299 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
@@ -26,7 +26,7 @@ function LaunchpadChannelIcon(channel) {
   const obj3 = { style: tmp.guildBadgeIcon, children: null };
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   obj3.children = closure_8(GuildIconDefault, { guild: stateFromStores, size: tmp2.icon.guildBadgeIconSize });
-  const items1 = [closure_8(View, obj3), closure_8(channel(13430).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
+  const items1 = [closure_8(View, obj3), closure_8(channel(13424).ChannelIcon, { channel, size: "sm", wrapperSize: 32 })];
   obj2.children = items1;
   return closure_10(closure_9, obj2);
 }
@@ -107,7 +107,7 @@ export default function renderChannelItem(unread) {
     tmp11Result2 = React5(View, obj5);
   }
   children[3] = tmp11Result2;
-  return tmp8(closure_1_10(React6, { children }), { fontScale });
+  return tmp8(refs(React6, { children }), { fontScale });
 };
 export function getChannelAccessibilityProps(channel) {
   channel = channel.channel;

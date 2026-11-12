@@ -1,6 +1,6 @@
-// === Module 18609: TabsPerformanceTracker ===
+// === Module 18604: TabsPerformanceTracker ===
 
-// Module 18609 (TabsPerformanceTracker)
+// Module 18604 (TabsPerformanceTracker)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import noop from "module_19" /* 19 */;

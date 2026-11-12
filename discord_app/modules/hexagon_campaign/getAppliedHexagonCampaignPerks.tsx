@@ -1,6 +1,6 @@
-// === Module 17516: getAppliedHexagonCampaignPerks ===
+// === Module 17511: getAppliedHexagonCampaignPerks ===
 
-// Module 17516 (getAppliedHexagonCampaignPerks)
+// Module 17511 (getAppliedHexagonCampaignPerks)
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5271 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5267 */;
 import ThemeStore from "ThemeStore" /* 1192 */;

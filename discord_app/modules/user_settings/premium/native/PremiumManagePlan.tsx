@@ -1,6 +1,6 @@
-// === Module 15259: PremiumManagePlan ===
+// === Module 15256: PremiumManagePlan ===
 
-// Module 15259 (PremiumManagePlan)
+// Module 15256 (PremiumManagePlan)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
@@ -20,14 +20,14 @@ import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 7431 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7743 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7747 */;
 import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 8463 */;
-import _modDef9225 from "module_9225" /* 9225 */;
-import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 9867 */;
-import PremiumManagementUtils from "PremiumManagementUtils" /* 9912 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 9914 */;
-import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 9948 */;
-import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 10892 */;
-import useFPDurationLeftDefault from "useFPDurationLeft" /* 15217 */;
-import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 15238 */;
+import _modDef9224 from "module_9224" /* 9224 */;
+import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 9866 */;
+import PremiumManagementUtils from "PremiumManagementUtils" /* 9911 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 9913 */;
+import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 9947 */;
+import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 10886 */;
+import useFPDurationLeftDefault from "useFPDurationLeft" /* 15214 */;
+import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 15235 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -37,7 +37,7 @@ import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2175 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
 import EntitlementStore from "EntitlementStore" /* 8464 */;
 import AppStateStore from "AppStateStore" /* 2117 */;
-import IAPStore from "IAPStore" /* 9236 */;
+import IAPStore from "IAPStore" /* 9235 */;
 
 require = fn;
 function ManagePlanHeader() {
@@ -478,7 +478,7 @@ function FractionalPremiumCredits(durationText) {
   obj10.colors = items2;
   const obj12 = { children: null };
   const tmp11 = LinearGradientDefault;
-  obj12.children = closure_1_28(native.Icon, { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef9225, size: native.IconSizes.LARGE });
+  obj12.children = closure_1_28(native.Icon, { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef9224, size: native.IconSizes.LARGE });
   obj10.children = closure_1_28(metroImportDefault, obj12);
   obj9.children = closure_1_28(tmp11, obj10);
   const items3 = [closure_1_28(metroImportDefault, obj9), ];
@@ -556,7 +556,7 @@ function FractionalPremiumCredits(durationText) {
   const intl4 = util.intl;
   obj31.children = intl4.string(util.t["B66Z+f"]);
   tmp8Result = closure_1_28(Text_Text.Text, obj31);
-  const obj13 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef9225, size: native.IconSizes.LARGE };
+  const obj13 = { color: nativeDefault.unsafe_rawColors.WHITE, source: _modDef9224, size: native.IconSizes.LARGE };
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_6, View: metroImportDefault, ScrollView: closure_8, ActivityIndicator: closure_9 } = get_ActivityIndicator);
@@ -644,8 +644,8 @@ export default function PremiumManagePlan() {
   const tmp = closure_31();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  const youBarSettingsOutsideSafeAreaTop = navigation(15215).useYouBarSettingsOutsideSafeAreaTop();
-  let obj = navigation(15215);
+  const youBarSettingsOutsideSafeAreaTop = navigation(15212).useYouBarSettingsOutsideSafeAreaTop();
+  let obj = navigation(15212);
   navigation = navigation(1499).useNavigation();
   items = [navigation];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -684,9 +684,9 @@ export default function PremiumManagePlan() {
     tmp5 = SubscriptionPlanStore.isLoadedForPremiumSKUs() || SubscriptionPlanStore.isFetchingForPremiumSKUs();
   });
   const obj6 = navigation(504);
-  let isInReverseTrial = navigation(9251).useIsInReverseTrial();
-  const obj8 = navigation(9251);
-  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(15217).CountDownMessageTypes.SHORT_TIME);
+  let isInReverseTrial = navigation(9250).useIsInReverseTrial();
+  const obj8 = navigation(9250);
+  const tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(15214).CountDownMessageTypes.SHORT_TIME);
   const unactivatedFractionalPremiumDurationString = navigation(2171).getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
     if (!tmp10.isPurchasedExternally) {
@@ -762,7 +762,7 @@ export default function PremiumManagePlan() {
   const items9 = [tmp29Result, , , , , , ];
   if (isInReverseTrial) {
     const obj13 = { premiumType: closure_26.TIER_2, forFractionalPremium: true, hideButton: true };
-    isInReverseTrial = closure_28(tmp2(10892), obj13);
+    isInReverseTrial = closure_28(tmp2(10886), obj13);
   }
   items9[1] = isInReverseTrial;
   let tmp29Result3 = result;
@@ -771,7 +771,7 @@ export default function PremiumManagePlan() {
   }
   if (tmp29Result3) {
     const obj14 = { premiumType: closure_26.TIER_2, hideButton: true, hidePrice: true, isPremiumGroup: true, premiumGroupRole };
-    tmp29Result3 = closure_28(tmp2(10892), obj14);
+    tmp29Result3 = closure_28(tmp2(10886), obj14);
   }
   items9[2] = tmp29Result3;
   if (tmp29Result4) {
@@ -797,9 +797,9 @@ export default function PremiumManagePlan() {
         },
       subscription: tmp10
     };
-    const items10 = [closure_28(tmp2(9867), obj17), ];
+    const items10 = [closure_28(tmp2(9866), obj17), ];
     const obj18 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_28(tmp2(9910), obj18);
+    items10[1] = closure_28(tmp2(9909), obj18);
     obj16.children = items10;
     tmp27Result = closure_29(closure_7, obj16);
   }

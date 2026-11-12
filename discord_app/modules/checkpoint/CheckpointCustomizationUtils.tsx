@@ -173,21 +173,21 @@ export function getAssetAccessibilityLabel(getName, arg1) {
   }
   return items.join(", ");
 }
-export function getNitroLockedMessage(nextBlockedTrait) {
+export function getNitroLockedMessage(checkpointRouteBlockedTrait) {
   let stringResult;
-  if (null != obj13[nextBlockedTrait]) {
+  if (null != obj13[checkpointRouteBlockedTrait]) {
     const intl = util.intl;
     stringResult = intl.string(tmp);
   }
   return stringResult;
 }
-export function getCheckpointRouteBlockedTrait(route, arr) {
-  if (route === require("CheckpointNavigation").CheckpointRoute.FINALIZE_CHARACTER) {
+export function getCheckpointRouteBlockedTrait(activeRoute, arr) {
+  if (activeRoute === require("CheckpointNavigation").CheckpointRoute.FINALIZE_CHARACTER) {
     return arr[0];
   } else {
-    if (tmpResult.isCheckpointCustomizationRoute(route)) {
+    if (tmpResult.isCheckpointCustomizationRoute(activeRoute)) {
       const tmpResult2 = tmp(6682);
-      const tmp4 = obj4[tmpResult2.getCheckpointRoutePresentation(tmpResult2, route).characterStage];
+      const tmp4 = obj4[tmpResult2.getCheckpointRoutePresentation(tmpResult2, activeRoute).characterStage];
       _require = tmp4;
       if (null != tmp4) {
         return arr.find((item) => item === obj3[closure_0]);

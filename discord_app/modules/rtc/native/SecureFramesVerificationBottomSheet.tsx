@@ -1,13 +1,13 @@
-// === Module 10576: SecureFramesVerificationBottomSheet ===
+// === Module 10574: SecureFramesVerificationBottomSheet ===
 
-// Module 10576 (SecureFramesVerificationBottomSheet)
+// Module 10574 (SecureFramesVerificationBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const SecureFramesConstants = fn(10561);
+const SecureFramesConstants = fn(10559);
 ({ EPOCH_AUTHENTICATOR_CHUNK_SIZE: hasOwnProperty, EPOCH_AUTHENTICATOR_COLUMNS: closure_6, EPOCH_AUTHENTICATOR_LENGTH: metroImportDefault } = SecureFramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -28,7 +28,7 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   onShareClick = onShareClick.onShareClick;
   ({ title, subtitle, footer, epochAuthenticator } = onShareClick);
   const tmp = closure_10();
-  const readableSecureFramesFingerprint = onShareClick(10568).useReadableSecureFramesFingerprint({ fingerprintBase64: epochAuthenticator, chunkSize, desiredLength });
+  const readableSecureFramesFingerprint = onShareClick(10566).useReadableSecureFramesFingerprint({ fingerprintBase64: epochAuthenticator, chunkSize, desiredLength });
   items = [readableSecureFramesFingerprint, onShareClick];
   const callback = noop.useCallback(() => {
     if (null != readableSecureFramesFingerprint) {
@@ -54,7 +54,7 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   const obj7 = { style: tmp.content, children: null };
   const obj8 = { spacing: 8, justify: "center", align: "center", direction: "vertical", children: null };
   const obj9 = { style: tmp.iconContainer, children: null };
-  const obj = onShareClick(10568);
+  const obj = onShareClick(10566);
   let obj2 = { fingerprintBase64: epochAuthenticator, chunkSize, desiredLength };
   const tmp2 = onShareClick;
   obj9.children = closure_8(onShareClick(8027).LockIcon, { style: tmp.icon, color: readableSecureFramesFingerprint(575).colors.TEXT_SUBTLE });
@@ -70,12 +70,12 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   let tmp7Result = null != readableSecureFramesFingerprint;
   if (tmp7Result) {
     const obj13 = { chunks: readableSecureFramesFingerprint };
-    tmp7Result = closure_8(tmp10(10577), obj13);
+    tmp7Result = closure_8(tmp10(10575), obj13);
   }
   obj12.trailing = tmp7Result;
   obj12.chunks = readableSecureFramesFingerprint;
   obj12.columns = columns;
-  items2[1] = closure_8(readableSecureFramesFingerprint(10574), obj12);
+  items2[1] = closure_8(readableSecureFramesFingerprint(10572), obj12);
   items2[2] = closure_8(tmp2(5866).Text, { style: tmp.footer, variant: "body-xs/normal", color: "text-muted", children: footer });
   obj7.children = items2;
   obj3.children = closure_9(View, obj7);

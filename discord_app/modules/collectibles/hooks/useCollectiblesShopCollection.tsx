@@ -1,10 +1,10 @@
-// === Module 18416: useCollectiblesShopCollection ===
+// === Module 18411: useCollectiblesShopCollection ===
 
-// Module 18416 (useCollectiblesShopCollection)
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 10391 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 10392 */;
+// Module 18411 (useCollectiblesShopCollection)
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 10389 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 10390 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9384 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9383 */;
 import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 8420 */;
 
 require = fn;

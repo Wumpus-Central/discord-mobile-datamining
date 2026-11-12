@@ -1,13 +1,13 @@
-// === Module 18923: GuildsBarAnimatedItemWrapper ===
+// === Module 18918: GuildsBarAnimatedItemWrapper ===
 
-// Module 18923 (GuildsBarAnimatedItemWrapper)
+// Module 18918 (GuildsBarAnimatedItemWrapper)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 5314 */;
 import useToken from "useToken" /* 5839 */;
 import NativeViewDefault from "NativeView" /* 7656 */;
-import usePressabilityDefault from "usePressability" /* 18924 */;
-import useHomeDrawerToggleAccessibilityActionDefault from "useHomeDrawerToggleAccessibilityAction" /* 18925 */;
+import usePressabilityDefault from "usePressability" /* 18919 */;
+import useHomeDrawerToggleAccessibilityActionDefault from "useHomeDrawerToggleAccessibilityAction" /* 18920 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -199,7 +199,7 @@ function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return React5(UnreadIndicator, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
 const IOS_POINTER_STYLE = fn(5883).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(18911);
+const GuildsBarConstants = fn(18906);
 ({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: closure_6, useGuildWrapperSize: metroImportDefault } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -328,7 +328,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
   GuildsBarAnimatedItemWrapperTsx4.__workletHash = 1300086607522;
   GuildsBarAnimatedItemWrapperTsx4.__initData = tmp9;
   const animatedStyle = require("module_1652").useAnimatedStyle(GuildsBarAnimatedItemWrapperTsx4);
-  const enableHome = noop.useContext(tmp2(18618).HomeDrawerStateContext).enableHome;
+  const enableHome = noop.useContext(tmp2(18613).HomeDrawerStateContext).enableHome;
   const obj3 = require("module_1652");
   const drawerOpen = require("useDrawerState").useDrawerOpen(enableHome);
   const items2 = [isDragTarget, dragState, num, overState, zIndex, tmp];

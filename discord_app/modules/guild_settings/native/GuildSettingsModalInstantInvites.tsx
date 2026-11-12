@@ -1,6 +1,6 @@
-// === Module 20444: GuildSettingsModalInstantInvites ===
+// === Module 20439: GuildSettingsModalInstantInvites ===
 
-// Module 20444 (GuildSettingsModalInstantInvites)
+// Module 20439 (GuildSettingsModalInstantInvites)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -10,13 +10,13 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489
 import Text_Text from "Text/Text" /* 5866 */;
 import TableRowIcon from "TableRowIcon" /* 7387 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 7667 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 9189 */;
-import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 9191 */;
-import InstantInvite from "InstantInvite" /* 10853 */;
-import _modDef15919 from "module_15919" /* 15919 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 9188 */;
+import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 9190 */;
+import InstantInvite from "InstantInvite" /* 10847 */;
+import _modDef15914 from "module_15914" /* 15914 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10950 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10944 */;
 import InviteRecord from "InviteRecord" /* 7598 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -149,7 +149,7 @@ function GuildSettingsModalInstantInvites(invites) {
       try {
         const obj = { source: GuildAntiRaidTypes.GuildIncidentActionSources.MESSAGE, alertType: GuildAntiRaidUtils.getIncidentAlertType(stateFromStores) };
         const obj4 = { guild, analyticsData: obj };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14026, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14022, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
         closure_7(false);
       } catch (tmp17) {
         tmp2(false);

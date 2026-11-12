@@ -1,6 +1,6 @@
-// === Module 19753: useTransitionToConnectedActivityInVoice ===
+// === Module 19748: useTransitionToConnectedActivityInVoice ===
 
-// Module 19753 (useTransitionToConnectedActivityInVoice)
+// Module 19748 (useTransitionToConnectedActivityInVoice)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -83,7 +83,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                         const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;
                         c4 = 1;
-                        const obj6 = { value: closure_2_1(12690)(obj5), done: false };
+                        const obj6 = { value: closure_2_1(12684)(obj5), done: false };
                         return obj6;
                       }
                     }
@@ -107,7 +107,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(12622)(closure_1_3, _location);
+                closure_3_1(12616)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }

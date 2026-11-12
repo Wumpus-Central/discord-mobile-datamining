@@ -1,6 +1,6 @@
-// === Module 10629: useGuildPowerupRollbackEnabled ===
+// === Module 10627: useGuildPowerupRollbackEnabled ===
 
-// Module 10629 (useGuildPowerupRollbackEnabled)
+// Module 10627 (useGuildPowerupRollbackEnabled)
 import Powerups from "Powerups" /* 5464 */;
 import ServerThemeExperiment from "ServerThemeExperiment" /* 5466 */;
 import size from "module_2" /* 2 */;

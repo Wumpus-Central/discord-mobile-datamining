@@ -1,19 +1,19 @@
-// === Module 18469: ParentalControlsMessageRequests ===
+// === Module 18464: ParentalControlsMessageRequests ===
 
-// Module 18469 (ParentalControlsMessageRequests)
+// Module 18464 (ParentalControlsMessageRequests)
 import util from "util" /* 1113 */;
 import _modDef2685 from "module_2685" /* 2685 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6770 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8124 */;
-import useSelectedTeen from "useSelectedTeen" /* 9552 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 17228 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 17229 */;
-import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 17233 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 18455 */;
+import useSelectedTeen from "useSelectedTeen" /* 9551 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 17223 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 17224 */;
+import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 17228 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 18450 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 8673 */;
 
 require = fn;
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -23,7 +23,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(_modDef2685["7aYkh1"]);
   },
-  parent: fn(9136).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(9135).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();

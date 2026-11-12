@@ -1,9 +1,9 @@
-// === Module 15008: GuildDirectoryEmpty ===
+// === Module 15004: GuildDirectoryEmpty ===
 
-// Module 15008 (GuildDirectoryEmpty)
+// Module 15004 (GuildDirectoryEmpty)
 import nativeDefault from "native" /* 575 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8394 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 14596 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 14592 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 5173 */;
 
@@ -32,13 +32,13 @@ export default function GuildDirectoryEmpty(guild) {
   const obj = guild(504);
   const obj3 = { contentContainerStyle: null, children: null };
   const items1 = [tmp.container, ];
-  const obj2 = guild(14595);
+  const obj2 = guild(14591);
   items1[1] = { paddingBottom: channel(1627)().bottom + 16 };
   obj3.contentContainerStyle = items1;
   const canCreateOrAddGuildInDirectory = obj2.useCanCreateOrAddGuildInDirectory(channel);
   const obj5 = { source: null, style: null };
   const obj4 = { paddingBottom: channel(1627)().bottom + 16 };
-  obj5.source = channel(15009);
+  obj5.source = channel(15005);
   obj5.style = tmp.header;
   const items2 = [closure_6(channel(5957), obj5), , , , ];
   const obj6 = { style: tmp.title, accessibilityRole: "header", children: null };
@@ -56,7 +56,7 @@ export default function GuildDirectoryEmpty(guild) {
       onPress() {
           return GuildDirectoryAddModalActionCreatorsDefault.open({ directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: channel.id });
         },
-      iconSource: tmp2(15010),
+      iconSource: tmp2(15006),
       title: null
     };
     const intl3 = tmp4(1113).intl;
@@ -69,7 +69,7 @@ export default function GuildDirectoryEmpty(guild) {
     onPress() {
       return instant_invite_InstantInviteUtils.handleOpenInviteActionsheet(guild, channel.id, closure_2, constants.HUB_EMPTY_STATE);
     },
-    iconSource: channel(15011),
+    iconSource: channel(15007),
     title: null
   };
   const intl4 = tmp4(1113).intl;

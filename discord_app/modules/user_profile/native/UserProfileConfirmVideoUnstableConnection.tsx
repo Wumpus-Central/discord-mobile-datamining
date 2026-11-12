@@ -1,6 +1,6 @@
-// === Module 12043: UserProfileConfirmVideoUnstableConnection ===
+// === Module 12037: UserProfileConfirmVideoUnstableConnection ===
 
-// Module 12043 (UserProfileConfirmVideoUnstableConnection)
+// Module 12037 (UserProfileConfirmVideoUnstableConnection)
 import util from "util" /* 1113 */;
 import AlertModal from "AlertModal" /* 6211 */;
 import noop from "module_19" /* 19 */;

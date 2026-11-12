@@ -1,6 +1,6 @@
-// === Module 20430: GuildSettingsRoleEditPermissions ===
+// === Module 20425: GuildSettingsRoleEditPermissions ===
 
-// Module 20430 (GuildSettingsRoleEditPermissions)
+// Module 20425 (GuildSettingsRoleEditPermissions)
 import nativeDefault from "native" /* 575 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -78,7 +78,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
       onClick: function handleTemplateOpen() {
           metroImportDefault.dismiss();
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(20431, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, { permissionsEdited, onPermissionsChanged, guildId: guild.id });
+          obj.openLazy(asyncRequireImpl(20426, dependencyMap.paths), "role-permission-templates-" + guild.id + "-" + role.id, { permissionsEdited, onPermissionsChanged, guildId: guild.id });
         },
       accessibilityRole: "button"
     };
@@ -88,7 +88,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   }
   canResult = PermissionUtilsAll.can({ permission: constants2.ADMINISTRATOR, user: currentUser, context: guild });
   const tmp18Result3 = closure_14(closure_6, { children: tmp18Result });
-  const guildPermissionSpec = role(19511).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(19506).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -101,7 +101,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(20428), { role }), , , ];
+  const children = [closure_14(role(20423), { role }), , , ];
   const obj7 = {
     children: closure_14(guild(7759).SearchBar, {
       size: "md",

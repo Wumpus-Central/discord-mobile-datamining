@@ -1,12 +1,12 @@
-// === Module 16299: GuildActionSheetHeader ===
+// === Module 16294: GuildActionSheetHeader ===
 
-// Module 16299 (GuildActionSheetHeader)
+// Module 16294 (GuildActionSheetHeader)
 import nativeDefault from "native" /* 575 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 5106 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 16301 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 16296 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 16300 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 16295 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7225 */;
 
@@ -22,7 +22,7 @@ function CommunityPill(guildVisibility) {
   _require = intl.string(tmp4 ? t.op2cJ6 : t.TME4LJ);
   let ExperimentalWebIcon;
   if (tmp4) {
-    ExperimentalWebIcon = tmp2(12253).ExperimentalWebIcon;
+    ExperimentalWebIcon = tmp2(12247).ExperimentalWebIcon;
   }
   const obj = {
     style: tmp.communityPill,
@@ -34,10 +34,10 @@ function CommunityPill(guildVisibility) {
   };
   if (tmp4) {
     const obj2 = { size: "xs", color: ExperimentalWebIcon(575).colors.BADGE_INVERTED_BACKGROUND, secondaryColor: ExperimentalWebIcon(575).colors.BADGE_INVERTED_TEXT, style: tmp.communityPillIcon };
-    let tmp7Result = closure_9(tmp2(10326).ExperimentalWebBadgeIcon, obj2);
+    let tmp7Result = closure_9(tmp2(10324).ExperimentalWebBadgeIcon, obj2);
     let tmp10 = closure_9;
   } else {
-    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(10330), disableColor: true };
+    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(10328), disableColor: true };
     tmp7Result = closure_9(tmp2(1187).Icon, obj3);
     tmp10 = closure_9;
   }

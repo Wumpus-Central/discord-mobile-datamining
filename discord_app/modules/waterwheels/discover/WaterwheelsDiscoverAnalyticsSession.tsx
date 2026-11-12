@@ -1,6 +1,6 @@
-// === Module 18887: WaterwheelsDiscoverAnalyticsSession ===
+// === Module 18882: WaterwheelsDiscoverAnalyticsSession ===
 
-// Module 18887 (WaterwheelsDiscoverAnalyticsSession)
+// Module 18882 (WaterwheelsDiscoverAnalyticsSession)
 import v1 from "v1" /* 1266 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

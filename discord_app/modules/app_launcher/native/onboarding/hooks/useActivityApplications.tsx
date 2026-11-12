@@ -1,7 +1,7 @@
-// === Module 13271: useActivityApplications ===
+// === Module 13265: useActivityApplications ===
 
-// Module 13271 (useActivityApplications)
-import fetchShelf from "fetchShelf" /* 12646 */;
+// Module 13265 (useActivityApplications)
+import fetchShelf from "fetchShelf" /* 12640 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ export function useActivityApplications(guildId) {
   guildId = guildId.guildId;
   const fetchesShelf = guildId.fetchesShelf;
   items = [fetchesShelf, guildId];
-  const mapped = fetchesShelf(13272)({ guildId }).map((application) => application.application);
+  const mapped = fetchesShelf(13266)({ guildId }).map((application) => application.application);
   const effect = noop.useEffect(() => {
     if (fetchesShelf) {
       const obj2 = { guildId };

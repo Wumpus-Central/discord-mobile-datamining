@@ -1,10 +1,10 @@
-// === Module 13000: SpeakerTileStatuses ===
+// === Module 12994: SpeakerTileStatuses ===
 
-// Module 13000 (SpeakerTileStatuses)
+// Module 12994 (SpeakerTileStatuses)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _modDef7568 from "module_7568" /* 7568 */;
-import _modDef13002 from "module_13002" /* 13002 */;
+import _modDef12996 from "module_12996" /* 12996 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
 import VoiceStateStore from "VoiceStateStore" /* 5918 */;
@@ -30,12 +30,12 @@ const memoResult = noop.memo(function VoiceStatus(userId) {
   const items1 = [userId];
   const stateFromStores = userId(504).useStateFromStores(items, () => MediaEngineStore.isLocalMute(userId), items1);
   const obj = userId(504);
-  const obj2 = userId(10530);
+  const obj2 = userId(10528);
   const items2 = [VoiceStateStore];
   const items3 = [channelId, userId];
   const stateFromStores1 = userId(504).useStateFromStores(items2, () => VoiceStateStore.getVoiceStateForChannel(channelId, userId), items3);
   const obj3 = userId(504);
-  const result = obj2.withLocalSelfMuteDeaf(stateFromStores1, userId(10530).useLocalSelfMuteDeaf());
+  const result = obj2.withLocalSelfMuteDeaf(stateFromStores1, userId(10528).useLocalSelfMuteDeaf());
   let flag;
   if (result != null) {
     flag = result.isVoiceMuted();
@@ -51,15 +51,15 @@ const memoResult = noop.memo(function VoiceStatus(userId) {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp6 = channelId(12960);
+    let tmp6 = channelId(12954);
     let flag3 = true;
   } else if (flag2) {
-    tmp6 = channelId(12746);
+    tmp6 = channelId(12740);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp6 = channelId(12747);
+      tmp6 = channelId(12741);
       flag3 = false;
     }
   }
@@ -86,7 +86,7 @@ export const ModeratorStatus = noop.memo(function ModeratorStatus(userId) {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(13001);
+    tmp4 = channelId(12995);
   }
   let tmp6 = null;
   if (null != tmp4) {
@@ -101,7 +101,7 @@ export const ModeratorStatus = noop.memo(function ModeratorStatus(userId) {
 });
 export function BlockedStatus() {
   const tmp = closure_8();
-  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef13002, size: native.Icon.Sizes.EXTRA_SMALL, color: nativeDefault.unsafe_rawColors.RED_400 });
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef12996, size: native.Icon.Sizes.EXTRA_SMALL, color: nativeDefault.unsafe_rawColors.RED_400 });
 }
 export function IgnoredStatus() {
   const tmp = closure_8();

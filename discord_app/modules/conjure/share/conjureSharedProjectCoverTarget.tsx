@@ -1,8 +1,8 @@
-// === Module 12353: conjureSharedProjectCoverTarget ===
+// === Module 12347: conjureSharedProjectCoverTarget ===
 
-// Module 12353 (conjureSharedProjectCoverTarget)
-import conjureSharedProjectHome from "conjureSharedProjectHome" /* 12354 */;
-import findLoadedAppChannelDefault from "findLoadedAppChannel" /* 12355 */;
+// Module 12347 (conjureSharedProjectCoverTarget)
+import conjureSharedProjectHome from "conjureSharedProjectHome" /* 12348 */;
+import findLoadedAppChannelDefault from "findLoadedAppChannel" /* 12349 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/share/conjureSharedProjectCoverTarget.tsx");

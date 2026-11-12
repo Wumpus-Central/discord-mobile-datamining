@@ -1,6 +1,6 @@
-// === Module 16812: getCurrentEmbeddedActivityChannel ===
+// === Module 16807: getCurrentEmbeddedActivityChannel ===
 
-// Module 16812 (getCurrentEmbeddedActivityChannel)
+// Module 16807 (getCurrentEmbeddedActivityChannel)
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 

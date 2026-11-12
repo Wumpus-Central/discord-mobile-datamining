@@ -1,6 +1,6 @@
-// === Module 20162: NativeOnDemandResourceManager ===
+// === Module 20157: NativeOnDemandResourceManager ===
 
-// Module 20162 (NativeOnDemandResourceManager)
+// Module 20157 (NativeOnDemandResourceManager)
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 6162 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import MediaEngineStore from "MediaEngineStore" /* 2130 */;
@@ -58,7 +58,7 @@ const prototype = function NativeOnDemandResourceManager() {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             if (applyArgumentsResult.isPastConnectionOpen) {
-              const obj2 = tmp2(20163);
+              const obj2 = tmp2(20158);
               let hasOnDemandResourceResult;
               if (obj2 != null) {
                 hasOnDemandResourceResult = obj2.hasOnDemandResource("krisp");
@@ -74,7 +74,7 @@ const prototype = function NativeOnDemandResourceManager() {
                 }
                 if (state.getState() === constants.ACTIVE) {
                   applyArgumentsResult.hasFetchedKrisp = true;
-                  const obj6 = tmp2(20163);
+                  const obj6 = tmp2(20158);
                   let onDemandResource;
                   if (obj6 != null) {
                     onDemandResource = obj6.fetchOnDemandResource("krisp");
@@ -98,7 +98,7 @@ const prototype = function NativeOnDemandResourceManager() {
         } else {
           closure_128_0 = value;
           let result1;
-          const obj10 = tmp2(20163);
+          const obj10 = tmp2(20158);
           if (obj10 != null) {
             result1 = obj10.isOnDemandResourcingAvailable();
           }

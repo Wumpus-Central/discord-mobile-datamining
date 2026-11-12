@@ -1,14 +1,14 @@
-// === Module 11296: StickersHooks ===
+// === Module 11290: StickersHooks ===
 
-// Module 11296 (StickersHooks)
+// Module 11290 (StickersHooks)
 import util from "util" /* 1113 */;
 import UserSettings from "UserSettings" /* 5068 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5180 */;
 import StickersUtils from "StickersUtils" /* 6729 */;
 import StickersTypes from "StickersTypes" /* 6730 */;
 import useManageResourcePermissions from "useManageResourcePermissions" /* 7965 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10508 */;
-import StickersActionCreators from "StickersActionCreators" /* 11297 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10506 */;
+import StickersActionCreators from "StickersActionCreators" /* 11291 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -371,7 +371,7 @@ export function useFavoriteStickerIds() {
   return stickerIds;
 }
 export function useFavoriteStickers() {
-  const favoriteStickers = stickerIds(10508).useFrecencySettings().favoriteStickers;
+  const favoriteStickers = stickerIds(10506).useFrecencySettings().favoriteStickers;
   stickerIds = undefined;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -379,7 +379,7 @@ export function useFavoriteStickers() {
   if (stickerIds == null) {
     stickerIds = closure_13;
   }
-  const obj = stickerIds(10508);
+  const obj = stickerIds(10506);
   items = [StickersStore];
   const items1 = [stickerIds];
   return stickerIds(504).useStateFromStoresArray(items, () => {
@@ -423,7 +423,7 @@ export function useLatestFrecentStickerIds() {
   return keys;
 }
 export function useLatestFrecentStickers() {
-  const frecencySettings = keys(10508).useFrecencySettings();
+  const frecencySettings = keys(10506).useFrecencySettings();
   keys = closure_13;
   let stickers;
   if (frecencySettings != null) {
@@ -442,7 +442,7 @@ export function useLatestFrecentStickers() {
     }
     keys = Object.keys(stickers1);
   }
-  const obj = keys(10508);
+  const obj = keys(10506);
   items = [StickersStore];
   const items1 = [keys];
   return keys(504).useStateFromStoresArray(items, () => {

@@ -1,9 +1,9 @@
-// === Module 15752: AddToWishlistItemCard ===
+// === Module 15747: AddToWishlistItemCard ===
 
-// Module 15752 (AddToWishlistItemCard)
+// Module 15747 (AddToWishlistItemCard)
 import nativeDefault from "native" /* 575 */;
-import HeartOutlineIcon from "HeartOutlineIcon" /* 9388 */;
-import SKUPreviewDefault from "SKUPreview" /* 9394 */;
+import HeartOutlineIcon from "HeartOutlineIcon" /* 9387 */;
+import SKUPreviewDefault from "SKUPreview" /* 9393 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -39,7 +39,7 @@ export default function AddToWishlistItemCard(sku) {
     const obj3 = { style: heartOverlay.heartOverlay, pointerEvents: "none", children: React5(HeartOutlineIcon.HeartOutlineIcon, { size: "sm", color: nativeDefault.colors.ICON_OVERLAY_LIGHT }) };
     items[1] = React5(View, obj3);
     obj.children = items;
-    return closure_2_10(React6, obj);
+    return refs(React6, obj);
   }, items);
   const items1 = [first, wishlistAnalyticsContext, , , , ];
   ({ id: arr2[2], productLine: arr2[3] } = sku);

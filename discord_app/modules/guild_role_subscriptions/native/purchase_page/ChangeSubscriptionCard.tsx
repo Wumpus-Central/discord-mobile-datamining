@@ -1,6 +1,6 @@
-// === Module 19201: ChangeSubscriptionCard ===
+// === Module 19196: ChangeSubscriptionCard ===
 
-// Module 19201 (ChangeSubscriptionCard)
+// Module 19196 (ChangeSubscriptionCard)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
@@ -8,7 +8,7 @@ import _modDef2166 from "module_2166" /* 2166 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17729 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17724 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -58,11 +58,11 @@ export default function ChangeSubscriptionCard(activeSubscription) {
     const intl4 = tmp6(1113).intl;
     obj11.text = intl4.string(tmp6(1113).t.UwHVxr);
     obj11.onPress = function handleCancelSubscription() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19202, dependencyMap.paths), { subscriptionId: activeSubscription.id });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19197, dependencyMap.paths), { subscriptionId: activeSubscription.id });
       const obj2 = { subscriptionId: activeSubscription.id };
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };
-    items3[1] = closure_7(tmp6(19194).ArrowButton, obj11);
+    items3[1] = closure_7(tmp6(19189).ArrowButton, obj11);
     obj10.children = items3;
     tmp7Result = closure_8(closure_9, obj10);
   }

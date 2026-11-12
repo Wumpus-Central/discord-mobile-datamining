@@ -1,9 +1,9 @@
-// === Module 19257: useSearchSuggestionsGesture ===
+// === Module 19252: useSearchSuggestionsGesture ===
 
-// Module 19257 (useSearchSuggestionsGesture)
+// Module 19252 (useSearchSuggestionsGesture)
 import _mod1652 from "module_1652" /* 1652 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14631 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 14627 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 19957: VoicePanelVoiceControls ===
+// === Module 19952: VoicePanelVoiceControls ===
 
-// Module 19957 (VoicePanelVoiceControls)
+// Module 19952 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
@@ -8,15 +8,15 @@ import UserSettings from "UserSettings" /* 5068 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
 import Stack_Stack from "Stack/Stack" /* 6274 */;
 import TableRowGroup from "TableRowGroup" /* 7680 */;
-import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 11891 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11924 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 12688 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 12912 */;
-import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 12941 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 15985 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19835 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19952 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 19958 */;
+import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 11885 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11918 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 12682 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 12906 */;
+import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 12935 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 15980 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19830 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19947 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 19953 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import module_1652 from "module_1652" /* 1652 */;
@@ -28,7 +28,7 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11923).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11917).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
 const createStyles = fn(5243);

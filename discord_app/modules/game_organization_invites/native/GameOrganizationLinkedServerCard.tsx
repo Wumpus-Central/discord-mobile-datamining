@@ -1,6 +1,6 @@
-// === Module 13981: GameOrganizationLinkedServerCard ===
+// === Module 13977: GameOrganizationLinkedServerCard ===
 
-// Module 13981 (GameOrganizationLinkedServerCard)
+// Module 13977 (GameOrganizationLinkedServerCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;

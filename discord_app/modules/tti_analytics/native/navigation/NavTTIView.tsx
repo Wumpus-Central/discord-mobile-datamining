@@ -1,10 +1,10 @@
-// === Module 19181: NavTTIView ===
+// === Module 19176: NavTTIView ===
 
-// Module 19181 (NavTTIView)
+// Module 19176 (NavTTIView)
 import initialize from "initialize" /* 504 */;
-import useComponentRenderSpan from "useComponentRenderSpan" /* 19182 */;
-import NavigationTTIRegionHierarchy from "NavigationTTIRegionHierarchy" /* 19184 */;
-import NavigationTTIRegionDebugOverlay from "NavigationTTIRegionDebugOverlay" /* 19185 */;
+import useComponentRenderSpan from "useComponentRenderSpan" /* 19177 */;
+import NavigationTTIRegionHierarchy from "NavigationTTIRegionHierarchy" /* 19179 */;
+import NavigationTTIRegionDebugOverlay from "NavigationTTIRegionDebugOverlay" /* 19180 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5869 */;
@@ -53,7 +53,7 @@ function VisualizedNavTTIViewContent(measurementProps) {
   obj.measurementProps = measurementProps.measurementProps;
   items = [React6(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, { value: hierarchy.contextValue, children: props.children }), React6(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, { name: str, regionId: hierarchy.regionId, tracking, descendantTracking, includedDescendants: hierarchy.includedDescendants, excludedDescendants: hierarchy.excludedDescendants, hierarchyDepth: hierarchy.depth, violation: hierarchy.violation })];
   obj.children = items;
-  return closure_1_10(NavTTIMeasuredView, obj);
+  return refs(NavTTIMeasuredView, obj);
 }
 function VisualizedIncludedNavTTIView(name) {
   const obj2 = { name: name.name, tracking: name.tracking, hasChildren: null };

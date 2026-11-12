@@ -1,8 +1,8 @@
-// === Module 10014: useTieredTenureBadgeForUser ===
+// === Module 10013: useTieredTenureBadgeForUser ===
 
-// Module 10014 (useTieredTenureBadgeForUser)
+// Module 10013 (useTieredTenureBadgeForUser)
 import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7297 */;
-import PremiumPerkGates from "PremiumPerkGates" /* 10015 */;
+import PremiumPerkGates from "PremiumPerkGates" /* 10014 */;
 import UserProfileStore from "UserProfileStore" /* 7288 */;
 import UserStore from "UserStore" /* 1385 */;
 

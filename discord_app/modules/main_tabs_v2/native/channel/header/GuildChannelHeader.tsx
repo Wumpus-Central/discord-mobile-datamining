@@ -1,16 +1,16 @@
-// === Module 15536: GuildChannelHeader ===
+// === Module 15533: GuildChannelHeader ===
 
-// Module 15536 (GuildChannelHeader)
+// Module 15533 (GuildChannelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import useChannelName from "useChannelName" /* 5891 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 7968 */;
-import ChannelHeader from "ChannelHeader" /* 15527 */;
-import openConjureAppChannelSheetDefault from "openConjureAppChannelSheet" /* 15538 */;
+import ChannelHeader from "ChannelHeader" /* 15524 */;
+import openConjureAppChannelSheetDefault from "openConjureAppChannelSheet" /* 15535 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 15537 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 15534 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
 import ChannelMemberStore from "ChannelMemberStore" /* 7251 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -69,7 +69,7 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(12257);
+    const tmpResult = tmp(12251);
     return tmpResult.renderMemberCountText(online, total, flag, tmp(7572).ICON_SIZE[token]);
   }
   const obj2 = channel(504);
@@ -104,7 +104,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
   const channel = guild.channel;
   _slicedToArray = undefined;
   items = [guild(5076).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = _slicedToArray(guild(9494).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
+  const tmp = _slicedToArray(guild(9493).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   dependencyMap = tmp2;
   const tmp3 = tmp[0] === guild(5076).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   _slicedToArray = tmp3;
@@ -132,8 +132,8 @@ function ChannelLinkedLobbyCoachmark(guild) {
     obj.imgSource = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(9494);
-  const coachmark = guild(9501).useCoachmark(guild.iconRef, memo);
+  let obj = guild(9493);
+  const coachmark = guild(9500).useCoachmark(guild.iconRef, memo);
   return null;
 }
 const View = fn(17).View;

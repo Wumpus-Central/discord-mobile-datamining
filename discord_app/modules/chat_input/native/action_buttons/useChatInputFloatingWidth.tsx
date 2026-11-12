@@ -1,6 +1,6 @@
-// === Module 14557: useChatInputFloatingWidth ===
+// === Module 14553: useChatInputFloatingWidth ===
 
-// Module 14557 (useChatInputFloatingWidth)
+// Module 14553 (useChatInputFloatingWidth)
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5485 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-let closure_3 = fn(13703).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
+let closure_3 = fn(13699).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
 let closure_4 = { code: "(function useChatInputFloatingWidthTsx1(){let[collapsedWidth,expandedWidth,progress]=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx");

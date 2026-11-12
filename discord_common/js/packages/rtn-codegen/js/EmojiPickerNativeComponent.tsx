@@ -1,6 +1,6 @@
-// === Module 11229: EmojiPickerNativeComponent ===
+// === Module 11223: EmojiPickerNativeComponent ===
 
-// Module 11229 (EmojiPickerNativeComponent)
+// Module 11223 (EmojiPickerNativeComponent)
 import renderElement from "renderElement" /* 114 */;
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;

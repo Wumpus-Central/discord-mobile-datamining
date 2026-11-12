@@ -1,6 +1,6 @@
-// === Module 13690: ConjureNativeComposer ===
+// === Module 13686: ConjureNativeComposer ===
 
-// Module 13690 (ConjureNativeComposer)
+// Module 13686 (ConjureNativeComposer)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -9,31 +9,31 @@ import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5489 */;
 import useToken from "useToken" /* 5839 */;
 import SendMessageIcon from "SendMessageIcon" /* 5968 */;
 import WarningIcon from "WarningIcon" /* 8095 */;
-import ImagesIcon from "ImagesIcon" /* 10673 */;
-import MusicIcon from "MusicIcon" /* 10793 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10878 */;
-import ImageCarousel from "ImageCarousel" /* 11570 */;
-import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11866 */;
-import conjureStoredAttachments2 from "conjureStoredAttachments" /* 13126 */;
-import ConjureModelSettingsSheet from "ConjureModelSettingsSheet" /* 13153 */;
-import FileUpIcon from "FileUpIcon" /* 13213 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 13482 */;
-import conjureMentions from "conjureMentions" /* 13524 */;
-import StopIcon from "StopIcon" /* 13553 */;
-import conjurePickedFiles from "conjurePickedFiles" /* 13641 */;
-import conjureComposerPills from "conjureComposerPills" /* 13691 */;
-import ChatInputParser from "ChatInputParser" /* 13692 */;
-import ConjureChatActionCreators from "ConjureChatActionCreators" /* 13695 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 13696 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13699 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 13700 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 13702 */;
+import ImagesIcon from "ImagesIcon" /* 10666 */;
+import MusicIcon from "MusicIcon" /* 10787 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10872 */;
+import ImageCarousel from "ImageCarousel" /* 11564 */;
+import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11860 */;
+import conjureStoredAttachments2 from "conjureStoredAttachments" /* 13120 */;
+import ConjureModelSettingsSheet from "ConjureModelSettingsSheet" /* 13147 */;
+import FileUpIcon from "FileUpIcon" /* 13207 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 13476 */;
+import conjureMentions from "conjureMentions" /* 13518 */;
+import StopIcon from "StopIcon" /* 13547 */;
+import conjurePickedFiles from "conjurePickedFiles" /* 13635 */;
+import conjureComposerPills from "conjureComposerPills" /* 13687 */;
+import ChatInputParser from "ChatInputParser" /* 13688 */;
+import ConjureChatActionCreators from "ConjureChatActionCreators" /* 13691 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 13692 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13695 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 13696 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 13698 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 7311 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 13484 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 13478 */;
 
 const require = globalThis.__r;
 const ConjureModelSettingsSheetDefault = ConjureModelSettingsSheet;
@@ -122,7 +122,7 @@ let obj11 = { flexDirection: "row", alignItems: "flex-end", paddingHorizontal: n
 obj5.input = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
 let obj12 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
 obj5.inputStacked = { paddingHorizontal: nativeDefault.space.PX_4 };
-obj5.draftCarousel = { marginTop: -fn(11571).IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING, marginBottom: 0 };
+obj5.draftCarousel = { marginTop: -fn(11565).IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING, marginBottom: 0 };
 let obj14 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj14.alignItems = "center";
@@ -585,7 +585,7 @@ export default function ConjureNativeComposer(projectId) {
             projectId = callback6;
             c1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: projectId(13641).pickConjurePhotos("mixed", projectId(13092).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE), done: false };
+            const obj5 = { value: projectId(13635).pickConjurePhotos("mixed", projectId(13086).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {

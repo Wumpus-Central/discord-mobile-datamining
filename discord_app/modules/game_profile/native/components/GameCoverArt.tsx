@@ -1,11 +1,11 @@
-// === Module 10254: GameCoverArt ===
+// === Module 10252: GameCoverArt ===
 
-// Module 10254 (GameCoverArt)
+// Module 10252 (GameCoverArt)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import useGameArtworkDefault from "useGameArtwork" /* 10255 */;
+import useGameArtworkDefault from "useGameArtwork" /* 10253 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

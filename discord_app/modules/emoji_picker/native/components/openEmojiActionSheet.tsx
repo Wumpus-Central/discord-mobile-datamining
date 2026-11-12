@@ -1,6 +1,6 @@
-// === Module 11237: openEmojiActionSheet ===
+// === Module 11231: openEmojiActionSheet ===
 
-// Module 11237 (openEmojiActionSheet)
+// Module 11231 (openEmojiActionSheet)
 import EmojiConstants from "EmojiConstants" /* 1388 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
@@ -26,7 +26,7 @@ export function openEmojiActionSheet(uniqueName) {
       const result = KeyboardManagerUtils.dismissGlobalKeyboard();
       const obj6 = ActionSheetActionCreatorsDefault;
       const obj7 = { emojiNode: obj };
-      obj6.openLazy(asyncRequireImpl(11238, dependencyMap.paths), "MessageEmojiActionSheet", obj7, "stack");
+      obj6.openLazy(asyncRequireImpl(11232, dependencyMap.paths), "MessageEmojiActionSheet", obj7, "stack");
     }
     obj = { id: uniqueName.id, alt: name, src: null };
     if (null != uniqueName.id) {

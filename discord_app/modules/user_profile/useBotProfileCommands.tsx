@@ -1,7 +1,7 @@
-// === Module 15370: useBotProfileCommands ===
+// === Module 15367: useBotProfileCommands ===
 
-// Module 15370 (useBotProfileCommands)
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 11344 */;
+// Module 15367 (useBotProfileCommands)
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 11338 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

@@ -1,12 +1,12 @@
-// === Module 11779: PremiumGiftPurchaseSuccess ===
+// === Module 11773: PremiumGiftPurchaseSuccess ===
 
-// Module 11779 (PremiumGiftPurchaseSuccess)
+// Module 11773 (PremiumGiftPurchaseSuccess)
 import nativeDefault from "native" /* 575 */;
 import ToastUtils from "ToastUtils" /* 5951 */;
 import GiftCodeUtils from "GiftCodeUtils" /* 6692 */;
 import ClipboardUtils from "ClipboardUtils" /* 7877 */;
-import showShareActionSheet from "showShareActionSheet" /* 10163 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 11601 */;
+import showShareActionSheet from "showShareActionSheet" /* 10161 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 11595 */;
 import noop from "module_19" /* 19 */;
 import SKUStore from "SKUStore" /* 7007 */;
 
@@ -33,9 +33,9 @@ let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumG
 export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp = closure_11();
-  const nativeGiftContext = giftCodeRecord(11603).useNativeGiftContext();
+  const nativeGiftContext = giftCodeRecord(11597).useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj = giftCodeRecord(11603);
+  let obj = giftCodeRecord(11597);
   const giftCodeURL = giftCodeRecord(6692).getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
@@ -60,7 +60,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     ClipboardUtils.copy(giftCodeURL);
     const result = ToastUtils.presentCopiedToClipboard();
   }, items);
-  obj3.children = closure_8(giftCodeURL(11691), { giftStyle });
+  obj3.children = closure_8(giftCodeURL(11685), { giftStyle });
   const items1 = [closure_8(View, obj3), , , , ];
   const obj6 = { style: tmp.title, variant: "heading-lg/semibold", children: null };
   const intl = tmp2(1113).intl;

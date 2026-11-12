@@ -1,6 +1,6 @@
-// === Module 10250: useGameProfileInvite ===
+// === Module 10248: useGameProfileInvite ===
 
-// Module 10250 (useGameProfileInvite)
+// Module 10248 (useGameProfileInvite)
 import DurationsDefault from "Durations" /* 1089 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7594 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,14 +1,14 @@
-// === Module 19147: ICYMIShareModal ===
+// === Module 19142: ICYMIShareModal ===
 
-// Module 19147 (ICYMIShareModal)
+// Module 19142 (ICYMIShareModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5850 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
 import ShareEventUtils from "ShareEventUtils" /* 7921 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 15069 */;
-import ShareChatInputDefault from "ShareChatInput" /* 15081 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 15066 */;
+import ShareChatInputDefault from "ShareChatInput" /* 15078 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -242,7 +242,7 @@ class ICYMIShareModal {
 }
 const View = fn(17).View;
 const AbortCodes = fn(1072).AbortCodes;
-const UserRowModes = fn(10177).UserRowModes;
+const UserRowModes = fn(10175).UserRowModes;
 const MessageSendLocation = fn(5248).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -305,7 +305,7 @@ export function GameShareModal(content) {
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(19148).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(19143).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

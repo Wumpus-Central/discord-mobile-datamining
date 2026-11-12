@@ -1,8 +1,8 @@
-// === Module 11097: ForumTagHooks ===
+// === Module 11091: ForumTagHooks ===
 
-// Module 11097 (ForumTagHooks)
+// Module 11091 (ForumTagHooks)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
-import ReportToModUtils from "ReportToModUtils" /* 11098 */;
+import ReportToModUtils from "ReportToModUtils" /* 11092 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import PermissionStore from "PermissionStore" /* 5175 */;

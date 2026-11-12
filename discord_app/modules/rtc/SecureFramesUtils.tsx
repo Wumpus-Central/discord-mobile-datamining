@@ -1,6 +1,6 @@
-// === Module 10560: SecureFramesUtils ===
+// === Module 10558: SecureFramesUtils ===
 
-// Module 10560 (SecureFramesUtils)
+// Module 10558 (SecureFramesUtils)
 import _modDef38 from "module_38" /* 38 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import DurationsDefault from "Durations" /* 1089 */;
@@ -10,10 +10,10 @@ import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
 import UserUtilsDefault from "UserUtils" /* 5309 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
-import _mod10545 from "module_10545" /* 10545 */;
-import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 10562 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 10563 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 10564 */;
+import _mod10543 from "module_10543" /* 10543 */;
+import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 10560 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 10561 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 10562 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -419,7 +419,7 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
   }
   const tmp = _slicedToArray(items, 2);
 }
-const SecureFramesConstants = fn(10561);
+const SecureFramesConstants = fn(10559);
 ({ AnalyticsSecureFramesUserVerification: closure_11, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } = SecureFramesConstants);
 const Constants = fn(1072);
 ({ LinkingTypes: map1, Routes: closure_14, Endpoints: closure_15, HelpdeskArticles: closure_16 } = Constants);
@@ -449,7 +449,7 @@ export function deleteVerification(userId, arg1, isOtherUserKeyPersistent) {
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const serializeKeyResult = _mod10545.serializeKey(uint8Array);
+    const serializeKeyResult = _mod10543.serializeKey(uint8Array);
     const result = SecureFramesActionCreatorsDefault.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
   } else {
     const result1 = SecureFramesActionCreatorsDefault.deleteSecureFramesTransientKey(userId);

@@ -1,6 +1,6 @@
-// === Module 20167: AddAvatarModal ===
+// === Module 20162: AddAvatarModal ===
 
-// Module 20167 (AddAvatarModal)
+// Module 20162 (AddAvatarModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -11,10 +11,10 @@ import components_Button_Button from "components/Button/Button" /* 5873 */;
 import Navigator from "Navigator" /* 7424 */;
 import NavigatorHeader from "NavigatorHeader" /* 7427 */;
 import VideoBackground from "VideoBackground" /* 8547 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 9335 */;
-import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 16951 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 20165 */;
-import PresetAvatarSelect from "PresetAvatarSelect" /* 20168 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 9334 */;
+import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 16946 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 20160 */;
+import PresetAvatarSelect from "PresetAvatarSelect" /* 20163 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -55,7 +55,7 @@ function AddAvatarScreen() {
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(8813).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(8812).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (noop === 1) {
@@ -71,15 +71,15 @@ function AddAvatarScreen() {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(16951);
-              obj11.description = tmp2(9335).generateAvatarDescription();
+              const obj = tmp2(16946);
+              obj11.description = tmp2(9334).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(9335);
+              const obj3 = tmp2(9334);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(9332).setPendingChanges(obj12);
-            const obj4 = tmp2(9332);
+            tmp2(9331).setPendingChanges(obj12);
+            const obj4 = tmp2(9331);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
@@ -142,7 +142,7 @@ function AddAvatarScreen() {
   obj5.children = items2;
   const items3 = [closure_10(View, obj5), , ];
   const memoizedImageSourceResult = VideoBackground.memoizedImageSource(imageUri);
-  items3[1] = closure_9(selectedAvatar(20177), {
+  items3[1] = closure_9(selectedAvatar(20172), {
     avatarSource: VideoBackground.memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
@@ -166,7 +166,7 @@ function AddAvatarScreen() {
   obj9.children = closure_9(native.LegacyText, obj10);
   items3[2] = closure_9(View, obj9);
   obj4.children = items3;
-  const items4 = [closure_10(View, obj4), closure_9(selectedAvatar(20168), { onAvatarSelect: tmp4[1], selectedAvatar }), ];
+  const items4 = [closure_10(View, obj4), closure_9(selectedAvatar(20163), { onAvatarSelect: tmp4[1], selectedAvatar }), ];
   let obj11 = { style: tmp.buttonContainer, children: null };
   let obj12 = { text: null, grow: true, onPress: null, disabled: null };
   const intl4 = util.intl;

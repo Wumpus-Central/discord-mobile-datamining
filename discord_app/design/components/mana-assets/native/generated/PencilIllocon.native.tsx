@@ -1,20 +1,20 @@
-// === Module 14920: PencilIllocon ===
+// === Module 14916: PencilIllocon ===
 
-// Module 14920 (PencilIllocon)
+// Module 14916 (PencilIllocon)
 import FastImageDefault from "FastImage" /* 5957 */;
 import assetHelpers from "assetHelpers" /* 7689 */;
-import _modDef14805 from "module_14805" /* 14805 */;
-import _modDef14921 from "module_14921" /* 14921 */;
-import _modDef14922 from "module_14922" /* 14922 */;
+import _modDef14801 from "module_14801" /* 14801 */;
+import _modDef14917 from "module_14917" /* 14917 */;
+import _modDef14918 from "module_14918" /* 14918 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14921 }, 3: null };
-const obj2 = { uri: _modDef14921 };
-obj[2] = { uri: _modDef14805 };
-const obj3 = { uri: _modDef14805 };
-obj[3] = { uri: _modDef14922 };
+let obj = { 1: null, 2: { uri: _modDef14917 }, 3: null };
+const obj2 = { uri: _modDef14917 };
+obj[2] = { uri: _modDef14801 };
+const obj3 = { uri: _modDef14801 };
+obj[3] = { uri: _modDef14918 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PencilIllocon.native.tsx");
 

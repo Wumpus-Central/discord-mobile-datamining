@@ -1,7 +1,7 @@
-// === Module 20094: ForumManager ===
+// === Module 20089: ForumManager ===
 
-// Module 20094 (ForumManager)
-import ForumPostDataLoader from "ForumPostDataLoader" /* 11836 */;
+// Module 20089 (ForumManager)
+import ForumPostDataLoader from "ForumPostDataLoader" /* 11830 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 

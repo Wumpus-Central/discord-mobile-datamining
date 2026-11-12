@@ -1,6 +1,6 @@
-// === Module 14255: ? ===
+// === Module 14251: ? ===
 
-// Module 14255
+// Module 14251
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_headwear_07_backwardHat.webp.js");

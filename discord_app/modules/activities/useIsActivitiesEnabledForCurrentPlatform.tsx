@@ -1,6 +1,6 @@
-// === Module 12644: useIsActivitiesEnabledForCurrentPlatform ===
+// === Module 12638: useIsActivitiesEnabledForCurrentPlatform ===
 
-// Module 12644 (useIsActivitiesEnabledForCurrentPlatform)
+// Module 12638 (useIsActivitiesEnabledForCurrentPlatform)
 import shared_PlatformUtils from "shared/PlatformUtils" /* 6199 */;
 import size from "module_2" /* 2 */;
 

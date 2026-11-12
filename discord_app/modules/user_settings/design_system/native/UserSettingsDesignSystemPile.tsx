@@ -1,16 +1,16 @@
-// === Module 18335: UserSettingsDesignSystemPile ===
+// === Module 18330: UserSettingsDesignSystemPile ===
 
-// Module 18335 (UserSettingsDesignSystemPile)
+// Module 18330 (UserSettingsDesignSystemPile)
 import native from "native" /* 1187 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1414 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import Stack_Stack from "Stack/Stack" /* 6274 */;
 import Card from "Card" /* 7381 */;
 import GuildIconDefault from "GuildIcon" /* 7654 */;
-import ClipView from "ClipView" /* 9437 */;
-import ListUtils from "ListUtils" /* 13688 */;
-import Pile from "Pile" /* 14837 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 16377 */;
+import ClipView from "ClipView" /* 9436 */;
+import ListUtils from "ListUtils" /* 13682 */;
+import Pile from "Pile" /* 14833 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 16372 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -54,7 +54,7 @@ export default function UserSettingsDesignSystemPile() {
       const obj3 = { size: children, names, totalCount: size(1414).DEFAULT_AVATARS.length, children: null };
       const DEFAULT_AVATARS = size(1414).DEFAULT_AVATARS;
       obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(15634).AvatarPile, obj3);
+      items[1] = closure_5(size(15631).AvatarPile, obj3);
       obj.children = items;
       return closure_6(size(6274).Stack, obj, children);
     })
@@ -68,7 +68,7 @@ export default function UserSettingsDesignSystemPile() {
       const obj3 = { size: children, names, totalCount: size(1414).DEFAULT_AVATARS.length, children: null };
       const DEFAULT_AVATARS = size(1414).DEFAULT_AVATARS;
       obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(15634).AvatarPile, obj3);
+      items[1] = closure_5(size(15631).AvatarPile, obj3);
       obj.children = items;
       return closure_6(size(6274).Stack, obj, children);
     })
@@ -82,7 +82,7 @@ export default function UserSettingsDesignSystemPile() {
       const obj3 = { size: children, names, totalCount: 9500, children: null };
       const DEFAULT_AVATARS = size(1414).DEFAULT_AVATARS;
       obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(15634).AvatarPile, obj3);
+      items[1] = closure_5(size(15631).AvatarPile, obj3);
       obj.children = items;
       return closure_6(size(6274).Stack, obj, children);
     })
@@ -96,7 +96,7 @@ export default function UserSettingsDesignSystemPile() {
       const obj3 = { size: children, names, totalCount: 9500, children: null };
       const DEFAULT_AVATARS = size(1414).DEFAULT_AVATARS;
       obj3.children = DEFAULT_AVATARS.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(15634).AvatarPile, obj3);
+      items[1] = closure_5(size(15631).AvatarPile, obj3);
       obj.children = items;
       return closure_6(size(6274).Stack, obj, children);
     })
@@ -111,7 +111,7 @@ export default function UserSettingsDesignSystemPile() {
       const DEFAULT_AVATARS = size(1414).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj3.children = substr.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(16377).AvatarDuoPile, obj3);
+      items[1] = closure_5(size(16372).AvatarDuoPile, obj3);
       obj.children = items;
       return closure_6(size(6274).Stack, obj, children);
     })
@@ -126,7 +126,7 @@ export default function UserSettingsDesignSystemPile() {
       const DEFAULT_AVATARS = size(1414).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj3.children = substr.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(16377).AvatarDuoPile, obj3);
+      items[1] = closure_5(size(16372).AvatarDuoPile, obj3);
       obj.children = items;
       return closure_6(size(6274).Stack, obj, children);
     })
@@ -175,7 +175,7 @@ export default function UserSettingsDesignSystemPile() {
       const obj = { children: null };
       items = [closure_5(size(5866).Text, { variant: "body-md/medium", color: "text-subtle", children: size.toLowerCase() }), ];
       const obj2 = { variant: "body-md/medium", color: "text-subtle", children: size.toLowerCase() };
-      items[1] = closure_5(size(14836).GuildIconPile, { size, names: names2, totalCount: 128, children: names2.map((value, index) => closure_2_5(GuildIconDefault, { value, size }, index)) });
+      items[1] = closure_5(size(14832).GuildIconPile, { size, names: names2, totalCount: 128, children: names2.map((value, index) => closure_2_5(GuildIconDefault, { value, size }, index)) });
       obj.children = items;
       return closure_6(size(6274).Stack, obj, size);
     })

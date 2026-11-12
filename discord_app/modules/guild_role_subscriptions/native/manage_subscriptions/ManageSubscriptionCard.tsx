@@ -1,6 +1,6 @@
-// === Module 17720: ManageSubscriptionCard ===
+// === Module 17715: ManageSubscriptionCard ===
 
-// Module 17720 (ManageSubscriptionCard)
+// Module 17715 (ManageSubscriptionCard)
 import nativeDefault from "native" /* 575 */;
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
@@ -10,9 +10,9 @@ import LinkingDefault from "Linking" /* 5949 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6206 */;
 import Pressables from "Pressables" /* 7364 */;
 import GuildIconDefault from "GuildIcon" /* 7654 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10493 */;
-import FormSeparatorDefault from "FormSeparator" /* 17721 */;
-import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 17725 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10491 */;
+import FormSeparatorDefault from "FormSeparator" /* 17716 */;
+import useManageSubscriptionCardDataDefault from "useManageSubscriptionCardData" /* 17720 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 15058: useFrameRunsInBackground ===
+// === Module 15054: useFrameRunsInBackground ===
 
-// Module 15058 (useFrameRunsInBackground)
+// Module 15054 (useFrameRunsInBackground)
 import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 7284 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import FramesStore from "FramesStore" /* 6956 */;

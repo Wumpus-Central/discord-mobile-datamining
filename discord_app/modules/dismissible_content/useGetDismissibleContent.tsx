@@ -1,12 +1,12 @@
-// === Module 9495: useGetDismissibleContent ===
+// === Module 9494: useGetDismissibleContent ===
 
-// Module 9495 (useGetDismissibleContent)
+// Module 9494 (useGetDismissibleContent)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 5075 */;
 import dismissible_content from "dismissible_content" /* 5076 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 5077 */;
-import DismissibleContentAvailability from "DismissibleContentAvailability" /* 9498 */;
-import markScopedDismissibleContentAsDismissed from "markScopedDismissibleContentAsDismissed" /* 9499 */;
+import DismissibleContentAvailability from "DismissibleContentAvailability" /* 9497 */;
+import markScopedDismissibleContentAsDismissed from "markScopedDismissibleContentAsDismissed" /* 9498 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
@@ -116,8 +116,8 @@ function useScopedDismissibleContentSelection(items1, groupName) {
     found2 = null;
   }
   if (null != found2) {
-    let dismissibleContentShowing = tmp(9497).getDismissibleContentShowing(found2);
-    const tmpResult = tmp(9497);
+    let dismissibleContentShowing = tmp(9496).getDismissibleContentShowing(found2);
+    const tmpResult = tmp(9496);
   } else {
     dismissibleContentShowing = closure_12;
   }
@@ -138,7 +138,7 @@ function useScopedDismissibleContentSelection(items1, groupName) {
     if (tmpResult7.isGuildScopedDismissibleContent(found2)) {
       guildId = found2.scope.guildId;
     }
-    tmpResult7 = tmp(9497);
+    tmpResult7 = tmp(9496);
   }
   let content;
   if (found2 != null) {

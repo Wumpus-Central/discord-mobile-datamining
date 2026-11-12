@@ -1,10 +1,10 @@
-// === Module 15781: InstantInviteQRCodeActionSheet ===
+// === Module 15776: InstantInviteQRCodeActionSheet ===
 
-// Module 15781 (InstantInviteQRCodeActionSheet)
+// Module 15776 (InstantInviteQRCodeActionSheet)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import GuildIconDefault from "GuildIcon" /* 7654 */;
-import components_native_QRCodeDefault from "components_native/QRCode" /* 15782 */;
+import components_native_QRCodeDefault from "components_native/QRCode" /* 15777 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import UserStore from "UserStore" /* 1385 */;

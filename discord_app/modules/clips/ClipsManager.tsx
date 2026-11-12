@@ -1,15 +1,15 @@
-// === Module 20647: clips/ClipsManager ===
+// === Module 20642: clips/ClipsManager ===
 
-// Module 20647 (clips/ClipsManager)
+// Module 20642 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserSettings from "UserSettings" /* 5068 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 6033 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6745 */;
-import ClipsExperiment from "ClipsExperiment" /* 15696 */;
-import isClipsEnabled from "isClipsEnabled" /* 15993 */;
-import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20649 */;
-import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20650 */;
+import ClipsExperiment from "ClipsExperiment" /* 15693 */;
+import isClipsEnabled from "isClipsEnabled" /* 15988 */;
+import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20644 */;
+import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20645 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
@@ -145,7 +145,7 @@ let closure_26 = async function _probeHardware() {
   return { classification: closure_132_0(closure_132_3[15]).classifyClipsHardware(closure_131_6, closure_131_4), gpuModels: closure_131_5, videoEncoders: closure_131_6 };
 };
 const getSystemAnalyticsInfo = fn(6027).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8779);
+const ClipsConstants = fn(8778);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15, CLIPS_DEFAULT_SETTINGS_VERSION: closure_16, ClipsHardwareClassification: closure_17, ClipsLogger: closure_18, CLIP_RUNTIME: closure_19 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);

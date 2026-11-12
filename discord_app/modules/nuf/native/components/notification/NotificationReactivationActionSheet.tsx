@@ -1,17 +1,17 @@
-// === Module 20209: NotificationReactivationActionSheet ===
+// === Module 20204: NotificationReactivationActionSheet ===
 
-// Module 20209 (NotificationReactivationActionSheet)
+// Module 20204 (NotificationReactivationActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 14718 */;
-import _modDef20210 from "module_20210" /* 20210 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 14714 */;
+import _modDef20205 from "module_20205" /* 20205 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const EventActionType = fn(14717).EventActionType;
+const EventActionType = fn(14713).EventActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -45,7 +45,7 @@ export default function NotificationReactivationActionSheet(location) {
   }, items1);
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
-  const obj3 = { style: tmp.image, source: _modDef20210, resizeMode: "contain" };
+  const obj3 = { style: tmp.image, source: _modDef20205, resizeMode: "contain" };
   const items2 = [closure_7(FastImageDefault, obj3), , , ];
   const obj4 = { style: tmp.title, variant: "heading-xl/semibold", accessibilityRole: "header", children: null };
   const intl = _location(1113).intl;

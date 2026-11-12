@@ -1,14 +1,14 @@
-// === Module 19956: VoicePanelControlsDrawer ===
+// === Module 19951: VoicePanelControlsDrawer ===
 
-// Module 19956 (VoicePanelControlsDrawer)
+// Module 19951 (VoicePanelControlsDrawer)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import Suspender from "Suspender" /* 6236 */;
 import useRefValueDefault from "useRefValue" /* 7352 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11924 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 14567 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19957 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19968 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11918 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 14563 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 19952 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 19963 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11925);
+const VoicePanelConstants = fn(11919);
 ({ MODE_CHANGE_PHYSICS: metroImportDefault, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -181,7 +181,7 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   let tmp32 = null;
   if (tmp10Result2.isJankScreenReportingEnabled()) {
     const obj4 = { channelId, tab, wrapperSpecs, mode };
-    tmp32 = closure_9(tmp(19953), obj4);
+    tmp32 = closure_9(tmp(19948), obj4);
   }
   const items9 = [tmp32, , , ];
   let tmp36 = !tmp6;

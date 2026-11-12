@@ -1,13 +1,13 @@
-// === Module 10441: GameProfileFloatingNav ===
+// === Module 10439: GameProfileFloatingNav ===
 
-// Module 10441 (GameProfileFloatingNav)
+// Module 10439 (GameProfileFloatingNav)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import native from "native" /* 7932 */;
-import YouBannerDecorations from "YouBannerDecorations" /* 10442 */;
-import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 10460 */;
+import YouBannerDecorations from "YouBannerDecorations" /* 10440 */;
+import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 10458 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -108,11 +108,11 @@ function FloatingNav(navigation) {
   GameProfileFloatingNavTsx1.__workletHash = 15050593289877;
   GameProfileFloatingNavTsx1.__initData = tmp11;
   if (isGameProfileCommunitiesMobileEnabled) {
-    let obj3 = { tab: tmp4(10244).GameProfileNavTab.OVERVIEW, IconComponent: tmp4(7374).GameControllerIcon, label: null };
+    let obj3 = { tab: tmp4(10242).GameProfileNavTab.OVERVIEW, IconComponent: tmp4(7374).GameControllerIcon, label: null };
     const intl = tmp4(1113).intl;
     obj3.label = intl.string(tmp4(1113).t.qHmbyh);
     const items3 = [obj3, ];
-    let obj4 = { tab: tmp4(10244).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(7372).GroupIcon, label: null };
+    let obj4 = { tab: tmp4(10242).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(7372).GroupIcon, label: null };
     const intl2 = tmp4(1113).intl;
     obj4.label = intl2.string(tmp4(1113).t["3xFZEo"]);
     items3[1] = obj4;
@@ -145,7 +145,7 @@ function FloatingNav(navigation) {
           }, tab);
         })
     };
-    items7[1] = closure_7(tmp4(10460).YouScreenNavIconMeasurer, obj11);
+    items7[1] = closure_7(tmp4(10458).YouScreenNavIconMeasurer, obj11);
     obj9.children = items7;
     items5[1] = closure_8(closure_5, obj9);
     obj7.children = items5;

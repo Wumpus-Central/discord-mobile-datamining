@@ -1,21 +1,21 @@
-// === Module 17179: AccountViewBackupCodesSetting ===
+// === Module 17174: AccountViewBackupCodesSetting ===
 
-// Module 17179 (AccountViewBackupCodesSetting)
+// Module 17174 (AccountViewBackupCodesSetting)
 import util from "util" /* 1113 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 17172 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 17167 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.xZEzbu);
   },
-  parent: fn(9136).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(17090).useIs2FAEnabled,
+  parent: fn(9135).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(17085).useIs2FAEnabled,
   usePreNavigationAction: function useOnViewBackups() {
     return noop.useCallback((arg0) => {
       closure_0 = arg0;
@@ -47,7 +47,7 @@ const route = SettingBuilders.createRoute({
             const intl4 = onSuccess(1113).intl;
             obj.actionText = intl4.string(onSuccess(1113).t.geKm7t);
             obj.confirmColor = onSuccess(1187).ButtonColors.BRAND;
-            closure_2_1(17180)(obj);
+            closure_2_1(17175)(obj);
           });
         },
         onSuccess,
@@ -65,7 +65,7 @@ const route = SettingBuilders.createRoute({
       let intl3 = closure_0(1113).intl;
       obj.actionText = intl3.string(closure_0(1113).t.PDTjLN);
       obj.confirmColor = closure_0(1187).ButtonColors.BRAND;
-      closure_1(17180)(obj);
+      closure_1(17175)(obj);
       return false;
     }, []);
   },

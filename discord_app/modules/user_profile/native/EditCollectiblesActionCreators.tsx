@@ -1,6 +1,6 @@
-// === Module 9340: EditCollectiblesActionCreators ===
+// === Module 9339: EditCollectiblesActionCreators ===
 
-// Module 9340 (EditCollectiblesActionCreators)
+// Module 9339 (EditCollectiblesActionCreators)
 import Constants from "Constants" /* 1072 */;
 import openUserSettings from "openUserSettings" /* 8537 */;
 import size from "module_2" /* 2 */;

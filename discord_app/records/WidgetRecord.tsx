@@ -1,6 +1,6 @@
-// === Module 16068: WidgetRecord ===
+// === Module 16063: WidgetRecord ===
 
-// Module 16068 (WidgetRecord)
+// Module 16063 (WidgetRecord)
 import Record from "Record" /* 1405 */;
 
 let size = fn(2);

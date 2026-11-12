@@ -1,6 +1,6 @@
-// === Module 20592: EmojiAlias ===
+// === Module 20587: EmojiAlias ===
 
-// Module 20592 (EmojiAlias)
+// Module 20587 (EmojiAlias)
 import Text_Text from "Text/Text" /* 5866 */;
 import noop from "module_19" /* 19 */;
 

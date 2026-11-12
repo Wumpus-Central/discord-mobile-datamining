@@ -1,15 +1,15 @@
-// === Module 17660: SettingsQuestPreviewScreen ===
+// === Module 17655: SettingsQuestPreviewScreen ===
 
-// Module 17660 (SettingsQuestPreviewScreen)
+// Module 17655 (SettingsQuestPreviewScreen)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import QuestActionCreators from "QuestActionCreators" /* 10066 */;
-import QuestCardPreview from "QuestCardPreview" /* 17661 */;
-import QuestEmbedPreview from "QuestEmbedPreview" /* 17663 */;
+import QuestActionCreators from "QuestActionCreators" /* 10065 */;
+import QuestCardPreview from "QuestCardPreview" /* 17656 */;
+import QuestEmbedPreview from "QuestEmbedPreview" /* 17658 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 8742 */;
+import QuestStore from "QuestStore" /* 8741 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 const require = globalThis.__r;
@@ -60,7 +60,7 @@ export default function SettingsQuestPreviewScreen() {
     let tmp2 = null;
     if (null != stateFromStores) {
       const obj = { quest: tmp };
-      tmp2 = closure_2_10(QuestCardPreview.QuestCardPreview, obj);
+      tmp2 = refs(QuestCardPreview.QuestCardPreview, obj);
     }
     return tmp2;
   }, items3);
@@ -91,7 +91,7 @@ export default function SettingsQuestPreviewScreen() {
       const _HermesInternal = HermesInternal;
       const combined = "" + first + "-" + stateFromStores1 + "-" + completedAt + "-" + progress;
       const obj = { questId: first };
-      return closure_2_10(QuestEmbedPreview.QuestEmbedPreview, obj, combined);
+      return refs(QuestEmbedPreview.QuestEmbedPreview, obj, combined);
     }
   }, items4);
   callback2 = obj2.useCallback(() => null, []);

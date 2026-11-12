@@ -1,13 +1,13 @@
-// === Module 18717: VoiceUsers ===
+// === Module 18712: VoiceUsers ===
 
-// Module 18717 (VoiceUsers)
+// Module 18712 (VoiceUsers)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5998 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8995 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 10667 */;
-import ChannelListLayout from "ChannelListLayout" /* 10987 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8994 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 10660 */;
+import ChannelListLayout from "ChannelListLayout" /* 10981 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 
@@ -60,10 +60,10 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   const tmp = channel;
-  const tmp3 = closure_11(channel(8995)());
-  const obj = user(10530);
-  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(10530).useLocalSelfMuteDeaf());
-  const obj2 = user(10530);
+  const tmp3 = closure_11(channel(8994)());
+  const obj = user(10528);
+  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(10528).useLocalSelfMuteDeaf());
+  const obj2 = user(10528);
   items = [GuildMemberStore];
   const items1 = [channel.guild_id, user.id];
   const stateFromStoresObject = user(504).useStateFromStoresObject(items, () => ({ storeMember: GuildMemberStore.getMember(channel.guild_id, user.id), isGuest: GuildMemberStore.isGuestOrLurker(channel.guild_id, user.id) }), items1);
@@ -87,7 +87,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   obj7.sessionId = result.sessionId;
   obj7.channel = channel;
   obj7.isGuest = isGuest;
-  obj4.children = closure_6(tmp(18718), obj7, user.id);
+  obj4.children = closure_6(tmp(18713), obj7, user.id);
   return closure_6(View, obj4);
 });
 const size = fn(2);

@@ -1,13 +1,13 @@
-// === Module 16965: useUserProfileEditForm ===
+// === Module 16960: useUserProfileEditForm ===
 
-// Module 16965 (useUserProfileEditForm)
+// Module 16960 (useUserProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8476 */;
 import UserProfileStore from "UserProfileStore" /* 7288 */;
-import WidgetStore from "WidgetStore" /* 12030 */;
+import WidgetStore from "WidgetStore" /* 12024 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = fn;

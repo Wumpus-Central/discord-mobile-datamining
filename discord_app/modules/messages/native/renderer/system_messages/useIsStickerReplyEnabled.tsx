@@ -1,6 +1,6 @@
-// === Module 9160: useIsStickerReplyEnabled ===
+// === Module 9159: useIsStickerReplyEnabled ===
 
-// Module 9160 (useIsStickerReplyEnabled)
+// Module 9159 (useIsStickerReplyEnabled)
 import ThreadHooks from "ThreadHooks" /* 7223 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import PermissionStore from "PermissionStore" /* 5175 */;

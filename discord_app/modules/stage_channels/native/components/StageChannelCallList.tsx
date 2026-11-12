@@ -1,20 +1,20 @@
-// === Module 12994: StageChannelCallList ===
+// === Module 12988: StageChannelCallList ===
 
-// Module 12994 (StageChannelCallList)
+// Module 12988 (StageChannelCallList)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 6880 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 12402 */;
-import SpeakerTile from "SpeakerTile" /* 12996 */;
-import StageSectionHeaderDefault from "StageSectionHeader" /* 13003 */;
-import StageGridRowDefault from "StageGridRow" /* 13004 */;
-import AudienceGridRowDefault from "AudienceGridRow" /* 13016 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 12396 */;
+import SpeakerTile from "SpeakerTile" /* 12990 */;
+import StageSectionHeaderDefault from "StageSectionHeader" /* 12997 */;
+import StageGridRowDefault from "StageGridRow" /* 12998 */;
+import AudienceGridRowDefault from "AudienceGridRow" /* 13010 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const StageChannelListStore = fn(12995);
+const StageChannelListStore = fn(12989);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: closure_6 } = StageChannelListStore);
 const MAX_AUDIENCE_ROW_LIMIT = fn(6843).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
@@ -285,9 +285,9 @@ export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  const throttleDurationForChannel = width(12863).useThrottleDurationForChannel(channel.id);
+  const throttleDurationForChannel = width(12857).useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1493)().width;
-  let obj = width(12863);
+  let obj = width(12857);
   isScreenLandscape = width(8494).useIsScreenLandscape();
   items = [width, isScreenLandscape];
   const memo = noop.useMemo(() => {
@@ -303,6 +303,6 @@ export default function StageChannelCallList(channel) {
     return obj;
   }, items);
   const obj2 = width(8494);
-  const tmp4 = _slicedToArray(width(12863).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
+  const tmp4 = _slicedToArray(width(12857).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
   return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });
 };

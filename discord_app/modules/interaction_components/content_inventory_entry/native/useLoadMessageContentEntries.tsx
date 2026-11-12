@@ -1,10 +1,10 @@
-// === Module 12336: useLoadMessageContentEntries ===
+// === Module 12330: useLoadMessageContentEntries ===
 
-// Module 12336 (useLoadMessageContentEntries)
+// Module 12330 (useLoadMessageContentEntries)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 2116 */;
 import useAvatarColor from "useAvatarColor" /* 8472 */;
-import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 12337 */;
+import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 12331 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

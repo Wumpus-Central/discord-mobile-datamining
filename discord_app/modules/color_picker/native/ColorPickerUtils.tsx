@@ -1,6 +1,6 @@
-// === Module 16956: ColorPickerUtils ===
+// === Module 16951: ColorPickerUtils ===
 
-// Module 16956 (ColorPickerUtils)
+// Module 16951 (ColorPickerUtils)
 import size from "module_2" /* 2 */;
 
 let items = [{ code: "(function normalizeValue_ColorPickerUtilsTsx1(value){if(value<0)return 0;if(value>1)return 1;return value;})" }];

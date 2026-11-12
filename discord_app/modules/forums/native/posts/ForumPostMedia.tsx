@@ -1,13 +1,13 @@
-// === Module 14510: ForumPostMedia ===
+// === Module 14506: ForumPostMedia ===
 
-// Module 14510 (ForumPostMedia)
+// Module 14506 (ForumPostMedia)
 import nativeDefault from "native" /* 575 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1492 */;
 import UserSettings from "UserSettings" /* 5068 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5843 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import SpoilerIconDefault from "SpoilerIcon" /* 14511 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 14513 */;
+import SpoilerIconDefault from "SpoilerIcon" /* 14507 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 14509 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
@@ -31,14 +31,14 @@ function ForumPostMediaAndroid(arg0) {
   obj2.style = items;
   const items1 = [React6(FastImageDefault, obj2), React6(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme })];
   obj.children = items1;
-  return closure_1_10(hasOwnProperty, obj);
+  return refs(hasOwnProperty, obj);
 }
 function ForumPostMediaIOS(arg0) {
   const obj = { children: null };
   ({ shouldSpoiler, blurTheme, source, iosStyle } = arg0);
   items = [React6(FastImageDefault, { style: iosStyle, source, resizeMode: "cover" }), React6(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme })];
   obj.children = items;
-  return closure_1_10(closure_1_11, obj);
+  return refs(closure_1_11, obj);
 }
 class ForumPostMediaSpoiler {
   constructor(arg0) {
@@ -79,9 +79,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_9(ref(14512), obj2);
+    let tmp6Result = closure_9(ref(14508), obj2);
     let tmp12 = closure_9;
-    const tmp19 = ref(14512);
+    const tmp19 = ref(14508);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};

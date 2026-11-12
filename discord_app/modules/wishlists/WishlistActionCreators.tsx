@@ -1,6 +1,6 @@
-// === Module 9404: WishlistActionCreators ===
+// === Module 9403: WishlistActionCreators ===
 
-// Module 9404 (WishlistActionCreators)
+// Module 9403 (WishlistActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
@@ -10,7 +10,7 @@ import UserProfileStore from "UserProfileStore" /* 7288 */;
 import UserStore from "UserStore" /* 1385 */;
 import BillingInfoStore from "BillingInfoStore" /* 2172 */;
 import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 7182 */;
-import WishlistRecord from "WishlistRecord" /* 9398 */;
+import WishlistRecord from "WishlistRecord" /* 9397 */;
 
 require = fn;
 function extraWishlistParams() {
@@ -44,7 +44,7 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     const tmpResult = StorefrontUtils;
   }
 }
-const getWishlistSkuIds = fn(9398).getWishlistSkuIds;
+const getWishlistSkuIds = fn(9397).getWishlistSkuIds;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
 const size = fn(2);

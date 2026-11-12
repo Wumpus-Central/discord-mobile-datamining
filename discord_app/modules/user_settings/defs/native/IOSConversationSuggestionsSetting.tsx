@@ -1,6 +1,6 @@
-// === Module 17261: IOSConversationSuggestionsSetting ===
+// === Module 17256: IOSConversationSuggestionsSetting ===
 
-// Module 17261 (IOSConversationSuggestionsSetting)
+// Module 17256 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -11,13 +11,13 @@ require = fn;
 const identity = fn(1254);
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 fn(17).NativeModules.IntentsHandler;
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.J8foZq);
   },
-  parent: fn(9136).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(9135).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useIOSConversationSuggestionsSettingValue() {
     const effect = noop.useEffect(() => {
       conversationSuggestionsEnabled = conversationSuggestionsEnabled.getConversationSuggestionsEnabled();

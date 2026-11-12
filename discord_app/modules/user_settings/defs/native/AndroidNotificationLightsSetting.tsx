@@ -1,13 +1,13 @@
-// === Module 18010: AndroidNotificationLightsSetting ===
+// === Module 18005: AndroidNotificationLightsSetting ===
 
-// Module 18010 (AndroidNotificationLightsSetting)
+// Module 18005 (AndroidNotificationLightsSetting)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
-import SettingsConstants from "SettingsConstants" /* 9136 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 17992 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 17996 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 17990 */;
-import SettingBuilders_mod from "SettingBuilders" /* 12317 */;
+import SettingsConstants from "SettingsConstants" /* 9135 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 17987 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 17991 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 17985 */;
+import SettingBuilders_mod from "SettingBuilders" /* 12311 */;
 import size from "module_2" /* 2 */;
 
 ({ useAndroidNotificationLightsEnabled: c2, setAndroidNotificationLightsEnabled } = AndroidNotificationSettingsStore);

@@ -1,6 +1,6 @@
-// === Module 19915: VoicePanelDockPIPWatchPromptStore ===
+// === Module 19910: VoicePanelDockPIPWatchPromptStore ===
 
-// Module 19915 (VoicePanelDockPIPWatchPromptStore)
+// Module 19910 (VoicePanelDockPIPWatchPromptStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6745 */;

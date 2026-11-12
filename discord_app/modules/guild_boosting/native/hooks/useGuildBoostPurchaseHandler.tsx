@@ -1,6 +1,6 @@
-// === Module 10682: useGuildBoostPurchaseHandler ===
+// === Module 10675: useGuildBoostPurchaseHandler ===
 
-// Module 10682 (useGuildBoostPurchaseHandler)
+// Module 10675 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -43,8 +43,8 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           } else {
             let newAnalyticsLoadId = tmp2;
             newAnalyticsLoadId = undefined;
-            newAnalyticsLoadId = args(9618).getNewAnalyticsLoadId();
-            const obj7 = args(9650);
+            newAnalyticsLoadId = args(9617).getNewAnalyticsLoadId();
+            const obj7 = args(9649);
             c3 = 1;
             c4 = 1;
             const obj4 = {

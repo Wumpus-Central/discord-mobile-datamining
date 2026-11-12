@@ -1,9 +1,9 @@
-// === Module 13512: ConjureTipGutterRow ===
+// === Module 13506: ConjureTipGutterRow ===
 
-// Module 13512 (ConjureTipGutterRow)
+// Module 13506 (ConjureTipGutterRow)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 13513 */;
+import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 13507 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

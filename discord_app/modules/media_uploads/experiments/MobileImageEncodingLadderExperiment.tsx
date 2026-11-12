@@ -1,6 +1,6 @@
-// === Module 8830: MobileImageEncodingLadderExperiment ===
+// === Module 8829: MobileImageEncodingLadderExperiment ===
 
-// Module 8830 (MobileImageEncodingLadderExperiment)
+// Module 8829 (MobileImageEncodingLadderExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 13463: MediaKeyboardFloatingSend ===
+// === Module 13457: MediaKeyboardFloatingSend ===
 
-// Module 13463 (MediaKeyboardFloatingSend)
+// Module 13457 (MediaKeyboardFloatingSend)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
@@ -8,7 +8,7 @@ import _modDef1652 from "module_1652" /* 1652 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8806 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8805 */;
 
 const require = globalThis.__r;
 

@@ -1,6 +1,6 @@
-// === Module 17085: ProfileSelectorActionSheet ===
+// === Module 17080: ProfileSelectorActionSheet ===
 
-// Module 17085 (ProfileSelectorActionSheet)
+// Module 17080 (ProfileSelectorActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5252 */;
@@ -8,7 +8,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6899 */;
 import GuildIcon from "GuildIcon" /* 7654 */;
 import TableRadioRow from "TableRadioRow" /* 7681 */;
-import ClydeIcon from "ClydeIcon" /* 11679 */;
+import ClydeIcon from "ClydeIcon" /* 11673 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -25,7 +25,7 @@ function getOptionKey(type) {
   return str;
 }
 const View = fn(17).View;
-let closure_8 = fn(17084).PROFILE_SELECTOR_ACTION_SHEET_KEY;
+let closure_8 = fn(17079).PROFILE_SELECTOR_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5243);

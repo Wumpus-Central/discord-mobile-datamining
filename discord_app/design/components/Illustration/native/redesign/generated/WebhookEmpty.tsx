@@ -1,6 +1,6 @@
-// === Module 19524: WebhookEmpty ===
+// === Module 19519: WebhookEmpty ===
 
-// Module 19524 (WebhookEmpty)
+// Module 19519 (WebhookEmpty)
 import shared from "shared" /* 5250 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import _mod8117 from "module_8117" /* 8117 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getWebhookEmptySource(theme) {
   return _mod8117.getIllustrationSource(theme, {
     dark() {
-      return require("module_19525");
+      return require("module_19520");
     },
     darker() {
-      return require("module_19526");
+      return require("module_19521");
     },
     light() {
-      return require("module_19527");
+      return require("module_19522");
     }
   });
 }
@@ -30,13 +30,13 @@ export function useWebhookEmptySource() {
   const obj = shared;
   return _mod8117.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_19525");
+      return require("module_19520");
     },
     darker() {
-      return require("module_19526");
+      return require("module_19521");
     },
     light() {
-      return require("module_19527");
+      return require("module_19522");
     }
   });
 }
@@ -44,25 +44,25 @@ export function WebhookEmpty(arg0) {
   const obj = shared;
   const illustrationSource = _mod8117.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_19525");
+      return require("module_19520");
     },
     darker() {
-      return require("module_19526");
+      return require("module_19521");
     },
     light() {
-      return require("module_19527");
+      return require("module_19522");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_19525");
+      return require("module_19520");
     },
     darker() {
-      return require("module_19526");
+      return require("module_19521");
     },
     light() {
-      return require("module_19527");
+      return require("module_19522");
     }
   };
   const merged = Object.assign(arg0);

@@ -1,12 +1,12 @@
-// === Module 10517: AudioManagerStore ===
+// === Module 10515: AudioManagerStore ===
 
-// Module 10517 (AudioManagerStore)
+// Module 10515 (AudioManagerStore)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import NativeAudioManagerModule2 from "NativeAudioManagerModule" /* 10518 */;
+import NativeAudioManagerModule2 from "NativeAudioManagerModule" /* 10516 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
 
@@ -151,9 +151,9 @@ const MediaEngineContextTypes = fn(6012).MediaEngineContextTypes;
 const nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAudioManagerModuleDefault);
 let closure_8 = new LoggerDefault("AudioManagerStore");
 let global = [];
-let NativeAudioManagerModule = fn(10518);
+let NativeAudioManagerModule = fn(10516);
 global = NativeAudioManagerModule.getInvalidAndroidDevice();
-NativeAudioManagerModule = fn(10518);
+NativeAudioManagerModule = fn(10516);
 let device = NativeAudioManagerModule.getInvalidAndroidDevice();
 let c12 = false;
 const Store = initializeDefault.Store;

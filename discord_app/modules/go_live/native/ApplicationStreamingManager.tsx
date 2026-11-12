@@ -1,12 +1,12 @@
-// === Module 20697: ApplicationStreamingManager ===
+// === Module 20692: ApplicationStreamingManager ===
 
-// Module 20697 (ApplicationStreamingManager)
+// Module 20692 (ApplicationStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6206 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 12897 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 12891 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6190 */;
-import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 20698 */;
+import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 20693 */;
 
 const require = fn;
 const ApplicationStreamPresets = fn(6108).ApplicationStreamPresets;

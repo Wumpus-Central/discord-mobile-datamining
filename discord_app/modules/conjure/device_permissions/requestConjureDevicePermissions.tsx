@@ -1,11 +1,11 @@
-// === Module 13062: requestConjureDevicePermissions ===
+// === Module 13056: requestConjureDevicePermissions ===
 
-// Module 13062 (requestConjureDevicePermissions)
+// Module 13056 (requestConjureDevicePermissions)
 import DurationsDefault from "Durations" /* 1089 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 import FramesStore from "FramesStore" /* 6956 */;
-import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 13063 */;
+import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 13057 */;
 
 const require = fn;
 let closure_10 = async function _requestConjureDevicePermissions(arg0) {

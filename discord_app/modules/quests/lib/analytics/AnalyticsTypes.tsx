@@ -1,6 +1,6 @@
-// === Module 8768: AnalyticsTypes ===
+// === Module 8767: AnalyticsTypes ===
 
-// Module 8768 (AnalyticsTypes)
+// Module 8767 (AnalyticsTypes)
 import QuestTypes from "QuestTypes" /* 5278 */;
 import size from "module_2" /* 2 */;
 

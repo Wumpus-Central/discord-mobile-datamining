@@ -1,8 +1,8 @@
-// === Module 20258: ThreadManager ===
+// === Module 20253: ThreadManager ===
 
-// Module 20258 (ThreadManager)
+// Module 20253 (ThreadManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9046 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9045 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;

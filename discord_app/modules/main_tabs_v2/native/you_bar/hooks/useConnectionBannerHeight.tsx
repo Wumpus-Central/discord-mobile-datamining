@@ -1,13 +1,13 @@
-// === Module 17591: useConnectionBannerHeight ===
+// === Module 17586: useConnectionBannerHeight ===
 
-// Module 17591 (useConnectionBannerHeight)
+// Module 17586 (useConnectionBannerHeight)
 import initialize from "initialize" /* 504 */;
-import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 16075 */;
-import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 16074 */;
+import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 16070 */;
+import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 16069 */;
 
 require = fn;
-const constants = fn(16074).ConnectivityIndicatorState;
-const CONNECTION_BANNER_HEIGHT = fn(17588).CONNECTION_BANNER_HEIGHT;
+const constants = fn(16069).ConnectivityIndicatorState;
+const CONNECTION_BANNER_HEIGHT = fn(17583).CONNECTION_BANNER_HEIGHT;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");
 

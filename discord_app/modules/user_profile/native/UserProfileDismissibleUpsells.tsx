@@ -1,6 +1,6 @@
-// === Module 15733: UserProfileDismissibleUpsells ===
+// === Module 15728: UserProfileDismissibleUpsells ===
 
-// Module 15733 (UserProfileDismissibleUpsells)
+// Module 15728 (UserProfileDismissibleUpsells)
 import nativeDefault from "native" /* 575 */;
 import dismissible_content from "dismissible_content" /* 5076 */;
 import noop from "module_19" /* 19 */;
@@ -12,15 +12,15 @@ const Text_Text = ShopIcon(5866);
 const components_Button_Button = ShopIcon(5873);
 const Pressables = ShopIcon(7364);
 const XSmallIcon = ShopIcon(7483);
-const NitroWheelIcon = ShopIcon(9369);
-const ShopIcon2 = ShopIcon(10498);
+const NitroWheelIcon = ShopIcon(9368);
+const ShopIcon2 = ShopIcon(10496);
 require = fn;
 const View = fn(17).View;
 const TrackUserProfileActions = fn(8413).TrackUserProfileActions;
 const ContentDismissActionType = fn(5089).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(9368).Gradients.PREMIUM_GUILD];
+let items = [...fn(9367).Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
 const createStyles = fn(5243);
 let obj2 = { upsellContainer: { paddingVertical: 16, paddingHorizontal: 12, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, customProfileThemeUpsellContainer: null, header: null, upsellButtonsContainer: null, upsellButton: null };

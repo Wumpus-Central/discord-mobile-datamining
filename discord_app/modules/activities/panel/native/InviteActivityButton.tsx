@@ -1,9 +1,9 @@
-// === Module 19730: InviteActivityButton ===
+// === Module 19725: InviteActivityButton ===
 
-// Module 19730 (InviteActivityButton)
+// Module 19725 (InviteActivityButton)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12606 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12600 */;
 import noop from "module_19" /* 19 */;
 import LocalActivityStore from "LocalActivityStore" /* 7253 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 7252 */;
@@ -23,9 +23,9 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     const obj2 = {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(19731, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+          obj.openLazy(asyncRequireImpl(19726, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
-      icon: stateFromStores(10919),
+      icon: stateFromStores(10913),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",
@@ -40,9 +40,9 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     tmp4 = jsx(tmp(5873).Button, {
       onPress() {
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequireImpl(19731, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
+          obj.openLazy(asyncRequireImpl(19726, dependencyMap.paths), "ActivityInviteSheet-" + stateFromStores.session_id, { activity: stateFromStores });
         },
-      icon: stateFromStores(10919),
+      icon: stateFromStores(10913),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",

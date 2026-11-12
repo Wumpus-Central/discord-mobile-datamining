@@ -1,6 +1,6 @@
-// === Module 19244: useFrameLifecycle ===
+// === Module 19239: useFrameLifecycle ===
 
-// Module 19244 (useFrameLifecycle)
+// Module 19239 (useFrameLifecycle)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -54,7 +54,7 @@ export default function useFrameLifecycle(applicationId) {
         const obj7 = { state: noop.Loading, frame: tmp3 };
         obj10 = obj7;
       } else if (isLoading) {
-        const obj8 = { state: noop.Loading, frame: "Array" };
+        const obj8 = { state: noop.Loading, frame: "a" };
         obj10 = obj8;
       } else {
         if (null != data) {

@@ -1,6 +1,6 @@
-// === Module 10962: InAppNotificationUtils ===
+// === Module 10956: InAppNotificationUtils ===
 
-// Module 10962 (InAppNotificationUtils)
+// Module 10956 (InAppNotificationUtils)
 import apply from "apply" /* 12 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import v1 from "v1" /* 1266 */;
@@ -9,7 +9,7 @@ import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(10963).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(10957).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, ChannelTypes: closure_6, InAppNotificationTypes: metroImportDefault, MessageEmbedTypes: closure_8, MessageFlags: closure_9 } = Constants);
 const size = fn(2);

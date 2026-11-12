@@ -1,16 +1,16 @@
-// === Module 15511: useAppChannelOverflowMenuItems ===
+// === Module 15508: useAppChannelOverflowMenuItems ===
 
-// Module 15511 (useAppChannelOverflowMenuItems)
+// Module 15508 (useAppChannelOverflowMenuItems)
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
 import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5914 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 5974 */;
-import ShieldIcon from "ShieldIcon" /* 11163 */;
-import FlagIcon from "FlagIcon" /* 11267 */;
-import DoorExitIcon from "DoorExitIcon" /* 12206 */;
-import restartFrames from "restartFrames" /* 13195 */;
-import RefreshIcon from "RefreshIcon" /* 13206 */;
-import closeFrameDefault from "closeFrame" /* 15039 */;
+import ShieldIcon from "ShieldIcon" /* 11157 */;
+import FlagIcon from "FlagIcon" /* 11261 */;
+import DoorExitIcon from "DoorExitIcon" /* 12200 */;
+import restartFrames from "restartFrames" /* 13189 */;
+import RefreshIcon from "RefreshIcon" /* 13200 */;
+import closeFrameDefault from "closeFrame" /* 15035 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,16 +23,16 @@ function useAppChannelAppActions(channel) {
   items = [, ];
   ({ id: arr[0], guild_id: arr[1] } = channel);
   const memo = bot.useMemo(() => ({ type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: channel.id, guildId: channel.guild_id }), items);
-  const tmp5 = application_id(13194)(application_id, memo);
+  const tmp5 = application_id(13188)(application_id, memo);
   dependencyMap = tmp5;
   const appChannelApplication = require("useAppChannelApplication").useAppChannelApplication(channel);
   bot = undefined;
   if (appChannelApplication != null) {
     bot = appChannelApplication.bot;
   }
-  const tmp8 = application_id(15512)(application_id);
+  const tmp8 = application_id(15509)(application_id);
   closure_4 = tmp8;
-  const tmp9 = application_id(15513)(application_id).length > 0;
+  const tmp9 = application_id(15510)(application_id).length > 0;
   closure_5 = tmp9;
   const items1 = [application_id, bot, channel, tmp8, tmp5, tmp9];
   return bot.useMemo(() => {
@@ -60,7 +60,7 @@ function useAppChannelAppActions(channel) {
       if (null != appName) {
         fn3 = null;
         if (closure_5) {
-          fn3 = () => application_id(15514)({ applicationId, appName });
+          fn3 = () => application_id(15511)({ applicationId, appName });
         }
       }
     }
@@ -75,7 +75,7 @@ function useAppChannelAppActions(channel) {
     obj.appInfo = fn4;
     let fn5 = null;
     if (null != application_id) {
-      fn5 = () => application_id(15517)(applicationId, closure_0, "app_channel_header_mobile");
+      fn5 = () => application_id(15514)(applicationId, closure_0, "app_channel_header_mobile");
     }
     obj.report = fn5;
     return obj;

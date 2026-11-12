@@ -147,7 +147,7 @@ export function openMemberVerificationRejectedAlert(canWithdraw) {
   let obj3 = onPress(2017);
   onClose(6206).openLazy({
     importer() {
-      return asyncRequireImpl(15945, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(15940, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -170,7 +170,7 @@ export function openMemberVerificationRejectedAlert(canWithdraw) {
   let obj4 = onClose(6206);
   let obj5 = {
     importer() {
-      return asyncRequireImpl(15945, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(15940, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -222,7 +222,7 @@ export function openMemberVerificationIncompleteAlert(guildId, arg1) {
   actions_AlertActionCreatorsDefault.openLazy({
     isDismissable: true,
     importer() {
-      return asyncRequireImpl(15949, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(15944, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};

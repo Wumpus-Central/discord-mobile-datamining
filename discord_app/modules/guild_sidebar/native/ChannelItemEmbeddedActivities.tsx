@@ -1,6 +1,6 @@
-// === Module 18828: ChannelItemEmbeddedActivities ===
+// === Module 18823: ChannelItemEmbeddedActivities ===
 
-// Module 18828 (ChannelItemEmbeddedActivities)
+// Module 18823 (ChannelItemEmbeddedActivities)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import GameIcon from "GameIcon" /* 7858 */;

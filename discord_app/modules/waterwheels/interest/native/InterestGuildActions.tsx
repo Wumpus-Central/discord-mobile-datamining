@@ -1,6 +1,6 @@
-// === Module 20198: InterestGuildActions ===
+// === Module 20193: InterestGuildActions ===
 
-// Module 20198 (InterestGuildActions)
+// Module 20193 (InterestGuildActions)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 5289 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

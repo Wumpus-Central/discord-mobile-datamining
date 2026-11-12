@@ -1,6 +1,6 @@
-// === Module 15265: SubscriptionPlaceholderPattern ===
+// === Module 15262: SubscriptionPlaceholderPattern ===
 
-// Module 15265 (SubscriptionPlaceholderPattern)
+// Module 15262 (SubscriptionPlaceholderPattern)
 import shared from "shared" /* 5250 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import _mod8117 from "module_8117" /* 8117 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getSubscriptionPlaceholderPatternSource(theme) {
   return _mod8117.getIllustrationSource(theme, {
     dark() {
-      return require("module_15266");
+      return require("module_15263");
     },
     darker() {
-      return require("module_15267");
+      return require("module_15264");
     },
     light() {
-      return require("module_15268");
+      return require("module_15265");
     }
   });
 }
@@ -30,13 +30,13 @@ export function useSubscriptionPlaceholderPatternSource() {
   const obj = shared;
   return _mod8117.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_15266");
+      return require("module_15263");
     },
     darker() {
-      return require("module_15267");
+      return require("module_15264");
     },
     light() {
-      return require("module_15268");
+      return require("module_15265");
     }
   });
 }
@@ -44,25 +44,25 @@ export function SubscriptionPlaceholderPattern(arg0) {
   const obj = shared;
   const illustrationSource = _mod8117.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_15266");
+      return require("module_15263");
     },
     darker() {
-      return require("module_15267");
+      return require("module_15264");
     },
     light() {
-      return require("module_15268");
+      return require("module_15265");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_15266");
+      return require("module_15263");
     },
     darker() {
-      return require("module_15267");
+      return require("module_15264");
     },
     light() {
-      return require("module_15268");
+      return require("module_15265");
     }
   };
   const merged = Object.assign(arg0);

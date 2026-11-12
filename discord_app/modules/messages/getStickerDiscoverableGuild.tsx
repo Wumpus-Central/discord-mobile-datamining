@@ -1,6 +1,6 @@
-// === Module 11316: getStickerDiscoverableGuild ===
+// === Module 11310: getStickerDiscoverableGuild ===
 
-// Module 11316 (getStickerDiscoverableGuild)
+// Module 11310 (getStickerDiscoverableGuild)
 import Constants from "Constants" /* 1072 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7167 */;

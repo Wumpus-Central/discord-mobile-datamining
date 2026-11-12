@@ -1,6 +1,6 @@
-// === Module 17524: DisplayNameStylesEditPreview ===
+// === Module 17519: DisplayNameStylesEditPreview ===
 
-// Module 17524 (DisplayNameStylesEditPreview)
+// Module 17519 (DisplayNameStylesEditPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -10,10 +10,10 @@ import DateUtils from "DateUtils" /* 5065 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import useAvatarDecoration from "useAvatarDecoration" /* 6964 */;
 import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8546 */;
-import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 9330 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 9335 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9998 */;
-import types from "types" /* 9999 */;
+import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 9329 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 9334 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9997 */;
+import types from "types" /* 9998 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8476 */;

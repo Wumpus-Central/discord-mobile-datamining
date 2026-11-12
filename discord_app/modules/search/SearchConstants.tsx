@@ -1,6 +1,6 @@
-// === Module 9000: SearchConstants ===
+// === Module 8999: SearchConstants ===
 
-// Module 9000 (SearchConstants)
+// Module 8999 (SearchConstants)
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5931 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;

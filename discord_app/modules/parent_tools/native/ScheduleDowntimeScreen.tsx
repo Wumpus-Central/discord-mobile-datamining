@@ -1,13 +1,13 @@
-// === Module 17350: ScheduleDowntimeScreen ===
+// === Module 17345: ScheduleDowntimeScreen ===
 
-// Module 17350 (ScheduleDowntimeScreen)
+// Module 17345 (ScheduleDowntimeScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import _modDef2685 from "module_2685" /* 2685 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import InlineNotice from "InlineNotice" /* 8094 */;
-import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10953 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 10947 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -315,7 +315,7 @@ export default function ScheduleDowntimeScreen() {
                 c4 = 2;
                 dependencyMap = 3;
                 c5 = 1;
-                const obj6 = { value: closure_0(17352).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
+                const obj6 = { value: closure_0(17347).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
                 return obj6;
               }
             }
@@ -426,7 +426,7 @@ export default function ScheduleDowntimeScreen() {
                 c4 = 2;
                 dependencyMap = 3;
                 c5 = 1;
-                const obj6 = { value: closure_0(17352).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
+                const obj6 = { value: closure_0(17347).deleteRestrictedScheduleRule(teenId, rule.ruleId), done: false };
                 return obj6;
               }
             }
@@ -541,7 +541,7 @@ export default function ScheduleDowntimeScreen() {
     obj13.trailing = first1(tmp2(stringResult[23]).Text, obj14);
     obj13.onPress = function handleStartTimePress() {
       const intl = util.intl;
-      const f134460 = (first1) => {
+      const f134471 = (first1) => {
         closure_1_12(first1);
         const result = (closure_0(rule[17]).timeToMinutes(first1) + 540) % 1440;
         const time = { hours: Math.floor(result / 60), minutes: result % 60 };

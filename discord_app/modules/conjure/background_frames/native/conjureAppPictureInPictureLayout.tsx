@@ -1,8 +1,8 @@
-// === Module 19709: conjureAppPictureInPictureLayout ===
+// === Module 19704: conjureAppPictureInPictureLayout ===
 
-// Module 19709 (conjureAppPictureInPictureLayout)
+// Module 19704 (conjureAppPictureInPictureLayout)
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2143 */;
-import MorphablePanelConstants from "MorphablePanelConstants" /* 11926 */;
+import MorphablePanelConstants from "MorphablePanelConstants" /* 11920 */;
 import size from "module_2" /* 2 */;
 
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;

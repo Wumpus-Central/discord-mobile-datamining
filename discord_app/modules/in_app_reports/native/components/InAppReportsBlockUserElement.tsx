@@ -1,6 +1,6 @@
-// === Module 12202: InAppReportsBlockUserElement ===
+// === Module 12196: InAppReportsBlockUserElement ===
 
-// Module 12202 (InAppReportsBlockUserElement)
+// Module 12196 (InAppReportsBlockUserElement)
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6852 */;

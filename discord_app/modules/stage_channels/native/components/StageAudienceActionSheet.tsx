@@ -1,6 +1,6 @@
-// === Module 12861: StageAudienceActionSheet ===
+// === Module 12855: StageAudienceActionSheet ===
 
-// Module 12861 (StageAudienceActionSheet)
+// Module 12855 (StageAudienceActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4209 from "module_4209" /* 4209 */;
@@ -11,8 +11,8 @@ import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
 import TableSwitchRow from "TableSwitchRow" /* 7888 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import useRequestToSpeakPermission from "useRequestToSpeakPermission" /* 12862 */;
-import useStageSummaryDefault from "useStageSummary" /* 12865 */;
+import useRequestToSpeakPermission from "useRequestToSpeakPermission" /* 12856 */;
+import useStageSummaryDefault from "useStageSummary" /* 12859 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -54,7 +54,7 @@ function StageAudienceEmptyState() {
   obj3.children = intl2.string(_modDef4209.eo2IxJ);
   items[1] = React5(Text_Text.Text, obj3);
   obj.children = items;
-  return closure_1_10(View, obj);
+  return refs(View, obj);
 }
 function getItemType(type) {
   return type.type;
@@ -72,7 +72,7 @@ function StageAudienceActionSheetContent(channel) {
   const sortedRequestToSpeakParticipants = channel(6886).useSortedRequestToSpeakParticipants(channel.id);
   closure_129_1 = sortedRequestToSpeakParticipants;
   let obj3 = channel(6886);
-  const throttledStageAudience = channel(12863).useThrottledStageAudience(channel.id);
+  const throttledStageAudience = channel(12857).useThrottledStageAudience(channel.id);
   closure_129_2 = throttledStageAudience;
   items = [canToggleRequestToSpeak, sortedRequestToSpeakParticipants, throttledStageAudience];
   const memo = noop.useMemo(() => {

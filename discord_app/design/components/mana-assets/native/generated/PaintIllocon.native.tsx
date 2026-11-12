@@ -1,20 +1,20 @@
-// === Module 14939: PaintIllocon ===
+// === Module 14935: PaintIllocon ===
 
-// Module 14939 (PaintIllocon)
+// Module 14935 (PaintIllocon)
 import FastImageDefault from "FastImage" /* 5957 */;
 import assetHelpers from "assetHelpers" /* 7689 */;
-import _modDef14940 from "module_14940" /* 14940 */;
-import _modDef14941 from "module_14941" /* 14941 */;
-import _modDef14942 from "module_14942" /* 14942 */;
+import _modDef14936 from "module_14936" /* 14936 */;
+import _modDef14937 from "module_14937" /* 14937 */;
+import _modDef14938 from "module_14938" /* 14938 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef14940 }, 3: null };
-const obj2 = { uri: _modDef14940 };
-obj[2] = { uri: _modDef14941 };
-const obj3 = { uri: _modDef14941 };
-obj[3] = { uri: _modDef14942 };
+let obj = { 1: null, 2: { uri: _modDef14936 }, 3: null };
+const obj2 = { uri: _modDef14936 };
+obj[2] = { uri: _modDef14937 };
+const obj3 = { uri: _modDef14937 };
+obj[3] = { uri: _modDef14938 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/PaintIllocon.native.tsx");
 

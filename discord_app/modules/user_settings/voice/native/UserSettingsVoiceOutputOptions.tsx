@@ -1,9 +1,9 @@
-// === Module 12926: UserSettingsVoiceOutputOptions ===
+// === Module 12920: UserSettingsVoiceOutputOptions ===
 
-// Module 12926 (UserSettingsVoiceOutputOptions)
+// Module 12920 (UserSettingsVoiceOutputOptions)
 import _modDef38 from "module_38" /* 38 */;
 import AudioActionCreatorsDefault from "AudioActionCreators" /* 6162 */;
-import VolumeSliderDefault from "VolumeSlider" /* 12927 */;
+import VolumeSliderDefault from "VolumeSlider" /* 12921 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -87,5 +87,5 @@ export default function UserSettingsVoiceOutputOptions() {
   }
   items4[1] = tmp9Result;
   obj4.children = items4;
-  return closure_10(stateFromStores1(12909).UserSettingsTableRowGroup, obj4);
+  return closure_10(stateFromStores1(12903).UserSettingsTableRowGroup, obj4);
 };

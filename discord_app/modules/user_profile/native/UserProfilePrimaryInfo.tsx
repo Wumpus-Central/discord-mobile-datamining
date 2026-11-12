@@ -1,6 +1,6 @@
-// === Module 15356: UserProfilePrimaryInfo ===
+// === Module 15353: UserProfilePrimaryInfo ===
 
-// Module 15356 (UserProfilePrimaryInfo)
+// Module 15353 (UserProfilePrimaryInfo)
 import nativeDefault from "native" /* 575 */;
 import QuestTypes from "QuestTypes" /* 5278 */;
 import UserUtilsDefault from "UserUtils" /* 5309 */;
@@ -11,15 +11,15 @@ import GuildTagUtils from "GuildTagUtils" /* 8343 */;
 import BadgeId from "BadgeId" /* 8414 */;
 import openUserSettings from "openUserSettings" /* 8537 */;
 import useBadges from "useBadges" /* 8541 */;
-import ClipView from "ClipView" /* 9437 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9998 */;
-import BadgeUtils from "BadgeUtils" /* 10046 */;
-import captureAdUserAction from "captureAdUserAction" /* 10068 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 10071 */;
-import GuildTagDefault from "GuildTag" /* 10587 */;
-import BotTagDefault from "BotTag" /* 10807 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 15161 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 15162 */;
+import ClipView from "ClipView" /* 9436 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9997 */;
+import BadgeUtils from "BadgeUtils" /* 10045 */;
+import captureAdUserAction from "captureAdUserAction" /* 10067 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 10070 */;
+import GuildTagDefault from "GuildTag" /* 10585 */;
+import BotTagDefault from "BotTag" /* 10801 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 15158 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 15159 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8481 */;
@@ -395,7 +395,7 @@ function UnreadDotCutoutLayer(showDot) {
   const items1 = [tmp.cutoutLayerFill, showDot.style];
   obj2.style = items1;
   obj.children = closure_15(closure_6, obj2);
-  return closure_15(first(9437), obj);
+  return closure_15(first(9436), obj);
 }
 class ProfileBadgeRows {
   constructor(arg0) {

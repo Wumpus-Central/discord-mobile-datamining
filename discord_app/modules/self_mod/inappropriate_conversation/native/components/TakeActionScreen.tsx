@@ -1,11 +1,11 @@
-// === Module 18256: TakeActionScreen ===
+// === Module 18251: TakeActionScreen ===
 
-// Module 18256 (TakeActionScreen)
+// Module 18251 (TakeActionScreen)
 import nativeDefault from "native" /* 575 */;
 import LinkingDefault from "Linking" /* 5949 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6852 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8072 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11977 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11971 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ import UserStore from "UserStore" /* 1385 */;
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(11963);
+const Constants = fn(11957);
 ({ MODAL_LOCATION_CONTEXT_MOBILE: closure_10, NOFILTR_URL: closure_11, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -94,7 +94,7 @@ export default function TakeActionButtons(senderId) {
             v1 = 1;
             dependencyMap = 1;
             const obj5 = {
-              value: tmp4(12002).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
+              value: tmp4(11996).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
                         dependencyMap(true);
                         const obj2 = { text: null, variant: "success" };
                         const intl = closure_0(1113).intl;
@@ -116,7 +116,7 @@ export default function TakeActionButtons(senderId) {
         } else if (arg0 !== 2) {
           closure_128_5(false);
           const result = v1(6852).showReportSuccessToast(closure_128_0, closure_128_1);
-          closure_128_3(tmp4(11977).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          closure_128_3(tmp4(11971).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
           const obj = v1(6852);
         }
         dependencyMap = 3;

@@ -1,6 +1,6 @@
-// === Module 17707: NoFillQuestDock ===
+// === Module 17702: NoFillQuestDock ===
 
-// Module 17707 (NoFillQuestDock)
+// Module 17702 (NoFillQuestDock)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(5243);
-let closure_4 = createStyles.createStyles({ placeholder: { position: "absolute", left: 0, right: 0, height: fn(17585).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 } });
+let closure_4 = createStyles.createStyles({ placeholder: { position: "absolute", left: 0, right: 0, height: fn(17580).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/NoFillQuestDock.tsx");
 
@@ -20,12 +20,12 @@ export default function NoFillQuestDock(noFillDecision) {
   _require = tmp;
   youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
   if (null == noFillDecision.adContentId) {
-    const obj2 = { ref: "HermesInternal", accessibilityElementsHidden: "no-hide-descendants", importantForAccessibility: "none", pointerEvents: null, style: "DeclarationList" };
+    const obj2 = { ref: "HermesInternal", accessibilityElementsHidden: "no-hide-descendants", importantForAccessibility: "none", pointerEvents: null, style: "isCertain" };
     items = [tmp.placeholder, ];
     const obj3 = { bottom: youBarTotalHeight - 1 };
     items[1] = obj3;
     obj2.style = items;
-    let tmp7 = <View ref="HermesInternal" accessibilityElementsHidden="no-hide-descendants" importantForAccessibility="none" pointerEvents={null} style="DeclarationList" />;
+    let tmp7 = <View ref="HermesInternal" accessibilityElementsHidden="no-hide-descendants" importantForAccessibility="none" pointerEvents={null} style="isCertain" />;
   } else {
     const obj4 = {
       adContentId: noFillDecision.adContentId,

@@ -273,7 +273,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const React6 = { padding: 0 };
 const createStyles = fn(5243);
-let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
+const refs = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
   let num = 1;
   if (arg0) {

@@ -1,6 +1,6 @@
-// === Module 15488: useJoinFromSupportedPlatformsIconKeys ===
+// === Module 15485: useJoinFromSupportedPlatformsIconKeys ===
 
-// Module 15488 (useJoinFromSupportedPlatformsIconKeys)
+// Module 15485 (useJoinFromSupportedPlatformsIconKeys)
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7406 */;
 import noop from "module_19" /* 19 */;
 

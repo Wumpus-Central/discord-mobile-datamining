@@ -1,18 +1,18 @@
-// === Module 18282: DevToolsContent ===
+// === Module 18277: DevToolsContent ===
 
-// Module 18282 (DevToolsContent)
+// Module 18277 (DevToolsContent)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import HapticUtils from "HapticUtils" /* 5491 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import Pressables from "Pressables" /* 7364 */;
-import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 13930 */;
-import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 13932 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 16939 */;
-import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 18283 */;
+import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 13926 */;
+import ArrowSmallDownIcon from "ArrowSmallDownIcon" /* 13928 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 16934 */;
+import useSortedDevToolsScreens from "useSortedDevToolsScreens" /* 18278 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 12278 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 12272 */;
 import ExperimentStore from "ExperimentStore" /* 5469 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 
@@ -80,7 +80,7 @@ let closure_12 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function DevToolsContentSubLabel(arg0) {
   ({ label, value } = arg0);
   const obj = { variant: "body-xs/medium", color: "text-subtle", children: null };
-  items = [label, closure_1_10(Text_Text.Text, { variant: "body-xs/semibold", children: value })];
+  items = [label, refs(Text_Text.Text, { variant: "body-xs/semibold", children: value })];
   obj.children = items;
   return closure_1_11(Text_Text.Text, obj);
 });
@@ -124,14 +124,14 @@ export default noop.memo(function DevToolsContent(arg0) {
       let tmp7;
       if (null != closure_0) {
         const obj2 = { label: "Build override: ", value: tmp5 };
-        tmp7 = closure_2_10(memoResult, obj2, tmp);
+        tmp7 = refs(memoResult, obj2, tmp);
       }
       return tmp7;
     } else if ("experiments" === tmp) {
       let tmp2;
       if (closure_1 > 0) {
         const obj = { label: "Experiments overridden: ", value: closure_1.toString() };
-        tmp2 = closure_2_10(memoResult, obj, tmp);
+        tmp2 = refs(memoResult, obj, tmp);
       }
       return tmp2;
     }

@@ -1,23 +1,23 @@
-// === Module 12047: UserProfileWidgetsBoard ===
+// === Module 12041: UserProfileWidgetsBoard ===
 
-// Module 12047 (UserProfileWidgetsBoard)
+// Module 12041 (UserProfileWidgetsBoard)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 6268 */;
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7293 */;
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7294 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 12024 */;
-import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 12052 */;
-import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 12064 */;
-import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 12067 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12077 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 12018 */;
+import openUserProfileAddGameActionSheetDefault from "openUserProfileAddGameActionSheet" /* 12046 */;
+import UserProfileGameDetailsRowDefault from "UserProfileGameDetailsRow" /* 12058 */;
+import UserProfileWidgetGameCoverDefault from "UserProfileWidgetGameCover" /* 12061 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12071 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function AddGameButton(ref) {
   ref = ref.ref;
   const widgetType = ref.widgetType;
-  const obj = { ref, size: "sm", variant: "secondary", icon: closure_8(ref(10382).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }), accessibilityLabel: null, disabled: null, onPress: null };
+  const obj = { ref, size: "sm", variant: "secondary", icon: closure_8(ref(10380).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }), accessibilityLabel: null, disabled: null, onPress: null };
   const intl = ref(1113).intl;
   obj.accessibilityLabel = intl.string(ref(1113).t.E3l3Zx);
   obj.disabled = ref.disabled;
@@ -51,7 +51,7 @@ let obj = { board: { gap: nativeDefault.space.PX_16 }, emptyState: null, singleG
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj.emptyState = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
 let obj4 = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
-obj.singleGameEmptyState = { flexDirection: "row", alignItems: "center", gap: fn(12048).GAME_COVER_DETAILS_GAP, paddingVertical: nativeDefault.space.PX_8 };
+obj.singleGameEmptyState = { flexDirection: "row", alignItems: "center", gap: fn(12042).GAME_COVER_DETAILS_GAP, paddingVertical: nativeDefault.space.PX_8 };
 obj.singleGameEmptyStateText = { flex: 1 };
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function WidgetSection(userId) {

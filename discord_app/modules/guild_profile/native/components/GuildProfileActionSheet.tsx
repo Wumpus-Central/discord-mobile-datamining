@@ -1,6 +1,6 @@
-// === Module 10588: GuildProfileActionSheet ===
+// === Module 10586: GuildProfileActionSheet ===
 
-// Module 10588 (GuildProfileActionSheet)
+// Module 10586 (GuildProfileActionSheet)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import useThemeDefault from "useTheme" /* 5484 */;
@@ -8,9 +8,9 @@ import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5503 */;
 import BottomSheetModal from "BottomSheetModal" /* 5507 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5838 */;
-import GuildProfileSheetBodyDefault from "GuildProfileSheetBody" /* 10589 */;
-import GuildProfileCreateTagUpsellDefault from "GuildProfileCreateTagUpsell" /* 10606 */;
-import GuildProfileCTADefault from "GuildProfileCTA" /* 10739 */;
+import GuildProfileSheetBodyDefault from "GuildProfileSheetBody" /* 10587 */;
+import GuildProfileCreateTagUpsellDefault from "GuildProfileCreateTagUpsell" /* 10604 */;
+import GuildProfileCTADefault from "GuildProfileCTA" /* 10733 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

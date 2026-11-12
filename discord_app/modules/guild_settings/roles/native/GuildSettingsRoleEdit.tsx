@@ -1,6 +1,6 @@
-// === Module 20419: GuildSettingsRoleEdit ===
+// === Module 20414: GuildSettingsRoleEdit ===
 
-// Module 20419 (GuildSettingsRoleEdit)
+// Module 20414 (GuildSettingsRoleEdit)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -19,13 +19,13 @@ import TableRowGroup from "TableRowGroup" /* 7680 */;
 import Form from "Form" /* 8041 */;
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8066 */;
 import InlineNotice from "InlineNotice" /* 8094 */;
-import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 12403 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 20410 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20420 */;
-import GuildSettingsRoleEditDisplayDefault from "GuildSettingsRoleEditDisplay" /* 20421 */;
-import GuildSettingsRoleEditPermissionsDefault from "GuildSettingsRoleEditPermissions" /* 20430 */;
-import GuildSettingsRoleMembersDefault from "GuildSettingsRoleMembers" /* 20432 */;
-import GuildSettingsRoleEditConnectionsControlsDefault from "GuildSettingsRoleEditConnectionsControls" /* 20433 */;
+import ConnectionsRoleActionCreators from "ConnectionsRoleActionCreators" /* 12397 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 20405 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20415 */;
+import GuildSettingsRoleEditDisplayDefault from "GuildSettingsRoleEditDisplay" /* 20416 */;
+import GuildSettingsRoleEditPermissionsDefault from "GuildSettingsRoleEditPermissions" /* 20425 */;
+import GuildSettingsRoleMembersDefault from "GuildSettingsRoleMembers" /* 20427 */;
+import GuildSettingsRoleEditConnectionsControlsDefault from "GuildSettingsRoleEditConnectionsControls" /* 20428 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -34,17 +34,17 @@ import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import GuildRoleStore from "GuildRoleStore" /* 5149 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 8339 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20406 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20401 */;
 
 require = fn;
 let closure_4 = ["guild"];
 const View = fn(17).View;
 const isEveryoneRole = fn(5150).isEveryoneRole;
-const RoleColorsStyle = fn(20406).RoleColorsStyle;
-const constants = fn(20401).GuildSettingsRoleEditSections;
+const RoleColorsStyle = fn(20401).RoleColorsStyle;
+const constants = fn(20396).GuildSettingsRoleEditSections;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_18, DEFAULT_ROLE_COLOR: closure_19, GuildSettingsSections: closure_20 } = Constants);
-const HOLOGRAPHIC_ROLE_COLORS = fn(20408).HOLOGRAPHIC_ROLE_COLORS;
+const HOLOGRAPHIC_ROLE_COLORS = fn(20403).HOLOGRAPHIC_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
 const createStyles = fn(5243);
@@ -172,10 +172,10 @@ class GuildSettingsRoleEdit extends PureComponent {
           closure_2 = editedRoleConnectionConfigurationsMap.get(id);
         }
         function success() {
-          applyArgumentsResult(20420).commitSectionChanges(id, effectiveSection);
+          applyArgumentsResult(20415).commitSectionChanges(id, effectiveSection);
           navigation.pop();
           closure_2_0.setState({ submitting: false, formErrors: {} });
-          const obj = applyArgumentsResult(20420);
+          const obj = applyArgumentsResult(20415);
           const obj3 = { text: null, variant: "success" };
           const intl = applyArgumentsResult(1113).intl;
           obj3.text = intl.string(applyArgumentsResult(1113).t.ulZn1j);
@@ -205,15 +205,15 @@ class GuildSettingsRoleEdit extends PureComponent {
           }
           updateRoleResult.then(() => {
             if (null != closure_1_2) {
-              const result = closure_3_0(12403).putRoleConnectionsConfigurations(closure_1_4, closure_1_5, tmp);
+              const result = closure_3_0(12397).putRoleConnectionsConfigurations(closure_1_4, closure_1_5, tmp);
               result.then(success, failure);
-              const obj5 = closure_3_0(12403);
+              const obj5 = closure_3_0(12397);
             } else if (typeof success === "function") {
-              closure_3_0(20420).commitSectionChanges(closure_1_5, effectiveSection);
+              closure_3_0(20415).commitSectionChanges(closure_1_5, effectiveSection);
               navigation.pop();
               const obj2 = { submitting: false, formErrors: {} };
               closure_0.setState(obj2);
-              const obj = closure_3_0(20420);
+              const obj = closure_3_0(20415);
               obj4 = { text: null, variant: "success" };
               const intl = closure_3_0(1113).intl;
               obj4.text = intl.string(closure_3_0(1113).t.ulZn1j);
@@ -293,7 +293,7 @@ class GuildSettingsRoleEdit extends PureComponent {
                 if (null === guild_connections) {
                   v1 = 1;
                   c2 = 1;
-                  const obj6 = { value: tmp4(12403).putRoleConnectionsConfigurations(id.id, role.id, []), done: false };
+                  const obj6 = { value: tmp4(12397).putRoleConnectionsConfigurations(id.id, role.id, []), done: false };
                   return obj6;
                 }
               }
@@ -353,11 +353,11 @@ class GuildSettingsRoleEdit extends PureComponent {
             const id = closure_2_0.props.role.id;
             const effectiveSection = closure_2_0.getEffectiveSection();
             if (effectiveSection === constants.VERIFICATIONS) {
-              const result = applyArgumentsResult(20420).discardConnectionsChanges(id);
-              const obj2 = applyArgumentsResult(20420);
+              const result = applyArgumentsResult(20415).discardConnectionsChanges(id);
+              const obj2 = applyArgumentsResult(20415);
             } else {
-              const result1 = applyArgumentsResult(20420).discardSectionChanges(id, effectiveSection);
-              const obj = applyArgumentsResult(20420);
+              const result1 = applyArgumentsResult(20415).discardSectionChanges(id, effectiveSection);
+              const obj = applyArgumentsResult(20415);
             }
             closure_0(true);
           };

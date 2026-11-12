@@ -1,6 +1,6 @@
-// === Module 10784: useDiscoverableApplicationStream ===
+// === Module 10778: useDiscoverableApplicationStream ===
 
-// Module 10784 (useDiscoverableApplicationStream)
+// Module 10778 (useDiscoverableApplicationStream)
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
 

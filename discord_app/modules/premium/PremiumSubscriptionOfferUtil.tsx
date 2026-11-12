@@ -1,15 +1,15 @@
-// === Module 9243: PremiumSubscriptionOfferUtil ===
+// === Module 9242: PremiumSubscriptionOfferUtil ===
 
-// Module 9243 (PremiumSubscriptionOfferUtil)
+// Module 9242 (PremiumSubscriptionOfferUtil)
 import initialize from "initialize" /* 504 */;
 import Server from "Server" /* 2116 */;
 import _modDef2166 from "module_2166" /* 2166 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9244 */;
-import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 9246 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 9247 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 9248 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 9249 */;
-import ReverseTrialUtils from "ReverseTrialUtils" /* 9251 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9243 */;
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 9245 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 9246 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 9247 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 9248 */;
+import ReverseTrialUtils from "ReverseTrialUtils" /* 9250 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
@@ -18,7 +18,7 @@ const require = globalThis.__r;
 
 require = fn;
 function getDiscountInfo(active_discount_id) {
-  if (closure_1_10 !== active_discount_id) {
+  if (refs !== active_discount_id) {
     if (application_id !== active_discount_id) {
       if (collapsedCategories === active_discount_id) {
         const obj2 = { duration: 1, percentage: 10, discountId: active_discount_id };
@@ -128,7 +128,7 @@ export function useActiveDiscountInfo() {
   return getDiscountInfo(active_discount_id);
 }
 export function useFetchChurnUserDiscountOffer(arg0) {
-  let tmp2 = useDiscountOfferDefault(closure_1_10);
+  let tmp2 = useDiscountOfferDefault(refs);
   const tmp3 = useDiscountOfferDefault(collapsedCategories);
   const tmp4 = useDiscountOfferDefault(expandedHeight);
   const tmp5 = useDiscountOfferDefault(closure_1_11);

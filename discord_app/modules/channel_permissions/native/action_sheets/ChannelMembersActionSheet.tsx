@@ -1,6 +1,6 @@
-// === Module 12469: ChannelMembersActionSheet ===
+// === Module 12463: ChannelMembersActionSheet ===
 
-// Module 12469 (ChannelMembersActionSheet)
+// Module 12463 (ChannelMembersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -16,12 +16,12 @@ import RowButton from "RowButton" /* 8043 */;
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8066 */;
 import InlineNotice from "InlineNotice" /* 8094 */;
 import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8106 */;
-import SettingsIcon from "SettingsIcon" /* 10502 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10856 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 10918 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 12468 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 12470 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 12471 */;
+import SettingsIcon from "SettingsIcon" /* 10500 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10850 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 10912 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 12462 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 12464 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 12465 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;

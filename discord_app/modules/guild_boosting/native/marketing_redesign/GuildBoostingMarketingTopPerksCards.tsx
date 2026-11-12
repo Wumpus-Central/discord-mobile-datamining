@@ -1,14 +1,14 @@
-// === Module 15912: GuildBoostingMarketingTopPerksCards ===
+// === Module 15907: GuildBoostingMarketingTopPerksCards ===
 
-// Module 15912 (GuildBoostingMarketingTopPerksCards)
+// Module 15907 (GuildBoostingMarketingTopPerksCards)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import LottieAnimationViewDefault from "LottieAnimationView" /* 5860 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import _modDef15913 from "module_15913" /* 15913 */;
-import _mod15914 from "module_15914" /* 15914 */;
-import _modDef15915 from "module_15915" /* 15915 */;
+import _modDef15908 from "module_15908" /* 15908 */;
+import _mod15909 from "module_15909" /* 15909 */;
+import _modDef15910 from "module_15910" /* 15910 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 
@@ -37,7 +37,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15913 };
+      const obj = { style, source: _modDef15908 };
       return hasOwnProperty(FastImageDefault, obj);
     }
   },
@@ -51,7 +51,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod15914, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod15909, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     }
   },
@@ -65,7 +65,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15915 };
+      const obj = { style, source: _modDef15910 };
       return hasOwnProperty(FastImageDefault, obj);
     }
   }

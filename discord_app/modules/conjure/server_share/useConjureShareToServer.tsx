@@ -1,6 +1,6 @@
-// === Module 13096: useConjureShareToServer ===
+// === Module 13090: useConjureShareToServer ===
 
-// Module 13096 (useConjureShareToServer)
+// Module 13090 (useConjureShareToServer)
 import ConjurePublishTypes from "ConjurePublishTypes" /* 7320 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -63,7 +63,7 @@ function refreshUntilBotJoins(arg0, arg1) {
                           closure_0 = closure_1_0;
                           closure_1 = tmp7 - 1;
                           let _setTimeout = setTimeout;
-                          let timerId = setTimeout(/* F105453 */ function() { ... }, 1500);
+                          let timerId = setTimeout(/* F105460 */ function() { ... }, 1500);
                         }
                         let obj = closure_2_0(closure_2_2[12]);
                       }

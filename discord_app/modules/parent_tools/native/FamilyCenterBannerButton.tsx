@@ -1,6 +1,6 @@
-// === Module 17288: FamilyCenterBannerButton ===
+// === Module 17283: FamilyCenterBannerButton ===
 
-// Module 17288 (FamilyCenterBannerButton)
+// Module 17283 (FamilyCenterBannerButton)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
@@ -9,8 +9,8 @@ import _modDef2685 from "module_2685" /* 2685 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 8126 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 17290 */;
-import QrCodeIcon from "QrCodeIcon" /* 17294 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 17285 */;
+import QrCodeIcon from "QrCodeIcon" /* 17289 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 8673 */;
@@ -64,7 +64,7 @@ function FamilyCenterTeenQRCodeButtonInner() {
       const obj2 = { action: React6.ShowQRCodeModal };
       AnalyticsUtilsDefault.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj2);
       const obj4 = { linkCode: stateFromStores1, expiresAt: stateFromStores2, onRefresh: getLinkCode2 };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17291, dependencyMap.paths), metroImportDefault, obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17286, dependencyMap.paths), metroImportDefault, obj4);
     }
   }, items4);
   const obj8 = { direction: "horizontal", spacing: getLinkCode2(stateFromStores[9]).space.PX_8, style: tmp.container, children: null };
@@ -168,6 +168,6 @@ export function FamilyCenterParentQRCodeButton() {
     };
     return closure_12(FamilyCenterBannerButton, obj2);
   }
-  obj = handleQrCodeScanSucess(9550);
+  obj = handleQrCodeScanSucess(9549);
   tmp = handleQrCodeScanSucess;
 }

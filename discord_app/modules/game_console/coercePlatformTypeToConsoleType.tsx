@@ -1,6 +1,6 @@
-// === Module 12962: coercePlatformTypeToConsoleType ===
+// === Module 12956: coercePlatformTypeToConsoleType ===
 
-// Module 12962 (coercePlatformTypeToConsoleType)
+// Module 12956 (coercePlatformTypeToConsoleType)
 import Constants from "Constants" /* 1072 */;
 import GameConsoleConstants from "GameConsoleConstants" /* 7405 */;
 import size from "module_2" /* 2 */;

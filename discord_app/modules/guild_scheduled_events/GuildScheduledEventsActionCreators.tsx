@@ -24,12 +24,12 @@ let result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildSch
 export default {
   startEvent(arg0, arg1) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENT(arg1, arg0), body: { status: constants.ACTIVE }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: refs.GUILD_EVENT(arg1, arg0), body: { status: constants.ACTIVE }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.patch(request);
   },
   endEvent(arg0, arg1) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENT(arg1, arg0), body: { status: constants.COMPLETED }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: refs.GUILD_EVENT(arg1, arg0), body: { status: constants.COMPLETED }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.patch(request);
   },
   joinVoiceEvent(arg0, id) {
@@ -52,14 +52,14 @@ export default {
     }
     const obj2 = { name: entityType.name, description: entityType.description, image, privacy_level: entityType.privacyLevel, scheduled_start_time: entityType.scheduledStartTime, scheduled_end_time: entityType.scheduledEndTime, entity_type: entityType.entityType, channel_id: channelId, entity_metadata: entityMetadata, recurrence_rule: EditGuildEventUtils.recurrenceRuleToServer(entityType.recurrenceRule) };
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENT(arg2, arg0), body: obj2, rejectWithError: null };
+    const request = { url: refs.GUILD_EVENT(arg2, arg0), body: obj2, rejectWithError: null };
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     return HTTP.patch(request);
   },
   createGuildEvent(name, id) {
     const obj = { name: name.name, description: name.description, image: name.image, privacy_level: name.privacyLevel, scheduled_start_time: name.scheduledStartTime, scheduled_end_time: name.scheduledEndTime, entity_type: name.entityType, channel_id: name.channelId, entity_metadata: name.entityMetadata, recurrence_rule: EditGuildEventUtils.recurrenceRuleToServer(name.recurrenceRule) };
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENTS_FOR_GUILD(id), body: obj, rejectWithError: null };
+    const request = { url: refs.GUILD_EVENTS_FOR_GUILD(id), body: obj, rejectWithError: null };
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     return HTTP.post(request);
   },
@@ -129,12 +129,12 @@ export default {
   },
   cancelGuildEvent(arg0, arg1) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENT(arg1, arg0), body: { status: constants.CANCELED }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: refs.GUILD_EVENT(arg1, arg0), body: { status: constants.CANCELED }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.patch(request);
   },
   deleteGuildEvent(arg0, arg1) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: closure_1_10.GUILD_EVENT(arg1, arg0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { url: refs.GUILD_EVENT(arg1, arg0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(obj);
   },
   getGuildEventsForCurrentUser(arg0) {
@@ -549,18 +549,18 @@ export default {
   createGuildEventException(arg0, guild_id, id) {
     ({ original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled } = arg0);
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENT_EXCEPTIONS(guild_id, id), body: { original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: refs.GUILD_EVENT_EXCEPTIONS(guild_id, id), body: { original_scheduled_start_time, scheduled_start_time, scheduled_end_time, is_canceled }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.post(request);
   },
   updateGuildEventException(arg0, guild_id, id, event_exception_id) {
     ({ scheduled_start_time, scheduled_end_time, is_canceled } = arg0);
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: closure_1_10.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id), body: { scheduled_start_time, scheduled_end_time, is_canceled }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: refs.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id), body: { scheduled_start_time, scheduled_end_time, is_canceled }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.patch(request);
   },
   deleteGuildEventException(guild_id, id, event_exception_id) {
     const HTTP = HTTPUtils.HTTP;
-    const obj = { url: closure_1_10.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id), rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const obj = { url: refs.GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id), rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.del(obj);
   },
   deleteRecurrence(guild_id, id, event_exception_id, eventException) {

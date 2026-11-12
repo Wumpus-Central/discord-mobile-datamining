@@ -1,6 +1,6 @@
-// === Module 15562: UserProfileOverflowMenu ===
+// === Module 15559: UserProfileOverflowMenu ===
 
-// Module 15562 (UserProfileOverflowMenu)
+// Module 15559 (UserProfileOverflowMenu)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import UserUtilsDefault from "UserUtils" /* 5309 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
@@ -10,13 +10,13 @@ import ClipboardUtils from "ClipboardUtils" /* 7877 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
 import CallActionCreatorsDefault from "CallActionCreators" /* 8071 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import isGameOrganizationInviteRecipientDefault from "isGameOrganizationInviteRecipient" /* 12440 */;
-import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 12472 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 13364 */;
-import GuildInviteUtils from "GuildInviteUtils" /* 15563 */;
-import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 15573 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 15577 */;
-import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 15582 */;
+import isGameOrganizationInviteRecipientDefault from "isGameOrganizationInviteRecipient" /* 12434 */;
+import openGameOrganizationInvitePickerDefault from "openGameOrganizationInvitePicker" /* 12466 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 13358 */;
+import GuildInviteUtils from "GuildInviteUtils" /* 15560 */;
+import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 15570 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 15574 */;
+import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 15579 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
@@ -299,7 +299,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
               trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15579, dependencyMap.paths), { userId: id, showUserProfile: callback1 });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15576, dependencyMap.paths), { userId: id, showUserProfile: callback1 });
               const obj = { action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations };
               const obj3 = { userId: id, showUserProfile: callback1 };
               ActionSheetActionCreatorsDefault.hideActionSheet();

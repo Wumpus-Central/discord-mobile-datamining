@@ -1,12 +1,12 @@
-// === Module 13243: ConjureModeTabBar ===
+// === Module 13237: ConjureModeTabBar ===
 
-// Module 13243 (ConjureModeTabBar)
+// Module 13237 (ConjureModeTabBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import spring_spring from "spring/spring" /* 5876 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 11192 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 11186 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 12018: InAppReportsShieldElement ===
+// === Module 12012: InAppReportsShieldElement ===
 
-// Module 12018 (InAppReportsShieldElement)
+// Module 12012 (InAppReportsShieldElement)
 import ShieldSpotIllustration from "ShieldSpotIllustration" /* 8145 */;
 import noop from "module_19" /* 19 */;
 

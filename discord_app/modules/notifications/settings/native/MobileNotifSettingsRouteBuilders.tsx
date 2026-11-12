@@ -1,9 +1,9 @@
-// === Module 18495: MobileNotifSettingsRouteBuilders ===
+// === Module 18490: MobileNotifSettingsRouteBuilders ===
 
-// Module 18495 (MobileNotifSettingsRouteBuilders)
+// Module 18490 (MobileNotifSettingsRouteBuilders)
 import util from "util" /* 1113 */;
 import _modDef3013 from "module_3013" /* 3013 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 17996 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 17991 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRouteBuilders.tsx");
@@ -18,7 +18,7 @@ export function buildOverviewCategoriesSection() {
 }
 export function buildCategoryCallsMessagesSettingsSection() {
   const obj = { settings: null };
-  items = [MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_REQUESTS, MobileNotifSettings.MobileNotifSettings.NOTIF_CALLS, MobileNotifSettings.MobileNotifSettings.NOTIF_MISSED_MESSAGES_LOW, MobileNotifSettings.MobileNotifSettings.NOTIF_MISSED_MESSAGES_DEFAULT, MobileNotifSettings.MobileNotifSettings.NOTIF_REACTIONS_CHOICE_ROUTE];
+  items = [MobileNotifSettings.MobileNotifSettings.NOTIF_FRIEND_REQUESTS, MobileNotifSettings.MobileNotifSettings.NOTIF_CALLS, MobileNotifSettings.MobileNotifSettings.NOTIF_MISSED_MESSAGES_LOW, MobileNotifSettings.MobileNotifSettings.NOTIF_MISSED_MESSAGES_DEFAULT, MobileNotifSettings.MobileNotifSettings.NOTIF_SUMMARY_REMINDER, MobileNotifSettings.MobileNotifSettings.NOTIF_REACTIONS_CHOICE_ROUTE];
   obj.settings = items;
   return obj;
 }
@@ -42,7 +42,7 @@ export function buildFriendActivityTitleSettingsSection() {
 }
 export function buildCategoryServersSettingsSection() {
   const obj = { settings: null };
-  items = [MobileNotifSettings.MobileNotifSettings.NOTIF_GUILD_EVENT_NOTIFICATIONS, MobileNotifSettings.MobileNotifSettings.NOTIF_FORUM_NOTIFICATIONS, MobileNotifSettings.MobileNotifSettings.NOTIF_OTHER_GUILD, MobileNotifSettings.MobileNotifSettings.NOTIF_SAFETY_ALERTS, MobileNotifSettings.MobileNotifSettings.NOTIF_STAGE_NOTIFICATIONS];
+  items = [MobileNotifSettings.MobileNotifSettings.NOTIF_GUILD_EVENT_NOTIFICATIONS, MobileNotifSettings.MobileNotifSettings.NOTIF_UPCOMING_SERVER_EVENT, MobileNotifSettings.MobileNotifSettings.NOTIF_FORUM_NOTIFICATIONS, MobileNotifSettings.MobileNotifSettings.NOTIF_OTHER_GUILD, MobileNotifSettings.MobileNotifSettings.NOTIF_SAFETY_ALERTS, MobileNotifSettings.MobileNotifSettings.NOTIF_STAGE_NOTIFICATIONS];
   obj.settings = items;
   return obj;
 }

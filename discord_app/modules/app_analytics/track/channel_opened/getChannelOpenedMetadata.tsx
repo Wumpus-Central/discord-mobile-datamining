@@ -1,10 +1,10 @@
-// === Module 8932: getChannelOpenedMetadata ===
+// === Module 8931: getChannelOpenedMetadata ===
 
-// Module 8932 (getChannelOpenedMetadata)
+// Module 8931 (getChannelOpenedMetadata)
 import DurationsDefault from "Durations" /* 1089 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8933 */;
-import hasPendingMemberAction from "hasPendingMemberAction" /* 8934 */;
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8932 */;
+import hasPendingMemberAction from "hasPendingMemberAction" /* 8933 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import PermissionStore from "PermissionStore" /* 5175 */;

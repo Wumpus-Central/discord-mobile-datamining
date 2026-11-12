@@ -1,10 +1,10 @@
-// === Module 18552: RegisterPasswordInput ===
+// === Module 18547: RegisterPasswordInput ===
 
-// Module 18552 (RegisterPasswordInput)
+// Module 18547 (RegisterPasswordInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import usePasswordScore from "usePasswordScore" /* 18549 */;
+import usePasswordScore from "usePasswordScore" /* 18544 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -45,7 +45,7 @@ function PasswordStrength(passwordScore) {
           const intl3 = util.intl;
           const items1 = [intl3.string(util.t["5gbdUX"]), ": ", str];
           obj.children = items1;
-          return closure_1_10(Text_Text.Text, obj);
+          return refs(Text_Text.Text, obj);
         }
       }
     }
@@ -53,7 +53,7 @@ function PasswordStrength(passwordScore) {
   return null;
 }
 let closure_3 = ["password"];
-const RegistrationUIStore = fn(18524);
+const RegistrationUIStore = fn(18519);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
@@ -97,7 +97,7 @@ export function RegisterPasswordInput(ref) {
     autoFocus = false;
   }
   obj2.enabled = autoFocus;
-  isPasswordFocused(16375)(obj2);
+  isPasswordFocused(16370)(obj2);
   const tmp8 = _slicedToArray(noop.useState(false), 2);
   isPasswordFocused = tmp8[0];
   dependencyMap = tmp10;
@@ -113,7 +113,7 @@ export function RegisterPasswordInput(ref) {
     onPasswordChange(arg0);
   }, items);
   const tmp14 = onPasswordChange;
-  const tmp6 = isPasswordFocused(16375);
+  const tmp6 = isPasswordFocused(16370);
   const items1 = [PhoneStore];
   stateFromStores = onPasswordChange(504).useStateFromStores(items1, () => {
     const FRANCE_AND_FRENCH_REGION = onPasswordChange(5936).CountryCodesSets.FRANCE_AND_FRENCH_REGION;

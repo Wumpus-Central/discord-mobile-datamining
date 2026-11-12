@@ -1,6 +1,6 @@
-// === Module 19057: NotificationCenterItemsActions ===
+// === Module 19052: NotificationCenterItemsActions ===
 
-// Module 19057 (NotificationCenterItemsActions)
+// Module 19052 (NotificationCenterItemsActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;

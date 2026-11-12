@@ -1,6 +1,6 @@
-// === Module 8936: trackChannelOpenedClickstream ===
+// === Module 8935: trackChannelOpenedClickstream ===
 
-// Module 8936 (trackChannelOpenedClickstream)
+// Module 8935 (trackChannelOpenedClickstream)
 import Clickstream from "Clickstream" /* 8602 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 

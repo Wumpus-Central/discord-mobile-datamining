@@ -1,6 +1,6 @@
-// === Module 11095: ForumComposer ===
+// === Module 11089: ForumComposer ===
 
-// Module 11095 (ForumComposer)
+// Module 11089 (ForumComposer)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -14,16 +14,16 @@ import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAwar
 import transitionToChannel from "transitionToChannel" /* 6000 */;
 import sanitizeThreadNameDefault from "sanitizeThreadName" /* 8082 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import MessageParser from "MessageParser" /* 8720 */;
-import Tracking from "Tracking" /* 8800 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8938 */;
-import TagIcon from "TagIcon" /* 9455 */;
-import useFocusHandlers from "useFocusHandlers" /* 11169 */;
-import ForumGuidelinesActionSheet from "ForumGuidelinesActionSheet" /* 11177 */;
-import openExpressionPickerActionSheet from "openExpressionPickerActionSheet" /* 11181 */;
-import DismissibleActionSheet from "DismissibleActionSheet" /* 11565 */;
-import ImageCarouselDefault from "ImageCarousel" /* 11570 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11574 */;
+import MessageParser from "MessageParser" /* 8719 */;
+import Tracking from "Tracking" /* 8799 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8937 */;
+import TagIcon from "TagIcon" /* 9454 */;
+import useFocusHandlers from "useFocusHandlers" /* 11163 */;
+import ForumGuidelinesActionSheet from "ForumGuidelinesActionSheet" /* 11171 */;
+import openExpressionPickerActionSheet from "openExpressionPickerActionSheet" /* 11175 */;
+import DismissibleActionSheet from "DismissibleActionSheet" /* 11559 */;
+import ImageCarouselDefault from "ImageCarousel" /* 11564 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11568 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -33,8 +33,8 @@ import DraftStore from "DraftStore" /* 8658 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
-import SlowmodeStore from "SlowmodeStore" /* 8726 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8806 */;
+import SlowmodeStore from "SlowmodeStore" /* 8725 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8805 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
@@ -122,7 +122,7 @@ function ActionBar(channel) {
       const items5 = [, ];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj6.style = items5;
-      obj6.IconComponent = tmp2(9455).TagIcon;
+      obj6.IconComponent = tmp2(9454).TagIcon;
       obj6.onPress = function handlePressTagsButton() {
         timestampProducer.dismiss();
         const obj2 = {
@@ -148,18 +148,18 @@ function ActionBar(channel) {
           }
           tmp4 = closure_1_7 !== channel(1625).KeyboardTypes.SYSTEM && closure_1_7 !== channel(1625).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11800, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(11794, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
       tmp10 = closure_29(tmp2(7363).HeaderActionButton, obj6);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(11169).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(11163).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj7 = { accessibilityLabel: null, style: null, IconComponent: null, onPress: null, foregroundRipple: true };
       const intl3 = tmp2(1113).intl;
       obj7.accessibilityLabel = intl3.string(tmp2(1113).t.iZ7Mz9);
       obj7.style = tmp.actionButton;
-      obj7.IconComponent = tmp2(10342).ReactionIcon;
+      obj7.IconComponent = tmp2(10340).ReactionIcon;
       obj7.onPress = onShowExpressionPicker;
       tmp18 = closure_29(tmp2(7363).HeaderActionButton, obj7);
     }
@@ -199,7 +199,7 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(11798).KeyboardIcon;
+      let ImageIcon = tmp2(11792).KeyboardIcon;
     } else {
       ImageIcon = tmp2(8020).ImageIcon;
     }
@@ -220,7 +220,7 @@ function ActionBar(channel) {
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_6, Pressable: metroImportDefault, StyleSheet, Text: closure_8, View: closure_9 } = get_ActivityIndicator);
 const DraftType = fn(8658).DraftType;
-const SlowmodeType = fn(8726).SlowmodeType;
+const SlowmodeType = fn(8725).SlowmodeType;
 let Constants = fn(1072);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
 const ChannelFlags = fn(5099).ChannelFlags;

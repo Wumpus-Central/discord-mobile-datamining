@@ -1,13 +1,13 @@
-// === Module 12637: useDraggablePip ===
+// === Module 12631: useDraggablePip ===
 
-// Module 12637 (useDraggablePip)
+// Module 12631 (useDraggablePip)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let useChannelCallStore = fn(10940).useChannelCallStore;
-const Constants = fn(12624);
+let useChannelCallStore = fn(10934).useChannelCallStore;
+const Constants = fn(12618);
 ({ PIP_FOCUS_SCALE: closure_4, PIP_GESTURE_ACTIVE_OFFSET: hasOwnProperty } = Constants);
 let closure_6 = { mass: 1, stiffness: 250, overshootClamping: true, damping: 20 };
 let closure_7 = { code: "(function useDraggablePipTsx1(){let[withTiming,pipFocus,PIP_FOCUS_SCALE,STANDARD_EASING]=this.__closure;return withTiming(pipFocus?PIP_FOCUS_SCALE:1,{easing:STANDARD_EASING,duration:250});})" };

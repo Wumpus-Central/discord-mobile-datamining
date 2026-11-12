@@ -1,9 +1,9 @@
-// === Module 20501: GuildSettingsRoleSubscriptionsEmpty ===
+// === Module 20496: GuildSettingsRoleSubscriptionsEmpty ===
 
-// Module 20501 (GuildSettingsRoleSubscriptionsEmpty)
+// Module 20496 (GuildSettingsRoleSubscriptionsEmpty)
 import useNavigation from "useNavigation" /* 1499 */;
-import PlaceholderDefault from "Placeholder" /* 20503 */;
-import GuildSettingsRoleSubscriptionWelcomeViewDefault from "GuildSettingsRoleSubscriptionWelcomeView" /* 20504 */;
+import PlaceholderDefault from "Placeholder" /* 20498 */;
+import GuildSettingsRoleSubscriptionWelcomeViewDefault from "GuildSettingsRoleSubscriptionWelcomeView" /* 20499 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
 

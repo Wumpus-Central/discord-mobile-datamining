@@ -1,23 +1,23 @@
-// === Module 10248: GameProfileView ===
+// === Module 10246: GameProfileView ===
 
-// Module 10248 (GameProfileView)
+// Module 10246 (GameProfileView)
 import nativeDefault from "native" /* 575 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7852 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import useGameProfileInvite from "useGameProfileInvite" /* 10250 */;
-import GameProfileHeaderDefault from "GameProfileHeader" /* 10251 */;
-import GameProfileMediaDefault from "GameProfileMedia" /* 10259 */;
-import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 10266 */;
-import GameProfileReviewsDefault from "GameProfileReviews" /* 10267 */;
-import GameProfileSummaryDefault from "GameProfileSummary" /* 10281 */;
-import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 10315 */;
-import GameProfileCommunityDefault from "GameProfileCommunity" /* 10321 */;
-import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 10335 */;
-import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 10348 */;
-import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 10393 */;
-import GameProfileDetailsDefault from "GameProfileDetails" /* 10399 */;
-import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 10421 */;
-import GameProfileReportButtonDefault from "GameProfileReportButton" /* 10427 */;
+import useGameProfileInvite from "useGameProfileInvite" /* 10248 */;
+import GameProfileHeaderDefault from "GameProfileHeader" /* 10249 */;
+import GameProfileMediaDefault from "GameProfileMedia" /* 10257 */;
+import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 10264 */;
+import GameProfileReviewsDefault from "GameProfileReviews" /* 10265 */;
+import GameProfileSummaryDefault from "GameProfileSummary" /* 10279 */;
+import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 10313 */;
+import GameProfileCommunityDefault from "GameProfileCommunity" /* 10319 */;
+import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 10333 */;
+import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 10346 */;
+import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 10391 */;
+import GameProfileDetailsDefault from "GameProfileDetails" /* 10397 */;
+import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 10419 */;
+import GameProfileReportButtonDefault from "GameProfileReportButton" /* 10425 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -29,8 +29,8 @@ const jsxProd = fn(21);
 const createStyles = fn(5243);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 }, body: null, buttonsContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 };
-obj2.body = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(10249).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
-let obj4 = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(10249).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+obj2.body = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(10247).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+let obj4 = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(10247).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
 obj2.buttonsContainer = { flexDirection: "column", gap: nativeDefault.space.PX_8 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

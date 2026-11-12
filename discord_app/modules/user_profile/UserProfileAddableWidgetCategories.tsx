@@ -1,6 +1,6 @@
-// === Module 15714: UserProfileAddableWidgetCategories ===
+// === Module 15709: UserProfileAddableWidgetCategories ===
 
-// Module 15714 (UserProfileAddableWidgetCategories)
+// Module 15709 (UserProfileAddableWidgetCategories)
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7293 */;
 import size from "module_2" /* 2 */;
 

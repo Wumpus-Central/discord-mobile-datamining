@@ -1,9 +1,9 @@
-// === Module 17417: shouldAggressivelyFetchNitroRewards ===
+// === Module 17412: shouldAggressivelyFetchNitroRewards ===
 
-// Module 17417 (shouldAggressivelyFetchNitroRewards)
+// Module 17412 (shouldAggressivelyFetchNitroRewards)
 import PremiumUtils from "PremiumUtils" /* 2171 */;
-import ProgramRewardsUtils from "ProgramRewardsUtils" /* 16113 */;
-import ProgramRewardsTypes from "ProgramRewardsTypes" /* 16115 */;
+import ProgramRewardsUtils from "ProgramRewardsUtils" /* 16108 */;
+import ProgramRewardsTypes from "ProgramRewardsTypes" /* 16110 */;
 import UserProfileStore from "UserProfileStore" /* 7288 */;
 import UserStore from "UserStore" /* 1385 */;
 

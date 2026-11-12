@@ -1,6 +1,6 @@
-// === Module 12053: UserProfileAddGameActionSheet ===
+// === Module 12047: UserProfileAddGameActionSheet ===
 
-// Module 12053 (UserProfileAddGameActionSheet)
+// Module 12047 (UserProfileAddGameActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5252 */;
@@ -9,12 +9,12 @@ import _mod7013 from "module_7013" /* 7013 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7290 */;
 import TableRow from "TableRow" /* 7379 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8480 */;
-import WidgetUtils from "WidgetUtils" /* 12029 */;
-import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet" /* 12052 */;
+import WidgetUtils from "WidgetUtils" /* 12023 */;
+import openUserProfileAddGameActionSheet from "openUserProfileAddGameActionSheet" /* 12046 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import WidgetStore from "WidgetStore" /* 12030 */;
+import WidgetStore from "WidgetStore" /* 12024 */;
 
 require = fn;
 const View = fn(17).View;

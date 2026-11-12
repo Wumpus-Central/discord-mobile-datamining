@@ -1,10 +1,10 @@
-// === Module 18322: UserSettingsDesignSystemTooltip ===
+// === Module 18317: UserSettingsDesignSystemTooltip ===
 
-// Module 18322 (UserSettingsDesignSystemTooltip)
+// Module 18317 (UserSettingsDesignSystemTooltip)
 import LayerScope from "LayerScope" /* 5853 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7351 */;
-import DeviceOrientation from "DeviceOrientation" /* 9975 */;
+import DeviceOrientation from "DeviceOrientation" /* 9974 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,7 +45,7 @@ function Content() {
     }
   }), items1);
   const tmp8 = first2(items, 2);
-  const tooltip = visible(9359).useTooltip(ref, memo);
+  const tooltip = visible(9358).useTooltip(ref, memo);
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,
@@ -60,7 +60,7 @@ function Content() {
     })
   };
   const items2 = [closure_5(View, obj4), closure_5(visible(7888).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }), , ];
-  const obj2 = visible(9359);
+  const obj2 = visible(9358);
   const obj5 = {
     ref,
     onPress() {

@@ -1,9 +1,9 @@
-// === Module 13398: CommandOptionView ===
+// === Module 13392: CommandOptionView ===
 
-// Module 13398 (CommandOptionView)
+// Module 13392 (CommandOptionView)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
-import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 13401 */;
+import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 13395 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 
@@ -30,7 +30,7 @@ export default function CommandOptionView(option) {
   const ReduceMotion = option(1652).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
   const obj = option(504);
-  const optionEnteringAnimation = option(13399).useOptionEnteringAnimation();
+  const optionEnteringAnimation = option(13393).useOptionEnteringAnimation();
   let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
   if (set.has(option.type)) {
     if (option.required || isPreSelectedOption) {
@@ -60,8 +60,8 @@ export default function CommandOptionView(option) {
     const obj5 = {
       collapsable: false,
       entering: optionEnteringAnimation.EnteringAnimation,
-      exiting: tmp2(13399).ExitingAnimation,
-      layout: tmp2(13399).LayoutAnimation,
+      exiting: tmp2(13393).ExitingAnimation,
+      layout: tmp2(13393).LayoutAnimation,
       onLayout(arg0) {
           importDefault(arg0, option);
         },
@@ -109,10 +109,10 @@ export default function CommandOptionView(option) {
     obj6.children = items2;
     obj5.children = closure_6(View, obj6);
     obj4.children = closure_5(_modDef1652.View, obj5);
-    obj3.children = closure_5(tmp2(13400).AwaitAnimationContext, obj4);
+    obj3.children = closure_5(tmp2(13394).AwaitAnimationContext, obj4);
     return closure_5(tmp2(1652).LayoutAnimationConfig, obj3);
   } else {
     return null;
   }
-  const tmp2Result = option(13399);
+  const tmp2Result = option(13393);
 };

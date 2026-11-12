@@ -1,14 +1,14 @@
-// === Module 17004: EditProfileEffectActionSheet ===
+// === Module 16999: EditProfileEffectActionSheet ===
 
-// Module 17004 (EditProfileEffectActionSheet)
+// Module 16999 (EditProfileEffectActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8417 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 9332 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 9333 */;
-import useShopProductItems from "useShopProductItems" /* 9336 */;
-import EditProfileEffectSection from "EditProfileEffectSection" /* 17006 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 9331 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 9332 */;
+import useShopProductItems from "useShopProductItems" /* 9335 */;
+import EditProfileEffectSection from "EditProfileEffectSection" /* 17001 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8434 */;
@@ -109,7 +109,7 @@ function ProfileEffectSectionPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_12();
-  const tmp2 = purchase(9338)(previewSkuId);
+  const tmp2 = purchase(9337)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
@@ -133,7 +133,7 @@ function ProfileEffectSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(9461), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
+  const items1 = [closure_9(purchase(9460), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;
@@ -239,7 +239,7 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   obj6.onApply = callback1;
   obj6.analyticsLocations = analyticsLocations;
   obj6.analyticsSource = isTryItOut(7871).EDIT_PROFILE_EFFECT_SHEET;
-  items3[1] = closure_9(isTryItOut(9337), obj6);
+  items3[1] = closure_9(isTryItOut(9336), obj6);
   obj3.children = items3;
   obj2.children = closure_10(guildId(5503).BottomSheet, obj3);
   return closure_9(guildId(7852).AnalyticsLocationProvider, obj2);

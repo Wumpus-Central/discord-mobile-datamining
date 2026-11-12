@@ -6,7 +6,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import NetStats from "NetStats" /* 8596 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 8715 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 8714 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 5473 */;
 import NetworkStore from "NetworkStore" /* 6147 */;

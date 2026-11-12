@@ -1,16 +1,16 @@
-// === Module 20101: GuildPowerupsManager ===
+// === Module 20096: GuildPowerupsManager ===
 
-// Module 20101 (GuildPowerupsManager)
+// Module 20096 (GuildPowerupsManager)
 import FavoritesUtils from "FavoritesUtils" /* 5117 */;
 import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5465 */;
 import ServerThemeExperiment2 from "ServerThemeExperiment" /* 5466 */;
 import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 5478 */;
 import GameServerExperiment2 from "GameServerExperiment" /* 5479 */;
 import shared_PlatformUtils from "shared/PlatformUtils" /* 6199 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 9172 */;
-import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 10609 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 10621 */;
-import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 18759 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 9171 */;
+import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 10607 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 10619 */;
+import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 18754 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;

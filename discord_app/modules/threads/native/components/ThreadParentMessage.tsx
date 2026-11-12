@@ -1,11 +1,11 @@
-// === Module 19241: ThreadParentMessage ===
+// === Module 19236: ThreadParentMessage ===
 
-// Module 19241 (ThreadParentMessage)
+// Module 19236 (ThreadParentMessage)
 import initialize from "initialize" /* 504 */;
 import router_utils from "router_utils" /* 1099 */;
 import Pressables from "Pressables" /* 7364 */;
-import RowGeneratorDefault from "RowGenerator" /* 9093 */;
-import ChatItemDefault from "ChatItem" /* 11002 */;
+import RowGeneratorDefault from "RowGenerator" /* 9092 */;
+import ChatItemDefault from "ChatItem" /* 10996 */;
 import noop from "module_19" /* 19 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 8677 */;
 import MessageStore from "MessageStore" /* 6309 */;

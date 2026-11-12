@@ -1,6 +1,6 @@
-// === Module 15540: ConjureAppChannelSheet ===
+// === Module 15537: ConjureAppChannelSheet ===
 
-// Module 15540 (ConjureAppChannelSheet)
+// Module 15537 (ConjureAppChannelSheet)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5489 */;
 import Text_Text from "Text/Text" /* 5866 */;
@@ -8,12 +8,12 @@ import useChannelNameDefault from "useChannelName" /* 5891 */;
 import Stack_Stack from "Stack/Stack" /* 6274 */;
 import useAppChannelApplication from "useAppChannelApplication" /* 7198 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8394 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10469 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10856 */;
-import ConjureRemixSheet from "ConjureRemixSheet" /* 10915 */;
-import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 15538 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10467 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10850 */;
+import ConjureRemixSheet from "ConjureRemixSheet" /* 10909 */;
+import openConjureAppChannelSheet from "openConjureAppChannelSheet" /* 15535 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberCountStore from "ChannelMemberCountStore" /* 15537 */;
+import ChannelMemberCountStore from "ChannelMemberCountStore" /* 15534 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
 
@@ -26,11 +26,11 @@ function ConjureAppChannelSheetHeader(channel) {
   const tmp3 = useChannelNameDefault(channel);
   const appChannelApplication = useAppChannelApplication.useAppChannelApplication(channel);
   const obj2 = { spacing: nativeDefault.space.PX_4, align: "center", children: null };
-  items = [closure_1_10(Text_Text.Heading, { variant: "heading-lg/semibold", lineClamp: 1, style: tmp.centered, children: tmp3 }), ];
+  items = [refs(Text_Text.Heading, { variant: "heading-lg/semibold", lineClamp: 1, style: tmp.centered, children: tmp3 }), ];
   let tmp7Result = null;
   if (null != appChannelApplication) {
     const obj4 = { variant: "body-sm/medium", color: "text-muted", lineClamp: 1, style: tmp.centered, children: appChannelApplication.name };
-    tmp7Result = closure_1_10(Text_Text.Text, obj4);
+    tmp7Result = refs(Text_Text.Text, obj4);
   }
   items[1] = tmp7Result;
   obj2.children = items;
@@ -152,7 +152,7 @@ function ConjureAppChannelSheetContent(channel) {
             return guild_id(remixProject[20])(arg0, { entryPoint: "remix" });
           }
       };
-      obj3.content = closure_2_10(ConjureRemixSheetDefault, obj4);
+      obj3.content = refs(ConjureRemixSheetDefault, obj4);
       ActionSheetActionCreators.showActionSheet(obj3);
     }
   }, items10);

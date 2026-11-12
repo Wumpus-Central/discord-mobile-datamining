@@ -1,6 +1,6 @@
-// === Module 12608: AppLauncherUtils ===
+// === Module 12602: AppLauncherUtils ===
 
-// Module 12608 (AppLauncherUtils)
+// Module 12602 (AppLauncherUtils)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
@@ -10,13 +10,13 @@ import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5914 */;
 import getPlatformDefault from "getPlatform" /* 5921 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6994 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8657 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 12489 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 12611 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 12483 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 12605 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 11345 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 11339 */;
 import ApplicationRecord from "ApplicationRecord" /* 2140 */;
-import AppLauncherStore from "AppLauncherStore" /* 12609 */;
+import AppLauncherStore from "AppLauncherStore" /* 12603 */;
 
 const require = globalThis.__r;
 

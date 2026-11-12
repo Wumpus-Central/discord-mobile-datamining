@@ -1,6 +1,6 @@
-// === Module 19600: Alerts ===
+// === Module 19595: Alerts ===
 
-// Module 19600 (Alerts)
+// Module 19595 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
@@ -9,13 +9,13 @@ import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 
 import OverlayViewDefault from "OverlayView" /* 6212 */;
 import useBackPressHandlerDefault from "useBackPressHandler" /* 6269 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7408 */;
-import ModalRegistryDefault from "ModalRegistry" /* 19601 */;
+import ModalRegistryDefault from "ModalRegistry" /* 19596 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 16139 */;
-import PermissionVADStore from "PermissionVADStore" /* 16729 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 16134 */;
+import PermissionVADStore from "PermissionVADStore" /* 16724 */;
 import SurveyStore from "SurveyStore" /* 6827 */;
-import AlertStore from "AlertStore" /* 12372 */;
+import AlertStore from "AlertStore" /* 12366 */;
 
 const require = globalThis.__r;
 
@@ -261,7 +261,7 @@ let closure_18 = { code: "(function AlertsTsx3(){let[useReducedMotion,visible,wi
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return application_id(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "delete", renderKey: "isArray", props: "isArray" });
+let closure_23 = Object.freeze({ renderAlert: "a", renderKey: "isArray", props: "isArray" });
 let tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -293,7 +293,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "delete", renderKey: "isArray", props: "isArray" };
+        return { renderAlert: "a", renderKey: "isArray", props: "isArray" };
       }
     }
   });

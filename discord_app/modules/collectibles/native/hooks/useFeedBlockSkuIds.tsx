@@ -1,7 +1,7 @@
-// === Module 18361: useFeedBlockSkuIds ===
+// === Module 18356: useFeedBlockSkuIds ===
 
-// Module 18361 (useFeedBlockSkuIds)
-import ShopHomeSortType from "ShopHomeSortType" /* 18362 */;
+// Module 18356 (useFeedBlockSkuIds)
+import ShopHomeSortType from "ShopHomeSortType" /* 18357 */;
 import noop from "module_19" /* 19 */;
 import ConsentStore from "ConsentStore" /* 6783 */;
 

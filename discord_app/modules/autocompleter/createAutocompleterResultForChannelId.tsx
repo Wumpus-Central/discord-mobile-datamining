@@ -1,6 +1,6 @@
-// === Module 10192: createAutocompleterResultForChannelId ===
+// === Module 10190: createAutocompleterResultForChannelId ===
 
-// Module 10192 (createAutocompleterResultForChannelId)
+// Module 10190 (createAutocompleterResultForChannelId)
 import useChannelName from "useChannelName" /* 5891 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;

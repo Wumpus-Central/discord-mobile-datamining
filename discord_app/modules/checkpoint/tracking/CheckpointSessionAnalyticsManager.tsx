@@ -1,8 +1,8 @@
-// === Module 14149: CheckpointSessionAnalyticsManager ===
+// === Module 14145: CheckpointSessionAnalyticsManager ===
 
-// Module 14149 (CheckpointSessionAnalyticsManager)
+// Module 14145 (CheckpointSessionAnalyticsManager)
 import v1 from "v1" /* 1266 */;
-import CheckpointStore from "CheckpointStore" /* 14150 */;
+import CheckpointStore from "CheckpointStore" /* 14146 */;
 
 require = fn;
 class CheckpointSessionAnalyticsManager {
@@ -23,12 +23,13 @@ prototype["getStepName"] = function getStepName() {
   return this.stepName;
 };
 prototype["getAnalyticsProperties"] = function getAnalyticsProperties() {
-  const obj = { checkpoint_session_id: this.sessionId, has_personalized_data: null };
+  const obj = { checkpoint_session_id: this.sessionId, has_personalized_data: null, checkpoint_availability: null, checkpoint_compact_assets: null };
   let didPlayerShareDataWithDiscord = this.didPlayerShareDataWithDiscord;
   if (didPlayerShareDataWithDiscord) {
     didPlayerShareDataWithDiscord = null != CheckpointStore.stats;
   }
   obj.has_personalized_data = didPlayerShareDataWithDiscord;
+  ({ availability: obj.checkpoint_availability, compactAssets: obj.checkpoint_compact_assets } = CheckpointStore);
   return obj;
 };
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 15934: SubscribeModalSuccessAlert ===
+// === Module 15929: SubscribeModalSuccessAlert ===
 
-// Module 15934 (SubscribeModalSuccessAlert)
+// Module 15929 (SubscribeModalSuccessAlert)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
@@ -11,8 +11,8 @@ import Text_Text from "Text/Text" /* 5866 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import common_AlertDefault from "common/Alert" /* 6277 */;
 import BoostingActionCreators from "BoostingActionCreators" /* 6889 */;
-import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 15935 */;
-import _mod15936 from "module_15936" /* 15936 */;
+import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 15930 */;
+import _mod15931 from "module_15931" /* 15931 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -29,7 +29,7 @@ class PremiumPaymentGuildAnimation {
   }
 }
 const View = fn(17).View;
-const Gradients = fn(9368).Gradients;
+const Gradients = fn(9367).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5243);
@@ -38,7 +38,7 @@ let obj3 = { padding: 2, borderRadius: nativeDefault.radii.xs, marginTop: 8 };
 obj2.activatedBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: 12, paddingHorizontal: 20, alignItems: "center" };
 obj2.activatedImage = { width: 220 };
 obj2.successInfo = { marginTop: 24 };
-let closure_10 = createStyles.createStyles(obj2);
+const refs = createStyles.createStyles(obj2);
 let obj5 = { ENTRY: "entry", IDLE: "idle" };
 const sceneSegments = { [obj5.ENTRY]: { BEG: 0, END: 180 }, [obj5.IDLE]: { BEG: 180, END: 360 } };
 PremiumPaymentGuildAnimation.Scenes = obj5;
@@ -111,9 +111,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = FastImageDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(15937);
+    let tmp8Result = tmp8(15932);
   } else {
-    tmp8Result = tmp8(15938);
+    tmp8Result = tmp8(15933);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_8(tmp15, obj6);

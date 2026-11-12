@@ -1,6 +1,6 @@
-// === Module 17842: DisplayNameStylesFontOrder ===
+// === Module 17837: DisplayNameStylesFontOrder ===
 
-// Module 17842 (DisplayNameStylesFontOrder)
+// Module 17837 (DisplayNameStylesFontOrder)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

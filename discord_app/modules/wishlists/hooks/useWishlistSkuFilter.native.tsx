@@ -1,6 +1,6 @@
-// === Module 11667: useWishlistSkuFilter ===
+// === Module 11661: useWishlistSkuFilter ===
 
-// Module 11667 (useWishlistSkuFilter)
+// Module 11661 (useWishlistSkuFilter)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

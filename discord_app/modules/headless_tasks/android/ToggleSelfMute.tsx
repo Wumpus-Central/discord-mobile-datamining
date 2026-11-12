@@ -1,9 +1,9 @@
-// === Module 20786: ToggleSelfMute ===
+// === Module 20781: ToggleSelfMute ===
 
-// Module 20786 (ToggleSelfMute)
-import useMuteStates from "useMuteStates" /* 12932 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 12956 */;
-import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 20782 */;
+// Module 20781 (ToggleSelfMute)
+import useMuteStates from "useMuteStates" /* 12926 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 12950 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 20777 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 
 require = fn;

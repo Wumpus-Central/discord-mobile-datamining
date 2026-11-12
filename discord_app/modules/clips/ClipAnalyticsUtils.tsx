@@ -1,6 +1,6 @@
-// === Module 8778: ClipAnalyticsUtils ===
+// === Module 8777: ClipAnalyticsUtils ===
 
-// Module 8778 (ClipAnalyticsUtils)
+// Module 8777 (ClipAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef6098 from "module_6098" /* 6098 */;
 import VideoQualityStats from "VideoQualityStats" /* 6197 */;
@@ -139,7 +139,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-const ClipsConstants = fn(8779);
+const ClipsConstants = fn(8778);
 ({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

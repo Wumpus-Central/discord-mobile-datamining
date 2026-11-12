@@ -1,8 +1,8 @@
-// === Module 17123: AgeNoticeLazy ===
+// === Module 17118: AgeNoticeLazy ===
 
-// Module 17123 (AgeNoticeLazy)
-import AgeNoticeVisibility from "AgeNoticeVisibility" /* 17124 */;
-import useShowAgeNoticePromoSheet from "useShowAgeNoticePromoSheet" /* 17125 */;
+// Module 17118 (AgeNoticeLazy)
+import AgeNoticeVisibility from "AgeNoticeVisibility" /* 17119 */;
+import useShowAgeNoticePromoSheet from "useShowAgeNoticePromoSheet" /* 17120 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/age_assurance/age_notice/native/AgeNoticeLazy.tsx");

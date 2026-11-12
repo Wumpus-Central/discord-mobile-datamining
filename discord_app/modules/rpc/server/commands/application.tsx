@@ -1,15 +1,15 @@
-// === Module 16811: application ===
+// === Module 16806: application ===
 
-// Module 16811 (application)
+// Module 16806 (application)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6994 */;
 import RPCErrorDefault from "RPCError" /* 7239 */;
-import TestModeUtils from "TestModeUtils" /* 9865 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 12776 */;
-import RPCHelpers from "RPCHelpers" /* 12779 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 16812 */;
-import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 16813 */;
+import TestModeUtils from "TestModeUtils" /* 9864 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 12770 */;
+import RPCHelpers from "RPCHelpers" /* 12773 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 16807 */;
+import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 16808 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 18632: useRelativeTimestamp ===
+// === Module 18627: useRelativeTimestamp ===
 
-// Module 18632 (useRelativeTimestamp)
+// Module 18627 (useRelativeTimestamp)
 import NotificationCenterUtils from "NotificationCenterUtils" /* 6971 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

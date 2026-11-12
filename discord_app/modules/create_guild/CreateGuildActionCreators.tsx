@@ -1,6 +1,6 @@
-// === Module 14608: create_guild/CreateGuildActionCreators ===
+// === Module 14604: create_guild/CreateGuildActionCreators ===
 
-// Module 14608 (create_guild/CreateGuildActionCreators)
+// Module 14604 (create_guild/CreateGuildActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6788 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

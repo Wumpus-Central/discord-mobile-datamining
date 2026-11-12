@@ -1,7 +1,7 @@
-// === Module 16223: resolveShareSendOutcome ===
+// === Module 16218: resolveShareSendOutcome ===
 
-// Module 16223 (resolveShareSendOutcome)
-import formatResults from "formatResults" /* 10178 */;
+// Module 16218 (resolveShareSendOutcome)
+import formatResults from "formatResults" /* 10176 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/share/native/resolveShareSendOutcome.tsx");
@@ -34,7 +34,7 @@ export function withoutSentDestinations(arr, arr2) {
     return items;
   } else {
     const _Set = Set;
-    set = new Set(arr2.map(set(10178).destinationKey));
+    set = new Set(arr2.map(set(10176).destinationKey));
     return arr.filter((item) => !set.has(formatResults.destinationKey(item)));
   }
 }

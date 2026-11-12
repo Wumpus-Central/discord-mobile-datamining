@@ -1,6 +1,6 @@
-// === Module 10694: ? ===
+// === Module 10688: ? ===
 
-// Module 10694
+// Module 10688
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/powerups/badge-packs/group-static.png.js");

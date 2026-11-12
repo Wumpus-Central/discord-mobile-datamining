@@ -1,6 +1,6 @@
-// === Module 16901: MediaPlayerManager ===
+// === Module 16896: MediaPlayerManager ===
 
-// Module 16901 (MediaPlayerManager)
+// Module 16896 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
@@ -18,7 +18,7 @@ import ChannelStore from "ChannelStore" /* 5092 */;
 import MessageStore from "MessageStore" /* 6309 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
 import AppStateStore from "AppStateStore" /* 2117 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 16902 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 16897 */;
 import module_560 from "module_560" /* 560 */;
 import LifecycleManager from "LifecycleManager" /* 2120 */;
 import size from "module_2" /* 2 */;
@@ -41,12 +41,12 @@ const useMediaPlayerManagerStore = module_560.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "flexDirection",
-    showPip: "flag_vi",
+    showPip: "en-BE",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: 50
+    currentlyDisplayedChannelId: "en"
   };
   return obj;
 });
@@ -286,7 +286,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "delete", rate: false, isPlaying: false, wasPipClosedByUser: "scrollToItem" };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "delete", rate: false, isPlaying: false, wasPipClosedByUser: "isConnected" };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);

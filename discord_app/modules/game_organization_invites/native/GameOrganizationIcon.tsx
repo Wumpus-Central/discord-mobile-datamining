@@ -1,6 +1,6 @@
-// === Module 13976: GameOrganizationIcon ===
+// === Module 13972: GameOrganizationIcon ===
 
-// Module 13976 (GameOrganizationIcon)
+// Module 13972 (GameOrganizationIcon)
 import nativeDefault from "native" /* 575 */;
 import ImageProxyUtils from "ImageProxyUtils" /* 2154 */;
 import FastImageDefault from "FastImage" /* 5957 */;

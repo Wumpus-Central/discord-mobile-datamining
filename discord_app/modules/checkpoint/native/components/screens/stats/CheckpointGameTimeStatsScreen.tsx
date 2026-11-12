@@ -1,6 +1,6 @@
-// === Module 14407: CheckpointGameTimeStatsScreen ===
+// === Module 14403: CheckpointGameTimeStatsScreen ===
 
-// Module 14407 (CheckpointGameTimeStatsScreen)
+// Module 14403 (CheckpointGameTimeStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -9,9 +9,9 @@ import _modDef3269 from "module_3269" /* 3269 */;
 import CheckpointConstants from "CheckpointConstants" /* 6314 */;
 import CheckpointStatsUtils from "CheckpointStatsUtils" /* 6684 */;
 import CalendarIcon from "CalendarIcon" /* 8391 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 14387 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 14388 */;
-import CheckpointStore from "CheckpointStore" /* 14150 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 14383 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 14384 */;
+import CheckpointStore from "CheckpointStore" /* 14146 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5243 */;
 import size from "module_2" /* 2 */;
@@ -89,35 +89,35 @@ export default function CheckpointGameTimeStatsScreen() {
   const obj5 = { style: tmp.imageContainer, children: null };
   const tmp2Result = CheckpointStatsUtils;
   const obj6 = { animatedUri: null, staticUri: null, style: null };
-  const tmp12Result = tmp12(14163);
-  obj6.animatedUri = tmp12(14408);
-  obj6.staticUri = tmp12(14409);
+  const tmp12Result = tmp12(14160);
+  obj6.animatedUri = tmp12(14404);
+  obj6.staticUri = tmp12(14405);
   obj6.style = tmp.image;
-  obj5.children = timestampProducer(tmp12(14166), obj6);
+  obj5.children = timestampProducer(tmp12(14163), obj6);
   const items2 = [timestampProducer(View, obj5), ];
   const obj7 = { style: tmp.copy, children: null };
   const obj8 = { style: tmp.title, children: null };
   const items3 = [timestampProducer(CalendarIcon.CalendarIcon, { size: "xs", color: CHECKPOINT_PRIMARY }), ];
   const obj10 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   const obj9 = { size: "xs", color: CHECKPOINT_PRIMARY };
-  const tmp12Result4 = tmp12(14166);
+  const tmp12Result4 = tmp12(14163);
   obj10.children = stringResult.toLocaleUpperCase();
-  items3[1] = timestampProducer(tmp12(14164), obj10);
+  items3[1] = timestampProducer(tmp12(14161), obj10);
   obj8.children = items3;
   const items4 = [metroImportDefault(View, obj8), , ];
   if (rounded <= 0 && null != stateFromStores1) {
     const obj11 = { value: stateFromStores1 };
-    let tmp14Result = timestampProducer(tmp12(14385), obj11);
+    let tmp14Result = timestampProducer(tmp12(14381), obj11);
   } else {
     const obj12 = { accessible: true, accessibilityLabel: CheckpointNumberUtils.formatCheckpointStatAccessibilityLabel("gameDays", rounded), style: tmp.number, children: null };
     const obj13 = { end: rounded };
-    obj12.children = timestampProducer(tmp12(14386), obj13);
+    obj12.children = timestampProducer(tmp12(14382), obj13);
     tmp14Result = timestampProducer(View, obj12);
     const tmp2Result3 = CheckpointNumberUtils;
   }
   items4[1] = tmp14Result;
   const obj14 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-  const tmp12Result5 = tmp12(14164);
+  const tmp12Result5 = tmp12(14161);
   if (rounded <= 0 && null != stateFromStores1) {
     const intl5 = util.intl;
     const obj15 = { numUsers: CheckpointStatsUtils.formatCheckpointCompactNumber(stateFromStores1) };
@@ -140,7 +140,7 @@ export default function CheckpointGameTimeStatsScreen() {
   }
   const obj18 = { children: null };
   obj14.children = formatToPlainStringResult1;
-  items4[2] = timestampProducer(tmp12(14164), obj14);
+  items4[2] = timestampProducer(tmp12(14161), obj14);
   obj7.children = items4;
   items2[1] = metroImportDefault(View, obj7);
   obj4.children = items2;

@@ -1,6 +1,6 @@
-// === Module 20373: useLoadGuildStickerWithCreator ===
+// === Module 20368: useLoadGuildStickerWithCreator ===
 
-// Module 20373 (useLoadGuildStickerWithCreator)
+// Module 20368 (useLoadGuildStickerWithCreator)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 14301: ? ===
+// === Module 14297: ? ===
 
-// Module 14301
+// Module 14297
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_08_astronaut_martian.webp.js");

@@ -1,6 +1,6 @@
-// === Module 13085: useConjurePublishPanel ===
+// === Module 13079: useConjurePublishPanel ===
 
-// Module 13085 (useConjurePublishPanel)
+// Module 13079 (useConjurePublishPanel)
 import _modDef4079 from "module_4079" /* 4079 */;
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8066 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

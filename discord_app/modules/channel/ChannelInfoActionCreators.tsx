@@ -1,6 +1,6 @@
-// === Module 12324: ChannelInfoActionCreators ===
+// === Module 12318: ChannelInfoActionCreators ===
 
-// Module 12324 (ChannelInfoActionCreators)
+// Module 12318 (ChannelInfoActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
 import ChannelStatusStore from "ChannelStatusStore" /* 8665 */;

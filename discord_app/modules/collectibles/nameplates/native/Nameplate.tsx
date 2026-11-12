@@ -1,6 +1,6 @@
-// === Module 9442: Nameplate ===
+// === Module 9441: Nameplate ===
 
-// Module 9442 (Nameplate)
+// Module 9441 (Nameplate)
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5485 */;
 import noop from "module_19" /* 19 */;
@@ -118,7 +118,7 @@ function NameplateInner(isFocused) {
   if (tmpResult6.isAndroid()) {
     if (tmp14) {
       const obj5 = { url: str, style: tmp4.img, autoplay: true };
-      let tmp19 = closure_5(tmp(9432).APNGPlayer, obj5);
+      let tmp19 = closure_5(tmp(9431).APNGPlayer, obj5);
     }
     items6[1] = tmp19;
     obj3.children = items6;

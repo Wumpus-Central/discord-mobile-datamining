@@ -1,20 +1,20 @@
-// === Module 20318: GuildSettingsAutomodRule ===
+// === Module 20313: GuildSettingsAutomodRule ===
 
-// Module 20318 (GuildSettingsAutomodRule)
+// Module 20313 (GuildSettingsAutomodRule)
 import nativeDefault from "native" /* 575 */;
 import ToastUtils from "ToastUtils" /* 5951 */;
 import NavigatorHeader from "NavigatorHeader" /* 7427 */;
 import ClipboardUtils from "ClipboardUtils" /* 7877 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 20303 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 20298 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useAutomodRulesList = fn(20300).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(20302);
+const useAutomodRulesList = fn(20295).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(20297);
 ({ useAutomodEditingRuleActions: metroImportDefault, useAutomodEditingRuleState: closure_8 } = GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(14063).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(14059).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = "automod-delete-rule";
@@ -324,7 +324,7 @@ export default function GuildSettingsAutomodRule(guildId) {
                         let v0 = 1;
                         c5 = 2;
                         c6 = 1;
-                        const obj6 = { value: closure_0(14068).deleteAutomodRule(id, closure_0), done: false };
+                        const obj6 = { value: closure_0(14064).deleteAutomodRule(id, closure_0), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp7) {

@@ -1,17 +1,17 @@
-// === Module 9619: GPlayManager ===
+// === Module 9618: GPlayManager ===
 
-// Module 9619 (GPlayManager)
+// Module 9618 (GPlayManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6704 */;
-import GPlayActionCreators from "GPlayActionCreators" /* 9620 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 9619 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GiftPromotionStore from "GiftPromotionStore" /* 9522 */;
+import GiftPromotionStore from "GiftPromotionStore" /* 9521 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SubscriptionStore from "SubscriptionStore" /* 2176 */;
-import IAPStore from "IAPStore" /* 9236 */;
+import IAPStore from "IAPStore" /* 9235 */;
 
 require = fn;
 function handleConnectionStateUpdated(connectionState) {
@@ -739,10 +739,10 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
 let closure_3 = ["succeededOnlyFields"];
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-const PremiumPlanPurchasedStore = fn(9523);
+const PremiumPlanPurchasedStore = fn(9522);
 ({ setPaymentSuccess: metroImportDefault, showOldPaymentFlowSuccess: closure_8 } = PremiumPlanPurchasedStore);
-const useGPlayAnalyticsStore = fn(9547).useGPlayAnalyticsStore;
-let Constants = fn(9237);
+const useGPlayAnalyticsStore = fn(9546).useGPlayAnalyticsStore;
+let Constants = fn(9236);
 ({ GPlayConnectionState: map1, GPlayDowngradeCommand: closure_14, GPlayPurchaseState: closure_15 } = Constants);
 Constants = fn(1072);
 ({ AnalyticEvents: closure_16, AppStates: closure_17, PaymentGateways: closure_18 } = Constants);

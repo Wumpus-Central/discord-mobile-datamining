@@ -1,6 +1,6 @@
-// === Module 13179: ConjureVersionRestoreConfirm ===
+// === Module 13173: ConjureVersionRestoreConfirm ===
 
-// Module 13179 (ConjureVersionRestoreConfirm)
+// Module 13173 (ConjureVersionRestoreConfirm)
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
 import useAlertStore from "useAlertStore" /* 6207 */;

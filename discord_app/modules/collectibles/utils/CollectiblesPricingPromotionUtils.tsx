@@ -1,9 +1,9 @@
-// === Module 9379: CollectiblesPricingPromotionUtils ===
+// === Module 9378: CollectiblesPricingPromotionUtils ===
 
-// Module 9379 (CollectiblesPricingPromotionUtils)
-import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 9380 */;
+// Module 9378 (CollectiblesPricingPromotionUtils)
+import CollectiblesPromoPriceUtils from "CollectiblesPromoPriceUtils" /* 9379 */;
 import SKUPricesStore from "SKUPricesStore" /* 7187 */;
-import StorefrontPromotionStore from "StorefrontPromotionStore" /* 9349 */;
+import StorefrontPromotionStore from "StorefrontPromotionStore" /* 9348 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -40,7 +40,7 @@ function getPricingPromotionForCollectiblesProduct(pricingPromotionIds) {
           tmp6 = found;
         }
         tmp2 = tmp6;
-        obj3 = pricingPromotionIds(9380);
+        obj3 = pricingPromotionIds(9379);
       }
     }
   }
@@ -53,14 +53,14 @@ const result = size.fileFinishedImporting("modules/collectibles/utils/Collectibl
 
 export { getPricingPromotionForCollectiblesProduct };
 export function useCollectiblesPricingPromotionForProduct(skuId) {
-  collectiblesStorefrontPricingIntegrationEnabled = collectiblesStorefrontPricingIntegrationEnabled(9381).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
+  collectiblesStorefrontPricingIntegrationEnabled = collectiblesStorefrontPricingIntegrationEnabled(9380).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
   skuId = undefined;
   if (skuId != null) {
     skuId = skuId.skuId;
   }
-  const obj = collectiblesStorefrontPricingIntegrationEnabled(9381);
-  const collectiblesStorefrontPrices = collectiblesStorefrontPricingIntegrationEnabled(9380).useCollectiblesStorefrontPrices(skuId, c7);
-  const tmpResult = collectiblesStorefrontPricingIntegrationEnabled(9380);
+  const obj = collectiblesStorefrontPricingIntegrationEnabled(9380);
+  const collectiblesStorefrontPrices = collectiblesStorefrontPricingIntegrationEnabled(9379).useCollectiblesStorefrontPrices(skuId, c7);
+  const tmpResult = collectiblesStorefrontPricingIntegrationEnabled(9379);
   items = [SKUPricesStore];
   const stateFromStores = collectiblesStorefrontPricingIntegrationEnabled(504).useStateFromStores(items, () => {
     let promotionIdsForSkuId;

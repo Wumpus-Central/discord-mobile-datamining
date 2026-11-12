@@ -1,6 +1,6 @@
-// === Module 14004: useExperimentAssignments ===
+// === Module 14000: useExperimentAssignments ===
 
-// Module 14004 (useExperimentAssignments)
+// Module 14000 (useExperimentAssignments)
 import ExperimentManager from "ExperimentManager" /* 5474 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 5469 */;

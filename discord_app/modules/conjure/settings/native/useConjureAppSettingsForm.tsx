@@ -1,14 +1,14 @@
-// === Module 13115: useConjureAppSettingsForm ===
+// === Module 13109: useConjureAppSettingsForm ===
 
-// Module 13115 (useConjureAppSettingsForm)
+// Module 13109 (useConjureAppSettingsForm)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5489 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11904 */;
-import conjureSettingValues from "conjureSettingValues" /* 13117 */;
-import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 13135 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 13140 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11898 */;
+import conjureSettingValues from "conjureSettingValues" /* 13111 */;
+import useConjureSettingPickerOptions from "useConjureSettingPickerOptions" /* 13129 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 13134 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,8 +25,8 @@ function ConjureChannelSettingRow(def) {
   c4 = undefined;
   let found;
   ({ projectId, isPreview, disabled, fallback } = def);
-  const conjureSettingsGuildId = def(13135).useConjureSettingsGuildId(projectId, isPreview);
-  let obj = def(13135);
+  const conjureSettingsGuildId = def(13129).useConjureSettingsGuildId(projectId, isPreview);
+  let obj = def(13129);
   items = [GuildChannelStore];
   const items1 = [conjureSettingsGuildId];
   const stateFromStores = def(504).useStateFromStores(items, () => {
@@ -47,9 +47,9 @@ function ConjureChannelSettingRow(def) {
       let obj3 = { label: def.label, subLabel: null, arrow: true, disabled: null, trailing: null, onPress: null };
       let tmp6Result;
       if (null != hint) {
-        let obj4 = { variant: "body-xs/medium", color: "text-subtle", children: tmp(13122).conjureLinkedNodes(hint, "body-xs/medium") };
+        let obj4 = { variant: "body-xs/medium", color: "text-subtle", children: tmp(13116).conjureLinkedNodes(hint, "body-xs/medium") };
         tmp6Result = closure_12(tmp(5866).Text, obj4);
-        const tmpResult3 = tmp(13122);
+        const tmpResult3 = tmp(13116);
       }
       obj3.subLabel = tmp6Result;
       obj3.disabled = disabled;
@@ -306,7 +306,7 @@ export default function useConjureAppSettingsForm(projectId) {
                   items[HermesBuiltin.arraySpread(arr, 0)] = value.value;
                   found = items;
                 } else {
-                  found = arr.filter(/* F145042 */ function() { ... });
+                  found = arr.filter(/* F145060 */ function() { ... });
                 }
                 obj[value.key] = found;
                 return obj;

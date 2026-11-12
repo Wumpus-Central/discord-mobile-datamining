@@ -1,6 +1,6 @@
-// === Module 18986: useInterestCoverColor ===
+// === Module 18981: useInterestCoverColor ===
 
-// Module 18986 (useInterestCoverColor)
+// Module 18981 (useInterestCoverColor)
 import _modDef671 from "module_671" /* 671 */;
 import privDefault from "priv" /* 1453 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

@@ -1,6 +1,6 @@
-// === Module 12045: UserProfileConfirmThreadRemove ===
+// === Module 12039: UserProfileConfirmThreadRemove ===
 
-// Module 12045 (UserProfileConfirmThreadRemove)
+// Module 12039 (UserProfileConfirmThreadRemove)
 import util from "util" /* 1113 */;
 import UserUtilsDefault from "UserUtils" /* 5309 */;
 import AlertModal from "AlertModal" /* 6211 */;

@@ -1,9 +1,9 @@
-// === Module 12245: usePinotMemberCoachmark ===
+// === Module 12239: usePinotMemberCoachmark ===
 
-// Module 12245 (usePinotMemberCoachmark)
+// Module 12239 (usePinotMemberCoachmark)
 import dismissible_content from "dismissible_content" /* 5076 */;
-import useIsPinotMemberCoachmarkEligible from "useIsPinotMemberCoachmarkEligible" /* 12246 */;
-import PinotMemberNoticeActionCreators from "PinotMemberNoticeActionCreators" /* 12249 */;
+import useIsPinotMemberCoachmarkEligible from "useIsPinotMemberCoachmarkEligible" /* 12240 */;
+import PinotMemberNoticeActionCreators from "PinotMemberNoticeActionCreators" /* 12243 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,17 +12,17 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/pinot/usePinotMemberCoachmark.tsx");
 
 export function usePinotMemberCoachmark(channel, mobile_member_coachmark) {
-  const isPinotMemberCoachmarkEligible = pinotPromotableChannelId(12246).useIsPinotMemberCoachmarkEligible(channel, mobile_member_coachmark);
-  let obj = pinotPromotableChannelId(12246);
-  pinotPromotableChannelId = pinotPromotableChannelId(12241).usePinotPromotableChannelId(channel, mobile_member_coachmark);
-  const obj2 = pinotPromotableChannelId(12241);
+  const isPinotMemberCoachmarkEligible = pinotPromotableChannelId(12240).useIsPinotMemberCoachmarkEligible(channel, mobile_member_coachmark);
+  let obj = pinotPromotableChannelId(12240);
+  pinotPromotableChannelId = pinotPromotableChannelId(12235).usePinotPromotableChannelId(channel, mobile_member_coachmark);
+  const obj2 = pinotPromotableChannelId(12235);
   if (isPinotMemberCoachmarkEligible) {
     items = [tmp(5076).DismissibleContent.PINOT_MEMBER_COACHMARK];
     let items1 = items;
   } else {
     items1 = [];
   }
-  const tmp5 = _slicedToArray(pinotPromotableChannelId(9494).useSelectedDismissibleContent(items1, { bypassAutoDismiss: true }), 2);
+  const tmp5 = _slicedToArray(pinotPromotableChannelId(9493).useSelectedDismissibleContent(items1, { bypassAutoDismiss: true }), 2);
   dependencyMap = tmp6;
   const items2 = [tmp5[1], pinotPromotableChannelId];
   const obj4 = { visible: null, markAsDismissed: null };

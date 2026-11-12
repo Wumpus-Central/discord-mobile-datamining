@@ -1,19 +1,19 @@
-// === Module 19413: NewGroupDMScreen ===
+// === Module 19408: NewGroupDMScreen ===
 
-// Module 19413 (NewGroupDMScreen)
+// Module 19408 (NewGroupDMScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ToastUtils from "ToastUtils" /* 5951 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
-import HeaderShared from "HeaderShared" /* 8985 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 12455 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19412 */;
+import HeaderShared from "HeaderShared" /* 8984 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 12449 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 19407 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 16141 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 16136 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
 import UserStore from "UserStore" /* 1385 */;
 
@@ -189,7 +189,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                             } else {
                               call(tmp9, false, true);
                             }
-                            v3(13936)(closure_128_3);
+                            v3(13932)(closure_128_3);
                             dependencyMap = 3;
                             tmp9 = closure_128_3;
                           }
@@ -278,7 +278,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const UserRowModes = fn(10177).UserRowModes;
+const UserRowModes = fn(10175).UserRowModes;
 const Constants = fn(1072);
 ({ InstantInviteSources: map1, AnalyticEvents: closure_14, AnalyticsSections: closure_15, NEW_GROUP_DM_POPOUT_ID: closure_16 } = Constants);
 const jsxProd = fn(21);

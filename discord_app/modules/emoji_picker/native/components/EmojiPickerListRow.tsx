@@ -1,6 +1,6 @@
-// === Module 11213: EmojiPickerListRow ===
+// === Module 11207: EmojiPickerListRow ===
 
-// Module 11213 (EmojiPickerListRow)
+// Module 11207 (EmojiPickerListRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import native from "native" /* 1187 */;
@@ -10,8 +10,8 @@ import FastImageDefault from "FastImage" /* 5957 */;
 import Pressables from "Pressables" /* 7364 */;
 import _modDef7830 from "module_7830" /* 7830 */;
 import LockIcon from "LockIcon" /* 8027 */;
-import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 11214 */;
-import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 11215 */;
+import getEmojiItemUrlDefault from "getEmojiItemUrl" /* 11208 */;
+import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 11209 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
@@ -92,7 +92,7 @@ class EmojiItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9480);
+const EmojiPickerListConstants = fn(9479);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1228).PADDING_VERTICAL;
 const jsxProd = fn(21);

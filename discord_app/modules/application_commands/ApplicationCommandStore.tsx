@@ -1,6 +1,6 @@
-// === Module 8941: ApplicationCommandStore ===
+// === Module 8940: ApplicationCommandStore ===
 
-// Module 8941 (ApplicationCommandStore)
+// Module 8940 (ApplicationCommandStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8657 */;

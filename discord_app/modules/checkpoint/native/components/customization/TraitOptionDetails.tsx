@@ -1,10 +1,10 @@
-// === Module 14423: TraitOptionDetails ===
+// === Module 14419: TraitOptionDetails ===
 
-// Module 14423 (TraitOptionDetails)
+// Module 14419 (TraitOptionDetails)
 import nativeDefault from "native" /* 575 */;
 import _modDef3269 from "module_3269" /* 3269 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import RarityBadgeDefault from "RarityBadge" /* 14424 */;
+import RarityBadgeDefault from "RarityBadge" /* 14420 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ function AssetDescription(asset) {
                   const obj = { analyticsLocations: null };
                   items = [closure_1_1(7871).CHECKPOINT, closure_1_1(7871).CHECKPOINT_TRAIT];
                   obj.analyticsLocations = items;
-                  return closure_1_1(9513)(obj);
+                  return closure_1_1(9512)(obj);
                 },
                 accessibilityRole: "link",
                 children

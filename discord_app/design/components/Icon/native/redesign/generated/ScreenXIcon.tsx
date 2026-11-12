@@ -1,9 +1,9 @@
-// === Module 19911: ScreenXIcon ===
+// === Module 19906: ScreenXIcon ===
 
-// Module 19911 (ScreenXIcon)
+// Module 19906 (ScreenXIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod12902 from "module_12902" /* 12902 */;
+import _mod12896 from "module_12896" /* 12896 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ScreenXIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12902, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12896, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

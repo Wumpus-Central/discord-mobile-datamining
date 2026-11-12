@@ -1,6 +1,6 @@
-// === Module 17128: useDismissOnce ===
+// === Module 17123: useDismissOnce ===
 
-// Module 17128 (useDismissOnce)
+// Module 17123 (useDismissOnce)
 import noop from "module_19" /* 19 */;
 
 const ContentDismissActionType = fn(5089).ContentDismissActionType;

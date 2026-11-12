@@ -1,11 +1,11 @@
-// === Module 12265: ForumPostActionBar ===
+// === Module 12259: ForumPostActionBar ===
 
-// Module 12265 (ForumPostActionBar)
+// Module 12259 (ForumPostActionBar)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import Client from "Client" /* 5480 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11804 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11798 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 5176 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5177 */;
@@ -35,8 +35,8 @@ export default function ForumPostActionBar(channel) {
   items = [ChannelStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => ChannelStore.getChannel(channel.parent_id));
   let obj = channel(504);
-  const firstMessage = channel(11836).useFirstForumPostMessage(channel).firstMessage;
-  let obj2 = channel(11836);
+  const firstMessage = channel(11830).useFirstForumPostMessage(channel).firstMessage;
+  let obj2 = channel(11830);
   const items1 = [JoinedThreadsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items1, () => JoinedThreadsStore.hasJoined(channel.id));
   dependencyMap = channel.getGuildId();
@@ -51,13 +51,13 @@ export default function ForumPostActionBar(channel) {
   });
   const obj4 = channel(504);
   const obj6 = { style: null, children: null };
-  const items3 = [tmp.actionBarContainer, channel(8994).useGradientTop()];
+  const items3 = [tmp.actionBarContainer, channel(8993).useGradientTop()];
   obj6.style = items3;
   let tmp9 = null != firstMessage;
   if (tmp9) {
     const obj7 = { style: tmp.reactionRow, children: null };
     const obj8 = { thread: channel, parentChannel: stateFromStores, firstMessage };
-    obj7.children = closure_8(tmp2(12266).ForumPostActionBarReactions, obj8);
+    obj7.children = closure_8(tmp2(12260).ForumPostActionBarReactions, obj8);
     tmp9 = closure_8(View, obj7);
   }
   const items4 = [tmp9, ];
@@ -93,7 +93,7 @@ export default function ForumPostActionBar(channel) {
       obj2.jumpType = Client.JumpType.ANIMATED;
       obj.jumpToMessage(obj2);
     };
-    obj11.children = closure_8(tmp2(12267).ArrowLargeUpIcon, { size: "xs" });
+    obj11.children = closure_8(tmp2(12261).ArrowLargeUpIcon, { size: "xs" });
     items6[2] = closure_8(tmp2(7364).PressableOpacity, obj11);
     obj9.children = items6;
     items4[1] = closure_9(View, obj9);
@@ -125,7 +125,7 @@ export default function ForumPostActionBar(channel) {
       obj12.accessibilityLabel = Text(t["DjZ+6E"]);
       obj12.style = tmp.actionButton;
       obj12.onPress = items8;
-      const items9 = [closure_8(tmp2(10933).BellIcon, { size: "xs" }), ];
+      const items9 = [closure_8(tmp2(10927).BellIcon, { size: "xs" }), ];
       const obj14 = { style: tmp.buttonText, variant: "body-sm/semibold", color: "interactive-text-default", children: null };
       const intl2 = tmp2(1113).intl;
       obj14.children = intl2.string(tmp2(1113).t["0rQinA"]);
@@ -135,5 +135,5 @@ export default function ForumPostActionBar(channel) {
     }
     closure_9(tmp2(7364).PressableOpacity, tmp13);
   }
-  const obj5 = channel(8994);
+  const obj5 = channel(8993);
 };

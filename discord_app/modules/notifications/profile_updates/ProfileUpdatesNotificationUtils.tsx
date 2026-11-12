@@ -1,6 +1,6 @@
-// === Module 18024: ProfileUpdatesNotificationUtils ===
+// === Module 18019: ProfileUpdatesNotificationUtils ===
 
-// Module 18024 (ProfileUpdatesNotificationUtils)
+// Module 18019 (ProfileUpdatesNotificationUtils)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserSettings from "UserSettings" /* 5068 */;

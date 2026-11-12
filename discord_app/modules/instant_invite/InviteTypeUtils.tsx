@@ -1,10 +1,10 @@
-// === Module 8775: InviteTypeUtils ===
+// === Module 8774: InviteTypeUtils ===
 
-// Module 8775 (InviteTypeUtils)
+// Module 8774 (InviteTypeUtils)
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6966 */;
 import InviteTargetTypes from "InviteTargetTypes" /* 7599 */;
-import Constants from "Constants" /* 8776 */;
-import GuildProfileUtils from "GuildProfileUtils" /* 8777 */;
+import Constants from "Constants" /* 8775 */;
+import GuildProfileUtils from "GuildProfileUtils" /* 8776 */;
 import ChannelRecord from "ChannelRecord" /* 5096 */;
 import size from "module_2" /* 2 */;
 

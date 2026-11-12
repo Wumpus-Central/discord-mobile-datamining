@@ -1,11 +1,11 @@
-// === Module 10777: PeopleUtils ===
+// === Module 10771: PeopleUtils ===
 
-// Module 10777 (PeopleUtils)
+// Module 10771 (PeopleUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import UserUtilsDefault from "UserUtils" /* 5309 */;
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8072 */;
-import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10778 */;
-import AcceptFriendRequestModalActionCreators from "AcceptFriendRequestModalActionCreators" /* 10779 */;
+import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10772 */;
+import AcceptFriendRequestModalActionCreators from "AcceptFriendRequestModalActionCreators" /* 10773 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
 
 require = fn;

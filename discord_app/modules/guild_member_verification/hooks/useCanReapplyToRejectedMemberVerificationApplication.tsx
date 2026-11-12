@@ -1,6 +1,6 @@
-// === Module 15946: useCanReapplyToRejectedMemberVerificationApplication ===
+// === Module 15941: useCanReapplyToRejectedMemberVerificationApplication ===
 
-// Module 15946 (useCanReapplyToRejectedMemberVerificationApplication)
+// Module 15941 (useCanReapplyToRejectedMemberVerificationApplication)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

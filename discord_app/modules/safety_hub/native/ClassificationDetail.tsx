@@ -1,6 +1,6 @@
-// === Module 14078: ClassificationDetail ===
+// === Module 14074: ClassificationDetail ===
 
-// Module 14078 (ClassificationDetail)
+// Module 14074 (ClassificationDetail)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -13,8 +13,8 @@ import MetricEvents from "MetricEvents" /* 6713 */;
 import TableRow from "TableRow" /* 7379 */;
 import SafetyHubModels from "SafetyHubModels" /* 8141 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 8385 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 14082 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 14084 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 14078 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 14080 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 import SafetyHubStore from "SafetyHubStore" /* 8165 */;
@@ -200,7 +200,7 @@ function ClassificationPolicyCard(classificationDescription) {
   };
   const obj3 = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj3.children = closure_13(policyExplainerLink(11163).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
+  obj3.children = closure_13(policyExplainerLink(11157).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
   items = [closure_13(closure_4, obj3), ];
   const obj5 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj6 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
@@ -405,7 +405,7 @@ export default function ConnectedClassificationDetail(classificationId) {
       const current = ref.current;
       ({ classificationState, source } = current);
       ({ accountStanding, classificationId, hasFlaggedContent } = current);
-      obj3 = { action: closure_2_10.ViewViolationDetail, account_standing: accountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
+      obj3 = { action: refs.ViewViolationDetail, account_standing: accountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
       const _Number = Number;
       items = [Number(classificationId)];
       obj3.classification_ids = items;
@@ -443,7 +443,7 @@ export default function ConnectedClassificationDetail(classificationId) {
       let tmp20Result5 = closure_13(ManualReviewDecidedUnderageView, {});
     } else {
       function onPressLetUsKnow() {
-        obj3 = { action: closure_2_10.ClickLetUsKnow, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
+        obj3 = { action: refs.ClickLetUsKnow, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
         items = [Number(classificationId)];
         obj3.classification_ids = items;
         let SystemDM = source;

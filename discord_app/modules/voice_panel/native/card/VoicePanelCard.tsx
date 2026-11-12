@@ -1,6 +1,6 @@
-// === Module 19857: VoicePanelCard ===
+// === Module 19852: VoicePanelCard ===
 
-// Module 19857 (VoicePanelCard)
+// Module 19852 (VoicePanelCard)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
@@ -10,16 +10,16 @@ import StreamKeyUtils from "StreamKeyUtils" /* 6745 */;
 import StreamActionCreators from "StreamActionCreators" /* 6799 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10509 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11924 */;
-import useVideoStreamErrorDefault from "useVideoStreamError" /* 12698 */;
-import useUserTileBackgroundDefault from "useUserTileBackground" /* 19700 */;
-import useStableParticipantDefault from "useStableParticipant" /* 19837 */;
-import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19859 */;
-import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 19861 */;
-import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 19862 */;
-import useTapGesturesDefault from "useTapGestures" /* 19863 */;
-import useCameraEncodeErrorDefault from "useCameraEncodeError" /* 19864 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10507 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11918 */;
+import useVideoStreamErrorDefault from "useVideoStreamError" /* 12692 */;
+import useUserTileBackgroundDefault from "useUserTileBackground" /* 19695 */;
+import useStableParticipantDefault from "useStableParticipant" /* 19832 */;
+import VoicePanelUserActionCreators from "VoicePanelUserActionCreators" /* 19854 */;
+import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 19856 */;
+import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 19857 */;
+import useTapGesturesDefault from "useTapGestures" /* 19858 */;
+import useCameraEncodeErrorDefault from "useCameraEncodeError" /* 19859 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SoundboardStore from "SoundboardStore" /* 6306 */;
@@ -1006,7 +1006,7 @@ function AnimatedWrapper(arg0) {
       }
     };
   } else if (isSelf) {
-    const tmp6Result21 = tmp6(19837);
+    const tmp6Result21 = tmp6(19832);
   }
   obj4.onDoubleTap = fn;
   let fn2;
@@ -1112,14 +1112,14 @@ function AnimatedWrapper(arg0) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const Pressable = get_ActivityIndicator.Pressable;
-const VoicePanelConstants = fn(11925);
+const VoicePanelConstants = fn(11919);
 ({ VoicePanelCTACard: closure_11, VoicePanelModes: closure_12, MODE_CHANGE_PHYSICS: map1, SPEAKING_PHYSICS: closure_14, VoicePanelCardItemType: closure_15 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11923).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19704).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11928).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19699).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11922).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;
 const ParticipantTypes = fn(5920).ParticipantTypes;
-const SCALE_PHYSICS = fn(11926).SCALE_PHYSICS;
+const SCALE_PHYSICS = fn(11920).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_22, Fragment: closure_23, jsxs: closure_24 } = jsxProd);
 let module_1652 = module_1652_mod;
@@ -1364,8 +1364,8 @@ let closure_40 = noop.memo(function AnimatedUserCardInner(guildId) {
   let cachedSourceFromURI;
   const animatedStyle1 = require("module_1652").useAnimatedStyle(VoicePanelCardTsx6);
   if (null != avatarURI) {
-    cachedSourceFromURI = tmp6(9450).getCachedSourceFromURI(avatarURI);
-    const tmp6Result4 = tmp6(9450);
+    cachedSourceFromURI = tmp6(9449).getCachedSourceFromURI(avatarURI);
+    const tmp6Result4 = tmp6(9449);
   }
   const items4 = [guildId, channelId, userId, controlsSpecs];
   const callback = noop.useCallback(() => {
@@ -1478,7 +1478,7 @@ let closure_46 = { code: "(function VoicePanelCardTsx10(){let[focused]=this.__cl
 let closure_47 = { code: "(function VoicePanelCardTsx11(focusedId,previous){let[scheduleOnRN,handleFocusedParticipantChange]=this.__closure;if(focusedId===previous)return;scheduleOnRN(handleFocusedParticipantChange,focusedId);})" };
 let closure_48 = { code: "(function VoicePanelCardTsx12(){let[mode,focused,sharedTransitionState]=this.__closure;return{mode:mode.get(),focused:focused.get(),transitionState:sharedTransitionState.get()};})" };
 let closure_49 = { code: "(function VoicePanelCardTsx13(props,previous){let[cheapWorkletShallowEqual,VoicePanelModes,TransitionStates,sharedVisible,isScrollVisible,scheduleOnRN,cleanUp,id]=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,focused:focused,transitionState:transitionState}=props;const isPIPMode=mode===VoicePanelModes.PIP;const manuallyFocusedId=focused===null||focused===void 0?void 0:focused.id;if(previous==null&&transitionState!==TransitionStates.YEETED){sharedVisible.set(1);}else if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1&&isScrollVisible.get()){sharedVisible.set(0);}else{scheduleOnRN(cleanUp);}}else if((previous===null||previous===void 0?void 0:previous.transitionState)===TransitionStates.YEETED){sharedVisible.set(1);}else if(!isPIPMode){if(manuallyFocusedId==null){sharedVisible.set(1);}else{if(manuallyFocusedId!==id){sharedVisible.set(0);}else{sharedVisible.set(1);}}}})" };
-let closure_50 = { isSelf: false, hasVideo: false, user: { id: "Array" } };
+let closure_50 = { isSelf: false, hasVideo: false, user: { id: "r" } };
 let items = [{ code: "(function layoutTransitionFunction_VoicePanelCardTsx14(values,physics,scale,lastScale,disableAnimation=false){let[withSpring]=this.__closure;const scaleAdjustment=scale.get()/lastScale.get();const shouldAnimate=!disableAnimation?'respect-motion-settings':'animate-never';return{animations:{originX:withSpring(values.targetOriginX,physics,shouldAnimate),originY:withSpring(values.targetOriginY,physics,shouldAnimate),width:withSpring(values.targetWidth,physics,shouldAnimate),height:withSpring(values.targetHeight,physics,shouldAnimate)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth*scaleAdjustment,height:values.currentHeight*scaleAdjustment},callback:function(){lastScale.set(scale.get());}};})" }, fn(5876).withSpring];
 let closure_129_0;
 [tmp13, tmp14] = items;
@@ -1673,13 +1673,13 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   if (item.type === closure_15.CTA) {
     const id3 = item.id;
     if (closure_11.NO_VIDEO_PARTICIPANTS === id3) {
-      let tmp43Result = closure_22(tmp(19866), {});
+      let tmp43Result = closure_22(tmp(19861), {});
       let tmp41 = closure_22;
     } else if (closure_11.CALLER_DISCONNECTED === id3) {
-      tmp43Result = closure_22(tmp(19867), {});
+      tmp43Result = closure_22(tmp(19862), {});
       tmp41 = closure_22;
     } else if (closure_11.NO_STAGE_SPEAKERS === id3) {
-      tmp43Result = closure_22(tmp(19868), {});
+      tmp43Result = closure_22(tmp(19863), {});
       tmp41 = closure_22;
     }
     const obj3 = { cleanUp: cleanUp.cleanUp, coords: cardLayoutCoordsSubscription, id, isRTCConnected: stateFromStores, isScrollVisible: derivedValue, layoutPhysics: memo, transitionState, sharedVisible: sharedValue, children: null };
@@ -1687,7 +1687,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
     let tmp41Result = null != tmp4;
     if (tmp41Result) {
       const obj4 = { isRinging: tmp8, participant: tmp4, label: null, layout: null };
-      const tmpResult3 = tmp(19880);
+      const tmpResult3 = tmp(19875);
       let userNick;
       if (tmp5Result17.isStableParticipantWithUser(tmp4)) {
         userNick = tmp4.userNick;
@@ -1695,10 +1695,10 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       obj4.label = userNick;
       obj4.layout = callback;
       tmp41Result = tmp41(tmpResult3, obj4);
-      tmp5Result17 = tmp5(19837);
+      tmp5Result17 = tmp5(19832);
     }
     items7[1] = tmp41Result;
-    let result = tmp5(19837).isStableParticipantWithUser(tmp4);
+    let result = tmp5(19832).isStableParticipantWithUser(tmp4);
     if (result) {
       const obj5 = { speakingOrPlayingSoundboard: sharedValue1, id, userId: tmp4.user.id, isSelf, layout: callback };
       result = tmp41(closure_45, obj5);
@@ -1722,7 +1722,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
               }
               obj6.streamId = streamId;
               obj6.isScrollVisible = derivedValue;
-              const VideoSpinnerContext = tmp5(12707).VideoSpinnerContext;
+              const VideoSpinnerContext = tmp5(12701).VideoSpinnerContext;
               obj6.videoSpinnerContext = isSelf ? VideoSpinnerContext.SELF_VIDEO : VideoSpinnerContext.REMOTE_VIDEO;
               obj6.sharedCoords = cardLayoutCoordsSubscription;
               if (isCall) {
@@ -1730,13 +1730,13 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
               }
               obj6.focusOnReady = isCall;
               obj6.layout = callback;
-              let tmp45Result = tmp45(tmp(19858), obj6);
-              const tmpResult4 = tmp(19858);
+              let tmp45Result = tmp45(tmp(19853), obj6);
+              const tmpResult4 = tmp(19853);
             }
             const obj7 = { avError: tmpResultResult, userId: user.id, style: null };
             user = StyleSheet.absoluteFill;
             obj7.style = user;
-            tmp45Result = closure_22(tmp(19869), obj7);
+            tmp45Result = closure_22(tmp(19864), obj7);
             tmp45 = closure_22;
           }
         }
@@ -1762,7 +1762,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       tmp41 = closure_22;
     } else if (ParticipantTypes.ACTIVITY === type2) {
       const obj10 = { sharedVisible: sharedValue, applicationId: tmp4.applicationId, layout: callback };
-      tmp43Result = closure_22(tmp(19870), obj10, tmp4.id);
+      tmp43Result = closure_22(tmp(19865), obj10, tmp4.id);
       tmp41 = closure_22;
     }
   }

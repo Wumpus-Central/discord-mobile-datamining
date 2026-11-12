@@ -1,10 +1,10 @@
-// === Module 10256: GameProfileRankPill ===
+// === Module 10254: GameProfileRankPill ===
 
-// Module 10256 (GameProfileRankPill)
+// Module 10254 (GameProfileRankPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import TrophyIcon from "TrophyIcon" /* 10257 */;
+import TrophyIcon from "TrophyIcon" /* 10255 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

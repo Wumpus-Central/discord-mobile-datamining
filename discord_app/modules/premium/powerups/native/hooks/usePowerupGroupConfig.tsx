@@ -1,12 +1,12 @@
-// === Module 10693: usePowerupGroupConfig ===
+// === Module 10687: usePowerupGroupConfig ===
 
-// Module 10693 (usePowerupGroupConfig)
+// Module 10687 (usePowerupGroupConfig)
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import _modDef2717 from "module_2717" /* 2717 */;
 import GuildTagUtils from "GuildTagUtils" /* 8343 */;
-import _modDef10694 from "module_10694" /* 10694 */;
-import _modDef10695 from "module_10695" /* 10695 */;
+import _modDef10688 from "module_10688" /* 10688 */;
+import _modDef10689 from "module_10689" /* 10689 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
 
@@ -36,7 +36,7 @@ export default function usePowerupGroupConfig(arg0, arg1) {
       obj2.title = intl.string(_modDef2717.KC9HRW);
       const intl2 = util.intl;
       obj2.description = intl2.string(_modDef2717.GJiSmP);
-      const obj3 = { staticUrl: _modDef10694, animatedUrl: _modDef10695 };
+      const obj3 = { staticUrl: _modDef10688, animatedUrl: _modDef10689 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {

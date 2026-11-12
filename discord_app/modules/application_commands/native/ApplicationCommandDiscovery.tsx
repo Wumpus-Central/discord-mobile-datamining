@@ -1,6 +1,6 @@
-// === Module 14701: ApplicationCommandDiscovery ===
+// === Module 14697: ApplicationCommandDiscovery ===
 
-// Module 14701 (ApplicationCommandDiscovery)
+// Module 14697 (ApplicationCommandDiscovery)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -10,11 +10,11 @@ import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5252 */;
 import useFontScale from "useFontScale" /* 5881 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5922 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
-import _modDef11329 from "module_11329" /* 11329 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 11351 */;
-import ApplicationSectionHeader from "ApplicationSectionHeader" /* 14703 */;
-import ApplicationCommandDiscoveryManager from "ApplicationCommandDiscoveryManager" /* 14704 */;
-import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories" /* 14705 */;
+import _modDef11323 from "module_11323" /* 11323 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 11345 */;
+import ApplicationSectionHeader from "ApplicationSectionHeader" /* 14699 */;
+import ApplicationCommandDiscoveryManager from "ApplicationCommandDiscoveryManager" /* 14700 */;
+import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories" /* 14701 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,8 +25,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_6, SectionList: metroImportDefault } = get_ActivityIndicator);
 const ApplicationCommandConstants = fn(6282);
 ({ BuiltInSectionId: closure_8, DISCOVERY_COMMANDS_QUERY_LIMIT: closure_9 } = ApplicationCommandConstants);
-const ITEM_HEIGHT = fn(14702).ITEM_HEIGHT;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(11173).AUTOCOMPLETE_ROW_HEIGHT;
+const ITEM_HEIGHT = fn(14698).ITEM_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(11167).AUTOCOMPLETE_ROW_HEIGHT;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, SectionListElementType: map1 } = Constants);
 const jsxProd = fn(21);
@@ -67,7 +67,7 @@ export default function ApplicationCommandDiscovery(channel) {
   obj6.applicationCommands = !canOnlyUseTextCommands;
   obj5.filters = obj6;
   obj5.options = { placeholderCount: 3, limit: commandDiscoveryManager, includeFrecency: true };
-  const discovery = channel(11344).useDiscovery(obj5);
+  const discovery = channel(11338).useDiscovery(obj5);
   const sectionDescriptors = discovery.sectionDescriptors;
   ({ activeSections: c11, commandsByActiveSection } = discovery);
   ({ hasMoreAfter: c13, filteredSectionId } = discovery);
@@ -308,7 +308,7 @@ export default function ApplicationCommandDiscovery(channel) {
     const section = item.section;
     let found;
     if (item.inputType === ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER) {
-      return filteredSectionId(onHeightChange(14706), {});
+      return filteredSectionId(onHeightChange(14702), {});
     } else {
       found = sectionDescriptors.find((id) => id.id === item.applicationId);
       const obj = {
@@ -324,7 +324,7 @@ export default function ApplicationCommandDiscovery(channel) {
         showIcon: item.applicationId !== section.section.id,
         guildId: found.guild_id
       };
-      return filteredSectionId(onHeightChange(14707), obj);
+      return filteredSectionId(onHeightChange(14703), obj);
     }
   };
   obj9.renderSectionHeader = function renderSectionHeader(section) {
@@ -332,7 +332,7 @@ export default function ApplicationCommandDiscovery(channel) {
     const children = [gesture(ApplicationSectionHeaderDefault, { section: section.section, guildId: channel.guild_id }, section.section.id), ];
     let tmp3Result = 0 === section.data.length;
     if (tmp3Result) {
-      const obj3 = { lightSource: _modDef11329, darkSource: _modDef11329, body: null, containerStyle: null, imageStyle: null };
+      const obj3 = { lightSource: _modDef11323, darkSource: _modDef11323, body: null, containerStyle: null, imageStyle: null };
       const intl = util.intl;
       const obj5 = { applicationName: section.section.name };
       obj3.body = intl.format(util.t.WoQXT6, obj5);

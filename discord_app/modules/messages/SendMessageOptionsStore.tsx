@@ -1,6 +1,6 @@
-// === Module 12550: SendMessageOptionsStore ===
+// === Module 12544: SendMessageOptionsStore ===
 
-// Module 12550 (SendMessageOptionsStore)
+// Module 12544 (SendMessageOptionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import MessageConstants from "MessageConstants" /* 5248 */;

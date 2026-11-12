@@ -1,6 +1,6 @@
-// === Module 15373: NameplateProductPreview ===
+// === Module 15370: NameplateProductPreview ===
 
-// Module 15373 (NameplateProductPreview)
+// Module 15370 (NameplateProductPreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -8,7 +8,7 @@ import utils from "utils" /* 2108 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import TableRow from "TableRow" /* 7379 */;
-import useShopProductItems from "useShopProductItems" /* 9336 */;
+import useShopProductItems from "useShopProductItems" /* 9335 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 
@@ -42,7 +42,7 @@ function NameplateUser(arg0) {
   }
   const items1 = [currentUser, tmp5Result, stateFromStores];
   const icon = noop.useMemo(() => {
-    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: "<string:833110952>", "aria-hidden": "<string:2914779138>" };
+    const obj = { user: currentUser, guildId: "a", size: native.AvatarSizes.NORMAL, avatarDecoration, animate: !stateFromStores, autoStatusCutout: null, "aria-hidden": 994646658086916000000000000000000000000000000000000000000000000000000000000000000000000 };
     return timestampProducer(native.Avatar, obj);
   }, items1);
   return closure_6(currentUser(stateFromStores[20]).UserNameplateRow, { nameplate, icon, label, isPreviewRow: true });

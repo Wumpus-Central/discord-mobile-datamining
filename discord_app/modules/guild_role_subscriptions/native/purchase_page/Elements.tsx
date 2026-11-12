@@ -1,15 +1,15 @@
-// === Module 19194: Elements ===
+// === Module 19189: Elements ===
 
-// Module 19194 (Elements)
+// Module 19189 (Elements)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import Pressables from "Pressables" /* 7364 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9657 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 10894 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17729 */;
-import _modDef19195 from "module_19195" /* 19195 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9656 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 10888 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 17724 */;
+import _modDef19190 from "module_19190" /* 19190 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2175 */;
@@ -80,7 +80,7 @@ export function TruncatedText(lineClamp) {
     };
     items = [React6(Text_Text.Text, obj3), first];
     obj2.children = items;
-    return closure_1_10(timestampProducer, obj2);
+    return refs(timestampProducer, obj2);
   } else {
     const obj = { style: tmp2.toggleTruncateButton, children: null };
     const intl = util.intl;
@@ -102,9 +102,9 @@ export function ArrowButton(arg0) {
   ({ text, onPress } = arg0);
   const tmp = closure_11();
   const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
-  items = [React6(Text_Text.Text, { variant: "body-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React6(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef19195, style: tmp.arrowButtonIcon })];
+  items = [React6(Text_Text.Text, { variant: "body-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text }), React6(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef19190, style: tmp.arrowButtonIcon })];
   obj.children = items;
-  return closure_1_10(Pressables.PressableOpacity, obj);
+  return refs(Pressables.PressableOpacity, obj);
 }
 export function useFormattedSubscriptionPlan(listingId) {
   const mobileStoreFront = NativePaymentHooksDefault.useMobileStoreFront();

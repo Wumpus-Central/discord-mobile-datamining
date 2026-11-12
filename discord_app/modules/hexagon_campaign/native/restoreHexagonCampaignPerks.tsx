@@ -1,14 +1,14 @@
-// === Module 17522: restoreHexagonCampaignPerks ===
+// === Module 17517: restoreHexagonCampaignPerks ===
 
-// Module 17522 (restoreHexagonCampaignPerks)
+// Module 17517 (restoreHexagonCampaignPerks)
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
 import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5271 */;
 import isPerModeThemingActive from "isPerModeThemingActive" /* 5312 */;
-import AppIconUtils from "AppIconUtils" /* 15203 */;
-import getAppliedHexagonCampaignPerks from "getAppliedHexagonCampaignPerks" /* 17516 */;
-import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 17517 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17518 */;
-import saveHexagonCampaignDisplayNameStyles from "saveHexagonCampaignDisplayNameStyles" /* 17521 */;
+import AppIconUtils from "AppIconUtils" /* 15200 */;
+import getAppliedHexagonCampaignPerks from "getAppliedHexagonCampaignPerks" /* 17511 */;
+import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 17512 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17513 */;
+import saveHexagonCampaignDisplayNameStyles from "saveHexagonCampaignDisplayNameStyles" /* 17516 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UserStore from "UserStore" /* 1385 */;
 

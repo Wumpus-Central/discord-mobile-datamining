@@ -1,17 +1,17 @@
-// === Module 19582: SettingsNavigator ===
+// === Module 19577: SettingsNavigator ===
 
-// Module 19582 (SettingsNavigator)
+// Module 19577 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7747 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 17099 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 19583 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 17094 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 19578 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 17097 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 17092 */;
 
 require = fn;
 function SettingHeaderBadge(badge) {
@@ -35,7 +35,7 @@ function LeftAlignedHeaderTitle(children) {
     const obj2 = { badge: persistentBadge };
     items[1] = React6(SettingHeaderBadge, obj2);
     obj.children = items;
-    tmp6 = closure_1_10(View, obj);
+    tmp6 = refs(View, obj);
   }
   return tmp6;
 }
@@ -44,7 +44,7 @@ const Constants = fn(1072);
 ({ AnalyticsPages: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const NativeStackNavigator = fn(9062);
+const NativeStackNavigator = fn(9061);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5243);
 let obj = { statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null };

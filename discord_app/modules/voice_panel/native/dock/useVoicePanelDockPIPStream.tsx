@@ -1,11 +1,11 @@
-// === Module 19914: useVoicePanelDockPIPStream ===
+// === Module 19909: useVoicePanelDockPIPStream ===
 
-// Module 19914 (useVoicePanelDockPIPStream)
+// Module 19909 (useVoicePanelDockPIPStream)
 import StreamKeyUtils from "StreamKeyUtils" /* 6745 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoicePanelDockPIPWatchPromptStore from "VoicePanelDockPIPWatchPromptStore" /* 19915 */;
+import VoicePanelDockPIPWatchPromptStore from "VoicePanelDockPIPWatchPromptStore" /* 19910 */;
 
 const require = globalThis.__r;
 

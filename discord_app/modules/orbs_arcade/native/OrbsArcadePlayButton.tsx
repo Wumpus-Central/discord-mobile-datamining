@@ -1,14 +1,14 @@
-// === Module 17558: OrbsArcadePlayButton ===
+// === Module 17553: OrbsArcadePlayButton ===
 
-// Module 17558 (OrbsArcadePlayButton)
+// Module 17553 (OrbsArcadePlayButton)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import ButtonConstants from "ButtonConstants" /* 5879 */;
-import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 17544 */;
-import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 17561 */;
+import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 17539 */;
+import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 17556 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 10062 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17534 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 10061 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17529 */;
 
 require = fn;
 function OrbsArcadePaidPlayLabel(count) {
@@ -19,7 +19,7 @@ function OrbsArcadePaidPlayLabel(count) {
   const formatResult = intl.format(size(1113).t.oSWYca, {
     count: count.orbCost,
     orbIconHook() {
-      return jsx(size(9375).OrbsIcon, { size: "xs", color: closure_1(575).colors.CONTROL_PRIMARY_TEXT_DEFAULT }, "orbs-icon");
+      return jsx(size(9374).OrbsIcon, { size: "xs", color: closure_1(575).colors.CONTROL_PRIMARY_TEXT_DEFAULT }, "orbs-icon");
     }
   });
   let arr = formatResult;
@@ -77,17 +77,17 @@ export default function OrbsArcadePlayButton(game) {
   }, items5);
   if (null != stateFromStores) {
     if (tmp5Result.mustClaimOrbsArcadeRewardsToPlay(stateFromStores)) {
-      const obj3 = { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "Array" };
+      const obj3 = { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "Boolean" };
       const intl3 = tmp5(tmp3[6]).intl;
       const obj4 = { count: tmp5(tmp3[18]).getOrbsArcadeClaimableRewards(game.rewards, stateFromStores).length };
       obj3.text = intl3.formatToPlainString(tmp5(tmp3[6]).t["18ToNc"], obj4);
-      let tmp18Result2 = jsx(tmp5(tmp3[19]).Button, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "Array" });
+      let tmp18Result2 = jsx(tmp5(tmp3[19]).Button, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "Boolean" });
       const tmp5Result3 = tmp5(tmp3[18]);
     }
     return tmp18Result2;
   }
   if (null != result) {
-    const obj5 = { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "Array" };
+    const obj5 = { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "Boolean" };
     if (null != result.timeUntilNextRound) {
       const intl2 = tmp5(tmp3[6]).intl;
       const obj6 = { duration: null };
@@ -100,7 +100,7 @@ export default function OrbsArcadePlayButton(game) {
       formatToPlainStringResult = intl.string(tmp5(tmp3[6]).t.iJjbMd);
     }
     obj5.text = formatToPlainStringResult;
-    jsx(tmp5(tmp3[19]).Button, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "Array" });
+    jsx(tmp5(tmp3[19]).Button, { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text: null, disabled: true, onPress: "Boolean" });
   } else if (canAffordPlay) {
     const obj7 = { grow: true, size: DEFAULT_BUTTON_SIZE, variant: "primary", text, textElement: null, disabled: null, loading: null, onPress: null };
     let tmp18Result;

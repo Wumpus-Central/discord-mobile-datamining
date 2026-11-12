@@ -1,6 +1,6 @@
-// === Module 15604: isOnPlayStation ===
+// === Module 15601: isOnPlayStation ===
 
-// Module 15604 (isOnPlayStation)
+// Module 15601 (isOnPlayStation)
 import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7406 */;
 import size from "module_2" /* 2 */;
 

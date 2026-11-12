@@ -1,9 +1,9 @@
-// === Module 9951: navigateToSocialLayerStorefront ===
+// === Module 9950: navigateToSocialLayerStorefront ===
 
-// Module 9951 (navigateToSocialLayerStorefront)
+// Module 9950 (navigateToSocialLayerStorefront)
 import router_utils from "router_utils" /* 1099 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7181 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 9952 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 9951 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7183 */;

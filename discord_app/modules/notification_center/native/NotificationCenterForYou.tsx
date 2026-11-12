@@ -1,26 +1,26 @@
-// === Module 19054: NotificationCenterForYou ===
+// === Module 19049: NotificationCenterForYou ===
 
-// Module 19054 (NotificationCenterForYou)
+// Module 19049 (NotificationCenterForYou)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import parseURLDefault from "parseURL" /* 5985 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6970 */;
 import NotificationCenterUtils from "NotificationCenterUtils" /* 6971 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 19057 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 19059 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 19052 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 19054 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 6997 */;
 import ReadStateStore from "ReadStateStore" /* 6952 */;
 import UserStore from "UserStore" /* 1385 */;
 import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6969 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 19055 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 19050 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const MainTabsConstants = fn(9964);
+const MainTabsConstants = fn(9963);
 ({ RootNavigatorScreen, YouBarNavigatorScreens } = MainTabsConstants);
 const ReadStateTypes = fn(6896).ReadStateTypes;
 const jsx = fn(21).jsx;

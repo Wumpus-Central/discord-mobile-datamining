@@ -1,6 +1,6 @@
-// === Module 14906: ContactSyncSuggestions ===
+// === Module 14902: ContactSyncSuggestions ===
 
-// Module 14906 (ContactSyncSuggestions)
+// Module 14902 (ContactSyncSuggestions)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -49,7 +49,7 @@ function SuggestionRow(suggestion) {
     tmp8Result = React5(Text_Text.Text, obj5);
   }
   items[1] = tmp8Result;
-  obj3.subLabel = closure_1_10(React6, { children: items });
+  obj3.subLabel = refs(React6, { children: items });
   obj3.onPress = function onPress() {
     return onSelect(suggestion.suggested_user.id);
   };
@@ -57,7 +57,7 @@ function SuggestionRow(suggestion) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SuggestedFriendSource = fn(14907).SuggestedFriendSource;
+const SuggestedFriendSource = fn(14903).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5243);
@@ -143,13 +143,13 @@ export default function ContactSyncSuggestions(friendSuggestions) {
       obj5.children = intl2.string(util.t.ait1x0);
       items[1] = React5(Text_Text.Text, obj5);
       obj3.children = items;
-      const items1 = [closure_2_10(View, obj3), ];
+      const items1 = [refs(View, obj3), ];
       const obj6 = { label: null };
       const intl3 = util.intl;
       obj6.label = intl3.string(util.t["1uAmCw"]);
       items1[1] = React5(SuggestedFriendsSectionHeader, obj6);
       obj2.children = items1;
-      return closure_2_10(React6, obj2);
+      return refs(React6, obj2);
     } else {
       const friendSuggestion = item.props.friendSuggestion;
       const obj7 = { start: 1 === index, end: index === friendSuggestions.length, suggestion: friendSuggestion, selected: item.props.selected, onSelect };
@@ -162,7 +162,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
       const obj8 = { children: null };
       items2[1] = tmp5;
       obj8.children = items2;
-      return closure_2_10(noop.Fragment, obj8, friendSuggestion.suggested_user.id);
+      return refs(noop.Fragment, obj8, friendSuggestion.suggested_user.id);
     }
   }, items3);
   let obj7 = { contentContainerStyle: null, data: null, renderItem: null };

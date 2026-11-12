@@ -1,14 +1,14 @@
-// === Module 19858: VoicePanelVideoRenderer ===
+// === Module 19853: VoicePanelVideoRenderer ===
 
-// Module 19858 (VoicePanelVideoRenderer)
+// Module 19853 (VoicePanelVideoRenderer)
 import _mod1705 from "module_1705" /* 1705 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
 import spring_spring from "spring/spring" /* 5876 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11924 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11929 */;
-import useVideoSpinnerTimerDefault from "useVideoSpinnerTimer" /* 12706 */;
-import DCDVideoRendererDefault from "DCDVideoRenderer" /* 12713 */;
-import VideoActionCreators from "VideoActionCreators" /* 19701 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11918 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11923 */;
+import useVideoSpinnerTimerDefault from "useVideoSpinnerTimer" /* 12700 */;
+import DCDVideoRendererDefault from "DCDVideoRenderer" /* 12707 */;
+import VideoActionCreators from "VideoActionCreators" /* 19696 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import module_1652 from "module_1652" /* 1652 */;
@@ -17,12 +17,12 @@ const require = globalThis.__r;
 
 require = fn;
 let PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(11925);
+const VoicePanelConstants = fn(11919);
 let VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(11923).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(19704).VoicePanelPIPModes;
-const SCALE_PHYSICS = fn(11926).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(19699).VoicePanelPIPModes;
+const SCALE_PHYSICS = fn(11920).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const DCDVideoRenderer = module_1652.createAnimatedComponent(DCDVideoRendererDefault);
@@ -105,7 +105,7 @@ let closure_53 = { code: "(function VoicePanelVideoRendererTsx39(props,previous)
 let closure_54 = { code: "(function VoicePanelVideoRendererTsx40(){let[focused,id,windowDimensions,sharedCoords]=this.__closure;var _focused$get;if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id){return{width:windowDimensions.get().width,height:windowDimensions.get().height};}return{width:sharedCoords.get().width,height:sharedCoords.get().height};})" };
 let closure_55 = { code: "(function VoicePanelVideoRendererTsx41(){let[scale,videoDimensions,mode]=this.__closure;return[scale.get(),videoDimensions.get(),mode.get()];})" };
 let closure_56 = { code: "(function VoicePanelVideoRendererTsx42(props,previous){let[streamId,cheapWorkletShallowEqual,scheduleOnRN,respondToVideoSizeUpdate]=this.__closure;if(streamId==null)return;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;scheduleOnRN(respondToVideoSizeUpdate);})" };
-let closure_57 = { code: "(function VoicePanelVideoRendererTsx43(){let[videoDimensions,pipState,VoicePanelPIPModes,scale,disableAnimations,translateX,translateY,mirror]=this.__closure;let{width:width,height:height}=videoDimensions.get();if(pipState.mode===VoicePanelPIPModes.IN_APP){const pipScale=pipState.scale.get();if(width>height){width=width*(pipState.height*pipScale/height)/scale.get();height=pipState.height*pipScale/scale.get();}else{height=height*(pipState.width*pipScale/width)/scale.get();width=pipState.width*pipScale/scale.get();}}return{width:width,height:height,opacity:disableAnimations.get()?0:1,transform:[{scale:scale.get()},{translateX:translateX.get()},{translateY:translateY.get()},{scaleX:mirror?-1:1}]};})" };
+let closure_57 = { code: "(function VoicePanelVideoRendererTsx43(){let[videoDimensions,isDockEnabled,dockJoinMorphOrigin,pipState,VoicePanelPIPModes,scale,disableAnimations,translateX,translateY,mirror]=this.__closure;let{width:width,height:height}=videoDimensions.get();const keepsPanelSize=isDockEnabled&&dockJoinMorphOrigin.get()==null;if(!keepsPanelSize&&pipState.mode===VoicePanelPIPModes.IN_APP){const pipScale=pipState.scale.get();if(width>height){width=width*(pipState.height*pipScale/height)/scale.get();height=pipState.height*pipScale/scale.get();}else{height=height*(pipState.width*pipScale/width)/scale.get();width=pipState.width*pipScale/scale.get();}}return{width:width,height:height,opacity:disableAnimations.get()?0:1,transform:[{scale:scale.get()},{translateX:translateX.get()},{translateY:translateY.get()},{scaleX:mirror?-1:1}]};})" };
 let closure_58 = { code: "(function VoicePanelVideoRendererTsx44(){let[mode,VoicePanelModes,focused,id]=this.__closure;var _focused$get;return{inPip:mode.get()===VoicePanelModes.PIP,isFocused:((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id};})" };
 let closure_59 = { code: "(function VoicePanelVideoRendererTsx45(curr,prev){let[cheapWorkletShallowEqual,strokeOpacity,withDelay,withTiming]=this.__closure;if(cheapWorkletShallowEqual(curr,prev!==null&&prev!==void 0?prev:undefined))return;if(curr.inPip||curr.isFocused){strokeOpacity.set(0);return;}const shouldDelay=(prev===null||prev===void 0?void 0:prev.isFocused)===true;strokeOpacity.set(shouldDelay?withDelay(300,withTiming(0.3,{duration:0},'animate-never')):0.3);})" };
 let closure_60 = { code: "(function VoicePanelVideoRendererTsx46(){let[isInSnap,SNAP_EDGE_INNER_THRESHOLD,borderRadius,strokeOpacity]=this.__closure;if(isInSnap.get()){return{position:'absolute',top:0,left:0,bottom:0,right:0,borderWidth:SNAP_EDGE_INNER_THRESHOLD,overflow:'hidden',borderColor:'white',opacity:0.5};}return{position:'absolute',top:-1,left:-1,bottom:-1,right:-1,borderWidth:2,borderRadius:borderRadius+2,overflow:'hidden',borderColor:'white',opacity:strokeOpacity.get()};})" };
@@ -150,7 +150,7 @@ export default noop.memo(function VideoRenderer(id) {
   selfId = mode;
   ({ focused, setFocused: c5, layoutManager } = context);
   VoicePanelModes = layoutManager;
-  ({ windowDimensions, streamOutputSinkStack } = context);
+  ({ windowDimensions, streamOutputSinkStack, isDockEnabled, dockJoinMorphOrigin } = context);
   let obj = require("SurfaceDirectRendererExperiment");
   const sharedValue = require("module_1652").useSharedValue(true);
   c7 = sharedValue;
@@ -175,7 +175,7 @@ export default noop.memo(function VideoRenderer(id) {
       _undefined4(c0);
     }
   });
-  onReady = tmp5(12708)({ streamId, userId, loading: tmp13, videoSpinnerContext, paused: flag3, streamKey }).onReady;
+  onReady = tmp5(12702)({ streamId, userId, loading: tmp13, videoSpinnerContext, paused: flag3, streamKey }).onReady;
   useVideoSpinnerTimerDefault({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, loading: tmp13 });
   items = [onReady];
   const callback = obj2.useCallback(() => {
@@ -303,7 +303,7 @@ export default noop.memo(function VideoRenderer(id) {
   closure_130_19 = undefined;
   closure_130_20 = undefined;
   closure_130_21 = undefined;
-  const context1 = obj2.useContext(tmp5(11924));
+  const context1 = obj2.useContext(tmp5(11918));
   ({ windowDimensions: windowDimensions2, dismissToPIPGestureRef } = context1);
   closure_130_4 = dismissToPIPGestureRef;
   const setFocused = context1.setFocused;
@@ -1363,7 +1363,7 @@ export default noop.memo(function VideoRenderer(id) {
     };
   }, items60);
   const tmp2Result47 = require("module_1652");
-  const items61 = [closure_57, sharedValue1, pIPState, c9, sharedValue2, sharedValue, sharedValue3, sharedValue4, flag];
+  const items61 = [closure_57, sharedValue1, isDockEnabled, dockJoinMorphOrigin, pIPState, c9, sharedValue2, sharedValue, sharedValue3, sharedValue4, flag];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -1372,46 +1372,56 @@ export default noop.memo(function VideoRenderer(id) {
   PixelRatio = undefined;
   VoicePanelModes = undefined;
   c7 = undefined;
-  [tmp167, tmp168, tmp169, tmp170, tmp171, tmp172, tmp173, tmp174, tmp175] = items61;
+  c8 = undefined;
+  c9 = undefined;
+  [tmp167, tmp168, tmp169, tmp170, tmp171, tmp172, tmp173, tmp174, tmp175, tmp176, tmp177] = items61;
   class VoicePanelVideoRendererTsx43 {
     constructor() {
       value = closure_0.get();
       ({ width, height } = value);
-      size = closure_1;
-      result3 = height;
-      result1 = width;
-      if (closure_1.mode === closure_2.IN_APP) {
-        scale = size.scale;
-        value1 = scale.get();
-        if (width > height) {
-          tmp8 = closure_3;
-          result = width * (size.height * value1 / height);
-          result1 = result / closure_3.get();
-          result2 = size.height * value1;
-          result3 = result2 / closure_3.get();
-        } else {
-          tmp5 = closure_3;
-          result4 = height * (size.width * value1 / width);
-          result3 = result4 / closure_3.get();
-          result5 = size.width * value1;
-          result1 = result5 / closure_3.get();
+      if (!closure_1) {
+        size = closure_3;
+        tmp6 = closure_4;
+        result3 = height;
+        result1 = width;
+        if (closure_3.mode === closure_4.IN_APP) {
+          scale = size.scale;
+          value1 = scale.get();
+          if (width > height) {
+            tmp11 = closure_5;
+            result = width * (size.height * value1 / height);
+            result1 = result / closure_5.get();
+            result2 = size.height * value1;
+            result3 = result2 / closure_5.get();
+          } else {
+            tmp8 = closure_5;
+            result4 = height * (size.width * value1 / width);
+            result3 = result4 / closure_5.get();
+            result5 = size.width * value1;
+            result1 = result5 / closure_5.get();
+          }
         }
+      } else {
+        tmp2 = closure_2;
+        tmp3 = null;
+        result3 = height;
+        result1 = width;
       }
       size1 = { width: result1, height: result3, opacity: null, transform: null };
       num = 1;
       num2 = 1;
-      if (closure_4.get()) {
+      if (closure_6.get()) {
         num2 = 0;
       }
       size1.opacity = num2;
-      obj1 = { scale: closure_3.get() };
+      obj1 = { scale: closure_5.get() };
       items = [, , , ];
       items[0] = obj1;
-      obj5 = { translateX: closure_5.get() };
+      obj5 = { translateX: closure_7.get() };
       items[1] = obj5;
-      obj6 = { translateY: closure_6.get() };
+      obj6 = { translateY: closure_8.get() };
       items[2] = obj6;
-      if (closure_7) {
+      if (closure_9) {
         num = -1;
       }
       items[3] = { scaleX: num };
@@ -1419,9 +1429,9 @@ export default noop.memo(function VideoRenderer(id) {
       return size1;
     }
   }
-  const items62 = [tmp168, tmp169, tmp170, tmp171, tmp172, tmp173, tmp174, tmp175];
+  const items62 = [tmp168, tmp169, tmp170, tmp171, tmp172, tmp173, tmp174, tmp175, tmp176, tmp177];
   VoicePanelVideoRendererTsx43.__closure = items62;
-  VoicePanelVideoRendererTsx43.__workletHash = 8500811993436;
+  VoicePanelVideoRendererTsx43.__workletHash = 13635575059100;
   VoicePanelVideoRendererTsx43.__initData = tmp167;
   const animatedStyle = require("module_1652").useAnimatedStyle(VoicePanelVideoRendererTsx43);
   const tmp2Result48 = require("module_1652");
@@ -1440,14 +1450,14 @@ export default noop.memo(function VideoRenderer(id) {
     }
   }
   const sharedValue10 = require("module_1652").useSharedValue(num);
-  const tmp178 = VoicePanelModes;
+  const tmp180 = VoicePanelModes;
   const tmp2Result50 = require("module_1652");
-  const items63 = [closure_58, mode, tmp178, focused, id];
+  const items63 = [closure_58, mode, tmp180, focused, id];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
   c3 = undefined;
-  [tmp182, tmp183, tmp184, tmp185, tmp186] = items63;
+  [tmp184, tmp185, tmp186, tmp187, tmp188] = items63;
   class VoicePanelVideoRendererTsx44 {
     constructor() {
       obj = { inPip: closure_0.get() === closure_1.PIP, isFocused: null };
@@ -1460,16 +1470,16 @@ export default noop.memo(function VideoRenderer(id) {
       return obj;
     }
   }
-  const items64 = [tmp183, tmp184, tmp185, tmp186];
+  const items64 = [tmp185, tmp186, tmp187, tmp188];
   VoicePanelVideoRendererTsx44.__closure = items64;
   VoicePanelVideoRendererTsx44.__workletHash = 11803304067139;
-  VoicePanelVideoRendererTsx44.__initData = tmp182;
+  VoicePanelVideoRendererTsx44.__initData = tmp184;
   const items65 = [closure_59, require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, sharedValue10, require("module_1652").withDelay, require("timing/timing").withTiming];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
   c3 = undefined;
-  [tmp187, tmp188, tmp189, tmp190, tmp191] = items65;
+  [tmp189, tmp190, tmp191, tmp192, tmp193] = items65;
   class VoicePanelVideoRendererTsx45 {
     constructor(arg0, arg1) {
       tmp2 = arg1;
@@ -1502,10 +1512,10 @@ export default noop.memo(function VideoRenderer(id) {
       return;
     }
   }
-  const items66 = [tmp188, tmp189, tmp190, tmp191];
+  const items66 = [tmp190, tmp191, tmp192, tmp193];
   VoicePanelVideoRendererTsx45.__closure = items66;
   VoicePanelVideoRendererTsx45.__workletHash = 4081353667825;
-  VoicePanelVideoRendererTsx45.__initData = tmp187;
+  VoicePanelVideoRendererTsx45.__initData = tmp189;
   const animatedReaction9 = require("module_1652").useAnimatedReaction(VoicePanelVideoRendererTsx44, VoicePanelVideoRendererTsx45);
   const tmp2Result51 = require("module_1652");
   const items67 = [closure_60, sharedValue6, 25, token, sharedValue10];
@@ -1513,7 +1523,7 @@ export default noop.memo(function VideoRenderer(id) {
   importDefault = undefined;
   dependencyMap = undefined;
   c3 = undefined;
-  [tmp193, tmp194, tmp195, tmp196, tmp197] = items67;
+  [tmp195, tmp196, tmp197, tmp198, tmp199] = items67;
   class VoicePanelVideoRendererTsx46 {
     constructor() {
       if (closure_0.get()) {
@@ -1532,23 +1542,23 @@ export default noop.memo(function VideoRenderer(id) {
       return rect1;
     }
   }
-  const items68 = [tmp194, tmp195, tmp196, tmp197];
+  const items68 = [tmp196, tmp197, tmp198, tmp199];
   VoicePanelVideoRendererTsx46.__closure = items68;
   VoicePanelVideoRendererTsx46.__workletHash = 13057876235952;
-  VoicePanelVideoRendererTsx46.__initData = tmp193;
+  VoicePanelVideoRendererTsx46.__initData = tmp195;
   const items69 = [closure_61, layout, sharedValue];
   _require = undefined;
   importDefault = undefined;
-  [tmp199, tmp200, tmp201] = items69;
+  [tmp201, tmp202, tmp203] = items69;
   class VoicePanelVideoRendererTsx47 {
     constructor(arg0) {
       return closure_0(id, closure_1.get());
     }
   }
-  const items70 = [tmp200, tmp201];
+  const items70 = [tmp202, tmp203];
   VoicePanelVideoRendererTsx47.__closure = items70;
   VoicePanelVideoRendererTsx47.__workletHash = 1306418724990;
-  VoicePanelVideoRendererTsx47.__initData = tmp199;
+  VoicePanelVideoRendererTsx47.__initData = tmp201;
   const items71 = [layout, sharedValue];
   const animatedStyle1 = require("module_1652").useAnimatedStyle(VoicePanelVideoRendererTsx46);
   const callback7 = obj2.useCallback(VoicePanelVideoRendererTsx47, items71);
@@ -1560,11 +1570,11 @@ export default noop.memo(function VideoRenderer(id) {
   const items73 = [tmp.animatedWrapperStyles, animatedStyle];
   obj9.style = items73;
   const obj10 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId: null, onReady: null, onSize: null, style: null, layout: null };
-  let tmp206 = null;
+  let tmp208 = null;
   if (!tmp11) {
-    tmp206 = streamId;
+    tmp208 = streamId;
   }
-  obj10.streamId = tmp206;
+  obj10.streamId = tmp208;
   obj10.onReady = callback;
   obj10.onSize = callback1;
   obj10.style = tmp.video;
@@ -1573,12 +1583,12 @@ export default noop.memo(function VideoRenderer(id) {
   const items74 = [onReady(module_1652.View, obj9), ];
   if (tmp13) {
     const obj11 = { animate: true, style: tmp.spinner };
-    let tmp203Result = tmp203(tmp5(12710), obj11);
+    let tmp205Result = tmp205(tmp5(12704), obj11);
   } else {
     const obj12 = { style: animatedStyle1, layout: callback7, pointerEvents: "none" };
-    tmp203Result = tmp203(tmp5(1652).View, obj12);
+    tmp205Result = tmp205(tmp5(1652).View, obj12);
   }
-  items74[1] = tmp203Result;
+  items74[1] = tmp205Result;
   obj8.children = items74;
   obj7.children = sharedValue2(module_1652.View, obj8);
   return onReady(require("LegacyBaseButton").GestureDetector, obj7);

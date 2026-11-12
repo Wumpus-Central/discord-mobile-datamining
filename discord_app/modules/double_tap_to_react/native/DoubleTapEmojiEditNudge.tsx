@@ -1,9 +1,9 @@
-// === Module 12581: DoubleTapEmojiEditNudge ===
+// === Module 12575: DoubleTapEmojiEditNudge ===
 
-// Module 12581 (DoubleTapEmojiEditNudge)
+// Module 12575 (DoubleTapEmojiEditNudge)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 9130 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 9129 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
@@ -89,7 +89,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
               return obj16;
             } else {
               const obj17 = { emoji: closure_129_0 };
-              const result = _location(9489).showDoubleTapEmojiUpdatedToast(obj17);
+              const result = _location(9488).showDoubleTapEmojiUpdatedToast(obj17);
               c4 = 3;
               return { value: "HermesInternal", done: null };
             }
@@ -110,7 +110,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
       }
       return applyArgumentsResult;
     };
-    let result = _location(9477).openEmojiPickerActionSheet(obj2, "stack");
+    let result = _location(9476).openEmojiPickerActionSheet(obj2, "stack");
   }, items2);
   let obj4 = { color: "text-subtle", variant: "body-sm/normal", children: null };
   const intl = _location(1113).intl;

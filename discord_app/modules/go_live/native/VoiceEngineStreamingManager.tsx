@@ -13,8 +13,8 @@ import UserSettings from "UserSettings" /* 5068 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6745 */;
 import AndroidStopAndPauseVideoExperimentDefault from "AndroidStopAndPauseVideoExperiment" /* 6798 */;
 import StreamActionCreators from "StreamActionCreators" /* 6799 */;
-import PushNotificationDefault from "PushNotification" /* 12830 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 12891 */;
+import PushNotificationDefault from "PushNotification" /* 12824 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 12885 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -235,11 +235,11 @@ prototype["_initialize"] = function _initialize() {
 prototype["_terminate"] = function _terminate() {
   voiceEngine = inject.getVoiceEngine();
   if (null != voiceEngine) {
-    const result = voiceEngine.setBroadcastRequestCallback(closure_1_10);
-    const result1 = voiceEngine.setBroadcastFinishedCallback(closure_1_10);
-    const result2 = voiceEngine.setBroadcastAnnotatedCallback(closure_1_10);
-    const result3 = voiceEngine.setBroadcastBlockedCallback(closure_1_10);
-    const result4 = voiceEngine.setBroadcastVisibilityChangedCallback(closure_1_10);
+    const result = voiceEngine.setBroadcastRequestCallback(refs);
+    const result1 = voiceEngine.setBroadcastFinishedCallback(refs);
+    const result2 = voiceEngine.setBroadcastAnnotatedCallback(refs);
+    const result3 = voiceEngine.setBroadcastBlockedCallback(refs);
+    const result4 = voiceEngine.setBroadcastVisibilityChangedCallback(refs);
   }
   timeout.stop();
   timeout1.stop();

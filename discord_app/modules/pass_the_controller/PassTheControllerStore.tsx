@@ -6,8 +6,8 @@ import DispatcherDefault from "Dispatcher" /* 572 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 6033 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6745 */;
-import InputHostDefault from "InputHost" /* 15997 */;
-import InputGuestDefault from "InputGuest" /* 16000 */;
+import InputHostDefault from "InputHost" /* 15992 */;
+import InputGuestDefault from "InputGuest" /* 15995 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6739 */;
@@ -158,9 +158,9 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
               const rTCConnection = RTCConnectionStore.getRTCConnection();
               tmp54 = null;
               if (null != rTCConnection) {
-                const inputConnection = new inputConnection1(15994).InputConnection(rTCConnection, AuthenticationStore.getId());
+                const inputConnection = new inputConnection1(15989).InputConnection(rTCConnection, AuthenticationStore.getId());
                 closure_129_0 = inputConnection;
-                inputConnection.on(inputConnection1(15995).InputEvent.Disconnect, () => {
+                inputConnection.on(inputConnection1(15990).InputEvent.Disconnect, () => {
                   if (c10 === inputConnection1) {
                     if (null != _null) {
                       obj2 = { type: "PASS_THE_CONTROLLER_UPDATE", streamKey: _null.streamKey, isHost: true, host: AuthenticationStore.getId(), active: false };
@@ -241,8 +241,8 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
             const rTCConnection1 = RTCConnectionStore.getRTCConnection();
             tmp14 = null;
             if (null != rTCConnection1) {
-              inputConnection1 = new inputConnection1(15994).InputConnection(rTCConnection1, AuthenticationStore.getId());
-              inputConnection1.on(inputConnection1(15995).InputEvent.Disconnect, () => {
+              inputConnection1 = new inputConnection1(15989).InputConnection(rTCConnection1, AuthenticationStore.getId());
+              inputConnection1.on(inputConnection1(15990).InputEvent.Disconnect, () => {
                 if (c10 === inputConnection1) {
                   if (null != _null) {
                     obj2 = { type: "PASS_THE_CONTROLLER_UPDATE", streamKey: _null.streamKey, isHost: true, host: AuthenticationStore.getId(), active: false };

@@ -1,7 +1,7 @@
-// === Module 15362: useCanOpenBadgeDirectoryFromProfile ===
+// === Module 15359: useCanOpenBadgeDirectoryFromProfile ===
 
-// Module 15362 (useCanOpenBadgeDirectoryFromProfile)
-import BadgeManagementExperiment from "BadgeManagementExperiment" /* 10012 */;
+// Module 15359 (useCanOpenBadgeDirectoryFromProfile)
+import BadgeManagementExperiment from "BadgeManagementExperiment" /* 10011 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/badges/native/useCanOpenBadgeDirectoryFromProfile.tsx");

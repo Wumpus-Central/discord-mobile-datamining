@@ -1,6 +1,6 @@
-// === Module 10449: ConjureMobileExperiment ===
+// === Module 10447: ConjureMobileExperiment ===
 
-// Module 10449 (ConjureMobileExperiment)
+// Module 10447 (ConjureMobileExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

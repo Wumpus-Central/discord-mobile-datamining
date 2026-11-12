@@ -1,6 +1,6 @@
-// === Module 16511: InputView ===
+// === Module 16506: InputView ===
 
-// Module 16511 (InputView)
+// Module 16506 (InputView)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -8,7 +8,7 @@ import PlatformUtils from "PlatformUtils" /* 1377 */;
 import shared from "shared" /* 5250 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import CircleXIcon from "CircleXIcon" /* 7563 */;
-import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 13411 */;
+import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 13405 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -186,7 +186,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
     obj.style = items;
     const items1 = ["(", error, ")"];
     obj.children = items1;
-    tmp3 = closure_1_10(native.LegacyText, obj);
+    tmp3 = refs(native.LegacyText, obj);
   }
   let tmp10 = null != title;
   if (tmp10) {
@@ -226,7 +226,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
   items2[2] = tmp22;
   items2[3] = tmp3;
   obj4.children = items2;
-  return closure_1_10(hasOwnProperty, obj4);
+  return refs(hasOwnProperty, obj4);
 };
 prototype["renderBottomContainer"] = function renderBottomContainer() {
   const self = this;
@@ -368,7 +368,7 @@ prototype["render"] = function render() {
   obj3.style = items2;
   const items3 = [self.renderTextView(), self.renderTrailingButton()];
   obj3.children = items3;
-  items1[1] = closure_1_10(hasOwnProperty, obj3);
+  items1[1] = refs(hasOwnProperty, obj3);
   items1[2] = PlatformUtils.isAndroid() && self.renderBorder();
   items1[3] = self.renderBottomContainer();
   const tmp8 = PlatformUtils.isAndroid() && self.renderBorder();
@@ -379,7 +379,7 @@ prototype["render"] = function render() {
   }
   items1[4] = renderBorderResult;
   obj2.children = items1;
-  obj.children = closure_1_10(hasOwnProperty, obj2);
+  obj.children = refs(hasOwnProperty, obj2);
   return React6(metroImportDefault, obj);
 };
 InputView.contextType = fn(5314).ThemeContext;

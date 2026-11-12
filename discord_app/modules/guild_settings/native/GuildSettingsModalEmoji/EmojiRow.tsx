@@ -1,11 +1,11 @@
-// === Module 20361: GuildSettingsModalEmoji/EmojiRow ===
+// === Module 20356: GuildSettingsModalEmoji/EmojiRow ===
 
-// Module 20361 (GuildSettingsModalEmoji/EmojiRow)
+// Module 20356 (GuildSettingsModalEmoji/EmojiRow)
 import nativeDefault from "native" /* 575 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 5193 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5505 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 11244 */;
-import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 20362 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 11238 */;
+import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 20357 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;

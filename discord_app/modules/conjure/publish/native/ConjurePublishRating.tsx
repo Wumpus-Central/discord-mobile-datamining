@@ -1,6 +1,6 @@
-// === Module 13654: ConjurePublishRating ===
+// === Module 13648: ConjurePublishRating ===
 
-// Module 13654 (ConjurePublishRating)
+// Module 13648 (ConjurePublishRating)
 import nativeDefault from "native" /* 575 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
@@ -8,7 +8,7 @@ import timing_timing from "timing/timing" /* 5485 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import spring_spring from "spring/spring" /* 5876 */;
 import springPresets from "springPresets" /* 5877 */;
-import ConjureRatingFeedbackSheet from "ConjureRatingFeedbackSheet" /* 13656 */;
+import ConjureRatingFeedbackSheet from "ConjureRatingFeedbackSheet" /* 13650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
@@ -61,9 +61,9 @@ function Star(rating) {
   ConjurePublishRatingTsx1.__initData = tmp7;
   const animatedStyle = require("module_1652").useAnimatedStyle(ConjurePublishRatingTsx1);
   if (tmp2) {
-    let StarOutlineIcon = tmp3(10115).StarIcon;
+    let StarOutlineIcon = tmp3(10114).StarIcon;
   } else {
-    StarOutlineIcon = tmp3(10113).StarOutlineIcon;
+    StarOutlineIcon = tmp3(10112).StarOutlineIcon;
   }
   let obj3 = { style: tmp.star, accessibilityRole: "button", accessibilityLabel: null, disabled: null, hitSlop: null, onPress: null, children: null };
   let obj2 = require("module_1652");
@@ -153,8 +153,8 @@ export default function ConjurePublishRating(arg0) {
       if (null != tmp2) {
         const obj = ActionSheetActionCreatorsDefault;
         const obj2 = { rating: tmp2 };
-        obj.openLazy(asyncRequireImpl(13656, dependencyMap.paths), ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY, obj2);
-        const tmp6 = asyncRequireImpl(13656, dependencyMap.paths);
+        obj.openLazy(asyncRequireImpl(13650, dependencyMap.paths), ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY, obj2);
+        const tmp6 = asyncRequireImpl(13650, dependencyMap.paths);
       }
     };
     return closure_1_7(Star, obj, rating);

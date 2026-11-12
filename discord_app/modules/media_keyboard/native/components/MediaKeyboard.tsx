@@ -1,23 +1,23 @@
-// === Module 13435: MediaKeyboard ===
+// === Module 13429: MediaKeyboard ===
 
-// Module 13435 (MediaKeyboard)
+// Module 13429 (MediaKeyboard)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ChatInputUtils from "ChatInputUtils" /* 5438 */;
 import ThreadIcon from "ThreadIcon" /* 8006 */;
 import ImageIcon from "ImageIcon" /* 8020 */;
 import AppsIcon from "AppsIcon" /* 8036 */;
-import Upload from "Upload" /* 8808 */;
-import AttachmentIcon from "AttachmentIcon" /* 10985 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11574 */;
-import PollsIcon from "PollsIcon" /* 11577 */;
-import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 11579 */;
-import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 11581 */;
-import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 13440 */;
-import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 13462 */;
-import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 13463 */;
+import Upload from "Upload" /* 8807 */;
+import AttachmentIcon from "AttachmentIcon" /* 10979 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 11568 */;
+import PollsIcon from "PollsIcon" /* 11571 */;
+import MediaKeyboardBottomSheetHeaderSimpleDefault from "MediaKeyboardBottomSheetHeaderSimple" /* 11573 */;
+import MediaKeyboardBottomSheetActionsDefault from "MediaKeyboardBottomSheetActions" /* 11575 */;
+import PollCreationModalActionCreators from "PollCreationModalActionCreators" /* 13434 */;
+import MediaKeyboardAccessoriesContainerDefault from "MediaKeyboardAccessoriesContainer" /* 13456 */;
+import MediaKeyboardFloatingSendDefault from "MediaKeyboardFloatingSend" /* 13457 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8806 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8805 */;
 
 require = fn;
 const DraftType = fn(8658).DraftType;
@@ -26,7 +26,7 @@ const MediaKeyboardConstants = fn(1623);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9 } = Constants);
 const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
-const KEYBOARD_ANIMATION_CONFIG = fn(13269).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(13263).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const size = fn(2);

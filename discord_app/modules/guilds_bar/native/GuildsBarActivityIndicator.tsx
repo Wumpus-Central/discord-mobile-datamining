@@ -1,6 +1,6 @@
-// === Module 18957: GuildsBarActivityIndicator ===
+// === Module 18952: GuildsBarActivityIndicator ===
 
-// Module 18957 (GuildsBarActivityIndicator)
+// Module 18952 (GuildsBarActivityIndicator)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import useToken from "useToken" /* 5839 */;
@@ -11,31 +11,31 @@ import StageIcon from "StageIcon" /* 7952 */;
 import _modDef7973 from "module_7973" /* 7973 */;
 import AppsIcon from "AppsIcon" /* 8036 */;
 import CalendarIcon from "CalendarIcon" /* 8391 */;
-import ScreenIcon from "ScreenIcon" /* 10400 */;
-import VideoIcon from "VideoIcon" /* 10983 */;
-import _modDef12843 from "module_12843" /* 12843 */;
-import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 18956 */;
-import _modDef18958 from "module_18958" /* 18958 */;
-import _modDef18959 from "module_18959" /* 18959 */;
-import _modDef18960 from "module_18960" /* 18960 */;
+import ScreenIcon from "ScreenIcon" /* 10398 */;
+import VideoIcon from "VideoIcon" /* 10977 */;
+import _modDef12837 from "module_12837" /* 12837 */;
+import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 18951 */;
+import _modDef18953 from "module_18953" /* 18953 */;
+import _modDef18954 from "module_18954" /* 18954 */;
+import _modDef18955 from "module_18955" /* 18955 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function getMediaIcon(activeEvent) {
   if (activeEvent.activeEvent) {
-    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef12843 };
+    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef12837 };
     let tmp6 = obj2;
   } else if (tmp4) {
     const obj3 = { icon: StageIcon.StageIcon, source: _modDef7951 };
     tmp6 = obj3;
   } else if (tmp3) {
-    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18958 };
+    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18953 };
     tmp6 = obj4;
   } else if (tmp2) {
-    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18959 };
+    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18954 };
     tmp6 = obj5;
   } else if (tmp) {
-    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18960 };
+    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18955 };
     tmp6 = obj6;
   } else {
     tmp6 = null;

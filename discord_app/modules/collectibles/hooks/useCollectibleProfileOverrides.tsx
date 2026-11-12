@@ -1,8 +1,8 @@
-// === Module 9357: useCollectibleProfileOverrides ===
+// === Module 9356: useCollectibleProfileOverrides ===
 
-// Module 9357 (useCollectibleProfileOverrides)
+// Module 9356 (useCollectibleProfileOverrides)
 import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
-import useShopProductItems from "useShopProductItems" /* 9336 */;
+import useShopProductItems from "useShopProductItems" /* 9335 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

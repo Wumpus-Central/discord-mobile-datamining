@@ -1,6 +1,6 @@
-// === Module 17970: UserSettingsText ===
+// === Module 17965: UserSettingsText ===
 
-// Module 17970 (UserSettingsText)
+// Module 17965 (UserSettingsText)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserSettings from "UserSettings" /* 5068 */;

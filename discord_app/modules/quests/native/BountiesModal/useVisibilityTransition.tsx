@@ -1,6 +1,6 @@
-// === Module 17436: useVisibilityTransition ===
+// === Module 17431: useVisibilityTransition ===
 
-// Module 17436 (useVisibilityTransition)
+// Module 17431 (useVisibilityTransition)
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
 import timing_timing from "timing/timing" /* 5485 */;

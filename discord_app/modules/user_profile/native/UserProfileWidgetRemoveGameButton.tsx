@@ -1,13 +1,13 @@
-// === Module 12069: UserProfileWidgetRemoveGameButton ===
+// === Module 12063: UserProfileWidgetRemoveGameButton ===
 
-// Module 12069 (UserProfileWidgetRemoveGameButton)
+// Module 12063 (UserProfileWidgetRemoveGameButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5252 */;
 import TrashIcon from "TrashIcon" /* 5977 */;
 import IconButton from "IconButton" /* 7922 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8480 */;
-import WidgetUtils from "WidgetUtils" /* 12029 */;
+import WidgetUtils from "WidgetUtils" /* 12023 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

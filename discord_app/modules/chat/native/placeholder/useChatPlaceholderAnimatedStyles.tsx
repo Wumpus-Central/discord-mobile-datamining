@@ -1,6 +1,6 @@
-// === Module 14852: useChatPlaceholderAnimatedStyles ===
+// === Module 14848: useChatPlaceholderAnimatedStyles ===
 
-// Module 14852 (useChatPlaceholderAnimatedStyles)
+// Module 14848 (useChatPlaceholderAnimatedStyles)
 import initialize from "initialize" /* 504 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import timing_timing from "timing/timing" /* 5485 */;

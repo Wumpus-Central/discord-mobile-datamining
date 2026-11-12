@@ -1,12 +1,12 @@
-// === Module 10266: GameProfileStoreLinks ===
+// === Module 10264: GameProfileStoreLinks ===
 
-// Module 10266 (GameProfileStoreLinks)
+// Module 10264 (GameProfileStoreLinks)
 import nativeDefault from "native" /* 575 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5489 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
 import LinkingDefault from "Linking" /* 5949 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 10217 */;
-import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 10245 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 10215 */;
+import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 10243 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileStoreLinksActionSheetDefault = GameProfileStoreLinksActionSheet;

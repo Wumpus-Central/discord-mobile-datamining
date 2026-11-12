@@ -223,7 +223,7 @@ function handleFavoritesUpdate() {
     }
     _null.push({ channel, index: -1 });
   }
-  const channels = GuildChannelStore.getChannels(closure_1_10);
+  const channels = GuildChannelStore.getChannels(refs);
   const obj = { _categories: [], null: [] };
   const item = channels[constants.GUILD_CATEGORY].forEach((channel) => {
     channel = channel.channel;
@@ -234,7 +234,7 @@ function handleFavoritesUpdate() {
   const item1 = channels[hasOwnProperty].forEach(updateChannel);
   const item2 = channels[timestampProducer].forEach(updateChannel);
   const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
-  closure_12[closure_1_10] = obj;
+  closure_12[refs] = obj;
 }
 let GuildChannelStore = fn(5173);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: closure_6 } = GuildChannelStore);

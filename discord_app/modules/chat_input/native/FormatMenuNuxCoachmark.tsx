@@ -1,6 +1,6 @@
-// === Module 14736: FormatMenuNuxCoachmark ===
+// === Module 14732: FormatMenuNuxCoachmark ===
 
-// Module 14736 (FormatMenuNuxCoachmark)
+// Module 14732 (FormatMenuNuxCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 7577 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const useChatInputKeyboardOffsetDefault = tmp5(14737);
+const useChatInputKeyboardOffsetDefault = tmp5(14733);
 require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(5089).ContentDismissActionType;
@@ -61,7 +61,7 @@ export default function FormatMenuNuxCoachmark() {
       return obj;
     }, items1);
     const ref = coachmark.useRef(null);
-    coachmark = tmp2(9501).useCoachmark(ref, memo);
+    coachmark = tmp2(9500).useCoachmark(ref, memo);
     const items2 = [coachmark];
     const obj2 = {
       style: tmp.anchor,

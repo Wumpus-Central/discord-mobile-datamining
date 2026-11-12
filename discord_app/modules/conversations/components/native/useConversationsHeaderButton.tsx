@@ -1,9 +1,9 @@
-// === Module 9052: useConversationsHeaderButton ===
+// === Module 9051: useConversationsHeaderButton ===
 
-// Module 9052 (useConversationsHeaderButton)
+// Module 9051 (useConversationsHeaderButton)
 import util from "util" /* 1113 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 9055 */;
-import PaperIcon from "PaperIcon" /* 9059 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 9054 */;
+import PaperIcon from "PaperIcon" /* 9058 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelConversationsStore from "ChannelConversationsStore" /* 8678 */;

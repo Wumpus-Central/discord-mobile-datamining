@@ -1,12 +1,12 @@
-// === Module 20041: ChannelResyncManager ===
+// === Module 20036: ChannelResyncManager ===
 
-// Module 20041 (ChannelResyncManager)
+// Module 20036 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 8692 */;
-import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 16038 */;
+import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 16033 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -381,7 +381,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
                     let obj2 = closure_2_1(1252);
                   }
                 }
-                obj = closure_2_0(16038);
+                obj = closure_2_0(16033);
               }, Math.ceil(Math.random() * closure_2_12));
             }
             tmp2 = null != closure_1_0 && id.id !== tmp;

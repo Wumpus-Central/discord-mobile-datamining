@@ -1,6 +1,6 @@
-// === Module 11245: useEmojiAndSource ===
+// === Module 11239: useEmojiAndSource ===
 
-// Module 11245 (useEmojiAndSource)
+// Module 11239 (useEmojiAndSource)
 import EmojiTypes from "EmojiTypes" /* 5192 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,6 +1,6 @@
-// === Module 15155: QuestOrbsRewardModal ===
+// === Module 15152: QuestOrbsRewardModal ===
 
-// Module 15155 (QuestOrbsRewardModal)
+// Module 15152 (QuestOrbsRewardModal)
 import nativeDefault from "native" /* 575 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -9,11 +9,11 @@ import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 2022 *
 import FastImageDefault from "FastImage" /* 5957 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
 import XSmallIcon from "XSmallIcon" /* 7483 */;
-import OrbsIcon from "OrbsIcon" /* 9375 */;
-import APNGPlayer from "APNGPlayer" /* 9432 */;
-import _modDef15156 from "module_15156" /* 15156 */;
-import _modDef15157 from "module_15157" /* 15157 */;
-import _modDef15158 from "module_15158" /* 15158 */;
+import OrbsIcon from "OrbsIcon" /* 9374 */;
+import APNGPlayer from "APNGPlayer" /* 9431 */;
+import _modDef15153 from "module_15153" /* 15153 */;
+import _modDef15154 from "module_15154" /* 15154 */;
+import _modDef15155 from "module_15155" /* 15155 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -59,7 +59,7 @@ function StaticOrb() {
   const obj2 = { source: null, style: null, fadeDuration: 0 };
   const obj3 = { uri: null };
   const tmp = closure_26();
-  obj3.uri = _modDef15156;
+  obj3.uri = _modDef15153;
   obj2.source = obj3;
   obj2.style = tmp.animatedOrb;
   obj.children = gesture(FastImageDefault, obj2);
@@ -104,7 +104,7 @@ function AnimatedOrbContainer(isAppActive) {
     tmp13 = gesture(React5, obj2);
   }
   const items1 = [tmp13, , ];
-  const obj3 = { uri: _modDef15157, style: null, onLoad: null, animate: null };
+  const obj3 = { uri: _modDef15154, style: null, onLoad: null, animate: null };
   const items2 = [tmp.animatedOrb, ];
   let obj4 = tmp15Result;
   if (!tmp15Result) {
@@ -123,7 +123,7 @@ function AnimatedOrbContainer(isAppActive) {
   obj3.animate = tmp19;
   items1[1] = gesture(closure_25, obj3);
   if (tmp15Result) {
-    const obj5 = { uri: _modDef15158, style: tmp.animatedOrb, onLoad: callback, animate: isAppActive };
+    const obj5 = { uri: _modDef15155, style: tmp.animatedOrb, onLoad: callback, animate: isAppActive };
     tmp15Result = gesture(closure_25, obj5);
   }
   items1[2] = tmp15Result;
@@ -242,8 +242,8 @@ export default function QuestOrbsRewardModal(quest) {
   const items1 = [AccessibilityStore];
   const stateFromStores = num(504).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   let obj2 = num(504);
-  num = num(10370).useFetchVirtualCurrencyBalance().balance;
-  const obj3 = num(10370);
+  num = num(10368).useFetchVirtualCurrencyBalance().balance;
+  const obj3 = num(10368);
   [tmp8, c1] = noop.useState(false);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
   const items2 = [AppStateStore];
@@ -257,8 +257,8 @@ export default function QuestOrbsRewardModal(quest) {
     num2 = userStatus.orbQuantityClaimed;
   }
   if (num2 == null) {
-    num2 = tmp5(10083).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
-    const tmp5Result = tmp5(10083);
+    num2 = tmp5(10082).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
+    const tmp5Result = tmp5(10082);
   }
   const effect = noop.useEffect(() => {
     num(dependencyMap[31]).applyOrientationLock("PORTRAIT");
@@ -276,7 +276,7 @@ export default function QuestOrbsRewardModal(quest) {
     obj2.openQuestHome({ filter: constants.VIRTUAL_CURRENCY, fromContent: num(dependencyMap[33]).QuestContent.REWARD_MODAL });
   }, []);
   const obj6 = { style: tmp.root, children: null };
-  const obj7 = { style: absoluteFill.absoluteFill, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(num(9662).OrbsRewardBackground, { style: tmp.background, onReady: callback }) };
+  const obj7 = { style: absoluteFill.absoluteFill, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: closure_14(num(9661).OrbsRewardBackground, { style: tmp.background, onReady: callback }) };
   const items4 = [closure_14(closure_8, obj7), , ];
   let tmp15Result = !tmp8;
   if (!tmp8) {

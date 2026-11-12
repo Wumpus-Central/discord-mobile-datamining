@@ -1,6 +1,6 @@
-// === Module 8970: PremiumUpsellActionSheet ===
+// === Module 8969: PremiumUpsellActionSheet ===
 
-// Module 8970 (PremiumUpsellActionSheet)
+// Module 8969 (PremiumUpsellActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -9,8 +9,8 @@ import ChatInputUtils from "ChatInputUtils" /* 5438 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 8969 */;
-import APNGPlayer from "APNGPlayer" /* 9432 */;
+import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 8968 */;
+import APNGPlayer from "APNGPlayer" /* 9431 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
@@ -71,7 +71,7 @@ const PremiumConstants = fn(1387);
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ThemeTypes: closure_15 } = Constants);
 const ApplicationStreamFPS = fn(6108).ApplicationStreamFPS;
-const premiumMax = fn(8965).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(8964).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
 const createStyles = fn(5243);

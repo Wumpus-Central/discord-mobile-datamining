@@ -1,11 +1,11 @@
-// === Module 11777: PremiumGiftSuccess ===
+// === Module 11771: PremiumGiftSuccess ===
 
-// Module 11777 (PremiumGiftSuccess)
+// Module 11771 (PremiumGiftSuccess)
 import nativeDefault from "native" /* 575 */;
 import dismissible_content from "dismissible_content" /* 5076 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 5077 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 9557 */;
+import PromotionsStore from "PromotionsStore" /* 9556 */;
 
 const require = globalThis.__r;
 

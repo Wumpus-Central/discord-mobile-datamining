@@ -1,23 +1,23 @@
-// === Module 14957: InstantInviteRow ===
+// === Module 14953: InstantInviteRow ===
 
-// Module 14957 (InstantInviteRow)
+// Module 14953 (InstantInviteRow)
 import nativeDefault from "native" /* 575 */;
 import InstantInviteUtils from "InstantInviteUtils" /* 8397 */;
-import InviteQueue from "InviteQueue" /* 14958 */;
+import InviteQueue from "InviteQueue" /* 14954 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import CreateInviteModalStore from "CreateInviteModalStore" /* 8396 */;
 import GuildStore from "GuildStore" /* 5114 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 14623 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 14619 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const InviteQueueDefault = InviteQueue;
 
 require = fn;
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(12475);
+const InstantInviteSendStateStore = fn(12469);
 ({ setSendState: closure_9, useInstantInviteSendStates: closure_10 } = InstantInviteSendStateStore);
-const InviteSendStates = fn(8776).InviteSendStates;
+const InviteSendStates = fn(8775).InviteSendStates;
 const jsx = fn(21).jsx;
 const createStyles = fn(5243);
 let obj = { acronym: null };

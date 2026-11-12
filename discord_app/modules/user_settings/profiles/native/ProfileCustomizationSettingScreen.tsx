@@ -1,22 +1,22 @@
-// === Module 16944: ProfileCustomizationSettingScreen ===
+// === Module 16939: ProfileCustomizationSettingScreen ===
 
-// Module 16944 (ProfileCustomizationSettingScreen)
+// Module 16939 (ProfileCustomizationSettingScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
 import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7734 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9971 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12032 */;
-import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 15351 */;
-import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 16945 */;
-import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 17069 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9970 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12026 */;
+import maybeShowUnsavedChangesAlertDefault from "maybeShowUnsavedChangesAlert" /* 15348 */;
+import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile" /* 16940 */;
+import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile" /* 17064 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9969 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9968 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8476 */;
-import WidgetStore from "WidgetStore" /* 12030 */;
+import WidgetStore from "WidgetStore" /* 12024 */;
 import SortedGuildStore from "SortedGuildStore" /* 6893 */;
 
 const require = globalThis.__r;
@@ -204,7 +204,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
     const result = closure_1_0(7734).resetAndCloseUserProfileForm();
     hasUnsavedChanges.resetState();
     const obj = closure_1_0(7734);
-    token(12032).clearPendingWidgets();
+    token(12026).clearPendingWidgets();
   }, []);
   const items6 = [token, nativeStackNavigation, isMobileWidgetEditingEnabled, hasUnsavedChanges, hasInvalidWidgetChanges, tmp21.isSubmitting || tmp23.isSubmitting, onSave];
   const layoutEffect = obj5.useLayoutEffect(() => {

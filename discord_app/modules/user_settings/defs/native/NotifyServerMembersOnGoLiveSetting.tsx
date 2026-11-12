@@ -1,12 +1,12 @@
-// === Module 18488: NotifyServerMembersOnGoLiveSetting ===
+// === Module 18483: NotifyServerMembersOnGoLiveSetting ===
 
-// Module 18488 (NotifyServerMembersOnGoLiveSetting)
+// Module 18483 (NotifyServerMembersOnGoLiveSetting)
 import util from "util" /* 1113 */;
 import _modDef2853 from "module_2853" /* 2853 */;
 import UserSettings from "UserSettings" /* 5068 */;
-import SettingsConstants from "SettingsConstants" /* 9136 */;
-import go_live_GoLiveNotificationUtils from "go_live/GoLiveNotificationUtils" /* 18489 */;
-import SettingBuilders from "SettingBuilders" /* 12317 */;
+import SettingsConstants from "SettingsConstants" /* 9135 */;
+import go_live_GoLiveNotificationUtils from "go_live/GoLiveNotificationUtils" /* 18484 */;
+import SettingBuilders from "SettingBuilders" /* 12311 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

@@ -1,8 +1,8 @@
-// === Module 14514: ForumPostAppliedTags ===
+// === Module 14510: ForumPostAppliedTags ===
 
-// Module 14514 (ForumPostAppliedTags)
+// Module 14510 (ForumPostAppliedTags)
 import nativeDefault from "native" /* 575 */;
-import AppliedForumTag from "AppliedForumTag" /* 11566 */;
+import AppliedForumTag from "AppliedForumTag" /* 11560 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ export function ForumPostAppliedTagPills(additionalTagsCount) {
     obj2.tag = obj3;
     obj2.containerStyle = tmp.tag;
     obj2.hasUnreads = hasUnreads;
-    tmp4 = closure_3(hasUnreads(11566).AppliedForumTagPill, obj2);
+    tmp4 = closure_3(hasUnreads(11560).AppliedForumTagPill, obj2);
   }
   items1[1] = tmp4;
   obj.children = items1;

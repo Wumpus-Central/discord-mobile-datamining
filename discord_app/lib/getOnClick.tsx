@@ -11,13 +11,13 @@ import CodedLink from "CodedLink" /* 5992 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
 import safeTransitionToDefault from "safeTransitionTo" /* 7199 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7594 */;
-import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 8730 */;
-import activityBookmarkUtils from "activityBookmarkUtils" /* 8731 */;
-import QuestUtils from "QuestUtils" /* 10061 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 11669 */;
-import storefrontCodedLink from "storefrontCodedLink" /* 12345 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 12422 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 12615 */;
+import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 8729 */;
+import activityBookmarkUtils from "activityBookmarkUtils" /* 8730 */;
+import QuestUtils from "QuestUtils" /* 10060 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 11663 */;
+import storefrontCodedLink from "storefrontCodedLink" /* 12339 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 12416 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 12609 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2162 */;
@@ -319,7 +319,7 @@ export default function getOnClick(assetURL) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "Array" };
+      result = { applicationId: code, skuId: "a" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -402,7 +402,7 @@ export default function getOnClick(assetURL) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(15832, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(15827, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(assetURL, analyticsLocations);
         });
         return true;
@@ -489,7 +489,7 @@ export default function getOnClick(assetURL) {
           return true;
         };
       }
-      tmp2Result = tmp2(10065);
+      tmp2Result = tmp2(10064);
     }
   }
   if (null != findCodedLinkResult) {
@@ -601,7 +601,7 @@ export default function getOnClick(assetURL) {
         return true;
       };
     }
-    tmp2Result4 = tmp2(12420);
+    tmp2Result4 = tmp2(12414);
   }
   const tmp2Result3 = require("LinkUtils");
 };

@@ -417,9 +417,9 @@ prototype["hasHadPremium"] = function hasHadPremium(arg0) {
   if (arg0 === undefined) {
     tmp = null;
   }
-  const hasPurchasedFlagResult = this.hasPurchasedFlag(closure_1_10.PREMIUM_TIER_0);
-  const hasPurchasedFlagResult1 = this.hasPurchasedFlag(closure_1_10.PREMIUM_TIER_1);
-  const hasPurchasedFlagResult2 = this.hasPurchasedFlag(closure_1_10.PREMIUM_TIER_2);
+  const hasPurchasedFlagResult = this.hasPurchasedFlag(refs.PREMIUM_TIER_0);
+  const hasPurchasedFlagResult1 = this.hasPurchasedFlag(refs.PREMIUM_TIER_1);
+  const hasPurchasedFlagResult2 = this.hasPurchasedFlag(refs.PREMIUM_TIER_2);
   if (React6.TIER_0 === tmp) {
     return hasPurchasedFlagResult;
   } else if (React6.TIER_1 === tmp) {

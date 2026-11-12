@@ -1,11 +1,11 @@
-// === Module 8719: EditMessageStore ===
+// === Module 8718: EditMessageStore ===
 
-// Module 8719 (EditMessageStore)
+// Module 8718 (EditMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import UserSettings from "UserSettings" /* 5068 */;
-import MessageParserDefault from "MessageParser" /* 8720 */;
-import SlateUtils from "SlateUtils" /* 8725 */;
+import MessageParserDefault from "MessageParser" /* 8719 */;
+import SlateUtils from "SlateUtils" /* 8724 */;
 import MessageStore from "MessageStore" /* 6309 */;
 
 require = fn;

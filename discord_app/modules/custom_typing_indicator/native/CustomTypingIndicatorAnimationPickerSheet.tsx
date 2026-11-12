@@ -1,6 +1,6 @@
-// === Module 17868: CustomTypingIndicatorAnimationPickerSheet ===
+// === Module 17863: CustomTypingIndicatorAnimationPickerSheet ===
 
-// Module 17868 (CustomTypingIndicatorAnimationPickerSheet)
+// Module 17863 (CustomTypingIndicatorAnimationPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import Stack_Stack from "Stack/Stack" /* 6274 */;
@@ -73,7 +73,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   const obj7 = { config: null, size: 54 };
   const obj8 = { emojis, animation, typingSuggestion: onChange(1398).TypingSuggestion.UNSPECIFIED };
   obj7.config = obj8;
-  obj6.children = closure_6(animation(14484), obj7);
+  obj6.children = closure_6(animation(14480), obj7);
   const items1 = [closure_6(View, obj6), ];
   const obj9 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];

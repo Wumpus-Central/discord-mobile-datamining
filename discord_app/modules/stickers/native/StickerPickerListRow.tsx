@@ -1,6 +1,6 @@
-// === Module 11311: StickerPickerListRow ===
+// === Module 11305: StickerPickerListRow ===
 
-// Module 11311 (StickerPickerListRow)
+// Module 11305 (StickerPickerListRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import UserSettings from "UserSettings" /* 5068 */;
@@ -21,7 +21,7 @@ function StickerItemLockedOverlay() {
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 const StickerAnimationSettings = fn(5071).StickerAnimationSettings;
-const StickerPickerConstants = fn(11183);
+const StickerPickerConstants = fn(11177);
 const STICKER_SIZE = StickerPickerConstants.STICKER_SIZE;
 const PADDING_VERTICAL = fn(1228).PADDING_VERTICAL;
 const jsxProd = fn(21);
@@ -101,7 +101,7 @@ export default function StickerPickerListRow(stickers) {
           let obj2 = { stickerId: null, stickerName: null, stickerType: null, stickerUrl: null, stickerAnimated: null, stickerDisabled: null, stickerOpaque: null, stickerLocked: null };
           ({ id: obj4.stickerId, name: obj4.stickerName, format_type: obj4.stickerType } = tmp12);
           ({ isOpaque, isDisabled, isLocked } = rowTraitsResult);
-          let obj5 = stickers(11030);
+          let obj5 = stickers(11024);
           obj2.stickerUrl = obj5.getStickerAssetUrl(tmp12, STICKER_SIZE, isAnimated);
           obj2.stickerAnimated = isAnimated;
           obj2.stickerDisabled = isDisabled;
@@ -137,7 +137,7 @@ export default function StickerPickerListRow(stickers) {
           handleOnLongPressSticker(found);
         }
       };
-      return closure_8(isSectionNitroLocked(11312), obj6);
+      return closure_8(isSectionNitroLocked(11306), obj6);
     } catch (tmp26) {
       const obj9 = { message: "Error in StickerPickerListRowNativeComponent", category: "sticker", data: null };
       const obj10 = { itemLength: arr.length, items: null };
@@ -192,7 +192,7 @@ export default function StickerPickerListRow(stickers) {
               return handleOnLongPressSticker(closure_0);
             };
             const obj3 = { sticker: tmp2, size, animated: stickers(6729).shouldAnimateSticker(closure_8, tmp2.id === id), opaque: isSendableStickerResult };
-            const items1 = [closure_8(isSectionNitroLocked(11030), obj3, c11), ];
+            const items1 = [closure_8(isSectionNitroLocked(11024), obj3, c11), ];
             let tmp16 = null;
             if (!isSendableStickerResult) {
               tmp16 = closure_8(c11, {});

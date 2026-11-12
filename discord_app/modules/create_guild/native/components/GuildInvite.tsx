@@ -1,6 +1,6 @@
-// === Module 14956: GuildInvite ===
+// === Module 14952: GuildInvite ===
 
-// Module 14956 (GuildInvite)
+// Module 14952 (GuildInvite)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
@@ -10,15 +10,15 @@ import TableRow from "TableRow" /* 7379 */;
 import NavigatorHeader from "NavigatorHeader" /* 7427 */;
 import _mod7822 from "module_7822" /* 7822 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8394 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 14622 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14916 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 14957 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 14618 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 14912 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 14953 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import CreateInviteModalStore from "CreateInviteModalStore" /* 8396 */;
 import GuildChannelStore from "GuildChannelStore" /* 5173 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 14623 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 14619 */;
 
 require = fn;
 function SeeMoreFooter(openInviteSheet) {
@@ -72,7 +72,7 @@ function GuildInviteSuggestionRows(openInviteSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(12475).useInstantInviteSendStates;
+let closure_6 = fn(12469).useInstantInviteSendStates;
 const CreateGuildModalStates = fn(7731).CreateGuildModalStates;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, Permissions: closure_15, SearchTypes: closure_16 } = Constants);

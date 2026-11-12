@@ -1,9 +1,9 @@
-// === Module 12965: DisconnectRemoteButton ===
+// === Module 12959: DisconnectRemoteButton ===
 
-// Module 12965 (DisconnectRemoteButton)
-import CallsUtils from "CallsUtils" /* 10516 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10758 */;
-import CallBarActionAll from "CallBarAction" /* 12639 */;
+// Module 12959 (DisconnectRemoteButton)
+import CallsUtils from "CallsUtils" /* 10514 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10752 */;
+import CallBarActionAll from "CallBarAction" /* 12633 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 6009 */;
 
@@ -17,7 +17,7 @@ export function DisconnectRemoteButton(channel) {
   items = [GameConsoleStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => ({ awaitingRemote: null != GameConsoleStore.getAwaitingRemoteSessionInfo(), remoteSessionId: GameConsoleStore.getRemoteSessionId() }));
   const remoteSessionId = stateFromStoresObject.remoteSessionId;
-  let obj2 = { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7366 : 12905), accessibilityLabel: null, isSmallSize: null, onPress: null };
+  let obj2 = { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7366 : 12899), accessibilityLabel: null, isSmallSize: null, onPress: null };
   const intl = tmp(1113).intl;
   obj2.accessibilityLabel = intl.string(channel(1113).t["6vrfgt"]);
   obj2.isSmallSize = channel.isSmallSize;
@@ -29,5 +29,5 @@ export function DisconnectRemoteButton(channel) {
       GameConsoleActionCreators.disconnectRemote();
     }
   };
-  return jsx(CallBarActionAll.PrimaryActionButton, { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7366 : 12905), accessibilityLabel: null, isSmallSize: null, onPress: null });
+  return jsx(CallBarActionAll.PrimaryActionButton, { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7366 : 12899), accessibilityLabel: null, isSmallSize: null, onPress: null });
 }

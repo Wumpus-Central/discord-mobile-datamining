@@ -1,6 +1,6 @@
-// === Module 12241: useIsChannelPinotPromotable ===
+// === Module 12235: useIsChannelPinotPromotable ===
 
-// Module 12241 (useIsChannelPinotPromotable)
+// Module 12235 (useIsChannelPinotPromotable)
 import Constants from "Constants" /* 1072 */;
 import ChannelRecord from "ChannelRecord" /* 5096 */;
 import PinotEligibility from "PinotEligibility" /* 8101 */;

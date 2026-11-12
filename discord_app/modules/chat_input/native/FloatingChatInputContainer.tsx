@@ -1,6 +1,6 @@
-// === Module 14714: FloatingChatInputContainer ===
+// === Module 14710: FloatingChatInputContainer ===
 
-// Module 14714 (FloatingChatInputContainer)
+// Module 14710 (FloatingChatInputContainer)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 5440 */;

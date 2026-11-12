@@ -1,6 +1,6 @@
-// === Module 11297: StickersActionCreators ===
+// === Module 11291: StickersActionCreators ===
 
-// Module 11297 (StickersActionCreators)
+// Module 11291 (StickersActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
@@ -456,7 +456,7 @@ export function favoriteSticker(sticker) {
       tmp = found;
     }
     stickerIds.stickerIds = tmp;
-    if (obj.size(stickerIds.stickerIds) >= closure_2_10) {
+    if (obj.size(stickerIds.stickerIds) >= refs) {
       const obj2 = { title: null, body: null };
       const intl = util.intl;
       obj2.title = intl.string(util.t["+XYXtZ"]);

@@ -1,16 +1,16 @@
-// === Module 14196: CheckpointCharacterStageLayer ===
+// === Module 14192: CheckpointCharacterStageLayer ===
 
-// Module 14196 (CheckpointCharacterStageLayer)
+// Module 14192 (CheckpointCharacterStageLayer)
 import usePrevious from "usePrevious" /* 6773 */;
-import CheckpointFadeLayerDefault from "CheckpointFadeLayer" /* 14197 */;
-import CheckpointCharacterStageDefault from "CheckpointCharacterStage" /* 14198 */;
+import CheckpointFadeLayerDefault from "CheckpointFadeLayer" /* 14193 */;
+import CheckpointCharacterStageDefault from "CheckpointCharacterStage" /* 14194 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CheckpointTransitionConstants = fn(14169);
+const CheckpointTransitionConstants = fn(14166);
 ({ CHECKPOINT_CHARACTER_STAGE_HIDE: metroImportDefault, CHECKPOINT_INSTANT: closure_8 } = CheckpointTransitionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -71,5 +71,5 @@ export default function CheckpointCharacterStageLayer(arg0) {
   obj6.children = React6(CheckpointCharacterStageDefault, { stage: currentWhen, layout, isActive, isHidden: tmp2, characterBottomInset: currentWhen1 });
   items = [React6(timestampProducer, obj6), currentWhen2];
   obj5.children = items;
-  return closure_1_10(CheckpointFadeLayerDefault, obj5);
+  return refs(CheckpointFadeLayerDefault, obj5);
 };

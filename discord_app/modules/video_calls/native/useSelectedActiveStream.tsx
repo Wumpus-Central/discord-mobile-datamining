@@ -1,6 +1,6 @@
-// === Module 15985: useSelectedActiveStream ===
+// === Module 15980: useSelectedActiveStream ===
 
-// Module 15985 (useSelectedActiveStream)
+// Module 15980 (useSelectedActiveStream)
 import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
 

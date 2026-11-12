@@ -1,10 +1,10 @@
-// === Module 10910: FavoritesCleanup ===
+// === Module 10904: FavoritesCleanup ===
 
-// Module 10910 (FavoritesCleanup)
+// Module 10904 (FavoritesCleanup)
 import DurationsDefault from "Durations" /* 1089 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 7005 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 10911 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 10905 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -98,7 +98,7 @@ export function getAutoAddedThreadsCategoryIds() {
   }
   items = [closure_1_11.toLowerCase()];
   const set = new Set(items);
-  if (FavoriteStore.autoAddThreadsMode === closure_1_10) {
+  if (FavoriteStore.autoAddThreadsMode === refs) {
     const guildsArray = GuildStore.getGuildsArray();
     for (const item10026 of guildsArray) {
       let str = item10026.name;

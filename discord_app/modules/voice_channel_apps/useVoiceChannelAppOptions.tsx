@@ -1,6 +1,6 @@
-// === Module 19486: useVoiceChannelAppOptions ===
+// === Module 19481: useVoiceChannelAppOptions ===
 
-// Module 19486 (useVoiceChannelAppOptions)
+// Module 19481 (useVoiceChannelAppOptions)
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import ConjureUtils from "ConjureUtils" /* 7197 */;
 import ConjureActionCreators from "ConjureActionCreators" /* 7265 */;

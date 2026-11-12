@@ -1,13 +1,13 @@
-// === Module 18551: RegisterUsernameInput ===
+// === Module 18546: RegisterUsernameInput ===
 
-// Module 18551 (RegisterUsernameInput)
+// Module 18546 (RegisterUsernameInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import Stack_Stack from "Stack/Stack" /* 6274 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 7557 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16375 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 17113 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16370 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 17108 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -31,7 +31,7 @@ function UsernameStatusMessage(arg0) {
     obj4.children = usernameStatus.message;
     items[1] = React6(Text_Text.Text, obj4);
     obj2.children = items;
-    let tmp6 = closure_1_10(Stack_Stack.Stack, obj2);
+    let tmp6 = refs(Stack_Stack.Stack, obj2);
   } else {
     if (isUsernameFocused) {
       let type1;
@@ -67,7 +67,7 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(18524);
+const RegistrationUIStore = fn(18519);
 ({ setRegistrationErrors: metroImportDefault, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
@@ -141,7 +141,7 @@ export function RegisterUsernameInput(setUsername) {
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(17113).NameValidationState.ERROR) {
+  if (type === tmp14(17108).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };

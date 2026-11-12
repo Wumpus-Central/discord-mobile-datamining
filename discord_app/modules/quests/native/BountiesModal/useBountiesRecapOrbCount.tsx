@@ -1,9 +1,9 @@
-// === Module 17439: useBountiesRecapOrbCount ===
+// === Module 17434: useBountiesRecapOrbCount ===
 
-// Module 17439 (useBountiesRecapOrbCount)
+// Module 17434 (useBountiesRecapOrbCount)
 import _mod1652 from "module_1652" /* 1652 */;
 import _mod1705 from "module_1705" /* 1705 */;
-import useBountiesRecapScroll from "useBountiesRecapScroll" /* 17438 */;
+import useBountiesRecapScroll from "useBountiesRecapScroll" /* 17433 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

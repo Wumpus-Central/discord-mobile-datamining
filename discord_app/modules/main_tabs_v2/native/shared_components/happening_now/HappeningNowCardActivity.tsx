@@ -1,17 +1,17 @@
-// === Module 18671: HappeningNowCardActivity ===
+// === Module 18666: HappeningNowCardActivity ===
 
-// Module 18671 (HappeningNowCardActivity)
+// Module 18666 (HappeningNowCardActivity)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ColorUtils from "ColorUtils" /* 5240 */;
 import ActivityTypes from "ActivityTypes" /* 6006 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 13011 */;
-import useLiveStageData from "useLiveStageData" /* 18669 */;
-import _modDef18672 from "module_18672" /* 18672 */;
-import _modDef18673 from "module_18673" /* 18673 */;
-import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 18680 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 13005 */;
+import useLiveStageData from "useLiveStageData" /* 18664 */;
+import _modDef18667 from "module_18667" /* 18667 */;
+import _modDef18668 from "module_18668" /* 18668 */;
+import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 18675 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 5097 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -131,10 +131,10 @@ function IconOrPreview(arg0) {
       obj8.style = tmp.cardImageStreamPreview;
       const intl5 = tmp28(1113).intl;
       obj8.ctaText = intl5.string(tmp28(1113).t["7Xq/nV"]);
-      obj3.children = closure_10(tmp2(13008), obj8);
+      obj3.children = closure_10(tmp2(13002), obj8);
       return closure_10(closure_4, obj3);
     } else {
-      if (tmp2(10797)(activity)) {
+      if (tmp2(10791)(activity)) {
         const intl4 = tmp28(1113).intl;
         let stringResult = intl4.string(tmp28(1113).t.rmnkz4);
       } else {
@@ -145,7 +145,7 @@ function IconOrPreview(arg0) {
         if (type === tmp28(6006).ActivityTypes.LISTENING) {
           const intl3 = tmp28(1113).intl;
           stringResult = intl3.string(tmp28(1113).t.kUEnxN);
-        } else if (tmp2(15603)(activity)) {
+        } else if (tmp2(15600)(activity)) {
           const intl2 = tmp28(1113).intl;
           stringResult = intl2.string(tmp28(1113).t.T0uYK9);
         } else {
@@ -177,7 +177,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       let tmp2Result4 = items[userId % items.length];
     } else {
-      tmp2Result4 = tmp2(18682);
+      tmp2Result4 = tmp2(18677);
     }
   }
 }
@@ -194,18 +194,18 @@ function StageStreamAvatars(stage) {
   obj3.guildId = stage.guild_id;
   obj3.userCount = audienceCount + 1;
   obj3.avatarSize = native.AvatarSizes.SIZE_16;
-  obj2.children = closure_1_10(HappeningNowAvatarStack.HappeningNowAvatarStack, obj3);
-  return closure_1_10(React4, obj2);
+  obj2.children = refs(HappeningNowAvatarStack.HappeningNowAvatarStack, obj3);
+  return refs(React4, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(17800);
+const HappeningNowConstants = fn(17795);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: metroImportDefault, STATUS_CUTOUT_SMALL: closure_8, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT } = HappeningNowConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef18672, _modDef18673];
+let items = [_modDef18667, _modDef18668];
 const createStyles = fn(5243);
 let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 }, cardAvatar: { marginBottom: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" }, cardImageStream: { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" }, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
@@ -302,8 +302,8 @@ export default noop.memo(function ActivityCard(userId) {
     obj2.destination_channel_id = channelId;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stream) {
-      asyncRequireImpl(13936, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(13936, dependencyMap.paths);
+      asyncRequireImpl(13932, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(13932, dependencyMap.paths);
     } else {
       asyncRequireImpl(8410, dependencyMap.paths).then((result) => result.default({ userId, localUser, sourceAnalyticsLocations }));
       const promise = asyncRequireImpl(8410, dependencyMap.paths);

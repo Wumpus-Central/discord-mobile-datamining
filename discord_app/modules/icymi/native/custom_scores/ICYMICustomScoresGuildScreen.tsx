@@ -1,22 +1,22 @@
-// === Module 19102: ICYMICustomScoresGuildScreen ===
+// === Module 19097: ICYMICustomScoresGuildScreen ===
 
-// Module 19102 (ICYMICustomScoresGuildScreen)
+// Module 19097 (ICYMICustomScoresGuildScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import ChannelListState from "ChannelListState" /* 8664 */;
-import ICYMIUtils from "ICYMIUtils" /* 10149 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10493 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 19104 */;
+import ICYMIUtils from "ICYMIUtils" /* 10147 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10491 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 19099 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelListStore from "ChannelListStore" /* 8662 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
-import ICYMIStore from "ICYMIStore" /* 10137 */;
+import ICYMIStore from "ICYMIStore" /* 10136 */;
 
 require = fn;
 function ICYMICustomScoreChannelRow(channelId) {
@@ -151,9 +151,9 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   const items2 = [ICYMIStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items2, () => ICYMIStore.getCustomGuildScore(guildId));
   const tmp2Result = navigation(504);
-  const numberToCustomScoreResult = navigation(10149).numberToCustomScore(stateFromStores1);
+  const numberToCustomScoreResult = navigation(10147).numberToCustomScore(stateFromStores1);
   noop = numberToCustomScoreResult;
-  const tmp2Result3 = navigation(10149);
+  const tmp2Result3 = navigation(10147);
   const items3 = [ChannelListStore];
   guildChannels = navigation(504).useStateFromStoresObject(items3, () => ChannelListStore.getGuild(guildId)).guildChannels;
   const items4 = [numberToCustomScoreResult, guildChannels];

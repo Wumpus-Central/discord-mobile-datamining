@@ -1,13 +1,13 @@
-// === Module 12463: ChatGDMUpsellActionSheet ===
+// === Module 12457: ChatGDMUpsellActionSheet ===
 
-// Module 12463 (ChatGDMUpsellActionSheet)
+// Module 12457 (ChatGDMUpsellActionSheet)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import dismissible_content from "dismissible_content" /* 5076 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5285 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import _modDef12464 from "module_12464" /* 12464 */;
+import _modDef12458 from "module_12458" /* 12458 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   }, items);
   let obj = { showGradient: true, scrollable: true, startExpanded: true, header: null, footer: null, children: null };
   const obj2 = { style: tmp.titleImage, children: null };
-  const obj3 = { source: _modDef12464, resizeMode: "contain" };
+  const obj3 = { source: _modDef12458, resizeMode: "contain" };
   obj2.children = closure_5(FastImageDefault, obj3);
   obj.header = closure_5(View, obj2);
   const obj4 = { style: null, children: null };
@@ -79,7 +79,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   const obj12 = { style: tmp.noticeContainer, children: null };
   const obj13 = { style: tmp.innerContainer, children: null };
   const obj5 = { padding: 16, paddingBottom: useSafeAreaInsetsDefault().bottom + 16 };
-  const items4 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(12465).TimerIcon, { size: "sm" }) }), ];
+  const items4 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(12459).TimerIcon, { size: "sm" }) }), ];
   const obj15 = { style: tmp.text, variant: "body-sm/medium", color: "text-default", children: null };
   const intl5 = onClick(1113).intl;
   obj15.children = intl5.string(onClick(1113).t.Fq3DJb);
@@ -87,7 +87,7 @@ export default function ChatGDMUpsellActionSheet(onClick) {
   obj13.children = items4;
   const items5 = [closure_6(View, obj13), ];
   const obj16 = { style: tmp.secondInnerContainer, children: null };
-  const obj14 = { style: tmp.item, children: closure_5(onClick(12465).TimerIcon, { size: "sm" }) };
+  const obj14 = { style: tmp.item, children: closure_5(onClick(12459).TimerIcon, { size: "sm" }) };
   const items6 = [closure_5(View, { style: tmp.item, children: closure_5(onClick(5966).LinkIcon, { size: "sm" }) }), ];
   const obj18 = { style: tmp.text, variant: "body-sm/medium", color: "text-default", children: null };
   const intl6 = onClick(1113).intl;

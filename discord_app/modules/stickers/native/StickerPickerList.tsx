@@ -1,25 +1,25 @@
-// === Module 11324: StickerPickerList ===
+// === Module 11318: StickerPickerList ===
 
-// Module 11324 (StickerPickerList)
+// Module 11318 (StickerPickerList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7771 */;
-import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 11209 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 11210 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 11311 */;
-import _modDef11325 from "module_11325" /* 11325 */;
-import useStickerPickerListData from "useStickerPickerListData" /* 11326 */;
-import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 11327 */;
+import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 11203 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 11204 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 11305 */;
+import _modDef11319 from "module_11319" /* 11319 */;
+import useStickerPickerListData from "useStickerPickerListData" /* 11320 */;
+import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 11321 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import StickersStore from "StickersStore" /* 6947 */;
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(11299).useStickerPickerStore;
-const StickerPickerConstants = fn(11183);
+const useStickerPickerStore = fn(11293).useStickerPickerStore;
+const StickerPickerConstants = fn(11177);
 ({ STICKER_SCROLL_LOAD_DELAY_MS: closure_8, STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9, STICKER_SIZE: closure_10 } = StickerPickerConstants);
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_11, AnalyticsSections: closure_12 } = Constants);
@@ -40,7 +40,7 @@ let closure_17 = noop.memo(function EmojiPickerListNSFWRow(height) {
   const obj = { style: null, children: null };
   items = [tmp.nsfwContainer, { height: height.height }];
   obj.style = items;
-  const items1 = [state(native.Icon, { source: _modDef11325, size: native.Icon.Sizes.SMALL }), ];
+  const items1 = [state(native.Icon, { source: _modDef11319, size: native.Icon.Sizes.SMALL }), ];
   const obj3 = { style: tmp.nsfwText, variant: "body-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.uy25Qz);

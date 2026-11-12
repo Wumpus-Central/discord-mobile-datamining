@@ -1,6 +1,6 @@
-// === Module 8715: getDeviceMetadata ===
+// === Module 8714: getDeviceMetadata ===
 
-// Module 8715 (getDeviceMetadata)
+// Module 8714 (getDeviceMetadata)
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8611 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 17066: UserProfileWidgetEditingHeader ===
+// === Module 17061: UserProfileWidgetEditingHeader ===
 
-// Module 17066 (UserProfileWidgetEditingHeader)
+// Module 17061 (UserProfileWidgetEditingHeader)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
@@ -38,7 +38,7 @@ export default function UserProfileWidgetEditingHeader() {
   obj4.onPress = function onPress() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15712, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15707, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
   };
   items1[1] = closure_6(require("components/Button/Button").Button, obj4);
   const obj6 = { size: "sm", variant: "secondary", icon: null, accessibilityLabel: null, onPress: null };

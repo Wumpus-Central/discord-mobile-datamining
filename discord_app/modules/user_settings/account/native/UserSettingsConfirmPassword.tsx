@@ -277,5 +277,5 @@ let result = size.fileFinishedImporting("modules/user_settings/account/native/Us
 export default UserSettingsConfirmPasswordInner;
 export function UserSettingsConfirmPasswordWrapped() {
   const merged = Object.assign(useSettingNavigationRoute.useSettingNavigationRoute().params);
-  return closure_1_10(UserSettingsConfirmPasswordInner, {});
+  return refs(UserSettingsConfirmPasswordInner, {});
 }

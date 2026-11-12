@@ -1,6 +1,6 @@
-// === Module 18727: RedesignGuildHeader ===
+// === Module 18722: RedesignGuildHeader ===
 
-// Module 18727 (RedesignGuildHeader)
+// Module 18722 (RedesignGuildHeader)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
@@ -13,13 +13,13 @@ import springPresets from "springPresets" /* 5877 */;
 import ButtonConstants from "ButtonConstants" /* 5879 */;
 import useFontScale from "useFontScale" /* 5881 */;
 import useScaledTextLineHeight from "useScaledTextLineHeight" /* 5998 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8995 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10204 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10509 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 16229 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 18700 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 18728 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 18729 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8994 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10202 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10507 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 16224 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 18695 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 18723 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 18724 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import ActionSheetStore from "ActionSheetStore" /* 5490 */;
@@ -206,7 +206,7 @@ function ReanimatedGuildBanner(guild) {
     obj6.children = items9;
     const items11 = [closure_14(closure_6, obj6), ];
     if (tmp28Result) {
-      tmp28Result = closure_13(tmp(18770), {});
+      tmp28Result = closure_13(tmp(18765), {});
     }
     items11[1] = tmp28Result;
     obj5.children = items11;
@@ -225,7 +225,7 @@ let createStyles = fn(5243);
 let closure_15 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
 createStyles = fn(5243);
 let closure_16 = createStyles.createStyles((arg0) => {
-  const obj = { bannerWrapper: { width: "100%", maxHeight: arg0 * closure_1_10, aspectRatio, overflow: "hidden" }, guildBanner: { left: "50%", top: "50%" }, bannerOverlay: null };
+  const obj = { bannerWrapper: { width: "100%", maxHeight: arg0 * refs, aspectRatio, overflow: "hidden" }, guildBanner: { left: "50%", top: "50%" }, bannerOverlay: null };
   const obj3 = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj3.backgroundColor = nativeDefault.colors.BLACK;

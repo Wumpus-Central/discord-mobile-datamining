@@ -1,6 +1,11 @@
-// === Module 17931: flags ===
+// === Module 17926: flags ===
 
-// Module 17931 (flags)
+// Module 17926 (flags)
+import _mod17927 from "module_17927" /* 17927 */;
+import _mod17928 from "module_17928" /* 17928 */;
+import _mod17929 from "module_17929" /* 17929 */;
+import _mod17930 from "module_17930" /* 17930 */;
+import _mod17931 from "module_17931" /* 17931 */;
 import _mod17932 from "module_17932" /* 17932 */;
 import _mod17933 from "module_17933" /* 17933 */;
 import _mod17934 from "module_17934" /* 17934 */;
@@ -27,13 +32,8 @@ import _mod17954 from "module_17954" /* 17954 */;
 import _mod17955 from "module_17955" /* 17955 */;
 import _mod17956 from "module_17956" /* 17956 */;
 import _mod17957 from "module_17957" /* 17957 */;
-import _mod17958 from "module_17958" /* 17958 */;
-import _mod17959 from "module_17959" /* 17959 */;
-import _mod17960 from "module_17960" /* 17960 */;
-import _mod17961 from "module_17961" /* 17961 */;
-import _mod17962 from "module_17962" /* 17962 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
-export const flags = { bg: _mod17932, cs: _mod17933, da: _mod17934, de: _mod17935, el: _mod17936, "en-GB": _mod17937, "en-US": _mod17938, "es-ES": _mod17939, "es-419": _mod17940, fi: _mod17941, fr: _mod17942, hi: _mod17943, hr: _mod17944, hu: _mod17945, it: _mod17946, ja: _mod17947, ko: _mod17948, lt: _mod17949, nl: _mod17950, no: _mod17951, pl: _mod17952, "pt-BR": _mod17953, ro: _mod17954, ru: _mod17955, "sv-SE": _mod17956, th: _mod17957, tr: _mod17958, uk: _mod17959, vi: _mod17960, "zh-CN": _mod17961, "zh-TW": _mod17962 };
+export const flags = { bg: _mod17927, cs: _mod17928, da: _mod17929, de: _mod17930, el: _mod17931, "en-GB": _mod17932, "en-US": _mod17933, "es-ES": _mod17934, "es-419": _mod17935, fi: _mod17936, fr: _mod17937, hi: _mod17938, hr: _mod17939, hu: _mod17940, it: _mod17941, ja: _mod17942, ko: _mod17943, lt: _mod17944, nl: _mod17945, no: _mod17946, pl: _mod17947, "pt-BR": _mod17948, ro: _mod17949, ru: _mod17950, "sv-SE": _mod17951, th: _mod17952, tr: _mod17953, uk: _mod17954, vi: _mod17955, "zh-CN": _mod17956, "zh-TW": _mod17957 };

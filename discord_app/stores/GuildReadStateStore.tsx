@@ -87,7 +87,7 @@ function isCountableChannel(channel) {
         let tmp11 = null != channel.guild_id;
         if (tmp11) {
           if (result1) {
-            let result2 = closure_1_10(channel.type);
+            let result2 = refs(channel.type);
             if (!result2) {
               result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(channel);
             }
@@ -470,7 +470,7 @@ function recountGuild(guildId, hasItem) {
                 if (tmp45) {
                   let tmp46 = result;
                   if (result) {
-                    let result2 = closure_1_10(obj14.type);
+                    let result2 = refs(obj14.type);
                     if (!result2) {
                       result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(obj14);
                     }

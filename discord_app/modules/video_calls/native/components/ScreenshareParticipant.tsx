@@ -1,6 +1,6 @@
-// === Module 12977: ScreenshareParticipant ===
+// === Module 12971: ScreenshareParticipant ===
 
-// Module 12977 (ScreenshareParticipant)
+// Module 12971 (ScreenshareParticipant)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;

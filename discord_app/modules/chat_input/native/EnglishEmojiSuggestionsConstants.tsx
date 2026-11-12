@@ -1,6 +1,6 @@
-// === Module 14735: EnglishEmojiSuggestionsConstants ===
+// === Module 14731: EnglishEmojiSuggestionsConstants ===
 
-// Module 14735 (EnglishEmojiSuggestionsConstants)
+// Module 14731 (EnglishEmojiSuggestionsConstants)
 import size from "module_2" /* 2 */;
 
 const set = new Set(["aw", "bi", "dr", "ew", "ez", "gg", "go", "ha", "hi", "hm", "no", "np", "oh", "ok", "or", "tm", "tv", "ty", "wp", "xd", "yo"]);

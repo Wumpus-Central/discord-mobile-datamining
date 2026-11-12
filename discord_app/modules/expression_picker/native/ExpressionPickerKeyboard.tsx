@@ -1,21 +1,21 @@
-// === Module 13465: ExpressionPickerKeyboard ===
+// === Module 13459: ExpressionPickerKeyboard ===
 
-// Module 13465 (ExpressionPickerKeyboard)
+// Module 13459 (ExpressionPickerKeyboard)
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
 import native from "native" /* 5314 */;
-import ExpressionPickerDefault from "ExpressionPicker" /* 11186 */;
-import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11954 */;
-import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 13311 */;
-import getEmojiTextDefault from "getEmojiText" /* 13466 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 11180 */;
+import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11948 */;
+import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 13305 */;
+import getEmojiTextDefault from "getEmojiText" /* 13460 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const KEYBOARD_ANIMATION_CONFIG = fn(13269).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(13263).KEYBOARD_ANIMATION_CONFIG;
 let jsx = fn(21).jsx;
 let closure_7 = { code: "(function ExpressionPickerKeyboardTsx1(){let[bottomSheetIndex]=this.__closure;return Math.max(bottomSheetIndex.get(),0)>0;})" };
 let closure_8 = { code: "(function ExpressionPickerKeyboardTsx2(){let[bottomSheetExpandingOrExpanded,maximum,minimum]=this.__closure;return{height:bottomSheetExpandingOrExpanded.get()?maximum:minimum};})" };

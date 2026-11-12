@@ -1,8 +1,8 @@
-// === Module 18724: VoiceUserSummary ===
+// === Module 18719: VoiceUserSummary ===
 
-// Module 18724 (VoiceUserSummary)
+// Module 18719 (VoiceUserSummary)
 import native from "native" /* 1187 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8995 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8994 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default noop.memo(function UserSummaryItem(guildId) {
     transparentBorder = tmp.transparentBorder;
   }
   const obj2 = { style: null, children: null };
-  items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(8994).useClientThemesOverride()];
+  items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(8993).useClientThemesOverride()];
   obj2.style = items;
   if (renderIcon) {
     if (stageIcon) {
@@ -53,6 +53,6 @@ export default noop.memo(function UserSummaryItem(guildId) {
     return tmp5(tmp6, obj2);
   }
   VoiceNormalIcon = tmp4(7368).VoiceNormalIcon;
-  let obj = guildId(8994);
+  let obj = guildId(8993);
 });
 export const VOICE_USER_SUMMARY_HEIGHT = 40;

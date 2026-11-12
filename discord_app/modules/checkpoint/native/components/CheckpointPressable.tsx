@@ -1,6 +1,6 @@
-// === Module 14404: CheckpointPressable ===
+// === Module 14400: CheckpointPressable ===
 
-// Module 14404 (CheckpointPressable)
+// Module 14400 (CheckpointPressable)
 import nativeDefault from "native" /* 575 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import CheckpointConstants from "CheckpointConstants" /* 6314 */;
@@ -14,9 +14,9 @@ import size from "module_2" /* 2 */;
 const PX_4 = nativeDefault.space.PX_4;
 let obj = { sm: { height: 32, gap: nativeDefault.space.PX_4, textVariant: "body-md/semibold" }, lg: null };
 let obj2 = { height: 32, gap: nativeDefault.space.PX_4, textVariant: "body-md/semibold" };
-obj.lg = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8, textVariant: "body-lg/medium" };
+obj.lg = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8 };
 let obj4 = { container: { paddingRight: PX_4, paddingBottom: PX_4 }, shadow: { position: "absolute", top: PX_4, left: PX_4, right: 0, bottom: 0 }, pressable: null, sm: null, lg: null, pressed: null };
-let obj3 = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8, textVariant: "body-lg/medium" };
+let obj3 = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8 };
 obj4.pressable = { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_12 };
 obj4.sm = { height: obj.sm.height, gap: obj.sm.gap };
 obj4.lg = { height: obj.lg.height, gap: obj.lg.gap };

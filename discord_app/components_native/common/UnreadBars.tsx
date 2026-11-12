@@ -1,13 +1,13 @@
-// === Module 18998: UnreadBars ===
+// === Module 18993: UnreadBars ===
 
-// Module 18998 (UnreadBars)
+// Module 18993 (UnreadBars)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import HapticUtils from "HapticUtils" /* 5491 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5492 */;
-import TransitionGroup from "TransitionGroup" /* 14730 */;
+import TransitionGroup from "TransitionGroup" /* 14726 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
 import TextStyles from "TextStyles" /* 6763 */;

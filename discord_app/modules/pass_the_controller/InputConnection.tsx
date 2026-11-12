@@ -1,9 +1,9 @@
-// === Module 15994: InputConnection ===
+// === Module 15989: InputConnection ===
 
-// Module 15994 (InputConnection)
+// Module 15989 (InputConnection)
 import LoggerDefault from "Logger" /* 3 */;
 import RTCConnectionEvent from "RTCConnectionEvent" /* 6126 */;
-import InputEvent from "InputEvent" /* 15995 */;
+import InputEvent from "InputEvent" /* 15990 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 6036 */;
 
 require = fn;

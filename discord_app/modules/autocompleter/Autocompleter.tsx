@@ -1,6 +1,6 @@
-// === Module 10181: Autocompleter ===
+// === Module 10179: Autocompleter ===
 
-// Module 10181 (Autocompleter)
+// Module 10179 (Autocompleter)
 import applyDefault from "apply" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1378 */;
 import _modDef2067 from "module_2067" /* 2067 */;
@@ -10,9 +10,9 @@ import CodedLink from "CodedLink" /* 5992 */;
 import AutocompleteUtils from "AutocompleteUtils" /* 6899 */;
 import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 7011 */;
 import GuildUtilsDefault from "GuildUtils" /* 7012 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 10183 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 10181 */;
 import ThreadMemberListStore from "ThreadMemberListStore" /* 7224 */;
-import LinkRecord from "LinkRecord" /* 10182 */;
+import LinkRecord from "LinkRecord" /* 10180 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
 import UserStore from "UserStore" /* 1385 */;
 

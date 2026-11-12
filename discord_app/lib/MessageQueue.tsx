@@ -1,14 +1,14 @@
-// === Module 8950: MessageQueue ===
+// === Module 8949: MessageQueue ===
 
-// Module 8950 (MessageQueue)
+// Module 8949 (MessageQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import getOverlayMessageAnaylticsLocationDefault from "getOverlayMessageAnaylticsLocation" /* 8952 */;
+import getOverlayMessageAnaylticsLocationDefault from "getOverlayMessageAnaylticsLocation" /* 8951 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import DevSettingsStore from "DevSettingsStore" /* 5869 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import NetworkStore from "NetworkStore" /* 6147 */;
-import Queue from "Queue" /* 8951 */;
+import Queue from "Queue" /* 8950 */;
 
 let handleCommand1 = fn;
 let closure_3 = ["channelId", "analyticsLocation"];
@@ -37,7 +37,7 @@ class MessageQueue extends tmp5 {
       const merged = Object.assign(messageId, Object.assign({ channelId: 0, messageId: 0, isCrossposted: 0 }));
       const abortController = new AbortController();
       const request = {
-        url: closure_1_10.MESSAGE(channelId, messageId),
+        url: constants.MESSAGE(channelId, messageId),
         body: merged,
         retries: 1,
         oldFormErrors: true,
@@ -221,7 +221,7 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     }
     const result1 = self.startQueueMetricTimers(nonce.nonce);
     const HTTP = handleCommand1(1282).HTTP;
-    const request = { url: closure_1_10.MESSAGES(channelId), body: obj3, context: tmp4, oldFormErrors: true };
+    const request = { url: refs.MESSAGES(channelId), body: obj3, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;
     request.rejectWithError = true;
@@ -265,7 +265,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     }
     const result1 = self.startQueueMetricTimers(message.nonce);
     const HTTP = handleCommand1(1282).HTTP;
-    const request = { url: closure_1_10.MESSAGES_ANNOUNCEMENT(channelId), body: obj3, context: tmp4, oldFormErrors: true };
+    const request = { url: refs.MESSAGES_ANNOUNCEMENT(channelId), body: obj3, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;
     request.rejectWithError = true;
@@ -293,7 +293,7 @@ function handleCommand(message, fn) {
   const result = requests.set(nonce, abortController);
   const HTTP = handleCommand1(nonce[12]).HTTP;
   const request = {
-    url: closure_10.INTERACTIONS,
+    url: constants.INTERACTIONS,
     body,
     signal: abortController.signal,
     rejectWithError: true,
@@ -327,7 +327,7 @@ handleCommand1.handleEdit = function handleEdit(messageId, fn) {
   const merged = Object.assign(messageId, Object.assign({ channelId: 0, messageId: 0, isCrossposted: 0 }));
   const abortController = new AbortController();
   const request = {
-    url: closure_1_10.MESSAGE(channelId, messageId),
+    url: constants.MESSAGE(channelId, messageId),
     body: merged,
     retries: 1,
     oldFormErrors: true,

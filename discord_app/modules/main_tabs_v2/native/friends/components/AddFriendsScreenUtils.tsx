@@ -1,8 +1,8 @@
-// === Module 18639: AddFriendsScreenUtils ===
+// === Module 18634: AddFriendsScreenUtils ===
 
-// Module 18639 (AddFriendsScreenUtils)
+// Module 18634 (AddFriendsScreenUtils)
 import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8072 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10777 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10771 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 

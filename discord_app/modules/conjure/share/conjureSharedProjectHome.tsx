@@ -1,6 +1,6 @@
-// === Module 12354: conjureSharedProjectHome ===
+// === Module 12348: conjureSharedProjectHome ===
 
-// Module 12354 (conjureSharedProjectHome)
+// Module 12348 (conjureSharedProjectHome)
 import ConjureProjectTypes from "ConjureProjectTypes" /* 6955 */;
 import size from "module_2" /* 2 */;
 

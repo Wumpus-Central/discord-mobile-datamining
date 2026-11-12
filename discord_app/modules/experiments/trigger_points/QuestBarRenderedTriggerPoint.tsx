@@ -1,8 +1,8 @@
-// === Module 17675: QuestBarRenderedTriggerPoint ===
+// === Module 17670: QuestBarRenderedTriggerPoint ===
 
-// Module 17675 (QuestBarRenderedTriggerPoint)
+// Module 17670 (QuestBarRenderedTriggerPoint)
 import ExperimentConstants from "ExperimentConstants" /* 5470 */;
-import Helpers from "Helpers" /* 9649 */;
+import Helpers from "Helpers" /* 9648 */;
 import size from "module_2" /* 2 */;
 
 const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.QUEST_BAR_RENDERED, { location: "quest bar rendered" });

@@ -1,6 +1,6 @@
-// === Module 8991: shared_components/Badge ===
+// === Module 8990: shared_components/Badge ===
 
-// Module 8991 (shared_components/Badge)
+// Module 8990 (shared_components/Badge)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 

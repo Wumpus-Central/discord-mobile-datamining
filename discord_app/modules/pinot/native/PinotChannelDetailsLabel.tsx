@@ -1,6 +1,6 @@
-// === Module 19388: PinotChannelDetailsLabel ===
+// === Module 19383: PinotChannelDetailsLabel ===
 
-// Module 19388 (PinotChannelDetailsLabel)
+// Module 19383 (PinotChannelDetailsLabel)
 import nativeDefault from "native" /* 575 */;
 import _modDef3337 from "module_3337" /* 3337 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
@@ -52,5 +52,5 @@ export function PinotChannelDetailsLabel(channel) {
   } else {
     return null;
   }
-  obj = stringResult1(12240);
+  obj = stringResult1(12234);
 }

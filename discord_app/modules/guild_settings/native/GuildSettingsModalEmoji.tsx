@@ -1,18 +1,18 @@
-// === Module 20358: GuildSettingsModalEmoji ===
+// === Module 20353: GuildSettingsModalEmoji ===
 
-// Module 20358 (GuildSettingsModalEmoji)
+// Module 20353 (GuildSettingsModalEmoji)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5197 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 20361 */;
-import HeaderRow from "HeaderRow" /* 20365 */;
-import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 20366 */;
+import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 20356 */;
+import HeaderRow from "HeaderRow" /* 20360 */;
+import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 20361 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 20359 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 20354 */;
 import apply_mod from "apply" /* 12 */;
 
 const require = globalThis.__r;
@@ -182,7 +182,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let apply = apply_mod;
-let closure_11 = apply.throttle(fn(11244).fetchEmoji, 1000);
+let closure_11 = apply.throttle(fn(11238).fetchEmoji, 1000);
 const createStyles = fn(5243);
 let obj = { loadingContainer: { flex: 1, paddingTop: 40 }, emptyState: { paddingTop: 30 }, list: { paddingHorizontal: nativeDefault.space.PX_12 }, section: null, titleContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };

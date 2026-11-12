@@ -1,6 +1,6 @@
-// === Module 20423: RoleIconActionSheet ===
+// === Module 20418: RoleIconActionSheet ===
 
-// Module 20423 (RoleIconActionSheet)
+// Module 20418 (RoleIconActionSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
@@ -9,10 +9,10 @@ import TableRow from "TableRow" /* 7379 */;
 import TableRowGroup from "TableRowGroup" /* 7680 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7847 */;
 import ActionSheet from "ActionSheet" /* 7885 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20420 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 20415 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20406 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 20401 */;
 
 require = fn;
 const UPLOAD_SMALL_SIZE = fn(1072).UPLOAD_SMALL_SIZE;
@@ -178,18 +178,18 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(20420).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(20420);
+                  closure_0(20415).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(20415);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(20420);
+                const tmp22 = closure_0(20415);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(20424).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(20419).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }
@@ -232,7 +232,7 @@ export default function RoleIconActionSheet(arg0) {
       }
       return applyArgumentsResult;
     };
-    const result = guildId(9477).openEmojiPickerActionSheet(obj2, "stack");
+    const result = guildId(9476).openEmojiPickerActionSheet(obj2, "stack");
   };
   items3[1] = closure_7(TableRow.TableRow, obj5);
   let tmp5Result = null;

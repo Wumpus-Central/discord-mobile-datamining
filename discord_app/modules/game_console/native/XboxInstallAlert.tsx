@@ -1,6 +1,6 @@
-// === Module 10773: XboxInstallAlert ===
+// === Module 10767: XboxInstallAlert ===
 
-// Module 10773 (XboxInstallAlert)
+// Module 10767 (XboxInstallAlert)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import LinkingDefault from "Linking" /* 5949 */;

@@ -1,6 +1,6 @@
-// === Module 15945: MemberVerificationAlertRejected ===
+// === Module 15940: MemberVerificationAlertRejected ===
 
-// Module 15945 (MemberVerificationAlertRejected)
+// Module 15940 (MemberVerificationAlertRejected)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;

@@ -1,11 +1,11 @@
-// === Module 13631: ConjurePlanAutomodExamples ===
+// === Module 13625: ConjurePlanAutomodExamples ===
 
-// Module 13631 (ConjurePlanAutomodExamples)
+// Module 13625 (ConjurePlanAutomodExamples)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 13632 */;
+import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 13626 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 13468: useConjureIncompleteAppNotice ===
+// === Module 13462: useConjureIncompleteAppNotice ===
 
-// Module 13468 (useConjureIncompleteAppNotice)
+// Module 13462 (useConjureIncompleteAppNotice)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/useConjureInc
 
 export default function useConjureIncompleteAppNotice(arg0) {
   _require = arg0;
-  const tmp3 = guildId(13073)(arg0);
+  const tmp3 = guildId(13067)(arg0);
   guildId = undefined;
   if (tmp3 != null) {
     guildId = tmp3.guildId;

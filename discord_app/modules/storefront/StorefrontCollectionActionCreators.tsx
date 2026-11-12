@@ -1,13 +1,13 @@
-// === Module 10392: StorefrontCollectionActionCreators ===
+// === Module 10390: StorefrontCollectionActionCreators ===
 
-// Module 10392 (StorefrontCollectionActionCreators)
+// Module 10390 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import StoreUtils from "StoreUtils" /* 6703 */;
 import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8515 */;
 import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 8516 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9384 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9383 */;
 import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 8436 */;
 
 require = fn;

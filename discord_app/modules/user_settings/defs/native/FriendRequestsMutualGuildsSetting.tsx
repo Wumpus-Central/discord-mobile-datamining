@@ -1,22 +1,22 @@
-// === Module 17389: FriendRequestsMutualGuildsSetting ===
+// === Module 17384: FriendRequestsMutualGuildsSetting ===
 
-// Module 17389 (FriendRequestsMutualGuildsSetting)
+// Module 17384 (FriendRequestsMutualGuildsSetting)
 import util from "util" /* 1113 */;
 import FlagUtilsAll from "FlagUtils" /* 1403 */;
 import UserSettings from "UserSettings" /* 5068 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7747 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 17228 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 17223 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const FriendSourceFlags = fn(1072).FriendSourceFlags;
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mozb8f);
   },
-  parent: fn(9136).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(9135).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsMutualGuildsSettingValue() {
     const FriendSourceFlagsSetting = setting(5068).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();

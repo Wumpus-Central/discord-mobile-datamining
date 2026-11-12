@@ -1,6 +1,6 @@
-// === Module 17121: AccountPhoneSetting ===
+// === Module 17116: AccountPhoneSetting ===
 
-// Module 17121 (AccountPhoneSetting)
+// Module 17116 (AccountPhoneSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
@@ -10,13 +10,13 @@ import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 let closure_4 = fn(7752).PHONE_VERIFICATION_MODAL_KEY;
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dEYpSt);
   },
-  parent: fn(9136).MobileUserSettings.ACCOUNT,
+  parent: fn(9135).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountPhoneSettingTrailing() {
     items = [UserStore];
     return initialize.useStateFromStores(items, () => {

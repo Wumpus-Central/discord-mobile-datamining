@@ -1,11 +1,11 @@
-// === Module 19642: ReferralProgramEntryPointActionSheet ===
+// === Module 19637: ReferralProgramEntryPointActionSheet ===
 
-// Module 19642 (ReferralProgramEntryPointActionSheet)
+// Module 19637 (ReferralProgramEntryPointActionSheet)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import _modDef9238 from "module_9238" /* 9238 */;
+import _modDef9237 from "module_9237" /* 9237 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export default function ReferralProgramEntryPointActionSheet(markAsDismissed) {
   const items1 = [markAsDismissed];
   const callback = noop.useCallback(() => {
     markAsDismissed(ContentDismissActionType.PRIMARY);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15186, dependencyMap.paths), "referral-program-share-action-sheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15183, dependencyMap.paths), "referral-program-share-action-sheet");
   }, items);
   const callback1 = noop.useCallback(() => {
     markAsDismissed(ContentDismissActionType.USER_DISMISS);
@@ -41,7 +41,7 @@ export default function ReferralProgramEntryPointActionSheet(markAsDismissed) {
   const obj = { onDismiss: callback1, children: null };
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: _modDef9238 };
+  const obj4 = { uri: _modDef9237 };
   obj3.source = obj4;
   obj3.style = tmp.image;
   const items2 = [closure_6(FastImageDefault, obj3), , , ];

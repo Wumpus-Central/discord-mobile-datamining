@@ -1,6 +1,6 @@
-// === Module 15301: PremiumSubscriptionUpsell ===
+// === Module 15298: PremiumSubscriptionUpsell ===
 
-// Module 15301 (PremiumSubscriptionUpsell)
+// Module 15298 (PremiumSubscriptionUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
@@ -12,9 +12,9 @@ import Text_Text from "Text/Text" /* 5866 */;
 import components_Button_Button from "components/Button/Button" /* 5873 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7672 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 10907 */;
-import _modDef15302 from "module_15302" /* 15302 */;
-import _modDef15303 from "module_15303" /* 15303 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 10901 */;
+import _modDef15299 from "module_15299" /* 15299 */;
+import _modDef15300 from "module_15300" /* 15300 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -22,7 +22,7 @@ import UserStore from "UserStore" /* 1385 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(9368).Gradients;
+const Gradients = fn(9367).Gradients;
 const PremiumConstants = fn(1387);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: metroImportDefault, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_8 } = PremiumConstants);
 const jsxProd = fn(21);
@@ -71,7 +71,7 @@ export default function PremiumSubscriptionUpsell(arg0) {
       obj7.children = intl3.format(util.t.Af0zEZ, obj8);
       items2[1] = React6(Text_Text.Text, obj7);
       obj5.children = items2;
-      let tmp6Result1 = closure_1_11(closure_1_10, obj5);
+      let tmp6Result1 = closure_1_11(refs, obj5);
     } else {
       const obj9 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "text-overlay-light", children: null };
       const intl = util.intl;
@@ -82,11 +82,11 @@ export default function PremiumSubscriptionUpsell(arg0) {
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     tmp5Result5 = PremiumUtilsDefault;
-    obj11.source = _modDef15302;
+    obj11.source = _modDef15299;
     const items4 = [React6(FastImageDefault, obj11), , ];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const tmp5Result6 = FastImageDefault;
-    obj12.source = _modDef15303;
+    obj12.source = _modDef15300;
     items4[1] = React6(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };

@@ -1,10 +1,10 @@
-// === Module 18597: ChannelScreenAnimatedFrame ===
+// === Module 18592: ChannelScreenAnimatedFrame ===
 
-// Module 18597 (ChannelScreenAnimatedFrame)
+// Module 18592 (ChannelScreenAnimatedFrame)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
 import _mod1652 from "module_1652" /* 1652 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 8994 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 8993 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;

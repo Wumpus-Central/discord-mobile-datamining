@@ -1,6 +1,6 @@
-// === Module 11330: StickerPickerCategories ===
+// === Module 11324: StickerPickerCategories ===
 
-// Module 11330 (StickerPickerCategories)
+// Module 11324 (StickerPickerCategories)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HapticUtils from "HapticUtils" /* 5491 */;
@@ -12,7 +12,7 @@ import GuildStore from "GuildStore" /* 5114 */;
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(11299).useStickerPickerStore;
+let useStickerPickerStore = fn(11293).useStickerPickerStore;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9, CATEGORY_ICON_RIPPLE_CONFIG: closure_10, CATEGORY_ICON_SIZE } = Constants);
 const EXPRESSION_FOOTER_HEIGHT = Constants.EXPRESSION_FOOTER_HEIGHT;
@@ -205,7 +205,7 @@ export default function _default(categories) {
   const callback5 = first.useCallback((arg0, index) => gesture(closure_17, { category: categories[index], index, isActive: index === categoryIndex, locked: categories[index].isNitroLocked, onPressCategory: callback2 }), items8);
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(11269)();
+  const tmp19 = categoryIndex(11263)();
   const items9 = [closure_14(categoryIndex(7764), { estimatedListSize: "windowSize", horizontal: true, itemSize: EXPRESSION_FOOTER_HEIGHT, keyboardShouldPersistTaps: "always", listId: ExpressionPickerViewType.STICKER, onLayout: callback4, onScroll: callback1, placeholderConfig: tmp19, ref, scrollReporting: "callbacks", sections: memo, renderItem: callback5, showsHorizontalScrollIndicator: false, style: tmp.list }), ];
   let tmp22Result = null != first && first1;
   if (tmp22Result) {
@@ -216,12 +216,12 @@ export default function _default(categories) {
     const items10 = [, ];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj4.style = items10;
-    const obj5 = { style: tmp.guildIcon, source: tmp17(11331) };
+    const obj5 = { style: tmp.guildIcon, source: tmp17(11325) };
     obj4.children = closure_14(categories(1187).Icon, obj5);
     obj3.children = closure_14(closure_5, obj4);
     tmp22Result = closure_14(categories(7364).PressableOpacity, obj3);
   }
   items9[1] = tmp22Result;
   obj.children = items9;
-  return closure_15(categoryIndex(11270), obj);
+  return closure_15(categoryIndex(11264), obj);
 };

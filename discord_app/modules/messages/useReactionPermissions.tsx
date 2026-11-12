@@ -1,6 +1,6 @@
-// === Module 11839: useReactionPermissions ===
+// === Module 11833: useReactionPermissions ===
 
-// Module 11839 (useReactionPermissions)
+// Module 11833 (useReactionPermissions)
 import _slicedToArray from "module_32" /* 32 */;
 import LurkingStore from "LurkingStore" /* 5176 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;

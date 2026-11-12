@@ -1,20 +1,20 @@
-// === Module 14466: TypingIndicator ===
+// === Module 14462: TypingIndicator ===
 
-// Module 14466 (TypingIndicator)
+// Module 14462 (TypingIndicator)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import native from "native" /* 5314 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import useTypingTextDefault from "useTypingText" /* 14470 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14471 */;
-import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 14472 */;
-import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 14473 */;
+import useTypingTextDefault from "useTypingText" /* 14466 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14467 */;
+import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 14468 */;
+import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 14469 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 5869 */;
 import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6907 */;
-import TypingStore from "TypingStore" /* 14467 */;
+import TypingStore from "TypingStore" /* 14463 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
@@ -226,8 +226,8 @@ function TypingIndicatorInner(channel) {
       tmp39 = callback;
     }
     obj7.onPress = tmp39;
-    let tmp33Result = closure_12(tmp5(14483), obj7);
-    const tmp5Result2 = tmp5(14483);
+    let tmp33Result = closure_12(tmp5(14479), obj7);
+    const tmp5Result2 = tmp5(14479);
   } else {
     let tmp32Result3 = null;
     if (null != tmp6Result) {
@@ -245,7 +245,7 @@ function TypingIndicatorInner(channel) {
   let tmp32Result4 = null;
   if (channel.rateLimitPerUser > 0) {
     const obj10 = { channel, hasTypingText: null != tmp6Result, slowmodeType: analyticsLocations.SendMessage };
-    tmp32Result4 = closure_12(tmp5(14487), obj10);
+    tmp32Result4 = closure_12(tmp5(14483), obj10);
   }
   items15[1] = tmp32Result4;
   obj5.children = items15;
@@ -260,8 +260,8 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return application_id(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(11805).useChatShowingAutoComplete;
-const SlowmodeType = fn(8726).SlowmodeType;
+let closure_5 = fn(11799).useChatShowingAutoComplete;
+const SlowmodeType = fn(8725).SlowmodeType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);

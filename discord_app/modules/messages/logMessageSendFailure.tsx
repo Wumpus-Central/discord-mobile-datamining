@@ -1,6 +1,6 @@
-// === Module 8962: logMessageSendFailure ===
+// === Module 8961: logMessageSendFailure ===
 
-// Module 8962 (logMessageSendFailure)
+// Module 8961 (logMessageSendFailure)
 import Constants from "Constants" /* 1072 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
 import size from "module_2" /* 2 */;

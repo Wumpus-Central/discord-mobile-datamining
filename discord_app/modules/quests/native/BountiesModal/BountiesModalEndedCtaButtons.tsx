@@ -1,12 +1,12 @@
-// === Module 17477: BountiesModalEndedCtaButtons ===
+// === Module 17472: BountiesModalEndedCtaButtons ===
 
-// Module 17477 (BountiesModalEndedCtaButtons)
+// Module 17472 (BountiesModalEndedCtaButtons)
 import nativeDefault from "native" /* 575 */;
 import _modDef1652 from "module_1652" /* 1652 */;
 import QuestContent from "QuestContent" /* 5280 */;
 import AdCreativeType from "AdCreativeType" /* 5282 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8768 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10102 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8767 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10101 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5243 */;
 import size from "module_2" /* 2 */;

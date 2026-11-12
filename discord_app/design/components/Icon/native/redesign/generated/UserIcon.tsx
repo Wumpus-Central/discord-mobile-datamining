@@ -1,9 +1,9 @@
-// === Module 10486: UserIcon ===
+// === Module 10484: UserIcon ===
 
-// Module 10486 (UserIcon)
+// Module 10484 (UserIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod10487 from "module_10487" /* 10487 */;
+import _mod10485 from "module_10485" /* 10485 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function UserIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10487, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10485, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

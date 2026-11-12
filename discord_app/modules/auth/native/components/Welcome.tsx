@@ -1,6 +1,6 @@
-// === Module 18526: Welcome ===
+// === Module 18521: Welcome ===
 
-// Module 18526 (Welcome)
+// Module 18521 (Welcome)
 import _modDef38 from "module_38" /* 38 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 575 */;
@@ -13,12 +13,12 @@ import Text_Text from "Text/Text" /* 5866 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 7705 */;
 import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 8611 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 14872 */;
-import _modDef15461 from "module_15461" /* 15461 */;
-import _mod16181 from "module_16181" /* 16181 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 18523 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 14868 */;
+import _modDef15458 from "module_15458" /* 15458 */;
+import _mod16176 from "module_16176" /* 16176 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 18518 */;
 import noop from "module_19" /* 19 */;
-import AgeGateStore from "AgeGateStore" /* 18527 */;
+import AgeGateStore from "AgeGateStore" /* 18522 */;
 import ExperimentStore from "ExperimentStore" /* 5469 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 8395 */;
 import UserRecord from "UserRecord" /* 1404 */;
@@ -45,7 +45,7 @@ function InviteCard(invite) {
       let tmp18 = expandedHeight;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      const obj = { user: null, guildId: "Array" };
+      const obj = { user: null, guildId: "a" };
       const tmp12 = new UserRecord(inviter);
       obj.user = tmp12;
       tmp14 = expandedHeight(native.Avatar, obj);
@@ -57,7 +57,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      const obj4 = { user: null, guildId: "Array" };
+      const obj4 = { user: null, guildId: "a" };
       const tmp33 = new UserRecord(inviter);
       obj4.user = tmp33;
       const intl3 = util.intl;
@@ -89,7 +89,7 @@ function GuildTemplateCard(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.container, style];
   obj.style = items;
-  const obj2 = { source: _modDef15461 };
+  const obj2 = { source: _modDef15458 };
   const items1 = [expandedHeight(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "body-sm/medium", color: "text-subtle", children: null };
@@ -111,7 +111,7 @@ function Centerpiece(inlineButtons) {
   }
   const obj = { style: tmp4.centerpieceContainer, children: null };
   const obj2 = { alwaysBounceVertical: false, contentContainerStyle: tmp4.scrollViewContainer, children: null };
-  items = [expandedHeight(FastImageDefault, { style: tmp4.logo, source: _mod16181 }), , ];
+  items = [expandedHeight(FastImageDefault, { style: tmp4.logo, source: _mod16176 }), , ];
   const obj4 = { style: tmp4.header, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   let num = 2;
   if (tmp3) {
@@ -155,7 +155,7 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, StorageKeys: map1, AuthStates: closure_14, InviteStates: closure_15, ThemeTypes: closure_16 } = Constants);
 const GuildTemplateStates = fn(8065).GuildTemplateStates;
-const InviteTypes = fn(8776).InviteTypes;
+const InviteTypes = fn(8775).InviteTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
 let createStyles = fn(5243);

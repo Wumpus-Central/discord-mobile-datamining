@@ -1,6 +1,6 @@
-// === Module 8983: ScheduledMessagesModal ===
+// === Module 8982: ScheduledMessagesModal ===
 
-// Module 8983 (ScheduledMessagesModal)
+// Module 8982 (ScheduledMessagesModal)
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
@@ -9,15 +9,15 @@ import spring_spring from "spring/spring" /* 5876 */;
 import springPresets from "springPresets" /* 5877 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 8963 */;
-import HeaderShared from "HeaderShared" /* 8985 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 11109 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 11218 */;
-import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 15545 */;
-import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 15548 */;
+import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 8962 */;
+import HeaderShared from "HeaderShared" /* 8984 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 11103 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 11212 */;
+import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 15542 */;
+import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 15545 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ScheduledMessageStore from "ScheduledMessageStore" /* 8984 */;
+import ScheduledMessageStore from "ScheduledMessageStore" /* 8983 */;
 
 const require = globalThis.__r;
 
@@ -57,7 +57,7 @@ function ScheduledMessagesPage(handleScroll) {
   const callback = noop.useCallback((item) => {
     item = item.item;
     const obj = { scheduledMessage: item, isPendingRemoval: stateFromStores2.has(item.scheduledMessageId) };
-    return closure_2_10(ScheduledMessageCardDefault, obj);
+    return refs(ScheduledMessageCardDefault, obj);
   }, items4);
   const obj4 = require("initialize");
   const scheduledMessagesLimit = require("ScheduledMessageUtils").useScheduledMessagesLimit();
@@ -117,12 +117,12 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
   }
   obj5.onPress = tmp8;
   obj5.loading = loading;
-  return closure_1_10(NitroLimitUpsellBarDefault, obj5);
+  return refs(NitroLimitUpsellBarDefault, obj5);
 }
 const View = fn(17).View;
 const AnalyticsPages = fn(1072).AnalyticsPages;
 const PremiumTypes = fn(1387).PremiumTypes;
-const premiumMax = fn(8965).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(8964).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];
@@ -175,7 +175,7 @@ export default function ScheduledMessagesModal() {
   const obj5 = {
     title: stringResult,
     headerTitle() {
-      return closure_2_10(HeaderShared.GenericHeaderTitle, { title });
+      return refs(HeaderShared.GenericHeaderTitle, { title });
     },
     headerTitleAlign: "center",
     headerStatusBarHeight: null,

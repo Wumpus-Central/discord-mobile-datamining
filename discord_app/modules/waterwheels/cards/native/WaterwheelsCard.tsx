@@ -1,13 +1,13 @@
-// === Module 18883: WaterwheelsCard ===
+// === Module 18878: WaterwheelsCard ===
 
-// Module 18883 (WaterwheelsCard)
+// Module 18878 (WaterwheelsCard)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10158 */;
-import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 18884 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10156 */;
+import entry_data_ErrorBoundary from "entry_data/ErrorBoundary" /* 18879 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14716 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14712 */;
 
 const require = globalThis.__r;
 
@@ -79,7 +79,7 @@ function WaterwheelsCardContent(card) {
         }
         items[4] = tmp4Result2;
         obj.children = items;
-        return closure_2_10(hasOwnProperty, obj, children.gameId);
+        return refs(hasOwnProperty, obj, children.gameId);
       });
       items2[1] = closure_9(first, obj11);
       obj4.children = items2;

@@ -1,6 +1,6 @@
-// === Module 17500: useBadBundleFilter ===
+// === Module 17495: useBadBundleFilter ===
 
-// Module 17500 (useBadBundleFilter)
+// Module 17495 (useBadBundleFilter)
 import _mod19 from "module_19" /* 19 */;
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
@@ -23,7 +23,7 @@ export function useBadBundleFilter() {
       found = arr;
       if (0 !== arr.length) {
         found = arr.filter((product) => {
-          const obj = canUseShopDiscountsResult(9452);
+          const obj = canUseShopDiscountsResult(9451);
           if (obj2.isBundleProduct(product)) {
             if (!tmpResult.isFreeCollectiblesProduct(product)) {
               if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {

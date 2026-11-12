@@ -1,6 +1,6 @@
-// === Module 15732: UserProfilePrivateInfoBanner ===
+// === Module 15727: UserProfilePrivateInfoBanner ===
 
-// Module 15732 (UserProfilePrivateInfoBanner)
+// Module 15727 (UserProfilePrivateInfoBanner)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;

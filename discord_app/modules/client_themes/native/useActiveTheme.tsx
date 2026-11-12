@@ -1,6 +1,6 @@
-// === Module 8996: useActiveTheme ===
+// === Module 8995: useActiveTheme ===
 
-// Module 8996 (useActiveTheme)
+// Module 8995 (useActiveTheme)
 import initialize from "initialize" /* 504 */;
 import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5428 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;

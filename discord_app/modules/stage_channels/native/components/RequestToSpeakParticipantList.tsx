@@ -1,6 +1,6 @@
-// === Module 12866: RequestToSpeakParticipantList ===
+// === Module 12860: RequestToSpeakParticipantList ===
 
-// Module 12866 (RequestToSpeakParticipantList)
+// Module 12860 (RequestToSpeakParticipantList)
 import nativeDefault from "native" /* 575 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 6846 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;

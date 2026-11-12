@@ -1,6 +1,6 @@
-// === Module 19499: AddModeratorsActionSheet ===
+// === Module 19494: AddModeratorsActionSheet ===
 
-// Module 19499 (AddModeratorsActionSheet)
+// Module 19494 (AddModeratorsActionSheet)
 import nativeDefault from "native" /* 575 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,9 +1,9 @@
-// === Module 11679: ClydeIcon ===
+// === Module 11673: ClydeIcon ===
 
-// Module 11679 (ClydeIcon)
+// Module 11673 (ClydeIcon)
 import nativeDefault from "native" /* 575 */;
 import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod11680 from "module_11680" /* 11680 */;
+import _mod11674 from "module_11674" /* 11674 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ClydeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11680, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11674, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

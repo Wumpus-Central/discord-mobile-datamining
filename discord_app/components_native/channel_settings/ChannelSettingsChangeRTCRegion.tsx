@@ -1,17 +1,17 @@
-// === Module 19532: ChannelSettingsChangeRTCRegion ===
+// === Module 19527: ChannelSettingsChangeRTCRegion ===
 
-// Module 19532 (ChannelSettingsChangeRTCRegion)
+// Module 19527 (ChannelSettingsChangeRTCRegion)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import TableRadioGroup from "TableRadioGroup" /* 7679 */;
 import TableRadioRow from "TableRadioRow" /* 7681 */;
 import Form from "Form" /* 8041 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10856 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10850 */;
 import _toArray from "_toArray" /* 717 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
-import RegionStore from "RegionStore" /* 19475 */;
+import RegionStore from "RegionStore" /* 19470 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -79,7 +79,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(10856).updateChannel({ rtcRegion: tmp });
+  self(10850).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     ChannelSettingsActionCreatorsDefault.saveChannel(self.props.channel.id, { rtcRegion });
   });

@@ -1,6 +1,6 @@
-// === Module 10500: MobileShopButtonCoachmark ===
+// === Module 10498: MobileShopButtonCoachmark ===
 
-// Module 10500 (MobileShopButtonCoachmark)
+// Module 10498 (MobileShopButtonCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 8741: BountyStore ===
+// === Module 8740: BountyStore ===
 
-// Module 8741 (BountyStore)
+// Module 8740 (BountyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AdCreativeType from "AdCreativeType" /* 5282 */;

@@ -1,23 +1,23 @@
-// === Module 17747: PremiumRestoreSubscriptionSetting ===
+// === Module 17742: PremiumRestoreSubscriptionSetting ===
 
-// Module 17747 (PremiumRestoreSubscriptionSetting)
+// Module 17742 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6206 */;
-import BillingActionCreatorsDefault from "BillingActionCreators" /* 9521 */;
+import BillingActionCreatorsDefault from "BillingActionCreators" /* 9520 */;
 import UserStore from "UserStore" /* 1385 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: fn(9369).NitroWheelIcon,
+  IconComponent: fn(9368).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
     const result = BillingActionCreatorsDefault.restoreAndApplyPurchases(true);
     result.then((result) => {

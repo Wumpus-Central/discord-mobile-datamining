@@ -1,6 +1,6 @@
-// === Module 9081: lurkGuildFromRoute ===
+// === Module 9080: lurkGuildFromRoute ===
 
-// Module 9081 (lurkGuildFromRoute)
+// Module 9080 (lurkGuildFromRoute)
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

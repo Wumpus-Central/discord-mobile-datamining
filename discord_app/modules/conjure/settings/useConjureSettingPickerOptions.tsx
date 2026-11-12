@@ -1,6 +1,6 @@
-// === Module 13135: useConjureSettingPickerOptions ===
+// === Module 13129: useConjureSettingPickerOptions ===
 
-// Module 13135 (useConjureSettingPickerOptions)
+// Module 13129 (useConjureSettingPickerOptions)
 import ConjureUtils from "ConjureUtils" /* 7197 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 5173 */;
@@ -67,9 +67,9 @@ export default function useConjureSettingPickerOptions(arg0, type) {
       return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
     } else if ("user" === type) {
       return conjureGuildMemberUsers.map((id) => {
-        const result = closure_0(13136).conjureMemberUsername(id, stateFromStores1);
+        const result = closure_0(13130).conjureMemberUsername(id, stateFromStores1);
         const obj2 = { id: id.id, label: null };
-        const obj = closure_0(13136);
+        const obj = closure_0(13130);
         obj2.label = closure_0(6288).getName(closure_1_0, null, id);
         if ("" === result) {
           let obj4 = {};

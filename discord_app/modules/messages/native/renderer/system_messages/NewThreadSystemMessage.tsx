@@ -1,11 +1,11 @@
-// === Module 9185: NewThreadSystemMessage ===
+// === Module 9184: NewThreadSystemMessage ===
 
-// Module 9185 (NewThreadSystemMessage)
+// Module 9184 (NewThreadSystemMessage)
 import util from "util" /* 1113 */;
 import useChannelName from "useChannelName" /* 5891 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9122 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9124 */;
-import createCommonMessageDefault from "createCommonMessage" /* 9126 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9121 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9123 */;
+import createCommonMessageDefault from "createCommonMessage" /* 9125 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
 import UserStore from "UserStore" /* 1385 */;

@@ -1,6 +1,6 @@
-// === Module 18769: ? ===
+// === Module 18764: ? ===
 
-// Module 18769
+// Module 18764
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/powerups/file-upload-static-2x.png.js");

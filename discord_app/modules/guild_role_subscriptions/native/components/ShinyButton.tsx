@@ -1,10 +1,10 @@
-// === Module 11203: ShinyButton ===
+// === Module 11197: ShinyButton ===
 
-// Module 11203 (ShinyButton)
+// Module 11197 (ShinyButton)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import BaseTextButton from "BaseTextButton" /* 5874 */;
-import _modDef11204 from "module_11204" /* 11204 */;
+import _modDef11198 from "module_11198" /* 11198 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,14 +32,14 @@ export default function ShinyButton(style) {
   obj.pillStyle = items;
   let tmp3Result;
   if (!loading) {
-    const obj2 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef11204, style: null };
+    const obj2 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef11198, style: null };
     const items1 = [tmp2.sparkleIcon, ];
     if (disabled) {
       disabled = tmp2.disabled;
     }
     items1[1] = disabled;
     obj2.style = items1;
-    tmp3Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef11204, style: null });
+    tmp3Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef11198, style: null });
   }
   obj.icon = tmp3Result;
   const merged1 = Object.assign(merged);

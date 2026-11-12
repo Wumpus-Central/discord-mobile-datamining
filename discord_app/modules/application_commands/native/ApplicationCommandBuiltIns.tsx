@@ -1,6 +1,6 @@
-// === Module 11355: application_commands/ApplicationCommandBuiltIns ===
+// === Module 11349: application_commands/ApplicationCommandBuiltIns ===
 
-// Module 11355 (application_commands/ApplicationCommandBuiltIns)
+// Module 11349 (application_commands/ApplicationCommandBuiltIns)
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
@@ -60,8 +60,8 @@ obj.execute = function execute(arg0, channel) {
         MessageActionCreatorsDefault.sendBotMessage(channel.id, intl.string(require("util").t["YOsuT/"]));
       }
     };
-    const result = channel(10837).openLeaveGroupDMConfirmationAlert(obj6);
-    const tmp4Result = channel(10837);
+    const result = channel(10831).openLeaveGroupDMConfirmationAlert(obj6);
+    const tmp4Result = channel(10831);
   }
 };
 const items = [obj];

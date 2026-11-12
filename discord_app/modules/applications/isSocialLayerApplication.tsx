@@ -1,6 +1,6 @@
-// === Module 14814: isSocialLayerApplication ===
+// === Module 14810: isSocialLayerApplication ===
 
-// Module 14814 (isSocialLayerApplication)
+// Module 14810 (isSocialLayerApplication)
 import Constants from "Constants" /* 1072 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6994 */;
 import scopes2 from "scopes" /* 7339 */;

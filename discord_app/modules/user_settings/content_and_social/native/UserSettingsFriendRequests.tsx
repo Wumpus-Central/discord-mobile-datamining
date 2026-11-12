@@ -1,6 +1,6 @@
-// === Module 19429: UserSettingsFriendRequests ===
+// === Module 19424: UserSettingsFriendRequests ===
 
-// Module 19429 (UserSettingsFriendRequests)
+// Module 19424 (UserSettingsFriendRequests)
 import FlagUtilsAll from "FlagUtils" /* 1403 */;
 import UserSettings from "UserSettings" /* 5068 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 7747 */;

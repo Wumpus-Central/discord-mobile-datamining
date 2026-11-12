@@ -1,21 +1,21 @@
-// === Module 8798: ThreadActionCreators ===
+// === Module 8797: ThreadActionCreators ===
 
-// Module 8798 (ThreadActionCreators)
+// Module 8797 (ThreadActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8938 */;
-import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8939 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8937 */;
+import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8938 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8799 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8798 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 5177 */;
-import ThreadSummaryStore from "ThreadSummaryStore" /* 8937 */;
+import ThreadSummaryStore from "ThreadSummaryStore" /* 8936 */;
 
 const require = globalThis.__r;
 
@@ -45,7 +45,7 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
   obj.dispatch({ type: "THREAD_MEMBER_LOCAL_UPDATE", id: id.id, guildId: id.getGuildId(), userId: AuthenticationStore.getId(), isJoining });
 }
 let closure_4 = fn(5096).createChannelRecordFromServer;
-const PAGE_SIZE = fn(8799).PAGE_SIZE;
+const PAGE_SIZE = fn(8798).PAGE_SIZE;
 const Constants = fn(1072);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
 const ChannelFlags = fn(5099).ChannelFlags;

@@ -1,6 +1,6 @@
-// === Module 10007: PromotionStringUtils ===
+// === Module 10006: PromotionStringUtils ===
 
-// Module 10007 (PromotionStringUtils)
+// Module 10006 (PromotionStringUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;

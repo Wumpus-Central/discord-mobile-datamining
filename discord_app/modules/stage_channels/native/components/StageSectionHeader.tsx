@@ -1,6 +1,6 @@
-// === Module 13003: StageSectionHeader ===
+// === Module 12997: StageSectionHeader ===
 
-// Module 13003 (StageSectionHeader)
+// Module 12997 (StageSectionHeader)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _mod1652 from "module_1652" /* 1652 */;

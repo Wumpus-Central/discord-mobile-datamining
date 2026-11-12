@@ -1,6 +1,6 @@
-// === Module 15814: EventDetailInfoSheet ===
+// === Module 15809: EventDetailInfoSheet ===
 
-// Module 15814 (EventDetailInfoSheet)
+// Module 15809 (EventDetailInfoSheet)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import UserUtilsDefault from "UserUtils" /* 5309 */;
@@ -98,7 +98,7 @@ export default function EventDetailInfoSheet(guildEvent) {
   obj6.style = items7;
   const items8 = [closure_12(guildEvent(7918).GuildEventCardHeader, { event: guildEvent, style: tmp.eventHeader, showUserCount: false, showEndDate: true, showCreator: false, recurrenceId }), closure_12(guildEvent(7918).GuildEventCardTitle, { event: guildEvent, textStyle: tmp.eventTitle, style: tmp.eventTitleContainer }), closure_12(guildEvent(7918).GuildEventCardSimpleGuildInfo, { event: guildEvent, textStyle: tmp.guildTextStyle }), closure_12(guildEvent(7918).GuildEventSimpleLocation, { event: guildEvent }), , , , , , ];
   const obj11 = { style: tmp.interestedContainer, children: null };
-  const items9 = [closure_12(guildEvent(10933).BellIcon, { size: "sm", style: tmp.interestedIcon }), ];
+  const items9 = [closure_12(guildEvent(10927).BellIcon, { size: "sm", style: tmp.interestedIcon }), ];
   const obj13 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl = guildEvent(1113).intl;
   obj13.children = intl.format(guildEvent(1113).t["+DLsD8"], { count: tmp8 });

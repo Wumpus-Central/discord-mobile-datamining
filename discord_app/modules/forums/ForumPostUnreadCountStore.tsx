@@ -1,6 +1,6 @@
-// === Module 9043: ForumPostUnreadCountStore ===
+// === Module 9042: ForumPostUnreadCountStore ===
 
-// Module 9043 (ForumPostUnreadCountStore)
+// Module 9042 (ForumPostUnreadCountStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

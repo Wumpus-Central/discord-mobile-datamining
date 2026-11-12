@@ -1,9 +1,9 @@
-// === Module 10391: CollectiblesShopManager ===
+// === Module 10389: CollectiblesShopManager ===
 
-// Module 10391 (CollectiblesShopManager)
+// Module 10389 (CollectiblesShopManager)
 import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8511 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 10392 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9384 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 10390 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9383 */;
 import StorefrontProductStore from "StorefrontProductStore" /* 8512 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 

@@ -1,6 +1,6 @@
-// === Module 11603: NativeGiftContext ===
+// === Module 11597: NativeGiftContext ===
 
-// Module 11603 (NativeGiftContext)
+// Module 11597 (NativeGiftContext)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
@@ -10,22 +10,22 @@ import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
 import BadgeId from "BadgeId" /* 8414 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8486 */;
-import ContextUtilsDefault from "ContextUtils" /* 9530 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 9618 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 11613 */;
+import ContextUtilsDefault from "ContextUtils" /* 9529 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 9617 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 11607 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8481 */;
-import PromotionsStore from "PromotionsStore" /* 9557 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 11604 */;
+import PromotionsStore from "PromotionsStore" /* 9556 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 11598 */;
 import UserStore from "UserStore" /* 1385 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-fn(9237).GPlayBillingResult;
+fn(9236).GPlayBillingResult;
 const PremiumConstants = fn(1387);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 const PaymentGateways = fn(1083).PaymentGateways;
@@ -278,7 +278,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
     closure_130_10 = tmp5;
     closure_130_11 = tmp9;
     closure_130_12 = tmp26;
-    let obj6 = { orderId: "a", planId: "flexDirection", planSelection: "st", giftInfo: "192px" };
+    let obj6 = { orderId: "a", planId: "flexDirection", planSelection: "st", giftInfo: 331 };
     let obj7 = { premiumType, planInterval: first1 };
     obj6.planSelection = obj7;
     closure_130_13 = obj.useRef(obj6);
@@ -1112,7 +1112,7 @@ export function NativeGiftContextProvider(basePurchaseAnalytics) {
                             closure_1 = closure_1_27;
                             c6 = 2;
                             c7 = 1;
-                            return { value: closure_2_0(9531).cancelOrderSigning(closure_2_1), done: false };
+                            return { value: closure_2_0(9530).cancelOrderSigning(closure_2_1), done: false };
                           }
                         }
                       }

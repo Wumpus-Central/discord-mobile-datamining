@@ -1,7 +1,7 @@
-// === Module 10130: MediaModalPortal ===
+// === Module 10129: MediaModalPortal ===
 
-// Module 10130 (MediaModalPortal)
-import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 10131 */;
+// Module 10129 (MediaModalPortal)
+import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 10130 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -56,7 +56,7 @@ export default noop.memo(function MediaModalPortal(paused) {
       MediaPlayerManager.setLoopPlayback(tmp, true);
       return () => {
         loopPlayback.setLoopPlayback(portal, false);
-        muted(10132).unregisterView(portal);
+        muted(10131).unregisterView(portal);
         set.add(portal);
       };
     }

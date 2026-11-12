@@ -1,6 +1,6 @@
-// === Module 12311: ActivityLauncherStore ===
+// === Module 12305: ActivityLauncherStore ===
 
-// Module 12311 (ActivityLauncherStore)
+// Module 12305 (ActivityLauncherStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import LocalActivityStore from "LocalActivityStore" /* 7253 */;

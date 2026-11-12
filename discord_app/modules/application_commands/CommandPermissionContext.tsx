@@ -1,9 +1,9 @@
-// === Module 11350: CommandPermissionContext ===
+// === Module 11344: CommandPermissionContext ===
 
-// Module 11350 (CommandPermissionContext)
+// Module 11344 (CommandPermissionContext)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import Server from "Server" /* 2116 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 10745 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 10739 */;
 import noop from "module_19" /* 19 */;
 import ImpersonateStore from "ImpersonateStore" /* 5148 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

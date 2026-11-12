@@ -1,12 +1,12 @@
-// === Module 11230: components/EmojiPickerListComponent ===
+// === Module 11224: components/EmojiPickerListComponent ===
 
-// Module 11230 (components/EmojiPickerListComponent)
+// Module 11224 (components/EmojiPickerListComponent)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiPickerListConstants = fn(9480);
+const EmojiPickerListConstants = fn(9479);
 ({ ROW_HEIGHT: closure_4, LABEL_HEIGHT: hasOwnProperty, LABEL_TOP_PADDING: closure_6, LABEL_BOTTOM_PADDING: metroImportDefault } = EmojiPickerListConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);

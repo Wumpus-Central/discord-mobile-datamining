@@ -1,13 +1,13 @@
-// === Module 19308: SearchMediaImage ===
+// === Module 19303: SearchMediaImage ===
 
-// Module 19308 (SearchMediaImage)
+// Module 19303 (SearchMediaImage)
 import ImageWarningIcon from "ImageWarningIcon" /* 8014 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8566 */;
 import ObscureMediaModels from "ObscureMediaModels" /* 8572 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 10261 */;
-import AttachmentPreview from "AttachmentPreview" /* 11063 */;
-import generated_SpoilerIcon from "generated/SpoilerIcon" /* 11793 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 14513 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 10259 */;
+import AttachmentPreview from "AttachmentPreview" /* 11057 */;
+import generated_SpoilerIcon from "generated/SpoilerIcon" /* 11787 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 14509 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
@@ -34,7 +34,7 @@ function SearchMediaObscurityIcon(obscureReason) {
   }, items);
   const memo1 = noop.useMemo(() => {
     if (ObscureMediaModels.ObscureReason.SPOILER === obscureReason) {
-      return closure_2_10(generated_SpoilerIcon.SpoilerIcon, { size: "lg" });
+      return refs(generated_SpoilerIcon.SpoilerIcon, { size: "lg" });
     } else {
       if (ObscureMediaModels.ObscureReason.EXPLICIT_CONTENT !== obscureReason) {
         if (ObscureMediaModels.ObscureReason.GORE_CONTENT !== obscureReason) {
@@ -45,7 +45,7 @@ function SearchMediaObscurityIcon(obscureReason) {
           }
         }
       }
-      return closure_2_10(ImageWarningIcon.ImageWarningIcon, { size: "lg" });
+      return refs(ImageWarningIcon.ImageWarningIcon, { size: "lg" });
     }
   }, items1);
   const obj2 = { blurTheme: str, style: null };
@@ -160,8 +160,8 @@ export function SearchAttachmentMediaImage(attachment) {
   const channelId = attachment.channelId;
   const merged = Object.assign(attachment, Object.assign({ attachment: 0, channelId: 0, authorId: 0 }));
   dependencyMap = undefined;
-  const enabledHarmTypesBitmaskForChannelAndAuthorId = attachment(11029).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, attachment.authorId);
-  const obj = attachment(11029);
+  const enabledHarmTypesBitmaskForChannelAndAuthorId = attachment(11023).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, attachment.authorId);
+  const obj = attachment(11023);
   let num = attachment.flags;
   if (num == null) {
     num = 0;
@@ -188,8 +188,8 @@ export function SearchEmbedMediaImage(embed) {
   embed = embed.embed;
   ({ sources: importDefault, messageId: dependencyMap, channelId } = embed);
   const merged = Object.assign(embed, Object.assign({ embed: 0, sources: 0, messageId: 0, channelId: 0, authorId: 0 }));
-  closure_3 = embed(11029).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
-  const obj = embed(11029);
+  closure_3 = embed(11023).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
+  const obj = embed(11023);
   const tmp2 = embed;
   closure_4 = embed(6795).useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
   const obj2 = embed(6795);
@@ -259,8 +259,8 @@ export function SearchSoundMediaImage(height) {
     }, items)
   ];
   obj.style = items1;
-  obj.children = closure_1_10(CirclePlayIcon.CirclePlayIcon, { size: "lg", color: "interactive-text-default" });
-  return closure_1_10(timestampProducer, obj);
+  obj.children = refs(CirclePlayIcon.CirclePlayIcon, { size: "lg", color: "interactive-text-default" });
+  return refs(timestampProducer, obj);
 }
 export function SearchFileMediaImage(height) {
   height = height.height;
@@ -277,8 +277,8 @@ export function SearchFileMediaImage(height) {
     }, items)
   ];
   obj.style = items1;
-  obj.children = closure_1_10(AttachmentPreview.AttachmentIcon, { fileName });
-  return closure_1_10(timestampProducer, obj);
+  obj.children = refs(AttachmentPreview.AttachmentIcon, { fileName });
+  return refs(timestampProducer, obj);
 }
 export function SearchComponentMediaImage(unfurledMediaItem) {
   unfurledMediaItem = unfurledMediaItem.unfurledMediaItem;

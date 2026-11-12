@@ -1,6 +1,6 @@
-// === Module 13064: conjureDevicePermissions ===
+// === Module 13058: conjureDevicePermissions ===
 
-// Module 13064 (conjureDevicePermissions)
+// Module 13058 (conjureDevicePermissions)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import _modDef4079 from "module_4079" /* 4079 */;

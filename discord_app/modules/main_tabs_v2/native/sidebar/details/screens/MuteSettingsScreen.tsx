@@ -1,9 +1,9 @@
-// === Module 19541: MuteSettingsScreen ===
+// === Module 19536: MuteSettingsScreen ===
 
-// Module 19541 (MuteSettingsScreen)
+// Module 19536 (MuteSettingsScreen)
 import nativeDefault from "native" /* 575 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 11019 */;
-import threadActionSheets from "threadActionSheets" /* 11834 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 11013 */;
+import threadActionSheets from "threadActionSheets" /* 11828 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildStore from "GuildStore" /* 5114 */;
@@ -26,11 +26,11 @@ function UnmuteOptions(channel) {
   }, items);
   const obj2 = { icon: null, label: null, onPress: null, start: true, end: true };
   const tmp = closure_13();
-  obj2.icon = closure_10(channel(1187).Icon, { disableColor: true, source: navigation(11021) });
+  obj2.icon = closure_10(channel(1187).Icon, { disableColor: true, source: navigation(11015) });
   const obj4 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = channel(1113).intl;
   const obj5 = { name: null };
-  const obj3 = { disableColor: true, source: navigation(11021) };
+  const obj3 = { disableColor: true, source: navigation(11015) };
   obj5.name = channel(5891).computeChannelName(channel, UserStore, RelationshipStore, true);
   obj4.children = intl.format(channel(1113).t["eC+9rj"], obj5);
   obj2.label = closure_10(channel(5866).Text, obj4);
@@ -38,8 +38,8 @@ function UnmuteOptions(channel) {
   const items1 = [closure_10(channel(7379).TableRow, obj2), ];
   const obj7 = { muteConfig: channel.muteConfig, type: null };
   const obj6 = channel(5891);
-  const tmp6 = navigation(11022);
-  const MuteSettingType = channel(11022).MuteSettingType;
+  const tmp6 = navigation(11016);
+  const MuteSettingType = channel(11016).MuteSettingType;
   obj7.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
   items1[1] = closure_10(tmp6, obj7);
   obj.children = items1;
@@ -159,7 +159,7 @@ const ChannelSettingsSections = fn(1072).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const createStyles = fn(5243);
-let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 }, options: { marginBottom: 16 }, trailing: { flexDirection: "row", alignItems: "center" }, hint: { marginTop: 8, paddingHorizontal: 12 }, headerRightSpacer: { width: fn(8986).MIN_HEADER_HEIGHT } };
+let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 }, options: { marginBottom: 16 }, trailing: { flexDirection: "row", alignItems: "center" }, hint: { marginTop: 8, paddingHorizontal: 12 }, headerRightSpacer: { width: fn(8985).MIN_HEADER_HEIGHT } };
 let closure_13 = createStyles.createStyles(obj);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, padding: 16 };
 const size = fn(2);

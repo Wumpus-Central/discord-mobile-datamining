@@ -1,6 +1,6 @@
-// === Module 17487: QuestHomeEmptyState ===
+// === Module 17482: QuestHomeEmptyState ===
 
-// Module 17487 (QuestHomeEmptyState)
+// Module 17482 (QuestHomeEmptyState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -10,7 +10,7 @@ import useToken from "useToken" /* 5839 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7351 */;
-import _modDef17488 from "module_17488" /* 17488 */;
+import _modDef17483 from "module_17483" /* 17483 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -86,7 +86,7 @@ export default function QuestHomeEmptyState(hasContentAbove) {
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
     const obj11 = { style: tmp5.emptyImage, children: null };
-    const obj12 = { style: tmp5.backgroundImage, source: _modDef17488, resizeMode: "cover" };
+    const obj12 = { style: tmp5.backgroundImage, source: _modDef17483, resizeMode: "cover" };
     obj11.children = hasOwnProperty(FastImageDefault, obj12);
     const items4 = [hasOwnProperty(React3, obj11), ];
     const obj24 = { style: tmp5.gradient, end: null, start: null, colors: null };

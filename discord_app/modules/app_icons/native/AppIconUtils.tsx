@@ -1,13 +1,13 @@
-// === Module 15203: AppIconUtils ===
+// === Module 15200: AppIconUtils ===
 
-// Module 15203 (AppIconUtils)
+// Module 15200 (AppIconUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
 import AppIconTypes from "AppIconTypes" /* 5269 */;
 import useMountEffectDefault from "useMountEffect" /* 5836 */;
 import openUserSettings from "openUserSettings" /* 8537 */;
-import NativeAppIconModuleDefault from "NativeAppIconModule" /* 15204 */;
+import NativeAppIconModuleDefault from "NativeAppIconModule" /* 15201 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -196,7 +196,7 @@ let closure_16 = async function _setAppIcon(arg0) {
     }
   }
 };
-const AppIconConstants = fn(11118);
+const AppIconConstants = fn(11112);
 ({ getDefaultIcon: closure_6, getIconById: metroImportDefault, getLimitedAlternateIcons: closure_8, getOfficialAlternateIcons: closure_9 } = AppIconConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, UserSettingsSections: closure_11 } = Constants);

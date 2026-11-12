@@ -1,6 +1,6 @@
-// === Module 18462: useIsAllowGameFriendDMsSettingVisible ===
+// === Module 18457: useIsAllowGameFriendDMsSettingVisible ===
 
-// Module 18462 (useIsAllowGameFriendDMsSettingVisible)
+// Module 18457 (useIsAllowGameFriendDMsSettingVisible)
 import initialize from "initialize" /* 504 */;
 import GameRelationshipStore from "GameRelationshipStore" /* 8698 */;
 

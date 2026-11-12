@@ -1,17 +1,17 @@
-// === Module 11212: EmojiPickerListComponents ===
+// === Module 11206: EmojiPickerListComponents ===
 
-// Module 11212 (EmojiPickerListComponents)
+// Module 11206 (EmojiPickerListComponents)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import _modDef9327 from "module_9327" /* 9327 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 11210 */;
+import _modDef9326 from "module_9326" /* 9326 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 11204 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerListConstants = fn(9480);
+const EmojiPickerListConstants = fn(9479);
 ({ LABEL_BOTTOM_PADDING, LABEL_TOP_PADDING, NSFW_ROW_HEIGHT } = EmojiPickerListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -25,7 +25,7 @@ const obj4 = { flexDirection: "row", height: NSFW_ROW_HEIGHT, alignItems: "cente
 const memoResult = noop.memo(function EmojiPickerListNSFWRow() {
   const tmp = closure_6();
   const obj = { style: tmp.nsfwContainer, children: null };
-  items = [React4(native.Icon, { source: _modDef9327, size: native.Icon.Sizes.SMALL }), ];
+  items = [React4(native.Icon, { source: _modDef9326, size: native.Icon.Sizes.SMALL }), ];
   const obj3 = { style: tmp.nsfwText, variant: "body-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.SLzV5z);

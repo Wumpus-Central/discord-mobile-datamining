@@ -1,6 +1,6 @@
-// === Module 17841: useDisplayNameStylesHandleApply ===
+// === Module 17836: useDisplayNameStylesHandleApply ===
 
-// Module 17841 (useDisplayNameStylesHandleApply)
+// Module 17836 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -107,8 +107,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                           closure_128_0 = undefined;
                           closure_128_1 = undefined;
                           if (closure_2_1) {
-                            const result = displayNameStyles(16966).saveHexagonCampaignPreviousDisplayNameStyles();
-                            const obj6 = displayNameStyles(16966);
+                            const result = displayNameStyles(16961).saveHexagonCampaignPreviousDisplayNameStyles();
+                            const obj6 = displayNameStyles(16961);
                           }
                           if (closure_1_10) {
                             closure_1_12.current = true;
@@ -130,12 +130,12 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                             const obj5 = { value: displayNameStyles(7734).saveProfileAndAccountChanges(obj4), done: false };
                             return obj5;
                           } else if (closure_1_7) {
-                            const result1 = tmp41(9333).setTryItOutDisplayNameStyles(displayNameStyles);
-                            const tmp41Result = tmp41(9333);
+                            const result1 = tmp41(9332).setTryItOutDisplayNameStyles(displayNameStyles);
+                            const tmp41Result = tmp41(9332);
                           } else {
                             const obj7 = { guildId, displayNameStyles };
-                            tmp41(9332).setPendingChanges(obj7);
-                            const tmp41Result2 = tmp41(9332);
+                            tmp41(9331).setPendingChanges(obj7);
+                            const tmp41Result2 = tmp41(9331);
                           }
                         }
                       } else if (1 === tmp9) {
@@ -182,9 +182,9 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                             items = [constants2.DISPLAY_NAME_STYLE];
                             obj15.perks = items;
                             obj15.content = displayNameStyles(5278).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
-                            obj15.contentSurface = displayNameStyles(16967).HexagonCampaignContentSurface.USER_PROFILE;
-                            const result2 = displayNameStyles(16967).trackHexagonCampaignPerkAction(obj15);
-                            const obj = displayNameStyles(16967);
+                            obj15.contentSurface = displayNameStyles(16962).HexagonCampaignContentSurface.USER_PROFILE;
+                            const result2 = displayNameStyles(16962).trackHexagonCampaignPerkAction(obj15);
+                            const obj = displayNameStyles(16962);
                           }
                           c3 = 0;
                           closure_1_12.current = false;
@@ -193,8 +193,8 @@ export function useDisplayNameStylesHandleApply(hasChanges) {
                       const obj16 = { font_name: displayNameStyles(1395).DisplayNameFont[closure_2], effect_name: displayNameStyles(1396).DisplayNameEffect[c3], colors, entry_point };
                       closure_2_1(1252).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj16);
                       if (closure_129_1) {
-                        const result3 = displayNameStyles(16966).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
-                        const obj12 = displayNameStyles(16966);
+                        const result3 = displayNameStyles(16961).markHexagonCampaignPerkApplied(constants2.DISPLAY_NAME_STYLE);
+                        const obj12 = displayNameStyles(16961);
                       }
                       if (closure_1_8 != null) {
                         closure_1_8();

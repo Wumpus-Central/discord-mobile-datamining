@@ -1,9 +1,9 @@
-// === Module 17564: OrbsArcadeGameGraphic ===
+// === Module 17559: OrbsArcadeGameGraphic ===
 
-// Module 17564 (OrbsArcadeGameGraphic)
+// Module 17559 (OrbsArcadeGameGraphic)
 import nativeDefault from "native" /* 575 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import AssetUtils from "AssetUtils" /* 10078 */;
+import AssetUtils from "AssetUtils" /* 10077 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 5244 */;
@@ -49,7 +49,7 @@ export default function OrbsArcadeGameGraphic(game) {
         obj3.onError = function onError() {
           return closure_1(sheetVideoAsset.url);
         };
-        let tmp7Result = jsx(tmp2(9664).VideoComponent, { style: tmp.graphicMedia, source: null, poster: null, posterResizeMode: "cover", resizeMode: "cover", onError: null, muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" });
+        let tmp7Result = jsx(tmp2(9663).VideoComponent, { style: tmp.graphicMedia, source: null, poster: null, posterResizeMode: "cover", resizeMode: "cover", onError: null, muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" });
       }
       obj2.children = tmp7Result;
       return <tmp8 {...obj2} />;

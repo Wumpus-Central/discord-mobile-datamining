@@ -1,11 +1,11 @@
-// === Module 12758: EmbeddedActivityView ===
+// === Module 12752: EmbeddedActivityView ===
 
-// Module 12758 (EmbeddedActivityView)
+// Module 12752 (EmbeddedActivityView)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12657 */;
-import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 12759 */;
-import activityWebViewController from "activityWebViewController" /* 12762 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12651 */;
+import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 12753 */;
+import activityWebViewController from "activityWebViewController" /* 12756 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -102,14 +102,14 @@ function EmbeddedActivityWebView(applicationId) {
   const merged = Object.assign(applicationId, Object.assign({ deepLinkQueryParams: 0, applicationId: 0 }));
   ({ iframeId, shellBridgeSecret } = _slicedToArray(noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)), 1)[0]);
   const merged1 = Object.assign(merged);
-  return closure_13(applicationId(12787).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
+  return closure_13(applicationId(12781).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
 }
 let closure_3 = ["ui_density"];
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroImportDefault, View: closure_8 } = get_ActivityIndicator);
 const ActivityScreenOrientation = fn(2142).ActivityScreenOrientation;
 fn(1362).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
-const ActivityLayoutMode = fn(12616).ActivityLayoutMode;
+const ActivityLayoutMode = fn(12610).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(5243);

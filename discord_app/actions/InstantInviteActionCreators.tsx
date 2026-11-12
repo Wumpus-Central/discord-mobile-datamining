@@ -13,10 +13,10 @@ import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6780 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
 import InviteTargetTypes from "InviteTargetTypes" /* 7599 */;
 import GuildInviteFlags from "GuildInviteFlags" /* 7611 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 12291 */;
-import showNSFWGuildJoinGate from "showNSFWGuildJoinGate" /* 15823 */;
-import generateDynamicLinkDefault from "generateDynamicLink" /* 15829 */;
-import ProtocolUtilsDefault from "ProtocolUtils" /* 15831 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 12285 */;
+import showNSFWGuildJoinGate from "showNSFWGuildJoinGate" /* 15818 */;
+import generateDynamicLinkDefault from "generateDynamicLink" /* 15824 */;
+import ProtocolUtilsDefault from "ProtocolUtils" /* 15826 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6966 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -541,12 +541,12 @@ export default {
                     closure_2 = closure_1_2;
                     if (obj.isDispatching()) {
                       let resolved = Promise.resolve();
-                      let nextPromise = resolved.then(/* F93265 */ function() { ... });
+                      let nextPromise = resolved.then(/* F93276 */ function() { ... });
                     } else {
                       let obj2 = { type: "INVITE_RESOLVE", code: closure_1_0 };
                       closure_2_1(closure_2_3[39]).dispatch(obj2);
                       let tmp4Result = closure_2_1(closure_2_3[39]);
-                      nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(/* F93266 */ function() { ... });
+                      nextPromise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2).then(/* F93277 */ function() { ... });
                       let promise = closure_2_1(closure_2_3[40])(closure_1_0, closure_1_1, closure_1_2);
                     }
                     return nextPromise;
@@ -618,7 +618,7 @@ export default {
       const obj2 = { type: "INVITE_RESOLVE", code };
       tmp(572).dispatch(obj2);
       const tmpResult = tmp(572);
-      nextPromise = tmp(15820)(code, arg1, arg2).then((result) => {
+      nextPromise = tmp(15815)(code, arg1, arg2).then((result) => {
         ({ invite, code } = result);
         if (null != invite) {
           const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
@@ -631,7 +631,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(15820)(code, arg1, arg2);
+      const promise = tmp(15815)(code, arg1, arg2);
     }
     return nextPromise;
   },
@@ -1847,8 +1847,8 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(15826).onOpenHubInvite(flags);
-        const obj6 = obj(15826);
+        obj(15821).onOpenHubInvite(flags);
+        const obj6 = obj(15821);
       }
     }
     let num = flags.flags;
@@ -1864,10 +1864,10 @@ export default {
       if (!hasFlagResult) {
         if (flags.new_member) {
           if (tmp6Result3.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(15827).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result4 = tmp6(15827);
+            const result1 = tmp6(15822).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result4 = tmp6(15822);
           }
-          tmp6Result3 = tmp6(15827);
+          tmp6Result3 = tmp6(15822);
         }
       }
     }
@@ -2330,9 +2330,9 @@ export default {
       const obj4 = require("DynamicLinkTemplates");
     }
     let obj3 = { type: "INVITE_APP_OPENING", code };
-    const attemptId = tmp18(15829).generateAttemptId();
+    const attemptId = tmp18(15824).generateAttemptId();
     inviteType = undefined;
-    const tmp18Result = tmp18(15829);
+    const tmp18Result = tmp18(15824);
     if (inviteType != null) {
       inviteType = inviteType.inviteType;
     }

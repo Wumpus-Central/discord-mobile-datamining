@@ -1,14 +1,14 @@
-// === Module 16175: ContactSyncUpsellCTA ===
+// === Module 16170: ContactSyncUpsellCTA ===
 
-// Module 16175 (ContactSyncUpsellCTA)
+// Module 16170 (ContactSyncUpsellCTA)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14883 */;
-import _modDef16176 from "module_16176" /* 16176 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14879 */;
+import _modDef16171 from "module_16171" /* 16171 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const dismissUpsellCTA = fn(14886).dismissUpsellCTA;
+const dismissUpsellCTA = fn(14882).dismissUpsellCTA;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
@@ -49,7 +49,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       const result = location(7882).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef16176,
+    iconSource: _modDef16171,
     title: null,
     subtitle: null
   };
@@ -87,7 +87,7 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
       const result = location(7882).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef16176,
+    iconSource: _modDef16171,
     title: null,
     subtitle: null
   });

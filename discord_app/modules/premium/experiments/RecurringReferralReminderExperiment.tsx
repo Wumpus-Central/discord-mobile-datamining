@@ -1,6 +1,6 @@
-// === Module 19645: RecurringReferralReminderExperiment ===
+// === Module 19640: RecurringReferralReminderExperiment ===
 
-// Module 19645 (RecurringReferralReminderExperiment)
+// Module 19640 (RecurringReferralReminderExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

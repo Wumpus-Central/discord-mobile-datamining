@@ -1,15 +1,15 @@
-// === Module 17825: MessagePreviewManager ===
+// === Module 17820: MessagePreviewManager ===
 
-// Module 17825 (MessagePreviewManager)
+// Module 17820 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 17826 */;
+import RemoteFetchData from "RemoteFetchData" /* 17821 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 16104 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 16099 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 require = fn;

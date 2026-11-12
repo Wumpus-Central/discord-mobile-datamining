@@ -1,9 +1,9 @@
-// === Module 15643: VoicePanelStreamPreview ===
+// === Module 15640: VoicePanelStreamPreview ===
 
-// Module 15643 (VoicePanelStreamPreview)
+// Module 15640 (VoicePanelStreamPreview)
 import nativeDefault from "native" /* 575 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 6745 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 13011 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 13005 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

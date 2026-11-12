@@ -1,6 +1,6 @@
-// === Module 12963: LabeledActionBarButton ===
+// === Module 12957: LabeledActionBarButton ===
 
-// Module 12963 (LabeledActionBarButton)
+// Module 12957 (LabeledActionBarButton)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import FastImageDefault from "FastImage" /* 5957 */;

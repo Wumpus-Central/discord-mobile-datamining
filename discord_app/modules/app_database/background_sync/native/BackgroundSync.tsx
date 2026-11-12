@@ -1,6 +1,6 @@
-// === Module 20031: background_sync/BackgroundSync ===
+// === Module 20026: background_sync/BackgroundSync ===
 
-// Module 20031 (background_sync/BackgroundSync)
+// Module 20026 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import Storage4 from "Storage" /* 510 */;

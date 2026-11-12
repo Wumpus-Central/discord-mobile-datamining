@@ -1,6 +1,6 @@
-// === Module 15722: UserProfileRecentActivityCard ===
+// === Module 15717: UserProfileRecentActivityCard ===
 
-// Module 15722 (UserProfileRecentActivityCard)
+// Module 15717 (UserProfileRecentActivityCard)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtils from "AvatarUtils" /* 1411 */;
@@ -14,14 +14,14 @@ import useAnalyticsLocations from "useAnalyticsLocations" /* 7852 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
 import UnknownGameIcon from "UnknownGameIcon" /* 8309 */;
 import utils from "utils" /* 8353 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 9410 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10219 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 10597 */;
-import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 15596 */;
-import BadgesAll from "Badges" /* 15609 */;
-import TrendingType from "TrendingType" /* 15614 */;
-import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 15621 */;
-import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 15622 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 9409 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10217 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 10595 */;
+import ContentInventoryActivityImageUtils from "ContentInventoryActivityImageUtils" /* 15593 */;
+import BadgesAll from "Badges" /* 15606 */;
+import TrendingType from "TrendingType" /* 15611 */;
+import useTrackUserProfileActivityActionDefault from "useTrackUserProfileActivityAction" /* 15618 */;
+import useTrackUserProfileActivityViewDefault from "useTrackUserProfileActivityView" /* 15619 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -308,7 +308,7 @@ export default function UserProfileRecentActivityCard(style) {
           const obj7 = { title: entry.extra.activity_name };
           obj8 = obj7;
         } else {
-          obj8 = { title: "Array" };
+          obj8 = { title: "r" };
         }
         tmpResult6 = ContentInventoryTypes;
       }

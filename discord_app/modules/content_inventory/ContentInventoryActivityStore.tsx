@@ -1,15 +1,15 @@
-// === Module 15598: ContentInventoryActivityStore ===
+// === Module 15595: ContentInventoryActivityStore ===
 
-// Module 15598 (ContentInventoryActivityStore)
+// Module 15595 (ContentInventoryActivityStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ActivityTypes from "ActivityTypes" /* 6006 */;
 import utils from "utils" /* 8353 */;
-import matchUtils from "matchUtils" /* 9409 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 9410 */;
+import matchUtils from "matchUtils" /* 9408 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 9409 */;
 import PresenceStore from "PresenceStore" /* 6005 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 10138 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 10137 */;
 
 require = fn;
 function entryToKey(content) {
@@ -21,7 +21,7 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(10155).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(10153).ContentInventoryAuthorType.USER) {
         const activities = PresenceStore.getActivities(author_type.author_id);
         found = activities.find((type) => {
           if (type.type === ActivityTypes.ActivityTypes.PLAYING) {

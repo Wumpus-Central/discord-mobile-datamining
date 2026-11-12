@@ -1,6 +1,6 @@
-// === Module 13290: useActivityShelfItem ===
+// === Module 13284: useActivityShelfItem ===
 
-// Module 13290 (useActivityShelfItem)
+// Module 13284 (useActivityShelfItem)
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import Server from "Server" /* 2116 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5164 */;
@@ -8,12 +8,12 @@ import getPlatformDefault from "getPlatform" /* 5921 */;
 import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6994 */;
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7196 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12657 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 12752 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 12753 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12808 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 13291 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 13292 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12651 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 12746 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 12747 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12802 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 13285 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 13286 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
 

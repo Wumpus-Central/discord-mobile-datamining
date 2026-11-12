@@ -1,6 +1,6 @@
-// === Module 15093: MediaModalOverlayHeader ===
+// === Module 15090: MediaModalOverlayHeader ===
 
-// Module 15093 (MediaModalOverlayHeader)
+// Module 15090 (MediaModalOverlayHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
@@ -9,13 +9,13 @@ import NavigationRouteUtils from "NavigationRouteUtils" /* 5429 */;
 import timing_timing from "timing/timing" /* 5485 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import XSmallIcon from "XSmallIcon" /* 7483 */;
-import ContextMenu from "ContextMenu" /* 9082 */;
-import MediaShareActions from "MediaShareActions" /* 10136 */;
-import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper" /* 10170 */;
-import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 10171 */;
-import useShouldHideMediaOptionsDefault from "useShouldHideMediaOptions" /* 12544 */;
-import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 15090 */;
-import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF" /* 15094 */;
+import ContextMenu from "ContextMenu" /* 9081 */;
+import MediaShareActions from "MediaShareActions" /* 10135 */;
+import MediaModalOverlayHeaderWrapper from "MediaModalOverlayHeaderWrapper" /* 10168 */;
+import MediaViewerOverlayButtonDefault from "MediaViewerOverlayButton" /* 10169 */;
+import useShouldHideMediaOptionsDefault from "useShouldHideMediaOptions" /* 12538 */;
+import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 15087 */;
+import MediaViewerOverlayButtonFavoriteGIFDefault from "MediaViewerOverlayButtonFavoriteGIF" /* 15091 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;
@@ -23,7 +23,7 @@ const _modDef1652 = _mod1652;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const SHARE_PREPARING_MODAL_KEY = fn(10166).SHARE_PREPARING_MODAL_KEY;
+const SHARE_PREPARING_MODAL_KEY = fn(10164).SHARE_PREPARING_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5243);
@@ -115,9 +115,9 @@ export function MediaModalOverlayHeader(arg0) {
               const obj = { accessibilityLabel: null, icon: null, ref: null };
               const intl = _undefined(1113).intl;
               obj.accessibilityLabel = intl.string(_undefined(1113).t.PdRCRg);
-              const tmp4 = _undefined2(10171);
+              const tmp4 = _undefined2(10169);
               if (obj2.isAndroid()) {
-                let tmp2Result = closure_1_6(_undefined(15095).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
+                let tmp2Result = closure_1_6(_undefined(15092).MoreVerticalIcon, { size: "md", color: "interactive-text-active" });
               } else {
                 tmp2Result = closure_1_6(_undefined(7356).MoreHorizontalIcon, { size: "md", color: "interactive-text-active" });
               }

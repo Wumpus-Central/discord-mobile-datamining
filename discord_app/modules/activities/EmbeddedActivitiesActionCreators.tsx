@@ -1,6 +1,6 @@
-// === Module 12651: EmbeddedActivitiesActionCreators ===
+// === Module 12645: EmbeddedActivitiesActionCreators ===
 
-// Module 12651 (EmbeddedActivitiesActionCreators)
+// Module 12645 (EmbeddedActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import dismissible_content from "dismissible_content" /* 5076 */;
@@ -610,7 +610,7 @@ let closure_26 = async function _maybeSendPrimaryAppCommand(arg0) {
                     };
                   }
                 };
-                nonce(11336)(obj);
+                nonce(11330)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -1307,7 +1307,7 @@ let closure_34 = async function _refreshProxyTicket() {
     }
   })();
 };
-let closure_5 = fn(11345).getOrFetchApplicationCommandIndexForTarget;
+let closure_5 = fn(11339).getOrFetchApplicationCommandIndexForTarget;
 let closure_16 = fn(2142).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_17, AnalyticsGameOpenTypes: closure_18, ChannelTypes: closure_19, Endpoints: closure_20, PopoutWindowKeys: closure_21 } = Constants);

@@ -1,6 +1,6 @@
-// === Module 11180: RoleLabel ===
+// === Module 11174: RoleLabel ===
 
-// Module 11180 (RoleLabel)
+// Module 11174 (RoleLabel)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 1187 */;
 import Form from "Form" /* 8041 */;

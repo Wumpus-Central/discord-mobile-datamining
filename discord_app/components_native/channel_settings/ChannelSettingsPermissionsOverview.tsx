@@ -1,6 +1,6 @@
-// === Module 19500: ChannelSettingsPermissionsOverview ===
+// === Module 19495: ChannelSettingsPermissionsOverview ===
 
-// Module 19500 (ChannelSettingsPermissionsOverview)
+// Module 19495 (ChannelSettingsPermissionsOverview)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -8,10 +8,10 @@ import Server from "Server" /* 2116 */;
 import PermissionUtilsAll from "PermissionUtils" /* 5180 */;
 import TableRow from "TableRow" /* 7379 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10866 */;
-import RoleLabel from "RoleLabel" /* 11180 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17818 */;
-import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 19501 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10860 */;
+import RoleLabel from "RoleLabel" /* 11174 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17813 */;
+import useGetOrFetchChannelOverwriteUsersDefault from "useGetOrFetchChannelOverwriteUsers" /* 19496 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -69,9 +69,9 @@ function ChannelPermissionSyncModule(channel) {
               closure_128_0 = undefined;
               const guild_id = tmp5.guild_id;
               const obj8 = PermissionUtilsAll;
-              const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(tmp5, tmp2(12470).getAppChannelBotUserId(tmp2));
+              const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(tmp5, tmp2(12464).getAppChannelBotUserId(tmp2));
               closure_128_0 = syncedPermissionOverwrites;
-              const obj9 = tmp2(12470);
+              const obj9 = tmp2(12464);
               c2 = 1;
               c3 = 1;
               const obj5 = { value: tmp2(8068).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp2, syncedPermissionOverwrites[guild_id].deny, syncedPermissionOverwrites[guild_id].allow), done: false };
@@ -87,7 +87,7 @@ function ChannelPermissionSyncModule(channel) {
           } else {
             if (value) {
               const obj7 = { permissionOverwrites: null };
-              const obj = tmp2(10856);
+              const obj = tmp2(10850);
               obj7.permissionOverwrites = category(12).values(closure_128_0);
               obj.saveChannel(tmp2.id, obj7);
               const obj3 = category(12);
@@ -127,7 +127,7 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(13206).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(13200).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1113).intl;
   obj6.label = intl2.string(channel(1113).t.NVwuHq);
   obj6.onPress = callback;

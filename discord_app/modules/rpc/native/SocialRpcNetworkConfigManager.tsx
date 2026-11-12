@@ -1,6 +1,6 @@
-// === Module 20665: SocialRpcNetworkConfigManager ===
+// === Module 20660: SocialRpcNetworkConfigManager ===
 
-// Module 20665 (SocialRpcNetworkConfigManager)
+// Module 20660 (SocialRpcNetworkConfigManager)
 import _mod17 from "module_17" /* 17 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;

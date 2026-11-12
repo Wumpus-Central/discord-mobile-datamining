@@ -1,6 +1,6 @@
-// === Module 13455: MessageBlock ===
+// === Module 13449: MessageBlock ===
 
-// Module 13455 (MessageBlock)
+// Module 13449 (MessageBlock)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import noop from "module_19" /* 19 */;

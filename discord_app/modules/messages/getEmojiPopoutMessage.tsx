@@ -1,6 +1,6 @@
-// === Module 11247: getEmojiPopoutMessage ===
+// === Module 11241: getEmojiPopoutMessage ===
 
-// Module 11247 (getEmojiPopoutMessage)
+// Module 11241 (getEmojiPopoutMessage)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;

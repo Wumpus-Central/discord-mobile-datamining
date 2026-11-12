@@ -1,6 +1,6 @@
-// === Module 14683: DoubleTapToReactActionSheet ===
+// === Module 14679: DoubleTapToReactActionSheet ===
 
-// Module 14683 (DoubleTapToReactActionSheet)
+// Module 14679 (DoubleTapToReactActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
 import _mod1652 from "module_1652" /* 1652 */;
@@ -9,7 +9,7 @@ import UserSettings from "UserSettings" /* 5068 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 5189 */;
 import timing_timing from "timing/timing" /* 5485 */;
 import spring_spring from "spring/spring" /* 5876 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 9130 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 9129 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

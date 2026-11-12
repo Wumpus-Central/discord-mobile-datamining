@@ -1,6 +1,6 @@
-// === Module 13307: MyGuildApplicationsStore ===
+// === Module 13301: MyGuildApplicationsStore ===
 
-// Module 13307 (MyGuildApplicationsStore)
+// Module 13301 (MyGuildApplicationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;

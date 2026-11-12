@@ -1,6 +1,6 @@
-// === Module 13706: useChatInputMaxHeight ===
+// === Module 13702: useChatInputMaxHeight ===
 
-// Module 13706 (useChatInputMaxHeight)
+// Module 13702 (useChatInputMaxHeight)
 import useWindowDimensions from "useWindowDimensions" /* 1493 */;
 import KeyboardTypes from "KeyboardTypes" /* 1625 */;
 import _mod1652 from "module_1652" /* 1652 */;
@@ -23,8 +23,8 @@ function getChatInputMaxHeight() {
   }
   return Math.min(200, Math.max(2 * CHAT_INPUT_PILL_CONTENT_SIZE, useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - 200));
 }
-const CHAT_INPUT_PILL_CONTENT_SIZE = fn(13703).CHAT_INPUT_PILL_CONTENT_SIZE;
-let items = [{ code: "(function getChatInputMaxHeightWorklet_useChatInputMaxHeightTsx1(){let[getKeyboardStateWorklet,KeyboardTypes,getWindowDimensionsWorklet,MAX_HEIGHT,MIN_HEIGHT]=this.__closure;const{keyboardHeight:keyboardHeightSystem,customKeyboardHeight:customKeyboardHeight,keyboardType:keyboardType}=getKeyboardStateWorklet();const keyboardHeight=keyboardType!==KeyboardTypes.SYSTEM?customKeyboardHeight:keyboardHeightSystem;const window=getWindowDimensionsWorklet({ignoreKeyboard:true});const windowHeightNoKeyboard=window.height-keyboardHeight;return Math.min(MAX_HEIGHT,Math.max(MIN_HEIGHT*2,windowHeightNoKeyboard-MAX_HEIGHT));})" }, fn(13707).getKeyboardStateWorklet, fn(1625).KeyboardTypes, fn(13708).getWindowDimensionsWorklet, 200, CHAT_INPUT_PILL_CONTENT_SIZE];
+const CHAT_INPUT_PILL_CONTENT_SIZE = fn(13699).CHAT_INPUT_PILL_CONTENT_SIZE;
+let items = [{ code: "(function getChatInputMaxHeightWorklet_useChatInputMaxHeightTsx1(){let[getKeyboardStateWorklet,KeyboardTypes,getWindowDimensionsWorklet,MAX_HEIGHT,MIN_HEIGHT]=this.__closure;const{keyboardHeight:keyboardHeightSystem,customKeyboardHeight:customKeyboardHeight,keyboardType:keyboardType}=getKeyboardStateWorklet();const keyboardHeight=keyboardType!==KeyboardTypes.SYSTEM?customKeyboardHeight:keyboardHeightSystem;const window=getWindowDimensionsWorklet({ignoreKeyboard:true});const windowHeightNoKeyboard=window.height-keyboardHeight;return Math.min(MAX_HEIGHT,Math.max(MIN_HEIGHT*2,windowHeightNoKeyboard-MAX_HEIGHT));})" }, fn(13703).getKeyboardStateWorklet, fn(1625).KeyboardTypes, fn(13704).getWindowDimensionsWorklet, 200, CHAT_INPUT_PILL_CONTENT_SIZE];
 let closure_129_0;
 let closure_129_1;
 let closure_129_2;

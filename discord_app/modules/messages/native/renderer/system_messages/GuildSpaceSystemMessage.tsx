@@ -1,11 +1,11 @@
-// === Module 9272: GuildSpaceSystemMessage ===
+// === Module 9271: GuildSpaceSystemMessage ===
 
-// Module 9272 (GuildSpaceSystemMessage)
+// Module 9271 (GuildSpaceSystemMessage)
 import GlobalUtils from "GlobalUtils" /* 1380 */;
 import _modDef2587 from "module_2587" /* 2587 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9124 */;
-import GuildSpaceLeaderboardSystemMessage from "GuildSpaceLeaderboardSystemMessage" /* 9273 */;
-import GuildSpaceMusicSystemMessage from "GuildSpaceMusicSystemMessage" /* 9275 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9123 */;
+import GuildSpaceLeaderboardSystemMessage from "GuildSpaceLeaderboardSystemMessage" /* 9272 */;
+import GuildSpaceMusicSystemMessage from "GuildSpaceMusicSystemMessage" /* 9274 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -34,9 +34,9 @@ export function createGuildSpaceSystemMessage(message) {
         const channel = ChannelStore.getChannel(message.channel_id);
         [tmp21, tmp22] = substr;
         const tmp20 = _slicedToArray(substr, 2);
-        const userAuthorWithProcessedColor = string(9122).getUserAuthorWithProcessedColor(tmp21, channel);
-        const stringResult = string(9122);
-        const userAuthorWithProcessedColor1 = string(9122).getUserAuthorWithProcessedColor(tmp22, channel);
+        const userAuthorWithProcessedColor = string(9121).getUserAuthorWithProcessedColor(tmp21, channel);
+        const stringResult = string(9121);
+        const userAuthorWithProcessedColor1 = string(9121).getUserAuthorWithProcessedColor(tmp22, channel);
         const intl2 = string(1113).intl;
         let tmp14 = importDefault;
         const obj3 = { displayCount: substr.length, username: userAuthorWithProcessedColor.nick, usernameOnClick: null, username2: null, username2OnClick: null, additionalCount: null };
@@ -46,15 +46,15 @@ export function createGuildSpaceSystemMessage(message) {
         let tmp11;
         if (null != tmp22) {
           const obj5 = { userId: tmp22.id, message, author: userAuthorWithProcessedColor1, roleStyle };
-          tmp11 = tmp14(9124)(obj5);
+          tmp11 = tmp14(9123)(obj5);
         }
         obj3.username2OnClick = tmp11;
         obj3.additionalCount = diff;
         let formatToPartsResult = intl2.formatToParts(_modDef2587.zUiZPF, obj3);
-        const stringResult1 = string(9122);
+        const stringResult1 = string(9121);
       }
       const obj6 = { content: formatToPartsResult };
-      merged = Object.assign(tmp14(9126)(message));
+      merged = Object.assign(tmp14(9125)(message));
     }
     const intl = string(1113).intl;
     string = intl.string;

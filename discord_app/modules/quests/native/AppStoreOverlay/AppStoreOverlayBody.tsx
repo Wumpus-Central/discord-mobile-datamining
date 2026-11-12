@@ -1,13 +1,13 @@
-// === Module 10109: AppStoreOverlayBody ===
+// === Module 10108: AppStoreOverlayBody ===
 
-// Module 10109 (AppStoreOverlayBody)
+// Module 10108 (AppStoreOverlayBody)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import AnalyticsActions from "AnalyticsActions" /* 8759 */;
-import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 10110 */;
-import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 10117 */;
-import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 15130 */;
+import AnalyticsActions from "AnalyticsActions" /* 8758 */;
+import AppStoreOverlayStatsCarouselDefault from "AppStoreOverlayStatsCarousel" /* 10109 */;
+import AppStoreOverlayMediaCarouselDefault from "AppStoreOverlayMediaCarousel" /* 10116 */;
+import AppStoreOverlayAboutSectionDefault from "AppStoreOverlayAboutSection" /* 15127 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

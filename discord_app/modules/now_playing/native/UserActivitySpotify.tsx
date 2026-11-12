@@ -1,11 +1,11 @@
-// === Module 12596: UserActivitySpotify ===
+// === Module 12590: UserActivitySpotify ===
 
-// Module 12596 (UserActivitySpotify)
+// Module 12590 (UserActivitySpotify)
 import native from "native" /* 1187 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1376 */;
 import LinkingDefault from "Linking" /* 5949 */;
-import _modDef12341 from "module_12341" /* 12341 */;
+import _modDef12335 from "module_12335" /* 12335 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -108,7 +108,7 @@ prototype["renderLink"] = function renderLink(children, index, arg2) {
     str = "";
   }
   children[1] = str;
-  return closure_1_10(native.LegacyText, { children }, index);
+  return refs(native.LegacyText, { children }, index);
 };
 prototype["render"] = function render() {
   const self = this;
@@ -242,7 +242,7 @@ export function openAlbum(activity, id) {
 export function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
-  let obj2 = { icon: closure_9(activity(5873).Button.Icon, { source: _modDef12341 }), text: null, size: "sm", onPress: null, grow: true };
+  let obj2 = { icon: closure_9(activity(5873).Button.Icon, { source: _modDef12335 }), text: null, size: "sm", onPress: null, grow: true };
   const intl = activity(1113).intl;
   obj2.text = intl.formatToPlainString(activity(1113).t.LEgD7t, { platform: activity.name });
   obj2.onPress = function handlePress() {

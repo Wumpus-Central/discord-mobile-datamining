@@ -1,6 +1,6 @@
-// === Module 17609: ReturnFullQuestStatusInDecisionExperiment ===
+// === Module 17604: ReturnFullQuestStatusInDecisionExperiment ===
 
-// Module 17609 (ReturnFullQuestStatusInDecisionExperiment)
+// Module 17604 (ReturnFullQuestStatusInDecisionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1449 */;
 import size from "module_2" /* 2 */;
 

@@ -1,15 +1,15 @@
-// === Module 10713: GuildPowerupsLevelCard ===
+// === Module 10707: GuildPowerupsLevelCard ===
 
-// Module 10713 (GuildPowerupsLevelCard)
+// Module 10707 (GuildPowerupsLevelCard)
 import nativeDefault from "native" /* 575 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import BoostGemIcon from "BoostGemIcon" /* 9915 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 10633 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 10655 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 10660 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 10715 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 10716 */;
+import BoostGemIcon from "BoostGemIcon" /* 9914 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 10631 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 10648 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 10653 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 10709 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 10710 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,12 +33,12 @@ function GuildLevelPowerupHeader(arg0) {
     items1[1] = progressStart;
     items1[2] = position === constants.END && tmp.progressEnd;
     obj3.style = items1;
-    const items2 = [closure_1_10(LinearGradientDefault, obj3), , ];
+    const items2 = [refs(LinearGradientDefault, obj3), , ];
     const obj4 = { style: null };
     const items3 = [, ];
     ({ boostContainer: arr6[0], boostContainerBackground: arr6[1] } = tmp);
     obj4.style = items3;
-    items2[1] = closure_1_10(View, obj4);
+    items2[1] = refs(View, obj4);
     const items4 = [tmp.boostContainer, ];
     let boostContainerActive = active;
     if (active) {
@@ -49,8 +49,8 @@ function GuildLevelPowerupHeader(arg0) {
     obj5.style = items4;
     colors = nativeDefault.colors;
     const obj9 = { size: "xs", color: active ? colors.WHITE : colors.TEXT_MUTED };
-    obj5.children = closure_1_10(BoostGemIcon.BoostGemIcon, obj9);
-    items2[2] = closure_1_10(View, obj5);
+    obj5.children = refs(BoostGemIcon.BoostGemIcon, obj9);
+    items2[2] = refs(View, obj5);
     obj.children = items2;
     return closure_1_11(View, obj);
   }
@@ -120,7 +120,7 @@ const GuildPowerupsConstants = fn(5461);
 ({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: closure_6 } = GuildPowerupsConstants);
 const Constants = fn(1072);
 ({ BoostedGuildTiers: metroImportDefault, HorizontalGradient: closure_8 } = Constants);
-const TIER_CARDS = fn(10714).TIER_CARDS;
+const TIER_CARDS = fn(10708).TIER_CARDS;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(5243);
@@ -181,11 +181,11 @@ export default function GuildPowerupsLevelCard(arg0) {
     tmp19 = tmp5.type !== constants2.INACTIVE;
   }
   obj3.nextActive = tmp19;
-  const items1 = [closure_1_10(GuildLevelPowerupHeader, obj3), ];
+  const items1 = [refs(GuildLevelPowerupHeader, obj3), ];
   const obj4 = { style: tmp.contentContainer, children: null };
-  const items2 = [closure_1_10(Text_Text.Text, { color: "text-strong", variant: "heading-md/semibold", children: powerup.title }), closure_1_10(GuildPowerupLevelBody, { isActive: tmp4.type !== constants2.INACTIVE, index }), ];
-  const obj6 = { style: tmp.footerContainer, children: closure_1_10(GuildPowerupsCardFooter.GuildPowerupsCardFooter, { cost: powerup.cost, status: calculatePowerupCardStatus }) };
-  items2[2] = closure_1_10(View, obj6);
+  const items2 = [refs(Text_Text.Text, { color: "text-strong", variant: "heading-md/semibold", children: powerup.title }), refs(GuildPowerupLevelBody, { isActive: tmp4.type !== constants2.INACTIVE, index }), ];
+  const obj6 = { style: tmp.footerContainer, children: refs(GuildPowerupsCardFooter.GuildPowerupsCardFooter, { cost: powerup.cost, status: calculatePowerupCardStatus }) };
+  items2[2] = refs(View, obj6);
   obj4.children = items2;
   items1[1] = closure_1_11(View, obj4);
   obj2.children = items1;

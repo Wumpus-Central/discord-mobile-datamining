@@ -1,6 +1,6 @@
-// === Module 11345: ApplicationCommandIndexStore ===
+// === Module 11339: ApplicationCommandIndexStore ===
 
-// Module 11345 (ApplicationCommandIndexStore)
+// Module 11339 (ApplicationCommandIndexStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -11,22 +11,22 @@ import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5922 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
 import fuzzysearchDefault from "fuzzysearch" /* 7010 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 8657 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 11349 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 11350 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 11351 */;
-import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 11353 */;
-import CommandPermissionUtils from "CommandPermissionUtils" /* 11359 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 11343 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 11344 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 11345 */;
+import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 11347 */;
+import CommandPermissionUtils from "CommandPermissionUtils" /* 11353 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 11346 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 11340 */;
 import LocaleStore from "LocaleStore" /* 2186 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import GuildStore from "GuildStore" /* 5114 */;
 import UserStore from "UserStore" /* 1385 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 11347 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 11341 */;
 
 const require = globalThis.__r;
 const CommandPermissionUtilsAll = CommandPermissionUtils;
@@ -630,7 +630,7 @@ function useQueryState(type, commandTypes, allowFetch) {
 function queryIndex(allowApplicationCommands) {
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
-    builtIns = NONE(11351).BuiltInCommandFilter.ALLOW;
+    builtIns = NONE(11345).BuiltInCommandFilter.ALLOW;
   }
   let flag = allowApplicationCommands.allowApplicationCommands;
   if (flag === undefined) {
@@ -646,7 +646,7 @@ function queryIndex(allowApplicationCommands) {
   }
   NONE = allowApplicationCommands.scoreMethod;
   if (NONE === undefined) {
-    NONE = NONE(11351).ScoreMethod.NONE;
+    NONE = NONE(11345).ScoreMethod.NONE;
   }
   let sortOptions = allowApplicationCommands.sortOptions;
   if (sortOptions === undefined) {
@@ -665,10 +665,10 @@ function queryIndex(allowApplicationCommands) {
   if (formatted != null) {
     parts = formatted.split(" ");
   }
-  if (builtIns !== NONE(11351).BuiltInCommandFilter.DENY) {
-    const tmp12 = builtIns === NONE(11351).BuiltInCommandFilter.ONLY_TEXT;
-    let builtInCommands = tmp9(11353).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
-    const tmp9Result = tmp9(11353);
+  if (builtIns !== NONE(11345).BuiltInCommandFilter.DENY) {
+    const tmp12 = builtIns === NONE(11345).BuiltInCommandFilter.ONLY_TEXT;
+    let builtInCommands = tmp9(11347).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
+    const tmp9Result = tmp9(11347);
   } else {
     builtInCommands = [];
   }
@@ -841,7 +841,7 @@ function queryIndex(allowApplicationCommands) {
     return collator.compare(section.section.name, section2.section.name);
   });
   if (builtInCommands.length > 0) {
-    const tmp87 = queryIndexSection(NONE(11353).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
+    const tmp87 = queryIndexSection(NONE(11347).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
     if (null != tmp87) {
       items.push(tmp87);
     }
@@ -855,7 +855,7 @@ function queryIndex(allowApplicationCommands) {
       return obj;
     });
   });
-  if (NONE === NONE(11351).ScoreMethod.COMMAND_ONLY) {
+  if (NONE === NONE(11345).ScoreMethod.COMMAND_ONLY) {
     const context = permissionContext.context;
     let guild_id;
     if (permissionContext != null) {

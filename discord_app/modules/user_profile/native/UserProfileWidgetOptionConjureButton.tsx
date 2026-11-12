@@ -1,10 +1,10 @@
-// === Module 15710: UserProfileWidgetOptionConjureButton ===
+// === Module 15705: UserProfileWidgetOptionConjureButton ===
 
-// Module 15710 (UserProfileWidgetOptionConjureButton)
+// Module 15705 (UserProfileWidgetOptionConjureButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import Text_Text from "Text/Text" /* 5866 */;
-import MagicWandIcon from "MagicWandIcon" /* 10461 */;
+import MagicWandIcon from "MagicWandIcon" /* 10459 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

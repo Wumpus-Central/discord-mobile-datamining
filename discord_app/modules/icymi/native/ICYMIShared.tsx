@@ -1,6 +1,6 @@
-// === Module 19136: ICYMIShared ===
+// === Module 19131: ICYMIShared ===
 
-// Module 19136 (ICYMIShared)
+// Module 19131 (ICYMIShared)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
@@ -15,12 +15,12 @@ import ReadStateActionCreators from "ReadStateActionCreators" /* 7808 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
-import ClipView from "ClipView" /* 9437 */;
-import ICYMIUtils from "ICYMIUtils" /* 10149 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10150 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 19137 */;
+import ClipView from "ClipView" /* 9436 */;
+import ICYMIUtils from "ICYMIUtils" /* 10147 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10148 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 19132 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 8805 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 8804 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
@@ -150,7 +150,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjects: closure_10, AnalyticsObjectTypes: closure_11, AnalyticsPages: closure_12, DEFAULT_ROLE_COLOR_HEX: map1, MAX_MESSAGES_FOR_JUMP: closure_14, MessageFlags: closure_15, Permissions: closure_16, Routes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createICYMIStyles = fn(19097);
+const createICYMIStyles = fn(19092);
 let guild = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {

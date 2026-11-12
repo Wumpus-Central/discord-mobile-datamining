@@ -1,9 +1,9 @@
-// === Module 18775: ChannelsUnreadBar ===
+// === Module 18770: ChannelsUnreadBar ===
 
-// Module 18775 (ChannelsUnreadBar)
+// Module 18770 (ChannelsUnreadBar)
 import nativeDefault from "native" /* 575 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8995 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8994 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import module_1652 from "module_1652" /* 1652 */;
@@ -269,9 +269,9 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   if (first) {
     let ArrowSmallUpIcon = tmp7(8022).AtIcon;
   } else if ("bottom" === position) {
-    ArrowSmallUpIcon = tmp7(13932).ArrowSmallDownIcon;
+    ArrowSmallUpIcon = tmp7(13928).ArrowSmallDownIcon;
   } else {
-    ArrowSmallUpIcon = tmp7(13930).ArrowSmallUpIcon;
+    ArrowSmallUpIcon = tmp7(13926).ArrowSmallUpIcon;
   }
   const tmp4Result = nativeDefault;
   if (first) {

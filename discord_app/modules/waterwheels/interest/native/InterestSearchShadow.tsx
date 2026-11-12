@@ -1,13 +1,13 @@
-// === Module 18992: InterestSearchShadow ===
+// === Module 18987: InterestSearchShadow ===
 
-// Module 18992 (InterestSearchShadow)
+// Module 18987 (InterestSearchShadow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import PlatformUtils from "PlatformUtils" /* 1377 */;
 import _mod1652 from "module_1652" /* 1652 */;
 import LinearGradientDefault from "LinearGradient" /* 5830 */;
 import useToken from "useToken" /* 5839 */;
-import InterestScrollHeader from "InterestScrollHeader" /* 18991 */;
+import InterestScrollHeader from "InterestScrollHeader" /* 18986 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1652 = _mod1652;

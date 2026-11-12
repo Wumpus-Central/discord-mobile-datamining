@@ -1,12 +1,12 @@
-// === Module 13550: ConjurePublishNotesSheet ===
+// === Module 13544: ConjurePublishNotesSheet ===
 
-// Module 13550 (ConjurePublishNotesSheet)
+// Module 13544 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4079 from "module_4079" /* 4079 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5489 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11904 */;
-import useConjurePatchNotesComposerDefault from "useConjurePatchNotesComposer" /* 13551 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11898 */;
+import useConjurePatchNotesComposerDefault from "useConjurePatchNotesComposer" /* 13545 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -69,7 +69,7 @@ export default function ConjurePublishNotesSheet(guildId) {
     obj3.onSelect = function onSelect(id) {
       return pickChannel(id.id);
     };
-    obj2.content = closure_2_10(ChannelPickerActionSheetDefault, obj3);
+    obj2.content = refs(ChannelPickerActionSheetDefault, obj3);
     obj.showActionSheet(obj2);
   }, items1);
   const callback2 = pickChannel.useCallback(() => {

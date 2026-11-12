@@ -1,6 +1,6 @@
-// === Module 20021: AppIconPremiumManager ===
+// === Module 20016: AppIconPremiumManager ===
 
-// Module 20021 (AppIconPremiumManager)
+// Module 20016 (AppIconPremiumManager)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -8,7 +8,7 @@ import UserStore from "UserStore" /* 1385 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
 
 let require = fn;
-const getIconById = fn(11118).getIconById;
+const getIconById = fn(11112).getIconById;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const HexagonCampaignPerk = fn(5268).HexagonCampaignPerk;
 let closure_8 = new LoggerDefault("AppIconPremiumManager");

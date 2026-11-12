@@ -1,6 +1,6 @@
-// === Module 10577: SecureFramesCopyIcon ===
+// === Module 10575: SecureFramesCopyIcon ===
 
-// Module 10577 (SecureFramesCopyIcon)
+// Module 10575 (SecureFramesCopyIcon)
 import ToastUtils from "ToastUtils" /* 5951 */;
 import ClipboardUtils from "ClipboardUtils" /* 7877 */;
 import noop from "module_19" /* 19 */;

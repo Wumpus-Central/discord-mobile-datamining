@@ -1,6 +1,6 @@
-// === Module 9914: PremiumAccountCredit ===
+// === Module 9913: PremiumAccountCredit ===
 
-// Module 9914 (PremiumAccountCredit)
+// Module 9913 (PremiumAccountCredit)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
@@ -8,7 +8,7 @@ import PremiumUtils from "PremiumUtils" /* 2171 */;
 import _modDef3465 from "module_3465" /* 3465 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import GameIcon from "GameIcon" /* 7858 */;
-import BoostGemIcon from "BoostGemIcon" /* 9915 */;
+import BoostGemIcon from "BoostGemIcon" /* 9914 */;
 import noop from "module_19" /* 19 */;
 import EntitlementStore from "EntitlementStore" /* 8464 */;
 

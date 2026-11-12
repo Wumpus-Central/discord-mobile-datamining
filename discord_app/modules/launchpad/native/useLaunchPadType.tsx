@@ -1,9 +1,9 @@
-// === Module 12314: useLaunchPadType ===
+// === Module 12308: useLaunchPadType ===
 
-// Module 12314 (useLaunchPadType)
+// Module 12308 (useLaunchPadType)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import UserSettings from "UserSettings" /* 5068 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 12313 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 12307 */;
 import size from "module_2" /* 2 */;
 
 const LaunchPadTypes = LaunchPadConstants.LaunchPadTypes;

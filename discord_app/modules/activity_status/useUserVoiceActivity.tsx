@@ -1,6 +1,6 @@
-// === Module 10785: useUserVoiceActivity ===
+// === Module 10779: useUserVoiceActivity ===
 
-// Module 10785 (useUserVoiceActivity)
+// Module 10779 (useUserVoiceActivity)
 import ChannelStore from "ChannelStore" /* 5092 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
 import VoiceStateStore from "VoiceStateStore" /* 5918 */;

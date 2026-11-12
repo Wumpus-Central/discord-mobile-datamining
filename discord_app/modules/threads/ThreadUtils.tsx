@@ -1,6 +1,6 @@
-// === Module 8942: ThreadUtils ===
+// === Module 8941: ThreadUtils ===
 
-// Module 8942 (ThreadUtils)
+// Module 8941 (ThreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -8,7 +8,7 @@ import _modDef2166 from "module_2166" /* 2166 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7812 */;
 import threads_getTimestampStringDefault from "threads/getTimestampString" /* 8635 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8931 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 8930 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ReadStateStore from "ReadStateStore" /* 6952 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;

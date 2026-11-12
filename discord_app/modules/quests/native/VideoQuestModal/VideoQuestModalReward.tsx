@@ -1,9 +1,9 @@
-// === Module 17641: VideoQuestModalReward ===
+// === Module 17636: VideoQuestModalReward ===
 
-// Module 17641 (VideoQuestModalReward)
+// Module 17636 (VideoQuestModalReward)
 import nativeDefault from "native" /* 575 */;
-import QuestUtils from "QuestUtils" /* 10061 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 17624 */;
+import QuestUtils from "QuestUtils" /* 10060 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 17619 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,14 +28,14 @@ export default noop.memo(function VideoQuestModalReward(style) {
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = style);
-  quest = quest(17619).useVideoQuestModalContext().quest;
-  const obj = quest(17619);
+  quest = quest(17614).useVideoQuestModalContext().quest;
+  const obj = quest(17614);
   items = [quest.id];
-  const questTaskDetails = quest(10064).useQuestTaskDetails(quest);
+  const questTaskDetails = quest(10063).useQuestTaskDetails(quest);
   const callback = noop.useCallback(() => {
     const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
   }, items);
-  const obj2 = quest(10064);
+  const obj2 = quest(10063);
   const obj3 = { justify: "center", align: "center", spacing: nativeDefault.space.PX_24, style: style.style, children: null };
   const items1 = [closure_4(QuestProgressIndicatorDefault, { hasConfetti: true, quest, size: str, progress: questTaskDetails.percentComplete, onPress: callback, withAnimation: withRewardTileAnimation }), ];
   const obj5 = { align: "center", spacing: nativeDefault.space.PX_4, onLayout: onTextBlockLayout, children: null };

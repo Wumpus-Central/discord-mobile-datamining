@@ -1,6 +1,6 @@
-// === Module 9395: WishlistItemCardBase ===
+// === Module 9394: WishlistItemCardBase ===
 
-// Module 9395 (WishlistItemCardBase)
+// Module 9394 (WishlistItemCardBase)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;
@@ -9,9 +9,9 @@ import useToken from "useToken" /* 5839 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
 import LockIcon from "LockIcon" /* 8027 */;
 import useUserProfileColors from "useUserProfileColors" /* 8535 */;
-import useWishlistHooks from "useWishlistHooks" /* 9396 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9417 */;
-import IndicatorDot from "IndicatorDot" /* 9419 */;
+import useWishlistHooks from "useWishlistHooks" /* 9395 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9416 */;
+import IndicatorDot from "IndicatorDot" /* 9418 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ function SourceIcon(toastText) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_5(toastText(9390).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
+    children: closure_5(toastText(9389).HeartIcon, { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" })
   };
   return closure_5(closure_3, obj);
 }

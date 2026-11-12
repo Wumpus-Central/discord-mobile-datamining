@@ -1,13 +1,13 @@
-// === Module 19773: useSoundboardSoundLock ===
+// === Module 19768: useSoundboardSoundLock ===
 
-// Module 19773 (useSoundboardSoundLock)
+// Module 19768 (useSoundboardSoundLock)
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 8969 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8971 */;
-import BoostGemIcon from "BoostGemIcon" /* 9915 */;
-import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 19774 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 8968 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8970 */;
+import BoostGemIcon from "BoostGemIcon" /* 9914 */;
+import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 19769 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
 

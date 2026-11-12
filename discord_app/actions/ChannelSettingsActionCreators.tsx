@@ -1,11 +1,11 @@
-// === Module 10856: ChannelSettingsActionCreators ===
+// === Module 10850: ChannelSettingsActionCreators ===
 
-// Module 10856 (ChannelSettingsActionCreators)
+// Module 10850 (ChannelSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import RootNavigationRef from "RootNavigationRef" /* 5430 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 10852 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 10846 */;
 import ChannelStore from "ChannelStore" /* 5092 */;
 
 require = fn;

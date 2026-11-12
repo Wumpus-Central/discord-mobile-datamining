@@ -1,6 +1,6 @@
-// === Module 10432: DiscoverableGuildsStore ===
+// === Module 10430: DiscoverableGuildsStore ===
 
-// Module 10432 (DiscoverableGuildsStore)
+// Module 10430 (DiscoverableGuildsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import GlobalUtils from "GlobalUtils" /* 1380 */;

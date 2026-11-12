@@ -1,12 +1,12 @@
-// === Module 17375: UserSettingsSessions ===
+// === Module 17370: UserSettingsSessions ===
 
-// Module 17375 (UserSettingsSessions)
+// Module 17370 (UserSettingsSessions)
 import nativeDefault from "native" /* 575 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7743 */;
-import _modDef13013 from "module_13013" /* 13013 */;
-import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 17376 */;
-import _modDef17377 from "module_17377" /* 17377 */;
-import _modDef17378 from "module_17378" /* 17378 */;
+import _modDef13007 from "module_13007" /* 13007 */;
+import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 17371 */;
+import _modDef17372 from "module_17372" /* 17372 */;
+import _modDef17373 from "module_17373" /* 17373 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1385 */;
@@ -16,9 +16,9 @@ const _modDef7366 = tmp10(7366);
 require = fn;
 function UserSettingsSessions() {
   const tmp = closure_13();
-  let authSessions = otherSessions(17192).useAuthSessions();
+  let authSessions = otherSessions(17187).useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
-  const obj = otherSessions(17192);
+  const obj = otherSessions(17187);
   items = [UserStore];
   const stateFromStores = otherSessions(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = otherSessions(504);
@@ -128,24 +128,24 @@ function SessionInfo(session) {
         if ("ios" !== trimmed) {
           if ("android" !== trimmed) {
             if ("horizon os" === trimmed) {
-              const obj2 = { text: os, iconSource: _modDef13013, IconComponent: session(17379).VrHeadsetIcon };
+              const obj2 = { text: os, iconSource: _modDef13007, IconComponent: session(17374).VrHeadsetIcon };
               let tmp9 = session;
               let obj = obj2;
             } else {
-              obj = { text: os, iconSource: _modDef17378, IconComponent: session(10400).ScreenIcon };
+              obj = { text: os, iconSource: _modDef17373, IconComponent: session(10398).ScreenIcon };
               tmp9 = session;
             }
           }
         }
-        const obj3 = { text: os, iconSource: _modDef13013, IconComponent: session(7720).MobilePhoneIcon };
+        const obj3 = { text: os, iconSource: _modDef13007, IconComponent: session(7720).MobilePhoneIcon };
         tmp9 = session;
         obj = obj3;
       }
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = obj);
       if (!current) {
-        formatDateResult = tmp9(17192).formatDate(session.approx_last_used_time);
-        const tmp9Result = tmp9(17192);
+        formatDateResult = tmp9(17187).formatDate(session.approx_last_used_time);
+        const tmp9Result = tmp9(17187);
       }
       items = [text, platform];
       const found = items.filter(tmp9(1380).isNotNullish);
@@ -209,8 +209,8 @@ function SessionInfo(session) {
   const obj19 = { text: null, iconSource: null, IconComponent: null };
   const intl = session(1113).intl;
   obj19.text = intl.string(session(1113).t.cDHCNY);
-  obj19.iconSource = _modDef17378;
-  obj19.IconComponent = session(10400).ScreenIcon;
+  obj19.iconSource = _modDef17373;
+  obj19.IconComponent = session(10398).ScreenIcon;
   tmp9 = session;
   obj = obj19;
 }
@@ -218,7 +218,7 @@ function UnknownLegacySessionsInfo() {
   _require = require("useNavigation").useNavigation();
   const obj2 = { icon: null, label: null, subLabel: null };
   const obj = require("useNavigation");
-  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef17377 });
+  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef17372 });
   const intl = require("util").intl;
   obj2.label = intl.string(require("util").t.iUa0sn);
   const intl2 = require("util").intl;
@@ -254,5 +254,5 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/devices/native/UserSettingsSessions.tsx");
 
 export default function UserSettingsSessionsContainer() {
-  return closure_1_10(UserSettingsSessions, {});
+  return refs(UserSettingsSessions, {});
 };

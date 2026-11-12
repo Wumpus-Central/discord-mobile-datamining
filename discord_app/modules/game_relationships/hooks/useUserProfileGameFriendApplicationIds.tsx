@@ -1,6 +1,6 @@
-// === Module 15728: useUserProfileGameFriendApplicationIds ===
+// === Module 15723: useUserProfileGameFriendApplicationIds ===
 
-// Module 15728 (useUserProfileGameFriendApplicationIds)
+// Module 15723 (useUserProfileGameFriendApplicationIds)
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 5185 */;
 import UserStore from "UserStore" /* 1385 */;

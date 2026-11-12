@@ -1,6 +1,6 @@
-// === Module 20197: InterestGuildJoinButton ===
+// === Module 20192: InterestGuildJoinButton ===
 
-// Module 20197 (InterestGuildJoinButton)
+// Module 20192 (InterestGuildJoinButton)
 import nativeDefault from "native" /* 575 */;
 import _modDef2553 from "module_2553" /* 2553 */;
 import useGetIsMountedDefault from "useGetIsMounted" /* 8548 */;
@@ -105,7 +105,7 @@ export default function InterestGuildJoinButton(guildId) {
   const items1 = [guildId];
   let stateFromStores = guildId(504).useStateFromStores(items, () => GuildMembershipStore.isMember(guildId), items1);
   let obj = guildId(504);
-  const currentUserGuildJoinRequest = guildId(14777).useCurrentUserGuildJoinRequest(guildId);
+  const currentUserGuildJoinRequest = guildId(14773).useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;

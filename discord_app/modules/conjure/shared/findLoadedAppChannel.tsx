@@ -1,6 +1,6 @@
-// === Module 12355: findLoadedAppChannel ===
+// === Module 12349: findLoadedAppChannel ===
 
-// Module 12355 (findLoadedAppChannel)
+// Module 12349 (findLoadedAppChannel)
 import ChannelStore from "ChannelStore" /* 5092 */;
 import PermissionStore from "PermissionStore" /* 5175 */;
 

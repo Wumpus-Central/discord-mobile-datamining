@@ -1,6 +1,6 @@
-// === Module 19426: UsernameSearchScreen ===
+// === Module 19421: UsernameSearchScreen ===
 
-// Module 19426 (UsernameSearchScreen)
+// Module 19421 (UsernameSearchScreen)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,8 +49,8 @@ export default function UsernameSearchScreen(navigation) {
       }
     }
   }), items);
-  const clientThemesOverride = navigation(8994).useClientThemesOverride();
-  let obj = navigation(8994);
+  const clientThemesOverride = navigation(8993).useClientThemesOverride();
+  let obj = navigation(8993);
   let prop = null;
   if (obj2.isIOS()) {
     prop = null;
@@ -66,7 +66,7 @@ export default function UsernameSearchScreen(navigation) {
   const items1 = [tmp.content, clientThemesOverride];
   obj4.style = items1;
   obj2 = navigation(1377);
-  const items2 = [closure_8(ref(10204), { absolute: true }), ];
+  const items2 = [closure_8(ref(10202), { absolute: true }), ];
   const obj5 = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items3 = [tmp.container, prop, ];
   const tmp3Result = ref(7408);
@@ -78,7 +78,7 @@ export default function UsernameSearchScreen(navigation) {
   obj7.headerText = intl.string(navigation(1113).t.YEOwDM);
   obj7.headerTextStyle = tmp.headerText;
   obj7.ref = ref;
-  obj5.children = closure_8(ref(16174), obj7);
+  obj5.children = closure_8(ref(16169), obj7);
   items2[1] = closure_8(closure_4, obj5);
   obj4.children = items2;
   obj3.children = closure_9(tmp3Result, obj4);

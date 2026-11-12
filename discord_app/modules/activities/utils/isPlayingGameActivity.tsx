@@ -1,6 +1,6 @@
-// === Module 10584: isPlayingGameActivity ===
+// === Module 10582: isPlayingGameActivity ===
 
-// Module 10584 (isPlayingGameActivity)
+// Module 10582 (isPlayingGameActivity)
 import Constants from "Constants" /* 2142 */;
 import ActivityTypes from "ActivityTypes" /* 6006 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8403 */;

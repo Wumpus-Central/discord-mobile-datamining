@@ -1,6 +1,6 @@
-// === Module 14165: CheckpointHeader ===
+// === Module 14162: CheckpointHeader ===
 
-// Module 14165 (CheckpointHeader)
+// Module 14162 (CheckpointHeader)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
@@ -12,11 +12,11 @@ import _modDef6344 from "module_6344" /* 6344 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
 import VoiceNormalIcon2 from "VoiceNormalIcon" /* 7368 */;
 import XSmallIcon from "XSmallIcon" /* 7483 */;
-import VoiceXIcon from "VoiceXIcon" /* 12928 */;
-import CheckpointActionCreators from "CheckpointActionCreators" /* 14154 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 14166 */;
-import CheckpointHeaderButtonDefault from "CheckpointHeaderButton" /* 14167 */;
-import CheckpointStore from "CheckpointStore" /* 14150 */;
+import VoiceXIcon from "VoiceXIcon" /* 12922 */;
+import CheckpointActionCreators from "CheckpointActionCreators" /* 14150 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 14163 */;
+import CheckpointHeaderButtonDefault from "CheckpointHeaderButton" /* 14164 */;
+import CheckpointStore from "CheckpointStore" /* 14146 */;
 import CheckpointConstants from "CheckpointConstants" /* 6314 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 5243 */;

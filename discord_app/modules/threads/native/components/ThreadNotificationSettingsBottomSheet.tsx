@@ -1,9 +1,9 @@
-// === Module 11835: ThreadNotificationSettingsBottomSheet ===
+// === Module 11829: ThreadNotificationSettingsBottomSheet ===
 
-// Module 11835 (ThreadNotificationSettingsBottomSheet)
+// Module 11829 (ThreadNotificationSettingsBottomSheet)
 import jsxProd from "jsxProd" /* 21 */;
 import ThreadConstants from "ThreadConstants" /* 1112 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8798 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8797 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = ThreadConstants.getThreadNotificationOptions;

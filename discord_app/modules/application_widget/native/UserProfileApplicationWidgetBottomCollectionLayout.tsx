@@ -1,12 +1,12 @@
-// === Module 12174: UserProfileApplicationWidgetBottomCollectionLayout ===
+// === Module 12168: UserProfileApplicationWidgetBottomCollectionLayout ===
 
-// Module 12174 (UserProfileApplicationWidgetBottomCollectionLayout)
+// Module 12168 (UserProfileApplicationWidgetBottomCollectionLayout)
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import FastImageDefault from "FastImage" /* 5957 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12080 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 12167 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12168 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12074 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 12161 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 12162 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

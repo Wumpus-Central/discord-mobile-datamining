@@ -1,6 +1,6 @@
-// === Module 10623: storeListingToGuildPowerup ===
+// === Module 10621: storeListingToGuildPowerup ===
 
-// Module 10623 (storeListingToGuildPowerup)
+// Module 10621 (storeListingToGuildPowerup)
 import EmojiConstants from "EmojiConstants" /* 1388 */;
 import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5461 */;
 import PremiumConstants from "PremiumConstants" /* 1387 */;

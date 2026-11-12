@@ -1,10 +1,10 @@
-// === Module 12957: VoicePanelRiveMicButton ===
+// === Module 12951: VoicePanelRiveMicButton ===
 
-// Module 12957 (VoicePanelRiveMicButton)
+// Module 12951 (VoicePanelRiveMicButton)
 import MicrophoneRive from "MicrophoneRive" /* 5402 */;
 import IconSize from "IconSize" /* 7572 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 10537 */;
-import MicrophoneIcon2 from "MicrophoneIcon" /* 12958 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 10535 */;
+import MicrophoneIcon2 from "MicrophoneIcon" /* 12952 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

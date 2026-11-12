@@ -1,6 +1,6 @@
-// === Module 10247: ObscuredSurfaceContext ===
+// === Module 10245: ObscuredSurfaceContext ===
 
-// Module 10247 (ObscuredSurfaceContext)
+// Module 10245 (ObscuredSurfaceContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext({ obscured: false });

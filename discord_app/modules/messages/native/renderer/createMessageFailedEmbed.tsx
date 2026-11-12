@@ -1,13 +1,13 @@
-// === Module 9325: createMessageFailedEmbed ===
+// === Module 9324: createMessageFailedEmbed ===
 
-// Module 9325 (createMessageFailedEmbed)
+// Module 9324 (createMessageFailedEmbed)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
 import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8588 */;
-import FileUtils from "FileUtils" /* 8809 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 9094 */;
+import FileUtils from "FileUtils" /* 8808 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 9093 */;
+import _modDef9325 from "module_9325" /* 9325 */;
 import _modDef9326 from "module_9326" /* 9326 */;
-import _modDef9327 from "module_9327" /* 9327 */;
 import size from "module_2" /* 2 */;
 
 const MessageFailureState = RowGeneratorConstants.MessageFailureState;
@@ -24,7 +24,7 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
       obj2.failureState = MessageFailureState.UNSPECIFIED;
       obj2.bodyTextColor = colors.failedMessageBodyTextColor;
       colors = renderer_EmbedUtils.getAssetUriForEmbed;
-      obj2.iconURL = colors(_modDef9327);
+      obj2.iconURL = colors(_modDef9326);
       let obj3 = obj2;
     } else {
       obj3 = { type: MessageEmbedTypes.TEXT, numAttachments: null, failureState: null, attachmentsSize: null, bodyTextColor: null };
@@ -51,6 +51,6 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
   }
 };
 export function createAutomodBlockedMessageEmbed(errorMessage) {
-  const obj = { type: MessageEmbedTypes.TEXT, messageSendError: errorMessage.errorMessage, failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE, disableBackgroundColor: true, bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor, iconURL: renderer_EmbedUtils.getAssetUriForEmbed(_modDef9326) };
+  const obj = { type: MessageEmbedTypes.TEXT, messageSendError: errorMessage.errorMessage, failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE, disableBackgroundColor: true, bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor, iconURL: renderer_EmbedUtils.getAssetUriForEmbed(_modDef9325) };
   return obj;
 }

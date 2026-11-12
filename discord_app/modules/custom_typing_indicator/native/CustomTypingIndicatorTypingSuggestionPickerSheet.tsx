@@ -1,6 +1,6 @@
-// === Module 17867: CustomTypingIndicatorTypingSuggestionPickerSheet ===
+// === Module 17862: CustomTypingIndicatorTypingSuggestionPickerSheet ===
 
-// Module 17867 (CustomTypingIndicatorTypingSuggestionPickerSheet)
+// Module 17862 (CustomTypingIndicatorTypingSuggestionPickerSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef4081 from "module_4081" /* 4081 */;
@@ -8,7 +8,7 @@ import TableRadioGroup from "TableRadioGroup" /* 7679 */;
 import TableRadioRow from "TableRadioRow" /* 7681 */;
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7847 */;
 import ActionSheet from "ActionSheet" /* 7885 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14471 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14467 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

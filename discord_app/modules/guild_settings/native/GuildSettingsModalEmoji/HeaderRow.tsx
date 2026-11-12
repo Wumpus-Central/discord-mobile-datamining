@@ -1,13 +1,13 @@
-// === Module 20365: HeaderRow ===
+// === Module 20360: HeaderRow ===
 
-// Module 20365 (HeaderRow)
+// Module 20360 (HeaderRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import Text_Text from "Text/Text" /* 5866 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 20359 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 20354 */;
 
 require = fn;
 function HeaderRow(guild) {
@@ -87,10 +87,10 @@ function HeaderRow(guild) {
               if (null != base64) {
                 upload = function upload(image, originalMd5, roles) {
                   const combined = "emoji_" + closure_1 + 1;
-                  let obj = closure_1_0(11244);
+                  let obj = closure_1_0(11238);
                   let obj2 = { guildId: image.id, image, name: combined, roles, originalMd5 };
-                  const uploadEmojiResult = closure_1_0(11244).uploadEmoji({ guildId: image.id, image, name: combined, roles, originalMd5 });
-                  closure_1_0(11244).uploadEmoji({ guildId: image.id, image, name: combined, roles, originalMd5 }).then(() => closure_2_1(1252).track(constants.EMOJI_UPLOAD_COMPLETED, { guild_id: image.id, upload_id })).catch((error) => {
+                  const uploadEmojiResult = closure_1_0(11238).uploadEmoji({ guildId: image.id, image, name: combined, roles, originalMd5 });
+                  closure_1_0(11238).uploadEmoji({ guildId: image.id, image, name: combined, roles, originalMd5 }).then(() => closure_2_1(1252).track(constants.EMOJI_UPLOAD_COMPLETED, { guild_id: image.id, upload_id })).catch((error) => {
                     const body = error.body;
                     if (null == body) {
                       if (null != undefined) {

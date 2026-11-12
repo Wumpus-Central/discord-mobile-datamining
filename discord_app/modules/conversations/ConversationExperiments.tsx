@@ -1,6 +1,6 @@
-// === Module 9053: ConversationExperiments ===
+// === Module 9052: ConversationExperiments ===
 
-// Module 9053 (ConversationExperiments)
+// Module 9052 (ConversationExperiments)
 import GuildStore from "GuildStore" /* 5114 */;
 
 const require = globalThis.__r;

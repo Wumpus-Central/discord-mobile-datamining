@@ -1,6 +1,6 @@
-// === Module 12522: FeedbackModalHappyDesaturated ===
+// === Module 12516: FeedbackModalHappyDesaturated ===
 
-// Module 12522 (FeedbackModalHappyDesaturated)
+// Module 12516 (FeedbackModalHappyDesaturated)
 import shared from "shared" /* 5250 */;
 import FastImageDefault from "FastImage" /* 5957 */;
 import _mod8117 from "module_8117" /* 8117 */;
@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export function getFeedbackModalHappyDesaturatedSource(theme) {
   return _mod8117.getIllustrationSource(theme, {
     dark() {
-      return require("module_12523");
+      return require("module_12517");
     },
     darker() {
-      return require("module_12524");
+      return require("module_12518");
     },
     light() {
-      return require("module_12525");
+      return require("module_12519");
     }
   });
 }
@@ -30,13 +30,13 @@ export function useFeedbackModalHappyDesaturatedSource() {
   const obj = shared;
   return _mod8117.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_12523");
+      return require("module_12517");
     },
     darker() {
-      return require("module_12524");
+      return require("module_12518");
     },
     light() {
-      return require("module_12525");
+      return require("module_12519");
     }
   });
 }
@@ -44,25 +44,25 @@ export function FeedbackModalHappyDesaturated(arg0) {
   const obj = shared;
   const illustrationSource = _mod8117.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_12523");
+      return require("module_12517");
     },
     darker() {
-      return require("module_12524");
+      return require("module_12518");
     },
     light() {
-      return require("module_12525");
+      return require("module_12519");
     }
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("module_12523");
+      return require("module_12517");
     },
     darker() {
-      return require("module_12524");
+      return require("module_12518");
     },
     light() {
-      return require("module_12525");
+      return require("module_12519");
     }
   };
   const merged = Object.assign(arg0);

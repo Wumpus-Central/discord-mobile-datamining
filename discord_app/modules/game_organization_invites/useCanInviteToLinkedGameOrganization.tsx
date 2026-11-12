@@ -1,6 +1,6 @@
-// === Module 12443: useCanInviteToLinkedGameOrganization ===
+// === Module 12437: useCanInviteToLinkedGameOrganization ===
 
-// Module 12443 (useCanInviteToLinkedGameOrganization)
+// Module 12437 (useCanInviteToLinkedGameOrganization)
 import GuildMemberStore from "GuildMemberStore" /* 5155 */;
 import GuildRoleStore from "GuildRoleStore" /* 5149 */;
 import PermissionStore from "PermissionStore" /* 5175 */;

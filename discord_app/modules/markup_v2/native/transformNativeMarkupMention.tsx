@@ -1,11 +1,11 @@
-// === Module 9309: transformNativeMarkupMention ===
+// === Module 9308: transformNativeMarkupMention ===
 
-// Module 9309 (transformNativeMarkupMention)
+// Module 9308 (transformNativeMarkupMention)
 import MarkupTypes from "MarkupTypes" /* 6279 */;
 import MarkupRules from "MarkupRules" /* 6281 */;
 import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 6291 */;
-import PlatformMarkupRules from "PlatformMarkupRules" /* 9310 */;
-import StaticMentionRoutes from "StaticMentionRoutes" /* 9315 */;
+import PlatformMarkupRules from "PlatformMarkupRules" /* 9309 */;
+import StaticMentionRoutes from "StaticMentionRoutes" /* 9314 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMention.tsx");
@@ -27,9 +27,9 @@ export function transformNativeMention(value, allowGameMentions) {
     obj5.id = str1;
     return MarkupRules.hydrateUserMention(obj5, allowGameMentions);
   } else if ("everyone" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "paddingHorizontal", everyoneOrHere: false }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "paddingHorizontal", everyoneOrHere: 1758146987692178000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 }, allowGameMentions);
   } else if ("here" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "paddingHorizontal", everyoneOrHere: false }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "paddingHorizontal", everyoneOrHere: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003522887313309739 }, allowGameMentions);
   } else if ("role" === type) {
     return MarkupRules.hydrateRoleMention(value.value.toString(), allowGameMentions);
   } else if ("game" === type) {

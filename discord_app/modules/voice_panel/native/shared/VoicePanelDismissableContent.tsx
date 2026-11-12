@@ -1,9 +1,9 @@
-// === Module 19898: VoicePanelDismissableContent ===
+// === Module 19893: VoicePanelDismissableContent ===
 
-// Module 19898 (VoicePanelDismissableContent)
+// Module 19893 (VoicePanelDismissableContent)
 import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10501 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11924 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10499 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11918 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
@@ -12,9 +12,9 @@ const require = globalThis.__r;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(19899, dependencyMap.paths);
+  return asyncRequireImpl(19894, dependencyMap.paths);
 }
-const VoicePanelModes = fn(11925).VoicePanelModes;
+const VoicePanelModes = fn(11919).VoicePanelModes;
 const isActivityParticipant = fn(5920).isActivityParticipant;
 const jsx = fn(21).jsx;
 let closure_10 = { code: "(function VoicePanelDismissableContentTsx1(){let[mode,VoicePanelModes,focused]=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;})" };
