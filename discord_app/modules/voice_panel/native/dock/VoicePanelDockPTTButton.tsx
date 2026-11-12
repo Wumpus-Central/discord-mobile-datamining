@@ -12,7 +12,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelDockConstants = fn(11948);
+const VoicePanelDockConstants = fn(11942);
 ({ DOCK_ROW_HEIGHT, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);

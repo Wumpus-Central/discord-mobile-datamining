@@ -31,7 +31,7 @@ function hasPermissionToPlaySound(guildId, guild_id) {
     canResult = PermissionStore.can(constants.USE_EXTERNAL_SOUNDS, guild_id);
   }
   if (!canResult) {
-    canResult = guildId.guildId === closure_1_10;
+    canResult = guildId.guildId === refs;
   }
   if (!canResult) {
     let guild_id1;
@@ -56,7 +56,7 @@ function canUseSoundboardSound(stateFromStores, guildId, guild_id) {
     result = guildId.guildId === guild_id;
   }
   if (!result) {
-    result = guildId.guildId === closure_1_10;
+    result = guildId.guildId === refs;
   }
   if (result) {
     let guild_id1;
@@ -68,7 +68,7 @@ function canUseSoundboardSound(stateFromStores, guildId, guild_id) {
       canResult = PermissionStore.can(constants.USE_EXTERNAL_SOUNDS, guild_id);
     }
     if (!canResult) {
-      canResult = guildId.guildId === closure_1_10;
+      canResult = guildId.guildId === refs;
     }
     if (!canResult) {
       let guild_id2;
@@ -181,7 +181,7 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
                 (function playCustomJoinSound(sound, id) {
                   closure_1_0(7163).playSoundLocally(id, sound);
                   const obj = closure_1_0(7163);
-                  const result = closure_1_0(12933).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
+                  const result = closure_1_0(12927).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
                 })(sound, closure_129_1.id);
               }
             }
@@ -328,7 +328,7 @@ export function updateCustomJoinSound(id, arg1, location_stack) {
     id,
     (joinSound) => {
       const AnalyticsSoundSource = SoundboardTypes.AnalyticsSoundSource;
-      if (guildId.guildId === closure_2_10) {
+      if (guildId.guildId === refs) {
         let CUSTOM = AnalyticsSoundSource.DEFAULT;
         let tmp6 = require;
       } else {
@@ -340,10 +340,7 @@ export function updateCustomJoinSound(id, arg1, location_stack) {
       } else {
         ADDED = tmp6(7164).AnalyticsChangeType.ADDED;
       }
-      joinSound.joinSound = {
-        soundId: guildId.soundId,
-        guildId: guildId.guildId === closure_2_10 ? React6 : guildId.guildId,
-      };
+      joinSound.joinSound = { soundId: guildId.soundId, guildId: guildId.guildId === refs ? React6 : guildId.guildId };
       const obj2 = { location_stack, guild_id: null, change_type: null, sound_type: null, sound_source: null };
       let num = 0;
       if ("" !== closure_0) {

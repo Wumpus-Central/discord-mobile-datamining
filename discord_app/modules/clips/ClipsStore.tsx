@@ -239,7 +239,7 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(8779);
+const ClipsConstants = fn(8778);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_6,
   ClipSaveTypes: metroImportDefault,
@@ -296,7 +296,7 @@ obj = {
   clipsSettings: obj,
   hardwareClassification: null,
   hardwareClassificationVersion: 0,
-  clipsDefaultSettingsState: fn(16380).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
+  clipsDefaultSettingsState: fn(16375).INITIAL_CLIPS_DEFAULT_SETTINGS_STATE,
   hasAutoEnabledClipsForHardware: false,
   newClipIds: [],
   hasClips: false,
@@ -394,7 +394,7 @@ prototype["hasFinishedApplyingDefaultSettings"] = function hasFinishedApplyingDe
   return c31;
 };
 prototype["getIsAtMaxSaveClipOperations"] = function getIsAtMaxSaveClipOperations() {
-  return closure_23 >= closure_1_10;
+  return closure_23 >= refs;
 };
 prototype["getLastClipsError"] = function getLastClipsError() {
   return c28;

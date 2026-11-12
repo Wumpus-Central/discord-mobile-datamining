@@ -248,11 +248,11 @@ prototype["_initialize"] = function _initialize() {
 prototype["_terminate"] = function _terminate() {
   voiceEngine = inject.getVoiceEngine();
   if (null != voiceEngine) {
-    const result = voiceEngine.setBroadcastRequestCallback(closure_1_10);
-    const result1 = voiceEngine.setBroadcastFinishedCallback(closure_1_10);
-    const result2 = voiceEngine.setBroadcastAnnotatedCallback(closure_1_10);
-    const result3 = voiceEngine.setBroadcastBlockedCallback(closure_1_10);
-    const result4 = voiceEngine.setBroadcastVisibilityChangedCallback(closure_1_10);
+    const result = voiceEngine.setBroadcastRequestCallback(refs);
+    const result1 = voiceEngine.setBroadcastFinishedCallback(refs);
+    const result2 = voiceEngine.setBroadcastAnnotatedCallback(refs);
+    const result3 = voiceEngine.setBroadcastBlockedCallback(refs);
+    const result4 = voiceEngine.setBroadcastVisibilityChangedCallback(refs);
   }
   timeout.stop();
   timeout1.stop();

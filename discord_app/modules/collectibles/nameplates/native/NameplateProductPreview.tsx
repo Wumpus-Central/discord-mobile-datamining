@@ -52,8 +52,8 @@ function NameplateUser(arg0) {
       size: native.AvatarSizes.NORMAL,
       avatarDecoration,
       animate: !stateFromStores,
-      autoStatusCutout: "<string:833110952>",
-      "aria-hidden": "<string:2914779138>",
+      autoStatusCutout: null,
+      "aria-hidden": 994646658086916000000000000000000000000000000000000000000000000000000000000000000000000,
     };
     return timestampProducer(native.Avatar, obj);
   }, items1);

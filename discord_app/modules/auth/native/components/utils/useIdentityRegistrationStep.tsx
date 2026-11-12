@@ -8,13 +8,13 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const RegistrationUIStore = fn(18524);
+const RegistrationUIStore = fn(18519);
 ({
   setRegistrationErrors: closure_6,
   updateRegistrationOptions: metroImportDefault,
   useRegistrationUIStore: closure_8,
 } = RegistrationUIStore);
-const RegistrationConstants = fn(18525);
+const RegistrationConstants = fn(18520);
 ({
   authStateToRegisterTransitionStep: closure_9,
   RegisterTransitionSteps: closure_10,

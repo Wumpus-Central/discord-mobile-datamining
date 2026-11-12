@@ -11,29 +11,29 @@ import AppsIcon from "../../../design/components/Icon/native/redesign/generated/
 import CalendarIcon from "../../../design/components/Icon/native/redesign/generated/CalendarIcon.tsx";
 import ScreenIcon from "../../../design/components/Icon/native/redesign/generated/ScreenIcon.tsx";
 import VideoIcon from "../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
-import _modDef12843 from "../../../../_runtime/metro/12843__.js";
+import _modDef12837 from "../../../../_runtime/metro/12837__.js";
 import useGuildsBarGuildMediaStateDefault from "../useGuildsBarGuildMediaState.tsx";
-import _modDef18958 from "../../../../_runtime/metro/18958__.js";
-import _modDef18959 from "../../../../_runtime/metro/18959__.js";
-import _modDef18960 from "../../../../_runtime/metro/18960__.js";
+import _modDef18953 from "../../../../_runtime/metro/18953__.js";
+import _modDef18954 from "../../../../_runtime/metro/18954__.js";
+import _modDef18955 from "../../../../_runtime/metro/18955__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function getMediaIcon(activeEvent) {
   if (activeEvent.activeEvent) {
-    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef12843 };
+    const obj2 = { icon: CalendarIcon.CalendarIcon, source: _modDef12837 };
     let tmp6 = obj2;
   } else if (tmp4) {
     const obj3 = { icon: StageIcon.StageIcon, source: _modDef7951 };
     tmp6 = obj3;
   } else if (tmp3) {
-    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18958 };
+    const obj4 = { icon: ScreenIcon.ScreenIcon, source: _modDef18953 };
     tmp6 = obj4;
   } else if (tmp2) {
-    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18959 };
+    const obj5 = { icon: VideoIcon.VideoIcon, source: _modDef18954 };
     tmp6 = obj5;
   } else if (tmp) {
-    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18960 };
+    const obj6 = { icon: VoiceNormalIcon.VoiceNormalIcon, source: _modDef18955 };
     tmp6 = obj6;
   } else {
     tmp6 = null;

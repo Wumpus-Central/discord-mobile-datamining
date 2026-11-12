@@ -325,7 +325,7 @@ export default function ConjureProjectList(guildId) {
         );
         items[1] = React6(TableRowGroup.TableRowGroup, obj3);
         obj.children = items;
-        tmp = closure_2_10(timestampProducer, obj, projects.key);
+        tmp = refs(timestampProducer, obj, projects.key);
       }
       return tmp;
     });

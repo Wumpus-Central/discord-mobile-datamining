@@ -76,7 +76,7 @@ export default function InterestGuildProfileSheet(guildId) {
   }
   obj6.footerHeight = sum;
   obj6.safeAreaBottom = bottom;
-  interestGuildProfileSheetLayout = guildId(20195).getInterestGuildProfileSheetLayout(obj6);
+  interestGuildProfileSheetLayout = guildId(20190).getInterestGuildProfileSheetLayout(obj6);
   closure_11 = c9(bottom, interestGuildProfileSheetLayout.reservedBottom);
   onLayout = obj4.useCallback((nativeEvent) => {
     _undefined(nativeEvent.nativeEvent.layout.height);

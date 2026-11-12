@@ -12,9 +12,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  activeLinkUserIds = activeLinkUserIds(9550).useActiveLinkUserIds();
+  activeLinkUserIds = activeLinkUserIds(9549).useActiveLinkUserIds();
   const obj2 = { label: null, noticeType: null, labelHook: null, count: null };
-  const obj = activeLinkUserIds(9550);
+  const obj = activeLinkUserIds(9549);
   obj2.label = _modDef2685.i284fU;
   obj2.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
   obj2.labelHook = function handleMessageParentClick() {

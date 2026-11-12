@@ -79,7 +79,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     num2 = 1;
   }
   [first, closure_5] = first.useState(num2);
-  arr = tmp2(12054)(userId);
+  arr = tmp2(12048)(userId);
   closure_7 = tmp8;
   let items1 = [arr];
   const memo = first.useMemo(() => arr.filter(UserProfileGameWidgetTypes.isGameWidget), items1);
@@ -168,7 +168,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   }
   obj6.variant = str;
   const items7 = [
-    arr(tmp10(13159).Tabs, obj6),
+    arr(tmp10(13153).Tabs, obj6),
     arr(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef }),
   ];
   obj5.children = items7;

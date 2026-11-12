@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../../modules/haptics/HapticFeedbackTypes.tsx";
-import _modDef12917 from "../../../../../_runtime/metro/12917__.js";
+import _modDef12911 from "../../../../../_runtime/metro/12911__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -139,7 +139,7 @@ export function Slider(maxValue) {
   }
   obj4.accessibilityValue = tmp19;
   obj4.testID = testID;
-  const tmp18 = _modDef12917;
+  const tmp18 = _modDef12911;
   let fn;
   if (obj6.isAndroid()) {
     fn = () => true;

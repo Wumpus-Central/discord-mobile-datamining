@@ -116,7 +116,7 @@ function NameplateInner(isFocused) {
   if (tmpResult6.isAndroid()) {
     if (tmp14) {
       const obj5 = { url: str, style: tmp4.img, autoplay: true };
-      let tmp19 = closure_5(tmp(9432).APNGPlayer, obj5);
+      let tmp19 = closure_5(tmp(9431).APNGPlayer, obj5);
     }
     items6[1] = tmp19;
     obj3.children = items6;

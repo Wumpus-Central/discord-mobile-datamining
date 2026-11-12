@@ -98,7 +98,7 @@ export function ActionSheetPresenter(appEntryKey) {
     />
   ));
   const obj = appEntryKey(504);
-  return jsx(appEntryKey(14730).TransitionGroup, {
+  return jsx(appEntryKey(14726).TransitionGroup, {
     style: StyleSheet.absoluteFill,
     component: appEntryKey(6212).TransitionGroupOverlayView,
     children: mapped,

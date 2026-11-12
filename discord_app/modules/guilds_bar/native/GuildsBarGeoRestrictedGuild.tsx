@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(18911).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(18906).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(5243);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
@@ -38,7 +38,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
   let animatableSourceWithFallback = null;
-  let obj = restrictedGuild(18923);
+  let obj = restrictedGuild(18918);
   const tmp2 = restrictedGuild;
   if (null != restrictedGuild.icon) {
     animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -75,7 +75,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(18923).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(18918).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -86,9 +86,9 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     overState: "a",
     externalChildren: "flexDirection",
     expandedChildren: "st",
-    children: "192px",
+    children: 331,
   };
-  const guildsBarAnimatedWrapperStyles = restrictedGuild(18923).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(18918).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: true,
   });
@@ -121,7 +121,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(18923).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(18918).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -132,6 +132,6 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     overState: "a",
     externalChildren: "flexDirection",
     expandedChildren: "st",
-    children: "192px",
+    children: 331,
   });
 });

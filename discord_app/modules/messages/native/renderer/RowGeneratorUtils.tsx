@@ -13,7 +13,7 @@ require = fn;
 const MessageConstants = fn(5248);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_6, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: metroImportDefault } =
   MessageConstants);
-const SwipeActionsType = fn(9094).SwipeActionsType;
+const SwipeActionsType = fn(9093).SwipeActionsType;
 const Constants = fn(1072);
 ({ MessageFlags: closure_9, MessageTypes: closure_10 } = Constants);
 let createStyles = fn(5243);

@@ -39,7 +39,7 @@ const Constants = fn(1072);
   ChannelTypes: closure_22,
 } = Constants);
 const FrameLayoutModes = fn(6957).FrameLayoutModes;
-const ActivityLayoutMode = fn(12616).ActivityLayoutMode;
+const ActivityLayoutMode = fn(12610).ActivityLayoutMode;
 const MediaEngineContextTypes = fn(6012).MediaEngineContextTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/RPCServerManager.tsx");
@@ -127,7 +127,7 @@ class RPCServerManager {
       if (0 !== obj.rpcServer.subscriptions.length) {
         const rpcServer = obj.rpcServer;
         const result = rpcServer.dispatchToSubscriptions(constants3.VOICE_CHANNEL_SELECT, {}, (socket) => {
-          obj = obj(16800);
+          obj = obj(16795);
           if (obj.isGuildVoiceSocket(socket.socket)) {
             channel = channel.getChannel(channelId);
             let type;
@@ -281,7 +281,7 @@ class RPCServerManager {
         subscriptions.some((evt) => {
           let tmp = evt.evt === constants2.FRAME_DEEP_LINK;
           if (tmp) {
-            obj = obj(15878);
+            obj = obj(15873);
             tmp = obj.getFrameDeepLinkChannelId(getSocketFrameDefault(evt.socket)) === channelId;
           }
           return tmp;
@@ -295,7 +295,7 @@ class RPCServerManager {
           const result = rpcServer.dispatchToSubscriptions(
             constants3.FRAME_DEEP_LINK,
             function targetsChannelFrame(socket) {
-              obj = obj(15878);
+              obj = obj(15873);
               return obj.getFrameDeepLinkChannelId(getSocketFrameDefault(socket.socket)) === channelId;
             },
             obj2,
@@ -459,7 +459,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(12779);
+            obj = obj(12773);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -474,7 +474,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(tmp2, user);
           const rpcServer = tmp3.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(12779);
+            obj = obj(12773);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -489,7 +489,7 @@ class RPCServerManager {
           closure_0 = obj.transformBaseRelationship(constants2.NONE, user);
           const rpcServer = tmp2.rpcServer;
           const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-            obj = obj(12779);
+            obj = obj(12773);
             return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
           });
         }
@@ -511,7 +511,7 @@ class RPCServerManager {
             if (null == user) {
               return 0;
             } else {
-              obj = obj(12779);
+              obj = obj(12773);
               rpcServer = obj.transformBaseRelationship(relationshipType, user);
               rpcServer = rpcServer.rpcServer;
               const result = rpcServer.dispatchToSubscriptions(constants2.RELATIONSHIP_UPDATE, {}, (socket) =>
@@ -538,7 +538,7 @@ class RPCServerManager {
             if (null == user) {
               return 0;
             } else {
-              obj = obj(12779);
+              obj = obj(12773);
               rpcServer = obj.transformBaseRelationship(tmp, user);
               rpcServer = rpcServer.rpcServer;
               const result = rpcServer.dispatchToSubscriptions(constants2.RELATIONSHIP_UPDATE, {}, (socket) =>
@@ -570,7 +570,7 @@ class RPCServerManager {
             closure_0 = obj.transformBaseRelationship(relationshipType, user);
             const rpcServer = tmp.rpcServer;
             const result = rpcServer.dispatchToSubscriptions(constants3.RELATIONSHIP_UPDATE, {}, (socket) => {
-              obj = obj(12779);
+              obj = obj(12773);
               return obj.transformApplicationRelationship(closure_0, socket.socket.application.id);
             });
           }

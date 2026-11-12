@@ -615,7 +615,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "add",
+      fetchError: "channelId",
     };
     value4 = obj;
   }

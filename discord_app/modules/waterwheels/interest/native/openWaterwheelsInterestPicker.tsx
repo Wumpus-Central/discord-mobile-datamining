@@ -39,8 +39,8 @@ let closure_7 = async function _openWaterwheelsInterestPicker() {
           closure_128_1 = undefined;
           closure_128_2 = function releaseOpenFlag() {
             if (closure_1_1 === closure_2_6) {
-              const result = assert(18978).setInterestPickerOpen(false);
-              const obj = assert(18978);
+              const result = assert(18973).setInterestPickerOpen(false);
+              const obj = assert(18973);
             }
           };
           closure_128_3 = function cleanup() {
@@ -50,8 +50,8 @@ let closure_7 = async function _openWaterwheelsInterestPicker() {
           function handleAccountChange() {
             if (!assert.isValid()) {
               if (closure_1_1 === closure_2_6) {
-                const result = assert(18978).setInterestPickerOpen(false);
-                const obj2 = assert(18978);
+                const result = assert(18973).setInterestPickerOpen(false);
+                const obj2 = assert(18973);
               }
               c4.removeChangeListener(closure_1_4);
               assert.dispose();

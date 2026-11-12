@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ClearAfterOptions = fn(9471).ClearAfterOptions;
+const ClearAfterOptions = fn(9470).ClearAfterOptions;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5243);
@@ -40,7 +40,7 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   obj3.title = intl2.string(util.t.E45wvP);
   obj3.defaultValue = initialValue;
   obj3.children = ClearAfterOptions.map((value) =>
-    closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(15365)(value) }, value),
+    closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(15362)(value) }, value),
   );
   items = [closure_7(TableRadioGroup.TableRadioGroup, obj3)];
   const obj4 = { style: tmp.buttonWrapper, children: null };

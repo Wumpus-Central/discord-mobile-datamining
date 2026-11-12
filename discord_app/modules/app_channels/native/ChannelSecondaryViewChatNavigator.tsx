@@ -34,7 +34,7 @@ function ChannelSecondaryViewChatScreen(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9062);
+const NativeStackNavigator = fn(9061);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5243);
 let obj3 = { actions: { marginRight: nativeDefault.space.PX_16 } };

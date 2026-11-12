@@ -398,7 +398,7 @@ function AnimatedItemPreview(cleanUp) {
     };
     ({ id: obj7.id, expanded: obj7.expanded, color: obj7.color, name: obj7.name, children: obj7.childNodes } = node);
     obj5.hideExpandedChildren = !isHomeDrawerEnabled;
-    let tmp22Result = tmp22(tmp4(18922), obj5);
+    let tmp22Result = tmp22(tmp4(18917), obj5);
   } else {
     let obj6 = { guildId: node.id, isDragPreview: true, hideExpandedChildren: null };
     let tmp25 = !isHomeDrawerEnabled;
@@ -406,14 +406,14 @@ function AnimatedItemPreview(cleanUp) {
       tmp25 = transitionState === tmp2(5314).TransitionStates.YEETED;
     }
     obj6.hideExpandedChildren = tmp25;
-    tmp22Result = tmp22(tmp4(18942), obj6);
-    const tmp4Result = tmp4(18942);
+    tmp22Result = tmp22(tmp4(18937), obj6);
+    const tmp4Result = tmp4(18937);
   }
   obj4.children = tmp22Result;
   return jsx(_modDef1652.View, obj4);
 }
 let GuildsNodeType = fn(6893).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(18911).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(18906).GUILD_ITEM_INSET_LEFT;
 let jsx = fn(21).jsx;
 let createStyles = fn(5243);
 let closure_8 = createStyles.createStyles({
@@ -505,12 +505,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "success",
-            scrollPosition: null,
-            dragRegion: null,
-            windowSize: true,
-            dropComplete: null,
-            listInsets: "checking",
+            gestureState: "dash",
+            scrollPosition: "dashing_away",
+            dragRegion: "ZodMap",
+            windowSize: "USER_LOGIN_MFA",
+            dropComplete: "_currentAdRequestNumber",
+            listInsets: "confirmTransitionTo",
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;

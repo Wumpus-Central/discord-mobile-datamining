@@ -16,7 +16,7 @@ import UnknownGameIcon from "../../../design/components/Icon/native/redesign/gen
 import TimestampUtils from "../../markup/TimestampUtils.tsx";
 import StickerDefault from "../../stickers/native/Sticker.tsx";
 import StickersHooks from "../../stickers/StickersHooks.tsx";
-import _modDef11564 from "../../../../_runtime/metro/11564__.js";
+import _modDef11558 from "../../../../_runtime/metro/11558__.js";
 import ChannelAutocompleteEmojiUpsellDefault from "../../channel_text_area/native/ChannelAutocompleteEmojiUpsell.tsx";
 import GameSearchRowExperimentDefault from "../../games/GameSearchRowExperiment.tsx";
 import GamePlatformBadgeRowDefault from "../../games/native/GamePlatformBadgeRow.tsx";
@@ -38,7 +38,7 @@ const jsxProd = fn(21);
 const createStyles = fn(5243);
 let obj2 = {
   row: {
-    height: fn(11173).AUTOCOMPLETE_ROW_HEIGHT,
+    height: fn(11167).AUTOCOMPLETE_ROW_HEIGHT,
     paddingVertical: 0,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
@@ -57,7 +57,7 @@ let obj2 = {
   labelRow: null,
 };
 let obj3 = {
-  height: fn(11173).AUTOCOMPLETE_ROW_HEIGHT,
+  height: fn(11167).AUTOCOMPLETE_ROW_HEIGHT,
   paddingVertical: 0,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
@@ -150,7 +150,7 @@ export default {
     const items1 = [,];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
     obj5.usernameStyle = items1;
-    obj2.trailing = closure_9(guildId(10867), obj5);
+    obj2.trailing = closure_9(guildId(10861), obj5);
     return closure_9(user(8041).FormRow, obj2);
   },
   Global(arg0) {
@@ -162,7 +162,7 @@ export default {
       const obj3 = { text };
       items = [React6(AutocompleteLabel, obj3), badge];
       obj2.children = items;
-      let tmp2Result = closure_1_10(View, obj2);
+      let tmp2Result = refs(View, obj2);
     } else {
       const obj4 = { text };
       tmp2Result = React6(AutocompleteLabel, obj4);
@@ -196,7 +196,7 @@ export default {
     ({ channel, category } = onPress);
     const tmp = closure_11();
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef11564;
+      let channelIconWithGuild = _modDef11558;
     } else {
       channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
     }

@@ -85,14 +85,14 @@ function GuildOnboardingHomePage(guildId) {
   } else {
     let obj3 = { guildId, scrollValue: sharedValue, children: null };
     const obj4 = { guildId, hideDescription: tmp5 };
-    const items3 = [closure_9(tmp4(19205), obj4)];
+    const items3 = [closure_9(tmp4(19200), obj4)];
     if (tmp5) {
       let obj5 = { children: null };
       const obj6 = { guildId };
-      const items4 = [closure_9(tmp4(19209), obj6), ,];
+      const items4 = [closure_9(tmp4(19204), obj6), ,];
       const obj7 = { guildId };
-      items4[1] = closure_9(tmp4(19213), obj7);
-      tmp4 = tmp4(19214);
+      items4[1] = closure_9(tmp4(19208), obj7);
+      tmp4 = tmp4(19209);
       const obj8 = { guildId };
       tmp = closure_9(tmp4, obj8);
       items4[2] = tmp;
@@ -100,12 +100,12 @@ function GuildOnboardingHomePage(guildId) {
       let tmp12Result = closure_11(closure_10, obj5);
     } else {
       const obj9 = { guildId };
-      tmp12Result = closure_9(tmp4(19217), obj9);
+      tmp12Result = closure_9(tmp4(19212), obj9);
     }
     items3[1] = tmp12Result;
     obj3.children = items3;
-    closure_11(tmp4(19204), obj3);
-    const tmp4Result = tmp4(19204);
+    closure_11(tmp4(19199), obj3);
+    const tmp4Result = tmp4(19199);
   }
   let obj2 = guildId(504);
 }

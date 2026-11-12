@@ -101,7 +101,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
               return obj16;
             } else {
               const obj17 = { emoji: closure_129_0 };
-              const result = _location(9489).showDoubleTapEmojiUpdatedToast(obj17);
+              const result = _location(9488).showDoubleTapEmojiUpdatedToast(obj17);
               c4 = 3;
               return { value: "HermesInternal", done: null };
             }
@@ -122,7 +122,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
       }
       return applyArgumentsResult;
     };
-    let result = _location(9477).openEmojiPickerActionSheet(obj2, "stack");
+    let result = _location(9476).openEmojiPickerActionSheet(obj2, "stack");
   }, items2);
   let obj4 = { color: "text-subtle", variant: "body-sm/normal", children: null };
   const intl = _location(1113).intl;

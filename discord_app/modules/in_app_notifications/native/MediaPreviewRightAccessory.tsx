@@ -77,7 +77,7 @@ function ObscuredMediaOverlay(isSpoiler) {
   obj4.children = tmp14Result;
   items[3] = React5(View, obj4);
   obj6.children = items;
-  return closure_1_10(React6, obj6);
+  return refs(React6, obj6);
 }
 function SinglePreviewableMedia(arg0) {
   ({ previewableMedia, size, message } = arg0);
@@ -222,7 +222,7 @@ function SinglePreviewableMedia(arg0) {
                 }
                 items4[1] = tmp24Result;
                 obj16.children = items4;
-                obj15.children = closure_1_10(ObscuredMediaOverlay, obj16);
+                obj15.children = refs(ObscuredMediaOverlay, obj16);
                 return React5(View, obj15);
               }
             }
@@ -264,7 +264,7 @@ function MultiplePreviewableMedia(arg0) {
   obj2.children = React5(SinglePreviewableMedia, { previewableMedia, size: 56, message });
   const items1 = [React5(ClipViewDefault, obj2), React5(CountBadge, { total: totalMediaCount })];
   obj.children = items1;
-  return closure_1_10(View, obj);
+  return refs(View, obj);
 }
 function MediaPreviewRightAccessoryContent(arg0) {
   ({ totalMediaCount, message } = arg0);
@@ -364,7 +364,7 @@ let obj11 = {
   alignItems: "center",
 };
 let closure_15 = createStyles.createStyles({
-  rightAccessoryContainer: { marginLeft: fn(10963).RIGHT_ACCESSORY_LEFT_MARGIN },
+  rightAccessoryContainer: { marginLeft: fn(10957).RIGHT_ACCESSORY_LEFT_MARGIN },
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");

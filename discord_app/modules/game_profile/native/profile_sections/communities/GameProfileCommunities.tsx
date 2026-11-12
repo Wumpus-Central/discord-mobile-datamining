@@ -28,7 +28,7 @@ let obj = {
   container: {
     marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
     padding: nativeDefault.space.PX_16,
-    maxWidth: fn(10249).MOBILE_GAME_PROFILE_MAX_WIDTH,
+    maxWidth: fn(10247).MOBILE_GAME_PROFILE_MAX_WIDTH,
     alignSelf: "center",
     width: "100%",
     gap: nativeDefault.space.PX_8,
@@ -40,7 +40,7 @@ let obj = {
 let obj3 = {
   marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
   padding: nativeDefault.space.PX_16,
-  maxWidth: fn(10249).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(10247).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
   gap: nativeDefault.space.PX_8,
@@ -291,7 +291,7 @@ export default function GameProfileCommunities(game) {
     const obj4 = {
       size: "sm",
       variant: "secondary",
-      icon: closure_11(tmp12(10438).LanguageIcon, { size: "sm" }),
+      icon: closure_11(tmp12(10436).LanguageIcon, { size: "sm" }),
       accessibilityLabel: null,
       onPress: null,
     };

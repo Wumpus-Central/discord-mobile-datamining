@@ -1116,7 +1116,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
                 return jsx(View, obj);
               }
             }
-            tmp94 = loading(tmp87(15842), obj10);
+            tmp94 = loading(tmp87(15837), obj10);
             flag6 = false;
             flag7 = false;
             flag8 = false;
@@ -1183,17 +1183,17 @@ export default function useOAuth2AuthorizeForm(clientId) {
                 }
                 const items26 = [tmp104, , , , ];
                 let obj13 = { application: first.application, accountScopes };
-                items26[1] = loading(tmp87(15843), obj13);
+                items26[1] = loading(tmp87(15838), obj13);
                 let obj14 = { application: first.application, accountScopes, requestedScopes, integrationType: first6, errors: obj11, isTrustedName: null };
                 const tmp20Result14 = tmp20(7344);
                 if (!flag2) {
                   flag2 = isSocialLayerParentApplication;
                 }
                 obj14.isTrustedName = flag2;
-                items26[2] = loading(tmp87(15847), obj14);
+                items26[2] = loading(tmp87(15842), obj14);
                 let tmp102Result = null;
                 if (tmp98) {
-                  const items27 = [tmp106(tmp20(15846).AuthorizeFormSeparator, {}), ];
+                  const items27 = [tmp106(tmp20(15841).AuthorizeFormSeparator, {}), ];
                   class Spinner {
                     constructor() {
                       obj = { style: closure_17.loading, children: jsx(closure_0(closure_3[39]).ActivityIndicator, {}) };
@@ -1217,15 +1217,15 @@ export default function useOAuth2AuthorizeForm(clientId) {
                   }
                   let obj16 = { children: null };
                   obj15.disabled = tmp110;
-                  items27[1] = tmp106(tmp87(15848), obj15);
+                  items27[1] = tmp106(tmp87(15843), obj15);
                   obj16.children = items27;
                   tmp102Result = tmp102(tmp103, obj16);
-                  const tmp87Result6 = tmp87(15848);
+                  const tmp87Result6 = tmp87(15843);
                 }
                 items26[3] = tmp102Result;
                 let tmp102Result3 = null;
                 if (hasItem) {
-                  const items29 = [tmp106(tmp20(15846).AuthorizeFormSeparator, {}), ];
+                  const items29 = [tmp106(tmp20(15841).AuthorizeFormSeparator, {}), ];
                   class Spinner {
                     constructor() {
                       obj = { style: closure_17.loading, children: jsx(closure_0(closure_3[39]).ActivityIndicator, {}) };
@@ -1237,15 +1237,15 @@ export default function useOAuth2AuthorizeForm(clientId) {
                   }
                   const obj17 = { children: null };
                   const obj18 = { error: items30[0], selectedChannelId: first4, selectedGuildId: first3, onChannelChange: tmp15 };
-                  items29[1] = tmp106(tmp87(15849), obj18);
+                  items29[1] = tmp106(tmp87(15844), obj18);
                   obj17.children = items29;
                   tmp102Result3 = tmp102(tmp103, obj17);
-                  const tmp87Result7 = tmp87(15849);
+                  const tmp87Result7 = tmp87(15844);
                 }
                 const obj19 = { children: null };
                 items26[4] = tmp102Result3;
                 obj19.children = items26;
-                const tmp87Result5 = tmp87(15847);
+                const tmp87Result5 = tmp87(15842);
                 let hasItem2 = requestedScopes.includes(tmp20(7243).OAuth2Scopes.BOT);
                 if (hasItem2) {
                   hasItem2 = !tmp16(1084).equals(memo4, tmp16(5180).NONE);
@@ -1313,7 +1313,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
               obj22.deniedPermissions = first5;
               obj22.onPermissionsChange = tmp90;
               obj22.guild = memo;
-              tmp94 = loading(tmp87(15850), obj22);
+              tmp94 = loading(tmp87(15845), obj22);
               flag6 = true;
               flag7 = true;
               flag8 = false;
@@ -1358,8 +1358,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
               obj23.approximateGuildCount = tmp126;
               obj23.isEmbeddedFlow = flag3;
               obj23.connectedAccount = stateFromStores1;
-              tmp123Result = tmp123(tmp87(15852), obj23);
-              const tmp87Result8 = tmp87(15852);
+              tmp123Result = tmp123(tmp87(15847), obj23);
+              const tmp87Result8 = tmp87(15847);
             }
           }
         }
@@ -1383,7 +1383,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
           }
           obj24.accountScopes = accountScopes;
           obj24.bot = first.bot;
-          tmp127 = loading(tmp87(15855), obj24);
+          tmp127 = loading(tmp87(15850), obj24);
         }
         let tmp129 = flag8;
         if (flag8) {

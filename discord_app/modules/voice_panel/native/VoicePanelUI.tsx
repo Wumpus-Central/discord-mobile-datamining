@@ -37,18 +37,18 @@ const require = globalThis.__r;
 const nativeDefault = native;
 const module_1652 = _mod1652;
 
-const calculateVoicePanelHeaderSpecsDefault = tmp2(11931);
-const closeVoicePanelsDefault = tmp2(12654);
-const useControlsLockDefault = tmp2(19795);
-const useControlsHoverGestureDefault = tmp2(19833);
-const VoicePanelHeaderDefault = tmp2(19834);
-const VoicePanelCardViewDefault = tmp2(19856);
-const VoicePanelPreJoinContentDefault = tmp2(19889);
-const VoicePanelVoiceChannelAppDefault = tmp2(19893);
-const VoicePanelSystemUIManagerDefault = tmp2(19896);
-const VoicePanelAccessibilityViewDefault = tmp2(19897);
-const VoicePanelDismissableContentDefault = tmp2(19898);
-const VoicePanelControlsDefault = tmp2(19917);
+const calculateVoicePanelHeaderSpecsDefault = tmp2(11925);
+const closeVoicePanelsDefault = tmp2(12648);
+const useControlsLockDefault = tmp2(19790);
+const useControlsHoverGestureDefault = tmp2(19828);
+const VoicePanelHeaderDefault = tmp2(19829);
+const VoicePanelCardViewDefault = tmp2(19851);
+const VoicePanelPreJoinContentDefault = tmp2(19884);
+const VoicePanelVoiceChannelAppDefault = tmp2(19888);
+const VoicePanelSystemUIManagerDefault = tmp2(19891);
+const VoicePanelAccessibilityViewDefault = tmp2(19892);
+const VoicePanelDismissableContentDefault = tmp2(19893);
+const VoicePanelControlsDefault = tmp2(19912);
 require = fn;
 function NOOP() {}
 function log() {
@@ -630,7 +630,7 @@ function AnimatedWrapper(arg0) {
     mode,
     connected,
     spring_spring.withSpring,
-    closure_1_10,
+    refs,
     tmp4,
   ];
   c0 = undefined;
@@ -800,6 +800,7 @@ function DockSheetLayers(arg0) {
   const tmp2 = closure_28();
   const tmp5 = useVoicePanelDockMicLiveDefault(channelId);
   const obj = { children: null };
+  items = [collapsedCategories(VoicePanelDockGlow.VoicePanelDockGlow, { micLive: tmp5 }), ,];
   obj2 = {
     ref: dockPTTMeasureHostRef,
     style: wrapperTransformStyles,
@@ -807,7 +808,6 @@ function DockSheetLayers(arg0) {
     collapsable: false,
     children: null,
   };
-  items = [collapsedCategories(VoicePanelDockGlow.VoicePanelDockGlow, { micLive: tmp5 }), , ,];
   const obj3 = { style: null, pointerEvents: "none" };
   const items1 = [
     tmp2.dockSurfaceShadow,
@@ -815,24 +815,22 @@ function DockSheetLayers(arg0) {
     wrapperSurfaceLayerStyles,
   ];
   obj3.style = items1;
-  items[1] = collapsedCategories(module_1652.View, obj3);
+  const items2 = [collapsedCategories(module_1652.View, obj3), ,];
   const obj4 = { style: null, onLayout: handleDockSheetLayout, layout: layoutTransition, children };
-  const items2 = [tmp2.dockSurfaceClip, wrapperSurfaceStyles];
-  obj4.style = items2;
-  items[2] = collapsedCategories(module_1652.View, obj4);
-  items[3] = collapsedCategories(Portal.PortalHost, { name: dockPTTPortalHostName });
-  obj2.children = items;
-  const items3 = [
-    expandedHeight(module_1652.View, obj2),
-    collapsedCategories(VoicePanelDockGlow.VoicePanelDockBottomLine, { micLive: tmp5 }),
-  ];
-  obj.children = items3;
+  const items3 = [tmp2.dockSurfaceClip, wrapperSurfaceStyles];
+  obj4.style = items3;
+  items2[1] = collapsedCategories(module_1652.View, obj4);
+  items2[2] = collapsedCategories(Portal.PortalHost, { name: dockPTTPortalHostName });
+  obj2.children = items2;
+  items[1] = expandedHeight(module_1652.View, obj2);
+  items[2] = collapsedCategories(VoicePanelDockGlow.VoicePanelDockBottomLine, { micLive: tmp5 });
+  obj.children = items;
   return expandedHeight(dependencyMap, obj);
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ Pressable: closure_6, ScrollView } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11925);
+const VoicePanelConstants = fn(11919);
 ({
   BORDER_RADIUS_PHYSICS: closure_10,
   DEFAULT_BORDER_RADIUS,
@@ -843,9 +841,9 @@ const VoicePanelConstants = fn(11925);
 } = VoicePanelConstants);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 ({ LAYOUT_PHYSICS, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_14, DEFAULT_BORDER_RADIUS_PIP } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11923).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
 const isActivityParticipant = fn(5920).isActivityParticipant;
-const POP_RESISTANCE = fn(11926).POP_RESISTANCE;
+const POP_RESISTANCE = fn(11920).POP_RESISTANCE;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 log = new LoggerDefault("VoicePanelUI");
@@ -2701,12 +2699,12 @@ export default noop.memo(function VoicePanelUI() {
     let tmp105Result = tmp107;
     if (isDockEnabled) {
       const obj23 = { children: tmp107 };
-      tmp105Result = closure_18(tmp13(19797).VoicePanelContentWithDock, obj23);
+      tmp105Result = closure_18(tmp13(19792).VoicePanelContentWithDock, obj23);
     }
     obj22.children = tmp105Result;
     items37[1] = closure_18(AnimatedWrapper, obj22);
     const obj24 = { children: null };
-    items37[2] = closure_18(tmp2(isDockEnabled ? 19900 : 19901), {});
+    items37[2] = closure_18(tmp2(isDockEnabled ? 19895 : 19896), {});
     tmp2 = VoicePanelControlsDefault;
     const obj25 = { gestureState: sharedValue4 };
     tmp105Result3 = closure_18(tmp2, obj25);

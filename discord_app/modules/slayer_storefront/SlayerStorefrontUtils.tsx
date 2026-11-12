@@ -228,7 +228,7 @@ function getStorefrontEmbedShareURL(applicationId, join) {
   const guildId = SelectedGuildStore.getGuildId();
   if (null != guildId) {
     const _location = location;
-    if (pathname.indexOf(closure_1_10(guildId)) >= 0) {
+    if (pathname.indexOf(refs(guildId)) >= 0) {
       let GAME_SHOPResult = gesture.GAME_SHOP(guildId);
     }
     const _URL = URL;
@@ -599,7 +599,7 @@ export function getForwardedStorefrontEmbedShareURL(applicationId, join) {
   const guildId = SelectedGuildStore.getGuildId();
   if (null != guildId) {
     const _location = location;
-    if (pathname.indexOf(closure_1_10(guildId)) >= 0) {
+    if (pathname.indexOf(refs(guildId)) >= 0) {
       let GAME_SHOPResult = gesture.GAME_SHOP(guildId);
     }
     const _URL = URL;
@@ -684,7 +684,7 @@ export function isOnSocialLayerStorefrontPage(arr, search, arg2, arg3) {
   if (!tmp2) {
     let tmp7 = null != arg3;
     if (tmp7) {
-      tmp7 = arr.indexOf(closure_1_10(arg3)) >= 0;
+      tmp7 = arr.indexOf(refs(arg3)) >= 0;
     }
     tmp2 = tmp7;
   }

@@ -38,10 +38,10 @@ export default function handleAcceptEventInstantInvite(code) {
           guildScheduledEvent(7594).acceptInvite(obj3);
           const obj4 = guildScheduledEvent(7594);
         }
-        tmpResult = tmp(10742);
+        tmpResult = tmp(10736);
       }
     }
   }
-  obj = code(8775);
+  obj = code(8774);
   tmp = code;
 }

@@ -80,8 +80,8 @@ class Coachmark {
         }
         const size = { height: closure_15[str], width: "auto" };
         obj3.style = size;
-        obj2.children = closure_2_10(Graphic.Graphic, obj3);
-        return closure_2_10(metroImportDefault, obj2);
+        obj2.children = refs(Graphic.Graphic, obj3);
+        return refs(metroImportDefault, obj2);
       } else {
         let tmp2 = null;
         if (null != renderImgComponent) {
@@ -89,12 +89,12 @@ class Coachmark {
         }
         if (null != imgSource) {
           const obj = { source: tmp3, style: closure_3.image };
-          tmp2 = closure_2_10(FastImageDefault, obj);
+          tmp2 = refs(FastImageDefault, obj);
         }
         let tmp8 = null;
         if (null != tmp2) {
           const obj4 = { style: closure_3.bottomMargin, children: tmp2 };
-          tmp8 = closure_2_10(metroImportDefault, obj4);
+          tmp8 = refs(metroImportDefault, obj4);
         }
         return tmp8;
       }
@@ -262,7 +262,7 @@ function Cursor(arg0) {
   const obj = { style: null, children: null };
   items = [tmp.cursorContainer, "top" === position ? { marginTop: -6 } : { marginBottom: -6 }, { flexDirection: str, left: -adjustmentX }];
   obj.style = items;
-  const items1 = [closure_1_10(metroImportDefault, { style: tmp.cursorHead }), closure_1_10(metroImportDefault, { style: tmp.cursorSpine })];
+  const items1 = [refs(metroImportDefault, { style: tmp.cursorHead }), refs(metroImportDefault, { style: tmp.cursorSpine })];
   obj.children = items1;
   return closure_1_11(metroImportDefault, obj);
 }
@@ -315,6 +315,6 @@ export function CoachmarkContainer(experimental_withBlurBackground) {
   }
   const obj2 = { theme: DARK, children: null };
   const merged = Object.assign(experimental_withBlurBackground);
-  obj2.children = closure_1_10(Coachmark, {});
-  return closure_1_10(native.ThemeContextProvider, obj2);
+  obj2.children = refs(Coachmark, {});
+  return refs(native.ThemeContextProvider, obj2);
 }

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/DoubleChevronSmallRightIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod13529 from "../../../../../../../_runtime/metro/13529__.js";
+import _mod13523 from "../../../../../../../_runtime/metro/13523__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -18,5 +18,5 @@ export function DoubleChevronSmallRightIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13529, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13523, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

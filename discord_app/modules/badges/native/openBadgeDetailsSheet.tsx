@@ -8,5 +8,5 @@ const result = size.fileFinishedImporting("modules/badges/native/openBadgeDetail
 
 export const BADGE_DETAILS_SHEET_KEY = "badge-details";
 export function openBadgeDetailsSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10045, dependencyMap.paths), c3, arg0);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10044, dependencyMap.paths), c3, arg0);
 }

@@ -21,12 +21,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     dragRegion: require("../../../../_runtime/metro/01652__.js").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: "teapot",
-    scrollPosition: "performURLNavigation",
-    windowSize: "attribution_framework",
-    setStateShallow: "\u{1F935}\u{1F3FD}",
-    dropStart: "Jmwzdx",
-    dropComplete: "escapeText",
+    listInsets: "kiss_woman_man",
+    scrollPosition: "description",
+    windowSize: "r",
+    setStateShallow: "Map",
+    dropStart: "error",
+    dropComplete: "isArray",
   };
   let obj2 = require("../../../../_runtime/metro/01652__.js");
   obj.gestureState = require("../../../../_runtime/metro/01652__.js").makeMutable(obj);
@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "onPress" }));
+      dropSpecs(1259).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "isArray" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -93,7 +93,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "Array" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {

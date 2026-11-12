@@ -23,7 +23,7 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11925);
+const VoicePanelConstants = fn(11919);
 ({ MODE_CHANGE_PHYSICS: metroImportDefault, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
@@ -212,7 +212,7 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   let tmp32 = null;
   if (tmp10Result2.isJankScreenReportingEnabled()) {
     const obj4 = { channelId, tab, wrapperSpecs, mode };
-    tmp32 = closure_9(tmp(19953), obj4);
+    tmp32 = closure_9(tmp(19948), obj4);
   }
   const items9 = [tmp32, , ,];
   let tmp36 = !tmp6;

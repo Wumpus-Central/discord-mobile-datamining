@@ -132,8 +132,8 @@ export default function BountiesModalAdvertiserCta(visible) {
   visible = visible.visible;
   let merged = Object.assign(visible, Object.assign({ visible: 0 }));
   let animatedStyle;
-  const isBountiesModalTransitionsRefactorEnabled = animatedStyle(17435).useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
-  let obj = animatedStyle(17435);
+  const isBountiesModalTransitionsRefactorEnabled = animatedStyle(17430).useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
+  let obj = animatedStyle(17430);
   items = [AccessibilityStore];
   let num = 0;
   const stateFromStores = animatedStyle(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -171,10 +171,10 @@ export default function BountiesModalAdvertiserCta(visible) {
     const merged = Object.assign(arg0);
     obj.opacityStyle = opacityStyle;
     obj.transformStyle = animatedStyle;
-    return closure_2_10(BountiesModalAdvertiserCtaContent, obj);
+    return refs(BountiesModalAdvertiserCtaContent, obj);
   }, items3);
   const tmp2Result = animatedStyle(1652);
-  const tmp2Result2 = animatedStyle(17436);
+  const tmp2Result2 = animatedStyle(17431);
   const visibilityTransition = tmp2Result2.useVisibilityTransition({ visible, entranceTiming: animatedStyle(5488).timingStandard, exitTiming: animatedStyle(5488).timingFast });
   let shouldRender = visibilityTransition.shouldRender;
   if (isBountiesModalTransitionsRefactorEnabled) {

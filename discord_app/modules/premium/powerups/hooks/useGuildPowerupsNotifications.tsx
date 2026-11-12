@@ -90,7 +90,7 @@ function maybeGetPerkPurchaseablePopoutDCF(guildId, unlockedPowerups, available,
         )
       ) {
         let obj = {
-          type: tmp4(10628).GuildPowerupNotificationPopoutType.PERKS_PURCHASABLE,
+          type: tmp4(10626).GuildPowerupNotificationPopoutType.PERKS_PURCHASABLE,
           powerups: found,
           markAsDismissed(AUTO_DISMISS) {
             const result = GuildDismissibleContentUtils.markContentAsDismissed(
@@ -113,7 +113,7 @@ function maybeGetPerkPurchaseablePopoutDCF(guildId, unlockedPowerups, available,
         )
       ) {
         const obj2 = {
-          type: tmp4(10628).GuildPowerupNotificationPopoutType.PERKS_PURCHASABLE,
+          type: tmp4(10626).GuildPowerupNotificationPopoutType.PERKS_PURCHASABLE,
           powerups: found,
           markAsDismissed(AUTO_DISMISS) {
             const result = GuildDismissibleContentUtils.markContentAsDismissed(
@@ -126,7 +126,7 @@ function maybeGetPerkPurchaseablePopoutDCF(guildId, unlockedPowerups, available,
         };
         tmp6 = obj2;
       }
-      tmp4Result2 = tmp4(10627);
+      tmp4Result2 = tmp4(10625);
     }
     obj = tmp6;
   }
@@ -354,12 +354,8 @@ function useGuildPowerupsChannelListPopout(guildId, stateFromStores1) {
   if (tmp20) {
     tmp20 = tmp19;
   }
-  let num = 0;
-  if (null != tmp18) {
-    num = tmp18.cost - available;
-  }
   const tmp3Result5 = _slicedToArray(
-    require("GuildPowerupsNotificationsDCF").useBoostToUnlockCoachmarkDCF(tmp20, guildId, num),
+    require("GuildPowerupsNotificationsDCF").useBoostToUnlockCoachmarkDCF(tmp20, guildId),
     2,
   );
   const markAsDismissed3 = tmp22;
@@ -449,7 +445,7 @@ function useGuildPowerupsChannelListPopout(guildId, stateFromStores1) {
                           type: GuildPowerupsNotification.GuildPowerupNotificationPopoutType.LEVEL_REACHED,
                           powerup: tmp15,
                           markAsDismissed(AUTO_DISMISS) {
-                            const result = closure_0(10627).markContentAsDismissed(
+                            const result = closure_0(10625).markContentAsDismissed(
                               dependencyMap,
                               closure_0,
                               true,
@@ -487,7 +483,7 @@ function useGuildPowerupsChannelListPopout(guildId, stateFromStores1) {
                                 type: GuildPowerupsNotification.GuildPowerupNotificationPopoutType
                                   .GAME_SERVER_HOSTING_GUILD_ELIGIBLE,
                                 markAsDismissed(AUTO_DISMISS) {
-                                  const result = closure_0(10627).markContentAsDismissed(
+                                  const result = closure_0(10625).markContentAsDismissed(
                                     closure_0(5076).DismissibleGuildContent
                                       .GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK,
                                     closure_0,
@@ -679,16 +675,16 @@ export function maybeGetLevelUnlockedPopoutDCF(guildId, arg1) {
         }
         if (null != tmp6) {
           const obj = {
-            type: tmp(10628).GuildPowerupNotificationPopoutType.LEVEL_REACHED,
+            type: tmp(10626).GuildPowerupNotificationPopoutType.LEVEL_REACHED,
             powerup: tmp6,
             markAsDismissed(AUTO_DISMISS) {
-              const result = closure_0(10627).markContentAsDismissed(dependencyMap, closure_0, true, AUTO_DISMISS);
+              const result = closure_0(10625).markContentAsDismissed(dependencyMap, closure_0, true, AUTO_DISMISS);
             },
           };
           return obj;
         }
       }
-      tmpResult = tmp(10627);
+      tmpResult = tmp(10625);
     }
   }
 }
@@ -706,9 +702,9 @@ export function maybeGetGameServerHostingGuildEligiblePopoutDCF(guildId, arg1, a
             )
           ) {
             const obj2 = {
-              type: tmp(10628).GuildPowerupNotificationPopoutType.GAME_SERVER_HOSTING_GUILD_ELIGIBLE,
+              type: tmp(10626).GuildPowerupNotificationPopoutType.GAME_SERVER_HOSTING_GUILD_ELIGIBLE,
               markAsDismissed(AUTO_DISMISS) {
-                const result = closure_0(10627).markContentAsDismissed(
+                const result = closure_0(10625).markContentAsDismissed(
                   closure_0(5076).DismissibleGuildContent.GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK,
                   closure_0,
                   true,
@@ -718,7 +714,7 @@ export function maybeGetGameServerHostingGuildEligiblePopoutDCF(guildId, arg1, a
             };
             return obj2;
           }
-          tmpResult = tmp(10627);
+          tmpResult = tmp(10625);
         }
       }
     }

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/projects/conjureDefaultAppIcon.tsx
 import _modDef671 from "../../../../_runtime/metro/00671__.js";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
-import rawDefault from "../../../../_runtime/10005_raw.js";
+import rawDefault from "../../../../_runtime/10004_raw.js";
 import GuildProfileConstants from "../../guild_profile/GuildProfileConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

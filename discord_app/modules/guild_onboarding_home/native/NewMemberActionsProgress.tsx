@@ -16,8 +16,8 @@ function ProgressBar(percent) {
   items[1] = obj3;
   obj2.style = items;
   obj2.colors = ["rgba(103, 203, 134, 1)", "rgba(59, 165, 92, 1)"];
-  obj.children = closure_1_10(LinearGradientDefault, obj2);
-  return closure_1_10(View, obj);
+  obj.children = refs(LinearGradientDefault, obj2);
+  return refs(View, obj);
 }
 const View = fn(17).View;
 const StaticChannelRoute = fn(5099).StaticChannelRoute;

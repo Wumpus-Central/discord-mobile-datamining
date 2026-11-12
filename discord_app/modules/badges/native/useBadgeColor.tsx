@@ -56,7 +56,7 @@ export function useBadgeColor(rasterUrl) {
                   uri,
                   asyncGeneratorStep(async () => {
                     closure_3 = tmp2;
-                    const tmp14 = value(15171);
+                    const tmp14 = value(15168);
                     const pickBadgeColor = tmp14.pickBadgeColor;
                     await pickBadgeColor(2022).getDominantColors({ uri });
                     const tmp8 = pickBadgeColor(value);

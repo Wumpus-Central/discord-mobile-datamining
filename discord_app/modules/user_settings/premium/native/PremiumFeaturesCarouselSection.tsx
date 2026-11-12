@@ -6,10 +6,10 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import _modDef15231 from "../../../../../_runtime/metro/15231__.js";
+import _modDef15232 from "../../../../../_runtime/metro/15232__.js";
+import _modDef15233 from "../../../../../_runtime/metro/15233__.js";
 import _modDef15234 from "../../../../../_runtime/metro/15234__.js";
-import _modDef15235 from "../../../../../_runtime/metro/15235__.js";
-import _modDef15236 from "../../../../../_runtime/metro/15236__.js";
-import _modDef15237 from "../../../../../_runtime/metro/15237__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -38,7 +38,7 @@ function CarouselCard(arg0) {
   const tmp = closure_15();
   const obj = { style, children: null };
   items = [
-    closure_1_10(Text_Text.Text, {
+    refs(Text_Text.Text, {
       variant: "heading-sm/semibold",
       color: "text-overlay-light",
       style: tmp.cardTitle,
@@ -48,7 +48,7 @@ function CarouselCard(arg0) {
   const obj3 = { source: imageSrc, style: null, resizeMode: "contain" };
   const items1 = [tmp.image, imageStyle];
   obj3.style = items1;
-  items[1] = closure_1_10(FastImageDefault, obj3);
+  items[1] = refs(FastImageDefault, obj3);
   obj.children = items;
   return closure_1_11(PremiumFeaturesCardBackground, obj);
 }
@@ -69,7 +69,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["3cyhe3"]);
-    obj.imageSrc = _modDef15234;
+    obj.imageSrc = _modDef15231;
     obj.imageStyle = first.emojiImage;
     items = [,];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
@@ -78,7 +78,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj2 = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = util.intl;
     obj2.title = intl2.string(util.t["8AhJqy"]);
-    obj2.imageSrc = _modDef15235;
+    obj2.imageSrc = _modDef15232;
     const items2 = [,];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = PremiumTypes);
     const set = new Set(items);
@@ -87,7 +87,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj3 = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = util.intl;
     obj3.title = intl3.string(util.t["t/Mvdj"]);
-    obj3.imageSrc = _modDef15236;
+    obj3.imageSrc = _modDef15233;
     const items3 = [PremiumTypes.TIER_2];
     const set1 = new Set(items2);
     obj3.premiumTypes = new Set(items3);
@@ -95,7 +95,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj4 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = util.intl;
     obj4.title = intl4.string(util.t["n+DGY/"]);
-    obj4.imageSrc = _modDef15237;
+    obj4.imageSrc = _modDef15234;
     const items4 = [PremiumTypes.TIER_2];
     const set2 = new Set(items3);
     obj4.premiumTypes = new Set(items4);
@@ -105,7 +105,7 @@ function PremiumFeaturesCarousel(arg0) {
   mapped = memo.map((item, index) => {
     const obj = { style: { width: onEndReached * c12 } };
     const merged = Object.assign(item);
-    return closure_2_10(CarouselCard, obj, index);
+    return refs(CarouselCard, obj, index);
   });
   let items1 = [currentIndex, mapped.length, onEndReached];
   const effect = noop.useEffect(() => {
@@ -143,7 +143,7 @@ function PremiumFeaturesCarousel(arg0) {
         modeConfig: { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 },
         onSnapToItem: tmp7,
       };
-      let tmp19 = closure_10(currentIndex(11629), obj3);
+      let tmp19 = closure_10(currentIndex(11623), obj3);
     }
     let items3 = [tmp19];
     let obj4 = { containerStyle: tmp.indicators, numberOfItems: mapped.length, currentIndex };
@@ -179,7 +179,7 @@ function PremiumFeaturesCarousel(arg0) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const Gradients = fn(9368).Gradients;
+const Gradients = fn(9367).Gradients;
 const PremiumTypes = fn(1387).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);

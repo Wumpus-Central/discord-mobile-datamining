@@ -136,7 +136,7 @@ export default function GiftingBadgeInfoActionSheet() {
         }
         items[2] = tmp12Result;
         obj.children = items;
-        return closure_2_10(View, obj, children.key);
+        return refs(View, obj, children.key);
       });
     }
   }

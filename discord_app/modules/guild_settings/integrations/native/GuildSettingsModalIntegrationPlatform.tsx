@@ -148,10 +148,10 @@ IntegrationItem.prototype["render"] = function render() {
       const obj3 = { style: styles.trailingWrapper, children: null };
       let syncing = integration.syncing;
       if (syncing) {
-        syncing = closure_1_10(React3, { animating: true, size: "small" });
+        syncing = refs(React3, { animating: true, size: "small" });
       }
       obj3.children = syncing;
-      obj2.trailing = closure_1_10(React4, obj3);
+      obj2.trailing = refs(React4, obj3);
       obj2.arrow = integration.enabled && !integration.syncing;
       obj2.icon = null;
       let enabled = integration.enabled;
@@ -168,7 +168,7 @@ IntegrationItem.prototype["render"] = function render() {
         }
         return enabled;
       };
-      items = [closure_1_10(TableRow.TableRow, obj2)];
+      items = [refs(TableRow.TableRow, obj2)];
       const obj5 = { value: null, disabled: null, onValueChange: null, label: null };
       const _Boolean = Boolean;
       obj5.value = Boolean(self.state.enabled);
@@ -176,7 +176,7 @@ IntegrationItem.prototype["render"] = function render() {
       obj5.onValueChange = self.handleToggleEnabled;
       const intl = util.intl;
       obj5.label = intl.string(util.t.vQC6vR);
-      items[1] = closure_1_10(TableSwitchRow.TableSwitchRow, obj5);
+      items[1] = refs(TableSwitchRow.TableSwitchRow, obj5);
       obj4.children = items;
       return closure_1_11(TableRowGroup.TableRowGroup, obj4);
     } else {
@@ -186,7 +186,7 @@ IntegrationItem.prototype["render"] = function render() {
       const icon = { source: null, style: null };
       icon.source = tmpResult.makeSource(shared.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
       icon.style = styles.platformIcon;
-      closure_1_10(tmp8Result, icon);
+      refs(tmp8Result, icon);
       const tmp14 = shared.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG;
     }
   } else {
@@ -250,7 +250,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     obj3.title = name;
     obj3.headerRight = function headerRight() {
       if (submitting) {
-        let tmp2 = closure_2_10(NavigatorHeader.HeaderSubmittingIndicator, {});
+        let tmp2 = refs(NavigatorHeader.HeaderSubmittingIndicator, {});
       } else {
         tmp2 = null;
         if (c5) {
@@ -258,7 +258,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
           const intl = util.intl;
           obj.text = intl.string(util.t["R3BPH+"]);
           obj.onPress = onSave;
-          tmp2 = closure_2_10(HeaderActionButton.HeaderActionButton, obj);
+          tmp2 = refs(HeaderActionButton.HeaderActionButton, obj);
         }
       }
       return tmp2;

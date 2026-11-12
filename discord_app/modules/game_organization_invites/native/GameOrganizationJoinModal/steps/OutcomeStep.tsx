@@ -12,8 +12,8 @@ import GameOrganizationJoinSuccessGraphicDefault from "../../GameOrganizationJoi
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const constants = fn(12280).GameOrganizationInviteAcceptStatus;
-let closure_4 = fn(13974).closeGameOrganizationJoinModal;
+const constants = fn(12274).GameOrganizationInviteAcceptStatus;
+let closure_4 = fn(13970).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5243);

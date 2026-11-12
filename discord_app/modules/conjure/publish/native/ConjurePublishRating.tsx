@@ -64,9 +64,9 @@ function Star(rating) {
   ConjurePublishRatingTsx1.__initData = tmp7;
   const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ConjurePublishRatingTsx1);
   if (tmp2) {
-    let StarOutlineIcon = tmp3(10115).StarIcon;
+    let StarOutlineIcon = tmp3(10114).StarIcon;
   } else {
-    StarOutlineIcon = tmp3(10113).StarOutlineIcon;
+    StarOutlineIcon = tmp3(10112).StarOutlineIcon;
   }
   let obj3 = {
     style: tmp.star,
@@ -182,11 +182,11 @@ export default function ConjurePublishRating(arg0) {
         const obj = ActionSheetActionCreatorsDefault;
         const obj2 = { rating: tmp2 };
         obj.openLazy(
-          asyncRequireImpl(13656, dependencyMap.paths),
+          asyncRequireImpl(13650, dependencyMap.paths),
           ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY,
           obj2,
         );
-        const tmp6 = asyncRequireImpl(13656, dependencyMap.paths);
+        const tmp6 = asyncRequireImpl(13650, dependencyMap.paths);
       }
     };
     return closure_1_7(Star, obj, rating);

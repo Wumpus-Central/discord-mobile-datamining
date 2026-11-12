@@ -113,7 +113,7 @@ let closure_13 = async function _fetchQuestHomeBounties(arg0) {
               asyncGeneratorStep(async () => {
                 await tmp2(8598).getSession();
                 closure_128_0 = value;
-                const orRefreshAdSession = tmp2(8762).getOrRefreshAdSession();
+                const orRefreshAdSession = tmp2(8761).getOrRefreshAdSession();
                 const HTTP = tmp2(1282).HTTP;
                 const request = {
                   url: constants.QUESTS_GET_DECISIONS,

@@ -5,8 +5,8 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/checkpoint/native/showNitroLockedToast.tsx");
 
-export default function showNitroLockedToast(nextBlockedTrait) {
-  const nitroLockedMessage = CheckpointCustomizationUtils.getNitroLockedMessage(nextBlockedTrait);
+export default function showNitroLockedToast(checkpointRouteBlockedTrait) {
+  const nitroLockedMessage = CheckpointCustomizationUtils.getNitroLockedMessage(checkpointRouteBlockedTrait);
   if (null != nitroLockedMessage) {
     ToastUtils.presentError(nitroLockedMessage);
     const tmpResult = ToastUtils;

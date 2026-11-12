@@ -67,8 +67,8 @@ export default function BadgeTierGrid(badge) {
   if (tiers == null) {
     tiers = [];
   }
-  const tmp9 = isViewingOtherUser(11252);
-  obj4.children = isViewingOtherUser(11252)(tiers, 3).map((arr) =>
+  const tmp9 = isViewingOtherUser(11246);
+  obj4.children = isViewingOtherUser(11246)(tiers, 3).map((arr) =>
     React4(
       View,
       {
@@ -84,7 +84,7 @@ export default function BadgeTierGrid(badge) {
           if (complex_icon_static_url == null) {
             complex_icon_static_url = owned.complex_icon_static_url;
           }
-          const tierRowSubtitle = badge(10046).getTierRowSubtitle({
+          const tierRowSubtitle = badge(10045).getTierRowSubtitle({
             tier: owned,
             isUnlocked: owned,
             isViewingOtherUser,
@@ -110,8 +110,8 @@ export default function BadgeTierGrid(badge) {
             }
             items1[1] = dimmedIcon;
             obj4.style = items1;
-            tmp9Result = closure_2_4(isViewingOtherUser(15166), obj4);
-            const tmp11 = isViewingOtherUser(15166);
+            tmp9Result = closure_2_4(isViewingOtherUser(15163), obj4);
+            const tmp11 = isViewingOtherUser(15163);
           }
           const items2 = [tmp9Result, ,];
           let tmp13Result = null != owned.name;

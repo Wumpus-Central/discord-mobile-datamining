@@ -204,8 +204,8 @@ export default function ViewModerators(channel) {
             const _HermesInternal = HermesInternal;
             const obj2 = ActionSheetActionCreatorsDefault;
             const obj3 = { channel, canSkip: false };
-            obj2.openLazy(asyncRequireImpl(19499, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
-            const tmp7 = asyncRequireImpl(19499, dependencyMap.paths);
+            obj2.openLazy(asyncRequireImpl(19494, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
+            const tmp7 = asyncRequireImpl(19494, dependencyMap.paths);
           }
         };
         obj9.disabled = !canUpdateStageChannelModerators;
@@ -215,7 +215,7 @@ export default function ViewModerators(channel) {
         let intl3 = tmp(tmp2[19]).intl;
         obj10.title = intl3.string(tmp(tmp2[19]).t.ghdVJL);
         obj10.children = existingRolesRowWithPermissionDisabled.map((item) =>
-          closure_2_10(
+          refs(
             ChannelOverwritesItemDefault,
             {
               guildId: channel.guild_id,
@@ -233,7 +233,7 @@ export default function ViewModerators(channel) {
         let intl4 = tmp(tmp2[19]).intl;
         obj11.title = intl4.string(tmp(tmp2[19]).t.ghdVJL);
         obj11.children = existingMembersRows.map((item) =>
-          closure_2_10(
+          refs(
             ChannelOverwritesItemDefault,
             {
               guildId: channel.guild_id,
@@ -262,7 +262,7 @@ export function openAddModeratorsActionSheet(channel) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(19499, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
+  obj2.openLazy(asyncRequireImpl(19494, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
     channel,
     canSkip: flag,
   });

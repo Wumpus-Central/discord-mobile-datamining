@@ -156,12 +156,12 @@ class GuildSettingsModalOverview extends PureComponent {
         }
         GuildSettingsActionCreatorsDefault.updateGuild({ systemChannelId: id });
         if (((null != systemChannel) !== null) != id) {
-          const result = applyArgumentsResult(20291).trackServerHubToggleSetting(
+          const result = applyArgumentsResult(20286).trackServerHubToggleSetting(
             guild.id,
-            applyArgumentsResult(20291).ServerHubSettingType.ALL_SYSTEM_MESSAGES,
+            applyArgumentsResult(20286).ServerHubSettingType.ALL_SYSTEM_MESSAGES,
             tmp,
           );
-          const obj2 = applyArgumentsResult(20291);
+          const obj2 = applyArgumentsResult(20286);
         }
       };
       if (systemChannel == null) {
@@ -447,7 +447,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     const intl = util.intl;
     channelName = intl.string(util.t.ibUhoa);
   }
-  const result = tmp(9155).isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild);
+  const result = tmp(9154).isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild);
   let hasFlagResult = result;
   if (!result) {
     hasFlagResult = tmp(1403).hasFlag(
@@ -464,13 +464,13 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     );
     const tmpResult14 = tmp(1403);
   }
-  const tmpResult = tmp(9155);
-  let result1 = tmp(20047).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
+  const tmpResult = tmp(9154);
+  let result1 = tmp(20042).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
   if (!result1) {
     result1 = tmp(1403).hasFlag(guild.systemChannelFlags, constants6.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     const tmpResult16 = tmp(1403);
   }
-  const tmpResult15 = tmp(20047);
+  const tmpResult15 = tmp(20042);
   let guildSpaceExperimentEnabled = tmp(7180).getGuildSpaceExperimentEnabled(guild.id, "GuildSettingsModalOverview");
   const obj2 = { title: null, description: null, hasIcons: false, children: null };
   const intl2 = tmp(1113).intl;

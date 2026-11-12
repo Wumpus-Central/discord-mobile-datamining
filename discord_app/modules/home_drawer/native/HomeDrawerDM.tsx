@@ -36,10 +36,10 @@ function HomeDrawerDMExpandedChildren(channel) {
   });
   let obj2 = channel(504);
   const tmp3 = useMessagePreviewsDefault(channel, {
-    unread: channel(18968).useBaseChannelUnreadBadgeState(channel, false).unread,
+    unread: channel(18963).useBaseChannelUnreadBadgeState(channel, false).unread,
   });
   closure_4 = tmp3;
-  const obj3 = channel(18968);
+  const obj3 = channel(18963);
   const items2 = [UserGuildSettingsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items2, () =>
     UserGuildSettingsStore.getChannelMuteConfig(channel.guild_id, channel.id),
@@ -90,7 +90,7 @@ function HomeDrawerDMExpandedChildren(channel) {
         color: "text-default",
         children: stateFromStores,
       };
-      items = [closure_2_10(Text_Text.Text, obj2), closure_2_10(NOOP, { size: "xs" })];
+      items = [refs(Text_Text.Text, obj2), refs(NOOP, { size: "xs" })];
       obj.children = items;
       return closure_2_11(View, obj);
     }
@@ -106,11 +106,11 @@ function HomeDrawerDMExpandedChildren(channel) {
         layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COZY,
         muted: memo.isMuted,
       };
-      tmp2 = closure_2_10(ChannelRowPreview.ChannelRowPreview, obj);
+      tmp2 = refs(ChannelRowPreview.ChannelRowPreview, obj);
     }
     return tmp2;
   }, items5);
-  return closure_10(channel(18935).HomeDrawerSharedItem, { title, subtitle });
+  return closure_10(channel(18930).HomeDrawerSharedItem, { title, subtitle });
 }
 const View = fn(17).View;
 const isMultiUserDM = fn(5096).isMultiUserDM;
@@ -132,7 +132,7 @@ export default function HomeDrawerDMExpandedChildrenWrapper(channel) {
     tmp2 = null;
     if (!tmp) {
       const obj = { channel: channel.channel };
-      tmp2 = closure_1_10(HomeDrawerDMExpandedChildren, obj);
+      tmp2 = refs(HomeDrawerDMExpandedChildren, obj);
     }
   }
   return tmp2;

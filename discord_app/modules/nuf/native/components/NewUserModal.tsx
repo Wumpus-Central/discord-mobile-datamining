@@ -10,7 +10,7 @@ require = fn;
 const NativeModules = fn(17).NativeModules;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const NativeStackNavigator = fn(9062);
+const NativeStackNavigator = fn(9061);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5243);
 let obj3 = {
@@ -98,14 +98,14 @@ export default function NewUserModal(arg0) {
     closure_5(Navigator.Screen, {
       name: "enable-notification",
       getComponent() {
-        return closure_0(18580).RedesignNotificationScreen;
+        return closure_0(18575).RedesignNotificationScreen;
       },
       initialParams: { onComplete },
     }),
     closure_5(Navigator.Screen, {
       name: "choose-avatar",
       getComponent() {
-        return closure_0(20187).default;
+        return closure_0(20182).default;
       },
       options() {
         return {
@@ -124,7 +124,7 @@ export default function NewUserModal(arg0) {
                 }),
               );
             };
-            return closure_2_5(closure_1(14904), obj);
+            return closure_2_5(closure_1(14900), obj);
           },
         };
       },
@@ -134,7 +134,7 @@ export default function NewUserModal(arg0) {
       name: "contact-sync",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(14892).ContactSyncOnboardingModal;
+        return closure_0(14888).ContactSyncOnboardingModal;
       },
       initialParams: { onComplete },
     }),
@@ -142,7 +142,7 @@ export default function NewUserModal(arg0) {
       name: "interest-picker",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(20188).default;
+        return closure_0(20183).default;
       },
       initialParams: { onComplete },
     }),
@@ -150,14 +150,14 @@ export default function NewUserModal(arg0) {
       name: "discoverability",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(20200).default;
+        return closure_0(20195).default;
       },
       initialParams: { onComplete },
     }),
     closure_5(Navigator.Screen, {
       name: "connect-guardian",
       getComponent() {
-        return closure_0(20206).default;
+        return closure_0(20201).default;
       },
       initialParams: { onComplete },
     }),

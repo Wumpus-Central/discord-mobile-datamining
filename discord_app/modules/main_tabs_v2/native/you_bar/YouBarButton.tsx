@@ -94,10 +94,10 @@ class YouBarButtonIcon {
         position: "absolute",
         left: size2 - badgeSize + num3,
         top: size2 - badgeSize + num4,
-        right: "HermesInternal",
-        bottom: "channelId",
-        padding: "hd",
-        minWidth: "action",
+        right: "paddingHorizontal",
+        bottom: "y",
+        padding: "HTTP",
+        minWidth: "r",
       };
       return rect;
     }, items1);
@@ -136,7 +136,7 @@ class YouBarButtonContainer {
   }
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17588);
+const YouBarConstants = fn(17583);
 ({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: closure_6 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);

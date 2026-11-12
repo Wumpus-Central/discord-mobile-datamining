@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/StageModeratorIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod19884 from "../../../../../../../_runtime/metro/19884__.js";
+import _mod19879 from "../../../../../../../_runtime/metro/19879__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function StageModeratorIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod19884, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod19879, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

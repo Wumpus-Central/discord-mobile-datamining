@@ -222,7 +222,7 @@ export function TabItem(arg0) {
       str = "neutral";
     }
     const obj6 = { variant: str };
-    obj5.children = closure_5(tmp3(9419).IndicatorDot, obj6);
+    obj5.children = closure_5(tmp3(9418).IndicatorDot, obj6);
     tmp14Result2 = closure_5(closure_4, obj5);
   }
   items3[2] = tmp14Result2;

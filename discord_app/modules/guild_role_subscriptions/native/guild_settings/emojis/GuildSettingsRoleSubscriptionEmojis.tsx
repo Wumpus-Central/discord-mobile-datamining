@@ -11,15 +11,15 @@ import apply from "../../../../../../_runtime/00012_apply.js";
 require = fn;
 function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
   guildId = guildId.guildId;
-  const roleSubscriptionSettingsDisabled = guildId(20573).useRoleSubscriptionSettingsDisabled();
-  let obj = guildId(20573);
+  const roleSubscriptionSettingsDisabled = guildId(20568).useRoleSubscriptionSettingsDisabled();
+  let obj = guildId(20568);
   items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   if (null == stateFromStores) {
     return null;
   } else {
     const intl = tmp(1113).intl;
-    const obj3 = { maxSlots: stateFromStores(20624)(stateFromStores) };
+    const obj3 = { maxSlots: stateFromStores(20619)(stateFromStores) };
     const obj4 = {
       guild: stateFromStores,
       headerDescription: intl.formatToPlainString(tmp(1113).t.H9Jxp6, obj3),
@@ -35,7 +35,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
             closure_1 = arg1;
             const obj = ActionSheetActionCreatorsDefault;
             obj.openLazy(
-              asyncRequireImpl(20625, dependencyMap.paths),
+              asyncRequireImpl(20620, dependencyMap.paths),
               "role-subscription-emoji-" + stateFromStores.id,
               {
                 guildId: stateFromStores.id,
@@ -57,7 +57,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
       },
       disabled: roleSubscriptionSettingsDisabled,
     };
-    return jsx(tmp(20358).ManageEmojisModal, {
+    return jsx(tmp(20353).ManageEmojisModal, {
       guild: stateFromStores,
       headerDescription: intl.formatToPlainString(tmp(1113).t.H9Jxp6, obj3),
       computeEmojiItems,
@@ -72,7 +72,7 @@ function GuildSettingsRoleSubscriptionEmojisInner(guildId) {
             closure_1 = arg1;
             const obj = ActionSheetActionCreatorsDefault;
             obj.openLazy(
-              asyncRequireImpl(20625, dependencyMap.paths),
+              asyncRequireImpl(20620, dependencyMap.paths),
               "role-subscription-emoji-" + stateFromStores.id,
               {
                 guildId: stateFromStores.id,

@@ -8,6 +8,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import useCheckpointMusicDefault from "../useCheckpointMusic.tsx";
+import useCheckpointStepAnalytics from "../../hooks/useCheckpointStepAnalytics.tsx";
 import CheckpointStepHeaderRefContext from "CheckpointStepHeaderRefContext.tsx";
 import CheckpointBackgroundDefault from "CheckpointBackground.tsx";
 import CheckpointUnavailableScreenDefault from "screens/CheckpointUnavailableScreen.tsx";
@@ -51,20 +52,21 @@ export default function CheckpointUnavailableModal() {
   const rect = useSafeAreaInsetsDefault();
   const intl = util.intl;
   useCheckpointMusicDefault();
-  const obj = { children: null };
-  const obj2 = { theme: ThemeTypes.DARK, children: null };
-  const obj3 = { style: tmp.container, children: null };
-  items = [timestampProducer(CheckpointBackgroundDefault, {}), , ,];
-  const obj4 = { message: null };
   const stringResult = intl.string(util.t.cpT0Cq);
+  const checkpointCloseAnalytics = useCheckpointStepAnalytics.useCheckpointCloseAnalytics();
+  const obj2 = { children: null };
+  const obj3 = { theme: ThemeTypes.DARK, children: null };
+  const obj4 = { style: tmp.container, children: null };
+  items = [timestampProducer(CheckpointBackgroundDefault, {}), , ,];
+  const obj5 = { message: null };
   const intl2 = util.intl;
-  obj4.message = intl2.string(_modDef3269.IaTl5H);
-  items[1] = timestampProducer(CheckpointUnavailableScreenDefault, obj4);
+  obj5.message = intl2.string(_modDef3269.IaTl5H);
+  items[1] = timestampProducer(CheckpointUnavailableScreenDefault, obj5);
   items[2] = timestampProducer(CheckpointHeaderDefault, {});
-  const obj5 = { style: null, children: null };
+  const obj6 = { style: null, children: null };
   const items1 = [tmp.footer, { marginLeft: rect.left, marginRight: rect.right, marginBottom: rect.bottom }];
-  obj5.style = items1;
-  const obj6 = {
+  obj6.style = items1;
+  const obj7 = {
     style: tmp.closeButton,
     onPress: handleClose,
     accessibilityRole: "button",
@@ -74,10 +76,10 @@ export default function CheckpointUnavailableModal() {
       children: stringResult,
     }),
   };
-  obj5.children = timestampProducer(React3, obj6);
-  items[3] = timestampProducer(React4, obj5);
-  obj3.children = items;
-  obj2.children = metroImportDefault(React4, obj3);
-  obj.children = timestampProducer(native.ThemeContextProvider, obj2);
-  return timestampProducer(CheckpointStepHeaderRefContext.CheckpointStepFocusProvider, obj);
+  obj6.children = timestampProducer(React3, obj7);
+  items[3] = timestampProducer(React4, obj6);
+  obj4.children = items;
+  obj3.children = metroImportDefault(React4, obj4);
+  obj2.children = timestampProducer(native.ThemeContextProvider, obj3);
+  return timestampProducer(CheckpointStepHeaderRefContext.CheckpointStepFocusProvider, obj2);
 }

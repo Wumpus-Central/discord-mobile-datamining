@@ -317,13 +317,13 @@ function EmojiOptionsButton(channelId) {
   items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp3 = messageId(11811)(stateFromStores);
+  const tmp3 = messageId(11805)(stateFromStores);
   dependencyMap = tmp3;
   const reaction = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3, flag];
   const obj2 = {
     onPress: noop.useCallback(() => {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11812, dependencyMap.paths), "ReactionEmojiOptionsActionSheet", { channelId, messageId, reaction, canRemoveReactions, isEmojiPack: flag }, "replaceTopSheet");
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11806, dependencyMap.paths), "ReactionEmojiOptionsActionSheet", { channelId, messageId, reaction, canRemoveReactions, isEmojiPack: flag }, "replaceTopSheet");
     }, items2),
     style: tmp.emojiOptionsButton,
     children: null
@@ -377,10 +377,10 @@ function ReactionTabs(setReactionSelectedIndex) {
     const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
     setReactionSelectedIndex(arg0);
   };
-  items = [closure_18(setReactionSelectedIndex(11813), obj4), closure_18(setReactionSelectedIndex(8045), { outer: true }), ];
+  items = [closure_18(setReactionSelectedIndex(11807), obj4), closure_18(setReactionSelectedIndex(8045), { outer: true }), ];
   const obj5 = { style: tmp.removeButtonContainer, children: null };
   const obj7 = { style: tmp.emojiTextIdentifier, variant: "body-sm/medium", color: "text-default", children: null };
-  const tmp6 = setReactionSelectedIndex(11813);
+  const tmp6 = setReactionSelectedIndex(11807);
   obj7.children = reactionSelectedIndex(5187).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
   const items1 = [closure_18(reactionSelectedIndex(5866).Text, obj7), ];
   if (isTidaMediaTakedownRegion) {

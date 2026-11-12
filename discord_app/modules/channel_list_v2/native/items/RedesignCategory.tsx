@@ -65,7 +65,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(13896).PlusMediumIcon;
+    Icon = trailingAction(13892).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , ,];
@@ -297,7 +297,7 @@ export function CategoryChannel(channel) {
   colors = nativeDefault.colors;
   const obj7 = {};
   const merged1 = Object.assign(merged);
-  obj7.icon = closure_12(channel(10493).ChevronSmallDownIcon, {
+  obj7.icon = closure_12(channel(10491).ChevronSmallDownIcon, {
     size: "xxs",
     color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
     style: collapsed2 ? obj3 : obj4,
@@ -330,7 +330,7 @@ export function RecentlyActiveCategory(guildId) {
   colors = stateFromStores(575).colors;
   obj3 = {};
   const merged1 = Object.assign(merged);
-  obj3.icon = closure_12(tmp2(10493).ChevronSmallDownIcon, {
+  obj3.icon = closure_12(tmp2(10491).ChevronSmallDownIcon, {
     size: "xxs",
     color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
     style: collapsed ? obj3 : obj4,

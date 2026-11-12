@@ -17,7 +17,7 @@ import createCommonMessageDefault from "createCommonMessage.tsx";
 import AutomodNotificationEmbedTypeKeys from "../../../../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedTypeKeys.tsx";
 import AutomodRaidAlertTypes from "../../../../../../discord_common/js/shared/shared-constants/AutomodRaidAlertTypes.tsx";
 import GuildAntiRaidUtils from "../../../../guild_antiraid/GuildAntiRaidUtils.tsx";
-import _modDef9193 from "../../../../../../_runtime/metro/09193__.js";
+import _modDef9192 from "../../../../../../_runtime/metro/09192__.js";
 import getRoleIcon from "../getRoleIcon.tsx";
 import get_ActivityIndicator from "../../../../../../_runtime/metro/00017__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -151,7 +151,7 @@ export function createAutoModerationActionSystemMessage(message) {
                 internal.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE),
               );
               const tmpResult39 = RowGeneratorStyleSheet;
-              obj3.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef9193)).uri;
+              obj3.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef9192)).uri;
               const tmpResult40 = AvatarUtils;
               const internal2 = nativeDefault.internal;
               obj3.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(
@@ -279,7 +279,7 @@ export function createAutoModerationActionSystemMessage(message) {
       let getRaidAlertResolveCTAText = React4.resolveAssetSource;
       let internal6 = AvatarUtils;
       let intl9 = internal6.makeSource;
-      obj8.headerIconURL = getRaidAlertResolveCTAText(intl9(importDefault(tmp41 ? 9192 : 7559))).uri;
+      obj8.headerIconURL = getRaidAlertResolveCTAText(intl9(importDefault(tmp41 ? 9191 : 7559))).uri;
       const tmpResult47 = RowGeneratorStyleSheet;
       internal6 = nativeDefault.internal;
       obj8.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(
@@ -422,7 +422,7 @@ export function createAutoModerationActionSystemMessage(message) {
       obj12.reasonDisplayText = formatToPlainStringResult1;
       const tmpResult56 = DateUtils;
       obj12.actionsIconURL = React4.resolveAssetSource(
-        AvatarUtils.makeSource(importDefault(result1 ? 9195 : 9196)),
+        AvatarUtils.makeSource(importDefault(result1 ? 9194 : 9195)),
       ).uri;
       const intl16 = util.intl;
       const string2 = intl16.string;

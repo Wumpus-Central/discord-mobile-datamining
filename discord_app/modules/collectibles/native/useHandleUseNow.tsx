@@ -5,7 +5,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const RootNavigatorScreen = fn(9964).RootNavigatorScreen;
+const RootNavigatorScreen = fn(9963).RootNavigatorScreen;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
 

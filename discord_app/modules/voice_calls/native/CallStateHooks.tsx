@@ -68,7 +68,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(10755)();
+  const tmp3 = id(10749)();
   dependencyMap = tmp3;
   obj2 = require("initialize");
   const items2 = [RTCConnectionStore];

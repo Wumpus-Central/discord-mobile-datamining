@@ -102,7 +102,7 @@ function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
     allowApplicationState: true,
   }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(11345);
+let ApplicationCommandIndexStore = fn(11339);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: closure_6 } =
   ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;

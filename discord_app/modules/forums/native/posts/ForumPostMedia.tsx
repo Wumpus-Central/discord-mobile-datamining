@@ -29,7 +29,7 @@ function ForumPostMediaAndroid(arg0) {
   obj2.style = items;
   const items1 = [React6(FastImageDefault, obj2), React6(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme })];
   obj.children = items1;
-  return closure_1_10(hasOwnProperty, obj);
+  return refs(hasOwnProperty, obj);
 }
 function ForumPostMediaIOS(arg0) {
   const obj = { children: null };
@@ -39,7 +39,7 @@ function ForumPostMediaIOS(arg0) {
     React6(ForumPostMediaSpoiler, { shouldSpoiler, blurTheme }),
   ];
   obj.children = items;
-  return closure_1_10(closure_1_11, obj);
+  return refs(closure_1_11, obj);
 }
 class ForumPostMediaSpoiler {
   constructor(arg0) {
@@ -82,9 +82,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     const obj2 = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_9(ref(14512), obj2);
+    let tmp6Result = closure_9(ref(14508), obj2);
     let tmp12 = closure_9;
-    const tmp19 = ref(14512);
+    const tmp19 = ref(14508);
   } else {
     if (tmp3Result.isAndroid()) {
       const obj3 = {};

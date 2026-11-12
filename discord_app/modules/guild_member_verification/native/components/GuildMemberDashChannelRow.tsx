@@ -39,7 +39,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   let hasItem;
   const tmp = closure_8();
   const id = guild.id;
-  let num = id(18808).useSubmittedGuildJoinRequestTotal({ guildId: id });
+  let num = id(18803).useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
     num = 0;
   }
@@ -56,7 +56,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   const callback = noop.useCallback(() => {
     router_utils.transitionTo(hasOwnProperty.CHANNEL(id, StaticChannelRoute.MEMBER_SAFETY));
   }, items1);
-  const ChannelModes = tmp2(14680).ChannelModes;
+  const ChannelModes = tmp2(14676).ChannelModes;
   const tmp7 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
   let obj2 = {
     onPress: callback,
@@ -69,7 +69,7 @@ export default function GuildMemberDashChannelRow(arg0) {
     icon: null,
     channelInfo: null,
   };
-  let obj = id(18808);
+  let obj = id(18803);
   const intl = tmp2(1113).intl;
   obj2.accessibilityLabel = intl.string(id(1113).t["9Oq93m"]);
   obj2.accessibilityState = { selected };
@@ -78,9 +78,9 @@ export default function GuildMemberDashChannelRow(arg0) {
   const intl2 = tmp2(1113).intl;
   obj3.name = intl2.string(id(1113).t["9Oq93m"]);
   obj3.mode = tmp7;
-  obj2.name = jsx(id(14680).BaseChannelName, { name: null, mode: null });
-  const tmp9 = hasItem(14680);
-  obj2.icon = jsx(id(14680).BaseChannelIcon, { mode: tmp7, IconComponent: id(7372).GroupIcon });
+  obj2.name = jsx(id(14676).BaseChannelName, { name: null, mode: null });
+  const tmp9 = hasItem(14676);
+  obj2.icon = jsx(id(14676).BaseChannelIcon, { mode: tmp7, IconComponent: id(7372).GroupIcon });
   let tmp8Result = null;
   if (num > 0) {
     const obj9 = { style: null, textStyle: null, value: null };

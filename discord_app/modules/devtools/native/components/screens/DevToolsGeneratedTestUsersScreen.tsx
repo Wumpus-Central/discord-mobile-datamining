@@ -96,7 +96,7 @@ function PoolIdInput(onSubmit) {
   );
   let obj = { spacing: 4, style: tmp.inputContainer, children: null };
   const items1 = [
-    closure_1_10(TextInput.TextInput, {
+    refs(TextInput.TextInput, {
       size: "md",
       placeholder: "Enter Pool ID",
       onChange: tmp2[1],
@@ -105,7 +105,7 @@ function PoolIdInput(onSubmit) {
       autoComplete: "off",
       clearable: true,
     }),
-    closure_1_10(TextInput.TextInput, {
+    refs(TextInput.TextInput, {
       size: "md",
       secureTextEntry: true,
       revealable: true,
@@ -124,7 +124,7 @@ function PoolIdInput(onSubmit) {
   if (!tmp11) {
     tmp11 = tmp7;
   }
-  items1[2] = closure_1_10(components_Button_Button.Button, {
+  items1[2] = refs(components_Button_Button.Button, {
     size: "md",
     variant: "primary",
     text: "Get Pool",
@@ -160,7 +160,7 @@ function UserActionSheet(pool) {
     hasIcons: true,
     children: usersForPool.map((id, index) => {
       const obj = {
-        icon: closure_1_10(pool(10486).UserIcon, { size: "md" }),
+        icon: closure_1_10(pool(10484).UserIcon, { size: "md" }),
         label: null,
         subLabel: null,
         onPress() {
@@ -214,25 +214,25 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 let items = [
-  fn(10486).UserIcon,
-  fn(11163).ShieldIcon,
-  fn(11757).GiftIcon,
-  fn(18106).AchievementsIcon,
-  fn(14127).PiggyBankIcon,
-  fn(18108).TreehouseIcon,
-  fn(12898).SpeedometerIcon,
-  fn(18110).CompassIcon,
-  fn(16159).SignPostIcon,
-  fn(18112).CarIcon,
-  fn(18114).TrainIcon,
-  fn(18116).TeacupIcon,
-  fn(18118).InventoryIcon,
-  fn(11261).FoodIcon,
-  fn(18120).BurgerIcon,
-  fn(18122).MagicDoorIcon,
-  fn(18124).PawPrintIcon,
-  fn(18126).RecordPlayerIcon,
-  fn(10502).SettingsIcon,
+  fn(10484).UserIcon,
+  fn(11157).ShieldIcon,
+  fn(11751).GiftIcon,
+  fn(18101).AchievementsIcon,
+  fn(14123).PiggyBankIcon,
+  fn(18103).TreehouseIcon,
+  fn(12892).SpeedometerIcon,
+  fn(18105).CompassIcon,
+  fn(16154).SignPostIcon,
+  fn(18107).CarIcon,
+  fn(18109).TrainIcon,
+  fn(18111).TeacupIcon,
+  fn(18113).InventoryIcon,
+  fn(11255).FoodIcon,
+  fn(18115).BurgerIcon,
+  fn(18117).MagicDoorIcon,
+  fn(18119).PawPrintIcon,
+  fn(18121).RecordPlayerIcon,
+  fn(10500).SettingsIcon,
 ];
 const createStyles = fn(5243);
 let obj2 = {
@@ -338,7 +338,7 @@ export default function DevToolsGeneratedTestUsersScreen() {
   const items3 = [
     tmp5Result,
     stateFromStoresArray.map((pool, index) =>
-      closure_2_10(PoolUsers, { pool, start: 0 === index, end: index === stateFromStoresArray.length - 1 }, pool.id),
+      refs(PoolUsers, { pool, start: 0 === index, end: index === stateFromStoresArray.length - 1 }, pool.id),
     ),
   ];
   obj6.children = items3;

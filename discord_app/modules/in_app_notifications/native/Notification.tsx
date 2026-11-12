@@ -13,7 +13,7 @@ const require = globalThis.__r;
 const _modDef1652 = _mod1652;
 
 require = fn;
-const InAppNotificationConstants = fn(10963);
+const InAppNotificationConstants = fn(10957);
 ({
   MIN_SWIPE_VELOCITY: closure_4,
   STARTED_SWIPE_THRESHOLD: hasOwnProperty,

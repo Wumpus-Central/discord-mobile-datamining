@@ -69,7 +69,7 @@ export default function OrbsArcadeGameGraphic(game) {
         obj3.onError = function onError() {
           return closure_1(sheetVideoAsset.url);
         };
-        let tmp7Result = jsx(tmp2(9664).VideoComponent, {
+        let tmp7Result = jsx(tmp2(9663).VideoComponent, {
           style: tmp.graphicMedia,
           source: null,
           poster: null,

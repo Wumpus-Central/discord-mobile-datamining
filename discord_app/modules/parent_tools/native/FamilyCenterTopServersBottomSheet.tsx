@@ -19,7 +19,7 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(9553).getTopUserOrGuildDescription(
+    const topUserOrGuildDescription = tmp2(9552).getTopUserOrGuildDescription(
       guildActivity.messages_sent,
       guildActivity.call_count,
     );

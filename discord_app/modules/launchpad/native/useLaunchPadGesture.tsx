@@ -8,7 +8,7 @@ import useWindowDimensionsSharedValue from "../../screen/useWindowDimensionsShar
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const LaunchPadConstants = fn(12313);
+const LaunchPadConstants = fn(12307);
 ({
   LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE: closure_4,
   LAUNCH_PAD_END_TRANSLATION_THRESHOLD: hasOwnProperty,
@@ -101,7 +101,7 @@ export default function useLaunchPadGesture(launchPadType) {
         launchPadType,
         constants,
         React4,
-        closure_2_10,
+        refs,
         React5,
         launchPadPullTabState,
         metroImportDefault,

@@ -65,5 +65,5 @@ export function showSkipAvatarModal(arg0) {
   AlertActionCreatorsDefault.show(obj3);
 }
 export function openAddAvatarModal() {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20167, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(20162, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 }

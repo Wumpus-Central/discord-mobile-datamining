@@ -52,7 +52,7 @@ function StageAudienceEmptyState() {
   obj3.children = intl2.string(_modDef4209.eo2IxJ);
   items[1] = React5(Text_Text.Text, obj3);
   obj.children = items;
-  return closure_1_10(View, obj);
+  return refs(View, obj);
 }
 function getItemType(type) {
   return type.type;
@@ -70,7 +70,7 @@ function StageAudienceActionSheetContent(channel) {
   const sortedRequestToSpeakParticipants = channel(6886).useSortedRequestToSpeakParticipants(channel.id);
   closure_129_1 = sortedRequestToSpeakParticipants;
   let obj3 = channel(6886);
-  const throttledStageAudience = channel(12863).useThrottledStageAudience(channel.id);
+  const throttledStageAudience = channel(12857).useThrottledStageAudience(channel.id);
   closure_129_2 = throttledStageAudience;
   items = [canToggleRequestToSpeak, sortedRequestToSpeakParticipants, throttledStageAudience];
   const memo = noop.useMemo(() => {

@@ -12,7 +12,7 @@ const EmojiPickerNativeComponentDefault = EmojiPickerNativeComponent2;
 
 require = fn;
 const EmojiCategoryTypes = fn(6909).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(9480).IMAGE_SIZE;
+const IMAGE_SIZE = fn(9479).IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1228).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);

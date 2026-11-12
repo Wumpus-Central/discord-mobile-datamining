@@ -20,8 +20,8 @@ let closure_9 = createStyles.createStyles({
 });
 let closure_10 = noop.memo(function RecommendationBannerEmbedded(applicationId) {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(12488);
-  heroMediaDimensions = heroMediaDimensions(13316).useHeroMediaDimensions({
+  let obj = heroMediaDimensions(12482);
+  heroMediaDimensions = heroMediaDimensions(13310).useHeroMediaDimensions({
     width: obj.useRequiredAppLauncherContext().width,
   });
   const tmp4 = useEmbeddedActivityBackgroundDefault({

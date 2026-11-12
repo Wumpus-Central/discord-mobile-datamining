@@ -46,11 +46,11 @@ function InterestGuildSkeleton() {
       obj7.children = React6(InterestGhostDefault, obj8);
       items2[1] = React6(View, obj7);
       obj5.children = items2;
-      items[1] = closure_2_10(View, obj5);
+      items[1] = refs(View, obj5);
       obj3.children = items;
-      const items4 = [closure_2_10(View, obj3), React6(InterestGhostDefault, { style: closure_0.skeletonButton })];
+      const items4 = [refs(View, obj3), React6(InterestGhostDefault, { style: closure_0.skeletonButton })];
       obj2.children = items4;
-      const items5 = [closure_2_10(View, obj2)];
+      const items5 = [refs(View, obj2)];
       const obj10 = { children: null };
       const obj11 = { style: closure_0.skeletonDescriptionFrame, children: null };
       const obj12 = { style: null };
@@ -67,9 +67,9 @@ function InterestGuildSkeleton() {
       obj13.children = React6(InterestGhostDefault, obj14);
       items7[1] = React6(View, obj13);
       obj10.children = items7;
-      items5[1] = closure_2_10(View, obj10);
+      items5[1] = refs(View, obj10);
       obj.children = items5;
-      return closure_2_10(View, obj, arg1);
+      return refs(View, obj, arg1);
     }),
   });
   return closure_9(View, obj);

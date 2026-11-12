@@ -47,9 +47,9 @@ if (PlatformUtils) {
     return application_id(ChannelTopicMention, obj, key.key);
   };
   obj.channelMention = obj3;
-  let obj4 = { react: fn(9289).smartOutput };
+  let obj4 = { react: fn(9288).smartOutput };
   obj.guild = obj4;
-  let obj5 = { react: fn(10998).inlineChannelReact };
+  let obj5 = { react: fn(10992).inlineChannelReact };
   obj.channel = obj5;
   let parseTopic = MarkupUtils.reactParserFor(obj);
 } else {

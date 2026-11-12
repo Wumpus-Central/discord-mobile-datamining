@@ -8,8 +8,8 @@ import createStyles from "../../../../../../design/components/Styles/native/crea
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import ProductIds from "../../../../../premium/native/ProductIds.android.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import _modDef9225 from "../../../../../../../_runtime/metro/09225__.js";
-import _modDef9238 from "../../../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
+import _modDef9224 from "../../../../../../../_runtime/metro/09224__.js";
+import _modDef9237 from "../../../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
 import useTrialOffer from "../../../../../premium/useTrialOffer.tsx";
 import ReferralProgramUtils from "../../../../../premium/referral_program/ReferralProgramUtils.tsx";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
@@ -82,7 +82,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
               learnMoreLink: null,
             };
             const tmp41Result9 = HelpdeskUtilsDefault;
-            obj6.headerImageUrl = _modDef9238;
+            obj6.headerImageUrl = _modDef9237;
             const intl12 = util.intl;
             obj6.headerText = intl12.string(util.t.HtTvXA);
             obj6.headerColor = headerTextColor;
@@ -197,7 +197,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
                     const intl7 = util.intl;
                     obj13.acceptLabelText = intl7.string(util.t.bXTClc);
                     obj13.acceptLabelColor = acceptLabelColor;
-                    obj13.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9225);
+                    obj13.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9224);
                     tmp31 = obj13;
                     const tmp39Result7 = renderer_EmbedUtils;
                   }
@@ -252,7 +252,7 @@ export function createReferralTrialEmbedRedesign(message, theme, id, relevantUse
         const obj19 = {
           titleText: "",
           titleColor,
-          headerImageUrl: _modDef9238,
+          headerImageUrl: _modDef9237,
           headerText: "",
           headerColor: headerTextColor,
           backgroundColor,

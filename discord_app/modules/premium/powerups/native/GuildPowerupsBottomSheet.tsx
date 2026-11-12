@@ -132,7 +132,7 @@ function GuildPowerupsBottomSheetBody(powerup) {
     const obj7 = { children: null };
     items[1] = tmp5Result;
     obj7.children = items;
-    return React6(closure_1_10, obj7);
+    return React6(refs, obj7);
   } else if (tmp2.LEVEL === type) {
     const obj = { powerup };
     return React5(GuildPowerupsBottomSheetLevelBody, obj);

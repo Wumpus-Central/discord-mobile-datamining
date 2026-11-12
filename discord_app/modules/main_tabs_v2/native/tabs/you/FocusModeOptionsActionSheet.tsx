@@ -88,7 +88,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/
 
 export default function FocusModeOptionsActionSheet(onSelect) {
   onSelect = onSelect.onSelect;
-  const focusModeEnabled = onSelect(10958).useFocusModeEnabled();
+  const focusModeEnabled = onSelect(10952).useFocusModeEnabled();
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = onSelect(1113).intl;
   obj2.title = intl.string(onSelect(1113).t["sNX1E+"]);

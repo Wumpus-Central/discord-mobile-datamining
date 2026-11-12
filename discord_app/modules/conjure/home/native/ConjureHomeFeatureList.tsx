@@ -539,7 +539,7 @@ let closure_14 = {
     obj5.style = items3;
     const obj6 = { left: nativeDefault.space.PX_6 };
     const items4 = [
-      closure_5(styles(10257).TrophyIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }),
+      closure_5(styles(10255).TrophyIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_WARNING }),
       closure_5(styles(5866).Text, { variant: "footnote/semibold", color: "text-overlay-light", children: 128 }),
     ];
     obj5.children = items4;
@@ -551,13 +551,13 @@ let closure_14 = {
     obj8.style = items5;
     const obj9 = { right: nativeDefault.space.PX_6 };
     const items6 = [
-      closure_5(styles(9390).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }),
+      closure_5(styles(9389).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }),
       ,
     ];
     const obj10 = { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    items6[1] = closure_5(styles(9390).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL });
+    items6[1] = closure_5(styles(9389).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL });
     const obj11 = { size: "xxs", color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    items6[2] = closure_5(styles(9390).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT });
+    items6[2] = closure_5(styles(9389).HeartIcon, { size: "xxs", color: nativeDefault.colors.ICON_OVERLAY_LIGHT });
     obj8.children = items6;
     items1[5] = closure_6(closure_4, obj8);
     obj.children = items1;

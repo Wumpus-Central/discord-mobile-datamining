@@ -6,7 +6,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 
 const require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(18443);
+const UserSettingsSafetySelectedGuildStore = fn(18438);
 ({
   GUILD_SELECT_ALL_SERVERS_OPTION_ID: metroImportDefault,
   setSelectedGuildId: closure_8,

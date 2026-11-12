@@ -121,12 +121,12 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "flexDirection",
-    shouldShowThread: "flag_vi",
+    shouldShowThread: "en-BE",
   });
   return metroImportDefault(_modDef1652.View, obj2);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(13703).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(13699).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5243);

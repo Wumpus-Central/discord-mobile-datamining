@@ -20,18 +20,14 @@ export default function GuildHeaderCoachmarks(arg0) {
     () => PermissionStore.can(Permissions.MANAGE_GUILD, guild),
     items1,
   );
-  const tmp5 = stateFromStores(18750)(guild.id);
+  const tmp5 = stateFromStores(18745)(guild.id);
   dependencyMap = tmp5;
-  stateFromStores(18752)(guild.id);
+  stateFromStores(18747)(guild.id);
   const obj = guild(504);
-  const tmp7 = stateFromStores(10609)(guild.id);
-  const tmp9 = stateFromStores(10642)(guild.id);
-  const tmp8 = stateFromStores(18759)();
-  let num = 0;
-  if (null != tmp9) {
-    num = tmp9.cost - tmp11;
-  }
+  const tmp7 = stateFromStores(10607)(guild.id);
+  const tmp9 = stateFromStores(10635)(guild.id);
   const items2 = [stateFromStores, guild.premiumProgressBarEnabled, tmp5];
+  const tmp8 = stateFromStores(18754)();
   const memo = noop.useMemo(() => {
     let tmp = stateFromStores;
     if (stateFromStores) {
@@ -46,46 +42,46 @@ export default function GuildHeaderCoachmarks(arg0) {
     }
     return items;
   }, items2);
-  const tmp10 = stateFromStores(10643)();
-  const obj2 = { groupName: constants.GUILD_HEADER_TOOLTIPS };
-  const tmpResult = guild(9494);
-  [tmp16, tmp17] = guild(9494).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS });
-  const tmp15 = _slicedToArray(
-    guild(9494).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS }),
+  const tmp10 = stateFromStores(10636)();
+  const obj2 = guild(9493);
+  const obj3 = { groupName: constants.GUILD_HEADER_TOOLTIPS };
+  [tmp15, tmp16] = guild(9493).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS });
+  const tmp14 = _slicedToArray(
+    guild(9493).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS }),
     2,
   );
-  let tmp18 = false === tmp7;
-  if (tmp18) {
-    tmp18 = tmp8;
+  let tmp17 = false === tmp7;
+  if (tmp17) {
+    tmp17 = tmp8;
   }
-  if (tmp18) {
-    tmp18 = null != tmp9;
+  if (tmp17) {
+    tmp17 = null != tmp9;
   }
-  if (tmp18) {
-    tmp18 = tmp10;
+  if (tmp17) {
+    tmp17 = tmp10;
   }
-  const tmp14Result = _slicedToArray(
-    guild(10634).useBoostToUnlockCoachmarkDCF(tmp18, guild.id, num, constants.GUILD_HEADER_TOOLTIPS),
+  const tmp13Result = _slicedToArray(
+    guild(10632).useBoostToUnlockCoachmarkDCF(tmp17, guild.id, constants.GUILD_HEADER_TOOLTIPS),
     2,
   );
   if (first == null) {
-    first = tmp14Result[0];
+    first = tmp13Result[0];
   }
   if (guild(5076).DismissibleContent.BOOST_PROGRESS_BAR_MOBILE_COACHMARK === first) {
-    const obj3 = { targetRef, guild, markAsDismissed: tmp17 };
-    return jsx(tmp4(18760), { targetRef, guild, markAsDismissed: tmp17 });
+    const obj5 = { targetRef, guild, markAsDismissed: tmp16 };
+    return jsx(tmp4(18755), { targetRef, guild, markAsDismissed: tmp16 });
   } else if (guild(5076).DismissibleContent.GUILD_THEME_MEMBER_COACHMARK === first) {
-    const obj4 = { guildId: guild.id, targetRef, markAsDismissed: tmp17 };
-    return jsx(tmp4(18761), { guildId: guild.id, targetRef, markAsDismissed: tmp17 });
+    const obj6 = { guildId: guild.id, targetRef, markAsDismissed: tmp16 };
+    return jsx(tmp4(18756), { guildId: guild.id, targetRef, markAsDismissed: tmp16 });
   } else if (guild(5076).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK === first) {
     let tmp20 = null;
     if (null != tmp9) {
-      const obj5 = { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp14Result[1] };
-      tmp20 = jsx(tmp4(18763), { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp14Result[1] });
+      const obj7 = { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp13Result[1] };
+      tmp20 = jsx(tmp4(18758), { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp13Result[1] });
     }
     return tmp20;
   } else {
     return null;
   }
-  const tmpResult2 = guild(10634);
+  const obj4 = guild(10632);
 }

@@ -6,7 +6,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-const getIconById = fn(11118).getIconById;
+const getIconById = fn(11112).getIconById;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const HexagonCampaignPerk = fn(5268).HexagonCampaignPerk;
 let closure_8 = new LoggerDefault("AppIconPremiumManager");

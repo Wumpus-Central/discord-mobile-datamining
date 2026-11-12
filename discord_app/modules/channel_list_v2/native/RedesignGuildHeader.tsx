@@ -237,7 +237,7 @@ function ReanimatedGuildBanner(guild) {
     obj6.children = items9;
     const items11 = [closure_14(closure_6, obj6)];
     if (tmp28Result) {
-      tmp28Result = closure_13(tmp(18770), {});
+      tmp28Result = closure_13(tmp(18765), {});
     }
     items11[1] = tmp28Result;
     obj5.children = items11;
@@ -261,7 +261,7 @@ let closure_15 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex
 createStyles = fn(5243);
 let closure_16 = createStyles.createStyles((arg0) => {
   const obj = {
-    bannerWrapper: { width: "100%", maxHeight: arg0 * closure_1_10, aspectRatio, overflow: "hidden" },
+    bannerWrapper: { width: "100%", maxHeight: arg0 * refs, aspectRatio, overflow: "hidden" },
     guildBanner: { left: "50%", top: "50%" },
     bannerOverlay: null,
   };

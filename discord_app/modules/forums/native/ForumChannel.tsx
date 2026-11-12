@@ -145,7 +145,7 @@ function SortAndViewOptions(channel) {
   items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15018, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15014, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -166,7 +166,7 @@ function SortAndViewOptions(channel) {
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_15(id(13388).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_15(id(13382).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
@@ -176,12 +176,12 @@ function TagFilter(channel) {
   obj.text = intl.string(channel(1113).t["112vVE"]);
   obj.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15019, dependencyMap.paths),
+      asyncRequireImpl(15015, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
   };
-  obj.icon = closure_15(channel(9455).TagIcon, { size: "xxs" });
+  obj.icon = closure_15(channel(9454).TagIcon, { size: "xxs" });
   return closure_15(channel(5873).Button, obj);
 }
 function getForumItemType(arg0) {
@@ -471,10 +471,10 @@ function onCreatePostWithoutPermission() {
   ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(14502).useForumChannelStore;
+const useForumChannelStore = fn(14498).useForumChannelStore;
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
-let closure_14 = fn(11948).getVoicePanelDockButtonsTop;
+let closure_14 = fn(11942).getVoicePanelDockButtonsTop;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
@@ -760,7 +760,7 @@ export default function ForumChannel(channel) {
   };
   const intl = tmp2(tmp3[17]).intl;
   obj14.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-  obj14.icon = require("../../../../_runtime/metro/15028__.js");
+  obj14.icon = require("../../../../_runtime/metro/15024__.js");
   obj14.disabled = tmp17;
   obj14.positionBottom = sum;
   obj14.onPress = callback1;

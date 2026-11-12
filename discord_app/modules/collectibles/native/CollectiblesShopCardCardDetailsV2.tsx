@@ -58,20 +58,20 @@ const memoResult = noop.memo((arg0) => {
   ({ product, hasShopDiscount } = arg0);
   ({ styles, collectibleProductState } = arg0);
   ({ discountSource, isFetchingGoogleSkus, preferVCPrice, isDisabled } = arg0);
-  const defaultVariantIndex = hasShopDiscount(10350).useDefaultVariantIndex(product);
-  const obj = hasShopDiscount(10350);
+  const defaultVariantIndex = hasShopDiscount(10348).useDefaultVariantIndex(product);
+  const obj = hasShopDiscount(10348);
   const selectedProduct = hasShopDiscount(8430).getSelectedProduct(product, defaultVariantIndex);
   const obj2 = hasShopDiscount(8430);
-  const formattedPriceForCollectiblesProduct = hasShopDiscount(10366).getFormattedPriceForCollectiblesProduct(
+  const formattedPriceForCollectiblesProduct = hasShopDiscount(10364).getFormattedPriceForCollectiblesProduct(
     selectedProduct,
     hasShopDiscount,
     true,
   );
-  const obj3 = hasShopDiscount(10366);
+  const obj3 = hasShopDiscount(10364);
   const isFiatExclusiveTargetedOfferPromotion =
-    hasShopDiscount(10368).useIsFiatExclusiveTargetedOfferPromotion(selectedProduct);
-  const obj4 = hasShopDiscount(10368);
-  const virtualCurrencyData = hasShopDiscount(10369).useVirtualCurrencyData(selectedProduct, hasShopDiscount);
+    hasShopDiscount(10366).useIsFiatExclusiveTargetedOfferPromotion(selectedProduct);
+  const obj4 = hasShopDiscount(10366);
+  const virtualCurrencyData = hasShopDiscount(10367).useVirtualCurrencyData(selectedProduct, hasShopDiscount);
   ({ price, canAfford } = virtualCurrencyData);
   items = [selectedProduct, hasShopDiscount];
   const memo = noop.useMemo(
@@ -86,7 +86,7 @@ const memoResult = noop.memo((arg0) => {
   );
   if (isFetchingGoogleSkus) {
     if (null == formattedPriceForCollectiblesProduct) {
-      return closure_8(hasShopDiscount(10377).CollectiblesShopPricePlaceholder, {});
+      return closure_8(hasShopDiscount(10375).CollectiblesShopPricePlaceholder, {});
     }
   }
   if ("partiallyOwnedBundle" === collectibleProductState) {
@@ -173,7 +173,7 @@ const memoResult = noop.memo((arg0) => {
           items2[1] = obj17;
           obj16.style = items2;
           const obj18 = { size: "xxs", color: "mobile-text-heading-primary", style: styles.wheelIcon };
-          const items3 = [closure_8(hasShopDiscount(9375).OrbsIcon, obj18), ,];
+          const items3 = [closure_8(hasShopDiscount(9374).OrbsIcon, obj18), ,];
           const obj19 = {
             variant: "body-xs/semibold",
             color: "mobile-text-heading-primary",
@@ -262,15 +262,15 @@ const memoResult = noop.memo((arg0) => {
         const tmp25 = hasShopDiscount(1377).isAndroid() && styles.androidTextPadding;
       } else if (discountSource === hasShopDiscount(8431).ShopDiscountSource.THIRDPARTY) {
         const obj25 = { size: "xs", color: "mobile-text-heading-primary", style: styles.wheelIcon };
-        let tmp21 = closure_8(hasShopDiscount(9455).TagIcon, obj25);
+        let tmp21 = closure_8(hasShopDiscount(9454).TagIcon, obj25);
       } else {
         const obj26 = { size: "xs", color: "mobile-text-heading-primary", style: styles.wheelIcon };
-        tmp21 = closure_8(hasShopDiscount(9369).NitroWheelIcon, obj26);
+        tmp21 = closure_8(hasShopDiscount(9368).NitroWheelIcon, obj26);
       }
     }
     return tmp11Result;
   }
-  const obj5 = hasShopDiscount(10369);
+  const obj5 = hasShopDiscount(10367);
 });
 memoResult.displayName = "PriceDescription";
 let obj3 = {
@@ -289,8 +289,8 @@ export default noop.memo(function CardDetailsV2(arg0) {
   let isInImprovedMobileShopLoading;
   ({ collectibleProductState, preferVCPrice, isDisabled } = arg0);
   const tmp = closure_10();
-  const currentUser = isInImprovedMobileShopLoading(9343).useCurrentUser();
-  const obj = isInImprovedMobileShopLoading(9343);
+  const currentUser = isInImprovedMobileShopLoading(9342).useCurrentUser();
+  const obj = isInImprovedMobileShopLoading(9342);
   const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
   const shopDiscountSource = isInImprovedMobileShopLoading(8431).getShopDiscountSource(currentUser);
   const obj3 = isInImprovedMobileShopLoading(8431);
@@ -302,10 +302,10 @@ export default noop.memo(function CardDetailsV2(arg0) {
   const obj7 = isInImprovedMobileShopLoading(5240);
   const obj8 = isInImprovedMobileShopLoading(5240);
   const hexToRgbaStringResult1 = obj7.hexToRgbaString(isInImprovedMobileShopLoading(5240).hexWithOpacity(token, 0));
-  const cardProductName = isInImprovedMobileShopLoading(10378).getCardProductName(product);
-  const obj9 = isInImprovedMobileShopLoading(10378);
-  isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(10379).useIsInImprovedMobileShopLoading();
-  const obj10 = isInImprovedMobileShopLoading(10379);
+  const cardProductName = isInImprovedMobileShopLoading(10376).getCardProductName(product);
+  const obj9 = isInImprovedMobileShopLoading(10376);
+  isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(10377).useIsInImprovedMobileShopLoading();
+  const obj10 = isInImprovedMobileShopLoading(10377);
   items = [IAPStore];
   const items1 = [isInImprovedMobileShopLoading];
   const stateFromStores = isInImprovedMobileShopLoading(504).useStateFromStores(

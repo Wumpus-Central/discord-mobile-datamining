@@ -87,7 +87,7 @@ function AssetShape(arg0) {
     const obj4 = { offset: "1", stopColor, stopOpacity: 0.04 };
     items[1] = React6(inlineStyles.Stop, obj4);
     obj2.children = items;
-    obj.children = closure_1_10(inlineStyles.LinearGradient, obj2);
+    obj.children = refs(inlineStyles.LinearGradient, obj2);
     tmp6 = React6(inlineStyles.Defs, obj);
   }
   const items1 = [tmp6, ,];
@@ -112,7 +112,7 @@ function AssetShape(arg0) {
   }
   items1[2] = tmp12Result;
   size1.children = items1;
-  return closure_1_10(inlineStylesDefault, size1);
+  return refs(inlineStylesDefault, size1);
 }
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 ({
@@ -210,7 +210,7 @@ export default function TraitOptionItem(disabled) {
   items1[1] = tmp8Result;
   items1[2] = React6(TraitOptionImage, { traitOption, size });
   obj2.children = items1;
-  return closure_1_10(React3, obj2);
+  return refs(React3, obj2);
 }
 export { TRAIT_OPTION_SIZE_TO_DIMENSIONS };
 export const TRAIT_OPTION_SIZE_TO_SHAPE_POINTS = obj2;

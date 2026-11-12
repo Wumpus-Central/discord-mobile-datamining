@@ -27,7 +27,7 @@ function CreateGameInvitePostContent(parentChannel) {
   items = [tags];
   const memo = noop.useMemo(() => new Set(first.map((id) => id.id)), items);
   const tmp4 = noMicTag(noop.useState(""), 2);
-  const createGameInvitePost = parentChannel(15026).useCreateGameInvitePost({
+  const createGameInvitePost = parentChannel(15022).useCreateGameInvitePost({
     parentChannel,
     description: tmp5,
     appliedTagIds: memo,
@@ -68,7 +68,7 @@ function CreateGameInvitePostContent(parentChannel) {
     const intl = util.intl;
     obj2.title = intl.string(util.t.HPu3kq);
     obj2.tags = tags;
-    obj.openLazy(asyncRequireImpl(11800, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+    obj.openLazy(asyncRequireImpl(11794, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
   }, items2);
   const obj5 = {
     style: tmp.closeButton,
@@ -98,7 +98,7 @@ function CreateGameInvitePostContent(parentChannel) {
   obj8.placeholder = intl4.string(tags(4015)["SU/IAE"]);
   obj8.value = tmp5;
   obj8.onChange = tmp6;
-  obj8.maxLength = parentChannel(14524).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
+  obj8.maxLength = parentChannel(14520).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
   const items6 = [closure_8(parentChannel(7793).TextArea, obj8), ,];
   let tmp15Result = availableTags.length > 0;
   if (tmp15Result) {
@@ -148,7 +148,7 @@ function CreateGameInvitePostContent(parentChannel) {
   if (isSlowmodeEnabled) {
     const obj16 = { style: tmp.slowmodeRow, children: null };
     const obj17 = { channel: parentChannel, hasTypingText: false, slowmodeType: SlowmodeType.CreateThread };
-    obj16.children = closure_8(tmp2(14487), obj17);
+    obj16.children = closure_8(tmp2(14483), obj17);
     tmp15Result4 = closure_8(View, obj16);
   }
   const items9 = [tmp15Result4];
@@ -173,7 +173,7 @@ function CreateGameInvitePostContent(parentChannel) {
   return closure_9(View, obj3);
 }
 const View = fn(17).View;
-const SlowmodeType = fn(8726).SlowmodeType;
+const SlowmodeType = fn(8725).SlowmodeType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 function NOOP_UPLOAD() {

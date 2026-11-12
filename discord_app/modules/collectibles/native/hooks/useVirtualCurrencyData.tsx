@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/native/hooks/useVirtualCurrencyData.tsx
 import CollectiblesProductUtils from "../../utils/CollectiblesProductUtils.tsx";
-import _mod10370 from "../../../virtual_currency/hooks/index.tsx";
+import _mod10368 from "../../../virtual_currency/hooks/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,7 +13,7 @@ export function useVirtualCurrencyData(product, canUseShopDiscountsResult) {
     hasShopDiscount: canUseShopDiscountsResult,
   });
   const obj2 = { product, hasShopDiscount: canUseShopDiscountsResult };
-  const balance = _mod10370.useFetchVirtualCurrencyBalance().balance;
+  const balance = _mod10368.useFetchVirtualCurrencyBalance().balance;
   items = [productOrbPrice, balance];
   return {
     price: productOrbPrice,

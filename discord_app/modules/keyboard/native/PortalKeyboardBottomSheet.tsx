@@ -484,7 +484,7 @@ export default function PortalKeyboardBottomSheet(isAppsKeyboard) {
   }
   if (tmp51Result) {
     const obj9 = { animatedSheetIndex: animatedIndex };
-    tmp51Result = tmp51(tmp3(11185), obj9);
+    tmp51Result = tmp51(tmp3(11179), obj9);
   }
   items19[1] = tmp51Result;
   items19[2] = closure_7(require("NavScrim").NavScrim, {});

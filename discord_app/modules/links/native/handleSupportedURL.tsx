@@ -38,7 +38,7 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 require = fn;
 let closure_4 = ["code", "state"];
 fn(7595).addPostConnectionCallback;
-let closure_9 = fn(9523).handleMobileWebCheckoutStatus;
+let closure_9 = fn(9522).handleMobileWebCheckoutStatus;
 const Constants = fn(1072);
 ({
   AnalyticEvents: map1,
@@ -51,11 +51,11 @@ const Constants = fn(1072);
 const StaticChannelRoute = fn(5099).StaticChannelRoute;
 const StreamTypes = fn(6740).StreamTypes;
 const NativePermissionTypes = fn(6839).NativePermissionTypes;
-let closure_22 = fn(12675).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_22 = fn(12669).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_23 = fn(8674).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_24 = fn(5987).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(16170).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(9136).MobileUserSettings;
+const SHARE_SCREEN_MODAL_KEY = fn(16165).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(9135).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -216,12 +216,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[30]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj25 = {
-        guildId: guildId2,
-        channelId: channelId2,
-        messageId: "Array",
-        navigationSettings: "autob\u00FAs",
-      };
+      const obj25 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       const obj30 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj25.navigationSettings = obj30;
       rootNavigationRef1(inviteCode[31])(obj25);
@@ -260,7 +255,7 @@ export default function handleSupportedURL(payload) {
                 closure_128_1 = undefined;
                 closure_128_2 = undefined;
                 tmp2(6785).popAll();
-                const tmp42 = tmp3(11669);
+                const tmp42 = tmp3(11663);
                 const openSocialLayerStorefrontUnsupportedOnMobileAlert =
                   tmp42.openSocialLayerStorefrontUnsupportedOnMobileAlert;
                 closure_128_0 = openSocialLayerStorefrontUnsupportedOnMobileAlert;
@@ -271,7 +266,7 @@ export default function handleSupportedURL(payload) {
                   c2 = 1;
                   dependencyMap = 1;
                   const obj4 = {
-                    value: tmp3(9952).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(16177).default()),
+                    value: tmp3(9951).fetchSocialLayerStorefrontSku(guildId, skuId, tmp3(16172).default()),
                     done: false,
                   };
                   return obj4;
@@ -391,7 +386,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(16182, dependencyMap.paths),
+                    asyncRequireImpl(16177, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );

@@ -6,13 +6,13 @@ import TwoFASetupModalActionCreatorsDefault from "../../account/native/mfa_modal
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.cDgKte);
   },
-  parent: fn(9136).MobileUserSettings.ACCOUNT,
+  parent: fn(9135).MobileUserSettings.ACCOUNT,
   onPress: function onAccountEnable2FASettingPress() {
     const currentUser = UserStore.getCurrentUser();
     let verified;

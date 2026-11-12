@@ -14,9 +14,9 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(18923);
+  let obj = id(18918);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(18923).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = id(18918).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: false,
   });
@@ -71,10 +71,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     sharedId: null,
     cutouts: "HermesInternal",
     overState: "a",
-    preventClipping: "inlineCode",
-    config: null,
-    externalChildren: 251,
-    children: 5,
+    preventClipping: 98.146,
+    config: 170.912,
+    externalChildren: 0,
+    children: "&Lambda;",
   };
   const obj3 = id(1652);
   obj4.id = "" + id;
@@ -89,10 +89,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(18922).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(18917).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
-  obj4.children = jsx(id(12188).HourglassIcon, {});
+  obj4.children = jsx(id(12182).HourglassIcon, {});
   return jsx(GuildsBarAnimatedItemWrapperDefault, {
     id: null,
     accessibilityActions: null,
@@ -105,9 +105,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     sharedId: null,
     cutouts: "HermesInternal",
     overState: "a",
-    preventClipping: "inlineCode",
-    config: null,
-    externalChildren: 251,
-    children: 5,
+    preventClipping: 98.146,
+    config: 170.912,
+    externalChildren: 0,
+    children: "&Lambda;",
   });
 });

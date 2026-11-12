@@ -35,8 +35,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus1;
   if (isDismissedResult) {
-    isDismissedResult = tmp(8738).isDismissed(questDockQuest.userStatus, tmp(5278).QuestContent.QUEST_BAR_MOBILE);
-    const tmpResult = tmp(8738);
+    isDismissedResult = tmp(8737).isDismissed(questDockQuest.userStatus, tmp(5278).QuestContent.QUEST_BAR_MOBILE);
+    const tmpResult = tmp(8737);
   }
   let claimedAt;
   if (questDockQuest != null) {

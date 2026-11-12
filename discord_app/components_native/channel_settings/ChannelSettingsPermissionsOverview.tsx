@@ -69,10 +69,10 @@ function ChannelPermissionSyncModule(channel) {
               const obj8 = PermissionUtilsAll;
               const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(
                 tmp5,
-                tmp2(12470).getAppChannelBotUserId(tmp2),
+                tmp2(12464).getAppChannelBotUserId(tmp2),
               );
               closure_128_0 = syncedPermissionOverwrites;
-              const obj9 = tmp2(12470);
+              const obj9 = tmp2(12464);
               c2 = 1;
               c3 = 1;
               const obj5 = {
@@ -95,7 +95,7 @@ function ChannelPermissionSyncModule(channel) {
           } else {
             if (value) {
               const obj7 = { permissionOverwrites: null };
-              const obj = tmp2(10856);
+              const obj = tmp2(10850);
               obj7.permissionOverwrites = category(12).values(closure_128_0);
               obj.saveChannel(tmp2.id, obj7);
               const obj3 = category(12);
@@ -135,7 +135,7 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(13206).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(13200).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1113).intl;
   obj6.label = intl2.string(channel(1113).t.NVwuHq);
   obj6.onPress = callback;

@@ -5,13 +5,13 @@ import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.t
 import MemberVerificationAlertActionCreators from "../../../guild_member_verification/native/MemberVerificationAlertActionCreators.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import _modDef14778 from "../../../../../_runtime/metro/14778__.js";
-import _modDef14779 from "../../../../../_runtime/metro/14779__.js";
+import _modDef14774 from "../../../../../_runtime/metro/14774__.js";
+import _modDef14775 from "../../../../../_runtime/metro/14775__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const TextAreaCta = fn(13703).TextAreaCta;
+const TextAreaCta = fn(13699).TextAreaCta;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
 const createStyles = fn(5243);
@@ -25,13 +25,13 @@ let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInp
 export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId) {
   guildId = guildId.guildId;
   const tmp = closure_7();
-  const currentUserGuildJoinRequest = guildId(14777).useCurrentUserGuildJoinRequest(guildId);
+  const currentUserGuildJoinRequest = guildId(14773).useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
   if (guildId(5289).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    let tmp8 = _modDef14778;
+    let tmp8 = _modDef14774;
     const intl2 = tmp2(1113).intl;
     let stringResult = intl2.string(tmp2(1113).t.lk30cY);
     class I {
@@ -46,7 +46,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
       }
     }
   } else if (tmp2(5289).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    tmp8 = _modDef14779;
+    tmp8 = _modDef14775;
     class I {
       constructor() {
         obj = closure_1(closure_2[10]);
@@ -76,7 +76,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
       }
     }
   }
-  let obj = guildId(14777);
+  let obj = guildId(14773);
   items = [AccessibilityStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp2Result = guildId(504);

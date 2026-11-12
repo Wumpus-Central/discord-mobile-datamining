@@ -146,7 +146,7 @@ let body = {
     ({ guildId, level } = arg0);
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: closure_1_10.GUILD_MFA(guildId),
+      url: refs.GUILD_MFA(guildId),
       body: { level },
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
@@ -345,7 +345,7 @@ let body = {
       tmp2 = null;
     }
     const request = {
-      url: closure_1_10.GUILD(id),
+      url: refs.GUILD(id),
       body: { owner_id: id2, code: tmp2 },
       oldFormErrors: true,
       trackedActionData: null,
@@ -368,12 +368,7 @@ let body = {
     if (arg1 === undefined) {
       flag = false;
     }
-    const obj2 = {
-      url: closure_1_10.GUILD_PINCODE(id),
-      oldFormErrors: true,
-      trackedActionData: null,
-      rejectWithError: null,
-    };
+    const obj2 = { url: refs.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const obj = TrackedHTTPUtilsDefault;
     obj2.trackedActionData = {
       event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE,
@@ -389,7 +384,7 @@ let body = {
   deleteGuild(arg0) {
     const HTTP = HTTPUtils.HTTP;
     const obj = {
-      url: closure_1_10.GUILD_DELETE(arg0),
+      url: refs.GUILD_DELETE(arg0),
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -581,7 +576,7 @@ let body = {
   enableIntegration(id, type, id2) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: closure_1_10.GUILD_INTEGRATIONS(id),
+      url: refs.GUILD_INTEGRATIONS(id),
       body: null,
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
@@ -593,7 +588,7 @@ let body = {
   disableIntegration(id, id2) {
     const HTTP = HTTPUtils.HTTP;
     const obj = {
-      url: closure_1_10.GUILD_INTEGRATION(id, id2),
+      url: refs.GUILD_INTEGRATION(id, id2),
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -602,7 +597,7 @@ let body = {
   updateIntegration(guildId, id, expire_behavior, expire_grace_period, enable_emoticons) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: closure_1_10.GUILD_INTEGRATION(guildId, id),
+      url: refs.GUILD_INTEGRATION(guildId, id),
       body: null,
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
@@ -614,7 +609,7 @@ let body = {
   syncIntegration(guildId, id) {
     const HTTP = HTTPUtils.HTTP;
     const obj = {
-      url: closure_1_10.GUILD_INTEGRATION_SYNC(guildId, id),
+      url: refs.GUILD_INTEGRATION_SYNC(guildId, id),
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };

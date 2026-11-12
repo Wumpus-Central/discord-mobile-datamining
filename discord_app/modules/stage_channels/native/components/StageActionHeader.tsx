@@ -21,10 +21,10 @@ import instant_invite_InstantInviteUtils from "../../../instant_invite/native/In
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import _modDef12981 from "../../../../../_runtime/metro/12981__.js";
-import _modDef12982 from "../../../../../_runtime/metro/12982__.js";
-import _modDef12983 from "../../../../../_runtime/metro/12983__.js";
-import _modDef12984 from "../../../../../_runtime/metro/12984__.js";
+import _modDef12975 from "../../../../../_runtime/metro/12975__.js";
+import _modDef12976 from "../../../../../_runtime/metro/12976__.js";
+import _modDef12977 from "../../../../../_runtime/metro/12977__.js";
+import _modDef12978 from "../../../../../_runtime/metro/12978__.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import ChannelCallHeaderButtons from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -50,7 +50,7 @@ function HideStageChannelCallIcon(channel) {
     children: null,
   };
   let obj = channel(504);
-  obj2.source = _modDef12981;
+  obj2.source = _modDef12975;
   const intl = channel(1113).intl;
   obj2.accessibilityLabel = intl.string(channel(1113).t.cpT0Cq);
   obj2.onPress = function handleClose() {
@@ -87,12 +87,12 @@ function StageParticipantCounts(channelId) {
     children: null,
   };
   items = [
-    state(native.Icon, { source: _modDef12982, size: native.Icon.Sizes.SMALL, style: tmp.icon }),
+    state(native.Icon, { source: _modDef12976, size: native.Icon.Sizes.SMALL, style: tmp.icon }),
     state(Text_Text.Text, { variant: "body-xs/normal", children: actualStageSpeakerCount }),
     ,
   ];
-  const obj4 = { source: _modDef12982, size: native.Icon.Sizes.SMALL, style: tmp.icon };
-  items[2] = state(native.Icon, { source: _modDef12983, size: native.Icon.Sizes.SMALL, style: tmp.icon });
+  const obj4 = { source: _modDef12976, size: native.Icon.Sizes.SMALL, style: tmp.icon };
+  items[2] = state(native.Icon, { source: _modDef12977, size: native.Icon.Sizes.SMALL, style: tmp.icon });
   items[3] = state(Text_Text.Text, { variant: "body-xs/normal", children: stageParticipantsCount });
   obj3.children = items;
   return gesture(React4, obj3);

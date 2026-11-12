@@ -6,7 +6,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/client_themes/native/chat/previewSharedClientTheme.tsx");
 
 export function handleTapPreviewSharedClientTheme(message) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14447, dependencyMap.paths), "custom-theme-preview", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14443, dependencyMap.paths), "custom-theme-preview", {
     message: message.message,
     backdropKind: "none",
   });

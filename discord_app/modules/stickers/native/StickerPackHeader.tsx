@@ -5,14 +5,14 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import StickersUtils from "../StickersUtils.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef11307 from "../../../../_runtime/metro/11307__.js";
-import _modDef11308 from "../../../../_runtime/metro/11308__.js";
+import _modDef11301 from "../../../../_runtime/metro/11301__.js";
+import _modDef11302 from "../../../../_runtime/metro/11302__.js";
 import StickerPackBannerDefault from "StickerPackBanner.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const StickerPickerConstants = fn(11183);
+const StickerPickerConstants = fn(11177);
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
@@ -89,7 +89,7 @@ export default noop.memo(function StickerPackHeader(withDescription) {
   if (result) {
     const obj5 = { style: tmp.iconContainer, children: null };
     const obj6 = {
-      source: _modDef11307,
+      source: _modDef11301,
       style: tmp.animatedIcon,
       size: native.Icon.Sizes.EXTRA_SMALL,
       color: tmp.icon.color,
@@ -107,7 +107,7 @@ export default noop.memo(function StickerPackHeader(withDescription) {
     children: stickerPack.name,
   };
   obj7.children = React4(native.Icon, {
-    source: _modDef11308,
+    source: _modDef11302,
     style: tmp.premiumIcon,
     size: native.Icon.Sizes.EXTRA_SMALL,
     color: tmp.icon.color,

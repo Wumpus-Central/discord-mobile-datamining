@@ -10,7 +10,7 @@ import UserSettingsAccountUnverifiedHeaderDefault from "../../account/native/Use
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import MarketingPageBannerTileDefault from "../../../premium/promotions/native/MarketingPageBannerTile.tsx";
 import PremiumFeaturesCardsDefault from "PremiumFeaturesCards.tsx";
-import _modDef14574 from "../../../../../_runtime/metro/14574__.js";
+import _modDef14570 from "../../../../../_runtime/metro/14570__.js";
 import NitroMobileRefreshExperiment from "../../../premium/experiments/NitroMobileRefreshExperiment.tsx";
 import PremiumMarketingFloatingSubscribeExperimentDefault from "PremiumMarketingFloatingSubscribeExperiment.tsx";
 import PlanSelectHeaderDefault from "../../../premium/plan_select_cards/native/PlanSelectHeader.tsx";
@@ -23,7 +23,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 function NitroMobileRefreshGate(children) {
-  return closure_1_11(closure_1_10, {
+  return closure_1_11(refs, {
     children: children.children(NitroMobileRefreshExperiment.useIsNitroMobileRefreshEnabled("PremiumMarketingPage")),
   });
 }
@@ -96,24 +96,24 @@ export default function PremiumMarketingPage(userHasSubscription) {
   c26 = undefined;
   let flag;
   let surface;
-  const commonTriggerPoint = userHasSubscription(15205).useCommonTriggerPoint(
-    userHasSubscription(15206).OpenNitroTriggerPoint,
+  const commonTriggerPoint = userHasSubscription(15202).useCommonTriggerPoint(
+    userHasSubscription(15203).OpenNitroTriggerPoint,
   );
   const tmp4 = bottom();
   closure_8 = tmp4;
-  let obj = userHasSubscription(15205);
+  let obj = userHasSubscription(15202);
   const navigation = userHasSubscription(1499).useNavigation();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   let obj2 = userHasSubscription(1499);
   [c11, c12] = noop.useState(false);
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  let top = userHasSubscription(15215).useYouBarSettingsCustomHeaderPaddingTop();
+  let top = userHasSubscription(15212).useYouBarSettingsCustomHeaderPaddingTop();
   const rect = useSafeAreaInsetsDefault();
   bottom = rect.bottom;
   if (isFullScreenPresentation) {
     top = rect.top;
   }
-  let obj4 = userHasSubscription(15215);
+  let obj4 = userHasSubscription(15212);
   const config = PremiumMarketingFloatingSubscribeExperimentDefault.useConfig({ location: "PremiumMarketingPage" });
   enabled = config.enabled;
   showAfterLastCard = config.showAfterLastCard;
@@ -141,8 +141,8 @@ export default function PremiumMarketingPage(userHasSubscription) {
     navigation.setOptions({ headerShown: userHasSubscription });
   }, items);
   const tmpResult = userHasSubscription(1652);
-  promotionMarketingSurface = userHasSubscription(9944).usePromotionMarketingSurface(
-    tmp(9561).MarketingSurfaceType.PREMIUM_TAB,
+  promotionMarketingSurface = userHasSubscription(9943).usePromotionMarketingSurface(
+    tmp(9560).MarketingSurfaceType.PREMIUM_TAB,
   );
   let items1 = [promotionMarketingSurface];
   const effect = noop.useEffect(() => {
@@ -173,13 +173,13 @@ export default function PremiumMarketingPage(userHasSubscription) {
     obj5.style = items2;
     const intl = tmp(1113).intl;
     obj5.accessibilityLabel = intl.string(tmp(1113).t["13/7kX"]);
-    obj5.source = _modDef14574;
-    obj5.size = tmp(15223).CircularIconButton.Sizes.MEDIUM_32;
+    obj5.source = _modDef14570;
+    obj5.size = tmp(15220).CircularIconButton.Sizes.MEDIUM_32;
     obj5.iconStyle = tmp4.arrowIcon;
     obj5.onPress = function onPress() {
       return onClose();
     };
-    tmp14 = c11(tmp(15223).CircularIconButton, obj5);
+    tmp14 = c11(tmp(15220).CircularIconButton, obj5);
   }
   closure_25 = tmp14;
   let hasAccountCreditResult = null != entitlements;
@@ -188,7 +188,7 @@ export default function PremiumMarketingPage(userHasSubscription) {
     const tmp6Result2 = PremiumUtilsDefault;
   }
   c26 = hasAccountCreditResult;
-  const tmpResult6 = userHasSubscription(9944);
+  const tmpResult6 = userHasSubscription(9943);
   let items3 = [UserStore];
   const stateFromStores = userHasSubscription(504).useStateFromStores(items3, () => onPaymentDismiss.getCurrentUser());
   flag = undefined;
@@ -199,16 +199,16 @@ export default function PremiumMarketingPage(userHasSubscription) {
     flag = false;
   }
   const tmpResult7 = userHasSubscription(504);
-  surface = userHasSubscription(9944).usePromotionMarketingSurface(
-    tmp(9561).MarketingSurfaceType.MARKETING_PAGE_BANNER,
+  surface = userHasSubscription(9943).usePromotionMarketingSurface(
+    tmp(9560).MarketingSurfaceType.MARKETING_PAGE_BANNER,
   );
-  const tmpResult8 = userHasSubscription(9944);
-  const premiumTrialOffer = userHasSubscription(9244).usePremiumTrialOffer();
-  const tmpResult9 = userHasSubscription(9244);
+  const tmpResult8 = userHasSubscription(9943);
+  const premiumTrialOffer = userHasSubscription(9243).usePremiumTrialOffer();
+  const tmpResult9 = userHasSubscription(9243);
   let items4 = [, ,];
   ({ container: arr5[0], themedBackground: arr5[1] } = tmp4);
   let num = 0;
-  const premiumDiscountOffer = userHasSubscription(9247).usePremiumDiscountOffer();
+  const premiumDiscountOffer = userHasSubscription(9246).usePremiumDiscountOffer();
   if (!userHasSubscription) {
     num = top;
   }
@@ -300,13 +300,13 @@ export default function PremiumMarketingPage(userHasSubscription) {
         const items4 = [,];
         ({ sectionWithTopMargin: arr7[0], sectionWidth: arr7[1] } = tmp32);
         obj7.style = items4;
-        items[7] = tmp40(tmp42(15233), obj7);
+        items[7] = tmp40(tmp42(15230), obj7);
         const obj8 = { style: null, isFractionalOnly: null };
         const items5 = [, ,];
         ({ sectionWithTopMargin: arr8[0], sectionWithPadding: arr8[1], sectionWidth: arr8[2] } = tmp32);
         obj8.style = items5;
         obj8.isFractionalOnly = flag;
-        items[8] = tmp40(tmp42(15238), obj8);
+        items[8] = tmp40(tmp42(15235), obj8);
         const items6 = [, , ,];
         ({ sectionWithTopMargin: arr9[0], sectionWithPadding: arr9[1], sectionWidth: arr9[2] } = tmp32);
         let tmp54 = null;
@@ -325,9 +325,9 @@ export default function PremiumMarketingPage(userHasSubscription) {
         }
         const obj11 = { children: null };
         obj10.showSubscribeButton = tmp58;
-        items[9] = tmp40(tmp42(15255), obj10);
+        items[9] = tmp40(tmp42(15252), obj10);
         obj11.children = items;
-        return application_id(closure_2_10, obj11);
+        return application_id(refs, obj11);
       } else {
         if (userHasSubscription) {
           let sectionWithTopMargin = closure_8.sectionWithTopMargin;
@@ -407,5 +407,5 @@ export default function PremiumMarketingPage(userHasSubscription) {
   }
   renderScrollContentResult = renderScrollContent(false);
   tmp19 = c12;
-  const tmpResult10 = userHasSubscription(9247);
+  const tmpResult10 = userHasSubscription(9246);
 }

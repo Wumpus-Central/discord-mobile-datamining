@@ -42,8 +42,8 @@ const require = globalThis.__r;
 const util = LeftBackIconWithBadge(1113);
 const Pressables = LeftBackIconWithBadge(7364);
 const XSmallIcon = LeftBackIconWithBadge(7483);
-const BackIconWithBadge = LeftBackIconWithBadge(17081);
-const notifications_Notifications = LeftBackIconWithBadge(19046);
+const BackIconWithBadge = LeftBackIconWithBadge(17076);
+const notifications_Notifications = LeftBackIconWithBadge(19041);
 require = fn;
 function SettingsButton() {
   return gesture(IconButton.IconButton, {
@@ -185,7 +185,7 @@ function ICYMI(inNestedNavigator) {
       hasOpenedEnoughTimesResult = ICYMIStore.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19120, dependencyMap.paths), "ICYMIFeedbackSheet", {});
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19115, dependencyMap.paths), "ICYMIFeedbackSheet", {});
     }
   }, items6);
   const ref = handleOnRefresh.useRef(null);
@@ -231,7 +231,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       let obj = {
         scrollToTop() {
-          isFocused(11844).showForLaterModal(isFocused(11845).SavedMessageSortTypes.BOOKMARK);
+          isFocused(11838).showForLaterModal(isFocused(11839).SavedMessageSortTypes.BOOKMARK);
         },
       };
       ref1.current = obj;
@@ -421,7 +421,7 @@ function keyExtractor(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, RefreshControl: closure_6 } = get_ActivityIndicator);
-let closure_12 = fn(19096).NUM_GUILDS_EXTENDED_ONBOARDING;
+let closure_12 = fn(19091).NUM_GUILDS_EXTENDED_ONBOARDING;
 const ContentDismissActionType = fn(5089).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -438,7 +438,7 @@ let closure_17 = createStyles.createStyles((paddingTop) => {
   };
   return obj;
 });
-const createICYMIStyles = fn(19097);
+const createICYMIStyles = fn(19092);
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: { flex: 1, flexShrink: 1, flexGrow: 1 },

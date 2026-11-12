@@ -50,7 +50,7 @@ class AccountStatusIcon {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(14720).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(14716).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5243);
@@ -123,7 +123,7 @@ export default function AccountSwitcherListItem(arg0) {
     const merged = Object.assign(sortHandlers);
     const items2 = [leading, ,];
     const obj8 = { style: tmp.accountInfo, children: null };
-    const obj9 = { user: obj3, guildId: "Array" };
+    const obj9 = { user: obj3, guildId: "a" };
     const items3 = [React6(native.Avatar, obj9)];
     const obj10 = { style: tmp.accountListTag, children: null };
     const obj11 = { style: tmp.tagContainer, children: null };
@@ -154,18 +154,18 @@ export default function AccountSwitcherListItem(arg0) {
     }
     items4[1] = tmp18Result;
     obj11.children = items4;
-    const items5 = [closure_1_10(React4, obj11), tmp8];
+    const items5 = [refs(React4, obj11), tmp8];
     obj10.children = items5;
-    items3[1] = closure_1_10(React4, obj10);
+    items3[1] = refs(React4, obj10);
     obj8.children = items3;
-    items2[1] = closure_1_10(React4, obj8);
+    items2[1] = refs(React4, obj8);
     if (undefined === trailing) {
       const obj16 = { user };
       trailing = React6(AccountStatusIcon, obj16);
     }
     items2[2] = trailing;
     obj6.children = items2;
-    return closure_1_10(PressableOpacity, obj6, user.id);
+    return refs(PressableOpacity, obj6, user.id);
   }
   tmp8 = null;
   if (user.tokenStatus === MultiAccountTokenStatus.INVALID) {

@@ -6,7 +6,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_5 = fn(14063).KEYWORDS_REGEX_PLACEHOLDER;
+let closure_5 = fn(14059).KEYWORDS_REGEX_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);

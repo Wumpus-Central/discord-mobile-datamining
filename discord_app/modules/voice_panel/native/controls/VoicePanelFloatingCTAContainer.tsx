@@ -187,8 +187,8 @@ class VoicePanelFloatingCTAContainer {
     return tmp27(tmp2(tmp3[19]).View, obj1);
   }
 }
-const UI_SHOW_HIDE_PHYSICS = fn(11925).UI_SHOW_HIDE_PHYSICS;
-const CALL_TILE_GUTTER = fn(11928).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(11919).UI_SHOW_HIDE_PHYSICS;
+const CALL_TILE_GUTTER = fn(11922).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1083).ThemeTypes;
 let jsx = fn(21).jsx;
 const createStyles = fn(5243);
@@ -203,7 +203,7 @@ const rect = {
   borderRadius: nativeDefault.radii.lg,
 };
 obj2.container = rect;
-let closure_10 = createStyles.createStyles(obj2);
+const refs = createStyles.createStyles(obj2);
 let closure_12 = {
   code: "(function VoicePanelFloatingCTAContainerTsx1(){let[getControlsDefaultWidth,windowDimensions,safeArea,wrapperSpecs,CALL_TILE_GUTTER,accessoryHeights,gestureState,isDockEnabled,dockMinimizeProgress,controlsSpecs,roundToNearestPixel,withSpring,UI_SHOW_HIDE_PHYSICS]=this.__closure;const width=getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);const offscreenY=wrapperSpecs.get().height+CALL_TILE_GUTTER+accessoryHeights.get();let translateY;if(wrapperSpecs.get().hidden||gestureState.get().active&&!gestureState.get().requiresPop){translateY=offscreenY;}else if(isDockEnabled){translateY=wrapperSpecs.get().y+dockMinimizeProgress.get()*offscreenY;}else{translateY=wrapperSpecs.get().y;}return{bottom:controlsSpecs.get().height+16,width:width,marginLeft:roundToNearestPixel(width/2)*-1,transform:[{translateX:withSpring(wrapperSpecs.get().x,UI_SHOW_HIDE_PHYSICS)},{translateY:withSpring(translateY,UI_SHOW_HIDE_PHYSICS)}]};})",
 };

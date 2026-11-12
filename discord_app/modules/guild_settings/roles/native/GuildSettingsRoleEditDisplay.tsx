@@ -8,11 +8,11 @@ import GuildSettingsRolesStore from "../GuildSettingsRolesStore.tsx";
 require = fn;
 const View = fn(17).View;
 const isEveryoneRole = fn(5150).isEveryoneRole;
-const RoleColorsStyle = fn(20406).RoleColorsStyle;
-const STYLE_CONFIGS = fn(20405).STYLE_CONFIGS;
+const RoleColorsStyle = fn(20401).RoleColorsStyle;
+const STYLE_CONFIGS = fn(20400).STYLE_CONFIGS;
 const Constants = fn(1072);
 ({ DEFAULT_ROLE_COLOR: closure_9, MAX_ROLE_LENGTH: closure_10 } = Constants);
-let closure_11 = fn(20408).DEFAULT_GRADIENT_ROLE_COLORS;
+let closure_11 = fn(20403).DEFAULT_GRADIENT_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const createStyles = fn(5243);
@@ -119,7 +119,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
     const items1 = [guild.id, id];
     const items2 = [role, id, concat, primary_color, SOLID];
     const callback = SOLID.useCallback(() => {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20423, dependencyMap.paths), "RoleIcon", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(20418, dependencyMap.paths), "RoleIcon", {
         guildId: guild.id,
         roleId: id,
       });
@@ -134,7 +134,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
           },
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(18920, dependencyMap.paths),
+          asyncRequireImpl(18915, dependencyMap.paths),
           "RoleColorPicker",
           obj2,
         );
@@ -146,7 +146,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
           },
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(20425, dependencyMap.paths),
+          asyncRequireImpl(20420, dependencyMap.paths),
           "RoleColorPicker",
           obj4,
         );
@@ -154,7 +154,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
     }, items2);
     const callback2 = SOLID.useCallback(() => {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(20426, dependencyMap.paths),
+        asyncRequireImpl(20421, dependencyMap.paths),
         "EnhancedRoleColorsSelectStyleModal",
         {
           guildId: guild.id,

@@ -11,7 +11,7 @@ require = fn;
 function hideSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(hasOwnProperty);
 }
-const GameOrganizationInviteConstants = fn(12280);
+const GameOrganizationInviteConstants = fn(12274);
 ({ GAME_ORGANIZATION_CANT_JOIN_ACTION_SHEET_KEY: hasOwnProperty, GameOrganizationCantJoinReasons: closure_6 } =
   GameOrganizationInviteConstants);
 const jsx = fn(21).jsx;
@@ -71,7 +71,7 @@ export default function GameOrganizationCantJoinActionSheet(arg0) {
       obj7.onPress = hideSheet;
     }
     obj3.actions = jsx(tmp5(5873).Button, obj7);
-    return jsx(tmp5(10651).PromoSheet, {
+    return jsx(tmp5(10644).PromoSheet, {
       header: jsx(tmp5(7847).BottomSheetTitleHeader, { title: null }),
       title: null,
       description: null,

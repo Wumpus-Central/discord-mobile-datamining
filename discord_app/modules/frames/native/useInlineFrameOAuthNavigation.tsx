@@ -8,7 +8,7 @@ import FramesStore from "../FramesStore.tsx";
 require = fn;
 const isLaunched = fn(6957).isLaunched;
 const ComponentActions = fn(1072).ComponentActions;
-let closure_8 = fn(12675).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_8 = fn(12669).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/useInlineFrameOAuthNavigation.tsx");
 

@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const NodeType = fn(12318).NodeType;
+const NodeType = fn(12312).NodeType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5243);
@@ -41,13 +41,13 @@ export default function SettingSegmentedControl(node) {
   const memo = noop.useMemo(() => {
     items = [];
     const item = settings.forEach((id) => {
-      const tmp = items(16942).SETTING_RENDERER_CONFIG[id];
+      const tmp = items(16937).SETTING_RENDERER_CONFIG[id];
       settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
       const tmp2 = settings(38);
-      obj.label = items(17099).getSettingTitle(id);
+      obj.label = items(17094).getSettingTitle(id);
       obj.id = id;
       obj.page = closure_2_8(component, {});
       items.push(obj);

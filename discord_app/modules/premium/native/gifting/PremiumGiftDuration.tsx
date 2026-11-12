@@ -117,7 +117,7 @@ const result = size.fileFinishedImporting("modules/premium/native/gifting/Premiu
 
 export default function PremiumGiftDuration() {
   const tmp = closure_11();
-  planInterval = planInterval(11603).useNativeGiftContext().planInterval;
+  planInterval = planInterval(11597).useNativeGiftContext().planInterval;
   const obj2 = { style: tmp.durationContainer, children: null };
   const obj3 = { style: tmp.durationTitle, variant: "body-sm/semibold", children: null };
   const intl = planInterval(1113).intl;

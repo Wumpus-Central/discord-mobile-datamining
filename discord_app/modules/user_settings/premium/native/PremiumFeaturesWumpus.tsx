@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesWumpus.tsx
-import _modDef9541 from "../../../../../_runtime/metro/09541__.js";
-import _modDef9543 from "../../../../../_runtime/metro/09543__.js";
+import _modDef9540 from "../../../../../_runtime/metro/09540__.js";
+import _modDef9542 from "../../../../../_runtime/metro/09542__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const PremiumTypes = fn(1387).PremiumTypes;
@@ -28,14 +28,14 @@ export default function PremiumFeaturesWumpus(premiumType) {
   items = [premiumType, tmp2];
   const memo = noop.useMemo(() => {
     if (premiumType === PremiumTypes.TIER_0) {
-      const obj2 = { wumpusImageSource: _modDef9541, cloudsImageSource: importDefault(closure_1 ? 10903 : 10904) };
+      const obj2 = { wumpusImageSource: _modDef9540, cloudsImageSource: importDefault(closure_1 ? 10897 : 10898) };
     } else {
       if (closure_1) {
-        let tmp4 = 10905;
+        let tmp4 = 10899;
       } else {
-        tmp4 = 10906;
+        tmp4 = 10900;
       }
-      const obj = { wumpusImageSource: _modDef9543, cloudsImageSource: importDefault(tmp4) };
+      const obj = { wumpusImageSource: _modDef9542, cloudsImageSource: importDefault(tmp4) };
       return obj;
     }
   }, items);

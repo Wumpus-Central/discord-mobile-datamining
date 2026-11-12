@@ -150,7 +150,7 @@ export default function EventDetailInfoSheet(guildEvent) {
     ,
   ];
   const obj11 = { style: tmp.interestedContainer, children: null };
-  const items9 = [closure_12(guildEvent(10933).BellIcon, { size: "sm", style: tmp.interestedIcon })];
+  const items9 = [closure_12(guildEvent(10927).BellIcon, { size: "sm", style: tmp.interestedIcon })];
   const obj13 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl = guildEvent(1113).intl;
   obj13.children = intl.format(guildEvent(1113).t["+DLsD8"], { count: tmp8 });

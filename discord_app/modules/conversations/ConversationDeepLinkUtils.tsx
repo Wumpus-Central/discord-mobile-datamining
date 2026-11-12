@@ -173,7 +173,7 @@ export function consumeConversationFocusParam(state) {
                         channelId = tmp4;
                         v2 = 1;
                         dependencyMap = 1;
-                        const obj4 = { value: v2(9081)(guildId), done: false };
+                        const obj4 = { value: v2(9080)(guildId), done: false };
                         return obj4;
                       }
                     } else if (1 === tmp4) {
@@ -204,8 +204,8 @@ export function consumeConversationFocusParam(state) {
                       return obj8;
                     } else {
                       if (value) {
-                        const conversationFocus = channelId(9055).requestConversationFocus();
-                        const obj = channelId(9055);
+                        const conversationFocus = channelId(9054).requestConversationFocus();
+                        const obj = channelId(9054);
                       }
                       dependencyMap = 3;
                       return { value: "HermesInternal", done: null };

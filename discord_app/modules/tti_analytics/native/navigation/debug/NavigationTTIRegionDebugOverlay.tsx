@@ -283,20 +283,20 @@ export function NavigationTTIRegionDebugOverlay(name) {
   noop = undefined;
   closure_5 = undefined;
   const tmp = closure_11();
-  const navTTISurface = name(14095).useNavTTISurface();
-  let obj = name(14095);
+  const navTTISurface = name(14091).useNavTTISurface();
+  let obj = name(14091);
   const tmp2 = name;
   [tmp6, c2] = noop.useState(false);
   const syncExternalStore = noop.useSyncExternalStore(
-    name(14098).subscribeNavigationTTIDebugFreezeTarget,
-    name(14098).getNavigationTTIDebugFreezeTarget,
-    name(14098).getNavigationTTIDebugFreezeTarget,
+    name(14094).subscribeNavigationTTIDebugFreezeTarget,
+    name(14094).getNavigationTTIDebugFreezeTarget,
+    name(14094).getNavigationTTIDebugFreezeTarget,
   );
   closure_129_0 = name;
   closure_129_1 = regionId;
   closure_129_2 = tracking;
   const tmp5 = _slicedToArray(noop.useState(false), 2);
-  const navTTISurface1 = name(14095).useNavTTISurface();
+  const navTTISurface1 = name(14091).useNavTTISurface();
   closure_129_3 = navTTISurface1;
   items = [name, regionId, navTTISurface1, tracking];
   const callback = noop.useCallback((arg0) => {
@@ -607,5 +607,5 @@ export function NavigationTTIRegionDebugOverlay(name) {
     return closure_7(closure_6, obj3);
   }
   str21 = " \u00B7 " + combined;
-  let obj2 = name(14095);
+  let obj2 = name(14091);
 }

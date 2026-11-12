@@ -23,7 +23,7 @@ let closure_6 = [
   "https://cdn.discordapp.com/bad-domains/hashes.json",
 ];
 _createForOfIteratorHelperDefault.parse[""] = JSON.parse;
-const idGenerator = new fn(19983).IdGenerator();
+const idGenerator = new fn(19978).IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
 const ApexExperiment = fn(1449);
 let obj2 = {
@@ -72,7 +72,7 @@ HTTPUtils.setRequestPatch({
         const result = promise.set("Authorization", _default.getToken());
       }
       const tmpResult = tmp(1282);
-      const result1 = tmp(19984).updateDynamicSuperProperties();
+      const result1 = tmp(19979).updateDynamicSuperProperties();
       const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
         const result2 = promise.set("X-Super-Properties", superPropertiesBase64);
@@ -174,7 +174,7 @@ HTTPUtils.setRequestPatch({
           }
         } catch (err) {}
       }
-      const tmpResult2 = tmp(19984);
+      const tmpResult2 = tmp(19979);
     }
     importAll = (function shouldTrackHttpRequest(url) {
       return !isAnalyticsEndpoint(url);
@@ -280,7 +280,7 @@ HTTPUtils.setRequestPatch({
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        items = [statusCode(2118)(19989, dependencyMap.paths), statusCode(2118)(6706, dependencyMap.paths)];
+        items = [statusCode(2118)(19984, dependencyMap.paths), statusCode(2118)(6706, dependencyMap.paths)];
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then((result) => {
           const iter = result[Symbol.iterator]();
@@ -384,14 +384,14 @@ HTTPUtils.setRequestPatch({
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = statusCode(2118)(18184, dependencyMap.paths);
-          statusCode(2118)(18184, dependencyMap.paths)
+          const promise4 = statusCode(2118)(18179, dependencyMap.paths);
+          statusCode(2118)(18179, dependencyMap.paths)
             .then((openMFAModal) => {
               openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
             })
             .catch(arg2);
           flag = true;
-          const nextPromise2 = statusCode(2118)(18184, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = statusCode(2118)(18179, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -436,14 +436,14 @@ HTTPUtils.setRequestPatch({
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(2118)(20000, dependencyMap.paths).then((openRestrictedHoursModal) => {
+          tmp7(2118)(19995, dependencyMap.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(2118)(20000, dependencyMap.paths);
+          const promise = tmp7(2118)(19995, dependencyMap.paths);
         }
       }
-      tmp7Result = tmp7(19999);
+      tmp7Result = tmp7(19994);
     }
     obj = statusCode(8075);
   },

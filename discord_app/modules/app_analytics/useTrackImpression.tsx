@@ -44,7 +44,7 @@ function trackImpression(type) {
     channel_id = SelectedChannelStore.getChannelId(guild_id);
   }
   const tmpResult = AnalyticsUtils2;
-  const obj2 = { impression_type: type, location: closure_1_10() };
+  const obj2 = { impression_type: type, location: refs() };
   const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guild_id));
   const tmpResult4 = AppAnalyticsUtils;
   const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(ChannelStore.getChannel(channel_id)));

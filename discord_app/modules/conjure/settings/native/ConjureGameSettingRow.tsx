@@ -19,7 +19,7 @@ export default function ConjureGameSettingRow(def) {
   def = def.def;
   ({ hint, value, pickingEmpty, disabled, onChange: importDefault, onPickingEmptyChange: dependencyMap } = def);
   let tmp = closure_6();
-  closure_3 = def(13134).useConjureGameNameLookup();
+  closure_3 = def(13128).useConjureGameNameLookup();
   items = value;
   if (!Array.isArray(value)) {
     items = [];
@@ -31,7 +31,7 @@ export default function ConjureGameSettingRow(def) {
   if (isArray) {
     isArray = !pickingEmpty;
   }
-  if (def.key === def(13137).CONJURE_OVERLAY_GAMES_SETTING_KEY) {
+  if (def.key === def(13131).CONJURE_OVERLAY_GAMES_SETTING_KEY) {
     const intl = tmp2(1113).intl;
     hint = intl.string(_modDef4079.cqWCNY);
   } else if (hint == null) {

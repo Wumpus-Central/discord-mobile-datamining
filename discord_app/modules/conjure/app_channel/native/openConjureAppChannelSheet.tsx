@@ -8,7 +8,7 @@ const ConjureAppChannelMembersSheet = "ConjureAppChannelMembersSheet";
 const result = size.fileFinishedImporting("modules/conjure/app_channel/native/openConjureAppChannelSheet.tsx");
 
 export default function openConjureAppChannelSheet(channelId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15540, dependencyMap.paths), ConjureAppChannelSheet, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15537, dependencyMap.paths), ConjureAppChannelSheet, {
     channelId,
   });
 }
@@ -20,7 +20,7 @@ export function closeConjureAppChannelMembersSheet() {
 }
 export function openConjureAppChannelMembersSheet(id) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(15539, dependencyMap.paths),
+    asyncRequireImpl(15536, dependencyMap.paths),
     ConjureAppChannelMembersSheet,
     { channelId: id },
   );

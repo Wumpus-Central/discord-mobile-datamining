@@ -6,7 +6,7 @@ import renderer_EmbedUtils from "../EmbedUtils.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import _modDef9260 from "../../../../../../_runtime/metro/09260__.js";
+import _modDef9259 from "../../../../../../_runtime/metro/09259__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
@@ -66,7 +66,7 @@ export function createFriendRequestAcceptedSystemMessage(message) {
             formatToPartsResult = formatToParts(t.hyPOTm, obj2);
           }
           const obj6 = { content: formatToPartsResult, iconUrl: null, textColor: null };
-          obj6.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9260);
+          obj6.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9259);
           obj6.textColor = undefined;
           const merged1 = Object.assign(createCommonMessageDefault(message));
           return obj6;

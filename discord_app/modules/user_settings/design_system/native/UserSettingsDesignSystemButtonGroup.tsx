@@ -4,7 +4,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef10503 from "../../../../../_runtime/metro/10503__.js";
+import _modDef10501 from "../../../../../_runtime/metro/10501__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -66,14 +66,14 @@ export default function UserSettingsDesignSystemButtonGroup() {
     hasOwnProperty(IconButton.IconButton, {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef10503,
+      icon: _modDef10501,
       onPress() {},
     }),
   ];
   const obj12 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     onPress() {},
   };
   const obj7 = {
@@ -89,7 +89,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items4[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     onPress() {},
   });
   obj11.children = items4;
@@ -127,7 +127,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj13 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     onPress() {},
   };
   const obj17 = {
@@ -139,7 +139,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items6[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Cancel",
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     onPress() {},
   });
   obj16.children = items6;

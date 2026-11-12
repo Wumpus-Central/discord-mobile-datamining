@@ -129,10 +129,10 @@ export function useMobileActivityPressHandler(questId) {
             return obj5;
           } else {
             const obj7 = {
-              type: tmp4(10071).AdUserActionType.CLICK_INTERNAL,
+              type: tmp4(10070).AdUserActionType.CLICK_INTERNAL,
               adCreativeType: tmp4(5282).AdCreativeType.QUEST,
               adCreativeId: closure_128_0,
-              questContentCTA: tmp4(8768).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
+              questContentCTA: tmp4(8767).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
               surfaceId: tmp4(5278).QuestContent.QUEST_BOTTOM_SHEET,
               sourceQuestContent: closure_128_1,
               impressionId: null,
@@ -148,7 +148,7 @@ export function useMobileActivityPressHandler(questId) {
               questContentPosition = closure_128_4.getQuestContentPosition();
             }
             obj7.questContentPosition = questContentPosition;
-            tmp4(10068).captureAdUserAction(obj7);
+            tmp4(10067).captureAdUserAction(obj7);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }

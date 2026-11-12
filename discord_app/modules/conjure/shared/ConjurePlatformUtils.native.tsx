@@ -298,7 +298,7 @@ let closure_16 = async function _relayPreviewCapture(arg0) {
               const obj9 = { value: { status: "unavailable" }, done: true };
               return obj9;
             } else if (null == onAccepted) {
-              let obj10 = { uploadToken: "Array" };
+              let obj10 = { uploadToken: "r" };
             } else {
               c7 = 2;
               c8 = 1;
@@ -638,7 +638,7 @@ const ConjureAppInstallSheet = "ConjureAppInstallSheet";
 let c17 = 0;
 let c18 = 0;
 let c21 = 0;
-const conjurePreviewControlLease = fn(13053);
+const conjurePreviewControlLease = fn(13047);
 let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -741,7 +741,7 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
     const obj4 = require("WebView");
   }
 });
-const conjurePreviewOperationSurfaces = fn(15861);
+const conjurePreviewOperationSurfaces = fn(15856);
 let closure_22 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;

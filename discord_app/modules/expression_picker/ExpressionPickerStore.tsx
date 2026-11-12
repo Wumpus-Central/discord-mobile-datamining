@@ -168,11 +168,11 @@ export function toggleExpressionPicker(activeView, activeViewType, activeChannel
 }
 export function setExpressionPickerView(activeView) {
   _require = activeView;
-  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ activeView, lastActiveView: withEqualityFnResult.getState().activeView, showEmojiPacks: false, showSelectedEmojiPackId: "add" }));
+  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ activeView, lastActiveView: withEqualityFnResult.getState().activeView, showEmojiPacks: false, showSelectedEmojiPackId: "ip" }));
 }
 export function setShowEmojiPacks(showEmojiPacks) {
   _require = showEmojiPacks;
-  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ showEmojiPacks, showSelectedEmojiPackId: "Array" }));
+  require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ showEmojiPacks, showSelectedEmojiPackId: "a" }));
 }
 export function setSearchQuery(searchQuery) {
   _require = searchQuery;

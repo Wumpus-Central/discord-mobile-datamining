@@ -205,7 +205,7 @@ function ActivityInfo(activity) {
                   analyticsLocations: num3,
                 };
                 v3 = num3;
-                const obj7 = { value: v3(12757).maybeJoinEmbeddedActivity(obj6), done: false };
+                const obj7 = { value: v3(12751).maybeJoinEmbeddedActivity(obj6), done: false };
                 return obj7;
               }
             } else {
@@ -260,7 +260,7 @@ function ActivityInfo(activity) {
     const obj9 = { style: tmp.previewImage, children: null };
     const tmp2Result = tmp2(7656);
     const obj10 = { imageBackground: tmp19, aspectRatio: 1.7777777777777777 };
-    obj9.children = closure_25(tmp2(19875), obj10);
+    obj9.children = closure_25(tmp2(19870), obj10);
     const items7 = [closure_25(tmp2(7656), obj9)];
     const obj11 = { style: tmp.joinButtonWrapper, children: null };
     const tmp2Result3 = tmp2(7656);
@@ -562,18 +562,18 @@ function renderItem(arg0, arg1, transitionState, transitionCleanUp) {
   return closure_1_25(PreJoinTransitioner, { transitionState, transitionCleanUp }, arg0);
 }
 const StyleSheet = fn(17).StyleSheet;
-const MODE_CHANGE_PHYSICS = fn(11925).MODE_CHANGE_PHYSICS;
-const EDGE_GUTTER = fn(11928).EDGE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(11919).MODE_CHANGE_PHYSICS;
+const EDGE_GUTTER = fn(11922).EDGE_GUTTER;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(16122).VoiceChannelWarningSurfaces;
+const constants4 = fn(16117).VoiceChannelWarningSurfaces;
 const Features = fn(6012).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
 const createStyles = fn(5243);
 let obj = {
   contentWrapper: {
-    paddingTop: EDGE_GUTTER + fn(11931).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
+    paddingTop: EDGE_GUTTER + fn(11925).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
     gap: 24,
     paddingBottom: 16,
   },
@@ -589,7 +589,7 @@ let obj = {
   consolePreJoinPadding: null,
 };
 let obj3 = {
-  paddingTop: EDGE_GUTTER + fn(11931).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
+  paddingTop: EDGE_GUTTER + fn(11925).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
   gap: 24,
   paddingBottom: 16,
 };
@@ -858,10 +858,10 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinContent.tsx");
 
 export default noop.memo(function VoicePanelPreJoinWrapper() {
-  const context = noop.useContext(guildId(11924));
+  const context = noop.useContext(guildId(11918));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(19740)(channelId);
+  const tmp2 = guildId(19735)(channelId);
   dependencyMap = tmp2;
   items = [
     SortedVoiceStateStore,
@@ -911,7 +911,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       }
     },
     items1,
-    channelId(19892).areVoicePanelPreJoinContentPropsEqual,
+    channelId(19887).areVoicePanelPreJoinContentPropsEqual,
   );
   return closure_25(channelId(5314).TransitionItem, { item: stateFromStores, renderItem });
 });

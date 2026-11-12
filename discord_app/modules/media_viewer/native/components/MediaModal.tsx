@@ -198,7 +198,7 @@ export default function MediaModal(originLayout) {
         const tmp2Result = HapticUtils;
         const obj2 = { source: selectedMediaSource, disableDownload, shareable: tmp };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(10136, dependencyMap.paths),
+          asyncRequireImpl(10135, dependencyMap.paths),
           "MediaShareActionSheet",
           obj2,
         );

@@ -212,7 +212,7 @@ function ChangelogInfo() {
     }),
   ];
   obj.children = items;
-  return closure_1_10(TableRowGroup.TableRowGroup, obj);
+  return refs(TableRowGroup.TableRowGroup, obj);
 }
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
@@ -233,6 +233,6 @@ export default noop.memo(function UserSettingsSurveyChangelogOverride() {
   const obj2 = { spacing: 16, children: null };
   items = [React6(SurveyInfo, {}), React6(ChangelogInfo, {})];
   obj2.children = items;
-  obj.children = closure_1_10(Stack_Stack.Stack, obj2);
+  obj.children = refs(Stack_Stack.Stack, obj2);
   return React6(ScrollView, obj);
 });

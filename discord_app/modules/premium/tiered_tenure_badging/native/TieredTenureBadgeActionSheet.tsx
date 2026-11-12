@@ -38,7 +38,7 @@ function TieredTenureBadgeItem(arg0) {
     items[1] = usersBadgeContainer;
     obj2.style = items;
     const obj3 = { resizeMode: "contain", source: small };
-    const items1 = [closure_1_10(FastImageDefault, obj3), , ,];
+    const items1 = [refs(FastImageDefault, obj3), , ,];
     const obj4 = {
       style: tmp.badgeName,
       variant: "heading-sm/semibold",
@@ -47,14 +47,14 @@ function TieredTenureBadgeItem(arg0) {
     };
     const intl = util.intl;
     obj4.children = intl.string(tieredTenureBadgeData.nameUnformatted);
-    items1[1] = closure_1_10(Text_Text.Text, obj4);
+    items1[1] = refs(Text_Text.Text, obj4);
     const obj5 = {
       style: tmp.badgeRequirement,
       variant: "body-xs/normal",
       color: "mobile-text-heading-primary",
       children: tmp7,
     };
-    items1[2] = closure_1_10(Text_Text.Text, obj5);
+    items1[2] = refs(Text_Text.Text, obj5);
     if (isUsersBadge) {
       isUsersBadge = null != premiumSince;
     }
@@ -66,7 +66,7 @@ function TieredTenureBadgeItem(arg0) {
       const date = new Date(premiumSince);
       obj7.date = date;
       obj6.children = intl2.formatToPlainString(util.t.Hu4jfi, obj7);
-      isUsersBadge = closure_1_10(Text_Text.Text, obj6);
+      isUsersBadge = refs(Text_Text.Text, obj6);
     }
     items1[3] = isUsersBadge;
     obj2.children = items1;
@@ -277,7 +277,7 @@ export default function TieredTenureBadgeActionSheet(userId) {
         rowContainerWithUsersBadge = closure_1.rowContainerWithUsersBadge;
       }
       items[1] = rowContainerWithUsersBadge;
-      return closure_2_10(
+      return refs(
         View,
         {
           style: items,

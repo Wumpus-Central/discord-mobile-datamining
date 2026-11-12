@@ -10,7 +10,7 @@ import FastImageDefault from "../../common/FastImage.tsx";
 import common_AlertDefault from "../../common/Alert.tsx";
 import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import SequencedLottieAnimationViewDefault from "../../common/SequencedLottieAnimationView.tsx";
-import _mod15936 from "../../../../_runtime/metro/15936__.js";
+import _mod15931 from "../../../../_runtime/metro/15931__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -27,7 +27,7 @@ class PremiumPaymentGuildAnimation {
   }
 }
 const View = fn(17).View;
-const Gradients = fn(9368).Gradients;
+const Gradients = fn(9367).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5243);
@@ -49,7 +49,7 @@ obj2.activatedBackground = {
 };
 obj2.activatedImage = { width: 220 };
 obj2.successInfo = { marginTop: 24 };
-let closure_10 = createStyles.createStyles(obj2);
+const refs = createStyles.createStyles(obj2);
 let obj5 = { ENTRY: "entry", IDLE: "idle" };
 const sceneSegments = { [obj5.ENTRY]: { BEG: 0, END: 180 }, [obj5.IDLE]: { BEG: 180, END: 360 } };
 PremiumPaymentGuildAnimation.Scenes = obj5;
@@ -125,9 +125,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp14 = LinearGradientDefault;
   const tmp15 = FastImageDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(15937);
+    let tmp8Result = tmp8(15932);
   } else {
-    tmp8Result = tmp8(15938);
+    tmp8Result = tmp8(15933);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_8(tmp15, obj6);

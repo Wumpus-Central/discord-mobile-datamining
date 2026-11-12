@@ -26,7 +26,7 @@ function LoggedEvent(arg0) {
   let tmp6Result2 = dependencyMap;
   let obj = {
     arrow: !tmp2,
-    icon: closure_8(fingerprint(11293).AnalyticsIcon, {}),
+    icon: closure_8(fingerprint(11287).AnalyticsIcon, {}),
     label: event,
     subLabel: null,
     onPress: null,
@@ -71,7 +71,7 @@ function LoggedEvent(arg0) {
     if (tmp6Result) {
       const obj8 = { name: "User ", children: null };
       const obj9 = { user };
-      obj8.children = closure_8(tmp10(10867), obj9);
+      obj8.children = closure_8(tmp10(10861), obj9);
       tmp6Result = closure_8(CommonProperty, obj8);
     }
     items1[1] = tmp6Result;
@@ -222,14 +222,14 @@ export default function DevToolsAnalyticsScreen() {
   const str2 = str.toLowerCase();
   const items2 = [
     closure_8(trimmed(7888).TableSwitchRow, {
-      icon: closure_8(trimmed(13388).ArrowsUpDownIcon, {}),
+      icon: closure_8(trimmed(13382).ArrowsUpDownIcon, {}),
       label: "Reverse Events",
       value: first,
       onValueChange: tmp5[1],
     }),
   ];
   const obj4 = {
-    icon: closure_8(trimmed(13388).ArrowsUpDownIcon, {}),
+    icon: closure_8(trimmed(13382).ArrowsUpDownIcon, {}),
     label: "Reverse Events",
     value: first,
     onValueChange: tmp5[1],
@@ -239,7 +239,7 @@ export default function DevToolsAnalyticsScreen() {
     variant: "danger",
     icon: closure_8(trimmed(5977).TrashIcon, { color: "text-feedback-critical" }),
     label: "Clear Analytics Log",
-    onPress: trimmed(18095).clearAnalyticsLog,
+    onPress: trimmed(18090).clearAnalyticsLog,
   });
   obj3.children = items2;
   const items3 = [closure_9(trimmed(7680).TableRowGroup, obj3), ,];
@@ -248,7 +248,7 @@ export default function DevToolsAnalyticsScreen() {
     variant: "danger",
     icon: closure_8(trimmed(5977).TrashIcon, { color: "text-feedback-critical" }),
     label: "Clear Analytics Log",
-    onPress: trimmed(18095).clearAnalyticsLog,
+    onPress: trimmed(18090).clearAnalyticsLog,
   };
   items3[1] = closure_8(View, {
     style: tmp.searchFieldContainer,

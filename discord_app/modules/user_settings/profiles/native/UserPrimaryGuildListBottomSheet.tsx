@@ -118,7 +118,7 @@ let closure_11 = noop.memo(function Item(item) {
     obj10.guildTag = tag;
     obj10.guildBadge = guildTagBadgeUrl;
     obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-    tmp10Result2 = closure_7(tmp7(10587).BaseGuildTagChiplet, obj10);
+    tmp10Result2 = closure_7(tmp7(10585).BaseGuildTagChiplet, obj10);
   }
   items = [tmp10Result2, closure_7(item(7682).FormRadio, { selected })];
   obj5.children = items;

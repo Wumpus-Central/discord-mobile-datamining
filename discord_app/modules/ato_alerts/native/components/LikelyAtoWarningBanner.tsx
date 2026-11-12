@@ -117,7 +117,7 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11982, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11976, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
         items = [
@@ -135,7 +135,7 @@ class LikelyAtoWarningBanner {
         obj.children = items;
         return closure_1_12(closure_1_11, obj);
       });
-      obj2.actionItems = closure_2_10(LikelyAtoMoreTipsModalActionItemsDefault, {
+      obj2.actionItems = refs(LikelyAtoMoreTipsModalActionItemsDefault, {
         senderId,
         handleMutePressed() {
           return closure_1_5(channelId(senderId[8]).CtaEventTypes.USER_MODAL_MUTE);
@@ -144,7 +144,7 @@ class LikelyAtoWarningBanner {
       const obj4 = { variant: "body-sm/normal", color: "text-link", children: null };
       const intl2 = util.intl;
       obj4.children = intl2.format(util.t.UkH122, { learnMoreLink: handleLearnMore });
-      obj2.learnMore = closure_2_10(Text_Text.Text, obj4);
+      obj2.learnMore = refs(Text_Text.Text, obj4);
       obj.pushLazy(tmp, obj2, modalKey);
       const arr = hasOwnProperty();
       const obj3 = {
@@ -176,8 +176,8 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(10833).SafetyWarningTypes;
-const Constants = fn(11976);
+const SafetyWarningTypes = fn(10827).SafetyWarningTypes;
+const Constants = fn(11970);
 ({
   getLikelyAtoMoreTips: hasOwnProperty,
   LIKELY_ATO_MORE_TIPS_MODAL_KEY: closure_6,

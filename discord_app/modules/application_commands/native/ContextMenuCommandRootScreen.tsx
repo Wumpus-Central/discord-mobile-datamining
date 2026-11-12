@@ -192,7 +192,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
               let stringResult = intl2.string(util.t.V0w2ap);
             }
             const obj = { variant, color: "text-default", style: closure_18.sectionHeader, children: stringResult };
-            return closure_2_10(Text_Text.Text, obj);
+            return refs(Text_Text.Text, obj);
           }
           const intl = util.intl;
           stringResult = intl.string(util.t.PHjkRE);

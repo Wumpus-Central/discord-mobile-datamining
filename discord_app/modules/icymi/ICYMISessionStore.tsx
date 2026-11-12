@@ -5,15 +5,14 @@ import v1 from "../../../_runtime/01266_v1.js";
 import ICYMIAnalytics2 from "ICYMIAnalytics.tsx";
 import ExperimentStore from "../experiments/ExperimentStore.tsx";
 import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
-import LabFeatureStore from "../labs/LabFeatureStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ICYMIStore from "ICYMIStore.tsx";
 
 require = fn;
-let c7 = 300000;
-let c8 = null;
-let closure_9 = [];
-let c10 = 0;
+let c6 = 300000;
+let c7 = null;
+let closure_8 = [];
+const React6 = 0;
 let map = new Map();
 class ICYMISession {
   constructor() {
@@ -28,7 +27,7 @@ class ICYMISession {
     list = str;
     obj = Object.create(new.target.prototype);
     closure_1 = obj;
-    obj2 = closure_0(closure_1[5]);
+    obj2 = closure_0(closure_1[4]);
     obj._sessionId = obj2.v4();
     obj._startTimestamp = Date.now();
     obj._endTimestamp = null;
@@ -47,13 +46,13 @@ class ICYMISession {
     obj._interactionCount = 0;
     obj._actionCount = 0;
     obj._latestDwellStartTimeMs = 0;
-    obj._timeout = setTimeout(() => obj.endSession(), c7);
-    ICYMIAnalytics = closure_0(closure_1[6]).ICYMIAnalytics;
+    obj._timeout = setTimeout(() => obj.endSession(), c6);
+    ICYMIAnalytics = closure_0(closure_1[5]).ICYMIAnalytics;
     obj1 = {
       icymiSessionId: obj._sessionId,
       sessionStartTimeMs: obj._startTimestamp,
-      previousIcymiSessionCount: c10,
-      uxVariation: closure_0(closure_1[6]).DEFAULT_UX_VARIATION,
+      previousIcymiSessionCount: c9,
+      uxVariation: closure_0(closure_1[5]).DEFAULT_UX_VARIATION,
     };
     result = ICYMIAnalytics.trackFeedSessionStarted(obj1);
     if (items.length > 0) {
@@ -151,7 +150,7 @@ prototype["getImpression"] = function getImpression(itemId) {
 prototype["startItemsDwell"] = function startItemsDwell(arr) {
   const self = this;
   this._resetTimeout();
-  closure_9 = arr;
+  closure_8 = arr;
   if (arr.length === this._activeItems.length) {
     if (arr.every((itemId, index) => self._activeItems[index].itemId === itemId.itemId)) {
       return self._activeItems;
@@ -423,14 +422,14 @@ prototype["endSession"] = function endSession() {
   });
   clearTimeout(this._timeout);
   previousIcyMiSessionCount = previousIcyMiSessionCount + 1;
-  c8 = null;
+  c7 = null;
   map.clear();
   return this;
 };
 prototype["_resetTimeout"] = function _resetTimeout() {
   const self = this;
   clearTimeout(this._timeout);
-  this._timeout = setTimeout(() => self.endSession(), c7);
+  this._timeout = setTimeout(() => self.endSession(), c6);
 };
 prototype["_createImpression"] = function _createImpression(itemId) {
   const self = this;
@@ -553,17 +552,17 @@ const Store = initializeDefault.Store;
 class ICYMISessionStore extends Store {}
 const prototype2 = ICYMISessionStore.prototype;
 prototype2["initialize"] = function initialize() {
-  this.waitFor(ApexExperimentStore, AuthenticationStore, ICYMIStore, ExperimentStore, LabFeatureStore);
+  this.waitFor(ApexExperimentStore, AuthenticationStore, ICYMIStore, ExperimentStore);
 };
 Object.defineProperty(prototype2, "currentSession", {
   get: function currentSession() {
-    return c8;
+    return c7;
   },
   set: undefined,
 });
 Object.defineProperty(prototype2, "endedSessionCount", {
   get: function endedSessionCount() {
-    return c10;
+    return c9;
   },
   set: undefined,
 });
@@ -574,8 +573,8 @@ const iCYMISessionStore = new ICYMISessionStore(DispatcherDefault, {
       _null.endSession();
       flag = true;
     }
-    if (closure_9.length > 0) {
-      _null = new ICYMISession(closure_9, "focus");
+    if (closure_8.length > 0) {
+      _null = new ICYMISession(closure_8, "focus");
       flag = true;
     }
     return flag;
@@ -591,9 +590,9 @@ const iCYMISessionStore = new ICYMISessionStore(DispatcherDefault, {
   ICYMI_SET_FOCUSED_TAB: function handleIcymiTabFocussed(focused) {
     if (focused.focused) {
       if (null != tmp) {
-        if (closure_9.length > 0) {
+        if (closure_8.length > 0) {
           _null.startItemsDwell(
-            closure_9.map((item) => {
+            closure_8.map((item) => {
               const obj = {};
               const merged = Object.assign(item);
               obj.triggerType = "focus";
@@ -611,8 +610,8 @@ const iCYMISessionStore = new ICYMISessionStore(DispatcherDefault, {
           _null.endSession();
           flag2 = true;
         }
-        if (closure_9.length > 0) {
-          _null = new ICYMISession(closure_9, "focus");
+        if (closure_8.length > 0) {
+          _null = new ICYMISession(closure_8, "focus");
           flag2 = true;
         }
         return flag2;
@@ -694,28 +693,28 @@ const iCYMISessionStore = new ICYMISessionStore(DispatcherDefault, {
   },
   ICYMI_ITEM_INTERACTED: function handleItemInteracted(press_comments) {
     if (null == _null) {
-      _null = new ICYMISession(closure_9, "focus");
+      _null = new ICYMISession(closure_8, "focus");
     }
     _null.trackItemInteraction(press_comments.itemId, press_comments.itemType, press_comments.actionType);
     return true;
   },
   ICYMI_FEED_ITEM_ACTIONED: function handleFeedItemActioned(arg0) {
     if (null == _null) {
-      _null = new ICYMISession(closure_9, "focus");
+      _null = new ICYMISession(closure_8, "focus");
     }
     const result = _null.trackFeedItemActioned(arg0);
     return true;
   },
   ICYMI_FEED_FILTER_ACTIONED: function handleFeedFilterActioned(arg0) {
     if (null == _null) {
-      _null = new ICYMISession(closure_9, "focus");
+      _null = new ICYMISession(closure_8, "focus");
     }
     const result = _null.trackFeedFilterActioned(arg0);
     return true;
   },
   ICYMI_FEED_PAGE_ACTIONED: function handleFeedPageActioned(arg0) {
     if (null == _null) {
-      _null = new ICYMISession(closure_9, "focus");
+      _null = new ICYMISession(closure_8, "focus");
     }
     const result = _null.trackFeedPageActioned(arg0);
     return true;
@@ -731,8 +730,8 @@ export function resetGlobalState() {
     clearTimeout(_null._timeout);
   }
   _null = null;
-  closure_9 = [];
-  c10 = 0;
+  closure_8 = [];
+  c9 = 0;
   map.clear();
 }
 export { ICYMISession };

@@ -77,7 +77,7 @@ export default function ConjurePublishNotesSheet(guildId) {
     obj3.onSelect = function onSelect(id) {
       return pickChannel(id.id);
     };
-    obj2.content = closure_2_10(ChannelPickerActionSheetDefault, obj3);
+    obj2.content = refs(ChannelPickerActionSheetDefault, obj3);
     obj.showActionSheet(obj2);
   }, items1);
   const callback2 = pickChannel.useCallback(() => {

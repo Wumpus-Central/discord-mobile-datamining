@@ -4,7 +4,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import CheckpointStore from "CheckpointStore.tsx";
 
 require = fn;
-const CheckpointFetchStates = fn(14150).CheckpointFetchStates;
+const CheckpointFetchStates = fn(14146).CheckpointFetchStates;
 let closure_5 = fn(6314).CHECKPOINT_GLOBAL_GAME_CATEGORIES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/useMaybeFetchCheckpointData.tsx");
@@ -48,8 +48,8 @@ export function useMaybeFetchCheckpointData() {
   const effect = noop.useEffect(() => {
     const fetchState = CheckpointStore.fetchState;
     if (!tmp) {
-      const checkpointData = stateFromStoresArray(14154).fetchCheckpointData();
-      const obj = stateFromStoresArray(14154);
+      const checkpointData = stateFromStoresArray(14150).fetchCheckpointData();
+      const obj = stateFromStoresArray(14150);
     }
     tmp = fetchState !== constants.INIT && fetchState !== constants.ERROR;
   }, []);

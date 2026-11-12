@@ -36,10 +36,10 @@ let obj = {
   image: null,
 };
 let obj3 = { padding: nativeDefault.space.PX_16 };
-obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(17624).COMPLETION_GLOW_CLEARANCE };
+obj.contentRewardsWrapper = { flexGrow: 1, flexShrink: 0, paddingTop: fn(17619).COMPLETION_GLOW_CLEARANCE };
 obj.contentRewards = { alignItems: "center" };
 obj.contentRewardsCopy = { textAlign: "center" };
-let obj4 = { flexGrow: 1, flexShrink: 0, paddingTop: fn(17624).COMPLETION_GLOW_CLEARANCE };
+let obj4 = { flexGrow: 1, flexShrink: 0, paddingTop: fn(17619).COMPLETION_GLOW_CLEARANCE };
 obj.contentEndCardHeader = { marginBottom: nativeDefault.space.PX_16 };
 obj.contentEndCardHeaderCopy = { flexGrow: 1, flexShrink: 1 };
 let obj5 = { marginBottom: nativeDefault.space.PX_16 };
@@ -157,7 +157,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
   const layoutEffect = obj2.useLayoutEffect(() => {
     _undefined(_undefined3[17]).applyOrientationLock("PORTRAIT");
   }, []);
-  const height = tmp5(11192)(obj2.useContext(tmp2(17586).QuestDockGestureContext).windowDimensions).height;
+  const height = tmp5(11186)(obj2.useContext(tmp2(17581).QuestDockGestureContext).windowDimensions).height;
   let str = "md";
   if (height >= 760) {
     let str2 = "lg";
@@ -169,9 +169,9 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
   const tmp2Result7 = require("utils/QuestUtils");
   ({ height: height2, ref, onLayout } = useMeasuredLayoutDefault());
   if (height2 == null) {
-    height2 = tmp2(17624).QUEST_PROGRESS_DIAMETER_BY_SIZE[str];
+    height2 = tmp2(17619).QUEST_PROGRESS_DIAMETER_BY_SIZE[str];
   }
-  const sum = height2 + tmp2(17624).COMPLETION_GLOW_CLEARANCE;
+  const sum = height2 + tmp2(17619).COMPLETION_GLOW_CLEARANCE;
   const sum1 = sum + tmp5(575).space.PX_16;
   const obj7 = {
     align: "center",
@@ -226,7 +226,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
         obj14.text = intl3.string(tmp2(1113).t.cfY4PE);
         let tmp5Result;
         if (isQuestAccessSuspended) {
-          tmp5Result = tmp5(17610);
+          tmp5Result = tmp5(17605);
         }
         obj14.onPressDisabled = tmp5Result;
         tmp28Result = closure_7(tmp2(5873).Button, obj14);
@@ -261,7 +261,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
       obj20.accessibilityLabel = intl4.string(tmp2(1113).t.YsCuyF);
       obj20.onPress = onRestartVideo.onRestartVideo;
       const obj21 = { color: tmp5(575).colors.INTERACTIVE_TEXT_DEFAULT };
-      obj20.children = closure_7(tmp2(11034).RetryIcon, obj21);
+      obj20.children = closure_7(tmp2(11028).RetryIcon, obj21);
       items13[1] = closure_7(tmp2(7364).PressableOpacity, obj20);
       obj16.children = items13;
       const items14 = [closure_8(tmp2(6274).Stack, obj16), ,];
@@ -288,7 +288,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
         onPress() {
           return _undefined2(QuestTypes.QuestContent.VIDEO_MODAL_END_CARD);
         },
-        text: tmp2(10088).getExternalCtaLabel(quest),
+        text: tmp2(10087).getExternalCtaLabel(quest),
       };
       const items15 = [closure_7(tmp2(5873).Button, obj27)];
       if (isShareableQuestResult) {
@@ -297,7 +297,7 @@ export default noop.memo(function VideoQuestModalContentCompleted(onRestartVideo
         obj28.accessibilityLabel = intl6.string(tmp2(1113).t.Ej3B3Y);
         obj28.onPress = callback;
         const obj29 = { color: tmp5(575).colors.INTERACTIVE_TEXT_DEFAULT };
-        obj28.children = closure_7(tmp2(12200).ShareIcon, obj29);
+        obj28.children = closure_7(tmp2(12194).ShareIcon, obj29);
         isShareableQuestResult = closure_7(tmp2(7364).PressableOpacity, obj28);
       }
       items15[1] = isShareableQuestResult;

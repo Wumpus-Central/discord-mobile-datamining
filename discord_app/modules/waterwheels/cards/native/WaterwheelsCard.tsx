@@ -79,7 +79,7 @@ function WaterwheelsCardContent(card) {
         }
         items[4] = tmp4Result2;
         obj.children = items;
-        return closure_2_10(hasOwnProperty, obj, children.gameId);
+        return refs(hasOwnProperty, obj, children.gameId);
       });
       items2[1] = closure_9(first, obj11);
       obj4.children = items2;

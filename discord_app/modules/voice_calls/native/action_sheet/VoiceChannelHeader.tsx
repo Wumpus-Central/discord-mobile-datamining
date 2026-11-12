@@ -7,7 +7,7 @@ import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef10919 from "../../../../../_runtime/metro/10919__.js";
+import _modDef10913 from "../../../../../_runtime/metro/10913__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
 import CallStateHooks from "../CallStateHooks.tsx";
@@ -27,24 +27,19 @@ function PrivateChannelSubtitle(channel) {
   state = CallStateHooksDefault(channel.id).state;
   const obj = { style: tmp.subtitleWrapper, children: null };
   items = [
-    closure_1_10(OngoingCallStatusLabelDefault, {
-      useAllAloneText: false,
-      channel,
-      voiceState: state,
-      style: tmp.subtitle,
-    }),
+    refs(OngoingCallStatusLabelDefault, { useAllAloneText: false, channel, voiceState: state, style: tmp.subtitle }),
     ,
   ];
   let tmp6Result = state === CallStateHooks.CallStates.CONNECTED;
   if (tmp6Result) {
     const obj3 = { style: tmp.subtitle, variant: "body-xs/medium", color: "text-overlay-light", children: " - " };
-    tmp6Result = closure_1_10(Text_Text.Text, obj3);
+    tmp6Result = refs(Text_Text.Text, obj3);
   }
   items[1] = tmp6Result;
   let tmp6Result2 = state === CallStateHooks.CallStates.CONNECTED;
   if (tmp6Result2) {
     const obj4 = { channelId: channel.id, style: tmp.subtitle };
-    tmp6Result2 = closure_1_10(OngoingCallTimerDefault, obj4);
+    tmp6Result2 = refs(OngoingCallTimerDefault, obj4);
   }
   items[2] = tmp6Result2;
   obj.children = items;
@@ -172,13 +167,13 @@ class VoiceChannelHeader {
 function AddMemberButton(onPress) {
   const obj = {
     onPress: onPress.onPress,
-    iconSource: _modDef10919,
+    iconSource: _modDef10913,
     iconStyle: closure_12().icons,
     accessibilityLabel: null,
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
-  return closure_1_10(IconButton, obj);
+  return refs(IconButton, obj);
 }
 class IconButton {
   constructor(arg0) {

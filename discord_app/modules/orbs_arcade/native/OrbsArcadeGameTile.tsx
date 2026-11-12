@@ -230,7 +230,7 @@ function OrbsArcadeGameTileContent(game) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const OrbsArcadeNativeConstants = fn(17537);
+const OrbsArcadeNativeConstants = fn(17532);
 ({ ORBS_ARCADE_GAME_TILE_MAX_WIDTH: closure_9, ORBS_ARCADE_GAME_TILE_MIN_HEIGHT: closure_10 } =
   OrbsArcadeNativeConstants);
 const ThemeTypes = fn(1072).ThemeTypes;

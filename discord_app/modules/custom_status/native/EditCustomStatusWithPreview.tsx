@@ -318,7 +318,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(15364, dependencyMap.paths),
+        asyncRequireImpl(15361, dependencyMap.paths),
         "ClearAfterOptionsActionSheet",
         { initialValue: first2, onChange },
       );
@@ -359,7 +359,7 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(9471).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(9470).STATUS_MAX_LENGTH;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1388).EmojiIntention;
@@ -448,7 +448,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
       const obj = { title: null };
       const intl = analyticsLocations(1113).intl;
       obj.title = intl.string(analyticsLocations(1113).t.Iuzg8R);
-      return closure_1_13(analyticsLocations(8985).GenericHeaderTitle, obj);
+      return closure_1_13(analyticsLocations(8984).GenericHeaderTitle, obj);
     };
     obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj2.render = function render(arg0, navigation) {

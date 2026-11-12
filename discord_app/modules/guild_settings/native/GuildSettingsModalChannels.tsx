@@ -18,11 +18,11 @@ import showSimpleActionSheet from "../../action_sheet/native/showSimpleActionShe
 import Form from "../../../design/void/Form/native/index.tsx";
 import ChannelSettingsActionCreators from "../../../actions/ChannelSettingsActionCreators.tsx";
 import FavoritesActionCreators from "../../favorites/FavoritesActionCreators.tsx";
-import _modDef13956 from "../../../../_runtime/metro/13956__.js";
+import _modDef13952 from "../../../../_runtime/metro/13952__.js";
 import ChannelSortingUtils from "../../channel_sorting/ChannelSortingUtils.tsx";
-import _modDef17803 from "../../../../_runtime/metro/17803__.js";
+import _modDef17798 from "../../../../_runtime/metro/17798__.js";
 import GuildSettingsModalChannelsActionCreatorsDefault from "../GuildSettingsModalChannelsActionCreators.tsx";
-import _modDef18743 from "../../../../_runtime/metro/18743__.js";
+import _modDef18738 from "../../../../_runtime/metro/18738__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -115,7 +115,7 @@ function ChannelItem(isFavoritesGuild) {
   if (stateFromStores) {
     tmp7Result2 = null;
     if (sortingEnabled) {
-      const obj10 = { source: tmp13(18741), style: actionIconStyle };
+      const obj10 = { source: tmp13(18736), style: actionIconStyle };
       tmp7Result2 = closure_16(channel(8041).FormRow.Icon, obj10);
     }
   }
@@ -167,7 +167,7 @@ function CreateButton(guild) {
       obj2.options = items;
       const result = showSimpleActionSheet.showSimpleActionSheet(obj2);
     };
-    obj3.icon = closure_16(tmp(10382).PlusSmallIcon, { color: "white" });
+    obj3.icon = closure_16(tmp(10380).PlusSmallIcon, { color: "white" });
     obj2.children = closure_16(tmp(5873).Button, obj3);
     tmp5 = closure_16(closure_5, obj2);
   }
@@ -290,7 +290,7 @@ Category.prototype["render"] = function render() {
   } else {
     tmp3Result = null;
     if (null != sortHandlers) {
-      const obj6 = { source: tmp11(18741), style: actionIconStyle };
+      const obj6 = { source: tmp11(18736), style: actionIconStyle };
       tmp3Result = closure_1_16(native.Icon, obj6);
     }
   }
@@ -423,18 +423,18 @@ class GuildSettingsModalChannels extends PureComponent3 {
         const obj = { label: null, icon: null, onPress: null };
         const intl = util.intl;
         obj.label = intl.string(util.t.ffgJrs);
-        obj.icon = _modDef18743;
+        obj.icon = _modDef18738;
         obj.onPress = function onPress() {
-          closure_1_1(18739).startReordering(constants.GUILD_CATEGORY);
+          closure_1_1(18734).startReordering(constants.GUILD_CATEGORY);
         };
         items.push(obj);
       }
       const obj2 = { label: null, icon: null, onPress: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t.nIfr0Y);
-      obj2.icon = _modDef13956;
+      obj2.icon = _modDef13952;
       obj2.onPress = function onPress() {
-        closure_1_1(18739).startReordering(
+        closure_1_1(18734).startReordering(
           constants.GUILD_TEXT,
           constants.GUILD_ANNOUNCEMENT,
           constants.GUILD_FORUM,
@@ -446,9 +446,9 @@ class GuildSettingsModalChannels extends PureComponent3 {
       const obj3 = { label: null, icon: null, onPress: null };
       const intl3 = util.intl;
       obj3.label = intl3.string(util.t.CYnO4s);
-      obj3.icon = _modDef17803;
+      obj3.icon = _modDef17798;
       obj3.onPress = function onPress() {
-        closure_1_1(18739).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
+        closure_1_1(18734).startReordering(constants.GUILD_VOICE, constants.GUILD_STAGE_VOICE);
       };
       items.push(obj3);
       const obj5 = { key: "GuildSettingsChannelsSort", header: null, options: null, hasIcons: true };
@@ -533,8 +533,8 @@ class GuildSettingsModalChannels extends PureComponent3 {
                           if (PermissionStore.can(constants2.MANAGE_ROLES, localChannel)) {
                             if (PermissionStore.can(constants2.MANAGE_ROLES, channel)) {
                               const appChannelBotUserId =
-                                applyArgumentsResult(12470).getAppChannelBotUserId(localChannel);
-                              const obj2 = applyArgumentsResult(12470);
+                                applyArgumentsResult(12464).getAppChannelBotUserId(localChannel);
+                              const obj2 = applyArgumentsResult(12464);
                               const areChannelsLockedResult = PermissionUtilsAll.areChannelsLocked(
                                 localChannel,
                                 channel,

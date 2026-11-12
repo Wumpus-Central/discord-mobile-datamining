@@ -113,7 +113,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const callback2 = noop.useCallback(() => {
     const obj2 = { initialValue: first2, presets: null, onChange: null, highlightedPresets: null, onDismiss: null };
     const obj = ActionSheetActionCreatorsDefault;
-    const tmp3 = asyncRequireImpl(17867, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(17862, dependencyMap.paths);
     obj2.presets = CustomTypingIndicatorUtils.getCustomTypingIndicatorSuggestionPresets(enabled);
     obj2.onChange = onChange;
     let prop;
@@ -130,7 +130,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   }, items5);
   const callback3 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17868, dependencyMap.paths),
+      asyncRequireImpl(17863, dependencyMap.paths),
       "CustomTypingIndicatorAnimationPickerSheet",
       { emojis: memo, initialAnimation: first3, onChange: onChange2 },
     );

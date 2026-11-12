@@ -93,19 +93,19 @@ export default function RarityBadge(rarity) {
       const obj3 = { children: null };
       const obj4 = { id, x1: "0", y1: "0", x2: "1", y2: "0", children: null };
       const obj5 = { offset: "0", stopColor: 32 };
-      const items1 = [closure_1_10(inlineStyles.Stop, obj5)];
+      const items1 = [refs(inlineStyles.Stop, obj5)];
       const obj6 = { offset: "1", stopColor: 19 };
-      items1[1] = closure_1_10(inlineStyles.Stop, obj6);
+      items1[1] = refs(inlineStyles.Stop, obj6);
       obj4.children = items1;
       obj3.children = closure_1_11(inlineStyles.LinearGradient, obj4);
-      tmp11 = closure_1_10(inlineStyles.Defs, obj3);
+      tmp11 = refs(inlineStyles.Defs, obj3);
     }
     const items2 = [tmp11];
     const obj7 = { points: null, fill: null };
     const tmp10 = inlineStylesDefault;
     obj7.points = CheckpointCustomizationUtils.getChamferedRectPoints(size.width, size.height, 6);
     obj7.fill = React5[rarity];
-    items2[1] = closure_1_10(inlineStyles.Polygon, obj7);
+    items2[1] = refs(inlineStyles.Polygon, obj7);
     size1.children = items2;
     tmp5Result = closure_1_11(tmp10, size1);
     const tmp3Result = CheckpointCustomizationUtils;
@@ -115,10 +115,10 @@ export default function RarityBadge(rarity) {
   const obj9 = { variant: "mono-md/bold", style: tmp.badgeLabel, children: null };
   const intl = util.intl;
   obj9.children = intl.string(React6[rarity]);
-  const items4 = [closure_1_10(Text_Text.Text, obj9)];
+  const items4 = [refs(Text_Text.Text, obj9)];
   if (tmp17Result) {
     const obj10 = { size: "xxs", color: nativeDefault.colors.BLACK };
-    tmp17Result = closure_1_10(NitroWheelIcon.NitroWheelIcon, obj10);
+    tmp17Result = refs(NitroWheelIcon.NitroWheelIcon, obj10);
   }
   items4[1] = tmp17Result;
   obj8.children = items4;

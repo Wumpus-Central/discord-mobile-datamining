@@ -35,8 +35,8 @@ export function receiveLocalNotification(getData) {
         const result = GuildActionCreatorsDefault.transitionToGuildSync(tmp4.guildId);
         const tmpResult = GuildActionCreatorsDefault;
       } else if (constants.CALL_RING === type) {
-        data(2118)(13936, dependencyMap.paths).then((result) => result.default(projectId.channelId));
-        const promise2 = data(2118)(13936, dependencyMap.paths);
+        data(2118)(13932, dependencyMap.paths).then((result) => result.default(projectId.channelId));
+        const promise2 = data(2118)(13932, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
         data(2118)(6000, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = projectId);
@@ -47,10 +47,10 @@ export function receiveLocalNotification(getData) {
         const promise = data(2118)(6000, dependencyMap.paths);
       } else if (constants.CONJURE === type) {
         projectId = tmp4.projectId;
-        data(2118)(10469, dependencyMap.paths).then((openConjureHomeScreenWhenReady) =>
+        data(2118)(10467, dependencyMap.paths).then((openConjureHomeScreenWhenReady) =>
           openConjureHomeScreenWhenReady.openConjureHomeScreenWhenReady(projectId),
         );
-        const promise3 = data(2118)(10469, dependencyMap.paths);
+        const promise3 = data(2118)(10467, dependencyMap.paths);
       }
     }
     let obj2 = data(8611);

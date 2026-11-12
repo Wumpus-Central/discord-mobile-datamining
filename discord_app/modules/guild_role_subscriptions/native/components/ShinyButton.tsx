@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import BaseTextButton from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
-import _modDef11204 from "../../../../../_runtime/metro/11204__.js";
+import _modDef11198 from "../../../../../_runtime/metro/11198__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -38,14 +38,14 @@ export default function ShinyButton(style) {
   obj.pillStyle = items;
   let tmp3Result;
   if (!loading) {
-    const obj2 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef11204, style: null };
+    const obj2 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef11198, style: null };
     const items1 = [tmp2.sparkleIcon];
     if (disabled) {
       disabled = tmp2.disabled;
     }
     items1[1] = disabled;
     obj2.style = items1;
-    tmp3Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef11204, style: null });
+    tmp3Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef11198, style: null });
   }
   obj.icon = tmp3Result;
   const merged1 = Object.assign(merged);

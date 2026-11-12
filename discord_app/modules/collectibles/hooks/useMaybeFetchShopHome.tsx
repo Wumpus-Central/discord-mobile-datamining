@@ -127,7 +127,7 @@ export function useMaybeFetchCollectiblesShopHome(HOME, arg1, memo) {
               );
             }
           }
-          tmp8 = null != closure_9 && Date.now() - closure_7 < closure_2_10;
+          tmp8 = null != closure_9 && Date.now() - closure_7 < refs;
         }
       }
     }

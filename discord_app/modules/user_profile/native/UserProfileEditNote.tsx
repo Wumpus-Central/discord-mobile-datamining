@@ -65,7 +65,7 @@ export default function UserProfileEditNote(userId) {
             if (closure_5 == null) {
               str = "";
             }
-            closure_1_1(15351)({
+            closure_1_1(15348)({
               location: "UserProfileEditNote",
               hasUnsavedChanges: str !== closure_6,
               onReset() {

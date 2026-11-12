@@ -51,8 +51,8 @@ const obj3 = {
 };
 obj2.menu = {
   paddingTop: nativeDefault.space.PX_4,
-  paddingLeft: fn(13513).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(13513).MESSAGE_EDGE_INSET,
+  paddingLeft: fn(13507).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(13507).MESSAGE_EDGE_INSET,
 };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

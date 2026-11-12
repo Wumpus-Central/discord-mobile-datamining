@@ -111,6 +111,7 @@ const items = [
   dismissible_content.DismissibleContent.PINOT_MEMBER_SETTING_NEW_BADGE,
   dismissible_content.DismissibleContent.PINOT_MEMBER_COACHMARK,
   dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_STYLING_BADGE,
+  dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT,
 ];
 const set = new Set(items);
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFatigueConfig.tsx");

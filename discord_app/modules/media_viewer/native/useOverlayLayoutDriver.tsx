@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/media_viewer/native/useOverlayL
 export function useOverlayLayoutDriver() {
   sharedValue = sharedValue(1652).useSharedValue(0);
   let obj = sharedValue(1652);
-  const mediaViewerDimensions = sharedValue(10127).useMediaViewerDimensions();
+  const mediaViewerDimensions = sharedValue(10126).useMediaViewerDimensions();
   items = [sharedValue, ,];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = noop.useEffect(() => {

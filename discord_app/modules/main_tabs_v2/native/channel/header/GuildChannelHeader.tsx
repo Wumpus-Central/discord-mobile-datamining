@@ -67,7 +67,7 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(12257);
+    const tmpResult = tmp(12251);
     return tmpResult.renderMemberCountText(online, total, flag, tmp(7572).ICON_SIZE[token]);
   }
   const obj2 = channel(504);
@@ -102,7 +102,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
   const channel = guild.channel;
   _slicedToArray = undefined;
   items = [guild(5076).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = _slicedToArray(guild(9494).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
+  const tmp = _slicedToArray(guild(9493).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   dependencyMap = tmp2;
   const tmp3 = tmp[0] === guild(5076).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   _slicedToArray = tmp3;
@@ -138,8 +138,8 @@ function ChannelLinkedLobbyCoachmark(guild) {
     obj.imgSource = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(9494);
-  const coachmark = guild(9501).useCoachmark(guild.iconRef, memo);
+  let obj = guild(9493);
+  const coachmark = guild(9500).useCoachmark(guild.iconRef, memo);
   return null;
 }
 const View = fn(17).View;

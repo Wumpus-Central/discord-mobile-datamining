@@ -29,7 +29,7 @@ import ForumSearchStore from "ForumSearchStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ForumTimestampFormats = fn(8930).ForumTimestampFormats;
+const ForumTimestampFormats = fn(8929).ForumTimestampFormats;
 const Constants = fn(1072);
 ({
   AnalyticsObjectTypes: closure_20,

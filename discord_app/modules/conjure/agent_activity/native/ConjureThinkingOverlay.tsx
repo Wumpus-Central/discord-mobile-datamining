@@ -106,13 +106,13 @@ export default function ConjureThinkingOverlay(projectId) {
   if (tmp5) {
     tmp5 = "end" !== stateFromStores.phase;
   }
-  const text = projectId(13189).useConjureRevealedText(str, { streaming: tmp5 }).text;
+  const text = projectId(13183).useConjureRevealedText(str, { streaming: tmp5 }).text;
   const obj3 = { style: tmp.root, children: null };
   const obj4 = { style: tmp.opaque, children: null };
   const obj5 = { style: tmp.body, children: null };
   const obj6 = { style: tmp.header, children: null };
-  const obj2 = projectId(13189);
-  const items2 = [closure_7(projectId(11257).LightbulbIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND })];
+  const obj2 = projectId(13183);
+  const items2 = [closure_7(projectId(11251).LightbulbIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND })];
   const obj8 = { variant: "body-sm/semibold", color: "text-strong", children: null };
   const intl = tmp2(1113).intl;
   obj8.children = intl.string(_modDef4079.XXYIeI);

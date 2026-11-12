@@ -186,7 +186,7 @@ export function maybeShowAgeGateModal(c0) {
 }
 export function openVoiceChannelActionSheet(channel) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(15960, dependencyMap.paths), "" + c18 + "-" + channel.id, { channel });
+  obj.openLazy(asyncRequireImpl(15955, dependencyMap.paths), "" + c18 + "-" + channel.id, { channel });
 }
 export function hideVoiceChannelActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("" + c18 + "-" + id.id);

@@ -517,7 +517,7 @@ class BugCreateScreen {
                         c5 = 1;
                         c6 = 1;
                         const obj11 = {
-                          value: closure_2_0(11041).submitReport(closure_131_0, closure_131_1, closure_131_2),
+                          value: closure_2_0(11035).submitReport(closure_131_0, closure_131_1, closure_131_2),
                           done: false,
                         };
                         return obj11;
@@ -562,7 +562,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(11040).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(11034).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -679,7 +679,7 @@ class BugCreateScreen {
             tmp8 = tmp12;
           }
           obj.disabled = tmp8;
-          return closure_3_10(HeaderActionButton.HeaderActionButton, obj);
+          return refs(HeaderActionButton.HeaderActionButton, obj);
         },
       });
     }, items3);
@@ -847,8 +847,8 @@ class BugCreateScreen {
         const tmp = FastImageDefault;
         obj3.uri = AvatarUtils.getEmojiURL({ id: emoji, animated: true, size: 48 });
         obj2.source = obj3;
-        obj.icon = closure_2_10(tmp, obj2);
-        return closure_2_10(TableRadioRow.TableRadioRow, obj, value);
+        obj.icon = refs(tmp, obj2);
+        return refs(TableRadioRow.TableRadioRow, obj, value);
       });
       items8[3] = tmp33(tmp21(tmp22[45]).TableRadioGroup, obj27);
       obj28 = { label: null, placeholder: null, onChange: null, autoCorrect: true, autoCapitalize: "sentences" };
@@ -916,7 +916,7 @@ class BugCreateScreen {
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
         return ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(11078, dependencyMap.paths),
+          asyncRequireImpl(11072, dependencyMap.paths),
           "BugReporterFeatureActionSheet",
           { features: null != first7 ? first7.features : [], feature: first8, setFeature },
         );

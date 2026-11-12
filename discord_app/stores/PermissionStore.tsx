@@ -342,7 +342,7 @@ prototype["getGuildPermissionProps"] = function getGuildPermissionProps(guild) {
   };
   let tmp4 = null != currentUser;
   if (tmp4) {
-    tmp4 = closure_1_10(guild, currentUser);
+    tmp4 = refs(guild, currentUser);
   }
   obj.isOwner = tmp4;
   let tmp6 = null != currentUser;
@@ -440,7 +440,7 @@ prototype["canManageUser"] = function canManageUser(BAN_MEMBERS, user, stateFrom
   if (user instanceof UserRecord) {
     id = user.id;
   }
-  if (closure_1_10(stateFromStores, id)) {
+  if (refs(stateFromStores, id)) {
     return false;
   } else {
     const self = this;

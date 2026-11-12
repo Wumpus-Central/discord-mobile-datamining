@@ -119,7 +119,7 @@ function BooleanConfigRule(metadataField) {
         type = type.type;
       }
       if (type == null) {
-        type = closure_2_10;
+        type = refs;
       }
       const obj = { connectionType: type, applicationId, connectionMetadataField: metadataField, operator, value: "1" };
       tmp = obj;
@@ -167,7 +167,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
         type = dependencyMap.type;
       }
       if (type == null) {
-        type = closure_2_10;
+        type = refs;
       }
       const obj = {
         connectionType: type,
@@ -187,7 +187,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(20435).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(20430).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -195,9 +195,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(20435);
-  const tmpResult = metadataField(20435);
-  str1 = metadataField(20435).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(20430);
+  const tmpResult = metadataField(20430);
+  str1 = metadataField(20430).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -307,7 +307,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
             type = dependencyMap.type;
           }
           if (type == null) {
-            type = closure_2_10;
+            type = refs;
           }
           const obj = {
             connectionType: type,
@@ -330,7 +330,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
     };
     return onInputValueChange(metadataField(7888).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(20435).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(20430).displayedValueFor(value, realizedOperatorForResult);
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);

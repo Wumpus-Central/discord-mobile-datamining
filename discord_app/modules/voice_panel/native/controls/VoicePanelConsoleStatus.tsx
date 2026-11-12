@@ -196,8 +196,8 @@ class VoicePanelConsoleStatus {
     return tmp29(tmp2(tmp3[9]).View, obj1);
   }
 }
-const EDGE_GUTTER = fn(11928).EDGE_GUTTER;
-const CONTROLS_HEIGHT = fn(11923).CONTROLS_HEIGHT;
+const EDGE_GUTTER = fn(11922).EDGE_GUTTER;
+const CONTROLS_HEIGHT = fn(11917).CONTROLS_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5243);
@@ -230,7 +230,7 @@ obj2.blockingControlCover = {
 };
 const React5 = createStyles.createStyles(obj2);
 let obj5 = {};
-let merged = Object.assign(fn(11925).MODE_CHANGE_PHYSICS);
+let merged = Object.assign(fn(11919).MODE_CHANGE_PHYSICS);
 obj5.overshootClamping = true;
 let closure_10 = {
   code: "(function VoicePanelConsoleStatusTsx1(finished){let[shouldShow,scheduleOnRN,cleanUp]=this.__closure;if(finished&&!shouldShow.get()){scheduleOnRN(cleanUp);}})",

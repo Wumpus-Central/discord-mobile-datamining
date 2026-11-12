@@ -59,7 +59,7 @@ export default function Checkpoint2026ForwardPreview(checkpointData) {
       });
     } else {
       const obj5 = { color: character(575).colors.BLACK };
-      mapped = jsx(tmp2(15079).ExperimentalCheckpointIcon, { color: character(575).colors.BLACK });
+      mapped = jsx(tmp2(15076).ExperimentalCheckpointIcon, { color: character(575).colors.BLACK });
     }
     obj3.children = mapped;
     <closure_5 style={null}>{null}</closure_5>;

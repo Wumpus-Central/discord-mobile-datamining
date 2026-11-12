@@ -38,7 +38,7 @@ function getPricingPromotionForCollectiblesProduct(pricingPromotionIds) {
           tmp6 = found;
         }
         tmp2 = tmp6;
-        obj3 = pricingPromotionIds(9380);
+        obj3 = pricingPromotionIds(9379);
       }
     }
   }
@@ -52,16 +52,16 @@ const result = size.fileFinishedImporting("modules/collectibles/utils/Collectibl
 export { getPricingPromotionForCollectiblesProduct };
 export function useCollectiblesPricingPromotionForProduct(skuId) {
   collectiblesStorefrontPricingIntegrationEnabled =
-    collectiblesStorefrontPricingIntegrationEnabled(9381).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
+    collectiblesStorefrontPricingIntegrationEnabled(9380).useCollectiblesStorefrontPricingIntegrationEnabled(c7);
   skuId = undefined;
   if (skuId != null) {
     skuId = skuId.skuId;
   }
-  const obj = collectiblesStorefrontPricingIntegrationEnabled(9381);
+  const obj = collectiblesStorefrontPricingIntegrationEnabled(9380);
   const collectiblesStorefrontPrices = collectiblesStorefrontPricingIntegrationEnabled(
-    9380,
+    9379,
   ).useCollectiblesStorefrontPrices(skuId, c7);
-  const tmpResult = collectiblesStorefrontPricingIntegrationEnabled(9380);
+  const tmpResult = collectiblesStorefrontPricingIntegrationEnabled(9379);
   items = [SKUPricesStore];
   const stateFromStores = collectiblesStorefrontPricingIntegrationEnabled(504).useStateFromStores(items, () => {
     let promotionIdsForSkuId;

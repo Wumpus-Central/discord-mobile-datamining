@@ -14,7 +14,7 @@ import ButtonGroup from "../../../../design/components/ButtonGroup/native/Button
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import AuthBackgroundArtDefault from "../../../auth/native/components/atoms/AuthBackgroundArt.tsx";
 import useEaseInEaseOutLayoutAnimationsDefault from "../../../animations/native/useEaseInEaseOutLayoutAnimations.tsx";
-import _modDef16181 from "../../../../../_runtime/metro/16181__.js";
+import _modDef16176 from "../../../../../_runtime/metro/16176__.js";
 import QrLoginSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx";
 import QrSuccessSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -289,7 +289,7 @@ export default function RemoteAuth(arg0) {
   const obj2 = { style: null, source: null };
   const items1 = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj2.style = items1;
-  obj2.source = _modDef16181;
+  obj2.source = _modDef16176;
   items[1] = metroImportDefault(FastImageDefault, obj2);
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { skipEntering: true, children: null };

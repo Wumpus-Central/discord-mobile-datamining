@@ -11,7 +11,7 @@ import MobileThemesUtils from "../../../../client_themes/native/MobileThemesUtil
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import ThemedGradient from "../../../../client_themes/native/ThemedGradient.tsx";
-import _modDef17780 from "../../../../../../_runtime/metro/17780__.js";
+import _modDef17775 from "../../../../../../_runtime/metro/17775__.js";
 import SynchronizeIconNativeDefault from "../../../../client_themes/images/native/SynchronizeIconNative.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../ThemeStore.tsx";
@@ -39,7 +39,7 @@ function GradientThemeBackground(arg0) {
   obj4.mixColorOverride = isThemeDarkResult ? closure_10 : closure_11;
   const items1 = [timestampProducer(ThemedGradientDefault, obj4)];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef17780, style: tmp4.lock };
+    const obj6 = { source: _modDef17775, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
@@ -98,7 +98,7 @@ function CustomThemeBackground(arg0) {
   obj4.customTheme = item;
   const items1 = [timestampProducer(ThemedGradient.CustomThemedGradient, obj4)];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef17780, style: tmp4.lock };
+    const obj6 = { source: _modDef17775, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;

@@ -8,13 +8,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const FriendSourceFlags = fn(1072).FriendSourceFlags;
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IqlCSq);
   },
-  parent: fn(9136).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(9135).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsMutualFriendsSettingValue() {
     const FriendSourceFlagsSetting = setting(5068).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();

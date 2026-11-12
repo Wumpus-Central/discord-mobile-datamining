@@ -85,16 +85,16 @@ function HeaderRow(guild) {
               if (null != base64) {
                 upload = function upload(image, originalMd5, roles) {
                   const combined = "emoji_" + closure_1 + 1;
-                  let obj = closure_1_0(11244);
+                  let obj = closure_1_0(11238);
                   let obj2 = { guildId: image.id, image, name: combined, roles, originalMd5 };
-                  const uploadEmojiResult = closure_1_0(11244).uploadEmoji({
+                  const uploadEmojiResult = closure_1_0(11238).uploadEmoji({
                     guildId: image.id,
                     image,
                     name: combined,
                     roles,
                     originalMd5,
                   });
-                  closure_1_0(11244)
+                  closure_1_0(11238)
                     .uploadEmoji({ guildId: image.id, image, name: combined, roles, originalMd5 })
                     .then(() =>
                       closure_2_1(1252).track(constants.EMOJI_UPLOAD_COMPLETED, { guild_id: image.id, upload_id }),

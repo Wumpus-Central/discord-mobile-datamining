@@ -64,7 +64,7 @@ export default function FamilyCenterTopActivity() {
   const items2 = [stateFromStores];
   [][0] = stateFromStores1;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17309, dependencyMap.paths), "FamilyCenterTopUsers", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17304, dependencyMap.paths), "FamilyCenterTopUsers", {
       topUserActivities: stateFromStores,
     });
   }, items2);

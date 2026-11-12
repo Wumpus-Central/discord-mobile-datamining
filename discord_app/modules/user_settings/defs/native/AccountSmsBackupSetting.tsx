@@ -50,13 +50,13 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
     const tmp5 = asyncRequireImpl(7751, dependencyMap.paths);
   }
 }, 200);
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uHAJ5v);
   },
-  parent: fn(9136).MobileUserSettings.ACCOUNT,
+  parent: fn(9135).MobileUserSettings.ACCOUNT,
   useIsDisabled: function useAccountSMSBackupSettingIsDisabled() {
     items = [UserStore];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -96,7 +96,7 @@ const toggle = SettingBuilders.createToggle({
     }
     return sMSBackupDisabledMessage;
   },
-  usePredicate: fn(17090).useIsTOTPEnabled,
+  usePredicate: fn(17085).useIsTOTPEnabled,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

@@ -368,7 +368,7 @@ export default {
     useAlertStore.openAlert(React5, jsx(ManualReviewDecidedTeenAlertModalDefault, { teenAgeRange, decidedPassed }));
   },
   showManualReviewPendingModal() {
-    useAlertStore.openAlert(closure_1_10, jsx(ManualReviewPendingAlertModalDefault, {}));
+    useAlertStore.openAlert(refs, jsx(ManualReviewPendingAlertModalDefault, {}));
   },
   showManualReviewFallbackModal,
   openUrl(arg0) {

@@ -15,11 +15,11 @@ let closure_8 = {
   user: "a",
   profile: "flexDirection",
   wishlistId: "st",
-  wishlist: "192px",
+  wishlist: 331,
   updatedAt: null,
-  storedUpdatedAt: "\u{1F6B6}\u200D\u2642\uFE0F\u200D\u27A1\uFE0F",
-  fetching: true,
-  error: 15.1,
+  storedUpdatedAt: 1,
+  fetching: "heading-md/semibold",
+  error: "mobile-text-heading-primary",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting(

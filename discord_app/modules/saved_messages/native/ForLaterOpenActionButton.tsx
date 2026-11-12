@@ -50,9 +50,9 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const point = {
-  shape: fn(9437).CutoutShape.Circle,
-  x: fn(10459).ICON_SIZE.sm - 7,
-  y: fn(10459).ICON_SIZE.sm - 8,
+  shape: fn(9436).CutoutShape.Circle,
+  x: fn(10457).ICON_SIZE.sm - 7,
+  y: fn(10457).ICON_SIZE.sm - 8,
   size: 10,
 };
 const createStyles = fn(5243);
@@ -61,7 +61,7 @@ let obj = {
   iconAnchor: null,
   dot: null,
 };
-let size = { width: fn(10459).ICON_SIZE.sm, height: fn(10459).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(10457).ICON_SIZE.sm, height: fn(10457).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = {
   position: "absolute",
@@ -80,7 +80,7 @@ const result = size.fileFinishedImporting("modules/saved_messages/native/ForLate
 export default function ForLaterActionButton(ref) {
   const type = ref.type;
   const onOpen = ref.onOpen;
-  const tmp3 = type === type(11845).SavedMessageSortTypes.REMINDER;
+  const tmp3 = type === type(11839).SavedMessageSortTypes.REMINDER;
   dependencyMap = tmp3;
   items = [SavedMessagesStore];
   const items1 = [tmp3];

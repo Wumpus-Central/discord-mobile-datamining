@@ -36,11 +36,11 @@ function StreamVolumeSlider(arg0) {
   };
   const intl = handleVolumeChange(1113).intl;
   obj3.accessibilityLabel = intl.string(handleVolumeChange(1113).t.pEAl4b);
-  obj2.children = closure_7(handleVolumeChange(16358).Slider, obj3);
+  obj2.children = closure_7(handleVolumeChange(16353).Slider, obj3);
   const items1 = [closure_7(tmp5, obj2)];
   const obj5 = { icon: null, onPress: null, accessibilityLabel: null };
   const obj4 = handleVolumeChange(6170);
-  obj5.icon = closure_7(handleVolumeChange(9417).CheckmarkLargeBoldIcon, { size: "sm" });
+  obj5.icon = closure_7(handleVolumeChange(9416).CheckmarkLargeBoldIcon, { size: "sm" });
   obj5.onPress = onSubmit;
   const intl2 = handleVolumeChange(1113).intl;
   obj5.accessibilityLabel = intl2.string(handleVolumeChange(1113).t["cY+Oob"]);
@@ -93,7 +93,7 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
   let sharedValue;
   ({ kind, onStopWatching, onOpenCall } = ownerId);
   let tmp = closure_12();
-  guildId = sharedValue.useContext(guildId(11924)).guildId;
+  guildId = sharedValue.useContext(guildId(11918)).guildId;
   dependencyMap = tmp5;
   let tmp6 = null;
   if (mode !== sharedValue.HIDDEN) {
@@ -208,9 +208,9 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
     let tmp22Result = null;
     const tmp2Result = tmp2(7656);
     if (null != stateFromStores) {
-      const obj6 = { source: tmp12(9450).getCachedSourceFromURI(stateFromStores), size: tmp12(1187).AvatarSizes.SMALL };
+      const obj6 = { source: tmp12(9449).getCachedSourceFromURI(stateFromStores), size: tmp12(1187).AvatarSizes.SMALL };
       tmp22Result = closure_7(tmp12(1187).Avatar, obj6);
-      const tmp12Result2 = tmp12(9450);
+      const tmp12Result2 = tmp12(9449);
     }
     const obj7 = { pointerEvents: "none", children: tmp22Result };
     const items6 = [closure_7(tmp2(7656), obj7)];
@@ -218,7 +218,7 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
     if ("video" === kind) {
       let ScreenXIcon = tmp12(7483).XSmallIcon;
     } else {
-      ScreenXIcon = tmp12(19911).ScreenXIcon;
+      ScreenXIcon = tmp12(19906).ScreenXIcon;
     }
     const obj8 = { icon: closure_7(ScreenXIcon, { size: "sm" }), onPress: onStopWatching, accessibilityLabel: null };
     const intl = tmp12(1113).intl;
@@ -230,12 +230,12 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
       stringResult = string(t.q3O3J8);
     }
     obj8.accessibilityLabel = stringResult;
-    items6[1] = closure_7(tmp2(19739), obj8);
+    items6[1] = closure_7(tmp2(19734), obj8);
     obj5.children = items6;
     const items7 = [closure_9(tmp2Result, obj5)];
     const items8 = [tmp.row];
     let rowEnd = null;
-    const tmp2Result7 = tmp2(19739);
+    const tmp2Result7 = tmp2(19734);
     if ("video" === kind) {
       rowEnd = tmp.rowEnd;
     }
@@ -256,14 +256,14 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
         return closure_9(tmp2(1652).View, obj4);
       }
       const obj11 = {
-        icon: closure_7(tmp12(17466).FullscreenEnterIcon, { size: "sm" }),
+        icon: closure_7(tmp12(17461).FullscreenEnterIcon, { size: "sm" }),
         onPress: onOpenCall,
         accessibilityLabel: null,
       };
       const intl3 = tmp12(1113).intl;
       obj11.accessibilityLabel = intl3.string(tmp2(3205).MPtef8);
-      tmp22Result3 = closure_7(tmp2(19739), obj11);
-      const tmp2Result9 = tmp2(19739);
+      tmp22Result3 = closure_7(tmp2(19734), obj11);
+      const tmp2Result9 = tmp2(19734);
     } else {
       const obj12 = {
         icon: closure_7(tmp12(7368).VoiceNormalIcon, { size: "sm" }),
@@ -278,8 +278,8 @@ export default noop.memo(function VoicePanelDockPIPOverlay(ownerId) {
         string2Result = string2(tmp12(1113).t.pEAl4b);
       }
       obj12.accessibilityLabel = string2Result;
-      closure_7(tmp2(19739), obj12);
-      const tmp2Result10 = tmp2(19739);
+      closure_7(tmp2(19734), obj12);
+      const tmp2Result10 = tmp2(19734);
     }
     tmp2Result8 = tmp2(7656);
   }

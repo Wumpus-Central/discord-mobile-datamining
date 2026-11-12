@@ -72,9 +72,9 @@ export function useGiftingBadgeCoachmarkVariant(arg0) {
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeExperiment = stateFromStores(11612).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = stateFromStores(11606).GiftingBadgeExperiment;
   let enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(11618).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(11612).GiftingBadgeCoachmarkAudienceExperiment;
   let str = "-DISABLED";
   if (enabled2) {
     str = "";

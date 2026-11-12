@@ -26,7 +26,7 @@ function LaunchpadChannelIcon(channel) {
   obj3.children = closure_8(GuildIconDefault, { guild: stateFromStores, size: tmp2.icon.guildBadgeIconSize });
   const items1 = [
     closure_8(View, obj3),
-    closure_8(channel(13430).ChannelIcon, { channel, size: "sm", wrapperSize: 32 }),
+    closure_8(channel(13424).ChannelIcon, { channel, size: "sm", wrapperSize: 32 }),
   ];
   obj2.children = items1;
   return closure_10(closure_9, obj2);
@@ -141,7 +141,7 @@ export default function renderChannelItem(unread) {
     tmp11Result2 = React5(View, obj5);
   }
   children[3] = tmp11Result2;
-  return tmp8(closure_1_10(React6, { children }), { fontScale });
+  return tmp8(refs(React6, { children }), { fontScale });
 }
 export function getChannelAccessibilityProps(channel) {
   channel = channel.channel;

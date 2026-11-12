@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/NitroBadg
 export default function NitroBadgeUnhiddenCoachmark(markAsDismissed) {
   ({ targetRef, visible } = markAsDismissed);
   markAsDismissed = markAsDismissed.markAsDismissed;
-  const tmp = markAsDismissed(19458)(targetRef, visible);
+  const tmp = markAsDismissed(19453)(targetRef, visible);
   dependencyMap = tmp;
   items = [visible, tmp, markAsDismissed];
   const memo = noop.useMemo(() => {
@@ -43,6 +43,6 @@ export default function NitroBadgeUnhiddenCoachmark(markAsDismissed) {
     };
     return obj;
   }, items);
-  const coachmark = visible(9501).useCoachmark(targetRef, memo);
+  const coachmark = visible(9500).useCoachmark(targetRef, memo);
   return null;
 }

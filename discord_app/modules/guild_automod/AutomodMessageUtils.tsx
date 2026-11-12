@@ -722,7 +722,7 @@ export function getActionHeaderTextMobile(message, author, interactionUserId) {
 export function getActionHeaderText(embeds, channel, arg2) {
   let intl = arg2;
   if (arg2 === undefined) {
-    intl = closure_1_10;
+    intl = refs;
   }
   if (null != channel) {
     let channelName = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
@@ -795,7 +795,7 @@ export function getActionHeaderText(embeds, channel, arg2) {
   } else {
     fn = intl;
     if (!tmp29) {
-      fn = closure_1_10;
+      fn = refs;
     }
   }
   GUILD_ROOM_NOTE_OUTCOME = format(8645).AutomodMessageEmbedKeys.VOICE_CHANNEL_STATUS_OUTCOME;

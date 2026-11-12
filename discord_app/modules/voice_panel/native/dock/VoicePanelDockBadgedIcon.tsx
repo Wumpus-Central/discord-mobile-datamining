@@ -54,7 +54,7 @@ function StreamBadge(progress) {
   obj.children = tmp3Result;
   return closure_5(state(cleanUp[10]).View, obj);
 }
-const VoicePanelDockConstants = fn(11948);
+const VoicePanelDockConstants = fn(11942);
 ({ DOCK_FADE_TIMING: closure_4, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
@@ -64,7 +64,7 @@ const sum2 = fn(1187).BADGE_SIZE + 4;
 let closure_9 = sum2 / 2;
 let closure_10 = sum + fn(1187).BADGE_SIZE / 2;
 let closure_11 = sum1 + fn(1187).BADGE_SIZE / 2;
-const GuildsBarActivityIndicator = fn(18957);
+const GuildsBarActivityIndicator = fn(18952);
 const mediaIcon = GuildsBarActivityIndicator.getMediaIcon({
   audio: false,
   video: false,

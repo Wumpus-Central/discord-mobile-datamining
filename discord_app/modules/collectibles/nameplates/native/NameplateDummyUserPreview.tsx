@@ -113,7 +113,7 @@ export function NameplateDummyUserPreview(hideAvatar) {
   const obj4 = { style: tmp3.avatarContainer, children: null };
   const obj3 = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
   obj4.children = hasOwnProperty(native.Avatar, {
-    source: importDefault(stateFromStores ? 9444 : 9445),
+    source: importDefault(stateFromStores ? 9443 : 9444),
     size: NORMAL,
     "aria-hidden": true,
     style: tmp3.avatar,

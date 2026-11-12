@@ -51,7 +51,7 @@ export default function EmojiOverflowActionSheet(emoji) {
     onClose();
   };
   const items2 = [closure_6(emoji(7379).TableRow, obj7), , ,];
-  const obj9 = { icon: closure_6(emoji(10838).PencilIcon, {}), label: null, onPress: null };
+  const obj9 = { icon: closure_6(emoji(10832).PencilIcon, {}), label: null, onPress: null };
   const obj10 = { variant: "body-md/semibold", children: null };
   const intl2 = emoji(1113).intl;
   obj10.children = intl2.string(emoji(1113).t.bt75uw);
@@ -63,7 +63,7 @@ export default function EmojiOverflowActionSheet(emoji) {
   items2[1] = closure_6(emoji(7379).TableRow, obj9);
   let tmp5Result = null;
   if (null != onSelectRolesForEmoji) {
-    const obj11 = { icon: closure_6(tmp3(10838).PencilIcon, {}), label: null, onPress: null };
+    const obj11 = { icon: closure_6(tmp3(10832).PencilIcon, {}), label: null, onPress: null };
     const obj12 = { variant: "body-md/semibold", children: null };
     const intl3 = tmp3(1113).intl;
     obj12.children = intl3.string(tmp3(1113).t["+riKdA"]);

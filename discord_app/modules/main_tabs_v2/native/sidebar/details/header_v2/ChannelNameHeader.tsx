@@ -54,10 +54,10 @@ function DirectMessageIcon(channel) {
       user: stateFromStores,
       guildId: "Boolean",
       size: tmp2(1187).AvatarSizes.NORMAL,
-      status: "\u2318",
-      isMobileOnline: "RIGHT META",
-      isVROnline: "RIGHT \u2318",
-      statusStyle: "RIGHT CMD",
+      status: "done",
+      isMobileOnline: true,
+      isVROnline: null,
+      statusStyle: "primary",
     };
     let isSystemUserResult;
     if (stateFromStores != null) {

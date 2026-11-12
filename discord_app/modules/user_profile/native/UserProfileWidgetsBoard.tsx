@@ -19,7 +19,7 @@ function AddGameButton(ref) {
     ref,
     size: "sm",
     variant: "secondary",
-    icon: closure_8(ref(10382).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }),
+    icon: closure_8(ref(10380).PlusSmallIcon, { size: "sm", color: widgetType(575).colors.ICON_DEFAULT }),
     accessibilityLabel: null,
     disabled: null,
     onPress: null,
@@ -65,7 +65,7 @@ let obj4 = { paddingVertical: nativeDefault.space.PX_16, textAlign: "center" };
 obj.singleGameEmptyState = {
   flexDirection: "row",
   alignItems: "center",
-  gap: fn(12048).GAME_COVER_DETAILS_GAP,
+  gap: fn(12042).GAME_COVER_DETAILS_GAP,
   paddingVertical: nativeDefault.space.PX_8,
 };
 obj.singleGameEmptyStateText = { flex: 1 };

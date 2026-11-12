@@ -17,7 +17,7 @@ import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10177).UserRowModes;
+const UserRowModes = fn(10175).UserRowModes;
 const MessageSendLocation = fn(5248).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
@@ -123,7 +123,7 @@ export default function ActivityShareLinkModal(applicationId) {
                 dependencyMap = 1;
                 c3 = 1;
                 let obj4 = {
-                  value: Promise.all(first1.map(tmp2(10178).getOrResolveChannelIdFromDestinationId)),
+                  value: Promise.all(first1.map(tmp2(10176).getOrResolveChannelIdFromDestinationId)),
                   done: false,
                 };
                 return obj4;
@@ -136,7 +136,7 @@ export default function ActivityShareLinkModal(applicationId) {
             throw value;
           } else if (arg0 !== 2) {
             closure_128_0 = value.filter(tmp2(1380).isNotNullish);
-            closure_128_1 = tmp2(16831).resolveActivityShareMessageContent(
+            closure_128_1 = tmp2(16826).resolveActivityShareMessageContent(
               closure_129_4,
               closure_129_15,
               closure_129_13,
@@ -176,7 +176,7 @@ export default function ActivityShareLinkModal(applicationId) {
                             c2 = 1;
                             c1 = 1;
                             const obj7 = {
-                              value: obj2.sendMessage(closure_0, closure_2_1(8720).parse(channel, c1), false, obj6),
+                              value: obj2.sendMessage(closure_0, closure_2_1(8719).parse(channel, c1), false, obj6),
                               done: false,
                             };
                             return obj7;
@@ -210,7 +210,7 @@ export default function ActivityShareLinkModal(applicationId) {
                 };
               })(),
             );
-            let obj5 = tmp2(16831);
+            let obj5 = tmp2(16826);
             let obj7 = { text: null };
             const intl = tmp2(1113).intl;
             const obj8 = { applicationName: closure_129_15.name };
@@ -218,8 +218,8 @@ export default function ActivityShareLinkModal(applicationId) {
             tmp3(5952).open("ACTIVITY_SHARE_LINK_SUCCESS", obj7);
             closure_129_5(true, closure_129_8);
             let obj6 = tmp3(5952);
-            const result = tmp2(16829).closeActivityShareLinkModal();
-            const obj9 = tmp2(16829);
+            const result = tmp2(16824).closeActivityShareLinkModal();
+            const obj9 = tmp2(16824);
           }
           c3 = 3;
           let obj = { value, done: true };

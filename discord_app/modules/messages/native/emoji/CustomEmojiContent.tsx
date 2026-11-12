@@ -341,7 +341,7 @@ export default function CustomEmojiContent(emojiNode) {
         const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
         function handleOpenEmojiOptionsMenu() {
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(11248, dependencyMap.paths),
+            asyncRequireImpl(11242, dependencyMap.paths),
             "EmojiOptionsActionSheet",
             { emojiSrc: emojiNode.src },
             "stack",

@@ -30,7 +30,7 @@ import VideoHookDX12Experiment2 from "../modules/media_engine/VideoHookDX12Exper
 import UpscaleSmallCapturedFramesExperiment2 from "../modules/media_engine/UpscaleSmallCapturedFramesExperiment.tsx";
 import GlobalFramePoolLockExperiment from "../modules/media_engine/GlobalFramePoolLockExperiment.tsx";
 import AudioFidelityExperiment from "../modules/media_engine/AudioFidelityExperiment.tsx";
-import _modDef16398 from "../../_runtime/metro/16398__.js";
+import _modDef16393 from "../../_runtime/metro/16393__.js";
 import AudioEffectsExperimentDefault from "../modules/media_engine/AudioEffectsExperiment.tsx";
 import queryAudioEffectsDefault from "../modules/noise_cancellation/queryAudioEffects.tsx";
 import IOSAudioInterruptExperiment from "../modules/media_engine/IOSAudioInterruptExperiment.tsx";
@@ -448,7 +448,7 @@ function updateVideo() {
               if (tmp41 != null) {
                 release = tmp41.os.release;
               }
-              isWindowsResult = _modDef16398.satisfies(release, closure_1_29);
+              isWindowsResult = _modDef16393.satisfies(release, closure_1_29);
             }
             if (!isWindowsResult) {
               let isWindowsResult1 = PlatformUtils.isWindows();
@@ -507,7 +507,7 @@ function updateVideo() {
                 if (tmp59 != null) {
                   release1 = tmp59.os.release;
                 }
-                isMacResult = _modDef16398.satisfies(release1, dependencyMap3);
+                isMacResult = _modDef16393.satisfies(release1, dependencyMap3);
               }
               const obj9 = { desktopDescription: null, quality: null };
               obj7.allowScreenCaptureKit = isMacResult;
@@ -533,7 +533,7 @@ function updateVideo() {
                 if (tmp47 != null) {
                   release2 = tmp47.os.release;
                 }
-                isWindowsResult2 = _modDef16398.satisfies(release2, closure_1_27);
+                isWindowsResult2 = _modDef16393.satisfies(release2, closure_1_27);
               }
               const tmp68Result8 = PlatformUtils;
             }
@@ -709,12 +709,12 @@ function updateConnectionVoiceProcessing(setEchoCancellation) {
   obj2 = { enabled: tmp7 };
   const tmp12 = defaultConfig.agc2Enabled ? closure_57 : { useAGC2: false };
   const tmp5 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId) || tmp2.noiseSuppression;
-  const tmp11ResultResult = tmp11(12944)(noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+  const tmp11ResultResult = tmp11(12938)(noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
   if (tmp11ResultResult !== noiseCancellation) {
     CertifiedDeviceStore.info("Falling back to system noise suppression.");
   }
   setEchoCancellation.setNoiseCancellation(tmp11ResultResult);
-  const tmp11Result3 = tmp11(16390);
+  const tmp11Result3 = tmp11(16385);
   if (tmp11ResultResult) {
     let defaultConfig2 = tmp11Result3.getConfig({ location: "setNoiseCancellation" });
   } else {
@@ -725,18 +725,18 @@ function updateConnectionVoiceProcessing(setEchoCancellation) {
   );
   const tmpResult = getSettings();
   const inputDeviceId2 = tmpResult.inputDeviceId;
-  const tmp11Result = tmp11(12944);
+  const tmp11Result = tmp11(12938);
   const tmp22 = CertifiedDeviceStore.hasEchoCancellation(inputDeviceId2) || tmpResult.echoCancellation;
   const tmp23 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId2) || tmpResult.noiseSuppression;
-  const tmp11Result4 = tmp11(12944);
-  const tmp11Result2Result = tmp11(12944)(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+  const tmp11Result4 = tmp11(12938);
+  const tmp11Result2Result = tmp11(12938)(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
   const voiceFidelityCaps = AudioFidelityExperiment.getVoiceFidelityCaps(
     { location: "updateVoiceFidelityCaps" },
     { krispEnabled: tmp11Result2Result, noiseSuppressionEnabled: tmp23, echoCancellationEnabled: tmp22 },
   );
   const result2 = result.setVoiceSampleRateCap(voiceFidelityCaps.maxSampleRateHz);
   const result3 = result.setVoiceChannelCountCap(voiceFidelityCaps.maxChannelCount);
-  if (tmp11(16397)()) {
+  if (tmp11(16392)()) {
     if (setEchoCancellation.context === MediaEngineContextTypes.DEFAULT) {
       const tmp32 = inputDevices[mediaEngineStore.getInputDeviceId(mediaEngineStore)];
       let windowsDeviceService;
@@ -1243,8 +1243,8 @@ function setLoopback() {
   };
   const tmp16 = CertifiedDeviceStore.hasEchoCancellation(inputDeviceId2) || tmpResult.echoCancellation;
   const tmp17 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId2) || tmpResult.noiseSuppression;
-  const tmp10Result = tmp10(12944);
-  const tmp10ResultResult = tmp10(12944)(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
+  const tmp10Result = tmp10(12938);
+  const tmp10ResultResult = tmp10(12938)(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
   const voiceFidelityCaps = AudioFidelityExperiment.getVoiceFidelityCaps(
     { location: "updateVoiceFidelityCaps" },
     { krispEnabled: tmp10ResultResult, noiseSuppressionEnabled: tmp17, echoCancellationEnabled: tmp16 },
@@ -1866,7 +1866,7 @@ const NativePermissionConstants = fn(6839);
 ({ NativePermissionStates: closure_32, NativePermissionTypes } = NativePermissionConstants);
 const UserSettingsConstants = fn(1082);
 ({ ProtoAudioSettingsContextTypes: closure_34, UserSettingsTypes: closure_35 } = UserSettingsConstants);
-const InputProfile = fn(16388).InputProfile;
+const InputProfile = fn(16383).InputProfile;
 Constants = fn(6012);
 ({
   AudioSubsystems: closure_37,
@@ -1961,8 +1961,8 @@ const outputDevices = {
     name: "No Output Devices",
     disabled: true,
     guid: "channel",
-    hardwareId: "flex",
-    containerId: "isArray",
+    hardwareId: "create",
+    containerId: "applicationId",
   },
 };
 let dependencyMap = {
@@ -1972,9 +1972,9 @@ let dependencyMap = {
     index: 0,
     name: "No Video Devices",
     disabled: true,
-    guid: "channelId",
-    hardwareId: "radii",
-    containerId: "resolve",
+    guid: "channel",
+    hardwareId: "width",
+    containerId: "isArray",
   },
 };
 const timeout = new fn(5087).Timeout();
@@ -2084,7 +2084,7 @@ prototype["initialize"] = function initialize() {
       }
       setAttenuation.setExperimentFlag(closure_45.RESET_DECODER_ON_ERRORS, true);
       setAttenuation.setExperimentFlag(closure_45.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS, true);
-      tmp9Result21 = tmp9(16443);
+      tmp9Result21 = tmp9(16438);
       if (obj6.getConfig({ location: "MediaEngineStore" }).swallowVolumeOnlySpeakingEvents) {
         setAttenuation.setExperimentFlag(closure_45.SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS, true);
       }
@@ -2115,8 +2115,8 @@ prototype["initialize"] = function initialize() {
                 release = DiscordNative2.os.release;
               }
             }
-            satisfiesResult = closure_1(16398).satisfies(release, closure_38);
-            const tmp22Result = closure_1(16398);
+            satisfiesResult = closure_1(16393).satisfies(release, closure_38);
+            const tmp22Result = closure_1(16393);
           }
           setAttenuation.setExperimentFlag(closure_45.H265_DISABLE_ENCODE, !satisfiesResult);
         } else {
@@ -2125,7 +2125,7 @@ prototype["initialize"] = function initialize() {
               setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_ENCODE, true);
             }
             setAttenuation.setExperimentFlag(closure_45.SIGNAL_AV1_DECODE, true);
-            tmp9Result25 = tmp9(16444);
+            tmp9Result25 = tmp9(16439);
           } else {
             let isIOSResult = tmp9(1377).isIOS();
             if (!isIOSResult) {
@@ -2147,9 +2147,9 @@ prototype["initialize"] = function initialize() {
       if (tmp9Result28.isWeb()) {
         setAttenuation.setExperimentFlag(
           closure_45.BROWSER_HEVC,
-          closure_1(16445).getConfig({ location: "MediaEngineStore" }).enabled,
+          closure_1(16440).getConfig({ location: "MediaEngineStore" }).enabled,
         );
-        const tmp22Result2 = closure_1(16445);
+        const tmp22Result2 = closure_1(16440);
       }
       tmp9Result28 = tmp9(1377);
       enabled = tmp9(1377).isWindows();
@@ -2161,8 +2161,8 @@ prototype["initialize"] = function initialize() {
         enabled = startsWithResult;
       }
       if (enabled) {
-        enabled = tmp9(16446).getWmfGpuEncode("MediaEngineStore").enabled;
-        const tmp9Result30 = tmp9(16446);
+        enabled = tmp9(16441).getWmfGpuEncode("MediaEngineStore").enabled;
+        const tmp9Result30 = tmp9(16441);
       }
       if (enabled) {
         setAttenuation.setExperimentFlag(closure_45.WMF_GPU_ENCODE, true);
@@ -2183,8 +2183,8 @@ prototype["initialize"] = function initialize() {
         enabled2 = 1 === closure_129;
       }
       if (enabled2) {
-        enabled2 = tmp9(16447).getWmfGpuEncodeIntel("MediaEngineStore").enabled;
-        const tmp9Result32 = tmp9(16447);
+        enabled2 = tmp9(16442).getWmfGpuEncodeIntel("MediaEngineStore").enabled;
+        const tmp9Result32 = tmp9(16442);
       }
       if (enabled2) {
         setAttenuation.setExperimentFlag(closure_45.WMF_GPU_ENCODE, true);
@@ -2206,8 +2206,8 @@ prototype["initialize"] = function initialize() {
         enabled3 = 1 === closure_129;
       }
       if (enabled3) {
-        enabled3 = tmp9(16448).getWmfCpuEncodeIntel("MediaEngineStore").enabled;
-        const tmp9Result34 = tmp9(16448);
+        enabled3 = tmp9(16443).getWmfCpuEncodeIntel("MediaEngineStore").enabled;
+        const tmp9Result34 = tmp9(16443);
       }
       if (enabled3) {
         setAttenuation.setExperimentFlag(closure_45.INTEL_GPU_DISABLE, true);
@@ -2222,13 +2222,13 @@ prototype["initialize"] = function initialize() {
         enabled4 = startsWithResult3;
       }
       if (enabled4) {
-        enabled4 = tmp9(16446).getWmfGpuEncode("MediaEngineStore").enabled;
-        const tmp9Result36 = tmp9(16446);
+        enabled4 = tmp9(16441).getWmfGpuEncode("MediaEngineStore").enabled;
+        const tmp9Result36 = tmp9(16441);
       }
       if (enabled4) {
         setAttenuation.setExperimentFlag(closure_45.WMF_GPU_ENCODE, true);
       }
-      const result2 = closure_70.setHasFullbandPerformance(closure_1(16449)());
+      const result2 = closure_70.setHasFullbandPerformance(closure_1(16444)());
       const result3 = setAttenuation.setRemoteAudioHistory(1000);
       const tmp5Result = closure_139(setAttenuation.context);
       const result4 = setAttenuation.setPostponeDecodeLevel(100);
@@ -2764,8 +2764,8 @@ prototype["initialize"] = function initialize() {
     obj2.videoHook = closure_1_70.supports(constants3.VIDEO_HOOK);
     obj.defaultsDeep(modeOptions, obj2);
     if (tmp6) {
-      modeOptions.modeOptions.shortcut = pollMetrics(16450).toCombo(modeOptions.modeOptions.shortcut);
-      const tmp2Result = pollMetrics(16450);
+      modeOptions.modeOptions.shortcut = pollMetrics(16445).toCombo(modeOptions.modeOptions.shortcut);
+      const tmp2Result = pollMetrics(16445);
     }
     let tmp7 = null != modeOptions.modeOptions;
     if (tmp7) {
@@ -3719,7 +3719,7 @@ prototype["supportsExperimentalSoundshare"] = function supportsExperimentalSound
     if (tmp4 != null) {
       release = tmp4.os.release;
     }
-    supportsResult = _modDef16398.satisfies(release, state2);
+    supportsResult = _modDef16393.satisfies(release, state2);
   }
   return supportsResult;
 };
@@ -3734,7 +3734,7 @@ prototype["supportsHookSoundshare"] = function supportsHookSoundshare() {
     if (tmp6 != null) {
       release = tmp6.os.release;
     }
-    isWindowsResult = _modDef16398.satisfies(release, closure_1_30);
+    isWindowsResult = _modDef16393.satisfies(release, closure_1_30);
   }
   return isWindowsResult;
 };
@@ -3822,7 +3822,7 @@ prototype["supportsScreenSoundshare"] = function supportsScreenSoundshare() {
       if (tmp12 != null) {
         release = tmp12.os.release;
       }
-      supportsResult = _modDef16398.satisfies(release, closure_1_25);
+      supportsResult = _modDef16393.satisfies(release, closure_1_25);
     }
     if (supportsResult) {
       let satisfiesResult = PlatformUtils.isMac() && result.supports(Features.SCREEN_CAPTURE_KIT);
@@ -3832,7 +3832,7 @@ prototype["supportsScreenSoundshare"] = function supportsScreenSoundshare() {
         if (tmp18 != null) {
           release1 = tmp18.os.release;
         }
-        satisfiesResult = _modDef16398.satisfies(release1, dependencyMap3);
+        satisfiesResult = _modDef16393.satisfies(release1, dependencyMap3);
       }
       supportsResult = satisfiesResult;
       const tmpResult = PlatformUtils;
@@ -6804,9 +6804,9 @@ const mediaEngineStore = new MediaEngineStore(DispatcherDefault, {
         index: 0,
         name: tmp5,
         disabled: true,
-        guid: "channel",
-        hardwareId: "style",
-        containerId: "flags",
+        guid: "channelId",
+        hardwareId: "useState",
+        containerId: "type",
       };
       obj2 = {};
       obj2[obj.id] = obj;
@@ -6993,9 +6993,9 @@ const mediaEngineStore = new MediaEngineStore(DispatcherDefault, {
         index: 0,
         name: tmp21,
         disabled: true,
-        guid: "channel",
-        hardwareId: "style",
-        containerId: "flags",
+        guid: "channelId",
+        hardwareId: "useState",
+        containerId: "type",
       };
       const obj6 = {};
       obj6[obj3.id] = obj3;
@@ -7205,9 +7205,9 @@ const mediaEngineStore = new MediaEngineStore(DispatcherDefault, {
         index: 0,
         name: tmp38,
         disabled: true,
-        guid: "channel",
-        hardwareId: "style",
-        containerId: "flags",
+        guid: "channelId",
+        hardwareId: "useState",
+        containerId: "type",
       };
       const obj8 = {};
       obj8[obj7.id] = obj7;
@@ -8401,8 +8401,8 @@ const mediaEngineStore = new MediaEngineStore(DispatcherDefault, {
         if (tmpResult6 != null) {
           release = tmpResult6.os.release;
         }
-        isWindowsResult = _modDef16398.satisfies(release, closure_1_29);
-        const tmpResult5 = _modDef16398;
+        isWindowsResult = _modDef16393.satisfies(release, closure_1_29);
+        const tmpResult5 = _modDef16393;
       }
       obj8.useGraphicsCapture = isWindowsResult;
       obj8.useLoopback = mediaEngineStore.getExperimentalSoundshare();
@@ -8417,8 +8417,8 @@ const mediaEngineStore = new MediaEngineStore(DispatcherDefault, {
         if (tmpResult8 != null) {
           release1 = tmpResult8.os.release;
         }
-        isMacResult = _modDef16398.satisfies(release1, dependencyMap3);
-        const tmpResult7 = _modDef16398;
+        isMacResult = _modDef16393.satisfies(release1, dependencyMap3);
+        const tmpResult7 = _modDef16393;
       }
       const obj9 = {
         desktopDescription: null,
@@ -8492,7 +8492,7 @@ export function supportsWindowsGraphicsCapture() {
     if (tmp4 != null) {
       release = tmp4.os.release;
     }
-    isWindowsResult = _modDef16398.satisfies(release, closure_1_29);
+    isWindowsResult = _modDef16393.satisfies(release, closure_1_29);
   }
   return isWindowsResult;
 }

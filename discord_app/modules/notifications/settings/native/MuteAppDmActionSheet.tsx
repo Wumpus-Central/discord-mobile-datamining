@@ -48,7 +48,7 @@ export default function MuteAppDMActionSheet(channel) {
     children: closure_4(View, {
       style: tmp.iconBackground,
       "aria-hidden": true,
-      children: closure_4(channel(10933).BellIcon, { size: "md", color: "interactive-text-default" }),
+      children: closure_4(channel(10927).BellIcon, { size: "md", color: "interactive-text-default" }),
     }),
   };
   items = [closure_4(View, obj3), , , ,];

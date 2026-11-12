@@ -78,7 +78,7 @@ function ChangeLogParagraph(state) {
   if (Paragraph == null) {
     Paragraph = output(5866).Text;
   }
-  const result = output(9288).splitParagraphAtImages(node.content);
+  const result = output(9287).splitParagraphAtImages(node.content);
   if (true !== state.changelogImagesDisabled) {
     if (tmp5Result.hasImageSegment(result)) {
       let obj2 = {
@@ -116,7 +116,7 @@ function ChangeLogParagraph(state) {
     }
     return tmp7;
   }
-  let obj = output(9288);
+  let obj = output(9287);
   tmp7 = <Paragraph key={state.key} variant="body-sm/normal" style={tmp.text}>{output(node.content, state)}</Paragraph>;
   let obj3 = { variant: "body-sm/normal", style: tmp.text, children: output(node.content, state) };
 }

@@ -17,13 +17,13 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5243);
 let obj = {
-  row: { flexDirection: "row", alignItems: "center", gap: fn(12048).GAME_COVER_DETAILS_GAP },
+  row: { flexDirection: "row", alignItems: "center", gap: fn(12042).GAME_COVER_DETAILS_GAP },
   editingCommentRow: { alignItems: "flex-start" },
   details: null,
   comment: null,
   commentText: null,
 };
-let obj3 = { flexDirection: "row", alignItems: "center", gap: fn(12048).GAME_COVER_DETAILS_GAP };
+let obj3 = { flexDirection: "row", alignItems: "center", gap: fn(12042).GAME_COVER_DETAILS_GAP };
 obj.details = { flex: 1, gap: nativeDefault.space.PX_8 };
 const obj4 = { flex: 1, gap: nativeDefault.space.PX_8 };
 obj.comment = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 };

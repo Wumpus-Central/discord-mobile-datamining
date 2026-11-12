@@ -58,8 +58,8 @@ class RedesignNotificationModal {
   }
 }
 const View = fn(17).View;
-const PermissionStateType = fn(14716).PermissionStateType;
-const NotificationPermissionConstants = fn(14717);
+const PermissionStateType = fn(14712).PermissionStateType;
+const NotificationPermissionConstants = fn(14713);
 ({ EventActionLocation: closure_6, EventActionType: metroImportDefault } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
@@ -71,7 +71,7 @@ let obj2 = {
     paddingTop: nativeDefault.space.PX_48,
   },
 };
-let closure_10 = createStyles.createStyles(obj2);
+const refs = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/components/notification/RedesignNotificationModal.tsx");
 

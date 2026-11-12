@@ -18,9 +18,9 @@ export default function GuildProfileCreateTagUpsell(guildId) {
   guildId = guildId.guildId;
   let creatableGuilds;
   const tmp = closure_5();
-  const guildTagCreationUpsell = guildId(10607).useGuildTagCreationUpsell(
+  const guildTagCreationUpsell = guildId(10605).useGuildTagCreationUpsell(
     "GuildProfileCreateTagUpsell",
-    creatableGuilds(10610),
+    creatableGuilds(10608),
   );
   creatableGuilds = guildTagCreationUpsell.creatableGuilds;
   let tmp5 = null;

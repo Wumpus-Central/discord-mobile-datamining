@@ -6,9 +6,9 @@ let size = {
   mode: "isArray",
   width: false,
   height: null,
-  containerHeight: 0,
-  showSecondaryPIP: false,
-  scale: null,
+  containerHeight: 6825665,
+  showSecondaryPIP: 30,
+  scale: 90,
 };
 const ReanimatedHelperTypes = fn(7782);
 size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);

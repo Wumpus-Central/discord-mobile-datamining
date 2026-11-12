@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9039 from "../../../../../_runtime/metro/09039__.js";
-import _modDef10665 from "../../../../../_runtime/metro/10665__.js";
+import _modDef9038 from "../../../../../_runtime/metro/09038__.js";
+import _modDef10658 from "../../../../../_runtime/metro/10658__.js";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoiceActionUtils from "../../../video_calls/native/VoiceActionUtils.tsx";
 import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
@@ -89,7 +89,7 @@ function DockHangUpButton(channelId) {
   const obj = { accessibilityLabel: null, variant: "critical-primary", size: "sm", icon: null, onPress: null };
   const intl = channelId(1113).intl;
   obj.accessibilityLabel = intl.string(channelId(1113).t["6vrfgt"]);
-  obj.icon = _modDef9039;
+  obj.icon = _modDef9038;
   obj.onPress = callback;
   return closure_9(channelId(7922).IconButton, obj);
 }
@@ -106,7 +106,7 @@ function DockSoundboardButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.ABjMWI);
-  obj.icon = _modDef10665;
+  obj.icon = _modDef10658;
   obj.onPress = onPress;
   obj.disabled = disabled;
   obj.accessibilityHint = disabledAccessibilityHint;
@@ -118,7 +118,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5243);
 let obj = {
-  actions: { flexDirection: "row", alignItems: "center", gap: fn(11948).DOCK_GAP },
+  actions: { flexDirection: "row", alignItems: "center", gap: fn(11942).DOCK_GAP },
   buttonShadow: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS },
 };
 let closure_11 = createStyles.createStyles(obj);
@@ -177,5 +177,5 @@ export default noop.memo(function VoicePanelDockControls(measureGlowOffset) {
   obj19.style = items4;
   items2[2] = tmp14(View, obj19);
   obj2.children = items2;
-  return closure_1_10(View, obj2);
+  return refs(View, obj2);
 });

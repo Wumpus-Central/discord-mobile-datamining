@@ -13,8 +13,8 @@ const _modDef1652 = _mod1652;
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(10940).useChannelCallStore;
-const Constants = fn(12624);
+const useChannelCallStore = fn(10934).useChannelCallStore;
+const Constants = fn(12618);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_6 } = Constants);
 const jsx = fn(21).jsx;
 const createStyles = fn(5243);

@@ -78,8 +78,8 @@ function ConnectedNotificationSettings(guildId) {
     items1,
   );
   const obj2 = guildId(504);
-  shouldUseNewNotificationSystem = guildId(11023).useShouldUseNewNotificationSystem("NotificationSettingsModalNative");
-  const obj3 = guildId(11023);
+  shouldUseNewNotificationSystem = guildId(11017).useShouldUseNewNotificationSystem("NotificationSettingsModalNative");
+  const obj3 = guildId(11017);
   const items2 = [UserGuildSettingsStore];
   const items3 = [shouldUseNewNotificationSystem, memo, tmp3.channelOverrides];
   const obj5 = { children: null };
@@ -171,8 +171,8 @@ class NotificationSettings extends PureComponent {
         const _HermesInternal = HermesInternal;
         const tmpResult2 = ActionSheetActionCreatorsDefault;
         const obj2 = { guildId };
-        tmpResult2.openLazy(asyncRequireImpl(11018, dependencyMap.paths), "muteSettings" + guildId, obj2);
-        const tmp7 = asyncRequireImpl(11018, dependencyMap.paths);
+        tmpResult2.openLazy(asyncRequireImpl(11012, dependencyMap.paths), "muteSettings" + guildId, obj2);
+        const tmp7 = asyncRequireImpl(11012, dependencyMap.paths);
       }
     };
     applyArgumentsResult.handleToggleChange = function handleToggleChange(mobile_push, arg1, NotificationLabel) {
@@ -429,7 +429,7 @@ prototype["renderMuteSection"] = function renderMuteSection() {
   items = [closure_1_29(tmp6(7680).TableRowGroup, obj3, "mute")];
   let tmp10Result = null;
   if (muted) {
-    const obj5 = { muteConfig: props.muteConfig, type: tmp6(11022).MuteSettingType.SERVER };
+    const obj5 = { muteConfig: props.muteConfig, type: tmp6(11016).MuteSettingType.SERVER };
     tmp10Result = closure_1_29(MutedUntilTextDefault, obj5, "muted-until");
   }
   items[1] = tmp10Result;
@@ -585,7 +585,7 @@ export default function NotificationSettingsModal() {
     obj4.title = intl2.string(util.t.s7vIQT);
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.render = function render(guildId, navigation) {
-      return closure_1_29(closure_1_1(20637), { guildId: guildId.guildId, navigation });
+      return closure_1_29(closure_1_1(20632), { guildId: guildId.guildId, navigation });
     };
     obj[constants.ADD_OVERRIDE] = obj4;
     const obj6 = { headerLeft: null, title: null, render: null };
@@ -593,7 +593,7 @@ export default function NotificationSettingsModal() {
     const intl3 = util.intl;
     obj6.title = intl3.string(util.t.h850Ss);
     obj6.render = function render(channelId) {
-      return closure_1_29(closure_1_1(11016), { channelId: channelId.channelId });
+      return closure_1_29(closure_1_1(11010), { channelId: channelId.channelId });
     };
     obj[constants.CHANNEL_OVERRIDE] = obj6;
     return obj;

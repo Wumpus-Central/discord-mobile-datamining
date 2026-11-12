@@ -454,7 +454,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       obj14.label = intl5.string(tmp5(tmp2[23]).t.OQ9MKu);
       obj14.IconComponent = tmp5(tmp2[32]).LinkIcon;
       obj14.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10851, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10845, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj14);
     }
@@ -837,7 +837,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             obj43.IconComponent = tmp5(tmp2[74]).ChatIcon;
             obj43.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10938, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10932, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons20.push(obj43);
@@ -1068,34 +1068,12 @@ function ChannelLongPressActionSheetConnected(channel) {
         const obj57 = { showGradient: true, startExpanded: null, header: null, children: null };
         tmp121 = channel.isGuildStageVoice() && stateFromStores6 && canConnect;
         obj57.startExpanded = tmp5(tmp2[115]).isMetaQuest();
-        const header = tmp48.header;
-        let icon;
-        if (header != null) {
-          icon = header.icon;
+        let header = tmp48.header;
+        if (header == null) {
+          const obj58 = { icon: tmp24, title: tmpResultResult, subtitle: formatToPlainStringResult };
+          header = tmp23(tmp5(tmp2[116]).ActionSheetIconHeader, obj58);
         }
-        if (icon == null) {
-          icon = tmp24;
-        }
-        const obj58 = { icon, title: null, subtitle: null };
-        const header2 = tmp48.header;
-        let title;
-        if (header2 != null) {
-          title = header2.title;
-        }
-        if (title == null) {
-          title = tmpResultResult;
-        }
-        obj58.title = title;
-        const header3 = tmp48.header;
-        let subtitle;
-        if (header3 != null) {
-          subtitle = header3.subtitle;
-        }
-        if (subtitle == null) {
-          subtitle = formatToPlainStringResult;
-        }
-        obj58.subtitle = subtitle;
-        obj57.header = tmp23(tmp5(tmp2[116]).ActionSheetIconHeader, obj58);
+        obj57.header = header;
         obj57.children = items14.map((buttons) => {
           const obj = { hasIcons: true, children: null };
           buttons = buttons.buttons;
@@ -1249,7 +1227,7 @@ function ChannelLongPressActionSheetConnected(channel) {
   tmp70 = null != remixProject && null != guildId1;
   tmp72 = null != tmp52 && null != guildId1;
 }
-const SafetyWarningTypes = fn(10833).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10827).SafetyWarningTypes;
 const ChannelRecord = fn(5096);
 ({
   isGuildTextChannelType: closure_9,
@@ -1269,7 +1247,7 @@ const Constants = fn(1072);
   Permissions: closure_30,
   ZERO_STRING_GUILD_ID: closure_31,
 } = Constants);
-let closure_32 = fn(10834).ChannelDetailsNavigatorScreens;
+let closure_32 = fn(10828).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel/native/ChannelLongPressActionSheet.tsx");

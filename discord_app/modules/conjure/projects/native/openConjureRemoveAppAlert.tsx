@@ -94,7 +94,7 @@ function ConjureRemoveFromServerAlert(target) {
   let tmp5Result = null;
   if (optionalItems.length > 0) {
     let obj5 = { items: [], optionalItems };
-    tmp5Result = closure_6(tmp(13212), obj5);
+    tmp5Result = closure_6(tmp(13206), obj5);
   }
   items = [
     tmp5Result,

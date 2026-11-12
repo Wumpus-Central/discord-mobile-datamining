@@ -3,7 +3,7 @@ import Constants from "../../../../../Constants.tsx";
 import ReactionUtils from "../../../../reactions/ReactionUtils.tsx";
 import _modDef7673 from "../../../../../../_runtime/metro/07673__.js";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
-import _modDef9107 from "../../../../../../_runtime/metro/09107__.js";
+import _modDef9106 from "../../../../../../_runtime/metro/09106__.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -24,13 +24,7 @@ export function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        const obj4 = {
-          id: emojiId,
-          name: "a",
-          animated: customGuildEmoji.animated,
-          src: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000153575201523127,
-          displayName: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000470045409719548,
-        };
+        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: null, displayName: null };
         const obj5 = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj4.src = emojiId(str2[10]).getEmojiURL(obj5);
         const obj6 = emojiId(str2[10]);
@@ -90,7 +84,7 @@ export function createForumPostActions(arg0) {
     let tmp6 = importDefault;
     let tmp8 = require;
   } else {
-    assetUriForEmbed = getAssetUriForEmbed(_modDef9107);
+    assetUriForEmbed = getAssetUriForEmbed(_modDef9106);
     tmp6 = importDefault;
     tmp8 = require;
   }
@@ -120,7 +114,7 @@ export function createForumPostActions(arg0) {
       const intl4 = tmp8(1113).intl;
       obj.cta = intl4.string(tmp8(1113).t.C5UQC9);
       const tmp6Result = tmp6(2185);
-      obj.icon = tmp8(8588).getAssetUriForEmbed(tmp6(9108));
+      obj.icon = tmp8(8588).getAssetUriForEmbed(tmp6(9107));
       const tmp8Result3 = tmp8(8588);
       obj.closeIcon = tmp8(8588).getAssetUriForEmbed(tmp6(7797));
       tmp14 = obj;
@@ -156,7 +150,7 @@ export function createForumPostActions(arg0) {
   } else {
     const _HermesInternal = HermesInternal;
     tmp6(1242).captureMessage(
-      "Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 7673 : 9107),
+      "Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 7673 : 9106),
     );
     const tmp6Result2 = tmp6(1242);
   }

@@ -149,8 +149,8 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     overState: "y",
     config: memo,
     label: null,
-    expandedChildren: "body-sm/normal",
-    children: "text-default",
+    expandedChildren: false,
+    children: null,
   };
   const intl = util.intl;
   obj4.label = intl.string(util.t.l5WIbf);
@@ -168,8 +168,8 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     overState: "y",
     config: memo,
     label: null,
-    expandedChildren: "body-sm/normal",
-    children: "text-default",
+    expandedChildren: false,
+    children: null,
   });
   return <View style={tmp.stretch}>{null}</View>;
 });

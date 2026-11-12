@@ -75,7 +75,7 @@ export default noop.memo(function SettingsAccountHeader() {
     }
     items2[1] = tmp14;
     obj4.children = items2;
-    let tmp9Result = closure_1_10(View, obj4);
+    let tmp9Result = refs(View, obj4);
   } else {
     tmp9Result = null;
   }

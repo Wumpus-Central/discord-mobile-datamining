@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "PX_8",
-  notifCenterActive: "none",
-  notifCenterTabFocused: "URL",
+  notifCenterActive: 175,
+  notifCenterTabFocused: null,
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -398,8 +398,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "PX_8",
-      notifCenterActive: "none",
-      notifCenterTabFocused: "URL",
+      notifCenterActive: 175,
+      notifCenterTabFocused: null,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "PX_8",
-      notifCenterActive: "none",
-      notifCenterTabFocused: "URL",
+      notifCenterActive: 175,
+      notifCenterTabFocused: null,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -711,8 +711,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "PX_8",
-      notifCenterActive: "none",
-      notifCenterTabFocused: "URL",
+      notifCenterActive: 175,
+      notifCenterTabFocused: null,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

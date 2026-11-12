@@ -127,11 +127,11 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(9216)(first);
+    const tmp15 = guild_id(9215)(first);
     let result = stringResult;
     if (null != tmp15) {
-      result = tmp2(8795).formatPollResultNotificationCenterText(tmp15);
-      const tmp2Result = tmp2(8795);
+      result = tmp2(8794).formatPollResultNotificationCenterText(tmp15);
+      const tmp2Result = tmp2(8794);
     }
   } else if (stickers.length > 0) {
     const intl6 = tmp2(1113).intl;
@@ -255,7 +255,7 @@ function ForYouMessagePreviewV2(item) {
   } else {
     const obj7 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(11797);
+      let tmp29 = guild_id(11791);
       const obj8 = { source: tmp29, size: null, style: null };
       SMALL = tmp2(1187).IconSizes.SMALL;
       obj8.size = SMALL;
@@ -266,10 +266,10 @@ function ForYouMessagePreviewV2(item) {
     } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (constants4.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(12982);
+        tmp29 = guild_id(12976);
       }
     }
-    tmp29 = guild_id(11331);
+    tmp29 = guild_id(11325);
   }
   const tmp2Result10 = item(8579);
 }
@@ -612,7 +612,7 @@ let closure_35 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(19057).deleteNotificationCenterItem(tmp3);
+        yield tmp3(19052).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { text: null };

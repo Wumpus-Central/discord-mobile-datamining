@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const Pressable = fn(17).Pressable;
-const LaunchPadConstants = fn(12313);
+const LaunchPadConstants = fn(12307);
 ({ LAUNCH_PAD_MARGIN: closure_4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT;
 ({
@@ -22,7 +22,7 @@ const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT
   LAUNCH_PAD_PULL_TAB_WIDTH,
   LAUNCH_PAD_SPRING_CONFIG: closure_11,
 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(13703).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(13699).CHAT_INPUT_HEIGHT;
 let jsx = fn(21).jsx;
 const createStyles = fn(5243);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };

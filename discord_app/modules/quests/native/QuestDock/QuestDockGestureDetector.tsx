@@ -232,7 +232,7 @@ function useQuestDockSwipeGesture() {
       c2,
       QuestDockMode,
       closure_2_16,
-      closure_2_10,
+      refs,
       c1,
       youBarTotalHeight,
       QuestDockUtils.getQuestDockExpandedWidth,
@@ -677,7 +677,7 @@ function useQuestDockSwipeGesture() {
   return memo;
 }
 const QuestDockMode = fn(5275).QuestDockMode;
-const QuestDockConstants = fn(17585);
+const QuestDockConstants = fn(17580);
 ({
   QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty,
   QUEST_DOCK_CLOSED_HEIGHT: closure_6,

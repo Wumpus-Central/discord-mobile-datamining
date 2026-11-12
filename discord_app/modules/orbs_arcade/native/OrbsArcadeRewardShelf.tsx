@@ -31,9 +31,9 @@ function OrbsArcadeClaimableRewardsShelfContent(rewards) {
   const obj2 = { children: null };
   const obj = rewards(504);
   const items2 = [
-    closure_9(rewards(14837).Pile, {
+    closure_9(rewards(14833).Pile, {
       "aria-label": memo,
-      shape: rewards(9437).CutoutShape.Circle,
+      shape: rewards(9436).CutoutShape.Circle,
       size: v50,
       gap: 2,
       depthX: 0.28,
@@ -80,9 +80,9 @@ function OrbsArcadeFocusedRewardShelfContent(arg0) {
   );
   items1[2] = React6(Text_Text.Text, obj6);
   obj4.children = items1;
-  items[1] = closure_1_10(timestampProducer, obj4);
+  items[1] = refs(timestampProducer, obj4);
   obj2.children = items;
-  return closure_1_10(closure_1_11, obj2);
+  return refs(closure_1_11, obj2);
 }
 function OrbsArcadePileReward(arg0) {
   ({ reward, size } = arg0);
@@ -126,9 +126,9 @@ function OrbsArcadeAllRewardsClaimedShelfContent(windowEndsAt) {
   const obj8 = { children: null };
   items1[1] = tmp11Result;
   obj4.children = items1;
-  items[1] = closure_1_10(timestampProducer, obj4);
+  items[1] = refs(timestampProducer, obj4);
   obj8.children = items;
-  return closure_1_10(closure_1_11, obj8);
+  return refs(closure_1_11, obj8);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);

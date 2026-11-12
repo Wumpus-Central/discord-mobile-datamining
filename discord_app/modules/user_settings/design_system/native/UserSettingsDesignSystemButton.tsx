@@ -3,23 +3,23 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef9107 from "../../../../../_runtime/metro/09107__.js";
-import _modDef10503 from "../../../../../_runtime/metro/10503__.js";
-import _modDef10538 from "../../../../../_runtime/metro/10538__.js";
-import _modDef10932 from "../../../../../_runtime/metro/10932__.js";
-import _modDef11591 from "../../../../../_runtime/metro/11591__.js";
+import _modDef9106 from "../../../../../_runtime/metro/09106__.js";
+import _modDef10501 from "../../../../../_runtime/metro/10501__.js";
+import _modDef10536 from "../../../../../_runtime/metro/10536__.js";
+import _modDef10926 from "../../../../../_runtime/metro/10926__.js";
+import _modDef11585 from "../../../../../_runtime/metro/11585__.js";
 import ToggleIconButton from "../../../../design/components/Button/native/ToggleIconButton.native.tsx";
 import useToggleButtonProps from "../../../../design/components/Button/native/useToggleButtonProps.native.tsx";
+import _modDef15793 from "../../../../../_runtime/metro/15793__.js";
+import _modDef15797 from "../../../../../_runtime/metro/15797__.js";
 import _modDef15798 from "../../../../../_runtime/metro/15798__.js";
-import _modDef15802 from "../../../../../_runtime/metro/15802__.js";
-import _modDef15803 from "../../../../../_runtime/metro/15803__.js";
-import _modDef15804 from "../../../../../_runtime/metro/15804__.js";
-import _modDef15805 from "../../../../../_runtime/metro/15805__.js";
-import _modDef15806 from "../../../../../_runtime/metro/15806__.js";
+import _modDef15799 from "../../../../../_runtime/metro/15799__.js";
+import _modDef15800 from "../../../../../_runtime/metro/15800__.js";
+import _modDef15801 from "../../../../../_runtime/metro/15801__.js";
 import ImageButton from "../../../../design/components/Button/native/ImageButton.native.tsx";
 import ToggleButton from "../../../../design/components/Button/native/ToggleButton.native.tsx";
 import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState.tsx";
-import _modDef18293 from "../../../../../_runtime/metro/18293__.js";
+import _modDef18288 from "../../../../../_runtime/metro/18288__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -69,12 +69,12 @@ function ExampleButton(arg0) {
   obj.size = buttonSize;
   let tmpResult;
   if (showIcon) {
-    tmpResult = _modDef18293;
+    tmpResult = _modDef18288;
   }
   obj.icon = tmpResult;
   obj.iconPosition = iconPosition;
   obj.scaleAmountInPx = buttonScale;
-  return closure_1_10(components_Button_Button.Button, obj);
+  return refs(components_Button_Button.Button, obj);
 }
 function ExampleIconButton(arg0) {
   ({ variant, showLabel } = arg0);
@@ -120,7 +120,7 @@ function ExampleIconButton(arg0) {
     obj2.label = str2;
     obj2.loading = tmp5;
     obj2.variant = variant;
-    obj2.icon = _modDef10503;
+    obj2.icon = _modDef10501;
     let obj = obj2;
   } else {
     obj = {
@@ -142,9 +142,9 @@ function ExampleIconButton(arg0) {
     obj.loading = tmp5;
     obj.variant = variant;
     obj.size = tmp3.buttonSize;
-    obj.icon = _modDef10503;
+    obj.icon = _modDef10501;
   }
-  return closure_1_10(IconButton.IconButton, obj);
+  return refs(IconButton.IconButton, obj);
 }
 function ExampleImageButton(arg0) {
   ({ image, label, showLabel } = arg0);
@@ -195,13 +195,13 @@ function ExampleImageButton(arg0) {
       image
     };
   }
-  return closure_1_10(ImageButton.ImageButton, obj);
+  return refs(ImageButton.ImageButton, obj);
 }
 function ExampleToggleButton() {
   [pressed, closure_1] = noop.useState(false);
-  return closure_1_10(ToggleButton.ToggleButton, {
+  return refs(ToggleButton.ToggleButton, {
     text: "Notifications",
-    icon: _modDef9107,
+    icon: _modDef9106,
     pressed,
     onPress() {
       return closure_1(!first);
@@ -214,10 +214,10 @@ function ExampleToggleIconButton(variant) {
   pressed = undefined;
   closure_1 = undefined;
   [pressed, closure_1] = noop.useState(false);
-  return closure_1_10(ToggleIconButton.ToggleIconButton, {
+  return refs(ToggleIconButton.ToggleIconButton, {
     accessibilityLabel: "" + variant + " notifications",
-    icon: _modDef9107,
-    selectedIcon: _modDef10932,
+    icon: _modDef9106,
+    selectedIcon: _modDef10926,
     pressed,
     onPress() {
       return closure_1(!first);
@@ -230,9 +230,9 @@ function ExampleCustomIconToggleButton() {
   [first, closure_1] = noop.useState(false);
   const obj2 = { on: null, off: null };
   const obj = useToggleButtonProps;
-  obj2.on = { variant: "destructive", accessibilityLabel: "Mute", icon: _modDef10538 };
-  const obj3 = { variant: "destructive", accessibilityLabel: "Mute", icon: _modDef10538 };
-  obj2.off = { variant: "secondary", accessibilityLabel: "Mute", icon: _modDef10538 };
+  obj2.on = { variant: "destructive", accessibilityLabel: "Mute", icon: _modDef10536 };
+  const obj3 = { variant: "destructive", accessibilityLabel: "Mute", icon: _modDef10536 };
+  obj2.off = { variant: "secondary", accessibilityLabel: "Mute", icon: _modDef10536 };
   const toggleIconButtonProps = obj.useToggleIconButtonProps(obj2, first);
   const obj5 = {};
   const merged = Object.assign(toggleIconButtonProps);
@@ -240,7 +240,7 @@ function ExampleCustomIconToggleButton() {
     closure_1(!first);
   };
   obj5.size = "md";
-  return closure_1_10(IconButton.IconButton, obj5);
+  return refs(IconButton.IconButton, obj5);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
@@ -275,7 +275,7 @@ export default function UserSettingsDesignSystemButton() {
   }, []);
   navigation.setOptions({
     headerRight() {
-      return closure_2_10(IconButton.IconButton, { onPress, icon: _modDef10503, size: "sm", variant: "secondary", accessibilityLabel: "Settings" });
+      return refs(IconButton.IconButton, { onPress, icon: _modDef10501, size: "sm", variant: "secondary", accessibilityLabel: "Settings" });
     }
   });
   const obj3 = { children: null };
@@ -285,15 +285,15 @@ export default function UserSettingsDesignSystemButton() {
   let obj = require("useNavigation");
   const obj2 = {
     headerRight() {
-      return closure_2_10(IconButton.IconButton, { onPress, icon: _modDef10503, size: "sm", variant: "secondary", accessibilityLabel: "Settings" });
+      return refs(IconButton.IconButton, { onPress, icon: _modDef10501, size: "sm", variant: "secondary", accessibilityLabel: "Settings" });
     }
   };
   items = [closure_10(require("Stack/Stack").Stack, { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Hierarchical buttons" }) }), ];
   const obj7 = { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Hierarchical buttons" }) };
   items[1] = closure_10(closure_5, {
     children: closure_13.map((variant) => {
-      const obj = { style: closure_0.buttonContainer, children: closure_2_10(ExampleButton, { variant }) };
-      return closure_2_10(hasOwnProperty, obj, variant);
+      const obj = { style: closure_0.buttonContainer, children: refs(ExampleButton, { variant }) };
+      return refs(hasOwnProperty, obj, variant);
     })
   });
   obj6.children = items;
@@ -301,16 +301,16 @@ export default function UserSettingsDesignSystemButton() {
   const obj9 = { children: null };
   const obj8 = {
     children: closure_13.map((variant) => {
-      const obj = { style: closure_0.buttonContainer, children: closure_2_10(ExampleButton, { variant }) };
-      return closure_2_10(hasOwnProperty, obj, variant);
+      const obj = { style: closure_0.buttonContainer, children: refs(ExampleButton, { variant }) };
+      return refs(hasOwnProperty, obj, variant);
     })
   };
   const items2 = [closure_10(require("Stack/Stack").Stack, { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Sentiment buttons" }) }), ];
   const obj10 = { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Sentiment buttons" }) };
   items2[1] = closure_10(closure_5, {
     children: closure_15.map((variant) => {
-      const obj = { style: closure_0.buttonContainer, children: closure_2_10(ExampleButton, { variant }) };
-      return closure_2_10(hasOwnProperty, obj, variant);
+      const obj = { style: closure_0.buttonContainer, children: refs(ExampleButton, { variant }) };
+      return refs(hasOwnProperty, obj, variant);
     })
   });
   obj9.children = items2;
@@ -318,16 +318,16 @@ export default function UserSettingsDesignSystemButton() {
   const obj12 = { children: null };
   const obj11 = {
     children: closure_15.map((variant) => {
-      const obj = { style: closure_0.buttonContainer, children: closure_2_10(ExampleButton, { variant }) };
-      return closure_2_10(hasOwnProperty, obj, variant);
+      const obj = { style: closure_0.buttonContainer, children: refs(ExampleButton, { variant }) };
+      return refs(hasOwnProperty, obj, variant);
     })
   };
   const items3 = [closure_10(require("Stack/Stack").Stack, { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Expressive buttons" }) }), ];
   const obj13 = { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Expressive buttons" }) };
   items3[1] = closure_10(closure_5, {
     children: closure_16.map((variant) => {
-      const obj = { style: closure_0.buttonContainer, children: closure_2_10(ExampleButton, { variant }) };
-      return closure_2_10(hasOwnProperty, obj, variant);
+      const obj = { style: closure_0.buttonContainer, children: refs(ExampleButton, { variant }) };
+      return refs(hasOwnProperty, obj, variant);
     })
   });
   obj12.children = items3;
@@ -335,16 +335,16 @@ export default function UserSettingsDesignSystemButton() {
   const obj15 = { children: null };
   const obj14 = {
     children: closure_16.map((variant) => {
-      const obj = { style: closure_0.buttonContainer, children: closure_2_10(ExampleButton, { variant }) };
-      return closure_2_10(hasOwnProperty, obj, variant);
+      const obj = { style: closure_0.buttonContainer, children: refs(ExampleButton, { variant }) };
+      return refs(hasOwnProperty, obj, variant);
     })
   };
   const items4 = [closure_10(require("Stack/Stack").Stack, { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Experimental premium buttons" }) }), ];
   const obj16 = { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Experimental premium buttons" }) };
   items4[1] = closure_10(closure_5, {
     children: closure_17.map((variant) => {
-      const obj = { style: closure_0.buttonContainer, children: closure_2_10(ExampleButton, { variant }) };
-      return closure_2_10(hasOwnProperty, obj, variant);
+      const obj = { style: closure_0.buttonContainer, children: refs(ExampleButton, { variant }) };
+      return refs(hasOwnProperty, obj, variant);
     })
   });
   obj15.children = items4;
@@ -356,17 +356,17 @@ export default function UserSettingsDesignSystemButton() {
   const items6 = [closure_11(require("Stack/Stack").Stack, obj19), ];
   const obj17 = {
     children: closure_17.map((variant) => {
-      const obj = { style: closure_0.buttonContainer, children: closure_2_10(ExampleButton, { variant }) };
-      return closure_2_10(hasOwnProperty, obj, variant);
+      const obj = { style: closure_0.buttonContainer, children: refs(ExampleButton, { variant }) };
+      return refs(hasOwnProperty, obj, variant);
     })
   };
   items6[1] = closure_10(closure_5, {
     children: closure_14.map((variant) => {
-      const obj = { style: null, children: closure_2_10(ExampleButton, { variant }) };
+      const obj = { style: null, children: refs(ExampleButton, { variant }) };
       items = [, ];
       ({ buttonContainer: arr[0], overlayButtonContainer: arr[1] } = closure_0);
       obj.style = items;
-      return closure_2_10(hasOwnProperty, obj, variant);
+      return refs(hasOwnProperty, obj, variant);
     })
   });
   obj18.children = items6;
@@ -389,14 +389,14 @@ export default function UserSettingsDesignSystemButton() {
   };
   const obj20 = {
     children: closure_14.map((variant) => {
-      const obj = { style: null, children: closure_2_10(ExampleButton, { variant }) };
+      const obj = { style: null, children: refs(ExampleButton, { variant }) };
       items = [, ];
       ({ buttonContainer: arr[0], overlayButtonContainer: arr[1] } = closure_0);
       obj.style = items;
-      return closure_2_10(hasOwnProperty, obj, variant);
+      return refs(hasOwnProperty, obj, variant);
     })
   };
-  obj25.icon = closure_10(require("components/Button/Button").Button.Icon, { source: _modDef11591 });
+  obj25.icon = closure_10(require("components/Button/Button").Button.Icon, { source: _modDef11585 });
   obj24.children = closure_10(require("components/Button/Button").Button, obj25);
   const items9 = [closure_10(closure_5, obj24), ];
   const obj27 = { style: tmp.buttonContainer, children: null };
@@ -409,8 +409,8 @@ export default function UserSettingsDesignSystemButton() {
     size: "md",
     icon: null
   };
-  const obj26 = { source: _modDef11591 };
-  obj28.icon = closure_10(require("components/Button/Button").Button.Icon, { variant: "entity", source: _modDef15798 });
+  const obj26 = { source: _modDef11585 };
+  obj28.icon = closure_10(require("components/Button/Button").Button.Icon, { variant: "entity", source: _modDef15793 });
   obj27.children = closure_10(require("components/Button/Button").Button, obj28);
   items9[1] = closure_10(closure_5, obj27);
   obj23.children = items9;
@@ -418,7 +418,7 @@ export default function UserSettingsDesignSystemButton() {
   obj21.children = items8;
   items1[5] = closure_11(require("Stack/Stack").Stack, obj21);
   const obj30 = { children: null };
-  const obj29 = { variant: "entity", source: _modDef15798 };
+  const obj29 = { variant: "entity", source: _modDef15793 };
   const items10 = [closure_10(require("Stack/Stack").Stack, { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Buttons with various text lengths" }) }), ];
   const obj32 = { children: null };
   const obj33 = { style: tmp.buttonContainer, children: null };
@@ -430,7 +430,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: _modDef11591
+    icon: _modDef11585
   });
   const items11 = [closure_10(closure_5, obj33), , , ];
   const obj35 = { style: tmp.buttonContainer, children: null };
@@ -441,7 +441,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: _modDef11591
+    icon: _modDef11585
   };
   obj35.children = closure_10(require("components/Button/Button").Button, {
     onPress() {
@@ -450,7 +450,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: _modDef11591,
+    icon: _modDef11585,
     iconPosition: "end"
   });
   items11[1] = closure_10(closure_5, obj35);
@@ -495,7 +495,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: _modDef11591,
+    icon: _modDef11585,
     iconPosition: "end"
   };
   const obj38 = {
@@ -536,8 +536,8 @@ export default function UserSettingsDesignSystemButton() {
   const obj46 = { style: tmp.buttonContainer, children: closure_10(ExampleCustomIconToggleButton, {}) };
   items18[1] = closure_10(closure_5, {
     children: closure_13.map((variant) => {
-      const obj = { style: closure_0.buttonContainer, children: closure_2_10(ExampleIconButton, { variant }) };
-      return closure_2_10(hasOwnProperty, obj, variant);
+      const obj = { style: closure_0.buttonContainer, children: refs(ExampleIconButton, { variant }) };
+      return refs(hasOwnProperty, obj, variant);
     })
   });
   obj47.children = items18;
@@ -545,16 +545,16 @@ export default function UserSettingsDesignSystemButton() {
   const obj50 = { children: null };
   const obj49 = {
     children: closure_13.map((variant) => {
-      const obj = { style: closure_0.buttonContainer, children: closure_2_10(ExampleIconButton, { variant }) };
-      return closure_2_10(hasOwnProperty, obj, variant);
+      const obj = { style: closure_0.buttonContainer, children: refs(ExampleIconButton, { variant }) };
+      return refs(hasOwnProperty, obj, variant);
     })
   };
   const items19 = [closure_10(require("Stack/Stack").Stack, { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Sentiment icon buttons" }) }), ];
   const obj51 = { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Sentiment icon buttons" }) };
   items19[1] = closure_10(closure_5, {
     children: closure_15.map((variant) => {
-      const obj = { style: closure_0.buttonContainer, children: closure_2_10(ExampleIconButton, { variant }) };
-      return closure_2_10(hasOwnProperty, obj, variant);
+      const obj = { style: closure_0.buttonContainer, children: refs(ExampleIconButton, { variant }) };
+      return refs(hasOwnProperty, obj, variant);
     })
   });
   obj50.children = items19;
@@ -562,19 +562,19 @@ export default function UserSettingsDesignSystemButton() {
   const obj53 = { children: null };
   const obj52 = {
     children: closure_15.map((variant) => {
-      const obj = { style: closure_0.buttonContainer, children: closure_2_10(ExampleIconButton, { variant }) };
-      return closure_2_10(hasOwnProperty, obj, variant);
+      const obj = { style: closure_0.buttonContainer, children: refs(ExampleIconButton, { variant }) };
+      return refs(hasOwnProperty, obj, variant);
     })
   };
   const items20 = [closure_10(require("Stack/Stack").Stack, { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Overlay icon buttons" }) }), ];
   const obj54 = { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Overlay icon buttons" }) };
   items20[1] = closure_10(closure_5, {
     children: closure_14.map((variant) => {
-      const obj = { style: null, children: closure_2_10(ExampleIconButton, { variant }) };
+      const obj = { style: null, children: refs(ExampleIconButton, { variant }) };
       items = [, ];
       ({ buttonContainer: arr[0], overlayButtonContainer: arr[1] } = closure_0);
       obj.style = items;
-      return closure_2_10(hasOwnProperty, obj, variant);
+      return refs(hasOwnProperty, obj, variant);
     })
   });
   obj53.children = items20;
@@ -588,22 +588,22 @@ export default function UserSettingsDesignSystemButton() {
   const obj59 = { style: tmp.buttonContainer, children: null };
   const obj55 = {
     children: closure_14.map((variant) => {
-      const obj = { style: null, children: closure_2_10(ExampleIconButton, { variant }) };
+      const obj = { style: null, children: refs(ExampleIconButton, { variant }) };
       items = [, ];
       ({ buttonContainer: arr[0], overlayButtonContainer: arr[1] } = closure_0);
       obj.style = items;
-      return closure_2_10(hasOwnProperty, obj, variant);
+      return refs(hasOwnProperty, obj, variant);
     })
   };
-  obj59.children = closure_10(ExampleImageButton, { image: _modDef15804, label: "Telegram" });
+  obj59.children = closure_10(ExampleImageButton, { image: _modDef15799, label: "Telegram" });
   const items23 = [closure_10(closure_5, obj59), , ];
   const obj61 = { style: tmp.buttonContainer, children: null };
-  const obj60 = { image: _modDef15804, label: "Telegram" };
-  obj61.children = closure_10(ExampleImageButton, { image: _modDef15806, label: "WhatsApp" });
+  const obj60 = { image: _modDef15799, label: "Telegram" };
+  obj61.children = closure_10(ExampleImageButton, { image: _modDef15801, label: "WhatsApp" });
   items23[1] = closure_10(closure_5, obj61);
   const obj63 = { style: tmp.buttonContainer, children: null };
-  const obj62 = { image: _modDef15806, label: "WhatsApp" };
-  obj63.children = closure_10(ExampleImageButton, { image: _modDef15805, label: "Twitter" });
+  const obj62 = { image: _modDef15801, label: "WhatsApp" };
+  obj63.children = closure_10(ExampleImageButton, { image: _modDef15800, label: "Twitter" });
   items23[2] = closure_10(closure_5, obj63);
   obj58.children = items23;
   items22[1] = closure_11(closure_5, obj58);
@@ -615,7 +615,7 @@ export default function UserSettingsDesignSystemButton() {
   obj66.children = items24;
   const items25 = [closure_11(require("Stack/Stack").Stack, obj66), , ];
   const obj67 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
-  const obj64 = { image: _modDef15805, label: "Twitter" };
+  const obj64 = { image: _modDef15800, label: "Twitter" };
   obj67.children = closure_10(require("Stack/Stack").Stack, { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: closure_13.map((variant) => closure_1_10(ExampleIconButton, { variant, showLabel: true }, variant)) });
   items25[1] = closure_10(closure_6, obj67);
   const obj69 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
@@ -624,7 +624,7 @@ export default function UserSettingsDesignSystemButton() {
   const items26 = [
     closure_10(require("IconButton").IconButton, {
       variant: "secondary",
-      icon: _modDef10503,
+      icon: _modDef10501,
       label: "Supercalifragilisticexpialidocious",
       grow: true,
       onPress() {
@@ -636,7 +636,7 @@ export default function UserSettingsDesignSystemButton() {
   ];
   const obj71 = {
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     label: "Supercalifragilisticexpialidocious",
     grow: true,
     onPress() {
@@ -645,7 +645,7 @@ export default function UserSettingsDesignSystemButton() {
   };
   items26[1] = closure_10(require("IconButton").IconButton, {
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     label: "Supercalifragilisticexpialidocious",
     grow: true,
     onPress() {
@@ -654,7 +654,7 @@ export default function UserSettingsDesignSystemButton() {
   });
   const obj72 = {
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     label: "Supercalifragilisticexpialidocious",
     grow: true,
     onPress() {
@@ -663,7 +663,7 @@ export default function UserSettingsDesignSystemButton() {
   };
   items26[2] = closure_10(require("IconButton").IconButton, {
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     label: "Supercalifragilisticexpialidocious",
     grow: true,
     onPress() {
@@ -678,7 +678,7 @@ export default function UserSettingsDesignSystemButton() {
   const obj74 = { spacing: 24, children: null };
   const obj73 = {
     variant: "secondary",
-    icon: _modDef10503,
+    icon: _modDef10501,
     label: "Supercalifragilisticexpialidocious",
     grow: true,
     onPress() {
@@ -689,29 +689,29 @@ export default function UserSettingsDesignSystemButton() {
   const obj76 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
   const obj77 = { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: null };
   const obj75 = { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "ImageButton with a label" }) };
-  const items28 = [closure_10(ExampleImageButton, { image: _modDef15803, label: "Label", showLabel: true }), , ];
-  const obj78 = { image: _modDef15803, label: "Label", showLabel: true };
-  items28[1] = closure_10(ExampleImageButton, { image: _modDef15798, label: "Label", showLabel: true });
-  const obj79 = { image: _modDef15798, label: "Label", showLabel: true };
-  items28[2] = closure_10(ExampleImageButton, { image: _modDef15802, label: "Label", showLabel: true });
+  const items28 = [closure_10(ExampleImageButton, { image: _modDef15798, label: "Label", showLabel: true }), , ];
+  const obj78 = { image: _modDef15798, label: "Label", showLabel: true };
+  items28[1] = closure_10(ExampleImageButton, { image: _modDef15793, label: "Label", showLabel: true });
+  const obj79 = { image: _modDef15793, label: "Label", showLabel: true };
+  items28[2] = closure_10(ExampleImageButton, { image: _modDef15797, label: "Label", showLabel: true });
   obj77.children = items28;
   obj76.children = closure_11(require("Stack/Stack").Stack, obj77);
   items27[1] = closure_10(closure_6, obj76);
   const obj81 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
   const obj82 = { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: null };
-  const obj80 = { image: _modDef15802, label: "Label", showLabel: true };
-  const items29 = [closure_10(ExampleImageButton, { image: _modDef15804, label: "Supercalifragilisticexpialidocious", showLabel: true }), , ];
-  const obj83 = { image: _modDef15804, label: "Supercalifragilisticexpialidocious", showLabel: true };
-  items29[1] = closure_10(ExampleImageButton, { image: _modDef15806, label: "Supercalifragilisticexpialidocious", showLabel: true });
-  const obj84 = { image: _modDef15806, label: "Supercalifragilisticexpialidocious", showLabel: true };
-  items29[2] = closure_10(ExampleImageButton, { image: _modDef15805, label: "Supercalifragilisticexpialidocious", showLabel: true });
+  const obj80 = { image: _modDef15797, label: "Label", showLabel: true };
+  const items29 = [closure_10(ExampleImageButton, { image: _modDef15799, label: "Supercalifragilisticexpialidocious", showLabel: true }), , ];
+  const obj83 = { image: _modDef15799, label: "Supercalifragilisticexpialidocious", showLabel: true };
+  items29[1] = closure_10(ExampleImageButton, { image: _modDef15801, label: "Supercalifragilisticexpialidocious", showLabel: true });
+  const obj84 = { image: _modDef15801, label: "Supercalifragilisticexpialidocious", showLabel: true };
+  items29[2] = closure_10(ExampleImageButton, { image: _modDef15800, label: "Supercalifragilisticexpialidocious", showLabel: true });
   obj82.children = items29;
   obj81.children = closure_11(require("Stack/Stack").Stack, obj82);
   items27[2] = closure_10(closure_6, obj81);
   obj74.children = items27;
   items1[13] = closure_11(require("Stack/Stack").Stack, obj74);
   const obj86 = { spacing: 24, children: null };
-  const obj85 = { image: _modDef15805, label: "Supercalifragilisticexpialidocious", showLabel: true };
+  const obj85 = { image: _modDef15800, label: "Supercalifragilisticexpialidocious", showLabel: true };
   const items30 = [closure_10(require("Stack/Stack").Stack, { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/semibold", children: "Mixing buttons" }) }), ];
   const obj88 = { direction: "horizontal", style: tmp.container, children: null };
   const items31 = [closure_10(ExampleButton, { variant: "secondary", text: "Search", grow: true }), closure_10(ExampleIconButton, { variant: "secondary" })];
@@ -825,7 +825,7 @@ export default function UserSettingsDesignSystemButton() {
   const items48 = [closure_10(closure_6, obj4), ];
   const obj124 = require("native");
   items48[1] = closure_10(require("FloatingActionButton").FloatingActionButton, {
-    icon: _modDef10503,
+    icon: _modDef10501,
     onPress() {
 
     },

@@ -6,7 +6,7 @@ import QuestDockGestureContext from "QuestDockGestureContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(17585).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+let closure_4 = fn(17580).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 let closure_5 = {
   code: "(function useIsQuestDockModeActiveOrExitingTsx1(){let[activeQuestDockMode,mode]=this.__closure;return activeQuestDockMode.get()===mode;})",
 };

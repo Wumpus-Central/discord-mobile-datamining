@@ -114,7 +114,7 @@ function useIOSCompletionStates(guild) {
   }
   const tmpResult4 = require("initialize");
 }
-const Steps = fn(14790).Steps;
+const Steps = fn(14786).Steps;
 const Constants = fn(1072);
 ({ WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
@@ -124,7 +124,7 @@ export const MIN_PROGRESS_PERCENT = 3;
 export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export function openActionSheet(guild) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(14797, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
+  obj.openLazy(asyncRequireImpl(14793, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
 }
 export function hideActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + id);

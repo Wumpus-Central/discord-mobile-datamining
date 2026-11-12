@@ -52,7 +52,7 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
     React6(Text_Text.Text, { variant: "heading-xl/semibold", color: "interactive-text-default", children: "1" }),
   ];
   obj3.children = items1;
-  const items2 = [closure_1_10(View, obj3), ,];
+  const items2 = [refs(View, obj3), ,];
   const obj6 = { style: tmp.text, children: null };
   const obj7 = { style: tmp.header, children: null };
   const obj8 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };
@@ -60,7 +60,7 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   obj8.children = intl.string(util.t["6RUX7d"]);
   const items3 = [React6(Text_Text.Text, obj8), React6(renderChannelBadge.NewBadge, {})];
   obj7.children = items3;
-  const items4 = [closure_1_10(View, obj7)];
+  const items4 = [refs(View, obj7)];
   const obj9 = { variant: "body-xs/medium", color: "text-default", children: null };
   const intl2 = util.intl;
   obj9.children = intl2.format(util.t["5/l2rR"], {
@@ -78,7 +78,7 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   });
   items4[1] = React6(Text_Text.Text, obj9);
   obj6.children = items4;
-  items2[1] = closure_1_10(View, obj6);
+  items2[1] = refs(View, obj6);
   const obj11 = {
     hitSlop: 8,
     accessibilityRole: "button",
@@ -94,7 +94,7 @@ function DoubleTapToReactChatInputBannerInner(emoji) {
   obj11.children = React6(XSmallIcon.XSmallIcon, { size: "sm", color: "icon-subtle" });
   items2[2] = React6(Pressables.PressableOpacity, obj11);
   obj2.children = items2;
-  return closure_1_10(View, obj2);
+  return refs(View, obj2);
 }
 function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   channel = channel.channel;
@@ -174,7 +174,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   const items5 = [markAsDismissed];
   const callback1 = obj.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14683, dependencyMap.paths),
+      asyncRequireImpl(14679, dependencyMap.paths),
       "DoubleTapToReactActionSheet",
       { emoji },
     );

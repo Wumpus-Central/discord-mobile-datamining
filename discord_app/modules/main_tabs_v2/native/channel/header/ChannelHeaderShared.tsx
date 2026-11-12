@@ -14,7 +14,7 @@ import UsernameWithEffectsDefault from "../../../../display_name_styles/native/U
 import ConjureAppIconTileDefault from "../../../../conjure/projects/native/ConjureAppIconTile.tsx";
 import BotTagDefault from "../../../../applications/native/BotTag.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef12258 from "../../../../../../_runtime/metro/12258__.js";
+import _modDef12252 from "../../../../../../_runtime/metro/12252__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -103,7 +103,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef12258, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef12252, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -130,10 +130,10 @@ function UserAvatar(user) {
     avatarDecoration: user.avatarDecoration,
     guildId: "Boolean",
     size: native.AvatarSizes.REFRESH_MEDIUM_32,
-    status: null,
-    isMobileOnline: null,
+    status: "done",
+    isMobileOnline: true,
     isVROnline: null,
-    style: null,
+    style: "primary",
     autoStatusCutout: null,
   };
   let tmp3 = null;
@@ -184,7 +184,7 @@ function MemberCountText(arg0) {
     tmp4Result = React5(Text_Text.Text, { variant: "body-xs/normal", color: "text-subtle", children: "\u2022" });
   }
   children[1] = tmp4Result;
-  return React6(closure_1_10, { children });
+  return React6(refs, { children });
 }
 class SubtitleText {
   constructor(arg0) {

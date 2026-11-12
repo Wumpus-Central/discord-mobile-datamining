@@ -15,7 +15,7 @@ import IconButton from "../../../../design/components/Button/native/IconButton.n
 import useConjureEntryPointPlacementDefault from "../../title_bar/native/useConjureEntryPointPlacement.tsx";
 import openConjureHomeScreenDefault from "../../home/native/openConjureHomeScreen.tsx";
 import confirmConjureYouBarPinDefault from "../../title_bar/native/confirmConjureYouBarPin.tsx";
-import _modDef10473 from "../../../../../_runtime/metro/10473__.js";
+import _modDef10471 from "../../../../../_runtime/metro/10471__.js";
 import ConjureProjectIcon from "ConjureProjectIcon.tsx";
 import ConjureProjectGroupListDefault from "ConjureProjectGroupList.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -52,7 +52,7 @@ export default function ConjureProjectsSheet() {
   obj.title = intl.string(_modDef4079.uk6jhJ);
   let tmp10Result;
   if ("you_screen" === placement) {
-    const obj2 = { icon: _modDef10473, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
+    const obj2 = { icon: _modDef10471, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
     const intl2 = util.intl;
     obj2.accessibilityLabel = intl2.string(_modDef4079.qCBh6V);
     obj2.onPress = confirmPin;

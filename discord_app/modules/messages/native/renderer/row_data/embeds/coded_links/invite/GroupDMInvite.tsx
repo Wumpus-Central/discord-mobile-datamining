@@ -7,7 +7,7 @@ import RelationshipStore from "../../../../../../../../stores/RelationshipStore.
 import UserStore from "../../../../../../../../stores/UserStore.tsx";
 
 require = fn;
-const InviteTypes = fn(8776).InviteTypes;
+const InviteTypes = fn(8775).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx",
@@ -53,8 +53,8 @@ export function createGroupDMInvite(invite, arg1, theme) {
   }
   let channelIconSource = null;
   if (null != channel) {
-    channelIconSource = tmp8(15450).getChannelIconSource(channel);
-    const tmp8Result = tmp8(15450);
+    channelIconSource = tmp8(15447).getChannelIconSource(channel);
+    const tmp8Result = tmp8(15447);
   }
   let uri = null;
   if (null != channelIconSource) {

@@ -237,7 +237,7 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   obj6.children = intl.formatToPlainString(util.t["/0Yndu"], { num: items.length });
   items4[1] = application_id(Text_Text.Text, obj6);
   obj4.children = items4;
-  const items5 = [state(closure_1_10, obj4)];
+  const items5 = [state(refs, obj4)];
   const obj8 = { style: tmp.bundleInfoContainer, children: null };
   const items6 = [
     application_id(closure_16, { items, bundledProducts, activeIndex: num, onSelect: tmp3, onTrackPress }),
@@ -253,9 +253,9 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   items7[1] = tmp20Result;
   items6[1] = state(Text_Text.Text, { variant: "body-sm/medium", color: "text-default", children: items7 });
   obj8.children = items6;
-  items5[1] = state(closure_1_10, obj8);
+  items5[1] = state(refs, obj8);
   obj3.children = items5;
-  items3[1] = state(closure_1_10, obj3);
+  items3[1] = state(refs, obj3);
   obj2.children = items3;
-  return state(closure_1_10, obj2);
+  return state(refs, obj2);
 }

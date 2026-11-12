@@ -44,13 +44,13 @@ export function DisclosureIcon(disclosure) {
   return noop.useMemo(() => {
     if (applications.ApplicationDisclosureType.IP_LOCATION === disclosure) {
       const obj2 = { style, size: "xs" };
-      return closure_2_10(GlobeEarthIcon.GlobeEarthIcon, obj2);
+      return refs(GlobeEarthIcon.GlobeEarthIcon, obj2);
     } else if (applications.ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === disclosure) {
       const obj3 = { style, size: "xs" };
-      return closure_2_10(EmbedIcon.EmbedIcon, obj3);
+      return refs(EmbedIcon.EmbedIcon, obj3);
     } else {
       const obj = { style, size: "xs" };
-      return closure_2_10(CircleInformationIcon.CircleInformationIcon, obj);
+      return refs(CircleInformationIcon.CircleInformationIcon, obj);
     }
   }, items);
 }
@@ -88,11 +88,11 @@ export function AuthorizedAppsHeader() {
   const obj2 = { color: "text-strong", variant: "heading-sm/semibold", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t["f6kk+r"]);
-  items = [closure_1_10(Text_Text.Heading, obj2)];
+  items = [refs(Text_Text.Heading, obj2)];
   const obj3 = { style: tmp.headerDescription, color: "text-default", variant: "body-sm/normal", children: null };
   const intl2 = util.intl;
   obj3.children = intl2.string(util.t.G9JfLg);
-  items[1] = closure_1_10(Text_Text.Text, obj3);
+  items[1] = refs(Text_Text.Text, obj3);
   obj.children = items;
   return closure_1_11(React4, obj);
 }
@@ -100,12 +100,12 @@ export function AuthorizedAppsEmpty(loading) {
   const tmp = closure_12();
   if (loading.loading) {
     const obj2 = { style: tmp.spinner, animating: true, size: "large" };
-    let tmp2Result = closure_1_10(hasOwnProperty, obj2);
+    let tmp2Result = refs(hasOwnProperty, obj2);
   } else {
     const obj = { color: "text-default", style: tmp.emptyText, variant: "body-sm/normal", children: null };
     const intl = util.intl;
     obj.children = intl.string(util.t["E+SM6T"]);
-    tmp2Result = closure_1_10(Text_Text.Text, obj);
+    tmp2Result = refs(Text_Text.Text, obj);
   }
   return tmp2Result;
 }

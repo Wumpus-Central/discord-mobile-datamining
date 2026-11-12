@@ -99,8 +99,8 @@ function UserResult(user) {
     isMobileOnline,
     isVROnline,
     status: null,
-    streaming: "72cc3733cc4821df4d4b1d852103b169",
-    style: "da.messages.72cc3733cc4821df4d4b1d852103b169.compiled.messages",
+    streaming: "96bbe12887647ea87c8a19504453b44d",
+    style: "zh-CN.messages.96bbe12887647ea87c8a19504453b44d.compiled.messages",
     size: "jsona",
     animate: "ConjureAppPictureInPicture",
     typing: null,
@@ -154,7 +154,7 @@ function UserResult(user) {
         muted: flag,
         layout: tmp6(5931).ChannelListLayoutTypes.COMPACT,
       };
-      tmp14Result = closure_12(tmp6(10982).ChannelRowPreview, obj9);
+      tmp14Result = closure_12(tmp6(10976).ChannelRowPreview, obj9);
     }
   }
   const obj10 = { children: null };
@@ -186,7 +186,7 @@ function UserResultWithChannel(arg0) {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(17823)(channel, { unread });
+  obj4.lastMessage = channel(17818)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;

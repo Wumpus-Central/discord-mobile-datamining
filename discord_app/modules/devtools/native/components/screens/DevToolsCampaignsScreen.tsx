@@ -19,7 +19,7 @@ const require = globalThis.__r;
 
 require = fn;
 function CampaignPicker() {
-  const tmp2 = loading(18235)();
+  const tmp2 = loading(18230)();
   ({ select: require, error, loading } = tmp2);
   ({ campaignsLoading, componentsLoading } = tmp2);
   ({ campaigns, selectedId, reload } = tmp2);

@@ -40,7 +40,7 @@ function QuestBottomSheet(initialStep) {
   closure_0 = tmp8[1];
   const obj5 = { value: noop.useMemo(() => ({ isInQuestBottomSheet: true }), []), children: null };
   const obj6 = {
-    header: closure_1_10(QuestBottomSheetHeaderDefault, { quest, step, location: constants.QUEST_HOME_MOBILE }),
+    header: refs(QuestBottomSheetHeaderDefault, { quest, step, location: constants.QUEST_HOME_MOBILE }),
     footer: null,
     startExpanded: true,
     children: null,
@@ -60,7 +60,7 @@ function QuestBottomSheet(initialStep) {
         onDefib: defibrillator.start,
         onConnectConsoleNext: stepActions.onNext,
       };
-      tmp9Result = closure_1_10(QuestBottomSheetFooterDefault, obj8);
+      tmp9Result = refs(QuestBottomSheetFooterDefault, obj8);
     } else {
       tmp9Result = null;
     }
@@ -73,7 +73,7 @@ function QuestBottomSheet(initialStep) {
   }
   const obj9 = {
     style: items,
-    children: closure_1_10(QuestBottomSheetContent, {
+    children: refs(QuestBottomSheetContent, {
       defibrillator,
       quest,
       handleTaskSelect,
@@ -84,23 +84,23 @@ function QuestBottomSheet(initialStep) {
     }),
   };
   items[1] = { paddingBottom: num };
-  obj6.children = closure_1_10(View, obj9);
-  obj5.children = closure_1_10(Sheet_BottomSheet.BottomSheet, obj6);
-  return closure_1_10(context.Provider, obj5);
+  obj6.children = refs(View, obj9);
+  obj5.children = refs(Sheet_BottomSheet.BottomSheet, obj6);
+  return refs(context.Provider, obj5);
 }
 function useEnrolledQuestContentProps(quest) {
   quest = quest.quest;
   ({ location: _location, sourceQuestContent: importDefault } = quest);
   _slicedToArray = undefined;
-  let obj = quest(10100);
+  let obj = quest(10099);
   dependencyMap = obj.useGetQuestImpressionId();
-  const questTaskDetails = quest(10064).useQuestTaskDetails(quest);
-  let obj2 = quest(10064);
-  const isQuestProgressing = quest(10064).useIsQuestProgressing(quest);
-  let obj3 = quest(10064);
-  let tmp6 = _slicedToArray(quest(10064).useTaskPlatformScreen(quest, questTaskDetails), 3);
+  const questTaskDetails = quest(10063).useQuestTaskDetails(quest);
+  let obj2 = quest(10063);
+  const isQuestProgressing = quest(10063).useIsQuestProgressing(quest);
+  let obj3 = quest(10063);
+  let tmp6 = _slicedToArray(quest(10063).useTaskPlatformScreen(quest, questTaskDetails), 3);
   _slicedToArray = tmp6[2];
-  const obj4 = quest(10064);
+  const obj4 = quest(10063);
   closure_129_0 = quest;
   closure_129_1 = undefined;
   closure_129_2 = undefined;
@@ -123,12 +123,12 @@ function useEnrolledQuestContentProps(quest) {
   };
   const userStatus = quest.userStatus;
   let completedAt;
-  const hasWatchVideoOnMobileTasks = quest(17580).useHasWatchVideoOnMobileTasks(quest.config);
+  const hasWatchVideoOnMobileTasks = quest(17575).useHasWatchVideoOnMobileTasks(quest.config);
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
-  const obj5 = quest(17580);
-  const xboxAndPlaystationAccounts = quest(10064).useConnectedAccounts().xboxAndPlaystationAccounts;
+  const obj5 = quest(17575);
+  const xboxAndPlaystationAccounts = quest(10063).useConnectedAccounts().xboxAndPlaystationAccounts;
   closure_129_1 = xboxAndPlaystationAccounts;
   items = [quest, xboxAndPlaystationAccounts];
   const memo = noop.useMemo(
@@ -139,12 +139,12 @@ function useEnrolledQuestContentProps(quest) {
       }),
     items,
   );
-  const tmpResult = quest(10064);
-  const questTaskDetails1 = quest(10064).useQuestTaskDetails(quest);
-  const tmpResult7 = quest(10064);
-  let isQuestProgressing1 = quest(10064).useIsQuestProgressing(quest);
-  const tmpResult8 = quest(10064);
-  const tmp5Result = _slicedToArray(quest(10064).useTaskPlatformScreen(quest, questTaskDetails1), 3);
+  const tmpResult = quest(10063);
+  const questTaskDetails1 = quest(10063).useQuestTaskDetails(quest);
+  const tmpResult7 = quest(10063);
+  let isQuestProgressing1 = quest(10063).useIsQuestProgressing(quest);
+  const tmpResult8 = quest(10063);
+  const tmp5Result = _slicedToArray(quest(10063).useTaskPlatformScreen(quest, questTaskDetails1), 3);
   const first = tmp5Result[0];
   closure_129_2 = first;
   closure_129_3 = tmp14;
@@ -166,7 +166,7 @@ function useEnrolledQuestContentProps(quest) {
     isQuestProgressing1 = questTaskDetails1.progressSeconds > 0;
   }
   closure_129_7 = isQuestProgressing1;
-  const tmpResult9 = quest(10064);
+  const tmpResult9 = quest(10063);
   if (!tmp21) {
     tmp20(true);
   }
@@ -221,10 +221,10 @@ function useEnrolledQuestContentProps(quest) {
   }, items3);
   closure_129_13 = memo3;
   tmp21 = 0 !== memo.length || null != completedAt || first !== quest(5278).TaskPlatformScreen.CONSOLE || first1;
-  const hasWatchVideoOnMobileTasks1 = quest(17580).useHasWatchVideoOnMobileTasks(quest.config);
+  const hasWatchVideoOnMobileTasks1 = quest(17575).useHasWatchVideoOnMobileTasks(quest.config);
   closure_129_14 = hasWatchVideoOnMobileTasks1;
-  const tmpResult10 = quest(17580);
-  const isMobileActivityQuest = quest(17580).useMobileActivityQuest(quest).isMobileActivityQuest;
+  const tmpResult10 = quest(17575);
+  const isMobileActivityQuest = quest(17575).useMobileActivityQuest(quest).isMobileActivityQuest;
   closure_129_15 = isMobileActivityQuest;
   const items4 = [tmp5Result[1], memo3, memo1, memo2, hasWatchVideoOnMobileTasks1, isMobileActivityQuest];
   const memo4 = noop.useMemo(() => {
@@ -265,11 +265,11 @@ function useEnrolledQuestContentProps(quest) {
   }
   obj6.onNext = onNext;
   items5[1] = obj6;
-  const tmpResult11 = quest(17580);
+  const tmpResult11 = quest(17575);
   closure_130_0 = quest;
   [tmp32, tmp33] = items5;
   const tmp5Result6 = _slicedToArray(items5, 2);
-  const questLogger = quest(8750).getQuestLogger({ quest, location: constants.QUEST_HOME_MOBILE });
+  const questLogger = quest(8749).getQuestLogger({ quest, location: constants.QUEST_HOME_MOBILE });
   closure_130_1 = questLogger;
   const tmp5Result7 = _slicedToArray(useState([]), 2);
   closure_130_2 = tmp36;
@@ -277,7 +277,7 @@ function useEnrolledQuestContentProps(quest) {
   closure_130_3 = tmp38;
   const items6 = [quest, questLogger, tmp5Result8[1], tmp5Result7[1]];
   const obj8 = { quest, location: constants.QUEST_HOME_MOBILE };
-  const tmpResult12 = quest(8750);
+  const tmpResult12 = quest(8749);
   const userStatus2 = quest.userStatus;
   let completedAt1;
   if (userStatus2 != null) {
@@ -329,9 +329,9 @@ function useEnrolledQuestContentProps(quest) {
         DESELECT_PLATFORM = AnalyticsTypes.QuestContentCTA.DESELECT_PLATFORM;
         tmp4 = require;
       }
-      const tmp4Result = tmp4(10068);
+      const tmp4Result = tmp4(10067);
       tmp4Result.captureAdUserAction({
-        type: tmp4(10071).AdUserActionType.CLICK_INTERNAL,
+        type: tmp4(10070).AdUserActionType.CLICK_INTERNAL,
         adCreativeType: tmp4(5282).AdCreativeType.QUEST,
         adCreativeId: quest.id,
         questContentCTA: DESELECT_PLATFORM,
@@ -341,7 +341,7 @@ function useEnrolledQuestContentProps(quest) {
       });
       closure_3(arg0);
       const obj = {
-        type: tmp4(10071).AdUserActionType.CLICK_INTERNAL,
+        type: tmp4(10070).AdUserActionType.CLICK_INTERNAL,
         adCreativeType: tmp4(5282).AdCreativeType.QUEST,
         adCreativeId: quest.id,
         questContentCTA: DESELECT_PLATFORM,
@@ -376,15 +376,15 @@ class QuestBottomSheetContent {
     memo = closure_4.useMemo(() => {
       if (hasWatchVideoOnMobileTasks) {
         const obj2 = { quest, sourceQuestContent };
-        let tmp5Result = closure_2_10(QuestBottomSheetProgressCard.QuestBottomSheetProgressCardWatchTask, obj2);
+        let tmp5Result = refs(QuestBottomSheetProgressCard.QuestBottomSheetProgressCardWatchTask, obj2);
       } else {
         const tmp8 = QuestBottomSheetProgressCard;
         if (isInGameQuestResult) {
           const obj3 = { quest, sourceQuestContent };
-          tmp5Result = closure_2_10(tmp8.QuestBottomSheetProgressCardInGameTask, obj3);
+          tmp5Result = refs(tmp8.QuestBottomSheetProgressCardInGameTask, obj3);
         } else {
           const obj4 = { quest, sourceQuestContent };
-          tmp5Result = closure_2_10(tmp8.QuestBottomSheetProgressCardPlayStreamTask, obj4);
+          tmp5Result = refs(tmp8.QuestBottomSheetProgressCardPlayStreamTask, obj4);
         }
         isInGameQuestResult = QuestTaskUtils.isInGameQuest(quest);
       }
@@ -469,7 +469,7 @@ function MicrophoneUnit(arg0) {
       str = "text-feedback-critical";
     }
     const obj4 = { color: str };
-    const items1 = [closure_1_10(WarningIcon.WarningIcon, obj4)];
+    const items1 = [refs(WarningIcon.WarningIcon, obj4)];
     const intl2 = util.intl;
     if (tmp4) {
       const obj5 = { gameTitle: quest.config.messages.gameTitle };
@@ -482,7 +482,7 @@ function MicrophoneUnit(arg0) {
       color: "mobile-text-heading-primary",
       children: formatToPlainStringResult,
     };
-    items1[1] = closure_1_10(Text_Text.Text, obj6);
+    items1[1] = refs(Text_Text.Text, obj6);
     obj3.children = items1;
     const items2 = [
       closure_1_11(View, obj3),
@@ -565,7 +565,7 @@ export default function QuestBottomSheetConnected(questContentPosition) {
       questContentPosition: questContentPosition.questContentPosition,
       sourceQuestContent,
       children() {
-        return closure_2_10(QuestBottomSheet, { quest: stateFromStores, initialStep, sourceQuestContent });
+        return refs(QuestBottomSheet, { quest: stateFromStores, initialStep, sourceQuestContent });
       },
     };
     tmp4 = closure_10(require("QuestContentImpressionTracker").QuestContentImpressionTrackerNative, obj2);

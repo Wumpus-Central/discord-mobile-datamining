@@ -246,7 +246,7 @@ let obj3 = {
   overflow: "hidden",
   flexDirection: "column",
 };
-obj2.scrollContent = { paddingBottom: fn(10109).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+obj2.scrollContent = { paddingBottom: fn(10108).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = {
   code: "(function BountyVideoEndAppStorePanelTsx1(){let[interpolate,revealProgress,sheetHeight,Extrapolation]=this.__closure;return{transform:[{translateY:interpolate(revealProgress.get(),[0,1],[sheetHeight,0],Extrapolation.CLAMP)}]};})",

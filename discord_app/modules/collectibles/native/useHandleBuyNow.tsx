@@ -59,7 +59,7 @@ function useHandleBuyNow(product) {
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile: closure_128_2,
           };
-          v1(9954).open(obj8);
+          v1(9953).open(obj8);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -71,7 +71,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(11741)({
+  const tmp3 = onBuySettled(11735)({
     product,
     analyticsLocations,
     onPurchaseComplete() {

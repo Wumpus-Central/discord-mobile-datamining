@@ -133,7 +133,7 @@ export default function CreationIntent(arg0) {
   const items3 = [closure_12(ref, obj4), ,];
   let obj7 = { style: tmp.sections, children: null };
   const obj8 = { hasIcons: true, children: null };
-  const tmp13 = trigger(14612);
+  const tmp13 = trigger(14608);
   const obj9 = { Icon: null, message: null, onPress: null };
   if (closure_14) {
     obj9.Icon = ChairIllocon.ChairIllocon;
@@ -149,10 +149,10 @@ export default function CreationIntent(arg0) {
     obj10.onPress = function onPress() {
       onPress(true);
     };
-    items4[1] = closure_11(trigger(14612), obj10);
+    items4[1] = closure_11(trigger(14608), obj10);
     obj8.children = items4;
     let tmp15 = obj8;
-    const tmp12Result = trigger(14612);
+    const tmp12Result = trigger(14608);
   } else {
     obj9.Icon = WorldIllocon.WorldIllocon;
     const intl3 = util.intl;
@@ -167,10 +167,10 @@ export default function CreationIntent(arg0) {
     obj11.onPress = function onPress() {
       onPress(false);
     };
-    items5[1] = closure_11(trigger(14612), obj11);
+    items5[1] = closure_11(trigger(14608), obj11);
     obj8.children = items5;
     tmp15 = obj8;
-    const tmp12Result2 = trigger(14612);
+    const tmp12Result2 = trigger(14608);
   }
   obj7.children = closure_12(TableRowGroup.TableRowGroup, tmp15);
   items3[1] = closure_11(ref, obj7);

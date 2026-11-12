@@ -194,7 +194,7 @@ export default noop.memo(function BanConfirm(arg0) {
       const obj6 = { style: tmp.iconLabelBlock, children: null };
       const obj7 = {
         style: tmp.iconStyles,
-        source: require("../../../../_runtime/metro/14053__.js"),
+        source: require("../../../../_runtime/metro/14049__.js"),
         resizeMode: "contain",
       };
       const items4 = [closure_9(require("FastImage"), obj7), ,];

@@ -60,7 +60,7 @@ function InviteDestinationIcon(invite) {
     if (null != invite.inviter) {
       let tmp2Result = null;
       if (null != invite.inviter) {
-        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: "autob\u00FAs" };
+        const obj3 = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: true };
         const tmp14 = new UserRecord(invite.inviter);
         obj3.user = tmp14;
         obj3.size = native.AvatarSizes.XLARGE;
@@ -197,9 +197,9 @@ function InviteJoinContext(invite) {
           const obj5 = isGuildMember(5309);
         }
       }
-      tmp3Result3 = tmp3(8775);
+      tmp3Result3 = tmp3(8774);
     }
-    tmp3Result = tmp3(8775);
+    tmp3Result = tmp3(8774);
   }
   const obj8 = { style: tmp.inviteJoinContainer, children: null };
   let tmp22 = null;
@@ -211,7 +211,7 @@ function InviteJoinContext(invite) {
       obj10.children = closure_12(isGuildMember(5957), obj12);
       tmp22 = closure_12(View, obj10);
     }
-    tmp3Result4 = tmp3(8775);
+    tmp3Result4 = tmp3(8774);
   }
   const items1 = [
     tmp22,
@@ -294,7 +294,7 @@ function InviteMemberCounts(invite) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, InviteStates: closure_10 } = Constants);
-let closure_11 = fn(14970).INVITE_ROUTING_HUB_GUILD_ID;
+let closure_11 = fn(14966).INVITE_ROUTING_HUB_GUILD_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const createStyles = fn(5243);

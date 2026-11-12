@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import GuildScheduledEventsConstants from "../GuildScheduledEventsConstants.tsx";
 import _modDef7951 from "../../../../_runtime/metro/07951__.js";
-import _modDef12843 from "../../../../_runtime/metro/12843__.js";
-import _modDef15454 from "../../../../_runtime/metro/15454__.js";
+import _modDef12837 from "../../../../_runtime/metro/12837__.js";
+import _modDef15451 from "../../../../_runtime/metro/15451__.js";
 import GuildScheduledEventStore from "../GuildScheduledEventStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -27,7 +27,7 @@ export function getGuildScheduledEventHeaderProps(eventTimeData) {
   }
   const tmp7 = React3(event);
   const ICON_SUBTLE = nativeDefault.colors.ICON_SUBTLE;
-  let tmp8Result = _modDef12843;
+  let tmp8Result = _modDef12837;
   if (tmp4) {
     const intl4 = util.intl;
     let stringResult = intl4.string(util.t["X2K3/4"]);
@@ -46,11 +46,11 @@ export function getGuildScheduledEventHeaderProps(eventTimeData) {
     let stringResult1 = stringResult;
     let tmp8Result3 = tmp8Result;
   } else if (tmp7) {
-    tmp8Result3 = _modDef15454;
+    tmp8Result3 = _modDef15451;
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else if (currentOrPastEvent) {
-    tmp8Result3 = _modDef15454;
+    tmp8Result3 = _modDef15451;
     const intl3 = util.intl;
     stringResult1 = intl3.string(util.t.WINqKV);
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
@@ -68,9 +68,9 @@ export function getGuildScheduledEventHeaderProps(eventTimeData) {
         formatToPlainStringResult = intl.string(util.t.WINqKV);
       }
       stringResult1 = formatToPlainStringResult;
-      tmp8Result3 = _modDef15454;
+      tmp8Result3 = _modDef15451;
       ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
-      const tmp8Result4 = _modDef15454;
+      const tmp8Result4 = _modDef15451;
     }
   }
   if (isCanceled) {

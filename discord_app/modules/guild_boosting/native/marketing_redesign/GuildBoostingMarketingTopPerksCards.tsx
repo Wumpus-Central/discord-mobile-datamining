@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef15913 from "../../../../../_runtime/metro/15913__.js";
-import _mod15914 from "../../../../../_runtime/metro/15914__.js";
-import _modDef15915 from "../../../../../_runtime/metro/15915__.js";
+import _modDef15908 from "../../../../../_runtime/metro/15908__.js";
+import _mod15909 from "../../../../../_runtime/metro/15909__.js";
+import _modDef15910 from "../../../../../_runtime/metro/15910__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -62,7 +62,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15913 };
+      const obj = { style, source: _modDef15908 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },
@@ -76,7 +76,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod15914, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod15909, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     },
   },
@@ -90,7 +90,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef15915 };
+      const obj = { style, source: _modDef15910 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },

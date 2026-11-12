@@ -258,17 +258,17 @@ export function PlayOnSpotifyButton(arg0) {
   ({ activity, onAction: require } = arg0);
   const sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(10797)(activity)) {
+  if (sync_id(10791)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
       const intl = util.intl;
       let obj2 = { platform: activity.name };
       obj.text = intl.formatToPlainString(util.t.LEgD7t, obj2);
-      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(12341), disableColor: true, style: tmp.icon };
+      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(12335), disableColor: true, style: tmp.icon };
       obj.icon = jsx(native.Icon, {
         size: native.Icon.Sizes.SMALL,
-        source: sync_id(12341),
+        source: sync_id(12335),
         disableColor: true,
         style: tmp.icon,
       });

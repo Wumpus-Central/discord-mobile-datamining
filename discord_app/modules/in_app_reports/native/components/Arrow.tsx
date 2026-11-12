@@ -1,7 +1,7 @@
 // discord_app/modules/in_app_reports/native/components/Arrow.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef12013 from "../../../../../_runtime/metro/12013__.js";
+import _modDef12007 from "../../../../../_runtime/metro/12007__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,5 +14,5 @@ const result = size.fileFinishedImporting("modules/in_app_reports/native/compone
 
 export default function Arrow() {
   const tmp = closure_4();
-  return jsx(native.Icon, { source: _modDef12013, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
+  return jsx(native.Icon, { source: _modDef12007, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
 }

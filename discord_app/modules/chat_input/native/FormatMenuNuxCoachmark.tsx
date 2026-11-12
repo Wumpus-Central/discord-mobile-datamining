@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const useChatInputKeyboardOffsetDefault = tmp5(14737);
+const useChatInputKeyboardOffsetDefault = tmp5(14733);
 require = fn;
 const View = fn(17).View;
 const ContentDismissActionType = fn(5089).ContentDismissActionType;
@@ -64,7 +64,7 @@ export default function FormatMenuNuxCoachmark() {
       return obj;
     }, items1);
     const ref = coachmark.useRef(null);
-    coachmark = tmp2(9501).useCoachmark(ref, memo);
+    coachmark = tmp2(9500).useCoachmark(ref, memo);
     const items2 = [coachmark];
     const obj2 = {
       style: tmp.anchor,

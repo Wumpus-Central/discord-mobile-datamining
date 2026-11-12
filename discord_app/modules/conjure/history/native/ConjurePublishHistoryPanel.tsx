@@ -106,7 +106,7 @@ const result = size.fileFinishedImporting("modules/conjure/history/native/Conjur
 
 export default function ConjurePublishHistoryPanel(projectId) {
   projectId = projectId.projectId;
-  const iter = projectId(13185).useConjurePublishHistory(projectId);
+  const iter = projectId(13179).useConjurePublishHistory(projectId);
   state = iter.state;
   if ("loading" === state.status) {
     const obj2 = { variant: "body-sm/normal", children: null };

@@ -18,7 +18,7 @@ function ReportModal(onSubmit) {
   items = [tmp];
   closure_3 = noop.useCallback(
     (arg0) =>
-      closure_2_10(Text_Text.Text, {
+      refs(Text_Text.Text, {
         style: formRow.formRow,
         variant: "body-md/semibold",
         color: "interactive-text-active",
@@ -90,7 +90,7 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(16297);
+const GuildReportRaidModalConstants = fn(16292);
 ({
   getReportRaidHelpArticleURL: metroImportDefault,
   getReportRaidTypeLabel: closure_8,
@@ -167,9 +167,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
               dependencyMap = 3;
             } else {
               tmp21.current = true;
-              const result = tmp2(14028).trackReportRaidViewed(guildId, first);
-              const obj2 = tmp2(14028);
-              tmp2(14028).handleReportRaid(guildId);
+              const result = tmp2(14024).trackReportRaidViewed(guildId, first);
+              const obj2 = tmp2(14024);
+              tmp2(14024).handleReportRaid(guildId);
               const intl = tmp2(1113).intl;
               c1 = 1;
               dependencyMap = 1;

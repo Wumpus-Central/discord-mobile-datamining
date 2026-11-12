@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import _modDef7568 from "../../../../../_runtime/metro/07568__.js";
-import _modDef13002 from "../../../../../_runtime/metro/13002__.js";
+import _modDef12996 from "../../../../../_runtime/metro/12996__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
@@ -48,7 +48,7 @@ const memoResult = noop.memo(function VoiceStatus(userId) {
   const items1 = [userId];
   const stateFromStores = userId(504).useStateFromStores(items, () => MediaEngineStore.isLocalMute(userId), items1);
   const obj = userId(504);
-  const obj2 = userId(10530);
+  const obj2 = userId(10528);
   const items2 = [VoiceStateStore];
   const items3 = [channelId, userId];
   const stateFromStores1 = userId(504).useStateFromStores(
@@ -57,7 +57,7 @@ const memoResult = noop.memo(function VoiceStatus(userId) {
     items3,
   );
   const obj3 = userId(504);
-  const result = obj2.withLocalSelfMuteDeaf(stateFromStores1, userId(10530).useLocalSelfMuteDeaf());
+  const result = obj2.withLocalSelfMuteDeaf(stateFromStores1, userId(10528).useLocalSelfMuteDeaf());
   let flag;
   if (result != null) {
     flag = result.isVoiceMuted();
@@ -73,15 +73,15 @@ const memoResult = noop.memo(function VoiceStatus(userId) {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp6 = channelId(12960);
+    let tmp6 = channelId(12954);
     let flag3 = true;
   } else if (flag2) {
-    tmp6 = channelId(12746);
+    tmp6 = channelId(12740);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp6 = channelId(12747);
+      tmp6 = channelId(12741);
       flag3 = false;
     }
   }
@@ -118,7 +118,7 @@ export const ModeratorStatus = noop.memo(function ModeratorStatus(userId) {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(13001);
+    tmp4 = channelId(12995);
   }
   let tmp6 = null;
   if (null != tmp4) {
@@ -139,7 +139,7 @@ export function BlockedStatus() {
   const tmp = closure_8();
   return jsx(native.Icon, {
     style: closure_8().restricted,
-    source: _modDef13002,
+    source: _modDef12996,
     size: native.Icon.Sizes.EXTRA_SMALL,
     color: nativeDefault.unsafe_rawColors.RED_400,
   });

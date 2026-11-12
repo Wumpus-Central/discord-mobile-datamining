@@ -9,8 +9,8 @@ import ChannelRTCStore from "../../calls/ChannelRTCStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11925).VoicePanelModes;
-const VoicePanelControlsModes = fn(11923).VoicePanelControlsModes;
+const VoicePanelModes = fn(11919).VoicePanelModes;
+const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
 const ParticipantTypes = fn(5920).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
@@ -179,7 +179,7 @@ export default noop.memo(function VoicePanelSystemUIManager() {
   let tmp25 = null;
   if (tmp6[0]) {
     const obj2 = { hidden: !tmp5, barStyle: "light-content" };
-    tmp25 = closure_9(tmp(11767), obj2);
+    tmp25 = closure_9(tmp(11761), obj2);
   }
   const obj3 = { children: null };
   const items6 = [

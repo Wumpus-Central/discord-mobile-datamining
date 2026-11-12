@@ -4,6 +4,12 @@ import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
+import _modDef12716 from "../../../_runtime/metro/12716__.js";
+import _modDef12717 from "../../../_runtime/metro/12717__.js";
+import _modDef12718 from "../../../_runtime/metro/12718__.js";
+import _modDef12719 from "../../../_runtime/metro/12719__.js";
+import _modDef12720 from "../../../_runtime/metro/12720__.js";
+import _modDef12721 from "../../../_runtime/metro/12721__.js";
 import _modDef12722 from "../../../_runtime/metro/12722__.js";
 import _modDef12723 from "../../../_runtime/metro/12723__.js";
 import _modDef12724 from "../../../_runtime/metro/12724__.js";
@@ -20,20 +26,20 @@ import _modDef12734 from "../../../_runtime/metro/12734__.js";
 import _modDef12735 from "../../../_runtime/metro/12735__.js";
 import _modDef12736 from "../../../_runtime/metro/12736__.js";
 import _modDef12737 from "../../../_runtime/metro/12737__.js";
-import _modDef12738 from "../../../_runtime/metro/12738__.js";
-import _modDef12739 from "../../../_runtime/metro/12739__.js";
-import _modDef12740 from "../../../_runtime/metro/12740__.js";
-import _modDef12741 from "../../../_runtime/metro/12741__.js";
-import _modDef12742 from "../../../_runtime/metro/12742__.js";
-import _modDef12743 from "../../../_runtime/metro/12743__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import apply from "../../../_runtime/00012_apply.js";
 
 require = fn;
-const VoiceChannelEffectsConstants = fn(12721);
+const VoiceChannelEffectsConstants = fn(12715);
 ({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
-const items = [_modDef12722];
+const items = [_modDef12716];
 const items1 = [
+  _modDef12717,
+  _modDef12718,
+  _modDef12719,
+  _modDef12720,
+  _modDef12721,
+  _modDef12722,
   _modDef12723,
   _modDef12724,
   _modDef12725,
@@ -49,12 +55,6 @@ const items1 = [
   _modDef12735,
   _modDef12736,
   _modDef12737,
-  _modDef12738,
-  _modDef12739,
-  _modDef12740,
-  _modDef12741,
-  _modDef12742,
-  _modDef12743,
 ];
 const AnimationTypeToAnimations = {
   [VoiceChannelEffectAnimationType.BASIC]: items,

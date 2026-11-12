@@ -711,7 +711,7 @@ let closure_35 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(8709).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(8708).ACCEPT_INVITE_MODAL_KEY;
 const StaticChannelRoutes = fn(5099).StaticChannelRoutes;
 const jsx = fn(21).jsx;
 const v1 = fn(1266);

@@ -40,7 +40,7 @@ function LeftAlignedHeaderTitle(children) {
     const obj2 = { badge: persistentBadge };
     items[1] = React6(SettingHeaderBadge, obj2);
     obj.children = items;
-    tmp6 = closure_1_10(View, obj);
+    tmp6 = refs(View, obj);
   }
   return tmp6;
 }
@@ -49,7 +49,7 @@ const Constants = fn(1072);
 ({ AnalyticsPages: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const NativeStackNavigator = fn(9062);
+const NativeStackNavigator = fn(9061);
 let closure_11 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5243);
 let obj = {

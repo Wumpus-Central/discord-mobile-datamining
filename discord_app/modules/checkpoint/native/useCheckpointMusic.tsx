@@ -14,11 +14,11 @@ export default function useCheckpointMusic() {
   closure_4(null);
   closure_3(() => {
     let num = 1;
-    const obj = stateFromStores(10970);
+    const obj = stateFromStores(10964);
     if (CheckpointStore.isMuted) {
       num = 0;
     }
-    const sound = obj.createSound(ref(14158), "vibing_wumpus", num);
+    const sound = obj.createSound(ref(14154), "vibing_wumpus", num);
     ref.current = sound;
     sound.loop();
     ref = AppState.addEventListener("change", (event) => {

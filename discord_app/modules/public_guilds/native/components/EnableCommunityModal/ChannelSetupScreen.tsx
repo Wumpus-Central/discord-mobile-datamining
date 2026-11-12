@@ -25,8 +25,8 @@ export default function ChannelSetupScreen() {
   const ref = noop.useRef(null);
   const token = guild(5839).useToken(callback(575).modules.mobile.TABLE_ROW_PADDING);
   let obj2 = guild(5839);
-  const enableCommunitySharedStyles = guild(20466).useEnableCommunitySharedStyles();
-  let obj3 = guild(20466);
+  const enableCommunitySharedStyles = guild(20461).useEnableCommunitySharedStyles();
+  let obj3 = guild(20461);
   items = [GuildSettingsStore];
   guild = guild(504).useStateFromStoresObject(items, () => props.getProps()).guild;
   const obj4 = guild(504);
@@ -145,7 +145,7 @@ export default function ChannelSetupScreen() {
       const obj6 = {
         headerRef: ref,
         disableNextStep: false,
-        currentStep: tmp2(20464).EnableCommunityModalSteps.STEP_2,
+        currentStep: tmp2(20459).EnableCommunityModalSteps.STEP_2,
         children: null,
       };
       const obj7 = { style: enableCommunitySharedStyles.content, children: null };
@@ -159,7 +159,7 @@ export default function ChannelSetupScreen() {
       const intl4 = tmp2(1113).intl;
       obj8.children = intl4.formatToPlainString(tmp2(1113).t.tInpJj, { number: 2, total: 3 });
       const items5 = [closure_13(tmp2(5866).Text, obj8), , ,];
-      const obj9 = { resizeMode: "contain", source: tmp4(20467)().channelSetup };
+      const obj9 = { resizeMode: "contain", source: tmp4(20462)().channelSetup };
       items5[1] = closure_13(tmp4(5957), obj9);
       const obj10 = {
         style: enableCommunitySharedStyles.header,
@@ -234,7 +234,7 @@ export default function ChannelSetupScreen() {
       obj12.children = items7;
       items6[1] = closure_14(tmp2(6274).Stack, obj12);
       obj6.children = items6;
-      return closure_14(tmp2(20464).EnableCommunityModalScreen, obj6);
+      return closure_14(tmp2(20459).EnableCommunityModalScreen, obj6);
     } else {
       let prop3;
       if (guild != null) {

@@ -29,10 +29,10 @@ function Loading() {
   return gesture(state, obj2);
 }
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(12475);
+const InstantInviteSendStateStore = fn(12469);
 ({ setSendState: closure_6, useInstantInviteSendStates: metroImportDefault } = InstantInviteSendStateStore);
 const ActivityActionTypes = fn(1072).ActivityActionTypes;
-const InviteSendStates = fn(8776).InviteSendStates;
+const InviteSendStates = fn(8775).InviteSendStates;
 const NOOP_NULL = fn(1083).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
@@ -192,14 +192,14 @@ export default function ActivityInviteSheet(activity) {
   obj4.title = intl.string(activity(1113).t["OzOM/q"]);
   obj3.header = closure_12(activity(7847).BottomSheetTitleHeader, obj4);
   if (null != tmp6) {
-    const obj5 = { style: tmp.emptyState, Illustration: tmp11(15771).AppCrash, title: tmp6 };
+    const obj5 = { style: tmp.emptyState, Illustration: tmp11(15766).AppCrash, title: tmp6 };
     let tmp19Result = closure_12(tmp11(1187).EmptyState, obj5);
   } else if (tmp15) {
     tmp19Result = closure_12(Loading, {});
   } else {
     const obj6 = { children: null };
     const obj7 = { style: tmp.searchAndShareContainer, children: null };
-    const obj8 = { size: "md", round: true, onChange: tmp11(14622).searchInviteSuggestions, placeholder: null };
+    const obj8 = { size: "md", round: true, onChange: tmp11(14618).searchInviteSuggestions, placeholder: null };
     const intl2 = tmp11(1113).intl;
     obj8.placeholder = intl2.string(tmp11(1113).t.iI1gMg);
     obj7.children = closure_12(tmp11(7759).SearchBar, obj8);
@@ -218,7 +218,7 @@ export default function ActivityInviteSheet(activity) {
         onInviteSent: callback2,
         onPressAvatar: callback1,
       };
-      tmp17Result2 = closure_12(tmp2(19732), obj10);
+      tmp17Result2 = closure_12(tmp2(19727), obj10);
     }
     const obj11 = { children: null };
     items4[1] = tmp17Result2;

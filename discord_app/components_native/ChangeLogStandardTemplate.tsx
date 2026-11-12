@@ -31,7 +31,7 @@ function LHeading(children) {
     });
     combined = mapped.concat(tmp5);
   }
-  items = [closure_1_10(native.LegacyText, { accessibilityRole: "header", style: combined, children: children.children }), ];
+  items = [refs(native.LegacyText, { accessibilityRole: "header", style: combined, children: children.children }), ];
   c0 = false;
   let combined1;
   if (null != children.className) {
@@ -49,7 +49,7 @@ function LHeading(children) {
     });
     combined1 = mapped1.concat(tmp7);
   }
-  items[1] = closure_1_10(React4, { style: combined1 });
+  items[1] = refs(React4, { style: combined1 });
   obj.children = items;
   return closure_1_11(React4, obj);
 }
@@ -59,7 +59,7 @@ function LinkInner(target) {
   items = [LocaleStore];
   const stateFromStores = target(563).useStateFromStores(items, () => locale.locale);
   let obj = target(563);
-  const changelog = target(9284).useChangelog(changelogId, stateFromStores).changelog;
+  const changelog = target(9283).useChangelog(changelogId, stateFromStores).changelog;
   return closure_10(target(1187).LegacyText, {
     accessibilityRole: "link",
     style: className,
@@ -117,7 +117,7 @@ const memoResult = noop.memo((children) => {
   children = children.children;
   const tmp = closure_13();
   const obj = { style: tmp.listItem, children: null };
-  items = [closure_1_10(React4, { style: tmp.bulletPoint }), ];
+  items = [refs(React4, { style: tmp.bulletPoint }), ];
   const obj3 = { style: tmp.listText, children: null };
   let childrenResult = children;
   if (typeof children === "function") {
@@ -125,7 +125,7 @@ const memoResult = noop.memo((children) => {
     childrenResult = children(obj4);
   }
   obj3.children = childrenResult;
-  items[1] = closure_1_10(React4, obj3);
+  items[1] = refs(React4, obj3);
   obj.children = items;
   return closure_1_11(React4, obj);
 });
@@ -158,7 +158,7 @@ export default noop.memo((video) => {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.changelogId = onScroll;
-      return closure_2_10(LinkInner, obj);
+      return refs(LinkInner, obj);
     };
     obj6.ListItem = ListItem;
     obj6.LHeading = LHeading;
@@ -170,21 +170,21 @@ export default noop.memo((video) => {
   obj2.children = items1;
   const items2 = [closure_11(closure_5, obj2), ];
   const obj7 = { bottom: true, style: tmp.footer, children: null };
-  const obj8 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(9293).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const obj8 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(9292).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl = onScroll(1113).intl;
   obj8.accessibilityLabel = intl.string(onScroll(1113).t["/lXfom"]);
   obj8.onPress = function onPress() {
     LinkingDefault.openURL(getLocalizedLinkDefault(constants.TWITTER));
   };
   const items3 = [closure_10(onScroll(7922).IconButton, obj8), , ];
-  const obj9 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(9295).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const obj9 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(9294).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl2 = onScroll(1113).intl;
   obj9.accessibilityLabel = intl2.string(onScroll(1113).t["h0or/l"]);
   obj9.onPress = function onPress() {
     LinkingDefault.openURL(constants2.FACEBOOK_URL);
   };
   items3[1] = closure_10(onScroll(7922).IconButton, obj9);
-  const obj10 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(9297).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const obj10 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(9296).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
   const intl3 = onScroll(1113).intl;
   obj10.accessibilityLabel = intl3.string(onScroll(1113).t["5uVPyf"]);
   obj10.onPress = function onPress() {
@@ -211,7 +211,7 @@ export function changelogRules(changelogId, arg1) {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.changelogId = onScroll;
-      return closure_2_10(LinkInner, obj);
+      return refs(LinkInner, obj);
     };
     obj3.ListItem = ListItem;
     obj3.LHeading = LHeading;
@@ -226,7 +226,7 @@ export function changelogRules(changelogId, arg1) {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.changelogId = onScroll;
-      return closure_2_10(LinkInner, obj);
+      return refs(LinkInner, obj);
     };
     obj5.ListItem = ListItem;
     obj5.LHeading = LHeading;
@@ -246,7 +246,7 @@ export function getRenderChangelog(id) {
           const obj = {};
           const merged = Object.assign(arg0);
           obj.changelogId = onScroll;
-          return closure_2_10(LinkInner, obj);
+          return refs(LinkInner, obj);
         },
       ListItem,
       LHeading,

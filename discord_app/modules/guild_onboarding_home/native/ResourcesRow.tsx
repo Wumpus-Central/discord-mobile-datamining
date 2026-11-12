@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_4 = fn(19210).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_4 = fn(19205).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5243);
@@ -60,7 +60,7 @@ export default function ResourcesRow(guildId) {
     const obj2 = {
       style: tmp.channelItem,
       onPress() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19212, dependencyMap.paths), closure_4, { guildId });
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19207, dependencyMap.paths), closure_4, { guildId });
       },
       children: null,
     };

@@ -29,10 +29,10 @@ export default function SearchNavigatorScreen(navigation) {
   const searchContext = navigation.route.params.searchContext;
   const tmp = closure_8();
   importDefault = tmp;
-  const searchSuggestionsGesture = navigation(19257).useSearchSuggestionsGesture(searchContext);
+  const searchSuggestionsGesture = navigation(19252).useSearchSuggestionsGesture(searchContext);
   ({ gesture, detectorRef, suggestionsContext } = searchSuggestionsGesture);
   items = [navigation.goBack, tmp.back];
-  let obj = navigation(19257);
+  let obj = navigation(19252);
   let obj2 = { children: null };
   const memo = noop.useMemo(() => {
     const obj = { children: null };
@@ -69,8 +69,8 @@ export default function SearchNavigatorScreen(navigation) {
   });
   obj5.children = items3;
   obj4.children = closure_6(View, obj5);
-  obj3.children = closure_5(navigation(19005).NonCollapsableGestureDetector, obj4);
-  items1[1] = closure_5(navigation(19257).SearchSuggestionsProvider, obj3);
+  obj3.children = closure_5(navigation(19000).NonCollapsableGestureDetector, obj4);
+  items1[1] = closure_5(navigation(19252).SearchSuggestionsProvider, obj3);
   obj2.children = items1;
   return closure_6(closure_7, obj2);
 }

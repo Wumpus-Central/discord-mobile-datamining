@@ -3,7 +3,7 @@ import native from "../../../design/void/native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ClientInfoUtilsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
-import _modDef12341 from "../../../../_runtime/metro/12341__.js";
+import _modDef12335 from "../../../../_runtime/metro/12335__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -113,7 +113,7 @@ prototype["renderLink"] = function renderLink(children, index, arg2) {
     str = "";
   }
   children[1] = str;
-  return closure_1_10(native.LegacyText, { children }, index);
+  return refs(native.LegacyText, { children }, index);
 };
 prototype["render"] = function render() {
   const self = this;
@@ -263,7 +263,7 @@ export function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
   let obj2 = {
-    icon: closure_9(activity(5873).Button.Icon, { source: _modDef12341 }),
+    icon: closure_9(activity(5873).Button.Icon, { source: _modDef12335 }),
     text: null,
     size: "sm",
     onPress: null,

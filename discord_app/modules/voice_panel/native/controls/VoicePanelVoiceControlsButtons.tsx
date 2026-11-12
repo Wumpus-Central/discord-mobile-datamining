@@ -23,16 +23,16 @@ import SoundboardIcon from "../../../../design/components/Icon/native/redesign/g
 import GroupPlusIcon from "../../../../design/components/Icon/native/redesign/generated/GroupPlusIcon.tsx";
 import speakOnStageDefault from "../../../stage_channels/native/speakOnStage.tsx";
 import useCanSpeakInChannelDefault from "../../../stage_channels/useCanSpeakInChannel.tsx";
-import _modDef11980 from "../../../../../_runtime/metro/11980__.js";
+import _modDef11974 from "../../../../../_runtime/metro/11974__.js";
 import ChannelCallConnectingScreen from "../../../video_calls/native/components/ChannelCallConnectingScreen.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
-import _modDef12954 from "../../../../../_runtime/metro/12954__.js";
+import _modDef12948 from "../../../../../_runtime/metro/12948__.js";
 import useMuteAwareLocalVolumeDefault from "../../../media_engine/useMuteAwareLocalVolume.tsx";
-import _modDef15957 from "../../../../../_runtime/metro/15957__.js";
+import _modDef15952 from "../../../../../_runtime/metro/15952__.js";
 import useInviteMembersCallback from "../hooks/useInviteMembersCallback.tsx";
 import useCanInviteMembers from "../hooks/useCanInviteMembers.tsx";
-import _modDef19816 from "../../../../../_runtime/metro/19816__.js";
-import _modDef19817 from "../../../../../_runtime/metro/19817__.js";
+import _modDef19811 from "../../../../../_runtime/metro/19811__.js";
+import _modDef19812 from "../../../../../_runtime/metro/19812__.js";
 import useSoundboardConfigDefault from "../hooks/useSoundboardConfig.tsx";
 import useHideSelfVideoDefault from "../../../calls/useHideSelfVideo.tsx";
 import ChannelCallUtils from "../../../video_calls/native/ChannelCallUtils.tsx";
@@ -222,7 +222,7 @@ function toggleDeaf() {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, PlatformTypes: closure_15 } = Constants);
-let closure_16 = fn(19959).SelfStreamAndVideoAlertType;
+let closure_16 = fn(19954).SelfStreamAndVideoAlertType;
 const MediaEngineContextTypes = fn(6012).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
@@ -232,7 +232,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/controls/Voi
 export function GameConsoles(channel) {
   channel = channel.channel;
   const connected = channel.connected;
-  const arr = connected(10754)();
+  const arr = connected(10748)();
   let tmp2 = null;
   if (!channel.isGuildStageVoice()) {
     let tmp3 = null;
@@ -253,7 +253,7 @@ export { GameConsoleAccountButton };
 export function ActivitiesButton(openTab) {
   openTab = openTab.openTab;
   let dismissPanel;
-  dismissPanel = noop.useContext(dismissPanel(11924)).dismissPanel;
+  dismissPanel = noop.useContext(dismissPanel(11918)).dismissPanel;
   items = [dismissPanel, openTab];
   const callback = noop.useCallback(() => {
     dismissPanel();
@@ -342,7 +342,7 @@ export function DeafenSwitch() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, {
     IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon,
-    source: _modDef19817,
+    source: _modDef19812,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
@@ -380,7 +380,7 @@ export function InviteButton(channel) {
       tmp8 = null;
       if (channel.connected) {
         const obj2 = { onPress: tmp7, icon: null, label: null, trailing: null };
-        const obj3 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef12954 };
+        const obj3 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef12948 };
         obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, obj3);
         const intl = util.intl;
         obj2.label = intl.string(util.t["f1+QIK"]);
@@ -404,8 +404,8 @@ export function HideNonVideoParticipants(channelId) {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   const obj = channelId(504);
   obj2.icon = closure_18(channelId(7387).TableRowIcon, {
-    IconComponent: channelId(10983).VideoIcon,
-    source: stateFromStores(12890),
+    IconComponent: channelId(10977).VideoIcon,
+    source: stateFromStores(12884),
   });
   const intl = channelId(1113).intl;
   obj2.accessibilityHint = intl.string(channelId(1113).t.ZMTRyc);
@@ -429,14 +429,14 @@ export function HideSelfVideo() {
   let tmp6 = null;
   if (tmp3[0]) {
     let obj2 = { icon: null, value: null, onValueChange: null, label: null };
-    const obj3 = { IconComponent: tmp5(10897).UserSquareIcon };
+    const obj3 = { IconComponent: tmp5(10891).UserSquareIcon };
     obj2.icon = closure_18(tmp5(7387).TableRowIcon, obj3);
     obj2.value = !tmp4;
     obj2.onValueChange = function handleMaybeConfirmToggleSelfVideoHidden() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f137127 = () => f137127(!VIDEO);
+          const f137145 = () => f137145(!VIDEO);
           const obj2 = {
             importer() {
               return VIDEO(paths[17])(paths[16], paths.paths).then((result) => {
@@ -465,7 +465,7 @@ export function HideSelfVideo() {
 }
 export function LeaveActivitiesButton() {
   const obj = {
-    icon: collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef11980 }),
+    icon: collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef11974 }),
     label: null,
     onPress: null,
   };
@@ -504,7 +504,7 @@ export function ToggleShowActivitiesDebugOverlay() {
     showActivitiesDebugOverlay.getShowActivitiesDebugOverlay(),
   );
   const obj2 = { icon: null, value: null, onValueChange: null, label: null };
-  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef15957 });
+  obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, { source: _modDef15952 });
   obj2.value = stateFromStores;
   obj2.onValueChange = function onPressShowDebugOverlayChange(visible) {
     DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });
@@ -521,7 +521,7 @@ export function VoiceSettingsButton(guildId) {
   }, items);
   const obj = {
     onPress: callback,
-    icon: closure_18(guildId(7387).TableRowIcon, { IconComponent: guildId(10502).SettingsIcon, source: _modDef19816 }),
+    icon: closure_18(guildId(7387).TableRowIcon, { IconComponent: guildId(10500).SettingsIcon, source: _modDef19811 }),
     label: null,
     subLabel: null,
     trailing: null,
@@ -558,7 +558,7 @@ export function RTCDebugPanelButton() {
 export function StageButtons(channel) {
   channel = channel.channel;
   const tmp2 = useCanSpeakInChannelDefault(channel.id);
-  const obj = channel(12819);
+  const obj = channel(12813);
   items = [PermissionStore];
   const stateFromStores = channel(504).useStateFromStores(items, () =>
     PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel),
@@ -575,7 +575,7 @@ export function StageButtons(channel) {
       tmp8 = null;
       if (!isStageSpeakingDisabledForCurrentUser) {
         const obj5 = { icon: null, label: null, onPress: null };
-        const obj6 = { IconComponent: tmp3(12858).MicrophoneArrowRightIcon };
+        const obj6 = { IconComponent: tmp3(12852).MicrophoneArrowRightIcon };
         obj5.icon = closure_18(tmp3(7387).TableRowIcon, obj6);
         const intl = tmp3(1113).intl;
         obj5.label = intl.string(tmp3(1113).t["8Joh+p"]);

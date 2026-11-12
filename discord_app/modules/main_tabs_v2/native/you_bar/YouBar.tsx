@@ -29,7 +29,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const YouBarConstants = fn(17588);
+const YouBarConstants = fn(17583);
 ({
   YOU_BAR_HEIGHT: closure_10,
   YOU_BAR_PADDING: closure_11,
@@ -101,7 +101,7 @@ let closure_26 = noop.memo(function YouBar() {
     str = str2;
   }
   if (isMobileRTCV2Enabled) {
-    let DOCK_SPACE_SPRING_CONFIG = tmp2(11956).DOCK_SPACE_SPRING_CONFIG;
+    let DOCK_SPACE_SPRING_CONFIG = tmp2(11950).DOCK_SPACE_SPRING_CONFIG;
   } else {
     DOCK_SPACE_SPRING_CONFIG = closure_12;
   }
@@ -300,8 +300,8 @@ let closure_26 = noop.memo(function YouBar() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
+            const obj = { value, done: true };
+            return obj;
           } else {
             closure_128_0 = value;
             const result = tmp2(paths[30]).triggerHapticFeedback(tmp2(paths[30]).HapticFeedbackTypes.SOFT);
@@ -310,9 +310,9 @@ let closure_26 = noop.memo(function YouBar() {
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp21) {
+        } catch (tmp10) {
           c3 = tmp;
-          throw tmp21;
+          throw tmp10;
         }
       }
     }),
@@ -370,7 +370,7 @@ let closure_26 = noop.memo(function YouBar() {
       callback3();
     }
   }, items9);
-  const context = obj8.useContext(tmp7(11950));
+  const context = obj8.useContext(tmp7(11944));
   gesture = context.gesture;
   const translateX = context.translateX;
   const tmp2Result25 = require("useYouBarAccessibilityLabel");
@@ -463,8 +463,8 @@ let closure_26 = noop.memo(function YouBar() {
   ];
   let tmp52Result = tmp34;
   if (null != nameplate) {
-    let obj5 = { nameplate, barWidth: diff, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp48 };
-    tmp52Result = closure_18(tmp7(19029), obj5);
+    const obj5 = { nameplate, barWidth: diff, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp48 };
+    tmp52Result = closure_18(tmp7(19024), obj5);
   }
   items12[1] = tmp52Result;
   const obj6 = { gesture: memo3, children: null };
@@ -503,12 +503,12 @@ let closure_26 = noop.memo(function YouBar() {
   }
   if ("you_bar" === placement) {
     const obj10 = { hasNameplate: tmp34, canUnpin: tmp28.canPin };
-    let tmp52Result3 = closure_18(tmp7(19035), obj10);
+    let tmp52Result3 = closure_18(tmp7(19030), obj10);
   } else {
     tmp52Result3 = null;
     if (tmp27) {
       const obj11 = { hasNameplate: tmp34 };
-      tmp52Result3 = closure_18(tmp7(19037), obj11);
+      tmp52Result3 = closure_18(tmp7(19032), obj11);
     }
   }
   const items13 = [tmp52Result3, closure_18(YouBarNotificationsButtonDefault, { hasNameplate: null != nameplate })];
@@ -521,7 +521,7 @@ let closure_26 = noop.memo(function YouBar() {
     const items15 = [tmp.dockRimRow, memo, animatedStyle];
     obj12.style = items15;
     const obj13 = { style: tmp.dockRim };
-    obj12.children = closure_18(tmp7(14743), obj13);
+    obj12.children = closure_18(tmp7(14739), obj13);
     tmp52Result4 = closure_18(tmp7(1652).View, obj12);
   }
   children[1] = tmp52Result4;

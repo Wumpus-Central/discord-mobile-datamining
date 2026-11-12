@@ -30,10 +30,10 @@ export function PinotMemberNoticeHeaderArrow(channelId) {
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   const obj4 = channelId(504);
-  const isForumChannelSearchActive = channelId(12262).useIsForumChannelSearchActive(channelId);
-  const obj5 = channelId(12262);
-  const obj6 = channelId(12242);
-  const pinotChannelLabelCenter = channelId(12251).usePinotChannelLabelCenter(channelId, ref);
+  const isForumChannelSearchActive = channelId(12256).useIsForumChannelSearchActive(channelId);
+  const obj5 = channelId(12256);
+  const obj6 = channelId(12236);
+  const pinotChannelLabelCenter = channelId(12245).usePinotChannelLabelCenter(channelId, ref);
   const center = pinotChannelLabelCenter.center;
   let tmp15Result2 = null;
   if (obj6.usePinotMemberNotice(stateFromStores, "mobile_channel_header").visible) {
@@ -57,11 +57,11 @@ export function PinotMemberNoticeHeaderArrow(channelId) {
           items2[1] = obj10;
           obj9.style = items2;
           const size = { width: 16, height: 10, viewBox: "0 0 16 10", fill: "none", accessible: false, children: null };
-          const obj11 = { d: tmp2(12264).PINOT_MEMBER_NOTICE_CARET_FILL, fill: token };
+          const obj11 = { d: tmp2(12258).PINOT_MEMBER_NOTICE_CARET_FILL, fill: token };
           const items3 = [closure_6(tmp2(8197).Path, obj11), ,];
-          const obj12 = { d: tmp2(12264).PINOT_MEMBER_NOTICE_CARET_FILL, fill: token1 };
+          const obj12 = { d: tmp2(12258).PINOT_MEMBER_NOTICE_CARET_FILL, fill: token1 };
           items3[1] = closure_6(tmp2(8197).Path, obj12);
-          const obj13 = { d: tmp2(12264).PINOT_MEMBER_NOTICE_CARET_BORDER, fill: "none", stroke: token2 };
+          const obj13 = { d: tmp2(12258).PINOT_MEMBER_NOTICE_CARET_BORDER, fill: "none", stroke: token2 };
           items3[2] = closure_6(tmp2(8197).Path, obj13);
           size.children = items3;
           obj9.children = closure_7(inlineStylesDefault, size);

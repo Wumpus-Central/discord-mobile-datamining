@@ -18,7 +18,7 @@ import CustomThemeMobileStore from "../../client_themes/native/CustomThemeMobile
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 
-const merged = Object.assign(fn(16810).crossPlatformCommands);
+const merged = Object.assign(fn(16805).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);
 const audioSession = Object.assign(audioSessionDefault);
 const auth = Object.assign(authDefault);
@@ -29,12 +29,12 @@ const pictureInPictureInteractive = Object.assign(pictureInPictureInteractiveDef
 const voiceSettings = Object.assign(voiceSettingsDefault);
 const unsupported = Object.assign(unsupportedDefault);
 Object.assign(crossPlatformRPCEventHandlersDefault);
-const discordEnvironmentEvents = fn(16882);
+const discordEnvironmentEvents = fn(16877);
 const merged11 = Object.assign(
   discordEnvironmentEvents.createDiscordEnvironmentEvents(true, getNativeDiscordCustomThemeDefault),
 );
-const merged12 = Object.assign(fn(16884).screenCaptureEvents);
-const merged13 = Object.assign(fn(16885).voiceSettingsEventHandlers);
+const merged12 = Object.assign(fn(16879).screenCaptureEvents);
+const merged13 = Object.assign(fn(16880).voiceSettingsEventHandlers);
 const obj4 = {
   server: NativeRPCServerDefault,
   commands: {},

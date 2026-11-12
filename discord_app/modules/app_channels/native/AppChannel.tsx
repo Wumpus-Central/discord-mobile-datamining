@@ -176,7 +176,7 @@ function AppChannel(arg0) {
   return tmp4Result;
 }
 const View = fn(17).View;
-let closure_5 = fn(19243).useConjureFrameUpdateAvailable;
+let closure_5 = fn(19238).useConjureFrameUpdateAvailable;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let createStyles = fn(5243);

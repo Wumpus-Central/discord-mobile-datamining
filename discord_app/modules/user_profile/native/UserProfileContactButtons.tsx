@@ -52,8 +52,8 @@ function FriendRequestButton(user) {
   dependencyMap = { location: newestAnalyticsLocation };
   let obj = user(8479);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(15667).useGameFriendsForUser(user.id);
-  const tmp3Result = user(15667);
+  const gameFriendsForUser = user(15664).useGameFriendsForUser(user.id);
+  const tmp3Result = user(15664);
   items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
@@ -66,7 +66,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(15763).UserClockIcon;
+          let UserPlusIcon = tmp3(15758).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(5960).UserPlusIcon;
         }

@@ -5,7 +5,7 @@ import _modDef2317 from "../../messages/OrbWallet.messages.js";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ChevronSmallRightIcon from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import _modDef10090 from "../../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
+import _modDef10089 from "../../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
 import QuestDockRewardTileDefault from "../../../quests/native/QuestDockRewardTile.tsx";
 import OrbChallengeTypes from "../../OrbChallengeTypes.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -18,7 +18,7 @@ function OrbChallengeAsset(achievementStatus) {
   const tmp = closure_12();
   if (achievementStatus !== OrbChallengeTypes.UserAchievementStatus.COMPLETED) {
     if (achievementStatus !== OrbChallengeTypes.UserAchievementStatus.CLAIMED) {
-      const size = { assetUrl: _modDef10090, isAnimatedAsset, height: 40, width: 40 };
+      const size = { assetUrl: _modDef10089, isAnimatedAsset, height: 40, width: 40 };
       let tmp8 = React5(QuestDockRewardTileDefault, size);
     }
     return tmp8;
@@ -26,7 +26,7 @@ function OrbChallengeAsset(achievementStatus) {
   const obj = { style: tmp.completedRing, accessible: true, accessibilityLabel: null, children: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(_modDef2317.k6h2J3);
-  const size1 = { assetUrl: _modDef10090, isAnimatedAsset, height: 32, width: 32, style: tmp.completedTile };
+  const size1 = { assetUrl: _modDef10089, isAnimatedAsset, height: 32, width: 32, style: tmp.completedTile };
   obj.children = React5(QuestDockRewardTileDefault, size1);
   tmp8 = React5(metroImportDefault, obj);
 }

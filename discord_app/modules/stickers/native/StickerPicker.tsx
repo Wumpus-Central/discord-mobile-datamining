@@ -55,10 +55,10 @@ export default noop.memo(function StickerPicker(channel) {
   noop = undefined;
   ({ bottomSheetRef, bottomSheetIndex, paddingTop, stickerFormats, inPortalKeyboard } = channel);
   let tmp = closure_17();
-  const fetchStickerPacks = channel(11296).useFetchStickerPacks();
-  let obj = channel(11296);
-  const stickerCategories = channel(11298).useStickerCategories(channel);
-  let obj2 = channel(11298);
+  const fetchStickerPacks = channel(11290).useFetchStickerPacks();
+  let obj = channel(11290);
+  const stickerCategories = channel(11292).useStickerCategories(channel);
+  let obj2 = channel(11292);
   items = [StickersStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => StickersStore.hasLoadedStickerPacks);
   const tmp6 = analyticsLocations(noop.useState(0), 2);
@@ -69,7 +69,7 @@ export default noop.memo(function StickerPicker(channel) {
   [tmp11, c4] = analyticsLocations(noop.useState(null), 2);
   const tmp10 = analyticsLocations(noop.useState(null), 2);
   let items1 = [channel];
-  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(11189)({ hasCategories: true }));
+  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(11183)({ hasCategories: true }));
   const items2 = [,];
   ({ id: arr4[0], guild_id: arr4[1] } = channel);
   const callback = noop.useCallback((arg0) => {
@@ -171,7 +171,7 @@ export default noop.memo(function StickerPicker(channel) {
       guild_id: channel.guild_id,
     });
   }, items4);
-  const tmp12 = onPressSticker(11189)({ hasCategories: true });
+  const tmp12 = onPressSticker(11183)({ hasCategories: true });
   const items5 = [channel];
   const isTidaMediaTakedownRegion = channel(5932).useIsTidaMediaTakedownRegion();
   const callback3 = noop.useCallback((renderableSticker) => {
@@ -194,7 +194,7 @@ export default noop.memo(function StickerPicker(channel) {
   if (stateFromStores) {
     if (0 === stickerCategories.length) {
       let obj9 = { style: tmp.emptyState, children: null };
-      tmp = closure_15(tmp8(11323), {});
+      tmp = closure_15(tmp8(11317), {});
       obj9.children = tmp;
       let tmp19Result2 = closure_15(closure_5, obj9);
     } else {
@@ -222,14 +222,14 @@ export default noop.memo(function StickerPicker(channel) {
       obj10.stickerFormats = stickerFormats;
       obj10.searchResults = tmp11;
       obj10.inPortalKeyboard = inPortalKeyboard;
-      tmp19Result2 = closure_15(tmp8(11324), obj10);
-      const tmp8Result = tmp8(11324);
+      tmp19Result2 = closure_15(tmp8(11318), obj10);
+      const tmp8Result = tmp8(11318);
     }
   } else {
     const obj11 = { animating: true, size: "large", style: tmp.loadingIndicator };
     items6[1] = closure_15(closure_6, obj11);
     let obj12 = { categories: stickerCategories, categoryIndex: tmp6[0], style: safeAreaStyle };
-    items6[2] = closure_15(tmp8(11330), obj12);
+    items6[2] = closure_15(tmp8(11324), obj12);
     obj6.children = items6;
     obj5.children = closure_16(closure_5, obj6);
     return closure_15(channel(7852).AnalyticsLocationProvider, obj5);

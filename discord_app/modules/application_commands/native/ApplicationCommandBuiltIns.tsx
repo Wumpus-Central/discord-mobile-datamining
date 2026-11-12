@@ -71,8 +71,8 @@ obj.execute = function execute(arg0, channel) {
         MessageActionCreatorsDefault.sendBotMessage(channel.id, intl.string(require("util").t["YOsuT/"]));
       }
     };
-    const result = channel(10837).openLeaveGroupDMConfirmationAlert(obj6);
-    const tmp4Result = channel(10837);
+    const result = channel(10831).openLeaveGroupDMConfirmationAlert(obj6);
+    const tmp4Result = channel(10831);
   }
 };
 const items = [obj];

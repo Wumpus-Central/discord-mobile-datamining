@@ -95,7 +95,7 @@ function ImageInput(openImageInputActionSheet) {
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const DraftType = fn(8658).DraftType;
-const PollsConstants = fn(8945);
+const PollsConstants = fn(8944);
 ({ MAX_POLL_ANSWER_LENGTH: closure_10, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: closure_11 } = PollsConstants);
 const EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
@@ -180,7 +180,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13458, dependencyMap.paths), closure_2_11, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13452, dependencyMap.paths), closure_2_11, {
           channelId,
           index,
           answer,
@@ -208,15 +208,14 @@ export default function PollAnswerInput(answer) {
     blurOnSubmit: false,
     style: null,
     selectionColor: "channel",
-    textContentType: "<string:3142648739>",
-    accessibilityLabel: "<string:1090589184>",
-    accessibilityHint: "TierTemplateSelected",
-    maxLength: "<string:14832385>",
-    returnKeyType: "<string:2461696819>",
-    required: "<string:1803760467>",
-    autoCorrect: "<string:824558674>",
-    "aria-invalid":
-      -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007526494357914475,
+    textContentType: -1152318557,
+    accessibilityLabel: 1090589184,
+    accessibilityHint: 169938,
+    maxLength: 14832385,
+    returnKeyType: -1828158719,
+    required: 1139,
+    autoCorrect: 768,
+    "aria-invalid": 1536,
   };
   const intl = tmp8(tmp9[11]).intl;
   obj5.placeholder = intl.string(answer(channelId[11]).t.NNHVlv);

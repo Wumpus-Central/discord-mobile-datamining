@@ -62,7 +62,7 @@ export function createVoiceChannelListInviteEmbed(invite, theme) {
     const guild1 = GuildStore.getGuild(invite.guild.id);
     tmp = null;
     if (null != guild1) {
-      const channel = displayNameStylesEnabled(11832)(invite).channel;
+      const channel = displayNameStylesEnabled(11826)(invite).channel;
       tmp = null;
       if (null != channel) {
         tmp = null;
@@ -86,7 +86,7 @@ export function createVoiceChannelListInviteEmbed(invite, theme) {
   } else {
     guild = tmp.guild;
     const channel2 = tmp.channel;
-    ({ colors, baseColors } = displayNameStylesEnabled(9104)(theme));
+    ({ colors, baseColors } = displayNameStylesEnabled(9103)(theme));
     let assetUriForEmbed;
     if (null != guild.icon) {
       assetUriForEmbed = guild(8588).getAssetUriForEmbed(getGuildIconSource(guild, 128, false));
@@ -95,7 +95,7 @@ export function createVoiceChannelListInviteEmbed(invite, theme) {
     const voiceStatesForChannelAlt = SortedVoiceStateStore.getVoiceStatesForChannelAlt(channel2.id, guild.id);
     items = [];
     const tmp39 = displayNameStylesEnabled;
-    const tmp41 = displayNameStylesEnabled(9104)(theme);
+    const tmp41 = displayNameStylesEnabled(9103)(theme);
     HermesBuiltin.arraySpread(
       voiceStatesForChannelAlt.filter((voiceState) => !voiceState.voiceState.selfStream),
       HermesBuiltin.arraySpread(
@@ -189,7 +189,7 @@ export function createVoiceChannelListInviteEmbed(invite, theme) {
     const tmp30Result = guild(5891);
     const tmp35 = currentClientVoiceChannelId === channel2.id;
     const items1 = [GuildMemberStore];
-    obj5.canBeAccepted = tmp39(11833).canAcceptInvite(items1, invite);
+    obj5.canBeAccepted = tmp39(11827).canAcceptInvite(items1, invite);
     obj5.embedCanBeTapped = true;
     obj5.type = InviteTypes.GUILD;
     obj5.voiceUsers = mapped;
@@ -197,7 +197,7 @@ export function createVoiceChannelListInviteEmbed(invite, theme) {
     const intl2 = tmp30(1113).intl;
     obj5.emptyStateText = intl2.string(guild(1113).t.zSqdrS);
     const intl3 = tmp30(1113).intl;
-    const tmp39Result = tmp39(11833);
+    const tmp39Result = tmp39(11827);
     obj5.streamingLabel = intl3.string(guild(1113).t.dI3q4h).toUpperCase();
     obj5.voiceHeaderBackgroundColor = colors.voiceHeaderBackgroundColor;
     obj5.reducedMotion = AccessibilityStore.useReducedMotion;

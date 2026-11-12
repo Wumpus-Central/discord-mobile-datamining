@@ -8,7 +8,7 @@ import timing_timing from "../../../../design/animation/reanimated/timing/timing
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import _modDef11307 from "../../../../../_runtime/metro/11307__.js";
+import _modDef11301 from "../../../../../_runtime/metro/11301__.js";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
@@ -23,7 +23,7 @@ function NewCaption(arg0) {
   items = [tmp.labelContainer, style];
   obj.style = items;
   const items1 = [
-    React6(native.Icon, { source: _modDef11307, style: tmp.icon }),
+    React6(native.Icon, { source: _modDef11301, style: tmp.icon }),
     React6(Text_Text.Text, {
       style: textStyle,
       color: "text-overlay-light",
@@ -32,7 +32,7 @@ function NewCaption(arg0) {
     }),
   ];
   obj.children = items1;
-  return closure_1_10(React4, obj);
+  return refs(React4, obj);
 }
 function MediaKeyboardImage(draftType) {
   draftType = draftType.draftType;
@@ -380,7 +380,7 @@ function MediaKeyboardSpecialButton(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(11588);
+const DeviceConstants = fn(11582);
 ({ ALAssetsType: metroImportDefault, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

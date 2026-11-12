@@ -95,5 +95,5 @@ export function transitionToEventDetailsFromInvite() {
   return applyArgumentsResult;
 }
 export function openEndEventModal(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15818, dependencyMap.paths), closure_4, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15813, dependencyMap.paths), closure_4, { channel });
 }

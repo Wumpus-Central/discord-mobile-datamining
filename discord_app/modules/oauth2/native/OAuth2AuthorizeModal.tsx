@@ -101,7 +101,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   };
   if (null != tmp4.backStep) {
     const obj7 = { color: tmp2(575).colors.INTERACTIVE_TEXT_DEFAULT };
-    let tmp13Result = closure_5(tmp5(14437).ArrowSmallLeftIcon, obj7);
+    let tmp13Result = closure_5(tmp5(14432).ArrowSmallLeftIcon, obj7);
   } else {
     const obj8 = { color: tmp2(575).colors.INTERACTIVE_TEXT_DEFAULT };
     tmp13Result = closure_5(tmp5(7483).XSmallIcon, obj8);
@@ -126,7 +126,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const merged = Object.assign(tmp4);
   obj13.onScroll = callback;
   obj13.centerContent = true;
-  obj12.children = closure_5(sharedValue(15856), obj13);
+  obj12.children = closure_5(sharedValue(15851), obj13);
   items6[1] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, obj12);
   obj3.children = items6;
   return closure_6(View, obj3);

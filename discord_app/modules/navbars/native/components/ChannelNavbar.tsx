@@ -542,8 +542,8 @@ export function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = closure_16(closure_1(10501), obj2);
-        const tmp4Result = closure_1(10501);
+        tmp3Result = closure_16(closure_1(10499), obj2);
+        const tmp4Result = closure_1(10499);
       }
       children1[1] = tmp3Result;
       return closure_17(closure_4, { children: children1 }, index);

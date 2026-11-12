@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting(
 export function getEmptyServerSettingsEmojiSource(theme) {
   return _mod8117.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/20367__.js");
+      return require("../../../../../../../_runtime/metro/20362__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/20368__.js");
+      return require("../../../../../../../_runtime/metro/20363__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/20369__.js");
+      return require("../../../../../../../_runtime/metro/20364__.js");
     },
   });
 }
@@ -30,13 +30,13 @@ export function useEmptyServerSettingsEmojiSource() {
   const obj = shared;
   return _mod8117.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/20367__.js");
+      return require("../../../../../../../_runtime/metro/20362__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/20368__.js");
+      return require("../../../../../../../_runtime/metro/20363__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/20369__.js");
+      return require("../../../../../../../_runtime/metro/20364__.js");
     },
   });
 }
@@ -44,25 +44,25 @@ export function EmptyServerSettingsEmoji(arg0) {
   const obj = shared;
   const illustrationSource = _mod8117.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/20367__.js");
+      return require("../../../../../../../_runtime/metro/20362__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/20368__.js");
+      return require("../../../../../../../_runtime/metro/20363__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/20369__.js");
+      return require("../../../../../../../_runtime/metro/20364__.js");
     },
   });
   const obj4 = {};
   const obj3 = {
     dark() {
-      return require("../../../../../../../_runtime/metro/20367__.js");
+      return require("../../../../../../../_runtime/metro/20362__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/20368__.js");
+      return require("../../../../../../../_runtime/metro/20363__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/20369__.js");
+      return require("../../../../../../../_runtime/metro/20364__.js");
     },
   };
   const merged = Object.assign(arg0);

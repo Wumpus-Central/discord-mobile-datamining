@@ -245,7 +245,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
     obj.style = items;
     const items1 = ["(", error, ")"];
     obj.children = items1;
-    tmp3 = closure_1_10(native.LegacyText, obj);
+    tmp3 = refs(native.LegacyText, obj);
   }
   let tmp10 = null != title;
   if (tmp10) {
@@ -285,7 +285,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
   items2[2] = tmp22;
   items2[3] = tmp3;
   obj4.children = items2;
-  return closure_1_10(hasOwnProperty, obj4);
+  return refs(hasOwnProperty, obj4);
 };
 prototype["renderBottomContainer"] = function renderBottomContainer() {
   const self = this;
@@ -471,7 +471,7 @@ prototype["render"] = function render() {
   obj3.style = items2;
   const items3 = [self.renderTextView(), self.renderTrailingButton()];
   obj3.children = items3;
-  items1[1] = closure_1_10(hasOwnProperty, obj3);
+  items1[1] = refs(hasOwnProperty, obj3);
   items1[2] = PlatformUtils.isAndroid() && self.renderBorder();
   items1[3] = self.renderBottomContainer();
   const tmp8 = PlatformUtils.isAndroid() && self.renderBorder();
@@ -482,7 +482,7 @@ prototype["render"] = function render() {
   }
   items1[4] = renderBorderResult;
   obj2.children = items1;
-  obj.children = closure_1_10(hasOwnProperty, obj2);
+  obj.children = refs(hasOwnProperty, obj2);
   return React6(metroImportDefault, obj);
 };
 InputView.contextType = fn(5314).ThemeContext;

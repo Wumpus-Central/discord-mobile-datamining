@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17800);
+const HappeningNowConstants = fn(17795);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: metroImportDefault } = HappeningNowConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
@@ -131,12 +131,12 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     const items1 = [userId];
     obj2.highlighted_user_ids = items1;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
-    asyncRequireImpl(13936, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(13932, dependencyMap.paths).then((result) => {
       if (null != channelId) {
         tmp(tmp2, true);
       }
     });
-    const promise = asyncRequireImpl(13936, dependencyMap.paths);
+    const promise = asyncRequireImpl(13932, dependencyMap.paths);
   }, items3);
   context = obj4.useContext(tmp2(tmp3[16]).ViewableHappeningNowCardKeysContext);
   cardKey.useRef(cardKey);

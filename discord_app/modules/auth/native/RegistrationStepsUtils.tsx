@@ -59,7 +59,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
           React6();
           const tmp22 = getNextAuthState(closure_0);
           if (null != tmp22) {
-            const obj4 = { step: closure_2_10(closure_0), toStep: closure_2_10(tmp22), actionType: constants.SUCCESS };
+            const obj4 = { step: refs(closure_0), toStep: refs(tmp22), actionType: constants.SUCCESS };
             dependencyMap(obj4);
             const StackActions = Link.StackActions;
             importDefault.dispatch(StackActions.push(tmp22));
@@ -147,9 +147,9 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   return value;
 };
 const usePromoEmailConsentStore = fn(6782).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(18524);
+const RegistrationUIStore = fn(18519);
 ({ setRegistrationErrors: closure_6, setSubmitting: metroImportDefault, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(18525);
+const RegistrationConstants = fn(18520);
 ({ authStateToRegisterTransitionStep: closure_10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1072).AuthStates;
 const jsx = fn(21).jsx;
@@ -420,7 +420,7 @@ export function getPreviousRegistrationTransitionStep(AGE_GATE) {
     }
   }
   if (null != tmp3) {
-    return closure_1_10(tmp3);
+    return refs(tmp3);
   }
 }
 export function getNextRegistrationTransitionStep(arg0) {
@@ -432,7 +432,7 @@ export function getNextRegistrationTransitionStep(arg0) {
     }
   }
   if (null != tmp2) {
-    return closure_1_10(tmp2);
+    return refs(tmp2);
   }
 }
 export function handleNextOrSubmitRegistration() {

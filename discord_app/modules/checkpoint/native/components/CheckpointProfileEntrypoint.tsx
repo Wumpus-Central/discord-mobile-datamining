@@ -33,8 +33,8 @@ function CheckpointProfileEntrypointRow() {
   if (stateFromStores) {
     let tmp5Result = <ActivityIndicator />;
   } else {
-    const obj4 = { IconComponent: tmp(15079).ExperimentalCheckpointIcon };
-    tmp5Result = jsx(tmp(7379).TableRow.Icon, { IconComponent: tmp(15079).ExperimentalCheckpointIcon });
+    const obj4 = { IconComponent: tmp(15076).ExperimentalCheckpointIcon };
+    tmp5Result = jsx(tmp(7379).TableRow.Icon, { IconComponent: tmp(15076).ExperimentalCheckpointIcon });
   }
   obj3.icon = tmp5Result;
   obj3.onPress = handlePress;
@@ -42,7 +42,7 @@ function CheckpointProfileEntrypointRow() {
   if ("off" !== checkpointQAMode) {
     fn = () => {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(19468, dependencyMap.paths),
+        asyncRequireImpl(19463, dependencyMap.paths),
         "CheckpointTestingActionSheet",
         { mode: checkpointQAMode },
       );

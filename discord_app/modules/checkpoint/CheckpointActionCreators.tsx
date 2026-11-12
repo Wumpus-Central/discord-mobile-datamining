@@ -359,7 +359,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
                   const obj = checkpointCardType(8593);
                   const id = channel.id;
                   const obj3 = { location: "checkpoint", checkpointCardType };
-                  return obj.sendMessage(id, checkpointCardType(8720).parse(channel, closure_1_0), false, obj3);
+                  return obj.sendMessage(id, checkpointCardType(8719).parse(channel, closure_1_0), false, obj3);
                 }
               }),
             ),
@@ -400,7 +400,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(14150).CheckpointFetchStates;
+const CheckpointFetchStates = fn(14146).CheckpointFetchStates;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");

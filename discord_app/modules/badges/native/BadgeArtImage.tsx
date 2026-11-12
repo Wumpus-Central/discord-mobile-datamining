@@ -240,7 +240,7 @@ export default function BadgeArtImage(style) {
         let APNGPlayer = require;
         PlatformUtils;
       }
-      APNGPlayer = APNGPlayer(9432).APNGPlayer;
+      APNGPlayer = APNGPlayer(9431).APNGPlayer;
       const obj4 = { url: fallbackUrl, style: size, autoplay: true, onLoad };
       tmp12 = <APNGPlayer url={fallbackUrl} style={size} autoplay onLoad={onLoad} />;
     }

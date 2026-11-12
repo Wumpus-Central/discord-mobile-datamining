@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_6 = fn(18524).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(18525);
+let closure_6 = fn(18519).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(18520);
 ({
   authStateToRegisterTransitionStep: metroImportDefault,
   RegisterTransitionSteps: closure_8,
@@ -35,7 +35,7 @@ export default function VerifyPhone(phone) {
   closure_7 = noop.useRef(false);
   const context = noop.useContext(require("Auth").TrackRegistrationContext);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
-  onPhoneTokenReceived(18542)(closure_7(sourceState));
+  onPhoneTokenReceived(18537)(closure_7(sourceState));
   items = [context];
   const effect = noop.useEffect(() => {
     if (_undefined()) {
@@ -181,7 +181,7 @@ export default function VerifyPhone(phone) {
     loading: null,
     disableKeyboardAvoidingView: true,
   };
-  const tmp7 = onPhoneTokenReceived(18542);
+  const tmp7 = onPhoneTokenReceived(18537);
   obj.codeType = require("CodeField").CodeType.NUMERIC;
   obj.footer = memo;
   obj.disabled = tmp5;

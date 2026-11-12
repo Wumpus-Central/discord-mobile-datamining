@@ -334,7 +334,7 @@ export default {
     return size.size > 2097152;
   },
   isDataTooBig(base64) {
-    return ImageUtils.dataUriFileSize(base64) > closure_1_10;
+    return ImageUtils.dataUriFileSize(base64) > refs;
   },
 };
 export function countEmoji(arr, arg1) {

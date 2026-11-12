@@ -48,7 +48,7 @@ let obj = {
                 prop = dependencyMap.isICYMIGameContentForwarding;
               }
               if (prop) {
-                let guild_id = tmp2(10142).GAME_CONTENT_GUILD_ID;
+                let guild_id = tmp2(10141).GAME_CONTENT_GUILD_ID;
               } else if (channel1 != null) {
                 guild_id = channel1.guild_id;
               }
@@ -64,7 +64,7 @@ let obj = {
                 const error1 = new Error("Unable to find destination channel for message");
                 throw error1;
               } else {
-                const parsed = item(8720).parse(channel, "");
+                const parsed = item(8719).parse(channel, "");
                 const obj7 = { guild_id, channel_id: null, message_id: null, type: null, forward_only: null };
                 ({ channel_id: obj16.channel_id, id: obj16.message_id } = tmp2);
                 obj7.type = tmp2(1095).MessageReferenceTypes.FORWARD;
@@ -91,7 +91,7 @@ let obj = {
                 closure_128_2 = withMessage;
                 let num9 = 0;
                 if (null != withMessage) {
-                  const tmp39 = v3(item(8722)(withMessage), 2);
+                  const tmp39 = v3(item(8721)(withMessage), 2);
                   num9 = 0;
                   if (tmp39[0]) {
                     closure_128_2 = tmp39[1];
@@ -129,8 +129,8 @@ let obj = {
                   result = "" === closure_128_2;
                 }
                 if (!result) {
-                  result = tmp2(10195).isRatelimitedInChannel(closure_128_0, PermissionStore);
-                  const obj2 = tmp2(10195);
+                  result = tmp2(10193).isRatelimitedInChannel(closure_128_0, PermissionStore);
+                  const obj2 = tmp2(10193);
                 }
                 if (!result) {
                   const obj3 = item(8593);
@@ -139,7 +139,7 @@ let obj = {
                   dependencyMap = 2;
                   v3 = 1;
                   const obj26 = {
-                    value: obj3.sendMessage(id, item(8720).parse(closure_128_0, closure_128_2), false, obj25),
+                    value: obj3.sendMessage(id, item(8719).parse(closure_128_0, closure_128_2), false, obj25),
                     done: false,
                   };
                   return obj26;

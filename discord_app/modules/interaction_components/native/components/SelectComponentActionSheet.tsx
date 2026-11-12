@@ -211,7 +211,7 @@ function SelectionOptionItem(item) {
   }
   items1[1] = tmp6Result2;
   obj4.children = items1;
-  obj2.trailing = closure_1_10(View, obj4);
+  obj2.trailing = refs(View, obj4);
   return React5(TableRow.TableRow, obj2);
 }
 const View = fn(17).View;

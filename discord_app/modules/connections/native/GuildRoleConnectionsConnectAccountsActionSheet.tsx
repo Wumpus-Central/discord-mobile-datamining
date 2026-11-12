@@ -25,10 +25,10 @@ import getConnectionsRolesDefault from "../../channel/getConnectionsRoles.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
-import _modDef12392 from "../../../../_runtime/metro/12392__.js";
-import _modDef12393 from "../../../../_runtime/metro/12393__.js";
+import _modDef12386 from "../../../../_runtime/metro/12386__.js";
+import _modDef12387 from "../../../../_runtime/metro/12387__.js";
 import OfficialConnectionIconDefault from "OfficialConnectionIcon.tsx";
-import _modDef12397 from "../../../../_runtime/metro/12397__.js";
+import _modDef12391 from "../../../../_runtime/metro/12391__.js";
 import ConnectionsRoleActionCreators from "../ConnectionsRoleActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -278,7 +278,7 @@ function IdentityConnectionsCheckGroup(eligibilityState) {
     obj7.onPress = callback;
     let tmp15Result = null;
     if (null != memo) {
-      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[21]).AvatarSizes.XSMALL, guildId: "Array" };
+      const obj8 = { style: tmp.appIcon, user: memo, size: tmp2(tmp3[21]).AvatarSizes.XSMALL, guildId: "a" };
       tmp15Result = tmp15(tmp2(tmp3[21]).Avatar, obj8);
     }
     const items3 = [tmp15Result, ,];
@@ -476,7 +476,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp20 = tmp19 <= c8;
     }
     if (tmp3) {
-      const obj3 = { source: _modDef12392, style: closure_5.connectionsChecksGroupCheckmark };
+      const obj3 = { source: _modDef12386, style: closure_5.connectionsChecksGroupCheckmark };
       let tmp22Result = closure_1_29(tmp15(1187).Icon, obj3);
       let tmp24 = closure_1_29;
     } else if (tmp20) {
@@ -486,7 +486,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp22Result = closure_1_29(tmp15(5866).Text, obj4);
       tmp24 = closure_1_29;
     } else if (tmp8) {
-      const obj5 = { source: _modDef12393, style: closure_5.connectionsChecksGroupCaret };
+      const obj5 = { source: _modDef12387, style: closure_5.connectionsChecksGroupCaret };
       tmp22Result = closure_1_29(tmp15(1187).Icon, obj5);
       tmp24 = closure_1_29;
     } else {
@@ -581,7 +581,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     items1[1] = tmp24Result6;
     let tmp24Result7 = null;
     if (null != tmp11) {
-      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1187).AvatarSizes.XSMALL, guildId: "Array" };
+      const obj13 = { style: closure_5.appIcon, user: tmp11, size: tmp15(1187).AvatarSizes.XSMALL, guildId: "a" };
       tmp24Result7 = tmp24(tmp15(1187).Avatar, obj13);
     }
     items1[2] = tmp24Result7;
@@ -620,7 +620,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
         children: null,
       };
       const obj17 = {
-        source: _modDef12397,
+        source: _modDef12391,
         size: tmp15(1187).Icon.Sizes.SMALL_20,
         style: closure_5.connectionsChecksGroupTextNameInfoIcon,
       };
@@ -1272,7 +1272,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 };
                 let tmp7 = null;
                 const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(
-                  12398,
+                  12392,
                 ).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != platformType) {
                   tmp7 = id;
@@ -1281,7 +1281,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj4.overrideUrl = { overrideUrl: prop }.overrideUrl;
                 obj4.onCloseModal = onCloseModal;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj4);
-                const obj3 = platformType(12398);
+                const obj3 = platformType(12392);
               },
               overrideUrl: null,
             };

@@ -31,7 +31,7 @@ const Constants = fn(1072);
   DISPLAY_NAME_MAX_LENGTH,
   MAX_CHANNEL_NAME_LENGTH,
 } = Constants);
-const DiceRollConstants = fn(11354);
+const DiceRollConstants = fn(11348);
 ({ ALLOWED_DICE_SIDES, MAX_DICE_COUNT } = DiceRollConstants);
 let closure_11 = fn(5157).getDisableCommunicationDurationOptions;
 const MessageSendLocation = fn(5248).MessageSendLocation;
@@ -54,7 +54,7 @@ Object.defineProperty(obj3, "name", {
   set: undefined,
 });
 obj[BuiltInSectionId.FRECENCY] = obj3;
-let items = [...fn(11355).default];
+let items = [...fn(11349).default];
 let obj4 = {
   id: "-1",
   untranslatedName: "shrug",
@@ -1380,7 +1380,7 @@ obj32.execute = function execute(arr, channel) {
           const obj7 = tmp2(8593);
           const id = channel2.id;
           const obj9 = { location: constants.PRIVATE_MESSAGE_COMMAND };
-          obj7.sendMessage(id, tmp2(8720).parse(channel2, closure_129_2), true, obj9);
+          obj7.sendMessage(id, tmp2(8719).parse(channel2, closure_129_2), true, obj9);
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -1525,7 +1525,7 @@ const found = items.filter((untranslatedName) => {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
 
-export const PLATFORM_COMMANDS = fn(11355).default;
+export const PLATFORM_COMMANDS = fn(11349).default;
 export const BUILT_IN_SECTIONS = obj;
 export const BUILT_IN_COMMANDS = items;
 export const BUILT_IN_COMMANDS_ORIGINAL = found;

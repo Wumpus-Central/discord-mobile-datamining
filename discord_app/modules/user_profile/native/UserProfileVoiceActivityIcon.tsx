@@ -56,5 +56,5 @@ export default function UserProfileVoiceActivityIcon(channel) {
     }
   }
   const merged5 = Object.assign(merged);
-  return jsx(channel(9036).PhoneCallIcon, {});
+  return jsx(channel(9035).PhoneCallIcon, {});
 }

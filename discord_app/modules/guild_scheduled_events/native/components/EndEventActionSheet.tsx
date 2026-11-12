@@ -70,7 +70,7 @@ export default function EndEventActionSheet(channel) {
     items[3] = closure_5(View, obj8);
     obj3.children = items;
     obj2.children = closure_6(View, obj3);
-    return closure_5(activeEvent(15819), obj2);
+    return closure_5(activeEvent(15814), obj2);
   }
   let obj = channel(8360);
 }

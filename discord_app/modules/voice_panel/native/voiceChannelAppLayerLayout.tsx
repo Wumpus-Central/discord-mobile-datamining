@@ -6,7 +6,7 @@ const items = [
     code: "(function getVoiceChannelAppLayerInsets_voiceChannelAppLayerLayoutTsx1({safeArea:safeArea,edgeGutter:edgeGutter,controlsHeight:controlsHeight,keyboardHeight:keyboardHeight}){let[calculateVoicePanelHeaderSpecs,EDGE_GUTTER]=this.__closure;const{height:top}=calculateVoicePanelHeaderSpecs(safeArea,edgeGutter);const aboveControls=controlsHeight+Math.max(safeArea.bottom,EDGE_GUTTER);return{top:top,bottom:Math.max(aboveControls,keyboardHeight)};})",
   },
   calculateVoicePanelHeaderSpecsDefault,
-  fn(11928).EDGE_GUTTER,
+  fn(11922).EDGE_GUTTER,
 ];
 let c0;
 let c1;
@@ -28,7 +28,7 @@ const items2 = [
   {
     code: "(function shouldRestoreVoiceChannelAppControls_voiceChannelAppLayerLayoutTsx2(mode,previousMode){let[VoicePanelControlsModes]=this.__closure;return mode===VoicePanelControlsModes.HIDDEN&&previousMode!==VoicePanelControlsModes.HIDDEN;})",
   },
-  fn(11923).VoicePanelControlsModes,
+  fn(11917).VoicePanelControlsModes,
 ];
 let closure_129_0;
 [tmp5, tmp6] = items2;

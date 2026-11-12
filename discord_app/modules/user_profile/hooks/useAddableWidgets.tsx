@@ -72,7 +72,7 @@ export default function useAddableWidgets() {
     let set = new Set(found.map((applicationId) => applicationId.applicationId));
     set1 = new Set(set1.map((type) => type.type));
     let found1 = closure_6.filter((item) => {
-      const ADDABLE_WIDGET_TYPES = set(15698).ADDABLE_WIDGET_TYPES;
+      const ADDABLE_WIDGET_TYPES = set(15695).ADDABLE_WIDGET_TYPES;
       return ADDABLE_WIDGET_TYPES.has(item);
     });
     return found1.flatMap((type) => {

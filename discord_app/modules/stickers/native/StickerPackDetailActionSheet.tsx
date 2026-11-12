@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const StickerPickerConstants = fn(11183);
+const StickerPickerConstants = fn(11177);
 ({ MIN_MARGIN: hasOwnProperty, STICKER_SIZE: closure_6 } = StickerPickerConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const ACTION_SHEET_MAX_WIDTH = fn(5504).ACTION_SHEET_MAX_WIDTH;

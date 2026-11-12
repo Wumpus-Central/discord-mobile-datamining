@@ -122,7 +122,7 @@ export default function PlaintextFilePreviewModal(url) {
   const tmp2 = first(noop.useState(true), 2);
   first = tmp2[0];
   noop = tmp2[1];
-  const MARKDOWN_LANGUAGES = url(12433).MARKDOWN_LANGUAGES;
+  const MARKDOWN_LANGUAGES = url(12427).MARKDOWN_LANGUAGES;
   const parts = str.split(".");
   const hasItem = MARKDOWN_LANGUAGES.has(parts.slice(-1)[0]);
   const tmp7 = first(noop.useState(true), 2);
@@ -214,5 +214,5 @@ export default function PlaintextFilePreviewModal(url) {
     obj[memo.PREVIEW] = obj2;
     return obj;
   }, items1);
-  return first1(url(12434).Modal, { screens: memo1, initialRouteName: memo.PREVIEW });
+  return first1(url(12428).Modal, { screens: memo1, initialRouteName: memo.PREVIEW });
 }

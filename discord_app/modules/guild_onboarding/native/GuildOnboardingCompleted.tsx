@@ -353,13 +353,9 @@ export default function GuildOnboardingCompleted(guildId) {
         substr.map((role) => {
           const obj = {
             style: duration.role,
-            children: closure_2_10(UserProfileRolesCard.RoleItem, {
-              role,
-              guildId: _undefined5.id,
-              disableInteraction: true,
-            }),
+            children: refs(UserProfileRolesCard.RoleItem, { role, guildId: _undefined5.id, disableInteraction: true }),
           };
-          return closure_2_10(React4, obj, role.id);
+          return refs(React4, obj, role.id);
         }),
       ];
       let tmp28Result3 = null;

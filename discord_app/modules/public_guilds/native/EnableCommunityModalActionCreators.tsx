@@ -22,7 +22,7 @@ export default {
     }
     GuildSettingsActionCreatorsDefault.updateGuild({ rulesChannelId });
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(20463, dependencyMap.paths),
+      asyncRequireImpl(20458, dependencyMap.paths),
       undefined,
       ENABLED_COMMUNITY_MODAL_KEY,
     );

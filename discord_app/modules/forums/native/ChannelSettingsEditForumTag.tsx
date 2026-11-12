@@ -226,7 +226,7 @@ export default function ChannelSettingsEditForumTag(channelId) {
       };
       setOptions(obj);
     } else {
-      setOptions({ headerRight: "Array" });
+      setOptions({ headerRight: "r" });
     }
   }, items5);
   const obj5 = { style: tmp.container, children: null };
@@ -367,5 +367,5 @@ export default function ChannelSettingsEditForumTag(channelId) {
     tmp31 = tag;
     const tmp32 = tag(7828);
   }
-  tmp27Result4 = tmp27(tmp3(10342).ReactionIcon, {});
+  tmp27Result4 = tmp27(tmp3(10340).ReactionIcon, {});
 }

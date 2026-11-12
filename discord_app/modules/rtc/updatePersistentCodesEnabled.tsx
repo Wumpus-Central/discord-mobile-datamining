@@ -277,7 +277,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     }
   }
 };
-let closure_7 = fn(10561).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_7 = fn(10559).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/updatePersistentCodesEnabled.tsx");

@@ -11,7 +11,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   const ref = noop.useRef(null);
   const tmp5 = visibilityRef;
   let tmp6 = visibilityRef(6773)(tmp3);
-  const adContentImpressionTrackerProps = adContentIds2(10100).useAdContentImpressionTrackerProps(skipRemountKey);
+  const adContentImpressionTrackerProps = adContentIds2(10099).useAdContentImpressionTrackerProps(skipRemountKey);
   const adContentIds = adContentImpressionTrackerProps.adContentIds;
   const obj3 = {};
   let merged = Object.assign(skipRemountKey);
@@ -20,7 +20,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   visibilityRef = obj3.visibilityRef;
   let overrideVisibility = obj3.overrideVisibility;
   const joined = adContentIds2.join("_");
-  const obj2 = adContentIds2(10100);
+  const obj2 = adContentIds2(10099);
   let items1 = [joined];
   const tmp10 = _slicedToArray(adContentIds2(7822).useRecyclingState(false, items1), 2);
   dependencyMap = tmp11;
@@ -157,9 +157,9 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
     obj7.adCreativeType = skipRemountKey.adCreativeType;
     tmp19 = obj7;
   }
-  return createElement(adContentIds2(15154).QuestContentImpressionTracker, tmp19);
+  return createElement(adContentIds2(15151).QuestContentImpressionTracker, tmp19);
 }
-let closure_6 = fn(10070).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+let closure_6 = fn(10069).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const AppStates = fn(1072).AppStates;
 const createElement = fn(19).createElement;
 const jsx = fn(21).jsx;

@@ -102,8 +102,8 @@ export default noop.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
   const tmp = closure_6();
-  defaultVariantIndex = defaultVariantIndex(10350).useDefaultVariantIndex(product);
-  const obj = defaultVariantIndex(10350);
+  defaultVariantIndex = defaultVariantIndex(10348).useDefaultVariantIndex(product);
+  const obj = defaultVariantIndex(10348);
   if (obj2.getIsVariantProduct(product)) {
     let num3 = 3;
     if (product.variants.length <= 4) {

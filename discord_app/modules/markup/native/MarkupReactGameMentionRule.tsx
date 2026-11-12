@@ -188,7 +188,7 @@ const jsxProd = fn(21);
 let closure_8 = nativeDefault.space.PX_4 / 2;
 let c9 = "body-sm/semibold";
 const createStyles = fn(5243);
-let closure_10 = createStyles.createStyles((width, arg1) => {
+const refs = createStyles.createStyles((width, arg1) => {
   const obj = {
     inlineRoot: { flexDirection: "row" },
     pill: {

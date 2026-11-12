@@ -74,14 +74,14 @@ function UserRowSubLabel(arg0) {
   }
 }
 const View = fn(17).View;
-const UserRowModes = fn(10177).UserRowModes;
+const UserRowModes = fn(10175).UserRowModes;
 const Constants = fn(1072);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const PlatformUtils = fn(1357);
 if (PlatformUtils.isIOS()) {
-  let obj = { lineHeight: "Array" };
+  let obj = { lineHeight: "r" };
 }
 let closure_18 = {
   CALL: "call",
@@ -245,7 +245,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "Array" };
+      let obj2 = { accessibilityActions: items, actions: "a" };
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {
@@ -419,7 +419,7 @@ export default noop.memo(function UserRow(type) {
               channel = channel.getChannel(result);
               if (null != channel) {
                 user(38)(channel.isPrivate(), "must be a DM");
-                const obj2 = user(10515)(channel, false);
+                const obj2 = user(10513)(channel, false);
                 if (!obj2.inCall) {
                   obj2.onPress();
                 }
@@ -475,7 +475,7 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10515)(channel, false);
+          const obj2 = user(10513)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }

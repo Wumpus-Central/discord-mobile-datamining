@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import 01652__ from "../../../../../../_runtime/metro/01652__.js";
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(11925).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11919).MODE_CHANGE_PHYSICS;
 let jsx = fn(21).jsx;
 const createStyles = fn(5243);
 let obj2 = { pressableWrapper: { justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.modules.button.BORDER_RADIUS_LG } };

@@ -136,7 +136,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
     require("GlobalStatusIndicator").useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
   let obj2 = require("GlobalStatusIndicator");
   let reveal = noop.useContext(require("RevealProvider").RevealContext).reveal;
-  const tmp6 = analyticsLocations(11889)();
+  const tmp6 = analyticsLocations(11883)();
   const isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   if (!reveal) {
     reveal = forceReveal;
@@ -202,7 +202,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
   const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(FocusedControlsTsx5);
   const tmpResult4 = require("../../../../../_runtime/metro/01652__.js");
   analyticsLocations = analyticsLocations(7852)(tmp5(7871).FOCUSED_VOICE_CONTROLS).analyticsLocations;
-  dependencyMap = tmp5(12753)();
+  dependencyMap = tmp5(12747)();
   if (containerStyle == null) {
     containerStyle = absoluteFill.absoluteFill;
   }
@@ -253,7 +253,7 @@ export default noop.memo(function FocusedControlsRevamped(disableGradient) {
         reveal,
         children,
       };
-      tmp27Result = closure_7(tmp5(12835), obj5);
+      tmp27Result = closure_7(tmp5(12829), obj5);
     }
   }
   items7[2] = tmp27Result;

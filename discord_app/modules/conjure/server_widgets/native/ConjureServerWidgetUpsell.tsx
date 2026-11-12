@@ -11,7 +11,7 @@ function ServerWidgetUpsellCard(cardStyle) {
   ({ userId, widget } = cardStyle);
   ({ guildId, onDismiss } = cardStyle);
   const tmp = closure_7();
-  const conjureServerWidgetUpsellDetails = widget(15691).useConjureServerWidgetUpsellDetails(userId, widget, guildId);
+  const conjureServerWidgetUpsellDetails = widget(15688).useConjureServerWidgetUpsellDetails(userId, widget, guildId);
   if (null == conjureServerWidgetUpsellDetails) {
     return null;
   } else {
@@ -35,7 +35,7 @@ function ServerWidgetUpsellCard(cardStyle) {
     let tmp10Result = null;
     if (null != creator) {
       const obj10 = { creator, guildId };
-      tmp10Result = closure_5(onDismiss(15699), obj10);
+      tmp10Result = closure_5(onDismiss(13683), obj10);
     }
     items1[2] = tmp10Result;
     obj5.children = items1;
@@ -61,10 +61,10 @@ function ServerWidgetUpsellCard(cardStyle) {
     const obj14 = { style: tmp.container, children: null };
     const tmp11 = onDismiss(7654);
     const obj15 = { userId, widget, cardStyle: cardStyle.cardStyle, rendererProps, footer: closure_6(View, obj2) };
-    obj14.children = closure_5(onDismiss(12077), obj15);
+    obj14.children = closure_5(onDismiss(12071), obj15);
     return closure_5(View, obj14);
   }
-  const obj = widget(15691);
+  const obj = widget(15688);
 }
 function ServerWidgetUpsellForUser(userId) {
   userId = userId.userId;

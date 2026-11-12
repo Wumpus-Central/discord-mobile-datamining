@@ -313,7 +313,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(11575).hideMediaKeyboardActionSheet();
+        return InteractionModal(11569).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveUploadLimit,
       onSelectFiles(arg0) {
@@ -346,7 +346,7 @@ export default function FileUploadActionComponent(maxValues) {
           const result = InteractionModal(customId[29]).hideMediaKeyboardActionSheet();
           if (item.isIncluded) {
             const found = currentUploads.find((item) =>
-              InteractionModal(8811).doesImageMatchUpload(item.node.image, item),
+              InteractionModal(8810).doesImageMatchUpload(item.node.image, item),
             );
             if (null != found) {
               callback1(found.id);
@@ -367,9 +367,9 @@ export default function FileUploadActionComponent(maxValues) {
           obj.handleViewAllDialog(obj2);
         },
         onManageLimited() {
-          obj = InteractionModal(11574);
+          obj = InteractionModal(11568);
           const result = obj.handleLimitedPickerDialog({
-            onDismissKeyboard: InteractionModal(11575).hideMediaKeyboardActionSheet,
+            onDismissKeyboard: InteractionModal(11569).hideMediaKeyboardActionSheet,
             onRestoreKeyboard,
           });
         },

@@ -2,7 +2,6 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
-import UserUtils from "../../../../utils/UserUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -14,6 +13,7 @@ import ConjureSharedProjectCoverDefault from "ConjureSharedProjectCover.tsx";
 import ConjureAppSheetIconDefault from "../../app_hover_card/native/ConjureAppSheetIcon.tsx";
 import conjureSharedProjectSurfaces from "../conjureSharedProjectSurfaces.tsx";
 import useConjureProjectCreator from "../../projects/useConjureProjectCreator.tsx";
+import ConjureCreatorBylineDefault from "../../app_hover_card/native/ConjureCreatorByline.tsx";
 import openConjureSharedProjectRemixSheetDefault from "openConjureSharedProjectRemixSheet.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -39,18 +39,15 @@ function Surfaces(project) {
   }
   return tmp3;
 }
-function Creator(project) {
-  const creator = useConjureProjectCreator.useConjureProjectPeople(project.project).creator;
-  let tmp3 = null;
+function Creator(arg0) {
+  ({ project, guildId } = arg0);
+  const creator = useConjureProjectCreator.useConjureProjectPeople(project).creator;
+  let tmp2 = null;
   if (null != creator) {
-    const obj2 = { variant: "body-sm/normal", color: "text-muted", lineClamp: 1, children: null };
-    const intl = util.intl;
-    const obj3 = { name: UserUtils.getName(creator) };
-    obj2.children = intl.formatToPlainString(_modDef4079["6/x9LD"], obj3);
-    tmp3 = timestampProducer(Text_Text.Text, obj2);
-    const tmpResult = UserUtils;
+    const obj2 = { creator, guildId };
+    tmp2 = timestampProducer(ConjureCreatorBylineDefault, obj2);
   }
-  return tmp3;
+  return tmp2;
 }
 function RemixActions(project) {
   project = project.project;
@@ -193,7 +190,7 @@ export default function ConjureProjectAboutSheet(arg0) {
             return obj5;
           } else {
             if (value) {
-              v1(5489).hideActionSheet(tmp4(13677).CONJURE_PROJECT_ABOUT_SHEET_KEY);
+              v1(5489).hideActionSheet(tmp4(13671).CONJURE_PROJECT_ABOUT_SHEET_KEY);
               const obj = v1(5489);
             }
             dependencyMap = 3;
@@ -281,7 +278,7 @@ export default function ConjureProjectAboutSheet(arg0) {
     const obj15 = { children: null };
     const obj16 = { project: tmp3.project };
     const items5 = [closure_6(Surfaces, obj16)];
-    const obj17 = { project: tmp3.project };
+    const obj17 = { project: tmp3.project, guildId: source.guildId };
     items5[1] = closure_6(Creator, obj17);
     obj15.children = items5;
     tmp18Result2 = closure_7(closure_8, obj15);

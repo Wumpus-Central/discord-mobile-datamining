@@ -1,4 +1,9 @@
 // discord_app/modules/auth/native/images/flags.tsx
+import _mod17927 from "../../../../../_runtime/metro/17927__.js";
+import _mod17928 from "../../../../../_runtime/metro/17928__.js";
+import _mod17929 from "../../../../../_runtime/metro/17929__.js";
+import _mod17930 from "../../../../../_runtime/metro/17930__.js";
+import _mod17931 from "../../../../../_runtime/metro/17931__.js";
 import _mod17932 from "../../../../../_runtime/metro/17932__.js";
 import _mod17933 from "../../../../../_runtime/metro/17933__.js";
 import _mod17934 from "../../../../../_runtime/metro/17934__.js";
@@ -25,45 +30,40 @@ import _mod17954 from "../../../../../_runtime/metro/17954__.js";
 import _mod17955 from "../../../../../_runtime/metro/17955__.js";
 import _mod17956 from "../../../../../_runtime/metro/17956__.js";
 import _mod17957 from "../../../../../_runtime/metro/17957__.js";
-import _mod17958 from "../../../../../_runtime/metro/17958__.js";
-import _mod17959 from "../../../../../_runtime/metro/17959__.js";
-import _mod17960 from "../../../../../_runtime/metro/17960__.js";
-import _mod17961 from "../../../../../_runtime/metro/17961__.js";
-import _mod17962 from "../../../../../_runtime/metro/17962__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
 export const flags = {
-  bg: _mod17932,
-  cs: _mod17933,
-  da: _mod17934,
-  de: _mod17935,
-  el: _mod17936,
-  "en-GB": _mod17937,
-  "en-US": _mod17938,
-  "es-ES": _mod17939,
-  "es-419": _mod17940,
-  fi: _mod17941,
-  fr: _mod17942,
-  hi: _mod17943,
-  hr: _mod17944,
-  hu: _mod17945,
-  it: _mod17946,
-  ja: _mod17947,
-  ko: _mod17948,
-  lt: _mod17949,
-  nl: _mod17950,
-  no: _mod17951,
-  pl: _mod17952,
-  "pt-BR": _mod17953,
-  ro: _mod17954,
-  ru: _mod17955,
-  "sv-SE": _mod17956,
-  th: _mod17957,
-  tr: _mod17958,
-  uk: _mod17959,
-  vi: _mod17960,
-  "zh-CN": _mod17961,
-  "zh-TW": _mod17962,
+  bg: _mod17927,
+  cs: _mod17928,
+  da: _mod17929,
+  de: _mod17930,
+  el: _mod17931,
+  "en-GB": _mod17932,
+  "en-US": _mod17933,
+  "es-ES": _mod17934,
+  "es-419": _mod17935,
+  fi: _mod17936,
+  fr: _mod17937,
+  hi: _mod17938,
+  hr: _mod17939,
+  hu: _mod17940,
+  it: _mod17941,
+  ja: _mod17942,
+  ko: _mod17943,
+  lt: _mod17944,
+  nl: _mod17945,
+  no: _mod17946,
+  pl: _mod17947,
+  "pt-BR": _mod17948,
+  ro: _mod17949,
+  ru: _mod17950,
+  "sv-SE": _mod17951,
+  th: _mod17952,
+  tr: _mod17953,
+  uk: _mod17954,
+  vi: _mod17955,
+  "zh-CN": _mod17956,
+  "zh-TW": _mod17957,
 };

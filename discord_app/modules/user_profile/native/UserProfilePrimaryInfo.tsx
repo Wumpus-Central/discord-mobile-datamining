@@ -459,7 +459,7 @@ function UnreadDotCutoutLayer(showDot) {
   const items1 = [tmp.cutoutLayerFill, showDot.style];
   obj2.style = items1;
   obj.children = closure_15(closure_6, obj2);
-  return closure_15(first(9437), obj);
+  return closure_15(first(9436), obj);
 }
 class ProfileBadgeRows {
   constructor(arg0) {

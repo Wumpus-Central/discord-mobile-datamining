@@ -1,6 +1,6 @@
 // discord_app/modules/virtual_currency/native/orb_wallet/OrbWalletProfileIntroductionCoachmark.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef19463 from "../../../../../discord_assets/assets/mana/asset-library/generated/Orb3dIllustration-3x.png.js";
+import _modDef19458 from "../../../../../discord_assets/assets/mana/asset-library/generated/Orb3dIllustration-3x.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -32,7 +32,7 @@ export default function OrbWalletProfileIntroductionCoachmark(visible) {
     const intl2 = util.intl;
     obj.description = intl2.string(util.t.YKJw4W);
     obj.visible = visible;
-    const obj2 = { type: "image", src: { uri: _modDef19463 }, aspectRatio: "16/9" };
+    const obj2 = { type: "image", src: { uri: _modDef19458 }, aspectRatio: "16/9" };
     obj.graphic = obj2;
     obj.onDismiss = function onDismiss() {
       return markAsDismissed(constants.USER_DISMISS);

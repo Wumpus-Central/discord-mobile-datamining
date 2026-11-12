@@ -9,7 +9,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(10744).NsfwGateSource;
+const NsfwGateSource = fn(10738).NsfwGateSource;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: closure_10, Fonts: closure_11 } = Constants);
 const jsxProd = fn(21);

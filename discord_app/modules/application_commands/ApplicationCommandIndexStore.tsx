@@ -669,7 +669,7 @@ function useQueryState(type, commandTypes, allowFetch) {
 function queryIndex(allowApplicationCommands) {
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
-    builtIns = NONE(11351).BuiltInCommandFilter.ALLOW;
+    builtIns = NONE(11345).BuiltInCommandFilter.ALLOW;
   }
   let flag = allowApplicationCommands.allowApplicationCommands;
   if (flag === undefined) {
@@ -685,7 +685,7 @@ function queryIndex(allowApplicationCommands) {
   }
   NONE = allowApplicationCommands.scoreMethod;
   if (NONE === undefined) {
-    NONE = NONE(11351).ScoreMethod.NONE;
+    NONE = NONE(11345).ScoreMethod.NONE;
   }
   let sortOptions = allowApplicationCommands.sortOptions;
   if (sortOptions === undefined) {
@@ -704,10 +704,10 @@ function queryIndex(allowApplicationCommands) {
   if (formatted != null) {
     parts = formatted.split(" ");
   }
-  if (builtIns !== NONE(11351).BuiltInCommandFilter.DENY) {
-    const tmp12 = builtIns === NONE(11351).BuiltInCommandFilter.ONLY_TEXT;
-    let builtInCommands = tmp9(11353).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
-    const tmp9Result = tmp9(11353);
+  if (builtIns !== NONE(11345).BuiltInCommandFilter.DENY) {
+    const tmp12 = builtIns === NONE(11345).BuiltInCommandFilter.ONLY_TEXT;
+    let builtInCommands = tmp9(11347).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
+    const tmp9Result = tmp9(11347);
   } else {
     builtInCommands = [];
   }
@@ -888,7 +888,7 @@ function queryIndex(allowApplicationCommands) {
   });
   if (builtInCommands.length > 0) {
     const tmp87 = queryIndexSection(
-      NONE(11353).BUILT_IN_SECTIONS[constants.BUILT_IN],
+      NONE(11347).BUILT_IN_SECTIONS[constants.BUILT_IN],
       builtInCommands,
       true,
       true,
@@ -907,7 +907,7 @@ function queryIndex(allowApplicationCommands) {
       return obj;
     });
   });
-  if (NONE === NONE(11351).ScoreMethod.COMMAND_ONLY) {
+  if (NONE === NONE(11345).ScoreMethod.COMMAND_ONLY) {
     const context = permissionContext.context;
     let guild_id;
     if (permissionContext != null) {

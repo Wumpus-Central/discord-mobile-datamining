@@ -39,13 +39,13 @@ function CutoutGuildIconWithUserCustom(guild) {
     size: native.AvatarSizes.XSMALL_20,
   });
   obj.children = items1;
-  return closure_1_10(View, obj);
+  return refs(View, obj);
 }
 const View = fn(17).View;
 const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createICYMIStyles = fn(19097);
+const createICYMIStyles = fn(19092);
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = {
     container: { marginTop: marginHorizontal.margin },
@@ -334,9 +334,9 @@ export default function ICYMICardInCard(message) {
               };
               items2[1] = React6(Text_Text.Text, obj9);
               obj7.children = items2;
-              items1[2] = closure_2_10(View, obj7);
+              items1[2] = refs(View, obj7);
               obj2.children = items1;
-              return closure_2_10(View, obj2);
+              return refs(View, obj2);
             }
           }
         }
@@ -371,13 +371,13 @@ export default function ICYMICardInCard(message) {
       };
       items5[1] = React6(Text_Text.Text, obj15);
       obj14.children = items5;
-      items4[1] = closure_2_10(View, obj14);
+      items4[1] = refs(View, obj14);
       obj12.children = items4;
-      tmp13 = closure_2_10(closure_2_11, obj12);
+      tmp13 = refs(closure_2_11, obj12);
     }
     items3[1] = tmp13;
     obj10.children = items3;
-    return closure_2_10(View, obj10);
+    return refs(View, obj10);
   }, items8);
   const items10 = [fontScale, ,];
   ({ channelNameAndAccessoryLarge: arr11[1], channelNameAndAccessory: arr11[2] } = tmp);

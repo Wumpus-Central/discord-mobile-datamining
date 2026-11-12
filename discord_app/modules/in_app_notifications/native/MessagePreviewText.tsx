@@ -148,7 +148,7 @@ function EmbedCard(embed) {
   return React6(View, obj2);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10963);
+const InAppNotificationConstants = fn(10957);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: metroImportDefault } =
   InAppNotificationConstants);
 const Fonts = fn(1083).Fonts;
@@ -162,7 +162,7 @@ let obj3 = {
     fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC,
   },
 };
-let closure_10 = createStyles.createStyles(obj3);
+const refs = createStyles.createStyles(obj3);
 createStyles = fn(5243);
 let obj6 = {
   embedContainer: null,

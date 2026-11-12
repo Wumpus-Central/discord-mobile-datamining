@@ -13,7 +13,7 @@ function closeActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet();
 }
 const View = fn(17).View;
-const FeedbackRating = fn(12506).FeedbackRating;
+const FeedbackRating = fn(12500).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5243);
@@ -78,8 +78,8 @@ export default function FeedbackActionSheet(feedbackReasons) {
         tmp14 = View(reason);
       }
       obj3.descriptionLabel = tmp14;
-      obj2.pushLazy(asyncRequireImpl(12528, dependencyMap.paths), obj3);
-      const tmp9 = asyncRequireImpl(12528, dependencyMap.paths);
+      obj2.pushLazy(asyncRequireImpl(12522, dependencyMap.paths), obj3);
+      const tmp9 = asyncRequireImpl(12522, dependencyMap.paths);
     } else {
       const obj = { rating, reason, dontShowAgain: first1 };
       trackReport(obj);

@@ -36,15 +36,15 @@ let closure_10 = noop.memo(function BugReporterFeature(item) {
   const obj = {
     start,
     end,
-    value: item(11041).getFeatureId(item),
+    value: item(11035).getFeatureId(item),
     label: item.name,
     legacyCompat_selected: null,
     legacyCompat_onPress: null,
   };
-  const obj2 = item(11041);
-  const featureId = item(11041).getFeatureId(item);
-  const obj3 = item(11041);
-  obj.legacyCompat_selected = featureId === item(11041).getFeatureId(feature);
+  const obj2 = item(11035);
+  const featureId = item(11035).getFeatureId(item);
+  const obj3 = item(11035);
+  obj.legacyCompat_selected = featureId === item(11035).getFeatureId(feature);
   obj.legacyCompat_onPress = function legacyCompat_onPress() {
     setFeature(item);
     ActionSheetActionCreatorsDefault.hideActionSheet();

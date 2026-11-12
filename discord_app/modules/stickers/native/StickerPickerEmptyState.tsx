@@ -119,13 +119,13 @@ export default function _default() {
       return closure_1_11(sticker(7364).PressableOpacity, obj, id);
     }),
   };
-  obj9.source = analyticsLocations(11153);
+  obj9.source = analyticsLocations(11147);
   obj9.style = tmp.nitroWheel;
   obj8.icon = closure_11(analyticsLocations(5957), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {
-    return analyticsLocations(11317)({ section: constants.EXPRESSION_PICKER });
+    return analyticsLocations(11311)({ section: constants.EXPRESSION_PICKER });
   };
   obj7.children = closure_11(require("components/Button/Button").Button, obj8);
   items2[3] = closure_11(View, obj7);

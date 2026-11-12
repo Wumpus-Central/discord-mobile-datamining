@@ -379,23 +379,23 @@ const Constants = fn(1072);
 const isStaticChannelRoute = fn(5099).isStaticChannelRoute;
 const CollectibleShopTab = fn(1074).CollectibleShopTab;
 let obj = {};
-obj[fn(10180).AutocompleterQuerySymbols.USER] = fn(10180).AutocompleterResultTypes.USER;
-obj[fn(10180).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(10180).AutocompleterResultTypes.TEXT_CHANNEL;
-obj[fn(10180).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(10180).AutocompleterResultTypes.VOICE_CHANNEL;
-obj[fn(10180).AutocompleterQuerySymbols.GUILD] = fn(10180).AutocompleterResultTypes.GUILD;
-obj[fn(10180).AutocompleterQuerySymbols.GAME_PROFILE] = fn(10180).AutocompleterResultTypes.GAME_PROFILE;
+obj[fn(10178).AutocompleterQuerySymbols.USER] = fn(10178).AutocompleterResultTypes.USER;
+obj[fn(10178).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(10178).AutocompleterResultTypes.TEXT_CHANNEL;
+obj[fn(10178).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(10178).AutocompleterResultTypes.VOICE_CHANNEL;
+obj[fn(10178).AutocompleterQuerySymbols.GUILD] = fn(10178).AutocompleterResultTypes.GUILD;
+obj[fn(10178).AutocompleterQuerySymbols.GAME_PROFILE] = fn(10178).AutocompleterResultTypes.GAME_PROFILE;
 let closure_20 = Object.freeze(obj);
 const regExp = new RegExp(
   "^" +
-    fn(10180).AutocompleterQuerySymbols.USER +
+    fn(10178).AutocompleterQuerySymbols.USER +
     "|" +
-    fn(10180).AutocompleterQuerySymbols.TEXT_CHANNEL +
+    fn(10178).AutocompleterQuerySymbols.TEXT_CHANNEL +
     "|" +
-    fn(10180).AutocompleterQuerySymbols.VOICE_CHANNEL +
+    fn(10178).AutocompleterQuerySymbols.VOICE_CHANNEL +
     "|\\" +
-    fn(10180).AutocompleterQuerySymbols.GUILD +
+    fn(10178).AutocompleterQuerySymbols.GUILD +
     "|\\" +
-    fn(10180).AutocompleterQuerySymbols.GAME_PROFILE,
+    fn(10178).AutocompleterQuerySymbols.GAME_PROFILE,
 );
 let items = [, ,];
 ({ SETTINGS: arr[0], PLAYGROUND: arr[1], SHOP_ORBS_TAB: arr[2] } = InAppNavigationType);
@@ -509,7 +509,7 @@ export function switchToResultInNewTab(type) {
                         return obj7;
                       } else {
                         closure_128_0 = value;
-                        const obj = tmp5(10212);
+                        const obj = tmp5(10210);
                         obj.openChannelTabActive(closure_128_0, null, "quick_switcher", closure_129_1);
                         c3 = 3;
                         return { value: "HermesInternal", done: null };
@@ -563,7 +563,7 @@ export function switchToResultInNewTab(type) {
                         return obj7;
                       } else {
                         closure_128_0 = value;
-                        const obj = tmp5(10212);
+                        const obj = tmp5(10210);
                         obj.openChannelTabActive(closure_128_0, null, "quick_switcher", closure_129_1);
                         c3 = 3;
                         return { value: "HermesInternal", done: null };

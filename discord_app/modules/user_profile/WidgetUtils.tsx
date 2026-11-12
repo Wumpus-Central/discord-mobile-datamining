@@ -85,7 +85,7 @@ function replaceWidgetInList(clipsGalleryWidget) {
 }
 const WIDGET_TITLES_BY_TYPE = fn(7291).WIDGET_TITLES_BY_TYPE;
 const ContentDismissActionType = fn(5089).ContentDismissActionType;
-let closure_9 = fn(12031).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_9 = fn(12025).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 

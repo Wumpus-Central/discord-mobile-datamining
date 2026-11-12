@@ -387,7 +387,7 @@ export function addFavoriteGIF(size) {
             obj3.order = num + 1;
             gifs.gifs[tmp23] = obj3;
             const FavoriteGIFs = frecency_user_settings.FavoriteGIFs;
-            if (FavoriteGIFs.toBinary(gifs).length > closure_2_10) {
+            if (FavoriteGIFs.toBinary(gifs).length > refs) {
               const obj5 = { title: null, body: null };
               const intl = util.intl;
               obj5.title = intl.string(util.t["+XYXtZ"]);

@@ -15,7 +15,7 @@ function SharedUser(user) {
   user = user.user;
   const tmp = closure_8();
   const name = UserUtilsDefault.getName(user);
-  const tmp6 = user.trialCreationResult === user(9228).CreateReferralStatus.FAIL;
+  const tmp6 = user.trialCreationResult === user(9227).CreateReferralStatus.FAIL;
   const obj2 = { style: tmp.recipientRow, children: null };
   items = [tmp.avatarContainer];
   let erroredAvatar = tmp6;
@@ -24,12 +24,7 @@ function SharedUser(user) {
   }
   items[1] = erroredAvatar;
   const items1 = [
-    closure_5(user(1187).Avatar, {
-      style: items,
-      size: user(1187).AvatarSizes.REFRESH_MEDIUM_32,
-      user,
-      guildId: "Array",
-    }),
+    closure_5(user(1187).Avatar, { style: items, size: user(1187).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" }),
     ,
   ];
   if (tmp6) {
@@ -51,7 +46,7 @@ function SharedUser(user) {
   const obj9 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
   const intl2 = tmp5(1113).intl;
   obj9.text = intl2.string(user(1113).t["g33r/P"]);
-  const obj3 = { style: items, size: user(1187).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" };
+  const obj3 = { style: items, size: user(1187).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" };
   obj9.icon = closure_5(user(8004).ChatIcon, {
     size: "xs",
     color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT,
@@ -141,7 +136,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   const obj4 = { children: null };
   const formatResult = intl3.format(tmp5(1113).t.AwGSWl, obj);
   items = [
-    closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(15191).FistBumpSpotIllustration, {}) }),
+    closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(15188).FistBumpSpotIllustration, {}) }),
     closure_5(tmp5(5866).Text, {
       variant: "heading-lg/semibold",
       color: "mobile-text-heading-primary",
@@ -156,7 +151,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
     }),
   ];
   const obj8 = { style: tmp.recipientContainer, children: null };
-  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(15191).FistBumpSpotIllustration, {}) };
+  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(15188).FistBumpSpotIllustration, {}) };
   const obj6 = {
     variant: "heading-lg/semibold",
     color: "mobile-text-heading-primary",

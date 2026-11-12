@@ -15,7 +15,7 @@ import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 
 require = fn;
 let closure_6 = fn(5173).GUILD_SELECTABLE_CHANNELS_KEY;
-const calculateLocaleOptions = fn(19122).calculateLocaleOptions;
+const calculateLocaleOptions = fn(19117).calculateLocaleOptions;
 const Constants = fn(1072);
 ({
   ChannelTypes: closure_12,

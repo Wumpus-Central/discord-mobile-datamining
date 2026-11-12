@@ -231,7 +231,7 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                 }
                 const obj4 = {};
                 obj3.type = messageType;
-                const merged = Object.assign(exchanges(8785)(obj3));
+                const merged = Object.assign(exchanges(8784)(obj3));
                 obj4.id = StringResult;
                 obj4.state = constants.SENT;
                 if (null != interactionName) {
@@ -240,16 +240,16 @@ export function useConjurePlanBotPreviewItems(projectId, exchanges) {
                     id: StringResult,
                     name: interactionName,
                     type: projectId(6318).InteractionTypes.APPLICATION_COMMAND,
-                    user: projectId(8785).userRecordToServer(currentUser),
+                    user: projectId(8784).userRecordToServer(currentUser),
                   };
                   obj5.interaction = obj6;
                   let obj7 = obj5;
-                  const tmp2Result = projectId(8785);
+                  const tmp2Result = projectId(8784);
                 } else {
                   obj7 = {};
                 }
                 const merged1 = Object.assign(obj7);
-                const tmp4 = exchanges(8785);
+                const tmp4 = exchanges(8784);
                 items.push({
                   key: StringResult,
                   record: obj2.createMessageRecord(obj4),

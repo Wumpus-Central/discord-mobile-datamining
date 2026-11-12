@@ -158,10 +158,10 @@ export function ContextMenu(triggerOnLongPress) {
   const tmpResult8 = require("useFontScale");
   const isContextMenuActive = require("ContextMenuState").useIsContextMenuActive(contextMenuState);
   const tmpResult9 = require("ContextMenuState");
-  let result = (tmp(9084).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(9084).CONTEXT_MENU_ITEM_PADDING) * fontScale;
-  const result1 = 2 * tmp(9084).CONTEXT_MENU_ITEM_PADDING;
+  let result = (tmp(9083).CONTEXT_MENU_ITEM_BASE_HEIGHT - 2 * tmp(9083).CONTEXT_MENU_ITEM_PADDING) * fontScale;
+  const result1 = 2 * tmp(9083).CONTEXT_MENU_ITEM_PADDING;
   const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(
-    Math.max(result + result1, tmp(9084).CONTEXT_MENU_ITEM_BASE_HEIGHT),
+    Math.max(result + result1, tmp(9083).CONTEXT_MENU_ITEM_BASE_HEIGHT),
   );
   obj3.useRef(items3);
   let items4 = [items3];

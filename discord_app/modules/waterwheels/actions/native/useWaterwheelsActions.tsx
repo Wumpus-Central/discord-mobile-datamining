@@ -1358,7 +1358,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                               timeout: null,
                             };
                             const obj2 = closure_0(1282);
-                            obj.timeout = { deadline: closure_0(10152).DISCOVER_REQUEST_DEADLINE_MS };
+                            obj.timeout = { deadline: closure_0(10150).DISCOVER_REQUEST_DEADLINE_MS };
                             return HTTP.get(obj);
                           }),
                           done: false,

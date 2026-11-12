@@ -43,7 +43,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
     RelationshipTypes.FRIEND,
   );
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(11723).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(11717).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {

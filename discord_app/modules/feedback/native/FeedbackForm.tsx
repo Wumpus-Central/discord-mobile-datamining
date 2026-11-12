@@ -6,7 +6,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let FeedbackRating = fn(12506).FeedbackRating;
+let FeedbackRating = fn(12500).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5243);

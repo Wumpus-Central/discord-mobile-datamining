@@ -67,7 +67,7 @@ function chatInputSendMessage(params) {
     chatInputRef(1242).addBreadcrumb(obj2);
     let obj = chatInputRef(1242);
   }
-  chatInputRef(8938).saveDraft(channel.id, "", scheduledTimestamp.ChannelMessage);
+  chatInputRef(8937).saveDraft(channel.id, "", scheduledTimestamp.ChannelMessage);
   const current = chatInputRef.current;
   if (current != null) {
     current.clearText();
@@ -76,8 +76,8 @@ function chatInputSendMessage(params) {
   if (current2 != null) {
     current2.showSideActions();
   }
-  let obj3 = chatInputRef(8938);
-  const handleLegacyCommandsResult = channel(14497).handleLegacyCommands(text, { channel, isEdit: false });
+  let obj3 = chatInputRef(8937);
+  const handleLegacyCommandsResult = channel(14493).handleLegacyCommands(text, { channel, isEdit: false });
   let tmp14 = tts;
   parsed = parsedMessage;
   let tmp16 = text;
@@ -108,17 +108,17 @@ function chatInputSendMessage(params) {
   if (null != mentionTimestamps) {
     result = tmp16;
     if (mentionTimestamps.size > 0) {
-      result = tmp12(14494).serializeComposerTimestampMentions(tmp16, mentionTimestamps);
-      const tmp12Result = tmp12(14494);
+      result = tmp12(14490).serializeComposerTimestampMentions(tmp16, mentionTimestamps);
+      const tmp12Result = tmp12(14490);
     }
   }
   if (parsed == null) {
-    const tmp6Result = tmp6(8720);
+    const tmp6Result = tmp6(8719);
     parsed = tmp6Result.parse(channel, result, undefined, mentionGames);
   }
   parsed.tts = tmp14;
   const obj5 = {};
-  const obj4 = channel(14497);
+  const obj4 = channel(14493);
   const merged = Object.assign(chatInputRef(8593).getSendMessageOptionsForReply(params.pendingReply));
   obj5.location = MessageSendLocation.CHAT_INPUT;
   const id = channel.id;
@@ -127,8 +127,8 @@ function chatInputSendMessage(params) {
     if (null == uploads) {
       uploads = [];
     } else {
-      tmp6(11092).clearAll(id, tmp8.ChannelMessage);
-      const tmp6Result6 = tmp6(11092);
+      tmp6(11086).clearAll(id, tmp8.ChannelMessage);
+      const tmp6Result6 = tmp6(11086);
     }
   } else {
     items = [];
@@ -147,7 +147,7 @@ function chatInputSendMessage(params) {
     if (scheduledMessage != null) {
       scheduledTimestamp = scheduledMessage.scheduledTimestamp;
     }
-    tmp12(12551).deletePendingReply(channel.id);
+    tmp12(12545).deletePendingReply(channel.id);
     if (applicationCommandManager != null) {
       const result1 = applicationCommandManager.clearTimestampMentions();
     }
@@ -165,7 +165,7 @@ function chatInputSendMessage(params) {
       }
       obj2 = { file, guildId: channel.getGuildId(), analyticsLocations, code, reason };
     };
-    const tmp12Result2 = tmp12(12551);
+    const tmp12Result2 = tmp12(12545);
     tmp6Result8.sendMessage(id2, parsed, undefined, obj8).catch((error) => {
       if (null != scheduledTimestamp) {
         const obj = { channel, chatInputRef, content: parsed.content, attachmentsToUpload: items };
@@ -356,7 +356,7 @@ export function chatInputHandleSendText(text) {
             let intl2 = util.intl;
             obj3.confirmText = intl2.string(util.t.KJnHq3);
             obj3.onConfirm = function onConfirm() {
-              const obj = { text, parsedMessage, tts: "paddingHorizontal", source: false, params };
+              const obj = { text, parsedMessage, tts: "paddingHorizontal", source: true, params };
               chatInputSendMessage(obj);
             };
             let intl3 = util.intl;
@@ -372,17 +372,24 @@ export function chatInputHandleSendText(text) {
               threadId: channel.id,
               attachments: uploads,
               sendMessage() {
-                chatInputSendMessage({ text, parsedMessage, tts: "paddingHorizontal", source: null, params });
+                const obj = {
+                  text,
+                  parsedMessage,
+                  tts: "paddingHorizontal",
+                  source: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000021305584227497904,
+                  params,
+                };
+                chatInputSendMessage(obj);
               },
             };
-            params(5489).openLazy(tmp19(2118)(14499, tmp20.paths), "add-media-to-original-forum-post", obj5);
+            params(5489).openLazy(tmp19(2118)(14495, tmp20.paths), "add-media-to-original-forum-post", obj5);
             const obj6 = params(5489);
           }
           obj4 = ForumPostMediaUtils;
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        const obj7 = { text, parsedMessage: tmp2, tts: "paddingHorizontal", source: "Array", params };
+        const obj7 = { text, parsedMessage: tmp2, tts: "paddingHorizontal", source: true, params };
         chatInputSendMessage(obj7);
       }
     }

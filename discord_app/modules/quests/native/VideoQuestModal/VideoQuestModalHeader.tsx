@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const useVideoQuestUIStore = fn(8744).useVideoQuestUIStore;
+const useVideoQuestUIStore = fn(8743).useVideoQuestUIStore;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5243);
@@ -36,9 +36,9 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   const withTextShadow = showCurrentVideoTime.withTextShadow;
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp2 = closure_7();
-  quest = quest(17619).useVideoQuestModalContext().quest;
-  let obj = quest(17619);
-  const questTaskDetails = quest(10064).useQuestTaskDetails(quest);
+  quest = quest(17614).useVideoQuestModalContext().quest;
+  let obj = quest(17614);
+  const questTaskDetails = quest(10063).useQuestTaskDetails(quest);
   const tmp6 = useVideoQuestUIStore((arg0) => {
     let tmp = arg0.videoProgress[quest.id];
     if (tmp == null) {
@@ -59,11 +59,11 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
     completedAt = userStatus.completedAt;
   }
   if (null == completedAt) {
-    const videoQuestProgressRemainingAccessibilityLabel = tmp3(15138).getVideoQuestProgressRemainingAccessibilityLabel(
+    const videoQuestProgressRemainingAccessibilityLabel = tmp3(15135).getVideoQuestProgressRemainingAccessibilityLabel(
       questTaskDetails,
       tmp8,
     );
-    const tmp3Result = tmp3(15138);
+    const tmp3Result = tmp3(15135);
   }
   const obj3 = { style: null, children: null };
   items = [tmp2.videoContentHeaderWrapper, style];
@@ -100,7 +100,7 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   obj4.children = items1;
   const items2 = [
     closure_6(View, obj4),
-    closure_5(questTaskDetails(17640), { iconColor: closeButtonIconColor, onClose }),
+    closure_5(questTaskDetails(17635), { iconColor: closeButtonIconColor, onClose }),
   ];
   obj3.children = items2;
   return closure_6(View, obj3);

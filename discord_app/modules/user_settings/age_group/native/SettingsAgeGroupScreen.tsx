@@ -29,7 +29,7 @@ function SettingsAgeGroupHeader() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(9136).MobileUserSettings;
+const MobileUserSettings = fn(9135).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
@@ -46,7 +46,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupScreen.tsx");
 
 export default function SettingsAgeGroupScreen() {
-  isAgeNoticeSettingsEnabled = isAgeNoticeSettingsEnabled(17091).useIsAgeNoticeSettingsEnabled();
+  isAgeNoticeSettingsEnabled = isAgeNoticeSettingsEnabled(17086).useIsAgeNoticeSettingsEnabled();
   items = [isAgeNoticeSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };

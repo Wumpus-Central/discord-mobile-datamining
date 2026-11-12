@@ -233,7 +233,7 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
       const result = closure_1_0(7734).resetAndCloseUserProfileForm();
       hasUnsavedChanges.resetState();
       const obj = closure_1_0(7734);
-      token(12032).clearPendingWidgets();
+      token(12026).clearPendingWidgets();
     },
     [],
   );

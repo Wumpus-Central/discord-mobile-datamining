@@ -46,7 +46,7 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   channel = channel.channel;
   if (channel.type === constants.GROUP_DM) {
     const originChannelId = channel.originChannelId;
-    const channelId = SelectedChannelStore.getChannelId(closure_1_10);
+    const channelId = SelectedChannelStore.getChannelId(refs);
     if (tmp) {
       router_utils.transitionTo(React5.CHANNEL(React6, channel.id));
     }

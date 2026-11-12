@@ -14,8 +14,8 @@ require = fn;
 function NotificationsContainer() {
   let tmp4 = null;
   if (useChatLayoutDefault().isChatBesideChannelList) {
-    const obj = { style: tmp.container, children: closure_1_10(common_NotificationsDefault, {}) };
-    tmp4 = closure_1_10(View, obj);
+    const obj = { style: tmp.container, children: refs(common_NotificationsDefault, {}) };
+    tmp4 = refs(View, obj);
   }
   return tmp4;
 }
@@ -51,7 +51,7 @@ export function ChannelContainer(children) {
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp5 = !isStageChannel;
   if (isStageChannel) {
-    tmp5 = channelId(11896)(stateFromStoresObject.voiceChannelId);
+    tmp5 = channelId(11890)(stateFromStoresObject.voiceChannelId);
   }
   const items1 = [LurkingStore];
   let isPrivateResult = null != channel;
@@ -107,13 +107,13 @@ export function ChannelContainer(children) {
     tmp15 = null;
     if (stateFromStores) {
       const obj4 = { channel };
-      tmp15 = closure_10(channelId(11898), obj4);
+      tmp15 = closure_10(channelId(11892), obj4);
     }
   }
   const items3 = [tmp15, children.children];
   if (tmp5) {
     const obj5 = { style: channelStyles.callPTTButton };
-    tmp5 = closure_10(channelId(11914), obj5);
+    tmp5 = closure_10(channelId(11908), obj5);
   }
   items3[2] = tmp5;
   obj3.children = items3;

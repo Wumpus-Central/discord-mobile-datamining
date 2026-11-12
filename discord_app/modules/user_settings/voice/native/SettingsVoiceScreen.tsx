@@ -7,8 +7,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import KrispLogo2 from "KrispLogo.tsx";
-import _modDef12947 from "../../../../../_runtime/metro/12947__.js";
-import _modDef12948 from "../../../../../_runtime/metro/12948__.js";
+import _modDef12941 from "../../../../../_runtime/metro/12941__.js";
+import _modDef12942 from "../../../../../_runtime/metro/12942__.js";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
@@ -19,9 +19,9 @@ function KrispLogo() {
   const tmp = closure_12();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef12947;
+    let tmp2Result = _modDef12941;
   } else {
-    tmp2Result = _modDef12948;
+    tmp2Result = _modDef12942;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -58,7 +58,7 @@ function SystemProcessingSubLabel() {
   return tmp3;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(9136).MobileUserSettings;
+const MobileUserSettings = fn(9135).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);

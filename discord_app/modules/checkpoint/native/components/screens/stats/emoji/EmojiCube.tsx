@@ -97,7 +97,7 @@ export default function EmojiCube(emoji) {
   items = [AccessibilityStore];
   const stateFromStores = emoji(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = emoji(504);
-  const result = emoji(14163).useCheckpointScreenFrame().width / 392;
+  const result = emoji(14160).useCheckpointScreenFrame().width / 392;
   let emojiURL;
   if (null != emoji.id) {
     const obj4 = { id: emoji.id, animated: null, size: null };

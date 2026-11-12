@@ -197,7 +197,7 @@ export default function ParentalConsentConnectionScreen() {
     obj2.title = intl.string(_modDef2981.dMMSA0);
     const intl2 = util.intl;
     obj2.body = intl2.format(_modDef2981["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(17291, dependencyMap.paths), closure_9, obj2);
+    obj.openLazy(asyncRequireImpl(17286, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = {
     title: null,

@@ -17,11 +17,11 @@ const PremiumGiftScreens = {
   GIFTING_BADGE: "GiftingBadgePostPurchase",
 };
 let obj2 = {
-  [PLAN_SELECT]: fn(9618).PaymentFlowStep.SKU_SELECT,
-  [REWARD_SELECT]: fn(9618).PaymentFlowStep.REWARD_SKU_SELECT,
-  [CUSTOMIZATION]: fn(9618).PaymentFlowStep.PLAN_SELECT,
-  [SUCCESS]: fn(9618).PaymentFlowStep.CONFIRM,
-  [GIFTING_BADGE]: fn(9618).PaymentFlowStep.CONFIRM,
+  [PLAN_SELECT]: fn(9617).PaymentFlowStep.SKU_SELECT,
+  [REWARD_SELECT]: fn(9617).PaymentFlowStep.REWARD_SKU_SELECT,
+  [CUSTOMIZATION]: fn(9617).PaymentFlowStep.PLAN_SELECT,
+  [SUCCESS]: fn(9617).PaymentFlowStep.CONFIRM,
+  [GIFTING_BADGE]: fn(9617).PaymentFlowStep.CONFIRM,
 };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = PremiumGiftScreens);
 const createStyles = fn(5243);
@@ -181,7 +181,7 @@ export default function PremiumGiftModal(analyticsLocations) {
           obj2 = { analyticsLocations: null };
           items = [analyticsLocations(7871).GIFTING_BADGE_POST_PURCHASE];
           obj2.analyticsLocations = items;
-          analyticsLocation(11600).openGiftModal(obj2);
+          analyticsLocation(11594).openGiftModal(obj2);
         },
       });
     };

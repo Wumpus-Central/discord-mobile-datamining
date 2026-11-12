@@ -168,8 +168,8 @@ export default function DevToolsDismissableContentsScreen() {
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
   const tmp2 = useSafeAreaInsetsDefault();
-  let obj = ref(12875);
-  [dependencyMap, tmp5] = ref(12875).useLocalStorageState("devtools-dc-search", "");
+  let obj = ref(12869);
+  [dependencyMap, tmp5] = ref(12869).useLocalStorageState("devtools-dc-search", "");
   _slicedToArray = tmp5;
   initialSearchQuery = _slicedToArray(
     initialSearchQuery.useState(() => {
@@ -210,7 +210,7 @@ export default function DevToolsDismissableContentsScreen() {
     const sorted = items.sort((localeCompare, arg1) => localeCompare.localeCompare(arg1));
     return items;
   });
-  let tmp4 = _slicedToArray(ref(12875).useLocalStorageState("devtools-dc-search", ""), 2);
+  let tmp4 = _slicedToArray(ref(12869).useLocalStorageState("devtools-dc-search", ""), 2);
   items = [closure_6];
   const stateFromStoresObject = ref(504).useStateFromStoresObject(items, () => ({
     dailyCapOverridden: closure_6.dailyCapOverridden,

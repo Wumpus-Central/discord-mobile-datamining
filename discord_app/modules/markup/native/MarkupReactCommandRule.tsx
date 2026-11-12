@@ -120,7 +120,7 @@ function handleLongPressCommandMention(arg0, arg1) {
     const obj2 = { label: null, IconComponent: null, onPress: null };
     const intl2 = tmp(1113).intl;
     obj2.label = intl2.string(tmp(1113).t.oJ1Muw);
-    obj2.IconComponent = tmp(11568).IdIcon;
+    obj2.IconComponent = tmp(11562).IdIcon;
     obj2.onPress = function onPress() {
       ToastUtils.presentIdCopied();
       ClipboardUtils.copy(closure_1);
@@ -145,7 +145,7 @@ let result = size.fileFinishedImporting("modules/markup/native/MarkupReactComman
 export default function MarkupReactCommandRule(node) {
   node = node.node;
   ({ output, state, style } = node);
-  closure_1 = null != noop.useContext(node(12488).AppLauncherContext);
+  closure_1 = null != noop.useContext(node(12482).AppLauncherContext);
   dependencyMap = closure_6();
   let obj = {
     style,
@@ -206,7 +206,7 @@ export default function MarkupReactCommandRule(node) {
     },
     children: null,
   };
-  items = ["/", node(9289).smartOutput(node, output, state)];
+  items = ["/", node(9288).smartOutput(node, output, state)];
   obj.children = items;
   return jsxs(node(5866).Text, {
     style,

@@ -173,9 +173,9 @@ export default function useGuildProfileEditForm() {
                       pendingDisplayNameStyles,
                     };
                     const guildMemberChangesForUpdateRequest =
-                      stateFromStores(9966).getGuildMemberChangesForUpdateRequest(obj5);
+                      stateFromStores(9965).getGuildMemberChangesForUpdateRequest(obj5);
                     closure_131_0 = guildMemberChangesForUpdateRequest;
-                    const obj21 = stateFromStores(9966);
+                    const obj21 = stateFromStores(9965);
                     const obj7 = {
                       pendingBanner,
                       pendingBio,
@@ -188,7 +188,7 @@ export default function useGuildProfileEditForm() {
                     if (selectedGuild != null) {
                       id = selectedGuild.id;
                     }
-                    profileChangesForUpdateRequest = stateFromStores(9966).getProfileChangesForUpdateRequest(obj7, id);
+                    profileChangesForUpdateRequest = stateFromStores(9965).getProfileChangesForUpdateRequest(obj7, id);
                     let id1;
                     if (selectedGuild != null) {
                       id1 = selectedGuild.id;
@@ -221,7 +221,7 @@ export default function useGuildProfileEditForm() {
                       c5 = 1;
                       c6 = 1;
                       const obj8 = {
-                        value: stateFromStores(9971).saveGuildIdentityChanges(id2, guildMemberChangesForUpdateRequest),
+                        value: stateFromStores(9970).saveGuildIdentityChanges(id2, guildMemberChangesForUpdateRequest),
                         done: false,
                       };
                       return obj8;
@@ -237,13 +237,13 @@ export default function useGuildProfileEditForm() {
                         c5 = 2;
                         c6 = 1;
                         const obj12 = {
-                          value: stateFromStores(9333).saveProfileChanges(closure_131_8, id3, bannerOriginalMd5),
+                          value: stateFromStores(9332).saveProfileChanges(closure_131_8, id3, bannerOriginalMd5),
                           done: false,
                         };
                         return obj12;
                       }
                     }
-                    const obj23 = stateFromStores(9966);
+                    const obj23 = stateFromStores(9965);
                   }
                 }
                 c6 = 3;
@@ -281,9 +281,9 @@ export default function useGuildProfileEditForm() {
                     items = [constants.DISPLAY_NAME_STYLE];
                     obj17.perks = items;
                     obj17.content = stateFromStores(5278).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
-                    obj17.contentSurface = stateFromStores(16967).HexagonCampaignContentSurface.GUILD_PROFILE;
-                    const result2 = stateFromStores(16967).trackHexagonCampaignPerkAction(obj17);
-                    const obj6 = stateFromStores(16967);
+                    obj17.contentSurface = stateFromStores(16962).HexagonCampaignContentSurface.GUILD_PROFILE;
+                    const result2 = stateFromStores(16962).trackHexagonCampaignPerkAction(obj17);
+                    const obj6 = stateFromStores(16962);
                   }
                 } else {
                   let avatar;
@@ -301,9 +301,9 @@ export default function useGuildProfileEditForm() {
                       const intl = stateFromStores(1113).intl;
                       stateFromStores = intl.string(stateFromStores(1113).t.s35OuK);
                     }
-                    const result3 = stateFromStores(16968).showGenericGuildProfileUpdateFailureToast(stateFromStores);
+                    const result3 = stateFromStores(16963).showGenericGuildProfileUpdateFailureToast(stateFromStores);
                     closure_131_4 = true;
-                    const obj19 = stateFromStores(16968);
+                    const obj19 = stateFromStores(16963);
                   }
                 }
                 let tmp61 = closure_131_3;
@@ -338,9 +338,9 @@ export default function useGuildProfileEditForm() {
                 firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
                 if (null != firstFieldErrorMessage2) {
                   const result4 =
-                    stateFromStores(16968).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
+                    stateFromStores(16963).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage2);
                   closure_131_4 = true;
-                  const obj2 = stateFromStores(16968);
+                  const obj2 = stateFromStores(16963);
                 }
               }
               let tmp24 = closure_131_3;
@@ -363,10 +363,10 @@ export default function useGuildProfileEditForm() {
             }
             if (!tmp82) {
               const intl2 = stateFromStores(1113).intl;
-              const result5 = stateFromStores(16968).showGenericGuildProfileUpdateFailureToast(
+              const result5 = stateFromStores(16963).showGenericGuildProfileUpdateFailureToast(
                 intl2.string(stateFromStores(1113).t.s35OuK),
               );
-              const obj11 = stateFromStores(16968);
+              const obj11 = stateFromStores(16963);
             }
             if (closure_131_3) {
               closure_132_13.delay();

@@ -69,7 +69,7 @@ export default function SettingsQuestPreviewScreen() {
     let tmp2 = null;
     if (null != stateFromStores) {
       const obj = { quest: tmp };
-      tmp2 = closure_2_10(QuestCardPreview.QuestCardPreview, obj);
+      tmp2 = refs(QuestCardPreview.QuestCardPreview, obj);
     }
     return tmp2;
   }, items3);
@@ -100,7 +100,7 @@ export default function SettingsQuestPreviewScreen() {
       const _HermesInternal = HermesInternal;
       const combined = "" + first + "-" + stateFromStores1 + "-" + completedAt + "-" + progress;
       const obj = { questId: first };
-      return closure_2_10(QuestEmbedPreview.QuestEmbedPreview, obj, combined);
+      return refs(QuestEmbedPreview.QuestEmbedPreview, obj, combined);
     }
   }, items4);
   callback2 = obj2.useCallback(() => null, []);

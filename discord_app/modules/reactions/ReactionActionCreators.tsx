@@ -96,11 +96,11 @@ function makeURL(type) {
     name = emoji.name;
   }
   if (null == userId) {
-    let REACTIONSResult = closure_1_10.REACTIONS(channelId, messageId, name);
+    let REACTIONSResult = refs.REACTIONS(channelId, messageId, name);
   } else if (useTypeEndpoint) {
-    REACTIONSResult = closure_1_10.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
+    REACTIONSResult = refs.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
   } else {
-    REACTIONSResult = closure_1_10.REACTION(channelId, messageId, name, userId);
+    REACTIONSResult = refs.REACTION(channelId, messageId, name, userId);
   }
   return REACTIONSResult;
 }

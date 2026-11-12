@@ -8,7 +8,7 @@ import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import useGameProfileHeroBackgroundURLDefault from "../../hooks/useGameProfileHeroBackgroundURL.tsx";
 import GameCoverArt from "GameCoverArt.tsx";
 import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
-import _modDef10258 from "../../../../../_runtime/metro/10258__.js";
+import _modDef10256 from "../../../../../_runtime/metro/10256__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const _modDef1652 = _mod1652;
@@ -16,7 +16,7 @@ const GameCoverArtDefault = GameCoverArt;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(10249);
+const GameProfileConstants = fn(10247);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
@@ -176,7 +176,7 @@ export default function GameProfileHeader(arg0) {
   const items10 = [timestampProducer(Text_Text.Text, obj14)];
   let tmp15Result3 = game.id === hasOwnProperty;
   if (tmp15Result3) {
-    const obj15 = { source: _modDef10258, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    const obj15 = { source: _modDef10256, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
     tmp15Result3 = timestampProducer(FastImageDefault, obj15);
     const tmp9Result2 = FastImageDefault;
   }

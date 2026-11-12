@@ -367,9 +367,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId) {
       const obj3 = { guildId };
       tmp19 = obj3;
     }
-    const obj4 = self(20257);
-    const reportIncomingCallResult = self(20257).reportIncomingCall(channelId, channelName, tmp19);
-    self(20257)
+    const obj4 = self(20252);
+    const reportIncomingCallResult = self(20252).reportIncomingCall(channelId, channelName, tmp19);
+    self(20252)
       .reportIncomingCall(channelId, channelName, tmp19)
       .then((result) => {
         if (!result) {
@@ -381,7 +381,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId) {
         obj.warn("Failed to report incoming call:", error);
         self.clearCall(closure_0);
       });
-    const nextPromise = self(20257)
+    const nextPromise = self(20252)
       .reportIncomingCall(channelId, channelName, tmp19)
       .then((result) => {
         if (!result) {
@@ -397,7 +397,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(20257);
+  obj = self(20252);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj
     .cancelIncomingCall(channelId)
@@ -835,7 +835,7 @@ prototype["startCall"] = function startCall(arg0) {
 prototype["endCall"] = function endCall(channelId) {
   const self = this;
   obj.info("Ending call:", channelId.channelId);
-  obj = self(20257);
+  obj = self(20252);
   const endCallResult = obj.endCall(channelId.channelId);
   return obj
     .endCall(channelId.channelId)
@@ -991,7 +991,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(20257);
+            obj = self(20252);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

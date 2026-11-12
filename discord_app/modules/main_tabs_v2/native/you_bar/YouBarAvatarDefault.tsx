@@ -67,7 +67,7 @@ function AvatarDefaultLarge() {
   const result = size / 2;
   const sum = result + native.STATUS_PADDING;
   const diff = tmp3 - sum - (size / 4) * 2;
-  const point = { shape: ClipView.CutoutShape.Circle, x: diff + closure_1_10, y: diff + closure_1_10, size: 2 * sum };
+  const point = { shape: ClipView.CutoutShape.Circle, x: diff + refs, y: diff + refs, size: 2 * sum };
   const obj2 = { style: null, children: null };
   size = {
     height: native.AVATAR_SIZE_MAP[hasOwnProperty],
@@ -110,11 +110,7 @@ function AvatarDefaultLarge() {
     streaming: false,
     style: null,
   };
-  const rect = {
-    position: "absolute",
-    right: timestampProducer - closure_1_10,
-    bottom: timestampProducer - closure_1_10,
-  };
+  const rect = { position: "absolute", right: timestampProducer - refs, bottom: timestampProducer - refs };
   obj8.style = rect;
   items4[1] = application_id(native.Status, obj8);
   obj3.children = items4;
@@ -122,7 +118,7 @@ function AvatarDefaultLarge() {
   return application_id(View, obj2);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17588);
+const YouBarConstants = fn(17583);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_4,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty,

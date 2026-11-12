@@ -31,12 +31,12 @@ function OpenInterviewButton(arg0) {
     items1,
   );
   const obj = interviewChannelId(504);
-  const joinRequestButtonActions = interviewChannelId(14846).useJoinRequestButtonActions(
+  const joinRequestButtonActions = interviewChannelId(14842).useJoinRequestButtonActions(
     joinRequest,
     interviewChannelId,
   );
   ({ handleOpenInterview, submitting } = joinRequestButtonActions);
-  const obj2 = interviewChannelId(14846);
+  const obj2 = interviewChannelId(14842);
   if (!obj3.isActionedApplicationStatus(joinRequest.applicationStatus)) {
     const obj4 = { variant: "secondary", size: "md", icon: null, text: null, onPress: null, disabled: null };
     const obj5 = { color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, size: "sm" };
@@ -180,17 +180,17 @@ let closure_12 = noop.memo(function JoinRequestActionSheetHeader(user) {
     obj7.containerStyle = items3;
     const obj9 = { style: tmp3.primaryInfo, children: null };
     const obj10 = { user, displayProfile, badgeContainerBackground: containerBackground, isPreviewingChanges: false };
-    const items4 = [closure_8(tmp6(15663).PrimaryInfo, obj10)];
+    const items4 = [closure_8(tmp6(15660).PrimaryInfo, obj10)];
     const obj11 = { user };
-    items4[1] = closure_8(joinRequest(15755), obj11);
+    items4[1] = closure_8(joinRequest(15750), obj11);
     obj9.children = items4;
     obj7.children = closure_9(View, obj9);
-    items2[1] = closure_8(joinRequest(9464), obj7);
+    items2[1] = closure_8(joinRequest(9463), obj7);
     obj4.children = items2;
     items1[1] = closure_9(View, obj4);
     obj2.children = items1;
     tmp9 = closure_9(closure_10, obj2);
-    const tmpResult = joinRequest(9464);
+    const tmpResult = joinRequest(9463);
   }
   return tmp9;
 });
@@ -339,14 +339,14 @@ let closure_15 = noop.memo(function JoinRequestActionSheetApplicationActions(joi
   const callback = noop.useCallback(() => {
     openJoinRequestActionSheetDefault(joinRequest);
   }, items);
-  const joinRequestButtonActions = joinRequest(14846).useJoinRequestButtonActions(
+  const joinRequestButtonActions = joinRequest(14842).useJoinRequestButtonActions(
     joinRequest,
     joinRequest.interviewChannelId,
     callback,
   );
   ({ submitting, approveRequest, rejectRequest, handleOpenInterview } = joinRequestButtonActions);
   const obj2 = { variant: "primary", icon: null, label: null, onPress: null, disabled: null };
-  const obj = joinRequest(14846);
+  const obj = joinRequest(14842);
   obj2.icon = closure_8(joinRequest(7672).CheckmarkLargeIcon, { color: nativeDefault.colors.WHITE, size: "lg" });
   const intl = joinRequest(1113).intl;
   obj2.label = intl.string(joinRequest(1113).t.BzjDQJ);
@@ -355,7 +355,7 @@ let closure_15 = noop.memo(function JoinRequestActionSheetApplicationActions(joi
   const children = [closure_8(joinRequest(7922).IconButton, obj2), ,];
   const obj4 = { variant: "destructive", icon: null, label: null, onPress: null, disabled: null };
   const obj3 = { color: nativeDefault.colors.WHITE, size: "lg" };
-  obj4.icon = closure_8(joinRequest(10803).XLargeIcon, { color: nativeDefault.colors.WHITE, size: "lg" });
+  obj4.icon = closure_8(joinRequest(10797).XLargeIcon, { color: nativeDefault.colors.WHITE, size: "lg" });
   const intl2 = joinRequest(1113).intl;
   obj4.label = intl2.string(joinRequest(1113).t.hDtbsz);
   obj4.onPress = rejectRequest;
@@ -480,7 +480,7 @@ let closure_17 = noop.memo(function JoinRequestAboutView(arg0) {
   obj3.children = items2;
   items[1] = React6(View, obj3);
   obj.children = items;
-  return React6(closure_1_10, obj);
+  return React6(refs, obj);
 });
 let obj6 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -544,7 +544,7 @@ export default noop.memo(function JoinRequestActionSheetContent(displayProfile) 
   obj6.children = mapped;
   items1[2] = closure_8(View, obj6);
   items1[3] = closure_8(closure_17, { joinRequest, user });
-  items1[4] = closure_8(memo(19234), {
+  items1[4] = closure_8(memo(19229), {
     guildId: joinRequest.guildId,
     userId: joinRequest.userId,
     selectedJoinRequestId: joinRequest.joinRequestId,

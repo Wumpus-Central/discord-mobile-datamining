@@ -35,7 +35,7 @@ function EmptyCustomizeCommunity(setTab) {
   const obj3 = { style: tmp.emptyContainer, children: null };
   const obj4 = { style: tmp.emptyContainerImage, source: null };
   const obj2 = setTab(504);
-  obj4.source = tmp4(isThemeDarkResult ? 12379 : 12380);
+  obj4.source = tmp4(isThemeDarkResult ? 12373 : 12374);
   const items1 = [closure_15(FastImageDefault, obj4), ,];
   const obj5 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1113).intl;
@@ -305,7 +305,7 @@ function DropdownPrompt(guildId) {
   CustomizeCommunityTsx1.__workletHash = 9001393483162;
   CustomizeCommunityTsx1.__initData = tmp6;
   const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(CustomizeCommunityTsx1);
-  handleSelectOption = tmp4(12382)(guildId).handleSelectOption;
+  handleSelectOption = tmp4(12376)(guildId).handleSelectOption;
   const items3 = [guildId, _prompt, handleSelectOption, stateFromStoresArray.length];
   const callback = handleSelectOption.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7833, dependencyMap.paths), "DropdownOptions", {
@@ -636,7 +636,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(12381)(guildId);
+  const tmp7 = stateFromStores(12375)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);

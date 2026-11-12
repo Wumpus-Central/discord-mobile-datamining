@@ -18,7 +18,7 @@ export function openAcceptFriendRequestConfirmModal(arg0) {
   const obj2 = { type };
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(10781, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(10775, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (View) => {
           const obj = {};

@@ -16,7 +16,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const SecureFramesConstants = fn(10561);
+const SecureFramesConstants = fn(10559);
 ({
   AnalyticsSecureFramesUserVerification: closure_9,
   SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_10,

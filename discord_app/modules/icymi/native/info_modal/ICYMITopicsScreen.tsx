@@ -28,36 +28,33 @@ function WordTopic(categoryid) {
   categoryid = categoryid.categoryid;
   ({ selected, handlePress: importDefault } = categoryid);
   if (GuildPrimaryCategory.GAMING === categoryid) {
-    let tmp2 = closure_1_10(GameControllerIcon.GameControllerIcon, {
-      size: "md",
-      color: "redesign-button-tertiary-text",
-    });
+    let tmp2 = refs(GameControllerIcon.GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.ENTERTAINMENT === categoryid) {
-    tmp2 = closure_1_10(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.GENERAL_CHATTING === categoryid) {
-    tmp2 = closure_1_10(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.SCIENCE_AND_TECH === categoryid) {
-    tmp2 = closure_1_10(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.MUSIC === categoryid) {
-    tmp2 = closure_1_10(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.EDUCATION === categoryid) {
-    tmp2 = closure_1_10(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.CREATIVE_ARTS === categoryid) {
-    tmp2 = closure_1_10(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FINANCE === categoryid) {
-    tmp2 = closure_1_10(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.BOTS === categoryid) {
-    tmp2 = closure_1_10(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.SPORTS === categoryid) {
-    tmp2 = closure_1_10(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.TRAVEL_AND_FOOD === categoryid) {
-    tmp2 = closure_1_10(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FASHION_AND_BEAUTY === categoryid) {
-    tmp2 = closure_1_10(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (GuildPrimaryCategory.FITNESS_AND_HEALTH === categoryid) {
-    tmp2 = closure_1_10(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (16 === categoryid) {
-    tmp2 = closure_1_10(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = refs(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   }
   const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked: selected });
   let tmp48Result = null;
@@ -80,13 +77,13 @@ function WordTopic(categoryid) {
       return importDefault(categoryid);
     };
     obj2.icon = tmp2;
-    tmp48Result = closure_1_10(components_Button_Button.Button, obj2);
+    tmp48Result = refs(components_Button_Button.Button, obj2);
   }
   return tmp48Result;
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(19122).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(19117).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: closure_10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5243);
@@ -274,7 +271,7 @@ export default function ICYMITopicsScreen() {
   obj6.children = closure_10(closure_6, {
     style: tmp.topicsContainer,
     children: stateFromStoresArray.map((categoryId) =>
-      closure_2_10(
+      refs(
         WordTopic,
         {
           selected: first.has(categoryId.categoryId),

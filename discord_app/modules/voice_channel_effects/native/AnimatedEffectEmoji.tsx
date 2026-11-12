@@ -160,12 +160,12 @@ export default function AnimatedEffectEmoji(onComplete) {
     const obj3 = { style: tmp.voiceChannelEffectEmoji, children: null };
     const obj4 = { url: null, surrogates: null };
     let tmp2Result = tmp2(1187);
-    obj4.url = tmp2(12720).getEffectUrl(emoji);
+    obj4.url = tmp2(12714).getEffectUrl(emoji);
     obj4.surrogates = emoji.name;
     obj3.children = <Emoji url={null} surrogates={null} />;
     obj2.children = <c4 style={tmp.voiceChannelEffectEmoji}>{null}</c4>;
     tmp16Result = jsx(_modDef1652.View, { style: null, children: null });
-    const tmp2Result2 = tmp2(12720);
+    const tmp2Result2 = tmp2(12714);
   }
   return tmp16Result;
 }

@@ -41,7 +41,7 @@ export default function ApplicationSectionHeader(section) {
     }
   });
   const obj = section(504);
-  const applicationCommandsIconSource = section(14532).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(14528).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;

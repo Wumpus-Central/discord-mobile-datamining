@@ -51,7 +51,7 @@ function getCollectionQualifyingSkuCount(bundledProducts, collectionId) {
   }
   obj = require("CollectiblesUtils");
 }
-let closure_3 = fn(9350).getCollectiblesCollectAndClaim;
+let closure_3 = fn(9349).getCollectiblesCollectAndClaim;
 const CollectibleShopTab = fn(1074).CollectibleShopTab;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesCollectAndClaimPromotionUtils.tsx");

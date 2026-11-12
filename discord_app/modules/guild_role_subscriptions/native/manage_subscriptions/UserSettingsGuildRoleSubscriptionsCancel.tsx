@@ -10,7 +10,7 @@ import GuildRoleSubscriptionsHooks from "../../GuildRoleSubscriptionsHooks.tsx";
 import FormSeparatorDefault from "../components/FormSeparator.tsx";
 import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef17737 from "../../../../../_runtime/metro/17737__.js";
+import _modDef17732 from "../../../../../_runtime/metro/17732__.js";
 import FastAssetImageDefault from "../components/FastAssetImage.tsx";
 import GuildRoleSubscriptionCardAll from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -40,27 +40,23 @@ function WhatYouLose(subscription) {
     numChannels: _slicedToArray(obj2.useChannelBenefits(listingId), 1)[0].length,
     numIntangibles: _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0].length,
   };
-  items = [closure_1_10(GuildIconDefault, { guild }), closure_1_10(native.Spacer, { size: 16 })];
+  items = [refs(GuildIconDefault, { guild }), refs(native.Spacer, { size: 16 })];
   const obj9 = { children: null };
   const items1 = [
-    closure_1_10(Text_Text.Text, {
+    refs(Text_Text.Text, {
       variant: "body-md/semibold",
       color: "interactive-text-active",
       children: _slicedToArray(obj4.useName(listingId), 1)[0],
     }),
-    closure_1_10(native.Spacer, { size: 2 }),
-    closure_1_10(Text_Text.Text, {
-      variant: "body-sm/medium",
-      color: "interactive-text-default",
-      children: guild.name,
-    }),
+    refs(native.Spacer, { size: 2 }),
+    refs(Text_Text.Text, { variant: "body-sm/medium", color: "interactive-text-default", children: guild.name }),
   ];
   obj9.children = items1;
   items[2] = closure_1_11(metroImportDefault, obj9);
   obj8.children = items;
   const items2 = [
     closure_1_11(metroImportDefault, obj8),
-    closure_1_10(FormSeparatorDefault, { style: { marginVertical: 16 } }),
+    refs(FormSeparatorDefault, { style: { marginVertical: 16 } }),
     ,
     ,
     ,
@@ -69,13 +65,13 @@ function WhatYouLose(subscription) {
   const obj11 = { variant: "body-md/semibold", color: "interactive-text-active", children: null };
   const intl3 = util.intl;
   obj11.children = intl3.string(util.t["9SgXmT"]);
-  items2[2] = closure_1_10(Text_Text.Text, obj11);
-  items2[3] = closure_1_10(native.Spacer, { size: 12 });
+  items2[2] = refs(Text_Text.Text, obj11);
+  items2[3] = refs(native.Spacer, { size: 12 });
   const obj12 = { variant: "body-sm/normal", color: "text-default", children: null };
   const items3 = [formatResult1, "\n"];
   obj12.children = items3;
   items2[4] = closure_1_11(Text_Text.Text, obj12);
-  items2[5] = closure_1_10(Text_Text.Text, {
+  items2[5] = refs(Text_Text.Text, {
     variant: "body-sm/medium",
     color: "text-default",
     children: intl2.formatToPlainString(util.t.OVlNGT, {
@@ -91,9 +87,9 @@ function WhatYouLose(subscription) {
     numIntangibles: _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0].length,
   });
   const obj10 = { variant: "body-sm/medium", color: "interactive-text-default", children: guild.name };
-  obj13.source = _modDef17737;
+  obj13.source = _modDef17732;
   obj13.style = tmp.cactus;
-  items2[6] = closure_1_10(FastImageDefault, obj13);
+  items2[6] = refs(FastImageDefault, obj13);
   obj7.children = items2;
   return closure_1_11(metroImportDefault, obj7);
 }
@@ -111,7 +107,7 @@ function CancelSubscriptionButtonFooter(guild) {
     subscription(7871).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL,
   ).analyticsLocations;
   const tmp5 = subscription(7852);
-  const cancelSubscription1 = subscription(9657).useCancelSubscription(subscription.id, subscription.isACOM);
+  const cancelSubscription1 = subscription(9656).useCancelSubscription(subscription.id, subscription.isACOM);
   cancelSubscription = cancelSubscription1.cancelSubscription;
   isPurchasedViaAppleGeneric = subscription.isPurchasedViaAppleGeneric;
   items = [guild.name, , , , , , ,];
@@ -310,23 +306,23 @@ function Content(subscription) {
       const obj2 = { style: tmp.container, children: null };
       const obj3 = { children: null };
       const obj4 = { style: tmp.heroImage, asset: cover_image_asset };
-      items = [closure_1_10(FastAssetImageDefault, obj4)];
+      items = [refs(FastAssetImageDefault, obj4)];
       const obj5 = { style: tmp.body, children: null };
       const obj6 = { guild, listingId: listing.id, subscription };
-      const items1 = [closure_1_10(WhatYouLose, obj6), closure_1_10(native.Spacer, { size: 24 }), , ,];
+      const items1 = [refs(WhatYouLose, obj6), refs(native.Spacer, { size: 24 }), , ,];
       const obj7 = { variant: "body-sm/semibold", color: "text-default", children: null };
       const intl = util.intl;
       obj7.children = intl.string(util.t.xyvN8p);
-      items1[2] = closure_1_10(Text_Text.Text, obj7);
-      items1[3] = closure_1_10(native.Spacer, { size: 16 });
+      items1[2] = refs(Text_Text.Text, obj7);
+      items1[3] = refs(native.Spacer, { size: 16 });
       const obj8 = { listingId: listing.id, guildId: guild.id };
-      items1[4] = closure_1_10(GuildRoleSubscriptionCardAll.Content, obj8);
+      items1[4] = refs(GuildRoleSubscriptionCardAll.Content, obj8);
       obj5.children = items1;
       items[1] = closure_1_11(metroImportDefault, obj5);
       obj3.children = items;
       const items2 = [closure_1_11(React5, obj3)];
       const obj9 = { guild, subscription, onClose: subscription.onClose };
-      items2[1] = closure_1_10(CancelSubscriptionButtonFooter, obj9);
+      items2[1] = refs(CancelSubscriptionButtonFooter, obj9);
       obj2.children = items2;
       tmp9 = closure_1_11(metroImportDefault, obj2);
     }

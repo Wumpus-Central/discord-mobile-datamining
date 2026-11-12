@@ -1,13 +1,13 @@
 // discord_app/modules/checkpoint/CheckpointSounds.tsx
 import CheckpointNavigation from "CheckpointNavigation.tsx";
-import _modDef14190 from "../../../discord_assets/assets/checkpoint/2026/sfx/character-first-machine-scan.mp3.js";
-import _modDef14191 from "../../../discord_assets/assets/checkpoint/2026/sfx/character-second-scan.mp3.js";
-import _modDef14192 from "../../../discord_assets/assets/checkpoint/2026/sfx/transition-data.mp3.js";
-import _modDef14193 from "../../../discord_assets/assets/checkpoint/2026/sfx/transition-lab.mp3.js";
-import _modDef14194 from "../../../discord_assets/assets/checkpoint/2026/sfx/zoom-whoosh.mp3.js";
+import _modDef14186 from "../../../discord_assets/assets/checkpoint/2026/sfx/character-first-machine-scan.mp3.js";
+import _modDef14187 from "../../../discord_assets/assets/checkpoint/2026/sfx/character-second-scan.mp3.js";
+import _modDef14188 from "../../../discord_assets/assets/checkpoint/2026/sfx/transition-data.mp3.js";
+import _modDef14189 from "../../../discord_assets/assets/checkpoint/2026/sfx/transition-lab.mp3.js";
+import _modDef14190 from "../../../discord_assets/assets/checkpoint/2026/sfx/zoom-whoosh.mp3.js";
 
 require = fn;
-let items = [_modDef14190, _modDef14191, _modDef14192, _modDef14193, _modDef14194];
+let items = [_modDef14186, _modDef14187, _modDef14188, _modDef14189, _modDef14190];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointSounds.tsx");
 
@@ -26,9 +26,9 @@ export function getCheckpointRouteSounds(arg0) {
   }
   items = [];
   if (route === CheckpointNavigation.CheckpointRoute.INTRODUCTION) {
-    const obj = { source: _modDef14190, delayMs: 0 };
+    const obj = { source: _modDef14186, delayMs: 0 };
     items.push(obj);
-    const obj2 = { source: _modDef14191, delayMs: 2800 };
+    const obj2 = { source: _modDef14187, delayMs: 2800 };
     items.push(obj2);
   } else {
     let tmp4 = previousRoute !== CheckpointNavigation.CheckpointRoute.HOME;
@@ -38,7 +38,7 @@ export function getCheckpointRouteSounds(arg0) {
     }
     if (tmp4) {
       if (null != tmpResult4.getCheckpointRoutePresentation(route).statsScreen) {
-        const obj3 = { source: _modDef14192, delayMs: 0 };
+        const obj3 = { source: _modDef14188, delayMs: 0 };
         items.push(obj3);
       }
       tmpResult4 = CheckpointNavigation;
@@ -53,7 +53,7 @@ export function getCheckpointRouteSounds(arg0) {
       tmp7 = tmp8;
     }
     if (tmp7) {
-      const obj4 = { source: _modDef14193, delayMs: 0 };
+      const obj4 = { source: _modDef14189, delayMs: 0 };
       items.push(obj4);
     }
     const tmpResult5 = CheckpointNavigation;

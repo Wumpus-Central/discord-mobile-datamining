@@ -8,7 +8,7 @@ import UserProfileBannerDefault from "UserProfileBanner.tsx";
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EditButtonDefault = tmp(16963);
+const EditButtonDefault = tmp(16958);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;

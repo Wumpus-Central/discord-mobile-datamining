@@ -203,7 +203,7 @@ let closure_9 = createStyles.createStyleProperties((arg0) => {
   return { backgroundColor, backgroundColorPressed };
 });
 createStyles = fn(5243);
-let closure_10 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4, arg5) => {
+const refs = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4, arg5) => {
   if ("primary" === arg2) {
     let BACKGROUND_SURFACE_HIGH = nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
   } else if ("secondary" === arg2) {

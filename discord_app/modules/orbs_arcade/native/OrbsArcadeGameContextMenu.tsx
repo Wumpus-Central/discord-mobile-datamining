@@ -53,14 +53,14 @@ export default function OrbsArcadeGameContextMenu(game) {
     obj.label = intl.string(util.t["3AT3DL"]);
     obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
     obj.action = function action() {
-      const result = game(17544).trackOrbsArcadeCtaClicked(
+      const result = game(17539).trackOrbsArcadeCtaClicked(
         id,
-        game(17544).OrbsArcadeCta.WHAT_IS_ORBS_ARCADE,
-        game(17544).OrbsArcadeCtaLocation.GAME_TILE,
+        game(17539).OrbsArcadeCta.WHAT_IS_ORBS_ARCADE,
+        game(17539).OrbsArcadeCtaLocation.GAME_TILE,
         surface,
       );
-      const obj = game(17544);
-      const result1 = game(17545).openOrbsArcadeInfoSheet(id.id, surface);
+      const obj = game(17539);
+      const result1 = game(17540).openOrbsArcadeInfoSheet(id.id, surface);
     };
     items = [obj];
     return items;
@@ -92,7 +92,7 @@ export default function OrbsArcadeGameContextMenu(game) {
   } else {
     items4 = [memo];
   }
-  return jsx(game(9082).ContextMenu, {
+  return jsx(game(9081).ContextMenu, {
     items: items4,
     triggerOnTap: true,
     children(ref) {

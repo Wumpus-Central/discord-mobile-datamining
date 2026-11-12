@@ -58,7 +58,7 @@ function QuestDockBackgroundMediaFade(arg0) {
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
 let QuestDockMode = fn(5275).QuestDockMode;
-const QuestDockConstants = fn(17585);
+const QuestDockConstants = fn(17580);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_10 } =
   QuestDockConstants);
 const VerticalGradient = fn(1072).VerticalGradient;
@@ -235,8 +235,8 @@ export default noop.memo(function QuestDockVideoBackground(imageUrl) {
     const tmp4Result = tmp4(1377);
   }
   if (isRendered) {
-    isRendered = tmp4(10061).isHeroVideoSupported(imageUrl.videoMimetype);
-    const tmp4Result3 = tmp4(10061);
+    isRendered = tmp4(10060).isHeroVideoSupported(imageUrl.videoMimetype);
+    const tmp4Result3 = tmp4(10060);
   }
   if (isRendered) {
     let tmp28 = !tmp2;
@@ -332,7 +332,7 @@ export default noop.memo(function QuestDockVideoBackground(imageUrl) {
     const obj5 = { uri: videoUrl };
     obj4.source = obj5;
     obj4.paused = tmp8 !== tmp12.EXPANDED;
-    tmp46 = closure_12(tmp4(9664).VideoComponent, obj4);
+    tmp46 = closure_12(tmp4(9663).VideoComponent, obj4);
   }
   const items9 = [tmp46];
   let tmp48 = null;

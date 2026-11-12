@@ -81,7 +81,7 @@ function EnrolledBodyWatchTask(quest) {
                 const obj4 = { questId: tmp2.id, sourceQuestContent: quest(5278).QuestContent.QUEST_BAR_MOBILE };
                 v1 = 1;
                 c2 = 1;
-                const obj5 = { value: setRestingQuestDockMode(17617)(obj4), done: false };
+                const obj5 = { value: setRestingQuestDockMode(17612)(obj4), done: false };
                 return obj5;
               } else {
                 c2 = 3;
@@ -217,7 +217,7 @@ function EnrolledBodyPlayStreamTask(quest) {
 const View = fn(17).View;
 const QuestConstants = fn(5275);
 ({ QuestDockMode: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const QuestDockConstants = fn(17585);
+const QuestDockConstants = fn(17580);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT: closure_10, QUEST_DOCK_EXPANDED_PADDING_BOTTOM } = QuestDockConstants);
 ({ QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, QUEST_DOCK_EXPANDED_ENROLLED_PADDING_TOP } = QuestDockConstants);
 const jsxProd = fn(21);
@@ -254,10 +254,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockEnrolledBody.tsx");
 
 export default noop.memo(function QuestDockEnrolledBody() {
-  const questDockQuest = minExpandedContentHeight(17614).useQuestDockQuest();
-  const obj = minExpandedContentHeight(17614);
+  const questDockQuest = minExpandedContentHeight(17609).useQuestDockQuest();
+  const obj = minExpandedContentHeight(17609);
   minExpandedContentHeight = noop.useContext(
-    minExpandedContentHeight(17586).QuestDockGestureContext,
+    minExpandedContentHeight(17581).QuestDockGestureContext,
   ).minExpandedContentHeight;
   items = [minExpandedContentHeight];
   const items1 = [minExpandedContentHeight];

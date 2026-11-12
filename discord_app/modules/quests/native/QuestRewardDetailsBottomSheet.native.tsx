@@ -33,10 +33,10 @@ function QuestRewardDetailsBottomSheet(quest) {
   const stateFromStores = quest(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   let obj = quest(504);
   const tmp4 = quest;
-  const defaultRewardName = quest(10083).getDefaultRewardName(quest.config, stateFromStores);
+  const defaultRewardName = quest(10082).getDefaultRewardName(quest.config, stateFromStores);
   const obj3 = { direction: "vertical", spacing: memo(575).space.PX_16, style: tmp.wrapper, children: null };
   const obj4 = { align: "center", direction: "horizontal", spacing: memo(575).space.PX_16, children: null };
-  const items3 = [closure_6(memo(15146), { quest, height: 56, width: 56, withAnimation: true })];
+  const items3 = [closure_6(memo(15143), { quest, height: 56, width: 56, withAnimation: true })];
   const obj5 = { direction: "vertical", spacing: memo(575).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj6 = { variant: "body-sm/medium", color: "text-subtle", children: null };
   let intl = quest(1113).intl;
@@ -59,7 +59,7 @@ function QuestRewardDetailsBottomSheet(quest) {
     obj7.children = items6;
     tmp9Result = closure_7(closure_8, obj7);
   }
-  const obj2 = quest(10083);
+  const obj2 = quest(10082);
   items5[1] = tmp9Result;
   obj3.children = items5;
   return closure_6(quest(5503).BottomSheet, { startExpanded: true, children: closure_7(quest(6274).Stack, obj3) });

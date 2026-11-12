@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/SubscriptionAccountHoldNotice.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import _modDef9909 from "../../../../_runtime/metro/09909__.js";
+import _modDef9908 from "../../../../_runtime/metro/09908__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,7 +28,7 @@ export default function SubscriptionAccountHoldNotice(subscription) {
   if (subscription.status === SubscriptionStatusTypes.ACCOUNT_HOLD) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { style: tmp.textContainer, children: null };
-    const obj3 = { size: subscription(1187).IconSizes.MEDIUM, style: tmp.icon, source: _modDef9909 };
+    const obj3 = { size: subscription(1187).IconSizes.MEDIUM, style: tmp.icon, source: _modDef9908 };
     items = [closure_6(subscription(1187).Icon, obj3)];
     const obj4 = { style: tmp.text, variant: "body-sm/medium", children: null };
     const intl = subscription(1113).intl;

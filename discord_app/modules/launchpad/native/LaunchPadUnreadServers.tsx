@@ -14,12 +14,12 @@ function HistorySeparator() {
   const tmp = closure_12();
   const obj = {
     style: tmp.guildHistorySeparatorWrapper,
-    children: closure_1_10(hasOwnProperty, { style: tmp.guildHistorySeparator }),
+    children: refs(hasOwnProperty, { style: tmp.guildHistorySeparator }),
   };
-  return closure_1_10(hasOwnProperty, obj);
+  return refs(hasOwnProperty, obj);
 }
 function renderHistorySection() {
-  return closure_1_10(HistorySeparator, {});
+  return refs(HistorySeparator, {});
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
@@ -59,7 +59,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
   const callback1 = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
-  obj.children = closure_10(onGuildSelect(19663), {
+  obj.children = closure_10(onGuildSelect(19658), {
     size: 48,
     borderRadius: 16,
     guildId,
@@ -210,7 +210,7 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
       let tmp14 = null != tmp12;
       if (tmp14) {
         const obj2 = { channelId: tmp12 };
-        tmp14 = closure_2_10(closure_14, obj2);
+        tmp14 = refs(closure_14, obj2);
       }
       return tmp14;
     } else if (arg0 >= 1) {
@@ -222,7 +222,7 @@ export default noop.memo(function LaunchPadUnreadServers(selectedGuildId) {
       let tmp6 = null != tmp3;
       if (tmp6) {
         const obj = { guildId: tmp3, selected: selectedGuildId === tmp3, onGuildSelect };
-        tmp6 = closure_2_10(closure_13, obj);
+        tmp6 = refs(closure_13, obj);
       }
       return tmp6;
     } else {

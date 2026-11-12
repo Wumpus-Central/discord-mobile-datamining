@@ -14,7 +14,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(15636).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(15633).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { damping: 17, stiffness: 320, mass: 0.5 };
@@ -347,7 +347,7 @@ export function HappeningNowAvatarStack(userLimit) {
       const items14 = [tmp3.ellipsisWrapper, animatedStyle];
       obj10.style = items14;
       const obj11 = { style: tmp3.ellipsisBorder };
-      obj10.children = tmp31(tmp6(18681).TypingIndicator, obj11);
+      obj10.children = tmp31(tmp6(18676).TypingIndicator, obj11);
       tmp31Result2 = tmp31(tmp30(1652).View, obj10);
     }
     items13[1] = tmp31Result2;

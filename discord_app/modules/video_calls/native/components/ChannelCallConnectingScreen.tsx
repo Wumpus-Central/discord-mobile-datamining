@@ -12,7 +12,7 @@ import instant_invite_InstantInviteUtils from "../../../instant_invite/native/In
 import beginConsoleTransfer from "../../../game_console/native/beginConsoleTransfer.tsx";
 import UserSettingsVoiceDefault from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
 import VoiceChatHeaderIconDefault from "../../../voice_chat/native/components/VoiceChatHeaderIcon.tsx";
-import _modDef12954 from "../../../../../_runtime/metro/12954__.js";
+import _modDef12948 from "../../../../../_runtime/metro/12948__.js";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import coercePlatformTypeToConsoleType from "../../../game_console/coercePlatformTypeToConsoleType.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -130,7 +130,7 @@ function JoinVoiceButton(channel) {
   return closure_12(channel(stateFromStores1[34]).LabeledActionButton, obj3);
 }
 const View = fn(17).View;
-const resetFocus = fn(10940).resetFocus;
+const resetFocus = fn(10934).resetFocus;
 const InstantInviteSources = fn(1072).InstantInviteSources;
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
@@ -144,7 +144,7 @@ let obj2 = {
     justifyContent: "center",
     alignItems: "flex-start",
     flexDirection: "row",
-    height: fn(12638).CALL_ACTION_BAR_HEIGHT,
+    height: fn(12632).CALL_ACTION_BAR_HEIGHT,
   },
 };
 let closure_15 = createStyles.createStyles(obj2);
@@ -160,7 +160,7 @@ export function ChannelCallConnectingHeader(channel) {
   channel = channel.channel;
   const tmp = closure_15();
   const tmp4 = useChannelNameDefault(channel);
-  const isVoiceChannelLocked = channel(12881).useIsVoiceChannelLocked(channel);
+  const isVoiceChannelLocked = channel(12875).useIsVoiceChannelLocked(channel);
   let fn = null;
   if (PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
     fn = null;
@@ -174,7 +174,7 @@ export function ChannelCallConnectingHeader(channel) {
   items = [closure_12(View, { style: { width: 4 } }), , ,];
   let tmp9Result = null;
   if (null != fn) {
-    const obj2 = { source: _modDef12954, onPress: fn, accessibilityLabel: null };
+    const obj2 = { source: _modDef12948, onPress: fn, accessibilityLabel: null };
     const intl = tmp5(1113).intl;
     const obj3 = { channelName: tmp4 };
     obj2.accessibilityLabel = intl.formatToPlainString(tmp5(1113).t["dHHb/2"], obj3);

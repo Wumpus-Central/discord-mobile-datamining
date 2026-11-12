@@ -6,10 +6,10 @@ import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/g
 import HeartIcon from "../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
 import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import BoostTier3Icon from "../../../../design/components/Icon/native/redesign/generated/BoostTier3Icon.tsx";
-import _modDef15908 from "../../../../../_runtime/metro/15908__.js";
-import _modDef15909 from "../../../../../_runtime/metro/15909__.js";
-import _modDef15910 from "../../../../../_runtime/metro/15910__.js";
-import _modDef15911 from "../../../../../_runtime/metro/15911__.js";
+import _modDef15903 from "../../../../../_runtime/metro/15903__.js";
+import _modDef15904 from "../../../../../_runtime/metro/15904__.js";
+import _modDef15905 from "../../../../../_runtime/metro/15905__.js";
+import _modDef15906 from "../../../../../_runtime/metro/15906__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -71,19 +71,19 @@ export default function GuildBoostingMarketingBoosterRecognitionCards() {
   obj2.children = intl.string(util.t.IzKs3o);
   items = [React4(Text_Text.Heading, obj2)];
   const obj3 = { style: tmp.recognitionCardsContainer, children: null };
-  const obj4 = { icon: _modDef15908, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+  const obj4 = { icon: _modDef15903, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.TZigSO);
   const items1 = [React4(Card, obj4), , ,];
-  const obj5 = { icon: _modDef15909, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+  const obj5 = { icon: _modDef15904, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
   const intl3 = util.intl;
   obj5.children = intl3.string(util.t.hjQuV2);
   items1[1] = React4(Card, obj5);
-  const obj6 = { icon: _modDef15910, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+  const obj6 = { icon: _modDef15905, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
   const intl4 = util.intl;
   obj6.children = intl4.string(util.t["2RUcaM"]);
   items1[2] = React4(Card, obj6);
-  const obj7 = { icon: _modDef15911, IconComponent: HeartIcon.HeartIcon, children: null };
+  const obj7 = { icon: _modDef15906, IconComponent: HeartIcon.HeartIcon, children: null };
   const intl5 = util.intl;
   obj7.children = intl5.string(util.t.bJoZKV);
   items1[3] = React4(Card, obj7);

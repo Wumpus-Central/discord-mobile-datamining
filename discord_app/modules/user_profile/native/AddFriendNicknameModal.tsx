@@ -134,7 +134,7 @@ export default function AddFriendNicknameModal(arg0) {
   };
   const tmp = closure_11();
   [c2, c3] = noop.useState(false);
-  _slicedToArray = showUserProfile(10847)();
+  _slicedToArray = showUserProfile(10841)();
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   items = [closure_7];
   const stateFromStores = initialize.useStateFromStores(items, () => RelationshipStore.getNickname(require));

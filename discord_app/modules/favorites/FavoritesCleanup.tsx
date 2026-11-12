@@ -103,7 +103,7 @@ export function getAutoAddedThreadsCategoryIds() {
   }
   items = [closure_1_11.toLowerCase()];
   const set = new Set(items);
-  if (FavoriteStore.autoAddThreadsMode === closure_1_10) {
+  if (FavoriteStore.autoAddThreadsMode === refs) {
     const guildsArray = GuildStore.getGuildsArray();
     for (const item10026 of guildsArray) {
       let str = item10026.name;

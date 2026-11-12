@@ -120,14 +120,14 @@ function GroupDMInviteManagement(channelId) {
   if (tmp3[0]) {
     let tmp12 = jsx(channelId(7522).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(10874), darkSource: tmp4(10875), title: null, body: null };
+    let obj2 = { lightSource: tmp4(10868), darkSource: tmp4(10869), title: null, body: null };
     const intl = channelId(1113).intl;
     obj2.title = intl.string(channelId(1113).t["+nLJkZ"]);
     const intl2 = channelId(1113).intl;
     obj2.body = intl2.string(channelId(1113).t.F53CAc);
     tmp12 = jsx(channelId(1187).EmptyState, {
-      lightSource: tmp4(10874),
-      darkSource: tmp4(10875),
+      lightSource: tmp4(10868),
+      darkSource: tmp4(10869),
       title: null,
       body: null,
     });
@@ -144,7 +144,7 @@ function GroupDMInviteManagement(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_6 } = get_ActivityIndicator);
-const ChannelSettingsStore = fn(10852);
+const ChannelSettingsStore = fn(10846);
 const Constants = fn(1072);
 ({ ChannelSettingsSections: closure_8, Endpoints: closure_9 } = Constants);
 const jsx = fn(21).jsx;

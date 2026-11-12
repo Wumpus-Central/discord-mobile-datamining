@@ -154,9 +154,9 @@ function StatusText(status) {
   const obj4 = { onLayout: callback, children: null };
   if (null != status.userId) {
     const obj5 = { userId: status.userId, dimmed: "left" === status.kind };
-    let tmp53Result = closure_8(tmp26(19822).DockUserTitle, obj5);
+    let tmp53Result = closure_8(tmp26(19817).DockUserTitle, obj5);
   } else {
-    tmp53Result = closure_8(tmp26(19822).DockChannelTitle, {});
+    tmp53Result = closure_8(tmp26(19817).DockChannelTitle, {});
   }
   obj4.children = tmp53Result;
   const items7 = [closure_8(c5, obj4)];
@@ -505,10 +505,10 @@ function StatusLayer(exit) {
   obj3.style = items5;
   if (null != status.userId) {
     let obj4 = { userId: status.userId, dimmed: "left" === status.kind, entered: tmp12[0] };
-    let tmp32Result = tmp32(tmp2(19822).DockFace, obj4);
+    let tmp32Result = tmp32(tmp2(19817).DockFace, obj4);
   } else {
     let obj5 = { streaming: status.streaming };
-    tmp32Result = tmp32(tmp2(19822).DockChannelIcon, obj5);
+    tmp32Result = tmp32(tmp2(19817).DockChannelIcon, obj5);
   }
   obj3.children = tmp32Result;
   const items6 = [sharedValue2(_modDef1652.View, obj3)];
@@ -528,9 +528,9 @@ function getStatusItemKey(status) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockStatusStore = fn(19819);
+const VoicePanelDockStatusStore = fn(19814);
 ({ useDockHasStreamers: closure_6, useDockSubject: metroImportDefault } = VoicePanelDockStatusStore);
-const VoicePanelDockConstants = fn(11948);
+const VoicePanelDockConstants = fn(11942);
 ({ DOCK_TILE_SIZE, DOCK_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

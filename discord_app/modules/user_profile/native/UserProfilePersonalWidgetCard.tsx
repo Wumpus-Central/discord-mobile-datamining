@@ -139,7 +139,7 @@ function CoverSection(section) {
   }
   items1[1] = tmp9;
   obj.children = items1;
-  const tmp3Result = closure_1_10(metroImportDefault, obj);
+  const tmp3Result = refs(metroImportDefault, obj);
   let tmp24Result6 = tmp3Result;
   if (null != source) {
     const obj4 = { theme: ThemeTypes.DARK, primaryColor: null, secondaryColor: null, children: null };
@@ -185,7 +185,7 @@ function CoverSection(section) {
     }
     items2[3] = tmp24Result5;
     obj5.children = items2;
-    obj4.children = closure_1_10(metroImportDefault, obj5);
+    obj4.children = refs(metroImportDefault, obj5);
     tmp24Result6 = React6(native.ThemeContextProvider, obj4);
   }
   return tmp24Result6;
@@ -218,7 +218,7 @@ function FieldRow(field) {
       }
       items[1] = tmp13;
       obj3.children = items;
-      tmp7Result = closure_1_10(hasOwnProperty, obj3);
+      tmp7Result = refs(hasOwnProperty, obj3);
     }
   }
   const items1 = [tmp7Result];
@@ -236,9 +236,9 @@ function FieldRow(field) {
   }
   items2[1] = tmp19;
   obj5.children = items2;
-  items1[1] = closure_1_10(metroImportDefault, obj5);
+  items1[1] = refs(metroImportDefault, obj5);
   obj2.children = items1;
-  return closure_1_10(metroImportDefault, obj2);
+  return refs(metroImportDefault, obj2);
 }
 function FieldsSection(arg0) {
   ({ userId: require, section, disableInteraction: importDefault } = arg0);
@@ -273,13 +273,13 @@ function UserProfilePersonalWidgetCardContent(style) {
   };
   const tmp = closure_14();
   const tmp3 = disableInteraction;
-  obj.titleLeadingIcon = closure_9(userId(9369).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj.titleLeadingIcon = closure_9(userId(9368).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj.title = widget.header;
   obj.disableInteraction = disableInteraction;
   let tmp6;
   if (flag) {
     let obj2 = { widget };
-    items = [closure_9(tmp3(12036), obj2, "edit-options")];
+    items = [closure_9(tmp3(12030), obj2, "edit-options")];
     tmp6 = items;
   }
   obj.actionButtons = tmp6;
@@ -306,7 +306,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   items1[1] = tmp2Result;
   obj3.children = items1;
   obj.children = closure_10(closure_7, obj3);
-  return closure_9(disableInteraction(12028), obj);
+  return closure_9(disableInteraction(12022), obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);

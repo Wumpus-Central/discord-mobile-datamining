@@ -73,7 +73,7 @@ function SearchTabsPage(selectMediaTab) {
       return jsx(LinksScreenDefault, { tab, searchContext, isFocused, width });
     } else if (SearchTabs.THREADS === tab) {
       const obj12 = { searchContext };
-      return jsx(searchContext(19363).SearchTabsThreadScreen, { searchContext });
+      return jsx(searchContext(19358).SearchTabsThreadScreen, { searchContext });
     } else if (SearchTabs.MESSAGES === tab) {
       const obj26 = { tab, searchContext, isFocused };
       return jsx(MessagesScreenDefault, { tab, searchContext, isFocused });
@@ -89,7 +89,7 @@ function SearchTabsPage(selectMediaTab) {
   const obj2 = searchContext(6795);
 }
 const View = fn(17).View;
-const SearchTabs = fn(9000).SearchTabs;
+const SearchTabs = fn(8999).SearchTabs;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(5243);

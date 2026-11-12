@@ -864,13 +864,13 @@ let closure_27 = async function _apiLogin(arg0) {
         items = ["LOGIN_FAILURE", "PASSWORDLESS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"];
         function _loop(iter) {
           obj = password(572);
-          const f145176 = () => {
+          const f145194 = () => {
             const error = new Error("Unable to login " + login + ". Login failed with action '" + obj + "'");
             iter(error);
           };
           function handler(arg0) {
             obj.unsubscribe(closure_1, handler);
-            return f145176(arg0);
+            return f145194(arg0);
           }
           const subscription = obj.subscribe(iter, handler);
         }
@@ -898,11 +898,11 @@ function subscribeOnce(subscribe, arg1, arg2) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f145176(arg0);
+    return f145194(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
-const applicationReady = fn(19979).applicationReady;
+const applicationReady = fn(19974).applicationReady;
 fn(7595).addPostConnectionCallback;
 const Constants = fn(1072);
 ({ ME: closure_11, Routes: closure_12 } = Constants);
@@ -965,34 +965,34 @@ let obj = {
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(11048).resetComponentProfiler();
+    const result = closure_0(11042).resetComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "reset-component-profiler" });
-    obj = closure_0(11048);
+    obj = closure_0(11042);
     const obj2 = { type: "response", status: "success", message: "reset-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(11048).pauseComponentProfiler();
+    const result = closure_0(11042).pauseComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "pause-component-profiler" });
-    obj = closure_0(11048);
+    obj = closure_0(11042);
     const obj2 = { type: "response", status: "success", message: "pause-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(11048).resumeComponentProfiler();
+    const result = closure_0(11042).resumeComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "resume-component-profiler" });
-    obj = closure_0(11048);
+    obj = closure_0(11042);
     const obj2 = { type: "response", status: "success", message: "resume-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    obj = { stats: closure_0(11048).dumpStats() };
+    obj = { stats: closure_0(11042).dumpStats() };
     const merged = Object.assign(obj);
     const json = JSON.stringify({ type: "response", status: "success", message: "dump-component-profiler-stats" });
-    const obj2 = closure_0(11048);
+    const obj2 = closure_0(11042);
     const obj3 = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
@@ -1075,7 +1075,7 @@ let closure_16 = asyncGeneratorStep(async (arg0) => {
           const obj4 = { ClientInfoUtils: null, ComponentProfiler: null, Dispatcher: null, ExperimentStore: null, NativeJankStats: null, ProcessUtils: null, AnalyticsUtils: null, TTITestAction: null };
           const obj5 = { getConstants: closure_0(1376).getConstants };
           obj4.ClientInfoUtils = obj5;
-          const obj6 = { resetComponentProfiler: closure_0(11048).resetComponentProfiler, resumeComponentProfiler: closure_0(11048).resumeComponentProfiler, pauseComponentProfiler: closure_0(11048).pauseComponentProfiler, dumpStats: closure_0(11048).dumpStats };
+          const obj6 = { resetComponentProfiler: closure_0(11042).resetComponentProfiler, resumeComponentProfiler: closure_0(11042).resumeComponentProfiler, pauseComponentProfiler: closure_0(11042).pauseComponentProfiler, dumpStats: closure_0(11042).dumpStats };
           obj4.ComponentProfiler = obj6;
           obj4.Dispatcher = Dispatcher;
           obj4.ExperimentStore = ExperimentStore;

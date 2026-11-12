@@ -1,6 +1,6 @@
 // discord_app/design/mana/components/Toast/Toast.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod16364 from "../../../../../discord_common/js/packages/design/components/Toast/ToastTypes.shared.tsx";
+import _mod16359 from "../../../../../discord_common/js/packages/design/components/Toast/ToastTypes.shared.tsx";
 import ToastEntity from "ToastEntity.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -78,7 +78,7 @@ export function Toast(variant) {
   obj3.style = items1;
   const memo = secondaryIconColor.useMemo(() => {
     if (null == obj[str]) {
-      obj = _mod16364;
+      obj = _mod16359;
       if (obj.isToastEntity(icon)) {
         const obj3 = { entity: tmp4 };
         return timestampProducer(ToastEntity.ToastEntity, obj3);
@@ -95,7 +95,7 @@ export function Toast(variant) {
         tmp9 = tmp8;
       }
       icon = tmp9;
-      obj2 = _mod16364;
+      obj2 = _mod16359;
       tmp8 = icon;
     }
     if (null == icon) {

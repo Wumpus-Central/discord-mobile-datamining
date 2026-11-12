@@ -110,10 +110,10 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   const tmp = channel;
-  const tmp3 = closure_11(channel(8995)());
-  const obj = user(10530);
-  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(10530).useLocalSelfMuteDeaf());
-  const obj2 = user(10530);
+  const tmp3 = closure_11(channel(8994)());
+  const obj = user(10528);
+  const result = obj.withLocalSelfMuteDeaf(voiceState.voiceState, user(10528).useLocalSelfMuteDeaf());
+  const obj2 = user(10528);
   items = [GuildMemberStore];
   const items1 = [channel.guild_id, user.id];
   const stateFromStoresObject = user(504).useStateFromStoresObject(
@@ -164,7 +164,7 @@ let closure_12 = noop.memo(function VoiceStateUserItem(voiceState) {
   obj7.sessionId = result.sessionId;
   obj7.channel = channel;
   obj7.isGuest = isGuest;
-  obj4.children = closure_6(tmp(18718), obj7, user.id);
+  obj4.children = closure_6(tmp(18713), obj7, user.id);
   return closure_6(View, obj4);
 });
 const size = fn(2);

@@ -91,7 +91,7 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   obj10.onPress = onPress;
   items1[1] = React6(components_Button_Button.Button, obj10);
   obj5.children = items1;
-  obj4.children = closure_1_10(tmp11, obj5);
+  obj4.children = refs(tmp11, obj5);
   return React6(native.ThemeContextProvider, obj4);
 }
 const View = fn(17).View;
@@ -273,7 +273,7 @@ export default noop.memo(function PremiumGiftFeaturesCard(variant) {
       }
       items3[6] = tmp12Result;
       obj3.children = items3;
-      obj2.children = closure_1_10(tmp7Result, obj3);
+      obj2.children = refs(tmp7Result, obj3);
       return React6(View, obj2);
     }
   }

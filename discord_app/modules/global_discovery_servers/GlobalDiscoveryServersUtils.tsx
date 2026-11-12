@@ -216,7 +216,7 @@ export function fromDiscoverableGuildSearchResult(id) {
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "Icon",
+    preferredLocale: "description",
     discoverySplash: null,
     emojis: [],
   };
@@ -234,7 +234,7 @@ export function getLanguageCodeFallback() {
     tmp = items;
   }
   [tmp3] = tmp;
-  const arr2 = closure_1_10();
+  const arr2 = refs();
   const locale = tmp3.locale;
   let found = arr2.find((code) => code.code === locale);
   if (found == null) {

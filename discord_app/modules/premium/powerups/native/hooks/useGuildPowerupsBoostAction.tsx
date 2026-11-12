@@ -64,9 +64,9 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
                 tmp15 = dependencyMap;
                 if (dependencyMap > 0) {
                   if (!handleMobileWebRedirectCheckout.hasFetched) {
-                    items = [tmp2(9521).init()];
-                    let obj2 = tmp2(9521);
-                    items[1] = tmp3(9172).fetchGuildBoostSlots();
+                    items = [tmp2(9520).init()];
+                    let obj2 = tmp2(9520);
+                    items[1] = tmp3(9171).fetchGuildBoostSlots();
                     dependencyMap = 1;
                     c3 = 1;
                     const obj8 = { value: Promise.all(items), done: false };
@@ -91,7 +91,7 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
             PERK = constants.PERK;
           }
           closure_128_0 = PERK;
-          availableGuildBoostSlots = tmp3(9169).getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
+          availableGuildBoostSlots = tmp3(9168).getAvailableGuildBoostSlots(handleMobileWebRedirectCheckout.boostSlots);
           if (availableGuildBoostSlots.length >= closure_129_2) {
             tmp15 = tmp3(6889);
             const obj9 = {
@@ -120,10 +120,10 @@ export default function useGuildPowerupsBoostAction(arg0, arg1, arg2, arg3, arg4
               }
               const obj = guildId(dependencyMap[9]);
             };
-            const result = tmp3(10639).launchGuildBoostFlowOrAlert(obj10);
-            const obj6 = tmp3(10639);
+            const result = tmp3(10676).launchGuildBoostFlowOrAlert(obj10);
+            const obj6 = tmp3(10676);
           }
-          const obj5 = tmp3(9169);
+          const obj5 = tmp3(9168);
         } catch (tmp50) {
           c3 = tmp;
           throw tmp50;

@@ -38,7 +38,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, StyleSheet } = get_ActivityIndicator);
 const isEveryoneRole = fn(5150).isEveryoneRole;
-let closure_15 = fn(20401).GuildSettingsRoleEditSections;
+let closure_15 = fn(20396).GuildSettingsRoleEditSections;
 const Constants = fn(1072);
 ({
   GuildSettingsSections: closure_16,

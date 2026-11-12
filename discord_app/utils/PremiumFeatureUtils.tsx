@@ -18,7 +18,7 @@ function getUserMaxFileSize(currentUser) {
       PremiumTypeUtils;
     }
     if (currentUser.premiumType === TIER_2.TIER_2) {
-      const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(8781);
+      const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(8780);
       getNitroFileUploadLimitBytes = nitroFileUploadLimitBytes.getNitroFileUploadLimitBytes;
       obj = { location: "getUserMaxFileSize" };
       let fileSize = getNitroFileUploadLimitBytes(obj);

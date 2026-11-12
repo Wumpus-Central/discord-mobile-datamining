@@ -11,10 +11,10 @@ import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, Keyboard: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(14716).PermissionStateType;
+const PermissionStateType = fn(14712).PermissionStateType;
 const ME = fn(1072).ME;
 let closure_8 = fn(6839).NotificationAuthorizationStatus;
-const NewUserTypes = fn(14913).NewUserTypes;
+const NewUserTypes = fn(14909).NewUserTypes;
 let closure_10 = { REGISTER: "register", LOGIN: "login" };
 let c11 = null;
 class AuthManager extends tmp3 {
@@ -77,8 +77,8 @@ class AuthManager extends tmp3 {
             closure_129_0();
           }
           const obj6 = { onComplete: closure_129_0 };
-          const result = applyArgumentsResult(18579).showPushNotificationPromptModal(obj6);
-          const obj = applyArgumentsResult(18579);
+          const result = applyArgumentsResult(18574).showPushNotificationPromptModal(obj6);
+          const obj = applyArgumentsResult(18574);
         } catch (tmp19) {
           c4 = tmp;
           throw tmp19;
@@ -105,13 +105,13 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        applyArgumentsResult(15001).setNewUser(constants.ORGANIC_REGISTERED);
-        const tmpResult = applyArgumentsResult(15001);
+        applyArgumentsResult(14997).setNewUser(constants.ORGANIC_REGISTERED);
+        const tmpResult = applyArgumentsResult(14997);
       }
       obj = applyArgumentsResult(8394);
       const result = MobileOnboardingFrictionExperimentDefault.trackMobileOnboardingFrictionExposure("AuthManager");
-      applyArgumentsResult(14912).startOnboarding();
-      const tmpResult2 = applyArgumentsResult(14912);
+      applyArgumentsResult(14908).startOnboarding();
+      const tmpResult2 = applyArgumentsResult(14908);
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {
       const result = applyArgumentsResult.handlePushNotificationOptIn(() => {

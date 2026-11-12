@@ -13,7 +13,7 @@ require = fn;
 const RPCEvents = fn(1072).RPCEvents;
 const ActivityScreenOrientation = fn(2142).ActivityScreenOrientation;
 const FrameLayoutModes = fn(6957).FrameLayoutModes;
-const ActivityLayoutMode = fn(12616).ActivityLayoutMode;
+const ActivityLayoutMode = fn(12610).ActivityLayoutMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 

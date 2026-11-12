@@ -27,9 +27,9 @@ let result = size.fileFinishedImporting("modules/guild_action_sheet/native/compo
 export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
   let stateFromStores;
-  let canAccessSettings = guild(16284).useGuildActionSheetPermissions(guild).canAccessSettings;
-  const total = stateFromStores(9175)(guild.id).total;
-  let obj = guild(16284);
+  let canAccessSettings = guild(16279).useGuildActionSheetPermissions(guild).canAccessSettings;
+  const total = stateFromStores(9174)(guild.id).total;
+  let obj = guild(16279);
   items = [GuildChannelStore];
   stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
   let obj2 = guild(504);
@@ -62,7 +62,7 @@ export default function GuildActionSheetTabItems(guild) {
   }
   const obj6 = { variant: "secondary", label: formatToPlainStringResult, icon: null, grow: true, onPress: null };
   let obj3 = guild(8398);
-  obj6.icon = closure_12(guild(9915).BoostGemIcon, {
+  obj6.icon = closure_12(guild(9914).BoostGemIcon, {
     color: stateFromStores(575).unsafe_rawColors.GUILD_BOOSTING_PINK,
   });
   obj6.onPress = function onPress() {
@@ -77,7 +77,7 @@ export default function GuildActionSheetTabItems(guild) {
     const obj8 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
     const intl3 = tmp(1113).intl;
     obj8.label = intl3.string(tmp(1113).t.VINpSK);
-    obj8.icon = tmp3(10919);
+    obj8.icon = tmp3(10913);
     obj8.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       closure_2();
@@ -88,7 +88,7 @@ export default function GuildActionSheetTabItems(guild) {
   const obj9 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
   const intl4 = tmp(1113).intl;
   obj9.label = intl4.string(guild(1113).t.HcoRu0);
-  obj9.icon = stateFromStores(9107);
+  obj9.icon = stateFromStores(9106);
   obj9.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     NotificationSettingsModalActionCreatorsDefault.open(guild.id);
@@ -98,7 +98,7 @@ export default function GuildActionSheetTabItems(guild) {
     const obj10 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
     const intl5 = tmp(1113).intl;
     obj10.label = intl5.string(tmp(1113).t["3D5yo/"]);
-    obj10.icon = tmp3(10503);
+    obj10.icon = tmp3(10501);
     obj10.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       GuildSettingsActionCreatorsDefault.open(guild.id);

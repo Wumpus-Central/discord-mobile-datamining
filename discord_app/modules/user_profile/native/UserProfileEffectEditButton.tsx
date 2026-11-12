@@ -20,7 +20,7 @@ let size = {
   overflow: "hidden",
 };
 obj2.profileEffectPreviewContainer = size;
-obj2.sampleProfile = { aspectRatio: fn(9422).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj2.sampleProfile = { aspectRatio: fn(9421).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj2.noneIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -66,7 +66,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
   items = [userProfileEffect, guildId, user, isTryItOut];
   let name;
   const callback = userProfileEffect.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17004, dependencyMap.paths), "Profile Effect", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16999, dependencyMap.paths), "Profile Effect", {
       user,
       currentProfileEffect: userProfileEffect,
       guildId,

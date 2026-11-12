@@ -9,8 +9,8 @@ import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/Toucha
 import openMediaModal from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import common_VideoDefault from "common/Video.tsx";
-import _modDef11307 from "../../_runtime/metro/11307__.js";
-import _modDef18060 from "../../_runtime/metro/18060__.js";
+import _modDef11301 from "../../_runtime/metro/11301__.js";
+import _modDef18055 from "../../_runtime/metro/18055__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -308,7 +308,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      items = [closure_7(_modDef18060, obj4)];
+      items = [closure_7(_modDef18055, obj4)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -358,7 +358,7 @@ prototype["renderVideo"] = function renderVideo() {
     const obj10 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
-      source: _modDef11307,
+      source: _modDef11301,
       onPress: self.playVideo,
       style: tmp.playButton,
       iconSize: tmp18(1187).IconSizes.CUSTOM,

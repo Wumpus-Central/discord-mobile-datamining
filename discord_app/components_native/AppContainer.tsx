@@ -21,12 +21,12 @@ import useNavigationTheme from "../design/components/Navigator/native/useNavigat
 import useIsScreenLandscape from "../modules/screen/useIsScreenLandscape.native.tsx";
 import StartupProfiler from "../modules/app_startup/StartupProfiler.tsx";
 import WebViewContext from "../modules/embedded_apps/native/WebViewContext.tsx";
-import MemoryRouter from "../../_runtime/13025_MemoryRouter.js";
+import MemoryRouter from "../../_runtime/13019_MemoryRouter.js";
 import RouteManagerDefault from "../modules/routing/RouteManager.tsx";
 import AnimatedKeyboardProviderDefault from "../modules/keyboard/native/AnimatedKeyboardProvider.android.tsx";
 import DiscordGestureHandlerRootViewDefault from "../modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx";
 import MainNavigationLoggerDefault from "../modules/main_tabs_v2/helpers/MainNavigationLogger.tsx";
-import ReanimatedScreenProvider from "../../_runtime/16924_ReanimatedScreenProvider.js";
+import ReanimatedScreenProvider from "../../_runtime/16919_ReanimatedScreenProvider.js";
 import RootThemeContextProvider from "../modules/themes/RootThemeContextProvider.native.tsx";
 import AccessibilityPreferencesContextProviderDefault from "../modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx";
 import ErrorBoundaryDefault from "ErrorBoundary.tsx";
@@ -203,7 +203,7 @@ let result = module_1652.configureReanimatedLogger({ level: fn(1652).ReanimatedL
 try {
   fn(6213).enableFreeze();
   let obj6 = fn(6213);
-  let obj8 = { useTrackNavigatorScreenImpression: fn(16921).useTrackNavigatorScreenImpression };
+  let obj8 = { useTrackNavigatorScreenImpression: fn(16916).useTrackNavigatorScreenImpression };
   fn(7519).setDesignConfig(obj8);
   let c22 = false;
   let closure_23 = {
@@ -213,7 +213,7 @@ try {
   const result1 = SentryUtilsDefault.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     const appEntryKey = children.appEntryKey;
-    const requestGatewaySocket = appEntryKey(16923).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = appEntryKey(16918).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = noop.useEffect(() => {
       if (!c22) {
         items = [closure_23, RNScreensTurboModule.RNScreensTurboModule];
@@ -245,8 +245,8 @@ try {
       }
       const obj = appEntryKey(1377);
     }, []);
-    let obj = appEntryKey(16923);
-    const riveAppStatePlaybackExperiment = appEntryKey(18517).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = appEntryKey(16918);
+    const riveAppStatePlaybackExperiment = appEntryKey(18512).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {

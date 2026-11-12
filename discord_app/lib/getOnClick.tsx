@@ -331,7 +331,7 @@ export default function getOnClick(assetURL) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "Array" };
+      result = { applicationId: code, skuId: "a" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -434,7 +434,7 @@ export default function getOnClick(assetURL) {
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(15832, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(15827, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(assetURL, analyticsLocations);
         });
         return true;
@@ -523,7 +523,7 @@ export default function getOnClick(assetURL) {
           return true;
         };
       }
-      tmp2Result = tmp2(10065);
+      tmp2Result = tmp2(10064);
     }
   }
   if (null != findCodedLinkResult) {
@@ -642,7 +642,7 @@ export default function getOnClick(assetURL) {
         return true;
       };
     }
-    tmp2Result4 = tmp2(12420);
+    tmp2Result4 = tmp2(12414);
   }
   const tmp2Result3 = require("LinkUtils");
 }

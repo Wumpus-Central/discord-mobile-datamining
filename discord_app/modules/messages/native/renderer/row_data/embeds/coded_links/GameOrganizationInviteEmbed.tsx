@@ -16,9 +16,9 @@ import GameOrganizationInviteStore from "../../../../../../game_organization_inv
 import GuildStore from "../../../../../../../stores/GuildStore.tsx";
 
 require = fn;
-const CodedLinkExtendedType = fn(11831).CodedLinkExtendedType;
-const constants = fn(12280).GameOrganizationInviteStates;
-const InviteTypes = fn(8776).InviteTypes;
+const CodedLinkExtendedType = fn(11825).CodedLinkExtendedType;
+const constants = fn(12274).GameOrganizationInviteStates;
+const InviteTypes = fn(8775).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/row_data/embeds/coded_links/GameOrganizationInviteEmbed.tsx",

@@ -148,5 +148,5 @@ export default noop.memo(function SettingsAppearanceChannelListPreviewNitroUpsel
   obj2.entering = animationEntering;
   obj2.exiting = animationExiting;
   obj2.renderItem = callback;
-  return closure_1_10(AnimatedEnterExitItemDefault, obj2);
+  return refs(AnimatedEnterExitItemDefault, obj2);
 });

@@ -26,8 +26,8 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(10176).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10177).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(10174).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10175).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(5243);
@@ -227,13 +227,13 @@ export default function ForwardModal(message) {
                 const intl2 = closure_0(source[23]).intl;
                 obj7.text = intl2.string(closure_0(source[23]).t.R0RpRX);
                 forwardOptions(source[22]).open("FORWARD_ERROR", obj7);
-                const obj24 = forwardOptions(source[22]);
+                const obj27 = forwardOptions(source[22]);
               }
             } else {
-              const obj8 = { withMessage: tmp123 };
+              const obj8 = { withMessage: tmp116 };
               c3 = 1;
               c4 = 1;
-              const obj10 = { value: tmp124(first1, obj8, _undefined), done: false };
+              const obj10 = { value: tmp117(first1, obj8, _undefined), done: false };
               return obj10;
             }
           }
@@ -263,7 +263,7 @@ export default function ForwardModal(message) {
                     closure_0 = arg0;
                     closure_1_0(6207).openAlert(
                       "staff-to-non-staff-forward",
-                      closure_1_15(forwardOptions(10198), {
+                      closure_1_15(forwardOptions(10196), {
                         onConfirm() {
                           return closure_0(true);
                         },
@@ -340,13 +340,13 @@ export default function ForwardModal(message) {
                   obj.numDestinations = closure_129_1.length;
                   obj.numDestinationChanges = ref.current;
                   obj.numQueryChanges = ref2.current;
-                  obj29.trackForwardSent(obj);
+                  obj28.trackForwardSent(obj);
                   closure_129_3 = first1.filter((item, index) => "rejected" === dependencyMap[index].status);
                   const obj21 = { message, failedDestinations: closure_129_3, forwardOptions };
                   const result = closure_0(source[19]).showForwardFailedAlertModal(obj21);
                   const obj2 = closure_0(source[19]);
                 }
-                obj29 = closure_0(source[18]);
+                obj28 = closure_0(source[18]);
               }
               c4 = 3;
               const obj22 = { value, done: true };
@@ -357,12 +357,12 @@ export default function ForwardModal(message) {
               const obj23 = { channelId: closure_129_1[0] };
               c3 = 4;
               c4 = 1;
-              const obj25 = { value: forwardOptions(source[28]).fetchMessages(obj23), done: false };
-              return obj25;
+              const obj24 = { value: forwardOptions(source[28]).fetchMessages(obj23), done: false };
+              return obj24;
             }
             const obj13 = closure_0(source[19]);
           }
-          const obj26 = {
+          const obj25 = {
             channelId,
             messageId,
             hasError: false,
@@ -376,25 +376,25 @@ export default function ForwardModal(message) {
           if (tmp31) {
             tmp31 = "" !== closure_129_0;
           }
-          obj26.hasContextMessage = tmp31;
-          obj26.numDestinations = closure_129_1.length;
-          obj26.numDestinationChanges = ref.current;
-          obj26.numQueryChanges = ref2.current;
-          obj26.source = source;
-          obj7(obj26);
-          const obj27 = { text: null, icon: null };
+          obj25.hasContextMessage = tmp31;
+          obj25.numDestinations = closure_129_1.length;
+          obj25.numDestinationChanges = ref.current;
+          obj25.numQueryChanges = ref2.current;
+          obj25.source = source;
+          obj7(obj25);
+          const obj26 = { text: null, icon: null };
           const intl = closure_0(source[23]).intl;
-          obj27.text = intl.string(closure_0(source[23]).t.kwmYkt);
-          obj27.icon = forwardOptions(source[31]);
-          forwardOptions(source[22]).open("FORWARD_SUCCESS", obj27);
+          obj26.text = intl.string(closure_0(source[23]).t.kwmYkt);
+          obj26.icon = forwardOptions(source[31]);
+          forwardOptions(source[22]).open("FORWARD_SUCCESS", obj26);
           c4 = 3;
-          const obj28 = { value: undefined, done: true };
-          return obj28;
+          const obj29 = { value: undefined, done: true };
+          return obj29;
         }
         c4 = 3;
-      } catch (tmp103) {
+      } catch (tmp96) {
         c4 = tmp;
-        throw tmp103;
+        throw tmp96;
       }
     }
   });

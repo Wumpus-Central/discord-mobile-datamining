@@ -87,7 +87,7 @@ const memoResult = noop.memo((action) => {
     const tmp3Result2 = UserUtilsDefault;
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj7.children = tmp6(9553).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+    obj7.children = tmp6(9552).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
     items2[1] = closure_8(tmp6(5866).Text, obj7);
     obj5.children = items2;
     items1[1] = closure_9(View, obj5);

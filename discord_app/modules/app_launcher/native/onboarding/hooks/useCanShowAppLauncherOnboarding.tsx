@@ -66,7 +66,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     items4.push(tmp2(5076).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
   }
   const tmp2Result10 = channelId(504);
-  const tmp2Result11 = channelId(9494);
+  const tmp2Result11 = channelId(9493);
   const items5 = [AppLauncherOnboardingStore];
   const stateFromStoresObject = channelId(504).useStateFromStoresObject(items5, () => ({
     recentMessageMetadata: AppLauncherOnboardingStore.getRecentMessageMetadata(),

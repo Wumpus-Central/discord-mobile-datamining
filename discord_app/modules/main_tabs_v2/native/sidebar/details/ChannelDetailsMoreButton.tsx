@@ -21,7 +21,7 @@ export default function MoreButton(channel) {
       obj2.accessibilityLabel = intl.string(channel(1113).t["UKOtz+"]);
       obj2.source = _modDef8371;
       obj2.onPress = tmp;
-      obj.children = jsx(channel(8985).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+      obj.children = jsx(channel(8984).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
       tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { children: null });
     } else {
       tmp2 = null;

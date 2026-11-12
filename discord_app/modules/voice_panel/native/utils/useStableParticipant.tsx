@@ -50,8 +50,8 @@ export default function useStableParticipant(id, channelId, guildId) {
               userAvatarDecoration: null,
               streamId: "PX_8",
               ringing: null,
-              hasVideo: 0,
-              isSelf: 12,
+              hasVideo: 0.016,
+              isSelf: 1,
             };
             id = AuthenticationStore.getId();
             obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);

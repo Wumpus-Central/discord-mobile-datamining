@@ -20,7 +20,7 @@ import UserStore from "../../../../../../stores/UserStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchListItemTypes = fn(9000).SearchListItemTypes;
+const SearchListItemTypes = fn(8999).SearchListItemTypes;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(

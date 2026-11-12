@@ -12,13 +12,13 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = {
-  bots: fn(12592).RobotIcon,
+  bots: fn(12586).RobotIcon,
   channels: fn(8036).AppsIcon,
-  test_app: fn(13219).BeakerIcon,
+  test_app: fn(13213).BeakerIcon,
   profile_widget: fn(8180).IdCardIcon,
   overlay: fn(7374).GameControllerIcon,
   collaboration: fn(7372).GroupIcon,
-  only_you: fn(10486).UserIcon,
+  only_you: fn(10484).UserIcon,
 };
 const createStyles = fn(5243);
 let obj3 = {

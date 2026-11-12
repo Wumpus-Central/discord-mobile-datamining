@@ -116,7 +116,7 @@ export (format_type, arg1) => {
       if (tmp3 === StickersTypes.StickerExtensions.WEBP) {
         str3 = "&quality=lossless";
       }
-      if ("development" !== closure_1_10) {
+      if ("development" !== refs) {
         if (format_type.format_type === StickersTypes.StickerFormat.LOTTIE) {
           const _location3 = location;
           const _HermesInternal4 = HermesInternal;
@@ -189,7 +189,7 @@ export function getStickerPackBannerAssetUrl(stickerPack, size) {
   }
 }
 export function isStickerAssetUrl(str) {
-  return null != str.match("development" !== closure_1_10 ? regExp : regExp1);
+  return null != str.match("development" !== refs ? regExp : regExp1);
 }
 export function isStickerPackAnimated(stickerPack) {
   const stickers = stickerPack.stickers;

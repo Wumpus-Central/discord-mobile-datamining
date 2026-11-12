@@ -22,7 +22,7 @@ export function SensitiveContentFiltersTeenNotice() {
   let obj = require("AgeNoticeSettingsNoticesLazy");
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isAgeNoticeSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(17226).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(17221).ContentFiltersTeenNotice, {});
   } else {
     const obj3 = {
       label: tmp(1113).t.EUo0yj,

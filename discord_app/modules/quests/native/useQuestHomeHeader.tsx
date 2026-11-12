@@ -25,7 +25,7 @@ function QuestHomeHeaderTitle() {
   obj2.children = intl.string(util.t.JALI2K);
   items[1] = React6(Text_Text.Heading, obj2);
   obj.children = items;
-  return closure_1_10(View, obj);
+  return refs(View, obj);
 }
 function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   isVirtualCurrencyEnabled = isVirtualCurrencyEnabled.isVirtualCurrencyEnabled;
@@ -33,15 +33,15 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   let balance;
   const tmp2 = closure_11();
   const tmp3 = balance;
-  balance = balance(9972).useFetchVirtualCurrencyBalance().balance;
-  let obj = balance(9972);
-  const orbBalanceEntrypoint = balance(17408).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
+  balance = balance(9971).useFetchVirtualCurrencyBalance().balance;
+  let obj = balance(9971);
+  const orbBalanceEntrypoint = balance(17403).useOrbBalanceEntrypoint({ location: "MobileQuestHomeHeader" });
   const openBalanceWidgetActionSheet = orbBalanceEntrypoint.openBalanceWidgetActionSheet;
   items = [balance, openBalanceWidgetActionSheet];
   let obj3 = { style: tmp2.headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     const obj4 = { balance, onPress: tmp6, showNotificationBadge: orbBalanceEntrypoint.hasUnreadUpdate };
-    isVirtualCurrencyEnabled = closure_9(tmp3(9977).BalanceWidgetPillButton, obj4);
+    isVirtualCurrencyEnabled = closure_9(tmp3(9976).BalanceWidgetPillButton, obj4);
   }
   const items1 = [isVirtualCurrencyEnabled];
   const merged1 = Object.assign(merged);
@@ -73,7 +73,7 @@ function FiltersButton(setSelectedSortMethod) {
   items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17427, dependencyMap.paths),
+      asyncRequireImpl(17422, dependencyMap.paths),
       "QuestHomeSortingFilteringBottomSheet",
       {
         onSortMethodChange: setSelectedSortMethod,

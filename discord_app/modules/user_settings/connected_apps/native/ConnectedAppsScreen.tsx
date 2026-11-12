@@ -119,7 +119,7 @@ function ConnectionsSection(onAdd) {
               accessibilityLabel: accessibilityLabel.name,
               onPress() {
                 closure_1(7358)({ platformType: type, location: constants.CONNECTIONS_EMPTY_STATE });
-                const result = type(17364).trackEmptyStateCardClicked({ platformType: type });
+                const result = type(17359).trackEmptyStateCardClicked({ platformType: type });
               },
               children: null,
             };
@@ -210,9 +210,9 @@ let result = size.fileFinishedImporting("modules/user_settings/connected_apps/na
 
 export default function ConnectedAppsScreen() {
   const tmp = closure_14();
-  const authorizedApps = apps(17365).useAuthorizedApps();
+  const authorizedApps = apps(17360).useAuthorizedApps();
   apps = authorizedApps.apps;
-  let obj = apps(17365);
+  let obj = apps(17360);
   const stackNavigation = apps(1499).useStackNavigation();
   items = [stackNavigation];
   const callback = noop.useCallback(() => {
@@ -239,11 +239,11 @@ export default function ConnectedAppsScreen() {
   const obj5 = { children: null };
   const items2 = [
     closure_11(ConnectionsSection, { onAdd: callback }),
-    closure_11(apps(17365).AuthorizedAppsHeader, {}),
+    closure_11(apps(17360).AuthorizedAppsHeader, {}),
   ];
   obj5.children = items2;
   obj3.ListHeaderComponent = closure_12(closure_13, obj5);
-  obj3.ListEmptyComponent = closure_11(apps(17365).AuthorizedAppsEmpty, { loading: authorizedApps.loading });
+  obj3.ListEmptyComponent = closure_11(apps(17360).AuthorizedAppsEmpty, { loading: authorizedApps.loading });
   obj3.data = apps;
   obj3.renderItem = function renderItem(app) {
     const index = app.index;

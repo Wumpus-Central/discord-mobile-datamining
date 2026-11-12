@@ -35,7 +35,7 @@ function AssetDescription(asset) {
                 const obj = { analyticsLocations: null };
                 items = [closure_1_1(7871).CHECKPOINT, closure_1_1(7871).CHECKPOINT_TRAIT];
                 obj.analyticsLocations = items;
-                return closure_1_1(9513)(obj);
+                return closure_1_1(9512)(obj);
               },
               accessibilityRole: "link",
               children,

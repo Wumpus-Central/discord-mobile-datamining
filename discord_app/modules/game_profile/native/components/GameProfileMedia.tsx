@@ -35,7 +35,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-let closure_14 = 2 * (fn(10260).MEDIA_ITEM_MAX_WIDTH + PX_12);
+let closure_14 = 2 * (fn(10258).MEDIA_ITEM_MAX_WIDTH + PX_12);
 const createStyles = fn(5243);
 let obj = {
   container: { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 },
@@ -53,8 +53,8 @@ let obj = {
 let obj3 = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj.mediaItem = {
-  maxWidth: fn(10260).MEDIA_ITEM_MAX_WIDTH,
-  maxHeight: fn(10260).MEDIA_ITEM_MAX_HEIGHT,
+  maxWidth: fn(10258).MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: fn(10258).MEDIA_ITEM_MAX_HEIGHT,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };

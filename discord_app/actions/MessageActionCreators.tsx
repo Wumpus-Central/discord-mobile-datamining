@@ -182,11 +182,11 @@ function trackInvite(channelId) {
 }
 const claimClipMessageNotice = fn(8594).claimClipMessageNotice;
 const ReferencedMessageState = fn(8677).ReferencedMessageState;
-const SlowmodeType = fn(8726).SlowmodeType;
+const SlowmodeType = fn(8725).SlowmodeType;
 const Constants = fn(1072);
 const AbortCodes = Constants.AbortCodes;
 ({ AnalyticEvents: closure_28, Endpoints: closure_29, Permissions, ChannelTypes: closure_30, LoggingInviteTypes: closure_31, SendTypes: closure_32, InviteStates: items, MessageFlags: closure_34, MAX_MESSAGES_FOR_JUMP: closure_35, MessageTypes: closure_36, AllowedMentionTypes: closure_37, HelpdeskArticles: closure_38, MarketingURLs: closure_39, MessageReferenceTypes: closure_40, LOCAL_BOT_ID: closure_41, NON_USER_BOT_DISCRIMINATOR: closure_42, MessageStates: closure_43, ActivityActionTypes: closure_44 } = Constants);
-const LinkType = fn(8728).LinkType;
+const LinkType = fn(8727).LinkType;
 const GuildTemplateStates = fn(8065).GuildTemplateStates;
 const MessageConstants = fn(5248);
 ({ FileUploadErrorTypes: closure_47, MessageSendLocation: closure_48 } = MessageConstants);
@@ -564,9 +564,9 @@ let obj17 = {
               return { value: "HermesInternal", done: null };
             }
           }
-        } catch (tmp13) {
+        } catch (tmp11) {
           dependencyMap = tmp;
-          throw tmp13;
+          throw tmp11;
         }
       }
     })();
@@ -1092,7 +1092,7 @@ let obj17 = {
               } else {
                 dependencyMap = 1;
                 c4 = 1;
-                const obj6 = { value: tmp2(8789)(closure_0), done: false };
+                const obj6 = { value: tmp2(8788)(closure_0), done: false };
                 return obj6;
               }
             }
@@ -1113,15 +1113,15 @@ let obj17 = {
               const nonce = closure_130_3.nonce;
               closure_0 = nonce;
               if (nonce == null) {
-                closure_0 = closure_0(8786).createNonce();
-                const obj = closure_0(8786);
+                closure_0 = closure_0(8785).createNonce();
+                const obj = closure_0(8785);
               }
               closure_129_1 = closure_0;
               const obj9 = {};
               const merged = Object.assign(closure_130_3);
               obj9.nonce = closure_129_1;
               closure_130_3 = obj9;
-              closure_129_2 = tmp2(8790).backgroundify(function _trySend() {
+              closure_129_2 = tmp2(8789).backgroundify(function _trySend() {
                 return closure_2_56._sendMessage(closure_1_0, closure_1_1, dependencyMap);
               }, undefined);
               if (null == closure_130_3.scheduledTimestamp) {
@@ -1147,7 +1147,7 @@ let obj17 = {
                 closure_129_2();
               }
               c4 = 3;
-              const obj3 = tmp2(8790);
+              const obj3 = tmp2(8789);
             }
           }
         } catch (tmp61) {
@@ -1739,13 +1739,13 @@ let obj17 = {
               logger.info("Queueing message to be sent LogId:" + rounded);
               emojiUsed(inviteAnalyticsMetadata[73]).enqueue(closure_17, (ok) => {
                 if (ok.ok) {
-                  id(8794).donateSentMessage(content, channelId);
+                  id(8793).donateSentMessage(content, channelId);
                   let obj4 = { sendAnalytics: null, poll: null };
                   let obj5 = { duration: tmp, queueSize: length };
                   obj4.sendAnalytics = obj5;
                   obj4.poll = poll;
                   closure_4_56.receiveMessage(channelId, ok.body, true, obj4);
-                  const obj15 = id(8794);
+                  const obj15 = id(8793);
                   request = request.getRequest(id(11).cast(channelId));
                   if (null != request) {
                     ({ guildId, userId, applicationStatus } = request);
@@ -2011,7 +2011,7 @@ let obj17 = {
                           let someResult = overrideProperties.state === constants.LOADED;
                           if (someResult) {
                             attachments = overrideProperties.message.attachments;
-                            someResult = attachments.some(/* F145341 */ function() { ... });
+                            someResult = attachments.some(/* F145359 */ function() { ... });
                           }
                           const obj5 = {};
                           const obj = id(length[38]);
@@ -2088,7 +2088,7 @@ let obj17 = {
                               let obj6 = id(572);
                             }
                           } else {
-                            const AUTOMOD_ERROR_CODES = closure_0(9100).AUTOMOD_ERROR_CODES;
+                            const AUTOMOD_ERROR_CODES = closure_0(9099).AUTOMOD_ERROR_CODES;
                             if (AUTOMOD_ERROR_CODES.has(ok.body.code)) {
                               const obj33 = { type: "MESSAGE_SEND_FAILED_AUTOMOD", messageData, errorResponseBody: null };
                               const obj34 = { code: ok.body.code, message: ok.body.message };
@@ -2139,7 +2139,7 @@ let obj17 = {
                       if (body2 != null) {
                         attachments1 = body2.attachments;
                       }
-                      let result2 = closure_4_56.sendExplicitMediaClydeError(channelId, attachments1, closure_0(8787).TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                      let result2 = closure_4_56.sendExplicitMediaClydeError(channelId, attachments1, closure_0(8786).TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                     }
                     const obj38 = { type: "MESSAGE_SEND_FAILED", messageId, channelId, shouldNotify: !c2.doNotNotifyOnError, reason: EXPLICIT_CONTENT };
                     id(572).dispatch(obj38);
@@ -2154,14 +2154,14 @@ let obj17 = {
                       message1 = ok.err.message;
                     }
                     obj40.errorMessage = message1;
-                    let result3 = closure_0(8962).logMessageSendFailure(obj40);
-                    let obj12 = closure_0(8962);
-                    let result4 = id(8950).cancelPendingSendRequests(channelId);
+                    let result3 = closure_0(8961).logMessageSendFailure(obj40);
+                    let obj12 = closure_0(8961);
+                    let result4 = id(8949).cancelPendingSendRequests(channelId);
                     const item3 = result4.forEach((messageId) => {
                       logger.log("Cancelling pending message", messageId.nonce);
                       id(channel3[47]).dispatch({ type: "MESSAGE_SEND_FAILED", messageId: messageId.nonce, channelId: messageId.channelId });
                     });
-                    const obj14 = id(8950);
+                    const obj14 = id(8949);
                   }
                   id(ok);
                 }
@@ -2256,7 +2256,7 @@ let obj17 = {
               })(tmp2, tmp3);
               c2 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp2(8798).unarchiveThreadIfNecessary(tmp3), done: false };
+              const obj5 = { value: tmp2(8797).unarchiveThreadIfNecessary(tmp3), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -2294,16 +2294,16 @@ let obj17 = {
             })(closure_129_0, closure_129_1);
             let obj6 = { channelId: closure_129_0, messageId: closure_129_1, content: closure_129_2, isCrossposted: closure_128_1, allowed_mentions: closure_128_0, components: closure_129_3 };
             closure_128_2 = obj6;
-            const obj8 = { type: tmp3(8950).MessageDataType.EDIT, message: closure_128_2 };
-            tmp2(8950).enqueue(obj8, (hasErr) => {
+            const obj8 = { type: tmp3(8949).MessageDataType.EDIT, message: closure_128_2 };
+            tmp2(8949).enqueue(obj8, (hasErr) => {
               hasErr = hasErr.hasErr;
               let hasItem = !hasErr;
               if (!hasErr) {
-                const AUTOMOD_ERROR_CODES = channelId(9100).AUTOMOD_ERROR_CODES;
+                const AUTOMOD_ERROR_CODES = channelId(9099).AUTOMOD_ERROR_CODES;
                 hasItem = AUTOMOD_ERROR_CODES.has(hasErr.body.code);
               }
               if (hasItem) {
-                const obj = { type: channelId(8950).MessageDataType.EDIT, message };
+                const obj = { type: channelId(8949).MessageDataType.EDIT, message };
                 const obj3 = { type: "MESSAGE_EDIT_FAILED_AUTOMOD", messageData: obj, errorResponseBody: null };
                 const obj4 = { code: hasErr.body.code, message: hasErr.body.message };
                 obj3.errorResponseBody = obj4;
@@ -2371,7 +2371,7 @@ let obj17 = {
               let message2;
               c2 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp5(8798).unarchiveThreadIfNecessary(tmp2), done: false };
+              const obj5 = { value: tmp5(8797).unarchiveThreadIfNecessary(tmp2), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -2435,7 +2435,7 @@ let obj17 = {
               let message2;
               c2 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp5(8798).unarchiveThreadIfNecessary(tmp2), done: false };
+              const obj5 = { value: tmp5(8797).unarchiveThreadIfNecessary(tmp2), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -2472,7 +2472,7 @@ let obj17 = {
     closure_1 = id;
     closure_2 = found;
     return (async () => {
-      await v1(8798).unarchiveThreadIfNecessary(tmp4);
+      await v1(8797).unarchiveThreadIfNecessary(tmp4);
       const HTTP = tmp4(1282).HTTP;
       const request = { url: closure_1_29.MESSAGE(closure_128_0, closure_128_1), body: { attachments: closure_128_2 }, oldFormErrors: true, rejectWithError: tmp4(1282).rejectWithMigratedError() };
       return HTTP.patch(request);
@@ -2526,7 +2526,7 @@ let obj17 = {
               } else {
                 c2 = 1;
                 dependencyMap = 1;
-                const obj5 = { value: id(8798).unarchiveThreadIfNecessary(channelId), done: false };
+                const obj5 = { value: id(8797).unarchiveThreadIfNecessary(channelId), done: false };
                 return obj5;
               }
             }

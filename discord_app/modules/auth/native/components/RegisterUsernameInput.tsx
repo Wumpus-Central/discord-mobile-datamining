@@ -29,7 +29,7 @@ function UsernameStatusMessage(arg0) {
     obj4.children = usernameStatus.message;
     items[1] = React6(Text_Text.Text, obj4);
     obj2.children = items;
-    let tmp6 = closure_1_10(Stack_Stack.Stack, obj2);
+    let tmp6 = refs(Stack_Stack.Stack, obj2);
   } else {
     if (isUsernameFocused) {
       let type1;
@@ -65,7 +65,7 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(18524);
+const RegistrationUIStore = fn(18519);
 ({ setRegistrationErrors: metroImportDefault, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
@@ -158,7 +158,7 @@ export function RegisterUsernameInput(setUsername) {
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(17113).NameValidationState.ERROR) {
+  if (type === tmp14(17108).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };

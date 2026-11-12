@@ -92,13 +92,13 @@ function WishlistSuggestionsGridContents(arg0) {
   let obj2 = trackUserProfileWishlistAction(504);
   const obj3 = { minCardSize: 80, maxCardSize: 120, containerWidth, maxWidth, sidePadding: closure_8 + PX_16 + 1, gap };
   const tmp7 = useInitialValueDefault(() => trackUserProfileWishlistAction(dependencyMap[17]).v4());
-  let obj4 = trackUserProfileWishlistAction(15749);
+  let obj4 = trackUserProfileWishlistAction(15744);
   const items2 = obj4.useAddToWishlistGridItems({
     userId,
     wishlist,
     numWishlistItemsToRecommend: 15,
     maxWishlistItemsToShow: 9,
-    source: trackUserProfileWishlistAction(9403).WishlistFetchSource.USER_PROFILE,
+    source: trackUserProfileWishlistAction(9402).WishlistFetchSource.USER_PROFILE,
   }).items;
   const items3 = [trackUserProfileWishlistAction];
   const callback = noop.useCallback(() => {
@@ -123,7 +123,7 @@ function WishlistSuggestionsGridContents(arg0) {
     const obj7 = {
       size: "md",
       variant: "secondary",
-      icon: closure_12(tmp(10498).ShopIcon, { size: "sm" }),
+      icon: closure_12(tmp(10496).ShopIcon, { size: "sm" }),
       text: null,
       onPress: null,
     };
@@ -196,7 +196,7 @@ function WishlistSuggestionsGridContents(arg0) {
     const obj33 = {
       size: "md",
       variant: "secondary",
-      icon: closure_12(tmp(10498).ShopIcon, { size: "sm" }),
+      icon: closure_12(tmp(10496).ShopIcon, { size: "sm" }),
       text: null,
       onPress: null,
     };
@@ -207,7 +207,7 @@ function WishlistSuggestionsGridContents(arg0) {
     items6[2] = closure_12(View, obj18);
     obj10.children = items6;
     obj8.children = closure_13(_modDef1652.View, obj10);
-    tmp12Result = closure_12(tmp(15750).WishlistAnalyticsProvider, obj8);
+    tmp12Result = closure_12(tmp(15745).WishlistAnalyticsProvider, obj8);
   }
   return tmp12Result;
 }

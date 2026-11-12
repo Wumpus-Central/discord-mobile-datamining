@@ -7,7 +7,7 @@ import HarmTypeConfiguration from "HarmTypeConfiguration.tsx";
 import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels.tsx";
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils.tsx";
 import ExplicitMediaRedactionActionCreators from "ExplicitMediaRedactionActionCreators.tsx";
-import uniqWithDefault from "../../../_runtime/20073_uniqWith.js";
+import uniqWithDefault from "../../../_runtime/20068_uniqWith.js";
 import ReferencedMessageStore from "../replies/ReferencedMessageStore.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelSectionStore from "../../stores/ChannelSectionStore.tsx";
@@ -124,7 +124,7 @@ function handleUnscannedMessages(found2, isMessageUpdate) {
       obj3.setAt = Date.now();
       const _setTimeout = setTimeout;
       obj3.timeout = setTimeout(() => {
-        if (maybeCancelTimeout(channel_id, found1(8787).TimeoutCancelSource.TIMEOUT)) {
+        if (maybeCancelTimeout(channel_id, found1(8786).TimeoutCancelSource.TIMEOUT)) {
           message = message.getMessage(channel_id.channel_id, channel_id.id);
           if (null != message) {
             const unscannedMediaIds = found1(8567).getUnscannedMediaIds(message);
@@ -134,8 +134,8 @@ function handleUnscannedMessages(found2, isMessageUpdate) {
             ({ channel_id: obj3.channelId, id: obj3.messageId } = channel_id);
             obj.attachmentIds = attachmentIds;
             obj.embedIds = embedIds;
-            const result = found1(8787).trackScanningTimedOut(obj);
-            const tmp2Result2 = found1(8787);
+            const result = found1(8786).trackScanningTimedOut(obj);
+            const tmp2Result2 = found1(8786);
           }
           ({ id: obj5.messageId, channel_id: obj5.channelId } = channel_id);
           closure_1(572).dispatch({ type: "MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT", messageId: null, channelId: null });
@@ -171,7 +171,7 @@ function handleUnscannedMessages(found2, isMessageUpdate) {
       }
     }, 800 * Math.random());
   } else if (0 !== found1.length) {
-    let obj2 = found1(11165);
+    let obj2 = found1(11159);
     if (tmp) {
       let result = obj2.sendMultiChannelMessagesForScanning(found1);
     } else {
@@ -185,7 +185,7 @@ function handleUnscannedMessages(found2, isMessageUpdate) {
 }
 function processMessagesFromAction(firstMessages, isMessageUpdate) {
   const found = firstMessages.filter((item) => {
-    obj = obj(20072);
+    obj = obj(20067);
     let result = obj.hasAttachmentsEmbedsComponentsOrSnapshots(item);
     obj(8567);
     if (result) {
@@ -197,7 +197,7 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
     if (null != referenced_message) {
       if ("referenced_message" in referenced_message) {
         if (null != referenced_message.referenced_message) {
-          obj = obj(20072);
+          obj = obj(20067);
           if (obj.hasAttachmentsEmbedsComponentsOrSnapshots(referenced_message.referenced_message)) {
             if (0 !== tmpResult.getEnabledHarmTypesForMessage(referenced_message.referenced_message)) {
               return referenced_message.referenced_message;
@@ -218,7 +218,7 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
     HermesBuiltin.arraySpread(found1, HermesBuiltin.arraySpread(found, 0));
     tmp2 = items;
   }
-  const arr4 = obj2(20073)(tmp2, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
+  const arr4 = obj2(20068)(tmp2, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
   const found2 = arr4.filter((item) => {
     obj = obj(8567);
     return obj.hasUnscannedMedia(item);
@@ -367,7 +367,7 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
   const entries = obj2(11).entries({});
   const item1 = entries.forEach((item) => {
     [tmp, tmp2] = item;
-    obj = obj(8787);
+    obj = obj(8786);
     const result = obj.trackExplicitMediaRedactableMessagedLoaded({
       channelId: tmp,
       numOfAttachments: tmp2.numOfAttachments,
@@ -381,7 +381,7 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
   const entries1 = obj2(11).entries(obj2);
   const item2 = entries1.forEach((item) => {
     [tmp, tmp2] = item;
-    obj = obj(8787);
+    obj = obj(8786);
     const result = obj.trackRedactableMessageLoaded({
       messageId: tmp,
       channelId: tmp2.channelId,
@@ -625,7 +625,7 @@ function maybeScanMessagesForChannelId(channelId) {
   let tmp = 0 !== messages.length;
   if (tmp) {
     const found = messages.filter((item) => {
-      obj = obj(20072);
+      obj = obj(20067);
       let result = obj.hasAttachmentsEmbedsComponentsOrSnapshots(item);
       if (result) {
         result = 0 !== obj(8567).getEnabledHarmTypesForMessage(item);
@@ -639,7 +639,7 @@ function maybeScanMessagesForChannelId(channelId) {
           messageByReference = messageByReference.getMessageByReference(type.messageReference);
           if (messageByReference.state === constants.LOADED) {
             if (null != messageByReference.message) {
-              obj = obj(20072);
+              obj = obj(20067);
               if (obj.hasAttachmentsEmbedsComponentsOrSnapshots(messageByReference.message)) {
                 if (0 !== tmp5Result.getEnabledHarmTypesForMessage(messageByReference.message)) {
                   return messageByReference.message;
@@ -661,7 +661,7 @@ function maybeScanMessagesForChannelId(channelId) {
       HermesBuiltin.arraySpread(found1, HermesBuiltin.arraySpread(found, 0));
       tmp3 = items;
     }
-    const arr5 = obj2(20073)(tmp3, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
+    const arr5 = obj2(20068)(tmp3, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
     const found2 = arr5.filter((item) => {
       obj = obj(8567);
       return obj.hasUnscannedMedia(item);
@@ -810,7 +810,7 @@ function maybeScanMessagesForChannelId(channelId) {
     const entries = obj2(11).entries({});
     const item1 = entries.forEach((item) => {
       [tmp, tmp2] = item;
-      obj = obj(8787);
+      obj = obj(8786);
       const result = obj.trackExplicitMediaRedactableMessagedLoaded({
         channelId: tmp,
         numOfAttachments: tmp2.numOfAttachments,
@@ -824,7 +824,7 @@ function maybeScanMessagesForChannelId(channelId) {
     const entries1 = obj2(11).entries(obj2);
     const item2 = entries1.forEach((item) => {
       [tmp, tmp2] = item;
-      obj = obj(8787);
+      obj = obj(8786);
       const result = obj.trackRedactableMessageLoaded({
         messageId: tmp,
         channelId: tmp2.channelId,

@@ -3,8 +3,8 @@ import VoicePanelCardLayoutManagerDefault from "card/VoicePanelCardLayoutManager
 import VoicePanelPIPHandoffDefault from "pip/VoicePanelPIPHandoff.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const VoicePanelModes = fn(11925).VoicePanelModes;
-const VoicePanelControlsConstants = fn(11923);
+const VoicePanelModes = fn(11919).VoicePanelModes;
+const VoicePanelControlsConstants = fn(11917);
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsConstants);
 const obj = {
   channelId: "context-not-initialized",
@@ -44,20 +44,20 @@ const obj = {
   refreshIdleTimeout: null,
   safeArea: null,
   scrollPosition: null,
-  setControlsMode: 1000,
-  setFocused: 1000,
-  setIsFocusedVideoZoomed: 20000,
-  setMode: 20000,
-  setShowFloatingCTA: false,
-  sheetExitProgress: true,
-  showControls: null,
-  showFloatingCTA: null,
-  streamOutputSinkStack: null,
-  windowDimensions: 16,
-  wrapperDimensions: 16,
+  setControlsMode: "http://dis.gd/contact",
+  setFocused: "https://api.krisp.ai/v2/resource/link/discord",
+  setIsFocusedVideoZoomed: null,
+  setMode: null,
+  setShowFloatingCTA: null,
+  sheetExitProgress: "http://dis.gd/importantupdates",
+  showControls: "https://dis.gd/phish",
+  showFloatingCTA: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps",
+  streamOutputSinkStack: "https://support.discord.com/hc/en-us/articles/10394859532823",
+  windowDimensions: null,
+  wrapperDimensions: "https://support.discord.com/hc/en-us/articles/208866998-Invites-101",
   useReducedMotion: null,
-  wrapperOffset: 20,
-  pipHandoff: 0.1,
+  wrapperOffset: "\u{1F435}",
+  pipHandoff: 6,
 };
 let ReanimatedHelperTypes = fn(7782);
 obj.connected = ReanimatedHelperTypes.createFakeSharedValue(false);
@@ -91,7 +91,7 @@ obj.dockPressProgress = ReanimatedHelperTypes.createFakeSharedValue(0);
 ReanimatedHelperTypes = fn(7782);
 obj.dockPressed = ReanimatedHelperTypes.createFakeSharedValue(false);
 obj.dockPTTMeasureHostRef = { current: null };
-obj.dismissToPIPGestureRef = { current: "Array" };
+obj.dismissToPIPGestureRef = { current: "r" };
 ReanimatedHelperTypes = fn(7782);
 obj.dragScrolling = ReanimatedHelperTypes.createFakeSharedValue(false);
 ReanimatedHelperTypes = fn(7782);
@@ -118,7 +118,7 @@ obj.layoutManager = new VoicePanelCardLayoutManagerDefault("invalid");
 ReanimatedHelperTypes = fn(7782);
 obj.mode = ReanimatedHelperTypes.createFakeSharedValue(VoicePanelModes.PANEL);
 ReanimatedHelperTypes = fn(7782);
-obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11926).MorphablePanelModes.PANEL);
+obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(11920).MorphablePanelModes.PANEL);
 const obj2 = {
   mode: VoicePanelControlsModes.FLOATING_DEFAULT,
   locked: false,

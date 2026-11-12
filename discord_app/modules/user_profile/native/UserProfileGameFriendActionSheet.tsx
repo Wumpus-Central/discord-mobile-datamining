@@ -193,7 +193,7 @@ export default function UserProfileGameFriendActionSheet(user) {
     let tmp = null != application;
     if (tmp) {
       const obj = { application, userDisplayName, userId: user.id };
-      tmp = closure_2_10(GameFriendApplicationRow, obj, application.id);
+      tmp = refs(GameFriendApplicationRow, obj, application.id);
     }
     return tmp;
   });

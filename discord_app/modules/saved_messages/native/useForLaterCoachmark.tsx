@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/saved_messages/native/useForL
 
 export default function useForLaterCoachmark(targetRef) {
   items = [closure_6];
-  const tmp = _slicedToArray(first(9494).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
+  const tmp = _slicedToArray(first(9493).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   first = tmp[0];
   dependencyMap = tmp3;
   const items1 = [tmp[1], first];
@@ -34,11 +34,11 @@ export default function useForLaterCoachmark(targetRef) {
       dependencyMap(constants.USER_DISMISS);
     };
     obj.renderImgComponent = function renderImgComponent() {
-      return closure_1_5(first(11879).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
+      return closure_1_5(first(11873).BookmarksSpotIllustration, { width: 120, height: 80, accessible: false });
     };
     return obj;
   }, items1);
-  let obj = first(9494);
-  const coachmark = first(9501).useCoachmark(targetRef, memo);
+  let obj = first(9493);
+  const coachmark = first(9500).useCoachmark(targetRef, memo);
   return tmp[1];
 }

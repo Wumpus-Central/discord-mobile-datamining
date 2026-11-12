@@ -78,7 +78,7 @@ export default noop.memo(function GuildsBar(enableHome) {
   }, items1);
   let obj = { profile: null, children: null };
   const tmp5 = useGuildsBarPropsDefault(fastListRef);
-  obj.profile = fastListRef(12358).Profiles.Guilds;
+  obj.profile = fastListRef(12352).Profiles.Guilds;
   const obj2 = { gesture, children: null };
   const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
   const tmp10 = StartupProfilerDefault;

@@ -19,7 +19,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 let StyleSheet = fn(17).StyleSheet;
-const getDockInset = fn(11948).getDockInset;
+const getDockInset = fn(11942).getDockInset;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let items = [
@@ -36,7 +36,7 @@ let items = [
 let closure_9 = { duration: 200 };
 let closure_10 = { duration: 90 };
 const styles = StyleSheet.create({
-  layer: { position: "absolute", top: 0, left: 0, right: 0 },
+  layer: { position: "absolute", bottom: 0, left: 0, right: 0 },
   bottomLine: { position: "absolute", bottom: 0, height: 2 },
 });
 let closure_12 = {
@@ -84,7 +84,7 @@ let closure_16 = noop.memo(function DockGlowGradient(arg0) {
   return closure_7(tmp, size);
 });
 let closure_17 = {
-  code: "(function VoicePanelDockGlowTsx5(){let[settledGate,pressGate,micLive]=this.__closure;return{opacity:settledGate.get()*pressGate.get()*micLive.get()};})",
+  code: "(function VoicePanelDockGlowTsx5(){let[settledGate,pressGate,micLive,dockEntryProgress,sheetExitProgress]=this.__closure;return{opacity:settledGate.get()*pressGate.get()*micLive.get()*dockEntryProgress.get()*(1-sheetExitProgress.get())};})",
 };
 let closure_18 = {
   code: "(function VoicePanelDockGlowTsx6(){let[settledGate,pressGate,micLive]=this.__closure;return settledGate.get()*pressGate.get()*micLive.get();})",
@@ -100,27 +100,29 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePa
 
 export function VoicePanelDockGlow(micLive) {
   micLive = micLive.micLive;
-  const tmp3 = useStateFromSharedValueDefault(noop.useContext(VoicePanelStateContextDefault).dockHeight);
   const context = noop.useContext(VoicePanelStateContextDefault);
-  ({ dockMinimizeProgress, dockPressProgress, dockPressed, isDockConnected, wrapperOffset } = context);
+  ({ dockEntryProgress, dockHeight, sheetExitProgress } = context);
+  const tmp4 = useStateFromSharedValueDefault(dockHeight);
+  const context1 = noop.useContext(VoicePanelStateContextDefault);
+  ({ dockMinimizeProgress, dockPressProgress, dockPressed, isDockConnected, wrapperOffset } = context1);
   const sharedValue = _mod1652.useSharedValue(1);
   items = [closure_12, dockPressed];
   c0 = undefined;
-  [tmp7, tmp8] = items;
+  [tmp8, tmp9] = items;
   class VoicePanelDockGlowTsx1 {
     constructor() {
       return closure_0.get();
     }
   }
-  const items1 = [tmp8];
+  const items1 = [tmp9];
   VoicePanelDockGlowTsx1.__closure = items1;
   VoicePanelDockGlowTsx1.__workletHash = 104815698833;
-  VoicePanelDockGlowTsx1.__initData = tmp7;
+  VoicePanelDockGlowTsx1.__initData = tmp8;
   const items2 = [closure_13, sharedValue, timing_timing.withTiming, closure_9];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
-  [tmp10, tmp11, tmp12, tmp13] = items2;
+  [tmp11, tmp12, tmp13, tmp14] = items2;
   class VoicePanelDockGlowTsx2 {
     constructor(arg0, arg1) {
       if (micLive !== arg1) {
@@ -137,19 +139,19 @@ export function VoicePanelDockGlow(micLive) {
       return;
     }
   }
-  const items3 = [tmp11, tmp12, tmp13];
+  const items3 = [tmp12, tmp13, tmp14];
   VoicePanelDockGlowTsx2.__closure = items3;
   VoicePanelDockGlowTsx2.__workletHash = 16677252752401;
-  VoicePanelDockGlowTsx2.__initData = tmp10;
+  VoicePanelDockGlowTsx2.__initData = tmp11;
   const animatedReaction = _mod1652.useAnimatedReaction(VoicePanelDockGlowTsx1, VoicePanelDockGlowTsx2);
   const sharedValue1 = _mod1652.useSharedValue(0);
-  const tmp5Result = _mod1652;
+  const tmp6Result = _mod1652;
   const items4 = [closure_14, isDockConnected, wrapperOffset, dockMinimizeProgress, dockPressProgress];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
   c3 = undefined;
-  [tmp16, tmp17, tmp18, tmp19, tmp20] = items4;
+  [tmp17, tmp18, tmp19, tmp20, tmp21] = items4;
   class VoicePanelDockGlowTsx3 {
     constructor() {
       value = closure_0.get();
@@ -171,16 +173,16 @@ export function VoicePanelDockGlow(micLive) {
       return value;
     }
   }
-  const items5 = [tmp17, tmp18, tmp19, tmp20];
+  const items5 = [tmp18, tmp19, tmp20, tmp21];
   VoicePanelDockGlowTsx3.__closure = items5;
   VoicePanelDockGlowTsx3.__workletHash = 3258060662491;
-  VoicePanelDockGlowTsx3.__initData = tmp16;
+  VoicePanelDockGlowTsx3.__initData = tmp17;
   const items6 = [closure_15, sharedValue1, timing_timing.withTiming, closure_9, closure_10];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
   c3 = undefined;
-  [tmp21, tmp22, tmp23, tmp24, tmp25] = items6;
+  [tmp22, tmp23, tmp24, tmp25, tmp26] = items6;
   class VoicePanelDockGlowTsx4 {
     constructor(arg0, arg1) {
       if (micLive === arg1) {
@@ -202,39 +204,43 @@ export function VoicePanelDockGlow(micLive) {
       return;
     }
   }
-  const items7 = [tmp22, tmp23, tmp24, tmp25];
+  const items7 = [tmp23, tmp24, tmp25, tmp26];
   VoicePanelDockGlowTsx4.__closure = items7;
   VoicePanelDockGlowTsx4.__workletHash = 9180121447929;
-  VoicePanelDockGlowTsx4.__initData = tmp21;
+  VoicePanelDockGlowTsx4.__initData = tmp22;
   const animatedReaction1 = _mod1652.useAnimatedReaction(VoicePanelDockGlowTsx3, VoicePanelDockGlowTsx4);
-  const tmp5Result5 = _mod1652;
+  const tmp6Result5 = _mod1652;
   const voicePanelDockGlowLevelProps = useVoicePanelDockLevelProps.useVoicePanelDockGlowLevelProps();
-  const tmp5Result6 = useVoicePanelDockLevelProps;
-  const items8 = [closure_17, sharedValue1, sharedValue, micLive];
+  const tmp6Result6 = useVoicePanelDockLevelProps;
+  const items8 = [closure_17, sharedValue1, sharedValue, micLive, dockEntryProgress, sheetExitProgress];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
-  [tmp28, tmp29, tmp30, tmp31] = items8;
+  c3 = undefined;
+  c4 = undefined;
+  [tmp29, tmp30, tmp31, tmp32, tmp33, tmp34] = items8;
   class VoicePanelDockGlowTsx5 {
     constructor() {
       obj = { opacity: null };
       value = closure_0.get();
       result = value * closure_1.get();
-      obj.opacity = result * closure_2.get();
+      result1 = result * closure_2.get();
+      result2 = result1 * closure_3.get();
+      obj.opacity = result2 * (1 - closure_4.get());
       return obj;
     }
   }
-  const items9 = [tmp29, tmp30, tmp31];
+  const items9 = [tmp30, tmp31, tmp32, tmp33, tmp34];
   VoicePanelDockGlowTsx5.__closure = items9;
-  VoicePanelDockGlowTsx5.__workletHash = 6231699429968;
-  VoicePanelDockGlowTsx5.__initData = tmp28;
+  VoicePanelDockGlowTsx5.__workletHash = 11149034218573;
+  VoicePanelDockGlowTsx5.__initData = tmp29;
   const animatedStyle = _mod1652.useAnimatedStyle(VoicePanelDockGlowTsx5);
-  const tmp5Result7 = _mod1652;
+  const tmp6Result7 = _mod1652;
   const items10 = [closure_18, sharedValue1, sharedValue, micLive];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
-  [tmp33, tmp34, tmp35, tmp36] = items10;
+  [tmp36, tmp37, tmp38, tmp39] = items10;
   class VoicePanelDockGlowTsx6 {
     constructor() {
       value = closure_0.get();
@@ -242,29 +248,29 @@ export function VoicePanelDockGlow(micLive) {
       return result * closure_2.get();
     }
   }
-  const items11 = [tmp34, tmp35, tmp36];
+  const items11 = [tmp37, tmp38, tmp39];
   VoicePanelDockGlowTsx6.__closure = items11;
   VoicePanelDockGlowTsx6.__workletHash = 17088839538486;
-  VoicePanelDockGlowTsx6.__initData = tmp33;
+  VoicePanelDockGlowTsx6.__initData = tmp36;
   const items12 = [closure_19, VoicePanelDockRimLight.voicePanelDockRimOpacity];
   c0 = undefined;
-  [tmp37, tmp38] = items12;
+  [tmp40, tmp41] = items12;
   class VoicePanelDockGlowTsx7 {
     constructor(arg0) {
       result = closure_0.set(micLive);
       return;
     }
   }
-  const items13 = [tmp38];
+  const items13 = [tmp41];
   VoicePanelDockGlowTsx7.__closure = items13;
   VoicePanelDockGlowTsx7.__workletHash = 12895478017097;
-  VoicePanelDockGlowTsx7.__initData = tmp37;
+  VoicePanelDockGlowTsx7.__initData = tmp40;
   const animatedReaction2 = _mod1652.useAnimatedReaction(VoicePanelDockGlowTsx6, VoicePanelDockGlowTsx7);
-  let tmp40 = null;
-  if (tmp3 > 0) {
+  let tmp43 = null;
+  if (tmp4 > 0) {
     const obj3 = { style: null, pointerEvents: "none", children: null };
     const items14 = [closure_11.layer, ,];
-    const obj4 = { height: tmp3 };
+    const obj4 = { height: tmp4 };
     items14[1] = obj4;
     items14[2] = animatedStyle;
     obj3.style = items14;
@@ -272,13 +278,13 @@ export function VoicePanelDockGlow(micLive) {
     const merged = Object.assign(voicePanelDockGlowLevelProps);
     obj5.minOpacity = VoicePanelDockRimLight.DOCK_GLOW_REST_OPACITY;
     obj5.maxOpacity = 1;
-    const obj6 = { width: useWindowDimensionsDefault().width, dockHeight: tmp3 };
+    const obj6 = { width: useWindowDimensionsDefault().width, dockHeight: tmp4 };
     obj5.children = timestampProducer(closure_16, obj6);
     obj3.children = timestampProducer(LiveVoiceLevelViewDefault, obj5);
-    tmp40 = timestampProducer(_modDef1652.View, obj3);
+    tmp43 = timestampProducer(_modDef1652.View, obj3);
     const tmpResult = LiveVoiceLevelViewDefault;
   }
-  return tmp40;
+  return tmp43;
 }
 export function VoicePanelDockBottomLine(micLive) {
   _require = undefined;

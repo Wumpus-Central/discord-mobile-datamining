@@ -4,7 +4,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import common_AlertDefault from "../../../../../components_native/common/Alert.tsx";
-import _modDef15948 from "../../../../../../_runtime/metro/15948__.js";
+import _modDef15943 from "../../../../../../_runtime/metro/15943__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -36,7 +36,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
   obj.onCancel = onClose.onClose;
   const obj2 = { source: null, style: null };
   const tmp2 = common_AlertDefault;
-  obj2.source = _modDef15948;
+  obj2.source = _modDef15943;
   obj2.style = tmp.headerImage;
   items = [React4(FastImageDefault, obj2), ,];
   const obj3 = {

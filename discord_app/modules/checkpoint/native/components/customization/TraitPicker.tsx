@@ -121,18 +121,18 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5243);
 let obj2 = {
-  container: { gap: fn(14421).TRAIT_OPTION_SPACING },
+  container: { gap: fn(14417).TRAIT_OPTION_SPACING },
   earnedRow: null,
   landscapeGap: null,
   details: null,
   landscapeScrollContent: null,
 };
-let obj3 = { gap: fn(14421).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(14421).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(14421).CONTENT_INSET };
+let obj3 = { gap: fn(14417).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(14417).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(14417).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(14421).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(14417).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

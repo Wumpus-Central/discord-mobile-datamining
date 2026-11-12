@@ -305,9 +305,9 @@ let closure_22 = async function _loadMissingApplication(arg0) {
       }
       c1 = 3;
       return { value: "HermesInternal", done: null };
-    } catch (tmp10) {
+    } catch (tmp7) {
       c1 = tmp;
-      throw tmp10;
+      throw tmp7;
     }
   }
 };

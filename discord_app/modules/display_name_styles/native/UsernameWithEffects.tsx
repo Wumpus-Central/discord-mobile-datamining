@@ -121,7 +121,7 @@ export default noop.memo(function UsernameWithEffects(userName) {
   let STATIC = userName.effectDisplayType;
   ({ userId, guildId } = userName);
   if (STATIC === undefined) {
-    STATIC = userName(9999).EffectDisplayType.STATIC;
+    STATIC = userName(9998).EffectDisplayType.STATIC;
   }
   ({ defaultColor, containerStyle, ignoreDisabledStylesSetting, pendingDisplayNameStyles } = userName);
   if (ignoreDisabledStylesSetting === undefined) {
@@ -144,13 +144,13 @@ export default noop.memo(function UsernameWithEffects(userName) {
   const tmp6 = num2(6687)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
   const displayNameStylesEnabled = userName(6688).useDisplayNameStylesEnabled({ location: "UsernameWithEffects" });
   const obj = userName(6688);
-  const displayNameStylesFont = userName(10000).useDisplayNameStylesFont({
+  const displayNameStylesFont = userName(9999).useDisplayNameStylesFont({
     displayNameStyles: tmp6,
     ignoreDisabledStylesSetting,
   });
   let tmp10;
   if (null != displayNameStylesFont) {
-    const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
+    const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "a" };
     tmp10 = obj3;
   }
   let num = merged.lineClamp;
@@ -166,12 +166,12 @@ export default noop.memo(function UsernameWithEffects(userName) {
     }
     tmp11 = tmp12;
   }
-  const obj2 = userName(10000);
+  const obj2 = userName(9999);
   const token = userName(5839).useToken(tmp4(575).colors.BACKGROUND_BASE_LOW);
   const tmp7Result = userName(5839);
   const token1 = userName(5839).useToken(tmp4(575).colors.WHITE);
   const tmp7Result6 = userName(5839);
-  const displayNameStylesAccessibleColors = userName(10001).useDisplayNameStylesAccessibleColors({
+  const displayNameStylesAccessibleColors = userName(10000).useDisplayNameStylesAccessibleColors({
     displayNameStyles: tmp6,
     backgroundColor: token,
   });
@@ -246,14 +246,14 @@ export default noop.memo(function UsernameWithEffects(userName) {
   const tmp26Result = closure_12(str, num2);
   if (displayNameStylesEnabled) {
     if (null != tmp6) {
-      if (STATIC !== tmp7(9999).EffectDisplayType.PLAIN) {
+      if (STATIC !== tmp7(9998).EffectDisplayType.PLAIN) {
         if (null != colorVariants) {
           const items1 = [merged.style, tmp11];
           if (tmp7Result9.doesEffectImpactLayout(effectId)) {
             const layoutImpact = tmp26Result.layoutImpact;
           }
           if (effectId === tmp7(1396).DisplayNameEffect.GUMMY) {
-            const tmp4Result = tmp4(10004);
+            const tmp4Result = tmp4(10003);
             let str3 = tmp7(5419).getNodeText(userName);
             if (str3 == null) {
               str3 = "";

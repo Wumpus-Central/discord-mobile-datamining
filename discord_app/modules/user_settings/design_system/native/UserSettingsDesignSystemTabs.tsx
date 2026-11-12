@@ -88,18 +88,18 @@ export default function UserSettingsDesignSystemTabs() {
   let obj2 = first(5839);
   items1[1] = first(5240).hexWithOpacity(token, 0);
   const obj4 = { style: tmp13.container, ref, onLayout, children: null };
-  const items2 = [closure_8(first(13159).Tabs, { state: segmentedControlState, grow: first1 })];
+  const items2 = [closure_8(first(13153).Tabs, { state: segmentedControlState, grow: first1 })];
   let tmp19Result = first2;
   if (first2) {
     const obj5 = { state: segmentedControlState, colors: items1 };
-    tmp19Result = closure_8(tmp(15014), obj5);
+    tmp19Result = closure_8(tmp(15010), obj5);
   }
   const obj6 = { children: null };
   const obj7 = { spacing: 24, children: null };
   items2[1] = tmp19Result;
   const items3 = [
     closure_7(closure_5, { children: items2 }),
-    closure_8(first(14834).SegmentedControlPages, { state: segmentedControlState }),
+    closure_8(first(14830).SegmentedControlPages, { state: segmentedControlState }),
     ,
   ];
   const obj8 = { spacing: 8, direction: "horizontal", children: null };

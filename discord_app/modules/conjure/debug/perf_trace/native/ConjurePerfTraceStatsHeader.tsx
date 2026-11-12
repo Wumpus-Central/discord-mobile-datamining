@@ -77,7 +77,7 @@ const result = size.fileFinishedImporting("modules/conjure/debug/perf_trace/nati
 
 export default function ConjurePerfTraceStatsHeader(stats) {
   stats = stats.stats;
-  const perfModelSummaryResult = stats(13904).perfModelSummary(stats);
+  const perfModelSummaryResult = stats(13900).perfModelSummary(stats);
   const tmp4 = closure_6();
   dependencyMap = styles();
   let obj2 = { style: tmp4.header, children: null };

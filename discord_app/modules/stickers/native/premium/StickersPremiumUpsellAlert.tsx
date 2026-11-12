@@ -6,9 +6,9 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
-import _modDef11319 from "../../../../../_runtime/metro/11319__.js";
-import _modDef11320 from "../../../../../_runtime/metro/11320__.js";
-import _modDef11321 from "../../../../../_runtime/metro/11321__.js";
+import _modDef11313 from "../../../../../_runtime/metro/11313__.js";
+import _modDef11314 from "../../../../../_runtime/metro/11314__.js";
+import _modDef11315 from "../../../../../_runtime/metro/11315__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
@@ -49,7 +49,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [
   {
-    icon: _modDef11319,
+    icon: _modDef11313,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -59,7 +59,7 @@ let items = [
   ,
 ];
 let obj = {
-  icon: _modDef11319,
+  icon: _modDef11313,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -67,21 +67,21 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE,
 };
 items[1] = {
-  icon: _modDef11320,
+  icon: _modDef11314,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 let obj2 = {
-  icon: _modDef11320,
+  icon: _modDef11314,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   },
 };
 items[2] = {
-  icon: _modDef11321,
+  icon: _modDef11315,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -103,7 +103,7 @@ let obj5 = {
   imageHeader: null,
 };
 let obj3 = {
-  icon: _modDef11321,
+  icon: _modDef11315,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -153,7 +153,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
       const obj = analyticsLocations(dependencyMap[14]);
     }
   }, []);
-  const tmp5 = analyticsLocations(10893)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
+  const tmp5 = analyticsLocations(10887)(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp5 != null) {
     priceString = tmp5.priceString;
@@ -208,7 +208,7 @@ export default function StickersPremiumUpsellAlert(arg0) {
   };
   const obj6 = { source: null, style: null };
   const obj4 = { source: analyticsLocations(7366) };
-  obj6.source = analyticsLocations(11322);
+  obj6.source = analyticsLocations(11316);
   obj6.style = tmp.imageHeader;
   const items2 = [closure_13(analyticsLocations(5957), obj6), ,];
   const obj7 = { style: tmp.description, variant: "body-md/medium", children: null };

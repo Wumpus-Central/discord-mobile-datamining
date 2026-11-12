@@ -23,7 +23,7 @@ function PooledFrame(frame) {
   );
   dependencyMap = tmp3;
   if (tmp2.proxyTicket !== proxyTicket) {
-    const obj2 = { iframeId: proxyTicket(12763)(), proxyTicket };
+    const obj2 = { iframeId: proxyTicket(12757)(), proxyTicket };
     tmp3(obj2);
   }
   iframeId = tmp2.iframeId;
@@ -50,7 +50,7 @@ function PooledFrame(frame) {
       return obj;
     });
   }, []);
-  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(13258).subscribe, () =>
+  let syncExternalStore = noop.useSyncExternalStore(proxyTicket(13252).subscribe, () =>
     FramePoolManagerDefault.getWinningTargetState(id),
   );
   const obj3 = { frame, iframeId, onActivityCrash: callback, presentation: null };
@@ -63,7 +63,7 @@ function PooledFrame(frame) {
     syncExternalStore = obj4;
   }
   obj3.presentation = syncExternalStore;
-  return jsx(proxyTicket(19688), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+  return jsx(proxyTicket(19683), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
 }
 const View = fn(17).View;
 const FramesConstants = fn(6957);

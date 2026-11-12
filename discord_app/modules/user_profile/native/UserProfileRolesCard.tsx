@@ -79,7 +79,7 @@ class RoleItem {
         tmp8Result = tmp8(RoleIconDefault, obj4);
       }
       children[2] = tmp8Result;
-      return closure_2_11(closure_2_10, { children });
+      return closure_2_11(refs, { children });
     };
     closure_5 = undefined !== guild_connections;
     DeveloperMode = tmp4(tmp5[9]).DeveloperMode;

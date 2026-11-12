@@ -49,8 +49,8 @@ function SystemNotificationsSubLabel() {
   return React5(React6, { children });
 }
 const View = fn(17).View;
-let closure_5 = fn(17990).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(9136).MobileUserSettings;
+let closure_5 = fn(17985).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(9135).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5243);

@@ -8,7 +8,7 @@ import GuildIconDefault from "../../modules/guild/native/GuildIcon.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../actions/UserSettingsModalActionCreators.tsx";
 import TouchableHitBoxDefault from "../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useGuildPowerupsBoostCountDefault from "../../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
-import _modDef11320 from "../../../_runtime/metro/11320__.js";
+import _modDef11314 from "../../../_runtime/metro/11314__.js";
 import BoostedGuildTierProgressCircleDefault from "../../modules/premium/native/BoostedGuildTierProgressCircle.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildStore from "../../stores/GuildStore.tsx";
@@ -48,7 +48,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj6 = { style: tmp.subscriptionInfo, children: null };
     const obj7 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
     const tmp2Result3 = GuildIconDefault;
-    obj7.source = _modDef11320;
+    obj7.source = _modDef11314;
     obj7.style = tmp.premiumGuildImage;
     const items3 = [closure_7(FastImageDefault, obj7)];
     const obj8 = { variant: "body-xs/medium", children: null };

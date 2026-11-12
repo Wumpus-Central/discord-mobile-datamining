@@ -53,7 +53,7 @@ function AddAvatarScreen() {
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(8813).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(8812).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (noop === 1) {
@@ -69,15 +69,15 @@ function AddAvatarScreen() {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(16951);
-              obj11.description = tmp2(9335).generateAvatarDescription();
+              const obj = tmp2(16946);
+              obj11.description = tmp2(9334).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(9335);
+              const obj3 = tmp2(9334);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(9332).setPendingChanges(obj12);
-            const obj4 = tmp2(9332);
+            tmp2(9331).setPendingChanges(obj12);
+            const obj4 = tmp2(9331);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
@@ -146,7 +146,7 @@ function AddAvatarScreen() {
   obj5.children = items2;
   const items3 = [closure_10(View, obj5), ,];
   const memoizedImageSourceResult = VideoBackground.memoizedImageSource(imageUri);
-  items3[1] = closure_9(selectedAvatar(20177), {
+  items3[1] = closure_9(selectedAvatar(20172), {
     avatarSource: VideoBackground.memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
@@ -172,7 +172,7 @@ function AddAvatarScreen() {
   obj4.children = items3;
   const items4 = [
     closure_10(View, obj4),
-    closure_9(selectedAvatar(20168), { onAvatarSelect: tmp4[1], selectedAvatar }),
+    closure_9(selectedAvatar(20163), { onAvatarSelect: tmp4[1], selectedAvatar }),
   ];
   let obj11 = { style: tmp.buttonContainer, children: null };
   let obj12 = { text: null, grow: true, onPress: null, disabled: null };

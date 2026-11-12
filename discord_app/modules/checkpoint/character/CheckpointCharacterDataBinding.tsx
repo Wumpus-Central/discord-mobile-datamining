@@ -75,7 +75,7 @@ export function getCheckpointCharacterDataBinding(textureScale) {
   obj = textureScale(6358);
   const characterFromTraits = obj.getCharacterFromTraits(traits);
   ({ base, shoes, outfit, face, hat, wearable, aura } = characterFromTraits);
-  const tmp4 = textureScale(14366).CHECKPOINT_OUTFIT_OPTION_TO_RIVE_OUTFIT[outfit];
+  const tmp4 = textureScale(14362).CHECKPOINT_OUTFIT_OPTION_TO_RIVE_OUTFIT[outfit];
   dependencyMap = tmp4;
   obj2 = {};
   const item = obj2.forEach((item) => {
@@ -114,8 +114,8 @@ export function getCheckpointCharacterDataBinding(textureScale) {
     obj3.chapterID = tmp6;
     obj3.faceID = face;
     obj3.shoesID = shoes;
-    obj3.headwearID = tmp(14366).CHECKPOINT_HAT_OPTION_TO_HEADWEAR_RIVE_ID[hat];
-    obj3.wearableID = tmp(14366).CHECKPOINT_WEARABLE_OPTION_TO_WEARABLE_RIVE_ID[wearable];
+    obj3.headwearID = tmp(14362).CHECKPOINT_HAT_OPTION_TO_HEADWEAR_RIVE_ID[hat];
+    obj3.wearableID = tmp(14362).CHECKPOINT_WEARABLE_OPTION_TO_WEARABLE_RIVE_ID[wearable];
     let num;
     if (tmp4 != null) {
       num = tmp4.riveId;
@@ -124,13 +124,13 @@ export function getCheckpointCharacterDataBinding(textureScale) {
       num = 0;
     }
     obj3.outfitID = num;
-    obj3.auraImage = tmp(14199).getCheckpointCharacterTextureUrl(
-      tmp(14366).CHECKPOINT_AURA_OPTION_TO_AURA_RIVE_TEXTURE[aura].name,
+    obj3.auraImage = tmp(14195).getCheckpointCharacterTextureUrl(
+      tmp(14362).CHECKPOINT_AURA_OPTION_TO_AURA_RIVE_TEXTURE[aura].name,
       textureScale,
     );
-    const tmpResult = tmp(14199);
-    obj3.baseColorImage = tmp(14199).getCheckpointCharacterTextureUrl(
-      tmp(14366).CHECKPOINT_BASE_OPTION_TO_BASE_RIVE_TEXTURE[base].name,
+    const tmpResult = tmp(14195);
+    obj3.baseColorImage = tmp(14195).getCheckpointCharacterTextureUrl(
+      tmp(14362).CHECKPOINT_BASE_OPTION_TO_BASE_RIVE_TEXTURE[base].name,
       textureScale,
     );
     if ("MobilePortrait" === layout) {
@@ -142,7 +142,7 @@ export function getCheckpointCharacterDataBinding(textureScale) {
       return obj3;
     }
     tmp10 = obj[layout];
-    const tmpResult2 = tmp(14199);
+    const tmpResult2 = tmp(14195);
   }
   tmp6 = dependencyMap2[stage];
 }

@@ -290,7 +290,7 @@ export function useThrottledStageAudience(id) {
   }, items2);
   const obj = stageParticipantsCount(504);
   stageParticipantsCount = undefined;
-  const obj2 = stageParticipantsCount(12864);
+  const obj2 = stageParticipantsCount(12858);
   stageParticipantsCount = stageParticipantsCount(6886).useStageParticipantsCount(
     id,
     stageParticipantsCount(6880).StageChannelParticipantNamedIndex.AUDIENCE,

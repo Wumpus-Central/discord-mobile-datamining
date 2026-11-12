@@ -12,7 +12,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const PX_4 = nativeDefault.space.PX_4;
 let obj = { sm: { height: 32, gap: nativeDefault.space.PX_4, textVariant: "body-md/semibold" }, lg: null };
 let obj2 = { height: 32, gap: nativeDefault.space.PX_4, textVariant: "body-md/semibold" };
-obj.lg = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8, textVariant: "body-lg/medium" };
+obj.lg = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8 };
 let obj4 = {
   container: { paddingRight: PX_4, paddingBottom: PX_4 },
   shadow: { position: "absolute", top: PX_4, left: PX_4, right: 0, bottom: 0 },
@@ -21,7 +21,7 @@ let obj4 = {
   lg: null,
   pressed: null,
 };
-let obj3 = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8, textVariant: "body-lg/medium" };
+let obj3 = { height: CHECKPOINT_CONTROL_SIZE, gap: nativeDefault.space.PX_8 };
 obj4.pressable = {
   flexDirection: "row",
   alignItems: "center",

@@ -6,9 +6,10 @@ import shared from "../../design/shared.tsx";
 import useThemeDefault from "../../hooks/useTheme.tsx";
 import FastImageDefault from "../common/FastImage.tsx";
 import common_AlertDefault from "../common/Alert.tsx";
-import _modDef9253 from "../../../_runtime/metro/09253__.js";
+import _modDef9252 from "../../../_runtime/metro/09252__.js";
+import _modDef9540 from "../../../_runtime/metro/09540__.js";
 import _modDef9541 from "../../../_runtime/metro/09541__.js";
-import _modDef9542 from "../../../_runtime/metro/09542__.js";
+import _modDef9622 from "../../../_runtime/metro/09622__.js";
 import _modDef9623 from "../../../_runtime/metro/09623__.js";
 import _modDef9624 from "../../../_runtime/metro/09624__.js";
 import _modDef9625 from "../../../_runtime/metro/09625__.js";
@@ -29,7 +30,6 @@ import _modDef9639 from "../../../_runtime/metro/09639__.js";
 import _modDef9640 from "../../../_runtime/metro/09640__.js";
 import _modDef9641 from "../../../_runtime/metro/09641__.js";
 import _modDef9642 from "../../../_runtime/metro/09642__.js";
-import _modDef9643 from "../../../_runtime/metro/09643__.js";
 import ShineAnimationDefault from "ShineAnimation.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -153,37 +153,37 @@ export default function PremiumActivatedAlert(onClose) {
   const obj7 = { style: tmp.header, children: null };
   const tmp4Result = common_AlertDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result15 = _modDef9623;
+    let tmp4Result15 = _modDef9622;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result15 = _modDef9624;
+    tmp4Result15 = _modDef9623;
   } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-    tmp4Result15 = _modDef9625;
+    tmp4Result15 = _modDef9624;
   } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
-    tmp4Result15 = _modDef9626;
+    tmp4Result15 = _modDef9625;
   } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-    tmp4Result15 = _modDef9627;
+    tmp4Result15 = _modDef9626;
   }
   items = [hasOwnProperty(FastImageDefault, { source: tmp4Result15, style: tmp.headerBackground }), , ,];
   const obj8 = { source: tmp4Result15, style: tmp.headerBackground };
   const tmp4Result14 = FastImageDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result17 = _modDef9631;
+    let tmp4Result17 = _modDef9630;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result17 = _modDef9632;
+    tmp4Result17 = _modDef9631;
   } else {
     if (PremiumUtils.Branding.BUNDLE !== premiumBranding) {
       if (PremiumUtils.Branding.TIER_2 !== premiumBranding) {
         if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-          tmp4Result17 = _modDef9633;
+          tmp4Result17 = _modDef9632;
         }
       }
     }
-    tmp4Result17 = _modDef9253;
+    tmp4Result17 = _modDef9252;
   }
   items[1] = hasOwnProperty(FastImageDefault, { source: tmp4Result17, style: tmp9.logo });
   let tmp15Result = null;
   if (premiumBranding === PremiumUtils.Branding.BUNDLE) {
-    const obj10 = { source: _modDef9643, style: tmp.logoPlusPremiumGuild };
+    const obj10 = { source: _modDef9642, style: tmp.logoPlusPremiumGuild };
     tmp15Result = hasOwnProperty(FastImageDefault, obj10);
     const tmp4Result18 = FastImageDefault;
   }
@@ -191,15 +191,15 @@ export default function PremiumActivatedAlert(onClose) {
   const obj9 = { source: tmp4Result17, style: tmp9.logo };
   const tmp4Result16 = FastImageDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result20 = _modDef9541;
+    let tmp4Result20 = _modDef9540;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result20 = _modDef9542;
+    tmp4Result20 = _modDef9541;
   } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-    tmp4Result20 = _modDef9628;
+    tmp4Result20 = _modDef9627;
   } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
-    tmp4Result20 = _modDef9629;
+    tmp4Result20 = _modDef9628;
   } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-    tmp4Result20 = _modDef9630;
+    tmp4Result20 = _modDef9629;
   }
   const obj11 = { source: tmp4Result20, style: null };
   const items1 = [tmp10.headerImage, tmp.headerImage];
@@ -211,38 +211,38 @@ export default function PremiumActivatedAlert(onClose) {
   const tmp4Result19 = FastImageDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     if (tmp7Result.isThemeDark(tmp6)) {
-      let tmp4Result22 = _modDef9634;
+      let tmp4Result22 = _modDef9633;
     } else {
-      tmp4Result22 = _modDef9635;
+      tmp4Result22 = _modDef9634;
     }
     tmp7Result = shared;
   } else {
     if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
       if (tmp7Result5.isThemeDark(tmp6)) {
-        let tmp4Result23 = _modDef9636;
+        let tmp4Result23 = _modDef9635;
       } else {
-        tmp4Result23 = _modDef9637;
+        tmp4Result23 = _modDef9636;
       }
       let tmp4Result26 = tmp4Result23;
       tmp7Result5 = shared;
     } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
       if (tmp7Result6.isThemeDark(tmp6)) {
-        let tmp4Result24 = _modDef9638;
+        let tmp4Result24 = _modDef9637;
       } else {
-        tmp4Result24 = _modDef9639;
+        tmp4Result24 = _modDef9638;
       }
       tmp4Result26 = tmp4Result24;
       tmp7Result6 = shared;
     } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
       if (tmp7Result7.isThemeDark(tmp6)) {
-        let tmp4Result25 = _modDef9640;
+        let tmp4Result25 = _modDef9639;
       } else {
-        tmp4Result25 = _modDef9641;
+        tmp4Result25 = _modDef9640;
       }
       tmp4Result26 = tmp4Result25;
       tmp7Result7 = shared;
     } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-      tmp4Result26 = _modDef9642;
+      tmp4Result26 = _modDef9641;
     }
     const obj13 = { source: tmp4Result26, style: tmp11.animation };
     const items3 = [hasOwnProperty(tmp4Result21, obj13)];

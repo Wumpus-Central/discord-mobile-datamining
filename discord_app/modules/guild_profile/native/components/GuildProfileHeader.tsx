@@ -13,7 +13,7 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const getBadgeTooltip = fn(10595).getBadgeTooltip;
+const getBadgeTooltip = fn(10593).getBadgeTooltip;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5243);

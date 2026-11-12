@@ -120,5 +120,5 @@ export default function AppIconRows(onSelect) {
     }),
   });
   obj6.children = items1;
-  return closure_1_10(React6, obj6);
+  return refs(React6, obj6);
 }

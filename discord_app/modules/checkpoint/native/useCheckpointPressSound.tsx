@@ -5,29 +5,28 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointPressSound.tsx");
 
-export default function useCheckpointPressSound(arg0, arg1) {
-  closure_0 = arg1;
-  let flag = arg2;
-  if (arg2 === undefined) {
-    flag = false;
+export default function useCheckpointPressSound(source) {
+  ({ onPress: importDefault, disabled } = source);
+  if (disabled === undefined) {
+    disabled = false;
   }
-  closure_2 = useCheckpointSoundDefault(arg0);
+  closure_2 = useCheckpointSoundDefault(source.source);
   noop.useRef(false);
   return {
     onPressIn() {
       closure_3.current = true;
-      if (!flag) {
+      if (!disabled) {
         closure_2();
       }
     },
-    onPress() {
+    onPressWithSound() {
       if (!ref.current) {
-        if (!flag) {
+        if (!disabled) {
           closure_2();
         }
       }
       ref.current = false;
-      closure_0();
+      importDefault();
     },
   };
 }

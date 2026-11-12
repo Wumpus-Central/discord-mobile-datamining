@@ -292,7 +292,7 @@ function isValidChannelAutocomplete(token, items) {
         flag = flag2;
       }
     }
-    obj2 = replaced(14642);
+    obj2 = replaced(14638);
   }
   return flag;
 }
@@ -581,7 +581,7 @@ function getChannelAutocompletions(arg0) {
       };
       const obj12 = AutocompleteUtilsDefault;
       const tmp7 = importDefault;
-      obj.boosters = tmp(6899).getBoosterMap(tmp(10180).AutocompleterResultTypes.TEXT_CHANNEL);
+      obj.boosters = tmp(6899).getBoosterMap(tmp(10178).AutocompleterResultTypes.TEXT_CHANNEL);
       const tmpResult = tmp(6899);
       const queryChannelsResult = obj12.queryChannels(obj);
       obj2 = {
@@ -594,7 +594,7 @@ function getChannelAutocompletions(arg0) {
         boosters: null,
       };
       const obj16 = AutocompleteUtilsDefault;
-      obj2.boosters = tmp(6899).getBoosterMap(tmp(10180).AutocompleterResultTypes.VOICE_CHANNEL);
+      obj2.boosters = tmp(6899).getBoosterMap(tmp(10178).AutocompleterResultTypes.VOICE_CHANNEL);
       const combined = queryChannelsResult.concat(obj16.queryChannels(obj2));
       const mapped = combined.map((record) => record.record);
       if (0 === substr1.length) {
@@ -639,16 +639,16 @@ function getChannelAutocompletions(arg0) {
         if (!StreamerModeStore.hidePersonalInformation) {
           const obj5 = { query: substr1, limit: maxResults, fuzzy: true, boosters: null };
           const obj4 = AutocompleteUtilsDefault;
-          obj5.boosters = tmp(6899).getBoosterMap(tmp(10180).AutocompleterResultTypes.GROUP_DM);
+          obj5.boosters = tmp(6899).getBoosterMap(tmp(10178).AutocompleterResultTypes.GROUP_DM);
           const tmpResult5 = tmp(6899);
           const queryGroupDMsResult = obj4.queryGroupDMs(obj5);
           const obj6 = { query: substr1, limit: maxResults, boosters: null };
           const obj8 = AutocompleteUtilsDefault;
-          obj6.boosters = tmp(6899).getBoosterMap(tmp(10180).AutocompleterResultTypes.USER);
+          obj6.boosters = tmp(6899).getBoosterMap(tmp(10178).AutocompleterResultTypes.USER);
           const tmpResult6 = tmp(6899);
           const queryDMChannelsResult = obj8.queryDMChannels(obj6);
           const sorted = applyDefault(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(
-            tmp(10180).sortByMatchScore,
+            tmp(10178).sortByMatchScore,
           );
           const mapped1 = sorted.map((record) => {
             record = record.record;

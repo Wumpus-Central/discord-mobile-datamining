@@ -81,7 +81,7 @@ export default function BadgeDirectoryScreen(targetUserId) {
         });
       } else {
         const obj5 = { screens: memo, initialRouteName, viewStyle: tmp.view };
-        tmp9Result = jsx(tmp2(12434).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
+        tmp9Result = jsx(tmp2(12428).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
       }
       return tmp9Result;
     }

@@ -90,7 +90,7 @@ let closure_12 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function DevToolsContentSubLabel(arg0) {
   ({ label, value } = arg0);
   const obj = { variant: "body-xs/medium", color: "text-subtle", children: null };
-  items = [label, closure_1_10(Text_Text.Text, { variant: "body-xs/semibold", children: value })];
+  items = [label, refs(Text_Text.Text, { variant: "body-xs/semibold", children: value })];
   obj.children = items;
   return closure_1_11(Text_Text.Text, obj);
 });
@@ -139,14 +139,14 @@ export default noop.memo(function DevToolsContent(arg0) {
       let tmp7;
       if (null != closure_0) {
         const obj2 = { label: "Build override: ", value: tmp5 };
-        tmp7 = closure_2_10(memoResult, obj2, tmp);
+        tmp7 = refs(memoResult, obj2, tmp);
       }
       return tmp7;
     } else if ("experiments" === tmp) {
       let tmp2;
       if (closure_1 > 0) {
         const obj = { label: "Experiments overridden: ", value: closure_1.toString() };
-        tmp2 = closure_2_10(memoResult, obj, tmp);
+        tmp2 = refs(memoResult, obj, tmp);
       }
       return tmp2;
     }

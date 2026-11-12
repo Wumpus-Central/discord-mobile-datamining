@@ -28,16 +28,16 @@ function GameProfileWebsiteLink(action) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(10145).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(10144).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(9411).PlatformType.DESKTOP] = fn(10400).ScreenIcon;
+obj[fn(9410).PlatformType.DESKTOP] = fn(10398).ScreenIcon;
 obj.mobile = fn(7720).MobilePhoneIcon;
-obj[fn(9411).PlatformType.XBOX] = fn(10241).XboxNeutralIcon;
-obj[fn(9411).PlatformType.PLAYSTATION] = fn(10402).PlaystationNeutralIcon;
-obj[fn(9411).PlatformType.NINTENDO] = fn(10404).NintendoSwitchNeutralIcon;
-obj[fn(9411).PlatformType.ROBLOX] = fn(10231).RobloxNeutralIcon;
+obj[fn(9410).PlatformType.XBOX] = fn(10239).XboxNeutralIcon;
+obj[fn(9410).PlatformType.PLAYSTATION] = fn(10400).PlaystationNeutralIcon;
+obj[fn(9410).PlatformType.NINTENDO] = fn(10402).NintendoSwitchNeutralIcon;
+obj[fn(9410).PlatformType.ROBLOX] = fn(10229).RobloxNeutralIcon;
 const createStyles = fn(5243);
 let obj3 = {
   container: { gap: nativeDefault.space.PX_8 },
@@ -161,7 +161,7 @@ export default function GameProfileDetails(game) {
             }
             if (length.length <= 0) {
               const mapped3 = gameProfileLinks.map((item) =>
-                trackAction(10408)(item, trackAction(575).colors.ICON_SUBTLE),
+                trackAction(10406)(item, trackAction(575).colors.ICON_SUBTLE),
               );
               const found = mapped3.filter((item) => null != item);
               if (found.length > 0) {
@@ -207,7 +207,7 @@ export default function GameProfileDetails(game) {
                   obj = {
                     size: "md",
                     color: trackAction(575).colors.ICON_SUBTLE,
-                    accessibilityLabel: game(10407).getGameProfilePlatformText(item),
+                    accessibilityLabel: game(10405).getGameProfilePlatformText(item),
                   };
                   return closure_1_8(closure_1_10[item], obj, item);
                 }),

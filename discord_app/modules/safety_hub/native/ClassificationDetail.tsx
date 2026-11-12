@@ -214,7 +214,7 @@ function ClassificationPolicyCard(classificationDescription) {
   };
   const obj3 = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj3.children = closure_13(policyExplainerLink(11163).ShieldIcon, {
+  obj3.children = closure_13(policyExplainerLink(11157).ShieldIcon, {
     size: "sm",
     color: nativeDefault.colors.TEXT_LINK,
   });
@@ -535,7 +535,7 @@ export default function ConnectedClassificationDetail(classificationId) {
       ({ classificationState, source } = current);
       ({ accountStanding, classificationId, hasFlaggedContent } = current);
       obj3 = {
-        action: closure_2_10.ViewViolationDetail,
+        action: refs.ViewViolationDetail,
         account_standing: accountStanding.state,
         classification_ids: null,
         source: null,
@@ -581,7 +581,7 @@ export default function ConnectedClassificationDetail(classificationId) {
     } else {
       function onPressLetUsKnow() {
         obj3 = {
-          action: closure_2_10.ClickLetUsKnow,
+          action: refs.ClickLetUsKnow,
           account_standing: safetyHubAccountStanding.state,
           classification_ids: null,
           source: null,

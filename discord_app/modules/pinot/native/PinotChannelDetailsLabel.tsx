@@ -78,5 +78,5 @@ export function PinotChannelDetailsLabel(channel) {
   } else {
     return null;
   }
-  obj = stringResult1(12240);
+  obj = stringResult1(12234);
 }

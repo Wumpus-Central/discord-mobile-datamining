@@ -284,7 +284,7 @@ function ApplicationCommandOptionDescription(option) {
   }
   items2[1] = tmp15Result;
   obj2.children = items2;
-  obj.children = closure_1_10(hasOwnProperty, obj2);
+  obj.children = refs(hasOwnProperty, obj2);
   return React5(Pressables.PressableOpacity, obj);
 }
 size = fn(2);

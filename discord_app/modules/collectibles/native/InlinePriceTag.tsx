@@ -52,7 +52,7 @@ function PriceTag(accessibilityLabel) {
   obj2.style = items1;
   items[1] = React6(Text_Text.Text, obj2);
   obj.children = items;
-  return closure_1_11(closure_1_10, obj);
+  return closure_1_11(refs, obj);
 }
 function OrbsPriceTag(arg0) {
   ({ vcData, product } = arg0);
@@ -156,7 +156,7 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (closure_1_2) {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp9 = asyncRequireImpl(15381, dependencyMap.paths);
+        const tmp9 = asyncRequireImpl(15378, dependencyMap.paths);
         const obj2 = { analyticsLocations: null, title: null, description: null };
         items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
         obj2.analyticsLocations = items;

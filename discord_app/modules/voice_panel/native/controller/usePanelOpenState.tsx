@@ -7,7 +7,7 @@ import VoicePanelStore from "../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11925).VoicePanelModes;
+const VoicePanelModes = fn(11919).VoicePanelModes;
 const Constants = fn(1072);
 ({ ComponentActions: metroImportDefault, Routes: closure_8 } = Constants);
 let closure_9 = {
@@ -93,10 +93,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, arg3) {
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items4);
-  [first, closure_5] = first.useState(() => _undefined2(13031).getHistory().location.pathname);
+  [first, closure_5] = first.useState(() => _undefined2(13025).getHistory().location.pathname);
   const items5 = [arg0, first];
   const effect1 = first.useEffect(() => {
-    closure_0 = _undefined2(13031).addRouteChangeListener((pathname) => {
+    closure_0 = _undefined2(13025).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
         closure_1_5(tmp);
         const obj2 = { path: null };
@@ -112,10 +112,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, arg3) {
             tmp2 = matchPathResult.params.channelId === closure_0;
           }
           if (!tmp2) {
-            c1(12654)();
+            c1(12648)();
           }
         }
-        obj3 = c0(13024);
+        obj3 = c0(13018);
       }
     });
     return () => {

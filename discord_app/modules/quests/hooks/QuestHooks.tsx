@@ -76,7 +76,7 @@ function useQuests(arg0) {
   const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
   lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
   const obj4 = obj(504);
-  isEligibleForQuests = obj(10065).getIsEligibleForQuests();
+  isEligibleForQuests = obj(10064).getIsEligibleForQuests();
   const items3 = [
     obj.fetchPolicy,
     isEligibleForQuests,
@@ -881,7 +881,7 @@ function useTaskPlatformScreen(quest, questTaskDetails) {
   ];
   return items8;
 }
-const useConsoleQuestUIStore = fn(8743).useConsoleQuestUIStore;
+const useConsoleQuestUIStore = fn(8742).useConsoleQuestUIStore;
 const QuestConstants = fn(5275);
 ({
   QuestTaskPlatform: closure_14,
@@ -1341,7 +1341,7 @@ export function useConnectedConsoleLinkOnClick(quest) {
   let obj = quest(504);
   const tmp = quest;
   const tmp5 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = quest(8765).isConsoleQuest(quest);
+  let isConsoleQuestResult = quest(8764).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1349,8 +1349,8 @@ export function useConnectedConsoleLinkOnClick(quest) {
     isConsoleQuestResult = !tmp5;
   }
   c3 = isConsoleQuestResult;
-  obj2 = quest(8765);
-  closure_4 = tmp(10100).useGetQuestImpressionId();
+  obj2 = quest(8764);
+  closure_4 = tmp(10099).useGetQuestImpressionId();
   return () => {
     const obj = QuestPlatformUtils;
     if (c3) {
@@ -1443,23 +1443,23 @@ export function useQuestPreviewActions(id) {
   return noop.useMemo(
     () => ({
       handleComplete() {
-        return closure_0(10066).completeQuestPreview(id);
+        return closure_0(10065).completeQuestPreview(id);
       },
       handleProgress(random) {
-        return closure_0(10066).completeQuestPreview(id, random);
+        return closure_0(10065).completeQuestPreview(id, random);
       },
       handleResetStatusClick() {
-        return closure_0(10066).resetQuestPreviewStatus(id);
+        return closure_0(10065).resetQuestPreviewStatus(id);
       },
       handleResetDismissibilityClick() {
-        return closure_0(10066).resetQuestDismissibilityStatus(id);
+        return closure_0(10065).resetQuestDismissibilityStatus(id);
       },
       handleOverridePreviewClick(placement) {
-        return closure_0(10066).overrideQuestForPlacement(placement, id);
+        return closure_0(10065).overrideQuestForPlacement(placement, id);
       },
       handleResetHasBeenSeenClick() {
         items = [id];
-        return closure_0(10066).markAdContentUnseen(closure_0(5282).AdCreativeType.QUEST, items);
+        return closure_0(10065).markAdContentUnseen(closure_0(5282).AdCreativeType.QUEST, items);
       },
     }),
     items,
@@ -1615,7 +1615,7 @@ export function useWaitingForConsoleConnection(quest) {
   ({ xboxAccounts, playstationAccounts } = memo);
   const obj = accounts(504);
   const tmp3 = useIsQuestProgressing(quest);
-  let isConsoleQuestResult = accounts(8765).isConsoleQuest(quest);
+  let isConsoleQuestResult = accounts(8764).isConsoleQuest(quest);
   if (isConsoleQuestResult) {
     isConsoleQuestResult = 0 === memo.xboxAndPlaystationAccounts.length;
   }
@@ -1939,8 +1939,8 @@ export function useQuestWarningTips(userStatus) {
     tmp19 = null != completedAt;
     let tmp22 = require("PlatformUtils").isWeb() && tmp17;
     if (tmp22) {
-      tmp22 = !tmp11(10102).isQuestSupportedOnWeb(userStatus);
-      const tmp11Result3 = tmp11(10102);
+      tmp22 = !tmp11(10101).isQuestSupportedOnWeb(userStatus);
+      const tmp11Result3 = tmp11(10101);
     }
     const tmp11Result = require("PlatformUtils");
     let isMacResult = require("PlatformUtils").isMac();
@@ -2394,7 +2394,7 @@ export function useFetchQuestHomeBounties(arg0) {
                   c1 = 3;
                   c4 = 1;
                   const obj6 = {
-                    value: previewAdCreativeIds(15145).fetchBountyPreview(
+                    value: previewAdCreativeIds(15142).fetchBountyPreview(
                       arr,
                       previewAdCreativeIds(5278).AdPlacement.VIDEO_MODAL_MOBILE,
                     ),
@@ -2406,7 +2406,7 @@ export function useFetchQuestHomeBounties(arg0) {
               c1 = 2;
               c4 = 1;
               const obj7 = {
-                value: previewAdCreativeIds(15145).fetchQuestHomeBounties(
+                value: previewAdCreativeIds(15142).fetchQuestHomeBounties(
                   previewAdCreativeIds(5278).AdPlacement.VIDEO_MODAL_MOBILE,
                 ),
                 done: false,

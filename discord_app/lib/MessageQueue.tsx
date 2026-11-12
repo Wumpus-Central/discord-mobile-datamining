@@ -44,7 +44,7 @@ class MessageQueue extends tmp5 {
       const merged = Object.assign(messageId, Object.assign({ channelId: 0, messageId: 0, isCrossposted: 0 }));
       const abortController = new AbortController();
       const request = {
-        url: closure_1_10.MESSAGE(channelId, messageId),
+        url: constants.MESSAGE(channelId, messageId),
         body: merged,
         retries: 1,
         oldFormErrors: true,
@@ -231,7 +231,7 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     }
     const result1 = self.startQueueMetricTimers(nonce.nonce);
     const HTTP = handleCommand1(1282).HTTP;
-    const request = { url: closure_1_10.MESSAGES(channelId), body: obj3, context: tmp4, oldFormErrors: true };
+    const request = { url: refs.MESSAGES(channelId), body: obj3, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;
     request.rejectWithError = true;
@@ -275,12 +275,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     }
     const result1 = self.startQueueMetricTimers(message.nonce);
     const HTTP = handleCommand1(1282).HTTP;
-    const request = {
-      url: closure_1_10.MESSAGES_ANNOUNCEMENT(channelId),
-      body: obj3,
-      context: tmp4,
-      oldFormErrors: true,
-    };
+    const request = { url: refs.MESSAGES_ANNOUNCEMENT(channelId), body: obj3, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;
     request.rejectWithError = true;
@@ -322,7 +317,7 @@ function handleCommand(message, fn) {
   const result = requests.set(nonce, abortController);
   const HTTP = handleCommand1(nonce[12]).HTTP;
   const request = {
-    url: closure_10.INTERACTIONS,
+    url: constants.INTERACTIONS,
     body,
     signal: abortController.signal,
     rejectWithError: true,
@@ -368,7 +363,7 @@ handleCommand1.handleEdit = function handleEdit(messageId, fn) {
   const merged = Object.assign(messageId, Object.assign({ channelId: 0, messageId: 0, isCrossposted: 0 }));
   const abortController = new AbortController();
   const request = {
-    url: closure_1_10.MESSAGE(channelId, messageId),
+    url: constants.MESSAGE(channelId, messageId),
     body: merged,
     retries: 1,
     oldFormErrors: true,

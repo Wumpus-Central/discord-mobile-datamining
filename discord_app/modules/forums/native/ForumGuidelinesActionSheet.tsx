@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(8930).FORUM_GUIDELINES_ACTION_SHEET;
+let closure_6 = fn(8929).FORUM_GUIDELINES_ACTION_SHEET;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const createStyles = fn(5243);
@@ -230,5 +230,5 @@ export function openForumGuidelinesActionSheet(arg0) {
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(11177, dependencyMap.paths), closure_6, obj2);
+  obj.openLazy(asyncRequireImpl(11171, dependencyMap.paths), closure_6, obj2);
 }

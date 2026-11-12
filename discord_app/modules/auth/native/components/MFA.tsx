@@ -68,7 +68,7 @@ export default function ConnectedMFA() {
       tmp13 = obj4;
     }
     obj3.headerRightContainerStyle = tmp13;
-    return jsx(isMultiAccount(18186).MFAModal, obj3);
+    return jsx(isMultiAccount(18181).MFAModal, obj3);
   } else {
     const tmpResult2 = isMultiAccount(1357);
     tmp4(575).space;

@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 require = fn;
 const AppStates = fn(1072).AppStates;
-let closure_5 = fn(10070).MIN_QUEST_VIEW_TIME_SECONDS;
+let closure_5 = fn(10069).MIN_QUEST_VIEW_TIME_SECONDS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/orbs_arcade/native/useTrackOrbsArcadeGameTileViewed.tsx");
 

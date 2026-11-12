@@ -176,5 +176,7 @@ export const QuestContent = {
   [78]: "DISPLAY_NAME_STYLES_SETTINGS",
   QUEST_HOME_HERO_BANNER: 79,
   [79]: "QUEST_HOME_HERO_BANNER",
+  QUEST_HOME_HERO_STICKY_HEADER: 80,
+  [80]: "QUEST_HOME_HERO_STICKY_HEADER",
 };
 export const QuestContentSets = obj;

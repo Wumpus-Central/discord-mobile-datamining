@@ -16,10 +16,10 @@ function getICYMIComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const YouBarNavigatorScreens = fn(9964).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(9963).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(9062);
+const NativeStackNavigator = fn(9061);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarStackNavigator.tsx");
@@ -92,7 +92,7 @@ export default noop.memo(function YouBarStackNavigator() {
       },
     });
     obj3.children = items;
-    return closure_2_11(closure_2_10, obj3);
+    return closure_2_11(refs, obj3);
   }, items2);
   obj5.children = closure_9(Navigator.Navigator, obj6);
   obj4.children = closure_9(current(accessibilityNativeStackOptions[14]).LayerScope, obj5);

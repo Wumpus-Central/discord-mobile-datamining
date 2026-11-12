@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "https://support.discord.com/hc/articles/14155060633623",
+      version: "asc",
     });
     merged.id = global;
     obj = closure_25;

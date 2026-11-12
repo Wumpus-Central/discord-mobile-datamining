@@ -22,10 +22,10 @@ import QuestStore from "../QuestStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ChannelDetailsStore = fn(8998);
+const ChannelDetailsStore = fn(8997);
 ({ useChannelDetailsStore: metroImportDefault, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
 const isTextChannel = fn(5096).isTextChannel;
-let closure_16 = fn(10070).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+let closure_16 = fn(10069).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1072).MessageStates;
 function log() {
   if (questLogger == null) {

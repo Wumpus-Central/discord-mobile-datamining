@@ -74,7 +74,7 @@ function ForumPostUsername(arg0) {
   const tmp2Result = initialize;
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(14502).useForumChannelStore;
+const useForumChannelStore = fn(14498).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const createStyles = fn(5243);

@@ -103,8 +103,8 @@ function ReactActionSheetBase(content) {
                 return obj3;
               } else {
                 closure_5(true);
-                v1(10150).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-                const obj5 = v1(10150);
+                v1(10148).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+                const obj5 = v1(10148);
                 const obj4 = {
                   itemId: tmp4.id,
                   itemType: hotwheels_gaming_activity,
@@ -115,7 +115,7 @@ function ReactActionSheetBase(content) {
                     actionDestinationType: null,
                   },
                 };
-                v1(10150).feedItemActioned(obj4);
+                v1(10148).feedItemActioned(obj4);
                 v1 = 1;
                 dependencyMap = 1;
                 const obj7 = { value: sendMessage(first1), done: false };

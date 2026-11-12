@@ -211,8 +211,8 @@ let items = [
   {
     code: "(function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){let[BADGE_GRID_COLUMNS,BADGE_GRID_GAP]=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};})",
   },
-  fn(16995).BADGE_GRID_COLUMNS,
-  fn(16995).BADGE_GRID_GAP,
+  fn(16990).BADGE_GRID_COLUMNS,
+  fn(16990).BADGE_GRID_GAP,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -481,13 +481,13 @@ let closure_34 = noop.memo(function DraggableBadgeTile(badge) {
       items15,
       orderShared,
       tileSize,
-      tmp2(16995).BADGE_GRID_GAP,
+      tmp2(16990).BADGE_GRID_GAP,
       tmp2(1652).clamp,
       sharedValue2,
-      tmp2(16995).BADGE_GRID_COLUMNS,
+      tmp2(16990).BADGE_GRID_COLUMNS,
       sharedValue3,
       slotOffset,
-      tmp2(15729).moveBadgeInDisplayOrder,
+      tmp2(15724).moveBadgeInDisplayOrder,
       badge_id,
       tmp2(1705).scheduleOnRN,
       tmp2(5491).triggerHapticFeedback,
@@ -1122,16 +1122,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       _undefined3.close();
     }
     const obj2 = {
-      analyticsLocation: {
-        page: closure_2_10.USER_SETTINGS,
-        section: constants2.USER_PROFILE,
-        object: constants.BUTTON_CTA,
-      },
+      analyticsLocation: { page: refs.USER_SETTINGS, section: constants2.USER_PROFILE, object: constants.BUTTON_CTA },
       analyticsLocations: _undefined2,
       premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING,
     };
     openPremiumModalDefault(obj2);
-    const obj3 = { page: closure_2_10.USER_SETTINGS, section: constants2.USER_PROFILE, object: constants.BUTTON_CTA };
+    const obj3 = { page: refs.USER_SETTINGS, section: constants2.USER_PROFILE, object: constants.BUTTON_CTA };
   }, items2);
   const obj4 = noop;
   const items3 = [c7];
@@ -1172,7 +1168,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     }
     if (tmp) {
       const obj2 = { type: PremiumUpsellTypes.BADGE_REORDERING_UPSELL, location: null, location_stack: null };
-      const obj3 = { page: closure_2_10.USER_SETTINGS, section: constants2.USER_PROFILE };
+      const obj3 = { page: refs.USER_SETTINGS, section: constants2.USER_PROFILE };
       obj2.location = obj3;
       obj2.location_stack = _undefined2;
       AnalyticsUtilsDefault.track(React5.PREMIUM_UPSELL_VIEWED, obj2);
@@ -1277,12 +1273,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const tmp5Result17 = require("Sheet/BottomSheet");
   badgeTileSize = require("BadgeGrid").getBadgeTileSize(bottomSheetWidth);
   const sum1 = fixedBadges.length + reorderableBadges.length + hiddenBadges.length;
-  const rounded = Math.ceil(sum1 / tmp5(16995).BADGE_GRID_COLUMNS);
+  const rounded = Math.ceil(sum1 / tmp5(16990).BADGE_GRID_COLUMNS);
   let num = 0;
   if (rounded > 0) {
     let result = rounded * badgeTileSize;
     const diff = rounded - 1;
-    num = result + diff * tmp5(16995).BADGE_GRID_GAP;
+    num = result + diff * tmp5(16990).BADGE_GRID_GAP;
   }
   const tmp5Result18 = require("BadgeGrid");
   animatedRef = require("../../../../_runtime/metro/01652__.js").useAnimatedRef();
@@ -1422,8 +1418,8 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const intl3 = tmp5(1113).intl;
       obj7.children = intl3.string(tmp5(1113).t.JrOki0);
       obj6.children = memo2(tmp5(5866).Text, obj7);
-      tmp56 = memo2(tmp2(16996), obj6);
-      const tmp2Result = tmp2(16996);
+      tmp56 = memo2(tmp2(16991), obj6);
+      const tmp2Result = tmp2(16991);
     }
     const items22 = [tmp56];
     const obj8 = { accessibilityRole: "list", style: null, children: null };

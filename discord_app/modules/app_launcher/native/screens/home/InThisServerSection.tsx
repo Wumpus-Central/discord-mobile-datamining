@@ -13,7 +13,7 @@ function AppInThisServer(onAppSelected) {
   onAppSelected = onAppSelected.onAppSelected;
   const tmp = closure_7();
   const application = onAppSelected.appItem.application;
-  const appLauncherIconSource = onAppSelected(13284).getAppLauncherIconSource(application);
+  const appLauncherIconSource = onAppSelected(13278).getAppLauncherIconSource(application);
   const obj2 = {
     accessible: true,
     accessibilityLabel: application.name,
@@ -34,7 +34,7 @@ function AppInThisServer(onAppSelected) {
   let tmp6 = null;
   if (null != appLauncherIconSource) {
     const obj3 = { iconSource: appLauncherIconSource, wrapperStyle: tmp.iconContainer, iconSize: 36 };
-    tmp6 = closure_5(application(13289), obj3);
+    tmp6 = closure_5(application(13283), obj3);
   }
   items = [
     tmp6,

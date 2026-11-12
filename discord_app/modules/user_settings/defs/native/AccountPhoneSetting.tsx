@@ -8,13 +8,13 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 let closure_4 = fn(7752).PHONE_VERIFICATION_MODAL_KEY;
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dEYpSt);
   },
-  parent: fn(9136).MobileUserSettings.ACCOUNT,
+  parent: fn(9135).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountPhoneSettingTrailing() {
     items = [UserStore];
     return initialize.useStateFromStores(items, () => {

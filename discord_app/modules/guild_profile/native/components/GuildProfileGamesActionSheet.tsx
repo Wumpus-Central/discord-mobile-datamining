@@ -47,15 +47,15 @@ export default function GuildProfileGamesActionSheet(profile) {
   const id = profile.id;
   const gameActivity = profile.gameActivity;
   const tmp = closure_7();
-  const allGuildProfileGames = id(10602).useAllGuildProfileGames(profile);
-  let obj = id(10602);
+  const allGuildProfileGames = id(10600).useAllGuildProfileGames(profile);
+  let obj = id(10600);
   const intl = id(1113).intl;
   const obj2 = id(8493);
   items = [id];
   const str = intl.format(id(1113).t.vuAVo7, { serverName: profile.name });
   const callback = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(10588, dependencyMap.paths), "GuildProfileActionSheet:" + id, { guildId: id });
+    obj.openLazy(asyncRequireImpl(10586, dependencyMap.paths), "GuildProfileActionSheet:" + id, { guildId: id });
   }, items);
   const obj3 = {
     ref: obj2.useBottomSheetRef().bottomSheetRef,

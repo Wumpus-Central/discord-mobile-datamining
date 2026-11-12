@@ -7,7 +7,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef19195 from "../../../../../_runtime/metro/19195__.js";
+import _modDef19190 from "../../../../../_runtime/metro/19190__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SubscriptionPlanStore from "../../../../stores/billing/SubscriptionPlanStore.tsx";
@@ -107,7 +107,7 @@ export function TruncatedText(lineClamp) {
     };
     items = [React6(Text_Text.Text, obj3), first];
     obj2.children = items;
-    return closure_1_10(timestampProducer, obj2);
+    return refs(timestampProducer, obj2);
   } else {
     const obj = { style: tmp2.toggleTruncateButton, children: null };
     const intl = util.intl;
@@ -136,10 +136,10 @@ export function ArrowButton(arg0) {
       style: tmp.arrowButtonText,
       children: text,
     }),
-    React6(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef19195, style: tmp.arrowButtonIcon }),
+    React6(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef19190, style: tmp.arrowButtonIcon }),
   ];
   obj.children = items;
-  return closure_1_10(Pressables.PressableOpacity, obj);
+  return refs(Pressables.PressableOpacity, obj);
 }
 export function useFormattedSubscriptionPlan(listingId) {
   const mobileStoreFront = NativePaymentHooksDefault.useMobileStoreFront();

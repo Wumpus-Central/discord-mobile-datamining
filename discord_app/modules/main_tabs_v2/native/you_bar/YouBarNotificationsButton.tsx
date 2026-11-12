@@ -7,7 +7,7 @@ import SavedMessagesStore from "../../../saved_messages/SavedMessagesStore.tsx";
 const _modDef1652 = tmp2(1652);
 const require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(17588);
+const YouBarConstants = fn(17583);
 ({
   YOU_BAR_SPRING_CONFIG: closure_6,
   YOU_BAR_BUTTON_HIT_SLOP: metroImportDefault,
@@ -134,16 +134,16 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   const obj5 = { children: null };
   obj4.variant = str4;
   const obj6 = { style: tmp.iconContainer, children: null };
-  const tmp16Result = closure_8(onLongPress(10933).BellIcon, obj2);
+  const tmp16Result = closure_8(onLongPress(10927).BellIcon, obj2);
   const items4 = [
-    closure_8(onLongPress(19036).YouBarButtonIcon, {
-      icon: closure_8(onLongPress(10933).BellIcon, obj2),
+    closure_8(onLongPress(19031).YouBarButtonIcon, {
+      icon: closure_8(onLongPress(10927).BellIcon, obj2),
       hasBadge: stateFromStores > 0 && 0 === value,
       badgeStyle: tmp.overdueReminderDot,
     }),
   ];
   const obj7 = {
-    icon: closure_8(onLongPress(10933).BellIcon, obj2),
+    icon: closure_8(onLongPress(10927).BellIcon, obj2),
     hasBadge: stateFromStores > 0 && 0 === value,
     badgeStyle: tmp.overdueReminderDot,
   };
@@ -162,5 +162,5 @@ export default noop.memo(function YouBarNotificationsButton(hasNameplate) {
   obj4.onLongPress = onLongPress;
   obj4.hitSlop = hitSlop;
   obj5.children = closure_8(onLongPress(7922).IconButton, obj4);
-  return closure_8(onLongPress(19036).YouBarButtonContainer, obj5);
+  return closure_8(onLongPress(19031).YouBarButtonContainer, obj5);
 });

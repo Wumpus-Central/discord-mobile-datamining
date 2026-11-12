@@ -1,7 +1,7 @@
 // discord_app/modules/activities/panel/native/LeaveActivityButton.tsx
 import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef12207 from "../../../../../_runtime/metro/12207__.js";
+import _modDef12201 from "../../../../../_runtime/metro/12201__.js";
 import leaveEmbeddedActivity from "../../leaveEmbeddedActivity.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

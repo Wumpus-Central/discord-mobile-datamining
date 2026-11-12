@@ -127,7 +127,7 @@ export default function NativeVideo(ref) {
           num = 100;
         }
         if (null != ref.current) {
-          const Commands = merged(9669).Commands;
+          const Commands = merged(9668).Commands;
           Commands.seek(tmp.current, arg0, num);
         }
       },
@@ -149,7 +149,7 @@ export default function NativeVideo(ref) {
           tmp3 = null != ref.current;
         }
         if (tmp3) {
-          const Commands = merged(9669).Commands;
+          const Commands = merged(9668).Commands;
           Commands.reset(ref.current);
         }
         dependencyMap((arg0) => {
@@ -173,7 +173,7 @@ export default function NativeVideo(ref) {
   const items1 = [tmp2.container, obj2.style];
   obj5.style = items1;
   const items2 = [
-    ref(ref(9669), {
+    ref(ref(9668), {
       ref,
       style: tmp2.content,
       sourceId: id,
@@ -251,13 +251,17 @@ export default function NativeVideo(ref) {
               const onVideoTracks = obj2.onVideoTracks;
               if (onVideoTracks != null) {
                 const obj4 = { videoTracks: nativeEvent.videoTracks, selectedVideoTrackId: null };
-                const first = nativeEvent.videoTracks[0];
-                str = undefined;
-                if (first != null) {
-                  str = first.trackId;
-                }
-                if (str == null) {
-                  str = "";
+                if ("" !== nativeEvent.selectedTrackId) {
+                  str = nativeEvent.selectedTrackId;
+                } else {
+                  const first = nativeEvent.videoTracks[0];
+                  str = undefined;
+                  if (first != null) {
+                    str = first.trackId;
+                  }
+                  if (str == null) {
+                    str = "";
+                  }
                 }
                 obj4.selectedVideoTrackId = str;
                 onVideoTracks(obj4);

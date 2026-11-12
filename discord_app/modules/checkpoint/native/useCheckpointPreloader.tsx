@@ -11,20 +11,20 @@ import _modDef6345 from "../../../../discord_assets/assets/checkpoint/2026/recap
 import _modDef6348 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-green.png.js";
 import _modDef6351 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-red.png.js";
 import _modDef6354 from "../../../../discord_assets/assets/checkpoint/2026/recap-card-background-yellow.png.js";
-import _modDef14158 from "../../../../discord_assets/assets/checkpoint/2026/checkpoint-bgm.mp3.js";
-import _modDef14161 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
-import _modDef14379 from "../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
-import _modDef14380 from "../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
-import _modDef14383 from "../../../../discord_assets/assets/checkpoint/2026/voice_bg_400w.png.js";
-import _modDef14384 from "../../../../discord_assets/assets/checkpoint/2026/voice_bg_halfres_static.png.js";
-import _modDef14390 from "../../../../discord_assets/assets/checkpoint/2026/messages_loop_400w.png.js";
-import _modDef14391 from "../../../../discord_assets/assets/checkpoint/2026/messages_loop_static.png.js";
-import _modDef14400 from "../../../../discord_assets/assets/checkpoint/2026/sfx/selected.mp3.js";
-import _modDef14408 from "../../../../discord_assets/assets/checkpoint/2026/gaming_loop_400w.png.js";
-import _modDef14409 from "../../../../discord_assets/assets/checkpoint/2026/gaming_loop_static.png.js";
-import _modDef14433 from "../../../../discord_assets/assets/checkpoint/2026/sfx/save.mp3.js";
-import _modDef14434 from "../../../../discord_assets/assets/checkpoint/2026/sfx/next.mp3.js";
-import _modDef14435 from "../../../../discord_assets/assets/checkpoint/2026/sfx/back.mp3.js";
+import _modDef14154 from "../../../../discord_assets/assets/checkpoint/2026/checkpoint-bgm.mp3.js";
+import _modDef14158 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
+import _modDef14375 from "../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef14376 from "../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
+import _modDef14379 from "../../../../discord_assets/assets/checkpoint/2026/voice_bg_400w.png.js";
+import _modDef14380 from "../../../../discord_assets/assets/checkpoint/2026/voice_bg_halfres_static.png.js";
+import _modDef14386 from "../../../../discord_assets/assets/checkpoint/2026/messages_loop_400w.png.js";
+import _modDef14387 from "../../../../discord_assets/assets/checkpoint/2026/messages_loop_static.png.js";
+import _modDef14396 from "../../../../discord_assets/assets/checkpoint/2026/sfx/selected.mp3.js";
+import _modDef14404 from "../../../../discord_assets/assets/checkpoint/2026/gaming_loop_400w.png.js";
+import _modDef14405 from "../../../../discord_assets/assets/checkpoint/2026/gaming_loop_static.png.js";
+import _modDef14429 from "../../../../discord_assets/assets/checkpoint/2026/sfx/next.mp3.js";
+import _modDef14431 from "../../../../discord_assets/assets/checkpoint/2026/sfx/back.mp3.js";
+import _modDef14434 from "../../../../discord_assets/assets/checkpoint/2026/sfx/save.mp3.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import CheckpointStore from "../CheckpointStore.tsx";
@@ -32,27 +32,27 @@ import CheckpointStore from "../CheckpointStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const CheckpointFetchStates = fn(14150).CheckpointFetchStates;
+const CheckpointFetchStates = fn(14146).CheckpointFetchStates;
 let items = [
   _modDef5391,
   _modDef5395,
   _modDef5397,
-  _modDef14161,
+  _modDef14158,
   _modDef6339,
   _modDef6342,
   _modDef6345,
   _modDef6348,
   _modDef6351,
   _modDef6354,
-  _modDef14158,
-  _modDef14435,
+  _modDef14154,
+  _modDef14431,
+  _modDef14429,
   _modDef14434,
-  _modDef14433,
-  _modDef14400,
-  ...fn(14189).CHECKPOINT_ROUTE_SOUNDS,
+  _modDef14396,
+  ...fn(14185).CHECKPOINT_ROUTE_SOUNDS,
 ];
-const items1 = [_modDef6343, _modDef14390, _modDef14383, _modDef14379, _modDef14408];
-const items2 = [_modDef6344, _modDef14391, _modDef14384, _modDef14380, _modDef14409];
+const items1 = [_modDef6343, _modDef14386, _modDef14379, _modDef14375, _modDef14404];
+const items2 = [_modDef6344, _modDef14387, _modDef14380, _modDef14376, _modDef14405];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointPreloader.tsx");
 

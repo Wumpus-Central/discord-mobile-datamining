@@ -4,8 +4,8 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef15022 from "../../../../_runtime/metro/15022__.js";
-import _modDef15023 from "../../../../_runtime/metro/15023__.js";
+import _modDef15018 from "../../../../_runtime/metro/15018__.js";
+import _modDef15019 from "../../../../_runtime/metro/15019__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -36,9 +36,9 @@ export default noop.memo(function ForumChannelEmptyState(topViewHeight) {
   const obj = shared;
   const tmp9 = FastImageDefault;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef15022;
+    let tmp4Result = _modDef15018;
   } else {
-    tmp4Result = _modDef15023;
+    tmp4Result = _modDef15019;
   }
   const items1 = [React4(tmp9, { source: tmp4Result, style: tmp.image }), ,];
   const obj5 = {

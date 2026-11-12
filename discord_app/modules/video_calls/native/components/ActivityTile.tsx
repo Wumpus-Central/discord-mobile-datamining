@@ -67,7 +67,7 @@ function ActivityTileInner(participant) {
               };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(12621)(obj4), done: false };
+              const obj5 = { value: v1(12615)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -77,8 +77,8 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(12756).setOrientationLockState(closure_128_3);
-          const obj = tmp2(12756);
+          const result = tmp2(12750).setOrientationLockState(closure_128_3);
+          const obj = tmp2(12750);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };
@@ -240,7 +240,7 @@ function ActivityTileInner(participant) {
           tmp5 = obj2;
         }
         obj.cutout = tmp5;
-        return closure_2_10(native.CutoutableAvatarImage, obj);
+        return refs(native.CutoutableAvatarImage, obj);
       },
     };
     const items5 = [closure_10(tmp5(tmp3[10]).SummarizedIconRow, obj13), , ,];
@@ -273,7 +273,7 @@ function ActivityTileInner(participant) {
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ ThemeTypes: closure_8, Fonts } = Constants);
-let ActivityLayoutMode = fn(12616).ActivityLayoutMode;
+let ActivityLayoutMode = fn(12610).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const XSMALL = fn(1187).AvatarSizes.XSMALL;
@@ -332,6 +332,6 @@ let result = size.fileFinishedImporting("modules/video_calls/native/components/A
 export default function ActivityTile(arg0) {
   const obj = { theme: constants.DARK, children: null };
   const merged = Object.assign(arg0);
-  obj.children = closure_1_10(ActivityTileInner, {});
-  return closure_1_10(native2.ThemeContextProvider, obj);
+  obj.children = refs(ActivityTileInner, {});
+  return refs(native2.ThemeContextProvider, obj);
 }

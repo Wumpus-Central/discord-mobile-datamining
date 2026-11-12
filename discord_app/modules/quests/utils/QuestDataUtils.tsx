@@ -266,7 +266,7 @@ export function getBountyByPlacementAndId(questPlacementFromQuestContent, bounty
 }
 export function getAdDecisionData(adContentId, questContent) {
   if (null == obj[questContent]) {
-    return closure_1_10;
+    return refs;
   } else {
     obj = getQuestDeliveryDataForPlacement(tmp, adContentId);
     if (obj == null) {
@@ -274,7 +274,7 @@ export function getAdDecisionData(adContentId, questContent) {
     }
     const adDecisionData = obj.adDecisionData;
     if (null == adDecisionData) {
-      let tmp6 = closure_1_10;
+      let tmp6 = refs;
     } else {
       tmp6 = adDecisionData;
       if (tmp4 !== adContentId) {

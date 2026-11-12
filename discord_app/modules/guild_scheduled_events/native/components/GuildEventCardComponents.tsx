@@ -498,7 +498,7 @@ export function GuildEventShareAction(event) {
       ToastUtils.presentLinkCopied();
     }
   };
-  obj3.icon = importDefault(tmp3 ? 12201 : 5967);
+  obj3.icon = importDefault(tmp3 ? 12195 : 5967);
   return closure_21(event(7922).IconButton, obj3);
 }
 export function GuildEventModeratorAction(event) {
@@ -582,7 +582,7 @@ export function GuildEventIndicateInterestAction(event) {
   if (first) {
     let BellIcon = tmp(7672).CheckmarkLargeIcon;
   } else {
-    BellIcon = tmp(10933).BellIcon;
+    BellIcon = tmp(10927).BellIcon;
   }
   const obj2 = {
     accessibilityRole: "togglebutton",

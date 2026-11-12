@@ -10,7 +10,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const getGuildAcronym = fn(5110).getGuildAcronym;
-const Constants = fn(19067);
+const Constants = fn(19062);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
 let createStyles = fn(5243);

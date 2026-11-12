@@ -99,7 +99,7 @@ function PlanSelectCard(onLayout) {
     const obj8 = {
       style: tmp.wumpus,
       pointerEvents: "none",
-      children: closure_6(tmp4(15229).NitroWumpusFlightLeft3dIllustration, { accessible: false, width: 320 }),
+      children: closure_6(tmp4(15226).NitroWumpusFlightLeft3dIllustration, { accessible: false, width: 320 }),
     };
     items[1] = closure_6(View, obj8);
     obj6.children = items;
@@ -127,7 +127,7 @@ function PlanSelectCard(onLayout) {
   const t2 = tmp4(1113).t;
   const obj13 = {
     text: intl2.string(premiumType === PremiumTypes.TIER_2 ? t2["8x0jKT"] : t2.cM8bbx),
-    icon: closure_6(premiumType(9369).NitroWheelIcon, { size: "md", color: obj4.iconColor }),
+    icon: closure_6(premiumType(9368).NitroWheelIcon, { size: "md", color: obj4.iconColor }),
     variant: obj4.variant,
     size: "lg",
     grow: true,

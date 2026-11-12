@@ -248,8 +248,8 @@ function TypingIndicatorInner(channel) {
       tmp39 = callback;
     }
     obj7.onPress = tmp39;
-    let tmp33Result = closure_12(tmp5(14483), obj7);
-    const tmp5Result2 = tmp5(14483);
+    let tmp33Result = closure_12(tmp5(14479), obj7);
+    const tmp5Result2 = tmp5(14479);
   } else {
     let tmp32Result3 = null;
     if (null != tmp6Result) {
@@ -276,7 +276,7 @@ function TypingIndicatorInner(channel) {
   let tmp32Result4 = null;
   if (channel.rateLimitPerUser > 0) {
     const obj10 = { channel, hasTypingText: null != tmp6Result, slowmodeType: analyticsLocations.SendMessage };
-    tmp32Result4 = closure_12(tmp5(14487), obj10);
+    tmp32Result4 = closure_12(tmp5(14483), obj10);
   }
   items15[1] = tmp32Result4;
   obj5.children = items15;
@@ -291,8 +291,8 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return application_id(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(11805).useChatShowingAutoComplete;
-const SlowmodeType = fn(8726).SlowmodeType;
+let closure_5 = fn(11799).useChatShowingAutoComplete;
+const SlowmodeType = fn(8725).SlowmodeType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);

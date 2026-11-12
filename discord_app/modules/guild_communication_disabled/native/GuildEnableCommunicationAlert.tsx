@@ -61,7 +61,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(14040).setCommunicationDisabledDuration(guildId, userId), done: false };
+            const obj5 = { value: v1(14036).setCommunicationDisabledDuration(guildId, userId), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -87,7 +87,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
   };
   const tmp2 = closure_12();
   dependencyMap = tmp2;
-  closure_3 = _slicedToArray(userId(9138)(userId, guildId), 1)[0];
+  closure_3 = _slicedToArray(userId(9137)(userId, guildId), 1)[0];
   userId(5836)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type, guild_id: guildId, other_user_id: userId });
   });
@@ -133,7 +133,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
         const _Date = Date;
         num = new Date(closure_3);
       }
-      return closure_2_10(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
+      return refs(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
     },
   });
   items = [closure_10(guildId(5866).Text, obj3)];

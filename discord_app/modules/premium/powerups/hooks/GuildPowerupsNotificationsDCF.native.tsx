@@ -2,8 +2,6 @@
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import useSelectedDismissibleContent from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import GuildPowerupsNotification from "../constants/GuildPowerupsNotification.tsx";
-import useHasGuildAffinityForBoostUpsellDefault from "../native/hooks/useHasGuildAffinityForBoostUpsell.tsx";
-import useCanBoostGuildFromMobileDefault from "../native/hooks/useCanBoostGuildFromMobile.tsx";
 import BoostToUnlockMobileCoachmarkExperimentDefault from "../../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -42,25 +40,16 @@ export function useNewGamesCoachmarkDC() {
   items = [null, () => {}];
   return items;
 }
-export function useBoostToUnlockCoachmarkDCF(arg0, id, arg2, GUILD_HEADER_TOOLTIPS) {
-  let tmp = arg0;
-  const tmp4 = useHasGuildAffinityForBoostUpsellDefault(id);
-  if (arg0) {
-    tmp = tmp4;
-  }
-  if (tmp) {
-    tmp = tmp5;
-  }
-  tmp5 = useCanBoostGuildFromMobileDefault(arg2);
+export function useBoostToUnlockCoachmarkDCF(arg0, id, GUILD_HEADER_TOOLTIPS) {
   let _location = "useBoostToUnlockCoachmarkDCF-ineligible";
-  if (tmp) {
+  if (arg0) {
     _location = "useBoostToUnlockCoachmarkDCF-eligible";
   }
-  const tmp2Result = BoostToUnlockMobileCoachmarkExperimentDefault;
+  const obj = BoostToUnlockMobileCoachmarkExperimentDefault;
   let prop = null;
-  if (tmp) {
+  if (arg0) {
     prop = null;
-    if (tmp2Result.useConfig({ location: _location }).showCoachmark) {
+    if (obj.useConfig({ location: _location }).showCoachmark) {
       prop = dismissible_content.DismissibleContent.BOOST_TO_UNLOCK_COACHMARK;
     }
   }

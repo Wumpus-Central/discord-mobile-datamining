@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
 import AddFriendsScreenUtils from "AddFriendsScreenUtils.tsx";
-import _modDef19085 from "../../../../../../_runtime/metro/19085__.js";
+import _modDef19080 from "../../../../../../_runtime/metro/19080__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -387,7 +387,7 @@ export function ContactSuggestionActions(user) {
   const items10 = [tmp.icon, animatedStyle];
   obj8.style = items10;
   const tmp2Result2 = require("../../../../../../_runtime/metro/01652__.js");
-  obj8.children = c5(require("native").Icon, { source: _modDef19085, color: tmp.icon.color });
+  obj8.children = c5(require("native").Icon, { source: _modDef19080, color: tmp.icon.color });
   const items11 = [c5(_modDef1652.View, obj8)];
   const obj10 = { style: animatedStyle1, children: null };
   const obj11 = { variant: "secondary", size: str, grow: false, text: null, onPress: null };

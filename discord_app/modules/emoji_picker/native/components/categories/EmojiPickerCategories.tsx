@@ -392,7 +392,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
       onPress: callback4,
       style: tmp.item,
     };
-    tmp37Result = tmp37(tmp34(11271), obj7);
+    tmp37Result = tmp37(tmp34(11265), obj7);
   }
   items18[1] = tmp37Result;
   let tmp37Result2 = null;
@@ -400,7 +400,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     const obj8 = { style: null, iconStyle: null, onBackspace: null };
     ({ item: obj10.style, keyboardItem: obj10.iconStyle } = tmp);
     obj8.onBackspace = onBackspace;
-    tmp37Result2 = tmp37(tmp34(11273), obj8);
+    tmp37Result2 = tmp37(tmp34(11267), obj8);
   }
   items18[2] = tmp37Result2;
   obj4.children = callback(ref, { children: items18 });

@@ -18,8 +18,8 @@ export function handleMessagesTapImage(tapImageData) {
   importDefault = undefined;
   ({ allowWithinModal, selectedChannelId } = tapImageData);
   if (null != portal) {
-    embedId(10130).markPortalAlive(portal);
-    const obj = embedId(10130);
+    embedId(10129).markPortalAlive(portal);
+    const obj = embedId(10129);
   }
   if (true === allowWithinModal) {
     if ("attachment" !== type) {
@@ -225,6 +225,6 @@ export function handleMessagesTapImage(tapImageData) {
       tmp12 = message1;
     }
   } else {
-    embedId(12371);
+    embedId(12365);
   }
 }

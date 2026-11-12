@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const MAX_FORUM_POST_TAGS = fn(8930).MAX_FORUM_POST_TAGS;
+const MAX_FORUM_POST_TAGS = fn(8929).MAX_FORUM_POST_TAGS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(5243);
@@ -47,15 +47,15 @@ export default function ForumPostTagsActionSheet(thread) {
     }
   }
   const tmp3 = closure_9();
-  let appliedTags = thread(11097).useAppliedTags(thread);
+  let appliedTags = thread(11091).useAppliedTags(thread);
   if (null != tags) {
     appliedTags = tags;
   }
-  let obj = thread(11097);
+  let obj = thread(11091);
   [first, closure_5] = first.useState(new Set(appliedTags));
   closure_6 = first.size >= closure_6;
   let set = new Set(appliedTags);
-  const visibleForumTags = thread(11097).useVisibleForumTags(thread.parentChannel);
+  const visibleForumTags = thread(11091).useVisibleForumTags(thread.parentChannel);
   let obj2 = {
     onDismiss() {
       let tmp;
@@ -72,7 +72,7 @@ export default function ForumPostTagsActionSheet(thread) {
   obj3.subtitle = intl2.string(thread(1113).t["+HS9+m"]);
   obj3.subtitleStyle = tmp3.subtitle;
   obj2.header = toggleTag(thread(7847).BottomSheetTitleHeader, obj3);
-  const tmp4Result = thread(11097);
+  const tmp4Result = thread(11091);
   items = [
     toggleTag(closure_5, {
       style: tmp3.tagsContainer,

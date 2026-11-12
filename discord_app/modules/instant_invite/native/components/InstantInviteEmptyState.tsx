@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import FreeFormTextInputDefault from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
 import InstantInviteUtilsDefault from "../../../../utils/InstantInviteUtils.tsx";
-import _modDef15776 from "../../../../../_runtime/metro/15776__.js";
+import _modDef15771 from "../../../../../_runtime/metro/15771__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import CreateInviteModalStore from "../../../../stores/CreateInviteModalStore.tsx";
 
@@ -46,7 +46,7 @@ export default function InstantInviteEmptyState(link) {
     containerStyle: tmp.emptyStateContainer,
     imageStyle: tmp.emptyStateArt,
     titleStyle: tmp.emptyStateTitle,
-    source: _modDef15776,
+    source: _modDef15771,
     title: null,
     body: null,
   };
@@ -78,7 +78,7 @@ export default function InstantInviteEmptyState(link) {
   obj6.accessibilityLabel = intl3.string(stateFromStores(1113).t["3D5yo/"]);
   obj6.onPress = onPressSettings;
   obj6.style = tmp.settingsButton;
-  obj6.children = closure_5(stateFromStores(10502).SettingsIcon, {});
+  obj6.children = closure_5(stateFromStores(10500).SettingsIcon, {});
   items2[1] = closure_5(stateFromStores(7364).PressableOpacity, obj6);
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);

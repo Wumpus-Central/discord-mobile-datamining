@@ -104,7 +104,7 @@ function handleConnectionOpen() {
   closure_11 = {};
   closure_12 = {};
 }
-const SlowmodeType = fn(8726).SlowmodeType;
+const SlowmodeType = fn(8725).SlowmodeType;
 const Endpoints = fn(1072).Endpoints;
 let closure_8 = 10 * DurationsDefault.Millis.SECOND;
 let closure_9 = 1.5 * DurationsDefault.Millis.SECOND;

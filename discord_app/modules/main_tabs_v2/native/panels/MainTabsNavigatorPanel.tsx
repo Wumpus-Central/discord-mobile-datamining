@@ -84,7 +84,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let obj = require;
       let result = dependencyMap;
       if (current) {
-        obj = obj(18592);
+        obj = obj(18587);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
         obj(5438).dismissKeyboard();
@@ -375,7 +375,7 @@ export default noop.memo(function MainTabsNavigatorPanel(showHeaderGradient) {
       let tmp = null;
       if (c11) {
         const obj = { translateX, maxWidth, isChatLockedOpen };
-        tmp = closure_2_10(ChannelScreenAnimatedFrameDefault, obj);
+        tmp = refs(ChannelScreenAnimatedFrameDefault, obj);
       }
       return tmp;
     }, items11);

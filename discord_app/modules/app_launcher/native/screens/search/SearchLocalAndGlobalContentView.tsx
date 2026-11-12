@@ -37,20 +37,20 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  const appLauncherIconSource = hasOptions(13284).getAppLauncherIconSource(application);
+  const appLauncherIconSource = hasOptions(13278).getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     const obj2 = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(13289), obj2);
+    tmp4 = closure_10(onPressSend(13283), obj2);
   }
-  obj = hasOptions(13284);
-  const tmpResult = hasOptions(13337);
+  obj = hasOptions(13278);
+  const tmpResult = hasOptions(13331);
   const commandRowSend = tmpResult.useCommandRowSend({
     command,
     context,
     beforeExecuteCommand,
     onExecuteCommand,
-    sectionName: hasOptions(12489).AppLauncherSectionName.SEARCH,
+    sectionName: hasOptions(12483).AppLauncherSectionName.SEARCH,
   });
   hasOptions = commandRowSend.hasOptions;
   onPressSend = commandRowSend.onPressSend;
@@ -89,15 +89,15 @@ function CommandRow(arg0) {
     context,
     beforeExecuteCommand,
     onExecuteCommand,
-    sectionName: hasOptions(12489).AppLauncherSectionName.SEARCH,
+    sectionName: hasOptions(12483).AppLauncherSectionName.SEARCH,
   };
-  obj4.subLabel = hasOptions(12608).getSectionName(application);
+  obj4.subLabel = hasOptions(12602).getSectionName(application);
   obj4.start = isFirstRow;
   obj4.end = isLastRow;
   obj4.onPress = onPress;
   obj4.accessibilityActions = memo;
   obj4.onAccessibilityAction = callback;
-  obj4.trailing = closure_10(onPressSend(13337), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  obj4.trailing = closure_10(onPressSend(13331), { hasOptions, sending: commandRowSend.sending, onPressSend });
   return closure_10(hasOptions(7379).TableRow, obj4);
 }
 function PlaceholderCommandRow(isFirstRow) {
@@ -113,7 +113,7 @@ function PlaceholderCommandRow(isFirstRow) {
   const placeholderWidth = usePlaceholderSize.usePlaceholderWidth(10, 50);
   const placeholderWidth1 = usePlaceholderSize.usePlaceholderWidth(30, 90);
   const obj3 = {
-    icon: closure_1_10(View, { style: tmp.loadingCommandAppIcon }),
+    icon: refs(View, { style: tmp.loadingCommandAppIcon }),
     label: null,
     subLabel: null,
     subLabelLineClamp: 1,
@@ -126,17 +126,17 @@ function PlaceholderCommandRow(isFirstRow) {
   const obj4 = { style: tmp.loadingCommandAppIcon };
   items[1] = { width: "" + placeholderWidth + "%" };
   obj5.style = items;
-  obj3.label = closure_1_10(View, obj5);
+  obj3.label = refs(View, obj5);
   const obj7 = { style: null };
   const items1 = [tmp.loadingTextPlaceholderSmall];
   const obj6 = { width: "" + placeholderWidth + "%" };
   items1[1] = { width: "" + placeholderWidth1 + "%" };
   obj7.style = items1;
-  obj3.subLabel = closure_1_10(View, obj7);
+  obj3.subLabel = refs(View, obj7);
   obj3.start = flag;
   obj3.end = flag2;
   obj3.onPress = function onPress() {};
-  return closure_1_10(TableRow.TableRow, obj3);
+  return refs(TableRow.TableRow, obj3);
 }
 function keyExtractor(type, arg1) {
   if (type.type === obj.PLACERHOLDER) {
@@ -188,8 +188,8 @@ function CommandsExpandableList(expandedOverride) {
   });
 }
 const View = fn(17).View;
-const getSection = fn(11345).getSection;
-const FetchState = fn(13300).FetchState;
+const getSection = fn(11339).getSection;
+const FetchState = fn(13294).FetchState;
 const AppLauncherNativeConstants = fn(1498);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;

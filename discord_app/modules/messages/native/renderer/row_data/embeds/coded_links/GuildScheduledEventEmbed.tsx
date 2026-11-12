@@ -13,11 +13,11 @@ import GuildEventUtils from "../../../../../../guild_scheduled_events/native/com
 import renderer_EmbedUtils from "../../../EmbedUtils.tsx";
 import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
-import _modDef9107 from "../../../../../../../../_runtime/metro/09107__.js";
+import _modDef9106 from "../../../../../../../../_runtime/metro/09106__.js";
 import icons_ShareDefault from "../../../../../../icons/native/Share.tsx";
 import GuildScheduledEventHeaderUtils from "../../../../../../guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx";
-import _modDef15455 from "../../../../../../../../_runtime/metro/15455__.js";
-import _modDef15456 from "../../../../../../../../_runtime/metro/15456__.js";
+import _modDef15452 from "../../../../../../../../_runtime/metro/15452__.js";
+import _modDef15453 from "../../../../../../../../_runtime/metro/15453__.js";
 import asyncGeneratorStep from "../../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../../_runtime/metro/00032__.js";
 import GuildScheduledEventStore_mod from "../../../../../../guild_scheduled_events/GuildScheduledEventStore.tsx";
@@ -72,7 +72,7 @@ function createGuildScheduledEventEmbed(type) {
     embedCanBeTapped: null != guild,
   };
   const tmp7Result = GuildScheduledEventHeaderUtils;
-  const assetUriForEmbed1 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9107);
+  const assetUriForEmbed1 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9106);
   const tmp7Result12 = renderer_EmbedUtils;
   const assetUriForEmbed2 = renderer_EmbedUtils.getAssetUriForEmbed(icons_ShareDefault);
   if (null != guild) {
@@ -88,7 +88,7 @@ function createGuildScheduledEventEmbed(type) {
       const acceptLabelActiveBackgroundColor2 = colors.acceptLabelActiveBackgroundColor;
     } else if (result1) {
       acceptLabelActiveBackgroundColor = colors.backgroundColor;
-      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15455);
+      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15452);
       acceptLabelGreenColor = colors.acceptLabelDisabledTextColor;
       let tmp21 = assetUriForEmbed2;
       let stringResult2 = stringResult;
@@ -168,7 +168,7 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj8.badgeCount = toLocaleStringResult;
   const tmpResult4 = GuildScheduledEventManagerDefault;
-  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15456);
+  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15453);
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
     assetUriForEmbed4 = renderer_EmbedUtils.getAssetUriForEmbed(eventLocationIconSource);
@@ -221,9 +221,9 @@ let GuildScheduledEventStore = fn(6966);
 ({ isGuildEventEnded: closure_6, isGuildScheduledEventActive: metroImportDefault } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const getGuildIconSource = fn(5110).getGuildIconSource;
-const CodedLinkExtendedType = fn(11831).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11825).CodedLinkExtendedType;
 const constants = fn(5098).GuildScheduledEventEntityTypes;
-const InviteTypes = fn(8776).InviteTypes;
+const InviteTypes = fn(8775).InviteTypes;
 let closure_17 = MarkupUtils.astParserFor(MarkupUtils.guildEventLocationRules);
 const map = new Map();
 const size = fn(2);

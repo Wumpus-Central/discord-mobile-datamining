@@ -6,8 +6,8 @@ import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import shared from "../../../../design/shared.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
-import _modDef12947 from "../../../../../_runtime/metro/12947__.js";
-import _modDef12948 from "../../../../../_runtime/metro/12948__.js";
+import _modDef12941 from "../../../../../_runtime/metro/12941__.js";
+import _modDef12942 from "../../../../../_runtime/metro/12942__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../ThemeStore.tsx";
 
@@ -51,10 +51,10 @@ export default function KrispLogo() {
   items = [ThemeStore];
   const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
   if (obj2.isThemeLight(stateFromStores)) {
-    let tmp4Result = _modDef12947;
+    let tmp4Result = _modDef12941;
     let tmp6 = importDefault;
   } else {
-    tmp4Result = _modDef12948;
+    tmp4Result = _modDef12942;
     tmp6 = importDefault;
   }
   const obj3 = { style: closure_12.detailsView, children: null };
@@ -62,7 +62,7 @@ export default function KrispLogo() {
   obj2 = shared;
   const intl = util.intl;
   obj4.accessibilityLabel = intl.string(util.t.vFiCSx);
-  const items1 = [closure_1_10(tmp6(5957), obj4)];
+  const items1 = [refs(tmp6(5957), obj4)];
   const obj5 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = util.intl;
   obj5.accessibilityLabel = intl2.string(util.t.hvVgAZ);
@@ -70,8 +70,8 @@ export default function KrispLogo() {
   const obj6 = { variant: "body-sm/medium", color: "text-link", children: null };
   const intl3 = util.intl;
   obj6.children = intl3.string(util.t.hvVgAZ);
-  obj5.children = closure_1_10(Text_Text.Text, obj6);
-  items1[1] = closure_1_10(React4, obj5);
+  obj5.children = refs(Text_Text.Text, obj6);
+  items1[1] = refs(React4, obj5);
   obj3.children = items1;
   return closure_1_11(React3, obj3);
 }

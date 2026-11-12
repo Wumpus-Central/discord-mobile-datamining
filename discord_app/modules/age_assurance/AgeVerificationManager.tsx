@@ -112,8 +112,8 @@ const prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              closure_1_0(11836).preloadForumThreads(channel);
-              const obj = closure_1_0(11836);
+              closure_1_0(11830).preloadForumThreads(channel);
+              const obj = closure_1_0(11830);
             }
           })(tmp17);
           const currentSidebarChannelId = ChannelSectionStore.getCurrentSidebarChannelId(tmp17);

@@ -9,7 +9,7 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import inlineStyles from "../../../../_runtime/08197_inlineStyles.js";
 import QuestUtils from "../../quests/native/QuestUtils.native.tsx";
-import _modDef18378 from "../../../../discord_assets/assets/orbs_arcade/shop_header.mp4.js";
+import _modDef18373 from "../../../../discord_assets/assets/orbs_arcade/shop_header.mp4.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -60,14 +60,14 @@ function RadialGradientLayer(color) {
       const obj6 = { offset: 1, stopColor: color, stopOpacity: 0 };
       items[1] = React6(inlineStyles.Stop, obj6);
       obj3.children = items;
-      obj4.children = closure_1_10(inlineStyles.RadialGradient, obj3);
+      obj4.children = refs(inlineStyles.RadialGradient, obj3);
       const items1 = [React6(inlineStyles.Defs, obj4)];
       const size2 = { width: "100%", height: "100%", fill: null };
       const _HermesInternal3 = HermesInternal;
       size2.fill = "url(#" + id + ")";
       items1[1] = React6(inlineStyles.Rect, size2);
       size1.children = items1;
-      tmp6Result = closure_1_10(inlineStylesDefault, size1);
+      tmp6Result = refs(inlineStylesDefault, size1);
     }
   }
   obj.children = tmp6Result;
@@ -255,8 +255,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let c12 = 289;
 const PX_16 = nativeDefault.space.PX_16;
-const AssetUtils = fn(10078);
-const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef18378);
+const AssetUtils = fn(10077);
+const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef18373);
 const PX_48 = nativeDefault.space.PX_48;
 const ellipse = { cx: 85.5, cy: 267.5, rx: 329, ry: 217, rotation: 63 };
 const ellipse2 = { cx: 67, cy: 231, rx: 185, ry: 155 };
@@ -328,5 +328,5 @@ export default function HeroBlockOrbsArcadeHeader(productsTitle) {
     }
   }
   children[1] = tmp8Result;
-  return closure_1_10(closure_1_11, { children });
+  return refs(closure_1_11, { children });
 }

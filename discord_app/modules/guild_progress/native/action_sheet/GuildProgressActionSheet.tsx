@@ -41,7 +41,7 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(14790);
+const GuildProgressConstants = fn(14786);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1072);
 ({
@@ -96,12 +96,12 @@ export default function GuildProgressActionSheet(guild) {
             let base64;
             tmp5(8338).init(View);
             const obj6 = tmp5(8338);
-            tmp2(14795).hideActionSheet(id.id);
-            const obj7 = tmp2(14795);
+            tmp2(14791).hideActionSheet(id.id);
+            const obj7 = tmp2(14791);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(8813).openImagePicker(obj4), done: false };
+            const obj5 = { value: tmp5(8812).openImagePicker(obj4), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {

@@ -40,7 +40,7 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(9094);
+const RowGeneratorConstants = fn(9093);
 ({ Changeset: closure_10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -322,11 +322,11 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(9055).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(9054).setSelectedConversation(closure_1_0, roleStyle, {
             cacheType: "preview",
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(9055);
+          const obj = applyArgumentsResult(9054);
           applyArgumentsResult(6000).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
@@ -365,9 +365,9 @@ class ChatPreviewBase extends PureComponent {
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "https://support.discord.com/hc/articles/14155060633623",
-        selectedChannelId: "https://support.discord.com/hc/articles/14155043715735",
-        tapLinkData: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731",
+        messageChannel: "asc",
+        selectedChannelId: "asc",
+        tapLinkData: "https://support.discord.com/hc/articles/14155060633623",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;

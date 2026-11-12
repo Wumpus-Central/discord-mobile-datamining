@@ -75,7 +75,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       };
       const intl2 = tmp4(1113).intl;
       obj7.accessibilityLabel = intl2.string(tmp4(1113).t["8mcccd"]);
-      tmp7Result3 = closure_6(tmp4(12267).ArrowLargeUpIcon, obj7);
+      tmp7Result3 = closure_6(tmp4(12261).ArrowLargeUpIcon, obj7);
     }
     const items3 = [tmp7Result3, ,];
     let tmp7Result4 = null;
@@ -88,7 +88,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       };
       const intl3 = tmp4(1113).intl;
       obj8.accessibilityLabel = intl3.string(tmp4(1113).t.NLl6Q3);
-      tmp7Result4 = closure_6(tmp4(20500).ArrowLargeDownIcon, obj8);
+      tmp7Result4 = closure_6(tmp4(20495).ArrowLargeDownIcon, obj8);
     }
     items3[1] = tmp7Result4;
     const obj9 = { variant: "body-xs/normal", color: "text-subtle", children: subtext };

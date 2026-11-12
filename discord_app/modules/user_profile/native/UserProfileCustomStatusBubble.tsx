@@ -30,7 +30,7 @@ function StatusBubbleConnector(arg0) {
     }),
   ];
   size.children = items;
-  return closure_1_10(inlineStylesDefault, size);
+  return refs(inlineStylesDefault, size);
 }
 function EmojiImage(id) {
   ({ size, animated } = id);
@@ -78,7 +78,7 @@ function TextStatusContent(arg0) {
       obj8.style = obj9;
       items[1] = React6(timestampProducer, obj8);
       obj4.children = items;
-      let tmp9Result = closure_1_10(closure_1_11, obj4);
+      let tmp9Result = refs(closure_1_11, obj4);
     } else {
       let name;
       if (emoji != null) {
@@ -93,7 +93,7 @@ function TextStatusContent(arg0) {
         obj11.style = obj12;
         items1[1] = React6(timestampProducer, obj11);
         obj10.children = items1;
-        tmp9Result = closure_1_10(closure_1_11, obj10);
+        tmp9Result = refs(closure_1_11, obj10);
       }
     }
     const items2 = [tmp9Result, text];
@@ -103,7 +103,7 @@ function TextStatusContent(arg0) {
     }
     items2[2] = tmp23;
     obj3.children = items2;
-    return closure_1_10(Text_Text.Text, obj3);
+    return refs(Text_Text.Text, obj3);
   } else {
     if (obj2.isAndroid()) {
       const obj13 = { fontFamily: Fonts.PRIMARY_NORMAL_ITALIC };

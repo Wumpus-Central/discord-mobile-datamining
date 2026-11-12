@@ -100,8 +100,8 @@ function DockPressTargetGuard(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(11925).VoicePanelModes;
-const VoicePanelDockConstants = fn(11948);
+const VoicePanelModes = fn(11919).VoicePanelModes;
+const VoicePanelDockConstants = fn(11942);
 ({
   DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: closure_8,
   DOCK_PULL_SNAP_DISTANCE: closure_9,
@@ -114,7 +114,7 @@ const VoicePanelDockConstants = fn(11948);
   DOCK_PADDING_TOP,
   DOCK_ROW_HEIGHT,
 } = VoicePanelDockConstants);
-const GestureConstants = fn(11949);
+const GestureConstants = fn(11943);
 ({
   FLING_MIN_DISTANCE: map1,
   FLING_MIN_VELOCITY: closure_14,
@@ -521,7 +521,7 @@ export default noop.memo(function VoicePanelDock() {
       timing_timing.withTiming,
       VoicePanelSheetMorph.DOCK_CONTENT_SWAP_TIMING,
       sharedValue4,
-      closure_2_10,
+      refs,
       closure_2_17,
       _mod1705.scheduleOnRN,
       HapticUtils.triggerHapticFeedback,

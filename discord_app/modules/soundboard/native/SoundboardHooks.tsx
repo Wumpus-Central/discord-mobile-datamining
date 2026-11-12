@@ -6,7 +6,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 require = fn;
-const SoundboardStyleConstants = fn(19763);
+const SoundboardStyleConstants = fn(19758);
 ({ SOUNDS_PER_ROW: closure_6, SOUND_ROW_PADDING: metroImportDefault } = SoundboardStyleConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");

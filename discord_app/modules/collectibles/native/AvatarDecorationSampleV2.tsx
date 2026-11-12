@@ -3,7 +3,7 @@ import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef9435 from "../../../../_runtime/metro/09435__.js";
+import _modDef9434 from "../../../../_runtime/metro/09434__.js";
 import CutoutableAvatarDecorationDefault from "components/CutoutableAvatarDecoration.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -50,7 +50,7 @@ export default function AvatarDecorationSampleV2(arg0) {
   const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = _modDef9435;
+    avatarSource = _modDef9434;
   }
   const obj2 = { children: null };
   obj.source = avatarSource;

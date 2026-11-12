@@ -39,7 +39,7 @@ export function useHexagonCampaignDaysLeft(perk) {
     }
     return hexagonCampaignPerkCutoffMs;
   }, items1);
-  const tmp3 = stateFromStores(9373)(memo, closure_5);
+  const tmp3 = stateFromStores(9372)(memo, closure_5);
   let num = 0;
   if (tmp3.hours > 0) {
     num = 1;

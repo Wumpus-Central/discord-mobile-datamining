@@ -21,7 +21,7 @@ function LiveBehindHint(arg0) {
 }
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(13500).CONJURE_LIVE_BEHIND_TIP_BASE);
+const merged = Object.assign(fn(13494).CONJURE_LIVE_BEHIND_TIP_BASE);
 obj.render = function render(arg0, context) {
   const publish = context.context.publish;
   let tmp3 = null;

@@ -127,8 +127,8 @@ export default function useConjureMakePersonal(id) {
     items2,
   );
   if (null != target) {
-    result = tmp4(13199).conjureRemoveAppKeptChannels(target);
-    const tmp4Result = tmp4(13199);
+    result = tmp4(13193).conjureRemoveAppKeptChannels(target);
+    const tmp4Result = tmp4(13193);
   }
   obj3.keptChannels = result;
   obj3.error = tmp2[0];

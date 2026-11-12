@@ -64,7 +64,7 @@ function FamilyCenterTeenQRCodeButtonInner() {
       const obj2 = { action: React6.ShowQRCodeModal };
       AnalyticsUtilsDefault.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj2);
       const obj4 = { linkCode: stateFromStores1, expiresAt: stateFromStores2, onRefresh: getLinkCode2 };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17291, dependencyMap.paths), metroImportDefault, obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17286, dependencyMap.paths), metroImportDefault, obj4);
     }
   }, items4);
   const obj8 = {
@@ -219,6 +219,6 @@ export function FamilyCenterParentQRCodeButton() {
     };
     return closure_12(FamilyCenterBannerButton, obj2);
   }
-  obj = handleQrCodeScanSucess(9550);
+  obj = handleQrCodeScanSucess(9549);
   tmp = handleQrCodeScanSucess;
 }

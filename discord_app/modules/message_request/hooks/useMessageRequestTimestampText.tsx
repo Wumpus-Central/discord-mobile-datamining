@@ -51,8 +51,8 @@ export function useMessageRequestRelativeTimestampText(channel) {
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = tmp(8942).getTimestampString(extractTimestampResult);
-      const tmpResult = tmp(8942);
+      str = tmp(8941).getTimestampString(extractTimestampResult);
+      const tmpResult = tmp(8941);
     }
     return str;
   }

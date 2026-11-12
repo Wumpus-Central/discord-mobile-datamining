@@ -9,7 +9,7 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
 const asLaunched = fn(6957).asLaunched;
-const MOBILE = fn(12775).ActivityPlatform.MOBILE;
+const MOBILE = fn(12769).ActivityPlatform.MOBILE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/embedded_apps/utils/buildEmbeddedContext.tsx");
 

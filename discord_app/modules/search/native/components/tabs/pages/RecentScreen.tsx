@@ -68,14 +68,14 @@ function ViewAll(onJumpToMedia) {
     children: null,
   });
 }
-const SearchConstants = fn(9000);
+const SearchConstants = fn(8999);
 ({
   EMPTY_SEARCH_QUERY_STRING: closure_10,
   MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11,
   SearchListItemTypes: closure_12,
   SearchTabs: map1,
 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(14647).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(14643).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1072).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo(function RecentScreen(searchContext) {

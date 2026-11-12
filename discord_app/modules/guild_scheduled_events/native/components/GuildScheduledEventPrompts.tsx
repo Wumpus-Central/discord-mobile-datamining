@@ -92,7 +92,7 @@ export function StartEventPrompt(event) {
           recurrenceId,
         );
       },
-      iconSource: recurrenceId(12843),
+      iconSource: recurrenceId(12837),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
@@ -117,7 +117,7 @@ export function StartEventPrompt(event) {
           recurrenceId,
         );
       },
-      iconSource: recurrenceId(12843),
+      iconSource: recurrenceId(12837),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,

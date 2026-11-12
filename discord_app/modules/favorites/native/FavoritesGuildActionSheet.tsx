@@ -36,7 +36,7 @@ export default function FavoritesGuildActionSheet(onClose) {
   obj5.onPress = function onPress() {
     onClose();
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(18734, dependencyMap.paths),
+      asyncRequireImpl(18729, dependencyMap.paths),
       undefined,
       "FavoritesGuildCleanupModal",
     );
@@ -49,7 +49,7 @@ export default function FavoritesGuildActionSheet(onClose) {
     const obj8 = { label: null, icon: null, onPress: null };
     const intl3 = tmp4(1113).intl;
     obj8.label = intl3.string(tmp4(1113).t["0dOFq+"]);
-    const obj9 = { IconComponent: tmp4(13388).ArrowsUpDownIcon };
+    const obj9 = { IconComponent: tmp4(13382).ArrowsUpDownIcon };
     obj8.icon = closure_4(tmp4(7887).ActionSheetRow.Icon, obj9);
     obj8.onPress = function onPress() {
       onClose();

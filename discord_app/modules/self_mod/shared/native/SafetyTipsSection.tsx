@@ -26,7 +26,7 @@ export default function SafetyTipsContainer(children) {
   let showHeader = children.showHeader;
   const tmp = closure_6();
   items = [
-    closure_4(View, { style: tmp.image, children: closure_4(safetyTips(11984).SafetyBookletSpotIllustration, {}) }),
+    closure_4(View, { style: tmp.image, children: closure_4(safetyTips(11978).SafetyBookletSpotIllustration, {}) }),
     ,
   ];
   if (showHeader) {
@@ -49,7 +49,7 @@ export default function SafetyTipsContainer(children) {
   ];
   obj4.children = items1;
   items[1] = closure_5(safetyTips(6274).Stack, obj4);
-  const obj = { style: tmp.image, children: closure_4(safetyTips(11984).SafetyBookletSpotIllustration, {}) };
+  const obj = { style: tmp.image, children: closure_4(safetyTips(11978).SafetyBookletSpotIllustration, {}) };
   const obj5 = {
     style: tmp.text,
     accessibilityRole: "header",

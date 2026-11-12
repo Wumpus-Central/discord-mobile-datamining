@@ -360,7 +360,7 @@ function PollAnnouncementCard(message) {
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj9.createdAt = date;
-    obj9.expiryLabel = message(10337).getPollExpiryLabel(poll);
+    obj9.expiryLabel = message(10335).getPollExpiryLabel(poll);
     obj8.children = intl2.format(message(1113).t.t0FTsH, obj9);
     obj7.children = closure_8(message(5866).Text, obj8);
     items[2] = closure_8(closure_5, obj7);
@@ -371,7 +371,7 @@ function PollAnnouncementCard(message) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const MAX_VISIBLE_ANNOUNCEMENTS = fn(10249).MAX_VISIBLE_ANNOUNCEMENTS;
+const MAX_VISIBLE_ANNOUNCEMENTS = fn(10247).MAX_VISIBLE_ANNOUNCEMENTS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PlatformUtils = fn(1377);

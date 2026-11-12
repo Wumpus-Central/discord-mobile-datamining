@@ -10,7 +10,7 @@ const _modDef1652 = _mod1652;
 
 require = fn;
 const QuestDockMode = fn(5275).QuestDockMode;
-let closure_5 = fn(17585).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+let closure_5 = fn(17580).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5243);
 const obj = { wrapper: null };

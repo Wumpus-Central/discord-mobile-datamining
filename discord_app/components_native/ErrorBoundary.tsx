@@ -170,10 +170,10 @@ prototype["render"] = function render() {
     obj4.onPress = self.handleReload;
     items1[1] = React6(components_Button_Button.Button, obj4);
     obj3.children = items1;
-    items[1] = closure_1_10(metroImportDefault, obj3);
+    items[1] = refs(metroImportDefault, obj3);
     items[2] = null;
     obj.children = items;
-    let children = closure_1_10(native.EmptyState, obj);
+    let children = refs(native.EmptyState, obj);
   } else {
     children = self.props.children;
   }

@@ -16,7 +16,7 @@ const require = globalThis.__r;
 
 require = fn;
 function getDiscountInfo(active_discount_id) {
-  if (closure_1_10 !== active_discount_id) {
+  if (refs !== active_discount_id) {
     if (application_id !== active_discount_id) {
       if (collapsedCategories === active_discount_id) {
         const obj2 = { duration: 1, percentage: 10, discountId: active_discount_id };
@@ -145,7 +145,7 @@ export function useActiveDiscountInfo() {
   return getDiscountInfo(active_discount_id);
 }
 export function useFetchChurnUserDiscountOffer(arg0) {
-  let tmp2 = useDiscountOfferDefault(closure_1_10);
+  let tmp2 = useDiscountOfferDefault(refs);
   const tmp3 = useDiscountOfferDefault(collapsedCategories);
   const tmp4 = useDiscountOfferDefault(expandedHeight);
   const tmp5 = useDiscountOfferDefault(closure_1_11);

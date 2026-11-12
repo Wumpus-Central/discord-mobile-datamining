@@ -10,13 +10,13 @@ import UserSettingsProtoStore from "../../UserSettingsProtoStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(9136).MobileUserSettings.APPEARANCE,
+  parent: fn(9135).MobileUserSettings.APPEARANCE,
   useIsDisabled: function useSyncThemeDisabled() {
     items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());

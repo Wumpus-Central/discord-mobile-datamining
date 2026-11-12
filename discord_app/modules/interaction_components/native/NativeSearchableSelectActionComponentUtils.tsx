@@ -6,7 +6,7 @@ import InteractionComponentTypes from "../InteractionComponentTypes.tsx";
 import RoleIconUtils from "../../guild_boosting/RoleIconUtils.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import _modDef8108 from "../../../../_runtime/metro/08108__.js";
-import _modDef11564 from "../../../../_runtime/metro/11564__.js";
+import _modDef11558 from "../../../../_runtime/metro/11558__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -101,7 +101,7 @@ export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, 
         let tmpResult11 = utils_AvatarUtils;
         let hex2int = tmpResult11.ensureAvatarSource;
         if (channel.type === constants.GUILD_CATEGORY) {
-          let channelIconWithGuild = _modDef11564;
+          let channelIconWithGuild = _modDef11558;
         } else {
           channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, id);
           const tmpResult12 = utils_ChannelUtils;
@@ -119,7 +119,7 @@ export function transformSearchableSelectOptions(initialSnowflakeSelectOptions, 
 }
 export function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef11564;
+    let channelIconWithGuild = _modDef11558;
   } else {
     channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, guild);
   }

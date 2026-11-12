@@ -3,6 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import _modDef2553 from "../../waterwheels/WaterwheelsUntranslated.messages.js";
+import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import CompassIcon from "../../../design/components/Icon/native/redesign/generated/CompassIcon.tsx";
 import WaterwheelsDiscoverNavigation from "../../waterwheels/discover/native/WaterwheelsDiscoverNavigation.tsx";
@@ -38,19 +39,22 @@ const WATERWHEELS = fn(1072).WATERWHEELS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(5243);
-let closure_10 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
+let closure_10 = createStyles.createStyles((marginBottom) => {
+  const obj = { stretch: { alignSelf: "stretch", marginBottom: -marginBottom } };
+  return obj;
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarWaterwheelsButton.tsx");
 
 export default noop.memo(function GuildsBarWaterwheelsButton() {
-  const tmp = closure_10();
+  const tmp = closure_10(useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING));
   const guildsBarAnimatedWrapperStyles = GuildsBarAnimatedItemWrapper.useGuildsBarAnimatedWrapperStyles();
   items = [SelectedGuildStore];
   const stateFromStores = initialize.useStateFromStores(items, () => guildId.getGuildId() === WATERWHEELS);
-  const obj3 = { style: tmp.stretch, children: null };
+  const obj4 = { style: tmp.stretch, children: null };
   const memo = noop.useMemo(() => ({ onPress }), []);
   const items1 = [React5(GuildsBarSeparatorDefault, {})];
-  const obj4 = {
+  const obj5 = {
     selected: stateFromStores,
     circle: false,
     unread: false,
@@ -58,18 +62,18 @@ export default noop.memo(function GuildsBarWaterwheelsButton() {
     overState: "y",
     config: memo,
     label: null,
-    expandedChildren: "body-sm/normal",
-    children: "text-default",
+    expandedChildren: false,
+    children: null,
   };
   const intl = util.intl;
-  obj4.label = intl.string(_modDef2553.zFl2A4);
-  obj4.expandedChildren = React5(GuildsBarWaterwheelsExpandedChildren, {});
+  obj5.label = intl.string(_modDef2553.zFl2A4);
+  obj5.expandedChildren = React5(GuildsBarWaterwheelsExpandedChildren, {});
   colors = nativeDefault.colors;
-  obj4.children = React5(CompassIcon.CompassIcon, {
+  obj5.children = React5(CompassIcon.CompassIcon, {
     size: "md",
     color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
   });
-  items1[1] = React5(GuildsBarAnimatedItemWrapperDefault, obj4);
-  obj3.children = items1;
-  return React6(View, obj3);
+  items1[1] = React5(GuildsBarAnimatedItemWrapperDefault, obj5);
+  obj4.children = items1;
+  return React6(View, obj4);
 });

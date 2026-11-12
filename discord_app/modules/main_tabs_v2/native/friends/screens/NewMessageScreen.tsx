@@ -17,7 +17,7 @@ import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocatio
 import ChannelActionCreatorsDefault from "../../../../../actions/ChannelActionCreators.tsx";
 import HeaderShared from "../../shared_components/HeaderShared.tsx";
 import GroupPlusIcon from "../../../../../design/components/Icon/native/redesign/generated/GroupPlusIcon.tsx";
-import _modDef10919 from "../../../../../../_runtime/metro/10919__.js";
+import _modDef10913 from "../../../../../../_runtime/metro/10913__.js";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
 import ChatViewDefault from "../../../../chat/native/ChatView.tsx";
 import getGroupDMRecipientLimitDefault from "../../../../group_dm/getGroupDMRecipientLimit.tsx";
@@ -259,14 +259,14 @@ function ChatPreview(channelId) {
     secondaryTextFieldRef: channelId.tagListInputRef,
   };
   obj4.portal = channelId(1377).isAndroid();
-  items2[1] = closure_17(channelId(13266).PortalKeyboardRenderer, obj4);
+  items2[1] = closure_17(channelId(13260).PortalKeyboardRenderer, obj4);
   obj2.children = items2;
   obj.children = closure_18(View, obj2);
   return closure_17(View, obj);
 }
 const View = fn(17).View;
 const PrivateChannelRecord = fn(5096).PrivateChannelRecord;
-const UserRowModes = fn(10177).UserRowModes;
+const UserRowModes = fn(10175).UserRowModes;
 const Constants = fn(1072);
 ({
   AnalyticEvents: closure_12,
@@ -508,7 +508,7 @@ export default function NewMessageScreen(navigation) {
           obj2.channel = {
             id: navigation(7178).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID,
             guild_id: "Array",
-            parent_id: "onPress",
+            parent_id: "isArray",
           };
           obj.dispatch(obj2);
         };
@@ -548,8 +548,8 @@ export default function NewMessageScreen(navigation) {
   require("GroupDMNitroUpsellModel");
   enabled = config.enabled;
   if (enabled) {
-    enabled = tmp13(12451).isGroupDMNitroUpsellAudience(tmp23);
-    const tmp13Result = tmp13(12451);
+    enabled = tmp13(12445).isGroupDMNitroUpsellAudience(tmp23);
+    const tmp13Result = tmp13(12445);
   }
   const items7 = [navigation, selectedUserIds.length, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, tmp20, result];
   const layoutEffect = obj.useLayoutEffect(() => {
@@ -714,7 +714,7 @@ export default function NewMessageScreen(navigation) {
     if (constants) {
       if (stateFromStores1) {
         const obj = {
-          icon: _modDef10919,
+          icon: _modDef10913,
           IconComponent: GroupPlusIcon.GroupPlusIcon,
           label: null,
           iconVariant: "default",

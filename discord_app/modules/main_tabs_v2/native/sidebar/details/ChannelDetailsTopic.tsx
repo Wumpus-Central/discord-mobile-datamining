@@ -339,7 +339,7 @@ function GroupDMChannelDetailsTopic(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(10834);
+const ChannelDetailsConstants = fn(10828);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
@@ -355,7 +355,7 @@ let obj = {
 const PlatformUtils = fn(1377);
 let obj3 = null;
 if (!PlatformUtils.isAndroid()) {
-  obj3 = { lineHeight: "Array" };
+  obj3 = { lineHeight: "r" };
 }
 let merged = Object.assign(obj3);
 obj.topicText = { paddingVertical: 5 };

@@ -67,7 +67,7 @@ class NsfwGateGuildAlert {
     return jsx(guildId(closure_2[8]).AlertModal, obj);
   }
 }
-const NsfwGateSource = fn(10744).NsfwGateSource;
+const NsfwGateSource = fn(10738).NsfwGateSource;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, HelpdeskArticles: closure_8 } = Constants);
 const jsx = fn(21).jsx;

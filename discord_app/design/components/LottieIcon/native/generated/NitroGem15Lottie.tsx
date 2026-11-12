@@ -1,6 +1,6 @@
 // discord_app/design/components/LottieIcon/native/generated/NitroGem15Lottie.tsx
 import LottieIcon from "../LottieIcon.tsx";
-import _mod16349 from "../../../../../../_runtime/metro/16349__.js";
+import _mod16344 from "../../../../../../_runtime/metro/16344__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,5 +13,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 export function NitroGem15Lottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod16349, animation: "all", ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod16344, animation: "all", ref: ref.ref, layers, markers: items });
 }

@@ -17,7 +17,7 @@ import QuestStore from "../../QuestStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ContentImpressionTrackerConstants = fn(10070);
+const ContentImpressionTrackerConstants = fn(10069);
 ({
   HEARTBEAT_SECONDS: closure_6,
   MIN_QUEST_VIEW_TIME_SECONDS: metroImportDefault,
@@ -134,10 +134,10 @@ class QuestContentImpression {
             } else {
               closure_1 = tmp5;
               closure_128_0 = undefined;
-              obj2 = tmp2(8769);
+              obj2 = tmp2(8768);
               dependencyMap = 1;
               c3 = 1;
-              let obj6 = { value: obj2.getAdUser(tmp2(8768).getQuestContentName(obj2.questContent)), done: false };
+              let obj6 = { value: obj2.getAdUser(tmp2(8767).getQuestContentName(obj2.questContent)), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {
@@ -156,19 +156,19 @@ class QuestContentImpression {
                 quest = quest.getQuest(tmp6);
                 let isQuestExpiredResult = null == quest;
                 if (!isQuestExpiredResult) {
-                  isQuestExpiredResult = tmp4(8749).isQuestExpired(quest);
-                  const tmp4Result = tmp4(8749);
+                  isQuestExpiredResult = tmp4(8748).isQuestExpired(quest);
+                  const tmp4Result = tmp4(8748);
                 }
                 if (!isQuestExpiredResult) {
                   items = [tmp6];
-                  tmp4(10066).markAdContentSeen(tmp4(5282).AdCreativeType.QUEST, items);
-                  const tmp4Result8 = tmp4(10066);
+                  tmp4(10065).markAdContentSeen(tmp4(5282).AdCreativeType.QUEST, items);
+                  const tmp4Result8 = tmp4(10065);
                 }
               }
               const shouldExtendSessionResult = adUser.shouldExtendSession(item);
               const obj = { type: null };
-              const result = obj2(8738).isBillableQuestContent(adUser.questContent, adUser.entity.adCreativeType);
-              const AdUserActionType = tmp4(10071).AdUserActionType;
+              const result = obj2(8737).isBillableQuestContent(adUser.questContent, adUser.entity.adCreativeType);
+              const AdUserActionType = tmp4(10070).AdUserActionType;
               if (result) {
                 obj.type = AdUserActionType.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION;
                 let tmp13 = obj;
@@ -199,16 +199,16 @@ class QuestContentImpression {
                 const merged1 = Object.assign(obj2);
                 obj3.adCreativeType = adUser.entity.adCreativeType;
                 obj3.adCreativeId = adUser.entity.adContentIds[index];
-                tmp4(10068).captureAdUserAction(obj3);
-                const tmp4Result10 = tmp4(10068);
+                tmp4(10067).captureAdUserAction(obj3);
+                const tmp4Result10 = tmp4(10067);
               } else if (null != adUser.entity.relatedQuestId) {
                 const obj4 = {};
                 const merged2 = Object.assign(obj2);
                 obj4.adCreativeType = adUser.entity.adCreativeType;
                 obj4.adCreativeId = adUser.entity.adContentIds[index];
                 obj4.relatedQuestId = adUser.entity.relatedQuestId;
-                tmp4(10068).captureAdUserAction(obj4);
-                const tmp4Result11 = tmp4(10068);
+                tmp4(10067).captureAdUserAction(obj4);
+                const tmp4Result11 = tmp4(10067);
               } else {
                 const obj6 = {};
                 const merged3 = Object.assign(obj2);
@@ -221,23 +221,23 @@ class QuestContentImpression {
                   obj8 = {};
                 }
                 const merged4 = Object.assign(obj8);
-                tmp4(10068).captureAdUserAction(obj6);
-                const tmp4Result12 = tmp4(10068);
+                tmp4(10067).captureAdUserAction(obj6);
+                const tmp4Result12 = tmp4(10067);
               }
-              const tmp4Result9 = obj2(8738);
-              const questLogger = obj2(8750).getQuestLogger();
-              const tmp4Result13 = obj2(8750);
+              const tmp4Result9 = obj2(8737);
+              const questLogger = obj2(8749).getQuestLogger();
+              const tmp4Result13 = obj2(8749);
               questLogger.info(
                 "" +
                   item +
                   " ad content viewed for at least " +
                   adUser.minViewTimeSeconds +
                   "s at " +
-                  obj2(8768).getQuestContentName(adUser.questContent),
+                  obj2(8767).getQuestContentName(adUser.questContent),
                 { impressionId: adUser.id },
               );
               const obj9 = { impressionId: adUser.id };
-              const tmp4Result14 = obj2(8768);
+              const tmp4Result14 = obj2(8767);
             });
             if (closure_129_0.onImpressionCallback != null) {
               onImpressionCallback();
@@ -372,7 +372,7 @@ class QuestContentImpression {
       const item = adContentIds.forEach((item, index) => {
         const result = closure_1_0.maybeRegisterIosAttributionImpression(
           item,
-          obj2(8738).getAdProvenanceMetadataSealed(closure_1_0.sourceQuestContent, item),
+          obj2(8737).getAdProvenanceMetadataSealed(closure_1_0.sourceQuestContent, item),
         );
         if (closure_1_0.entity.adCreativeType === obj2(5282).AdCreativeType.QUEST) {
           obj2 = {
@@ -388,11 +388,11 @@ class QuestContentImpression {
             noFillDecision: closure_1_0.entity.noFillDecision,
           };
         }
-        const obj = obj2(8738);
-        const tmpResult = obj2(10068);
+        const obj = obj2(8737);
+        const tmpResult = obj2(10067);
         const merged = Object.assign(obj3);
         tmpResult.captureAdUserAction({
-          type: obj2(10071).AdUserActionType.END_CONTENT_LOAD,
+          type: obj2(10070).AdUserActionType.END_CONTENT_LOAD,
           surfaceId: closure_1_0.questContent,
           sourceQuestContent: closure_1_0.sourceQuestContent,
           impressionId: closure_1_0.id,
@@ -402,7 +402,7 @@ class QuestContentImpression {
           questContentRowIndex: closure_1_0.questContentRowIndex,
         });
         const obj4 = {
-          type: obj2(10071).AdUserActionType.END_CONTENT_LOAD,
+          type: obj2(10070).AdUserActionType.END_CONTENT_LOAD,
           surfaceId: closure_1_0.questContent,
           sourceQuestContent: closure_1_0.sourceQuestContent,
           impressionId: closure_1_0.id,

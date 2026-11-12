@@ -71,7 +71,7 @@ function CustomStatusBubble(guildId) {
   let tmp7 = null;
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15354, dependencyMap.paths),
+      asyncRequireImpl(15351, dependencyMap.paths),
       "UserProfileCustomStatusActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -154,7 +154,7 @@ function RemoveGameFriendIconButton(user) {
   items = [channelId, guildId, user];
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15666, dependencyMap.paths),
+      asyncRequireImpl(15663, dependencyMap.paths),
       "UserProfileGameFriendActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -331,8 +331,8 @@ function EditSection(guildId) {
   const obj = guildId(8479);
   items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  dependencyMap = trackUserProfileAction(9968)();
-  closure_3 = trackUserProfileAction(9968)({ guild: stateFromStores });
+  dependencyMap = trackUserProfileAction(9967)();
+  closure_3 = trackUserProfileAction(9967)({ guild: stateFromStores });
   const obj3 = {
     style: tmp3.primaryButtons,
     maxWidth: ACTION_SHEET_MAX_WIDTH,
@@ -341,8 +341,8 @@ function EditSection(guildId) {
   };
   const obj2 = guildId(504);
   const obj4 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
-  const tmp7 = trackUserProfileAction(15591);
-  obj4.icon = closure_19(guildId(10838).PencilIcon, { size: "sm", color: trackUserProfileAction(575).colors.WHITE });
+  const tmp7 = trackUserProfileAction(15588);
+  obj4.icon = closure_19(guildId(10832).PencilIcon, { size: "sm", color: trackUserProfileAction(575).colors.WHITE });
   if (null != stateFromStores) {
     const intl2 = tmp4(1113).intl;
     let stringResult = intl2.string(tmp4(1113).t.HmFaFB);
@@ -362,7 +362,7 @@ function EditSection(guildId) {
   if (null != stateFromStores) {
     const obj6 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj7 = { size: "sm", color: tmp(575).colors.WHITE };
-    obj6.icon = closure_19(tmp4(10838).PencilIcon, obj7);
+    obj6.icon = closure_19(tmp4(10832).PencilIcon, obj7);
     const intl3 = tmp4(1113).intl;
     obj6.text = intl3.string(tmp4(1113).t["PKQB/H"]);
     obj6.onPress = function handleEditGuildProfile() {

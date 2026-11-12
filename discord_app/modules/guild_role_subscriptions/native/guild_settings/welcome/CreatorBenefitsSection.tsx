@@ -123,7 +123,7 @@ function BenefitAvatar(Avatar) {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(17709).CREATOR_REVENUE_SHARE_PERCENTAGE;
+let closure_4 = fn(17704).CREATOR_REVENUE_SHARE_PERCENTAGE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const createStyles = fn(5243);

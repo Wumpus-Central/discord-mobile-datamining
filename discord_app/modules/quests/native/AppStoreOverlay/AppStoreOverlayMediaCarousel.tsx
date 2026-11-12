@@ -162,10 +162,10 @@ function AppStoreOverlayMediaCarouselItem(arg0) {
   const type = media.type;
   if ("screenshot" === type) {
     const obj2 = { media, index, mediaViewerSources, tileSize, recordMediaSize: tmp, onGetGamePress };
-    return closure_1_10(AppStoreOverlayScreenshotItem, obj2);
+    return refs(AppStoreOverlayScreenshotItem, obj2);
   } else if ("trailer" === type) {
     const obj = { media, index, mediaViewerSources, tileSize, onGetGamePress };
-    return closure_1_10(AppStoreOverlayTrailerItem, obj);
+    return refs(AppStoreOverlayTrailerItem, obj);
   }
 }
 get_ActivityIndicator = fn(17);
@@ -419,7 +419,7 @@ export default function AppStoreOverlayMediaCarousel(media) {
       obj.tileSize = AppStoreOverlayMediaSize.getMediaTileSize(value);
       obj.recordMediaSize = recordMediaSize;
       obj.onGetGamePress = onGetGamePress;
-      return closure_2_10(AppStoreOverlayMediaCarouselItem, obj, "" + media.type + "-" + index);
+      return refs(AppStoreOverlayMediaCarouselItem, obj, "" + media.type + "-" + index);
     });
     obj2.children = length(memo1, obj5);
     tmp15 = length(tmp3(tmp4[17]).GestureDetector, obj2);

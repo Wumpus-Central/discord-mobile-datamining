@@ -156,7 +156,7 @@ export default function GuildBoostingSubscribeButton(guild) {
   ];
   jsx = intent.useCallback(() => {
     if (closure_6) {
-      let tmp8 = closure_2_10;
+      let tmp8 = refs;
     } else if (stateFromStores) {
       tmp8 = callback(guild.id, previousGuildSubscriptionSlot);
     } else {

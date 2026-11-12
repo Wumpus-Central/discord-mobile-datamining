@@ -5,7 +5,7 @@ import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 import SettingBlocklistStore from "stores/SettingBlocklistStore.tsx";
 
 const require = fn;
-const NodeType = fn(12318).NodeType;
+const NodeType = fn(12312).NodeType;
 let closure_7 = [];
 const map = new Map();
 const map1 = new Map();

@@ -41,8 +41,8 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           } else {
             let newAnalyticsLoadId = tmp2;
             newAnalyticsLoadId = undefined;
-            newAnalyticsLoadId = args(9618).getNewAnalyticsLoadId();
-            const obj7 = args(9650);
+            newAnalyticsLoadId = args(9617).getNewAnalyticsLoadId();
+            const obj7 = args(9649);
             c3 = 1;
             c4 = 1;
             const obj4 = {

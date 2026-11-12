@@ -138,7 +138,7 @@ export function useBountiesModalVideoAnalytics(bountyId) {
           } else if (1 === tmp8) {
             c4 = 0;
             closure_129_6 = closure_3;
-            const questLogger = closure_0(8750).getQuestLogger();
+            const questLogger = closure_0(8749).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_129_6);
             throw closure_129_6;
           } else if (arg0 === 1) {
@@ -159,9 +159,9 @@ export function useBountiesModalVideoAnalytics(bountyId) {
               sourceQuestContent: null,
             };
             const obj10 = {};
-            const obj9 = closure_0(8759);
-            const merged = Object.assign(closure_0(8768).getContentProperties(VIDEO_MODAL_MOBILE));
-            const merged1 = Object.assign(sourceQuestContent(8715)());
+            const obj9 = closure_0(8758);
+            const merged = Object.assign(closure_0(8767).getContentProperties(VIDEO_MODAL_MOBILE));
+            const merged1 = Object.assign(sourceQuestContent(8714)());
             obj10.impression_id = impressionId;
             obj10.video_watch_seconds = closure_129_0.video_watch_seconds;
             obj10.video_position_seconds = closure_129_0.video_position_seconds;

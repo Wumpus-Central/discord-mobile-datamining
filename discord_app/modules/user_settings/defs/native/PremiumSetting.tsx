@@ -10,7 +10,7 @@ import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx"
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(12317);
+const SettingBuilders = fn(12311);
 const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
     const currentUser = UserStore.getCurrentUser();
@@ -29,7 +29,7 @@ const route = SettingBuilders.createRoute({
     return stringResult;
   },
   parent: null,
-  IconComponent: fn(9369).NitroWheelIcon,
+  IconComponent: fn(9368).NitroWheelIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();

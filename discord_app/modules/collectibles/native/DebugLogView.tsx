@@ -82,11 +82,7 @@ export default function DebugLogView() {
       const items4 = [closure_9(stateFromStores, obj3)];
       const obj8 = {
         children: substr.map((children, index) =>
-          closure_2_10(
-            Text_Text.Text,
-            { variant: "body-xs/normal", style: debugLogText.debugLogText, children },
-            index,
-          ),
+          refs(Text_Text.Text, { variant: "body-xs/normal", style: debugLogText.debugLogText, children }, index),
         ),
       };
       items4[1] = closure_10(closure_4, obj8);

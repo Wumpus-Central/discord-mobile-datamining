@@ -14,10 +14,10 @@ import utils from "../../../content_inventory/utils.tsx";
 import ContentInventoryTraitType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryTraitType.tsx";
 import ContentInventoryEntryType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import useAvatarColor from "../../../avatar/useAvatarColor.tsx";
-import _modDef9274 from "../../../../../_runtime/metro/09274__.js";
+import _modDef9273 from "../../../../../_runtime/metro/09273__.js";
 import useHeroColors from "../../../content_inventory/memberlist/useHeroColors.tsx";
-import _modDef12340 from "../../../../../_runtime/metro/12340__.js";
-import _modDef12341 from "../../../../../_runtime/metro/12341__.js";
+import _modDef12334 from "../../../../../_runtime/metro/12334__.js";
+import _modDef12335 from "../../../../../_runtime/metro/12335__.js";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -99,7 +99,7 @@ export function transformToRowGeneratedContentInventoryEntryComponent(component)
             title: contentInventoryEntry.extra.media_title,
             subtitles: items2,
             gradientColors: tmp47,
-            platformIconUrl: Image.resolveAssetSource(_modDef12340).uri,
+            platformIconUrl: Image.resolveAssetSource(_modDef12334).uri,
           };
           tmp49 = obj4;
           const obj33 = /\w+ (\d+), \w+ (\d+)/;
@@ -131,7 +131,7 @@ export function transformToRowGeneratedContentInventoryEntryComponent(component)
               const intl = util.intl;
               const obj5 = { count };
               const obj6 = {
-                badgeUrl: Image.resolveAssetSource(_modDef9274).uri,
+                badgeUrl: Image.resolveAssetSource(_modDef9273).uri,
                 text: intl.formatToPlainString(util.t.HtifnG, obj5),
               };
               items4.push(obj6);
@@ -140,7 +140,7 @@ export function transformToRowGeneratedContentInventoryEntryComponent(component)
                 title: contentInventoryEntry.extra.artist.name,
                 subtitles: items4,
                 gradientColors: items3,
-                platformIconUrl: Image.resolveAssetSource(_modDef12341).uri,
+                platformIconUrl: Image.resolveAssetSource(_modDef12335).uri,
               };
               tmp30 = obj7;
               const formatToPlainStringResult1 = intl.formatToPlainString(util.t.HtifnG, obj5);
@@ -181,7 +181,7 @@ export function transformToRowGeneratedContentInventoryEntryComponent(component)
             const items6 = [obj9];
             obj8.subtitles = items6;
             obj8.gradientColors = items5;
-            obj8.platformIconUrl = Image.resolveAssetSource(_modDef12341).uri;
+            obj8.platformIconUrl = Image.resolveAssetSource(_modDef12335).uri;
             tmp25 = obj8;
             const tmpResult41 = ColorUtils;
           }
@@ -307,7 +307,7 @@ export function transformToRowGeneratedContentInventoryEntryComponent(component)
           const obj18 = { badgeUrl: null, text: null };
           const combined =
             "" + intl2.string(util.t["/50eHi"]) + " - " + intl3.formatToPlainString(util.t.C0AxoR, obj17);
-          obj18.badgeUrl = Image.resolveAssetSource(_modDef9274).uri;
+          obj18.badgeUrl = Image.resolveAssetSource(_modDef9273).uri;
           obj18.text = combined;
           items10.push(obj18);
           const stringResult = intl2.string(util.t["/50eHi"]);

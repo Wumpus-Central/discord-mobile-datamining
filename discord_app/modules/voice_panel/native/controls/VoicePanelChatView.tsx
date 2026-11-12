@@ -4,7 +4,7 @@ import _mod1652 from "../../../../../_runtime/metro/01652__.js";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import ThemedGradientDefault from "../../../client_themes/native/ThemedGradient.tsx";
-import _modDef10804 from "../../../../../_runtime/metro/10804__.js";
+import _modDef10798 from "../../../../../_runtime/metro/10798__.js";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import ChatFloatingNavButtonDefault from "../../../chat_input/native/ChatFloatingNavButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ const _modDef1652 = _mod1652;
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(11923).CONTROLS_DRAWER_HEADER_SIZE;
+const CONTROLS_DRAWER_HEADER_SIZE = fn(11917).CONTROLS_DRAWER_HEADER_SIZE;
 const Constants = fn(1072);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
@@ -56,7 +56,7 @@ const memoResult = noop.memo(function VoicePanelDismissChatButton() {
   const obj = { accessibilityLabel: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["5MstTl"]);
-  obj.icon = _modDef10804;
+  obj.icon = _modDef10798;
   obj.onPress = callback;
   return timestampProducer(ChatFloatingNavButtonDefault, obj);
 });

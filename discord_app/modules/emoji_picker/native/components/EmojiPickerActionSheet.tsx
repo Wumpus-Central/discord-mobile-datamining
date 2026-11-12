@@ -14,7 +14,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(9480).EmojiPickerSource;
+const EmojiPickerSource = fn(9479).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1072).EXPRESSION_FOOTER_HEIGHT;
 let EmojiIntention = fn(1388).EmojiIntention;
 const jsxProd = fn(21);
@@ -168,11 +168,11 @@ export default function EmojiPickerActionSheet(onClose) {
       const obj2 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t.wHTk2C);
-      items = [closure_2_10(Text_Text.Text, obj2)];
+      items = [refs(Text_Text.Text, obj2)];
       const obj3 = { variant: "body-sm/medium", color: "text-muted", children: null };
       const intl2 = util.intl;
       obj3.children = intl2.string(util.t.VrWSNn);
-      items[1] = closure_2_10(Text_Text.Text, obj3);
+      items[1] = refs(Text_Text.Text, obj3);
       obj.children = items;
       tmp = closure_2_11(View, obj);
     }
@@ -197,7 +197,7 @@ export default function EmojiPickerActionSheet(onClose) {
       onChange: handleTextChange,
       placeholder: EmojiPickerUtils.getSearchPlaceholder(pickerIntention, currentUser),
     };
-    const items2 = [closure_2_10(Search_SearchBar.SearchBar, obj3)];
+    const items2 = [refs(Search_SearchBar.SearchBar, obj3)];
     let tmp4Result = pickerIntention === EmojiIntention.REACTION;
     if (tmp4Result) {
       tmp4Result = source !== EmojiPickerSource.NOTIFICATION;
@@ -222,7 +222,7 @@ export default function EmojiPickerActionSheet(onClose) {
         },
         isActive: currentUser,
       };
-      tmp4Result = closure_2_10(BurstReactionToggleDefault, obj5);
+      tmp4Result = refs(BurstReactionToggleDefault, obj5);
     }
     items2[1] = tmp4Result;
     obj2.children = items2;

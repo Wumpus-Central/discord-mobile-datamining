@@ -61,7 +61,7 @@ function refreshUntilBotJoins(arg0, arg1) {
                           closure_0 = closure_1_0;
                           closure_1 = tmp7 - 1;
                           let _setTimeout = setTimeout;
-                          let timerId = setTimeout(/* F105453 */ function() { ... }, 1500);
+                          let timerId = setTimeout(/* F105460 */ function() { ... }, 1500);
                         }
                         let obj = closure_2_0(closure_2_2[12]);
                       }

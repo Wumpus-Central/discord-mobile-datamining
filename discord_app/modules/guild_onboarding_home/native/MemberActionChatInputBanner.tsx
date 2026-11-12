@@ -9,10 +9,10 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildOnboardingHomeTypes from "../GuildOnboardingHomeTypes.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef13956 from "../../../../_runtime/metro/13956__.js";
-import _modDef14574 from "../../../../_runtime/metro/14574__.js";
+import _modDef13952 from "../../../../_runtime/metro/13952__.js";
+import _modDef14570 from "../../../../_runtime/metro/14570__.js";
 import MemberActionUtils from "../MemberActionUtils.tsx";
-import _modDef14577 from "../../../../_runtime/metro/14577__.js";
+import _modDef14573 from "../../../../_runtime/metro/14573__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -48,7 +48,7 @@ function ChannelActionEmoji(emoji) {
   const tmp = closure_15();
   const obj = {
     style: tmp.emojiPlaceholder,
-    children: closure_12(id(1187).Icon, { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13956 }),
+    children: closure_12(id(1187).Icon, { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13952 }),
   };
   const tmp6 = closure_12(View, obj);
   id = undefined;
@@ -58,7 +58,7 @@ function ChannelActionEmoji(emoji) {
   if (emoji != null) {
     const name = emoji.name;
   }
-  const obj2 = { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13956 };
+  const obj2 = { size: id(1187).Icon.Sizes.REFRESH_SMALL_16, source: _modDef13952 };
   items = [EmojiStore];
   const items1 = [id];
   const stateFromStores = id(563).useStateFromStores(
@@ -296,7 +296,7 @@ function MemberActionChatInputBanner(channel) {
         items[1] = state(View, obj3);
         let tmp6Result = c3;
         if (c3) {
-          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef14577 };
+          const obj6 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef14573 };
           tmp6Result = application_id(native.Icon, obj6);
         }
         items[2] = tmp6Result;
@@ -354,7 +354,7 @@ function MemberActionChatInputBanner(channel) {
             obj3.children = items1;
             items[1] = state(View, obj3);
             const obj7 = { style: _undefined.circle, children: null };
-            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef14574 };
+            const obj8 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: _undefined.icon, source: _modDef14570 };
             obj7.children = application_id(native.Icon, obj8);
             items[2] = application_id(View, obj7);
             obj.children = items;

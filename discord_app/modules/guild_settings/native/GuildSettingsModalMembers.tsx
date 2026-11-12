@@ -25,7 +25,7 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1072).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let items = [fn(10180).AutocompleterResultTypes.USER];
+let items = [fn(10178).AutocompleterResultTypes.USER];
 const createStyles = fn(5243);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 },
@@ -104,7 +104,7 @@ let closure_20 = noop.memo(function GuildSettingsModalMember(guild) {
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_15(guildMember(10866), obj4);
+    return closure_15(guildMember(10860), obj4);
   }
   const obj = guild(1499);
 });

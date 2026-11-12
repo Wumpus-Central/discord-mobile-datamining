@@ -251,15 +251,14 @@ export default function useFractionalPremiumInfo() {
     let tmp10 = null != stateFromStores;
     if (tmp10) {
       const applicationIdsFetching = EntitlementStore.applicationIdsFetching;
-      tmp10 = !applicationIdsFetching.has(closure_2_10);
+      tmp10 = !applicationIdsFetching.has(refs);
     }
     if (tmp10) {
       const applicationIdsFetched = EntitlementStore.applicationIdsFetched;
-      tmp10 = !applicationIdsFetched.has(closure_2_10);
+      tmp10 = !applicationIdsFetched.has(refs);
     }
     if (tmp10) {
-      const userEntitlementsForApplication =
-        EntitlementActionCreators.fetchUserEntitlementsForApplication(closure_2_10);
+      const userEntitlementsForApplication = EntitlementActionCreators.fetchUserEntitlementsForApplication(refs);
     }
   });
   const items5 = [

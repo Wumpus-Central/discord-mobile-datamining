@@ -78,7 +78,7 @@ export default function Overview() {
   let obj4 = { style: tmp.containerInner, children: null };
   const callback = noop.useCallback(
     () =>
-      closure_2_10(closure_2_11, {
+      refs(closure_2_11, {
         children: stateFromStores.map((item) => {
           if (item === constants.CAPTCHA) {
             let obj = { text: null, onPress: null, grow: true };

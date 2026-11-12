@@ -4,7 +4,7 @@ import _modDef1652 from "../../../../_runtime/metro/01652__.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
-import _modDef10258 from "../../../../_runtime/metro/10258__.js";
+import _modDef10256 from "../../../../_runtime/metro/10256__.js";
 import usePressabilityDefault from "../../core/native/usePressability.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
@@ -17,10 +17,10 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildsBarConstants = fn(18911);
+const GuildsBarConstants = fn(18906);
 ({ GUILD_ITEM_HIT_SLOP: metroImportDefault, useGuildWrapperSize: closure_8 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1072).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(9964).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(9963).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const createStyles = fn(5243);
@@ -142,7 +142,7 @@ export default noop.memo(function GuildsBarEmptyNUX() {
   const obj11 = { style: tmp5.icon, source: null, resizeMode: "contain" };
   const obj7 = require("../../../../_runtime/metro/01652__.js");
   const obj8 = { onPress: handlePress };
-  obj11.source = _modDef10258;
+  obj11.source = _modDef10256;
   items6[1] = closure_11(FastImageDefault, obj11);
   const obj12 = {
     style: tmp5.guildIndicator,
@@ -168,7 +168,7 @@ export default noop.memo(function GuildsBarEmptyNUX() {
     const intl2 = tmp(1113).intl;
     obj17.children = intl2.string(tmp(1113).t["3S2xmm"]);
     obj16.title = closure_11(tmp(5866).Text, obj17);
-    obj15.children = closure_11(tmp(18935).HomeDrawerSharedItem, obj16);
+    obj15.children = closure_11(tmp(18930).HomeDrawerSharedItem, obj16);
     tmp21Result = closure_11(tmp3(7656), obj15);
     const tmp3Result4 = tmp3(7656);
   }

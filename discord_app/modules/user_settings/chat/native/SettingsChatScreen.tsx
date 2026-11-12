@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import _modDef11308 from "../../../../../_runtime/metro/11308__.js";
+import _modDef11302 from "../../../../../_runtime/metro/11302__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -33,7 +33,7 @@ function VideoUploadQualityNitroUpsell() {
     const obj6 = { style: tmp3.cardContent, children: null };
     const obj7 = {
       style: tmp3.cardIcon,
-      source: _modDef11308,
+      source: _modDef11302,
       size: tmp(1187).Icon.Sizes.SMALL,
       color: nativeDefault.unsafe_rawColors.PRIMARY_400,
     };
@@ -57,7 +57,7 @@ function VideoUploadQualityNitroUpsell() {
   return closure_10(View, { children });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(9136).MobileUserSettings;
+const MobileUserSettings = fn(9135).MobileUserSettings;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);

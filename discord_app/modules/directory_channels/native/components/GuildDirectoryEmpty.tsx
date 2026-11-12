@@ -53,13 +53,13 @@ export default function GuildDirectoryEmpty(guild) {
   const obj = guild(504);
   const obj3 = { contentContainerStyle: null, children: null };
   const items1 = [tmp.container];
-  const obj2 = guild(14595);
+  const obj2 = guild(14591);
   items1[1] = { paddingBottom: channel(1627)().bottom + 16 };
   obj3.contentContainerStyle = items1;
   const canCreateOrAddGuildInDirectory = obj2.useCanCreateOrAddGuildInDirectory(channel);
   const obj5 = { source: null, style: null };
   const obj4 = { paddingBottom: channel(1627)().bottom + 16 };
-  obj5.source = channel(15009);
+  obj5.source = channel(15005);
   obj5.style = tmp.header;
   const items2 = [closure_6(channel(5957), obj5), , , ,];
   const obj6 = { style: tmp.title, accessibilityRole: "header", children: null };
@@ -81,7 +81,7 @@ export default function GuildDirectoryEmpty(guild) {
           directoryChannelId: channel.id,
         });
       },
-      iconSource: tmp2(15010),
+      iconSource: tmp2(15006),
       title: null,
     };
     const intl3 = tmp4(1113).intl;
@@ -99,7 +99,7 @@ export default function GuildDirectoryEmpty(guild) {
         constants.HUB_EMPTY_STATE,
       );
     },
-    iconSource: channel(15011),
+    iconSource: channel(15007),
     title: null,
   };
   const intl4 = tmp4(1113).intl;

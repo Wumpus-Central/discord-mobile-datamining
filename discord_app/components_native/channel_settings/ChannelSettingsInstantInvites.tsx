@@ -11,9 +11,9 @@ const require = globalThis.__r;
 const InstantInviteDefault = InstantInvite;
 
 const FastestListDefault = tmp2(7764);
-const _modDef10874 = tmp2(10874);
-const _modDef10875 = tmp2(10875);
-const InstantInviteSelfMeasurerDefault = tmp2(19495);
+const _modDef10868 = tmp2(10868);
+const _modDef10869 = tmp2(10869);
+const InstantInviteSelfMeasurerDefault = tmp2(19490);
 require = fn;
 const View = fn(17).View;
 const ChannelSettingsSections = fn(1072).ChannelSettingsSections;
@@ -117,7 +117,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items7);
   if (!loading) {
     if (0 === memo1.length) {
-      const obj5 = { lightSource: _modDef10874, darkSource: _modDef10875, title: null, body: null };
+      const obj5 = { lightSource: _modDef10868, darkSource: _modDef10869, title: null, body: null };
       const intl = tmpResult(1113).intl;
       obj5.title = intl.string(tmpResult(1113).t["+nLJkZ"]);
       const intl2 = tmpResult(1113).intl;

@@ -4,7 +4,7 @@ import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import FastImageDefault from "FastImage.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
 import GuildIcon from "../../modules/guild/native/GuildIcon.tsx";
-import _modDef10849 from "../../../_runtime/metro/10849__.js";
+import _modDef10843 from "../../../_runtime/metro/10843__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -129,7 +129,7 @@ export default function IconUploader(disabled) {
   const items1 = [tmp8];
   let tmp17 = null;
   if (!flag) {
-    let obj5 = { style: tmp.uploadIcon, source: _modDef10849 };
+    let obj5 = { style: tmp.uploadIcon, source: _modDef10843 };
     tmp17 = closure_7(FastImageDefault, obj5);
   }
   items1[1] = tmp17;

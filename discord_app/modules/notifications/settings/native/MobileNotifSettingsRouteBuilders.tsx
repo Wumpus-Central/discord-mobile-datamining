@@ -26,6 +26,7 @@ export function buildCategoryCallsMessagesSettingsSection() {
     MobileNotifSettings.MobileNotifSettings.NOTIF_CALLS,
     MobileNotifSettings.MobileNotifSettings.NOTIF_MISSED_MESSAGES_LOW,
     MobileNotifSettings.MobileNotifSettings.NOTIF_MISSED_MESSAGES_DEFAULT,
+    MobileNotifSettings.MobileNotifSettings.NOTIF_SUMMARY_REMINDER,
     MobileNotifSettings.MobileNotifSettings.NOTIF_REACTIONS_CHOICE_ROUTE,
   ];
   obj.settings = items;
@@ -75,6 +76,7 @@ export function buildCategoryServersSettingsSection() {
   const obj = { settings: null };
   items = [
     MobileNotifSettings.MobileNotifSettings.NOTIF_GUILD_EVENT_NOTIFICATIONS,
+    MobileNotifSettings.MobileNotifSettings.NOTIF_UPCOMING_SERVER_EVENT,
     MobileNotifSettings.MobileNotifSettings.NOTIF_FORUM_NOTIFICATIONS,
     MobileNotifSettings.MobileNotifSettings.NOTIF_OTHER_GUILD,
     MobileNotifSettings.MobileNotifSettings.NOTIF_SAFETY_ALERTS,

@@ -842,8 +842,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      nonce = onMessageSuccess(8786).createNonce();
-      let obj2 = onMessageSuccess(8786);
+      nonce = onMessageSuccess(8785).createNonce();
+      let obj2 = onMessageSuccess(8785);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -919,8 +919,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     }
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
-    const obj10 = { type: onMessageSuccess(8950).MessageDataType.COMMAND, message };
-    message(8950).enqueue(obj10, (ok) => {
+    const obj10 = { type: onMessageSuccess(8949).MessageDataType.COMMAND, message };
+    message(8949).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -941,7 +941,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       }
       const obj = onMessageSuccess(dependencyMap[27]);
     });
-    const obj6 = message(8950);
+    const obj6 = message(8949);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -1290,14 +1290,14 @@ let closure_24 = async function _stageAttachments(arg0) {
             }
             const intl = closure_0(1113).intl;
             const obj2 = { maxSize: null };
-            const obj = closure_2(11341);
-            obj2.maxSize = closure_0(8809).sizeString(dependencyMap);
+            const obj = closure_2(11335);
+            obj2.maxSize = closure_0(8808).sizeString(dependencyMap);
             obj.setFailed(
               closure_1_1,
               constants.ENTITY_TOO_LARGE,
               intl.formatToPlainString(closure_0(1113).t.fxEKdS, obj2),
             );
-            const obj3 = closure_0(8809);
+            const obj3 = closure_0(8808);
           };
           const obj11 = UploadLimits;
           effectiveUploadLimit = obj11.getEffectiveUploadLimit(FileUtils.maxFileSize(closure_2));

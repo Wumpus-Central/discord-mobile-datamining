@@ -182,7 +182,7 @@ export default function VoicePanelUserSheet(userId) {
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   const obj4 = channelId(504);
   const name = channelId(6288).useName(guildId, channelId, stateFromStores);
-  const live = userId(15645)(userId).live;
+  const live = userId(15642)(userId).live;
   closure_5 = tmp8;
   const items3 = [null == stateFromStores || null == stateFromStores1 || null == stateFromStores2];
   const effect = stateFromStores.useEffect(() => {
@@ -195,8 +195,8 @@ export default function VoicePanelUserSheet(userId) {
       if (null != stateFromStores2) {
         const avatarURL = stateFromStores.getAvatarURL(guildId, 48, false);
         if (null != avatarURL) {
-          const cachedSourceFromURI = channelId(9450).getCachedSourceFromURI(avatarURL);
-          const tmp2Result = channelId(9450);
+          const cachedSourceFromURI = channelId(9449).getCachedSourceFromURI(avatarURL);
+          const tmp2Result = channelId(9449);
         }
         const avatarDecoration = stateFromStores.avatarDecoration;
         const obj2 = { style: tmp.wrapper, children: null };
@@ -226,7 +226,7 @@ export default function VoicePanelUserSheet(userId) {
             if (application_id == null) {
               application_id = index;
             }
-            return closure_2_10(
+            return refs(
               UserProfileActivity.ActivityCard,
               { user: stateFromStores, currentUser: stateFromStores2, activity, style: card.card },
               application_id,
@@ -239,7 +239,7 @@ export default function VoicePanelUserSheet(userId) {
           currentUser: stateFromStores2,
           style: tmp.card,
         };
-        items6[2] = closure_10(tmp7(15648), obj12);
+        items6[2] = closure_10(tmp7(15645), obj12);
         obj2.children = items6;
         obj9.children = closure_11(stateFromStores2, obj2);
         return closure_10(channelId(5503).BottomSheet, obj9);

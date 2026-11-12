@@ -6,7 +6,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod17175 from "../../../../../../_runtime/metro/17175__.js";
+import _mod17170 from "../../../../../../_runtime/metro/17170__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -145,9 +145,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(17163).close();
+              setError(17158).close();
               c4 = 0;
-              const obj = setError(17163);
+              const obj = setError(17158);
             }
             c4 = 0;
             c6 = 3;
@@ -185,7 +185,7 @@ export default function TwoFASetupSuccess() {
   let obj3 = { source: null, style: null };
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  obj3.source = _mod17175;
+  obj3.source = _mod17170;
   obj3.style = tmp.image;
   items[1] = closure_7(FastImageDefault, obj3);
   let obj4 = { style: tmp.success, variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };

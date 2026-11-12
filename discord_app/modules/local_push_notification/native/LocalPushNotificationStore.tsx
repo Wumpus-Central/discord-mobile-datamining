@@ -38,11 +38,11 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
               set.add(userInfo);
             }
           }
-          const result = closure_1_1(12830).cancelLocalNotifications(userInfo);
-          const obj = closure_1_1(12830);
-          const result1 = closure_1_1(12830).cancelLocalNotifications(userInfo);
+          const result = closure_1_1(12824).cancelLocalNotifications(userInfo);
+          const obj = closure_1_1(12824);
+          const result1 = closure_1_1(12824).cancelLocalNotifications(userInfo);
           set.delete(userInfo);
-          const obj2 = closure_1_1(12830);
+          const obj2 = closure_1_1(12824);
         }
       });
     });

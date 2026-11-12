@@ -54,13 +54,13 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
         onPress() {
           if (label.key === constants2.REMOVE) {
             closure_3.current = false;
-            returnFocusRef(5489).hideActionSheet(label(12037).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+            returnFocusRef(5489).hideActionSheet(label(12031).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
             let obj = returnFocusRef(5489);
             const obj3 = {
               widgetName: header,
               onConfirm() {
-                const result = profileEditAnalyticsOptions(12029).removeWidgetFromPending(profileEditAnalyticsOptions);
-                const obj = profileEditAnalyticsOptions(12029);
+                const result = profileEditAnalyticsOptions(12023).removeWidgetFromPending(profileEditAnalyticsOptions);
+                const obj = profileEditAnalyticsOptions(12023);
                 const obj2 = profileEditAnalyticsOptions(8480);
                 const merged = Object.assign(profileEditAnalyticsOptions.getProfileEditAnalyticsOptions());
                 const result1 = obj2.trackUserProfileEditAction({
@@ -75,8 +75,8 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
                 return profileEditAnalyticsOptions(6268).setAccessibilityFocus({ ref, delay: 100 });
               },
             };
-            label(12039).confirmRemoveWidget(obj3);
-            let obj2 = label(12039);
+            label(12033).confirmRemoveWidget(obj3);
+            let obj2 = label(12033);
           }
         },
       };
@@ -89,14 +89,14 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
           onPress() {
             if (label.key === constants2.REMOVE) {
               closure_3.current = false;
-              returnFocusRef(5489).hideActionSheet(label(12037).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+              returnFocusRef(5489).hideActionSheet(label(12031).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
               let obj = returnFocusRef(5489);
               const obj3 = {
                 widgetName: header,
                 onConfirm() {
                   const result =
-                    profileEditAnalyticsOptions(12029).removeWidgetFromPending(profileEditAnalyticsOptions);
-                  const obj = profileEditAnalyticsOptions(12029);
+                    profileEditAnalyticsOptions(12023).removeWidgetFromPending(profileEditAnalyticsOptions);
+                  const obj = profileEditAnalyticsOptions(12023);
                   const obj2 = profileEditAnalyticsOptions(8480);
                   const merged = Object.assign(profileEditAnalyticsOptions.getProfileEditAnalyticsOptions());
                   const result1 = obj2.trackUserProfileEditAction({
@@ -111,8 +111,8 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
                   return profileEditAnalyticsOptions(6268).setAccessibilityFocus({ ref, delay: 100 });
                 },
               };
-              label(12039).confirmRemoveWidget(obj3);
-              let obj2 = label(12039);
+              label(12033).confirmRemoveWidget(obj3);
+              let obj2 = label(12033);
             }
           },
         },

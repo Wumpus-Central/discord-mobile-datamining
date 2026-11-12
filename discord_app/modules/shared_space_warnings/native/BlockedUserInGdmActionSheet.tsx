@@ -25,14 +25,14 @@ function getUserCalloutRowText(arg0) {
           variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19),
         };
-        return closure_2_10(Text_Text.Text, obj);
+        return refs(Text_Text.Text, obj);
       },
       usernameHook2() {
         const obj = {
           variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17),
         };
-        return closure_2_10(Text_Text.Text, obj);
+        return refs(Text_Text.Text, obj);
       },
       numberOfOtherUsers: totalUsers - calledOutUserIds.length,
     };
@@ -45,14 +45,14 @@ function getUserCalloutRowText(arg0) {
           variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19),
         };
-        return closure_2_10(Text_Text.Text, obj);
+        return refs(Text_Text.Text, obj);
       },
       usernameHook2() {
         const obj = {
           variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17),
         };
-        return closure_2_10(Text_Text.Text, obj);
+        return refs(Text_Text.Text, obj);
       },
     };
     formatResult = intl3.format(util.t["67ZE+9"], obj3);
@@ -64,14 +64,14 @@ function getUserCalloutRowText(arg0) {
           variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19),
         };
-        return closure_2_10(Text_Text.Text, obj);
+        return refs(Text_Text.Text, obj);
       },
       usernameHook2() {
         const obj = {
           variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17),
         };
-        return closure_2_10(Text_Text.Text, obj);
+        return refs(Text_Text.Text, obj);
       },
     };
     formatResult = intl2.format(util.t.veV4IN, obj4);
@@ -83,7 +83,7 @@ function getUserCalloutRowText(arg0) {
           variant: "body-md/semibold",
           children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19),
         };
-        return closure_2_10(Text_Text.Text, obj);
+        return refs(Text_Text.Text, obj);
       },
     };
     formatResult = intl.format(util.t["4WHCtq"], obj);
@@ -111,11 +111,11 @@ function UserCalloutAvatars(userIds) {
       obj3.size = REFRESH_MEDIUM_32;
       let tmp6 = closure_10(tmp(1187).Avatar, obj3);
     } else {
-      tmp6 = closure_10(tmp(10486).UserIcon, {});
+      tmp6 = closure_10(tmp(10484).UserIcon, {});
     }
   } else {
     const obj4 = { users: found, size: tmp(1187).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_10(tmp(10828).FacepileGroupDMAvatar, obj4);
+    return closure_10(tmp(10822).FacepileGroupDMAvatar, obj4);
   }
   const obj = userIds(504);
 }
@@ -157,7 +157,7 @@ function BlockedUserInGDMDescription(arg0) {
   }
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(16122);
+const SharedSpaceWarningConstants = fn(16117);
 ({ BlockWarningEngagements: metroImportDefault, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
@@ -251,8 +251,8 @@ export default function BlockedUserInGdmActionSheet(channelId) {
       hasIcons: true,
       children: items1.map((item, index) => {
         ({ icon, label } = item);
-        const obj = { icon: closure_2_10(View, { style: icon.icon, children: icon }), label };
-        return closure_2_10(TableRow.TableRow, obj, index);
+        const obj = { icon: refs(View, { style: icon.icon, children: icon }), label };
+        return refs(TableRow.TableRow, obj, index);
       }),
     };
     obj13.children = closure_10(tmp7(tmp8[23]).TableRowGroup, obj14);

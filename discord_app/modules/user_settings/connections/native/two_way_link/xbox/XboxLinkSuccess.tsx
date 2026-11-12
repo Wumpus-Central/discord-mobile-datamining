@@ -75,7 +75,7 @@ export default function XboxLinkDiscordSuccess() {
       if (obj.isAndroid()) {
         openURL(React6);
       } else {
-        openURL(closure_2_10);
+        openURL(refs);
       }
       obj = PlatformUtils;
     }

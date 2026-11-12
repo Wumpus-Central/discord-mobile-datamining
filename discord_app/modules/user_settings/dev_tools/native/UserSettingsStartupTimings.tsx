@@ -108,9 +108,9 @@ export default function UserSettingsStartupTimings() {
             return obj6;
           } else {
             closure_128_0 = value;
-            closure_128_1 = tmp5(11047)(closure_128_0);
+            closure_128_1 = tmp5(11041)(closure_128_0);
             const obj7 = { message: closure_128_1 };
-            tmp2(10163).showShareActionSheet(obj7, "Startup Timing");
+            tmp2(10161).showShareActionSheet(obj7, "Startup Timing");
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -221,7 +221,7 @@ export default function UserSettingsStartupTimings() {
     obj20.children = items9;
     items2[7] = React6(Code, obj20);
     obj19.children = items2;
-    obj18.label = React6(closure_2_10, obj19);
+    obj18.label = React6(refs, obj19);
     obj17.children = React5(TableRow.TableRow, obj18);
     items[1] = React5(TableRowGroup.TableRowGroup, obj17);
     const obj21 = { title: "Legend", hasIcons: false, children: null };
@@ -236,7 +236,7 @@ export default function UserSettingsStartupTimings() {
       React5(Code, { children: "\u{1F310} - Socket Event" }),
     ];
     obj23.children = items10;
-    obj22.label = React6(closure_2_10, obj23);
+    obj22.label = React6(refs, obj23);
     obj21.children = React5(TableRow.TableRow, obj22);
     items[2] = React5(TableRowGroup.TableRowGroup, obj21);
     const obj24 = { title: "Detailed Times", hasIcons: false, children: null };
@@ -272,7 +272,7 @@ export default function UserSettingsStartupTimings() {
     obj.children = items;
     const items12 = [React6(Stack_Stack.Stack, obj), React5(View, { style: border.border })];
     obj16.children = items12;
-    return React6(closure_2_10, obj16);
+    return React6(refs, obj16);
   };
   obj5.data = memo;
   obj5.renderItem = function renderItem(children) {

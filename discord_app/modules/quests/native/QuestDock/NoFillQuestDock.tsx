@@ -8,7 +8,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 const createStyles = fn(5243);
 let closure_4 = createStyles.createStyles({
-  placeholder: { position: "absolute", left: 0, right: 0, height: fn(17585).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 },
+  placeholder: { position: "absolute", left: 0, right: 0, height: fn(17580).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 },
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/NoFillQuestDock.tsx");
@@ -25,7 +25,7 @@ export default function NoFillQuestDock(noFillDecision) {
       accessibilityElementsHidden: "no-hide-descendants",
       importantForAccessibility: "none",
       pointerEvents: null,
-      style: "DeclarationList",
+      style: "isCertain",
     };
     items = [tmp.placeholder];
     const obj3 = { bottom: youBarTotalHeight - 1 };
@@ -37,7 +37,7 @@ export default function NoFillQuestDock(noFillDecision) {
         accessibilityElementsHidden="no-hide-descendants"
         importantForAccessibility="none"
         pointerEvents={null}
-        style="DeclarationList"
+        style="isCertain"
       />
     );
   } else {

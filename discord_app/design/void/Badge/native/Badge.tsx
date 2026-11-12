@@ -156,7 +156,7 @@ const obj6 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFIC
 obj2.lowImportanceMention = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 const obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj2.eventsMentionBadge = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
-let closure_10 = createStyles.createStyles(obj2);
+const refs = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("design/void/Badge/native/Badge.tsx");
 

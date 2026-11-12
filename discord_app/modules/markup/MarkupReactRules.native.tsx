@@ -46,7 +46,7 @@ class MarkupText {
     tmp3 = closure_0;
     tmp4 = closure_2;
     if (closure_3.useContext(closure_0(closure_2[10]).SpoilerHiddenContext)) {
-      obj = { style: null, onPress: "paddingHorizontal", onLongPress: "useState", accessibilityRole: "Text" };
+      obj = { style: null, onPress: "match", onLongPress: "ti", accessibilityRole: "__esModule" };
       items = [,];
       items[0] = merged.style;
       tmp5 = closure_14;
@@ -103,7 +103,7 @@ function MarkupLink(arg0) {
             return LinkingDefault.openURL(formatResult);
           },
           trusted() {
-            return node(12494).isLinkTrusted(formatResult);
+            return node(12488).isLinkTrusted(formatResult);
           },
         };
         node(7587).handleClick(obj);
@@ -139,7 +139,7 @@ function MarkupLink(arg0) {
   let obj3 = {};
   const merged = Object.assign(state);
   obj3.inLink = true;
-  obj.children = node(9289).smartOutput(node, output, obj3);
+  obj.children = node(9288).smartOutput(node, output, obj3);
   return closure_12(MarkupText, obj, state.key);
 }
 function MarkupMention(styles) {
@@ -228,13 +228,13 @@ function MarkupMention(styles) {
           const obj5 = ActionSheetActionCreatorsDefault;
           const obj3 = { guildId: null, roleId: null, channelId: null };
           ({ guildId: obj6.guildId, roleId: obj6.roleId, channelId: obj6.channelId } = node);
-          obj5.openLazy(asyncRequireImpl(12435, dependencyMap.paths), "RoleMembersActionSheet", obj3, "stack");
+          obj5.openLazy(asyncRequireImpl(12429, dependencyMap.paths), "RoleMembersActionSheet", obj3, "stack");
         }
       }
       if ("@everyone" === node.roleName) {
         if (null != node.guildId) {
           const obj2 = ActionSheetActionCreatorsDefault;
-          const tmp12 = asyncRequireImpl(12435, dependencyMap.paths);
+          const tmp12 = asyncRequireImpl(12429, dependencyMap.paths);
           const obj8 = {
             guildId: node.guildId,
             roleId: SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(node.guildId),
@@ -348,7 +348,7 @@ function MarkupInlineCode(arg0) {
   }
   obj2.onPress = fn;
   tmp3 = closure_16();
-  obj2.children = node(9289).smartOutput(node, output, state);
+  obj2.children = node(9288).smartOutput(node, output, state);
   return closure_12(MarkupText, obj2, state.key);
 }
 function MarkupCodeBlock(state) {
@@ -467,7 +467,7 @@ function MarkupChannelMention(state) {
   items = [outputResult, ,];
   if (null == node.inContent) {
     items[1] = null;
-    items[2] = tmp4(9289).smartOutput(node, output, obj);
+    items[2] = tmp4(9288).smartOutput(node, output, obj);
     obj2.children = items;
     const tmp3Result = closure_13(state(5866).Text, obj2, state.key);
     let tmp14Result = tmp3Result;
@@ -538,7 +538,7 @@ function MarkupChannelMention(state) {
       size = fontScale < 2 ? { width: 12, height: 12 } : { width: 16, height: 16 };
     }
     obj6.style = size;
-    obj6.source = node(12393);
+    obj6.source = node(12387);
     obj6.size = tmp4(1187).Icon.Sizes.CUSTOM;
     closure_12(tmp4(1187).ThemedIcon, obj6);
   }
@@ -548,7 +548,7 @@ function MarkupStaticRouteLink(state) {
   const node = state.node;
   ({ output, styles, variants } = state);
   let tmp = closure_16();
-  let SignPostIcon = state(16159).SignPostIcon;
+  let SignPostIcon = state(16154).SignPostIcon;
   const channelId = node.channelId;
   if (StaticChannelId.GUILD_HOME !== channelId) {
     if (StaticChannelId.SERVER_GUIDE !== channelId) {
@@ -559,7 +559,7 @@ function MarkupStaticRouteLink(state) {
           }
         }
       }
-      SignPostIcon = tmp2(16161).ChannelListMagnifyingGlassIcon;
+      SignPostIcon = tmp2(16156).ChannelListMagnifyingGlassIcon;
     }
     let str = "button";
     if (state.noStyleAndInteraction) {
@@ -583,7 +583,7 @@ function MarkupStaticRouteLink(state) {
     }
     obj3.size = str3;
     obj2.children = closure_12(SignPostIcon, obj3);
-    items = [closure_12(closure_6, obj2), tmp2(9289).smartOutput(node, output, state)];
+    items = [closure_12(closure_6, obj2), tmp2(9288).smartOutput(node, output, state)];
     obj.children = items;
     const tmp5Result = closure_13(tmp2(5866).Text, obj, state.key);
     if (state.disablePressableChannelMention) {
@@ -627,9 +627,9 @@ function MarkupStaticRouteLink(state) {
       }
       return tmp7Result;
     }
-    const tmp2Result = tmp2(9289);
+    const tmp2Result = tmp2(9288);
   }
-  SignPostIcon = tmp2(16159).SignPostIcon;
+  SignPostIcon = tmp2(16154).SignPostIcon;
 }
 function MarkupAttachmentLink(state) {
   state = state.state;
@@ -645,7 +645,7 @@ function MarkupAttachmentLink(state) {
     str2 = "body-xs/medium";
   }
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
-  const obj2 = { themedColor: node(575).colors.MENTION_FOREGROUND, source: node(16163), size: null };
+  const obj2 = { themedColor: node(575).colors.MENTION_FOREGROUND, source: node(16158), size: null };
   const fontScale = closure_4.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1187).Icon.Sizes.EXTRA_SMALL_10;
@@ -655,7 +655,7 @@ function MarkupAttachmentLink(state) {
     SMALL = tmp3(1187).Icon.Sizes.SMALL;
   }
   obj2.size = SMALL;
-  items = [closure_12(state(1187).ThemedIcon, obj2), state(9289).smartOutput(node, output, state)];
+  items = [closure_12(state(1187).ThemedIcon, obj2), state(9288).smartOutput(node, output, state)];
   obj.children = items;
   const tmp2Result = closure_13(state(5866).Text, obj, state.key);
   let tmp5Result = tmp2Result;
@@ -739,7 +739,7 @@ style.listItem = { paddingTop: 4 };
 style.bullet = { fontFamily: Fonts.CODE_BOLD };
 style.strong = { fontFamily: Fonts.PRIMARY_BOLD };
 let obj3 = { translateY: nativeDefault.space.PX_4 };
-style.spoilerHiddenText = { color: fn(5996).SPOILER_HIDDEN_TEXT_COLOR, backgroundColor: "Array" };
+style.spoilerHiddenText = { color: fn(5996).SPOILER_HIDDEN_TEXT_COLOR, backgroundColor: "a" };
 const createStyles = fn(5243);
 let obj6 = {
   link: null,
@@ -750,7 +750,7 @@ let obj6 = {
   codeBlock: null,
   blockQuote: null,
 };
-let obj4 = { color: fn(5996).SPOILER_HIDDEN_TEXT_COLOR, backgroundColor: "Array" };
+let obj4 = { color: fn(5996).SPOILER_HIDDEN_TEXT_COLOR, backgroundColor: "a" };
 obj6.link = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.colors.TEXT_LINK };
 let obj7 = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.colors.TEXT_LINK };
 obj6.channelMention = {
@@ -851,9 +851,9 @@ export default function createRules() {
             textColor = textColor.textColor;
           }
           const obj = { color: textColor, children: null };
-          obj.children = obj(9289).smartOutput(content, output, textColor);
+          obj.children = obj(9288).smartOutput(content, output, textColor);
           content = closure_1_12(MarkupText, obj, textColor.key);
-          obj2 = obj(9289);
+          obj2 = obj(9288);
         }
         return content;
       },
@@ -867,7 +867,7 @@ export default function createRules() {
         }
         obj.color = textColor;
         obj.variant = textColor.textVariant;
-        obj.children = obj(9289).smartOutput(node, output, textColor);
+        obj.children = obj(9288).smartOutput(node, output, textColor);
         return closure_1_12(MarkupText, obj, textColor.key);
       },
     },
@@ -880,7 +880,7 @@ export default function createRules() {
         }
         obj.color = textColor;
         obj.variant = textColor.textVariant;
-        obj.children = obj(9289).smartOutput(node, output, textColor);
+        obj.children = obj(9288).smartOutput(node, output, textColor);
         return closure_1_12(MarkupText, obj, textColor.key);
       },
     },
@@ -940,7 +940,7 @@ export default function createRules() {
         if (textColor != null) {
           textColor = textColor.textColor;
         }
-        obj = { color: textColor, children: obj(9289).smartOutput(node, output, textColor) };
+        obj = { color: textColor, children: obj(9288).smartOutput(node, output, textColor) };
         return closure_1_12(MarkupText, obj, textColor.key);
       },
     },
@@ -957,7 +957,7 @@ export default function createRules() {
         if (textColor != null) {
           textColor = textColor.textColor;
         }
-        obj = { color: textColor, children: obj(9289).smartOutput(node, output, textColor) };
+        obj = { color: textColor, children: obj(9288).smartOutput(node, output, textColor) };
         return closure_1_12(MarkupText, obj, textColor.key);
       },
     },
@@ -978,7 +978,7 @@ export default function createRules() {
                 accessibilityLabel: surrogate.content,
                 onPress(stopPropagation) {
                   stopPropagation.stopPropagation();
-                  obj2(12484)({ surrogate: children, content: surrogate.content });
+                  obj2(12478)({ surrogate: children, content: surrogate.content });
                 },
                 children,
               };
@@ -1036,7 +1036,7 @@ export default function createRules() {
         const parsed = obj.parse(arg0, arg1, arg2);
         if ("ansi" === str.toLowerCase()) {
           const content = parsed.content;
-          parsed.content = content.replaceAll(obj(9289).ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
+          parsed.content = content.replaceAll(obj(9288).ANSI_CONTROL_SEQUENCE_RE_GLOBAL, "");
         }
         return parsed;
       },
@@ -1066,7 +1066,7 @@ export default function createRules() {
     [closure_0(closure_2[47]).AST_KEY.SOUNDBOARD]: {
       react(node, output, key) {
         const obj = { variant: "body-md/semibold", children: null };
-        items = ["<sound:", obj(9289).smartOutput(node, output, key), ">"];
+        items = ["<sound:", obj(9288).smartOutput(node, output, key), ">"];
         obj.children = items;
         return closure_1_13(obj(5866).Text, obj, key.key);
       },
@@ -1094,7 +1094,7 @@ export default function createRules() {
           if (textColor != null) {
             textColor1 = textColor.textColor;
           }
-          const obj4 = { color: textColor1, children: tmp(9289).smartOutput(icon, output, textColor) };
+          const obj4 = { color: textColor1, children: tmp(9288).smartOutput(icon, output, textColor) };
           items[1] = closure_1_12(MarkupText, obj4);
           obj2.children = items;
           return closure_1_13(MarkupText, obj2, textColor.key);
@@ -1150,7 +1150,7 @@ export default function createRules() {
           closure_1_12(closure_1_6, { style: { paddingEnd: num }, children: closure_1_12(obj(1187).ThemedIcon, obj) }),
         ];
         const obj4 = { style: { paddingEnd: num }, children: closure_1_12(obj(1187).ThemedIcon, obj) };
-        items[1] = obj(9289).smartOutput(iconType, output, textColor);
+        items[1] = obj(9288).smartOutput(iconType, output, textColor);
         obj3.children = items;
         return closure_1_13(MarkupText, obj3, textColor.key);
       },
@@ -1163,7 +1163,7 @@ export default function createRules() {
     },
     [closure_0(closure_2[47]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, state) {
-        return closure_1_12(obj2(10994), { node, state }, state.key);
+        return closure_1_12(obj2(10988), { node, state }, state.key);
       },
     },
     [closure_0(closure_2[47]).AST_KEY.TIMESTAMP]: {
@@ -1304,7 +1304,7 @@ export default function createRules() {
           const obj3 = {};
           const merged = Object.assign(formatInline);
           obj3.textVariant = "body-sm/semibold";
-          items = [obj(9289).smartOutput(level, output, obj3), " "];
+          items = [obj(9288).smartOutput(level, output, obj3), " "];
           obj2.children = items;
           return closure_1_13(MarkupText, obj2, formatInline.key);
         } else {
@@ -1325,7 +1325,7 @@ export default function createRules() {
           const obj4 = {};
           const merged1 = Object.assign(formatInline);
           obj4.textVariant = str;
-          const items1 = [obj(9289).smartOutput(level, output, obj4), "\n"];
+          const items1 = [obj(9288).smartOutput(level, output, obj4), "\n"];
           obj.children = items1;
           return closure_1_13(obj(5866).Text, obj, formatInline.key);
         }
@@ -1334,7 +1334,7 @@ export default function createRules() {
     [closure_0(closure_2[47]).AST_KEY.SUBTEXT]: {
       react(node, output, key) {
         const obj = { variant: "body-sm/normal", color: "text-muted", children: null };
-        items = [obj(9289).smartOutput(node, output, key), "\n"];
+        items = [obj(9288).smartOutput(node, output, key), "\n"];
         obj.children = items;
         return closure_1_13(obj(5866).Text, obj, key.key);
       },
@@ -1349,9 +1349,9 @@ export default function createRules() {
             textColor = textColor.textColor;
           }
           const obj = { color: textColor, children: null };
-          obj.children = obj(9289).smartOutput(content, output, textColor);
+          obj.children = obj(9288).smartOutput(content, output, textColor);
           content = closure_1_12(MarkupText, obj, textColor.key);
-          obj2 = obj(9289);
+          obj2 = obj(9288);
         }
         return content;
       },
@@ -1374,4 +1374,4 @@ export function plainSpoilerRenderer(content) {
   }
   return str;
 }
-export const createFetchingGameMentionRule = fn(10994).createFetchingGameMentionRule;
+export const createFetchingGameMentionRule = fn(10988).createFetchingGameMentionRule;

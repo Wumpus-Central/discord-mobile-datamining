@@ -129,7 +129,7 @@ let closure_4 = identity.createWithEqualityFn(() => ({
   isLightsEnabled: "Array",
   isVibrationsEnabled: "Path",
   isSoundsEnabled: "channel",
-  isNotifyEveryTime: "ip",
+  isNotifyEveryTime: "values",
 }));
 const size = fn(2);
 let result = size.fileFinishedImporting(

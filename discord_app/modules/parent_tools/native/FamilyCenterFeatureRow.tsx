@@ -8,10 +8,10 @@ import TableRow from "../../../design/components/TableRow/native/TableRow.native
 import EyeIcon from "../../../design/components/Icon/native/redesign/generated/EyeIcon.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
-import _modDef14677 from "../../../../_runtime/metro/14677__.js";
-import _modDef15779 from "../../../../_runtime/metro/15779__.js";
+import _modDef14673 from "../../../../_runtime/metro/14673__.js";
+import _modDef15774 from "../../../../_runtime/metro/15774__.js";
 import QrCodeIcon from "../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
-import _modDef17298 from "../../../../_runtime/metro/17298__.js";
+import _modDef17293 from "../../../../_runtime/metro/17293__.js";
 import ChatCheckIcon from "../../../design/components/Icon/native/redesign/generated/ChatCheckIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -48,18 +48,18 @@ export default function FamilyCenterFeatureRows() {
     intl5.string(_modDef2685["+pi4Yt"]),
     intl6.string(_modDef2685["1xPTwE"]),
   );
-  obj4.icon = _modDef17298;
+  obj4.icon = _modDef17293;
   obj4.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
   obj4.header = intl7.string(_modDef2685["001l3m"]);
   obj4.description = ageSpecificText;
   items = [obj4, ,];
-  const obj5 = { icon: _modDef14677, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+  const obj5 = { icon: _modDef14673, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
   const intl8 = util.intl;
   obj5.header = intl8.string(_modDef2685.yipAeP);
   obj5.description = ageSpecificText1;
   items[1] = obj5;
-  const obj6 = { icon: _modDef15779, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
+  const obj6 = { icon: _modDef15774, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
   const intl9 = util.intl;
   obj6.header = intl9.string(_modDef2685.hhOuMe);
   obj6.description = ageSpecificText2;

@@ -38,7 +38,7 @@ function IgnoredInformationTable() {
 }
 const View = fn(17).View;
 const UserRemediationAction = fn(8073).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11993);
+const RestrictionConfirmationConstants = fn(11987);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_9, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: closure_10 } =
   RestrictionConfirmationConstants);
 const Constants = fn(1072);
@@ -303,7 +303,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       });
       const obj2 = { action: UserRemediationAction.GOTO_BLOCK, location: "user-profile-context-menu" };
       const obj3 = ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequireImpl(11994, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(11988, dependencyMap.paths);
       obj3.openLazy(
         tmp2,
         React6,

@@ -65,7 +65,7 @@ function NotificationWrapper(notification) {
   }
 }
 let StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(10963);
+const InAppNotificationConstants = fn(10957);
 ({
   DEFAULT_ANIMATION_TIMING: metroImportDefault,
   extrapolateConfig: closure_8,
@@ -134,8 +134,8 @@ export default function InAppNotificationContainer(notification) {
   const tmp = closure_16();
   let isIOSResult = require("utils/PlatformUtils").isIOS();
   if (isIOSResult) {
-    isIOSResult = tmp2(11895).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
-    const tmp2Result = tmp2(11895);
+    isIOSResult = tmp2(11889).shouldEnableYYTextReplacement({ location: "InAppNotificationContainer" });
+    const tmp2Result = tmp2(11889);
   }
   items = [notification];
   const memo = noop.useMemo(() => InAppNotificationUtils.extractMetadataFromNotification(c0), items);

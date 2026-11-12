@@ -105,8 +105,8 @@ export default function Header(application) {
   const tmp3 = closure_11();
   let appLauncherIconSource = null;
   if (null != application) {
-    appLauncherIconSource = tmp(13284).getAppLauncherIconSource(application);
-    const tmpResult = tmp(13284);
+    appLauncherIconSource = tmp(13278).getAppLauncherIconSource(application);
+    const tmpResult = tmp(13278);
   }
   let obj = require("initialize");
   let str = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
@@ -125,7 +125,7 @@ export default function Header(application) {
   const tmp6Result = useAvatarColorDefault(tmp7, str);
   if (null != appLauncherIconSource) {
     let obj2 = { iconSource: appLauncherIconSource, iconBorderRadius: xl, iconSize: 72 };
-    let tmp12 = closure_7(tmp5(13289), obj2);
+    let tmp12 = closure_7(tmp5(13283), obj2);
     let tmp13 = closure_7;
   } else {
     let obj3 = { style: tmp3.loadingIcon };
@@ -235,8 +235,8 @@ export default function Header(application) {
   let str2 = "";
   const animatedStyle3 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HeaderTsx4);
   if (null != application) {
-    str2 = tmp(12608).getSectionName(application);
-    const tmpResult14 = tmp(12608);
+    str2 = tmp(12602).getSectionName(application);
+    const tmpResult14 = tmp(12602);
   }
   let result = null != application;
   if (result) {
@@ -318,11 +318,11 @@ export default function Header(application) {
       obj11.accessibilityLabel = intl.string(tmp(1113).t.XWDihq);
       const items15 = [tmp13(tmp(7922).IconButton, obj11)];
       const obj12 = { application, onAddAppMenuClick };
-      items15[1] = tmp13(tmp5(13365), obj12);
+      items15[1] = tmp13(tmp5(13359), obj12);
       obj10.children = items15;
       tmp38Result = closure_8(tmp39, obj10);
     }
-    tmpResult16 = tmp(12608);
+    tmpResult16 = tmp(12602);
   }
   items11[2] = tmp38Result;
   obj4.children = items11;

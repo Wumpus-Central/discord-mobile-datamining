@@ -9,7 +9,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 
 require = fn;
-let closure_5 = fn(8999).SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY;
+let closure_5 = fn(8998).SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY;
 const Constants = fn(1072);
 ({ SearchTokenTypes: closure_6, AnalyticEvents: metroImportDefault } = Constants);
 const size = fn(2);

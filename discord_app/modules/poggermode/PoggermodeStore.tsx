@@ -80,7 +80,7 @@ function updateCombo(userId) {
     }
   }
 }
-const PoggermodeConstants = fn(8717);
+const PoggermodeConstants = fn(8716);
 ({ ShakeLevel: hasOwnProperty, ShakeLocation: closure_6 } = PoggermodeConstants);
 const ComponentActions = fn(1072).ComponentActions;
 const set = new Set();

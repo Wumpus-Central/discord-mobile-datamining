@@ -50,7 +50,7 @@ export function PromoSheet(arg0) {
     const obj2 = {};
     const merged1 = Object.assign(graphic);
     obj2.style = tmp2.graphic;
-    let tmp4Result = closure_7(gradientColor(9504).Graphic, obj2);
+    let tmp4Result = closure_7(gradientColor(9503).Graphic, obj2);
   } else {
     tmp4Result = null;
     if (null != illustration) {

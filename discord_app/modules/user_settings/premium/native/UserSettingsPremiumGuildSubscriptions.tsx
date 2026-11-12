@@ -180,8 +180,8 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   const tmp3 = flag(8463)({ forceFetch: true });
   isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
   const tmpResult = require("ReverseTrialUtils");
-  fpDurationText = flag(15217)(endsAt, tmp(15217).CountDownMessageTypes.LONG_TIME_LEFT);
-  const tmp4 = flag(15217);
+  fpDurationText = flag(15214)(endsAt, tmp(15214).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp4 = flag(15214);
   items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {

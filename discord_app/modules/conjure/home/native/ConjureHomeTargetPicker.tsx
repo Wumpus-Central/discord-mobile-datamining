@@ -46,7 +46,7 @@ export default function ConjureHomeTargetPicker(target) {
       },
       ...guilds.map((label) => ({
         label: label.name,
-        IconComponent: target(10876).ServerIcon,
+        IconComponent: target(10870).ServerIcon,
         action() {
           return dependencyMap(label.id);
         },

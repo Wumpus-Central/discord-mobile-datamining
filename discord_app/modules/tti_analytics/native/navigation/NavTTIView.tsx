@@ -66,7 +66,7 @@ function VisualizedNavTTIViewContent(measurementProps) {
     }),
   ];
   obj.children = items;
-  return closure_1_10(NavTTIMeasuredView, obj);
+  return refs(NavTTIMeasuredView, obj);
 }
 function VisualizedIncludedNavTTIView(name) {
   const obj2 = { name: name.name, tracking: name.tracking, hasChildren: null };

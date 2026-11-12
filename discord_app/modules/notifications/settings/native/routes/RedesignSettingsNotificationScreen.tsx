@@ -34,19 +34,14 @@ function getNotificationSettings() {
   const obj4 = { label: null, settings: null };
   const intl2 = util.intl;
   obj4.label = intl2.string(_modDef3013["1S8d9h"]);
-  const items3 = [, , ,];
-  ({
-    HIGHLIGHT_NOTIFICATIONS: arr4[0],
-    FRIEND_ANNIVERSARY_NOTIFICATIONS: arr4[1],
-    UPCOMING_SERVER_EVENT_NOTIFICATIONS: arr4[2],
-    SUMMARY_REMINDER_NOTIFICATIONS: arr4[3],
-  } = MobileUserSettings);
+  const items3 = [,];
+  ({ HIGHLIGHT_NOTIFICATIONS: arr4[0], FRIEND_ANNIVERSARY_NOTIFICATIONS: arr4[1] } = MobileUserSettings);
   obj4.settings = items3;
   items[3] = obj4;
   return items;
 }
-let closure_4 = fn(17990).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(9136).MobileUserSettings;
+let closure_4 = fn(17985).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(9135).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(

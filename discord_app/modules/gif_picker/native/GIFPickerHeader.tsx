@@ -162,9 +162,9 @@ let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
 obj.headerContainer = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: fn(11281).GIF_PICKER_GUTTER_SPACING,
+  gap: fn(11275).GIF_PICKER_GUTTER_SPACING,
 };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(11281).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(11275).GIF_PICKER_GUTTER_SPACING };
 obj.header = {
   borderWidth: 1,
   borderColor: "transparent",

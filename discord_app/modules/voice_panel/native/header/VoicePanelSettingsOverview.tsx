@@ -23,7 +23,7 @@ import ShieldLockIcon from "../../../../design/components/Icon/native/redesign/g
 import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
 import StageChannelUnifiedCallExperiment from "../../../stage_channels/StageChannelUnifiedCallExperiment.tsx";
 import ChannelCallConnectingScreen from "../../../video_calls/native/components/ChannelCallConnectingScreen.tsx";
-import _modDef15957 from "../../../../../_runtime/metro/15957__.js";
+import _modDef15952 from "../../../../../_runtime/metro/15952__.js";
 import WrenchIcon from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
 import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators.tsx";
 import getChannelInfoSubtitleDefault from "../utils/getChannelInfoSubtitle.tsx";
@@ -140,7 +140,7 @@ function ShareActivityLogsButton() {
     onPress: callback,
     icon: collapsedCategories(TableRowIcon.TableRowIcon, {
       IconComponent: WrenchIcon.WrenchIcon,
-      source: _modDef15957,
+      source: _modDef15952,
     }),
     label: null,
     trailing: null,
@@ -161,7 +161,7 @@ function ActivityDebugToggle() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, {
     IconComponent: WrenchIcon.WrenchIcon,
-    source: _modDef15957,
+    source: _modDef15952,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
@@ -174,7 +174,7 @@ function ActivityDebugToggle() {
 const Constants = fn(1072);
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = Constants);
 const isStreamParticipant = fn(5920).isStreamParticipant;
-let closure_17 = fn(10561).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
+let closure_17 = fn(10559).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 const createStyles = fn(5243);
@@ -312,7 +312,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19813, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19808, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

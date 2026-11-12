@@ -23,11 +23,11 @@ const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(16902);
+const MediaPlaybackPanelConstants = fn(16897);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: metroImportDefault, MediaPlaybackPanelModes: closure_8 } =
   MediaPlaybackPanelConstants);
-const IS_IOS = fn(11926).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(11925).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(11920).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(11919).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(5243);
 const obj2 = {

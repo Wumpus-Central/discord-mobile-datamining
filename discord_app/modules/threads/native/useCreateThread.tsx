@@ -26,7 +26,7 @@ export default function useCreateThread(arg0) {
     useDefaultThreadName,
   } = arg0);
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  return analyticsLocations(11103).useCreateThreadCommon({
+  return analyticsLocations(11097).useCreateThreadCommon({
     parentChannel,
     parentMessageId,
     threadSettings,
@@ -66,11 +66,11 @@ export function useCreateForumPost(parentChannel) {
     return (async (arg0) => {
       analyticsLocations = tmp4;
       closure_129_0 = guildId;
-      const obj7 = new analyticsLocations(8956)();
+      const obj7 = new analyticsLocations(8955)();
       closure_129_1 = obj7;
-      const maxFileSizeResult = guildId(8809).maxFileSize(guildId.getGuildId());
+      const maxFileSizeResult = guildId(8808).maxFileSize(guildId.getGuildId());
       closure_129_2 = maxFileSizeResult;
-      const effectiveUploadLimit = guildId(8824).getEffectiveUploadLimit(maxFileSizeResult);
+      const effectiveUploadLimit = guildId(8823).getEffectiveUploadLimit(maxFileSizeResult);
       obj7.on("progress", (currentSize) => {
         if (currentSize.currentSize > closure_1_3) {
           analyticsLocations.cancel();
@@ -80,13 +80,13 @@ export function useCreateForumPost(parentChannel) {
             draftType: FirstThreadMessage.FirstThreadMessage,
             resetState: true,
           };
-          analyticsLocations(11092).setUploads(obj2);
+          analyticsLocations(11086).setUploads(obj2);
           const obj3 = { file: currentSize, maxSize: tmp, baseMaxSize, guildId: null, analyticsLocations: null };
-          const obj = analyticsLocations(11092);
+          const obj = analyticsLocations(11086);
           obj3.guildId = uploads.getGuildId();
           obj3.analyticsLocations = analyticsLocations;
-          analyticsLocations(11106)(obj3);
-          const tmp10 = analyticsLocations(11106);
+          analyticsLocations(11100)(obj3);
+          const tmp10 = analyticsLocations(11100);
         }
       });
       await obj7.uploadFiles(guildId);

@@ -105,7 +105,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
               dependencyMap(true);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(16236).adoptGuildIdentity(guildId, true), done: false };
+              const obj5 = { value: tmp2(16231).adoptGuildIdentity(guildId, true), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -152,7 +152,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   obj6.style = items3;
   const obj7 = { source: null, style: null, importantForAccessibility: "no" };
   const tmp10 = _slicedToArray(noop.useState(false), 2);
-  obj7.source = onAdopted(16237);
+  obj7.source = onAdopted(16232);
   obj7.style = tmp.avatar;
   const items4 = [closure_9(onAdopted(5957), obj7)];
   const obj8 = { style: tmp.messageBody, children: null };
@@ -190,10 +190,10 @@ export default function GuildSettingsServerTagPreview(guildId) {
         height: null,
       };
       ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-      tmp15Result = closure_9(tmp2(16238).GuildBadge, size);
+      tmp15Result = closure_9(tmp2(16233).GuildBadge, size);
     }
     obj14.guildBadge = tmp15Result;
-    tmp15Result3 = closure_9(tmp2(10587).BaseGuildTagChiplet, obj14);
+    tmp15Result3 = closure_9(tmp2(10585).BaseGuildTagChiplet, obj14);
   }
   items8[1] = tmp15Result3;
   obj13.children = items8;
@@ -213,7 +213,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const obj18 = { source: null, style: null, importantForAccessibility: "no" };
   const obj11 = { source, style: tmp.avatar, importantForAccessibility: "no" };
   const tmp4Result = onAdopted(5957);
-  obj18.source = onAdopted(16282);
+  obj18.source = onAdopted(16277);
   obj18.style = tmp.avatar;
   const items11 = [closure_9(onAdopted(5957), obj18)];
   const obj19 = { style: tmp.messageBody, children: null };

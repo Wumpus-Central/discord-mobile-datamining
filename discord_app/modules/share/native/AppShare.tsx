@@ -19,9 +19,9 @@ const require = globalThis.__r;
 require = fn;
 fn(17).BackHandler;
 const AnalyticsTrackingStore = fn(8597);
-const ShareStore = fn(16728);
+const ShareStore = fn(16723);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let closure_8 = fn(14721).MultiAccountSwitchLocation;
+let closure_8 = fn(14717).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const share = "share";
@@ -58,8 +58,8 @@ export default function AppShare(targetUserId) {
     if (tmp2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const obj = closure_0(14724);
-        closure_0(14724)
+        const obj = closure_0(14720);
+        closure_0(14720)
           .switchAccount(targetUserId, false, constants.SHARE_EXTENSION)
           .then(() => {
             closure_1_3(true);
@@ -126,7 +126,7 @@ export default function AppShare(targetUserId) {
   } else {
     const items5 = [closure_9(tmp9(7522).SceneLoadingIndicator, {}), , ,];
     const obj5 = { appEntryKey: share };
-    items5[1] = closure_9(tmp9(19593).ActionSheetContainer, obj5);
+    items5[1] = closure_9(tmp9(19588).ActionSheetContainer, obj5);
     items5[2] = closure_9(AppToastContainerDefault, { appChrome: false });
     items5[3] = closure_9(tmp9(6211).AlertModalContainer, {});
     obj3.children = items5;

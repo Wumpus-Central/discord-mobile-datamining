@@ -3,14 +3,14 @@ import RootNavigationRef from "../../../../main_tabs_v2/RootNavigationRef.native
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_3 = fn(18524).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(18525);
+let closure_3 = fn(18519).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(18520);
 ({ RegisterTransitionSteps: closure_4, RegistrationTransitionActionTypes: hasOwnProperty } = RegistrationConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIsHCaptchaModalOpenTracking.tsx");
 
 export function useIsHCaptchaModalOpenTracking() {
-  context = noop.useContext(context(18521).TrackRegistrationContext);
+  context = noop.useContext(context(18516).TrackRegistrationContext);
   items = [context];
   const layoutEffect = noop.useLayoutEffect(() => {
     const rootNavigationRef = RootNavigationRef.getRootNavigationRef();

@@ -46,7 +46,7 @@ export default function ContextMenuCommandItem(item) {
   }, items);
   const tmp = closure_6();
   const tmp5 = item;
-  const applicationCommandsIconSource = item(14532).getApplicationCommandsIconSource(section);
+  const applicationCommandsIconSource = item(14528).getApplicationCommandsIconSource(section);
   const obj2 = {
     accessibilityLabel: memo,
     onPress,

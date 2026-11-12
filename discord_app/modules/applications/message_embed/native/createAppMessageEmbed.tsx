@@ -29,7 +29,7 @@ import ApplicationStore from "../../ApplicationStore.tsx";
 require = fn;
 const FetchState = fn(7250).FetchState;
 const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
-const CodedLinkExtendedType = fn(11831).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11825).CodedLinkExtendedType;
 let closure_10 = ["embedded_cover"];
 let c11 = 512;
 const size = fn(2);

@@ -84,7 +84,7 @@ export default function ConjureRemoveFromServerForm(onRemoved) {
   let tmp6Result = null;
   if (optionalItems.length > 0) {
     let obj = { items: [], optionalItems };
-    tmp6Result = closure_4(tmp(13212), obj);
+    tmp6Result = closure_4(tmp(13206), obj);
   }
   children[1] = tmp6Result;
   children[2] = notes.map((children) =>

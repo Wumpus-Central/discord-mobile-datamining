@@ -130,14 +130,14 @@ function FloatingNav(navigation) {
   GameProfileFloatingNavTsx1.__initData = tmp11;
   if (isGameProfileCommunitiesMobileEnabled) {
     let obj3 = {
-      tab: tmp4(10244).GameProfileNavTab.OVERVIEW,
+      tab: tmp4(10242).GameProfileNavTab.OVERVIEW,
       IconComponent: tmp4(7374).GameControllerIcon,
       label: null,
     };
     const intl = tmp4(1113).intl;
     obj3.label = intl.string(tmp4(1113).t.qHmbyh);
     const items3 = [obj3];
-    let obj4 = { tab: tmp4(10244).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(7372).GroupIcon, label: null };
+    let obj4 = { tab: tmp4(10242).GameProfileNavTab.COMMUNITIES, IconComponent: tmp4(7372).GroupIcon, label: null };
     const intl2 = tmp4(1113).intl;
     obj4.label = intl2.string(tmp4(1113).t["3xFZEo"]);
     items3[1] = obj4;
@@ -178,7 +178,7 @@ function FloatingNav(navigation) {
         );
       }),
     };
-    items7[1] = closure_7(tmp4(10460).YouScreenNavIconMeasurer, obj11);
+    items7[1] = closure_7(tmp4(10458).YouScreenNavIconMeasurer, obj11);
     obj9.children = items7;
     items5[1] = closure_8(closure_5, obj9);
     obj7.children = items5;

@@ -86,14 +86,14 @@ obj4.handler = function handler(args) {
         } else {
           currentUser2 = currentUser.getCurrentUser();
           sound2 = sound.getSound(closure_129_0, closure_129_1);
-          closure_128_2 = tmp5(12936)();
+          closure_128_2 = tmp5(12930)();
           let result = null != sound2;
           if (result) {
             result = null != currentUser2;
           }
           if (result) {
-            result = tmp2(12931).canUseSoundboardSound(currentUser2, sound2, closure_128_2);
-            const obj = tmp2(12931);
+            result = tmp2(12925).canUseSoundboardSound(currentUser2, sound2, closure_128_2);
+            const obj = tmp2(12925);
           }
           closure_128_3 = result;
           if (null == closure_128_2) {
@@ -101,11 +101,11 @@ obj4.handler = function handler(args) {
             const tmp52 = new tmp5(7239)(obj8, "Invalid Channel.");
             throw tmp52;
           } else if (closure_128_3) {
-            if (tmp5(12938)(closure_128_2)) {
+            if (tmp5(12932)(closure_128_2)) {
               if (null != sound2) {
                 items = [tmp5(7871).RPC];
-                tmp2(12931).playSound(sound2, closure_128_2.id, items);
-                const obj4 = tmp2(12931);
+                tmp2(12925).playSound(sound2, closure_128_2.id, items);
+                const obj4 = tmp2(12925);
               }
               c3 = 3;
               return { value: "HermesInternal", done: null };

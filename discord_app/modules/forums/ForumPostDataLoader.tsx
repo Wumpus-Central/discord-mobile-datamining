@@ -46,7 +46,7 @@ let closure_13 = async function _loadForumPostData() {
         } else {
           closure_0 = tmp3;
           c3 = 1;
-          if (closure_2_10.hasNext()) {
+          if (refs.hasNext()) {
             c1 = 2;
             c4 = 1;
             const obj4 = { value: closure_128_14(closure_128_10.next()), done: false };
@@ -122,12 +122,12 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
           closure_129_1 = undefined;
           closure_129_2 = undefined;
           let threads;
-          const nextBatch = closure_2_10.getNextBatch(closure_0, 10);
+          const nextBatch = refs.getNextBatch(closure_0, 10);
           closure_129_1 = nextBatch;
           c4 = 2;
           if (0 === nextBatch.length) {
             c4 = 0;
-            closure_2_10.finishRequesting(closure_0, nextBatch);
+            refs.finishRequesting(closure_0, nextBatch);
             c6 = 3;
             return { value: "HermesInternal", done: null };
           } else {
@@ -139,7 +139,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
             closure_129_2 = guild_id;
             if (null == guild_id) {
               c4 = 0;
-              closure_2_10.finishRequesting(closure_0, nextBatch);
+              refs.finishRequesting(closure_0, nextBatch);
               c6 = 3;
               return { value: "HermesInternal", done: null };
             } else {
@@ -193,7 +193,7 @@ let closure_15 = async function _loadForumPostDataForChannelId(arg0) {
     }
   }
 };
-const computeThreadIdsSnapshot = fn(9042).computeThreadIdsSnapshot;
+const computeThreadIdsSnapshot = fn(9041).computeThreadIdsSnapshot;
 const Endpoints = fn(1072).Endpoints;
 class DefaultDict {
   constructor(arg0) {

@@ -74,7 +74,7 @@ export default function AppealIngestionModal(classificationId) {
           return closure_1_12(isDsaEligible(5866).Text, { variant: "body-md/normal", children: "paddingHorizontal" });
         },
         render() {
-          return closure_2_12(flag(14086), { isDsaEligible, isCoppa, isDeveloperClassification });
+          return closure_2_12(flag(14082), { isDsaEligible, isCoppa, isDeveloperClassification });
         },
         impressionName: discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_SPEED_BUMP,
         impressionProperties,
@@ -92,7 +92,7 @@ export default function AppealIngestionModal(classificationId) {
         return closure_1_12(isDsaEligible(5866).Text, { variant: "body-md/normal", children: "paddingHorizontal" });
       };
       obj4.render = function render() {
-        return closure_2_12(flag(14106), { isDsaEligible });
+        return closure_2_12(flag(14102), { isDsaEligible });
       };
       obj4.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL;
       obj4.impressionProperties = impressionProperties;
@@ -109,7 +109,7 @@ export default function AppealIngestionModal(classificationId) {
         return closure_1_12(isDsaEligible(5866).Text, { variant: "body-md/normal", children: "paddingHorizontal" });
       };
       obj6.render = function render() {
-        return closure_2_12(flag(14108), { isDsaEligible });
+        return closure_2_12(flag(14104), { isDsaEligible });
       };
       obj6.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION;
       obj6.impressionProperties = impressionProperties;
@@ -126,7 +126,7 @@ export default function AppealIngestionModal(classificationId) {
         return closure_1_12(isDsaEligible(5866).Text, { variant: "body-md/normal", children: "paddingHorizontal" });
       };
       obj8.render = function render() {
-        return closure_1_12(isCoppa(14110), {});
+        return closure_1_12(isCoppa(14106), {});
       };
       obj8.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT;
       obj8.impressionProperties = impressionProperties;
@@ -143,7 +143,7 @@ export default function AppealIngestionModal(classificationId) {
         return closure_1_12(isDsaEligible(5866).Text, { variant: "body-md/normal", children: "paddingHorizontal" });
       };
       obj10.render = function render() {
-        return closure_1_12(isCoppa(14112), {});
+        return closure_1_12(isCoppa(14108), {});
       };
       obj10.impressionName = discord_common_AnalyticsUtils.ImpressionNames.APPEAL_INGESTION_THANKS;
       obj10.impressionProperties = impressionProperties;
@@ -297,7 +297,7 @@ export function AppealIngestionModalScreen(children) {
                 v2 = 2;
                 c5 = 1;
                 const obj6 = {
-                  value: tmp27(14080).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
+                  value: tmp27(14076).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
                   done: false,
                 };
                 return obj6;

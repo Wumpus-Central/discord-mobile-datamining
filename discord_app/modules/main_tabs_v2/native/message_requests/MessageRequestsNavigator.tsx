@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9062);
+const NativeStackNavigator = fn(9061);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(5243);
 let obj3 = {
@@ -56,7 +56,7 @@ export default function MessageRequestsNavigator() {
   let merged = Object.assign(getNavigationModalPresentationDefault());
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(19553).default;
+    return closure_0(19548).default;
   };
   items = [closure_4(Screen, obj4), ,];
   const obj6 = { name: "spam", options: null, getComponent: null };
@@ -66,7 +66,7 @@ export default function MessageRequestsNavigator() {
   let merged1 = Object.assign(getNavigationModalPresentationDefault());
   obj6.options = obj7;
   obj6.getComponent = function getComponent() {
-    return closure_0(19572).default;
+    return closure_0(19567).default;
   };
   items[1] = closure_4(closure_6.Screen, obj6);
   const obj8 = { name: "preview", options: null, getComponent: null };
@@ -76,7 +76,7 @@ export default function MessageRequestsNavigator() {
   const merged2 = Object.assign(getNavigationModalPresentationDefault());
   obj8.options = obj9;
   obj8.getComponent = function getComponent() {
-    return closure_0(19573).default;
+    return closure_0(19568).default;
   };
   items[2] = closure_4(closure_6.Screen, obj8);
   obj3.children = items;

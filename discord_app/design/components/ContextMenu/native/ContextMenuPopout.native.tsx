@@ -84,7 +84,7 @@ obj2.container = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(9084).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(9083).CONTEXT_MENU_MIN_WIDTH,
 };
 let obj3 = {
   position: "absolute",
@@ -92,12 +92,12 @@ let obj3 = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(9084).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(9083).CONTEXT_MENU_MIN_WIDTH,
 };
-obj2.titleContainer = { padding: fn(9084).CONTEXT_MENU_ITEM_PADDING };
-let obj4 = { padding: fn(9084).CONTEXT_MENU_ITEM_PADDING };
+obj2.titleContainer = { padding: fn(9083).CONTEXT_MENU_ITEM_PADDING };
+let obj4 = { padding: fn(9083).CONTEXT_MENU_ITEM_PADDING };
 obj2.divider = {
-  borderBottomWidth: fn(9084).CONTEXT_MENU_DIVIDER_HEIGHT,
+  borderBottomWidth: fn(9083).CONTEXT_MENU_DIVIDER_HEIGHT,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 let closure_10 = createStyles.createStyles(obj2);
@@ -105,7 +105,7 @@ let items = [
   {
     code: "(function getCollapsedOffset_ContextMenuPopoutNativeTsx1(width,height,positionX,positionY){let[CONTEXT_MENU_MIN_SCALE]=this.__closure;const scaleOffset=1-CONTEXT_MENU_MIN_SCALE;return{translateX:(positionX==='left'?-1:1)*(width/2)*scaleOffset,translateY:(positionY==='below'?-1:1)*(height/2)*scaleOffset};})",
   },
-  fn(9084).CONTEXT_MENU_MIN_SCALE,
+  fn(9083).CONTEXT_MENU_MIN_SCALE,
 ];
 let closure_129_0;
 [tmp5, tmp6] = items;
@@ -156,7 +156,7 @@ let items2 = [
     code: "(function backdropEnteringAnimation_ContextMenuPopoutNativeTsx7(){let[withSpring,CONTEXT_MENU_SPRING]=this.__closure;return{initialValues:{opacity:0},animations:{opacity:withSpring(1,CONTEXT_MENU_SPRING)}};})",
   },
   fn(5876).withSpring,
-  fn(9084).CONTEXT_MENU_SPRING,
+  fn(9083).CONTEXT_MENU_SPRING,
 ];
 let closure_130_0;
 let closure_130_1;
@@ -247,10 +247,10 @@ export function ContextMenuPopout(cleanUp) {
   const callback = noop.useCallback(ContextMenuPopoutNativeTsx2, items4);
   if ("below" === positionY) {
     const diff1 = diff - bottom;
-    let diff2 = diff1 - tmp6(9084).CONTEXT_MENU_EDGE_OFFSET;
+    let diff2 = diff1 - tmp6(9083).CONTEXT_MENU_EDGE_OFFSET;
   } else {
     const diff3 = diff - top;
-    diff2 = diff3 - tmp6(9084).CONTEXT_MENU_EDGE_OFFSET;
+    diff2 = diff3 - tmp6(9083).CONTEXT_MENU_EDGE_OFFSET;
   }
   c7 = diff2;
   const tmp20 = scale(noop.useState(menu.height >= diff2), 2);

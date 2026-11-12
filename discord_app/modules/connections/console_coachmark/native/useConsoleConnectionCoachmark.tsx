@@ -1,7 +1,7 @@
 // discord_app/modules/connections/console_coachmark/native/useConsoleConnectionCoachmark.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef19444 from "../../../../../discord_assets/assets/discovery/controller.png.js";
+import _modDef19439 from "../../../../../discord_assets/assets/discovery/controller.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 const _modDef1652 = tmp5(1652);
 const LinearGradientDefault = tmp5(5830);
-const StickerDefault = tmp5(11030);
+const StickerDefault = tmp5(11024);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -86,8 +86,8 @@ export default function DMMessageStickerGreeting(channel) {
   }
   const intl2 = Text(1113).intl;
   const formatToPlainStringResult = intl2.formatToPlainString(Text(1113).t.m0zYbV, { username: name });
-  const showConvoStarterInDM = Text(14563).useShowConvoStarterInDM(channel);
-  const TextResult = Text(14563);
+  const showConvoStarterInDM = Text(14559).useShowConvoStarterInDM(channel);
+  const TextResult = Text(14559);
   const items2 = [c7];
   const items3 = [showConvoStarterInDM];
   const stateFromStores2 = Text(504).useStateFromStores(
@@ -290,7 +290,7 @@ export default function DMMessageStickerGreeting(channel) {
   const TextResult4 = Text(5839);
   const items10 = [Text(5240).hexWithOpacity(token, 0), token];
   const TextResult5 = Text(5240);
-  const shouldAnimateSticker = Text(11296).useShouldAnimateSticker(false);
+  const shouldAnimateSticker = Text(11290).useShouldAnimateSticker(false);
   if (!showConvoStarterInDM) {
     return null;
   } else {
@@ -346,5 +346,5 @@ export default function DMMessageStickerGreeting(channel) {
     obj5.children = items11;
     closure_11(_modDef1652.View, obj5);
   }
-  const TextResult6 = Text(11296);
+  const TextResult6 = Text(11290);
 }

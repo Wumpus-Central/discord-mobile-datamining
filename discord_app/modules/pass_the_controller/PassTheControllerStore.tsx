@@ -159,12 +159,12 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
               const rTCConnection = RTCConnectionStore.getRTCConnection();
               tmp54 = null;
               if (null != rTCConnection) {
-                const inputConnection = new inputConnection1(15994).InputConnection(
+                const inputConnection = new inputConnection1(15989).InputConnection(
                   rTCConnection,
                   AuthenticationStore.getId(),
                 );
                 closure_129_0 = inputConnection;
-                inputConnection.on(inputConnection1(15995).InputEvent.Disconnect, () => {
+                inputConnection.on(inputConnection1(15990).InputEvent.Disconnect, () => {
                   if (c10 === inputConnection1) {
                     if (null != _null) {
                       obj2 = {
@@ -257,11 +257,11 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
             const rTCConnection1 = RTCConnectionStore.getRTCConnection();
             tmp14 = null;
             if (null != rTCConnection1) {
-              inputConnection1 = new inputConnection1(15994).InputConnection(
+              inputConnection1 = new inputConnection1(15989).InputConnection(
                 rTCConnection1,
                 AuthenticationStore.getId(),
               );
-              inputConnection1.on(inputConnection1(15995).InputEvent.Disconnect, () => {
+              inputConnection1.on(inputConnection1(15990).InputEvent.Disconnect, () => {
                 if (c10 === inputConnection1) {
                   if (null != _null) {
                     obj2 = {

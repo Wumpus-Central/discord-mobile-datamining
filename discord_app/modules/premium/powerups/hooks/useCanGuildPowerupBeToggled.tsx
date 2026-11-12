@@ -26,7 +26,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
   items1[4] = tmp2.type;
   return stateFromStores.useMemo(() => {
     if (null == stateFromStores) {
-      return { disabled: true, reason: "a" };
+      return { disabled: true, reason: "Array" };
     } else {
       if (closure_4.type !== constants.LEVEL_ACTIVATED) {
         if (closure_4.type !== tmp15.TIER_OVERRIDE_ACTIVATED) {
@@ -73,7 +73,7 @@ export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
           return obj;
         }
       }
-      return { disabled: true, reason: "a" };
+      return { disabled: true, reason: "Array" };
     }
   }, items1);
 }

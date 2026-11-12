@@ -18,9 +18,9 @@ import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let computeMaxX = fn(18612).computeMaxX;
+let computeMaxX = fn(18607).computeMaxX;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const GestureConstants = fn(11949);
+const GestureConstants = fn(11943);
 ({
   FLING_MIN_DISTANCE: closure_9,
   FLING_MIN_VELOCITY: closure_10,
@@ -28,7 +28,7 @@ const GestureConstants = fn(11949);
   PULL_GESTURE_RESISTANCE,
 } = GestureConstants);
 ({ PULL_GESTURE_SNAP_TIMING: map1, PULL_GESTURE_UNSNAP_TIMING: closure_14 } = GestureConstants);
-const LaunchPadTypes = fn(12313).LaunchPadTypes;
+const LaunchPadTypes = fn(12307).LaunchPadTypes;
 let c16 = 144;
 let result = 144 * (1 - 1 / PULL_GESTURE_RESISTANCE);
 let closure_18 = 48 + result;
@@ -797,7 +797,7 @@ export function useHomeGesture() {
       closure_38,
       c11,
       c10,
-      closure_2_10,
+      refs,
       React6,
       sharedValue6,
       fireThrow,

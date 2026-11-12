@@ -37,8 +37,8 @@ export default function Modal(route) {
     isIpadOSResult = "modal" === params.presentation;
   }
   if (!isIpadOSResult) {
-    isIpadOSResult = modal(19551).shouldExcludeSafeAreaForModalKey(modal.key);
-    const obj2 = modal(19551);
+    isIpadOSResult = modal(19546).shouldExcludeSafeAreaForModalKey(modal.key);
+    const obj2 = modal(19546);
   }
   ({ insets, styles } = useAppFrameDefault({ enabled: !isIpadOSResult }));
   const tmp7 = closure_11(insets.left, insets.right);
@@ -121,7 +121,7 @@ export default function Modal(route) {
   const items4 = [closure_10(closure_6, obj7)];
   const tmpResult = useTrackImpressionDefault;
   const tmp12Result = modal(1377);
-  items4[1] = modal(1377).isIOS() && closure_9(modal(13266).PortalKeyboardRenderer, { portal: false });
-  obj6.children = closure_10(modal(16937).SafeAreaProvider, { children: items4 });
+  items4[1] = modal(1377).isIOS() && closure_9(modal(13260).PortalKeyboardRenderer, { portal: false });
+  obj6.children = closure_10(modal(16932).SafeAreaProvider, { children: items4 });
   return closure_9(closure_6, obj6);
 }

@@ -65,8 +65,8 @@ export function createEmptyEditInfo() {
     errorCallbacks: [],
     loaded: false,
     loading: "channel",
-    triggeredMigrations: "c",
-    offlineEditDataVersion: "__closure",
+    triggeredMigrations: "replace",
+    offlineEditDataVersion: "c",
   };
   return obj;
 }

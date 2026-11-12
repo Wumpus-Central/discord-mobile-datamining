@@ -214,7 +214,7 @@ let obj11 = {
 obj5.input = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
 let obj12 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_4 };
 obj5.inputStacked = { paddingHorizontal: nativeDefault.space.PX_4 };
-obj5.draftCarousel = { marginTop: -fn(11571).IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING, marginBottom: 0 };
+obj5.draftCarousel = { marginTop: -fn(11565).IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING, marginBottom: 0 };
 let obj14 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj14.alignItems = "center";
@@ -704,9 +704,9 @@ export default function ConjureNativeComposer(projectId) {
               c1 = 1;
               dependencyMap = 1;
               const obj5 = {
-                value: projectId(13641).pickConjurePhotos(
+                value: projectId(13635).pickConjurePhotos(
                   "mixed",
-                  projectId(13092).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
+                  projectId(13086).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                 ),
                 done: false,
               };

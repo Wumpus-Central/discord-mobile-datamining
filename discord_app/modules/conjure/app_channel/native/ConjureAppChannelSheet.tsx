@@ -25,12 +25,7 @@ function ConjureAppChannelSheetHeader(channel) {
   const appChannelApplication = useAppChannelApplication.useAppChannelApplication(channel);
   const obj2 = { spacing: nativeDefault.space.PX_4, align: "center", children: null };
   items = [
-    closure_1_10(Text_Text.Heading, {
-      variant: "heading-lg/semibold",
-      lineClamp: 1,
-      style: tmp.centered,
-      children: tmp3,
-    }),
+    refs(Text_Text.Heading, { variant: "heading-lg/semibold", lineClamp: 1, style: tmp.centered, children: tmp3 }),
   ];
   let tmp7Result = null;
   if (null != appChannelApplication) {
@@ -41,7 +36,7 @@ function ConjureAppChannelSheetHeader(channel) {
       style: tmp.centered,
       children: appChannelApplication.name,
     };
-    tmp7Result = closure_1_10(Text_Text.Text, obj4);
+    tmp7Result = refs(Text_Text.Text, obj4);
   }
   items[1] = tmp7Result;
   obj2.children = items;
@@ -180,7 +175,7 @@ function ConjureAppChannelSheetContent(channel) {
           return guild_id(remixProject[20])(arg0, { entryPoint: "remix" });
         },
       };
-      obj3.content = closure_2_10(ConjureRemixSheetDefault, obj4);
+      obj3.content = refs(ConjureRemixSheetDefault, obj4);
       ActionSheetActionCreators.showActionSheet(obj3);
     }
   }, items10);

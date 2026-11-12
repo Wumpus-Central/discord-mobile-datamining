@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import GameProfileCommunitiesLocaleFilterStore from "../GameProfileCommunitiesLocaleFilterStore.tsx";
 
 require = fn;
-let closure_4 = fn(10435).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(10433).useGameProfileCommunitiesLocaleFilterExclusions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleOptions.tsx");
 

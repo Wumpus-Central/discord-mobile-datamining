@@ -44,7 +44,7 @@ export default function trackSoundPlayed(location_stack, in_overlay, guildId, so
   }
   const obj = {
     feature_name: constants.SOUNDBOARD_PLAY,
-    feature_tier: tmp6 ? constants.PREMIUM_STANDARD : constants.FREE,
+    feature_tier: tmp6 ? refs.PREMIUM_STANDARD : refs.FREE,
     guild_id: guildId,
     home_guild_id: guildId.guildId,
     location_stack,

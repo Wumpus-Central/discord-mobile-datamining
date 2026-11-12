@@ -5,7 +5,7 @@ import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLoc
 import Form from "../../../../design/void/Form/native/index.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
-import _modDef10919 from "../../../../../_runtime/metro/10919__.js";
+import _modDef10913 from "../../../../../_runtime/metro/10913__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import GuildEventVoiceBannerDefault from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
 import VoiceMemberUser from "VoiceMemberUser.tsx";
@@ -64,7 +64,7 @@ function extractKey(id) {
 function VoiceSectionRow(arg0) {
   ({ item, isActionSheet } = arg0);
   ({ channelId, onPressUser } = arg0);
-  importDefault = isActionSheet(11236).useAnalyticsContext();
+  importDefault = isActionSheet(11230).useAnalyticsContext();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   if (tmp3) {
     dependencyMap = async function _onItemPress(arg0) {
@@ -152,15 +152,15 @@ function VoiceSectionRow(arg0) {
       },
       isActionSheet,
     };
-    return closure_21(tmp2(15977), obj2);
+    return closure_21(tmp2(15972), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_21(tmp2(15978), obj3);
+    return closure_21(tmp2(15973), obj3);
   }
-  let obj = isActionSheet(11236);
+  let obj = isActionSheet(11230);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
 }
 get_ActivityIndicator = fn(17);
@@ -198,9 +198,9 @@ let closure_26 = noop.memo(function Footer(channel) {
       const obj3 = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1113).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1113).t["6Qgrev"]);
-      obj3.source = _modDef10919;
-      obj3.size = tmp4(15223).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_21(tmp4(15223).CircularIconButton, obj3);
+      obj3.source = _modDef10913;
+      obj3.size = tmp4(15220).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_21(tmp4(15220).CircularIconButton, obj3);
       const intl2 = tmp4(1113).intl;
       obj2.label = intl2.string(tmp4(1113).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -398,7 +398,7 @@ export default function VoiceMemberList(channel) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(15977);
+                tmp4 = tmp4(15972);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

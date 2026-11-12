@@ -533,7 +533,7 @@ let closure_14 = async function _getActivityChannelId() {
 const makeFrameId = fn(6957).makeFrameId;
 const Constants = fn(1072);
 ({ AbortCodes: closure_8, ChannelTypes: closure_9, RPCEvents: closure_10 } = Constants);
-const ActivityIntent = fn(12616).ActivityIntent;
+const ActivityIntent = fn(12610).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/joinFrameActivity.tsx");
 

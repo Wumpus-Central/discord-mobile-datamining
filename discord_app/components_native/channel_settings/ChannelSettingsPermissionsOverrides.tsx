@@ -96,7 +96,7 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
   let obj2 = channelId(504);
   const appChannelApplication = channelId(7198).useAppChannelApplication(stateFromStores);
   let obj3 = channelId(7198);
-  const appChannelBotUserId = channelId(12470).useAppChannelBotUserId(stateFromStores);
+  const appChannelBotUserId = channelId(12464).useAppChannelBotUserId(stateFromStores);
   let tmp9 = null;
   if (appChannelBotUserId === id) {
     tmp9 = appChannelApplication;
@@ -301,19 +301,19 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
           };
           const intl = channelId(1113).intl;
           obj.label = intl.string(channelId(1113).t.i4jeWR);
-          return closure_2_20(channelId(8985).HeaderTextButton, obj);
+          return closure_2_20(channelId(8984).HeaderTextButton, obj);
         },
       };
       navigation.setOptions(obj);
     }
   }, items3);
   let obj5 = { variant: "body-md/medium", color: "text-muted", children: null };
-  let obj4 = channelId(12470);
+  let obj4 = channelId(12464);
   obj5.children = channelId(5891).computeChannelName(stateFromStores, UserStore, RelationshipStore, true);
   const tmp12 = closure_20(channelId(5866).Text, obj5);
   if (channelId.type === constants.MEMBER) {
     let obj6 = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp12 };
-    let tmp11Result = closure_20(tmp5(10866), obj6);
+    let tmp11Result = closure_20(tmp5(10860), obj6);
   } else {
     let role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;
@@ -357,7 +357,7 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
         const obj = {
           variant: "body-xs/medium",
           color: "text-subtle",
-          children: channelId(19515).renderDescription(description.description),
+          children: channelId(19510).renderDescription(description.description),
         };
         items = [closure_2_20(channelId(5866).Text, obj)];
         let tmp5Result = null;
@@ -369,7 +369,7 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
           }
         }
         items[1] = tmp5Result;
-        const obj2 = channelId(19515);
+        const obj2 = channelId(19510);
         const tmp3Result = closure_2_22(closure_2_21, { children: items });
         const tmp6Result = channelId(1377);
         const obj4 = {
@@ -389,7 +389,7 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
           onValueChange: null,
         };
         const tmp10 = channelId(1377).isAndroid() || undefined;
-        obj5.savedValue = channelId(19506).getChannelPermissionOverwriteValue(
+        obj5.savedValue = channelId(19501).getChannelPermissionOverwriteValue(
           permissionOverwrites.permissionOverwrites[overwriteId],
           flag,
         );

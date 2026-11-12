@@ -8,8 +8,8 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 const PlatformUtils = APNGPlayer(1377);
 const StringUtils = APNGPlayer(2150);
-const APNGPlayer2 = APNGPlayer(9432);
-const DynamicRive = APNGPlayer(14549);
+const APNGPlayer2 = APNGPlayer(9431);
+const DynamicRive = APNGPlayer(14545);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

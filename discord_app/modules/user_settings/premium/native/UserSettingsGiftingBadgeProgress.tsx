@@ -64,9 +64,9 @@ function GiftingBadgeIntro(analyticsLocation) {
         obj5.children = intl.format(_modDef2781.qvx9E4, { count: closure_8(name) });
         items1[1] = React6(Text_Text.Text, obj5);
         obj4.children = items1;
-        items[1] = closure_2_10(timestampProducer, obj4);
+        items[1] = refs(timestampProducer, obj4);
         obj2.children = items;
-        return closure_2_10(timestampProducer, obj2, name.key);
+        return refs(timestampProducer, obj2, name.key);
       }),
     };
     items1[1] = closure_9(closure_6, obj5);
@@ -289,15 +289,15 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
   } else {
     let tmp19 = closure_8(currentTier);
     const tmp25 = closure_8(nextTier);
-    const giftingBadgeProgressPercent = tmp7(11617).getGiftingBadgeProgressPercent(
+    const giftingBadgeProgressPercent = tmp7(11611).getGiftingBadgeProgressPercent(
       badgeProgress,
       currentTier,
       nextTier,
     );
-    const tmp7Result = tmp7(11617);
-    let giftingBadgeTierIconUrl = tmp7(11617).getGiftingBadgeTierIconUrl(currentTier);
-    const tmp7Result3 = tmp7(11617);
-    const giftingBadgeTierIconUrl1 = tmp7(11617).getGiftingBadgeTierIconUrl(nextTier);
+    const tmp7Result = tmp7(11611);
+    let giftingBadgeTierIconUrl = tmp7(11611).getGiftingBadgeTierIconUrl(currentTier);
+    const tmp7Result3 = tmp7(11611);
+    const giftingBadgeTierIconUrl1 = tmp7(11611).getGiftingBadgeTierIconUrl(nextTier);
     if (null != nextTier) {
       const intl2 = tmp7(1113).intl;
       let obj3 = { count: tmp9, nextTier: null };
@@ -328,7 +328,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     let tmp13 = null != giftingBadgeTierIconUrl;
     if (tmp13) {
       const obj8 = { icon: giftingBadgeTierIconUrl, size: 36, style: { margin: 4 } };
-      tmp13 = closure_9(tmp4(11619), obj8);
+      tmp13 = closure_9(tmp4(11613), obj8);
     }
     let items1 = [tmp13, ,];
     const obj9 = {
@@ -341,7 +341,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     let tmp15Result = null != giftingBadgeTierIconUrl1;
     if (tmp15Result) {
       const obj10 = { icon: giftingBadgeTierIconUrl1, size: 36, style: { margin: 4 } };
-      tmp15Result = closure_9(tmp4(11619), obj10);
+      tmp15Result = closure_9(tmp4(11613), obj10);
     }
     items1[2] = tmp15Result;
     obj7.children = items1;
@@ -378,7 +378,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     const items5 = [closure_10(closure_6, obj6), , , ,];
     const obj18 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj19 = { size: "sm", color: tmp4(575).unsafe_rawColors.WHITE };
-    obj18.icon = closure_9(tmp7(11757).GiftIcon, obj19);
+    obj18.icon = closure_9(tmp7(11751).GiftIcon, obj19);
     const intl4 = tmp7(1113).intl;
     obj18.text = intl4.string(tmp4(2781).DZnomS);
     obj18.onPress = function onPress() {
@@ -399,9 +399,9 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     obj22.children = intl5.string(tmp4(2781).WZ4cXA);
     const items6 = [closure_9(tmp7(5866).Text, obj22)];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(15348).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(15345).ChevronSmallUpIcon;
     } else {
-      ChevronSmallDownIcon = tmp7(10493).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = tmp7(10491).ChevronSmallDownIcon;
     }
     const obj23 = { color: tmp4(575).colors.INTERACTIVE_ICON_DEFAULT };
     items6[1] = closure_9(ChevronSmallDownIcon, obj23);
@@ -440,9 +440,9 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
           obj5.children = intl.format(_modDef2781.qvx9E4, { count: closure_8(key) });
           items2[1] = React6(Text_Text.Text, obj5);
           obj4.children = items2;
-          items1[1] = closure_2_10(timestampProducer, obj4);
+          items1[1] = refs(timestampProducer, obj4);
           obj2.children = items1;
-          return closure_2_10(timestampProducer, obj2, key.key);
+          return refs(timestampProducer, obj2, key.key);
         }),
       };
       const items7 = [closure_9(closure_6, obj25)];

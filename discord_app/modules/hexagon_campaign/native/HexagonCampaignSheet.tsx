@@ -42,7 +42,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let size = Math.round(66.3);
 let obj = { fontId: fn(1395).DisplayNameFont.DEFAULT, effectId: fn(1396).DisplayNameEffect.SOLID, colors: [] };
-let PRIMARY_SEMIBOLD = fn(10000).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT];
+let PRIMARY_SEMIBOLD = fn(9999).DISPLAY_NAME_STYLES_FONT_FAMILY_MAP[HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT];
 if (PRIMARY_SEMIBOLD == null) {
   PRIMARY_SEMIBOLD = fn(1083).Fonts.PRIMARY_SEMIBOLD;
 }
@@ -166,7 +166,7 @@ export default function HexagonCampaignSheet() {
                   isThemeSynced,
                   analyticsLocations,
                 };
-                const result = stateFromStores(17515).applyHexagonCampaignPerks(obj7);
+                const result = stateFromStores(17510).applyHexagonCampaignPerks(obj7);
                 HexagonCampaignPersistedStore.current = result;
                 c3 = 2;
                 c4 = 1;
@@ -208,9 +208,9 @@ export default function HexagonCampaignSheet() {
         obj12.perks = values.filter((item) => closure_1_5[item]);
         obj12.content = stateFromStores(5278).QuestContent.AD_PERK_MODAL;
         obj12.sourceQuestContent = stateFromStores(5278).QuestContent.QUEST_HOME_MOBILE;
-        const result1 = stateFromStores(16967).trackHexagonCampaignPerkAction(obj12);
-        obj4 = stateFromStores(16967);
-        tmp3(5489).hideActionSheet(stateFromStores(17513).HEXAGON_CAMPAIGN_SHEET_KEY);
+        const result1 = stateFromStores(16962).trackHexagonCampaignPerkAction(obj12);
+        obj4 = stateFromStores(16962);
+        tmp3(5489).hideActionSheet(stateFromStores(17508).HEXAGON_CAMPAIGN_SHEET_KEY);
         const _Object2 = Object;
         const values2 = Object.values(closure_129_5);
         const _Boolean = Boolean;

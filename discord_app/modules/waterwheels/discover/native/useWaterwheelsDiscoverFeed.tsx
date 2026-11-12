@@ -5,7 +5,6 @@ import WaterwheelsDiscoverFeedState from "../WaterwheelsDiscoverFeedState.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApexExperimentStore from "../../../experiments/apex/ApexExperimentStore.tsx";
 import ICYMIStore from "../../../icymi/ICYMIStore.tsx";
-import LabFeatureStore from "../../../labs/LabFeatureStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 import InterestPickerSessionStore from "../../interest/InterestPickerSessionStore.tsx";
@@ -24,12 +23,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/discover/native/useWaterwheelsDiscoverFeed.tsx");
 
 export default function useWaterwheelsDiscoverFeed(arg0) {
-  items = [ICYMIStore, ApexExperimentStore, AuthenticationStore, LabFeatureStore, UserStore];
+  items = [ICYMIStore, ApexExperimentStore, AuthenticationStore, UserStore];
   EMPTY_DISCOVER_SNAPSHOT = EMPTY_DISCOVER_SNAPSHOT(504).useStateFromStores(items, () =>
     discoverSnapshot.getDiscoverSnapshot(),
   );
   if (!arg0) {
-    EMPTY_DISCOVER_SNAPSHOT = tmp(10146).EMPTY_DISCOVER_SNAPSHOT;
+    EMPTY_DISCOVER_SNAPSHOT = tmp(10145).EMPTY_DISCOVER_SNAPSHOT;
   }
   const tmp3 = useWaterwheelsCardEligibilityDefault();
   importDefault = tmp3;
@@ -39,11 +38,11 @@ export default function useWaterwheelsDiscoverFeed(arg0) {
     items1,
   );
   const obj = EMPTY_DISCOVER_SNAPSHOT(504);
-  const tmpResult = EMPTY_DISCOVER_SNAPSHOT(18885);
+  const tmpResult = EMPTY_DISCOVER_SNAPSHOT(18880);
   return {
     snapshot: EMPTY_DISCOVER_SNAPSHOT,
     entries: memo,
-    status: EMPTY_DISCOVER_SNAPSHOT(18885).getWaterwheelsDiscoverFeedStatus(EMPTY_DISCOVER_SNAPSHOT, memo.length),
+    status: EMPTY_DISCOVER_SNAPSHOT(18880).getWaterwheelsDiscoverFeedStatus(EMPTY_DISCOVER_SNAPSHOT, memo.length),
     retry: requestWaterwheelsDiscover,
   };
 }

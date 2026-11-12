@@ -7,7 +7,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useStableAddableWidgets.tsx");
 
 export default function useStableAddableWidgets(arg0) {
-  const arr = first(15694)();
+  const arr = first(15691)();
   let tmp = _slicedToArray(noop.useState(arr), 2);
   first = tmp[0];
   if (arr.length > first.length) {

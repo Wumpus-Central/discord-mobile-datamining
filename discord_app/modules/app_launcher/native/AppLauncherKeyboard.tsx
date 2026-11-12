@@ -22,7 +22,7 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const ContentDismissActionType = fn(5089).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(13269).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(13263).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
 const createStyles = fn(5243);
@@ -189,7 +189,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
       tmp4Result = PlatformUtils;
     }
     children[1] = tmp3Result;
-    return closure_2_10(React6, { children });
+    return refs(React6, { children });
   }, items7);
   const items9 = [chatInputRef, isScreenReaderEnabled, ref, onClose];
   const callback3 = obj2.useCallback((arg0, arg1, arg2) => {
@@ -198,11 +198,11 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(12488).AppLauncherBottomSheetExpandReason.KEYBOARD;
+          let current = trackWithMetadata(12482).AppLauncherBottomSheetExpandReason.KEYBOARD;
         } else if (arg2 === trackWithMetadata(5507).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(12488).AppLauncherBottomSheetExpandReason.GESTURE;
+          current = trackWithMetadata(12482).AppLauncherBottomSheetExpandReason.GESTURE;
         } else if (arg2 !== trackWithMetadata(5507).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(12488).AppLauncherBottomSheetExpandReason.OTHER;
+          current = trackWithMetadata(12482).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }
@@ -282,7 +282,7 @@ export default noop.memo(function AppLauncherKeyboard(context) {
   obj8.backdropComponent = callback2;
   let tmp29 = onboardingNavigatorContent;
   if (!onboardingNavigatorContent) {
-    tmp29 = entrypoint === tmp(12489).AppLauncherEntrypoint.VOICE;
+    tmp29 = entrypoint === tmp(12483).AppLauncherEntrypoint.VOICE;
   }
   obj8.disableHeaderRoundingAnimation = tmp29;
   let onboardingRoundingView = onboardingNavigatorContent;
