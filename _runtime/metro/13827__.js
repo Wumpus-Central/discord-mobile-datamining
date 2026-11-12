@@ -1,7 +1,7 @@
 // _runtime/metro/13827__.js
 
 export default {
-  parse() {
-    return this.createSingleNodeList(this.Identifier());
+  parse: function selectorList() {
+    return this.createSingleNodeList(this.SelectorList());
   },
 };

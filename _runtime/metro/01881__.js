@@ -25,7 +25,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 function SkipEntering(children) {
-  const tmp = closure_1_10(children.shouldSkip);
+  const tmp = refs(children.shouldSkip);
   closure_0 = tmp;
   items = [tmp];
   React6(() => {

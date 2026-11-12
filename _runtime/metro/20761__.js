@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 120,
+  height: 62,
   scales: [2, 3],
-  hash: "b7c23ecf7d498084060048eec006835a",
-  name: "CircleInformationIcon",
+  hash: "9344f1089c1146b314e038ef9542fb46",
+  name: "poop_dark_large",
   type: "png",
 });

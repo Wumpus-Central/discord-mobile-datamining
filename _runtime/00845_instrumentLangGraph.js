@@ -62,8 +62,8 @@ export function instrumentLangGraph(compile, arg1) {
                   obj3[applyResult(703).SEMANTIC_ATTRIBUTE_SENTRY_OP] = applyResult(824).GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
                   obj3[applyResult(824).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
                   obj2.attributes = obj3;
-                  applyResult = closure_2(/* F145187 */ function() { ... });
-                  return applyResult(730).startSpan(obj2, /* F145188 */ function() { ... });
+                  applyResult = closure_2(/* F145205 */ function() { ... });
+                  return applyResult(730).startSpan(obj2, /* F145206 */ function() { ... });
                 }
               });
               return proxy;
@@ -136,8 +136,8 @@ export function instrumentStateGraphCompile(arg0, arg1) {
                   obj3[applyResult(703).SEMANTIC_ATTRIBUTE_SENTRY_OP] = applyResult(824).GEN_AI_INVOKE_AGENT_OPERATION_ATTRIBUTE;
                   obj3[applyResult(824).GEN_AI_OPERATION_NAME_ATTRIBUTE] = "invoke_agent";
                   obj2.attributes = obj3;
-                  applyResult = closure_2(/* F145187 */ function() { ... });
-                  return applyResult(730).startSpan(obj2, /* F145188 */ function() { ... });
+                  applyResult = closure_2(/* F145205 */ function() { ... });
+                  return applyResult(730).startSpan(obj2, /* F145206 */ function() { ... });
                 }
               });
               return proxy;

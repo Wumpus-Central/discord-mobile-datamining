@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "54b1df301be8a48609dd405b7597a135",
-  name: "RobloxNeutralIcon",
+  hash: "0a2944e427275918c323a5aa7d658085",
+  name: "BattlenetNeutralIcon",
   type: "png",
 });

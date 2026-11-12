@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/notifications",
   scales: [1],
-  hash: "f63276fb413ac228d67d7a5e7af17920",
+  hash: "9c366a1f70ac2df7e88dfb54fd151fcd",
   name: "NotificationSettings.compiled.messages",
   type: "jsona",
 });

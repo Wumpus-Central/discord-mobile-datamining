@@ -1,41 +1,42 @@
 // _runtime/metro/13783__.js
-import _mod13730 from "13730__.js";
+import _mod13726 from "13726__.js";
 
-const Comment = _mod13730.TYPE.Comment;
-let obj = {
-  name: "Comment",
-  structure: { value: String },
-  parse() {
+const RightParenthesis = _mod13726.TYPE.RightParenthesis;
+const obj = {
+  name: "Function",
+  structure: null,
+  parse(call, arg1) {
     const self = this;
-    const tokenStart = this.scanner.tokenStart;
-    const tokenEnd = this.scanner.tokenEnd;
-    this.eat(Comment);
-    const sum = tokenEnd - tokenStart + 2;
-    let tmp3 = sum >= 2;
-    if (2 <= sum) {
-      const source = self.scanner.source;
-      tmp3 = 42 === source.charCodeAt(tokenEnd - 2);
+    const str = this.consumeFunctionName();
+    const formatted = str.toLowerCase();
+    if (arg1.hasOwnProperty(formatted)) {
+      const call2 = tmp4.call;
+      typeof call2 === "unknown" ? arg1[formatted](arg1) : call2(self, arg1);
+    } else {
+      call = call.call;
+      if (!self.scanner.eof) {
+        self.eat(RightParenthesis);
+      }
+      const element = {
+        type: "Function",
+        loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+        name: str,
+        children: typeof call === "unknown" ? call(arg1) : call(self, arg1),
+      };
+      return element;
     }
-    if (tmp3) {
-      const source2 = self.scanner.source;
-      tmp3 = 47 === source2.charCodeAt(tokenEnd - 1);
-    }
-    let diff = tokenEnd;
-    if (tmp3) {
-      diff = tokenEnd - 2;
-    }
-    const obj = {
-      type: "Comment",
-      loc: self.getLocation(tokenStart, self.scanner.tokenStart),
-      value: self.scanner.source.substring(tokenStart + 2, diff),
-    };
-    return obj;
   },
-  generate(value) {
-    this.chunk("/*");
-    this.chunk(value.value);
-    this.chunk("*/");
+  generate(name) {
+    this.chunk(name.name);
+    this.chunk("(");
+    this.children(name);
+    this.chunk(")");
   },
+  walkContext: "function",
 };
+const obj2 = { name: String, children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

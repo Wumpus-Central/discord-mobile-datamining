@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 84.5,
-  height: 90.5,
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "89e957c2ca19c43cdc74008a47a75acc",
-  name: "money_birb_placeholder_light",
+  hash: "e831387e9387034c87c9b5bc784cf6eb",
+  name: "partner_icon",
   type: "png",
 });

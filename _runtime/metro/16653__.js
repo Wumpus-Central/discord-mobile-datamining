@@ -1,4 +1,4 @@
 // _runtime/metro/16653__.js
-import _mod16639 from "16639__.js";
+import _mod16631 from "16631__.js";
 
-export default (arg0) => Object(_mod16639(arg0));
+export default _mod16631({}.isPrototypeOf);

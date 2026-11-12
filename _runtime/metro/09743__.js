@@ -1,76 +1,187 @@
 // _runtime/metro/09743__.js
-import generatePropagationContext from "../09741_generatePropagationContext.js";
-import _mod9744 from "09744__.js";
+import _mod9729 from "09729__.js";
+import _mod9730 from "09730__.js";
+import _mod9737 from "09737__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
+let c2 = "sentry-";
+const tmp2 = /^sentry-/;
+const re3 = tmp2;
+let c4 = 8192;
 
-export const TRACEPARENT_REGEXP = regExp;
-export function extractTraceparentData(str) {
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
-        }
-      }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      return obj;
+export const BAGGAGE_HEADER_NAME = "baggage";
+export const MAX_BAGGAGE_STRING_LENGTH = 8192;
+export const SENTRY_BAGGAGE_KEY_PREFIX = "sentry-";
+export const SENTRY_BAGGAGE_KEY_PREFIX_REGEX = tmp2;
+export function baggageHeaderToDynamicSamplingContext(arr) {
+  if (arr) {
+    if (!obj.isString(arr)) {
+      const _Array = Array;
     }
+    const _Array2 = Array;
+    if (Array.isArray(arr)) {
+      let reduced = arr.reduce((acc, item) => {
+        closure_0 = acc;
+        let parts = item.split(",");
+        const mapped = parts.map((item) => {
+          const parts = item.split("=");
+          return parts.map((item) => decodeURIComponent(item.trim()));
+        });
+        const entries = Object.entries(
+          mapped.reduce((acc, item) => {
+            [tmp, tmp2] = item;
+            let tmp3 = tmp;
+            if (tmp) {
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              acc[tmp] = tmp2;
+            }
+            return acc;
+          }, {}),
+        );
+        item = entries.forEach((item) => {
+          [tmp, tmp2] = item;
+          closure_0[tmp] = tmp2;
+        });
+        return acc;
+      }, {});
+    } else {
+      let parts = arr.split(",");
+      let mapped = parts.map((item) => {
+        const parts = item.split("=");
+        return parts.map((item) => decodeURIComponent(item.trim()));
+      });
+      reduced = mapped.reduce((acc, item) => {
+        [tmp, tmp2] = item;
+        let tmp3 = tmp;
+        if (tmp) {
+          tmp3 = tmp2;
+        }
+        if (tmp3) {
+          acc[tmp] = tmp2;
+        }
+        return acc;
+      }, {});
+    }
+    obj = _mod9737;
+  }
+  if (undefined) {
+    const _Object = Object;
+    let entries = Object.entries(tmp);
+    const reduced1 = entries.reduce((acc, item) => {
+      [str, tmp] = item;
+      if (str.match(closure_1_3)) {
+        acc[str.slice(7)] = tmp;
+      }
+      return acc;
+    }, {});
+    const _Object2 = Object;
+    let tmp10;
+    if (Object.keys(reduced1).length > 0) {
+      tmp10 = reduced1;
+    }
+    return tmp10;
   }
 }
-export function generateSentryTraceHeader() {
-  if (traceId === undefined) {
-    traceId = generatePropagationContext.generateTraceId();
-  }
-  if (spanId === undefined) {
-    spanId = generatePropagationContext.generateSpanId();
-  }
-  let str = "";
-  if (undefined !== sampled) {
-    let str2 = "-0";
-    if (sampled) {
-      str2 = "-1";
-    }
-    str = str2;
-  }
-  return "" + traceId + "-" + spanId + str;
-}
-export function propagationContextFromHeaders(str, _slicedToArray) {
-  let tmp;
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
+export function dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan) {
+  if (dynamicSamplingContextFromSpan) {
+    const _Object = Object;
+    const entries = Object.entries(dynamicSamplingContextFromSpan);
+    const reduced = entries.reduce((acc, item) => {
+      [tmp, tmp2] = item;
+      if (tmp2) {
+        const _HermesInternal = HermesInternal;
+        acc["" + closure_1_2 + tmp] = tmp2;
+      }
+      return acc;
+    }, {});
+    const _Object2 = Object;
+    let reduced1;
+    if (0 !== Object.keys(reduced).length) {
+      const _Object3 = Object;
+      const entries1 = Object.entries(reduced);
+      reduced1 = entries1.reduce((acc, item, index) => {
+        [tmp, tmp2] = item;
+        const combined = "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
+        let combined1 = combined;
+        if (0 !== index) {
+          const _HermesInternal = HermesInternal;
+          combined1 = "" + acc + "," + combined;
         }
-      }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      tmp = obj;
+        if (combined1.length > closure_1_4) {
+          combined1 = acc;
+          if (_mod9729.DEBUG_BUILD) {
+            const logger = _mod9730.logger;
+            const _HermesInternal2 = HermesInternal;
+            logger.warn(
+              "Not adding key: " +
+                tmp +
+                " with val: " +
+                tmp2 +
+                " to baggage header due to exceeding baggage size limits.",
+            );
+            combined1 = acc;
+          }
+        }
+        return combined1;
+      }, "");
     }
+    return reduced1;
   }
-  let result = _mod9744.baggageHeaderToDynamicSamplingContext(_slicedToArray);
-  if (tmp) {
-    if (tmp.traceId) {
-      const obj3 = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
-      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
-      obj3.spanId = generatePropagationContext.generateSpanId();
-      obj3.sampled = parentSampled;
-      if (!result) {
-        result = {};
-      }
-      obj3.dsc = result;
-      return obj3;
+}
+export function parseBaggageHeader(arr) {
+  if (arr) {
+    if (!obj.isString(arr)) {
+      const _Array = Array;
     }
+    const _Array2 = Array;
+    if (Array.isArray(arr)) {
+      let reduced = arr.reduce((acc, item) => {
+        closure_0 = acc;
+        let parts = item.split(",");
+        const mapped = parts.map((item) => {
+          const parts = item.split("=");
+          return parts.map((item) => decodeURIComponent(item.trim()));
+        });
+        const entries = Object.entries(
+          mapped.reduce((acc, item) => {
+            [tmp, tmp2] = item;
+            let tmp3 = tmp;
+            if (tmp) {
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              acc[tmp] = tmp2;
+            }
+            return acc;
+          }, {}),
+        );
+        item = entries.forEach((item) => {
+          [tmp, tmp2] = item;
+          closure_0[tmp] = tmp2;
+        });
+        return acc;
+      }, {});
+    } else {
+      const parts = arr.split(",");
+      const mapped = parts.map((item) => {
+        const parts = item.split("=");
+        return parts.map((item) => decodeURIComponent(item.trim()));
+      });
+      reduced = mapped.reduce((acc, item) => {
+        [tmp, tmp2] = item;
+        let tmp3 = tmp;
+        if (tmp) {
+          tmp3 = tmp2;
+        }
+        if (tmp3) {
+          acc[tmp] = tmp2;
+        }
+        return acc;
+      }, {});
+    }
+    return reduced;
   }
-  const obj4 = { traceId: null, spanId: null };
-  obj4.traceId = generatePropagationContext.generateTraceId();
-  const tmp4Result3 = generatePropagationContext;
-  obj4.spanId = generatePropagationContext.generateSpanId();
-  return obj4;
 }

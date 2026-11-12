@@ -1,56 +1,14 @@
 // _runtime/metro/13850__.js
-import _mod13843 from "13843__.js";
+import _mod13839 from "13839__.js";
+import _mod13851 from "13851__.js";
 
-const self = this;
+let isActive = exports;
 let fn = this;
 if (this) {
-  fn = self.__spreadArray;
+  fn = this.__importDefault;
 }
 if (!fn) {
-  fn = (arr, arg1, arg2) => {
-    let tmp;
-    if (arg2) {
-      let num4 = 0;
-      if (0 < arg1.length) {
-        while (true) {
-          let tmp4 = !tmp3;
-          let tmp6 = tmp3;
-          if (!tmp3) {
-            tmp4 = num4 in arg1;
-          }
-          let tmp7 = tmp3;
-          if (!tmp4) {
-            if (!tmp3) {
-              break;
-            } else {
-              tmp6[num4] = arg1[num4];
-              tmp7 = tmp6;
-            }
-          }
-          num4 = num4 + 1;
-          tmp3 = tmp7;
-          tmp = tmp7;
-        }
-        const _Array = Array;
-        const call = slice.call;
-        typeof call === "unknown" ? slice(0, num4) : call(arg1, 0, num4);
-      }
-    }
-    if (tmp) {
-      return arr.concat(tmp);
-    } else {
-      const _Array2 = Array;
-      const call2 = slice2.call;
-      typeof call2 === "unknown" ? slice2() : call2(arg1);
-    }
-  };
-}
-let fn2 = self;
-if (self) {
-  fn2 = self.__importDefault;
-}
-if (!fn2) {
-  fn2 = (__esModule) => {
+  fn = (__esModule) => {
     if (!__esModule) {
       const obj = { default: __esModule };
       let tmp = obj;
@@ -60,206 +18,323 @@ if (!fn2) {
     return tmp;
   };
 }
-function ensureIsTag(tmpResult, adapter) {
-  closure_0 = tmpResult;
-  closure_1 = adapter;
-  if (tmpResult === module_13843.default.falseFunc) {
-    fn = module_13843.default.falseFunc;
-  } else {
-    fn = (arr) => {
-      let isTagResult = adapter.isTag(arr);
-      if (isTagResult) {
-        isTagResult = closure_0(arr);
-      }
-      return isTagResult;
-    };
-  }
-  return fn;
-}
-function getNextSiblings(substr, adapter3) {
-  const siblings = adapter3.getSiblings(substr);
-  if (siblings.length <= 1) {
-    return [];
-  } else {
-    const index = siblings.indexOf(substr);
-    if (index >= 0) {
-      if (index !== siblings.length - 1) {
-        substr = siblings.slice(index + 1);
-        let found = substr.filter(adapter3.isTag);
-      }
-      return found;
-    }
-    found = [];
-  }
-}
-let module_13843 = fn2(_mod13843);
-function is(arg0, value, xmlMode, f, fn) {
-  closure_0 = arg0;
-  let tmp = fn(
-    value,
-    {
-      xmlMode: xmlMode.xmlMode,
-      lowerCaseAttributeNames: xmlMode.lowerCaseAttributeNames,
-      lowerCaseTags: xmlMode.lowerCaseTags,
-      quirksMode: xmlMode.quirksMode,
-      cacheResults: xmlMode.cacheResults,
-      pseudos: xmlMode.pseudos,
-      adapter: xmlMode.adapter,
-      equals: xmlMode.equals,
-    },
-    f,
-  );
-  closure_1 = tmp;
-  if (tmp === module_13843.default.trueFunc) {
-    return arg0;
-  } else if (tmp === module_13843.default.falseFunc) {
-    ({ default: _default, falseFunc } = module_13843);
-  } else {
-    falseFunc = (arg0) => {
-      let tmp = closure_1(arg0);
-      if (tmp) {
-        tmp = closure_0(arg0);
-      }
-      return tmp;
-    };
-  }
-  const obj = {
-    xmlMode: xmlMode.xmlMode,
-    lowerCaseAttributeNames: xmlMode.lowerCaseAttributeNames,
-    lowerCaseTags: xmlMode.lowerCaseTags,
-    quirksMode: xmlMode.quirksMode,
-    cacheResults: xmlMode.cacheResults,
-    pseudos: xmlMode.pseudos,
-    adapter: xmlMode.adapter,
-    equals: xmlMode.equals,
-  };
-}
+const parse = fn(_mod13851);
+const module_13839 = fn(_mod13839);
+isActive = "isHovered";
+isActive = "isVisited";
+isActive = "isActive";
 
-export const PLACEHOLDER_ELEMENT = {};
-export { ensureIsTag };
-export { getNextSiblings };
-export const subselects = {
-  is,
-  matches: is,
-  where: is,
-  not(arg0, value, xmlMode, f, fn) {
+export const filters = {
+  contains(arg0, arg1, adapter) {
     closure_0 = arg0;
-    let tmp = fn(
-      value,
-      {
-        xmlMode: xmlMode.xmlMode,
-        lowerCaseAttributeNames: xmlMode.lowerCaseAttributeNames,
-        lowerCaseTags: xmlMode.lowerCaseTags,
-        quirksMode: xmlMode.quirksMode,
-        cacheResults: xmlMode.cacheResults,
-        pseudos: xmlMode.pseudos,
-        adapter: xmlMode.adapter,
-        equals: xmlMode.equals,
-      },
-      f,
-    );
-    closure_1 = tmp;
-    if (tmp === module_13843.default.falseFunc) {
-      return arg0;
-    } else if (tmp === module_13843.default.trueFunc) {
-      ({ default: _default, falseFunc } = module_13843);
-    } else {
-      falseFunc = (arg0) => {
-        const tmp = closure_1(arg0);
-        let tmp2 = !tmp;
-        if (!tmp) {
+    closure_1 = arg1;
+    adapter = adapter.adapter;
+    return function contains(arg0) {
+      let hasItem = closure_0(arg0);
+      if (hasItem) {
+        const text = adapter.getText(arg0);
+        hasItem = text.includes(closure_1);
+      }
+      return hasItem;
+    };
+  },
+  icontains(arg0, str, adapter) {
+    closure_0 = arg0;
+    adapter = adapter.adapter;
+    closure_2 = str.toLowerCase();
+    return function icontains(arg0) {
+      let hasItem = closure_0(arg0);
+      if (hasItem) {
+        const formatted = adapter.getText(arg0).toLowerCase();
+        hasItem = formatted.includes(closure_2);
+        const str = adapter.getText(arg0);
+      }
+      return hasItem;
+    };
+  },
+  (arg0, arg1, adapter) => {
+    closure_0 = arg0;
+    adapter = adapter.adapter;
+    const equals = adapter.equals;
+    const defaultResult = parse.default(arg1);
+    closure_3 = defaultResult;
+    if (defaultResult === module_13839.default.falseFunc) {
+      let nthChild = module_13839.default.falseFunc;
+    } else if (defaultResult === module_13839.default.trueFunc) {
+      closure_0 = arg0;
+      nthChild = (arg0) => {
+        const parent = adapter.getParent(arg0);
+        let tmp2 = null != parent && adapter.isTag(parent);
+        if (tmp2) {
           tmp2 = closure_0(arg0);
         }
         return tmp2;
       };
-    }
-    const obj = {
-      xmlMode: xmlMode.xmlMode,
-      lowerCaseAttributeNames: xmlMode.lowerCaseAttributeNames,
-      lowerCaseTags: xmlMode.lowerCaseTags,
-      quirksMode: xmlMode.quirksMode,
-      cacheResults: xmlMode.cacheResults,
-      pseudos: xmlMode.pseudos,
-      adapter: xmlMode.adapter,
-      equals: xmlMode.equals,
-    };
-  },
-  has(arg0, arr, adapter, arg3, fn) {
-    closure_0 = arg0;
-    adapter = adapter.adapter;
-    const obj = {
-      xmlMode: adapter.xmlMode,
-      lowerCaseAttributeNames: adapter.lowerCaseAttributeNames,
-      lowerCaseTags: adapter.lowerCaseTags,
-      quirksMode: adapter.quirksMode,
-      cacheResults: adapter.cacheResults,
-      pseudos: adapter.pseudos,
-      adapter: adapter.adapter,
-      equals: adapter.equals,
-      relativeSelector: true,
-    };
-    let tmp;
-    if (arr.some((arr) => arr.some(closure_0(items[1]).isTraversal))) {
-      items = [adapter.PLACEHOLDER_ELEMENT];
-      tmp = items;
-    }
-    items = tmp;
-    const tmp3 = fn(arr, obj, tmp);
-    if (tmp3 === module_13843.default.falseFunc) {
-      return tmp4.default.falseFunc;
     } else {
-      closure_0 = tmp3;
-      if (tmp3 === tmp4.default.falseFunc) {
-        fn = tmp4.default.falseFunc;
-      } else {
-        fn = (arr) => {
-          let isTagResult = adapter.isTag(arr);
-          if (isTagResult) {
-            isTagResult = closure_0(arr);
-          }
-          return isTagResult;
-        };
-      }
-      if (tmp) {
-        if (tmp3 !== tmp4.default.trueFunc) {
-          const shouldTestNextSiblings = tmp3.shouldTestNextSiblings;
-          module_13843 = undefined !== shouldTestNextSiblings && shouldTestNextSiblings;
-          return (arg0) => {
-            if (closure_0(arg0)) {
-              items[0] = arg0;
-              const children = adapter.getChildren(arg0);
-              if (!closure_4) {
-                return adapter.existsOne(fn, children);
-              } else {
-                const siblings = adapter.getSiblings(arg0);
-                if (siblings.length <= 1) {
-                  items = [];
-                } else {
-                  const index = siblings.indexOf(arg0);
-                  if (index >= 0) {
-                    if (index !== siblings.length - 1) {
-                      const substr = siblings.slice(index + 1);
-                      items = substr.filter(adapter.isTag);
-                    }
-                  }
-                  items = [];
-                }
-                fn(fn([], children, true), items, true);
-                const tmp6 = fn([], children, true);
+      nthChild = function nthChild(arg0) {
+        const siblings = adapter.getSiblings(arg0);
+        let num = 0;
+        if (0 < siblings.length) {
+          let num3 = 0;
+          let num4 = 0;
+          num = 0;
+          if (!equals(arg0, siblings[0])) {
+            while (true) {
+              let sum = num4;
+              if (adapter.isTag(siblings[num3])) {
+                sum = num4 + 1;
               }
-            } else {
-              return false;
+              let sum1 = num3 + 1;
+              num = sum;
+              if (sum1 >= siblings.length) {
+                break;
+              } else {
+                num3 = sum1;
+                num4 = sum;
+                num = sum;
+                if (equals(arg0, siblings[sum1])) {
+                  break;
+                }
+              }
             }
-          };
+          }
         }
-      }
-      return (arg0) => {
-        let existsOneResult = closure_0(arg0);
-        if (existsOneResult) {
-          existsOneResult = adapter.existsOne(fn, adapter.getChildren(arg0));
+        let tmp8 = defaultResult(num);
+        if (tmp8) {
+          tmp8 = closure_0(arg0);
         }
-        return existsOneResult;
+        return tmp8;
       };
     }
+    return nthChild;
   },
+  (arg0, arg1, adapter) => {
+    closure_0 = arg0;
+    adapter = adapter.adapter;
+    const equals = adapter.equals;
+    const defaultResult = parse.default(arg1);
+    closure_3 = defaultResult;
+    if (defaultResult === module_13839.default.falseFunc) {
+      let nthLastChild = module_13839.default.falseFunc;
+    } else if (defaultResult === module_13839.default.trueFunc) {
+      closure_0 = arg0;
+      nthLastChild = (arg0) => {
+        const parent = adapter.getParent(arg0);
+        let tmp2 = null != parent && adapter.isTag(parent);
+        if (tmp2) {
+          tmp2 = closure_0(arg0);
+        }
+        return tmp2;
+      };
+    } else {
+      nthLastChild = function nthLastChild(arg0) {
+        const siblings = adapter.getSiblings(arg0);
+        let diff = siblings.length - 1;
+        let num = 0;
+        if (0 <= diff) {
+          let num2 = 0;
+          num = 0;
+          if (!equals(arg0, siblings[diff])) {
+            while (true) {
+              let sum = num2;
+              if (adapter.isTag(siblings[diff])) {
+                sum = num2 + 1;
+              }
+              let diff1 = diff - 1;
+              num = sum;
+              if (0 > diff1) {
+                break;
+              } else {
+                diff = diff1;
+                num2 = sum;
+                num = sum;
+                if (equals(arg0, siblings[diff1])) {
+                  break;
+                }
+              }
+            }
+          }
+        }
+        let tmp9 = defaultResult(num);
+        if (tmp9) {
+          tmp9 = closure_0(arg0);
+        }
+        return tmp9;
+      };
+    }
+    return nthLastChild;
+  },
+  (arg0, arg1, adapter) => {
+    closure_0 = arg0;
+    adapter = adapter.adapter;
+    const equals = adapter.equals;
+    const defaultResult = parse.default(arg1);
+    closure_3 = defaultResult;
+    if (defaultResult === module_13839.default.falseFunc) {
+      let nthOfType = module_13839.default.falseFunc;
+    } else if (defaultResult === module_13839.default.trueFunc) {
+      closure_0 = arg0;
+      nthOfType = (arg0) => {
+        const parent = adapter.getParent(arg0);
+        let tmp2 = null != parent && adapter.isTag(parent);
+        if (tmp2) {
+          tmp2 = closure_0(arg0);
+        }
+        return tmp2;
+      };
+    } else {
+      nthOfType = function nthOfType(arg0) {
+        const siblings = adapter.getSiblings(arg0);
+        let num = 0;
+        let num2 = 0;
+        let num3 = 0;
+        if (0 < siblings.length) {
+          num = num3;
+          while (!equals(arg0, siblings[num2])) {
+            let isTagResult = adapter.isTag(tmp);
+            if (isTagResult) {
+              let name = adapter.getName(tmp);
+              isTagResult = name === adapter.getName(arg0);
+            }
+            let sum = num3;
+            if (isTagResult) {
+              sum = num3 + 1;
+            }
+            num2 = num2 + 1;
+            num3 = sum;
+            num = sum;
+            if (num2 >= siblings.length) {
+              break;
+            }
+          }
+        }
+        let tmp8 = defaultResult(num);
+        if (tmp8) {
+          tmp8 = closure_0(arg0);
+        }
+        return tmp8;
+      };
+    }
+    return nthOfType;
+  },
+  (arg0, arg1, adapter) => {
+    closure_0 = arg0;
+    adapter = adapter.adapter;
+    const equals = adapter.equals;
+    const defaultResult = parse.default(arg1);
+    closure_3 = defaultResult;
+    if (defaultResult === module_13839.default.falseFunc) {
+      let nthLastOfType = module_13839.default.falseFunc;
+    } else if (defaultResult === module_13839.default.trueFunc) {
+      closure_0 = arg0;
+      nthLastOfType = (arg0) => {
+        const parent = adapter.getParent(arg0);
+        let tmp2 = null != parent && adapter.isTag(parent);
+        if (tmp2) {
+          tmp2 = closure_0(arg0);
+        }
+        return tmp2;
+      };
+    } else {
+      nthLastOfType = function nthLastOfType(arg0) {
+        const siblings = adapter.getSiblings(arg0);
+        let diff = siblings.length - 1;
+        let num = 0;
+        let num2 = 0;
+        if (0 <= diff) {
+          num2 = num;
+          while (!equals(arg0, siblings[diff])) {
+            let isTagResult = adapter.isTag(tmp2);
+            if (isTagResult) {
+              let name = adapter.getName(tmp2);
+              isTagResult = name === adapter.getName(arg0);
+            }
+            let sum = num;
+            if (isTagResult) {
+              sum = num + 1;
+            }
+            diff = diff - 1;
+            num = sum;
+            num2 = sum;
+            if (0 > diff) {
+              break;
+            }
+          }
+        }
+        let tmp9 = defaultResult(num2);
+        if (tmp9) {
+          tmp9 = closure_0(arg0);
+        }
+        return tmp9;
+      };
+    }
+    return nthLastOfType;
+  },
+  root(arg0, arg1, adapter) {
+    closure_0 = arg0;
+    adapter = adapter.adapter;
+    return (arg0) => {
+      const parent = adapter.getParent(arg0);
+      let tmp2 = null == parent || !adapter.isTag(parent);
+      if (tmp2) {
+        tmp2 = closure_0(arg0);
+      }
+      return tmp2;
+    };
+  },
+  scope(arg0, arg1, equals, arg3) {
+    closure_0 = arg0;
+    closure_1 = arg3;
+    equals = equals.equals;
+    const filters = isActive.filters;
+    return filters.root(arg0, arg1, equals);
+  },
+  hover: function dynamicPseudo(arg0, arg1, arg2) {
+    closure_0 = arg0;
+    closure_1 = tmp;
+    if (typeof arg2.adapter[isActive] !== "function") {
+      let active = module_13839.default.falseFunc;
+    } else {
+      active = function active(arg0) {
+        let tmp = closure_1(arg0);
+        if (tmp) {
+          tmp = closure_0(arg0);
+        }
+        return tmp;
+      };
+    }
+    return active;
+  },
+  visited: function dynamicPseudo(arg0, arg1, arg2) {
+    closure_0 = arg0;
+    closure_1 = tmp;
+    if (typeof arg2.adapter[isActive] !== "function") {
+      let active = module_13839.default.falseFunc;
+    } else {
+      active = function active(arg0) {
+        let tmp = closure_1(arg0);
+        if (tmp) {
+          tmp = closure_0(arg0);
+        }
+        return tmp;
+      };
+    }
+    return active;
+  },
+  active: function dynamicPseudo(arg0, arg1, arg2) {
+    closure_0 = arg0;
+    closure_1 = tmp;
+    if (typeof arg2.adapter[isActive] !== "function") {
+      let active = module_13839.default.falseFunc;
+    } else {
+      active = function active(arg0) {
+        let tmp = closure_1(arg0);
+        if (tmp) {
+          tmp = closure_0(arg0);
+        }
+        return tmp;
+      };
+    }
+    return active;
+  }
 };

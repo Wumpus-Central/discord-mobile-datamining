@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/modules/voice_panel/native/images",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "9c9eaf9e089e1e9ddafb13abb59b28d7",
-  name: "MicrophoneSlashIcon",
+  scales: [2, 3, 4],
+  hash: "a9d9f17a82c0681a83d7c3c4c21e6009",
+  name: "video",
   type: "png",
 });

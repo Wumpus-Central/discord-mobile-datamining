@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stickers/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 12,
+  height: 12,
   scales: [2, 3],
-  hash: "14e9f26f2a47abbd4dc478a8a748d9e9",
-  name: "history",
+  hash: "91cf7e45c8979413a0ad2486eb772598",
+  name: "ic_nitro_wheel",
   type: "png",
 });

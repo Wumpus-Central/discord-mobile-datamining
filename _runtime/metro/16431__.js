@@ -1,11 +1,15 @@
 // _runtime/metro/16431__.js
-import _mod16429 from "16429__.js";
+import _mod16424 from "16424__.js";
 
-export default (arg0, arg1, arg2) => {
+export default (arg0, arg1) => {
   try {
-    const tmp7 = new _mod16429(arg1, arg2);
-    return tmp7.test(arg0);
+    const tmp8 = new _mod16424(arg0, arg1);
+    let str = tmp8.range;
+    if (!str) {
+      str = "*";
+    }
+    return str;
   } catch (err) {
-    return false;
+    return null;
   }
 };

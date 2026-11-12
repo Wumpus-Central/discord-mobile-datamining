@@ -1,56 +1,33 @@
 // _runtime/metro/13799__.js
-import _mod13730 from "13730__.js";
-
-const Ident = _mod13730.TYPE.Ident;
-const Function = _mod13730.TYPE.Function;
-const Colon = _mod13730.TYPE.Colon;
-const RightParenthesis = _mod13730.TYPE.RightParenthesis;
 const obj = {
-  name: "PseudoClassSelector",
+  name: "Selector",
   structure: null,
   parse() {
     const self = this;
-    this.eat(Colon);
-    if (this.scanner.tokenType === Function) {
-      const str = self.consumeFunctionName();
-      const formatted = str.toLowerCase();
-      const pseudo = self.pseudo;
-      if (!pseudo.hasOwnProperty(formatted)) {
-        const list = self.createList();
-        list.push(self.Raw(self.scanner.tokenIndex, null, false));
-        self.eat(RightParenthesis);
-      }
-      const scanner = self.scanner;
-      scanner.skipSC();
-      let skipSCResult1 = self.pseudo[formatted];
-      const call = skipSCResult1.call;
-      const scanner2 = self.scanner;
-      skipSCResult1 = scanner2.skipSC();
-      const tmp10 = typeof call === "unknown" ? skipSCResult1() : call(self);
-    } else {
-      const element = {
-        type: "PseudoClassSelector",
-        loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-        name: self.consume(Ident),
-        children: null,
-      };
-      return element;
+    const sequence = this.readSequence(this.scope.Selector);
+    if (null === this.getFirstListNode(sequence)) {
+      self.error("Selector is expected");
     }
+    const element = { type: "Selector", loc: self.getLocationFromList(sequence), children: sequence };
+    return element;
   },
-  generate(name) {
-    const self = this;
-    this.chunk(":");
-    this.chunk(name.name);
-    if (null !== name.children) {
-      self.chunk("(");
-      self.children(name);
-      self.chunk(")");
-    }
+  generate(arg0) {
+    this.children(arg0);
   },
-  walkContext: "function",
 };
-const obj2 = { name: String, children: null };
-const items = [["Raw"], null];
+const obj2 = { children: null };
+const items = [
+  [
+    "TypeSelector",
+    "IdSelector",
+    "ClassSelector",
+    "AttributeSelector",
+    "PseudoClassSelector",
+    "PseudoElementSelector",
+    "Combinator",
+    "WhiteSpace",
+  ],
+];
 obj2.children = items;
 obj.structure = obj2;
 

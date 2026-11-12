@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 640,
   height: 360,
   scales: [1],
-  hash: "d95a32482e4d06c5be43d6a731f0016a",
-  name: "conjure-home-raid-calendar",
+  hash: "4e5bae29363ccb3adb92755885f5263f",
+  name: "conjure-home-spoilers-automod",
   type: "svg",
 });

@@ -1,42 +1,38 @@
 // _runtime/metro/16668__.js
-import _mod16633 from "16633__.js";
-import _mod16655 from "16655__.js";
+import _mod16629 from "16629__.js";
+import _mod16631 from "16631__.js";
+import _mod16647 from "16647__.js";
+import _mod16669 from "16669__.js";
+import _mod16670 from "16670__.js";
 
-const re2 = /#|\.prototype\./;
-function isForced(arg0, arg1) {
-  if (typeof fn === "function") {
-    const _String = String;
-    const str3 = String(arg0).replace(re2, ".");
-    const tmp5 = tmp[str3.toLowerCase(str3)];
-    let tmp7 = tmp5 === P;
-    if (!tmp7) {
-      if (tmp5 === N) {
-        tmp7 = tmp9;
-      } else {
-        let tmp11Result = dependencyMap;
-        if (_mod16655(arg1)) {
-          tmp11Result = _mod16633;
-          let tmp11ResultResult = tmp11Result(arg1);
-        } else {
-          tmp11ResultResult = arg1;
-        }
+let closure_2 = _mod16631([].push);
+
+export default (arg0, arg1) => {
+  const tmp = _mod16629(arg0);
+  items = [];
+  for (const key10010 in tmp) {
+    let tmp14 = _mod16647;
+    let tmp14Result = tmp14(_mod16669, key10010);
+    let tmp2 = !tmp14Result;
+    if (!tmp14Result) {
+      tmp2 = _mod16647(tmp, key10010);
+    }
+    if (!tmp2) {
+      continue;
+    } else {
+      let tmp4 = closure_2(items, key10010);
+      continue;
+    }
+    continue;
+  }
+  for (let num = 0; arg1.length > num; num = num + 1) {
+    let tmp7 = arg1[num];
+    if (_mod16647(tmp, tmp7)) {
+      let tmp5Result = _mod16670;
+      if (!~tmp5Result.indexOf(items, tmp7)) {
+        let tmp10 = closure_2(items, tmp7);
       }
     }
-    return tmp7;
-  } else {
-    throw new TypeError("Trying to call a non-function");
   }
-}
-const normalize = (arg0) => {
-  const str = String(arg0);
-  return String(arg0).replace(re2, ".").toLowerCase();
+  return items;
 };
-isForced.normalize = normalize;
-const data = {};
-isForced.data = data;
-isForced.NATIVE = "N";
-const N = "N";
-isForced.POLYFILL = "P";
-const P = "P";
-
-export default isForced;

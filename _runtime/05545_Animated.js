@@ -166,7 +166,7 @@ export (children) => {
   items[2] = obj2;
   const items1 = [React6(Animated.View, { style: items }), children.children];
   obj.children = items1;
-  return closure_1_10(BaseButton, obj);
+  return refs(BaseButton, obj);
 }
 export (ref) => {
   let onActiveStateChange = ref;

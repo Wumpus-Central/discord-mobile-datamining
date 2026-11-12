@@ -1,20 +1,40 @@
 // _runtime/metro/13789__.js
-import _mod13730 from "13730__.js";
+import _mod13726 from "13726__.js";
 
-const Ident = _mod13730.TYPE.Ident;
+const Comma = _mod13726.TYPE.Comma;
 const obj = {
-  name: "Identifier",
-  structure: { name: String },
-  parse() {
-    return {
-      type: "Identifier",
-      loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd),
-      name: this.consume(Ident),
-    };
+  name: "MediaQueryList",
+  structure: null,
+  parse(arg0) {
+    const self = this;
+    const list = this.createList();
+    const scanner = this.scanner;
+    scanner.skipSC();
+    if (!this.scanner.eof) {
+      list.push(self.MediaQuery(arg0));
+      if (self.scanner.tokenType === Comma) {
+        self.scanner.next();
+        while (!self.scanner.eof) {
+          let arr3 = list.push(self.MediaQuery(arg0));
+          if (self.scanner.tokenType !== Comma) {
+            break;
+          }
+        }
+        const iter = self.scanner;
+      }
+    }
+    const element = { type: "MediaQueryList", loc: self.getLocationFromList(list), children: list };
+    return element;
   },
-  generate(name) {
-    this.chunk(name.name);
+  generate(arg0) {
+    this.children(arg0, function () {
+      this.chunk(",");
+    });
   },
 };
+const obj2 = { children: null };
+const items = [["MediaQuery"]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

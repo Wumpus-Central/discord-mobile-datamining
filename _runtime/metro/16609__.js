@@ -1,5 +1,23 @@
 // _runtime/metro/16609__.js
 
-export function shouldPolyfill() {
-  return !("supportedValuesOf" in Intl);
-}
+export const collations = [
+  "big5han",
+  "compat",
+  "dict",
+  "direct",
+  "ducet",
+  "emoji",
+  "eor",
+  "gb2312",
+  "phonebk",
+  "phonetic",
+  "pinyin",
+  "reformed",
+  "search",
+  "searchjl",
+  "standard",
+  "stroke",
+  "trad",
+  "unihan",
+  "zhuyin",
+];

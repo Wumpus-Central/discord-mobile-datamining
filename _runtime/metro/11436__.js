@@ -1,97 +1,61 @@
 // _runtime/metro/11436__.js
-import includeCommonConfiguration from "../11404_includeCommonConfiguration.js";
-import _mod11410 from "11410__.js";
-import JPStandardParser2 from "../11437_JPStandardParser.js";
-import _mod11439 from "11439__.js";
-import _mod11440 from "11440__.js";
-import _mod11441 from "11441__.js";
-import _mod11442 from "11442__.js";
-import _mod11443 from "11443__.js";
-import _mod11444 from "11444__.js";
-import _mod11445 from "11445__.js";
-import _mod11446 from "11446__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
 
-const require = globalThis.__r;
-
-function createConfiguration() {
-  if (flag === undefined) {
-    flag = true;
+const JPSlashDateFormatParser = require;
+const regExp = new RegExp(
+  "([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))",
+  "i",
+);
+class JPSlashDateFormatParser {
+  constructor() {
+    tmp = c2(this, JPSlashDateFormatParser);
+    return;
   }
-  const obj = { parsers: null, refiners: null };
-  items = [new JPStandardParser.default(), , , ,];
-  const _default = new JPStandardParser.default();
-  items[1] = new regExp.default();
-  const _default1 = new regExp.default();
-  items[2] = new regExp.default();
-  const _default2 = new regExp.default();
-  items[3] = new regExp.default();
-  const _default3 = new regExp.default();
-  items[4] = new _isNativeReflectConstruct.default();
-  obj.parsers = items;
-  const _default4 = new _isNativeReflectConstruct.default();
-  const items1 = [new _isNativeReflectConstruct.default(), ,];
-  const _default5 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  const _default6 = new _isNativeReflectConstruct.default();
-  items1[2] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  const result = includeCommonConfiguration.includeCommonConfiguration(obj, flag);
-  const refiners = result.refiners;
-  result.refiners = refiners.filter((item) => !(item instanceof _isNativeReflectConstruct.default));
-  return result;
 }
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-function createCasualConfiguration() {
-  const tmp = createConfiguration(false);
-  const parsers = tmp.parsers;
-  parsers.unshift(new module_11440.default());
-  return tmp;
-}
-const JPStandardParser = fn(JPStandardParser2);
-fn(_mod11439);
-const module_11440 = fn(_mod11440);
-fn(_mod11441);
-fn(_mod11442);
-fn(_mod11443);
-fn(_mod11444);
-fn(_mod11445);
-const regExp = fn(_mod11446);
-const _isNativeReflectConstruct = fn(_mod11410);
-const configuration = createConfiguration(false);
-let parsers = configuration.parsers;
-parsers.unshift(new module_11440.default());
-const chrono = new require("11364__.js").Chrono(configuration);
-const chrono1 = new require("11364__.js").Chrono(createConfiguration(true));
+const entry = {
+  key: "pattern",
+  value: function pattern() {
+    return regExp;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "extract",
+    value: function extract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      const parsed = parseInt(JPSlashDateFormatParser(11432).toHankaku(arg1[2]));
+      const parsed1 = parseInt(JPSlashDateFormatParser(11432).toHankaku(arg1[3]));
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          if (parsed1 >= 1) {
+            if (parsed1 <= 31) {
+              parsingComponents.assign("day", parsed1);
+              parsingComponents.assign("month", parsed);
+              if (arg1[1]) {
+                const _parseInt = parseInt;
+                const parsed2 = parseInt(JPSlashDateFormatParser(11432).toHankaku(arg1[1]));
+                parsingComponents.assign("year", JPSlashDateFormatParser(11363).findMostLikelyADYear(parsed2));
+              } else {
+                parsingComponents.imply(
+                  "year",
+                  JPSlashDateFormatParser(11363).findYearClosestToRef(
+                    createParsingComponents.reference.instant,
+                    parsed1,
+                    parsed,
+                  ),
+                );
+              }
+              return parsingComponents;
+            }
+          }
+          return null;
+        }
+      }
+      return null;
+    },
+  },
+];
 
-export function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-}
-export function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-}
-export { createCasualConfiguration };
-export { createConfiguration };
-export const Chrono = require("11364__.js").Chrono;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;
+export default _createClass(JPSlashDateFormatParser, items);

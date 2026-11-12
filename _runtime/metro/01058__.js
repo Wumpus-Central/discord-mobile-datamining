@@ -233,7 +233,7 @@ let items = [
           const _Object4 = Object;
           const tmpResult7 = FeedbackWidgetProvider(1065);
           ({ _handleClose: obj17.onFormClose, _handleClose: obj17.onFormSubmitted } = self);
-          element = <RN.View style={null}><closure_1_10 visible={isVisible} transparent animationType="none" onRequestClose={self._handleClose} testID="feedback-form-modal">{element2}<RN.View {......merged}>{createElement3(application_id, obj11, createElement4(FeedbackWidgetProvider(1068).FeedbackWidget, Object.assign({}, FeedbackWidgetProvider(995).getFeedbackOptions(), { onFormClose: null, onFormSubmitted: null })))}</RN.View></closure_1_10></RN.View>;
+          element = <RN.View style={null}><refs visible={isVisible} transparent animationType="none" onRequestClose={self._handleClose} testID="feedback-form-modal">{element2}<RN.View {......merged}>{createElement3(application_id, obj11, createElement4(FeedbackWidgetProvider(1068).FeedbackWidget, Object.assign({}, FeedbackWidgetProvider(995).getFeedbackOptions(), { onFormClose: null, onFormSubmitted: null })))}</RN.View></refs></RN.View>;
           const obj12 = { onFormClose: null, onFormSubmitted: null };
           const tmpResult8 = FeedbackWidgetProvider(995);
         }

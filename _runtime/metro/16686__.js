@@ -1,45 +1,12 @@
 // _runtime/metro/16686__.js
-import _mod16630 from "16630__.js";
-import _mod16655 from "16655__.js";
-import _mod16683 from "16683__.js";
-import _mod16687 from "16687__.js";
+import _mod16624 from "16624__.js";
+import all from "16650__.js";
 
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod16655(value)) {
-    _mod16687(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
-    } else {
-      _mod16630(arg1, value);
-    }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        _mod16683.f(arg0, arg1, obj2);
-        const tmp3Result = _mod16683;
-      }
-    } catch (err) {}
-  }
-  return arg0;
-};
+let _moduleResult = all(_mod16624.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod16624.WeakMap));
+  const obj = /native code/;
+}
+
+export default _moduleResult;

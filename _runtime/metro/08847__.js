@@ -1,199 +1,51 @@
 // _runtime/metro/08847__.js
+import _mod8843 from "08843__.js";
 import _mod8844 from "08844__.js";
-import _mod8845 from "08845__.js";
-import _mod8848 from "08848__.js";
-import is7Z from "../08849_is7Z.js";
-import _mod8850 from "08850__.js";
-import _mod8851 from "08851__.js";
-import _mod8852 from "08852__.js";
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
+require = arg1;
+const dependencyMap = arg6;
+
+export function isAAC(fileChunk, excludeSimilarTypes) {
+  fileChunk = _mod8843.getFileChunk(fileChunk);
+  const FileTypes = _mod8844.FileTypes;
+  let checkByFileTypeResult1 = FileTypes.checkByFileType(fileChunk, "aac");
+  if (!checkByFileTypeResult1) {
+    excludeSimilarTypes = undefined;
+    if (null != excludeSimilarTypes) {
+      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
+    }
+    let checkByFileTypeResult = !excludeSimilarTypes;
+    if (!excludeSimilarTypes) {
+      const fileChunk1 = _mod8843.getFileChunk(fileChunk);
+      const FileTypes2 = _mod8844.FileTypes;
+      checkByFileTypeResult = FileTypes2.checkByFileType(fileChunk1, "m4a");
+    }
+    checkByFileTypeResult1 = checkByFileTypeResult;
+  }
+  return checkByFileTypeResult1;
 }
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
-  }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
-          }
-          continue;
-        } else {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
-          }
-        }
-      }
-    };
-  }
-  let _Object2 = Object;
-  exports.validateFileType = undefined;
-  fn(_mod8848, exports);
-  fn(is7Z, exports);
-  fn(_mod8850, exports);
-  fn(_mod8851, exports);
-  fn(_mod8852, exports);
-  exports.validateFileType = function validateFileType(fileChunk, arr, chunkSize) {
-    items = [];
-    const items1 = [
-      ...new Set(
-        arr.map((item) => {
-          const parts = item.split(".");
-          const formatted = parts.join("").toUpperCase();
-          let combined = formatted;
-          if ("7Z" === formatted) {
-            const _HermesInternal = HermesInternal;
-            combined = "_" + formatted;
-          }
-          return combined;
-        }),
-      ),
-    ];
-    for (const item10023 of items1) {
-      let _Object = Object;
-      hasOwnProperty = Object.prototype.hasOwnProperty;
-      let call = hasOwnProperty.call;
-      let FileTypes = _mod8845.FileTypes;
-      if (typeof call === "unknown") {
-        let hasOwnPropertyResult = hasOwnProperty(item10023);
-      } else {
-        hasOwnPropertyResult = call(FileTypes, item10023);
-      }
-      if (hasOwnPropertyResult) {
-        arr = items.push(item10023);
-        continue;
-      } else {
-        let _TypeError = TypeError;
-        let _HermesInternal = HermesInternal;
-        let str2 = "` is not supported. Please make sure that `types` list conatins only supported files";
-        let str3 = "Type `";
-        let tmp8 = new.target;
-        let tmp9 = new.target;
-        let typeError = new TypeError(
-          "Type `" +
-            item10023.toLowerCase() +
-            "` is not supported. Please make sure that `types` list conatins only supported files",
-        );
-        throw typeError;
-      }
-    }
-    if (chunkSize) {
-      const _Object2 = Object;
-      const call2 = hasOwnProperty2.call;
-      if (typeof call2 === "unknown") {
-        let hasOwnProperty2Result = hasOwnProperty2("chunkSize");
-      } else {
-        hasOwnProperty2Result = call2(chunkSize, "chunkSize");
-      }
-      if (hasOwnProperty2Result) {
-        chunkSize = undefined;
-        if (null != chunkSize) {
-          chunkSize = chunkSize.chunkSize;
-        }
-        let num = 0;
-        if (null !== chunkSize) {
-          num = 0;
-          if (undefined !== chunkSize) {
-            num = chunkSize;
-          }
-        }
-        if (num <= 0) {
-          const _RangeError = RangeError;
-          const rangeError = new RangeError("chunkSize must be bigger than zero");
-          throw rangeError;
-        }
-      }
-    }
-    if (!chunkSize) {
-      const arr3 = (function addSimilarTypes(items) {
-        if (items.some((item) => "MP4" === item)) {
-          items = ["M4V"];
-        } else {
-          items = items.some((item) => "AAC" === item) ? ["M4A"] : [];
-        }
-        return items;
-      })(items);
-      let combined = items;
-      if (arr3.length > 0) {
-        combined = items.concat(arr3);
-      }
-    } else {
-      let excludeSimilarTypes;
-      if (null != chunkSize) {
-        excludeSimilarTypes = chunkSize.excludeSimilarTypes;
-      }
-      combined = items;
-    }
-    let items2 = [];
-    const items3 = [];
-    for (const item10079 of combined) {
-      let tmp21 = require;
-      let FileTypes2 = _mod8845.FileTypes;
-      items2 = items2.concat(FileTypes2.getSignaturesByName(item10079));
-      let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = _mod8845.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
-      if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(item10079.toLowerCase())) {
-        let FileTypes3 = tmp21(8845).FileTypes;
-        let arr2 = items3.push(FileTypes3.getInfoByName(item10079));
-      }
-      continue;
-    }
-    let num2;
-    if (null != chunkSize) {
-      num2 = chunkSize.chunkSize;
-    }
-    if (!num2) {
-      num2 = 64;
-    }
-    fileChunk = _mod8844.getFileChunk(fileChunk, num2);
-    const FileTypes4 = _mod8845.FileTypes;
-    const detectSignatureResult = FileTypes4.detectSignature(fileChunk, items2);
-    require = detectSignatureResult;
-    if (detectSignatureResult) {
-      if (items3.length > 0) {
-        const found = items3.filter((signatures) => {
-          signatures = signatures.signatures;
-          return signatures.includes(detectSignatureResult);
-        });
-        if (found.length > 0) {
-          const FileTypes5 = _mod8845.FileTypes;
-          const result = FileTypes5.detectTypeByAdditionalCheck(fileChunk, found);
-          dependencyMap = result;
-          return result && combined.some((item) => item.toLowerCase() === result);
-        }
-      }
-      return true;
-    } else {
-      return false;
-    }
-    const set = new Set(
-      arr.map((item) => {
-        const parts = item.split(".");
-        const formatted = parts.join("").toUpperCase();
-        let combined = formatted;
-        if ("7Z" === formatted) {
-          const _HermesInternal = HermesInternal;
-          combined = "_" + formatted;
-        }
-        return combined;
-      }),
-    );
-  };
-} else {
-  let _Object = Object;
+export function isAMR(fileChunk) {
+  fileChunk = _mod8843.getFileChunk(fileChunk);
+  const FileTypes = _mod8844.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "amr");
+}
+export function isFLAC(fileChunk) {
+  fileChunk = _mod8843.getFileChunk(fileChunk);
+  const FileTypes = _mod8844.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flac");
+}
+export function isM4A(fileChunk) {
+  fileChunk = _mod8843.getFileChunk(fileChunk);
+  const FileTypes = _mod8844.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4a");
+}
+export function isMP3(fileChunk) {
+  fileChunk = _mod8843.getFileChunk(fileChunk);
+  const FileTypes = _mod8844.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mp3");
+}
+export function isWAV(fileChunk) {
+  fileChunk = _mod8843.getFileChunk(fileChunk);
+  const FileTypes = _mod8844.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "wav");
 }

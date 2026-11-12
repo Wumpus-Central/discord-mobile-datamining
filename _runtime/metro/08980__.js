@@ -4,10 +4,10 @@ import registerAsset from "01119__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/premium/roadblocks/images",
-  width: 552,
-  height: 336,
+  width: 488,
+  height: 240,
   scales: [1],
-  hash: "f59c66d6f542b08761b44d6d5de547c8",
-  name: "client_themes_upsell",
+  hash: "1653812d24f945a581bfdacd052d1cd9",
+  name: "app_icons_upsell",
   type: "png",
 });

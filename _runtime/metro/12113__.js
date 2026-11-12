@@ -1,5 +1,5 @@
 // _runtime/metro/12113__.js
-import _mod12093 from "12093__.js";
+import _mod12087 from "12087__.js";
 
 const self = this;
 let self2 = this;
@@ -56,15 +56,15 @@ if (self2) {
       if (typeof error === "function") {
         const obj = { localeError: null };
         const obj2 = {
-          string: { unit: "caract\u00E8res", verb: "avoir" },
-          file: { unit: "octets", verb: "avoir" },
-          array: { unit: "\u00E9l\u00E9ments", verb: "avoir" },
-          set: { unit: "\u00E9l\u00E9ments", verb: "avoir" },
+          string: { unit: "stafi", verb: "a\u00F0 hafa" },
+          file: { unit: "b\u00E6ti", verb: "a\u00F0 hafa" },
+          array: { unit: "hluti", verb: "a\u00F0 hafa" },
+          set: { unit: "hluti", verb: "a\u00F0 hafa" },
         };
         closure_1 = {
-          regex: "entr\u00E9e",
-          email: "adresse e-mail",
-          url: "URL",
+          regex: "gildi",
+          email: "netfang",
+          url: "vefsl\u00F3\u00F0",
           emoji: "emoji",
           uuid: "UUID",
           uuidv4: "UUIDv4",
@@ -76,22 +76,22 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime: "date et heure ISO",
-          date: "date ISO",
-          time: "heure ISO",
-          duration: "dur\u00E9e ISO",
-          ipv4: "adresse IPv4",
-          ipv6: "adresse IPv6",
-          cidrv4: "plage IPv4",
-          cidrv6: "plage IPv6",
-          base64: "cha\u00EEne encod\u00E9e en base64",
-          base64url: "cha\u00EEne encod\u00E9e en base64url",
-          json_string: "cha\u00EEne JSON",
-          e164: "num\u00E9ro E.164",
+          datetime: "ISO dagsetning og t\u00EDmi",
+          date: "ISO dagsetning",
+          time: "ISO t\u00EDmi",
+          duration: "ISO t\u00EDmalengd",
+          ipv4: "IPv4 address",
+          ipv6: "IPv6 address",
+          cidrv4: "IPv4 range",
+          cidrv6: "IPv6 range",
+          base64: "base64-encoded strengur",
+          base64url: "base64url-encoded strengur",
+          json_string: "JSON strengur",
+          e164: "E.164 t\u00F6lugildi",
           jwt: "JWT",
-          template_literal: "entr\u00E9e",
+          template_literal: "gildi",
         };
-        closure_2 = { nan: "NaN", number: "nombre", array: "tableau" };
+        closure_2 = { nan: "NaN", number: "n\u00FAmer", array: "fylki" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -100,133 +100,138 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp49 = closure_2[parsedTypeResult];
-              if (tmp49 == null) {
-                tmp49 = parsedTypeResult;
+              let tmp48 = closure_2[parsedTypeResult];
+              if (tmp48 == null) {
+                tmp48 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
-                  "Entr\u00E9e invalide : instanceof " + code.expected + " attendu, " + tmp49 + " re\u00E7u";
+                  "Rangt gildi: \u00DE\u00FA sl\u00F3st inn " +
+                  tmp48 +
+                  " \u00FEar sem \u00E1 a\u00F0 vera instanceof " +
+                  code.expected;
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Entr\u00E9e invalide : " + expected + " attendu, " + tmp49 + " re\u00E7u";
+                combined =
+                  "Rangt gildi: \u00DE\u00FA sl\u00F3st inn " + tmp48 + " \u00FEar sem \u00E1 a\u00F0 vera " + expected;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Entr\u00E9e invalide : " + closure_2.stringifyPrimitive(code.values[0]) + " attendu";
+                let combined1 = "Rangt gildi: gert r\u00E1\u00F0 fyrir " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
                 combined1 =
-                  "Option invalide : une valeur parmi " + closure_2.joinValues(code.values, "|") + " attendue";
+                  "\u00D3gilt val: m\u00E1 vera eitt af eftirfarandi " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str31 = "<";
+              let str24 = "<";
               if (code.inclusive) {
-                str31 = "<=";
+                str24 = "<=";
               }
               let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
-              let str32 = code.origin;
+              let str25 = code.origin;
               if (tmp27) {
-                if (str32 == null) {
-                  str32 = "valeur";
+                if (str25 == null) {
+                  str25 = "gildi";
                 }
-                const verb = tmp27.verb;
                 const str1 = code.maximum.toString();
-                let str38 = tmp27.unit;
-                if (str38 == null) {
-                  str38 = "\u00E9l\u00E9ment(s)";
+                let str31 = tmp27.unit;
+                if (str31 == null) {
+                  str31 = "hluti";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Trop grand : " + str32 + " doit " + verb + " " + str31 + str1 + " " + str38;
+                let combined2 =
+                  "Of st\u00F3rt: gert er r\u00E1\u00F0 fyrir a\u00F0 " + str25 + " hafi " + str24 + str1 + " " + str31;
               } else {
-                let str33 = str32;
-                if (str32 == null) {
-                  str33 = "valeur";
+                let str26 = str25;
+                if (str25 == null) {
+                  str26 = "gildi";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "Trop grand : " + str33 + " doit \u00EAtre " + str31 + code.maximum.toString();
+                combined2 =
+                  "Of st\u00F3rt: gert er r\u00E1\u00F0 fyrir a\u00F0 " +
+                  str26 +
+                  " s\u00E9 " +
+                  str24 +
+                  code.maximum.toString();
               }
               return combined2;
             case "too_small":
-              let str21 = ">";
+              let str18 = ">";
               if (code.inclusive) {
-                str21 = ">=";
+                str18 = ">=";
               }
-              let tmp17 = obj2[code.origin];
-              if (tmp17 == null) {
-                tmp17 = null;
+              let tmp15 = obj2[code.origin];
+              if (tmp15 == null) {
+                tmp15 = null;
               }
-              const origin = code.origin;
-              if (tmp17) {
+              ({ origin, minimum } = code);
+              const str45 = minimum.toString();
+              if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
-                  "Trop petit : " +
+                  "Of l\u00EDti\u00F0: gert er r\u00E1\u00F0 fyrir a\u00F0 " +
                   origin +
-                  " doit " +
-                  tmp17.verb +
+                  " hafi " +
+                  str18 +
+                  str45 +
                   " " +
-                  str21 +
-                  code.minimum.toString() +
-                  " " +
-                  tmp17.unit;
+                  tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Trop petit : " + origin + " doit \u00EAtre " + str21 + code.minimum.toString();
+                combined3 =
+                  "Of l\u00EDti\u00F0: gert er r\u00E1\u00F0 fyrir a\u00F0 " + origin + " s\u00E9 " + str18 + str45;
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = 'Cha\u00EEne invalide : doit commencer par "' + code.prefix + '"';
+                let combined4 = '\u00D3gildur strengur: ver\u00F0ur a\u00F0 byrja \u00E1 "' + code.prefix + '"';
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = 'Cha\u00EEne invalide : doit se terminer par "' + code.suffix + '"';
+                combined4 = '\u00D3gildur strengur: ver\u00F0ur a\u00F0 enda \u00E1 "' + code.suffix + '"';
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = 'Cha\u00EEne invalide : doit inclure "' + code.includes + '"';
+                combined4 = '\u00D3gildur strengur: ver\u00F0ur a\u00F0 innihalda "' + code.includes + '"';
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "Cha\u00EEne invalide : doit correspondre au mod\u00E8le " + code.pattern;
+                combined4 = "\u00D3gildur strengur: ver\u00F0ur a\u00F0 fylgja mynstri " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "" + format + " invalide";
+                combined4 = "Rangt " + format;
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Nombre invalide : doit \u00EAtre un multiple de " + code.divisor;
+              return "R\u00F6ng tala: ver\u00F0ur a\u00F0 vera margfeldi af " + code.divisor;
             case "unrecognized_keys":
-              let str3 = "";
-              let str4 = "";
+              let str3 = "ur lykill";
               if (code.keys.length > 1) {
-                str4 = "s";
-              }
-              if (code.keys.length > 1) {
-                str3 = "s";
+                str3 = "ir lyklar";
               }
               const _HermesInternal3 = HermesInternal;
-              return "Cl\u00E9" + str4 + " non reconnue" + str3 + " : " + closure_2.joinValues(code.keys, ", ");
+              return "\u00D3\u00FEekkt " + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Cl\u00E9 invalide dans " + code.origin;
+              return "Rangur lykill \u00ED " + code.origin;
             case "invalid_union":
-              return "Entr\u00E9e invalide";
+              return "Rangt gildi";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "Valeur invalide dans " + code.origin;
+              return "Rangt gildi \u00ED " + code.origin;
             default:
-              return "Entr\u00E9e invalide";
+              return "Rangt gildi";
           }
         };
         return obj;
@@ -234,7 +239,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod12093);
+    let closure_2 = fn(_mod12087);
     function error() {}
     module.exports = exports.default;
   } else {

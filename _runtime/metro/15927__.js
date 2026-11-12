@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/dark",
-  width: 24,
-  height: 23,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 215,
+  height: 128,
   scales: [2, 3],
-  hash: "d3ced0dd7614d99a1c612f606eea8d5d",
-  name: "tier_2_24px",
+  hash: "91b8f5f85a023591658822c0d3091e54",
+  name: "guild_subscription_removal_darker",
   type: "png",
 });

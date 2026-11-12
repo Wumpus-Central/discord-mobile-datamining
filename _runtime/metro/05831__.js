@@ -85,7 +85,7 @@ let items = [
         const _console = console;
         console.warn("LinearGradient colors and locations props should be arrays of the same length");
       }
-      const tmp5 = closure_1_10.flatten(style) || {};
+      const tmp5 = refs.flatten(style) || {};
       let tmp6 = tmp5.borderRadius || 0;
       const borderTopLeftRadius = tmp5.borderTopLeftRadius;
       let tmp7 = tmp6;

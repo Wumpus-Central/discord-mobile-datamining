@@ -1,6 +1,5 @@
 // _runtime/metro/08858__.js
 import _mod8859 from "08859__.js";
-import _mod8861 from "08861__.js";
 
 const self = this;
 let self2 = this;
@@ -39,7 +38,6 @@ if (self2) {
   }
   const _Object2 = Object;
   fn(_mod8859, exports);
-  fn(_mod8861, exports);
 } else {
   let _Object = Object;
 }

@@ -1,3 +1,6 @@
 // _runtime/metro/16674__.js
 
-export default {};
+export default Math.trunc ||
+  function trunc(arg0) {
+    return 0 < +arg0 ? floor : ceil(+arg0);
+  };

@@ -1,73 +1,41 @@
 // _runtime/metro/13815__.js
-import _mod13730 from "13730__.js";
+import _mod13726 from "13726__.js";
+import _mod13770 from "13770__.js";
 
-const Ident = _mod13730.TYPE.Ident;
-const String = _mod13730.TYPE.String;
-const Number = _mod13730.TYPE.Number;
-const Function = _mod13730.TYPE.Function;
-const Url = _mod13730.TYPE.Url;
-const Hash = _mod13730.TYPE.Hash;
-const Dimension = _mod13730.TYPE.Dimension;
-const Percentage = _mod13730.TYPE.Percentage;
-const LeftParenthesis = _mod13730.TYPE.LeftParenthesis;
-const LeftSquareBracket = _mod13730.TYPE.LeftSquareBracket;
-const Comma = _mod13730.TYPE.Comma;
-const Delim = _mod13730.TYPE.Delim;
+const Comma = _mod13726.TYPE.Comma;
+const WhiteSpace = _mod13726.TYPE.WhiteSpace;
 
-export default function defaultRecognizer(recognizer) {
+export default function () {
   const self = this;
-  const tokenType = this.scanner.tokenType;
-  if (Hash === tokenType) {
-    return self.Hash();
-  } else if (Comma === tokenType) {
-    recognizer.space = null;
-    recognizer.ignoreWSAfter = true;
-    return self.Operator();
-  } else if (LeftParenthesis === tokenType) {
-    return self.Parentheses(self.readSequence, recognizer.recognizer);
-  } else if (LeftSquareBracket === tokenType) {
-    return self.Brackets(self.readSequence, recognizer.recognizer);
-  } else if (String === tokenType) {
-    return self.String();
-  } else if (Dimension === tokenType) {
-    return self.Dimension();
-  } else if (Percentage === tokenType) {
-    return self.Percentage();
-  } else if (Number === tokenType) {
-    return self.Number();
-  } else if (Function === tokenType) {
-    const obj3 = _mod13730;
-    if (obj3.cmpStr(self.scanner.source, self.scanner.tokenStart, self.scanner.tokenEnd, "url(")) {
-      let UrlResult = self.Url();
+  const list = this.createList();
+  const scanner = this.scanner;
+  scanner.skipSC();
+  list.push(this.Identifier());
+  const scanner2 = this.scanner;
+  scanner2.skipSC();
+  if (this.scanner.tokenType !== Comma) {
+    return list;
+  } else {
+    list.push(self.Operator());
+    if (self.parseCustomProperty) {
+      let element = self.Value(null);
     } else {
-      UrlResult = self.Function(self.readSequence, recognizer.recognizer);
+      element = self.Raw(self.scanner.tokenIndex, _mod13770.mode.exclamationMarkOrSemicolon, false);
     }
-    return UrlResult;
-  } else if (Url === tokenType) {
-    return self.Url();
-  } else if (Ident === tokenType) {
-    if (obj.cmpChar(self.scanner.source, self.scanner.tokenStart, 117)) {
-      if (tmp3Result.cmpChar(self.scanner.source, self.scanner.tokenStart + 1, 43)) {
-        let UnicodeRangeResult = self.UnicodeRange();
-      }
-      return UnicodeRangeResult;
-    }
-    UnicodeRangeResult = self.Identifier();
-    obj = _mod13730;
-  } else if (Delim === tokenType) {
-    const source = self.scanner.source;
-    const charCodeAtResult = source.charCodeAt(self.scanner.tokenStart);
-    if (47 !== charCodeAtResult) {
-      if (42 !== charCodeAtResult) {
-        if (43 !== charCodeAtResult) {
-          if (45 !== charCodeAtResult) {
-            if (35 === charCodeAtResult) {
-              self.error("Hex or identifier is expected", self.scanner.tokenStart + 1);
-            }
+    if ("Value" === element.type) {
+      const children = element.children;
+      if (children.isEmpty()) {
+        let diff = self.scanner.tokenIndex - self.scanner.tokenIndex;
+        if (diff <= 0) {
+          const scanner3 = self.scanner;
+          while (scanner3.lookupType(diff) !== WhiteSpace) {
+            diff = diff + 1;
           }
         }
+        const children2 = element.children;
+        children2.appendData({ type: "WhiteSpace", loc: null, value: " " });
       }
     }
-    return self.Operator();
+    list.push(element);
   }
 }

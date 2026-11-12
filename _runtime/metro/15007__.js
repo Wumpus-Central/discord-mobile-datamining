@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hub/native/images",
-  width: 48,
-  height: 48,
+  httpServerLocation: "/assets/modules/directory_channels/native/images",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "c0ad0e7adefed3e2ebad52c7f4beb394",
-  name: "progress-setup",
+  hash: "cf9fbd33b5f8251873e494b446828ceb",
+  name: "invite",
   type: "png",
 });

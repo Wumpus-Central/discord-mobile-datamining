@@ -210,7 +210,7 @@ export (enabled) => {
     }
   }, items13);
   const obj10 = { value: tmp11, children: null };
-  const obj11 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "nl-BQ", onKeyboardMoveInteractive: "nl", onKeyboardMoveEnd: 0, onFocusedInputLayoutChangedReanimated: null, children: "Boolean" };
+  const obj11 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "RIGHT CTRL", onKeyboardMoveInteractive: "RIGHT \u2303", onKeyboardMoveEnd: "ENTER", onFocusedInputLayoutChangedReanimated: "\u21B5", children: "BACKSPACE" };
   let tmp34 = closure_12;
   let tmp35 = closure_12;
   if (!closure_12) {

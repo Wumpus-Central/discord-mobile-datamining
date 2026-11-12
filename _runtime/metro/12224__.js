@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "88df5c832b935fed96e52c66883efce1",
-  name: "CircleXIcon",
+  hash: "50acfdf084b8dccbfa3fd235ea0ab8ff",
+  name: "PauseIcon",
   type: "png",
 });

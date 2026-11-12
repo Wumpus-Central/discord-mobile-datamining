@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 251,
-  height: 120,
+  httpServerLocation: "/assets/modules/guild_member_verification/images",
+  width: 88,
+  height: 80,
   scales: [1, 2, 3],
-  hash: "ded9c31a2e9dd512048ecebbadd9fab8",
-  name: "audience_welcome",
+  hash: "c8acaccaced63579ec708b5154ef923d",
+  name: "updateAppIcon",
   type: "png",
 });

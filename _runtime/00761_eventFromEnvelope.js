@@ -131,7 +131,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
             if (!length) {
               items = ["event"];
             }
-            dependencyMap(728).forEachEnvelopeItem(dependencyMap, /* F81467 */ function() { ... });
+            dependencyMap(728).forEachEnvelopeItem(dependencyMap, /* F81478 */ function() { ... });
             return dependencyMap2;
           }
         }).map((dsn) => {

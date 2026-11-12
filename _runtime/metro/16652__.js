@@ -1,10 +1,20 @@
 // _runtime/metro/16652__.js
-import _mod16636 from "16636__.js";
-import _mod16653 from "16653__.js";
+import _mod16624 from "16624__.js";
+import _mod16650 from "16650__.js";
 
-let closure_2 = _mod16636({}.hasOwnProperty);
-
-export default Object.hasOwn ||
-  function hasOwn(arg0, arg1) {
-    return closure_2(_mod16653(arg0), arg1);
-  };
+export default (arg0, arg1) => {
+  if (arguments.length < 2) {
+    const tmp7 = _mod16624[arg0];
+    let tmp8;
+    if (_mod16650(tmp7)) {
+      tmp8 = tmp7;
+    }
+    let tmp3 = tmp8;
+  } else {
+    tmp3 = _mod16624[arg0];
+    if (tmp3) {
+      tmp3 = _mod16624[arg0][arg1];
+    }
+  }
+  return tmp3;
+};

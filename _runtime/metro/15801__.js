@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/instant_invite/native/images",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "31fe21f79423d8afd3dcadd61d04938b",
-  name: "ic_mail",
+  hash: "bc9640d059e4504fae6e197e103e15f0",
+  name: "whatsapp",
   type: "png",
 });

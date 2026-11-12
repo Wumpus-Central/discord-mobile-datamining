@@ -129,7 +129,7 @@ const entry = {
     obj.children = items1;
     const obj3 = { style: drawerSubview.mainSubview, collapsable: false, children: null };
     let tmp12 = tmp2;
-    const tmp3Result = closure_1_10(ViewDefault, obj);
+    const tmp3Result = refs(ViewDefault, obj);
     if (tmp2) {
       const obj4 = { translucent: true, backgroundColor: self.props.statusBarBackgroundColor };
       tmp12 = React6(_modDef304, obj4);
@@ -148,7 +148,7 @@ const entry = {
     obj3.children = items2;
     const tmp4Result = ViewDefault;
     const obj13 = {};
-    const tmp3Result2 = closure_1_10(ViewDefault, obj3);
+    const tmp3Result2 = refs(ViewDefault, obj3);
     const merged = Object.assign(tmp);
     obj13.ref = self._nativeRef;
     obj13.drawerBackgroundColor = str;
@@ -165,7 +165,7 @@ const entry = {
     } = self);
     const items5 = [tmp3Result2, tmp3Result];
     obj13.children = items5;
-    return closure_1_10(_modDef309, obj13);
+    return refs(_modDef309, obj13);
   },
 };
 let items = [

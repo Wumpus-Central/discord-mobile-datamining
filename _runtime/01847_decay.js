@@ -107,8 +107,8 @@ function pnpm_decayTs3(arg0, arg1) {
       initialVelocity: 0,
       current: "description",
       lastTimestamp: null,
-      startTimestamp: "2026-02-go-live-hdr",
-      reduceMotion: "user",
+      startTimestamp: "body-xs/semibold",
+      reduceMotion: "text-feedback-positive",
     };
     let num = obj.velocity;
     if (num == null) {

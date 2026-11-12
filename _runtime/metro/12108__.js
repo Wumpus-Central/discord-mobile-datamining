@@ -1,5 +1,5 @@
 // _runtime/metro/12108__.js
-import _mod12093 from "12093__.js";
+import _mod12087 from "12087__.js";
 
 const self = this;
 let self2 = this;
@@ -56,15 +56,14 @@ if (self2) {
       if (typeof error === "function") {
         const obj = { localeError: null };
         const obj2 = {
-          string: { unit: "characters", verb: "to have" },
-          file: { unit: "bytes", verb: "to have" },
-          array: { unit: "items", verb: "to have" },
-          set: { unit: "items", verb: "to have" },
-          map: { unit: "entries", verb: "to have" },
+          string: { unit: "caract\u00E8res", verb: "avoir" },
+          file: { unit: "octets", verb: "avoir" },
+          array: { unit: "\u00E9l\u00E9ments", verb: "avoir" },
+          set: { unit: "\u00E9l\u00E9ments", verb: "avoir" },
         };
         closure_1 = {
-          regex: "input",
-          email: "email address",
+          regex: "entr\u00E9e",
+          email: "adresse courriel",
           url: "URL",
           emoji: "emoji",
           uuid: "UUID",
@@ -77,21 +76,20 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime: "ISO datetime",
-          date: "ISO date",
-          time: "ISO time",
-          duration: "ISO duration",
-          ipv4: "IPv4 address",
-          ipv6: "IPv6 address",
-          mac: "MAC address",
-          cidrv4: "IPv4 range",
-          cidrv6: "IPv6 range",
-          base64: "base64-encoded string",
-          base64url: "base64url-encoded string",
-          json_string: "JSON string",
-          e164: "E.164 number",
+          datetime: "date-heure ISO",
+          date: "date ISO",
+          time: "heure ISO",
+          duration: "dur\u00E9e ISO",
+          ipv4: "adresse IPv4",
+          ipv6: "adresse IPv6",
+          cidrv4: "plage IPv4",
+          cidrv6: "plage IPv6",
+          base64: "cha\u00EEne encod\u00E9e en base64",
+          base64url: "cha\u00EEne encod\u00E9e en base64url",
+          json_string: "cha\u00EEne JSON",
+          e164: "num\u00E9ro E.164",
           jwt: "JWT",
-          template_literal: "input",
+          template_literal: "entr\u00E9e",
         };
         closure_2 = { nan: "NaN" };
         obj.localeError = (code) => {
@@ -102,112 +100,119 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp48 = closure_2[parsedTypeResult];
-              if (tmp48 == null) {
-                tmp48 = parsedTypeResult;
+              let tmp47 = closure_2[parsedTypeResult];
+              if (tmp47 == null) {
+                tmp47 = parsedTypeResult;
               }
-              const _HermesInternal16 = HermesInternal;
-              return "Invalid input: expected " + expected + ", received " + tmp48;
+              if (obj.test(code.expected)) {
+                const _HermesInternal17 = HermesInternal;
+                let combined = "Entr\u00E9e invalide : attendu instanceof " + code.expected + ", re\u00E7u " + tmp47;
+              } else {
+                const _HermesInternal16 = HermesInternal;
+                combined = "Entr\u00E9e invalide : attendu " + expected + ", re\u00E7u " + tmp47;
+              }
+              return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined = "Invalid input: expected " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 = "Entr\u00E9e invalide : attendu " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined = "Invalid option: expected one of " + closure_2.joinValues(code.values, "|");
-              }
-              return combined;
-            case "too_big":
-              let str24 = "<";
-              if (code.inclusive) {
-                str24 = "<=";
-              }
-              let tmp27 = obj2[code.origin];
-              if (tmp27 == null) {
-                tmp27 = null;
-              }
-              let str25 = code.origin;
-              if (tmp27) {
-                if (str25 == null) {
-                  str25 = "value";
-                }
-                const str1 = code.maximum.toString();
-                let str31 = tmp27.unit;
-                if (str31 == null) {
-                  str31 = "elements";
-                }
-                const _HermesInternal13 = HermesInternal;
-                let combined1 = "Too big: expected " + str25 + " to have " + str24 + str1 + " " + str31;
-              } else {
-                let str26 = str25;
-                if (str25 == null) {
-                  str26 = "value";
-                }
-                const _HermesInternal12 = HermesInternal;
-                combined1 = "Too big: expected " + str26 + " to be " + str24 + code.maximum.toString();
+                combined1 =
+                  "Option invalide : attendu l'une des valeurs suivantes " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
-            case "too_small":
-              let str18 = ">";
+            case "too_big":
+              let str27 = "<";
               if (code.inclusive) {
-                str18 = ">=";
+                str27 = "\u2264";
               }
-              let tmp15 = obj2[code.origin];
-              if (tmp15 == null) {
-                tmp15 = null;
+              let tmp29 = obj2[code.origin];
+              if (tmp29 == null) {
+                tmp29 = null;
               }
-              ({ origin, minimum } = code);
-              const str43 = minimum.toString();
-              if (tmp15) {
-                const _HermesInternal11 = HermesInternal;
-                let combined2 = "Too small: expected " + origin + " to have " + str18 + str43 + " " + tmp15.unit;
+              let str28 = code.origin;
+              if (tmp29) {
+                if (str28 == null) {
+                  str28 = "la valeur";
+                }
+                const _HermesInternal13 = HermesInternal;
+                let combined2 =
+                  "Trop grand : attendu que " + str28 + " ait " + str27 + code.maximum.toString() + " " + tmp29.unit;
               } else {
-                const _HermesInternal10 = HermesInternal;
-                combined2 = "Too small: expected " + origin + " to be " + str18 + str43;
+                let str29 = str28;
+                if (str28 == null) {
+                  str29 = "la valeur";
+                }
+                const _HermesInternal12 = HermesInternal;
+                combined2 = "Trop grand : attendu que " + str29 + " soit " + str27 + code.maximum.toString();
               }
               return combined2;
+            case "too_small":
+              let str21 = ">";
+              if (code.inclusive) {
+                str21 = "\u2265";
+              }
+              let tmp17 = obj2[code.origin];
+              if (tmp17 == null) {
+                tmp17 = null;
+              }
+              ({ origin, minimum } = code);
+              const str1 = minimum.toString();
+              if (tmp17) {
+                const _HermesInternal11 = HermesInternal;
+                let combined3 = "Trop petit : attendu que " + origin + " ait " + str21 + str1 + " " + tmp17.unit;
+              } else {
+                const _HermesInternal10 = HermesInternal;
+                combined3 = "Trop petit : attendu que " + origin + " soit " + str21 + str1;
+              }
+              return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined3 = 'Invalid string: must start with "' + code.prefix + '"';
+                let combined4 = 'Cha\u00EEne invalide : doit commencer par "' + code.prefix + '"';
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined3 = 'Invalid string: must end with "' + code.suffix + '"';
+                combined4 = 'Cha\u00EEne invalide : doit se terminer par "' + code.suffix + '"';
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined3 = 'Invalid string: must include "' + code.includes + '"';
+                combined4 = 'Cha\u00EEne invalide : doit inclure "' + code.includes + '"';
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined3 = "Invalid string: must match pattern " + code.pattern;
+                combined4 = "Cha\u00EEne invalide : doit correspondre au motif " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined3 = "Invalid " + format;
+                combined4 = "" + format + " invalide";
               }
-              return combined3;
+              return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Invalid number: must be a multiple of " + code.divisor;
+              return "Nombre invalide : doit \u00EAtre un multiple de " + code.divisor;
             case "unrecognized_keys":
               let str3 = "";
+              let str4 = "";
+              if (code.keys.length > 1) {
+                str4 = "s";
+              }
               if (code.keys.length > 1) {
                 str3 = "s";
               }
               const _HermesInternal3 = HermesInternal;
-              return "Unrecognized key" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
+              return "Cl\u00E9" + str4 + " non reconnue" + str3 + " : " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Invalid key in " + code.origin;
+              return "Cl\u00E9 invalide dans " + code.origin;
             case "invalid_union":
-              return "Invalid input";
+              return "Entr\u00E9e invalide";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "Invalid value in " + code.origin;
+              return "Valeur invalide dans " + code.origin;
             default:
-              return "Invalid input";
+              return "Entr\u00E9e invalide";
           }
         };
         return obj;
@@ -215,7 +220,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod12093);
+    let closure_2 = fn(_mod12087);
     function error() {}
     module.exports = exports.default;
   } else {

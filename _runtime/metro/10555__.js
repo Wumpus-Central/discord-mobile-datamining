@@ -1,12 +1,12 @@
 // _runtime/metro/10555__.js
-import _asyncLoop from "../10551__asyncLoop.js";
+import _asyncLoop from "../10549__asyncLoop.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const HMAC = require;
+const HashMD = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,12 +26,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class HMAC {
-  constructor(arg0, arg1) {
+class HashMD {
+  constructor(arg0, arg1, arg2, arg3) {
     self = this;
-    tmp = c2(this, HMAC);
+    tmp = c2(this, HashMD);
     tmp2 = closure_4;
-    obj = closure_4(HMAC);
+    obj = closure_4(HashMD);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp5 = globalThis;
@@ -41,135 +41,171 @@ class HMAC {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
+    tmp3Result.blockLen = global;
+    tmp3Result.outputLen = require;
+    tmp3Result.padOffset = importDefault;
+    tmp3Result.isLE = importAll;
     tmp3Result.finished = false;
+    tmp3Result.length = 0;
+    tmp3Result.pos = 0;
     tmp3Result.destroyed = false;
-    hashResult = closure_0(closure_1[5]).hash(global);
-    toBytesResult = closure_0(closure_1[6]).toBytes(require);
-    tmp3Result.iHash = global.create();
-    if (typeof tmp3Result.iHash.update !== "function") {
-      tmp13 = globalThis;
-      _Error = Error;
-      tmp14 = new.target;
-      str = "Expected instance of class which extends utils.Hash";
-      tmp15 = new.target;
-      error = new Error("Expected instance of class which extends utils.Hash");
-      tmp17 = error;
-      throw error;
-    } else {
-      tmp3Result.blockLen = tmp3Result.iHash.blockLen;
-      tmp3Result.outputLen = tmp3Result.iHash.outputLen;
-      blockLen = tmp3Result.blockLen;
-      tmp18 = globalThis;
-      _Uint8Array = Uint8Array;
-      tmp19 = new.target;
-      tmp20 = new.target;
-      tmp21 = blockLen;
-      uint8Array = new Uint8Array(blockLen);
-      tmp22 = uint8Array;
-      digestResult = toBytesResult;
-      if (toBytesResult.length > blockLen) {
-        obj1 = global.create();
-        updateResult = obj1.update(toBytesResult);
-        digestResult = updateResult.digest();
-      }
-      result = uint8Array.set(digestResult);
-      num = 0;
-      num2 = 54;
-      num3 = 1;
-      num4 = 0;
-      if (0 < uint8Array.length) {
-        do {
-          uint8Array[num4] = uint8Array[num4] ^ 54;
-          num4 = num4 + 1;
-          length = uint8Array.length;
-        } while (num4 < length);
-      }
-      iHash = tmp3Result.iHash;
-      updateResult1 = iHash.update(uint8Array);
-      tmp3Result.oHash = global.create();
-      num5 = 106;
-      num6 = 0;
-      if (0 < uint8Array.length) {
-        do {
-          uint8Array[num6] = uint8Array[num6] ^ 106;
-          num6 = num6 + 1;
-          length2 = uint8Array.length;
-        } while (num6 < length2);
-      }
-      oHash = tmp3Result.oHash;
-      updateResult2 = oHash.update(uint8Array);
-      fillResult = uint8Array.fill(0);
-      return tmp3Result;
-    }
+    uint8Array = new Uint8Array(global);
+    tmp3Result.buffer = uint8Array;
+    tmp3Result.view = closure_0(closure_1[5]).createView(tmp3Result.buffer);
+    return tmp3Result;
   }
 }
-_inherits(HMAC, _asyncLoop.Hash);
+_inherits(HashMD, _asyncLoop.Hash);
 const entry = {
   key: "update",
-  value: function update(arg0) {
-    HMAC(10552).exists(this);
-    const iHash = this.iHash;
-    iHash.update(arg0);
-    return this;
+  value: function update(B) {
+    let tmp8;
+    const self = this;
+    HashMD(10550).exists(this);
+    ({ buffer, blockLen, view } = this);
+    const toBytesResult = HashMD(10549).toBytes(B);
+    let num = 0;
+    if (0 < toBytesResult.length) {
+      do {
+        let _Math = Math;
+        let bound = Math.min(blockLen - self.pos, length - num);
+        if (bound !== blockLen) {
+          let result = buffer.set(toBytesResult.subarray(num, num + bound), self.pos);
+          self.pos = self.pos + bound;
+          let sum = num + bound;
+          tmp8 = sum;
+          if (self.pos === blockLen) {
+            let processResult = self.process(view, 0);
+            self.pos = 0;
+            tmp8 = sum;
+          }
+        } else {
+          let tmp7 = num;
+          tmp8 = num;
+          if (blockLen <= length - num) {
+            do {
+              let processResult1 = self.process(tmp6, tmp7);
+              let sum1 = tmp7 + blockLen;
+              tmp7 = sum1;
+              tmp8 = sum1;
+              diff = length - sum1;
+            } while (blockLen <= diff);
+          }
+        }
+        num = tmp8;
+      } while (tmp8 < length);
+    }
+    self.length = self.length + toBytesResult.length;
+    self.roundClean();
+    return self;
   }
 };
-const items = [
+let items = [
   entry,
   {
     key: "digestInto",
-    value: function digestInto(arg0) {
-      HMAC(10552).exists(this);
-      HMAC(10552).bytes(arg0, this.outputLen);
+    value: function digestInto(content) {
+      const self = this;
+      HashMD(10550).exists(this);
+      HashMD(10550).output(content, this);
       this.finished = true;
-      const iHash = this.iHash;
-      iHash.digestInto(arg0);
-      const oHash = this.oHash;
-      oHash.update(arg0);
-      const oHash2 = this.oHash;
-      oHash2.digestInto(arg0);
-      this.destroy();
+      ({ buffer, view, blockLen, isLE } = this);
+      let num = tmp3 + 1;
+      buffer[+this.pos] = 128;
+      const buffer2 = this.buffer;
+      buffer2.subarray(num).fill(0);
+      if (this.padOffset > blockLen - num) {
+        self.process(view, 0);
+        num = 0;
+      }
+      if (num < blockLen) {
+        do {
+          buffer[num] = 0;
+          num = num + 1;
+        } while (num < blockLen);
+      }
+      const diff = blockLen - 8;
+      const BigIntResult = BigInt(8 * self.length);
+      if (typeof view.setBigUint64 === "function") {
+        view.setBigUint64(diff, BigIntResult, isLE);
+      } else {
+        const _BigInt = BigInt;
+        const _BigInt2 = BigInt;
+        const BigIntResult2 = BigInt(4294967295);
+        const _Number = Number;
+        const _Number2 = Number;
+        const BigIntResult1 = BigInt(32);
+        let num2 = 0;
+        const NumberResult = Number(BigIntResult >> BigInt(32) & BigIntResult2);
+        if (isLE) {
+          num2 = 4;
+        }
+        let num3 = 4;
+        if (isLE) {
+          num3 = 0;
+        }
+        view.setUint32(diff + num2, NumberResult, isLE);
+        view.setUint32(diff + num3, Number(BigIntResult & BigIntResult2), isLE);
+        const NumberResult1 = Number(BigIntResult & BigIntResult2);
+      }
+      self.process(view, 0);
+      const view1 = HashMD(10549).createView(content);
+      const outputLen = self.outputLen;
+      if (outputLen % 4) {
+        const _Error2 = Error;
+        const error = new Error("_sha2: outputLen should be aligned to 32bit");
+        throw error;
+      } else {
+        const result = outputLen / 4;
+        value = self.get();
+        if (result > value.length) {
+          const _Error = Error;
+          const error1 = new Error("_sha2: outputLen bigger than state");
+          throw error1;
+        } else {
+          let num5 = 0;
+          if (0 < result) {
+            do {
+              let setUint32Result2 = view1.setUint32(4 * num5, value[num5], isLE);
+              num5 = num5 + 1;
+            } while (num5 < result);
+          }
+        }
+      }
+      const subarrayResult = buffer2.subarray(num);
     }
   },
   {
     key: "digest",
     value: function digest() {
-      const uint8Array = new Uint8Array(this.oHash.outputLen);
-      this.digestInto(uint8Array);
-      return uint8Array;
+      ({ buffer, outputLen } = this);
+      this.digestInto(buffer);
+      const substr = buffer.slice(0, outputLen);
+      this.destroy();
+      return substr;
     }
   },
   {
     key: "_cloneInto",
     value: function _cloneInto(arg0) {
       const self = this;
-      let obj = arg0;
+      let constructor = arg0;
       if (!arg0) {
-        const _Object = Object;
-        const _Object2 = Object;
-        obj = Object.create(Object.getPrototypeOf(self), {});
+        constructor = new self.constructor();
       }
-      ({ oHash, iHash, finished: tmp.finished, destroyed: tmp.destroyed, blockLen: tmp.blockLen, outputLen: tmp.outputLen } = self);
-      obj.oHash = oHash._cloneInto(obj.oHash);
-      obj.iHash = iHash._cloneInto(obj.iHash);
-      return obj;
-    }
-  },
-  {
-    key: "destroy",
-    value: function destroy() {
-      this.destroyed = true;
-      const oHash = this.oHash;
-      oHash.destroy();
-      const iHash = this.iHash;
-      iHash.destroy();
+      items = [...self.get()];
+      constructor.set.apply(items);
+      constructor.length = self.length;
+      ({ pos: tmp.pos, finished: tmp.finished, destroyed: tmp.destroyed } = self);
+      if (self.length % self.blockLen) {
+        const buffer = constructor.buffer;
+        const result = buffer.set(tmp5);
+      }
+      return constructor;
     }
   }
 ];
-const _moduleResult = _createClass(HMAC, items);
-exports.hmac.create = (arg0, arg1) => new _moduleResult(arg0, arg1);
 
-export const HMAC = _moduleResult;
-export (arg0, arg1, arg2) => {
-  const obj = new _moduleResult(arg0, arg1);
-  return new _moduleResult(arg0, arg1).update(arg2).digest();
-}
+export (E, F, G) => E & F ^ ~E & G
+export (A, B, C) => A & B ^ A & C ^ B & C
+export const HashMD = _createClass(HashMD, items);

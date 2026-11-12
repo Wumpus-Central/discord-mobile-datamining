@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d24fd30a4be11fedb417c4afcd1e21a5",
-  name: "ExperimentalWebBadgeIcon-secondary",
+  hash: "ec67305879cbfc8d1c27dd7c85d614f6",
+  name: "ic_community_guild_badge_dark_24px",
   type: "png",
 });

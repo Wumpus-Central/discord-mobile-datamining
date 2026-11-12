@@ -1,6 +1,26 @@
 // _runtime/metro/16684__.js
-import _mod16632 from "16632__.js";
-import _mod16633 from "16633__.js";
+import _mod16647 from "16647__.js";
+import getOwnPropertyDescriptor_mod from "16627__.js";
 
-export default _mod16632 &&
-  _mod16633(() => 42 !== Object.defineProperty(() => {}, "prototype", { value: 42, writable: false }).prototype);
+let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
+if (getOwnPropertyDescriptor) {
+  const _Object = Object;
+  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+}
+const tmp = _mod16647(prototype, "name");
+let tmp2 = tmp;
+if (tmp) {
+  tmp2 = "something" === function something() {}.name;
+}
+let tmp3 = tmp;
+if (tmp) {
+  const _module = getOwnPropertyDescriptor;
+  let tmp5 = !_module;
+  if (_module) {
+    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+  }
+  tmp3 = tmp5;
+}
+
+export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };

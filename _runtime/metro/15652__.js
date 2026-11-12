@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ae439aad7c7ee77514ad4b1f3601a8e9",
-  name: "VideoSlashIcon",
+  hash: "ef42f58d92ae3022fbec5decb610cbf2",
+  name: "ThreadMinusIcon",
   type: "png",
 });

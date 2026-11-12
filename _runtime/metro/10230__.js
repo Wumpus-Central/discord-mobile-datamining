@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "8c94b907df8972f3dc35ed38a2375c9f",
-  name: "EpicGamesNeutralIcon",
+  hash: "54b1df301be8a48609dd405b7597a135",
+  name: "RobloxNeutralIcon",
   type: "png",
 });

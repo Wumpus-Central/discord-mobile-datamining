@@ -1,16 +1,11 @@
 // _runtime/metro/16401__.js
-let closure_0 = Object.freeze({ loose: true });
-let closure_1 = Object.freeze({});
+import _mod16394 from "16394__.js";
 
-export default (arg0) => {
-  let tmp = arg0;
-  if (arg0) {
-    if (typeof tmp !== "object") {
-      tmp = closure_0;
-    }
-    let tmp2 = tmp;
-  } else {
-    tmp2 = closure_1;
+export default (arg0, arg1) => {
+  const tmp = _mod16394(arg0, arg1);
+  let version = null;
+  if (tmp) {
+    version = tmp.version;
   }
-  return tmp2;
+  return version;
 };

@@ -1,7 +1,4 @@
 // _runtime/metro/13834__.js
+import _mod13833 from "13833__.js";
 
-export default {
-  parse: function nthWithOfClause() {
-    return this.createSingleNodeList(this.Nth(true));
-  },
-};
+export default _mod13833;

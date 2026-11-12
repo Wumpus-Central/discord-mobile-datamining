@@ -60,7 +60,7 @@ function ItemWithSeparator(leadingItem) {
   const first1 = tmp6[0];
   closure_13 = tmp8;
   items = [cellKey, setSelfHighlightCallback, tmp6[1], setSelfUpdatePropsCallback];
-  closure_1_10(() => {
+  refs(() => {
     setSelfHighlightCallback(cellKey, closure_9);
     setSelfUpdatePropsCallback(cellKey, closure_13);
     return () => {

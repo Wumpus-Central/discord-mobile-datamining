@@ -1,44 +1,116 @@
 // _runtime/metro/13841__.js
+import _mod13842 from "13842__.js";
 
-export default {
-  name: "css-tree",
-  version: "1.1.3",
-  description:
-    "A tool set for CSS: fast detailed parser (CSS \u2192 AST), walker (AST traversal), generator (AST \u2192 CSS) and lexer (validation and matching) based on specs and browser implementations",
-  author: "Roman Dvornov <rdvornov@gmail.com> (https://github.com/lahmatiy)",
-  license: "MIT",
-  repository: "csstree/csstree",
-  keywords: ["css", "ast", "tokenizer", "parser", "walker", "lexer", "generator", "utils", "syntax", "validation"],
-  main: "lib/index.js",
-  unpkg: "dist/csstree.min.js",
-  jsdelivr: "dist/csstree.min.js",
-  scripts: {
-    build: "rollup --config",
-    lint: "eslint data lib scripts test && node scripts/review-syntax-patch --lint && node scripts/update-docs --lint",
-    "lint-and-test": "npm run lint && npm test",
-    "update:docs": "node scripts/update-docs",
-    "review:syntax-patch": "node scripts/review-syntax-patch",
-    test: "mocha --reporter progress",
-    coverage: "nyc npm test",
-    travis: "nyc npm run lint-and-test && npm run coveralls",
-    coveralls: "nyc report --reporter=text-lcov | coveralls",
-    prepublishOnly: "npm run build",
-    hydrogen:
-      "node --trace-hydrogen --trace-phase=Z --trace-deopt --code-comments --hydrogen-track-positions --redirect-code-traces --redirect-code-traces-to=code.asm --trace_hydrogen_file=code.cfg --print-opt-code bin/parse --stat -o /dev/null",
-  },
-  dependencies: { "mdn-data": "2.0.14", "source-map": "^0.6.1" },
-  devDependencies: {
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-json": "^4.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
-    coveralls: "^3.0.9",
-    eslint: "^6.8.0",
-    "json-to-ast": "^2.1.0",
-    mocha: "^6.2.3",
-    nyc: "^14.1.1",
-    rollup: "^1.32.1",
-    "rollup-plugin-terser": "^5.3.0",
-  },
-  engines: { node: ">=8.0.0" },
-  files: ["data", "dist", "lib"],
-};
+function getProcedure(type) {
+  value = map.get(type.type);
+  let num = -1;
+  if (null !== value) {
+    num = -1;
+    if (undefined !== value) {
+      num = value;
+    }
+  }
+  if (type.type === _mod13842.SelectorType.Attribute) {
+    const value2 = map1.get(type.action);
+    let num8 = 4;
+    if (null !== value2) {
+      num8 = 4;
+      if (undefined !== value2) {
+        num8 = value2;
+      }
+    }
+    let tmp7 = type.action === _mod13842.AttributeAction.Equals;
+    if (tmp7) {
+      tmp7 = "id" === type.name;
+    }
+    if (tmp7) {
+      num8 = 9;
+    }
+    num = num8;
+    if (type.ignoreCase) {
+      num = num8 >> 1;
+    }
+  } else if (type.type === _mod13842.SelectorType.Pseudo) {
+    let num6 = 3;
+    if (type.data) {
+      let num3 = 0;
+      if ("has" !== type.name) {
+        num3 = 0;
+        if ("contains" !== type.name) {
+          const _Array = Array;
+          let num4 = 2;
+          if (Array.isArray(type.data)) {
+            const _Math = Math;
+            const _Math2 = Math;
+            const data = type.data;
+            let num5 = min.apply(
+              Math,
+              data.map((arr) => {
+                return min.apply(Math, arr.map(getProcedure));
+              }),
+            );
+            if (num5 < 0) {
+              num5 = 0;
+            }
+            num4 = num5;
+          }
+          num3 = num4;
+        }
+      }
+      num6 = num3;
+    }
+    num = num6;
+  }
+  return num;
+}
+const items = [_mod13842.SelectorType.Universal, 50];
+const items1 = [items, , ,];
+const items2 = [_mod13842.SelectorType.Tag, 30];
+items1[1] = items2;
+const items3 = [_mod13842.SelectorType.Attribute, 1];
+items1[2] = items3;
+const items4 = [_mod13842.SelectorType.Pseudo, 0];
+items1[3] = items4;
+const map = new Map(items1);
+const items5 = [_mod13842.AttributeAction.Exists, 10];
+const items6 = [items5, , , , ,];
+const items7 = [_mod13842.AttributeAction.Equals, 8];
+items6[1] = items7;
+const items8 = [_mod13842.AttributeAction.Not, 7];
+items6[2] = items8;
+const items9 = [_mod13842.AttributeAction.Start, 6];
+items6[3] = items9;
+const items10 = [_mod13842.AttributeAction.End, 6];
+items6[4] = items10;
+const items11 = [_mod13842.AttributeAction.Any, 5];
+items6[5] = items11;
+const map1 = new Map(items6);
+
+export function isTraversal(type) {
+  return !map.has(type.type);
+}
+export default function sortByProcedure(arr) {
+  const mapped = arr.map(getProcedure);
+  for (let num = 1; num < arr.length; num = num + 1) {
+    let tmp2 = mapped[num];
+    if (tmp2 >= 0) {
+      let diff = num - 1;
+      if (0 <= diff) {
+        if (tmp2 < mapped[diff]) {
+          let sum = diff + 1;
+          arr[sum] = arr[diff];
+          arr[diff] = arr[sum];
+          mapped[sum] = mapped[diff];
+          mapped[diff] = tmp2;
+          let diff1 = diff - 1;
+          while (0 <= diff1) {
+            diff = diff1;
+            if (tmp2 >= mapped[diff1]) {
+              break;
+            }
+          }
+        }
+      }
+    }
+  }
+}

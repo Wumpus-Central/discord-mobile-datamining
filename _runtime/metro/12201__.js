@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "13168e0700737564714d8e4fc44106f6",
-  name: "ShareIcon",
+  hash: "2deb3f64961131491b7db6bb10903f69",
+  name: "DoorExitIcon",
   type: "png",
 });

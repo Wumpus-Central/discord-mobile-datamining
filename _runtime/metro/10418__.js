@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c4c151d6ead96957c93181e4a41ea4b6",
-  name: "ItchNeutralIcon",
+  hash: "1e2c63f1ee26f8c3880e4c0e137e58ab",
+  name: "FandomNeutralIcon",
   type: "png",
 });

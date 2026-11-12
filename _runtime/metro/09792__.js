@@ -1,32 +1,32 @@
 // _runtime/metro/09792__.js
-import _mod9737 from "09737__.js";
-import _mod9775 from "09775__.js";
-import _mod9778 from "09778__.js";
+import _mod9730 from "09730__.js";
+import _mod9757 from "09757__.js";
+import _mod9758 from "09758__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
-  const obj = { sent_at: new Date().toISOString() };
-  if (sdk) {
-    sdk = sdk.sdk;
+export function initAndBind(arg0, debug) {
+  if (true === debug.debug) {
+    const obj = _mod9730;
+    if (_mod9758.DEBUG_BUILD) {
+      const logger = obj.logger;
+      logger.enable();
+    } else {
+      obj.consoleSandbox(() => {
+        console.warn("[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.");
+      });
+    }
   }
-  if (sdk) {
-    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
-    obj.sdk = obj2;
-  }
-  let tmp = arg3;
-  if (arg3) {
-    tmp = url;
-  }
-  if (tmp) {
-    obj.dsn = _mod9778.dsnToString(url);
-  }
-  if (contexts) {
-    obj.trace = _mod9737.dropUndefinedKeys(contexts);
-  }
-  items = [{ type: "check_in" }, arg0];
-  const date = new Date();
-  const items1 = [items];
-  return _mod9775.createEnvelope(obj, items1);
+  const currentScope = _mod9757.getCurrentScope();
+  currentScope.update(debug.initialScope);
+  const obj4 = new arg0(debug);
+  const currentScope1 = _mod9757.getCurrentScope();
+  currentScope1.setClient(obj4);
+  obj4.init();
+  return obj4;
+}
+export function setCurrentClient(arg0) {
+  const currentScope = _mod9757.getCurrentScope();
+  currentScope.setClient(arg0);
 }

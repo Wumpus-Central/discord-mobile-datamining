@@ -1,19 +1,12 @@
 // _runtime/metro/16655__.js
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
+import _mod16650 from "16650__.js";
+import _mod16656 from "16656__.js";
+
+export default (arg0) => {
+  if (_mod16650(arg0)) {
+    return arg0;
+  } else {
+    const tmp6 = new TypeError(_mod16656(arg0) + " is not a function");
+    throw tmp6;
   }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+};

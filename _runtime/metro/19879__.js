@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/badge",
-  width: 30,
-  height: 30,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "394e48046e846651a339ee88e4f1b0b4",
-  name: "ic_profile_badge_active_developer",
+  hash: "95d7e93c2793e11c61d9325838069af2",
+  name: "StageModeratorIcon",
   type: "png",
 });

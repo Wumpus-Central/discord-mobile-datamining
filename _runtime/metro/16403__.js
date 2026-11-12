@@ -1,20 +1,20 @@
 // _runtime/metro/16403__.js
-if (typeof process === "object") {
-  const _process3 = process;
-  if (process.env) {
-    const _process = process;
-    if (process.env.NODE_DEBUG) {
-      const _process2 = process;
-      if (obj.test(process.env.NODE_DEBUG)) {
-        let fn = () => {
-          items = ["SEMVER"];
-          HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
-          return console.error.apply(items);
-        };
-      }
-      module.exports = fn;
-      obj = /\bsemver\b/i;
-    }
+import _mod16395 from "16395__.js";
+
+export default (version, pre, major2, major2, major22) => {
+  let tmp = major22;
+  let tmp2 = major2;
+  if (typeof major2 === "string") {
+    tmp = major2;
+    tmp2 = major2;
   }
-}
-fn = () => {};
+  try {
+    if (version instanceof _mod16395) {
+      version = version.version;
+    }
+    const tmp72 = new _mod16395(version, tmp3);
+    return tmp72.inc(pre, tmp2, tmp).version;
+  } catch (err) {
+    return null;
+  }
+};

@@ -198,7 +198,7 @@ let items = [
                   tmp64 = start;
                 } else if ("string" === tmp63) {
                   if (typeof getMarkTimeForMeasure === "function") {
-                    tmp64 = closure_1_10(start);
+                    tmp64 = refs(start);
                     if (null == tmp64) {
                       const _HermesInternal6 = HermesInternal;
                       const tmp732 = new _modDef157(
@@ -214,7 +214,7 @@ let items = [
                   const _String = String;
                   const StringResult1 = String(start);
                   if (typeof getMarkTimeForMeasure === "function") {
-                    tmp64 = closure_1_10(StringResult1);
+                    tmp64 = refs(StringResult1);
                     if (null == tmp64) {
                       const _HermesInternal8 = HermesInternal;
                       const tmp1452 = new _modDef157(
@@ -235,7 +235,7 @@ let items = [
                   let tmp80 = end;
                 } else if ("string" === tmp79) {
                   if (typeof getMarkTimeForMeasure === "function") {
-                    tmp80 = closure_1_10(end);
+                    tmp80 = refs(end);
                     if (null == tmp80) {
                       const _HermesInternal7 = HermesInternal;
                       const tmp892 = new _modDef157(
@@ -251,7 +251,7 @@ let items = [
                   const _String2 = String;
                   const StringResult2 = String(end);
                   if (typeof getMarkTimeForMeasure === "function") {
-                    tmp80 = closure_1_10(StringResult2);
+                    tmp80 = refs(StringResult2);
                     if (null == tmp80) {
                       const _HermesInternal9 = HermesInternal;
                       const tmp1522 = new _modDef157(
@@ -313,7 +313,7 @@ let items = [
             }
           } else if ("string" === tmp19) {
             if (typeof getMarkTimeForMeasure === "function") {
-              const tmp42 = closure_1_10(arg1);
+              const tmp42 = refs(arg1);
               if (null == tmp42) {
                 const _HermesInternal5 = HermesInternal;
                 const tmp572 = new _modDef157(
@@ -324,7 +324,7 @@ let items = [
               } else {
                 if (undefined !== arg2) {
                   if (typeof tmp40 === "function") {
-                    const tmp41Result = closure_1_10(arg2);
+                    const tmp41Result = refs(arg2);
                     if (null == tmp41Result) {
                       const _HermesInternal4 = HermesInternal;
                       const tmp492 = new _modDef157(
@@ -352,7 +352,7 @@ let items = [
             const _String4 = String;
             const StringResult3 = String(arg1);
             if (typeof getMarkTimeForMeasure === "function") {
-              const tmp21 = closure_1_10(StringResult3);
+              const tmp21 = refs(StringResult3);
               if (null == tmp21) {
                 const _HermesInternal3 = HermesInternal;
                 const tmp352 = new _modDef157(
@@ -363,7 +363,7 @@ let items = [
               } else {
                 if (undefined !== arg2) {
                   if (typeof getMarkTimeForMeasure === "function") {
-                    const tmp20Result = closure_1_10(arg2);
+                    const tmp20Result = refs(arg2);
                     if (null == tmp20Result) {
                       const _HermesInternal2 = HermesInternal;
                       const tmp282 = new _modDef157(
@@ -391,7 +391,7 @@ let items = [
         } else {
           if (undefined !== arg2) {
             if (typeof getMarkTimeForMeasure === "function") {
-              const tmp9 = closure_1_10(arg2);
+              const tmp9 = refs(arg2);
               if (null == tmp9) {
                 const _HermesInternal = HermesInternal;
                 const tmp131 = new _modDef157(

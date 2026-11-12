@@ -109,16 +109,16 @@ function createOnShouldStartLoadWithRequest(arg0, arg1, arg2) {
 
 export const defaultOriginWhitelist = ["http://*", "https://*"];
 export { createOnShouldStartLoadWithRequest };
-export () => closure_1_10(metroImportDefault, { style: _modDef8154.loadingOrErrorView, children: closure_1_10(React5, {}) })
+export () => refs(metroImportDefault, { style: _modDef8154.loadingOrErrorView, children: refs(React5, {}) })
 export (arg0, arg1, arg2) => {
   const obj = { style: _modDef8154.loadingOrErrorView, children: null };
-  items = [closure_1_10(React6, { style: _modDef8154.errorTextTitle, children: "Error loading page" }), , , ];
+  items = [refs(React6, { style: _modDef8154.errorTextTitle, children: "Error loading page" }), , , ];
   const obj2 = { style: _modDef8154.errorTextTitle, children: "Error loading page" };
-  items[1] = closure_1_10(React6, { style: _modDef8154.errorText, children: "Domain: ".concat(arg0) });
+  items[1] = refs(React6, { style: _modDef8154.errorText, children: "Domain: ".concat(arg0) });
   const obj3 = { style: _modDef8154.errorText, children: "Domain: ".concat(arg0) };
-  items[2] = closure_1_10(React6, { style: _modDef8154.errorText, children: "Error Code: ".concat(arg1) });
+  items[2] = refs(React6, { style: _modDef8154.errorText, children: "Error Code: ".concat(arg1) });
   const obj4 = { style: _modDef8154.errorText, children: "Error Code: ".concat(arg1) };
-  items[3] = closure_1_10(React6, { style: _modDef8154.errorText, children: "Description: ".concat(arg2) });
+  items[3] = refs(React6, { style: _modDef8154.errorText, children: "Description: ".concat(arg2) });
   obj.children = items;
   return closure_1_11(metroImportDefault, obj);
 }

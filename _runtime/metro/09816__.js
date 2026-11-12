@@ -1,68 +1,36 @@
 // _runtime/metro/09816__.js
-import _mod9758 from "09758__.js";
-import _mod9818 from "09818__.js";
-import setupIntegration from "09787__.js";
+import _mod9728 from "09728__.js";
+import _mod9730 from "09730__.js";
+import _mod9731 from "09731__.js";
 
-export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let handled;
-  let CONSOLE_LEVELS = obj.levels;
-  if (!CONSOLE_LEVELS) {
-    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
-  }
-  handled = obj.handled;
-  return {
-    name: "CaptureConsole",
-    setup(arg0) {
-      closure_0 = arg0;
-      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
-        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
-          ({ args, level } = arg0);
-          let hasItem = _mod9758.getClient() === args;
-          if (hasItem) {
-            hasItem = CONSOLE_LEVELS.includes(level);
-          }
-          if (hasItem) {
-            closure_2 = handled;
-            let obj2 = { level: _mod9818.severityLevelFromString(level), extra: null };
-            const obj3 = { arguments: args };
-            obj2.extra = obj3;
-            const tmpResult = _mod9818;
-            _mod9758.withScope((addEventProcessor) => {
-              addEventProcessor.addEventProcessor((arg0) => {
-                arg0.logger = "console";
-                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
-                return arg0;
-              });
-              if ("assert" !== level) {
-                const found = args.find((item) => item instanceof Error);
-                if (found) {
-                  args(9779).captureException(found, obj2);
-                  const tmp14Result = args(9779);
-                } else {
-                  const tmp14Result2 = args(9740);
-                  const safeJoinResult = args(9740).safeJoin(args, " ");
-                  args(9779).captureMessage(safeJoinResult, obj2);
-                  const obj4 = args(9779);
-                }
-              } else if (!args[0]) {
-                const obj = args(9740);
-                const _HermesInternal = HermesInternal;
-                const combined = "Assertion failed: " + args(9740).safeJoin(args.slice(1), " ") || "console.assert";
-                addEventProcessor.setExtra("arguments", args.slice(1));
-                obj2 = args(9779);
-                obj2.captureMessage(combined, obj2);
-                const tmp4 = args(9740).safeJoin(args.slice(1), " ") || "console.assert";
-              }
-            });
-            const tmpResult2 = _mod9758;
-          }
+require = arg1;
+const dependencyMap = arg6;
+function instrumentConsole() {
+  if ("console" in _mod9731.GLOBAL_OBJ) {
+    const CONSOLE_LEVELS = _mod9730.CONSOLE_LEVELS;
+    const item = CONSOLE_LEVELS.forEach((item) => {
+      closure_0 = item;
+      if (item in closure_0(9731).GLOBAL_OBJ.console) {
+        tmp(9736).fill(tmp(9731).GLOBAL_OBJ.console, item, (arg0) => {
+          _mod9730.originalConsoleMethods[level] = arg0;
+          return () => {
+            items = [...arguments];
+            level(9728).triggerHandlers("console", { args: items, level });
+            const obj3 = level(9730).originalConsoleMethods[level];
+            if (obj3) {
+              obj3.apply(level(9731).GLOBAL_OBJ.console, items);
+            }
+            const obj = { args: items, level };
+            const obj2 = level(9728);
+          };
         });
-        let tmpResult = CONSOLE_LEVELS(handled[2]);
+        const tmpResult = tmp(9736);
       }
-    },
-  };
-});
+    });
+  }
+}
+
+export function addConsoleInstrumentationHandler(errorCallback) {
+  _mod9728.addHandler("console", errorCallback);
+  _mod9728.maybeInstrument("console", instrumentConsole);
+}

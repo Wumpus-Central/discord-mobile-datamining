@@ -1,14 +1,13 @@
 // _runtime/metro/11378__.js
-import _mod11367 from "11367__.js";
-import repeatedTimeunitPattern from "../11368_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../11375_AbstractParserWithWordBoundaryChecking.js";
+import _mod11361 from "11361__.js";
+import AbstractParserWithWordBoundaryChecking from "../11369_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENMonthNameParser = require;
+const ENTimeUnitLaterFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,76 +27,53 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const regExp = new RegExp(
-  "((?:in)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod11367.MONTH_DICTIONARY) +
-    ")\\s*(?:(?:,|-|of)?\\s*(" +
-    _mod11367.YEAR_PATTERN +
-    ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)",
+  "(" + _mod11361.TIME_UNITS_PATTERN + ")\\s{0,5}(?:later|after|from now|henceforth|forward|out)(?=(?:\\W|$))",
   "i",
 );
-class ENMonthNameParser {
-  constructor() {
+const regExp1 = new RegExp(
+  "(" + _mod11361.TIME_UNITS_NO_ABBR_PATTERN + ")\\s{0,5}(later|after|from now)(?=\\W|$)",
+  "i",
+);
+class ENTimeUnitLaterFormatParser {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, ENMonthNameParser);
+    tmp = c2(this, ENTimeUnitLaterFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMonthNameParser);
+    obj = closure_4(ENTimeUnitLaterFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
 }
-_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeUnitLaterFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return regExp;
+    return this.strictMode ? regExp1 : regExp;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const formatted = index[2].toLowerCase();
-      if (index[0].length <= 3) {
-        if (!ENMonthNameParser(11367).FULL_MONTH_NAME_DICTIONARY[formatted]) {
-          return null;
-        }
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = ENTimeUnitLaterFormatParser(11361).parseDuration(arg1[1]);
+      let relativeFromReference = null;
+      if (parseDurationResult) {
+        const ParsingComponents = ENTimeUnitLaterFormatParser(11365).ParsingComponents;
+        relativeFromReference = ParsingComponents.createRelativeFromReference(reference.reference, parseDurationResult);
       }
-      let str2 = index[1];
-      if (!str2) {
-        str2 = "";
-      }
-      const parsingResult = createParsingResult.createParsingResult(
-        index.index + str2.length,
-        index.index + index[0].length,
-      );
-      const start = parsingResult.start;
-      start.imply("day", 1);
-      const start2 = parsingResult.start;
-      start2.addTag("parser/ENMonthNameParser");
-      const tmp10 = ENMonthNameParser(11367).MONTH_DICTIONARY[formatted];
-      const start3 = parsingResult.start;
-      start3.assign("month", tmp10);
-      if (index[3]) {
-        const start5 = parsingResult.start;
-        start5.assign("year", ENMonthNameParser(11367).parseYear(index[3]));
-      } else {
-        const start4 = parsingResult.start;
-        start4.imply("year", ENMonthNameParser(11369).findYearClosestToRef(createParsingResult.refDate, 1, tmp10));
-      }
-      return parsingResult;
+      return relativeFromReference;
     },
   },
 ];
 
-export default _createClass(ENMonthNameParser, items);
+export default _createClass(ENTimeUnitLaterFormatParser, items);

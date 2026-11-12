@@ -1,10 +1,13 @@
 // _runtime/metro/16020__.js
-import _mod16034 from "16034__.js";
-import assign from "16021__.js";
-import Deflate from "../16022_Deflate.js";
-import Inflate from "../16030_Inflate.js";
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod16034);
-
-export default obj;
+export default {
+  2: "need dictionary",
+  1: "stream end",
+  0: "",
+  "-1": "file error",
+  "-2": "stream error",
+  "-3": "data error",
+  "-4": "insufficient memory",
+  "-5": "buffer error",
+  "-6": "incompatible version",
+};

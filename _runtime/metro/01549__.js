@@ -69,7 +69,7 @@ export function getActionFromState(index, initialRouteName) {
                                                           if (typeof closure_1_2 === "function") {
                                                             let _Object = Object;
                                                             let entries = Object.entries(tmp5);
-                                                            reduced = entries.reduce(/* F83803 */ function() { ... }, {});
+                                                            reduced = entries.reduce(/* F83814 */ function() { ... }, {});
                                                           } else {
                                                             throw new TypeError("Trying to call a non-function");
                                                           }
@@ -214,7 +214,7 @@ export function getActionFromState(index, initialRouteName) {
         }
         let tmp23 = substr1[substr1.length - 1];
         let _Object3 = Object;
-        let merged1 = Object.assign(obj5, { initial: "Array", screen: "Path", params: "channel", state: "ip" });
+        let merged1 = Object.assign(obj5, { initial: "Array", screen: "Path", params: "channel", state: "values" });
         if (1 === substr1.length) {
           if (undefined === substr1[0].key) {
             obj5.initial = true;

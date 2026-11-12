@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "d34103fd5e89ba1cd4ca70f2429c1570",
-  name: "ic_wreath",
+  scales: [2, 3],
+  hash: "e2f2314b317d679f7a97eb76ebf6b124",
+  name: "UnsendIcon",
   type: "png",
 });

@@ -1,1143 +1,352 @@
 // _runtime/metro/13719__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import _slicedToArray from "00032__.js";
-import "module_19";
+import _mod13720 from "13720__.js";
+import keys2 from "../13722_keys2.js";
 
-let SvgWithCssUri = fn;
-let closure_1 = importDefault;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+const require = globalThis.__r;
+
+function noop() {}
+const WhiteSpace = _mod13720.TYPE.WhiteSpace;
+const Comment = _mod13720.TYPE.Comment;
+const Ident = _mod13720.TYPE.Ident;
+const Function = _mod13720.TYPE.Function;
+const Url = _mod13720.TYPE.Url;
+const Hash = _mod13720.TYPE.Hash;
+const Percentage = _mod13720.TYPE.Percentage;
+const Number = _mod13720.TYPE.Number;
+
+export default function createParser(arg0) {
+  let obj = arg0;
+  const obj2 = {
+    scanner: new require("TokenStream")(),
+    locationMap: null,
+    filename: "<unknown>",
+    needPositions: false,
+    onParseError: null,
+    onParseErrorThrow: false,
+    parseAtrulePrelude: true,
+    parseRulePrelude: true,
+    parseValue: true,
+    parseCustomProperty: false,
+    readSequence: null,
+    createList: null,
+    createSingleNodeList: null,
+    getFirstListNode: null,
+    getLastListNode: null,
+    parseWithFallback: null,
+    lookupNonWSType: null,
+    eat: null,
+    consume: null,
+    consumeFunctionName: null,
+    getLocation: null,
+    getLocationFromList: null,
+    error: null,
+  };
+  const tmp = new require("TokenStream")();
+  obj2.locationMap = new require("OffsetToLocation")();
+  obj2.onParseError = noop;
+  obj2.readSequence = require("13727__.js");
+  obj2.createList = function createList() {
+    return new closure_0(13728)();
+  };
+  obj2.createSingleNodeList = function createSingleNodeList(self) {
+    return new closure_0(13728)().appendData(self);
+  };
+  obj2.getFirstListNode = function getFirstListNode(sequence) {
+    let firstResult = sequence;
+    if (sequence) {
+      firstResult = sequence.first();
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-function flattenToSelectors(parsed, items) {
-  closure_0 = items;
-  closure_1(13720).walk(parsed, {
-    visit: "Rule",
-    enter(type) {
-      const rule = type;
-      if ("Rule" === type.type) {
-        const self = this;
-        const atrule = this.atrule;
-        let children = tmp.children;
-        children.each((children, item) => {
-          children = children.children;
-          items = [];
-          rule.push({ item, atrule, rule, pseudos: items });
-          children.each((type, item, list) => {
-            type = type.type;
-            let tmp = "PseudoClassSelector" !== type;
-            if (tmp) {
-              tmp = "PseudoElementSelector" !== type;
-            }
-            if (!tmp) {
-              obj = { item, list };
-              items.push(obj);
-            }
-          });
-        });
-      }
-    }
-  });
-}
-function selectorWithSpecificity(selector) {
-  obj = { selector, specificity: null };
-  closure_0 = 0;
-  closure_1 = 0;
-  closure_2 = 0;
-  let children = selector.item.data.children;
-  function walk(type) {
-    type = type.type;
-    if ("SelectorList" !== type) {
-      if ("Selector" !== type) {
-        if ("IdSelector" === type) {
-          closure_0 = closure_0 + 1;
-        } else {
-          if ("ClassSelector" !== type) {
-            if ("AttributeSelector" !== type) {
-              if ("PseudoClassSelector" === type) {
-                const formatted = type.name.toLowerCase();
-                if ("not" === formatted) {
-                  const children = type.children;
-                  if (children) {
-                    children.each(walk);
-                  }
-                } else {
-                  if ("before" !== formatted) {
-                    if ("after" !== formatted) {
-                      if ("first-line" !== formatted) {
-                        if ("first-letter" !== formatted) {
-                          closure_1 = closure_1 + 1;
-                        }
-                      }
-                    }
-                  }
-                  closure_2 = closure_2 + 1;
-                }
-              } else if ("PseudoElementSelector" === type) {
-                closure_2 = closure_2 + 1;
-              } else if ("TypeSelector" === type) {
-                if ("*" !== type.name.charAt(type.name.length - 1)) {
-                  closure_2 = closure_2 + 1;
-                }
-              }
-            }
-          }
-          closure_1 = closure_1 + 1;
-        }
-      }
-    }
-    const children2 = type.children;
-    children2.each(walk);
-  }
-  children.each(walk);
-  items = [closure_0, closure_1, closure_2];
-  obj.specificity = items;
-  return obj;
-}
-function sortSelectors(arr) {
-  let mapped1 = arr;
-  if (arr.length > 1) {
-    let mapped = arr.map(selectorWithSpecificity);
-    const _Array = Array;
-    let array = new Array(length);
-    let num3 = 1;
-    arr = mapped;
-    if (1 < length) {
-      do {
-        let tmp4 = array;
-        let num = 0;
-        let num2 = 0;
-        if (0 < length) {
-          do {
-            let sum = num2 + num3;
-            let sum2 = num;
-            let tmp9 = sum;
-            if (sum > length) {
-              tmp9 = length;
-            }
-            let sum1 = sum + num3;
-            if (sum1 > length) {
-              sum1 = length;
-            }
-            let sum4 = tmp9;
-            let sum3 = num2;
-            while (true) {
-              let tmp13 = sum2;
-              let tmp15 = sum3;
-              if (sum3 < tmp9) {
-                if (sum4 < sum1) {
-                  let specificity = mapped[sum3].specificity;
-                  let specificity2 = mapped[sum4].specificity;
-                  let num4 = 0;
-                  let num5 = -1;
-                  while (specificity[num4] >= specificity2[num4]) {
-                    num5 = 1;
-                    if (specificity[num4] > specificity2[num4]) {
-                      break;
-                    } else {
-                      num4 = num4 + 1;
-                      num5 = 0;
-                      if (num4 >= 4) {
-                        break;
-                      }
-                    }
-                  }
-                  if (num5 <= 0) {
-                    sum2 = sum2 + 1;
-                    sum3 = sum3 + 1;
-                    array[tmp13] = mapped[tmp15];
-                    continue;
-                  } else {
-                    sum2 = sum2 + 1;
-                    let tmp20 = +sum4;
-                    sum4 = tmp20 + 1;
-                    array[tmp13] = mapped[tmp20];
-                    continue;
-                  }
-                  continue;
-                }
-              }
-              if (sum3 < tmp9) {
-                sum2 = sum2 + 1;
-                sum3 = sum3 + 1;
-                array[tmp13] = mapped[tmp15];
-                continue;
-              } else if (sum4 >= sum1) {
-                break;
-              } else {
-                sum2 = sum2 + 1;
-                let tmp18 = +sum4;
-                sum4 = tmp18 + 1;
-                array[tmp13] = mapped[tmp18];
-                continue;
-              }
-              continue;
-            }
-            num2 = num2 + tmp2;
-            num = sum2;
-          } while (num2 < length);
-        }
-        num3 = num3 * 2;
-        array = mapped;
-        mapped = tmp4;
-        arr = tmp4;
-      } while (num3 < length);
-    }
-    mapped1 = arr.map((selector) => selector.selector);
-  }
-  return mapped1;
-}
-function initStyle(style) {
-  if (!style.style) {
-    (function CSSStyleDeclaration(style) {
-      ({ props, styles } = style);
-      if (!props.style) {
-        props.style = {};
-      }
-      style = props.style;
-      const map = new Map();
-      style.style = style;
-      style.priority = map;
-      if (styles) {
-        if (0 !== styles.length) {
-          try {
-            const children = map(13720).parse(styles, closure_19).children;
-            children.each((arg0) => {
-              try {
-                ({ property, value, important } = arg0);
-                const trimmed = property.trim();
-                const result = map.set(trimmed, important);
-                obj = SvgWithCssUri(8197);
-                const camelCaseResult = SvgWithCssUri(8197).camelCase(trimmed);
-                const obj2 = closure_2_1(13720);
-                style[camelCaseResult] = closure_2_1(13720).generate(value).trim();
-                const str = closure_2_1(13720).generate(value);
-              } catch (tmp10) {
-                const _Error = Error;
-                let tmp12 = tmp10 instanceof Error;
-                if (tmp12) {
-                  tmp12 = "Unknown node type: undefined" !== tmp10.message;
-                }
-                if (tmp12) {
-                  const _console = console;
-                  console.warn("Warning: Parse error when parsing inline styles, style properties of this element cannot be used. The raw styles can still be get/set using .attr('style').value. Error details: " + tmp10);
-                }
-              }
-            });
-            obj = map(13720);
-          } catch (tmp7) {
-            let _console = tmp.console;
-            _console.warn("Warning: Parse error when parsing inline styles, style properties of this element cannot be used. The raw styles can still be get/set using .attr('style').value. Error details: " + tmp7);
-          }
-        }
-      }
-    })(style);
-  }
-  return style;
-}
-function closestElem(parent, foreignObject) {
-  parent = parent.parent;
-  let tmp = parent;
-  if (parent) {
-    let tmp2 = parent;
-    tmp = parent;
-    if (parent.tag !== "foreignObject") {
-      const parent2 = tmp2.parent;
-      tmp = parent2;
-      while (parent2) {
-        tmp2 = parent2;
-        tmp = parent2;
-        if (parent2.tag === "foreignObject") {
-          break;
-        }
-      }
-    }
-  }
-  return tmp;
-}
-function extractVariables(parsed) {
-  const map = new Map();
-  closure_1(13720).walk(parsed, {
-    visit: "Declaration",
-    enter(property) {
-      if (property.property.startsWith("--")) {
-        const trimmed = str.trim();
-        obj = closure_1(13720);
-        const result = map.set(trimmed, closure_1(13720).generate(property.value).trim());
-        const str2 = closure_1(13720).generate(property.value);
-      }
-    }
-  });
-  return map;
-}
-class SvgCss {
-  constructor(arg0) {
-    xml = global.xml;
-    ({ override, fallback } = global);
-    if (undefined === global.onError) {
-      tmp4 = closure_12;
-    }
+    return firstResult;
+  };
+  obj2.getLastListNode = function getLastListNode(children) {
+    return children.last();
+  };
+  obj2.parseWithFallback = function parseWithFallback(Atrule, consumeRaw) {
+    const self = this;
     try {
-      tmp5 = useMemo;
-      items = [];
-      items[0] = xml;
-      tmp8 = xml;
-      tmp9 = closure_2;
-      tmp6 = useMemo(() => {
-        let parsed = null;
-        if (null !== xml) {
-          parsed = SvgWithCssUri(8197).parse(tmp, inlineStyles);
-          obj = SvgWithCssUri(8197);
+      const call = Atrule.call;
+      if (typeof call === "unknown") {
+        let callResult = Atrule();
+      } else {
+        callResult = call(self);
+      }
+      return callResult;
+    } catch (tmp4) {
+      if (obj.onParseErrorThrow) {
+        throw tmp4;
+      } else {
+        const call2 = consumeRaw.call;
+        if (typeof call2 === "unknown") {
+          let call2Result = consumeRaw(tmp);
+        } else {
+          call2Result = call2(obj, tmp);
         }
-        return parsed;
-      }, items);
-      tmp7 = jsx;
-      obj = { ast: null, override: null };
-      obj.ast = tmp6;
-      if (override) {
-      } else {
-        override = global;
+        obj.onParseErrorThrow = true;
+        obj.onParseError(tmp4, call2Result);
+        obj.onParseErrorThrow = false;
+        return call2Result;
       }
-      obj.override = override;
-      return tmp7(xml(closure_2[10]).SvgAst, obj);
-    } catch (tmp10) {
-      tmp3Result = tmp3(tmp10);
-      tmp12 = null;
-      if (tmp != null) {
+    }
+  };
+  obj2.lookupNonWSType = function lookupNonWSType(arg0) {
+    let sum = arg0;
+    const scanner = this.scanner;
+    const lookupTypeResult = scanner.lookupType(+sum);
+    while (lookupTypeResult === WhiteSpace) {
+      sum = tmp2 + 1;
+      if (0 !== lookupTypeResult) {
+        continue;
       } else {
-        tmp13 = null;
+        return 0;
       }
+    }
+    return lookupTypeResult;
+  };
+  obj2.eat = function eat(arg0) {
+    const self = this;
+    if (this.scanner.tokenType === arg0) {
+      self.scanner.next();
+      const iter2 = self.scanner;
+    } else {
+      const tokenStart = self.scanner.tokenStart;
+      let iter = `${closure_0(closure_1_1[0]).NAME[arg0]} is expected`;
+      if (Ident === arg0) {
+        if (self.scanner.tokenType === Function) {
+          let tokenEnd = self.scanner.tokenEnd - 1;
+          let str = "Identifier is expected but function found";
+        } else {
+          str = "Identifier is expected";
+          tokenEnd = tokenStart;
+        }
+      } else {
+        if (Hash === arg0) {
+          const scanner = self.scanner;
+          str = iter;
+          tokenEnd = tokenStart;
+          if (scanner.isDelim(35)) {
+            iter = self.scanner;
+            iter.next();
+            tokenEnd = tokenStart + 1;
+            str = "Name is expected";
+          }
+        } else if (Percentage !== arg0) {
+          const source = self.scanner.source;
+          str = iter;
+          tokenEnd = tokenStart;
+          if (source.charCodeAt(self.scanner.tokenStart) === arg0) {
+            tokenEnd = tokenStart + 1;
+            str = iter;
+          }
+        }
+        str = iter;
+        tokenEnd = tokenStart;
+        if (self.scanner.tokenType === Number) {
+          tokenEnd = self.scanner.tokenEnd;
+          str = "Percent sign is expected";
+        }
+      }
+      self.error(str, tokenEnd);
+    }
+  };
+  obj2.consume = function consume(Number) {
+    const scanner = this.scanner;
+    const tokenValue = scanner.getTokenValue();
+    this.eat(Number);
+    return tokenValue;
+  };
+  obj2.consumeFunctionName = function consumeFunctionName() {
+    const substr = this.scanner.source.substring(this.scanner.tokenStart, this.scanner.tokenEnd - 1);
+    this.eat(Function);
+    return substr;
+  };
+  obj2.getLocation = function getLocation(tokenStart, tokenStart2) {
+    const self = this;
+    let locationRange = null;
+    if (this.needPositions) {
+      const locationMap = self.locationMap;
+      locationRange = locationMap.getLocationRange(tokenStart, tokenStart2, self.filename);
+    }
+    return locationRange;
+  };
+  obj2.getLocationFromList = function getLocationFromList(list) {
+    const self = this;
+    if (this.needPositions) {
+      const firstListNode = self.getFirstListNode(list);
+      const lastListNode = self.getLastListNode(list);
+      const locationMap = self.locationMap;
+      if (null !== firstListNode) {
+        let tokenStart = firstListNode.loc.start.offset - self.locationMap.startOffset;
+      } else {
+        tokenStart = self.scanner.tokenStart;
+      }
+      if (null !== lastListNode) {
+        let tokenStart2 = lastListNode.loc.end.offset - self.locationMap.startOffset;
+      } else {
+        tokenStart2 = self.scanner.tokenStart;
+      }
+      return locationMap.getLocationRange(tokenStart, tokenStart2, self.filename);
+    } else {
       return null;
     }
-    return;
-  }
-}
-_possibleConstructorReturnDefault;
-const noop = fn(19);
-({ Component, useEffect: metroImportDefault, useMemo: closure_8, useState: closure_9 } = noop);
-const jsx = fn(21).jsx;
-let closure_12 = error.bind(console);
-let obj = { xmlMode: true, adapter: null };
-let obj2 = {
-  removeSubsets(arr) {
-    let diff = arr.length - 1;
-    if (diff > -1) {
-      do {
-        let tmp4 = arr[diff];
-        delete tmp[tmp2];
-        let flag = true;
-        let tmp6 = tmp4;
-        if (tmp4) {
-          while (!arr.includes(tmp6)) {
-            let parent = typeof tmp6 === "object";
-            if (typeof tmp6 === "object") {
-              parent = tmp6.parent;
-            }
-            if (!parent) {
-              parent = null;
-            }
-            tmp6 = parent;
-            flag = true;
-          }
-          let spliceResult = arr.splice(diff, 1);
-          flag = false;
-        }
-        if (flag) {
-          arr[diff] = tmp4;
-        }
-        diff = diff - 1;
-      } while (diff > -1);
-    }
-    return arr;
-  },
-  existsOne(arg0, arr) {
-    closure_0 = arg0;
-    return arr.some((children) => {
-      let tmp = typeof children === "object";
-      if (typeof children === "object") {
-        let someResult = closure_1_0(children);
-        if (!someResult) {
-          children = children.children;
-          closure_0 = closure_1_0;
-          someResult = children.some((children) => {
-            let tmp = typeof children === "object";
-            if (typeof children === "object") {
-              let someResult = closure_1_0(children);
-              if (!someResult) {
-                children = children.children;
-                closure_0 = closure_1_0;
-                someResult = children.some((children) => {
-                  let tmp = typeof children === "object";
-                  if (typeof children === "object") {
-                    let someResult = closure_1_0(children);
-                    if (!someResult) {
-                      children = children.children;
-                      closure_0 = closure_1_0;
-                      someResult = children.some((children) => {
-                        let tmp = typeof children === "object";
-                        if (typeof children === "object") {
-                          let someResult = closure_1_0(children);
-                          if (!someResult) {
-                            children = children.children;
-                            closure_0 = closure_1_0;
-                            someResult = children.some(/* F107169 */ function() { ... });
-                          }
-                          tmp = someResult;
-                        }
-                        return tmp;
-                      });
-                    }
-                    tmp = someResult;
-                  }
-                  return tmp;
-                });
-              }
-              tmp = someResult;
-            }
-            return tmp;
-          });
-        }
-        tmp = someResult;
+  };
+  obj2.error = function error(arg0, arg1) {
+    const self = this;
+    if (undefined !== arg1) {
+      if (arg1 < self.scanner.source.length) {
+        const locationMap2 = self.locationMap;
+        let _location = locationMap2.getLocation(arg1);
       }
-      return tmp;
-    });
-  },
-  getSiblings(parent) {
-    parent = typeof parent === "object";
-    if (typeof parent === "object") {
-      parent = parent.parent;
-    }
-    let children = parent;
-    if (parent) {
-      children = parent.children;
-    }
-    if (!children) {
-      children = [];
-    }
-    return children;
-  },
-  hasAttrib(props, key10009) {
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    const call = hasOwnProperty.call;
-    props = props.props;
-    return typeof call === "unknown" ? hasOwnProperty(key10009) : call(props, key10009);
-  },
-  findOne: null,
-  findAll: null,
-  isTag(obj) {
-    return typeof obj === "object";
-  },
-  getParent(parent) {
-    parent = typeof parent === "object";
-    if (typeof parent === "object") {
-      parent = parent.parent;
-    }
-    if (!parent) {
-      parent = null;
-    }
-    return parent;
-  },
-  getChildren(children) {
-    children = typeof children === "object";
-    if (typeof children === "object") {
-      children = children.children;
-    }
-    if (!children) {
-      children = [];
-    }
-    return children;
-  },
-  getName(tag) {
-    return tag.tag;
-  },
-  getText(arg0) {
-    return "";
-  },
-  getAttributeValue(arg0, arg1) {
-    return arg0.props[arg1] || null;
-  }
-};
-function findOne(fn, arg1) {
-  let tmp = null;
-  let num = 0;
-  let tmp2 = null;
-  if (0 < arg1.length) {
-    while (true) {
-      let tmp3 = arg1[num];
-      let tmp6 = tmp;
-      if (typeof tmp3 !== "string") {
-        tmp6 = tmp3;
-        if (!fn(tmp3)) {
-          let children = tmp3.children;
-          tmp6 = tmp;
-          if (0 !== children.length) {
-            tmp6 = findOne(fn, children);
-          }
-        }
+      let str = arg0;
+      if (!arg0) {
+        str = "Unexpected input";
       }
-      let sum = num + 1;
-      tmp2 = tmp6;
-      if (sum >= length) {
-        break;
+      const tmp62 = new closure_0(13729)(str, self.scanner.source, _location.offset, _location.line, _location.column);
+      throw tmp62;
+    }
+    const locationMap = self.locationMap;
+    const getLocation = locationMap.getLocation;
+    if (self.scanner.eof) {
+      _location = getLocation(
+        closure_0(13722).findWhiteSpaceStart(self.scanner.source, self.scanner.source.length - 1),
+      );
+      const obj = closure_0(13722);
+    } else {
+      _location = getLocation(self.scanner.tokenStart);
+    }
+  };
+  _require = obj2;
+  if (!arg0) {
+    obj = {};
+  }
+  const obj3 = { context: {}, scope: {}, atrule: {}, pseudo: {} };
+  if (obj.parseContext) {
+    for (const key10042 in obj.parseContext) {
+      let tmp4 = typeof obj.parseContext[key10042];
+      if ("function" === tmp4) {
+        obj3.context[key10042] = obj.parseContext[key10042];
+        continue;
       } else {
-        num = sum;
-        tmp = tmp6;
-        tmp2 = tmp6;
-        if (tmp6) {
-          break;
-        }
-      }
-    }
-  }
-  return tmp2;
-}
-obj2.findOne = findOne;
-function findAll(fn, arg1) {
-  items = arg2;
-  if (arg2 === undefined) {
-    items = [];
-  }
-  for (let num = 0; num < length; num = num + 1) {
-    let tmp = arg1[num];
-    if (typeof tmp === "object") {
-      if (fn(tmp)) {
-        let arr = items.push(tmp);
-      }
-      let children = tmp.children;
-      if (0 !== children.length) {
-        let tmp5 = findAll(fn, children, items);
-      }
-    }
-  }
-  return items;
-}
-obj2.findAll = findAll;
-obj.adapter = obj2;
-let closure_15 = ["", "screen"];
-let closure_16 = [""];
-let closure_19 = { context: "declarationList", parseValue: false };
-let closure_22 = { parseValue: false, parseCustomProperty: false };
-let closure_24 = ["color", "fill", "floodColor", "lightingColor", "stopColor", "stroke"];
-function resolveElementVariables(item10064, map) {
-  return closure_24.forEach((item) => {
-    let startsWithResult = obj;
-    if (item10064.props[item]) {
-      startsWithResult = obj.startsWith("var(");
-    }
-    if (startsWithResult) {
-      item10064 = map;
-      let str2 = "";
-      if (undefined !== obj) {
-        let str3 = obj;
-        if (typeof obj !== "string") {
-          str3 = map(13720).generate(obj);
-          let obj2 = map(13720);
-        }
-        str2 = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, (arg0, arg1, str) => {
-          value = closure_0.get(arg1);
-          if (undefined !== value) {
-            closure_0 = tmp;
-            let str4 = "";
-            if (undefined !== value) {
-              let str5 = value;
-              if (typeof value !== "string") {
-                str5 = closure_1(13720).generate(value);
-                const obj2 = closure_1(13720);
-              }
-              str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, (arg0, arg1, str) => {
-                value = closure_0.get(arg1);
-                if (undefined !== value) {
-                  closure_0 = tmp;
-                  let str4 = "";
-                  if (undefined !== value) {
-                    let str5 = value;
-                    if (typeof value !== "string") {
-                      str5 = closure_1(13720).generate(value);
-                      const obj2 = closure_1(13720);
-                    }
-                    str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, (arg0, arg1, str) => {
-                      value = closure_0.get(arg1);
-                      if (undefined !== value) {
-                        closure_0 = tmp;
-                        let str4 = "";
-                        if (undefined !== value) {
-                          let str5 = value;
-                          if (typeof value !== "string") {
-                            str5 = closure_1(13720).generate(value);
-                            const obj2 = closure_1(13720);
-                          }
-                          str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F107167 */ function() { ... });
-                        }
-                        let str2 = str4;
-                      } else {
-                        str = "";
-                        str2 = "";
-                        if (str) {
-                          closure_0 = tmp;
-                          if (undefined !== str) {
-                            let str3 = str;
-                            if (typeof str !== "string") {
-                              str3 = closure_1(13720).generate(str);
-                              obj = closure_1(13720);
-                            }
-                            str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F107167 */ function() { ... });
-                          }
-                          str2 = str;
-                        }
-                      }
-                      return str2;
-                    });
-                  }
-                  let str2 = str4;
-                } else {
-                  str = "";
-                  str2 = "";
-                  if (str) {
-                    closure_0 = tmp;
-                    if (undefined !== str) {
-                      let str3 = str;
-                      if (typeof str !== "string") {
-                        str3 = closure_1(13720).generate(str);
-                        obj = closure_1(13720);
-                      }
-                      str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, (arg0, arg1, str) => {
-                        value = closure_0.get(arg1);
-                        if (undefined !== value) {
-                          closure_0 = tmp;
-                          let str4 = "";
-                          if (undefined !== value) {
-                            let str5 = value;
-                            if (typeof value !== "string") {
-                              str5 = closure_1(13720).generate(value);
-                              const obj2 = closure_1(13720);
-                            }
-                            str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F107167 */ function() { ... });
-                          }
-                          let str2 = str4;
-                        } else {
-                          str = "";
-                          str2 = "";
-                          if (str) {
-                            closure_0 = tmp;
-                            if (undefined !== str) {
-                              let str3 = str;
-                              if (typeof str !== "string") {
-                                str3 = closure_1(13720).generate(str);
-                                obj = closure_1(13720);
-                              }
-                              str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F107167 */ function() { ... });
-                            }
-                            str2 = str;
-                          }
-                        }
-                        return str2;
-                      });
-                    }
-                    str2 = str;
-                  }
-                }
-                return str2;
-              });
-            }
-            let str2 = str4;
-          } else {
-            str = "";
-            str2 = "";
-            if (str) {
-              closure_0 = tmp;
-              if (undefined !== str) {
-                let str3 = str;
-                if (typeof str !== "string") {
-                  str3 = closure_1(13720).generate(str);
-                  obj = closure_1(13720);
-                }
-                str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, (arg0, arg1, str) => {
-                  value = closure_0.get(arg1);
-                  if (undefined !== value) {
-                    closure_0 = tmp;
-                    let str4 = "";
-                    if (undefined !== value) {
-                      let str5 = value;
-                      if (typeof value !== "string") {
-                        str5 = closure_1(13720).generate(value);
-                        const obj2 = closure_1(13720);
-                      }
-                      str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, (arg0, arg1, str) => {
-                        value = closure_0.get(arg1);
-                        if (undefined !== value) {
-                          closure_0 = tmp;
-                          let str4 = "";
-                          if (undefined !== value) {
-                            let str5 = value;
-                            if (typeof value !== "string") {
-                              str5 = closure_1(13720).generate(value);
-                              const obj2 = closure_1(13720);
-                            }
-                            str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F107167 */ function() { ... });
-                          }
-                          let str2 = str4;
-                        } else {
-                          str = "";
-                          str2 = "";
-                          if (str) {
-                            closure_0 = tmp;
-                            if (undefined !== str) {
-                              let str3 = str;
-                              if (typeof str !== "string") {
-                                str3 = closure_1(13720).generate(str);
-                                obj = closure_1(13720);
-                              }
-                              str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F107167 */ function() { ... });
-                            }
-                            str2 = str;
-                          }
-                        }
-                        return str2;
-                      });
-                    }
-                    let str2 = str4;
-                  } else {
-                    str = "";
-                    str2 = "";
-                    if (str) {
-                      closure_0 = tmp;
-                      if (undefined !== str) {
-                        let str3 = str;
-                        if (typeof str !== "string") {
-                          str3 = closure_1(13720).generate(str);
-                          obj = closure_1(13720);
-                        }
-                        str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, (arg0, arg1, str) => {
-                          value = closure_0.get(arg1);
-                          if (undefined !== value) {
-                            closure_0 = tmp;
-                            let str4 = "";
-                            if (undefined !== value) {
-                              let str5 = value;
-                              if (typeof value !== "string") {
-                                str5 = closure_1(13720).generate(value);
-                                const obj2 = closure_1(13720);
-                              }
-                              str4 = str5.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F107167 */ function() { ... });
-                            }
-                            let str2 = str4;
-                          } else {
-                            str = "";
-                            str2 = "";
-                            if (str) {
-                              closure_0 = tmp;
-                              if (undefined !== str) {
-                                let str3 = str;
-                                if (typeof str !== "string") {
-                                  str3 = closure_1(13720).generate(str);
-                                  obj = closure_1(13720);
-                                }
-                                str = str3.replace(/var\((--[^,)]+)(?:,\s*([^)]+))?\)/g, /* F107167 */ function() { ... });
-                              }
-                              str2 = str;
-                            }
-                          }
-                          return str2;
-                        });
-                      }
-                      str2 = str;
-                    }
-                  }
-                  return str2;
-                });
-              }
-              str2 = str;
-            }
-          }
-          return str2;
-        });
-      }
-      tmp.props[item] = str2;
-    }
-    tmp = item10064;
-  });
-}
-function inlineStyles(arg0) {
-  closure_0 = arg0;
-  let arr = closure_1(13842)("style", arg0, obj);
-  if (0 === arr.length) {
-    return arg0;
-  } else {
-    items = [];
-    const _Map = Map;
-    let map = new Map();
-    let iter = arr[Symbol.iterator]();
-    let nextResult = iter.next();
-    if (iter === undefined) {
-      const tmp21 = (function filterByPseudos(arr) {
-        return arr.filter((pseudos) => {
-          pseudos = pseudos.pseudos;
-          const element = { type: "Selector", children: null };
-          const list = new closure_1_0(13720).List();
-          element.children = list.fromArray(pseudos.map((item) => item.item.data));
-          return closure_1_16.includes(closure_1_1(13720).generate(element));
-        });
-      })((function filterByMqs(items) {
-        return items.filter((atrule) => {
-          atrule = atrule.atrule;
-          if (null === atrule) {
-            return true;
-          } else {
-            ({ name, prelude } = atrule);
-            let firstResult = prelude;
-            if (prelude) {
-              const children = prelude.children;
-              firstResult = children.first();
-            }
-            let generateResult = name;
-            if (firstResult) {
-              generateResult = name;
-              if ("MediaQueryList" === firstResult.type) {
-                generateResult = closure_1_1(dependencyMap[9]).generate(prelude);
-                obj = closure_1_1(dependencyMap[9]);
-              }
-            }
-            return closure_1_15.includes(generateResult);
-          }
-        });
-      })(items));
-      (function cleanPseudos(arr) {
-        const item = arr.forEach((pseudos) => {
-          pseudos = pseudos.pseudos;
-          return pseudos.forEach((list) => {
-            list = list.list;
-            return list.remove(list.item);
-          });
-        });
-      })(tmp21);
-      const reversed = sortSelectors(tmp21).reverse();
-      const tmp28 = closure_1(13842)("*[color], *[fill], *[floodColor], *[lightingColor], *[stopColor], *[stroke]", arg0, obj);
-      for (const item10064 of tmp28) {
-        let tmp33 = resolveElementVariables(item10064, map);
-        continue;
-      }
-      for (const item10074 of reversed) {
-        ({ rule: closure_1, item: dependencyMap } = item10074);
-        let tmp34Result = tmp34();
-        continue;
-      }
-      return arg0;
-    } else {
-      let children = nextResult.children;
-      if (children.length) {
-        if (!closestElem(tmp6, "foreignObject")) {
-          try {
-            const joined = obj.join("");
-            const parsed = closure_1(13720).parse(joined, closure_22);
-            map = extractVariables(parsed);
-            flattenToSelectors(parsed, items);
-            let obj2 = closure_1(13720);
-          } catch (tmp19) {
-            let _console = tmp2.console;
-            _console.warn(tmp + tmp19);
-          }
-        }
-      }
-    }
-  }
-}
-class SvgWithCss {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = closure_3(this, SvgWithCssUri);
-    items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(SvgWithCssUri);
-    tmp3 = closure_4;
-    if (closure_11()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.state = { ast: null };
-    return tmp3Result;
-  }
-}
-SvgWithCssUri = SvgWithCss;
-_inherits(SvgWithCss, Component);
-const entry = {
-  key: "componentDidMount",
-  value: function componentDidMount() {
-    const parsed = this.parse(this.props.xml);
-  }
-};
-let items = [
-  entry,
-  {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(xml) {
-      const self = this;
-      xml = this.props.xml;
-      if (xml !== xml.xml) {
-        const parsed = self.parse(xml);
-      }
-    }
-  },
-  {
-    key: "parse",
-    value: function parse(arg0) {
-      const self = this;
-      try {
-        let parsed = null;
-        if (arg0) {
-          parsed = SvgWithCssUri(8197).parse(arg0, inlineStyles);
-          obj = SvgWithCssUri(8197);
-        }
-        const obj2 = { ast: parsed };
-        self.setState(obj2);
-      } catch (tmp8) {
-        if (tmp.props.onError) {
-          const props = tmp.props;
-          props.onError(tmp8);
+        if ("string" !== tmp4) {
+          continue;
         } else {
-          const _console = console;
-          console.error(tmp8);
+          _require = obj.parseContext[key10042];
+          obj3.context[key10042] = function () {
+            return this[closure_0]();
+          };
+          continue;
         }
+        continue;
       }
-    }
-  },
-  {
-    key: "render",
-    value: function render() {
-      const props = this.props;
-      obj = { ast: this.state.ast, override: null };
-      let override = props.override;
-      if (!override) {
-        override = props;
-      }
-      obj.override = override;
-      return jsx(SvgWithCssUri(8197).SvgAst, { ast: this.state.ast, override: null });
+      continue;
     }
   }
-];
-const importDefaultResult1Result = _createClass(SvgWithCss, items);
-closure_1 = undefined;
-class SvgWithCssUri {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = closure_3(this, SvgWithCssUri);
-    items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(SvgWithCssUri);
-    tmp3 = closure_4;
-    if (closure_11()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
+  if (obj.scope) {
+    for (const key10053 in obj.scope) {
+      obj3.scope[key10053] = obj.scope[key10053];
+      continue;
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.state = { xml: null };
-    return tmp3Result;
   }
-}
-_inherits(SvgWithCssUri, Component);
-const entry1 = {
-  key: "componentDidMount",
-  value: function componentDidMount() {
-    const response = this.fetch(this.props.uri);
-  }
-};
-let items1 = [
-  entry1,
-  {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(uri) {
-      const self = this;
-      uri = this.props.uri;
-      if (uri !== uri.uri) {
-        const response = self.fetch(uri);
-      }
-    }
-  },
-,
-
-];
-const entry2 = { key: "fetch", value: null };
-closure_1 = asyncGeneratorStep(async function(arg0) {
-  const self = this;
-  closure_1 = arg0;
-  c8 = 0;
-  c9 = 0;
-  c6 = 0;
-  return (async (arg0) => {
-    if (c9 === 2) {
-      c9 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+  if (obj.atrule) {
+    for (const key10057 in obj.atrule) {
+      let tmp7 = obj.atrule[key10057];
+      if (!tmp7.parse) {
+        continue;
       } else {
-        return { value: "HermesInternal", done: null };
+        obj3.atrule[key10057] = tmp7.parse;
+        continue;
       }
-    } else {
-      try {
-        c9 = 2;
-        if (0 === c8) {
-          if (arg0 === 1) {
-            c9 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c9 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_5 = self;
-            closure_4 = tmp4;
-            c6 = 1;
-            setState = self.setState;
-            closure_2 = {};
-            let tmp8 = null;
-            if (closure_1) {
-              c8 = 2;
-              c9 = 1;
-              const obj5 = { value: self(closure_2[10]).fetchText(tmp36), done: false };
-              return obj5;
+      continue;
+    }
+  }
+  if (obj.pseudo) {
+    for (const key10063 in obj.pseudo) {
+      let tmp9 = obj.pseudo[key10063];
+      if (!tmp9.parse) {
+        continue;
+      } else {
+        obj3.pseudo[key10063] = tmp9.parse;
+        continue;
+      }
+      continue;
+    }
+  }
+  if (obj.node) {
+    for (const key10069 in obj.node) {
+      obj3[key10069] = obj.node[key10069].parse;
+      continue;
+    }
+  }
+  for (const key10072 in obj3) {
+    obj2[key10072] = obj3[key10072];
+    continue;
+  }
+  return (source, arg1) => {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
+    }
+    const onComment = obj.onComment;
+    source(13726)(source, source.scanner);
+    const locationMap = source.locationMap;
+    locationMap.setSource(source, obj.offset, obj.line, obj.column);
+    source.filename = obj.filename || "<unknown>";
+    source.needPositions = Boolean(obj.positions);
+    source.onParseError = typeof obj.onParseError === "function" ? obj.onParseError : noop;
+    source.onParseErrorThrow = false;
+    let BooleanResult = !("parseAtrulePrelude" in obj);
+    if (!BooleanResult) {
+      const _Boolean = Boolean;
+      BooleanResult = Boolean(obj.parseAtrulePrelude);
+    }
+    source.parseAtrulePrelude = BooleanResult;
+    let BooleanResult1 = !("parseRulePrelude" in obj);
+    if (!BooleanResult1) {
+      const _Boolean2 = Boolean;
+      BooleanResult1 = Boolean(obj.parseRulePrelude);
+    }
+    source.parseRulePrelude = BooleanResult1;
+    let BooleanResult2 = !("parseValue" in obj);
+    if (!BooleanResult2) {
+      const _Boolean3 = Boolean;
+      BooleanResult2 = Boolean(obj.parseValue);
+    }
+    source.parseValue = BooleanResult2;
+    let BooleanResult3 = "parseCustomProperty" in obj;
+    if (BooleanResult3) {
+      const _Boolean4 = Boolean;
+      BooleanResult3 = Boolean(obj.parseCustomProperty);
+    }
+    source.parseCustomProperty = BooleanResult3;
+    const context = obj2.context;
+    if (context.hasOwnProperty(obj.context || "default")) {
+      if (typeof onComment === "function") {
+        const scanner = obj2.scanner;
+        scanner.forEachToken((arg0, arg1, length) => {
+          if (arg0 === Comment) {
+            const _location = source.getLocation(arg1, length);
+            const obj = keys2;
+            let num = 2;
+            const slice = source.slice;
+            const sum = arg1 + 2;
+            if (obj.cmpStr(source, length - 2, length, "*/")) {
+              num = length - num;
+              let substr = slice(sum, num);
             } else {
-              closure_2.xml = tmp8;
-              setState(closure_2);
-              const props2 = closure_5.props;
-              const onLoad = props2.onLoad;
-              if (onLoad != null) {
-                onLoad();
-              }
-              c6 = 0;
-              c9 = 3;
+              substr = slice(sum, length);
             }
+            onComment(substr, _location);
           }
-        } else if (1 === tmp7) {
-          c6 = 0;
-          closure_132_0 = closure_7;
-          if (!closure_5.props.onError) {
-            const _console = console;
-            console.error(closure_132_0);
-          }
-        } else if (arg0 === 1) {
-          c9 = 3;
-          throw value;
-        } else {
-          tmp8 = value;
-          if (arg0 === 2) {
-            c6 = 0;
-            c9 = 3;
-            obj = { value, done: true };
-            return obj;
-          }
-        }
-        const props = closure_5.props;
-        props.onError(closure_132_0);
-      } catch (tmp26) {
-        closure_7 = tmp26;
-        if (tmp3 === c6) {
-          c9 = tmp2;
-          throw tmp26;
-        } else {
-          c8 = tmp;
-        }
+        });
       }
-    }
-  })();
-});
-entry2.value = function fetch(arg0) {
-  const self = this;
-  const apply = closure_1.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-items1[2] = entry2;
-items1[3] = {
-  key: "render",
-  value: function render() {
-    return <importDefaultResult1Result xml={this.state.xml} override={this.props} />;
-  }
-};
-
-export { inlineStyles };
-export { SvgCss };
-export function SvgCssUri(uri) {
-  uri = uri.uri;
-  let onError = uri.onError;
-  if (undefined === onError) {
-    onError = closure_12;
-  }
-  const onLoad = uri.onLoad;
-  let fallback = uri.fallback;
-  const tmp2 = _slicedToArray(closure_9(null), 2);
-  closure_3 = tmp2[1];
-  const tmp3 = _slicedToArray(closure_9(false), 2);
-  closure_4 = tmp3[1];
-  items = [onError, uri, onLoad];
-  closure_7(() => {
-    if (uri) {
-      const text = SvgWithCssUri(8197).fetchText(tmp);
-      obj = SvgWithCssUri(8197);
-      text.then((result) => {
-        closure_1_3(result);
-        if (onLoad != null) {
-          onLoad();
-        }
-      }).catch((error) => {
-        onError(error);
-        closure_1_4(true);
-      });
-      const nextPromise = text.then((result) => {
-        closure_1_3(result);
-        if (onLoad != null) {
-          onLoad();
-        }
-      });
+      const call = tmp12.call;
+      if (!obj2.scanner.eof) {
+        obj2.error();
+      }
+      return typeof call === "unknown" ? obj2.context[tmp](obj) : call(obj2, obj);
     } else {
-      closure_3(null);
+      const _Error = Error;
+      const error = new Error("Unknown context `" + tmp + "`");
+      throw error;
     }
-  }, items);
-  if (tmp3[0]) {
-    if (fallback == null) {
-      fallback = null;
-    }
-    let tmp7 = fallback;
-  } else {
-    obj = { xml: tmp2[0], override: uri, fallback };
-    tmp7 = <SvgCss xml={tmp2[0]} override={uri} fallback={fallback} />;
-  }
-  return tmp7;
+  };
 }
-export const SvgWithCss = importDefaultResult1Result;
-export const SvgWithCssUri = _createClass(SvgWithCssUri, items1);
