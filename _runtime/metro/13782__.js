@@ -1,54 +1,23 @@
 // === Module 13782: ? ===
 
 // Module 13782
-import _mod13730 from "module_13730" /* 13730 */;
+import keys2 from "keys2" /* 13722 */;
+import _mod13726 from "module_13726" /* 13726 */;
 
-const Ident = _mod13730.TYPE.Ident;
-let obj = {
-  name: "Combinator",
-  structure: { name: String },
+const Dimension = _mod13726.TYPE.Dimension;
+const obj = {
+  name: "Dimension",
+  structure: { value: String, unit: String },
   parse() {
-    const self = this;
     const tokenStart = this.scanner.tokenStart;
-    const source = this.scanner.source;
-    const charCodeAtResult = source.charCodeAt(this.scanner.tokenStart);
-    if (62 !== charCodeAtResult) {
-      if (43 !== charCodeAtResult) {
-        if (126 !== charCodeAtResult) {
-          if (47 === charCodeAtResult) {
-            self.scanner.next();
-            let tmp5 = self.scanner.tokenType === Ident;
-            if (tmp5) {
-              const scanner = self.scanner;
-              tmp5 = false !== scanner.lookupValue(0, "deep");
-            }
-            if (!tmp5) {
-              self.error("Identifier `deep` is expected");
-            }
-            self.scanner.next();
-            const scanner2 = self.scanner;
-            if (!scanner2.isDelim(47)) {
-              self.error("Solidus is expected");
-            }
-            self.scanner.next();
-            const iter = self.scanner;
-            const iter2 = self.scanner;
-            const iter3 = self.scanner;
-          } else {
-            self.error("Combinator is expected");
-          }
-        }
-        const obj = { type: "Combinator", loc: self.getLocation(tokenStart, self.scanner.tokenStart), name: null };
-        const scanner3 = self.scanner;
-        obj.name = scanner3.substrToCursor(tokenStart);
-        return obj;
-      }
-    }
-    self.scanner.next();
-    const iter4 = self.scanner;
+    const consumeNumberResult = keys2.consumeNumber(this.scanner.source, tokenStart);
+    this.eat(Dimension);
+    const obj2 = { type: "Dimension", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: this.scanner.source.substring(tokenStart, consumeNumberResult), unit: this.scanner.source.substring(consumeNumberResult, this.scanner.tokenStart) };
+    return obj2;
   },
-  generate(name) {
-    this.chunk(name.name);
+  generate(value) {
+    this.chunk(value.value);
+    this.chunk(value.unit);
   }
 };
 

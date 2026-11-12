@@ -1,12 +1,15 @@
 // === Module 8901: ? ===
 
 // Module 8901
-const obj = { 4: null };
-obj[4] = {
-  name: "ShotInfo",
-  description(arg0) {
-    return arg0;
-  }
+const obj = {
+  0: {
+    name: "PentaxVersion",
+    description(join) {
+      return join.join(".");
+    }
+  },
+  5: "PentaxModelID",
+  555: "LevelInfo"
 };
 
 export default obj;

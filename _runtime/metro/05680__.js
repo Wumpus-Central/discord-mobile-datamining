@@ -55,7 +55,7 @@ class TouchableOpacity {
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.getChildStyleOpacityWithDefault = () => {
-      const tmp = closure_2_10.flatten(closure_0.props.style) || {};
+      const tmp = refs.flatten(closure_0.props.style) || {};
       let num = 1;
       if (null != tmp.opacity) {
         const opacity = tmp.opacity;

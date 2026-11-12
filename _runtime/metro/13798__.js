@@ -1,23 +1,51 @@
 // === Module 13798: ? ===
 
 // Module 13798
-import keys2 from "keys2" /* 13726 */;
-import _mod13730 from "module_13730" /* 13730 */;
+import _mod13726 from "module_13726" /* 13726 */;
+import _mod13770 from "module_13770" /* 13770 */;
 
-const Percentage = _mod13730.TYPE.Percentage;
-let obj = {
-  name: "Percentage",
-  structure: { value: String },
-  parse() {
-    const tokenStart = this.scanner.tokenStart;
-    this.eat(Percentage);
-    const obj2 = { type: "Percentage", loc: this.getLocation(tokenStart, this.scanner.tokenStart), value: this.scanner.source.substring(tokenStart, keys2.consumeNumber(this.scanner.source, tokenStart)) };
-    return obj2;
-  },
-  generate(value) {
-    this.chunk(value.value);
-    this.chunk("%");
+function consumeRaw(arg0) {
+  return this.Raw(arg0, _mod13770.mode.leftCurlyBracket, true);
+}
+function consumePrelude() {
+  const self = this;
+  const SelectorListResult = this.SelectorList();
+  let tmp2 = "Raw" !== SelectorListResult.type;
+  if (tmp2) {
+    tmp2 = false === self.scanner.eof;
   }
-};
+  if (tmp2) {
+    tmp2 = self.scanner.tokenType !== LeftCurlyBracket;
+  }
+  if (tmp2) {
+    self.error();
+  }
+  return SelectorListResult;
+}
+const LeftCurlyBracket = _mod13726.TYPE.LeftCurlyBracket;
 
-export default obj;
+export default {
+  name: "Rule",
+  structure: { prelude: ["SelectorList", "Raw"], block: ["Block"] },
+  parse() {
+    const self = this;
+    const tokenIndex = this.scanner.tokenIndex;
+    if (this.parseRulePrelude) {
+      let parseWithFallbackResult = self.parseWithFallback(consumePrelude, consumeRaw);
+    } else {
+      const call = consumeRaw.call;
+      if (typeof call === "unknown") {
+        parseWithFallbackResult = self.Raw(tokenIndex, _mod13770.mode.leftCurlyBracket, true);
+      } else {
+        parseWithFallbackResult = call(self, tokenIndex);
+      }
+    }
+    const obj = { type: "Rule", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), prelude: parseWithFallbackResult, block: self.Block(true) };
+    return obj;
+  },
+  generate(prelude) {
+    this.node(prelude.prelude);
+    this.node(prelude.block);
+  },
+  walkContext: "rule"
+};

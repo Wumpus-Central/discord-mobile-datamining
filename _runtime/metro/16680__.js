@@ -1,15 +1,12 @@
 // === Module 16680: ? ===
 
 // Module 16680
+import _mod16627 from "module_16627" /* 16627 */;
+import _mod16661 from "module_16661" /* 16661 */;
 import _mod16678 from "module_16678" /* 16678 */;
 
 
-export default (arg0, arg1) => {
-  const tmp = _mod16678(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
-  } else {
-    tmp3 = min(tmp, arg1);
-  }
-  return tmp3;
-};
+export default _mod16627 ? ((arg0, arg1, arg2) => _mod16678.f(arg0, arg1, _mod16661(1, arg2))) : ((arg0, arg1, arg2) => {
+  arg0[arg1] = arg2;
+  return arg0;
+});

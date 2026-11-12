@@ -1,12 +1,21 @@
 // === Module 9614: ? ===
 
 // Module 9614
-import _slicedToArray from "module_32" /* 32 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef9615 from "module_9615" /* 9615 */;
 
-const noop = fn(19);
-({ useCallback: closure_1, useState: c2 } = noop);
+const useRef = _mod19.useRef;
+let closure_3 = [];
 
-export default function useForceUpdate() {
-  closure_0 = _slicedToArray(React2({}), 2)[1];
-  return duration(() => closure_0({}), []);
+export default function useStableMemo(fn, items) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = fn();
+    tmp2.current = items;
+  } else if (!_modDef9615(items, tmp2.current)) {
+    tmp.current = fn();
+    tmp2.current = items;
+  }
+  return tmp.current;
 };

@@ -1,51 +1,61 @@
 // === Module 13802: ? ===
 
 // Module 13802
-import _mod13730 from "module_13730" /* 13730 */;
-import _mod13774 from "module_13774" /* 13774 */;
+import _mod13726 from "module_13726" /* 13726 */;
 
 function consumeRaw(arg0) {
-  return this.Raw(arg0, _mod13774.mode.leftCurlyBracket, true);
+  return this.Raw(arg0, null, false);
 }
-function consumePrelude() {
-  const self = this;
-  const SelectorListResult = this.SelectorList();
-  let tmp2 = "Raw" !== SelectorListResult.type;
-  if (tmp2) {
-    tmp2 = false === self.scanner.eof;
-  }
-  if (tmp2) {
-    tmp2 = self.scanner.tokenType !== LeftCurlyBracket;
-  }
-  if (tmp2) {
-    self.error();
-  }
-  return SelectorListResult;
-}
-const LeftCurlyBracket = _mod13730.TYPE.LeftCurlyBracket;
-
-export default {
-  name: "Rule",
-  structure: { prelude: ["SelectorList", "Raw"], block: ["Block"] },
+const WhiteSpace = _mod13726.TYPE.WhiteSpace;
+const Comment = _mod13726.TYPE.Comment;
+const AtKeyword = _mod13726.TYPE.AtKeyword;
+const CDO = _mod13726.TYPE.CDO;
+const CDC = _mod13726.TYPE.CDC;
+const obj = {
+  name: "StyleSheet",
+  structure: null,
   parse() {
     const self = this;
-    const tokenIndex = this.scanner.tokenIndex;
-    if (this.parseRulePrelude) {
-      let parseWithFallbackResult = self.parseWithFallback(consumePrelude, consumeRaw);
-    } else {
-      const call = consumeRaw.call;
-      if (typeof call === "unknown") {
-        parseWithFallbackResult = self.Raw(tokenIndex, _mod13774.mode.leftCurlyBracket, true);
-      } else {
-        parseWithFallbackResult = call(self, tokenIndex);
-      }
+    const list = this.createList();
+    if (!this.scanner.eof) {
+      do {
+        let tokenType = self.scanner.tokenType;
+        if (WhiteSpace === tokenType) {
+          let iter2 = self.scanner;
+          let nextResult = iter2.next();
+        } else {
+          if (Comment === tokenType) {
+            let source = self.scanner.source;
+            if (33 !== source.charCodeAt(self.scanner.tokenStart + 2)) {
+              let iter = self.scanner;
+              let nextResult1 = iter.next();
+            } else {
+              let CommentResult = self.Comment();
+            }
+          } else if (CDO === tokenType) {
+            CommentResult = self.CDO();
+          } else if (CDC === tokenType) {
+            CommentResult = self.CDC();
+          } else if (AtKeyword === tokenType) {
+            CommentResult = self.parseWithFallback(self.Atrule, consumeRaw);
+          } else {
+            CommentResult = self.parseWithFallback(self.Rule, consumeRaw);
+          }
+          let arr = list.push(CommentResult);
+        }
+      } while (!self.scanner.eof);
     }
-    const obj = { type: "Rule", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), prelude: parseWithFallbackResult, block: self.Block(true) };
-    return obj;
+    const element = { type: "StyleSheet", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: list };
+    return element;
   },
-  generate(prelude) {
-    this.node(prelude.prelude);
-    this.node(prelude.block);
+  generate(arg0) {
+    this.children(arg0);
   },
-  walkContext: "rule"
+  walkContext: "stylesheet"
 };
+const obj2 = { children: null };
+const items = [["Comment", "CDO", "CDC", "Atrule", "Rule", "Raw"]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

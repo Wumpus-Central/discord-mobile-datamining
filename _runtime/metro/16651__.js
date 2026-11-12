@@ -1,18 +1,18 @@
 // === Module 16651: ? ===
 
 // Module 16651
-import _mod16636 from "module_16636" /* 16636 */;
+import _mod16642 from "module_16642" /* 16642 */;
+import _mod16650 from "module_16650" /* 16650 */;
+import _mod16652 from "module_16652" /* 16652 */;
+import _mod16653 from "module_16653" /* 16653 */;
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod16636(1.toString);
 
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
+export default _mod16642 ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
+  const tmp3 = _mod16652("Symbol");
+  let tmpResultResult = _mod16650(tmp3);
+  if (tmpResultResult) {
+    tmpResultResult = _mod16653(tmp3.prototype, Object(arg0));
+    const tmpResult = _mod16653;
   }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
-};
+  return tmpResultResult;
+});

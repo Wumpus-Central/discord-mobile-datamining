@@ -1,7 +1,7 @@
 // === Module 16410: ? ===
 
 // Module 16410
-import _mod16400 from "module_16400" /* 16400 */;
+import _mod16409 from "module_16409" /* 16409 */;
 
 
-export default (arg0, arg1) => new _mod16400(arg0, arg1).major;
+export default (arg0, arg1, arg2) => _mod16409(arg1, arg0, arg2);

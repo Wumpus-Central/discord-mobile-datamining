@@ -1,16 +1,11 @@
 // === Module 16647: ? ===
 
 // Module 16647
-import prop_mod from "module_16648" /* 16648 */;
+import _mod16631 from "module_16631" /* 16631 */;
+import _mod16648 from "module_16648" /* 16648 */;
 
-let prop = prop_mod;
-if (prop) {
-  const _Symbol = Symbol;
-  prop = !Symbol.sham;
-}
-if (prop) {
-  const _Symbol2 = Symbol;
-  prop = typeof Symbol.iterator === "symbol";
-}
+let closure_2 = _mod16631({}.hasOwnProperty);
 
-export default prop;
+export default Object.hasOwn || (function hasOwn(arg0, arg1) {
+  return closure_2(_mod16648(arg0), arg1);
+});

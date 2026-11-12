@@ -1,22 +1,24 @@
 // === Module 8886: ? ===
 
 // Module 8886
-import _mod8872 from "module_8872" /* 8872 */;
+import _mod8871 from "module_8871" /* 8871 */;
 
 require = arg1;
 const dependencyMap = arg6;
-let c2 = 6;
-let closure_3 = ["GIF87a", "GIF89a"];
+let c2 = 0;
+let c3 = "<?xpacket begin";
 
 export default {
-  isGifFile(dataView) {
-    let hasItem = dataView;
-    if (hasItem) {
-      hasItem = closure_3.includes(_mod8872.getStringFromDataView(dataView, 0, c2));
+  isXMLFile(dataView) {
+    let tmp = dataView;
+    if (tmp) {
+      tmp = _mod8871.getStringFromDataView(dataView, c2, length.length) === length;
     }
-    return hasItem;
+    return tmp;
   },
-  findOffsets() {
-    return { gifHeaderOffset: 0 };
+  findOffsets(byteLength) {
+    const xmpChunks = [];
+    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
+    return { xmpChunks };
   }
 };

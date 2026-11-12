@@ -1,12 +1,5 @@
 // === Module 16020: ? ===
 
 // Module 16020
-import _mod16034 from "module_16034" /* 16034 */;
-import assign from "module_16021" /* 16021 */;
-import Deflate from "Deflate" /* 16022 */;
-import Inflate from "Inflate" /* 16030 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod16034);
-
-export default obj;
+export default { 2: "need dictionary", 1: "stream end", 0: "", "-1": "file error", "-2": "stream error", "-3": "data error", "-4": "insufficient memory", "-5": "buffer error", "-6": "incompatible version" };

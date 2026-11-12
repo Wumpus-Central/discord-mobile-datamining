@@ -1,39 +1,84 @@
 // === Module 13744: ? ===
 
 // Module 13744
+import _mod13745 from "module_13745" /* 13745 */;
 
-export default function createConvertors(arg0) {
-  closure_0 = arg0;
-  return {
-    fromPlainObject(arg0) {
-      closure_0(arg0, {
-        enter(children) {
-          children = children.children;
-          if (children) {
-            children = children.children instanceof closure_1_0(13732) === false;
-          }
-          if (children) {
-            const obj = new closure_1_0(13732)();
-            children.children = obj.fromArray(children.children);
-          }
-        }
-      });
-      return arg0;
-    },
-    toPlainObject(arg0) {
-      closure_0(arg0, {
-        leave(children) {
-          children = children.children;
-          if (children) {
-            children = children.children instanceof closure_1_0(closure_1_1[0]);
-          }
-          if (children) {
-            const children2 = children.children;
-            children.children = children2.toArray();
-          }
-        }
-      });
-      return arg0;
+class Tokenizer {
+  constructor(arg0) {
+    return;
+  }
+}
+Tokenizer.prototype = {
+  charCodeAt(sum) {
+    let num = 0;
+    if (sum < this.str.length) {
+      num = this.str.charCodeAt(sum);
     }
-  };
+    return num;
+  },
+  charCode() {
+    return this.charCodeAt(this.pos);
+  },
+  nextCharCode() {
+    return this.charCodeAt(this.pos + 1);
+  },
+  nextNonWsCode(pos) {
+    return this.charCodeAt(this.findWsEnd(pos));
+  },
+  findWsEnd(pos) {
+    const self = this;
+    let sum = pos;
+    let tmp2 = pos;
+    if (pos < this.str.length) {
+      while (true) {
+        let str = self.str;
+        let charCodeAtResult = str.charCodeAt(sum);
+        if (13 !== charCodeAtResult) {
+          if (10 !== charCodeAtResult) {
+            if (12 !== charCodeAtResult) {
+              if (32 !== charCodeAtResult) {
+                tmp2 = sum;
+                if (9 !== charCodeAtResult) {
+                  break;
+                }
+              }
+              break;
+            }
+          }
+        }
+        sum = sum + 1;
+        tmp2 = sum;
+        if (sum >= self.str.length) {
+          break;
+        }
+      }
+    }
+    return tmp2;
+  },
+  substringToPos(wsEnd) {
+    this.pos = wsEnd;
+    return this.str.substring(this.pos, wsEnd);
+  },
+  eat(arg0) {
+    const self = this;
+    if (this.charCode() !== arg0) {
+      const _String = String;
+      self.error(`Expect \`${String.fromCharCode(arg0)}\``);
+    }
+    self.pos = self.pos + 1;
+  },
+  peek() {
+    const self = this;
+    let str = "";
+    if (this.pos < this.str.length) {
+      self.pos = +self.pos + 1;
+      str = self.str.charAt(tmp);
+    }
+    return str;
+  },
+  error(arg0) {
+    throw new _mod13745(arg0, this.str, this.pos);
+  }
 };
+
+export default Tokenizer;

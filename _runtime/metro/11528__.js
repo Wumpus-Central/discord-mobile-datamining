@@ -1,13 +1,14 @@
 // === Module 11528: ? ===
 
 // Module 11528
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod11386 from "module_11386" /* 11386 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _mod11518 from "module_11518" /* 11518 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const UKTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,31 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class UKMergeDateRangeRefiner {
+class UKTimeUnitCasualRelativeFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, UKMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(UKMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, UKTimeUnitCasualRelativeFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(UKTimeUnitCasualRelativeFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -64,14 +48,30 @@ class UKMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = UKMergeDateRangeRefiner;
-_inherits(UKMergeDateRangeRefiner, fn(_mod11386).default);
+_inherits(UKTimeUnitCasualRelativeFormatParser, _mod11518.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(і до|і по|до|по|-)\s*$/i;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(\u0446\u0456|\u043E\u0441\u0442\u0430\u043D\u043D\u0456|\u043C\u0438\u043D\u0443\u043B\u0456|\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0456|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0456|\u043F\u0456\u0441\u043B\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" + UKTimeUnitCasualRelativeFormatParser(11516).TIME_UNITS_PATTERN + ")";
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = UKTimeUnitCasualRelativeFormatParser(11516).parseDuration(arg1[3]);
+      if ("\u043E\u0441\u0442\u0430\u043D\u043D\u0456" !== formatted) {
+        if ("\u043C\u0438\u043D\u0443\u043B\u0456" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
+        }
+        const ParsingComponents = UKTimeUnitCasualRelativeFormatParser(11365).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      }
+      reverseDurationResult = UKTimeUnitCasualRelativeFormatParser(11364).reverseDuration(parseDurationResult);
+    }
+  }
+];
 
-export default _createClass(UKMergeDateRangeRefiner, items);
+export default _createClass(UKTimeUnitCasualRelativeFormatParser, items);

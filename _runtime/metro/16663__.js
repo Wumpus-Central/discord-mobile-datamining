@@ -1,39 +1,44 @@
 // === Module 16663: ? ===
 
 // Module 16663
-import _mod16654 from "module_16654" /* 16654 */;
-import _mod16655 from "module_16655" /* 16655 */;
-import _mod16662 from "module_16662" /* 16662 */;
+import _mod16628 from "module_16628" /* 16628 */;
+import _mod16650 from "module_16650" /* 16650 */;
 
-
-export default (arg0, arg1) => {
-  if ("string" === arg1) {
-    const toString = arg0.toString;
-    if (_mod16655(toString)) {
-      const tmp4 = _mod16662(toString, arg0);
-      if (!tmpResult(tmp4)) {
-        return tmp4;
+const re2 = /#|\.prototype\./;
+function isForced(arg0, arg1) {
+  if (typeof fn === "function") {
+    const _String = String;
+    const str3 = String(arg0).replace(re2, ".");
+    const tmp5 = tmp[str3.toLowerCase(str3)];
+    let tmp7 = tmp5 === P;
+    if (!tmp7) {
+      if (tmp5 === N) {
+        tmp7 = tmp9;
+      } else {
+        let tmp11Result = dependencyMap;
+        if (_mod16650(arg1)) {
+          tmp11Result = _mod16628;
+          let tmp11ResultResult = tmp11Result(arg1);
+        } else {
+          tmp11ResultResult = arg1;
+        }
       }
-      tmpResult = _mod16654;
     }
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const valueOf = arg0.valueOf;
-  if (_mod16655(valueOf)) {
-    const tmp8 = _mod16662(valueOf, arg0);
-    if (!tmp5Result(tmp8)) {
-      return tmp8;
-    }
-    tmp5Result = _mod16654;
-  }
-  if ("string" !== arg1) {
-    const toString2 = arg0.toString;
-    if (_mod16655(toString2)) {
-      const tmp10 = _mod16662(toString2, arg0);
-      if (!tmp5Result2(tmp10)) {
-        return tmp10;
-      }
-      tmp5Result2 = _mod16654;
-    }
-  }
-  throw new TypeError("Can't convert object to primitive value");
+}
+const normalize = (arg0) => {
+  const str = String(arg0);
+  return String(arg0).replace(re2, ".").toLowerCase();
 };
+isForced.normalize = normalize;
+const data = {};
+isForced.data = data;
+isForced.NATIVE = "N";
+const N = "N";
+isForced.POLYFILL = "P";
+const P = "P";
+
+export default isForced;

@@ -1,9 +1,7 @@
 // === Module 13834: ? ===
 
 // Module 13834
+import _mod13833 from "module_13833" /* 13833 */;
 
-export default {
-  parse: function nthWithOfClause() {
-    return this.createSingleNodeList(this.Nth(true));
-  }
-};
+
+export default _mod13833;

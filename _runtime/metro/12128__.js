@@ -1,7 +1,7 @@
 // === Module 12128: ? ===
 
 // Module 12128
-import _mod12093 from "module_12093" /* 12093 */;
+import _mod12087 from "module_12087" /* 12087 */;
 
 const self = this;
 let self2 = this;
@@ -57,9 +57,9 @@ if (self2) {
     exports.default = function default_1() {
       if (typeof error === "function") {
         const obj = { localeError: null };
-        const obj2 = { string: { unit: "aksara", verb: "mempunyai" }, file: { unit: "bait", verb: "mempunyai" }, array: { unit: "elemen", verb: "mempunyai" }, set: { unit: "elemen", verb: "mempunyai" } };
-        closure_1 = { regex: "input", email: "alamat e-mel", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "tarikh masa ISO", date: "tarikh ISO", time: "masa ISO", duration: "tempoh ISO", ipv4: "alamat IPv4", ipv6: "alamat IPv6", cidrv4: "julat IPv4", cidrv6: "julat IPv6", base64: "string dikodkan base64", base64url: "string dikodkan base64url", json_string: "string JSON", e164: "nombor E.164", jwt: "JWT", template_literal: "input" };
-        closure_2 = { nan: "NaN", number: "nombor" };
+        const obj2 = { string: { unit: "caracteres", verb: "ter" }, file: { unit: "bytes", verb: "ter" }, array: { unit: "itens", verb: "ter" }, set: { unit: "itens", verb: "ter" } };
+        closure_1 = { regex: "padr\u00E3o", email: "endere\u00E7o de e-mail", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "data e hora ISO", date: "data ISO", time: "hora ISO", duration: "dura\u00E7\u00E3o ISO", ipv4: "endere\u00E7o IPv4", ipv6: "endere\u00E7o IPv6", cidrv4: "faixa de IPv4", cidrv6: "faixa de IPv6", base64: "texto codificado em base64", base64url: "URL codificada em base64", json_string: "texto JSON", e164: "n\u00FAmero E.164", jwt: "JWT", template_literal: "entrada" };
+        closure_2 = { nan: "NaN", number: "n\u00FAmero", null: "nulo" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -68,114 +68,122 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp47 = closure_2[parsedTypeResult];
-              if (tmp47 == null) {
-                tmp47 = parsedTypeResult;
+              let tmp50 = closure_2[parsedTypeResult];
+              if (tmp50 == null) {
+                tmp50 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
-                let combined = "Input tidak sah: dijangka instanceof " + code.expected + ", diterima " + tmp47;
+                let combined = "Tipo inv\u00E1lido: esperado instanceof " + code.expected + ", recebido " + tmp50;
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Input tidak sah: dijangka " + expected + ", diterima " + tmp47;
+                combined = "Tipo inv\u00E1lido: esperado " + expected + ", recebido " + tmp50;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Input tidak sah: dijangka " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 = "Entrada inv\u00E1lida: esperado " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined1 = "Pilihan tidak sah: dijangka salah satu daripada " + closure_2.joinValues(code.values, "|");
+                combined1 = "Op\u00E7\u00E3o inv\u00E1lida: esperada uma das " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str27 = "<";
+              let str28 = "<";
               if (code.inclusive) {
-                str27 = "<=";
+                str28 = "<=";
               }
-              let tmp25 = obj2[code.origin];
-              if (tmp25 == null) {
-                tmp25 = null;
+              let tmp29 = obj2[code.origin];
+              if (tmp29 == null) {
+                tmp29 = null;
               }
-              let str28 = code.origin;
-              if (tmp25) {
-                if (str28 == null) {
-                  str28 = "nilai";
+              let str29 = code.origin;
+              if (tmp29) {
+                if (str29 == null) {
+                  str29 = "valor";
                 }
-                const verb = tmp25.verb;
                 const str1 = code.maximum.toString();
-                let str34 = tmp25.unit;
-                if (str34 == null) {
-                  str34 = "elemen";
+                let str35 = tmp29.unit;
+                if (str35 == null) {
+                  str35 = "elementos";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Terlalu besar: dijangka " + str28 + " " + verb + " " + str27 + str1 + " " + str34;
+                let combined2 = "Muito grande: esperado que " + str29 + " tivesse " + str28 + str1 + " " + str35;
               } else {
-                let str29 = str28;
-                if (str28 == null) {
-                  str29 = "nilai";
+                let str30 = str29;
+                if (str29 == null) {
+                  str30 = "valor";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "Terlalu besar: dijangka " + str29 + " adalah " + str27 + code.maximum.toString();
+                combined2 = "Muito grande: esperado que " + str30 + " fosse " + str28 + code.maximum.toString();
               }
               return combined2;
             case "too_small":
-              let str17 = ">";
+              let str22 = ">";
               if (code.inclusive) {
-                str17 = ">=";
+                str22 = ">=";
               }
-              let tmp15 = obj2[code.origin];
-              if (tmp15 == null) {
-                tmp15 = null;
+              let tmp17 = obj2[code.origin];
+              if (tmp17 == null) {
+                tmp17 = null;
               }
-              const origin = code.origin;
-              if (tmp15) {
+              ({ origin, minimum } = code);
+              const str49 = minimum.toString();
+              if (tmp17) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Terlalu kecil: dijangka " + origin + " " + tmp15.verb + " " + str17 + code.minimum.toString() + " " + tmp15.unit;
+                let combined3 = "Muito pequeno: esperado que " + origin + " tivesse " + str22 + str49 + " " + tmp17.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Terlalu kecil: dijangka " + origin + " adalah " + str17 + code.minimum.toString();
+                combined3 = "Muito pequeno: esperado que " + origin + " fosse " + str22 + str49;
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = "String tidak sah: mesti bermula dengan \"" + code.prefix + "\"";
+                let combined4 = "Texto inv\u00E1lido: deve come\u00E7ar com \"" + code.prefix + "\"";
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = "String tidak sah: mesti berakhir dengan \"" + code.suffix + "\"";
+                combined4 = "Texto inv\u00E1lido: deve terminar com \"" + code.suffix + "\"";
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = "String tidak sah: mesti mengandungi \"" + code.includes + "\"";
+                combined4 = "Texto inv\u00E1lido: deve incluir \"" + code.includes + "\"";
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "String tidak sah: mesti sepadan dengan corak " + code.pattern;
+                combined4 = "Texto inv\u00E1lido: deve corresponder ao padr\u00E3o " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "" + format + " tidak sah";
+                combined4 = "" + format + " inv\u00E1lido";
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Nombor tidak sah: perlu gandaan " + code.divisor;
+              return "N\u00FAmero inv\u00E1lido: deve ser m\u00FAltiplo de " + code.divisor;
             case "unrecognized_keys":
+              let str4 = "";
+              let str5 = "";
+              if (code.keys.length > 1) {
+                str5 = "s";
+              }
+              if (code.keys.length > 1) {
+                str4 = "s";
+              }
               const _HermesInternal3 = HermesInternal;
-              return "Kunci tidak dikenali: " + closure_2.joinValues(code.keys, ", ");
+              return "Chave" + str5 + " desconhecida" + str4 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Kunci tidak sah dalam " + code.origin;
+              return "Chave inv\u00E1lida em " + code.origin;
             case "invalid_union":
-              return "Input tidak sah";
+              return "Entrada inv\u00E1lida";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "Nilai tidak sah dalam " + code.origin;
+              return "Valor inv\u00E1lido em " + code.origin;
             default:
-              return "Input tidak sah";
+              return "Campo inv\u00E1lido";
           }
         };
         return obj;
@@ -183,7 +191,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod12093);
+    let closure_2 = fn(_mod12087);
     function error() {
 
     }

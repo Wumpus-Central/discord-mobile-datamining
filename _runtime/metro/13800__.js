@@ -1,54 +1,40 @@
 // === Module 13800: ? ===
 
 // Module 13800
-import _mod13730 from "module_13730" /* 13730 */;
+import _mod13726 from "module_13726" /* 13726 */;
 
-const Ident = _mod13730.TYPE.Ident;
-const Function = _mod13730.TYPE.Function;
-const Colon = _mod13730.TYPE.Colon;
-const RightParenthesis = _mod13730.TYPE.RightParenthesis;
+const Comma = _mod13726.TYPE.Comma;
 const obj = {
-  name: "PseudoElementSelector",
+  name: "SelectorList",
   structure: null,
   parse() {
     const self = this;
-    this.eat(Colon);
-    this.eat(Colon);
-    if (this.scanner.tokenType === Function) {
-      const str = self.consumeFunctionName();
-      const formatted = str.toLowerCase();
-      const pseudo = self.pseudo;
-      if (!pseudo.hasOwnProperty(formatted)) {
-        const list = self.createList();
-        list.push(self.Raw(self.scanner.tokenIndex, null, false));
-        self.eat(RightParenthesis);
+    const list = this.createList();
+    if (!this.scanner.eof) {
+      list.push(self.Selector());
+      if (self.scanner.tokenType === Comma) {
+        self.scanner.next();
+        while (!self.scanner.eof) {
+          let arr3 = list.push(self.Selector());
+          if (self.scanner.tokenType !== Comma) {
+            break;
+          }
+        }
+        const iter = self.scanner;
       }
-      const scanner = self.scanner;
-      scanner.skipSC();
-      let skipSCResult1 = self.pseudo[formatted];
-      const call = skipSCResult1.call;
-      const scanner2 = self.scanner;
-      skipSCResult1 = scanner2.skipSC();
-      const tmp11 = typeof call === "unknown" ? skipSCResult1() : call(self);
-    } else {
-      const element = { type: "PseudoElementSelector", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), name: self.consume(Ident), children: null };
-      return element;
     }
+    const element = { type: "SelectorList", loc: self.getLocationFromList(list), children: list };
+    return element;
   },
-  generate(name) {
-    const self = this;
-    this.chunk("::");
-    this.chunk(name.name);
-    if (null !== name.children) {
-      self.chunk("(");
-      self.children(name);
-      self.chunk(")");
-    }
+  generate(arg0) {
+    this.children(arg0, function() {
+      this.chunk(",");
+    });
   },
-  walkContext: "function"
+  walkContext: "selector"
 };
-const obj2 = { name: String, children: null };
-const items = [["Raw"], null];
+const obj2 = { children: null };
+const items = [["Selector", "Raw"]];
 obj2.children = items;
 obj.structure = obj2;
 

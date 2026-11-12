@@ -3,7 +3,10 @@
 // Module 13839
 
 export default {
-  parse: function compoundSelector() {
-    return this.createSingleNodeList(this.Selector());
+  trueFunc() {
+    return true;
+  },
+  falseFunc() {
+    return false;
   }
 };

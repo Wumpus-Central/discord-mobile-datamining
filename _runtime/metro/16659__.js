@@ -1,14 +1,17 @@
 // === Module 16659: ? ===
 
 // Module 16659
-import _mod16640 from "module_16640" /* 16640 */;
-import _mod16660 from "module_16660" /* 16660 */;
+import _mod16628 from "module_16628" /* 16628 */;
+import element from "element" /* 16660 */;
+import getOwnPropertyDescriptor from "module_16627" /* 16627 */;
 
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod16628(() => 7 !== Object.defineProperty(element("div"), "a", {
+    get() {
+      return 7;
+    }
+  }).a);
+}
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod16640(arg0[arg1])) {
-    tmp4 = _mod16660(tmp);
-  }
-  return tmp4;
-};
+export default tmp2;

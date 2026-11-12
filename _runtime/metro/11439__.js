@@ -2,7 +2,7 @@
 
 // Module 11439
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod11386 from "module_11386" /* 11386 */;
+import Filter from "Filter" /* 11381 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
@@ -29,27 +29,12 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class JPMergeDateRangeRefiner {
+class JPMergeWeekdayComponentRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, JPMergeDateRangeRefiner);
+    tmp = closure_0(this, JPMergeWeekdayComponentRefiner);
     tmp2 = c2;
-    obj = c2(JPMergeDateRangeRefiner);
+    obj = c2(JPMergeWeekdayComponentRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -64,14 +49,45 @@ class JPMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = JPMergeDateRangeRefiner;
-_inherits(JPMergeDateRangeRefiner, fn(_mod11386).default);
+_classCallCheck = JPMergeWeekdayComponentRefiner;
+_inherits(JPMergeWeekdayComponentRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(から|－|ー|-|～|~)\s*$/i;
+  key: "mergeResults",
+  value: function mergeResults(arg0, clone, text) {
+    const cloneResult = clone.clone();
+    cloneResult.text = clone.text + arg0 + text.text;
+    const start = cloneResult.start;
+    const start2 = text.start;
+    start.assign("weekday", start2.get("weekday"));
+    if (cloneResult.end) {
+      const end = cloneResult.end;
+      const start3 = text.start;
+      end.assign("weekday", start3.get("weekday"));
+    }
+    return cloneResult;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "shouldMergeResults",
+    value: function shouldMergeResults(str, start, start2) {
+      start = start.start;
+      let isCertainResult = start.isCertain("day");
+      if (isCertainResult) {
+        start2 = start2.start;
+        isCertainResult = start2.isOnlyWeekdayComponent();
+      }
+      if (isCertainResult) {
+        const start3 = start2.start;
+        isCertainResult = !start3.isCertain("hour");
+      }
+      if (isCertainResult) {
+        isCertainResult = null !== str.match(/^[,、の]?\s*$/);
+      }
+      return isCertainResult;
+    }
+  }
+];
 
-export default _createClass(JPMergeDateRangeRefiner, items);
+export default _createClass(JPMergeWeekdayComponentRefiner, items);

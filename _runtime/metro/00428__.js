@@ -326,7 +326,7 @@ let items = [
       const tmp15Result2 = TouchableHighlightImpl(254);
       items = [cloneElement(onlyResult, { style: TouchableHighlightImpl(254).compose(onlyResult.props.style, child) }), null];
       obj2.children = items;
-      return closure_1_10(tmp17, obj2);
+      return refs(tmp17, obj2);
     }
   },
   {

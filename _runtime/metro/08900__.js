@@ -1,15 +1,11 @@
 // === Module 8900: ? ===
 
 // Module 8900
-import _mod8897 from "module_8897" /* 8897 */;
-
-require = arg1;
-const dependencyMap = arg6;
-const obj = { 45056: null, 45057: "NumberOfImages", 45058: "MPEntry", 45059: "ImageUIDList", 45060: "TotalFrames" };
-obj[45056] = {
-  name: "MPFVersion",
-  description(value) {
-    return _mod8897.getStringValue(value);
+const obj = { 4: null };
+obj[4] = {
+  name: "ShotInfo",
+  description(arg0) {
+    return arg0;
   }
 };
 

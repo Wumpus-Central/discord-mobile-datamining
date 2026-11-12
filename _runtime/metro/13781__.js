@@ -1,25 +1,53 @@
 // === Module 13781: ? ===
 
 // Module 13781
-import _mod13730 from "module_13730" /* 13730 */;
+import _mod13726 from "module_13726" /* 13726 */;
+import _mod13770 from "module_13770" /* 13770 */;
 
-const Ident = _mod13730.TYPE.Ident;
+function consumeRaw(arg0) {
+  return this.Raw(arg0, _mod13770.mode.semicolonIncluded, true);
+}
+const WhiteSpace = _mod13726.TYPE.WhiteSpace;
+const Comment = _mod13726.TYPE.Comment;
+const Semicolon = _mod13726.TYPE.Semicolon;
 const obj = {
-  name: "ClassSelector",
-  structure: { name: String },
+  name: "DeclarationList",
+  structure: null,
   parse() {
     const self = this;
-    const scanner = this.scanner;
-    if (!scanner.isDelim(46)) {
-      self.error("Full stop is expected");
+    const list = this.createList();
+    if (!this.scanner.eof) {
+      while (true) {
+        let tokenType = self.scanner.tokenType;
+        if (WhiteSpace !== tokenType) {
+          if (Comment !== tokenType) {
+            if (Semicolon !== tokenType) {
+              let arr = list.push(self.parseWithFallback(self.Declaration, consumeRaw));
+            }
+            if (self.scanner.eof) {
+              break;
+            }
+          }
+        }
+        let iter = self.scanner;
+        let nextResult = iter.next();
+      }
     }
-    self.scanner.next();
-    return { type: "ClassSelector", loc: self.getLocation(self.scanner.tokenStart - 1, self.scanner.tokenEnd), name: self.consume(Ident) };
+    const element = { type: "DeclarationList", loc: self.getLocationFromList(list), children: list };
+    return element;
   },
-  generate(name) {
-    this.chunk(".");
-    this.chunk(name.name);
+  generate(arg0) {
+    this.children(arg0, function(type) {
+      if ("Declaration" === type.type) {
+        const self = this;
+        this.chunk(";");
+      }
+    });
   }
 };
+const obj2 = { children: null };
+const items = [["Declaration"]];
+obj2.children = items;
+obj.structure = obj2;
 
 export default obj;

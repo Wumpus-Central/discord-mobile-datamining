@@ -1,7 +1,8 @@
 // === Module 10863: ? ===
 
 // Module 10863
-import registerAsset from "module_1119" /* 1119 */;
+import baseRest from "baseRest" /* 7604 */;
+import baseDelay from "baseDelay" /* 10864 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 32, height: 32, scales: [2, 3], hash: "6745f221b3e662876db35721a519454b", name: "copy", type: "png" });
+export default baseRest((arg0, arg1) => baseDelay(arg0, 1, arg1));

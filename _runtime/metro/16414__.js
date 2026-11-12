@@ -1,10 +1,10 @@
 // === Module 16414: ? ===
 
 // Module 16414
-import _mod16400 from "module_16400" /* 16400 */;
+import _mod16412 from "module_16412" /* 16412 */;
 
 
-export default (arg0, arg1, arg2) => {
-  const obj = new _mod16400(arg0, arg2);
-  return obj.compare(new _mod16400(arg1, arg2));
+export default (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.sort((arg0, arg1) => _mod16412(arg1, arg0, closure_0));
 };

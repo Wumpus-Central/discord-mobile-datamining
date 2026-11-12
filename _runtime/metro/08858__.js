@@ -2,7 +2,6 @@
 
 // Module 8858
 import _mod8859 from "module_8859" /* 8859 */;
-import _mod8861 from "module_8861" /* 8861 */;
 
 const self = this;
 let self2 = this;
@@ -41,7 +40,6 @@ if (self2) {
   }
   const _Object2 = Object;
   fn(_mod8859, exports);
-  fn(_mod8861, exports);
 } else {
   let _Object = Object;
 }

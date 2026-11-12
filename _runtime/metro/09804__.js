@@ -1,44 +1,33 @@
 // === Module 9804: ? ===
 
 // Module 9804
-import _mod9731 from "module_9731" /* 9731 */;
-import _mod9745 from "module_9745" /* 9745 */;
-import _mod9758 from "module_9758" /* 9758 */;
+import setupIntegration from "module_9786" /* 9786 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const weakMap = new WeakMap();
 
-export function addBreadcrumb(arg0, arg1) {
-  closure_0 = arg1;
-  const client = _mod9758.getClient();
-  const isolationScope = _mod9758.getIsolationScope();
-  if (client) {
-    const options = client.getOptions();
-    let beforeBreadcrumb = options.beforeBreadcrumb;
-    let tmp5 = null;
-    if (undefined !== beforeBreadcrumb) {
-      tmp5 = beforeBreadcrumb;
-    }
-    beforeBreadcrumb = tmp5;
-    const maxBreadcrumbs = options.maxBreadcrumbs;
-    let num = 100;
-    if (undefined !== maxBreadcrumbs) {
-      num = maxBreadcrumbs;
-    }
-    if (num > 0) {
-      let obj2 = { timestamp: _mod9745.dateTimestampInSeconds() };
-      const merged = Object.assign(arg0);
-      if (tmp5) {
-        obj2 = _mod9731.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
-        const tmpResult2 = _mod9731;
-      }
-      if (null !== obj2) {
-        if (client.emit) {
-          client.emit("beforeAddBreadcrumb", obj2, arg1);
+export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
+  name: "FunctionToString",
+  setupOnce() {
+    toString = Function.prototype.toString;
+    try {
+      const _Function = Function;
+      Function.prototype.toString = function() {
+        items = [...arguments];
+        const originalFunction = closure_1_0(9736).getOriginalFunction(this);
+        const obj = closure_1_0(9736);
+        let self = this;
+        if (set.has(obj2.getClient())) {
+          self = this;
+          if (undefined !== originalFunction) {
+            self = originalFunction;
+          }
         }
-        isolationScope.addBreadcrumb(obj2, num);
-      }
-      const tmpResult = _mod9745;
+        return toString.apply(self, items);
+      };
+    } catch (err) {
     }
+  },
+  setup(arg0) {
+    const result = weakMap.set(arg0, true);
   }
-}
+}));

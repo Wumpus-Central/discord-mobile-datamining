@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/HoloWavesIcon", width: 60, height: 60, scales: [2, 3], hash: "88fd60fc6961a4cc52d32c54b3209f38", name: "HoloWavesIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/HexagonIcon", width: 102, height: 102, scales: [2, 3], hash: "6fc713ff4969740a35633ad9d71eaf93", name: "HexagonIcon", type: "png" });

@@ -1,41 +1,31 @@
 // === Module 13793: ? ===
 
 // Module 13793
-import _mod13730 from "module_13730" /* 13730 */;
+import _mod13726 from "module_13726" /* 13726 */;
 
-const Comma = _mod13730.TYPE.Comma;
+const LeftParenthesis = _mod13726.TYPE.LeftParenthesis;
+const RightParenthesis = _mod13726.TYPE.RightParenthesis;
 const obj = {
-  name: "MediaQueryList",
+  name: "Parentheses",
   structure: null,
-  parse(arg0) {
+  parse(call, arg1) {
     const self = this;
-    const list = this.createList();
-    const scanner = this.scanner;
-    scanner.skipSC();
-    if (!this.scanner.eof) {
-      list.push(self.MediaQuery(arg0));
-      if (self.scanner.tokenType === Comma) {
-        self.scanner.next();
-        while (!self.scanner.eof) {
-          let arr3 = list.push(self.MediaQuery(arg0));
-          if (self.scanner.tokenType !== Comma) {
-            break;
-          }
-        }
-        const iter = self.scanner;
-      }
+    this.eat(LeftParenthesis);
+    call = call.call;
+    if (!self.scanner.eof) {
+      self.eat(RightParenthesis);
     }
-    const element = { type: "MediaQueryList", loc: self.getLocationFromList(list), children: list };
+    const element = { type: "Parentheses", loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart), children: typeof call === "unknown" ? call(arg1) : call(self, arg1) };
     return element;
   },
   generate(arg0) {
-    this.children(arg0, function() {
-      this.chunk(",");
-    });
+    this.chunk("(");
+    this.children(arg0);
+    this.chunk(")");
   }
 };
 const obj2 = { children: null };
-const items = [["MediaQuery"]];
+const items = [[]];
 obj2.children = items;
 obj.structure = obj2;
 

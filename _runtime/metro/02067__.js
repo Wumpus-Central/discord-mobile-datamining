@@ -1722,7 +1722,7 @@ let fn = function t() {
                       obj = {};
                     }
                     if (Array.isArray(arr)) {
-                      let mapped = arr.map(/* F138654 */ function() { ... });
+                      let mapped = arr.map(/* F138672 */ function() { ... });
                       let joined = mapped.join("");
                     } else {
                       joined = closure_2_0(arr, closure_2_1, obj);

@@ -1,7 +1,7 @@
 // === Module 15793: ? ===
 
 // Module 15793
-import _mod15794 from "module_15794" /* 15794 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default _mod15794();
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 60, height: 60, scales: [2, 3], hash: "811fb35960f597c4ee3417f16bd2f9e6", name: "messages", type: "png" });

@@ -2,32 +2,19 @@
 
 // Module 9840
 
-export function flatten(arr) {
-  items = [];
-  const item = arr.forEach((arr) => {
-    if (Array.isArray(arr)) {
-      let item = arr.forEach((arr) => {
-        if (Array.isArray(arr)) {
-          let item = arr.forEach((arr) => {
-            if (Array.isArray(arr)) {
-              let item = arr.forEach((arr) => {
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach(/* F129175 */ function() { ... });
-                } else {
-                  arr = closure_1_0.push(arr);
-                }
-              });
-            } else {
-              arr = closure_1_0.push(arr);
-            }
-          });
-        } else {
-          arr = closure_1_0.push(arr);
-        }
-      });
+export function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
+  let tmp;
+  if (undefined !== arg0) {
+    if (arg0 < 400) {
+      let str2;
+      if (arg0 >= 500) {
+        str2 = "error";
+      }
+      let str = str2;
     } else {
-      arr = closure_1_0.push(arr);
+      str = "warning";
     }
-  });
-  return items;
+    tmp = str;
+  }
+  return tmp;
 }

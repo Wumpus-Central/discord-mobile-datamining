@@ -1,5 +1,7 @@
 // === Module 15788: ? ===
 
 // Module 15788
+import _mod15789 from "module_15789" /* 15789 */;
 
-export default { L: 1, M: 0, Q: 3, H: 2 };
+
+export default _mod15789();

@@ -37,7 +37,7 @@ export function createLangChainCallbackHandler() {
     lc_namespace: ["langchain_core", "callbacks", "sentry"],
     lc_secrets: "r",
     lc_attributes: "paddingHorizontal",
-    lc_aliases: "ao",
+    lc_aliases: "hd",
     lc_serializable_keys: "names",
     lc_id: ["langchain_core", "callbacks", "sentry"],
     lc_kwargs: {},

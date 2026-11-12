@@ -1,34 +1,65 @@
 // === Module 11529: ? ===
 
 // Module 11529
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod11389 from "module_11389" /* 11389 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod11358 from "module_11358" /* 11358 */;
+import _mod11391 from "module_11391" /* 11391 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 11398 */;
+import _mod11530 from "module_11530" /* 11530 */;
+import _mod11532 from "module_11532" /* 11532 */;
+import _mod11533 from "module_11533" /* 11533 */;
+import _mod11534 from "module_11534" /* 11534 */;
+import _mod11535 from "module_11535" /* 11535 */;
+import _mod11536 from "module_11536" /* 11536 */;
+import _mod11537 from "module_11537" /* 11537 */;
+import _mod11538 from "module_11538" /* 11538 */;
+import _mod11539 from "module_11539" /* 11539 */;
+import _mod11540 from "module_11540" /* 11540 */;
+import _mod11541 from "module_11541" /* 11541 */;
+import _mod11542 from "module_11542" /* 11542 */;
+import _mod11543 from "module_11543" /* 11543 */;
+import _mod11544 from "module_11544" /* 11544 */;
+import _mod11545 from "module_11545" /* 11545 */;
+import _mod11546 from "module_11546" /* 11546 */;
+import _mod11547 from "module_11547" /* 11547 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
   }
+  let flag2 = arg1;
+  if (arg1 === undefined) {
+    flag2 = false;
+  }
+  const obj = { parsers: null, refiners: null };
+  items = [new regExp.default(flag2), , , , , , , , , ];
+  const _default = new regExp.default(flag2);
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  const _default3 = new _isNativeReflectConstruct.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  const _default4 = new _isNativeReflectConstruct.default();
+  items[5] = new _isNativeReflectConstruct.default();
+  const _default5 = new _isNativeReflectConstruct.default();
+  items[6] = new _isNativeReflectConstruct.default();
+  const _default6 = new _isNativeReflectConstruct.default();
+  items[7] = new _isNativeReflectConstruct.default(flag);
+  const _default7 = new _isNativeReflectConstruct.default(flag);
+  items[8] = new _isNativeReflectConstruct.default(flag);
+  const _default8 = new _isNativeReflectConstruct.default(flag);
+  items[9] = new _isNativeReflectConstruct.default(flag);
+  obj.parsers = items;
+  const _default9 = new _isNativeReflectConstruct.default(flag);
+  const items1 = [new _isNativeReflectConstruct.default(), , ];
+  const _default10 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  const _default11 = new _isNativeReflectConstruct.default();
+  items1[2] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
 let fn = this;
 if (this) {
   fn = this.__importDefault;
@@ -44,35 +75,75 @@ if (!fn) {
     return tmp;
   };
 }
-class UKMergeDateTimeRefiner {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, UKMergeDateTimeRefiner);
-    tmp2 = c2;
-    obj = c2(UKMergeDateTimeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+function createCasualConfiguration() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = false;
   }
+  const tmp = createConfiguration(false, flag);
+  const parsers = tmp.parsers;
+  parsers.unshift(new _isNativeReflectConstruct.default());
+  const parsers1 = tmp.parsers;
+  const _default = new _isNativeReflectConstruct.default();
+  parsers1.unshift(new _isNativeReflectConstruct.default());
+  const parsers2 = tmp.parsers;
+  const _default1 = new _isNativeReflectConstruct.default();
+  parsers2.unshift(new _isNativeReflectConstruct.default());
+  const parsers3 = tmp.parsers;
+  const _default2 = new _isNativeReflectConstruct.default();
+  parsers3.unshift(new _isNativeReflectConstruct.default());
+  const parsers4 = tmp.parsers;
+  const _default3 = new _isNativeReflectConstruct.default();
+  parsers4.unshift(new _isNativeReflectConstruct.default());
+  return tmp;
 }
-_classCallCheck = UKMergeDateTimeRefiner;
-_inherits(UKMergeDateTimeRefiner, fn(_mod11389).default);
-const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|\u0432|\u0443|\u043E|,|-)?\\s*$");
-    return regExp;
-  }
-};
-const items = [entry];
+fn(_mod11530);
+fn(_mod11532);
+fn(_mod11533);
+fn(_mod11534);
+fn(_mod11535);
+fn(_mod11536);
+fn(_mod11537);
+fn(_mod11538);
+fn(_mod11539);
+fn(_mod11540);
+fn(_mod11541);
+fn(_mod11542);
+fn(_mod11543);
+fn(_mod11544);
+fn(_mod11545);
+const regExp = fn(_mod11391);
+fn(_mod11546);
+const _isNativeReflectConstruct = fn(_mod11547);
+const configuration = createConfiguration(false, false);
+let parsers = configuration.parsers;
+parsers.unshift(new _isNativeReflectConstruct.default());
+let parsers1 = configuration.parsers;
+let _default = new _isNativeReflectConstruct.default();
+parsers1.unshift(new _isNativeReflectConstruct.default());
+let parsers2 = configuration.parsers;
+let _default1 = new _isNativeReflectConstruct.default();
+parsers2.unshift(new _isNativeReflectConstruct.default());
+let parsers3 = configuration.parsers;
+let _default2 = new _isNativeReflectConstruct.default();
+parsers3.unshift(new _isNativeReflectConstruct.default());
+let parsers4 = configuration.parsers;
+let _default3 = new _isNativeReflectConstruct.default();
+parsers4.unshift(new _isNativeReflectConstruct.default());
+const chrono = new _mod11358.Chrono(configuration);
+const chrono1 = new _mod11358.Chrono(createConfiguration(true, false));
+const chrono2 = new _mod11358.Chrono(createConfiguration(false, true));
 
-export default _createClass(UKMergeDateTimeRefiner, items);
+export function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+}
+export function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+}
+export { createCasualConfiguration };
+export { createConfiguration };
+export const casual = chrono;
+export const strict = chrono1;
+export const GB = chrono2;
