@@ -1,9 +1,9 @@
-// === Module 20012: DateInput ===
+// === Module 20170: DateInput ===
 
-// Module 20012 (DateInput)
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import _modDef2166 from "module_2166" /* 2166 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
+// Module 20170 (DateInput)
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import _modDef2169 from "module_2169" /* 2169 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -34,19 +34,19 @@ export default function DateInput(date) {
       toDateResult = date.toDate();
     }
     if (toDateResult == null) {
-      const obj4 = _modDef2166();
+      const obj4 = _modDef2169();
       const result = obj4.set("year", obj4.year() - 10);
       toDateResult = obj4.toDate();
     }
     obj2.startDate = toDateResult;
-    const obj5 = _modDef2166();
+    const obj5 = _modDef2169();
     const result1 = obj5.set("year", obj5.year() - 3);
     obj2.maximumDate = obj5.toDate();
-    const obj6 = _modDef2166();
+    const obj6 = _modDef2169();
     const result2 = obj6.set("year", obj6.year() - 100);
     obj2.minimumDate = obj6.toDate();
-    obj.openLazy(asyncRequireImpl(7954, dependencyMap.paths), "DatePicker", obj2);
-    const tmp4 = asyncRequireImpl(7954, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(8019, dependencyMap.paths), "DatePicker", obj2);
+    const tmp4 = asyncRequireImpl(8019, dependencyMap.paths);
   }
   ({ style, error, ref } = date);
   ref1 = ref1.useRef(null);
@@ -59,14 +59,14 @@ export default function DateInput(date) {
   if (date != null) {
     formatResult = date.format("L");
   }
-  let obj = require("module_2166")();
+  let obj = require("module_2169")();
   let result = obj.set("year", obj.year() - 10);
   let tmp4 = label;
-  const tmp5 = require("module_2166");
-  const formatResult1 = require("module_2166")(obj.toDate()).format("L");
+  const tmp5 = require("module_2169");
+  const formatResult1 = require("module_2169")(obj.toDate()).format("L");
   let obj2 = { style, ref: ref1, value: null, placeholder: null, returnKeyType: "next", textContentType: "none", autoCapitalize: "none", clearButtonVisibility: null, editable: false, forceAccessibleContainer: true, accessibilityLabel: null, onPress: null, label: null, error: null };
   let str2 = formatResult;
-  const tmp5Result = require("module_2166")(obj.toDate());
+  const tmp5Result = require("module_2169")(obj.toDate());
   const tmp8 = openDatePicker;
   if (formatResult == null) {
     str2 = "";

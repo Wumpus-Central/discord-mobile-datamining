@@ -1,16 +1,16 @@
-// === Module 13393: useOptionAnimations ===
+// === Module 13496: useOptionAnimations ===
 
-// Module 13393 (useOptionAnimations)
+// Module 13496 (useOptionAnimations)
 import Discord from "Discord" /* 0 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5485 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import timing_timing from "timing/timing" /* 5548 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let c4 = 300;
-let items = [{ code: "(function LayoutAnimation_useOptionAnimationsTsx1(values){let[withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION]=this.__closure;const animations={originY:withTiming(values.targetOriginY,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originY:values.currentOriginY};return{initialValues:initialValues,animations:animations};})" }, fn(5485).withTiming, 300];
+let items = [{ code: "(function LayoutAnimation_useOptionAnimationsTsx1(values){let[withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION]=this.__closure;const animations={originY:withTiming(values.targetOriginY,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originY:values.currentOriginY};return{initialValues:initialValues,animations:animations};})" }, fn(5548).withTiming, 300];
 let closure_129_0;
 let closure_129_1;
 [tmp2, tmp3, tmp4] = items;
@@ -27,7 +27,7 @@ let items1 = [tmp3, tmp4];
 LayoutAnimation.__closure = items1;
 LayoutAnimation.__workletHash = 5041452333732;
 LayoutAnimation.__initData = tmp2;
-const items2 = [{ code: "(function ExitingAnimation_useOptionAnimationsTsx2(values){let[withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION]=this.__closure;const offScreenX=Math.min(values.currentOriginX-values.windowWidth,-values.windowWidth);const animations={opacity:withTiming(0,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}),originX:withTiming(offScreenX,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originX:values.currentOriginX,opacity:1};return{initialValues:initialValues,animations:animations};})" }, fn(5485).withTiming, 300];
+const items2 = [{ code: "(function ExitingAnimation_useOptionAnimationsTsx2(values){let[withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION]=this.__closure;const offScreenX=Math.min(values.currentOriginX-values.windowWidth,-values.windowWidth);const animations={opacity:withTiming(0,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}),originX:withTiming(offScreenX,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originX:values.currentOriginX,opacity:1};return{initialValues:initialValues,animations:animations};})" }, fn(5548).withTiming, 300];
 let closure_130_0;
 let closure_130_1;
 [tmp5, tmp6, tmp7] = items2;
@@ -55,7 +55,7 @@ export const OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION = 300;
 export { LayoutAnimation };
 export { ExitingAnimation };
 export function useOptionEnteringAnimation() {
-  sharedValue = sharedValue(1652).useSharedValue(false);
+  sharedValue = sharedValue(1655).useSharedValue(false);
   dependencyMap = noop.useRef([]);
   items = [sharedValue];
   _slicedToArray = noop.useCallback(() => {
@@ -65,10 +65,10 @@ export function useOptionEnteringAnimation() {
     const current1 = closure_1.current;
     current1.splice(0, closure_1.current.length);
   }, items);
-  let obj = sharedValue(1652);
+  let obj = sharedValue(1655);
   return {
     EnteringAnimation: _slicedToArray(noop.useState(() => {
-      items = [closure_5, timing_timing.withTiming, _mod1652.Easing, c4, _mod1652.withDelay, _mod1705.scheduleOnRN, closure_2];
+      items = [closure_5, timing_timing.withTiming, _mod1655.Easing, c4, _mod1655.withDelay, _mod1708.scheduleOnRN, closure_2];
       c0 = undefined;
       c1 = undefined;
       c2 = undefined;

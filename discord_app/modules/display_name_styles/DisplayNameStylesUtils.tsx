@@ -1,19 +1,29 @@
-// === Module 1393: DisplayNameStylesUtils ===
+// === Module 1396: DisplayNameStylesUtils ===
 
-// Module 1393 (DisplayNameStylesUtils)
+// Module 1396 (DisplayNameStylesUtils)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import _modDef671 from "module_671" /* 671 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1396 */;
-import ColorPaletteUtils from "ColorPaletteUtils" /* 1397 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1399 */;
+import ColorPaletteUtils from "ColorPaletteUtils" /* 1400 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1394);
+function isValidDisplayNameColor(arg0) {
+  let isIntegerResult = Number.isInteger(arg0);
+  if (isIntegerResult) {
+    isIntegerResult = arg0 >= 0;
+  }
+  if (isIntegerResult) {
+    isIntegerResult = arg0 <= 16777215;
+  }
+  return isIntegerResult;
+}
+const DisplayNameStylesConstants = fn(1397);
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty, getColorPresetsForEffect: closure_6, HEXAGON_CAMPAIGN_FONTS: metroImportDefault } = DisplayNameStylesConstants);
-let items = [fn(1396).DisplayNameEffect.NEON, fn(1396).DisplayNameEffect.TOON, fn(1396).DisplayNameEffect.POP, fn(1396).DisplayNameEffect.GUMMY];
+let items = [fn(1399).DisplayNameEffect.NEON, fn(1399).DisplayNameEffect.TOON, fn(1399).DisplayNameEffect.POP, fn(1399).DisplayNameEffect.GUMMY];
 const set = new Set(items);
 const items1 = [{ hueShift: -18, saturation: 0.54, lightness: 0.72 }, { hueShift: -5, saturation: 0.66, lightness: 0.6 }, { hueShift: 9, saturation: 0.56, lightness: 0.68 }, { hueShift: 22, saturation: 0.6, lightness: 0.63 }];
 const size = fn(2);
@@ -141,11 +151,13 @@ export function rebuildGummySourceColor(color) {
 export function hueToGummyColor(sharedValue) {
   return _modDef671.hsl(sharedValue, hasOwnProperty, React4).num();
 }
+export { isValidDisplayNameColor };
 export function parseServerDisplayNameStyles(display_name_styles) {
   let tmp = null;
   if (null != display_name_styles) {
     const obj = { fontId: null, effectId: null, colors: null };
-    ({ font_id: obj.fontId, effect_id: obj.effectId, colors: obj.colors } = display_name_styles);
+    ({ font_id: obj.fontId, effect_id: obj.effectId, colors } = display_name_styles);
+    obj.colors = colors.filter(isValidDisplayNameColor);
     tmp = obj;
   }
   return tmp;

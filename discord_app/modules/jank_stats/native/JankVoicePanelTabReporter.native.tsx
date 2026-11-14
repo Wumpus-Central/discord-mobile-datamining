@@ -1,14 +1,14 @@
-// === Module 19948: JankVoicePanelTabReporter ===
+// === Module 20105: JankVoicePanelTabReporter ===
 
-// Module 19948 (JankVoicePanelTabReporter)
-import getJankSurfaceName from "getJankSurfaceName" /* 18600 */;
+// Module 20105 (JankVoicePanelTabReporter)
+import getJankSurfaceName from "getJankSurfaceName" /* 18729 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11919).VoicePanelModes;
-const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
+const VoicePanelModes = fn(11985).VoicePanelModes;
+const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
 const map = new Map();
 let items = [{ code: "(function isDrawerShown_JankVoicePanelTabReporterNativeTsx1(wrapperSpecs,panelMode){let[VoicePanelModes]=this.__closure;return wrapperSpecs.drawerMode&&!wrapperSpecs.hidden&&panelMode===VoicePanelModes.PANEL;})" }, VoicePanelModes];
 let closure_129_0;
@@ -96,7 +96,7 @@ export default noop.memo(function JankVoicePanelTabReporter(channelId) {
   JankVoicePanelTabReporterNativeTsx2.__closure = items3;
   JankVoicePanelTabReporterNativeTsx2.__workletHash = 2083564958222;
   JankVoicePanelTabReporterNativeTsx2.__initData = tmp5;
-  const items4 = [closure_8, require("module_1705").scheduleOnRN, callback];
+  const items4 = [closure_8, require("module_1708").scheduleOnRN, callback];
   _require = undefined;
   dependencyMap = undefined;
   [tmp10, tmp11, tmp12] = items4;
@@ -116,7 +116,7 @@ export default noop.memo(function JankVoicePanelTabReporter(channelId) {
   JankVoicePanelTabReporterNativeTsx3.__closure = items5;
   JankVoicePanelTabReporterNativeTsx3.__workletHash = 4126589190035;
   JankVoicePanelTabReporterNativeTsx3.__initData = tmp10;
-  const animatedReaction = require("module_1652").useAnimatedReaction(JankVoicePanelTabReporterNativeTsx2, JankVoicePanelTabReporterNativeTsx3);
+  const animatedReaction = require("module_1655").useAnimatedReaction(JankVoicePanelTabReporterNativeTsx2, JankVoicePanelTabReporterNativeTsx3);
   const items6 = [channelId];
   const layoutEffect1 = noop.useLayoutEffect(() => () => {
     set.delete(_undefined);

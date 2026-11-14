@@ -1,8 +1,8 @@
-// === Module 11043: getLogMetadata ===
+// === Module 11110: getLogMetadata ===
 
-// Module 11043 (getLogMetadata)
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1376 */;
-import DeviceUtils from "DeviceUtils" /* 5200 */;
+// Module 11110 (getLogMetadata)
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1379 */;
+import DeviceUtils from "DeviceUtils" /* 5263 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");

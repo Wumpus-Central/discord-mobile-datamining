@@ -1,23 +1,23 @@
-// === Module 10246: GameProfileView ===
+// === Module 10315: GameProfileView ===
 
-// Module 10246 (GameProfileView)
+// Module 10315 (GameProfileView)
 import nativeDefault from "native" /* 575 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7852 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import useGameProfileInvite from "useGameProfileInvite" /* 10248 */;
-import GameProfileHeaderDefault from "GameProfileHeader" /* 10249 */;
-import GameProfileMediaDefault from "GameProfileMedia" /* 10257 */;
-import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 10264 */;
-import GameProfileReviewsDefault from "GameProfileReviews" /* 10265 */;
-import GameProfileSummaryDefault from "GameProfileSummary" /* 10279 */;
-import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 10313 */;
-import GameProfileCommunityDefault from "GameProfileCommunity" /* 10319 */;
-import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 10333 */;
-import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 10346 */;
-import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 10391 */;
-import GameProfileDetailsDefault from "GameProfileDetails" /* 10397 */;
-import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 10419 */;
-import GameProfileReportButtonDefault from "GameProfileReportButton" /* 10425 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7918 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
+import useGameProfileInvite from "useGameProfileInvite" /* 10317 */;
+import GameProfileHeaderDefault from "GameProfileHeader" /* 10318 */;
+import GameProfileMediaDefault from "GameProfileMedia" /* 10326 */;
+import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 10333 */;
+import GameProfileReviewsDefault from "GameProfileReviews" /* 10334 */;
+import GameProfileSummaryDefault from "GameProfileSummary" /* 10348 */;
+import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 10382 */;
+import GameProfileCommunityDefault from "GameProfileCommunity" /* 10388 */;
+import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 10402 */;
+import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 10415 */;
+import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 10460 */;
+import GameProfileDetailsDefault from "GameProfileDetails" /* 10466 */;
+import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 10488 */;
+import GameProfileReportButtonDefault from "GameProfileReportButton" /* 10494 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
@@ -26,11 +26,11 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 }, body: null, buttonsContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: nativeDefault.space.PX_16 };
-obj2.body = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(10247).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
-let obj4 = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(10247).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+obj2.body = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(10316).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
+let obj4 = { flexDirection: "column", paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32, maxWidth: fn(10316).MOBILE_GAME_PROFILE_MAX_WIDTH, alignSelf: "center", width: "100%" };
 obj2.buttonsContainer = { flexDirection: "column", gap: nativeDefault.space.PX_8 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

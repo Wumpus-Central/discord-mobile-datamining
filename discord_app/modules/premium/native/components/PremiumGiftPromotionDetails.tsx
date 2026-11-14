@@ -1,20 +1,20 @@
-// === Module 11619: PremiumGiftPromotionDetails ===
+// === Module 11686: PremiumGiftPromotionDetails ===
 
-// Module 11619 (PremiumGiftPromotionDetails)
+// Module 11686 (PremiumGiftPromotionDetails)
+import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import SKUPreview from "SKUPreview" /* 9393 */;
-import _slicedToArray from "module_32" /* 32 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import FastImageDefault from "FastImage" /* 6020 */;
+import SKUPreview from "SKUPreview" /* 9462 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 require = fn;
 function PremiumGiftPromotionDetailsBase(arg0) {
   ({ titleVariant, titleColor, subtitleVariant, subtitleColor } = arg0);
   ({ style, graphic, topContent, title, subtitle } = arg0);
-  const tmp = closure_10();
+  const tmp = closure_9();
   const obj = { style: null, children: null };
   items = [tmp.container, style];
   obj.style = items;
@@ -30,7 +30,7 @@ function PremiumGiftPromotionDetailsBase(arg0) {
   }
   obj3.color = titleColor;
   obj3.children = title;
-  items2[1] = metroImportDefault(Text_Text.Text, obj3);
+  items2[1] = timestampProducer(Text_Text.Text, obj3);
   if (subtitleVariant == null) {
     subtitleVariant = "body-sm/medium";
   }
@@ -40,84 +40,44 @@ function PremiumGiftPromotionDetailsBase(arg0) {
   }
   obj4.color = subtitleColor;
   obj4.children = subtitle;
-  items2[2] = metroImportDefault(Text_Text.Text, obj4);
+  items2[2] = timestampProducer(Text_Text.Text, obj4);
   obj2.children = items2;
-  items1[1] = React5(View, obj2);
+  items1[1] = metroImportDefault(View, obj2);
   obj.children = items1;
-  return React5(View, obj);
+  return metroImportDefault(View, obj);
 }
-function AnimatedImage(arg0) {
-  ({ imageUrl, style, shouldAnimate } = arg0);
-  if (shouldAnimate === undefined) {
-    shouldAnimate = true;
+function AnimatedImage(shouldAnimate) {
+  let flag = shouldAnimate.shouldAnimate;
+  ({ imageUrl, style } = shouldAnimate);
+  if (flag === undefined) {
+    flag = true;
   }
-  let aPNGPlayerControls;
-  let first;
-  noop = undefined;
   items = [AccessibilityStore];
-  const stateFromStores = shouldAnimate(aPNGPlayerControls[8]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let num = null;
-  const ref = noop.useRef(null);
-  let obj = shouldAnimate(aPNGPlayerControls[8]);
-  aPNGPlayerControls = shouldAnimate(aPNGPlayerControls[9]).useAPNGPlayerControls(ref);
-  const tmp6 = first(noop.useState(false), 2);
-  first = tmp6[0];
-  noop = tmp6[1];
-  const items1 = [shouldAnimate, aPNGPlayerControls, stateFromStores];
-  const effect = noop.useEffect(() => {
-    let isAndroidResult = utils_PlatformUtils.isAndroid();
-    if (isAndroidResult) {
-      isAndroidResult = !stateFromStores;
-    }
-    if (isAndroidResult) {
-      if (shouldAnimate) {
-        aPNGPlayerControls.seek(0);
-        closure_4(true);
-      } else {
-        closure_4(false);
-        aPNGPlayerControls.stop();
-      }
-    }
-  }, items1);
-  const obj2 = shouldAnimate(aPNGPlayerControls[9]);
-  const tmp9 = stateFromStores;
-  if (first) {
-    num = 100;
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const obj2 = { style, resizeMode: "contain", source: { uri: imageUrl }, enableAnimation: null };
+  if (flag) {
+    flag = !stateFromStores;
   }
-  stateFromStores(aPNGPlayerControls[11])(() => {
-    if (first) {
-      aPNGPlayerControls.play();
-    }
-  }, num);
-  const tmp10 = stateFromStores(aPNGPlayerControls[11]);
-  if (tmpResult.isAndroid()) {
-    if (!stateFromStores) {
-      const obj3 = { ref, url: imageUrl, autoplay: false, style };
-      let tmp13 = closure_7(tmp(tmp2[9]).APNGPlayer, obj3);
-    }
-    return tmp13;
-  }
-  tmp13 = closure_7(tmp9(tmp2[12]), { style, resizeMode: "contain", source: { uri: imageUrl } });
-  const obj4 = { style, resizeMode: "contain", source: { uri: imageUrl } };
-  tmpResult = shouldAnimate(aPNGPlayerControls[10]);
+  obj2.enableAnimation = flag;
+  return timestampProducer(FastImageDefault, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(5243);
-let closure_10 = createStyles.createStyles(() => {
+let createStyles = fn(5306);
+let closure_9 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 }, image: null, textContainer: null };
   const size = { width: 64, height: 64, borderRadius: nativeDefault.radii.xs };
   obj.image = size;
   obj.textContainer = { flex: 1, alignSelf: "center" };
   return obj;
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj3 = { preview: null };
 let size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, overflow: "hidden" };
 obj3.preview = size;
-let closure_13 = createStyles.createStyles(obj3);
+let closure_12 = createStyles.createStyles(obj3);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/components/PremiumGiftPromotionDetails.tsx");
 
@@ -127,10 +87,10 @@ export default function PremiumGiftPromotionDetails(imageUrl) {
   let tmp3Result = null != imageUrl;
   if (tmp3Result) {
     const obj = { style: tmp2.image, imageUrl, shouldAnimate: imageUrl.shouldAnimate };
-    tmp3Result = metroImportDefault(AnimatedImage, obj);
+    tmp3Result = timestampProducer(AnimatedImage, obj);
   }
   const merged1 = Object.assign(merged);
-  return metroImportDefault(PremiumGiftPromotionDetailsBase, { graphic: tmp3Result });
+  return timestampProducer(PremiumGiftPromotionDetailsBase, { graphic: tmp3Result });
 };
 export function PremiumGiftPromotionCollectibleRewardDetails(product) {
   product = product.product;
@@ -154,7 +114,7 @@ export function PremiumGiftPromotionCollectibleRewardDetails(product) {
   if (null == memo) {
     const obj2 = { graphic: tmp6 };
     const merged1 = Object.assign(merged);
-    return closure_7(tmp5, obj2);
+    return closure_6(tmp5, obj2);
   } else {
     let obj = { style: tmp2.preview, children: null };
     let obj3 = { collectiblesItemData: memo, size: null };
@@ -163,16 +123,16 @@ export function PremiumGiftPromotionCollectibleRewardDetails(product) {
       let rounded = Math.floor(1.2 * PX_40);
     } else {
       rounded = PX_40;
-      if (memo.item.type === tmp8(2111).CollectiblesItemType.AVATAR_DECORATION) {
+      if (memo.item.type === tmp8(2114).CollectiblesItemType.AVATAR_DECORATION) {
         const _Math = Math;
         rounded = Math.floor(1.5 * PX_40);
       }
     }
     obj3.size = rounded;
-    obj3 = closure_7(SKUPreview.CollectiblesPreview, obj3);
+    obj3 = closure_6(SKUPreview.CollectiblesPreview, obj3);
     obj.children = obj3;
-    closure_7(View, obj);
+    closure_6(View, obj);
     tmp8 = require;
   }
-  tmp2 = closure_13();
+  tmp2 = closure_12();
 }

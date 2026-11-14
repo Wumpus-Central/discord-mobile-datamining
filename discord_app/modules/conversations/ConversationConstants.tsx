@@ -1,6 +1,6 @@
-// === Module 5894: ConversationConstants ===
+// === Module 5957: ConversationConstants ===
 
-// Module 5894 (ConversationConstants)
+// Module 5957 (ConversationConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conversations/ConversationConstants.tsx");

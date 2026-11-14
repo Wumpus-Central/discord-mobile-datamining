@@ -1,12 +1,12 @@
-// === Module 16833: setOrientationLockState ===
+// === Module 16956: setOrientationLockState ===
 
-// Module 16833 (setOrientationLockState)
+// Module 16956 (setOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import getSocketFrameDefault from "getSocketFrame" /* 7232 */;
-import isPostMessageSocketDefault from "isPostMessageSocket" /* 7233 */;
-import RPCErrorDefault from "RPCError" /* 7239 */;
+import getSocketFrameDefault from "getSocketFrame" /* 7296 */;
+import isPostMessageSocketDefault from "isPostMessageSocket" /* 7297 */;
+import RPCErrorDefault from "RPCError" /* 7303 */;
 import Constants from "Constants" /* 1083 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 16799 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 16922 */;
 import size from "module_2" /* 2 */;
 
 ({ RPCCommands, RPCErrors: c2 } = Constants);

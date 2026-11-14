@@ -1,6 +1,6 @@
-// === Module 18628: usePrivateChannelWave ===
+// === Module 18757: usePrivateChannelWave ===
 
-// Module 18628 (usePrivateChannelWave)
+// Module 18757 (usePrivateChannelWave)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1072);
 ({ ME: closure_6, Routes: metroImportDefault } = Constants);
-const MessageSendLocation = fn(5248).MessageSendLocation;
+const MessageSendLocation = fn(5311).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWave.native.tsx");
 

@@ -1,7 +1,7 @@
-// === Module 19713: useActivityWebViewLockManager ===
+// === Module 19923: useActivityWebViewLockManager ===
 
-// Module 19713 (useActivityWebViewLockManager)
-import native from "native" /* 5314 */;
+// Module 19923 (useActivityWebViewLockManager)
+import native from "native" /* 5377 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -91,7 +91,7 @@ export default function useActivityWebViewLockManager() {
         return () => {
           if (null == closure_0) {
             const resolved = Promise.resolve();
-            closure_0 = resolved.then(/* F142578 */ function() { ... });
+            closure_0 = resolved.then(/* F144210 */ function() { ... });
           }
         };
       }, items1);

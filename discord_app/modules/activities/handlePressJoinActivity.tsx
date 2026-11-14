@@ -1,18 +1,18 @@
-// === Module 12751: handlePressJoinActivity ===
+// === Module 12847: handlePressJoinActivity ===
 
-// Module 12751 (handlePressJoinActivity)
+// Module 12847 (handlePressJoinActivity)
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
-import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 12683 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 12748 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 12779 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 12844 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationRecord from "ApplicationRecord" /* 2140 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5918 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
+import ApplicationRecord from "ApplicationRecord" /* 2143 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import UserStore from "UserStore" /* 1388 */;
+import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 
 require = fn;
 function handlePressJoinActivity(arg0) {
@@ -190,7 +190,7 @@ let closure_12 = async function _maybeJoinEmbeddedActivity(arg0) {
     }
     return applyArgumentsResult;
   };
-  return "flexDirection";
+  return "Path";
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/handlePressJoinActivity.tsx");

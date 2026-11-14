@@ -1,6 +1,6 @@
-// === Module 11326: HorizontalAutocompleteWrapper ===
+// === Module 11393: HorizontalAutocompleteWrapper ===
 
-// Module 11326 (HorizontalAutocompleteWrapper)
+// Module 11393 (HorizontalAutocompleteWrapper)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -137,10 +137,10 @@ export default function HorizontalAutocompleteWrapper(channel) {
   HorizontalAutocompleteWrapperTsx1.__closure = items5;
   HorizontalAutocompleteWrapperTsx1.__workletHash = 15765485703035;
   HorizontalAutocompleteWrapperTsx1.__initData = tmp13;
-  const animatedStyle = require("module_1652").useAnimatedStyle(HorizontalAutocompleteWrapperTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(HorizontalAutocompleteWrapperTsx1);
   let obj3 = {
     style: null,
-    children: ref(require("module_7822").FlashList, {
+    children: ref(require("module_7888").FlashList, {
       ref,
       keyboardShouldPersistTaps: "always",
       horizontal: true,

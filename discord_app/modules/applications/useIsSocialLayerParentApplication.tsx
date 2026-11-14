@@ -1,7 +1,7 @@
-// === Module 7344: useIsSocialLayerParentApplication ===
+// === Module 7408: useIsSocialLayerParentApplication ===
 
-// Module 7344 (useIsSocialLayerParentApplication)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6994 */;
+// Module 7408 (useIsSocialLayerParentApplication)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7057 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

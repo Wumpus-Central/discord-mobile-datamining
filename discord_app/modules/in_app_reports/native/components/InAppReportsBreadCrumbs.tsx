@@ -1,8 +1,8 @@
-// === Module 12189: InAppReportsBreadCrumbs ===
+// === Module 12284: InAppReportsBreadCrumbs ===
 
-// Module 12189 (InAppReportsBreadCrumbs)
+// Module 12284 (InAppReportsBreadCrumbs)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5866 */;
+import Text_Text from "Text/Text" /* 5929 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { flex: 0, alignSelf: "stretch", marginBottom: 16, paddingHorizontal: 16 }, title: { lineHeight: 16, marginBottom: 8 }, breadCrumbItemContainer: { flexDirection: "row", justifyContent: "flex-start", marginBottom: 8, marginEnd: 32, overflow: "visible" }, breadCrumbDot: null, breadCrumbBar: null, breadCrumbText: null };
 let size = { marginStart: 2, marginTop: 8, width: 4, height: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.breadCrumbDot = size;
@@ -64,7 +64,7 @@ export default function Breadcrumbs(element) {
         const intl = require("util").intl;
         const string = intl.string;
         if (hasItem) {
-          prop = tmp7(2819)["6mx/DP"];
+          prop = tmp7(2835)["6mx/DP"];
           let stringResult = string(prop);
         } else {
           stringResult = string(tmp12(1113).t["+3V9Tp"]);

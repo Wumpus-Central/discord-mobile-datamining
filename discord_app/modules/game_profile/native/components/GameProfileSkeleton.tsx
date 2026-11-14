@@ -1,9 +1,9 @@
-// === Module 10315: GameProfileSkeleton ===
+// === Module 10384: GameProfileSkeleton ===
 
-// Module 10315 (GameProfileSkeleton)
+// Module 10384 (GameProfileSkeleton)
 import nativeDefault from "native" /* 575 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 10316 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 10385 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ class GameProfileSkeletonPlaceholder {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { placeholder: { backgroundColor: nativeDefault.colors.ICON_MUTED }, button: null, buttonSm: null, buttonMd: null };
 const obj3 = { backgroundColor: nativeDefault.colors.ICON_MUTED };
 obj2.button = { borderRadius: nativeDefault.radii.sm };
@@ -44,7 +44,7 @@ export function GameProfileSkeletonContainer(animationDelayMs) {
   const obj2 = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children };
   items = [style, skeletonPulseStyle];
   obj2.style = items;
-  return jsx(_modDef1652.View, { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children });
+  return jsx(_modDef1655.View, { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children });
 }
 export function GameProfileSkeletonButton(size) {
   let str = size.size;

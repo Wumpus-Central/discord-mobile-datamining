@@ -1,10 +1,10 @@
-// === Module 14662: SearchFetcher ===
+// === Module 14775: SearchFetcher ===
 
-// Module 14662 (SearchFetcher)
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import _modDef1487 from "module_1487" /* 1487 */;
+// Module 14775 (SearchFetcher)
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import _modDef1490 from "module_1490" /* 1490 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -192,7 +192,7 @@ prototype2["makeRequest"] = function makeRequest(rejectWithError) {
   value = null;
   if (null != endpoint) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: endpoint, query: _modDef1487.stringify(this.query), oldFormErrors: true, rejectWithError: rejectWithError.rejectWithError };
+    const request = { url: endpoint, query: _modDef1490.stringify(this.query), oldFormErrors: true, rejectWithError: rejectWithError.rejectWithError };
     value = HTTP.get(request);
   }
   return value;

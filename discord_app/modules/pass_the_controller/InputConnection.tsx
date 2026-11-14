@@ -1,10 +1,10 @@
-// === Module 15989: InputConnection ===
+// === Module 16110: InputConnection ===
 
-// Module 15989 (InputConnection)
+// Module 16110 (InputConnection)
 import LoggerDefault from "Logger" /* 3 */;
-import RTCConnectionEvent from "RTCConnectionEvent" /* 6126 */;
-import InputEvent from "InputEvent" /* 15990 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 6036 */;
+import RTCConnectionEvent from "RTCConnectionEvent" /* 6189 */;
+import InputEvent from "InputEvent" /* 16111 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 6099 */;
 
 require = fn;
 const React3 = { Closed: 0, [0]: "Closed", Connecting: 1, [1]: "Connecting", Connected: 2, [2]: "Connected" };
@@ -50,7 +50,7 @@ prototype["connect"] = function connect() {
   const self = this;
   this.state = Connecting.Connecting;
   let rtc = this.rtc;
-  rtc.on(self(6126).RTCConnectionEvent.WebTransportAck, this.webTransportAck);
+  rtc.on(self(6189).RTCConnectionEvent.WebTransportAck, this.webTransportAck);
   const rtc2 = this.rtc;
   rtc2.startWebTransport();
   const timerId = setTimeout(() => {

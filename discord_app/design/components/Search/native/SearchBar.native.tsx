@@ -1,9 +1,9 @@
-// === Module 7759: Search/SearchBar ===
+// === Module 7825: Search/SearchBar ===
 
-// Module 7759 (Search/SearchBar)
+// Module 7825 (Search/SearchBar)
 import util from "util" /* 1113 */;
-import TextField from "TextField" /* 7560 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7760 */;
+import TextField from "TextField" /* 7626 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7826 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

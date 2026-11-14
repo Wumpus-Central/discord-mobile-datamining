@@ -1,9 +1,10 @@
-// === Module 12442: getInvitableGameOrganizationsFullState ===
+// === Module 12537: getInvitableGameOrganizationsFullState ===
 
-// Module 12442 (getInvitableGameOrganizationsFullState)
+// Module 12537 (getInvitableGameOrganizationsFullState)
 import util from "util" /* 1113 */;
-import _modDef2549 from "module_2549" /* 2549 */;
-import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 12443 */;
+import _modDef2565 from "module_2565" /* 2565 */;
+import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 12538 */;
+import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12539 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = { kind: "available" };
@@ -29,11 +30,12 @@ export default function getInvitableGameOrganizationsFullState(arg0) {
   tmp = closure_3;
 };
 export function getGameOrganizationFullSubLabel(data) {
+  let tmp = stateFromStores;
+  if (stateFromStores === undefined) {
+    tmp = null;
+  }
   const intl = util.intl;
-  const obj = { orgName: data.name, noun: null };
-  const intl2 = util.intl;
-  obj.noun = intl2.string(_modDef2549.xXXGsq);
-  return intl.formatToPlainString(_modDef2549.xuM052, obj);
+  return intl.formatToPlainString(_modDef2565.xuM052, { orgName: data.name, noun: getGameOrganizationDisplayNounDefault({ displayNoun: tmp, lowercase: true }) });
 }
 export function getInvitableGameOrganizationsFullSubLabel(kind) {
   kind = kind.kind;
@@ -41,12 +43,12 @@ export function getInvitableGameOrganizationsFullSubLabel(kind) {
     if ("single_full" === kind) {
       const intl2 = util.intl;
       const obj = { orgName: kind.organization.name, noun: null };
-      const intl3 = util.intl;
-      obj.noun = intl3.string(_modDef2549.xXXGsq);
-      return intl2.formatToPlainString(_modDef2549.xuM052, obj);
+      const obj2 = { displayNoun: null, lowercase: true };
+      obj.noun = getGameOrganizationDisplayNounDefault(obj2);
+      return intl2.formatToPlainString(_modDef2565.xuM052, obj);
     } else if ("all_full" === kind) {
       const intl = util.intl;
-      return intl.string(_modDef2549.bY80Jh);
+      return intl.string(_modDef2565.bY80Jh);
     }
   }
 }

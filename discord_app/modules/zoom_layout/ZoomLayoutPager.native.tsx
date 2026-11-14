@@ -1,9 +1,9 @@
-// === Module 15126: ZoomLayoutPager ===
+// === Module 15240: ZoomLayoutPager ===
 
-// Module 15126 (ZoomLayoutPager)
-import _modDef1652 from "module_1652" /* 1652 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
+// Module 15240 (ZoomLayoutPager)
+import _modDef1655 from "module_1655" /* 1655 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 let jsx = fn(21).jsx;
 let obj = {};
-let merged = Object.assign(fn(5877).springStandard);
+let merged = Object.assign(fn(5940).springStandard);
 obj.stiffness = 100;
 obj.overshootClamping = true;
 let closure_8 = { code: "(function ZoomLayoutPagerNativeTsx1(){let[cancelAnimation,translateX,dragging,onEndDrag,onMomentumEnd,isPaging]=this.__closure;var _onMomentumEnd;cancelAnimation(translateX);if(dragging.get()){var _onEndDrag;dragging.set(false);(_onEndDrag=onEndDrag)===null||_onEndDrag===void 0||_onEndDrag();}(_onMomentumEnd=onMomentumEnd)===null||_onMomentumEnd===void 0||_onMomentumEnd();isPaging.set(false);})" };
@@ -75,13 +75,13 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
   const tmp = height(noop.useState(() => _undefined5.get()), 2);
   const first = tmp[0];
   closure_15 = tmp[1];
-  const sharedValue = require("module_1652").useSharedValue(first);
-  const obj2 = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(-first * width);
-  const obj3 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(-first * width);
-  const obj4 = require("module_1652");
-  const sharedValue3 = require("module_1652").useSharedValue(false);
+  const sharedValue = require("module_1655").useSharedValue(first);
+  const obj2 = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(-first * width);
+  const obj3 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(-first * width);
+  const obj4 = require("module_1655");
+  const sharedValue3 = require("module_1655").useSharedValue(false);
   items = [onPageChanged];
   const callback = noop.useCallback((arg0) => {
     closure_15(arg0);
@@ -89,7 +89,7 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
       _undefined9(arg0);
     }
   }, items);
-  let items1 = [c8, require("module_1652").cancelAnimation, sharedValue1, sharedValue3, onEndDrag, onMomentumEnd, isPaging];
+  let items1 = [c8, require("module_1655").cancelAnimation, sharedValue1, sharedValue3, onEndDrag, onMomentumEnd, isPaging];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -122,7 +122,7 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
   ZoomLayoutPagerNativeTsx1.__initData = tmp10;
   let items3 = [sharedValue1, sharedValue3, onEndDrag, onMomentumEnd, isPaging];
   callback1 = noop.useCallback(ZoomLayoutPagerNativeTsx1, items3);
-  let items4 = [c10, callback1, pageCount, sharedValue, require("module_1705").scheduleOnRN, callback, isPaging, onMomentumBegin, sharedValue1, require("spring/spring").withSpring, width, c7, c9, onScroll, onMomentumEnd];
+  let items4 = [c10, callback1, pageCount, sharedValue, require("module_1708").scheduleOnRN, callback, isPaging, onMomentumBegin, sharedValue1, require("spring/spring").withSpring, width, c7, c9, onScroll, onMomentumEnd];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -414,7 +414,7 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
     }
     return tmpResult;
   }, items8);
-  const obj5 = require("module_1652");
+  const obj5 = require("module_1655");
   let items9 = [sharedValue, sharedValue1];
   _require = undefined;
   [tmp36, tmp37] = items9;
@@ -447,8 +447,8 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
   ZoomLayoutPagerNativeTsx10.__closure = items12;
   ZoomLayoutPagerNativeTsx10.__workletHash = 10461805768773;
   ZoomLayoutPagerNativeTsx10.__initData = tmp38;
-  const animatedReaction = require("module_1652").useAnimatedReaction(ZoomLayoutPagerNativeTsx9, ZoomLayoutPagerNativeTsx10);
-  const tmp3Result = require("module_1652");
+  const animatedReaction = require("module_1655").useAnimatedReaction(ZoomLayoutPagerNativeTsx9, ZoomLayoutPagerNativeTsx10);
+  const tmp3Result = require("module_1655");
   const items13 = [sharedValue2, selectedPage, isPaging];
   _require = undefined;
   importDefault = undefined;
@@ -486,7 +486,7 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
   ZoomLayoutPagerNativeTsx12.__closure = items16;
   ZoomLayoutPagerNativeTsx12.__workletHash = 10042999683418;
   ZoomLayoutPagerNativeTsx12.__initData = tmp45;
-  const animatedReaction1 = require("module_1652").useAnimatedReaction(ZoomLayoutPagerNativeTsx11, ZoomLayoutPagerNativeTsx12);
+  const animatedReaction1 = require("module_1655").useAnimatedReaction(ZoomLayoutPagerNativeTsx11, ZoomLayoutPagerNativeTsx12);
   const items17 = [width, height, callback2, sharedValue];
   const effect = obj.useEffect(() => {
     items = [closure_20, callback2, sharedValue];
@@ -502,7 +502,7 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
     ZoomLayoutPagerNativeTsx13.__closure = items1;
     ZoomLayoutPagerNativeTsx13.__workletHash = 9355468723939;
     ZoomLayoutPagerNativeTsx13.__initData = tmp;
-    _mod1705.scheduleOnUI(ZoomLayoutPagerNativeTsx13);
+    _mod1708.scheduleOnUI(ZoomLayoutPagerNativeTsx13);
   }, items17);
   const imperativeHandle = obj.useImperativeHandle(pageCount.ref, () => ({
     goToPage(arg0) {
@@ -541,7 +541,7 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
     const size = { position: "absolute", top: 0, width: _undefined4, height };
     return size;
   }, items20);
-  const tmp3Result3 = require("module_1652");
+  const tmp3Result3 = require("module_1655");
   const items21 = [callback2, sharedValue1, pageCount, width, height];
   _require = undefined;
   importDefault = undefined;
@@ -564,11 +564,11 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
   ZoomLayoutPagerNativeTsx14.__closure = items22;
   ZoomLayoutPagerNativeTsx14.__workletHash = 9683182820627;
   ZoomLayoutPagerNativeTsx14.__initData = tmp52;
-  const animatedStyle = require("module_1652").useAnimatedStyle(ZoomLayoutPagerNativeTsx14);
+  const animatedStyle = require("module_1655").useAnimatedStyle(ZoomLayoutPagerNativeTsx14);
   const obj6 = { gesture: memo1, children: null };
   const obj7 = { collapsable: false, style: memo3, children: null };
-  const tmp3Result4 = require("module_1652");
-  obj7.children = jsx(_modDef1652.View, {
+  const tmp3Result4 = require("module_1655");
+  obj7.children = jsx(_modDef1655.View, {
     style: animatedStyle,
     children: memo2.map((item) => {
       obj = { accessibilityElementsHidden: item !== first, importantForAccessibility: null, style: null, children: null };

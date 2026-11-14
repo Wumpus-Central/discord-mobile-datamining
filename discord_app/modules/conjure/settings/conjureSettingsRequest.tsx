@@ -1,6 +1,6 @@
-// === Module 13500: conjureSettingsRequest ===
+// === Module 13603: conjureSettingsRequest ===
 
-// Module 13500 (conjureSettingsRequest)
+// Module 13603 (conjureSettingsRequest)
 import size from "module_2" /* 2 */;
 
 let set = new Set(["select", "channel", "role", "user"]);

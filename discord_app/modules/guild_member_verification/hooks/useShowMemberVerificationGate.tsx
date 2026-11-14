@@ -1,10 +1,10 @@
-// === Module 7617: useShowMemberVerificationGate ===
+// === Module 7683: useShowMemberVerificationGate ===
 
-// Module 7617 (useShowMemberVerificationGate)
-import MemberVerificationUtils from "MemberVerificationUtils" /* 7217 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import UserStore from "UserStore" /* 1385 */;
+// Module 7683 (useShowMemberVerificationGate)
+import MemberVerificationUtils from "MemberVerificationUtils" /* 7280 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 

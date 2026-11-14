@@ -1,7 +1,7 @@
-// === Module 15828: useVirtualCurrencyMobileEnabled ===
+// === Module 15948: useVirtualCurrencyMobileEnabled ===
 
-// Module 15828 (useVirtualCurrencyMobileEnabled)
-import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
+// Module 15948 (useVirtualCurrencyMobileEnabled)
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/native/useVirtualCurrencyMobileEnabled.tsx");

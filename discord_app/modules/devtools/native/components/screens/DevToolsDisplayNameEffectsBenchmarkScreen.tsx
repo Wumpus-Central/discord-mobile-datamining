@@ -1,19 +1,19 @@
-// === Module 18259: DevToolsDisplayNameEffectsBenchmarkScreen ===
+// === Module 18380: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
-// Module 18259 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 18380 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1396 */;
-import _modDef3077 from "module_3077" /* 3077 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import Stack_Stack from "Stack/Stack" /* 6274 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 9997 */;
-import types from "types" /* 9998 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10001 */;
-import _mod10005 from "module_10005" /* 10005 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1399 */;
+import _modDef3125 from "module_3125" /* 3125 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import Stack_Stack from "Stack/Stack" /* 6337 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10064 */;
+import types from "types" /* 10065 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10068 */;
+import _mod10072 from "module_10072" /* 10072 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ function effectName(arg0) {
   const intl = util.intl;
   let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
   if (OpWJ3f == null) {
-    OpWJ3f = _modDef3077.OpWJ3f;
+    OpWJ3f = _modDef3125.OpWJ3f;
   }
   return intl.string(OpWJ3f);
 }
@@ -63,14 +63,14 @@ function BenchmarkRow(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const EFFECT_ORDER = fn(1394).EFFECT_ORDER;
+const EFFECT_ORDER = fn(1397).EFFECT_ORDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = EFFECT_ORDER.filter((item) => item !== DisplayNameEffect.DisplayNameEffect.PRISM);
 let closure_12 = [10, 50, 100, 200];
 let closure_13 = { overrideSettings: true };
 let items = [{ key: "short", label: "Short", name: "Pixel7" }, { key: "medium", label: "Medium", name: "NebulaWanderer" }, { key: "long", label: "Long", name: "GalacticOverlord2049" }];
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 }, container: null, batchRow: null, optionButtons: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.container = { paddingVertical: nativeDefault.space.PX_16 };
@@ -117,7 +117,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   }, items1);
   const memo = first1.useMemo(() => items.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod10005.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => _mod10072.splitGraphemes(memo).length, items3);
   const items4 = [first];
   const memo2 = first1.useMemo(() => measure.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
@@ -242,7 +242,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
-        const splitGraphemesResult = _mod10005.splitGraphemes(run.params.name);
+        const splitGraphemesResult = _mod10072.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
           const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);

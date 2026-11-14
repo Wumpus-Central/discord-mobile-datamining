@@ -1,21 +1,21 @@
-// === Module 6212: OverlayView ===
+// === Module 6275: OverlayView ===
 
-// Module 6212 (OverlayView)
-import _modDef6262 from "module_6262" /* 6262 */;
+// Module 6275 (OverlayView)
+import _modDef6325 from "module_6325" /* 6325 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 let View = get_ActivityIndicator.View;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const jsx = fn(21).jsx;
-let PlatformUtils = fn(1377);
+let PlatformUtils = fn(1380);
 let FullWindowOverlay = View;
 if (PlatformUtils.isIOS()) {
-  FullWindowOverlay = fn(6213).FullWindowOverlay;
+  FullWindowOverlay = fn(6276).FullWindowOverlay;
 }
-PlatformUtils = fn(1377);
+PlatformUtils = fn(1380);
 if (PlatformUtils.isIOS()) {
-  View = _modDef6262;
+  View = _modDef6325;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");

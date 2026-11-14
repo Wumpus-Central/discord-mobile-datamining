@@ -1,7 +1,7 @@
-// === Module 9344: CollectiblesPromotionsEndpointMobileExperiment ===
+// === Module 9411: CollectiblesPromotionsEndpointMobileExperiment ===
 
-// Module 9344 (CollectiblesPromotionsEndpointMobileExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 9411 (CollectiblesPromotionsEndpointMobileExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-10-collectibles-promotion-endpoint-reference-mobile", kind: "user", defaultConfig: { useEndpoint: false }, variations: { 0: { useEndpoint: false }, 1: { useEndpoint: true } } });

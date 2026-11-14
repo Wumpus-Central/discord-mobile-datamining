@@ -1,10 +1,10 @@
-// === Module 6979: WindowStore ===
+// === Module 7042: WindowStore ===
 
-// Module 6979 (WindowStore)
+// Module 7042 (WindowStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import WindowIdUtils from "WindowIdUtils" /* 6980 */;
+import WindowIdUtils from "WindowIdUtils" /* 7043 */;
 
 require = fn;
 let c3 = null;
@@ -178,7 +178,7 @@ const windowStore = new WindowStore(DispatcherDefault, {
     return flag;
   }
 });
-fn(2118)(1252, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
+fn(2121)(1256, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
   const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator(() => {
 
   });

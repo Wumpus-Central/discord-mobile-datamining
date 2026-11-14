@@ -1,6 +1,6 @@
-// === Module 7262: conjureAgentHiddenMessages ===
+// === Module 7326: conjureAgentHiddenMessages ===
 
-// Module 7262 (conjureAgentHiddenMessages)
+// Module 7326 (conjureAgentHiddenMessages)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureAgentHiddenMessages.tsx");

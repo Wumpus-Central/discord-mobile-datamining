@@ -1,7 +1,7 @@
-// === Module 7583: FreeFormErrorLabel ===
+// === Module 7649: FreeFormErrorLabel ===
 
-// Module 7583 (FreeFormErrorLabel)
-import shared from "shared" /* 5250 */;
+// Module 7649 (FreeFormErrorLabel)
+import shared from "shared" /* 5313 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("design/void/Form/native/FreeFormError
 export default function Label(style) {
   const children = style.children;
   let nodeText;
-  nodeText = nodeText(5418).getNodeText(children);
+  nodeText = nodeText(5481).getNodeText(children);
   items = [nodeText];
   const effect = noop.useEffect(() => {
     let tmp2 = null != nodeText;
@@ -24,5 +24,5 @@ export default function Label(style) {
       AccessibilityAnnouncer.announce(nodeText);
     }
   }, items);
-  return jsx(nodeText(5866).Text, { style: style.style, variant: "body-xs/medium", color: "text-feedback-critical", children });
+  return jsx(nodeText(5929).Text, { style: style.style, variant: "body-xs/medium", color: "text-feedback-critical", children });
 };

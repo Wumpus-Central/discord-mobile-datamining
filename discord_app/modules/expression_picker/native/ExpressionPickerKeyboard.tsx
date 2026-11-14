@@ -1,21 +1,21 @@
-// === Module 13459: ExpressionPickerKeyboard ===
+// === Module 13562: ExpressionPickerKeyboard ===
 
-// Module 13459 (ExpressionPickerKeyboard)
-import KeyboardTypes from "KeyboardTypes" /* 1625 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2017 */;
-import native from "native" /* 5314 */;
-import ExpressionPickerDefault from "ExpressionPicker" /* 11180 */;
-import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11948 */;
-import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 13305 */;
-import getEmojiTextDefault from "getEmojiText" /* 13460 */;
+// Module 13562 (ExpressionPickerKeyboard)
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2020 */;
+import native from "native" /* 5377 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 11247 */;
+import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 12015 */;
+import PortalKeyboardBottomSheetDefault from "PortalKeyboardBottomSheet" /* 13410 */;
+import getEmojiTextDefault from "getEmojiText" /* 13563 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const KEYBOARD_ANIMATION_CONFIG = fn(13263).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(13368).KEYBOARD_ANIMATION_CONFIG;
 let jsx = fn(21).jsx;
 let closure_7 = { code: "(function ExpressionPickerKeyboardTsx1(){let[bottomSheetIndex]=this.__closure;return Math.max(bottomSheetIndex.get(),0)>0;})" };
 let closure_8 = { code: "(function ExpressionPickerKeyboardTsx2(){let[bottomSheetExpandingOrExpanded,maximum,minimum]=this.__closure;return{height:bottomSheetExpandingOrExpanded.get()?maximum:minimum};})" };
@@ -30,12 +30,12 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
   const transitionState = channel.transitionState;
   dependencyMap = transitionState;
   let isScreenReaderEnabled;
-  const sharedValue = require("module_1652").useSharedValue(-1);
-  let obj = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(-1);
+  let obj = require("module_1655");
   let tmp = _require;
-  const sharedValue1 = require("module_1652").useSharedValue(0);
+  const sharedValue1 = require("module_1655").useSharedValue(0);
   const ref = isScreenReaderEnabled.useRef(null);
-  const obj2 = require("module_1652");
+  const obj2 = require("module_1655");
   isScreenReaderEnabled = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   const tmp7 = ref(isScreenReaderEnabled.useState(false), 2);
   const animationConfigs = tmp7[0];
@@ -91,8 +91,8 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
   ExpressionPickerKeyboardTsx1.__closure = items5;
   ExpressionPickerKeyboardTsx1.__workletHash = 15440201615969;
   ExpressionPickerKeyboardTsx1.__initData = tmp16;
-  const derivedValue = require("module_1652").useDerivedValue(ExpressionPickerKeyboardTsx1);
-  const obj6 = require("module_1652");
+  const derivedValue = require("module_1655").useDerivedValue(ExpressionPickerKeyboardTsx1);
+  const obj6 = require("module_1655");
   const items6 = [closure_8, derivedValue, maximum, minimum];
   _require = undefined;
   importDefault = undefined;
@@ -109,7 +109,7 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
   ExpressionPickerKeyboardTsx2.__workletHash = 10164343902621;
   ExpressionPickerKeyboardTsx2.__initData = tmp19;
   const items8 = [isScreenReaderEnabled, chatInputRef];
-  const animatedStyle = tmp(1652).useAnimatedStyle(ExpressionPickerKeyboardTsx2);
+  const animatedStyle = tmp(1655).useAnimatedStyle(ExpressionPickerKeyboardTsx2);
   const items9 = [animationConfigs, onClose, transitionState];
   const callback4 = obj3.useCallback(() => {
     closure_6(true);
@@ -130,8 +130,8 @@ export default noop.memo(function ExpressionPickerKeyboard(channel) {
     }
   }, items9);
   const obj7 = { ref, animatedIndex: sharedValue, animatedPosition: sharedValue1, forceMaxHeight: isScreenReaderEnabled, chatInputRef, animationConfigs, onClose: callback4, renderExpressionFooter: true, transitionState, children: null };
-  const tmpResult = tmp(1652);
+  const tmpResult = tmp(1655);
   const tmp14Result = PortalKeyboardBottomSheetDefault;
-  obj7.children = jsx(_modDef1652.View, { nativeID: "expression-picker-sheet", style: animatedStyle, children: jsx(ExpressionPickerDefault, { bottomSheetRef: ref, bottomSheetIndex: sharedValue, onBackspace: callback3, onPressEmoji: callback, onPressGIF: callback1, onPressSticker: callback2, channel: channel.channel, expressionType: type, suggestedEmojis, inPortalKeyboard: true }) });
+  obj7.children = jsx(_modDef1655.View, { nativeID: "expression-picker-sheet", style: animatedStyle, children: jsx(ExpressionPickerDefault, { bottomSheetRef: ref, bottomSheetIndex: sharedValue, onBackspace: callback3, onPressEmoji: callback, onPressGIF: callback1, onPressSticker: callback2, channel: channel.channel, expressionType: type, suggestedEmojis, inPortalKeyboard: true }) });
   return <tmp14Result key={"expression-picker-" + isScreenReaderEnabled} ref={ref} animatedIndex={sharedValue} animatedPosition={sharedValue1} forceMaxHeight={isScreenReaderEnabled} chatInputRef={chatInputRef} animationConfigs={animationConfigs} onClose={callback4} renderExpressionFooter transitionState={transitionState}>{null}</tmp14Result>;
 });

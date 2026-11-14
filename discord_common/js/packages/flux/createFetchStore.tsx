@@ -155,7 +155,7 @@ export function createFetchStore(ApplicationStore, arg1) {
               closure_130_8 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "flexDirection", done: true };
+              return { value: "Path", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -486,7 +486,7 @@ export function createFetchStore(ApplicationStore, arg1) {
       await "HermesInternal";
       closure_1 = tmp2;
       closure_129_0 = closure_0;
-      return "flexDirection";
+      return "Path";
     })();
     iter.next();
     return iter;
@@ -516,7 +516,7 @@ export function createFetchStore(ApplicationStore, arg1) {
       await "HermesInternal";
       closure_1 = tmp2;
       closure_129_0 = closure_0;
-      return "flexDirection";
+      return "Path";
     })();
     iter.next();
     return iter;
@@ -547,7 +547,7 @@ export function createFetchStore(ApplicationStore, arg1) {
       await "HermesInternal";
       closure_1 = tmp2;
       closure_129_0 = closure_0;
-      return "flexDirection";
+      return "Path";
     })();
     iter.next();
     return iter;

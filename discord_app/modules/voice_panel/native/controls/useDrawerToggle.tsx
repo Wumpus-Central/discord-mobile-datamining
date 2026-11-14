@@ -1,13 +1,13 @@
-// === Module 19913: useDrawerToggle ===
+// === Module 20070: useDrawerToggle ===
 
-// Module 19913 (useDrawerToggle)
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19799 */;
+// Module 20070 (useDrawerToggle)
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19187 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
 let closure_5 = { code: "(function useDrawerToggleTsx1(){let[controlsSpecs,VoicePanelControlsModes]=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useDrawerToggle.tsx");
@@ -28,7 +28,7 @@ export default function useDrawerToggle(arg0) {
   useDrawerToggleTsx1.__closure = items1;
   useDrawerToggleTsx1.__workletHash = 13427978758146;
   useDrawerToggleTsx1.__initData = tmp5;
-  const derivedValue = require("module_1652").useDerivedValue(useDrawerToggleTsx1);
+  const derivedValue = require("module_1655").useDerivedValue(useDrawerToggleTsx1);
   const tmp9 = require("useStateFromSharedValue")(derivedValue);
   const items2 = [arg0, dismissPanel, connected, controlsSpecs];
   const callback = dismissPanel.useCallback(() => {
@@ -42,7 +42,7 @@ export default function useDrawerToggle(arg0) {
     }
   }, items2);
   const obj3 = { isDrawerOpen: tmp9, handlePress: callback, accessibilityLabel: null, ariaHidden: null };
-  const obj2 = require("module_1652");
+  const obj2 = require("module_1655");
   const intl = tmp4(tmp2[6]).intl;
   const string = intl.string;
   const t = tmp4(tmp2[6]).t;

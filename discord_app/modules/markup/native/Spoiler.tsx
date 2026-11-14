@@ -1,6 +1,6 @@
-// === Module 5996: Spoiler ===
+// === Module 6059: Spoiler ===
 
-// Module 5996 (Spoiler)
+// Module 6059 (Spoiler)
 import _mod560 from "module_560" /* 560 */;
 import _mod561 from "module_561" /* 561 */;
 import nativeDefault from "native" /* 575 */;
@@ -44,19 +44,19 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
 const EMOJI_CHAT_SIZE = fn(1072).EMOJI_CHAT_SIZE;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let str = "transparent";
 if (PlatformUtils.isAndroid()) {
   str = "rgba(0,0,0,0.0019607844)";
 }
 let context = noop.createContext(false);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { spoiler: { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND }, placeholder: null, spoilerRevealed: null, muted: null };
 let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj.placeholder = size;
 const obj4 = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj.spoilerRevealed = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
-obj.muted = { opacity: fn(5997).MUTED_OPACITY_CONTENT };
+obj.muted = { opacity: fn(6060).MUTED_OPACITY_CONTENT };
 let closure_8 = createStyles.createLegacyClassComponentStyles(obj);
 const redux = noop.createContext(null);
 const PureComponent = noop.PureComponent;
@@ -93,19 +93,22 @@ Spoiler.prototype["render"] = function render() {
   if (revealed == null) {
     revealed = self.state.revealed;
   }
-  const children = self.props.children;
+  ({ hiddenContent, spoilerStyle, spoilerRevealedStyle } = self.props);
   if (revealed) {
-    items = [tmp.spoilerRevealed, tmp3];
+    hiddenContent = self.props.children;
+  }
+  if (revealed) {
+    items = [tmp.spoilerRevealed, spoilerRevealedStyle];
     let items1 = items;
   } else {
-    items1 = [tmp.spoiler, tmp2];
+    items1 = [tmp.spoiler, spoilerStyle];
   }
   let Children = noop.Children;
-  if (0 === Children.count(children)) {
+  if (0 === Children.count(hiddenContent)) {
     return null;
   } else {
     const Children1 = noop.Children;
-    let mapped = Children1.map(children, (type) => {
+    let mapped = Children1.map(hiddenContent, (type) => {
       let map = noop;
       if (!noop.isValidElement(type)) {
         return type;
@@ -164,7 +167,7 @@ Spoiler.prototype["render"] = function render() {
                         }
                         const obj = { children: null, style: null, onPress: "Array" };
                         ({ Children, cloneElement } = validElement);
-                        obj.children = Children.map(props.props.children, /* F90700 */ function() { ... });
+                        obj.children = Children.map(props.props.children, /* F91888 */ function() { ... });
                         items = [flattenResult, spoiler.spoiler];
                         obj.style = items;
                         return cloneElement(props, obj);
@@ -208,7 +211,7 @@ Spoiler.prototype["render"] = function render() {
     return jsx(require("native").LegacyText, { accessibilityRole: "button", style: null, onPress: null, children: null });
   }
 };
-Spoiler.contextType = fn(5314).ThemeContext;
+Spoiler.contextType = fn(5377).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/native/Spoiler.tsx");
 

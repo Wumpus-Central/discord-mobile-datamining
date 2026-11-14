@@ -1,25 +1,27 @@
-// === Module 14552: useVoiceMessageTooltip ===
+// === Module 14664: useVoiceMessageTooltip ===
 
-// Module 14552 (useVoiceMessageTooltip)
+// Module 14664 (useVoiceMessageTooltip)
 import util from "util" /* 1113 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7577 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1495 */;
-
-const require = globalThis.__r;
 
 require = fn;
-const VoiceMessagesUIStore = fn(14458);
+const VoiceMessagesUIStore = fn(14570);
 ({ hideVoiceMessagesTooltip: closure_4, showVoiceMessagesTooltip: hasOwnProperty, useVoiceMessagesUIStore: closure_6 } = VoiceMessagesUIStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_messages/native/useVoiceMessageTooltip.tsx");
 
 export default function useVoiceMessageTooltip() {
   const ref = noop.useRef(null);
-  const tmp2 = closure_6((showVoiceMessagesTooltip) => showVoiceMessagesTooltip.showVoiceMessagesTooltip);
-  _require = tmp2;
-  items = [tmp2];
-  const items1 = [tmp2];
+  targetBottomInset = targetBottomInset(14665)().targetBottomInset;
+  let tmp3 = targetBottomInset(6836)(targetBottomInset);
+  if (tmp3 == null) {
+    tmp3 = targetBottomInset;
+  }
+  targetBottomInset = tmp3;
+  const tmp4 = closure_6((showVoiceMessagesTooltip) => showVoiceMessagesTooltip.showVoiceMessagesTooltip);
+  dependencyMap = tmp4;
+  items = [tmp4];
+  const items1 = [targetBottomInset, tmp3];
   const memo = noop.useMemo(() => {
     const obj = { position: "top", label: null, visible: null };
     const intl = util.intl;
@@ -28,24 +30,22 @@ export default function useVoiceMessageTooltip() {
     return obj;
   }, items);
   const effect = noop.useEffect(() => {
-    if (keyboardIsOpen) {
-      keyboardIsOpen = useKeyboardIsOpen.getKeyboardIsOpen({ includeCustomKeyboard: true });
-      closure_1 = subscribeToKeyboardUIStore(function keyboardChangeListener() {
-        if (closure_0 !== obj.getKeyboardIsOpen({ includeCustomKeyboard: true })) {
-          closure_2_4();
-        }
-        obj = closure_0(dependencyMap[4]);
-      });
+    if (targetBottomInset !== targetBottomInset) {
+      React4();
+    }
+  }, items1);
+  const items2 = [tmp4];
+  const effect1 = noop.useEffect(() => {
+    if (closure_2) {
       const _setTimeout = setTimeout;
       const timeout = setTimeout(() => {
         closure_1_4();
       }, 2000);
       return () => {
-        clearTimeout(closure_2);
-        closure_1();
+        clearTimeout(closure_0);
       };
     }
-  }, items1);
-  const tooltip = require("useTooltip").useTooltip(ref, memo);
+  }, items2);
+  const tooltip = targetBottomInset(9426).useTooltip(ref, memo);
   return { tooltipTargetRef: ref, showVoiceMessagesTooltip };
 };

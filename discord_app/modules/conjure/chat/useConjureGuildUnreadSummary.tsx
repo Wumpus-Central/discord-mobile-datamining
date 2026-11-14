@@ -1,13 +1,13 @@
-// === Module 18805: useConjureGuildUnreadSummary ===
+// === Module 18934: useConjureGuildUnreadSummary ===
 
-// Module 18805 (useConjureGuildUnreadSummary)
-import ConjureActionCreators from "ConjureActionCreators" /* 7265 */;
+// Module 18934 (useConjureGuildUnreadSummary)
+import ConjureActionCreators from "ConjureActionCreators" /* 7329 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6952 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
+import ReadStateStore from "ReadStateStore" /* 7015 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 
 require = fn;
-const ReadStateTypes = fn(6896).ReadStateTypes;
+const ReadStateTypes = fn(6959).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/useConjureGuildUnreadSummary.tsx");
 
@@ -32,5 +32,5 @@ export default function useConjureGuildUnreadSummary(arg0) {
     }
   }, items1);
   let obj = stateFromStoresArray(504);
-  return stateFromStoresArray(7267).useConjureUnreadSummary(arg0);
+  return stateFromStoresArray(7331).useConjureUnreadSummary(arg0);
 };

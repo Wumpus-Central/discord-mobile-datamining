@@ -1,30 +1,30 @@
-// === Module 8566: MediaSourceUtil ===
+// === Module 8633: MediaSourceUtil ===
 
-// Module 8566 (MediaSourceUtil)
+// Module 8633 (MediaSourceUtil)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1441 */;
-import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1492 */;
-import Server from "Server" /* 2116 */;
-import ToastUtils from "ToastUtils" /* 5951 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6206 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6298 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6313 */;
-import EmbedUtils from "EmbedUtils" /* 6727 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6795 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8562 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8567 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8573 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8578 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8579 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8588 */;
-import transformMessageComponents from "transformMessageComponents" /* 8589 */;
-import MediaModalPortal from "MediaModalPortal" /* 10129 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 11000 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11186 */;
+import FlagUtils from "FlagUtils" /* 1406 */;
+import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1444 */;
+import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1495 */;
+import Server from "Server" /* 2119 */;
+import ToastUtils from "ToastUtils" /* 6014 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6361 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6376 */;
+import EmbedUtils from "EmbedUtils" /* 6790 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6858 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8629 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8634 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8640 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8645 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8646 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8655 */;
+import transformMessageComponents from "transformMessageComponents" /* 8656 */;
+import MediaModalPortal from "MediaModalPortal" /* 10198 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 11069 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11253 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
 
 const require = globalThis.__r;
 
@@ -715,12 +715,12 @@ export function extractMediaFromMessageComponents(getContentMessage, contentMess
       let type = nextResult.type;
       if (Server.ComponentType.MEDIA_GALLERY === type) {
         items = tmp4.items;
-        for (const item10035 of items) {
-          let tmp18 = toMediaSourceFromUnfurledMedia(arg0, arg2, item10035.media, item10035.description, item10035.spoiler);
-          if (null != tmp18) {
+        for (const item10029 of items) {
+          let tmp16 = toMediaSourceFromUnfurledMedia(arg0, arg2, item10029.media, item10029.description, item10029.spoiler);
+          if (null != tmp16) {
             let obj = { sources: null, unfurledMediaItem: null };
-            obj.sources = tmp19;
-            obj.unfurledMediaItem = item10035.media;
+            obj.sources = tmp17;
+            obj.unfurledMediaItem = item10029.media;
             let arr = items1.push(obj);
           }
           continue;
@@ -805,7 +805,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
     return null;
   } else {
     const type = value.type;
-    if (tmp(2116).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(2119).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -826,9 +826,9 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
         }
         return tmp;
       });
-      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1380).isNotNullish) };
+      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1255).isNotNullish) };
       return obj2;
-    } else if (tmp(2116).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(2119).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {

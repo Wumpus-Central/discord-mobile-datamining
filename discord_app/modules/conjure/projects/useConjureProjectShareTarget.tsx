@@ -1,8 +1,8 @@
-// === Module 10483: useConjureProjectShareTarget ===
+// === Module 10552: useConjureProjectShareTarget ===
 
-// Module 10483 (useConjureProjectShareTarget)
-import _modDef4079 from "module_4079" /* 4079 */;
-import GuildStore from "GuildStore" /* 5114 */;
+// Module 10552 (useConjureProjectShareTarget)
+import _modDef4131 from "module_4131" /* 4131 */;
+import GuildStore from "GuildStore" /* 5177 */;
 
 const require = fn;
 const size = fn(2);
@@ -40,7 +40,7 @@ export default function useConjureProjectShareTarget(guild_id) {
   } else if ("user" === guild_id.install_scope) {
     const obj2 = { kind: "user", label: null };
     intl = intl(1113).intl;
-    stringResult = intl.string(_modDef4079.KxFFKT);
+    stringResult = intl.string(_modDef4131.KxFFKT);
     obj2.label = stringResult;
   } else if (null != stateFromStores) {
     const obj3 = { kind: "guild", label: stateFromStores.name, guild: stateFromStores };
@@ -72,7 +72,7 @@ export function useConjureProjectShareTargetDetails(project) {
   } else if ("user" === project.install_scope) {
     const obj2 = { kind: "user", label: null };
     intl = intl(1113).intl;
-    stringResult = intl.string(_modDef4079.KxFFKT);
+    stringResult = intl.string(_modDef4131.KxFFKT);
     obj2.label = stringResult;
   } else if (null != stateFromStores) {
     const obj3 = { kind: "guild", label: stateFromStores.name, guild: stateFromStores };

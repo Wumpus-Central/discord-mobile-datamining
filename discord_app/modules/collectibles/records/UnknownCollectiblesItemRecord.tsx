@@ -1,8 +1,8 @@
-// === Module 8427: UnknownCollectiblesItemRecord ===
+// === Module 8493: UnknownCollectiblesItemRecord ===
 
-// Module 8427 (UnknownCollectiblesItemRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
-import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 2110 */;
+// Module 8493 (UnknownCollectiblesItemRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
+import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 2113 */;
 
 require = fn;
 const prototype = function UnknownCollectiblesItemRecord(arg0) {

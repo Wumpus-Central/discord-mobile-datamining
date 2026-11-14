@@ -1,36 +1,36 @@
-// === Module 19589: PictureInPictureGlobal ===
+// === Module 19782: PictureInPictureGlobal ===
 
-// Module 19589 (PictureInPictureGlobal)
+// Module 19782 (PictureInPictureGlobal)
 import nativeDefault from "native" /* 575 */;
 import native2 from "native" /* 1187 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import NavigatorConstants from "NavigatorConstants" /* 5829 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6837 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6962 */;
-import isChannelFocused from "isChannelFocused" /* 6985 */;
-import transitionToActivityDefault from "transitionToActivity" /* 12616 */;
-import PictureInPictureDefault from "PictureInPicture" /* 12625 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 19590 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import NavigatorConstants from "NavigatorConstants" /* 5892 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6900 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 7025 */;
+import isChannelFocused from "isChannelFocused" /* 7048 */;
+import transitionToActivityDefault from "transitionToActivity" /* 12712 */;
+import PictureInPictureDefault from "PictureInPicture" /* 12721 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 19783 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2130 */;
+import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, TouchableOpacity: metroImportDefault } = get_ActivityIndicator);
-let closure_10 = fn(11799).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(11865).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1072).PictureInPicturePositions;
-const ParticipantTypes = fn(5920).ParticipantTypes;
+const ParticipantTypes = fn(5983).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: null, pip: null, background: null };
 const native = fn(1187);
 obj.elevationShadow = native.generateBoxShadowStyle(fn(1187).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
@@ -241,9 +241,9 @@ export default function PictureInPictureGlobal(channel) {
   PictureInPictureGlobalTsx1.__closure = items1;
   PictureInPictureGlobalTsx1.__workletHash = 16919925230637;
   PictureInPictureGlobalTsx1.__initData = tmp5;
-  const derivedValue = _mod1652.useDerivedValue(PictureInPictureGlobalTsx1);
-  const tmp2Result = _mod1652;
-  const items2 = [closure_21, _mod1652.interpolate, derivedValue, NavigatorConstants.NAV_BAR_HEIGHT, 12, tmp4, getPIPBottomOffsetForPIPMode.PIP_AVOIDANCE_TAB_BAR_HEIGHT];
+  const derivedValue = _mod1655.useDerivedValue(PictureInPictureGlobalTsx1);
+  const tmp2Result = _mod1655;
+  const items2 = [closure_21, _mod1655.interpolate, derivedValue, NavigatorConstants.NAV_BAR_HEIGHT, 12, tmp4, getPIPBottomOffsetForPIPMode.PIP_AVOIDANCE_TAB_BAR_HEIGHT];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -269,7 +269,7 @@ export default function PictureInPictureGlobal(channel) {
   PictureInPictureGlobalTsx2.__closure = items3;
   PictureInPictureGlobalTsx2.__workletHash = 6177116209527;
   PictureInPictureGlobalTsx2.__initData = tmp10;
-  const animatedStyle = _mod1652.useAnimatedStyle(PictureInPictureGlobalTsx2);
+  const animatedStyle = _mod1655.useAnimatedStyle(PictureInPictureGlobalTsx2);
   const rect = useSafeAreaInsetsDefault();
   const obj2 = { style: null, pointerEvents: "box-none", children: null };
   const items4 = [absoluteFill.absoluteFill, { paddingLeft: rect.left, paddingRight: rect.right }];
@@ -277,6 +277,6 @@ export default function PictureInPictureGlobal(channel) {
   const obj3 = { style: null, pointerEvents: "box-none", children: colors(closure_19, { channel: channel.channel }) };
   const items5 = [tmp.container, animatedStyle];
   obj3.style = items5;
-  obj2.children = colors(_modDef1652.View, obj3);
+  obj2.children = colors(_modDef1655.View, obj3);
   return colors(hasOwnProperty, obj2);
 };

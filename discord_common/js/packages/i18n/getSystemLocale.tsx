@@ -1,6 +1,6 @@
-// === Module 1348: getSystemLocale ===
+// === Module 1351: getSystemLocale ===
 
-// Module 1348 (getSystemLocale)
+// Module 1351 (getSystemLocale)
 import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1114 */;
 import size from "module_2" /* 2 */;
 

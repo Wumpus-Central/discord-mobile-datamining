@@ -1,9 +1,9 @@
-// === Module 13116: ConjureNativeLinkedText ===
+// === Module 13222: ConjureNativeLinkedText ===
 
-// Module 13116 (ConjureNativeLinkedText)
-import Text_Text from "Text/Text" /* 5866 */;
-import conjureMarkup from "conjureMarkup" /* 13117 */;
-import conjureLinkifyBareDomains from "conjureLinkifyBareDomains" /* 13126 */;
+// Module 13222 (ConjureNativeLinkedText)
+import Text_Text from "Text/Text" /* 5929 */;
+import conjureMarkup from "conjureMarkup" /* 13223 */;
+import conjureLinkifyBareDomains from "conjureLinkifyBareDomains" /* 13232 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

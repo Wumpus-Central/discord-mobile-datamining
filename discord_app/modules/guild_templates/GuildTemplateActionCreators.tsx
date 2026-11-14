@@ -1,8 +1,8 @@
-// === Module 8063: GuildTemplateActionCreators ===
+// === Module 8128: GuildTemplateActionCreators ===
 
-// Module 8063 (GuildTemplateActionCreators)
+// Module 8128 (GuildTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -33,7 +33,7 @@ export default {
                     closure_0 = closure_1_0;
                     if (obj.isDispatching()) {
                       let resolved = Promise.resolve();
-                      let nextPromise = resolved.then(/* F94049 */ function() { ... });
+                      let nextPromise = resolved.then(/* F95241 */ function() { ... });
                     } else {
                       nextPromise = closure_2_5.get(closure_1_0);
                       if (null == nextPromise) {
@@ -43,10 +43,10 @@ export default {
                         let obj4 = { url: closure_2_3.UNRESOLVED_GUILD_TEMPLATE(closure_1_0), oldFormErrors: true, rejectWithError: true };
                         let value = HTTP.get(obj4);
                         let tmp2Result = closure_2_1(closure_2_2[1]);
-                        let cleanupPromise = value.then(/* F94050 */ function() { ... }, /* F94051 */ function() { ... }).finally(/* F94052 */ function() { ... });
+                        let cleanupPromise = value.then(/* F95242 */ function() { ... }, /* F95243 */ function() { ... }).finally(/* F95244 */ function() { ... });
                         let result = closure_2_5.set(closure_1_0, cleanupPromise);
                         nextPromise = cleanupPromise;
-                        let nextPromise1 = value.then(/* F94050 */ function() { ... }, /* F94051 */ function() { ... });
+                        let nextPromise1 = value.then(/* F95242 */ function() { ... }, /* F95243 */ function() { ... });
                       }
                     }
                     return nextPromise;

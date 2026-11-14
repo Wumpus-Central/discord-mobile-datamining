@@ -1,15 +1,15 @@
-// === Module 9073: ConversationNavigatorHeader ===
+// === Module 9140: ConversationNavigatorHeader ===
 
-// Module 9073 (ConversationNavigatorHeader)
+// Module 9140 (ConversationNavigatorHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1357 */;
-import useToken from "useToken" /* 5839 */;
-import useChannelNameDefault from "useChannelName" /* 5891 */;
-import HeaderShared from "HeaderShared" /* 8984 */;
-import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 9074 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1360 */;
+import useToken from "useToken" /* 5902 */;
+import useChannelNameDefault from "useChannelName" /* 5954 */;
+import HeaderShared from "HeaderShared" /* 9051 */;
+import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 9141 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
 
 const require = globalThis.__r;
 
@@ -27,7 +27,7 @@ function ConversationNavigatorHeader(channelId) {
   const obj = channelId(504);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" };
-  obj2.children = jsx(channelId(8984).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  obj2.children = jsx(channelId(9051).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
   return <View style={tmp.container}>{null}</View>;
 }
 function HeaderWithBorder(shouldHandleSafeArea) {
@@ -46,7 +46,7 @@ function HeaderWithBorder(shouldHandleSafeArea) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_6 = createStyles.createStyles((arg0) => {
   const container = { flex: 1, paddingVertical: nativeDefault.space.PX_16, paddingRight: null, alignItems: "center", justifyContent: "center" };
   let num = 0;

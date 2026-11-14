@@ -1,11 +1,11 @@
-// === Module 14848: useChatPlaceholderAnimatedStyles ===
+// === Module 14962: useChatPlaceholderAnimatedStyles ===
 
-// Module 14848 (useChatPlaceholderAnimatedStyles)
+// Module 14962 (useChatPlaceholderAnimatedStyles)
 import initialize from "initialize" /* 504 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import timingPresets from "timingPresets" /* 5488 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import timingPresets from "timingPresets" /* 5551 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 require = fn;
 let obj = { duration: 1300, easing: fn(1187).STANDARD_EASING };
@@ -18,7 +18,7 @@ export default function useChatPlaceholderAnimatedStyles(arg0) {
   obj = initialize;
   items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => _undefined.useReducedMotion);
-  const items1 = [_undefined3, visible, animated, stateFromStores, _mod1652.withRepeat, _mod1652.withSequence, timing_timing.withTiming, timingPresets.timingNone, obj];
+  const items1 = [_undefined3, visible, animated, stateFromStores, _mod1655.withRepeat, _mod1655.withSequence, timing_timing.withTiming, timingPresets.timingNone, obj];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -47,5 +47,5 @@ export default function useChatPlaceholderAnimatedStyles(arg0) {
   useChatPlaceholderAnimatedStylesTsx1.__closure = items2;
   useChatPlaceholderAnimatedStylesTsx1.__workletHash = 17414638142691;
   useChatPlaceholderAnimatedStylesTsx1.__initData = tmp2;
-  return _mod1652.useAnimatedStyle(useChatPlaceholderAnimatedStylesTsx1);
+  return _mod1655.useAnimatedStyle(useChatPlaceholderAnimatedStylesTsx1);
 };

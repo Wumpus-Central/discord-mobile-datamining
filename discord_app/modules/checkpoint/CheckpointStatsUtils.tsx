@@ -1,11 +1,11 @@
-// === Module 6684: CheckpointStatsUtils ===
+// === Module 6747: CheckpointStatsUtils ===
 
-// Module 6684 (CheckpointStatsUtils)
+// Module 6747 (CheckpointStatsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
-import StringUtils from "StringUtils" /* 2150 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5106 */;
-import UserRecord from "UserRecord" /* 1404 */;
+import StringUtils from "StringUtils" /* 2153 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
+import UserRecord from "UserRecord" /* 1407 */;
 
 require = fn;
 let closure_4 = { hour: "numeric", minute: "2-digit", numberingSystem: "latn" };
@@ -34,9 +34,9 @@ export function getGuildAcronymCharacter(guildName) {
   }
   return toLocaleUpperCaseResult;
 }
-export function formatCheckpointCompactNumber(stateFromStores1) {
+export function formatCheckpointCompactNumber(checkpointOdysseyCopies) {
   const numberFormat = new Intl.NumberFormat(util.intl.currentLocale, { notation: "compact", compactDisplay: "long" });
-  return numberFormat.format(stateFromStores1);
+  return numberFormat.format(checkpointOdysseyCopies);
 }
 export function getCheckpointOdysseyCopies(stateFromStores1) {
   return stateFromStores1 / 87765;

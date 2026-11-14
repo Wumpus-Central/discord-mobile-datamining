@@ -1,9 +1,9 @@
-// === Module 15667: BadgeDirectoryNuxGraphicUtils ===
+// === Module 15786: BadgeDirectoryNuxGraphicUtils ===
 
-// Module 15667 (BadgeDirectoryNuxGraphicUtils)
+// Module 15786 (BadgeDirectoryNuxGraphicUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
-let items = [fn(8414).BadgeId.STREAMING, fn(8414).BadgeId.GAME_VARIETY, fn(8414).BadgeId.GAME_TIME, fn(8414).BadgeId.ACCOUNT_AGE];
+let items = [fn(8480).BadgeId.STREAMING, fn(8480).BadgeId.GAME_VARIETY, fn(8480).BadgeId.GAME_TIME, fn(8480).BadgeId.ACCOUNT_AGE];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/BadgeDirectoryNuxGraphicUtils.tsx");
 

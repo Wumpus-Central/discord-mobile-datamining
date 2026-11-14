@@ -1,9 +1,9 @@
-// === Module 10487: ConjureProjectGroupsCollapseStore ===
+// === Module 10556: ConjureProjectGroupsCollapseStore ===
 
-// Module 10487 (ConjureProjectGroupsCollapseStore)
+// Module 10556 (ConjureProjectGroupsCollapseStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureProjectGroupsTypes from "ConjureProjectGroupsTypes" /* 10488 */;
+import ConjureProjectGroupsTypes from "ConjureProjectGroupsTypes" /* 10557 */;
 
 require = fn;
 let obj = { collapsedByKey: {} };

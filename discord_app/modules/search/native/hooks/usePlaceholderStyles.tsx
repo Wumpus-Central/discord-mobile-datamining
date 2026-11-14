@@ -1,15 +1,15 @@
-// === Module 19280: usePlaceholderStyles ===
+// === Module 19472: usePlaceholderStyles ===
 
-// Module 19280 (usePlaceholderStyles)
+// Module 19472 (usePlaceholderStyles)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 1187 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 require = fn;
-let closure_4 = fn(8999).FADE_LAYOUT_ANIMATION_DURATION;
+let closure_4 = fn(9066).FADE_LAYOUT_ANIMATION_DURATION;
 let closure_5 = { code: "(function usePlaceholderStylesTsx1(){let[useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION]=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};})" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/usePlaceholderStyles.tsx");
@@ -21,7 +21,7 @@ export function useFullscreenPlaceholderCount(arg0) {
 export function usePlaceholderAnimatedStyle(visible) {
   items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => _undefined2.useReducedMotion);
-  const items1 = [easing, stateFromStores, visible, _mod1652.withRepeat, _mod1652.withSequence, timing_timing.withTiming, native.STANDARD_EASING, _undefined3];
+  const items1 = [easing, stateFromStores, visible, _mod1655.withRepeat, _mod1655.withSequence, timing_timing.withTiming, native.STANDARD_EASING, _undefined3];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -57,5 +57,5 @@ export function usePlaceholderAnimatedStyle(visible) {
   usePlaceholderStylesTsx1.__closure = items2;
   usePlaceholderStylesTsx1.__workletHash = 3033147489043;
   usePlaceholderStylesTsx1.__initData = tmp2;
-  return _mod1652.useAnimatedStyle(usePlaceholderStylesTsx1);
+  return _mod1655.useAnimatedStyle(usePlaceholderStylesTsx1);
 }

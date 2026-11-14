@@ -1,6 +1,6 @@
-// === Module 6541: ? ===
+// === Module 6604: ? ===
 
-// Module 6541
+// Module 6604
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/mech_viper.png.js");

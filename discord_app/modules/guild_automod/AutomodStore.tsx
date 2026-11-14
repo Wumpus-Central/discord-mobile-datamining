@@ -1,8 +1,8 @@
-// === Module 20295: AutomodStore ===
+// === Module 20450: AutomodStore ===
 
-// Module 20295 (AutomodStore)
-import _mod5158 from "module_5158" /* 5158 */;
-import SystemRulesUtils from "SystemRulesUtils" /* 20296 */;
+// Module 20450 (AutomodStore)
+import _mod5221 from "module_5221" /* 5221 */;
+import SystemRulesUtils from "SystemRulesUtils" /* 20451 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -10,10 +10,10 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(14059).AutomodTriggerType;
+const AutomodTriggerType = fn(14166).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
-const identity = fn(1254);
+const identity = fn(1258);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   dependencyMap = arg1;
@@ -54,7 +54,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         mapped[HermesBuiltin.arraySpread(found, 0)] = guildId;
       }
       someResult = items.some((id) => id.id === closure_1_2);
-      guildId(1259).batchUpdates(() => {
+      guildId(1263).batchUpdates(() => {
         obj = { rules: null, error: null };
         const obj2 = {};
         const merged = Object.assign(rules);
@@ -81,7 +81,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         acc[NumberResult] = items.filter((id) => id.id !== closure_1_0);
         return acc;
       }, {});
-      closure_0(1259).batchUpdates(() => {
+      closure_0(1263).batchUpdates(() => {
         const obj = { rules: null, error: null };
         const obj2 = {};
         const merged = Object.assign(rules);
@@ -228,7 +228,7 @@ export function useSyncAutomodRules(arg0) {
     items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, _mod5158.shallow), 2);
+  }, _mod5221.shallow), 2);
   const first = tmp2[0];
   closure_3 = tmp4;
   items = [tmp[0], ];
@@ -308,7 +308,7 @@ export function useSyncAutomodRulesEffect(arg0) {
     items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, require("module_5158").shallow), 2);
+  }, require("module_5221").shallow), 2);
   first = tmp2[0];
   asyncGeneratorStep = tmp4;
   items = [tmp[0], ];
@@ -445,5 +445,5 @@ export function useAutomodRulesList(arg0) {
       obj = {};
     }
     return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-  }, require("module_5158").shallow);
+  }, require("module_5221").shallow);
 }

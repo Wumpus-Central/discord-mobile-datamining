@@ -1,10 +1,10 @@
-// === Module 9188: GuildAntiRaidUtils ===
+// === Module 9255: GuildAntiRaidUtils ===
 
-// Module 9188 (GuildAntiRaidUtils)
+// Module 9255 (GuildAntiRaidUtils)
 import util from "util" /* 1113 */;
-import _modDef2166 from "module_2166" /* 2166 */;
-import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 9190 */;
-import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 9189 */;
+import _modDef2169 from "module_2169" /* 2169 */;
+import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 9257 */;
+import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 9256 */;
 import size from "module_2" /* 2 */;
 
 ({ NAGBAR_DISPLAY_MAX_HOURS: c3, DEFAULT_LOCKDOWN_DURATION: closure_4, getTimeframes: hasOwnProperty } = GuildAntiRaidConstants);
@@ -15,16 +15,16 @@ export const DATE_CONFIG = date;
 export function hasDetectedActivity(incidentsData) {
   let tmp = null != incidentsData.dmSpamDetectedAt;
   if (tmp) {
-    const obj = _modDef2166(incidentsData.dmSpamDetectedAt);
-    tmp = _modDef2166(incidentsData.dmSpamDetectedAt).add(React3, "hours") > _modDef2166();
-    const addResult = _modDef2166(incidentsData.dmSpamDetectedAt).add(React3, "hours");
+    const obj = _modDef2169(incidentsData.dmSpamDetectedAt);
+    tmp = _modDef2169(incidentsData.dmSpamDetectedAt).add(React3, "hours") > _modDef2169();
+    const addResult = _modDef2169(incidentsData.dmSpamDetectedAt).add(React3, "hours");
   }
   if (!tmp) {
     let tmp6 = null != incidentsData.raidDetectedAt;
     if (tmp6) {
-      const obj2 = _modDef2166(incidentsData.raidDetectedAt);
-      tmp6 = _modDef2166(incidentsData.raidDetectedAt).add(React3, "hours") > _modDef2166();
-      const addResult1 = _modDef2166(incidentsData.raidDetectedAt).add(React3, "hours");
+      const obj2 = _modDef2169(incidentsData.raidDetectedAt);
+      tmp6 = _modDef2169(incidentsData.raidDetectedAt).add(React3, "hours") > _modDef2169();
+      const addResult1 = _modDef2169(incidentsData.raidDetectedAt).add(React3, "hours");
     }
     tmp = tmp6;
   }
@@ -33,18 +33,18 @@ export function hasDetectedActivity(incidentsData) {
 export function hasDetectedRaid(raidDetectedAt) {
   let tmp = null != raidDetectedAt.raidDetectedAt;
   if (tmp) {
-    const obj = _modDef2166(raidDetectedAt.raidDetectedAt);
-    tmp = _modDef2166(raidDetectedAt.raidDetectedAt).add(React3, "hours") > _modDef2166();
-    const addResult = _modDef2166(raidDetectedAt.raidDetectedAt).add(React3, "hours");
+    const obj = _modDef2169(raidDetectedAt.raidDetectedAt);
+    tmp = _modDef2169(raidDetectedAt.raidDetectedAt).add(React3, "hours") > _modDef2169();
+    const addResult = _modDef2169(raidDetectedAt.raidDetectedAt).add(React3, "hours");
   }
   return tmp;
 }
 export function hasDetectedDMRaid(dmSpamDetectedAt) {
   let tmp = null != dmSpamDetectedAt.dmSpamDetectedAt;
   if (tmp) {
-    const obj = _modDef2166(dmSpamDetectedAt.dmSpamDetectedAt);
-    tmp = _modDef2166(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours") > _modDef2166();
-    const addResult = _modDef2166(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours");
+    const obj = _modDef2169(dmSpamDetectedAt.dmSpamDetectedAt);
+    tmp = _modDef2169(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours") > _modDef2169();
+    const addResult = _modDef2169(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours");
   }
   return tmp;
 }
@@ -52,9 +52,9 @@ export function getIncidentAlertType(guildIncident) {
   if (null != guildIncident) {
     let tmp = null != guildIncident.raidDetectedAt;
     if (tmp) {
-      const obj = _modDef2166(guildIncident.raidDetectedAt);
-      tmp = _modDef2166(guildIncident.raidDetectedAt).add(React3, "hours") > _modDef2166();
-      const addResult = _modDef2166(guildIncident.raidDetectedAt).add(React3, "hours");
+      const obj = _modDef2169(guildIncident.raidDetectedAt);
+      tmp = _modDef2169(guildIncident.raidDetectedAt).add(React3, "hours") > _modDef2169();
+      const addResult = _modDef2169(guildIncident.raidDetectedAt).add(React3, "hours");
     }
     const GuildIncidentAlertTypes = GuildAntiRaidTypes.GuildIncidentAlertTypes;
   }

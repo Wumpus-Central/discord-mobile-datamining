@@ -1,10 +1,10 @@
-// === Module 17824: GameMentionsAutocompleteSetting ===
+// === Module 17944: GameMentionsAutocompleteSetting ===
 
-// Module 17824 (GameMentionsAutocompleteSetting)
+// Module 17944 (GameMentionsAutocompleteSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 5068 */;
-import SettingsConstants from "SettingsConstants" /* 9135 */;
-import SettingBuilders from "SettingBuilders" /* 12311 */;
+import UserSettings from "UserSettings" /* 5131 */;
+import SettingsConstants from "SettingsConstants" /* 9202 */;
+import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

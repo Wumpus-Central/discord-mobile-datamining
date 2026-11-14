@@ -1,43 +1,43 @@
-// === Module 7539: CrunchyrollLinkLanding ===
+// === Module 7605: CrunchyrollLinkLanding ===
 
-// Module 7539 (CrunchyrollLinkLanding)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import _modDef7542 from "module_7542" /* 7542 */;
+// Module 7605 (CrunchyrollLinkLanding)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
+import _modDef7608 from "module_7608" /* 7608 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(7538).CrunchyrollLinkModalScenes;
+let closure_4 = fn(7604).CrunchyrollLinkModalScenes;
 const Constants = fn(1072);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: closure_6 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({ image: { width: 234, height: 147 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx");
 
 export default function CrunchyrollLinkLanding() {
   const tmp = closure_8();
-  navigation = navigation(1499).useNavigation();
+  navigation = navigation(1502).useNavigation();
   items = [navigation];
   const memo = noop.useMemo(() => {
     const obj = { label: null, icon: null };
     const intl = navigation(1113).intl;
     obj.label = intl.string(navigation(1113).t["2TXHQd"]);
-    obj.icon = navigation(7540).PlayIcon;
+    obj.icon = navigation(7606).PlayIcon;
     items = [obj];
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef7542, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
+  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef7608, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
   let intl = navigation(1113).intl;
   obj2.headerConnect = intl.string(navigation(1113).t["Da+3NJ"]);
   const intl2 = navigation(1113).intl;
   obj2.body = intl2.string(navigation(1113).t.MaPpPL);
-  let obj = navigation(1499);
+  let obj = navigation(1502);
   obj2.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj2.onNext = callback;
   obj2.valueProps = memo;
-  return jsx(navigation(7377).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef7542, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  return jsx(navigation(7441).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef7608, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 };

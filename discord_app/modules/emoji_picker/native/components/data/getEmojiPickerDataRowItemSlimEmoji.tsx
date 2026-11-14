@@ -1,7 +1,7 @@
-// === Module 11205: getEmojiPickerDataRowItemSlimEmoji ===
+// === Module 11272: getEmojiPickerDataRowItemSlimEmoji ===
 
-// Module 11205 (getEmojiPickerDataRowItemSlimEmoji)
-import EmojiTypes from "EmojiTypes" /* 5192 */;
+// Module 11272 (getEmojiPickerDataRowItemSlimEmoji)
+import EmojiTypes from "EmojiTypes" /* 5255 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,14 +1,14 @@
-// === Module 9220: PremiumGroupInviteEmbed ===
+// === Module 9287: PremiumGroupInviteEmbed ===
 
-// Module 9220 (PremiumGroupInviteEmbed)
+// Module 9287 (PremiumGroupInviteEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3465 from "module_3465" /* 3465 */;
-import createStyles from "createStyles" /* 5243 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8588 */;
-import _modDef9221 from "module_9221" /* 9221 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 9222 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 2184 */;
+import _modDef3513 from "module_3513" /* 3513 */;
+import createStyles from "createStyles" /* 5306 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8655 */;
+import _modDef9288 from "module_9288" /* 9288 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 9289 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 2187 */;
 import size from "module_2" /* 2 */;
 
 ({ HELP_CENTER_LINK: c3, PremiumGroupInviteState: closure_4 } = PremiumGroupConstants);
@@ -20,7 +20,7 @@ export function createPremiumGroupInviteEmbed(message, theme, id, channel) {
     ({ backgroundColor, headerTextColor, bodyTextColor, linkTextColor, betaPillTextColor, betaPillBackgroundColor } = createStyles.createNativeStyleProperties(obj2)(theme));
     const tmp9 = createStyles.createNativeStyleProperties(obj2)(theme);
     const author = message.author;
-    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9221);
+    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9288);
     const obj3 = { sender: author, channel, isSender: id === author.id, inviteState: constants.UNKNOWN };
     const premiumGroupInviteEmbedText = PremiumGroupUtils.getPremiumGroupInviteEmbedText(obj3);
     if (null != premiumGroupInviteEmbedText) {
@@ -31,7 +31,7 @@ export function createPremiumGroupInviteEmbed(message, theme, id, channel) {
       obj.learnMoreLinkOnClick = obj5;
       const obj8 = { headerText: header, headerColor: headerTextColor, backgroundColor, borderColor: backgroundColor, headerImageUrl: assetUriForEmbed, betaPillText: null, betaPillTextColor: null, betaPillBackgroundColor: null, bodyText: null, bodyTextColor: null, learnMoreLink: null };
       const intl2 = util.intl;
-      const formatToPartsResult = intl.formatToParts(_modDef3465["9VTnfI"], obj);
+      const formatToPartsResult = intl.formatToParts(_modDef3513["9VTnfI"], obj);
       obj8.betaPillText = intl2.string(util.t.oW0eUd).toUpperCase();
       obj8.betaPillTextColor = betaPillTextColor;
       obj8.betaPillBackgroundColor = betaPillBackgroundColor;

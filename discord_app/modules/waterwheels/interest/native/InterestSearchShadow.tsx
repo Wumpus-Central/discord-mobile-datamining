@@ -1,22 +1,22 @@
-// === Module 18987: InterestSearchShadow ===
+// === Module 19041: InterestSearchShadow ===
 
-// Module 18987 (InterestSearchShadow)
+// Module 19041 (InterestSearchShadow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5830 */;
-import useToken from "useToken" /* 5839 */;
-import InterestScrollHeader from "InterestScrollHeader" /* 18986 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import useToken from "useToken" /* 5902 */;
+import InterestScrollHeader from "InterestScrollHeader" /* 19040 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { backing: null, shadow: null, bar: null, barAndroid: null, fill: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, height: nativeDefault.space.PX_26 + nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.backing = rect;
@@ -51,7 +51,7 @@ export default function InterestSearchShadow(arg0) {
   InterestSearchShadowTsx1.__closure = items1;
   InterestSearchShadowTsx1.__workletHash = 15648602916327;
   InterestSearchShadowTsx1.__initData = tmp6;
-  const animatedStyle = _mod1652.useAnimatedStyle(InterestSearchShadowTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(InterestSearchShadowTsx1);
   const items2 = [React4(View, { pointerEvents: "none", style: tmp.backing }), , ];
   const items3 = [tmp.bar, , ];
   const obj3 = { pointerEvents: "none", style: tmp.backing };
@@ -59,7 +59,7 @@ export default function InterestSearchShadow(arg0) {
   const obj4 = { children: null };
   items3[1] = PlatformUtils.isAndroid() && tmp.barAndroid;
   items3[2] = animatedStyle;
-  items2[1] = React4(_modDef1652.View, { pointerEvents: "none", style: items3 });
+  items2[1] = React4(_modDef1655.View, { pointerEvents: "none", style: items3 });
   const obj5 = { pointerEvents: "none", style: null, children: null };
   const items4 = [tmp.shadow, animatedStyle];
   obj5.style = items4;
@@ -71,7 +71,7 @@ export default function InterestSearchShadow(arg0) {
   items5[1] = _modDef671(token).alpha(0).hex();
   obj6.colors = items5;
   obj5.children = React4(tmp4Result, obj6);
-  items2[2] = React4(_modDef1652.View, obj5);
+  items2[2] = React4(_modDef1655.View, obj5);
   obj4.children = items2;
   return timestampProducer(hasOwnProperty, obj4);
 };

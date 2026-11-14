@@ -1,10 +1,10 @@
-// === Module 13464: useConjureRemixNotice ===
+// === Module 13567: useConjureRemixNotice ===
 
-// Module 13464 (useConjureRemixNotice)
-import _modDef4079 from "module_4079" /* 4079 */;
-import conjureRemixConnection from "conjureRemixConnection" /* 10911 */;
+// Module 13567 (useConjureRemixNotice)
+import _modDef4131 from "module_4131" /* 4131 */;
+import conjureRemixConnection from "conjureRemixConnection" /* 10980 */;
 import noop from "module_19" /* 19 */;
-import ConjureRemixStore from "ConjureRemixStore" /* 7314 */;
+import ConjureRemixStore from "ConjureRemixStore" /* 7378 */;
 
 const require = globalThis.__r;
 
@@ -22,10 +22,10 @@ export default function useConjureRemixNotice(arg0) {
     const obj2 = { message: null, retry: null };
     const intl = tmp(1113).intl;
     const obj3 = { reason: stateFromStores };
-    obj2.message = intl.format(_modDef4079.Up6Ssw, obj3);
+    obj2.message = intl.format(_modDef4131.Up6Ssw, obj3);
     const obj4 = { text: null, onClick: null };
     const intl2 = tmp(1113).intl;
-    obj4.text = intl2.string(_modDef4079["ywA+ET"]);
+    obj4.text = intl2.string(_modDef4131["ywA+ET"]);
     obj4.onClick = tmp4;
     obj2.retry = obj4;
     tmp5 = obj2;

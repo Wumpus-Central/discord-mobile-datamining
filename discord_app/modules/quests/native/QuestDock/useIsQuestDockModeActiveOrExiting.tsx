@@ -1,14 +1,14 @@
-// === Module 17684: useIsQuestDockModeActiveOrExiting ===
+// === Module 17804: useIsQuestDockModeActiveOrExiting ===
 
-// Module 17684 (useIsQuestDockModeActiveOrExiting)
-import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11186 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 17581 */;
+// Module 17804 (useIsQuestDockModeActiveOrExiting)
+import _mod1655 from "module_1655" /* 1655 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11253 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 17699 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(17580).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+let closure_4 = fn(17698).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 let closure_5 = { code: "(function useIsQuestDockModeActiveOrExitingTsx1(){let[activeQuestDockMode,mode]=this.__closure;return activeQuestDockMode.get()===mode;})" };
 let closure_6 = { code: "(function useIsQuestDockModeActiveOrExitingTsx2(finished){let[activeQuestDockMode,mode,isActiveOrExiting]=this.__closure;if(finished===true&&activeQuestDockMode.get()!==mode){isActiveOrExiting.set(false);}})" };
 let closure_7 = { code: "(function useIsQuestDockModeActiveOrExitingTsx3(isActive,wasActive){let[isActiveOrExiting,transitionProgress,withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS,_worklet_1770169018036_init_data,activeQuestDockMode,mode]=this.__closure;if(isActive===wasActive)return;if(wasActive==null&&isActiveOrExiting.get()===isActive)return;if(isActive){isActiveOrExiting.set(true);return;}transitionProgress.set(0);transitionProgress.set(withSpring(1,QUEST_DOCK_MODE_CHANGE_PHYSICS,'respect-motion-settings',function useIsQuestDockModeActiveOrExitingTsx2Factory([_worklet_1770169018036_init_data,activeQuestDockMode,mode,isActiveOrExiting]){const useIsQuestDockModeActiveOrExitingTsx2=function(finished){if(finished===true&&activeQuestDockMode.get()!==mode){isActiveOrExiting.set(false);}};useIsQuestDockModeActiveOrExitingTsx2.__closure=[activeQuestDockMode,mode,isActiveOrExiting];useIsQuestDockModeActiveOrExitingTsx2.__workletHash=1770169018036;useIsQuestDockModeActiveOrExitingTsx2.__initData=_worklet_1770169018036_init_data;return useIsQuestDockModeActiveOrExitingTsx2;}([_worklet_1770169018036_init_data,activeQuestDockMode,mode,isActiveOrExiting])));})" };
@@ -17,8 +17,8 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestDock/useIsQu
 
 export default function useIsQuestDockModeActiveOrExiting(arg0) {
   const activeQuestDockMode = noop.useContext(QuestDockGestureContext.QuestDockGestureContext).activeQuestDockMode;
-  const sharedValue = _mod1652.useSharedValue(activeQuestDockMode.get() === arg0);
-  const sharedValue1 = _mod1652.useSharedValue(0);
+  const sharedValue = _mod1655.useSharedValue(activeQuestDockMode.get() === arg0);
+  const sharedValue1 = _mod1655.useSharedValue(0);
   items = [closure_5, activeQuestDockMode, arg0];
   [tmp5, tmp6, tmp7] = items;
   function useIsQuestDockModeActiveOrExitingTsx1() {
@@ -75,6 +75,6 @@ export default function useIsQuestDockModeActiveOrExiting(arg0) {
   useIsQuestDockModeActiveOrExitingTsx3.__closure = items3;
   useIsQuestDockModeActiveOrExitingTsx3.__workletHash = 14421846937413;
   useIsQuestDockModeActiveOrExitingTsx3.__initData = tmp8;
-  const animatedReaction = _mod1652.useAnimatedReaction(useIsQuestDockModeActiveOrExitingTsx1, useIsQuestDockModeActiveOrExitingTsx3);
+  const animatedReaction = _mod1655.useAnimatedReaction(useIsQuestDockModeActiveOrExitingTsx1, useIsQuestDockModeActiveOrExitingTsx3);
   return useStateFromSharedValueDefault(sharedValue);
 };

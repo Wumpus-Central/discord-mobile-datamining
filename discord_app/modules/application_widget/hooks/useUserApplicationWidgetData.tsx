@@ -1,21 +1,21 @@
-// === Module 13039: useUserApplicationWidgetData ===
+// === Module 13134: useUserApplicationWidgetData ===
 
-// Module 13039 (useUserApplicationWidgetData)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8417 */;
-import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 12172 */;
-import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 12173 */;
+// Module 13134 (useUserApplicationWidgetData)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8483 */;
+import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 12268 */;
+import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 12269 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2162 */;
-import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 12171 */;
-import UserProfileStore from "UserProfileStore" /* 7288 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 12174 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 12267 */;
+import UserProfileStore from "UserProfileStore" /* 7352 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 12266 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-fn(12171).FetchState;
-const FetchState = fn(12174).FetchState;
+fn(12267).FetchState;
+const FetchState = fn(12266).FetchState;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_widget/hooks/useUserApplicationWidgetData.tsx");
 

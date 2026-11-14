@@ -1,9 +1,9 @@
-// === Module 8516: getStorefrontNativeStoreQuery ===
+// === Module 8582: getStorefrontNativeStoreQuery ===
 
-// Module 8516 (getStorefrontNativeStoreQuery)
+// Module 8582 (getStorefrontNativeStoreQuery)
 import initialize from "initialize" /* 504 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8512 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8578 */;
 
 require = fn;
 const PaymentGateways = fn(1072).PaymentGateways;

@@ -1,7 +1,7 @@
-// === Module 7241: validateScope ===
+// === Module 7305: validateScope ===
 
-// Module 7241 (validateScope)
-import Constants from "Constants" /* 6698 */;
+// Module 7305 (validateScope)
+import Constants from "Constants" /* 6761 */;
 import size from "module_2" /* 2 */;
 
 const RPC_SCOPE_CONFIG = Constants.RPC_SCOPE_CONFIG;

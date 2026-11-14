@@ -1,9 +1,9 @@
-// === Module 12662: resolveAppChannel ===
+// === Module 12758: resolveAppChannel ===
 
-// Module 12662 (resolveAppChannel)
+// Module 12758 (resolveAppChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
 
 const require = fn;
 let closure_7 = async function _resolveAppChannel(arg0) {
@@ -52,7 +52,7 @@ let closure_7 = async function _resolveAppChannel(arg0) {
           closure_131_7 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

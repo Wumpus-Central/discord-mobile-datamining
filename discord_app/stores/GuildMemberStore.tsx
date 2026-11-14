@@ -1,27 +1,27 @@
-// === Module 5155: GuildMemberStore ===
+// === Module 5218: GuildMemberStore ===
 
-// Module 5155 (GuildMemberStore)
+// Module 5218 (GuildMemberStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1393 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2103 */;
-import mappers from "mappers" /* 2104 */;
-import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 2115 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 5153 */;
-import useCommunicationDisabledNoticeStore from "useCommunicationDisabledNoticeStore" /* 5156 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 5161 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5162 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5163 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5164 */;
-import ImpersonateStore from "ImpersonateStore" /* 5148 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1396 */;
+import FlagUtils from "FlagUtils" /* 1406 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 2106 */;
+import mappers from "mappers" /* 2107 */;
+import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 2118 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 5216 */;
+import useCommunicationDisabledNoticeStore from "useCommunicationDisabledNoticeStore" /* 5219 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 5224 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5225 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5226 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5227 */;
+import ImpersonateStore from "ImpersonateStore" /* 5211 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildRoleStore from "GuildRoleStore" /* 5149 */;
-import GuildStore from "GuildStore" /* 5114 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildRoleStore from "GuildRoleStore" /* 5212 */;
+import GuildStore from "GuildStore" /* 5177 */;
 import size from "module_2" /* 2 */;
 
 function trackCommunicationDisabled(guildId, tmp10Result) {
@@ -89,7 +89,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
   let tmp3;
   let tmp4;
   if (0 === roles.length) {
-    return { colorString: null, colorStrings: null, colorRoleId: "paddingHorizontal", hoistRoleId: "y", iconRoleId: "HTTP", highestRoleId: "r" };
+    return { colorString: null, colorStrings: null, colorRoleId: "HermesInternal", hoistRoleId: "channel_id", iconRoleId: "hash", highestRoleId: "padding" };
   } else {
     const iter = roles[Symbol.iterator]();
     while (iter !== undefined) {

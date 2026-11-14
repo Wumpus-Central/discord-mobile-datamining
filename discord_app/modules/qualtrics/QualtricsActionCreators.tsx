@@ -1,11 +1,11 @@
-// === Module 6826: QualtricsActionCreators ===
+// === Module 6889: QualtricsActionCreators ===
 
-// Module 6826 (QualtricsActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+// Module 6889 (QualtricsActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SurveyStore from "SurveyStore" /* 6827 */;
-import QualtricsStore from "QualtricsStore" /* 6830 */;
+import SurveyStore from "SurveyStore" /* 6890 */;
+import QualtricsStore from "QualtricsStore" /* 6893 */;
 
 require = fn;
 function fetchSurveyDetails() {
@@ -289,7 +289,7 @@ let closure_13 = async function _fireSurveyAction() {
       obj4.metadata = metadata;
     }
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: constants.EMBEDDED_SURVEY_ACTION, query: { force_survey_id }, body: obj4, rejectWithError: true };
+    const request = { url: constants.EMBEDDED_SURVEY_ACTION, query: { force_survey_id, supports_native: false }, body: obj4, rejectWithError: true };
     await HTTP.post(request);
     if (1 === tmp8) {
       c5 = 0;
@@ -312,8 +312,8 @@ let closure_13 = async function _fireSurveyAction() {
     return value;
   })();
 };
-const useQualtricsResponseStore = fn(6829).useQualtricsResponseStore;
-const QualtricsConstants = fn(6831);
+const useQualtricsResponseStore = fn(6892).useQualtricsResponseStore;
+const QualtricsConstants = fn(6894);
 ({ QuestionSelectorEnum: closure_8, QuestionTypeEnum: closure_9 } = QualtricsConstants);
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);

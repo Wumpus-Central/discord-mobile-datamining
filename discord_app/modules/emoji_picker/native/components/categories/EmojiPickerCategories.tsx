@@ -1,26 +1,26 @@
-// === Module 11248: EmojiPickerCategories ===
+// === Module 11315: EmojiPickerCategories ===
 
-// Module 11248 (EmojiPickerCategories)
+// Module 11315 (EmojiPickerCategories)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HapticUtils from "HapticUtils" /* 5491 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5492 */;
-import FastestListDefault from "FastestList" /* 7764 */;
-import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 11249 */;
-import useExpressionPickerCategoriesPlaceholderConfigDefault from "useExpressionPickerCategoriesPlaceholderConfig" /* 11263 */;
-import ExpressionPickerCategoriesDefault from "ExpressionPickerCategories" /* 11264 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import HapticUtils from "HapticUtils" /* 5554 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5555 */;
+import FastestListDefault from "FastestList" /* 7830 */;
+import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 11316 */;
+import useExpressionPickerCategoriesPlaceholderConfigDefault from "useExpressionPickerCategoriesPlaceholderConfig" /* 11330 */;
+import ExpressionPickerCategoriesDefault from "ExpressionPickerCategories" /* 11331 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const EmojiCategoryTypes = fn(6909).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6972).EmojiCategoryTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: closure_6, CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
 const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, listPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, item: { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" }, keyboardItem: { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE } };
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = { code: "(function EmojiPickerCategoriesTsx1(){let[categoryIndexActive]=this.__closure;return categoryIndexActive.get();})" };
@@ -62,7 +62,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   let callback3;
   const tmp = derivedValue();
   closure_7 = tmp;
-  const sharedValue = require("module_1652").useSharedValue(undefined);
+  const sharedValue = require("module_1655").useSharedValue(undefined);
   noop.useRef(undefined);
   const ref = noop.useRef(null);
   items = [categories];
@@ -96,7 +96,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
       }
     }
   }, []);
-  let obj = require("module_1652");
+  let obj = require("module_1655");
   let items1 = [ref2, categoryIndexActive];
   _require = undefined;
   [tmp8, tmp9] = items1;
@@ -109,7 +109,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   EmojiPickerCategoriesTsx1.__closure = items2;
   EmojiPickerCategoriesTsx1.__workletHash = 726737127541;
   EmojiPickerCategoriesTsx1.__initData = tmp8;
-  const items3 = [ref3, sharedValue, closure_7, require("module_1705").scheduleOnRN, callback];
+  const items3 = [ref3, sharedValue, closure_7, require("module_1708").scheduleOnRN, callback];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -140,7 +140,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   EmojiPickerCategoriesTsx2.__closure = items4;
   EmojiPickerCategoriesTsx2.__workletHash = 7202421305396;
   EmojiPickerCategoriesTsx2.__initData = tmp11;
-  const animatedReaction = require("module_1652").useAnimatedReaction(EmojiPickerCategoriesTsx1, EmojiPickerCategoriesTsx2);
+  const animatedReaction = require("module_1655").useAnimatedReaction(EmojiPickerCategoriesTsx1, EmojiPickerCategoriesTsx2);
   const items5 = [sharedValue];
   const callback1 = obj2.useCallback((nativeEvent) => {
     if (null != ref.current) {
@@ -148,7 +148,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
       const result = sharedValue.set(obj);
     }
   }, items5);
-  let obj3 = require("module_1652");
+  let obj3 = require("module_1655");
   const tmp10 = closure_7;
   const items6 = [callback2, flag, bottomSheetIndex];
   _require = undefined;
@@ -171,7 +171,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   EmojiPickerCategoriesTsx3.__closure = items7;
   EmojiPickerCategoriesTsx3.__workletHash = 1755978433752;
   EmojiPickerCategoriesTsx3.__initData = tmp18;
-  derivedValue = require("module_1652").useDerivedValue(EmojiPickerCategoriesTsx3);
+  derivedValue = require("module_1655").useDerivedValue(EmojiPickerCategoriesTsx3);
   ref2 = obj2.useRef(undefined);
   ref3 = obj2.useRef(false);
   const items8 = [derivedValue, bottomSheetRef, emojiPickerListRef, flag, isSearching, onClearSearch];
@@ -210,7 +210,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
       tmp7 = tmp7();
     }
   }, items8);
-  const tmp2Result = require("module_1652");
+  const tmp2Result = require("module_1655");
   const items9 = [callback3, derivedValue];
   _require = undefined;
   [tmp23, tmp24] = items9;
@@ -223,7 +223,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   EmojiPickerCategoriesTsx4.__closure = items10;
   EmojiPickerCategoriesTsx4.__workletHash = 4255098648304;
   EmojiPickerCategoriesTsx4.__initData = tmp23;
-  const items11 = [closure_17, require("module_1705").scheduleOnRN, callback2];
+  const items11 = [closure_17, require("module_1708").scheduleOnRN, callback2];
   _require = undefined;
   importDefault = undefined;
   [tmp25, tmp26, tmp27] = items11;
@@ -241,7 +241,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   EmojiPickerCategoriesTsx5.__closure = items12;
   EmojiPickerCategoriesTsx5.__workletHash = 806583209655;
   EmojiPickerCategoriesTsx5.__initData = tmp25;
-  const animatedReaction1 = require("module_1652").useAnimatedReaction(EmojiPickerCategoriesTsx4, EmojiPickerCategoriesTsx5);
+  const animatedReaction1 = require("module_1655").useAnimatedReaction(EmojiPickerCategoriesTsx4, EmojiPickerCategoriesTsx5);
   const items13 = [isSearching, categoryIndexActive, emojiPickerListRef];
   const effect = obj2.useEffect(() => {
     if (!isSearching) {
@@ -305,7 +305,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     const result = sharedValue.set(obj);
   }, items16);
   const callback6 = obj2.useCallback((arg0, index) => React6(EmojiPickerCategoriesItemDefault, { category: _undefined2[index], categoryIndexActive, index, handlePressCategory: callback3, loadingStyle: closure_7.listPlaceholder, locked: _undefined2[index].isNitroLocked, style: closure_7.item }), items17);
-  const tmp2Result2 = require("module_1652");
+  const tmp2Result2 = require("module_1655");
   const memo1 = obj2.useMemo(() => {
     const Gesture = _undefined(categoryIndexActive[14]).Gesture;
     return Gesture.Native().disallowInterruption(true);
@@ -317,7 +317,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   let tmp37Result = null;
   if (null != firstUnicodeCategory) {
     const obj7 = { blockRef: sharedValue, category: firstUnicodeCategory, categoryIndex: firstUnicodeCategoryIndex, onPress: callback4, style: tmp.item };
-    tmp37Result = tmp37(tmp34(11265), obj7);
+    tmp37Result = tmp37(tmp34(11332), obj7);
   }
   items18[1] = tmp37Result;
   let tmp37Result2 = null;
@@ -325,7 +325,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     const obj8 = { style: null, iconStyle: null, onBackspace: null };
     ({ item: obj10.style, keyboardItem: obj10.iconStyle } = tmp);
     obj8.onBackspace = onBackspace;
-    tmp37Result2 = tmp37(tmp34(11267), obj8);
+    tmp37Result2 = tmp37(tmp34(11334), obj8);
   }
   items18[2] = tmp37Result2;
   obj4.children = callback(ref, { children: items18 });

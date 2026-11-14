@@ -1,16 +1,16 @@
-// === Module 16898: SoundboardManager ===
+// === Module 17021: SoundboardManager ===
 
-// Module 16898 (SoundboardManager)
+// Module 17021 (SoundboardManager)
 import LoggerDefault from "Logger" /* 3 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7163 */;
-import SoundUtils from "SoundUtils" /* 10964 */;
-import getVolumeForSoundDefault from "getVolumeForSound" /* 16900 */;
-import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 16901 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7226 */;
+import SoundUtils from "SoundUtils" /* 11033 */;
+import getVolumeForSoundDefault from "getVolumeForSound" /* 17023 */;
+import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 17024 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
-import SoundboardStore from "SoundboardStore" /* 6306 */;
-import BaseSoundboardManager from "BaseSoundboardManager" /* 16899 */;
+import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
+import SoundboardStore from "SoundboardStore" /* 6369 */;
+import BaseSoundboardManager from "BaseSoundboardManager" /* 17022 */;
 
 require = fn;
 let map = new Map();
@@ -76,7 +76,7 @@ const prototype = function SoundboardManager() {
     }
     await "HermesInternal";
     ({ sound: closure_129_0, soundKey: closure_129_1, soundId: closure_129_2, userId: closure_129_3 } = applyArgumentsResult);
-    return "flexDirection";
+    return "Path";
   });
   applyArgumentsResult._playSoundWithListener = function() {
     const self = this;

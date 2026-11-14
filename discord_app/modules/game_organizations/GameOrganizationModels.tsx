@@ -1,6 +1,6 @@
-// === Module 12275: GameOrganizationModels ===
+// === Module 12370: GameOrganizationModels ===
 
-// Module 12275 (GameOrganizationModels)
+// Module 12370 (GameOrganizationModels)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organizations/GameOrganizationModels.tsx");

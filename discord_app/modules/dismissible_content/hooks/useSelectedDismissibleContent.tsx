@@ -1,9 +1,9 @@
-// === Module 9493: useSelectedDismissibleContent ===
+// === Module 9560: useSelectedDismissibleContent ===
 
-// Module 9493 (useSelectedDismissibleContent)
-import useGetDismissibleContent from "useGetDismissibleContent" /* 9494 */;
-import DismissibleContentScope from "DismissibleContentScope" /* 9496 */;
-import useSelectedDismissibleContentShared from "useSelectedDismissibleContentShared" /* 9499 */;
+// Module 9560 (useSelectedDismissibleContent)
+import useGetDismissibleContent from "useGetDismissibleContent" /* 9561 */;
+import DismissibleContentScope from "DismissibleContentScope" /* 9563 */;
+import useSelectedDismissibleContentShared from "useSelectedDismissibleContentShared" /* 9566 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -19,7 +19,7 @@ export function useSelectedScopedDismissibleContent(items1) {
   if (bypassAutoDismiss === undefined) {
     bypassAutoDismiss = false;
   }
-  const scopedDismissibleContentSelection = useGetDismissibleContent.useScopedDismissibleContentSelection(items1, groupName);
+  const scopedDismissibleContentSelection = useGetDismissibleContent.useScopedDismissibleContentSelection(items1, groupName, obj.deduplicateImpressions);
   ({ visibleContent, markAsDismissed } = scopedDismissibleContentSelection);
   let candidate = null;
   if (null != visibleContent) {
@@ -50,7 +50,7 @@ export function useSelectedDismissibleContent(items, arg1) {
     }
     return result;
   });
-  const scopedDismissibleContentSelection = useGetDismissibleContent.useScopedDismissibleContentSelection(flatMapResult, groupName);
+  const scopedDismissibleContentSelection = useGetDismissibleContent.useScopedDismissibleContentSelection(flatMapResult, groupName, obj.deduplicateImpressions);
   ({ visibleContent, markAsDismissed } = scopedDismissibleContentSelection);
   let candidate = null;
   if (null != visibleContent) {

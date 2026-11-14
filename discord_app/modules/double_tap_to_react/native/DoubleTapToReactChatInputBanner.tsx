@@ -1,25 +1,25 @@
-// === Module 14574: DoubleTapToReactChatInputBanner ===
+// === Module 14687: DoubleTapToReactChatInputBanner ===
 
-// Module 14574 (DoubleTapToReactChatInputBanner)
+// Module 14687 (DoubleTapToReactChatInputBanner)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import dismissible_content from "dismissible_content" /* 5076 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6275 */;
-import usePreviousDefault from "usePrevious" /* 6773 */;
-import Pressables from "Pressables" /* 7364 */;
-import XSmallIcon from "XSmallIcon" /* 7483 */;
-import EmojiDefault from "Emoji" /* 7828 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 9132 */;
-import renderChannelBadge from "renderChannelBadge" /* 14575 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import dismissible_content from "dismissible_content" /* 5139 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6338 */;
+import usePreviousDefault from "usePrevious" /* 6836 */;
+import Pressables from "Pressables" /* 7428 */;
+import XSmallIcon from "XSmallIcon" /* 7549 */;
+import EmojiDefault from "Emoji" /* 7894 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 9199 */;
+import renderChannelBadge from "renderChannelBadge" /* 14688 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 require = fn;
 function DoubleTapToReactChatInputBannerInner(emoji) {
@@ -103,7 +103,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   obj3.type = require("discord_common/AnalyticsUtils").ImpressionTypes.VIEW;
   obj3.name = require("discord_common/AnalyticsUtils").ImpressionNames.DOUBLE_TAP_REACT_UPSELL;
   useTrackImpressionDefault(obj3);
-  const sharedValue = require("module_1652").useSharedValue(0);
+  const sharedValue = require("module_1655").useSharedValue(0);
   const items1 = [sharedValue, first, first1];
   const effect = easing.useEffect(() => {
     if (first1) {
@@ -112,8 +112,8 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
       const result1 = set(c3);
     }
   }, items1);
-  const obj4 = require("module_1652");
-  const items2 = [closure_15, stateFromStores, sharedValue, require("module_1652").withDelay, require("timing/timing").withTiming, require("native").DECELERATED_EASING];
+  const obj4 = require("module_1655");
+  const items2 = [closure_15, stateFromStores, sharedValue, require("module_1655").withDelay, require("timing/timing").withTiming, require("native").DECELERATED_EASING];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -145,14 +145,14 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   DoubleTapToReactChatInputBannerTsx1.__closure = items3;
   DoubleTapToReactChatInputBannerTsx1.__workletHash = 11366133549482;
   DoubleTapToReactChatInputBannerTsx1.__initData = tmp14;
-  const animatedStyle = require("module_1652").useAnimatedStyle(DoubleTapToReactChatInputBannerTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(DoubleTapToReactChatInputBannerTsx1);
   const items4 = [emoji, markAsDismissed];
   const callback = obj.useCallback((nativeEvent) => {
     easing(nativeEvent.nativeEvent.layout.height);
   }, []);
   const items5 = [markAsDismissed];
   const callback1 = obj.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14679, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14792, dependencyMap.paths), "DoubleTapToReactActionSheet", { emoji });
     _undefined2(ContentDismissActionType.TAKE_ACTION);
   }, items4);
   const callback2 = obj.useCallback(() => {
@@ -173,7 +173,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
       _undefined2(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items6);
-  const obj5 = require("module_1652");
+  const obj5 = require("module_1655");
   const unmountEffect = require("hooks/useMountEffect").useUnmountEffect(() => {
     _undefined2(ContentDismissActionType.AUTO_DISMISS);
   });
@@ -185,17 +185,17 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   obj8.style = items8;
   const obj7 = { style: tmp.measurement, onLayout: callback, children: closure_9(DoubleTapToReactChatInputBannerInner, { emoji, handleDismissBanner: callback2 }) };
   obj8.children = closure_9(require("native").AnimatedPressableHighlight, { onPress: callback1, style: tmp.highlight, androidRippleConfig, children: closure_9(DoubleTapToReactChatInputBannerInner, { emoji, handleDismissBanner: callback2 }) });
-  items7[1] = closure_9(_modDef1652.View, obj8);
+  items7[1] = closure_9(_modDef1655.View, obj8);
   obj6.children = items7;
   return closure_10(closure_11, obj6);
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
-const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const androidRippleConfig = { cornerRadius: 0 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { animatedContainer: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, measurement: { opacity: 0, position: "absolute" }, container: { display: "flex", flexDirection: "row", alignItems: "center", padding: 12 }, highlight: null, text: null, emojiContainer: null, emoji: null, textEmoji: null, header: null, closeButton: null };
 let obj3 = { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.highlight = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -203,13 +203,13 @@ obj2.text = { marginHorizontal: 12, flex: 1 };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.emojiContainer = { borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.md, flexDirection: "row", gap: 8, alignItems: "center", justifyContent: "center", padding: 12 };
 obj2.emoji = { width: 28, height: 28 };
-let PlatformUtils = fn(1377);
+let PlatformUtils = fn(1380);
 let num = 22;
 if (PlatformUtils.isIOS()) {
   num = 28;
 }
 let obj7 = { fontSize: num, textAlign: "center", lineHeight: null, color: null };
-PlatformUtils = fn(1377);
+PlatformUtils = fn(1380);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;

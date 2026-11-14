@@ -1,9 +1,9 @@
-// === Module 10668: StickerIcon ===
+// === Module 10737: StickerIcon ===
 
-// Module 10668 (StickerIcon)
+// Module 10737 (StickerIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod10669 from "module_10669" /* 10669 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod10738 from "module_10738" /* 10738 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function StickerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10669, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10738, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

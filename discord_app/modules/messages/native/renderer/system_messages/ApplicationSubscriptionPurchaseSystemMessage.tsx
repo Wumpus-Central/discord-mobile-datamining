@@ -1,10 +1,10 @@
-// === Module 9204: ApplicationSubscriptionPurchaseSystemMessage ===
+// === Module 9271: ApplicationSubscriptionPurchaseSystemMessage ===
 
-// Module 9204 (ApplicationSubscriptionPurchaseSystemMessage)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9121 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9123 */;
-import createCommonMessageDefault from "createCommonMessage" /* 9125 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 9157 */;
+// Module 9271 (ApplicationSubscriptionPurchaseSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 9188 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 9190 */;
+import createCommonMessageDefault from "createCommonMessage" /* 9192 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 9224 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ApplicationSubscriptionPurchaseSystemMessage.tsx");

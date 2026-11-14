@@ -1,10 +1,10 @@
-// === Module 15705: UserProfileWidgetOptionConjureButton ===
+// === Module 15826: UserProfileWidgetOptionConjureButton ===
 
-// Module 15705 (UserProfileWidgetOptionConjureButton)
+// Module 15826 (UserProfileWidgetOptionConjureButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import MagicWandIcon from "MagicWandIcon" /* 10459 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import MagicWandIcon from "MagicWandIcon" /* 10528 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,8 +13,8 @@ require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
-let obj2 = { button: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.radii.md, overflow: "hidden", alignSelf: "stretch", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, minHeight: 96 }, pressed: { opacity: 0.8 } };
+const createStyles = fn(5306);
+let obj2 = { button: { backgroundColor: nativeDefault.colors.CARD_MUTED_BG, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderRadius: nativeDefault.radii.md, overflow: "hidden", alignSelf: "stretch", alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_8, minHeight: 96 }, pressed: { opacity: 0.8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetOptionConjureButton.tsx");
@@ -51,7 +51,7 @@ export default function UserProfileWidgetOptionConjureButton(arg0) {
   items = [closure_5(MagicWandIcon.MagicWandIcon, { size: "md", color: padding(575).colors.TEXT_DEFAULT }), ];
   const obj3 = { variant: "body-md/medium", color: "text-strong", children: null };
   const intl = util.intl;
-  obj3.children = intl.string(padding(4079)["5WHmVU"]);
+  obj3.children = intl.string(padding(4131)["5WHmVU"]);
   items[1] = closure_5(Text_Text.Text, obj3);
   obj.children = items;
   return closure_6(Pressable, obj);

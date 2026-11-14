@@ -1,11 +1,11 @@
-// === Module 1261: AnalyticsTrackingStore ===
+// === Module 1265: AnalyticsTrackingStore ===
 
-// Module 1261 (AnalyticsTrackingStore)
+// Module 1265 (AnalyticsTrackingStore)
 import logger_Logger from "logger/Logger" /* 4 */;
-import discord_common_IdGenerator from "discord_common/IdGenerator" /* 1262 */;
-import FingerprintUtils from "FingerprintUtils" /* 1265 */;
-import v1 from "v1" /* 1266 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import FingerprintUtils from "FingerprintUtils" /* 1254 */;
+import discord_common_IdGenerator from "discord_common/IdGenerator" /* 1266 */;
+import v1 from "v1" /* 1269 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import Constants from "Constants" /* 1083 */;
 import size from "module_2" /* 2 */;
 
@@ -343,7 +343,7 @@ export (getLaunchSignature) => {
                   let _Math3 = Math;
                   let obj = { type: "timeout", id: null };
                   let _setTimeout = setTimeout;
-                  obj.id = setTimeout(/* F143347 */ function() { ... }, Math.max(closure_3_8 + (Math.floor(Math.random() * result * 2) - result), closure_3_9));
+                  obj.id = setTimeout(/* F144967 */ function() { ... }, Math.max(closure_3_8 + (Math.floor(Math.random() * result * 2) - result), closure_3_9));
                   closure_3_22 = obj;
                 } else {
                   throw new TypeError("Trying to call a non-function");

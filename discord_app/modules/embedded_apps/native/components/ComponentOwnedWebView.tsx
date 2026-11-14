@@ -1,6 +1,6 @@
-// === Module 19685: ComponentOwnedWebView ===
+// === Module 19895: ComponentOwnedWebView ===
 
-// Module 19685 (ComponentOwnedWebView)
+// Module 19895 (ComponentOwnedWebView)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

@@ -1,14 +1,14 @@
-// === Module 12445: GroupDMNitroUpsellModel ===
+// === Module 12541: GroupDMNitroUpsellModel ===
 
-// Module 12445 (GroupDMNitroUpsellModel)
+// Module 12541 (GroupDMNitroUpsellModel)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
-import UserStore from "UserStore" /* 1385 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const MAX_GROUP_DM_PARTICIPANTS = fn(1072).MAX_GROUP_DM_PARTICIPANTS;
-const PremiumTypes = fn(1387).PremiumTypes;
+const PremiumTypes = fn(1390).PremiumTypes;
 const GroupDMNitroAcquisitionStrategy = { MARKETING: "marketing", CHECKOUT: "checkout" };
 let obj2 = { NONE: "none", MANAGE: "manage", MARKETING: "marketing", CHECKOUT: "checkout" };
 const size = fn(2);

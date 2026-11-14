@@ -1,21 +1,21 @@
-// === Module 13489: ConjureShellGlow ===
+// === Module 13592: ConjureShellGlow ===
 
-// Module 13489 (ConjureShellGlow)
+// Module 13592 (ConjureShellGlow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5830 */;
-import ConjureDitherDefault from "ConjureDither" /* 13490 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import ConjureDitherDefault from "ConjureDither" /* 13593 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let closure_12 = PlatformUtils.isAndroid();
 let c13 = 500;
 let items = [{ code: "(function pulseAt_ConjureShellGlowTsx1(progress){let[PULSE_KEYFRAMES]=this.__closure;for(let i=1;i<PULSE_KEYFRAMES.length;i++){const[t1,v1]=PULSE_KEYFRAMES[i];if(progress<=t1){const[t0,v0]=PULSE_KEYFRAMES[i-1];const span=t1-t0;const local=span>0?(progress-t0)/span:1;return v0+(v1-v0)*local;}}return 1;})" }, ];
@@ -52,7 +52,7 @@ const start = { x: 0.5, y: 0 };
 const end = { x: 0.5, y: 1 };
 const start2 = { x: 0, y: 0.5 };
 const end2 = { x: 1, y: 0.5 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_21 = createStyles.createStyles({ root: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, overflow: "hidden", zIndex: 0 }, band: { position: "absolute", left: 0, right: 0, bottom: 0, height: 500 }, sweep: { position: "absolute", top: 0, bottom: 0, left: 0, width: "200%" }, fill: { flex: 1 }, ditherClip: { position: "absolute", left: 0, right: 0, bottom: 0, overflow: "hidden" }, ditherField: { position: "absolute", left: 0, right: 0, bottom: 0, height: 500 } });
 let closure_22 = { code: "(function ConjureShellGlowTsx2(){let[lift,pulseAt,pulse,BAND_HEIGHT]=this.__closure;const scale=lift.get()*pulseAt(pulse.get());return{transform:[{translateY:BAND_HEIGHT*(1-scale)/2},{scaleY:scale}]};})" };
 let closure_23 = { code: "(function ConjureShellGlowTsx3(){let[chromaMix,layerAlpha,driftBase,width]=this.__closure;return{opacity:(1-chromaMix.get())*layerAlpha,transform:[{translateX:-driftBase.get()*width}]};})" };
@@ -84,7 +84,7 @@ export default function ConjureShellGlow(thinking) {
   const stateFromStores1 = _undefined(504).useStateFromStores(items1, () => sharedValue3.theme);
   dependencyMap = stateFromStores1;
   let obj2 = _undefined(504);
-  const isThemeDarkResult = _undefined(5251).isThemeDark(stateFromStores1);
+  const isThemeDarkResult = _undefined(5314).isThemeDark(stateFromStores1);
   _slicedToArray = isThemeDarkResult;
   let items2 = [stateFromStores1];
   let items3 = [isThemeDarkResult];
@@ -124,7 +124,7 @@ export default function ConjureShellGlow(thinking) {
   if (isThemeDarkResult) {
     num2 = 0.3;
   }
-  let obj3 = _undefined(5251);
+  let obj3 = _undefined(5314);
   [tmp10, c4] = noop.useState(0);
   const callback = obj4.useCallback((nativeEvent) => {
     closure_0 = Math.round(nativeEvent.nativeEvent.layout.width);
@@ -141,76 +141,76 @@ export default function ConjureShellGlow(thinking) {
   if (thinking) {
     num3 = 1;
   }
-  const sharedValue = _undefined(1652).useSharedValue(num3);
+  const sharedValue = _undefined(1655).useSharedValue(num3);
   c5 = sharedValue;
-  const tmp2Result = _undefined(1652);
+  const tmp2Result = _undefined(1655);
   let num4 = 0;
   if (thinking) {
     num4 = 1;
   }
-  sharedValue1 = _undefined(1652).useSharedValue(num4);
-  const tmp2Result10 = _undefined(1652);
+  sharedValue1 = _undefined(1655).useSharedValue(num4);
+  const tmp2Result10 = _undefined(1655);
   let num5 = 0;
   if (thinking) {
     num5 = height;
   }
-  sharedValue2 = _undefined(1652).useSharedValue(num5);
-  const tmp2Result11 = _undefined(1652);
-  sharedValue3 = _undefined(1652).useSharedValue(0);
-  const tmp2Result12 = _undefined(1652);
-  sharedValue4 = _undefined(1652).useSharedValue(0);
-  const tmp2Result13 = _undefined(1652);
-  sharedValue5 = _undefined(1652).useSharedValue(0);
+  sharedValue2 = _undefined(1655).useSharedValue(num5);
+  const tmp2Result11 = _undefined(1655);
+  sharedValue3 = _undefined(1655).useSharedValue(0);
+  const tmp2Result12 = _undefined(1655);
+  sharedValue4 = _undefined(1655).useSharedValue(0);
+  const tmp2Result13 = _undefined(1655);
+  sharedValue5 = _undefined(1655).useSharedValue(0);
   const items4 = [sharedValue1, sharedValue2, sharedValue, thinking];
   const effect = obj4.useEffect(() => {
-    const Easing = _undefined(1652).Easing;
+    const Easing = _undefined(1655).Easing;
     const bezierResult = Easing.bezier(0.4, 0, 0.2, 1);
     let num = 0;
     if (_undefined) {
       num = 1;
     }
-    const result = _undefined6.set(_undefined(5485).withTiming(num, { duration: 700, easing: bezierResult }, "animate-always"));
-    const obj = _undefined(5485);
+    const result = _undefined6.set(_undefined(5548).withTiming(num, { duration: 700, easing: bezierResult }, "animate-always"));
+    const obj = _undefined(5548);
     let num2 = 0;
     if (_undefined) {
       num2 = 1;
     }
-    const result1 = sharedValue1.set(_undefined(5485).withTiming(num2, { duration: 700, easing: bezierResult }, "animate-always"));
-    const tmpResult = _undefined(5485);
+    const result1 = sharedValue1.set(_undefined(5548).withTiming(num2, { duration: 700, easing: bezierResult }, "animate-always"));
+    const tmpResult = _undefined(5548);
     let num3 = 0;
     if (_undefined) {
       num3 = c13;
     }
-    const result2 = sharedValue2.set(_undefined(5485).withTiming(num3, { duration: 400, easing: bezierResult }, "animate-always"));
-    const tmpResult2 = _undefined(5485);
+    const result2 = sharedValue2.set(_undefined(5548).withTiming(num3, { duration: 400, easing: bezierResult }, "animate-always"));
+    const tmpResult2 = _undefined(5548);
   }, items4);
   const items5 = [sharedValue4, sharedValue5, stateFromStores, thinking];
   const effect1 = obj4.useEffect(() => {
     if (c1) {
-      _undefined(1652).cancelAnimation(sharedValue4);
-      const obj7 = _undefined(1652);
-      _undefined(1652).cancelAnimation(sharedValue5);
+      _undefined(1655).cancelAnimation(sharedValue4);
+      const obj7 = _undefined(1655);
+      _undefined(1655).cancelAnimation(sharedValue5);
       const result = sharedValue4.set(0);
       const result1 = sharedValue5.set(0);
-      const obj8 = _undefined(1652);
+      const obj8 = _undefined(1655);
     } else if (_undefined) {
-      let obj = _undefined(1652);
+      let obj = _undefined(1655);
       const obj3 = { duration: 24000, easing: null };
-      const Easing = _undefined(1652).Easing;
-      obj3.easing = Easing.inOut(_undefined(1652).Easing.ease);
-      const result2 = sharedValue4.set(obj.withRepeat(_undefined(5485).withTiming(1, obj3), -1, true));
-      const obj2 = _undefined(5485);
-      const obj4 = _undefined(1652);
+      const Easing = _undefined(1655).Easing;
+      obj3.easing = Easing.inOut(_undefined(1655).Easing.ease);
+      const result2 = sharedValue4.set(obj.withRepeat(_undefined(5548).withTiming(1, obj3), -1, true));
+      const obj2 = _undefined(5548);
+      const obj4 = _undefined(1655);
       const obj6 = { duration: 12000, easing: null };
-      const Easing2 = _undefined(1652).Easing;
-      obj6.easing = Easing2.inOut(_undefined(1652).Easing.ease);
-      const result3 = sharedValue5.set(obj4.withRepeat(_undefined(5485).withTiming(1, obj6), -1, true));
+      const Easing2 = _undefined(1655).Easing;
+      obj6.easing = Easing2.inOut(_undefined(1655).Easing.ease);
+      const result3 = sharedValue5.set(obj4.withRepeat(_undefined(5548).withTiming(1, obj6), -1, true));
       const fn = () => {
-        c0(1652).cancelAnimation(sharedValue4);
-        const obj = c0(1652);
-        c0(1652).cancelAnimation(sharedValue5);
+        c0(1655).cancelAnimation(sharedValue4);
+        const obj = c0(1655);
+        c0(1655).cancelAnimation(sharedValue5);
       };
-      const obj5 = _undefined(5485);
+      const obj5 = _undefined(5548);
     }
     return fn;
   }, items5);
@@ -219,20 +219,20 @@ export default function ConjureShellGlow(thinking) {
     if (!c1) {
       if (_undefined) {
         const result = sharedValue3.set(0);
-        const obj = _undefined(1652);
-        const obj3 = { duration: 5500, easing: _undefined(1652).Easing.ease };
-        const result1 = sharedValue3.set(obj.withRepeat(_undefined(5485).withTiming(1, obj3), -1, false));
+        const obj = _undefined(1655);
+        const obj3 = { duration: 5500, easing: _undefined(1655).Easing.ease };
+        const result1 = sharedValue3.set(obj.withRepeat(_undefined(5548).withTiming(1, obj3), -1, false));
         const fn = () => c0(c2[12]).cancelAnimation(sharedValue3);
-        const obj2 = _undefined(5485);
+        const obj2 = _undefined(5548);
       }
       return fn;
     }
-    _undefined(1652).cancelAnimation(sharedValue3);
-    const obj4 = _undefined(1652);
-    const result2 = sharedValue3.set(_undefined(5485).withTiming(0, { duration: 700 }));
-    const obj5 = _undefined(5485);
+    _undefined(1655).cancelAnimation(sharedValue3);
+    const obj4 = _undefined(1655);
+    const result2 = sharedValue3.set(_undefined(5548).withTiming(0, { duration: 700 }));
+    const obj5 = _undefined(5548);
   }, items6);
-  const tmp2Result14 = _undefined(1652);
+  const tmp2Result14 = _undefined(1655);
   const items7 = [closure_22, sharedValue, pulseAt, sharedValue3, height];
   _undefined = undefined;
   importDefault = undefined;
@@ -256,8 +256,8 @@ export default function ConjureShellGlow(thinking) {
   ConjureShellGlowTsx2.__closure = items8;
   ConjureShellGlowTsx2.__workletHash = 16357624272846;
   ConjureShellGlowTsx2.__initData = tmp23;
-  const animatedStyle = _undefined(1652).useAnimatedStyle(ConjureShellGlowTsx2);
-  const tmp2Result15 = _undefined(1652);
+  const animatedStyle = _undefined(1655).useAnimatedStyle(ConjureShellGlowTsx2);
+  const tmp2Result15 = _undefined(1655);
   const items9 = [closure_23, sharedValue1, num2, sharedValue4, tmp10];
   _undefined = undefined;
   importDefault = undefined;
@@ -278,8 +278,8 @@ export default function ConjureShellGlow(thinking) {
   ConjureShellGlowTsx3.__closure = items10;
   ConjureShellGlowTsx3.__workletHash = 17164869251802;
   ConjureShellGlowTsx3.__initData = tmp29;
-  const animatedStyle1 = _undefined(1652).useAnimatedStyle(ConjureShellGlowTsx3);
-  const tmp2Result16 = _undefined(1652);
+  const animatedStyle1 = _undefined(1655).useAnimatedStyle(ConjureShellGlowTsx3);
+  const tmp2Result16 = _undefined(1655);
   const items11 = [closure_24, sharedValue1, num2, sharedValue5, tmp10];
   _undefined = undefined;
   importDefault = undefined;
@@ -300,8 +300,8 @@ export default function ConjureShellGlow(thinking) {
   ConjureShellGlowTsx4.__closure = items12;
   ConjureShellGlowTsx4.__workletHash = 6789154933248;
   ConjureShellGlowTsx4.__initData = tmp35;
-  const animatedStyle2 = _undefined(1652).useAnimatedStyle(ConjureShellGlowTsx4);
-  const tmp2Result17 = _undefined(1652);
+  const animatedStyle2 = _undefined(1655).useAnimatedStyle(ConjureShellGlowTsx4);
+  const tmp2Result17 = _undefined(1655);
   const items13 = [closure_25, closure_12, height, sharedValue, pulseAt, sharedValue3, sharedValue2];
   _undefined = undefined;
   importDefault = undefined;
@@ -330,17 +330,17 @@ export default function ConjureShellGlow(thinking) {
   ConjureShellGlowTsx5.__closure = items14;
   ConjureShellGlowTsx5.__workletHash = 6143578775689;
   ConjureShellGlowTsx5.__initData = tmp42;
-  const animatedStyle3 = _undefined(1652).useAnimatedStyle(ConjureShellGlowTsx5);
+  const animatedStyle3 = _undefined(1655).useAnimatedStyle(ConjureShellGlowTsx5);
   const tmp55 = sharedValue4(LinearGradientDefault, { style: tmp.fill, colors, locations, start, end });
   let obj6 = { children: null };
   let obj7 = { style: null, children: sharedValue4(LinearGradientDefault, { style: tmp.fill, colors: memo1.base, start: start2, end: end2 }) };
   const items15 = [tmp.sweep, animatedStyle1];
   obj7.style = items15;
-  const items16 = [sharedValue4(_modDef1652.View, obj7), ];
+  const items16 = [sharedValue4(_modDef1655.View, obj7), ];
   const obj9 = { style: null, children: sharedValue4(LinearGradientDefault, { style: tmp.fill, colors: memo1.chroma, start: start2, end: end2 }) };
   const items17 = [tmp.sweep, animatedStyle2];
   obj9.style = items17;
-  items16[1] = sharedValue4(_modDef1652.View, obj9);
+  items16[1] = sharedValue4(_modDef1655.View, obj9);
   obj6.children = items16;
   const tmp57 = closure_11(sharedValue5, obj6);
   const obj11 = { style: tmp.ditherField, children: null };
@@ -349,7 +349,7 @@ export default function ConjureShellGlow(thinking) {
   const obj10 = { style: tmp.fill, colors: memo1.chroma, start: start2, end: end2 };
   let obj5 = { style: tmp.fill, colors, locations, start, end };
   let obj8 = { style: tmp.fill, colors: memo1.base, start: start2, end: end2 };
-  const tmp2Result18 = _undefined(1652);
+  const tmp2Result18 = _undefined(1655);
   if (isThemeDarkResult) {
     str = "rgb(225, 240, 255)";
   }
@@ -382,10 +382,10 @@ export default function ConjureShellGlow(thinking) {
     obj16.style = c5.absoluteFill;
     obj16.maskElement = tmp55;
     obj16.children = tmp57;
-    tmp50Result5 = tmp50(tmp51(7467), obj16);
+    tmp50Result5 = tmp50(tmp51(7533), obj16);
   }
   obj14.children = tmp50Result5;
-  const items20 = [sharedValue4(_modDef1652.View, obj14), , ];
+  const items20 = [sharedValue4(_modDef1655.View, obj14), , ];
   let tmp50Result7 = null;
   if (!stateFromStores) {
     const obj17 = { style: null, children: null };
@@ -394,10 +394,10 @@ export default function ConjureShellGlow(thinking) {
     let tmp50Result6 = tmp50Result;
     if (!closure_12) {
       const obj18 = { style: tmp62.absoluteFill, maskElement: tmp55, children: tmp50Result };
-      tmp50Result6 = tmp50(tmp51(7467), obj18);
+      tmp50Result6 = tmp50(tmp51(7533), obj18);
     }
     obj17.children = tmp50Result6;
-    tmp50Result7 = tmp50(tmp51(1652).View, obj17);
+    tmp50Result7 = tmp50(tmp51(1655).View, obj17);
   }
   items20[1] = tmp50Result7;
   let tmp50Result8 = null;
@@ -406,8 +406,8 @@ export default function ConjureShellGlow(thinking) {
     const items22 = [tmp.band, animatedStyle];
     obj19.style = items22;
     const obj20 = { style: tmp.fill, colors: memo, locations, start, end };
-    obj19.children = tmp50(tmp51(5830), obj20);
-    tmp50Result8 = tmp50(tmp51(1652).View, obj19);
+    obj19.children = tmp50(tmp51(5893), obj20);
+    tmp50Result8 = tmp50(tmp51(1655).View, obj19);
   }
   items20[2] = tmp50Result8;
   obj13.children = items20;

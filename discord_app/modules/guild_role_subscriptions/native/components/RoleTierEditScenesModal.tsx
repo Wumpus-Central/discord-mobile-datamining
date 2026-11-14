@@ -1,8 +1,8 @@
-// === Module 20584: RoleTierEditScenesModal ===
+// === Module 20739: RoleTierEditScenesModal ===
 
-// Module 20584 (RoleTierEditScenesModal)
+// Module 20739 (RoleTierEditScenesModal)
 import _modDef38 from "module_38" /* 38 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,12 +21,12 @@ function orderify(scene, arg1) {
   }
   return obj2;
 }
-const RoleTierEditStore = fn(20572);
+const RoleTierEditStore = fn(20727);
 ({ useCurrentTierEditScene: hasOwnProperty, useResetTierEditState: closure_6 } = RoleTierEditStore);
-let closure_7 = fn(17704).GuildRoleSubscriptionsTierScenes;
+let closure_7 = fn(17824).GuildRoleSubscriptionsTierScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_11 = createStyles.createStyles({ stepsIndicator: { position: "absolute", alignSelf: "center", height: 48 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/RoleTierEditScenesModal.tsx");

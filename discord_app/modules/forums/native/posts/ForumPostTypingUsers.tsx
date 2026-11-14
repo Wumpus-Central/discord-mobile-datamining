@@ -1,9 +1,9 @@
-// === Module 14516: ForumPostTypingUsers ===
+// === Module 14628: ForumPostTypingUsers ===
 
-// Module 14516 (ForumPostTypingUsers)
+// Module 14628 (ForumPostTypingUsers)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import _modDef1652 from "module_1652" /* 1652 */;
+import _modDef1655 from "module_1655" /* 1655 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 }, lastTypingUser: { marginEnd: 0 }, typingUser: { marginEnd: -8, borderWidth: 2, borderRadius: nativeDefault.radii.round }, dots: null, typingText: null, borderColor: null, borderColorPressed: null };
 let obj3 = { marginEnd: -8, borderWidth: 2, borderRadius: nativeDefault.radii.round };
 obj2.dots = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingVertical: nativeDefault.space.PX_4, paddingLeft: 4, borderRadius: nativeDefault.radii.lg, marginStart: -8, borderWidth: 4, marginEnd: 8, marginTop: -1, marginBottom: -1 };
@@ -58,7 +58,7 @@ export default function ForumPostTypingUsers(hasUnreads) {
   ForumPostTypingUsersTsx1.__closure = items1;
   ForumPostTypingUsersTsx1.__workletHash = 15202435957297;
   ForumPostTypingUsersTsx1.__initData = tmp8;
-  animatedStyle = require("module_1652").useAnimatedStyle(ForumPostTypingUsersTsx1);
+  animatedStyle = require("module_1655").useAnimatedStyle(ForumPostTypingUsersTsx1);
   let str = "text-muted";
   if (hasUnreads.hasUnreads) {
     str = "text-default";
@@ -78,7 +78,7 @@ export default function ForumPostTypingUsers(hasUnreads) {
               }
               const obj = { style: items, children: React4(native.Avatar, { source: getAvatarSource.getAvatarSource(guildId), size: native.AvatarSizes.SIZE_16 }) };
               items[2] = lastTypingUser;
-              return React4(_modDef1652.View, obj, getAvatarSource.id);
+              return React4(_modDef1655.View, obj, getAvatarSource.id);
             }),
   ,
 

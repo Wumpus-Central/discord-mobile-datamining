@@ -1,8 +1,8 @@
-// === Module 11885: StageChannelUnifiedCallExperiment ===
+// === Module 11951: StageChannelUnifiedCallExperiment ===
 
-// Module 11885 (StageChannelUnifiedCallExperiment)
+// Module 11951 (StageChannelUnifiedCallExperiment)
 import Constants from "Constants" /* 1072 */;
-import ApexExperiment_mod from "ApexExperiment" /* 1449 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;

@@ -1,11 +1,11 @@
-// === Module 7965: useManageResourcePermissions ===
+// === Module 8030: useManageResourcePermissions ===
 
-// Module 7965 (useManageResourcePermissions)
+// Module 8030 (useManageResourcePermissions)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import UserStore from "UserStore" /* 1385 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
@@ -60,7 +60,7 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
   }
   return tmp;
 }
-const PermissionsConstants = fn(7964);
+const PermissionsConstants = fn(8029);
 ({ CREATE_GUILD_EVENT_CORE_PERMISSIONS: metroImportDefault, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8, CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_9 } = PermissionsConstants);
 const Permissions = fn(1083).Permissions;
 let closure_11 = {

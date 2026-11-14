@@ -1,6 +1,6 @@
-// === Module 15985: Timer ===
+// === Module 16105: Timer ===
 
-// Module 15985 (Timer)
+// Module 16105 (Timer)
 import applyDefault from "apply" /* 12 */;
 import native from "native" /* 1187 */;
 import noop from "module_19" /* 19 */;

@@ -1,11 +1,11 @@
-// === Module 12814: StageViewWithPrompts ===
+// === Module 12910: StageViewWithPrompts ===
 
-// Module 12814 (StageViewWithPrompts)
+// Module 12910 (StageViewWithPrompts)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import FocusedControls from "FocusedControls" /* 12817 */;
-import MicrophoneSpotIllustration from "MicrophoneSpotIllustration" /* 12832 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import FocusedControls from "FocusedControls" /* 12913 */;
+import MicrophoneSpotIllustration from "MicrophoneSpotIllustration" /* 12928 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,8 +13,8 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let closure_7 = fn(12815).CALL_ACTION_BAR_HEIGHT + 8;
-const createStyles = fn(5243);
+let closure_7 = fn(12911).CALL_ACTION_BAR_HEIGHT + 8;
+const createStyles = fn(5306);
 let obj2 = { scrollView: { flex: 1 }, container: { paddingHorizontal: 16, alignItems: "center" }, illustration: { marginTop: nativeDefault.space.PX_48, marginBottom: nativeDefault.space.PX_16 }, title: { marginTop: 16, marginBottom: 8, textAlign: "center" }, body: { fontSize: 14, textAlign: "center" }, prompts: { marginTop: 24, display: "flex", flexDirection: "column", width: "100%" } };
 const styles = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 7331: ConjurePreviewPauseStore ===
+// === Module 7395: ConjurePreviewPauseStore ===
 
-// Module 7331 (ConjurePreviewPauseStore)
+// Module 7395 (ConjurePreviewPauseStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

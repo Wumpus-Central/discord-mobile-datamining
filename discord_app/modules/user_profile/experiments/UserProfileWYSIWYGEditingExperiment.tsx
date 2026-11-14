@@ -1,7 +1,7 @@
-// === Module 9969: UserProfileWYSIWYGEditingExperiment ===
+// === Module 10036: UserProfileWYSIWYGEditingExperiment ===
 
-// Module 9969 (UserProfileWYSIWYGEditingExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 10036 (UserProfileWYSIWYGEditingExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-03-wysiwyg-user-profile-editing", kind: "user", defaultConfig: { enabled: false }, variations: null };

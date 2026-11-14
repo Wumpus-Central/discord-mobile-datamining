@@ -1,8 +1,8 @@
-// === Module 11044: uploadDebugLog ===
+// === Module 11111: uploadDebugLog ===
 
-// Module 11044 (uploadDebugLog)
+// Module 11111 (uploadDebugLog)
 import Constants from "Constants" /* 1072 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

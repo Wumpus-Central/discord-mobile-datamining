@@ -1,35 +1,35 @@
-// === Module 12353: MessagesRenderer ===
+// === Module 12448: MessagesRenderer ===
 
-// Module 12353 (MessagesRenderer)
+// Module 12448 (MessagesRenderer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import KeyboardTypes from "KeyboardTypes" /* 1625 */;
-import QuestTypes from "QuestTypes" /* 5278 */;
-import Client from "Client" /* 5480 */;
-import CodedLink from "CodedLink" /* 5992 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 8774 */;
-import QuestActionCreators from "QuestActionCreators" /* 10065 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11798 */;
-import computeScrollData from "computeScrollData" /* 11815 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11816 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11818 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11820 */;
-import useSocialLayerStorefrontEmbedData from "useSocialLayerStorefrontEmbedData" /* 12336 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 12354 */;
-import MessagesHandlers from "MessagesHandlers" /* 12364 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 12368 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 14092 */;
-import NavigationTTIDefinition from "NavigationTTIDefinition" /* 14453 */;
-import MessagesUtilsDefault from "MessagesUtils" /* 14454 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
+import QuestTypes from "QuestTypes" /* 5341 */;
+import Client from "Client" /* 5543 */;
+import CodedLink from "CodedLink" /* 6055 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8660 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 8841 */;
+import QuestActionCreators from "QuestActionCreators" /* 10133 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11864 */;
+import computeScrollData from "computeScrollData" /* 11881 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11882 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11884 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11886 */;
+import useSocialLayerStorefrontEmbedData from "useSocialLayerStorefrontEmbedData" /* 12431 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 12449 */;
+import MessagesHandlers from "MessagesHandlers" /* 12459 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 12463 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 14199 */;
+import NavigationTTIDefinition from "NavigationTTIDefinition" /* 14565 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 14566 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import ReadStateStore from "ReadStateStore" /* 6952 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import ReadStateStore from "ReadStateStore" /* 7015 */;
 
 require = fn;
 function handleTapShowAltText(description) {
@@ -54,9 +54,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(11799).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(5155).getUserCommunicationDisabledVersion;
-const Changeset = fn(9093).Changeset;
+let closure_6 = fn(11865).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(5218).getUserCommunicationDisabledVersion;
+const Changeset = fn(9160).Changeset;
 const Constants = fn(1072);
 ({ ActivityActionTypes: closure_11, MAX_MESSAGES_PER_CHANNEL: closure_12, MessageFlags: map1, MessageTypes: closure_14, Permissions: closure_15 } = Constants);
 const jsxProd = fn(21);

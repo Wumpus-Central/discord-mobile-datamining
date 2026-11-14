@@ -1,10 +1,10 @@
-// === Module 9567: marketing_page_banner ===
+// === Module 9634: marketing_page_banner ===
 
-// Module 9567 (marketing_page_banner)
+// Module 9634 (marketing_page_banner)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9563 */;
-import help_article from "help_article" /* 9564 */;
-import cta_button from "cta_button" /* 9565 */;
+import localized_string from "localized_string" /* 9630 */;
+import help_article from "help_article" /* 9631 */;
+import cta_button from "cta_button" /* 9632 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

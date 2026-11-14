@@ -1,9 +1,9 @@
-// === Module 10708: GuildBoostingMarketingConstants ===
+// === Module 10777: GuildBoostingMarketingConstants ===
 
-// Module 10708 (GuildBoostingMarketingConstants)
+// Module 10777 (GuildBoostingMarketingConstants)
 import util from "util" /* 1113 */;
 import Constants from "Constants" /* 1072 */;
-import PremiumConstants from "PremiumConstants" /* 1387 */;
+import PremiumConstants from "PremiumConstants" /* 1390 */;
 import size from "module_2" /* 2 */;
 
 const BoostedGuildTiers = Constants.BoostedGuildTiers;

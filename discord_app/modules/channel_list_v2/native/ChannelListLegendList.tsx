@@ -1,8 +1,8 @@
-// === Module 18848: ChannelListLegendList ===
+// === Module 18977: ChannelListLegendList ===
 
-// Module 18848 (ChannelListLegendList)
-import FastList from "FastList" /* 7781 */;
-import useChannelListFlatDataDefault from "useChannelListFlatData" /* 18849 */;
+// Module 18977 (ChannelListLegendList)
+import FastList from "FastList" /* 7847 */;
+import useChannelListFlatDataDefault from "useChannelListFlatData" /* 18978 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ Fragment: closure_4, jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = [];
-let closure_8 = { item: "delete", positionPercentage: false };
+let closure_8 = { item: "description", positionPercentage: false };
 let closure_9 = { zIndex: 5 };
 let closure_10 = { code: "(function ChannelListLegendListTsx1(event){let[scrollPosValue,onScrollWorklet,onScroll,scheduleOnRN]=this.__closure;scrollPosValue.set(event.contentOffset.y);onScrollWorklet(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);if(onScroll!=null){scheduleOnRN(onScroll);}})" };
 const size = fn(2);
@@ -65,7 +65,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
       return Math.max(0, Math.min(diff, contentSize + c2 - c3));
     }
   }, []);
-  const sharedValue = require("module_1652").useSharedValue(memo);
+  const sharedValue = require("module_1655").useSharedValue(memo);
   const ref2 = noop.useRef(tmp3);
   ref2.current = tmp3;
   const ref3 = noop.useRef(0);
@@ -264,9 +264,9 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   }, items);
   const items1 = [memo1];
   const imperativeHandle = noop.useImperativeHandle(ref, () => memo1, items1);
-  let obj2 = require("module_1652");
+  let obj2 = require("module_1655");
   const tmp5 = _require;
-  const items2 = [index, sharedValue, onScrollWorklet, onScroll, require("module_1705").scheduleOnRN];
+  const items2 = [index, sharedValue, onScrollWorklet, onScroll, require("module_1708").scheduleOnRN];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -288,7 +288,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   ChannelListLegendListTsx1.__workletHash = 15385241443618;
   ChannelListLegendListTsx1.__initData = tmp11;
   const items4 = [renderItem, renderSectionFooter, renderSectionHeader];
-  const obj3 = require("module_1652");
+  const obj3 = require("module_1655");
   const callback = obj.useCallback((item) => {
     item = item.item;
     const type = item.type;
@@ -330,10 +330,10 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   obj4.ListHeaderComponentStyle = ref1;
   obj4.onEndReached = onEndReached;
   obj4.onEndReachedThreshold = num;
-  obj4.onScroll = require("module_1652").useAnimatedScrollHandler(ChannelListLegendListTsx1);
+  obj4.onScroll = require("module_1655").useAnimatedScrollHandler(ChannelListLegendListTsx1);
   obj4.renderItem = callback;
   obj4.scrollIndicatorInsets = memo4;
-  const items8 = [renderItem(tmp5(15063).AnimatedLegendList, obj4), renderAccessory(memo1)];
+  const items8 = [renderItem(tmp5(15177).AnimatedLegendList, obj4), renderAccessory(memo1)];
   obj5.children = items8;
   return renderSectionFooter(renderHeader, obj5);
 });

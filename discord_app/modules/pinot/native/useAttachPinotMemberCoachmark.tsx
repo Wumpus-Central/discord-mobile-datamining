@@ -1,12 +1,12 @@
-// === Module 12246: useAttachPinotMemberCoachmark ===
+// === Module 12341: useAttachPinotMemberCoachmark ===
 
-// Module 12246 (useAttachPinotMemberCoachmark)
+// Module 12341 (useAttachPinotMemberCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3337 from "module_3337" /* 3337 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import ExperimentalWebIcon from "ExperimentalWebIcon" /* 12247 */;
-import PinotAnalytics from "PinotAnalytics" /* 12249 */;
+import _modDef3385 from "module_3385" /* 3385 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import ExperimentalWebIcon from "ExperimentalWebIcon" /* 12342 */;
+import PinotAnalytics from "PinotAnalytics" /* 12344 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ function renderWebIcon() {
 }
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_4, UserSettingsSections: hasOwnProperty } = Constants);
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
@@ -40,10 +40,10 @@ export function useAttachPinotMemberCoachmark(ref1, channel, bottom) {
   const memo = guild_id.useMemo(() => {
     let obj = { title: null, description: null, renderImgComponent: null, visible: null, position: null, offsetY: 12, onDismiss: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3337.MrT2mn);
+    obj.title = intl.string(_modDef3385.MrT2mn);
     let obj2 = { children: null };
     const intl2 = util.intl;
-    items = [intl2.string(_modDef3337.x9NGts), "\n", ];
+    items = [intl2.string(_modDef3385.x9NGts), "\n", ];
     let obj3 = {
       variant: "body-sm/medium",
       color: "text-link",
@@ -57,7 +57,7 @@ export function useAttachPinotMemberCoachmark(ref1, channel, bottom) {
       children: null
     };
     const intl3 = util.intl;
-    obj3.children = intl3.string(_modDef3337.eJZ8MS);
+    obj3.children = intl3.string(_modDef3385.eJZ8MS);
     items[2] = metroImportDefault(Text_Text.Text, obj3);
     obj2.children = items;
     obj.description = React6(React5, obj2);

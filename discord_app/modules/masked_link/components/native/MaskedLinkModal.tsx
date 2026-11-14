@@ -1,21 +1,21 @@
-// === Module 15835: MaskedLinkModal ===
+// === Module 15955: MaskedLinkModal ===
 
-// Module 15835 (MaskedLinkModal)
+// Module 15955 (MaskedLinkModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import AlertModal from "AlertModal" /* 6211 */;
-import Stack_Stack from "Stack/Stack" /* 6274 */;
-import Form from "Form" /* 8041 */;
-import SharedStateUtils from "SharedStateUtils" /* 15832 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import AlertModal from "AlertModal" /* 6274 */;
+import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Form from "Form" /* 8106 */;
+import SharedStateUtils from "SharedStateUtils" /* 15952 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5243 */;
+import createStyles from "createStyles" /* 5306 */;
 import size from "module_2" /* 2 */;
 
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const obj = { linkCalloutContainer: { maxHeight: 250 }, emphasis: { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
+const obj = { linkCalloutContainer: { maxHeight: 250 }, emphasis: { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_6 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/masked_link/components/native/MaskedLinkModal.tsx");
 

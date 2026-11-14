@@ -1,27 +1,34 @@
-// === Module 17403: useOrbBalanceEntrypoint ===
+// === Module 17526: useOrbBalanceEntrypoint ===
 
-// Module 17403 (useOrbBalanceEntrypoint)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 15828 */;
-import OrbchievementsExperiment from "OrbchievementsExperiment" /* 17421 */;
+// Module 17526 (useOrbBalanceEntrypoint)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
+import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 15948 */;
+import VirtualCurrencyAnalyticsUtil from "VirtualCurrencyAnalyticsUtil" /* 17528 */;
+import OrbchievementsExperiment from "OrbchievementsExperiment" /* 17539 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(17404).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_5 = fn(17527).ORB_WALLET_ACTION_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/useOrbBalanceEntrypoint.tsx");
 
-export function openBalanceWidgetActionSheet(isOrbWalletEntrypointEnabled, arg1) {
-  closure_0 = isOrbWalletEntrypointEnabled;
+export function openBalanceWidgetActionSheet(isOrbWalletEntrypointEnabled, analyticsPage) {
+  _require = isOrbWalletEntrypointEnabled;
+  if (isOrbWalletEntrypointEnabled) {
+    const obj2 = { pageType: analyticsPage.analyticsPage, sectionType: AnalyticsLocationDefault.ORB_WALLET, ctaObject: analyticsPage.openCtaObject };
+    require("VirtualCurrencyAnalyticsUtil").trackOrbsClick(obj2);
+    const obj = require("VirtualCurrencyAnalyticsUtil");
+  }
   let str = "BalanceWidgetActionSheet";
-  const obj = ActionSheetActionCreatorsDefault;
+  const obj3 = ActionSheetActionCreatorsDefault;
   if (isOrbWalletEntrypointEnabled) {
     str = closure_5;
   }
-  obj.openLazy(asyncGeneratorStep(async () => {
+  obj3.openLazy(asyncGeneratorStep(async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -46,16 +53,16 @@ export function openBalanceWidgetActionSheet(isOrbWalletEntrypointEnabled, arg1)
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const tmp15 = v3(closure_1_2[5]);
+            const tmp15 = v3(closure_1_2[7]);
             if (closure_0) {
               c1 = 2;
               v3 = 1;
-              const obj4 = { value: tmp15(closure_1_2[4], closure_1_2.paths), done: false };
+              const obj4 = { value: tmp15(closure_1_2[6], closure_1_2.paths), done: false };
               return obj4;
             } else {
               c1 = 1;
               v3 = 1;
-              const obj5 = { value: tmp15(closure_1_2[6], closure_1_2.paths), done: false };
+              const obj5 = { value: tmp15(closure_1_2[8], closure_1_2.paths), done: false };
               return obj5;
             }
           }
@@ -84,7 +91,71 @@ export function openBalanceWidgetActionSheet(isOrbWalletEntrypointEnabled, arg1)
         throw tmp7;
       }
     }
-  }), str, arg1);
+  }), str, analyticsPage);
+  const tmp5 = asyncGeneratorStep(async () => {
+    if (v3 === 2) {
+      v3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        v3 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            v3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            v3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            const tmp15 = v3(closure_1_2[7]);
+            if (closure_0) {
+              c1 = 2;
+              v3 = 1;
+              const obj4 = { value: tmp15(closure_1_2[6], closure_1_2.paths), done: false };
+              return obj4;
+            } else {
+              c1 = 1;
+              v3 = 1;
+              const obj5 = { value: tmp15(closure_1_2[8], closure_1_2.paths), done: false };
+              return obj5;
+            }
+          }
+        } else {
+          if (1 === tmp4) {
+            if (arg0 === 1) {
+              v3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              v3 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else {
+              v3 = 3;
+            }
+          } else if (arg0 === 1) {
+            v3 = 3;
+            throw value;
+          }
+          v3 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp7) {
+        v3 = tmp;
+        throw tmp7;
+      }
+    }
+  });
 }
 export function useIsOrbWalletEntrypointEnabled(location) {
   const obj = useVirtualCurrencyMobileEnabled;
@@ -97,21 +168,25 @@ export function useOrbBalanceEntrypoint(location) {
   const tmp3 = require("OrbchievementsExperiment").useIsOrbchievementsMobileEnabled({ location: location.location }) && obj.useVirtualCurrencyMobileEnabled().enabled;
   _require = tmp3;
   let obj2 = require("OrbchievementsExperiment");
-  const orbChallengeUnreadState = tmp(17407).useOrbChallengeUnreadState({ enabled: tmp3 });
+  const orbChallengeUnreadState = tmp(17531).useOrbChallengeUnreadState({ enabled: tmp3 });
   items = [tmp3];
   ({ hasUnreadUpdate, notificationType } = orbChallengeUnreadState);
-  const tmpResult = tmp(17407);
+  const tmpResult = tmp(17531);
   return {
     isOrbchievementsEnabled: tmp3,
     hasUnreadUpdate,
     notificationType,
-    openBalanceWidgetActionSheet: noop.useCallback((arg0) => {
+    openBalanceWidgetActionSheet: noop.useCallback((analyticsPage) => {
+      if (closure_0) {
+        let obj2 = { pageType: analyticsPage.analyticsPage, sectionType: AnalyticsLocationDefault.ORB_WALLET, ctaObject: analyticsPage.openCtaObject };
+        VirtualCurrencyAnalyticsUtil.trackOrbsClick(obj2);
+      }
       let str = "BalanceWidgetActionSheet";
-      let obj = ActionSheetActionCreatorsDefault;
+      let obj3 = ActionSheetActionCreatorsDefault;
       if (closure_0) {
         str = closure_5;
       }
-      obj.openLazy(asyncGeneratorStep(async () => {
+      obj3.openLazy(asyncGeneratorStep(async () => {
         if (v3 === 2) {
           v3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -136,16 +211,16 @@ export function useOrbBalanceEntrypoint(location) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                const tmp15 = v3(closure_1_2[5]);
+                const tmp15 = v3(closure_1_2[7]);
                 if (closure_0) {
                   c1 = 2;
                   v3 = 1;
-                  const obj4 = { value: tmp15(closure_1_2[4], closure_1_2.paths), done: false };
+                  const obj4 = { value: tmp15(closure_1_2[6], closure_1_2.paths), done: false };
                   return obj4;
                 } else {
                   c1 = 1;
                   v3 = 1;
-                  const obj5 = { value: tmp15(closure_1_2[6], closure_1_2.paths), done: false };
+                  const obj5 = { value: tmp15(closure_1_2[8], closure_1_2.paths), done: false };
                   return obj5;
                 }
               }
@@ -174,7 +249,71 @@ export function useOrbBalanceEntrypoint(location) {
             throw tmp7;
           }
         }
-      }), str, arg0);
+      }), str, analyticsPage);
+      const tmp6 = asyncGeneratorStep(async () => {
+        if (v3 === 2) {
+          v3 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            v3 = 2;
+            if (0 === c1) {
+              if (arg0 === 1) {
+                v3 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                v3 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                const tmp15 = v3(closure_1_2[7]);
+                if (closure_0) {
+                  c1 = 2;
+                  v3 = 1;
+                  const obj4 = { value: tmp15(closure_1_2[6], closure_1_2.paths), done: false };
+                  return obj4;
+                } else {
+                  c1 = 1;
+                  v3 = 1;
+                  const obj5 = { value: tmp15(closure_1_2[8], closure_1_2.paths), done: false };
+                  return obj5;
+                }
+              }
+            } else {
+              if (1 === tmp4) {
+                if (arg0 === 1) {
+                  v3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  v3 = 3;
+                  const obj6 = { value, done: true };
+                  return obj6;
+                } else {
+                  v3 = 3;
+                }
+              } else if (arg0 === 1) {
+                v3 = 3;
+                throw value;
+              }
+              v3 = 3;
+              const obj = { value, done: true };
+              return obj;
+            }
+          } catch (tmp7) {
+            v3 = tmp;
+            throw tmp7;
+          }
+        }
+      });
     }, items)
   };
 }

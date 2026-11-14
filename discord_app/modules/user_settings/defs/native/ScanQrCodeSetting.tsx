@@ -1,15 +1,15 @@
-// === Module 17385: ScanQrCodeSetting ===
+// === Module 17508: ScanQrCodeSetting ===
 
-// Module 17385 (ScanQrCodeSetting)
+// Module 17508 (ScanQrCodeSetting)
 import util from "util" /* 1113 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 8126 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 8192 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const NativePermissionTypes = fn(6839).NativePermissionTypes;
+const NativePermissionTypes = fn(6902).NativePermissionTypes;
 const apply = fn(12);
-const SettingBuilders = fn(12311);
+const SettingBuilders = fn(12406);
 const debounceResult = apply.debounce(asyncGeneratorStep(async () => {
   if (c3 === 2) {
     c3 = 3;
@@ -84,7 +84,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: fn(17289).QrCodeIcon,
+  IconComponent: fn(17412).QrCodeIcon,
   onPress: apply.debounce(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;

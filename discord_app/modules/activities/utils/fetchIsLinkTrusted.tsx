@@ -1,8 +1,8 @@
-// === Module 16822: fetchIsLinkTrusted ===
+// === Module 16945: fetchIsLinkTrusted ===
 
-// Module 16822 (fetchIsLinkTrusted)
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import URLUtilsDefault from "URLUtils" /* 1378 */;
+// Module 16945 (fetchIsLinkTrusted)
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import URLUtilsDefault from "URLUtils" /* 1381 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

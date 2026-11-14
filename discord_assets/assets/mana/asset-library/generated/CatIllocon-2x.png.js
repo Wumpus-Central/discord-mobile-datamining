@@ -1,6 +1,6 @@
-// === Module 13571: ? ===
+// === Module 13674: ? ===
 
-// Module 13571
+// Module 13674
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CatIllocon-2x.png.js");

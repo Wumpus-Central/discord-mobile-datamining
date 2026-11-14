@@ -1,13 +1,13 @@
-// === Module 1446: ImageLoaderUtils ===
+// === Module 1449: ImageLoaderUtils ===
 
-// Module 1446 (ImageLoaderUtils)
-import URLUtilsDefault from "URLUtils" /* 1378 */;
-import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1447 */;
-import AttachmentImageLadder from "AttachmentImageLadder" /* 1448 */;
-import privDefault from "priv" /* 1453 */;
-import _modDef1487 from "module_1487" /* 1487 */;
-import ImageUtils from "ImageUtils" /* 1490 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
+// Module 1449 (ImageLoaderUtils)
+import URLUtilsDefault from "URLUtils" /* 1381 */;
+import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment" /* 1450 */;
+import AttachmentImageLadder from "AttachmentImageLadder" /* 1451 */;
+import privDefault from "priv" /* 1456 */;
+import _modDef1490 from "module_1490" /* 1490 */;
+import ImageUtils from "ImageUtils" /* 1493 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2024 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -43,10 +43,10 @@ function getSrcWithWidthAndHeight(quality) {
     if (!obj.isDiscordCdnUrl(src)) {
       [tmp8, tmp9] = src.split("?");
       const tmp7 = _slicedToArray(src.split("?"), 2);
-      const parsed = _modDef1487.parse(tmp9);
+      const parsed = _modDef1490.parse(tmp9);
       delete tmp2[tmp];
       items = [tmp8, parsed];
-      const tmp4Result = _modDef1487;
+      const tmp4Result = _modDef1490;
       [tmp12, tmp13] = items;
       if (null != format) {
         tmp13.format = format;
@@ -105,7 +105,7 @@ function getSrcWithWidthAndHeight(quality) {
       const fitResult = ImageUtils.fit(size1);
       let text = tmp12;
       if (!tmp4Result3.isEmpty(tmp13)) {
-        _modDef1487;
+        _modDef1490;
         text = `${tmp12}?${obj9.stringify(tmp13)}`;
       }
       return text;
@@ -263,7 +263,7 @@ export function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F124490 */ function() { ... });
+                            image.onerror = closure_2_4(/* F125892 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

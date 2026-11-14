@@ -1,16 +1,16 @@
-// === Module 17990: InAppNotificationsSetting ===
+// === Module 18110: InAppNotificationsSetting ===
 
-// Module 17990 (InAppNotificationsSetting)
+// Module 18110 (InAppNotificationsSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import _modDef3013 from "module_3013" /* 3013 */;
-import UserSettings from "UserSettings" /* 5068 */;
-import SettingsConstants from "SettingsConstants" /* 9135 */;
-import FocusModeUtils from "FocusModeUtils" /* 10952 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 16779 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 17991 */;
-import SettingBuilders_mod from "SettingBuilders" /* 12311 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import _modDef3029 from "module_3029" /* 3029 */;
+import UserSettings from "UserSettings" /* 5131 */;
+import SettingsConstants from "SettingsConstants" /* 9202 */;
+import FocusModeUtils from "FocusModeUtils" /* 11021 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 16902 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 18111 */;
+import SettingBuilders_mod from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -57,7 +57,7 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef3013.sH5mu9);
+  return intl.string(_modDef3029.sH5mu9);
 };
 obj3.useDescription = function useRedesignInAppNotificationsDescription() {
   const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
@@ -66,7 +66,7 @@ obj3.useDescription = function useRedesignInAppNotificationsDescription() {
   if (focusModeEnabled) {
     let stringResult = string(util.t.cIRG0s);
   } else {
-    stringResult = string(_modDef3013["T/zMdV"]);
+    stringResult = string(_modDef3029["T/zMdV"]);
   }
   return stringResult;
 };

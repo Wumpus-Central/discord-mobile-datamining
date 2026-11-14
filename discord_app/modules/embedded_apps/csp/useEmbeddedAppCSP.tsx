@@ -1,11 +1,11 @@
-// === Module 12782: useEmbeddedAppCSP ===
+// === Module 12878: useEmbeddedAppCSP ===
 
-// Module 12782 (useEmbeddedAppCSP)
-import getURLForApplication from "getURLForApplication" /* 5911 */;
-import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 7280 */;
-import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 7281 */;
+// Module 12878 (useEmbeddedAppCSP)
+import getURLForApplication from "getURLForApplication" /* 5974 */;
+import EmbeddedAppFramePolicyExperiment from "EmbeddedAppFramePolicyExperiment" /* 7344 */;
+import EmbeddedAppCSPActionCreators from "EmbeddedAppCSPActionCreators" /* 7345 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 7279 */;
+import EmbeddedAppCSPStore from "EmbeddedAppCSPStore" /* 7343 */;
 
 require = fn;
 const initialize = fn(504);

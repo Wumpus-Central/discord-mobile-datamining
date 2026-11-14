@@ -1,14 +1,14 @@
-// === Module 10072: QuestDecisionRoundtripTracker ===
+// === Module 10140: QuestDecisionRoundtripTracker ===
 
-// Module 10072 (QuestDecisionRoundtripTracker)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AdCreativeType from "AdCreativeType" /* 5282 */;
-import NetStats from "NetStats" /* 8596 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 8599 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 8714 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 8739 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 8738 */;
-import NetworkStore from "NetworkStore" /* 6147 */;
+// Module 10140 (QuestDecisionRoundtripTracker)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import AdCreativeType from "AdCreativeType" /* 5345 */;
+import NetStats from "NetStats" /* 8663 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 8666 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 8781 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 8806 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8805 */;
+import NetworkStore from "NetworkStore" /* 6210 */;
 
 require = fn;
 function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
@@ -69,22 +69,21 @@ class QuestDecisionRoundtripTracker {
   }
 }
 const prototype = QuestDecisionRoundtripTracker.prototype;
-prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource, arg2) {
+prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource) {
   const self = this;
-  let tmp = arg2;
-  if (arg2 === undefined) {
+  let tmp = MOBILE_HOME_DOCK_AREA;
+  if (MOBILE_HOME_DOCK_AREA === undefined) {
     tmp = null;
   }
   const SymbolResult = Symbol();
   c0 = SymbolResult;
   let tmp3 = null;
   if (null != tmp) {
-    const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
-    value = deliveryAdDecisionByPlacement.get(tmp);
-    if (value == null) {
-      value = null;
+    let first = AdDeliveryStore.getAdDecisionsForPlacement(tmp)[0];
+    if (first == null) {
+      first = null;
     }
-    tmp3 = value;
+    tmp3 = first;
   }
   let pendingRequests = this.pendingRequests;
   const result = pendingRequests.set(SymbolResult, {

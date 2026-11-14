@@ -1,17 +1,17 @@
-// === Module 15689: useConjureServerWidgetOffers ===
+// === Module 15808: useConjureServerWidgetOffers ===
 
-// Module 15689 (useConjureServerWidgetOffers)
+// Module 15808 (useConjureServerWidgetOffers)
 import BackoffDefault from "Backoff" /* 559 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6955 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 7265 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7293 */;
-import useAddableWidgets from "useAddableWidgets" /* 15691 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7018 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7329 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7357 */;
+import useAddableWidgets from "useAddableWidgets" /* 15810 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 12174 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import UserStore from "UserStore" /* 1385 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 12266 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import UserStore from "UserStore" /* 1388 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 
 const require = globalThis.__r;
 
@@ -384,7 +384,7 @@ export default function useConjureServerWidgetOffers() {
   const stateFromStores5 = stateFromStoresArray(stateFromStores4[10]).useStateFromStores(items8, () => GuildStore.getGuilds());
   const items9 = [stateFromStoresArray, stateFromStores4, stateFromStores5, tmp11Result];
   return noop.useMemo(() => {
-    const found = closure_1.filter((item) => item instanceof stateFromStoresArray(7293).ApplicationWidget);
+    const found = closure_1.filter((item) => item instanceof stateFromStoresArray(7357).ApplicationWidget);
     const map = new Map();
     const iter = stateFromStoresArray[Symbol.iterator]();
     const nextResult = iter.next();
@@ -395,7 +395,7 @@ export default function useConjureServerWidgetOffers() {
       let arr2 = stateFromStores4[application_id];
       let found1;
       if (arr2 != null) {
-        found1 = arr2.find((status) => status.status === stateFromStoresArray(15690).ApplicationWidgetConfigStatus.PUBLISHED);
+        found1 = arr2.find((status) => status.status === stateFromStoresArray(15809).ApplicationWidgetConfigStatus.PUBLISHED);
       }
       let tmp6 = found1;
       let result = null != guild_id;

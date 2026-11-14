@@ -1,19 +1,19 @@
-// === Module 16500: RoleDot ===
+// === Module 16623: RoleDot ===
 
-// Module 16500 (RoleDot)
+// Module 16623 (RoleDot)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import LinearGradientDefault from "LinearGradient" /* 5830 */;
-import useFontScale from "useFontScale" /* 5881 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 6287 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import useFontScale from "useFontScale" /* 5944 */;
+import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 6350 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { flexShrink: 0 }, background: { position: "relative" }, backgroundColor: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.xs }, borderBase: null, borderColor: null, dot: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.xs };
 obj2.borderBase = { backgroundColor: nativeDefault.colors.TEXT_DEFAULT, borderRadius: nativeDefault.radii.md };

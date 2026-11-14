@@ -1,15 +1,15 @@
-// === Module 12986: StageChannelAnimationUtils ===
+// === Module 13082: StageChannelAnimationUtils ===
 
-// Module 12986 (StageChannelAnimationUtils)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11883 */;
-import StageChannelHeightHooks from "StageChannelHeightHooks" /* 12815 */;
+// Module 13082 (StageChannelAnimationUtils)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11949 */;
+import StageChannelHeightHooks from "StageChannelHeightHooks" /* 12911 */;
 import size from "module_2" /* 2 */;
 
 let obj = { duration: 250, easing: null };
-const Easing = _mod1652.Easing;
+const Easing = _mod1655.Easing;
 obj.easing = Easing.bezier(0.66, 0, 0.2, 1);
 let closure_4 = { code: "(function StageChannelAnimationUtilsTsx1(){let[isInvited,actionBarHeight,ACTION_BAR_SAFE_AREA_PADDING,safeAreaTop,controlPadding]=this.__closure;return isInvited?actionBarHeight+ACTION_BAR_SAFE_AREA_PADDING+safeAreaTop:controlPadding;})" };
 let closure_5 = { code: "(function StageChannelAnimationUtilsTsx2(){let[withTiming,paddingTop,TIMING_CONFIG]=this.__closure;return{paddingTop:withTiming(paddingTop.get(),TIMING_CONFIG)};})" };
@@ -43,7 +43,7 @@ export function useStageActionBarAnimation(channelId, arg1) {
   StageChannelAnimationUtilsTsx1.__closure = items1;
   StageChannelAnimationUtilsTsx1.__workletHash = 554637474683;
   StageChannelAnimationUtilsTsx1.__initData = tmp5;
-  const derivedValue = _mod1652.useDerivedValue(StageChannelAnimationUtilsTsx1);
+  const derivedValue = _mod1655.useDerivedValue(StageChannelAnimationUtilsTsx1);
   const items2 = [closure_5, timing_timing.withTiming, derivedValue, obj];
   c0 = undefined;
   c1 = undefined;
@@ -59,5 +59,5 @@ export function useStageActionBarAnimation(channelId, arg1) {
   StageChannelAnimationUtilsTsx2.__closure = items3;
   StageChannelAnimationUtilsTsx2.__workletHash = 6071132596271;
   StageChannelAnimationUtilsTsx2.__initData = tmp12;
-  return _mod1652.useAnimatedStyle(StageChannelAnimationUtilsTsx2);
+  return _mod1655.useAnimatedStyle(StageChannelAnimationUtilsTsx2);
 }

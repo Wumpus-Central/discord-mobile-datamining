@@ -1,18 +1,18 @@
-// === Module 19447: DisplayNameStylesFlywheelProfileCoachmark ===
+// === Module 19639: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 19447 (DisplayNameStylesFlywheelProfileCoachmark)
-import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 19448 */;
+// Module 19639 (DisplayNameStylesFlywheelProfileCoachmark)
+import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 19640 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function CoachmarkImage() {
   return <View style={closure_8().coachmarkImageContainer}>{jsx(DisplayNameLockeAbstractUI.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" })}</View>;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx");
@@ -27,10 +27,10 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(504);
   const tmp4 = markAsDismissed;
-  const result = markAsDismissed(2171).canUsePremiumProfileCustomization(stateFromStores);
+  const result = markAsDismissed(2174).canUsePremiumProfileCustomization(stateFromStores);
   const intl = visible(1113).intl;
   const string = intl.string;
-  const tmp6 = markAsDismissed(3077);
+  const tmp6 = markAsDismissed(3125);
   if (result) {
     let stringResult = string(tmp6.h6sykk);
   } else {
@@ -39,7 +39,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   dependencyMap = stringResult;
   const intl2 = tmp(1113).intl;
   const string2 = intl2.string;
-  const tmp4Result = tmp4(3077);
+  const tmp4Result = tmp4(3125);
   if (result) {
     let string2Result = string2(tmp4Result.TyUdka);
   } else {
@@ -61,7 +61,7 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
       return closure_1_7(closure_1_9, {});
     }
   }), items2);
-  const obj2 = markAsDismissed(2171);
-  const coachmark = visible(9500).useCoachmark(visible.targetRef, memo);
+  const obj2 = markAsDismissed(2174);
+  const coachmark = visible(9567).useCoachmark(visible.targetRef, memo);
   return null;
 };

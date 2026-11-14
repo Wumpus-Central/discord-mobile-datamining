@@ -1,15 +1,15 @@
-// === Module 19459: useShouldShowExpiringTrialOfferCard ===
+// === Module 19651: useShouldShowExpiringTrialOfferCard ===
 
-// Module 19459 (useShouldShowExpiringTrialOfferCard)
+// Module 19651 (useShouldShowExpiringTrialOfferCard)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9243 */;
-import useCountdownDefault from "useCountdown" /* 9372 */;
-import NoticeStore from "NoticeStore" /* 16103 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9310 */;
+import useCountdownDefault from "useCountdown" /* 9440 */;
+import NoticeStore from "NoticeStore" /* 16224 */;
 
 require = fn;
 const NoticeTypes = fn(1072).NoticeTypes;
-const PremiumSubscriptionSKUs = fn(1387).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1390).PremiumSubscriptionSKUs;
 let closure_6 = 10 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx");

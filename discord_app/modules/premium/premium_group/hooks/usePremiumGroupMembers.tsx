@@ -1,9 +1,9 @@
-// === Module 15251: usePremiumGroupMembers ===
+// === Module 15365: usePremiumGroupMembers ===
 
-// Module 15251 (usePremiumGroupMembers)
+// Module 15365 (usePremiumGroupMembers)
 import _mod19 from "module_19" /* 19 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PremiumGroupStore from "PremiumGroupStore" /* 15248 */;
+import PremiumGroupStore from "PremiumGroupStore" /* 15362 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

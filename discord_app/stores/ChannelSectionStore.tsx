@@ -1,23 +1,23 @@
-// === Module 6973: ChannelSectionStore ===
+// === Module 7036: ChannelSectionStore ===
 
-// Module 6973 (ChannelSectionStore)
+// Module 7036 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import ApexExperiment from "ApexExperiment" /* 1449 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6975 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6976 */;
-import FriendsSidebarTracking from "FriendsSidebarTracking" /* 6977 */;
-import ApplicationStore from "ApplicationStore" /* 2162 */;
-import ExperimentStore from "ExperimentStore" /* 5469 */;
-import SearchMessageStore from "SearchMessageStore" /* 6974 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
-import UserStore from "UserStore" /* 1385 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 7038 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 7039 */;
+import FriendsSidebarTracking from "FriendsSidebarTracking" /* 7040 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import ExperimentStore from "ExperimentStore" /* 5532 */;
+import SearchMessageStore from "SearchMessageStore" /* 7037 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function setIsFriendsOpen(arg0, trackClose) {
@@ -136,7 +136,7 @@ function handlePermissionsChange() {
 }
 const Constants = fn(1072);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(5099);
+const ChannelConstants = fn(5162);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
 const Permissions = fn(1083).Permissions;
 let c17 = false;

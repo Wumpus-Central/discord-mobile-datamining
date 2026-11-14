@@ -1,10 +1,10 @@
-// === Module 12328: useDrawerWidth ===
+// === Module 12423: useDrawerWidth ===
 
-// Module 12328 (useDrawerWidth)
-import useChatLayoutDefault from "useChatLayout" /* 5432 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5434 */;
-import useFoldSeamDefault from "useFoldSeam" /* 12329 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
+// Module 12423 (useDrawerWidth)
+import useChatLayoutDefault from "useChatLayout" /* 5495 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5497 */;
+import useFoldSeamDefault from "useFoldSeam" /* 12424 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
 
 const require = fn;
 const Constants = fn(1072);

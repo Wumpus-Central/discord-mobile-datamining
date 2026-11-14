@@ -1,8 +1,8 @@
-// === Module 19795: useCanInviteMembers ===
+// === Module 19182: useCanInviteMembers ===
 
-// Module 19795 (useCanInviteMembers)
-import ChannelStore from "ChannelStore" /* 5092 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
+// Module 19182 (useCanInviteMembers)
+import ChannelStore from "ChannelStore" /* 5155 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
 
 const require = globalThis.__r;
 

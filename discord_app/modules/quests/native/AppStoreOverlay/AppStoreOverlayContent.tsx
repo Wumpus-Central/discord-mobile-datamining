@@ -1,8 +1,8 @@
-// === Module 10103: AppStoreOverlayContent ===
+// === Module 10172: AppStoreOverlayContent ===
 
-// Module 10103 (AppStoreOverlayContent)
-import openURL from "openURL" /* 5945 */;
-import LinkingDefault from "Linking" /* 5949 */;
+// Module 10172 (AppStoreOverlayContent)
+import openURL from "openURL" /* 6008 */;
+import LinkingDefault from "Linking" /* 6012 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -89,8 +89,8 @@ let closure_4 = async function _getAppStoreOverlayContent(arg0) {
               if (null != rating.category_id) {
                 appStoreOverlayCategoryLabel = null;
                 if ("" !== rating.category_id) {
-                  appStoreOverlayCategoryLabel = closure_1_0(10104).getAppStoreOverlayCategoryLabel(os.os, rating.category_id);
-                  const obj3 = closure_1_0(10104);
+                  appStoreOverlayCategoryLabel = closure_1_0(10173).getAppStoreOverlayCategoryLabel(os.os, rating.category_id);
+                  const obj3 = closure_1_0(10173);
                 }
               }
               const obj4 = { type: "chart", label: null, rank: null, category: null };

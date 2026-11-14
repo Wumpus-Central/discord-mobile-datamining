@@ -1,6 +1,6 @@
-// === Module 9319: sanitizeMediaDimension ===
+// === Module 9386: sanitizeMediaDimension ===
 
-// Module 9319 (sanitizeMediaDimension)
+// Module 9386 (sanitizeMediaDimension)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/sanitizeMediaDimension.tsx");

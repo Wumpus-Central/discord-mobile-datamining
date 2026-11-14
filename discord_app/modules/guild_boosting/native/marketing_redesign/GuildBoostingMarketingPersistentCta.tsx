@@ -1,18 +1,18 @@
-// === Module 15879: GuildBoostingMarketingPersistentCta ===
+// === Module 15999: GuildBoostingMarketingPersistentCta ===
 
-// Module 15879 (GuildBoostingMarketingPersistentCta)
+// Module 15999 (GuildBoostingMarketingPersistentCta)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5830 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import GuildIcon from "GuildIcon" /* 7654 */;
-import GuildBoostingSubscribeButtonDefault from "GuildBoostingSubscribeButton" /* 10730 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import GuildIcon from "GuildIcon" /* 7720 */;
+import GuildBoostingSubscribeButtonDefault from "GuildBoostingSubscribeButton" /* 10799 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 const GuildIconDefault = GuildIcon;
 
 require = fn;
@@ -21,7 +21,7 @@ const AnalyticsSections = fn(1072).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { stiffness: 70, damping: 10 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { wrapper: { display: "flex", alignItems: "center", position: "absolute", width: "100%", zIndex: 1, bottom: -76 }, innerWraper: null, guildInfoContainer: null, guildIcon: null, guildIconText: null, guildName: null, buttonContainer: null, button: null, border: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, display: "flex", flexDirection: "row", alignItems: "center", position: "relative", height: 76, width: 343, borderRadius: 76, paddingLeft: 13, paddingVertical: 13, paddingRight: 27 };
 obj2.innerWraper = size;
@@ -79,7 +79,7 @@ export default function GuildBoostingMarketingPersistentCta(guild) {
   GuildBoostingMarketingPersistentCtaTsx1.__closure = items2;
   GuildBoostingMarketingPersistentCtaTsx1.__workletHash = 5251879028260;
   GuildBoostingMarketingPersistentCtaTsx1.__initData = tmp5;
-  const animatedStyle = _mod1652.useAnimatedStyle(GuildBoostingMarketingPersistentCtaTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(GuildBoostingMarketingPersistentCtaTsx1);
   const obj3 = { style: null, children: null };
   const items3 = [tmp.wrapper, animatedStyle];
   obj3.style = items3;
@@ -101,6 +101,6 @@ export default function GuildBoostingMarketingPersistentCta(guild) {
   obj5.children = items6;
   obj4.children = metroImportDefault(View, obj5);
   obj3.children = timestampProducer(tmp12, obj4);
-  return timestampProducer(_modDef1652.View, obj3);
+  return timestampProducer(_modDef1655.View, obj3);
 };
 export const VISIBILITY_OFFSET = 120;

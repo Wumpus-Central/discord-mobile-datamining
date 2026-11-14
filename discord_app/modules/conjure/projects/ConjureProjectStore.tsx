@@ -1,20 +1,20 @@
-// === Module 6954: ConjureProjectStore ===
+// === Module 7017: ConjureProjectStore ===
 
-// Module 6954 (ConjureProjectStore)
+// Module 7017 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6955 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7018 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
-function isProjectOwner(item10010) {
+function isProjectOwner(project) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  return item10010.owner_user_id === id;
+  return project.owner_user_id === id;
 }
 function isRailProject(owner_user_id) {
   const currentUser = UserStore.getCurrentUser();

@@ -1,19 +1,19 @@
-// === Module 12342: useFetchSocialLayerStorefrontEmbedWishlist ===
+// === Module 12437: useFetchSocialLayerStorefrontEmbedWishlist ===
 
-// Module 12342 (useFetchSocialLayerStorefrontEmbedWishlist)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8417 */;
-import WishlistFetchSource from "WishlistFetchSource" /* 9402 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 9403 */;
+// Module 12437 (useFetchSocialLayerStorefrontEmbedWishlist)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8483 */;
+import WishlistFetchSource from "WishlistFetchSource" /* 9471 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 9472 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7288 */;
-import WishlistStore from "WishlistStore" /* 9396 */;
+import UserProfileStore from "UserProfileStore" /* 7352 */;
+import WishlistStore from "WishlistStore" /* 9465 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_8 = { user: "a", profile: "flexDirection", wishlistId: "st", wishlist: 331, updatedAt: null, storedUpdatedAt: 1, fetching: "heading-md/semibold", error: "mobile-text-heading-primary" };
+let closure_8 = { user: "a", profile: "Path", wishlistId: "container", wishlist: "animal", updatedAt: "chipmunk", storedUpdatedAt: "squirrel", fetching: "animal", error: "hedgehog" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/native/useFetchSocialLayerStorefrontEmbedWishlist.tsx");
 

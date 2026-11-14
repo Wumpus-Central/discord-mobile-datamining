@@ -1,26 +1,26 @@
-// === Module 11916: ChannelSpoiler ===
+// === Module 11982: ChannelSpoiler ===
 
-// Module 11916 (ChannelSpoiler)
+// Module 11982 (ChannelSpoiler)
 import nativeDefault from "native" /* 575 */;
-import RootNavigationRef from "RootNavigationRef" /* 5430 */;
-import useChannelNameDefault from "useChannelName" /* 5891 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
-import GatedContentDefault from "GatedContent" /* 11915 */;
+import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import useChannelNameDefault from "useChannelName" /* 5954 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import GatedContentDefault from "GatedContent" /* 11981 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildStore from "GuildStore" /* 5114 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildStore from "GuildStore" /* 5177 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { subtitle: { textAlign: "center", lineHeight: 22 }, subtitleContainer: { alignItems: "center" }, divider: null, subtitleMeasure: null };
 let size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 16 };
 obj2.divider = size;
@@ -45,7 +45,7 @@ export default function ChannelSpoiler(channelId) {
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = noop.useContext(tmp6(11918)).setControlsMode;
+  setControlsMode = noop.useContext(tmp6(11984)).setControlsMode;
   const items2 = [, , , ];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;
@@ -73,14 +73,14 @@ export default function ChannelSpoiler(channelId) {
     }
   }, items3);
   if (null != stateFromStores1) {
-    channelIconComponent = tmp(7968).getChannelIconComponent(stateFromStores1);
-    const tmpResult = tmp(7968);
+    channelIconComponent = tmp(8033).getChannelIconComponent(stateFromStores1);
+    const tmpResult = tmp(8033);
   }
   if (null != channelIconComponent) {
     let obj3 = { style: { flexDirection: "row", alignItems: "center", gap: 4, flexShrink: 1 }, children: null };
     const items4 = [closure_10(channelIconComponent, { size: "lg", color: "mobile-text-heading-primary" }), ];
     const obj5 = { variant: "heading-xxl/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: { flexShrink: 1 }, children: tmp7 };
-    items4[1] = closure_10(tmp(5866).Text, obj5);
+    items4[1] = closure_10(tmp(5929).Text, obj5);
     obj3.children = items4;
     let stringResult = closure_11(View, obj3);
   } else {
@@ -99,29 +99,29 @@ export default function ChannelSpoiler(channelId) {
       const obj7 = { style: tmp4.subtitleMeasure, pointerEvents: "none", children: null };
       const obj8 = { variant: "body-md/medium", maxFontSizeMultiplier: 2, onTextLayout: callback1, children: null };
       const obj9 = { channelId: stateFromStores1.id };
-      obj8.children = tmp6(5994).parseTopic(stateFromStores1.topic, true, obj9);
-      obj7.children = closure_10(tmp(5866).Text, obj8);
+      obj8.children = tmp6(6057).parseTopic(stateFromStores1.topic, true, obj9);
+      obj7.children = closure_10(tmp(5929).Text, obj8);
       const items5 = [closure_10(View, obj7), , , ];
       const obj10 = { color: "text-muted", variant: "body-md/medium", style: tmp4.subtitle, maxFontSizeMultiplier: 2, lineClamp: 3, children: null };
-      const tmp6Result = tmp6(5994);
+      const tmp6Result = tmp6(6057);
       const obj11 = { channelId: stateFromStores1.id };
-      obj10.children = tmp6(5994).parseTopic(stateFromStores1.topic, true, obj11);
-      items5[1] = closure_10(tmp(5866).Text, obj10);
+      obj10.children = tmp6(6057).parseTopic(stateFromStores1.topic, true, obj11);
+      items5[1] = closure_10(tmp(5929).Text, obj10);
       let tmp24Result = null;
       if (tmp5[0]) {
         const obj12 = { onPress: callback2, accessibilityRole: "button", children: null };
         const obj13 = { variant: "body-sm/medium", color: "text-brand", style: { textDecorationLine: "underline" }, children: null };
         const intl2 = tmp(1113).intl;
         obj13.children = intl2.string(tmp(1113).t["/QvRak"]);
-        obj12.children = closure_10(tmp(5866).Text, obj13);
-        tmp24Result = closure_10(tmp(7364).PressableHighlight, obj12);
+        obj12.children = closure_10(tmp(5929).Text, obj13);
+        tmp24Result = closure_10(tmp(7428).PressableHighlight, obj12);
       }
       items5[2] = tmp24Result;
       const obj14 = { style: tmp4.divider };
       items5[3] = closure_10(View, obj14);
       obj6.children = items5;
-      tmp23Result = closure_11(tmp(6274).Stack, obj6);
-      const tmp6Result3 = tmp6(5994);
+      tmp23Result = closure_11(tmp(6337).Stack, obj6);
+      const tmp6Result3 = tmp6(6057);
     }
     str = stateFromStores1.topic;
   }

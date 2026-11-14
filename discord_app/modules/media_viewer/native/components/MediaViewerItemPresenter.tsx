@@ -1,12 +1,12 @@
-// === Module 15120: MediaViewerItemPresenter ===
+// === Module 15234: MediaViewerItemPresenter ===
 
-// Module 15120 (MediaViewerItemPresenter)
-import MediaViewerEntranceJankExperiment from "MediaViewerEntranceJankExperiment" /* 15099 */;
-import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 15118 */;
-import MediaViewerItemTransformPresenterDefault from "MediaViewerItemTransformPresenter" /* 15121 */;
+// Module 15234 (MediaViewerItemPresenter)
+import MediaViewerEntranceJankExperiment from "MediaViewerEntranceJankExperiment" /* 15213 */;
+import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 15232 */;
+import MediaViewerItemTransformPresenterDefault from "MediaViewerItemTransformPresenter" /* 15235 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = tmp5(1652);
+const _modDef1655 = tmp5(1655);
 require = fn;
 function MediaViewerItemPresenter(windowHeight) {
   ({ source, originLayout, renderMedia, windowWidth } = windowHeight);
@@ -102,7 +102,7 @@ function MediaViewerItemPresenter(windowHeight) {
   }
   const obj2 = require("useMediaItemHasSpoiler");
   const obj3 = noop;
-  let items2 = [c9, entranceAnimationDriver, require("module_1652").interpolate, require("module_1652").Extrapolation, height2, height, width2, width, diff1, diff, c8, num3];
+  let items2 = [c9, entranceAnimationDriver, require("module_1655").interpolate, require("module_1655").Extrapolation, height2, height, width2, width, diff1, diff, c8, num3];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -154,7 +154,7 @@ function MediaViewerItemPresenter(windowHeight) {
   MediaViewerItemPresenterTsx1.__workletHash = 5465877012081;
   MediaViewerItemPresenterTsx1.__initData = tmp22;
   let items4 = [windowWidth, windowHeight, width, height];
-  const animatedStyle = require("module_1652").useAnimatedStyle(MediaViewerItemPresenterTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(MediaViewerItemPresenterTsx1);
   const memo = obj3.useMemo(() => {
     const obj = { container: null, child: null, presenter: { position: "relative", overflow: "hidden", opacity: 1 } };
     const size = { width, height, alignItems: "center", justifyContent: "center" };
@@ -168,7 +168,7 @@ function MediaViewerItemPresenter(windowHeight) {
   const obj9 = { style: null, children: items1 };
   let items5 = [memo.presenter, animatedStyle];
   obj9.style = items5;
-  obj8.children = jsx(_modDef1652.View, { style: null, children: items1 });
+  obj8.children = jsx(_modDef1655.View, { style: null, children: items1 });
   obj7.children = <c4 style={memo.child}>{null}</c4>;
   return <c4 collapsable={false} style={memo.container}>{null}</c4>;
 }
@@ -176,10 +176,10 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
 let closure_7 = { platformStyles: { position: "absolute", width: "100%", height: "100%" } };
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 if (PlatformUtils.isAndroid()) {
   const _parseInt = parseInt;
-  obj2 = fn(5200);
+  obj2 = fn(5263);
 }
 let closure_9 = { code: "(function MediaViewerItemPresenterTsx1(){let[entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,BORDER_RADIUS_END,startScale]=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,BORDER_RADIUS_END]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};})" };
 let size = fn(2);

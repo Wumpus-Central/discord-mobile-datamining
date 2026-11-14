@@ -1,28 +1,28 @@
-// === Module 17358: UserSettingsAuthedApp ===
+// === Module 17481: UserSettingsAuthedApp ===
 
-// Module 17358 (UserSettingsAuthedApp)
+// Module 17481 (UserSettingsAuthedApp)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Link from "Link" /* 1500 */;
-import RootNavigationRef from "RootNavigationRef" /* 5430 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5974 */;
-import useAlertStore from "useAlertStore" /* 6207 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7346 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 7587 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7743 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7747 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7812 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7817 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12651 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 14809 */;
+import Link from "Link" /* 1503 */;
+import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 6037 */;
+import useAlertStore from "useAlertStore" /* 6270 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7410 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 7653 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7809 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7813 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7878 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7883 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12747 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 14923 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7158 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import RelationshipStore from "RelationshipStore" /* 5185 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
-import LocaleStore from "LocaleStore" /* 2186 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7221 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import RelationshipStore from "RelationshipStore" /* 5248 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
 
 require = fn;
 function WarningLabel(children) {
@@ -34,7 +34,7 @@ function WarningLabel(children) {
 }
 function AuthorizedAppTwoWay(application) {
   let navigation;
-  navigation = navigation(1499).useNavigation();
+  navigation = navigation(1502).useNavigation();
   items = [navigation];
   const obj2 = { text: null };
   const callback = noop.useCallback(() => {
@@ -55,11 +55,11 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(10828).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(11987).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(10897).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(12054).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { paddingHorizontal: 16, paddingVertical: 24 }, section: { marginBottom: 24 }, header: { flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }, appAboutDescription: { width: "100%" }, warningContainer: { marginTop: nativeDefault.space.PX_12, display: "flex", flexDirection: "row" }, warningIcon: null };
 let size = { width: 16, height: 16, marginRight: 8, color: nativeDefault.colors.TEXT_MUTED };
 obj2.warningIcon = size;

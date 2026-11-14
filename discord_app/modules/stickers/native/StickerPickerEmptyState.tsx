@@ -1,14 +1,14 @@
-// === Module 11317: StickerPickerEmptyState ===
+// === Module 11384: StickerPickerEmptyState ===
 
-// Module 11317 (StickerPickerEmptyState)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HapticUtils from "HapticUtils" /* 5491 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5492 */;
-import StickerDefault from "Sticker" /* 11024 */;
-import StickersHooks from "StickersHooks" /* 11290 */;
+// Module 11384 (StickerPickerEmptyState)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import HapticUtils from "HapticUtils" /* 5554 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5555 */;
+import StickerDefault from "Sticker" /* 11093 */;
+import StickersHooks from "StickersHooks" /* 11357 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6947 */;
+import StickersStore from "StickersStore" /* 7010 */;
 
 const require = globalThis.__r;
 
@@ -23,13 +23,13 @@ function EmptyStateSticker(sticker) {
   return closure_1_11(StickerDefault, { sticker, size: 60, animated }, id);
 }
 const View = fn(17).View;
-const EMPTY_STATE_STICKERS = fn(5071).EMPTY_STATE_STICKERS;
+const EMPTY_STATE_STICKERS = fn(5134).EMPTY_STATE_STICKERS;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
-const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1390).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_13 = createStyles.createStyles({ header: { marginBottom: 8, textAlign: "center" }, blurb: { lineHeight: 18, textAlign: "center", marginBottom: 12 }, premiumButton: { marginTop: 20, alignSelf: "center", paddingLeft: 5, paddingRight: 10, flexGrow: 0 }, nitroWheel: { width: 32 }, stickersRow: { flexDirection: "row", alignSelf: "center" }, sticker: { paddingHorizontal: 2 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stickers/native/StickerPickerEmptyState.tsx");
@@ -39,8 +39,8 @@ export default function _default() {
   _require = tmp;
   const fetchStickerPacks = require("StickersHooks").useFetchStickerPacks();
   let obj = require("StickersHooks");
-  analyticsLocations = analyticsLocations(7852)(analyticsLocations(7871).EMPTY_STATE).analyticsLocations;
-  const tmp3 = analyticsLocations(7852);
+  analyticsLocations = analyticsLocations(7918)(analyticsLocations(7937).EMPTY_STATE).analyticsLocations;
+  const tmp3 = analyticsLocations(7918);
   items = [StickersStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const mapped = EMPTY_STATE_STICKERS.map((item) => stickerById.getStickerById(item));
@@ -79,7 +79,7 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(7364).PressableOpacity, obj, id);
+      return closure_1_11(sticker(7428).PressableOpacity, obj, id);
     })
   });
   const obj7 = { style: tmp.premiumButton, children: null };
@@ -101,16 +101,16 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(7364).PressableOpacity, obj, id);
+      return closure_1_11(sticker(7428).PressableOpacity, obj, id);
     })
   };
-  obj9.source = analyticsLocations(11147);
+  obj9.source = analyticsLocations(11214);
   obj9.style = tmp.nitroWheel;
-  obj8.icon = closure_11(analyticsLocations(5957), obj9);
+  obj8.icon = closure_11(analyticsLocations(6020), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {
-    return analyticsLocations(11311)({ section: constants.EXPRESSION_PICKER });
+    return analyticsLocations(11378)({ section: constants.EXPRESSION_PICKER });
   };
   obj7.children = closure_11(require("components/Button/Button").Button, obj8);
   items2[3] = closure_11(View, obj7);

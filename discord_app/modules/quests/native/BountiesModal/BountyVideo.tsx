@@ -1,18 +1,18 @@
-// === Module 17448: BountyVideo ===
+// === Module 17566: BountyVideo ===
 
-// Module 17448 (BountyVideo)
+// Module 17566 (BountyVideo)
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import timingPresets from "timingPresets" /* 5488 */;
-import LinearGradientDefault from "LinearGradient" /* 5830 */;
-import AssetUtils from "AssetUtils" /* 10077 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 17449 */;
-import pickBountyVideoRendition from "pickBountyVideoRendition" /* 17450 */;
-import BountiesModalAdvertiserCtaDefault from "BountiesModalAdvertiserCta" /* 17466 */;
-import BountiesModalTimerDefault from "BountiesModalTimer" /* 17468 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import timingPresets from "timingPresets" /* 5551 */;
+import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import AssetUtils from "AssetUtils" /* 10146 */;
+import BountiesModalProgress from "BountiesModalProgress" /* 17567 */;
+import pickBountyVideoRendition from "pickBountyVideoRendition" /* 17568 */;
+import BountiesModalAdvertiserCtaDefault from "BountiesModalAdvertiserCta" /* 17584 */;
+import BountiesModalTimerDefault from "BountiesModalTimer" /* 17586 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import module_1652 from "module_1652" /* 1652 */;
+import module_1655 from "module_1655" /* 1655 */;
 import n_mod from "module_671" /* 671 */;
 
 const require = globalThis.__r;
@@ -21,14 +21,14 @@ const BountiesModalProgressDefault = BountiesModalProgress;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, ActivityIndicator: metroImportDefault, Pressable: closure_8 } = get_ActivityIndicator);
-const BountiesModalConstants = fn(17428);
+const BountiesModalConstants = fn(17546);
 ({ getBountyVideoEndPeekClipHeight: closure_9, getBountyVideoEndPeekScale: closure_10 } = BountiesModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const PlatformUtils = fn(1357);
+const PlatformUtils = fn(1360);
 const contentInsets = { top: 48, bottom: 16, left: 16, right: 16 };
 const lg = nativeDefault.radii.lg;
-const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
+const LinearGradient = module_1655.createAnimatedComponent(LinearGradientDefault);
 const start = { x: 0, y: 0 };
 const end = { x: 0, y: 1 };
 let n = n_mod;
@@ -38,7 +38,7 @@ let n = n_mod;
 const alphaResult = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0.4);
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.PLUM_23);
 items[1] = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0).hex();
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_21 = createStyles.createStyles(() => {
   const obj = { videoContainer: null, leftRow: null, progress: null, poster: null, scrimGradient: null };
   const obj2 = {};
@@ -120,7 +120,7 @@ export function BountyVideo(handleVideoProgress) {
   c7 = tmp6;
   ref = height.useRef(null);
   const tmp2 = width(height.useState(false), 2);
-  sharedValue = require("module_1652").useSharedValue(1);
+  sharedValue = require("module_1655").useSharedValue(1);
   videoHls = bounty.videoHls;
   videoRenditions = bounty.videoRenditions;
   items = [videoHls, videoRenditions];
@@ -137,7 +137,7 @@ export function BountyVideo(handleVideoProgress) {
     const size = { assetUrl: memo, width, height };
     return AssetUtils.getScaledFirstFrameImageUrl(size);
   }, items1);
-  let obj2 = require("module_1652");
+  let obj2 = require("module_1655");
   const token = require("useToken").useToken(nativeDefault.colors.TEXT_DEFAULT);
   const combined = "" + bounty.id + ":" + shouldLoadHls + ":" + memo;
   const tmp14 = width(height.useState(combined), 2);
@@ -210,8 +210,8 @@ export function BountyVideo(handleVideoProgress) {
   BountyVideoTsx1.__closure = items8;
   BountyVideoTsx1.__workletHash = 8043995477166;
   BountyVideoTsx1.__initData = tmp24;
-  const animatedStyle = require("module_1652").useAnimatedStyle(BountyVideoTsx1);
-  const tmp7Result = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(BountyVideoTsx1);
+  const tmp7Result = require("module_1655");
   const items9 = [closure_23, isScrollingInBoundsSharedValue, require("timing/timing").withTiming, isActive, require("timingPresets").timingStandard];
   _require = undefined;
   importDefault = undefined;
@@ -241,8 +241,8 @@ export function BountyVideo(handleVideoProgress) {
   BountyVideoTsx2.__closure = items10;
   BountyVideoTsx2.__workletHash = 13062892827356;
   BountyVideoTsx2.__initData = tmp27;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(BountyVideoTsx2);
-  const tmp7Result5 = require("module_1652");
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(BountyVideoTsx2);
+  const tmp7Result5 = require("module_1655");
   const bountyVideoEndAppStoreContext = require("useBountyVideoEndAppStoreOverlay").useBountyVideoEndAppStoreContext();
   let tmp34;
   if (isActive) {
@@ -308,9 +308,9 @@ export function BountyVideo(handleVideoProgress) {
   BountyVideoTsx3.__closure = items12;
   BountyVideoTsx3.__workletHash = 9514254449235;
   BountyVideoTsx3.__initData = tmp38;
-  const animatedStyle2 = require("module_1652").useAnimatedStyle(BountyVideoTsx3);
+  const animatedStyle2 = require("module_1655").useAnimatedStyle(BountyVideoTsx3);
   const tmp37 = sharedValue;
-  const tmp7Result7 = require("module_1652");
+  const tmp7Result7 = require("module_1655");
   const items13 = [closure_25, tmp34, absoluteFillObject, tmp37, width, height];
   _require = undefined;
   importDefault = undefined;
@@ -346,7 +346,7 @@ export function BountyVideo(handleVideoProgress) {
   BountyVideoTsx4.__workletHash = 10206614241485;
   BountyVideoTsx4.__initData = tmp48;
   let prop1 = null;
-  const animatedStyle3 = require("module_1652").useAnimatedStyle(BountyVideoTsx4);
+  const animatedStyle3 = require("module_1655").useAnimatedStyle(BountyVideoTsx4);
   if (true === isActive) {
     let prop;
     if (bountyVideoEndAppStoreContext != null) {
@@ -374,17 +374,17 @@ export function BountyVideo(handleVideoProgress) {
     obj7.source = obj8;
     let prop3;
     if (flag2) {
-      prop3 = tmp7(17463).SOFT_CAP_PRELOAD_MAX_BITRATE;
+      prop3 = tmp7(17581).SOFT_CAP_PRELOAD_MAX_BITRATE;
     }
     obj7.maxBitRate = prop3;
     let prop4;
     if (flag2) {
-      prop4 = tmp7(17463).SOFT_CAP_PRELOAD_BUFFER_CONFIG;
+      prop4 = tmp7(17581).SOFT_CAP_PRELOAD_BUFFER_CONFIG;
     }
     obj7.bufferConfig = prop4;
     let prop5;
     if (flag2) {
-      prop5 = tmp7(17463).SOFT_CAP_PRELOAD_FORWARD_BUFFER_SEC;
+      prop5 = tmp7(17581).SOFT_CAP_PRELOAD_FORWARD_BUFFER_SEC;
     }
     obj7.preferredForwardBufferDuration = prop5;
     obj7.initialProgress = initialProgress;
@@ -410,7 +410,7 @@ export function BountyVideo(handleVideoProgress) {
     obj7.hideControls = isEndCardVisible;
     obj7.repeat = repeat;
     obj7.onPlayerStateChange = onPlayerStateChange;
-    tmp60Result = tmp60(tmp7(17451).AdVideoPlayer, obj7);
+    tmp60Result = tmp60(tmp7(17569).AdVideoPlayer, obj7);
   }
   const items15 = [tmp60Result, , , , , , ];
   if (null != memo1) {
@@ -420,7 +420,7 @@ export function BountyVideo(handleVideoProgress) {
     const obj10 = { style: tmp36.absoluteFillObject, source: null, resizeMode: "cover" };
     const obj11 = { uri: memo1 };
     obj10.source = obj11;
-    const items17 = [tmp60(tmp11(5957), obj10), ];
+    const items17 = [tmp60(tmp11(6020), obj10), ];
     let tmp60Result3 = !first;
     if (!first) {
       const obj12 = { animating: true, size: "small", color: token };
@@ -428,12 +428,12 @@ export function BountyVideo(handleVideoProgress) {
     }
     items17[1] = tmp60Result3;
     obj9.children = items17;
-    let tmp60Result4 = tmp58(tmp11(1652).View, obj9);
+    let tmp60Result4 = tmp58(tmp11(1655).View, obj9);
   } else {
     const obj13 = { style: null, pointerEvents: "none" };
     const items18 = [tmp.poster, animatedStyle];
     obj13.style = items18;
-    tmp60Result4 = tmp60(tmp11(1652).View, obj13);
+    tmp60Result4 = tmp60(tmp11(1655).View, obj13);
   }
   items15[1] = tmp60Result4;
   const obj14 = { start, end, style: null, colors: items, pointerEvents: "none" };
@@ -462,8 +462,8 @@ export function BountyVideo(handleVideoProgress) {
     }
     obj16.enabled = isActive;
     obj16.isEndCardVisible = isEndCardVisible;
-    isScrollIndicatorEnabled = tmp60(tmp11(17464), obj16);
-    const tmp11Result = tmp11(17464);
+    isScrollIndicatorEnabled = tmp60(tmp11(17582), obj16);
+    const tmp11Result = tmp11(17582);
   }
   items15[5] = isScrollIndicatorEnabled;
   const obj17 = { style: null, pointerEvents: "box-none", children: null };
@@ -472,7 +472,7 @@ export function BountyVideo(handleVideoProgress) {
   const obj18 = { bounty, visible: null, sourceQuestContent: null };
   const tmp59 = callback;
   const tmp61 = c5;
-  const tmp7Result8 = require("module_1652");
+  const tmp7Result8 = require("module_1655");
   if (isCtaVisible) {
     isCtaVisible = !isEndCardVisible;
   }
@@ -480,22 +480,22 @@ export function BountyVideo(handleVideoProgress) {
   obj18.visible = isCtaVisible;
   obj18.sourceQuestContent = sourceQuestContent;
   obj17.children = videoRenditions(BountiesModalAdvertiserCtaDefault, obj18);
-  items15[6] = videoRenditions(module_1652.View, obj17);
+  items15[6] = videoRenditions(module_1655.View, obj17);
   obj6.children = items15;
   const items21 = [memo(tmp61, obj6), ];
   const obj20 = { style: null, children: videoRenditions(BountiesModalProgressDefault, { progress: normalizedProgress, visible: isProgressBarVisible }) };
   const items22 = [tmp.progress, animatedStyle1];
   obj20.style = items22;
-  items21[1] = videoRenditions(module_1652.View, obj20);
+  items21[1] = videoRenditions(module_1655.View, obj20);
   obj5.children = items21;
-  obj3.children = memo(module_1652.View, obj5);
-  const items23 = [videoRenditions(module_1652.View, obj3), ];
+  obj3.children = memo(module_1655.View, obj5);
+  const items23 = [videoRenditions(module_1655.View, obj3), ];
   const obj21 = { style: null, children: null };
   const items24 = [tmp.leftRow, animatedStyle1];
   obj21.style = items24;
   const items25 = [videoRenditions(BountiesModalTimerDefault, { isCompleted, totalSeconds: rewardTotalSeconds, remainingSeconds: rewardRemainingSeconds }), videoRenditions(require("virtual_currency/BalanceWidgetPill").BalanceWidgetPill, { balance: orbsBalance }, balanceWidgetPillResetKey)];
   obj21.children = items25;
-  items23[1] = memo(module_1652.View, obj21);
+  items23[1] = memo(module_1655.View, obj21);
   obj19.children = items23;
   return memo(tmp59, obj19);
 }

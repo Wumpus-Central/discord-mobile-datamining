@@ -1,7 +1,7 @@
-// === Module 20569: CreatorMonetizationSettingsDisabledContext ===
+// === Module 20724: CreatorMonetizationSettingsDisabledContext ===
 
-// Module 20569 (CreatorMonetizationSettingsDisabledContext)
-import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7205 */;
+// Module 20724 (CreatorMonetizationSettingsDisabledContext)
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7268 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 11874: ? ===
+// === Module 11940: ? ===
 
-// Module 11874
+// Module 11940
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BookmarksSpotIllustration-1x.png.js");

@@ -1,6 +1,6 @@
-// === Module 11950: VoicePanelSheetMorph ===
+// === Module 12017: VoicePanelSheetMorph ===
 
-// Module 11950 (VoicePanelSheetMorph)
+// Module 12017 (VoicePanelSheetMorph)
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function getSheetMorphFadeProgress_VoicePanelSheetMorphTsx1(progress,start,end){const t=Math.min(Math.max((progress-start)/(end-start),0),1);return t*t*(3-2*t);})" }];

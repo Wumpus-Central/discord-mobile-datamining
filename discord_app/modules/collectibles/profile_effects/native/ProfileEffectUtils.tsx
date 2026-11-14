@@ -1,26 +1,26 @@
-// === Module 9427: ProfileEffectUtils ===
+// === Module 9496: ProfileEffectUtils ===
 
-// Module 9427 (ProfileEffectUtils)
-import getAssetWHRatio from "getAssetWHRatio" /* 9428 */;
+// Module 9496 (ProfileEffectUtils)
+import getAssetWHRatio from "getAssetWHRatio" /* 9497 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");
 
-export function shouldAnimate(aPNGPlayerControls, current) {
-  if (current >= aPNGPlayerControls.start) {
-    if (!aPNGPlayerControls.loop) {
-      if (current > aPNGPlayerControls.duration + aPNGPlayerControls.start) {
+export function shouldAnimate(start, current) {
+  if (current >= start.start) {
+    if (!start.loop) {
+      if (current > start.duration + start.start) {
         return false;
       }
     }
-    if (aPNGPlayerControls.loop) {
-      if (undefined !== aPNGPlayerControls.loopDelay) {
-        if (aPNGPlayerControls.loopDelay > 0) {
+    if (start.loop) {
+      if (undefined !== start.loopDelay) {
+        if (start.loopDelay > 0) {
           let loopDelay;
-          if (aPNGPlayerControls != null) {
-            loopDelay = aPNGPlayerControls.loopDelay;
+          if (start != null) {
+            loopDelay = start.loopDelay;
           }
-          if ((current - aPNGPlayerControls.start) % (aPNGPlayerControls.duration + loopDelay) > aPNGPlayerControls.duration) {
+          if ((current - start.start) % (start.duration + loopDelay) > start.duration) {
             return false;
           }
         }

@@ -1,8 +1,8 @@
-// === Module 13499: useConjureRemixSettingsRequest ===
+// === Module 13602: useConjureRemixSettingsRequest ===
 
-// Module 13499 (useConjureRemixSettingsRequest)
-import conjureSettingsRequest from "conjureSettingsRequest" /* 13500 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 7315 */;
+// Module 13602 (useConjureRemixSettingsRequest)
+import conjureSettingsRequest from "conjureSettingsRequest" /* 13603 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 7379 */;
 
 const require = globalThis.__r;
 
@@ -38,7 +38,7 @@ export default function useConjureRemixSettingsRequest(arg0, type) {
     if (null != settings_keys) {
       let obj2 = { keys: settings_keys, note: null };
       const intl = require("util").intl;
-      obj2.note = intl.string(settings_keys(4079).F2yVHg);
+      obj2.note = intl.string(settings_keys(4131).F2yVHg);
       tmp5 = obj2;
     }
   }

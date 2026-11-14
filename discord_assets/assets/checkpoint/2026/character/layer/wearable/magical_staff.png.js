@@ -1,6 +1,6 @@
-// === Module 6643: ? ===
+// === Module 6706: ? ===
 
-// Module 6643
+// Module 6706
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/wearable/magical_staff.png.js");

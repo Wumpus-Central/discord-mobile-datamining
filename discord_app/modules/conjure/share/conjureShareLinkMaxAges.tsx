@@ -1,6 +1,6 @@
-// === Module 13231: conjureShareLinkMaxAges ===
+// === Module 13336: conjureShareLinkMaxAges ===
 
-// Module 13231 (conjureShareLinkMaxAges)
+// Module 13336 (conjureShareLinkMaxAges)
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 

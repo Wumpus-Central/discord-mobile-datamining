@@ -77,5 +77,6 @@ export function isExternalProduct(arg0) {
 export const ALL_FILTERS = items1;
 export const SORT_OPTIONS = items2;
 export const CollectiblesMobileShopScreen = { FEATURED_PAGE: "featured-page", SHOP_ALL: "shop-all", ORBS: "orbs" };
+export const TWELVE_DAYS_COLLECTION_SKU_ID = "1569803532339519578";
 export const REWARD_CATEGORY_AND_REWARD_SKU_IDS = items3;
 export const ShopCtaEnum = { BUY_WITH_FIAT: "buy_with_fiat", BUY_WITH_ORBS: "buy_with_orbs", SEND_AS_GIFT: "send_as_gift", SUBSCRIBE_NOW: "subscribe_now", ADD_TO_WISHLIST: "add_to_wishlist", REMOVE_FROM_WISHLIST: "remove_from_wishlist", CLOSE_DETAIL: "close_detail", GO_TO_COLLECTION: "go_to_collection", COPY_LINK: "copy_link", SHARE_LINK: "share_link", USE_NOW: "use_now", EDIT_PROFILE: "edit_profile", UNLOCK_WITH_NITRO: "unlock_with_nitro", ADD_TO_COLLECTION: "add_to_collection", BUNDLE_VIEW_AVATAR_DECORATION: "bundle_view_avatar_decoration", BUNDLE_VIEW_PROFILE_EFFECT: "bundle_view_profile_effect", BUNDLE_VIEW_NAMEPLATE: "bundle_view_nameplate", BUNDLE_VIEW_PRODUCT: "bundle_view_product", FULL_PROFILE_PREVIEW: "full_profile_preview", FULL_PROFILE_PREVIEW_BUTTON: "full_profile_preview_button", VIEW_DETAILS: "view_details", PAYMENT_OPTIONS: "payment_options", OPEN_DETAILS: "open_details", VARIANT_CLICK: "variant_click", VARIANT_CLICK_MORE: "variant_click_more" };

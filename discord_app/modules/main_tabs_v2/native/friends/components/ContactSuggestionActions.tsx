@@ -1,10 +1,10 @@
-// === Module 19079: ContactSuggestionActions ===
+// === Module 19271: ContactSuggestionActions ===
 
-// Module 19079 (ContactSuggestionActions)
+// Module 19271 (ContactSuggestionActions)
 import nativeDefault from "native" /* 575 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18634 */;
-import _modDef19080 from "module_19080" /* 19080 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 18763 */;
+import _modDef19272 from "module_19272" /* 19272 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,19 +14,19 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { duration: 200, easing: null };
-const Easing = fn(1652).Easing;
-obj.easing = Easing.in(fn(1652).Easing.quad);
+const Easing = fn(1655).Easing;
+obj.easing = Easing.in(fn(1655).Easing.quad);
 let obj2 = { duration: 250, easing: null };
-const Easing2 = fn(1652).Easing;
-obj2.easing = Easing2.in(fn(1652).Easing.quad);
+const Easing2 = fn(1655).Easing;
+obj2.easing = Easing2.in(fn(1655).Easing.quad);
 let obj3 = { duration: 250, easing: null };
-const Easing3 = fn(1652).Easing;
-obj3.easing = Easing3.in(fn(1652).Easing.quad);
+const Easing3 = fn(1655).Easing;
+obj3.easing = Easing3.in(fn(1655).Easing.quad);
 let obj4 = { duration: 250, easing: null };
-const Easing4 = fn(1652).Easing;
-obj4.easing = Easing4.out(fn(1652).Easing.quad);
+const Easing4 = fn(1655).Easing;
+obj4.easing = Easing4.out(fn(1655).Easing.quad);
 let closure_11 = { mass: 1, stiffness: 172, damping: 17.3 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj6 = { icon: { position: "absolute", top: 4, zIndex: 2, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, opacity: 0 } };
 let closure_12 = createStyles.createStyles(obj6);
 let closure_13 = { code: "(function ContactSuggestionActionsTsx1(){let[right,opacity,scale]=this.__closure;return{right:right.get(),opacity:opacity.get(),transform:[{scale:scale.get()}]};})" };
@@ -54,16 +54,16 @@ export function ContactSuggestionActions(user) {
   const animate = user.animate;
   c4 = animate;
   const tmp = c12();
-  const sharedValue = require("module_1652").useSharedValue(30);
+  const sharedValue = require("module_1655").useSharedValue(30);
   c5 = sharedValue;
-  obj = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(0.5);
+  obj = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(0.5);
   c6 = sharedValue1;
-  obj2 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(0);
+  obj2 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(0);
   c7 = sharedValue2;
-  obj3 = require("module_1652");
-  const sharedValue3 = require("module_1652").useSharedValue(1);
+  obj3 = require("module_1655");
+  const sharedValue3 = require("module_1655").useSharedValue(1);
   c8 = sharedValue3;
   items = [onFinishAnimation, user];
   const callback = noop.useCallback(() => {
@@ -74,7 +74,7 @@ export function ContactSuggestionActions(user) {
       }, 1000);
     }
   }, items);
-  obj4 = require("module_1652");
+  obj4 = require("module_1655");
   const obj5 = noop;
   let items1 = [c13, sharedValue, sharedValue2, sharedValue1];
   _require = undefined;
@@ -95,8 +95,8 @@ export function ContactSuggestionActions(user) {
   ContactSuggestionActionsTsx1.__closure = items2;
   ContactSuggestionActionsTsx1.__workletHash = 1508257222955;
   ContactSuggestionActionsTsx1.__initData = tmp9;
-  const animatedStyle = require("module_1652").useAnimatedStyle(ContactSuggestionActionsTsx1);
-  const obj6 = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(ContactSuggestionActionsTsx1);
+  const obj6 = require("module_1655");
   const items3 = [c14, sharedValue3];
   _require = undefined;
   [tmp14, tmp15] = items3;
@@ -111,7 +111,7 @@ export function ContactSuggestionActions(user) {
   ContactSuggestionActionsTsx2.__workletHash = 4559914341574;
   ContactSuggestionActionsTsx2.__initData = tmp14;
   const items5 = [onAddSuggestion, user, added, animate, sharedValue, sharedValue2, sharedValue1, sharedValue3];
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(ContactSuggestionActionsTsx2);
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(ContactSuggestionActionsTsx2);
   const callback1 = obj5.useCallback(() => {
     AddFriendsScreenUtils.addContactSuggestion(c0);
     _undefined3(c0);
@@ -123,7 +123,7 @@ export function ContactSuggestionActions(user) {
       const result4 = _undefined9.set(0);
     }
   }, items5);
-  const tmp2Result = require("module_1652");
+  const tmp2Result = require("module_1655");
   const items6 = [c15, added];
   _require = undefined;
   [tmp18, tmp19] = items6;
@@ -136,7 +136,7 @@ export function ContactSuggestionActions(user) {
   ContactSuggestionActionsTsx3.__closure = items7;
   ContactSuggestionActionsTsx3.__workletHash = 303935681858;
   ContactSuggestionActionsTsx3.__initData = tmp18;
-  const items8 = [closure_18, animate, require("module_1705").scheduleOnRN, callback, sharedValue1, require("timing/timing").withTiming, c9, sharedValue2, c7, sharedValue3, sharedValue, require("spring/spring").withSpring, c11, closure_17, require("module_1652").withDelay, c8, c10, c16];
+  const items8 = [closure_18, animate, require("module_1708").scheduleOnRN, callback, sharedValue1, require("timing/timing").withTiming, c9, sharedValue2, c7, sharedValue3, sharedValue, require("spring/spring").withSpring, c11, closure_17, require("module_1655").withDelay, c8, c10, c16];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -306,21 +306,21 @@ export function ContactSuggestionActions(user) {
   ContactSuggestionActionsTsx6.__closure = items9;
   ContactSuggestionActionsTsx6.__workletHash = 3747678974505;
   ContactSuggestionActionsTsx6.__initData = tmp20;
-  const animatedReaction = require("module_1652").useAnimatedReaction(ContactSuggestionActionsTsx3, ContactSuggestionActionsTsx6);
+  const animatedReaction = require("module_1655").useAnimatedReaction(ContactSuggestionActionsTsx3, ContactSuggestionActionsTsx6);
   const obj7 = { children: null };
   const obj8 = { pointerEvents: "none", style: null, children: null };
   const items10 = [tmp.icon, animatedStyle];
   obj8.style = items10;
-  const tmp2Result2 = require("module_1652");
-  obj8.children = c5(require("native").Icon, { source: _modDef19080, color: tmp.icon.color });
-  const items11 = [c5(_modDef1652.View, obj8), ];
+  const tmp2Result2 = require("module_1655");
+  obj8.children = c5(require("native").Icon, { source: _modDef19272, color: tmp.icon.color });
+  const items11 = [c5(_modDef1655.View, obj8), ];
   const obj10 = { style: animatedStyle1, children: null };
   const obj11 = { variant: "secondary", size: str, grow: false, text: null, onPress: null };
   const intl = tmp2(1113).intl;
   obj11.text = intl.string(require("util").t.OYkgVk);
   obj11.onPress = callback1;
   obj10.children = c5(require("components/Button/Button").Button, obj11);
-  items11[1] = c5(_modDef1652.View, obj10);
+  items11[1] = c5(_modDef1655.View, obj10);
   obj7.children = items11;
   return c6(c4, obj7);
 }

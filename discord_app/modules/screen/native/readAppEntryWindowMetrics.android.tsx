@@ -1,7 +1,7 @@
-// === Module 2019: readAppEntryWindowMetrics ===
+// === Module 2022: readAppEntryWindowMetrics ===
 
-// Module 2019 (readAppEntryWindowMetrics)
-import NativeDeviceModuleDefault from "NativeDeviceModule" /* 1349 */;
+// Module 2022 (readAppEntryWindowMetrics)
+import NativeDeviceModuleDefault from "NativeDeviceModule" /* 1352 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/screen/native/readAppEntryWindowMetrics.android.tsx");

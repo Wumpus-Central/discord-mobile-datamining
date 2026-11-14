@@ -1,25 +1,25 @@
-// === Module 8072: RelationshipActionCreators ===
+// === Module 8137: RelationshipActionCreators ===
 
-// Module 8072 (RelationshipActionCreators)
+// Module 8137 (RelationshipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import shared from "shared" /* 5250 */;
-import UserUtilsDefault from "UserUtils" /* 5309 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
-import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6826 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 6833 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6852 */;
-import SafetyToastsUtils from "SafetyToastsUtils" /* 6853 */;
-import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6857 */;
-import ContextMenuActionCreators from "ContextMenuActionCreators" /* 7626 */;
-import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 8074 */;
-import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 8075 */;
-import FriendsUtils from "FriendsUtils" /* 8076 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import shared from "shared" /* 5313 */;
+import UserUtilsDefault from "UserUtils" /* 5372 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6889 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 6896 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6915 */;
+import SafetyToastsUtils from "SafetyToastsUtils" /* 6916 */;
+import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6920 */;
+import ContextMenuActionCreators from "ContextMenuActionCreators" /* 7692 */;
+import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 8139 */;
+import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 8140 */;
+import FriendsUtils from "FriendsUtils" /* 8141 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RelationshipStore from "RelationshipStore" /* 5185 */;
-import UserStore from "UserStore" /* 1385 */;
+import RelationshipStore from "RelationshipStore" /* 5248 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
@@ -100,8 +100,8 @@ function fireFriendRequestSurveyAction(arg0) {
 }
 const Constants = fn(1072);
 ({ Endpoints: closure_8, AbortCodes: closure_9, RelationshipTypes: closure_10 } = Constants);
-const ClearFriendRequestFilters = fn(8073).ClearFriendRequestFilters;
-const SafetyToastType = fn(6847).SafetyToastType;
+const ClearFriendRequestFilters = fn(8138).ClearFriendRequestFilters;
+const SafetyToastType = fn(6910).SafetyToastType;
 const RelationshipErrorUXConfig = { SHOW_ALWAYS: 0, [0]: "SHOW_ALWAYS", SHOW_ONLY_IF_ACTION_NEEDED: 1, [1]: "SHOW_ONLY_IF_ACTION_NEEDED" };
 let obj2 = {
   sendRequest(arg0) {
@@ -167,7 +167,7 @@ let obj2 = {
             }
             closure_128_0 = NONE;
             dependencyMap = 1;
-            HTTP = closure_0(1282).HTTP;
+            HTTP = closure_0(1285).HTTP;
             const request = { url: closure_1_8.USER_RELATIONSHIPS(), body: null, context: null, oldFormErrors: true, rejectWithError: null };
             const obj6 = { username: merged, discriminator: null, note: null };
             const _parseInt = parseInt;
@@ -177,11 +177,11 @@ let obj2 = {
             request.body = obj6;
             request.context = context;
             const tmp41 = v2(_require.split("#"), 2);
-            request.rejectWithError = closure_0(1282).rejectWithMigratedError();
+            request.rejectWithError = closure_0(1285).rejectWithMigratedError();
             HTTP.post(request);
             v2 = 2;
             c5 = 1;
-            const obj5 = closure_0(1282);
+            const obj5 = closure_0(1285);
           }
         } catch (tmp30) {
           closure_2 = tmp30;
@@ -205,14 +205,14 @@ let obj2 = {
     }
     dependencyMap = UserStore.getUser(userId);
     const relationshipType = RelationshipStore.getRelationshipType(userId);
-    const HTTP = type(1282).HTTP;
+    const HTTP = type(1285).HTTP;
     const request = { url: closure_8.USER_RELATIONSHIP(userId), body: null, context: null, oldFormErrors: true, rejectWithError: null };
     body = { type, from_friend_suggestion: fromFriendSuggestion, confirm_stranger_request: confirmStrangerRequest };
     const merged = Object.assign(captchaPayload.captchaPayload);
     request.body = body;
     request.context = context;
-    request.rejectWithError = type(1282).rejectWithMigratedError();
-    let obj3 = type(1282);
+    request.rejectWithError = type(1285).rejectWithMigratedError();
+    let obj3 = type(1285);
     const putResult = HTTP.put(request);
     return HTTP.put(request).then(() => {
       if (type === constants2.BLOCKED) {
@@ -283,7 +283,7 @@ let obj2 = {
         tmp();
       }
     }).catch(() => {
-      const AccessibilityAnnouncer = closure_0(5250).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_0(5313).AccessibilityAnnouncer;
       const intl = closure_0(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_0(1113).t.n6Jo3E));
     });
@@ -348,8 +348,8 @@ let obj2 = {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.IGNORE_SUCCESS, userId, closure_1));
     }).catch(() => {
-      channelId(6852).showFailedToast();
-      const AccessibilityAnnouncer = userId(5250).AccessibilityAnnouncer;
+      channelId(6915).showFailedToast();
+      const AccessibilityAnnouncer = userId(5313).AccessibilityAnnouncer;
       const intl = userId(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
     });
@@ -368,8 +368,8 @@ let obj2 = {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(SafetyToastsUtils.getSafetyToastTypeContent(SafetyToastType.UNIGNORE_SUCCESS, userId, closure_1));
     }).catch(() => {
-      channelId(6852).showFailedToast();
-      const AccessibilityAnnouncer = userId(5250).AccessibilityAnnouncer;
+      channelId(6915).showFailedToast();
+      const AccessibilityAnnouncer = userId(5313).AccessibilityAnnouncer;
       const intl = userId(1113).intl;
       AccessibilityAnnouncer.announce(intl.string(userId(1113).t.n6Jo3E));
     });

@@ -1,11 +1,11 @@
-// === Module 7680: TableRowGroup ===
+// === Module 7746: TableRowGroup ===
 
-// Module 7680 (TableRowGroup)
+// Module 7746 (TableRowGroup)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5839 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 7380 */;
-import TableRowDivider from "TableRowDivider" /* 7385 */;
+import useToken from "useToken" /* 5902 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 7444 */;
+import TableRowDivider from "TableRowDivider" /* 7453 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ class TableRowGroupTitle {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { flexShrink: 0 }, content: { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 }, title: { marginBottom: 8 }, description: { marginBottom: 8 }, hasTrailingText: null, helperText: null };
 let obj3 = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
 obj2.hasTrailingText = { borderBottomLeftRadius: nativeDefault.radii.none, borderBottomRightRadius: nativeDefault.radii.none };
@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting("design/components/TableRow/native/Tab
 
 export { TableRowGroupTitle };
 export function TableRowGroup(accessibilityLabel) {
-  ({ title, description, helperText, hasIcons: require, hasTrailingText } = accessibilityLabel);
+  ({ title, description, helperText, hasIcons: require, isSortable: importDefault, hasTrailingText } = accessibilityLabel);
   if (hasTrailingText === undefined) {
     hasTrailingText = false;
   }
@@ -44,20 +44,20 @@ export function TableRowGroup(accessibilityLabel) {
     str = "none";
   }
   const tmp = closure_8();
-  importDefault = false;
+  dependencyMap = false;
   const Children = noop.Children;
   const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
   const mapped = Children.map(accessibilityLabel.children, (arg0) => {
     if (null == arg0) {
       return null;
-    } else if (c1) {
+    } else if (c2) {
       const obj = { children: null };
-      const obj2 = { adjustSpacingForIcon };
+      const obj2 = { adjustSpacingForIcon, adjustSpacingForDragHandle };
       items = [hasOwnProperty(TableRowDivider.TableRowDivider, obj2), arg0];
       obj.children = items;
       const tmp2 = metroImportDefault(timestampProducer, obj);
     } else {
-      c1 = true;
+      c2 = true;
     }
   });
   let obj2 = { style: tmp.container, children: null };

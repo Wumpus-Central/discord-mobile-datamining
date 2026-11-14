@@ -1,9 +1,9 @@
-// === Module 9079: ConversationDeepLinkUtils ===
+// === Module 9146: ConversationDeepLinkUtils ===
 
-// Module 9079 (ConversationDeepLinkUtils)
-import ChannelUtils from "ChannelUtils" /* 6293 */;
+// Module 9146 (ConversationDeepLinkUtils)
+import ChannelUtils from "ChannelUtils" /* 6356 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 8681 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 8748 */;
 
 require = fn;
 function resolveConversationFocusLink() {
@@ -50,7 +50,7 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
           let conversation;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -100,8 +100,8 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
     }
   }
 };
-fn(7595).addPostConnectionCallback;
-const CONVERSATION_QUERY_PARAM = fn(5894).CONVERSATION_QUERY_PARAM;
+fn(7661).addPostConnectionCallback;
+const CONVERSATION_QUERY_PARAM = fn(5957).CONVERSATION_QUERY_PARAM;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationDeepLinkUtils.tsx");
 
@@ -168,7 +168,7 @@ export function consumeConversationFocusParam(state) {
                       channelId = tmp4;
                       v2 = 1;
                       dependencyMap = 1;
-                      const obj4 = { value: v2(9080)(guildId), done: false };
+                      const obj4 = { value: v2(9147)(guildId), done: false };
                       return obj4;
                     }
                   } else if (1 === tmp4) {
@@ -195,8 +195,8 @@ export function consumeConversationFocusParam(state) {
                     return obj8;
                   } else {
                     if (value) {
-                      const conversationFocus = channelId(9054).requestConversationFocus();
-                      const obj = channelId(9054);
+                      const conversationFocus = channelId(9121).requestConversationFocus();
+                      const obj = channelId(9121);
                     }
                     dependencyMap = 3;
                     return { value: "HermesInternal", done: null };

@@ -1,11 +1,11 @@
-// === Module 20779: MuteAction ===
+// === Module 20933: MuteAction ===
 
-// Module 20779 (MuteAction)
+// Module 20933 (MuteAction)
 import UserSettingsConstants from "UserSettingsConstants" /* 1082 */;
-import _modDef2166 from "module_2166" /* 2166 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7812 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7817 */;
-import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 20777 */;
+import _modDef2169 from "module_2169" /* 2169 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7878 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7883 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 20931 */;
 import size from "module_2" /* 2 */;
 
 const MuteUntilSeconds = UserSettingsConstants.MuteUntilSeconds;
@@ -22,9 +22,9 @@ export default (arg0) => {
         if (HOURS_1 == null) {
           HOURS_1 = MuteUntilSeconds.HOURS_1;
         }
-        const obj = _modDef2166();
-        toISOStringResult = _modDef2166().add(HOURS_1, "second").toISOString();
-        const addResult = _modDef2166().add(HOURS_1, "second");
+        const obj = _modDef2169();
+        toISOStringResult = _modDef2169().add(HOURS_1, "second").toISOString();
+        const addResult = _modDef2169().add(HOURS_1, "second");
       }
       const obj2 = { guildId: closure_0.guildId, channelId: closure_0.channelId, settings: null, label: NotificationSettingsUtils.NotificationLabels.Muted };
       const obj4 = { muted: true, mute_config: { selected_time_window: MuteUntilSeconds.HOURS_1, end_time: toISOStringResult } };

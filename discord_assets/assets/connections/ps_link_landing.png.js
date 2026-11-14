@@ -1,6 +1,6 @@
-// === Module 7529: ? ===
+// === Module 7595: ? ===
 
-// Module 7529
+// Module 7595
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/connections/ps_link_landing.png.js");

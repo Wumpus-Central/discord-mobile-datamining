@@ -1,6 +1,6 @@
-// === Module 5439: ScreenIndexFrozen ===
+// === Module 5502: ScreenIndexFrozen ===
 
-// Module 5439 (ScreenIndexFrozen)
+// Module 5502 (ScreenIndexFrozen)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -34,7 +34,7 @@ export function removeFrozenScreenIndexesChangedListener(arg0) {
 }
 export function useIsScreenIndexFrozenSharedValue(arg0) {
   _require = arg0;
-  sharedValue = require("module_1652").useSharedValue(set.has(arg0));
+  sharedValue = require("module_1655").useSharedValue(set.has(arg0));
   items = [arg0, sharedValue];
   const effect = noop.useEffect(() => {
     const fn = () => {

@@ -1,15 +1,15 @@
-// === Module 15748: UserProfileTabPages ===
+// === Module 15868: UserProfileTabPages ===
 
-// Module 15748 (UserProfileTabPages)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5505 */;
+// Module 15868 (UserProfileTabPages)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5568 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const _modDef1652 = tmp(1652);
+const _modDef1655 = tmp(1655);
 require = fn;
 const ScrollView = fn(17).ScrollView;
 let jsx = fn(21).jsx;
@@ -57,16 +57,16 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   }, items);
   ({ activeIndex, visiblePageRange } = state);
   const tmp3 = c3(noop.useState(0), 2);
-  const sharedValue = require("module_1652").useSharedValue(0);
-  let obj2 = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(-1);
-  const obj3 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(false);
-  const obj4 = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(0);
+  let obj2 = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(-1);
+  const obj3 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(false);
+  const obj4 = require("module_1655");
   const useReducedMotion = state.useReducedMotion;
   _require = scrollViewRef;
   const items1 = [scrollViewRef, sharedValue1, useReducedMotion];
-  const sharedValue3 = require("module_1652").useSharedValue(-1);
+  const sharedValue3 = require("module_1655").useSharedValue(-1);
   const callback1 = noop.useCallback((arg0, arg1) => {
     _undefined = arg0;
     closure_1 = arg1;
@@ -101,7 +101,7 @@ export default noop.memo(function UserProfileTabPages(arg0) {
       });
     }
   }, items1);
-  const obj5 = require("module_1652");
+  const obj5 = require("module_1655");
   const items2 = [closure_7, sharedValue2, activeIndex, pageHeights];
   _require = undefined;
   importDefault = undefined;
@@ -131,7 +131,7 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   UserProfileTabPagesTsx1.__closure = items3;
   UserProfileTabPagesTsx1.__workletHash = 12657345027755;
   UserProfileTabPagesTsx1.__initData = tmp13;
-  const items4 = [closure_8, sharedValue3, scrollPosition, tmp4, sharedValue, pageHeights, require("module_1705").scheduleOnRN, callback1];
+  const items4 = [closure_8, sharedValue3, scrollPosition, tmp4, sharedValue, pageHeights, require("module_1708").scheduleOnRN, callback1];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -176,8 +176,8 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   UserProfileTabPagesTsx2.__closure = items5;
   UserProfileTabPagesTsx2.__workletHash = 17354990160146;
   UserProfileTabPagesTsx2.__initData = tmp17;
-  const animatedReaction = require("module_1652").useAnimatedReaction(UserProfileTabPagesTsx1, UserProfileTabPagesTsx2);
-  const obj6 = require("module_1652");
+  const animatedReaction = require("module_1655").useAnimatedReaction(UserProfileTabPagesTsx1, UserProfileTabPagesTsx2);
+  const obj6 = require("module_1655");
   const items6 = [closure_9, pageHeights, visiblePageRange, tmp4, scrollPosition, sharedValue1];
   closure_129_0 = undefined;
   closure_129_1 = undefined;
@@ -267,8 +267,8 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   UserProfileTabPagesTsx4.__closure = items9;
   UserProfileTabPagesTsx4.__workletHash = 12442150107490;
   UserProfileTabPagesTsx4.__initData = tmp32;
-  const animatedReaction1 = require("module_1652").useAnimatedReaction(UserProfileTabPagesTsx3, UserProfileTabPagesTsx4);
-  const tmp7Result = require("module_1652");
+  const animatedReaction1 = require("module_1655").useAnimatedReaction(UserProfileTabPagesTsx3, UserProfileTabPagesTsx4);
+  const tmp7Result = require("module_1655");
   const items10 = [closure_11, sharedValue];
   _require = undefined;
   [tmp38, tmp39] = items10;
@@ -303,7 +303,7 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   UserProfileTabPagesTsx6.__workletHash = 5669274193379;
   UserProfileTabPagesTsx6.__initData = tmp41;
   const items14 = [sharedValue2];
-  const animatedStyle = require("module_1652").useAnimatedStyle(UserProfileTabPagesTsx5);
+  const animatedStyle = require("module_1655").useAnimatedStyle(UserProfileTabPagesTsx5);
   const items15 = [closure_13, sharedValue2];
   _require = undefined;
   [tmp44, tmp45] = items15;
@@ -320,12 +320,12 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   const items17 = [sharedValue2];
   const callback2 = obj.useCallback(UserProfileTabPagesTsx6, items14);
   const callback3 = obj.useCallback(UserProfileTabPagesTsx7, items17);
-  const tmp7Result2 = require("module_1652");
-  return jsx(_modDef1652.View, { ref, onLayout: callback, style: animatedStyle, children: jsx(require("SegmentedControlPages").SegmentedControlPages, { state, bounces: false, onBeginDragWorklet: callback2, onEndDragWorklet: callback3 }) });
+  const tmp7Result2 = require("module_1655");
+  return jsx(_modDef1655.View, { ref, onLayout: callback, style: animatedStyle, children: jsx(require("SegmentedControlPages").SegmentedControlPages, { state, bounces: false, onBeginDragWorklet: callback2, onEndDragWorklet: callback3 }) });
 });
 export function useMeasuredTabItems(memo) {
   _require = memo;
-  const sharedValue = require("module_1652").useSharedValue([]);
+  const sharedValue = require("module_1655").useSharedValue([]);
   dependencyMap = noop.useRef([]);
   items = [sharedValue];
   const callback = noop.useCallback((arg0, arg1) => {

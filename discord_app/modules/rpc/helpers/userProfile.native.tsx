@@ -1,10 +1,10 @@
-// === Module 16845: userProfile ===
+// === Module 16968: userProfile ===
 
-// Module 16845 (userProfile)
-import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8410 */;
+// Module 16968 (userProfile)
+import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8476 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ActionSheetStore from "ActionSheetStore" /* 5490 */;
-import UserStore from "UserStore" /* 1385 */;
+import ActionSheetStore from "ActionSheetStore" /* 5553 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const size = fn(2);
@@ -45,7 +45,7 @@ export function openUserProfile(arg0) {
             if (null == authStore.getUser(require)) {
               v2 = 3;
               c3 = 1;
-              const obj4 = { value: tmp3(7286).getUser(require), done: false };
+              const obj4 = { value: tmp3(7350).getUser(require), done: false };
               return obj4;
             }
           }
@@ -86,7 +86,7 @@ export function openUserProfile(arg0) {
           const obj8 = { userId: closure_128_0, channelId: closure_128_1, onClose: closure_128_3 };
           v2 = 2;
           c3 = 1;
-          const obj9 = { value: v2(8410)(obj8), done: false };
+          const obj9 = { value: v2(8476)(obj8), done: false };
           return obj9;
         }
       } catch (tmp29) {

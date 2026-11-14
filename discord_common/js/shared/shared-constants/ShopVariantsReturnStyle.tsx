@@ -1,6 +1,6 @@
-// === Module 8462: ShopVariantsReturnStyle ===
+// === Module 8528: ShopVariantsReturnStyle ===
 
-// Module 8462 (ShopVariantsReturnStyle)
+// Module 8528 (ShopVariantsReturnStyle)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ShopVariantsReturnStyle.tsx");

@@ -1,9 +1,9 @@
-// === Module 8032: HubIcon ===
+// === Module 8097: HubIcon ===
 
-// Module 8032 (HubIcon)
+// Module 8097 (HubIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod7976 from "module_7976" /* 7976 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod8041 from "module_8041" /* 8041 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function HubIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7976, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8041, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,9 +1,9 @@
-// === Module 5274: HexagonCampaignExperiment ===
+// === Module 5337: HexagonCampaignExperiment ===
 
-// Module 5274 (HexagonCampaignExperiment)
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5271 */;
-import QuestConstants from "QuestConstants" /* 5275 */;
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 5337 (HexagonCampaignExperiment)
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5334 */;
+import QuestConstants from "QuestConstants" /* 5338 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const QuestsExperimentLocations = QuestConstants.QuestsExperimentLocations;

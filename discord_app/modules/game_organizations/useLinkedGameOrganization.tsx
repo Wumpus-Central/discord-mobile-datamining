@@ -1,10 +1,10 @@
-// === Module 16280: useLinkedGameOrganization ===
+// === Module 16402: useLinkedGameOrganization ===
 
-// Module 16280 (useLinkedGameOrganization)
+// Module 16402 (useLinkedGameOrganization)
 import DurationsDefault from "Durations" /* 1089 */;
-import GameOrganizationActionCreators from "GameOrganizationActionCreators" /* 16282 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import GameOrganizationStore from "GameOrganizationStore" /* 16281 */;
+import GameOrganizationActionCreators from "GameOrganizationActionCreators" /* 16403 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import GameOrganizationStore from "GameOrganizationStore" /* 16349 */;
 
 require = fn;
 const result = 5 * DurationsDefault.Seconds.MINUTE;

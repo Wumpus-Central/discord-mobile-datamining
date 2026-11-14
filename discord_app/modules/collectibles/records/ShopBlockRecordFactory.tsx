@@ -1,15 +1,15 @@
-// === Module 8448: ShopBlockRecordFactory ===
+// === Module 8514: ShopBlockRecordFactory ===
 
-// Module 8448 (ShopBlockRecordFactory)
-import ShopBlockType from "ShopBlockType" /* 5928 */;
-import CountdownTimerBlockRecord2 from "CountdownTimerBlockRecord" /* 8449 */;
-import FeaturedBlockRecord2 from "FeaturedBlockRecord" /* 8450 */;
-import FeedBlockRecord2 from "FeedBlockRecord" /* 8453 */;
-import GameServerHostingBannerBlockRecord from "GameServerHostingBannerBlockRecord" /* 8454 */;
-import ImmersiveBannerBlockRecord from "ImmersiveBannerBlockRecord" /* 8455 */;
-import ShelfBlockRecord2 from "ShelfBlockRecord" /* 8456 */;
-import SocialLayerStorefrontPromotionalBannerBlockRecord from "SocialLayerStorefrontPromotionalBannerBlockRecord" /* 8457 */;
-import WideBannerBlockRecord2 from "WideBannerBlockRecord" /* 8458 */;
+// Module 8514 (ShopBlockRecordFactory)
+import ShopBlockType from "ShopBlockType" /* 5991 */;
+import CountdownTimerBlockRecord2 from "CountdownTimerBlockRecord" /* 8515 */;
+import FeaturedBlockRecord2 from "FeaturedBlockRecord" /* 8516 */;
+import FeedBlockRecord2 from "FeedBlockRecord" /* 8519 */;
+import GameServerHostingBannerBlockRecord from "GameServerHostingBannerBlockRecord" /* 8520 */;
+import ImmersiveBannerBlockRecord from "ImmersiveBannerBlockRecord" /* 8521 */;
+import ShelfBlockRecord2 from "ShelfBlockRecord" /* 8522 */;
+import SocialLayerStorefrontPromotionalBannerBlockRecord from "SocialLayerStorefrontPromotionalBannerBlockRecord" /* 8523 */;
+import WideBannerBlockRecord2 from "WideBannerBlockRecord" /* 8524 */;
 import size from "module_2" /* 2 */;
 
 const CountdownTimerBlockRecord = CountdownTimerBlockRecord2.CountdownTimerBlockRecord;

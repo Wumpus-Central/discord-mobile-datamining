@@ -1,7 +1,7 @@
-// === Module 18951: useGuildsBarGuildMediaState ===
+// === Module 19105: useGuildsBarGuildMediaState ===
 
-// Module 18951 (useGuildsBarGuildMediaState)
-import GuildMediaStateStore from "GuildMediaStateStore" /* 16092 */;
+// Module 19105 (useGuildsBarGuildMediaState)
+import GuildMediaStateStore from "GuildMediaStateStore" /* 16213 */;
 
 const require = globalThis.__r;
 

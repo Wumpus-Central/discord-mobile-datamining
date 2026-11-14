@@ -1,15 +1,15 @@
-// === Module 18487: MobileNotifSettingsRoutes ===
+// === Module 18615: MobileNotifSettingsRoutes ===
 
-// Module 18487 (MobileNotifSettingsRoutes)
+// Module 18615 (MobileNotifSettingsRoutes)
 import util from "util" /* 1113 */;
-import _modDef3013 from "module_3013" /* 3013 */;
-import BellIcon from "BellIcon" /* 10927 */;
-import settings_NotifSettingsUtils from "settings/NotifSettingsUtils" /* 16041 */;
-import NotifSettings from "NotifSettings" /* 16776 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 16779 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 17991 */;
-import MobileNotifSettingsSections from "MobileNotifSettingsSections" /* 18488 */;
-import SettingBuilders_mod from "SettingBuilders" /* 12311 */;
+import _modDef3029 from "module_3029" /* 3029 */;
+import BellIcon from "BellIcon" /* 10996 */;
+import settings_NotifSettingsUtils from "settings/NotifSettingsUtils" /* 16162 */;
+import NotifSettings from "NotifSettings" /* 16899 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 16902 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 18111 */;
+import MobileNotifSettingsSections from "MobileNotifSettingsSections" /* 18616 */;
+import SettingBuilders_mod from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -37,11 +37,11 @@ let SettingBuilders = SettingBuilders_mod;
 const obj3 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3013.gbaIfD);
+    return intl.string(_modDef3029.gbaIfD);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3013.MjXONr);
+    return intl.string(_modDef3029.MjXONr);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -66,11 +66,11 @@ let SettingBuilders = SettingBuilders_mod;
 const obj5 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3013["ZwNQS+"]);
+    return intl.string(_modDef3029["ZwNQS+"]);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3013.BBFiVq);
+    return intl.string(_modDef3029.BBFiVq);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -95,11 +95,11 @@ let SettingBuilders = SettingBuilders_mod;
 const obj7 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3013.BBcVf5);
+    return intl.string(_modDef3029.BBcVf5);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3013.eI4aPM);
+    return intl.string(_modDef3029.eI4aPM);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -124,7 +124,7 @@ let SettingBuilders = SettingBuilders_mod;
 const obj9 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3013.vcrTV5);
+    return intl.string(_modDef3029.vcrTV5);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIF_CATEGORY_FRIENDS_ACTIVITY,
   usePredicate() {
@@ -149,11 +149,11 @@ let SettingBuilders = SettingBuilders_mod;
 const obj11 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3013.qxdDqr);
+    return intl.string(_modDef3029.qxdDqr);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef3013.r60oLi);
+    return intl.string(_modDef3029.r60oLi);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -178,19 +178,19 @@ let SettingBuilders = SettingBuilders_mod;
 const obj13 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3013.wv4QHR);
+    return intl.string(_modDef3029.wv4QHR);
   },
   useTrailing() {
     const notifSettingRadioValue = settings_NotifSettingsUtils.useNotifSettingRadioValue(NotifSettings.NotifSettings.REACTIONS_CHOICE);
     if (2 === notifSettingRadioValue) {
       const intl3 = util.intl;
-      return intl3.string(_modDef3013.jUZVYn);
+      return intl3.string(_modDef3029.jUZVYn);
     } else if (1 === notifSettingRadioValue) {
       const intl2 = util.intl;
-      return intl2.string(_modDef3013.qggLZW);
+      return intl2.string(_modDef3029.qggLZW);
     } else if (0 === notifSettingRadioValue) {
       const intl = util.intl;
-      return intl.string(_modDef3013.FLSQ8z);
+      return intl.string(_modDef3029.FLSQ8z);
     } else {
       return null;
     }

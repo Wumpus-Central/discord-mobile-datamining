@@ -1,7 +1,7 @@
-// === Module 18124: GeneratedTestUsersModels ===
+// === Module 18244: GeneratedTestUsersModels ===
 
-// Module 18124 (GeneratedTestUsersModels)
-import Record from "Record" /* 1405 */;
+// Module 18244 (GeneratedTestUsersModels)
+import Record from "Record" /* 1408 */;
 
 let GeneratedTestPoolRecord;
 class GeneratedTestPoolRecord extends tmp2 {

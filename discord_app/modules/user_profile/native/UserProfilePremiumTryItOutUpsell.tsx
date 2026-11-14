@@ -1,21 +1,21 @@
-// === Module 17062: UserProfilePremiumTryItOutUpsell ===
+// === Module 17185: UserProfilePremiumTryItOutUpsell ===
 
-// Module 17062 (UserProfilePremiumTryItOutUpsell)
+// Module 17185 (UserProfilePremiumTryItOutUpsell)
 import util from "util" /* 1113 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 17039 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 17162 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(7896).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7962).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 let closure_5 = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_6 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 }, card: { marginHorizontal: PROFILE_SIDE_PADDING - UserProfileUpsellCardV2.GRADIENT_BORDER_WIDTH } };
   return obj;
@@ -66,7 +66,7 @@ export default function UserProfilePremiumTryItOutUpsell(isVisible) {
   UserProfilePremiumTryItOutUpsellTsx1.__closure = items1;
   UserProfilePremiumTryItOutUpsellTsx1.__workletHash = 3911087995142;
   UserProfilePremiumTryItOutUpsellTsx1.__initData = tmp5;
-  const animatedStyle = _mod1652.useAnimatedStyle(UserProfilePremiumTryItOutUpsellTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(UserProfilePremiumTryItOutUpsellTsx1);
   const items2 = [closure_8, isVisible];
   c0 = undefined;
   [tmp12, tmp13] = items2;
@@ -90,17 +90,17 @@ export default function UserProfilePremiumTryItOutUpsell(isVisible) {
   UserProfilePremiumTryItOutUpsellTsx2.__closure = items3;
   UserProfilePremiumTryItOutUpsellTsx2.__workletHash = 15138098665436;
   UserProfilePremiumTryItOutUpsellTsx2.__initData = tmp12;
-  const animatedProps = _mod1652.useAnimatedProps(UserProfilePremiumTryItOutUpsellTsx2);
+  const animatedProps = _mod1655.useAnimatedProps(UserProfilePremiumTryItOutUpsellTsx2);
   let obj2 = { animatedProps, style: null, children: null };
   const items4 = [tmp3.container, animatedStyle];
   obj2.style = items4;
   const obj3 = { style: tmp3.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" };
-  const tmp4Result = _mod1652;
+  const tmp4Result = _mod1655;
   const intl = util.intl;
   obj3.text = intl.string(util.t["MswR/h"]);
   const intl2 = util.intl;
   obj3.buttonText = intl2.string(util.t.PxUx8e);
   obj3.onButtonPress = isVisible.onPreviewPremium;
   obj2.children = jsx(UserProfileUpsellCardV2Default, { style: tmp3.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" });
-  return jsx(_modDef1652.View, { animatedProps, style: null, children: null });
+  return jsx(_modDef1655.View, { animatedProps, style: null, children: null });
 };

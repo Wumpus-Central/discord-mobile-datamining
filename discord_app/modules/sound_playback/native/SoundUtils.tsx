@@ -1,11 +1,11 @@
-// === Module 10968: sound_playback/SoundUtils ===
+// === Module 11037: sound_playback/SoundUtils ===
 
-// Module 10968 (sound_playback/SoundUtils)
+// Module 11037 (sound_playback/SoundUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 559 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import _modDef10969 from "module_10969" /* 10969 */;
-import _modDef10970 from "module_10970" /* 10970 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import _modDef11038 from "module_11038" /* 11038 */;
+import _modDef11039 from "module_11039" /* 11039 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -115,12 +115,12 @@ Object.defineProperty(prototype, "numberOfLoops", {
 });
 let obj = { NOTIFICATION: "notification", VOICE: "voice", RING_TONE: "ring_tone", MEDIA: "media", NOTIFICATION_NO_VIBRATION: "notification_no_vibration" };
 let obj5 = { call_calling: obj.VOICE, call_ringing: null, call_ringing_halloween: null, camera_on: null, camera_off: null, deafen: null, disconnect: null, mention1: null, mention2: null, mention3: null, message1: null, message2: null, message3: null, mute: null, ptt_start: null, ptt_stop: null, reconnect: null, stage_waiting: null, stream_ended: null, stream_started: null, stream_user_joined: null, stream_user_left: null, soundboard_sound: null, undeafen: null, unmute: null, user_join: null, user_leave: null, user_moved: null, vibing_wumpus: null, activity_end: null, activity_launch: null, activity_user_join: null, activity_user_left: null };
-let MetaQuestUtils = fn(1624);
+let MetaQuestUtils = fn(1627);
 obj5.call_ringing = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
-MetaQuestUtils = fn(1624);
+MetaQuestUtils = fn(1627);
 obj5.call_ringing_halloween = MetaQuestUtils.isMetaQuest() ? obj.MEDIA : obj.RING_TONE;
 ({ VOICE: obj2.camera_on, VOICE: obj2.camera_off, VOICE: obj2.deafen, VOICE: obj2.disconnect, NOTIFICATION: obj2.mention1, NOTIFICATION: obj2.mention2, NOTIFICATION: obj2.mention3, NOTIFICATION: obj2.message1, NOTIFICATION: obj2.message2, NOTIFICATION: obj2.message3, VOICE: obj2.mute, VOICE: obj2.ptt_start, VOICE: obj2.ptt_stop, VOICE: obj2.reconnect, VOICE: obj2.stage_waiting, VOICE: obj2.stream_ended, VOICE: obj2.stream_started, VOICE: obj2.stream_user_joined, VOICE: obj2.stream_user_left, VOICE: obj2.soundboard_sound, VOICE: obj2.undeafen, VOICE: obj2.unmute, VOICE: obj2.user_join, VOICE: obj2.user_leave, VOICE: obj2.user_moved, MEDIA: obj2.vibing_wumpus, NOTIFICATION_NO_VIBRATION: obj2.activity_end, NOTIFICATION_NO_VIBRATION: obj2.activity_launch, NOTIFICATION_NO_VIBRATION: obj2.activity_user_join, NOTIFICATION_NO_VIBRATION: obj2.activity_user_left } = obj);
-const obj8 = { stage_waiting: _modDef10969, vibing_wumpus: _modDef10970 };
+const obj8 = { stage_waiting: _modDef11038, vibing_wumpus: _modDef11039 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/sound_playback/native/SoundUtils.tsx");
 fn = (call_calling, call_calling, _volume, DEFAULT) => {

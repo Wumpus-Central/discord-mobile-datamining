@@ -1,16 +1,16 @@
-// === Module 17576: PlayableStore ===
+// === Module 17694: PlayableStore ===
 
-// Module 17576 (PlayableStore)
+// Module 17694 (PlayableStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import QuestTypes from "QuestTypes" /* 5278 */;
-import AdCreativeType from "AdCreativeType" /* 5282 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6984 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 8739 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 8738 */;
-import FramesStore from "FramesStore" /* 6956 */;
-import AppStateStore from "AppStateStore" /* 2117 */;
+import QuestTypes from "QuestTypes" /* 5341 */;
+import AdCreativeType from "AdCreativeType" /* 5345 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 7047 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 8806 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8805 */;
+import FramesStore from "FramesStore" /* 7019 */;
+import AppStateStore from "AppStateStore" /* 2120 */;
 
 require = fn;
 function pauseOrResumeTimer(startedAt) {
@@ -72,8 +72,8 @@ function handleVisibilityChange() {
   }
   return tmp;
 }
-const ActivityPanelModes = fn(5896).ActivityPanelModes;
-const asLaunched = fn(6957).asLaunched;
+const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const asLaunched = fn(7020).asLaunched;
 let obj = null;
 let set = new Set();
 const Store = initializeDefault.Store;
@@ -133,11 +133,13 @@ obj = {
     if (null != obj) {
       return false;
     } else {
-      const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
-      value = deliveryAdDecisionByPlacement.get(QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA);
+      let first = AdDeliveryStore.getAdDecisionsForPlacement(QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA)[0];
+      if (first == null) {
+        first = null;
+      }
       let creative;
-      if (value != null) {
-        creative = value.creative;
+      if (first != null) {
+        creative = first.creative;
       }
       const deliveredPlayable = AdDecisionUtils.getDeliveredPlayable(creative);
       if (null != deliveredPlayable) {

@@ -1,6 +1,6 @@
-// === Module 7254: SocialSdkApplicationStore ===
+// === Module 7318: SocialSdkApplicationStore ===
 
-// Module 7254 (SocialSdkApplicationStore)
+// Module 7318 (SocialSdkApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _slicedToArray from "module_32" /* 32 */;

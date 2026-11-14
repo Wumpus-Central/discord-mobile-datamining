@@ -1,6 +1,6 @@
-// === Module 16990: BadgeGrid ===
+// === Module 17113: BadgeGrid ===
 
-// Module 16990 (BadgeGrid)
+// Module 17113 (BadgeGrid)
 import nativeDefault from "native" /* 575 */;
 
 const PX_16 = nativeDefault.space.PX_16;

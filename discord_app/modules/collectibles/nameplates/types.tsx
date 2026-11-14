@@ -1,6 +1,6 @@
-// === Module 2113: types ===
+// === Module 2116: types ===
 
-// Module 2113 (types)
+// Module 2116 (types)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/types.tsx");

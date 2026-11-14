@@ -1,14 +1,14 @@
-// === Module 15701: AddWidgetButtonConfig ===
+// === Module 15820: AddWidgetButtonConfig ===
 
-// Module 15701 (AddWidgetButtonConfig)
+// Module 15820 (AddWidgetButtonConfig)
 import util from "util" /* 1113 */;
-import SampleGameWidgetData from "SampleGameWidgetData" /* 15702 */;
-import ApplicationStore from "ApplicationStore" /* 2162 */;
+import SampleGameWidgetData from "SampleGameWidgetData" /* 15821 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 require = fn;
-const WIDGET_TITLES_BY_TYPE = fn(7291).WIDGET_TITLES_BY_TYPE;
+const WIDGET_TITLES_BY_TYPE = fn(7355).WIDGET_TITLES_BY_TYPE;
 const dependencyMap = {
-  [fn(7289).WidgetType.FAVORITE_GAMES]: {
+  [fn(7353).WidgetType.FAVORITE_GAMES]: {
     placeholder() {
       return { variant: "details", applicationId: SampleGameWidgetData.SampleGameIds.LEAGUE_OF_LEGENDS };
     },
@@ -17,7 +17,7 @@ const dependencyMap = {
       return intl.string(util.t.xJtdIm);
     }
   },
-  [fn(7289).WidgetType.CURRENT_GAMES]: {
+  [fn(7353).WidgetType.CURRENT_GAMES]: {
     placeholder() {
       return { variant: "details", applicationId: SampleGameWidgetData.SampleGameIds.VALORANT };
     },
@@ -26,7 +26,7 @@ const dependencyMap = {
       return intl.string(util.t.Ae8tRi);
     }
   },
-  [fn(7289).WidgetType.PLAYED_GAMES]: {
+  [fn(7353).WidgetType.PLAYED_GAMES]: {
     placeholder() {
       const obj = { variant: "grid", applicationIds: null };
       items = [SampleGameWidgetData.SampleGameIds.PEAK, SampleGameWidgetData.SampleGameIds.BATTLEFIELD_6, SampleGameWidgetData.SampleGameIds.REPO, SampleGameWidgetData.SampleGameIds.BALDURS_GATE_3];
@@ -38,7 +38,7 @@ const dependencyMap = {
       return intl.string(util.t["pBR+4j"]);
     }
   },
-  [fn(7289).WidgetType.WANT_TO_PLAY_GAMES]: {
+  [fn(7353).WidgetType.WANT_TO_PLAY_GAMES]: {
     placeholder() {
       const obj = { variant: "grid", applicationIds: null };
       items = [SampleGameWidgetData.SampleGameIds.MARVEL_RIVALS, SampleGameWidgetData.SampleGameIds.WORLD_OF_WARCRAFT, SampleGameWidgetData.SampleGameIds.RUST, SampleGameWidgetData.SampleGameIds.SILKSONG];
@@ -50,7 +50,7 @@ const dependencyMap = {
       return intl.string(util.t.NtoBi1);
     }
   },
-  [fn(7289).WidgetType.APPLICATION]: {
+  [fn(7353).WidgetType.APPLICATION]: {
     placeholder(applicationId) {
       return { variant: "application-widget", applicationId: applicationId.applicationId };
     },
@@ -67,7 +67,7 @@ const dependencyMap = {
       return intl.formatToPlainString(util.t.KfGahB, { applicationName });
     }
   },
-  [fn(7289).WidgetType.PERSONAL]: {
+  [fn(7353).WidgetType.PERSONAL]: {
     placeholder() {
       return { variant: "personal" };
     },
@@ -80,7 +80,7 @@ const dependencyMap = {
       return intl.string(util.t.f8kllL);
     }
   },
-  [fn(7289).WidgetType.CLIPS_GALLERY]: {
+  [fn(7353).WidgetType.CLIPS_GALLERY]: {
     placeholder() {
       return { variant: "clips-gallery" };
     },

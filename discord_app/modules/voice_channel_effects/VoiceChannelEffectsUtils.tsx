@@ -1,41 +1,41 @@
-// === Module 12714: VoiceChannelEffectsUtils ===
+// === Module 12810: VoiceChannelEffectsUtils ===
 
-// Module 12714 (VoiceChannelEffectsUtils)
+// Module 12810 (VoiceChannelEffectsUtils)
 import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5189 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 5193 */;
-import _modDef12716 from "module_12716" /* 12716 */;
-import _modDef12717 from "module_12717" /* 12717 */;
-import _modDef12718 from "module_12718" /* 12718 */;
-import _modDef12719 from "module_12719" /* 12719 */;
-import _modDef12720 from "module_12720" /* 12720 */;
-import _modDef12721 from "module_12721" /* 12721 */;
-import _modDef12722 from "module_12722" /* 12722 */;
-import _modDef12723 from "module_12723" /* 12723 */;
-import _modDef12724 from "module_12724" /* 12724 */;
-import _modDef12725 from "module_12725" /* 12725 */;
-import _modDef12726 from "module_12726" /* 12726 */;
-import _modDef12727 from "module_12727" /* 12727 */;
-import _modDef12728 from "module_12728" /* 12728 */;
-import _modDef12729 from "module_12729" /* 12729 */;
-import _modDef12730 from "module_12730" /* 12730 */;
-import _modDef12731 from "module_12731" /* 12731 */;
-import _modDef12732 from "module_12732" /* 12732 */;
-import _modDef12733 from "module_12733" /* 12733 */;
-import _modDef12734 from "module_12734" /* 12734 */;
-import _modDef12735 from "module_12735" /* 12735 */;
-import _modDef12736 from "module_12736" /* 12736 */;
-import _modDef12737 from "module_12737" /* 12737 */;
-import UserStore from "UserStore" /* 1385 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 5256 */;
+import _modDef12812 from "module_12812" /* 12812 */;
+import _modDef12813 from "module_12813" /* 12813 */;
+import _modDef12814 from "module_12814" /* 12814 */;
+import _modDef12815 from "module_12815" /* 12815 */;
+import _modDef12816 from "module_12816" /* 12816 */;
+import _modDef12817 from "module_12817" /* 12817 */;
+import _modDef12818 from "module_12818" /* 12818 */;
+import _modDef12819 from "module_12819" /* 12819 */;
+import _modDef12820 from "module_12820" /* 12820 */;
+import _modDef12821 from "module_12821" /* 12821 */;
+import _modDef12822 from "module_12822" /* 12822 */;
+import _modDef12823 from "module_12823" /* 12823 */;
+import _modDef12824 from "module_12824" /* 12824 */;
+import _modDef12825 from "module_12825" /* 12825 */;
+import _modDef12826 from "module_12826" /* 12826 */;
+import _modDef12827 from "module_12827" /* 12827 */;
+import _modDef12828 from "module_12828" /* 12828 */;
+import _modDef12829 from "module_12829" /* 12829 */;
+import _modDef12830 from "module_12830" /* 12830 */;
+import _modDef12831 from "module_12831" /* 12831 */;
+import _modDef12832 from "module_12832" /* 12832 */;
+import _modDef12833 from "module_12833" /* 12833 */;
+import UserStore from "UserStore" /* 1388 */;
 import apply from "apply" /* 12 */;
 
 require = fn;
-const VoiceChannelEffectsConstants = fn(12715);
+const VoiceChannelEffectsConstants = fn(12811);
 ({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
-const items = [_modDef12716];
-const items1 = [_modDef12717, _modDef12718, _modDef12719, _modDef12720, _modDef12721, _modDef12722, _modDef12723, _modDef12724, _modDef12725, _modDef12726, _modDef12727, _modDef12728, _modDef12729, _modDef12730, _modDef12731, _modDef12732, _modDef12733, _modDef12734, _modDef12735, _modDef12736, _modDef12737];
+const items = [_modDef12812];
+const items1 = [_modDef12813, _modDef12814, _modDef12815, _modDef12816, _modDef12817, _modDef12818, _modDef12819, _modDef12820, _modDef12821, _modDef12822, _modDef12823, _modDef12824, _modDef12825, _modDef12826, _modDef12827, _modDef12828, _modDef12829, _modDef12830, _modDef12831, _modDef12832, _modDef12833];
 const AnimationTypeToAnimations = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx");

@@ -1,14 +1,14 @@
-// === Module 18463: ParentalControlsDirectMessages ===
+// === Module 18588: ParentalControlsDirectMessages ===
 
-// Module 18463 (ParentalControlsDirectMessages)
+// Module 18588 (ParentalControlsDirectMessages)
 import util from "util" /* 1113 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 17223 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 17224 */;
-import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 17228 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8673 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 17346 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 17347 */;
+import FamilyCenterSaveErrorUtils from "FamilyCenterSaveErrorUtils" /* 17351 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8740 */;
 
 require = fn;
-const SettingBuilders = fn(12311);
+const SettingBuilders = fn(12406);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -18,7 +18,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.wbYDfT);
   },
-  parent: fn(9135).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(9202).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
     return !useParentalControlSettings.useDefaultGuildsRestricted();
   },

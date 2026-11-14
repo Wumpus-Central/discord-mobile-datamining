@@ -169,11 +169,11 @@ prototype["dispatchKeyed"] = function dispatchKeyed(VOICE_MESSAGE_SEND, c0) {
   items = ["" + VOICE_MESSAGE_SEND + "_" + c0, ...substr];
   return this.dispatch.apply(items);
 };
-prototype["subscribeKeyed"] = function subscribeKeyed(VOICE_MESSAGE_SEND, c0, callback) {
-  return this.subscribe("" + VOICE_MESSAGE_SEND + "_" + c0, callback);
+prototype["subscribeKeyed"] = function subscribeKeyed(VOICE_MESSAGE_SEND, c1, callback) {
+  return this.subscribe("" + VOICE_MESSAGE_SEND + "_" + c1, callback);
 };
-prototype["unsubscribeKeyed"] = function unsubscribeKeyed(VOICE_MESSAGE_SEND, _undefined, callback) {
-  return this.unsubscribe("" + VOICE_MESSAGE_SEND + "_" + _undefined, callback);
+prototype["unsubscribeKeyed"] = function unsubscribeKeyed(VOICE_MESSAGE_SEND, _undefined2, callback) {
+  return this.unsubscribe("" + VOICE_MESSAGE_SEND + "_" + _undefined2, callback);
 };
 
 export { ComponentDispatcher };

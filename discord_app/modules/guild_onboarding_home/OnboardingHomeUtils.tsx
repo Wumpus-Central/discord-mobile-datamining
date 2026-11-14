@@ -1,22 +1,22 @@
-// === Module 7016: OnboardingHomeUtils ===
+// === Module 7079: OnboardingHomeUtils ===
 
-// Module 7016 (OnboardingHomeUtils)
-import FavoritesUtils from "FavoritesUtils" /* 5117 */;
-import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 7018 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 7019 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7020 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7021 */;
-import ImpersonateStore from "ImpersonateStore" /* 5148 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7017 */;
+// Module 7079 (OnboardingHomeUtils)
+import FavoritesUtils from "FavoritesUtils" /* 5180 */;
+import GuildOnboardingHomeTypes from "GuildOnboardingHomeTypes" /* 7081 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 7082 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 7083 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7084 */;
+import ImpersonateStore from "ImpersonateStore" /* 5211 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7080 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
 ({ GuildFeatures: metroImportDefault, ME: closure_8 } = Constants);
-const ChannelFlags = fn(5099).ChannelFlags;
+const ChannelFlags = fn(5162).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");
 
@@ -41,7 +41,7 @@ export function useCanSeeOnboardingHome(guild_id) {
           return tmp7;
         } else if (ImpersonateStore.isFullServerPreview(closure_0)) {
           const id = has.id;
-          const isSettingsEmptyResult = enabled(7018).isSettingsEmpty(GuildOnboardingHomeSettingsStore.getSettings(id));
+          const isSettingsEmptyResult = enabled(7081).isSettingsEmpty(GuildOnboardingHomeSettingsStore.getSettings(id));
           hasItem1 = !isSettingsEmptyResult;
           enabled = GuildOnboardingHomeSettingsStore.getEnabled(id);
           if (!isSettingsEmptyResult) {
@@ -55,7 +55,7 @@ export function useCanSeeOnboardingHome(guild_id) {
             const tmp23 = has(constants.GUILD_ONBOARDING) && !enabled;
           }
           let tmp10 = hasItem1;
-          const enabledResult = enabled(7018);
+          const enabledResult = enabled(7081);
         } else {
           tmp10 = guildHasOnboardingHomeDefault(has);
           if (tmp10) {

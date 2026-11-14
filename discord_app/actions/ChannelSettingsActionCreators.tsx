@@ -1,12 +1,12 @@
-// === Module 10850: ChannelSettingsActionCreators ===
+// === Module 10919: ChannelSettingsActionCreators ===
 
-// Module 10850 (ChannelSettingsActionCreators)
+// Module 10919 (ChannelSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import RootNavigationRef from "RootNavigationRef" /* 5430 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import RootNavigationRef from "RootNavigationRef" /* 5493 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 10846 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 10915 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
 
 require = fn;
 function init(channelId, location, subsection) {
@@ -108,7 +108,7 @@ let closure_9 = async function _saveChannel(arg0) {
           let channel;
           c4 = 1;
           c5 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -200,8 +200,8 @@ let closure_9 = async function _saveChannel(arg0) {
             tmp5 = isThreadResult;
           }
           if (!tmp5) {
-            const result = closure_1(8062).checkGuildTemplateDirty(guildId);
-            const tmpResult = closure_1(8062);
+            const result = closure_1(8127).checkGuildTemplateDirty(guildId);
+            const tmpResult = closure_1(8127);
           }
           return arg0;
         }, (body) => {

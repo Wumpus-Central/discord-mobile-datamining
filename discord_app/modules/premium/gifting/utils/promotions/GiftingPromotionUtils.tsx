@@ -1,18 +1,18 @@
-// === Module 11603: GiftingPromotionUtils ===
+// === Module 11670: GiftingPromotionUtils ===
 
-// Module 11603 (GiftingPromotionUtils)
-import dismissible_content from "dismissible_content" /* 5076 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5285 */;
-import MarketingSurfaceType from "MarketingSurfaceType" /* 9560 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 11605 */;
+// Module 11670 (GiftingPromotionUtils)
+import dismissible_content from "dismissible_content" /* 5139 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5348 */;
+import MarketingSurfaceType from "MarketingSurfaceType" /* 9627 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 11672 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 9556 */;
+import PromotionsStore from "PromotionsStore" /* 9623 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SubscriptionPlans = fn(1387).SubscriptionPlans;
+const SubscriptionPlans = fn(1390).SubscriptionPlans;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 

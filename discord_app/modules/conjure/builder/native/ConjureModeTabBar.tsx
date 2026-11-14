@@ -1,16 +1,16 @@
-// === Module 13237: ConjureModeTabBar ===
+// === Module 13342: ConjureModeTabBar ===
 
-// Module 13237 (ConjureModeTabBar)
+// Module 13342 (ConjureModeTabBar)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 11186 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 11253 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function ConjureModeTab(index) {
@@ -69,7 +69,7 @@ function ConjureModeTab(index) {
   ConjureModeTabBarTsx5.__workletHash = 1750569862445;
   ConjureModeTabBarTsx5.__initData = tmp8;
   onShowMenu = undefined;
-  const animatedStyle = _mod1652.useAnimatedStyle(ConjureModeTabBarTsx5);
+  const animatedStyle = _mod1655.useAnimatedStyle(ConjureModeTabBarTsx5);
   if (extras != null) {
     onShowMenu = extras.onShowMenu;
   }
@@ -121,7 +121,7 @@ function ConjureModeTab(index) {
     accessibilityHint: null,
     children: null
   };
-  const tmp2Result = _mod1652;
+  const tmp2Result = _mod1655;
   let formatToPlainStringResult;
   if (tmp2Result2.isAndroid()) {
     const intl = util.intl;
@@ -162,7 +162,7 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let closure_11 = createStyles.createStyles((borderRadius, arg1) => {
   const obj = { scrollContentContainer: { flexGrow: 1 }, controlsContainer: { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + 4, paddingVertical: 4, flexDirection: "row", alignItems: "center" }, indicatorContainer: { position: "absolute", width: "100%", height: "100%", borderRadius, flexDirection: "row" }, indicator: null, indicatorHidden: null, item: null, itemFirst: null, itemLast: null, label: null, labelText: null, prefix: null };
   const obj2 = { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + 4, paddingVertical: 4, flexDirection: "row", alignItems: "center" };
@@ -178,7 +178,7 @@ let closure_11 = createStyles.createStyles((borderRadius, arg1) => {
   obj.prefix = { flexShrink: 0 };
   return obj;
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let closure_12 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE });
 let closure_13 = { code: "(function ConjureModeTabBarTsx1(){let[indicatorWidth]=this.__closure;return indicatorWidth.get();})" };
 let closure_14 = { code: "(function ConjureModeTabBarTsx2(_,previous){let[previousIndicatorWidth]=this.__closure;if(previous!=null)previousIndicatorWidth.set(previous);})" };
@@ -202,11 +202,11 @@ export default function ConjureModeTabBar(arg0) {
   let tmp3 = closure_11(require("useToken").useToken(nativeDefault.modules.mobile.SEGMENTED_CONTROL_BORDER_RADIUS), items.length);
   c5 = tmp3;
   let obj = require("useToken");
-  const sharedValue = require("module_1652").useSharedValue(0);
+  const sharedValue = require("module_1655").useSharedValue(0);
   c6 = sharedValue;
-  const obj2 = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(0);
-  const obj3 = require("module_1652");
+  const obj2 = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(0);
+  const obj3 = require("module_1655");
   const items1 = [closure_13, sharedValue];
   _require = undefined;
   [tmp6, tmp7] = items1;
@@ -235,13 +235,13 @@ export default function ConjureModeTabBar(arg0) {
   ConjureModeTabBarTsx2.__closure = items4;
   ConjureModeTabBarTsx2.__workletHash = 12016602073272;
   ConjureModeTabBarTsx2.__initData = tmp8;
-  const animatedReaction = require("module_1652").useAnimatedReaction(ConjureModeTabBarTsx1, ConjureModeTabBarTsx2);
+  const animatedReaction = require("module_1655").useAnimatedReaction(ConjureModeTabBarTsx1, ConjureModeTabBarTsx2);
   const items5 = [sharedValue];
   c7 = noop.useCallback((nativeEvent) => _undefined3.set(nativeEvent.nativeEvent.layout.width), items5);
-  const obj4 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(activeIndex.get());
+  const obj4 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(activeIndex.get());
   c8 = sharedValue2;
-  const tmpResult = require("module_1652");
+  const tmpResult = require("module_1655");
   const items6 = [closure_15, activeIndex, items.length];
   _require = undefined;
   importDefault = undefined;
@@ -255,8 +255,8 @@ export default function ConjureModeTabBar(arg0) {
   ConjureModeTabBarTsx3.__closure = items7;
   ConjureModeTabBarTsx3.__workletHash = 12987911031538;
   ConjureModeTabBarTsx3.__initData = tmp12;
-  const derivedValue = require("module_1652").useDerivedValue(ConjureModeTabBarTsx3);
-  const tmpResult5 = require("module_1652");
+  const derivedValue = require("module_1655").useDerivedValue(ConjureModeTabBarTsx3);
+  const tmpResult5 = require("module_1655");
   const items8 = [closure_16, derivedValue, sharedValue2, sharedValue, pressedIndex, 0.04, 4, items.length, sharedValue1, require("spring/spring").withSpring, closure_9];
   _require = undefined;
   importDefault = undefined;
@@ -331,7 +331,7 @@ export default function ConjureModeTabBar(arg0) {
   ConjureModeTabBarTsx4.__closure = items9;
   ConjureModeTabBarTsx4.__workletHash = 680934149064;
   ConjureModeTabBarTsx4.__initData = tmp16;
-  closure_9 = require("module_1652").useAnimatedStyle(ConjureModeTabBarTsx4);
+  closure_9 = require("module_1655").useAnimatedStyle(ConjureModeTabBarTsx4);
   const mapped = items.map((id, index) => {
     const tmp = _undefined5.get() === index;
     let tmp3;
@@ -341,7 +341,7 @@ export default function ConjureModeTabBar(arg0) {
     const obj = { onLayout: tmp3, style: null };
     items = [_undefined2.indicator, tmp ? closure_9 : _undefined2.indicatorHidden];
     obj.style = items;
-    return metroImportDefault(_modDef1652.View, obj, id.id);
+    return metroImportDefault(_modDef1655.View, obj, id.id);
   });
   const mapped1 = items.map((id, index) => {
     id = id.id;
@@ -363,7 +363,7 @@ export default function ConjureModeTabBar(arg0) {
     return metroImportDefault(ConjureModeTab, obj, id);
   });
   const tmp30 = c5;
-  const tmpResult6 = require("module_1652");
+  const tmpResult6 = require("module_1655");
   let str;
   if (tmpResult7.isIOS()) {
     str = "tabbar";

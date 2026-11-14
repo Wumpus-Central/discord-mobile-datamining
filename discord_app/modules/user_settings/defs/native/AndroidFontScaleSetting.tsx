@@ -1,25 +1,25 @@
-// === Module 17812: AndroidFontScaleSetting ===
+// === Module 17932: AndroidFontScaleSetting ===
 
-// Module 17812 (AndroidFontScaleSetting)
+// Module 17932 (AndroidFontScaleSetting)
 import util from "util" /* 1113 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 13361 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 17813 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 13466 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 17933 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function formatFontScale(arg0) {
   return 100 * FontScales[Math.round(Math, arg0)] + "%";
 }
-const useFontScaleStore = fn(17764).useFontScaleStore;
+const useFontScaleStore = fn(17884).useFontScaleStore;
 const FontScales = fn(1082).FontScales;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(12311);
+const SettingBuilders = fn(12406);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.i19n5L);
   },
-  parent: fn(9135).MobileUserSettings.APPEARANCE,
+  parent: fn(9202).MobileUserSettings.APPEARANCE,
   useProps: function useFontScaleSliderProps() {
     const tmp = useFontScaleStore();
     closure_0 = tmp;
@@ -34,7 +34,7 @@ const slider = SettingBuilders.createSlider({
     items = [index, onChange, tmp.fontScale];
     return onChange.useMemo(() => ({ value: index, minValue: 0, maxValue: FontScales.length - 1, step: 1, onChange, startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}), endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}), formatValue: formatFontScale, valueLabel: `${tmp * 100}%`, defaultValue: FontScales.indexOf(1) }), items);
   },
-  usePredicate: fn(1377).isAndroid
+  usePredicate: fn(1380).isAndroid
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidFontScaleSetting.tsx");

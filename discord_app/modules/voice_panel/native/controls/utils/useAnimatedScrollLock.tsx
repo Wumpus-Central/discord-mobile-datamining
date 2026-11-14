@@ -1,12 +1,12 @@
-// === Module 13329: useAnimatedScrollLock ===
+// === Module 13434: useAnimatedScrollLock ===
 
-// Module 13329 (useAnimatedScrollLock)
-import _mod1652 from "module_1652" /* 1652 */;
-import _mod1705 from "module_1705" /* 1705 */;
+// Module 13434 (useAnimatedScrollLock)
+import _mod1655 from "module_1655" /* 1655 */;
+import _mod1708 from "module_1708" /* 1708 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let closure_3 = PlatformUtils.isAndroid();
 let context = noop.createContext(null);
 let closure_5 = { code: "(function onBeginDrag_useAnimatedScrollLockTsx1(_,context){let[isDragScrolling]=this.__closure;context.momentumEndCount=0;isDragScrolling.set(true);})" };
@@ -26,10 +26,10 @@ export function useAnimatedScrollLock(arg0) {
   ({ onScrollHandler, onScrollHandlerWorkletized } = obj);
   context = noop.useContext(context);
   const ref = noop.useRef(undefined);
-  const sharedValue = _mod1652.useSharedValue(false);
-  const sharedValue1 = _mod1652.useSharedValue(0);
+  const sharedValue = _mod1655.useSharedValue(false);
+  const sharedValue1 = _mod1655.useSharedValue(0);
   let gestureRef;
-  const sharedValue2 = _mod1652.useSharedValue(false);
+  const sharedValue2 = _mod1655.useSharedValue(false);
   if (context != null) {
     gestureRef = context.gestureRef;
   }
@@ -57,8 +57,8 @@ export function useAnimatedScrollLock(arg0) {
   if (isDragScrolling == null) {
     isDragScrolling = sharedValue2;
   }
-  const animatedRef = _mod1652.useAnimatedRef();
-  const tmp3Result = _mod1652;
+  const animatedRef = _mod1655.useAnimatedRef();
+  const tmp3Result = _mod1655;
   items = [_undefined5, isDragScrolling];
   [tmp13, tmp14] = items;
   const obj5 = { onBeginDrag: null, onEndDrag: null, onMomentumEnd: null, onScroll: null };
@@ -118,7 +118,7 @@ export function useAnimatedScrollLock(arg0) {
   onMomentumEnd.__workletHash = 3109808246259;
   onMomentumEnd.__initData = tmp18;
   obj5.onMomentumEnd = onMomentumEnd;
-  const items6 = [closure_8, isDragScrolling, closure_3, _mod1652.scrollTo, animatedRef, scrollOffsetValue, scrollLocked, onScrollHandler, _mod1705.scheduleOnRN, onScrollHandlerWorkletized];
+  const items6 = [closure_8, isDragScrolling, closure_3, _mod1655.scrollTo, animatedRef, scrollOffsetValue, scrollLocked, onScrollHandler, _mod1708.scheduleOnRN, onScrollHandlerWorkletized];
   c1 = undefined;
   c2 = undefined;
   c3 = undefined;
@@ -169,8 +169,8 @@ export function useAnimatedScrollLock(arg0) {
   onScroll.__workletHash = 12056309843492;
   onScroll.__initData = tmp21;
   obj5.onScroll = onScroll;
-  const tmp3Result3 = _mod1652;
-  const animatedScrollHandler = _mod1652.useAnimatedScrollHandler(obj5);
+  const tmp3Result3 = _mod1655;
+  const animatedScrollHandler = _mod1655.useAnimatedScrollHandler(obj5);
   const items8 = [closure_9, scrollLocked];
   c0 = undefined;
   [tmp32, tmp33] = items8;
@@ -181,6 +181,6 @@ export function useAnimatedScrollLock(arg0) {
   useAnimatedScrollLockTsx5.__closure = items9;
   useAnimatedScrollLockTsx5.__workletHash = 5672658583564;
   useAnimatedScrollLockTsx5.__initData = tmp32;
-  const tmp3Result4 = _mod1652;
-  return { onScroll: animatedScrollHandler, animatedProps: _mod1652.useAnimatedProps(useAnimatedScrollLockTsx5), scrollerRef: animatedRef, gestureRef };
+  const tmp3Result4 = _mod1655;
+  return { onScroll: animatedScrollHandler, animatedProps: _mod1655.useAnimatedProps(useAnimatedScrollLockTsx5), scrollerRef: animatedRef, gestureRef };
 }

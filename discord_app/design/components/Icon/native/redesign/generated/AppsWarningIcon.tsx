@@ -1,9 +1,9 @@
-// === Module 8033: AppsWarningIcon ===
+// === Module 8098: AppsWarningIcon ===
 
-// Module 8033 (AppsWarningIcon)
+// Module 8098 (AppsWarningIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod7992 from "module_7992" /* 7992 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod8057 from "module_8057" /* 8057 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function AppsWarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7992, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8057, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

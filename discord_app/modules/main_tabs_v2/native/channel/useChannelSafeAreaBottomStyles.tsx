@@ -1,23 +1,23 @@
-// === Module 11951: useChannelSafeAreaBottomStyles ===
+// === Module 12018: useChannelSafeAreaBottomStyles ===
 
-// Module 11951 (useChannelSafeAreaBottomStyles)
+// Module 12018 (useChannelSafeAreaBottomStyles)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import KeyboardTypes from "KeyboardTypes" /* 1625 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
-import LurkingStore from "LurkingStore" /* 5176 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import LurkingStore from "LurkingStore" /* 5239 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const InputModes = fn(1072).InputModes;
-const StaticChannelRoute = fn(5099).StaticChannelRoute;
+const StaticChannelRoute = fn(5162).StaticChannelRoute;
 let closure_11 = { LURKER: "lurker", VOICE: "voice", CHAT: "chat", DIRECTORY: "directory", EXPRESSION_PICKER: "expression", MEDIA: "media", APPS: "apps", NONE: "none" };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, chat: { backgroundColor }, voice: { backgroundColor }, expressionPickerBackground: { backgroundColor } };
   return obj;

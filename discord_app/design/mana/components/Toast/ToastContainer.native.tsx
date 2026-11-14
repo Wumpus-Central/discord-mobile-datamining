@@ -1,10 +1,10 @@
-// === Module 16362: ToastContainer ===
+// === Module 16485: ToastContainer ===
 
-// Module 16362 (ToastContainer)
+// Module 16485 (ToastContainer)
 import nativeDefault from "native" /* 575 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import TransitionGroup_TransitionGroup from "TransitionGroup/TransitionGroup" /* 5319 */;
-import OverlayViewDefault from "OverlayView" /* 6212 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import TransitionGroup_TransitionGroup from "TransitionGroup/TransitionGroup" /* 5382 */;
+import OverlayViewDefault from "OverlayView" /* 6275 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,17 +15,17 @@ function AnimatedToast(cleanUp) {
   cleanUp = cleanUp.cleanUp;
   ({ entry, enterDelayMs } = cleanUp);
   let tmp = c12();
-  const sharedValue = require("module_1652").useSharedValue(0);
-  obj = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(0);
+  obj = require("module_1655");
   const tmp2 = _require;
-  const sharedValue1 = require("module_1652").useSharedValue(c8.HIDDEN);
+  const sharedValue1 = require("module_1655").useSharedValue(c8.HIDDEN);
   _slicedToArray = sharedValue1;
-  obj2 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(false);
+  obj2 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(false);
   noop = sharedValue2;
   [first, c6] = noop.useState(false);
-  const obj3 = require("module_1652");
-  items = [c14, position, sharedValue, sharedValue2, sharedValue1, c8, _slicedToArray(noop.useState(enterDelayMs), 1)[0], require("module_1652").interpolate, c9, require("module_1652").withDelay, require("timing/timing").withTiming, c10, c13, state, require("TransitionGroup/TransitionGroup").TransitionStates, require("module_1705").scheduleOnRN, cleanUp];
+  const obj3 = require("module_1655");
+  items = [c14, position, sharedValue, sharedValue2, sharedValue1, c8, _slicedToArray(noop.useState(enterDelayMs), 1)[0], require("module_1655").interpolate, c9, require("module_1655").withDelay, require("timing/timing").withTiming, c10, c13, state, require("TransitionGroup/TransitionGroup").TransitionStates, require("module_1708").scheduleOnRN, cleanUp];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -139,7 +139,7 @@ function AnimatedToast(cleanUp) {
   ToastContainerNativeTsx2.__workletHash = 2210438006804;
   ToastContainerNativeTsx2.__initData = tmp9;
   let items2 = [sharedValue1, cleanUp, sharedValue2, first, state];
-  const animatedStyle = require("module_1652").useAnimatedStyle(ToastContainerNativeTsx2);
+  const animatedStyle = require("module_1655").useAnimatedStyle(ToastContainerNativeTsx2);
   const effect = obj4.useEffect(() => {
     if (c0 === TransitionGroup_TransitionGroup.TransitionStates.YEETED) {
       if (_undefined4.get()) {
@@ -165,8 +165,8 @@ function AnimatedToast(cleanUp) {
   let items4 = [tmp.toast, "top" === position ? tmp.toastTop : tmp.toastBottom, animatedStyle];
   obj6.style = items4;
   const merged = Object.assign(entry.toast);
-  obj6.children = jsx(tmp2(16358).Toast, {});
-  return jsx(_modDef1652.View, obj6);
+  obj6.children = jsx(tmp2(16481).Toast, {});
+  return jsx(_modDef1655.View, obj6);
 }
 function getItemKey(key) {
   return String(key.key);
@@ -181,10 +181,10 @@ let items = [, ];
 let obj2 = { duration: null, easing: null };
 const ANIMATION_DURATION_MS = nativeDefault.modules.toast.ANIMATION_DURATION_MS;
 obj2.duration = ANIMATION_DURATION_MS.resolve({});
-obj2.easing = fn(1652).Easing.linear;
+obj2.easing = fn(1655).Easing.linear;
 const QUEUE_ENTER_DELAY_MS = nativeDefault.modules.toast.QUEUE_ENTER_DELAY_MS;
 let closure_11 = QUEUE_ENTER_DELAY_MS.resolve({});
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj4 = { container: null, bounds: null, toast: null, toastTop: null, toastBottom: null };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

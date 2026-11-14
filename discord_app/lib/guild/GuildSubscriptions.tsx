@@ -1,13 +1,13 @@
-// === Module 15870: GuildSubscriptions ===
+// === Module 15990: GuildSubscriptions ===
 
-// Module 15870 (GuildSubscriptions)
+// Module 15990 (GuildSubscriptions)
 import applyDefault from "apply" /* 12 */;
 import Constants from "Constants" /* 1072 */;
-import Timers from "Timers" /* 5087 */;
-import FavoritesUtils from "FavoritesUtils" /* 5117 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 12432 */;
-import GuildMemberSubscriptionsDefault from "GuildMemberSubscriptions" /* 15871 */;
-import GuildThreadSubscriptionsDefault from "GuildThreadSubscriptions" /* 15872 */;
+import Timers from "Timers" /* 5150 */;
+import FavoritesUtils from "FavoritesUtils" /* 5180 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 12527 */;
+import GuildMemberSubscriptionsDefault from "GuildMemberSubscriptions" /* 15991 */;
+import GuildThreadSubscriptionsDefault from "GuildThreadSubscriptions" /* 15992 */;
 import size from "module_2" /* 2 */;
 
 const ME = Constants.ME;

@@ -1,6 +1,6 @@
-// === Module 9421: CollectiblesPreviewConstants ===
+// === Module 9490: CollectiblesPreviewConstants ===
 
-// Module 9421 (CollectiblesPreviewConstants)
+// Module 9490 (CollectiblesPreviewConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesPreviewConstants.tsx");

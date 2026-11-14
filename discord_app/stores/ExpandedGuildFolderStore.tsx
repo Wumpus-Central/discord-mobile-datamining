@@ -1,6 +1,6 @@
-// === Module 6856: ExpandedGuildFolderStore ===
+// === Module 6919: ExpandedGuildFolderStore ===
 
-// Module 6856 (ExpandedGuildFolderStore)
+// Module 6919 (ExpandedGuildFolderStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;

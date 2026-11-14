@@ -1,17 +1,17 @@
-// === Module 11611: GiftingBadgesUtils ===
+// === Module 11678: GiftingBadgesUtils ===
 
-// Module 11611 (GiftingBadgesUtils)
+// Module 11678 (GiftingBadgesUtils)
 import util from "util" /* 1113 */;
-import _modDef2781 from "module_2781" /* 2781 */;
-import BadgeId from "BadgeId" /* 8414 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8486 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 11606 */;
+import _modDef2797 from "module_2797" /* 2797 */;
+import BadgeId from "BadgeId" /* 8480 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8552 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 11673 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8481 */;
-import UserStore from "UserStore" /* 1385 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8547 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
-let closure_5 = fn(8481).getSingleRequirementThreshold;
+let closure_5 = fn(8547).getSingleRequirementThreshold;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
@@ -25,7 +25,7 @@ export function getGiftingBadgeAccessibilityLabel(name) {
     str = "";
   }
   const intl = util.intl;
-  return "" + str + ", " + intl.formatToPlainString(_modDef2781.qvx9E4, { count });
+  return "" + str + ", " + intl.formatToPlainString(_modDef2797.qvx9E4, { count });
 }
 export function getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier) {
   const tmp = closure_5(currentTier);
@@ -74,9 +74,9 @@ export function useGiftingBadgeCoachmarkVariant(arg0) {
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeExperiment = stateFromStores(11606).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = stateFromStores(11673).GiftingBadgeExperiment;
   let enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(11612).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = stateFromStores(11679).GiftingBadgeCoachmarkAudienceExperiment;
   let str = "-DISABLED";
   if (enabled2) {
     str = "";
@@ -96,8 +96,8 @@ export function useGiftingBadgeCoachmarkVariant(arg0) {
     return flag;
   });
   const tmpResult = stateFromStores(504);
-  const result = stateFromStores(5285).useIsDismissibleContentDismissed_UNSAFE(tmp(5076).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
-  const tmpResult3 = stateFromStores(5285);
+  const result = stateFromStores(5348).useIsDismissibleContentDismissed_UNSAFE(tmp(5139).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  const tmpResult3 = stateFromStores(5348);
   const items1 = [BadgeDirectoryStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => badgeById.getBadgeById(stateFromStores(dependencyMap[10]).BadgeId.GIFTING));
   if (enabled2) {

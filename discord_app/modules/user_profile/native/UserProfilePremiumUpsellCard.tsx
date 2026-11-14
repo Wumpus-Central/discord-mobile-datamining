@@ -1,14 +1,14 @@
-// === Module 17063: UserProfilePremiumUpsellCard ===
+// === Module 17186: UserProfilePremiumUpsellCard ===
 
-// Module 17063 (UserProfilePremiumUpsellCard)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7743 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9512 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10885 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16991 */;
+// Module 17186 (UserProfilePremiumUpsellCard)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7809 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9579 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10954 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 17114 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ function UpsellCardLayout(arg0) {
 }
 function PreviewNitroCard(style) {
   let navigation;
-  navigation = navigation(1499).useNavigation();
+  navigation = navigation(1502).useNavigation();
   items = [navigation];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };
   const callback = noop.useCallback(() => {
@@ -35,7 +35,7 @@ function PreviewNitroCard(style) {
 }
 function GetNitroCard(style) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(9539).useNitroTrialCtaOverride();
+  let nitroTrialCtaOverride = analyticsLocations(9606).useNitroTrialCtaOverride();
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   const obj2 = { style: style.style, ctaText: null, description: null, onPress: null };
@@ -57,7 +57,7 @@ const Constants = fn(1072);
 ({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 const jsx = fn(21).jsx;
 let items = [AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM];
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_10 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 } };
   return obj;

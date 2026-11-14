@@ -1,24 +1,24 @@
-// === Module 13000: CallTile ===
+// === Module 13096: CallTile ===
 
-// Module 13000 (CallTile)
+// Module 13096 (CallTile)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
-import _modDef7414 from "module_7414" /* 7414 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import _modDef10769 from "module_10769" /* 10769 */;
-import RevealProvider from "RevealProvider" /* 12619 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 13001 */;
-import _modDef13006 from "module_13006" /* 13006 */;
-import _modDef13007 from "module_13007" /* 13007 */;
-import _modDef13008 from "module_13008" /* 13008 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 13009 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import _modDef7480 from "module_7480" /* 7480 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
+import _modDef10838 from "module_10838" /* 10838 */;
+import RevealProvider from "RevealProvider" /* 12715 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 13097 */;
+import _modDef13102 from "module_13102" /* 13102 */;
+import _modDef13103 from "module_13103" /* 13103 */;
+import _modDef13104 from "module_13104" /* 13104 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 13105 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
-import UserStore from "UserStore" /* 1385 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 class StreamPreviewTile {
@@ -32,7 +32,7 @@ class StreamPreviewTile {
     obj1 = {
       guildId: participant.stream.guildId,
       userId: participant.user.id,
-      style: { aspectRatio: "delete", borderRadius: false },
+      style: { aspectRatio: "description", borderRadius: false },
       disableTransition: true,
       onPress() {
             return closure_1_8();
@@ -45,17 +45,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef13006;
+    let tmp3 = _modDef13102;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef13007;
+      tmp3 = _modDef13103;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef7414;
+      tmp3 = _modDef7480;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef10769;
+      tmp3 = _modDef10838;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef13008;
+      tmp3 = _modDef13104;
     }
   }
   let tmp14 = null;
@@ -157,16 +157,16 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10934);
+const ChannelCallStore = fn(11003);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(5920);
+const CallConstants = fn(5983);
 ({ ParticipantTypes: closure_10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
 let obj3 = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
-const ColorUtils = fn(5240);
+const ColorUtils = fn(5303);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj3;

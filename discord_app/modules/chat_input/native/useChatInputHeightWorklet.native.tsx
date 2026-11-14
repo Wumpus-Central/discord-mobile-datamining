@@ -1,9 +1,9 @@
-// === Module 14527: useChatInputHeightWorklet ===
+// === Module 14639: useChatInputHeightWorklet ===
 
-// Module 14527 (useChatInputHeightWorklet)
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import useKeyboardStateSharedValueDefault from "useKeyboardStateSharedValue" /* 13703 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13704 */;
+// Module 14639 (useChatInputHeightWorklet)
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import useKeyboardStateSharedValueDefault from "useKeyboardStateSharedValue" /* 13808 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13809 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,9 +18,9 @@ let result = size.fileFinishedImporting("modules/chat_input/native/useChatInputH
 export default function useChatInputHeightWorklet(arg0) {
   ({ textFieldHeight, textFieldMinHeight } = arg0);
   _require = undefined;
-  const sharedValue = require("module_1652").useSharedValue(0);
+  const sharedValue = require("module_1655").useSharedValue(0);
   _require = sharedValue;
-  let obj = require("module_1652");
+  let obj = require("module_1655");
   items = [c4, sharedValue, textFieldHeight, require("useChatInputMaxHeight").getChatInputHeightAnimationTimingWorklet, textFieldMinHeight];
   _require = undefined;
   [tmp4, tmp5, tmp6, tmp7, tmp8] = items;
@@ -32,8 +32,8 @@ export default function useChatInputHeightWorklet(arg0) {
   useChatInputHeightWorkletNativeTsx1.__closure = items1;
   useChatInputHeightWorkletNativeTsx1.__workletHash = 620916776372;
   useChatInputHeightWorkletNativeTsx1.__initData = tmp4;
-  const event = require("module_1652").useEvent(useChatInputHeightWorkletNativeTsx1, ["onChangeContentSize"]);
-  const obj2 = require("module_1652");
+  const event = require("module_1655").useEvent(useChatInputHeightWorkletNativeTsx1, ["onChangeContentSize"]);
+  const obj2 = require("module_1655");
   const tmpResult = require("PlatformUtils");
   const isAndroidResult = require("PlatformUtils").isAndroid();
   const tmp11 = useKeyboardStateSharedValueDefault();
@@ -77,7 +77,7 @@ export default function useChatInputHeightWorklet(arg0) {
   useChatInputHeightWorkletNativeTsx3.__closure = items5;
   useChatInputHeightWorkletNativeTsx3.__workletHash = 14811065728720;
   useChatInputHeightWorkletNativeTsx3.__initData = tmp17;
-  const animatedReaction = require("module_1652").useAnimatedReaction(useChatInputHeightWorkletNativeTsx2, useChatInputHeightWorkletNativeTsx3);
+  const animatedReaction = require("module_1655").useAnimatedReaction(useChatInputHeightWorkletNativeTsx2, useChatInputHeightWorkletNativeTsx3);
   const obj3 = { registerViewTag: null, unregisterViewTag: null };
   const items6 = [event];
   obj3.registerViewTag = noop.useCallback((findNodeHandleResult) => {

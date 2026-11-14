@@ -1,7 +1,7 @@
-// === Module 8314: AppStoreAgeSignalActionCreators ===
+// === Module 8380: AppStoreAgeSignalActionCreators ===
 
-// Module 8314 (AppStoreAgeSignalActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+// Module 8380 (AppStoreAgeSignalActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -150,7 +150,7 @@ let closure_8 = async function _submitAgeSignal(arg0) {
           closure_134_4 = closure_4;
           c8 = 1;
           c9 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

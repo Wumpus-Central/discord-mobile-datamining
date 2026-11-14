@@ -1,11 +1,11 @@
-// === Module 19330: snowballStemmer ===
+// === Module 19522: snowballStemmer ===
 
-// Module 19330 (snowballStemmer)
-import _mod19331 from "module_19331" /* 19331 */;
+// Module 19522 (snowballStemmer)
+import _mod19523 from "module_19523" /* 19523 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/search/snowballStemmer.tsx");
 
 export function snowballStem(arg0) {
-  return _mod19331.stem(arg0);
+  return _mod19523.stem(arg0);
 }

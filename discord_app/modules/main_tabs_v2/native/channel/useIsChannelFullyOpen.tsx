@@ -1,7 +1,7 @@
-// === Module 11949: useIsChannelFullyOpen ===
+// === Module 12016: useIsChannelFullyOpen ===
 
-// Module 11949 (useIsChannelFullyOpen)
-import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11944 */;
+// Module 12016 (useIsChannelFullyOpen)
+import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 12011 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -63,7 +63,7 @@ export default function useIsChannelFullyOpen() {
   useIsChannelFullyOpenTsx2.__closure = items1;
   useIsChannelFullyOpenTsx2.__workletHash = 2274606773816;
   useIsChannelFullyOpenTsx2.__initData = tmp7;
-  const items2 = [closure_7, tmp6(1705).scheduleOnRN, tmp5];
+  const items2 = [closure_7, tmp6(1708).scheduleOnRN, tmp5];
   _require = undefined;
   importDefault = undefined;
   [tmp11, tmp12, tmp13] = items2;
@@ -76,7 +76,7 @@ export default function useIsChannelFullyOpen() {
   useIsChannelFullyOpenTsx3.__closure = items3;
   useIsChannelFullyOpenTsx3.__workletHash = 11624957574532;
   useIsChannelFullyOpenTsx3.__initData = tmp11;
-  const animatedReaction = require("module_1652").useAnimatedReaction(useIsChannelFullyOpenTsx2, useIsChannelFullyOpenTsx3);
+  const animatedReaction = require("module_1655").useAnimatedReaction(useIsChannelFullyOpenTsx2, useIsChannelFullyOpenTsx3);
   return tmp4;
 };
 export { getIsChannelFullyOpen };

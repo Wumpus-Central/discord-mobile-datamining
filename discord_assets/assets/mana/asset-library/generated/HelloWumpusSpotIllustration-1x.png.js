@@ -1,6 +1,6 @@
-// === Module 14956: ? ===
+// === Module 15070: ? ===
 
-// Module 14956
+// Module 15070
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HelloWumpusSpotIllustration-1x.png.js");

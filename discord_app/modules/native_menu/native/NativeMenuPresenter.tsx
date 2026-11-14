@@ -1,8 +1,8 @@
-// === Module 19593: NativeMenuPresenter ===
+// === Module 19786: NativeMenuPresenter ===
 
-// Module 19593 (NativeMenuPresenter)
+// Module 19786 (NativeMenuPresenter)
 import initialize from "initialize" /* 504 */;
-import NativeMenuStore from "NativeMenuStore" /* 10972 */;
+import NativeMenuStore from "NativeMenuStore" /* 11041 */;
 
 require = fn;
 const size = fn(2);

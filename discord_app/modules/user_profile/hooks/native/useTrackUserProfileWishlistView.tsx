@@ -1,8 +1,8 @@
-// === Module 15740: useTrackUserProfileWishlistView ===
+// === Module 15860: useTrackUserProfileWishlistView ===
 
-// Module 15740 (useTrackUserProfileWishlistView)
+// Module 15860 (useTrackUserProfileWishlistView)
 import noop from "module_19" /* 19 */;
-import WishlistStore from "WishlistStore" /* 9396 */;
+import WishlistStore from "WishlistStore" /* 9465 */;
 import size from "module_2" /* 2 */;
 
 ({ useEffect: c2, useRef: c3 } = noop);

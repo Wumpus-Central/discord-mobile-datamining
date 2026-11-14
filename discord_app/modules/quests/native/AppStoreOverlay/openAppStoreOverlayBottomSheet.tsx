@@ -1,9 +1,9 @@
-// === Module 10106: openAppStoreOverlayBottomSheet ===
+// === Module 10175: openAppStoreOverlayBottomSheet ===
 
-// Module 10106 (openAppStoreOverlayBottomSheet)
+// Module 10175 (openAppStoreOverlayBottomSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import AnalyticsActions from "AnalyticsActions" /* 8758 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10102 */;
+import AnalyticsActions from "AnalyticsActions" /* 8825 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10171 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 19944: VoicePanelStageAudienceButton ===
+// === Module 20101: VoicePanelStageAudienceButton ===
 
-// Module 19944 (VoicePanelStageAudienceButton)
-import _modDef4209 from "module_4209" /* 4209 */;
-import NativeViewDefault from "NativeView" /* 7656 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11918 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 19927 */;
-import CircleWithCutoutDefault from "CircleWithCutout" /* 19935 */;
-import openStageAudienceSheetDefault from "openStageAudienceSheet" /* 19945 */;
+// Module 20101 (VoicePanelStageAudienceButton)
+import _modDef4261 from "module_4261" /* 4261 */;
+import NativeViewDefault from "NativeView" /* 7722 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 20084 */;
+import CircleWithCutoutDefault from "CircleWithCutout" /* 20092 */;
+import openStageAudienceSheetDefault from "openStageAudienceSheet" /* 20102 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const result = BADGE_SIZE / 2;
 const cutoutRadius = result + BADGE_PADDING;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({ iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" }, badge: { position: "absolute", zIndex: 1, top: 0, right: 0 } });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelStageAudienceButton.tsx");
@@ -25,13 +25,13 @@ export default function StageAudienceButton(props) {
   props = props.props;
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
   const tmp3 = closure_8();
-  const voicePanelButtonStyles = channelId(19926).useVoicePanelButtonStyles(props.wrapperSpecs);
-  const obj = channelId(19926);
-  const canModerateRequestToSpeak = channelId(6875).useCanModerateRequestToSpeak(channelId);
-  const obj2 = channelId(6875);
+  const voicePanelButtonStyles = channelId(20083).useVoicePanelButtonStyles(props.wrapperSpecs);
+  const obj = channelId(20083);
+  const canModerateRequestToSpeak = channelId(6938).useCanModerateRequestToSpeak(channelId);
+  const obj2 = channelId(6938);
   let num = 0;
   if (canModerateRequestToSpeak) {
-    num = obj3.useStageParticipantsCount(channelId, channelId(6880).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY);
+    num = obj3.useStageParticipantsCount(channelId, channelId(6943).StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY);
   }
   const element = {
     onPress() {
@@ -41,20 +41,20 @@ export default function StageAudienceButton(props) {
     accessibilityLabel: null,
     children: null
   };
-  obj3 = channelId(6886);
+  obj3 = channelId(6949);
   const intl = tmp4(1113).intl;
   if (num > 0) {
     const obj4 = { count: num };
-    let formatToPlainStringResult = intl.formatToPlainString(_modDef4209.IQmRBE, obj4);
+    let formatToPlainStringResult = intl.formatToPlainString(_modDef4261.IQmRBE, obj4);
   } else {
-    formatToPlainStringResult = intl.string(_modDef4209.Ds8IST);
+    formatToPlainStringResult = intl.string(_modDef4261.Ds8IST);
   }
   element.accessibilityLabel = formatToPlainStringResult;
   items = [closure_4(CircleWithCutoutDefault, { fill: voicePanelButtonStyles.iconBg.backgroundColor, circleRadius: props.width / 2, cutoutRadius, enableCutout: num > 0, cutoutPositionInDegrees: 45, alignBadgeEdgeWithCircleEdge: true, badgeRadius, scaleToPixelDensity: true }), , ];
   const obj6 = { style: tmp3.iconContainer, children: null };
   const obj5 = { fill: voicePanelButtonStyles.iconBg.backgroundColor, circleRadius: props.width / 2, cutoutRadius, enableCutout: num > 0, cutoutPositionInDegrees: 45, alignBadgeEdgeWithCircleEdge: true, badgeRadius, scaleToPixelDensity: true };
   const tmpResult = VoicePanelAnimatedButtonWrapperDefault;
-  obj6.children = closure_4(channelId(7372).GroupIcon, { color: voicePanelButtonStyles.iconFill.color });
+  obj6.children = closure_4(channelId(7436).GroupIcon, { color: voicePanelButtonStyles.iconFill.color });
   items[1] = closure_4(NativeViewDefault, obj6);
   const obj8 = { style: tmp3.badge, pointerEvents: "none", children: null };
   const obj7 = { color: voicePanelButtonStyles.iconFill.color };

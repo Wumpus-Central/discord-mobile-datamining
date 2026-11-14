@@ -1,9 +1,9 @@
-// === Module 11762: StatusBarManager ===
+// === Module 11828: StatusBarManager ===
 
-// Module 11762 (StatusBarManager)
+// Module 11828 (StatusBarManager)
 import applyDefault from "apply" /* 12 */;
 import _mod17 from "module_17" /* 17 */;
-import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1639 */;
+import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1642 */;
 import size from "module_2" /* 2 */;
 
 const StatusBar = _mod17.StatusBar;

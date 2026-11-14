@@ -1,10 +1,10 @@
-// === Module 17721: GuildRoleSubscriptionsCancelSetting ===
+// === Module 17841: GuildRoleSubscriptionsCancelSetting ===
 
-// Module 17721 (GuildRoleSubscriptionsCancelSetting)
+// Module 17841 (GuildRoleSubscriptionsCancelSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import SettingsConstants from "SettingsConstants" /* 9135 */;
-import SettingBuilders from "SettingBuilders" /* 12311 */;
+import SettingsConstants from "SettingsConstants" /* 9202 */;
+import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

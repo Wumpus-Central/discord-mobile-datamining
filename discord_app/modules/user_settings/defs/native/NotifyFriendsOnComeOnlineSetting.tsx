@@ -1,22 +1,22 @@
-// === Module 18480: NotifyFriendsOnComeOnlineSetting ===
+// === Module 18605: NotifyFriendsOnComeOnlineSetting ===
 
-// Module 18480 (NotifyFriendsOnComeOnlineSetting)
+// Module 18605 (NotifyFriendsOnComeOnlineSetting)
 import util from "util" /* 1113 */;
-import _modDef2853 from "module_2853" /* 2853 */;
-import UserSettings from "UserSettings" /* 5068 */;
-import SettingsConstants from "SettingsConstants" /* 9135 */;
-import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 18015 */;
-import SettingBuilders from "SettingBuilders" /* 12311 */;
+import _modDef2869 from "module_2869" /* 2869 */;
+import UserSettings from "UserSettings" /* 5131 */;
+import SettingsConstants from "SettingsConstants" /* 9202 */;
+import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 18142 */;
+import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2853.A0FVCV);
+    return intl.string(_modDef2869.A0FVCV);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2853.vHX6RG);
+    return intl.string(_modDef2869.vHX6RG);
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: UserSettings.NotifyFriendsOnComeOnline.useSetting,

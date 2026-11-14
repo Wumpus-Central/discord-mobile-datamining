@@ -1,18 +1,18 @@
-// === Module 9341: ProductDetailsActionSheet ===
+// === Module 9408: ProductDetailsActionSheet ===
 
-// Module 9341 (ProductDetailsActionSheet)
+// Module 9408 (ProductDetailsActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5503 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8430 */;
-import ShopStandalonePdpMobileExperiment from "ShopStandalonePdpMobileExperiment" /* 9338 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9352 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10364 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5566 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8496 */;
+import ShopStandalonePdpMobileExperiment from "ShopStandalonePdpMobileExperiment" /* 9405 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9420 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10433 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8419 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8485 */;
 
 require = fn;
 function PreviewProfileTrigger(handlePreviewPress) {
@@ -20,9 +20,9 @@ function PreviewProfileTrigger(handlePreviewPress) {
   const onTrackPress = handlePreviewPress.onTrackPress;
   const tmp = closure_19();
   dependencyMap = tmp;
-  const theme = handlePreviewPress(5314).useThemeContext().theme;
-  const obj = handlePreviewPress(5314);
-  const isThemeLightResult = handlePreviewPress(5250).isThemeLight(theme);
+  const theme = handlePreviewPress(5377).useThemeContext().theme;
+  const obj = handlePreviewPress(5377);
+  const isThemeLightResult = handlePreviewPress(5313).isThemeLight(theme);
   closure_3 = theme === ThemeTypes.ONYX;
   noop = isThemeLightResult ? tmp.previewProfileButtonLight : tmp.previewProfileButtonDark;
   closure_5 = isThemeLightResult ? tmp.previewProfileButtonLightPressed : tmp.previewProfileButtonDarkPressed;
@@ -52,8 +52,8 @@ function PreviewProfileTrigger(handlePreviewPress) {
   };
   const intl = tmp2(1113).intl;
   obj3.accessibilityLabel = intl.string(handlePreviewPress(1113).t["3Qcx6K"]);
-  const obj2 = handlePreviewPress(5250);
-  obj3.children = closure_14(handlePreviewPress(7569).EyeIcon, { size: "md", color: onTrackPress(575).colors.INTERACTIVE_ICON_DEFAULT });
+  const obj2 = handlePreviewPress(5313);
+  obj3.children = closure_14(handlePreviewPress(7635).EyeIcon, { size: "md", color: onTrackPress(575).colors.INTERACTIVE_ICON_DEFAULT });
   return closure_14(closure_7, obj3);
 }
 function ProductDetailsActionSheetContent(product) {
@@ -399,12 +399,12 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   const initialVariantIndex = skuId.initialVariantIndex;
   let ref1;
   ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-  const collectiblesShopProduct = skuId(10388).useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
+  const collectiblesShopProduct = skuId(10457).useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
-  let obj = skuId(10388);
-  const getOrFetchPurchases = skuId(11604).useGetOrFetchPurchases();
+  let obj = skuId(10457);
+  const getOrFetchPurchases = skuId(11671).useGetOrFetchPurchases();
   items = [product];
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
   const obj3 = closure_6(() => {
@@ -416,10 +416,10 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     }
     return googleSkuIds;
   }, items);
-  const obj2 = skuId(11604);
+  const obj2 = skuId(11671);
   const tmp5 = initialVariantIndex;
-  initialVariantIndex(9656).useLoadedGoogleSkuIds(obj3);
-  const obj4 = initialVariantIndex(9656);
+  initialVariantIndex(9723).useLoadedGoogleSkuIds(obj3);
+  const obj4 = initialVariantIndex(9723);
   const everyResult = obj3.every((item) => set.has(item));
   ref1 = ref1.useRef(null);
   const items1 = [product, skuId, initialVariantIndex];
@@ -453,24 +453,24 @@ function ManagedProductDetailsActionSheetInner(skuId) {
           ref,
           children: tmp11
         };
-        return tmp10(tmp(5503).BottomSheet, obj6);
+        return tmp10(tmp(5566).BottomSheet, obj6);
       }
     }
   }
   if ("error" === state) {
-    const obj7 = { Illustration: tmp(8530).NoResults, body: null, children: null };
+    const obj7 = { Illustration: tmp(8596).NoResults, body: null, children: null };
     const intl = tmp(1113).intl;
     obj7.body = intl.string(tmp(1113).t.eAn6z2);
     const obj8 = { text: null, onPress: null };
     const intl2 = tmp(1113).intl;
     obj8.text = intl2.string(tmp(1113).t["+hivLW"]);
     obj8.onPress = retry;
-    obj7.children = closure_14(tmp(5873).Button, obj8);
+    obj7.children = closure_14(tmp(5936).Button, obj8);
     tmp11 = closure_14(tmp(1187).EmptyState, obj7);
     tmp10 = closure_14;
   } else {
     tmp10 = closure_14;
-    tmp11 = closure_14(tmp5(15404), {});
+    tmp11 = closure_14(tmp5(15518), {});
   }
   ref = ref1.useRef(null);
 }
@@ -512,18 +512,18 @@ const jsxProd = fn(21);
 let closure_16 = {};
 const logger = new LoggerDefault("ProductDetailsActionSheet");
 let closure_18 = [];
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { position: "relative", flex: 1 }, actionButtons: null, previewProfileButton: null, previewProfileButtonLight: null, previewProfileButtonLightPressed: null, previewProfileButtonDark: null, previewProfileButtonDarkPressed: null, previewProfileButtonMidnight: null, badgeWrapper: null };
 const rect = { position: "absolute", top: 0, right: nativeDefault.space.PX_16, zIndex: 2, flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.actionButtons = rect;
-let size = { width: fn(5879).MEDIUM_BUTTON_HEIGHT, height: fn(5879).MEDIUM_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
+let size = { width: fn(5942).MEDIUM_BUTTON_HEIGHT, height: fn(5942).MEDIUM_BUTTON_HEIGHT, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
 obj2.previewProfileButton = size;
 let obj3 = { backgroundColor: null };
-let native = fn(5314);
+let native = fn(5377);
 obj3.backgroundColor = native.setColorOpacity("white", 0.72);
 obj2.previewProfileButtonLight = obj3;
 let obj4 = { backgroundColor: null };
-native = fn(5314);
+native = fn(5377);
 obj4.backgroundColor = native.setColorOpacity("white", 0.62);
 obj2.previewProfileButtonLightPressed = obj4;
 const tmp6 = new LoggerDefault("ProductDetailsActionSheet");

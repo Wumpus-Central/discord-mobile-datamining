@@ -1,14 +1,14 @@
-// === Module 11947: useSafeAreaBottomKeyboardInfoController ===
+// === Module 12014: useSafeAreaBottomKeyboardInfoController ===
 
-// Module 11947 (useSafeAreaBottomKeyboardInfoController)
-import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1639 */;
-import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 2016 */;
+// Module 12014 (useSafeAreaBottomKeyboardInfoController)
+import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1642 */;
+import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 2019 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let MetaQuestUtils = fn(1624);
+let MetaQuestUtils = fn(1627);
 MetaQuestUtils = MetaQuestUtils.isMetaQuest();
 let closure_5 = { code: "(function useSafeAreaBottomKeyboardInfoControllerTsx1(e){let[scheduleOnRN,KeyboardStateDebugging,IS_SYSTEM_KEYBOARD_EXTERNAL,keyboardOverlapsCurrentAppEntry,keyboardOpenedHeight]=this.__closure;scheduleOnRN(KeyboardStateDebugging.keyboardControllerWorkletEvent,'onStart',e.height);if(IS_SYSTEM_KEYBOARD_EXTERNAL)return;if(e.height>0&&keyboardOverlapsCurrentAppEntry.get()){keyboardOpenedHeight.set(e.height);}})" };
 let closure_6 = { code: "(function useSafeAreaBottomKeyboardInfoControllerTsx2(e){let[scheduleOnRN,KeyboardStateDebugging,IS_SYSTEM_KEYBOARD_EXTERNAL,keyboardOverlapsCurrentAppEntry,keyboardOpenedHeight]=this.__closure;scheduleOnRN(KeyboardStateDebugging.keyboardControllerWorkletEvent,'onEnd',e.height);if(IS_SYSTEM_KEYBOARD_EXTERNAL)return;if(e.height>0&&keyboardOverlapsCurrentAppEntry.get()){keyboardOpenedHeight.set(e.height);}})" };
@@ -20,7 +20,7 @@ export default function useSafeAreaBottomKeyboardInfoController() {
   _require = appEntryKey;
   let num = 0;
   if (!c4) {
-    const KeyboardController = tmp(1641).KeyboardController;
+    const KeyboardController = tmp(1644).KeyboardController;
     const stateResult = KeyboardController.state();
     let num2;
     if (stateResult != null) {
@@ -34,12 +34,12 @@ export default function useSafeAreaBottomKeyboardInfoController() {
   let tmp7 = 0 !== num;
   if (tmp7) {
     closure_129_0 = appEntryKey;
-    let isAndroidResult = tmp(1377).isAndroid();
+    let isAndroidResult = tmp(1380).isAndroid();
     let tmp9 = !isAndroidResult;
     if (isAndroidResult) {
       let tmp11 = NativeSafeAreaInsetsModuleDefault.getImeInsets(false, appEntryKey) > 0;
       if (!tmp11) {
-        let APP_ENTRY_KEYS = tmp(1640).APP_ENTRY_KEYS;
+        let APP_ENTRY_KEYS = tmp(1643).APP_ENTRY_KEYS;
         let someResult = APP_ENTRY_KEYS.some((item) => {
           let tmp = item !== closure_0;
           if (tmp) {
@@ -57,18 +57,18 @@ export default function useSafeAreaBottomKeyboardInfoController() {
       tmp9 = tmp11;
     }
     tmp7 = true === tmp9;
-    const tmpResult = tmp(1377);
+    const tmpResult = tmp(1380);
   }
   let num3 = 0;
   if (tmp7) {
     num3 = num;
   }
   let obj = require("AppEntryKeyContext");
-  const keyboardOpenedHeight = require("module_1652").useSharedValue(num3);
-  const tmpResult5 = require("module_1652");
-  const keyboardOpenOrOpening = require("module_1652").useSharedValue(tmp7);
-  const tmpResult6 = require("module_1652");
-  const keyboardOverlapsCurrentAppEntry = require("module_1652").useSharedValue(tmp7);
+  const keyboardOpenedHeight = require("module_1655").useSharedValue(num3);
+  const tmpResult5 = require("module_1655");
+  const keyboardOpenOrOpening = require("module_1655").useSharedValue(tmp7);
+  const tmpResult6 = require("module_1655");
+  const keyboardOverlapsCurrentAppEntry = require("module_1655").useSharedValue(tmp7);
   noop = keyboardOverlapsCurrentAppEntry;
   items = [appEntryKey, keyboardOpenOrOpening, keyboardOpenedHeight, keyboardOverlapsCurrentAppEntry];
   const effect = noop.useEffect(() => {
@@ -151,8 +151,8 @@ export default function useSafeAreaBottomKeyboardInfoController() {
       };
     }
   }, items);
-  const tmpResult7 = require("module_1652");
-  const items1 = [closure_5, require("module_1705").scheduleOnRN, KeyboardStateDebuggingDefault, c4, keyboardOverlapsCurrentAppEntry, keyboardOpenedHeight];
+  const tmpResult7 = require("module_1655");
+  const items1 = [closure_5, require("module_1708").scheduleOnRN, KeyboardStateDebuggingDefault, c4, keyboardOverlapsCurrentAppEntry, keyboardOpenedHeight];
   _require = undefined;
   c4 = undefined;
   [tmp19, tmp20, tmp21, tmp22, tmp23, tmp24] = items1;
@@ -174,7 +174,7 @@ export default function useSafeAreaBottomKeyboardInfoController() {
   useSafeAreaBottomKeyboardInfoControllerTsx1.__workletHash = 16041436337775;
   useSafeAreaBottomKeyboardInfoControllerTsx1.__initData = tmp19;
   obj2.onStart = useSafeAreaBottomKeyboardInfoControllerTsx1;
-  const items3 = [closure_6, require("module_1705").scheduleOnRN, KeyboardStateDebuggingDefault, c4, keyboardOverlapsCurrentAppEntry, keyboardOpenedHeight];
+  const items3 = [closure_6, require("module_1708").scheduleOnRN, KeyboardStateDebuggingDefault, c4, keyboardOverlapsCurrentAppEntry, keyboardOpenedHeight];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;

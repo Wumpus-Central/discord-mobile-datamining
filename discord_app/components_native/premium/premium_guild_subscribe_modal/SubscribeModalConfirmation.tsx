@@ -1,23 +1,23 @@
-// === Module 15913: SubscribeModalConfirmation ===
+// === Module 16033: SubscribeModalConfirmation ===
 
-// Module 15913 (SubscribeModalConfirmation)
+// Module 16033 (SubscribeModalConfirmation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import FastImageDefault from "FastImage" /* 5957 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 9168 */;
-import _modDef15914 from "module_15914" /* 15914 */;
-import _modDef15915 from "module_15915" /* 15915 */;
-import PremiumGuildPreviewDefault from "PremiumGuildPreview" /* 15916 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import FastImageDefault from "FastImage" /* 6020 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 9235 */;
+import _modDef16034 from "module_16034" /* 16034 */;
+import _modDef16035 from "module_16035" /* 16035 */;
+import PremiumGuildPreviewDefault from "PremiumGuildPreview" /* 16036 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 10700 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 9169 */;
-import SubscriptionStore from "SubscriptionStore" /* 2176 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 10769 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 9236 */;
+import SubscriptionStore from "SubscriptionStore" /* 2179 */;
 
 const require = globalThis.__r;
 
@@ -33,7 +33,7 @@ function PendingCancellationWarning(slots) {
     tmp5 = null;
     if (null != stateFromStores) {
       const obj2 = { style: tmp.pendingCancellation, children: null };
-      const obj3 = { style: tmp.pendingCancellationIcon, source: _modDef15914 };
+      const obj3 = { style: tmp.pendingCancellationIcon, source: _modDef16034 };
       const items1 = [closure_1_17(FastImageDefault, obj3), ];
       const obj4 = { style: tmp.pendingCancellationMessage, variant: "body-sm/medium", children: null };
       const intl = util.intl;
@@ -51,7 +51,7 @@ function SubscribeConfirmation(arg0) {
   ({ guild, isModifyingSubscription } = arg0);
   const tmp = closure_20();
   const obj = { children: null };
-  const obj2 = { style: tmp.subscribeImage, source: _modDef15915 };
+  const obj2 = { style: tmp.subscribeImage, source: _modDef16035 };
   items = [closure_1_17(FastImageDefault, obj2), , , , , ];
   const obj3 = { style: tmp.header, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -84,8 +84,8 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
   ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
   const tmp = closure_20();
-  const guildSubscriptionRemovalSource = prop(15925).useGuildSubscriptionRemovalSource();
-  const obj = prop(15925);
+  const guildSubscriptionRemovalSource = prop(16045).useGuildSubscriptionRemovalSource();
+  const obj = prop(16045);
   items = [GuildStore];
   const stateFromStores = prop(504).useStateFromStores(items, () => {
     const found = prop.find((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription);
@@ -104,28 +104,28 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   } else {
     const obj4 = { children: null };
     const obj5 = { style: tmp.transferImage, source: guildSubscriptionRemovalSource };
-    const items1 = [closure_17(onPremiumGuildSubscribe(5957), obj5), , , , , ];
+    const items1 = [closure_17(onPremiumGuildSubscribe(6020), obj5), , , , , ];
     const obj6 = { style: tmp.header, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1113).intl;
     obj6.children = intl.string(tmp2(1113).t.h92jfS);
-    items1[1] = closure_17(tmp2(5866).Text, obj6);
+    items1[1] = closure_17(tmp2(5929).Text, obj6);
     const obj7 = { style: tmp.blurb, variant: "body-sm/medium", children: null };
     const intl2 = tmp2(1113).intl;
     const obj8 = { slotCount: prop.length, guildCount: 1 };
     obj7.children = intl2.format(tmp2(1113).t.SSA2lu, obj8);
-    items1[2] = closure_17(tmp2(5866).Text, obj7);
+    items1[2] = closure_17(tmp2(5929).Text, obj7);
     const obj9 = { style: tmp.transferPreviews, children: null };
     const obj10 = { style: tmp.previewHeader, variant: "body-sm/medium", color: "text-default", children: null };
     const intl3 = tmp2(1113).intl;
     obj10.children = intl3.format(tmp2(1113).t["5zQYEz"], { guildCount: 1 });
-    const items2 = [closure_17(tmp2(5866).Text, obj10), , , ];
+    const items2 = [closure_17(tmp2(5929).Text, obj10), , , ];
     const obj11 = { style: tmp.guildPreview, guild: stateFromStores };
-    items2[1] = closure_17(onPremiumGuildSubscribe(15916), obj11);
+    items2[1] = closure_17(onPremiumGuildSubscribe(16036), obj11);
     const obj12 = { style: tmp.previewHeader, variant: "body-sm/medium", color: "text-default", children: null };
     const intl4 = tmp2(1113).intl;
     const obj13 = { slotCount: prop.length };
     obj12.children = intl4.format(tmp2(1113).t.ct6oxD, obj13);
-    items2[2] = closure_17(tmp2(5866).Text, obj12);
+    items2[2] = closure_17(tmp2(5929).Text, obj12);
     const obj14 = { style: null, start: null, end: null, colors: null, children: null };
     const items3 = [, ];
     ({ guildPreview: arr5[0], activeTransferGuildCardBorder: arr5[1] } = tmp);
@@ -134,8 +134,8 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj14.end = tmp2(1092).HorizontalGradient.END;
     obj14.colors = Gradients.PREMIUM_GUILD;
     const obj15 = { guild };
-    obj14.children = closure_17(onPremiumGuildSubscribe(15916), obj15);
-    items2[3] = closure_17(onPremiumGuildSubscribe(5830), obj14);
+    obj14.children = closure_17(onPremiumGuildSubscribe(16036), obj15);
+    items2[3] = closure_17(onPremiumGuildSubscribe(5893), obj14);
     obj9.children = items2;
     items1[3] = closure_18(closure_6, obj9);
     const obj16 = { slots: prop };
@@ -149,11 +149,11 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
       return onPremiumGuildSubscribe(true);
     };
     obj18.loading = isModifyingSubscription;
-    obj17.children = closure_17(tmp2(5873).Button, obj18);
+    obj17.children = closure_17(tmp2(5936).Button, obj18);
     items1[5] = closure_17(closure_6, obj17);
     obj4.children = items1;
     tmp8 = closure_18(closure_19, obj4);
-    const tmp14 = onPremiumGuildSubscribe(5830);
+    const tmp14 = onPremiumGuildSubscribe(5893);
   }
   return tmp8;
 }
@@ -161,13 +161,13 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6, ScrollView: metroImportDefault, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, AnalyticsObjects: map1, AnalyticsSections: closure_14, GUILD_BOOST_APPLY_COOLDOWN_DAYS: closure_15 } = Constants);
-const Gradients = fn(9367).Gradients;
+const Gradients = fn(9435).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { content: { paddingHorizontal: 24, marginBottom: 24 }, scrollableContent: { alignItems: "center", width: "100%" }, subscribeImage: { marginTop: 105, alignSelf: "center" }, transferImage: { marginTop: 65, alignSelf: "center" }, header: { marginTop: 32, marginBottom: 8 }, transferPreviews: { marginTop: 16, width: "100%" }, previewHeader: { lineHeight: 16, marginTop: 16, letterSpacing: 0.2 }, guildPreview: { marginTop: 8, width: "100%" }, blurb: { lineHeight: 18, textAlign: "center" }, warning: { marginTop: 16 }, pendingCancellation: null, pendingCancellationMessage: null, pendingCancellationIcon: null, loading: null, confirmButton: null, activeTransferGuildCardBorder: null };
 let obj3 = { marginTop: 16, padding: 16, backgroundColor: null, alignItems: "center", flexDirection: "row", borderRadius: null, borderColor: null, borderWidth: null, width: "100%" };
-const ColorUtils = fn(5240);
+const ColorUtils = fn(5303);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.YELLOW_300, 0.1);
 obj3.borderRadius = nativeDefault.radii.xs;
 obj3.borderColor = nativeDefault.unsafe_rawColors.YELLOW_300;

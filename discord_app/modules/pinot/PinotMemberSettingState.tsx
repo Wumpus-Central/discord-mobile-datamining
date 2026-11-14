@@ -1,12 +1,12 @@
-// === Module 12241: PinotMemberSettingState ===
+// === Module 12336: PinotMemberSettingState ===
 
-// Module 12241 (PinotMemberSettingState)
+// Module 12336 (PinotMemberSettingState)
 import initialize from "initialize" /* 504 */;
 import wrappers from "wrappers" /* 1227 */;
-import PinotMemberSettingStore from "PinotMemberSettingStore" /* 12242 */;
+import PinotMemberSettingStore from "PinotMemberSettingStore" /* 12337 */;
 
 require = fn;
-const UserSettingDefinitions = fn(5072);
+const UserSettingDefinitions = fn(5135);
 const defineProtoSettingResult = UserSettingDefinitions.defineProtoSetting("privacy", "swpMessagePromotionOptedOut", (value) => {
   value = undefined;
   if (value != null) {

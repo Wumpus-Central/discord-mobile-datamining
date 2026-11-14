@@ -1,6 +1,6 @@
-// === Module 12258: PinotMemberNoticeCaret ===
+// === Module 12353: PinotMemberNoticeCaret ===
 
-// Module 12258 (PinotMemberNoticeCaret)
+// Module 12353 (PinotMemberNoticeCaret)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/pinot/PinotMemberNoticeCaret.tsx");

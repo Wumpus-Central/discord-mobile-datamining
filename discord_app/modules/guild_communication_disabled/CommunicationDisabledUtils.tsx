@@ -1,15 +1,15 @@
-// === Module 5162: CommunicationDisabledUtils ===
+// === Module 5225: CommunicationDisabledUtils ===
 
-// Module 5162 (CommunicationDisabledUtils)
+// Module 5225 (CommunicationDisabledUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");
 
-export function isCommunicationDisabled(communicationDisabledUserMap) {
-  let tmp = null != communicationDisabledUserMap;
+export function isCommunicationDisabled(communicationDisabledUntil) {
+  let tmp = null != communicationDisabledUntil;
   if (tmp) {
     const _Date = Date;
-    const date = new Date(communicationDisabledUserMap);
+    const date = new Date(communicationDisabledUntil);
     const _Date2 = Date;
     const date1 = new Date();
     tmp = date > date1;

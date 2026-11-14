@@ -1,9 +1,9 @@
-// === Module 13431: getAppDMApplication ===
+// === Module 13534: getAppDMApplication ===
 
-// Module 13431 (getAppDMApplication)
-import ApplicationStore from "ApplicationStore" /* 2162 */;
-import UserProfileStore from "UserProfileStore" /* 7288 */;
-import UserStore from "UserStore" /* 1385 */;
+// Module 13534 (getAppDMApplication)
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import UserProfileStore from "UserProfileStore" /* 7352 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");

@@ -1,11 +1,11 @@
-// === Module 15355: useIsPremiumSubscriber ===
+// === Module 15469: useIsPremiumSubscriber ===
 
-// Module 15355 (useIsPremiumSubscriber)
-import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
-import UserStore from "UserStore" /* 1385 */;
+// Module 15469 (useIsPremiumSubscriber)
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
-const PremiumTypes = fn(1387).PremiumTypes;
+const PremiumTypes = fn(1390).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/useIsPremiumSubscriber.tsx");
 

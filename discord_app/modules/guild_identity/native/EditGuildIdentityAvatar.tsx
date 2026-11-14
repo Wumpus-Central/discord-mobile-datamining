@@ -1,20 +1,20 @@
-// === Module 17072: EditGuildIdentityAvatar ===
+// === Module 17195: EditGuildIdentityAvatar ===
 
-// Module 17072 (EditGuildIdentityAvatar)
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 11103 */;
+// Module 17195 (EditGuildIdentityAvatar)
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 11170 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import UserStore from "UserStore" /* 1385 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticsSections: closure_6, AnalyticsObjects: metroImportDefault, UpsellTypes: closure_8 } = Constants);
-const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1390).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_12 = createStyles.createStyles({ editAvatarIcon: { position: "absolute", right: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_identity/native/EditGuildIdentityAvatar.tsx");

@@ -1,11 +1,11 @@
-// === Module 19920: useControlsHiddenPresentation ===
+// === Module 20077: useControlsHiddenPresentation ===
 
-// Module 19920 (useControlsHiddenPresentation)
-import _mod1652 from "module_1652" /* 1652 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import native from "native" /* 5314 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11919 */;
+// Module 20077 (useControlsHiddenPresentation)
+import _mod1655 from "module_1655" /* 1655 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import native from "native" /* 5377 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11985 */;
 import size from "module_2" /* 2 */;
 
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
@@ -39,8 +39,8 @@ export default function useControlsHiddenPresentation(arg0, arg1) {
   useControlsHiddenPresentationTsx1.__closure = items1;
   useControlsHiddenPresentationTsx1.__workletHash = 10191676178362;
   useControlsHiddenPresentationTsx1.__initData = tmp4;
-  const animatedProps = _mod1652.useAnimatedProps(useControlsHiddenPresentationTsx1);
-  const items2 = [closure_5, spring_spring.withSpring, tmp3, arg1, obj, cleanUp, _mod1705.scheduleOnRN];
+  const animatedProps = _mod1655.useAnimatedProps(useControlsHiddenPresentationTsx1);
+  const items2 = [closure_5, spring_spring.withSpring, tmp3, arg1, obj, cleanUp, _mod1708.scheduleOnRN];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -72,6 +72,6 @@ export default function useControlsHiddenPresentation(arg0, arg1) {
   useControlsHiddenPresentationTsx2.__closure = items3;
   useControlsHiddenPresentationTsx2.__workletHash = 14159877281811;
   useControlsHiddenPresentationTsx2.__initData = tmp10;
-  const tmpResult = _mod1652;
-  return { hiddenProps: animatedProps, hiddenStyles: _mod1652.useAnimatedStyle(useControlsHiddenPresentationTsx2) };
+  const tmpResult = _mod1655;
+  return { hiddenProps: animatedProps, hiddenStyles: _mod1655.useAnimatedStyle(useControlsHiddenPresentationTsx2) };
 };

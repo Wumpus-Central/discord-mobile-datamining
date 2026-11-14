@@ -1,9 +1,9 @@
-// === Module 13324: useBottomSheetFlashListBottomViewabilityInset ===
+// === Module 13429: useBottomSheetFlashListBottomViewabilityInset ===
 
-// Module 13324 (useBottomSheetFlashListBottomViewabilityInset)
+// Module 13429 (useBottomSheetFlashListBottomViewabilityInset)
 import applyDefault from "apply" /* 12 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11948 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 12015 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -49,7 +49,7 @@ export function useBottomSheetFlashListBottomViewabilityInset() {
   useBottomSheetFlashListBottomViewabilityInsetTsx1.__closure = items1;
   useBottomSheetFlashListBottomViewabilityInsetTsx1.__workletHash = 15442314305075;
   useBottomSheetFlashListBottomViewabilityInsetTsx1.__initData = tmp11;
-  const items2 = [closure_5, diff, require("module_1705").scheduleOnRN, memo];
+  const items2 = [closure_5, diff, require("module_1708").scheduleOnRN, memo];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -61,6 +61,6 @@ export function useBottomSheetFlashListBottomViewabilityInset() {
   useBottomSheetFlashListBottomViewabilityInsetTsx2.__closure = items3;
   useBottomSheetFlashListBottomViewabilityInsetTsx2.__workletHash = 15359386741414;
   useBottomSheetFlashListBottomViewabilityInsetTsx2.__initData = tmp13;
-  const animatedReaction = require("module_1652").useAnimatedReaction(useBottomSheetFlashListBottomViewabilityInsetTsx1, useBottomSheetFlashListBottomViewabilityInsetTsx2);
+  const animatedReaction = require("module_1655").useAnimatedReaction(useBottomSheetFlashListBottomViewabilityInsetTsx1, useBottomSheetFlashListBottomViewabilityInsetTsx2);
   return { flashListRef, bottomVisibilityInsetRef };
 }

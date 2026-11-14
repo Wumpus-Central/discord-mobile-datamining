@@ -1,12 +1,12 @@
-// === Module 10007: NitroUpsellButton ===
+// === Module 10074: NitroUpsellButton ===
 
-// Module 10007 (NitroUpsellButton)
+// Module 10074 (NitroUpsellButton)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9368 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9436 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 require = fn;
 const jsx = fn(21).jsx;

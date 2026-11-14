@@ -1,19 +1,19 @@
-// === Module 16960: useUserProfileEditForm ===
+// === Module 17083: useUserProfileEditForm ===
 
-// Module 16960 (useUserProfileEditForm)
+// Module 17083 (useUserProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8476 */;
-import UserProfileStore from "UserProfileStore" /* 7288 */;
-import WidgetStore from "WidgetStore" /* 12024 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8542 */;
+import UserProfileStore from "UserProfileStore" /* 7352 */;
+import WidgetStore from "WidgetStore" /* 12091 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 const FormStates = fn(1072).FormStates;
-const HexagonCampaignPerk = fn(5268).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5331).HexagonCampaignPerk;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useUserProfileEditForm.tsx");
 
@@ -91,7 +91,7 @@ export default function useUserProfileEditForm() {
               const obj5 = { avatarDecoration: pendingChanges.pendingAvatarDecoration };
               dependencyMap = 1;
               c3 = 1;
-              const obj6 = { value: tmp5(7734).saveProfileAndAccountChanges(obj5), done: false };
+              const obj6 = { value: tmp5(7800).saveProfileAndAccountChanges(obj5), done: false };
               return obj6;
             }
           }
@@ -105,8 +105,8 @@ export default function useUserProfileEditForm() {
             ok = closure_128_0.ok;
           }
           if (ok) {
-            const result = tmp5(7734).resetPendingAccountChanges();
-            const obj = tmp5(7734);
+            const result = tmp5(7800).resetPendingAccountChanges();
+            const obj = tmp5(7800);
           }
         }
         c3 = 3;

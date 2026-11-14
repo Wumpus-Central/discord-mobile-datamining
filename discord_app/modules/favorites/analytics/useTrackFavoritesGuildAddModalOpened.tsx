@@ -1,7 +1,7 @@
-// === Module 15043: useTrackFavoritesGuildAddModalOpened ===
+// === Module 15157: useTrackFavoritesGuildAddModalOpened ===
 
-// Module 15043 (useTrackFavoritesGuildAddModalOpened)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+// Module 15157 (useTrackFavoritesGuildAddModalOpened)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import noop from "module_19" /* 19 */;
 
 const AnalyticEvents = fn(1072).AnalyticEvents;

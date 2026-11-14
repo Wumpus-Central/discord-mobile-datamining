@@ -1,7 +1,7 @@
-// === Module 8684: MobileAppDatabaseManager ===
+// === Module 8751: MobileAppDatabaseManager ===
 
-// Module 8684 (MobileAppDatabaseManager)
-import AppDatabaseManager from "AppDatabaseManager" /* 8685 */;
+// Module 8751 (MobileAppDatabaseManager)
+import AppDatabaseManager from "AppDatabaseManager" /* 8752 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const items = [
   },
   {
     name: "GuildBasicChannels",
-    actions: ["BACKGROUND_SYNC", "CHANNEL_CREATE", "CHANNEL_DELETE", "CHANNEL_UPDATES", "CONNECTION_OPEN", "GUILD_CREATE", "GUILD_DELETE", "GUILD_MEMBER_UPDATE", "GUILD_ROLE_UPDATE", "GUILD_UPDATE", "POST_CONNECTION_OPEN", "WRITE_CACHES"],
+    actions: ["BACKGROUND_SYNC", "CHANNEL_CREATE", "CHANNEL_DELETE", "CHANNEL_UPDATES", "CONNECTION_OPEN", "GUILD_CREATE", "GUILD_DELETE", "GUILD_MEMBER_UPDATE", "GUILD_ROLE_DELETE", "GUILD_ROLE_UPDATE", "GUILD_UPDATE", "POST_CONNECTION_OPEN", "WRITE_CACHES"],
     require() {
       return require("GuildBasicChannels").default;
     }

@@ -1,16 +1,16 @@
-// === Module 14898: ContactSyncError ===
+// === Module 15012: ContactSyncError ===
 
-// Module 14898 (ContactSyncError)
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import Text_Text from "Text/Text" /* 5866 */;
+// Module 15012 (ContactSyncError)
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import Text_Text from "Text/Text" /* 5929 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_4 = createStyles.createStyles({ container: { justifyContent: "center" }, error: { paddingHorizontal: 16, textAlign: "center" } });
 let closure_5 = { code: "(function ContactSyncErrorTsx1(){let[withTiming,hasError,ERROR_HEIGHT]=this.__closure;return{height:withTiming(hasError?ERROR_HEIGHT:0)};})" };
 const size = fn(2);
@@ -42,9 +42,9 @@ export default function ContactSyncError(error) {
   ContactSyncErrorTsx1.__closure = items1;
   ContactSyncErrorTsx1.__workletHash = 13817117600464;
   ContactSyncErrorTsx1.__initData = tmp5;
-  const animatedStyle = _mod1652.useAnimatedStyle(ContactSyncErrorTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(ContactSyncErrorTsx1);
   const obj2 = { style: null, children: jsx(Text_Text.Text, { variant: "body-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error }) };
   const items2 = [tmp.container, error.style, animatedStyle];
   obj2.style = items2;
-  return jsx(_modDef1652.View, { style: null, children: jsx(Text_Text.Text, { variant: "body-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error }) });
+  return jsx(_modDef1655.View, { style: null, children: jsx(Text_Text.Text, { variant: "body-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error }) });
 };

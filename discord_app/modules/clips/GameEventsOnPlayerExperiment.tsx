@@ -1,7 +1,7 @@
-// === Module 8782: GameEventsOnPlayerExperiment ===
+// === Module 8849: GameEventsOnPlayerExperiment ===
 
-// Module 8782 (GameEventsOnPlayerExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 8849 (GameEventsOnPlayerExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-07-clips-game-events-on-player", defaultConfig: { enableGameEventsOnPlayer: false }, variations: null };

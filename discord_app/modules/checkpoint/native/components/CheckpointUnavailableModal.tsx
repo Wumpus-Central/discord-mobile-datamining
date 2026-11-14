@@ -1,25 +1,26 @@
-// === Module 14152: CheckpointUnavailableModal ===
+// === Module 14261: CheckpointUnavailableModal ===
 
-// Module 14152 (CheckpointUnavailableModal)
+// Module 14261 (CheckpointUnavailableModal)
 import nativeDefault from "native" /* 575 */;
 import Constants from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _modDef3269 from "module_3269" /* 3269 */;
-import native from "native" /* 5314 */;
-import HapticUtils from "HapticUtils" /* 5491 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
-import useCheckpointMusicDefault from "useCheckpointMusic" /* 14153 */;
-import useCheckpointStepAnalytics from "useCheckpointStepAnalytics" /* 14155 */;
-import CheckpointStepHeaderRefContext from "CheckpointStepHeaderRefContext" /* 14156 */;
-import CheckpointBackgroundDefault from "CheckpointBackground" /* 14157 */;
-import CheckpointUnavailableScreenDefault from "CheckpointUnavailableScreen" /* 14159 */;
-import CheckpointTextDefault from "CheckpointText" /* 14161 */;
-import CheckpointHeaderDefault from "CheckpointHeader" /* 14162 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _modDef3317 from "module_3317" /* 3317 */;
+import native from "native" /* 5377 */;
+import HapticUtils from "HapticUtils" /* 5554 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import useCheckpointMusicDefault from "useCheckpointMusic" /* 14262 */;
+import useCheckpointStepAnalytics from "useCheckpointStepAnalytics" /* 14264 */;
+import useCheckpointForegroundTrackingDefault from "useCheckpointForegroundTracking" /* 14265 */;
+import CheckpointStepHeaderRefContext from "CheckpointStepHeaderRefContext" /* 14266 */;
+import CheckpointBackgroundDefault from "CheckpointBackground" /* 14267 */;
+import CheckpointUnavailableScreenDefault from "CheckpointUnavailableScreen" /* 14269 */;
+import CheckpointTextDefault from "CheckpointText" /* 14271 */;
+import CheckpointHeaderDefault from "CheckpointHeader" /* 14272 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 6314 */;
+import CheckpointConstants from "CheckpointConstants" /* 6377 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5243 */;
+import createStyles from "createStyles" /* 5306 */;
 import size from "module_2" /* 2 */;
 
 function handleClose() {
@@ -45,21 +46,25 @@ export default function CheckpointUnavailableModal() {
   useCheckpointMusicDefault();
   const stringResult = intl.string(util.t.cpT0Cq);
   const checkpointCloseAnalytics = useCheckpointStepAnalytics.useCheckpointCloseAnalytics();
+  useCheckpointForegroundTrackingDefault();
   const obj2 = { children: null };
   const obj3 = { theme: ThemeTypes.DARK, children: null };
   const obj4 = { style: tmp.container, children: null };
   items = [timestampProducer(CheckpointBackgroundDefault, {}), , , ];
-  const obj5 = { message: null };
+  const obj5 = { children: null };
+  const obj6 = { isStepHeading: true, variant: "heading-lg/medium", children: null };
+  const tmp6 = CheckpointUnavailableScreenDefault;
   const intl2 = util.intl;
-  obj5.message = intl2.string(_modDef3269.IaTl5H);
-  items[1] = timestampProducer(CheckpointUnavailableScreenDefault, obj5);
+  obj6.children = intl2.string(_modDef3317.IaTl5H);
+  obj5.children = timestampProducer(CheckpointTextDefault, obj6);
+  items[1] = timestampProducer(tmp6, obj5);
   items[2] = timestampProducer(CheckpointHeaderDefault, {});
-  const obj6 = { style: null, children: null };
+  const obj7 = { style: null, children: null };
   const items1 = [tmp.footer, { marginLeft: rect.left, marginRight: rect.right, marginBottom: rect.bottom }];
-  obj6.style = items1;
-  const obj7 = { style: tmp.closeButton, onPress: handleClose, accessibilityRole: "button", children: timestampProducer(CheckpointTextDefault, { variant: "mono-md/normal", style: tmp.closeButtonLabel, children: stringResult }) };
-  obj6.children = timestampProducer(React3, obj7);
-  items[3] = timestampProducer(React4, obj6);
+  obj7.style = items1;
+  const obj8 = { style: tmp.closeButton, onPress: handleClose, accessibilityRole: "button", children: timestampProducer(CheckpointTextDefault, { variant: "mono-md/normal", style: tmp.closeButtonLabel, children: stringResult }) };
+  obj7.children = timestampProducer(React3, obj8);
+  items[3] = timestampProducer(React4, obj7);
   obj4.children = items;
   obj3.children = metroImportDefault(React4, obj4);
   obj2.children = timestampProducer(native.ThemeContextProvider, obj3);

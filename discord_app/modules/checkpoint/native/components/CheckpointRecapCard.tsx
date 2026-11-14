@@ -1,20 +1,20 @@
-// === Module 14411: CheckpointRecapCard ===
+// === Module 14532: CheckpointRecapCard ===
 
-// Module 14411 (CheckpointRecapCard)
+// Module 14532 (CheckpointRecapCard)
 import nativeDefault from "native" /* 575 */;
-import CheckpointCharacterAccessibilityUtils from "CheckpointCharacterAccessibilityUtils" /* 6680 */;
-import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 14156 */;
-import CheckpointCardFrameDefault from "CheckpointCardFrame" /* 14169 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 14373 */;
+import CheckpointCharacterAccessibilityUtils from "CheckpointCharacterAccessibilityUtils" /* 6743 */;
+import CheckpointStepHeaderRefContextDefault from "CheckpointStepHeaderRefContext" /* 14266 */;
+import CheckpointCardFrameDefault from "CheckpointCardFrame" /* 14279 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 14479 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const rect = { size: 240, top: nativeDefault.space.PX_16, left: -20 };
-const CheckpointStatNumber = fn(14373);
+const CheckpointStatNumber = fn(14479);
 const checkpointStatNumberWidth = CheckpointStatNumber.getCheckpointStatNumberWidth(2026, 64);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { year: null };
 const rect1 = { position: "absolute", left: 178 - checkpointStatNumberWidth / 2, top: 22.5, transform: null };
 let items = [{ rotate: "90deg" }];
@@ -26,20 +26,24 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 
 export default function CheckpointRecapCard(character) {
   character = character.character;
-  ({ maxHeight, isStepFocusTarget } = character);
-  if (isStepFocusTarget === undefined) {
-    isStepFocusTarget = false;
+  ({ maxHeight, maxScale } = character);
+  if (maxScale === undefined) {
+    maxScale = 1;
   }
-  let num = 1;
+  let flag = character.isStepFocusTarget;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let bound = maxScale;
   const context = noop.useContext(CheckpointStepHeaderRefContextDefault);
   if (null != maxHeight) {
     const _Math = Math;
     const _Math2 = Math;
-    num = Math.min(Math.max(maxHeight / 268, 0.75), 1);
+    bound = Math.min(Math.max(maxHeight / 268, 0.75), maxScale);
   }
   const tmp = closure_7();
-  const characterCardColorPalette = character(6338).getCharacterCardColorPalette(character);
-  const obj2 = character(6338);
+  const characterCardColorPalette = character(6401).getCharacterCardColorPalette(character);
+  const obj2 = character(6401);
   items = [character];
   const memo = noop.useMemo(() => {
     let checkpointCharacterAccessibilityLabel = null;
@@ -48,21 +52,21 @@ export default function CheckpointRecapCard(character) {
     }
     return checkpointCharacterAccessibilityLabel;
   }, items);
-  const obj4 = { character, cardColorPalette: characterCardColorPalette, canvasWidth: 200, canvasHeight: 268, scale: num, clydeSize: 28, characterLayout: rect, children: null };
+  const obj4 = { character, cardColorPalette: characterCardColorPalette, canvasWidth: 200, canvasHeight: 268, scale: bound, clydeSize: 28, characterLayout: rect, children: null };
   const obj5 = { style: tmp.year, children: null };
-  const obj3 = character(6338);
+  const obj3 = character(6401);
   obj5.children = jsx(CheckpointStatNumberDefault, { value: 2026, color: obj3.getCardColors(characterCardColorPalette).primaryBackgroundColor, size: 64 });
   obj4.children = <View style={tmp.year}>{null}</View>;
-  const tmp11 = jsx(CheckpointCardFrameDefault, { character, cardColorPalette: characterCardColorPalette, canvasWidth: 200, canvasHeight: 268, scale: num, clydeSize: 28, characterLayout: rect, children: null });
+  const tmp12 = jsx(CheckpointCardFrameDefault, { character, cardColorPalette: characterCardColorPalette, canvasWidth: 200, canvasHeight: 268, scale: bound, clydeSize: 28, characterLayout: rect, children: null });
   if (null == memo) {
-    const obj6 = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: tmp11 };
+    const obj6 = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: tmp12 };
     let obj7 = obj6;
   } else {
-    let tmp12;
-    if (isStepFocusTarget) {
-      tmp12 = context;
+    let tmp13;
+    if (flag) {
+      tmp13 = context;
     }
-    obj7 = { ref: tmp12, accessible: true, accessibilityRole: "image", accessibilityLabel: memo, children: tmp11 };
+    obj7 = { ref: tmp13, accessible: true, accessibilityRole: "image", accessibilityLabel: memo, children: tmp12 };
   }
   return <View {...obj7} />;
 };

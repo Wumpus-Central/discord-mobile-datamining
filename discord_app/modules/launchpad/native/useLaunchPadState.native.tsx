@@ -1,19 +1,19 @@
-// === Module 19649: useLaunchPadState ===
+// === Module 19859: useLaunchPadState ===
 
-// Module 19649 (useLaunchPadState)
-import _mod1705 from "module_1705" /* 1705 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11923 */;
-import useSafeAreaInsetsSharedValue from "useSafeAreaInsetsSharedValue" /* 11945 */;
-import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 13704 */;
-import LaunchPadPullTabCache2 from "LaunchPadPullTabCache" /* 19650 */;
+// Module 19859 (useLaunchPadState)
+import _mod1708 from "module_1708" /* 1708 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11989 */;
+import useSafeAreaInsetsSharedValue from "useSafeAreaInsetsSharedValue" /* 12012 */;
+import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 13809 */;
+import LaunchPadPullTabCache2 from "LaunchPadPullTabCache" /* 19860 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const LaunchPadConstants = fn(12307);
+const LaunchPadConstants = fn(12402);
 ({ LAUNCH_PAD_PULL_TAB_MAX_POSITION: closure_4, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: hasOwnProperty } = LaunchPadConstants);
 let closure_6 = { active: false, initialLaunchPadPosition: 0, initialPullTabPosition: 0, initialTouchX: 0, initialTouchY: 0, positionOffsetX: 0, positionOffsetY: 0, startTime: -1, requiresPop: false, startShown: false };
 let obj = { position: null, scale: 1, offset: 0, minimized: false };
-const LaunchPadPullTabCache = fn(19650);
+const LaunchPadPullTabCache = fn(19860);
 obj.position = LaunchPadPullTabCache.getLaunchPadPullTabPositionCached();
 let closure_8 = { code: "(function setLaunchPadShown_useLaunchPadStateNativeTsx1(shown){let[launchPadShown]=this.__closure;launchPadShown.set(shown);})" };
 let closure_9 = { code: "(function setLaunchPadPosition_useLaunchPadStateNativeTsx2(value){let[launchPadSharedState]=this.__closure;launchPadSharedState.set(Math.max(Math.min(value,1),0));})" };
@@ -60,7 +60,7 @@ export default function useLaunchPadState() {
       setLaunchPadPosition.__closure = items3;
       setLaunchPadPosition.__workletHash = 13366630538162;
       setLaunchPadPosition.__initData = tmp3;
-      const items4 = [closure_10, useWindowDimensionsSharedValue.getWindowDimensionsWorklet, sharedValue1, React4, useSafeAreaInsetsSharedValue.getSafeAreaInsetsWorklet, hasOwnProperty, updateSharedValueIfChangedDefault, _mod1705.scheduleOnRN, LaunchPadPullTabCache2.persistLaunchPadPullTabPosition];
+      const items4 = [closure_10, useWindowDimensionsSharedValue.getWindowDimensionsWorklet, sharedValue1, React4, useSafeAreaInsetsSharedValue.getSafeAreaInsetsWorklet, hasOwnProperty, updateSharedValueIfChangedDefault, _mod1708.scheduleOnRN, LaunchPadPullTabCache2.persistLaunchPadPullTabPosition];
       c2 = undefined;
       c3 = undefined;
       c4 = undefined;

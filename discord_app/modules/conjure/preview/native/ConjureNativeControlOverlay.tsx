@@ -1,15 +1,15 @@
-// === Module 13242: ConjureNativeControlOverlay ===
+// === Module 13347: ConjureNativeControlOverlay ===
 
-// Module 13242 (ConjureNativeControlOverlay)
+// Module 13347 (ConjureNativeControlOverlay)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import _modDef4079 from "module_4079" /* 4079 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import springPresets from "springPresets" /* 5877 */;
-import useConjureControlBar from "useConjureControlBar" /* 13243 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import _modDef4131 from "module_4131" /* 4131 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import springPresets from "springPresets" /* 5940 */;
+import useConjureControlBar from "useConjureControlBar" /* 13348 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { root: { flex: 1 }, content: { flex: 1 }, block: null, border: null, glow: null, barArea: null, bar: null, title: null, actions: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.block = {};
@@ -70,9 +70,9 @@ export default function ConjureNativeControlOverlay(arg0) {
   }
   dependencyMap = tmp8;
   let obj4 = require("initialize");
-  sharedValue = require("module_1652").useSharedValue(0);
-  const tmp2Result = require("module_1652");
-  sharedValue1 = require("module_1652").useSharedValue(0);
+  sharedValue = require("module_1655").useSharedValue(0);
+  const tmp2Result = require("module_1655");
+  sharedValue1 = require("module_1655").useSharedValue(0);
   const items1 = [sharedValue1, conjureControlPhase, stateFromStores];
   const effect = sharedValue.useEffect(() => {
     if ("controlling" === c0) {
@@ -84,38 +84,38 @@ export default function ConjureNativeControlOverlay(arg0) {
     } else if ("handoff" === tmp) {
       let num2 = 280;
       const diff = useConjureControlBar.CONJURE_CONTROL_HANDOFF_MS - 280;
-      const obj = _mod1652;
+      const obj = _mod1655;
       if (c1) {
         num2 = 0;
       }
       const obj3 = { duration: num2, easing: null };
-      const Easing = _mod1652.Easing;
-      obj3.easing = Easing.in(_mod1652.Easing.ease);
+      const Easing = _mod1655.Easing;
+      obj3.easing = Easing.in(_mod1655.Easing.ease);
       const result1 = sharedValue1.set(obj.withDelay(diff, timing_timing.withTiming(0, obj3)));
     } else {
       const result2 = sharedValue1.set(0);
     }
   }, items1);
-  const tmp2Result6 = require("module_1652");
-  sharedValue2 = require("module_1652").useSharedValue(0.5);
+  const tmp2Result6 = require("module_1655");
+  sharedValue2 = require("module_1655").useSharedValue(0.5);
   const items2 = [tmp8, sharedValue2, stateFromStores];
   const effect1 = sharedValue.useEffect(() => {
     if (closure_2) {
       if (!c1) {
         const result = sharedValue2.set(0.2);
-        const obj = _mod1652;
+        const obj = _mod1655;
         const obj3 = { duration: 1200, easing: null };
-        const Easing = _mod1652.Easing;
-        obj3.easing = Easing.inOut(_mod1652.Easing.ease);
+        const Easing = _mod1655.Easing;
+        obj3.easing = Easing.inOut(_mod1655.Easing.ease);
         const result1 = sharedValue2.set(obj.withRepeat(timing_timing.withTiming(0.7, obj3), -1, true));
         const fn = () => c0(closure_2[9]).cancelAnimation(sharedValue2);
       }
       return fn;
     }
-    _mod1652.cancelAnimation(sharedValue2);
+    _mod1655.cancelAnimation(sharedValue2);
     const result2 = sharedValue2.set(0.5);
   }, items2);
-  const tmp2Result7 = require("module_1652");
+  const tmp2Result7 = require("module_1655");
   const items3 = [closure_10, sharedValue1, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -132,8 +132,8 @@ export default function ConjureNativeControlOverlay(arg0) {
   ConjureNativeControlOverlayTsx1.__closure = items4;
   ConjureNativeControlOverlayTsx1.__workletHash = 2210719149660;
   ConjureNativeControlOverlayTsx1.__initData = tmp14;
-  const animatedStyle = require("module_1652").useAnimatedStyle(ConjureNativeControlOverlayTsx1);
-  const tmp2Result8 = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(ConjureNativeControlOverlayTsx1);
+  const tmp2Result8 = require("module_1655");
   const items5 = [closure_11, sharedValue1, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -154,8 +154,8 @@ export default function ConjureNativeControlOverlay(arg0) {
   ConjureNativeControlOverlayTsx2.__closure = items6;
   ConjureNativeControlOverlayTsx2.__workletHash = 12257928691075;
   ConjureNativeControlOverlayTsx2.__initData = tmp18;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(ConjureNativeControlOverlayTsx2);
-  const tmp2Result9 = require("module_1652");
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(ConjureNativeControlOverlayTsx2);
+  const tmp2Result9 = require("module_1655");
   const items7 = [closure_12, sharedValue2];
   _require = undefined;
   [tmp22, tmp23] = items7;
@@ -169,9 +169,9 @@ export default function ConjureNativeControlOverlay(arg0) {
   ConjureNativeControlOverlayTsx3.__closure = items8;
   ConjureNativeControlOverlayTsx3.__workletHash = 14753805314992;
   ConjureNativeControlOverlayTsx3.__initData = tmp22;
-  const animatedStyle2 = require("module_1652").useAnimatedStyle(ConjureNativeControlOverlayTsx3);
+  const animatedStyle2 = require("module_1655").useAnimatedStyle(ConjureNativeControlOverlayTsx3);
   const intl = tmp2(1113).intl;
-  const tmp26 = _modDef4079;
+  const tmp26 = _modDef4131;
   if (tmp8) {
     if (conjureControlTuning) {
       let prop = tmp26["VJW/5P"];
@@ -195,10 +195,10 @@ export default function ConjureNativeControlOverlay(arg0) {
           return sharedValue.set(nativeEvent.nativeEvent.layout.height);
         };
         if (tmp8) {
-          let tmp46Result = closure_6(tmp2(13244).AILoader, { size: 12, color: "text-overlay-light" });
+          let tmp46Result = closure_6(tmp2(13349).AILoader, { size: 12, color: "text-overlay-light" });
         } else {
           const obj8 = { size: "sm", color: tmp25(575).colors.TEXT_OVERLAY_LIGHT };
-          tmp46Result = closure_6(tmp2(13248).SparklesIcon, obj8);
+          tmp46Result = closure_6(tmp2(13353).SparklesIcon, obj8);
         }
         const items11 = [tmp46Result, , ];
         const obj9 = { variant: "body-sm/semibold", color: "text-overlay-light", lineClamp: 1, style: tmp.title, accessibilityLabel: null, children: null };
@@ -206,11 +206,11 @@ export default function ConjureNativeControlOverlay(arg0) {
         if (tmp8) {
           const intl2 = tmp2(1113).intl;
           const _HermesInternal = HermesInternal;
-          combined = "" + stringResult + ". " + intl2.string(tmp25(4079).fg1sor);
+          combined = "" + stringResult + ". " + intl2.string(tmp25(4131).fg1sor);
         }
         obj9.accessibilityLabel = combined;
         obj9.children = stringResult;
-        items11[1] = closure_6(tmp2(5866).Text, obj9);
+        items11[1] = closure_6(tmp2(5929).Text, obj9);
         let tmp46Result3 = null;
         if (tmp8) {
           tmp46Result3 = null;
@@ -218,17 +218,17 @@ export default function ConjureNativeControlOverlay(arg0) {
             const obj10 = { style: tmp.actions, children: null };
             const obj11 = { variant: "primary-overlay", size: "sm", text: null, loading: null, onPress: null };
             const intl3 = tmp2(1113).intl;
-            obj11.text = intl3.string(tmp25(4079).oU59sU);
+            obj11.text = intl3.string(tmp25(4131).oU59sU);
             obj11.loading = stopping;
             obj11.onPress = stop;
-            obj10.children = closure_6(tmp2(5873).Button, obj11);
+            obj10.children = closure_6(tmp2(5936).Button, obj11);
             tmp46Result3 = closure_6(tmp34, obj10);
           }
         }
         items11[2] = tmp46Result3;
         obj7.children = items11;
-        obj6.children = closure_7(tmp25(1652).View, obj7);
-        tmp46Result4 = closure_6(tmp25(1652).View, obj6);
+        obj6.children = closure_7(tmp25(1655).View, obj7);
+        tmp46Result4 = closure_6(tmp25(1655).View, obj6);
       }
     }
     const items12 = [tmp46Result4, , ];
@@ -248,7 +248,7 @@ export default function ConjureNativeControlOverlay(arg0) {
       const obj15 = { style: null, pointerEvents: "none" };
       const items14 = [tmp.glow, animatedStyle2];
       obj15.style = items14;
-      const items15 = [closure_6(tmp25(1652).View, obj15), ];
+      const items15 = [closure_6(tmp25(1655).View, obj15), ];
       const obj16 = { style: tmp.border, pointerEvents: "none" };
       items15[1] = closure_6(tmp34, obj16);
       obj14.children = items15;
@@ -258,5 +258,5 @@ export default function ConjureNativeControlOverlay(arg0) {
     obj5.children = items12;
     return closure_7(sharedValue1, obj5);
   }
-  const tmp2Result10 = require("module_1652");
+  const tmp2Result10 = require("module_1655");
 };

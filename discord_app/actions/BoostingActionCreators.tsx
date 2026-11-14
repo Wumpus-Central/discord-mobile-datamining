@@ -1,12 +1,12 @@
-// === Module 9171: actions/BoostingActionCreators ===
+// === Module 9238: actions/BoostingActionCreators ===
 
-// Module 9171 (actions/BoostingActionCreators)
+// Module 9238 (actions/BoostingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 9172 */;
-import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 9173 */;
-import SubscriptionStore from "SubscriptionStore" /* 2176 */;
+import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 9239 */;
+import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 9240 */;
+import SubscriptionStore from "SubscriptionStore" /* 2179 */;
 
 require = fn;
 let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
@@ -50,7 +50,7 @@ let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
           closure_130_2 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -131,7 +131,7 @@ let closure_9 = async function _fetchAppliedGuildBoostsForUser() {
           closure_129_1 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -315,7 +315,7 @@ let closure_13 = async function _applyToGuild(arg0) {
           closure_131_5 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

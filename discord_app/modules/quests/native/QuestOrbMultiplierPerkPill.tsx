@@ -1,18 +1,18 @@
-// === Module 17649: QuestOrbMultiplierPerkPill ===
+// === Module 17769: QuestOrbMultiplierPerkPill ===
 
-// Module 17649 (QuestOrbMultiplierPerkPill)
+// Module 17769 (QuestOrbMultiplierPerkPill)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ColorUtils from "ColorUtils" /* 5240 */;
-import themes from "themes" /* 5265 */;
-import useTheme from "useTheme" /* 5484 */;
-import useToken from "useToken" /* 5839 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import Pressables from "Pressables" /* 7364 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9368 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 10063 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10085 */;
-import openQuestOrbMultiplierPerkInfoActionSheetDefault from "openQuestOrbMultiplierPerkInfoActionSheet" /* 17650 */;
+import ColorUtils from "ColorUtils" /* 5303 */;
+import themes from "themes" /* 5328 */;
+import useTheme from "useTheme" /* 5547 */;
+import useToken from "useToken" /* 5902 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import Pressables from "Pressables" /* 7428 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9436 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 10131 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10154 */;
+import openQuestOrbMultiplierPerkInfoActionSheetDefault from "openQuestOrbMultiplierPerkInfoActionSheet" /* 17770 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -25,7 +25,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const start = { x: 0, y: 0 };
 const end = { x: 1, y: 0 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { fullGradientContainer: { borderRadius: nativeDefault.radii.round, overflow: "hidden", minHeight: 19, backgroundColor: "transparent" }, fullGradient: null, fullGradientContent: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -99,7 +99,7 @@ export function QuestOrbMultiplierPerkPill(questId) {
     obj16.style = items3;
     if (!tmp13) {
       const obj18 = { style: tmp.fullGradient, colors: items, start, end };
-      tmp21Result = tmp21(orbMultiplierEligibility(5830), obj18);
+      tmp21Result = tmp21(orbMultiplierEligibility(5893), obj18);
     }
     const items4 = [tmp21Result, ];
     const obj19 = { style: tmp.fullGradientContent, children: closure_8(closure_7, obj13) };

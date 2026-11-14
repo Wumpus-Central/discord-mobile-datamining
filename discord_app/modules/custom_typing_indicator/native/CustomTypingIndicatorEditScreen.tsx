@@ -1,22 +1,22 @@
-// === Module 17861: CustomTypingIndicatorEditScreen ===
+// === Module 17981: CustomTypingIndicatorEditScreen ===
 
-// Module 17861 (CustomTypingIndicatorEditScreen)
+// Module 17981 (CustomTypingIndicatorEditScreen)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import user from "user" /* 1398 */;
-import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1407 */;
-import Link from "Link" /* 1500 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5073 */;
-import dismissible_content from "dismissible_content" /* 5076 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7852 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9512 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14467 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import user from "user" /* 1401 */;
+import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1410 */;
+import Link from "Link" /* 1503 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5136 */;
+import dismissible_content from "dismissible_content" /* 5139 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7918 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9579 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14579 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function CustomTypingIndicatorEditScreenContent(mode) {
@@ -108,7 +108,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   const callback2 = noop.useCallback(() => {
     const obj2 = { initialValue: first2, presets: null, onChange: null, highlightedPresets: null, onDismiss: null };
     const obj = ActionSheetActionCreatorsDefault;
-    const tmp3 = asyncRequireImpl(17862, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(17982, dependencyMap.paths);
     obj2.presets = CustomTypingIndicatorUtils.getCustomTypingIndicatorSuggestionPresets(enabled);
     obj2.onChange = onChange;
     let prop;
@@ -124,7 +124,7 @@ function CustomTypingIndicatorEditScreenContent(mode) {
     obj.openLazy(tmp3, "CustomTypingIndicatorTypingSuggestionPickerSheet", obj2);
   }, items5);
   const callback3 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17863, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17983, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
   }, items6);
   noop.useRef(null);
   const items7 = [analyticsLocations, enabled];
@@ -394,10 +394,10 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsSections: closure_10, HelpdeskArticles: closure_11 } = Constants);
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { screen: { flex: 1 }, container: { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 }, previewContainer: null, section: null, sectionHeader: null, description: null };
 let obj3 = { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 };
 obj2.previewContainer = { height: 140, display: "flex", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_8 };
@@ -407,7 +407,7 @@ obj2.sectionHeader = { flexDirection: "row", justifyContent: "space-between", al
 let obj5 = { rowGap: nativeDefault.space.PX_8 };
 obj2.description = { marginTop: nativeDefault.space.PX_4 };
 let closure_15 = createStyles.createStyles(obj2);
-let items = [fn(5076).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_STYLING_BADGE];
+let items = [fn(5139).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_STYLING_BADGE];
 let closure_17 = [];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorEditScreen.tsx");

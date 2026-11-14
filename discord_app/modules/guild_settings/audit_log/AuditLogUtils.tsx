@@ -1,30 +1,30 @@
-// === Module 20335: AuditLogUtils ===
+// === Module 20490: AuditLogUtils ===
 
-// Module 20335 (AuditLogUtils)
+// Module 20490 (AuditLogUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import IntegerDefault from "Integer" /* 14 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
-import _modDef2166 from "module_2166" /* 2166 */;
-import DateUtils from "DateUtils" /* 5065 */;
-import UserUtilsDefault from "UserUtils" /* 5309 */;
-import useChannelName from "useChannelName" /* 5891 */;
-import TimeUtils from "TimeUtils" /* 6016 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8397 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 20298 */;
-import GuildFeedItemTypes from "GuildFeedItemTypes" /* 20336 */;
-import EmojiStore from "EmojiStore" /* 6906 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7803 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7017 */;
-import StageInstanceStore from "StageInstanceStore" /* 5097 */;
-import StickersStore from "StickersStore" /* 6947 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildRoleStore from "GuildRoleStore" /* 5149 */;
-import RelationshipStore from "RelationshipStore" /* 5185 */;
-import UserStore from "UserStore" /* 1385 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 20333 */;
+import _modDef2169 from "module_2169" /* 2169 */;
+import DateUtils from "DateUtils" /* 5128 */;
+import UserUtilsDefault from "UserUtils" /* 5372 */;
+import useChannelName from "useChannelName" /* 5954 */;
+import TimeUtils from "TimeUtils" /* 6079 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8463 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 20453 */;
+import GuildFeedItemTypes from "GuildFeedItemTypes" /* 20491 */;
+import EmojiStore from "EmojiStore" /* 6969 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7869 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7080 */;
+import StageInstanceStore from "StageInstanceStore" /* 5160 */;
+import StickersStore from "StickersStore" /* 7010 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildRoleStore from "GuildRoleStore" /* 5212 */;
+import RelationshipStore from "RelationshipStore" /* 5248 */;
+import UserStore from "UserStore" /* 1388 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 20488 */;
 
 require = fn;
 function getPermissionChanges(oldValue, newValue) {
@@ -241,19 +241,19 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(20334).AuditLogChange;
+const AuditLogChange = fn(20489).AuditLogChange;
 const Constants = fn(1072);
 const AuditLogActions = Constants.AuditLogActions;
 const AuditLogChangeKeys = Constants.AuditLogChangeKeys;
 const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
 ({ MFALevels: closure_18, VerificationLevels: closure_19, UserNotificationSettings: closure_20, GuildExplicitContentFilterTypes: closure_21, ChannelTypes: closure_22, Permissions: closure_23, NOOP_NULL: closure_24, VideoQualityMode: closure_25, ApplicationCommandPermissionTypes: closure_26, AuditLogSubtargetTypes: closure_27, SystemChannelFlags: closure_28, AuditLogActionTypes: closure_29 } = Constants);
-const ChannelFlags = fn(5099).ChannelFlags;
-const AutomodTriggerType = fn(14059).AutomodTriggerType;
-const GuildOnboardingMode = fn(7155).GuildOnboardingMode;
-const GuildScheduledEventsConstants = fn(5098);
+const ChannelFlags = fn(5162).ChannelFlags;
+const AutomodTriggerType = fn(14166).AutomodTriggerType;
+const GuildOnboardingMode = fn(7218).GuildOnboardingMode;
+const GuildScheduledEventsConstants = fn(5161);
 ({ GuildScheduledEventEntityTypes: items, GuildScheduledEventStatus: closure_34, GuildScheduledEventPrivacyLevel: closure_35 } = GuildScheduledEventsConstants);
 let closure_36 = new LoggerDefault("AuditLogUtils");
-items = [fn(6016).TimeUnits.DAYS, fn(6016).TimeUnits.HOURS, fn(6016).TimeUnits.MINUTES, fn(6016).TimeUnits.SECONDS];
+items = [fn(6079).TimeUnits.DAYS, fn(6079).TimeUnits.HOURS, fn(6079).TimeUnits.MINUTES, fn(6079).TimeUnits.SECONDS];
 let closure_38 = { [AuditLogTargetTypes.CHANNEL]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true }, [AuditLogTargetTypes.CHANNEL_OVERWRITE]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true }, [AuditLogTargetTypes.INVITE]: { [AuditLogChangeKeys.INVITER_ID]: true, [AuditLogChangeKeys.USES]: true }, [AuditLogTargetTypes.WEBHOOK]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.APPLICATION_ID]: true }, [AuditLogTargetTypes.INTEGRATION]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.NAME]: true }, [AuditLogTargetTypes.THREAD]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.TYPE]: true }, [AuditLogTargetTypes.STICKER]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.ASSET]: true, [AuditLogChangeKeys.FORMAT_TYPE]: true, [AuditLogChangeKeys.AVAILABLE]: true, [AuditLogChangeKeys.GUILD_ID]: true }, [AuditLogTargetTypes.GUILD_HOME]: { [AuditLogChangeKeys.ENTITY_TYPE]: true }, [AuditLogTargetTypes.GUILD_ONBOARDING]: { [AuditLogChangeKeys.PROMPTS]: true }, [AuditLogTargetTypes.GUILD_SOUNDBOARD]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.SOUND_ID]: true } };
 class ACTION_FILTER_ITEMS {
   constructor() {
@@ -540,19 +540,19 @@ class ACTION_FILTER_ITEMS {
   }
 }
 let obj = {
-  [fn(6016).TimeUnits.SECONDS]: (seconds) => {
+  [fn(6079).TimeUnits.SECONDS]: (seconds) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.geSp4K, { seconds });
   },
-  [fn(6016).TimeUnits.MINUTES]: (minutes) => {
+  [fn(6079).TimeUnits.MINUTES]: (minutes) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.iXLF9W, { minutes });
   },
-  [fn(6016).TimeUnits.HOURS]: (hours) => {
+  [fn(6079).TimeUnits.HOURS]: (hours) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.xCjYxK, { hours });
   },
-  [fn(6016).TimeUnits.DAYS]: (days) => {
+  [fn(6079).TimeUnits.DAYS]: (days) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t["k2UNz+"], { days });
   }
@@ -805,7 +805,7 @@ export function getChangeStrings(targetType) {
           __3TkD = __3TkD(1113).t.MWp6H7;
           obj20[AuditLogChangeKeys.TEMPORARY] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
           const obj23 = {};
-          obj23[__3TkD(7611).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1113).t.XYZMbL;
+          obj23[__3TkD(7677).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1113).t.XYZMbL;
           __3TkD = obj23;
           obj20[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
           obj20[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1113).t.gb1Owj;
@@ -2336,7 +2336,7 @@ export function transformLogs(arr, arg1) {
                                       let name = name_localized.name_localized;
                                     }
                                     let combined = name;
-                                    if (name_localized.type === result3(2116).ApplicationCommandType.CHAT) {
+                                    if (name_localized.type === result3(2119).ApplicationCommandType.CHAT) {
                                       const _HermesInternal = HermesInternal;
                                       combined = "/\u2060" + name;
                                     }
@@ -2493,7 +2493,7 @@ export function transformLogs(arr, arg1) {
                             let tmp7 = ((targetId) => closure_1_10.getChannel(targetId))(targetId);
                             let tmp10 = null;
                             if (tmp9) {
-                              tmp10 = ((channel) => result3(5891).computeChannelName(channel, user, closure_1_12, true))(tmp7);
+                              tmp10 = ((channel) => result3(5954).computeChannelName(channel, user, closure_1_12, true))(tmp7);
                             }
                             let tmp11 = tmp10;
                             if (null == tmp10) {
@@ -2575,7 +2575,7 @@ export function transformLogs(arr, arg1) {
           const tmp205 = ((targetId16) => closure_1_10.getChannel(targetId16))(targetId16);
           let tmp208 = null;
           if (tmp207) {
-            tmp208 = ((channel) => result3(5891).computeChannelName(channel, user, closure_1_12, true))(tmp205);
+            tmp208 = ((channel) => result3(5954).computeChannelName(channel, user, closure_1_12, true))(tmp205);
           }
           let tmp209 = tmp208;
           if (null == tmp208) {
@@ -2621,8 +2621,8 @@ export function transformLogs(arr, arg1) {
             user = authStore.getUser(id);
           }
           if (tmp225) {
-            id = items(5309).getUserTag(user);
-            let obj4 = items(5309);
+            id = items(5372).getUserTag(user);
+            let obj4 = items(5372);
           }
           obj.subtarget = id;
           tmp225 = null != user && true;
@@ -2692,8 +2692,8 @@ export function transformLogs(arr, arg1) {
             const prop = found19.guild_scheduled_event_exceptions;
             found20 = prop.find((event_exception_id) => event_exception_id.event_exception_id === result3.options.event_exception_id);
           }
-          let obj5 = closure_0(5065);
-          const tmp245 = items(2166);
+          let obj5 = closure_0(5128);
+          const tmp245 = items(2169);
           let str5;
           if (found20 != null) {
             str5 = found20.event_exception_id;
@@ -2928,18 +2928,18 @@ export function transformLogs(arr, arg1) {
                                 if (typeof newValue === "number") {
                                   num2 = newValue;
                                 }
-                                obj = items2(1403);
-                                const removeFlagResult = items2(1403).removeFlag(num2, num);
+                                obj = items2(1406);
+                                const removeFlagResult = items2(1406).removeFlag(num2, num);
                                 const added = [];
                                 const removed = [];
-                                const obj2 = items2(1403);
+                                const obj2 = items2(1406);
                                 const values = Object.values(closure_1_30);
                                 for (const item10028 of values) {
-                                  obj3 = items2(1403);
+                                  obj3 = items2(1406);
                                   if (obj3.hasFlag(removeFlagResult, item10028)) {
                                     let arr = added.push(item10028);
                                   }
-                                  let tmp6Result = items2(1403);
+                                  let tmp6Result = items2(1406);
                                   if (tmp6Result.hasFlag(removeFlagResult1, item10028)) {
                                     let arr2 = removed.push(item10028);
                                   }
@@ -2966,18 +2966,18 @@ export function transformLogs(arr, arg1) {
                                 if (typeof newValue === "number") {
                                   num2 = newValue;
                                 }
-                                obj = items2(1403);
-                                const removeFlagResult = items2(1403).removeFlag(num2, num);
+                                obj = items2(1406);
+                                const removeFlagResult = items2(1406).removeFlag(num2, num);
                                 const added = [];
                                 const removed = [];
-                                const obj2 = items2(1403);
+                                const obj2 = items2(1406);
                                 const values = Object.values(closure_1_30);
                                 for (const item10028 of values) {
-                                  obj3 = items2(1403);
+                                  obj3 = items2(1406);
                                   if (obj3.hasFlag(removeFlagResult, item10028)) {
                                     let arr = added.push(item10028);
                                   }
-                                  let tmp6Result = items2(1403);
+                                  let tmp6Result = items2(1406);
                                   if (tmp6Result.hasFlag(removeFlagResult1, item10028)) {
                                     let arr2 = removed.push(item10028);
                                   }
@@ -3198,7 +3198,7 @@ export function transformLogs(arr, arg1) {
                                                 const newValue22 = newValue.newValue;
                                                 const mapped6 = newValue22.map(ChannelStore.getChannel);
                                                 const found2 = mapped6.filter((item) => null != item);
-                                                const mapped7 = found2.map((item) => newValue(5891).computeChannelName(item, user, closure_1_12, true));
+                                                const mapped7 = found2.map((item) => newValue(5954).computeChannelName(item, user, closure_1_12, true));
                                                 if (null == mapped7) {
                                                   newValue5 = mapped7;
                                                 } else {
@@ -3213,7 +3213,7 @@ export function transformLogs(arr, arg1) {
                                                 const oldValue22 = newValue.oldValue;
                                                 const mapped8 = oldValue22.map(ChannelStore.getChannel);
                                                 const found3 = mapped8.filter((item) => null != item);
-                                                const mapped9 = found3.map((item) => newValue(5891).computeChannelName(item, user, closure_1_12, true));
+                                                const mapped9 = found3.map((item) => newValue(5954).computeChannelName(item, user, closure_1_12, true));
                                                 if (null == mapped9) {
                                                   oldValue5 = mapped9;
                                                 } else {
@@ -3312,14 +3312,14 @@ export function transformLogs(arr, arg1) {
                                               const _Date = Date;
                                               obj = DateUtils;
                                               const date = new Date(newValue2);
-                                              newValue = obj.dateFormat(_modDef2166(date), "LLLL");
+                                              newValue = obj.dateFormat(_modDef2169(date), "LLLL");
                                             }
                                             if (null != newValue.oldValue) {
                                               const oldValue2 = newValue.oldValue;
                                               const _Date2 = Date;
                                               let obj2 = DateUtils;
                                               const date1 = new Date(oldValue2);
-                                              oldValue = obj2.dateFormat(_modDef2166(date1), "LLLL");
+                                              oldValue = obj2.dateFormat(_modDef2169(date1), "LLLL");
                                             }
                                             if (!oldValue) {
                                               oldValue = newValue.oldValue;

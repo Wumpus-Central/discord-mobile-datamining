@@ -1,7 +1,7 @@
-// === Module 2023: ForceSdrEmojisStickersExperiment ===
+// === Module 2026: ForceSdrEmojisStickersExperiment ===
 
-// Module 2023 (ForceSdrEmojisStickersExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 2026 (ForceSdrEmojisStickersExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-10-force-sdr-emojis-stickers", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

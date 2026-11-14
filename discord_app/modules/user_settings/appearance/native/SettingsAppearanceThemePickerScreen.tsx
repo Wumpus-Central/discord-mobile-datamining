@@ -1,35 +1,35 @@
-// === Module 17767: SettingsAppearanceThemePickerScreen ===
+// === Module 17887: SettingsAppearanceThemePickerScreen ===
 
-// Module 17767 (SettingsAppearanceThemePickerScreen)
+// Module 17887 (SettingsAppearanceThemePickerScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5271 */;
-import QuestTypes from "QuestTypes" /* 5278 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5481 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7354 */;
-import Pressables from "Pressables" /* 7364 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7929 */;
-import StatusBarDefault from "StatusBar" /* 11761 */;
-import ThemeDarkIcon from "ThemeDarkIcon" /* 11879 */;
-import HexagonActionCreators from "HexagonActionCreators" /* 16961 */;
-import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 16962 */;
-import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 17512 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17513 */;
-import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17514 */;
-import ThemeLightIcon from "ThemeLightIcon" /* 17768 */;
-import ThemeMidnightIcon from "ThemeMidnightIcon" /* 17770 */;
-import SettingsAppearanceChannelListDefault from "SettingsAppearanceChannelList" /* 17790 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5334 */;
+import QuestTypes from "QuestTypes" /* 5341 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5544 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7418 */;
+import Pressables from "Pressables" /* 7428 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7994 */;
+import StatusBarDefault from "StatusBar" /* 11827 */;
+import ThemeDarkIcon from "ThemeDarkIcon" /* 11945 */;
+import HexagonActionCreators from "HexagonActionCreators" /* 17084 */;
+import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 17085 */;
+import HexagonCampaignPreviousPerkValues from "HexagonCampaignPreviousPerkValues" /* 17630 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 17631 */;
+import ClientThemesBackgroundActionCreators from "ClientThemesBackgroundActionCreators" /* 17632 */;
+import ThemeLightIcon from "ThemeLightIcon" /* 17888 */;
+import ThemeMidnightIcon from "ThemeMidnightIcon" /* 17890 */;
+import SettingsAppearanceChannelListDefault from "SettingsAppearanceChannelList" /* 17910 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5267 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5330 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
@@ -48,13 +48,13 @@ function needsHexagonCampaignEnrollment(c0) {
 const View = fn(17).View;
 const ThemeConstants = fn(1195);
 ({ SystemTheme: map1, SystemThemeState: closure_14 } = ThemeConstants);
-const HexagonCampaignPerk = fn(5268).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5331).HexagonCampaignPerk;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let obj2 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_24, marginBottom: null };
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let num = 0;
 if (!PlatformUtils.isIOS()) {
   num = nativeDefault.space.PX_16;
@@ -72,52 +72,52 @@ let closure_22 = items.map((item) => {
   return internal.resolveSemanticColor(item, nativeDefault.colors.CARD_SECONDARY_BG);
 });
 let closure_23 = items.map((item, index) => index);
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj6 = { width: "100%", gap: nativeDefault.space.PX_16, alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };
 let closure_24 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj8 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_25 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 let closure_26 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj12 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 let closure_27 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj14 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 let closure_28 = createStyles.createAnimatedThemedStyles({ backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj16 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_29 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_DEFAULT }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 const obj18 = { color: nativeDefault.colors.TEXT_DEFAULT };
 let closure_30 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 const obj20 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 let closure_31 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_SUBTLE }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 const obj22 = { color: nativeDefault.colors.TEXT_SUBTLE };
 let closure_32 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_MUTED }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 const obj24 = { color: nativeDefault.colors.TEXT_MUTED };
 let closure_33 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_MUTED }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 const obj26 = { borderColor: nativeDefault.colors.BORDER_MUTED };
 let closure_34 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_STRONG }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 const obj28 = { borderColor: nativeDefault.colors.BORDER_STRONG };
 let closure_35 = createStyles.createAnimatedThemedStyles({ borderColor: nativeDefault.colors.BORDER_NORMAL }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 const obj30 = { borderColor: nativeDefault.colors.BORDER_NORMAL };
 let closure_36 = createStyles.createAnimatedThemedStyles({ tintColor: nativeDefault.colors.REDESIGN_ACTIVITY_CARD_BADGE_ICON }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 const obj32 = { tintColor: nativeDefault.colors.REDESIGN_ACTIVITY_CARD_BADGE_ICON };
 let closure_37 = createStyles.createAnimatedThemedStyles({ tintColor: nativeDefault.colors.TEXT_SUBTLE }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 const obj34 = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 let closure_38 = createStyles.createAnimatedThemedStyles({ tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, items);
-createStyles = fn(5243);
+createStyles = fn(5306);
 const obj36 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let closure_39 = createStyles.createAnimatedThemedStyles({ color: nativeDefault.colors.TEXT_BRAND }, items);
 function getSegmentedControlItems() {
@@ -195,7 +195,7 @@ function ThemePicker(defaultIndex) {
   [tmp12, c13] = noop.useState(str);
   const tmp8Result = _slicedToArray(noop.useState(str), 2);
   closure_14 = tmp14;
-  const headerHeight = require("module_7434").useHeaderHeight();
+  const headerHeight = require("module_7500").useHeaderHeight();
   const tmp15 = useMeasuredLayoutDefault();
   const width = tmp15.width;
   let num = 0;
@@ -205,7 +205,7 @@ function ThemePicker(defaultIndex) {
   }
   const memo = obj2.useMemo(getSegmentedControlItems, []);
   const memo1 = obj2.useMemo(() => closure_21.findIndex((item) => item === theme.theme), []);
-  const tmp3Result = require("module_7434");
+  const tmp3Result = require("module_7500");
   items = [themeIndex];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => closure_0(_undefined2[26]).isThemeLight(first.systemTheme) ? activeIndex.LIGHT : activeIndex.DARK);
   const tmp3Result9 = require("useStateFromStores");
@@ -225,7 +225,7 @@ function ThemePicker(defaultIndex) {
   SettingsAppearanceThemePickerScreenTsx1.__closure = items2;
   SettingsAppearanceThemePickerScreenTsx1.__workletHash = 4189626295489;
   SettingsAppearanceThemePickerScreenTsx1.__initData = tmp23;
-  const items3 = [closure_43, require("module_1705").scheduleOnRN, tmp21];
+  const items3 = [closure_43, require("module_1708").scheduleOnRN, tmp21];
   _require = undefined;
   importDefault = undefined;
   [tmp25, tmp26, tmp27] = items3;
@@ -239,8 +239,8 @@ function ThemePicker(defaultIndex) {
   SettingsAppearanceThemePickerScreenTsx2.__closure = items4;
   SettingsAppearanceThemePickerScreenTsx2.__workletHash = 2807189811629;
   SettingsAppearanceThemePickerScreenTsx2.__initData = tmp25;
-  const animatedReaction = require("module_1652").useAnimatedReaction(SettingsAppearanceThemePickerScreenTsx1, SettingsAppearanceThemePickerScreenTsx2);
-  const tmp3Result11 = require("module_1652");
+  const animatedReaction = require("module_1655").useAnimatedReaction(SettingsAppearanceThemePickerScreenTsx1, SettingsAppearanceThemePickerScreenTsx2);
+  const tmp3Result11 = require("module_1655");
   let num2 = 1;
   if ("light" === mobileThemes[defaultIndex].theme) {
     num2 = 0;
@@ -250,8 +250,8 @@ function ThemePicker(defaultIndex) {
     activeIndex = tmp3Result12.useSharedValue(num2);
   }
   const memo2 = obj2.useMemo(() => closure_0(_undefined2[38]).hexWithOpacity(closure_0(_undefined2[39]).OverlayColors.LIGHT, closure_0(_undefined2[39]).OverlayOpacity.LEVEL_1), []);
-  tmp3Result12 = require("module_1652");
-  const items5 = [closure_44, mobileThemes, "nitro" === themeSelector, themeIndex, activeIndex, require("ClientThemesTypes").ClientThemeType, require("timing/timing").withTiming, require("module_1652").interpolateColor, callback1, callback, require("timingPresets").timingStandard, memo2];
+  tmp3Result12 = require("module_1655");
+  const items5 = [closure_44, mobileThemes, "nitro" === themeSelector, themeIndex, activeIndex, require("ClientThemesTypes").ClientThemeType, require("timing/timing").withTiming, require("module_1655").interpolateColor, callback1, callback, require("timingPresets").timingStandard, memo2];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -295,7 +295,7 @@ function ThemePicker(defaultIndex) {
   SettingsAppearanceThemePickerScreenTsx3.__workletHash = 5300958173313;
   SettingsAppearanceThemePickerScreenTsx3.__initData = tmp30;
   obj4 = { textNormal: null, textMuted: null, textBrand: null, borderFaint: null, borderStrong: null, borderNormal: null, headerPrimary: null, headerSecondary: null, activityIcon: null, bgModSubtle: null, bgModStrong: null, iconHeaderSecondary: null, iconInteractive: null, bgBasePrimary: null, bgSurfaceOverlay: null, bgSurfaceHigh: null, bgRaised: null };
-  const animatedStyle = require("module_1652").useAnimatedStyle(SettingsAppearanceThemePickerScreenTsx3);
+  const animatedStyle = require("module_1655").useAnimatedStyle(SettingsAppearanceThemePickerScreenTsx3);
   obj4.textNormal = closure_29(activeIndex);
   obj4.textMuted = closure_32(activeIndex);
   obj4.textBrand = closure_39(activeIndex);
@@ -539,7 +539,7 @@ function ThemePicker(defaultIndex) {
       }
     }
   }), items9);
-  const tmp3Result13 = require("module_1652");
+  const tmp3Result13 = require("module_1655");
   const items10 = [c7];
   stateFromStores1 = require("useStateFromStores").useStateFromStores(items10, () => _undefined7.hasHiddenHexagonCampaignPreset);
   const items11 = [hasSaveButton, mobileThemes, themeIndex, defaultIndex, isPreview, mode, stateFromStores1];
@@ -681,8 +681,8 @@ function ThemePicker(defaultIndex) {
           }
           const obj = { theme: tmp4, children: null };
           const obj2 = { navigation };
-          obj.children = obj4(dependencyMap(8991), obj2);
-          return obj4(closure_0(5314).ThemeContextProvider, obj);
+          obj.children = obj4(dependencyMap(9058), obj2);
+          return obj4(closure_0(5377).ThemeContextProvider, obj);
         } else {
           return null;
         }
@@ -695,7 +695,7 @@ function ThemePicker(defaultIndex) {
           stringResult = intl.string(closure_0(1113).t.XAS5Pi);
         }
         obj.children = stringResult;
-        return obj4(closure_0(5866).Text, obj);
+        return obj4(closure_0(5929).Text, obj);
       },
       headerTitleAlign: "center",
       headerRight: null
@@ -744,7 +744,7 @@ function ThemePicker(defaultIndex) {
   }
   if ("nitro" === themeSelector) {
     const obj5 = { themes: mobileThemes, currentThemeIndex: themeIndex, isPreview, isSynced, defaultIndex, deviceWidth: rounded, animatedStyles: obj4, hasOnyxNux, onThemeSelected: callback4 };
-    let tmp62 = obj4(tmp6(17772), obj5);
+    let tmp62 = obj4(tmp6(17892), obj5);
     let tmp63 = obj4;
   } else {
     let tmp58;
@@ -758,14 +758,14 @@ function ThemePicker(defaultIndex) {
     let obj6 = { style: tmp.segmentedControlContainer, ref, onLayout, children: null };
     let obj7 = { theme: tmp58, children: null };
     let obj8 = { variant: "experimental_Large", state: segmentedControlState };
-    obj7.children = obj4(tmp3(11184).SegmentedControl, obj8);
-    const items15 = [obj4(tmp3(5314).ThemeContextProvider, obj7), ];
+    obj7.children = obj4(tmp3(11251).SegmentedControl, obj8);
+    const items15 = [obj4(tmp3(5377).ThemeContextProvider, obj7), ];
     const obj9 = { animated: true, variant: "body-xs/medium", style: null, children: null };
     const items16 = [obj4.headerSecondary, tmp.textCentered];
     obj9.style = items16;
     let intl = tmp3(1113).intl;
     obj9.children = intl.string(tmp3(1113).t.d5Gu9A);
-    items15[1] = obj4(tmp3(5866).Text, obj9);
+    items15[1] = obj4(tmp3(5929).Text, obj9);
     obj6.children = items15;
     tmp62 = first1(c6, obj6);
     tmp63 = obj4;
@@ -788,7 +788,7 @@ function ThemePicker(defaultIndex) {
     }
     _undefined(str);
   }, items17);
-  const memo3 = obj2.useMemo(tmp6(17778), []);
+  const memo3 = obj2.useMemo(tmp6(17898), []);
   const obj10 = { themes: mobileThemes, themeIndex, animatedStyles: obj4, data: memo3, useGradientBackground: "nitro" === themeSelector, isNitroLocked: null };
   let result = tmp14;
   const tmp3Result15 = require("useNavigatorBackPressHandler");
@@ -796,8 +796,8 @@ function ThemePicker(defaultIndex) {
     result = isPreview;
   }
   if (result) {
-    result = tmp3(5481).isNitroGatedMobileTheme(mobileThemes[themeIndex]);
-    const tmp3Result16 = tmp3(5481);
+    result = tmp3(5544).isNitroGatedMobileTheme(mobileThemes[themeIndex]);
+    const tmp3Result16 = tmp3(5544);
   }
   obj10.isNitroLocked = result;
   const tmp63Result = tmp63(SettingsAppearanceChannelListDefault, obj10);
@@ -811,7 +811,7 @@ function ThemePicker(defaultIndex) {
   let tmp63Result2 = null;
   if ("nitro" === themeSelector) {
     const obj12 = { themes: mobileThemes, themeIndex, isDimmed: true };
-    tmp63Result2 = tmp63(tmp6(17799), obj12);
+    tmp63Result2 = tmp63(tmp6(17919), obj12);
   }
   const items19 = [tmp63Result2, ];
   const items20 = [tmp.container, , ];
@@ -840,7 +840,7 @@ function ThemePicker(defaultIndex) {
   obj13.children = items21;
   items19[1] = first1(require("common/SafeAreaView").SafeAreaPaddingView, obj13);
   obj11.children = items19;
-  return first1(_modDef1652.View, obj11);
+  return first1(_modDef1655.View, obj11);
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceThemePickerScreen.tsx");

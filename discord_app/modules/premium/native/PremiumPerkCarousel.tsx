@@ -1,7 +1,7 @@
-// === Module 15199: PremiumPerkCarousel ===
+// === Module 15313: PremiumPerkCarousel ===
 
-// Module 15199 (PremiumPerkCarousel)
-import PremiumPerkCard from "PremiumPerkCard" /* 9919 */;
+// Module 15313 (PremiumPerkCarousel)
+import PremiumPerkCard from "PremiumPerkCard" /* 9986 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({ title: { marginLeft: 24 }, indicators: { marginBottom: -36 }, carousel: { marginTop: 16 }, carouselCard: { marginLeft: 8 }, lastCarouselCard: { marginRight: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPerkCarousel.tsx");

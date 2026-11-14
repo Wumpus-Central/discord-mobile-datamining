@@ -1,12 +1,12 @@
-// === Module 20774: BackgroundSync ===
+// === Module 20928: BackgroundSync ===
 
-// Module 20774 (BackgroundSync)
+// Module 20928 (BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 5138 */;
-import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 20026 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 5201 */;
+import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 20184 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AppStateStore from "AppStateStore" /* 2117 */;
+import AppStateStore from "AppStateStore" /* 2120 */;
 
 require = fn;
 let closure_6 = new LoggerDefault("BackgroundSync");

@@ -1,21 +1,21 @@
-// === Module 13340: NoPermsState ===
+// === Module 13445: NoPermsState ===
 
-// Module 13340 (NoPermsState)
+// Module 13445 (NoPermsState)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import shared from "shared" /* 5250 */;
-import useThemeDefault from "useTheme" /* 5484 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import FastImageDefault from "FastImage" /* 5957 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 12483 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 13278 */;
+import shared from "shared" /* 5313 */;
+import useThemeDefault from "useTheme" /* 5547 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import FastImageDefault from "FastImage" /* 6020 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 12579 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 13383 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { paddingVertical: 16, paddingHorizontal: 24, gap: 12, backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "flex-start", display: "flex", flexDirection: "row" }, textContainer: { flexShrink: 1 }, image: { width: 64, height: 64 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 
 export default function EmptyState() {
   const tmp = closure_6();
-  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 13341 : 13342);
+  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 13446 : 13447);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   const obj2 = { style: tmp.container, children: null };
   items = [React4(FastImageDefault, { style: tmp.image, resizeMode: "contain", source: tmp4Result }), ];

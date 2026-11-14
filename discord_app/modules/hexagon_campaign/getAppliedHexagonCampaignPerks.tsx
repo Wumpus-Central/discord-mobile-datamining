@@ -1,13 +1,13 @@
-// === Module 17511: getAppliedHexagonCampaignPerks ===
+// === Module 17629: getAppliedHexagonCampaignPerks ===
 
-// Module 17511 (getAppliedHexagonCampaignPerks)
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5271 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5267 */;
+// Module 17629 (getAppliedHexagonCampaignPerks)
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5334 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5330 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
-const HexagonCampaignPerk = fn(5268).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5331).HexagonCampaignPerk;
 const SystemTheme = fn(1195).SystemTheme;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/getAppliedHexagonCampaignPerks.tsx");
@@ -42,7 +42,7 @@ export function isHexagonCampaignClientThemeApplied() {
     if (gradientPreset != null) {
       id = gradientPreset.id;
     }
-    tmp6 = HexagonCampaignUtils.isHexagonCampaignClientThemePreset(id) || ClientThemesBackgroundStore.hasHiddenHexagonCampaignPreset;
+    tmp6 = HexagonCampaignUtils.isHexagonCampaignClientThemePreset(id) && !ClientThemesBackgroundStore.isUpsellGradientPreview || ClientThemesBackgroundStore.hasHiddenHexagonCampaignPreset;
     const tmpResult = HexagonCampaignUtils;
   }
   return tmp6;

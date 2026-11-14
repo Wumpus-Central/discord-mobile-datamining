@@ -1,6 +1,6 @@
-// === Module 8588: renderer/EmbedUtils ===
+// === Module 8655: renderer/EmbedUtils ===
 
-// Module 8588 (renderer/EmbedUtils)
+// Module 8655 (renderer/EmbedUtils)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;

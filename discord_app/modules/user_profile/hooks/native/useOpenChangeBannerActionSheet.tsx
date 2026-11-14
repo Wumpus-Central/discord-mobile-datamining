@@ -1,9 +1,9 @@
-// === Module 16944: useOpenChangeBannerActionSheet ===
+// === Module 17067: useOpenChangeBannerActionSheet ===
 
-// Module 16944 (useOpenChangeBannerActionSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 9332 */;
+// Module 17067 (useOpenChangeBannerActionSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 9399 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ export default function useOpenChangeBannerActionSheet(user) {
       obj3.selectionContext = closure_1_2 ? GIFSelectionContext.PROFILE_TRY_IT_OUT : GIFSelectionContext.PROFILE_EDIT;
       obj2.openLazy(user(flag[3])(flag[6], flag.paths), "Select GIF Banner", obj3);
     };
-    obj.openLazy(asyncRequireImpl(16945, dependencyMap.paths), "Change Banner", obj2);
-    const tmp3 = asyncRequireImpl(16945, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(17068, dependencyMap.paths), "Change Banner", obj2);
+    const tmp3 = asyncRequireImpl(17068, dependencyMap.paths);
   }, items);
 };

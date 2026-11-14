@@ -1,9 +1,9 @@
-// === Module 14587: GuildDirectorySearchStore ===
+// === Module 14700: GuildDirectorySearchStore ===
 
-// Module 14587 (GuildDirectorySearchStore)
+// Module 14700 (GuildDirectorySearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildDirectoryUtils from "GuildDirectoryUtils" /* 14588 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 14701 */;
 
 require = fn;
 let closure_2 = [];
@@ -63,7 +63,7 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(DispatcherDefaul
     });
     const obj2 = {};
     const merged1 = Object.assign(dependencyMap2[channelId]);
-    const obj3 = { results: items(14588).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
+    const obj3 = { results: items(14701).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
     obj2[query.query] = obj3;
     dependencyMap2[channelId] = obj2;
   },

@@ -1,22 +1,22 @@
-// === Module 19256: SearchBarActivityIcon ===
+// === Module 19448: SearchBarActivityIcon ===
 
-// Module 19256 (SearchBarActivityIcon)
+// Module 19448 (SearchBarActivityIcon)
 import nativeDefault from "native" /* 575 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import SearchUtils from "SearchUtils" /* 14634 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import SearchUtils from "SearchUtils" /* 14747 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6974 */;
-import SearchQueryStore from "SearchQueryStore" /* 14641 */;
+import SearchMessageStore from "SearchMessageStore" /* 7037 */;
+import SearchQueryStore from "SearchQueryStore" /* 14754 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(8999).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_7 = fn(9066).SEARCH_MESSAGE_TAB_SENTINEL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { spinnerColor: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, spinner: { width: 18, height: 18, alignItems: "center", justifyContent: "center", position: "absolute" }, icon: { marginLeft: 12, marginRight: 4 } };
 let closure_11 = createStyles.createStyles(obj);
 let obj4 = { START: 0, [0]: "START", END: 1, [1]: "END" };
@@ -48,7 +48,7 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
     return tmp3;
   }, items1);
   let obj = require("useStateFromStores");
-  const sharedValue = require("module_1652").useSharedValue(obj4.START);
+  const sharedValue = require("module_1655").useSharedValue(obj4.START);
   const items2 = [stateFromStores, sharedValue];
   const effect = noop.useEffect(() => {
     const withTiming = timing_timing.withTiming;
@@ -58,8 +58,8 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
       const result1 = set(withTiming(obj4.START));
     }
   }, items2);
-  const obj2 = require("module_1652");
-  const items3 = [closure_14, require("module_1652").interpolate, sharedValue, items];
+  const obj2 = require("module_1655");
+  const items3 = [closure_14, require("module_1655").interpolate, sharedValue, items];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -74,10 +74,10 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
   SearchBarActivityIconTsx1.__closure = items4;
   SearchBarActivityIconTsx1.__workletHash = 14380742529421;
   SearchBarActivityIconTsx1.__initData = tmp8;
-  const animatedStyle = require("module_1652").useAnimatedStyle(SearchBarActivityIconTsx1);
-  const obj3 = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(SearchBarActivityIconTsx1);
+  const obj3 = require("module_1655");
   const tmp7 = items;
-  const items5 = [closure_15, require("module_1652").interpolate, sharedValue, tmp7];
+  const items5 = [closure_15, require("module_1655").interpolate, sharedValue, tmp7];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -92,17 +92,17 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
   SearchBarActivityIconTsx2.__closure = items6;
   SearchBarActivityIconTsx2.__workletHash = 4711746497812;
   SearchBarActivityIconTsx2.__initData = tmp13;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(SearchBarActivityIconTsx2);
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(SearchBarActivityIconTsx2);
   obj4 = { style: animatedStyle, children: null };
   const obj5 = { color: tmp.spinnerColor.color, style: null };
   const items7 = [, ];
   ({ icon: arr8[0], spinner: arr8[1] } = tmp);
   obj5.style = items7;
   obj4.children = closure_8(ActivityIndicator, obj5);
-  const items8 = [closure_8(_modDef1652.View, obj4), ];
+  const items8 = [closure_8(_modDef1655.View, obj4), ];
   const obj6 = { style: animatedStyle1, children: null };
   const obj7 = { style: tmp.icon, size: null, color: "interactive-text-default" };
-  const tmp2Result = require("module_1652");
+  const tmp2Result = require("module_1655");
   let str = "xs";
   if (tmp2Result2.isAndroid()) {
     str = "sm";
@@ -110,7 +110,7 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
   const obj8 = { children: null };
   obj7.size = str;
   obj6.children = closure_8(require("MagnifyingGlassIcon").MagnifyingGlassIcon, obj7);
-  items8[1] = closure_8(_modDef1652.View, obj6);
+  items8[1] = closure_8(_modDef1655.View, obj6);
   obj8.children = items8;
   return closure_10(closure_9, obj8);
 });

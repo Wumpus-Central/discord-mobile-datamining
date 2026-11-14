@@ -1,10 +1,10 @@
-// === Module 20729: LocalMessageCacheStatsManager ===
+// === Module 20884: LocalMessageCacheStatsManager ===
 
-// Module 20729 (LocalMessageCacheStatsManager)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import MessageCacheStatsDefault from "MessageCacheStats" /* 8624 */;
+// Module 20884 (LocalMessageCacheStatsManager)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import MessageCacheStatsDefault from "MessageCacheStats" /* 8691 */;
 import Constants from "Constants" /* 1072 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 import size from "module_2" /* 2 */;
 
 function makeLogLine(channelId) {

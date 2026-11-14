@@ -1,21 +1,21 @@
-// === Module 10876: FavoritesHooks ===
+// === Module 10945: FavoritesHooks ===
 
-// Module 10876 (FavoritesHooks)
+// Module 10945 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 2107 */;
-import FavoritesUtils from "FavoritesUtils" /* 5117 */;
-import FavoritesLimits from "FavoritesLimits" /* 10877 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
-import UserStore from "UserStore" /* 1385 */;
-import FavoriteStore from "FavoriteStore" /* 5095 */;
+import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 2110 */;
+import FavoritesUtils from "FavoritesUtils" /* 5180 */;
+import FavoritesLimits from "FavoritesLimits" /* 10946 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import UserStore from "UserStore" /* 1388 */;
+import FavoriteStore from "FavoriteStore" /* 5158 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const MAX_FAVORITE_CHANNELS = fn(5105).MAX_FAVORITE_CHANNELS;
-const PremiumTypes = fn(1387).PremiumTypes;
+const MAX_FAVORITE_CHANNELS = fn(5168).MAX_FAVORITE_CHANNELS;
+const PremiumTypes = fn(1390).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");
 

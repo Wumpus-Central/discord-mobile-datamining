@@ -1,20 +1,20 @@
-// === Module 10820: UserNameplateRow ===
+// === Module 10889: UserNameplateRow ===
 
-// Module 10820 (UserNameplateRow)
+// Module 10889 (UserNameplateRow)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5839 */;
-import TableRow from "TableRow" /* 7379 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 7380 */;
-import Card from "Card" /* 7381 */;
-import TableRowDivider from "TableRowDivider" /* 7385 */;
-import NameplateDefault from "Nameplate" /* 9441 */;
+import useToken from "useToken" /* 5902 */;
+import TableRow from "TableRow" /* 7443 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 7444 */;
+import Card from "Card" /* 7445 */;
+import TableRowDivider from "TableRowDivider" /* 7453 */;
+import NameplateDefault from "Nameplate" /* 9508 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { card: { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -32,7 +32,7 @@ export function UserNameplateRow(onPressOut) {
   if (variant === undefined) {
     variant = "default";
   }
-  ({ isPreviewRow, draggable, dragHandlePressableProps, nameplate } = onPressOut);
+  ({ draggable, isPreviewRow, dragHandlePressableProps, nameplate } = onPressOut);
   if (isPreviewRow === undefined) {
     isPreviewRow = false;
   }
@@ -61,7 +61,7 @@ export function UserNameplateRow(onPressOut) {
   }, items1);
   const tmp2 = closure_8();
   const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS);
-  const obj2 = { shadow: "none", border: "none", radius: token, start: null, end: null, onPress: null, onPressIn: null, onPressOut: null, disabled: null, style: null };
+  const obj2 = { shadow: "none", border: "none", padding: "none", radius: token, start: null, end: null, onPress: null, onPressIn: null, onPressOut: null, disabled: null, style: null, draggable: null, dragHandlePressableProps: null };
   let tmp13 = !context;
   if (!context) {
     tmp13 = true === start;
@@ -73,8 +73,10 @@ export function UserNameplateRow(onPressOut) {
   obj2.onPressOut = callback1;
   obj2.disabled = flag;
   obj2.style = tmp2.card;
+  obj2.draggable = draggable;
+  obj2.dragHandlePressableProps = dragHandlePressableProps;
   const merged1 = Object.assign(merged);
-  const items2 = [hasOwnProperty(NameplateDefault, { nameplate, isPressed: tmp7[0], invertPressOpacity: true, fullOpacity: isPreviewRow, animate: isPreviewRow }), hasOwnProperty(TableRow.TableRowInner, { height: "100%", label, subLabel, icon, trailing, arrow, disabled: flag, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps })];
+  const items2 = [hasOwnProperty(NameplateDefault, { nameplate, isPressed: tmp7[0], invertPressOpacity: true, fullOpacity: isPreviewRow, animate: isPreviewRow }), hasOwnProperty(TableRow.TableRowInner, { height: "100%", label, subLabel, icon, trailing, arrow, disabled: flag, labelLineClamp, subLabelLineClamp, variant, draggable })];
   obj2.children = items2;
   const tmp12Result = timestampProducer(Card.Card, obj2);
   let tmp12Result2 = tmp12Result;

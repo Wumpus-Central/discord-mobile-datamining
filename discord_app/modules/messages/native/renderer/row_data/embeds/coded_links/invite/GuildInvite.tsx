@@ -1,40 +1,40 @@
-// === Module 15444: invite/GuildInvite ===
+// === Module 15558: invite/GuildInvite ===
 
-// Module 15444 (invite/GuildInvite)
+// Module 15558 (invite/GuildInvite)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5106 */;
-import UserUtilsDefault from "UserUtils" /* 5309 */;
-import useChannelName from "useChannelName" /* 5891 */;
-import InviteTargetTypes from "InviteTargetTypes" /* 7599 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 7611 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 7968 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8588 */;
-import Constants2 from "Constants" /* 8775 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 9096 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9103 */;
-import GuildBadgeImageSource from "GuildBadgeImageSource" /* 10327 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 11825 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11826 */;
-import GuestUtilsDefault from "GuestUtils" /* 11827 */;
-import _modDef13998 from "module_13998" /* 13998 */;
-import _modDef13999 from "module_13999" /* 13999 */;
-import InviteErrorUtils from "InviteErrorUtils" /* 14971 */;
-import _modDef14972 from "module_14972" /* 14972 */;
-import getHeaderTextForInvite from "getHeaderTextForInvite" /* 15445 */;
-import GuildRecord from "GuildRecord" /* 5110 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import InviteStore from "InviteStore" /* 5989 */;
-import RelationshipStore from "RelationshipStore" /* 5185 */;
-import UserStore from "UserStore" /* 1385 */;
+import FlagUtils from "FlagUtils" /* 1406 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2024 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
+import UserUtilsDefault from "UserUtils" /* 5372 */;
+import useChannelName from "useChannelName" /* 5954 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 7665 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 7677 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8033 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8655 */;
+import Constants2 from "Constants" /* 8842 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 9163 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9170 */;
+import GuildBadgeImageSource from "GuildBadgeImageSource" /* 10396 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 11891 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11892 */;
+import GuestUtilsDefault from "GuestUtils" /* 11893 */;
+import _modDef14105 from "module_14105" /* 14105 */;
+import _modDef14106 from "module_14106" /* 14106 */;
+import InviteErrorUtils from "InviteErrorUtils" /* 15085 */;
+import _modDef15086 from "module_15086" /* 15086 */;
+import getHeaderTextForInvite from "getHeaderTextForInvite" /* 15559 */;
+import GuildRecord from "GuildRecord" /* 5173 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import InviteStore from "InviteStore" /* 6052 */;
+import RelationshipStore from "RelationshipStore" /* 5248 */;
+import UserStore from "UserStore" /* 1388 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -70,7 +70,7 @@ export function createExpiredGuildInvite(author, arg1, theme) {
     tmp6 = require;
   }
   obj.headerText = str.toUpperCase();
-  obj.titleColor = tmp6(9096).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
+  obj.titleColor = tmp6(9163).processColorOrThrow(nativeDefault.unsafe_rawColors.RED_400);
   if (arg1) {
     const intl4 = tmp6(1113).intl;
     let stringResult = intl4.string(tmp6(1113).t["F/OLvL"]);
@@ -93,11 +93,11 @@ export function createExpiredGuildInvite(author, arg1, theme) {
   obj.subtitle = stringResult;
   const intl5 = tmp6(1113).intl;
   obj.titleText = intl5.string(tmp6(1113).t["Jhx/ud"]);
-  const tmp6Result = tmp6(9096);
+  const tmp6Result = tmp6(9163);
   if (tmp6Result2.isThemeDark(theme)) {
-    let tmpResult2 = _modDef13998;
+    let tmpResult2 = _modDef14105;
   } else {
-    tmpResult2 = _modDef13999;
+    tmpResult2 = _modDef14106;
   }
   obj.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
   ({ thumbnailBackgroundColor: obj.thumbnailBackgroundColor, subtitleColor: obj.subtitleColor } = tmp3.colors);
@@ -150,7 +150,7 @@ export function createDisabledGuildInvite(invite, theme) {
   obj2.helpCenterArticleURL = HelpdeskUtilsDefault.getArticleURL(constants.INVITE_DISABLED);
   obj2.guildIcon = tmp11;
   const tmpResult = HelpdeskUtilsDefault;
-  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14972);
+  obj2.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15086);
   let tmp17;
   if (null == tmp11) {
     let tmp18;
@@ -208,9 +208,9 @@ export function createErroredGuildInvite(code, arg1, theme) {
   obj3.titleText = title;
   const tmp5Result = RowGeneratorStyleSheet;
   if (tmp5Result2.isThemeDark(theme)) {
-    let tmpResult = _modDef13998;
+    let tmpResult = _modDef14105;
   } else {
-    tmpResult = _modDef13999;
+    tmpResult = _modDef14106;
   }
   obj3.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   ({ thumbnailBackgroundColor: obj2.thumbnailBackgroundColor, subtitleColor: obj2.subtitleColor } = colors);

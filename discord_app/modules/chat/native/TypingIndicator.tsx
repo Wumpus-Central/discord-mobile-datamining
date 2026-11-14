@@ -1,21 +1,21 @@
-// === Module 14462: TypingIndicator ===
+// === Module 14574: TypingIndicator ===
 
-// Module 14462 (TypingIndicator)
+// Module 14574 (TypingIndicator)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import native from "native" /* 5314 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import useTypingTextDefault from "useTypingText" /* 14466 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14467 */;
-import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 14468 */;
-import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 14469 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import native from "native" /* 5377 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
+import useTypingTextDefault from "useTypingText" /* 14578 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 14579 */;
+import CustomTypingIndicatorAnalytics from "CustomTypingIndicatorAnalytics" /* 14580 */;
+import openCustomTypingIndicatorAnnounceActionSheet from "openCustomTypingIndicatorAnnounceActionSheet" /* 14581 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5869 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6907 */;
-import TypingStore from "TypingStore" /* 14463 */;
-import UserStore from "UserStore" /* 1385 */;
+import DevSettingsStore from "DevSettingsStore" /* 5932 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 6970 */;
+import TypingStore from "TypingStore" /* 14575 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function TypingIndicatorInner(channel) {
@@ -93,7 +93,7 @@ function TypingIndicatorInner(channel) {
     }
   }, items3);
   const tmpResult = require("initialize");
-  analyticsLocations = useAnalyticsLocationsDefault(tmp5(7871).CHAT_TYPING_INDICATOR).analyticsLocations;
+  analyticsLocations = useAnalyticsLocationsDefault(tmp5(7937).CHAT_TYPING_INDICATOR).analyticsLocations;
   const items4 = [stateFromStoresObject, style_owner_user_id, , , ];
   ({ id: arr5[2], type: arr5[3] } = channel);
   items4[4] = analyticsLocations;
@@ -114,15 +114,15 @@ function TypingIndicatorInner(channel) {
     const result = openCustomTypingIndicatorAnnounceActionSheet.openCustomTypingIndicatorAnnounceActionSheet(analyticsLocations);
   }, items4);
   const tmp5Result = useAnalyticsLocationsDefault;
-  sharedValue = require("module_1652").useSharedValue(undefined);
+  sharedValue = require("module_1655").useSharedValue(undefined);
   const items5 = [sharedValue];
   const callback1 = noop.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout);
   }, items5);
-  const tmpResult6 = require("module_1652");
+  const tmpResult6 = require("module_1655");
   const tmp16 = closure_15(require("useToken").useToken(nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING));
   const tmpResult7 = require("useToken");
-  sharedValue1 = require("module_1652").useSharedValue(0);
+  sharedValue1 = require("module_1655").useSharedValue(0);
   const items6 = [cleanUp, transitionState, sharedValue1];
   const effect1 = noop.useEffect(() => {
     if (c1 === native.TransitionStates.YEETED) {
@@ -130,7 +130,7 @@ function TypingIndicatorInner(channel) {
       _undefined3();
     }
   }, items6);
-  const tmpResult8 = require("module_1652");
+  const tmpResult8 = require("module_1655");
   const items7 = [closure_16, sharedValue];
   _require = undefined;
   [tmp19, tmp20] = items7;
@@ -176,8 +176,8 @@ function TypingIndicatorInner(channel) {
   TypingIndicatorTsx2.__closure = items10;
   TypingIndicatorTsx2.__workletHash = 3866076667250;
   TypingIndicatorTsx2.__initData = tmp21;
-  const animatedReaction = require("module_1652").useAnimatedReaction(TypingIndicatorTsx1, TypingIndicatorTsx2);
-  const tmpResult9 = require("module_1652");
+  const animatedReaction = require("module_1655").useAnimatedReaction(TypingIndicatorTsx1, TypingIndicatorTsx2);
+  const tmpResult9 = require("module_1655");
   const items11 = [closure_18, sharedValue, sharedValue1, transitionState, require("native").TransitionStates];
   _require = undefined;
   importDefault = undefined;
@@ -212,7 +212,7 @@ function TypingIndicatorInner(channel) {
   TypingIndicatorTsx3.__closure = items12;
   TypingIndicatorTsx3.__workletHash = 15288723177178;
   TypingIndicatorTsx3.__initData = tmp26;
-  const animatedStyle = require("module_1652").useAnimatedStyle(TypingIndicatorTsx3);
+  const animatedStyle = require("module_1655").useAnimatedStyle(TypingIndicatorTsx3);
   let obj4 = { style: null, onLayout: callback1, children: null };
   const items13 = [tmp16.typingWrapper, animatedStyle];
   obj4.style = items13;
@@ -226,8 +226,8 @@ function TypingIndicatorInner(channel) {
       tmp39 = callback;
     }
     obj7.onPress = tmp39;
-    let tmp33Result = closure_12(tmp5(14479), obj7);
-    const tmp5Result2 = tmp5(14479);
+    let tmp33Result = closure_12(tmp5(14591), obj7);
+    const tmp5Result2 = tmp5(14591);
   } else {
     let tmp32Result3 = null;
     if (null != tmp6Result) {
@@ -236,7 +236,7 @@ function TypingIndicatorInner(channel) {
     const obj8 = { children: null };
     const items14 = [tmp32Result3, ];
     const obj9 = { style: tmp16.text, lineClamp: 1, maxFontSizeMultiplier: 2, variant: "body-xs/medium", color: "interactive-text-default", includeFontPadding: true, ellipsizeMode: "tail", children: tmp6Result };
-    items14[1] = closure_12(tmp(5866).Text, obj9);
+    items14[1] = closure_12(tmp(5929).Text, obj9);
     obj8.children = items14;
     tmp33Result = closure_14(closure_13, obj8);
   }
@@ -245,12 +245,12 @@ function TypingIndicatorInner(channel) {
   let tmp32Result4 = null;
   if (channel.rateLimitPerUser > 0) {
     const obj10 = { channel, hasTypingText: null != tmp6Result, slowmodeType: analyticsLocations.SendMessage };
-    tmp32Result4 = closure_12(tmp5(14483), obj10);
+    tmp32Result4 = closure_12(tmp5(14595), obj10);
   }
   items15[1] = tmp32Result4;
   obj5.children = items15;
   obj4.children = closure_14(stateFromStores, obj5);
-  return closure_12(_modDef1652.View, obj4);
+  return closure_12(_modDef1655.View, obj4);
 }
 function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   const obj = {};
@@ -260,12 +260,12 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return application_id(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(11799).useChatShowingAutoComplete;
-const SlowmodeType = fn(8725).SlowmodeType;
+let closure_5 = fn(11865).useChatShowingAutoComplete;
+const SlowmodeType = fn(8792).SlowmodeType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { typingWrapper: { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 }, wrapperHoriz: { justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, horiz: null, text: null };
   const obj2 = { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 };

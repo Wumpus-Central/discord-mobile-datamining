@@ -1,14 +1,14 @@
-// === Module 18416: SettingsSecureFramesScreen ===
+// === Module 18541: SettingsSecureFramesScreen ===
 
-// Module 18416 (SettingsSecureFramesScreen)
+// Module 18541 (SettingsSecureFramesScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import UserActionCreators from "UserActionCreators" /* 7286 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 10558 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import UserActionCreators from "UserActionCreators" /* 7350 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 10627 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function UserListItem(userId) {
@@ -105,7 +105,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, header: null, list: null };
 let obj3 = { flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj2.header = { marginTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_8 };

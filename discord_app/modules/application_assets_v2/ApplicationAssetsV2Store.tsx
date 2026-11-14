@@ -1,8 +1,9 @@
-// === Module 12170: ApplicationAssetsV2Store ===
+// === Module 12265: ApplicationAssetsV2Store ===
 
-// Module 12170 (ApplicationAssetsV2Store)
+// Module 12265 (ApplicationAssetsV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 12266 */;
 
 const require = fn;
 function handleFeaturedOrDeveloperFetchSuccess(configs) {
@@ -59,7 +60,58 @@ const map = new Map();
 const Store = initializeDefault.Store;
 class ApplicationAssetsV2Store extends Store {
 }
-ApplicationAssetsV2Store.prototype["getAssets"] = function getAssets(arg0) {
+const prototype = ApplicationAssetsV2Store.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(ApplicationWidgetConfigStore);
+  const values = Object.values(ApplicationWidgetConfigStore.getAllConfigsByApplication());
+  _require = false;
+  const flatResult = values.flat();
+  const entries = Object.entries(require("apply").groupBy(flatResult, (application_id) => application_id.application_id));
+  const mapped = entries.map((item) => {
+    [tmp, obj] = item;
+    items = [
+      tmp,
+      obj.flatMap((resolved_assets) => {
+        resolved_assets = resolved_assets.resolved_assets;
+        if (resolved_assets == null) {
+          resolved_assets = [];
+        }
+        return resolved_assets;
+      }).filter((updated_at) => {
+        value = map.get(closure_1_0);
+        let tmp2;
+        if (value != null) {
+          tmp2 = value[updated_at.key];
+        }
+        let tmp3 = null == tmp2;
+        if (!tmp3) {
+          const _Date = Date;
+          const date = new Date(updated_at.updated_at);
+          const _Date2 = Date;
+          const date1 = new Date(tmp2.updated_at);
+          tmp3 = date > date1;
+        }
+        return tmp3;
+      })
+    ];
+    return items;
+  });
+  const found = mapped.filter((item) => {
+    [, arr] = item;
+    return arr.length > 0;
+  });
+  const item = found.forEach((item) => {
+    [tmp, arr] = item;
+    c0 = true;
+    const merged = Object.assign(map.get(tmp));
+    const merged1 = Object.assign(Object.fromEntries(arr.map((key) => {
+      items = [key.key, key];
+      return items;
+    })));
+    return map.set(tmp, {});
+  });
+};
+prototype["getAssets"] = function getAssets(arg0) {
   return map.get(arg0);
 };
 ApplicationAssetsV2Store.displayName = "ApplicationAssetsV2Store";

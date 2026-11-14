@@ -1,12 +1,12 @@
-// === Module 10567: useIsPersistentSecureFramesFingerprint ===
+// === Module 10636: useIsPersistentSecureFramesFingerprint ===
 
-// Module 10567 (useIsPersistentSecureFramesFingerprint)
+// Module 10636 (useIsPersistentSecureFramesFingerprint)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_5 = fn(10559).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_5 = fn(10628).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsPersistentSecureFramesFingerprint.tsx");
 

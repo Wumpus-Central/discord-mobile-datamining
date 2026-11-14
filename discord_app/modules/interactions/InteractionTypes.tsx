@@ -1,6 +1,6 @@
-// === Module 6319: interactions/InteractionTypes ===
+// === Module 6382: interactions/InteractionTypes ===
 
-// Module 6319 (interactions/InteractionTypes)
+// Module 6382 (interactions/InteractionTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/interactions/InteractionTypes.tsx");

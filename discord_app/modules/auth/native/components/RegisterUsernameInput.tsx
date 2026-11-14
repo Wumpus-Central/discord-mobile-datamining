@@ -1,13 +1,13 @@
-// === Module 18546: RegisterUsernameInput ===
+// === Module 18675: RegisterUsernameInput ===
 
-// Module 18546 (RegisterUsernameInput)
+// Module 18675 (RegisterUsernameInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import Stack_Stack from "Stack/Stack" /* 6274 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7557 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16370 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 17108 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import Stack_Stack from "Stack/Stack" /* 6337 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7623 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16493 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 17231 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -67,21 +67,21 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(18519);
+const RegistrationUIStore = fn(18648);
 ({ setRegistrationErrors: metroImportDefault, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_12 = createStyles.createStyles({ status: { width: "90%" }, inputHint: { width: "100%" } });
 let obj2 = { entering: null, exiting: null };
-const FadeIn = fn(1652).FadeIn;
+const FadeIn = fn(1655).FadeIn;
 obj2.entering = FadeIn.duration(300);
-const FadeOut = fn(1652).FadeOut;
+const FadeOut = fn(1655).FadeOut;
 obj2.exiting = FadeOut.duration(300);
 let obj3 = { layout: null };
-const LinearTransition = fn(1652).LinearTransition;
-const Easing = fn(1652).Easing;
-obj3.layout = LinearTransition.easing(Easing.inOut(fn(1652).Easing.quad)).duration(300);
+const LinearTransition = fn(1655).LinearTransition;
+const Easing = fn(1655).Easing;
+obj3.layout = LinearTransition.easing(Easing.inOut(fn(1655).Easing.quad)).duration(300);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
@@ -125,8 +125,8 @@ export function RegisterUsernameInput(setUsername) {
   obj3.accessibilityHint = intl2.string(setUsername(1113).t["47dcUZ"]);
   obj3.onChange = callback;
   const tmp14 = setUsername;
-  obj3.secureTextEntry = setUsername(1377).isAndroid();
-  const obj4 = setUsername(1377);
+  obj3.secureTextEntry = setUsername(1380).isAndroid();
+  const obj4 = setUsername(1380);
   let str = "default";
   if (obj5.isAndroid()) {
     str = "visible-password";
@@ -141,13 +141,13 @@ export function RegisterUsernameInput(setUsername) {
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(17108).NameValidationState.ERROR) {
+  if (type === tmp14(17231).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };
   obj3.status = str2;
   obj3.submitBehavior = submitBehavior;
-  const items3 = [closure_9(setUsername(7553).TextInput, obj3), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
+  const items3 = [closure_9(setUsername(7619).TextInput, obj3), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
   obj6.children = items3;
   return closure_10(closure_11, obj6);
 }

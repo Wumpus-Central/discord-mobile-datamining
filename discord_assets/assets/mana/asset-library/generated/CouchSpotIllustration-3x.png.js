@@ -1,6 +1,6 @@
-// === Module 12698: ? ===
+// === Module 12794: ? ===
 
-// Module 12698
+// Module 12794
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CouchSpotIllustration-3x.png.js");

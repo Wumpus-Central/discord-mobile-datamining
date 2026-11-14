@@ -1,16 +1,16 @@
-// === Module 11939: useChannelSafeAreaHeightSharedValue ===
+// === Module 12007: useChannelSafeAreaHeightSharedValue ===
 
-// Module 11939 (useChannelSafeAreaHeightSharedValue)
+// Module 12007 (useChannelSafeAreaHeightSharedValue)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import useToken from "useToken" /* 5839 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import useChannelDockHeightDefault from "useChannelDockHeight" /* 11940 */;
-import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 11944 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11945 */;
-import useSafeAreaBottomKeyboardInfoControllerDefault from "useSafeAreaBottomKeyboardInfoController" /* 11947 */;
-import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 11948 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 11950 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useToken from "useToken" /* 5902 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import VoicePanelDockLayout from "VoicePanelDockLayout" /* 12008 */;
+import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 12011 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 12012 */;
+import useSafeAreaBottomKeyboardInfoControllerDefault from "useSafeAreaBottomKeyboardInfoController" /* 12014 */;
+import useKeyboardActionSheetHeightDefault from "useKeyboardActionSheetHeight" /* 12015 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 12017 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -29,17 +29,18 @@ export default function useChannelSafeAreaHeightSharedValue() {
   const keyboardWillOpenSharedValue = require("useKeyboardType").useKeyboardWillOpenSharedValue();
   const minimum = useKeyboardActionSheetHeightDefault().minimum;
   const obj2 = require("useKeyboardType");
-  const sharedValue = require("module_1652").useSharedValue(minimum);
+  const sharedValue = require("module_1655").useSharedValue(minimum);
   let result = sharedValue.set(minimum);
-  const obj3 = require("module_1652");
+  const obj3 = require("module_1655");
   const token = require("useToken").useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM);
-  const tmp7 = useChannelDockHeightDefault();
-  _require = tmp7;
   const obj5 = require("useToken");
-  const sharedValue1 = require("module_1652").useSharedValue(tmp7);
-  const obj6 = require("module_1652");
+  const channelDockHeight = require("VoicePanelDockLayout").useChannelDockHeight();
+  _require = channelDockHeight;
+  const obj6 = require("VoicePanelDockLayout");
+  const sharedValue1 = require("module_1655").useSharedValue(channelDockHeight);
+  const obj7 = require("module_1655");
   const isChannelFullyOpen = require("useIsChannelFullyOpen").getIsChannelFullyOpen(noop.useContext(MainTabsNavigatorPanelContextDefault));
-  items = [tmp7, sharedValue1, isChannelFullyOpen];
+  items = [channelDockHeight, sharedValue1, isChannelFullyOpen];
   const effect = noop.useEffect(() => {
     if (c2) {
       let withSpringResult = spring_spring.withSpring(c0, VoicePanelSheetMorph.DOCK_SPACE_SPRING_CONFIG);
@@ -48,7 +49,7 @@ export default function useChannelSafeAreaHeightSharedValue() {
     }
     const result = _undefined2.set(withSpringResult);
   }, items);
-  const obj7 = require("useIsChannelFullyOpen");
+  const obj8 = require("useIsChannelFullyOpen");
   const items1 = [c4, sharedValue1, token, keyboardOpenOrOpening, keyboardWillOpenSharedValue, keyboardOpenedHeight, tmp, keyboardTypeSharedValue, require("KeyboardTypes").KeyboardTypes, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -84,9 +85,9 @@ export default function useChannelSafeAreaHeightSharedValue() {
   useChannelSafeAreaHeightSharedValueAndroidTsx1.__closure = items2;
   useChannelSafeAreaHeightSharedValueAndroidTsx1.__workletHash = 15573495853475;
   useChannelSafeAreaHeightSharedValueAndroidTsx1.__initData = tmp11;
-  return require("module_1652").useDerivedValue(useChannelSafeAreaHeightSharedValueAndroidTsx1);
+  return require("module_1655").useDerivedValue(useChannelSafeAreaHeightSharedValueAndroidTsx1);
 };
 export function useChannelSafeAreaRestingHeight() {
   const token = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM);
-  return Math.max(useSafeAreaInsetsDefault().bottom, token, useChannelDockHeightDefault());
+  return Math.max(useSafeAreaInsetsDefault().bottom, token, VoicePanelDockLayout.useChannelDockHeight());
 }

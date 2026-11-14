@@ -1,9 +1,9 @@
-// === Module 11730: useCollectiblesExternalGatewayFacet ===
+// === Module 11796: useCollectiblesExternalGatewayFacet ===
 
-// Module 11730 (useCollectiblesExternalGatewayFacet)
+// Module 11796 (useCollectiblesExternalGatewayFacet)
 import _mod19 from "module_19" /* 19 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10364 */;
-import UserStore from "UserStore" /* 1385 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10433 */;
+import UserStore from "UserStore" /* 1388 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

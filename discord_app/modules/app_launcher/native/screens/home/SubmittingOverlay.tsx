@@ -1,16 +1,16 @@
-// === Module 13287: SubmittingOverlay ===
+// === Module 13392: SubmittingOverlay ===
 
-// Module 13287 (SubmittingOverlay)
+// Module 13392 (SubmittingOverlay)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import springPresets from "springPresets" /* 5877 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5886 */;
-import createStyles from "createStyles" /* 5243 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import springPresets from "springPresets" /* 5940 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5949 */;
+import createStyles from "createStyles" /* 5306 */;
 import size from "module_2" /* 2 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 const jsx = jsxProd.jsx;
 const obj = { ellipsis: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" } };
@@ -41,7 +41,7 @@ export function SubmittingOverlay(submitting) {
   SubmittingOverlayTsx1.__closure = items1;
   SubmittingOverlayTsx1.__workletHash = 16951680167717;
   SubmittingOverlayTsx1.__initData = tmp4;
-  const animatedStyle = _mod1652.useAnimatedStyle(SubmittingOverlayTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(SubmittingOverlayTsx1);
   const obj2 = { style: null, children: null };
   const items2 = [submitting.style, tmp.ellipsis, animatedStyle];
   obj2.style = items2;
@@ -49,5 +49,5 @@ export function SubmittingOverlay(submitting) {
     submitting = jsx(ButtonEllipsis.Ellipsis, { variant: "active", size: "md" });
   }
   obj2.children = submitting;
-  return jsx(_modDef1652.View, { style: null, children: null });
+  return jsx(_modDef1655.View, { style: null, children: null });
 }

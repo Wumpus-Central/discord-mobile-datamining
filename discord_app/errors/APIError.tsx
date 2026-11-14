@@ -1,9 +1,9 @@
-// === Module 6695: APIError ===
+// === Module 6758: APIError ===
 
-// Module 6695 (APIError)
+// Module 6758 (APIError)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import size from "module_2" /* 2 */;
 
 const Links = Constants.Links;

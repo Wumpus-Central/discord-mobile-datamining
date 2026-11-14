@@ -1,15 +1,15 @@
-// === Module 13677: useConjureSharedProjectAppChannel ===
+// === Module 13782: useConjureSharedProjectAppChannel ===
 
-// Module 13677 (useConjureSharedProjectAppChannel)
-import findLoadedAppChannelDefault from "findLoadedAppChannel" /* 12349 */;
+// Module 13782 (useConjureSharedProjectAppChannel)
+import findLoadedAppChannelDefault from "findLoadedAppChannel" /* 12444 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelLoader = fn(5092).ChannelLoader;
+const ChannelLoader = fn(5155).ChannelLoader;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/useConjureSharedProjectAppChannel.tsx");
 

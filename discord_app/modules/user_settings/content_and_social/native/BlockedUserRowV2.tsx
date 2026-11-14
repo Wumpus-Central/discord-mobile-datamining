@@ -1,16 +1,16 @@
-// === Module 17209: BlockedUserRowV2 ===
+// === Module 17332: BlockedUserRowV2 ===
 
-// Module 17209 (BlockedUserRowV2)
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8072 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
+// Module 17332 (BlockedUserRowV2)
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 8137 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = fn;
 function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7852)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7918)().analyticsLocations;
   const intl = userRecord(1113).intl;
   let username = userRecord.globalName;
   if (username == null) {
@@ -38,7 +38,7 @@ function BlockedUserRow(userRecord) {
   };
   items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
   obj3.accessibilityActions = items;
-  obj.label = jsx(userRecord(17210).RestrictedUserRowLabel, {
+  obj.label = jsx(userRecord(17333).RestrictedUserRowLabel, {
     userRecord,
     accessibilityActions: null,
     onAccessibilityAction: function handleAccessibilityAction(nativeEvent) {
@@ -59,8 +59,8 @@ function BlockedUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj.trailing = jsx(userRecord(5873).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
-  return jsx(userRecord(7379).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
+  obj.trailing = jsx(userRecord(5936).Button, { size: "sm", variant: "secondary", text: null, accessibilityLabel: null, onPress: null });
+  return jsx(userRecord(7443).TableRow, { accessible: false, icon: null, label: null, onPress: null, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

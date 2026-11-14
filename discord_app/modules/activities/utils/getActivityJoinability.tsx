@@ -1,17 +1,17 @@
-// === Module 15637: getActivityJoinability ===
+// === Module 15751: getActivityJoinability ===
 
-// Module 15637 (getActivityJoinability)
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5914 */;
-import hasFlagDefault from "hasFlag" /* 8404 */;
-import getPartySize from "getPartySize" /* 12593 */;
-import isPartyFull from "isPartyFull" /* 12595 */;
-import getIsInParty from "getIsInParty" /* 12596 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12600 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 12601 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 12638 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 12748 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 15481 */;
+// Module 15751 (getActivityJoinability)
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import hasFlagDefault from "hasFlag" /* 8470 */;
+import getPartySize from "getPartySize" /* 12689 */;
+import isPartyFull from "isPartyFull" /* 12691 */;
+import getIsInParty from "getIsInParty" /* 12692 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 12696 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 12697 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 12734 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 12844 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 15595 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

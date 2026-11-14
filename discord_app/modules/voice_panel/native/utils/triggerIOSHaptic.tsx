@@ -1,8 +1,8 @@
-// === Module 19791: utils/triggerIOSHaptic ===
+// === Module 19979: utils/triggerIOSHaptic ===
 
-// Module 19791 (utils/triggerIOSHaptic)
-import HapticUtils from "HapticUtils" /* 5491 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11919 */;
+// Module 19979 (utils/triggerIOSHaptic)
+import HapticUtils from "HapticUtils" /* 5554 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11985 */;
 import size from "module_2" /* 2 */;
 
 const IS_IOS = VoicePanelConstants.IS_IOS;

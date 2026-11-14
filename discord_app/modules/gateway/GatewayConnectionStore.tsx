@@ -1,28 +1,28 @@
-// === Module 6737: GatewayConnectionStore ===
+// === Module 6800: GatewayConnectionStore ===
 
-// Module 6737 (GatewayConnectionStore)
+// Module 6800 (GatewayConnectionStore)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6984 */;
-import GatewaySocketSingleton from "GatewaySocketSingleton" /* 15996 */;
-import ConnectionStateDefault from "ConnectionState" /* 16010 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 16031 */;
-import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 16039 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 7047 */;
+import GatewaySocketSingleton from "GatewaySocketSingleton" /* 16117 */;
+import ConnectionStateDefault from "ConnectionState" /* 16131 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 16152 */;
+import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 16160 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PassTheControllerStore from "PassTheControllerStore" /* 6738 */;
+import PassTheControllerStore from "PassTheControllerStore" /* 6801 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6960 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
-import RTCRegionStore from "RTCRegionStore" /* 6107 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 7252 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6739 */;
+import CallStore from "CallStore" /* 7023 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import RTCRegionStore from "RTCRegionStore" /* 6170 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6802 */;
 
 require = fn;
 let closure_26 = async function _handleConnectionOpen(arg0) {
@@ -186,7 +186,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1072);
 ({ RTCConnectionStates: closure_16, AppStates: closure_17 } = Constants);
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
-fn(15996).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(16117).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_20 = new LoggerDefault("ConnectionStore");
 let closure_21 = 0;
 let c22 = null;
@@ -516,13 +516,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((item) => closure_0(6745).decodeStreamKey(item).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((item) => closure_0(6808).decodeStreamKey(item).ownerId === id.getId());
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(15996).socket;
+          const socket = closure_0(16117).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(15996).socket;
+            const socket2 = closure_0(16117).socket;
             socket2.streamDelete(item);
           }
         });

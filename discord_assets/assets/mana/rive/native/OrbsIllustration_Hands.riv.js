@@ -1,6 +1,6 @@
-// === Module 5409: ? ===
+// === Module 5472: ? ===
 
-// Module 5409
+// Module 5472
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/OrbsIllustration_Hands.riv.js");

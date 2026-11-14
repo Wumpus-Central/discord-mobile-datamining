@@ -1,11 +1,11 @@
-// === Module 9974: DeviceOrientation ===
+// === Module 10041: DeviceOrientation ===
 
-// Module 9974 (DeviceOrientation)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import DeviceUtils from "DeviceUtils" /* 5200 */;
+// Module 10041 (DeviceOrientation)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import DeviceUtils from "DeviceUtils" /* 5263 */;
 import noop from "module_19" /* 19 */;
-import get_ActivityIndicator_mod from "module_9975" /* 9975 */;
+import get_ActivityIndicator_mod from "module_10042" /* 10042 */;
 
 require = fn;
 function handleOrientationChange(initialOrientation) {

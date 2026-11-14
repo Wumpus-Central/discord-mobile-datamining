@@ -1,8 +1,8 @@
-// === Module 9430: ProfileEffectLayer ===
+// === Module 9499: ProfileEffectLayer ===
 
-// Module 9430 (ProfileEffectLayer)
-import ProfileEffectUtils from "ProfileEffectUtils" /* 9427 */;
-import APNGPlayer from "APNGPlayer" /* 9431 */;
+// Module 9499 (ProfileEffectLayer)
+import FastImageDefault from "FastImage" /* 6020 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 9496 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,23 +11,22 @@ const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx");
 
-export default noop.memo(function ProfileEffectLayerAndroid(paused) {
-  ({ layerConfig, animate } = paused);
-  paused = paused.paused;
-  const width = paused.width;
-  ({ accessibilityLabel, onLoad } = paused);
-  const ref = noop.useRef(null);
-  const aPNGPlayerControls = APNGPlayer.useAPNGPlayerControls(ref);
-  items = [animate, paused, aPNGPlayerControls];
-  const effect = noop.useEffect(() => {
-    if (animate) {
-      if (!paused) {
-        aPNGPlayerControls.play();
-      }
+export default noop.memo(function ProfileEffectLayerAndroid(layerConfig) {
+  layerConfig = layerConfig.layerConfig;
+  ({ animate, width, onLoad } = layerConfig);
+  items = [layerConfig.src, onLoad];
+  ({ paused, accessibilityLabel } = layerConfig);
+  const callback = noop.useCallback(() => {
+    if (onLoad != null) {
+      tmp(layerConfig.src);
     }
-    aPNGPlayerControls.pause();
   }, items);
-  const obj2 = { ref, url: layerConfig.src, autoplay: false, style: null, ariaLabel: null, onLoad: null };
+  const obj = { source: { uri: layerConfig.src }, paused: null, resizeMode: "contain", fadeDuration: 0, style: null, accessibilityLabel: null, onLoad: null };
+  let tmp5 = !animate;
+  if (animate) {
+    tmp5 = true === paused;
+  }
+  obj.paused = tmp5;
   const items1 = [StyleSheet.absoluteFill, ];
   const size = { position: "absolute", width, height: null, opacity: null };
   size.height = ProfileEffectUtils.calculateProfileEffectHeight(layerConfig, width);
@@ -37,8 +36,8 @@ export default noop.memo(function ProfileEffectLayerAndroid(paused) {
   }
   size.opacity = num;
   items1[1] = size;
-  obj2.style = items1;
-  obj2.ariaLabel = accessibilityLabel;
-  obj2.onLoad = onLoad;
-  return jsx(APNGPlayer.APNGPlayer, { ref, url: layerConfig.src, autoplay: false, style: null, ariaLabel: null, onLoad: null });
+  obj.style = items1;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.onLoad = callback;
+  return <tmp4 source={{ uri: layerConfig.src }} paused={null} resizeMode="contain" fadeDuration={0} style={null} accessibilityLabel={null} onLoad={null} />;
 });

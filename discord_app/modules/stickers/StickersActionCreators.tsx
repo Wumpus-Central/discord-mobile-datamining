@@ -1,16 +1,16 @@
-// === Module 11291: StickersActionCreators ===
+// === Module 11358: StickersActionCreators ===
 
-// Module 11291 (StickersActionCreators)
+// Module 11358 (StickersActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
-import InlineUploaderDefault from "InlineUploader" /* 7735 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import InlineUploaderDefault from "InlineUploader" /* 7801 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
-import LocaleStore from "LocaleStore" /* 2186 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6894 */;
-import UserStore from "UserStore" /* 1385 */;
-import StickersStore from "StickersStore" /* 6947 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6957 */;
+import UserStore from "UserStore" /* 1388 */;
+import StickersStore from "StickersStore" /* 7010 */;
 
 const require = globalThis.__r;
 
@@ -65,7 +65,7 @@ let closure_13 = async function _fetchStickerPacks() {
           let sticker_packs;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp6) {

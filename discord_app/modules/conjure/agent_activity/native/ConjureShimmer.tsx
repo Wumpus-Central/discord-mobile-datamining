@@ -1,17 +1,17 @@
-// === Module 13508: ConjureShimmer ===
+// === Module 13611: ConjureShimmer ===
 
-// Module 13508 (ConjureShimmer)
+// Module 13611 (ConjureShimmer)
 import _modDef671 from "module_671" /* 671 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import LinearGradientDefault from "LinearGradient" /* 5830 */;
-import _modDef7467 from "module_7467" /* 7467 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import _modDef7533 from "module_7533" /* 7533 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -21,7 +21,7 @@ const jsxProd = fn(21);
 const locations = [0, 0.4, 0.5, 0.6, 1];
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_13 = createStyles.createStyles({ root: { position: "relative" }, band: { position: "absolute", top: 0, bottom: 0 }, fill: { flex: 1 } });
 let closure_14 = { code: "(function ConjureShimmerTsx1(){let[bandWidth,progress,width]=this.__closure;return{transform:[{translateX:-bandWidth+progress.get()*(bandWidth+width)}]};})" };
 const size = fn(2);
@@ -43,7 +43,7 @@ export default function ConjureShimmer(epoch) {
   const tmp2 = _require;
   [tmp6, c1] = live(noop.useState(0), 2);
   const tmp5 = live(noop.useState(0), 2);
-  const sharedValue = require("module_1652").useSharedValue(0);
+  const sharedValue = require("module_1655").useSharedValue(0);
   dependencyMap = sharedValue;
   if (live) {
     live = !stateFromStores;
@@ -55,12 +55,12 @@ export default function ConjureShimmer(epoch) {
   const effect = noop.useEffect(() => {
     if (live) {
       const result = _undefined2.set(0);
-      const obj2 = _mod1652;
-      const obj4 = { duration: 2000, easing: _mod1652.Easing.linear };
+      const obj2 = _mod1655;
+      const obj4 = { duration: 2000, easing: _mod1655.Easing.linear };
       const result1 = _undefined2.set(obj2.withRepeat(timing_timing.withTiming(1, obj4), -1, false));
       const fn = () => c0(c2[7]).cancelAnimation(_undefined2);
     } else {
-      _mod1652.cancelAnimation(_undefined2);
+      _mod1655.cancelAnimation(_undefined2);
       const result2 = _undefined2.set(0);
     }
     return fn;
@@ -77,7 +77,7 @@ export default function ConjureShimmer(epoch) {
     items[4] = cssResult;
     return items;
   }, items2);
-  let obj3 = require("module_1652");
+  let obj3 = require("module_1655");
   const items3 = [closure_14, result, sharedValue, tmp6];
   _require = undefined;
   importDefault = undefined;
@@ -99,7 +99,7 @@ export default function ConjureShimmer(epoch) {
   ConjureShimmerTsx1.__closure = items4;
   ConjureShimmerTsx1.__workletHash = 6512928925171;
   ConjureShimmerTsx1.__initData = tmp11;
-  const animatedStyle = tmp2(1652).useAnimatedStyle(ConjureShimmerTsx1);
+  const animatedStyle = tmp2(1655).useAnimatedStyle(ConjureShimmerTsx1);
   let obj4 = {
     style: tmp.root,
     onLayout: noop.useCallback((nativeEvent) => {
@@ -129,8 +129,8 @@ export default function ConjureShimmer(epoch) {
     obj8.style = items6;
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
     obj8.children = closure_8(LinearGradientDefault, obj10);
-    obj6.children = closure_8(_modDef1652.View, obj8);
-    obj5.children = closure_8(_modDef7467, obj6);
+    obj6.children = closure_8(_modDef1655.View, obj8);
+    obj5.children = closure_8(_modDef7533, obj6);
     tmp18 = closure_8(closure_6, obj5);
   }
   items5[1] = tmp18;

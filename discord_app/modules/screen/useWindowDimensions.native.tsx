@@ -1,8 +1,8 @@
-// === Module 1493: useWindowDimensions ===
+// === Module 1496: useWindowDimensions ===
 
-// Module 1493 (useWindowDimensions)
+// Module 1496 (useWindowDimensions)
 import noop from "module_19" /* 19 */;
-import DimensionsStore from "DimensionsStore" /* 1494 */;
+import DimensionsStore from "DimensionsStore" /* 1497 */;
 
 const require = fn;
 let closure_4 = { ignoreKeyboard: false };

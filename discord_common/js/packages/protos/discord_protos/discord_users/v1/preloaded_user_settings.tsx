@@ -3414,7 +3414,7 @@ class NotificationSettings$Type extends MessageType19 {
             return require("wrappers").BoolValue;
           }
     };
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , ];
     items[0] = obj;
     items[1] = {
       no: 2,
@@ -3589,17 +3589,25 @@ class NotificationSettings$Type extends MessageType19 {
             return require("wrappers").BoolValue;
           }
     };
-    obj1 = { no: 25, name: "notify_friends_on_come_online", kind: "message", T: null };
+    items[24] = {
+      no: 25,
+      name: "notify_friends_on_come_online",
+      kind: "message",
+      T() {
+            return require("wrappers").BoolValue;
+          }
+    };
+    obj1 = { no: 26, name: "notify_server_members_on_go_live", kind: "message", T: null };
     class T {
       constructor() {
         return closure_1_0(closure_1_1[4]).BoolValue;
       }
     }
     obj1.T = T;
-    items[24] = obj1;
-    items[25] = {
-      no: 26,
-      name: "notify_server_members_on_go_live",
+    items[25] = obj1;
+    items[26] = {
+      no: 27,
+      name: "notify_friends_on_custom_status_update",
       kind: "message",
       T() {
             return require("wrappers").BoolValue;
@@ -3778,6 +3786,12 @@ prototype19["internalBinaryWrite"] = function internalBinaryWrite(showInAppNotif
     const tagResult25 = tag.tag(26, _mod1197.WireType.LengthDelimited);
     const joined20 = BoolValue21.internalBinaryWrite(showInAppNotifications.notifyServerMembersOnGoLive, tag.tag(26, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult20 = BoolValue21.internalBinaryWrite(showInAppNotifications.notifyServerMembersOnGoLive, tag.tag(26, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
+  if (showInAppNotifications.notifyFriendsOnCustomStatusUpdate) {
+    const BoolValue22 = wrappers.BoolValue;
+    const tagResult26 = tag.tag(27, _mod1197.WireType.LengthDelimited);
+    const joined21 = BoolValue22.internalBinaryWrite(showInAppNotifications.notifyFriendsOnCustomStatusUpdate, tag.tag(27, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult21 = BoolValue22.internalBinaryWrite(showInAppNotifications.notifyFriendsOnCustomStatusUpdate, tag.tag(27, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

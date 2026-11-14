@@ -1,18 +1,18 @@
-// === Module 15539: SafetyToolsButton ===
+// === Module 15653: SafetyToolsButton ===
 
-// Module 15539 (SafetyToolsButton)
+// Module 15653 (SafetyToolsButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11971 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11972 */;
-import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 12208 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 12038 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 12039 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 12303 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { safetyToolsButton: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

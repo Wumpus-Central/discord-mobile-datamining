@@ -1,6 +1,6 @@
-// === Module 6171: perceptual_volume/PerceptualVolumeUtils ===
+// === Module 6234: perceptual_volume/PerceptualVolumeUtils ===
 
-// Module 6171 (perceptual_volume/PerceptualVolumeUtils)
+// Module 6234 (perceptual_volume/PerceptualVolumeUtils)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/perceptual_volume/PerceptualVolumeUtils.tsx");
@@ -24,15 +24,15 @@ export function perceptualToAmplitude(arg0) {
     return powResult * num;
   }
 }
-export function amplitudeToPerceptual(USER) {
+export function amplitudeToPerceptual(effectiveVolume) {
   let num = arg1;
   if (arg1 === undefined) {
     num = 100;
   }
-  if (0 === USER) {
+  if (0 === effectiveVolume) {
     return 0;
   } else {
-    const result = USER / num;
+    const result = effectiveVolume / num;
     if (result < 1) {
       const _Math2 = Math;
       let powResult = Math.pow(result, 0.35714285714285715);

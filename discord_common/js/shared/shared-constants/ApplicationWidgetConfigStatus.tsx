@@ -1,6 +1,6 @@
-// === Module 15690: ApplicationWidgetConfigStatus ===
+// === Module 15809: ApplicationWidgetConfigStatus ===
 
-// Module 15690 (ApplicationWidgetConfigStatus)
+// Module 15809 (ApplicationWidgetConfigStatus)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetConfigStatus.tsx");

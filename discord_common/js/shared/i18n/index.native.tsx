@@ -1,92 +1,92 @@
-// === Module 2025: ? ===
+// === Module 2028: ? ===
 
-// Module 2025
-import i18nDefault from "i18n" /* 2026 */;
+// Module 2028
+import i18nDefault from "i18n" /* 2029 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 let closure_2 = {
   bg() {
-    return require("module_2070");
-  },
-  cs() {
-    return require("module_2071");
-  },
-  da() {
-    return require("module_2072");
-  },
-  de() {
     return require("module_2073");
   },
-  el() {
+  cs() {
     return require("module_2074");
   },
-  () => require("module_2075"),
-  () => require("module_2076"),
-  () => require("module_2077"),
+  da() {
+    return require("module_2075");
+  },
+  de() {
+    return require("module_2076");
+  },
+  el() {
+    return require("module_2077");
+  },
   () => require("module_2078"),
+  () => require("module_2079"),
+  () => require("module_2080"),
+  () => require("module_2081"),
   fi() {
-    return require("module_2079");
-  },
-  fr() {
-    return require("module_2080");
-  },
-  hi() {
-    return require("module_2081");
-  },
-  hr() {
     return require("module_2082");
   },
-  hu() {
+  fr() {
     return require("module_2083");
   },
-  id() {
+  hi() {
     return require("module_2084");
   },
-  it() {
+  hr() {
     return require("module_2085");
   },
-  ja() {
+  hu() {
     return require("module_2086");
   },
-  ko() {
+  id() {
     return require("module_2087");
   },
-  lt() {
+  it() {
     return require("module_2088");
   },
-  nl() {
+  ja() {
     return require("module_2089");
   },
-  no() {
+  ko() {
     return require("module_2090");
   },
-  pl() {
+  lt() {
     return require("module_2091");
   },
-  () => require("module_2092"),
-  ro() {
+  nl() {
+    return require("module_2092");
+  },
+  no() {
     return require("module_2093");
   },
-  ru() {
+  pl() {
     return require("module_2094");
   },
   () => require("module_2095"),
-  th() {
+  ro() {
     return require("module_2096");
   },
-  tr() {
+  ru() {
     return require("module_2097");
   },
-  uk() {
-    return require("module_2098");
-  },
-  vi() {
+  () => require("module_2098"),
+  th() {
     return require("module_2099");
   },
-  () => require("module_2100"),
-  () => require("module_2101")
+  tr() {
+    return require("module_2100");
+  },
+  uk() {
+    return require("module_2101");
+  },
+  vi() {
+    return require("module_2102");
+  },
+  () => require("module_2103"),
+  () => require("module_2104")
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/i18n/index.native.tsx");
@@ -103,6 +103,6 @@ export default new i18nDefault({
     }
   },
   getLanguages() {
-    return require("module_2102");
+    return require("module_2105");
   }
 });

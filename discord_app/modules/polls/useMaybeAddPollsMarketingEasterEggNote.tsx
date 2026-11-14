@@ -1,9 +1,9 @@
-// === Module 11237: useMaybeAddPollsMarketingEasterEggNote ===
+// === Module 11304: useMaybeAddPollsMarketingEasterEggNote ===
 
-// Module 11237 (useMaybeAddPollsMarketingEasterEggNote)
+// Module 11304 (useMaybeAddPollsMarketingEasterEggNote)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import LocaleStore from "LocaleStore" /* 2186 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
 
 require = fn;
 const size = fn(2);

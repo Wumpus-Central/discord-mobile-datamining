@@ -1,12 +1,12 @@
-// === Module 12573: useEmojisForReactionRow ===
+// === Module 12669: useEmojisForReactionRow ===
 
-// Module 12573 (useEmojisForReactionRow)
+// Module 12669 (useEmojisForReactionRow)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiIntention = fn(1388).EmojiIntention;
+const EmojiIntention = fn(1391).EmojiIntention;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 5116: DualReadUtils ===
+// === Module 5179: DualReadUtils ===
 
-// Module 5116 (DualReadUtils)
+// Module 5179 (DualReadUtils)
 import LastFewActionsAll from "LastFewActions" /* 509 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import Constants from "Constants" /* 1072 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import SetUtils from "SetUtils" /* 5109 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import SetUtils from "SetUtils" /* 5172 */;
 import size from "module_2" /* 2 */;
 
 function deepEqualImpl(getTime, getTime2, map, arg3) {

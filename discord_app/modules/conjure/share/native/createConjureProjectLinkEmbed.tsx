@@ -1,14 +1,14 @@
-// === Module 15470: createConjureProjectLinkEmbed ===
+// === Module 15584: createConjureProjectLinkEmbed ===
 
-// Module 15470 (createConjureProjectLinkEmbed)
+// Module 15584 (createConjureProjectLinkEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4079 from "module_4079" /* 4079 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9103 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 11825 */;
-import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 12346 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 14439 */;
-import createStyles from "createStyles" /* 5243 */;
+import _modDef4131 from "module_4131" /* 4131 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9170 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 11891 */;
+import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 12441 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 14551 */;
+import createStyles from "createStyles" /* 5306 */;
 import size from "module_2" /* 2 */;
 
 const CodedLinkExtendedType = CodedLinksConstants.CodedLinkExtendedType;
@@ -35,9 +35,9 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
     if (tmp4) {
       const intl8 = util.intl;
       if ("expired" === conjureProjectLinkCard.type) {
-        let mQma36 = _modDef4079.wahvH2;
+        let mQma36 = _modDef4131.wahvH2;
       } else {
-        mQma36 = _modDef4079.mQma36;
+        mQma36 = _modDef4131.mQma36;
       }
       const stringResult = intl8.string(mQma36);
       const obj3 = {};
@@ -88,14 +88,14 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
         if (null != conjureProjectLinkCard.creatorName) {
           const intl = util.intl;
           const obj5 = { name: conjureProjectLinkCard.creatorName };
-          formatToPlainStringResult = intl.formatToPlainString(_modDef4079["6/x9LD"], obj5);
+          formatToPlainStringResult = intl.formatToPlainString(_modDef4131["6/x9LD"], obj5);
         }
       }
       obj4.creatorText = formatToPlainStringResult;
       let stringResult1 = null;
       if ("ready" !== conjureProjectLinkCard.type) {
         const intl2 = util.intl;
-        stringResult1 = intl2.string(_modDef4079["2DSRxV"]);
+        stringResult1 = intl2.string(_modDef4131["2DSRxV"]);
       }
       obj4.noticeText = stringResult1;
       let iconURL = application.getIconURL(80);
@@ -111,19 +111,19 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       let stringResult2 = null;
       if (canRemix) {
         const intl3 = util.intl;
-        stringResult2 = intl3.string(_modDef4079["UsUa/c"]);
+        stringResult2 = intl3.string(_modDef4131["UsUa/c"]);
       }
       obj4.installLabel = stringResult2;
       let stringResult3 = null;
       if (canRemix) {
         const intl4 = util.intl;
-        stringResult3 = intl4.string(_modDef4079["6RGR3m"]);
+        stringResult3 = intl4.string(_modDef4131["6RGR3m"]);
       }
       obj4.remixLabel = stringResult3;
       obj4.coverAction = coverAction;
       if ("launch" === coverAction) {
         const intl6 = util.intl;
-        let stringResult4 = intl6.string(_modDef4079["1cF7L4"]);
+        let stringResult4 = intl6.string(_modDef4131["1cF7L4"]);
       } else {
         stringResult4 = null;
         if ("open" === coverAction) {
@@ -134,7 +134,7 @@ export default function createConjureProjectLinkEmbed(applicationId, ticket, the
       obj4.coverActionLabel = stringResult4;
       const intl7 = util.intl;
       const obj6 = { name: application.name };
-      obj4.accessibilityLabel = intl7.formatToPlainString(_modDef4079.c8DqSD, obj6);
+      obj4.accessibilityLabel = intl7.formatToPlainString(_modDef4131.c8DqSD, obj6);
       return obj4;
     }
   }

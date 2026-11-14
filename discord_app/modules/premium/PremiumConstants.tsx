@@ -1,11 +1,11 @@
-// === Module 1387: PremiumConstants ===
+// === Module 1390: PremiumConstants ===
 
-// Module 1387 (PremiumConstants)
+// Module 1390 (PremiumConstants)
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1075 */;
 import util from "util" /* 1113 */;
-import EmojiConstants from "EmojiConstants" /* 1388 */;
-import BadgeRarity from "BadgeRarity" /* 1389 */;
-import gift_intent_type from "gift_intent_type" /* 1390 */;
+import EmojiConstants from "EmojiConstants" /* 1391 */;
+import BadgeRarity from "BadgeRarity" /* 1392 */;
+import gift_intent_type from "gift_intent_type" /* 1393 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

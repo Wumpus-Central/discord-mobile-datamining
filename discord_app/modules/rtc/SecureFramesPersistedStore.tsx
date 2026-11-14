@@ -1,6 +1,6 @@
-// === Module 6026: SecureFramesPersistedStore ===
+// === Module 6089: SecureFramesPersistedStore ===
 
-// Module 6026 (SecureFramesPersistedStore)
+// Module 6089 (SecureFramesPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

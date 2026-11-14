@@ -1,6 +1,6 @@
-// === Module 6652: ? ===
+// === Module 6715: ? ===
 
-// Module 6652
+// Module 6715
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/aura/blaze.png.js");

@@ -1,25 +1,22 @@
-// === Module 14159: CheckpointUnavailableScreen ===
+// === Module 14269: CheckpointUnavailableScreen ===
 
-// Module 14159 (CheckpointUnavailableScreen)
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 14269 (CheckpointUnavailableScreen)
 import nativeDefault from "native" /* 575 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 14160 */;
-import CheckpointTextDefault from "CheckpointText" /* 14161 */;
-import createStyles from "createStyles" /* 5243 */;
-import size from "module_2" /* 2 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 14270 */;
+import noop from "module_19" /* 19 */;
 
-const View = _mod17.View;
-const jsx = jsxProd.jsx;
-let obj = { container: { flexGrow: 1, justifyContent: "center", paddingBottom: nativeDefault.space.PX_64 } };
-let closure_4 = createStyles.createStyles(obj);
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(5306);
+let obj2 = { container: { flexGrow: 1, justifyContent: "center", gap: nativeDefault.space.PX_32, paddingBottom: nativeDefault.space.PX_64 } };
+let closure_4 = createStyles.createStyles(obj2);
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/screens/CheckpointUnavailableScreen.tsx");
 
 export default function CheckpointUnavailableScreen(children) {
   const obj = { children: null };
-  const obj2 = { style: closure_4().container, children: null };
   const tmp = closure_4();
-  obj2.children = jsx(CheckpointTextDefault, { isStepHeading: true, variant: "heading-lg/medium", children: children.message });
-  obj.children = <View style={closure_4().container}>{null}</View>;
+  const obj2 = { style: closure_4().container, children: children.children };
+  obj.children = <View style={closure_4().container}>{children.children}</View>;
   return jsx(CheckpointScreenDefault, { children: null });
 };

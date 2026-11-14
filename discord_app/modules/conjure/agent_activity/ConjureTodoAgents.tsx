@@ -1,7 +1,7 @@
-// === Module 13486: ConjureTodoAgents ===
+// === Module 13589: ConjureTodoAgents ===
 
-// Module 13486 (ConjureTodoAgents)
-import ConjureTimelineTree from "ConjureTimelineTree" /* 13471 */;
+// Module 13589 (ConjureTodoAgents)
+import ConjureTimelineTree from "ConjureTimelineTree" /* 13574 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTodoAgents.tsx");
@@ -14,17 +14,17 @@ export function runningTodoAgents(tasks) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if ("running" === nextResult.task.status) {
-      let obj2 = { key: null, name: null, task: null, todoId: null };
-      obj2.key = tmp2.taskId;
+      let obj = { key: null, name: null, task: null, todoId: null };
+      obj.key = tmp2.taskId;
       let taskId = tmp2.task.helperName;
       if (taskId == null) {
         taskId = tmp2.taskId;
       }
-      obj2.name = taskId;
-      let obj = ConjureTimelineTree;
-      obj2.task = obj.describeNode(tmp2.task);
-      obj2.todoId = tmp2.task.todoId;
-      let arr = items.push(obj2);
+      obj.name = taskId;
+      let obj2 = ConjureTimelineTree;
+      obj.task = obj2.describeNode(tmp2.task);
+      obj.todoId = tmp2.task.todoId;
+      let arr = items.push(obj);
     }
     continue;
   }

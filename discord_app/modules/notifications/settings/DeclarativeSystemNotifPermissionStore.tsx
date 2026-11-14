@@ -1,16 +1,16 @@
-// === Module 18492: DeclarativeSystemNotifPermissionStore ===
+// === Module 18620: DeclarativeSystemNotifPermissionStore ===
 
-// Module 18492 (DeclarativeSystemNotifPermissionStore)
+// Module 18620 (DeclarativeSystemNotifPermissionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 18493 */;
-import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 18494 */;
+import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 18621 */;
+import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 18622 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-function handlePermissionsUpdated(result) {
+function handlePermissionsUpdated(disabledCategories) {
   obj = {};
-  const iter = result.disabledSettings[Symbol.iterator]();
+  const iter = disabledCategories.disabledSettings[Symbol.iterator]();
   while (iter !== undefined) {
     obj[iter.next()] = true;
     continue;
@@ -18,6 +18,7 @@ function handlePermissionsUpdated(result) {
   const obj2 = {};
   const merged = Object.assign(obj);
   obj2.disabledSettings = obj;
+  obj2.disabledCategories = disabledCategories.disabledCategories;
   obj = obj2;
 }
 let obj = { disabledSettings: {} };
@@ -42,6 +43,14 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 prototype["isDisabled"] = function isDisabled(arg0) {
   return true === obj.disabledSettings[arg0];
+};
+prototype["isCategoryDisabled"] = function isCategoryDisabled(arg0) {
+  const disabledCategories = obj.disabledCategories;
+  let hasItem;
+  if (disabledCategories != null) {
+    hasItem = disabledCategories.includes(arg0);
+  }
+  return true === hasItem;
 };
 prototype["getDisabledSettings"] = function getDisabledSettings() {
   items = [];

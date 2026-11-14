@@ -1,9 +1,9 @@
-// === Module 6292: useChannelRoleSubscriptionStatus ===
+// === Module 6355: useChannelRoleSubscriptionStatus ===
 
-// Module 6292 (useChannelRoleSubscriptionStatus)
-import GatedChannelStore from "GatedChannelStore" /* 5147 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
+// Module 6355 (useChannelRoleSubscriptionStatus)
+import GatedChannelStore from "GatedChannelStore" /* 5210 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
 
 const require = globalThis.__r;
 

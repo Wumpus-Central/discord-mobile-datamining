@@ -1,9 +1,9 @@
-// === Module 19369: SearchTabsTransitionGroup ===
+// === Module 19561: SearchTabsTransitionGroup ===
 
-// Module 19369 (SearchTabsTransitionGroup)
-import _modDef1652 from "module_1652" /* 1652 */;
-import native from "native" /* 5314 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 13153 */;
+// Module 19561 (SearchTabsTransitionGroup)
+import _modDef1655 from "module_1655" /* 1655 */;
+import native from "native" /* 5377 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 13262 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,9 +20,9 @@ function AnimatedTabs(cleanUp) {
   if (transitionState === require("native").TransitionStates.MOUNTED) {
     num = 1;
   }
-  const sharedValue = require("module_1652").useSharedValue(num);
-  let obj = require("module_1652");
-  items = [c7, require("spring/spring").withSpring, sharedValue, require("springPresets").springStandard, c6, transitionState, require("native").TransitionStates, require("module_1705").scheduleOnRN, cleanUp.cleanUp];
+  const sharedValue = require("module_1655").useSharedValue(num);
+  let obj = require("module_1655");
+  items = [c7, require("spring/spring").withSpring, sharedValue, require("springPresets").springStandard, c6, transitionState, require("native").TransitionStates, require("module_1708").scheduleOnRN, cleanUp.cleanUp];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -88,7 +88,7 @@ function AnimatedTabs(cleanUp) {
   SearchTabsTransitionGroupTsx2.__workletHash = 1226548959062;
   SearchTabsTransitionGroupTsx2.__initData = tmp4;
   const items2 = [sharedValue, transitionState];
-  const animatedStyle = require("module_1652").useAnimatedStyle(SearchTabsTransitionGroupTsx2);
+  const animatedStyle = require("module_1655").useAnimatedStyle(SearchTabsTransitionGroupTsx2);
   const effect = noop.useEffect(() => {
     let num = 1;
     if (c0 === native.TransitionStates.YEETED) {
@@ -96,7 +96,7 @@ function AnimatedTabs(cleanUp) {
     }
     const result = _undefined2.set(num);
   }, items2);
-  const tmpResult = require("module_1652");
+  const tmpResult = require("module_1655");
   const setting = require("UserSettings").SearchResultExactCountEnabled.useSetting();
   closure_129_0 = setting;
   const items3 = [setting];
@@ -110,7 +110,7 @@ function AnimatedTabs(cleanUp) {
     }
     combined = "(" + Tabs_Tabs.defaultCountFormatter(toLocaleString) + ")";
   }, items3);
-  const context = noop.useContext(tmp(14737).SwipeForMemberListContext);
+  const context = noop.useContext(tmp(14850).SwipeForMemberListContext);
   const items4 = [closure_8, context];
   _require = undefined;
   [tmp19, tmp20] = items4;
@@ -163,7 +163,7 @@ function AnimatedTabs(cleanUp) {
   SearchTabsTransitionGroupTsx5.__closure = items10;
   SearchTabsTransitionGroupTsx5.__workletHash = 15943463641590;
   SearchTabsTransitionGroupTsx5.__initData = tmp24;
-  const animatedReaction = require("module_1652").useAnimatedReaction(SearchTabsTransitionGroupTsx4, SearchTabsTransitionGroupTsx5);
+  const animatedReaction = require("module_1655").useAnimatedReaction(SearchTabsTransitionGroupTsx4, SearchTabsTransitionGroupTsx5);
   let obj2 = { style: animatedStyle, children: null };
   const obj3 = { state, grow: false, formatCount: callback, simultaneousHandlers: null, onEndDrag: null };
   gesture = undefined;
@@ -177,7 +177,7 @@ function AnimatedTabs(cleanUp) {
   }
   obj3.onEndDrag = tmp29;
   obj2.children = jsx(require("Tabs/Tabs").Tabs, obj3);
-  return jsx(_modDef1652.View, obj2);
+  return jsx(_modDef1655.View, obj2);
 }
 function renderItem(key, state, transitionState, cleanUp) {
   return <AnimatedTabs key={key} state={state} transitionState={transitionState} cleanUp={cleanUp} />;

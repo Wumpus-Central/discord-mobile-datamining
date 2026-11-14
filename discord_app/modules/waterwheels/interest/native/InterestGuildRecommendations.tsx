@@ -1,22 +1,22 @@
-// === Module 20188: InterestGuildRecommendations ===
+// === Module 20348: InterestGuildRecommendations ===
 
-// Module 20188 (InterestGuildRecommendations)
+// Module 20348 (InterestGuildRecommendations)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import _modDef2553 from "module_2553" /* 2553 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import GuildIconDefault from "GuildIcon" /* 7654 */;
-import ClipViewDefault from "ClipView" /* 9436 */;
-import GuildBadgeV2Default from "GuildBadgeV2" /* 10321 */;
-import InterestGhostDefault from "InterestGhost" /* 18988 */;
-import InterestGuildProfileSheetDefault from "InterestGuildProfileSheet" /* 20189 */;
-import InterestGuildJoinButtonDefault from "InterestGuildJoinButton" /* 20192 */;
-import InterestGuildActions from "InterestGuildActions" /* 20193 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import _modDef2569 from "module_2569" /* 2569 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import GuildIconDefault from "GuildIcon" /* 7720 */;
+import ClipViewDefault from "ClipView" /* 9503 */;
+import GuildBadgeV2Default from "GuildBadgeV2" /* 10390 */;
+import InterestGuildProfileSheetDefault from "InterestGuildProfileSheet" /* 19014 */;
+import InterestGuildJoinButtonDefault from "InterestGuildJoinButton" /* 19017 */;
+import InterestGuildActions from "InterestGuildActions" /* 19018 */;
+import InterestGhostDefault from "InterestGhost" /* 19042 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 5094 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 5157 */;
 
 const require = globalThis.__r;
 
@@ -98,9 +98,9 @@ const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, GuildFeatures: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const NavigatorHeader = fn(7427);
+const NavigatorHeader = fn(7493);
 const headerBackButton = NavigatorHeader.getHeaderBackButton();
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_13 = createStyles.createStyles(() => {
   let PX_64 = arg0;
   if (arg0 === undefined) {
@@ -168,10 +168,10 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
   guild = guild.guild;
   ({ rowPosition: importDefault, onRowLayout: dependencyMap, onJoinTapped: _slicedToArray, onProfileOpened: noop, onJoinResult: View } = guild);
   const tmp = closure_13();
-  const token = guild(5839).useToken(nativeDefault.modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS);
-  let obj = guild(5839);
-  const token1 = guild(5839).useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const obj2 = guild(5839);
+  const token = guild(5902).useToken(nativeDefault.modules.mobile.GUILD_ITEM_SELECTED_BORDER_RADIUS);
+  let obj = guild(5902);
+  const token1 = guild(5902).useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const obj2 = guild(5902);
   const obj5 = {
     onLayout(arg0) {
       return dependencyMap(importDefault + 1, arg0);
@@ -181,7 +181,7 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
   const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: guild.id, icon: guild.icon, size: 40 });
   const obj6 = { accessibilityRole: "button", accessibilityLabel: guild.name, accessibilityHint: null, onPress: null, style: null, children: null };
   const intl = guild(1113).intl;
-  obj6.accessibilityHint = intl.string(_modDef2553.nkweXX);
+  obj6.accessibilityHint = intl.string(_modDef2569.nkweXX);
   obj6.onPress = function openProfile() {
     noop(guild.id, closure_1_1);
     const obj = ActionSheetActionCreatorsDefault;
@@ -209,13 +209,13 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
   obj9.style = items;
   const obj11 = { icon: guildIconURL, value: guild.name, size: null, selected: false, style: null };
   const tmp11 = ClipViewDefault;
-  obj11.size = guild(7654).GuildIconSizes.NORMAL;
+  obj11.size = guild(7720).GuildIconSizes.NORMAL;
   obj11.style = tmp.guildIconImage;
   obj9.children = closure_9(GuildIconDefault, obj11);
   const items1 = [closure_9(tmp11, obj9), ];
   const obj12 = { style: tmp.details, spacing: nativeDefault.space.PX_0, children: null };
   const obj13 = { style: tmp.name, children: null };
-  const items2 = [closure_9(guild(5866).Text, { style: tmp.nameText, variant: "body-md/semibold", color: "text-strong", lineClamp: 1, children: guild.name }), , ];
+  const items2 = [closure_9(guild(5929).Text, { style: tmp.nameText, variant: "body-md/semibold", color: "text-strong", lineClamp: 1, children: guild.name }), , ];
   const features = guild.features;
   let hasItem = features.includes(constants2.VERIFIED);
   if (!hasItem) {
@@ -230,13 +230,13 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
     const _Set = Set;
     const set = new Set(guild.features);
     obj16.features = set;
-    obj15.guild = tmp2(5106).constructFromPartialGuildRecord(obj16);
+    obj15.guild = tmp2(5169).constructFromPartialGuildRecord(obj16);
     obj15.style = tmp.badge;
     hasItem = closure_9(tmp4Result, obj15);
-    const tmp2Result = tmp2(5106);
+    const tmp2Result = tmp2(5169);
   }
   items2[1] = hasItem;
-  items2[2] = closure_9(guild(7897).ChevronSmallRightIcon, { size: "xxs", accessible: false });
+  items2[2] = closure_9(guild(7963).ChevronSmallRightIcon, { size: "xxs", accessible: false });
   obj13.children = items2;
   const items3 = [closure_10(View, obj13), ];
   const obj18 = { style: tmp.online, children: null };
@@ -244,11 +244,11 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
   const obj20 = { variant: "body-xs/medium", color: "text-muted", children: null };
   const intl2 = tmp2(1113).intl;
   obj20.children = intl2.format(guild(1113).t["LC+S+m"], { membersOnline: guild.approximate_presence_count });
-  items4[1] = closure_9(guild(5866).Text, obj20);
+  items4[1] = closure_9(guild(5929).Text, obj20);
   obj18.children = items4;
   items3[1] = closure_10(View, obj18);
   obj12.children = items3;
-  items1[1] = closure_10(guild(6274).Stack, obj12);
+  items1[1] = closure_10(guild(6337).Stack, obj12);
   obj8.children = items1;
   const items5 = [closure_10(View, obj8), closure_9(View, { style: tmp.joinSpace })];
   obj7.children = items5;
@@ -259,11 +259,11 @@ let closure_15 = noop.memo(function InterestGuildRow(guild) {
   }
   if (tmp10Result) {
     const obj23 = { variant: "body-sm/normal", color: "text-subtle", lineClamp: 2, children: guild.description };
-    tmp10Result = closure_9(tmp2(5866).Text, obj23);
+    tmp10Result = closure_9(tmp2(5929).Text, obj23);
   }
   items6[1] = tmp10Result;
   obj6.children = items6;
-  const items7 = [closure_10(guild(7364).PressableHighlight, obj6), ];
+  const items7 = [closure_10(guild(7428).PressableHighlight, obj6), ];
   const obj24 = {
     style: tmp.joinTarget,
     children: closure_9(InterestGuildJoinButtonDefault, {
@@ -399,7 +399,7 @@ export default function InterestGuildRecommendations(analyticsContext) {
   const items6 = [ref(View, obj6), , ];
   const obj8 = { title: null, scrollY: null };
   const intl2 = tmp8(gameIds[10]).intl;
-  obj8.title = intl2.string(require("module_2553")["mdhU/Q"]);
+  obj8.title = intl2.string(require("module_2569")["mdhU/Q"]);
   obj8.scrollY = scrollY;
   items6[1] = ref(analyticsContext(gameIds[27]).InterestCompactTitle, obj8);
   const obj9 = {
@@ -451,11 +451,11 @@ export default function InterestGuildRecommendations(analyticsContext) {
   const obj13 = { style: tmp6.intro, children: null };
   const obj14 = { variant: "heading-xl/semibold", color: "text-strong", children: null };
   const intl4 = tmp8(gameIds[10]).intl;
-  obj14.children = intl4.string(require("module_2553").TQdfcH);
+  obj14.children = intl4.string(require("module_2569").TQdfcH);
   const items8 = [ref(analyticsContext(gameIds[9]).Heading, obj14), ];
   const obj15 = { variant: "body-sm/normal", color: "text-default", style: tmp6.centered, lineBreakStrategyIOS: "push-out", textBreakStrategy: "balanced", children: null };
   const intl5 = tmp8(gameIds[10]).intl;
-  obj15.children = intl5.string(require("module_2553")["G++b7J"]);
+  obj15.children = intl5.string(require("module_2569")["G++b7J"]);
   items8[1] = ref(analyticsContext(gameIds[9]).Text, obj15);
   obj13.children = items8;
   const items9 = [ref2(View, obj13), , , , ];
@@ -489,11 +489,11 @@ export default function InterestGuildRecommendations(analyticsContext) {
     const obj19 = { style: tmp6.empty, children: null };
     const obj20 = { variant: "body-lg/normal", color: "text-muted", style: tmp6.centered, children: null };
     const intl6 = tmp8(gameIds[10]).intl;
-    obj20.children = intl6.string(require("module_2553").A3YsGV);
+    obj20.children = intl6.string(require("module_2569").A3YsGV);
     const items10 = [tmp20(tmp8(gameIds[9]).Text, obj20), ];
     const obj21 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl7 = tmp8(gameIds[10]).intl;
-    obj21.text = intl7.string(require("module_2553").uGhymA);
+    obj21.text = intl7.string(require("module_2569").uGhymA);
     obj21.onPress = function handleRetry() {
       const obj2 = {};
       const merged = Object.assign(analyticsContext);
@@ -507,7 +507,7 @@ export default function InterestGuildRecommendations(analyticsContext) {
   }
   items9[4] = tmp18Result;
   obj12.children = items9;
-  items7[1] = ref2(require("module_1652").ScrollView, obj12);
+  items7[1] = ref2(require("module_1655").ScrollView, obj12);
   obj4.children = items7;
   return ref2(View, obj4);
 };

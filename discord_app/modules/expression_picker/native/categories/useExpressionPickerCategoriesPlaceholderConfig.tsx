@@ -1,13 +1,13 @@
-// === Module 11263: useExpressionPickerCategoriesPlaceholderConfig ===
+// === Module 11330: useExpressionPickerCategoriesPlaceholderConfig ===
 
-// Module 11263 (useExpressionPickerCategoriesPlaceholderConfig)
+// Module 11330 (useExpressionPickerCategoriesPlaceholderConfig)
 import nativeDefault from "native" /* 575 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7771 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7837 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const CATEGORY_ICON_SIZE = fn(1072).CATEGORY_ICON_SIZE;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = { placeholder: { color: nativeDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.5 } };
 let closure_4 = createStyles.createStyles(obj2);
 let size = fn(2);

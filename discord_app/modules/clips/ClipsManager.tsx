@@ -1,26 +1,26 @@
-// === Module 20642: clips/ClipsManager ===
+// === Module 20797: clips/ClipsManager ===
 
-// Module 20642 (clips/ClipsManager)
+// Module 20797 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettings from "UserSettings" /* 5068 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 6033 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6745 */;
-import ClipsExperiment from "ClipsExperiment" /* 15693 */;
-import isClipsEnabled from "isClipsEnabled" /* 15988 */;
-import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20644 */;
-import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20645 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import UserSettings from "UserSettings" /* 5131 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 6096 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6808 */;
+import ClipsExperiment from "ClipsExperiment" /* 15812 */;
+import isClipsEnabled from "isClipsEnabled" /* 16108 */;
+import AutoclipsExperimentDefault from "AutoclipsExperiment" /* 20799 */;
+import ClipsDefaultOnGeoExperimentDefault from "ClipsDefaultOnGeoExperiment" /* 20800 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6739 */;
-import UserStore from "UserStore" /* 1385 */;
-import ClipsStore from "ClipsStore" /* 2136 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6802 */;
+import UserStore from "UserStore" /* 1388 */;
+import ClipsStore from "ClipsStore" /* 2139 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 const StreamKeyUtilsAll = StreamKeyUtils;
 
@@ -144,13 +144,13 @@ let closure_26 = async function _probeHardware() {
   closure_131_6 = closure_2;
   return { classification: closure_132_0(closure_132_3[15]).classifyClipsHardware(closure_131_6, closure_131_4), gpuModels: closure_131_5, videoEncoders: closure_131_6 };
 };
-const getSystemAnalyticsInfo = fn(6027).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8778);
+const getSystemAnalyticsInfo = fn(6090).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8845);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15, CLIPS_DEFAULT_SETTINGS_VERSION: closure_16, ClipsHardwareClassification: closure_17, ClipsLogger: closure_18, CLIP_RUNTIME: closure_19 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6740).StreamTypes;
-const Features = fn(6012).Features;
+const StreamTypes = fn(6803).StreamTypes;
+const Features = fn(6075).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -374,7 +374,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(clas
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(5068).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(5131).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -396,8 +396,8 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(clas
             }
             obj8.actual_allow_voice_recording = tmp36;
             obj8.clip_runtime = clip_runtime;
-            decision(1252).track(constants.CLIPS_DEFAULT_SETTINGS_APPLIED, obj8);
-            const obj = decision(1252);
+            decision(1256).track(constants.CLIPS_DEFAULT_SETTINGS_APPLIED, obj8);
+            const obj = decision(1256);
           }
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
@@ -436,7 +436,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(5068).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(5131).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };

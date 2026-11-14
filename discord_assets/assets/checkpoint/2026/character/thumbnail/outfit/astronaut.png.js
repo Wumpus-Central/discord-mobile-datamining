@@ -1,6 +1,6 @@
-// === Module 6437: ? ===
+// === Module 6500: ? ===
 
-// Module 6437
+// Module 6500
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/astronaut.png.js");

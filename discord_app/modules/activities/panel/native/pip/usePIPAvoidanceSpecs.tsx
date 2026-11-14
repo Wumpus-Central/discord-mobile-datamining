@@ -1,13 +1,13 @@
-// === Module 19701: pip/usePIPAvoidanceSpecs ===
+// === Module 19911: pip/usePIPAvoidanceSpecs ===
 
-// Module 19701 (pip/usePIPAvoidanceSpecs)
-import _mod1652 from "module_1652" /* 1652 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 11266 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11923 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 13033 */;
-import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 19590 */;
-import useScreenNameSharedValueDefault from "useScreenNameSharedValue" /* 19702 */;
-import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 19703 */;
+// Module 19911 (pip/usePIPAvoidanceSpecs)
+import _mod1655 from "module_1655" /* 1655 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 11333 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11989 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 13129 */;
+import getPIPBottomOffsetForPIPModeDefault from "getPIPBottomOffsetForPIPMode" /* 19783 */;
+import useScreenNameSharedValueDefault from "useScreenNameSharedValue" /* 19912 */;
+import getAdjustedBottomOffsetsDefault from "getAdjustedBottomOffsets" /* 19913 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = { code: "(function usePIPAvoidanceSpecsTsx1(){let[keyboardHeight,safeArea,screenName]=this.__closure;return{keyboardHeight:keyboardHeight.get(),safeAreaBottom:safeArea.bottom,screenName:screenName.get()};})" };
@@ -15,7 +15,7 @@ let closure_4 = { code: "(function usePIPAvoidanceSpecsTsx2(props,previous){let[
 const result = size.fileFinishedImporting("modules/activities/panel/native/pip/usePIPAvoidanceSpecs.tsx");
 
 export default function usePIPAvoidanceSpecs(arg0) {
-  const sharedValue = _mod1652.useSharedValue({ top: 0, bottom: 0 });
+  const sharedValue = _mod1655.useSharedValue({ top: 0, bottom: 0 });
   const tmp5 = useAnimatedKeyboardHeightDefault();
   const tmp6 = useScreenNameSharedValueDefault();
   items = [_undefined4, tmp5, arg0, tmp6];
@@ -47,6 +47,6 @@ export default function usePIPAvoidanceSpecs(arg0) {
   usePIPAvoidanceSpecsTsx2.__closure = items3;
   usePIPAvoidanceSpecsTsx2.__workletHash = 12351742460170;
   usePIPAvoidanceSpecsTsx2.__initData = tmp11;
-  const animatedReaction = _mod1652.useAnimatedReaction(usePIPAvoidanceSpecsTsx1, usePIPAvoidanceSpecsTsx2);
+  const animatedReaction = _mod1655.useAnimatedReaction(usePIPAvoidanceSpecsTsx1, usePIPAvoidanceSpecsTsx2);
   return sharedValue;
 };

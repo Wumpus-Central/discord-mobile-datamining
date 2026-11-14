@@ -1,10 +1,10 @@
-// === Module 15128: IosAttributionEligibility ===
+// === Module 15242: IosAttributionEligibility ===
 
-// Module 15128 (IosAttributionEligibility)
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import QuestDataUtils from "QuestDataUtils" /* 8737 */;
-import apexExperiment from "apexExperiment" /* 10097 */;
-import IosAttributionNativeModule from "IosAttributionNativeModule" /* 15129 */;
+// Module 15242 (IosAttributionEligibility)
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import QuestDataUtils from "QuestDataUtils" /* 8804 */;
+import apexExperiment from "apexExperiment" /* 10166 */;
+import IosAttributionNativeModule from "IosAttributionNativeModule" /* 15243 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionEligibility.tsx");

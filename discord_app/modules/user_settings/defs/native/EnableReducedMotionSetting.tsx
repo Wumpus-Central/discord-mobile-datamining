@@ -1,19 +1,19 @@
-// === Module 17919: EnableReducedMotionSetting ===
+// === Module 18039: EnableReducedMotionSetting ===
 
-// Module 17919 (EnableReducedMotionSetting)
+// Module 18039 (EnableReducedMotionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16766 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 16889 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 require = fn;
-const SettingBuilders = fn(12311);
+const SettingBuilders = fn(12406);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.e3TR1b);
   },
-  parent: fn(9135).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(9202).MobileUserSettings.ACCESSIBILITY,
   useValue: function useReducedMotionSettingValue() {
     items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);

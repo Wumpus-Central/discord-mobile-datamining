@@ -1,7 +1,7 @@
-// === Module 20645: ClipsDefaultOnGeoExperiment ===
+// === Module 20800: ClipsDefaultOnGeoExperiment ===
 
-// Module 20645 (ClipsDefaultOnGeoExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 20800 (ClipsDefaultOnGeoExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-10-clips-default-on-geo", defaultConfig: { allowDefaultOn: false }, variations: null };

@@ -1,11 +1,11 @@
-// === Module 15102: MediaModalYoutube ===
+// === Module 15216: MediaModalYoutube ===
 
-// Module 15102 (MediaModalYoutube)
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8562 */;
-import MediaModalWebViewBase from "MediaModalWebViewBase" /* 10133 */;
+// Module 15216 (MediaModalYoutube)
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8629 */;
+import MediaModalWebViewBase from "MediaModalWebViewBase" /* 10202 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 2117 */;
+import AppStateStore from "AppStateStore" /* 2120 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -23,16 +23,16 @@ export default noop.memo(function MediaModalYoutube(visible) {
   _slicedToArray = undefined;
   noop = undefined;
   ({ style, onError, onLoad, onLoadStart, onToggleOverlay } = visible);
-  [playerState, dependencyMap] = noop.useState(visible(10133).PlayerState.UNREADY);
+  [playerState, dependencyMap] = noop.useState(visible(10202).PlayerState.UNREADY);
   const tmp5 = _slicedToArray(noop.useState(undefined), 2);
   _slicedToArray = tmp5[1];
-  let tmp7 = playerState(6773)(playerState);
+  let tmp7 = playerState(6836)(playerState);
   noop = tmp7;
-  const tmp8 = playerState(6773)(visible);
+  const tmp8 = playerState(6836)(visible);
   closure_5 = tmp8;
   const ref = noop.useRef(null);
   const effect = noop.useEffect(() => {
-    const MediaViewerAnalytics = visible(8562).MediaViewerAnalytics;
+    const MediaViewerAnalytics = visible(8629).MediaViewerAnalytics;
     const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted({ platform: "youtube", action: "attempted" });
   }, []);
   items = [ref, visible, tmp8, tmp7, playerState];
@@ -152,25 +152,25 @@ export default noop.memo(function MediaModalYoutube(visible) {
       ref.current = null;
     }
   }, items1);
-  let youtubeVideoIdFromURI = visible(8566).getYoutubeVideoIdFromURI(source.uri);
+  let youtubeVideoIdFromURI = visible(8633).getYoutubeVideoIdFromURI(source.uri);
   if (youtubeVideoIdFromURI == null) {
-    youtubeVideoIdFromURI = tmp(8566).getYoutubeClipVideoIdFromURI(source.uri);
-    const tmpResult = tmp(8566);
+    youtubeVideoIdFromURI = tmp(8633).getYoutubeClipVideoIdFromURI(source.uri);
+    const tmpResult = tmp(8633);
   }
   if (null == youtubeVideoIdFromURI) {
     return null;
   } else {
-    if (playerState === tmp(10133).PlayerState.ERRORED) {
+    if (playerState === tmp(10202).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp5[0]) {
         let obj2 = { videoId: youtubeVideoIdFromURI.videoId };
-        return jsx(tmp6(15103), { videoId: youtubeVideoIdFromURI.videoId });
+        return jsx(tmp6(15217), { videoId: youtubeVideoIdFromURI.videoId });
       }
     }
-    const isAndroidResult = tmp(1377).isAndroid();
+    const isAndroidResult = tmp(1380).isAndroid();
     const obj3 = { ref, style, source: null, baseURL: null, playerState: null, onDataReceived: null, onToggleOverlay: null, javaScriptCanOpenWindowsAutomatically: true, domStorageEnabled: null, mixedContentMode: null, nestedScrollEnabled: null, onError: null, onLoad: null, onLoadStart: null, overScrollMode: null };
     let str2 = "";
     let str3 = "";
-    const tmpResult2 = tmp(1377);
+    const tmpResult2 = tmp(1380);
     if (null != youtubeVideoIdFromURI.start) {
       const _HermesInternal = HermesInternal;
       str3 = "'start': " + youtubeVideoIdFromURI.start + ",";
@@ -209,7 +209,7 @@ export default noop.memo(function MediaModalYoutube(visible) {
       str20 = "never";
     }
     obj3.overScrollMode = str20;
-    return jsx(tmp6(10133), { ref, style, source: null, baseURL: null, playerState: null, onDataReceived: null, onToggleOverlay: null, javaScriptCanOpenWindowsAutomatically: true, domStorageEnabled: null, mixedContentMode: null, nestedScrollEnabled: null, onError: null, onLoad: null, onLoadStart: null, overScrollMode: null }, youtubeVideoIdFromURI.videoId);
+    return jsx(tmp6(10202), { ref, style, source: null, baseURL: null, playerState: null, onDataReceived: null, onToggleOverlay: null, javaScriptCanOpenWindowsAutomatically: true, domStorageEnabled: null, mixedContentMode: null, nestedScrollEnabled: null, onError: null, onLoad: null, onLoadStart: null, overScrollMode: null }, youtubeVideoIdFromURI.videoId);
   }
-  let obj = visible(8566);
+  let obj = visible(8633);
 });

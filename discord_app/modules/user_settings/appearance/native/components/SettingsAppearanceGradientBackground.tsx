@@ -1,27 +1,27 @@
-// === Module 17799: SettingsAppearanceGradientBackground ===
+// === Module 17919: SettingsAppearanceGradientBackground ===
 
-// Module 17799 (SettingsAppearanceGradientBackground)
+// Module 17919 (SettingsAppearanceGradientBackground)
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import timingPresets from "timingPresets" /* 5488 */;
-import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 17800 */;
-import getGradientStartPontDefault from "getGradientStartPont" /* 17801 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import timingPresets from "timingPresets" /* 5551 */;
+import SettingsAppearancePickerUtils from "SettingsAppearancePickerUtils" /* 17920 */;
+import getGradientStartPontDefault from "getGradientStartPont" /* 17921 */;
 import noop from "module_19" /* 19 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17773 */;
-import module_1652_mod from "module_1652" /* 1652 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 17893 */;
+import module_1655_mod from "module_1655" /* 1655 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let StyleSheet = fn(17).StyleSheet;
 let jsx = fn(21).jsx;
-let module_1652 = fn(1652);
-let num = module_1652.processColor("rgba(0, 0, 0, 0)");
+let module_1655 = fn(1655);
+let num = module_1655.processColor("rgba(0, 0, 0, 0)");
 if (num == null) {
   num = 0;
 }
-let module_1652 = module_1652_mod;
-let closure_7 = module_1652.createAnimatedComponent(fn(5830).LinearGradientNativeComponent);
+let module_1655 = module_1655_mod;
+let closure_7 = module_1655.createAnimatedComponent(fn(5893).LinearGradientNativeComponent);
 let obj = { colors: null, locations: [], startPoint: { x: 0, y: 0 }, endPoint: { x: 0, y: 0 } };
 let items = [num, num];
 obj.colors = items;
@@ -66,10 +66,10 @@ export default noop.memo(function SettingsAppearanceGradientBackground(isDimmed)
   }
   closure_129_0 = tmp8;
   const obj2 = require("SettingsAppearancePickerUtils");
-  const sharedValue = require("module_1652").useSharedValue({ themePrev: tmp8, themeCurrent: tmp8 });
+  const sharedValue = require("module_1655").useSharedValue({ themePrev: tmp8, themeCurrent: tmp8 });
   closure_129_1 = sharedValue;
-  const tmp5Result = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(0);
+  const tmp5Result = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(0);
   closure_129_2 = sharedValue1;
   const items1 = [tmp8, sharedValue, sharedValue1, launchWelcomeSystemTheme];
   const effect = obj.useEffect(() => {
@@ -78,16 +78,16 @@ export default noop.memo(function SettingsAppearanceGradientBackground(isDimmed)
     obj = { themePrev: _undefined.get().themeCurrent, themeCurrent };
     const result2 = _undefined2.set(timing_timing.withTiming(1, timingPresets.timingStandard));
   }, items1);
-  const tmp5Result4 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue({ width: 0, height: 0 });
+  const tmp5Result4 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue({ width: 0, height: 0 });
   const items2 = [sharedValue2];
   const callback = obj.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     const size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
     const result = _undefined5.set(size);
   }, items2);
-  const tmp5Result5 = require("module_1652");
-  const items3 = [closure_9, sharedValue2, noop, sharedValue, require("module_1652").interpolate, sharedValue1, getGradientStartPontDefault, require("module_1652").processColor, require("module_1652").interpolateColor];
+  const tmp5Result5 = require("module_1655");
+  const items3 = [closure_9, sharedValue2, noop, sharedValue, require("module_1655").interpolate, sharedValue1, getGradientStartPontDefault, require("module_1655").processColor, require("module_1655").interpolateColor];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -150,7 +150,7 @@ export default noop.memo(function SettingsAppearanceGradientBackground(isDimmed)
   SettingsAppearanceGradientBackgroundTsx1.__workletHash = 1728256022641;
   SettingsAppearanceGradientBackgroundTsx1.__initData = tmp15;
   const obj3 = { style: StyleSheet.absoluteFill, onLayout: callback };
-  const animatedProps = require("module_1652").useAnimatedProps(SettingsAppearanceGradientBackgroundTsx1);
+  const animatedProps = require("module_1655").useAnimatedProps(SettingsAppearanceGradientBackgroundTsx1);
   const merged = Object.assign(noop);
   obj3.animatedProps = animatedProps;
   return <c7 style={StyleSheet.absoluteFill} onLayout={callback} />;

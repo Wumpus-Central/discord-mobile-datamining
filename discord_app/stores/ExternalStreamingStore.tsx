@@ -1,15 +1,15 @@
-// === Module 15866: ExternalStreamingStore ===
+// === Module 15986: ExternalStreamingStore ===
 
-// Module 15866 (ExternalStreamingStore)
+// Module 15986 (ExternalStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import _modDef1342 from "module_1342" /* 1342 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7400 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import _modDef1345 from "module_1345" /* 1345 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7466 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7022 */;
-import StreamerModeStore from "StreamerModeStore" /* 5310 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7085 */;
+import StreamerModeStore from "StreamerModeStore" /* 5373 */;
 
 require = fn;
 function makeTwitchRequest(arg0, query, arg2) {
@@ -499,7 +499,7 @@ prototype2["getStream"] = function getStream() {
 ExternalStreamingStore.displayName = "ExternalStreamingStore";
 const externalStreamingStore = new ExternalStreamingStore(DispatcherDefault, {
   STREAMING_UPDATE: function streamUpdate(stream) {
-    if (_modDef1342(stream.stream, stream)) {
+    if (_modDef1345(stream.stream, stream)) {
       return false;
     } else {
       stream = stream.stream;

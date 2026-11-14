@@ -1,6 +1,6 @@
-// === Module 19655: useLaunchPadPullTabMinimized ===
+// === Module 19865: useLaunchPadPullTabMinimized ===
 
-// Module 19655 (useLaunchPadPullTabMinimized)
+// Module 19865 (useLaunchPadPullTabMinimized)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -22,7 +22,7 @@ export default function useLaunchPadPullTabMinimized(arg0) {
   _require = undefined;
   const isVoicePanelFullscreen = require("VoicePanelUtils").useIsVoicePanelFullscreen();
   const obj = require("VoicePanelUtils");
-  const sharedValue = require("module_1652").useSharedValue(false);
+  const sharedValue = require("module_1655").useSharedValue(false);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
@@ -49,7 +49,7 @@ export default function useLaunchPadPullTabMinimized(arg0) {
       }
     };
   }, items);
-  const obj2 = require("module_1652");
+  const obj2 = require("module_1655");
   const items1 = [closure_4, launchPadPullTabState, isVoicePanelFullscreen, launchPadSharedState, sharedValue];
   _require = undefined;
   dependencyMap = undefined;
@@ -70,5 +70,5 @@ export default function useLaunchPadPullTabMinimized(arg0) {
   useLaunchPadPullTabMinimizedTsx1.__closure = items2;
   useLaunchPadPullTabMinimizedTsx1.__workletHash = 11967190027017;
   useLaunchPadPullTabMinimizedTsx1.__initData = tmp4;
-  return require("module_1652").useDerivedValue(useLaunchPadPullTabMinimizedTsx1);
+  return require("module_1655").useDerivedValue(useLaunchPadPullTabMinimizedTsx1);
 };

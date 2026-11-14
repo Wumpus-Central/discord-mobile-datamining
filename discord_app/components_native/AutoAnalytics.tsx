@@ -1,37 +1,37 @@
-// === Module 19391: AutoAnalytics ===
+// === Module 19583: AutoAnalytics ===
 
-// Module 19391 (AutoAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import FavoritesUtils from "FavoritesUtils" /* 5117 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
-import getChannelOpenedMetadata from "getChannelOpenedMetadata" /* 8931 */;
-import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 8935 */;
-import GuildThemeAnalyticsUtils from "GuildThemeAnalyticsUtils" /* 19392 */;
-import trackGuildViewedClickstreamDefault from "trackGuildViewedClickstream" /* 19393 */;
-import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 19394 */;
-import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 19395 */;
+// Module 19583 (AutoAnalytics)
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import FavoritesUtils from "FavoritesUtils" /* 5180 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
+import getChannelOpenedMetadata from "getChannelOpenedMetadata" /* 8998 */;
+import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 9002 */;
+import GuildThemeAnalyticsUtils from "GuildThemeAnalyticsUtils" /* 19584 */;
+import trackGuildViewedClickstreamDefault from "trackGuildViewedClickstream" /* 19585 */;
+import trackFavoritesGuildViewedDefault from "trackFavoritesGuildViewed" /* 19586 */;
+import getChannelOpenedRouteTrackingProps from "getChannelOpenedRouteTrackingProps" /* 19587 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6966 */;
-import StageInstanceStore from "StageInstanceStore" /* 5097 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import NetworkStore from "NetworkStore" /* 6147 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 7252 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
-import UserStore from "UserStore" /* 1385 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7029 */;
+import StageInstanceStore from "StageInstanceStore" /* 5160 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+import NetworkStore from "NetworkStore" /* 6210 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_18, GuildFeatures: closure_19 } = Constants);
-const isStaticChannelRoute = fn(5099).isStaticChannelRoute;
+const isStaticChannelRoute = fn(5162).isStaticChannelRoute;
 const jsx = fn(21).jsx;
 const PureComponent = noop.PureComponent;
 class AutoAnalytics extends PureComponent {

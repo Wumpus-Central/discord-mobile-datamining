@@ -1,28 +1,28 @@
-// === Module 11308: StickerDetailActionSheet ===
+// === Module 11375: StickerDetailActionSheet ===
 
-// Module 11308 (StickerDetailActionSheet)
+// Module 11375 (StickerDetailActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5503 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
-import StickersUtils from "StickersUtils" /* 6729 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
-import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6859 */;
-import openUserSettings from "openUserSettings" /* 8537 */;
-import StarOutlineIcon2 from "StarOutlineIcon" /* 10112 */;
-import StarIcon from "StarIcon" /* 10114 */;
-import StickersHooks from "StickersHooks" /* 11290 */;
-import StickersActionCreators from "StickersActionCreators" /* 11291 */;
-import openStickersPremiumUpsellAlertDefault from "openStickersPremiumUpsellAlert" /* 11311 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5566 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
+import StickersUtils from "StickersUtils" /* 6792 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6922 */;
+import openUserSettings from "openUserSettings" /* 8604 */;
+import StarOutlineIcon2 from "StarOutlineIcon" /* 10181 */;
+import StarIcon from "StarIcon" /* 10183 */;
+import StickersHooks from "StickersHooks" /* 11357 */;
+import StickersActionCreators from "StickersActionCreators" /* 11358 */;
+import openStickersPremiumUpsellAlertDefault from "openStickersPremiumUpsellAlert" /* 11378 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import UserStore from "UserStore" /* 1385 */;
-import StickersStore from "StickersStore" /* 6947 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import UserStore from "UserStore" /* 1388 */;
+import StickersStore from "StickersStore" /* 7010 */;
 
 require = fn;
 function StandardStickerDetail(chatInputRef) {
@@ -149,7 +149,7 @@ function UnavailableStickerDetail(arg0) {
     if (null != stickerAssetUrl) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(11309, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(11376, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items1);
   const items2 = [closure_21(require("Sticker"), { sticker: renderableSticker, size: 48 }), , ];
@@ -193,15 +193,15 @@ function UnavailableStickerDetail(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ActivityIndicator: metroImportDefault, Pressable: closure_8 } = get_ActivityIndicator);
-const StickerPickerConstants = fn(11177);
+const StickerPickerConstants = fn(11244);
 ({ PADDING_HORIZONTAL: closure_12, MIN_MARGIN: map1, STICKER_SIZE: closure_14 } = StickerPickerConstants);
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_15, AnalyticsSections: closure_16, AnalyticEvents: closure_17, GuildFeatures: closure_18, UserSettingsSections: closure_19 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5504).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5567).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(5243);
-const PlatformUtils = fn(1377);
+const createStyles = fn(5306);
+const PlatformUtils = fn(1380);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -309,7 +309,7 @@ function GuildStickerDetail(sticker) {
     if (null != stickerAssetUrl) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(11309, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(11376, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items3);
   analyticsLocation = obj.useMemo(() => {

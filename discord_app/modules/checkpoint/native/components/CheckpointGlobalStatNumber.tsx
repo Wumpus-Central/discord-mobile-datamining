@@ -1,76 +1,100 @@
-// === Module 14381: CheckpointGlobalStatNumber ===
+// === Module 14504: CheckpointGlobalStatNumber ===
 
-// Module 14381 (CheckpointGlobalStatNumber)
-import _mod17 from "module_17" /* 17 */;
+// Module 14504 (CheckpointGlobalStatNumber)
 import nativeDefault from "native" /* 575 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 14373 */;
-import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 14374 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 14382 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 14383 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5243 */;
-import size from "module_2" /* 2 */;
+import CheckpointStatNumber from "CheckpointStatNumber" /* 14479 */;
+import CheckpointGlobeAnimationDefault from "CheckpointGlobeAnimation" /* 14480 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 14505 */;
+import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+const CheckpointStatNumberDefault = CheckpointStatNumber;
+
+require = fn;
 function GlobalStatValue(value) {
   value = value.value;
   if (typeof value === "string") {
     const obj = { value, size: 96 };
-    let tmp4 = React4(CheckpointStatNumberDefault, obj);
+    let tmp4 = hasOwnProperty(CheckpointStatNumberDefault, obj);
   } else {
     const obj2 = { end: value, size: 96 };
-    tmp4 = React4(CheckpointCountUpStatNumberDefault, obj2);
+    tmp4 = hasOwnProperty(CheckpointCountUpStatNumberDefault, obj2);
   }
   return tmp4;
 }
-const View = _mod17.View;
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { container: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", columnGap: nativeDefault.space.PX_8 }, croppedContainer: null, uncroppedContainer: null, clip: null, value: null, globe: null };
-let obj2 = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", columnGap: nativeDefault.space.PX_8 };
-obj.croppedContainer = { marginTop: -nativeDefault.space.PX_30, marginBottom: -nativeDefault.space.PX_20 };
-let obj3 = { marginTop: -nativeDefault.space.PX_30, marginBottom: -nativeDefault.space.PX_20 };
-obj.uncroppedContainer = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_4 };
-let obj4 = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_4 };
-obj.clip = { height: 96 - 2 * nativeDefault.space.PX_24, marginVertical: nativeDefault.space.PX_24, paddingRight: nativeDefault.space.PX_8, marginRight: -nativeDefault.space.PX_8, overflow: "hidden" };
-let obj5 = { height: 96 - 2 * nativeDefault.space.PX_24, marginVertical: nativeDefault.space.PX_24, paddingRight: nativeDefault.space.PX_8, marginRight: -nativeDefault.space.PX_8, overflow: "hidden" };
-obj.value = { marginTop: -nativeDefault.space.PX_24 };
-obj.globe = { width: 75, height: 56 };
-let closure_6 = createStyles.createStyles(obj);
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
+let c7 = 1.3392857142857142;
+const createStyles = fn(5306);
+let obj2 = { container: { flexDirection: "row", alignItems: "center", columnGap: nativeDefault.space.PX_8 }, croppedContainer: null, uncroppedContainer: null, clip: null, value: null, globe: null, globeImage: null };
+let obj3 = { flexDirection: "row", alignItems: "center", columnGap: nativeDefault.space.PX_8 };
+obj2.croppedContainer = { marginTop: -nativeDefault.space.PX_30, marginBottom: -nativeDefault.space.PX_20 };
+let obj4 = { marginTop: -nativeDefault.space.PX_30, marginBottom: -nativeDefault.space.PX_20 };
+obj2.uncroppedContainer = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_4 };
+let obj5 = { marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_4 };
+obj2.clip = { height: 96 - 2 * nativeDefault.space.PX_24, marginVertical: nativeDefault.space.PX_24, paddingRight: nativeDefault.space.PX_8, marginRight: -nativeDefault.space.PX_8, overflow: "hidden" };
+let obj6 = { height: 96 - 2 * nativeDefault.space.PX_24, marginVertical: nativeDefault.space.PX_24, paddingRight: nativeDefault.space.PX_8, marginRight: -nativeDefault.space.PX_8, overflow: "hidden" };
+obj2.value = { marginTop: -nativeDefault.space.PX_24 };
+obj2.globe = { flexShrink: 1 };
+obj2.globeImage = { width: "100%", aspectRatio: 1.3392857142857142 };
+let closure_8 = createStyles.createStyles(obj2);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointGlobalStatNumber.tsx");
 
 export default function CheckpointGlobalStatNumber(arg0) {
   ({ value, accessibilityLabel } = arg0);
-  const iter = closure_6();
+  _require = undefined;
+  const iter = closure_8();
   let result = value;
   if (typeof value === "number") {
-    result = CheckpointNumberUtils.formatCheckpointStatNumber(value);
+    result = require("CheckpointNumberUtils").formatCheckpointStatNumber(value);
+    const obj11 = require("CheckpointNumberUtils");
   }
+  _require = result;
   if (accessibilityLabel == null) {
     accessibilityLabel = result;
   }
-  const obj2 = { accessible: true, accessibilityLabel, style: null, children: null };
-  items = [iter.container, ];
+  items = [result];
+  const memo = noop.useMemo(() => {
+    const result = CheckpointStatNumber.getCheckpointStatNumberDigitHeight(c0, 96) / 0.7263157894736842;
+    const obj3 = { width: result * c7, transform: null };
+    items = [{ translateY: 3.936 * (1 - CheckpointStatNumber.getCheckpointStatNumberShrinkRatio(c0)) }];
+    obj3.transform = items;
+    return obj3;
+  }, items);
+  let obj2 = { accessible: true, accessibilityLabel, style: null, children: null };
+  const items1 = [iter.container, ];
   if (obj.isCheckpointStatNumberShrunk(result)) {
-    items[1] = iter.croppedContainer;
-    obj2.style = items;
-    const obj3 = { style: iter.clip, children: null };
+    items1[1] = iter.croppedContainer;
+    obj2.style = items1;
+    let obj3 = { style: iter.clip, children: null };
     const obj4 = { style: iter.value, children: null };
     const obj5 = { value };
-    obj4.children = React4(GlobalStatValue, obj5);
-    obj3.children = React4(View, obj4);
-    const items1 = [React4(View, obj3), ];
-    const obj6 = { style: iter.globe };
-    items1[1] = React4(CheckpointGlobeAnimationDefault, obj6);
-    obj2.children = items1;
-    let tmp3Result = hasOwnProperty(View, obj2);
-  } else {
-    items[1] = iter.uncroppedContainer;
-    obj2.style = items;
-    const obj7 = { value };
-    const items2 = [React4(GlobalStatValue, obj7), ];
-    const obj8 = { style: iter.globe };
-    items2[1] = React4(CheckpointGlobeAnimationDefault, obj8);
+    obj4.children = closure_5(GlobalStatValue, obj5);
+    obj3.children = closure_5(View, obj4);
+    const items2 = [closure_5(View, obj3), ];
+    const obj6 = { style: null, children: null };
+    const items3 = [iter.globe, memo];
+    obj6.style = items3;
+    const obj7 = { style: iter.globeImage };
+    obj6.children = closure_5(CheckpointGlobeAnimationDefault, obj7);
+    items2[1] = closure_5(View, obj6);
     obj2.children = items2;
-    tmp3Result = hasOwnProperty(View, obj2);
+    let tmp4Result = closure_6(View, obj2);
+  } else {
+    items1[1] = iter.uncroppedContainer;
+    obj2.style = items1;
+    const obj8 = { value };
+    const items4 = [closure_5(GlobalStatValue, obj8), ];
+    const obj9 = { style: null, children: null };
+    const items5 = [iter.globe, memo];
+    obj9.style = items5;
+    const obj10 = { style: iter.globeImage };
+    obj9.children = closure_5(CheckpointGlobeAnimationDefault, obj10);
+    items4[1] = closure_5(View, obj9);
+    obj2.children = items4;
+    tmp4Result = closure_6(View, obj2);
   }
-  return tmp3Result;
+  return tmp4Result;
 };

@@ -1,9 +1,9 @@
-// === Module 13630: ConjureImageOptions ===
+// === Module 13734: ConjureImageOptions ===
 
-// Module 13630 (ConjureImageOptions)
+// Module 13734 (ConjureImageOptions)
 import util from "util" /* 1113 */;
-import _modDef4079 from "module_4079" /* 4079 */;
-import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 7590 */;
+import _modDef4131 from "module_4131" /* 4131 */;
+import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 7656 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -81,7 +81,7 @@ export function imageOptionViewerSize(value) {
 export function ownImageOption(image) {
   const obj = { id: "own:" + image.attachment.id, label: null, image: null };
   const intl = util.intl;
-  obj.label = intl.string(_modDef4079.SUdqCQ);
+  obj.label = intl.string(_modDef4131.SUdqCQ);
   obj.image = { attachment_id: image.attachment.id };
   return obj;
 }
@@ -165,7 +165,7 @@ export function imageOptionCaption(option) {
 export function ownImageUploadText(question) {
   const intl = util.intl;
   const isMatch = /\bicons?\b/i.test(question.question);
-  const tmp2 = _modDef4079;
+  const tmp2 = _modDef4131;
   return intl.string(isMatch ? tmp2.qU4WN6 : tmp2.cbMDDB);
 }
 export function uploadHint(upload) {
@@ -173,13 +173,13 @@ export function uploadHint(upload) {
     return null;
   } else if (0 === upload.options.length) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef4079.ZZ641e);
+    let stringResult = intl2.string(_modDef4131.ZZ641e);
   } else {
     const intl = util.intl;
     if (1 === upload.options.length) {
-      let dkzChE = _modDef4079["2g3gk9"];
+      let dkzChE = _modDef4131["2g3gk9"];
     } else {
-      dkzChE = _modDef4079.dkzChE;
+      dkzChE = _modDef4131.dkzChE;
     }
     stringResult = intl.string(dkzChE);
   }
@@ -187,6 +187,6 @@ export function uploadHint(upload) {
 export function noImageAnswer() {
   const obj = { kind: "custom", text: null };
   const intl = util.intl;
-  obj.text = intl.string(_modDef4079.zxSq2q);
+  obj.text = intl.string(_modDef4131.zxSq2q);
   return obj;
 }

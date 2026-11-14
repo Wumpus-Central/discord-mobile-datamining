@@ -1,6 +1,6 @@
-// === Module 1405: Record ===
+// === Module 1408: Record ===
 
-// Module 1405 (Record)
+// Module 1408 (Record)
 import size from "module_2" /* 2 */;
 
 let Record;
@@ -153,12 +153,12 @@ prototype2["merge"] = function merge(arg0) {
   }
   return constructor;
 };
-prototype2["update"] = function update(arg0, value, fn) {
+prototype2["update"] = function update(arg0, arg1, fn) {
   const self = this;
   let tmp2 = tmp;
   if (this[arg0] instanceof Record) {
     if (undefined === tmp2) {
-      tmp2 = value;
+      tmp2 = arg1;
     }
     return self.set(arg0, fn(tmp2));
   } else {

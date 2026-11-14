@@ -1,11 +1,11 @@
-// === Module 13510: ConjureLiveBehindTip ===
+// === Module 13613: ConjureLiveBehindTip ===
 
-// Module 13510 (ConjureLiveBehindTip)
+// Module 13613 (ConjureLiveBehindTip)
 import util from "util" /* 1113 */;
-import _modDef4079 from "module_4079" /* 4079 */;
-import UploadIcon from "UploadIcon" /* 10664 */;
-import useConjureStartPublishDefault from "useConjureStartPublish" /* 13072 */;
-import ConjureTipHintDefault from "ConjureTipHint" /* 13505 */;
+import _modDef4131 from "module_4131" /* 4131 */;
+import UploadIcon from "UploadIcon" /* 10733 */;
+import useConjureStartPublishDefault from "useConjureStartPublish" /* 13171 */;
+import ConjureTipHintDefault from "ConjureTipHint" /* 13608 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ function LiveBehindHint(arg0) {
   closure_0 = useConjureStartPublishDefault(projectId, publish);
   const obj = { icon: UploadIcon.UploadIcon, onDismiss, children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef4079.fWfeZ8, {
+  obj.children = intl.format(_modDef4131.fWfeZ8, {
     onPublish() {
       return closure_0("outdated_notice");
     }
@@ -23,7 +23,7 @@ function LiveBehindHint(arg0) {
 }
 const jsx = fn(21).jsx;
 let obj = {};
-const merged = Object.assign(fn(13494).CONJURE_LIVE_BEHIND_TIP_BASE);
+const merged = Object.assign(fn(13597).CONJURE_LIVE_BEHIND_TIP_BASE);
 obj.render = function render(arg0, context) {
   const publish = context.context.publish;
   let tmp3 = null;

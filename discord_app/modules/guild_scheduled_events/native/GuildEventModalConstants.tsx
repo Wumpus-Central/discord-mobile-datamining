@@ -1,6 +1,6 @@
-// === Module 7900: GuildEventModalConstants ===
+// === Module 7966: GuildEventModalConstants ===
 
-// Module 7900 (GuildEventModalConstants)
+// Module 7966 (GuildEventModalConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/GuildEventModalConstants.tsx");

@@ -1,12 +1,12 @@
-// === Module 9619: GPlayActionCreators ===
+// === Module 9686: GPlayActionCreators ===
 
-// Module 9619 (GPlayActionCreators)
+// Module 9686 (GPlayActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IAPStore from "IAPStore" /* 9235 */;
+import IAPStore from "IAPStore" /* 9302 */;
 
 function getPlanIdForProduct(arg0, arg1) {
   if (arg1) {
@@ -98,7 +98,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
           closure_145_20 = undefined;
           c21 = 1;
           c22 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -506,7 +506,7 @@ let closure_40 = async function _verifyPurchase(arg0) {
             const tmp75 = state.getState().analyticsByProductId[closure_0.productId];
             closure_131_1 = tmp75;
             id = id.getId();
-            const SubscriptionProductIds = closure_2_0(8514).SubscriptionProductIds;
+            const SubscriptionProductIds = closure_2_0(8580).SubscriptionProductIds;
             const hasItem = SubscriptionProductIds.includes(closure_0.productId);
             let tmp53 = !hasItem;
             closure_131_2 = tmp53;
@@ -526,11 +526,11 @@ let closure_40 = async function _verifyPurchase(arg0) {
             }
             if (tmp53) {
               const obj4 = { source: "verifyPurchase", sku_id: closure_0.productId };
-              _true(1252).track(constants.GIFT_INFO_OPTIONS_MISSING, obj4);
-              const obj8 = _true(1252);
+              _true(1256).track(constants.GIFT_INFO_OPTIONS_MISSING, obj4);
+              const obj8 = _true(1256);
             }
             c6 = 1;
-            const HTTP = closure_2_0(1282).HTTP;
+            const HTTP = closure_2_0(1285).HTTP;
             const request = { url: constants2.VERIFY_PURCHASE, body: null, rejectWithError: false };
             const obj5 = { purchase_token: closure_0.purchaseToken, user_id: id, package_name: closure_0.packageName, subscription_sku_id: tmp52, one_time_purchase_sku_id: tmp51, gift_info_options, one_time_purchase_options: { consume_on_validate: true }, load_id: null };
             load_id = undefined;
@@ -600,58 +600,97 @@ let closure_40 = async function _verifyPurchase(arg0) {
     }
   })();
 };
-function captureGPlayBillingException(code, merged) {
+function captureGPlayBillingException(arg0, arg1) {
+  let obj = arg0;
   let tmp2 = null;
-  code = undefined;
-  if (code != null) {
-    code = code.code;
+  let code;
+  if (arg0 != null) {
+    code = obj.code;
   }
   if (!set3.has(code)) {
-    let code1;
-    if (code != tmp2) {
-      code1 = code.code;
-    }
-    const hasItem = set2.has(code1);
-    if (code != tmp2) {
-      const message = code.message;
+    let hasItem;
+    if (obj != tmp2) {
+      const message = obj.message;
       if (message != tmp2) {
-        const hasItem1 = message.includes("max attempts exceeded");
+        hasItem = message.includes("max attempts exceeded");
       }
     }
-    if (code != tmp2) {
-      const message2 = code.message;
-      if (message2 != tmp2) {
-        const hasItem2 = message2.includes("returned null");
+    if (true !== hasItem) {
+      let code1;
+      if (obj != tmp2) {
+        code1 = obj.code;
       }
-    }
-    if (!hasItem) {
-      if (true !== hasItem1) {
-        if (true !== hasItem2) {
-          const result = closure_0(getUserCountry[23]).captureBillingException(code, merged);
-          const obj = closure_0(getUserCountry[23]);
+      const hasItem1 = set2.has(code1);
+      if (obj != tmp2) {
+        const message2 = obj.message;
+        if (message2 != tmp2) {
+          const hasItem2 = message2.includes("returned null");
         }
       }
-    }
-    let captureBillingException = globalThis;
-    const _Math = Math;
-    if (Math.random() < 0.01) {
-      if (hasItem) {
-        tmp2 = code == tmp2;
-        let code2;
-        if (!tmp2) {
-          code2 = code.code;
+      let error = globalThis;
+      const _Error = Error;
+      let tmp8 = obj instanceof Error && typeof obj.code === "string";
+      if (tmp8) {
+        tmp8 = "userInfo" in obj;
+      }
+      let userInfo = arg1;
+      if (tmp8) {
+        const _Error2 = Error;
+        const error1 = new Error(obj.message);
+        error1.name = "GPlayBillingError";
+        error1.cause = obj;
+        const obj2 = { error: error1, options: null };
+        const obj3 = {};
+        const merged = Object.assign(userInfo);
+        const obj4 = {};
+        const merged1 = Object.assign(userInfo.tags);
+        obj4.gplay_code = obj.code;
+        const _String = String;
+        obj4.gplay_native_name = String(obj.name);
+        obj3.tags = obj4;
+        if (tmp2 != obj.userInfo) {
+          const obj5 = {};
+          const merged2 = Object.assign(userInfo.extra);
+          userInfo = obj.userInfo;
+          obj5.gplay_user_info = userInfo;
+          let extra = obj5;
+        } else {
+          extra = userInfo.extra;
         }
-        items = ["gplay-billing-error", captureBillingException.String(code2)];
-        let fingerprint = items;
+        obj3.extra = extra;
+        obj2.options = obj3;
       } else {
-        fingerprint = merged.fingerprint;
+        let obj6 = { error: obj, options: userInfo };
+        if (!hasItem1) {
+          if (true !== hasItem2) {
+            const result = closure_0(getUserCountry[23]).captureBillingException(obj6.error, obj6.options);
+            const obj7 = closure_0(getUserCountry[23]);
+          }
+        }
+        const _Math = Math;
+        if (Math.random() < 0.01) {
+          if (hasItem1) {
+            tmp2 = obj == tmp2;
+            let code2;
+            if (!tmp2) {
+              code2 = obj.code;
+            }
+            items = ["gplay-billing-error", error.String(code2)];
+            let fingerprint = items;
+          } else {
+            const options = obj6.options;
+            if (options != tmp2) {
+              fingerprint = options.fingerprint;
+            }
+          }
+          obj = closure_0(getUserCountry[23]);
+          error = obj6.error;
+          const obj8 = {};
+          obj6 = Object.assign(obj6.options);
+          obj8.fingerprint = fingerprint;
+          const result1 = obj.captureBillingException(error, obj8);
+        }
       }
-      captureBillingException = closure_0(getUserCountry[23]).captureBillingException;
-      const obj2 = {};
-      merged = Object.assign(merged);
-      obj2.fingerprint = fingerprint;
-      const result1 = captureBillingException(code, obj2);
-      const tmp16 = closure_0(getUserCountry[23]);
     }
   }
 }
@@ -659,14 +698,14 @@ let closure_3 = ["succeededOnlyFields"];
 let closure_4 = ["succeededOnlyFields"];
 let closure_5 = ["succeededOnlyFields"];
 let closure_6 = ["succeededOnlyFields"];
-const GPlayAnalyticsStore = fn(9546);
+const GPlayAnalyticsStore = fn(9613);
 ({ deleteGPlayAnalytics: closure_9, useGPlayAnalyticsStore: closure_10 } = GPlayAnalyticsStore);
 let Constants = fn(1072);
 ({ AnalyticEvents: map1, Endpoints: closure_14, PriceSetAssignmentPurchaseTypes: closure_15 } = Constants);
-Constants = fn(9236);
+Constants = fn(9303);
 const GPlayBillingResult = Constants.GPlayBillingResult;
 const GPlaySkusType = Constants.GPlaySkusType;
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({ PremiumSubscriptionSKUs: closure_18, SubscriptionPlanInfo: closure_19 } = PremiumConstants);
 const PaymentGateways = fn(1083).PaymentGateways;
 const BillingManager = fn(17).NativeModules.BillingManager;
@@ -707,7 +746,7 @@ asyncGeneratorStep(async () => {
           closure_129_1 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -799,7 +838,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -821,13 +860,14 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             return obj3;
           } else {
             closure_2 = tmp3;
-            closure_1 = tmp5;
+            closure_1 = tmp7;
             closure_129_0 = closure_0;
+            closure_129_1 = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "Path", done: true };
           }
-        } else if (1 === tmp8) {
+        } else if (1 === tmp7) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -844,18 +884,28 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             const obj5 = { value: HermesBuiltin.apply(items, undefined), done: false };
             return obj5;
           }
-        } else if (2 === tmp8) {
+        } else if (2 === tmp7) {
           c4 = 0;
-          closure_129_1 = closure_3;
-          let tmp16;
-          if (null != closure_130_2) {
-            const obj6 = { source: tmp15 };
-            tmp16 = obj6;
+          closure_129_2 = closure_3;
+          let tmp12 = null != closure_129_2;
+          if (tmp12) {
+            tmp12 = typeof closure_129_2 === "object";
           }
-          const obj7 = { tags: tmp16 };
-          captureGPlayBillingException(closure_129_1, obj7);
+          closure_129_1 = tmp12;
+          if (!closure_129_1) {
+            let tmp25;
+            if (null != closure_130_2) {
+              const obj6 = { source: tmp24 };
+              tmp25 = obj6;
+            }
+            const obj7 = { tags: tmp25 };
+            captureGPlayBillingException(closure_129_2, obj7);
+            if (closure_129_1) {
+              set.add(closure_129_2);
+            }
+          }
           if (closure_130_1) {
-            throw closure_129_1;
+            throw closure_129_2;
           } else {
             c6 = 3;
             return { value: "HermesInternal", done: null };
@@ -874,11 +924,11 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
           const obj = { value, done: true };
           return obj;
         }
-      } catch (tmp30) {
-        closure_3 = tmp30;
+      } catch (tmp46) {
+        closure_3 = tmp46;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp30;
+          throw tmp46;
         } else {
           c5 = tmp;
         }
@@ -924,7 +974,7 @@ asyncGeneratorStep(async () => {
           closure_129_1 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -1038,7 +1088,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -1060,13 +1110,14 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             return obj3;
           } else {
             closure_2 = tmp3;
-            closure_1 = tmp5;
+            closure_1 = tmp7;
             closure_129_0 = closure_0;
+            closure_129_1 = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "Path", done: true };
           }
-        } else if (1 === tmp8) {
+        } else if (1 === tmp7) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -1083,18 +1134,28 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             const obj5 = { value: HermesBuiltin.apply(items, undefined), done: false };
             return obj5;
           }
-        } else if (2 === tmp8) {
+        } else if (2 === tmp7) {
           c4 = 0;
-          closure_129_1 = closure_3;
-          let tmp16;
-          if (null != closure_130_2) {
-            const obj6 = { source: tmp15 };
-            tmp16 = obj6;
+          closure_129_2 = closure_3;
+          let tmp12 = null != closure_129_2;
+          if (tmp12) {
+            tmp12 = typeof closure_129_2 === "object";
           }
-          const obj7 = { tags: tmp16 };
-          captureGPlayBillingException(closure_129_1, obj7);
+          closure_129_1 = tmp12;
+          if (!closure_129_1) {
+            let tmp25;
+            if (null != closure_130_2) {
+              const obj6 = { source: tmp24 };
+              tmp25 = obj6;
+            }
+            const obj7 = { tags: tmp25 };
+            captureGPlayBillingException(closure_129_2, obj7);
+            if (closure_129_1) {
+              set.add(closure_129_2);
+            }
+          }
           if (closure_130_1) {
-            throw closure_129_1;
+            throw closure_129_2;
           } else {
             c6 = 3;
             return { value: "HermesInternal", done: null };
@@ -1113,11 +1174,11 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
           const obj = { value, done: true };
           return obj;
         }
-      } catch (tmp30) {
-        closure_3 = tmp30;
+      } catch (tmp46) {
+        closure_3 = tmp46;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp30;
+          throw tmp46;
         } else {
           c5 = tmp;
         }
@@ -1185,7 +1246,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -1207,13 +1268,14 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             return obj3;
           } else {
             closure_2 = tmp3;
-            closure_1 = tmp5;
+            closure_1 = tmp7;
             closure_129_0 = closure_0;
+            closure_129_1 = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "Path", done: true };
           }
-        } else if (1 === tmp8) {
+        } else if (1 === tmp7) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -1230,18 +1292,28 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             const obj5 = { value: HermesBuiltin.apply(items, undefined), done: false };
             return obj5;
           }
-        } else if (2 === tmp8) {
+        } else if (2 === tmp7) {
           c4 = 0;
-          closure_129_1 = closure_3;
-          let tmp16;
-          if (null != closure_130_2) {
-            const obj6 = { source: tmp15 };
-            tmp16 = obj6;
+          closure_129_2 = closure_3;
+          let tmp12 = null != closure_129_2;
+          if (tmp12) {
+            tmp12 = typeof closure_129_2 === "object";
           }
-          const obj7 = { tags: tmp16 };
-          captureGPlayBillingException(closure_129_1, obj7);
+          closure_129_1 = tmp12;
+          if (!closure_129_1) {
+            let tmp25;
+            if (null != closure_130_2) {
+              const obj6 = { source: tmp24 };
+              tmp25 = obj6;
+            }
+            const obj7 = { tags: tmp25 };
+            captureGPlayBillingException(closure_129_2, obj7);
+            if (closure_129_1) {
+              set.add(closure_129_2);
+            }
+          }
           if (closure_130_1) {
-            throw closure_129_1;
+            throw closure_129_2;
           } else {
             c6 = 3;
             return { value: "HermesInternal", done: null };
@@ -1260,11 +1332,11 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
           const obj = { value, done: true };
           return obj;
         }
-      } catch (tmp30) {
-        closure_3 = tmp30;
+      } catch (tmp46) {
+        closure_3 = tmp46;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp30;
+          throw tmp46;
         } else {
           c5 = tmp;
         }
@@ -1485,7 +1557,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -1507,13 +1579,14 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             return obj3;
           } else {
             closure_2 = tmp3;
-            closure_1 = tmp5;
+            closure_1 = tmp7;
             closure_129_0 = closure_0;
+            closure_129_1 = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "Path", done: true };
           }
-        } else if (1 === tmp8) {
+        } else if (1 === tmp7) {
           if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -1530,18 +1603,28 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             const obj5 = { value: HermesBuiltin.apply(items, undefined), done: false };
             return obj5;
           }
-        } else if (2 === tmp8) {
+        } else if (2 === tmp7) {
           c4 = 0;
-          closure_129_1 = closure_3;
-          let tmp16;
-          if (null != closure_130_2) {
-            const obj6 = { source: tmp15 };
-            tmp16 = obj6;
+          closure_129_2 = closure_3;
+          let tmp12 = null != closure_129_2;
+          if (tmp12) {
+            tmp12 = typeof closure_129_2 === "object";
           }
-          const obj7 = { tags: tmp16 };
-          captureGPlayBillingException(closure_129_1, obj7);
+          closure_129_1 = tmp12;
+          if (!closure_129_1) {
+            let tmp25;
+            if (null != closure_130_2) {
+              const obj6 = { source: tmp24 };
+              tmp25 = obj6;
+            }
+            const obj7 = { tags: tmp25 };
+            captureGPlayBillingException(closure_129_2, obj7);
+            if (closure_129_1) {
+              set.add(closure_129_2);
+            }
+          }
           if (closure_130_1) {
-            throw closure_129_1;
+            throw closure_129_2;
           } else {
             c6 = 3;
             return { value: "HermesInternal", done: null };
@@ -1560,11 +1643,11 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
           const obj = { value, done: true };
           return obj;
         }
-      } catch (tmp30) {
-        closure_3 = tmp30;
+      } catch (tmp46) {
+        closure_3 = tmp46;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp30;
+          throw tmp46;
         } else {
           c5 = tmp;
         }
@@ -1580,6 +1663,7 @@ const set2 = new Set(items1.map(String));
 const items2 = [, , ];
 ({ FEATURE_NOT_SUPPORTED: arr3[0], SERVICE_UNAVAILABLE: arr3[1], NETWORK_ERROR: arr3[2] } = GPlayBillingResult);
 const set3 = new Set(items2.map(String));
+const weakSet = new WeakSet();
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/native/GPlayActionCreators.tsx");
 

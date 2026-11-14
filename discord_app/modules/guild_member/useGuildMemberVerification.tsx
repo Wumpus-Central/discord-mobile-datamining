@@ -1,6 +1,6 @@
-// === Module 11555: useGuildMemberVerification ===
+// === Module 11622: useGuildMemberVerification ===
 
-// Module 11555 (useGuildMemberVerification)
+// Module 11622 (useGuildMemberVerification)
 import apply from "apply" /* 12 */;
 import noop from "module_19" /* 19 */;
 

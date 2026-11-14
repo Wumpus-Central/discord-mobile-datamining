@@ -1,8 +1,8 @@
-// === Module 7335: OAuth2AuthorizeModal ===
+// === Module 7399: OAuth2AuthorizeModal ===
 
-// Module 7335 (OAuth2AuthorizeModal)
+// Module 7399 (OAuth2AuthorizeModal)
 import nativeDefault from "native" /* 575 */;
-import spring_spring from "spring/spring" /* 5876 */;
+import spring_spring from "spring/spring" /* 5939 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, contentContainer: { flex: 1 }, titleContainer: { padding: 16, flexDirection: "row", gap: 16 }, titleContainerBorder: null, title: null };
 const rect = { position: "absolute", left: 0, right: 0, bottom: 0, height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.titleContainerBorder = rect;
@@ -25,10 +25,10 @@ let result = size.fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeMo
 
 export default function OAuth2AuthorizeModal(arg0) {
   const tmp = closure_8();
-  const tmp4 = sharedValue(7336)(arg0);
+  const tmp4 = sharedValue(7400)(arg0);
   _require = tmp4;
-  sharedValue = require("module_1652").useSharedValue(0);
-  let obj = require("module_1652");
+  sharedValue = require("module_1655").useSharedValue(0);
+  let obj = require("module_1655");
   items = [closure_9, sharedValue];
   _require = undefined;
   [tmp7, tmp8] = items;
@@ -46,12 +46,12 @@ export default function OAuth2AuthorizeModal(arg0) {
   OAuth2AuthorizeModalTsx1.__workletHash = 9078225687376;
   OAuth2AuthorizeModalTsx1.__initData = tmp7;
   const items2 = [sharedValue];
-  const animatedStyle = require("module_1652").useAnimatedStyle(OAuth2AuthorizeModalTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(OAuth2AuthorizeModalTsx1);
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: null, children: null };
   const items3 = [tmp.titleContainer, ];
-  const obj2 = require("module_1652");
-  items3[1] = { paddingTop: sharedValue(1627)().top + 16 };
+  const obj2 = require("module_1655");
+  items3[1] = { paddingTop: sharedValue(1630)().top + 16 };
   obj4.style = items3;
   const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
@@ -82,10 +82,10 @@ export default function OAuth2AuthorizeModal(arg0) {
   };
   if (null != tmp4.backStep) {
     const obj7 = { color: tmp2(575).colors.INTERACTIVE_TEXT_DEFAULT };
-    let tmp13Result = closure_5(tmp5(14432).ArrowSmallLeftIcon, obj7);
+    let tmp13Result = closure_5(tmp5(14493).ArrowSmallLeftIcon, obj7);
   } else {
     const obj8 = { color: tmp2(575).colors.INTERACTIVE_TEXT_DEFAULT };
-    tmp13Result = closure_5(tmp5(7483).XSmallIcon, obj8);
+    tmp13Result = closure_5(tmp5(7549).XSmallIcon, obj8);
   }
   obj6.children = tmp13Result;
   const items4 = [closure_5(require("Pressables").PressableOpacity, obj6), , ];
@@ -98,16 +98,16 @@ export default function OAuth2AuthorizeModal(arg0) {
   const obj11 = { style: null };
   const items5 = [tmp.titleContainerBorder, animatedStyle];
   obj11.style = items5;
-  items4[2] = closure_5(sharedValue(1652).View, obj11);
+  items4[2] = closure_5(sharedValue(1655).View, obj11);
   obj4.children = items4;
   const items6 = [closure_6(View, obj4), ];
   const obj12 = { bottom: true, style: tmp.contentContainer, children: null };
   const obj13 = {};
-  const obj5 = { paddingTop: sharedValue(1627)().top + 16 };
+  const obj5 = { paddingTop: sharedValue(1630)().top + 16 };
   const merged = Object.assign(tmp4);
   obj13.onScroll = callback;
   obj13.centerContent = true;
-  obj12.children = closure_5(sharedValue(15851), obj13);
+  obj12.children = closure_5(sharedValue(15971), obj13);
   items6[1] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, obj12);
   obj3.children = items6;
   return closure_6(View, obj3);

@@ -1,7 +1,7 @@
-// === Module 6129: VoiceQualityScoringExperiment ===
+// === Module 6192: VoiceQualityScoringExperiment ===
 
-// Module 6129 (VoiceQualityScoringExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 6192 (VoiceQualityScoringExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-voice-quality-scoring", kind: "user", defaultConfig: { enabled: false }, variations: null };

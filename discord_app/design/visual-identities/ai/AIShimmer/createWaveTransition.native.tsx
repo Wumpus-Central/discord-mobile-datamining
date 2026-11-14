@@ -1,9 +1,9 @@
-// === Module 13665: createWaveTransition ===
+// === Module 13769: createWaveTransition ===
 
-// Module 13665 (createWaveTransition)
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import waveTransition from "waveTransition" /* 13663 */;
+// Module 13769 (createWaveTransition)
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import waveTransition from "waveTransition" /* 13767 */;
 import size from "module_2" /* 2 */;
 
 let items = [{ code: "(function incomingSlotForPass_createWaveTransitionNativeTsx1(passIndex){return passIndex%2===0?'B':'A';})" }];
@@ -33,7 +33,7 @@ export function createWaveTransition(duration) {
   }
   let DEFAULT_PASS_DURATION = duration.duration;
   if (DEFAULT_PASS_DURATION == null) {
-    DEFAULT_PASS_DURATION = obj(13663).DEFAULT_PASS_DURATION;
+    DEFAULT_PASS_DURATION = obj(13767).DEFAULT_PASS_DURATION;
   }
   obj = { duration: DEFAULT_PASS_DURATION, random: null, reducedMotion: null, respectReducedMotion: null, animationProgress: null, crossFadeOpacity: null, glyphCount: null, onPass: null, onStart: null, onComplete: null };
   let random = duration.rng;
@@ -67,7 +67,7 @@ export function createWaveTransition(duration) {
   let str2 = "";
   if (0 < glyphCountResult) {
     do {
-      let GLYPH_PEAK = obj(13663).GLYPH_PEAK;
+      let GLYPH_PEAK = obj(13767).GLYPH_PEAK;
       let tmp5Result = tmp5();
       str = `${tmp8(tmp9 * obj(c1[0]).GLYPH_PEAK.length | 0)}`;
       num = num + 1;
@@ -84,7 +84,7 @@ export function createWaveTransition(duration) {
     closure_8 = closure_8 + 1;
     c6 = 0;
     c5 = false;
-    obj = _mod1652;
+    obj = _mod1655;
     obj.cancelAnimation(obj.animationProgress);
     if (c5) {
       const animationProgress = tmp4.animationProgress;
@@ -121,7 +121,7 @@ export function createWaveTransition(duration) {
       closure_8 = closure_8 + 1;
       c6 = 0;
       c5 = false;
-      obj = _mod1652;
+      obj = _mod1655;
       obj.cancelAnimation(obj.animationProgress);
       if (c5) {
         const animationProgress = obj2.animationProgress;
@@ -290,9 +290,9 @@ export function createWaveTransition(duration) {
       closure_8 = closure_8 + 1;
       c6 = 0;
       c5 = false;
-      obj = _mod1652;
+      obj = _mod1655;
       obj.cancelAnimation(obj.animationProgress);
-      _mod1652.cancelAnimation(obj.crossFadeOpacity);
+      _mod1655.cancelAnimation(obj.crossFadeOpacity);
     }
   };
   Object.defineProperty(obj3, "running", { get: () => c5, set: undefined });

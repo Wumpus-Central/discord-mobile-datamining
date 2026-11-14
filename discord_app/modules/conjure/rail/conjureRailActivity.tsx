@@ -1,15 +1,15 @@
-// === Module 10489: conjureRailActivity ===
+// === Module 10558: conjureRailActivity ===
 
-// Module 10489 (conjureRailActivity)
-import conjureUnread from "conjureUnread" /* 7267 */;
-import conjureProjectMute from "conjureProjectMute" /* 7268 */;
+// Module 10558 (conjureRailActivity)
+import conjureUnread from "conjureUnread" /* 7331 */;
+import conjureProjectMute from "conjureProjectMute" /* 7332 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ReadStateStore from "ReadStateStore" /* 6952 */;
-import ConjureChatStore from "ConjureChatStore" /* 7257 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7313 */;
+import ReadStateStore from "ReadStateStore" /* 7015 */;
+import ConjureChatStore from "ConjureChatStore" /* 7321 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 7377 */;
 
 const require = globalThis.__r;
 

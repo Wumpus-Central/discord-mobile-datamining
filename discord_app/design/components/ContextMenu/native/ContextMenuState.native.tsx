@@ -1,8 +1,8 @@
-// === Module 9082: ContextMenuState ===
+// === Module 9149: ContextMenuState ===
 
-// Module 9082 (ContextMenuState)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import _mod1652 from "module_1652" /* 1652 */;
+// Module 9149 (ContextMenuState)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
+import _mod1655 from "module_1655" /* 1655 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const module_560 = fn(560);
 const obj3 = module_560.create(() => ({ menu: null }));
-let items = [{ code: "(function updateContextMenuState_ContextMenuStateNativeTsx1(absoluteX,absoluteY,state){let[INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_OFFSET,scheduleOnRN,triggerHapticFeedback,HapticFeedbackTypes]=this.__closure;const{pan:pan,itemMeasurements:itemMeasurements,activeIndex:activeIndex}=state;pan.set(absoluteY);const bounds=itemMeasurements.get();let offset=0;while(offset<bounds.length){const width=bounds[offset+INDEX_BOUNDS_WIDTH_OFFSET];const height=bounds[offset+INDEX_BOUNDS_HEIGHT_OFFSET];const pageY=bounds[offset+INDEX_BOUNDS_PAGE_Y_OFFSET];const pageX=bounds[offset+INDEX_BOUNDS_PAGE_X_OFFSET];const lowerY=pageY;const upperY=pageY+height;const lowerX=pageX;const upperX=pageX+width;if(absoluteY>=lowerY&&absoluteY<=upperY&&absoluteX>=lowerX&&absoluteX<=upperX){const index=offset/INDEX_BOUNDS_OFFSET;if(activeIndex.get()!==index){activeIndex.set(index);scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.IMPACT_LIGHT);}return;}offset+=INDEX_BOUNDS_OFFSET;}activeIndex.set(-1);})" }, 2, 3, 1, 0, 4, fn(1705).scheduleOnRN, fn(5491).triggerHapticFeedback, fn(5491).HapticFeedbackTypes];
+let items = [{ code: "(function updateContextMenuState_ContextMenuStateNativeTsx1(absoluteX,absoluteY,state){let[INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_OFFSET,scheduleOnRN,triggerHapticFeedback,HapticFeedbackTypes]=this.__closure;const{pan:pan,itemMeasurements:itemMeasurements,activeIndex:activeIndex}=state;pan.set(absoluteY);const bounds=itemMeasurements.get();let offset=0;while(offset<bounds.length){const width=bounds[offset+INDEX_BOUNDS_WIDTH_OFFSET];const height=bounds[offset+INDEX_BOUNDS_HEIGHT_OFFSET];const pageY=bounds[offset+INDEX_BOUNDS_PAGE_Y_OFFSET];const pageX=bounds[offset+INDEX_BOUNDS_PAGE_X_OFFSET];const lowerY=pageY;const upperY=pageY+height;const lowerX=pageX;const upperX=pageX+width;if(absoluteY>=lowerY&&absoluteY<=upperY&&absoluteX>=lowerX&&absoluteX<=upperX){const index=offset/INDEX_BOUNDS_OFFSET;if(activeIndex.get()!==index){activeIndex.set(index);scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.IMPACT_LIGHT);}return;}offset+=INDEX_BOUNDS_OFFSET;}activeIndex.set(-1);})" }, 2, 3, 1, 0, 4, fn(1708).scheduleOnRN, fn(5554).triggerHapticFeedback, fn(5554).HapticFeedbackTypes];
 let closure_129_0;
 let closure_129_1;
 let closure_129_2;
@@ -92,9 +92,9 @@ export function useIsContextMenuActive(contextMenuState) {
 }
 export { updateContextMenuState };
 export function useContextMenuState() {
-  const sharedValue = _mod1652.useSharedValue(-1);
-  const sharedValue1 = _mod1652.useSharedValue([]);
-  const sharedValue2 = _mod1652.useSharedValue(-1);
+  const sharedValue = _mod1655.useSharedValue(-1);
+  const sharedValue1 = _mod1655.useSharedValue([]);
+  const sharedValue2 = _mod1655.useSharedValue(-1);
   items = [sharedValue, sharedValue1, sharedValue2];
   return noop.useMemo(() => ({ pan: sharedValue, itemMeasurements: sharedValue1, activeIndex: sharedValue2 }), items);
 }

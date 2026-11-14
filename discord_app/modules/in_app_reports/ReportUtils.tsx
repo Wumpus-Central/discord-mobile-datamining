@@ -1,17 +1,17 @@
-// === Module 12000: in_app_reports/ReportUtils ===
+// === Module 12067: in_app_reports/ReportUtils ===
 
-// Module 12000 (in_app_reports/ReportUtils)
+// Module 12067 (in_app_reports/ReportUtils)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
-import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6826 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6852 */;
-import MenuTypes from "MenuTypes" /* 11997 */;
-import ReportMenuType from "ReportMenuType" /* 11999 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6889 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 6915 */;
+import MenuTypes from "MenuTypes" /* 12064 */;
+import ReportMenuType from "ReportMenuType" /* 12066 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5869 */;
+import DevSettingsStore from "DevSettingsStore" /* 5932 */;
 
 require = fn;
 function getReportMenu() {
@@ -230,7 +230,7 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  let obj2 = { channel_id: "ti", message_id: "channel", stage_instance_id: "sr", guild_id: "httpServerLocation", guild_scheduled_event_id: "channel", user_id: "w", email_token: "next", application_id: "channel", entrypoint: "k", widget_id: "fill" };
+  let obj2 = { channel_id: "Array", message_id: "alignItems", stage_instance_id: "to", guild_id: "kind", guild_scheduled_event_id: "r", user_id: "isArray", email_token: "r", application_id: "description", entrypoint: "a", widget_id: "isArray" };
   obj.language = str;
   obj.breadcrumbs = arr.map((nodeRef) => nodeRef.nodeRef);
   obj.elements = arr.reduce((acc, item) => {
@@ -369,7 +369,7 @@ function genSubmitData(version, name, arr, email_token) {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, Endpoints: metroImportDefault } = Constants);
-const SafetyToastType = fn(6847).SafetyToastType;
+const SafetyToastType = fn(6910).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/ReportUtils.tsx");
 
@@ -408,7 +408,7 @@ export function submitReport(language, name, arr) {
   if (DevSettingsStore.get("iar_skip_api_report_submit")) {
     let resolved = Promise.resolve();
   } else {
-    const REPORT_TO_MOD = obj4(11999).ReportMenuTypeSets.REPORT_TO_MOD;
+    const REPORT_TO_MOD = obj4(12066).ReportMenuTypeSets.REPORT_TO_MOD;
     if (REPORT_TO_MOD.has(name.name)) {
       let str2 = language.language;
       const obj = { version: null, variant: null, language: null, breadcrumbs: null, elements: null };
@@ -441,8 +441,8 @@ export function submitReport(language, name, arr) {
         return {};
       }, {});
       let tmp14 = null;
-      if (name.name === tmp4(11997).ModeratorReportNames.MESSAGE) {
-        let obj2 = { channel_id: "a", message_id: "isArray", guild_id: "isArray" };
+      if (name.name === tmp4(12064).ModeratorReportNames.MESSAGE) {
+        let obj2 = { channel_id: "channel_id", message_id: "flex", guild_id: "analyticsLocations" };
         obj4 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);
@@ -453,12 +453,12 @@ export function submitReport(language, name, arr) {
         tmp14 = obj4;
       }
       obj4 = tmp14;
-      const HTTP2 = tmp4(1282).HTTP;
-      const REPORT_TO_MOD2 = tmp4(11999).ReportMenuTypeSets.REPORT_TO_MOD;
+      const HTTP2 = tmp4(1285).HTTP;
+      const REPORT_TO_MOD2 = tmp4(12066).ReportMenuTypeSets.REPORT_TO_MOD;
       const _HermesInternal2 = HermesInternal;
       const hasItem = REPORT_TO_MOD2.has(name.name);
       _modDef38(hasItem, "Invalid report type " + name.name);
-      if (name.name === tmp4(11997).ModeratorReportNames.MESSAGE) {
+      if (name.name === tmp4(12064).ModeratorReportNames.MESSAGE) {
         const request = { url: closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id), body: tmp14, rejectWithError: false };
         let nextPromise = HTTP2.post(request).then((result) => {
           SafetyToastsActionCreatorsDefault.showSuccessToast(SafetyToastType.REPORT_TO_MOD_SUCCESS);
@@ -490,11 +490,11 @@ export function submitReport(language, name, arr) {
         throw error;
       }
     } else {
-      const HTTP = tmp4(1282).HTTP;
+      const HTTP = tmp4(1285).HTTP;
       const request1 = { url: null, body: null, rejectWithError: false };
       name = name.name;
       let _Object = Object;
-      const values = Object.values(tmp4(11997).ReportNames);
+      const values = Object.values(tmp4(12064).ReportNames);
       const _HermesInternal = HermesInternal;
       const hasItem1 = values.includes(name);
       _modDef38(hasItem1, "Invalid report type " + name.name);
@@ -503,7 +503,7 @@ export function submitReport(language, name, arr) {
       nextPromise = HTTP.post(request1);
     }
     resolved = nextPromise.then((result) => {
-      QualtricsActionCreatorsDefault.fireSurveyAction(obj4(6833).SurveyActionTypes.REPORT_SUBMITTED);
+      QualtricsActionCreatorsDefault.fireSurveyAction(obj4(6896).SurveyActionTypes.REPORT_SUBMITTED);
       return result;
     });
   }

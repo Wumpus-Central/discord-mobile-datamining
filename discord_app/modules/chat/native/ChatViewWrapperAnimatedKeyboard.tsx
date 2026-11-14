@@ -1,24 +1,24 @@
-// === Module 11938: ChatViewWrapperAnimatedKeyboard ===
+// === Module 12006: ChatViewWrapperAnimatedKeyboard ===
 
-// Module 11938 (ChatViewWrapperAnimatedKeyboard)
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5851 */;
-import LayerScope from "LayerScope" /* 5853 */;
-import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 11939 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11951 */;
-import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 11953 */;
-import StickyWrapper from "StickyWrapper" /* 11954 */;
+// Module 12006 (ChatViewWrapperAnimatedKeyboard)
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5914 */;
+import LayerScope from "LayerScope" /* 5916 */;
+import useChannelSafeAreaHeightSharedValueDefault from "useChannelSafeAreaHeightSharedValue" /* 12007 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 12018 */;
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 12020 */;
+import StickyWrapper from "StickyWrapper" /* 12021 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const Easing = fn(1652).Easing;
-let obj = { duration: fn(5488).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
+const Easing = fn(1655).Easing;
+let obj = { duration: fn(5551).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
 let closure_8 = { code: "(function ChatViewWrapperAnimatedKeyboardTsx1(){let[animatedHeight]=this.__closure;return animatedHeight.get();})" };
 let closure_9 = { code: "(function ChatViewWrapperAnimatedKeyboardTsx2(height,heightPrev){let[animatedAdjustedMargin,animatedAdjustedMarginPending]=this.__closure;if(heightPrev==null){return;}if(height<heightPrev){animatedAdjustedMargin.set(height);animatedAdjustedMarginPending.set(-1);}else{animatedAdjustedMarginPending.set(height);}})" };
 let closure_10 = { code: "(function ChatViewWrapperAnimatedKeyboardTsx3(finished){let[animatedAdjustedMarginPending,animatedAdjustedMargin]=this.__closure;if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}})" };
@@ -46,8 +46,8 @@ export default function ChatViewWrapperAnimatedKeyboard(arg0) {
   ({ children, stickyHeader } = arg0);
   obj = useChannelSafeAreaHeightSharedValueDefault();
   const tmp3 = useChatViewPointerEventsDefault(channelId);
-  const sharedValue = _mod1652.useSharedValue(obj.get());
-  const sharedValue1 = _mod1652.useSharedValue(-1);
+  const sharedValue = _mod1655.useSharedValue(obj.get());
+  const sharedValue1 = _mod1655.useSharedValue(-1);
   items = [closure_8, obj];
   c0 = undefined;
   [tmp7, tmp8] = items;
@@ -86,7 +86,7 @@ export default function ChatViewWrapperAnimatedKeyboard(arg0) {
   ChatViewWrapperAnimatedKeyboardTsx2.__closure = items3;
   ChatViewWrapperAnimatedKeyboardTsx2.__workletHash = 10320676760625;
   ChatViewWrapperAnimatedKeyboardTsx2.__initData = tmp9;
-  const animatedReaction = _mod1652.useAnimatedReaction(ChatViewWrapperAnimatedKeyboardTsx1, ChatViewWrapperAnimatedKeyboardTsx2);
+  const animatedReaction = _mod1655.useAnimatedReaction(ChatViewWrapperAnimatedKeyboardTsx1, ChatViewWrapperAnimatedKeyboardTsx2);
   const items4 = [closure_11, sharedValue, timing_timing.withTiming, obj, obj, closure_10, sharedValue1];
   c0 = undefined;
   c1 = undefined;
@@ -144,13 +144,13 @@ export default function ChatViewWrapperAnimatedKeyboard(arg0) {
   ChatViewWrapperAnimatedKeyboardTsx4.__closure = items5;
   ChatViewWrapperAnimatedKeyboardTsx4.__workletHash = 8586064025936;
   ChatViewWrapperAnimatedKeyboardTsx4.__initData = tmp13;
-  const animatedStyle = _mod1652.useAnimatedStyle(ChatViewWrapperAnimatedKeyboardTsx4);
+  const animatedStyle = _mod1655.useAnimatedStyle(ChatViewWrapperAnimatedKeyboardTsx4);
   const obj5 = { children: null };
   const obj6 = { header: stickyHeader, style, pointerEvents: tmp3, children: null };
   const obj7 = { style: animatedStyle, children: null };
   const items6 = [hasOwnProperty(View, { style, children }), hasOwnProperty(closure_12, { channelId })];
   obj7.children = items6;
-  obj6.children = timestampProducer(_modDef1652.View, obj7);
+  obj6.children = timestampProducer(_modDef1655.View, obj7);
   obj5.children = hasOwnProperty(StickyWrapper.StickyWrapper, obj6);
   return hasOwnProperty(LayerScope.LayerScope, obj5);
 };

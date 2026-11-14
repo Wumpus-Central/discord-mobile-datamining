@@ -1,11 +1,11 @@
-// === Module 18345: UserSettingsDesignSystemAIShimmer ===
+// === Module 18468: UserSettingsDesignSystemAIShimmer ===
 
-// Module 18345 (UserSettingsDesignSystemAIShimmer)
-import Text_Text from "Text/Text" /* 5866 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import Stack_Stack from "Stack/Stack" /* 6274 */;
-import Card from "Card" /* 7381 */;
-import AIShimmer from "AIShimmer" /* 13661 */;
+// Module 18468 (UserSettingsDesignSystemAIShimmer)
+import Text_Text from "Text/Text" /* 5929 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import Stack_Stack from "Stack/Stack" /* 6337 */;
+import Card from "Card" /* 7445 */;
+import AIShimmer from "AIShimmer" /* 13765 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({ container: { padding: 16 }, buttonRow: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, stage: { minHeight: 28, justifyContent: "center" } });
 const text = ["Reading the channel", "Finding the highlights", "Writing it up"];
 const options = ["body-xs/normal", "body-sm/normal", "body-md/normal", "body-lg/semibold"];

@@ -1,13 +1,13 @@
-// === Module 18983: InterestTileEdge ===
+// === Module 19037: InterestTileEdge ===
 
-// Module 18983 (InterestTileEdge)
+// Module 19037 (InterestTileEdge)
 import nativeDefault from "native" /* 575 */;
-import _modDef1652 from "module_1652" /* 1652 */;
+import _modDef1655 from "module_1655" /* 1655 */;
 import noop from "module_19" /* 19 */;
 
-const GRID_COVER_HAIRLINE_WIDTH = fn(18979).GRID_COVER_HAIRLINE_WIDTH;
+const GRID_COVER_HAIRLINE_WIDTH = fn(19025).GRID_COVER_HAIRLINE_WIDTH;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_4 = createStyles.createStyles((borderRadius) => {
   const obj = { edge: { position: "absolute", inset: 0, borderWidth: GRID_COVER_HAIRLINE_WIDTH, borderRadius, borderColor: nativeDefault.colors.BORDER_MUTED } };
   return obj;
@@ -19,5 +19,5 @@ export default function InterestTileEdge(radius) {
   const obj = { accessible: false, pointerEvents: "none", style: null };
   items = [closure_4(radius.radius).edge, radius.style];
   obj.style = items;
-  return jsx(_modDef1652.View, { accessible: false, pointerEvents: "none", style: null });
+  return jsx(_modDef1655.View, { accessible: false, pointerEvents: "none", style: null });
 };

@@ -1,9 +1,9 @@
-// === Module 10925: BellSlashIcon ===
+// === Module 10994: BellSlashIcon ===
 
-// Module 10925 (BellSlashIcon)
+// Module 10994 (BellSlashIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod10926 from "module_10926" /* 10926 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod10995 from "module_10995" /* 10995 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BellSlashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10926, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10995, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,9 +1,9 @@
-// === Module 10155: parseWaterwheelsCard ===
+// === Module 10224: parseWaterwheelsCard ===
 
-// Module 10155 (parseWaterwheelsCard)
+// Module 10224 (parseWaterwheelsCard)
 import LoggerDefault from "Logger" /* 3 */;
 import apply from "apply" /* 12 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10156 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10225 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
@@ -48,11 +48,18 @@ function isActionValid(value) {
 function mapLayout(layout) {
   const type = layout.type;
   if ("server_row" === type) {
-    ({ guild_id, icon_url, online, members } = layout);
+    const description = layout.description;
+    let tmp9 = null;
+    ({ guild_id, icon_url, online, members, partnered } = layout);
     const obj4 = {};
-    let merged = Object.assign(Object.assign(layout, Object.assign({ guild_id: 0, icon_url: 0, online: 0, members: 0 })));
+    let merged = Object.assign(Object.assign(layout, Object.assign({ guild_id: 0, icon_url: 0, online: 0, members: 0, description: 0, partnered: 0 })));
     obj4.guildId = guild_id;
     obj4.iconUrl = icon_url;
+    if (typeof description === "string") {
+      tmp9 = description;
+    }
+    obj4.description = tmp9;
+    obj4.partnered = true === partnered;
     let _Number = Number;
     obj4.online = Number(online);
     let _Number2 = Number;
@@ -71,27 +78,58 @@ function mapLayout(layout) {
     const merged2 = Object.assign(_objectWithoutProperties(layout, closure_3));
     ({ title: obj2.title, subtitle: obj2.subtitle, icon_url: obj2.iconUrl } = header);
     obj.header = { title: null, subtitle: null, iconUrl: null };
-    obj.items = items.map((server) => {
-      server = server.server;
-      ({ game_id, cover_url } = server);
+    obj.items = items.map((item) => {
+      ({ server, description, hero_url, l30_rank } = item);
+      ({ game_id, cover_url } = item);
       const obj = {};
-      const merged = Object.assign(Object.assign(server, Object.assign({ game_id: 0, cover_url: 0, server: 0 })));
+      const merged = Object.assign(Object.assign(item, Object.assign({ game_id: 0, cover_url: 0, server: 0, description: 0, hero_url: 0, l30_rank: 0 })));
       obj.gameId = game_id;
-      obj.coverUrl = cover_url;
       let tmp2 = null;
+      if (typeof description === "string") {
+        tmp2 = null;
+        if ("" !== description.trim()) {
+          tmp2 = description;
+        }
+      }
+      obj.description = tmp2;
+      let tmp3 = null;
+      if (typeof hero_url === "string") {
+        tmp3 = hero_url;
+      }
+      obj.heroUrl = tmp3;
+      let tmp4 = null;
+      if (typeof l30_rank === "number") {
+        const _Number3 = Number;
+        tmp4 = null;
+        if (Number.isSafeInteger(l30_rank)) {
+          tmp4 = null;
+          if (l30_rank > 0) {
+            tmp4 = l30_rank;
+          }
+        }
+      }
+      obj.l30Rank = tmp4;
+      obj.coverUrl = cover_url;
+      let tmp5 = null;
       if (null != server) {
-        ({ guild_id, icon_url, online, members } = server);
+        ({ description: description2, guild_id, icon_url, online, members, partnered } = server);
         const obj3 = {};
-        const merged1 = Object.assign(Object.assign(server, Object.assign({ guild_id: 0, icon_url: 0, online: 0, members: 0 })));
+        const merged1 = Object.assign(Object.assign(server, Object.assign({ guild_id: 0, icon_url: 0, online: 0, members: 0, description: 0, partnered: 0 })));
         obj3.guildId = guild_id;
         obj3.iconUrl = icon_url;
+        let tmp9 = null;
+        if (typeof description2 === "string") {
+          tmp9 = description2;
+        }
+        obj3.description = tmp9;
+        obj3.partnered = true === partnered;
         const _Number = Number;
         obj3.online = Number(online);
         const _Number2 = Number;
         obj3.members = Number(members);
-        tmp2 = obj3;
+        tmp5 = obj3;
       }
-      obj.server = tmp2;
+      obj.server = tmp5;
       return obj;
     });
     return obj;

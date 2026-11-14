@@ -1,7 +1,7 @@
-// === Module 11214: useShowNitroUpsellCallback ===
+// === Module 11281: useShowNitroUpsellCallback ===
 
-// Module 11214 (useShowNitroUpsellCallback)
-import _mod1652 from "module_1652" /* 1652 */;
+// Module 11281 (useShowNitroUpsellCallback)
+import _mod1655 from "module_1655" /* 1655 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -9,7 +9,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/hooks/useShowNitroUpsellCallback.tsx");
 
 export default function useShowNitroUpsellCallback() {
-  const sharedValue = _mod1652.useSharedValue(false);
+  const sharedValue = _mod1655.useSharedValue(false);
   items = [sharedValue];
   return {
     shouldShowUpsell: sharedValue,

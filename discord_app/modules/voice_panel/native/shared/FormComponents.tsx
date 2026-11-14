@@ -1,18 +1,18 @@
-// === Module 10525: FormComponents ===
+// === Module 10594: FormComponents ===
 
-// Module 10525 (FormComponents)
+// Module 10594 (FormComponents)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import NativeViewDefault from "NativeView" /* 7656 */;
-import TableRowGroup from "TableRowGroup" /* 7680 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 8071 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8402 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 10526 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import NativeViewDefault from "NativeView" /* 7722 */;
+import TableRowGroup from "TableRowGroup" /* 7746 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 8136 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8468 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 10595 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 6005 */;
+import PresenceStore from "PresenceStore" /* 6068 */;
 
 require = fn;
 function VoiceBadges(arg0) {
@@ -42,7 +42,7 @@ function VoiceBadges(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: { marginLeft: 8, padding: 6, backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: nativeDefault.radii.round }, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.icon = size;

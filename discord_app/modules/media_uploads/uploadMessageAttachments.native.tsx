@@ -1,8 +1,8 @@
-// === Module 8953: uploadMessageAttachments ===
+// === Module 9020: uploadMessageAttachments ===
 
-// Module 8953 (uploadMessageAttachments)
+// Module 9020 (uploadMessageAttachments)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UploadStore from "UploadStore" /* 8954 */;
+import UploadStore from "UploadStore" /* 9021 */;
 
 const require = fn;
 let closure_6 = async function _uploadMessageAttachments(arg0) {
@@ -43,7 +43,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

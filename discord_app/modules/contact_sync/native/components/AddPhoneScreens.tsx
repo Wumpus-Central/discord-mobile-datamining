@@ -1,28 +1,28 @@
-// === Module 14907: AddPhoneScreens ===
+// === Module 15021: AddPhoneScreens ===
 
-// Module 14907 (AddPhoneScreens)
+// Module 15021 (AddPhoneScreens)
 import nativeDefault from "native" /* 575 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7521 */;
-import AddPhoneDefault from "AddPhone" /* 7753 */;
-import PhoneActionCreators from "PhoneActionCreators" /* 7754 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14879 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7587 */;
+import AddPhoneDefault from "AddPhone" /* 7819 */;
+import PhoneActionCreators from "PhoneActionCreators" /* 7820 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 14993 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 const PhoneActionCreatorsDefault = PhoneActionCreators;
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(14880).useContactSyncModalStore;
+const useContactSyncModalStore = fn(14994).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
-let obj2 = { container: { paddingTop: fn(5829).NAV_BAR_HEIGHT + 32 }, redesignContainer: null, header: null, title: null, subtitle: null };
-let obj3 = { paddingTop: fn(5829).NAV_BAR_HEIGHT + 32 };
-obj2.redesignContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: fn(5829).NAV_BAR_HEIGHT + 32 };
+const createStyles = fn(5306);
+let obj2 = { container: { paddingTop: fn(5892).NAV_BAR_HEIGHT + 32 }, redesignContainer: null, header: null, title: null, subtitle: null };
+let obj3 = { paddingTop: fn(5892).NAV_BAR_HEIGHT + 32 };
+obj2.redesignContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: fn(5892).NAV_BAR_HEIGHT + 32 };
 obj2.header = { alignItems: "center" };
 obj2.title = { textAlign: "center" };
 obj2.subtitle = { marginTop: 8, lineHeight: 18, textAlign: "center" };

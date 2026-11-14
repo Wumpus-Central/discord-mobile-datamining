@@ -1,16 +1,16 @@
-// === Module 10991: HighlightText ===
+// === Module 11060: HighlightText ===
 
-// Module 10991 (HighlightText)
+// Module 11060 (HighlightText)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = { text: null };
 const obj3 = { fontFamily: fn(1072).Fonts.PRIMARY_BOLD, backgroundColor: null, color: null };
-const ColorUtils = fn(5240);
+const ColorUtils = fn(5303);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.YELLOW_300, 0.3);
 obj3.color = nativeDefault.colors.TEXT_STRONG;
 obj2.text = obj3;

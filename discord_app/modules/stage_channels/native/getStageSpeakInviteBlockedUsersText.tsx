@@ -1,6 +1,6 @@
-// === Module 12828: getStageSpeakInviteBlockedUsersText ===
+// === Module 12924: getStageSpeakInviteBlockedUsersText ===
 
-// Module 12828 (getStageSpeakInviteBlockedUsersText)
+// Module 12924 (getStageSpeakInviteBlockedUsersText)
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 

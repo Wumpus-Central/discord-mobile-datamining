@@ -1,12 +1,12 @@
-// === Module 8408: UserPlaceholderRow ===
+// === Module 8474: UserPlaceholderRow ===
 
-// Module 8408 (UserPlaceholderRow)
+// Module 8474 (UserPlaceholderRow)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import timingPresets from "timingPresets" /* 5488 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import timingPresets from "timingPresets" /* 5551 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles((height) => {
   const obj = { row: { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height }, rowInner: null, rowHeaderWrapper: null, placeholderAvatar: null, placeholderText: null };
   const obj2 = { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height };
@@ -42,9 +42,9 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   _require = undefined;
   flag = undefined;
   const tmp3 = closure_8(height);
-  const sharedValue = require("module_1652").useSharedValue(1);
+  const sharedValue = require("module_1655").useSharedValue(1);
   _require = sharedValue;
-  let obj = require("module_1652");
+  let obj = require("module_1655");
   const tmp4 = _require;
   items = [AccessibilityStore];
   if (flag) {
@@ -53,8 +53,8 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   const items1 = [flag, sharedValue];
   const effect = noop.useEffect(() => {
     if (flag) {
-      const obj = _mod1652;
-      const obj2 = _mod1652;
+      const obj = _mod1655;
+      const obj2 = _mod1655;
       const obj4 = { duration: 2 * timingPresets.timingSlowDuration };
       const withTimingResult = timing_timing.withTiming(0.3, obj4);
       const obj6 = { duration: 2 * timingPresets.timingSlowDuration };
@@ -77,7 +77,7 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   UserPlaceholderRowTsx1.__closure = items3;
   UserPlaceholderRowTsx1.__workletHash = 5854204937948;
   UserPlaceholderRowTsx1.__initData = tmp8;
-  const animatedStyle = tmp4(1652).useAnimatedStyle(UserPlaceholderRowTsx1);
+  const animatedStyle = tmp4(1655).useAnimatedStyle(UserPlaceholderRowTsx1);
   let obj3 = { style: null, collapsable: false, children: null };
   const items4 = [tmp3.row, animatedStyle];
   obj3.style = items4;
@@ -95,5 +95,5 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   obj5.children = closure_6(View, obj6);
   items5[1] = closure_6(View, obj5);
   obj3.children = items5;
-  return closure_7(flag(1652).View, obj3);
+  return closure_7(flag(1655).View, obj3);
 });

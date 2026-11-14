@@ -1,15 +1,15 @@
-// === Module 16843: commands/userProfile ===
+// === Module 16966: commands/userProfile ===
 
-// Module 16843 (commands/userProfile)
+// Module 16966 (commands/userProfile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
 const RPCCommands = fn(1072).RPCCommands;
 const weakMap = new WeakMap();
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(16799);
+const CONTEXT_MENU_ICON_NAMES = fn(16922);
 obj[RPCCommands.OPEN_USER_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.OPEN_USER_PROFILE, {
-  scope: fn(6698).RPC_EMBEDDED_APP_SCOPE,
+  scope: fn(6761).RPC_EMBEDDED_APP_SCOPE,
   handler(socket) {
     socket = socket.socket;
     let user_id = socket.args.user_id;
@@ -38,9 +38,9 @@ obj[RPCCommands.OPEN_USER_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RP
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              ({ iframeId: closure_0, frame } = user_id(16792)(socket));
-              const tmp22 = user_id(16792)(socket);
-              ({ guildId: closure_1, channelId: c2 } = user_id(16844)(frame));
+              ({ iframeId: closure_0, frame } = user_id(16915)(socket));
+              const tmp22 = user_id(16915)(socket);
+              ({ guildId: closure_1, channelId: c2 } = user_id(16967)(frame));
               value = weakMap.get(socket);
               let iframeId = value;
               if (value == null) {
@@ -86,11 +86,11 @@ obj[RPCCommands.OPEN_USER_PROFILE] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RP
                     const obj5 = { value: promise, done: false };
                     return obj5;
                   }
-                  obj2 = iframeId(16845);
+                  obj2 = iframeId(16968);
                 }
               }
               c3 = 3;
-              const tmp23 = user_id(16844)(frame);
+              const tmp23 = user_id(16967)(frame);
             }
           } else if (arg0 === 1) {
             c3 = 3;

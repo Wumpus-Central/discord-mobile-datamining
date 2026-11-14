@@ -1,8 +1,8 @@
-// === Module 15121: MediaViewerItemTransformPresenter ===
+// === Module 15235: MediaViewerItemTransformPresenter ===
 
-// Module 15121 (MediaViewerItemTransformPresenter)
-import _modDef1652 from "module_1652" /* 1652 */;
-import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 15118 */;
+// Module 15235 (MediaViewerItemTransformPresenter)
+import _modDef1655 from "module_1655" /* 1655 */;
+import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 15232 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -131,7 +131,7 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
   }
   const obj2 = require("useMediaItemHasSpoiler");
   const obj3 = noop;
-  let items2 = [c9, entranceAnimationDriver, require("module_1652").interpolate, require("module_1652").Extrapolation, width2, width, height2, height, diff, diff1, num3, c8];
+  let items2 = [c9, entranceAnimationDriver, require("module_1655").interpolate, require("module_1655").Extrapolation, width2, width, height2, height, diff, diff1, num3, c8];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -186,10 +186,10 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
   MediaViewerItemTransformPresenterTsx2.__closure = items3;
   MediaViewerItemTransformPresenterTsx2.__workletHash = 7865873276369;
   MediaViewerItemTransformPresenterTsx2.__initData = tmp23;
-  const animatedStyle = require("module_1652").useAnimatedStyle(MediaViewerItemTransformPresenterTsx2);
+  const animatedStyle = require("module_1655").useAnimatedStyle(MediaViewerItemTransformPresenterTsx2);
   const tmp22 = c8;
-  const tmpResult = require("module_1652");
-  let items4 = [c10, entranceAnimationDriver, tmp22, require("module_1652").interpolate, width2, width, require("module_1652").Extrapolation, height2, height];
+  const tmpResult = require("module_1655");
+  let items4 = [c10, entranceAnimationDriver, tmp22, require("module_1655").interpolate, width2, width, require("module_1655").Extrapolation, height2, height];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -225,7 +225,7 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
   MediaViewerItemTransformPresenterTsx3.__workletHash = 10330717925602;
   MediaViewerItemTransformPresenterTsx3.__initData = tmp36;
   const items6 = [windowWidth, windowHeight, width, height];
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(MediaViewerItemTransformPresenterTsx3);
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(MediaViewerItemTransformPresenterTsx3);
   const memo = obj3.useMemo(() => {
     obj = { container: null, child: null };
     const size = { width, height, alignItems: "center", justifyContent: "center" };
@@ -242,8 +242,8 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
   const obj10 = { style: null, children: items1 };
   const items8 = [StyleSheet.absoluteFill, animatedStyle1];
   obj10.style = items8;
-  obj9.children = jsx(_modDef1652.View, { style: null, children: items1 });
-  obj8.children = jsx(_modDef1652.View, { style: null, children: null });
+  obj9.children = jsx(_modDef1655.View, { style: null, children: items1 });
+  obj8.children = jsx(_modDef1655.View, { style: null, children: null });
   obj7.children = <c4 style={memo.child}>{null}</c4>;
   return <c4 collapsable={false} style={memo.container}>{null}</c4>;
 };

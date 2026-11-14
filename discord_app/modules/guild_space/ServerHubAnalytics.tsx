@@ -1,11 +1,15 @@
-// === Module 20286: ServerHubAnalytics ===
+// === Module 20441: ServerHubAnalytics ===
 
-// Module 20286 (ServerHubAnalytics)
+// Module 20441 (ServerHubAnalytics)
 import Constants from "Constants" /* 1072 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
+import StandardAnalyticsConstants from "StandardAnalyticsConstants" /* 1343 */;
+import useTrackImpression from "useTrackImpression" /* 6338 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
+const ImpressionTypes = StandardAnalyticsConstants.ImpressionTypes;
 const result = size.fileFinishedImporting("modules/guild_space/ServerHubAnalytics.tsx");
 
 export const ServerHubSettingType = { ALL_SYSTEM_MESSAGES: "all_system_messages", LEADERBOARD_SYSTEM_MESSAGES: "leaderboard_system_messages", WHITEBOARD_SYSTEM_MESSAGES: "whiteboard_system_messages", MUSIC_SYSTEM_MESSAGES: "music_system_messages" };
@@ -16,6 +20,38 @@ export function trackServerHubToggleSetting(id, ALL_SYSTEM_MESSAGES, value) {
 }
 export function trackServerHubVisit(guild_id, source) {
   AnalyticsUtilsDefault.track(AnalyticEvents.SERVER_HUB_VISIT, { guild_id, source });
+}
+export function trackServerHubWidgetImpression(guild_id) {
+  const obj2 = { type: ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.SERVER_HUB_WIDGET, properties: null };
+  const widget = guild_id.widget;
+  const obj3 = { guild_id: guild_id.guildId, hub_load_id: guild_id.loadId, widget_type: widget.type };
+  ({ column, order } = guild_id);
+  const obj = useTrackImpression;
+  if (obj4.isDraftWidgetId(widget.id)) {
+    let obj5 = {};
+  } else {
+    obj5 = { widget_id: widget.id };
+  }
+  const merged = Object.assign(obj5);
+  obj3.column_index = column;
+  obj3.order_index = order;
+  obj2.properties = obj3;
+  obj.trackImpression(obj2, false, true);
+}
+export function trackServerHubWidgetEmptyViewed(guild_id) {
+  const widget = guild_id.widget;
+  const obj2 = { guild_id: guild_id.guildId, hub_load_id: guild_id.loadId, widget_type: widget.type };
+  ({ column, order } = guild_id);
+  const obj = AnalyticsUtilsDefault;
+  if (obj3.isDraftWidgetId(widget.id)) {
+    let obj4 = {};
+  } else {
+    obj4 = { widget_id: widget.id };
+  }
+  const merged = Object.assign(obj4);
+  obj2.column_index = column;
+  obj2.order_index = order;
+  obj.track(AnalyticEvents.SERVER_HUB_WIDGET_EMPTY_VIEWED, obj2);
 }
 export function trackServerHubWidgetEditClicked(guild_id, widget_type, widget_id) {
   const obj = AnalyticsUtilsDefault;

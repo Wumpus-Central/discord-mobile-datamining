@@ -1,17 +1,17 @@
-// === Module 19825: VoicePanelDockPTTFloatingContent ===
+// === Module 19231: VoicePanelDockPTTFloatingContent ===
 
-// Module 19825 (VoicePanelDockPTTFloatingContent)
+// Module 19231 (VoicePanelDockPTTFloatingContent)
 import native from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import shared from "shared" /* 5250 */;
-import useThemeDefault from "useTheme" /* 5484 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5843 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 12952 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19818 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import shared from "shared" /* 5313 */;
+import useThemeDefault from "useTheme" /* 5547 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5906 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 13048 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19204 */;
 import noop from "module_19" /* 19 */;
 
 const nativeDefault = native;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -20,8 +20,8 @@ const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = 66 + nativeDefault.space.PX_16;
-let closure_8 = fn(11942).DOCK_TILE_SIZE / 56;
-const createStyles = fn(5243);
+let closure_8 = fn(12009).DOCK_TILE_SIZE / 56;
+const createStyles = fn(5306);
 let obj2 = { host: { position: "absolute", top: 0, left: 0, width: 0, height: 0, overflow: "visible" }, indicator: null, indicatorFill: null, tile: null };
 let size = { position: "absolute", width: 76, height: 76, borderRadius: nativeDefault.radii.round, overflow: "hidden" };
 obj2.indicator = size;
@@ -45,7 +45,7 @@ export default function VoicePanelDockPTTFloatingContent(arg0) {
   const tmp = closure_9();
   const tmp4Result = useDockBoxShadowDefault(native.Shadow.SHADOW_HIGH);
   const tmp7 = useThemeDefault();
-  items = [closure_10, anchor, progress, 76, _mod1652.interpolate, _mod1652.Extrapolation, dragX, dragY, 0.5];
+  items = [closure_10, anchor, progress, 76, _mod1655.interpolate, _mod1655.Extrapolation, dragX, dragY, 0.5];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -100,8 +100,8 @@ export default function VoicePanelDockPTTFloatingContent(arg0) {
   VoicePanelDockPTTFloatingContentTsx1.__closure = items1;
   VoicePanelDockPTTFloatingContentTsx1.__workletHash = 477439147398;
   VoicePanelDockPTTFloatingContentTsx1.__initData = tmp8;
-  const animatedStyle = _mod1652.useAnimatedStyle(VoicePanelDockPTTFloatingContentTsx1);
-  let items2 = [closure_11, anchor, progress, 56, _mod1652.interpolate, _mod1652.Extrapolation, dragX, _undefined7, dragY, closure_8];
+  const animatedStyle = _mod1655.useAnimatedStyle(VoicePanelDockPTTFloatingContentTsx1);
+  let items2 = [closure_11, anchor, progress, 56, _mod1655.interpolate, _mod1655.Extrapolation, dragX, _undefined7, dragY, closure_8];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -164,11 +164,11 @@ export default function VoicePanelDockPTTFloatingContent(arg0) {
   VoicePanelDockPTTFloatingContentTsx2.__workletHash = 6388817195515;
   VoicePanelDockPTTFloatingContentTsx2.__initData = tmp18;
   let obj2 = { style: tmp.host, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, children: null };
-  const animatedStyle1 = _mod1652.useAnimatedStyle(VoicePanelDockPTTFloatingContentTsx2);
+  const animatedStyle1 = _mod1655.useAnimatedStyle(VoicePanelDockPTTFloatingContentTsx2);
   let obj3 = { style: null, children: null };
   const items4 = [tmp.indicator, animatedStyle];
   obj3.style = items4;
-  const tmp5Result = _mod1652;
+  const tmp5Result = _mod1655;
   const tmp2Result = VisualEffectViewDefault;
   let str = "light";
   if (tmp5Result2.isThemeDark(tmp7)) {
@@ -176,7 +176,7 @@ export default function VoicePanelDockPTTFloatingContent(arg0) {
   }
   const items5 = [hasOwnProperty(tmp2Result, { blurTheme: str, blurStyle: "ultra-thin", blurAmount: 0.16666666666666666, android_fallbackColor: "transparent", style: StyleSheet.absoluteFill }), hasOwnProperty(View, { style: tmp.indicatorFill })];
   obj3.children = items5;
-  const items6 = [timestampProducer(_modDef1652.View, obj3), ];
+  const items6 = [timestampProducer(_modDef1655.View, obj3), ];
   const obj6 = { style: null, children: null };
   const items7 = [tmp.tile, { boxShadow: tmp4Result }, animatedStyle1];
   obj6.style = items7;
@@ -184,7 +184,7 @@ export default function VoicePanelDockPTTFloatingContent(arg0) {
   const obj5 = { style: tmp.indicatorFill };
   tmp5Result2 = shared;
   obj6.children = hasOwnProperty(MicrophoneIcon.MicrophoneIcon, { size: "md", color: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT });
-  items6[1] = hasOwnProperty(_modDef1652.View, obj6);
+  items6[1] = hasOwnProperty(_modDef1655.View, obj6);
   obj2.children = items6;
   return timestampProducer(View, obj2);
 };

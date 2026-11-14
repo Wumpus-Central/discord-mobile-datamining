@@ -1,14 +1,14 @@
-// === Module 19002: useYouBarCoachmark ===
+// === Module 19138: useYouBarCoachmark ===
 
-// Module 19002 (useYouBarCoachmark)
+// Module 19138 (useYouBarCoachmark)
 import util from "util" /* 1113 */;
-import dismissible_content from "dismissible_content" /* 5076 */;
+import dismissible_content from "dismissible_content" /* 5139 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
 
 require = fn;
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 let closure_6 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarCoachmark.tsx");

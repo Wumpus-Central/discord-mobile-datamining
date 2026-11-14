@@ -1,8 +1,8 @@
-// === Module 8163: AgeVerificationModal ===
+// === Module 8229: AgeVerificationModal ===
 
-// Module 8163 (AgeVerificationModal)
+// Module 8229 (AgeVerificationModal)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 5949 */;
+import LinkingDefault from "Linking" /* 6012 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -98,7 +98,7 @@ function AgeVerifyScreen(onComplete) {
 }
 let jsx = fn(21).jsx;
 const constants = { VERIFY_AGE: "VERIFY_AGE" };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

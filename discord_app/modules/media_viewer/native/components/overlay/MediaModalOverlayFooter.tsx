@@ -1,27 +1,27 @@
-// === Module 15096: MediaModalOverlayFooter ===
+// === Module 15210: MediaModalOverlayFooter ===
 
-// Module 15096 (MediaModalOverlayFooter)
+// Module 15210 (MediaModalOverlayFooter)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 12356 */;
-import useMediaModalFooterBackgroundDefault from "useMediaModalFooterBackground" /* 15097 */;
-import MediaMessagePreviewDefault from "MediaMessagePreview" /* 15098 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 12451 */;
+import useMediaModalFooterBackgroundDefault from "useMediaModalFooterBackground" /* 15211 */;
+import MediaMessagePreviewDefault from "MediaMessagePreview" /* 15212 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
-let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "WireType" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
+const createStyles = fn(5306);
+let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "__esModule" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 let c9 = -1;
 let items = [{ code: "(function clamp_MediaModalOverlayFooterTsx1(value,min,max){return Math.max(Math.min(value,max),min);})" }];
@@ -64,10 +64,10 @@ export function MediaModalOverlayFooter(channelId) {
   if (tmp81Result) {
     num2 = 60;
   }
-  const sharedValue = require("module_1652").useSharedValue(true);
+  const sharedValue = require("module_1655").useSharedValue(true);
   c3 = sharedValue;
-  let obj = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(c9);
+  let obj = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(c9);
   noop = sharedValue1;
   const tmp8 = c3(noop.useState(false), 2);
   const first = tmp8[0];
@@ -87,9 +87,9 @@ export function MediaModalOverlayFooter(channelId) {
   const effect1 = noop.useEffect(() => {
     _undefined(c5);
   }, items1);
-  let obj2 = require("module_1652");
+  let obj2 = require("module_1655");
   const tmp7 = c3;
-  const sharedValue2 = require("module_1652").useSharedValue(0);
+  const sharedValue2 = require("module_1655").useSharedValue(0);
   let items2 = [sharedValue2, sharedValue1, sharedValue];
   const callback = noop.useCallback(() => {
     let result = easing.set(1);
@@ -162,8 +162,8 @@ export function MediaModalOverlayFooter(channelId) {
   const callback4 = noop.useCallback((arg0) => {
     _undefined8(arg0 + 17);
   }, items6);
-  const obj4 = require("module_1652");
-  const items7 = [sharedValue2, first3, sharedValue1, 2, sharedValue2, 0, require("module_1652").interpolate, 1, 2, first2, 40];
+  const obj4 = require("module_1655");
+  const items7 = [sharedValue2, first3, sharedValue1, 2, sharedValue2, 0, require("module_1655").interpolate, 1, 2, first2, 40];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -219,9 +219,9 @@ export function MediaModalOverlayFooter(channelId) {
   MediaModalOverlayFooterTsx4.__closure = items8;
   MediaModalOverlayFooterTsx4.__workletHash = 14957520672262;
   MediaModalOverlayFooterTsx4.__initData = tmp27;
-  const animatedStyle = require("module_1652").useAnimatedStyle(MediaModalOverlayFooterTsx4);
-  const obj5 = require("module_1652");
-  const items9 = [callback, require("module_1652").interpolate, sharedValue2, 0, 1, num2];
+  const animatedStyle = require("module_1655").useAnimatedStyle(MediaModalOverlayFooterTsx4);
+  const obj5 = require("module_1655");
+  const items9 = [callback, require("module_1655").interpolate, sharedValue2, 0, 1, num2];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -249,7 +249,7 @@ export function MediaModalOverlayFooter(channelId) {
   MediaModalOverlayFooterTsx5.__workletHash = 3232524289494;
   MediaModalOverlayFooterTsx5.__initData = tmp39;
   const items11 = [tmp16[1], num, sharedValue, sharedValue1];
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(MediaModalOverlayFooterTsx5);
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(MediaModalOverlayFooterTsx5);
   const callback5 = obj3.useCallback((nativeEvent) => {
     const height = nativeEvent.nativeEvent.layout.height;
     value = height > c1;
@@ -263,8 +263,8 @@ export function MediaModalOverlayFooter(channelId) {
       closure_12(height);
     }
   }, items11);
-  const tmp3Result = require("module_1652");
-  const items12 = [callback1, require("module_1652").interpolate, sharedValue2, 0, 1];
+  const tmp3Result = require("module_1655");
+  const items12 = [callback1, require("module_1655").interpolate, sharedValue2, 0, 1];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -284,11 +284,11 @@ export function MediaModalOverlayFooter(channelId) {
   MediaModalOverlayFooterTsx6.__closure = items13;
   MediaModalOverlayFooterTsx6.__workletHash = 1997603737745;
   MediaModalOverlayFooterTsx6.__initData = tmp47;
-  const animatedStyle2 = require("module_1652").useAnimatedStyle(MediaModalOverlayFooterTsx6);
+  const animatedStyle2 = require("module_1655").useAnimatedStyle(MediaModalOverlayFooterTsx6);
   const tmp54 = useMediaModalFooterBackgroundDefault();
   ({ r, g, b, a } = tmp54.mediaModalFooterBackgroundColorRgba);
-  const tmp3Result4 = require("module_1652");
-  const items14 = [callback2, r, g, b, require("module_1652").interpolate, sharedValue2, 0, 1, a, -1];
+  const tmp3Result4 = require("module_1655");
+  const items14 = [callback2, r, g, b, require("module_1655").interpolate, sharedValue2, 0, 1, a, -1];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -328,7 +328,7 @@ export function MediaModalOverlayFooter(channelId) {
   MediaModalOverlayFooterTsx7.__closure = items15;
   MediaModalOverlayFooterTsx7.__workletHash = 8200199729064;
   MediaModalOverlayFooterTsx7.__initData = tmp55;
-  const animatedStyle3 = require("module_1652").useAnimatedStyle(MediaModalOverlayFooterTsx7);
+  const animatedStyle3 = require("module_1655").useAnimatedStyle(MediaModalOverlayFooterTsx7);
   const ref = obj3.useRef(undefined);
   const ref1 = obj3.useRef(undefined);
   const tmp7Result = tmp7(noop.useState(true), 2);
@@ -337,7 +337,7 @@ export function MediaModalOverlayFooter(channelId) {
   const memo = obj3.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const FlingResult = Gesture.Fling();
-    items = [closure_17, _mod1705.scheduleOnRN, callback2];
+    items = [closure_17, _mod1708.scheduleOnRN, callback2];
     c0 = undefined;
     c1 = undefined;
     [tmp, tmp2, tmp3] = items;
@@ -363,7 +363,7 @@ export function MediaModalOverlayFooter(channelId) {
   const memo1 = obj3.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const FlingResult = Gesture.Fling();
-    items = [closure_19, c5, sharedValue2, timing_timing.withTiming, -1, native.STANDARD_EASING, closure_18, 0, _mod1705.scheduleOnRN, callback2];
+    items = [closure_19, c5, sharedValue2, timing_timing.withTiming, -1, native.STANDARD_EASING, closure_18, 0, _mod1708.scheduleOnRN, callback2];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -431,7 +431,7 @@ export function MediaModalOverlayFooter(channelId) {
     const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
     const maxPointersResult = Gesture.Pan().maxPointers(1);
-    items = [closure_20, c4, 2, clamp, c9, c2, c7, 0, 1, sharedValue2, 0.4, _mod1705.scheduleOnRN, c6, 3, 40, 2];
+    items = [closure_20, c4, 2, clamp, c9, c2, c7, 0, 1, sharedValue2, 0.4, _mod1708.scheduleOnRN, c6, 3, 40, 2];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -491,7 +491,7 @@ export function MediaModalOverlayFooter(channelId) {
     const activeOffsetYResult = Gesture.Pan().maxPointers(1).activeOffsetY(10);
     const tmp3 = c4;
     const tmp5 = c6;
-    let items2 = [closure_23, sharedValue2, 0.75, _mod1705.scheduleOnRN, tmp5, c3, 0, tmp3, _mod1652.withDelay, timing_timing.withTiming, c9, native.STANDARD_EASING, closure_21, 1, closure_22];
+    let items2 = [closure_23, sharedValue2, 0.75, _mod1708.scheduleOnRN, tmp5, c3, 0, tmp3, _mod1655.withDelay, timing_timing.withTiming, c9, native.STANDARD_EASING, closure_21, 1, closure_22];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -623,7 +623,7 @@ export function MediaModalOverlayFooter(channelId) {
     }
     return Gesture.Pan().maxPointers(1).activeOffsetY(10).onUpdate(MediaModalOverlayFooterTsx11).onEnd(MediaModalOverlayFooterTsx14).enabled(tmp37);
   }, items18);
-  const tmp3Result5 = require("module_1652");
+  const tmp3Result5 = require("module_1655");
   const items19 = [closure_24, overlayEnabled, sharedValue2];
   _require = undefined;
   importDefault = undefined;
@@ -663,7 +663,7 @@ export function MediaModalOverlayFooter(channelId) {
   MediaModalOverlayFooterTsx16.__closure = items22;
   MediaModalOverlayFooterTsx16.__workletHash = 2620357650006;
   MediaModalOverlayFooterTsx16.__initData = tmp76;
-  const animatedReaction = require("module_1652").useAnimatedReaction(MediaModalOverlayFooterTsx15, MediaModalOverlayFooterTsx16);
+  const animatedReaction = require("module_1655").useAnimatedReaction(MediaModalOverlayFooterTsx15, MediaModalOverlayFooterTsx16);
   const items23 = [memo2, memo1, memo];
   const memo3 = obj3.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
@@ -675,7 +675,7 @@ export function MediaModalOverlayFooter(channelId) {
   const obj8 = { style: null, children: c6(require("ActionSheetHeaderBar").ActionSheetHeaderBar, { tabStyle: tmp.drawerHeaderTab, style: tmp.drawerHeader }) };
   const items25 = [animatedStyle2, tmp.drawerContainer];
   obj8.style = items25;
-  const items26 = [c6(_modDef1652.View, obj8), channelId.sliderElement, ];
+  const items26 = [c6(_modDef1655.View, obj8), channelId.sliderElement, ];
   const obj10 = { onLayout: callback5, style: animatedStyle, children: null };
   const obj11 = { style: tmp.messagePreviewContainer, children: c6(MediaMessagePreviewDefault, { channelId: channelId.channelId, messageId: channelId.messageId, onClose: channelId.onClose, onTapMessage: callback2, onMeasureFullHeight: callback3, onMeasureCollapsedHeight: callback4, full: first, canExpand: first2 > first1, setScrollViewIsAtTop: tmp7Result[1], flingUpRef: ref, flingDownRef: ref1, animationDriver: sharedValue2, entranceAnimationDriver: channelId.entranceAnimationDriver }) };
   const items27 = [c6(c5, obj11), ];
@@ -684,16 +684,16 @@ export function MediaModalOverlayFooter(channelId) {
     const items28 = [animatedStyle1, tmp.thumbnailsContainer];
     obj13.style = items28;
     const obj14 = { syncer };
-    obj13.children = tmp81(tmp53(15088), obj14);
-    tmp81Result = tmp81(tmp53(1652).View, obj13);
+    obj13.children = tmp81(tmp53(15202), obj14);
+    tmp81Result = tmp81(tmp53(1655).View, obj13);
   }
   const rect = { bottom: true, left: true, right: true, children: null };
   items27[1] = tmp81Result;
   obj10.children = items27;
-  items26[2] = c7(_modDef1652.View, obj10);
+  items26[2] = c7(_modDef1655.View, obj10);
   rect.children = items26;
   items24[1] = c7(require("common/SafeAreaView").SafeAreaPaddingView, rect);
   obj7.children = items24;
-  obj6.children = c7(_modDef1652.View, obj7);
+  obj6.children = c7(_modDef1655.View, obj7);
   return c6(require("LegacyBaseButton").GestureDetector, obj6);
 }

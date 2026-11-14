@@ -1,13 +1,13 @@
-// === Module 12284: GiftCodeActionCreators ===
+// === Module 12379: GiftCodeActionCreators ===
 
-// Module 12284 (GiftCodeActionCreators)
+// Module 12379 (GiftCodeActionCreators)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 5064 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 12285 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 5127 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 12380 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2162 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8419 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8485 */;
 
 require = fn;
 function resolveGiftCode() {
@@ -21,8 +21,8 @@ function resolveGiftCode() {
   return applyArgumentsResult;
 }
 let closure_11 = async function _resolveGiftCode(arg0) {
-  if (c8 === 2) {
-    c8 = 3;
+  if (c7 === 2) {
+    c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp8 === 3) {
     if (arg0 === 1) {
@@ -35,144 +35,138 @@ let closure_11 = async function _resolveGiftCode(arg0) {
     }
   } else {
     try {
-      c8 = 2;
-      if (0 === c7) {
+      c7 = 2;
+      if (0 === c6) {
         if (arg0 === 1) {
-          c8 = 3;
+          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c8 = 3;
+          c7 = 3;
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          closure_4 = tmp4;
-          closure_3 = tmp9;
-          closure_131_1 = undefined;
-          closure_131_2 = undefined;
-          closure_131_0 = closure_0;
-          let flag = closure_1;
+          closure_3 = tmp4;
+          closure_2 = tmp9;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let obj5 = closure_1;
           if (closure_1 === undefined) {
-            flag = false;
+            obj5 = {};
           }
-          closure_131_1 = flag;
-          let flag2 = closure_2;
-          if (closure_2 === undefined) {
-            flag2 = false;
-          }
-          closure_131_2 = flag2;
-          closure_131_3 = undefined;
+          closure_130_1 = obj5;
+          closure_130_2 = undefined;
           let product;
+          c6 = 1;
           c7 = 1;
-          c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
-          c8 = 3;
+          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c8 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          const obj6 = { type: "GIFT_CODE_RESOLVE", code: closure_131_0 };
-          closure_132_1(closure_132_2[6]).dispatch(obj6);
-          c6 = 1;
-          const obj18 = closure_132_1(closure_132_2[6]);
           c7 = 3;
-          c8 = 1;
-          const obj8 = { value: closure_132_0(closure_132_2[7]).resolveGiftCode(closure_131_0, closure_131_1, closure_131_2), done: false };
-          return obj8;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          const obj8 = { type: "GIFT_CODE_RESOLVE", code: closure_130_0 };
+          closure_131_1(closure_131_2[6]).dispatch(obj8);
+          c5 = 1;
+          const obj19 = closure_131_1(closure_131_2[6]);
+          c6 = 3;
+          c7 = 1;
+          const obj10 = { value: closure_131_0(closure_131_2[7]).resolveGiftCode(closure_130_0, closure_130_1), done: false };
+          return obj10;
         }
       } else if (2 === tmp9) {
-        c6 = 0;
-        closure_131_5 = closure_5;
-        const obj10 = { type: "GIFT_CODE_RESOLVE_FAILURE", code: closure_131_0, error: closure_131_5 };
-        closure_132_1(closure_132_2[6]).dispatch(obj10);
-        throw closure_131_5;
+        c5 = 0;
+        closure_130_4 = closure_4;
+        const obj11 = { type: "GIFT_CODE_RESOLVE_FAILURE", code: closure_130_0, error: closure_130_4 };
+        closure_131_1(closure_131_2[6]).dispatch(obj11);
+        throw closure_130_4;
       } else {
         if (3 === tmp9) {
           if (arg0 === 1) {
-            c8 = 3;
+            c7 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 0;
-            c8 = 3;
-            const obj11 = { value, done: true };
-            return obj11;
+            c5 = 0;
+            c7 = 3;
+            const obj13 = { value, done: true };
+            return obj13;
           } else {
-            closure_131_3 = value;
-            if (null != closure_131_3.application_id) {
-              if (closure_131_3.application_id !== closure_132_10) {
-                if (null == closure_132_4.getApplication(closure_131_3.application_id)) {
-                  c6 = 2;
-                  c7 = 5;
-                  c8 = 1;
-                  const obj13 = { value: closure_132_1(closure_132_2[8]).fetchApplication(closure_131_3.application_id), done: false };
-                  return obj13;
+            closure_130_2 = value;
+            if (null != closure_130_2.application_id) {
+              if (closure_130_2.application_id !== closure_131_10) {
+                if (null == closure_131_4.getApplication(closure_130_2.application_id)) {
+                  c5 = 2;
+                  c6 = 5;
+                  c7 = 1;
+                  const obj14 = { value: closure_131_1(closure_131_2[8]).fetchApplication(closure_130_2.application_id), done: false };
+                  return obj14;
                 }
               }
             }
           }
         } else if (4 === tmp9) {
-          c6 = 1;
+          c5 = 1;
         } else {
           if (5 === tmp9) {
             if (arg0 === 1) {
-              c8 = 3;
+              c7 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c6 = 0;
-              c8 = 3;
-              const obj14 = { value, done: true };
-              return obj14;
+              c5 = 0;
+              c7 = 3;
+              const obj15 = { value, done: true };
+              return obj15;
             } else {
-              c6 = 1;
+              c5 = 1;
             }
           } else if (arg0 === 1) {
-            c8 = 3;
+            c7 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 0;
-            c8 = 3;
+            c5 = 0;
+            c7 = 3;
             const obj = { value, done: true };
             return obj;
           } else {
-            product = closure_132_5.getProduct(closure_131_3.sku_id);
+            product = closure_131_5.getProduct(closure_130_2.sku_id);
             let someResult;
             if (product != null) {
               items = tmp66.items;
-              someResult = items.some(closure_132_6);
+              someResult = items.some(closure_131_6);
             }
             if (true === someResult) {
-              const clientOutdatedAcceptGiftError = new closure_132_0(closure_132_2[10]).ClientOutdatedAcceptGiftError("Client update required to redeem this gift");
+              const clientOutdatedAcceptGiftError = new closure_131_0(closure_131_2[10]).ClientOutdatedAcceptGiftError("Client update required to redeem this gift");
               throw clientOutdatedAcceptGiftError;
             }
           }
-          const obj15 = { type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: closure_131_3 };
-          closure_132_1(closure_132_2[6]).dispatch(obj15);
-          const obj16 = { giftCode: closure_131_3 };
-          c6 = 0;
-          c8 = 3;
-          const obj17 = { value: obj16, done: true };
-          return obj17;
+          const obj16 = { type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: closure_130_2 };
+          closure_131_1(closure_131_2[6]).dispatch(obj16);
+          const obj17 = { giftCode: closure_130_2 };
+          c5 = 0;
+          c7 = 3;
+          const obj18 = { value: obj17, done: true };
+          return obj18;
         }
-        if (closure_131_3.application_id === closure_132_7) {
-          c7 = 6;
-          c8 = 1;
-          const obj19 = { value: closure_132_0(closure_132_2[9]).fetchCollectiblesProduct(closure_131_3.sku_id), done: false };
-          return obj19;
+        if (closure_130_2.application_id === closure_131_7) {
+          c6 = 6;
+          c7 = 1;
+          const obj20 = { value: closure_131_0(closure_131_2[9]).fetchCollectiblesProduct(closure_130_2.sku_id), done: false };
+          return obj20;
         }
       }
     } catch (tmp54) {
-      closure_5 = tmp54;
-      if (tmp5 === c6) {
-        c8 = tmp3;
+      closure_4 = tmp54;
+      if (tmp5 === c5) {
+        c7 = tmp3;
         throw tmp54;
       } else if (tmp2 === tmp56) {
-        c7 = tmp;
+        c6 = tmp;
       } else {
-        c7 = tmp6;
+        c6 = tmp6;
       }
     }
   }
@@ -209,11 +203,11 @@ let closure_12 = async function _deliverGiftCodes() {
     return value.body;
   })();
 };
-let closure_6 = fn(8427).isUnknownCollectiblesItemRecord;
+let closure_6 = fn(8493).isUnknownCollectiblesItemRecord;
 const Constants = fn(1072);
 ({ COLLECTIBLES_APPLICATION_ID: metroImportDefault, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
-let closure_10 = fn(1387).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(12286).default);
+let closure_10 = fn(1390).PREMIUM_SUBSCRIPTION_APPLICATION;
+const merged = Object.assign(fn(12381).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 12959: DisconnectRemoteButton ===
+// === Module 13055: DisconnectRemoteButton ===
 
-// Module 12959 (DisconnectRemoteButton)
-import CallsUtils from "CallsUtils" /* 10514 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10752 */;
-import CallBarActionAll from "CallBarAction" /* 12633 */;
+// Module 13055 (DisconnectRemoteButton)
+import CallsUtils from "CallsUtils" /* 10583 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10821 */;
+import CallBarActionAll from "CallBarAction" /* 12729 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 6009 */;
+import GameConsoleStore from "GameConsoleStore" /* 6072 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -17,7 +17,7 @@ export function DisconnectRemoteButton(channel) {
   items = [GameConsoleStore];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => ({ awaitingRemote: null != GameConsoleStore.getAwaitingRemoteSessionInfo(), remoteSessionId: GameConsoleStore.getRemoteSessionId() }));
   const remoteSessionId = stateFromStoresObject.remoteSessionId;
-  let obj2 = { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7366 : 12899), accessibilityLabel: null, isSmallSize: null, onPress: null };
+  let obj2 = { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7430 : 12995), accessibilityLabel: null, isSmallSize: null, onPress: null };
   const intl = tmp(1113).intl;
   obj2.accessibilityLabel = intl.string(channel(1113).t["6vrfgt"]);
   obj2.isSmallSize = channel.isSmallSize;
@@ -29,5 +29,5 @@ export function DisconnectRemoteButton(channel) {
       GameConsoleActionCreators.disconnectRemote();
     }
   };
-  return jsx(CallBarActionAll.PrimaryActionButton, { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7366 : 12899), accessibilityLabel: null, isSmallSize: null, onPress: null });
+  return jsx(CallBarActionAll.PrimaryActionButton, { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7430 : 12995), accessibilityLabel: null, isSmallSize: null, onPress: null });
 }

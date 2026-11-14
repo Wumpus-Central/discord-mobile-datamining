@@ -1,7 +1,7 @@
-// === Module 15613: parseProviderRouteHeadlessSessionId ===
+// === Module 15727: parseProviderRouteHeadlessSessionId ===
 
-// Module 15613 (parseProviderRouteHeadlessSessionId)
-import PlatformsDefault from "Platforms" /* 7024 */;
+// Module 15727 (parseProviderRouteHeadlessSessionId)
+import PlatformsDefault from "Platforms" /* 7087 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 let c3 = "h:";

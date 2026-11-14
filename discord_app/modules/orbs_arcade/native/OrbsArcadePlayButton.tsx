@@ -1,14 +1,14 @@
-// === Module 17553: OrbsArcadePlayButton ===
+// === Module 17671: OrbsArcadePlayButton ===
 
-// Module 17553 (OrbsArcadePlayButton)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import ButtonConstants from "ButtonConstants" /* 5879 */;
-import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 17539 */;
-import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 17556 */;
+// Module 17671 (OrbsArcadePlayButton)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import ButtonConstants from "ButtonConstants" /* 5942 */;
+import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 17657 */;
+import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 17674 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 10061 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17529 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 10129 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17647 */;
 
 require = fn;
 function OrbsArcadePaidPlayLabel(count) {
@@ -19,7 +19,7 @@ function OrbsArcadePaidPlayLabel(count) {
   const formatResult = intl.format(size(1113).t.oSWYca, {
     count: count.orbCost,
     orbIconHook() {
-      return jsx(size(9374).OrbsIcon, { size: "xs", color: closure_1(575).colors.CONTROL_PRIMARY_TEXT_DEFAULT }, "orbs-icon");
+      return jsx(size(9442).OrbsIcon, { size: "xs", color: closure_1(575).colors.CONTROL_PRIMARY_TEXT_DEFAULT }, "orbs-icon");
     }
   });
   let arr = formatResult;
@@ -39,7 +39,7 @@ function OrbsArcadePaidPlayLabel(count) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({ paidPlayLabel: { flexDirection: "row", alignItems: "center" }, paidPlayText: { flexShrink: 1 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadePlayButton.tsx");

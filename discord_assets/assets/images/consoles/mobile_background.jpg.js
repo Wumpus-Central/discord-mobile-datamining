@@ -1,6 +1,6 @@
-// === Module 16205: ? ===
+// === Module 16326: ? ===
 
-// Module 16205
+// Module 16326
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/images/consoles/mobile_background.jpg.js");

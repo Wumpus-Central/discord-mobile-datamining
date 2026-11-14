@@ -1,6 +1,6 @@
-// === Module 9383: StorefrontCollectionStore ===
+// === Module 9451: StorefrontCollectionStore ===
 
-// Module 9383 (StorefrontCollectionStore)
+// Module 9451 (StorefrontCollectionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

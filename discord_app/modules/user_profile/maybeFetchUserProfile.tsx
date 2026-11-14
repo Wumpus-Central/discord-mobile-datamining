@@ -1,14 +1,14 @@
-// === Module 8417: maybeFetchUserProfile ===
+// === Module 8483: maybeFetchUserProfile ===
 
-// Module 8417 (maybeFetchUserProfile)
-import UserActionCreators from "UserActionCreators" /* 7286 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 7401 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8418 */;
-import useAvatarColor from "useAvatarColor" /* 8472 */;
-import preloadUserBannerImageDefault from "preloadUserBannerImage" /* 8473 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import UserProfileStore from "UserProfileStore" /* 7288 */;
+// Module 8483 (maybeFetchUserProfile)
+import UserActionCreators from "UserActionCreators" /* 7350 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 7467 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8484 */;
+import useAvatarColor from "useAvatarColor" /* 8538 */;
+import preloadUserBannerImageDefault from "preloadUserBannerImage" /* 8539 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import UserProfileStore from "UserProfileStore" /* 7352 */;
 
 require = fn;
 const size = fn(2);

@@ -1,26 +1,26 @@
-// === Module 12555: EditAttachmentActionSheet ===
+// === Module 12651: EditAttachmentActionSheet ===
 
-// Module 12555 (EditAttachmentActionSheet)
+// Module 12651 (EditAttachmentActionSheet)
 import util from "util" /* 1113 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5252 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import Stack_Stack from "Stack/Stack" /* 6274 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 7667 */;
-import TextArea from "TextArea" /* 7793 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7847 */;
-import ActionSheet from "ActionSheet" /* 7885 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 8493 */;
+import FlagUtils from "FlagUtils" /* 1406 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import Stack_Stack from "Stack/Stack" /* 6337 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 7733 */;
+import TextArea from "TextArea" /* 7859 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7913 */;
+import ActionSheet from "ActionSheet" /* 7951 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8559 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 6309 */;
+import MessageStore from "MessageStore" /* 6372 */;
 
 require = fn;
-let closure_7 = fn(5248).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let closure_7 = fn(5311).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 const MessageAttachmentFlags = fn(1072).MessageAttachmentFlags;
-let maxLength = fn(11784).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
+let maxLength = fn(11850).MAX_ATTACHMENT_DESCRIPTION_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);
@@ -147,7 +147,7 @@ export default function EditAttachmentActionSheet(arg0) {
   const tmp7Result3 = first1(first2.useState(false), 2);
   first2 = tmp7Result3[0];
   closure_6 = tmp7Result3[1];
-  const tmp5 = attachment(8578)(attachment);
+  const tmp5 = attachment(8645)(attachment);
   [tmp17, c7] = first1(first2.useState(), 2);
   let intl = util.intl;
   let stringResult = intl.string(util.t.Y8ujqr);

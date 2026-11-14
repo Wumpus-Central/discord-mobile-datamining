@@ -1,6 +1,6 @@
-// === Module 18375: CollectiblesCoachmarkScrollDismissContext ===
+// === Module 18498: CollectiblesCoachmarkScrollDismissContext ===
 
-// Module 18375 (CollectiblesCoachmarkScrollDismissContext)
+// Module 18498 (CollectiblesCoachmarkScrollDismissContext)
 import noop from "module_19" /* 19 */;
 
 const NOOP = fn(1083).NOOP;
@@ -9,7 +9,7 @@ const redux = noop.createContext({
   registerDismiss() {
     return NOOP;
   },
-  handleDismissCoachmarkOnScroll: "a"
+  handleDismissCoachmarkOnScroll: "y"
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx");

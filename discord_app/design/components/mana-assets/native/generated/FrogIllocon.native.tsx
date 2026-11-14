@@ -1,20 +1,20 @@
-// === Module 13561: FrogIllocon ===
+// === Module 13664: FrogIllocon ===
 
-// Module 13561 (FrogIllocon)
-import FastImageDefault from "FastImage" /* 5957 */;
-import assetHelpers from "assetHelpers" /* 7689 */;
-import _modDef13562 from "module_13562" /* 13562 */;
-import _modDef13563 from "module_13563" /* 13563 */;
-import _modDef13564 from "module_13564" /* 13564 */;
+// Module 13664 (FrogIllocon)
+import FastImageDefault from "FastImage" /* 6020 */;
+import assetHelpers from "assetHelpers" /* 7755 */;
+import _modDef13665 from "module_13665" /* 13665 */;
+import _modDef13666 from "module_13666" /* 13666 */;
+import _modDef13667 from "module_13667" /* 13667 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13562 }, 3: null };
-const obj2 = { uri: _modDef13562 };
-obj[2] = { uri: _modDef13563 };
-const obj3 = { uri: _modDef13563 };
-obj[3] = { uri: _modDef13564 };
+let obj = { 1: null, 2: { uri: _modDef13665 }, 3: null };
+const obj2 = { uri: _modDef13665 };
+obj[2] = { uri: _modDef13666 };
+const obj3 = { uri: _modDef13666 };
+obj[3] = { uri: _modDef13667 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FrogIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function FrogIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7689).getAssetSource(obj);
+  obj.source = num(7755).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

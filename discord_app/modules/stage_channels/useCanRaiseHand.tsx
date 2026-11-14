@@ -1,7 +1,7 @@
-// === Module 12870: useCanRaiseHand ===
+// === Module 12966: useCanRaiseHand ===
 
-// Module 12870 (useCanRaiseHand)
-import PermissionStore from "PermissionStore" /* 5175 */;
+// Module 12966 (useCanRaiseHand)
+import PermissionStore from "PermissionStore" /* 5238 */;
 
 const require = globalThis.__r;
 

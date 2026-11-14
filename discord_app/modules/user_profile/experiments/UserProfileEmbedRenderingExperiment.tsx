@@ -1,7 +1,7 @@
-// === Module 20146: UserProfileEmbedRenderingExperiment ===
+// === Module 20306: UserProfileEmbedRenderingExperiment ===
 
-// Module 20146 (UserProfileEmbedRenderingExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 20306 (UserProfileEmbedRenderingExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-profile-embed-rendering", kind: "user", defaultConfig: { enabled: false }, variations: null };

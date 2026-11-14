@@ -1,23 +1,23 @@
-// === Module 9318: transformEmbeds ===
+// === Module 9385: transformEmbeds ===
 
-// Module 9318 (transformEmbeds)
+// Module 9385 (transformEmbeds)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1072 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1090 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import DateUtils from "DateUtils" /* 5065 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6298 */;
-import EmbedUtils from "EmbedUtils" /* 6727 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6767 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8567 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8573 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8588 */;
-import MarkupParsers from "MarkupParsers" /* 9277 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 9319 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 9320 */;
-import utils from "utils" /* 9321 */;
-import NativeChatCapabilities from "NativeChatCapabilities" /* 9322 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import DateUtils from "DateUtils" /* 5128 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6361 */;
+import EmbedUtils from "EmbedUtils" /* 6790 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6830 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8634 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8640 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8655 */;
+import MarkupParsers from "MarkupParsers" /* 9344 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 9386 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 9387 */;
+import utils from "utils" /* 9388 */;
+import NativeChatCapabilities from "NativeChatCapabilities" /* 9389 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;
@@ -221,14 +221,14 @@ export default function transformEmbeds(arg0) {
                           const mapped1 = fields.map((rawName) => {
                             let result = null;
                             if (null != rawName.rawName) {
-                              result = channelId(9277).parseEmbedTitleMarkup(rawName.rawName, channelId);
-                              const obj = channelId(9277);
+                              result = channelId(9344).parseEmbedTitleMarkup(rawName.rawName, channelId);
+                              const obj = channelId(9344);
                             }
                             let result1 = null;
                             if (null != rawName.rawValue) {
                               const obj3 = { description: rawName.rawValue, channelId, isField: true, ignoreCache, replaceMap: { "\t": "" }, showListsAndHeaders, showMaskedLinks };
-                              result1 = channelId(9277).parseEmbedDescriptionMarkup(obj3);
-                              const obj2 = channelId(9277);
+                              result1 = channelId(9344).parseEmbedDescriptionMarkup(obj3);
+                              const obj2 = channelId(9344);
                             }
                             const obj4 = {};
                             const merged = Object.assign(rawName);

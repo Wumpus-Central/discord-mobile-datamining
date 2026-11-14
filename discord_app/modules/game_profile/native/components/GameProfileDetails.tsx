@@ -1,13 +1,13 @@
-// === Module 10397: GameProfileDetails ===
+// === Module 10466: GameProfileDetails ===
 
-// Module 10397 (GameProfileDetails)
+// Module 10466 (GameProfileDetails)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Server from "Server" /* 2116 */;
-import DateUtilsAll from "DateUtils" /* 5065 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import LinkingDefault from "Linking" /* 5949 */;
-import SKUUtils from "SKUUtils" /* 10250 */;
+import Server from "Server" /* 2119 */;
+import DateUtilsAll from "DateUtils" /* 5128 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import LinkingDefault from "Linking" /* 6012 */;
+import SKUUtils from "SKUUtils" /* 10319 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,17 +30,17 @@ function GameProfileWebsiteLink(action) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(10144).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(10213).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(9410).PlatformType.DESKTOP] = fn(10398).ScreenIcon;
-obj.mobile = fn(7720).MobilePhoneIcon;
-obj[fn(9410).PlatformType.XBOX] = fn(10239).XboxNeutralIcon;
-obj[fn(9410).PlatformType.PLAYSTATION] = fn(10400).PlaystationNeutralIcon;
-obj[fn(9410).PlatformType.NINTENDO] = fn(10402).NintendoSwitchNeutralIcon;
-obj[fn(9410).PlatformType.ROBLOX] = fn(10229).RobloxNeutralIcon;
-const createStyles = fn(5243);
+obj[fn(9479).PlatformType.DESKTOP] = fn(10467).ScreenIcon;
+obj.mobile = fn(7786).MobilePhoneIcon;
+obj[fn(9479).PlatformType.XBOX] = fn(10308).XboxNeutralIcon;
+obj[fn(9479).PlatformType.PLAYSTATION] = fn(10469).PlaystationNeutralIcon;
+obj[fn(9479).PlatformType.NINTENDO] = fn(10471).NintendoSwitchNeutralIcon;
+obj[fn(9479).PlatformType.ROBLOX] = fn(10298).RobloxNeutralIcon;
+const createStyles = fn(5306);
 let obj3 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
 let obj4 = { gap: nativeDefault.space.PX_8 };
 obj3.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };
@@ -131,7 +131,7 @@ export default function GameProfileDetails(game) {
               items.push(obj2);
             }
             if (length.length <= 0) {
-              const mapped3 = gameProfileLinks.map((item) => trackAction(10406)(item, trackAction(575).colors.ICON_SUBTLE));
+              const mapped3 = gameProfileLinks.map((item) => trackAction(10475)(item, trackAction(575).colors.ICON_SUBTLE));
               const found = mapped3.filter((item) => null != item);
               if (found.length > 0) {
                 const obj3 = { label: null, value: null };
@@ -169,7 +169,7 @@ export default function GameProfileDetails(game) {
               const obj8 = {
                 style: closure_2.platformsContainer,
                 children: length.map((item) => {
-                            obj = { size: "md", color: trackAction(575).colors.ICON_SUBTLE, accessibilityLabel: game(10405).getGameProfilePlatformText(item) };
+                            obj = { size: "md", color: trackAction(575).colors.ICON_SUBTLE, accessibilityLabel: game(10474).getGameProfilePlatformText(item) };
                             return closure_1_8(closure_1_10[item], obj, item);
                           })
               };
@@ -217,7 +217,7 @@ export default function GameProfileDetails(game) {
     let obj3 = { variant: "heading-xs/semibold", color: "mobile-text-heading-primary", style: tmp.headerText, children: null };
     let intl = tmp2(tmp3[17]).intl;
     obj3.children = intl.string(tmp2(tmp3[17]).t["7OjmmH"]);
-    let items1 = [closure_8(tmp2(tmp3[21]).Text, obj3), ];
+    let items1 = [closure_8(tmp2(tmp3[21]).Heading, obj3), ];
     let obj4 = {
       style: tmp.detailsContainer,
       children: memo.map((children, index) => {

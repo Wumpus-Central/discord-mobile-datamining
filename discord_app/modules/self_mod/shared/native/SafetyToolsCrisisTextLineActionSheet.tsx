@@ -1,19 +1,19 @@
-// === Module 12215: SafetyToolsCrisisTextLineActionSheet ===
+// === Module 12310: SafetyToolsCrisisTextLineActionSheet ===
 
-// Module 12215 (SafetyToolsCrisisTextLineActionSheet)
+// Module 12310 (SafetyToolsCrisisTextLineActionSheet)
 import nativeDefault from "native" /* 575 */;
-import LinkingDefault from "Linking" /* 5949 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11971 */;
-import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 12216 */;
+import LinkingDefault from "Linking" /* 6012 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 12038 */;
+import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 12311 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(11957);
+const Constants = fn(12024);
 ({ CRISIS_TEXT_LINE_SMS_URI: closure_4, CRISIS_TEXT_LINE_URL: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { display: "flex", alignItems: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, paddingTop: 0 }, description: null };
 let obj3 = { display: "flex", alignItems: "center", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_16, paddingTop: 0 };
 obj2.description = { textAlign: "center", marginBottom: nativeDefault.space.PX_8, maxWidth: 300 };
@@ -34,7 +34,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
   const obj3 = { variant: "body-md/medium", color: "text-default", style: tmp.description, children: null };
   const intl2 = trackAnalyticsEvent(1113).intl;
   obj3.children = intl2.string(trackAnalyticsEvent(1113).t.uicS5l);
-  items = [closure_6(trackAnalyticsEvent(5866).Text, obj3), , ];
+  items = [closure_6(trackAnalyticsEvent(5929).Text, obj3), , ];
   const obj4 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl3 = trackAnalyticsEvent(1113).intl;
   obj4.text = intl3.string(trackAnalyticsEvent(1113).t.lkUb4S);
@@ -42,7 +42,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
     LinkingDefault.openURL(React4);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_CTL_SMS);
   };
-  items[1] = closure_6(trackAnalyticsEvent(5873).Button, obj4);
+  items[1] = closure_6(trackAnalyticsEvent(5936).Button, obj4);
   const obj5 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl4 = trackAnalyticsEvent(1113).intl;
   obj5.text = intl4.string(trackAnalyticsEvent(1113).t.ogLlvy);
@@ -50,7 +50,7 @@ export default function SafetyToolsCrisisTextLineActionSheet(trackAnalyticsEvent
     LinkingDefault.openURL(hasOwnProperty);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_SAFETY_TOOLS_CTL_WEB);
   };
-  items[2] = closure_6(trackAnalyticsEvent(5873).Button, obj5);
+  items[2] = closure_6(trackAnalyticsEvent(5936).Button, obj5);
   obj2.children = items;
   obj.children = closure_7(View, obj2);
   return closure_6(SafetyToolsActionSheetWrapperDefault, obj);

@@ -1,15 +1,15 @@
-// === Module 15113: MediaModalSpoilerOverlay ===
+// === Module 15227: MediaModalSpoilerOverlay ===
 
-// Module 15113 (MediaModalSpoilerOverlay)
+// Module 15227 (MediaModalSpoilerOverlay)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils2 from "PlatformUtils" /* 1377 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import useToken from "useToken" /* 5839 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5843 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8014 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 15089 */;
+import PlatformUtils2 from "PlatformUtils" /* 1380 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import useToken from "useToken" /* 5902 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5906 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8079 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 15203 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,10 +18,10 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 }, obscureContentContainer: { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" }, spoilerOverlayBackground: null };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, height: nativeDefault.space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
-let PlatformUtils = fn(1377);
+let PlatformUtils = fn(1380);
 PlatformUtils = PlatformUtils.isAndroid();
 const unsafe_rawColors = nativeDefault.unsafe_rawColors;
 obj4.backgroundColor = PlatformUtils ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;
@@ -76,7 +76,7 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
     obj5 = timestampProducer(hasOwnProperty, obj5);
     items1[1] = obj5;
     obj3.children = items1;
-    metroImportDefault(_modDef1652.View, obj3);
+    metroImportDefault(_modDef1655.View, obj3);
     const tmp3Result = VisualEffectViewDefault;
   }
   tmp5 = _slicedToArray(useMediaItemSpoilerState.useMediaItemSpoilerState(index), 2);

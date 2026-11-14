@@ -1,14 +1,14 @@
-// === Module 14853: ChannelSafeAreaBottomAnimated ===
+// === Module 14967: ChannelSafeAreaBottomAnimated ===
 
-// Module 14853 (ChannelSafeAreaBottomAnimated)
-import _mod1652 from "module_1652" /* 1652 */;
-import useChannelSafeAreaHeightSharedValue from "useChannelSafeAreaHeightSharedValue" /* 11939 */;
-import useIsChannelFullyOpenDefault from "useIsChannelFullyOpen" /* 11949 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11951 */;
-import MobileRTCV2Experiment from "MobileRTCV2Experiment" /* 14461 */;
+// Module 14967 (ChannelSafeAreaBottomAnimated)
+import _mod1655 from "module_1655" /* 1655 */;
+import useChannelSafeAreaHeightSharedValue from "useChannelSafeAreaHeightSharedValue" /* 12007 */;
+import useIsChannelFullyOpenDefault from "useIsChannelFullyOpen" /* 12016 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 12018 */;
+import MobileRTCV2Experiment from "MobileRTCV2Experiment" /* 14573 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 const useChannelSafeAreaHeightSharedValueDefault = useChannelSafeAreaHeightSharedValue;
 
 require = fn;
@@ -27,7 +27,7 @@ function useChannelSafeAreaAnimatedStyles() {
   ChannelSafeAreaBottomAnimatedAndroidTsx1.__closure = items1;
   ChannelSafeAreaBottomAnimatedAndroidTsx1.__workletHash = 14690382113580;
   ChannelSafeAreaBottomAnimatedAndroidTsx1.__initData = tmp2;
-  return _mod1652.useAnimatedStyle(ChannelSafeAreaBottomAnimatedAndroidTsx1);
+  return _mod1655.useAnimatedStyle(ChannelSafeAreaBottomAnimatedAndroidTsx1);
 }
 function KeyboardAwareChannelSafeAreaBottom(channelId) {
   const tmp = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
@@ -36,7 +36,7 @@ function KeyboardAwareChannelSafeAreaBottom(channelId) {
   items = [React3.absoluteFill, tmp];
   obj2.style = items;
   obj.children = <React4 style={null} />;
-  return jsx(_modDef1652.View, { style: useChannelSafeAreaAnimatedStyles(), children: null });
+  return jsx(_modDef1655.View, { style: useChannelSafeAreaAnimatedStyles(), children: null });
 }
 function DockAwareChannelSafeAreaBottom(channelId) {
   const tmp3 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
@@ -48,7 +48,7 @@ function DockAwareChannelSafeAreaBottom(channelId) {
     items = [React3.absoluteFill, tmp3];
     obj3.style = items;
     obj2.children = <React4 style={null} />;
-    let tmp6Result = jsx(_modDef1652.View, { style: tmp4, children: null });
+    let tmp6Result = jsx(_modDef1655.View, { style: tmp4, children: null });
   } else {
     const obj4 = { style: null, children: null };
     const obj5 = { height: channelSafeAreaRestingHeight };

@@ -1,11 +1,11 @@
-// === Module 6680: CheckpointCharacterAccessibilityUtils ===
+// === Module 6743: CheckpointCharacterAccessibilityUtils ===
 
-// Module 6680 (CheckpointCharacterAccessibilityUtils)
+// Module 6743 (CheckpointCharacterAccessibilityUtils)
 import util from "util" /* 1113 */;
-import _modDef3269 from "module_3269" /* 3269 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6358 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6681 */;
-import CheckpointTraitOptionNames from "CheckpointTraitOptionNames" /* 6683 */;
+import _modDef3317 from "module_3317" /* 3317 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6421 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6744 */;
+import CheckpointTraitOptionNames from "CheckpointTraitOptionNames" /* 6746 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ export function getCheckpointCharacterAccessibilityLabel(character) {
         const obj = { category: CheckpointCustomizationUtils.getCustomizationOptionName(item), name: null };
         const intl2 = util.intl;
         obj.name = intl2.string(undefined);
-        items.push(intl.formatToPlainString(_modDef3269["Z+HdIo"], obj));
+        items.push(intl.formatToPlainString(_modDef3317["Z+HdIo"], obj));
         const tmpResult = CheckpointCustomizationUtils;
       }
     } else {
@@ -44,5 +44,5 @@ export function getCheckpointCharacterAccessibilityLabel(character) {
   let obj = { traits: null };
   const listFormat = new Intl.ListFormat(require("util").intl.currentLocale, { type: "conjunction" });
   obj.traits = listFormat.format(items);
-  return intl.formatToPlainString(items(3269).mQNR4x, obj);
+  return intl.formatToPlainString(items(3317).mQNR4x, obj);
 }

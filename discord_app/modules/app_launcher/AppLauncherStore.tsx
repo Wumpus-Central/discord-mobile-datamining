@@ -1,9 +1,9 @@
-// === Module 12603: AppLauncherStore ===
+// === Module 12699: AppLauncherStore ===
 
-// Module 12603 (AppLauncherStore)
+// Module 12699 (AppLauncherStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 12483 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 12579 */;
 
 require = fn;
 function handleDismissWithDismissed() {
@@ -28,7 +28,7 @@ function handleSetActiveCommand() {
   obj.initialState = undefined;
   obj.activeChannelId = null;
 }
-const obj = { show: false, entrypoint: fn(12483).AppLauncherEntrypoint.NONE, lastShownEntrypoint: fn(12483).AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: fn(12483).AppLauncherCloseReason.DISMISSED, initialState: "add" };
+const obj = { show: false, entrypoint: fn(12579).AppLauncherEntrypoint.NONE, lastShownEntrypoint: fn(12579).AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: fn(12579).AppLauncherCloseReason.DISMISSED, initialState: "analyticsLocations" };
 const Store = initializeDefault.Store;
 class AppLauncherStore extends Store {
 }

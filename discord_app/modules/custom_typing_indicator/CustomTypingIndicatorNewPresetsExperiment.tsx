@@ -1,7 +1,7 @@
-// === Module 17858: CustomTypingIndicatorNewPresetsExperiment ===
+// === Module 17978: CustomTypingIndicatorNewPresetsExperiment ===
 
-// Module 17858 (CustomTypingIndicatorNewPresetsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 17978 (CustomTypingIndicatorNewPresetsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-11-cti-new-presets", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

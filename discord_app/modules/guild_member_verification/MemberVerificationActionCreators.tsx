@@ -1,15 +1,15 @@
-// === Module 7620: MemberVerificationActionCreators ===
+// === Module 7686: MemberVerificationActionCreators ===
 
-// Module 7620 (MemberVerificationActionCreators)
+// Module 7686 (MemberVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5990 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 6053 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 5148 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import InviteStore from "InviteStore" /* 5989 */;
-import UserStore from "UserStore" /* 1385 */;
+import ImpersonateStore from "ImpersonateStore" /* 5211 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import InviteStore from "InviteStore" /* 6052 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 let closure_10 = async function _fetchVerificationForm() {
@@ -282,7 +282,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
           let body;
           c8 = 1;
           c9 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

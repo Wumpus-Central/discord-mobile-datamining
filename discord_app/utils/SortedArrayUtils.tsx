@@ -1,11 +1,11 @@
-// === Module 6736: SortedArrayUtils ===
+// === Module 6799: SortedArrayUtils ===
 
-// Module 6736 (SortedArrayUtils)
+// Module 6799 (SortedArrayUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/SortedArrayUtils.tsx");
 
-export function insertionIndex(arg0, key, fn) {
+export function insertionIndex(arg0, arg1, fn) {
   let sum;
   let tmp4;
   length = arg0.length;
@@ -16,7 +16,7 @@ export function insertionIndex(arg0, key, fn) {
       let tmp = num + length >>> 1;
       sum = num;
       tmp4 = tmp;
-      if (fn(arg0[tmp], key) < 0) {
+      if (fn(arg0[tmp], arg1) < 0) {
         sum = tmp + 1;
         tmp4 = length;
       }
@@ -49,7 +49,7 @@ export function insert(arr, item, fn) {
   }
   arr.splice(num2, 0, item);
 }
-export function remove(arr, key, fn) {
+export function remove(arr, arg1, fn) {
   let sum;
   let tmp4;
   length = arr.length;
@@ -60,7 +60,7 @@ export function remove(arr, key, fn) {
       let tmp = num + length >>> 1;
       sum = num;
       tmp4 = tmp;
-      if (fn(arr[tmp], key) < 0) {
+      if (fn(arr[tmp], arg1) < 0) {
         sum = tmp + 1;
         tmp4 = length;
       }
@@ -69,7 +69,7 @@ export function remove(arr, key, fn) {
       num2 = sum;
     } while (sum < tmp4);
   }
-  const tmp5 = num2 >= arr.length || 0 !== fn(arr[num2], key);
+  const tmp5 = num2 >= arr.length || 0 !== fn(arr[num2], arg1);
   let flag = !tmp5;
   if (!tmp5) {
     arr.splice(num2, 1);

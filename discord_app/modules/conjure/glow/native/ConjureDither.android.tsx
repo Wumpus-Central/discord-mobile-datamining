@@ -1,9 +1,9 @@
-// === Module 13490: ConjureDither ===
+// === Module 13593: ConjureDither ===
 
-// Module 13490 (ConjureDither)
-import _modDef1652 from "module_1652" /* 1652 */;
-import inlineStyles from "inlineStyles" /* 8197 */;
-import _mod13491 from "module_13491" /* 13491 */;
+// Module 13593 (ConjureDither)
+import _modDef1655 from "module_1655" /* 1655 */;
+import inlineStyles from "inlineStyles" /* 8263 */;
+import _mod13594 from "module_13594" /* 13594 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ function BandPicture(width) {
   const size1 = { id: "cells-" + combined, patternUnits: "userSpaceOnUse", width: state(height[3]).TILE, height: state(height[3]).TILE, children: null };
   const tmp8 = width(height[4]);
   size1.children = state(height[3]).TILES[band].map((item) => {
-    const size = { x: item.x, y: item.y, width: _mod13491.CELL, height: _mod13491.CELL, rx: _mod13491.CORNER, fill, fillOpacity };
+    const size = { x: item.x, y: item.y, width: _mod13594.CELL, height: _mod13594.CELL, rx: _mod13594.CORNER, fill, fillOpacity };
     return timestampProducer(inlineStyles.Rect, size, "" + item.x + "-" + item.y);
   });
   items = [bound(state(height[4]).Pattern, size1), , , ];
@@ -40,10 +40,10 @@ function BandPicture(width) {
   items[2] = BLOBS.map((peak, index) => {
     const obj = { id: "blob-" + combined + "-" + index, children: null };
     const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-    const obj3 = _mod13491;
+    const obj3 = _mod13594;
     ({ peak, radius } = peak);
-    const blobReachResult = _mod13491.blobReach(peak, radius, closure_5 + _mod13491.FADE_HALF);
-    obj2.offset = obj3.isoStop(blobReachResult, _mod13491.blobReach(peak.peak, peak.radius, bound));
+    const blobReachResult = _mod13594.blobReach(peak, radius, closure_5 + _mod13594.FADE_HALF);
+    obj2.offset = obj3.isoStop(blobReachResult, _mod13594.blobReach(peak.peak, peak.radius, bound));
     items = [timestampProducer(inlineStyles.Stop, obj2), timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 })];
     obj.children = items;
     return metroImportDefault(inlineStyles.RadialGradient, obj, index);
@@ -60,7 +60,7 @@ function BandPicture(width) {
   const items2 = [tmp9Result, ];
   const BLOBS1 = tmp(tmp2[3]).BLOBS;
   items2[1] = BLOBS1.map((peak, index) => {
-    const blobReachResult = _mod13491.blobReach(peak.peak, peak.radius, bound);
+    const blobReachResult = _mod13594.blobReach(peak.peak, peak.radius, bound);
     if (blobReachResult <= 0) {
       return null;
     } else {
@@ -105,19 +105,19 @@ export default function ConjureDither(width) {
   let sharedValue2;
   closure_6 = undefined;
   closure_7 = undefined;
-  const sharedValue = require("module_1652").useSharedValue(0);
-  let obj = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(0);
+  let obj = require("module_1655");
   let num = 1;
   let num2 = 1;
   if (thinking) {
     num2 = 3;
   }
-  const sharedValue1 = require("module_1652").useSharedValue(num2);
-  const obj2 = require("module_1652");
+  const sharedValue1 = require("module_1655").useSharedValue(num2);
+  const obj2 = require("module_1655");
   if (thinking) {
     num = 3;
   }
-  sharedValue2 = require("module_1652").useSharedValue(num);
+  sharedValue2 = require("module_1655").useSharedValue(num);
   items = [sharedValue2, thinking];
   const effect = noop.useEffect(() => {
     let num = 1;
@@ -126,7 +126,7 @@ export default function ConjureDither(width) {
     }
     const result = sharedValue2.set(num);
   }, items);
-  const tmpResult = require("module_1652");
+  const tmpResult = require("module_1655");
   const items1 = [closure_10, 80, sharedValue1, sharedValue2, sharedValue, 9000];
   _require = undefined;
   c1 = undefined;
@@ -155,8 +155,8 @@ export default function ConjureDither(width) {
   ConjureDitherAndroidTsx1.__closure = items2;
   ConjureDitherAndroidTsx1.__workletHash = 13577503851898;
   ConjureDitherAndroidTsx1.__initData = tmp7;
-  require("module_1652").useFrameCallback(ConjureDitherAndroidTsx1);
-  const tmpResult4 = require("module_1652");
+  require("module_1655").useFrameCallback(ConjureDitherAndroidTsx1);
+  const tmpResult4 = require("module_1655");
   const items3 = [closure_11, sharedValue];
   _require = undefined;
   [tmp14, tmp15] = items3;
@@ -170,8 +170,8 @@ export default function ConjureDither(width) {
   ConjureDitherAndroidTsx2.__closure = items4;
   ConjureDitherAndroidTsx2.__workletHash = 2589685812342;
   ConjureDitherAndroidTsx2.__initData = tmp14;
-  closure_6 = require("module_1652").useAnimatedStyle(ConjureDitherAndroidTsx2);
-  const tmpResult5 = require("module_1652");
+  closure_6 = require("module_1655").useAnimatedStyle(ConjureDitherAndroidTsx2);
+  const tmpResult5 = require("module_1655");
   const items5 = [closure_12, sharedValue];
   _require = undefined;
   [tmp16, tmp17] = items5;
@@ -185,18 +185,18 @@ export default function ConjureDither(width) {
   ConjureDitherAndroidTsx3.__closure = items6;
   ConjureDitherAndroidTsx3.__workletHash = 9176560266449;
   ConjureDitherAndroidTsx3.__initData = tmp16;
-  closure_7 = require("module_1652").useAnimatedStyle(ConjureDitherAndroidTsx3);
+  closure_7 = require("module_1655").useAnimatedStyle(ConjureDitherAndroidTsx3);
   let tmp18 = null;
   if (width > 0) {
     const obj3 = { style: absoluteFill.absoluteFill, pointerEvents: "none", children: null };
-    const LEVELS = tmp(13491).LEVELS;
+    const LEVELS = tmp(13594).LEVELS;
     obj3.children = LEVELS.map((item, index) => items.map((item, state) => {
       items = [React4.absoluteFill, ];
       const obj = { style: items, renderToHardwareTextureAndroid: true, children: null };
       items[1] = 0 === state ? closure_6 : closure_7;
       const size = { band: index, state, width: index, height, fill, fillOpacity };
       obj.children = timestampProducer(BandPicture, size);
-      return timestampProducer(_modDef1652.View, obj, "" + index + "-" + state);
+      return timestampProducer(_modDef1655.View, obj, "" + index + "-" + state);
     }));
     tmp18 = closure_6(sharedValue2, obj3);
   }

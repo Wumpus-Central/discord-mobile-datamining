@@ -1,30 +1,30 @@
-// === Module 13238: ConjureNativePreview ===
+// === Module 13343: ConjureNativePreview ===
 
-// Module 13238 (ConjureNativePreview)
+// Module 13343 (ConjureNativePreview)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4079 from "module_4079" /* 4079 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 7275 */;
-import leaveFrame from "leaveFrame" /* 7285 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7293 */;
-import ConjurePlatformUtils from "ConjurePlatformUtils" /* 7332 */;
-import Card from "Card" /* 7381 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7808 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12071 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 12647 */;
-import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 13239 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 13240 */;
+import _modDef4131 from "module_4131" /* 4131 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 7339 */;
+import leaveFrame from "leaveFrame" /* 7349 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7357 */;
+import ConjurePlatformUtils from "ConjurePlatformUtils" /* 7396 */;
+import Card from "Card" /* 7445 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7874 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12146 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 12743 */;
+import useEdgeOnlySwipeExitDefault from "useEdgeOnlySwipeExit" /* 13344 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 13345 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6956 */;
+import FramesStore from "FramesStore" /* 7019 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import ReadStateStore from "ReadStateStore" /* 6952 */;
-import AppStateStore from "AppStateStore" /* 2117 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import ReadStateStore from "ReadStateStore" /* 7015 */;
+import AppStateStore from "AppStateStore" /* 2120 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 
 require = fn;
 function StatusCard(body) {
@@ -272,9 +272,9 @@ function PreviewWidget(applicationId) {
   if (applicationId.revoked) {
     const obj2 = { title: null, body: null };
     const intl = tmp2(1113).intl;
-    obj2.title = intl.string(_modDef4079["08U+YO"]);
+    obj2.title = intl.string(_modDef4131["08U+YO"]);
     const intl2 = tmp2(1113).intl;
-    obj2.body = intl2.string(_modDef4079.pKBfrc);
+    obj2.body = intl2.string(_modDef4131.pKBfrc);
     let tmp6Result = closure_22(StatusCard, obj2);
   } else {
     const obj3 = { contentContainerStyle: tmp.widget, children: null };
@@ -385,14 +385,14 @@ function PreviewBot(projectId) {
   if (tmp2Result[0] === previewApplicationId) {
     const obj3 = { title: null, body: null, children: null };
     const intl = tmp7(1113).intl;
-    obj3.title = intl.string(previewApplicationId(4079)["VP/O8s"]);
+    obj3.title = intl.string(previewApplicationId(4131)["VP/O8s"]);
     const intl2 = tmp7(1113).intl;
-    obj3.body = intl2.string(previewApplicationId(4079).Sl9ITD);
+    obj3.body = intl2.string(previewApplicationId(4131).Sl9ITD);
     const obj4 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl3 = tmp7(1113).intl;
     obj4.text = intl3.string(tmp7(1113).t["5911Lb"]);
     obj4.onPress = callback;
-    obj3.children = closure_22(tmp7(5873).Button, obj4);
+    obj3.children = closure_22(tmp7(5936).Button, obj4);
     let tmp28Result = closure_22(StatusCard, obj3);
   } else if (null == stateFromStores) {
     const obj5 = { style: tmp.centered, children: closure_22(closure_5, {}) };
@@ -400,28 +400,28 @@ function PreviewBot(projectId) {
   } else {
     const obj6 = { style: tmp.dm, children: null };
     const obj7 = { guildId, channelId: stateFromStores.id, chatInputRef: tmp19, screenIndex: "conjure-preview", alwaysRespectKeyboard: true, disableGradient: true };
-    const items8 = [closure_22(previewApplicationId(11910), obj7, stateFromStores.id), ];
+    const items8 = [closure_22(previewApplicationId(11976), obj7, stateFromStores.id), ];
     let tmp30Result = null;
     if (tmp7Result4.isAndroid()) {
-      tmp30Result = closure_22(tmp7(13260).PortalKeyboardRenderer, { portal: true });
+      tmp30Result = closure_22(tmp7(13365).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp30Result;
     obj6.children = items8;
     tmp28Result = closure_23(id, obj6);
-    tmp7Result4 = tmp7(1377);
+    tmp7Result4 = tmp7(1380);
   }
   return tmp28Result;
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const conjureDesignFeedbackStore = fn(13195);
+const conjureDesignFeedbackStore = fn(13303);
 ({ exitConjureDesignFeedback: map1, useConjureDesignFeedback: closure_14 } = conjureDesignFeedbackStore);
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_16, AnalyticsObjectTypes: closure_17, AnalyticsSections: closure_18, AppStates: closure_19, ME: closure_20 } = Constants);
-const isLaunched = fn(6957).isLaunched;
+const isLaunched = fn(7020).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { frame: { flex: 1 }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 }, card: { alignSelf: "stretch" }, cardBody: null, cardCopy: null, cardText: null, widget: null, dm: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 };
 obj.cardBody = { padding: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -441,12 +441,12 @@ export default function ConjureNativePreview(arg0) {
   if (null != botInstall) {
     const obj2 = { title: null, body: null, children: null };
     const intl5 = util.intl;
-    obj2.title = intl5.string(_modDef4079.xlEjZ8);
+    obj2.title = intl5.string(_modDef4131.xlEjZ8);
     const intl6 = util.intl;
-    obj2.body = intl6.string(_modDef4079["4ByPbd"]);
+    obj2.body = intl6.string(_modDef4131["4ByPbd"]);
     const obj3 = { variant: "primary", size: "sm", text: null, onPress: null, loading: null };
     const intl7 = util.intl;
-    obj3.text = intl7.string(_modDef4079.RGeB11);
+    obj3.text = intl7.string(_modDef4131.RGeB11);
     ({ onAddBot: obj7.onPress, loading: obj7.loading } = botInstall);
     obj2.children = closure_1_22(components_Button_Button.Button, obj3);
     return closure_1_22(StatusCard, obj2);
@@ -457,9 +457,9 @@ export default function ConjureNativePreview(arg0) {
     } else {
       const obj5 = { title: null, body: null };
       const intl3 = util.intl;
-      obj5.title = intl3.string(_modDef4079["7k4GyN"]);
+      obj5.title = intl3.string(_modDef4131["7k4GyN"]);
       const intl4 = util.intl;
-      obj5.body = intl4.string(_modDef4079.zdIy3R);
+      obj5.body = intl4.string(_modDef4131.zdIy3R);
       tmp15Result = closure_1_22(StatusCard, obj5);
     }
     return tmp15Result;
@@ -478,9 +478,9 @@ export default function ConjureNativePreview(arg0) {
   } else if (null === mode) {
     const obj = { title: null, body: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef4079["7k4GyN"]);
+    obj.title = intl.string(_modDef4131["7k4GyN"]);
     const intl2 = util.intl;
-    obj.body = intl2.string(_modDef4079.zdIy3R);
+    obj.body = intl2.string(_modDef4131.zdIy3R);
     return closure_1_22(StatusCard, obj);
   }
 };

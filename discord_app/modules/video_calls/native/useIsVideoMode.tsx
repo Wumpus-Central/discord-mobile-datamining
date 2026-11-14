@@ -1,12 +1,12 @@
-// === Module 10770: useIsVideoMode ===
+// === Module 10839: useIsVideoMode ===
 
-// Module 10770 (useIsVideoMode)
+// Module 10839 (useIsVideoMode)
 import initialize from "initialize" /* 504 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6757 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
-import VoiceStateStore from "VoiceStateStore" /* 5918 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6820 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
+import VoiceStateStore from "VoiceStateStore" /* 5981 */;
 
 require = fn;
 const size = fn(2);

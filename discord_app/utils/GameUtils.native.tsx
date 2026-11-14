@@ -1,8 +1,8 @@
-// === Module 7230: GameUtils ===
+// === Module 7294: GameUtils ===
 
-// Module 7230 (GameUtils)
-import waitForFrameSubscriptionDefault from "waitForFrameSubscription" /* 7231 */;
-import NativeRPCServerDefault from "NativeRPCServer" /* 7234 */;
+// Module 7294 (GameUtils)
+import waitForFrameSubscriptionDefault from "waitForFrameSubscription" /* 7295 */;
+import NativeRPCServerDefault from "NativeRPCServer" /* 7298 */;
 import size from "module_2" /* 2 */;
 
 let c2 = "not supported";

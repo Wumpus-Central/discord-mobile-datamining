@@ -1,6 +1,6 @@
-// === Module 6587: ? ===
+// === Module 6650: ? ===
 
-// Module 6587
+// Module 6650
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/face/free_fall.png.js");

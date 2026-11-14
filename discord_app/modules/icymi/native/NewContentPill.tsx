@@ -1,14 +1,14 @@
-// === Module 19160: NewContentPill ===
+// === Module 19352: NewContentPill ===
 
-// Module 19160 (NewContentPill)
+// Module 19352 (NewContentPill)
 import nativeDefault from "native" /* 575 */;
-import useThemeDefault from "useTheme" /* 5484 */;
-import GuildIcon from "GuildIcon" /* 7654 */;
-import ClipView from "ClipView" /* 9436 */;
+import useThemeDefault from "useTheme" /* 5547 */;
+import GuildIcon from "GuildIcon" /* 7720 */;
+import ClipView from "ClipView" /* 9503 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import ICYMIStore from "ICYMIStore" /* 10136 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import ICYMIStore from "ICYMIStore" /* 10205 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -36,7 +36,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, guildIconBG: null, refreshMorePillContainer: null };
 let obj3 = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.guildIconBG = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -128,8 +128,8 @@ export default function NewContentPill(onPress) {
   NewContentPillTsx1.__closure = items5;
   NewContentPillTsx1.__workletHash = 15743373779199;
   NewContentPillTsx1.__initData = tmp13;
-  const animatedStyle = require("module_1652").useAnimatedStyle(NewContentPillTsx1);
-  const tmp2Result = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(NewContentPillTsx1);
+  const tmp2Result = require("module_1655");
   const items6 = [closure_15, first1];
   _require = undefined;
   [tmp18, tmp19] = items6;
@@ -146,8 +146,8 @@ export default function NewContentPill(onPress) {
   NewContentPillTsx2.__closure = items7;
   NewContentPillTsx2.__workletHash = 15727177943954;
   NewContentPillTsx2.__initData = tmp18;
-  const animatedProps = require("module_1652").useAnimatedProps(NewContentPillTsx2);
-  const tmp2Result4 = require("module_1652");
+  const animatedProps = require("module_1655").useAnimatedProps(NewContentPillTsx2);
+  const tmp2Result4 = require("module_1655");
   isFocused = require("BaseNavigationContainer").useIsFocused();
   const tmp6Result = tmp6(first.useState(false), 2);
   first2 = tmp6Result[0];
@@ -189,14 +189,14 @@ export default function NewContentPill(onPress) {
     obj5.style = items11;
     obj5.animatedProps = animatedProps;
     const obj6 = { onPress: callback, style: tmp.container, children: null };
-    const items12 = [first2(tmp2(13926).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ];
+    const items12 = [first2(tmp2(14031).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), ];
     const obj7 = { style: { marginLeft: 4 }, variant: "heading-sm/semibold", color: "interactive-text-active", children: null };
     const intl = tmp2(1113).intl;
     obj7.children = intl.string(tmp2(1113).t["4Nl0Rl"]);
-    items12[1] = first2(tmp2(5866).Text, obj7);
+    items12[1] = first2(tmp2(5929).Text, obj7);
     obj6.children = items12;
-    obj5.children = closure_10(tmp2(7364).PressableOpacity, obj6);
-    let tmp36Result2 = first2(tmp9(1652).View, obj5);
+    obj5.children = closure_10(tmp2(7428).PressableOpacity, obj6);
+    let tmp36Result2 = first2(tmp9(1655).View, obj5);
   } else {
     const obj8 = { style: null, animatedProps: null, children: null };
     const items13 = [tmp.refreshMorePillContainer, animatedStyle];
@@ -205,15 +205,15 @@ export default function NewContentPill(onPress) {
     const obj9 = { onPress: callback, style: tmp.container, children: null };
     if (isRefreshing) {
       const tmp27 = closure_5;
-      const tmp2Result6 = tmp2(5250);
+      const tmp2Result6 = tmp2(5313);
       tmp9(575).unsafe_rawColors;
-      const isThemeDarkResult = tmp2(5250).isThemeDark(tmp10);
+      const isThemeDarkResult = tmp2(5313).isThemeDark(tmp10);
       const unsafe_rawColors = { color: null };
-      unsafe_rawColors.color = tmp2(5250).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
+      unsafe_rawColors.color = tmp2(5313).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
       tmp36(tmp27, unsafe_rawColors);
-      const tmp29 = tmp2(5250).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
+      const tmp29 = tmp2(5313).isThemeDark(tmp10) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
     } else {
-      const items14 = [tmp36(tmp2(13926).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), , ];
+      const items14 = [tmp36(tmp2(14031).ArrowSmallUpIcon, { size: "md", color: "interactive-text-active" }), , ];
       const substr = stateFromStoresArray1.slice(0, stateFromStoresArray1.length - 1);
       items14[1] = substr.map((guild, index) => {
         let num = 4;
@@ -230,13 +230,13 @@ export default function NewContentPill(onPress) {
       const obj10 = { style: null, children: null };
       const obj11 = { marginLeft: num2 };
       obj10.style = obj11;
-      const obj12 = { guild: stateFromStoresArray1[stateFromStoresArray1.length - 1], size: tmp2(7654).GuildIconSizes.XSMALL, style: tmp.guildIconBG };
-      obj10.children = tmp36(tmp9(7654), obj12);
+      const obj12 = { guild: stateFromStoresArray1[stateFromStoresArray1.length - 1], size: tmp2(7720).GuildIconSizes.XSMALL, style: tmp.guildIconBG };
+      obj10.children = tmp36(tmp9(7720), obj12);
       items14[2] = tmp36(closure_6, obj10);
       obj9.children = items14;
       obj8.children = tmp37(tmp38, obj9);
-      tmp36Result2 = tmp36(tmp9(1652).View, obj8);
-      const tmp9Result = tmp9(7654);
+      tmp36Result2 = tmp36(tmp9(1655).View, obj8);
+      const tmp9Result = tmp9(7720);
     }
     tmp37 = closure_10;
   }

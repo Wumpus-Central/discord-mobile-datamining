@@ -1,6 +1,6 @@
-// === Module 11935: Summary ===
+// === Module 12003: Summary ===
 
-// Module 11935 (Summary)
+// Module 12003 (Summary)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/summaries/Summary.tsx");

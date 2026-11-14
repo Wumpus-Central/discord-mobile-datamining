@@ -1,17 +1,17 @@
-// === Module 10210: ChannelTabsActionCreators ===
+// === Module 10279: ChannelTabsActionCreators ===
 
-// Module 10210 (ChannelTabsActionCreators)
+// Module 10279 (ChannelTabsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
-import FavoritesUtils from "FavoritesUtils" /* 5117 */;
-import matchPathCompat from "matchPathCompat" /* 5291 */;
-import RouteUtils from "RouteUtils" /* 5304 */;
-import transitionToChannel from "transitionToChannel" /* 6000 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
-import ChannelTabsStore from "ChannelTabsStore" /* 10206 */;
+import FavoritesUtils from "FavoritesUtils" /* 5180 */;
+import matchPathCompat from "matchPathCompat" /* 5354 */;
+import RouteUtils from "RouteUtils" /* 5367 */;
+import transitionToChannel from "transitionToChannel" /* 6063 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
+import ChannelTabsStore from "ChannelTabsStore" /* 10275 */;
 
 require = fn;
 function navigateToTabLocation(activeTab) {
@@ -119,8 +119,7 @@ function trackChannelTabOpened(tabs, close, is_new_tab, focused) {
   obj2.focused = focused;
   obj2.tab_index = tabs.findIndex((id) => id.id === tabs.id);
   obj2.is_pinned = tabs.pinned;
-  ({ friends: obj4.friends_tab_count, shop: obj4.shop_tab_count, quests: obj4.quests_tab_count, conjure: obj4.conjure_tab_count } = obj);
-  obj2.other_page_tab_count = obj.other + obj.nitro;
+  ({ friends: obj4.friends_tab_count, shop: obj4.shop_tab_count, quests: obj4.quests_tab_count, nitro: obj4.nitro_tab_count, conjure: obj4.conjure_tab_count, other: obj4.other_page_tab_count } = obj);
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_OPENED, obj2);
 }
 function navigateActiveTabHistory(arg0) {
@@ -218,7 +217,7 @@ function selectChannelTab(id, keyboard_cycle) {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, Routes: metroImportDefault } = Constants);
-const StaticChannelRoute = fn(5099).StaticChannelRoute;
+const StaticChannelRoute = fn(5162).StaticChannelRoute;
 const TabHistoryNavResult = { Passthrough: "passthrough", Noop: "noop", Navigated: "navigated" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tabs/ChannelTabsActionCreators.tsx");
@@ -390,29 +389,25 @@ export function moveChannelTab(tabId, toIndex) {
 }
 export function setChannelTabPinned(tabId, pinned, source) {
   closure_0 = tabId;
-  let tmp = arg3;
-  if (arg3 === undefined) {
-    tmp = null;
-  }
   const tabs = ChannelTabsStore.getTabs();
   const found = tabs.find((id) => id.id === closure_0);
   pinned = undefined;
   if (found != null) {
     pinned = found.pinned;
   }
-  DispatcherDefault.dispatch({ type: "CHANNEL_TABS_SET_PINNED", tabId, pinned, scope: tmp });
+  DispatcherDefault.dispatch({ type: "CHANNEL_TABS_SET_PINNED", tabId, pinned });
   const tabs1 = ChannelTabsStore.getTabs();
   const found1 = tabs1.find((id) => id.id === closure_0);
-  if (tmp8) {
+  if (tmp7) {
     const obj4 = {};
     const merged = Object.assign(getTabProperties(found1));
     obj4.source = source;
     obj4.pinned = found1.pinned;
     AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_PIN_TOGGLED, obj4);
-    const tmp4Result = AppAnalyticsUtilsDefault;
+    const tmp3Result = AppAnalyticsUtilsDefault;
   }
-  const obj3 = { type: "CHANNEL_TABS_SET_PINNED", tabId, pinned, scope: tmp };
-  tmp8 = null != found1 && pinned !== found1.pinned;
+  const obj3 = { type: "CHANNEL_TABS_SET_PINNED", tabId, pinned };
+  tmp7 = null != found1 && pinned !== found1.pinned;
 }
 export function trackChannelTabPinToggled(pinned, source) {
   const obj2 = {};

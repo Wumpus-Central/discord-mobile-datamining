@@ -1,6 +1,6 @@
-// === Module 8470: CollectiblesMarketingPlatform ===
+// === Module 8536: CollectiblesMarketingPlatform ===
 
-// Module 8470 (CollectiblesMarketingPlatform)
+// Module 8536 (CollectiblesMarketingPlatform)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/CollectiblesMarketingPlatform.tsx");

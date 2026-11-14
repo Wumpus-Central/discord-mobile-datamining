@@ -1,12 +1,12 @@
-// === Module 17837: DisplayNameStylesFontOrder ===
+// === Module 17957: DisplayNameStylesFontOrder ===
 
-// Module 17837 (DisplayNameStylesFontOrder)
+// Module 17957 (DisplayNameStylesFontOrder)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const DisplayNameStylesConstants = fn(1394);
+const DisplayNameStylesConstants = fn(1397);
 ({ FONT_ORDER: c3, HEXAGON_CAMPAIGN_FONTS: closure_4 } = DisplayNameStylesConstants);
-const HexagonCampaignConstants = fn(5268);
+const HexagonCampaignConstants = fn(5331);
 ({ HexagonCampaignPerk: hasOwnProperty, HexagonCampaignPerkAvailability: closure_6 } = HexagonCampaignConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesFontOrder.tsx");
@@ -21,7 +21,7 @@ export function useVisibleFontOrder(arg0) {
     flag = false;
   }
   flag = undefined;
-  flag(5273);
+  flag(5336);
   if (flag) {
     flag = tmp2 !== constants.HIDDEN;
   }

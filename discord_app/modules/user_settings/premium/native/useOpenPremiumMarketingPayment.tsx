@@ -1,15 +1,15 @@
-// === Module 15253: useOpenPremiumMarketingPayment ===
+// === Module 15367: useOpenPremiumMarketingPayment ===
 
-// Module 15253 (useOpenPremiumMarketingPayment)
+// Module 15367 (useOpenPremiumMarketingPayment)
 import util from "util" /* 1113 */;
-import PremiumUtils from "PremiumUtils" /* 2171 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9523 */;
+import PremiumUtils from "PremiumUtils" /* 2174 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9590 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticsPages, AnalyticsSections, AnalyticsObjectTypes } = Constants);
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({ SubscriptionIntervalTypes: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
 let closure_6 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_PREMIUM, objectType: AnalyticsObjectTypes.BUY };
 const size = fn(2);

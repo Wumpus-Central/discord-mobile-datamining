@@ -1,6 +1,6 @@
-// === Module 6981: networkAwareRetry ===
+// === Module 7044: networkAwareRetry ===
 
-// Module 6981 (networkAwareRetry)
+// Module 7044 (networkAwareRetry)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -78,7 +78,7 @@ let closure_5 = async function _networkAwareRetry(arg0) {
     num14 = 3;
   }
   closure_130_1 = num14;
-  return "flexDirection";
+  return "Path";
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/network/networkAwareRetry.tsx");

@@ -1,9 +1,9 @@
-// === Module 12322: useApexExperiments ===
+// === Module 12417: useApexExperiments ===
 
-// Module 12322 (useApexExperiments)
-import apex_ApexTypes from "apex/ApexTypes" /* 1452 */;
-import ExperimentManager from "ExperimentManager" /* 5474 */;
-import experiment from "experiment" /* 8585 */;
+// Module 12417 (useApexExperiments)
+import apex_ApexTypes from "apex/ApexTypes" /* 1455 */;
+import ExperimentManager from "ExperimentManager" /* 5537 */;
+import experiment from "experiment" /* 8652 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 

@@ -1,7 +1,7 @@
-// === Module 16454: WindowsPlayoutBufferExperiment ===
+// === Module 16577: WindowsPlayoutBufferExperiment ===
 
-// Module 16454 (WindowsPlayoutBufferExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 16577 (WindowsPlayoutBufferExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-10-windows-playout-buffer-duration", defaultConfig: { windowsOutputBufferDurationMs: null }, variations: null };

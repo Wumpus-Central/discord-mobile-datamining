@@ -1,15 +1,15 @@
-// === Module 13551: ConjureActivityBox ===
+// === Module 13654: ConjureActivityBox ===
 
-// Module 13551 (ConjureActivityBox)
+// Module 13654 (ConjureActivityBox)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import WarningIcon from "WarningIcon" /* 8095 */;
-import ConjureNativeStatusLineDefault from "ConjureNativeStatusLine" /* 13507 */;
-import ConjureSubagentMark from "ConjureSubagentMark" /* 13552 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import WarningIcon from "WarningIcon" /* 8160 */;
+import ConjureNativeStatusLineDefault from "ConjureNativeStatusLine" /* 13610 */;
+import ConjureSubagentMark from "ConjureSubagentMark" /* 13655 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const ConjureNativeStepImagesDefault = tmp5(13599);
+const ConjureNativeStepImagesDefault = tmp5(13702);
 require = fn;
 function TurnStatusLine(epoch) {
   ({ projectId: require, tree, turnActive } = epoch);
@@ -186,7 +186,7 @@ function TimelineRow(inGutter) {
   });
   let obj = { line: null, live: null, settled: null, failed: null, presentation: null, crestColor: null, inGutter: null, epoch: null, trailing: null };
   let tmp7 = ConjureNativeStatusLineDefault;
-  obj.line = node(13471).describeNode(node);
+  obj.line = node(13574).describeNode(node);
   obj.live = flag2;
   let tmp9 = !flag2;
   if (!flag2) {
@@ -204,9 +204,9 @@ function TimelineRow(inGutter) {
   obj.epoch = epoch;
   let tmp4Result = null;
   if (null != node.durationMs) {
-    let obj3 = { variant: "body-xs/normal", color: "text-subtle", children: node(13071).describeDuration(node.durationMs) };
-    tmp4Result = closure_6(node(5866).Text, obj3);
-    const tmp8Result = node(13071);
+    let obj3 = { variant: "body-xs/normal", color: "text-subtle", children: node(13170).describeDuration(node.durationMs) };
+    tmp4Result = closure_6(node(5929).Text, obj3);
+    const tmp8Result = node(13170);
   }
   obj.trailing = tmp4Result;
   const children = [closure_6(tmp7, obj), , ];
@@ -256,11 +256,11 @@ function TimelineRow(inGutter) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
-let obj2 = { activityBox: { marginLeft: -fn(13516).RAIL_INDENT }, activityDetail: null, stepDetail: null, stepLine: null, stepCommand: null };
-let obj3 = { marginLeft: -fn(13516).RAIL_INDENT };
-obj2.activityDetail = { paddingLeft: fn(13516).RAIL_INDENT };
-let obj4 = { paddingLeft: fn(13516).RAIL_INDENT };
+const createStyles = fn(5306);
+let obj2 = { activityBox: { marginLeft: -fn(13619).RAIL_INDENT }, activityDetail: null, stepDetail: null, stepLine: null, stepCommand: null };
+let obj3 = { marginLeft: -fn(13619).RAIL_INDENT };
+obj2.activityDetail = { paddingLeft: fn(13619).RAIL_INDENT };
+let obj4 = { paddingLeft: fn(13619).RAIL_INDENT };
 obj2.stepDetail = { marginTop: nativeDefault.space.PX_4, paddingLeft: nativeDefault.space.PX_12, borderLeftWidth: 2, borderLeftColor: nativeDefault.colors.BORDER_SUBTLE, gap: 2 };
 let obj5 = { marginTop: nativeDefault.space.PX_4, paddingLeft: nativeDefault.space.PX_12, borderLeftWidth: 2, borderLeftColor: nativeDefault.colors.BORDER_SUBTLE, gap: 2 };
 obj2.stepLine = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };

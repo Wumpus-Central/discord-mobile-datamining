@@ -1,23 +1,23 @@
-// === Module 9360: Tooltip ===
+// === Module 9428: Tooltip ===
 
-// Module 9360 (Tooltip)
+// Module 9428 (Tooltip)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import useToken from "useToken" /* 5839 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import useTooltipPositionDefault from "useTooltipPosition" /* 9361 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import useToken from "useToken" /* 5902 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import useTooltipPositionDefault from "useTooltipPosition" /* 9429 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { position: "absolute", alignItems: "center" }, horizontalContainer: { flexDirection: "row" }, textContainer: { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, maxWidth: 150, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, text: { textAlign: "center" }, arrow: null, bottomArrow: null, topArrow: null, leftArrow: null, rightArrow: null };
 let size = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: nativeDefault.colors.BACKGROUND_BRAND, borderBottomColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.arrow = size;
@@ -35,7 +35,7 @@ export function Tooltip(targetMeasurements) {
   ({ surfaceMeasurements, label, position, onPress } = targetMeasurements);
   c1 = undefined;
   let tmp = closure_9();
-  const sharedValue = _mod1652.useSharedValue(0);
+  const sharedValue = _mod1655.useSharedValue(0);
   c0 = sharedValue;
   const token = useToken.useToken(nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT);
   const token1 = useToken.useToken(nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE);
@@ -56,7 +56,7 @@ export function Tooltip(targetMeasurements) {
     tmp14 = "right" === position;
   }
   const tmp10 = _slicedToArray(noop.useState(null), 2);
-  const items2 = [closure_10, spring_spring.withSpring, _mod1652.interpolateColor, sharedValue, token, token1, closure_8];
+  const items2 = [closure_10, spring_spring.withSpring, _mod1655.interpolateColor, sharedValue, token, token1, closure_8];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -78,9 +78,9 @@ export function Tooltip(targetMeasurements) {
   TooltipNativeTsx1.__closure = items3;
   TooltipNativeTsx1.__workletHash = 1253049499792;
   TooltipNativeTsx1.__initData = tmp16;
-  const animatedStyle = _mod1652.useAnimatedStyle(TooltipNativeTsx1);
-  const tmp2Result = _mod1652;
-  const items4 = [closure_11, spring_spring.withSpring, _mod1652.interpolateColor, sharedValue, token, token1, closure_8, tmp14];
+  const animatedStyle = _mod1655.useAnimatedStyle(TooltipNativeTsx1);
+  const tmp2Result = _mod1655;
+  const items4 = [closure_11, spring_spring.withSpring, _mod1655.interpolateColor, sharedValue, token, token1, closure_8, tmp14];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -123,7 +123,7 @@ export function Tooltip(targetMeasurements) {
   TooltipNativeTsx2.__closure = items5;
   TooltipNativeTsx2.__workletHash = 10252270917599;
   TooltipNativeTsx2.__initData = tmp24;
-  const animatedStyle1 = _mod1652.useAnimatedStyle(TooltipNativeTsx2);
+  const animatedStyle1 = _mod1655.useAnimatedStyle(TooltipNativeTsx2);
   const obj4 = {
     disabled: null == onPress,
     onPress,
@@ -159,7 +159,7 @@ export function Tooltip(targetMeasurements) {
     items7[2] = obj6;
     items7[3] = animatedStyle1;
     obj5.style = items7;
-    let tmp36 = timestampProducer(_modDef1652.View, obj5);
+    let tmp36 = timestampProducer(_modDef1655.View, obj5);
   } else {
     tmp36 = null;
     if ("right" === position) {
@@ -170,14 +170,14 @@ export function Tooltip(targetMeasurements) {
       items8[2] = obj8;
       items8[3] = animatedStyle1;
       obj7.style = items8;
-      tmp36 = timestampProducer(_modDef1652.View, obj7);
+      tmp36 = timestampProducer(_modDef1655.View, obj7);
     }
   }
   const items9 = [tmp36, , ];
   const obj9 = { style: null, children: timestampProducer(Text_Text.Text, { style: tmp.text, variant: "body-xs/semibold", color: "text-overlay-light", children: label }) };
   const items10 = [tmp.textContainer, animatedStyle];
   obj9.style = items10;
-  items9[1] = timestampProducer(_modDef1652.View, obj9);
+  items9[1] = timestampProducer(_modDef1655.View, obj9);
   if ("top" === position) {
     const obj11 = { style: null };
     const items11 = [, , , ];
@@ -186,7 +186,7 @@ export function Tooltip(targetMeasurements) {
     items11[2] = obj12;
     items11[3] = animatedStyle1;
     obj11.style = items11;
-    let tmp39Result = timestampProducer(_modDef1652.View, obj11);
+    let tmp39Result = timestampProducer(_modDef1655.View, obj11);
   } else {
     tmp39Result = null;
     if (tmp13) {
@@ -197,7 +197,7 @@ export function Tooltip(targetMeasurements) {
       items12[2] = obj14;
       items12[3] = animatedStyle1;
       obj13.style = items12;
-      tmp39Result = timestampProducer(_modDef1652.View, obj13);
+      tmp39Result = timestampProducer(_modDef1655.View, obj13);
     }
   }
   items9[2] = tmp39Result;

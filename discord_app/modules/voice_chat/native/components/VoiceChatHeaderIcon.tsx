@@ -1,14 +1,14 @@
-// === Module 12947: VoiceChatHeaderIcon ===
+// === Module 13043: VoiceChatHeaderIcon ===
 
-// Module 12947 (VoiceChatHeaderIcon)
+// Module 13043 (VoiceChatHeaderIcon)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import native2 from "native" /* 5314 */;
-import Pressables from "Pressables" /* 7364 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 12862 */;
+import native2 from "native" /* 5377 */;
+import Pressables from "Pressables" /* 7428 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 12958 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6952 */;
+import ReadStateStore from "ReadStateStore" /* 7015 */;
 
 const require = globalThis.__r;
 
@@ -31,14 +31,14 @@ const View = fn(17).View;
 const ThemeTypes = fn(1072).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { headerButton: null, disabledOpacity: null, chatIconContainer: null, chatIcon: null, badge: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, alignSelf: "center", padding: 6, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
 obj2.headerButton = size;
 obj2.disabledOpacity = { opacity: 0.6 };
-obj2.chatIconContainer = { marginRight: 12, height: fn(5829).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+obj2.chatIconContainer = { marginRight: 12, height: fn(5892).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
-const obj3 = { marginRight: 12, height: fn(5829).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+const obj3 = { marginRight: 12, height: fn(5892).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);

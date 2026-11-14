@@ -1,12 +1,12 @@
-// === Module 6177: LastUsedVideoBackgroundOption ===
+// === Module 6240: LastUsedVideoBackgroundOption ===
 
-// Module 6177 (LastUsedVideoBackgroundOption)
-import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 6178 */;
+// Module 6240 (LastUsedVideoBackgroundOption)
+import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 6241 */;
 import noop from "module_19" /* 19 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const size = fn(2);

@@ -1,12 +1,12 @@
-// === Module 19690: ExternalPipView ===
+// === Module 19900: ExternalPipView ===
 
-// Module 19690 (ExternalPipView)
-import ExternalPipDefault from "ExternalPip" /* 6118 */;
-import ExternalPipAutoEnterExperiment from "ExternalPipAutoEnterExperiment" /* 19693 */;
-import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 19694 */;
+// Module 19900 (ExternalPipView)
+import ExternalPipDefault from "ExternalPip" /* 6181 */;
+import ExternalPipAutoEnterExperiment from "ExternalPipAutoEnterExperiment" /* 19903 */;
+import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 19904 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppFreezeStore from "AppFreezeStore" /* 10123 */;
+import AppFreezeStore from "AppFreezeStore" /* 10192 */;
 
 require = fn;
 function FreezeAfterLayoutPipView() {
@@ -32,11 +32,11 @@ const result = size.fileFinishedImporting("modules/external_pip/ExternalPipView.
 
 export default function ExternalPipView() {
   let obj = { disabled: null };
-  const tmp = callback(19691);
-  obj.disabled = !callback(6118).isSupported();
+  const tmp = callback(19901);
+  obj.disabled = !callback(6181).isSupported();
   const externalPipEnabled = tmp(obj).externalPipEnabled;
   closure_129_0 = undefined;
-  let obj2 = callback(6118);
+  let obj2 = callback(6181);
   [tmp3, closure_129_0] = noop.useState(false);
   callback = noop.useCallback((arg0) => {
     externalPipEnabled(arg0);
@@ -59,7 +59,7 @@ export default function ExternalPipView() {
   }, items);
   const items1 = [callback];
   const effect2 = noop.useEffect(() => {
-    closure_0 = callback(6118).addOnPipModeChangedListener((arg0) => {
+    closure_0 = callback(6181).addOnPipModeChangedListener((arg0) => {
       callback(arg0);
     });
     return () => {
@@ -72,7 +72,7 @@ export default function ExternalPipView() {
   }, items1);
   const items2 = [callback];
   const effect3 = noop.useEffect(() => {
-    closure_0 = callback(6118).addOnPipModeWillChangeListener(() => {
+    closure_0 = callback(6181).addOnPipModeWillChangeListener(() => {
       callback(true);
     });
     return () => {

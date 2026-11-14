@@ -1,6 +1,6 @@
-// === Module 6710: ReleaseChannels ===
+// === Module 6773: ReleaseChannels ===
 
-// Module 6710 (ReleaseChannels)
+// Module 6773 (ReleaseChannels)
 import size from "module_2" /* 2 */;
 
 const obj = { WEB_AND_IOS: new Set(["canary", "ptb", "stable"]), ANDROID: null, QUEST_VR: null, OTHER: null, ALL: null };

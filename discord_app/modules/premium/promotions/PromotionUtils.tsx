@@ -1,16 +1,16 @@
-// === Module 9945: PromotionUtils ===
+// === Module 10012: PromotionUtils ===
 
-// Module 9945 (PromotionUtils)
+// Module 10012 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import dismissible_content from "dismissible_content" /* 5076 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 5077 */;
-import constants from "constants" /* 9602 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import FlagUtils from "FlagUtils" /* 1406 */;
+import dismissible_content from "dismissible_content" /* 5139 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 5140 */;
+import constants from "constants" /* 9669 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import PromotionRecord from "PromotionRecord" /* 9557 */;
-import PromotionsStore from "PromotionsStore" /* 9556 */;
+import PromotionRecord from "PromotionRecord" /* 9624 */;
+import PromotionsStore from "PromotionsStore" /* 9623 */;
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -53,7 +53,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           closure_131_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -110,7 +110,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
     }
   }
 };
-const PromotionFlags = fn(1387).PromotionFlags;
+const PromotionFlags = fn(1390).PromotionFlags;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: closure_10 } = Constants);
 const size = fn(2);

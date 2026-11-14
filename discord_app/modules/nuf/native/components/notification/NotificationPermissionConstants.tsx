@@ -1,6 +1,6 @@
-// === Module 14713: NotificationPermissionConstants ===
+// === Module 14826: NotificationPermissionConstants ===
 
-// Module 14713 (NotificationPermissionConstants)
+// Module 14826 (NotificationPermissionConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/nuf/native/components/notification/NotificationPermissionConstants.tsx");

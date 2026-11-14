@@ -1,16 +1,16 @@
-// === Module 19720: useMorphablePanelGesture ===
+// === Module 19930: useMorphablePanelGesture ===
 
-// Module 19720 (useMorphablePanelGesture)
-import _mod1705 from "module_1705" /* 1705 */;
-import HapticUtils from "HapticUtils" /* 5491 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11923 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 19718 */;
-import triggerIOSHapticDefault from "triggerIOSHaptic" /* 19721 */;
+// Module 19930 (useMorphablePanelGesture)
+import _mod1708 from "module_1708" /* 1708 */;
+import HapticUtils from "HapticUtils" /* 5554 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11989 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 19928 */;
+import triggerIOSHapticDefault from "triggerIOSHaptic" /* 19931 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MorphablePanelConstants = fn(11920);
+const MorphablePanelConstants = fn(11986);
 ({ IS_IOS: closure_4, MIN_PAN_GESTURE_MOVE: hasOwnProperty, MorphablePanelModes } = MorphablePanelConstants);
 ({ PANEL_TAP_GESTURE_MAX_DISTANCE: metroImportDefault, PIP_POP_HEIGHT: closure_8, POP_RESISTANCE: closure_9 } = MorphablePanelConstants);
 let closure_10 = { code: "(function useMorphablePanelGestureTsx1(){let[onTapGestureStart]=this.__closure;var _onTapGestureStart;(_onTapGestureStart=onTapGestureStart)===null||_onTapGestureStart===void 0||_onTapGestureStart();})" };
@@ -81,7 +81,7 @@ export default function useMorphablePanelGesture(mode) {
     useMorphablePanelGestureTsx2.__workletHash = 17191883845;
     useMorphablePanelGestureTsx2.__initData = tmp11;
     const maxPointersResult = Gesture3.Pan().enabled(flag).manualActivation(true).maxPointers(1);
-    const items4 = [closure_12, React4, sharedValue, LegacyBaseButton.State, MorphablePanelUtils.calculateXYDiff, mode, MorphablePanelModes, hasOwnProperty, _mod1705.scheduleOnRN, triggerIOSHapticDefault, updateSharedValueIfChangedDefault, wrapperOffset];
+    const items4 = [closure_12, React4, sharedValue, LegacyBaseButton.State, MorphablePanelUtils.calculateXYDiff, mode, MorphablePanelModes, hasOwnProperty, _mod1708.scheduleOnRN, triggerIOSHapticDefault, updateSharedValueIfChangedDefault, wrapperOffset];
     [tmp20, tmp21, tmp22, tmp23, tmp24, tmp25, tmp26, tmp27, tmp28, tmp29, tmp30, tmp31] = items4;
     function useMorphablePanelGestureTsx3(state, activate) {
       if (c0) {
@@ -129,7 +129,7 @@ export default function useMorphablePanelGesture(mode) {
     useMorphablePanelGestureTsx3.__workletHash = 362604412627;
     useMorphablePanelGestureTsx3.__initData = tmp20;
     const onBeginResult = result.onBegin(useMorphablePanelGestureTsx2);
-    const items6 = [closure_13, mode, MorphablePanelModes, _undefined8, sharedValue, React6, React5, _mod1705.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, updateSharedValueIfChangedDefault, wrapperOffset];
+    const items6 = [closure_13, mode, MorphablePanelModes, _undefined8, sharedValue, React6, React5, _mod1708.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, updateSharedValueIfChangedDefault, wrapperOffset];
     [tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43] = items6;
     function useMorphablePanelGestureTsx4(absoluteY) {
       if (c0 !== _undefined2.PIP) {

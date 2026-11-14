@@ -1,9 +1,9 @@
-// === Module 18989: InterestGameTray ===
+// === Module 19043: InterestGameTray ===
 
-// Module 18989 (InterestGameTray)
+// Module 19043 (InterestGameTray)
 import nativeDefault from "native" /* 575 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import InterestGameCoverDefault from "InterestGameCover" /* 18980 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import InterestGameCoverDefault from "InterestGameCover" /* 19033 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,18 +33,18 @@ function TrayCover(game) {
       num = PX_12;
     }
   }
-  sharedValue = require("module_1652").useSharedValue(result + num);
+  sharedValue = require("module_1655").useSharedValue(result + num);
   first = reduceMotion(onExit.useState(0 === index), 1)[0];
-  let obj = require("module_1652");
+  let obj = require("module_1655");
   let obj2 = onExit;
   if (reduceMotion) {
     let num2 = 1;
   } else {
     num2 = 0;
   }
-  sharedValue1 = require("module_1652").useSharedValue(num2);
-  const tmp2Result = require("module_1652");
-  sharedValue2 = require("module_1652").useSharedValue(1);
+  sharedValue1 = require("module_1655").useSharedValue(num2);
+  const tmp2Result = require("module_1655");
+  sharedValue2 = require("module_1655").useSharedValue(1);
   closure_9 = tmp9;
   items = [index < 0, first, game.id, index, onExit, sharedValue1, reduceMotion, sharedValue2, step, sharedValue];
   const effect = obj2.useEffect(() => {
@@ -93,7 +93,7 @@ function TrayCover(game) {
       return () => clearTimeout(closure_0);
     }
   }, items);
-  const tmp2Result3 = require("module_1652");
+  const tmp2Result3 = require("module_1655");
   const items1 = [closure_13, sharedValue1, sharedValue, sharedValue2];
   _require = undefined;
   importDefault = undefined;
@@ -115,7 +115,7 @@ function TrayCover(game) {
   InterestGameTrayTsx1.__closure = items2;
   InterestGameTrayTsx1.__workletHash = 7147928113380;
   InterestGameTrayTsx1.__initData = tmp11;
-  const animatedStyle = require("module_1652").useAnimatedStyle(InterestGameTrayTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(InterestGameTrayTsx1);
   let obj3 = { style: null, pointerEvents: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
   const items3 = [tmp.item, animatedStyle];
   obj3.style = items3;
@@ -135,10 +135,10 @@ function TrayCover(game) {
   const items4 = [sharedValue2(sharedValue, obj5), sharedValue2(sharedValue, { pointerEvents: "none", style: tmp.stroke })];
   obj4.children = items4;
   obj3.children = closure_9(sharedValue, obj4);
-  return sharedValue2(_modDef1652.View, obj3);
+  return sharedValue2(_modDef1655.View, obj3);
 }
 const View = fn(17).View;
-const InterestGamePickerConstants = fn(18979);
+const InterestGamePickerConstants = fn(19025);
 const SELECTED_BORDER_WIDTH = InterestGamePickerConstants.SELECTED_BORDER_WIDTH;
 const THUMBNAIL_WIDTH = InterestGamePickerConstants.THUMBNAIL_WIDTH;
 ({ FOOTER_THUMBNAIL_GAP, THUMBNAIL_ASPECT_RATIO } = InterestGamePickerConstants);
@@ -147,7 +147,7 @@ const jsxProd = fn(21);
 let result = THUMBNAIL_WIDTH / THUMBNAIL_ASPECT_RATIO;
 let closure_10 = THUMBNAIL_WIDTH + FOOTER_THUMBNAIL_GAP;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { tray: { height: result, flex: 1 }, viewport: { position: "absolute", inset: -SELECTED_BORDER_WIDTH, right: 0, overflow: "hidden" }, content: { position: "absolute", inset: SELECTED_BORDER_WIDTH, right: 0 }, item: { position: "absolute", width: THUMBNAIL_WIDTH, height: result }, target: { flex: 1 }, art: { flex: 1, overflow: "hidden", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, stroke: null };
 let obj3 = { flex: 1, overflow: "hidden", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.stroke = { position: "absolute", inset: -SELECTED_BORDER_WIDTH, borderRadius: nativeDefault.radii.xs + SELECTED_BORDER_WIDTH, borderWidth: SELECTED_BORDER_WIDTH, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };

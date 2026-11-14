@@ -1,16 +1,16 @@
-// === Module 12774: transformMessage ===
+// === Module 12870: transformMessage ===
 
-// Module 12774 (transformMessage)
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import Server from "Server" /* 2116 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5994 */;
-import useMessageAuthor from "useMessageAuthor" /* 6686 */;
-import transformUserDefault from "transformUser" /* 7237 */;
-import getRemoteIconURLDefault from "getRemoteIconURL" /* 12775 */;
-import UserRecord from "UserRecord" /* 1404 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import RelationshipStore from "RelationshipStore" /* 5185 */;
-import UserStore from "UserStore" /* 1385 */;
+// Module 12870 (transformMessage)
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import Server from "Server" /* 2119 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 6057 */;
+import useMessageAuthor from "useMessageAuthor" /* 6749 */;
+import transformUserDefault from "transformUser" /* 7301 */;
+import getRemoteIconURLDefault from "getRemoteIconURL" /* 12871 */;
+import UserRecord from "UserRecord" /* 1407 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import RelationshipStore from "RelationshipStore" /* 5248 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function recurseReplaceContentTree(type) {

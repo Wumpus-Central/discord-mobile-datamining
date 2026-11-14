@@ -1,13 +1,13 @@
-// === Module 19299: renderChannelContent ===
+// === Module 19491: renderChannelContent ===
 
-// Module 19299 (renderChannelContent)
-import Text_Text from "Text/Text" /* 5866 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7156 */;
-import LockIcon from "LockIcon" /* 8027 */;
-import WarningIcon from "WarningIcon" /* 8095 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18709 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 19296 */;
-import ChannelTitleDefault from "ChannelTitle" /* 19300 */;
+// Module 19491 (renderChannelContent)
+import Text_Text from "Text/Text" /* 5929 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7219 */;
+import LockIcon from "LockIcon" /* 8092 */;
+import WarningIcon from "WarningIcon" /* 8160 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 18838 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 19488 */;
+import ChannelTitleDefault from "ChannelTitle" /* 19492 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -150,19 +150,19 @@ function ChannelContent(arg0) {
   return metroImportDefault(View, obj2);
 }
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(5997).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(6896).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(6060).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(6959).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
-let PlatformUtils = fn(1377);
+const createStyles = fn(5306);
+let PlatformUtils = fn(1380);
 let num = -1;
 if (PlatformUtils.isIOS()) {
   num = 2;
 }
 let obj3 = { channelContent: { flex: 1, marginTop: num }, channelContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, leftBox: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, rightBox: { flexDirection: "column", alignItems: "flex-end" }, rightContentAbsolute: { position: "absolute", right: 0, top: 0 }, channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" }, channelTraitIcon: null };
 let obj4 = { opacity: SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
-PlatformUtils = fn(1377);
+PlatformUtils = fn(1380);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;

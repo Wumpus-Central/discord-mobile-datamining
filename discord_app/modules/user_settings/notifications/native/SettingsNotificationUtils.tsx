@@ -1,8 +1,8 @@
-// === Module 17987: SettingsNotificationUtils ===
+// === Module 18107: SettingsNotificationUtils ===
 
-// Module 17987 (SettingsNotificationUtils)
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import DeviceUtils from "DeviceUtils" /* 5200 */;
+// Module 18107 (SettingsNotificationUtils)
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import DeviceUtils from "DeviceUtils" /* 5263 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationUtils.tsx");

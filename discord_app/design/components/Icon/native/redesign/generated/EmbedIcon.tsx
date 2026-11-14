@@ -1,9 +1,9 @@
-// === Module 15848: EmbedIcon ===
+// === Module 15968: EmbedIcon ===
 
-// Module 15848 (EmbedIcon)
+// Module 15968 (EmbedIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod15849 from "module_15849" /* 15849 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod15969 from "module_15969" /* 15969 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmbedIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15849, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15969, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

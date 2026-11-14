@@ -1,18 +1,18 @@
-// === Module 17844: DisplayNameStylesGummyColorPickerSheet ===
+// === Module 17964: DisplayNameStylesGummyColorPickerSheet ===
 
-// Module 17844 (DisplayNameStylesGummyColorPickerSheet)
+// Module 17964 (DisplayNameStylesGummyColorPickerSheet)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import DisplayNameStylesUtils2 from "DisplayNameStylesUtils" /* 1393 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1396 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import HapticUtils from "HapticUtils" /* 5491 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5503 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10001 */;
-import showGummyCustomColorSheetDefault from "showGummyCustomColorSheet" /* 17847 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import DisplayNameStylesUtils2 from "DisplayNameStylesUtils" /* 1396 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1399 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import HapticUtils from "HapticUtils" /* 5554 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5566 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10068 */;
+import showGummyCustomColorSheetDefault from "showGummyCustomColorSheet" /* 17967 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,17 +21,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6, StyleSheet } = get_ActivityIndicator);
-let closure_7 = fn(1394).DISPLAY_NAME_STYLES_GUMMY_PRESETS;
+let closure_7 = fn(1397).DISPLAY_NAME_STYLES_GUMMY_PRESETS;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const DisplayNameStylesUtils = fn(1393);
+const DisplayNameStylesUtils = fn(1396);
 let closure_11 = DisplayNameStylesUtils.hueToGummyColor(0);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj3 = { sheetBackground: { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg }, body: null, sheetContentColumn: null, optionContainer: null, swatch: null, selectionRing: null };
 let obj4 = { borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg };
 obj3.body = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_4, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, alignItems: "center" };
-obj3.sheetContentColumn = { width: "100%", maxWidth: fn(17845).SHEET_CONTENT_MAX_WIDTH };
+obj3.sheetContentColumn = { width: "100%", maxWidth: fn(17965).SHEET_CONTENT_MAX_WIDTH };
 let obj5 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_4, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, alignItems: "center" };
 obj3.optionContainer = { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", columnGap: nativeDefault.space.PX_24, rowGap: nativeDefault.space.PX_24 };
 let size = { width: 40, height: 40, flexDirection: "row", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
@@ -62,7 +62,7 @@ export default function DisplayNameStylesGummyColorPickerSheet(arg0) {
   colors = tmp6[0];
   closure_5 = tmp6[1];
   const tmp5 = displayNameStylesEffectConfig;
-  const tmp8Result = onSelectColors(17846)(DisplayNameEffect.DisplayNameEffect.GUMMY);
+  const tmp8Result = onSelectColors(17966)(DisplayNameEffect.DisplayNameEffect.GUMMY);
   const findIndexResult = tmp8Result.findIndex((colors) => discord_common_shallowEqual.areArraysShallowEqual(colors.colors, first));
   c6 = findIndexResult;
   closure_7 = tmp10;
@@ -106,25 +106,25 @@ export default function DisplayNameStylesGummyColorPickerSheet(arg0) {
   }, items1);
   let obj3 = { backgroundStyles: tmp.sheetBackground, header: null, children: null };
   const obj4 = { title: displayNameStylesEffectConfig.name, trailing: null };
-  const tmp8 = onSelectColors(17846);
+  const tmp8 = onSelectColors(17966);
   const obj5 = { variant: "primary", size: "sm", text: null, onPress: null };
   const intl = util.intl;
   obj5.text = intl.string(util.t.XqMe3N);
   obj5.onPress = callback2;
   obj4.trailing = closure_9(components_Button_Button.Button, obj5);
-  obj3.header = closure_9(onSelectColors(17841), obj4);
+  obj3.header = closure_9(onSelectColors(17961), obj4);
   const obj6 = { style: tmp.body, children: null };
   const obj7 = { style: null, children: null };
   const items2 = [, ];
   ({ sheetContentColumn: arr5[0], optionContainer: arr5[1] } = tmp);
   obj7.style = items2;
   let tmp21;
-  const tmp7Result = onSelectColors(17841);
+  const tmp7Result = onSelectColors(17961);
   if (colors.length > 0 && findIndexResult < 0) {
     tmp21 = colors;
   }
   const items3 = [
-    closure_9(onSelectColors(17850), { activeColors: tmp21, isSelected: colors.length > 0 && findIndexResult < 0, onPress: callback, showGummyStripes: true }),
+    closure_9(onSelectColors(17970), { activeColors: tmp21, isSelected: colors.length > 0 && findIndexResult < 0, onPress: callback, showGummyStripes: true }),
     tmp8Result.map((accessibilityLabel, index) => {
       colors = accessibilityLabel.colors;
       let tmp = c6 === index;

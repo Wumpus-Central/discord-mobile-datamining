@@ -1,13 +1,13 @@
-// === Module 18519: RegistrationUIStore ===
+// === Module 18648: RegistrationUIStore ===
 
-// Module 18519 (RegistrationUIStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+// Module 18648 (RegistrationUIStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "ip" }));
+const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "disabled" }));
 const result = size.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export { useRegistrationUIStore };
@@ -22,7 +22,7 @@ export function clearRegistrationErrorMessage() {
   let errors = {};
   const merged = Object.assign(errors.getState().errors);
   delete tmp2[tmp];
-  errors(1259).batchUpdates(() => {
+  errors(1263).batchUpdates(() => {
     errors = { errors };
     errors.setState(errors);
   });

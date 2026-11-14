@@ -1,9 +1,9 @@
-// === Module 19436: ConsoleConnectionCoachmarkExperiment ===
+// === Module 19628: ConsoleConnectionCoachmarkExperiment ===
 
-// Module 19436 (ConsoleConnectionCoachmarkExperiment)
+// Module 19628 (ConsoleConnectionCoachmarkExperiment)
 import initialize from "initialize" /* 504 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7022 */;
-import ConsentStore from "ConsentStore" /* 6783 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7085 */;
+import ConsentStore from "ConsentStore" /* 6846 */;
 
 require = fn;
 const Constants = fn(1072);
@@ -11,7 +11,7 @@ const Constants = fn(1072);
 let items = [, , ];
 ({ PLAYSTATION: arr[0], PLAYSTATION_STAGING: arr[1], XBOX: arr[2] } = PlatformTypes);
 const set = new Set(items);
-const ApexExperiment = fn(1449);
+const ApexExperiment = fn(1452);
 let obj2 = { name: "2026-11-console-connection-coachmark", kind: "user", defaultConfig: { enabled: false }, variations: null };
 const obj3 = { 1: null, 2: { enabled: true }, 3: { enabled: true } };
 obj3[3] = { enabled: true };

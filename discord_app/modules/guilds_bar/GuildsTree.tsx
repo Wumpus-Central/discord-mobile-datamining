@@ -1,6 +1,6 @@
-// === Module 6897: GuildsTree ===
+// === Module 6960: GuildsTree ===
 
-// Module 6897 (GuildsTree)
+// Module 6960 (GuildsTree)
 import apply from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import size from "module_2" /* 2 */;
@@ -231,7 +231,7 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
                     items1 = [];
                   } else {
                     let children = type.children;
-                    let mapped = children.map(/* F126900 */ function() { ... });
+                    let mapped = children.map(/* F128303 */ function() { ... });
                     items1 = mapped.flat();
                   }
                   return items1;

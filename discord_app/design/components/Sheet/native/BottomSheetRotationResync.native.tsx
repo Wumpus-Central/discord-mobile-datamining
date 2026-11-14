@@ -1,8 +1,8 @@
-// === Module 5852: BottomSheetRotationResync ===
+// === Module 5915: BottomSheetRotationResync ===
 
-// Module 5852 (BottomSheetRotationResync)
-import BottomSheetSnapPoints from "BottomSheetSnapPoints" /* 5506 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
+// Module 5915 (BottomSheetRotationResync)
+import BottomSheetSnapPoints from "BottomSheetSnapPoints" /* 5569 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -29,11 +29,11 @@ export function BottomSheetRotationResync(bottomSheetRef) {
   const animatedHandleGestureState = bottomSheetInternal.animatedHandleGestureState;
   ({ animatedContainerHeight, animatedIndex, animatedAnimationState } = bottomSheetInternal);
   let obj = require("BottomSheetModal");
-  const sharedValue = require("module_1652").useSharedValue(-1);
-  const obj2 = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(false);
-  const obj3 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(false);
+  const sharedValue = require("module_1655").useSharedValue(-1);
+  const obj2 = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(false);
+  const obj3 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(false);
   const ref = noop.useRef(null);
   noop.useRef(null);
   items = [animatedContentGestureState, animatedHandleGestureState, animatedSnapPoints, bottomSheetRef, isExitingRef, sharedValue2, sharedValue, sharedValue1];
@@ -87,7 +87,7 @@ export function BottomSheetRotationResync(bottomSheetRef) {
       clearTimeout(tmp4.current);
     }
   }, []);
-  const obj4 = require("module_1652");
+  const obj4 = require("module_1655");
   const items2 = [c3, animatedIndex, animatedAnimationState, require("BottomSheetModal").ANIMATION_STATE, sharedValue2];
   _require = undefined;
   dependencyMap = undefined;
@@ -141,8 +141,8 @@ export function BottomSheetRotationResync(bottomSheetRef) {
   BottomSheetRotationResyncNativeTsx2.__closure = items5;
   BottomSheetRotationResyncNativeTsx2.__workletHash = 5550662404596;
   BottomSheetRotationResyncNativeTsx2.__initData = tmp15;
-  const animatedReaction = require("module_1652").useAnimatedReaction(BottomSheetRotationResyncNativeTsx1, BottomSheetRotationResyncNativeTsx2);
-  const obj5 = require("module_1652");
+  const animatedReaction = require("module_1655").useAnimatedReaction(BottomSheetRotationResyncNativeTsx1, BottomSheetRotationResyncNativeTsx2);
+  const obj5 = require("module_1655");
   const items6 = [sharedValue, animatedContainerHeight];
   _require = undefined;
   [tmp20, tmp21] = items6;
@@ -155,7 +155,7 @@ export function BottomSheetRotationResync(bottomSheetRef) {
   BottomSheetRotationResyncNativeTsx3.__closure = items7;
   BottomSheetRotationResyncNativeTsx3.__workletHash = 91405314278;
   BottomSheetRotationResyncNativeTsx3.__initData = tmp20;
-  const items8 = [sharedValue1, sharedValue2, require("module_1652").runOnJS, callback1];
+  const items8 = [sharedValue1, sharedValue2, require("module_1655").runOnJS, callback1];
   _require = undefined;
   dependencyMap = undefined;
   noop = undefined;
@@ -189,8 +189,8 @@ export function BottomSheetRotationResync(bottomSheetRef) {
   BottomSheetRotationResyncNativeTsx4.__closure = items9;
   BottomSheetRotationResyncNativeTsx4.__workletHash = 10618511840168;
   BottomSheetRotationResyncNativeTsx4.__initData = tmp22;
-  const animatedReaction1 = require("module_1652").useAnimatedReaction(BottomSheetRotationResyncNativeTsx3, BottomSheetRotationResyncNativeTsx4);
-  const tmpResult = require("module_1652");
+  const animatedReaction1 = require("module_1655").useAnimatedReaction(BottomSheetRotationResyncNativeTsx3, BottomSheetRotationResyncNativeTsx4);
+  const tmpResult = require("module_1655");
   const items10 = [sharedValue2, animatedSnapPoints];
   _require = undefined;
   [tmp27, tmp28] = items10;
@@ -203,7 +203,7 @@ export function BottomSheetRotationResync(bottomSheetRef) {
   BottomSheetRotationResyncNativeTsx5.__closure = items11;
   BottomSheetRotationResyncNativeTsx5.__workletHash = 8125636855552;
   BottomSheetRotationResyncNativeTsx5.__initData = tmp27;
-  const items12 = [ref, sharedValue2, require("module_1652").runOnJS, callback1];
+  const items12 = [ref, sharedValue2, require("module_1655").runOnJS, callback1];
   _require = undefined;
   dependencyMap = undefined;
   noop = undefined;
@@ -228,6 +228,6 @@ export function BottomSheetRotationResync(bottomSheetRef) {
   BottomSheetRotationResyncNativeTsx6.__closure = items13;
   BottomSheetRotationResyncNativeTsx6.__workletHash = 16028021278103;
   BottomSheetRotationResyncNativeTsx6.__initData = tmp29;
-  const animatedReaction2 = require("module_1652").useAnimatedReaction(BottomSheetRotationResyncNativeTsx5, BottomSheetRotationResyncNativeTsx6);
+  const animatedReaction2 = require("module_1655").useAnimatedReaction(BottomSheetRotationResyncNativeTsx5, BottomSheetRotationResyncNativeTsx6);
   return null;
 }

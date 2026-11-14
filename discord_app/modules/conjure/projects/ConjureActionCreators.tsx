@@ -1,20 +1,20 @@
-// === Module 7265: ConjureActionCreators ===
+// === Module 7329: ConjureActionCreators ===
 
-// Module 7265 (ConjureActionCreators)
+// Module 7329 (ConjureActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5914 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 7271 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7272 */;
-import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 7274 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 7275 */;
-import createProxyTicket from "createProxyTicket" /* 7277 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7335 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7336 */;
+import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 7338 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 7339 */;
+import createProxyTicket from "createProxyTicket" /* 7341 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReadStateStore from "ReadStateStore" /* 6952 */;
-import UserStore from "UserStore" /* 1385 */;
-import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 7266 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
+import ReadStateStore from "ReadStateStore" /* 7015 */;
+import UserStore from "UserStore" /* 1388 */;
+import ConjureLastIntegrationStatusStore from "ConjureLastIntegrationStatusStore" /* 7330 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 
 require = fn;
 function listProjects() {
@@ -323,8 +323,8 @@ function currentSession() {
   }
   return { userId: id, generation: ConjureProjectStore.getSessionGeneration() };
 }
-function isCurrentSession(session) {
-  let tmp = session.generation === ConjureProjectStore.getSessionGeneration();
+function isCurrentSession(generation) {
+  let tmp = generation.generation === ConjureProjectStore.getSessionGeneration();
   if (tmp) {
     const currentUser = UserStore.getCurrentUser();
     let id;
@@ -334,7 +334,7 @@ function isCurrentSession(session) {
     if (id == null) {
       id = null;
     }
-    tmp = session.userId === id;
+    tmp = generation.userId === id;
   }
   return tmp;
 }
@@ -1539,7 +1539,7 @@ function refreshConjureInstallState(id) {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1072).Endpoints;
-const ReadStateTypes = fn(6896).ReadStateTypes;
+const ReadStateTypes = fn(6959).ReadStateTypes;
 const logger = new fn(4).Logger("ConjureActionCreators");
 let c14 = null;
 let c15 = null;

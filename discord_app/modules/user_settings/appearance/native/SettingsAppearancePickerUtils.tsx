@@ -1,13 +1,13 @@
-// === Module 17800: SettingsAppearancePickerUtils ===
+// === Module 17920: SettingsAppearancePickerUtils ===
 
-// Module 17800 (SettingsAppearancePickerUtils)
+// Module 17920 (SettingsAppearancePickerUtils)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1230 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import ColorUtils from "ColorUtils" /* 5240 */;
-import utils_ColorDefault from "utils/Color" /* 5241 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5481 */;
+import ColorUtils from "ColorUtils" /* 5303 */;
+import utils_ColorDefault from "utils/Color" /* 5304 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5544 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -142,8 +142,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     const obj2 = { hex: null, stop: null };
     const hexToRgbResult = ColorUtils.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(5241)(r, g, b, num8);
-    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(5241)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(5304)(r, g, b, num8);
+    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(5304)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
@@ -207,7 +207,7 @@ export function convertThemesToAnimatedThemes(c1) {
 }
 export function useLaunchWelcomeSystemTheme() {
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-  token = token(5839).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(5902).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   items = [token];
   return noop.useMemo(() => {
     const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };

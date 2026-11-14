@@ -1,6 +1,6 @@
-// === Module 7716: makePasswordResetLink ===
+// === Module 7782: makePasswordResetLink ===
 
-// Module 7716 (makePasswordResetLink)
+// Module 7782 (makePasswordResetLink)
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

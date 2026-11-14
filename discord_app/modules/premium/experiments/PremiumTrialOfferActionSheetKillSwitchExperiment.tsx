@@ -1,7 +1,7 @@
-// === Module 19641: PremiumTrialOfferActionSheetKillSwitchExperiment ===
+// === Module 19849: PremiumTrialOfferActionSheetKillSwitchExperiment ===
 
-// Module 19641 (PremiumTrialOfferActionSheetKillSwitchExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 19849 (PremiumTrialOfferActionSheetKillSwitchExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-09-premium-trial-offer-action-sheet-ks", kind: "user", defaultConfig: { enabled: false }, variations: null };

@@ -1,27 +1,27 @@
-// === Module 5882: Button/BaseButton ===
+// === Module 5945: Button/BaseButton ===
 
-// Module 5882 (Button/BaseButton)
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import native from "native" /* 5314 */;
-import ButtonHooks from "ButtonHooks" /* 5880 */;
+// Module 5945 (Button/BaseButton)
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import native from "native" /* 5377 */;
+import ButtonHooks from "ButtonHooks" /* 5943 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import module_1652_mod from "module_1652" /* 1652 */;
+import module_1655_mod from "module_1655" /* 1655 */;
 
 require = fn;
 let closure_2 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
 const ThemeTypes = fn(1072).ThemeTypes;
-const IOS_POINTER_STYLE = fn(5883).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5946).IOS_POINTER_STYLE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
-let module_1652 = module_1652_mod;
-let closure_9 = module_1652.createAnimatedComponent(Pressable);
-let module_1652 = module_1652_mod;
-let closure_10 = module_1652.createAnimatedComponent(TouchableOpacity);
+let module_1655 = module_1655_mod;
+let closure_9 = module_1655.createAnimatedComponent(Pressable);
+let module_1655 = module_1655_mod;
+let closure_10 = module_1655.createAnimatedComponent(TouchableOpacity);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
 

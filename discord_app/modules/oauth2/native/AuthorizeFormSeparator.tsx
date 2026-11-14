@@ -1,10 +1,10 @@
-// === Module 15841: AuthorizeFormSeparator ===
+// === Module 15961: AuthorizeFormSeparator ===
 
-// Module 15841 (AuthorizeFormSeparator)
+// Module 15961 (AuthorizeFormSeparator)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 575 */;
-import createStyles from "createStyles" /* 5243 */;
+import createStyles from "createStyles" /* 5306 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

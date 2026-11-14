@@ -1,15 +1,15 @@
-// === Module 10732: GuildTagCreateGuildListBottomSheet ===
+// === Module 10801: GuildTagCreateGuildListBottomSheet ===
 
-// Module 10732 (GuildTagCreateGuildListBottomSheet)
+// Module 10801 (GuildTagCreateGuildListBottomSheet)
 import util from "util" /* 1113 */;
-import Powerups from "Powerups" /* 5464 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import TableRowGroup from "TableRowGroup" /* 7680 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7847 */;
-import ActionSheet from "ActionSheet" /* 7885 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 10610 */;
+import Powerups from "Powerups" /* 5527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import TableRowGroup from "TableRowGroup" /* 7746 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7913 */;
+import ActionSheet from "ActionSheet" /* 7951 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 10679 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5473 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
 
 require = fn;
 function GuildRow(guild) {
@@ -27,8 +27,8 @@ function GuildRow(guild) {
   obj2.subLabel = formatToPlainStringResult;
   const obj4 = { guild, size: null };
   let obj = guild(504);
-  obj4.size = guild(7654).GuildIconSizes.SMALL_32;
-  obj2.icon = closure_4(analyticsLocation(7654), obj4);
+  obj4.size = guild(7720).GuildIconSizes.SMALL_32;
+  obj2.icon = closure_4(analyticsLocation(7720), obj4);
   obj2.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     const obj2 = { guildId: guild.id, autoOpenPerkId: null, analyticsLocation: null };
@@ -36,7 +36,7 @@ function GuildRow(guild) {
     obj2.analyticsLocation = analyticsLocation;
     openGuildPowerupsModalDefault(obj2);
   };
-  return closure_4(guild(7379).TableRow, obj2);
+  return closure_4(guild(7443).TableRow, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);

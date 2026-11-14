@@ -1,11 +1,11 @@
-// === Module 20667: GlobalDiscoveryServersUtils ===
+// === Module 20822: GlobalDiscoveryServersUtils ===
 
-// Module 20667 (GlobalDiscoveryServersUtils)
+// Module 20822 (GlobalDiscoveryServersUtils)
 import util from "util" /* 1113 */;
-import v1 from "v1" /* 1266 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import v1 from "v1" /* 1269 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2186 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
 
 require = fn;
 let closure_13 = async function _navigateToGuild() {
@@ -18,9 +18,9 @@ let closure_13 = async function _navigateToGuild() {
   await "HermesInternal";
   closure_1 = tmp2;
   ({ loadId: closure_129_0, guildId: closure_129_1, index: closure_129_2, categoryId: closure_129_3, analyticsLocation: closure_129_4, options: closure_129_5 } = closure_0);
-  return "flexDirection";
+  return "Path";
 };
-const GlobalDiscoveryServersConstants = fn(8340);
+const GlobalDiscoveryServersConstants = fn(8406);
 ({ GlobalDiscoveryServerTab: closure_6, FEATURED_GUILDS_CACHE_DURATION: metroImportDefault, CategoryId: closure_8, DISCOVERY_ALL_CATEGORIES_ID: closure_9, getLanguageOptions: closure_10, HUBS_CATEGORY_ID: closure_11 } = GlobalDiscoveryServersConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
@@ -164,8 +164,9 @@ export function fromDiscoverableGuildServer(id) {
   return obj;
 }
 export function fromDiscoverableGuildSearchResult(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "description", discoverySplash: null, emojis: [] };
+  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "isArray", discoverySplash: true, emojis: "/assets/design/components/Icon/native/redesign/generated/images" };
   ({ approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, discovery_splash: obj.discoverySplash } = id);
+  obj.emojis = [];
   return obj;
 }
 export function getLanguageCodeFallback() {

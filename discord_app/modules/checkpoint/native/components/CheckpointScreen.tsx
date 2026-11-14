@@ -1,18 +1,18 @@
-// === Module 14160: CheckpointScreen ===
+// === Module 14270: CheckpointScreen ===
 
-// Module 14160 (CheckpointScreen)
+// Module 14270 (CheckpointScreen)
 import nativeDefault from "native" /* 575 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6314);
+const CheckpointConstants = fn(6377);
 ({ CHECKPOINT_CONTENT_MAX_HEIGHT: hasOwnProperty, CHECKPOINT_CONTENT_MAX_WIDTH: closure_6, CHECKPOINT_NAV_HEIGHT: metroImportDefault } = CheckpointConstants);
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_11 = createStyles.createStyles({ container: { height: "100%", width: "100%" }, scroll: { width: "100%" }, scrollContent: { flexGrow: 1 }, centered: { justifyContent: "center" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointScreen.tsx");
@@ -23,15 +23,15 @@ export default function CheckpointScreen(centered) {
     flag = false;
   }
   const tmp = closure_11();
-  const tmp2 = flag(1627)();
+  const tmp2 = flag(1630)();
   dependencyMap = tmp2;
-  const size = flag(1493)({ ignoreKeyboard: true });
+  const size = flag(1496)({ ignoreKeyboard: true });
   const width = size.width;
   const height = size.height;
   items = [tmp2, flag, width, height];
   let obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.scroll, contentContainerStyle: null, showsVerticalScrollIndicator: false, children: null };
-  const items1 = [tmp.scrollContent, , ];
+  const items1 = [tmp.scrollContent, , , ];
   const memo = width.useMemo(() => {
     let num = 0;
     if (!flag) {
@@ -61,12 +61,13 @@ export default function CheckpointScreen(centered) {
   }
   items1[1] = flag;
   items1[2] = memo;
+  items1[3] = centered.contentContainerStyle;
   obj2.contentContainerStyle = items1;
   obj2.children = centered.children;
   obj.children = <height style={tmp.scroll} contentContainerStyle={null} showsVerticalScrollIndicator={false}>{null}</height>;
   return <closure_4 style={tmp.container}>{null}</closure_4>;
 };
-export function useCheckpointScreenContentHeight() {
+export function useCheckpointScreenContentHeight(arg0) {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;

@@ -1,14 +1,14 @@
-// === Module 13243: useConjureControlBar ===
+// === Module 13348: useConjureControlBar ===
 
-// Module 13243 (useConjureControlBar)
+// Module 13348 (useConjureControlBar)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 7257 */;
+import ConjureChatStore from "ConjureChatStore" /* 7321 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const interruptTurn = fn(7301).interruptTurn;
+const interruptTurn = fn(7365).interruptTurn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/useConjureControlBar.tsx");
 

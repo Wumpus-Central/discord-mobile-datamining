@@ -1,30 +1,30 @@
-// === Module 14856: VoiceMessageChat ===
+// === Module 14970: VoiceMessageChat ===
 
-// Module 14856 (VoiceMessageChat)
+// Module 14970 (VoiceMessageChat)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import springPresets from "springPresets" /* 5877 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 8830 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import springPresets from "springPresets" /* 5940 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 8897 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 const require = globalThis.__r;
-const module_1652 = _mod1652;
+const module_1655 = _mod1655;
 
 require = fn;
 function WaveformBar(value) {
   value = value.value;
   _require = value;
   const tmp = closure_16();
-  const sharedValue = require("module_1652").useSharedValue(0);
-  let obj = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(0);
-  let obj2 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(0);
-  let obj3 = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(0);
+  let obj = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(0);
+  let obj2 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(0);
+  let obj3 = require("module_1655");
   items = [closure_17, sharedValue, sharedValue1, sharedValue2];
   _require = undefined;
   importDefault = undefined;
@@ -41,7 +41,7 @@ function WaveformBar(value) {
   VoiceMessageChatTsx1.__workletHash = 4154638191769;
   VoiceMessageChatTsx1.__initData = tmp6;
   const items2 = [sharedValue, value];
-  const animatedStyle = require("module_1652").useAnimatedStyle(VoiceMessageChatTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(VoiceMessageChatTsx1);
   const effect = noop.useEffect(() => {
     const result = 20 * Math.min(1, c0 / application_id * 1.25);
     const bound = Math.max(2, result);
@@ -50,15 +50,15 @@ function WaveformBar(value) {
   const items3 = [sharedValue1, sharedValue2];
   const effect1 = noop.useEffect(() => {
     const obj = timing_timing;
-    const result = _undefined3.set(obj.withTiming(2, { duration: 300, easing: _mod1652.Easing.linear }));
-    const obj2 = { duration: 300, easing: _mod1652.Easing.linear };
+    const result = _undefined3.set(obj.withTiming(2, { duration: 300, easing: _mod1655.Easing.linear }));
+    const obj2 = { duration: 300, easing: _mod1655.Easing.linear };
     const obj3 = timing_timing;
-    const result1 = sharedValue2.set(obj3.withTiming(4, { duration: 300, easing: _mod1652.Easing.linear }));
+    const result1 = sharedValue2.set(obj3.withTiming(4, { duration: 300, easing: _mod1655.Easing.linear }));
   }, items3);
   const obj5 = { style: null };
   const items4 = [tmp.waveformBar, animatedStyle];
   obj5.style = items4;
-  return closure_13(module_1652.View, obj5);
+  return closure_13(module_1655.View, obj5);
 }
 function Waveform() {
   useVoiceMessagesUIStore((waveformVersion) => waveformVersion.waveformVersion);
@@ -173,7 +173,7 @@ function Duration(animationValue) {
   VoiceMessageChatTsx2.__closure = items4;
   VoiceMessageChatTsx2.__workletHash = 7684903526084;
   VoiceMessageChatTsx2.__initData = tmp16;
-  const animatedStyle = require("module_1652").useAnimatedStyle(VoiceMessageChatTsx2);
+  const animatedStyle = require("module_1655").useAnimatedStyle(VoiceMessageChatTsx2);
   const obj3 = { style: null, children: null };
   const items5 = [tmp.durationContainer, animatedStyle];
   obj3.style = items5;
@@ -195,19 +195,19 @@ function Duration(animationValue) {
   }
   obj4.color = str;
   obj4.children = memo;
-  items7[1] = closure_13(tmp8(5866).Text, obj4);
+  items7[1] = closure_13(tmp8(5929).Text, obj4);
   obj3.children = items7;
-  return closure_14(tmp10(1652).View, obj3);
+  return closure_14(tmp10(1655).View, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(14458).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(14459);
+const useVoiceMessagesUIStore = fn(14570).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(14571);
 ({ VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8, VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9, VOICE_RECORDING_REALLY_WARN_DURATION_MILLIS: closure_10, VOICE_RECORDING_WARN_DURATION_MILLIS: closure_11, WAVEFORM_WAVE_MAX_VALUE: closure_12 } = VoiceMessageConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let closure_15 = module_1652.createAnimatedComponent(ActivityIndicator);
-const createStyles = fn(5243);
+let closure_15 = module_1655.createAnimatedComponent(ActivityIndicator);
+const createStyles = fn(5306);
 let obj = { container: { height: "100%", flexDirection: "row", alignItems: "center", paddingVertical: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL, paddingHorizontal: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_PADDING_HORIZONTAL, gap: nativeDefault.modules.mobile.VOICE_MESSAGE_CHAT_GAP, borderRadius: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_PILL_BORDER_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE }, loading: { position: "absolute", left: 12 }, dot: null, dotDismissed: null, waveformContainer: null, waveformBar: null, durationContainer: null, duration: null };
 let size = { height: 6, width: 6, backgroundColor: nativeDefault.unsafe_rawColors.RED_400, borderRadius: nativeDefault.radii.round };
 obj.dot = size;
@@ -217,11 +217,11 @@ let obj2 = { height: "100%", flexDirection: "row", alignItems: "center", padding
 obj.waveformBar = { backgroundColor: nativeDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_WAVEFORM_BAR_BACKGROUND, borderRadius: 1 };
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_WAVEFORM_BAR_BACKGROUND, borderRadius: 1 };
 obj.durationContainer = { flexDirection: "row", alignItems: "center", gap: 4, marginLeft: nativeDefault.modules.mobile.VOICE_MESSAGE_DURATION_MARGIN_LEFT };
-let PlatformUtils = fn(1377);
+let PlatformUtils = fn(1380);
 PlatformUtils = PlatformUtils.isAndroid();
 const mobile = nativeDefault.modules.mobile;
 let obj6 = { lineHeight: PlatformUtils ? mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_ANDROID : mobile.VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS, textAlignVertical: null };
-PlatformUtils = fn(1377);
+PlatformUtils = fn(1380);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";
@@ -248,23 +248,23 @@ export default noop.memo(function VoiceMessageChat(isRecording) {
   let tmp = closure_16();
   const token = require("useToken").useToken(nativeDefault.colors.MOBILE_VOICE_MESSAGE_RECORDING_SPINNER_COLOR);
   let obj = require("useToken");
-  const sharedValue = require("module_1652").useSharedValue(0);
+  const sharedValue = require("module_1655").useSharedValue(0);
   items = [sharedValue, isRecording];
   const effect = noop.useEffect(() => {
     if (!timeout) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        const obj = c0(5485);
-        const result = _undefined2.set(obj.withTiming(1, { easing: c0(1652).Easing.quad, duration: 200 }));
+        const obj = c0(5548);
+        const result = _undefined2.set(obj.withTiming(1, { easing: c0(1655).Easing.quad, duration: 200 }));
       }, 1000);
       return () => {
         clearTimeout(closure_0);
       };
     }
   }, items);
-  let obj2 = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(0);
-  let obj3 = require("module_1652");
+  let obj2 = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(0);
+  let obj3 = require("module_1655");
   const items1 = [closure_23, initialAnimation, isRecording];
   _require = undefined;
   importDefault = undefined;
@@ -279,7 +279,7 @@ export default noop.memo(function VoiceMessageChat(isRecording) {
   VoiceMessageChatTsx3.__closure = items2;
   VoiceMessageChatTsx3.__workletHash = 4127950941280;
   VoiceMessageChatTsx3.__initData = tmp9;
-  const items3 = [closure_24, sharedValue1, require("timing/timing").withTiming, require("module_1652").Easing, sharedValue];
+  const items3 = [closure_24, sharedValue1, require("timing/timing").withTiming, require("module_1655").Easing, sharedValue];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -311,8 +311,8 @@ export default noop.memo(function VoiceMessageChat(isRecording) {
   VoiceMessageChatTsx4.__closure = items4;
   VoiceMessageChatTsx4.__workletHash = 6644508258045;
   VoiceMessageChatTsx4.__initData = tmp12;
-  const animatedReaction = require("module_1652").useAnimatedReaction(VoiceMessageChatTsx3, VoiceMessageChatTsx4);
-  const obj4 = require("module_1652");
+  const animatedReaction = require("module_1655").useAnimatedReaction(VoiceMessageChatTsx3, VoiceMessageChatTsx4);
+  const obj4 = require("module_1655");
   const items5 = [closure_25, backgroundColor];
   _require = undefined;
   [tmp18, tmp19] = items5;
@@ -335,8 +335,8 @@ export default noop.memo(function VoiceMessageChat(isRecording) {
   VoiceMessageChatTsx5.__closure = items6;
   VoiceMessageChatTsx5.__workletHash = 14070656036467;
   VoiceMessageChatTsx5.__initData = tmp18;
-  const animatedStyle = require("module_1652").useAnimatedStyle(VoiceMessageChatTsx5);
-  const tmp2Result = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(VoiceMessageChatTsx5);
+  const tmp2Result = require("module_1655");
   const items7 = [closure_26, sharedValue];
   _require = undefined;
   [tmp21, tmp22] = items7;
@@ -350,7 +350,7 @@ export default noop.memo(function VoiceMessageChat(isRecording) {
   VoiceMessageChatTsx6.__closure = items8;
   VoiceMessageChatTsx6.__workletHash = 5849307603008;
   VoiceMessageChatTsx6.__initData = tmp21;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(VoiceMessageChatTsx6);
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(VoiceMessageChatTsx6);
   const obj5 = { style: null, children: null };
   const items9 = [tmp.container, animatedStyle];
   obj5.style = items9;
@@ -364,5 +364,5 @@ export default noop.memo(function VoiceMessageChat(isRecording) {
   }
   const items11 = [tmp25, leftAccessory, closure_13(Duration, { animationValue: sharedValue1 }), closure_13(Waveform, {}), rightAccessory];
   obj5.children = items11;
-  return closure_14(module_1652.View, obj5);
+  return closure_14(module_1655.View, obj5);
 });

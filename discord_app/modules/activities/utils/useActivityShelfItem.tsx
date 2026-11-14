@@ -1,21 +1,21 @@
-// === Module 13284: useActivityShelfItem ===
+// === Module 13389: useActivityShelfItem ===
 
-// Module 13284 (useActivityShelfItem)
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import Server from "Server" /* 2116 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5164 */;
-import getPlatformDefault from "getPlatform" /* 5921 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6994 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7196 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12651 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 12746 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 12747 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12802 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 13285 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 13286 */;
+// Module 13389 (useActivityShelfItem)
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import Server from "Server" /* 2119 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5227 */;
+import getPlatformDefault from "getPlatform" /* 5984 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 7057 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7259 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12747 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 12842 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 12843 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 12898 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 13390 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 13391 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 
 require = fn;
 function useActivityAction(applicationId) {
@@ -252,7 +252,7 @@ function useOnActivityItemSelected(arg0) {
     }) : undefined;
   }
 }
-const STAFF_RELEASE_PHASES = fn(2142).STAFF_RELEASE_PHASES;
+const STAFF_RELEASE_PHASES = fn(2145).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1072).ApplicationFlags;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 const size = fn(2);

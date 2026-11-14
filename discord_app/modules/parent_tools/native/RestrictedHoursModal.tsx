@@ -1,18 +1,18 @@
-// === Module 19996: RestrictedHoursModal ===
+// === Module 20154: RestrictedHoursModal ===
 
-// Module 19996 (RestrictedHoursModal)
+// Module 20154 (RestrictedHoursModal)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6269 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6781 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7354 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 19995 */;
-import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 19999 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6332 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6844 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 7418 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 20153 */;
+import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 20157 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
@@ -46,37 +46,37 @@ function RestrictedHoursScreen(visible) {
     return str;
   });
   let obj = require("initialize");
-  const sharedValue = require("module_1652").useSharedValue(0);
+  const sharedValue = require("module_1655").useSharedValue(0);
   importDefault = sharedValue;
-  let obj2 = require("module_1652");
-  sharedValue1 = require("module_1652").useSharedValue(0);
-  let obj3 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(0);
-  let obj4 = require("module_1652");
-  const sharedValue3 = require("module_1652").useSharedValue(0.9);
+  let obj2 = require("module_1655");
+  sharedValue1 = require("module_1655").useSharedValue(0);
+  let obj3 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(0);
+  let obj4 = require("module_1655");
+  const sharedValue3 = require("module_1655").useSharedValue(0.9);
   const items1 = [sharedValue, sharedValue1, sharedValue2, sharedValue3];
   const effect = sharedValue3.useEffect(() => {
     const obj2 = { duration: 3000, easing: null };
-    const Easing = _mod1652.Easing;
+    const Easing = _mod1655.Easing;
     obj2.easing = Easing.bezier(0.24, 0.27, 0.58, 1);
     const result = _undefined.set(timing_timing.withTiming(1, obj2));
-    const obj3 = _mod1652;
+    const obj3 = _mod1655;
     const obj5 = { duration: 1500, easing: null };
-    const Easing2 = _mod1652.Easing;
+    const Easing2 = _mod1655.Easing;
     obj5.easing = Easing2.bezier(0, 0, 1, 1);
     const result1 = sharedValue1.set(obj3.withDelay(1500, timing_timing.withTiming(1, obj5)));
-    const obj6 = _mod1652;
+    const obj6 = _mod1655;
     const obj8 = { duration: 1000, easing: null };
-    const Easing3 = _mod1652.Easing;
+    const Easing3 = _mod1655.Easing;
     obj8.easing = Easing3.bezier(0.1, 0.24, 0.32, 1);
     const result2 = sharedValue2.set(obj6.withDelay(2000, timing_timing.withTiming(1, obj8)));
-    const obj9 = _mod1652;
+    const obj9 = _mod1655;
     const obj11 = { duration: 1000, easing: null };
-    const Easing4 = _mod1652.Easing;
+    const Easing4 = _mod1655.Easing;
     obj11.easing = Easing4.bezier(0.1, 0.24, 0.32, 1);
     const result3 = sharedValue3.set(obj9.withDelay(2000, timing_timing.withTiming(1, obj11)));
   }, items1);
-  let obj5 = require("module_1652");
+  let obj5 = require("module_1655");
   const items2 = [closure_13, sharedValue];
   _require = undefined;
   [tmp13, tmp14] = items2;
@@ -90,8 +90,8 @@ function RestrictedHoursScreen(visible) {
   RestrictedHoursModalTsx1.__closure = items3;
   RestrictedHoursModalTsx1.__workletHash = 11776278729345;
   RestrictedHoursModalTsx1.__initData = tmp13;
-  const animatedStyle = require("module_1652").useAnimatedStyle(RestrictedHoursModalTsx1);
-  let obj6 = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(RestrictedHoursModalTsx1);
+  let obj6 = require("module_1655");
   const items4 = [closure_14, sharedValue1];
   _require = undefined;
   [tmp16, tmp17] = items4;
@@ -105,8 +105,8 @@ function RestrictedHoursScreen(visible) {
   RestrictedHoursModalTsx2.__closure = items5;
   RestrictedHoursModalTsx2.__workletHash = 10964689956002;
   RestrictedHoursModalTsx2.__initData = tmp16;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(RestrictedHoursModalTsx2);
-  const tmp6Result = require("module_1652");
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(RestrictedHoursModalTsx2);
+  const tmp6Result = require("module_1655");
   const items6 = [closure_15, sharedValue2, sharedValue3];
   _require = undefined;
   importDefault = undefined;
@@ -125,7 +125,7 @@ function RestrictedHoursScreen(visible) {
   RestrictedHoursModalTsx3.__closure = items7;
   RestrictedHoursModalTsx3.__workletHash = 4184569865582;
   RestrictedHoursModalTsx3.__initData = tmp19;
-  const animatedStyle2 = require("module_1652").useAnimatedStyle(RestrictedHoursModalTsx3);
+  const animatedStyle2 = require("module_1655").useAnimatedStyle(RestrictedHoursModalTsx3);
   if (null != tmp5) {
     const intl2 = tmp6(tmp3[13]).intl;
     let obj7 = { endTime: tmp5 };
@@ -144,22 +144,22 @@ function RestrictedHoursScreen(visible) {
   obj11.style = items10;
   const obj12 = { source: null, resizeMode: "cover", style: null };
   const obj10 = { style: tmp.backgroundFill, pointerEvents: "none" };
-  const tmp6Result2 = require("module_1652");
-  obj12.source = require("module_19998");
+  const tmp6Result2 = require("module_1655");
+  obj12.source = require("module_20156");
   obj12.style = tmp.sunbeamGradient;
   obj11.children = closure_7(require("FastImage"), obj12);
-  items9[1] = closure_7(require("module_1652").View, obj11);
+  items9[1] = closure_7(require("module_1655").View, obj11);
   const obj13 = { style: null, children: null };
   const items11 = [tmp.content, animatedStyle2];
   obj13.style = items11;
   const tmp2Result = require("FastImage");
   const items12 = [closure_7(closure_5, { style: tmp.riveContainer, children: closure_7(require("TeenScreenTimeRive").TeenScreenTimeRive, { artboard: "Teen Screen Time Illo", stateMachine: "State Machine 1" }) }), closure_7(require("Text/Text").Text, { variant: "body-lg/medium", color: "text-overlay-light", style: tmp.description, children: formatResult })];
   obj13.children = items12;
-  items9[2] = closure_8(require("module_1652").View, obj13);
+  items9[2] = closure_8(require("module_1655").View, obj13);
   const obj16 = { style: tmp.footer, children: null };
   const obj17 = { variant: "body-sm/medium", color: "text-subtle", style: tmp.description, children: null };
   const intl3 = tmp6(tmp3[13]).intl;
-  obj17.children = intl3.format(require("module_2685").iqeKDz, {
+  obj17.children = intl3.format(require("module_2701").iqeKDz, {
     username: stateFromStores,
     loginHook(children, id) {
       return metroImportDefault(Text_Text.Text, { variant: "body-sm/normal", color: "text-link", onPress, children }, id);
@@ -168,7 +168,7 @@ function RestrictedHoursScreen(visible) {
   obj16.children = closure_7(require("Text/Text").Text, obj17);
   items9[3] = closure_7(closure_5, obj16);
   obj9.children = items9;
-  const items13 = [closure_8(require("module_1652").View, obj9), closure_7(RestrictedHoursLogoutBlockingLayer, { visible: visible.logoutRequestInFlight })];
+  const items13 = [closure_8(require("module_1655").View, obj9), closure_7(RestrictedHoursLogoutBlockingLayer, { visible: visible.logoutRequestInFlight })];
   obj8.children = items13;
   return closure_8(require("ModalScreen").ModalScreen, obj8);
 }
@@ -177,7 +177,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = "rgb(0, 3, 40)";
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_24 }, backgroundFill: null, assetLayers: null, sunbeamGradient: null, riveContainer: null, content: null, description: null, footer: null, logoutBlockingLayer: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

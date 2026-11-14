@@ -1,21 +1,21 @@
-// === Module 8797: ThreadActionCreators ===
+// === Module 8864: ThreadActionCreators ===
 
-// Module 8797 (ThreadActionCreators)
+// Module 8864 (ThreadActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6004 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8937 */;
-import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8938 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 6067 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 9004 */;
+import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 9005 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8798 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5177 */;
-import ThreadSummaryStore from "ThreadSummaryStore" /* 8936 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8865 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5240 */;
+import ThreadSummaryStore from "ThreadSummaryStore" /* 9003 */;
 
 const require = globalThis.__r;
 
@@ -44,11 +44,11 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
   const obj = DispatcherDefault;
   obj.dispatch({ type: "THREAD_MEMBER_LOCAL_UPDATE", id: id.id, guildId: id.getGuildId(), userId: AuthenticationStore.getId(), isJoining });
 }
-let closure_4 = fn(5096).createChannelRecordFromServer;
-const PAGE_SIZE = fn(8798).PAGE_SIZE;
+let closure_4 = fn(5159).createChannelRecordFromServer;
+const PAGE_SIZE = fn(8865).PAGE_SIZE;
 const Constants = fn(1072);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-const ChannelFlags = fn(5099).ChannelFlags;
+const ChannelFlags = fn(5162).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadActionCreators.tsx");
 
@@ -696,7 +696,7 @@ export default {
       if (flag) {
         obj7.archived = false;
       }
-      const HTTP = tmp3(1282).HTTP;
+      const HTTP = tmp3(1285).HTTP;
       const request = { url: closure_1_12.CHANNEL(tmp3.id), body: obj7, rejectWithError: true };
       await HTTP.patch(request);
       if (1 === tmp7) {
@@ -780,7 +780,7 @@ export default {
               return obj14;
             } else {
               dependencyMap = 1;
-              const HTTP2 = tmp3(1282).HTTP;
+              const HTTP2 = tmp3(1285).HTTP;
               const request = { url: closure_1_12.CHANNEL(closure_128_0.id), body: null, rejectWithError: true };
               const obj15 = { flags: closure_128_0.flags & ~constants.PINNED };
               request.body = obj15;
@@ -817,7 +817,7 @@ export default {
                 return obj21;
               } else {
                 dependencyMap = 2;
-                const HTTP = tmp3(1282).HTTP;
+                const HTTP = tmp3(1285).HTTP;
                 const request1 = { url: closure_1_12.CHANNEL(closure_128_1.id), body: null, rejectWithError: true };
                 const obj22 = { flags: closure_128_1.flags | constants.PINNED };
                 request1.body = obj22;

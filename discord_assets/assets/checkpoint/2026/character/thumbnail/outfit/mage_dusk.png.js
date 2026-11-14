@@ -1,6 +1,6 @@
-// === Module 6533: ? ===
+// === Module 6596: ? ===
 
-// Module 6533
+// Module 6596
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/mage_dusk.png.js");

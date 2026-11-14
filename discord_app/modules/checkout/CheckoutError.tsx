@@ -1,7 +1,7 @@
-// === Module 12291: CheckoutError ===
+// === Module 12386: CheckoutError ===
 
-// Module 12291 (CheckoutError)
-import RevenueError2 from "RevenueError" /* 12292 */;
+// Module 12386 (CheckoutError)
+import RevenueError2 from "RevenueError" /* 12387 */;
 import size from "module_2" /* 2 */;
 
 const RevenueError = RevenueError2.RevenueError;

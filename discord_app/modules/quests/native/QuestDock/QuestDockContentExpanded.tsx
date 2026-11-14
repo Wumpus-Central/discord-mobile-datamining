@@ -1,20 +1,20 @@
-// === Module 17668: QuestDockContentExpanded ===
+// === Module 17788: QuestDockContentExpanded ===
 
-// Module 17668 (QuestDockContentExpanded)
-import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11945 */;
-import QuestDockUtils from "QuestDockUtils" /* 17579 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 17581 */;
+// Module 17788 (QuestDockContentExpanded)
+import _mod1655 from "module_1655" /* 1655 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 12012 */;
+import QuestDockUtils from "QuestDockUtils" /* 17697 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 17699 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
-const QuestDockMode = fn(5275).QuestDockMode;
-let closure_5 = fn(17580).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(5338).QuestDockMode;
+let closure_5 = fn(17698).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj = { wrapper: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -77,9 +77,9 @@ export default noop.memo(function QuestDockContentExpanded(arg0) {
   QuestDockContentExpandedTsx1.__closure = items1;
   QuestDockContentExpandedTsx1.__workletHash = 5435658496809;
   QuestDockContentExpandedTsx1.__initData = tmp6;
-  const animatedStyle = _mod1652.useAnimatedStyle(QuestDockContentExpandedTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(QuestDockContentExpandedTsx1);
   const obj2 = { style: null, children };
   const items2 = [tmp.wrapper, animatedStyle];
   obj2.style = items2;
-  return jsx(_modDef1652.View, { style: null, children });
+  return jsx(_modDef1655.View, { style: null, children });
 });

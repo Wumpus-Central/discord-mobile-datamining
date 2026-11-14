@@ -1,7 +1,7 @@
-// === Module 12340: SocialLayerStorefrontMobileEmbedExperiment ===
+// === Module 12435: SocialLayerStorefrontMobileEmbedExperiment ===
 
-// Module 12340 (SocialLayerStorefrontMobileEmbedExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 12435 (SocialLayerStorefrontMobileEmbedExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-08-social-layer-storefront-mobile-embed", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

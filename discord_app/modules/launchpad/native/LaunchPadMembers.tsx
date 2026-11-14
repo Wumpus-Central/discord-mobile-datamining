@@ -1,20 +1,20 @@
-// === Module 19677: LaunchPadMembers ===
+// === Module 19887: LaunchPadMembers ===
 
-// Module 19677 (LaunchPadMembers)
+// Module 19887 (LaunchPadMembers)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import GuildChannelUserListDefault from "GuildChannelUserList" /* 12430 */;
-import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 13419 */;
-import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 19342 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import GuildChannelUserListDefault from "GuildChannelUserList" /* 12525 */;
+import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 13522 */;
+import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 19534 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_7 = createStyles.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadMembers.tsx");
@@ -42,7 +42,7 @@ export default noop.memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "channel", type: -1152318557 };
+    return { channelId: "channelId", type: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004259905181437145 };
   });
   if ("private" === stateFromStoresObject.type) {
     let obj2 = { style: tmp.wrapper, children: null };

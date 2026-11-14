@@ -1,22 +1,22 @@
-// === Module 10193: ForwardDestinationUtils ===
+// === Module 10262: ForwardDestinationUtils ===
 
-// Module 10193 (ForwardDestinationUtils)
+// Module 10262 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import StickersUtils from "StickersUtils" /* 6729 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 8726 */;
-import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 10194 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import StickersUtils from "StickersUtils" /* 6792 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 8793 */;
+import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 10263 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6947 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import RelationshipStore from "RelationshipStore" /* 5185 */;
-import UserStore from "UserStore" /* 1385 */;
+import StickersStore from "StickersStore" /* 7010 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import RelationshipStore from "RelationshipStore" /* 5248 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelRecord = fn(5096);
+const ChannelRecord = fn(5159);
 ({ ChannelRecordBase: hasOwnProperty, isGuildChannelType: closure_6, createChannelRecord: metroImportDefault } = ChannelRecord);
 const Constants = fn(1072);
 ({ MessageFlags: closure_12, Permissions: map1 } = Constants);
@@ -24,8 +24,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(10176).getChannelIdFromDestinationId);
-  found = mapped.find(found(1380).isNotNullish);
+  const mapped = selectedDestinations.map(found(10245).getChannelIdFromDestinationId);
+  found = mapped.find(found(1255).isNotNullish);
   items = [ChannelStore];
   const items1 = [found];
   const stateFromStores = found(504).useStateFromStores(items, () => ChannelStore.getChannel(found), items1);
@@ -64,7 +64,7 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
     if (null != channel) {
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp2) {
-          tmp12(6775);
+          tmp12(6838);
         }
         const obj2 = { label: null, lineClamp: 2 };
         const intl = tmp12(1113).intl;
@@ -80,10 +80,10 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
           if (currentUser != null) {
             nsfwAllowed = currentUser.nsfwAllowed;
           }
-          let needsAgeVerificationResult = tmp12(6767).needsAgeVerification();
+          let needsAgeVerificationResult = tmp12(6830).needsAgeVerification();
           if (needsAgeVerificationResult) {
-            needsAgeVerificationResult = tmp12(5932).isFeatureAgeGated(tmp12(6772).AgeGatedFeature.AGE_GATED_SPACES);
-            const tmp12Result10 = tmp12(5932);
+            needsAgeVerificationResult = tmp12(5995).isFeatureAgeGated(tmp12(6835).AgeGatedFeature.AGE_GATED_SPACES);
+            const tmp12Result10 = tmp12(5995);
           }
           let tmp19 = !tmp18;
           if (false !== nsfwAllowed) {
@@ -94,9 +94,9 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
             disableAgeRestrictedDestinations = ForwardAgeRestrictedDestinationsExperimentDefault.getConfig({ location: "getDestinationIsUnavailable" }).disableAgeRestrictedDestinations;
           }
           flag2 = disableAgeRestrictedDestinations;
-          const tmp12Result9 = tmp12(6767);
+          const tmp12Result9 = tmp12(6830);
         }
-        tmp12Result8 = tmp12(6775);
+        tmp12Result8 = tmp12(6838);
       }
       if (flag2) {
         const obj3 = { label: null, lineClamp: 2 };
@@ -123,9 +123,9 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
                 obj5.label = intl3.string(tmp12(1113).t.Wr4RIX);
                 return obj5;
               }
-              tmp12Result12 = tmp12(6727);
+              tmp12Result12 = tmp12(6790);
             }
-            tmp12Result11 = tmp12(6727);
+            tmp12Result11 = tmp12(6790);
           } else {
             const messageSnapshots2 = components.messageSnapshots;
           }
@@ -136,12 +136,12 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
               obj6.label = intl4.string(tmp12(1113).t.Wr4RIX);
               return obj6;
             }
-            tmp12Result13 = tmp12(6727);
+            tmp12Result13 = tmp12(6790);
           }
           items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          const tmp12Result14 = tmp12(6729);
-          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp12(6729).getMessageStickers(components), 0));
+          const tmp12Result14 = tmp12(6792);
+          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp12(6792).getMessageStickers(components), 0));
           if (items.length > 0) {
             if (!PermissionStore.can(constants2.USE_EXTERNAL_STICKERS, type)) {
               if (items.some((id) => {
@@ -173,7 +173,7 @@ export function getDestinationIsUnavailable(components, channel, type, fn) {
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(6729).getMessageStickers(components), 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(6792).getMessageStickers(components), 0);
         }
       }
       obj = require("AgeGateUtils");
@@ -203,8 +203,8 @@ export function useSelectedDestinationNames(arg0) {
         if (null != user) {
           nickname = nickname.getNickname(user.id);
           if (nickname == null) {
-            nickname = closure_1_1(5309).getName(user);
-            const obj2 = closure_1_1(5309);
+            nickname = closure_1_1(5372).getName(user);
+            const obj2 = closure_1_1(5372);
           }
           tmp13 = nickname;
         }
@@ -213,7 +213,7 @@ export function useSelectedDestinationNames(arg0) {
         channel = channel.getChannel(id);
         let channelName = null;
         if (null != channel) {
-          const obj = closure_1_0(5891);
+          const obj = closure_1_0(5954);
           channelName = obj.computeChannelName(channel, user, nickname, true);
         }
         return channelName;

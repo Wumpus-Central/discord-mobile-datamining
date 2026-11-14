@@ -1,16 +1,16 @@
-// === Module 7526: PlayStationLinkModal ===
+// === Module 7592: PlayStationLinkModal ===
 
-// Module 7526 (PlayStationLinkModal)
+// Module 7592 (PlayStationLinkModal)
 import util from "util" /* 1113 */;
-import HeaderActionButton from "HeaderActionButton" /* 7363 */;
-import _modDef7366 from "module_7366" /* 7366 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 7525 */;
+import HeaderActionButton from "HeaderActionButton" /* 7427 */;
+import _modDef7430 from "module_7430" /* 7430 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 7591 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function CloseButton() {
   const obj = {
-    source: _modDef7366,
+    source: _modDef7430,
     onPress: function onClose() {
       return PlayStationLinkModalActionCreatorsDefault.hideModal();
     },
@@ -19,14 +19,14 @@ function CloseButton() {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef7366,
+    source: _modDef7430,
     onPress: function onClose() {
       return PlayStationLinkModalActionCreatorsDefault.hideModal();
     },
     accessibilityLabel: null
   });
 }
-const constants = fn(7527).PlayStationLinkModalScenes;
+const constants = fn(7593).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkModal.tsx");

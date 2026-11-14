@@ -1,7 +1,7 @@
-// === Module 9544: PremiumBundledPlansUtils ===
+// === Module 9611: PremiumBundledPlansUtils ===
 
-// Module 9544 (PremiumBundledPlansUtils)
-import ProductIds from "ProductIds" /* 8514 */;
+// Module 9611 (PremiumBundledPlansUtils)
+import ProductIds from "ProductIds" /* 8580 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -86,7 +86,7 @@ function getProductIdFromSubscriptionItems(subscriptionItemsForProduct) {
   const error = new Error("No App Store bundled product matches the subscription items");
   throw error;
 }
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({ PREMIUM_GUILD_SUBSCRIPTION_PLANS: c3, PremiumTypes: closure_4, SubscriptionIntervalTypes: hasOwnProperty, SubscriptionPlans: closure_6 } = PremiumConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/PremiumBundledPlansUtils.tsx");
@@ -233,11 +233,11 @@ export function excludeNitroOnlyPlansForActiveTrial(premiumTier) {
 }
 export { getSubscriptionItemsForProduct };
 export function getModifySubscriptionItemsForProduct(productId, subscription) {
-  if (productId in found(8514).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(8514).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+  if (productId in found(8580).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(8580).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {
       if (tmpResult.isBoostOnlySubscription(subscription)) {
-        const itemsWithUpsertedPremiumPlanId = tmp(2171).getItemsWithUpsertedPremiumPlanId(subscription, tmp8.basePlanId);
+        const itemsWithUpsertedPremiumPlanId = tmp(2174).getItemsWithUpsertedPremiumPlanId(subscription, tmp8.basePlanId);
         const reversed = itemsWithUpsertedPremiumPlanId.reverse();
         const additionalPlans = tmp8.additionalPlans;
         found = additionalPlans.find((planId) => set.has(planId.planId));
@@ -256,7 +256,7 @@ export function getModifySubscriptionItemsForProduct(productId, subscription) {
         }
         return mapped;
       }
-      tmpResult = tmp(2171);
+      tmpResult = tmp(2174);
     }
     return getSubscriptionItemsForProduct(productId);
   } else {

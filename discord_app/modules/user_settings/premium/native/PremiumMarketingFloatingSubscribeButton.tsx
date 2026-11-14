@@ -1,16 +1,16 @@
-// === Module 15255: PremiumMarketingFloatingSubscribeButton ===
+// === Module 15369: PremiumMarketingFloatingSubscribeButton ===
 
-// Module 15255 (PremiumMarketingFloatingSubscribeButton)
+// Module 15369 (PremiumMarketingFloatingSubscribeButton)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5830 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10007 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 15253 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10074 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 15367 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 const require = globalThis.__r;
 
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 1 }, gradient: { position: "absolute", left: 0, right: 0, bottom: 0, top: -64 }, buttonContainer: { marginLeft: "auto", marginRight: "auto", width: "100%", paddingHorizontal: 12, paddingTop: nativeDefault.space.PX_12 } };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = { code: "(function PremiumMarketingFloatingSubscribeButtonTsx1(){let[withTiming,isVisible,useReducedMotion,FADE_DURATION_MS,ENTER_TRANSLATE_PX]=this.__closure;return{opacity:withTiming(isVisible.get()?1:0,{duration:useReducedMotion?0:FADE_DURATION_MS}),transform:[{translateY:withTiming(isVisible.get()?0:ENTER_TRANSLATE_PX,{duration:useReducedMotion?0:FADE_DURATION_MS})}]};})" };
@@ -83,8 +83,8 @@ export default function PremiumMarketingFloatingSubscribeButton(style) {
   PremiumMarketingFloatingSubscribeButtonTsx1.__closure = items3;
   PremiumMarketingFloatingSubscribeButtonTsx1.__workletHash = 2100931871963;
   PremiumMarketingFloatingSubscribeButtonTsx1.__initData = tmp9;
-  const animatedStyle = require("module_1652").useAnimatedStyle(PremiumMarketingFloatingSubscribeButtonTsx1);
-  let obj2 = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(PremiumMarketingFloatingSubscribeButtonTsx1);
+  let obj2 = require("module_1655");
   const items4 = [closure_11, isVisible];
   _require = undefined;
   [tmp16, tmp17] = items4;
@@ -108,7 +108,7 @@ export default function PremiumMarketingFloatingSubscribeButton(style) {
   PremiumMarketingFloatingSubscribeButtonTsx2.__closure = items5;
   PremiumMarketingFloatingSubscribeButtonTsx2.__workletHash = 4354740509872;
   PremiumMarketingFloatingSubscribeButtonTsx2.__initData = tmp16;
-  const animatedProps = tmp4(1652).useAnimatedProps(PremiumMarketingFloatingSubscribeButtonTsx2);
+  const animatedProps = tmp4(1655).useAnimatedProps(PremiumMarketingFloatingSubscribeButtonTsx2);
   const obj3 = { animatedProps, style: null, children: null };
   const items6 = [tmp.container, animatedStyle];
   obj3.style = items6;
@@ -116,12 +116,12 @@ export default function PremiumMarketingFloatingSubscribeButton(style) {
   const obj5 = { style: null, children: null };
   const items8 = [tmp.buttonContainer, , ];
   const obj4 = { pointerEvents: "none", style: tmp.gradient, colors: memo, locations: [0, 0.75, 1], start: VerticalGradient.START, end: VerticalGradient.END };
-  const tmp4Result = tmp4(1652);
+  const tmp4Result = tmp4(1655);
   items8[1] = { paddingBottom: Math.max(useSafeAreaInsetsDefault().bottom, nativeDefault.space.PX_16) };
   items8[2] = style.style;
   obj5.style = items8;
   obj5.children = closure_7(NitroUpsellButtonDefault, { onPress: openPayment, text: buttonText });
   items7[1] = closure_7(c4, obj5);
   obj3.children = items7;
-  return closure_8(_modDef1652.View, obj3);
+  return closure_8(_modDef1655.View, obj3);
 };

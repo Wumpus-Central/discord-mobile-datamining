@@ -1,9 +1,9 @@
-// === Module 18771: channel_list_v2/ChannelListUtils ===
+// === Module 18900: channel_list_v2/ChannelListUtils ===
 
-// Module 18771 (channel_list_v2/ChannelListUtils)
+// Module 18900 (channel_list_v2/ChannelListUtils)
 import Constants from "Constants" /* 1072 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
-import ChannelListState from "ChannelListState" /* 8664 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import ChannelListState from "ChannelListState" /* 8731 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

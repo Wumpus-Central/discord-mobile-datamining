@@ -1,17 +1,17 @@
-// === Module 10955: useFormattedMessagePreview ===
+// === Module 11024: useFormattedMessagePreview ===
 
-// Module 10955 (useFormattedMessagePreview)
+// Module 11024 (useFormattedMessagePreview)
 import apply from "apply" /* 12 */;
 import MessageTypes from "MessageTypes" /* 1088 */;
 import util from "util" /* 1113 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5889 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 6686 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 9143 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 9148 */;
-import VoiceSessionUtils from "VoiceSessionUtils" /* 9255 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5952 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 6749 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 9210 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 9215 */;
+import VoiceSessionUtils from "VoiceSessionUtils" /* 9322 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 5185 */;
-import UserStore from "UserStore" /* 1385 */;
+import RelationshipStore from "RelationshipStore" /* 5248 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
@@ -19,13 +19,13 @@ require = fn;
 function formatMessagePreview(type, isBlocked) {
   if (isBlocked.isBlocked) {
     const obj2 = { type: "text", text: null };
-    const intl29 = util.intl;
-    obj2.text = intl29.string(util.t.XAkOo2);
+    const intl30 = util.intl;
+    obj2.text = intl30.string(util.t.XAkOo2);
     return obj2;
   } else if (tmp) {
     const obj3 = { type: "text", text: null };
-    const intl28 = util.intl;
-    obj3.text = intl28.string(util.t["G7p6v/"]);
+    const intl29 = util.intl;
+    obj3.text = intl29.string(util.t["G7p6v/"]);
     return obj3;
   } else {
     type = type.type;
@@ -203,9 +203,9 @@ function formatMessagePreview(type, isBlocked) {
               if (type.type === MessageTypes.MessageTypes.RECIPIENT_ADD) {
                 if (null != otherUserNick) {
                   const obj29 = { type: "text", text: null };
-                  const intl27 = util.intl;
+                  const intl28 = util.intl;
                   const obj30 = { username: authorNick, usernameHook: apply.identity, otherUsername: otherUserNick, otherUsernameHook: apply.identity };
-                  obj29.text = intl27.formatToPlainString(util.t.MMN2Jq, obj30);
+                  obj29.text = intl28.formatToPlainString(util.t.MMN2Jq, obj30);
                   let tmp21 = obj29;
                 }
                 let tmp31;
@@ -221,13 +221,13 @@ function formatMessagePreview(type, isBlocked) {
                     id = otherUser.id;
                   }
                   if (type.author.id === id) {
-                    const intl26 = util.intl;
+                    const intl27 = util.intl;
                     const obj31 = { username: authorNick, usernameHook: apply.identity };
-                    let formatToPlainStringResult = intl26.formatToPlainString(util.t["5v2xa8"], obj31);
+                    let formatToPlainStringResult = intl27.formatToPlainString(util.t["5v2xa8"], obj31);
                   } else {
-                    const intl25 = util.intl;
+                    const intl26 = util.intl;
                     const obj32 = { username: authorNick, usernameHook: apply.identity, otherUsername: otherUserNick, otherUsernameHook: apply.identity };
-                    formatToPlainStringResult = intl25.formatToPlainString(util.t.L2FyVq, obj32);
+                    formatToPlainStringResult = intl26.formatToPlainString(util.t.L2FyVq, obj32);
                   }
                   const obj33 = { type: "text", text: formatToPlainStringResult };
                   tmp21 = obj33;
@@ -235,18 +235,18 @@ function formatMessagePreview(type, isBlocked) {
               }
               if (type.type === MessageTypes.MessageTypes.CALL) {
                 if (isCallActive) {
-                  const intl24 = util.intl;
-                  let stringResult = intl24.string(util.t["NGg/fm"]);
+                  const intl25 = util.intl;
+                  let stringResult = intl25.string(util.t["NGg/fm"]);
                 } else {
                   if (null != type.call) {
                     const participants = type.call.participants;
                     if (!participants.includes(currentUserId)) {
-                      const intl22 = util.intl;
-                      stringResult = intl22.string(util.t["2CnhoI"]);
+                      const intl23 = util.intl;
+                      stringResult = intl23.string(util.t["2CnhoI"]);
                     }
                   }
-                  const intl23 = util.intl;
-                  stringResult = intl23.string(util.t.v05Xd6);
+                  const intl24 = util.intl;
+                  stringResult = intl24.string(util.t.v05Xd6);
                 }
                 const obj34 = { type: "text", text: stringResult, color: null, trailingIcon: null };
                 let str2;
@@ -262,76 +262,91 @@ function formatMessagePreview(type, isBlocked) {
                 tmp21 = obj34;
               } else if (type.type === MessageTypes.MessageTypes.CHANNEL_NAME_CHANGE) {
                 const obj35 = { type: "text", text: null };
-                const intl21 = util.intl;
+                const intl22 = util.intl;
                 const obj36 = { username: authorNick, usernameHook: apply.identity, channelName: type.content };
-                obj35.text = intl21.formatToPlainString(util.t.oItgEw, obj36);
+                obj35.text = intl22.formatToPlainString(util.t.oItgEw, obj36);
                 tmp21 = obj35;
               } else if (type.type === MessageTypes.MessageTypes.CHANNEL_ICON_CHANGE) {
                 const obj37 = { type: "text", text: null };
-                const intl20 = util.intl;
+                const intl21 = util.intl;
                 const obj38 = { username: authorNick, usernameHook: apply.identity };
-                obj37.text = intl20.formatToPlainString(util.t.OEdU6X, obj38);
+                obj37.text = intl21.formatToPlainString(util.t.OEdU6X, obj38);
                 tmp21 = obj37;
               } else if (type.type === MessageTypes.MessageTypes.CHANNEL_PINNED_MESSAGE) {
-                const obj40 = { type: "text", text: null };
-                const intl19 = util.intl;
-                const obj42 = { username: authorNick, usernameHook: apply.identity };
-                obj40.text = intl19.formatToPlainString(util.t.vfkjqx, obj42);
-                tmp21 = obj40;
+                const obj39 = { type: "text", text: null };
+                const intl20 = util.intl;
+                const obj40 = { username: authorNick, usernameHook: apply.identity };
+                obj39.text = intl20.formatToPlainString(util.t.vfkjqx, obj40);
+                tmp21 = obj39;
               } else if (type.type === MessageTypes.MessageTypes.USER_JOIN) {
-                const obj43 = { type: "text", text: null };
+                const obj42 = { type: "text", text: null };
                 if (type.author.bot) {
-                  obj43.text = SystemMessageUtilsDefault.getSystemMessageAppAdded(authorNick, actorNick);
-                  let tmp24 = obj43;
+                  obj42.text = SystemMessageUtilsDefault.getSystemMessageAppAdded(authorNick, actorNick);
+                  let tmp24 = obj42;
                 } else {
-                  const intl18 = util.intl;
+                  const intl19 = util.intl;
                   const obj44 = { username: authorNick, usernameHook: null };
                   const systemMessageUserJoin = SystemMessageUtilsDefault.getSystemMessageUserJoin(type.id);
                   obj44.usernameHook = apply.identity;
-                  obj43.text = intl18.formatToPlainString(systemMessageUserJoin, obj44);
-                  tmp24 = obj43;
+                  obj42.text = intl19.formatToPlainString(systemMessageUserJoin, obj44);
+                  tmp24 = obj42;
                 }
                 tmp21 = tmp24;
-              } else if (type.type === MessageTypes.MessageTypes.THREAD_CREATED) {
-                const obj45 = { type: "text", text: null };
-                const intl17 = util.intl;
-                const obj46 = { actorName: authorNick, actorHook: apply.identity, threadName: type.content, threadOnClick: apply.identity };
-                obj45.text = intl17.formatToPlainString(util.t.SGaUAU, obj46);
-                tmp21 = obj45;
-              } else if (type.type === MessageTypes.MessageTypes.PREMIUM_REFERRAL) {
-                const obj47 = { type: "text", text: null };
-                const intl16 = util.intl;
-                const obj48 = { username: authorNick };
-                obj47.text = intl16.formatToPlainString(util.t.lieTqU, obj48);
-                tmp21 = obj47;
-              } else if (type.type === MessageTypes.MessageTypes.STAGE_START) {
-                const obj49 = { type: "text", text: null };
-                const intl15 = util.intl;
-                const obj50 = { username: authorNick, usernameOnClick: apply.identity, topic: type.content };
-                obj49.text = intl15.formatToPlainString(util.t.aZtRW8, obj50);
-                tmp21 = obj49;
-              } else if (type.type === MessageTypes.MessageTypes.STAGE_END) {
-                const obj51 = { type: "text", text: null };
-                const intl14 = util.intl;
-                const obj52 = { username: authorNick, usernameOnClick: apply.identity, topic: type.content };
-                obj51.text = intl14.formatToPlainString(util.t.vMJhvG, obj52);
-                tmp21 = obj51;
-              } else if (type.type === MessageTypes.MessageTypes.STAGE_SPEAKER) {
-                const obj53 = { type: "text", text: null };
-                const intl13 = util.intl;
-                const obj54 = { username: authorNick, usernameOnClick: apply.identity };
-                obj53.text = intl13.formatToPlainString(util.t.V4uCm4, obj54);
-                tmp21 = obj53;
-              } else if (type.type === MessageTypes.MessageTypes.STAGE_TOPIC) {
-                const obj55 = { type: "text", text: null };
-                const intl12 = util.intl;
-                const obj56 = { username: authorNick, usernameOnClick: apply.identity, topic: type.content };
-                obj55.text = intl12.formatToPlainString(util.t.ro3RM0, obj56);
-                tmp21 = obj55;
-              } else if (type.type === MessageTypes.MessageTypes.VOICE_SESSION) {
-                const obj57 = { type: "text", text: VoiceSessionUtils.getVoiceSessionMessageContent(type) };
-                tmp21 = obj57;
-                const tmp4Result = VoiceSessionUtils;
+              } else {
+                if (type.type !== MessageTypes.MessageTypes.GUILD_BOOST) {
+                  if (type.type !== MessageTypes.MessageTypes.GUILD_BOOST_TIER_1) {
+                    if (type.type !== MessageTypes.MessageTypes.GUILD_BOOST_TIER_2) {
+                      if (type.type !== MessageTypes.MessageTypes.GUILD_BOOST_TIER_3) {
+                        if (type.type === MessageTypes.MessageTypes.THREAD_CREATED) {
+                          const obj45 = { type: "text", text: null };
+                          const intl17 = util.intl;
+                          const obj46 = { actorName: authorNick, actorHook: apply.identity, threadName: type.content, threadOnClick: apply.identity };
+                          obj45.text = intl17.formatToPlainString(util.t.SGaUAU, obj46);
+                          tmp21 = obj45;
+                        } else if (type.type === MessageTypes.MessageTypes.PREMIUM_REFERRAL) {
+                          const obj47 = { type: "text", text: null };
+                          const intl16 = util.intl;
+                          const obj48 = { username: authorNick };
+                          obj47.text = intl16.formatToPlainString(util.t.lieTqU, obj48);
+                          tmp21 = obj47;
+                        } else if (type.type === MessageTypes.MessageTypes.STAGE_START) {
+                          const obj49 = { type: "text", text: null };
+                          const intl15 = util.intl;
+                          const obj50 = { username: authorNick, usernameOnClick: apply.identity, topic: type.content };
+                          obj49.text = intl15.formatToPlainString(util.t.aZtRW8, obj50);
+                          tmp21 = obj49;
+                        } else if (type.type === MessageTypes.MessageTypes.STAGE_END) {
+                          const obj51 = { type: "text", text: null };
+                          const intl14 = util.intl;
+                          const obj52 = { username: authorNick, usernameOnClick: apply.identity, topic: type.content };
+                          obj51.text = intl14.formatToPlainString(util.t.vMJhvG, obj52);
+                          tmp21 = obj51;
+                        } else if (type.type === MessageTypes.MessageTypes.STAGE_SPEAKER) {
+                          const obj53 = { type: "text", text: null };
+                          const intl13 = util.intl;
+                          const obj54 = { username: authorNick, usernameOnClick: apply.identity };
+                          obj53.text = intl13.formatToPlainString(util.t.V4uCm4, obj54);
+                          tmp21 = obj53;
+                        } else if (type.type === MessageTypes.MessageTypes.STAGE_TOPIC) {
+                          const obj55 = { type: "text", text: null };
+                          const intl12 = util.intl;
+                          const obj56 = { username: authorNick, usernameOnClick: apply.identity, topic: type.content };
+                          obj55.text = intl12.formatToPlainString(util.t.ro3RM0, obj56);
+                          tmp21 = obj55;
+                        } else if (type.type === MessageTypes.MessageTypes.VOICE_SESSION) {
+                          const obj57 = { type: "text", text: VoiceSessionUtils.getVoiceSessionMessageContent(type) };
+                          tmp21 = obj57;
+                          const tmp4Result = VoiceSessionUtils;
+                        }
+                      }
+                    }
+                  }
+                }
+                const obj58 = { type: "text", text: null };
+                const intl18 = util.intl;
+                const obj59 = { username: authorNick, usernameHook: apply.identity };
+                obj58.text = intl18.formatToPlainString(util.t["57St/7"], obj59);
+                tmp21 = obj58;
               }
             }
           }

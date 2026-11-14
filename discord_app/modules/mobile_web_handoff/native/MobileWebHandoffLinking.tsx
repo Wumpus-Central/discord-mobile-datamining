@@ -1,9 +1,9 @@
-// === Module 10420: MobileWebHandoffLinking ===
+// === Module 10489: MobileWebHandoffLinking ===
 
-// Module 10420 (MobileWebHandoffLinking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import FingerprintUtils from "FingerprintUtils" /* 1265 */;
-import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 10423 */;
+// Module 10489 (MobileWebHandoffLinking)
+import FingerprintUtils from "FingerprintUtils" /* 1254 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 10492 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -87,7 +87,7 @@ let closure_10 = async function _redirectWithHandoffToken(arg0) {
           closure_131_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

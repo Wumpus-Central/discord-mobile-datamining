@@ -1,16 +1,16 @@
-// === Module 18227: DevToolsGuildTagBadgesModal ===
+// === Module 18348: DevToolsGuildTagBadgesModal ===
 
-// Module 18227 (DevToolsGuildTagBadgesModal)
-import HeaderShared from "HeaderShared" /* 8984 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10839 */;
-import DevToolsGuildTagBadgesScreenDefault from "DevToolsGuildTagBadgesScreen" /* 18228 */;
+// Module 18348 (DevToolsGuildTagBadgesModal)
+import HeaderShared from "HeaderShared" /* 9051 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10908 */;
+import DevToolsGuildTagBadgesScreenDefault from "DevToolsGuildTagBadgesScreen" /* 18349 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const NativeStackNavigator = fn(9061);
+const NativeStackNavigator = fn(9128);
 let closure_4 = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildTagBadgesModal.tsx");

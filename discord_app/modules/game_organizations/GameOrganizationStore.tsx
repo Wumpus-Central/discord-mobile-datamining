@@ -1,15 +1,16 @@
-// === Module 16281: GameOrganizationStore ===
+// === Module 16349: GameOrganizationStore ===
 
-// Module 16281 (GameOrganizationStore)
+// Module 16349 (GameOrganizationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GameOrganizationModels from "GameOrganizationModels" /* 12275 */;
+import GameOrganizationModels from "GameOrganizationModels" /* 12370 */;
 
 require = fn;
 let closure_2 = {};
 let closure_3 = {};
 let closure_4 = {};
 const dependencyMap = {};
+let closure_6 = {};
 const Store = initializeDefault.Store;
 class GameOrganizationStore extends Store {
 }
@@ -21,6 +22,17 @@ prototype["getGameOrganizationByGuildId"] = function getGameOrganizationByGuildI
   let tmp = null;
   if (null != arg0) {
     let tmp3 = dependencyMap[arg0];
+    if (tmp3 == null) {
+      tmp3 = null;
+    }
+    tmp = tmp3;
+  }
+  return tmp;
+};
+prototype["getDisplayNounByGuildId"] = function getDisplayNounByGuildId(guildId) {
+  let tmp = null;
+  if (null != guildId) {
+    let tmp3 = closure_6[guildId];
     if (tmp3 == null) {
       tmp3 = null;
     }
@@ -59,8 +71,9 @@ const gameOrganizationStore = new GameOrganizationStore(DispatcherDefault, {
     gameOrganization = gameOrganization.gameOrganization;
     closure_4[gameOrganization.id] = gameOrganization;
     closure_5[gameOrganization.guildId] = gameOrganization;
-    delete tmp4[tmp3];
     delete tmp2[tmp];
+    delete tmp2[tmp];
+    closure_6[gameOrganization.guildId] = gameOrganization.displayNoun;
   },
   GAME_ORGANIZATION_FETCH_FAILURE: function handleGameOrganizationFetchFailure(arg0) {
     ({ guildId, error } = arg0);
@@ -68,11 +81,16 @@ const gameOrganizationStore = new GameOrganizationStore(DispatcherDefault, {
     closure_3[guildId] = error;
   },
   GAME_ORGANIZATION_INVITE_RESOLVE_SUCCESS: function handleGameOrganizationInviteResolveSuccess(invite) {
-    const result = GameOrganizationModels.gameOrganizationFromServer(invite.invite.game_organization);
+    invite = invite.invite;
+    const application_config = invite.application_config;
+    const result = GameOrganizationModels.gameOrganizationFromServer(invite.game_organization);
     closure_4[result.id] = result;
     closure_5[result.guildId] = result;
-    delete tmp2[tmp4];
+    delete tmp2[tmp3];
     delete tmp4[tmp3];
+    if (null != application_config) {
+      closure_6[result.guildId] = application_config.display_noun;
+    }
     delete tmp2[tmp];
   },
   GUILD_UPDATE: function handleGuildUpdate(guild) {
@@ -107,6 +125,8 @@ const gameOrganizationStore = new GameOrganizationStore(DispatcherDefault, {
       const guildId2 = tmp6.guildId;
       delete tmp4[tmp3];
       const guildId3 = tmp6.guildId;
+      delete tmp4[tmp3];
+      const guildId4 = tmp6.guildId;
       delete tmp2[tmp];
       flag = true;
     }
@@ -122,6 +142,8 @@ const gameOrganizationStore = new GameOrganizationStore(DispatcherDefault, {
       const guildId2 = tmp6.guildId;
       delete tmp4[tmp3];
       const guildId3 = tmp6.guildId;
+      delete tmp4[tmp3];
+      const guildId4 = tmp6.guildId;
       delete tmp2[tmp];
       flag = true;
     }

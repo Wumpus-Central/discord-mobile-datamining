@@ -1,7 +1,7 @@
-// === Module 16063: WidgetRecord ===
+// === Module 16184: WidgetRecord ===
 
-// Module 16063 (WidgetRecord)
-import Record from "Record" /* 1405 */;
+// Module 16184 (WidgetRecord)
+import Record from "Record" /* 1408 */;
 
 let size = fn(2);
 const result = size.fileFinishedImporting("records/WidgetRecord.tsx");
@@ -71,7 +71,7 @@ const prototype = function WidgetRecord(id) {
   const size1 = { width: 0, height: 0 };
   const merged = Object.assign(id.size);
   tmp7.size = size1;
-  const size2 = { width: "Array", height: "flexDirection" };
+  const size2 = { width: "disabled", height: "isArray" };
   const merged1 = Object.assign(id.minSize);
   tmp7.minSize = size2;
   tmp7.pinned = id.pinned;

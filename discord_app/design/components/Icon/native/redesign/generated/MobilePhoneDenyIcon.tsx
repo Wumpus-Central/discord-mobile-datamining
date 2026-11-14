@@ -1,9 +1,9 @@
-// === Module 19940: MobilePhoneDenyIcon ===
+// === Module 20097: MobilePhoneDenyIcon ===
 
-// Module 19940 (MobilePhoneDenyIcon)
+// Module 20097 (MobilePhoneDenyIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod19941 from "module_19941" /* 19941 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod20098 from "module_20098" /* 20098 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function MobilePhoneDenyIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod19941, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod20098, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

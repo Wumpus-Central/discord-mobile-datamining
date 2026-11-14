@@ -1,21 +1,21 @@
-// === Module 20178: NewUserUtils ===
+// === Module 20338: NewUserUtils ===
 
-// Module 20178 (NewUserUtils)
+// Module 20338 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import router_utils from "router_utils" /* 1099 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import Link from "Link" /* 1500 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8133 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 14886 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 14997 */;
-import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 18580 */;
-import InterestPickerExperiment from "InterestPickerExperiment" /* 18975 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 20177 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import Link from "Link" /* 1503 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 8199 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 15000 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 15111 */;
+import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 18709 */;
+import InterestPickerExperiment from "InterestPickerExperiment" /* 19029 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 20337 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 18532 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7022 */;
-import UserStore from "UserStore" /* 1385 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 18661 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7085 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
@@ -138,7 +138,7 @@ let closure_21 = async function _getNextOnboardingStep() {
           let transitionStep2;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -227,12 +227,12 @@ let closure_21 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NotificationPermissionConstants = fn(14713);
+const NotificationPermissionConstants = fn(14826);
 ({ EventActionLocation: metroImportDefault, EventActionType: closure_8 } = NotificationPermissionConstants);
 const Constants = fn(1072);
 ({ PlatformTypes: closure_9, Routes: closure_10 } = Constants);
-const ContactPermissions = fn(14881).ContactPermissions;
-let closure_12 = fn(6839).NotificationAuthorizationStatus;
+const ContactPermissions = fn(14995).ContactPermissions;
+let closure_12 = fn(6902).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_16 = asyncGeneratorStep(async () => {
@@ -485,7 +485,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(8394).hasDeferredInvite,
+    shouldShowStep: fn(8460).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }

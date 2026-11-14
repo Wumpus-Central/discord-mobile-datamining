@@ -1,7 +1,7 @@
-// === Module 6802: GuildRoomActionCreators ===
+// === Module 6865: GuildRoomActionCreators ===
 
-// Module 6802 (GuildRoomActionCreators)
-import _guildRoomConnectAll from "_guildRoomConnect" /* 6803 */;
+// Module 6865 (GuildRoomActionCreators)
+import _guildRoomConnectAll from "_guildRoomConnect" /* 6866 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;

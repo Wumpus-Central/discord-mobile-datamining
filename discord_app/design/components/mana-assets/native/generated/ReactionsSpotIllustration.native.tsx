@@ -1,19 +1,19 @@
-// === Module 8971: ReactionsSpotIllustration ===
+// === Module 9038: ReactionsSpotIllustration ===
 
-// Module 8971 (ReactionsSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7689 */;
-import _modDef8972 from "module_8972" /* 8972 */;
-import _modDef8973 from "module_8973" /* 8973 */;
-import _modDef8974 from "module_8974" /* 8974 */;
+// Module 9038 (ReactionsSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7755 */;
+import _modDef9039 from "module_9039" /* 9039 */;
+import _modDef9040 from "module_9040" /* 9040 */;
+import _modDef9041 from "module_9041" /* 9041 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef8972 }, 3: null };
-let obj2 = { uri: _modDef8972 };
-obj[2] = { uri: _modDef8973 };
-const obj3 = { uri: _modDef8973 };
-obj[3] = { uri: _modDef8974 };
+let obj = { 1: null, 2: { uri: _modDef9039 }, 3: null };
+let obj2 = { uri: _modDef9039 };
+obj[2] = { uri: _modDef9040 };
+const obj3 = { uri: _modDef9040 };
+obj[3] = { uri: _modDef9041 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ReactionsSpotIllustration.native.tsx");
 

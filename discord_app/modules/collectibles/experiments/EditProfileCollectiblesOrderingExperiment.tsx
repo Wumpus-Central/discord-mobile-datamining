@@ -1,7 +1,7 @@
-// === Module 15408: EditProfileCollectiblesOrderingExperiment ===
+// === Module 15522: EditProfileCollectiblesOrderingExperiment ===
 
-// Module 15408 (EditProfileCollectiblesOrderingExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 15522 (EditProfileCollectiblesOrderingExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-09-edit-profile-collectibles-ordering", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

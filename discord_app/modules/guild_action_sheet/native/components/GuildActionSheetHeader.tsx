@@ -1,14 +1,14 @@
-// === Module 16294: GuildActionSheetHeader ===
+// === Module 16415: GuildActionSheetHeader ===
 
-// Module 16294 (GuildActionSheetHeader)
+// Module 16415 (GuildActionSheetHeader)
 import nativeDefault from "native" /* 575 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5106 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 16296 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 16417 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 16295 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7225 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 16416 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7289 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ function CommunityPill(guildVisibility) {
   _require = intl.string(tmp4 ? t.op2cJ6 : t.TME4LJ);
   let ExperimentalWebIcon;
   if (tmp4) {
-    ExperimentalWebIcon = tmp2(12247).ExperimentalWebIcon;
+    ExperimentalWebIcon = tmp2(12342).ExperimentalWebIcon;
   }
   const obj = {
     style: tmp.communityPill,
@@ -34,10 +34,10 @@ function CommunityPill(guildVisibility) {
   };
   if (tmp4) {
     const obj2 = { size: "xs", color: ExperimentalWebIcon(575).colors.BADGE_INVERTED_BACKGROUND, secondaryColor: ExperimentalWebIcon(575).colors.BADGE_INVERTED_TEXT, style: tmp.communityPillIcon };
-    let tmp7Result = closure_9(tmp2(10324).ExperimentalWebBadgeIcon, obj2);
+    let tmp7Result = closure_9(tmp2(10393).ExperimentalWebBadgeIcon, obj2);
     let tmp10 = closure_9;
   } else {
-    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(10328), disableColor: true };
+    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(10397), disableColor: true };
     tmp7Result = closure_9(tmp2(1187).Icon, obj3);
     tmp10 = closure_9;
   }
@@ -54,7 +54,7 @@ const View = fn(17).View;
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { content: { padding: 16 }, avatar: { borderRadius: 14.117647058823529, height: 60, width: 60 }, headerContainer: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, avatarBackground: null, description: null, memberInfo: null, nameRow: null, communityPill: null, communityPillIcon: null, communityPillText: null, guildBanner: null };
 let size = { height: 68, width: 68, marginBottom: 12, marginLeft: -4, padding: 4, borderRadius: 16, alignContent: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.avatarBackground = size;
@@ -64,7 +64,7 @@ obj2.nameRow = { flexDirection: "row", alignItems: "center", marginTop: 8 };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.communityPill = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER, paddingTop: 4, paddingRight: 8, paddingBottom: 4, paddingLeft: 6, borderRadius: nativeDefault.radii.round };
 obj2.communityPillIcon = { width: 16, height: 16, marginRight: 6 };
-const PlatformUtils = fn(1357);
+const PlatformUtils = fn(1360);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

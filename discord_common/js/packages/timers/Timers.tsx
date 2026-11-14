@@ -1,6 +1,6 @@
-// === Module 5087: Timers ===
+// === Module 5150: Timers ===
 
-// Module 5087 (Timers)
+// Module 5150 (Timers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 class Timeout {

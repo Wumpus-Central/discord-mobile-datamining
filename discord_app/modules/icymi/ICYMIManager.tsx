@@ -1,11 +1,12 @@
-// === Module 16904: ICYMIManager ===
+// === Module 17027: ICYMIManager ===
 
-// Module 16904 (ICYMIManager)
+// Module 17027 (ICYMIManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10148 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 10151 */;
-import LifecycleManager from "LifecycleManager" /* 2120 */;
+import WaterwheelsDiscoverExperiment from "WaterwheelsDiscoverExperiment" /* 10215 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10217 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 10220 */;
+import LifecycleManager from "LifecycleManager" /* 2123 */;
 
 require = fn;
 let closure_3 = null;
@@ -20,50 +21,67 @@ prototype["_terminate"] = function _terminate() {
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   if (obj.getICYMIEnabled("ICYMIManager")) {
-    const obj3 = { isInitialLoad: true };
-    const dehydrated = ICYMIActionCreatorsDefault.fetchDehydrated(obj3);
+    if (!tmpResult.getWaterwheelsDiscoverEnabled("ICYMIManager")) {
+      const obj2 = { isInitialLoad: true };
+      const dehydrated = ICYMIActionCreatorsDefault.fetchDehydrated(obj2);
+    }
     if (null != timeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
     }
     const _setTimeout = setTimeout;
     timeout = setTimeout(() => {
-      let dehydrated = closure_1_1(closure_1_2[0]).fetchDehydrated({ isInitialLoad: false });
+      if (!obj.getWaterwheelsDiscoverEnabled("ICYMIManager")) {
+        let obj3 = { isInitialLoad: false };
+        let dehydrated = closure_1_1(closure_1_2[1]).fetchDehydrated(obj3);
+        let obj2 = closure_1_1(closure_1_2[1]);
+      }
       if (null != timeout) {
         let _clearTimeout = clearTimeout;
         clearTimeout(timeout);
       }
       timeout = setTimeout(() => {
-        let dehydrated = closure_1_1(closure_1_2[0]).fetchDehydrated({ isInitialLoad: false });
+        if (!obj.getWaterwheelsDiscoverEnabled("ICYMIManager")) {
+          let obj3 = { isInitialLoad: false };
+          let dehydrated = closure_1_1(closure_1_2[1]).fetchDehydrated(obj3);
+          let obj2 = closure_1_1(closure_1_2[1]);
+        }
         if (null != timeout) {
           let _clearTimeout = clearTimeout;
           clearTimeout(timeout);
         }
         timeout = setTimeout(() => {
-          let dehydrated = closure_1_1(closure_1_2[0]).fetchDehydrated({ isInitialLoad: false });
+          if (!obj.getWaterwheelsDiscoverEnabled("ICYMIManager")) {
+            let obj3 = { isInitialLoad: false };
+            let dehydrated = closure_1_1(closure_1_2[1]).fetchDehydrated(obj3);
+            let obj2 = closure_1_1(closure_1_2[1]);
+          }
           if (null != timeout) {
             let _clearTimeout = clearTimeout;
             clearTimeout(timeout);
           }
           timeout = setTimeout(() => {
-            let dehydrated = closure_1_1(closure_1_2[0]).fetchDehydrated({ isInitialLoad: false });
+            if (!obj.getWaterwheelsDiscoverEnabled("ICYMIManager")) {
+              let obj3 = { isInitialLoad: false };
+              let dehydrated = closure_1_1(closure_1_2[1]).fetchDehydrated(obj3);
+              let obj2 = closure_1_1(closure_1_2[1]);
+            }
             if (null != timeout) {
               let _clearTimeout = clearTimeout;
               clearTimeout(timeout);
             }
-            timeout = setTimeout(/* F113168 */ function() { ... }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
-            let obj = closure_1_1(closure_1_2[0]);
-          }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
-          let obj = closure_1_1(closure_1_2[0]);
-        }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
-        let obj = closure_1_1(closure_1_2[0]);
-      }, 15 * closure_1_1(closure_1_2[1]).Millis.MINUTE);
-      let obj = closure_1_1(closure_1_2[0]);
+            timeout = setTimeout(/* F114467 */ function() { ... }, 15 * closure_1_1(closure_1_2[2]).Millis.MINUTE);
+            obj = closure_1_0(closure_1_2[0]);
+          }, 15 * closure_1_1(closure_1_2[2]).Millis.MINUTE);
+          obj = closure_1_0(closure_1_2[0]);
+        }, 15 * closure_1_1(closure_1_2[2]).Millis.MINUTE);
+        obj = closure_1_0(closure_1_2[0]);
+      }, 15 * closure_1_1(closure_1_2[2]).Millis.MINUTE);
+      obj = closure_1_0(closure_1_2[0]);
     }, 15 * DurationsDefault.Millis.MINUTE);
+    tmpResult = WaterwheelsDiscoverExperiment;
     const guildChannelScores = ICYMIActionCreatorsDefault.getGuildChannelScores();
-    const tmp2Result = ICYMIActionCreatorsDefault;
     const recommendedGuilds = ICYMIActionCreatorsDefault.getRecommendedGuilds();
-    const tmp2Result2 = ICYMIActionCreatorsDefault;
   }
   obj = ICYMIExperiment;
 };

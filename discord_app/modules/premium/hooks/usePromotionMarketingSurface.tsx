@@ -1,9 +1,9 @@
-// === Module 9943: usePromotionMarketingSurface ===
+// === Module 10010: usePromotionMarketingSurface ===
 
-// Module 9943 (usePromotionMarketingSurface)
+// Module 10010 (usePromotionMarketingSurface)
 import noop from "module_19" /* 19 */;
-import UserOfferStore from "UserOfferStore" /* 9231 */;
-import PromotionsStore from "PromotionsStore" /* 9556 */;
+import UserOfferStore from "UserOfferStore" /* 9298 */;
+import PromotionsStore from "PromotionsStore" /* 9623 */;
 
 const require = globalThis.__r;
 

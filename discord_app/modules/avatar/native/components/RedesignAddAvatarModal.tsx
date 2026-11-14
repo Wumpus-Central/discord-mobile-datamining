@@ -1,12 +1,12 @@
-// === Module 20182: RedesignAddAvatarModal ===
+// === Module 20342: RedesignAddAvatarModal ===
 
-// Module 20182 (RedesignAddAvatarModal)
+// Module 20342 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 575 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 20160 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 20320 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8476 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8542 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1072).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: { flexGrow: 2, alignItems: "center" }, growContainer: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.growContainer = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -67,7 +67,7 @@ export default function RedesignAddAvatarModal(route) {
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(8812).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(8879).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -83,23 +83,23 @@ export default function RedesignAddAvatarModal(route) {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(16946);
-              obj11.description = tmp2(9334).generateAvatarDescription();
+              const obj = tmp2(17069);
+              obj11.description = tmp2(9401).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(9334);
+              const obj3 = tmp2(9401);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(9331).setPendingChanges(obj12);
-            const obj4 = tmp2(9331);
+            tmp2(9398).setPendingChanges(obj12);
+            const obj4 = tmp2(9398);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
             }
-            const result = tmp2(8475).announcePendingAvatarChange(str);
+            const result = tmp2(8541).announcePendingAvatarChange(str);
             closure_129_3(undefined);
             c3 = 3;
-            const obj6 = tmp2(8475);
+            const obj6 = tmp2(8541);
           }
           closure_129_1(true);
         }

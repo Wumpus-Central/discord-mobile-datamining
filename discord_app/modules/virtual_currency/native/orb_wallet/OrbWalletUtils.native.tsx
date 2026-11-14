@@ -1,15 +1,15 @@
-// === Module 17406: OrbWalletUtils ===
+// === Module 17530: OrbWalletUtils ===
 
-// Module 17406 (OrbWalletUtils)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8418 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9523 */;
+// Module 17530 (OrbWalletUtils)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8484 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9590 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const constants = fn(1074).CollectiblesMobileShopScreen;
-const PremiumTypes = fn(1387).PremiumTypes;
+const PremiumTypes = fn(1390).PremiumTypes;
 const context = noop.createContext({ analyticsPage: AnalyticsLocationDefault.ORB_WALLET });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/native/orb_wallet/OrbWalletUtils.native.tsx");

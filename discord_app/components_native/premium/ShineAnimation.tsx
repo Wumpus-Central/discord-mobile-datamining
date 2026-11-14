@@ -1,15 +1,15 @@
-// === Module 9643: ShineAnimation ===
+// === Module 9710: ShineAnimation ===
 
-// Module 9643 (ShineAnimation)
+// Module 9710 (ShineAnimation)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import FastImageDefault from "FastImage" /* 5957 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import FastImageDefault from "FastImage" /* 6020 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = Object.freeze({ FLASH_TIME_PERCENT: 0.72, FLASH_DURATION_PERCENT: 0.08 });
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { container: { overflow: "hidden" }, shineContainer: null, shine: null, shineInner: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.shineContainer = {};
@@ -38,16 +38,16 @@ export default noop.memo(function ShineAnimation(arg0) {
   _require = undefined;
   ({ source, style } = arg0);
   const tmp = closure_8();
-  const sharedValue = require("module_1652").useSharedValue(0);
+  const sharedValue = require("module_1655").useSharedValue(0);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const obj = _mod1652;
-    const obj2 = _mod1652;
+    const obj = _mod1655;
+    const obj2 = _mod1655;
     const result = _undefined.set(obj.withDelay(400, obj2.withRepeat(timing_timing.withTiming(1, { duration: 1000 }), -1, false)));
   }, items);
-  let obj = require("module_1652");
-  let items1 = [closure_9, require("module_1652").interpolate, sharedValue];
+  let obj = require("module_1655");
+  let items1 = [closure_9, require("module_1655").interpolate, sharedValue];
   _require = undefined;
   importDefault = undefined;
   [tmp6, tmp7, tmp8] = items1;
@@ -61,15 +61,15 @@ export default noop.memo(function ShineAnimation(arg0) {
   ShineAnimationTsx1.__closure = items2;
   ShineAnimationTsx1.__workletHash = 2390175696032;
   ShineAnimationTsx1.__initData = tmp6;
-  const animatedStyle = require("module_1652").useAnimatedStyle(ShineAnimationTsx1);
-  let obj2 = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(ShineAnimationTsx1);
+  let obj2 = require("module_1655");
   const tmp11Result = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360);
   const alphaResult = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360).alpha(0.2);
   const hexResult = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360).alpha(0.2).hex();
   const tmp13Result = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360);
   const alphaResult1 = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360).alpha(1);
   const hexResult1 = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360).alpha(1).hex();
-  const items3 = [closure_10, closure_7, require("module_1652").interpolateColor, sharedValue, hexResult, hexResult1];
+  const items3 = [closure_10, closure_7, require("module_1655").interpolateColor, sharedValue, hexResult, hexResult1];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -99,16 +99,16 @@ export default noop.memo(function ShineAnimation(arg0) {
   ShineAnimationTsx2.__closure = items4;
   ShineAnimationTsx2.__workletHash = 15848815967493;
   ShineAnimationTsx2.__initData = tmp15;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(ShineAnimationTsx2);
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(ShineAnimationTsx2);
   const obj3 = { style: null, children: null };
   const items5 = [tmp.container, style, animatedStyle1];
   obj3.style = items5;
   const obj4 = { style: tmp.shineContainer, children: null };
-  const items6 = [closure_5(_modDef1652.View, { style: animatedStyle }), ];
+  const items6 = [closure_5(_modDef1655.View, { style: animatedStyle }), ];
   const obj5 = { style: tmp.shine, children: closure_5(c4, { style: tmp.shineInner }) };
   items6[1] = closure_5(c4, obj5);
   obj4.children = items6;
   const items7 = [closure_6(c4, obj4), closure_5(FastImageDefault, { source })];
   obj3.children = items7;
-  return closure_6(_modDef1652.View, obj3);
+  return closure_6(_modDef1655.View, obj3);
 });

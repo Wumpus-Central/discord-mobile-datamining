@@ -1,6 +1,6 @@
-// === Module 14719: DragAndDropUtils ===
+// === Module 14832: DragAndDropUtils ===
 
-// Module 14719 (DragAndDropUtils)
+// Module 14832 (DragAndDropUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 

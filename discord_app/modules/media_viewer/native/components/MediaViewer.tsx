@@ -1,16 +1,16 @@
-// === Module 15115: MediaViewer ===
+// === Module 15229: MediaViewer ===
 
-// Module 15115 (MediaViewer)
-import _modDef1652 from "module_1652" /* 1652 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6269 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import useVideoControls from "useVideoControls" /* 8563 */;
-import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 10126 */;
-import StatusBarDefault from "StatusBar" /* 11761 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 12621 */;
-import MediaViewerItem from "MediaViewerItem" /* 15117 */;
-import useMediaViewerClosePositionDefault from "useMediaViewerClosePosition" /* 15122 */;
+// Module 15229 (MediaViewer)
+import _modDef1655 from "module_1655" /* 1655 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6332 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
+import useVideoControls from "useVideoControls" /* 8630 */;
+import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 10195 */;
+import StatusBarDefault from "StatusBar" /* 11827 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 12717 */;
+import MediaViewerItem from "MediaViewerItem" /* 15231 */;
+import useMediaViewerClosePositionDefault from "useMediaViewerClosePosition" /* 15236 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,12 +35,12 @@ function MediaViewer(arg0) {
   _require = height;
   const tmp10 = useMediaViewerClosePositionDefault({ index, onClose, sources, windowHeight: height, windowWidth: width });
   let obj2 = require("MediaViewerDimensionsContext");
-  const sharedValue = require("module_1652").useSharedValue(0);
-  let obj3 = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(false);
-  const obj4 = require("module_1652");
-  const animatedRef = require("module_1652").useAnimatedRef();
-  const obj5 = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(0);
+  let obj3 = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(false);
+  const obj4 = require("module_1655");
+  const animatedRef = require("module_1655").useAnimatedRef();
+  const obj5 = require("module_1655");
   const isMediaViewerImprovementsEnabled = require("MediaViewerImprovementsExperiment").useIsMediaViewerImprovementsEnabled();
   const obj6 = require("MediaViewerImprovementsExperiment");
   const isMediaViewerEntranceJankFixEnabled = require("MediaViewerEntranceJankExperiment").useIsMediaViewerEntranceJankFixEnabled();
@@ -68,7 +68,7 @@ function MediaViewer(arg0) {
     obj.backgroundColor = "black";
     return obj;
   }, items2);
-  const items3 = [closure_14, isMediaViewerEntranceJankFixEnabled, memo, sharedValue, require("module_1652").interpolate, translatePos, tmp10];
+  const items3 = [closure_14, isMediaViewerEntranceJankFixEnabled, memo, sharedValue, require("module_1655").interpolate, translatePos, tmp10];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -98,12 +98,12 @@ function MediaViewer(arg0) {
   MediaViewerTsx3.__workletHash = 1493258125771;
   MediaViewerTsx3.__initData = tmp22;
   const obj10 = {};
-  const animatedStyle = require("module_1652").useAnimatedStyle(MediaViewerTsx3);
+  const animatedStyle = require("module_1655").useAnimatedStyle(MediaViewerTsx3);
   let merged = Object.assign(StyleSheet.absoluteFillObject);
   obj10.backgroundColor = "transparent";
-  const obj9 = require("module_1652");
+  const obj9 = require("module_1655");
   const tmp30 = StyleSheet;
-  const items5 = [closure_16, isClosing, sharedValue1, overlayEnabled, isInteracting, require("timing/timing").withTiming, require("module_1652").Easing, closure_15, require("module_1705").scheduleOnRN, tmp7];
+  const items5 = [closure_16, isClosing, sharedValue1, overlayEnabled, isInteracting, require("timing/timing").withTiming, require("module_1655").Easing, closure_15, require("module_1708").scheduleOnRN, tmp7];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -175,9 +175,9 @@ function MediaViewer(arg0) {
   MediaViewerTsx5.__closure = items6;
   MediaViewerTsx5.__workletHash = 1237930573376;
   MediaViewerTsx5.__initData = tmp32;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(MediaViewerTsx5);
-  const tmp8Result = require("module_1652");
-  const items7 = [closure_17, overlayEnabled, isInteracting, require("module_1705").scheduleOnRN, tmp7];
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(MediaViewerTsx5);
+  const tmp8Result = require("module_1655");
+  const items7 = [closure_17, overlayEnabled, isInteracting, require("module_1708").scheduleOnRN, tmp7];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -203,9 +203,9 @@ function MediaViewer(arg0) {
   MediaViewerTsx6.__closure = items8;
   MediaViewerTsx6.__workletHash = 15736275157365;
   MediaViewerTsx6.__initData = tmp43;
-  const derivedValue = require("module_1652").useDerivedValue(MediaViewerTsx6);
-  const tmp8Result4 = require("module_1652");
-  const items9 = [closure_18, isMediaViewerEntranceJankFixEnabled, pan, translatePos, sharedValue1, require("timing/timing").withTiming, require("module_1652").Easing];
+  const derivedValue = require("module_1655").useDerivedValue(MediaViewerTsx6);
+  const tmp8Result4 = require("module_1655");
+  const items9 = [closure_18, isMediaViewerEntranceJankFixEnabled, pan, translatePos, sharedValue1, require("timing/timing").withTiming, require("module_1655").Easing];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -243,7 +243,7 @@ function MediaViewer(arg0) {
   MediaViewerTsx7.__closure = items10;
   MediaViewerTsx7.__workletHash = 12989144735041;
   MediaViewerTsx7.__initData = tmp50;
-  const animatedStyle2 = require("module_1652").useAnimatedStyle(MediaViewerTsx7);
+  const animatedStyle2 = require("module_1655").useAnimatedStyle(MediaViewerTsx7);
   StyleSheet = obj.useRef(null);
   const items11 = [sources.length > 1, animatedRef, sharedValue1];
   callback = obj.useCallback(() => {
@@ -283,7 +283,7 @@ function MediaViewer(arg0) {
       const result = useVideoControls.unpauseCurrentVideoIfNeeded();
     }
   }, items14);
-  const tmp8Result5 = require("module_1652");
+  const tmp8Result5 = require("module_1655");
   const orientationListener = require("DeviceOrientation").useOrientationListener(callback2);
   let tmp63Result = callback(closure_13, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed });
   const obj11 = { style: tmp30.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
@@ -291,16 +291,16 @@ function MediaViewer(arg0) {
   const obj13 = { style: null };
   const items16 = [memo, animatedStyle];
   obj13.style = items16;
-  items15[1] = callback(_modDef1652.View, obj13);
+  items15[1] = callback(_modDef1655.View, obj13);
   const obj14 = { ref: animatedRef, style: null, children: null };
   const items17 = [pan.pan, animatedStyle2];
   obj14.style = items17;
   if (isMediaViewerImprovementsEnabled) {
     const obj15 = { entranceAnimationDriver: sharedValue, onLongPress, onScrollWorklets, originLayout, pagerIndex, panGestureConfig: mediaViewerPanGestureConfig, renderMedia, sources, useItemVisible, windowWidth: width, windowHeight: height, zoomed };
-    tmp63Result = tmp63(tmp(15124), obj15);
+    tmp63Result = tmp63(tmp(15238), obj15);
   }
   obj14.children = tmp63Result;
-  items15[2] = callback(_modDef1652.View, obj14);
+  items15[2] = callback(_modDef1655.View, obj14);
   const obj16 = { style: null, pointerEvents: null, children: null };
   const items18 = [tmp4(noop.useState(obj10), 1)[0], animatedStyle1];
   obj16.style = items18;
@@ -310,7 +310,7 @@ function MediaViewer(arg0) {
   }
   obj16.pointerEvents = str;
   obj16.children = renderOverlay(dismiss, overlayEnabled, sharedValue);
-  items15[3] = callback(_modDef1652.View, obj16);
+  items15[3] = callback(_modDef1655.View, obj16);
   items15[4] = callback(HomeIndicatorDefault, {});
   obj11.children = items15;
   const children = ref2(c5, obj11);
@@ -320,7 +320,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let closure_9 = PlatformUtils.isAndroid();
 let obj = { pan: null };
 let obj3 = {};
@@ -345,8 +345,8 @@ let closure_13 = noop.memo(function MediaViewer(entranceAnimationDriver) {
   const zoomed = entranceAnimationDriver.zoomed;
   let panGestureGenerator;
   ({ onContentSizeChange, onScroll, ref, index } = entranceAnimationDriver);
-  const sharedValue = require("module_1652").useSharedValue(false);
-  const obj = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(false);
+  const obj = require("module_1655");
   items = [panGestureGenerator, zoomed, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -366,12 +366,12 @@ let closure_13 = noop.memo(function MediaViewer(entranceAnimationDriver) {
   MediaViewerTsx1.__closure = items1;
   MediaViewerTsx1.__workletHash = 3986226128458;
   MediaViewerTsx1.__initData = tmp4;
-  const derivedValue = require("module_1652").useDerivedValue(MediaViewerTsx1);
+  const derivedValue = require("module_1655").useDerivedValue(MediaViewerTsx1);
   const items2 = [sharedValue];
   const items3 = [sharedValue];
   const callback = renderMedia.useCallback((nativeEvent) => sharedValue.set(2 === nativeEvent.nativeEvent.touches.length), items2);
   const callback1 = renderMedia.useCallback(() => sharedValue.set(false), items3);
-  const obj2 = require("module_1652");
+  const obj2 = require("module_1655");
   const mediaViewerPanGesture = require("useMediaViewerPanGesture").useMediaViewerPanGesture(panGestureConfig, derivedValue);
   panGestureGenerator = mediaViewerPanGesture.panGestureGenerator;
   const items4 = [entranceAnimationDriver, onLongPress, originLayout, panGestureConfig, panGestureGenerator, renderMedia, sources, useItemVisible, windowHeight, windowWidth, zoomed];
@@ -390,8 +390,8 @@ let closure_13 = noop.memo(function MediaViewer(entranceAnimationDriver) {
   MediaViewerTsx2.__closure = items6;
   MediaViewerTsx2.__workletHash = 8145051155624;
   MediaViewerTsx2.__initData = tmp12;
-  const animatedProps = require("module_1652").useAnimatedProps(MediaViewerTsx2);
-  const tmpResult2 = require("module_1652");
+  const animatedProps = require("module_1655").useAnimatedProps(MediaViewerTsx2);
+  const tmpResult2 = require("module_1655");
   const obj3 = { gesture: mediaViewerPanGesture.nativeGesture, children: null };
   const obj4 = { ref, style: useItemVisible.absoluteFill, sections: null, onTouchStart: callback, onTouchEnd: callback1, onTouchCancel: callback1, initialScrollItem: require("useStateFromSharedValue")(index), automaticallyAdjustContentInsets: false, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, itemSize: windowWidth, renderItem: callback2, onContentSizeChange, pagingEnabled: true, onScroll, scrollEventThrottle: 16, animatedProps, disableLegacyGestureHandling: true, chunkBase: windowWidth, horizontal: true };
   const items7 = [sources.length];

@@ -1,10 +1,10 @@
-// === Module 9598: game_exit_panel ===
+// === Module 9665: game_exit_panel ===
 
-// Module 9598 (game_exit_panel)
+// Module 9665 (game_exit_panel)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9563 */;
-import cta_button from "cta_button" /* 9565 */;
-import theme_aware_asset from "theme_aware_asset" /* 9573 */;
+import localized_string from "localized_string" /* 9630 */;
+import cta_button from "cta_button" /* 9632 */;
+import theme_aware_asset from "theme_aware_asset" /* 9640 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const MessageType = fn(1197).MessageType;
 class GameExitPanel$Type extends MessageType {
   constructor() {
     items = [, , , , ];
-    items[0] = { no: 1, name: "trigger_application_ids", kind: "scalar", repeat: 2, T: 9 };
+    items[0] = { no: 6, name: "trigger_application_id", kind: "scalar", T: 9 };
     items[1] = {
       no: 2,
       name: "body_localized",
@@ -44,7 +44,7 @@ class GameExitPanel$Type extends MessageType {
 }
 const prototype = GameExitPanel$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { triggerApplicationIds: [], body: "" };
+  const obj = { triggerApplicationId: "", body: "" };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -64,9 +64,8 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
     do {
       let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
-      if (1 === tmp5) {
-        let prop = obj.triggerApplicationIds;
-        let arr = prop.push(pos.string());
+      if (6 === tmp5) {
+        obj.triggerApplicationId = pos.string();
       } else if (2 === tmp5) {
         let LocalizedString = localized_string.LocalizedString;
         obj.bodyLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.bodyLocalized);
@@ -105,37 +104,32 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   }
   return obj;
 };
-prototype["internalBinaryWrite"] = function internalBinaryWrite(triggerApplicationIds, tag, writeUnknownFields) {
-  let num = 0;
-  if (0 < triggerApplicationIds.triggerApplicationIds.length) {
-    do {
-      let tagResult = tag.tag(1, _mod1197.WireType.LengthDelimited);
-      let stringResult = tagResult.string(triggerApplicationIds.triggerApplicationIds[num]);
-      num = num + 1;
-      length = triggerApplicationIds.triggerApplicationIds.length;
-    } while (num < length);
+prototype["internalBinaryWrite"] = function internalBinaryWrite(triggerApplicationId, tag, writeUnknownFields) {
+  if ("" !== triggerApplicationId.triggerApplicationId) {
+    tag.tag(6, _mod1197.WireType.LengthDelimited).string(triggerApplicationId.triggerApplicationId);
+    const tagResult = tag.tag(6, _mod1197.WireType.LengthDelimited);
   }
-  if (triggerApplicationIds.bodyLocalized) {
+  if (triggerApplicationId.bodyLocalized) {
     const LocalizedString = localized_string.LocalizedString;
     const tagResult1 = tag.tag(2, _mod1197.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(triggerApplicationIds.bodyLocalized, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(triggerApplicationIds.bodyLocalized, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined = LocalizedString.internalBinaryWrite(triggerApplicationId.bodyLocalized, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(triggerApplicationId.bodyLocalized, tag.tag(2, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
-  if ("" !== triggerApplicationIds.body) {
-    tag.tag(3, _mod1197.WireType.LengthDelimited).string(triggerApplicationIds.body);
+  if ("" !== triggerApplicationId.body) {
+    tag.tag(3, _mod1197.WireType.LengthDelimited).string(triggerApplicationId.body);
     const tagResult2 = tag.tag(3, _mod1197.WireType.LengthDelimited);
   }
-  if (triggerApplicationIds.cta) {
+  if (triggerApplicationId.cta) {
     const CTAButton = cta_button.CTAButton;
     const tagResult3 = tag.tag(4, _mod1197.WireType.LengthDelimited);
-    const joined1 = CTAButton.internalBinaryWrite(triggerApplicationIds.cta, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(triggerApplicationIds.cta, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined1 = CTAButton.internalBinaryWrite(triggerApplicationId.cta, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(triggerApplicationId.cta, tag.tag(4, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
-  if (triggerApplicationIds.image) {
+  if (triggerApplicationId.image) {
     const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
     const tagResult4 = tag.tag(5, _mod1197.WireType.LengthDelimited);
-    const joined2 = ThemeAwareAsset.internalBinaryWrite(triggerApplicationIds.image, tag.tag(5, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = ThemeAwareAsset.internalBinaryWrite(triggerApplicationIds.image, tag.tag(5, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const joined2 = ThemeAwareAsset.internalBinaryWrite(triggerApplicationId.image, tag.tag(5, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = ThemeAwareAsset.internalBinaryWrite(triggerApplicationId.image, tag.tag(5, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -143,12 +137,12 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(triggerApplicati
       onWrite = _mod1197.UnknownFieldHandler.onWrite;
     }
     const self = this;
-    onWrite(this.typeName, triggerApplicationIds, tag);
+    onWrite(this.typeName, triggerApplicationId, tag);
   }
   return tag;
 };
 let items = [
-  { no: 1, name: "trigger_application_ids", kind: "scalar", repeat: 2, T: 9 },
+  { no: 6, name: "trigger_application_id", kind: "scalar", T: 9 },
   {
     no: 2,
     name: "body_localized",

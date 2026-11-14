@@ -1,10 +1,10 @@
-// === Module 1398: user ===
+// === Module 1401: user ===
 
-// Module 1398 (user)
+// Module 1401 (user)
 import _mod1197 from "module_1197" /* 1197 */;
 import timestamp from "timestamp" /* 1226 */;
 import wrappers from "wrappers" /* 1227 */;
-import safety_state from "safety_state" /* 1399 */;
+import safety_state from "safety_state" /* 1402 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -2495,7 +2495,7 @@ class UserData$Type extends MessageType19 {
                 }
           }
     };
-    items = [, , , , , , , , , , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , , , , , , , , ];
     items[0] = obj;
     obj1 = {
       no: 2,
@@ -2651,13 +2651,14 @@ class UserData$Type extends MessageType19 {
           }
     };
     items[21] = { no: 22, name: "hidden_flags", kind: "scalar", T: 4 };
+    items[22] = { no: 23, name: "play_install_ids", kind: "scalar", repeat: 2, T: 9 };
     tmp1 = new tmp("discord_protos.users.v1.UserData", items, T);
     return tmp1;
   }
 }
 const prototype19 = UserData$Type.prototype;
 prototype19["create"] = function create(partialSettings) {
-  obj = { linkedUsers: {}, safetyFeatureLimits: {}, safetyFlags: {}, isPendingRequiredAction: false, disableStaffDiscount: false, hiddenFlags: "0" };
+  obj = { linkedUsers: {}, safetyFeatureLimits: {}, safetyFlags: {}, isPendingRequiredAction: false, disableStaffDiscount: false, hiddenFlags: "0", playInstallIds: [] };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -2919,6 +2920,15 @@ prototype19["internalBinaryWrite"] = function internalBinaryWrite(linkedUsers, t
   if ("0" !== linkedUsers.hiddenFlags) {
     tag.tag(22, _mod1197.WireType.Varint).uint64(linkedUsers.hiddenFlags);
     const tagResult27 = tag.tag(22, _mod1197.WireType.Varint);
+  }
+  let num20 = 0;
+  if (0 < linkedUsers.playInstallIds.length) {
+    do {
+      let tagResult28 = tag.tag(23, _mod1197.WireType.LengthDelimited);
+      let stringResult = tagResult28.string(linkedUsers.playInstallIds[num20]);
+      num20 = num20 + 1;
+      length = linkedUsers.playInstallIds.length;
+    } while (num20 < length);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

@@ -1,16 +1,16 @@
-// === Module 9219: PremiumGroupInviteSystemMessage ===
+// === Module 9286: PremiumGroupInviteSystemMessage ===
 
-// Module 9219 (PremiumGroupInviteSystemMessage)
+// Module 9286 (PremiumGroupInviteSystemMessage)
 import nativeDefault from "native" /* 575 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8588 */;
-import createCommonMessageDefault from "createCommonMessage" /* 9125 */;
-import PremiumGroupInviteEmbed from "PremiumGroupInviteEmbed" /* 9220 */;
-import _modDef9224 from "module_9224" /* 9224 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8655 */;
+import createCommonMessageDefault from "createCommonMessage" /* 9192 */;
+import PremiumGroupInviteEmbed from "PremiumGroupInviteEmbed" /* 9287 */;
+import _modDef9291 from "module_9291" /* 9291 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
 
 require = fn;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_5 = createStyles.createNativeStyleProperties({ iconTintColor: nativeDefault.colors.ICON_STRONG, iconDividerColor: nativeDefault.colors.ICON_STRONG });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx");
@@ -27,7 +27,7 @@ export function createPremiumGroupInviteSystemMessage(message) {
     const merged = Object.assign(createCommonMessageDefault(message));
     obj3.premiumGroupInviteInfo = premiumGroupInviteEmbed;
     const tmp7 = closure_5(theme);
-    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9224);
+    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9291);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp7);
     return obj3;
   }

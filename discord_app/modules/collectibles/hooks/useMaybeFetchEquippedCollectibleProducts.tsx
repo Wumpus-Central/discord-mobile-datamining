@@ -1,9 +1,9 @@
-// === Module 8509: useMaybeFetchEquippedCollectibleProducts ===
+// === Module 8575: useMaybeFetchEquippedCollectibleProducts ===
 
-// Module 8509 (useMaybeFetchEquippedCollectibleProducts)
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8511 */;
+// Module 8575 (useMaybeFetchEquippedCollectibleProducts)
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8577 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function useEquippedCollectibleSkuIds(id, guildId) {

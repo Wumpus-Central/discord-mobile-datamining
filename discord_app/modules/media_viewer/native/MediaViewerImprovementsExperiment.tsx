@@ -1,7 +1,7 @@
-// === Module 15123: MediaViewerImprovementsExperiment ===
+// === Module 15237: MediaViewerImprovementsExperiment ===
 
-// Module 15123 (MediaViewerImprovementsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 15237 (MediaViewerImprovementsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-media-viewer-improvements", kind: "user", defaultConfig: { enabled: false }, variations: null };

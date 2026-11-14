@@ -1,15 +1,15 @@
-// === Module 17619: QuestProgressIndicator ===
+// === Module 17737: QuestProgressIndicator ===
 
-// Module 17619 (QuestProgressIndicator)
+// Module 17737 (QuestProgressIndicator)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import inlineStyles from "inlineStyles" /* 8197 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import inlineStyles from "inlineStyles" /* 8263 */;
 import noop_mod from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 import jsxProd from "jsxProd" /* 21 */;
-import module_1652 from "module_1652" /* 1652 */;
-import createStyles from "createStyles" /* 5243 */;
+import module_1655 from "module_1655" /* 1655 */;
+import createStyles from "createStyles" /* 5306 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ let noop = noop_mod;
 const View = _mod17.View;
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const dependencyMap = ["#666777", "#535564"];
-let closure_12 = module_1652.createAnimatedComponent(inlineStyles.Circle);
+let closure_12 = module_1655.createAnimatedComponent(inlineStyles.Circle);
 const QUEST_PROGRESS_DIAMETER_BY_SIZE = { "x-sm": 40, sm: 64, md: 70, "md-lg": 100, lg: 128 };
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { wrapper: { position: "relative" }, container: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1 }, completionGlow: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 20, shadowOpacity: 0, elevation: 4, shadowColor: "#30C77399" }, canvas: null, imageContainer: null, progressPath: null, confetti: null, opacityMask: null };
@@ -72,26 +72,26 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   const result2 = 2 * Math.PI;
   const tmp10 = closure_14(obj[size]);
   const confetti = tmp10;
-  const sharedValue = require("module_1652").useSharedValue(progress);
-  const obj2 = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(progress);
+  const obj2 = require("module_1655");
   let num = 0;
   if (flag) {
     num = 0.7;
   }
-  sharedValue1 = require("module_1652").useSharedValue(num);
+  sharedValue1 = require("module_1655").useSharedValue(num);
   const userStatus = quest.userStatus;
   let completedAt;
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
   useReducedMotion = tmp14;
-  const obj3 = require("module_1652");
+  const obj3 = require("module_1655");
   let num2 = 0;
   if (null != completedAt) {
     num2 = 1;
   }
-  sharedValue2 = require("module_1652").useSharedValue(num2);
-  const tmpResult = require("module_1652");
+  sharedValue2 = require("module_1655").useSharedValue(num2);
+  const tmpResult = require("module_1655");
   const items1 = [closure_15, sharedValue2];
   _require = undefined;
   [tmp16, tmp17] = items1;
@@ -107,8 +107,8 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   QuestProgressIndicatorTsx1.__closure = items2;
   QuestProgressIndicatorTsx1.__workletHash = 3121805679544;
   QuestProgressIndicatorTsx1.__initData = tmp16;
-  const animatedStyle = require("module_1652").useAnimatedStyle(QuestProgressIndicatorTsx1);
-  const tmpResult4 = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(QuestProgressIndicatorTsx1);
+  const tmpResult4 = require("module_1655");
   const items3 = [closure_16, result3, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -123,8 +123,8 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   QuestProgressIndicatorTsx2.__closure = items4;
   QuestProgressIndicatorTsx2.__workletHash = 3809633407287;
   QuestProgressIndicatorTsx2.__initData = tmp21;
-  const animatedProps = require("module_1652").useAnimatedProps(QuestProgressIndicatorTsx2);
-  const tmpResult5 = require("module_1652");
+  const animatedProps = require("module_1655").useAnimatedProps(QuestProgressIndicatorTsx2);
+  const tmpResult5 = require("module_1655");
   const items5 = [closure_17, sharedValue1, tmp10];
   _require = undefined;
   importDefault = undefined;
@@ -141,7 +141,7 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   QuestProgressIndicatorTsx3.__workletHash = 14807344640177;
   QuestProgressIndicatorTsx3.__initData = tmp25;
   const items7 = [sharedValue, progress, stateFromStores];
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(QuestProgressIndicatorTsx3);
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(QuestProgressIndicatorTsx3);
   scale(() => {
     let num = 500;
     if (stateFromStores) {
@@ -167,7 +167,7 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   ref = tmp31;
   const items9 = [tmp10.confetti, tmp6, obj[size]];
   const items10 = [null != completedAt, sharedValue2, stateFromStores];
-  const tmpResult6 = require("module_1652");
+  const tmpResult6 = require("module_1655");
   scale(() => {
     if (!stateFromStores) {
       if (closure_8) {
@@ -210,7 +210,7 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   }
   obj6.accessibilityLabel = formatToPlainStringResult;
   obj6.accessibilityValue = { min: 0, max: 100, now: rounded };
-  const items12 = [sharedValue2(require("module_1652").View, { style: animatedStyle1 }), ];
+  const items12 = [sharedValue2(require("module_1655").View, { style: animatedStyle1 }), ];
   const obj8 = { style: tmp10.container, children: null };
   const size1 = { height: tmp5, width: tmp5, style: tmp10.canvas, children: null };
   const obj9 = { children: null };
@@ -235,7 +235,7 @@ export default noop.memo(function QuestProgressIndicator(loading) {
   obj8.children = items15;
   items12[1] = ref(sharedValue1, obj8);
   obj6.children = items12;
-  obj5.children = ref(require("module_1652").View, obj6);
+  obj5.children = ref(require("module_1655").View, obj6);
   return sharedValue2(PressableOpacity, obj5);
 });
 export const COMPLETION_GLOW_SHADOW_RADIUS = 20;

@@ -1,10 +1,10 @@
-// === Module 12924: UserSettingsSoundboardVolume ===
+// === Module 13020: UserSettingsSoundboardVolume ===
 
-// Module 12924 (UserSettingsSoundboardVolume)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7163 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import VolumeSliderDefault from "VolumeSlider" /* 12921 */;
+// Module 13020 (UserSettingsSoundboardVolume)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7226 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
+import VolumeSliderDefault from "VolumeSlider" /* 13017 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,14 +12,14 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({ slider: { marginTop: 4 }, text: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsSoundboardVolume.tsx");
 
 export default function SoundboardVolume() {
   const tmp = closure_8();
-  const amplitudinalSoundboardVolume = analyticsLocations(12925).getAmplitudinalSoundboardVolume();
+  const amplitudinalSoundboardVolume = analyticsLocations(13021).getAmplitudinalSoundboardVolume();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const obj2 = { title: null, hasIcons: false, children: null };
   const intl = analyticsLocations(1113).intl;
@@ -37,7 +37,7 @@ export default function SoundboardVolume() {
     },
     accessibilityLabel: null
   };
-  const obj = analyticsLocations(12925);
+  const obj = analyticsLocations(13021);
   const intl3 = analyticsLocations(1113).intl;
   obj6.accessibilityLabel = intl3.string(analyticsLocations(1113).t.kbFsAD);
   obj5.children = closure_5(VolumeSliderDefault, obj6);
@@ -47,9 +47,9 @@ export default function SoundboardVolume() {
   const obj8 = { helpCenterArticle: null };
   obj8.helpCenterArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOUNDBOARD);
   obj7.children = intl4.format(analyticsLocations(1113).t.BPbGq7, obj8);
-  items[1] = closure_5(analyticsLocations(5866).Text, obj7);
+  items[1] = closure_5(analyticsLocations(5929).Text, obj7);
   obj4.children = items;
   obj3.subLabel = closure_7(closure_6, obj4);
-  obj2.children = closure_5(analyticsLocations(7379).TableRow, obj3);
-  return closure_5(analyticsLocations(12903).UserSettingsTableRowGroup, obj2);
+  obj2.children = closure_5(analyticsLocations(7443).TableRow, obj3);
+  return closure_5(analyticsLocations(12999).UserSettingsTableRowGroup, obj2);
 };

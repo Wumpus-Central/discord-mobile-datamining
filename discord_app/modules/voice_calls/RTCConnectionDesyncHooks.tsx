@@ -1,13 +1,13 @@
-// === Module 18826: RTCConnectionDesyncHooks ===
+// === Module 18955: RTCConnectionDesyncHooks ===
 
-// Module 18826 (RTCConnectionDesyncHooks)
-import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 18827 */;
+// Module 18955 (RTCConnectionDesyncHooks)
+import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 18956 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 16137 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
-import VoiceStateStore from "VoiceStateStore" /* 5918 */;
+import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 16258 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
+import VoiceStateStore from "VoiceStateStore" /* 5981 */;
 
 const require = globalThis.__r;
 

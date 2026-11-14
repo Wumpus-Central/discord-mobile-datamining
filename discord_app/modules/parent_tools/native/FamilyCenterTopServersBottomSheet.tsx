@@ -1,14 +1,14 @@
-// === Module 17305: FamilyCenterTopServersBottomSheet ===
+// === Module 17428: FamilyCenterTopServersBottomSheet ===
 
-// Module 17305 (FamilyCenterTopServersBottomSheet)
+// Module 17428 (FamilyCenterTopServersBottomSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2685 from "module_2685" /* 2685 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import GuildIconDefault from "GuildIcon" /* 7654 */;
-import TableRowGroup from "TableRowGroup" /* 7680 */;
-import ActionSheet from "ActionSheet" /* 7885 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 8673 */;
+import _modDef2701 from "module_2701" /* 2701 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import GuildIconDefault from "GuildIcon" /* 7720 */;
+import TableRowGroup from "TableRowGroup" /* 7746 */;
+import ActionSheet from "ActionSheet" /* 7951 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 8740 */;
 
 require = fn;
 function GuildRow(guildActivity) {
@@ -19,17 +19,17 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(9552).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
+    const topUserOrGuildDescription = tmp2(9619).getTopUserOrGuildDescription(guildActivity.messages_sent, guildActivity.call_count);
     const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
     obj2.icon = closure_4(GuildIconDefault, obj3);
-    return closure_4(tmp2(7379).TableRow, obj2);
+    return closure_4(tmp2(7443).TableRow, obj2);
   }
   const obj = guildActivity(504);
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { header: { textAlign: "center" }, guildIcon: { borderRadius: nativeDefault.radii.md, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -40,7 +40,7 @@ export default function FamilyCenterTopGuildsBottomSheet(topGuildActivities) {
   const obj = { children: null };
   const obj2 = { variant: "body-md/semibold", style: closure_6().header, children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2685.Lq9Set);
+  obj2.children = intl.string(_modDef2701.Lq9Set);
   items = [React4(Text_Text.Text, obj2), ];
   const tmp = closure_6();
   items[1] = React4(TableRowGroup.TableRowGroup, { hasIcons: true, children: topGuildActivities.map((guildActivity) => closure_1_4(GuildRow, { guildActivity }, guildActivity.guild_id)) });

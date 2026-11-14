@@ -1,23 +1,23 @@
-// === Module 18770: ChannelsUnreadBar ===
+// === Module 18899: ChannelsUnreadBar ===
 
-// Module 18770 (ChannelsUnreadBar)
+// Module 18899 (ChannelsUnreadBar)
 import nativeDefault from "native" /* 575 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8994 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9061 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import module_1652 from "module_1652" /* 1652 */;
+import module_1655 from "module_1655" /* 1655 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const RedesignChannelListConstants = fn(5997);
+const RedesignChannelListConstants = fn(6060);
 ({ getScaledSearchBarHeight: hasOwnProperty, VIEWABILITY_CONFIG: closure_6 } = RedesignChannelListConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let closure_10 = module_1652.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(5243);
+let closure_10 = module_1655.createAnimatedComponent(fn(17).Pressable);
+const createStyles = fn(5306);
 let closure_11 = createStyles.createStyles((arg0, arg1) => {
   let num = 5;
   if (arg0) {
@@ -87,9 +87,9 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   let sum = require("useScaledTextLineHeight").scaleTextLineHeight(c12, fontScale) + 8;
   const obj3 = require("useScaledTextLineHeight");
   const tmp9 = c12;
-  const sharedValue = require("module_1652").useSharedValue(0);
-  let obj4 = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(sum);
+  const sharedValue = require("module_1655").useSharedValue(0);
+  let obj4 = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(sum);
   let items1 = [sharedValue, sharedValue1];
   const items2 = [shown, first, position];
   const callback = obj.useCallback((nativeEvent) => {
@@ -113,8 +113,8 @@ export default noop.memo(function ChannelsUnreadBar(position) {
     AppAnalyticsUtilsDefault.trackWithMetadata(AnalyticEvents.CHANNEL_LIST_UNREAD_BADGE_CLICKED, { is_mention, position });
     _undefined();
   }, items3);
-  let obj5 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(0);
+  let obj5 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(0);
   const items4 = [sharedValue2];
   const items5 = [sharedValue2];
   const callback2 = obj.useCallback(() => {
@@ -123,7 +123,7 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   const callback3 = obj.useCallback(() => {
     const result = _undefined5.set(0);
   }, items5);
-  let obj6 = require("module_1652");
+  let obj6 = require("module_1655");
   const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
   const items6 = [headerHeight, position, youBarTotalHeight];
   const memo = obj.useMemo(() => {
@@ -149,7 +149,7 @@ export default noop.memo(function ChannelsUnreadBar(position) {
     }, timestampProducer.minimumViewTime + 1);
   }, []);
   const tmp21 = c5(fontScale);
-  const items8 = [c13, shown, position, scrollPosition, listPaddingTop, tmp21, tmp22[0], require("module_1705").scheduleOnRN, callback4, sharedValue1, 12, guildChannelsListUnreadBarInsetEnd, sharedValue, require("spring/spring").withSpring, require("springPresets").springStandard, require("module_1652").interpolate, sharedValue2, require("springPresets").ON_PRESS_SPRING];
+  const items8 = [c13, shown, position, scrollPosition, listPaddingTop, tmp21, tmp22[0], require("module_1708").scheduleOnRN, callback4, sharedValue1, 12, guildChannelsListUnreadBarInsetEnd, sharedValue, require("spring/spring").withSpring, require("springPresets").springStandard, require("module_1655").interpolate, sharedValue2, require("springPresets").ON_PRESS_SPRING];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -265,13 +265,13 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   ChannelsUnreadBarTsx1.__closure = items9;
   ChannelsUnreadBarTsx1.__workletHash = 15777306615393;
   ChannelsUnreadBarTsx1.__initData = tmp25;
-  const animatedStyle = require("module_1652").useAnimatedStyle(ChannelsUnreadBarTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(ChannelsUnreadBarTsx1);
   if (first) {
-    let ArrowSmallUpIcon = tmp7(8022).AtIcon;
+    let ArrowSmallUpIcon = tmp7(8087).AtIcon;
   } else if ("bottom" === position) {
-    ArrowSmallUpIcon = tmp7(13928).ArrowSmallDownIcon;
+    ArrowSmallUpIcon = tmp7(14033).ArrowSmallDownIcon;
   } else {
-    ArrowSmallUpIcon = tmp7(13926).ArrowSmallUpIcon;
+    ArrowSmallUpIcon = tmp7(14031).ArrowSmallUpIcon;
   }
   const tmp4Result = nativeDefault;
   if (first) {
@@ -283,7 +283,7 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   const items10 = [tmp6.unreadBar, memo, animatedStyle];
   obj9.style = items10;
   let str2 = "none";
-  const obj8 = require("module_1652");
+  const obj8 = require("module_1655");
   if (shown) {
     str2 = "auto";
   }

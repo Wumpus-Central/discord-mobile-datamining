@@ -1,26 +1,26 @@
-// === Module 18207: PremiumTrialOfferActionSheetContent ===
+// === Module 18328: PremiumTrialOfferActionSheetContent ===
 
-// Module 18207 (PremiumTrialOfferActionSheetContent)
+// Module 18328 (PremiumTrialOfferActionSheetContent)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PremiumUtils from "PremiumUtils" /* 2171 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import FolderIcon from "FolderIcon" /* 8007 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8780 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9368 */;
-import UserIcon from "UserIcon" /* 10484 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 15839 */;
-import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 18208 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 18212 */;
+import PremiumUtils from "PremiumUtils" /* 2174 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import FolderIcon from "FolderIcon" /* 8072 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8847 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9436 */;
+import UserIcon from "UserIcon" /* 10553 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 15959 */;
+import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 18329 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 18333 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1387).PremiumTypes;
+const PremiumTypes = fn(1390).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_7 = createStyles.createStyles({ contentContainer: { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 }, buttonContainer: { marginVertical: 6, width: "100%", height: 48 }, title: { width: "100%", textAlign: "center" }, heroIllustrationContainer: { alignItems: "center", justifyContent: "center", height: 188, width: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheetContent.tsx");

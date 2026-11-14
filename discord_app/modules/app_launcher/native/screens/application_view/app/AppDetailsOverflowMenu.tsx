@@ -1,8 +1,8 @@
-// === Module 13359: AppDetailsOverflowMenu ===
+// === Module 13464: AppDetailsOverflowMenu ===
 
-// Module 13359 (AppDetailsOverflowMenu)
-import ToastUtils from "ToastUtils" /* 5951 */;
-import ClipboardUtils from "ClipboardUtils" /* 7877 */;
+// Module 13464 (AppDetailsOverflowMenu)
+import ToastUtils from "ToastUtils" /* 6014 */;
+import ClipboardUtils from "ClipboardUtils" /* 7943 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,10 +13,10 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/a
 export default function AppDetailsOverflowMenu(application) {
   application = application.application;
   const onAddAppMenuClick = application.onAddAppMenuClick;
-  dependencyMap = application(12602).getInstallAppProps(application);
-  let obj = application(12602);
-  const tmp3 = onAddAppMenuClick(13360);
-  let tmp3Result = tmp3(application(12602).getInstallableApplication(application));
+  dependencyMap = application(12698).getInstallAppProps(application);
+  let obj = application(12698);
+  const tmp3 = onAddAppMenuClick(13465);
+  let tmp3Result = tmp3(application(12698).getInstallableApplication(application));
   if (tmp3Result) {
     tmp3Result = null != onAddAppMenuClick;
   }
@@ -28,10 +28,10 @@ export default function AppDetailsOverflowMenu(application) {
     obj3.action = function action() {
       return onAddAppMenuClick({ installAppProps });
     };
-    obj3.IconComponent = tmp(13361).CirclePlusIcon;
+    obj3.IconComponent = tmp(13466).CirclePlusIcon;
     items.push(obj3);
   }
-  const DeveloperMode = tmp(5068).DeveloperMode;
+  const DeveloperMode = tmp(5131).DeveloperMode;
   if (DeveloperMode.getSetting()) {
     const obj4 = { label: null, action: null, IconComponent: null };
     const intl2 = tmp(1113).intl;
@@ -40,7 +40,7 @@ export default function AppDetailsOverflowMenu(application) {
       ClipboardUtils.copy(application.id);
       ToastUtils.presentIdCopied();
     };
-    obj4.IconComponent = tmp(11562).IdIcon;
+    obj4.IconComponent = tmp(11629).IdIcon;
     items.push(obj4);
   }
   let tmp8 = null;
@@ -57,7 +57,7 @@ export default function AppDetailsOverflowMenu(application) {
           return jsx(application(installAppProps[11]).IconButton, { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: onAddAppMenuClick(installAppProps[12]) });
         }
     };
-    tmp8 = jsx(tmp(9081).ContextMenu, {
+    tmp8 = jsx(tmp(9148).ContextMenu, {
       items,
       children(ref) {
           const merged = Object.assign(ref, Object.assign({ ref: 0 }));

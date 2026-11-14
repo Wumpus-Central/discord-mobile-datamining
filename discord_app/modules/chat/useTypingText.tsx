@@ -1,9 +1,9 @@
-// === Module 14466: useTypingText ===
+// === Module 14578: useTypingText ===
 
-// Module 14466 (useTypingText)
-import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
+// Module 14578 (useTypingText)
+import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = fn;
 const size = fn(2);

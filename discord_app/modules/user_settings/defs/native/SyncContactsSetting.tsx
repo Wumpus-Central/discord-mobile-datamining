@@ -1,21 +1,21 @@
-// === Module 17250: SyncContactsSetting ===
+// === Module 17373: SyncContactsSetting ===
 
-// Module 17250 (SyncContactsSetting)
+// Module 17373 (SyncContactsSetting)
 import util from "util" /* 1113 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 14883 */;
-import ContactSyncSettings from "ContactSyncSettings" /* 17251 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7022 */;
-import UserStore from "UserStore" /* 1385 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 14997 */;
+import ContactSyncSettings from "ContactSyncSettings" /* 17374 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7085 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const PlatformTypes = fn(1072).PlatformTypes;
-const SettingBuilders = fn(12311);
+const SettingBuilders = fn(12406);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.uSvEy7);
   },
-  parent: fn(9135).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(9202).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useContactSyncSettingValue() {
     const contactSyncAccount = ContactSyncUtils.useContactSyncAccount();
     return ContactSyncUtils.isContactSyncEnabled(contactSyncAccount);

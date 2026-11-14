@@ -1,16 +1,16 @@
-// === Module 15296: PremiumSubscriptionPricingUpsell ===
+// === Module 15410: PremiumSubscriptionPricingUpsell ===
 
-// Module 15296 (PremiumSubscriptionPricingUpsell)
+// Module 15410 (PremiumSubscriptionPricingUpsell)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 9920 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 9987 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2186 */;
-import UserStore from "UserStore" /* 1385 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2175 */;
-import SubscriptionStore from "SubscriptionStore" /* 2176 */;
-import IAPStore from "IAPStore" /* 9235 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
+import UserStore from "UserStore" /* 1388 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2178 */;
+import SubscriptionStore from "SubscriptionStore" /* 2179 */;
+import IAPStore from "IAPStore" /* 9302 */;
 
 require = fn;
 function PricingSubheadingCopy() {
@@ -192,11 +192,11 @@ function PricingSubheadingCopy() {
 }
 const View = fn(17).View;
 const CurrencyCodes = fn(1072).CurrencyCodes;
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_21 = createStyles.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/premium/PremiumSubscriptionPricingUpsell.tsx");

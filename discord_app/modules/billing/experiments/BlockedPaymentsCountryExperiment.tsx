@@ -1,7 +1,7 @@
-// === Module 9518: BlockedPaymentsCountryExperiment ===
+// === Module 9585: BlockedPaymentsCountryExperiment ===
 
-// Module 9518 (BlockedPaymentsCountryExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 9585 (BlockedPaymentsCountryExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-03-block-purchases", kind: "user", defaultConfig: { enabled: false }, variations: null };

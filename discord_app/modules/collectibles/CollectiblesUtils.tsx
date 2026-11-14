@@ -1,22 +1,22 @@
-// === Module 8431: CollectiblesUtils ===
+// === Module 8497: CollectiblesUtils ===
 
-// Module 8431 (CollectiblesUtils)
+// Module 8497 (CollectiblesUtils)
 import apply from "apply" /* 12 */;
 import Constants2 from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import PerksStateUtils from "PerksStateUtils" /* 1391 */;
-import user from "user" /* 1398 */;
-import NameplateRecord from "NameplateRecord" /* 2109 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 2111 */;
-import EntitlementTypes from "EntitlementTypes" /* 2170 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import PriceUtils from "PriceUtils" /* 7190 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 8424 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 8425 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 8426 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8430 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 8432 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import PerksStateUtils from "PerksStateUtils" /* 1394 */;
+import user from "user" /* 1401 */;
+import NameplateRecord from "NameplateRecord" /* 2112 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
+import EntitlementTypes from "EntitlementTypes" /* 2173 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
+import PriceUtils from "PriceUtils" /* 7253 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 8490 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 8491 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 8492 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8496 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 8498 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1074 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -284,7 +284,7 @@ export function getBundleItemsPriceSum(bundledProducts, arg1) {
         return acc + num;
       }, 0);
     } else {
-      tmp(1377);
+      tmp(1380);
     }
     DEFAULT = constants2.DEFAULT;
     obj = require("PlatformUtils");
@@ -393,7 +393,7 @@ export function getProductDiscount(product, hasShopDiscount, DISCORD_ORB) {
           return acc + num;
         }, 0);
       } else {
-        tmp(1377);
+        tmp(1380);
       }
       DEFAULT = constants2.DEFAULT;
       obj = require("PlatformUtils");

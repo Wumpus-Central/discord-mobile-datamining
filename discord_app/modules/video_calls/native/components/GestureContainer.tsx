@@ -1,25 +1,25 @@
-// === Module 12968: GestureContainer ===
+// === Module 13064: GestureContainer ===
 
-// Module 12968 (GestureContainer)
+// Module 13064 (GestureContainer)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(10934).useChannelCallStore;
-const Constants = fn(12618);
+const useChannelCallStore = fn(11003).useChannelCallStore;
+const Constants = fn(12714);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_6 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_8 = createStyles.createStyles(obj2);
 let closure_9 = { code: "(function GestureContainerTsx1({translationY:translationY}){let[THRESHOLD_TRANSLATE,position]=this.__closure;const boundedGestureY=Math.max(Math.min(translationY,THRESHOLD_TRANSLATE),0)/THRESHOLD_TRANSLATE;const easeOutCubic=1-Math.pow(1-boundedGestureY,3);position.set(easeOutCubic);})" };
@@ -31,7 +31,7 @@ let result = size.fileFinishedImporting("modules/video_calls/native/components/G
 export default function GestureContainer(children) {
   const tmp = closure_8();
   const tmp2 = useChannelCallStore((isGestureEnabled) => isGestureEnabled.isGestureEnabled);
-  const sharedValue = _mod1652.useSharedValue(0);
+  const sharedValue = _mod1655.useSharedValue(0);
   const Gesture = LegacyBaseButton.Gesture;
   const PanResult = Gesture.Pan();
   items = [closure_9, 200, sharedValue];
@@ -49,7 +49,7 @@ export default function GestureContainer(children) {
   GestureContainerTsx1.__workletHash = 12996346617978;
   GestureContainerTsx1.__initData = tmp7;
   const enabledResult = Gesture.Pan().enabled(tmp2);
-  const items2 = [closure_10, sharedValue, 500, _mod1705.scheduleOnRN, ModalActionCreatorsDefault, timing_timing.withTiming, native.DECELERATED_EASING];
+  const items2 = [closure_10, sharedValue, 500, _mod1708.scheduleOnRN, ModalActionCreatorsDefault, timing_timing.withTiming, native.DECELERATED_EASING];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -86,7 +86,7 @@ export default function GestureContainer(children) {
   const items5 = [-timestampProducer, timestampProducer];
   const activeOffsetYResult = Gesture.Pan().enabled(tmp2).onUpdate(GestureContainerTsx1).onEnd(GestureContainerTsx2).activeOffsetY(items4);
   const failOffsetXResult = Gesture.Pan().enabled(tmp2).onUpdate(GestureContainerTsx1).onEnd(GestureContainerTsx2).activeOffsetY(items4).failOffsetX(items5);
-  const items6 = [closure_11, _mod1652.interpolate, sharedValue, useWindowDimensionsDefault().height];
+  const items6 = [closure_11, _mod1655.interpolate, sharedValue, useWindowDimensionsDefault().height];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -111,8 +111,8 @@ export default function GestureContainer(children) {
   GestureContainerTsx3.__workletHash = 9579755515869;
   GestureContainerTsx3.__initData = tmp18;
   let obj2 = { style: tmp.background, children: null };
-  const animatedStyle = _mod1652.useAnimatedStyle(GestureContainerTsx3);
-  const tmp5Result = _mod1652;
-  obj2.children = jsx(LegacyBaseButton.GestureDetector, { gesture: failOffsetXResult, children: jsx(_modDef1652.View, { style: animatedStyle, children: children.children }) });
+  const animatedStyle = _mod1655.useAnimatedStyle(GestureContainerTsx3);
+  const tmp5Result = _mod1655;
+  obj2.children = jsx(LegacyBaseButton.GestureDetector, { gesture: failOffsetXResult, children: jsx(_modDef1655.View, { style: animatedStyle, children: children.children }) });
   return <View style={tmp.background}>{null}</View>;
 };

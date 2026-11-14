@@ -1,12 +1,12 @@
-// === Module 8446: CollectiblesShopHomeRecord ===
+// === Module 8512: CollectiblesShopHomeRecord ===
 
-// Module 8446 (CollectiblesShopHomeRecord)
-import ShopBlockType from "ShopBlockType" /* 5928 */;
-import ShopBlockRecordFactory from "ShopBlockRecordFactory" /* 8448 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 8420 */;
+// Module 8512 (CollectiblesShopHomeRecord)
+import ShopBlockType from "ShopBlockType" /* 5991 */;
+import ShopBlockRecordFactory from "ShopBlockRecordFactory" /* 8514 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 8486 */;
 
 require = fn;
-const HeroBlockRecord = fn(8447).HeroBlockRecord;
+const HeroBlockRecord = fn(8513).HeroBlockRecord;
 const prototype = function CollectiblesShopHomeRecord(shop_blocks) {
   const obj = Object.create(new.target.prototype);
   shop_blocks = shop_blocks.shop_blocks;

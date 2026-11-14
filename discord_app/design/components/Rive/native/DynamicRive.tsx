@@ -1,8 +1,8 @@
-// === Module 14545: DynamicRive ===
+// === Module 14657: DynamicRive ===
 
-// Module 14545 (DynamicRive)
-import BaseRive from "BaseRive" /* 5322 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5375 */;
+// Module 14657 (DynamicRive)
+import BaseRive from "BaseRive" /* 5385 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5438 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

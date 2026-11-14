@@ -1,19 +1,19 @@
-// === Module 15142: BountyActionCreators ===
+// === Module 15256: BountyActionCreators ===
 
-// Module 15142 (BountyActionCreators)
+// Module 15256 (BountyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import QuestTypes from "QuestTypes" /* 5278 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8598 */;
-import QuestDataUtils from "QuestDataUtils" /* 8737 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 8761 */;
-import BountiesDesktopQuestBarExperiment2 from "BountiesDesktopQuestBarExperiment" /* 10074 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import QuestTypes from "QuestTypes" /* 5341 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8665 */;
+import QuestDataUtils from "QuestDataUtils" /* 8804 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 8828 */;
+import BountiesDesktopQuestBarExperiment2 from "BountiesDesktopQuestBarExperiment" /* 10142 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 8738 */;
-import NetworkStore from "NetworkStore" /* 6147 */;
-import BountyStore from "BountyStore" /* 8740 */;
-import QuestStore from "QuestStore" /* 8741 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 8805 */;
+import NetworkStore from "NetworkStore" /* 6210 */;
+import BountyStore from "BountyStore" /* 8807 */;
+import QuestStore from "QuestStore" /* 8808 */;
 
 require = fn;
 function fetchBountiesAndDispatch() {
@@ -102,10 +102,10 @@ let closure_13 = async function _fetchQuestHomeBounties(arg0) {
           c1 = 1;
           const obj4 = {
             value: fetchBountiesAndDispatch(tmp5, asyncGeneratorStep(async () => {
-                      await tmp2(8598).getSession();
+                      await tmp2(8665).getSession();
                       closure_128_0 = value;
-                      const orRefreshAdSession = tmp2(8761).getOrRefreshAdSession();
-                      const HTTP = tmp2(1282).HTTP;
+                      const orRefreshAdSession = tmp2(8828).getOrRefreshAdSession();
+                      const HTTP = tmp2(1285).HTTP;
                       const request = { url: constants.QUESTS_GET_DECISIONS, query: null, rejectWithError: false, context: null };
                       const obj7 = { placement: closure_129_0, client_ad_session_id: orRefreshAdSession.uuid, client_heartbeat_session_id: null, num_decisions_requested: 5 };
                       if (closure_128_0 != null) {
@@ -287,8 +287,8 @@ let closure_15 = async function _fetchQuestBarCreativePreview(arg0) {
           obj10.status = status;
           closure_133_10.error("Failed to fetch dock creative preview for adCreativeId", obj10);
           const obj11 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE", placement: closure_132_1, error: null };
-          const tmp82 = new closure_133_1(closure_133_2[12])(closure_132_8);
-          obj11.error = tmp82;
+          const tmp88 = new closure_133_1(closure_133_2[12])(closure_132_8);
+          obj11.error = tmp88;
           closure_133_1(closure_133_2[8]).dispatch(obj11);
           c9 = 3;
           return { value: null, done: true };
@@ -322,118 +322,112 @@ let closure_15 = async function _fetchQuestBarCreativePreview(arg0) {
             c3 = null;
           }
           closure_132_6 = c3;
-          if (null != closure_132_6) {
-            if (closure_132_6.creative_type === closure_133_0(closure_133_2[9]).AdCreativeType.BOUNTY) {
-              closure_132_7 = closure_133_0(closure_133_2[10]).bountyFromServer(closure_132_6.creative_content);
-              const obj18 = closure_133_0(closure_133_2[10]);
-              const obj14 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS", creative: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null, responseTtlSeconds: 300, placement: null, fetchedAt: null };
-              const obj15 = { type: closure_133_0(closure_133_2[9]).AdCreativeType.BOUNTY, bounty: closure_132_7 };
-              obj14.creative = obj15;
-              let ad_id;
-              if (closure_132_5 != null) {
-                const ad_identifiers = closure_132_5.ad_identifiers;
-                if (ad_identifiers != null) {
-                  ad_id = ad_identifiers.ad_id;
-                }
-              }
-              const obj = { ad_id, adset_id: null, ad_set_id: null, campaign_id: null, creative_id: null, creative_type: null, decision_id: null, is_targeted: null };
-              let adset_id;
-              if (closure_132_5 != null) {
-                const ad_identifiers2 = closure_132_5.ad_identifiers;
-                if (ad_identifiers2 != null) {
-                  adset_id = ad_identifiers2.adset_id;
-                }
-              }
-              obj.adset_id = adset_id;
-              let ad_set_id;
-              if (closure_132_5 != null) {
-                const ad_identifiers3 = closure_132_5.ad_identifiers;
-                if (ad_identifiers3 != null) {
-                  ad_set_id = ad_identifiers3.ad_set_id;
-                }
-              }
-              obj.ad_set_id = ad_set_id;
-              let campaign_id;
-              if (closure_132_5 != null) {
-                const ad_identifiers4 = closure_132_5.ad_identifiers;
-                if (ad_identifiers4 != null) {
-                  campaign_id = ad_identifiers4.campaign_id;
-                }
-              }
-              obj.campaign_id = campaign_id;
-              let creative_id;
-              if (closure_132_5 != null) {
-                const ad_identifiers5 = closure_132_5.ad_identifiers;
-                if (ad_identifiers5 != null) {
-                  creative_id = ad_identifiers5.creative_id;
-                }
-              }
-              obj.creative_id = creative_id;
-              let creative_type;
-              if (closure_132_5 != null) {
-                const ad_identifiers6 = closure_132_5.ad_identifiers;
-                if (ad_identifiers6 != null) {
-                  creative_type = ad_identifiers6.creative_type;
-                }
-              }
-              obj.creative_type = creative_type;
-              obj.decision_id = body.request_id;
-              let ad_identifiers1;
-              if (closure_132_5 != null) {
-                ad_identifiers1 = closure_132_5.ad_identifiers;
-              }
-              obj.is_targeted = null != ad_identifiers1;
-              obj14.adDecisionData = obj;
-              let ad_context;
-              if (closure_132_5 != null) {
-                ad_context = closure_132_5.ad_context;
-              }
-              obj14.adContext = ad_context;
-              let metadata_sealed;
-              if (closure_132_5 != null) {
-                metadata_sealed = closure_132_5.metadata_sealed;
-              }
-              obj14.metadataSealed = metadata_sealed;
-              let prop;
-              if (closure_132_5 != null) {
-                prop = closure_132_5.traffic_metadata_sealed;
-              }
-              obj14.trafficMetadataSealed = prop;
-              let prop1;
-              if (closure_132_5 != null) {
-                prop1 = closure_132_5.provenance_metadata_sealed;
-              }
-              obj14.provenanceMetadataSealed = prop1;
-              obj14.placement = closure_132_1;
-              obj14.fetchedAt = closure_132_2;
-              closure_133_1(closure_133_2[8]).dispatch(obj14);
-              c7 = 0;
-              c9 = 3;
-              const obj16 = { value: closure_132_7, done: true };
-              return obj16;
+          closure_132_7 = closure_133_0(closure_133_2[18]).adCreativeFromServer(closure_132_6);
+          if (null == closure_132_7) {
+            const obj14 = { adCreativeId: closure_132_0, creativeType: null };
+            let creative_type;
+            if (closure_132_6 != null) {
+              creative_type = closure_132_6.creative_type;
             }
+            obj14.creativeType = creative_type;
+            closure_133_10.error("Creative preview returned no renderable creative", obj14);
+            const obj15 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE", placement: closure_132_1, error: null };
+            const obj16 = { status: closure_132_3.status, body: closure_132_3.body };
+            const tmp65 = new closure_133_1(closure_133_2[12])(obj16);
+            obj15.error = tmp65;
+            closure_133_1(closure_133_2[8]).dispatch(obj15);
+            const obj4 = closure_133_1(closure_133_2[8]);
+          } else {
+            const obj17 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS", creative: closure_132_7, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null, provenanceMetadataSealed: null, responseTtlSeconds: 300, placement: null, fetchedAt: null };
+            let ad_id;
+            if (closure_132_5 != null) {
+              const ad_identifiers = closure_132_5.ad_identifiers;
+              if (ad_identifiers != null) {
+                ad_id = ad_identifiers.ad_id;
+              }
+            }
+            const obj19 = { ad_id, adset_id: null, ad_set_id: null, campaign_id: null, creative_id: null, creative_type: null, decision_id: null, is_targeted: null };
+            let adset_id;
+            if (closure_132_5 != null) {
+              const ad_identifiers2 = closure_132_5.ad_identifiers;
+              if (ad_identifiers2 != null) {
+                adset_id = ad_identifiers2.adset_id;
+              }
+            }
+            obj19.adset_id = adset_id;
+            let ad_set_id;
+            if (closure_132_5 != null) {
+              const ad_identifiers3 = closure_132_5.ad_identifiers;
+              if (ad_identifiers3 != null) {
+                ad_set_id = ad_identifiers3.ad_set_id;
+              }
+            }
+            obj19.ad_set_id = ad_set_id;
+            let campaign_id;
+            if (closure_132_5 != null) {
+              const ad_identifiers4 = closure_132_5.ad_identifiers;
+              if (ad_identifiers4 != null) {
+                campaign_id = ad_identifiers4.campaign_id;
+              }
+            }
+            obj19.campaign_id = campaign_id;
+            let creative_id;
+            if (closure_132_5 != null) {
+              const ad_identifiers5 = closure_132_5.ad_identifiers;
+              if (ad_identifiers5 != null) {
+                creative_id = ad_identifiers5.creative_id;
+              }
+            }
+            obj19.creative_id = creative_id;
+            let creative_type1;
+            if (closure_132_5 != null) {
+              const ad_identifiers6 = closure_132_5.ad_identifiers;
+              if (ad_identifiers6 != null) {
+                creative_type1 = ad_identifiers6.creative_type;
+              }
+            }
+            obj19.creative_type = creative_type1;
+            obj19.decision_id = body.request_id;
+            let ad_identifiers1;
+            if (closure_132_5 != null) {
+              ad_identifiers1 = closure_132_5.ad_identifiers;
+            }
+            obj19.is_targeted = null != ad_identifiers1;
+            obj17.adDecisionData = obj19;
+            let ad_context;
+            if (closure_132_5 != null) {
+              ad_context = closure_132_5.ad_context;
+            }
+            obj17.adContext = ad_context;
+            let metadata_sealed;
+            if (closure_132_5 != null) {
+              metadata_sealed = closure_132_5.metadata_sealed;
+            }
+            obj17.metadataSealed = metadata_sealed;
+            let prop;
+            if (closure_132_5 != null) {
+              prop = closure_132_5.traffic_metadata_sealed;
+            }
+            obj17.trafficMetadataSealed = prop;
+            let prop1;
+            if (closure_132_5 != null) {
+              prop1 = closure_132_5.provenance_metadata_sealed;
+            }
+            obj17.provenanceMetadataSealed = prop1;
+            obj17.placement = closure_132_1;
+            obj17.fetchedAt = closure_132_2;
+            closure_133_1(closure_133_2[8]).dispatch(obj17);
+            const obj18 = closure_133_1(closure_133_2[8]);
           }
-          const obj17 = { adCreativeId: closure_132_0, creativeType: null };
-          let creative_type1;
-          if (closure_132_6 != null) {
-            creative_type1 = closure_132_6.creative_type;
-          }
-          obj17.creativeType = creative_type1;
-          closure_133_10.error("Creative preview returned no renderable bounty", obj17);
-          const obj20 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE", placement: closure_132_1, error: null };
-          const obj21 = { status: closure_132_3.status, body: closure_132_3.body };
-          const tmp60 = new closure_133_1(closure_133_2[12])(obj21);
-          obj20.error = tmp60;
-          closure_133_1(closure_133_2[8]).dispatch(obj20);
           c7 = 0;
           c9 = 3;
-          return { value: null, done: true };
+          const obj = closure_133_0(closure_133_2[18]);
         }
-      } catch (tmp100) {
-        closure_6 = tmp100;
+      } catch (tmp106) {
+        closure_6 = tmp106;
         if (tmp4 === c7) {
           c9 = tmp2;
-          throw tmp100;
+          throw tmp106;
         } else {
           c8 = tmp;
         }
@@ -513,9 +507,9 @@ let closure_16 = async function _claimBountyReward() {
             closure_130_2 = value;
             orRefreshAdSession = closure_131_0(closure_131_2[14]).getOrRefreshAdSession();
             const obj15 = closure_131_0(closure_131_2[14]);
-            adMetadataSealed = closure_131_0(closure_131_2[18]).getAdMetadataSealed(closure_130_1, closure_130_0);
-            const obj16 = closure_131_0(closure_131_2[18]);
-            adTrafficMetadataSealed = closure_131_0(closure_131_2[18]).getAdTrafficMetadataSealed(closure_130_1, undefined, closure_130_0);
+            adMetadataSealed = closure_131_0(closure_131_2[19]).getAdMetadataSealed(closure_130_1, closure_130_0);
+            const obj16 = closure_131_0(closure_131_2[19]);
+            adTrafficMetadataSealed = closure_131_0(closure_131_2[19]).getAdTrafficMetadataSealed(closure_130_1, undefined, closure_130_0);
             const HTTP = closure_131_0(closure_131_2[15]).HTTP;
             const request = { url: closure_131_9.QUESTS_CREATIVES_CLAIM_REWARD(closure_130_0), body: null, rejectWithError: false };
             let tmp15 = null;
@@ -790,7 +784,7 @@ let closure_19 = async function _resetPreviewDeliveryStateLookback() {
     }
   })();
 };
-const QuestsExperimentLocations = fn(5275).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5338).QuestsExperimentLocations;
 const Endpoints = fn(1072).Endpoints;
 let closure_10 = new LoggerDefault("BountyActionCreators");
 const size = fn(2);

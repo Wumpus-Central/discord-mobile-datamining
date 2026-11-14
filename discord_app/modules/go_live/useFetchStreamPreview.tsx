@@ -1,12 +1,12 @@
-// === Module 13005: useFetchStreamPreview ===
+// === Module 13101: useFetchStreamPreview ===
 
-// Module 13005 (useFetchStreamPreview)
-import StreamActionCreators from "StreamActionCreators" /* 6799 */;
+// Module 13101 (useFetchStreamPreview)
+import StreamActionCreators from "StreamActionCreators" /* 6862 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 6801 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 6864 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 
 const require = globalThis.__r;
 
@@ -78,5 +78,5 @@ export default function useFetchStreamPreview(guildId, channelId, ownerId) {
     }
     return obj5;
   }
-  obj5 = { previewUrl: "flexDirection", isLoading: true };
+  obj5 = { previewUrl: "Path", isLoading: true };
 };

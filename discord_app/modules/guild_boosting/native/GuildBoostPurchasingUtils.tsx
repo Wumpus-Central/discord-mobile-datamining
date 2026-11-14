@@ -1,11 +1,11 @@
-// === Module 10676: GuildBoostPurchasingUtils ===
+// === Module 10745: GuildBoostPurchasingUtils ===
 
-// Module 10676 (GuildBoostPurchasingUtils)
+// Module 10745 (GuildBoostPurchasingUtils)
 import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6206 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SubscriptionStore from "SubscriptionStore" /* 2176 */;
+import SubscriptionStore from "SubscriptionStore" /* 2179 */;
 
 require = fn;
 function alertUnableToManageSub(body, source) {
@@ -57,7 +57,7 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
           closure_130_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp6) {
@@ -153,10 +153,10 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
                     let num3 = 0;
                     const sum = interval.numPremiumGuild + num2;
                     if (null != closure_1_6) {
-                      const numPremiumGuildSubscriptions = closure_0(2171).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
-                      const obj = closure_0(2171);
-                      num3 = numPremiumGuildSubscriptions + c1(2171).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
-                      const obj2 = c1(2171);
+                      const numPremiumGuildSubscriptions = closure_0(2174).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
+                      const obj = closure_0(2174);
+                      num3 = numPremiumGuildSubscriptions + c1(2174).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                      const obj2 = c1(2174);
                     }
                     tmp = sum > num3;
                   }
@@ -184,7 +184,7 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
 };
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: closure_6, SubscriptionStatusTypes: metroImportDefault } = Constants);
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, PremiumTypes: closure_9, SubscriptionIntervalTypes: closure_10 } = PremiumConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");

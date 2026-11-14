@@ -1,6 +1,6 @@
-// === Module 2128: GatewaySocketOpcode ===
+// === Module 2131: GatewaySocketOpcode ===
 
-// Module 2128 (GatewaySocketOpcode)
+// Module 2131 (GatewaySocketOpcode)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gateway/GatewaySocketOpcode.tsx");

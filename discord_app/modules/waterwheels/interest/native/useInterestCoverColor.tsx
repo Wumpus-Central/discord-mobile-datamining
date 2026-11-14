@@ -1,8 +1,8 @@
-// === Module 18981: useInterestCoverColor ===
+// === Module 19034: useInterestCoverColor ===
 
-// Module 18981 (useInterestCoverColor)
+// Module 19034 (useInterestCoverColor)
 import _modDef671 from "module_671" /* 671 */;
-import privDefault from "priv" /* 1453 */;
+import privDefault from "priv" /* 1456 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -160,7 +160,7 @@ function fetchInterestCoverColor(arg0, uri) {
     return obj2.pending;
   }
 }
-const sum = fn(5250).WCAGContrastRatios.Text + 0.3;
+const sum = fn(5313).WCAGContrastRatios.Text + 0.3;
 let closure_7 = new privDefault({ max: 256 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/interest/native/useInterestCoverColor.tsx");

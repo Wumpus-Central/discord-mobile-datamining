@@ -1,6 +1,6 @@
-// === Module 19815: useMeasureDockGlowOffset ===
+// === Module 19179: useMeasureDockGlowOffset ===
 
-// Module 19815 (useMeasureDockGlowOffset)
+// Module 19179 (useMeasureDockGlowOffset)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

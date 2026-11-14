@@ -1,8 +1,8 @@
-// === Module 5929: DismissibleContentFrameworkActionCreators ===
+// === Module 5992: DismissibleContentFrameworkActionCreators ===
 
-// Module 5929 (DismissibleContentFrameworkActionCreators)
+// Module 5992 (DismissibleContentFrameworkActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 5084 */;
+import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 5147 */;
 import size from "module_2" /* 2 */;
 
 const resetFatigueCooldown = DismissibleContentShownStateStore.resetFatigueCooldown;

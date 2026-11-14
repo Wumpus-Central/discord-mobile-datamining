@@ -1,38 +1,38 @@
-// === Module 15635: UserProfileActivityButtons ===
+// === Module 15749: UserProfileActivityButtons ===
 
-// Module 15635 (UserProfileActivityButtons)
+// Module 15749 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5164 */;
-import RootNavigationRef from "RootNavigationRef" /* 5430 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import LinkingDefault from "Linking" /* 5949 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6837 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 7358 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7612 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import isStreamingDefault from "isStreaming" /* 8558 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 12609 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 15636 */;
-import getActivityJoinability from "getActivityJoinability" /* 15637 */;
-import getStreamURLDefault from "getStreamURL" /* 15638 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5227 */;
+import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import LinkingDefault from "Linking" /* 6012 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6900 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 7422 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7678 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
+import isStreamingDefault from "isStreaming" /* 8625 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 12705 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 15750 */;
+import getActivityJoinability from "getActivityJoinability" /* 15751 */;
+import getStreamURLDefault from "getStreamURL" /* 15752 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7022 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5473 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import LocalActivityStore from "LocalActivityStore" /* 7253 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import RelationshipStore from "RelationshipStore" /* 5185 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 7252 */;
-import VoiceStateStore from "VoiceStateStore" /* 5918 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7085 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import LocalActivityStore from "LocalActivityStore" /* 7317 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import RelationshipStore from "RelationshipStore" /* 5248 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
+import VoiceStateStore from "VoiceStateStore" /* 5981 */;
 
 const require = globalThis.__r;
 const getActivityJoinabilityDefault = getActivityJoinability;
@@ -40,10 +40,10 @@ const getActivityJoinabilityDefault = getActivityJoinability;
 require = fn;
 const Constants = fn(1072);
 ({ PlatformTypes: closure_15, UserSettingsSections: closure_16 } = Constants);
-const SpotifyConstants = fn(7227);
+const SpotifyConstants = fn(7291);
 ({ SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = SpotifyConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { icon: { tintColor: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT } };
 let closure_20 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -158,15 +158,15 @@ export function PlayOnSpotifyButton(arg0) {
   ({ activity, onAction: require } = arg0);
   const sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(10791)(activity)) {
+  if (sync_id(10860)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
       const intl = util.intl;
       let obj2 = { platform: activity.name };
       obj.text = intl.formatToPlainString(util.t.LEgD7t, obj2);
-      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(12335), disableColor: true, style: tmp.icon };
-      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(12335), disableColor: true, style: tmp.icon });
+      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(12430), disableColor: true, style: tmp.icon };
+      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(12430), disableColor: true, style: tmp.icon });
       obj.onPress = asyncGeneratorStep(async () => {
         if (c5 === 2) {
           c5 = 3;

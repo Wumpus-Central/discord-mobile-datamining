@@ -1,15 +1,15 @@
-// === Module 12377: OptInOnboardingUtils ===
+// === Module 12472: OptInOnboardingUtils ===
 
-// Module 12377 (OptInOnboardingUtils)
+// Module 12472 (OptInOnboardingUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import FlagUtils from "FlagUtils" /* 1403 */;
-import isOptInEnabled from "isOptInEnabled" /* 6996 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7806 */;
-import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7811 */;
+import FlagUtils from "FlagUtils" /* 1406 */;
+import isOptInEnabled from "isOptInEnabled" /* 7059 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7872 */;
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7877 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 5173 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 5236 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
 
 require = fn;
 function optIntoAllChannelsForExistingMember(id, arg1) {
@@ -43,10 +43,10 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
   const obj2 = GuildOnboardingActionCreatorsDefault;
   const result = obj2.onboardExistingMember(id, new Set(mapped));
 }
-let GuildChannelStore = fn(5173);
+let GuildChannelStore = fn(5236);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_4, GUILD_VOCAL_CHANNELS_KEY: hasOwnProperty } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const GuildMemberFlags = fn(5161).GuildMemberFlags;
+const GuildMemberFlags = fn(5224).GuildMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInOnboardingUtils.tsx");
 

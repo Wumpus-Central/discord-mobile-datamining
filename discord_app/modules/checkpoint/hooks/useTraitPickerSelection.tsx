@@ -1,11 +1,14 @@
-// === Module 14415: useTraitPickerSelection ===
+// === Module 14536: useTraitPickerSelection ===
 
-// Module 14415 (useTraitPickerSelection)
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6358 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6681 */;
-import Tracking from "Tracking" /* 14144 */;
+// Module 14536 (useTraitPickerSelection)
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6421 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6744 */;
+import Tracking from "Tracking" /* 14251 */;
+import useTraitPickerOptions from "useTraitPickerOptions" /* 14537 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 14146 */;
+import UserStore from "UserStore" /* 1388 */;
+import CheckpointStore from "CheckpointStore" /* 14253 */;
 
 require = fn;
 const size = fn(2);
@@ -14,10 +17,10 @@ let result = size.fileFinishedImporting("modules/checkpoint/hooks/useTraitPicker
 export function useTraitPickerSelection(customizationOption) {
   customizationOption = customizationOption.customizationOption;
   const onSelectOption = customizationOption.onSelectOption;
-  let selectedOptionId;
-  noop = customizationOption(onSelectOption[2]).CUSTOMIZATION_OPTION_TO_TRAIT[customizationOption];
-  items = [selectedOptionId];
-  const savedOptionId = customizationOption(onSelectOption[5]).useStateFromStoresObject(items, () => {
+  let savedOptionId;
+  noop = customizationOption(onSelectOption[3]).CUSTOMIZATION_OPTION_TO_TRAIT[customizationOption];
+  items = [savedOptionId];
+  const stateFromStoresObject = customizationOption(onSelectOption[6]).useStateFromStoresObject(items, () => {
     let tmp7 = tmp4;
     if (customizationOption === CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT) {
       let outfitDefaultOptionId;
@@ -45,23 +48,31 @@ export function useTraitPickerSelection(customizationOption) {
     obj.savedOptionId = tmp11;
     return obj;
   });
-  selectedOptionId = savedOptionId.selectedOptionId;
-  const items1 = [onSelectOption, selectedOptionId];
-  const onSelectOption1 = noop.useCallback((trait_type, option_id) => {
-    if (option_id !== selectedOptionId) {
-      const result = Tracking.trackCheckpoint2026CharacterChoiceSelected(trait_type, option_id);
-      onSelectOption(trait_type, option_id);
+  const selectedOptionId = stateFromStoresObject.selectedOptionId;
+  savedOptionId = stateFromStoresObject.savedOptionId;
+  const items1 = [onSelectOption, savedOptionId, selectedOptionId];
+  const onSelectOption1 = noop.useCallback((item, item10034) => {
+    if (item10034 !== selectedOptionId) {
+      const traitOptionRarity = CheckpointCharacterTraits.getTraitOptionRarity(item, item10034);
+      const obj3 = { rarity: traitOptionRarity, isSavedOption: savedOptionId === item10034, visibleRarities: null, hasNitroSubscription: null };
+      const obj2 = useTraitPickerOptions;
+      obj3.visibleRarities = CheckpointCharacterTraits.getVisibleTraitRarities(item, CheckpointStore.stats);
+      obj3.hasNitroSubscription = PremiumTypeUtils.isPremium(UserStore.getCurrentUser());
+      const traitOptionStatus = obj2.getTraitOptionStatus(obj3);
+      const obj6 = Tracking;
+      const result = obj6.trackCheckpoint2026CharacterChoiceSelected(item, item10034, traitOptionStatus, traitOptionRarity);
+      onSelectOption(item, item10034);
     }
   }, items1);
-  if (customizationOption(onSelectOption[2]).CheckpointCustomizationOption.OUTFIT === customizationOption) {
-    let optionIds = tmp(tmp2[3]).OUTFIT_DEFAULT_OPTION_IDS;
-  } else if (tmp(tmp2[2]).CheckpointCustomizationOption.OUTFIT_COLOR === customizationOption) {
+  if (customizationOption(onSelectOption[3]).CheckpointCustomizationOption.OUTFIT === customizationOption) {
+    let optionIds = tmp(tmp2[4]).OUTFIT_DEFAULT_OPTION_IDS;
+  } else if (tmp(tmp2[3]).CheckpointCustomizationOption.OUTFIT_COLOR === customizationOption) {
     let NONE = selectedOptionId;
     if (selectedOptionId == null) {
-      NONE = tmp(tmp2[4]).CheckpointCharacterOutfit.NONE;
+      NONE = tmp(tmp2[5]).CheckpointCharacterOutfit.NONE;
     }
-    optionIds = tmp(tmp2[3]).getOutfitColorOptionIds(NONE);
-    const tmpResult = tmp(tmp2[3]);
+    optionIds = tmp(tmp2[4]).getOutfitColorOptionIds(NONE);
+    const tmpResult = tmp(tmp2[4]);
   }
-  return { optionIds, selectedOptionId, savedOptionId: savedOptionId.savedOptionId, onSelectOption: onSelectOption1 };
+  return { optionIds, selectedOptionId, savedOptionId, onSelectOption: onSelectOption1 };
 }

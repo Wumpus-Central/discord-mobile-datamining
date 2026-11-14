@@ -1,17 +1,17 @@
-// === Module 5859: FadeOutLottieAnimation ===
+// === Module 5922: FadeOutLottieAnimation ===
 
-// Module 5859 (FadeOutLottieAnimation)
-import _modDef1652 from "module_1652" /* 1652 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5860 */;
+// Module 5922 (FadeOutLottieAnimation)
+import _modDef1655 from "module_1655" /* 1655 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5923 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_7 = createStyles.createStyles({ content: { width: "100%" } });
 let closure_8 = { code: "(function FadeOutLottieAnimationTsx1(finished){let[scheduleOnRN,setIsFadeOut]=this.__closure;if(finished)scheduleOnRN(setIsFadeOut,false);})" };
 let closure_9 = { code: "(function FadeOutLottieAnimationTsx2(){let[isAnimationComplete,isFadeOut,withTiming,_worklet_16247045492721_init_data,scheduleOnRN,setIsFadeOut]=this.__closure;if(!isAnimationComplete){return{opacity:1};}if(isFadeOut){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function FadeOutLottieAnimationTsx1Factory([_worklet_16247045492721_init_data,scheduleOnRN,setIsFadeOut]){const FadeOutLottieAnimationTsx1=function(finished){if(finished)scheduleOnRN(setIsFadeOut,false);};FadeOutLottieAnimationTsx1.__closure=[scheduleOnRN,setIsFadeOut];FadeOutLottieAnimationTsx1.__workletHash=16247045492721;FadeOutLottieAnimationTsx1.__initData=_worklet_16247045492721_init_data;return FadeOutLottieAnimationTsx1;}([_worklet_16247045492721_init_data,scheduleOnRN,setIsFadeOut]))};}return{opacity:0};})" };
@@ -31,8 +31,8 @@ export default function FadeOutLottieAnimation(onComplete) {
   const effect = noop.useEffect(() => {
     _undefined2(false);
   }, []);
-  require("module_1652");
-  let items1 = [closure_9, tmp4, first, require("timing/timing").withTiming, closure_8, require("module_1705").scheduleOnRN, tmp5[1]];
+  require("module_1655");
+  let items1 = [closure_9, tmp4, first, require("timing/timing").withTiming, closure_8, require("module_1708").scheduleOnRN, tmp5[1]];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -108,7 +108,7 @@ export default function FadeOutLottieAnimation(onComplete) {
     };
     const merged1 = Object.assign(merged);
     obj2.children = jsx(LottieAnimationViewDefault, { style: tmp2.content, speed: null, onAnimationFinish: null });
-    let tmp20Result = jsx(_modDef1652.View, { style: tmp18, children: null });
+    let tmp20Result = jsx(_modDef1655.View, { style: tmp18, children: null });
   } else {
     tmp20Result = null;
   }

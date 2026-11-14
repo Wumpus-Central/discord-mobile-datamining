@@ -1,20 +1,20 @@
-// === Module 18526: AccountSwitcherListItem ===
+// === Module 18655: AccountSwitcherListItem ===
 
-// Module 18526 (AccountSwitcherListItem)
+// Module 18655 (AccountSwitcherListItem)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import UserUtilsDefault from "UserUtils" /* 5309 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5315 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5974 */;
-import Pressables from "Pressables" /* 7364 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7864 */;
+import UserUtilsDefault from "UserUtils" /* 5372 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5378 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 6037 */;
+import Pressables from "Pressables" /* 7428 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7930 */;
 import noop from "module_19" /* 19 */;
-import UserRecord from "UserRecord" /* 1404 */;
-import StreamerModeStore from "StreamerModeStore" /* 5310 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserRecord from "UserRecord" /* 1407 */;
+import StreamerModeStore from "StreamerModeStore" /* 5373 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 class AccountStatusIcon {
@@ -52,10 +52,10 @@ class AccountStatusIcon {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(14716).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(14829).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_11 = createStyles.createStyles({ accountListTag: { marginLeft: 12, flex: 1 }, tagContainer: { display: "flex", flexDirection: "row" }, accountSwitcherListItem: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingVertical: 8, paddingHorizontal: 16 }, username: { flexShrink: 1 }, accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitcherListItem.tsx");
@@ -105,7 +105,7 @@ export default function AccountSwitcherListItem(arg0) {
     const merged = Object.assign(sortHandlers);
     const items2 = [leading, , ];
     const obj8 = { style: tmp.accountInfo, children: null };
-    const obj9 = { user: obj3, guildId: "a" };
+    const obj9 = { user: obj3, guildId: "y" };
     const items3 = [React6(native.Avatar, obj9), ];
     const obj10 = { style: tmp.accountListTag, children: null };
     const obj11 = { style: tmp.tagContainer, children: null };

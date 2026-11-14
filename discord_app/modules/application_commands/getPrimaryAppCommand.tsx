@@ -1,14 +1,14 @@
-// === Module 12666: getPrimaryAppCommand ===
+// === Module 12762: getPrimaryAppCommand ===
 
-// Module 12666 (getPrimaryAppCommand)
-import Server from "Server" /* 2116 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5890 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 11343 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 11345 */;
+// Module 12762 (getPrimaryAppCommand)
+import Server from "Server" /* 2119 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5953 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 11410 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 11412 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 11339 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 11406 */;
 
 const require = globalThis.__r;
 
@@ -98,11 +98,11 @@ function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
   obj.commandTypes = items;
   return ApplicationCommandIndexStore.query(withAffinitySuggestions, obj, { placeholderCount: 1, scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(11339);
+let ApplicationCommandIndexStore = fn(11406);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: closure_6 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";
-let items = [fn(2116).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(2119).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/getPrimaryAppCommand.tsx");
 

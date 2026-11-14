@@ -1,9 +1,9 @@
-// === Module 9381: CollectiblesPromotionUtils ===
+// === Module 9449: CollectiblesPromotionUtils ===
 
-// Module 9381 (CollectiblesPromotionUtils)
-import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 9350 */;
-import CollectiblesCollectAndClaimPromotionUtils from "CollectiblesCollectAndClaimPromotionUtils" /* 9382 */;
-import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils" /* 9384 */;
+// Module 9449 (CollectiblesPromotionUtils)
+import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 9417 */;
+import CollectiblesCollectAndClaimPromotionUtils from "CollectiblesCollectAndClaimPromotionUtils" /* 9450 */;
+import CollectiblesTargetedOfferPromotionUtils from "CollectiblesTargetedOfferPromotionUtils" /* 9452 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesPromotionUtils.tsx");
@@ -34,4 +34,39 @@ export function getPromotionForCollectiblesProduct(selectedProduct, tenantMetada
       return null;
     }
   }
+}
+export function isPromotionInInvoicePreview(getDiscountIdIfExists, rewardConfig) {
+  let id;
+  if (rewardConfig != null) {
+    rewardConfig = rewardConfig.rewardConfig;
+    if (rewardConfig != null) {
+      const discount = rewardConfig.discount;
+      if (discount != null) {
+        id = discount.id;
+      }
+    }
+  }
+  let tmp2 = null != id;
+  if (tmp2) {
+    let discountIdIfExists;
+    if (getDiscountIdIfExists != null) {
+      discountIdIfExists = getDiscountIdIfExists.getDiscountIdIfExists();
+    }
+    const _String = String;
+    tmp2 = discountIdIfExists === String(id);
+  }
+  return tmp2;
+}
+export function hasFiatDiscountPromotion(rewardConfig) {
+  let fiatEnabled;
+  if (rewardConfig != null) {
+    rewardConfig = rewardConfig.rewardConfig;
+    if (rewardConfig != null) {
+      const discount = rewardConfig.discount;
+      if (discount != null) {
+        fiatEnabled = discount.fiatEnabled;
+      }
+    }
+  }
+  return true === fiatEnabled;
 }

@@ -1,13 +1,13 @@
-// === Module 16820: getEmbeddedActivityPopoutWindowKey ===
+// === Module 16943: getEmbeddedActivityPopoutWindowKey ===
 
-// Module 16820 (getEmbeddedActivityPopoutWindowKey)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5164 */;
-import ApplicationStore from "ApplicationStore" /* 2162 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 6800 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
+// Module 16943 (getEmbeddedActivityPopoutWindowKey)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5227 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 6863 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 
 require = fn;
-const ActivityPanelModes = fn(5896).ActivityPanelModes;
+const ActivityPanelModes = fn(5959).ActivityPanelModes;
 const PopoutWindowKeys = fn(1072).PopoutWindowKeys;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getEmbeddedActivityPopoutWindowKey.tsx");

@@ -1,31 +1,30 @@
-// === Module 19771: SoundboardSoundPreviewActionSheet ===
+// === Module 19223: SoundboardSoundPreviewActionSheet ===
 
-// Module 19771 (SoundboardSoundPreviewActionSheet)
+// Module 19223 (SoundboardSoundPreviewActionSheet)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7163 */;
-import SoundboardUtils from "SoundboardUtils" /* 12925 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 19755 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7226 */;
+import SoundboardUtils from "SoundboardUtils" /* 13021 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import UserStore from "UserStore" /* 1385 */;
-import SoundboardStore from "SoundboardStore" /* 6306 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import UserStore from "UserStore" /* 1388 */;
+import SoundboardStore from "SoundboardStore" /* 6369 */;
 
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: closure_10 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5243);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5306);
 let obj2 = { soundPresentation: { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 }, soundPresentationPlaying: null, emoji: null, emojiFastImage: null, emojiText: null, text: null, buttonContainer: null, star: null, primaryIcon: null };
 let obj3 = { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 };
 obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.STATUS_SPEAKING };
 let size = { marginTop: nativeDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
 obj2.emoji = size;
 obj2.emojiFastImage = { width: 128, height: 128 };
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 60;
@@ -39,75 +38,58 @@ const size1 = { width: 16, height: 16, tintColor: nativeDefault.colors.TEXT_DEFA
 obj2.star = size1;
 const size2 = { width: 16, height: 16, tintColor: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
 obj2.primaryIcon = size2;
-let closure_14 = createStyles.createStyles(obj2);
+let closure_13 = createStyles.createStyles(obj2);
 size = fn(2);
-let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPreviewActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPreviewActionSheet.tsx");
 
-export default function SoundboardSoundPreviewActionSheet(channel) {
-  channel = channel.channel;
-  const sound = channel.sound;
-  const soundGridLocation = channel.soundGridLocation;
-  const analyticsSource = channel.analyticsSource;
-  onLockedPress = undefined;
-  c10 = undefined;
-  let primaryIcon = closure_14();
+export default function SoundboardSoundPreviewActionSheet(analyticsSource) {
+  ({ channel, sound } = analyticsSource);
+  analyticsSource = analyticsSource.analyticsSource;
+  c5 = undefined;
+  const tmp = closure_13();
   let id = channel.id;
-  let stringResult1 = soundGridLocation;
-  const soundboardSoundPreviewMenuEnabled = channel(soundGridLocation[11]).useSoundboardSoundPreviewMenuEnabled("SoundboardSoundPreviewActionSheet");
-  let obj = channel(soundGridLocation[11]);
-  const soundboardSoundLock = channel(soundGridLocation[12]).useSoundboardSoundLock(sound, channel);
-  ({ isLocked, onLockedPress } = soundboardSoundLock);
-  items = [channel, soundGridLocation, soundboardSoundPreviewMenuEnabled, analyticsSource];
-  const onDismiss = id.useCallback(() => {
-    if (soundboardSoundPreviewMenuEnabled) {
-      const obj2 = { channel, analyticsSource, initialScrollLocation: soundGridLocation };
-      const result = soundboard_SoundboardActionCreators.openSoundboardSoundPickerActionSheet(obj2);
-    }
-  }, items);
-  const items1 = [onLockedPress, onDismiss];
-  const callback1 = id.useCallback(() => {
-    onLockedPress(() => onDismiss());
-  }, items1);
-  let obj2 = channel(soundGridLocation[12]);
-  const items2 = [onDismiss];
-  const stateFromStores = channel(soundGridLocation[14]).useStateFromStores(items2, () => {
-    const currentUser = callback.getCurrentUser();
+  const soundboardSoundLock = sound(id[11]).useSoundboardSoundLock(sound, channel);
+  ({ isLocked, lockedAccessibilityHint, onLockedPress } = soundboardSoundLock);
+  let obj = sound(id[11]);
+  items = [UserStore];
+  const stateFromStores = sound(id[12]).useStateFromStores(items, () => {
+    currentUser = currentUser.getCurrentUser();
     id = undefined;
     if (currentUser != null) {
       id = currentUser.id;
     }
     return id;
   });
-  let obj4 = channel(soundGridLocation[14]);
-  const items3 = [stateFromStores];
-  const stateFromStores1 = channel(soundGridLocation[14]).useStateFromStores(items3, () => SoundboardStore.isFavoriteSound(sound.soundId));
-  const obj5 = channel(soundGridLocation[14]);
-  const items4 = [stateFromStores];
-  const items5 = [sound];
-  const stateFromStores2 = channel(soundGridLocation[14]).useStateFromStores(items4, () => SoundboardStore.isPlayingSound(sound.soundId), items5);
-  const obj6 = channel(soundGridLocation[14]);
-  const items6 = [stateFromStores];
-  const items7 = [stateFromStores];
-  let stateFromStores3 = channel(soundGridLocation[14]).useStateFromStores(items6, () => {
+  let obj2 = sound(id[12]);
+  const items1 = [SoundboardStore];
+  const stateFromStores1 = sound(id[12]).useStateFromStores(items1, () => SoundboardStore.isFavoriteSound(sound.soundId));
+  let obj3 = sound(id[12]);
+  const items2 = [SoundboardStore];
+  const items3 = [sound];
+  const stateFromStores2 = sound(id[12]).useStateFromStores(items2, () => SoundboardStore.isPlayingSound(sound.soundId), items3);
+  let obj4 = sound(id[12]);
+  const items4 = [SoundboardStore];
+  const items5 = [stateFromStores];
+  let stateFromStores3 = sound(id[12]).useStateFromStores(items4, () => {
     let isUserPlayingSoundsResult = null != stateFromStores;
     if (isUserPlayingSoundsResult) {
       isUserPlayingSoundsResult = SoundboardStore.isUserPlayingSounds(tmp);
     }
     return isUserPlayingSoundsResult;
-  }, items7);
-  const obj7 = channel(soundGridLocation[14]);
-  [tmp12, c10] = analyticsSource(id.useState(false), 2);
-  let tmp13 = !tmp12;
-  if (!tmp12) {
-    tmp13 = stateFromStores2;
+  }, items5);
+  const obj5 = sound(id[12]);
+  [tmp10, c5] = stateFromStores(stateFromStores1.useState(false), 2);
+  let tmp11 = !tmp10;
+  if (!tmp10) {
+    tmp11 = stateFromStores2;
   }
-  if (tmp13) {
-    tmp13 = stateFromStores3;
+  if (tmp11) {
+    tmp11 = stateFromStores3;
   }
-  stateFromStores3 = tmp12;
-  const items8 = [stateFromStores1, sound];
-  const items9 = [id, sound, tmp12, analyticsSource];
-  const callback2 = obj3.useCallback(() => {
+  stateFromStores3 = tmp10;
+  const items6 = [stateFromStores1, sound];
+  const items7 = [id, sound, tmp10, analyticsSource];
+  const callback = obj6.useCallback(() => {
     if (stateFromStores1) {
       SoundboardActionCreators.removeFavoriteSound(sound.soundId);
       const tmpResult = SoundboardActionCreators;
@@ -119,14 +101,14 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
       const tmpResult2 = SoundboardUtils;
       SoundboardActionCreators.addFavoriteSound(sound.soundId);
     }
-  }, items8);
-  const items10 = [sound, id, analyticsSource];
-  const callback3 = obj3.useCallback(() => {
+  }, items6);
+  const items8 = [sound, id, analyticsSource];
+  const callback1 = obj6.useCallback(() => {
     if (!stateFromStores3) {
       _undefined(true);
       const obj4 = { sound_id: null, sound_name: null, sound_guild_id: null, location_guild_id: null, location_stack: null };
       ({ soundId: obj2.sound_id, name: obj2.sound_name, guildId: obj2.sound_guild_id } = sound);
-      channel = ChannelStore.getChannel(id);
+      const channel = ChannelStore.getChannel(id);
       let guild_id;
       if (channel != null) {
         guild_id = channel.guild_id;
@@ -137,116 +119,94 @@ export default function SoundboardSoundPreviewActionSheet(channel) {
       AnalyticsUtilsDefault.track(constants.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED, obj4);
       SoundboardActionCreators.playSoundLocally(id, sound);
     }
-  }, items9);
-  const callback4 = obj3.useCallback(() => {
+  }, items7);
+  const callback2 = obj6.useCallback(() => {
     _undefined(false);
     items = [analyticsSource];
     SoundboardUtils.playSound(sound, id, items);
-  }, items10);
-  let str = "primary";
-  if (soundboardSoundPreviewMenuEnabled) {
-    str = "secondary";
-  }
-  const obj8 = { variant: str, icon: null, text: null, onPress: null };
-  if (stateFromStores1) {
-    let StarOutlineIcon = tmp(stringResult1[19]).StarIcon;
-  } else {
-    StarOutlineIcon = tmp(stringResult1[20]).StarOutlineIcon;
-  }
-  obj8.icon = stateFromStores3(StarOutlineIcon, { style: primaryIcon.star });
-  const intl = tmp(stringResult1[21]).intl;
-  const string = intl.string;
-  const t = tmp(stringResult1[21]).t;
-  if (stateFromStores1) {
-    let stringResult = string(t.aBUcp3);
-  } else {
-    stringResult = string(t.yZFibY);
-  }
-  obj8.text = stringResult;
-  obj8.onPress = callback2;
-  const tmp17Result = stateFromStores3(channel(stringResult1[18]).Button, obj8);
-  if (tmp12) {
-    const obj10 = { style: primaryIcon.star };
-    let tmp17Result3 = tmp17(tmp(stringResult1[22]).WaveformIcon, obj10);
-  } else {
-    const obj11 = { style: primaryIcon.star, source: sound(stringResult1[24]) };
-    tmp17Result3 = tmp17(sound(stringResult1[23]), obj11);
-    const tmp21 = sound(stringResult1[23]);
-  }
-  const obj12 = { variant: "secondary", icon: tmp17Result3, text: null, onPress: null };
-  const intl2 = tmp(stringResult1[21]).intl;
-  const t2 = tmp(stringResult1[21]).t;
-  obj12.text = intl2.string(tmp12 ? t2.diasud : t2.Kd4uxG);
-  obj12.onPress = callback3;
-  const tmp17Result4 = stateFromStores3(channel(stringResult1[18]).Button, obj12);
-  const obj13 = { startExpanded: true, onDismiss, children: null };
-  const items11 = [primaryIcon.soundPresentation, ];
+  }, items8);
+  const items9 = [tmp.soundPresentation, ];
   let prop = null;
-  if (tmp13) {
-    prop = primaryIcon.soundPresentationPlaying;
+  if (tmp11) {
+    prop = tmp.soundPresentationPlaying;
   }
-  const obj14 = { style: items11, accessible: true, accessibilityLabel: sound.name, accessibilityValue: null, children: null };
-  items11[1] = prop;
-  let tmp27;
-  if (tmp13) {
-    const obj15 = { text: null };
-    const intl3 = tmp(stringResult1[21]).intl;
-    obj15.text = intl3.string(tmp(stringResult1[21]).t.diasud);
-    tmp27 = obj15;
+  const obj7 = { style: items9, accessible: true, accessibilityLabel: sound.name, accessibilityValue: null, children: null };
+  items9[1] = prop;
+  let tmp19;
+  if (tmp11) {
+    const obj8 = { text: null };
+    const intl = sound(tmp3[17]).intl;
+    obj8.text = intl.string(sound(tmp3[17]).t.diasud);
+    tmp19 = obj8;
   }
-  obj14.accessibilityValue = tmp27;
-  const obj16 = { fastImageStyle: null, textEmojiStyle: null, src: null, name: null };
-  const items12 = [, ];
-  ({ emoji: arr13[0], emojiFastImage: arr13[1] } = primaryIcon);
-  obj16.fastImageStyle = items12;
-  const items13 = [, ];
-  ({ emoji: arr14[0], emojiText: arr14[1] } = primaryIcon);
-  obj16.textEmojiStyle = items13;
-  const obj9 = { style: primaryIcon.star };
-  const tmp11 = analyticsSource(id.useState(false), 2);
-  obj16.src = sound(stringResult1[27])(sound, 64);
-  let str2 = sound.emojiName;
-  if (str2 == null) {
-    str2 = "";
+  obj7.accessibilityValue = tmp19;
+  const obj9 = { fastImageStyle: null, textEmojiStyle: null, src: null, name: null };
+  const items10 = [, ];
+  ({ emoji: arr11[0], emojiFastImage: arr11[1] } = tmp);
+  obj9.fastImageStyle = items10;
+  const items11 = [, ];
+  ({ emoji: arr12[0], emojiText: arr12[1] } = tmp);
+  obj9.textEmojiStyle = items11;
+  const tmp9 = stateFromStores(stateFromStores1.useState(false), 2);
+  obj9.src = analyticsSource(id[19])(sound, 64);
+  let str = sound.emojiName;
+  if (str == null) {
+    str = "";
   }
-  obj16.name = str2;
-  const items14 = [stateFromStores3(sound(stringResult1[26]), obj16), stateFromStores3(channel(stringResult1[28]).Text, { style: primaryIcon.text, variant: "heading-lg/semibold", children: sound.name })];
-  obj14.children = items14;
-  const items15 = [closure_12(soundboardSoundPreviewMenuEnabled, obj14), ];
-  const obj18 = { style: primaryIcon.buttonContainer, children: null };
-  const obj19 = { children: null };
-  if (soundboardSoundPreviewMenuEnabled) {
-    let Button = tmp(stringResult1[18]).Button;
-    if (isLocked) {
-      let PlayIcon = tmp(stringResult1[29]).LockIcon;
-    } else {
-      PlayIcon = tmp(stringResult1[30]).PlayIcon;
-    }
-    const obj20 = { variant: "primary", icon: null, text: null, disabled: null, accessibilityHint: null, onPress: null, onPressDisabled: null };
-    const obj21 = { style: null };
-    primaryIcon = primaryIcon.primaryIcon;
-    obj21.style = primaryIcon;
-    obj20.icon = tmp17(PlayIcon, obj21);
-    const intl4 = tmp(stringResult1[21]).intl;
-    stringResult1 = intl4.string(tmp(stringResult1[21]).t.RscU7I);
-    obj20.text = stringResult1;
-    obj20.disabled = isLocked;
-    obj20.accessibilityHint = soundboardSoundLock.lockedAccessibilityHint;
-    obj20.onPress = callback4;
-    obj20.onPressDisabled = callback1;
-    Button = tmp17(Button, obj20);
-    const items16 = [Button, tmp17Result4, tmp17Result];
-    obj19.children = items16;
+  obj9.name = str;
+  const items12 = [closure_11(analyticsSource(id[18]), obj9), closure_11(sound(id[20]).Text, { style: tmp.text, variant: "heading-lg/semibold", children: sound.name })];
+  obj7.children = items12;
+  const items13 = [closure_12(c5, obj7), ];
+  const obj11 = { style: tmp.buttonContainer, children: null };
+  if (isLocked) {
+    let PlayIcon = sound(tmp3[22]).LockIcon;
   } else {
-    const items17 = [tmp17Result, tmp17Result4];
-    obj19.children = items17;
-    const obj22 = { children: null };
-    obj18.children = closure_12(tmp29, obj19);
-    items15[1] = tmp17(tmp25, obj18);
-    obj22.children = items15;
-    obj13.children = closure_12(tmp25, obj22);
-    return tmp17(tmp(stringResult1[25]).ActionSheet, obj13);
+    PlayIcon = sound(tmp3[23]).PlayIcon;
   }
-  const obj17 = { style: primaryIcon.text, variant: "heading-lg/semibold", children: sound.name };
-  const tmp28 = sound(stringResult1[26]);
+  const obj12 = { variant: "primary", icon: closure_11(PlayIcon, { style: tmp.primaryIcon }), text: null, disabled: null, accessibilityHint: null, onPress: null, onPressDisabled: null };
+  const intl2 = sound(tmp3[17]).intl;
+  obj12.text = intl2.string(sound(id[17]).t.RscU7I);
+  obj12.disabled = isLocked;
+  obj12.accessibilityHint = lockedAccessibilityHint;
+  obj12.onPress = callback2;
+  obj12.onPressDisabled = onLockedPress;
+  const items14 = [closure_11(sound(id[21]).Button, obj12), , ];
+  if (tmp10) {
+    const obj14 = { style: tmp.star };
+    let tmp15Result = closure_11(sound(tmp3[24]).WaveformIcon, obj14);
+  } else {
+    const obj15 = { style: tmp.star, source: tmp20(tmp3[26]) };
+    tmp15Result = closure_11(tmp20(tmp3[25]), obj15);
+    const tmp20Result = tmp20(tmp3[25]);
+  }
+  const obj16 = { variant: "secondary", icon: tmp15Result, text: null, onPress: null };
+  const intl3 = sound(tmp3[17]).intl;
+  const t = sound(tmp3[17]).t;
+  obj16.text = intl3.string(tmp10 ? t.diasud : t.Kd4uxG);
+  obj16.onPress = callback1;
+  items14[1] = closure_11(sound(id[21]).Button, obj16);
+  if (stateFromStores1) {
+    let StarOutlineIcon = sound(tmp3[27]).StarIcon;
+  } else {
+    StarOutlineIcon = sound(tmp3[28]).StarOutlineIcon;
+  }
+  const obj17 = { variant: "secondary", icon: closure_11(StarOutlineIcon, { style: tmp.star }), text: null, onPress: null };
+  const intl4 = sound(tmp3[17]).intl;
+  const string = intl4.string;
+  const t2 = sound(tmp3[17]).t;
+  if (stateFromStores1) {
+    let stringResult = string(t2.aBUcp3);
+  } else {
+    stringResult = string(t2.yZFibY);
+  }
+  const obj19 = { startExpanded: true, children: null };
+  const obj20 = { children: null };
+  obj17.text = stringResult;
+  obj17.onPress = callback;
+  items14[2] = closure_11(sound(id[21]).Button, obj17);
+  obj11.children = items14;
+  items13[1] = closure_12(c5, obj11);
+  obj20.children = items13;
+  obj19.children = closure_12(c5, obj20);
+  return closure_11(sound(id[16]).ActionSheet, obj19);
 };

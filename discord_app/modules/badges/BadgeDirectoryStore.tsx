@@ -1,14 +1,14 @@
-// === Module 8481: BadgeDirectoryStore ===
+// === Module 8547: BadgeDirectoryStore ===
 
-// Module 8481 (BadgeDirectoryStore)
+// Module 8547 (BadgeDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import privDefault from "priv" /* 1453 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8482 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8486 */;
-import UserStore from "UserStore" /* 1385 */;
+import privDefault from "priv" /* 1456 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8548 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8552 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const HOUR = DurationsDefault.Millis.HOUR;
@@ -55,8 +55,8 @@ prototype["hasCatalogFor"] = function hasCatalogFor(id) {
   }
   return flag;
 };
-prototype["isCatalogStaleFor"] = function isCatalogStaleFor(displayedUserId) {
-  const peekResult = closure_5.peek(displayedUserId);
+prototype["isCatalogStaleFor"] = function isCatalogStaleFor(id) {
+  const peekResult = closure_5.peek(id);
   let fetchedAt;
   if (peekResult != null) {
     fetchedAt = peekResult.fetchedAt;
@@ -344,6 +344,15 @@ const badgeDirectoryStore = new BadgeDirectoryStore(DispatcherDefault, {
         info_label = info_label1;
       }
       obj3.info_label = info_label;
+      let stats = badge.stats;
+      if (stats == null) {
+        let stats1;
+        if (value2 != null) {
+          stats1 = value2.stats;
+        }
+        stats = stats1;
+      }
+      obj3.stats = stats;
       const result = badges2.set(badge.badge_id, obj3);
       const result1 = closure_5.set(userId, peekResult);
     }

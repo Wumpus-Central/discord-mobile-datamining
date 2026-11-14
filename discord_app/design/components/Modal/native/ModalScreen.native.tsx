@@ -1,11 +1,11 @@
-// === Module 8142: ModalScreen ===
+// === Module 8208: ModalScreen ===
 
-// Module 8142 (ModalScreen)
+// Module 8208 (ModalScreen)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5850 */;
-import NavigatorBackgroundContext from "NavigatorBackgroundContext" /* 7426 */;
-import NavigatorGradientContext from "NavigatorGradientContext" /* 7523 */;
-import ExpressiveGradient from "ExpressiveGradient" /* 8143 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5913 */;
+import NavigatorBackgroundContext from "NavigatorBackgroundContext" /* 7492 */;
+import NavigatorGradientContext from "NavigatorGradientContext" /* 7589 */;
+import ExpressiveGradient from "ExpressiveGradient" /* 8209 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let obj = { navigator: nativeDefault.colors.BACKGROUND_BASE_LOW, modal: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj3 = { container: { flex: 1, flexDirection: "column" }, navigator: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, modal: null };
 const obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj3.modal = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

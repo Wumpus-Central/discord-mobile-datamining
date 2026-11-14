@@ -1,14 +1,14 @@
-// === Module 12821: GlobalStatusIndicator ===
+// === Module 12917: GlobalStatusIndicator ===
 
-// Module 12821 (GlobalStatusIndicator)
-import _mod1652 from "module_1652" /* 1652 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6837 */;
+// Module 12917 (GlobalStatusIndicator)
+import _mod1655 from "module_1655" /* 1655 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6900 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5490 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
-import NativeMenuStore from "NativeMenuStore" /* 10972 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
+import ActionSheetStore from "ActionSheetStore" /* 5553 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
+import NativeMenuStore from "NativeMenuStore" /* 11041 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -149,7 +149,7 @@ export default function GlobalStatusIndicator(children) {
   }, items2);
 };
 export function useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState) {
-  const sharedValue = _mod1652.useSharedValue(globalStatusIndicatorState.height);
+  const sharedValue = _mod1655.useSharedValue(globalStatusIndicatorState.height);
   items = [globalStatusIndicatorState.height, sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(globalStatusIndicatorState.height);

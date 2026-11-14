@@ -1,14 +1,14 @@
-// === Module 12049: useProfileSortedGames ===
+// === Module 12134: useProfileSortedGames ===
 
-// Module 12049 (useProfileSortedGames)
+// Module 12134 (useProfileSortedGames)
 import applyDefault from "apply" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildProfileConstants = fn(10480);
+const GuildProfileConstants = fn(10549);
 ({ HOISTED_SEARCH_GAME_IDS: closure_4, HOISTED_SEARCH_GAME_IDS_BY_PRIORITY: hasOwnProperty } = GuildProfileConstants);
 let closure_6 = [];
 const size = fn(2);

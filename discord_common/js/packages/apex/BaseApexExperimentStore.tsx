@@ -78,6 +78,15 @@ class BaseApexExperimentStore extends PersistedStore {
   }
 }
 const prototype = BaseApexExperimentStore.prototype;
+prototype["onAssignmentsIngested"] = function onAssignmentsIngested() {
+
+};
+prototype["resolveConfigAssignment"] = function resolveConfigAssignment() {
+
+};
+prototype["onConfigApplied"] = function onConfigApplied() {
+
+};
 prototype["loadStoredState"] = function loadStoredState(version, buildOverrideExperiments) {
   if (null != version) {
     if (3 === version.version) {
@@ -131,14 +140,14 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
       let tmp9 = tmp8;
       if (null != tmp8) {
         if (null != tmp7) {
-          let tmp38 = obj[tmp7];
-          for (const key10031 in tmp9) {
-            let addResult = set1.add(key10031);
-            ({ evaluation_id, assignments } = tmp9[key10031]);
+          let tmp50 = obj[tmp7];
+          for (const key10032 in tmp9) {
+            let addResult = set1.add(key10032);
+            ({ evaluation_id, assignments } = tmp9[key10032]);
             obj = { evaluationId: evaluation_id, assignments: {} };
-            tmp38[key10031] = obj;
-            for (const item10042 of assignments) {
-              let tmp16 = _slicedToArray(item10042, 6);
+            tmp50[key10032] = obj;
+            for (const item10043 of assignments) {
+              let tmp16 = _slicedToArray(item10043, 6);
               [tmp17, tmp18, tmp19] = tmp16;
               let num = tmp19;
               let tmp20 = tmp16[3];
@@ -164,12 +173,30 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
       continue;
     }
   }
+  if (null != apexExperiments) {
+    const iter2 = items[Symbol.iterator]();
+    const nextResult1 = iter2.next();
+    while (iter2 !== undefined) {
+      let tmp37 = ApexTypes.UnitTypeToKind[nextResult1];
+      let obj3 = apexExperiments.assignments[nextResult1];
+      if (obj3 == null) {
+        obj3 = {};
+      }
+      let keys = Object.keys(obj3);
+      for (const item10112 of keys) {
+        let result1 = self.onAssignmentsIngested(tmp37, item10112, obj[tmp37][item10112]);
+        continue;
+      }
+      continue;
+    }
+  }
   if (null != arg1) {
-    const result1 = self.setGuildExperimentAssignments(arg1);
+    const result2 = self.setGuildExperimentAssignments(arg1);
   }
   return true;
 };
 prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignments(arg0) {
+  const self = this;
   obj = arg0;
   if (arg0 == null) {
     obj = {};
@@ -180,9 +207,10 @@ prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignme
     [tmp7, tmp8] = tmp6;
     ({ evaluation_id, assignments } = tmp8);
     let obj2 = { evaluationId: evaluation_id, assignments: {} };
+    let tmp9 = obj2;
     tmp[tmp7] = obj2;
-    for (const item10038 of assignments) {
-      let tmp14 = _slicedToArray(item10038, 5);
+    for (const item10040 of assignments) {
+      let tmp14 = _slicedToArray(item10040, 5);
       [tmp15, tmp16, tmp17] = tmp14;
       let num = tmp17;
       let tmp18 = tmp14[3];
@@ -200,6 +228,7 @@ prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignme
       tmp9.assignments[tmp15] = obj3;
       continue;
     }
+    let result = self.onAssignmentsIngested("guild", tmp7, tmp9);
     continue;
   }
   tmp3 = entries[Symbol.iterator]();
@@ -280,11 +309,11 @@ prototype["registerExperiment"] = function registerExperiment(name) {
 prototype["getRegisteredExperiments"] = function getRegisteredExperiments() {
   return closure_10;
 };
-prototype["getAssignment"] = function getAssignment(kind, id, name) {
+prototype["getAssignment"] = function getAssignment(installation, id, name) {
   const self = this;
   let override = this.getOverride(name);
   if (null == override) {
-    override = self.getServerAssignment(kind, id, name);
+    override = self.getServerAssignment(installation, id, name);
   }
   return override;
 };
@@ -364,14 +393,32 @@ prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(us
   }
   const tmp2 = _slicedToArray(this.getEvaluationAndAssignmentInner(user, id, logger), 2);
 };
-prototype["trackExperimentExposure"] = function trackExperimentExposure(evaluation_id, experiment, location, unit_type, revision, trackedVariantId, arg6) {
+prototype["getConfigEvaluationAndAssignment"] = function getConfigEvaluationAndAssignment(user, id, logger, tmpResult) {
   const self = this;
-  importDefault = evaluation_id;
-  dependencyMap = experiment;
+  const configAssignment = this.resolveConfigAssignment(user, id, logger);
+  if (null != configAssignment) {
+    items = [, ];
+    ({ evaluationId: arr[0], assignment: arr[1] } = configAssignment);
+    let evaluationAndAssignment = items;
+  } else {
+    evaluationAndAssignment = self.getEvaluationAndAssignment(user, id, logger, tmpResult);
+  }
+  return evaluationAndAssignment;
+};
+prototype["getOverrides"] = function getOverrides() {
+  const merged = Object.assign(closure_13);
+  const merged1 = Object.assign(closure_11);
+  const merged2 = Object.assign(closure_12);
+  return {};
+};
+prototype["trackExperimentExposure"] = function trackExperimentExposure(evaluationId, experimentName, location, unit_type, revision, trackedVariantId, arg6) {
+  const self = this;
+  importDefault = evaluationId;
+  dependencyMap = experimentName;
   const exposure_location = location;
   const tracked_variation_id = trackedVariantId;
   closure_0 = arg6;
-  const combined = "" + experiment + "|" + revision + "|" + trackedVariantId + "|" + location + "|" + arg6 + "|1";
+  const combined = "" + experimentName + "|" + revision + "|" + trackedVariantId + "|" + location + "|" + arg6 + "|1";
   let tmp3 = dependencyMap4[combined];
   if (null == tmp3) {
     const v3Result = MurmurHashV3Default.v3(combined);
@@ -433,24 +480,24 @@ prototype["withExposureTracking"] = function withExposureTracking(v3Result, fn) 
     self.saveTrackedExposures(closure_19);
   }
 };
-prototype["trackExposureSuppression"] = function trackExposureSuppression(name, client_override) {
-  if (null != closure_10[name]) {
+prototype["trackExposureSuppression"] = function trackExposureSuppression(experiment, suppression_source) {
+  if (null != closure_10[experiment]) {
     const self = this;
     if ("user" === tmp.kind) {
-      obj = { experiment: name, unit_type: tmp.kind, suppression_source: client_override };
-      self.track(WebAnalyticsEvents.EXPERIMENT_USER_EXPOSURE_SUPPRESSED, obj, { flush: true });
+      const obj2 = { experiment, unit_type: tmp.kind, suppression_source };
+      self.track(WebAnalyticsEvents.EXPERIMENT_USER_EXPOSURE_SUPPRESSED, obj2, { flush: true });
     } else if ("installation" === tmp.kind) {
       const _Object = Object;
       const first = Object.keys(obj.installation)[0];
       if (null != first) {
-        const obj2 = { experiment: name, unit_type: tmp.kind, suppression_source: client_override, installation_id: first };
-        self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED, obj2, { flush: true });
+        obj = { experiment, unit_type: tmp.kind, suppression_source, installation_id: first };
+        self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED, obj, { flush: true });
       }
     } else if ("guild" === tmp.kind) {
       const _Object2 = Object;
       const first1 = Object.keys(obj.guild)[0];
       if (null != first1) {
-        const obj3 = { experiment: name, unit_type: tmp.kind, suppression_source: client_override, guild_id: first1 };
+        const obj3 = { experiment, unit_type: tmp.kind, suppression_source, guild_id: first1 };
         self.track(WebAnalyticsEvents.EXPERIMENT_GUILD_EXPOSURE_SUPPRESSED, obj3, { flush: true });
       }
     }

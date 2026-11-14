@@ -1,11 +1,11 @@
-// === Module 9359: AnimatedTooltip ===
+// === Module 9427: AnimatedTooltip ===
 
-// Module 9359 (AnimatedTooltip)
-import _modDef1652 from "module_1652" /* 1652 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5257 */;
-import Tooltip from "Tooltip" /* 9360 */;
-import TooltipConstants from "TooltipConstants" /* 9362 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9363 */;
+// Module 9427 (AnimatedTooltip)
+import _modDef1655 from "module_1655" /* 1655 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5320 */;
+import Tooltip from "Tooltip" /* 9428 */;
+import TooltipConstants from "TooltipConstants" /* 9430 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9431 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -23,7 +23,7 @@ function renderTooltipItem(arg0, arg1) {
     tmpResult = jsx(Tooltip.Tooltip, {});
   }
   obj.children = tmpResult;
-  return jsx(_modDef1652.View, { style: null, pointerEvents: "box-none", children: null });
+  return jsx(_modDef1655.View, { style: null, pointerEvents: "box-none", children: null });
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Tooltip/native/AnimatedTooltip.native.tsx");

@@ -1,21 +1,21 @@
-// === Module 19893: VoicePanelDismissableContent ===
+// === Module 20050: VoicePanelDismissableContent ===
 
-// Module 19893 (VoicePanelDismissableContent)
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10499 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11918 */;
+// Module 20050 (VoicePanelDismissableContent)
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10568 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(19894, dependencyMap.paths);
+  return asyncRequireImpl(20051, dependencyMap.paths);
 }
-const VoicePanelModes = fn(11919).VoicePanelModes;
-const isActivityParticipant = fn(5920).isActivityParticipant;
+const VoicePanelModes = fn(11985).VoicePanelModes;
+const isActivityParticipant = fn(5983).isActivityParticipant;
 const jsx = fn(21).jsx;
 let closure_10 = { code: "(function VoicePanelDismissableContentTsx1(){let[mode,VoicePanelModes,focused]=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;})" };
 let closure_11 = { code: "(function VoicePanelDismissableContentTsx2(manualId,previousManualId){let[scheduleOnRN,handleFocusChange]=this.__closure;if(manualId!==previousManualId){scheduleOnRN(handleFocusChange,manualId);}})" };
@@ -60,7 +60,7 @@ export default noop.memo(function VoicePanelDismissibleContent() {
   VoicePanelDismissableContentTsx1.__closure = items2;
   VoicePanelDismissableContentTsx1.__workletHash = 2390811461540;
   VoicePanelDismissableContentTsx1.__initData = tmp7;
-  const items3 = [closure_11, require("module_1705").scheduleOnRN, callback];
+  const items3 = [closure_11, require("module_1708").scheduleOnRN, callback];
   _require = undefined;
   importDefault = undefined;
   [tmp11, tmp12, tmp13] = items3;
@@ -78,9 +78,9 @@ export default noop.memo(function VoicePanelDismissibleContent() {
   VoicePanelDismissableContentTsx2.__closure = items4;
   VoicePanelDismissableContentTsx2.__workletHash = 15261631446843;
   VoicePanelDismissableContentTsx2.__initData = tmp11;
-  const animatedReaction = require("module_1652").useAnimatedReaction(VoicePanelDismissableContentTsx1, VoicePanelDismissableContentTsx2);
+  const animatedReaction = require("module_1655").useAnimatedReaction(VoicePanelDismissableContentTsx1, VoicePanelDismissableContentTsx2);
   if (tmp4[0]) {
-    const items5 = [tmp6(5076).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX];
+    const items5 = [tmp6(5139).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX];
     let items6 = items5;
   } else {
     items6 = [];

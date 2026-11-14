@@ -1,10 +1,10 @@
-// === Module 13533: useConjureProjectEventLine ===
+// === Module 13636: useConjureProjectEventLine ===
 
-// Module 13533 (useConjureProjectEventLine)
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12351 */;
+// Module 13636 (useConjureProjectEventLine)
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12446 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import UserStore from "UserStore" /* 1385 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
@@ -48,12 +48,19 @@ export default function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
     return tmp2;
   }, items4);
   if (stateFromStores1 == null) {
+    let guild_name = null;
+    if ("app_removed" === actor_user_id.type) {
+      guild_name = actor_user_id.guild_name;
+    }
+    stateFromStores1 = guild_name;
+  }
+  if (stateFromStores1 == null) {
     const intl = tmp2(tmp3[7]).intl;
     stateFromStores1 = intl.string(tmp6(tmp3[8]).R1tPlP);
   }
-  let tmp9 = null;
+  let tmp10 = null;
   if (null != stateFromStores) {
-    tmp9 = null;
+    tmp10 = null;
     if (null != name) {
       const obj4 = {
         user: name,
@@ -61,59 +68,59 @@ export default function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
               return closure_1(stateFromStores.id, name, arg1);
             }
       };
-      tmp9 = obj4;
+      tmp10 = obj4;
     }
   }
   const type = actor_user_id.type;
   if ("app_removed" === type) {
-    if (null == tmp9) {
+    if (null == tmp10) {
       const intl11 = tmp2(tmp3[7]).intl;
       const obj5 = { app: tmp7, server: stateFromStores1 };
       let formatResult = intl11.format(tmp6(tmp3[8]).Lwsrhg, obj5);
     } else {
       const intl10 = tmp2(tmp3[7]).intl;
       const obj6 = { app: tmp7, server: stateFromStores1 };
-      const merged = Object.assign(tmp9);
+      const merged = Object.assign(tmp10);
       formatResult = intl10.format(tmp6(tmp3[8]).qqePfT, obj6);
     }
     return formatResult;
   } else if ("bot_removed" === type) {
-    if (null == tmp9) {
+    if (null == tmp10) {
       const intl9 = tmp2(tmp3[7]).intl;
       const obj7 = { app: tmp7, server: stateFromStores1 };
       let formatResult1 = intl9.format(tmp6(tmp3[8]).mT7EQG, obj7);
     } else {
       const intl8 = tmp2(tmp3[7]).intl;
       const obj8 = { app: tmp7, server: stateFromStores1 };
-      const merged1 = Object.assign(tmp9);
+      const merged1 = Object.assign(tmp10);
       formatResult1 = intl8.format(tmp6(tmp3[8])["lA/crI"], obj8);
     }
     return formatResult1;
   } else if ("preview_bot_removed" === type) {
-    if (null == tmp9) {
+    if (null == tmp10) {
       const intl7 = tmp2(tmp3[7]).intl;
       const obj9 = { app: tmp7, server: stateFromStores1 };
       let formatResult2 = intl7.format(tmp6(tmp3[8])["4LVIeo"], obj9);
     } else {
       const intl6 = tmp2(tmp3[7]).intl;
       const obj10 = { app: tmp7, server: stateFromStores1 };
-      const merged2 = Object.assign(tmp9);
+      const merged2 = Object.assign(tmp10);
       formatResult2 = intl6.format(tmp6(tmp3[8]).YJOV6D, obj10);
     }
     return formatResult2;
   } else if ("app_channel_deleted" === type) {
-    let str3 = actor_user_id.channel_name;
-    if (str3 == null) {
-      str3 = "";
+    let str4 = actor_user_id.channel_name;
+    if (str4 == null) {
+      str4 = "";
     }
-    if (null == tmp9) {
+    if (null == tmp10) {
       const intl5 = tmp2(tmp3[7]).intl;
-      const obj11 = { channel: str3, server: stateFromStores1 };
+      const obj11 = { channel: str4, server: stateFromStores1 };
       let formatResult3 = intl5.format(tmp6(tmp3[8])["4VQfid"], obj11);
     } else {
       const intl4 = tmp2(tmp3[7]).intl;
-      const obj12 = { channel: str3, server: stateFromStores1 };
-      const merged3 = Object.assign(tmp9);
+      const obj12 = { channel: str4, server: stateFromStores1 };
+      const merged3 = Object.assign(tmp10);
       formatResult3 = intl4.format(tmp6(tmp3[8]).RlMIJN, obj12);
     }
     return formatResult3;

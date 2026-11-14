@@ -1,9 +1,9 @@
-// === Module 10664: UploadIcon ===
+// === Module 10733: UploadIcon ===
 
-// Module 10664 (UploadIcon)
+// Module 10733 (UploadIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod10665 from "module_10665" /* 10665 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod10734 from "module_10734" /* 10734 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function UploadIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10665, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10734, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

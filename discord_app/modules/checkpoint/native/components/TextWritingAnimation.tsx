@@ -1,8 +1,8 @@
-// === Module 14370: TextWritingAnimation ===
+// === Module 14497: TextWritingAnimation ===
 
-// Module 14370 (TextWritingAnimation)
+// Module 14497 (TextWritingAnimation)
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 let require = fn;
 const noop = fn(19);
@@ -10,15 +10,15 @@ const noop = fn(19);
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
-let closure_11 = createStyles.createStyles({ hiddenText: { opacity: 0 }, animatedText: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 } });
+const createStyles = fn(5306);
+let closure_11 = createStyles.createStyles({ hiddenText: { opacity: 0 }, animatedText: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, unrevealedText: { color: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/TextWritingAnimation.tsx");
 
 export default function TextWritingAnimation(isStepHeading) {
   ({ style, textStyle, text } = isStepHeading);
   require = text;
-  ({ variant, adjustsFontSizeToFit, lineClamp, delay } = isStepHeading);
+  ({ accessibilityLabel, variant, adjustsFontSizeToFit, lineClamp, delay } = isStepHeading);
   if (delay === undefined) {
     delay = 0;
   }
@@ -32,8 +32,8 @@ export default function TextWritingAnimation(isStepHeading) {
   const tmp4 = closure_4(delay(stateFromStores[6]));
   items = [AccessibilityStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp6 = _slicedToArray(closure_6(0), 2);
-  _slicedToArray = tmp6[1];
+  const obj = require("initialize");
+  [tmp7, c3] = closure_6(0);
   const items1 = [delay, stateFromStores, text];
   closure_5(() => {
     if (!handleAnimationFrame) {
@@ -42,7 +42,7 @@ export default function TextWritingAnimation(isStepHeading) {
       let _requestAnimationFrame = requestAnimationFrame;
       handleAnimationFrame = function handleAnimationFrame() {
         const bound = Math.max(Math.min((Date.now() - closure_0) / 400, 1), 0);
-        closure_3(Math.floor(bound * text.length));
+        c3(Math.floor(bound * text.length));
         if (bound < 1) {
           const _requestAnimationFrame = requestAnimationFrame;
           closure_1 = requestAnimationFrame(handleAnimationFrame);
@@ -54,27 +54,37 @@ export default function TextWritingAnimation(isStepHeading) {
   }, items1);
   if (stateFromStores) {
     const obj2 = { style, children: null };
-    const obj3 = { isStepHeading: flag, style: textStyle, variant, adjustsFontSizeToFit, lineClamp, children: text };
+    const obj3 = { isStepHeading: flag, accessibilityLabel, style: textStyle, variant, adjustsFontSizeToFit, lineClamp, children: text };
     obj2.children = closure_9(tmp2(tmp3[8]), obj3);
-    let tmp8Result = closure_9(View, obj2);
+    let tmp9Result = closure_9(View, obj2);
   } else {
-    let tmp10;
+    let tmp11;
     if (flag) {
-      tmp10 = tmp4;
+      tmp11 = tmp4;
     }
-    const obj4 = { ref: tmp10, accessible: flag, accessibilityRole: null, accessibilityLabel: null, style: null, children: null };
+    const obj4 = { ref: tmp11, accessible: flag, accessibilityRole: null, accessibilityLabel: null, style: null, children: null };
     let str;
     if (flag) {
       str = "header";
     }
     obj4.accessibilityRole = str;
-    let tmp11;
+    let tmp12;
     if (flag) {
-      tmp11 = text;
+      let tmp14 = accessibilityLabel;
+      if (accessibilityLabel == null) {
+        tmp14 = text;
+      }
+      tmp12 = tmp14;
     }
-    obj4.accessibilityLabel = tmp11;
+    obj4.accessibilityLabel = tmp12;
     obj4.style = style;
-    const obj5 = { accessible: !flag, accessibilityElementsHidden: flag, importantForAccessibility: null, style: null, variant: null, adjustsFontSizeToFit: null, lineClamp: null, children: null };
+    const obj5 = { accessible: !flag, accessibilityLabel: null, accessibilityElementsHidden: null, importantForAccessibility: null, style: null, variant: null, adjustsFontSizeToFit: null, lineClamp: null, children: null };
+    let tmp18;
+    if (!flag) {
+      tmp18 = accessibilityLabel;
+    }
+    obj5.accessibilityLabel = tmp18;
+    obj5.accessibilityElementsHidden = flag;
     let str2;
     if (flag) {
       str2 = "no-hide-descendants";
@@ -93,14 +103,21 @@ export default function TextWritingAnimation(isStepHeading) {
     obj6.variant = variant;
     obj6.adjustsFontSizeToFit = adjustsFontSizeToFit;
     obj6.lineClamp = lineClamp;
-    const tmp14 = !flag;
+    const tmp17 = !flag;
     const tmp2Result = tmp2(tmp3[8]);
-    obj6.children = text.substring(0, tmp6[0]);
-    items3[1] = closure_9(tmp2(tmp3[8]), obj6);
+    const items5 = [text.substring(0, tmp7), ];
+    const obj7 = { variant, style: null, children: null };
+    const items6 = [textStyle, tmp.unrevealedText];
+    obj7.style = items6;
+    const tmp2Result3 = tmp2(tmp3[8]);
+    obj7.children = text.substring(tmp7);
+    items5[1] = closure_9(tmp2(tmp3[8]), obj7);
+    obj6.children = items5;
+    items3[1] = closure_10(tmp2Result3, obj6);
     obj4.children = items3;
-    tmp8Result = closure_10(View, obj4);
-    const tmp2Result2 = tmp2(tmp3[8]);
+    tmp9Result = closure_10(View, obj4);
+    const tmp2Result4 = tmp2(tmp3[8]);
   }
-  return tmp8Result;
+  return tmp9Result;
 };
 export const DURATION = 400;

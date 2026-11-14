@@ -1,8 +1,8 @@
-// === Module 14453: NavigationTTIDefinition ===
+// === Module 14565: NavigationTTIDefinition ===
 
-// Module 14453 (NavigationTTIDefinition)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import AnalyticsSchema from "AnalyticsSchema" /* 1346 */;
+// Module 14565 (NavigationTTIDefinition)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
+import AnalyticsSchema from "AnalyticsSchema" /* 1349 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationTTIDefinition.tsx");

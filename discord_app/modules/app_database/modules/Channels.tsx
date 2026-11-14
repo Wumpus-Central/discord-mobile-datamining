@@ -1,10 +1,10 @@
-// === Module 8687: Channels ===
+// === Module 8754: Channels ===
 
-// Module 8687 (Channels)
-import ChannelRecord from "ChannelRecord" /* 5096 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 5121 */;
+// Module 8754 (Channels)
+import ChannelRecord from "ChannelRecord" /* 5159 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5184 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = ChannelRecord.createChannelRecordFromServer;

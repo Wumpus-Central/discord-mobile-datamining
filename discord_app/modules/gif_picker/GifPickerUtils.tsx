@@ -1,6 +1,6 @@
-// === Module 11277: GifPickerUtils ===
+// === Module 11344: GifPickerUtils ===
 
-// Module 11277 (GifPickerUtils)
+// Module 11344 (GifPickerUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gif_picker/GifPickerUtils.tsx");

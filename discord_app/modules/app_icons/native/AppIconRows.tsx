@@ -1,17 +1,17 @@
-// === Module 18038: AppIconRows ===
+// === Module 18158: AppIconRows ===
 
-// Module 18038 (AppIconRows)
+// Module 18158 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
-import AppIconTypes from "AppIconTypes" /* 5269 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5271 */;
-import AppIconUtils from "AppIconUtils" /* 15200 */;
-import AppIconRowDefault from "AppIconRow" /* 18039 */;
-import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 18040 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
+import AppIconTypes from "AppIconTypes" /* 5332 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5334 */;
+import AppIconUtils from "AppIconUtils" /* 15314 */;
+import AppIconRowDefault from "AppIconRow" /* 18159 */;
+import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 18160 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function BackwardsCompatibleAppIconRows(arg0) {
@@ -44,7 +44,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_8(merged(7680).TableRowGroup, obj2);
+    obj.children = closure_8(merged(7746).TableRowGroup, obj2);
     return closure_8(View, obj);
   }
 }
@@ -52,7 +52,7 @@ const View = fn(17).View;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_11 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");

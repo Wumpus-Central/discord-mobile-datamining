@@ -1,6 +1,6 @@
-// === Module 5886: ButtonEllipsis ===
+// === Module 5949: ButtonEllipsis ===
 
-// Module 5886 (ButtonEllipsis)
+// Module 5949 (ButtonEllipsis)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,10 +13,10 @@ function EllipsisCircle(offset) {
   let obj = require("ButtonHooks");
   const tmp = sharedValue1;
   const tmp2 = closure_6(size, offset, require("ButtonHooks").useForegroundColor(variant));
-  const sharedValue = require("module_1652").useSharedValue(0.4);
-  const obj2 = require("module_1652");
-  sharedValue1 = require("module_1652").useSharedValue(0.75);
-  const obj3 = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(0.4);
+  const obj2 = require("module_1655");
+  sharedValue1 = require("module_1655").useSharedValue(0.75);
+  const obj3 = require("module_1655");
   const mountLayoutEffect = require("useMountEffect").useMountLayoutEffect(() => {
     if (typeof withEllipsisAnimation === "function") {
       const result = c0 * (require / 3);
@@ -55,19 +55,19 @@ function EllipsisCircle(offset) {
   ButtonEllipsisNativeTsx2.__closure = items1;
   ButtonEllipsisNativeTsx2.__workletHash = 14645917185224;
   ButtonEllipsisNativeTsx2.__initData = tmp6;
-  const animatedStyle = require("module_1652").useAnimatedStyle(ButtonEllipsisNativeTsx2);
+  const animatedStyle = require("module_1655").useAnimatedStyle(ButtonEllipsisNativeTsx2);
   const obj6 = { style: null };
   const items2 = [tmp2.circle, animatedStyle];
   obj6.style = items2;
-  return closure_4(require("module_1652").View, obj6);
+  return closure_4(require("module_1655").View, obj6);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = { duration: 500, easing: null };
-const Easing = fn(1652).Easing;
-obj.easing = Easing.inOut(fn(1652).Easing.quad);
-const createStyles = fn(5243);
+const Easing = fn(1655).Easing;
+obj.easing = Easing.inOut(fn(1655).Easing.quad);
+const createStyles = fn(5306);
 let closure_6 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   if ("lg" === arg0) {
     let num = 4;
@@ -94,7 +94,7 @@ let closure_6 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   circle.backgroundColor = backgroundColor;
   return { circle };
 });
-let items = [{ code: "(function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){let[ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING]=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));})" }, 500, fn(1652).withDelay, fn(1652).withRepeat, fn(5485).withTiming, obj];
+let items = [{ code: "(function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){let[ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING]=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));})" }, 500, fn(1655).withDelay, fn(1655).withRepeat, fn(5548).withTiming, obj];
 let closure_129_0;
 let closure_129_1;
 let closure_129_2;

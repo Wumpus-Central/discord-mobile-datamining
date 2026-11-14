@@ -1,17 +1,17 @@
-// === Module 15388: OrbCheckoutModalContext ===
+// === Module 15502: OrbCheckoutModalContext ===
 
-// Module 15388 (OrbCheckoutModalContext)
+// Module 15502 (OrbCheckoutModalContext)
 import jsxProd from "jsxProd" /* 21 */;
-import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7193 */;
-import OrbCheckoutHooks from "OrbCheckoutHooks" /* 15389 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7256 */;
+import OrbCheckoutHooks from "OrbCheckoutHooks" /* 15503 */;
 import noop from "module_19" /* 19 */;
-import OrderRecord from "OrderRecord" /* 9526 */;
-import v1 from "v1" /* 1266 */;
+import OrderRecord from "OrderRecord" /* 9593 */;
+import v1 from "v1" /* 1269 */;
 import size from "module_2" /* 2 */;
 
 ({ useContext: c2, useMemo: c3 } = noop);
 const jsx = jsxProd.jsx;
-let obj = { skuId: "123", skuProductLine: null, skuApplicationId: "r", loadId: "PX_8", analyticsLocations: null, analyticsSourceLocation: null, isRedeeming: null, isCreatingOrder: null, orbRedemptionError: false, orbCheckoutErrorMessage: null, orbProductContext: true, orbChargeAmount: null, isOrdersCheckout: 500, onRedeemVirtualCurrency: null };
+let obj = { skuId: "123", skuProductLine: null, skuApplicationId: "r", loadId: "Promise", analyticsLocations: null, analyticsSourceLocation: null, isRedeeming: null, isCreatingOrder: null, orbRedemptionError: false, orbCheckoutErrorMessage: null, orbProductContext: true, orbChargeAmount: null, isOrdersCheckout: 500, onRedeemVirtualCurrency: null };
 obj.loadId = v1.v4();
 obj.analyticsLocations = [];
 obj.onRedeemVirtualCurrency = function onRedeemVirtualCurrency() {

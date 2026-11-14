@@ -1,7 +1,7 @@
-// === Module 18882: WaterwheelsDiscoverAnalyticsSession ===
+// === Module 19012: WaterwheelsDiscoverAnalyticsSession ===
 
-// Module 18882 (WaterwheelsDiscoverAnalyticsSession)
-import v1 from "v1" /* 1266 */;
+// Module 19012 (WaterwheelsDiscoverAnalyticsSession)
+import v1 from "v1" /* 1269 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -112,11 +112,11 @@ prototype["trackSeenBatch"] = function trackSeenBatch(dwellItems) {
     });
   }
 };
-prototype["trackAction"] = function trackAction(dependencyMap, discoverActionParameters, arg2) {
+prototype["trackAction"] = function trackAction(dependencyMap, discoverActionParameters) {
   const self = this;
   const parameters = discoverActionParameters;
-  let flag = arg2;
-  if (arg2 === undefined) {
+  let flag = identity;
+  if (identity === undefined) {
     flag = false;
   }
   c3 = undefined;

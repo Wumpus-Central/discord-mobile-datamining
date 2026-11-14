@@ -1,6 +1,6 @@
-// === Module 16037: rateLimit ===
+// === Module 16158: rateLimit ===
 
-// Module 16037 (rateLimit)
+// Module 16158 (rateLimit)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/rateLimit.tsx");

@@ -1,6 +1,6 @@
-// === Module 11008: InAppNotificationContext ===
+// === Module 11077: InAppNotificationContext ===
 
-// Module 11008 (InAppNotificationContext)
+// Module 11077 (InAppNotificationContext)
 import noop from "module_19" /* 19 */;
 
 let context = noop.createContext(undefined);

@@ -1,22 +1,22 @@
-// === Module 16870: conjureAppPictureInPictureFrames ===
+// === Module 16993: conjureAppPictureInPictureFrames ===
 
-// Module 16870 (conjureAppPictureInPictureFrames)
+// Module 16993 (conjureAppPictureInPictureFrames)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import _modDef4079 from "module_4079" /* 4079 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 7275 */;
-import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 7284 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 12647 */;
-import closeFrameDefault from "closeFrame" /* 15035 */;
-import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 16866 */;
-import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 16869 */;
-import isLeftBuilderPreviewFrameDefault from "isLeftBuilderPreviewFrame" /* 16871 */;
-import ApplicationStore from "ApplicationStore" /* 2162 */;
-import FramesStore from "FramesStore" /* 6956 */;
+import _modDef4131 from "module_4131" /* 4131 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 7339 */;
+import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 7348 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 12743 */;
+import closeFrameDefault from "closeFrame" /* 15149 */;
+import conjureBackgroundFrameRules from "conjureBackgroundFrameRules" /* 16989 */;
+import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 16992 */;
+import isLeftBuilderPreviewFrameDefault from "isLeftBuilderPreviewFrame" /* 16994 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import FramesStore from "FramesStore" /* 7019 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15854 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15974 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 
 require = fn;
 function canFloat(id) {
@@ -90,12 +90,12 @@ function closeToMakeRoom(frameId) {
     const obj = { text: null };
     const intl = util.intl;
     const obj2 = { appName: tmp3 };
-    obj.text = intl.formatToPlainString(_modDef4079.jmMirO, obj2);
+    obj.text = intl.formatToPlainString(_modDef4131.jmMirO, obj2);
     ToastActionCreatorsDefault.open("CONJURE_APP_PIP_CLOSED_TO_MAKE_ROOM", obj);
     const tmp7Result = ToastActionCreatorsDefault;
   }
 }
-const FramesConstants = fn(6957);
+const FramesConstants = fn(7020);
 ({ asLaunched: closure_6, FrameLayoutModes: metroImportDefault } = FramesConstants);
 const items = [FramesStore, UnsyncedUserSettingsStore, ApplicationStore, ConjureProjectStore, ConjureBuilderPreviewStore];
 const size = fn(2);

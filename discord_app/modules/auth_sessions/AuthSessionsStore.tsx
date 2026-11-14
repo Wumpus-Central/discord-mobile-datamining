@@ -1,6 +1,6 @@
-// === Module 17188: AuthSessionsStore ===
+// === Module 17311: AuthSessionsStore ===
 
-// Module 17188 (AuthSessionsStore)
+// Module 17311 (AuthSessionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

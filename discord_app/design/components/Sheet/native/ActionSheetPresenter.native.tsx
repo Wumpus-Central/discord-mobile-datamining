@@ -1,10 +1,10 @@
-// === Module 16320: ActionSheetPresenter ===
+// === Module 16445: ActionSheetPresenter ===
 
-// Module 16320 (ActionSheetPresenter)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
+// Module 16445 (ActionSheetPresenter)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5490 */;
+import ActionSheetStore from "ActionSheetStore" /* 5553 */;
 
 const require = fn;
 const StyleSheet = fn(17).StyleSheet;
@@ -26,8 +26,8 @@ function TrackedWrapperInner(sheetKey) {
   const callback1 = registerDismissHandler.useCallback(() => {
     ref2.current();
   }, []);
-  const obj = { type: sheetKey(1260).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
-  transitionState(6275)(obj);
+  const obj = { type: sheetKey(1264).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
+  transitionState(6338)(obj);
   const imperativeHandle = registerDismissHandler.useImperativeHandle(ref, () => ({
     componentDidEnter() {
       closure_1_2("visible");
@@ -56,9 +56,9 @@ function TrackedWrapperInner(sheetKey) {
     callback2();
     return true;
   }, items2);
-  transitionState(6269)(callback3);
-  const tmp5 = transitionState(6275);
-  return jsx(transitionState(5834).Provider, { value: memo, children: jsx(sheetKey(6264).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) });
+  transitionState(6332)(callback3);
+  const tmp5 = transitionState(6338);
+  return jsx(transitionState(5897).Provider, { value: memo, children: jsx(sheetKey(6327).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) });
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetPresenter.native.tsx");
@@ -74,5 +74,5 @@ export function ActionSheetPresenter(appEntryKey) {
   const found = stateFromStoresArray.filter((appEntryKey) => appEntryKey.appEntryKey === appEntryKey);
   const mapped = found.map((content) => <TrackedWrapperInner key={content.key} sheetKey={content.key} content={content.content} impressionName={content.impressionName} impressionProperties={content.impressionProperties} zIndex={content.zIndex} />);
   const obj = appEntryKey(504);
-  return jsx(appEntryKey(14726).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(6212).TransitionGroupOverlayView, children: mapped });
+  return jsx(appEntryKey(14839).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(6275).TransitionGroupOverlayView, children: mapped });
 }

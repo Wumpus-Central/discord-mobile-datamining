@@ -1,8 +1,8 @@
-// === Module 17053: SpinAnimation ===
+// === Module 17176: SpinAnimation ===
 
-// Module 17053 (SpinAnimation)
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
+// Module 17176 (SpinAnimation)
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,8 +16,8 @@ let result = size.fileFinishedImporting("modules/user_profile/native/SpinAnimati
 export default function SpinAnimation(children) {
   const shouldAnimate = children.shouldAnimate;
   _require = shouldAnimate;
-  const sharedValue = require("module_1652").useSharedValue(0);
-  let obj = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(0);
+  let obj = require("module_1655");
   items = [closure_5, sharedValue];
   _require = undefined;
   [tmp3, tmp4] = items;
@@ -36,20 +36,20 @@ export default function SpinAnimation(children) {
   SpinAnimationTsx1.__workletHash = 17162751475447;
   SpinAnimationTsx1.__initData = tmp3;
   const items2 = [sharedValue, shouldAnimate];
-  const style = require("module_1652").useAnimatedStyle(SpinAnimationTsx1);
+  const style = require("module_1655").useAnimatedStyle(SpinAnimationTsx1);
   const effect = noop.useEffect(() => {
     if (c0) {
-      const obj2 = _mod1652;
+      const obj2 = _mod1655;
       const obj4 = { duration: 3000, easing: null };
-      const Easing = _mod1652.Easing;
+      const Easing = _mod1655.Easing;
       obj4.easing = Easing.bezier(0.25, 0.1, 0.25, 1);
       const result = sharedValue.set(obj2.withRepeat(timing_timing.withTiming(360, obj4), -1));
       const fn = () => c0(dependencyMap[2]).cancelAnimation(sharedValue);
     } else {
-      _mod1652.cancelAnimation(sharedValue);
+      _mod1655.cancelAnimation(sharedValue);
       const result1 = sharedValue.set(0);
     }
     return fn;
   }, items2);
-  return jsx(sharedValue(1652).View, { style, children: children.children });
+  return jsx(sharedValue(1655).View, { style, children: children.children });
 };

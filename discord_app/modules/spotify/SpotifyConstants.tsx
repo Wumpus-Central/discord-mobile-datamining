@@ -1,7 +1,7 @@
-// === Module 7227: SpotifyConstants ===
+// === Module 7291: SpotifyConstants ===
 
-// Module 7227 (SpotifyConstants)
-import Platforms from "Platforms" /* 7024 */;
+// Module 7291 (SpotifyConstants)
+import Platforms from "Platforms" /* 7087 */;
 
 const spotify = "spotify";
 let c1 = "spotify:";
@@ -57,7 +57,7 @@ const obj2 = {
   APP_STORE: null,
   IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8"
 };
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let str = "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
 if (PlatformUtils.isAndroid()) {
   str = "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US";

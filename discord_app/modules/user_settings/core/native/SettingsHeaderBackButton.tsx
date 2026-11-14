@@ -1,16 +1,16 @@
-// === Module 17075: SettingsHeaderBackButton ===
+// === Module 17198: SettingsHeaderBackButton ===
 
-// Module 17075 (SettingsHeaderBackButton)
+// Module 17198 (SettingsHeaderBackButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Pressables from "Pressables" /* 7364 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 17076 */;
+import Pressables from "Pressables" /* 7428 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 17199 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { backIcon: { borderRadius: nativeDefault.radii.round, marginTop: nativeDefault.space.PX_8 } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

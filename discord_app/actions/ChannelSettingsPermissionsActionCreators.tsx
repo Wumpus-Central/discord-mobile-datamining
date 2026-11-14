@@ -1,9 +1,9 @@
-// === Module 8067: ChannelSettingsPermissionsActionCreators ===
+// === Module 8132: ChannelSettingsPermissionsActionCreators ===
 
-// Module 8067 (ChannelSettingsPermissionsActionCreators)
+// Module 8132 (ChannelSettingsPermissionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import DefaultChannelThresholdUtils from "DefaultChannelThresholdUtils" /* 8068 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
+import DefaultChannelThresholdUtils from "DefaultChannelThresholdUtils" /* 8133 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

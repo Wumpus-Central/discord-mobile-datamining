@@ -1,6 +1,6 @@
-// === Module 18374: ? ===
+// === Module 18497: ? ===
 
-// Module 18374
+// Module 18497
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs_arcade/shop_header.png.js");

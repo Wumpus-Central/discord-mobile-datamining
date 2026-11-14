@@ -1,10 +1,10 @@
-// === Module 18269: BuildOverridesSetting ===
+// === Module 18390: BuildOverridesSetting ===
 
-// Module 18269 (BuildOverridesSetting)
-import SettingsConstants from "SettingsConstants" /* 9135 */;
-import RefreshIcon from "RefreshIcon" /* 13200 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 17249 */;
-import SettingBuilders from "SettingBuilders" /* 12311 */;
+// Module 18390 (BuildOverridesSetting)
+import SettingsConstants from "SettingsConstants" /* 9202 */;
+import RefreshIcon from "RefreshIcon" /* 13308 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 17372 */;
+import SettingBuilders from "SettingBuilders" /* 12406 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

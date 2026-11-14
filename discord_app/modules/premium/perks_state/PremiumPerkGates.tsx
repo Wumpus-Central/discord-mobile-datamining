@@ -1,13 +1,13 @@
-// === Module 10014: PremiumPerkGates ===
+// === Module 10081: PremiumPerkGates ===
 
-// Module 10014 (PremiumPerkGates)
-import PerksStateUtils from "PerksStateUtils" /* 1391 */;
-import user2 from "user" /* 1398 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 2107 */;
-import FileSizeUtils from "FileSizeUtils" /* 6699 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8780 */;
-import ProductCatalog from "ProductCatalog" /* 10015 */;
-import PremiumConstants from "PremiumConstants" /* 1387 */;
+// Module 10081 (PremiumPerkGates)
+import PerksStateUtils from "PerksStateUtils" /* 1394 */;
+import user2 from "user" /* 1401 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 2110 */;
+import FileSizeUtils from "FileSizeUtils" /* 6762 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 8847 */;
+import ProductCatalog from "ProductCatalog" /* 10082 */;
+import PremiumConstants from "PremiumConstants" /* 1390 */;
 import size from "module_2" /* 2 */;
 
 ({ PremiumTypes: c2, PremiumUserLimits: c3 } = PremiumConstants);

@@ -1,8 +1,8 @@
-// === Module 20001: ManagerRegistry ===
+// === Module 20159: ManagerRegistry ===
 
-// Module 20001 (ManagerRegistry)
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import ManagerRegistryShared from "ManagerRegistryShared" /* 20738 */;
+// Module 20159 (ManagerRegistry)
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import ManagerRegistryShared from "ManagerRegistryShared" /* 20892 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -69,6 +69,7 @@ const obj = {
   CommunicationDisabledManager: null,
   ConjureBackgroundFramesManager: null,
   ConjureProjectReconnectManager: null,
+  ConjurePublishEvalManager: null,
   ConjureTurnNotificationManager: null,
   ContactSyncLifecycleManager: null,
   CustomStatusManager: null,
@@ -188,7 +189,8 @@ const obj = {
   SentryExperimentFeatureFlagManager: null,
   PlayableProgressManager: null,
   QuestProgressManager: null,
-  AccountLinkManagerNative: null
+  AccountLinkManagerNative: null,
+  AccountLinkingCampaignManager: null
 };
 obj.ATTManager = {
   actions: PlatformUtils.isIOS() ? ["POST_CONNECTION_OPEN", "APP_STATE_UPDATE", "PUSH_NOTIFICATION_AUTHORIZATION_STATUS_UPDATE"] : ["POST_CONNECTION_OPEN"],
@@ -288,6 +290,12 @@ obj.ConjureProjectReconnectManager = {
   actions: ["POST_CONNECTION_OPEN"],
   inlineRequire() {
     return require("ConjureProjectReconnectManager").default;
+  }
+};
+obj.ConjurePublishEvalManager = {
+  actions: ["POST_CONNECTION_OPEN", "CONJURE_PUBLISH_EVAL_PENDING"],
+  inlineRequire() {
+    return require("ConjurePublishEvalManager").default;
   }
 };
 obj.ConjureTurnNotificationManager = {
@@ -1084,6 +1092,13 @@ obj.AccountLinkManagerNative = {
     return require("AccountLinkManagerNative").default;
   },
   loadRightBeforeConnectionOpen: true
+};
+obj.AccountLinkingCampaignManager = {
+  actions: ["LOGOUT", "POST_CONNECTION_OPEN"],
+  inlineRequire() {
+    return require("AccountLinkingCampaignManager").default;
+  },
+  neverLoadBeforeConnectionOpen: true
 };
 ManagerRegistryShared.initialize(obj);
 const result = size.fileFinishedImporting("modules/app_startup/ManagerRegistry.native.tsx");

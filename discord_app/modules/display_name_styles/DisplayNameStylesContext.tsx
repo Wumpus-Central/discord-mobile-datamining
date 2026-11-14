@@ -1,6 +1,6 @@
-// === Module 6689: DisplayNameStylesContext ===
+// === Module 6752: DisplayNameStylesContext ===
 
-// Module 6689 (DisplayNameStylesContext)
+// Module 6752 (DisplayNameStylesContext)
 import _mod19 from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 

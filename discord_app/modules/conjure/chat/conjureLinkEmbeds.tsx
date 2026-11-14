@@ -1,7 +1,7 @@
-// === Module 13689: conjureLinkEmbeds ===
+// === Module 13794: conjureLinkEmbeds ===
 
-// Module 13689 (conjureLinkEmbeds)
-import URLUtilsDefault from "URLUtils" /* 1378 */;
+// Module 13794 (conjureLinkEmbeds)
+import URLUtilsDefault from "URLUtils" /* 1381 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

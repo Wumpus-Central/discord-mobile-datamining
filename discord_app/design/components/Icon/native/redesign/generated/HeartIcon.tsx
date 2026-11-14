@@ -1,9 +1,9 @@
-// === Module 9389: HeartIcon ===
+// === Module 9458: HeartIcon ===
 
-// Module 9389 (HeartIcon)
+// Module 9458 (HeartIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod9390 from "module_9390" /* 9390 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod9459 from "module_9459" /* 9459 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function HeartIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9390, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9459, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,7 +1,7 @@
-// === Module 6838: VoicePanelStore ===
+// === Module 6901: VoicePanelStore ===
 
-// Module 6838 (VoicePanelStore)
-import identity from "module_1254" /* 1254 */;
+// Module 6901 (VoicePanelStore)
+import identity from "module_1258" /* 1258 */;
 import size from "module_2" /* 2 */;
 
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
@@ -42,7 +42,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     closure_0 = arg0;
     const channels = dependencyMap().channels;
     if (!channels.has(arg0)) {
-      closure_0(1259).batchUpdates(() => {
+      closure_0(1263).batchUpdates(() => {
         closure_0((channels) => {
           const obj = {};
           const merged = Object.assign(channels);
@@ -54,11 +54,11 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
           return obj;
         });
       });
-      let obj = closure_0(1259);
+      let obj = closure_0(1263);
     }
   };
   obj.closeChannel = function closeChannel(channelId) {
-    channelId(1259).batchUpdates(() => {
+    channelId(1263).batchUpdates(() => {
       channelId((arg0) => {
         ({ channels, voicePanelsFullscreen, voicePanelsOpened } = arg0);
         if (!channels.has(channelId)) {
@@ -102,7 +102,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     return channels.has(arg0);
   };
   obj.setIsActivityFocused = function setIsActivityFocused(connectedValue) {
-    connectedValue(1259).batchUpdates(() => {
+    connectedValue(1263).batchUpdates(() => {
       connectedValue((isActivityFocused) => {
         let tmp2 = isActivityFocused;
         if (isActivityFocused.isActivityFocused !== connectedValue) {
@@ -117,7 +117,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   obj.setChannelPanelFullscreen = function setChannelPanelFullscreen(c0, lockEnabled) {
     dependencyMap = lockEnabled;
-    c0(1259).batchUpdates(() => {
+    c0(1263).batchUpdates(() => {
       c0((voicePanelsFullscreen) => {
         const set = new Set(voicePanelsFullscreen.voicePanelsFullscreen);
         const hasItem = set.has(closure_1_0);
@@ -141,7 +141,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   obj.setChannelPanelOpen = function setChannelPanelOpen(c0, arg1) {
     dependencyMap = arg1;
-    c0(1259).batchUpdates(() => {
+    c0(1263).batchUpdates(() => {
       c0((channels) => {
         channels = channels.channels;
         if (channels.has(closure_1_0)) {
@@ -175,7 +175,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   obj.setChannelPanelPIP = function setChannelPanelPIP(c0, arg1) {
     dependencyMap = arg1;
-    c0(1259).batchUpdates(() => {
+    c0(1263).batchUpdates(() => {
       c0((voicePanelsPIP) => {
         const set = new Set(voicePanelsPIP.voicePanelsPIP);
         const hasItem = set.has(closure_1_0);
@@ -199,7 +199,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   obj.setChannelPanelWithDock = function setChannelPanelWithDock(c0, arg1) {
     dependencyMap = arg1;
-    c0(1259).batchUpdates(() => {
+    c0(1263).batchUpdates(() => {
       c0((voicePanelsWithDock) => {
         voicePanelsWithDock = voicePanelsWithDock.voicePanelsWithDock;
         if (voicePanelsWithDock.has(closure_1_0) === closure_1_1) {

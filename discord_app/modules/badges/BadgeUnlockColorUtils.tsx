@@ -1,7 +1,7 @@
-// === Module 15168: BadgeUnlockColorUtils ===
+// === Module 15281: BadgeUnlockColorUtils ===
 
-// Module 15168 (BadgeUnlockColorUtils)
-import ColorUtils from "ColorUtils" /* 5240 */;
+// Module 15281 (BadgeUnlockColorUtils)
+import ColorUtils from "ColorUtils" /* 5303 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/badges/BadgeUnlockColorUtils.tsx");
@@ -28,11 +28,4 @@ export function pickBadgeColor(arr) {
     rgbToHexResult = ColorUtils.rgbToHex(found1[0], found1[1], found1[2]);
   }
   return rgbToHexResult;
-}
-export function getBadgeHaloColor(PRIMARY_800) {
-  ({ r, g, b } = ColorUtils.hexToRgb(PRIMARY_800));
-  const hexToRgbResult = ColorUtils.hexToRgb(PRIMARY_800);
-  ({ hue, saturation } = ColorUtils.rawRgbToHsl(r, g, b));
-  const rawRgbToHslResult = ColorUtils.rawRgbToHsl(r, g, b);
-  return ColorUtils.hslToHex(hue, 100 * saturation, 70);
 }

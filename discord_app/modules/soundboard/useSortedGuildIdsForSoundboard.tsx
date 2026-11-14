@@ -1,10 +1,10 @@
-// === Module 19761: useSortedGuildIdsForSoundboard ===
+// === Module 19214: useSortedGuildIdsForSoundboard ===
 
-// Module 19761 (useSortedGuildIdsForSoundboard)
+// Module 19214 (useSortedGuildIdsForSoundboard)
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import SortedGuildStore from "SortedGuildStore" /* 6893 */;
-import UserStore from "UserStore" /* 1385 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 

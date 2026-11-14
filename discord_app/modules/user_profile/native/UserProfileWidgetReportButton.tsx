@@ -1,12 +1,12 @@
-// === Module 12028: UserProfileWidgetReportButton ===
+// === Module 12095: UserProfileWidgetReportButton ===
 
-// Module 12028 (UserProfileWidgetReportButton)
+// Module 12095 (UserProfileWidgetReportButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 7356 */;
-import ContextMenu from "ContextMenu" /* 9081 */;
-import FlagIcon from "FlagIcon" /* 11261 */;
-import showReportModalForUserWidget from "showReportModalForUserWidget" /* 12029 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 7420 */;
+import ContextMenu from "ContextMenu" /* 9148 */;
+import FlagIcon from "FlagIcon" /* 11328 */;
+import showReportModalForUserWidget from "showReportModalForUserWidget" /* 12096 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

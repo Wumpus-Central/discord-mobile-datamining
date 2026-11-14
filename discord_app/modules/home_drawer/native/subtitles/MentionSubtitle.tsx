@@ -1,11 +1,11 @@
-// === Module 18945: MentionSubtitle ===
+// === Module 19099: MentionSubtitle ===
 
-// Module 18945 (MentionSubtitle)
+// Module 19099 (MentionSubtitle)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 7968 */;
-import TextIcon from "TextIcon" /* 8013 */;
-import useSubtitleStyles from "useSubtitleStyles" /* 18946 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8033 */;
+import TextIcon from "TextIcon" /* 8078 */;
+import useSubtitleStyles from "useSubtitleStyles" /* 19100 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

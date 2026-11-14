@@ -1,9 +1,9 @@
-// === Module 9349: StorefrontPromotionRecord ===
+// === Module 9416: StorefrontPromotionRecord ===
 
-// Module 9349 (StorefrontPromotionRecord)
-import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 9350 */;
+// Module 9416 (StorefrontPromotionRecord)
+import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 9417 */;
 import _slicedToArray from "module_32" /* 32 */;
-import Record from "Record" /* 1405 */;
+import Record from "Record" /* 1408 */;
 
 require = fn;
 function parseSkuIds(sku_ids) {
@@ -152,192 +152,205 @@ prototype["createFromServer"] = function createFromServer(display_name) {
   let tmp34 = null;
   if (tmp14 != display_name.progress) {
     const progress = display_name.progress;
-    const obj5 = { current: null, target: null, label: null };
+    const obj6 = { current: null, target: null, label: null };
     ({ current: obj4.current, target } = progress);
-    obj5.target = target;
-    obj5.label = progress.label;
-    tmp34 = obj5;
+    obj6.target = target;
+    obj6.label = progress.label;
+    tmp34 = obj6;
   }
   let tmp35 = null;
   if (tmp14 != display_name.tenant_metadata) {
     const tenant_metadata = display_name.tenant_metadata;
     if (tmp14 == tenant_metadata.collectibles) {
-      const obj6 = { collectibles: _Date3 };
-      tmp35 = obj6;
+      const obj7 = { collectibles: _Date3 };
+      tmp35 = obj7;
     } else {
       let collectibles = tenant_metadata.collectibles;
       const type = collectibles.type;
       let tmp36 = require;
       if (StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM === type) {
         const subtype = collectibles.subtype;
-        if (tmp36(9350).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER === subtype) {
-          const obj7 = { type: tmp36(9350).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: tmp36(9350).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
-          const obj8 = { title: collectibles.shop_home.title, description: collectibles.shop_home.description, rewardStates: null, style: null };
+        if (tmp36(9417).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER === subtype) {
+          const obj8 = { type: tmp36(9417).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: tmp36(9417).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
+          const obj9 = { title: collectibles.shop_home.title, description: collectibles.shop_home.description, rewardStates: null, style: null };
           const reward_states = collectibles.shop_home.reward_states;
-          const obj9 = { inProgress: null, earned: null, consumed: null };
-          const obj10 = { progressSteps: null };
+          const obj10 = { inProgress: null, earned: null, consumed: null };
+          const obj11 = { progressSteps: null };
           const progress_steps = reward_states.in_progress.progress_steps;
-          obj10.progressSteps = progress_steps.map((heroUrl) => ({ heroUrl: heroUrl.hero_url }));
-          obj9.inProgress = obj10;
-          const obj11 = { heroUrl: reward_states.earned.hero_url };
-          obj9.earned = obj11;
-          const obj12 = { heroUrl: reward_states.consumed.hero_url };
-          obj9.consumed = obj12;
-          obj8.rewardStates = obj9;
+          obj11.progressSteps = progress_steps.map((heroUrl) => ({ heroUrl: heroUrl.hero_url }));
+          obj10.inProgress = obj11;
+          const obj12 = { heroUrl: reward_states.earned.hero_url };
+          obj10.earned = obj12;
+          const obj13 = { heroUrl: reward_states.consumed.hero_url };
+          obj10.consumed = obj13;
+          obj9.rewardStates = obj10;
           let tmp53;
           if (tmp14 != collectibles.shop_home.style) {
-            const obj13 = { contentTheme: collectibles.shop_home.style.content_theme };
-            tmp53 = obj13;
+            const obj14 = { contentTheme: collectibles.shop_home.style.content_theme };
+            tmp53 = obj14;
           }
-          obj8.style = tmp53;
-          obj7.shopHome = obj8;
-          const obj14 = { description: collectibles.index_page.description, rewardStates: null, style: null };
+          obj9.style = tmp53;
+          obj8.shopHome = obj9;
+          const obj15 = { description: collectibles.index_page.description, rewardStates: null, style: null };
           const reward_states2 = collectibles.index_page.reward_states;
-          const obj15 = { inProgress: null, earned: null, consumed: null };
-          const obj16 = { progressSteps: null };
+          const obj16 = { inProgress: null, earned: null, consumed: null };
+          const obj17 = { progressSteps: null };
           const progress_steps1 = reward_states2.in_progress.progress_steps;
-          obj16.progressSteps = progress_steps1.map((heroUrl) => ({ heroUrl: heroUrl.hero_url }));
-          obj15.inProgress = obj16;
-          const obj17 = { heroUrl: reward_states2.earned.hero_url };
-          obj15.earned = obj17;
-          const obj18 = { heroUrl: reward_states2.consumed.hero_url };
-          obj15.consumed = obj18;
-          obj14.rewardStates = obj15;
+          obj17.progressSteps = progress_steps1.map((heroUrl) => ({ heroUrl: heroUrl.hero_url }));
+          obj16.inProgress = obj17;
+          const obj18 = { heroUrl: reward_states2.earned.hero_url };
+          obj16.earned = obj18;
+          const obj19 = { heroUrl: reward_states2.consumed.hero_url };
+          obj16.consumed = obj19;
+          obj15.rewardStates = obj16;
           tmp14 = tmp14 != collectibles.index_page.style;
           tmp36 = undefined;
           if (tmp14) {
-            const obj19 = { contentTheme: collectibles.index_page.style.content_theme };
-            tmp36 = obj19;
+            const obj20 = { contentTheme: collectibles.index_page.style.content_theme };
+            tmp36 = obj20;
           }
-          obj14.style = tmp36;
-          obj7.indexPage = obj14;
+          obj15.style = tmp36;
+          obj8.indexPage = obj15;
           collectibles = parseCollectiblesShared(collectibles.shared);
-          obj7.shared = collectibles;
-        } else if (tmp36(9350).StorefrontPromotionCollectAndClaimSubtype.BASIC === subtype) {
-          const obj20 = { type: tmp36(9350).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: tmp36(9350).StorefrontPromotionCollectAndClaimSubtype.BASIC, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
-          const obj21 = { title: collectibles.shop_home.title, description: collectibles.shop_home.description, style: null };
+          obj8.shared = collectibles;
+        } else if (tmp36(9417).StorefrontPromotionCollectAndClaimSubtype.BASIC === subtype) {
+          const obj21 = { type: tmp36(9417).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: tmp36(9417).StorefrontPromotionCollectAndClaimSubtype.BASIC, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
+          const obj22 = { title: collectibles.shop_home.title, description: collectibles.shop_home.description, style: null };
           let tmp50;
           if (tmp14 != collectibles.shop_home.style) {
-            const obj22 = { contentTheme: collectibles.shop_home.style.content_theme };
-            tmp50 = obj22;
+            const obj23 = { contentTheme: collectibles.shop_home.style.content_theme };
+            tmp50 = obj23;
           }
-          obj21.style = tmp50;
-          obj20.shopHome = obj21;
-          const obj23 = { description: collectibles.index_page.description, style: null };
+          obj22.style = tmp50;
+          obj21.shopHome = obj22;
+          const obj24 = { description: collectibles.index_page.description, style: null };
           let tmp51;
           if (tmp14 != collectibles.index_page.style) {
-            const obj24 = { contentTheme: collectibles.index_page.style.content_theme };
-            tmp51 = obj24;
+            const obj25 = { contentTheme: collectibles.index_page.style.content_theme };
+            tmp51 = obj25;
           }
-          obj23.style = tmp51;
-          obj20.indexPage = obj23;
-          obj20.shared = parseCollectiblesShared(collectibles.shared);
+          obj24.style = tmp51;
+          obj21.indexPage = obj24;
+          obj21.shared = parseCollectiblesShared(collectibles.shared);
         }
-      } else if (tmp36(9350).StorefrontPromotionCollectiblesType.TARGETED_OFFER !== type) {
-        if (tmp36(9350).StorefrontPromotionCollectiblesType.COLLECTION_SALE === type) {
-          const navigation = collectibles.navigation;
-          const obj25 = { type: tmp36(9350).StorefrontPromotionCollectiblesType.COLLECTION_SALE, collectionId: null, countdownStyle: null, showUpsellBlocks: null, navigation: null };
-          ({ collection_id: obj33.collectionId, countdown_style: obj33.countdownStyle, show_upsell_blocks } = collectibles);
-          if (show_upsell_blocks == tmp14) {
-            show_upsell_blocks = false;
+      } else if (tmp36(9417).StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
+        const reward = collectibles.reward;
+        let nagbar;
+        if (reward != tmp14) {
+          const storefront = reward.storefront;
+          if (storefront != tmp14) {
+            nagbar = storefront.nagbar;
           }
-          obj25.showUpsellBlocks = show_upsell_blocks;
-          let tab;
-          if (navigation != tmp14) {
-            tab = navigation.tab;
+        }
+        let offer_notice;
+        if (reward != tmp14) {
+          const checkout = reward.checkout;
+          if (checkout != tmp14) {
+            offer_notice = checkout.offer_notice;
           }
-          let tmp39;
-          if (tmp14 != tab) {
-            const obj26 = { tab: null };
-            const obj27 = { title: navigation.tab.title, icon: navigation.tab.icon };
-            obj26.tab = obj27;
-            tmp39 = obj26;
+        }
+        let override_title;
+        if (reward != tmp14) {
+          const collected = reward.collected;
+          if (collected != tmp14) {
+            override_title = collected.override_title;
           }
-          obj25.navigation = tmp39;
         }
-      }
-      const reward = collectibles.reward;
-      let nagbar;
-      if (reward != tmp14) {
-        const storefront = reward.storefront;
-        if (storefront != tmp14) {
-          nagbar = storefront.nagbar;
+        let tmp44;
+        if (tmp14 != override_title) {
+          if ("" !== override_title) {
+            tmp44 = override_title;
+          }
         }
-      }
-      let offer_notice;
-      if (reward != tmp14) {
-        const checkout = reward.checkout;
-        if (checkout != tmp14) {
-          offer_notice = checkout.offer_notice;
+        let flavor;
+        if (reward != tmp14) {
+          flavor = reward.flavor;
         }
-      }
-      let override_title;
-      if (reward != tmp14) {
-        const collected = reward.collected;
-        if (collected != tmp14) {
-          override_title = collected.override_title;
-        }
-      }
-      let tmp44;
-      if (tmp14 != override_title) {
-        if ("" !== override_title) {
-          tmp44 = override_title;
-        }
-      }
-      let flavor;
-      if (reward != tmp14) {
-        flavor = reward.flavor;
-      }
-      if (tmp14 == nagbar) {
-        if (tmp14 == offer_notice) {
-          if (tmp14 == tmp44) {
-            if (tmp14 == flavor) {
-              const obj28 = { type: tmp36(9350).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
-              let obj29 = obj28;
+        if (tmp14 == nagbar) {
+          if (tmp14 == offer_notice) {
+            if (tmp14 == tmp44) {
+              if (tmp14 == flavor) {
+                const obj26 = { type: tmp36(9417).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
+                let obj27 = obj26;
+              }
             }
           }
         }
-      }
-      obj29 = { type: tmp36(9350).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
-      let tmp46;
-      if (tmp14 != nagbar) {
-        const header_text = nagbar.header_text;
-        const obj30 = { headerText: header_text, cta: null, helpCenterId: null, icon: null };
-        let tmp47;
-        if (tmp14 != nagbar.cta) {
-          const text = nagbar.cta.text;
-          const obj31 = { text };
-          tmp47 = obj31;
+        obj27 = { type: tmp36(9417).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
+        let tmp46;
+        if (tmp14 != nagbar) {
+          const header_text = nagbar.header_text;
+          const obj28 = { headerText: header_text, cta: null, helpCenterId: null, icon: null };
+          let tmp47;
+          if (tmp14 != nagbar.cta) {
+            const text = nagbar.cta.text;
+            const obj29 = { text };
+            tmp47 = obj29;
+          }
+          obj28.cta = tmp47;
+          const help_center_id = nagbar.help_center_id;
+          obj28.helpCenterId = help_center_id;
+          const icon = nagbar.icon;
+          const obj30 = { nagbar: null };
+          obj28.icon = icon;
+          obj30.nagbar = obj28;
+          tmp46 = obj30;
         }
-        obj30.cta = tmp47;
-        const help_center_id = nagbar.help_center_id;
-        obj30.helpCenterId = help_center_id;
-        const icon = nagbar.icon;
-        const obj32 = { nagbar: null };
-        obj30.icon = icon;
-        obj32.nagbar = obj30;
-        tmp46 = obj32;
+        const obj31 = { storefront: tmp46, checkout: null, collected: null, flavor: null };
+        let tmp48;
+        if (tmp14 != offer_notice) {
+          const icon2 = offer_notice.icon;
+          const obj32 = { icon: icon2, text: null };
+          const text2 = offer_notice.text;
+          const obj33 = { offerNotice: null };
+          obj32.text = text2;
+          obj33.offerNotice = obj32;
+          tmp48 = obj33;
+        }
+        obj31.checkout = tmp48;
+        let tmp49;
+        if (tmp14 != tmp44) {
+          const obj35 = { overrideTitle: tmp44 };
+          tmp49 = obj35;
+        }
+        obj31.collected = tmp49;
+        obj31.flavor = flavor;
+        obj27.reward = obj31;
+      } else if (tmp36(9417).StorefrontPromotionCollectiblesType.COLLECTION_SALE !== type) {
+        if (tmp36(9417).StorefrontPromotionCollectiblesType.COLLECTION_SEQUENCED_OFFER === type) {
+          const obj36 = { type: tmp36(9417).StorefrontPromotionCollectiblesType.COLLECTION_SEQUENCED_OFFER, collectionId: null, position: null };
+          ({ collection_id: obj34.collectionId, position: obj34.position } = collectibles);
+        }
       }
-      const obj34 = { storefront: tmp46, checkout: null, collected: null, flavor: null };
-      let tmp48;
-      if (tmp14 != offer_notice) {
-        const icon2 = offer_notice.icon;
-        const obj35 = { icon: icon2, text: null };
-        const text2 = offer_notice.text;
-        const obj69 = { offerNotice: null };
-        obj35.text = text2;
-        obj69.offerNotice = obj35;
-        tmp48 = obj69;
+      const navigation = collectibles.navigation;
+      const obj71 = { type: tmp36(9417).StorefrontPromotionCollectiblesType.COLLECTION_SALE, collectionId: null, countdownStyle: null, showCountdownCta: null, countdownPosition: null, showUpsellBlocks: null, navigation: null };
+      ({ collection_id: obj5.collectionId, countdown_style: obj5.countdownStyle, show_countdown_cta } = collectibles);
+      if (show_countdown_cta == tmp14) {
+        show_countdown_cta = true;
       }
-      obj34.checkout = tmp48;
-      let tmp49;
-      if (tmp14 != tmp44) {
-        const obj70 = { overrideTitle: tmp44 };
-        tmp49 = obj70;
+      obj71.showCountdownCta = show_countdown_cta;
+      let RIGHT = collectibles.countdown_position;
+      if (RIGHT == tmp14) {
+        RIGHT = tmp36(9418).CollectiblesPromotionCountdownPosition.RIGHT;
       }
-      obj34.collected = tmp49;
-      obj34.flavor = flavor;
-      obj29.reward = obj34;
+      obj71.countdownPosition = RIGHT;
+      let flag = collectibles.show_upsell_blocks;
+      if (flag == tmp14) {
+        flag = false;
+      }
+      obj71.showUpsellBlocks = flag;
+      let tab;
+      if (navigation != tmp14) {
+        tab = navigation.tab;
+      }
+      let tmp40;
+      if (tmp14 != tab) {
+        const obj72 = { tab: null };
+        const obj73 = { title: navigation.tab.title, icon: navigation.tab.icon };
+        obj72.tab = obj73;
+        tmp40 = obj72;
+      }
+      obj71.navigation = tmp40;
     }
   }
   if (typeof prototype === "function") {
@@ -417,6 +430,24 @@ export function getCollectiblesCollectionSale(tenantMetadata) {
   }
   let tmp3;
   if (type === StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECTION_SALE) {
+    tmp3 = collectibles;
+  }
+  return tmp3;
+}
+export function getCollectiblesCollectionSequencedOffer(tenantMetadata) {
+  let collectibles;
+  if (tenantMetadata != null) {
+    tenantMetadata = tenantMetadata.tenantMetadata;
+    if (tenantMetadata != null) {
+      collectibles = tenantMetadata.collectibles;
+    }
+  }
+  let type;
+  if (collectibles != null) {
+    type = collectibles.type;
+  }
+  let tmp3;
+  if (type === StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECTION_SEQUENCED_OFFER) {
     tmp3 = collectibles;
   }
   return tmp3;

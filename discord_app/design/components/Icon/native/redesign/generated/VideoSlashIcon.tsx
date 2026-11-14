@@ -1,9 +1,9 @@
-// === Module 15648: VideoSlashIcon ===
+// === Module 15767: VideoSlashIcon ===
 
-// Module 15648 (VideoSlashIcon)
+// Module 15767 (VideoSlashIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod15649 from "module_15649" /* 15649 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod15768 from "module_15768" /* 15768 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function VideoSlashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15649, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15768, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

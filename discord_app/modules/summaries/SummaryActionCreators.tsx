@@ -1,14 +1,14 @@
-// === Module 11931: SummaryActionCreators ===
+// === Module 11999: SummaryActionCreators ===
 
-// Module 11931 (SummaryActionCreators)
+// Module 11999 (SummaryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import SummaryStore from "SummaryStore" /* 11932 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import SummaryStore from "SummaryStore" /* 12000 */;
 
 require = fn;
 function fetchSummary() {
@@ -487,7 +487,7 @@ let closure_18 = async function _fetchSummariesBulk(arg0) {
     flag2 = true;
   }
   closure_131_2 = flag2;
-  return "flexDirection";
+  return "Path";
 };
 function useChannelSummaries(channelIds) {
   channelIds = channelIds.channelIds;

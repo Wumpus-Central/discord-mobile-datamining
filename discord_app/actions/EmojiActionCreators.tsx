@@ -1,20 +1,20 @@
-// === Module 11238: EmojiActionCreators ===
+// === Module 11305: EmojiActionCreators ===
 
-// Module 11238 (EmojiActionCreators)
+// Module 11305 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import wrappers from "wrappers" /* 1227 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5189 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 6911 */;
-import InlineUploaderDefault from "InlineUploader" /* 7735 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 6974 */;
+import InlineUploaderDefault from "InlineUploader" /* 7801 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 6906 */;
-import EmojiPackStore from "EmojiPackStore" /* 5194 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6894 */;
+import EmojiStore from "EmojiStore" /* 6969 */;
+import EmojiPackStore from "EmojiPackStore" /* 5257 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6957 */;
 
 const require = globalThis.__r;
 
@@ -53,7 +53,7 @@ let closure_11 = async function _updateEmoji(arg0) {
           ({ guildId: closure_129_0, emojiId: closure_129_1, name: closure_129_2, roles: closure_129_3 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -132,7 +132,7 @@ export function uploadEmoji(guildId) {
   const analyticsLocation = guildId.analyticsLocation;
   ({ image, name, roles, originalMd5 } = guildId);
   DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_START", guildId });
-  const HTTP = guildId(1282).HTTP;
+  const HTTP = guildId(1285).HTTP;
   const request = { url: Endpoints.GUILD_EMOJIS(guildId), body: { image, name, roles }, headers: null, context: null, oldFormErrors: true, rejectWithError: null };
   const tmp3 = guildId;
   request.headers = InlineUploaderDefault.buildHeadersForMd5(originalMd5);
@@ -141,8 +141,8 @@ export function uploadEmoji(guildId) {
     page = analyticsLocation.page;
   }
   request.context = { client_event_source: page };
-  request.rejectWithError = tmp3(1282).rejectWithMigratedError();
-  const tmp3Result = tmp3(1282);
+  request.rejectWithError = tmp3(1285).rejectWithMigratedError();
+  const tmp3Result = tmp3(1285);
   return HTTP.post(request).then((body) => {
     DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId });
     return body.body;
@@ -199,7 +199,7 @@ export function favoriteEmoji(customEmojiFromJoinedGuild) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(5073).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(5136).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", async (emojis) => {
       const emojis1 = emojis.emojis;
       let tmp = emojis1;
@@ -267,7 +267,7 @@ export function unfavoriteEmoji(customEmojiFromJoinedGuild) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(5073).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(5136).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", async (emojis) => {
       const emojis1 = emojis.emojis;
       let tmp = emojis1;

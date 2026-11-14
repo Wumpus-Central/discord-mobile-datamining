@@ -1,7 +1,7 @@
-// === Module 16439: AV1EncodeExperimentLinux ===
+// === Module 16562: AV1EncodeExperimentLinux ===
 
-// Module 16439 (AV1EncodeExperimentLinux)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 16562 (AV1EncodeExperimentLinux)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-av1-encode-linux", kind: "user", defaultConfig: { enabled: false }, variations: null };

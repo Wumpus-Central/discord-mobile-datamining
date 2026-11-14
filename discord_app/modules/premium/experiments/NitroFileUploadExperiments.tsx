@@ -1,8 +1,8 @@
-// === Module 8780: NitroFileUploadExperiments ===
+// === Module 8847: NitroFileUploadExperiments ===
 
-// Module 8780 (NitroFileUploadExperiments)
-import PremiumConstants from "PremiumConstants" /* 1387 */;
-import ApexExperiment_mod from "ApexExperiment" /* 1449 */;
+// Module 8847 (NitroFileUploadExperiments)
+import PremiumConstants from "PremiumConstants" /* 1390 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 ({ MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE: closure_0, MAX_PREMIUM_TIER_2_ATTACHMENT_SIZE_1GB: closure_1 } = PremiumConstants);

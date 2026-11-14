@@ -1,10 +1,11 @@
-// === Module 10000: useDisplayNameStylesAccessibleColors ===
+// === Module 10067: useDisplayNameStylesAccessibleColors ===
 
-// Module 10000 (useDisplayNameStylesAccessibleColors)
+// Module 10067 (useDisplayNameStylesAccessibleColors)
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1396 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
-const require = fn;
+require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx");
 
@@ -36,17 +37,18 @@ export function useDisplayNameStylesAccessibleColors(displayNameStyles) {
       items = [];
     } else {
       colors = tmp.colors;
-      items = colors.map((item) => {
-        const obj2 = { foreground: backgroundColor(stateFromStores[6])(item), background: null, ratio: null, saturationFactor: null };
+      const found = colors.filter(DisplayNameStylesUtils.isValidDisplayNameColor);
+      items = found.map((item) => {
+        const obj2 = { foreground: backgroundColor(stateFromStores[7])(item), background: null, ratio: null, saturationFactor: null };
         if (effectId === displayNameStyles(stateFromStores[3]).DisplayNameEffect.TOON) {
-          let tmp4 = backgroundColor(stateFromStores[6])("#333");
+          let tmp4 = backgroundColor(stateFromStores[7])("#333");
         } else {
-          tmp4 = backgroundColor(stateFromStores[6])(closure_1_1);
+          tmp4 = backgroundColor(stateFromStores[7])(closure_1_1);
         }
         obj2.background = tmp4;
         obj2.ratio = minContrastRatio.minContrastRatio;
         obj2.saturationFactor = saturationFactor;
-        const accessibleForegroundColor = displayNameStyles(stateFromStores[5]).getAccessibleForegroundColor(obj2);
+        const accessibleForegroundColor = displayNameStyles(stateFromStores[6]).getAccessibleForegroundColor(obj2);
         return accessibleForegroundColor.hex();
       });
     }

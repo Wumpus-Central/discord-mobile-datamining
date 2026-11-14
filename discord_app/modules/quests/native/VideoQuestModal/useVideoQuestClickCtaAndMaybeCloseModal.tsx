@@ -1,10 +1,10 @@
-// === Module 17641: useVideoQuestClickCtaAndMaybeCloseModal ===
+// === Module 17761: useVideoQuestClickCtaAndMaybeCloseModal ===
 
-// Module 17641 (useVideoQuestClickCtaAndMaybeCloseModal)
-import parseURLDefault from "parseURL" /* 5985 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8767 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 10087 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10101 */;
+// Module 17761 (useVideoQuestClickCtaAndMaybeCloseModal)
+import parseURLDefault from "parseURL" /* 6048 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 10156 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10170 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

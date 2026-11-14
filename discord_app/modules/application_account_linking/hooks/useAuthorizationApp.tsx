@@ -1,14 +1,14 @@
-// === Module 7855: useAuthorizationApp ===
+// === Module 7921: useAuthorizationApp ===
 
-// Module 7855 (useAuthorizationApp)
+// Module 7921 (useAuthorizationApp)
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2162 */;
-import ApplicationRecord from "ApplicationRecord" /* 2140 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import ApplicationRecord from "ApplicationRecord" /* 2143 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ApplicationTypes = fn(1362).ApplicationTypes;
+const ApplicationTypes = fn(1365).ApplicationTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
 

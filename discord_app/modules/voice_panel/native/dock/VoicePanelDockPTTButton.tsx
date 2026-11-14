@@ -1,20 +1,19 @@
-// === Module 19822: VoicePanelDockPTTButton ===
+// === Module 19227: VoicePanelDockPTTButton ===
 
-// Module 19822 (VoicePanelDockPTTButton)
+// Module 19227 (VoicePanelDockPTTButton)
 import nativeDefault from "native" /* 575 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import HapticUtils from "HapticUtils" /* 5491 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11909 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11975 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import MediaEngineStore from "MediaEngineStore" /* 2130 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelDockConstants = fn(11942);
+const VoicePanelDockConstants = fn(12009);
 ({ DOCK_ROW_HEIGHT, DOCK_TILE_SIZE } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
@@ -40,7 +39,7 @@ getDockPTTIndicatorDrag.__closure = items1;
 getDockPTTIndicatorDrag.__workletHash = 14207531924828;
 getDockPTTIndicatorDrag.__initData = tmp5;
 const diff = result - 1;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { ring: { padding: diff, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.md }, buttonShadow: null };
 let obj3 = { padding: diff, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.md };
 obj.buttonShadow = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS };
@@ -121,13 +120,13 @@ export default noop.memo(function VoicePanelDockPTTButton(measureGlowOffset) {
       let withTiming = require;
       let obj2 = dependencyMap;
       if (useReducedMotion.get()) {
-        withTiming = withTiming(5485).withTiming;
+        withTiming = withTiming(5548).withTiming;
         obj2 = { duration: 150 };
         let withTimingResult3 = withTiming(0, obj2);
-        const withTimingResult2 = withTiming(5485);
+        const withTimingResult2 = withTiming(5548);
       } else {
-        withTimingResult3 = withTiming(5876).withSpring(0, closure_10);
-        const withTimingResult4 = withTiming(5876);
+        withTimingResult3 = withTiming(5939).withSpring(0, closure_10);
+        const withTimingResult4 = withTiming(5939);
       }
       const result2 = sharedValue4.set(withTimingResult3);
     }
@@ -142,18 +141,24 @@ export default noop.memo(function VoicePanelDockPTTButton(measureGlowOffset) {
         if (onPress2 != null) {
           tmp11();
         }
-        let result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
-        MediaEngineActionCreators.setPushToTalkState(MediaEngineStore.getMediaEngine(), true);
+        let result = channelId(dockPTTMeasureHostRef[17]).triggerHapticFeedback(channelId(dockPTTMeasureHostRef[17]).HapticFeedbackTypes.IMPACT_MEDIUM);
+        const obj = channelId(dockPTTMeasureHostRef[17]);
+        channelId(dockPTTMeasureHostRef[18]).setPushToTalkState(onPress2.getMediaEngine(), true);
         const current2 = dockPTTMeasureHostRef.current;
         if (null != current2) {
-          current.measureLayout(current2, (x, y, width, height) => {
-            if (ref.current) {
-              const size = { x, y, width, height };
-              const result = sharedValue1.set(size);
-              callback(1);
-            }
+          current2.measureInWindow((arg0, arg1) => {
+            closure_0 = arg0;
+            closure_1 = arg1;
+            current.measureInWindow((arg0, arg1, width, height) => {
+              if (ref.current) {
+                const size = { x: arg0 - closure_0, y: arg1 - closure_1, width, height };
+                const result = sharedValue1.set(size);
+                callback(1);
+              }
+            });
           });
         }
+        const obj2 = channelId(dockPTTMeasureHostRef[18]);
       }
     }
   }, items3);
@@ -179,7 +184,7 @@ export default noop.memo(function VoicePanelDockPTTButton(measureGlowOffset) {
     const PanResult = Gesture.Pan();
     const enabledResult = Gesture.Pan().enabled(!isScreenReaderEnabled);
     let result = Gesture.Pan().enabled(!isScreenReaderEnabled).manualActivation(true).shouldCancelWhenOutside(false);
-    items = [closure_13, _mod1705.scheduleOnRN, closure_13];
+    items = [closure_13, _mod1708.scheduleOnRN, closure_13];
     c0 = undefined;
     c1 = undefined;
     [tmp3, tmp4, tmp5] = items;
@@ -258,7 +263,7 @@ export default noop.memo(function VoicePanelDockPTTButton(measureGlowOffset) {
     VoicePanelDockPTTButtonTsx4.__workletHash = 2024555727413;
     VoicePanelDockPTTButtonTsx4.__initData = tmp13;
     const onTouchesDownResult = result.onBegin(VoicePanelDockPTTButtonTsx2).onTouchesDown(VoicePanelDockPTTButtonTsx3);
-    const items6 = [closure_16, _mod1705.scheduleOnRN, closure_14];
+    const items6 = [closure_16, _mod1708.scheduleOnRN, closure_14];
     c0 = undefined;
     c1 = undefined;
     [tmp19, tmp20, tmp21] = items6;

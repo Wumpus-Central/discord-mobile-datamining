@@ -1,17 +1,17 @@
-// === Module 8097: PinotDiscoverableRow ===
+// === Module 8162: PinotDiscoverableRow ===
 
-// Module 8097 (PinotDiscoverableRow)
+// Module 8162 (PinotDiscoverableRow)
 import util from "util" /* 1113 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
-import _modDef3337 from "module_3337" /* 3337 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import TableRow from "TableRow" /* 7379 */;
-import TableRowGroup from "TableRowGroup" /* 7680 */;
-import PinotDiscoverable from "PinotDiscoverable" /* 8079 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 8098 */;
-import PinotEligibility from "PinotEligibility" /* 8101 */;
-import useIsPinotNewChannelPrivate from "useIsPinotNewChannelPrivate" /* 8104 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
+import _modDef3385 from "module_3385" /* 3385 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import TableRow from "TableRow" /* 7443 */;
+import TableRowGroup from "TableRowGroup" /* 7746 */;
+import PinotDiscoverable from "PinotDiscoverable" /* 8144 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 8163 */;
+import PinotEligibility from "PinotEligibility" /* 8167 */;
+import useIsPinotNewChannelPrivate from "useIsPinotNewChannelPrivate" /* 8170 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ function PinotDiscoverableTableRow(arg0) {
   const obj = { description, hasIcons: true, children: null };
   const obj2 = { icon: jsx(GlobeEarthIcon.GlobeEarthIcon, {}), label: null, trailing: null, arrow: null, disabled: null, accessible: null, accessibilityState: null, onPress: null };
   const intl = util.intl;
-  obj2.label = intl.string(_modDef3337.uneDIi);
+  obj2.label = intl.string(_modDef3385.uneDIi);
   const obj3 = { text: null };
   const intl2 = util.intl;
   obj3.text = intl2.string(PinotDiscoverable.PINOT_DISCOVERABLE_OPTION_LABELS[value]);
@@ -37,45 +37,30 @@ function PinotDiscoverableSelectRow(value) {
   value = value.value;
   require = value;
   ({ options: importDefault, readOnly, onChange: dependencyMap } = value);
-  let obj = { value, description: null, arrow: null, disabled: null, onPress: null };
-  let intl = util.intl;
-  let obj2 = { learnMoreURL: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SERVER_WEB_PAGES_ADMIN) };
-  obj.description = intl.format(_modDef3337["o3+MNm"], obj2);
+  const obj = { value, description: null, arrow: null, disabled: null, onPress: null };
+  const intl = util.intl;
+  const obj2 = { learnMoreURL: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SERVER_WEB_PAGES_ADMIN) };
+  obj.description = intl.format(_modDef3385["o3+MNm"], obj2);
   obj.arrow = !readOnly;
   obj.disabled = readOnly;
   obj.onPress = function handlePress() {
-    const obj2 = { title: null, items: null, selectedItem: null, onItemSelect: null, hasIcons: false };
-    let obj = ActionSheetActionCreatorsDefault;
-    let intl = util.intl;
-    obj2.title = intl.string(_modDef3337["r/o6RM"]);
-    obj2.items = closure_1_1.map((value) => {
-      const obj = { value, label: null };
-      const intl = closure_1_0(1113).intl;
-      obj.label = intl.string(closure_1_0(8079).PINOT_DISCOVERABLE_OPTION_LABELS[value]);
-      return obj;
-    });
-    obj2.selectedItem = value;
-    obj2.onItemSelect = function onItemSelect(arg0) {
-      dependencyMap(arg0);
-      require("ActionSheetActionCreators").hideActionSheet();
-    };
-    obj.openLazy(asyncRequireImpl(7944, dependencyMap.paths), "PinotDiscoverableSheet", obj2);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8165, dependencyMap.paths), "PinotDiscoverableSheet", { options, value, onChange });
   };
   return <PinotDiscoverableTableRow value={value} description={null} arrow={null} disabled={null} onPress={null} />;
 }
 function PinotDiscoverableRow(onChange) {
   onChange = onChange.onChange;
   ({ guildId, isPrivate, flags } = onChange);
-  const pinotDiscoverableRowState = onChange(8100).usePinotDiscoverableRowState(guildId, flags, isPrivate);
+  const pinotDiscoverableRowState = onChange(8166).usePinotDiscoverableRowState(guildId, flags, isPrivate);
   const kind = pinotDiscoverableRowState.kind;
   if ("hidden" === kind) {
     return null;
   } else if ("private" === kind) {
-    const obj3 = { value: tmp(8079).PinotDiscoverableOption.NONE, description: null, accessible: true, accessibilityState: null };
+    const obj3 = { value: tmp(8144).PinotDiscoverableOption.NONE, description: null, accessible: true, accessibilityState: null };
     const intl = tmp(1113).intl;
-    obj3.description = intl.string(pinotDiscoverableRowState(3337)["MrI+fw"]);
+    obj3.description = intl.string(pinotDiscoverableRowState(3385)["MrI+fw"]);
     obj3.accessibilityState = { disabled: true };
-    return <PinotDiscoverableTableRow value={tmp(8079).PinotDiscoverableOption.NONE} description={null} accessible accessibilityState={null} />;
+    return <PinotDiscoverableTableRow value={tmp(8144).PinotDiscoverableOption.NONE} description={null} accessible accessibilityState={null} />;
   } else if ("select" === kind) {
     const obj5 = { value: null, options: null, readOnly: null, onChange: null };
     ({ value: obj2.value, options: obj2.options, readOnly: obj2.readOnly } = pinotDiscoverableRowState);
@@ -84,7 +69,7 @@ function PinotDiscoverableRow(onChange) {
     };
     return <PinotDiscoverableSelectRow value={null} options={null} readOnly={null} onChange={null} />;
   }
-  const obj = onChange(8100);
+  const obj = onChange(8166);
 }
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsx = fn(21).jsx;

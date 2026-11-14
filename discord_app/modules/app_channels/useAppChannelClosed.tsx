@@ -1,10 +1,10 @@
-// === Module 19247: useAppChannelClosed ===
+// === Module 19439: useAppChannelClosed ===
 
-// Module 19247 (useAppChannelClosed)
+// Module 19439 (useAppChannelClosed)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const FramesConstants = fn(6957);
+const FramesConstants = fn(7020);
 ({ isLaunched: closure_4, makeFrameId: hasOwnProperty } = FramesConstants);
 const set = new Set();
 const size = fn(2);
@@ -14,7 +14,7 @@ export default function useAppChannelClosed(shouldStartClosed) {
   ({ applicationId, surface } = shouldStartClosed);
   first = undefined;
   let tmp = closure_5(applicationId, surface);
-  const tmp2 = first(13188)(applicationId, surface);
+  const tmp2 = first(13297)(applicationId, surface);
   [first] = noop.useState(null);
   dependencyMap = tmp5;
   let frameId;

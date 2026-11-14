@@ -1,8 +1,8 @@
-// === Module 1363: js_shim/shim ===
+// === Module 1366: js_shim/shim ===
 
-// Module 1363 (js_shim/shim)
-import LIBDISCORE_JSI from "LIBDISCORE_JSI" /* 1364 */;
-import initLibdiscore from "initLibdiscore" /* 1367 */;
+// Module 1366 (js_shim/shim)
+import LIBDISCORE_JSI from "LIBDISCORE_JSI" /* 1367 */;
+import initLibdiscore from "initLibdiscore" /* 1370 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");

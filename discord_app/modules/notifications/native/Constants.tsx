@@ -1,6 +1,6 @@
-// === Module 12498: Constants ===
+// === Module 12594: Constants ===
 
-// Module 12498 (Constants)
+// Module 12594 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/notifications/native/Constants.tsx");

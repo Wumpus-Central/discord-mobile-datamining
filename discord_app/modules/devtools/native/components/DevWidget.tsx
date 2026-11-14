@@ -1,22 +1,22 @@
-// === Module 18506: DevWidget ===
+// === Module 18635: DevWidget ===
 
-// Module 18506 (DevWidget)
+// Module 18635 (DevWidget)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import springPresets from "springPresets" /* 5877 */;
-import Pressables from "Pressables" /* 7364 */;
-import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 11945 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13704 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 18091 */;
-import VEVOODefault from "VEVOO" /* 18507 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import springPresets from "springPresets" /* 5940 */;
+import Pressables from "Pressables" /* 7428 */;
+import useSafeAreaInsetsSharedValueDefault from "useSafeAreaInsetsSharedValue" /* 12012 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13809 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 18211 */;
+import VEVOODefault from "VEVOO" /* 18636 */;
 import noop from "module_19" /* 19 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8759 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 8826 */;
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function DraggableContainer(arg0) {
@@ -26,11 +26,11 @@ function DraggableContainer(arg0) {
   }
   ({ onChangePosition, children } = arg0);
   const tmp = closure_9();
-  const sharedValue = _mod1652.useSharedValue(x.get());
-  const sharedValue1 = _mod1652.useSharedValue(y.get());
+  const sharedValue = _mod1655.useSharedValue(x.get());
+  const sharedValue1 = _mod1655.useSharedValue(y.get());
   const tmp7 = useSafeAreaInsetsSharedValueDefault();
   const tmp8 = useWindowDimensionsSharedValueDefault();
-  items = [closure_10, tmp8, tmp7, _mod1652.clamp, dragBoundsPadding, contentWidth, contentHeight];
+  items = [closure_10, tmp8, tmp7, _mod1655.clamp, dragBoundsPadding, contentWidth, contentHeight];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -93,7 +93,7 @@ function DraggableContainer(arg0) {
   DevWidgetTsx3.__workletHash = 9152627460216;
   DevWidgetTsx3.__initData = tmp23;
   obj3.onUpdate = DevWidgetTsx3;
-  const items7 = [closure_13, _mod1705.scheduleOnRN, onChangePosition, x, y];
+  const items7 = [closure_13, _mod1708.scheduleOnRN, onChangePosition, x, y];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -138,18 +138,18 @@ function DraggableContainer(arg0) {
   DevWidgetTsx5.__closure = items10;
   DevWidgetTsx5.__workletHash = 4562461506226;
   DevWidgetTsx5.__initData = tmp35;
-  const animatedStyle = _mod1652.useAnimatedStyle(DevWidgetTsx5);
+  const animatedStyle = _mod1655.useAnimatedStyle(DevWidgetTsx5);
   const obj4 = { gesture: panGesture, children: null };
   const obj5 = { style: null, children };
   const items11 = [tmp.widgetContainer, animatedStyle];
   obj5.style = items11;
-  obj4.children = timestampProducer(_modDef1652.View, obj5);
+  obj4.children = timestampProducer(_modDef1655.View, obj5);
   return timestampProducer(LegacyBaseButton.GestureDetector, obj4);
 }
 const DEV_WIDGET_SIZE = fn(573).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { widgetContainer: { position: "absolute" }, widget: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: nativeDefault.radii.xl };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
@@ -176,8 +176,8 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default function DevWidget() {
-  const sharedValue = _mod1652.useSharedValue(DevToolsSettingsStore.devWidgetPosition.x);
-  const sharedValue1 = _mod1652.useSharedValue(DevToolsSettingsStore.devWidgetPosition.y);
+  const sharedValue = _mod1655.useSharedValue(DevToolsSettingsStore.devWidgetPosition.x);
+  const sharedValue1 = _mod1655.useSharedValue(DevToolsSettingsStore.devWidgetPosition.y);
   const obj3 = { children: null };
   items = [timestampProducer(VEVOODefault, { x: sharedValue, y: sharedValue1 }), ];
   const point = {

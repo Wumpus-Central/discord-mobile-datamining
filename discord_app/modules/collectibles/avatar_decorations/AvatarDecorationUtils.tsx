@@ -1,8 +1,8 @@
-// === Module 2103: AvatarDecorationUtils ===
+// === Module 2106: AvatarDecorationUtils ===
 
-// Module 2103 (AvatarDecorationUtils)
+// Module 2106 (AvatarDecorationUtils)
 import apply from "apply" /* 12 */;
-import mappers from "mappers" /* 2104 */;
+import mappers from "mappers" /* 2107 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");

@@ -1,7 +1,7 @@
-// === Module 9412: isCrunchyrollActivity ===
+// === Module 9481: isCrunchyrollActivity ===
 
-// Module 9412 (isCrunchyrollActivity)
-import CrunchyrollConnectionConstants from "CrunchyrollConnectionConstants" /* 7544 */;
+// Module 9481 (isCrunchyrollActivity)
+import CrunchyrollConnectionConstants from "CrunchyrollConnectionConstants" /* 7610 */;
 import size from "module_2" /* 2 */;
 
 const CRUNCHYROLL_CLIENT_ID = CrunchyrollConnectionConstants.CRUNCHYROLL_CLIENT_ID;

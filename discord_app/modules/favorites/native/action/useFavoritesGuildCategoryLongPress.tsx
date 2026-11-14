@@ -1,8 +1,8 @@
-// === Module 18699: useFavoritesGuildCategoryLongPress ===
+// === Module 18828: useFavoritesGuildCategoryLongPress ===
 
-// Module 18699 (useFavoritesGuildCategoryLongPress)
+// Module 18828 (useFavoritesGuildCategoryLongPress)
 import util from "util" /* 1113 */;
-import FavoritesUtils from "FavoritesUtils" /* 5117 */;
+import FavoritesUtils from "FavoritesUtils" /* 5180 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

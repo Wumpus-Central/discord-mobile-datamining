@@ -1,17 +1,17 @@
-// === Module 19851: VoicePanelCardView ===
+// === Module 20007: VoicePanelCardView ===
 
-// Module 19851 (VoicePanelCardView)
+// Module 20007 (VoicePanelCardView)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1113 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5252 */;
-import native from "native" /* 5314 */;
-import Suspender from "Suspender" /* 6236 */;
-import VoicePanelCardDefault from "VoicePanelCard" /* 19852 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5315 */;
+import native from "native" /* 5377 */;
+import Suspender from "Suspender" /* 6299 */;
+import VoicePanelCardDefault from "VoicePanelCard" /* 20008 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
 
 const require = globalThis.__r;
 
@@ -27,13 +27,14 @@ function CardContentFreezer(children) {
   _require = undefined;
   importDefault = undefined;
   let animatedStyle;
-  const isDockEnabled = noop.useContext(require("VoicePanelStateContext")).isDockEnabled;
   const context = noop.useContext(require("VoicePanelStateContext"));
-  ({ mode, dockMinimizeProgress, dockPressed, wrapperOffset } = context);
+  ({ isDockEnabled, pipHandoff } = context);
+  const context1 = noop.useContext(require("VoicePanelStateContext"));
+  ({ mode, dockMinimizeProgress, dockPressed, wrapperOffset } = context1);
   obj = require("VoicePanelPIPStateContext");
-  const tmp5 = _slicedToArray;
-  [tmp7, tmp8] = noop.useState(false);
-  const tmp6 = _slicedToArray(noop.useState(false), 2);
+  const tmp6 = _slicedToArray;
+  [tmp8, tmp9] = noop.useState(false);
+  const tmp7 = _slicedToArray(noop.useState(false), 2);
   items = [closure_23, isDockEnabled, mode, c10, dockMinimizeProgress, require("VoicePanelSheetMorph").SHEET_MORPH_PHYSICS, dockPressed, wrapperOffset];
   _require = undefined;
   importDefault = undefined;
@@ -42,7 +43,7 @@ function CardContentFreezer(children) {
   noop = undefined;
   c5 = undefined;
   c6 = undefined;
-  [tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17] = items;
+  [tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18] = items;
   class VoicePanelCardViewTsx4 {
     constructor() {
       tmp = closure_0;
@@ -68,14 +69,14 @@ function CardContentFreezer(children) {
       return tmp;
     }
   }
-  const items1 = [tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17];
+  const items1 = [tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18];
   VoicePanelCardViewTsx4.__closure = items1;
   VoicePanelCardViewTsx4.__workletHash = 13976123982266;
-  VoicePanelCardViewTsx4.__initData = tmp10;
-  const items2 = [closure_24, require("module_1705").scheduleOnRN, tmp8];
+  VoicePanelCardViewTsx4.__initData = tmp11;
+  const items2 = [closure_24, require("module_1708").scheduleOnRN, tmp9];
   _require = undefined;
   importDefault = undefined;
-  [tmp18, tmp19, tmp20] = items2;
+  [tmp19, tmp20, tmp21] = items2;
   class VoicePanelCardViewTsx5 {
     constructor(arg0, arg1) {
       if (children !== arg1) {
@@ -86,19 +87,21 @@ function CardContentFreezer(children) {
       return;
     }
   }
-  const items3 = [tmp19, tmp20];
+  const items3 = [tmp20, tmp21];
   VoicePanelCardViewTsx5.__closure = items3;
   VoicePanelCardViewTsx5.__workletHash = 5067780860290;
-  VoicePanelCardViewTsx5.__initData = tmp18;
-  const animatedReaction = require("module_1652").useAnimatedReaction(VoicePanelCardViewTsx4, VoicePanelCardViewTsx5);
+  VoicePanelCardViewTsx5.__initData = tmp19;
+  const animatedReaction = require("module_1655").useAnimatedReaction(VoicePanelCardViewTsx4, VoicePanelCardViewTsx5);
+  require("VoicePanelPIPCardThaw");
   if (!isDockEnabled) {
-    tmp7 = obj.usePIPState().mode === VoicePanelPIPModes.IN_APP;
+    tmp8 = obj.usePIPState().mode === VoicePanelPIPModes.IN_APP && !tmp24;
+    let tmp26 = obj.usePIPState().mode === VoicePanelPIPModes.IN_APP && !tmp24;
   }
-  _require = tmp7;
-  const ref = noop.useRef(tmp7);
+  _require = tmp8;
+  const ref = noop.useRef(tmp8);
   importDefault = ref;
-  animatedStyle = tmp5(obj2.useState({}), 2)[1];
-  const items4 = [tmp7];
+  animatedStyle = tmp6(obj2.useState({}), 2)[1];
+  const items4 = [tmp8];
   const effect = obj2.useEffect(() => {
     if (timeout) {
       const _setTimeout = setTimeout;
@@ -115,18 +118,24 @@ function CardContentFreezer(children) {
       c1.current = false;
     }
   }, items4);
-  const tmp25 = tmp7 && require("useRefValue")(ref);
-  importDefault = tmp25;
-  const context1 = obj2.useContext(tmp3(tmp2[15]));
-  ({ connected, controlsSpecs, safeArea, contentDimensions, windowDimensions, mode: mode2, focused, wrapperOffset: wrapperOffset2, isDockEnabled: isDockEnabled2 } = context1);
-  const obj3 = require("module_1652");
-  const tmp9 = c10;
+  const tmp29 = tmp8 && require("useRefValue")(ref);
+  const obj3 = require("module_1655");
+  const tmp10 = c10;
+  let tmp30 = tmp29;
+  if (tmp29) {
+    tmp30 = !isDockEnabled;
+  }
+  const pIPCardThaw = require("VoicePanelPIPCardThaw").usePIPCardThaw(pipHandoff.cardThaw, tmp30);
+  importDefault = tmp29;
+  const context2 = obj2.useContext(tmp3(tmp2[15]));
+  ({ connected, controlsSpecs, safeArea, contentDimensions, windowDimensions, mode: mode2, focused, wrapperOffset: wrapperOffset2, isDockEnabled: isDockEnabled2 } = context2);
+  const tmpResult5 = require("VoicePanelPIPCardThaw");
   const items5 = [c8];
   const stateFromStores = require("initialize").useStateFromStores(items5, () => _undefined6.isConnected());
-  const tmpResult = require("initialize");
+  const tmpResult6 = require("initialize");
   const token = require("useToken").useToken(tmp3(tmp2[18]).modules.mobile.VOICE_PANEL_GUTTER);
-  const tmpResult3 = require("useToken");
-  const items6 = [closure_22, controlsSpecs, c11, safeArea, c13, require("calculateVoicePanelHeaderSpecs"), token, connected, contentDimensions, windowDimensions, isDockEnabled2, mode2, tmp9, focused, wrapperOffset2, c16, c9, stateFromStores, require("roundToNearestPixel"), require("spring/spring").withSpring, tmp25];
+  const tmpResult7 = require("useToken");
+  const items6 = [closure_22, controlsSpecs, c11, safeArea, c13, require("calculateVoicePanelHeaderSpecs"), token, connected, contentDimensions, windowDimensions, isDockEnabled2, mode2, tmp10, focused, wrapperOffset2, c16, c9, stateFromStores, require("roundToNearestPixel"), require("spring/spring").withSpring, tmp29, context2.pipHandoff.cardThaw.thawing];
   _require = undefined;
   importDefault = undefined;
   animatedStyle = undefined;
@@ -147,7 +156,8 @@ function CardContentFreezer(children) {
   c17 = undefined;
   c18 = undefined;
   c19 = undefined;
-  [tmp29, tmp30, tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49] = items6;
+  c20 = undefined;
+  [tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56] = items6;
   class VoicePanelCardViewTsx3 {
     constructor() {
       obj = closure_0;
@@ -174,8 +184,8 @@ function CardContentFreezer(children) {
           num3 = num;
           num4 = height2;
           if (closure_0.get().mode !== closure_1.HIDDEN) {
-            tmp28 = closure_12;
-            tmp29 = null;
+            tmp29 = closure_12;
+            tmp30 = null;
             num2 = 0;
             num3 = num;
             num4 = height2;
@@ -250,32 +260,34 @@ function CardContentFreezer(children) {
       size.transform = items;
       if (closure_19) {
         num = 0;
+      } else {
+        tmp28 = closure_20;
       }
       size.opacity = num;
       return size;
     }
   }
-  const items7 = [tmp30, tmp31, tmp32, tmp33, tmp34, tmp35, tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49];
+  const items7 = [tmp36, tmp37, tmp38, tmp39, tmp40, tmp41, tmp42, tmp43, tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56];
   VoicePanelCardViewTsx3.__closure = items7;
-  VoicePanelCardViewTsx3.__workletHash = 8022757380744;
-  VoicePanelCardViewTsx3.__initData = tmp29;
-  animatedStyle = require("module_1652").useAnimatedStyle(VoicePanelCardViewTsx3);
-  const items8 = [animatedStyle, tmp25, children];
+  VoicePanelCardViewTsx3.__workletHash = 14589964706813;
+  VoicePanelCardViewTsx3.__initData = tmp35;
+  animatedStyle = require("module_1655").useAnimatedStyle(VoicePanelCardViewTsx3);
+  const items8 = [animatedStyle, tmp29, children];
   return noop.useMemo(() => {
     obj = { style: animatedStyle, children: null };
     const obj2 = { freeze, children: <timestampProducer collapsable={false} style={hasOwnProperty.absoluteFill}>{children}</timestampProducer> };
     obj.children = jsx(Suspender.Freeze, { freeze, children: <timestampProducer collapsable={false} style={hasOwnProperty.absoluteFill}>{children}</timestampProducer> });
-    return jsx(_modDef1652.View, { style: animatedStyle, children: null });
+    return jsx(_modDef1655.View, { style: animatedStyle, children: null });
   }, items8);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11919);
+const VoicePanelConstants = fn(11985);
 ({ LAYOUT_PHYSICS: closure_9, VoicePanelModes: closure_10, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
-let VoicePanelPIPModes = fn(19699).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11922).EDGE_GUTTER;
-const isUserParticipant = fn(5920).isUserParticipant;
+const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
+let VoicePanelPIPModes = fn(19909).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11988).EDGE_GUTTER;
+const isUserParticipant = fn(5983).isUserParticipant;
 const jsx = fn(21).jsx;
 let obj = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);
@@ -283,7 +295,7 @@ obj.mass = 1;
 let closure_19 = { start: 0, end: VOICE_PANEL_CHUNK_DIVISOR };
 let closure_20 = { code: "(function VoicePanelCardViewTsx1(){let[viewableChunks]=this.__closure;return viewableChunks.get();})" };
 let closure_21 = { code: "(function VoicePanelCardViewTsx2(newChunks,previous){let[cheapWorkletShallowEqual,scheduleOnRN,updateValueIfChange]=this.__closure;if(cheapWorkletShallowEqual(newChunks,previous!==null&&previous!==void 0?previous:undefined))return;scheduleOnRN(updateValueIfChange,newChunks);})" };
-let closure_22 = { code: "(function VoicePanelCardViewTsx3(){let[controlsSpecs,VoicePanelControlsModes,safeArea,EDGE_GUTTER,calculateVoicePanelHeaderSpecs,edgeGutter,connected,contentDimensions,windowDimensions,isDockEnabled,mode,VoicePanelModes,focused,wrapperOffset,SCALE_PHYSICS,LAYOUT_PHYSICS,isRTCConnected,roundToNearestPixel,withSpring,freeze]=this.__closure;const hidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;let height=0;let scale=1;let top=0;const safeAreaBottom=Math.max(safeArea.get().bottom,EDGE_GUTTER);const{height:headerBarHeight,paddingTop:safeAreaTop}=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);if(connected.get()){height+=safeAreaTop;height+=contentDimensions.get().height;height+=safeAreaBottom;if(height-windowDimensions.get().height<8){height=windowDimensions.get().height;}if((isDockEnabled||mode.get()!==VoicePanelModes.PIP)&&!hidden&&focused.get()==null){const targetHeight=height-headerBarHeight-EDGE_GUTTER-controlsSpecs.get().height-safeAreaBottom;const fullView=windowDimensions.get().height-safeAreaTop-safeAreaBottom;const controlsView=windowDimensions.get().height-headerBarHeight-controlsSpecs.get().height-safeAreaBottom;top=headerBarHeight;scale=function(){if(contentDimensions.get().height>targetHeight){return targetHeight/contentDimensions.get().height;}return 1;}();if(contentDimensions.get().height<fullView&&contentDimensions.get().height>controlsView){const offsetOriginal=(fullView-contentDimensions.get().height)/2;const scaledContent=contentDimensions.get().height*scale;const scaledOffset=(controlsView-scaledContent)/2;top-=(offsetOriginal-scaledOffset)*scale;}if(contentDimensions.get().height>targetHeight){top+=(height*scale-height)/2;}else{top+=(targetHeight-(windowDimensions.get().height-safeAreaTop-safeAreaBottom))/2;}top-=safeAreaTop*scale;}}const offsetY=isDockEnabled?0:wrapperOffset.get().y;const translatePhysics=isDockEnabled||!wrapperOffset.get().gestureActive&&mode.get()!==VoicePanelModes.PIP?SCALE_PHYSICS:LAYOUT_PHYSICS;const motion=isDockEnabled&&!isRTCConnected?'animate-never':'respect-motion-settings';return{position:'relative',width:windowDimensions.get().width,height:roundToNearestPixel(height),transform:[{translateY:withSpring(top+offsetY,translatePhysics,motion)},{scale:withSpring(scale,SCALE_PHYSICS,motion)}],opacity:freeze?0:1};})" };
+let closure_22 = { code: "(function VoicePanelCardViewTsx3(){let[controlsSpecs,VoicePanelControlsModes,safeArea,EDGE_GUTTER,calculateVoicePanelHeaderSpecs,edgeGutter,connected,contentDimensions,windowDimensions,isDockEnabled,mode,VoicePanelModes,focused,wrapperOffset,SCALE_PHYSICS,LAYOUT_PHYSICS,isRTCConnected,roundToNearestPixel,withSpring,freeze,thawing]=this.__closure;const hidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;let height=0;let scale=1;let top=0;const safeAreaBottom=Math.max(safeArea.get().bottom,EDGE_GUTTER);const{height:headerBarHeight,paddingTop:safeAreaTop}=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);if(connected.get()){height+=safeAreaTop;height+=contentDimensions.get().height;height+=safeAreaBottom;if(height-windowDimensions.get().height<8){height=windowDimensions.get().height;}if((isDockEnabled||mode.get()!==VoicePanelModes.PIP)&&!hidden&&focused.get()==null){const targetHeight=height-headerBarHeight-EDGE_GUTTER-controlsSpecs.get().height-safeAreaBottom;const fullView=windowDimensions.get().height-safeAreaTop-safeAreaBottom;const controlsView=windowDimensions.get().height-headerBarHeight-controlsSpecs.get().height-safeAreaBottom;top=headerBarHeight;scale=function(){if(contentDimensions.get().height>targetHeight){return targetHeight/contentDimensions.get().height;}return 1;}();if(contentDimensions.get().height<fullView&&contentDimensions.get().height>controlsView){const offsetOriginal=(fullView-contentDimensions.get().height)/2;const scaledContent=contentDimensions.get().height*scale;const scaledOffset=(controlsView-scaledContent)/2;top-=(offsetOriginal-scaledOffset)*scale;}if(contentDimensions.get().height>targetHeight){top+=(height*scale-height)/2;}else{top+=(targetHeight-(windowDimensions.get().height-safeAreaTop-safeAreaBottom))/2;}top-=safeAreaTop*scale;}}const offsetY=isDockEnabled?0:wrapperOffset.get().y;const translatePhysics=isDockEnabled||!wrapperOffset.get().gestureActive&&mode.get()!==VoicePanelModes.PIP?SCALE_PHYSICS:LAYOUT_PHYSICS;const motion=isDockEnabled&&!isRTCConnected?'animate-never':'respect-motion-settings';return{position:'relative',width:windowDimensions.get().width,height:roundToNearestPixel(height),transform:[{translateY:withSpring(top+offsetY,translatePhysics,motion)},{scale:withSpring(scale,SCALE_PHYSICS,motion)}],opacity:freeze||thawing.get()?0:1};})" };
 let closure_23 = { code: "(function VoicePanelCardViewTsx4(){let[isDockEnabled,mode,VoicePanelModes,dockMinimizeProgress,SHEET_MORPH_PHYSICS,dockPressed,wrapperOffset]=this.__closure;return isDockEnabled&&mode.get()===VoicePanelModes.PIP&&dockMinimizeProgress.get()>=1-SHEET_MORPH_PHYSICS.restDisplacementThreshold&&!dockPressed.get()&&!wrapperOffset.get().gestureActive;})" };
 let closure_24 = { code: "(function VoicePanelCardViewTsx5(current,previous){let[scheduleOnRN,setIsDockFrozen]=this.__closure;if(current!==previous){scheduleOnRN(setIsDockFrozen,current);}})" };
 let size = fn(2);
@@ -321,7 +333,7 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
   VoicePanelCardViewTsx1.__closure = items1;
   VoicePanelCardViewTsx1.__workletHash = 4293143028920;
   VoicePanelCardViewTsx1.__initData = tmp6;
-  const items2 = [closure_21, require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, require("module_1705").scheduleOnRN, callback];
+  const items2 = [closure_21, require("cheapWorkletShallowEqual").cheapWorkletShallowEqual, require("module_1708").scheduleOnRN, callback];
   _require = undefined;
   chunkedParticipants = undefined;
   stateFromStoresArray = undefined;
@@ -342,8 +354,8 @@ export default noop.memo(function VoicePanelCardView(viewableChunks) {
   VoicePanelCardViewTsx2.__closure = items3;
   VoicePanelCardViewTsx2.__workletHash = 9848593615087;
   VoicePanelCardViewTsx2.__initData = tmp8;
-  const animatedReaction = require("module_1652").useAnimatedReaction(VoicePanelCardViewTsx1, VoicePanelCardViewTsx2);
-  let obj2 = require("module_1652");
+  const animatedReaction = require("module_1655").useAnimatedReaction(VoicePanelCardViewTsx1, VoicePanelCardViewTsx2);
+  let obj2 = require("module_1655");
   chunkedParticipants = require("useVoicePanelParticipants").useChunkedParticipants(channelId, tmp3);
   const tmp5Result = require("useVoicePanelParticipants");
   const items4 = [ChannelRTCStore];

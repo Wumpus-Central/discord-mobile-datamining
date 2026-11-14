@@ -1,8 +1,8 @@
-// === Module 19798: VoicePanelNoVideoPermissionsAlert ===
+// === Module 19186: VoicePanelNoVideoPermissionsAlert ===
 
-// Module 19798 (VoicePanelNoVideoPermissionsAlert)
+// Module 19186 (VoicePanelNoVideoPermissionsAlert)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 6211 */;
+import AlertModal from "AlertModal" /* 6274 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

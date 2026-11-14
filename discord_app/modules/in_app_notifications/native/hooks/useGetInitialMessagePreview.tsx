@@ -1,11 +1,11 @@
-// === Module 11007: useGetInitialMessagePreview ===
+// === Module 11076: useGetInitialMessagePreview ===
 
-// Module 11007 (useGetInitialMessagePreview)
-import isForwardMessageDefault from "isForwardMessage" /* 5889 */;
+// Module 11076 (useGetInitialMessagePreview)
+import isForwardMessageDefault from "isForwardMessage" /* 5952 */;
 import noop from "module_19" /* 19 */;
-import MessageRecord from "MessageRecord" /* 5186 */;
+import MessageRecord from "MessageRecord" /* 5249 */;
 
-const MessageSnapshotRecord = fn(5186).MessageSnapshotRecord;
+const MessageSnapshotRecord = fn(5249).MessageSnapshotRecord;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx");
 

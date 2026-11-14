@@ -1,9 +1,10 @@
-// === Module 13205: useConjureRemoveFromServer ===
+// === Module 13208: useConjureRemoveFromServer ===
 
-// Module 13205 (useConjureRemoveFromServer)
+// Module 13208 (useConjureRemoveFromServer)
 import util from "util" /* 1113 */;
-import _modDef4079 from "module_4079" /* 4079 */;
-import conjureRemoveApp from "conjureRemoveApp" /* 13193 */;
+import _modDef4131 from "module_4131" /* 4131 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7018 */;
+import conjureRemoveApp from "conjureRemoveApp" /* 13206 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -31,6 +32,8 @@ export default function useConjureRemoveFromServer(arg0) {
   const keptChannelNames = tmp9.keptChannelNames;
   const previewApp = tmp9.previewApp;
   const botStays = tmp9.botStays;
+  const inOtherServers = tmp9.inOtherServers;
+  const endsCollaboration = tmp9.endsCollaboration;
   let tmp10 = !tmp4;
   if (!tmp4) {
     let canRemove;
@@ -68,7 +71,7 @@ export default function useConjureRemoveFromServer(arg0) {
     return items;
   }, items);
   let items1 = [tmp10, appName, channelNames.length, checked, guildId, guildName, projectId, arg0];
-  let items2 = [botStays, guildName, keptChannelNames];
+  let items2 = [botStays, endsCollaboration, guildName, inOtherServers, keptChannelNames];
   const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c4 === 2) {
       c4 = 3;
@@ -110,7 +113,7 @@ export default function useConjureRemoveFromServer(arg0) {
             obj4.alsoRemovePreviewBot = alsoRemovePreviewBot;
             c3 = 2;
             c4 = 1;
-            const obj5 = { value: closure_0(13063).unpublishProject(projectId, obj4), done: false };
+            const obj5 = { value: closure_0(13158).unpublishProject(projectId, obj4), done: false };
             return obj5;
           }
         } else {
@@ -133,10 +136,10 @@ export default function useConjureRemoveFromServer(arg0) {
           if (ok) {
             const intl2 = closure_0(1113).intl;
             const obj7 = { app: closure_129_9, server: closure_129_10 };
-            intl2.formatToPlainString(tmp3(4079).SNFGxP, obj7);
+            intl2.formatToPlainString(tmp3(4131).SNFGxP, obj7);
           } else {
             const intl = closure_0(1113).intl;
-            closure_129_5(intl.string(tmp3(4079).PJ2Fkn));
+            closure_129_5(intl.string(tmp3(4131).PJ2Fkn));
             closure_129_6(null);
           }
           c4 = 3;
@@ -154,49 +157,62 @@ export default function useConjureRemoveFromServer(arg0) {
   let obj2 = { optionalItems: memo, body: null, notes: null, pending: null, error: null, submit: null };
   const memo1 = noop.useMemo(() => {
     const result = conjureRemoveApp.conjureRemoveAppKeptChannels({ keptChannelNames });
-    if (botStays) {
+    if (endsCollaboration) {
       const intl = util.intl;
       const obj3 = { server: guildName };
-      items = [intl.formatToPlainString(_modDef4079["0a7JdI"], obj3)];
+      items = [intl.formatToPlainString(_modDef4131["9b3KdT"], obj3)];
       let items1 = items;
     } else {
       items1 = [];
     }
     const items2 = [...items1];
-    if (null != result) {
-      const items3 = [result];
-      let items4 = items3;
+    if (botStays) {
+      const intl2 = util.intl;
+      const obj4 = { server: guildName };
+      const items3 = [];
+      items3[0] = intl2.formatToPlainString(inOtherServers ? items3.oQ3WRg : items3["0a7JdI"], obj4);
+      const formatToPlainStringResult = intl2.formatToPlainString(inOtherServers ? items3.oQ3WRg : items3["0a7JdI"], obj4);
     } else {
-      items4 = [];
+      const items4 = [];
+      const arraySpreadResult = HermesBuiltin.arraySpread(items4, tmp6);
+      if (null != result) {
+        const items5 = [result];
+        let items6 = items5;
+      } else {
+        items6 = [];
+      }
+      HermesBuiltin.arraySpread(items6, arraySpreadResult);
+      return items2;
     }
-    HermesBuiltin.arraySpread(items4, tmp6);
-    return items2;
+    const obj2 = { keptChannelNames };
   }, items2);
   let intl = require("util").intl;
-  obj2.body = intl.formatToPlainString(checked(4079)["8OKM1N"], { server: guildName });
+  obj2.body = intl.formatToPlainString(checked(4131)["8OKM1N"], { server: guildName });
   obj2.notes = memo1;
   obj2.error = tmp7;
   obj2.submit = callback;
   return obj2;
 };
 export function conjureRemoveTargetFromProject(project, target) {
+  const obj = { projectId: project.id, guildId: target.guildId, appName: target.appName, guildName: target.guildName, channelNames: target.channelNames, keptChannelNames: target.keptChannelNames, previewApp: null, botStays: null, inOtherServers: null, endsCollaboration: null };
   let tmp = null;
-  if (null != project.guild_id) {
-    const obj = { projectId: null, guildId: null, appName: null, guildName: null, channelNames: null, keptChannelNames: null, previewApp: null, botStays: null };
-    ({ id: obj.projectId, guild_id: obj.guildId } = project);
-    ({ appName: obj.appName, guildName: obj.guildName, channelNames: obj.channelNames, keptChannelNames: obj.keptChannelNames } = target);
-    let tmp3 = null;
-    if (null != target.previewAppName) {
-      ({ previewAppName: obj2.name, canRemovePreviewBot: obj2.canRemove } = target);
-      tmp3 = { name: null, canRemove: null };
-      const obj3 = { name: null, canRemove: null };
-    }
-    obj.previewApp = tmp3;
-    obj.botStays = !target.canRemoveBot;
-    tmp = obj;
+  if (null != target.previewAppName) {
+    ({ previewAppName: obj2.name, canRemovePreviewBot: obj2.canRemove } = target);
+    tmp = { name: null, canRemove: null };
+    const obj4 = { name: null, canRemove: null };
   }
-  return tmp;
+  obj.previewApp = tmp;
+  obj.botStays = !target.canRemoveBot;
+  const result = ConjureProjectTypes.conjureProjectServerIds(project);
+  obj.inOtherServers = result.some((item) => item !== target.guildId);
+  let result1 = target.guildId === project.guild_id;
+  if (result1) {
+    result1 = ConjureProjectTypes.isProjectGuildCollaborationEnabled(project);
+    const tmp2Result = ConjureProjectTypes;
+  }
+  obj.endsCollaboration = result1;
+  return obj;
 }
 export function conjureRemoveTargetFromServerApp(conjureServerApp) {
-  return { projectId: conjureServerApp.projectId, guildId: conjureServerApp.guildId, appName: conjureServerApp.targetAppName, guildName: conjureServerApp.guildName, channelNames: conjureServerApp.deletableChannelNames, keptChannelNames: conjureServerApp.keptChannelNames, previewApp: conjureServerApp.previewApp, botStays: false };
+  return { projectId: conjureServerApp.projectId, guildId: conjureServerApp.guildId, appName: conjureServerApp.targetAppName, guildName: conjureServerApp.guildName, channelNames: conjureServerApp.deletableChannelNames, keptChannelNames: conjureServerApp.keptChannelNames, previewApp: conjureServerApp.previewApp, botStays: false, inOtherServers: false, endsCollaboration: false };
 }

@@ -1,21 +1,21 @@
-// === Module 15819: NsfwGateGuild ===
+// === Module 15939: NsfwGateGuild ===
 
-// Module 15819 (NsfwGateGuild)
+// Module 15939 (NsfwGateGuild)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 10739 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 10808 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import UserStore from "UserStore" /* 1385 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(10738).NsfwGateSource;
+const NsfwGateSource = fn(10807).NsfwGateSource;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, HelpdeskArticles: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, header: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 16 }, image: { marginBottom: 16 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,8 +31,8 @@ export default function NsfwGateGuild(guildId) {
   const intl3 = guildId(1113).intl;
   let obj = { helpURL: null };
   const stringResult1 = intl2.string(guildId(1113).t.Crj6eC);
-  obj.helpURL = currentUser(2185).getArticleURL(constants2.NSFW_GUILD_GUIDELINES);
-  let obj2 = currentUser(2185);
+  obj.helpURL = currentUser(2188).getArticleURL(constants2.NSFW_GUILD_GUIDELINES);
+  let obj2 = currentUser(2188);
   currentUser = UserStore.getCurrentUser();
   items = [guildId, currentUser];
   const effect = noop.useEffect(() => {
@@ -59,19 +59,19 @@ export default function NsfwGateGuild(guildId) {
     AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
   }, items);
   let obj3 = { style: tmp.container, children: null };
-  const items1 = [closure_10(currentUser(7648), {}), , , , , ];
+  const items1 = [closure_10(currentUser(7714), {}), , , , , ];
   const obj4 = { source: null, style: null };
   const formatResult = intl3.format(guildId(1113).t.Z12LNW, obj);
-  obj4.source = currentUser(15820);
+  obj4.source = currentUser(15940);
   obj4.style = tmp.image;
-  items1[1] = closure_10(currentUser(5957), obj4);
-  items1[2] = closure_10(guildId(5866).Heading, { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: stringResult });
-  items1[3] = closure_10(guildId(5866).Text, { style: tmp.description, variant: "body-md/normal", color: "text-default", children: stringResult1 });
-  items1[4] = closure_10(guildId(5866).Text, { style: tmp.description, variant: "body-md/normal", color: "text-default", children: formatResult });
+  items1[1] = closure_10(currentUser(6020), obj4);
+  items1[2] = closure_10(guildId(5929).Heading, { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: stringResult });
+  items1[3] = closure_10(guildId(5929).Text, { style: tmp.description, variant: "body-md/normal", color: "text-default", children: stringResult1 });
+  items1[4] = closure_10(guildId(5929).Text, { style: tmp.description, variant: "body-md/normal", color: "text-default", children: formatResult });
   const obj8 = { onPress: guildId.onClose, size: "md", text: null };
   const intl4 = guildId(1113).intl;
   obj8.text = intl4.string(guildId(1113).t.gRqiWV);
-  items1[5] = closure_10(guildId(5873).Button, obj8);
+  items1[5] = closure_10(guildId(5936).Button, obj8);
   obj3.children = items1;
   return closure_11(View, obj3);
 };

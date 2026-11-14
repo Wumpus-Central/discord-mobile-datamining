@@ -1,9 +1,9 @@
-// === Module 13884: ChatShieldIcon ===
+// === Module 13989: ChatShieldIcon ===
 
-// Module 13884 (ChatShieldIcon)
+// Module 13989 (ChatShieldIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod13885 from "module_13885" /* 13885 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod13990 from "module_13990" /* 13990 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ChatShieldIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13885, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13990, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,8 +1,8 @@
-// === Module 20044: ConjureBackgroundFramesManager ===
+// === Module 20202: ConjureBackgroundFramesManager ===
 
-// Module 20044 (ConjureBackgroundFramesManager)
+// Module 20202 (ConjureBackgroundFramesManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 const require = fn;
 function handleFrameLaunchStart() {
@@ -48,7 +48,7 @@ let closure_4 = async function _handleFrameLaunchStart(arg0) {
           ({ applicationId: closure_129_0, frameId: closure_129_1, surface: closure_129_2 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp5) {

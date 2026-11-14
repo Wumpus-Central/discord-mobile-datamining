@@ -1,29 +1,29 @@
-// === Module 10934: ChannelCallStore ===
+// === Module 11003: ChannelCallStore ===
 
-// Module 10934 (ChannelCallStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
-import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2143 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
-import DeviceOrientation from "DeviceOrientation" /* 9974 */;
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 10936 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 10937 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 10939 */;
+// Module 11003 (ChannelCallStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
+import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2146 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import DeviceOrientation from "DeviceOrientation" /* 10041 */;
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 11005 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 11006 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 11008 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 import apply from "apply" /* 12 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(10935);
+const ChannelCallConstants = fn(11004);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const ParticipantTypes = fn(5920).ParticipantTypes;
-const timeout = new fn(5087).Timeout();
+const ParticipantTypes = fn(5983).ParticipantTypes;
+const timeout = new fn(5150).Timeout();
 let obj = { focus: true, pipFocus: false, isGestureEnabled: true, voiceChatDrawerState: VoiceChatDrawerState.CLOSED, voiceCallOverlayLayoutStates: null };
 let obj2 = {};
-let size = { x: "Array", y: "Path", width: "channel", height: "values", screenOrientation: fn(9974).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "computeEmojiItems", isInitialized: "r", isVisible: "WireType" };
+let size = { x: "Array", y: "s", width: "channelId", height: "type", screenOrientation: fn(10041).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: 858992913, isInitialized: 858993459, isVisible: 2138128424 };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
-const size1 = { x: "Array", y: "Path", width: "channel", height: "values", screenOrientation: fn(9974).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: "computeEmojiItems", isInitialized: "r", isVisible: "WireType" };
+const size1 = { x: "Array", y: "s", width: "channelId", height: "type", screenOrientation: fn(10041).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: 858992913, isInitialized: 858993459, isVisible: 2138128424 };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 obj.voiceCallOverlayLayoutStates = obj2;
 let closure_8 = Object.freeze(obj);
@@ -39,7 +39,7 @@ export function setFocus(focus) {
 }
 export function toggleFocus() {
   const focus = obj3.getState().focus;
-  focus(1259).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
+  focus(1263).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
 }
 export function resetFocusTimer() {
   timeout.stop();
@@ -71,7 +71,7 @@ export function setVoiceChatDrawerState(embeddedActivityLocationChannelId, CLOSE
 }
 export const togglePipFocus = apply.throttle(() => {
   const pipFocus = obj3.getState().pipFocus;
-  pipFocus(1259).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
+  pipFocus(1263).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
 }, 300);
 export function useIsVoiceChatFocused() {
   const voiceChatDrawerState = obj3().voiceChatDrawerState;

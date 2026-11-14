@@ -1,7 +1,7 @@
-// === Module 6037: Video ===
+// === Module 6100: Video ===
 
-// Module 6037 (Video)
-import DirectVideoDefault from "DirectVideo" /* 6038 */;
+// Module 6100 (Video)
+import DirectVideoDefault from "DirectVideo" /* 6101 */;
 import size from "module_2" /* 2 */;
 
 class Video {

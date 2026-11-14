@@ -1,15 +1,15 @@
-// === Module 12752: EmbeddedActivityView ===
+// === Module 12848: EmbeddedActivityView ===
 
-// Module 12752 (EmbeddedActivityView)
+// Module 12848 (EmbeddedActivityView)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12651 */;
-import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 12753 */;
-import activityWebViewController from "activityWebViewController" /* 12756 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 12747 */;
+import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 12849 */;
+import activityWebViewController from "activityWebViewController" /* 12852 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
 
 require = fn;
 function useBaseActivityView(orientationLockState) {
@@ -102,17 +102,17 @@ function EmbeddedActivityWebView(applicationId) {
   const merged = Object.assign(applicationId, Object.assign({ deepLinkQueryParams: 0, applicationId: 0 }));
   ({ iframeId, shellBridgeSecret } = _slicedToArray(noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)), 1)[0]);
   const merged1 = Object.assign(merged);
-  return closure_13(applicationId(12781).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
+  return closure_13(applicationId(12877).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
 }
 let closure_3 = ["ui_density"];
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroImportDefault, View: closure_8 } = get_ActivityIndicator);
-const ActivityScreenOrientation = fn(2142).ActivityScreenOrientation;
-fn(1362).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
-const ActivityLayoutMode = fn(12610).ActivityLayoutMode;
+const ActivityScreenOrientation = fn(2145).ActivityScreenOrientation;
+fn(1365).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
+const ActivityLayoutMode = fn(12706).ActivityLayoutMode;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const colors = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
 const memoResult = noop.memo(function EmbeddedActivityViewInner(channel) {
   channel = channel.channel;

@@ -1,13 +1,13 @@
-// === Module 7167: GuildDiscoveryUtils ===
+// === Module 7230: GuildDiscoveryUtils ===
 
-// Module 7167 (GuildDiscoveryUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import _modDef1487 from "module_1487" /* 1487 */;
+// Module 7230 (GuildDiscoveryUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import _modDef1490 from "module_1490" /* 1490 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 5176 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5473 */;
-import GuildStore from "GuildStore" /* 5114 */;
+import LurkingStore from "LurkingStore" /* 5239 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5536 */;
+import GuildStore from "GuildStore" /* 5177 */;
 
 require = fn;
 let closure_11 = async function _startLurking(arg0) {
@@ -149,7 +149,7 @@ let closure_11 = async function _startLurking(arg0) {
   }
   closure_133_2 = obj5;
   closure_133_3 = closure_3;
-  return "flexDirection";
+  return "Path";
 };
 function makeDiscoverableGuild(body) {
   const obj = { id: body.id, name: body.name, description: body.description, splash: body.splash, banner: body.banner, icon: body.icon, features: new Set(body.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: null, preferredLocale: null, discoverySplash: null, emojis: null, emojiCount: null, stickers: null, stickerCount: null, keywords: null };
@@ -193,7 +193,7 @@ let closure_13 = async function _getDiscoverableGuild() {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: true };
             const obj4 = { guild_ids };
-            request.query = _modDef1487.stringify(obj4);
+            request.query = _modDef1490.stringify(obj4);
             c5 = 2;
             c6 = 1;
             const obj5 = { value: HTTP.get(request), done: false };

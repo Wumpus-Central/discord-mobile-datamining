@@ -1,9 +1,9 @@
-// === Module 16954: HuePicker ===
+// === Module 17077: HuePicker ===
 
-// Module 16954 (HuePicker)
+// Module 17077 (HuePicker)
 import nativeDefault from "native" /* 575 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5830 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import LinearGradientDefault from "LinearGradient" /* 5893 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = [0, 60, 120, 180, 240, 300, 360];
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { justifyContent: "center", alignItems: "center" }, containerFullWidth: { alignSelf: "stretch", overflow: "visible" }, slider: null, colorBar: null, colorBarFullWidth: null, colorBarInner: null, colorBarInnerFullWidth: null };
 let size = { left: 0, position: "absolute", borderColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, width: 24, height: 36, borderRadius: nativeDefault.radii.sm, borderWidth: 2 };
 obj2.slider = size;
@@ -48,15 +48,15 @@ export default function HuePicker(lightness) {
     flag = false;
   }
   let tmp = closure_9();
-  const sharedValue = require("module_1652").useSharedValue(0);
-  const obj = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(tmp.slider.height);
-  const obj2 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(tmp.colorBarInner.height);
-  let obj3 = require("module_1652");
-  const sharedValue3 = require("module_1652").useSharedValue(0);
-  let obj4 = require("module_1652");
-  items = [closure_10, hue, require("ColorPickerUtils").normalizeValue, sharedValue3, onPanUpdate, require("module_1705").scheduleOnRN];
+  const sharedValue = require("module_1655").useSharedValue(0);
+  const obj = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(tmp.slider.height);
+  const obj2 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(tmp.colorBarInner.height);
+  let obj3 = require("module_1655");
+  const sharedValue3 = require("module_1655").useSharedValue(0);
+  let obj4 = require("module_1655");
+  items = [closure_10, hue, require("ColorPickerUtils").normalizeValue, sharedValue3, onPanUpdate, require("module_1708").scheduleOnRN];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -79,7 +79,7 @@ export default function HuePicker(lightness) {
   HuePickerTsx1.__workletHash = 2888417885837;
   HuePickerTsx1.__initData = tmp8;
   obj6.onBegin = HuePickerTsx1;
-  const items2 = [closure_11, hue, require("ColorPickerUtils").normalizeValue, sharedValue3, onPanUpdate, require("module_1705").scheduleOnRN];
+  const items2 = [closure_11, hue, require("ColorPickerUtils").normalizeValue, sharedValue3, onPanUpdate, require("module_1708").scheduleOnRN];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -101,7 +101,7 @@ export default function HuePicker(lightness) {
   HuePickerTsx2.__workletHash = 1340523300494;
   HuePickerTsx2.__initData = tmp14;
   obj6.onUpdate = HuePickerTsx2;
-  const items4 = [closure_12, onPanFinalize, require("module_1705").scheduleOnRN];
+  const items4 = [closure_12, onPanFinalize, require("module_1708").scheduleOnRN];
   _require = undefined;
   importDefault = undefined;
   [tmp20, tmp21, tmp22] = items4;
@@ -161,7 +161,7 @@ export default function HuePicker(lightness) {
   HuePickerTsx4.__workletHash = 9466436421270;
   HuePickerTsx4.__initData = tmp25;
   const items9 = [sharedValue];
-  const animatedStyle = require("module_1652").useAnimatedStyle(HuePickerTsx4);
+  const animatedStyle = require("module_1655").useAnimatedStyle(HuePickerTsx4);
   const items10 = [sharedValue3];
   const callback = obj7.useCallback((nativeEvent) => {
     const result = s.set(nativeEvent.nativeEvent.layout.width);
@@ -169,7 +169,7 @@ export default function HuePicker(lightness) {
   const callback1 = obj7.useCallback((nativeEvent) => {
     const result = l.set(nativeEvent.nativeEvent.layout.width);
   }, items10);
-  const tmp2Result = require("module_1652");
+  const tmp2Result = require("module_1655");
   const items11 = [closure_14, sharedValue1, sharedValue2, flag, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -200,7 +200,7 @@ export default function HuePicker(lightness) {
   HuePickerTsx5.__closure = items12;
   HuePickerTsx5.__workletHash = 7167757714665;
   HuePickerTsx5.__initData = tmp36;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(HuePickerTsx5);
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(HuePickerTsx5);
   const items13 = [tmp.container, , , ];
   let containerFullWidth = flag;
   if (flag) {
@@ -214,7 +214,7 @@ export default function HuePicker(lightness) {
   const obj10 = { colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 }, style: null, children: null };
   const items14 = [tmp.colorBar, ];
   let colorBarFullWidth = flag;
-  const tmp2Result2 = require("module_1652");
+  const tmp2Result2 = require("module_1655");
   if (flag) {
     colorBarFullWidth = tmp.colorBarFullWidth;
   }
@@ -234,7 +234,7 @@ export default function HuePicker(lightness) {
   const obj12 = { onLayout: callback, pointerEvents: "box-none", style: null };
   const items17 = [tmp.slider, sliderStyle, animatedStyle];
   obj12.style = items17;
-  items16[1] = c6(_modDef1652.View, obj12);
+  items16[1] = c6(_modDef1655.View, obj12);
   obj8.children = items16;
-  return closure_7(_modDef1652.View, obj8);
+  return closure_7(_modDef1655.View, obj8);
 };

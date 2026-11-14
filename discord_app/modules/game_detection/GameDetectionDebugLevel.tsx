@@ -1,6 +1,6 @@
-// === Module 7635: GameDetectionDebugLevel ===
+// === Module 7701: GameDetectionDebugLevel ===
 
-// Module 7635 (GameDetectionDebugLevel)
+// Module 7701 (GameDetectionDebugLevel)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_detection/GameDetectionDebugLevel.tsx");

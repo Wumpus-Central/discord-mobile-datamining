@@ -1,21 +1,21 @@
-// === Module 10181: UserSearchManager ===
+// === Module 10250: UserSearchManager ===
 
-// Module 10181 (UserSearchManager)
+// Module 10250 (UserSearchManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import applyDefault from "apply" /* 12 */;
 import Constants from "Constants" /* 1072 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import FlagUtilsAll from "FlagUtils" /* 1403 */;
-import ChannelRecord from "ChannelRecord" /* 5096 */;
-import UserUtilsDefault from "UserUtils" /* 5309 */;
-import UserSearchWorkerManager from "UserSearchWorkerManager" /* 10182 */;
-import UserRecord from "UserRecord" /* 1404 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import RelationshipStore from "RelationshipStore" /* 5185 */;
-import UserStore from "UserStore" /* 1385 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import FlagUtilsAll from "FlagUtils" /* 1406 */;
+import ChannelRecord from "ChannelRecord" /* 5159 */;
+import UserUtilsDefault from "UserUtils" /* 5372 */;
+import UserSearchWorkerManager from "UserSearchWorkerManager" /* 10251 */;
+import UserRecord from "UserRecord" /* 1407 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import RelationshipStore from "RelationshipStore" /* 5248 */;
+import UserStore from "UserStore" /* 1388 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 import size from "module_2" /* 2 */;
 
 function getTransformedUser(user) {
@@ -950,7 +950,7 @@ prototype2["getUserSearchContext"] = function getUserSearchContext(parseUserResu
       }
     };
     obj._worker = _worker;
-    obj._uuid = obj(1266).v4();
+    obj._uuid = obj(1269).v4();
     obj._callback = parseUserResults;
     obj._limit = num;
     obj._currentQuery = null;

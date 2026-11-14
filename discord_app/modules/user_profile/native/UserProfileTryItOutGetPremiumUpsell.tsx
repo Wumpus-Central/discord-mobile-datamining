@@ -1,10 +1,10 @@
-// === Module 17054: UserProfileTryItOutGetPremiumUpsell ===
+// === Module 17177: UserProfileTryItOutGetPremiumUpsell ===
 
-// Module 17054 (UserProfileTryItOutGetPremiumUpsell)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7852 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9512 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10885 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 17051 */;
+// Module 17177 (UserProfileTryItOutGetPremiumUpsell)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7918 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9579 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10954 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 17174 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(9539).useNitroTrialCtaOverride();
+  let nitroTrialCtaOverride = analyticsLocations(9606).useNitroTrialCtaOverride();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   items = [analyticsLocations];
   const callback = noop.useCallback(() => {
@@ -24,7 +24,7 @@ export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
     openPremiumModalDefault(obj);
   }, items);
   const obj2 = { text: null, buttonText: null, buttonVariant: "experimental_premium-primary", onButtonPress: null, onLayout: null };
-  let obj = analyticsLocations(9539);
+  let obj = analyticsLocations(9606);
   const intl = analyticsLocations(1113).intl;
   obj2.text = intl.format(analyticsLocations(1113).t.TmfgI2, { onClick: callback });
   if (nitroTrialCtaOverride == null) {

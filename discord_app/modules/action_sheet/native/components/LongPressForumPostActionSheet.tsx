@@ -1,42 +1,42 @@
-// === Module 11081: LongPressForumPostActionSheet ===
+// === Module 11148: LongPressForumPostActionSheet ===
 
-// Module 11081 (LongPressForumPostActionSheet)
+// Module 11148 (LongPressForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import useChannelNameDefault from "useChannelName" /* 5891 */;
-import ToastUtils from "ToastUtils" /* 5951 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6205 */;
-import GuildIconDefault from "GuildIcon" /* 7654 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7808 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import ClipboardUtils from "ClipboardUtils" /* 7877 */;
-import ActionSheetRow from "ActionSheetRow" /* 7887 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8797 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10850 */;
-import buildFavoritesSectionButtonsDefault from "buildFavoritesSectionButtons" /* 10906 */;
-import markChannelUnreadDefault from "markChannelUnread" /* 10923 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 11084 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11798 */;
-import threadActionSheets from "threadActionSheets" /* 11828 */;
-import useFavoritesGuildChannelActionsDefault from "useFavoritesGuildChannelActions" /* 11831 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import useChannelNameDefault from "useChannelName" /* 5954 */;
+import ToastUtils from "ToastUtils" /* 6014 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6268 */;
+import GuildIconDefault from "GuildIcon" /* 7720 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7874 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
+import ClipboardUtils from "ClipboardUtils" /* 7943 */;
+import ActionSheetRow from "ActionSheetRow" /* 7953 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8660 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8864 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10919 */;
+import buildFavoritesSectionButtonsDefault from "buildFavoritesSectionButtons" /* 10975 */;
+import markChannelUnreadDefault from "markChannelUnread" /* 10992 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 11151 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11864 */;
+import threadActionSheets from "threadActionSheets" /* 11894 */;
+import useFavoritesGuildChannelActionsDefault from "useFavoritesGuildChannelActions" /* 11897 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 5176 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 5177 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 8804 */;
+import LurkingStore from "LurkingStore" /* 5239 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 5240 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 8871 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import ReadStateStore from "ReadStateStore" /* 6952 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import ReadStateStore from "ReadStateStore" /* 7015 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: closure_10, AnalyticsSections: closure_11, ChannelSettingsSections: closure_12 } = Constants);
-const ChannelFlags = fn(5099).ChannelFlags;
+const ChannelFlags = fn(5162).ChannelFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/action_sheet/native/components/LongPressForumPostActionSheet.tsx");
@@ -58,8 +58,8 @@ export default function ForumPostLongPressActionSheet(thread) {
   const items3 = [ReadStateStore];
   const stateFromStores3 = thread(504).useStateFromStores(items3, () => ReadStateStore.hasUnreadOrMentions(thread.id));
   const obj4 = thread(504);
-  const canMarkChannelUnread = thread(10923).useCanMarkChannelUnread(thread);
-  const obj5 = thread(10923);
+  const canMarkChannelUnread = thread(10992).useCanMarkChannelUnread(thread);
+  const obj5 = thread(10992);
   const items4 = [LurkingStore];
   const stateFromStores4 = thread(504).useStateFromStores(items4, () => {
     let isLurkingResult = null != closure_2;
@@ -69,16 +69,16 @@ export default function ForumPostLongPressActionSheet(thread) {
     return isLurkingResult;
   });
   const obj6 = thread(504);
-  const firstMessage = thread(11830).useFirstForumPostMessage(thread).firstMessage;
-  const obj7 = thread(11830);
-  const isThreadModerator = thread(7223).useIsThreadModerator(parentChannel);
-  const obj8 = thread(7223);
-  const canManageThread = thread(7223).useCanManageThread(thread);
-  const obj9 = thread(7223);
-  const canUnarchiveThread = thread(7223).useCanUnarchiveThread(thread);
-  const obj10 = thread(7223);
-  const existingPin = thread(9040).useExistingPin(thread);
-  const obj11 = thread(9040);
+  const firstMessage = thread(11896).useFirstForumPostMessage(thread).firstMessage;
+  const obj7 = thread(11896);
+  const isThreadModerator = thread(7287).useIsThreadModerator(parentChannel);
+  const obj8 = thread(7287);
+  const canManageThread = thread(7287).useCanManageThread(thread);
+  const obj9 = thread(7287);
+  const canUnarchiveThread = thread(7287).useCanUnarchiveThread(thread);
+  const obj10 = thread(7287);
+  const existingPin = thread(9107).useExistingPin(thread);
+  const obj11 = thread(9107);
   const items5 = [ThreadMessageStore];
   const stateFromStores5 = thread(504).useStateFromStores(items5, () => {
     let num = ThreadMessageStore.getCount(thread.id);
@@ -87,7 +87,7 @@ export default function ForumPostLongPressActionSheet(thread) {
     }
     return num;
   });
-  const DeveloperMode = thread(5068).DeveloperMode;
+  const DeveloperMode = thread(5131).DeveloperMode;
   const setting = DeveloperMode.useSetting();
   const obj12 = thread(504);
   const items6 = [AuthenticationStore];
@@ -99,8 +99,8 @@ export default function ForumPostLongPressActionSheet(thread) {
   const obj13 = thread(504);
   const tmp18 = useChannelNameDefault(thread);
   if (null != stateFromStores) {
-    const obj14 = { guild: stateFromStores, size: tmp(7654).GuildIconSizes.LARGE };
-    let tmp21 = jsx(GuildIconDefault, { guild: stateFromStores, size: tmp(7654).GuildIconSizes.LARGE });
+    const obj14 = { guild: stateFromStores, size: tmp(7720).GuildIconSizes.LARGE };
+    let tmp21 = jsx(GuildIconDefault, { guild: stateFromStores, size: tmp(7720).GuildIconSizes.LARGE });
     let tmp20 = jsx;
     const tmp17Result = GuildIconDefault;
   } else {
@@ -134,7 +134,7 @@ export default function ForumPostLongPressActionSheet(thread) {
     items7.push(obj16);
   }
   const obj17 = { sectionKey: "mark-as-read", buttons: [] };
-  const MarkChannelUnreadExperiment = tmp(10920).MarkChannelUnreadExperiment;
+  const MarkChannelUnreadExperiment = tmp(10989).MarkChannelUnreadExperiment;
   if (MarkChannelUnreadExperiment.getConfig({ location: "forum_post_action_sheet" }).enabled) {
     if (!stateFromStores3) {
       if (canMarkChannelUnread) {
@@ -142,7 +142,7 @@ export default function ForumPostLongPressActionSheet(thread) {
         const obj18 = { label: null, IconComponent: null, onPress: null };
         let intl = tmp(1113).intl;
         obj18.label = intl.string(tmp(1113).t.RpE9k7);
-        obj18.IconComponent = tmp(10921).ChatMarkUnreadIcon;
+        obj18.IconComponent = tmp(10990).ChatMarkUnreadIcon;
         obj18.onPress = function onPress() {
           markChannelUnreadDefault(thread.id);
         };
@@ -159,14 +159,14 @@ export default function ForumPostLongPressActionSheet(thread) {
         const t = tmp(1113).t;
         if (stateFromStores1) {
           obj20.label = string(t["2LsZdT"]);
-          obj20.IconComponent = tmp(5964).UserMinusIcon;
+          obj20.IconComponent = tmp(6027).UserMinusIcon;
           obj20.onPress = function onPress() {
             return ThreadActionCreatorsDefault.leaveThread(thread, "Context Menu");
           };
           push(obj20);
         } else {
           obj20.label = string(t.ihLPiO);
-          obj20.IconComponent = tmp(10927).BellIcon;
+          obj20.IconComponent = tmp(10996).BellIcon;
           obj20.onPress = function onPress() {
             return ThreadActionCreatorsDefault.joinThread(thread, "Context Menu");
           };
@@ -179,7 +179,7 @@ export default function ForumPostLongPressActionSheet(thread) {
           const obj21 = { label: null, IconComponent: null, onPress: null };
           let intl5 = tmp(1113).intl;
           obj21.label = intl5.string(tmp(1113).t.cnRubV);
-          obj21.IconComponent = tmp(5979).ClockIcon;
+          obj21.IconComponent = tmp(6042).ClockIcon;
           obj21.onPress = function onPress() {
             ThreadActionCreatorsDefault.unarchiveThread(thread, false);
           };
@@ -190,7 +190,7 @@ export default function ForumPostLongPressActionSheet(thread) {
         const obj22 = { label: null, IconComponent: null, onPress: null };
         let intl4 = tmp(1113).intl;
         obj22.label = intl4.string(tmp(1113).t.BTs4Kb);
-        obj22.IconComponent = tmp(10797).XLargeIcon;
+        obj22.IconComponent = tmp(10866).XLargeIcon;
         obj22.onPress = function onPress() {
           ThreadActionCreatorsDefault.archiveThread(thread, false);
         };
@@ -205,14 +205,14 @@ export default function ForumPostLongPressActionSheet(thread) {
         const t2 = tmp(1113).t;
         if (locked) {
           obj23.label = string2(t2["/OKSxp"]);
-          obj23.IconComponent = tmp(11082).LockUnlockedIcon;
+          obj23.IconComponent = tmp(11149).LockUnlockedIcon;
           obj23.onPress = function onPress() {
             ThreadActionCreatorsDefault.unlockThread(thread);
           };
           push2(obj23);
         } else {
           obj23.label = string2(t2["Ur/0Na"]);
-          obj23.IconComponent = tmp(8027).LockIcon;
+          obj23.IconComponent = tmp(8092).LockIcon;
           obj23.onPress = function onPress() {
             ThreadActionCreatorsDefault.lockThread(thread);
           };
@@ -232,7 +232,7 @@ export default function ForumPostLongPressActionSheet(thread) {
         const obj24 = { label: null, IconComponent: null, onPress: null };
         let intl7 = tmp(1113).intl;
         obj24.label = intl7.string(tmp(1113).t.NP1yHG);
-        obj24.IconComponent = tmp(10832).PencilIcon;
+        obj24.IconComponent = tmp(10901).PencilIcon;
         obj24.onPress = function onPress() {
           const obj2 = { guildId: parentChannel.guild_id, parentChannelId: parentChannel.id, threadId: thread.id, messageId: null, isEdit: true, analyticsLocations: null, analyticsLocationObject: null };
           const obj = ForumComposerModalActionCreators;
@@ -249,7 +249,7 @@ export default function ForumPostLongPressActionSheet(thread) {
         const obj25 = { label: null, IconComponent: null, onPress: null };
         const intl8 = tmp(1113).intl;
         obj25.label = intl8.string(tmp(1113).t.SGuVbR);
-        obj25.IconComponent = tmp(10500).SettingsIcon;
+        obj25.IconComponent = tmp(10569).SettingsIcon;
         obj25.onPress = function onPress() {
           ChannelSettingsActionCreatorsDefault.setSection(constants4.OVERVIEW);
           ChannelSettingsActionCreatorsDefault.open(thread.id);
@@ -260,9 +260,9 @@ export default function ForumPostLongPressActionSheet(thread) {
           const obj26 = { label: null, IconComponent: null, onPress: null };
           const intl9 = tmp(1113).intl;
           obj26.label = intl9.string(tmp(1113).t["436ZFw"]);
-          obj26.IconComponent = tmp(11796).TagsIcon;
+          obj26.IconComponent = tmp(11862).TagsIcon;
           obj26.onPress = function onPress() {
-            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11794, dependencyMap.paths), "ForumPostTagsActionSheet", { thread, parentChannel, canManageThread });
+            ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11860, dependencyMap.paths), "ForumPostTagsActionSheet", { thread, parentChannel, canManageThread });
           };
           buttons7.push(obj26);
         }
@@ -271,7 +271,7 @@ export default function ForumPostLongPressActionSheet(thread) {
       const obj27 = { label: null, IconComponent: null, onPress: null };
       const intl10 = tmp(1113).intl;
       obj27.label = intl10.string(tmp(1113).t.WqhZss);
-      obj27.IconComponent = tmp(5966).LinkIcon;
+      obj27.IconComponent = tmp(6029).LinkIcon;
       obj27.onPress = function onPress() {
         const result = messages_MessagesUtils.handleCopyLinkForumPost(thread.guild_id, thread.id, { section: constants3.CONTEXT_MENU });
       };
@@ -288,14 +288,14 @@ export default function ForumPostLongPressActionSheet(thread) {
           const t3 = tmp(1113).t;
           if (hasFlagResult) {
             obj29.label = string4(t3.trD8ao);
-            obj29.IconComponent = tmp(10470).PinIcon;
+            obj29.IconComponent = tmp(10539).PinIcon;
             obj29.onPress = function onPress() {
               return ThreadActionCreatorsDefault.unpin(thread);
             };
             push4(obj29);
           } else {
             obj29.label = string4(t3.EnaWhu);
-            obj29.IconComponent = tmp(10470).PinIcon;
+            obj29.IconComponent = tmp(10539).PinIcon;
             obj29.onPress = function onPress() {
               if (null != ThreadMessageStore) {
                 const obj3 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null };
@@ -326,7 +326,7 @@ export default function ForumPostLongPressActionSheet(thread) {
               const obj31 = { label: null, IconComponent: null, onPress: null };
               const intl14 = tmp(1113).intl;
               obj31.label = intl14.string(tmp(1113).t.DQ797g);
-              obj31.IconComponent = tmp(11562).IdIcon;
+              obj31.IconComponent = tmp(11629).IdIcon;
               obj31.onPress = function onPress() {
                 ClipboardUtils.copy(thread.id);
                 ToastUtils.presentPostIdCopied();
@@ -335,9 +335,9 @@ export default function ForumPostLongPressActionSheet(thread) {
               obj30.buttons = items9;
               items7.push(obj30);
             }
-            const obj32 = { showGradient: true, startExpanded: tmp(1624).isMetaQuest(), header: null, children: null };
+            const obj32 = { showGradient: true, startExpanded: tmp(1627).isMetaQuest(), header: null, children: null };
             const obj33 = { title: tmp18, icon: tmp21 };
-            obj32.header = tmp20(tmp(11832).ActionSheetIconHeader, obj33);
+            obj32.header = tmp20(tmp(11898).ActionSheetIconHeader, obj33);
             obj32.children = items7.map((buttons) => {
               buttons = buttons.buttons;
               return jsx(ActionSheetRow.ActionSheetRow.Group, {
@@ -351,9 +351,9 @@ export default function ForumPostLongPressActionSheet(thread) {
                     const intl2 = thread(1113).intl;
                     tmp3 = label === intl2.string(thread(1113).t.xwMqD7);
                   }
-                  return closure_1_14(thread(7887).ActionSheetRow, {
+                  return closure_1_14(thread(7953).ActionSheetRow, {
                     variant: str,
-                    icon: closure_1_14(thread(7887).ActionSheetRow.Icon, { IconComponent, disableColor }),
+                    icon: closure_1_14(thread(7953).ActionSheetRow.Icon, { IconComponent, disableColor }),
                     label,
                     trailing,
                     onPress() {
@@ -364,7 +364,7 @@ export default function ForumPostLongPressActionSheet(thread) {
                 })
               }, buttons.sectionKey);
             });
-            return tmp20(tmp(7885).ActionSheet, obj32);
+            return tmp20(tmp(7951).ActionSheet, obj32);
           }
         }
         if (tmp24) {
@@ -385,7 +385,7 @@ export default function ForumPostLongPressActionSheet(thread) {
         }
         const obj34 = {
           label: string5Result,
-          IconComponent: tmp(5977).TrashIcon,
+          IconComponent: tmp(6040).TrashIcon,
           onPress() {
                   const intl = util.intl;
                   const stringResult = intl.string(util.t.nEOg1N);
@@ -442,21 +442,21 @@ export default function ForumPostLongPressActionSheet(thread) {
         let onPress = tmp(1113).t;
         if (stateFromStores2) {
           obj36.label = string3(onPress["0JQfsP"]);
-          obj36.IconComponent = tmp(10927).BellIcon;
+          obj36.IconComponent = tmp(10996).BellIcon;
           obj36.onPress = function onPress() {
             return ThreadActionCreatorsDefault.setNotificationSettings(thread, { muted: !closure_1_1 });
           };
           push3(obj36);
         } else {
           obj36.label = string3(onPress["nP+Ykd"]);
-          obj36.IconComponent = tmp(10925).BellSlashIcon;
+          obj36.IconComponent = tmp(10994).BellSlashIcon;
           obj36.onPress = function onPress() {
             const obj = ActionSheetActionCreatorsDefault;
             const obj2 = { guildId: null, channelId: null };
             const combined = "muteSettings" + thread.id;
             obj2.guildId = thread.getGuildId();
             obj2.channelId = thread.id;
-            obj.openLazy(asyncRequireImpl(11012, dependencyMap.paths), combined, obj2);
+            obj.openLazy(asyncRequireImpl(11081, dependencyMap.paths), combined, obj2);
           };
           push3(obj36);
         }
@@ -466,7 +466,7 @@ export default function ForumPostLongPressActionSheet(thread) {
         intl11 = tmp(1113).intl;
         string3 = intl11.string;
         obj37.label = string3(tmp(1113).t.HcoRu0);
-        obj37.IconComponent = tmp(10928).ChannelNotificationIcon;
+        obj37.IconComponent = tmp(10997).ChannelNotificationIcon;
         onPress = function onPress() {
           return threadActionSheets.showThreadNotificationsBottomSheet(thread);
         };
@@ -480,7 +480,7 @@ export default function ForumPostLongPressActionSheet(thread) {
   const obj38 = { label: null, IconComponent: null, onPress: null };
   let intl2 = tmp(1113).intl;
   obj38.label = intl2.string(tmp(1113).t.e6RscS);
-  obj38.IconComponent = tmp(7569).EyeIcon;
+  obj38.IconComponent = tmp(7635).EyeIcon;
   obj38.onPress = function onPress() {
     ReadStateActionCreators.ack(thread.id, { object: constants2.MARK_FORUM_POST_AS_READ_BUTTON, objectType: constants.ACK_MANUAL }, true, true);
   };

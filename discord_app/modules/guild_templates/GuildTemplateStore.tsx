@@ -1,10 +1,10 @@
-// === Module 8395: GuildTemplateStore ===
+// === Module 8461: GuildTemplateStore ===
 
-// Module 8395 (GuildTemplateStore)
+// Module 8461 (GuildTemplateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import createResolvedGuildTemplateDefault from "createResolvedGuildTemplate" /* 8064 */;
-import GuildTemplatesConstants from "GuildTemplatesConstants" /* 8065 */;
+import createResolvedGuildTemplateDefault from "createResolvedGuildTemplate" /* 8129 */;
+import GuildTemplatesConstants from "GuildTemplatesConstants" /* 8130 */;
 import size from "module_2" /* 2 */;
 
 function handleGuildTemplateResolveSuccess(guildTemplate) {

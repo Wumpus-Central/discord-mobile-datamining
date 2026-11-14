@@ -1,15 +1,15 @@
-// === Module 20263: DeprecatedModalManager ===
+// === Module 20418: DeprecatedModalManager ===
 
-// Module 20263 (DeprecatedModalManager)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5429 */;
-import RootNavigationRef from "RootNavigationRef" /* 5430 */;
-import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 6786 */;
-import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 20174 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8339 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 8396 */;
-import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 20264 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 5086 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
+// Module 20418 (DeprecatedModalManager)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
+import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 6849 */;
+import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 20334 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8405 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 8462 */;
+import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 20419 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 5149 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 require = fn;
 function handlePushedModal(modal) {

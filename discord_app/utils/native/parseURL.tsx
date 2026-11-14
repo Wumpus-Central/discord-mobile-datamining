@@ -1,26 +1,26 @@
-// === Module 5985: parseURL ===
+// === Module 6048: parseURL ===
 
-// Module 5985 (parseURL)
+// Module 6048 (parseURL)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import FingerprintUtils from "FingerprintUtils" /* 1265 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import URLUtilsDefault from "URLUtils" /* 1378 */;
-import UrlDefault from "Url" /* 1381 */;
-import _modDef1487 from "module_1487" /* 1487 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
-import _modDef2067 from "module_2067" /* 2067 */;
-import LinkUtils from "LinkUtils" /* 5893 */;
-import findCodedLinks from "findCodedLinks" /* 5988 */;
-import CodedLink from "CodedLink" /* 5992 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6692 */;
-import Authorize from "Authorize" /* 7338 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 9646 */;
-import SecureFramesDeeplinkExperiment from "SecureFramesDeeplinkExperiment" /* 10568 */;
-import conjureProjectLink from "conjureProjectLink" /* 12345 */;
-import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 15828 */;
-import QRLoginUtils from "QRLoginUtils" /* 16162 */;
-import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 16163 */;
+import FingerprintUtils from "FingerprintUtils" /* 1254 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import URLUtilsDefault from "URLUtils" /* 1381 */;
+import UrlDefault from "Url" /* 1383 */;
+import _modDef1490 from "module_1490" /* 1490 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+import _modDef2070 from "module_2070" /* 2070 */;
+import LinkUtils from "LinkUtils" /* 5956 */;
+import findCodedLinks from "findCodedLinks" /* 6051 */;
+import CodedLink from "CodedLink" /* 6055 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6755 */;
+import Authorize from "Authorize" /* 7402 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 9713 */;
+import SecureFramesDeeplinkExperiment from "SecureFramesDeeplinkExperiment" /* 10637 */;
+import conjureProjectLink from "conjureProjectLink" /* 12440 */;
+import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 15948 */;
+import QRLoginUtils from "QRLoginUtils" /* 16283 */;
+import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 16284 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -28,7 +28,7 @@ function parseQuery(arg0) {
   try {
     const _Object = Object;
     const _Object2 = Object;
-    const entries = Object.entries(_modDef1487.parse(arg0));
+    const entries = Object.entries(_modDef1490.parse(arg0));
     return Object.fromEntries(entries.map((item) => {
       [tmp, tmp2] = item;
       items = [tmp, ];
@@ -47,9 +47,9 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, GuildSettingsSections: hasOwnProperty, GuildSettingsSubsections: closure_6, LinkingTypes: metroImportDefault } = Constants);
 const CollectiblesShopConstants = fn(1074);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const CONVERSATION_QUERY_PARAM = fn(5894).CONVERSATION_QUERY_PARAM;
-const UPDATE_CONFIG = fn(5986).UPDATE_CONFIG;
-const PaymentConstants = fn(5987);
+const CONVERSATION_QUERY_PARAM = fn(5957).CONVERSATION_QUERY_PARAM;
+const UPDATE_CONFIG = fn(6049).UPDATE_CONFIG;
+const PaymentConstants = fn(6050);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_12, MobileWebRedirectCheckoutDeepLinkQueryKeys: map1 } = PaymentConstants);
 const re14 = /feature\/([\w-]+)/;
 const re15 = /feature\/boost\/([0-9]+)/;
@@ -75,7 +75,7 @@ export default function parseURL(ctaLink) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const sanitizeUrlResult = _modDef2067.sanitizeUrl(ctaLink);
+  const sanitizeUrlResult = _modDef2070.sanitizeUrl(ctaLink);
   if (null == sanitizeUrlResult) {
     const obj3 = { payload: null };
     const obj4 = { type: metroImportDefault.NONE };
@@ -299,7 +299,7 @@ export default function parseURL(ctaLink) {
                 if (query == null) {
                   str5 = "";
                 }
-                let ad_creative_ids = _modDef1487.parse(str5).ad_creative_ids;
+                let ad_creative_ids = _modDef1490.parse(str5).ad_creative_ids;
                 if (ad_creative_ids == null) {
                   ad_creative_ids = [];
                 }
@@ -311,14 +311,14 @@ export default function parseURL(ctaLink) {
                   obj42.payload = obj43;
                   return obj42;
                 }
-                const tmpResult13 = _modDef1487;
+                const tmpResult13 = _modDef1490;
               }
               if (null != pathname.match(re27)) {
                 let str27 = query;
                 if (query == null) {
                   str27 = "";
                 }
-                let ad_creative_ids1 = _modDef1487.parse(str27).ad_creative_ids;
+                let ad_creative_ids1 = _modDef1490.parse(str27).ad_creative_ids;
                 if (ad_creative_ids1 == null) {
                   ad_creative_ids1 = [];
                 }

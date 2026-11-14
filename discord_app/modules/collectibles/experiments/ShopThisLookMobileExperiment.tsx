@@ -1,7 +1,7 @@
-// === Module 8508: ShopThisLookMobileExperiment ===
+// === Module 8574: ShopThisLookMobileExperiment ===
 
-// Module 8508 (ShopThisLookMobileExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 8574 (ShopThisLookMobileExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-shop-this-look-mobile", kind: "user", defaultConfig: { shopThisLookMobileEnabled: false }, variations: { 0: { shopThisLookMobileEnabled: false }, 1: { shopThisLookMobileEnabled: true } } });

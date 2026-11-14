@@ -1,6 +1,6 @@
-// === Module 14457: DiceRollStore ===
+// === Module 14569: DiceRollStore ===
 
-// Module 14457 (DiceRollStore)
+// Module 14569 (DiceRollStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

@@ -1,29 +1,29 @@
-// === Module 19648: LaunchPadContainer ===
+// === Module 19858: LaunchPadContainer ===
 
-// Module 19648 (LaunchPadContainer)
-import _mod1652 from "module_1652" /* 1652 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5435 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11186 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 12308 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13704 */;
-import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 18591 */;
-import useLaunchPadStateDefault from "useLaunchPadState" /* 19649 */;
-import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19651 */;
-import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19652 */;
+// Module 19858 (LaunchPadContainer)
+import _mod1655 from "module_1655" /* 1655 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5498 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11253 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 12403 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13809 */;
+import LaunchPadGestureRefContextDefault from "LaunchPadGestureRefContext" /* 18720 */;
+import useLaunchPadStateDefault from "useLaunchPadState" /* 19859 */;
+import useLaunchPadGestureDefault from "useLaunchPadGesture" /* 19861 */;
+import LaunchPadWrapperDefault from "LaunchPadWrapper" /* 19862 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(12307);
+const LaunchPadConstants = fn(12402);
 ({ LAUNCH_PAD_SPRING_CONFIG: closure_4, LaunchPadTypes: hasOwnProperty } = LaunchPadConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { wrapper: null, container: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -80,8 +80,8 @@ export default function LaunchPadContainer(children) {
   LaunchPadContainerTsx2.__closure = items3;
   LaunchPadContainerTsx2.__workletHash = 8587684116006;
   LaunchPadContainerTsx2.__initData = tmp12;
-  const animatedReaction = _mod1652.useAnimatedReaction(LaunchPadContainerTsx1, LaunchPadContainerTsx2);
-  const items4 = [closure_11, _mod1652.interpolate, launchPadSharedState, spring_spring.withSpring, tmp8, React4];
+  const animatedReaction = _mod1655.useAnimatedReaction(LaunchPadContainerTsx1, LaunchPadContainerTsx2);
+  const items4 = [closure_11, _mod1655.interpolate, launchPadSharedState, spring_spring.withSpring, tmp8, React4];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -109,7 +109,7 @@ export default function LaunchPadContainer(children) {
   LaunchPadContainerTsx3.__closure = items5;
   LaunchPadContainerTsx3.__workletHash = 13015105508497;
   LaunchPadContainerTsx3.__initData = tmp15;
-  const animatedStyle = _mod1652.useAnimatedStyle(LaunchPadContainerTsx3);
+  const animatedStyle = _mod1655.useAnimatedStyle(LaunchPadContainerTsx3);
   const MobileHomeDrawerExperiment = HomeDrawerExperiment.MobileHomeDrawerExperiment;
   let obj2 = { value: gestureRef, children: null };
   const obj3 = { gesture, children: null };
@@ -129,7 +129,7 @@ export default function LaunchPadContainer(children) {
   }
   obj5.importantForAccessibility = str;
   obj5.children = children.children;
-  const items7 = [timestampProducer(_modDef1652.View, obj5), ];
+  const items7 = [timestampProducer(_modDef1655.View, obj5), ];
   if (tmp4 !== constants.DISABLED) {
     const obj6 = { launchPadType: tmp4, gestureState, launchPadShown, launchPadSharedState, launchPadPullTabState, updaters };
     const tmp22Result = timestampProducer(LaunchPadWrapperDefault, obj6);

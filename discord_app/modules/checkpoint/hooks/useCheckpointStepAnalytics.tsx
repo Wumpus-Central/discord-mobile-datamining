@@ -1,9 +1,9 @@
-// === Module 14155: useCheckpointStepAnalytics ===
+// === Module 14264: useCheckpointStepAnalytics ===
 
-// Module 14155 (useCheckpointStepAnalytics)
-import useMountEffect from "useMountEffect" /* 5836 */;
-import Tracking from "Tracking" /* 14144 */;
-import CheckpointSessionAnalyticsManagerDefault from "CheckpointSessionAnalyticsManager" /* 14145 */;
+// Module 14264 (useCheckpointStepAnalytics)
+import useMountEffect from "useMountEffect" /* 5899 */;
+import Tracking from "Tracking" /* 14251 */;
+import CheckpointSessionAnalyticsManagerDefault from "CheckpointSessionAnalyticsManager" /* 14252 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,8 @@ export function useCheckpointStepAnalytics(route) {
 }
 export function useCheckpointCloseAnalytics() {
   const unmountEffect = useMountEffect.useUnmountEffect(() => {
-    const obj = Tracking;
-    const result = obj.trackCheckpoint2026Closed(CheckpointSessionAnalyticsManagerDefault.getStepName());
+    CheckpointSessionAnalyticsManagerDefault.stop();
+    const obj2 = Tracking;
+    const result = obj2.trackCheckpoint2026Closed(CheckpointSessionAnalyticsManagerDefault.getStepName());
   });
 }

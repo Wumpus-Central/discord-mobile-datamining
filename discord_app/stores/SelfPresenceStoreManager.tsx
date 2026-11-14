@@ -1,9 +1,9 @@
-// === Module 20237: SelfPresenceStoreManager ===
+// === Module 20392: SelfPresenceStoreManager ===
 
-// Module 20237 (SelfPresenceStoreManager)
+// Module 20392 (SelfPresenceStoreManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 7252 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 function handleChange() {
   const obj = DispatcherDefault;

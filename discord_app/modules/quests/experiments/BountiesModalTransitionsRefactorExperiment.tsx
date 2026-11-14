@@ -1,7 +1,7 @@
-// === Module 17430: BountiesModalTransitionsRefactorExperiment ===
+// === Module 17548: BountiesModalTransitionsRefactorExperiment ===
 
-// Module 17430 (BountiesModalTransitionsRefactorExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 17548 (BountiesModalTransitionsRefactorExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-07-bounties-modal-transitions-refactor", kind: "user", defaultConfig: { enabled: false }, variations: null };

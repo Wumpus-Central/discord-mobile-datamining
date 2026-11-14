@@ -1,6 +1,6 @@
-// === Module 10723: getBoostLifecyclePhase ===
+// === Module 10792: getBoostLifecyclePhase ===
 
-// Module 10723 (getBoostLifecyclePhase)
+// Module 10792 (getBoostLifecyclePhase)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 

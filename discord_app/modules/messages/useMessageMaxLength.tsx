@@ -1,9 +1,9 @@
-// === Module 11090: useMessageMaxLength ===
+// === Module 11157: useMessageMaxLength ===
 
-// Module 11090 (useMessageMaxLength)
+// Module 11157 (useMessageMaxLength)
 import initialize from "initialize" /* 504 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import UserStore from "UserStore" /* 1385 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const Constants = fn(1072);

@@ -1,22 +1,22 @@
-// === Module 13336: ExpandableList ===
+// === Module 13441: ExpandableList ===
 
-// Module 13336 (ExpandableList)
+// Module 13441 (ExpandableList)
 import util from "util" /* 1113 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import timingPresets from "timingPresets" /* 5488 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import usePreviousDefault from "usePrevious" /* 6773 */;
-import TableRow from "TableRow" /* 7379 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import timingPresets from "timingPresets" /* 5551 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import usePreviousDefault from "usePrevious" /* 6836 */;
+import TableRow from "TableRow" /* 7443 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = tmp4(1652);
+const _modDef1655 = tmp4(1655);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_9 = createStyles.createStyles({ animatedListContainer: { overflow: "hidden" }, expandCTALabelContainer: { alignItems: "center" } });
 let closure_10 = { code: "(function ExpandableListTsx1(){let[expanded,collapsedListHeight,remainingListHeight]=this.__closure;if(expanded&&collapsedListHeight.get()!==0&&remainingListHeight.get()!==0){return collapsedListHeight.get()+remainingListHeight.get();}return collapsedListHeight.get();})" };
 let closure_11 = { code: "(function ExpandableListTsx2(){let[collapsedListHeight,withTiming,containerHeight,timingStandard]=this.__closure;if(collapsedListHeight.get()!==0){return{height:withTiming(containerHeight.get(),timingStandard)};}else{return{};}})" };
@@ -66,8 +66,8 @@ export default function ExpandableList(onExpand) {
   if (null == showsExpandCTAOverride) {
     showsExpandCTAOverride = items.length > bound;
   }
-  sharedValue = _mod1652.useSharedValue(0);
-  sharedValue1 = _mod1652.useSharedValue(0);
+  sharedValue = _mod1655.useSharedValue(0);
+  sharedValue1 = _mod1655.useSharedValue(0);
   const items3 = [closure_10, first, sharedValue, sharedValue1];
   memo1 = undefined;
   importDefault = undefined;
@@ -96,7 +96,7 @@ export default function ExpandableList(onExpand) {
   ExpandableListTsx1.__workletHash = 3023496786140;
   ExpandableListTsx1.__initData = tmp12;
   const items5 = [items, bound];
-  const derivedValue = _mod1652.useDerivedValue(ExpandableListTsx1);
+  const derivedValue = _mod1655.useDerivedValue(ExpandableListTsx1);
   const memo = noop.useMemo(() => memo1.slice(0, bound), items5);
   const items6 = [items, bound];
   noop.useMemo(() => memo1.slice(bound, memo1.length), items6);
@@ -125,7 +125,7 @@ export default function ExpandableList(onExpand) {
   ExpandableListTsx2.__closure = items8;
   ExpandableListTsx2.__workletHash = 10519564962816;
   ExpandableListTsx2.__initData = tmp17;
-  const animatedStyle = _mod1652.useAnimatedStyle(ExpandableListTsx2);
+  const animatedStyle = _mod1655.useAnimatedStyle(ExpandableListTsx2);
   let obj2 = { style: null, children: null };
   const items9 = [tmp.animatedListContainer, animatedStyle];
   obj2.style = items9;
@@ -171,7 +171,7 @@ export default function ExpandableList(onExpand) {
   }
   items10[1] = tmp25Result;
   obj2.children = items10;
-  const items11 = [metroImportDefault(_modDef1652.View, obj2), ];
+  const items11 = [metroImportDefault(_modDef1655.View, obj2), ];
   if (!showsExpandCTAOverride) {
     const obj8 = { children: null };
     items11[1] = showsExpandCTAOverride;
@@ -214,6 +214,6 @@ export default function ExpandableList(onExpand) {
     obj12.children = obj10;
     timestampProducer(View, obj12);
   }
-  const tmp9Result = _mod1652;
+  const tmp9Result = _mod1655;
 };
 export const COLLAPSED_LIST_ITEM_MAX = 4;

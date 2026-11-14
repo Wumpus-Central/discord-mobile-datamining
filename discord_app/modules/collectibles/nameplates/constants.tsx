@@ -1,7 +1,7 @@
-// === Module 2112: constants ===
+// === Module 2115: constants ===
 
-// Module 2112 (constants)
-import types from "types" /* 2113 */;
+// Module 2115 (constants)
+import types from "types" /* 2116 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};

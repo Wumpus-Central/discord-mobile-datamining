@@ -1,12 +1,12 @@
-// === Module 18126: UserSettingsDesignSystemsScreen ===
+// === Module 18246: UserSettingsDesignSystemsScreen ===
 
-// Module 18126 (UserSettingsDesignSystemsScreen)
-import SettingBuilders from "SettingBuilders" /* 12311 */;
-import SettingLayoutDefault from "SettingLayout" /* 17090 */;
+// Module 18246 (UserSettingsDesignSystemsScreen)
+import SettingBuilders from "SettingBuilders" /* 12406 */;
+import SettingLayoutDefault from "SettingLayout" /* 17213 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(9135).MobileUserSettings;
+const MobileUserSettings = fn(9202).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx");
@@ -15,8 +15,8 @@ export default function SettingsDesignSystemsScreen() {
   const node = noop.useMemo(() => {
     const obj2 = { sections: null };
     const obj3 = { label: "Components", settings: null };
-    items = [, , , , , , , , , , , , , , , , ];
-    ({ DESIGN_SYSTEMS_TEXT: arr[0], DESIGN_SYSTEMS_BUTTON: arr[1], DESIGN_SYSTEMS_BUTTON_GROUP: arr[2], DESIGN_SYSTEMS_ROW_BUTTON: arr[3], DESIGN_SYSTEMS_TABLE_ROW: arr[4], DESIGN_SYSTEMS_ALERT_MODAL: arr[5], DESIGN_SYSTEMS_SHADOWS: arr[6], DESIGN_SYSTEM_SEGMENTED_CONTROL: arr[7], DESIGN_SYSTEMS_TABS: arr[8], DESIGN_SYSTEM_BACKDROP: arr[9], DESIGN_SYSTEMS_TOOLTIP: arr[10], DESIGN_SYSTEMS_COACHMARK: arr[11], DESIGN_SYSTEM_FORM_PRIMITIVES: arr[12], DESIGN_SYSTEMS_TEXT_INPUT: arr[13], DESIGN_SYSTEM_PILE: arr[14], DESIGN_SYSTEM_TAG_GROUP: arr[15], DESIGN_SYSTEM_HAPTICS: arr[16] } = constants);
+    items = [, , , , , , , , , , , , , , , , , ];
+    ({ DESIGN_SYSTEMS_TEXT: arr[0], DESIGN_SYSTEMS_BUTTON: arr[1], DESIGN_SYSTEMS_BUTTON_GROUP: arr[2], DESIGN_SYSTEMS_ROW_BUTTON: arr[3], DESIGN_SYSTEMS_TABLE_ROW: arr[4], DESIGN_SYSTEM_DRAG_HANDLE: arr[5], DESIGN_SYSTEMS_ALERT_MODAL: arr[6], DESIGN_SYSTEMS_SHADOWS: arr[7], DESIGN_SYSTEM_SEGMENTED_CONTROL: arr[8], DESIGN_SYSTEMS_TABS: arr[9], DESIGN_SYSTEM_BACKDROP: arr[10], DESIGN_SYSTEMS_TOOLTIP: arr[11], DESIGN_SYSTEMS_COACHMARK: arr[12], DESIGN_SYSTEM_FORM_PRIMITIVES: arr[13], DESIGN_SYSTEMS_TEXT_INPUT: arr[14], DESIGN_SYSTEM_PILE: arr[15], DESIGN_SYSTEM_TAG_GROUP: arr[16], DESIGN_SYSTEM_HAPTICS: arr[17] } = constants);
     obj3.settings = items;
     const items1 = [obj3, , , , ];
     const obj4 = { label: "AI Visual Identity", settings: null };

@@ -1,10 +1,10 @@
-// === Module 13097: useConjureProjectSettingsDraft ===
+// === Module 13196: useConjureProjectSettingsDraft ===
 
-// Module 13097 (useConjureProjectSettingsDraft)
+// Module 13196 (useConjureProjectSettingsDraft)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 
 const require = globalThis.__r;
 
@@ -47,7 +47,8 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
   let obj4 = require("ConjureHostApproval");
   [tmp10, closure_9] = changes(commit.useState(str), 2);
   const tmp9 = changes(commit.useState(str), 2);
-  [tmp12, closure_10] = changes(commit.useState(null), 2);
+  [tmp12, tmp13] = changes(commit.useState(null), 2);
+  closure_10 = tmp13;
   const tmp11 = changes(commit.useState(null), 2);
   [str2, closure_11] = changes(commit.useState(tmp10), 2);
   let num;
@@ -59,36 +60,64 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
   }
   const tmp8Result = changes(commit.useState(num), 2);
   let flags = tmp8Result[0];
-  closure_13 = tmp8Result[1];
-  const tmp8Result9 = changes(commit.useState(() => {
+  closure_13 = tmp17;
+  const tmp8Result10 = changes(commit.useState(() => {
     items = [...prop];
     return items;
   }), 2);
-  const first1 = tmp8Result9[0];
-  closure_15 = tmp8Result9[1];
+  const first1 = tmp8Result10[0];
+  closure_15 = tmp20;
+  let install_scope;
+  if (stateFromStores != null) {
+    install_scope = stateFromStores.install_scope;
+  }
+  let tmp22 = null;
+  if ("guild" === install_scope) {
+    let guild_id = stateFromStores.guild_id;
+    if (guild_id == null) {
+      guild_id = null;
+    }
+    tmp22 = guild_id;
+  }
+  const tmp8Result11 = changes(commit.useState(tmp22), 2);
+  if (tmp22 !== tmp8Result11[0]) {
+    tmp8Result11[1](tmp22);
+    let num2;
+    if (stateFromStores != null) {
+      num2 = stateFromStores.flags;
+    }
+    if (num2 == null) {
+      num2 = 0;
+    }
+    tmp17(num2);
+    const items2 = [];
+    HermesBuiltin.arraySpread(prop, 0);
+    tmp20(items2);
+    tmp13(null);
+  }
   let uses_preview_app;
   if (stateFromStores != null) {
     uses_preview_app = stateFromStores.uses_preview_app;
   }
-  const tmp13 = changes(commit.useState(tmp10), 2);
-  [tmp20, tmp21] = changes(commit.useState(null), 2);
-  if (tmp22) {
-    tmp21(null);
+  const tmp14 = changes(commit.useState(tmp10), 2);
+  [tmp34, tmp35] = changes(commit.useState(null), 2);
+  if (tmp36) {
+    tmp35(null);
   }
-  const tmp8Result11 = changes(commit.useState(false), 2);
-  const first2 = tmp8Result11[0];
-  closure_18 = tmp8Result11[1];
-  tmp22 = null != tmp20 && tmp20 === uses_preview_app;
-  const tmp8Result10 = changes(commit.useState(null), 2);
-  [tmp27, closure_19] = changes(commit.useState(null), 2);
+  const tmp8Result13 = changes(commit.useState(false), 2);
+  const first2 = tmp8Result13[0];
+  closure_18 = tmp8Result13[1];
+  tmp36 = null != tmp34 && tmp34 === uses_preview_app;
   const tmp8Result12 = changes(commit.useState(null), 2);
-  [tmp29, closure_20] = changes(commit.useState(null), 2);
-  const tmp8Result13 = changes(commit.useState(null), 2);
-  [tmp31, closure_21] = changes(commit.useState(null), 2);
+  [tmp41, closure_19] = changes(commit.useState(null), 2);
   const tmp8Result14 = changes(commit.useState(null), 2);
-  [tmp33, closure_22] = changes(commit.useState(null), 2);
+  [tmp43, closure_20] = changes(commit.useState(null), 2);
   const tmp8Result15 = changes(commit.useState(null), 2);
-  [tmp35, closure_23] = changes(commit.useState(false), 2);
+  [tmp45, closure_21] = changes(commit.useState(null), 2);
+  const tmp8Result16 = changes(commit.useState(null), 2);
+  [tmp47, closure_22] = changes(commit.useState(null), 2);
+  const tmp8Result17 = changes(commit.useState(null), 2);
+  [tmp49, closure_23] = changes(commit.useState(false), 2);
   closure_24 = obj5.useRef(null);
   closure_25 = obj5.useRef(false);
   const trimmed = str2.trim();
@@ -97,46 +126,42 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
     result = tmp(tmp2[9]).projectSupportsVisibility(stateFromStores);
     const tmpResult = tmp(tmp2[9]);
   }
-  let tmp38 = null != stateFromStores;
-  if (tmp38) {
-    tmp38 = "guild" === stateFromStores.install_scope;
-  }
-  let result1 = tmp38;
-  if (tmp38) {
+  let result1 = tmp52;
+  if (null != stateFromStores && "guild" === stateFromStores.install_scope) {
     result1 = null != arg1;
   }
   if (result1) {
     result1 = tmp(tmp2[9]).projectSupportsCollaboratorRoles(stateFromStores);
     const tmpResult4 = tmp(tmp2[9]);
   }
-  const tmp8Result16 = changes(commit.useState(false), 2);
+  const tmp8Result18 = changes(commit.useState(false), 2);
   const conjureProjectAccessSettings = require("ConjureUtils").getConjureProjectAccessSettings(flags);
   const isGuildCollaboration = conjureProjectAccessSettings.isGuildCollaboration;
-  let tmp41 = null != stateFromStores;
-  if (tmp41) {
-    tmp41 = trimmed !== tmp10;
+  let tmp55 = null != stateFromStores;
+  if (tmp55) {
+    tmp55 = trimmed !== tmp10;
   }
-  closure_28 = tmp41;
-  let tmp42 = result;
+  closure_28 = tmp55;
+  let tmp56 = result;
   if (result) {
-    let num2;
+    let num4;
     if (tmp12 != null) {
-      num2 = tmp12.flags;
+      num4 = tmp12.flags;
     }
-    if (num2 == null) {
+    if (num4 == null) {
       flags = undefined;
       if (stateFromStores != null) {
         flags = stateFromStores.flags;
       }
-      num2 = flags;
+      num4 = flags;
     }
-    if (num2 == null) {
-      num2 = 0;
+    if (num4 == null) {
+      num4 = 0;
     }
-    tmp42 = flags !== num2;
+    tmp56 = flags !== num4;
   }
-  closure_29 = tmp42;
-  let tmp44 = result1;
+  closure_29 = tmp56;
+  let tmp58 = result1;
   if (result1) {
     let roleIds;
     if (tmp12 != null) {
@@ -145,31 +170,31 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
     if (roleIds == null) {
       roleIds = prop;
     }
-    tmp44 = !tmp(tmp2[11]).haveSameRoleIds(first1, roleIds);
+    tmp58 = !tmp(tmp2[11]).haveSameRoleIds(first1, roleIds);
     const tmpResult6 = tmp(tmp2[11]);
   }
-  closure_30 = tmp44;
-  let flag = tmp20;
-  if (tmp20 == null) {
+  closure_30 = tmp58;
+  let flag = tmp34;
+  if (tmp34 == null) {
     flag = uses_preview_app;
   }
   if (flag == null) {
     flag = false;
   }
-  let tmp47 = tmp46;
+  let tmp61 = tmp60;
   if (null != uses_preview_app) {
-    tmp47 = null != tmp20;
+    tmp61 = null != tmp34;
   }
-  closure_32 = tmp47;
-  let changed = tmp41;
-  if (!tmp41) {
-    changed = tmp42;
-  }
-  if (!changed) {
-    changed = tmp44;
+  closure_32 = tmp61;
+  let changed = tmp55;
+  if (!tmp55) {
+    changed = tmp56;
   }
   if (!changed) {
-    changed = tmp47;
+    changed = tmp58;
+  }
+  if (!changed) {
+    changed = tmp61;
   }
   if (!changed) {
     changed = tmp5.changed;
@@ -189,16 +214,16 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
   const setChecked = conjureLiveReloadSetting.setChecked;
   const setChecked2 = conjureSmartContextSetting.setChecked;
   const setChecked3 = conjureRequireHostApprovalSetting.setChecked;
-  const items2 = [setIcon];
-  const items3 = [setDescription];
+  const items3 = [setIcon];
+  const items4 = [setDescription];
   const callback = obj5.useCallback((channelId) => {
     setIcon(channelId);
     closure_1_21(null);
-  }, items2);
+  }, items3);
   const callback1 = obj5.useCallback((description) => {
     setDescription(description);
     closure_1_21(null);
-  }, items3);
+  }, items4);
   const callback2 = obj5.useCallback((arg0) => {
     closure_1_11(arg0);
     closure_1_19(null);
@@ -218,16 +243,16 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
     closure_1_20(null);
     closure_1_21(null);
   }, []);
-  const items4 = [setChecked];
+  const items5 = [setChecked];
   const callback4 = obj5.useCallback((arg0) => {
-    tmp21(arg0);
+    tmp35(arg0);
     closure_1_21(null);
   }, []);
   const callback5 = obj5.useCallback((arg0) => {
     setChecked(arg0);
     closure_1_21(null);
-  }, items4);
-  const items5 = [arg1, stateFromStores];
+  }, items5);
+  const items6 = [arg1, stateFromStores];
   const callback6 = obj5.useCallback(save(function*() {
     if (c5 === 2) {
       c5 = 3;
@@ -362,7 +387,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
         }
       }
     }
-  }), items5);
+  }), items6);
   _require = save(function*(arg0) {
     if (c4 === 2) {
       c4 = 3;
@@ -440,8 +465,8 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
       }
     }
   });
-  const items6 = [callback6, first1];
-  const items7 = [setChecked2];
+  const items7 = [callback6, first1];
+  const items8 = [setChecked2];
   const callback7 = obj5.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
@@ -451,18 +476,18 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }, items6);
-  const items8 = [setChecked3];
+  }, items7);
+  const items9 = [setChecked3];
   const callback8 = obj5.useCallback((arg0) => {
     setChecked2(arg0);
     closure_1_22(null);
-  }, items7);
+  }, items8);
   const callback9 = obj5.useCallback((arg0) => {
     setChecked3(arg0);
     closure_1_22(null);
-  }, items8);
-  const items9 = [commit, flags, tmp42, arg1, changed2, changes, isGuildCollaboration, tmp41, tmp47, flag, stateFromStores, arg0, changed, tmp44, save3, save, save2, first2, first1, trimmed];
-  let obj6 = { iconURL: tmp5.iconURL, description: tmp5.description, liveReload: conjureLiveReloadSetting, smartContext: conjureSmartContextSetting, hostApproval: conjureRequireHostApprovalSetting, name: str2, nameError: tmp27, nameChanged: tmp41, isPublic: conjureProjectAccessSettings.isPublic, isGuildCollaboration, usesPreviewApp: flag, canChangePreviewApp: null != uses_preview_app, selectedRoleIds: first1, supportsVisibility: result, supportsCollaboration: tmp38, supportsCollaboratorRoles: result1, checkingAppInGuild: tmp35, saving: first2, selectionError: tmp29, saveError: tmp31, experimentalError: tmp33, canSave: null, handleIconChange: null, handleNameChange: null, handleDescriptionChange: null, handleFlagChange: null, handleUsesPreviewAppChange: null, handleLiveReloadChange: null, handleRoleSelectionChange: null, ensureAppInGuild: null, handleSmartContextChange: null, handleRequireHostApprovalChange: null, submit: null };
+  }, items9);
+  const items10 = [commit, flags, tmp56, arg1, changed2, changes, isGuildCollaboration, tmp55, tmp61, flag, stateFromStores, arg0, changed, tmp58, save3, save, save2, first2, first1, trimmed];
+  let obj6 = { iconURL: tmp5.iconURL, description: tmp5.description, liveReload: conjureLiveReloadSetting, smartContext: conjureSmartContextSetting, hostApproval: conjureRequireHostApprovalSetting, name: str2, nameError: tmp41, nameChanged: tmp55, isPublic: conjureProjectAccessSettings.isPublic, isGuildCollaboration, usesPreviewApp: flag, canChangePreviewApp: null != uses_preview_app, selectedRoleIds: first1, supportsVisibility: result, supportsCollaboration: null != stateFromStores && "guild" === stateFromStores.install_scope, supportsCollaboratorRoles: result1, checkingAppInGuild: tmp49, saving: first2, selectionError: tmp43, saveError: tmp45, experimentalError: tmp47, canSave: null, handleIconChange: null, handleNameChange: null, handleDescriptionChange: null, handleFlagChange: null, handleUsesPreviewAppChange: null, handleLiveReloadChange: null, handleRoleSelectionChange: null, ensureAppInGuild: null, handleSmartContextChange: null, handleRequireHostApprovalChange: null, submit: null };
   const callback10 = obj5.useCallback(save(function*() {
     if (c4 === 2) {
       c4 = 3;
@@ -606,7 +631,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
         }
       }
     }
-  }), items9);
+  }), items10);
   if (changed2) {
     changed2 = "" !== trimmed;
   }

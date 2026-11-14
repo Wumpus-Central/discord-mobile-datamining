@@ -1,12 +1,12 @@
-// === Module 19173: useMainTabsChannelScreenStyles ===
+// === Module 19365: useMainTabsChannelScreenStyles ===
 
-// Module 19173 (useMainTabsChannelScreenStyles)
+// Module 19365 (useMainTabsChannelScreenStyles)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
+import _mod1655 from "module_1655" /* 1655 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = { elevation: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -65,7 +65,7 @@ export function useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth,
   useMainTabsChannelScreenStylesTsx1.__closure = items1;
   useMainTabsChannelScreenStylesTsx1.__workletHash = 1877489175721;
   useMainTabsChannelScreenStylesTsx1.__initData = tmp2;
-  const animatedStyle = _mod1652.useAnimatedStyle(useMainTabsChannelScreenStylesTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(useMainTabsChannelScreenStylesTsx1);
   const items2 = [tmp, animatedStyle];
   return noop.useMemo(() => {
     items = [_undefined.elevation, animatedStyle];

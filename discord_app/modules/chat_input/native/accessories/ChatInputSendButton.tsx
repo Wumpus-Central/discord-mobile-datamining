@@ -1,19 +1,19 @@
-// === Module 14548: ChatInputSendButton ===
+// === Module 14660: ChatInputSendButton ===
 
-// Module 14548 (ChatInputSendButton)
+// Module 14660 (ChatInputSendButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import useToken from "useToken" /* 5839 */;
-import SendMessageIcon from "SendMessageIcon" /* 5968 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13695 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 13698 */;
-import VoiceMessageButtonDefault from "VoiceMessageButton" /* 14549 */;
-import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 14553 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import useToken from "useToken" /* 5902 */;
+import SendMessageIcon from "SendMessageIcon" /* 6031 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 13800 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 13803 */;
+import VoiceMessageButtonDefault from "VoiceMessageButton" /* 14661 */;
+import useChatInputFloatingWidthDefault from "useChatInputFloatingWidth" /* 14666 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
-import SlowmodeStore from "SlowmodeStore" /* 8725 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
+import SlowmodeStore from "SlowmodeStore" /* 8792 */;
 
 require = fn;
 function renderChatInputSendButton(type, arg1, state, cleanup) {
@@ -142,13 +142,13 @@ function FloatingSlot(arg0) {
   const obj2 = { style: null, children };
   items = [{ height: buttonHeight }, useChatInputFloatingWidthDefault({ expanded: !sendVoiceMessageEnabled, collapsedWidth: buttonHeight + 2 * buttonMargin, expandedWidth: buttonWidth + 2 * buttonMargin }).animatedStyle];
   obj2.style = items;
-  return jsx(_modDef1652.View, { style: null, children });
+  return jsx(_modDef1655.View, { style: null, children });
 }
 const View = fn(17).View;
-let closure_8 = fn(13699).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(13804).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = { BUTTON_SEND: "send-button", BUTTON_SEND_DISABLED: "send-button-disabled", BUTTON_SEND_VOICE_MESSAGE: "voice-message-button", BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled" };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_11 = createStyles.createStyles((width, height) => {
   const obj = { button: null, buttonActive: { backgroundColor: nativeDefault.colors.CHAT_INPUT_SEND_BUTTON_ACTIVE_BACKGROUND }, iconActive: null };
   const size = { width, height };

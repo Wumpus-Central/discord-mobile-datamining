@@ -1,22 +1,23 @@
-// === Module 19249: SwipeForMemberListWrapper ===
+// === Module 19441: SwipeForMemberListWrapper ===
 
-// Module 19249 (SwipeForMemberListWrapper)
+// Module 19441 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5429 */;
-import RootNavigationRef from "RootNavigationRef" /* 5430 */;
-import useChatLayout from "useChatLayout" /* 5432 */;
-import ChatInputUtils from "ChatInputUtils" /* 5438 */;
-import useThemeDefault from "useTheme" /* 5484 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6269 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10202 */;
-import useChatWidthDefault from "useChatWidth" /* 12326 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18589 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 18600 */;
-import ChannelDetailsDefault from "ChannelDetails" /* 19251 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
+import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import useChatLayout from "useChatLayout" /* 5495 */;
+import ChatInputUtils from "ChatInputUtils" /* 5501 */;
+import useThemeDefault from "useTheme" /* 5547 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6332 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10271 */;
+import useChatWidthDefault from "useChatWidth" /* 12421 */;
+import VoicePanelDockScrimDefault from "VoicePanelDockScrim" /* 15122 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18718 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 18729 */;
+import ChannelDetailsDefault from "ChannelDetails" /* 19443 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -27,15 +28,15 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(8997);
+const ChannelDetailsStore = fn(9064);
 ({ getIsChannelDetailsSearchActive: metroImportDefault, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(8985).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9052).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { memberListPreview: null, content: null, memberListContainer: null, onyxBorder: null, onyxRightOverflow: null };
 const tmp6 = new LoggerDefault("SwipeForMemberListWrapper");
 obj2.memberListPreview = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -128,8 +129,8 @@ export default function _default(channelId) {
   SwipeForMemberListWrapperTsx5.__closure = items4;
   SwipeForMemberListWrapperTsx5.__workletHash = 10636144961030;
   SwipeForMemberListWrapperTsx5.__initData = tmp13;
-  derivedValue = require("module_1652").useDerivedValue(SwipeForMemberListWrapperTsx5);
-  let obj2 = require("module_1652");
+  derivedValue = require("module_1655").useDerivedValue(SwipeForMemberListWrapperTsx5);
+  let obj2 = require("module_1655");
   derivedStateFromSharedValue = require("useStateFromSharedValue").useDerivedStateFromSharedValue(derivedValue, (arg0) => arg0 > 0);
   const items5 = [derivedStateFromSharedValue, channelId, screenIndex];
   const effect1 = obj.useEffect(() => {
@@ -175,7 +176,7 @@ export default function _default(channelId) {
   SwipeForMemberListWrapperTsx6.__closure = items9;
   SwipeForMemberListWrapperTsx6.__workletHash = 5263013881598;
   SwipeForMemberListWrapperTsx6.__initData = tmp23;
-  const derivedValue1 = require("module_1652").useDerivedValue(SwipeForMemberListWrapperTsx6);
+  const derivedValue1 = require("module_1655").useDerivedValue(SwipeForMemberListWrapperTsx6);
   const items10 = [channelId, screenIndex, movePanel];
   callback3 = obj.useCallback((channelId) => {
     let tmp = channelId.channelId === c0;
@@ -278,7 +279,7 @@ export default function _default(channelId) {
   const effect5 = obj.useEffect(() => {
     callback4();
   }, items15);
-  const tmp12Result9 = require("module_1652");
+  const tmp12Result9 = require("module_1655");
   navigation = require("Link").useNavigation();
   closure_129_0 = channelId;
   closure_129_1 = screenIndex;
@@ -306,12 +307,12 @@ export default function _default(channelId) {
   gesture3 = undefined;
   disallowGesture2 = undefined;
   disallowGesture3 = undefined;
-  const context = obj.useContext(tmp2(11944));
+  const context = obj.useContext(tmp2(12011));
   const gesture2 = context.gesture;
   importDefault = gesture2;
   const disallowGesture = context.disallowGesture;
   dependencyMap = disallowGesture;
-  let context1 = obj.useContext(tmp12(11944).MainTabsChannelScreenStackContext);
+  let context1 = obj.useContext(tmp12(12011).MainTabsChannelScreenStackContext);
   if (context1 == null) {
     context1 = {};
   }
@@ -368,8 +369,8 @@ export default function _default(channelId) {
   SwipeForMemberListWrapperTsx2.__closure = items22;
   SwipeForMemberListWrapperTsx2.__workletHash = 6834415820461;
   SwipeForMemberListWrapperTsx2.__initData = tmp43;
-  const animatedReaction = require("module_1652").useAnimatedReaction(SwipeForMemberListWrapperTsx1, SwipeForMemberListWrapperTsx2);
-  const tmp12Result11 = require("module_1652");
+  const animatedReaction = require("module_1655").useAnimatedReaction(SwipeForMemberListWrapperTsx1, SwipeForMemberListWrapperTsx2);
+  const tmp12Result11 = require("module_1655");
   const items23 = [closure_19, useChatLayoutDefault().isChatLockedOpen, context.translateX, context1.translateX];
   _require = undefined;
   importDefault = undefined;
@@ -416,8 +417,8 @@ export default function _default(channelId) {
   SwipeForMemberListWrapperTsx4.__closure = items26;
   SwipeForMemberListWrapperTsx4.__workletHash = 10562317341127;
   SwipeForMemberListWrapperTsx4.__initData = tmp52;
-  const animatedReaction1 = require("module_1652").useAnimatedReaction(SwipeForMemberListWrapperTsx3, SwipeForMemberListWrapperTsx4);
-  const tmp12Result12 = require("module_1652");
+  const animatedReaction1 = require("module_1655").useAnimatedReaction(SwipeForMemberListWrapperTsx3, SwipeForMemberListWrapperTsx4);
+  const tmp12Result12 = require("module_1655");
   const unmountEffect = require("useMountEffect").useUnmountEffect(() => {
     const result = disallowGesture3.set(false);
     const result1 = _undefined2.set(false);
@@ -464,14 +465,14 @@ export default function _default(channelId) {
   SwipeForMemberListWrapperTsx7.__closure = items29;
   SwipeForMemberListWrapperTsx7.__workletHash = 2478251364213;
   SwipeForMemberListWrapperTsx7.__initData = tmp58;
-  const animatedStyle = require("module_1652").useAnimatedStyle(SwipeForMemberListWrapperTsx7);
+  const animatedStyle = require("module_1655").useAnimatedStyle(SwipeForMemberListWrapperTsx7);
   let obj3 = { value: memo3, children: null };
-  const tmp12Result15 = require("module_1652");
+  const tmp12Result15 = require("module_1655");
   let tmp63 = null;
   if (tmp12Result16.isJankScreenReportingEnabled()) {
-    let obj4 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp12(18595).getBaseScreenName, resolveClosedName: tmp12(18595).getBaseScreenName, onCoveringChange: callback2 };
-    tmp63 = navigation(tmp2(18598), obj4);
-    const tmp2Result = tmp2(18598);
+    let obj4 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp12(18724).getBaseScreenName, resolveClosedName: tmp12(18724).getBaseScreenName, onCoveringChange: callback2 };
+    tmp63 = navigation(tmp2(18727), obj4);
+    const tmp2Result = tmp2(18727);
   }
   const items30 = [tmp63, ];
   let obj5 = { gesture: memo2, children: null };
@@ -508,16 +509,17 @@ export default function _default(channelId) {
   }
   const obj8 = { style: items33, accessibilityElementsHidden: !derivedStateFromSharedValue, importantForAccessibility: "no-hide-descendants", children: null };
   items33[3] = onyxRightOverflow;
-  const items34 = [navigation(ThemedGradientDefault, { absolute: true, withOverlay: true, overlayOpacity: 0.5 }), , ];
+  const items34 = [navigation(ThemedGradientDefault, { absolute: true, withOverlay: true, overlayOpacity: 0.5 }), , , ];
   tmp12Result16 = require("isJankScreenReportingEnabled");
   const tmp70 = !derivedStateFromSharedValue;
   items34[1] = navigation(require("LayerScope").LayerScope, { children: navigation(ChannelDetailsDefault, { isShowing: derivedStateFromSharedValue, channelId: tmp5[0], isSearchLocked: false, onBackPress: callback5, componentWidth: tmp8, onChannelDeleted: callback4 }) });
+  items34[2] = navigation(VoicePanelDockScrimDefault, {});
   const obj10 = { style: null, children: navigation(panelGestureContext, { style: tmp.memberListPreview }) };
   const items35 = [disallowGesture3.absoluteFill, animatedStyle];
   obj10.style = items35;
-  items34[2] = navigation(_modDef1652.View, obj10);
+  items34[3] = navigation(_modDef1655.View, obj10);
   obj8.children = items34;
-  items32[1] = closure_14(_modDef1652.View, obj8);
+  items32[1] = closure_14(_modDef1655.View, obj8);
   obj6.children = items32;
   obj5.children = closure_14(panelGestureContext, obj6);
   items30[1] = navigation(require("LegacyBaseButton").GestureDetector, obj5);

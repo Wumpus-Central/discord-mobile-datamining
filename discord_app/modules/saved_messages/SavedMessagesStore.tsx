@@ -1,11 +1,11 @@
-// === Module 11843: SavedMessagesStore ===
+// === Module 11909: SavedMessagesStore ===
 
-// Module 11843 (SavedMessagesStore)
+// Module 11909 (SavedMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6311 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 11839 */;
-import UserStore from "UserStore" /* 1385 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6374 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 11905 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function getTimeSafe(dueAt) {
@@ -115,7 +115,7 @@ function handleGuild() {
   return tmp;
 }
 let c3 = 10000000000000;
-const secondaryIndexMap = new fn(5170).SecondaryIndexMap((saveData) => {
+const secondaryIndexMap = new fn(5233).SecondaryIndexMap((saveData) => {
   items = [SavedMessagesTypes.SavedMessageSortTypes.ALL, ];
   if (null != saveData.saveData.dueAt) {
     let BOOKMARK = SavedMessagesTypes.SavedMessageSortTypes.REMINDER;
@@ -138,7 +138,7 @@ let closure_7 = 0;
 let set = new Set();
 const set1 = new Set();
 let nextBefore = null;
-let FAILED = fn(11839).BookmarksFetchState.LOADED_FINISHED;
+let FAILED = fn(11905).BookmarksFetchState.LOADED_FINISHED;
 let c12 = false;
 let c13 = null;
 const set2 = new Set();

@@ -1,11 +1,11 @@
-// === Module 8471: parseCollectiblesSequencedOffers ===
+// === Module 8537: parseCollectiblesSequencedOffers ===
 
-// Module 8471 (parseCollectiblesSequencedOffers)
+// Module 8537 (parseCollectiblesSequencedOffers)
 import size from "module_2" /* 2 */;
 
 function parseSequencedOffer(assets) {
   assets = assets.assets;
-  return { position: assets.position, cardShape: assets.card_shape, assets: { locked: assets.locked, hint: assets.hint, idleAnimation: assets.idle_animation, revealAnimation: assets.reveal_animation } };
+  return { position: assets.position, cardShape: assets.card_shape, assets: { locked: assets.locked, calendarLocked: assets.calendar_locked, hint: assets.hint, idleAnimation: assets.idle_animation, revealAnimation: assets.reveal_animation } };
 }
 const result = size.fileFinishedImporting("modules/collectibles/utils/parseCollectiblesSequencedOffers.tsx");
 

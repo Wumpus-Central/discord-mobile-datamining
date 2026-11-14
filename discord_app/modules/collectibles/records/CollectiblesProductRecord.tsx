@@ -1,13 +1,13 @@
-// === Module 8421: CollectiblesProductRecord ===
+// === Module 8487: CollectiblesProductRecord ===
 
-// Module 8421 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 2167 */;
+// Module 8487 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 2170 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 8422 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 8428 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 8488 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 8494 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(8423);
+const CollectiblesItemRecord = fn(8489);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: closure_6 } = CollectiblesItemRecord);
 let closure_7 = fn(1074).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1072);
@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "to", type: "Array", premiumType: "channel", items: true, categorySkuId: true, categoryWillUnpublishAt: true, isCategoryReward: true, prices: true, previewAssets: true, googleSkuIds: true, eligibleOffers: true, variants: true, bundledProducts: "Array", isFirstParty: "channel" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "to", type: "Array", premiumType: "channelId", items: "ansigt", categorySkuId: "godnat", categoryWillUnpublishAt: "sengetid", isCategoryReward: "sove", prices: "sovende ansigt", previewAssets: "s\u00F8vn", googleSkuIds: "s\u00F8vnig", eligibleOffers: "tr\u00E6t", variants: "zzz", bundledProducts: "\u3044\u3073\u304D", isFirstParty: "\u304A\u3084\u3059\u307F" };
               let str;
               if (first != null) {
                 str = first.optionValue;

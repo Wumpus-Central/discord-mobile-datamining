@@ -1,43 +1,43 @@
-// === Module 11737: PremiumGiftBackgroundSelectTile ===
+// === Module 11803: PremiumGiftBackgroundSelectTile ===
 
-// Module 11737 (PremiumGiftBackgroundSelectTile)
+// Module 11803 (PremiumGiftBackgroundSelectTile)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef2749 from "module_2749" /* 2749 */;
-import FastImageDefault from "FastImage" /* 5957 */;
-import _modDef11739 from "module_11739" /* 11739 */;
-import _modDef11740 from "module_11740" /* 11740 */;
-import _modDef11741 from "module_11741" /* 11741 */;
-import _modDef11742 from "module_11742" /* 11742 */;
-import _modDef11743 from "module_11743" /* 11743 */;
-import _modDef11744 from "module_11744" /* 11744 */;
-import _modDef11745 from "module_11745" /* 11745 */;
-import _modDef11746 from "module_11746" /* 11746 */;
-import _modDef11747 from "module_11747" /* 11747 */;
+import _modDef2765 from "module_2765" /* 2765 */;
+import FastImageDefault from "FastImage" /* 6020 */;
+import _modDef11805 from "module_11805" /* 11805 */;
+import _modDef11806 from "module_11806" /* 11806 */;
+import _modDef11807 from "module_11807" /* 11807 */;
+import _modDef11808 from "module_11808" /* 11808 */;
+import _modDef11809 from "module_11809" /* 11809 */;
+import _modDef11810 from "module_11810" /* 11810 */;
+import _modDef11811 from "module_11811" /* 11811 */;
+import _modDef11812 from "module_11812" /* 11812 */;
+import _modDef11813 from "module_11813" /* 11813 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
-const PremiumGiftStyles = fn(1387).PremiumGiftStyles;
-const GIFT_STYLE_DESCRIPTIONS = fn(11738).GIFT_STYLE_DESCRIPTIONS;
+const PremiumGiftStyles = fn(1390).PremiumGiftStyles;
+const GIFT_STYLE_DESCRIPTIONS = fn(11804).GIFT_STYLE_DESCRIPTIONS;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const GIFT_STYLE_IMG = { [STANDARD_BOX]: _modDef11739, [CAKE]: _modDef11740, [CHEST]: _modDef11741, [COFFEE]: _modDef11742 };
+const GIFT_STYLE_IMG = { [STANDARD_BOX]: _modDef11805, [CAKE]: _modDef11806, [CHEST]: _modDef11807, [COFFEE]: _modDef11808 };
 ({ STANDARD_BOX, CAKE, CHEST, COFFEE } = PremiumGiftStyles);
-GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef11743 };
+GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef11809 };
 GIFT_STYLE_IMG[PremiumGiftStyles.SNOWGLOBE] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.BOX] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.CUP] = null;
-let obj2 = { uri: _modDef11743 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef11744 };
-let obj3 = { uri: _modDef11744 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef11745 };
-let obj4 = { uri: _modDef11745 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef11746 };
-const obj5 = { uri: _modDef11746 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef11747 };
-const createStyles = fn(5243);
+let obj2 = { uri: _modDef11809 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef11810 };
+let obj3 = { uri: _modDef11810 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef11811 };
+let obj4 = { uri: _modDef11811 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef11812 };
+const obj5 = { uri: _modDef11812 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef11813 };
+const createStyles = fn(5306);
 let closure_9 = createStyles.createStyles((arg0) => {
   const size = { width: 78, height: 44, justifyContent: "center", marginEnd: nativeDefault.space.PX_8, marginStart: null };
   let num = 0;
@@ -64,7 +64,7 @@ export default function GiftBackgroundSelectTile(index) {
     const obj2 = { giftStyle: null };
     const intl2 = util.intl;
     obj2.giftStyle = intl2.string(GIFT_STYLE_DESCRIPTIONS[giftStyle]);
-    obj["aria-label"] = intl.formatToPlainString(_modDef2749["+utqaz"], obj2);
+    obj["aria-label"] = intl.formatToPlainString(_modDef2765["+utqaz"], obj2);
     obj["aria-selected"] = selected;
     obj.style = tmp.container;
     obj.onPress = index.onPress;

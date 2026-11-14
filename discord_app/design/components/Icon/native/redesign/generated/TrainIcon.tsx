@@ -1,9 +1,9 @@
-// === Module 18109: TrainIcon ===
+// === Module 18229: TrainIcon ===
 
-// Module 18109 (TrainIcon)
+// Module 18229 (TrainIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod18110 from "module_18110" /* 18110 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod18230 from "module_18230" /* 18230 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function TrainIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18110, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18230, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

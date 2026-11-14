@@ -1,7 +1,7 @@
-// === Module 7429: useDesignToggle ===
+// === Module 7495: useDesignToggle ===
 
-// Module 7429 (useDesignToggle)
-import DesignTogglesStore from "DesignTogglesStore" /* 7430 */;
+// Module 7495 (useDesignToggle)
+import DesignTogglesStore from "DesignTogglesStore" /* 7496 */;
 
 const require = globalThis.__r;
 

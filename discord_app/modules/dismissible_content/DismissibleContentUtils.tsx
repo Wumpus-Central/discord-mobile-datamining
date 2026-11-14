@@ -1,21 +1,21 @@
-// === Module 5077: DismissibleContentUtils ===
+// === Module 5140: DismissibleContentUtils ===
 
-// Module 5077 (DismissibleContentUtils)
+// Module 5140 (DismissibleContentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5073 */;
-import dismissible_content from "dismissible_content" /* 5076 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 5080 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 5083 */;
-import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 5090 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5307 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5929 */;
-import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5930 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5136 */;
+import dismissible_content from "dismissible_content" /* 5139 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 5143 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 5146 */;
+import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 5153 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5370 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5992 */;
+import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5993 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 5079 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 5142 */;
 
 const require = globalThis.__r;
 
@@ -439,13 +439,13 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(5078).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(5084);
+const DCFEventTypes = fn(5141).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(5147);
 ({ addCandidateContent: closure_8, removeCandidateContent: closure_9, isContentShown: closure_10, getCurrentlyShownCounts: closure_11 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 let c14 = 2592000000;
-let items = [fn(5076).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(5076).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION, fn(5076).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT];
+let items = [fn(5139).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(5139).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_CALL_EDUCATION, fn(5139).DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");
@@ -567,7 +567,7 @@ export function isTimeRecurringDismissibleContentDismissed(id, cooldownConfig) {
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "Array" };
+      return { isDismissed: false, lastDismissedAtMs: "a" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {
@@ -713,7 +713,7 @@ export function isDismissibleContentBlockedByOverlay(content, arg1, arg2) {
   }
   return tmp;
 }
-export function requestMarkDismissibleContentAsShown(PASSWORDLESS_UPSELL, guildId, arg2, guildId) {
+export function requestMarkDismissibleContentAsShown(PASSWORDLESS_UPSELL, guildId, guildId, DismissibleContentFrameworkStore) {
   closure_0 = PASSWORDLESS_UPSELL;
   importDefault = guildId;
   let hasUserHitDCCapResult = closure_10(PASSWORDLESS_UPSELL);
@@ -725,12 +725,12 @@ export function requestMarkDismissibleContentAsShown(PASSWORDLESS_UPSELL, guildI
     hasUserHitDCCapResult = DismissibleContentFrameworkStore.hasUserHitDCCap(PASSWORDLESS_UPSELL, guildId);
   }
   if (!hasUserHitDCCapResult) {
-    let flag = arg2;
-    if (arg2 == null) {
+    let flag = guildId;
+    if (guildId == null) {
       flag = false;
     }
-    let tmp6 = guildId;
-    if (guildId == null) {
+    let tmp6 = DismissibleContentFrameworkStore;
+    if (DismissibleContentFrameworkStore == null) {
       tmp6 = null;
     }
     if (flag) {
@@ -752,12 +752,22 @@ export function requestMarkDismissibleContentAsShown(PASSWORDLESS_UPSELL, guildI
     }
     obj3.groupName = groupName;
     obj3.onAdded = function onAdded(found) {
+      let prop;
+      if (guildId != null) {
+        prop = guildId.deduplicateImpressions;
+      }
+      let tmp3 = true === prop;
+      if (tmp3) {
+        tmp3 = null != DismissibleContentFrameworkStore.getRenderedAtTimestamp(closure_0);
+      }
       guildId = undefined;
       if (guildId != null) {
         guildId = guildId.guildId;
       }
       DismissibleContentFrameworkActionCreators.handleDCShownToUser(closure_0, guildId);
-      trackDismissibleContentShown(closure_0, guildId, found);
+      if (!tmp3) {
+        trackDismissibleContentShown(closure_0, guildId, found);
+      }
       if (guildId != null) {
         const onShown = guildId.onShown;
         if (onShown != null) {

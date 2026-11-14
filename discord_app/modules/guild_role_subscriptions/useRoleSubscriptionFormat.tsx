@@ -1,15 +1,15 @@
-// === Module 20564: useRoleSubscriptionFormat ===
+// === Module 20719: useRoleSubscriptionFormat ===
 
-// Module 20564 (useRoleSubscriptionFormat)
+// Module 20719 (useRoleSubscriptionFormat)
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 5149 */;
-import GuildStore from "GuildStore" /* 5114 */;
+import GuildRoleStore from "GuildRoleStore" /* 5212 */;
+import GuildStore from "GuildStore" /* 5177 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const hasPermission = fn(5150).hasPermission;
-const constants = fn(17704).GuildRoleSubscriptionFormat;
+const hasPermission = fn(5213).hasPermission;
+const constants = fn(17824).GuildRoleSubscriptionFormat;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");

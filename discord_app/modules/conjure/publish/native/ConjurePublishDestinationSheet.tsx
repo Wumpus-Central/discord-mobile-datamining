@@ -1,14 +1,14 @@
-// === Module 13065: ConjurePublishDestinationSheet ===
+// === Module 13160: ConjurePublishDestinationSheet ===
 
-// Module 13065 (ConjurePublishDestinationSheet)
+// Module 13160 (ConjurePublishDestinationSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5489 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import TableRadioGroup from "TableRadioGroup" /* 7679 */;
-import TableRadioRow from "TableRadioRow" /* 7681 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7847 */;
-import ActionSheet from "ActionSheet" /* 7885 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5552 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import TableRadioGroup from "TableRadioGroup" /* 7745 */;
+import TableRadioRow from "TableRadioRow" /* 7747 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7913 */;
+import ActionSheet from "ActionSheet" /* 7951 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,7 @@ function PublishDestinationSheet(arg0) {
   const tmp2 = _slicedToArray(noop.useState(options.selected_destination_id), 2);
   value = tmp2[0];
   const intl = util.intl;
-  const stringResult = intl.string(value(4079).lJrOGW);
+  const stringResult = intl.string(value(4131).lJrOGW);
   const obj = {
     header: closure_6(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: stringResult }),
     onDismiss() {
@@ -38,7 +38,7 @@ function PublishDestinationSheet(arg0) {
   items = [closure_6(TableRadioGroup.TableRadioGroup, obj3), , ];
   const obj4 = { variant: "primary", text: null, onPress: null };
   const intl2 = util.intl;
-  obj4.text = intl2.string(value(4079).zh1Izp);
+  obj4.text = intl2.string(value(4131).zh1Izp);
   obj4.onPress = function onPress() {
     require(first);
     ActionSheetActionCreatorsDefault.hideActionSheet(ConjurePublishDestinationSheet);
@@ -46,7 +46,7 @@ function PublishDestinationSheet(arg0) {
   items[1] = closure_6(components_Button_Button.Button, obj4);
   const obj5 = { variant: "secondary", text: null, onPress: null };
   const intl3 = util.intl;
-  obj5.text = intl3.string(value(4079).y83r6D);
+  obj5.text = intl3.string(value(4131).y83r6D);
   obj5.onPress = function onPress() {
     require(null);
     ActionSheetActionCreatorsDefault.hideActionSheet(ConjurePublishDestinationSheet);
@@ -60,7 +60,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const ConjurePublishDestinationSheet = "ConjurePublishDestinationSheet";
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

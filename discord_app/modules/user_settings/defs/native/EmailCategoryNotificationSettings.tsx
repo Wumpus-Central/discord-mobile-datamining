@@ -1,9 +1,9 @@
-// === Module 18003: EmailCategoryNotificationSettings ===
+// === Module 18123: EmailCategoryNotificationSettings ===
 
-// Module 18003 (EmailCategoryNotificationSettings)
+// Module 18123 (EmailCategoryNotificationSettings)
 import initialize from "initialize" /* 504 */;
-import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 17999 */;
-import EmailSettingsStore from "EmailSettingsStore" /* 16120 */;
+import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 18119 */;
+import EmailSettingsStore from "EmailSettingsStore" /* 16241 */;
 
 require = fn;
 function useMarketingEmailsDisabled() {
@@ -34,7 +34,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
     obj4.onValueChange = function onValueChange(arg0) {
       return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
     };
-    obj.communication = COMMUNICATION(12311).createToggle(obj4);
+    obj.communication = COMMUNICATION(12406).createToggle(obj4);
     const SOCIAL = constants.SOCIAL;
     closure_129_0 = SOCIAL;
     const found1 = closure_4.find((category) => category.category === COMMUNICATION);
@@ -55,7 +55,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
       obj6.onValueChange = function onValueChange(arg0) {
         return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
       };
-      obj.social = tmp29(12311).createToggle(obj6);
+      obj.social = tmp29(12406).createToggle(obj6);
       const UPDATES_AND_ANNOUNCEMENTS = constants.UPDATES_AND_ANNOUNCEMENTS;
       closure_130_0 = UPDATES_AND_ANNOUNCEMENTS;
       const found2 = closure_4.find((category) => category.category === COMMUNICATION);
@@ -76,7 +76,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
         obj8.onValueChange = function onValueChange(arg0) {
           return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
         };
-        obj.updatesAndAnnouncements = tmp29(12311).createToggle(obj8);
+        obj.updatesAndAnnouncements = tmp29(12406).createToggle(obj8);
         const TIPS = constants.TIPS;
         closure_131_0 = TIPS;
         const found3 = closure_4.find((category) => category.category === COMMUNICATION);
@@ -97,7 +97,7 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
           obj10.onValueChange = function onValueChange(arg0) {
             return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
           };
-          obj.tips = tmp29(12311).createToggle(obj10);
+          obj.tips = tmp29(12406).createToggle(obj10);
           const RECOMMENDATIONS_AND_EVENTS = constants.RECOMMENDATIONS_AND_EVENTS;
           closure_132_0 = RECOMMENDATIONS_AND_EVENTS;
           const found4 = closure_4.find((category) => category.category === COMMUNICATION);
@@ -118,8 +118,8 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
             obj12.onValueChange = function onValueChange(arg0) {
               return EmailSettingsActionCreators.updateEmailSetting(COMMUNICATION, arg0);
             };
-            obj.recommendationsAndEvents = tmp29(12311).createToggle(obj12);
-            const tmp29Result7 = tmp29(12311);
+            obj.recommendationsAndEvents = tmp29(12406).createToggle(obj12);
+            const tmp29Result7 = tmp29(12406);
             const obj13 = {
               useTitle() {
                           const intl = COMMUNICATION(1113).intl;
@@ -128,22 +128,22 @@ function createEmailSettings(EMAIL_NOTIFICATIONS) {
               parent: EMAIL_NOTIFICATIONS,
               variant: "danger",
               useIsDisabled: useMarketingEmailsDisabled,
-              onPress: tmp29(17999).updateMarketingEmailSettings
+              onPress: tmp29(18119).updateMarketingEmailSettings
             };
-            obj.unsubscribeFromAllMarketing = tmp29(12311).createPressable(obj13);
+            obj.unsubscribeFromAllMarketing = tmp29(12406).createPressable(obj13);
             return obj;
           }
-          const tmp29Result6 = tmp29(12311);
+          const tmp29Result6 = tmp29(12406);
         }
-        const tmp29Result5 = tmp29(12311);
+        const tmp29Result5 = tmp29(12406);
       }
-      const tmp29Result = tmp29(12311);
+      const tmp29Result = tmp29(12406);
     }
-    const obj2 = COMMUNICATION(12311);
+    const obj2 = COMMUNICATION(12406);
   }
 }
-const MobileUserSettings = fn(9135).MobileUserSettings;
-const EmailSettingsConstants = fn(18000);
+const MobileUserSettings = fn(9202).MobileUserSettings;
+const EmailSettingsConstants = fn(18120);
 ({ EmailCategories: c3, EmailCategoriesList: closure_4, MarketingEmailCategories: hasOwnProperty } = EmailSettingsConstants);
 const emailSettings = createEmailSettings(MobileUserSettings.EMAIL_NOTIFICATIONS);
 const emailSettings1 = createEmailSettings(MobileUserSettings.REDESIGN_EMAIL_NOTIFICATIONS);

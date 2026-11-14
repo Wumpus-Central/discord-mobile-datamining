@@ -1,9 +1,9 @@
-// === Module 7184: SocialLayerStorefrontConstants ===
+// === Module 7247: SocialLayerStorefrontConstants ===
 
-// Module 7184 (SocialLayerStorefrontConstants)
+// Module 7247 (SocialLayerStorefrontConstants)
 import Constants from "Constants" /* 1072 */;
-import UserStoreConstants from "UserStoreConstants" /* 1402 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2185 */;
+import UserStoreConstants from "UserStoreConstants" /* 1405 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;

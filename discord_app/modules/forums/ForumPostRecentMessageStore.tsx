@@ -1,13 +1,13 @@
-// === Module 11079: ForumPostRecentMessageStore ===
+// === Module 11146: ForumPostRecentMessageStore ===
 
-// Module 11079 (ForumPostRecentMessageStore)
+// Module 11146 (ForumPostRecentMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6311 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import UserStore from "UserStore" /* 1385 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6374 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function handleLoadThreadsSuccess(arg0) {

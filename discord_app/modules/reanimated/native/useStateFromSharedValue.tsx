@@ -1,7 +1,7 @@
-// === Module 11186: useStateFromSharedValue ===
+// === Module 11253: useStateFromSharedValue ===
 
-// Module 11186 (useStateFromSharedValue)
-import _mod1705 from "module_1705" /* 1705 */;
+// Module 11253 (useStateFromSharedValue)
+import _mod1708 from "module_1708" /* 1708 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -72,7 +72,7 @@ export default function useStateFromSharedValue(arg0) {
         }
         useStateFromSharedValueTsx2.__workletHash = 7876346397934;
         useStateFromSharedValueTsx2.__initData = tmp3;
-        _mod1705.scheduleOnUI(useStateFromSharedValueTsx2, _undefined.listenerId, closure_0);
+        _mod1708.scheduleOnUI(useStateFromSharedValueTsx2, _undefined.listenerId, closure_0);
         map.delete(closure_0);
       }
     };
@@ -144,7 +144,7 @@ export function useDerivedStateFromSharedValue(activeIndex, current) {
         }
         useStateFromSharedValueTsx2.__workletHash = 7876346397934;
         useStateFromSharedValueTsx2.__initData = tmp3;
-        _mod1705.scheduleOnUI(useStateFromSharedValueTsx2, _undefined.listenerId, closure_0);
+        _mod1708.scheduleOnUI(useStateFromSharedValueTsx2, _undefined.listenerId, closure_0);
         map.delete(closure_0);
       }
     };

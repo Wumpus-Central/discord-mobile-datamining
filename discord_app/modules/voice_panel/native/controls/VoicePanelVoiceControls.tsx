@@ -1,25 +1,26 @@
-// === Module 19952: VoicePanelVoiceControls ===
+// === Module 20109: VoicePanelVoiceControls ===
 
-// Module 19952 (VoicePanelVoiceControls)
+// Module 20109 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
-import UserSettings from "UserSettings" /* 5068 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
-import Stack_Stack from "Stack/Stack" /* 6274 */;
-import TableRowGroup from "TableRowGroup" /* 7680 */;
-import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 11885 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11918 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 12682 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 12906 */;
-import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 12935 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 15980 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19830 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 19947 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 19953 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+import UserSettings from "UserSettings" /* 5131 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import Stack_Stack from "Stack/Stack" /* 6337 */;
+import TableRowGroup from "TableRowGroup" /* 7746 */;
+import StageChannelUnifiedCallExperiment from "StageChannelUnifiedCallExperiment" /* 11951 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 12778 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 13002 */;
+import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 13031 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 16100 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 19986 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 20104 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 20110 */;
+import StreamVolumeMovedNoticeDefault from "StreamVolumeMovedNotice" /* 20120 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import module_1652 from "module_1652" /* 1652 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import module_1655 from "module_1655" /* 1655 */;
 
 const require = globalThis.__r;
 const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
@@ -28,57 +29,59 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11917).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(11983).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { scrollView: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 }, scrollViewScreenReader: null, blurRegion: null };
 let obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.scrollViewScreenReader = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 obj.blurRegion = { height: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 let closure_8 = createStyles.createStyles(obj);
-let closure_9 = module_1652.createAnimatedComponent(fn(17).ScrollView);
+let closure_9 = module_1655.createAnimatedComponent(fn(17).ScrollView);
 let closure_10 = noop.memo(function ListItems(arg0) {
   ({ channel, openTab } = arg0);
   const channelId = noop.useContext(VoicePanelStateContextDefault).channelId;
-  const tmp2 = useShowConnectedControlsDefault(channelId);
+  const tmp3 = useShowConnectedControlsDefault(channelId);
   const embeddedActivityLaunchability = getEmbeddedActivityLaunchability.useEmbeddedActivityLaunchability(channelId);
   const DeveloperMode = UserSettings.DeveloperMode;
   const setting = DeveloperMode.useSetting();
   const treatment = MobileGoLiveEntrypointExperimentDefault.useConfig({ location: "VoicePanelVoiceControls" }).treatment;
-  let nonContextualStreamOutputPresent = MobileAudioOutputExperimentDefault.useConfig({ location: "VoicePanelVoiceControls" }).nonContextualStreamOutputPresent;
-  const tmp6 = useSelectedActiveStreamDefault(channel);
+  const tmp7 = useSelectedActiveStreamDefault(channel);
+  const obj3 = MobileAudioOutputExperimentDefault;
   const isStageUnifiedCall = StageChannelUnifiedCallExperiment.useIsStageUnifiedCall(channel, "VoicePanelVoiceControls");
-  let tmp9 = tmp2;
-  if (tmp2) {
-    tmp9 = isStageUnifiedCall;
+  let tmp10 = tmp3;
+  if (tmp3) {
+    tmp10 = isStageUnifiedCall;
   }
-  if (tmp9) {
+  if (tmp10) {
     const obj5 = { channel, openTab };
-    tmp9 = hasOwnProperty(VoicePanelVoiceControlsButtons.StageButtons, obj5);
+    tmp10 = hasOwnProperty(VoicePanelVoiceControlsButtons.StageButtons, obj5);
   }
-  items = [tmp9, , , , , , , ];
-  let tmp11 = tmp2;
-  if (tmp2) {
-    tmp11 = !isStageUnifiedCall;
+  items = [tmp10, , , , , , , ];
+  let tmp12 = tmp3;
+  if (tmp3) {
+    tmp12 = !isStageUnifiedCall;
   }
-  if (!tmp11) {
-    items[1] = tmp11;
-    let tmp15 = !isStageUnifiedCall;
+  if (!tmp12) {
+    items[1] = tmp12;
+    let tmp16 = !isStageUnifiedCall;
     if (!isStageUnifiedCall) {
-      const obj6 = { channel, connected: tmp2 };
-      tmp15 = hasOwnProperty(VoicePanelVoiceControlsButtons.GameConsoles, obj6);
+      const obj6 = { channel, connected: tmp3 };
+      tmp16 = hasOwnProperty(VoicePanelVoiceControlsButtons.GameConsoles, obj6);
     }
-    items[2] = tmp15;
-    if (nonContextualStreamOutputPresent) {
-      nonContextualStreamOutputPresent = hasOwnProperty(VoicePanelVoiceControlsButtons.StreamVolumeItem, {});
+    items[2] = tmp16;
+    if (obj3.useConfig({ location: "VoicePanelVoiceControls" }).nonContextualStreamOutputPresent) {
+      let StreamVolumeItem = VoicePanelVoiceControlsButtons.StreamVolumeItem;
+    } else {
+      StreamVolumeItem = StreamVolumeMovedNoticeDefault;
     }
-    items[3] = nonContextualStreamOutputPresent;
+    items[3] = hasOwnProperty(StreamVolumeItem, {});
     const obj7 = { title: null, hasIcons: true, children: null };
     const intl = util.intl;
     obj7.title = intl.string(util.t.dsXapM);
     const items1 = [hasOwnProperty(VoicePanelVoiceControlsButtons.DeafenSwitch, {}), , , , ];
-    const obj8 = { channel, connected: tmp2 };
+    const obj8 = { channel, connected: tmp3 };
     items1[1] = hasOwnProperty(VoicePanelVoiceControlsButtons.AudioRouteButton, obj8);
     let tmp18Result = !isStageUnifiedCall;
     if (!isStageUnifiedCall) {
@@ -87,9 +90,9 @@ let closure_10 = noop.memo(function ListItems(arg0) {
     }
     items1[2] = tmp18Result;
     items1[3] = hasOwnProperty(VoicePanelVoiceControlsButtons.HideSelfVideo, {});
-    let tmp18Result3 = tmp2;
-    if (tmp2) {
-      const obj10 = { channel, connected: tmp2 };
+    let tmp18Result3 = tmp3;
+    if (tmp3) {
+      const obj10 = { channel, connected: tmp3 };
       tmp18Result3 = hasOwnProperty(VoicePanelVoiceControlsButtons.InviteButton, obj10);
     }
     items1[4] = tmp18Result3;
@@ -98,32 +101,32 @@ let closure_10 = noop.memo(function ListItems(arg0) {
     items[5] = hasOwnProperty(UserSettingsVoiceProcessing.VoiceProcessingOptions, {});
     const obj11 = { guildId: channel.guild_id };
     const items2 = [hasOwnProperty(VoicePanelVoiceControlsButtons.VoiceSettingsButton, obj11), ];
-    let tmp18Result4 = null != tmp6;
+    let tmp18Result4 = null != tmp7;
     if (tmp18Result4) {
-      const obj12 = { stream: tmp6 };
+      const obj12 = { stream: tmp7 };
       tmp18Result4 = hasOwnProperty(VoicePanelVoiceControlsButtons.ReportStreamIssueButton, obj12);
     }
     const obj13 = { hasIcons: true, children: null };
     items2[1] = tmp18Result4;
     obj13.children = items2;
     items[6] = timestampProducer(TableRowGroup.TableRowGroup, obj13);
-    let tmp8Result = null;
-    if (tmp2) {
-      tmp8Result = null;
+    let tmp9Result = null;
+    if (tmp3) {
+      tmp9Result = null;
       if (setting) {
-        tmp8Result = null;
+        tmp9Result = null;
         if (embeddedActivityLaunchability === getEmbeddedActivityLaunchability.EmbeddedActivityLaunchability.CAN_LAUNCH) {
           const obj14 = { title: null, hasIcons: true, children: null };
           const intl2 = util.intl;
           obj14.title = intl2.string(util.t.J6rqB7);
           const items3 = [hasOwnProperty(VoicePanelVoiceControlsButtons.LeaveActivitiesButton, {}), hasOwnProperty(VoicePanelVoiceControlsButtons.ShareActivityLogsButton, {}), hasOwnProperty(VoicePanelVoiceControlsButtons.ToggleShowActivitiesDebugOverlay, {})];
           obj14.children = items3;
-          tmp8Result = timestampProducer(TableRowGroup.TableRowGroup, obj14);
+          tmp9Result = timestampProducer(TableRowGroup.TableRowGroup, obj14);
         }
       }
     }
     const obj15 = { spacing: 24, children: null };
-    items[7] = tmp8Result;
+    items[7] = tmp9Result;
     obj15.children = items;
     return timestampProducer(Stack_Stack.Stack, obj15);
   } else {
@@ -131,17 +134,17 @@ let closure_10 = noop.memo(function ListItems(arg0) {
     const items4 = [hasOwnProperty(VoicePanelVoiceControlsButtons.ActivitiesButton, obj16), ];
     if (MobileGoLiveEntrypointExperiment.MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT === treatment) {
       const obj17 = { openTab };
-      let tmp12Result = hasOwnProperty(VoicePanelVoiceControlsButtons.ChatButton, obj17);
+      let tmp13Result = hasOwnProperty(VoicePanelVoiceControlsButtons.ChatButton, obj17);
       const obj18 = { hasIcons: true, children: null };
-      items4[1] = tmp12Result;
+      items4[1] = tmp13Result;
       obj18.children = items4;
       timestampProducer(TableRowGroup.TableRowGroup, obj18);
     } else if (MobileGoLiveEntrypointExperiment.MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD !== treatment) {
       const obj19 = { channel };
-      tmp12Result = hasOwnProperty(VoicePanelVoiceControlsButtons.ScreenshareButton, obj19);
+      tmp13Result = hasOwnProperty(VoicePanelVoiceControlsButtons.ScreenshareButton, obj19);
     }
     const obj20 = { channel };
-    tmp12Result = hasOwnProperty(VoicePanelVoiceControlsButtons.SoundboardButton, obj20);
+    tmp13Result = hasOwnProperty(VoicePanelVoiceControlsButtons.SoundboardButton, obj20);
   }
 });
 const scrollIndicatorInsets = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
@@ -161,7 +164,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   items = [ChannelStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj2 = require("initialize");
-  const sharedValue = require("module_1652").useSharedValue(false);
+  const sharedValue = require("module_1655").useSharedValue(false);
   const items1 = [closure_13, sharedValue];
   _require = undefined;
   [tmp7, tmp8] = items1;
@@ -177,7 +180,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   VoicePanelVoiceControlsTsx1.__initData = tmp7;
   const items3 = [sharedValue];
   const callback = scrollerRef.useCallback(VoicePanelVoiceControlsTsx1, items3);
-  const obj3 = require("module_1652");
+  const obj3 = require("module_1655");
   const animatedScrollLock = require("useAnimatedScrollLock").useAnimatedScrollLock({ onScrollHandlerWorkletized: callback });
   gestureRef = animatedScrollLock.gestureRef;
   scrollerRef = animatedScrollLock.scrollerRef;
@@ -204,7 +207,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   let tmp16Result = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     const obj6 = { style: tmp.blurRegion };
-    tmp16Result = closure_5(tmp2(tmp3[26]), obj6);
+    tmp16Result = closure_5(tmp2(tmp3[27]), obj6);
   }
   const items6 = [tmp16Result, , ];
   let tmp16Result3 = null != stateFromStores;
@@ -220,7 +223,7 @@ export default noop.memo(function VoicePanelVoiceControls(isVisible) {
   let tmp16Result4 = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     const obj8 = { shown: sharedValue, style: tmp.blurRegion };
-    tmp16Result4 = closure_5(tmp2(tmp3[28]), obj8);
+    tmp16Result4 = closure_5(tmp2(tmp3[29]), obj8);
   }
   children[1] = tmp16Result4;
   return closure_6(closure_7, { children });

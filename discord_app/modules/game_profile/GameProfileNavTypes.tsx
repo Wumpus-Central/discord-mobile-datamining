@@ -1,6 +1,6 @@
-// === Module 10242: GameProfileNavTypes ===
+// === Module 10311: GameProfileNavTypes ===
 
-// Module 10242 (GameProfileNavTypes)
+// Module 10311 (GameProfileNavTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileNavTypes.tsx");

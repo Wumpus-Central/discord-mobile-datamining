@@ -1,10 +1,10 @@
-// === Module 15159: openBadgeDirectoryScreen ===
+// === Module 15273: openBadgeDirectoryScreen ===
 
-// Module 15159 (openBadgeDirectoryScreen)
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 7705 */;
+// Module 15273 (openBadgeDirectoryScreen)
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 7771 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "badge-directory";
@@ -26,7 +26,7 @@ export function openBadgeDirectoryScreen(arg0) {
   }
   const obj2 = ModalActionCreatorsDefault;
   const obj3 = { targetUserId: obj.targetUserId };
-  const tmp3 = asyncRequireImpl(15160, dependencyMap.paths);
+  const tmp3 = asyncRequireImpl(15274, dependencyMap.paths);
   if (!obj4.isIOS()) {
     const obj5 = { presentation: "modal" };
   } else {

@@ -1,60 +1,60 @@
-// === Module 14679: DoubleTapToReactActionSheet ===
+// === Module 14792: DoubleTapToReactActionSheet ===
 
-// Module 14679 (DoubleTapToReactActionSheet)
+// Module 14792 (DoubleTapToReactActionSheet)
 import nativeDefault from "native" /* 575 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import UserSettings from "UserSettings" /* 5068 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5189 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 9129 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import UserSettings from "UserSettings" /* 5131 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 9196 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
-import EmojiStore from "EmojiStore" /* 6906 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
+import EmojiStore from "EmojiStore" /* 6969 */;
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function EmojiConfetti(arg0) {
   ({ bottom, right, leading: c0 } = arg0);
   ({ emojiComponent, top, left } = arg0);
-  const sharedValue = require("module_1652").useSharedValue(0);
-  let obj = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(0);
-  const obj2 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(0.2);
-  const obj3 = require("module_1652");
-  const sharedValue3 = require("module_1652").useSharedValue(0);
-  let obj4 = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(0);
+  let obj = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(0);
+  const obj2 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(0.2);
+  const obj3 = require("module_1655");
+  const sharedValue3 = require("module_1655").useSharedValue(0);
+  let obj4 = require("module_1655");
   const mountLayoutEffect = require("useMountEffect").useMountLayoutEffect(() => {
     let num = 0;
     if (!c0) {
       const _Math = Math;
       num = 50 + 150 * Math.random();
     }
-    const obj5 = _mod1652;
+    const obj5 = _mod1655;
     const withTimingResult = timing_timing.withTiming(0, { duration: num });
     const obj8 = { duration: 600, easing: null };
     const result = 10 * Math.random();
-    const Easing = _mod1652.Easing;
-    obj8.easing = Easing.out(_mod1652.Easing.ease);
+    const Easing = _mod1655.Easing;
+    obj8.easing = Easing.out(_mod1655.Easing.ease);
     const result1 = _undefined.set(obj5.withSequence(withTimingResult, timing_timing.withTiming(result + 35, obj8)));
-    const obj9 = _mod1652;
+    const obj9 = _mod1655;
     const withTimingResult1 = timing_timing.withTiming(0, { duration: num });
     const obj12 = { duration: 600, easing: null };
     const result2 = 40 * Math.random();
-    obj12.easing = _mod1652.Easing.ease;
+    obj12.easing = _mod1655.Easing.ease;
     const result3 = c2.set(obj9.withSequence(withTimingResult1, timing_timing.withTiming(result2 + 20, obj12)));
-    const obj13 = _mod1652;
+    const obj13 = _mod1655;
     const withTimingResult2 = timing_timing.withTiming(0, { duration: num });
     const withTimingResult3 = timing_timing.withTiming(0.3 * Math.random() + 0.5, { duration: 240 });
     const result4 = _undefined2.set(obj13.withSequence(withTimingResult2, withTimingResult3, timing_timing.withTiming(0.5, { duration: 360 })));
-    const obj17 = _mod1652;
+    const obj17 = _mod1655;
     const withTimingResult4 = timing_timing.withTiming(0, { duration: num });
     const withTimingResult5 = timing_timing.withTiming(1, { duration: 360 });
     const result5 = _undefined3.set(obj17.withSequence(withTimingResult4, withTimingResult5, timing_timing.withTiming(0, { duration: 240 })));
@@ -106,8 +106,8 @@ function EmojiConfetti(arg0) {
   DoubleTapToReactActionSheetTsx1.__closure = items1;
   DoubleTapToReactActionSheetTsx1.__workletHash = 7386139842022;
   DoubleTapToReactActionSheetTsx1.__initData = tmp7;
-  const style = require("module_1652").useAnimatedStyle(DoubleTapToReactActionSheetTsx1);
-  return closure_11(_modDef1652.View, { style, children });
+  const style = require("module_1655").useAnimatedStyle(DoubleTapToReactActionSheetTsx1);
+  return closure_11(_modDef1655.View, { style, children });
 }
 function EmojiBurstAnimation(emojiComponent) {
   emojiComponent = emojiComponent.emojiComponent;
@@ -118,18 +118,18 @@ function EmojiBurstAnimation(emojiComponent) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { emoji: { width: 48, height: 48, zIndex: 2 }, selectedCustomEmoji: { width: 48, height: 48 }, selectedTextEmoji: null, selectedEmojiText: null, content: null, emojiContainer: null, alignCenter: null, emojiSelectRow: null, header: null, emojiName: null, burstContainer: null };
-let PlatformUtils = fn(1377);
+let PlatformUtils = fn(1380);
 let num = 36;
 if (PlatformUtils.isIOS()) {
   num = 48;
 }
 let obj4 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1377);
+PlatformUtils = fn(1380);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 56;
@@ -138,7 +138,7 @@ obj4.lineHeight = num2;
 obj4.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
 obj2.selectedTextEmoji = obj4;
 let obj6 = { marginLeft: nativeDefault.space.PX_16, fontSize: 40, lineHeight: null };
-PlatformUtils = fn(1377);
+PlatformUtils = fn(1380);
 let num3;
 if (PlatformUtils.isIOS()) {
   num3 = 56;
@@ -188,9 +188,9 @@ export default function DoubleTapToReactActionSheet(emoji) {
   closure_6 = tmp8[1];
   ref = first1.useRef(null);
   let obj2 = require("initialize");
-  const sharedValue = require("module_1652").useSharedValue(0);
-  let obj3 = require("module_1652");
-  let items1 = [closure_17, require("module_1652").interpolate, sharedValue];
+  const sharedValue = require("module_1655").useSharedValue(0);
+  let obj3 = require("module_1655");
+  let items1 = [closure_17, require("module_1655").interpolate, sharedValue];
   _require = undefined;
   importDefault = undefined;
   [tmp11, tmp12, tmp13] = items1;
@@ -210,12 +210,12 @@ export default function DoubleTapToReactActionSheet(emoji) {
   DoubleTapToReactActionSheetTsx2.__closure = items2;
   DoubleTapToReactActionSheetTsx2.__workletHash = 4658248494487;
   DoubleTapToReactActionSheetTsx2.__initData = tmp11;
-  const animatedStyle = require("module_1652").useAnimatedStyle(DoubleTapToReactActionSheetTsx2);
-  let obj4 = require("module_1652");
-  sharedValue1 = require("module_1652").useSharedValue(1);
-  const tmp3Result = require("module_1652");
-  sharedValue2 = require("module_1652").useSharedValue(1);
-  const tmp3Result4 = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(DoubleTapToReactActionSheetTsx2);
+  let obj4 = require("module_1655");
+  sharedValue1 = require("module_1655").useSharedValue(1);
+  const tmp3Result = require("module_1655");
+  sharedValue2 = require("module_1655").useSharedValue(1);
+  const tmp3Result4 = require("module_1655");
   const items3 = [closure_18, sharedValue1, sharedValue2];
   _require = undefined;
   importDefault = undefined;
@@ -236,7 +236,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
   DoubleTapToReactActionSheetTsx3.__workletHash = 2167494599504;
   DoubleTapToReactActionSheetTsx3.__initData = tmp17;
   const items5 = [sharedValue1, sharedValue2, stateFromStores, first1];
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(DoubleTapToReactActionSheetTsx3);
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(DoubleTapToReactActionSheetTsx3);
   const items6 = [selectedEmoji];
   const callback = obj.useCallback((arg0, current) => {
     closure_0 = arg0;
@@ -302,7 +302,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
   }, items7);
   let obj5 = { style: tmp.emoji, fastImageStyle: tmp.selectedCustomEmoji, textEmojiStyle: tmp.selectedTextEmoji, name: null, src: null };
   let str = "";
-  const tmp3Result5 = require("module_1652");
+  const tmp3Result5 = require("module_1655");
   if (null == selectedEmoji.id) {
     str = selectedEmoji.surrogates;
   }
@@ -337,7 +337,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
           } else {
             let tmp22 = tmp2;
             if (memo) {
-              const DoubleTapReactionEmoji = tmp2(5068).DoubleTapReactionEmoji;
+              const DoubleTapReactionEmoji = tmp2(5131).DoubleTapReactionEmoji;
               const obj5 = { emojiId: first.id, emojiName: null, animated: null, disableDoubleTap: false };
               tmp22 = first;
               obj5.emojiName = first.name;
@@ -356,8 +356,8 @@ export default function DoubleTapToReactActionSheet(emoji) {
           const obj = { value, done: true };
           return obj;
         }
-        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7871).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
-        tmp22(1252).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
+        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7937).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
+        tmp22(1256).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => closure_0(emoji[24]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
         c3 = 3;
@@ -375,14 +375,14 @@ export default function DoubleTapToReactActionSheet(emoji) {
     if (c1) {
       const result = set(0);
     } else {
-      const obj = _mod1652;
+      const obj = _mod1655;
       const withTimingResult = timing_timing.withTiming(0, { duration: 0 });
       const obj4 = { duration: 100, easing: null };
-      const Easing = _mod1652.Easing;
-      obj4.easing = Easing.out(_mod1652.Easing.quad);
+      const Easing = _mod1655.Easing;
+      obj4.easing = Easing.out(_mod1655.Easing.quad);
       const withTimingResult1 = timing_timing.withTiming(1, obj4);
       const obj5 = timing_timing;
-      items = [closure_19, _mod1705.scheduleOnRN, c0];
+      items = [closure_19, _mod1708.scheduleOnRN, c0];
       c0 = undefined;
       c1 = undefined;
       [tmp11, tmp12, tmp13] = items;
@@ -439,7 +439,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
   }
   items12[1] = tmp24Result2;
   obj9.children = items12;
-  const items13 = [callback1(require("module_1652").View, obj9), memo(require("Text/Text").Text, { variant: "body-lg/semibold", style: tmp.selectedEmojiText, color: "interactive-text-default", children: "1" })];
+  const items13 = [callback1(require("module_1655").View, obj9), memo(require("Text/Text").Text, { variant: "body-lg/semibold", style: tmp.selectedEmojiText, color: "interactive-text-default", children: "1" })];
   obj8.children = items13;
   const items14 = [callback1(closure_6, obj8), , , , , ];
   const obj11 = { variant: "body-lg/semibold", style: tmp.selectedEmojiText, color: "interactive-text-default", children: "1" };

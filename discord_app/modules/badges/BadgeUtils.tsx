@@ -1,11 +1,11 @@
-// === Module 10045: BadgeUtils ===
+// === Module 10113: BadgeUtils ===
 
-// Module 10045 (BadgeUtils)
+// Module 10113 (BadgeUtils)
 import util from "util" /* 1113 */;
-import StringUtils from "StringUtils" /* 2150 */;
-import Constants from "Constants" /* 8413 */;
-import BadgeId from "BadgeId" /* 8414 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8482 */;
+import StringUtils from "StringUtils" /* 2153 */;
+import Constants from "Constants" /* 8479 */;
+import BadgeId from "BadgeId" /* 8480 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8548 */;
 import size from "module_2" /* 2 */;
 
 function isPinnedBadge(badge_id) {
@@ -31,8 +31,8 @@ export function isPersonalizationGatedBadge(badge_id) {
   return set.has(badge_id);
 }
 export const BETA_BADGE_IDS = set1;
-export function isBetaBadgeId(arg0) {
-  return set1.has(arg0);
+export function isBetaBadgeId(badgeId) {
+  return set1.has(badgeId);
 }
 export function getDisplayTier(badge) {
   const tiers = badge.tiers;

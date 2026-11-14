@@ -1,32 +1,32 @@
-// === Module 8719: MessageParser ===
+// === Module 8786: MessageParser ===
 
-// Module 8719 (MessageParser)
+// Module 8786 (MessageParser)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 5068 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5189 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 5193 */;
-import UserUtilsDefault from "UserUtils" /* 5309 */;
-import useChannelName from "useChannelName" /* 5891 */;
-import MarkupRulesDefault from "MarkupRules" /* 6281 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
-import MarkupTextRule2 from "MarkupTextRule" /* 6290 */;
-import AutocompleteBoundaryUtils from "AutocompleteBoundaryUtils" /* 8720 */;
-import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 8721 */;
-import getGuildOrPackEmojiByNameDefault from "getGuildOrPackEmojiByName" /* 8722 */;
-import IsolateString from "IsolateString" /* 8723 */;
-import EmojiStore from "EmojiStore" /* 6906 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6951 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildChannelStore from "GuildChannelStore" /* 5173 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import GuildRoleStore from "GuildRoleStore" /* 5149 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import RelationshipStore from "RelationshipStore" /* 5185 */;
-import StreamerModeStore from "StreamerModeStore" /* 5310 */;
-import UserStore from "UserStore" /* 1385 */;
-import t_mod from "module_2067" /* 2067 */;
+import UserSettings from "UserSettings" /* 5131 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 5256 */;
+import UserUtilsDefault from "UserUtils" /* 5372 */;
+import useChannelName from "useChannelName" /* 5954 */;
+import MarkupRulesDefault from "MarkupRules" /* 6344 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import MarkupTextRule2 from "MarkupTextRule" /* 6353 */;
+import AutocompleteBoundaryUtils from "AutocompleteBoundaryUtils" /* 8787 */;
+import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 8788 */;
+import getGuildOrPackEmojiByNameDefault from "getGuildOrPackEmojiByName" /* 8789 */;
+import IsolateString from "IsolateString" /* 8790 */;
+import EmojiStore from "EmojiStore" /* 6969 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 7014 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildChannelStore from "GuildChannelStore" /* 5236 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import GuildRoleStore from "GuildRoleStore" /* 5212 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import RelationshipStore from "RelationshipStore" /* 5248 */;
+import StreamerModeStore from "StreamerModeStore" /* 5373 */;
+import UserStore from "UserStore" /* 1388 */;
+import t_mod from "module_2070" /* 2070 */;
 
 const MarkupTextRuleDefault = MarkupTextRule2;
 
@@ -44,7 +44,7 @@ function rebuild(arr, arg1, arg2, arg3) {
           fn(type.emoji, false);
         }
         if ("emoticon" === type.type) {
-          const result = obj(5189).translateSurrogatesToInlineEmoji(type.content);
+          const result = obj(5252).translateSurrogatesToInlineEmoji(type.content);
           let match = regex.exec(result);
           if (null !== match) {
             while (true) {
@@ -65,11 +65,11 @@ function rebuild(arr, arg1, arg2, arg3) {
                   }
                 }
               }
-              let obj2 = obj(5189);
+              let obj2 = obj(5252);
               byId = obj2.getByName(match[2]);
             }
           }
-          obj = obj(5189);
+          obj = obj(5252);
         }
       }
     })(isNotification, content, dependencyMap);
@@ -174,8 +174,8 @@ function createParserState(getGuildId, arr) {
   const mapped3 = applyDefault(GuildChannelStore.getTextChannelNameDisambiguations(guildId)).map((id) => ({ id: id.id, text: id.name }));
   if (null != guildId) {
     const tmp9Result3 = tmp9(12);
-    const found1 = tmp9(12)(guildId(6899).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter((item) => item !== closure_1_7);
-    const tmp9Result1Result = tmp9(12)(guildId(6899).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
+    const found1 = tmp9(12)(guildId(6962).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter((item) => item !== closure_1_7);
+    const tmp9Result1Result = tmp9(12)(guildId(6962).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
     const flatMapResult = found1.flatMap((item) => GuildChannelStore.getChannels(guildId)[item].map((channel) => {
       channel = channel.channel;
       if (!channel.isCategory()) {
@@ -197,7 +197,7 @@ function createParserState(getGuildId, arr) {
         tmp3 = null;
       }
       return tmp3;
-    })).filter(guildId(1380).isNotNullish).value();
+    })).filter(guildId(1255).isNotNullish).value();
     const iter = found1.flatMap((item) => GuildChannelStore.getChannels(guildId)[item].map((channel) => {
       channel = channel.channel;
       if (!channel.isCategory()) {
@@ -208,15 +208,19 @@ function createParserState(getGuildId, arr) {
         tmp3 = null;
       }
       return tmp3;
-    })).filter(guildId(1380).isNotNullish);
+    })).filter(guildId(1255).isNotNullish);
   } else {
     items = [];
   }
-  const allActiveJoinedThreads = ActiveJoinedThreadsStore.computeAllActiveJoinedThreads(guildId);
-  const mapped4 = allActiveJoinedThreads.map((id) => {
-    const obj = { id: id.id, text: guildId(dependencyMap[14]).computeChannelName(id, user, RelationshipStore) };
-    return obj;
-  });
+  if (null != guildId) {
+    const allActiveJoinedThreads = ActiveJoinedThreadsStore.computeAllActiveJoinedThreads(guildId);
+    let mapped4 = allActiveJoinedThreads.map((id) => {
+      const obj = { id: id.id, text: guildId(dependencyMap[14]).computeChannelName(id, user, RelationshipStore) };
+      return obj;
+    });
+  } else {
+    mapped4 = [];
+  }
   const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(guildId);
   const escapedCustomEmoticonNames = disambiguatedEmojiContext.getEscapedCustomEmoticonNames();
   const customEmoji = disambiguatedEmojiContext.getCustomEmoji();
@@ -261,21 +265,21 @@ function unparseWithMeta(content1, id, isNotification) {
   if (isNotification) {
     translateSurrogatesToInlineEmoji = NOOP;
   } else {
-    translateSurrogatesToInlineEmoji = translateSurrogatesToInlineEmoji(5189).translateSurrogatesToInlineEmoji;
+    translateSurrogatesToInlineEmoji = translateSurrogatesToInlineEmoji(5252).translateSurrogatesToInlineEmoji;
   }
   const obj = { inline: true, guild, channelId: id, isNotification };
-  const obj4 = translateSurrogatesToInlineEmoji(2067);
+  const obj4 = translateSurrogatesToInlineEmoji(2070);
   dependencyMap = undefined;
   content = "";
   items = [];
-  const item = translateSurrogatesToInlineEmoji(2067).parserFor(omitResult)(content1, { inline: true, guild, channelId: id, isNotification }).forEach((content) => {
+  const item = translateSurrogatesToInlineEmoji(2070).parserFor(omitResult)(content1, { inline: true, guild, channelId: id, isNotification }).forEach((content) => {
     (function handleEmoji(emojiContext, type, fn) {
       if (null != fn) {
         if ("customEmoticon" === type.type) {
           fn(type.emoji, false);
         }
         if ("emoticon" === type.type) {
-          const result = obj(5189).translateSurrogatesToInlineEmoji(type.content);
+          const result = obj(5252).translateSurrogatesToInlineEmoji(type.content);
           let match = regex.exec(result);
           if (null !== match) {
             while (true) {
@@ -296,11 +300,11 @@ function unparseWithMeta(content1, id, isNotification) {
                   }
                 }
               }
-              let obj2 = obj(5189);
+              let obj2 = obj(5252);
               byId = obj2.getByName(match[2]);
             }
           }
-          obj = obj(5189);
+          obj = obj(5252);
         }
       }
     })(isNotification, content, dependencyMap);
@@ -348,11 +352,11 @@ function unparseWithMeta(content1, id, isNotification) {
   });
   return { content, emoji: items };
 }
-let closure_7 = fn(5173).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(5236).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1072);
 ({ Permissions: closure_15, MARKDOWN_SPOILER_REGEXP, MARKDOWN_STATIC_ROUTE_NAME_REGEXP } = Constants);
-const GAME_MENTION_SENTINEL = fn(6283).GAME_MENTION_SENTINEL;
-const EmojiIntention = fn(1388).EmojiIntention;
+const GAME_MENTION_SENTINEL = fn(6346).GAME_MENTION_SENTINEL;
+const EmojiIntention = fn(1391).EmojiIntention;
 let tmp3 = /^<@!?(\d+)>/;
 const tmp4 = /^<@&(\d+)>/;
 const tmp5 = /^<#(\d+)>/;
@@ -959,7 +963,7 @@ obj12.parse = function parse(arg0, arg1, guild) {
 obj8.emoji = obj12;
 const obj13 = { match: null, parse: null };
 let t = t_mod;
-obj13.match = t.anyScopeRegex(fn(6305).soundmojiRawFormatRegex);
+obj13.match = t.anyScopeRegex(fn(6368).soundmojiRawFormatRegex);
 obj13.parse = function parse(arg0) {
   [, tmp, tmp2] = arg0;
   return { content: "<sound:" + tmp + ":" + tmp2 + ">" };
@@ -1036,7 +1040,7 @@ export default {
     obj = { content, tts: false, invalidEmojis: [], validNonShortcutEmojis: [] };
     arr = closure_21(obj.content, tmp);
     closure_129_0 = tmp;
-    closure_129_1 = obj(5189).translateInlineEmojiToSurrogates;
+    closure_129_1 = obj(5252).translateInlineEmojiToSurrogates;
     closure_129_2 = (emoji, arg1) => {
       obj = EmojiUtilsDefault;
       if (obj.isEmojiPremiumLocked(obj2)) {
@@ -1056,7 +1060,7 @@ export default {
             fn(type.emoji, false);
           }
           if ("emoticon" === type.type) {
-            const result = obj(5189).translateSurrogatesToInlineEmoji(type.content);
+            const result = obj(5252).translateSurrogatesToInlineEmoji(type.content);
             let match = regex.exec(result);
             if (null !== match) {
               while (true) {
@@ -1077,11 +1081,11 @@ export default {
                     }
                   }
                 }
-                let obj2 = obj(5189);
+                let obj2 = obj(5252);
                 byId = obj2.getByName(match[2]);
               }
             }
-            obj = obj(5189);
+            obj = obj(5252);
           }
         }
       })(isNotification, content, dependencyMap);
@@ -1151,7 +1155,7 @@ export function parseAndRebuild(arg0, arg1, arg2) {
           fn(type.emoji, false);
         }
         if ("emoticon" === type.type) {
-          const result = obj(5189).translateSurrogatesToInlineEmoji(type.content);
+          const result = obj(5252).translateSurrogatesToInlineEmoji(type.content);
           let match = regex.exec(result);
           if (null !== match) {
             while (true) {
@@ -1172,11 +1176,11 @@ export function parseAndRebuild(arg0, arg1, arg2) {
                   }
                 }
               }
-              let obj2 = obj(5189);
+              let obj2 = obj(5252);
               byId = obj2.getByName(match[2]);
             }
           }
-          obj = obj(5189);
+          obj = obj(5252);
         }
       }
     })(isNotification, content, dependencyMap);

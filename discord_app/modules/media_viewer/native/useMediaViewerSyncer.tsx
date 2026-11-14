@@ -1,15 +1,15 @@
-// === Module 10124: useMediaViewerSyncer ===
+// === Module 10193: useMediaViewerSyncer ===
 
-// Module 10124 (useMediaViewerSyncer)
-import _mod1652 from "module_1652" /* 1652 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8566 */;
+// Module 10193 (useMediaViewerSyncer)
+import _mod1655 from "module_1655" /* 1655 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8633 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(10125);
+const Constants = fn(10194);
 ({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: closure_6, THUMBNAIL_MAX_WIDTH: metroImportDefault, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = { code: "(function useMediaViewerSyncerTsx1(){let[thumbnailsScrolling,SCROLLING_DRAG,swipeSource]=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');})" };
 let closure_12 = { code: "(function useMediaViewerSyncerTsx2(){let[thumbnailsScrolling,SCROLLING_DRAG]=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()&~SCROLLING_DRAG);})" };
@@ -53,14 +53,14 @@ export function useMediaViewerSyncer(sources) {
   let memo;
   items = [initialIndex];
   memo = memo.useMemo(() => {
-    const obj = { selectedIndex: _mod1652.makeMutable(initialIndex), thumbnailsIndex: null, thumbnailsScrolling: null, thumbnailsAnimateTo: null, viewerPos: null, viewerScrolling: null, zoomed: null, swipeSource: null };
-    obj.thumbnailsIndex = _mod1652.makeMutable(initialIndex);
-    obj.thumbnailsScrolling = _mod1652.makeMutable(0);
-    obj.thumbnailsAnimateTo = _mod1652.makeMutable(-1);
-    obj.viewerPos = _mod1652.makeMutable(initialIndex);
-    obj.viewerScrolling = _mod1652.makeMutable(0);
-    obj.zoomed = _mod1652.makeMutable(false);
-    obj.swipeSource = _mod1652.makeMutable(undefined);
+    const obj = { selectedIndex: _mod1655.makeMutable(initialIndex), thumbnailsIndex: null, thumbnailsScrolling: null, thumbnailsAnimateTo: null, viewerPos: null, viewerScrolling: null, zoomed: null, swipeSource: null };
+    obj.thumbnailsIndex = _mod1655.makeMutable(initialIndex);
+    obj.thumbnailsScrolling = _mod1655.makeMutable(0);
+    obj.thumbnailsAnimateTo = _mod1655.makeMutable(-1);
+    obj.viewerPos = _mod1655.makeMutable(initialIndex);
+    obj.viewerScrolling = _mod1655.makeMutable(0);
+    obj.zoomed = _mod1655.makeMutable(false);
+    obj.swipeSource = _mod1655.makeMutable(undefined);
     return obj;
   }, items);
   let items1 = [sources, memo, onEndReached, onEndReachedThreshold];

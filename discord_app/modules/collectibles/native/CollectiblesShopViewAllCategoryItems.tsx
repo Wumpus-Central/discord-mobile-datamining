@@ -1,19 +1,19 @@
-// === Module 18410: CollectiblesShopViewAllCategoryItems ===
+// === Module 18535: CollectiblesShopViewAllCategoryItems ===
 
-// Module 18410 (CollectiblesShopViewAllCategoryItems)
+// Module 18535 (CollectiblesShopViewAllCategoryItems)
 import nativeDefault from "native" /* 575 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import springPresets from "springPresets" /* 5877 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 8468 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10364 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import springPresets from "springPresets" /* 5940 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 8534 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10433 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5869 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9383 */;
-import IAPStore from "IAPStore" /* 9235 */;
+import DevSettingsStore from "DevSettingsStore" /* 5932 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9451 */;
+import IAPStore from "IAPStore" /* 9302 */;
 
 require = fn;
 function CategoryItemsBySku(categorySkuId) {
@@ -27,9 +27,9 @@ function CategoryItemsBySku(categorySkuId) {
   c9 = undefined;
   c10 = undefined;
   closure_11 = undefined;
-  constants = undefined;
+  closure_12 = undefined;
   ({ categoryName, analyticsContext } = categorySkuId);
-  let items12 = closure_17();
+  let items12 = closure_18();
   let stringResult = category;
   const stackNavigation = categorySkuId(category[12]).useStackNavigation();
   const tmp5 = stackNavigation(category[13])(categorySkuId, { includePricing: true });
@@ -103,7 +103,7 @@ function CategoryItemsBySku(categorySkuId) {
     }
     tmp19 = tmp20;
   }
-  constants = tmp19;
+  closure_12 = tmp19;
   const items7 = [tmp19, tmp16];
   const effect = obj6.useEffect(() => {
     if (closure_12) {
@@ -178,7 +178,7 @@ function CategoryItemsBySku(categorySkuId) {
   const effect2 = obj6.useEffect(() => {
     if (stateFromStores1) {
       const obj = { screen: constants.ORBS, analyticsSource: AnalyticsLocationDefault.COLLECTIBLES_SHOP };
-      const replaced = stackNavigation.replace(constants2.COLLECTIBLES_SHOP, obj);
+      const replaced = stackNavigation.replace(constants3.COLLECTIBLES_SHOP, obj);
     }
   }, items10);
   let tmp26 = null == categorySkuId;
@@ -204,8 +204,8 @@ function CategoryItemsBySku(categorySkuId) {
         if (!stateFromStores1) {
           const obj3 = { value: true, children: null };
           const obj4 = { category, analyticsContext };
-          obj3.children = closure_15(CategoryItemsContent, obj4);
-          return closure_15(tmp(stringResult[19]).ImprovedMobileShopLoadingProvider, obj3);
+          obj3.children = closure_16(CategoryItemsContent, obj4);
+          return closure_16(tmp(stringResult[19]).ImprovedMobileShopLoadingProvider, obj3);
         }
       }
     }
@@ -216,7 +216,7 @@ function CategoryItemsBySku(categorySkuId) {
   if (category != null) {
     logoUrl = category.logoUrl;
   }
-  const obj7 = { logoUrl, buttonColor: "Array", categoryName: -1 };
+  const obj7 = { logoUrl, buttonColor: "Array", categoryName: "y" };
   let name;
   if (category != null) {
     name = category.name;
@@ -229,13 +229,13 @@ function CategoryItemsBySku(categorySkuId) {
     name = intl.string(tmp(stringResult[21]).t.ZTNur7);
   }
   obj7.categoryName = name;
-  const items11 = [closure_15(tmp4(stringResult[20]), obj7), ];
+  const items11 = [closure_16(tmp4(stringResult[20]), obj7), ];
   if (tmp27) {
     const obj8 = { style: items12.errorContainer, children: null };
     const obj9 = { variant: "body-md/medium", color: "text-default", accessibilityLiveRegion: "polite", children: null };
     const intl2 = tmp(stringResult[21]).intl;
     obj9.children = intl2.string(tmp(stringResult[21]).t.eAn6z2);
-    items12 = [closure_15(tmp(stringResult[22]).Text, obj9), ];
+    items12 = [closure_16(tmp(stringResult[22]).Text, obj9), ];
     let tmp32Result = !tmp26;
     if (!tmp26) {
       const obj10 = { variant: "secondary", text: null, onPress: null };
@@ -243,17 +243,17 @@ function CategoryItemsBySku(categorySkuId) {
       stringResult = intl3.string(tmp(stringResult[21]).t["+hivLW"]);
       obj10.text = stringResult;
       obj10.onPress = callback;
-      tmp32Result = closure_15(tmp(stringResult[23]).Button, obj10);
+      tmp32Result = closure_16(tmp(stringResult[23]).Button, obj10);
     }
     items12[1] = tmp32Result;
     obj8.children = items12;
-    let tmp32Result1 = closure_16(tmp31, obj8);
+    let tmp32Result1 = closure_17(tmp31, obj8);
   } else {
-    tmp32Result1 = closure_15(tmp(stringResult[24]).ShopCategorySkeleton, {});
+    tmp32Result1 = closure_16(tmp(stringResult[24]).ShopCategorySkeleton, {});
   }
   items11[1] = tmp32Result1;
   obj5.children = items11;
-  closure_16(memo, obj5);
+  closure_17(memo, obj5);
   const tmp4Result = tmp4(stringResult[20]);
 }
 function CategoryItemsContent(category) {
@@ -261,7 +261,7 @@ function CategoryItemsContent(category) {
   _require = category;
   const analyticsContext = category.analyticsContext;
   let analyticsLocations;
-  const tmp = closure_17();
+  const tmp = closure_18();
   ({ mobileBgUrl, logoUrl } = category);
   const backgroundColors = analyticsContext(analyticsLocations[25])(category.styles).backgroundColors;
   items = [analyticsContext(analyticsLocations[18]).COLLECTIBLES_SHOP_INDEX_PAGE];
@@ -270,7 +270,7 @@ function CategoryItemsContent(category) {
   const filteredAndSortedProducts = require("useFilteredAndSortedProducts").useFilteredAndSortedProducts({ products: category.products });
   let obj = require("useFilteredAndSortedProducts");
   let obj2 = { products: category.products };
-  const sharedValue = require("module_1652").useSharedValue(0);
+  const sharedValue = require("module_1655").useSharedValue(0);
   const items1 = [sharedValue];
   const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
@@ -279,8 +279,8 @@ function CategoryItemsContent(category) {
     }
     const result = sharedValue.set(spring_spring.withSpring(num, springPresets.Reanimated3DefaultSpringConfig));
   }, items1);
-  let obj3 = require("module_1652");
-  const items2 = [closure_19, sharedValue];
+  let obj3 = require("module_1655");
+  const items2 = [closure_20, sharedValue];
   _require = undefined;
   [tmp9, tmp10] = items2;
   class CollectiblesShopViewAllCategoryItemsTsx1 {
@@ -294,7 +294,7 @@ function CategoryItemsContent(category) {
   CollectiblesShopViewAllCategoryItemsTsx1.__workletHash = 3426078799765;
   CollectiblesShopViewAllCategoryItemsTsx1.__initData = tmp9;
   let sessionId;
-  const animatedStyle = require("module_1652").useAnimatedStyle(CollectiblesShopViewAllCategoryItemsTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(CollectiblesShopViewAllCategoryItemsTsx1);
   if (analyticsContext != null) {
     sessionId = analyticsContext.sessionId;
   }
@@ -308,7 +308,7 @@ function CategoryItemsContent(category) {
     obj2.page_session_id = sessionId;
     obj2.source = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
     obj2.category = _undefined.name;
-    AnalyticsUtilsDefault.track(constants.COLLECTIBLES_SHOP_VIEWED, obj2);
+    AnalyticsUtilsDefault.track(constants2.COLLECTIBLES_SHOP_VIEWED, obj2);
     let sessionId1;
     if (analyticsContext != null) {
       sessionId1 = analyticsContext.sessionId;
@@ -325,50 +325,57 @@ function CategoryItemsContent(category) {
   obj7.newValue = obj8;
   const obj9 = { skuIDs: [], activeSubscription: null, children: null };
   const obj10 = { style: tmp.rootContainer, children: null };
-  const items5 = [closure_15(require("CollectiblesProgressiveImage").CollectiblesProgressiveImage, { source: { uri: mobileBgUrl }, style: absoluteFill.absoluteFill }), , , ];
+  const items5 = [closure_16(require("CollectiblesProgressiveImage").CollectiblesProgressiveImage, { source: { uri: mobileBgUrl }, style: absoluteFill.absoluteFill }), , , ];
   const obj12 = { logoUrl, buttonColor: null, categoryName: null };
   let toHexStringResult;
   const obj11 = { source: { uri: mobileBgUrl }, style: absoluteFill.absoluteFill };
-  const obj5 = require("module_1652");
+  const obj5 = require("module_1655");
   if (backgroundColors != null) {
     const label = backgroundColors.label;
     toHexStringResult = label.toHexString();
   }
   obj12.buttonColor = toHexStringResult;
   obj12.categoryName = category.name;
-  items5[1] = closure_15(analyticsContext(analyticsLocations[20]), obj12);
+  items5[1] = closure_16(analyticsContext(analyticsLocations[20]), obj12);
   const obj13 = { style: null };
   const items6 = [tmp.border, animatedStyle];
   obj13.style = items6;
-  items5[2] = closure_15(analyticsContext(analyticsLocations[29]).View, obj13);
-  const obj14 = { category, products: filteredAndSortedProducts, scrollEnabled: true, onScroll: callback, paddingTop: null, paddingBottom: null, muteBundleStaticBackground: true, accessibilityLabel: null };
+  items5[2] = closure_16(analyticsContext(analyticsLocations[29]).View, obj13);
+  const obj14 = { category, products: filteredAndSortedProducts, scrollEnabled: true, onScroll: callback, paddingTop: null, paddingBottom: null, muteBundleStaticBackground: true, header: null, accessibilityLabel: null };
   const tmp2Result = analyticsContext(analyticsLocations[20]);
   obj14.paddingTop = analyticsContext(analyticsLocations[11]).space.PX_16;
   obj14.paddingBottom = analyticsContext(analyticsLocations[27])().bottom + analyticsContext(analyticsLocations[11]).space.PX_16;
+  let tmp14Result;
+  if (category.skuId === closure_13) {
+    const obj15 = { collectionSkuId: category.skuId };
+    tmp14Result = closure_16(tmp5(tmp3[38]).TwelveDaysIndexNotice, obj15);
+  }
+  obj14.header = tmp14Result;
   const intl = tmp5(tmp3[21]).intl;
   obj14.accessibilityLabel = intl.formatToPlainString(require("util").t.FNtLb3, { category: category.name });
-  items5[3] = closure_15(analyticsContext(analyticsLocations[37]), obj14);
+  items5[3] = closure_16(analyticsContext(analyticsLocations[37]), obj14);
   obj10.children = items5;
-  obj9.children = closure_16(closure_7, obj10);
-  obj7.children = closure_15(require("NativePaymentContext").NativePaymentContextProvider, obj9);
-  obj6.children = closure_15(require("CollectiblesAnalyticsContext").CollectiblesAnalyticsProvider, obj7);
-  return closure_15(require("useAnalyticsLocations").AnalyticsLocationProvider, obj6);
+  obj9.children = closure_17(closure_7, obj10);
+  obj7.children = closure_16(require("NativePaymentContext").NativePaymentContextProvider, obj9);
+  obj6.children = closure_16(require("CollectiblesAnalyticsContext").CollectiblesAnalyticsProvider, obj7);
+  return closure_16(require("useAnalyticsLocations").AnalyticsLocationProvider, obj6);
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_6, View: metroImportDefault, StyleSheet: closure_8 } = get_ActivityIndicator);
-let closure_12 = fn(1074).CollectiblesMobileShopScreen;
+const CollectiblesShopConstants = fn(1074);
+({ CollectiblesMobileShopScreen: closure_12, TWELVE_DAYS_COLLECTION_SKU_ID: map1 } = CollectiblesShopConstants);
 const Constants = fn(1072);
-({ AnalyticEvents: map1, UserSettingsSections: closure_14 } = Constants);
+({ AnalyticEvents: closure_14, UserSettingsSections: closure_15 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5243);
+({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
+const createStyles = fn(5306);
 let obj = { rootContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, border: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.border = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 let obj4 = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.errorContainer = { flex: 1, justifyContent: "center", alignItems: "center", padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
-let closure_17 = createStyles.createStyles(obj);
-let closure_19 = { code: "(function CollectiblesShopViewAllCategoryItemsTsx1(){let[borderOpacity]=this.__closure;return{opacity:borderOpacity.get()};})" };
+let closure_18 = createStyles.createStyles(obj);
+let closure_20 = { code: "(function CollectiblesShopViewAllCategoryItemsTsx1(){let[borderOpacity]=this.__closure;return{opacity:borderOpacity.get()};})" };
 let obj5 = { flex: 1, justifyContent: "center", alignItems: "center", padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopViewAllCategoryItems.tsx");
@@ -376,12 +383,12 @@ let result = size.fileFinishedImporting("modules/collectibles/native/Collectible
 export default noop.memo(function CollectiblesShopViewAllCategoryItems(category) {
   if (null != category.category) {
     ({ category: obj2.category, analyticsContext: obj2.analyticsContext } = category);
-    let tmp6 = colors(CategoryItemsContent, { category: null, analyticsContext: null });
+    let tmp6 = closure_1_16(CategoryItemsContent, { category: null, analyticsContext: null });
     const obj3 = { category: null, analyticsContext: null };
   } else {
     const obj = {};
     const merged = Object.assign(category);
-    tmp6 = colors(CategoryItemsBySku, obj);
+    tmp6 = closure_1_16(CategoryItemsBySku, obj);
   }
   return tmp6;
 });

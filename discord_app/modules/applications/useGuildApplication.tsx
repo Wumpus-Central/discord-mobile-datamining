@@ -1,10 +1,10 @@
-// === Module 20497: useGuildApplication ===
+// === Module 20652: useGuildApplication ===
 
-// Module 20497 (useGuildApplication)
+// Module 20652 (useGuildApplication)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2162 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 const require = globalThis.__r;
 

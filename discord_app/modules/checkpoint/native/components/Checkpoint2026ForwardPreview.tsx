@@ -1,9 +1,9 @@
-// === Module 15075: Checkpoint2026ForwardPreview ===
+// === Module 15189: Checkpoint2026ForwardPreview ===
 
-// Module 15075 (Checkpoint2026ForwardPreview)
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
-import FastImageDefault from "FastImage" /* 5957 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6335 */;
+// Module 15189 (Checkpoint2026ForwardPreview)
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2024 */;
+import FastImageDefault from "FastImage" /* 6020 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6398 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { preview: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, layer: null };
 let obj3 = { transform: null };
 let items = [{ translateY: -2 }];
@@ -57,7 +57,7 @@ export default function Checkpoint2026ForwardPreview(checkpointData) {
       });
     } else {
       const obj5 = { color: character(575).colors.BLACK };
-      mapped = jsx(tmp2(15076).ExperimentalCheckpointIcon, { color: character(575).colors.BLACK });
+      mapped = jsx(tmp2(15190).ExperimentalCheckpointIcon, { color: character(575).colors.BLACK });
     }
     obj3.children = mapped;
     <closure_5 style={null}>{null}</closure_5>;

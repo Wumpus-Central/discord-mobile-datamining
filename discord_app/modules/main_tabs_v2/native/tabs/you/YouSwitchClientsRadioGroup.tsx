@@ -1,9 +1,9 @@
-// === Module 19020: YouSwitchClientsRadioGroup ===
+// === Module 19156: YouSwitchClientsRadioGroup ===
 
-// Module 19020 (YouSwitchClientsRadioGroup)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import DiscordVariants from "DiscordVariants" /* 19021 */;
-import DiscordVariantTypes from "DiscordVariantTypes" /* 19022 */;
+// Module 19156 (YouSwitchClientsRadioGroup)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import DiscordVariants from "DiscordVariants" /* 19157 */;
+import DiscordVariantTypes from "DiscordVariantTypes" /* 19158 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,13 +13,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSwitchClientsRadioGroup.tsx");
 
 export default function YouSwitchClientsRadioGroup() {
-  const memo = noop.useMemo(() => memo(19021).getCurrentVariant(), []);
+  const memo = noop.useMemo(() => memo(19157).getCurrentVariant(), []);
   [arr, importDefault] = noop.useState(null);
   items = [memo];
   const effect = noop.useEffect(() => {
     if (null != c0) {
       c0 = false;
-      let DISCORD_VARIANT_LIST = memo(19022).DISCORD_VARIANT_LIST;
+      let DISCORD_VARIANT_LIST = memo(19158).DISCORD_VARIANT_LIST;
       const allPromises = Promise.all(DISCORD_VARIANT_LIST.map((item) => _true(dependencyMap[3]).isVariantInstalled(item)));
       Promise.all(DISCORD_VARIANT_LIST.map((item) => _true(dependencyMap[3]).isVariantInstalled(item))).then((result) => {
         closure_0 = result;
@@ -50,18 +50,18 @@ export default function YouSwitchClientsRadioGroup() {
           onChange: tmp4,
           hasIcons: true,
           children: arr.map((value) => {
-                  const obj = { value, label: memo(19022).DISCORD_VARIANTS[value].label, icon: jsx(memo(11673).ClydeIcon, { color: memo(19022).DISCORD_VARIANTS[value].color }) };
-                  return jsx(memo(7681).TableRadioRow, { value, label: memo(19022).DISCORD_VARIANTS[value].label, icon: jsx(memo(11673).ClydeIcon, { color: memo(19022).DISCORD_VARIANTS[value].color }) }, value);
+                  const obj = { value, label: memo(19158).DISCORD_VARIANTS[value].label, icon: jsx(memo(11739).ClydeIcon, { color: memo(19158).DISCORD_VARIANTS[value].color }) };
+                  return jsx(memo(7747).TableRadioRow, { value, label: memo(19158).DISCORD_VARIANTS[value].label, icon: jsx(memo(11739).ClydeIcon, { color: memo(19158).DISCORD_VARIANTS[value].color }) }, value);
                 })
         };
-        tmp5 = jsx(memo(7679).TableRadioGroup, {
+        tmp5 = jsx(memo(7745).TableRadioGroup, {
           title: "Switch Clients",
           value: memo,
           onChange: tmp4,
           hasIcons: true,
           children: arr.map((value) => {
-                  const obj = { value, label: memo(19022).DISCORD_VARIANTS[value].label, icon: jsx(memo(11673).ClydeIcon, { color: memo(19022).DISCORD_VARIANTS[value].color }) };
-                  return jsx(memo(7681).TableRadioRow, { value, label: memo(19022).DISCORD_VARIANTS[value].label, icon: jsx(memo(11673).ClydeIcon, { color: memo(19022).DISCORD_VARIANTS[value].color }) }, value);
+                  const obj = { value, label: memo(19158).DISCORD_VARIANTS[value].label, icon: jsx(memo(11739).ClydeIcon, { color: memo(19158).DISCORD_VARIANTS[value].color }) };
+                  return jsx(memo(7747).TableRadioRow, { value, label: memo(19158).DISCORD_VARIANTS[value].label, icon: jsx(memo(11739).ClydeIcon, { color: memo(19158).DISCORD_VARIANTS[value].color }) }, value);
                 })
         });
       }

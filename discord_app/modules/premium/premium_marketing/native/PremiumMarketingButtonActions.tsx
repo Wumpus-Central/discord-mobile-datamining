@@ -1,20 +1,20 @@
-// === Module 9949: PremiumMarketingButtonActions ===
+// === Module 10016: PremiumMarketingButtonActions ===
 
-// Module 9949 (PremiumMarketingButtonActions)
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8418 */;
-import ProductIds from "ProductIds" /* 8514 */;
-import openUserSettings from "openUserSettings" /* 8537 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9523 */;
-import cta_button from "cta_button" /* 9565 */;
-import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 9950 */;
-import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 9952 */;
-import PromotionsStore from "PromotionsStore" /* 9556 */;
+// Module 10016 (PremiumMarketingButtonActions)
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8484 */;
+import ProductIds from "ProductIds" /* 8580 */;
+import openUserSettings from "openUserSettings" /* 8604 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 9590 */;
+import cta_button from "cta_button" /* 9632 */;
+import navigateToSocialLayerStorefrontDefault from "navigateToSocialLayerStorefront" /* 10017 */;
+import showMarketingMomentRewardScreen from "showMarketingMomentRewardScreen" /* 10019 */;
+import PromotionsStore from "PromotionsStore" /* 9623 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PremiumTypes = fn(1387).PremiumTypes;
+const PremiumTypes = fn(1390).PremiumTypes;
 const Constants = fn(1072);
 ({ AnalyticsSections: hasOwnProperty, AnalyticsObjects: closure_6, AnalyticsObjectTypes: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
 const size = fn(2);

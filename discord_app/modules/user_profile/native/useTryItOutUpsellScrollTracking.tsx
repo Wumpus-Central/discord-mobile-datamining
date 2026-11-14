@@ -1,7 +1,7 @@
-// === Module 16966: useTryItOutUpsellScrollTracking ===
+// === Module 17089: useTryItOutUpsellScrollTracking ===
 
-// Module 16966 (useTryItOutUpsellScrollTracking)
-import _mod1652 from "module_1652" /* 1652 */;
+// Module 17089 (useTryItOutUpsellScrollTracking)
+import _mod1655 from "module_1655" /* 1655 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/useTryItOut
 export default function useTryItOutUpsellScrollTracking(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  const sharedValue = _mod1652.useSharedValue(true);
+  const sharedValue = _mod1655.useSharedValue(true);
   noop.useRef({ contentHeight: 0, viewportHeight: 0, tryItOutSectionHeight: 0 });
   items = [arg0, sharedValue, arg1];
   const callback = noop.useCallback((arg0) => {

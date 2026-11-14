@@ -1,6 +1,6 @@
-// === Module 2120: LifecycleManager ===
+// === Module 2123: LifecycleManager ===
 
-// Module 2120 (LifecycleManager)
+// Module 2123 (LifecycleManager)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/LifecycleManager.tsx");

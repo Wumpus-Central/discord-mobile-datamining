@@ -1,13 +1,13 @@
-// === Module 7249: ApplicationAssetUtils ===
+// === Module 7313: ApplicationAssetUtils ===
 
-// Module 7249 (ApplicationAssetUtils)
+// Module 7313 (ApplicationAssetUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1446 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7250 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7314 */;
 
 require = fn;
 function updateAssets() {
@@ -318,7 +318,7 @@ let closure_22 = async function _fetchAssetIds(arg0) {
     num13 = 1;
   }
   closure_131_2 = num13;
-  return "flexDirection";
+  return "Path";
 };
 const Constants = fn(1072);
 ({ Endpoints: closure_6, PlatformTypes } = Constants);

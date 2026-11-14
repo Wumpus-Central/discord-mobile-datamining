@@ -1,24 +1,24 @@
-// === Module 14566: VoicePanelHeaderGlassBlur ===
+// === Module 14679: VoicePanelHeaderGlassBlur ===
 
-// Module 14566 (VoicePanelHeaderGlassBlur)
-import _mod1652 from "module_1652" /* 1652 */;
-import shared from "shared" /* 5250 */;
-import useThemeDefault from "useTheme" /* 5484 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5842 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import springPresets from "springPresets" /* 5877 */;
-import NativeViewDefault from "NativeView" /* 7656 */;
+// Module 14679 (VoicePanelHeaderGlassBlur)
+import _mod1655 from "module_1655" /* 1655 */;
+import shared from "shared" /* 5313 */;
+import useThemeDefault from "useTheme" /* 5547 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5905 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import springPresets from "springPresets" /* 5940 */;
+import NativeViewDefault from "NativeView" /* 7722 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_6 = createStyles.createStyles({ blur: { position: "absolute", top: 0, left: 0, right: 0 }, strokeContainer: { position: "absolute", left: 0, right: 0, bottom: -StyleSheet.hairlineWidth, height: StyleSheet.hairlineWidth }, stroke: { height: StyleSheet.hairlineWidth, opacity: 0.15, backgroundColor: "white" }, strokeAlt: { height: StyleSheet.hairlineWidth, opacity: 0.8, backgroundColor: "black" }, strokeAltLight: { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" } });
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let closure_7 = PlatformUtils.isAndroid();
 let closure_8 = { code: "(function VoicePanelHeaderGlassBlurTsx1(){let[shown,IS_ANDROID]=this.__closure;return{opacity:shown.get()?IS_ANDROID?0.7:1:0};})" };
 let closure_9 = { code: "(function VoicePanelHeaderGlassBlurTsx2(){let[withSpring,shown,Reanimated3DefaultSpringConfig]=this.__closure;return{blurAmount:withSpring(shown.get()?0.3:0,Reanimated3DefaultSpringConfig)};})" };
@@ -51,7 +51,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   VoicePanelHeaderGlassBlurTsx1.__closure = items1;
   VoicePanelHeaderGlassBlurTsx1.__workletHash = 4561654385020;
   VoicePanelHeaderGlassBlurTsx1.__initData = tmp4;
-  const animatedStyle = _mod1652.useAnimatedStyle(VoicePanelHeaderGlassBlurTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(VoicePanelHeaderGlassBlurTsx1);
   const items2 = [closure_9, spring_spring.withSpring, shown, springPresets.Reanimated3DefaultSpringConfig];
   c0 = undefined;
   c1 = undefined;
@@ -72,12 +72,12 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   VoicePanelHeaderGlassBlurTsx2.__closure = items3;
   VoicePanelHeaderGlassBlurTsx2.__workletHash = 10192062827186;
   VoicePanelHeaderGlassBlurTsx2.__initData = tmp8;
-  const animatedProps = _mod1652.useAnimatedProps(VoicePanelHeaderGlassBlurTsx2);
+  const animatedProps = _mod1655.useAnimatedProps(VoicePanelHeaderGlassBlurTsx2);
   const tmp14 = useThemeDefault();
   const obj2 = { style: null, children: null };
   const items4 = [tmp.blur, style, animatedStyle];
   obj2.style = items4;
-  const tmp2Result = _mod1652;
+  const tmp2Result = _mod1655;
   const tmp17 = VisualEffectViewAnimatedDefault;
   let str = "light";
   if (tmp2Result3.isThemeDark(tmp14)) {
@@ -98,5 +98,5 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   obj4.children = items7;
   items6[1] = hasOwnProperty(tmp13Result, obj4);
   obj2.children = items6;
-  return hasOwnProperty(_modDef1652.View, obj2);
+  return hasOwnProperty(_modDef1655.View, obj2);
 });

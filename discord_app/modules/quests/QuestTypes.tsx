@@ -1,9 +1,9 @@
-// === Module 5278: QuestTypes ===
+// === Module 5341: QuestTypes ===
 
-// Module 5278 (QuestTypes)
-import QuestRewardCodePlatforms from "QuestRewardCodePlatforms" /* 5279 */;
-import QuestContent from "QuestContent" /* 5280 */;
-import AdPlacement from "AdPlacement" /* 5281 */;
+// Module 5341 (QuestTypes)
+import QuestRewardCodePlatforms from "QuestRewardCodePlatforms" /* 5342 */;
+import QuestContent from "QuestContent" /* 5343 */;
+import AdPlacement from "AdPlacement" /* 5344 */;
 import size from "module_2" /* 2 */;
 
 const values = Object.values(QuestRewardCodePlatforms.QuestRewardCodePlatforms);

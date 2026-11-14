@@ -1,10 +1,10 @@
-// === Module 5240: ColorUtils ===
+// === Module 5303: ColorUtils ===
 
-// Module 5240 (ColorUtils)
+// Module 5303 (ColorUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
-import utils_ColorDefault from "utils/Color" /* 5241 */;
+import utils_ColorDefault from "utils/Color" /* 5304 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -44,16 +44,16 @@ function rgbToHslObject(items, items2, items3) {
     result5 = (result - result1) / diff + 4;
   }
 }
-function hslToHex(hue, sum, sum1) {
+function hslToHex(sum2, sum, sum1) {
   const result = sum1 / 100;
   const result1 = sum * Math.min(result, 1 - result) / 100;
-  const result2 = hue / 30 % 12;
+  const result2 = sum2 / 30 % 12;
   const str = Math.round(255 * (result - result1 * Math.max(Math.min(result2 - 3, 9 - result2, 1), -1)));
-  const result3 = (8 + hue / 30) % 12;
+  const result3 = (8 + sum2 / 30) % 12;
   const str1 = Math.round(255 * (result - result1 * Math.max(Math.min(result2 - 3, 9 - result2, 1), -1))).toString(16);
   const padStartResult = Math.round(255 * (result - result1 * Math.max(Math.min(result2 - 3, 9 - result2, 1), -1))).toString(16).padStart(2, "0");
   const str2 = Math.round(255 * (result - result1 * Math.max(Math.min(result3 - 3, 9 - result3, 1), -1)));
-  const result4 = (4 + hue / 30) % 12;
+  const result4 = (4 + sum2 / 30) % 12;
   const str4 = Math.round(255 * (result - result1 * Math.max(Math.min(result3 - 3, 9 - result3, 1), -1))).toString(16);
   const padStartResult1 = Math.round(255 * (result - result1 * Math.max(Math.min(result3 - 3, 9 - result3, 1), -1))).toString(16).padStart(2, "0");
   const str3 = Math.round(255 * (result - result1 * Math.max(Math.min(result4 - 3, 9 - result4, 1), -1)));

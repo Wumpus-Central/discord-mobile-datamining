@@ -1,13 +1,13 @@
-// === Module 19452: BadgeCustomizationProfileCoachmark ===
+// === Module 19644: BadgeCustomizationProfileCoachmark ===
 
-// Module 19452 (BadgeCustomizationProfileCoachmark)
+// Module 19644 (BadgeCustomizationProfileCoachmark)
 import util from "util" /* 1113 */;
-import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 5321 */;
+import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 5384 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");
 

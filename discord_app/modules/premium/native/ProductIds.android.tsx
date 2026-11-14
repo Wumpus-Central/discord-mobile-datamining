@@ -1,8 +1,8 @@
-// === Module 8514: ProductIds ===
+// === Module 8580: ProductIds ===
 
-// Module 8514 (ProductIds)
-import PremiumConstants from "PremiumConstants" /* 1387 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
+// Module 8580 (ProductIds)
+import PremiumConstants from "PremiumConstants" /* 1390 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
 import size from "module_2" /* 2 */;
 
 ({ PremiumTypes, SubscriptionIntervalTypes, SubscriptionPlans } = PremiumConstants);
@@ -76,18 +76,18 @@ export const AppStorePremiumProductIdsToPremiumBundledItems = { [frozen.PREMIUM_
 export const TrialIdToProductOfferId = { [PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID]: { [frozen.PREMIUM_TIER_2_MONTHLY]: "premium-tier-2-monthly-likelihood", [frozen.PREMIUM_TIER_2_YEARLY]: "premium-tier-2-yearly-likelihood" }, [PREMIUM_TIER_2_REACTIVATION_TRIAL_ID]: { [frozen.PREMIUM_TIER_2_MONTHLY]: "premium-tier-2-monthly-reactivation", [frozen.PREMIUM_TIER_2_YEARLY]: "premium-tier-2-yearly-reactivation" }, [PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID]: { [frozen.PREMIUM_TIER_0_MONTHLY]: "premium-tier-0-monthly-likelihood", [frozen.PREMIUM_TIER_0_YEARLY]: "premium-tier-0-yearly-likelihood" }, [PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID]: { [frozen.PREMIUM_TIER_2_MONTHLY]: "premium-tier-2-monthly-q4-drop", [frozen.PREMIUM_TIER_2_YEARLY]: "premium-tier-2-yearly-q4-drop" }, [PREMIUM_TIER_2_REFERRAL_TRIAL_ID]: { [frozen.PREMIUM_TIER_2_MONTHLY]: "premium-tier-2-monthly-referral-trial", [frozen.PREMIUM_TIER_2_YEARLY]: "premium-tier-2-yearly-referral-trial" }, [PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID]: { [frozen.PREMIUM_TIER_2_MONTHLY]: "premium-tier-2-monthly-hfu-two-week-trial", [frozen.PREMIUM_TIER_2_YEARLY]: "premium-tier-2-yearly-hfu-two-week-trial" } };
 export const DiscountIdToProductOfferId = { [PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID]: { [frozen.PREMIUM_TIER_2_MONTHLY]: "premium-tier-2-monthly-likelihood-discount" }, [PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID]: { [frozen.PREMIUM_TIER_2_MONTHLY]: "premium-tier-2-monthly-reengagement-discount" } };
 export const BOGO_OFFER_ID = "premium-tier-2-monthly-bogo";
-export function getProductIdForGift(planIdForPremiumType) {
-  if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === planIdForPremiumType) {
+export function getProductIdForGift(arg0) {
+  if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === arg0) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_0;
-  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_0 === planIdForPremiumType) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_0 === arg0) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_0;
-  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_1 === planIdForPremiumType) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_1 === arg0) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_1;
-  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_1 === planIdForPremiumType) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_1 === arg0) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_1;
-  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_2 === planIdForPremiumType) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_2 === arg0) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_2;
-  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === planIdForPremiumType) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === arg0) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_2;
   } else {
     const _Error = Error;

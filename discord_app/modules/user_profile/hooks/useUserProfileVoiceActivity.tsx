@@ -1,9 +1,9 @@
-// === Module 15644: useUserProfileVoiceActivity ===
+// === Module 15758: useUserProfileVoiceActivity ===
 
-// Module 15644 (useUserProfileVoiceActivity)
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8403 */;
-import PresenceStore from "PresenceStore" /* 6005 */;
-import VoiceStateStore from "VoiceStateStore" /* 5918 */;
+// Module 15758 (useUserProfileVoiceActivity)
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8469 */;
+import PresenceStore from "PresenceStore" /* 6068 */;
+import VoiceStateStore from "VoiceStateStore" /* 5981 */;
 
 const require = fn;
 const size = fn(2);
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserPro
 export default function useUserProfileVoiceActivity(guildId) {
   const userId = guildId.userId;
   let id;
-  const tmp2 = id(10779)({ userId, guildId: guildId.guildId });
+  const tmp2 = id(10848)({ userId, guildId: guildId.guildId });
   const voiceChannel = tmp2.voiceChannel;
   id = undefined;
   if (voiceChannel != null) {

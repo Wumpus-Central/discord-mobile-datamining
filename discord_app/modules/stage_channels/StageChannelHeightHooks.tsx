@@ -1,7 +1,7 @@
-// === Module 12815: StageChannelHeightHooks ===
+// === Module 12911: StageChannelHeightHooks ===
 
-// Module 12815 (StageChannelHeightHooks)
-import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 12816 */;
+// Module 12911 (StageChannelHeightHooks)
+import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 12912 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelHeightHooks.tsx");

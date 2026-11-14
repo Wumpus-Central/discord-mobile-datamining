@@ -1,7 +1,7 @@
-// === Module 15206: GiftCardsExperiment ===
+// === Module 15320: GiftCardsExperiment ===
 
-// Module 15206 (GiftCardsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 15320 (GiftCardsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-02-gift-cards", kind: "user", defaultConfig: { enabled: false }, variations: null };

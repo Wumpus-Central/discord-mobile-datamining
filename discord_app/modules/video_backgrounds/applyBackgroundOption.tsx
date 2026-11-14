@@ -1,16 +1,16 @@
-// === Module 6172: applyBackgroundOption ===
+// === Module 6235: applyBackgroundOption ===
 
-// Module 6172 (applyBackgroundOption)
-import AvatarUtils from "AvatarUtils" /* 1411 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 6033 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 6175 */;
-import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 6177 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 6180 */;
-import getFilterImageDefault from "getFilterImage" /* 6185 */;
-import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 6186 */;
+// Module 6235 (applyBackgroundOption)
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 6096 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 6238 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 6240 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 6243 */;
+import getFilterImageDefault from "getFilterImage" /* 6248 */;
+import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 6249 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1385 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 6173 */;
+import UserStore from "UserStore" /* 1388 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 6236 */;
 
 require = fn;
 let closure_9 = async function _getFilterBlob() {
@@ -219,7 +219,7 @@ let closure_14 = async function _applyBackgroundOptionLive(arg0, arg1) {
     }
     closure_130_1 = flag;
     _location = track.location;
-    return "flexDirection";
+    return "Path";
   })();
   iter.next();
   return iter;
@@ -247,12 +247,12 @@ let closure_15 = async function _applyBackgroundOptionPreview(arg0, arg1, arg2) 
     }
     closure_131_2 = flag;
     _location = track.location;
-    return "flexDirection";
+    return "Path";
   })();
   iter.next();
   return iter;
 };
-const VideoBackgroundConstants = fn(6174);
+const VideoBackgroundConstants = fn(6237);
 ({ BACKGROUND_REPLACEMENT_SIZE: closure_6, BLUR_BACKGROUND_OPTION: metroImportDefault } = VideoBackgroundConstants);
 const NOOP = fn(1072).NOOP;
 const size = fn(2);

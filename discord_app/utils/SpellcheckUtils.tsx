@@ -1,8 +1,8 @@
-// === Module 7627: SpellcheckUtils ===
+// === Module 7693: SpellcheckUtils ===
 
-// Module 7627 (SpellcheckUtils)
-import PlatformUtils2 from "PlatformUtils" /* 1377 */;
-import DiscordNativeDefault from "DiscordNative" /* 5053 */;
+// Module 7693 (SpellcheckUtils)
+import PlatformUtils2 from "PlatformUtils" /* 1380 */;
+import DiscordNativeDefault from "DiscordNative" /* 5116 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -151,7 +151,7 @@ let closure_9 = async function _isMisspelled(arg0) {
           closure_130_2 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -233,7 +233,7 @@ let closure_10 = async function _getCorrections(arg0) {
           closure_131_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -309,7 +309,7 @@ let closure_11 = async function _getCachedMisspelling() {
           let cachedMisspelling;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -410,8 +410,8 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
     }
   }
 };
-fn(7595).addPostConnectionCallback;
-let PlatformUtils = fn(1377);
+fn(7661).addPostConnectionCallback;
+let PlatformUtils = fn(1380);
 PlatformUtils = PlatformUtils.isDesktop();
 if (PlatformUtils) {
   const importDefaultResult = DiscordNativeDefault;

@@ -1,24 +1,24 @@
-// === Module 7640: MemberVerificationModal ===
+// === Module 7706: MemberVerificationModal ===
 
-// Module 7640 (MemberVerificationModal)
+// Module 7706 (MemberVerificationModal)
 import nativeDefault from "native" /* 575 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5289 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6861 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5352 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6924 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7641 */;
-import module_1652 from "module_1652" /* 1652 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 7707 */;
+import module_1655 from "module_1655" /* 1655 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(7642);
+const MemberVerificationFormConstants = fn(7708);
 ({ SCROLL_EVENT_TIMER_MS: metroImportDefault, SHEET_RADIUS, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-let closure_11 = module_1652.createAnimatedComponent(fn(1187).Icon);
-const createStyles = fn(5243);
+let closure_11 = module_1655.createAnimatedComponent(fn(1187).Icon);
+const createStyles = fn(5306);
 let obj = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center" }, scrollContent: { flexGrow: 1 }, sheet: { flexGrow: 1, marginTop: -SHEET_RADIUS, borderTopLeftRadius: SHEET_RADIUS, borderTopRightRadius: SHEET_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, closeButtonContainer: { position: "absolute", right: 0 }, closeIconContainer: { position: "relative", marginTop: 10, marginRight: 20, width: 24, height: 24 }, closeIconOverBanner: null, closeIconAfterBanner: null, headerSeparator: null };
 let obj3 = { flexGrow: 1, marginTop: -SHEET_RADIUS, borderTopLeftRadius: SHEET_RADIUS, borderTopRightRadius: SHEET_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj.closeIconOverBanner = { position: "absolute", tintColor: nativeDefault.colors.WHITE };
@@ -43,8 +43,8 @@ export default function MemberVerificationModal(guildId) {
   let tmp = closure_12();
   const rect = require("useSafeAreaInsets")();
   const top = rect.top;
-  const sharedValue = require("module_1652").useSharedValue(0);
-  let obj = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(0);
+  let obj = require("module_1655");
   items = [closure_13, sharedValue];
   _require = undefined;
   [tmp6, tmp7] = items;
@@ -57,13 +57,13 @@ export default function MemberVerificationModal(guildId) {
   MemberVerificationModalTsx1.__closure = items1;
   MemberVerificationModalTsx1.__workletHash = 7671790778026;
   MemberVerificationModalTsx1.__initData = tmp6;
-  const obj2 = require("module_1652");
-  const animatedScrollHandler = require("module_1652").useAnimatedScrollHandler(MemberVerificationModalTsx1);
+  const obj2 = require("module_1655");
+  const animatedScrollHandler = require("module_1655").useAnimatedScrollHandler(MemberVerificationModalTsx1);
   const tmp9 = require("useTheme")();
   const tmp4Result = require("shared");
   const tmp11 = closure_8();
   const isThemeDarkResult = require("shared").isThemeDark(tmp9);
-  const items2 = [closure_14, require("module_1652").interpolate, sharedValue, tmp11, top, isThemeDarkResult];
+  const items2 = [closure_14, require("module_1655").interpolate, sharedValue, tmp11, top, isThemeDarkResult];
   _require = undefined;
   importDefault = undefined;
   stateFromStores = undefined;
@@ -91,9 +91,9 @@ export default function MemberVerificationModal(guildId) {
   MemberVerificationModalTsx2.__closure = items3;
   MemberVerificationModalTsx2.__workletHash = 1795520586643;
   MemberVerificationModalTsx2.__initData = tmp12;
-  const animatedStyle = require("module_1652").useAnimatedStyle(MemberVerificationModalTsx2);
-  const tmp4Result5 = require("module_1652");
-  const items4 = [closure_15, require("module_1652").interpolate, sharedValue, tmp11, top];
+  const animatedStyle = require("module_1655").useAnimatedStyle(MemberVerificationModalTsx2);
+  const tmp4Result5 = require("module_1655");
+  const items4 = [closure_15, require("module_1655").interpolate, sharedValue, tmp11, top];
   _require = undefined;
   importDefault = undefined;
   stateFromStores = undefined;
@@ -112,8 +112,8 @@ export default function MemberVerificationModal(guildId) {
   MemberVerificationModalTsx3.__closure = items5;
   MemberVerificationModalTsx3.__workletHash = 11491807066890;
   MemberVerificationModalTsx3.__initData = tmp19;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(MemberVerificationModalTsx3);
-  const tmp4Result6 = require("module_1652");
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(MemberVerificationModalTsx3);
+  const tmp4Result6 = require("module_1655");
   const setInitialVerificationEffect = require("MemberVerificationModalHooks").useSetInitialVerificationEffect(guildId);
   const tmp26 = require("usePreviewDisabledGuild")(guildId);
   const tmp4Result7 = require("MemberVerificationModalHooks");

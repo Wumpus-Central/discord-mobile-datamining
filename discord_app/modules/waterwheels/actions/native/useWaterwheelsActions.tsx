@@ -1,21 +1,20 @@
-// === Module 18873: useWaterwheelsActions ===
+// === Module 19002: useWaterwheelsActions ===
 
-// Module 18873 (useWaterwheelsActions)
+// Module 19002 (useWaterwheelsActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 7358 */;
-import openPrivacySettingsDefault from "openPrivacySettings" /* 8134 */;
-import GameActionCreators from "GameActionCreators" /* 9467 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10156 */;
-import NotificationUtilsDefault from "NotificationUtils" /* 14721 */;
-import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 18874 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 8200 */;
+import GameActionCreators from "GameActionCreators" /* 9534 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10225 */;
+import NotificationUtilsDefault from "NotificationUtils" /* 14834 */;
+import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 19003 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2138 */;
+import GameStore from "GameStore" /* 2141 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14712 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 14825 */;
 
 require = fn;
 function openErrorToast(text) {
@@ -646,14 +645,15 @@ function joinWaterwheelsGuild() {
 let closure_21 = async function _joinWaterwheelsGuild() {
   closure_1 = value;
   closure_2 = arg2;
-  c12 = 0;
+  closure_3 = arg3;
   c13 = 0;
-  c10 = 0;
-  return (async (arg0, value, arg2) => {
-    if (c13 === 2) {
-      c13 = 3;
+  c14 = 0;
+  c11 = 0;
+  return (async (arg0, value, arg2, arg3) => {
+    if (c14 === 2) {
+      c14 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp20 === 3) {
+    } else if (tmp21 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -664,46 +664,48 @@ let closure_21 = async function _joinWaterwheelsGuild() {
       }
     } else {
       try {
-        c13 = 2;
-        switch (c12) {
+        c14 = 2;
+        switch (c13) {
           case 0:
             if (arg0 === 1) {
-              c13 = 3;
+              c14 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c13 = 3;
+              c14 = 3;
               let obj3 = { value, done: true };
               return obj3;
             } else {
-              const assert = tmp3;
-              closure_9 = tmp471;
-              closure_137_0 = set;
-              closure_137_1 = closure_1;
-              closure_137_2 = dependencyMap;
-              closure_137_4 = undefined;
-              closure_137_5 = undefined;
-              closure_137_6 = undefined;
+              closure_9 = tmp3;
+              const assert = tmp19;
+              closure_138_0 = set;
+              closure_138_1 = closure_1;
+              closure_138_2 = dependencyMap;
+              closure_138_3 = closure_3;
+              closure_138_5 = undefined;
+              closure_138_6 = undefined;
+              closure_138_7 = undefined;
+              closure_138_8 = undefined;
               let id2;
-              closure_137_8 = undefined;
-              closure_137_9 = undefined;
-              closure_137_10 = undefined;
+              closure_138_10 = undefined;
+              closure_138_11 = undefined;
+              closure_138_12 = undefined;
               let application_status2;
-              closure_137_12 = undefined;
-              closure_137_13 = undefined;
-              closure_137_14 = undefined;
+              closure_138_14 = undefined;
+              closure_138_15 = undefined;
+              closure_138_16 = undefined;
               function hasJoinedGuild() {
-                guild = closure_7.getGuild(closure_1_1);
+                guild = c7.getGuild(closure_1_1);
                 let joinedAt;
                 if (guild != null) {
                   joinedAt = guild.joinedAt;
                 }
                 return null != joinedAt;
               }
-              closure_137_3 = hasJoinedGuild;
-              closure_137_15 = function canOpenVerification() {
+              closure_138_4 = hasJoinedGuild;
+              closure_138_17 = function canOpenVerification() {
                 let isValidResult = assert.isValid();
                 if (isValidResult) {
-                  guild = closure_7.getGuild(closure_1_1);
+                  guild = c7.getGuild(closure_1_1);
                   let joinedAt;
                   if (guild != null) {
                     joinedAt = guild.joinedAt;
@@ -715,28 +717,32 @@ let closure_21 = async function _joinWaterwheelsGuild() {
               if (!hasJoinedGuild()) {
                 if (!set.has(closure_1)) {
                   set.add(closure_1);
-                  closure_137_6 = false;
+                  if (closure_3 != null) {
+                    closure_3(closure_1, true);
+                  }
+                  closure_138_7 = false;
+                  closure_138_8 = false;
                   id2 = id.getId();
-                  closure_137_8 = WaterwheelsDiscoverJoinAttribution.captureDiscoverJoinAttribution(id, () => {
+                  closure_138_10 = WaterwheelsDiscoverJoinAttribution.captureDiscoverJoinAttribution(id, () => {
 
                   }, DispatcherDefault);
-                  c10 = 3;
-                  c12 = 4;
-                  c13 = 1;
+                  c11 = 3;
+                  c13 = 4;
+                  c14 = 1;
                   let obj4 = { value: GuildActionCreatorsDefault.joinGuild(closure_1, { autoNavigate: false }), done: false };
                   return obj4;
                 }
               }
-              c13 = 3;
+              c14 = 3;
               return { value: "HermesInternal", done: null };
             }
           break;
           case 1:
-            closure_7 = tmp472;
-            c10 = 0;
-            closure_137_16 = function report() {
+            closure_8 = closure_12;
+            c11 = 0;
+            closure_138_18 = function report() {
               const self = this;
-              const apply = closure_17.apply;
+              const apply = closure_19.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
@@ -744,7 +750,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
               }
               return applyArgumentsResult;
             };
-            closure_137_17 = function _report() {
+            closure_138_19 = function _report() {
               const self = this;
               const tmp = closure_3(function*() {
                 if (c0 === 2) {
@@ -772,14 +778,14 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                         return obj3;
                       } else {
                         c2 = 1;
-                        let isValidResult = null != closure_2_4;
+                        let isValidResult = null != closure_2_5;
                         if (isValidResult) {
                           isValidResult = assert.isValid();
                         }
                         if (isValidResult) {
                           let tmp10Result;
                           if (dependencyMap != null) {
-                            tmp10Result = tmp10(closure_2_4);
+                            tmp10Result = tmp10(closure_2_5);
                           }
                           c1 = 2;
                           c0 = 1;
@@ -811,7 +817,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                   }
                 }
               });
-              closure_17 = tmp;
+              closure_19 = tmp;
               const apply = tmp.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -820,63 +826,84 @@ let closure_21 = async function _joinWaterwheelsGuild() {
               }
               return applyArgumentsResult;
             };
-            closure_137_14 = closure_137_16();
-            c10 = 17;
-            const tmp425 = closure_137_15();
-            let tmp426 = !tmp425;
-            if (tmp425) {
-              let outcome;
-              if (closure_137_4 != null) {
-                outcome = closure_137_4.outcome;
+            closure_138_16 = closure_138_18();
+            c11 = 17;
+            if (closure_138_8) {
+              let isValidResult = closure_138_10.isValid();
+              if (isValidResult) {
+                isValidResult = closure_138_4();
               }
-              let tmp429 = "verification_required" !== outcome;
-              if (tmp429) {
-                let outcome1;
-                if (closure_137_4 != null) {
-                  outcome1 = closure_137_4.outcome;
+              if (isValidResult) {
+                isValidResult = closure_137_0(closure_137_2[26]).shouldShowMembershipVerificationGate(closure_138_1);
+                const obj56 = closure_137_0(closure_137_2[26]);
+              }
+              if (isValidResult) {
+                const result = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                const obj57 = closure_137_0(closure_137_2[30]);
+              }
+            } else {
+              const tmp590 = closure_138_17();
+              let tmp591 = !tmp590;
+              if (tmp590) {
+                let outcome;
+                if (closure_138_5 != null) {
+                  outcome = closure_138_5.outcome;
                 }
-                tmp429 = "pending" !== outcome1;
+                let tmp594 = "verification_required" !== outcome;
+                if (tmp594) {
+                  let outcome1;
+                  if (closure_138_5 != null) {
+                    outcome1 = closure_138_5.outcome;
+                  }
+                  tmp594 = "pending" !== outcome1;
+                }
+                tmp591 = tmp594;
               }
-              tmp426 = tmp429;
-            }
-            if (!tmp426) {
-              if (null != closure_137_5) {
-                const obj5 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_137_1, request: closure_137_5 };
-                closure_136_1(closure_136_2[15]).dispatch(obj5);
-                const obj34 = closure_136_1(closure_136_2[15]);
+              if (!tmp591) {
+                if (null != closure_138_6) {
+                  const obj5 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_138_1, request: closure_138_6 };
+                  closure_137_1(closure_137_2[15]).dispatch(obj5);
+                  const obj53 = closure_137_1(closure_137_2[15]);
+                }
+                const result1 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                const obj55 = closure_137_0(closure_137_2[30]);
               }
-              const result = closure_136_0(closure_136_2[29]).transitionToMemberVerification(closure_137_1);
-              const obj36 = closure_136_0(closure_136_2[29]);
             }
-            c10 = 2;
-            c10 = 0;
-            closure_137_0.delete(closure_137_1);
-            closure_137_8.dispose();
-            c12 = 25;
-            c13 = 1;
-            tmp471 = closure_137_14;
-          break;
+            c11 = 2;
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp649(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            c13 = 25;
+            c14 = 1;
+            const obj7 = { value: closure_138_16, done: false };
+            return obj7;
           case 2:
-            c10 = 0;
-            closure_137_0.delete(closure_137_1);
-            closure_137_8.dispose();
-            throw tmp472;
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp576(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            throw closure_12;
           case 3:
-            c10 = 1;
-            closure_137_18 = tmp472;
-            let tmp357 = closure_137_18 instanceof closure_136_0(closure_136_2[21]).JoinGuildRefusedError;
-            if (tmp357) {
-              tmp357 = null == closure_137_18.cause;
+            c11 = 1;
+            closure_138_20 = closure_12;
+            let tmp496 = closure_138_20 instanceof closure_137_0(closure_137_2[21]).JoinGuildRefusedError;
+            if (tmp496) {
+              tmp496 = null == closure_138_20.cause;
             }
-            if (!tmp357) {
-              const obj7 = { outcome: "failed", reason: closure_136_0(closure_136_2[28]).classifyWaterwheelsJoinFailure(closure_137_18) };
-              closure_137_4 = obj7;
-              const obj30 = closure_136_0(closure_136_2[28]);
+            if (!tmp496) {
+              const obj11 = { outcome: "failed", reason: closure_137_0(closure_137_2[29]).classifyWaterwheelsJoinFailure(closure_138_20) };
+              closure_138_5 = obj11;
+              const obj46 = closure_137_0(closure_137_2[29]);
             }
-            let isValidResult = closure_137_8.isValid();
-            if (isValidResult) {
-              isValidResult = !(function isJoinFailureAlreadyShown(body) {
-                if (body instanceof closure_1_0(6859).JoinGuildRefusedError) {
+            let isValidResult1 = closure_138_10.isValid();
+            if (isValidResult1) {
+              isValidResult1 = !(function isJoinFailureAlreadyShown(body) {
+                if (body instanceof closure_1_0(6922).JoinGuildRefusedError) {
                   return true;
                 } else {
                   let code;
@@ -892,16 +919,16 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                   }
                   return hasItem;
                 }
-              })(closure_137_18);
+              })(closure_138_20);
             }
-            if (isValidResult) {
-              const intl8 = closure_136_0(closure_136_2[11]).intl;
-              closure_136_14(intl8.string(closure_136_1(closure_136_2[12]).grYfmA));
+            if (isValidResult1) {
+              const intl8 = closure_137_0(closure_137_2[11]).intl;
+              closure_137_14(intl8.string(closure_137_1(closure_137_2[12]).grYfmA));
             }
-            c10 = 0;
-            closure_137_16 = function report() {
+            c11 = 0;
+            closure_138_18 = function report() {
               const self = this;
-              const apply = closure_17.apply;
+              const apply = closure_19.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
@@ -909,7 +936,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
               }
               return applyArgumentsResult;
             };
-            closure_137_17 = function _report() {
+            closure_138_19 = function _report() {
               const self = this;
               const tmp = closure_3(function*() {
                 if (c0 === 2) {
@@ -937,14 +964,14 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                         return obj3;
                       } else {
                         c2 = 1;
-                        let isValidResult = null != closure_2_4;
+                        let isValidResult = null != closure_2_5;
                         if (isValidResult) {
                           isValidResult = assert.isValid();
                         }
                         if (isValidResult) {
                           let tmp10Result;
                           if (dependencyMap != null) {
-                            tmp10Result = tmp10(closure_2_4);
+                            tmp10Result = tmp10(closure_2_5);
                           }
                           c1 = 2;
                           c0 = 1;
@@ -976,7 +1003,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                   }
                 }
               });
-              closure_17 = tmp;
+              closure_19 = tmp;
               const apply = tmp.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -985,60 +1012,62 @@ let closure_21 = async function _joinWaterwheelsGuild() {
               }
               return applyArgumentsResult;
             };
-            closure_137_14 = closure_137_16();
-            c10 = 16;
-            const tmp381 = closure_137_15();
-            let tmp382 = !tmp381;
-            if (tmp381) {
-              let outcome2;
-              if (closure_137_4 != null) {
-                outcome2 = closure_137_4.outcome;
+            closure_138_16 = closure_138_18();
+            c11 = 16;
+            if (closure_138_8) {
+              let isValidResult2 = closure_138_10.isValid();
+              if (isValidResult2) {
+                isValidResult2 = closure_138_4();
               }
-              let tmp385 = "verification_required" !== outcome2;
-              if (tmp385) {
-                let outcome3;
-                if (closure_137_4 != null) {
-                  outcome3 = closure_137_4.outcome;
+              if (isValidResult2) {
+                isValidResult2 = closure_137_0(closure_137_2[26]).shouldShowMembershipVerificationGate(closure_138_1);
+                const obj50 = closure_137_0(closure_137_2[26]);
+              }
+              if (isValidResult2) {
+                const result2 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                const obj51 = closure_137_0(closure_137_2[30]);
+              }
+            } else {
+              const tmp521 = closure_138_17();
+              let tmp522 = !tmp521;
+              if (tmp521) {
+                let outcome2;
+                if (closure_138_5 != null) {
+                  outcome2 = closure_138_5.outcome;
                 }
-                tmp385 = "pending" !== outcome3;
+                let tmp525 = "verification_required" !== outcome2;
+                if (tmp525) {
+                  let outcome3;
+                  if (closure_138_5 != null) {
+                    outcome3 = closure_138_5.outcome;
+                  }
+                  tmp525 = "pending" !== outcome3;
+                }
+                tmp522 = tmp525;
               }
-              tmp382 = tmp385;
-            }
-            if (!tmp382) {
-              if (null != closure_137_5) {
-                const obj10 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_137_1, request: closure_137_5 };
-                closure_136_1(closure_136_2[15]).dispatch(obj10);
-                const obj31 = closure_136_1(closure_136_2[15]);
+              if (!tmp522) {
+                if (null != closure_138_6) {
+                  const obj13 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_138_1, request: closure_138_6 };
+                  closure_137_1(closure_137_2[15]).dispatch(obj13);
+                  const obj47 = closure_137_1(closure_137_2[15]);
+                }
+                const result3 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                const obj49 = closure_137_0(closure_137_2[30]);
               }
-              const result1 = closure_136_0(closure_136_2[29]).transitionToMemberVerification(closure_137_1);
-              const obj33 = closure_136_0(closure_136_2[29]);
             }
-            c10 = 15;
-            c10 = 0;
-            closure_137_0.delete(closure_137_1);
-            closure_137_8.dispose();
-            c12 = 23;
-            c13 = 1;
-            if (arg0 === 1) {
-              c13 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c13 = 3;
-              const obj12 = { value, done: true };
-              return obj12;
-            }
+            c11 = 15;
           break;
           case 4:
             if (arg0 === 1) {
-              c13 = 3;
+              c14 = 3;
               throw value;
             } else {
               value2 = value;
               if (arg0 === 2) {
-                c10 = 0;
-                closure_137_16 = function report() {
+                c11 = 0;
+                closure_138_18 = function report() {
                   const self = this;
-                  const apply = closure_17.apply;
+                  const apply = closure_19.apply;
                   if (typeof apply === "unknown") {
                     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                   } else {
@@ -1046,7 +1075,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                   }
                   return applyArgumentsResult;
                 };
-                closure_137_17 = function _report() {
+                closure_138_19 = function _report() {
                   const self = this;
                   const tmp = closure_3(function*() {
                     if (c0 === 2) {
@@ -1074,14 +1103,14 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                             return obj3;
                           } else {
                             c2 = 1;
-                            let isValidResult = null != closure_2_4;
+                            let isValidResult = null != closure_2_5;
                             if (isValidResult) {
                               isValidResult = assert.isValid();
                             }
                             if (isValidResult) {
                               let tmp10Result;
                               if (dependencyMap != null) {
-                                tmp10Result = tmp10(closure_2_4);
+                                tmp10Result = tmp10(closure_2_5);
                               }
                               c1 = 2;
                               c0 = 1;
@@ -1113,7 +1142,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                       }
                     }
                   });
-                  closure_17 = tmp;
+                  closure_19 = tmp;
                   const apply = tmp.apply;
                   if (typeof apply === "unknown") {
                     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1122,249 +1151,252 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                   }
                   return applyArgumentsResult;
                 };
-                closure_137_14 = closure_137_16();
-                c10 = 5;
-                const tmp320 = closure_137_15();
-                let tmp321 = !tmp320;
-                if (tmp320) {
-                  let outcome4;
-                  if (closure_137_4 != null) {
-                    outcome4 = closure_137_4.outcome;
+                closure_138_16 = closure_138_18();
+                c11 = 5;
+                if (closure_138_8) {
+                  let isValidResult3 = closure_138_10.isValid();
+                  if (isValidResult3) {
+                    isValidResult3 = closure_138_4();
                   }
-                  let tmp324 = "verification_required" !== outcome4;
-                  if (tmp324) {
-                    let outcome5;
-                    if (closure_137_4 != null) {
-                      outcome5 = closure_137_4.outcome;
-                    }
-                    tmp324 = "pending" !== outcome5;
+                  if (isValidResult3) {
+                    isValidResult3 = closure_137_0(closure_137_2[26]).shouldShowMembershipVerificationGate(closure_138_1);
+                    const obj42 = closure_137_0(closure_137_2[26]);
                   }
-                  tmp321 = tmp324;
-                }
-                if (!tmp321) {
-                  if (null != closure_137_5) {
-                    const obj13 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_137_1, request: closure_137_5 };
-                    closure_136_1(closure_136_2[15]).dispatch(obj13);
-                    const obj26 = closure_136_1(closure_136_2[15]);
+                  if (isValidResult3) {
+                    const result4 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                    const obj43 = closure_137_0(closure_137_2[30]);
                   }
-                  const result2 = closure_136_0(closure_136_2[29]).transitionToMemberVerification(closure_137_1);
-                  const obj28 = closure_136_0(closure_136_2[29]);
-                }
-                c10 = 4;
-                c10 = 0;
-                closure_137_0.delete(closure_137_1);
-                closure_137_8.dispose();
-                c12 = 6;
-                c13 = 1;
-                if (arg0 === 1) {
-                  c13 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c13 = 3;
-                  const obj14 = { value, done: true };
-                  return obj14;
                 } else {
-                  c13 = 3;
-                  const obj15 = { value: value2, done: true };
-                  return obj15;
-                }
-              } else {
-                closure_137_9 = value;
-                if (closure_137_8.isValid()) {
-                  if (closure_137_3()) {
-                    closure_137_4 = { outcome: "succeeded" };
-                    value3 = undefined;
-                    c10 = 0;
-                    closure_137_16 = function report() {
-                      const self = this;
-                      const apply = closure_17.apply;
-                      if (typeof apply === "unknown") {
-                        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                      } else {
-                        applyArgumentsResult = apply(self, arguments);
+                  const tmp440 = closure_138_17();
+                  let tmp441 = !tmp440;
+                  if (tmp440) {
+                    let outcome4;
+                    if (closure_138_5 != null) {
+                      outcome4 = closure_138_5.outcome;
+                    }
+                    let tmp444 = "verification_required" !== outcome4;
+                    if (tmp444) {
+                      let outcome5;
+                      if (closure_138_5 != null) {
+                        outcome5 = closure_138_5.outcome;
                       }
-                      return applyArgumentsResult;
-                    };
-                    closure_137_17 = function _report() {
-                      const self = this;
-                      const tmp = closure_3(function*() {
-                        if (c0 === 2) {
-                          c0 = 3;
-                          throw new TypeError("Generator functions may not be called on executing generators");
-                        } else if (tmp5 === 3) {
-                          if (arg0 === 1) {
-                            throw value;
-                          } else if (arg0 === 2) {
-                            const obj2 = { value, done: true };
-                            return obj2;
-                          } else {
-                            return { value: "HermesInternal", done: null };
-                          }
+                      tmp444 = "pending" !== outcome5;
+                    }
+                    tmp441 = tmp444;
+                  }
+                  if (!tmp441) {
+                    if (null != closure_138_6) {
+                      const obj17 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_138_1, request: closure_138_6 };
+                      closure_137_1(closure_137_2[15]).dispatch(obj17);
+                      const obj39 = closure_137_1(closure_137_2[15]);
+                    }
+                    const result5 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                    const obj41 = closure_137_0(closure_137_2[30]);
+                  }
+                }
+                c11 = 4;
+              } else {
+                closure_138_11 = value;
+                if (closure_138_10.isValid()) {
+                  let body = closure_138_11.body;
+                  closure_4 = body;
+                  if (body == null) {
+                    closure_4 = {};
+                  }
+                  closure_138_12 = closure_4;
+                  if (closure_138_4()) {
+                    if (tmp341.show_verification_form) {
+                      if (obj32.shouldShowMembershipVerificationGate(closure_138_1)) {
+                        closure_138_5 = { outcome: "verification_required" };
+                        closure_138_8 = true;
+                      }
+                      value3 = undefined;
+                      c11 = 0;
+                      closure_138_18 = function report() {
+                        const self = this;
+                        const apply = closure_19.apply;
+                        if (typeof apply === "unknown") {
+                          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                         } else {
-                          try {
-                            c0 = 2;
-                            if (0 === c1) {
-                              if (arg0 === 1) {
+                          applyArgumentsResult = apply(self, arguments);
+                        }
+                        return applyArgumentsResult;
+                      };
+                      closure_138_19 = function _report() {
+                        const self = this;
+                        const tmp = closure_3(function*() {
+                          if (c0 === 2) {
+                            c0 = 3;
+                            throw new TypeError("Generator functions may not be called on executing generators");
+                          } else if (tmp5 === 3) {
+                            if (arg0 === 1) {
+                              throw value;
+                            } else if (arg0 === 2) {
+                              const obj2 = { value, done: true };
+                              return obj2;
+                            } else {
+                              return { value: "HermesInternal", done: null };
+                            }
+                          } else {
+                            try {
+                              c0 = 2;
+                              if (0 === c1) {
+                                if (arg0 === 1) {
+                                  c0 = 3;
+                                  throw value;
+                                } else if (arg0 === 2) {
+                                  c0 = 3;
+                                  const obj3 = { value, done: true };
+                                  return obj3;
+                                } else {
+                                  c2 = 1;
+                                  let isValidResult = null != closure_2_5;
+                                  if (isValidResult) {
+                                    isValidResult = assert.isValid();
+                                  }
+                                  if (isValidResult) {
+                                    let tmp10Result;
+                                    if (dependencyMap != null) {
+                                      tmp10Result = tmp10(closure_2_5);
+                                    }
+                                    c1 = 2;
+                                    c0 = 1;
+                                    const obj4 = { value: tmp10Result, done: false };
+                                    return obj4;
+                                  } else {
+                                    c2 = 0;
+                                  }
+                                }
+                              } else if (1 === tmp6) {
+                                c2 = 0;
+                              } else if (arg0 === 1) {
                                 c0 = 3;
                                 throw value;
                               } else if (arg0 === 2) {
+                                c2 = 0;
                                 c0 = 3;
-                                const obj3 = { value, done: true };
-                                return obj3;
-                              } else {
-                                c2 = 1;
-                                let isValidResult = null != closure_2_4;
-                                if (isValidResult) {
-                                  isValidResult = assert.isValid();
-                                }
-                                if (isValidResult) {
-                                  let tmp10Result;
-                                  if (dependencyMap != null) {
-                                    tmp10Result = tmp10(closure_2_4);
-                                  }
-                                  c1 = 2;
-                                  c0 = 1;
-                                  const obj4 = { value: tmp10Result, done: false };
-                                  return obj4;
-                                } else {
-                                  c2 = 0;
-                                }
+                                const obj = { value, done: true };
+                                return obj;
                               }
-                            } else if (1 === tmp6) {
-                              c2 = 0;
-                            } else if (arg0 === 1) {
                               c0 = 3;
-                              throw value;
-                            } else if (arg0 === 2) {
-                              c2 = 0;
-                              c0 = 3;
-                              const obj = { value, done: true };
-                              return obj;
-                            }
-                            c0 = 3;
-                          } catch (tmp13) {
-                            if (tmp3 === c2) {
-                              c0 = tmp2;
-                              throw tmp13;
-                            } else {
-                              c1 = tmp;
+                            } catch (tmp13) {
+                              if (tmp3 === c2) {
+                                c0 = tmp2;
+                                throw tmp13;
+                              } else {
+                                c1 = tmp;
+                              }
                             }
                           }
+                        });
+                        closure_19 = tmp;
+                        const apply = tmp.apply;
+                        if (typeof apply === "unknown") {
+                          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                        } else {
+                          applyArgumentsResult = apply(self, arguments);
                         }
-                      });
-                      closure_17 = tmp;
-                      const apply = tmp.apply;
-                      if (typeof apply === "unknown") {
-                        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                        return applyArgumentsResult;
+                      };
+                      closure_138_16 = closure_138_18();
+                      c11 = 9;
+                      if (closure_138_8) {
+                        let isValidResult4 = closure_138_10.isValid();
+                        if (isValidResult4) {
+                          isValidResult4 = closure_138_4();
+                        }
+                        if (isValidResult4) {
+                          isValidResult4 = closure_137_0(closure_137_2[26]).shouldShowMembershipVerificationGate(closure_138_1);
+                          const obj36 = closure_137_0(closure_137_2[26]);
+                        }
+                        if (isValidResult4) {
+                          const result6 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                          const obj37 = closure_137_0(closure_137_2[30]);
+                        }
                       } else {
-                        applyArgumentsResult = apply(self, arguments);
-                      }
-                      return applyArgumentsResult;
-                    };
-                    closure_137_14 = closure_137_16();
-                    c10 = 9;
-                    const tmp286 = closure_137_15();
-                    let tmp287 = !tmp286;
-                    if (tmp286) {
-                      let outcome6;
-                      if (closure_137_4 != null) {
-                        outcome6 = closure_137_4.outcome;
-                      }
-                      let tmp290 = "verification_required" !== outcome6;
-                      if (tmp290) {
-                        let outcome7;
-                        if (closure_137_4 != null) {
-                          outcome7 = closure_137_4.outcome;
+                        const tmp386 = closure_138_17();
+                        let tmp387 = !tmp386;
+                        if (tmp386) {
+                          let outcome6;
+                          if (closure_138_5 != null) {
+                            outcome6 = closure_138_5.outcome;
+                          }
+                          let tmp390 = "verification_required" !== outcome6;
+                          if (tmp390) {
+                            let outcome7;
+                            if (closure_138_5 != null) {
+                              outcome7 = closure_138_5.outcome;
+                            }
+                            tmp390 = "pending" !== outcome7;
+                          }
+                          tmp387 = tmp390;
                         }
-                        tmp290 = "pending" !== outcome7;
+                        if (!tmp387) {
+                          if (null != closure_138_6) {
+                            const obj18 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_138_1, request: closure_138_6 };
+                            closure_137_1(closure_137_2[15]).dispatch(obj18);
+                            const obj33 = closure_137_1(closure_137_2[15]);
+                          }
+                          const result7 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                          const obj35 = closure_137_0(closure_137_2[30]);
+                        }
                       }
-                      tmp287 = tmp290;
+                      c11 = 8;
+                      obj32 = closure_137_0(closure_137_2[26]);
                     }
-                    if (!tmp287) {
-                      if (null != closure_137_5) {
-                        const obj16 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_137_1, request: closure_137_5 };
-                        closure_136_1(closure_136_2[15]).dispatch(obj16);
-                        const obj23 = closure_136_1(closure_136_2[15]);
-                      }
-                      const result3 = closure_136_0(closure_136_2[29]).transitionToMemberVerification(closure_137_1);
-                      const obj25 = closure_136_0(closure_136_2[29]);
-                    }
-                    c10 = 8;
-                    c10 = 0;
-                    closure_137_0.delete(closure_137_1);
-                    closure_137_8.dispose();
-                    c12 = 12;
-                    c13 = 1;
-                    if (arg0 === 1) {
-                      c13 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c13 = 3;
-                      const obj18 = { value, done: true };
-                      return obj18;
-                    } else {
-                      c13 = 3;
-                      const obj20 = { value: value3, done: true };
-                      return obj20;
-                    }
+                    closure_138_5 = { outcome: "succeeded" };
                   } else {
-                    let body = closure_137_9.body;
-                    closure_3 = body;
-                    if (body == null) {
-                      closure_3 = {};
-                    }
-                    closure_137_10 = closure_3;
-                    const join_request = closure_137_10.join_request;
+                    const join_request = tmp341.join_request;
                     let application_status;
                     if (join_request != null) {
                       application_status = join_request.application_status;
                     }
                     application_status2 = application_status;
-                    if (closure_137_10.show_verification_form) {
-                      if (closure_137_8.isValid()) {
-                        c10 = 10;
+                    if (closure_138_12.show_verification_form) {
+                      if (closure_138_10.isValid()) {
+                        c11 = 10;
                         const _AbortController = AbortController;
                         const abortController = new AbortController();
-                        closure_137_12 = abortController;
-                        c12 = 15;
-                        c13 = 1;
-                        const obj22 = {
-                          value: closure_136_0(closure_136_2[26]).withDiscoverRequestDeadline(closure_137_12, () => {
-                                                const HTTP = closure_0(1282).HTTP;
-                                                const obj = { url: closure_9.GUILD_MEMBER_REQUEST_TO_JOIN(closure_1_1), rejectWithError: closure_0(1282).rejectWithMigratedError(), signal: signal.signal, timeout: null };
-                                                const obj2 = closure_0(1282);
-                                                obj.timeout = { deadline: closure_0(10150).DISCOVER_REQUEST_DEADLINE_MS };
+                        closure_138_14 = abortController;
+                        c13 = 15;
+                        c14 = 1;
+                        const obj19 = {
+                          value: closure_137_0(closure_137_2[27]).withDiscoverRequestDeadline(closure_138_14, () => {
+                                                const HTTP = closure_0(1285).HTTP;
+                                                const obj = { url: closure_9.GUILD_MEMBER_REQUEST_TO_JOIN(closure_1_1), rejectWithError: closure_0(1285).rejectWithMigratedError(), signal: signal.signal, timeout: null };
+                                                const obj2 = closure_0(1285);
+                                                obj.timeout = { deadline: closure_0(10219).DISCOVER_REQUEST_DEADLINE_MS };
                                                 return HTTP.get(obj);
                                               }),
                           done: false
                         };
-                        return obj22;
+                        return obj19;
                       }
                     }
-                    if (closure_137_3()) {
-                      let obj24 = { outcome: "succeeded" };
-                    } else if (closure_137_6) {
-                      obj24 = { outcome: "verification_required" };
-                    } else if (application_status2 === closure_136_0(closure_136_2[24]).GuildJoinRequestApplicationStatuses.APPROVED) {
-                      obj24 = { outcome: "succeeded" };
-                    } else if (application_status2 === closure_136_0(closure_136_2[24]).GuildJoinRequestApplicationStatuses.SUBMITTED) {
-                      obj24 = { outcome: "pending" };
+                    if (closure_138_4()) {
+                      let obj20 = { outcome: "succeeded" };
+                    } else if (closure_138_7) {
+                      obj20 = { outcome: "verification_required" };
+                    } else if (application_status2 === closure_137_0(closure_137_2[24]).GuildJoinRequestApplicationStatuses.APPROVED) {
+                      obj20 = { outcome: "succeeded" };
+                    } else if (application_status2 === closure_137_0(closure_137_2[24]).GuildJoinRequestApplicationStatuses.SUBMITTED) {
+                      obj20 = { outcome: "pending" };
                     } else {
-                      if (!closure_137_10.show_verification_form) {
-                        if (null == closure_137_10.join_request) {
-                          obj24 = { outcome: "succeeded" };
+                      if (!closure_138_12.show_verification_form) {
+                        if (null == closure_138_12.join_request) {
+                          obj20 = { outcome: "succeeded" };
                         }
                       }
-                      obj24 = { outcome: "verification_required" };
+                      obj20 = { outcome: "verification_required" };
                     }
-                    closure_137_4 = obj24;
-                    c10 = 1;
+                    closure_138_5 = obj20;
+                    c11 = 1;
                   }
                 } else {
-                  c10 = 0;
-                  closure_137_16 = function report() {
+                  c11 = 0;
+                  closure_138_18 = function report() {
                     const self = this;
-                    const apply = closure_17.apply;
+                    const apply = closure_19.apply;
                     if (typeof apply === "unknown") {
                       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                     } else {
@@ -1372,7 +1404,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                     }
                     return applyArgumentsResult;
                   };
-                  closure_137_17 = function _report() {
+                  closure_138_19 = function _report() {
                     const self = this;
                     const tmp = closure_3(function*() {
                       if (c0 === 2) {
@@ -1400,14 +1432,14 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                               return obj3;
                             } else {
                               c2 = 1;
-                              let isValidResult = null != closure_2_4;
+                              let isValidResult = null != closure_2_5;
                               if (isValidResult) {
                                 isValidResult = assert.isValid();
                               }
                               if (isValidResult) {
                                 let tmp10Result;
                                 if (dependencyMap != null) {
-                                  tmp10Result = tmp10(closure_2_4);
+                                  tmp10Result = tmp10(closure_2_5);
                                 }
                                 c1 = 2;
                                 c0 = 1;
@@ -1439,7 +1471,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                         }
                       }
                     });
-                    closure_17 = tmp;
+                    closure_19 = tmp;
                     const apply = tmp.apply;
                     if (typeof apply === "unknown") {
                       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1448,114 +1480,184 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                     }
                     return applyArgumentsResult;
                   };
-                  closure_137_14 = closure_137_16();
-                  c10 = 7;
-                  const tmp214 = closure_137_15();
-                  let tmp215 = !tmp214;
-                  if (tmp214) {
-                    let outcome8;
-                    if (closure_137_4 != null) {
-                      outcome8 = closure_137_4.outcome;
+                  closure_138_16 = closure_138_18();
+                  c11 = 7;
+                  if (closure_138_8) {
+                    let isValidResult5 = closure_138_10.isValid();
+                    if (isValidResult5) {
+                      isValidResult5 = closure_138_4();
                     }
-                    let tmp218 = "verification_required" !== outcome8;
-                    if (tmp218) {
-                      let outcome9;
-                      if (closure_137_4 != null) {
-                        outcome9 = closure_137_4.outcome;
-                      }
-                      tmp218 = "pending" !== outcome9;
+                    if (isValidResult5) {
+                      isValidResult5 = closure_137_0(closure_137_2[26]).shouldShowMembershipVerificationGate(closure_138_1);
+                      const obj26 = closure_137_0(closure_137_2[26]);
                     }
-                    tmp215 = tmp218;
-                  }
-                  if (!tmp215) {
-                    if (null != closure_137_5) {
-                      const obj27 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_137_1, request: closure_137_5 };
-                      closure_136_1(closure_136_2[15]).dispatch(obj27);
-                      const obj17 = closure_136_1(closure_136_2[15]);
+                    if (isValidResult5) {
+                      const result8 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                      const obj27 = closure_137_0(closure_137_2[30]);
                     }
-                    const result4 = closure_136_0(closure_136_2[29]).transitionToMemberVerification(closure_137_1);
-                    const obj19 = closure_136_0(closure_136_2[29]);
-                  }
-                  c10 = 6;
-                  c10 = 0;
-                  closure_137_0.delete(closure_137_1);
-                  closure_137_8.dispose();
-                  c12 = 9;
-                  c13 = 1;
-                  if (arg0 === 1) {
-                    c13 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c13 = 3;
-                    const obj29 = { value, done: true };
-                    return obj29;
                   } else {
-                    c13 = 3;
-                    return { value: "HermesInternal", done: null };
+                    const tmp286 = closure_138_17();
+                    let tmp287 = !tmp286;
+                    if (tmp286) {
+                      let outcome8;
+                      if (closure_138_5 != null) {
+                        outcome8 = closure_138_5.outcome;
+                      }
+                      let tmp290 = "verification_required" !== outcome8;
+                      if (tmp290) {
+                        let outcome9;
+                        if (closure_138_5 != null) {
+                          outcome9 = closure_138_5.outcome;
+                        }
+                        tmp290 = "pending" !== outcome9;
+                      }
+                      tmp287 = tmp290;
+                    }
+                    if (!tmp287) {
+                      if (null != closure_138_6) {
+                        const obj21 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_138_1, request: closure_138_6 };
+                        closure_137_1(closure_137_2[15]).dispatch(obj21);
+                        const obj23 = closure_137_1(closure_137_2[15]);
+                      }
+                      const result9 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                      const obj25 = closure_137_0(closure_137_2[30]);
+                    }
                   }
+                  c11 = 6;
                 }
               }
             }
           break;
           case 5:
-            c10 = 0;
-            closure_137_0.delete(closure_137_1);
-            closure_137_8.dispose();
-            throw tmp472;
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp274(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            throw closure_12;
           case 6:
+            if (arg0 === 1) {
+              c14 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c14 = 3;
+              const obj22 = { value, done: true };
+              return obj22;
+            } else {
+              c14 = 3;
+              const obj24 = { value: value2, done: true };
+              return obj24;
+            }
           break;
           case 7:
-            c10 = 4;
-            if (closure_137_15()) {
-              const intl7 = closure_136_0(closure_136_2[11]).intl;
-              closure_136_14(intl7.string(closure_136_1(closure_136_2[12]).grYfmA));
+            c11 = 4;
+            if (closure_138_17()) {
+              const intl7 = closure_137_0(closure_137_2[11]).intl;
+              closure_137_14(intl7.string(closure_137_1(closure_137_2[12]).grYfmA));
             }
-          break;
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp481(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            c13 = 6;
+            c14 = 1;
+            const obj28 = { value: closure_138_16, done: false };
+            return obj28;
           case 8:
-            c10 = 0;
-            closure_137_0.delete(closure_137_1);
-            closure_137_8.dispose();
-            throw tmp472;
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp251(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            throw closure_12;
           case 9:
+            if (arg0 === 1) {
+              c14 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c14 = 3;
+              const obj29 = { value, done: true };
+              return obj29;
+            } else {
+              c14 = 3;
+              return { value: "HermesInternal", done: null };
+            }
           break;
           case 10:
-            c10 = 6;
-            if (closure_137_15()) {
-              const intl6 = closure_136_0(closure_136_2[11]).intl;
-              closure_136_14(intl6.string(closure_136_1(closure_136_2[12]).grYfmA));
+            c11 = 6;
+            if (closure_138_17()) {
+              const intl6 = closure_137_0(closure_137_2[11]).intl;
+              closure_137_14(intl6.string(closure_137_1(closure_137_2[12]).grYfmA));
             }
-          break;
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp327(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            c13 = 9;
+            c14 = 1;
+            const obj31 = { value: closure_138_16, done: false };
+            return obj31;
           case 11:
-            c10 = 0;
-            closure_137_0.delete(closure_137_1);
-            closure_137_8.dispose();
-            throw tmp472;
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp229(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            throw closure_12;
           case 12:
+            if (arg0 === 1) {
+              c14 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c14 = 3;
+              const obj34 = { value, done: true };
+              return obj34;
+            } else {
+              c14 = 3;
+              const obj38 = { value: value3, done: true };
+              return obj38;
+            }
           break;
           case 13:
-            c10 = 8;
-            if (closure_137_15()) {
-              const intl5 = closure_136_0(closure_136_2[11]).intl;
-              closure_136_14(intl5.string(closure_136_1(closure_136_2[12]).grYfmA));
+            c11 = 8;
+            if (closure_138_17()) {
+              const intl5 = closure_137_0(closure_137_2[11]).intl;
+              closure_137_14(intl5.string(closure_137_1(closure_137_2[12]).grYfmA));
             }
-          break;
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp427(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            c13 = 12;
+            c14 = 1;
+            const obj40 = { value: closure_138_16, done: false };
+            return obj40;
           case 14:
-            c10 = 3;
-            closure_137_6 = true;
-            if (closure_137_15()) {
-              const intl4 = closure_136_0(closure_136_2[11]).intl;
-              closure_136_14(intl4.string(closure_136_1(closure_136_2[12]).grYfmA));
+            c11 = 3;
+            closure_138_7 = true;
+            if (closure_138_17()) {
+              const intl4 = closure_137_0(closure_137_2[11]).intl;
+              closure_137_14(intl4.string(closure_137_1(closure_137_2[12]).grYfmA));
             }
           break;
           case 15:
             if (arg0 === 1) {
-              c13 = 3;
+              c14 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c10 = 0;
-              closure_137_16 = function report() {
+              c11 = 0;
+              closure_138_18 = function report() {
                 const self = this;
-                const apply = closure_17.apply;
+                const apply = closure_19.apply;
                 if (typeof apply === "unknown") {
                   let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                 } else {
@@ -1563,7 +1665,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                 }
                 return applyArgumentsResult;
               };
-              closure_137_17 = function _report() {
+              closure_138_19 = function _report() {
                 const self = this;
                 const tmp = closure_3(function*() {
                   if (c0 === 2) {
@@ -1591,14 +1693,14 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                           return obj3;
                         } else {
                           c2 = 1;
-                          let isValidResult = null != closure_2_4;
+                          let isValidResult = null != closure_2_5;
                           if (isValidResult) {
                             isValidResult = assert.isValid();
                           }
                           if (isValidResult) {
                             let tmp10Result;
                             if (dependencyMap != null) {
-                              tmp10Result = tmp10(closure_2_4);
+                              tmp10Result = tmp10(closure_2_5);
                             }
                             c1 = 2;
                             c0 = 1;
@@ -1630,7 +1732,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                     }
                   }
                 });
-                closure_17 = tmp;
+                closure_19 = tmp;
                 const apply = tmp.apply;
                 if (typeof apply === "unknown") {
                   let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1639,56 +1741,54 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                 }
                 return applyArgumentsResult;
               };
-              closure_137_14 = closure_137_16();
-              c10 = 12;
-              const tmp118 = closure_137_15();
-              let tmp119 = !tmp118;
-              if (tmp118) {
-                let outcome10;
-                if (closure_137_4 != null) {
-                  outcome10 = closure_137_4.outcome;
+              closure_138_16 = closure_138_18();
+              c11 = 12;
+              if (closure_138_8) {
+                let isValidResult6 = closure_138_10.isValid();
+                if (isValidResult6) {
+                  isValidResult6 = closure_138_4();
                 }
-                let tmp122 = "verification_required" !== outcome10;
-                if (tmp122) {
-                  let outcome11;
-                  if (closure_137_4 != null) {
-                    outcome11 = closure_137_4.outcome;
-                  }
-                  tmp122 = "pending" !== outcome11;
+                if (isValidResult6) {
+                  isValidResult6 = closure_137_0(closure_137_2[26]).shouldShowMembershipVerificationGate(closure_138_1);
+                  const obj15 = closure_137_0(closure_137_2[26]);
                 }
-                tmp119 = tmp122;
-              }
-              if (!tmp119) {
-                if (null != closure_137_5) {
-                  const obj32 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_137_1, request: closure_137_5 };
-                  closure_136_1(closure_136_2[15]).dispatch(obj32);
-                  const obj9 = closure_136_1(closure_136_2[15]);
+                if (isValidResult6) {
+                  const result10 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                  const obj16 = closure_137_0(closure_137_2[30]);
                 }
-                const result5 = closure_136_0(closure_136_2[29]).transitionToMemberVerification(closure_137_1);
-                const obj11 = closure_136_0(closure_136_2[29]);
-              }
-              c10 = 11;
-              c10 = 0;
-              closure_137_0.delete(closure_137_1);
-              closure_137_8.dispose();
-              c12 = 17;
-              c13 = 1;
-              if (arg0 === 1) {
-                c13 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c13 = 3;
-                const obj35 = { value, done: true };
-                return obj35;
               } else {
-                c13 = 3;
-                const obj39 = { value, done: true };
-                return obj39;
+                const tmp155 = closure_138_17();
+                let tmp156 = !tmp155;
+                if (tmp155) {
+                  let outcome10;
+                  if (closure_138_5 != null) {
+                    outcome10 = closure_138_5.outcome;
+                  }
+                  let tmp159 = "verification_required" !== outcome10;
+                  if (tmp159) {
+                    let outcome11;
+                    if (closure_138_5 != null) {
+                      outcome11 = closure_138_5.outcome;
+                    }
+                    tmp159 = "pending" !== outcome11;
+                  }
+                  tmp156 = tmp159;
+                }
+                if (!tmp156) {
+                  if (null != closure_138_6) {
+                    const obj44 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_138_1, request: closure_138_6 };
+                    closure_137_1(closure_137_2[15]).dispatch(obj44);
+                    const obj12 = closure_137_1(closure_137_2[15]);
+                  }
+                  const result11 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                  const obj14 = closure_137_0(closure_137_2[30]);
+                }
               }
+              c11 = 11;
             } else {
-              closure_137_13 = value;
-              if (closure_137_8.isValid()) {
-                closure_137_5 = (function parseJoinRequest(body, arg1, id2) {
+              closure_138_15 = value;
+              if (closure_138_10.isValid()) {
+                closure_138_6 = (function parseJoinRequest(body, arg1, id2) {
                   if (null != body) {
                     if (typeof body === "object") {
                       const _Array2 = Array;
@@ -1743,14 +1843,14 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                   }
                   const error1 = new Error("Invalid join request response");
                   throw error1;
-                })(closure_137_13.body, closure_137_1, id2);
-                application_status2 = closure_137_5.application_status;
-                c10 = 3;
+                })(closure_138_15.body, closure_138_1, id2);
+                application_status2 = closure_138_6.application_status;
+                c11 = 3;
               } else {
-                c10 = 0;
-                closure_137_16 = function report() {
+                c11 = 0;
+                closure_138_18 = function report() {
                   const self = this;
-                  const apply = closure_17.apply;
+                  const apply = closure_19.apply;
                   if (typeof apply === "unknown") {
                     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                   } else {
@@ -1758,7 +1858,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                   }
                   return applyArgumentsResult;
                 };
-                closure_137_17 = function _report() {
+                closure_138_19 = function _report() {
                   const self = this;
                   const tmp = closure_3(function*() {
                     if (c0 === 2) {
@@ -1786,14 +1886,14 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                             return obj3;
                           } else {
                             c2 = 1;
-                            let isValidResult = null != closure_2_4;
+                            let isValidResult = null != closure_2_5;
                             if (isValidResult) {
                               isValidResult = assert.isValid();
                             }
                             if (isValidResult) {
                               let tmp10Result;
                               if (dependencyMap != null) {
-                                tmp10Result = tmp10(closure_2_4);
+                                tmp10Result = tmp10(closure_2_5);
                               }
                               c1 = 2;
                               c0 = 1;
@@ -1825,7 +1925,7 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                       }
                     }
                   });
-                  closure_17 = tmp;
+                  closure_19 = tmp;
                   const apply = tmp.apply;
                   if (typeof apply === "unknown") {
                     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1834,170 +1934,237 @@ let closure_21 = async function _joinWaterwheelsGuild() {
                   }
                   return applyArgumentsResult;
                 };
-                closure_137_14 = closure_137_16();
-                c10 = 14;
-                const tmp79 = closure_137_15();
-                let tmp80 = !tmp79;
-                if (tmp79) {
-                  let outcome12;
-                  if (closure_137_4 != null) {
-                    outcome12 = closure_137_4.outcome;
+                closure_138_16 = closure_138_18();
+                c11 = 14;
+                if (closure_138_8) {
+                  let isValidResult7 = closure_138_10.isValid();
+                  if (isValidResult7) {
+                    isValidResult7 = closure_138_4();
                   }
-                  let tmp83 = "verification_required" !== outcome12;
-                  if (tmp83) {
-                    let outcome13;
-                    if (closure_137_4 != null) {
-                      outcome13 = closure_137_4.outcome;
-                    }
-                    tmp83 = "pending" !== outcome13;
+                  if (isValidResult7) {
+                    isValidResult7 = closure_137_0(closure_137_2[26]).shouldShowMembershipVerificationGate(closure_138_1);
+                    const obj9 = closure_137_0(closure_137_2[26]);
                   }
-                  tmp80 = tmp83;
-                }
-                if (!tmp80) {
-                  if (null != closure_137_5) {
-                    const obj40 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_137_1, request: closure_137_5 };
-                    closure_136_1(closure_136_2[15]).dispatch(obj40);
-                    const obj6 = closure_136_1(closure_136_2[15]);
+                  if (isValidResult7) {
+                    const result12 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                    const obj10 = closure_137_0(closure_137_2[30]);
                   }
-                  const result6 = closure_136_0(closure_136_2[29]).transitionToMemberVerification(closure_137_1);
-                  const obj8 = closure_136_0(closure_136_2[29]);
-                }
-                c10 = 13;
-                c10 = 0;
-                closure_137_0.delete(closure_137_1);
-                closure_137_8.dispose();
-                c12 = 20;
-                c13 = 1;
-                if (arg0 === 1) {
-                  c13 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c13 = 3;
-                  const obj41 = { value, done: true };
-                  return obj41;
                 } else {
-                  c13 = 3;
-                  return { value: "HermesInternal", done: null };
+                  const tmp96 = closure_138_17();
+                  let tmp97 = !tmp96;
+                  if (tmp96) {
+                    let outcome12;
+                    if (closure_138_5 != null) {
+                      outcome12 = closure_138_5.outcome;
+                    }
+                    let tmp100 = "verification_required" !== outcome12;
+                    if (tmp100) {
+                      let outcome13;
+                      if (closure_138_5 != null) {
+                        outcome13 = closure_138_5.outcome;
+                      }
+                      tmp100 = "pending" !== outcome13;
+                    }
+                    tmp97 = tmp100;
+                  }
+                  if (!tmp97) {
+                    if (null != closure_138_6) {
+                      const obj45 = { type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: closure_138_1, request: closure_138_6 };
+                      closure_137_1(closure_137_2[15]).dispatch(obj45);
+                      const obj6 = closure_137_1(closure_137_2[15]);
+                    }
+                    const result13 = closure_137_0(closure_137_2[30]).transitionToMemberVerification(closure_138_1);
+                    const obj8 = closure_137_0(closure_137_2[30]);
+                  }
                 }
+                c11 = 13;
               }
             }
           break;
           case 16:
-            c10 = 0;
-            closure_137_0.delete(closure_137_1);
-            closure_137_8.dispose();
-            throw tmp472;
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp84(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            throw closure_12;
           case 17:
-          break;
-          case 18:
-            c10 = 11;
-            if (closure_137_15()) {
-              const intl3 = closure_136_0(closure_136_2[11]).intl;
-              closure_136_14(intl3.string(closure_136_1(closure_136_2[12]).grYfmA));
-            }
-          break;
-          case 19:
-            c10 = 0;
-            closure_137_0.delete(closure_137_1);
-            closure_137_8.dispose();
-            throw tmp472;
-          case 20:
-          break;
-          case 21:
-            c10 = 13;
-            if (closure_137_15()) {
-              const intl2 = closure_136_0(closure_136_2[11]).intl;
-              closure_136_14(intl2.string(closure_136_1(closure_136_2[12]).grYfmA));
-            }
-          break;
-          case 22:
-            c10 = 0;
-            closure_137_0.delete(closure_137_1);
-            closure_137_8.dispose();
-            throw tmp472;
-          case 23:
-          break;
-          case 24:
-            c10 = 15;
-            if (closure_137_15()) {
-              const intl = closure_136_0(closure_136_2[11]).intl;
-              closure_136_14(intl.string(closure_136_1(closure_136_2[12]).grYfmA));
-            }
-          break;
-          case 25:
             if (arg0 === 1) {
-              c13 = 3;
+              c14 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c13 = 3;
+              c14 = 3;
+              const obj48 = { value, done: true };
+              return obj48;
+            } else {
+              c14 = 3;
+              const obj52 = { value, done: true };
+              return obj52;
+            }
+          break;
+          case 18:
+            c11 = 11;
+            if (closure_138_17()) {
+              const intl3 = closure_137_0(closure_137_2[11]).intl;
+              closure_137_14(intl3.string(closure_137_1(closure_137_2[12]).grYfmA));
+            }
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp196(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            c13 = 17;
+            c14 = 1;
+            const obj54 = { value: closure_138_16, done: false };
+            return obj54;
+          case 19:
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp61(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            throw closure_12;
+          case 20:
+            if (arg0 === 1) {
+              c14 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c14 = 3;
+              const obj60 = { value, done: true };
+              return obj60;
+            } else {
+              c14 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          break;
+          case 21:
+            c11 = 13;
+            if (closure_138_17()) {
+              const intl2 = closure_137_0(closure_137_2[11]).intl;
+              closure_137_14(intl2.string(closure_137_1(closure_137_2[12]).grYfmA));
+            }
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp137(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            c13 = 20;
+            c14 = 1;
+            const obj61 = { value: closure_138_16, done: false };
+            return obj61;
+          case 22:
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp39(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            throw closure_12;
+          case 23:
+            if (arg0 === 1) {
+              c14 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c14 = 3;
+              const obj62 = { value, done: true };
+              return obj62;
+            }
+          break;
+          case 24:
+            c11 = 15;
+            if (closure_138_17()) {
+              const intl = closure_137_0(closure_137_2[11]).intl;
+              closure_137_14(intl.string(closure_137_1(closure_137_2[12]).grYfmA));
+            }
+            c11 = 0;
+            closure_138_0.delete(closure_138_1);
+            if (closure_138_3 != null) {
+              tmp562(closure_138_1, false);
+            }
+            closure_138_10.dispose();
+            c13 = 23;
+            c14 = 1;
+            const obj63 = { value: closure_138_16, done: false };
+            return obj63;
+          case 25:
+            if (arg0 === 1) {
+              c14 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c14 = 3;
               let obj = { value, done: true };
               return obj;
             } else {
-              throw closure_7;
+              throw closure_8;
             }
           break;
           default:
-            c10 = 2;
-            if (closure_137_15()) {
-              const intl9 = closure_136_0(closure_136_2[11]).intl;
-              closure_136_14(intl9.string(closure_136_1(closure_136_2[12]).grYfmA));
+            c11 = 2;
+            if (closure_138_17()) {
+              const intl9 = closure_137_0(closure_137_2[11]).intl;
+              closure_137_14(intl9.string(closure_137_1(closure_137_2[12]).grYfmA));
             }
         }
-      } catch (tmp472) {
-        switch (c10) {
+      } catch (tmp657) {
+        closure_12 = tmp657;
+        switch (c11) {
           case 0:
-            c13 = tmp18;
-            throw tmp473;
+            c14 = tmp18;
+            throw tmp658;
           case 1:
-            c12 = tmp2;
+            c13 = tmp2;
           break;
           case 2:
-            c12 = tmp;
+            c13 = tmp;
           break;
           case 3:
-            c12 = tmp18;
+            c13 = tmp18;
           break;
           case 4:
-            c12 = tmp16;
+            c13 = tmp16;
           break;
           case 5:
-            c12 = tmp15;
+            c13 = tmp15;
           break;
           case 6:
-            c12 = tmp14;
+            c13 = tmp14;
           break;
           case 7:
-            c12 = tmp13;
+            c13 = tmp13;
           break;
           case 8:
-            c12 = tmp12;
+            c13 = tmp12;
           break;
           case 9:
-            c12 = tmp11;
+            c13 = tmp11;
           break;
           case 10:
-            c12 = tmp10;
+            c13 = tmp10;
           break;
           case 11:
-            c12 = tmp9;
+            c13 = tmp9;
           break;
           case 12:
-            c12 = tmp8;
+            c13 = tmp8;
           break;
           case 13:
-            c12 = tmp7;
+            c13 = tmp7;
           break;
           case 14:
-            c12 = tmp6;
+            c13 = tmp6;
           break;
           case 15:
-            c12 = tmp5;
+            c13 = tmp5;
           break;
           case 16:
-            c12 = tmp4;
+            c13 = tmp4;
           break;
           default:
-            c12 = tmp17;
+            c13 = tmp17;
         }
       }
     }
@@ -2032,54 +2199,56 @@ let closure_23 = async function _runGuarded(arg0) {
 };
 const Constants = fn(1072);
 ({ AbortCodes, Endpoints: closure_9, PlatformTypes } = Constants);
-let closure_10 = fn(6839).NotificationAuthorizationStatus;
+let closure_10 = fn(6902).NotificationAuthorizationStatus;
 let items = [, , ];
 ({ USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED: arr[0], TOO_MANY_USER_GUILDS: arr[1], GUILD_AT_CAPACITY: arr[2] } = AbortCodes);
 const set = new Set(items);
 const set1 = new Set(Object.values(PlatformTypes));
 const waterwheels = "waterwheels";
-const set2 = new Set(Object.values(fn(5289).GuildJoinRequestApplicationStatuses));
+const set2 = new Set(Object.values(fn(5352).GuildJoinRequestApplicationStatuses));
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/actions/native/useWaterwheelsActions.tsx");
 
-export function useWaterwheelsActions() {
+export function useWaterwheelsActions(callback) {
+  closure_0 = callback;
   noop.useRef(new Set());
+  items = [callback];
   return noop.useCallback((type, arg1) => {
     type = type.type;
     if (WaterwheelsCardTypes.WaterwheelsActionType.JOIN_GUILD === type) {
-      return joinWaterwheelsGuild(ref.current, type.value.guild_id, arg1);
+      return joinWaterwheelsGuild(ref.current, type.value.guild_id, arg1, type);
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GUILD === type) {
-      return runGuarded(() => type(7167).startLurking(type.value.guild_id, {}), () => {
+      return runGuarded(() => type(7230).startLurking(type.value.guild_id, {}), () => {
         const intl = type(1113).intl;
-        return intl.string(closure_1_1(2553).d6U01J);
+        return intl.string(ref(2569).d6U01J);
       });
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_CONNECTION === type) {
       return runGuarded(() => {
         const provider = type.value.provider;
         if (set.has(provider)) {
           const obj = { platformType: provider, location: _location };
-          authorizeConnectionDefault(obj);
+          closure_1(7422)(obj);
         }
       }, () => {
         const intl = type(1113).intl;
-        return intl.string(closure_1_1(2553)["rdTp+3"]);
+        return intl.string(ref(2569)["rdTp+3"]);
       });
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_URI === type) {
-      return runGuarded(() => type(7587).handleClick({ href: type.value.url }), () => {
+      return runGuarded(() => type(7653).handleClick({ href: type.value.url }), () => {
         const intl = type(1113).intl;
-        return intl.string(closure_1_1(2553)["4a9Wgk"]);
+        return intl.string(ref(2569)["4a9Wgk"]);
       });
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_NUDGE === type) {
       return runGuarded(requestNotifications, () => {
         const intl = type(1113).intl;
-        return intl.string(closure_1_1(2553)["4BoMhv"]);
+        return intl.string(ref(2569)["4BoMhv"]);
       });
     } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GAME === type) {
       return openWaterwheelsGame(type.value.game_id, arg1);
     } else {
       return Promise.resolve(type);
     }
-  }, []);
+  }, items);
 }
 export { openWaterwheelsGame };
 export { joinWaterwheelsGuild };

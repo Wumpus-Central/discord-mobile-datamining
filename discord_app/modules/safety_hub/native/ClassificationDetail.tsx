@@ -1,23 +1,23 @@
-// === Module 14074: ClassificationDetail ===
+// === Module 14181: ClassificationDetail ===
 
-// Module 14074 (ClassificationDetail)
+// Module 14181 (ClassificationDetail)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import _modDef3369 from "module_3369" /* 3369 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import LinkingDefault from "Linking" /* 5949 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6708 */;
-import MetricEvents from "MetricEvents" /* 6713 */;
-import TableRow from "TableRow" /* 7379 */;
-import SafetyHubModels from "SafetyHubModels" /* 8141 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 8385 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 14078 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 14080 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import _modDef3417 from "module_3417" /* 3417 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import LinkingDefault from "Linking" /* 6012 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6771 */;
+import MetricEvents from "MetricEvents" /* 6776 */;
+import TableRow from "TableRow" /* 7443 */;
+import SafetyHubModels from "SafetyHubModels" /* 8207 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8451 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 14185 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 14187 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2186 */;
-import SafetyHubStore from "SafetyHubStore" /* 8165 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
+import SafetyHubStore from "SafetyHubStore" /* 8231 */;
 
 require = fn;
 function ClassificationHeader(classificationTypeText) {
@@ -69,7 +69,7 @@ function ClassificationHeader(classificationTypeText) {
       return intl.format(util.t["39jfOz"], obj2);
     }
   }, items);
-  obj.children = closure_13(classificationTypeText(5866).Text, { variant: "body-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
+  obj.children = closure_13(classificationTypeText(5929).Text, { variant: "body-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo });
   return closure_13(closure_4, obj);
 }
 function SectionHeader(arg0) {
@@ -142,7 +142,7 @@ function ManualReviewDecidedUnderageActionsTaken() {
   const obj3 = { style: tmp.actionsTaken, children: null };
   const obj4 = { large: true, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3369.rn3Gto);
+  obj4.children = intl2.string(_modDef3417.rn3Gto);
   obj3.children = state(BulletRow, obj4);
   items[1] = state(React4, obj3);
   obj.children = items;
@@ -165,7 +165,7 @@ function ManualReviewDecidedUnderageGuidance() {
   const obj3 = { style: tmp.actionsTaken, children: null };
   const obj4 = { large: true, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3369["yV/t/V"]);
+  obj4.children = intl2.string(_modDef3417["yV/t/V"]);
   obj3.children = state(BulletRow, obj4);
   items[1] = state(React4, obj3);
   obj.children = items;
@@ -200,13 +200,13 @@ function ClassificationPolicyCard(classificationDescription) {
   };
   const obj3 = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj3.children = closure_13(policyExplainerLink(11157).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
+  obj3.children = closure_13(policyExplainerLink(11224).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
   items = [closure_13(closure_4, obj3), ];
   const obj5 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj6 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = policyExplainerLink(1113).intl;
   obj6.children = intl.format(policyExplainerLink(1113).t.zxUdpj, { classificationDescription: classificationDescription.classificationTypeText });
-  obj5.children = closure_13(policyExplainerLink(5866).Text, obj6);
+  obj5.children = closure_13(policyExplainerLink(5929).Text, obj6);
   items[1] = closure_13(closure_4, obj5);
   obj2.children = items;
   obj.children = closure_14(tmp2, obj2);
@@ -280,7 +280,7 @@ function ManualReviewDecidedUnderageFooter(arg0) {
   ({ tosLink, communityGuidelinesLink } = arg0);
   const obj = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3369.vPOpia, { tosLink, communityGuidelinesLink });
+  obj.children = intl.format(_modDef3417.vPOpia, { tosLink, communityGuidelinesLink });
   return state(Text_Text.Text, obj);
 }
 function ManualReviewDecidedUnderageView() {
@@ -300,12 +300,12 @@ function ClassificationDetailFooter(onClose) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8140);
+const SafetyHubConstants = fn(8206);
 ({ SafetyHubAnalyticsActionSource: closure_9, SafetyHubAnalyticsActions: closure_10, SafetyHubLinks: closure_11 } = SafetyHubConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, container: null, header: null, headerText: null, sectionContainer: null, actionsTaken: null, classificationDetailContainer: null, letUsKnowContainer: null, appealWindowExpiredContainer: null, appealWindowExpiredText: null, confirmMinimumAgeSection: null, guidelinesFooter: null, classificationPolicyCard: null, classificationPolicyCardIcon: null, classificationPolicyCardContent: null, classificationActionDescription: null, bulletText: null, redirectButtonWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.container = { display: "flex", flexDirection: "column", height: "100%", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32 };

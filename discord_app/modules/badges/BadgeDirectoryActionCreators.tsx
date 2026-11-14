@@ -1,9 +1,9 @@
-// === Module 8486: BadgeDirectoryActionCreators ===
+// === Module 8552: BadgeDirectoryActionCreators ===
 
-// Module 8486 (BadgeDirectoryActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+// Module 8552 (BadgeDirectoryActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 require = fn;
@@ -62,7 +62,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
           closure_131_8 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp7) {

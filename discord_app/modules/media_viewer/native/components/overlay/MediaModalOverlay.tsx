@@ -1,40 +1,41 @@
-// === Module 15083: MediaModalOverlay ===
+// === Module 15197: MediaModalOverlay ===
 
-// Module 15083 (MediaModalOverlay)
+// Module 15197 (MediaModalOverlay)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5843 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7351 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 8385 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8561 */;
-import useVideoControls from "useVideoControls" /* 8563 */;
-import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8564 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8566 */;
-import useMediaModalFooterAction from "useMediaModalFooterAction" /* 10119 */;
-import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 15087 */;
-import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 15088 */;
-import MediaModalOverlayHeader from "MediaModalOverlayHeader" /* 15090 */;
-import MediaModalOverlayAltTextDefault from "MediaModalOverlayAltText" /* 15094 */;
-import MediaModalOverlayFooterAction from "MediaModalOverlayFooterAction" /* 15095 */;
-import MediaModalOverlayFooter from "MediaModalOverlayFooter" /* 15096 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5906 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7415 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8451 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8628 */;
+import useVideoControls from "useVideoControls" /* 8630 */;
+import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8631 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8633 */;
+import useMediaModalFooterAction from "useMediaModalFooterAction" /* 10188 */;
+import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 15201 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 15202 */;
+import MediaModalOverlayHeader from "MediaModalOverlayHeader" /* 15204 */;
+import MediaModalOverlayAltTextDefault from "MediaModalOverlayAltText" /* 15208 */;
+import MediaModalOverlayFooterAction from "MediaModalOverlayFooterAction" /* 15209 */;
+import MediaModalOverlayFooter from "MediaModalOverlayFooter" /* 15210 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function OverlayMuteButton(arg0) {
-  ({ isMuted, onToggleMute } = arg0);
-  const obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, color: null, onPress: null, style: null, iconStyle: null };
+function OverlayMuteButton(isMuted) {
+  isMuted = isMuted.isMuted;
   const tmp = closure_10();
   const intl = util.intl;
-  obj.accessibilityLabel = intl.string(util.t.w4m945);
-  const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(isMuted ? 15084 : 12958);
-  obj.color = nativeDefault.unsafe_rawColors.WHITE;
-  obj.onPress = onToggleMute;
-  ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
-  rect.children = metroImportDefault(TouchableHitBoxDefault, obj);
+  const string = intl.string;
+  const t = util.t;
+  if (isMuted) {
+    let stringResult = string(t.YqAjXy);
+  } else {
+    stringResult = string(t.w4m945);
+  }
+  const tmp5 = TouchableHitBoxDefault;
+  const rect = { left: true, right: true, children: metroImportDefault(tmp5, { accessibilityRole: "button", accessibilityLabel: stringResult, source: importDefault(isMuted ? 15198 : 13054), color: nativeDefault.unsafe_rawColors.WHITE, onPress: isMuted.onToggleMute, style: tmp.overlayButton, iconStyle: tmp.overlayButtonIcon }) };
   return metroImportDefault(common_SafeAreaView.SafeAreaPaddingView, rect);
 }
 function OverlayObscureToggleButton(arg0) {
@@ -44,7 +45,7 @@ function OverlayObscureToggleButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.UIsxUw);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(spoilerActive ? 15085 : 15086);
+  obj.source = importDefault(spoilerActive ? 15199 : 15200);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleObscure;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -54,7 +55,7 @@ function OverlayObscureToggleButton(arg0) {
 function MediaModalOverlay(getVideoControls) {
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
-  const tmp2 = videoControls(8563)(index, source, videoControls);
+  const tmp2 = videoControls(8630)(index, source, videoControls);
   items = [index];
   const items1 = [videoControls];
   const callback = noop.useCallback(() => useMediaViewerSources.toggleSpoiler(index), items);
@@ -70,7 +71,7 @@ function MediaModalOverlay(getVideoControls) {
     flag = false;
   }
   obj2.obscure = flag;
-  obj2.spoilerActive = _slicedToArray(index(15089).useMediaItemSpoilerState(index), 1)[0];
+  obj2.spoilerActive = _slicedToArray(index(15203).useMediaItemSpoilerState(index), 1)[0];
   obj2.toggleObscure = callback;
   return closure_7(closure_13, obj2);
 }
@@ -79,7 +80,7 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { portraitFooterButtons: null, invisibleFooter: null, overlayIcons: null, overlayButtonIcon: null, overlayButton: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -170,7 +171,7 @@ let closure_13 = noop.memo(function MediaModalOverlayMemo(arg0) {
   const obj17 = { children: null };
   items3[2] = tmp22Result5;
   obj8.children = items3;
-  items1[1] = React5(_modDef1652.View, obj8);
+  items1[1] = React5(_modDef1655.View, obj8);
   obj17.children = items1;
   return React5(React6, obj17);
 });

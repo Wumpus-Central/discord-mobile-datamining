@@ -1,6 +1,6 @@
-// === Module 14349: ? ===
+// === Module 14456: ? ===
 
-// Module 14349
+// Module 14456
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_wearable_06_takeOutBag.webp.js");

@@ -1,9 +1,9 @@
-// === Module 19997: useFormattedEndTime ===
+// === Module 20155: useFormattedEndTime ===
 
-// Module 19997 (useFormattedEndTime)
+// Module 20155 (useFormattedEndTime)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const size = fn(2);

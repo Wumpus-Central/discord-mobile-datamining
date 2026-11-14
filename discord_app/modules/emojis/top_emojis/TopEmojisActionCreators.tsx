@@ -1,6 +1,6 @@
-// === Module 9483: TopEmojisActionCreators ===
+// === Module 9550: TopEmojisActionCreators ===
 
-// Module 9483 (TopEmojisActionCreators)
+// Module 9550 (TopEmojisActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -15,7 +15,7 @@ export function fetchTopEmojis(guildId) {
   if (!obj.isPseudoGuildId(guildId)) {
     const obj3 = { type: "TOP_EMOJIS_FETCH", guildId };
     DispatcherDefault.dispatch(obj3);
-    const HTTP = tmp(1282).HTTP;
+    const HTTP = tmp(1285).HTTP;
     const obj4 = { url: Endpoints.TOP_EMOJIS_FOR_GUILD(guildId), oldFormErrors: true, rejectWithError: true };
     value = HTTP.get(obj4);
     value.then((body) => {

@@ -1,11 +1,11 @@
-// === Module 11193: PremiumFeatureUpsellUtils ===
+// === Module 11260: PremiumFeatureUpsellUtils ===
 
-// Module 11193 (PremiumFeatureUpsellUtils)
+// Module 11260 (PremiumFeatureUpsellUtils)
 import Constants from "Constants" /* 1072 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import SoundboardTypes from "SoundboardTypes" /* 7164 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8970 */;
+import SoundboardTypes from "SoundboardTypes" /* 7227 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9037 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsPages = Constants.AnalyticsPages;

@@ -1,23 +1,23 @@
-// === Module 15317: UserSettingsPremiumGifting ===
+// === Module 15431: UserSettingsPremiumGifting ===
 
-// Module 15317 (UserSettingsPremiumGifting)
+// Module 15431 (UserSettingsPremiumGifting)
 import applyDefault from "apply" /* 12 */;
 import nativeDefault from "native" /* 575 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6692 */;
-import TableRowGroup from "TableRowGroup" /* 7680 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7743 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7747 */;
-import BadgeId from "BadgeId" /* 8414 */;
-import EntitlementActionCreators from "EntitlementActionCreators" /* 8467 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8486 */;
-import BillingActionCreatorsDefault from "BillingActionCreators" /* 9520 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10885 */;
-import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 15319 */;
-import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 15325 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6755 */;
+import TableRowGroup from "TableRowGroup" /* 7746 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7809 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7813 */;
+import BadgeId from "BadgeId" /* 8480 */;
+import EntitlementActionCreators from "EntitlementActionCreators" /* 8533 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8552 */;
+import BillingActionCreatorsDefault from "BillingActionCreators" /* 9587 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10954 */;
+import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 15433 */;
+import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 15439 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8481 */;
-import EntitlementStore from "EntitlementStore" /* 8464 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8547 */;
+import EntitlementStore from "EntitlementStore" /* 8530 */;
 
 const require = globalThis.__r;
 
@@ -29,11 +29,11 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ UserSettingsSections: closure_9, AnalyticsPages: closure_10 } = Constants);
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({ PremiumTypes: closure_11, SubscriptionPlans: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { scrollView: { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL }, giftingSettingsContainer: { flex: 1 }, inventorySectionWrapper: { flex: 1 }, giftPurchaseSectionWrapper: { flex: 1, paddingTop: 36, paddingBottom: 16 }, emptyGiftLinks: null, emptyImage: null, emptyGiftHeader: null, emptyGiftDescription: null, emptyGiftInformation: null, titleWrapper: null, cardText: null, tierCard: null, giftPurchaseButton: null, buttonWrapper: null, loading: null, warningMargins: null };
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL };
 obj2.emptyGiftLinks = { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 16, borderWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };

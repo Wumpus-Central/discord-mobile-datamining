@@ -1,8 +1,8 @@
-// === Module 10874: openFavoritesGuildMoveToCategoryActionSheet ===
+// === Module 10943: openFavoritesGuildMoveToCategoryActionSheet ===
 
-// Module 10874 (openFavoritesGuildMoveToCategoryActionSheet)
+// Module 10943 (openFavoritesGuildMoveToCategoryActionSheet)
 import Constants from "Constants" /* 1072 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10875 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10944 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

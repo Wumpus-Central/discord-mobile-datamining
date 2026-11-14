@@ -1,6 +1,6 @@
-// === Module 5909: ContentRatingRobloxRating ===
+// === Module 5972: ContentRatingRobloxRating ===
 
-// Module 5909 (ContentRatingRobloxRating)
+// Module 5972 (ContentRatingRobloxRating)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set([1, 2, 3, 4, 5, 6, 7]), IS_ADULT_ONLY: null };

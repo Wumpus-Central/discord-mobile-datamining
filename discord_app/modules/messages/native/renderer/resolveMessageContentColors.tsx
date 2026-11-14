@@ -1,9 +1,9 @@
-// === Module 9114: resolveMessageContentColors ===
+// === Module 9181: resolveMessageContentColors ===
 
-// Module 9114 (resolveMessageContentColors)
+// Module 9181 (resolveMessageContentColors)
 import nativeDefault from "native" /* 575 */;
-import shared from "shared" /* 5250 */;
-import createStyles_mod from "createStyles" /* 5243 */;
+import shared from "shared" /* 5313 */;
+import createStyles_mod from "createStyles" /* 5306 */;
 import size from "module_2" /* 2 */;
 
 let createStyles = createStyles_mod;

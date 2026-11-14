@@ -1,8 +1,8 @@
-// === Module 16827: getFrameChannelId ===
+// === Module 16950: getFrameChannelId ===
 
-// Module 16827 (getFrameChannelId)
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6959 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
+// Module 16950 (getFrameChannelId)
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 7022 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
 
 const ChannelTypes = fn(1072).ChannelTypes;
 const size = fn(2);

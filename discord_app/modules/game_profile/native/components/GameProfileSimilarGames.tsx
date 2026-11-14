@@ -1,13 +1,13 @@
-// === Module 10391: GameProfileSimilarGames ===
+// === Module 10460: GameProfileSimilarGames ===
 
-// Module 10391 (GameProfileSimilarGames)
+// Module 10460 (GameProfileSimilarGames)
 import nativeDefault from "native" /* 575 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 10212 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10217 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 10315 */;
-import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 10334 */;
-import useSimilarGamesDefault from "useSimilarGames" /* 10395 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 10281 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10286 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 10384 */;
+import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 10403 */;
+import useSimilarGamesDefault from "useSimilarGames" /* 10464 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
@@ -21,11 +21,11 @@ function ListPadding() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(10247).MOBILE_GAME_PROFILE_MAX_WIDTH;
+let closure_6 = fn(10316).MOBILE_GAME_PROFILE_MAX_WIDTH;
 const jsx = fn(21).jsx;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { container: { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 }, header: null, card: null, spacer: null, listPadding: null, coverArtContainer: null, coverArt: null, skeletonCards: null, skeletonArtwork: null };
 let obj3 = { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 };
 obj.header = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -123,7 +123,7 @@ let closure_16 = noop.memo(function GameProfileSimilarGamesSkeleton(cardWidth) {
   const obj = { style: tmp.container, headerStyle: tmp.header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: null };
   const obj2 = { contentContainerStyle: tmp.skeletonCards, children: Array.from({ length: 4 }, (arg0, key) => <closure_15 key={key} animationDelayMs={key * GameProfileSkeleton.SKELETON_CARD_ANIMATION_DELAY_MS} cardWidth={cardWidth} />) };
   obj.children = jsx(GameProfileSkeletonCardRowDefault, { contentContainerStyle: tmp.skeletonCards, children: Array.from({ length: 4 }, (arg0, key) => <closure_15 key={key} animationDelayMs={key * GameProfileSkeleton.SKELETON_CARD_ANIMATION_DELAY_MS} cardWidth={cardWidth} />) });
-  return jsx(cardWidth(10314).GameProfileSectionSkeleton, { style: tmp.container, headerStyle: tmp.header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: null });
+  return jsx(cardWidth(10383).GameProfileSectionSkeleton, { style: tmp.container, headerStyle: tmp.header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: null });
 });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSimilarGames.tsx");
@@ -146,7 +146,7 @@ export default function GameProfileSimilarGames(trackAction) {
       obj3.title = intl.string(trackAction(1113).t["6rLyQB"]);
       const obj5 = {
         horizontal: true,
-        renderScrollComponent: tmp2(10263),
+        renderScrollComponent: tmp2(10332),
         data: similarGames,
         renderItem(game) {
               return <closure_14 game={game.item} trackAction={trackAction} cardWidth={cardWidth} />;
@@ -158,9 +158,9 @@ export default function GameProfileSimilarGames(trackAction) {
         decelerationRate: "fast",
         snapToInterval: result + tmp5
       };
-      obj3.children = jsx(trackAction(7822).FlashList, {
+      obj3.children = jsx(trackAction(7888).FlashList, {
         horizontal: true,
-        renderScrollComponent: tmp2(10263),
+        renderScrollComponent: tmp2(10332),
         data: similarGames,
         renderItem(game) {
               return <closure_14 game={game.item} trackAction={trackAction} cardWidth={cardWidth} />;
@@ -172,8 +172,8 @@ export default function GameProfileSimilarGames(trackAction) {
         decelerationRate: "fast",
         snapToInterval: result + tmp5
       });
-      tmp7 = jsx(tmp2(10314), { style: null, headerStyle: null, title: null, children: null });
-      const tmp2Result = tmp2(10314);
+      tmp7 = jsx(tmp2(10383), { style: null, headerStyle: null, title: null, children: null });
+      const tmp2Result = tmp2(10383);
     }
   }
   return tmp7;

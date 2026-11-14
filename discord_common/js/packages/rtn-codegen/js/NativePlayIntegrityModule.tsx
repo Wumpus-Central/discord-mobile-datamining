@@ -1,6 +1,6 @@
-// === Module 8316: NativePlayIntegrityModule ===
+// === Module 8382: NativePlayIntegrityModule ===
 
-// Module 8316 (NativePlayIntegrityModule)
+// Module 8382 (NativePlayIntegrityModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

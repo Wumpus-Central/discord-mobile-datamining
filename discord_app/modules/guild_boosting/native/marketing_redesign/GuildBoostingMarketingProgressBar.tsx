@@ -1,16 +1,16 @@
-// === Module 15887: GuildBoostingMarketingProgressBar ===
+// === Module 16007: GuildBoostingMarketingProgressBar ===
 
-// Module 15887 (GuildBoostingMarketingProgressBar)
+// Module 16007 (GuildBoostingMarketingProgressBar)
 import nativeDefault from "native" /* 575 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import useThemeDefault from "useTheme" /* 5484 */;
-import LinearGradientDefault from "LinearGradient" /* 5830 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 9168 */;
-import GuildBoostingMarketingProgressBarMarker from "GuildBoostingMarketingProgressBarMarker" /* 15888 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import useThemeDefault from "useTheme" /* 5547 */;
+import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 9235 */;
+import GuildBoostingMarketingProgressBarMarker from "GuildBoostingMarketingProgressBarMarker" /* 16008 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 const require = globalThis.__r;
 const GuildBoostingMarketingProgressBarMarkerDefault = GuildBoostingMarketingProgressBarMarker;
@@ -20,10 +20,10 @@ const View = fn(17).View;
 const BoostedGuildTiers = fn(1072).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
-let obj2 = { progressBarContainer: { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(15888).MARKER_DIMENSIONS / 2 + 34 }, progressBar: { height: 54, maxWidth: 660, width: "100%" }, progressBarScrubber: null, progressBarTrack: null, progressBarFill: null, progressBarGradientFill: null };
-const obj3 = { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(15888).MARKER_DIMENSIONS / 2 + 34 };
-obj2.progressBarScrubber = { height: 8, top: fn(15888).MARKER_DIMENSIONS / 2 - 4, marginHorizontal: fn(15888).MARKER_DIMENSIONS / 2 + 2 };
+const createStyles = fn(5306);
+let obj2 = { progressBarContainer: { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(16008).MARKER_DIMENSIONS / 2 + 34 }, progressBar: { height: 54, maxWidth: 660, width: "100%" }, progressBarScrubber: null, progressBarTrack: null, progressBarFill: null, progressBarGradientFill: null };
+const obj3 = { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(16008).MARKER_DIMENSIONS / 2 + 34 };
+obj2.progressBarScrubber = { height: 8, top: fn(16008).MARKER_DIMENSIONS / 2 - 4, marginHorizontal: fn(16008).MARKER_DIMENSIONS / 2 + 2 };
 let size = { borderRadius: 8, height: "100%", width: "100%", position: "absolute", zIndex: 0, backgroundColor: nativeDefault.colors.SPINE_DEFAULT };
 obj2.progressBarTrack = size;
 obj2.progressBarFill = { borderRadius: 8, position: "absolute", height: "100%", left: 0, zIndex: 1 };
@@ -49,12 +49,12 @@ export default function ProgressBar(guild) {
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => useReducedMotion2.useReducedMotion);
   importDefault = stateFromStores;
   let obj = require("useStateFromStores");
-  const sharedValue = require("module_1652").useSharedValue(0);
+  const sharedValue = require("module_1655").useSharedValue(0);
   dependencyMap = sharedValue;
   const tmp9 = _slicedToArray(fillFactor.useState(BoostedGuildTiers.NONE), 2);
   const first = tmp9[0];
   _slicedToArray = first;
-  const obj2 = require("module_1652");
+  const obj2 = require("module_1655");
   const items1 = [closure_13, sharedValue];
   _require = undefined;
   [tmp11, tmp12] = items1;
@@ -68,8 +68,8 @@ export default function ProgressBar(guild) {
   GuildBoostingMarketingProgressBarTsx1.__closure = items2;
   GuildBoostingMarketingProgressBarTsx1.__workletHash = 12429210936939;
   GuildBoostingMarketingProgressBarTsx1.__initData = tmp11;
-  const animatedStyle = require("module_1652").useAnimatedStyle(GuildBoostingMarketingProgressBarTsx1);
-  const obj4 = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(GuildBoostingMarketingProgressBarTsx1);
+  const obj4 = require("module_1655");
   const items3 = [closure_14, sharedValue];
   _require = undefined;
   [tmp14, tmp15] = items3;
@@ -82,7 +82,7 @@ export default function ProgressBar(guild) {
   GuildBoostingMarketingProgressBarTsx2.__closure = items4;
   GuildBoostingMarketingProgressBarTsx2.__workletHash = 7658772434044;
   GuildBoostingMarketingProgressBarTsx2.__initData = tmp14;
-  const items5 = [closure_15, BoostedGuildTiers, 5, first, require("module_1705").scheduleOnRN, tmp9[1]];
+  const items5 = [closure_15, BoostedGuildTiers, 5, first, require("module_1708").scheduleOnRN, tmp9[1]];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -115,7 +115,7 @@ export default function ProgressBar(guild) {
   GuildBoostingMarketingProgressBarTsx3.__closure = items6;
   GuildBoostingMarketingProgressBarTsx3.__workletHash = 1273150541408;
   GuildBoostingMarketingProgressBarTsx3.__initData = tmp16;
-  const animatedReaction = require("module_1652").useAnimatedReaction(GuildBoostingMarketingProgressBarTsx2, GuildBoostingMarketingProgressBarTsx3);
+  const animatedReaction = require("module_1655").useAnimatedReaction(GuildBoostingMarketingProgressBarTsx2, GuildBoostingMarketingProgressBarTsx3);
   const items7 = [guild];
   fillFactor = obj3.useMemo(() => GuildBoostingUtils.getGuildBoostingProgressBarFillFactor(c0), items7).fillFactor;
   const items8 = [fillFactor, sharedValue, stateFromStores];
@@ -141,7 +141,7 @@ export default function ProgressBar(guild) {
   const obj8 = { style: null, children: null };
   const items9 = [tmp.progressBarFill, animatedStyle];
   obj8.style = items9;
-  const tmp5Result = require("module_1652");
+  const tmp5Result = require("module_1655");
   const tmp2Result = LinearGradientDefault;
   let str = "#515359";
   if (!tmp5Result2.isThemeDark(tmp4)) {
@@ -151,7 +151,7 @@ export default function ProgressBar(guild) {
   const items10 = [str, "#AB77F2"];
   obj9.colors = items10;
   obj8.children = closure_8(tmp2Result, obj9);
-  const items11 = [closure_8(_modDef1652.View, obj8), closure_8(View, { style: tmp.progressBarTrack })];
+  const items11 = [closure_8(_modDef1655.View, obj8), closure_8(View, { style: tmp.progressBarTrack })];
   obj7.children = items11;
   const items12 = [
     closure_9(View, obj7),

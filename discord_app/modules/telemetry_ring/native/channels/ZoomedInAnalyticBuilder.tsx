@@ -1,10 +1,10 @@
-// === Module 2127: ZoomedInAnalyticBuilder ===
+// === Module 2130: ZoomedInAnalyticBuilder ===
 
-// Module 2127 (ZoomedInAnalyticBuilder)
+// Module 2130 (ZoomedInAnalyticBuilder)
 import Constants from "Constants" /* 1072 */;
-import ProcessUtilsDefault from "ProcessUtils" /* 1371 */;
-import GatewaySocketOpcode from "GatewaySocketOpcode" /* 2128 */;
-import RTCControlSocket from "RTCControlSocket" /* 2129 */;
+import ProcessUtilsDefault from "ProcessUtils" /* 1374 */;
+import GatewaySocketOpcode from "GatewaySocketOpcode" /* 2131 */;
+import RTCControlSocket from "RTCControlSocket" /* 2132 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -522,7 +522,7 @@ const dependencyMap2 = {
   [AnalyticEvents.WEBSOCKET_MESSAGE_RECEIVED]: (data) => {
     data = data.data;
     if (null == data) {
-      let obj = { message_identity: "unknown", socket_kind: "paddingHorizontal" };
+      let obj = { message_identity: "unknown", socket_kind: "channelId" };
     } else {
       const url = data.url;
       let tmp61 = null;

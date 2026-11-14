@@ -1,7 +1,7 @@
-// === Module 6131: WebScreenShareAudioExperiment ===
+// === Module 6194: WebScreenShareAudioExperiment ===
 
-// Module 6131 (WebScreenShareAudioExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 6194 (WebScreenShareAudioExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-web-screen-share-audio", kind: "user", defaultConfig: { enabled: false }, variations: null };

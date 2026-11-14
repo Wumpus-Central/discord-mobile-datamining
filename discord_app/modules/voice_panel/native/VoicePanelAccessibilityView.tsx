@@ -1,12 +1,12 @@
-// === Module 19892: VoicePanelAccessibilityView ===
+// === Module 20049: VoicePanelAccessibilityView ===
 
-// Module 19892 (VoicePanelAccessibilityView)
+// Module 20049 (VoicePanelAccessibilityView)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const VoicePanelPIPModes = fn(19699).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(19909).VoicePanelPIPModes;
 const jsx = fn(21).jsx;
-let closure_4 = noop.memo(fn(6265).AccessibilityViewAnimated);
+let closure_4 = noop.memo(fn(6328).AccessibilityViewAnimated);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
 

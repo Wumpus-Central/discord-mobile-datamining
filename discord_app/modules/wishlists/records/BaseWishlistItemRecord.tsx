@@ -1,18 +1,18 @@
-// === Module 9398: BaseWishlistItemRecord ===
+// === Module 9467: BaseWishlistItemRecord ===
 
-// Module 9398 (BaseWishlistItemRecord)
-import Record from "Record" /* 1405 */;
-import SKURecord from "SKURecord" /* 2164 */;
+// Module 9467 (BaseWishlistItemRecord)
+import Record from "Record" /* 1408 */;
+import SKURecord from "SKURecord" /* 2167 */;
 
-const prototype = function BaseWishlistItemRecord(shop_expires_at) {
+const prototype = function BaseWishlistItemRecord(shop_unpublished_at) {
   const tmp3 = new prototype(tmp2, tmp, new.target);
-  ({ sku_id: tmp3.skuId, sku_product_line: tmp3.skuProductLine, sku_name: tmp3.skuName, is_owned: tmp3.isOwned, gifter_user_id: tmp3.gifterUserId, sku: tmp3.sku, added_at: tmp3.addedAt } = shop_expires_at);
+  ({ sku_id: tmp3.skuId, sku_product_line: tmp3.skuProductLine, sku_name: tmp3.skuName, is_owned: tmp3.isOwned, gifter_user_id: tmp3.gifterUserId, sku: tmp3.sku, added_at: tmp3.addedAt } = shop_unpublished_at);
   let date;
-  if (null != shop_expires_at.shop_expires_at) {
+  if (null != shop_unpublished_at.shop_unpublished_at) {
     const _Date = Date;
-    date = new Date(shop_expires_at.shop_expires_at);
+    date = new Date(shop_unpublished_at.shop_unpublished_at);
   }
-  tmp3.shopExpiresAt = date;
+  tmp3.shopUnpublishedAt = date;
   return tmp3;
 }.prototype;
 class prototype extends tmp2 {
@@ -33,11 +33,11 @@ prototype["fromServer"] = function fromServer(arg0) {
     const tmp10 = new prototype(obj, merged1, merged, merged2, sku_id);
     ({ sku_id: tmp10.skuId, sku_product_line: tmp10.skuProductLine, sku_name: tmp10.skuName, is_owned: tmp10.isOwned, gifter_user_id: tmp10.gifterUserId, sku: tmp10.sku, added_at: tmp10.addedAt } = obj);
     let date;
-    if (null != obj.shop_expires_at) {
+    if (null != obj.shop_unpublished_at) {
       const _Date = Date;
-      date = new Date(obj.shop_expires_at);
+      date = new Date(obj.shop_unpublished_at);
     }
-    tmp10.shopExpiresAt = date;
+    tmp10.shopUnpublishedAt = date;
     return tmp10;
   } else {
     throw new TypeError("Trying to call a non-function");

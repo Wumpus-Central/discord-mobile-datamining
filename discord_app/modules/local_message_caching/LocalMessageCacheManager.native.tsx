@@ -1,22 +1,22 @@
-// === Module 16911: LocalMessageCacheManager ===
+// === Module 17034: LocalMessageCacheManager ===
 
-// Module 16911 (LocalMessageCacheManager)
+// Module 17034 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import _modDef2166 from "module_2166" /* 2166 */;
-import DateUtils from "DateUtils" /* 5065 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8593 */;
-import createMessageDefault from "createMessage" /* 8784 */;
-import UploadActionCreatorsDefault from "UploadActionCreators" /* 12589 */;
+import _modDef2169 from "module_2169" /* 2169 */;
+import DateUtils from "DateUtils" /* 5128 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8660 */;
+import createMessageDefault from "createMessage" /* 8851 */;
+import UploadActionCreatorsDefault from "UploadActionCreators" /* 12685 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 5186 */;
+import MessageRecord from "MessageRecord" /* 5249 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import MessageStore from "MessageStore" /* 6309 */;
-import LifecycleManager from "LifecycleManager" /* 2120 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import MessageStore from "MessageStore" /* 6372 */;
+import LifecycleManager from "LifecycleManager" /* 2123 */;
 
 require = fn;
 function _getKeyForFileId(id) {
@@ -44,8 +44,8 @@ function getAllCachedMessages() {
 }
 function messageTimestampIsInInterval(arg0, arg1) {
   if (null != arg0) {
-    const tmp4 = _modDef2166();
-    const tmp5 = _modDef2166(arg0);
+    const tmp4 = _modDef2169();
+    const tmp5 = _modDef2169(arg0);
     return DateUtils.isWithinInterval(tmp4, tmp5, arg1);
   } else {
     return false;
@@ -261,10 +261,10 @@ let closure_26 = async function _rehydrateFailedMessages(arg0) {
     }
   }
 };
-const SendMessageOptionsStore = fn(12544);
+const SendMessageOptionsStore = fn(12640);
 const Constants = fn(1072);
 ({ MessageStates: closure_9, MessageTypes: closure_10 } = Constants);
-const MutexUtils = fn(16912);
+const MutexUtils = fn(17035);
 let closure_11 = MutexUtils.createLock();
 let closure_12 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -985,7 +985,7 @@ prototype["_initialize"] = function _initialize() {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(6732);
+                let obj9 = values(6795);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

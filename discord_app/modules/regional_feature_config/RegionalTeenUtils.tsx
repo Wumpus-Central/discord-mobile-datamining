@@ -1,13 +1,13 @@
-// === Module 14722: RegionalTeenUtils ===
+// === Module 14835: RegionalTeenUtils ===
 
-// Module 14722 (RegionalTeenUtils)
-import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10918 */;
+// Module 14835 (RegionalTeenUtils)
+import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10987 */;
 import noop from "module_19" /* 19 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5933 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5996 */;
 
 require = fn;
 let items = ["GB", "AU"];
-HermesBuiltin.arraySpread(fn(5936).CountryCodesSets.EU_COUNTRIES, 2);
+HermesBuiltin.arraySpread(fn(5999).CountryCodesSets.EU_COUNTRIES, 2);
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/regional_feature_config/RegionalTeenUtils.tsx");
@@ -33,7 +33,7 @@ export function useIsTeenInCountrySet(set) {
     }
   }, items1);
   const obj = stateFromStores(504);
-  let userIsTeen = stateFromStores(11962).useUserIsTeen();
+  let userIsTeen = stateFromStores(12029).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }
@@ -52,7 +52,7 @@ export function useIsTeenInStrictCountry() {
     }
   }, items1);
   const obj2 = stateFromStores(504);
-  let userIsTeen = stateFromStores(11962).useUserIsTeen();
+  let userIsTeen = stateFromStores(12029).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }

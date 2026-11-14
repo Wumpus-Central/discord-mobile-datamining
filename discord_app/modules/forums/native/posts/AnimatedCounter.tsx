@@ -1,15 +1,15 @@
-// === Module 11835: AnimatedCounter ===
+// === Module 11901: AnimatedCounter ===
 
-// Module 11835 (AnimatedCounter)
+// Module 11901 (AnimatedCounter)
 import _modDef38 from "module_38" /* 38 */;
-import native from "native" /* 5314 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import springPresets from "springPresets" /* 5877 */;
-import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11836 */;
+import native from "native" /* 5377 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import springPresets from "springPresets" /* 5940 */;
+import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11902 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = tmp2(1652);
+const _modDef1655 = tmp2(1655);
 require = fn;
 function AnimatedCount(state) {
   state = state.state;
@@ -33,7 +33,7 @@ function AnimatedCount(state) {
       NEUTRAL = c10.NEUTRAL;
     }
   }
-  const sharedValue = require("module_1652").useSharedValue(NEUTRAL);
+  const sharedValue = require("module_1655").useSharedValue(NEUTRAL);
   items = [height];
   const memo = obj.useMemo(() => items.map((item) => {
     if (null == _undefined) {
@@ -43,8 +43,8 @@ function AnimatedCount(state) {
     } else if (constants.BELOW !== item) {
     }
   }), items);
-  let obj2 = require("module_1652");
-  let items1 = [closure_14, require("spring/spring").withSpring, require("module_1652").interpolate, sharedValue, items, memo, springConfig, closure_13, state, require("native").TransitionStates, require("module_1705").scheduleOnRN, cleanUp];
+  let obj2 = require("module_1655");
+  let items1 = [closure_14, require("spring/spring").withSpring, require("module_1655").interpolate, sharedValue, items, memo, springConfig, closure_13, state, require("native").TransitionStates, require("module_1708").scheduleOnRN, cleanUp];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -111,7 +111,7 @@ function AnimatedCount(state) {
   AnimatedCounterTsx2.__workletHash = 10296245481336;
   AnimatedCounterTsx2.__initData = tmp12;
   const items3 = [sharedValue, context, state];
-  const animatedStyle = require("module_1652").useAnimatedStyle(AnimatedCounterTsx2);
+  const animatedStyle = require("module_1655").useAnimatedStyle(AnimatedCounterTsx2);
   const effect = obj.useEffect(() => {
     if (c0 === native.TransitionStates.YEETED) {
       ({ current, previous } = c2);
@@ -130,9 +130,9 @@ function AnimatedCount(state) {
   const obj3 = { style: null, children: null };
   const items4 = [absoluteFill.absoluteFill, animatedStyle, { height }];
   obj3.style = items4;
-  const tmp5Result = require("module_1652");
+  const tmp5Result = require("module_1655");
   obj3.children = c7(require("Text/Text").Text, { variant: textVariant, color: textColor, style: textStyle, children: formatter(count) });
-  return c7(_modDef1652.View, obj3);
+  return c7(_modDef1655.View, obj3);
 }
 function getItemKey(arg0) {
   return "" + arg0;
@@ -205,7 +205,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_9 = createStyles.createStyles({ container: { flex: 0, flexGrow: 0, flexShrink: 0, justifyContent: "flex-start", alignItems: "flex-start", overflow: "hidden" }, hidden: { opacity: 0 } });
 let obj = { ABOVE: -1, [-1]: "ABOVE", NEUTRAL: 0, [0]: "NEUTRAL", BELOW: 1, [1]: "BELOW" };
 let items = [, , ];

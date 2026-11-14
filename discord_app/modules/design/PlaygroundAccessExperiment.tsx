@@ -1,11 +1,11 @@
-// === Module 10503: PlaygroundAccessExperiment ===
+// === Module 10572: PlaygroundAccessExperiment ===
 
-// Module 10503 (PlaygroundAccessExperiment)
+// Module 10572 (PlaygroundAccessExperiment)
 import initialize from "initialize" /* 504 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
-const ApexExperiment = fn(1449);
+const ApexExperiment = fn(1452);
 const obj2 = { name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: null };
 const obj3 = { 1: null };
 obj3[1] = { enabled: true };

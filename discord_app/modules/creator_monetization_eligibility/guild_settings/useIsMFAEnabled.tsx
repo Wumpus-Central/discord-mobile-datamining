@@ -1,9 +1,9 @@
-// === Module 20506: useIsMFAEnabled ===
+// === Module 20661: useIsMFAEnabled ===
 
-// Module 20506 (useIsMFAEnabled)
+// Module 20661 (useIsMFAEnabled)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8339 */;
-import UserStore from "UserStore" /* 1385 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8405 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const MFALevels = fn(1072).MFALevels;

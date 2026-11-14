@@ -1,9 +1,9 @@
-// === Module 13066: useConjurePublishButton ===
+// === Module 13161: useConjurePublishButton ===
 
-// Module 13066 (useConjurePublishButton)
+// Module 13161 (useConjurePublishButton)
 import util from "util" /* 1113 */;
-import _modDef4079 from "module_4079" /* 4079 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 13067 */;
+import _modDef4131 from "module_4131" /* 4131 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 13162 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ function publishButtonText(upToDate, arg1) {
     return arg1;
   } else if (null == upToDate) {
     const intl2 = util.intl;
-    let label = intl2.string(_modDef4079["120EFN"]);
+    let label = intl2.string(_modDef4131["120EFN"]);
   } else {
     let tmp = null != upToDate && upToDate.upToDate;
     if (tmp) {
@@ -25,7 +25,7 @@ function publishButtonText(upToDate, arg1) {
     if (tmp) {
       if (!upToDate.publishing) {
         const intl = util.intl;
-        label = intl.string(_modDef4079.kAfbEN);
+        label = intl.string(_modDef4131.kAfbEN);
       }
     }
     label = upToDate.label;

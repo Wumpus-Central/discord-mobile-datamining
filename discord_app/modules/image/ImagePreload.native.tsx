@@ -1,6 +1,6 @@
-// === Module 15058: ImagePreload ===
+// === Module 15172: ImagePreload ===
 
-// Module 15058 (ImagePreload)
+// Module 15172 (ImagePreload)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

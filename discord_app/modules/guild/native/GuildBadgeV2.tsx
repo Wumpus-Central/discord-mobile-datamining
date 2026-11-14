@@ -1,18 +1,18 @@
-// === Module 10321: GuildBadgeV2 ===
+// === Module 10390: GuildBadgeV2 ===
 
-// Module 10321 (GuildBadgeV2)
+// Module 10390 (GuildBadgeV2)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
-import shared from "shared" /* 5250 */;
-import BadgeCategory from "BadgeCategory" /* 10322 */;
-import GuildTraits from "GuildTraits" /* 10323 */;
-import ExperimentalWebBadgeIcon from "ExperimentalWebBadgeIcon" /* 10324 */;
-import GuildBadgeImageSource from "GuildBadgeImageSource" /* 10327 */;
+import shared from "shared" /* 5313 */;
+import BadgeCategory from "BadgeCategory" /* 10391 */;
+import GuildTraits from "GuildTraits" /* 10392 */;
+import ExperimentalWebBadgeIcon from "ExperimentalWebBadgeIcon" /* 10393 */;
+import GuildBadgeImageSource from "GuildBadgeImageSource" /* 10396 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_4 = createStyles.createStyles({ icon: { marginRight: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");

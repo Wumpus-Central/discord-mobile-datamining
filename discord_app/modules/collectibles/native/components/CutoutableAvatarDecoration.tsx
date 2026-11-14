@@ -1,12 +1,11 @@
-// === Module 9435: CutoutableAvatarDecoration ===
+// === Module 9502: CutoutableAvatarDecoration ===
 
-// Module 9435 (CutoutableAvatarDecoration)
-import AvatarUtils from "AvatarUtils" /* 1411 */;
+// Module 9502 (CutoutableAvatarDecoration)
+import AvatarUtils from "AvatarUtils" /* 1414 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 require = fn;
-const View = fn(17).View;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/components/CutoutableAvatarDecoration.tsx");
@@ -17,9 +16,10 @@ export default function CutoutableAvatarDecoration(size) {
   const decorationStyle = size.decorationStyle;
   const animate = size.animate;
   let nativeCutouts = size.cutout;
-  let tmp2 = decorationStyle;
-  items = [AccessibilityStore];
-  const stateFromStores = size(decorationStyle[4]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let stateFromStores;
+  let tmp = decorationStyle;
+  items = [stateFromStores];
+  stateFromStores = size(decorationStyle[3]).useStateFromStores(items, () => stateFromStores.useReducedMotion);
   const items1 = [animate, size, avatarDecoration, decorationStyle, stateFromStores];
   const memo = animate.useMemo(() => {
     let tmp2 = true === animate;
@@ -44,40 +44,25 @@ export default function CutoutableAvatarDecoration(size) {
     obj3.source = { uri: str2 };
     return obj3;
   }, items1);
-  ({ avatarDecorationUrl, style, sizeStyle, source } = memo);
-  let tmp6 = null;
+  ({ shouldAnimate, style, source } = memo);
+  let tmp5 = null;
   if (null != avatarDecoration) {
-    tmp6 = null;
-    if (null != avatarDecorationUrl) {
-      if (!tmpResult.isAndroid()) {
-        if (null != nativeCutouts) {
-          const obj2 = { style, cutouts: nativeCutouts.nativeCutouts, children: null };
-          let obj3 = { source, style: sizeStyle };
-          obj2.children = jsx(avatarDecoration(tmp2[9]), { source, style: sizeStyle });
-          let tmp9 = jsx(avatarDecoration(tmp2[7]), { style, cutouts: nativeCutouts.nativeCutouts, children: null });
-          const tmp12 = avatarDecoration(tmp2[7]);
-        } else {
-          const obj4 = { source, style };
-          tmp9 = jsx(avatarDecoration(tmp2[9]), { source, style });
-        }
-      }
+    tmp5 = null;
+    if (null != memo.avatarDecorationUrl) {
       if (null != nativeCutouts) {
-        const obj5 = { style, cutouts: null, children: null };
+        const obj2 = { style, cutouts: null, children: null };
         nativeCutouts = nativeCutouts.nativeCutouts;
-        obj5.cutouts = nativeCutouts;
-        const obj6 = { url: avatarDecorationUrl, style: sizeStyle };
-        tmp2 = jsx(avatarDecoration(tmp2[8]), { url: avatarDecorationUrl, style: sizeStyle });
-        obj5.children = tmp2;
-        let tmp16 = jsx(avatarDecoration(tmp2[7]), { style, cutouts: null, children: null });
-        const tmp19 = avatarDecoration(tmp2[7]);
+        obj2.cutouts = nativeCutouts;
+        let obj3 = { source, style: tmp4, enableAnimation: shouldAnimate };
+        tmp = jsx(avatarDecoration(tmp[6]), { source, style: tmp4, enableAnimation: shouldAnimate });
+        obj2.children = tmp;
+        let tmp8 = jsx(avatarDecoration(tmp[5]), { style, cutouts: null, children: null });
+        const tmp11 = avatarDecoration(tmp[5]);
       } else {
-        const obj7 = { style, pointerEvents: "none", children: null };
-        const obj8 = { url: avatarDecorationUrl, style: sizeStyle };
-        obj7.children = jsx(avatarDecoration(tmp2[8]), { url: avatarDecorationUrl, style: sizeStyle });
-        tmp16 = <stateFromStores style={style} pointerEvents="none">{null}</stateFromStores>;
+        const obj4 = { source, style, enableAnimation: shouldAnimate, pointerEvents: "none" };
+        tmp8 = jsx(avatarDecoration(tmp[6]), { source, style, enableAnimation: shouldAnimate, pointerEvents: "none" });
       }
-      tmpResult = size(tmp2[6]);
     }
   }
-  return tmp6;
+  return tmp5;
 };

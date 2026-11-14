@@ -1,25 +1,25 @@
-// === Module 14401: CheckpointGamesStatsScreen ===
+// === Module 14522: CheckpointGamesStatsScreen ===
 
-// Module 14401 (CheckpointGamesStatsScreen)
+// Module 14522 (CheckpointGamesStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3269 from "module_3269" /* 3269 */;
-import CheckpointTextDefault from "CheckpointText" /* 14161 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 14163 */;
-import _modDef14375 from "module_14375" /* 14375 */;
-import _modDef14376 from "module_14376" /* 14376 */;
-import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 14382 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 14383 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 14384 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 14389 */;
-import CheckpointRankTagDefault from "CheckpointRankTag" /* 14391 */;
-import CheckpointGameCard from "CheckpointGameCard" /* 14402 */;
-import CheckpointStore from "CheckpointStore" /* 14146 */;
-import CheckpointConstants from "CheckpointConstants" /* 6314 */;
+import _modDef3317 from "module_3317" /* 3317 */;
+import CheckpointTextDefault from "CheckpointText" /* 14271 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 14273 */;
+import _modDef14481 from "module_14481" /* 14481 */;
+import _modDef14482 from "module_14482" /* 14482 */;
+import CheckpointCountUpStatNumberDefault from "CheckpointCountUpStatNumber" /* 14505 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 14506 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 14507 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 14512 */;
+import CheckpointRankTagDefault from "CheckpointRankTag" /* 14514 */;
+import CheckpointGameCard from "CheckpointGameCard" /* 14523 */;
+import CheckpointStore from "CheckpointStore" /* 14253 */;
+import CheckpointConstants from "CheckpointConstants" /* 6377 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5243 */;
+import createStyles from "createStyles" /* 5306 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -54,14 +54,14 @@ function UserGames(gameStats) {
   if (null != checkpointTopPercent) {
     const intl2 = tmp3(1113).intl;
     const obj2 = { percent: checkpointTopPercent };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3269.VjXwW9, obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3317.VjXwW9, obj2);
   }
   let obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.title, children: null };
   items = [closure_7(require("GameControllerIcon").GameControllerIcon, { size: "refresh_sm", color }), ];
   const obj6 = { isStepHeading: true, variant: "heading-sm/semibold", style: tmp.titleText, children: null };
   let obj5 = { size: "refresh_sm", color };
-  const stringResult = intl.string(_modDef3269.HM2fjf);
+  const stringResult = intl.string(_modDef3317.HM2fjf);
   obj6.children = stringResult.toLocaleUpperCase();
   items[1] = closure_7(CheckpointTextDefault, obj6);
   obj4.children = items;
@@ -82,11 +82,11 @@ function UserGames(gameStats) {
           return closure_1_7(CheckpointEmphasisDefault, { children }, arg1);
         }
     };
-    let formatResult = intl4.format(_modDef3269["hc0/yJ"], obj9);
+    let formatResult = intl4.format(_modDef3317["hc0/yJ"], obj9);
   } else {
     const intl3 = tmp3(1113).intl;
     const obj10 = { numGames: rounded };
-    formatResult = intl3.format(_modDef3269.aJMJ6b, obj10);
+    formatResult = intl3.format(_modDef3317.aJMJ6b, obj10);
   }
   const obj11 = { children: null };
   obj8.children = formatResult;
@@ -102,7 +102,7 @@ function UserGames(gameStats) {
       const rounded = Math.round(game.numSessions);
       const obj = { accessible: true, accessibilityLabel: null, style: null, children: null };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.formatToPlainString(_modDef3269.mqdLhl, { gameName: game.name, rank: sum, numSessions: rounded });
+      obj.accessibilityLabel = intl.formatToPlainString(_modDef3317.mqdLhl, { gameName: game.name, rank: sum, numSessions: rounded });
       obj.style = closure_0.game;
       const obj3 = { game, style: closure_0.cover, children: metroImportDefault(CheckpointRankTagDefault, { rank: sum, style: closure_0.rank }) };
       items = [metroImportDefault(CheckpointGameCard.CheckpointGameCard, obj3), ];
@@ -125,19 +125,19 @@ function GlobalGames(gameStats) {
   obj.style = items;
   let obj2 = { style: tmp.header, children: null };
   let obj3 = { style: tmp.globalHeading, children: null };
-  const obj4 = { animatedUri: _modDef14375, staticUri: _modDef14376, style: tmp.globe };
+  const obj4 = { animatedUri: _modDef14481, staticUri: _modDef14482, style: tmp.globe };
   const items1 = [closure_7(CheckpointApngPlayerDefault, obj4), ];
   const obj5 = { isStepHeading: true, children: null };
   let intl = gameStats(1113).intl;
   const tmp3 = CheckpointDisplayTextDefault;
-  obj5.children = intl.string(_modDef3269.qbCgI7).toLocaleUpperCase();
+  obj5.children = intl.string(_modDef3317.qbCgI7).toLocaleUpperCase();
   items1[1] = closure_7(tmp3, obj5);
   obj3.children = items1;
   const items2 = [closure_8(View, obj3), ];
   const obj6 = { variant: "heading-lg/medium", children: null };
-  let stringResult = intl.string(_modDef3269.qbCgI7);
+  let stringResult = intl.string(_modDef3317.qbCgI7);
   const intl2 = gameStats(1113).intl;
-  obj6.children = intl2.string(_modDef3269["0oDeiM"]);
+  obj6.children = intl2.string(_modDef3317["0oDeiM"]);
   items2[1] = closure_7(CheckpointTextDefault, obj6);
   obj2.children = items2;
   const items3 = [closure_8(View, obj2), ];

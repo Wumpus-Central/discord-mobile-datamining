@@ -1,8 +1,8 @@
-// === Module 8135: PermissionsAlertModal ===
+// === Module 8201: PermissionsAlertModal ===
 
-// Module 8135 (PermissionsAlertModal)
+// Module 8201 (PermissionsAlertModal)
 import util from "util" /* 1113 */;
-import AlertModal from "AlertModal" /* 6211 */;
+import AlertModal from "AlertModal" /* 6274 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

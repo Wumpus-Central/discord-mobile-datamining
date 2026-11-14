@@ -1,13 +1,21 @@
-// === Module 13139: conjureLinkedApps ===
+// === Module 13243: conjureLinkedApps ===
 
-// Module 13139 (conjureLinkedApps)
-import util from "util" /* 1113 */;
-import _modDef4079 from "module_4079" /* 4079 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 13113 */;
+// Module 13243 (conjureLinkedApps)
+import conjureWorkerFetch from "conjureWorkerFetch" /* 13219 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_4 = async function _fetchLinkedAppCallers() {
+function fetchLinkedApps() {
+  const self = this;
+  const apply = closure_4.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_4 = async function _fetchLinkedApps() {
   closure_1 = tmp2;
   await conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/linked-apps");
   closure_129_0 = value;
@@ -18,74 +26,79 @@ let closure_4 = async function _fetchLinkedAppCallers() {
     throw error;
   }
   await closure_129_0.json();
-  return value.callers;
+  return value;
 };
-let closure_5 = async function _linkConjureApp(arg0) {
-  closure_0 = arg0;
-  c4 = 0;
-  c5 = 0;
-  return (async (arg0, value, arg2) => {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_3 = tmp2;
-            closure_131_0 = undefined;
-            const obj4 = { method: "PUT", json: null };
-            const obj6 = { caller_project_id, build };
-            obj4.json = obj6;
-            c4 = 1;
-            c5 = 1;
-            const obj7 = { value: conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/linked-apps", obj4), done: false };
-            return obj7;
-          }
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_131_0 = value;
-          if (closure_131_0.ok) {
-            c5 = 3;
-            return { value: "HermesInternal", done: null };
-          } else {
-            const _Error = Error;
-            const _HermesInternal = HermesInternal;
-            const error = new Error("Linking apps failed: " + closure_131_0.status);
-            throw error;
-          }
-        }
-      } catch (tmp15) {
-        c5 = tmp;
-        throw tmp15;
-      }
+let closure_5 = async function _fetchLinkedAppTargets() {
+  closure_2 = tmp2;
+  await conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/linked-apps/targets", { method: "POST", json: { project_ids: closure_1.slice(0, 200) } });
+  closure_130_0 = value;
+  if (!closure_130_0.ok) {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("Linked app targets request failed: " + closure_130_0.status);
+    throw error;
+  }
+  await closure_130_0.json();
+  return value;
+};
+let closure_6 = async function _fetchLinkedAppStart() {
+  closure_5 = tmp4;
+  closure_133_0 = closure_1;
+  await fetchLinkedApps(closure_0);
+  closure_133_1 = value;
+  const callers = closure_133_1.callers;
+  const live = closure_133_1.live;
+  const has_preview = closure_133_1.has_preview;
+  closure_133_5 = callers.find((project_id) => project_id.project_id === closure_1_0);
+  const obj6 = { live: true === live, hasPreview: false !== has_preview, build: null, purpose: null, flow: null };
+  if (closure_133_5 != null) {
+    const build = closure_133_5.build;
+  }
+  let str = build;
+  if (build == null) {
+    str = "auto";
+    if (true === live) {
+      str = "published";
     }
-  })();
+  }
+  obj6.build = str;
+  if (closure_133_5 != null) {
+    let purpose = closure_133_5.purpose;
+  }
+  if (purpose == null) {
+    purpose = null;
+  }
+  obj6.purpose = purpose;
+  if (closure_133_5 != null) {
+    let flow = closure_133_5.flow;
+  }
+  if (flow == null) {
+    flow = null;
+  }
+  obj6.flow = flow;
+  return obj6;
 };
-let closure_6 = async function _unlinkConjureApp(arg0) {
+let closure_7 = async function _linkConjureApp() {
+  await closure_132_0(closure_132_1[1]).fetchConjureWorker(closure_131_0, "/agent/linked-apps", { method: "PUT", json: { caller_project_id: closure_131_1, build: closure_131_2, purpose: closure_131_3, flow: closure_131_4 } });
+  closure_131_5 = value;
+  if (!closure_131_5.ok) {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("Linking apps failed: " + closure_131_5.status);
+    throw error;
+  }
+  await "HermesInternal";
+  closure_3 = tmp2;
+  closure_131_0 = closure_0;
+  closure_131_1 = closure_1;
+  let obj4 = closure_2;
+  if (closure_2 === undefined) {
+    obj4 = {};
+  }
+  ({ build: closure_131_2, purpose: closure_131_3, flow: closure_131_4 } = obj4);
+  return "Path";
+};
+let closure_8 = async function _unlinkConjureApp(arg0) {
   closure_0 = arg0;
   c3 = 0;
   c4 = 0;
@@ -129,7 +142,7 @@ let closure_6 = async function _unlinkConjureApp(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj = { value, done: true };
+          const obj = { value, done: true };
           return obj;
         } else {
           closure_130_0 = value;
@@ -150,34 +163,11 @@ let closure_6 = async function _unlinkConjureApp(arg0) {
     }
   })();
 };
-let obj = { auto: { label: _modDef4079["2TTprm"], description: _modDef4079["1ck6o0"] }, preview: null, published: null };
-let obj2 = { label: _modDef4079["2TTprm"], description: _modDef4079["1ck6o0"] };
-obj.preview = { label: _modDef4079.bUZ6jT, description: _modDef4079.DP2NVW };
-let obj3 = { label: _modDef4079.bUZ6jT, description: _modDef4079.DP2NVW };
-obj.published = { label: _modDef4079.yXd0cc, description: _modDef4079["YY+UD8"] };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/linked_apps/conjureLinkedApps.tsx");
 
-export const CONJURE_LINKED_APP_BUILDS = ["auto", "preview", "published"];
-export function linkedAppBuildLabel(build) {
-  const intl = util.intl;
-  return intl.string(obj[build].label);
-}
-export function linkedAppBuildDescription(value) {
-  const intl = util.intl;
-  return intl.string(obj[value].description);
-}
-export function fetchLinkedAppCallers() {
-  const self = this;
-  const apply = closure_4.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-export function linkConjureApp() {
+export { fetchLinkedApps };
+export function fetchLinkedAppTargets() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -187,9 +177,29 @@ export function linkConjureApp() {
   }
   return applyArgumentsResult;
 }
-export function unlinkConjureApp() {
+export function fetchLinkedAppStart() {
   const self = this;
   const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+export function linkConjureApp() {
+  const self = this;
+  const apply = closure_7.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+export function unlinkConjureApp() {
+  const self = this;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

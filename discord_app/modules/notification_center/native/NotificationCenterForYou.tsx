@@ -1,28 +1,28 @@
-// === Module 19049: NotificationCenterForYou ===
+// === Module 19241: NotificationCenterForYou ===
 
-// Module 19049 (NotificationCenterForYou)
+// Module 19241 (NotificationCenterForYou)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import parseURLDefault from "parseURL" /* 5985 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6970 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6971 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 19052 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 19054 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import parseURLDefault from "parseURL" /* 6048 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7033 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 7034 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 19244 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 19246 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6997 */;
-import ReadStateStore from "ReadStateStore" /* 6952 */;
-import UserStore from "UserStore" /* 1385 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6969 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 19050 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7060 */;
+import ReadStateStore from "ReadStateStore" /* 7015 */;
+import UserStore from "UserStore" /* 1388 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7032 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 19242 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const MainTabsConstants = fn(9963);
+const MainTabsConstants = fn(10030);
 ({ RootNavigatorScreen, YouBarNavigatorScreens } = MainTabsConstants);
-const ReadStateTypes = fn(6896).ReadStateTypes;
+const ReadStateTypes = fn(6959).ReadStateTypes;
 const jsx = fn(21).jsx;
 let items = [, , , , ];
 ({ YOU: arr[0], SETTINGS: arr[1] } = RootNavigatorScreen);

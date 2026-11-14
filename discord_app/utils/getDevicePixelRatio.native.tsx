@@ -1,6 +1,6 @@
-// === Module 2021: getDevicePixelRatio ===
+// === Module 2024: getDevicePixelRatio ===
 
-// Module 2021 (getDevicePixelRatio)
+// Module 2024 (getDevicePixelRatio)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

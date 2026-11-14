@@ -1,15 +1,15 @@
-// === Module 18929: HomeDrawerFolderRow ===
+// === Module 19083: HomeDrawerFolderRow ===
 
-// Module 18929 (HomeDrawerFolderRow)
+// Module 19083 (HomeDrawerFolderRow)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10925 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10994 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6997 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import SortedGuildStore from "SortedGuildStore" /* 6893 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
-import VoiceStateStore from "VoiceStateStore" /* 5918 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7060 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import SortedGuildStore from "SortedGuildStore" /* 6956 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import VoiceStateStore from "VoiceStateStore" /* 5981 */;
 
 require = fn;
 function Wrapper(folder) {
@@ -206,7 +206,7 @@ const View = fn(17).View;
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_13 = createStyles.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");
@@ -221,7 +221,7 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(5435).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(5498).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

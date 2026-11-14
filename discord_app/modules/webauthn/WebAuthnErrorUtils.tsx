@@ -1,7 +1,7 @@
-// === Module 6790: WebAuthnErrorUtils ===
+// === Module 6853: WebAuthnErrorUtils ===
 
-// Module 6790 (WebAuthnErrorUtils)
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6694 */;
+// Module 6853 (WebAuthnErrorUtils)
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6757 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/webauthn/WebAuthnErrorUtils.tsx");

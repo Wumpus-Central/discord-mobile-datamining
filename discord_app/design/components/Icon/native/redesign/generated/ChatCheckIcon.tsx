@@ -1,9 +1,9 @@
-// === Module 17294: ChatCheckIcon ===
+// === Module 17417: ChatCheckIcon ===
 
-// Module 17294 (ChatCheckIcon)
+// Module 17417 (ChatCheckIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod17295 from "module_17295" /* 17295 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod17418 from "module_17418" /* 17418 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ChatCheckIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17295, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17418, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

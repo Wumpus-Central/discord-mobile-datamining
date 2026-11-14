@@ -1,7 +1,7 @@
-// === Module 7775: useFastestListPropsScrollReporting ===
+// === Module 7841: useFastestListPropsScrollReporting ===
 
-// Module 7775 (useFastestListPropsScrollReporting)
-import _mod1652 from "module_1652" /* 1652 */;
+// Module 7841 (useFastestListPropsScrollReporting)
+import _mod1655 from "module_1655" /* 1655 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = { code: "(function useFastestListPropsScrollReportingNativeTsx1(event){let[scrollPosition,horizontal]=this.__closure;if(scrollPosition!=null){scrollPosition.set(horizontal?event.contentOffset.x:event.contentOffset.y);}})" };
@@ -12,7 +12,7 @@ export default function useFastestListPropsScrollReporting(scrollReporting, arg1
   if ("animatedScrollPosition" === scrollReporting.scrollReporting) {
     scrollPosition = scrollReporting.scrollPosition;
   }
-  _mod1652;
+  _mod1655;
   items = [closure_2, scrollPosition, arg1];
   c0 = undefined;
   c1 = undefined;

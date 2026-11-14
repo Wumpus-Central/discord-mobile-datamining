@@ -1,6 +1,6 @@
-// === Module 8477: NotificationsInboxConstants ===
+// === Module 8543: NotificationsInboxConstants ===
 
-// Module 8477 (NotificationsInboxConstants)
+// Module 8543 (NotificationsInboxConstants)
 import Constants from "Constants" /* 1072 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
@@ -38,7 +38,7 @@ export function getNotificationsInboxGuild(arg0) {
     stringResult = intl.string(util.t.HcoRu0);
   }
   const obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: [] };
-  return tmp2(5106).fromGuildBasic(obj);
+  return tmp2(5169).fromGuildBasic(obj);
 }
 export const MessageCategory = obj;
 export const InboxFilters = obj2;

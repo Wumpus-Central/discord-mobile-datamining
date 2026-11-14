@@ -1,9 +1,9 @@
-// === Module 17903: EmojiZanyFaceIcon ===
+// === Module 18023: EmojiZanyFaceIcon ===
 
-// Module 17903 (EmojiZanyFaceIcon)
+// Module 18023 (EmojiZanyFaceIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod17904 from "module_17904" /* 17904 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod18024 from "module_18024" /* 18024 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiZanyFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17904, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18024, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

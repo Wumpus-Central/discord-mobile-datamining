@@ -1,22 +1,22 @@
-// === Module 6293: ChannelUtils ===
+// === Module 6356: ChannelUtils ===
 
-// Module 6293 (ChannelUtils)
+// Module 6356 (ChannelUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import util from "util" /* 1113 */;
-import PremiumConstants from "PremiumConstants" /* 1387 */;
-import Server from "Server" /* 2116 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5180 */;
-import UserUtilsDefault from "UserUtils" /* 5309 */;
-import ChannelListUtils from "ChannelListUtils" /* 6294 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6295 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 6301 */;
-import ChannelRecord from "ChannelRecord" /* 5096 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildChannelStore from "GuildChannelStore" /* 5173 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6011 */;
+import PremiumConstants from "PremiumConstants" /* 1390 */;
+import Server from "Server" /* 2119 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
+import UserUtilsDefault from "UserUtils" /* 5372 */;
+import ChannelListUtils from "ChannelListUtils" /* 6357 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 6358 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 6364 */;
+import ChannelRecord from "ChannelRecord" /* 5159 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildChannelStore from "GuildChannelStore" /* 5236 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

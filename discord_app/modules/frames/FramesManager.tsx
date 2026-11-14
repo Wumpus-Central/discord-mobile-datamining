@@ -1,13 +1,13 @@
-// === Module 16894: FramesManager ===
+// === Module 17017: FramesManager ===
 
-// Module 16894 (FramesManager)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ChannelRecord from "ChannelRecord" /* 5096 */;
-import leaveFrame from "leaveFrame" /* 7285 */;
-import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 16895 */;
-import FramesStore from "FramesStore" /* 6956 */;
+// Module 17017 (FramesManager)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import ChannelRecord from "ChannelRecord" /* 5159 */;
+import leaveFrame from "leaveFrame" /* 7349 */;
+import isPostMessageDisconnectDefault from "isPostMessageDisconnect" /* 17018 */;
+import FramesStore from "FramesStore" /* 7019 */;
 import Constants from "Constants" /* 1072 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 import size from "module_2" /* 2 */;
 
 const isPrivate = ChannelRecord.isPrivate;
@@ -21,14 +21,14 @@ const prototype = function FramesManager() {
     },
     FRAME_LAUNCH(arg0) {
       ({ applicationId, analyticsContext } = arg0);
-      const result = applyArgumentsResult(16808).trackFrameSessionStart(applicationId, analyticsContext);
+      const result = applyArgumentsResult(16931).trackFrameSessionStart(applicationId, analyticsContext);
     },
     FRAME_LAUNCH_FAIL(arg0) {
       ({ applicationId, error, analyticsContext } = arg0);
-      const result = applyArgumentsResult(16808).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+      const result = applyArgumentsResult(16931).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
     },
     FRAME_STOP(applicationId) {
-      applyArgumentsResult(16808).trackFrameSessionEnd(applicationId.applicationId);
+      applyArgumentsResult(16931).trackFrameSessionEnd(applicationId.applicationId);
     },
     VOICE_CHANNEL_SELECT(arg0) {
       const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);
@@ -36,7 +36,7 @@ const prototype = function FramesManager() {
     CHANNEL_DELETE(channel) {
       const framesForChannel = FramesStore.getFramesForChannel(channel.channel.id);
       for (const item10010 of framesForChannel) {
-        let obj = applyArgumentsResult(7285);
+        let obj = applyArgumentsResult(7349);
         let leaveFrameResult = obj.leaveFrame(item10010.id);
         continue;
       }
@@ -46,15 +46,15 @@ const prototype = function FramesManager() {
       if (!("unavailable" in guild)) {
         const allFrames = FramesStore.getAllFrames();
         for (const item10014 of allFrames) {
-          let tmp8 = item10014.surface.type !== applyArgumentsResult(5914).EmbeddedSurfaceType.MAIN;
+          let tmp8 = item10014.surface.type !== applyArgumentsResult(5977).EmbeddedSurfaceType.MAIN;
           if (tmp8) {
-            tmp8 = item10014.surface.type !== applyArgumentsResult(5914).EmbeddedSurfaceType.OVERLAY;
+            tmp8 = item10014.surface.type !== applyArgumentsResult(5977).EmbeddedSurfaceType.OVERLAY;
           }
           if (tmp8) {
             tmp8 = item10014.surface.guildId === guild.id;
           }
           if (tmp8) {
-            let tmp6Result = applyArgumentsResult(7285);
+            let tmp6Result = applyArgumentsResult(7349);
             let leaveFrameResult = tmp6Result.leaveFrame(item10014.id);
           }
           continue;
@@ -66,12 +66,12 @@ const prototype = function FramesManager() {
         if (!isPrivate(item10008.type)) {
           let framesForChannel = FramesStore.getFramesForChannel(item10008.id);
           for (const item10022 of framesForChannel) {
-            let tmp12 = item10022.surface.type !== applyArgumentsResult(5914).EmbeddedSurfaceType.MAIN;
+            let tmp12 = item10022.surface.type !== applyArgumentsResult(5977).EmbeddedSurfaceType.MAIN;
             if (tmp12) {
               tmp12 = item10022.applicationId !== item10008.application_id;
             }
             if (tmp12) {
-              let tmp10Result = applyArgumentsResult(7285);
+              let tmp10Result = applyArgumentsResult(7349);
               let leaveFrameResult = tmp10Result.leaveFrame(item10022.id);
             }
             continue;
@@ -85,10 +85,10 @@ const prototype = function FramesManager() {
     currentVoiceChannelId = currentVoiceChannelId.currentVoiceChannelId;
     if (null != currentVoiceChannelId) {
       if (currentVoiceChannelId !== currentVoiceChannelId.channelId) {
-        const obj2 = { type: applyArgumentsResult(5914).EmbeddedSurfaceType.VOICE_CHANNEL, channelId: currentVoiceChannelId };
+        const obj2 = { type: applyArgumentsResult(5977).EmbeddedSurfaceType.VOICE_CHANNEL, channelId: currentVoiceChannelId };
         const framesForSurface = FramesStore.getFramesForSurface(obj2);
         for (const item10005 of framesForSurface) {
-          let obj = applyArgumentsResult(7285);
+          let obj = applyArgumentsResult(7349);
           let leaveFrameResult = obj.leaveFrame(item10005.id);
           continue;
         }

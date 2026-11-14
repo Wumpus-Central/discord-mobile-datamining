@@ -1,10 +1,10 @@
-// === Module 15104: MediaModalWebEmbed ===
+// === Module 15218: MediaModalWebEmbed ===
 
-// Module 15104 (MediaModalWebEmbed)
-import URLUtilsDefault from "URLUtils" /* 1378 */;
-import MediaModalWebViewBase from "MediaModalWebViewBase" /* 10133 */;
-import escapeDefault from "escape" /* 15105 */;
-import EmbedIFrameConfig from "EmbedIFrameConfig" /* 15108 */;
+// Module 15218 (MediaModalWebEmbed)
+import URLUtilsDefault from "URLUtils" /* 1381 */;
+import MediaModalWebViewBase from "MediaModalWebViewBase" /* 10202 */;
+import escapeDefault from "escape" /* 15219 */;
+import EmbedIFrameConfig from "EmbedIFrameConfig" /* 15222 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ function WebEmbed(onLoad) {
   onLoad = onLoad.onLoad;
   importDefault = undefined;
   ({ src, style, onError, onLoadStart, onToggleOverlay } = onLoad);
-  [obj.playerState, importDefault] = noop.useState(onLoad(10133).PlayerState.UNREADY);
+  [obj.playerState, importDefault] = noop.useState(onLoad(10202).PlayerState.UNREADY);
   items = [onLoad];
   const callback = noop.useCallback(() => {
     closure_1(MediaModalWebViewBase.PlayerState.PLAYING);
@@ -26,7 +26,7 @@ function WebEmbed(onLoad) {
   }, []);
   const obj = { style, source: null, baseURL: null, playerState: null, onDataReceived: null, onToggleOverlay: null, onError: null, onLoad: null, onLoadStart: null };
   const obj2 = { html: null, baseUrl: null };
-  obj2.html = "\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"initial-scale=1\">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src=\"" + escapeDefault(src) + "\" allow=\"autoplay\" sandbox=\"" + onLoad(15108).EMBED_IFRAME_SANDBOX + "\" scrolling=\"no\"></iframe>\n  </body>\n</html>\n";
+  obj2.html = "\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"initial-scale=1\">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src=\"" + escapeDefault(src) + "\" allow=\"autoplay\" sandbox=\"" + onLoad(15222).EMBED_IFRAME_SANDBOX + "\" scrolling=\"no\"></iframe>\n  </body>\n</html>\n";
   obj2.baseUrl = baseURL;
   obj.source = obj2;
   obj.baseURL = baseURL;

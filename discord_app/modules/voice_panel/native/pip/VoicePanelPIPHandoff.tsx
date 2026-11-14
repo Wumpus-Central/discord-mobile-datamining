@@ -1,6 +1,7 @@
-// === Module 11927: VoicePanelPIPHandoff ===
+// === Module 11993: VoicePanelPIPHandoff ===
 
-// Module 11927 (VoicePanelPIPHandoff)
+// Module 11993 (VoicePanelPIPHandoff)
+import VoicePanelPIPCardThawDefault from "VoicePanelPIPCardThaw" /* 11994 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -15,6 +16,8 @@ class VoicePanelPIPHandoff {
     obj.listeners = set;
     obj.inPIPLayout = 0;
     obj.inFlight = 0;
+    tmp4 = new closure_0(closure_1[1])();
+    obj.cardThaw = tmp4;
     obj.subscribe = function subscribe(arg0) {
       closure_0 = arg0;
       let listeners = closure_0.listeners;

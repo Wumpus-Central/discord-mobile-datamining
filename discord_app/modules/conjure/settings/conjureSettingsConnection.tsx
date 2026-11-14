@@ -1,12 +1,12 @@
-// === Module 13112: conjureSettingsConnection ===
+// === Module 13218: conjureSettingsConnection ===
 
-// Module 13112 (conjureSettingsConnection)
+// Module 13218 (conjureSettingsConnection)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 7330 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 13113 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 7394 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 13219 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 7315 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 7379 */;
 
 require = fn;
 function noteSettingsWrite(arg0) {
@@ -101,19 +101,19 @@ let closure_8 = async function _fetchProjectSettings(arg0) {
         closure_133_3 = value;
         const value2 = closure_134_5.get(closure_133_0);
         c2 = value2;
-        let tmp35 = null;
+        let tmp36 = null;
         if (value2 == null) {
           c2 = 0;
         }
         let tmp7 = c2;
         let tmp9 = c2 !== closure_133_1;
         if (tmp9) {
-          tmp9 = tmp35 != closure_134_4.getSettings(closure_133_0);
+          tmp9 = tmp36 != closure_134_4.getSettings(closure_133_0);
         }
         if (!tmp9) {
           tmp7 = undefined;
           let schema;
-          if (closure_133_3 != tmp35) {
+          if (closure_133_3 != tmp36) {
             schema = closure_133_3.schema;
           }
           if (!Array.isArray(schema)) {
@@ -123,17 +123,18 @@ let closure_8 = async function _fetchProjectSettings(arg0) {
           }
           tmp7 = closure_134_1(closure_134_2[2]);
           const obj10 = { type: "CONJURE_SETTINGS_SET", projectId: closure_133_0, settings: null };
-          const obj11 = { schema: closure_133_3.schema, values: null, secrets: null, connections: null };
+          const obj11 = { schema: closure_133_3.schema, values: null, server_values: null, secrets: null, connections: null };
           let values = closure_133_3.values;
-          if (values == tmp35) {
+          if (values == tmp36) {
             values = {};
           }
           obj11.values = values;
+          obj11.server_values = closure_133_3.server_values;
           let secrets = closure_133_3.secrets;
-          if (secrets == tmp35) {
+          if (secrets == tmp36) {
             secrets = [];
           }
-          tmp35 = secrets;
+          tmp36 = secrets;
           obj11.secrets = secrets;
           obj11.connections = closure_133_3.connections;
           obj10.settings = obj11;
@@ -141,9 +142,9 @@ let closure_8 = async function _fetchProjectSettings(arg0) {
         }
         c8 = 3;
       }
-    } catch (tmp48) {
+    } catch (tmp49) {
       c8 = tmp;
-      throw tmp48;
+      throw tmp49;
     }
   }
 };
@@ -274,52 +275,129 @@ let closure_13 = async function _submitProjectSettings(arg0) {
   c6 = 0;
   c4 = 0;
   return (async (arg0, value) => {
-    closure_3 = tmp3;
-    closure_130_0 = closure_0;
-    closure_130_1 = json;
-    await conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/settings", { method: "PUT", json });
-    closure_130_2 = value;
-    if (!closure_130_2.ok) {
-      const _Error = Error;
-      const _HermesInternal = HermesInternal;
-      const error = new Error("settings submission failed (" + closure_130_2.status + ")");
-      throw error;
-    }
-    closure_130_3 = null;
-    await closure_130_2.json();
-    if (2 === tmp7) {
-      c4 = 0;
-    } else if (arg0 === 1) {
+    if (c6 === 2) {
       c6 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c4 = 0;
-      c6 = 3;
-      return { value, done: true };
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
     } else {
-      closure_130_3 = value;
-      c4 = 0;
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = closure_0;
+            closure_130_1 = json;
+            closure_130_2 = undefined;
+            closure_130_3 = undefined;
+            let settings;
+            const obj6 = { method: "PUT", json };
+            c5 = 1;
+            c6 = 1;
+            const obj7 = { value: conjureWorkerFetch.fetchConjureWorker(closure_0, "/agent/settings", obj6), done: false };
+            return obj7;
+          }
+        } else if (1 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj9 = { value, done: true };
+            return obj9;
+          } else {
+            closure_130_2 = value;
+            if (closure_130_2.ok) {
+              closure_130_3 = null;
+              c4 = 1;
+              c5 = 3;
+              c6 = 1;
+              const obj10 = { value: closure_130_2.json(), done: false };
+              return obj10;
+            } else {
+              const _Error = Error;
+              const _HermesInternal = HermesInternal;
+              const error = new Error("settings submission failed (" + closure_130_2.status + ")");
+              throw error;
+            }
+          }
+        } else {
+          if (2 === tmp7) {
+            c4 = 0;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 0;
+            c6 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            closure_130_3 = value;
+            c4 = 0;
+          }
+          closure_131_6(closure_130_0);
+          settings = closure_131_4.getSettings(closure_130_0);
+          let tmp17 = null == settings;
+          if (!tmp17) {
+            let tmp20 = null == closure_130_1.values;
+            if (tmp20) {
+              tmp20 = null == closure_130_1.server_values;
+            }
+            tmp17 = tmp20;
+          }
+          if (tmp17) {
+            let rebuild_required;
+            if (closure_130_3 != null) {
+              rebuild_required = closure_130_3.rebuild_required;
+            }
+            const obj11 = { rebuildRequired: true === rebuild_required };
+            c6 = 3;
+            const obj12 = { value: obj11, done: true };
+            return obj12;
+          } else {
+            let obj14 = { type: "CONJURE_SETTINGS_SET", projectId: closure_130_0, settings: null };
+            const obj15 = {};
+            const merged = Object.assign(settings);
+            const obj2 = closure_131_1(closure_131_2[2]);
+            obj15.values = closure_131_0(closure_131_2[6]).mergeSubmittedSettingValues(settings.values, closure_130_1.values);
+            if (null != closure_130_1.server_values) {
+              const obj16 = { server_values: closure_131_0(closure_131_2[6]).mergeSubmittedServerValues(settings.server_values, closure_130_1.server_values) };
+              let obj17 = obj16;
+              const obj8 = closure_131_0(closure_131_2[6]);
+            } else {
+              obj17 = {};
+            }
+            const merged1 = Object.assign(obj17);
+            obj14.settings = obj15;
+            obj14 = obj2.dispatch(obj14);
+            const obj5 = closure_131_0(closure_131_2[6]);
+          }
+        }
+      } catch (tmp57) {
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp57;
+        } else {
+          c5 = tmp;
+        }
+      }
     }
-    closure_131_6(closure_130_0);
-    const settings = closure_131_4.getSettings(closure_130_0);
-    let tmp17 = null != settings;
-    if (tmp17) {
-      tmp17 = null != closure_130_1.values;
-    }
-    if (tmp17) {
-      const obj11 = { type: "CONJURE_SETTINGS_SET", projectId: closure_130_0, settings: null };
-      const obj12 = {};
-      const merged = Object.assign(settings);
-      obj12.values = closure_131_0(closure_131_2[6]).mergeSubmittedSettingValues(settings.values, closure_130_1.values);
-      obj11.settings = obj12;
-      closure_131_1(closure_131_2[2]).dispatch(obj11);
-      closure_131_0(closure_131_2[6]);
-      closure_131_1(closure_131_2[2]);
-    }
-    if (closure_130_3 != null) {
-      const rebuild_required = closure_130_3.rebuild_required;
-    }
-    return { rebuildRequired: true === rebuild_required };
   })();
 };
 const map = new Map();
@@ -335,11 +413,24 @@ export const settingsFrameHandlers = {
       num = 0;
     }
     const result = map.set(projectId, num + 1);
-    DispatcherDefault.dispatch({ type: "CONJURE_SETTINGS_SET", projectId, settings: { schema: schema.schema, values: schema.values, secrets: schema.secrets, connections: schema.connections } });
+    const obj2 = { type: "CONJURE_SETTINGS_SET", projectId, settings: null };
+    const obj6 = { schema: schema.schema, values: schema.values, server_values: null, secrets: null, connections: null };
+    let server_values = schema.server_values;
+    if (server_values == null) {
+      const settings = ConjureSettingsStore.getSettings(projectId);
+      let server_values1;
+      if (settings != null) {
+        server_values1 = settings.server_values;
+      }
+      server_values = server_values1;
+    }
+    obj6.server_values = server_values;
+    ({ secrets: obj3.secrets, connections: obj3.connections } = schema);
+    obj2.settings = obj6;
+    DispatcherDefault.dispatch(obj2);
     if (true === schema.values_changed) {
       const result1 = ConjurePreviewActionCreators.reloadConjureProjectFrames(projectId);
     }
-    const obj2 = { type: "CONJURE_SETTINGS_SET", projectId, settings: { schema: schema.schema, values: schema.values, secrets: schema.secrets, connections: schema.connections } };
   }
 };
 export { fetchProjectSettings };

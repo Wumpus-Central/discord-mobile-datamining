@@ -1,11 +1,11 @@
-// === Module 15697: conjureServerWidgetConsent ===
+// === Module 15816: conjureServerWidgetConsent ===
 
-// Module 15697 (conjureServerWidgetConsent)
-import URLUtilsDefault from "URLUtils" /* 1378 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12026 */;
+// Module 15816 (conjureServerWidgetConsent)
+import URLUtilsDefault from "URLUtils" /* 1381 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12093 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import WidgetStore from "WidgetStore" /* 12024 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
+import WidgetStore from "WidgetStore" /* 12091 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 
 const require = globalThis.__r;
 
@@ -178,7 +178,7 @@ let closure_9 = async function _exchangeAndAdd(arg0) {
           ({ onTurnedOn: closure_132_3, showToast: closure_132_4 } = closure_3);
           c8 = 1;
           c9 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {

@@ -1,20 +1,20 @@
-// === Module 19258: SearchFilterUtils ===
+// === Module 19450: SearchFilterUtils ===
 
-// Module 19258 (SearchFilterUtils)
+// Module 19450 (SearchFilterUtils)
 import util from "util" /* 1113 */;
-import AtIcon from "AtIcon" /* 8022 */;
-import CalendarIcon from "CalendarIcon" /* 8391 */;
-import TrackingConstants from "TrackingConstants" /* 8998 */;
-import UserIcon from "UserIcon" /* 10484 */;
-import AttachmentIcon from "AttachmentIcon" /* 10979 */;
-import RobotIcon from "RobotIcon" /* 12586 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 13446 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 14627 */;
-import SearchTokens from "SearchTokens" /* 14635 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14652 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 16156 */;
-import CalendarMinusIcon from "CalendarMinusIcon" /* 19259 */;
-import SearchConstants from "SearchConstants" /* 8999 */;
+import AtIcon from "AtIcon" /* 8087 */;
+import CalendarIcon from "CalendarIcon" /* 8457 */;
+import TrackingConstants from "TrackingConstants" /* 9065 */;
+import UserIcon from "UserIcon" /* 10553 */;
+import AttachmentIcon from "AttachmentIcon" /* 11048 */;
+import RobotIcon from "RobotIcon" /* 12682 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 13549 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 14740 */;
+import SearchTokens from "SearchTokens" /* 14748 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 14765 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 16277 */;
+import CalendarMinusIcon from "CalendarMinusIcon" /* 19451 */;
+import SearchConstants from "SearchConstants" /* 9066 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -213,7 +213,7 @@ export function getSearchTokenPressHandler(_undefined, token, CONTEXT_MENU) {
 export function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   items = [];
-  const keys = Object.keys(items(14635));
+  const keys = Object.keys(items(14748));
   const item = keys.forEach((token) => {
     if (obj.isSearchFilterTokenType(token)) {
       const plainText = SearchTokensDefault[token].plainText;

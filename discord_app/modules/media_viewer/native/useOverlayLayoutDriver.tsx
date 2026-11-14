@@ -1,9 +1,9 @@
-// === Module 15087: useOverlayLayoutDriver ===
+// === Module 15201: useOverlayLayoutDriver ===
 
-// Module 15087 (useOverlayLayoutDriver)
+// Module 15201 (useOverlayLayoutDriver)
 import native from "native" /* 1187 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,9 +13,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useOverlayLayoutDriver.tsx");
 
 export function useOverlayLayoutDriver() {
-  sharedValue = sharedValue(1652).useSharedValue(0);
-  let obj = sharedValue(1652);
-  const mediaViewerDimensions = sharedValue(10126).useMediaViewerDimensions();
+  sharedValue = sharedValue(1655).useSharedValue(0);
+  let obj = sharedValue(1655);
+  const mediaViewerDimensions = sharedValue(10195).useMediaViewerDimensions();
   items = [sharedValue, , ];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);
   const effect = noop.useEffect(() => {
@@ -25,7 +25,7 @@ export function useOverlayLayoutDriver() {
   return sharedValue;
 }
 export function useHeaderLayoutAnimation(animationDriver) {
-  items = [closure_3, _mod1652.interpolate, animationDriver];
+  items = [closure_3, _mod1655.interpolate, animationDriver];
   c0 = undefined;
   c1 = undefined;
   [tmp, tmp2, tmp3] = items;
@@ -40,10 +40,10 @@ export function useHeaderLayoutAnimation(animationDriver) {
   useOverlayLayoutDriverTsx1.__closure = items1;
   useOverlayLayoutDriverTsx1.__workletHash = 9211883579773;
   useOverlayLayoutDriverTsx1.__initData = tmp;
-  return _mod1652.useAnimatedStyle(useOverlayLayoutDriverTsx1);
+  return _mod1655.useAnimatedStyle(useOverlayLayoutDriverTsx1);
 }
 export function useFooterLayoutAnimation(overlayLayoutDriver) {
-  items = [closure_4, _mod1652.interpolate, overlayLayoutDriver];
+  items = [closure_4, _mod1655.interpolate, overlayLayoutDriver];
   c0 = undefined;
   c1 = undefined;
   [tmp, tmp2, tmp3] = items;
@@ -58,5 +58,5 @@ export function useFooterLayoutAnimation(overlayLayoutDriver) {
   useOverlayLayoutDriverTsx2.__closure = items1;
   useOverlayLayoutDriverTsx2.__workletHash = 11051399715838;
   useOverlayLayoutDriverTsx2.__initData = tmp;
-  return _mod1652.useAnimatedStyle(useOverlayLayoutDriverTsx2);
+  return _mod1655.useAnimatedStyle(useOverlayLayoutDriverTsx2);
 }

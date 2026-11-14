@@ -1,20 +1,20 @@
-// === Module 18985: useInterestRowVisibility ===
+// === Module 19039: useInterestRowVisibility ===
 
-// Module 18985 (useInterestRowVisibility)
+// Module 19039 (useInterestRowVisibility)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/interest/native/useInterestRowVisibility.tsx");
 
-export default function useInterestRowVisibility(onRowSeen, arg1, arg2) {
+export default function useInterestRowVisibility(onRowSeen, arg1) {
   closure_0 = onRowSeen;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  let num = arg2;
-  if (arg2 === undefined) {
+  let num = first1;
+  if (first1 === undefined) {
     num = 0;
   }
   flag.useRef(0);

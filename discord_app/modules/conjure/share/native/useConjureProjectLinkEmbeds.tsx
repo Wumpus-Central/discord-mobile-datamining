@@ -1,16 +1,16 @@
-// === Module 12343: useConjureProjectLinkEmbeds ===
+// === Module 12438: useConjureProjectLinkEmbeds ===
 
-// Module 12343 (useConjureProjectLinkEmbeds)
-import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 12346 */;
-import loadConjureSharedProjectDefault from "loadConjureSharedProject" /* 12350 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12351 */;
+// Module 12438 (useConjureProjectLinkEmbeds)
+import conjureProjectLinkCard2 from "conjureProjectLinkCard" /* 12441 */;
+import loadConjureSharedProjectDefault from "loadConjureSharedProject" /* 12445 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12446 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2162 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import UserStore from "UserStore" /* 1385 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
-import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 12344 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import UserStore from "UserStore" /* 1388 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
+import ConjureSharedProjectStore from "ConjureSharedProjectStore" /* 12439 */;
 
 const require = globalThis.__r;
 

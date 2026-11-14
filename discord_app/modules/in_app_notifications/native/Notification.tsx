@@ -1,26 +1,26 @@
-// === Module 11018: Notification ===
+// === Module 11087: Notification ===
 
-// Module 11018 (Notification)
+// Module 11087 (Notification)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6004 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10956 */;
-import NotificationContentDefault from "NotificationContent" /* 11019 */;
-import NotificationProgressDefault from "NotificationProgress" /* 11021 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6067 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 11025 */;
+import NotificationContentDefault from "NotificationContent" /* 11088 */;
+import NotificationProgressDefault from "NotificationProgress" /* 11090 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
-const InAppNotificationConstants = fn(10957);
+const InAppNotificationConstants = fn(11026);
 ({ MIN_SWIPE_VELOCITY: closure_4, STARTED_SWIPE_THRESHOLD: hasOwnProperty, NOTIFICATION_MAX_WIDTH } = InAppNotificationConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { shadow: null, container: null };
 let obj3 = {};
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -70,12 +70,12 @@ export function NotificationPressable(notification) {
   const initialized = inAppNotificationContext.initialized;
   const panning = inAppNotificationContext.panning;
   let obj2 = require("InAppNotificationContext");
-  const sharedValue = require("module_1652").useSharedValue(1);
+  const sharedValue = require("module_1655").useSharedValue(1);
   let items1 = [sharedValue];
   const items2 = [sharedValue];
   const callback = guildId.useCallback(() => sharedValue.set(0.95), items1);
   const callback1 = guildId.useCallback(() => sharedValue.set(1), items2);
-  const obj3 = require("module_1652");
+  const obj3 = require("module_1655");
   const items3 = [panning, require("spring/spring").withSpring, sharedValue, initialized];
   _require = undefined;
   importDefault = undefined;
@@ -95,10 +95,10 @@ export function NotificationPressable(notification) {
   NotificationTsx1.__closure = items4;
   NotificationTsx1.__workletHash = 8384259234867;
   NotificationTsx1.__initData = tmp10;
-  const animatedStyle = require("module_1652").useAnimatedStyle(NotificationTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(NotificationTsx1);
   const memo1 = obj.useMemo(() => ({ foreground: true }), []);
-  const obj4 = require("module_1652");
-  sharedValue1 = require("module_1652").useSharedValue(100);
+  const obj4 = require("module_1655");
+  sharedValue1 = require("module_1655").useSharedValue(100);
   closure_14 = tmp17;
   const items5 = [initialized, panning, notification, sharedValue1, handleDismissNotification, notification.duration !== Infinity];
   const effect = obj.useEffect(() => {
@@ -107,8 +107,8 @@ export function NotificationPressable(notification) {
         if (closure_14) {
           value = sharedValue1.get();
           const obj = timing_timing;
-          const obj2 = { duration: value / 100 * tmp, easing: _mod1652.Easing.linear };
-          items = [closure_12, _mod1705.scheduleOnRN, handleDismissNotification];
+          const obj2 = { duration: value / 100 * tmp, easing: _mod1655.Easing.linear };
+          items = [closure_12, _mod1708.scheduleOnRN, handleDismissNotification];
           c0 = undefined;
           c1 = undefined;
           [tmp11, tmp12, tmp13] = items;
@@ -193,5 +193,5 @@ export function NotificationPressable(notification) {
   items11[1] = tmp23Result;
   obj6.children = items11;
   obj5.children = velocityY(require("Pressables").PressableHighlight, obj6);
-  return notificationGestureY(_modDef1652.View, obj5);
+  return notificationGestureY(_modDef1655.View, obj5);
 }

@@ -1,8 +1,8 @@
-// === Module 7216: canReviewGuildMemberApplications ===
+// === Module 7279: canReviewGuildMemberApplications ===
 
-// Module 7216 (canReviewGuildMemberApplications)
-import GuildStore from "GuildStore" /* 5114 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
+// Module 7279 (canReviewGuildMemberApplications)
+import GuildStore from "GuildStore" /* 5177 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
 
 const require = globalThis.__r;
 

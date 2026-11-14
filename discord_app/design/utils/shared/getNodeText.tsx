@@ -1,7 +1,7 @@
-// === Module 5419: shared/getNodeText ===
+// === Module 5482: shared/getNodeText ===
 
-// Module 5419 (shared/getNodeText)
-import getNodeText from "getNodeText" /* 5317 */;
+// Module 5482 (shared/getNodeText)
+import getNodeText from "getNodeText" /* 5380 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/utils/shared/getNodeText.tsx");

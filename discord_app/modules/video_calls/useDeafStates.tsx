@@ -1,9 +1,9 @@
-// === Module 12965: useDeafStates ===
+// === Module 13061: useDeafStates ===
 
-// Module 12965 (useDeafStates)
+// Module 13061 (useDeafStates)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import VoiceStateStore from "VoiceStateStore" /* 5918 */;
+import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+import VoiceStateStore from "VoiceStateStore" /* 5981 */;
 
 const require = globalThis.__r;
 

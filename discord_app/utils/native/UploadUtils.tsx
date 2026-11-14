@@ -1,25 +1,25 @@
-// === Module 8812: utils/UploadUtils ===
+// === Module 8879: utils/UploadUtils ===
 
-// Module 8812 (utils/UploadUtils)
+// Module 8879 (utils/UploadUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1149 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1441 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 8126 */;
-import UploadUtils from "UploadUtils" /* 8779 */;
-import UploadPlatform from "UploadPlatform" /* 8783 */;
-import FileUtils from "FileUtils" /* 8808 */;
-import ImagePickerDefault from "ImagePicker" /* 8813 */;
-import ImageConversionDecision from "ImageConversionDecision" /* 8820 */;
-import VideoUploadUtils from "VideoUploadUtils" /* 8822 */;
-import UploadLimits from "UploadLimits" /* 8823 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 8830 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1444 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 8192 */;
+import UploadUtils from "UploadUtils" /* 8846 */;
+import UploadPlatform from "UploadPlatform" /* 8850 */;
+import FileUtils from "FileUtils" /* 8875 */;
+import ImagePickerDefault from "ImagePicker" /* 8880 */;
+import ImageConversionDecision from "ImageConversionDecision" /* 8887 */;
+import VideoUploadUtils from "VideoUploadUtils" /* 8889 */;
+import UploadLimits from "UploadLimits" /* 8890 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 8897 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UnsyncedUserSettingsStore_mod from "UnsyncedUserSettingsStore" /* 1194 */;
-import NetworkStore from "NetworkStore" /* 6147 */;
-import UserStore from "UserStore" /* 1385 */;
+import NetworkStore from "NetworkStore" /* 6210 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function openImagePickerUnhandled() {
@@ -495,7 +495,7 @@ let closure_28 = async function _mediaManager(arg0) {
             closure_130_1 = closure_1;
             c6 = 1;
             c7 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "Path", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1269,7 +1269,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      obj8 = { uri, overrideType: "a" };
+                      obj8 = { uri, overrideType: "y" };
                       isVideo2 = UploadUtils.getFile(obj8).isVideo;
                       const tmp12Result10 = UploadUtils;
                     }
@@ -1288,7 +1288,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj9 = { uri, overrideType: "a" };
+                  const obj9 = { uri, overrideType: "y" };
                   isVideo = UploadUtils.getFile(obj9).isVideo;
                   const tmp12Result12 = UploadUtils;
                 }
@@ -1452,7 +1452,7 @@ let closure_37 = async function _processVideoUpload(arg0) {
           let encodingConfig;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -1602,7 +1602,7 @@ let closure_38 = async function _processImageOrFileUpload(arg0) {
           closure_131_26 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -1848,7 +1848,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
             closure_130_19 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "Path", done: true };
           }
         break;
         case 1:
@@ -1889,7 +1889,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
           } else {
             closure_130_10 = value;
             if ((function shouldConvertBase64ToJPG(str) {
-              let isIOSResult = closure_1_0(1377).isIOS();
+              let isIOSResult = closure_1_0(1380).isIOS();
               if (isIOSResult) {
                 isIOSResult = null != str.match(closure_1_20);
               }
@@ -1901,7 +1901,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
               const obj9 = { value: closure_131_27(closure_131_1(closure_131_2[16]).convertBase64ToJPEG, closure_130_0.replace(closure_131_20, ""), obj8), done: false };
               return obj9;
             } else if ((function shouldConvertBase64ToGIF(str) {
-              let isIOSResult = closure_1_0(1377).isIOS();
+              let isIOSResult = closure_1_0(1380).isIOS();
               if (isIOSResult) {
                 isIOSResult = null != str.match(closure_1_21);
               }
@@ -1934,7 +1934,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
                 const obj16 = closure_131_0(closure_131_2[20]);
                 if (!obj16.shouldConvertToJPG(closure_130_0, closure_130_1, closure_130_2, closure_130_4, closure_130_7)) {
                   if ((function shouldConvertToGifFilepath(str, str2) {
-                    const isIOSResult = closure_1_0(1377).isIOS();
+                    const isIOSResult = closure_1_0(1380).isIOS();
                     if (!isIOSResult) {
                       return isIOSResult;
                     } else {
@@ -1947,9 +1947,9 @@ let closure_39 = async function _tryConvertImage(arg0) {
                       } else {
                         tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = closure_1_0(8820);
+                      tmpResult = closure_1_0(8887);
                     }
-                    const obj = closure_1_0(1377);
+                    const obj = closure_1_0(1380);
                   })(closure_130_0, closure_130_1)) {
                     c4 = 2;
                     c6 = 10;
@@ -2596,7 +2596,7 @@ let UnsyncedUserSettingsStore = UnsyncedUserSettingsStore_mod;
 const Constants = fn(1072);
 ({ Base64PNGPrefix: closure_12, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_14, CompressionQuality: closure_15, Base64WEBPPrefix: closure_16, Base64AVIFPrefix: closure_17, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(6839).NativePermissionTypes;
+const NativePermissionTypes = fn(6902).NativePermissionTypes;
 let closure_19 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2665,8 +2665,8 @@ export function getFileSize(uri) {
 }
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(8820).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(8820).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(8887).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(8887).shouldForceConvertToJPG;
 export function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

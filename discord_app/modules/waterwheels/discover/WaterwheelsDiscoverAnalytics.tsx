@@ -1,9 +1,9 @@
-// === Module 18883: WaterwheelsDiscoverAnalytics ===
+// === Module 19013: WaterwheelsDiscoverAnalytics ===
 
-// Module 18883 (WaterwheelsDiscoverAnalytics)
+// Module 19013 (WaterwheelsDiscoverAnalytics)
 import Constants from "Constants" /* 1072 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10156 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10225 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -21,19 +21,22 @@ export function getDiscoverActionParameters(type, arg1) {
     str = "item_header";
   }
   type = type.type;
-  if (WaterwheelsCardTypes.WaterwheelsActionType.JOIN_GUILD === type) {
-    const obj2 = { actionType: "press_join_guild", gestureType: "press", targetElement: str, intentType: "join", destinationType: "guild", guildId: type.value.guild_id };
+  if ("guild_profile" === type) {
+    const obj2 = { actionType: "press_guild_profile", gestureType: "press", targetElement: str, intentType: "navigate", destinationType: "guild_profile", guildId: type.guildId };
     return obj2;
+  } else if (WaterwheelsCardTypes.WaterwheelsActionType.JOIN_GUILD === type) {
+    const obj3 = { actionType: "press_join_guild", gestureType: "press", targetElement: str, intentType: "join", destinationType: "guild", guildId: type.value.guild_id };
+    return obj3;
   } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GUILD === type) {
     let str2 = "press";
     if (tmp) {
       str2 = "press_header";
     }
-    const obj3 = { actionType: str2, gestureType: "press", targetElement: str, intentType: "navigate", destinationType: "guild", guildId: type.value.guild_id };
-    return obj3;
-  } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_NUDGE === type) {
-    const obj4 = { actionType: "press", gestureType: "press", targetElement: str, intentType: "configure", destinationType: "none", guildId: null };
+    const obj4 = { actionType: str2, gestureType: "press", targetElement: str, intentType: "navigate", destinationType: "guild", guildId: type.value.guild_id };
     return obj4;
+  } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_NUDGE === type) {
+    const obj5 = { actionType: "press", gestureType: "press", targetElement: str, intentType: "configure", destinationType: "none", guildId: null };
+    return obj5;
   } else {
     const obj = { actionType: "press", gestureType: "press", targetElement: str, intentType: "open", destinationType: "unknown", guildId: null };
     return obj;

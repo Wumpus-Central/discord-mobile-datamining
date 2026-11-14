@@ -1,14 +1,14 @@
-// === Module 18495: EffectiveNotifSettingsLayout ===
+// === Module 18624: EffectiveNotifSettingsLayout ===
 
-// Module 18495 (EffectiveNotifSettingsLayout)
+// Module 18624 (EffectiveNotifSettingsLayout)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
-import _modDef3013 from "module_3013" /* 3013 */;
-import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCreators" /* 18496 */;
+import _modDef3029 from "module_3029" /* 3029 */;
+import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCreators" /* 18625 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 16042 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 16163 */;
 
 require = fn;
 function EffectiveSettingsHeader() {
@@ -40,7 +40,7 @@ function EffectiveSettingsHeader() {
     let obj3 = { type: str, role: "status", message: null, action: null };
     let intl = loading(1113).intl;
     let string = intl.string;
-    const tmp12 = _modDef3013;
+    const tmp12 = _modDef3029;
     obj3.message = string(loading ? tmp12.Ns127F : tmp12.Nu2TMI);
     const obj4 = { text: null, onPress: null, loading: null };
     intl = loading(1113).intl;
@@ -50,15 +50,15 @@ function EffectiveSettingsHeader() {
     obj4.onPress = callback;
     obj4.loading = loading;
     obj3.action = obj4;
-    obj3 = closure_7(loading(8094).InlineNotice, obj3);
+    obj3 = closure_7(loading(8159).InlineNotice, obj3);
     obj.children = obj3;
-    closure_7(loading(6274).Stack, obj);
+    closure_7(loading(6337).Stack, obj);
   }
   tmp = closure_10();
 }
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { notice: { paddingTop: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj);
 const redux = noop.createContext({ unavailable: false, loading: false });

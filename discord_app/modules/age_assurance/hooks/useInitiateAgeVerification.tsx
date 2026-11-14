@@ -1,12 +1,12 @@
-// === Module 8190: useInitiateAgeVerification ===
+// === Module 8256: useInitiateAgeVerification ===
 
-// Module 8190 (useInitiateAgeVerification)
+// Module 8256 (useInitiateAgeVerification)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8138 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8204 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function useAgeVerificationRunner(onComplete) {
@@ -170,7 +170,7 @@ function useAgeVerificationRunner(onComplete) {
   };
 }
 const AbortCodes = fn(1072).AbortCodes;
-const SafetyToastType = fn(6847).SafetyToastType;
+const SafetyToastType = fn(6910).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/hooks/useInitiateAgeVerification.tsx");
 

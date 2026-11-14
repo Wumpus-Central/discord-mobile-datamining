@@ -1,17 +1,17 @@
-// === Module 8762: utils/QuestUtils ===
+// === Module 8829: utils/QuestUtils ===
 
-// Module 8762 (utils/QuestUtils)
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6764 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 8764 */;
-import QuestSharePolicy from "QuestSharePolicy" /* 8765 */;
-import QuestType2 from "QuestType" /* 8766 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8767 */;
+// Module 8829 (utils/QuestUtils)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6827 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 8831 */;
+import QuestSharePolicy from "QuestSharePolicy" /* 8832 */;
+import QuestType2 from "QuestType" /* 8833 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameConsoleStore from "GameConsoleStore" /* 6009 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import VoiceStateStore from "VoiceStateStore" /* 5918 */;
-import QuestUtmStore from "QuestUtmStore" /* 8763 */;
+import GameConsoleStore from "GameConsoleStore" /* 6072 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import VoiceStateStore from "VoiceStateStore" /* 5981 */;
+import QuestUtmStore from "QuestUtmStore" /* 8830 */;
 
 require = fn;
 function isSponsoredPlayQuest(quest) {
@@ -29,7 +29,7 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(5275);
+const QuestConstants = fn(5338);
 ({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: closure_10, TaskFilterTypes: closure_11 } = QuestConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");

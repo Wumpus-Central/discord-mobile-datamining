@@ -1,12 +1,12 @@
-// === Module 13979: GameOrganizationBenefits ===
+// === Module 14097: GameOrganizationBenefits ===
 
-// Module 13979 (GameOrganizationBenefits)
-import _modDef2549 from "module_2549" /* 2549 */;
+// Module 14097 (GameOrganizationBenefits)
+import _modDef2565 from "module_2565" /* 2565 */;
 import size from "module_2" /* 2 */;
 
-const items = [{ key: "auto-sync", message: _modDef2549.WUVzdk }, ];
-const obj = { key: "auto-sync", message: _modDef2549.WUVzdk };
-items[1] = { key: "linked-channel", message: _modDef2549.MEQJ1m };
+const items = [{ key: "auto-sync", message: _modDef2565.WUVzdk }, ];
+const obj = { key: "auto-sync", message: _modDef2565.WUVzdk };
+items[1] = { key: "linked-channel", message: _modDef2565.MEQJ1m };
 const result = size.fileFinishedImporting("modules/game_organization_invites/GameOrganizationBenefits.tsx");
 
 export const GAME_ORGANIZATION_BENEFITS = items;

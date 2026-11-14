@@ -1,18 +1,18 @@
-// === Module 18603: guilds/Guilds ===
+// === Module 18732: guilds/Guilds ===
 
-// Module 18603 (guilds/Guilds)
+// Module 18732 (guilds/Guilds)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5429 */;
-import RootNavigationRef from "RootNavigationRef" /* 5430 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5435 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
+import RootNavigationRef from "RootNavigationRef" /* 5493 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5498 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
 
 require = fn;
-const YouBarNavigatorScreens = fn(9963).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(10030).YouBarNavigatorScreens;
 const ComponentActions = fn(1072).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -21,11 +21,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/Guilds.tsx");
 
 export default noop.memo(function GuildsOnly() {
-  const trackTabPerformance = enabled(18604).useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
-  let obj = enabled(18604);
-  const tmp5 = isChatBesideChannelList(5425)();
-  const isEligibleForQuests = enabled(10064).getIsEligibleForQuests();
-  const GuildsRenderExperiment = enabled(18605).GuildsRenderExperiment;
+  const trackTabPerformance = enabled(18733).useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
+  let obj = enabled(18733);
+  const tmp5 = isChatBesideChannelList(5488)();
+  const isEligibleForQuests = enabled(10132).getIsEligibleForQuests();
+  const GuildsRenderExperiment = enabled(18734).GuildsRenderExperiment;
   enabled = GuildsRenderExperiment.useConfig({ location: "GuildsOnly" }).enabled;
   isChatBesideChannelList = undefined;
   dependencyMap = undefined;
@@ -83,7 +83,7 @@ export default noop.memo(function GuildsOnly() {
       let ComponentDispatch = enabled(1108).ComponentDispatch;
       const subscription1 = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
       let obj = isChatBesideChannelList(572);
-      let rootNavigationRef = enabled(5430).getRootNavigationRef();
+      let rootNavigationRef = enabled(5493).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", handleNavigationChange);
       }
@@ -101,21 +101,21 @@ export default noop.memo(function GuildsOnly() {
     }
   }, items);
   if (!isChatBesideChannelList) {
-    isChatBesideChannelList = isChatBesideChannelList(5432)().isChatBesideChannelList;
+    isChatBesideChannelList = isChatBesideChannelList(5495)().isChatBesideChannelList;
   }
   if (!enabled) {
     const obj3 = { gradient: tmp5, children: null };
-    const items1 = [closure_8(tmp4(18606), {}), closure_8(tmp4(19001), {}), , ];
+    const items1 = [closure_8(tmp4(18735), {}), closure_8(tmp4(19137), {}), closure_8(tmp4(19177), { placement: "channel-list" }), , ];
     let tmp10Result = isEligibleForQuests;
     if (isEligibleForQuests) {
-      tmp10Result = closure_8(tmp4(17664), {});
+      tmp10Result = closure_8(tmp4(17784), {});
     }
     const obj4 = { children: null };
-    items1[2] = tmp10Result;
-    items1[3] = closure_8(tmp(18588).BackgroundChatHost, {});
+    items1[3] = tmp10Result;
+    items1[4] = closure_8(tmp(18717).BackgroundChatHost, {});
     obj4.children = items1;
-    obj3.children = closure_9(tmp(17584).QuestDockExternalCoordinationContextProvider, obj4);
-    let tmp10Result2 = closure_8(tmp(5314).ThemeContextProvider, obj3);
+    obj3.children = closure_9(tmp(17702).QuestDockExternalCoordinationContextProvider, obj4);
+    let tmp10Result2 = closure_8(tmp(5377).ThemeContextProvider, obj3);
   } else {
     tmp10Result2 = null;
   }

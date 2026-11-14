@@ -1,9 +1,9 @@
-// === Module 5472: AuthInviteStore ===
+// === Module 5535: AuthInviteStore ===
 
-// Module 5472 (AuthInviteStore)
+// Module 5535 (AuthInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5106 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
 
 require = fn;
 let closure_2 = {};

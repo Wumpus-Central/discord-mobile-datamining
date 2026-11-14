@@ -1,18 +1,18 @@
-// === Module 18950: useGuildsBarBadges ===
+// === Module 19104: useGuildsBarBadges ===
 
-// Module 18950 (useGuildsBarBadges)
+// Module 19104 (useGuildsBarBadges)
 import native from "native" /* 1187 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5288 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 18922 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 18952 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 5351 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 19076 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 19106 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10944 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5287 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import UserStore from "UserStore" /* 1385 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11013 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5350 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ let closure_3 = ["guildActivityIndicatorSource"];
 const Constants = fn(1072);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_15 = createStyles.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");

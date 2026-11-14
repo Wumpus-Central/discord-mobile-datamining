@@ -1,9 +1,9 @@
-// === Module 8092: useGuildProfile ===
+// === Module 8157: useGuildProfile ===
 
-// Module 8092 (useGuildProfile)
+// Module 8157 (useGuildProfile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildProfileStore from "GuildProfileStore" /* 8091 */;
+import GuildProfileStore from "GuildProfileStore" /* 8156 */;
 
 const require = globalThis.__r;
 
@@ -54,7 +54,7 @@ export function useGuildProfile(guildId) {
             closure_129_0 = flag;
             c3 = 1;
             c4 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "Path", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {

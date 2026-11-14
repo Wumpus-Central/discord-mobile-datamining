@@ -1,8 +1,8 @@
-// === Module 15125: ZoomLayoutGesture ===
+// === Module 15239: ZoomLayoutGesture ===
 
-// Module 15125 (ZoomLayoutGesture)
-import _modDef1652 from "module_1652" /* 1652 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
+// Module 15239 (ZoomLayoutGesture)
+import _modDef1655 from "module_1655" /* 1655 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -22,7 +22,7 @@ let items1 = [tmp3];
 resistTranslation.__closure = items1;
 resistTranslation.__workletHash = 234320700197;
 resistTranslation.__initData = tmp2;
-let items2 = [{ code: "(function releaseTranslation_ZoomLayoutGestureNativeTsx3(translation,bound,velocity){let[MAX_PAN_VELOCITY,accessibilityPreferencesSharedValue,withSpring,SPRING_CONFIG,MAX_FLING_OVERSHOOT,withDecay,PAN_DECELERATION,_worklet_10161841114284_init_data]=this.__closure;const position=translation.get();const clamped=Math.max(-bound,Math.min(bound,position));const releaseVelocity=Math.max(-MAX_PAN_VELOCITY,Math.min(MAX_PAN_VELOCITY,velocity));if(accessibilityPreferencesSharedValue.get().reduceMotion){translation.set(clamped);}else if(position!==clamped||bound===0){translation.set(withSpring(clamped,SPRING_CONFIG));}else{const overshoot=Math.min(MAX_FLING_OVERSHOOT,Math.abs(releaseVelocity)*0.02);translation.set(withDecay({velocity:releaseVelocity,deceleration:PAN_DECELERATION,clamp:[-bound-overshoot,bound+overshoot]},function releaseTranslation_ZoomLayoutGestureNativeTsx3([_worklet_10161841114284_init_data,bound,translation,withSpring,SPRING_CONFIG]){const ZoomLayoutGestureNativeTsx2=function(finished){if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));};ZoomLayoutGestureNativeTsx2.__closure=[bound,translation,withSpring,SPRING_CONFIG];ZoomLayoutGestureNativeTsx2.__workletHash=10161841114284;ZoomLayoutGestureNativeTsx2.__initData=_worklet_10161841114284_init_data;return ZoomLayoutGestureNativeTsx2;}([_worklet_10161841114284_init_data,bound,translation,withSpring,SPRING_CONFIG])));}})" }, 4000, fn(5487).accessibilityPreferencesSharedValue, fn(5876).withSpring, deceleration, 48, fn(1652).withDecay, 0.998, { code: "(function ZoomLayoutGestureNativeTsx2(finished){let[bound,translation,withSpring,SPRING_CONFIG]=this.__closure;if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));})" }];
+let items2 = [{ code: "(function releaseTranslation_ZoomLayoutGestureNativeTsx3(translation,bound,velocity){let[MAX_PAN_VELOCITY,accessibilityPreferencesSharedValue,withSpring,SPRING_CONFIG,MAX_FLING_OVERSHOOT,withDecay,PAN_DECELERATION,_worklet_10161841114284_init_data]=this.__closure;const position=translation.get();const clamped=Math.max(-bound,Math.min(bound,position));const releaseVelocity=Math.max(-MAX_PAN_VELOCITY,Math.min(MAX_PAN_VELOCITY,velocity));if(accessibilityPreferencesSharedValue.get().reduceMotion){translation.set(clamped);}else if(position!==clamped||bound===0){translation.set(withSpring(clamped,SPRING_CONFIG));}else{const overshoot=Math.min(MAX_FLING_OVERSHOOT,Math.abs(releaseVelocity)*0.02);translation.set(withDecay({velocity:releaseVelocity,deceleration:PAN_DECELERATION,clamp:[-bound-overshoot,bound+overshoot]},function releaseTranslation_ZoomLayoutGestureNativeTsx3([_worklet_10161841114284_init_data,bound,translation,withSpring,SPRING_CONFIG]){const ZoomLayoutGestureNativeTsx2=function(finished){if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));};ZoomLayoutGestureNativeTsx2.__closure=[bound,translation,withSpring,SPRING_CONFIG];ZoomLayoutGestureNativeTsx2.__workletHash=10161841114284;ZoomLayoutGestureNativeTsx2.__initData=_worklet_10161841114284_init_data;return ZoomLayoutGestureNativeTsx2;}([_worklet_10161841114284_init_data,bound,translation,withSpring,SPRING_CONFIG])));}})" }, 4000, fn(5550).accessibilityPreferencesSharedValue, fn(5939).withSpring, deceleration, 48, fn(1655).withDecay, 0.998, { code: "(function ZoomLayoutGestureNativeTsx2(finished){let[bound,translation,withSpring,SPRING_CONFIG]=this.__closure;if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));})" }];
 let closure_130_0;
 let closure_130_1;
 let closure_130_2;
@@ -89,7 +89,7 @@ let items3 = [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10, tmp11, tmp12];
 releaseTranslation.__closure = items3;
 releaseTranslation.__workletHash = 13668627211373;
 releaseTranslation.__initData = tmp4;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_9 = createStyles.createStyles({ container: { flex: 1, overflow: "hidden" }, content: { flex: 1 } });
 let closure_10 = { code: "(function ZoomLayoutGestureNativeTsx4(){let[cancelAnimation,scale,translateX,translateY]=this.__closure;cancelAnimation(scale);cancelAnimation(translateX);cancelAnimation(translateY);})" };
 let closure_11 = { code: "(function ZoomLayoutGestureNativeTsx5(zoom){let[contentWidth,containerWidth,contentHeight,containerHeight]=this.__closure;return{x:Math.max(0,(contentWidth*zoom-containerWidth.get())/2),y:Math.max(0,(contentHeight*zoom-containerHeight.get())/2)};})" };
@@ -141,26 +141,26 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
   let memo;
   let memo1;
   const tmp = sharedValue3();
-  const sharedValue = require("module_1652").useSharedValue(0);
-  let obj = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(0);
-  let obj2 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(0);
-  let obj3 = require("module_1652");
-  sharedValue3 = require("module_1652").useSharedValue(0);
-  const obj4 = require("module_1652");
-  const sharedValue4 = require("module_1652").useSharedValue({ x: 0, y: 0 });
-  const obj5 = require("module_1652");
-  const sharedValue5 = require("module_1652").useSharedValue(false);
-  const obj6 = require("module_1652");
-  const sharedValue6 = require("module_1652").useSharedValue(false);
-  const obj7 = require("module_1652");
-  const sharedValue7 = require("module_1652").useSharedValue(false);
-  const obj8 = require("module_1652");
-  const sharedValue8 = require("module_1652").useSharedValue(false);
-  const obj9 = require("module_1652");
-  const sharedValue9 = require("module_1652").useSharedValue({ scale: 1, x: 0, y: 0, focalX: 0, focalY: 0, gestureScale: 1, pointers: 0 });
-  items = [sharedValue4, require("module_1652").cancelAnimation, zoomScale, sharedValue2, sharedValue3];
+  const sharedValue = require("module_1655").useSharedValue(0);
+  let obj = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(0);
+  let obj2 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(0);
+  let obj3 = require("module_1655");
+  sharedValue3 = require("module_1655").useSharedValue(0);
+  const obj4 = require("module_1655");
+  const sharedValue4 = require("module_1655").useSharedValue({ x: 0, y: 0 });
+  const obj5 = require("module_1655");
+  const sharedValue5 = require("module_1655").useSharedValue(false);
+  const obj6 = require("module_1655");
+  const sharedValue6 = require("module_1655").useSharedValue(false);
+  const obj7 = require("module_1655");
+  const sharedValue7 = require("module_1655").useSharedValue(false);
+  const obj8 = require("module_1655");
+  const sharedValue8 = require("module_1655").useSharedValue(false);
+  const obj9 = require("module_1655");
+  const sharedValue9 = require("module_1655").useSharedValue({ scale: 1, x: 0, y: 0, focalX: 0, focalY: 0, gestureScale: 1, pointers: 0 });
+  items = [sharedValue4, require("module_1655").cancelAnimation, zoomScale, sharedValue2, sharedValue3];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -604,7 +604,7 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
     }
     return SimultaneousResult;
   }, items14);
-  const obj10 = require("module_1652");
+  const obj10 = require("module_1655");
   const items15 = [closure_23, sharedValue2, sharedValue3, zoomScale];
   _require = undefined;
   importDefault = undefined;
@@ -629,7 +629,7 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
   ZoomLayoutGestureNativeTsx17.__workletHash = 12652072835214;
   ZoomLayoutGestureNativeTsx17.__initData = tmp40;
   const items17 = [sharedValue, sharedValue1, onLayout];
-  const animatedStyle = require("module_1652").useAnimatedStyle(ZoomLayoutGestureNativeTsx17);
+  const animatedStyle = require("module_1655").useAnimatedStyle(ZoomLayoutGestureNativeTsx17);
   const callback4 = obj11.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
     const result1 = sharedValue1.set(nativeEvent.nativeEvent.layout.height);
@@ -784,7 +784,7 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
   const obj14 = { style: null, children };
   const items19 = [tmp.content, animatedStyle];
   obj14.style = items19;
-  obj13.children = jsx(_modDef1652.View, { style: null, children });
+  obj13.children = jsx(_modDef1655.View, { style: null, children });
   obj12.children = <c4 collapsable={false} style={null} onLayout={callback4}>{null}</c4>;
   return jsx(require("LegacyBaseButton").GestureDetector, { gesture: memo2, children: null });
 });

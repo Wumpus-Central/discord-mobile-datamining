@@ -1,11 +1,11 @@
-// === Module 17998: SettingsEmailNotificationsScreen ===
+// === Module 18118: SettingsEmailNotificationsScreen ===
 
-// Module 17998 (SettingsEmailNotificationsScreen)
+// Module 18118 (SettingsEmailNotificationsScreen)
 import util from "util" /* 1113 */;
-import SettingBuilders from "SettingBuilders" /* 12311 */;
-import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 17999 */;
+import SettingBuilders from "SettingBuilders" /* 12406 */;
+import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 18119 */;
 import noop from "module_19" /* 19 */;
-import EmailSettingsStore from "EmailSettingsStore" /* 16120 */;
+import EmailSettingsStore from "EmailSettingsStore" /* 16241 */;
 
 require = fn;
 function initializeEmailSettings() {
@@ -13,7 +13,7 @@ function initializeEmailSettings() {
     const emailSettings = EmailSettingsActionCreators.fetchEmailSettings();
   }
 }
-const MobileUserSettings = fn(9135).MobileUserSettings;
+const MobileUserSettings = fn(9202).MobileUserSettings;
 const jsx = fn(21).jsx;
 let obj = { categories: null, unsubscribeFromAllMarketing: MobileUserSettings.EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING };
 let items = [, , , , ];
@@ -27,9 +27,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/notifications/native/SettingsEmailNotificationsScreen.tsx");
 
 export default noop.memo(function SettingsEmailNotificationsScreen() {
-  isDeclarativeSettingsUIAvailable = isDeclarativeSettingsUIAvailable(16779).useIsDeclarativeSettingsUIAvailable("SettingsEmailNotificationsScreen");
-  obj = isDeclarativeSettingsUIAvailable(16779);
-  enabled = enabled(18002).useConfig({ location: "SettingsEmailNotificationsScreen" }).enabled;
+  isDeclarativeSettingsUIAvailable = isDeclarativeSettingsUIAvailable(16902).useIsDeclarativeSettingsUIAvailable("SettingsEmailNotificationsScreen");
+  obj = isDeclarativeSettingsUIAvailable(16902);
+  enabled = enabled(18122).useConfig({ location: "SettingsEmailNotificationsScreen" }).enabled;
   items = [isDeclarativeSettingsUIAvailable, enabled];
   const node = noop.useMemo(() => {
     const tmp = isDeclarativeSettingsUIAvailable ? obj2 : obj;
@@ -50,6 +50,6 @@ export default noop.memo(function SettingsEmailNotificationsScreen() {
     obj3.sections = items;
     return obj.createList(obj3);
   }, items);
-  enabled(5836)(initializeEmailSettings);
-  return jsx(enabled(17090), { node });
+  enabled(5899)(initializeEmailSettings);
+  return jsx(enabled(17213), { node });
 });

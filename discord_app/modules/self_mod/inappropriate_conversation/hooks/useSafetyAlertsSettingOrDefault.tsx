@@ -1,10 +1,10 @@
-// === Module 11966: useSafetyAlertsSettingOrDefault ===
+// === Module 12033: useSafetyAlertsSettingOrDefault ===
 
-// Module 11966 (useSafetyAlertsSettingOrDefault)
+// Module 12033 (useSafetyAlertsSettingOrDefault)
 import initialize from "initialize" /* 504 */;
-import useUserIsTeen from "useUserIsTeen" /* 11962 */;
+import useUserIsTeen from "useUserIsTeen" /* 12029 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const size = fn(2);

@@ -1,18 +1,18 @@
-// === Module 17667: QuestDockContentCollapsed ===
+// === Module 17787: QuestDockContentCollapsed ===
 
-// Module 17667 (QuestDockContentCollapsed)
-import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 17581 */;
+// Module 17787 (QuestDockContentCollapsed)
+import _mod1655 from "module_1655" /* 1655 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 17699 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
-const QuestDockMode = fn(5275).QuestDockMode;
-let closure_5 = fn(17580).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(5338).QuestDockMode;
+let closure_5 = fn(17698).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { questDockContentCollapsed: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -59,7 +59,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   QuestDockContentCollapsedTsx1.__closure = items1;
   QuestDockContentCollapsedTsx1.__workletHash = 8739411300627;
   QuestDockContentCollapsedTsx1.__initData = tmp6;
-  const animatedStyle = _mod1652.useAnimatedStyle(QuestDockContentCollapsedTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(QuestDockContentCollapsedTsx1);
   const items2 = [closure_9, activeQuestDockMode, QuestDockMode, tmp];
   c0 = undefined;
   c1 = undefined;
@@ -82,9 +82,9 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   QuestDockContentCollapsedTsx2.__closure = items3;
   QuestDockContentCollapsedTsx2.__workletHash = 6789144201508;
   QuestDockContentCollapsedTsx2.__initData = tmp13;
-  const animatedProps = _mod1652.useAnimatedProps(QuestDockContentCollapsedTsx2);
+  const animatedProps = _mod1655.useAnimatedProps(QuestDockContentCollapsedTsx2);
   const obj2 = { style: null, animatedProps, children: children.children };
   const items4 = [tmp2.questDockContentCollapsed, animatedStyle];
   obj2.style = items4;
-  return jsx(_modDef1652.View, { style: null, animatedProps, children: children.children });
+  return jsx(_modDef1655.View, { style: null, animatedProps, children: children.children });
 });

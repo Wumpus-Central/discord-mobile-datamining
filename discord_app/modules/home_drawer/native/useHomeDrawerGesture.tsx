@@ -1,31 +1,31 @@
-// === Module 18613: useHomeDrawerGesture ===
+// === Module 18742: useHomeDrawerGesture ===
 
-// Module 18613 (useHomeDrawerGesture)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5429 */;
-import useChatLayoutDefault from "useChatLayout" /* 5432 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import HapticUtils from "HapticUtils" /* 5491 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 12308 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18608 */;
+// Module 18742 (useHomeDrawerGesture)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5492 */;
+import useChatLayoutDefault from "useChatLayout" /* 5495 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import HapticUtils from "HapticUtils" /* 5554 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 12403 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18737 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 18607 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 18614 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 18736 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 18743 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let computeMaxX = fn(18607).computeMaxX;
+let computeMaxX = fn(18736).computeMaxX;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const GestureConstants = fn(11943);
+const GestureConstants = fn(12010);
 ({ FLING_MIN_DISTANCE: closure_9, FLING_MIN_VELOCITY: closure_10, PULL_GESTURE_ACTIVATION_DISTANCE: closure_11, PULL_GESTURE_RESISTANCE } = GestureConstants);
 ({ PULL_GESTURE_SNAP_TIMING: map1, PULL_GESTURE_UNSNAP_TIMING: closure_14 } = GestureConstants);
-const LaunchPadTypes = fn(12307).LaunchPadTypes;
+const LaunchPadTypes = fn(12402).LaunchPadTypes;
 let c16 = 144;
 let result = 144 * (1 - 1 / PULL_GESTURE_RESISTANCE);
 let closure_18 = 48 + result;
@@ -51,17 +51,17 @@ let closure_37 = { code: "(function useHomeDrawerGestureTsx18(event){let[gesture
 let closure_38 = { code: "(function useHomeDrawerGestureTsx19(event){let[activationOffsetX,dragOffsetX,FLING_MIN_VELOCITY,FLING_MIN_DISTANCE,snappedByDrag,fireThrow,INITIAL_OPEN_WIDTH,scheduleOnRN,triggerHapticFeedback,HapticFeedbackTypes,shouldOpenFromPosition,settleDrawer,didSettle,gestureState,trackServerDrawerInteract,ServerDrawerInteractAction]=this.__closure;const flingDistanceX=activationOffsetX.get()+dragOffsetX.get();const passesOpeningVelocity=event.velocityX>FLING_MIN_VELOCITY;const passesMinDistance=flingDistanceX>FLING_MIN_DISTANCE;const isBlockedByDragSnap=snappedByDrag.get();const isOpeningFling=passesOpeningVelocity&&passesMinDistance;const shouldAttemptThrow=isOpeningFling&&!isBlockedByDragSnap;if(shouldAttemptThrow){fireThrow();}let shouldOpen;if(isOpeningFling){shouldOpen=true;if(flingDistanceX<INITIAL_OPEN_WIDTH){scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.IMPACT_MEDIUM);}}else if(event.velocityX<-FLING_MIN_VELOCITY&&flingDistanceX<-FLING_MIN_DISTANCE){shouldOpen=false;scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.SOFT);}else{shouldOpen=shouldOpenFromPosition();}settleDrawer(shouldOpen);didSettle.set(true);const wasOpenAtStart=gestureState.get().panelX>0;if(shouldOpen&&!wasOpenAtStart){scheduleOnRN(trackServerDrawerInteract,ServerDrawerInteractAction.OPEN);}else if(!wasOpenAtStart){scheduleOnRN(trackServerDrawerInteract,ServerDrawerInteractAction.PEEK);}})" };
 let closure_39 = { code: "(function useHomeDrawerGestureTsx20(){let[gestureState,didSettle,settleDrawer,shouldOpenFromPosition,isPanelTouchActive,scheduleOnRN,noteInteraction,dragOffsetX,activationOffsetX]=this.__closure;if(gestureState.get().active&&!didSettle.get()){settleDrawer(shouldOpenFromPosition());}isPanelTouchActive.set(false);scheduleOnRN(noteInteraction);gestureState.set({active:false,initialX:0,initialY:0,panelX:0});dragOffsetX.set(0);activationOffsetX.set(0);})" };
 let obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, panelTranslateX: null, guildsBarDrawerStyle: null, guildsBarPullX: null };
-let Gesture = fn(5535).Gesture;
+let Gesture = fn(5598).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7782);
+let ReanimatedHelperTypes = fn(7848);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7782);
+ReanimatedHelperTypes = fn(7848);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7782);
+ReanimatedHelperTypes = fn(7848);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(7782);
+ReanimatedHelperTypes = fn(7848);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 const size = fn(2);
@@ -85,22 +85,22 @@ export function useHomeGesture() {
   const setPanelX = tmp4.setPanelX;
   const isPanelTouchActive = tmp4.isPanelTouchActive;
   const noteInteraction = tmp4.noteInteraction;
-  const sharedValue = require("module_1652").useSharedValue(0);
-  let obj = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(0);
-  const obj2 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(false);
-  const obj3 = require("module_1652");
-  const sharedValue3 = require("module_1652").useSharedValue(false);
-  const obj4 = require("module_1652");
-  const sharedValue4 = require("module_1652").useSharedValue(false);
-  const obj5 = require("module_1652");
-  const sharedValue5 = require("module_1652").useSharedValue(0);
-  const obj6 = require("module_1652");
-  const sharedValue6 = require("module_1652").useSharedValue(false);
-  const obj7 = require("module_1652");
-  const sharedValue7 = require("module_1652").useSharedValue(false);
-  const obj8 = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(0);
+  let obj = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(0);
+  const obj2 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(false);
+  const obj3 = require("module_1655");
+  const sharedValue3 = require("module_1655").useSharedValue(false);
+  const obj4 = require("module_1655");
+  const sharedValue4 = require("module_1655").useSharedValue(false);
+  const obj5 = require("module_1655");
+  const sharedValue5 = require("module_1655").useSharedValue(0);
+  const obj6 = require("module_1655");
+  const sharedValue6 = require("module_1655").useSharedValue(false);
+  const obj7 = require("module_1655");
+  const sharedValue7 = require("module_1655").useSharedValue(false);
+  const obj8 = require("module_1655");
   const navigation = require("Link").useNavigation();
   const callback = noop.useCallback((action) => {
     panelX(_undefined2[10]).track(_undefined5.SERVER_DRAWER_INTERACT, { action });
@@ -120,8 +120,8 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx1.__closure = items1;
   useHomeDrawerGestureTsx1.__workletHash = 3177392550602;
   useHomeDrawerGestureTsx1.__initData = tmp14;
-  derivedValue = require("module_1652").useDerivedValue(useHomeDrawerGestureTsx1);
-  const obj12 = require("module_1652");
+  derivedValue = require("module_1655").useDerivedValue(useHomeDrawerGestureTsx1);
+  const obj12 = require("module_1655");
   let items2 = [closure_21, derivedValue];
   _require = undefined;
   [tmp19, tmp20] = items2;
@@ -132,7 +132,7 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx2.__closure = items3;
   useHomeDrawerGestureTsx2.__workletHash = 2182322128830;
   useHomeDrawerGestureTsx2.__initData = tmp19;
-  let items4 = [closure_22, gestureState, sharedValue3, snapX, require("timing/timing").withTiming, sharedValue7, sharedValue3, require("module_1705").scheduleOnRN, require("HapticUtils").triggerHapticFeedback, require("HapticUtils").HapticFeedbackTypes, sharedValue5, sharedValue4, sharedValue7, sharedValue6];
+  let items4 = [closure_22, gestureState, sharedValue3, snapX, require("timing/timing").withTiming, sharedValue7, sharedValue3, require("module_1708").scheduleOnRN, require("HapticUtils").triggerHapticFeedback, require("HapticUtils").HapticFeedbackTypes, sharedValue5, sharedValue4, sharedValue7, sharedValue6];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -171,7 +171,7 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx3.__closure = items5;
   useHomeDrawerGestureTsx3.__workletHash = 16083884898345;
   useHomeDrawerGestureTsx3.__initData = tmp22;
-  const animatedReaction = require("module_1652").useAnimatedReaction(useHomeDrawerGestureTsx2, useHomeDrawerGestureTsx3);
+  const animatedReaction = require("module_1655").useAnimatedReaction(useHomeDrawerGestureTsx2, useHomeDrawerGestureTsx3);
   const tmp37 = useWindowDimensionsDefault();
   closure_21 = tmp37;
   const tmp38 = useSafeAreaInsetsDefault();
@@ -185,14 +185,14 @@ export function useHomeGesture() {
   }
   const tmp21 = sharedValue7;
   tmp40 = tmp39 === sharedValue5.GESTURE_FULL || tmp39 === sharedValue5.GESTURE_EDGE;
-  const tmpResult = require("module_1652");
+  const tmpResult = require("module_1655");
   let isFocused = enableHome;
   if (enableHome) {
     isFocused = tmpResult11.useIsFocused();
   }
   tmpResult11 = require("Link");
-  const sharedValue8 = require("module_1652").useSharedValue(0);
-  const tmpResult12 = require("module_1652");
+  const sharedValue8 = require("module_1655").useSharedValue(0);
+  const tmpResult12 = require("module_1655");
   let enablePeekHint = enableHome;
   if (enableHome) {
     enablePeekHint = config.enablePeekHint;
@@ -329,8 +329,8 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx4.__closure = items11;
   useHomeDrawerGestureTsx4.__workletHash = 13135043941592;
   useHomeDrawerGestureTsx4.__initData = tmp54;
-  const derivedValue1 = require("module_1652").useDerivedValue(useHomeDrawerGestureTsx4);
-  const tmpResult15 = require("module_1652");
+  const derivedValue1 = require("module_1655").useDerivedValue(useHomeDrawerGestureTsx4);
+  const tmpResult15 = require("module_1655");
   let items12 = [isFocused, derivedValue1];
   _require = undefined;
   [tmp59, tmp60] = items12;
@@ -344,8 +344,8 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx5.__closure = items13;
   useHomeDrawerGestureTsx5.__workletHash = 3831081045453;
   useHomeDrawerGestureTsx5.__initData = tmp59;
-  const animatedStyle = require("module_1652").useAnimatedStyle(useHomeDrawerGestureTsx5);
-  const tmpResult16 = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(useHomeDrawerGestureTsx5);
+  const tmpResult16 = require("module_1655");
   let items14 = [drawerOpen, isOpenTarget, isPanelTouchActive, derivedValue1];
   [tmp62, tmp63, tmp64, tmp65] = items14;
   function useHomeDrawerGestureTsx6() {
@@ -380,8 +380,8 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx7.__closure = items17;
   useHomeDrawerGestureTsx7.__workletHash = 818068477594;
   useHomeDrawerGestureTsx7.__initData = tmp66;
-  const animatedReaction1 = require("module_1652").useAnimatedReaction(useHomeDrawerGestureTsx6, useHomeDrawerGestureTsx7);
-  const tmpResult17 = require("module_1652");
+  const animatedReaction1 = require("module_1655").useAnimatedReaction(useHomeDrawerGestureTsx6, useHomeDrawerGestureTsx7);
+  const tmpResult17 = require("module_1655");
   let items18 = [ref, derivedValue1, sharedValue4, navigation, 48, tmp21];
   _require = undefined;
   [tmp69, tmp70, tmp71, tmp72, tmp73, tmp74] = items18;
@@ -407,8 +407,8 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx8.__closure = items19;
   useHomeDrawerGestureTsx8.__workletHash = 4744333108989;
   useHomeDrawerGestureTsx8.__initData = tmp69;
-  const derivedValue2 = require("module_1652").useDerivedValue(useHomeDrawerGestureTsx8);
-  const tmpResult18 = require("module_1652");
+  const derivedValue2 = require("module_1655").useDerivedValue(useHomeDrawerGestureTsx8);
+  const tmpResult18 = require("module_1655");
   const items20 = [derivedValue1, require("reanimated/AccessibilityPreferencesSharedValue").accessibilityPreferencesSharedValue, derivedValue2, 12, sharedValue5, 16];
   _require = undefined;
   importDefault = undefined;
@@ -429,8 +429,8 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx9.__closure = items21;
   useHomeDrawerGestureTsx9.__workletHash = 7013202740043;
   useHomeDrawerGestureTsx9.__initData = tmp76;
-  const derivedValue3 = require("module_1652").useDerivedValue(useHomeDrawerGestureTsx9);
-  const tmpResult19 = require("module_1652");
+  const derivedValue3 = require("module_1655").useDerivedValue(useHomeDrawerGestureTsx9);
+  const tmpResult19 = require("module_1655");
   const items22 = [animatedStyle, derivedValue3];
   _require = undefined;
   [tmp83, tmp84] = items22;
@@ -444,7 +444,7 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx10.__closure = items23;
   useHomeDrawerGestureTsx10.__workletHash = 3575476532345;
   useHomeDrawerGestureTsx10.__initData = tmp83;
-  const guildsBarDrawerStyle = require("module_1652").useAnimatedStyle(useHomeDrawerGestureTsx10);
+  const guildsBarDrawerStyle = require("module_1655").useAnimatedStyle(useHomeDrawerGestureTsx10);
   const items24 = [gestureState, panelX, snapX, isOpenTarget, sharedValue2, sharedValue3, derivedValue, sharedValue4, derivedValue2, sharedValue5, sharedValue6, sharedValue7, sharedValue, sharedValue1, isFocused, maxX, isPanelTouchActive, noteInteraction, callback];
   const memo = obj11.useMemo(() => {
     items = [closure_30, c1, derivedValue, result];
@@ -461,7 +461,7 @@ export function useHomeGesture() {
     visualPanelX.__closure = items1;
     visualPanelX.__workletHash = 2869044857423;
     visualPanelX.__initData = tmp3;
-    const items2 = [closure_31, c3, c1, timing_timing.withTiming, c6, HomeDrawerAnimations.HOME_DRAWER_SETTLE_TIMING, c2, _mod1705.scheduleOnRN, NavigationRouteUtils.setHomeDrawerState];
+    const items2 = [closure_31, c3, c1, timing_timing.withTiming, c6, HomeDrawerAnimations.HOME_DRAWER_SETTLE_TIMING, c2, _mod1708.scheduleOnRN, NavigationRouteUtils.setHomeDrawerState];
     [tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20] = items2;
     function settleDrawer(arg0) {
       result = _undefined.set(arg0);
@@ -477,7 +477,7 @@ export function useHomeGesture() {
     settleDrawer.__closure = items3;
     settleDrawer.__workletHash = 14466862505699;
     settleDrawer.__initData = tmp12;
-    const items4 = [closure_32, sharedValue7, sharedValue4, sharedValue5, _mod1652.clamp, derivedValue2, 12, 16, _mod1652.withSequence, timing_timing.withTiming, HomeDrawerAnimations.HOME_DRAWER_FLING_THROW_TIMING, HomeDrawerAnimations.HOME_DRAWER_FLING_RETURN_TIMING];
+    const items4 = [closure_32, sharedValue7, sharedValue4, sharedValue5, _mod1655.clamp, derivedValue2, 12, 16, _mod1655.withSequence, timing_timing.withTiming, HomeDrawerAnimations.HOME_DRAWER_FLING_THROW_TIMING, HomeDrawerAnimations.HOME_DRAWER_FLING_RETURN_TIMING];
     c1 = undefined;
     c2 = undefined;
     c4 = undefined;
@@ -651,7 +651,7 @@ export function useHomeGesture() {
     useHomeDrawerGestureTsx18.__workletHash = 17074708416812;
     useHomeDrawerGestureTsx18.__initData = tmp75;
     const onTouchesMoveResult = result.maxPointers(1).onBegin(useHomeDrawerGestureTsx16).onTouchesMove(useHomeDrawerGestureTsx17);
-    const items16 = [closure_38, c11, c10, refs, React6, sharedValue6, fireThrow, c16, _mod1705.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, shouldOpenFromPosition, settleDrawer, c12, c4, callback, closure_19];
+    const items16 = [closure_38, c11, c10, refs, React6, sharedValue6, fireThrow, c16, _mod1708.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, shouldOpenFromPosition, settleDrawer, c12, c4, callback, closure_19];
     c4 = undefined;
     c9 = undefined;
     c10 = undefined;
@@ -708,7 +708,7 @@ export function useHomeGesture() {
     useHomeDrawerGestureTsx19.__workletHash = 14013089644907;
     useHomeDrawerGestureTsx19.__initData = tmp87;
     const onChangeResult = result.maxPointers(1).onBegin(useHomeDrawerGestureTsx16).onTouchesMove(useHomeDrawerGestureTsx17).onChange(useHomeDrawerGestureTsx18);
-    const items18 = [closure_39, c4, c12, settleDrawer, shouldOpenFromPosition, tmp53, _mod1705.scheduleOnRN, c9, c10, c11];
+    const items18 = [closure_39, c4, c12, settleDrawer, shouldOpenFromPosition, tmp53, _mod1708.scheduleOnRN, c9, c10, c11];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -748,7 +748,7 @@ export function useHomeGesture() {
     return obj;
   }, items25);
   const items26 = [memo1, enableHome, landOnHome];
-  const tmpResult20 = require("module_1652");
+  const tmpResult20 = require("module_1655");
   return {
     gesture: memo,
     panelStyles: animatedStyle,

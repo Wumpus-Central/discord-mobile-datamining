@@ -1,7 +1,7 @@
-// === Module 14468: CustomTypingIndicatorAnalytics ===
+// === Module 14580: CustomTypingIndicatorAnalytics ===
 
-// Module 14468 (CustomTypingIndicatorAnalytics)
-import user from "user" /* 1398 */;
+// Module 14580 (CustomTypingIndicatorAnalytics)
+import user from "user" /* 1401 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorAnalytics.tsx");

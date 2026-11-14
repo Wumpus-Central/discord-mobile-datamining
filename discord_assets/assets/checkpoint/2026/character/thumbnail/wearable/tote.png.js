@@ -1,6 +1,6 @@
-// === Module 6628: ? ===
+// === Module 6691: ? ===
 
-// Module 6628
+// Module 6691
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/wearable/tote.png.js");

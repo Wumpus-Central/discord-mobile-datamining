@@ -1,12 +1,12 @@
-// === Module 11756: CollectiblesWishlistItemCard ===
+// === Module 11822: CollectiblesWishlistItemCard ===
 
-// Module 11756 (CollectiblesWishlistItemCard)
-import SKUPreview from "SKUPreview" /* 9393 */;
+// Module 11822 (CollectiblesWishlistItemCard)
+import SKUPreview from "SKUPreview" /* 9462 */;
 import noop from "module_19" /* 19 */;
-import SentGiftsStore from "SentGiftsStore" /* 11757 */;
+import SentGiftsStore from "SentGiftsStore" /* 11823 */;
 
 require = fn;
-let closure_4 = fn(8423).transformSKUToCollectiblesItem;
+let closure_4 = fn(8489).transformSKUToCollectiblesItem;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/CollectiblesWishlistItemCard.tsx");

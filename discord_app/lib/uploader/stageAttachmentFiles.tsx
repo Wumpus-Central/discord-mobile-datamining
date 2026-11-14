@@ -1,6 +1,6 @@
-// === Module 8960: stageAttachmentFiles ===
+// === Module 9027: stageAttachmentFiles ===
 
-// Module 8960 (stageAttachmentFiles)
+// Module 9027 (stageAttachmentFiles)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -54,7 +54,7 @@ let closure_4 = async function _stageAttachmentFiles() {
   }
   closure_131_1 = flag;
   closure_131_2 = closure_2;
-  return "flexDirection";
+  return "Path";
 };
 const AbortCodes = fn(1072).AbortCodes;
 const size = fn(2);

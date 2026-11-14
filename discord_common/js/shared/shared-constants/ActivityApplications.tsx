@@ -1,6 +1,6 @@
-// === Module 2145: ActivityApplications ===
+// === Module 2148: ActivityApplications ===
 
-// Module 2145 (ActivityApplications)
+// Module 2148 (ActivityApplications)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ActivityApplications.tsx");

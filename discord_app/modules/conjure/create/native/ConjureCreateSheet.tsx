@@ -1,11 +1,11 @@
-// === Module 13877: ConjureCreateSheet ===
+// === Module 13982: ConjureCreateSheet ===
 
-// Module 13877 (ConjureCreateSheet)
+// Module 13982 (ConjureCreateSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5489 */;
-import ConjureEffortPicker from "ConjureEffortPicker" /* 13149 */;
-import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 13869 */;
-import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 13883 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5552 */;
+import ConjureEffortPicker from "ConjureEffortPicker" /* 13258 */;
+import ConjureLandingModelChoices from "ConjureLandingModelChoices" /* 13974 */;
+import ConjureTemplateWizardSheet from "ConjureTemplateWizardSheet" /* 13988 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,11 +16,11 @@ const ConjureTemplateWizardSheetDefault = ConjureTemplateWizardSheet;
 
 require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(7301).sendUserMessage;
+const sendUserMessage = fn(7365).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjureCreateSheet = "ConjureCreateSheet";
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -410,14 +410,14 @@ export default function ConjureCreateSheet(guildId) {
               c5 = 1;
               c6 = 2;
               c7 = 1;
-              const obj5 = { value: _null(13203).pickConjureArchive(), done: false };
+              const obj5 = { value: _null(13311).pickConjureArchive(), done: false };
               return obj5;
             }
           }
         } else if (1 === tmp7) {
           c5 = 0;
           const intl2 = _null(1113).intl;
-          closure_132_8(intl2.string(onCreated(4079)["Q+l4Hv"]));
+          closure_132_8(intl2.string(onCreated(4131)["Q+l4Hv"]));
           c7 = 3;
           const obj6 = { value: undefined, done: true };
           return obj6;
@@ -435,20 +435,20 @@ export default function ConjureCreateSheet(guildId) {
               closure_131_0 = value;
               c5 = 0;
               if (null != closure_131_0) {
-                closure_131_1 = _null(13203).describeConjureArchiveRejection(closure_131_0);
+                closure_131_1 = _null(13311).describeConjureArchiveRejection(closure_131_0);
                 if (null == closure_131_1) {
                   closure_131_2 = closure_131_0;
-                  const tmp38 = _null(13880);
+                  const tmp38 = _null(13985);
                   dependencyMap = tmp38;
                   onCreated = tmp38.importedConjureInstallScope;
                   c6 = 3;
                   c7 = 1;
-                  const obj9 = { value: _null(13880).readConjureArchiveInstallScope(closure_131_2.bytes), done: false };
+                  const obj9 = { value: _null(13985).readConjureArchiveInstallScope(closure_131_2.bytes), done: false };
                   return obj9;
                 } else {
                   closure_132_8(closure_131_1);
                 }
-                const obj15 = _null(13203);
+                const obj15 = _null(13311);
               }
             }
           } else if (3 === tmp7) {
@@ -470,7 +470,7 @@ export default function ConjureCreateSheet(guildId) {
                 const obj10 = { key: "ConjureImportInstallScope", stackingBehavior: "stack", header: null, hasIcons: false, options: null };
                 const obj12 = { title: null };
                 let intl = _null(1113).intl;
-                obj12.title = intl.string(onCreated(4079).NyVn6T);
+                obj12.title = intl.string(onCreated(4131).NyVn6T);
                 obj10.header = obj12;
                 items = ["guild", "user"];
                 obj10.options = items.map((item) => {
@@ -488,8 +488,8 @@ export default function ConjureCreateSheet(guildId) {
                     }
                   };
                 });
-                const result = _null(7883).showSimpleActionSheet(obj10);
-                const obj3 = _null(7883);
+                const result = _null(7949).showSimpleActionSheet(obj10);
+                const obj3 = _null(7949);
               } else {
                 c6 = 4;
                 c7 = 1;

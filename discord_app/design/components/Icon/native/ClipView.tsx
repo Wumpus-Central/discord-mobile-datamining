@@ -1,10 +1,10 @@
-// === Module 9436: ClipView ===
+// === Module 9503: ClipView ===
 
-// Module 9436 (ClipView)
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 9437 */;
-import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 9439 */;
+// Module 9503 (ClipView)
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 9504 */;
+import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 9506 */;
 import noop from "module_19" /* 19 */;
-import module_1652 from "module_1652" /* 1652 */;
+import module_1655 from "module_1655" /* 1655 */;
 
 require = fn;
 function SolidCutout(arg0) {
@@ -45,7 +45,7 @@ let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.solidCutoutContainer = {};
 obj2.solidCutout = { position: "absolute" };
 const styles = StyleSheet.create(obj2);
-const ClipViewNativeComponent = module_1652.createAnimatedComponent(ClipViewNativeComponentDefault);
+const ClipViewNativeComponent = module_1655.createAnimatedComponent(ClipViewNativeComponentDefault);
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/Icon/native/ClipView.tsx");
 

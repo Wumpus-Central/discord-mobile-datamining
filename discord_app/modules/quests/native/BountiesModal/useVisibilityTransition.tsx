@@ -1,9 +1,9 @@
-// === Module 17431: useVisibilityTransition ===
+// === Module 17549: useVisibilityTransition ===
 
-// Module 17431 (useVisibilityTransition)
-import _mod1652 from "module_1652" /* 1652 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5485 */;
+// Module 17549 (useVisibilityTransition)
+import _mod1655 from "module_1655" /* 1655 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import timing_timing from "timing/timing" /* 5548 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,7 +32,7 @@ export function useVisibilityTransition(visible) {
   if (visible) {
     num = 1;
   }
-  items = [closure_5, timing_timing.withTiming, num, visible, entranceTiming, exitTiming, closure_4, _mod1705.scheduleOnRN, callback];
+  items = [closure_5, timing_timing.withTiming, num, visible, entranceTiming, exitTiming, closure_4, _mod1708.scheduleOnRN, callback];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -60,7 +60,7 @@ export function useVisibilityTransition(visible) {
   useVisibilityTransitionTsx2.__closure = items1;
   useVisibilityTransitionTsx2.__workletHash = 9776140762994;
   useVisibilityTransitionTsx2.__initData = tmp7;
-  const obj3 = { opacityStyle: _mod1652.useAnimatedStyle(useVisibilityTransitionTsx2), shouldRender: null };
+  const obj3 = { opacityStyle: _mod1655.useAnimatedStyle(useVisibilityTransitionTsx2), shouldRender: null };
   if (!visible) {
     visible = tmp[0];
   }

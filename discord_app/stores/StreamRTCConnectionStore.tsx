@@ -1,20 +1,20 @@
-// === Module 6739: StreamRTCConnectionStore ===
+// === Module 6802: StreamRTCConnectionStore ===
 
-// Module 6739 (StreamRTCConnectionStore)
+// Module 6802 (StreamRTCConnectionStore)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 6033 */;
-import StreamRTCConnection from "StreamRTCConnection" /* 6742 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6745 */;
-import canSpectateDefault from "canSpectate" /* 6797 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8402 */;
-import RunningGameStore from "RunningGameStore" /* 2137 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 6096 */;
+import StreamRTCConnection from "StreamRTCConnection" /* 6805 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6808 */;
+import canSpectateDefault from "canSpectate" /* 6860 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8468 */;
+import RunningGameStore from "RunningGameStore" /* 2140 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import PresenceStore from "PresenceStore" /* 6005 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
+import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+import PresenceStore from "PresenceStore" /* 6068 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 const StreamRTCConnectionDefault = StreamRTCConnection;
@@ -22,15 +22,15 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 require = fn;
 const Constants = fn(1072);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(6740).StreamTypes;
-let dependencyMap = {};
-dependencyMap = {};
+const StreamTypes = fn(6803).StreamTypes;
+const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
+const dependencyMap4 = {};
 let closure_15 = {};
 let closure_16 = {};
 let layout = StreamLayouts.PORTRAIT;
-const dependencyMap4 = {};
+const dependencyMap5 = {};
 const Store = initializeDefault.Store;
 class StreamRTCConnectionStore extends Store {
 }
@@ -45,13 +45,13 @@ prototype["getAllActiveStreamKeys"] = function getAllActiveStreamKeys() {
   return Object.keys(closure_18);
 };
 prototype["getRTCConnection"] = function getRTCConnection(arg0) {
-  return dependencyMap4[arg0];
+  return dependencyMap5[arg0];
 };
 prototype["getQuality"] = function getQuality(arg0) {
   if (canSpectateDefault(MediaEngineStore)) {
     if (null != arg0) {
       let quality;
-      if (dependencyMap4[arg0] != null) {
+      if (dependencyMap5[arg0] != null) {
         quality = tmp4.quality;
       }
       if (quality == null) {
@@ -68,7 +68,7 @@ prototype["getMediaSessionId"] = function getMediaSessionId(arg0) {
     return null;
   } else {
     let tmp2;
-    if (null != dependencyMap4[arg0]) {
+    if (null != dependencyMap5[arg0]) {
       let mediaSessionId = null;
       if (null != obj) {
         mediaSessionId = obj.getMediaSessionId();
@@ -83,7 +83,7 @@ prototype["getRtcConnectionId"] = function getRtcConnectionId(encodeStreamKeyRes
     return null;
   } else {
     let tmp2;
-    if (null != dependencyMap4[encodeStreamKeyResult]) {
+    if (null != dependencyMap5[encodeStreamKeyResult]) {
       let rTCConnectionId = null;
       if (null != obj) {
         rTCConnectionId = obj.getRTCConnectionId();
@@ -98,7 +98,7 @@ prototype["getVideoStats"] = function getVideoStats(arg0) {
     return null;
   } else {
     let videoStats = null;
-    if (null != dependencyMap4[arg0]) {
+    if (null != dependencyMap5[arg0]) {
       videoStats = obj.getVideoStats();
     }
     return videoStats;
@@ -109,7 +109,7 @@ prototype["getHostname"] = function getHostname(arg0) {
     return "";
   } else {
     let str2 = "";
-    if (null != dependencyMap4[arg0]) {
+    if (null != dependencyMap5[arg0]) {
       str2 = "";
       if (null != tmp2.hostname) {
         str2 = tmp2.hostname;
@@ -123,7 +123,7 @@ prototype["getRegion"] = function getRegion(arg0) {
     return null;
   } else {
     let region = null;
-    if (null != dependencyMap4[arg0]) {
+    if (null != dependencyMap5[arg0]) {
       region = obj.getRegion();
     }
     return region;
@@ -134,42 +134,42 @@ prototype["getMaxViewers"] = function getMaxViewers(arg0) {
     return null;
   } else {
     let maxViewers = null;
-    if (null != dependencyMap4[arg0]) {
+    if (null != dependencyMap5[arg0]) {
       maxViewers = obj.getMaxViewers();
     }
     return maxViewers;
   }
 };
 prototype["getStreamSourceId"] = function getStreamSourceId(arg0) {
-  return dependencyMap3[arg0];
+  return dependencyMap4[arg0];
 };
 prototype["getLastNonZeroRemoteVideoSinkWantsTime"] = function getLastNonZeroRemoteVideoSinkWantsTime(arg0) {
   return closure_16[arg0];
 };
 prototype["getUserIds"] = function getUserIds(arg0) {
   let userIds;
-  if (dependencyMap4[arg0] != null) {
+  if (dependencyMap5[arg0] != null) {
     userIds = obj.getUserIds();
   }
   return userIds;
 };
 prototype["isUserConnected"] = function isUserConnected(arg0, arg1) {
   let isUserConnected;
-  if (dependencyMap4[arg0] != null) {
+  if (dependencyMap5[arg0] != null) {
     isUserConnected = obj.getIsUserConnected(arg1);
   }
   return isUserConnected;
 };
 prototype["getSecureFramesState"] = function getSecureFramesState(arg0) {
   let secureFramesState;
-  if (dependencyMap4[arg0] != null) {
+  if (dependencyMap5[arg0] != null) {
     secureFramesState = obj.getSecureFramesState();
   }
   return secureFramesState;
 };
 prototype["getSecureFramesRosterMapEntry"] = function getSecureFramesRosterMapEntry(arg0, arg1) {
   let secureFramesRosterMap;
-  if (dependencyMap4[arg0] != null) {
+  if (dependencyMap5[arg0] != null) {
     secureFramesRosterMap = obj.getSecureFramesRosterMap();
   }
   value = undefined;
@@ -179,7 +179,7 @@ prototype["getSecureFramesRosterMapEntry"] = function getSecureFramesRosterMapEn
   return value;
 };
 prototype["getStreamPid"] = function getStreamPid(encodeStreamKeyResult) {
-  return dependencyMap2[encodeStreamKeyResult];
+  return dependencyMap3[encodeStreamKeyResult];
 };
 StreamRTCConnectionStore.displayName = "StreamRTCConnectionStore";
 if (MediaEngineStore.isSupported()) {
@@ -230,7 +230,7 @@ if (MediaEngineStore.isSupported()) {
         const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey({ streamType: GUILD, guildId, channelId, ownerId: userId });
         let tmp6 = context === BaseConnectionEvent.MediaEngineContextTypes.STREAM;
         if (tmp6) {
-          tmp6 = null != dependencyMap4[encodeStreamKeyResult];
+          tmp6 = null != dependencyMap5[encodeStreamKeyResult];
         }
         if (tmp6) {
           const _Object = Object;
@@ -259,7 +259,7 @@ if (MediaEngineStore.isSupported()) {
         const encodeStreamKeyResult = obj.encodeStreamKey({ streamType, guildId, channelId, ownerId: AuthenticationStore.getId() });
         closure_11[encodeStreamKeyResult] = { appContext, analyticsLocations };
         const obj2 = { streamType, guildId, channelId, ownerId: AuthenticationStore.getId() };
-        const item = applyDefault.forEach(dependencyMap4, (analyticsContext) => {
+        const item = applyDefault.forEach(dependencyMap5, (analyticsContext) => {
           analyticsContext = analyticsContext.analyticsContext;
           analyticsContext.setActionContext(appContext);
           const result = analyticsContext.setNativePickerStyleUsed(importDefault);
@@ -276,14 +276,14 @@ if (MediaEngineStore.isSupported()) {
           const gameForPID = RunningGameStore.getGameForPID(pid);
           if (null != gameForPID) {
             ({ name: obj3.name, id: obj3.id, exeName: obj3.exe, distributor: obj3.distributor, sku: obj3.sku, gameMetadata: obj3.gameMetadata } = gameForPID);
-            dependencyMap[encodeStreamKeyResult] = { name: null, id: null, exe: null, distributor: null, sku: null, gameMetadata: null };
+            dependencyMap2[encodeStreamKeyResult] = { name: null, id: null, exe: null, distributor: null, sku: null, gameMetadata: null };
             const obj5 = { name: null, id: null, exe: null, distributor: null, sku: null, gameMetadata: null };
           }
-          if (dependencyMap4[encodeStreamKeyResult] != null) {
+          if (dependencyMap5[encodeStreamKeyResult] != null) {
             let analyticsContext = tmp10.analyticsContext;
-            let result = analyticsContext.updateStreamApplication(dependencyMap[encodeStreamKeyResult]);
+            let result = analyticsContext.updateStreamApplication(dependencyMap2[encodeStreamKeyResult]);
           }
-        } else if (dependencyMap4[encodeStreamKeyResult] != null) {
+        } else if (dependencyMap5[encodeStreamKeyResult] != null) {
           const analyticsContext2 = tmp6.analyticsContext;
           const result1 = analyticsContext2.updateStreamApplication(null);
         }
@@ -296,7 +296,7 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
         appContext = appContext.appContext;
         const streamKey = appContext.streamKey;
-        closure_11[streamKey] = { appContext, analyticsLocations: "a" };
+        closure_11[streamKey] = { appContext, analyticsLocations: "y" };
         const item = applyDefault.forEach(closure_18, (analyticsContext) => {
           analyticsContext = analyticsContext.analyticsContext;
           analyticsContext.setActionContext(appContext);
@@ -308,29 +308,41 @@ if (MediaEngineStore.isSupported()) {
         closure_13[streamKey] = null;
         delete tmp[tmp2];
       },
+    STREAM_WATCH: function handleStreamWatch(streamKey) {
+        streamKey = streamKey.streamKey;
+        if (obj.decodeStreamKey(streamKey).ownerId !== AuthenticationStore.getId()) {
+          let appContext;
+          if (dependencyMap[streamKey] != null) {
+            appContext = tmp2.appContext;
+          }
+          const obj2 = { appContext, analyticsLocations: streamKey.analyticsLocations };
+          dependencyMap[streamKey] = obj2;
+        }
+        return false;
+      },
     STREAM_CREATE: function handleStreamCreate(arg0) {
         ({ streamKey, rtcServerId, viewerIds } = arg0);
-        let obj = dependencyMap4[streamKey];
+        let obj = dependencyMap5[streamKey];
         ({ rtcChannelId, region } = arg0);
         let tmp7 = null == obj;
         if (tmp7) {
           tmp7 = null != rtcServerId;
         }
         if (tmp7) {
-          if (null == dependencyMap2[streamKey]) {
-            dependencyMap[streamKey] = null;
+          if (null == dependencyMap3[streamKey]) {
+            dependencyMap2[streamKey] = null;
           }
-          let tmp11 = null == dependencyMap[streamKey];
+          let tmp11 = null == dependencyMap2[streamKey];
           if (tmp11) {
-            tmp11 = null == dependencyMap3[streamKey];
+            tmp11 = null == dependencyMap4[streamKey];
           }
           if (tmp11) {
-            dependencyMap[streamKey] = StreamerApplicationSelectors.getStreamerApplication(decodeStreamKeyResult, PresenceStore);
+            dependencyMap2[streamKey] = StreamerApplicationSelectors.getStreamerApplication(decodeStreamKeyResult, PresenceStore);
             const tmp4Result = StreamerApplicationSelectors;
           }
-          const obj3 = { streamRegion: region, streamApplication: dependencyMap[streamKey], streamSourceType: null, actionContext: null, numViewers: null, goLiveModalDurationMs: null, analyticsLocations: null };
+          const obj3 = { streamRegion: region, streamApplication: dependencyMap2[streamKey], streamSourceType: null, actionContext: null, numViewers: null, goLiveModalDurationMs: null, analyticsLocations: null };
           let str2 = "unknown";
-          if (null != dependencyMap3[streamKey]) {
+          if (null != dependencyMap4[streamKey]) {
             if (!PlatformUtils.isPlatformEmbedded) {
               let name;
               if (globalThis.platform != null) {
@@ -394,7 +406,7 @@ if (MediaEngineStore.isSupported()) {
           _modDef38(null != sessionId, "Creating RTCConnection without session.");
           const obj4 = { sessionId, streamKey, serverId: rtcServerId, channelId: rtcChannelId, initialLayout: layout, analyticsContext: streamRTCAnalyticsContext, parentMediaSessionId: RTCConnectionStore.getMediaSessionId() };
           const tmp322 = new StreamRTCConnectionDefault(obj4);
-          dependencyMap4[streamKey] = tmp322;
+          dependencyMap5[streamKey] = tmp322;
           obj = tmp322;
         }
         delete tmp[tmp2];
@@ -404,7 +416,7 @@ if (MediaEngineStore.isSupported()) {
         const obj6 = { type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET", mediaEngineConnectionId: obj.getMediaEngineConnectionId() };
       },
     STREAM_SERVER_UPDATE: function handleStreamServerUpdate(endpoint) {
-        if (null == dependencyMap4[endpoint.streamKey]) {
+        if (null == dependencyMap5[endpoint.streamKey]) {
           return false;
         } else {
           obj.connect(endpoint.endpoint, endpoint.token);
@@ -412,7 +424,7 @@ if (MediaEngineStore.isSupported()) {
       },
     STREAM_UPDATE: function handleStreamUpdate(viewerIds) {
         viewerIds = viewerIds.viewerIds;
-        if (null == dependencyMap4[viewerIds.streamKey]) {
+        if (null == dependencyMap5[viewerIds.streamKey]) {
           return false;
         } else {
           if (null != viewerIds) {
@@ -423,7 +435,7 @@ if (MediaEngineStore.isSupported()) {
         }
       },
     STREAM_DELETE: function handleStreamDelete(arg0) {
-        if (null == dependencyMap4[arg0.streamKey]) {
+        if (null == dependencyMap5[arg0.streamKey]) {
           return false;
         } else {
           const obj3 = { type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET", mediaEngineConnectionId: obj.getMediaEngineConnectionId() };

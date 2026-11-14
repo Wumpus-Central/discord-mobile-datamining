@@ -1,7 +1,7 @@
-// === Module 7917: SegmentedControlState ===
+// === Module 7983: SegmentedControlState ===
 
-// Module 7917 (SegmentedControlState)
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5505 */;
+// Module 7983 (SegmentedControlState)
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5568 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -29,23 +29,23 @@ export function useSegmentedControlState(pageWidth) {
   const onSetActiveIndex = pageWidth.onSetActiveIndex;
   let callback1;
   const enabled = onPageChange.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext).reducedMotion.enabled;
-  const sharedValue = require("module_1652").useSharedValue([]);
+  const sharedValue = require("module_1655").useSharedValue([]);
   let obj = onPageChange;
-  let obj2 = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(-1);
-  let obj3 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(0);
-  let obj4 = require("module_1652");
-  const sharedValue3 = require("module_1652").useSharedValue(0);
-  const obj5 = require("module_1652");
-  const sharedValue4 = require("module_1652").useSharedValue(num);
-  const obj6 = require("module_1652");
+  let obj2 = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(-1);
+  let obj3 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(0);
+  let obj4 = require("module_1655");
+  const sharedValue3 = require("module_1655").useSharedValue(0);
+  const obj5 = require("module_1655");
+  const sharedValue4 = require("module_1655").useSharedValue(num);
+  const obj6 = require("module_1655");
   const items1 = [num, num];
-  const sharedValue5 = require("module_1652").useSharedValue(items1);
-  const obj7 = require("module_1652");
-  const animatedRef = require("module_1652").useAnimatedRef();
-  const obj8 = require("module_1652");
-  const sharedValue6 = require("module_1652").useSharedValue(-1);
+  const sharedValue5 = require("module_1655").useSharedValue(items1);
+  const obj7 = require("module_1655");
+  const animatedRef = require("module_1655").useAnimatedRef();
+  const obj8 = require("module_1655");
+  const sharedValue6 = require("module_1655").useSharedValue(-1);
   const onPageChangeRef = onPageChange.useRef(onPageChange);
   const items2 = [onPageChange];
   const layoutEffect = onPageChange.useLayoutEffect(() => {

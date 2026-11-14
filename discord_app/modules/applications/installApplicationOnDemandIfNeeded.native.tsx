@@ -1,9 +1,9 @@
-// === Module 12667: installApplicationOnDemandIfNeeded ===
+// === Module 12763: installApplicationOnDemandIfNeeded ===
 
-// Module 12667 (installApplicationOnDemandIfNeeded)
+// Module 12763 (installApplicationOnDemandIfNeeded)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationRecord from "ApplicationRecord" /* 2140 */;
-import ApplicationStore from "ApplicationStore" /* 2162 */;
+import ApplicationRecord from "ApplicationRecord" /* 2143 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 const require = fn;
 let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
@@ -44,7 +44,7 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
           closure_129_7 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -104,9 +104,9 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
         }
         const promise = new Promise((arg0) => {
           const clientId = arg0;
-          closure_1_0(5438).dismissKeyboard();
-          let obj = closure_1_0(5438);
-          closure_1_0(12668).openOAuth2Modal({
+          closure_1_0(5501).dismissKeyboard();
+          let obj = closure_1_0(5501);
+          closure_1_0(12764).openOAuth2Modal({
             clientId,
             integrationType,
             scopes,

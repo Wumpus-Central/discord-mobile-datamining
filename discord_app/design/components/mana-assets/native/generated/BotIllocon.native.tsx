@@ -1,20 +1,20 @@
-// === Module 13593: BotIllocon ===
+// === Module 13696: BotIllocon ===
 
-// Module 13593 (BotIllocon)
-import FastImageDefault from "FastImage" /* 5957 */;
-import assetHelpers from "assetHelpers" /* 7689 */;
-import _modDef13594 from "module_13594" /* 13594 */;
-import _modDef13595 from "module_13595" /* 13595 */;
-import _modDef13596 from "module_13596" /* 13596 */;
+// Module 13696 (BotIllocon)
+import FastImageDefault from "FastImage" /* 6020 */;
+import assetHelpers from "assetHelpers" /* 7755 */;
+import _modDef13697 from "module_13697" /* 13697 */;
+import _modDef13698 from "module_13698" /* 13698 */;
+import _modDef13699 from "module_13699" /* 13699 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13594 }, 3: null };
-const obj2 = { uri: _modDef13594 };
-obj[2] = { uri: _modDef13595 };
-const obj3 = { uri: _modDef13595 };
-obj[3] = { uri: _modDef13596 };
+let obj = { 1: null, 2: { uri: _modDef13697 }, 3: null };
+const obj2 = { uri: _modDef13697 };
+obj[2] = { uri: _modDef13698 };
+const obj3 = { uri: _modDef13698 };
+obj[3] = { uri: _modDef13699 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/BotIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function BotIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7689).getAssetSource(obj);
+  obj.source = num(7755).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

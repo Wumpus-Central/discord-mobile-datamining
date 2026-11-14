@@ -1,22 +1,22 @@
-// === Module 12809: StageChannelCallNavigator ===
+// === Module 12905: StageChannelCallNavigator ===
 
-// Module 12809 (StageChannelCallNavigator)
+// Module 12905 (StageChannelCallNavigator)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6003 */;
-import MessageManagerDefault from "MessageManager" /* 9002 */;
-import participantHasVideoDefault from "participantHasVideo" /* 11924 */;
-import ModeratorOverlayState from "ModeratorOverlayState" /* 12810 */;
-import ModeratorStartStageViewDefault from "ModeratorStartStageView" /* 12811 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 12838 */;
-import JoinStageViewDefault from "JoinStageView" /* 12878 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 13016 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 6066 */;
+import MessageManagerDefault from "MessageManager" /* 9069 */;
+import participantHasVideoDefault from "participantHasVideo" /* 11990 */;
+import ModeratorOverlayState from "ModeratorOverlayState" /* 12906 */;
+import ModeratorStartStageViewDefault from "ModeratorStartStageView" /* 12907 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 12934 */;
+import JoinStageViewDefault from "JoinStageView" /* 12974 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 13112 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function ModeratorViewOverlay(channel) {
@@ -45,7 +45,7 @@ function ModeratorViewOverlay(channel) {
   StageChannelCallNavigatorTsx1.__workletHash = 5590822981710;
   StageChannelCallNavigatorTsx1.__initData = tmp7;
   const items2 = [first];
-  const animatedStyle = _mod1652.useAnimatedStyle(StageChannelCallNavigatorTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(StageChannelCallNavigatorTsx1);
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
       if (!closure_0) {
@@ -66,7 +66,7 @@ function ModeratorViewOverlay(channel) {
     obj4.style = items3;
     const obj6 = { channel, onSkip: tmp13 };
     obj4.children = React5(ModeratorStartStageViewDefault, obj6);
-    tmp14 = React5(_modDef1652.View, obj4);
+    tmp14 = React5(_modDef1655.View, obj4);
   }
   return tmp14;
 }
@@ -92,7 +92,7 @@ function JoinStageOverlay(channel) {
   StageChannelCallNavigatorTsx2.__closure = items1;
   StageChannelCallNavigatorTsx2.__workletHash = 5763143772621;
   StageChannelCallNavigatorTsx2.__initData = tmp3;
-  const animatedStyle = _mod1652.useAnimatedStyle(StageChannelCallNavigatorTsx2);
+  const animatedStyle = _mod1655.useAnimatedStyle(StageChannelCallNavigatorTsx2);
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
       closure_0(true);
@@ -107,7 +107,7 @@ function JoinStageOverlay(channel) {
   items2[2] = animatedStyle;
   obj3.style = items2;
   obj3.children = React5(JoinStageViewDefault, { channel: channel.channel });
-  return React5(_modDef1652.View, obj3);
+  return React5(_modDef1655.View, obj3);
 }
 function StagePromptWrapper(channel) {
   return React5(ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme, { children: React5(StagePromptInner, { channel: channel.channel }) });
@@ -125,7 +125,7 @@ let closure_11 = { mass: 0.5, stiffness: 600, damping: 30, overshootClamping: fa
 const fullScreen = { fullScreen: { flex: 1 } };
 let closure_13 = { code: "(function StageChannelCallNavigatorTsx1(){let[withSpring,showStartStageView,viewAnimationConfig]=this.__closure;return{opacity:withSpring(showStartStageView?1:0,viewAnimationConfig)};})" };
 let closure_15 = { code: "(function StageChannelCallNavigatorTsx2(){let[withSpring,showOverlay,viewAnimationConfig]=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};})" };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { startStagePrompt: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_17 = createStyles.createStyles(obj2);
 const size = fn(2);

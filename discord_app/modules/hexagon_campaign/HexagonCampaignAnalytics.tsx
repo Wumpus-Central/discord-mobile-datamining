@@ -1,11 +1,11 @@
-// === Module 16962: HexagonCampaignAnalytics ===
+// === Module 17085: HexagonCampaignAnalytics ===
 
-// Module 16962 (HexagonCampaignAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AdCreativeType from "AdCreativeType" /* 5282 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 8714 */;
-import AnalyticsActions from "AnalyticsActions" /* 8758 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8767 */;
+// Module 17085 (HexagonCampaignAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import AdCreativeType from "AdCreativeType" /* 5345 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 8781 */;
+import AnalyticsActions from "AnalyticsActions" /* 8825 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,18 +32,18 @@ let closure_8 = async function _trackHexagonCampaignContentClicked(arg0) {
       sourceQuestContent = content;
     }
     closure_132_2 = sourceQuestContent;
-    return "flexDirection";
+    return "Path";
   })();
   iter.next();
   return iter;
 };
-const HexagonCampaignConstants = fn(5268);
+const HexagonCampaignConstants = fn(5331);
 ({ HEXAGON_CAMPAIGN_AD_CONTENT_ID: hasOwnProperty, HEXAGON_CAMPAIGN_PERK_ANALYTICS_ACTION: closure_6 } = HexagonCampaignConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/HexagonCampaignAnalytics.tsx");
 
-export const HexagonCampaignContentSurface = { FONT_PICKER: "FONT_PICKER", PROFILE_ROW_PROMO: "PROFILE_ROW_PROMO", NON_NITRO_CARD: "NON_NITRO_CARD", THEME_PICKER: "THEME_PICKER", APP_ICON_PICKER: "APP_ICON_PICKER", USER_PROFILE: "USER_PROFILE", GUILD_PROFILE: "GUILD_PROFILE" };
+export const HexagonCampaignContentSurface = { FONT_PICKER: "FONT_PICKER", PROFILE_ROW_PROMO: "PROFILE_ROW_PROMO", NON_NITRO_CARD: "NON_NITRO_CARD", THEME_PICKER: "THEME_PICKER", APP_ICON_PICKER: "APP_ICON_PICKER", USER_PROFILE: "USER_PROFILE", GUILD_PROFILE: "GUILD_PROFILE", EXPIRING_SOON_SHEET: "EXPIRING_SOON_SHEET", EXPIRED_SHEET: "EXPIRED_SHEET", EXPIRING_SOON_POPOVER: "EXPIRING_SOON_POPOVER" };
 export function trackHexagonCampaignContentViewed(contentSurface) {
   ({ content, sourceQuestContent } = contentSurface);
   if (sourceQuestContent === undefined) {

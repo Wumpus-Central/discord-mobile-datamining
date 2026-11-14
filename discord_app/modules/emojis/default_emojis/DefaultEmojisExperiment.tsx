@@ -1,7 +1,7 @@
-// === Module 5195: DefaultEmojisExperiment ===
+// === Module 5258: DefaultEmojisExperiment ===
 
-// Module 5195 (DefaultEmojisExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 5258 (DefaultEmojisExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-default-emojis", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

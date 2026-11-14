@@ -1,33 +1,33 @@
-// === Module 15298: PremiumSubscriptionUpsell ===
+// === Module 15412: PremiumSubscriptionUpsell ===
 
-// Module 15298 (PremiumSubscriptionUpsell)
+// Module 15412 (PremiumSubscriptionUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
-import NumberUtils from "NumberUtils" /* 2024 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import LinearGradientDefault from "LinearGradient" /* 5830 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import FastImageDefault from "FastImage" /* 5957 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7672 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 10901 */;
-import _modDef15299 from "module_15299" /* 15299 */;
-import _modDef15300 from "module_15300" /* 15300 */;
+import NumberUtils from "NumberUtils" /* 2027 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
+import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import FastImageDefault from "FastImage" /* 6020 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 7738 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 10970 */;
+import _modDef15413 from "module_15413" /* 15413 */;
+import _modDef15414 from "module_15414" /* 15414 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2186 */;
-import UserStore from "UserStore" /* 1385 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(9367).Gradients;
-const PremiumConstants = fn(1387);
+const Gradients = fn(9435).Gradients;
+const PremiumConstants = fn(1390);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: metroImportDefault, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_8 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { title: { textAlign: "center" }, subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" }, upsell: { paddingTop: 32, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, upsellCard: null, upsellFeatures: null, upsellFeatureSubLogo: null, upsellFeatureList: null, upsellButton: null, upsellFeatureLogoTier2: null, upsellLabel: null, upsellRow: null };
 let obj3 = { paddingTop: 32, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.upsellCard = { borderRadius: nativeDefault.radii.xs, padding: 16, alignItems: "center" };
@@ -82,11 +82,11 @@ export default function PremiumSubscriptionUpsell(arg0) {
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     tmp5Result5 = PremiumUtilsDefault;
-    obj11.source = _modDef15299;
+    obj11.source = _modDef15413;
     const items4 = [React6(FastImageDefault, obj11), , ];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const tmp5Result6 = FastImageDefault;
-    obj12.source = _modDef15300;
+    obj12.source = _modDef15414;
     items4[1] = React6(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };

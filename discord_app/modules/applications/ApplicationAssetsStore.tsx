@@ -1,6 +1,6 @@
-// === Module 7250: ApplicationAssetsStore ===
+// === Module 7314: ApplicationAssetsStore ===
 
-// Module 7250 (ApplicationAssetsStore)
+// Module 7314 (ApplicationAssetsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;

@@ -1,6 +1,6 @@
-// === Module 12660: openFrameInAppChannel ===
+// === Module 12756: openFrameInAppChannel ===
 
-// Module 12660 (openFrameInAppChannel)
+// Module 12756 (openFrameInAppChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -36,7 +36,7 @@ let closure_4 = async function _openFrameInAppChannel(arg0) {
   await "HermesInternal";
   closure_1 = tmp2;
   ({ applicationId: closure_129_0, channelId: closure_129_1, analyticsContext: closure_129_2, launch: closure_129_3 } = closure_0);
-  return "flexDirection";
+  return "Path";
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/openFrameInAppChannel.tsx");

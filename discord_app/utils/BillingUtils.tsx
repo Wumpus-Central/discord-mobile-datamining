@@ -1,10 +1,10 @@
-// === Module 5055: BillingUtils ===
+// === Module 5118: BillingUtils ===
 
-// Module 5055 (BillingUtils)
+// Module 5118 (BillingUtils)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import BraintreeUtils from "BraintreeUtils" /* 5057 */;
-import BillingErrorDefault from "BillingError" /* 5063 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import BraintreeUtils from "BraintreeUtils" /* 5120 */;
+import BillingErrorDefault from "BillingError" /* 5126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -70,7 +70,7 @@ let closure_6 = async function _createGatewayCheckoutContext(arg0) {
     }
   })();
 };
-const StripeErrorTypes = fn(5056).StripeErrorTypes;
+const StripeErrorTypes = fn(5119).StripeErrorTypes;
 const PaymentGateways = fn(1083).PaymentGateways;
 const set = new Set(["card_error", "api_connection_error", "validation_error"]);
 const size = fn(2);
@@ -91,12 +91,12 @@ export function createGatewayCheckoutContext() {
   }
   return applyArgumentsResult;
 }
-export function captureBillingException(error, merged) {
+export function captureBillingException(error, options) {
   const obj2 = {};
-  merged = Object.assign(merged);
+  const merged = Object.assign(options);
   let tags;
-  if (merged != null) {
-    tags = merged.tags;
+  if (options != null) {
+    tags = options.tags;
   }
   const obj3 = {};
   const merged1 = Object.assign(tags);

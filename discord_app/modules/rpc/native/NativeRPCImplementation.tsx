@@ -1,26 +1,27 @@
-// === Module 16804: NativeRPCImplementation ===
+// === Module 16927: NativeRPCImplementation ===
 
-// Module 16804 (NativeRPCImplementation)
-import NativeRPCServerDefault from "NativeRPCServer" /* 7234 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 12764 */;
-import commands_activitiesDefault from "commands/activities" /* 16857 */;
-import audioSessionDefault from "audioSession" /* 16858 */;
-import authDefault from "auth" /* 16859 */;
-import screenCaptureDefault from "screenCapture" /* 16861 */;
-import setRunsInBackgroundDefault from "setRunsInBackground" /* 16862 */;
-import frameRelaunchDeepLinkDefault from "frameRelaunchDeepLink" /* 16863 */;
-import pictureInPictureInteractiveDefault from "pictureInPictureInteractive" /* 16864 */;
-import voiceSettingsDefault from "voiceSettings" /* 16872 */;
-import unsupportedDefault from "unsupported" /* 16873 */;
-import crossPlatformRPCEventHandlersDefault from "crossPlatformRPCEventHandlers" /* 16875 */;
-import getNativeDiscordCustomThemeDefault from "getNativeDiscordCustomTheme" /* 16878 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5267 */;
+// Module 16927 (NativeRPCImplementation)
+import NativeRPCServerDefault from "NativeRPCServer" /* 7298 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 12860 */;
+import commands_activitiesDefault from "commands/activities" /* 16980 */;
+import audioSessionDefault from "audioSession" /* 16981 */;
+import authDefault from "auth" /* 16982 */;
+import screenCaptureDefault from "screenCapture" /* 16984 */;
+import setRunsInBackgroundDefault from "setRunsInBackground" /* 16985 */;
+import frameRelaunchDeepLinkDefault from "frameRelaunchDeepLink" /* 16986 */;
+import pictureInPictureInteractiveDefault from "pictureInPictureInteractive" /* 16987 */;
+import voiceSettingsDefault from "voiceSettings" /* 16995 */;
+import unsupportedDefault from "unsupported" /* 16996 */;
+import crossPlatformRPCEventHandlersDefault from "crossPlatformRPCEventHandlers" /* 16998 */;
+import getNativeDiscordCustomThemeDefault from "getNativeDiscordCustomTheme" /* 17001 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 5330 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import StreamerModeStore from "StreamerModeStore" /* 5373 */;
 
-const merged = Object.assign(fn(16805).crossPlatformCommands);
+const merged = Object.assign(fn(16928).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);
 const audioSession = Object.assign(audioSessionDefault);
 const auth = Object.assign(authDefault);
@@ -31,12 +32,12 @@ const pictureInPictureInteractive = Object.assign(pictureInPictureInteractiveDef
 const voiceSettings = Object.assign(voiceSettingsDefault);
 const unsupported = Object.assign(unsupportedDefault);
 Object.assign(crossPlatformRPCEventHandlersDefault);
-const discordEnvironmentEvents = fn(16877);
+const discordEnvironmentEvents = fn(17000);
 const merged11 = Object.assign(discordEnvironmentEvents.createDiscordEnvironmentEvents(true, getNativeDiscordCustomThemeDefault));
-const merged12 = Object.assign(fn(16879).screenCaptureEvents);
-const merged13 = Object.assign(fn(16880).voiceSettingsEventHandlers);
+const merged12 = Object.assign(fn(17002).screenCaptureEvents);
+const merged13 = Object.assign(fn(17003).voiceSettingsEventHandlers);
 const obj4 = { server: NativeRPCServerDefault, commands: {}, events: {}, stores: null, transports: null, registerTransportsForEmbeddedPlatform: null };
-const items = [ThemeStore, AccessibilityStore, UserSettingsProtoStore, ClientThemesBackgroundStore, CustomThemeMobileStore];
+const items = [ThemeStore, AccessibilityStore, UserSettingsProtoStore, ClientThemesBackgroundStore, CustomThemeMobileStore, StreamerModeStore];
 obj4.stores = items;
 const items1 = [WebViewPostMessageTransportDefault];
 obj4.transports = items1;

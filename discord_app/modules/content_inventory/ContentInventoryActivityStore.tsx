@@ -1,15 +1,15 @@
-// === Module 15595: ContentInventoryActivityStore ===
+// === Module 15709: ContentInventoryActivityStore ===
 
-// Module 15595 (ContentInventoryActivityStore)
+// Module 15709 (ContentInventoryActivityStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ActivityTypes from "ActivityTypes" /* 6006 */;
-import utils from "utils" /* 8353 */;
-import matchUtils from "matchUtils" /* 9408 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 9409 */;
-import PresenceStore from "PresenceStore" /* 6005 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 10137 */;
+import ActivityTypes from "ActivityTypes" /* 6069 */;
+import utils from "utils" /* 8419 */;
+import matchUtils from "matchUtils" /* 9477 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 9478 */;
+import PresenceStore from "PresenceStore" /* 6068 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 10206 */;
 
 require = fn;
 function entryToKey(content) {
@@ -21,7 +21,7 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(10153).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(10222).ContentInventoryAuthorType.USER) {
         const activities = PresenceStore.getActivities(author_type.author_id);
         found = activities.find((type) => {
           if (type.type === ActivityTypes.ActivityTypes.PLAYING) {
@@ -45,7 +45,7 @@ function getMatchingActivity(author_type) {
       }
     }
     tmp3 = found;
-    tmpResult = tmp(8353);
+    tmpResult = tmp(8419);
   }
   return tmp3;
 }
@@ -111,7 +111,7 @@ function handlePresenceUpdates() {
   }
   set = new Set();
 }
-let items = [fn(8355).ContentInventoryEntryType.LISTENED_SESSION];
+let items = [fn(8421).ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();
 const Store = initializeDefault.Store;

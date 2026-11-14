@@ -1,22 +1,22 @@
-// === Module 16800: definitions ===
+// === Module 16923: definitions ===
 
-// Module 16800 (definitions)
+// Module 16923 (definitions)
 import Constants2 from "Constants" /* 1083 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import EmbeddedActivityOrientationLockState2 from "EmbeddedActivityOrientationLockState" /* 2143 */;
-import EntitlementTypes from "EntitlementTypes" /* 2170 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5914 */;
-import ActivityTypes from "ActivityTypes" /* 6006 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 7243 */;
-import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7406 */;
-import InviteTargetTypes from "InviteTargetTypes" /* 7599 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10789 */;
-import ActivityPlatform from "ActivityPlatform" /* 12769 */;
-import ThermalStates from "ThermalStates" /* 16797 */;
-import SKUTypes from "SKUTypes" /* 16801 */;
-import discord_common_helpers from "discord_common/helpers" /* 16802 */;
-import contextMenuIcons from "contextMenuIcons" /* 16803 */;
-import Constants from "Constants" /* 12610 */;
+import EmbeddedActivityOrientationLockState2 from "EmbeddedActivityOrientationLockState" /* 2146 */;
+import EntitlementTypes from "EntitlementTypes" /* 2173 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5977 */;
+import ActivityTypes from "ActivityTypes" /* 6069 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 7307 */;
+import ActivityGamePlatforms from "ActivityGamePlatforms" /* 7472 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 7665 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10858 */;
+import ActivityPlatform from "ActivityPlatform" /* 12865 */;
+import ThermalStates from "ThermalStates" /* 16920 */;
+import SKUTypes from "SKUTypes" /* 16924 */;
+import discord_common_helpers from "discord_common/helpers" /* 16925 */;
+import contextMenuIcons from "contextMenuIcons" /* 16926 */;
+import Constants from "Constants" /* 12706 */;
 import size from "module_2" /* 2 */;
 
 function joiEnum(number, EmbeddedActivityOrientationLockState, arg2) {
@@ -2226,7 +2226,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "flexDirection"
+    response: "Path"
   },
   [discord_common_helpers.RPCCommand.GET_CONTEXT]: obj44,
   [discord_common_helpers.RPCCommand.GET_USER]: {
@@ -2317,7 +2317,7 @@ export const RPCCommandSchemas = {
       obj.message = string.string().max(1000).required();
       return obj;
     },
-    response: "flexDirection"
+    response: "Path"
   },
   [discord_common_helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: obj57,
   [discord_common_helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: obj58,
@@ -2332,7 +2332,7 @@ export const RPCCommandSchemas = {
       obj.grid_lock_state = joiEnum(number, "EmbeddedActivityOrientationLockState", { nullable: true }).optional();
       return obj;
     },
-    response: "flexDirection"
+    response: "Path"
   },
   [discord_common_helpers.RPCCommand.SET_CONFIG]: {
     embeddedAppSDK: true,
@@ -2345,7 +2345,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "channelId", response: "" },
+  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "channel_id", response: "" },
   [discord_common_helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

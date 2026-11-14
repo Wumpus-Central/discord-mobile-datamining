@@ -1,17 +1,17 @@
-// === Module 17909: FloatingApplyButton ===
+// === Module 18029: FloatingApplyButton ===
 
-// Module 17909 (FloatingApplyButton)
+// Module 18029 (FloatingApplyButton)
 import nativeDefault from "native" /* 575 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import HapticUtils from "HapticUtils" /* 5491 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import HapticUtils from "HapticUtils" /* 5554 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(1623).MEDIA_PICKER_SEND_BUTTON_SPRING;
+let closure_5 = fn(1626).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
 let closure_7 = { code: "(function FloatingApplyButtonTsx1(){let[visible]=this.__closure;return{pointerEvents:visible?'box-none':'none'};})" };
 let closure_8 = { code: "(function FloatingApplyButtonTsx2(){let[visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING]=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:'absolute',bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:'column',justifyContent:'flex-end',transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};})" };
@@ -41,8 +41,8 @@ export default function FloatingApplyButton(renderButton) {
   FloatingApplyButtonTsx1.__closure = items2;
   FloatingApplyButtonTsx1.__workletHash = 4329148887087;
   FloatingApplyButtonTsx1.__initData = tmp5;
-  const animatedProps = require("module_1652").useAnimatedProps(FloatingApplyButtonTsx1);
-  const obj2 = require("module_1652");
+  const animatedProps = require("module_1655").useAnimatedProps(FloatingApplyButtonTsx1);
+  const obj2 = require("module_1655");
   const items3 = [closure_8, visible, nativeDefault, stateFromStores, require("spring/spring").withSpring, closure_5];
   _require = undefined;
   importDefault = undefined;
@@ -98,7 +98,7 @@ export default function FloatingApplyButton(renderButton) {
   FloatingApplyButtonTsx2.__workletHash = 13112691757829;
   FloatingApplyButtonTsx2.__initData = tmp8;
   const items5 = [onPress];
-  const animatedStyle = require("module_1652").useAnimatedStyle(FloatingApplyButtonTsx2);
+  const animatedStyle = require("module_1655").useAnimatedStyle(FloatingApplyButtonTsx2);
   const callback = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
     _undefined();
@@ -112,9 +112,9 @@ export default function FloatingApplyButton(renderButton) {
   }
   if (renderButtonResult == null) {
     const obj6 = { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: renderButton.loading };
-    renderButtonResult = jsx(tmp(5873).Button, { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: renderButton.loading });
+    renderButtonResult = jsx(tmp(5936).Button, { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: renderButton.loading });
   }
   obj4.children = renderButtonResult;
-  obj3.children = jsx(_modDef1652.View, { style: { marginBottom: useSafeAreaInsetsDefault().bottom }, animatedProps, children: null });
-  return jsx(_modDef1652.View, { style: animatedStyle, children: null });
+  obj3.children = jsx(_modDef1655.View, { style: { marginBottom: useSafeAreaInsetsDefault().bottom }, animatedProps, children: null });
+  return jsx(_modDef1655.View, { style: animatedStyle, children: null });
 };

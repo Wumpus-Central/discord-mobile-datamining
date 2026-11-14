@@ -1,28 +1,28 @@
-// === Module 12430: GuildChannelUserList ===
+// === Module 12525: GuildChannelUserList ===
 
-// Module 12430 (GuildChannelUserList)
+// Module 12525 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1113 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5180 */;
-import UserUtilsDefault from "UserUtils" /* 5309 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 6288 */;
-import GuildUtilsDefault from "GuildUtils" /* 7012 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8410 */;
-import sortByMatchScore from "sortByMatchScore" /* 10178 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
+import UserUtilsDefault from "UserUtils" /* 5372 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6351 */;
+import GuildUtilsDefault from "GuildUtils" /* 7075 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8476 */;
+import sortByMatchScore from "sortByMatchScore" /* 10247 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore_mod from "ChannelMemberStore" /* 7251 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildMemberStore from "GuildMemberStore" /* 5155 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
-import UserStore from "UserStore" /* 1385 */;
+import ChannelMemberStore_mod from "ChannelMemberStore" /* 7315 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-let ChannelMemberStore = fn(7251);
+let ChannelMemberStore = fn(7315);
 ({ EVERYONE_CHANNEL_ID: metroImportDefault, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 let ChannelMemberStore = ChannelMemberStore_mod;
 const Constants = fn(1072);

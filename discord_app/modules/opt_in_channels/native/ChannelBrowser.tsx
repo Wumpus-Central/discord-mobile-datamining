@@ -1,17 +1,17 @@
-// === Module 12378: ChannelBrowser ===
+// === Module 12473: ChannelBrowser ===
 
-// Module 12378 (ChannelBrowser)
+// Module 12473 (ChannelBrowser)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import MarkupInlineChannelMentionRules from "MarkupInlineChannelMentionRules" /* 10992 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import MarkupInlineChannelMentionRules from "MarkupInlineChannelMentionRules" /* 11061 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NewChannelsStore from "NewChannelsStore" /* 8668 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7809 */;
-import GuildChannelStore from "GuildChannelStore" /* 5173 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6895 */;
-import MarkupUtils from "MarkupUtils" /* 5994 */;
+import NewChannelsStore from "NewChannelsStore" /* 8735 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7875 */;
+import GuildChannelStore from "GuildChannelStore" /* 5236 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6958 */;
+import MarkupUtils from "MarkupUtils" /* 6057 */;
 
 const require = globalThis.__r;
 
@@ -24,11 +24,11 @@ function keyExtractor(section) {
   return "" + section.section + "-" + section.row;
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let c15 = "body-xs/medium";
-let PlatformUtils = fn(1377);
+let PlatformUtils = fn(1380);
 PlatformUtils = PlatformUtils.isAndroid();
 if (PlatformUtils) {
   let obj = {};
@@ -44,15 +44,15 @@ if (PlatformUtils) {
     return application_id(ChannelTopicMention, obj, key.key);
   };
   obj.channelMention = obj3;
-  let obj4 = { react: fn(9288).smartOutput };
+  let obj4 = { react: fn(9355).smartOutput };
   obj.guild = obj4;
-  let obj5 = { react: fn(10992).inlineChannelReact };
+  let obj5 = { react: fn(11061).inlineChannelReact };
   obj.channel = obj5;
   let parseTopic = MarkupUtils.reactParserFor(obj);
 } else {
   parseTopic = MarkupUtils.parseTopic;
 }
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj6 = { channelMention: { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND }, container: { flex: 1 }, header: null, categoryContainer: null, categoryTitle: null, channelTitle: null, selectAllContainer: null, selectAllCheckbox: null, newBadge: null, nuxCard: null, nuxCloseContainer: null, nuxHeader: null, nuxHeaderText: null, nuxBody: null };
 let obj7 = { backgroundColor: nativeDefault.colors.MENTION_BACKGROUND };
 obj6.header = { marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16 };
@@ -79,11 +79,11 @@ let closure_20 = noop.memo(function CategoryRow(channel) {
   channel = channel.channel;
   const onChannelClick = channel.onChannelClick;
   const tmp = closure_17();
-  const tmp3 = onChannelClick(5891)(channel);
+  const tmp3 = onChannelClick(5954)(channel);
   items = [UserGuildSettingsStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserGuildSettingsStore.isChannelOptedIn(channel.guild_id, channel.id));
   const obj = channel(504);
-  const checkboxA11yNative = channel(5315).useCheckboxA11yNative({ checked: stateFromStores });
+  const checkboxA11yNative = channel(5378).useCheckboxA11yNative({ checked: stateFromStores });
   const obj3 = {
     style: tmp.categoryContainer,
     onPress() {
@@ -103,24 +103,24 @@ let closure_20 = noop.memo(function CategoryRow(channel) {
     accessibilityState = checkboxA11yNative.accessibilityState;
   }
   obj3.accessibilityState = accessibilityState;
-  const items1 = [closure_12(channel(7680).TableRowGroupTitle, { style: tmp.categoryTitle, title: tmp3, lineClamp: 1 }), ];
+  const items1 = [closure_12(channel(7746).TableRowGroupTitle, { style: tmp.categoryTitle, title: tmp3, lineClamp: 1 }), ];
   let tmp10Result = null;
   if ("null" !== channel.id) {
     const obj5 = { style: tmp.selectAllContainer, children: null };
     const obj6 = { style: tmp.selectAllCheckbox, children: null };
     const obj7 = { checked: stateFromStores };
-    obj6.children = closure_12(tmp4(7668).FormCheckbox, obj7);
+    obj6.children = closure_12(tmp4(7734).FormCheckbox, obj7);
     const items2 = [closure_12(View, obj6), ];
     const obj8 = { variant: "body-xs/semibold", color: "interactive-text-default", children: null };
     const intl = tmp4(1113).intl;
     obj8.children = intl.string(tmp4(1113).t.mSQwnW);
-    items2[1] = closure_12(tmp4(5866).Text, obj8);
+    items2[1] = closure_12(tmp4(5929).Text, obj8);
     obj5.children = items2;
     tmp10Result = closure_13(View, obj5);
   }
   items1[1] = tmp10Result;
   obj3.children = closure_13(closure_14, { children: items1 });
-  return closure_12(channel(7364).PressableOpacity, obj3);
+  return closure_12(channel(7428).PressableOpacity, obj3);
 });
 let closure_21 = noop.memo(function ChannelRow(channel) {
   channel = channel.channel;

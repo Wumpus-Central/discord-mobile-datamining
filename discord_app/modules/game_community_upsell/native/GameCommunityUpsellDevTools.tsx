@@ -1,10 +1,10 @@
-// === Module 18131: GameCommunityUpsellDevTools ===
+// === Module 18251: GameCommunityUpsellDevTools ===
 
-// Module 18131 (GameCommunityUpsellDevTools)
+// Module 18251 (GameCommunityUpsellDevTools)
 import nativeDefault from "native" /* 575 */;
 import noop from "module_19" /* 19 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 16095 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 18132 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 16216 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 18252 */;
 
 const require = fn;
 function MultiGuildDevTools() {
@@ -127,7 +127,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollView: { flex: 1 }, section: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.section = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };

@@ -1,19 +1,19 @@
-// === Module 11729: CollectiblesShopGiftModal ===
+// === Module 11795: CollectiblesShopGiftModal ===
 
-// Module 11729 (CollectiblesShopGiftModal)
+// Module 11795 (CollectiblesShopGiftModal)
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Navigator from "Navigator" /* 7424 */;
-import NavigatorHeader from "NavigatorHeader" /* 7427 */;
-import BadgeId from "BadgeId" /* 8414 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8418 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8486 */;
-import generated_NoResults from "generated/NoResults" /* 8530 */;
-import openGiftModal from "openGiftModal" /* 11728 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11731 */;
-import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 11734 */;
+import Navigator from "Navigator" /* 7490 */;
+import NavigatorHeader from "NavigatorHeader" /* 7493 */;
+import BadgeId from "BadgeId" /* 8480 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 8484 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8552 */;
+import generated_NoResults from "generated/NoResults" /* 8596 */;
+import openGiftModal from "openGiftModal" /* 11794 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11797 */;
+import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 11800 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8419 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8485 */;
 
 require = fn;
 function CollectiblesShopGiftModalContent(product) {

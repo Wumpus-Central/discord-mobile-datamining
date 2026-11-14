@@ -1,26 +1,27 @@
-// === Module 7219: MemberSafetyPermissionsUtils ===
+// === Module 7282: MemberSafetyPermissionsUtils ===
 
-// Module 7219 (MemberSafetyPermissionsUtils)
+// Module 7282 (MemberSafetyPermissionsUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
+import BulkRoleActionsExperimentDefault from "BulkRoleActionsExperiment" /* 7283 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import UserStore from "UserStore" /* 1385 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(5110).isGuildOwner;
-let closure_8 = fn(5179).MemberSafetyPagePermissions;
+const isGuildOwner = fn(5173).isGuildOwner;
+let closure_9 = fn(5242).MemberSafetyPagePermissions;
 const Constants = fn(1072);
-({ GuildFeatures: closure_9, Permissions: closure_10 } = Constants);
+({ GuildFeatures: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx");
 
 export function getContextForPermission(arg0) {
   let tmp = items;
   if (items === undefined) {
-    items = [UserStore, closure_8];
+    items = [UserStore, closure_9];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -35,7 +36,7 @@ export function canAccessMemberSafetyPage(arg0) {
     tmp = items;
   }
   if (tmp === undefined) {
-    const items1 = [UserStore, closure_8];
+    const items1 = [UserStore, closure_9];
     tmp = items1;
   }
   [obj, obj2] = tmp;
@@ -50,7 +51,7 @@ export function hasBulkBanningPermissions(arg0) {
     tmp = items;
   }
   if (tmp === undefined) {
-    const items1 = [UserStore, closure_8];
+    const items1 = [UserStore, closure_9];
     tmp = items1;
   }
   [obj, obj2] = tmp;
@@ -126,34 +127,85 @@ export function useCanAccessInviteCodeFeature(arg0) {
     return canResult;
   }, items1);
 }
-export function useCanBulkBanUser(arg0, arg1, arg2) {
+export function canBulkBanUser(arg0, user) {
+  guild = GuildStore.getGuild(arg0);
+  let canManageUserResult = null != guild;
+  if (canManageUserResult) {
+    canManageUserResult = PermissionStore.canManageUser(constants2.BAN_MEMBERS, user, guild);
+  }
+  return canManageUserResult;
+}
+export function useCanBulkBanUser(arg0, arg1) {
   _require = arg0;
   closure_1 = arg1;
-  dependencyMap = arg2;
   items = [PermissionStore, GuildStore];
-  const items1 = [arg1, arg0, arg2];
+  const items1 = [arg0, arg1];
   return require("initialize").useStateFromStores(items, () => {
     guild = GuildStore.getGuild(closure_0);
-    let tmp2 = null != guild;
-    if (tmp2) {
-      let canManageUserResult = closure_1;
-      if (closure_1) {
-        canManageUserResult = PermissionStore.canManageUser(constants2.BAN_MEMBERS, closure_2, guild);
-      }
-      tmp2 = canManageUserResult;
+    let canManageUserResult = null != guild;
+    if (canManageUserResult) {
+      canManageUserResult = PermissionStore.canManageUser(constants2.BAN_MEMBERS, closure_1, guild);
     }
-    return tmp2;
+    return canManageUserResult;
   }, items1);
 }
-export function canBulkBanUser(arg0, arg1, user) {
-  guild = GuildStore.getGuild(arg0);
-  let tmp2 = null != guild;
-  if (tmp2) {
-    let canManageUserResult = arg1;
-    if (arg1) {
-      canManageUserResult = PermissionStore.canManageUser(constants2.BAN_MEMBERS, user, guild);
-    }
-    tmp2 = canManageUserResult;
+export function useCanAccessBulkActions(guildId) {
+  _require = guildId;
+  closure_129_0 = guildId;
+  items = [GuildStore, UserStore];
+  const items1 = [guildId];
+  let canAccessBulkBan = require("initialize").useStateFromStores(items, () => {
+    items = [GuildStore, UserStore];
+    [obj, obj2] = items;
+    guild = obj.getGuild(closure_0);
+    const currentUser = obj2.getCurrentUser();
+    return false;
+  }, items1);
+  const obj = require("initialize");
+  const items2 = [GuildStore, UserStore];
+  const items3 = [guildId];
+  if (canAccessBulkBan) {
+    canAccessBulkBan = obj2.useStateFromStores(items2, () => {
+      items = [GuildStore, UserStore];
+      [obj, obj2] = items;
+      guild = obj.getGuild(closure_0);
+      const currentUser = obj2.getCurrentUser();
+      return false;
+    }, items3);
   }
-  return tmp2;
+  closure_130_0 = guildId;
+  obj2 = require("initialize");
+  let canAccessBulkRole = BulkRoleActionsExperimentDefault.useConfig({ guildId, location: "Members page bulk actions" }).enabled;
+  closure_131_0 = guildId;
+  const obj4 = { guildId, location: "Members page bulk actions" };
+  const items4 = [GuildStore, UserStore];
+  const items5 = [guildId];
+  const stateFromStores1 = require("initialize").useStateFromStores(items4, () => {
+    items = [GuildStore, UserStore];
+    [obj, obj2] = items;
+    guild = obj.getGuild(closure_0);
+    const currentUser = obj2.getCurrentUser();
+    return false;
+  }, items5);
+  const tmpResult = require("initialize");
+  const items6 = [GuildStore, UserStore];
+  const items7 = [guildId];
+  const stateFromStores2 = require("initialize").useStateFromStores(items6, () => {
+    items = [GuildStore, UserStore];
+    [obj, obj2] = items;
+    guild = obj.getGuild(closure_0);
+    const currentUser = obj2.getCurrentUser();
+    return false;
+  }, items7);
+  if (canAccessBulkRole) {
+    canAccessBulkRole = stateFromStores1;
+  }
+  if (canAccessBulkRole) {
+    canAccessBulkRole = stateFromStores2;
+  }
+  let canAccessBulkActions = canAccessBulkBan;
+  if (!canAccessBulkBan) {
+    canAccessBulkActions = canAccessBulkRole;
+  }
+  return { canAccessBulkActions, canAccessBulkBan, canAccessBulkRole };
 }

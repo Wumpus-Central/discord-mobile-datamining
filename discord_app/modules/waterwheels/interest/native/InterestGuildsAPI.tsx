@@ -1,6 +1,6 @@
-// === Module 20186: InterestGuildsAPI ===
+// === Module 20346: InterestGuildsAPI ===
 
-// Module 20186 (InterestGuildsAPI)
+// Module 20346 (InterestGuildsAPI)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -16,8 +16,8 @@ export function createInterestGuildsResource() {
     c2 = 0;
     c1 = 0;
     return (async (arg0) => {
-      const HTTP = game_ids(1282).HTTP;
-      const request = { url, query: { game_ids }, retries: 0, timeout: 10000, rejectWithError: game_ids(1282).rejectWithMigratedError() };
+      const HTTP = game_ids(1285).HTTP;
+      const request = { url, query: { game_ids }, retries: 0, timeout: 10000, rejectWithError: game_ids(1285).rejectWithMigratedError() };
       await HTTP.get(request);
       return value.body;
     })();

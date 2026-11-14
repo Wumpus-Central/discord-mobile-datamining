@@ -1,20 +1,20 @@
-// === Module 11281: GIFPickerNoResults ===
+// === Module 11348: GIFPickerNoResults ===
 
-// Module 11281 (GIFPickerNoResults)
+// Module 11348 (GIFPickerNoResults)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import BottomSheetModal from "BottomSheetModal" /* 5507 */;
-import useExpressionPickerInsetsDefault from "useExpressionPickerInsets" /* 11183 */;
-import SearchEmpty from "SearchEmpty" /* 11216 */;
-import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 11220 */;
+import BottomSheetModal from "BottomSheetModal" /* 5570 */;
+import useExpressionPickerInsetsDefault from "useExpressionPickerInsets" /* 11250 */;
+import SearchEmpty from "SearchEmpty" /* 11283 */;
+import useModalDismissGuardRefreshControl from "useModalDismissGuardRefreshControl" /* 11287 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 fn(1072).GIFPickerResultTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE }, emptyStateImage: null };
 const obj3 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.emptyStateImage = { marginBottom: nativeDefault.space.PX_8, marginTop: 0 };

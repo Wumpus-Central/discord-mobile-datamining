@@ -1,10 +1,10 @@
-// === Module 17190: WebAuthnRegisterStep ===
+// === Module 17313: WebAuthnRegisterStep ===
 
-// Module 17190 (WebAuthnRegisterStep)
+// Module 17313 (WebAuthnRegisterStep)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import NativeCeremoniesDefault from "NativeCeremonies" /* 7709 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 7775 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -42,7 +42,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { scrollContent: { flexGrow: 1 }, flexContainer: { flexGrow: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "space-between", marginLeft: 16, marginRight: 16, marginTop: 16 }, centerFlex: { display: "flex", alignItems: "center" }, margin: { marginTop: 16, textAlign: "center" }, radioItem: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md } };
 let closure_10 = createStyles.createStyles(obj2);
 let obj4 = { PASSKEY_CREDENTIAL_MANAGER: 0, [0]: "PASSKEY_CREDENTIAL_MANAGER", PASSKEY_DEVICE: 1, [1]: "PASSKEY_DEVICE", OTHER_AND_ANDROID_NONDISCOVERABLE: 2, [2]: "OTHER_AND_ANDROID_NONDISCOVERABLE" };
@@ -52,9 +52,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnRegisterStep.tsx");
 
 export default function WebAuthnRegisterStep() {
-  navigation = navigation(1499).useNavigation();
+  navigation = navigation(1502).useNavigation();
   const tmp4 = closure_10();
-  const obj = navigation(1499);
+  const obj = navigation(1502);
   const tmp5 = authenticatorSelection;
   [tmp7, tmp8] = authenticatorSelection(onRegisterSuccess.useState(false), 2);
   importDefault = tmp8;
@@ -62,7 +62,7 @@ export default function WebAuthnRegisterStep() {
   [tmp10, tmp11] = authenticatorSelection(onRegisterSuccess.useState(""), 2);
   dependencyMap = tmp11;
   const tmp9 = authenticatorSelection(onRegisterSuccess.useState(""), 2);
-  const tmp5Result = tmp5(onRegisterSuccess.useState(navigation(1377).isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE), 2);
+  const tmp5Result = tmp5(onRegisterSuccess.useState(navigation(1380).isAndroid() ? obj4.PASSKEY_CREDENTIAL_MANAGER : obj4.OTHER_AND_ANDROID_NONDISCOVERABLE), 2);
   authenticatorSelection = tmp5Result[0];
   items = [navigation];
   onRegisterSuccess = obj2.useCallback((arg0) => {
@@ -72,12 +72,12 @@ export default function WebAuthnRegisterStep() {
   closure_5 = obj2.useMemo(() => obj5[first], items1);
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj2.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
-  const obj3 = navigation(1377);
-  const announceError = navigation(17191).useAnnounceError(tmp10);
+  const obj3 = navigation(1380);
+  const announceError = navigation(17314).useAnnounceError(tmp10);
   obj4 = { contentContainerStyle: tmp4.scrollContent, alwaysBounceVertical: false, children: null };
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj5 = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_8(navigation(17192).KeyImage, {}), , ];
+  const items3 = [closure_8(navigation(17315).KeyImage, {}), , ];
   const obj6 = { style: tmp4.margin, variant: "body-md/normal", children: null };
   const intl = tmp(1113).intl;
   const string = intl.string;
@@ -88,11 +88,11 @@ export default function WebAuthnRegisterStep() {
     stringResult = string(t.Lh5vTW);
   }
   obj6.children = stringResult;
-  items3[1] = closure_8(navigation(5866).Text, obj6);
+  items3[1] = closure_8(navigation(5929).Text, obj6);
   let tmp17Result = "" !== tmp10;
   if (tmp17Result) {
     const obj7 = { variant: "body-md/normal", color: "text-feedback-critical", children: tmp10 };
-    tmp17Result = closure_8(tmp(5866).Text, obj7);
+    tmp17Result = closure_8(tmp(5929).Text, obj7);
   }
   items3[2] = tmp17Result;
   obj5.children = items3;
@@ -112,7 +112,7 @@ export default function WebAuthnRegisterStep() {
     string2Result = string2(t2.oibaQa);
   }
   const obj9 = {
-    children: closure_8(navigation(5873).Button, {
+    children: closure_8(navigation(5936).Button, {
       text: string2Result,
       disabled: tmp7,
       loading: tmp7,
@@ -122,8 +122,8 @@ export default function WebAuthnRegisterStep() {
       size: "lg"
     })
   };
-  items4[2] = closure_8(navigation(6888).ButtonGroup, obj9);
+  items4[2] = closure_8(navigation(6951).ButtonGroup, obj9);
   rect.children = items4;
-  obj4.children = closure_9(navigation(7351).SafeAreaPaddingView, rect);
+  obj4.children = closure_9(navigation(7415).SafeAreaPaddingView, rect);
   return closure_8(closure_5, obj4);
 };

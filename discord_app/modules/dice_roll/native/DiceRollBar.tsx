@@ -1,21 +1,21 @@
-// === Module 14681: DiceRollBar ===
+// === Module 14794: DiceRollBar ===
 
-// Module 14681 (DiceRollBar)
+// Module 14794 (DiceRollBar)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
-const useDiceRollState = fn(14457).useDiceRollState;
+const useDiceRollState = fn(14569).useDiceRollState;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { animatedContainer: { overflow: "hidden" }, container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, gap: 12, borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_9 = createStyles.createStyles(obj2);
 let closure_10 = { code: "(function DiceRollBarTsx1(){let[useReducedMotion,height,opacity,withTiming,ANIMATION_DURATION_MS,DECELERATED_EASING]=this.__closure;if(useReducedMotion){return{height:height.get(),opacity:opacity.get()};}return{height:withTiming(height.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING}),opacity:withTiming(opacity.get(),{duration:ANIMATION_DURATION_MS,easing:DECELERATED_EASING})};})" };
@@ -32,13 +32,13 @@ export default function DiceRollBar(channelId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => easing.useReducedMotion);
   _require = stateFromStores;
   let obj = require("initialize");
-  const sharedValue = require("module_1652").useSharedValue(0);
+  const sharedValue = require("module_1655").useSharedValue(0);
   importDefault = sharedValue;
-  let obj2 = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(0);
+  let obj2 = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(0);
   dependencyMap = sharedValue1;
-  let obj3 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(0);
+  let obj3 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(0);
   noop = sharedValue2;
   c4 = tmp9;
   let flag;
@@ -65,14 +65,14 @@ export default function DiceRollBar(channelId) {
   const effect1 = noop.useEffect(() => {
     if (c5) {
       if (!c0) {
-        const obj = _mod1652;
-        const obj3 = { duration: 800, easing: _mod1652.Easing.linear };
+        const obj = _mod1655;
+        const obj3 = { duration: 800, easing: _mod1655.Easing.linear };
         const result = _undefined4.set(obj.withRepeat(timing_timing.withTiming(360, obj3), -1, false));
       }
     }
     const result1 = _undefined4.set(0);
   }, items2);
-  const obj4 = require("module_1652");
+  const obj4 = require("module_1655");
   const items3 = [closure_10, stateFromStores, sharedValue, sharedValue1, require("timing/timing").withTiming, 300, require("native").DECELERATED_EASING];
   _require = undefined;
   importDefault = undefined;
@@ -113,8 +113,8 @@ export default function DiceRollBar(channelId) {
   DiceRollBarTsx1.__closure = items4;
   DiceRollBarTsx1.__workletHash = 2869558544264;
   DiceRollBarTsx1.__initData = tmp12;
-  const animatedStyle = require("module_1652").useAnimatedStyle(DiceRollBarTsx1);
-  require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(DiceRollBarTsx1);
+  require("module_1655");
   const items5 = [closure_11, sharedValue2];
   _require = undefined;
   [tmp21, tmp22] = items5;
@@ -135,18 +135,18 @@ export default function DiceRollBar(channelId) {
   if (null == tmp2) {
     return null;
   } else {
-    const barText = tmp3(14682).getBarText(flag, tmp2.results);
+    const barText = tmp3(14795).getBarText(flag, tmp2.results);
     const obj5 = { style: null, children: null };
     const items7 = [animatedStyle, tmp.animatedContainer];
     obj5.style = items7;
     const obj6 = { style: tmp.container, children: null };
-    const obj7 = { style: tmp23, children: closure_7(tmp3(9369).DiceIcon, { size: "md" }) };
-    const items8 = [closure_7(_modDef1652.View, obj7), ];
+    const obj7 = { style: tmp23, children: closure_7(tmp3(9437).DiceIcon, { size: "md" }) };
+    const items8 = [closure_7(_modDef1655.View, obj7), ];
     const obj8 = { variant: "body-sm/normal", color: "text-default", children: barText };
-    items8[1] = closure_7(tmp3(5866).Text, obj8);
+    items8[1] = closure_7(tmp3(5929).Text, obj8);
     obj6.children = items8;
     obj5.children = closure_8(c4, obj6);
-    return closure_7(_modDef1652.View, obj5);
+    return closure_7(_modDef1655.View, obj5);
   }
-  const tmp3Result = require("module_1652");
+  const tmp3Result = require("module_1655");
 };

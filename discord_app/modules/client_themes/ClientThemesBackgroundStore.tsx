@@ -1,20 +1,20 @@
-// === Module 5267: ClientThemesBackgroundStore ===
+// === Module 5330: ClientThemesBackgroundStore ===
 
-// Module 5267 (ClientThemesBackgroundStore)
+// Module 5330 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import dismissible_content from "dismissible_content" /* 5076 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5285 */;
-import UserUtils from "UserUtils" /* 5309 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 5313 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
+import dismissible_content from "dismissible_content" /* 5139 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5348 */;
+import UserUtils from "UserUtils" /* 5372 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 5376 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1193 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import UserStore from "UserStore" /* 1385 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function getAppliedHexagonCampaignPreset() {
@@ -175,9 +175,9 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(5096).isGuildTextChannelType;
+const isGuildTextChannelType = fn(5159).isGuildTextChannelType;
 const dependencyMap = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(5268).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5331).HexagonCampaignPerk;
 const SystemThemeState = fn(1195).SystemThemeState;
 let closure_15 = true;
 let c16 = false;
@@ -335,6 +335,12 @@ Object.defineProperty(prototype, "hasHiddenHexagonCampaignPreset", {
 Object.defineProperty(prototype, "isPreview", {
   get: function isPreview() {
     return closure_15;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "isUpsellGradientPreview", {
+  get: function isUpsellGradientPreview() {
+    return c17;
   },
   set: undefined
 });

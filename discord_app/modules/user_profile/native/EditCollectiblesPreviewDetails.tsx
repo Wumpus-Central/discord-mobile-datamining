@@ -1,15 +1,15 @@
-// === Module 15416: EditCollectiblesPreviewDetails ===
+// === Module 15530: EditCollectiblesPreviewDetails ===
 
-// Module 15416 (EditCollectiblesPreviewDetails)
+// Module 15530 (EditCollectiblesPreviewDetails)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2171 */;
-import DateUtils from "DateUtils" /* 5065 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 8431 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 9337 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
+import DateUtils from "DateUtils" /* 5128 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 8497 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 9404 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2186 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
 
 require = fn;
 function EditCollectiblesPreviewDescription(arg0) {
@@ -111,7 +111,7 @@ function EditCollectiblesPreviewDescription(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({ productDetailsContainer: { width: "100%", marginVertical: 12, alignItems: "center", gap: 2 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/EditCollectiblesPreviewDetails.tsx");

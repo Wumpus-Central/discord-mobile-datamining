@@ -1,13 +1,13 @@
-// === Module 15200: AppIconUtils ===
+// === Module 15314: AppIconUtils ===
 
-// Module 15200 (AppIconUtils)
+// Module 15314 (AppIconUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1624 */;
-import AppIconTypes from "AppIconTypes" /* 5269 */;
-import useMountEffectDefault from "useMountEffect" /* 5836 */;
-import openUserSettings from "openUserSettings" /* 8537 */;
-import NativeAppIconModuleDefault from "NativeAppIconModule" /* 15201 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+import AppIconTypes from "AppIconTypes" /* 5332 */;
+import useMountEffectDefault from "useMountEffect" /* 5899 */;
+import openUserSettings from "openUserSettings" /* 8604 */;
+import NativeAppIconModuleDefault from "NativeAppIconModule" /* 15315 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -132,7 +132,7 @@ let closure_16 = async function _setAppIcon(arg0) {
           closure_131_2 = flag;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -196,11 +196,11 @@ let closure_16 = async function _setAppIcon(arg0) {
     }
   }
 };
-const AppIconConstants = fn(11112);
+const AppIconConstants = fn(11179);
 ({ getDefaultIcon: closure_6, getIconById: metroImportDefault, getLimitedAlternateIcons: closure_8, getOfficialAlternateIcons: closure_9 } = AppIconConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, UserSettingsSections: closure_11 } = Constants);
-const PremiumTypes = fn(1387).PremiumTypes;
+const PremiumTypes = fn(1390).PremiumTypes;
 let closure_13 = new LoggerDefault("AppIconUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconUtils.tsx");

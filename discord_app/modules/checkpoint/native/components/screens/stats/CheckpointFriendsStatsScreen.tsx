@@ -1,28 +1,28 @@
-// === Module 14406: CheckpointFriendsStatsScreen ===
+// === Module 14527: CheckpointFriendsStatsScreen ===
 
-// Module 14406 (CheckpointFriendsStatsScreen)
+// Module 14527 (CheckpointFriendsStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1493 */;
-import _modDef3237 from "module_3237" /* 3237 */;
-import _modDef3269 from "module_3269" /* 3269 */;
-import FriendsIcon from "FriendsIcon" /* 5955 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import ChatIcon from "ChatIcon" /* 8004 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 11594 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 12952 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 13033 */;
-import Tracking from "Tracking" /* 14144 */;
-import CheckpointTextDefault from "CheckpointText" /* 14161 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 14373 */;
-import CheckpointNumberUtils from "CheckpointNumberUtils" /* 14383 */;
-import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 14389 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import _modDef3285 from "module_3285" /* 3285 */;
+import _modDef3317 from "module_3317" /* 3317 */;
+import FriendsIcon from "FriendsIcon" /* 6018 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
+import ChatIcon from "ChatIcon" /* 8069 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 11661 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 13048 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 13129 */;
+import Tracking from "Tracking" /* 14251 */;
+import CheckpointTextDefault from "CheckpointText" /* 14271 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 14479 */;
+import CheckpointNumberUtils from "CheckpointNumberUtils" /* 14506 */;
+import CheckpointDisplayTextDefault from "CheckpointDisplayText" /* 14512 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
-import UserStore from "UserStore" /* 1385 */;
-import CheckpointStore from "CheckpointStore" /* 14146 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
+import UserStore from "UserStore" /* 1388 */;
+import CheckpointStore from "CheckpointStore" /* 14253 */;
 
 const require = globalThis.__r;
 
@@ -38,12 +38,12 @@ function FriendsHeader(children) {
   const intl = util.intl;
   const obj4 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
   const tmp2 = CheckpointTextDefault;
-  obj5.children = intl.string(_modDef3237.ZQakPR).toLocaleUpperCase();
+  obj5.children = intl.string(_modDef3285.ZQakPR).toLocaleUpperCase();
   items[1] = state(tmp2, obj5);
   obj3.children = items;
   const items1 = [gesture(metroImportDefault, obj3), ];
   const obj6 = { children: null };
-  const stringResult = intl.string(_modDef3237.ZQakPR);
+  const stringResult = intl.string(_modDef3285.ZQakPR);
   obj6.children = title.toLocaleUpperCase();
   items1[1] = state(CheckpointDisplayTextDefault, obj6);
   obj2.children = items1;
@@ -61,10 +61,10 @@ function SidekickStats(sidekick) {
   const intl = util.intl;
   obj3 = { duration: null };
   const intl2 = util.intl;
-  obj3.duration = intl2.formatToPlainString(_modDef3269.x7PkHm, { minutes: rounded1 });
+  obj3.duration = intl2.formatToPlainString(_modDef3317.x7PkHm, { minutes: rounded1 });
   const obj4 = { style: tmp.stats, children: null };
   const obj5 = { accessible: true, accessibilityLabel: null, style: null, children: null };
-  const formatToPlainStringResult = intl.formatToPlainString(_modDef3269.lw35aH, obj3);
+  const formatToPlainStringResult = intl.formatToPlainString(_modDef3317.lw35aH, obj3);
   obj5.accessibilityLabel = CheckpointNumberUtils.formatCheckpointStatAccessibilityLabel("messages", rounded);
   obj5.style = tmp.stat;
   items = [state(ChatIcon.ChatIcon, { size: "md", color: CHECKPOINT_PRIMARY }), state(CheckpointStatNumberDefault, { value: result })];
@@ -164,8 +164,8 @@ function SidekickMessageInput(user) {
   const ref = noop.useRef(null);
   noop = ref;
   const tmp6 = _slicedToArray(noop.useState(false), 2);
-  const sharedValue = require("module_1652").useSharedValue(0);
-  let obj2 = require("module_1652");
+  const sharedValue = require("module_1655").useSharedValue(0);
+  let obj2 = require("module_1655");
   const tmp13 = useAnimatedKeyboardHeightDefault();
   obj3 = require("utils/PlatformUtils");
   const size = useWindowDimensionsDefault({ ignoreKeyboard: true });
@@ -173,8 +173,8 @@ function SidekickMessageInput(user) {
   const bound = Math.min(size.width, height);
   let messageInputContainerLarge = bound > require("useWindowSizeClassifier").WINDOW_SIZE_THRESHOLD_LARGE;
   const isIOSResult = require("utils/PlatformUtils").isIOS();
-  const sharedValue1 = require("module_1652").useSharedValue(0);
-  let obj4 = require("module_1652");
+  const sharedValue1 = require("module_1655").useSharedValue(0);
+  let obj4 = require("module_1655");
   items = [closure_22, sharedValue1, require("timing/timing").withTiming, noop];
   _require = undefined;
   importDefault = undefined;
@@ -225,7 +225,7 @@ function SidekickMessageInput(user) {
   CheckpointFriendsStatsScreenTsx2.__workletHash = 4013262097384;
   CheckpointFriendsStatsScreenTsx2.__initData = tmp22;
   const items4 = [sharedValue];
-  const animatedStyle = require("module_1652").useAnimatedStyle(CheckpointFriendsStatsScreenTsx2);
+  const animatedStyle = require("module_1655").useAnimatedStyle(CheckpointFriendsStatsScreenTsx2);
   const callback = obj.useCallback(() => {
     const current = _undefined4.current;
     if (current != null) {
@@ -233,7 +233,7 @@ function SidekickMessageInput(user) {
     }
   }, items4);
   let tmp32 = null != first;
-  const tmp9Result = require("module_1652");
+  const tmp9Result = require("module_1655");
   if (tmp32) {
     tmp32 = first.length > 0;
   }
@@ -290,7 +290,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp9(1113).intl;
     obj12.accessibilityLabel = intl2.string(tmp9(1113).t.Ve9Ge6);
     const obj13 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj12.children = closure_13(tmp9(11751).GiftIcon, obj13);
+    obj12.children = closure_13(tmp9(11817).GiftIcon, obj13);
     const items7 = [closure_13(sharedValue, obj12), ];
     const obj14 = {
       onPress: function handleSend() {
@@ -320,29 +320,29 @@ function SidekickMessageInput(user) {
     const obj15 = { disabled: !tmp32 };
     obj14.accessibilityState = obj15;
     const obj16 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj14.children = closure_13(tmp9(5968).SendMessageIcon, obj16);
+    obj14.children = closure_13(tmp9(6031).SendMessageIcon, obj16);
     items7[1] = closure_13(sharedValue, obj14);
     obj11.children = items7;
     items6[1] = closure_14(closure_7, obj11);
     obj8.children = items6;
-    obj7.children = closure_14(tmp12(1652).View, obj8);
+    obj7.children = closure_14(tmp12(1655).View, obj8);
     tmp34Result = closure_13(tmp35, obj7);
   }
   return tmp34Result;
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const CheckpointConstants = fn(6314);
+const CheckpointConstants = fn(6377);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-let obj = { duration: fn(5488).timingStandardDuration, easing: null };
-const Easing = fn(1652).Easing;
+let obj = { duration: fn(5551).timingStandardDuration, easing: null };
+const Easing = fn(1655).Easing;
 obj.easing = Easing.bezier(0.2, 0, 0, 1);
 let closure_17 = { "Avatar01/Stroke": "#000000", "Avatar01/Fill": CHECKPOINT_PRIMARY, "Avatar02/Stroke": "#000000", "Avatar02/Fill": CHECKPOINT_PRIMARY, "Avatar03/Stroke": "#000000", "Avatar03/Fill": CHECKPOINT_PRIMARY, "Avatar04/Stroke": "#000000", "Avatar04/Fill": CHECKPOINT_PRIMARY, "Avatar05/Stroke": "#000000", "Avatar05/Fill": CHECKPOINT_PRIMARY, ConnectorColor: CHECKPOINT_PRIMARY };
-const PlatformUtils = fn(1357);
+const PlatformUtils = fn(1360);
 let tmp5;
 if (PlatformUtils.isIOS()) {
   let obj3 = { "unifont-17.0.03": null };
@@ -351,7 +351,7 @@ if (PlatformUtils.isIOS()) {
   tmp5 = obj3;
 }
 obj3 = tmp5;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj6 = { container: { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBottom: nativeDefault.space.PX_64 }, animation: null, transition: null, header: null, heading: null, title: null, titleText: null, sidekick: null, sidekickDetails: null, stats: null, stat: null, messageInputContainer: null, messageInputContainerLarge: null, messageInput: null, messageInputActions: null, disabled: null };
 const rect = { position: "absolute", left: -nativeDefault.space.PX_24, right: -nativeDefault.space.PX_24 };
 obj6.animation = rect;

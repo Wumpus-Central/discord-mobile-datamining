@@ -1,19 +1,19 @@
-// === Module 16282: GameOrganizationActionCreators ===
+// === Module 16403: GameOrganizationActionCreators ===
 
-// Module 16282 (GameOrganizationActionCreators)
+// Module 16403 (GameOrganizationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationRecord from "ApplicationRecord" /* 2140 */;
+import ApplicationRecord from "ApplicationRecord" /* 2143 */;
 
 require = fn;
 let closure_6 = async function _fetchGameOrganization() {
-  c5 = 0;
   c6 = 0;
-  c4 = 0;
+  c7 = 0;
+  c5 = 0;
   return (async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
+    if (c7 === 2) {
+      c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
@@ -26,73 +26,84 @@ let closure_6 = async function _fetchGameOrganization() {
       }
     } else {
       try {
-        c6 = 2;
-        if (0 === c5) {
+        c7 = 2;
+        if (0 === c6) {
           if (arg0 === 1) {
-            c6 = 3;
+            c7 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c6 = 3;
+            c7 = 3;
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            closure_2 = tmp3;
-            closure_1 = tmp7;
-            closure_129_0 = guildId;
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = guildId;
             let body;
             let game_organization;
             let application;
-            closure_129_4 = undefined;
-            closure_129_5 = undefined;
-            closure_129_6 = undefined;
+            let application_config;
+            closure_130_5 = undefined;
+            closure_130_6 = undefined;
+            closure_130_7 = undefined;
             if (null != guildId) {
               const obj6 = { type: "GAME_ORGANIZATION_FETCH_START", guildId };
               DispatcherDefault.dispatch(obj6);
-              c4 = 1;
+              c5 = 1;
               const HTTP = HTTPUtils.HTTP;
               const obj7 = { url: Endpoints.GAME_ORGANIZATION(guildId), rejectWithError: true };
-              c5 = 2;
-              c6 = 1;
+              c6 = 2;
+              c7 = 1;
               const obj8 = { value: HTTP.get(obj7), done: false };
               return obj8;
             } else {
-              c6 = 3;
+              c7 = 3;
             }
           }
         } else if (1 === tmp7) {
-          c4 = 0;
-          closure_129_7 = closure_3;
-          const aPIError = new closure_130_0(closure_130_2[6]).APIError(closure_129_7);
-          closure_129_6 = aPIError;
-          const obj9 = { type: "GAME_ORGANIZATION_FETCH_FAILURE", guildId: closure_129_0, error: closure_129_6 };
-          closure_130_1(closure_130_2[3]).dispatch(obj9);
-          throw closure_129_7;
+          c5 = 0;
+          closure_130_8 = closure_4;
+          const aPIError = new closure_131_0(closure_131_2[6]).APIError(closure_130_8);
+          closure_130_7 = aPIError;
+          const obj9 = { type: "GAME_ORGANIZATION_FETCH_FAILURE", guildId: closure_130_0, error: closure_130_7 };
+          closure_131_1(closure_131_2[3]).dispatch(obj9);
+          throw closure_130_8;
         } else if (arg0 === 1) {
-          c6 = 3;
+          c7 = 3;
           throw value;
         } else if (arg0 !== 2) {
           body = value.body;
           game_organization = body.game_organization;
           application = body.application;
-          closure_129_4 = closure_130_0(closure_130_2[5]).gameOrganizationFromServer(game_organization);
-          closure_129_5 = closure_130_4.createFromServer(application);
-          const obj10 = closure_130_0(closure_130_2[5]);
-          const obj12 = { type: "GAME_ORGANIZATION_FETCH_SUCCESS", gameOrganization: closure_129_4, application: closure_129_5 };
-          closure_130_1(closure_130_2[3]).dispatch(obj12);
-          c4 = 0;
-          const obj11 = closure_130_1(closure_130_2[3]);
+          application_config = body.application_config;
+          closure_130_5 = closure_131_0(closure_131_2[5]).gameOrganizationFromServer(game_organization);
+          closure_130_6 = closure_131_4.createFromServer(application);
+          const obj10 = closure_131_0(closure_131_2[5]);
+          const obj12 = { type: "GAME_ORGANIZATION_FETCH_SUCCESS", gameOrganization: closure_130_5, application: closure_130_6, displayNoun: null };
+          let display_noun;
+          if (application_config != null) {
+            display_noun = application_config.display_noun;
+          }
+          displayNoun = display_noun;
+          if (display_noun == null) {
+            displayNoun = null;
+          }
+          obj12.displayNoun = displayNoun;
+          closure_131_1(closure_131_2[3]).dispatch(obj12);
+          c5 = 0;
+          const obj11 = closure_131_1(closure_131_2[3]);
         }
-        c4 = 0;
-        c6 = 3;
+        c5 = 0;
+        c7 = 3;
         const obj = { value, done: true };
         return obj;
-      } catch (tmp31) {
-        closure_3 = tmp31;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp31;
+      } catch (tmp34) {
+        closure_4 = tmp34;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp34;
         } else {
-          c5 = tmp;
+          c6 = tmp;
         }
       }
     }

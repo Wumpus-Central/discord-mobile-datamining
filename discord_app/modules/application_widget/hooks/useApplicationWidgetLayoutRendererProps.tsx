@@ -1,19 +1,19 @@
-// === Module 12169: useApplicationWidgetLayoutRendererProps ===
+// === Module 12264: useApplicationWidgetLayoutRendererProps ===
 
-// Module 12169 (useApplicationWidgetLayoutRendererProps)
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12074 */;
-import ApplicationAssetV2Utils from "ApplicationAssetV2Utils" /* 12176 */;
+// Module 12264 (useApplicationWidgetLayoutRendererProps)
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12149 */;
+import ApplicationAssetV2Utils from "ApplicationAssetV2Utils" /* 12271 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationAssetsV2Store from "ApplicationAssetsV2Store" /* 12170 */;
-import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 12171 */;
-import LocaleStore from "LocaleStore" /* 2186 */;
+import ApplicationAssetsV2Store from "ApplicationAssetsV2Store" /* 12265 */;
+import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 12267 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(12171).FetchState;
+const FetchState = fn(12267).FetchState;
 const localizedStrings = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx");

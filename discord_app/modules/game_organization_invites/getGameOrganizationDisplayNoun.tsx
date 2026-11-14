@@ -1,9 +1,9 @@
-// === Module 13968: getGameOrganizationDisplayNoun ===
+// === Module 12539: getGameOrganizationDisplayNoun ===
 
-// Module 13968 (getGameOrganizationDisplayNoun)
+// Module 12539 (getGameOrganizationDisplayNoun)
 import util from "util" /* 1113 */;
-import _modDef2549 from "module_2549" /* 2549 */;
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 12274 */;
+import _modDef2565 from "module_2565" /* 2565 */;
+import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 12369 */;
 import size from "module_2" /* 2 */;
 
 const constants = GameOrganizationInviteConstants.GameOrganizationDisplayNouns;
@@ -16,11 +16,11 @@ export default function getGameOrganizationDisplayNoun(lowercase) {
   }
   if (lowercase.displayNoun === constants.GUILD) {
     const intl2 = util.intl;
-    const tmp8 = _modDef2549;
+    const tmp8 = _modDef2565;
     intl2.string(flag ? tmp8.aikK3o : tmp8.sm5cz5);
   } else {
     const intl = util.intl;
-    const tmp4 = _modDef2549;
+    const tmp4 = _modDef2565;
     return intl.string(flag ? tmp4.xXXGsq : tmp4.nVMqjA);
   }
 };

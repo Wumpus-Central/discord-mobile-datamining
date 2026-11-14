@@ -1,8 +1,8 @@
-// === Module 20094: NewMemberActionsCompletedModal ===
+// === Module 20254: NewMemberActionsCompletedModal ===
 
-// Module 20094 (NewMemberActionsCompletedModal)
+// Module 20254 (NewMemberActionsCompletedModal)
 import nativeDefault from "native" /* 575 */;
-import _modDef1652 from "module_1652" /* 1652 */;
+import _modDef1655 from "module_1655" /* 1655 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = { screen: { flex: 1, position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0, 0, 0, 0.8)", display: "flex", alignItems: "center", justifyContent: "center" }, text: { marginBottom: 16 }, progressBackground: null, progressForeground: null };
 let size = { borderRadius: nativeDefault.radii.round, height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, width: "60%" };
 obj2.progressBackground = size;
@@ -25,14 +25,14 @@ export default function NewMemberActionsCompleted(arg0) {
   _require = undefined;
   ({ initialPercent, numActions } = arg0);
   const tmp = closure_7();
-  const sharedValue = require("module_1652").useSharedValue(initialPercent);
+  const sharedValue = require("module_1655").useSharedValue(initialPercent);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
     const result = _undefined.set(1);
   }, items);
-  const obj = require("module_1652");
-  const items1 = [closure_8, require("module_1652").withDelay, require("timing/timing").withTiming, sharedValue];
+  const obj = require("module_1655");
+  const items1 = [closure_8, require("module_1655").withDelay, require("timing/timing").withTiming, sharedValue];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -47,9 +47,9 @@ export default function NewMemberActionsCompleted(arg0) {
   NewMemberActionsCompletedModalTsx1.__closure = items2;
   NewMemberActionsCompletedModalTsx1.__workletHash = 7122689544809;
   NewMemberActionsCompletedModalTsx1.__initData = tmp6;
-  const animatedStyle = require("module_1652").useAnimatedStyle(NewMemberActionsCompletedModalTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(NewMemberActionsCompletedModalTsx1);
   const effect1 = noop.useEffect(() => {
-    const timerId = setTimeout(() => _undefined2(6785).popWithKey(_undefined(7018).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+    const timerId = setTimeout(() => _undefined2(6848).popWithKey(_undefined(7081).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
   }, []);
   const obj4 = { style: tmp.screen, children: null };
   const obj5 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
@@ -60,7 +60,7 @@ export default function NewMemberActionsCompleted(arg0) {
   const obj7 = { style: null };
   const items4 = [tmp.progressForeground, animatedStyle];
   obj7.style = items4;
-  obj6.children = closure_5(_modDef1652.View, obj7);
+  obj6.children = closure_5(_modDef1655.View, obj7);
   items3[1] = closure_5(View, obj6);
   obj4.children = items3;
   return closure_6(View, obj4);

@@ -1,29 +1,29 @@
-// === Module 18351: CollectiblesShopV2 ===
+// === Module 18474: CollectiblesShopV2 ===
 
-// Module 18351 (CollectiblesShopV2)
+// Module 18474 (CollectiblesShopV2)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 2183 */;
-import dismissible_content from "dismissible_content" /* 5076 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5285 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8417 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 8468 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9656 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10364 */;
-import ImprovedMobileShopLoadingExperiment from "ImprovedMobileShopLoadingExperiment" /* 10377 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 10389 */;
-import takeWhileDefault from "takeWhile" /* 18358 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 18361 */;
-import ShopCategory from "ShopCategory" /* 18363 */;
-import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 18365 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 18366 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 2186 */;
+import dismissible_content from "dismissible_content" /* 5139 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5348 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8483 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 8534 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9723 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10433 */;
+import ImprovedMobileShopLoadingExperiment from "ImprovedMobileShopLoadingExperiment" /* 10446 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 10458 */;
+import takeWhileDefault from "takeWhile" /* 18481 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 18484 */;
+import ShopCategory from "ShopCategory" /* 18486 */;
+import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 18488 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 18489 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5869 */;
+import DevSettingsStore from "DevSettingsStore" /* 5932 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
-import UserStore from "UserStore" /* 1385 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8419 */;
-import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5927 */;
+import UserStore from "UserStore" /* 1388 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8485 */;
+import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5990 */;
 
 const MobileNitroUpsellInShopFeedExperimentDefault = MobileNitroUpsellInShopFeedExperiment;
 
@@ -33,7 +33,7 @@ function ImprovedLoadingCollectiblesShopInternal(arg0) {
   const isImprovedMobileShopLoadingEnabled = ImprovedMobileShopLoadingExperiment.useIsImprovedMobileShopLoadingEnabled("collectibles_shop_v2");
   const merged = Object.assign(arg0);
   obj2.improvedLoading = isImprovedMobileShopLoadingEnabled;
-  return guild(CollectiblesShopInternal, obj2);
+  return closure_1_22(CollectiblesShopInternal, obj2);
 }
 class CollectiblesShopV2 {
   constructor(arg0) {
@@ -44,7 +44,7 @@ class CollectiblesShopV2 {
     nativePaymentsConnected = nativeIAPPayments.nativePaymentsConnected;
     storeFront = nativeIAPPayments.storeFront;
     tmp5 = nativePaymentsConnected;
-    tmp4 = closure_23();
+    tmp4 = closure_24();
     obj2 = nativePaymentsConnected(closure_2[19]);
     items = [];
     items[0] = closure_9;
@@ -74,7 +74,7 @@ class CollectiblesShopV2 {
       }
     }, items1);
     tmp5Result = tmp5(tmp2[27]);
-    tmp11 = tmp5Result.isIOS() && !tmp5(tmp2[58]).isStable && isStaffResult;
+    tmp11 = tmp5Result.isIOS() && !tmp5(tmp2[59]).isStable && isStaffResult;
     if (!nativePaymentsConnected) {
       if (!tmp11) {
         if (!tmp9) {
@@ -95,11 +95,11 @@ class CollectiblesShopV2 {
       str = "collectibles mobile shop failed to connect to native payments isIOS: ";
       text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`;
       str2 = " isStable: ";
-      captureMessageResult = tmpResult.captureMessage(`${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${tmp5(tmp2[58]).isStable}`);
+      captureMessageResult = tmpResult.captureMessage(`${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${tmp5(tmp2[59]).isStable}`);
     }
     screen = global;
     if (global.screen !== closure_14.ORBS) {
-      tmp5Result2 = tmp5(tmp2[59]);
+      tmp5Result2 = tmp5(tmp2[60]);
       if (!tmp5Result2.isMetaQuest()) {
         tmp16 = jsx;
         tmp17 = ImprovedLoadingCollectiblesShopInternal;
@@ -125,20 +125,21 @@ class CollectiblesShopV2 {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const FeedBlockRecord = fn(8453).FeedBlockRecord;
+const FeedBlockRecord = fn(8519).FeedBlockRecord;
 const CollectiblesShopConstants = fn(1074);
 ({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: map1, CollectiblesMobileShopScreen: closure_14, CollectibleShopTab: closure_15, SHOP_ALL_PAGE_SIZE } = CollectiblesShopConstants);
+let closure_17 = CollectiblesShopConstants.TWELVE_DAYS_COLLECTION_SKU_ID;
 const Constants = fn(1072);
-({ AnalyticEvents: closure_17, COLLECTIBLES_APPLICATION_ID: closure_18, PaymentGateways: closure_19 } = Constants);
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+({ AnalyticEvents: closure_18, COLLECTIBLES_APPLICATION_ID: closure_19, PaymentGateways: closure_20 } = Constants);
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(5243);
-const dependencyMap2 = createStyles.createStyles({ rootContainer: { height: "100%", width: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 } });
+({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
+const createStyles = fn(5306);
+const dependencyMap3 = createStyles.createStyles({ rootContainer: { height: "100%", width: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 } });
 const constants3 = { CATEGORY: "category", NITRO_UPSELL: "nitro_upsell", SKELETON: "skeleton" };
-let closure_25 = 2 * SHOP_ALL_PAGE_SIZE;
-let closure_26 = Array.from({ length: 3 }, (arg0, skeletonIndex) => ({ kind: constants3.SKELETON, skeletonIndex }));
-let closure_27 = [];
+let closure_26 = 2 * SHOP_ALL_PAGE_SIZE;
+let closure_27 = Array.from({ length: 3 }, (arg0, skeletonIndex) => ({ kind: constants3.SKELETON, skeletonIndex }));
+let closure_28 = [];
 function CollectiblesShopInternal(analyticsSource) {
   analyticsSource = analyticsSource.analyticsSource;
   const onNavigateAway = analyticsSource.onNavigateAway;
@@ -184,7 +185,7 @@ function CollectiblesShopInternal(analyticsSource) {
   let tmp7;
   let obj2 = analyticsSource(screen[17]);
   if (collectiblesPromotionEndpointReferenceMobile) {
-    tmp7 = stateFromStores;
+    tmp7 = isFetchingGoogleSkus;
   }
   onNavigateAway(screen[18])(tmp7);
   const tmp6 = onNavigateAway(screen[18]);
@@ -203,7 +204,7 @@ function CollectiblesShopInternal(analyticsSource) {
   bypassGoogleSkuSync = stateFromStoresObject.bypassGoogleSkuSync;
   noCache = stateFromStoresObject.noCache;
   includeUnpublished = stateFromStoresObject.includeUnpublished;
-  let tmp12 = analyticsLocations();
+  let tmp12 = navigation();
   let country;
   if (storeFront != null) {
     country = storeFront.country;
@@ -223,7 +224,7 @@ function CollectiblesShopInternal(analyticsSource) {
     obj.tab = FEATURED_PAGE;
     return obj;
   }, items2);
-  let obj3 = { paymentGateway: isFetchingGoogleSkus.APPLE };
+  let obj3 = { paymentGateway: loadedGoogleSkuIds.APPLE };
   const tmpResult10 = analyticsSource(screen[19]);
   if (null != country) {
     let obj4 = { countryCode: country };
@@ -304,7 +305,7 @@ function CollectiblesShopInternal(analyticsSource) {
     if (improvedLoading) {
       return collectibles_CollectiblesUtils.getGoogleSkuIds(screen === constants.SHOP_ALL ? categories1 : stateFromStores.flatMap((products) => products.products));
     } else {
-      return closure_27;
+      return closure_28;
     }
   }, items8);
   const tmp5Result11 = onNavigateAway(screen[29]);
@@ -416,7 +417,7 @@ function CollectiblesShopInternal(analyticsSource) {
       tmp = mapped.length > 0;
     }
     if (tmp) {
-      const obj = { kind: navigation.NITRO_UPSELL };
+      const obj = { kind: memo4.NITRO_UPSELL };
       mapped.splice(1, 0, obj);
     }
     let tmp4 = improvedLoading;
@@ -433,7 +434,7 @@ function CollectiblesShopInternal(analyticsSource) {
     if (tmp4) {
       const push = mapped.push;
       items = [];
-      HermesBuiltin.arraySpread(closure_26, 0);
+      HermesBuiltin.arraySpread(closure_27, 0);
       HermesBuiltin.apply(items, mapped);
     }
     return mapped;
@@ -493,8 +494,8 @@ function CollectiblesShopInternal(analyticsSource) {
   const items20 = [sessionId, includeUnpublished, noCache, stateFromStores1, dismiss, tmp9Result3[1]];
   const callback1 = obj5.useCallback((item) => {
     item = item.item;
-    if (item.kind === navigation.SKELETON) {
-      let tmp18Result = guild(ShopCategory.ShopCategorySkeleton, {});
+    if (item.kind === memo4.SKELETON) {
+      let tmp18Result = closure_2_22(ShopCategory.ShopCategorySkeleton, {});
     } else if (item.kind === tmp.NITRO_UPSELL) {
       const obj2 = { isDarkTheme: stateFromStores1, dismiss, buttonVariant: null };
       let GET_NITRO = closure_31;
@@ -502,7 +503,7 @@ function CollectiblesShopInternal(analyticsSource) {
         GET_NITRO = MobileNitroUpsellInShopFeedExperiment.NitroUpsellBannerButtonVariant.GET_NITRO;
       }
       obj2.buttonVariant = GET_NITRO;
-      tmp18Result = guild(ShopNitroUpsellBanner.ShopNitroUpsellBanner, obj2);
+      tmp18Result = closure_2_22(ShopNitroUpsellBanner.ShopNitroUpsellBanner, obj2);
     } else {
       let tmp4 = 0 !== item.categoryIndex;
       if (!tmp4) {
@@ -514,7 +515,7 @@ function CollectiblesShopInternal(analyticsSource) {
         CollectiblesPerfLogging.trackShopPerf(obj3);
       }
       const obj4 = { category: item.category, isDarkTheme: stateFromStores1, index: item.categoryIndex };
-      tmp18Result = guild(ShopCategory.ShopCategory, obj4);
+      tmp18Result = closure_2_22(ShopCategory.ShopCategory, obj4);
     }
     return tmp18Result;
   }, items20);
@@ -522,7 +523,7 @@ function CollectiblesShopInternal(analyticsSource) {
   const items21 = [categories1];
   const callback3 = obj5.useCallback((kind) => {
     kind = kind.kind;
-    if (navigation.CATEGORY === kind) {
+    if (memo4.CATEGORY === kind) {
       return kind.category.skuId;
     } else if (tmp.SKELETON === kind) {
       const _HermesInternal = HermesInternal;
@@ -548,7 +549,7 @@ function CollectiblesShopInternal(analyticsSource) {
     while (iter !== undefined) {
       let item = iter.next().item;
       let tmp = item;
-      if (item.kind === navigation.SKELETON) {
+      if (item.kind === memo4.SKELETON) {
         let _Math = Math;
         let bound = Math.max(num, memo5.length);
         num = bound;
@@ -585,7 +586,7 @@ function CollectiblesShopInternal(analyticsSource) {
       tmp = memo4.length === categories1.length;
     }
     if (tmp) {
-      tmp = memo5.length < first3 + closure_25;
+      tmp = memo5.length < first3 + closure_26;
     }
     if (tmp) {
       prefetchThrough(categories1.length);
@@ -609,7 +610,7 @@ function CollectiblesShopInternal(analyticsSource) {
       tmp16 = null;
     }
     obj3.fetchShopHomeError = tmp16;
-    return guild(CollectiblesShopFeaturedPageDefault, obj3);
+    return closure_2_22(CollectiblesShopFeaturedPageDefault, obj3);
   }, items24);
   const callback6 = obj5.useCallback(() => {
     if (!closure_34.current[constants.ORBS]) {
@@ -627,7 +628,7 @@ function CollectiblesShopInternal(analyticsSource) {
       if (tmp67) {
         if (tmp72) {
           const obj9 = { style: tmp12.spinner, size: "large" };
-          return currentUserIfAvailable(noCache, obj9);
+          return stateFromStores1(noCache, obj9);
         }
       }
       tmp72 = false !== isFetchingShopHome || memo3.some((item) => !loadedGoogleSkuIds.has(item));
@@ -635,12 +636,12 @@ function CollectiblesShopInternal(analyticsSource) {
       if (tmp67) {
         if (isFetchingShopHome) {
           const obj10 = { style: tmp12.spinner, size: "large" };
-          return currentUserIfAvailable(noCache, obj10);
+          return stateFromStores1(noCache, obj10);
         }
       }
       if (tmp66) {
         const obj11 = { style: tmp12.spinner, size: "large" };
-        return currentUserIfAvailable(noCache, obj11);
+        return stateFromStores1(noCache, obj11);
       }
     }
     let tmp73 = !improvedLoading;
@@ -668,18 +669,18 @@ function CollectiblesShopInternal(analyticsSource) {
     const obj16 = { value: improvedLoading, children: null };
     if (screen === tmp19.SHOP_ALL) {
       const obj17 = { data: memo6, renderItem: callback1, getItemType: callback2, keyExtractor: null, initialScrollIndex: null, onViewableItemsChanged: null };
-      let tmp82;
+      let tmp84;
       if (improvedLoading) {
-        tmp82 = callback3;
+        tmp84 = callback3;
       }
-      obj17.keyExtractor = tmp82;
+      obj17.keyExtractor = tmp84;
       obj17.initialScrollIndex = memo7;
-      let tmp83;
+      let tmp85;
       if (improvedLoading) {
-        tmp83 = callback4;
+        tmp85 = callback4;
       }
-      obj17.onViewableItemsChanged = tmp83;
-      let tmp76Result = tmp76(tmp5(tmp2[54]), obj17);
+      obj17.onViewableItemsChanged = tmp85;
+      let tmp77Result = tmp76(tmp5(tmp2[54]), obj17);
       const tmp5Result17 = tmp5(tmp2[54]);
     } else if (screen === tmp19.ORBS) {
       const obj18 = { shopBlocks, fetchShopHomeError: null, onRenderFirstOrbsItem: null, getItemType: null };
@@ -689,21 +690,28 @@ function CollectiblesShopInternal(analyticsSource) {
       obj18.fetchShopHomeError = fetchShopHomeError;
       obj18.onRenderFirstOrbsItem = callback6;
       obj18.getItemType = callback7;
-      tmp76Result = tmp76(tmp5(tmp2[55]), obj18);
+      tmp77Result = tmp76(tmp5(tmp2[55]), obj18);
       const tmp5Result18 = tmp5(tmp2[55]);
     } else {
-      const obj19 = { children: null };
-      const obj20 = { data: shopBlocks, renderItem: callback5, getItemType: callback7 };
-      obj19.children = tmp76(tmp5(tmp2[54]), obj20);
-      tmp76Result = tmp76(tmp(tmp2[56]).CollectiblesCoachmarkScrollDismissProvider, obj19);
+      let tmp76Result2 = shopBlocks.length > 0;
+      if (tmp76Result2) {
+        const obj19 = { collectionSkuId: resolvedSkuIds };
+        tmp76Result2 = tmp76(tmp(tmp2[57]).TwelveDaysHomeNagbar, obj19);
+      }
+      const obj20 = { children: null };
+      const items26 = [tmp76Result2, ];
+      const obj21 = { data: shopBlocks, renderItem: callback5, getItemType: callback7 };
+      items26[1] = tmp76(tmp5(tmp2[54]), obj21);
+      obj20.children = items26;
+      tmp77Result = tmp77(tmp(tmp2[56]).CollectiblesCoachmarkScrollDismissProvider, obj20);
     }
-    obj16.children = tmp76Result;
-    obj15.children = currentUserIfAvailable(tmp(tmp2[53]).ImprovedMobileShopLoadingProvider, obj16);
-    obj14.children = currentUserIfAvailable(tmp(tmp2[52]).NativePaymentContextProvider, obj15);
-    const items26 = [currentUserIfAvailable(includeUnpublished, obj14), currentUserIfAvailable(tmp5(tmp2[57]), {})];
-    obj13.children = items26;
-    obj12.children = stateFromStores1(tmp(tmp2[51]).CollectiblesAnalyticsProvider, obj13);
-    return currentUserIfAvailable(tmp(tmp2[33]).AnalyticsLocationProvider, obj12);
+    obj16.children = tmp77Result;
+    obj15.children = stateFromStores1(tmp(tmp2[53]).ImprovedMobileShopLoadingProvider, obj16);
+    obj14.children = stateFromStores1(tmp(tmp2[52]).NativePaymentContextProvider, obj15);
+    const items27 = [stateFromStores1(includeUnpublished, obj14), stateFromStores1(tmp5(tmp2[58]), {})];
+    obj13.children = items27;
+    obj12.children = analyticsLocations(tmp(tmp2[51]).CollectiblesAnalyticsProvider, obj13);
+    return stateFromStores1(tmp(tmp2[33]).AnalyticsLocationProvider, obj12);
   }
   const tmp5Result14 = onNavigateAway(screen[45]);
 }

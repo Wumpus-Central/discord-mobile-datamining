@@ -1,6 +1,6 @@
-// === Module 7263: ConjurePagesStore ===
+// === Module 7327: ConjurePagesStore ===
 
-// Module 7263 (ConjurePagesStore)
+// Module 7327 (ConjurePagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 

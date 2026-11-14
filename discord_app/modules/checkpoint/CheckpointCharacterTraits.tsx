@@ -1,26 +1,26 @@
-// === Module 6358: CheckpointCharacterTraits ===
+// === Module 6421: CheckpointCharacterTraits ===
 
-// Module 6358 (CheckpointCharacterTraits)
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6315 */;
-import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6357 */;
-import CheckpointTrait from "CheckpointTrait" /* 6359 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6360 */;
-import CheckpointCharacterBase from "CheckpointCharacterBase" /* 6361 */;
-import CheckpointCharacterShoes from "CheckpointCharacterShoes" /* 6392 */;
-import CheckpointCharacterOutfit from "CheckpointCharacterOutfit" /* 6421 */;
-import CheckpointCharacterFace from "CheckpointCharacterFace" /* 6562 */;
-import CheckpointCharacterHat from "CheckpointCharacterHat" /* 6593 */;
-import CheckpointCharacterWearable from "CheckpointCharacterWearable" /* 6622 */;
-import CheckpointCharacterAura from "CheckpointCharacterAura" /* 6651 */;
+// Module 6421 (CheckpointCharacterTraits)
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6378 */;
+import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6420 */;
+import CheckpointTrait from "CheckpointTrait" /* 6422 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6423 */;
+import CheckpointCharacterBase from "CheckpointCharacterBase" /* 6424 */;
+import CheckpointCharacterShoes from "CheckpointCharacterShoes" /* 6455 */;
+import CheckpointCharacterOutfit from "CheckpointCharacterOutfit" /* 6484 */;
+import CheckpointCharacterFace from "CheckpointCharacterFace" /* 6625 */;
+import CheckpointCharacterHat from "CheckpointCharacterHat" /* 6656 */;
+import CheckpointCharacterWearable from "CheckpointCharacterWearable" /* 6685 */;
+import CheckpointCharacterAura from "CheckpointCharacterAura" /* 6714 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-function getVisibleTraitRarities(item, c4) {
+function getVisibleTraitRarities(item, stats) {
   let tmp = null;
-  if (null != c4) {
+  if (null != stats) {
     if (require("CheckpointTrait").CheckpointTrait.FACE === item) {
-      const voice = c4.voice;
+      const voice = stats.voice;
       let prop;
       if (voice != null) {
         prop = voice.totalVoiceMinutesPercentile;
@@ -29,8 +29,8 @@ function getVisibleTraitRarities(item, c4) {
         prop = null;
       }
       tmp = prop;
-    } else if (tmp3(6359).CheckpointTrait.OUTFIT === item) {
-      const messages = c4.messages;
+    } else if (tmp3(6422).CheckpointTrait.OUTFIT === item) {
+      const messages = stats.messages;
       let prop1;
       if (messages != null) {
         prop1 = messages.numMessagesSentPercentile;
@@ -39,8 +39,8 @@ function getVisibleTraitRarities(item, c4) {
         prop1 = null;
       }
       tmp = prop1;
-    } else if (tmp3(6359).CheckpointTrait.HAT === item) {
-      const guilds = c4.guilds;
+    } else if (tmp3(6422).CheckpointTrait.HAT === item) {
+      const guilds = stats.guilds;
       let prop2;
       if (guilds != null) {
         const first = guilds.guilds[0];
@@ -52,8 +52,8 @@ function getVisibleTraitRarities(item, c4) {
         prop2 = null;
       }
       tmp = prop2;
-    } else if (tmp3(6359).CheckpointTrait.SHOES === item) {
-      const emojis = c4.emojis;
+    } else if (tmp3(6422).CheckpointTrait.SHOES === item) {
+      const emojis = stats.emojis;
       let prop3;
       if (emojis != null) {
         prop3 = emojis.numEmojisSentPercentile;
@@ -62,8 +62,8 @@ function getVisibleTraitRarities(item, c4) {
         prop3 = null;
       }
       tmp = prop3;
-    } else if (tmp3(6359).CheckpointTrait.WEARABLE === item) {
-      const games2 = c4.games;
+    } else if (tmp3(6422).CheckpointTrait.WEARABLE === item) {
+      const games2 = stats.games;
       let prop4;
       if (games2 != null) {
         prop4 = games2.totalGamesPlayedPercentile;
@@ -72,8 +72,8 @@ function getVisibleTraitRarities(item, c4) {
         prop4 = null;
       }
       tmp = prop4;
-    } else if (tmp3(6359).CheckpointTrait.AURA === item) {
-      const games = c4.games;
+    } else if (tmp3(6422).CheckpointTrait.AURA === item) {
+      const games = stats.games;
       let prop5;
       if (games != null) {
         prop5 = games.totalDaysPlayedPercentile;
@@ -82,7 +82,7 @@ function getVisibleTraitRarities(item, c4) {
         prop5 = null;
       }
       tmp = prop5;
-    } else if (tmp3(6359).CheckpointTrait.BASE === item) {
+    } else if (tmp3(6422).CheckpointTrait.BASE === item) {
       tmp = null;
     }
   }
@@ -106,10 +106,10 @@ function getVisibleTraitRarities(item, c4) {
   }));
 }
 let closure_129_0 = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
-let f91332 = (arg0) => require.has(arg0);
+let f92520 = (arg0) => require.has(arg0);
 const set = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
 let closure_130_0 = new Set(Object.values(CheckpointTrait.CheckpointTrait));
-f91332 = (arg0) => require.has(arg0);
+f92520 = (arg0) => require.has(arg0);
 let obj = {};
 obj[CheckpointTrait.CheckpointTrait.FACE] = CheckpointTraitConfig.CHECKPOINT_FACE_OPTION_TO_RARITY;
 obj[CheckpointTrait.CheckpointTrait.OUTFIT] = CheckpointTraitConfig.CHECKPOINT_OUTFIT_OPTION_TO_RARITY;
@@ -240,7 +240,7 @@ export function getCharacterLayerOrdering(wearable) {
   const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = CheckpointTraitConfig.CHECKPOINT_WEARABLE_LAYER_BACKGROUND;
   const hasItem = CHECKPOINT_WEARABLE_LAYER_BACKGROUND.has(wearable);
   const tmp2 = CheckpointTraitConfig;
-  return hasItem ? tmp2.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f91332);
+  return hasItem ? tmp2.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f92520);
 }
 export const CHECKPOINT_TRAIT_TO_OPTION_ASSETS = obj2;
 export const CHECKPOINT_TRAIT_TO_OPTION_IDS = obj3;
@@ -256,7 +256,7 @@ export function getOutfitDefaultOptionId(character) {
 export function getTraitOptionRarity(item10034, item10034) {
   let tmp2;
   if (null != obj[item10034][item10034]) {
-    if (typeof f91332 === "function") {
+    if (typeof f92520 === "function") {
       if (closure_131_0.has(tmp)) {
         tmp2 = tmp;
       }
@@ -278,7 +278,7 @@ export function isTraitSelectionLocked(item, arg1, savedCharacter) {
   } else {
     let tmp4;
     if (null != obj[item][arg1]) {
-      if (typeof f91332 === "function") {
+      if (typeof f92520 === "function") {
         if (closure_131_0.has(tmp11)) {
           tmp4 = tmp11;
         }

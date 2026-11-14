@@ -1,14 +1,14 @@
-// === Module 7197: ConjureUtils ===
+// === Module 7260: ConjureUtils ===
 
-// Module 7197 (ConjureUtils)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6955 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6990 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 7198 */;
-import ApplicationStore from "ApplicationStore" /* 2162 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 5173 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
+// Module 7260 (ConjureUtils)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7018 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 7053 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 7261 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 5236 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
 
 require = fn;
 function conjureChannelAppId(channel) {
@@ -26,7 +26,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(5173);
+let GuildChannelStore = fn(5236);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
@@ -37,13 +37,13 @@ const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureUtils.tsx");
 
-export function conjureSettingsGuildId(project, arg1) {
+export function conjureSettingsGuildId(project, stateFromStores) {
   let tmp = null;
   if (null != project) {
     tmp = null;
     if ("guild" === project.install_scope) {
       let preview_guild_id = null;
-      if (arg1) {
+      if (stateFromStores) {
         preview_guild_id = project.preview_guild_id;
       }
       if (preview_guild_id == null) {

@@ -1,8 +1,8 @@
-// === Module 17142: SettingsAccountStandingScreen ===
+// === Module 17265: SettingsAccountStandingScreen ===
 
-// Module 17142 (SettingsAccountStandingScreen)
+// Module 17265 (SettingsAccountStandingScreen)
 import jsxProd from "jsxProd" /* 21 */;
-import SafetyHubPageDefault from "SafetyHubPage" /* 17143 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 17266 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

@@ -1,23 +1,23 @@
-// === Module 8598: SessionHeartbeatScheduler ===
+// === Module 8665: SessionHeartbeatScheduler ===
 
-// Module 8598 (SessionHeartbeatScheduler)
+// Module 8665 (SessionHeartbeatScheduler)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import SessionForegroundUtils2 from "SessionForegroundUtils" /* 8599 */;
-import SessionRouteUtils2 from "SessionRouteUtils" /* 8600 */;
-import MonotonicClock from "MonotonicClock" /* 8601 */;
-import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 8606 */;
-import SessionUtils from "SessionUtils" /* 8608 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import SessionForegroundUtils2 from "SessionForegroundUtils" /* 8666 */;
+import SessionRouteUtils2 from "SessionRouteUtils" /* 8667 */;
+import MonotonicClock from "MonotonicClock" /* 8668 */;
+import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 8673 */;
+import SessionUtils from "SessionUtils" /* 8675 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6737 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6800 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IdleStore from "IdleStore" /* 6978 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
+import IdleStore from "IdleStore" /* 7041 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
 
 require = fn;
 function trackHeartbeat() {
@@ -392,7 +392,7 @@ let closure_39 = async function _getSession() {
           closure_130_3 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -523,9 +523,9 @@ let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = RTCConnectionStore.getState();
-const SessionForegroundUtils = fn(8599);
+const SessionForegroundUtils = fn(8666);
 let closure_22 = SessionForegroundUtils.isForegrounded();
-const SessionRouteUtils = fn(8600);
+const SessionRouteUtils = fn(8667);
 let closure_23 = SessionRouteUtils.isActiveUserRoute();
 let token = AuthenticationStore.getToken();
 const size = fn(2);

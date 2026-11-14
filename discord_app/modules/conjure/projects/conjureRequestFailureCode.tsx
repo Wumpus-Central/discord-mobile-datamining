@@ -1,6 +1,6 @@
-// === Module 7270: conjureRequestFailureCode ===
+// === Module 7334: conjureRequestFailureCode ===
 
-// Module 7270 (conjureRequestFailureCode)
+// Module 7334 (conjureRequestFailureCode)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureRequestFailureCode.tsx");

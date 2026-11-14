@@ -1,9 +1,9 @@
-// === Module 10057: ExperimentalMythicIcon ===
+// === Module 10125: ExperimentalMythicIcon ===
 
-// Module 10057 (ExperimentalMythicIcon)
+// Module 10125 (ExperimentalMythicIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod10058 from "module_10058" /* 10058 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod10126 from "module_10126" /* 10126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ExperimentalMythicIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10058, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10126, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

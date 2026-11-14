@@ -1,11 +1,11 @@
-// === Module 5841: Backdrop ===
+// === Module 5904: Backdrop ===
 
-// Module 5841 (Backdrop)
+// Module 5904 (Backdrop)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import native from "native" /* 5314 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import native from "native" /* 5377 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = {};
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { fill: StyleSheet.absoluteFillObject, backdrop: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM }, backdropOpaque: null, accessibilityDismiss: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj2.backdropOpaque = { backgroundColor: nativeDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };
@@ -82,7 +82,7 @@ export function Backdrop(animatedProps) {
     obj8.style = items3;
     items2[1] = React4(tmp8, obj8);
     obj3.children = items2;
-    return hasOwnProperty(_modDef1652.View, obj3);
+    return hasOwnProperty(_modDef1655.View, obj3);
   }
   obj = native;
 }

@@ -1,9 +1,9 @@
-// === Module 18200: OverridePremiumTypeActions ===
+// === Module 18320: OverridePremiumTypeActions ===
 
-// Module 18200 (OverridePremiumTypeActions)
+// Module 18320 (OverridePremiumTypeActions)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import createMessage from "createMessage" /* 8784 */;
-import UserStore from "UserStore" /* 1385 */;
+import createMessage from "createMessage" /* 8851 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const size = fn(2);

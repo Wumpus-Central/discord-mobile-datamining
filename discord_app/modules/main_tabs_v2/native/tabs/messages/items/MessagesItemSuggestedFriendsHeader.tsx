@@ -1,11 +1,11 @@
-// === Module 18689: MessagesItemSuggestedFriendsHeader ===
+// === Module 18818: MessagesItemSuggestedFriendsHeader ===
 
-// Module 18689 (MessagesItemSuggestedFriendsHeader)
+// Module 18818 (MessagesItemSuggestedFriendsHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10202 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10271 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,8 +13,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const sum = fn(5866).TextStyleSheet["body-md/semibold"].lineHeight + nativeDefault.space.PX_24;
-const createStyles = fn(5243);
+const sum = fn(5929).TextStyleSheet["body-md/semibold"].lineHeight + nativeDefault.space.PX_24;
+const createStyles = fn(5306);
 let obj = { headerContainer: { height: sum, justifyContent: "center", overflow: "hidden" }, stickyOverlay: null, headerText: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -50,7 +50,7 @@ export default noop.memo(function MessagesItemSuggestedFriendsHeader(stickyLeft)
   MessagesItemSuggestedFriendsHeaderTsx1.__closure = items1;
   MessagesItemSuggestedFriendsHeaderTsx1.__workletHash = 9510203774773;
   MessagesItemSuggestedFriendsHeaderTsx1.__initData = tmp4;
-  const derivedValue = _mod1652.useDerivedValue(MessagesItemSuggestedFriendsHeaderTsx1);
+  const derivedValue = _mod1655.useDerivedValue(MessagesItemSuggestedFriendsHeaderTsx1);
   const items2 = [stickyLeft, stickyTop];
   const obj2 = { style: tmp.headerContainer, collapsable: false, children: null };
   let tmp11Result = null;

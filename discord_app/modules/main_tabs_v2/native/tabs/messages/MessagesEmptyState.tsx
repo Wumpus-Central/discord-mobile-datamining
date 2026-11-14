@@ -1,15 +1,15 @@
-// === Module 18643: MessagesEmptyState ===
+// === Module 18772: MessagesEmptyState ===
 
-// Module 18643 (MessagesEmptyState)
+// Module 18772 (MessagesEmptyState)
 import util from "util" /* 1113 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import useNavigation from "useNavigation" /* 1499 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 6275 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8494 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 17585 */;
-import ActivitiesTogetherSpotIllustration from "ActivitiesTogetherSpotIllustration" /* 18644 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 6338 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8560 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 17703 */;
+import ActivitiesTogetherSpotIllustration from "ActivitiesTogetherSpotIllustration" /* 18773 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center" }, scrollViewContentContainer: { flexGrow: 2 }, innerContainer: { alignItems: "center", justifyContent: "center" }, imageContainer: { alignItems: "center", marginBottom: 24 }, textWrapper: { paddingHorizontal: 48 }, body: { marginBottom: 24, textAlign: "center" }, title: { textAlign: "center", fontSize: 18, marginBottom: 8 }, buttonWrapper: { paddingHorizontal: 16, paddingBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx");

@@ -1,29 +1,29 @@
-// === Module 10824: ChannelRow ===
+// === Module 10893: ChannelRow ===
 
-// Module 10824 (ChannelRow)
+// Module 10893 (ChannelRow)
 import nativeDefault from "native" /* 575 */;
-import _modDef2166 from "module_2166" /* 2166 */;
-import DateUtils from "DateUtils" /* 5065 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import useChannelName from "useChannelName" /* 5891 */;
-import TextIcon2 from "TextIcon" /* 8013 */;
-import ForumIcon from "ForumIcon" /* 8021 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10825 */;
-import GuildIconWithChannelType from "GuildIconWithChannelType" /* 15060 */;
+import _modDef2169 from "module_2169" /* 2169 */;
+import DateUtils from "DateUtils" /* 5128 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import useChannelName from "useChannelName" /* 5954 */;
+import TextIcon2 from "TextIcon" /* 8078 */;
+import ForumIcon from "ForumIcon" /* 8086 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10894 */;
+import GuildIconWithChannelType from "GuildIconWithChannelType" /* 15174 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import GuildStore from "GuildStore" /* 5114 */;
-import ReadStateStore from "ReadStateStore" /* 6952 */;
-import RelationshipStore from "RelationshipStore" /* 5185 */;
-import UserStore from "UserStore" /* 1385 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import GuildStore from "GuildStore" /* 5177 */;
+import ReadStateStore from "ReadStateStore" /* 7015 */;
+import RelationshipStore from "RelationshipStore" /* 5248 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10175).UserRowModes;
-const ReadStateTypes = fn(6896).ReadStateTypes;
+const UserRowModes = fn(10244).UserRowModes;
+const ReadStateTypes = fn(6959).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { guildIcon: { flexShrink: 0, flexGrow: 0 }, subLabel: { display: "flex", flexDirection: "row", alignItems: "center" }, subLabelIcon: { width: 12, height: 12, marginRight: 2 }, subLabelSeparator: { marginHorizontal: nativeDefault.space.PX_4 }, threadName: { flexShrink: 1 } };
 let closure_15 = createStyles.createStyles(obj);
 let obj3 = { marginHorizontal: nativeDefault.space.PX_4 };
@@ -140,7 +140,7 @@ export default noop.memo(function ChannelRow(channel) {
         const obj4 = { children: null };
         const obj5 = { style: closure_7.subLabelSeparator, variant: "body-xs/medium", color: "text-subtle", children: "\u2022" };
         const items1 = [application_id(Text_Text.Text, obj5), ];
-        const obj6 = { variant: "body-xs/medium", color: "text-subtle", children: DateUtils.calendarFormatCompact(_modDef2166(tmp14)) };
+        const obj6 = { variant: "body-xs/medium", color: "text-subtle", children: DateUtils.calendarFormatCompact(_modDef2169(tmp14)) };
         items1[1] = application_id(Text_Text.Text, obj6);
         obj4.children = items1;
         tmp5Result = gesture(state, obj4);

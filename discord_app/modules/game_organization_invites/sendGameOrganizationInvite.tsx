@@ -1,9 +1,9 @@
-// === Module 12474: sendGameOrganizationInvite ===
+// === Module 12570: sendGameOrganizationInvite ===
 
-// Module 12474 (sendGameOrganizationInvite)
+// Module 12570 (sendGameOrganizationInvite)
 import util from "util" /* 1113 */;
-import shared from "shared" /* 5250 */;
-import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 12475 */;
+import shared from "shared" /* 5313 */;
+import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 12571 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -116,8 +116,8 @@ let closure_7 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
     }
   })();
 };
-const setSendState = fn(12469).setSendState;
-const InviteSendStates = fn(8775).InviteSendStates;
+const setSendState = fn(12565).setSendState;
+const InviteSendStates = fn(8842).InviteSendStates;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_organization_invites/sendGameOrganizationInvite.tsx");

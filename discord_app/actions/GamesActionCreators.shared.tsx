@@ -1,14 +1,14 @@
-// === Module 12614: _tryJoinAsFrame ===
+// === Module 12710: _tryJoinAsFrame ===
 
-// Module 12614 (_tryJoinAsFrame)
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8069 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 12601 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 12611 */;
+// Module 12710 (_tryJoinAsFrame)
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 8134 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 12697 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 12707 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import PresenceStore from "PresenceStore" /* 6005 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import PresenceStore from "PresenceStore" /* 6068 */;
 
 require = fn;
 let closure_10 = async function _tryJoinAsFrame(arg0) {
@@ -265,7 +265,7 @@ let closure_12 = async function _startFrame(arg0) {
           let frameParticipantId;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -469,7 +469,7 @@ let closure_13 = async function _startActivity(arg0, arg1) {
   })();
 };
 const ActivityFlags = fn(1072).ActivityFlags;
-const MAIN_SURFACE = fn(6957).MAIN_SURFACE;
+const MAIN_SURFACE = fn(7020).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.shared.tsx");
 

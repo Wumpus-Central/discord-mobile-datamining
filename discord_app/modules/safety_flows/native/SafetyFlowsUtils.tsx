@@ -1,15 +1,15 @@
-// === Module 20709: SafetyFlowsUtils ===
+// === Module 20864: SafetyFlowsUtils ===
 
-// Module 20709 (SafetyFlowsUtils)
+// Module 20864 (SafetyFlowsUtils)
 import util from "util" /* 1113 */;
-import _modDef2981 from "module_2981" /* 2981 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5952 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
-import types from "types" /* 20703 */;
-import constants from "constants" /* 20704 */;
+import _modDef2997 from "module_2997" /* 2997 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6015 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import types from "types" /* 20858 */;
+import constants from "constants" /* 20859 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
@@ -39,7 +39,7 @@ function navigateToScreenForTask(arr, task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
     const obj3 = { text: null, variant: "success" };
     const intl = util.intl;
-    obj3.text = intl.string(_modDef2981["/fHz9S"]);
+    obj3.text = intl.string(_modDef2997["/fHz9S"]);
     ToastActionCreatorsDefault.open("SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", obj3);
   } else {
     task_type = task_type.task_type;

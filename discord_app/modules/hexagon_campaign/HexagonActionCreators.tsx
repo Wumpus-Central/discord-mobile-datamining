@@ -1,13 +1,13 @@
-// === Module 16961: HexagonActionCreators ===
+// === Module 17084: HexagonActionCreators ===
 
-// Module 16961 (HexagonActionCreators)
+// Module 17084 (HexagonActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5271 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5334 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function enrollInHexagonCampaign() {
@@ -256,7 +256,7 @@ let closure_12 = async function _enrollAndClearPendingHexagonCampaignEnrollment(
     }
   }
 };
-let closure_5 = fn(5268).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
+let closure_5 = fn(5331).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
 let closure_6 = new LoggerDefault("HexagonActionCreators");
 const result = 10 * DurationsDefault.Millis.SECOND;
 const metroImportDefault = result;
@@ -297,6 +297,9 @@ export function clearHexagonCampaignAppliedPerks() {
 }
 export function markHexagonCampaignDisplayNameStylesVisited() {
   DispatcherDefault.dispatch({ type: "HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES_VISITED" });
+}
+export function markHexagonCampaignExpiredClientThemeRestored() {
+  DispatcherDefault.dispatch({ type: "HEXAGON_CAMPAIGN_EXPIRED_CLIENT_THEME_RESTORED" });
 }
 export function saveHexagonCampaignPreviousPerkValues(previousPerkValues) {
   DispatcherDefault.dispatch({ type: "HEXAGON_CAMPAIGN_PREVIOUS_PERK_VALUES_SAVED", previousPerkValues });

@@ -1,6 +1,6 @@
-// === Module 8783: UploadPlatform ===
+// === Module 8850: UploadPlatform ===
 
-// Module 8783 (UploadPlatform)
+// Module 8850 (UploadPlatform)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_uploads/UploadPlatform.tsx");

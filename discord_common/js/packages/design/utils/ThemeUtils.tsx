@@ -1,6 +1,6 @@
-// === Module 5259: ThemeUtils ===
+// === Module 5322: ThemeUtils ===
 
-// Module 5259 (ThemeUtils)
+// Module 5322 (ThemeUtils)
 import ThemeTypes from "ThemeTypes" /* 576 */;
 import size from "module_2" /* 2 */;
 

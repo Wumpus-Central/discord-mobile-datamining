@@ -1,18 +1,18 @@
-// === Module 9242: PremiumSubscriptionOfferUtil ===
+// === Module 9309: PremiumSubscriptionOfferUtil ===
 
-// Module 9242 (PremiumSubscriptionOfferUtil)
+// Module 9309 (PremiumSubscriptionOfferUtil)
 import initialize from "initialize" /* 504 */;
-import Server from "Server" /* 2116 */;
-import _modDef2166 from "module_2166" /* 2166 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9243 */;
-import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 9245 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 9246 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 9247 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 9248 */;
-import ReverseTrialUtils from "ReverseTrialUtils" /* 9250 */;
+import Server from "Server" /* 2119 */;
+import _modDef2169 from "module_2169" /* 2169 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9310 */;
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 9312 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 9313 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 9314 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 9315 */;
+import ReverseTrialUtils from "ReverseTrialUtils" /* 9317 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 2176 */;
+import SubscriptionStore from "SubscriptionStore" /* 2179 */;
 
 const require = globalThis.__r;
 
@@ -65,7 +65,7 @@ function getDiscountInfo(active_discount_id) {
   }
   return { duration: 1, percentage: 30, discountId: active_discount_id };
 }
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({ PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID: closure_6, PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID: metroImportDefault, PREMIUM_TIER_2_ANNUAL_V2_20_PERCENT_DISCOUNT_ID: closure_8, PREMIUM_TIER_2_ANNUAL_V2_30_PERCENT_DISCOUNT_ID: closure_9, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: closure_10, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_11, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID: closure_12, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: map1, PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID: closure_14, PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID: closure_15, PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_16, PREMIUM_TIER_2_REFERRAL_INCENTIVE_DISCOUNT_ID: closure_17, PREMIUM_TIER_2_CHURN_1_MONTH_10_PERCENT_DISCOUNT_ID: closure_18, PREMIUM_TIER_2_CHURN_1_MONTH_50_PERCENT_DISCOUNT_ID: closure_19, PREMIUM_GROUP_TIER_2_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_20, CHURN_DISCOUNT_IDS: closure_21 } = PremiumConstants);
 function useHasDiscountApplied() {
   items = [SubscriptionStore];
@@ -80,8 +80,8 @@ function useHasDiscountApplied() {
   let tmp4 = null != prop;
   if (tmp4) {
     const _Date = Date;
-    tmp4 = _modDef2166(Date.now()) <= _modDef2166(prop);
-    const tmp6Result = _modDef2166(Date.now());
+    tmp4 = _modDef2169(Date.now()) <= _modDef2169(prop);
+    const tmp6Result = _modDef2169(Date.now());
   }
   return tmp4;
 }
@@ -105,8 +105,8 @@ export function useIsInPremiumOfferExperience() {
     let tmp11 = null != prop;
     if (tmp11) {
       const _Date = Date;
-      tmp11 = _modDef2166(Date.now()) <= _modDef2166(prop);
-      const tmp13Result = _modDef2166(Date.now());
+      tmp11 = _modDef2169(Date.now()) <= _modDef2169(prop);
+      const tmp13Result = _modDef2169(Date.now());
     }
     return null != premiumTrialOffer || hasActiveTrial || null != tmp6 || tmp11;
   } else {
@@ -203,8 +203,8 @@ export function useShouldFetchChurnOffer() {
     let tmp8 = null != prop;
     if (tmp8) {
       const _Date = Date;
-      tmp8 = _modDef2166(Date.now()) <= _modDef2166(prop);
-      const tmp10Result = _modDef2166(Date.now());
+      tmp8 = _modDef2169(Date.now()) <= _modDef2169(prop);
+      const tmp10Result = _modDef2169(Date.now());
     }
     let tmp13 = null !== stateFromStores && stateFromStores.hasPremiumNitroMonthly && !tmp8;
     if (tmp13) {

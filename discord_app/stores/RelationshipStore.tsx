@@ -1,12 +1,12 @@
-// === Module 5185: RelationshipStore ===
+// === Module 5248: RelationshipStore ===
 
-// Module 5185 (RelationshipStore)
+// Module 5248 (RelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5163 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 5226 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 5186 */;
-import UserStore from "UserStore" /* 1385 */;
+import MessageRecord from "MessageRecord" /* 5249 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 function markAllUserIdListsStale() {
@@ -96,7 +96,7 @@ let closure_15 = 0;
 const dependencyMap = {};
 let closure_17 = 0;
 let size = 0;
-let closure_20 = { friends: "Array", blocked: "Path", ignored: "channel", blockedOrIgnored: "values" };
+let closure_20 = { friends: "analyticsLocations", blocked: "space", ignored: "Reflect", blockedOrIgnored: "r" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;

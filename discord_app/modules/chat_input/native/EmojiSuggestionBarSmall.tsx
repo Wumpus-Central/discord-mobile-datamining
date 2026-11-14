@@ -1,11 +1,11 @@
-// === Module 14744: EmojiSuggestionBarSmall ===
+// === Module 14858: EmojiSuggestionBarSmall ===
 
-// Module 14744 (EmojiSuggestionBarSmall)
+// Module 14858 (EmojiSuggestionBarSmall)
 import nativeDefault from "native" /* 575 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 11207 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 11231 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 14729 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 11274 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 11298 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 14842 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   const tmp = closure_7(displayEmojis.anchorTop);
   const suggestionBarHeight = require("EmojiSuggestionBarUtils").useSuggestionBarHeight(transitionState, cleanUp, closure_6, onOccupiedHeightChange);
   let obj = require("EmojiSuggestionBarUtils");
-  items = [closure_8, require("module_1652").interpolate, suggestionBarHeight, closure_6];
+  items = [closure_8, require("module_1655").interpolate, suggestionBarHeight, closure_6];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -35,7 +35,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   EmojiSuggestionBarSmallTsx1.__closure = items1;
   EmojiSuggestionBarSmallTsx1.__workletHash = 1179846537362;
   EmojiSuggestionBarSmallTsx1.__initData = tmp4;
-  const animatedStyle = require("module_1652").useAnimatedStyle(EmojiSuggestionBarSmallTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(EmojiSuggestionBarSmallTsx1);
   const obj3 = {
     style: null,
     children: displayEmojis.map((emoji, index) => {
@@ -55,7 +55,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   };
   const items2 = [tmp.containerSmall, animatedStyle];
   obj3.style = items2;
-  return jsx(_modDef1652.View, {
+  return jsx(_modDef1655.View, {
     style: null,
     children: displayEmojis.map((emoji, index) => {
       const locked = emoji.locked;
@@ -74,10 +74,10 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   });
 }
 const jsx = fn(21).jsx;
-const sum = fn(9479).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(9546).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 let closure_6 = sum + nativeDefault.space.PX_8;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { containerSmall: null };
   const rect = { position: "absolute", top: null, right: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, height: sum, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, borderWidth: 1, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };

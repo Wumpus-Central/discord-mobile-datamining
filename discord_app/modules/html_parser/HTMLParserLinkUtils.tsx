@@ -1,11 +1,11 @@
-// === Module 10308: HTMLParserLinkUtils ===
+// === Module 10377: HTMLParserLinkUtils ===
 
-// Module 10308 (HTMLParserLinkUtils)
-import MarkupLinkRule2 from "MarkupLinkRule" /* 6284 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 6285 */;
-import HTMLParserRunUtils from "HTMLParserRunUtils" /* 10307 */;
+// Module 10377 (HTMLParserLinkUtils)
+import MarkupLinkRule2 from "MarkupLinkRule" /* 6347 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 6348 */;
+import HTMLParserRunUtils from "HTMLParserRunUtils" /* 10376 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import t from "module_2067" /* 2067 */;
+import t from "module_2070" /* 2070 */;
 
 const require = globalThis.__r;
 const MarkupLinkRuleDefault = MarkupLinkRule2;
@@ -389,7 +389,7 @@ function validateSplitURLs(items) {
   }
 }
 let closure_3 = ["rawURL"];
-const HTMLParserConstants = fn(10282);
+const HTMLParserConstants = fn(10351);
 ({ ALLOWED_MAILTO_HEADERS: hasOwnProperty, BIDI_CONTROL_CHARACTERS: closure_6, BIDI_CONTROL_CHARACTERS_GLOBAL: metroImportDefault, BIDI_PARAGRAPH_SEPARATOR: closure_8, BIDI_PARAGRAPH_SEPARATORS: closure_9, BROKEN_URL_SCHEME_IN_LABEL: closure_10, EMAIL_IN_LABEL: closure_11, HTTP_URL_SCHEME: closure_12, URL_IN_LABEL: map1, URL_LABEL_IGNORABLE_CHARACTERS: closure_14, URL_MATCH: closure_15, URL_TEXT_BOUNDARY: closure_16 } = HTMLParserConstants);
 let obj = { text: t.defaultRules.text, link: null, url: null };
 let obj2 = {};

@@ -1,12 +1,12 @@
-// === Module 5981: BrowserManager ===
+// === Module 6044: BrowserManager ===
 
-// Module 5981 (BrowserManager)
+// Module 6044 (BrowserManager)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import PlatformUtils2 from "PlatformUtils" /* 1377 */;
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import LinkingDefault from "Linking" /* 5949 */;
-import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 5982 */;
-import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 5983 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import PlatformUtils2 from "PlatformUtils" /* 1380 */;
+import LinkingDefault from "Linking" /* 6012 */;
+import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 6045 */;
+import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 6046 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const NativeBrowserManagerModuleDefault = NativeBrowserManagerModule;
@@ -62,7 +62,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
   }
 };
 const AppState = fn(17).AppState;
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = NativeBrowserManagerModuleDefault;
 } else {

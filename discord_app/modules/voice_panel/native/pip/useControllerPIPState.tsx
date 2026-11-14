@@ -1,25 +1,25 @@
-// === Module 19781: useControllerPIPState ===
+// === Module 19970: useControllerPIPState ===
 
-// Module 19781 (useControllerPIPState)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5164 */;
-import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 7798 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19735 */;
-import useSelfHasVideoDefault from "useSelfHasVideo" /* 19783 */;
-import calculatePIPStateDefault from "calculatePIPState" /* 19784 */;
+// Module 19970 (useControllerPIPState)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5227 */;
+import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 7864 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19229 */;
+import useSelfHasVideoDefault from "useSelfHasVideo" /* 19972 */;
+import calculatePIPStateDefault from "calculatePIPState" /* 19973 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
-import FramesStore from "FramesStore" /* 6956 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import PIPSpeakerStore from "PIPSpeakerStore" /* 16124 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
+import FramesStore from "FramesStore" /* 7019 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import PIPSpeakerStore from "PIPSpeakerStore" /* 16245 */;
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(19785);
+const useExternalPipSelectedTileDefault = tmp6(19974);
 require = fn;
-const VoicePanelModes = fn(11919).VoicePanelModes;
-const ActivityPanelModes = fn(5896).ActivityPanelModes;
-const asLaunched = fn(6957).asLaunched;
+const VoicePanelModes = fn(11985).VoicePanelModes;
+const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const asLaunched = fn(7020).asLaunched;
 let closure_12 = { code: "(function useControllerPIPStateTsx1(){let[scale,pipAvoidanceSpecs,windowDimensions,safeArea]=this.__closure;return{scale:scale.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get(),windowDimensions:windowDimensions.get(),safeArea:safeArea.get()};})" };
 let closure_13 = { code: "(function useControllerPIPStateTsx2(current){let[clampPIPScale,pipState,scale]=this.__closure;const newScale=clampPIPScale({scale:current.scale,width:pipState.width,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,windowDimensions:current.windowDimensions,safeArea:current.safeArea,pipAvoidanceSpecs:current.pipAvoidanceSpecs});if(current.scale!==newScale){scale.set(newScale);}})" };
 let size = fn(2);
@@ -35,9 +35,9 @@ export function useControllerPIPState(channelId) {
   const mode = channelId.mode;
   _slicedToArray = undefined;
   ({ windowDimensions, pipAvoidanceSpecs, safeArea } = channelId);
-  let obj = require("module_1652");
+  let obj = require("module_1655");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
-  const size = { id: "ip", mode: "isArray", width: false, height: null, containerHeight: 6825665, showSecondaryPIP: 30, scale: sharedValue };
+  const size = { id: "disabled", mode: "isArray", width: false, height: null, containerHeight: "yes", showSecondaryPIP: null, scale: sharedValue };
   const ref = noop.useRef(size);
   const obj2 = require("VoicePanelPIPScaleCache");
   items = [PIPSpeakerStore];
@@ -151,7 +151,7 @@ export function useControllerPIPState(channelId) {
   useControllerPIPStateTsx2.__closure = items6;
   useControllerPIPStateTsx2.__workletHash = 16873305114518;
   useControllerPIPStateTsx2.__initData = tmp24;
-  const animatedReaction = require("module_1652").useAnimatedReaction(useControllerPIPStateTsx1, useControllerPIPStateTsx2);
+  const animatedReaction = require("module_1655").useAnimatedReaction(useControllerPIPStateTsx1, useControllerPIPStateTsx2);
   const items7 = [focusedId, layoutManager, tmp11];
   const effect1 = noop.useEffect(() => {
     _undefined3((safeAreaState) => {

@@ -1,12 +1,12 @@
-// === Module 13967: useResolvedGameOrganizationInvite ===
+// === Module 14072: useResolvedGameOrganizationInvite ===
 
-// Module 13967 (useResolvedGameOrganizationInvite)
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 12273 */;
+// Module 14072 (useResolvedGameOrganizationInvite)
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 12368 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(12274).GameOrganizationInviteStates;
+let closure_3 = fn(12369).GameOrganizationInviteStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/useResolvedGameOrganizationInvite.tsx");
 

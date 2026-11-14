@@ -1,12 +1,12 @@
-// === Module 15044: ModalFloatingAction ===
+// === Module 15158: ModalFloatingAction ===
 
-// Module 15044 (ModalFloatingAction)
+// Module 15158 (ModalFloatingAction)
 import _modDef671 from "module_671" /* 671 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1627 */;
-import _modDef1652 from "module_1652" /* 1652 */;
-import LinearGradientDefault from "LinearGradient" /* 5830 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import springPresets from "springPresets" /* 5877 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _modDef1655 from "module_1655" /* 1655 */;
+import LinearGradientDefault from "LinearGradient" /* 5893 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import springPresets from "springPresets" /* 5940 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({ floating: { position: "absolute", bottom: 0, width: "100%", paddingHorizontal: 16 }, spacer: { height: 96 } });
 let closure_9 = { code: "(function ModalFloatingActionNativeTsx1(){let[interpolate,sharedValue,floatingBackgroundColor,useReducedMotion]=this.__closure;return{opacity:interpolate(sharedValue.get(),[0,1],[0,1]),borderBottomColor:floatingBackgroundColor,borderBottomWidth:16,transform:[{translateY:interpolate(sharedValue.get(),[useReducedMotion?0.999999:0,1],[32,0])}]};})" };
 const size = fn(2);
@@ -33,9 +33,9 @@ export function ModalFloatingAction(isVisible) {
   if (isVisible) {
     num = 1;
   }
-  const sharedValue = require("module_1652").useSharedValue(num);
+  const sharedValue = require("module_1655").useSharedValue(num);
   items = [isVisible, sharedValue];
-  let obj = require("module_1652");
+  let obj = require("module_1655");
   const effect = noop.useEffect(() => {
     let num = 0;
     if (c0) {
@@ -44,7 +44,7 @@ export function ModalFloatingAction(isVisible) {
     const result = _undefined2.set(spring_spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always"));
   }, items);
   const tmp7 = useSafeAreaInsetsDefault();
-  let items1 = [closure_9, require("module_1652").interpolate, sharedValue, floatingBackgroundColor, noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext).reducedMotion.enabled];
+  let items1 = [closure_9, require("module_1655").interpolate, sharedValue, floatingBackgroundColor, noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext).reducedMotion.enabled];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -74,7 +74,7 @@ export function ModalFloatingAction(isVisible) {
   ModalFloatingActionNativeTsx1.__closure = items2;
   ModalFloatingActionNativeTsx1.__workletHash = 5863322493848;
   ModalFloatingActionNativeTsx1.__initData = tmp9;
-  const animatedStyle = require("module_1652").useAnimatedStyle(ModalFloatingActionNativeTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(ModalFloatingActionNativeTsx1);
   let obj2 = { style: null, pointerEvents: null, children: null };
   const items3 = [animatedStyle, tmp2.floating, { paddingBottom: tmp7.bottom }];
   obj2.style = items3;
@@ -84,7 +84,7 @@ export function ModalFloatingAction(isVisible) {
   }
   obj2.pointerEvents = str;
   const obj3 = { colors: null, locations: null, style: null };
-  const tmp3Result = require("module_1652");
+  const tmp3Result = require("module_1655");
   const tmp6Result = LinearGradientDefault;
   const obj5 = _modDef671(floatingBackgroundColor);
   const items4 = [_modDef671(floatingBackgroundColor).alpha(0).hex(), floatingBackgroundColor];
@@ -97,7 +97,7 @@ export function ModalFloatingAction(isVisible) {
   obj4.variant = "primary";
   items5[1] = closure_6(require("ModalActionButton").ModalActionButton, obj4);
   obj2.children = items5;
-  return closure_7(_modDef1652.View, obj2);
+  return closure_7(_modDef1655.View, obj2);
 }
 export function ModalFloatingActionSpacer() {
   return timestampProducer(hasOwnProperty, { style: closure_8().spacer });

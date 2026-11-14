@@ -1,20 +1,20 @@
-// === Module 11598: GiftCodeRecord ===
+// === Module 11665: GiftCodeRecord ===
 
-// Module 11598 (GiftCodeRecord)
-import _modDef2166 from "module_2166" /* 2166 */;
-import Record from "Record" /* 1405 */;
-import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 9229 */;
-import PromotionRecord from "PromotionRecord" /* 9557 */;
-import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 2168 */;
+// Module 11665 (GiftCodeRecord)
+import _modDef2169 from "module_2169" /* 2169 */;
+import Record from "Record" /* 1408 */;
+import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 9296 */;
+import PromotionRecord from "PromotionRecord" /* 9624 */;
+import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 2171 */;
 
 const require = fn;
-let closure_6 = fn(1387).PremiumSubscriptionSKUToPremiumType;
+let closure_6 = fn(1390).PremiumSubscriptionSKUToPremiumType;
 const frozen = Object.freeze({ PAYMENT_SOURCE_REQUIRED: 1, EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2, NOT_SELF_REDEEMABLE: 4 });
 let GiftCodeRecord;
 class GiftCodeRecord extends tmp2 {
   constructor(arg0) {
     tmp = new GiftCodeRecord(new.target, new.target);
-    ({ userId: tmp.userId, code: tmp.code, skuId: tmp.skuId, applicationId: tmp.applicationId, uses: tmp.uses, maxUses: tmp.maxUses, expiresAt: tmp.expiresAt, redeemed: tmp.redeemed, storeListingId: tmp.storeListingId, subscriptionPlanId: tmp.subscriptionPlanId, subscriptionPlan: tmp.subscriptionPlan, revoked: tmp.revoked, entitlementBranches: tmp.entitlementBranches, flags: tmp.flags, subscriptionTrial: tmp.subscriptionTrial, promotion: tmp.promotion, giftStyle: tmp.giftStyle } = global);
+    ({ userId: tmp.userId, code: tmp.code, skuId: tmp.skuId, applicationId: tmp.applicationId, uses: tmp.uses, maxUses: tmp.maxUses, expiresAt: tmp.expiresAt, redeemed: tmp.redeemed, storeListingId: tmp.storeListingId, subscriptionPlanId: tmp.subscriptionPlanId, subscriptionPlan: tmp.subscriptionPlan, revoked: tmp.revoked, entitlementBranches: tmp.entitlementBranches, flags: tmp.flags, subscriptionTrial: tmp.subscriptionTrial, promotion: tmp.promotion, giftStyle: tmp.giftStyle, giftSubscriptionAgreement: tmp.giftSubscriptionAgreement } = global);
     return tmp;
   }
 }
@@ -31,7 +31,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let tmp5 = null;
   if (null != user.expires_at) {
-    tmp5 = _modDef2166(user.expires_at);
+    tmp5 = _modDef2169(user.expires_at);
   }
   const redeemed = user.redeemed;
   if (null != user.subscription_plan) {
@@ -53,33 +53,35 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let fromServer1 = null;
   if (null != user.subscription_trial) {
+    let tmp12 = SubscriptionTrialRecord;
     fromServer1 = SubscriptionTrialRecord.createFromServer(user.subscription_trial);
   }
-  const promotion = user.promotion;
   let fromServer2 = null;
-  if (null != promotion) {
+  if (null != user.promotion) {
+    tmp12 = PromotionRecord;
     fromServer2 = PromotionRecord.createFromServer(user.promotion);
   }
   if (typeof GiftCodeRecord === "function") {
-    const tmp18 = new GiftCodeRecord(tmp, SubscriptionTrialRecord, PromotionRecord, promotion, GiftCodeRecord, new.target, id, code, sku_id, application_id, uses, max_uses, tmp5, redeemed, id1, subscription_plan_id, fromServer, entitlement_branches);
-    tmp18.userId = id;
-    tmp18.code = code;
-    tmp18.skuId = sku_id;
-    tmp18.applicationId = application_id;
-    tmp18.uses = uses;
-    tmp18.maxUses = max_uses;
-    tmp18.expiresAt = tmp5;
-    tmp18.redeemed = redeemed;
-    tmp18.storeListingId = id1;
-    tmp18.subscriptionPlanId = subscription_plan_id;
-    tmp18.subscriptionPlan = fromServer;
-    tmp18.revoked = false;
-    tmp18.entitlementBranches = entitlement_branches;
-    tmp18.flags = num;
-    tmp18.subscriptionTrial = fromServer1;
-    tmp18.promotion = fromServer2;
-    tmp18.giftStyle = user.gift_style;
-    return tmp18;
+    const tmp19 = new GiftCodeRecord(tmp, tmp12, tmp13, GiftCodeRecord, new.target, id, code, sku_id, application_id, uses, max_uses, tmp5, redeemed, id1, subscription_plan_id, fromServer, entitlement_branches, num, fromServer1);
+    tmp19.userId = id;
+    tmp19.code = code;
+    tmp19.skuId = sku_id;
+    tmp19.applicationId = application_id;
+    tmp19.uses = uses;
+    tmp19.maxUses = max_uses;
+    tmp19.expiresAt = tmp5;
+    tmp19.redeemed = redeemed;
+    tmp19.storeListingId = id1;
+    tmp19.subscriptionPlanId = subscription_plan_id;
+    tmp19.subscriptionPlan = fromServer;
+    tmp19.revoked = false;
+    tmp19.entitlementBranches = entitlement_branches;
+    tmp19.flags = num;
+    tmp19.subscriptionTrial = fromServer1;
+    tmp19.promotion = fromServer2;
+    tmp19.giftStyle = user.gift_style;
+    tmp19.giftSubscriptionAgreement = tmp15;
+    return tmp19;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -88,8 +90,8 @@ prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;
   let isAfterResult = null != expiresAt;
   if (isAfterResult) {
-    isAfterResult = _modDef2166().isAfter(expiresAt);
-    const obj = _modDef2166();
+    isAfterResult = _modDef2169().isAfter(expiresAt);
+    const obj = _modDef2169();
   }
   return isAfterResult;
 };

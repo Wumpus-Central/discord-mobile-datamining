@@ -1,17 +1,17 @@
-// === Module 17097: SettingListItemHighlight ===
+// === Module 17220: SettingListItemHighlight ===
 
-// Module 17097 (SettingListItemHighlight)
+// Module 17220 (SettingListItemHighlight)
 import nativeDefault from "native" /* 575 */;
-import _modDef1652 from "module_1652" /* 1652 */;
+import _modDef1655 from "module_1655" /* 1655 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 17092 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 17215 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 let StyleSheet = fn(17).StyleSheet;
 let jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { background: { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_HOVER } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = { code: "(function SettingListItemHighlightTsx1(finished){let[scheduleOnRN,clearSelectedSearchResult]=this.__closure;if(finished){scheduleOnRN(clearSelectedSearchResult);}})" };
@@ -52,7 +52,7 @@ export default noop.memo(function SettingListItemHighlight(start) {
     _undefined5.setState({ selected: null });
   }, []);
   let tmp = closure_7();
-  let items1 = [closure_9, require("module_1652").withSequence, require("module_1652").withDelay, require("timing/timing").withTiming, require("module_1652").Easing, closure_8, require("module_1705").scheduleOnRN, callback];
+  let items1 = [closure_9, require("module_1655").withSequence, require("module_1655").withDelay, require("timing/timing").withTiming, require("module_1655").Easing, closure_8, require("module_1708").scheduleOnRN, callback];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -101,9 +101,9 @@ export default noop.memo(function SettingListItemHighlight(start) {
   SettingListItemHighlightTsx2.__closure = items2;
   SettingListItemHighlightTsx2.__workletHash = 15031503673005;
   SettingListItemHighlightTsx2.__initData = tmp5;
-  const animatedStyle = require("module_1652").useAnimatedStyle(SettingListItemHighlightTsx2);
+  const animatedStyle = require("module_1655").useAnimatedStyle(SettingListItemHighlightTsx2);
   let obj2 = { pointerEvents: "none", style: null };
   const items3 = [StyleSheet.absoluteFill, tmp.background, memo, animatedStyle, start.style];
   obj2.style = items3;
-  return jsx(_modDef1652.View, { pointerEvents: "none", style: null });
+  return jsx(_modDef1655.View, { pointerEvents: "none", style: null });
 });

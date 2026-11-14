@@ -1,11 +1,11 @@
-// === Module 5322: BaseRive ===
+// === Module 5385: BaseRive ===
 
-// Module 5322 (BaseRive)
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5257 */;
-import DataBindByName from "DataBindByName" /* 5323 */;
-import ManaContext from "ManaContext" /* 5370 */;
-import useRivePlayback from "useRivePlayback" /* 5371 */;
-import RiveTypes from "RiveTypes" /* 5372 */;
+// Module 5385 (BaseRive)
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 5320 */;
+import DataBindByName from "DataBindByName" /* 5386 */;
+import ManaContext from "ManaContext" /* 5433 */;
+import useRivePlayback from "useRivePlayback" /* 5434 */;
+import RiveTypes from "RiveTypes" /* 5435 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

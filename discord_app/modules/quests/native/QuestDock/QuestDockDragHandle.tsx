@@ -1,24 +1,24 @@
-// === Module 17669: QuestDockDragHandle ===
+// === Module 17789: QuestDockDragHandle ===
 
-// Module 17669 (QuestDockDragHandle)
+// Module 17789 (QuestDockDragHandle)
 import util from "util" /* 1113 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5838 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import QuestDockUtils from "QuestDockUtils" /* 17579 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 17581 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5901 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import QuestDockUtils from "QuestDockUtils" /* 17697 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 17699 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const QuestDockMode = fn(5275).QuestDockMode;
-let closure_6 = fn(17580).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(5338).QuestDockMode;
+let closure_6 = fn(17698).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { dragHandleWrapper: null, dragHandleOverlay: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -65,7 +65,7 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   QuestDockDragHandleTsx1.__closure = items1;
   QuestDockDragHandleTsx1.__workletHash = 17506228702630;
   QuestDockDragHandleTsx1.__initData = tmp5;
-  const animatedStyle = _mod1652.useAnimatedStyle(QuestDockDragHandleTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(QuestDockDragHandleTsx1);
   const items2 = [closure_11, spring_spring.withSpring, "default" === variant, activeQuestDockMode, QuestDockMode, closure_6];
   c0 = undefined;
   c1 = undefined;
@@ -93,8 +93,8 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   QuestDockDragHandleTsx2.__closure = items3;
   QuestDockDragHandleTsx2.__workletHash = 5329516175324;
   QuestDockDragHandleTsx2.__initData = tmp11;
-  const animatedStyle1 = _mod1652.useAnimatedStyle(QuestDockDragHandleTsx2);
-  const tmp2Result = _mod1652;
+  const animatedStyle1 = _mod1655.useAnimatedStyle(QuestDockDragHandleTsx2);
+  const tmp2Result = _mod1655;
   const items4 = [closure_12, spring_spring.withSpring, "default" === variant, activeQuestDockMode, QuestDockMode, closure_6];
   c0 = undefined;
   c1 = undefined;
@@ -123,7 +123,7 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   QuestDockDragHandleTsx3.__workletHash = 1737041725862;
   QuestDockDragHandleTsx3.__initData = tmp18;
   let obj2 = { style: tmp.dragHandleWrapper, children: null };
-  const animatedStyle2 = _mod1652.useAnimatedStyle(QuestDockDragHandleTsx3);
+  const animatedStyle2 = _mod1655.useAnimatedStyle(QuestDockDragHandleTsx3);
   const obj3 = { style: animatedStyle, layout: QuestDockUtils.dimensionsLayoutTransition, children: null };
   const obj4 = { style: null, children: null };
   const items6 = [tmp.dragHandleOverlay, animatedStyle2];
@@ -137,12 +137,12 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
     stringResult = string(t.Yplnt6);
   }
   obj4.children = metroImportDefault(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "overlay", accessibilityLabel: stringResult });
-  const items7 = [metroImportDefault(_modDef1652.View, obj4), ];
+  const items7 = [metroImportDefault(_modDef1655.View, obj4), ];
   const obj5 = { style: null, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: metroImportDefault(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "default" }) };
   const items8 = [tmp.dragHandleOverlay, animatedStyle1];
   obj5.style = items8;
-  items7[1] = metroImportDefault(_modDef1652.View, obj5);
+  items7[1] = metroImportDefault(_modDef1655.View, obj5);
   obj3.children = items7;
-  obj2.children = React5(_modDef1652.View, obj3);
+  obj2.children = React5(_modDef1655.View, obj3);
   return metroImportDefault(React4, obj2);
 });

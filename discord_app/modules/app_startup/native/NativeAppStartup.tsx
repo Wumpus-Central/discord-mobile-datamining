@@ -1,23 +1,23 @@
-// === Module 19974: NativeAppStartup ===
+// === Module 20132: NativeAppStartup ===
 
-// Module 19974 (NativeAppStartup)
+// Module 20132 (NativeAppStartup)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import Storage4 from "Storage" /* 510 */;
 import TokenManagerAll from "TokenManager" /* 1098 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 5138 */;
-import timeRequireDefault from "timeRequire" /* 8628 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 16520 */;
-import DeepLinkEventMapping from "DeepLinkEventMapping" /* 20742 */;
-import DeepLinkProcessorDefault from "DeepLinkProcessor" /* 20743 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 5201 */;
+import timeRequireDefault from "timeRequire" /* 8695 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 16643 */;
+import DeepLinkEventMapping from "DeepLinkEventMapping" /* 20896 */;
+import DeepLinkProcessorDefault from "DeepLinkProcessor" /* 20897 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
-import AppStateStore from "AppStateStore" /* 2117 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
+import AppStateStore from "AppStateStore" /* 2120 */;
 
 require = fn;
 function linkFromAppsFlyer(url) {
@@ -395,7 +395,7 @@ let closure_37 = async function _initializeIntl(arg0) {
     await "HermesInternal";
     closure_1 = tmp2;
     log2 = log.log;
-    return "flexDirection";
+    return "Path";
   })();
   iter.next();
   return iter;
@@ -702,11 +702,11 @@ let closure_40 = async function _initializeApp() {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[45])(paths[55], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[56]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(16767).updateSaturation(closure_0(5244).default.saturation);
-            obj = closure_0(16767);
-            closure_0(19646).updateVisualRefresh(true);
-            const obj2 = closure_0(19646);
-            closure_0(19647).updateTheme(closure_0(1192).default.theme);
+            closure_0(16890).updateSaturation(closure_0(5307).default.saturation);
+            obj = closure_0(16890);
+            closure_0(19856).updateVisualRefresh(true);
+            const obj2 = closure_0(19856);
+            closure_0(19857).updateTheme(closure_0(1192).default.theme);
             closure_1_0();
           }));
         });
@@ -850,14 +850,14 @@ function initializeTokenStorage() {
   global();
   const obj5 = { storageHasToken: null != Storage3.get(closure_1_17), tokenManagerHasToken: null != TokenManagerAll.getToken() };
 }
-const module_19975 = fn(19975);
-const superagentPatch = fn(19977);
+const module_20133 = fn(20133);
+const superagentPatch = fn(20135);
 get_ActivityIndicator = fn(17);
 ({ AppState: closure_6, NativeEventEmitter: metroImportDefault, Linking: closure_8, LogBox: closure_9, NativeModules: closure_10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(20000);
-let closure_11 = fn(2187).subscribeToIntlLoadingSuccess;
-const AnalyticsTrackingStore = fn(8597);
-const ManagerRegistry = fn(20001);
+const logThirdPartyImportsDone = fn(20158);
+let closure_11 = fn(2190).subscribeToIntlLoadingSuccess;
+const AnalyticsTrackingStore = fn(8664);
+const ManagerRegistry = fn(20159);
 const Constants = fn(1072);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;
@@ -880,7 +880,7 @@ let closure_25 = new DeepLinkProcessorDefault(function handleLinkingEventURL(url
     const mapDeepLinkEventResult = DeepLinkEventMapping.mapDeepLinkEvent(url, closure_1, tmp8);
   });
 });
-const future = new fn(11342).Future();
+const future = new fn(11409).Future();
 let obj = { None: 0, [0]: "None", HeadlessRan: 1, [1]: "HeadlessRan", Full: 2, [2]: "Full" };
 const None = obj.None;
 let promise = new Promise((arg0) => {

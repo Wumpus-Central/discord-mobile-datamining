@@ -1,8 +1,8 @@
-// === Module 9947: PremiumNitroHomeUtils ===
+// === Module 10014: PremiumNitroHomeUtils ===
 
-// Module 9947 (PremiumNitroHomeUtils)
+// Module 10014 (PremiumNitroHomeUtils)
 import Constants from "Constants" /* 1072 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

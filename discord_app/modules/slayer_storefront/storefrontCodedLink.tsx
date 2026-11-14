@@ -1,6 +1,6 @@
-// === Module 12339: storefrontCodedLink ===
+// === Module 12434: storefrontCodedLink ===
 
-// Module 12339 (storefrontCodedLink)
+// Module 12434 (storefrontCodedLink)
 import _slicedToArray from "module_32" /* 32 */;
 
 function normalizeStorefrontSkuIds(items) {

@@ -1,8 +1,8 @@
-// === Module 20185: InterestPickerFlow ===
+// === Module 20345: InterestPickerFlow ===
 
-// Module 20185 (InterestPickerFlow)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import InterestPickerCatalogs from "InterestPickerCatalogs" /* 18976 */;
+// Module 20345 (InterestPickerFlow)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import InterestPickerCatalogs from "InterestPickerCatalogs" /* 19030 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -71,7 +71,12 @@ export default function InterestPickerFlow(arm) {
     let tmp16 = first1(onComplete(tmp2[8]), obj2);
     const tmp15 = onComplete(tmp2[8]);
   } else {
-    const obj3 = { catalog: arm.catalog, onRowSeen: callback, title: null, subtitle: null, minSelection: 1, initialSelection: null, onGameToggle: null, onSearch: null, onContinue: null, onSkip: null };
+    const obj3 = { catalog: arm.catalog, performanceContext: null, onRowSeen: null, title: null, subtitle: null, minSelection: 1, initialSelection: null, onGameToggle: null, onSearch: null, onContinue: null, onSkip: null };
+    const obj4 = {};
+    let merged = Object.assign(memo);
+    obj4.surface = "onboarding";
+    obj3.performanceContext = obj4;
+    obj3.onRowSeen = callback;
     const intl = tmp(tmp2[10]).intl;
     obj3.title = intl.string(onComplete(tmp2[11])["5MUKTF"]);
     const intl2 = tmp(tmp2[10]).intl;

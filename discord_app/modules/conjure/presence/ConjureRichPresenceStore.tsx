@@ -1,24 +1,24 @@
-// === Module 7256: ConjureRichPresenceStore ===
+// === Module 7320: ConjureRichPresenceStore ===
 
-// Module 7256 (ConjureRichPresenceStore)
+// Module 7320 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActivityTypes from "ActivityTypes" /* 6006 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6990 */;
-import conjureServerProject from "conjureServerProject" /* 7173 */;
-import conjureChatTurns from "conjureChatTurns" /* 7258 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 7264 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import ActivityTypes from "ActivityTypes" /* 6069 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 7053 */;
+import conjureServerProject from "conjureServerProject" /* 7236 */;
+import conjureChatTurns from "conjureChatTurns" /* 7322 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 7328 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IdleStore from "IdleStore" /* 6978 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
-import ConjureChatStore from "ConjureChatStore" /* 7257 */;
-import ConjurePagesStore from "ConjurePagesStore" /* 7263 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
+import IdleStore from "IdleStore" /* 7041 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import ConjureChatStore from "ConjureChatStore" /* 7321 */;
+import ConjurePagesStore from "ConjurePagesStore" /* 7327 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 
 require = fn;
 function updateActivity(withGracePeriod) {
@@ -303,7 +303,7 @@ function updateActivity(withGracePeriod) {
                       let merged = Object.assign(closure_1_16);
                       details = closure_1_16.details;
                       let prop = closure_1_0(closure_1_1[11]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                      let found = prop.filter(/* F92696 */ function() { ... });
+                      let found = prop.filter(/* F93886 */ function() { ... });
                       let _Math = Math;
                       let _Math2 = Math;
                       obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -314,7 +314,7 @@ function updateActivity(withGracePeriod) {
                         timeout = null;
                       }
                       let _setTimeout = setTimeout;
-                      timeout = setTimeout(/* F92697 */ function() { ... }, closure_1_14);
+                      timeout = setTimeout(/* F93887 */ function() { ... }, closure_1_14);
                       closure_1_24.emitChange();
                     }
                   }, closure_1_14);
@@ -534,7 +534,7 @@ let closure_23 = async function _resumeRunningProjects() {
   }
 };
 let closure_2 = ["party"];
-const StaticChannelRoute = fn(5099).StaticChannelRoute;
+const StaticChannelRoute = fn(5162).StaticChannelRoute;
 let c14 = 300000;
 let c15 = null;
 let c16 = null;

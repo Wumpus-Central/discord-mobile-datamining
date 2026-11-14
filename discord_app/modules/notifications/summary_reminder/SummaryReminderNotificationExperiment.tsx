@@ -1,7 +1,7 @@
-// === Module 18026: SummaryReminderNotificationExperiment ===
+// === Module 18153: SummaryReminderNotificationExperiment ===
 
-// Module 18026 (SummaryReminderNotificationExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 18153 (SummaryReminderNotificationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-10-summary-reminder-notif-re-revival", defaultConfig: { showSettingsToggle: false }, variations: null };

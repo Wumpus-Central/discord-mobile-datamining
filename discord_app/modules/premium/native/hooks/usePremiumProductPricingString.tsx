@@ -1,25 +1,20 @@
-// === Module 11615: usePremiumProductPricingString ===
+// === Module 11682: usePremiumProductPricingString ===
 
-// Module 11615 (usePremiumProductPricingString)
-import IAPStore from "IAPStore" /* 9235 */;
+// Module 11682 (usePremiumProductPricingString)
+import PremiumConstants from "PremiumConstants" /* 1390 */;
+import PremiumUtils from "PremiumUtils" /* 2174 */;
+import usePremiumPlanPriceDefault from "usePremiumPlanPrice" /* 10956 */;
+import size from "module_2" /* 2 */;
 
-const require = globalThis.__r;
-
-const require = fn;
-const PRICE_PLACEHOLDER = fn(1387).PRICE_PLACEHOLDER;
-const size = fn(2);
+const PRICE_PLACEHOLDER = PremiumConstants.PRICE_PLACEHOLDER;
 const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
 
 export default function usePremiumProductPricingString(premiumType, YEAR) {
-  const planIdForPremiumType = require("PremiumUtils").getPlanIdForPremiumType(premiumType, YEAR);
-  const obj = require("PremiumUtils");
-  _require = require("ProductIds").getProductIdForGift(planIdForPremiumType);
-  const obj2 = require("ProductIds");
-  items = [IAPStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => IAPStore.getProduct(closure_0));
+  const tmp = usePremiumPlanPriceDefault;
+  const tmpResult = tmp(PremiumUtils.getPlanIdForPremiumType(premiumType, YEAR), { isGift: true });
   let priceString;
-  if (stateFromStores != null) {
-    priceString = stateFromStores.priceString;
+  if (tmpResult != null) {
+    priceString = tmpResult.priceString;
   }
   if (priceString == null) {
     priceString = PRICE_PLACEHOLDER;

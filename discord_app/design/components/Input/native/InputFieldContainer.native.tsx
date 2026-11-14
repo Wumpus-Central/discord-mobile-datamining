@@ -1,15 +1,15 @@
-// === Module 7573: InputFieldContainer ===
+// === Module 7639: InputFieldContainer ===
 
-// Module 7573 (InputFieldContainer)
+// Module 7639 (InputFieldContainer)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import useToken from "useToken" /* 5839 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import InputTypes from "InputTypes" /* 7574 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import useToken from "useToken" /* 5902 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import InputTypes from "InputTypes" /* 7640 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function useInputStyles(size) {
@@ -57,7 +57,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -144,7 +144,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj9.leadingDividerText = { flexGrow: 0 };
   return obj9;
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let closure_10 = createStyles.createStyleProperties({ error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT, default: "transparent", focused: nativeDefault.colors.INPUT_BORDER_ACTIVE });
 let closure_11 = { code: "(function InputFieldContainerNativeTsx1(){let[status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG]=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};})" };
 const size = fn(2);
@@ -219,11 +219,11 @@ export function InputFieldContainer(isFocused) {
   const items2 = [, , , ];
   ({ container: arr3[0], background: arr3[1], radius: arr3[2], minHeight: arr3[3] } = tmp4Result);
   obj3.style = items2;
-  const animatedStyle = _mod1652.useAnimatedStyle(InputFieldContainerNativeTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(InputFieldContainerNativeTsx1);
   const obj4 = { style: null };
   const items3 = [React3.absoluteFill, tmp4Result.radius, animatedStyle];
   obj4.style = items3;
-  const items4 = [hasOwnProperty(_modDef1652.View, obj4), children];
+  const items4 = [hasOwnProperty(_modDef1655.View, obj4), children];
   obj3.children = items4;
   return timestampProducer(React4, obj3);
 }

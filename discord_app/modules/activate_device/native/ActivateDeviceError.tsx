@@ -1,19 +1,19 @@
-// === Module 16204: ActivateDeviceError ===
+// === Module 16325: ActivateDeviceError ===
 
-// Module 16204 (ActivateDeviceError)
+// Module 16325 (ActivateDeviceError)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import components_Button_Button from "components/Button/Button" /* 5873 */;
-import FastImageDefault from "FastImage" /* 5957 */;
-import _modDef7422 from "module_7422" /* 7422 */;
-import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 16202 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import components_Button_Button from "components/Button/Button" /* 5936 */;
+import FastImageDefault from "FastImage" /* 6020 */;
+import _modDef7488 from "module_7488" /* 7488 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 16323 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_7 = createStyles.createStyles({ image: { width: 254, height: 127, alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDeviceError.tsx");
@@ -22,7 +22,7 @@ export function ActivateDeviceError(onRetry) {
   const obj = { children: null };
   const obj2 = { source: null, style: null };
   const tmp = closure_7();
-  obj2.source = _modDef7422;
+  obj2.source = _modDef7488;
   obj2.style = tmp.image;
   items = [React4(FastImageDefault, obj2), , ];
   const obj3 = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };

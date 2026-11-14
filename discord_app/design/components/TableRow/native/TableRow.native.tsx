@@ -1,19 +1,18 @@
-// === Module 7379: TableRow ===
+// === Module 7443: TableRow ===
 
-// Module 7379 (TableRow)
+// Module 7443 (TableRow)
 import nativeDefault from "native" /* 575 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import useToken from "useToken" /* 5839 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import useFontScale from "useFontScale" /* 5881 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 7380 */;
-import Card from "Card" /* 7381 */;
-import TableRowDivider from "TableRowDivider" /* 7385 */;
-import TableRowArrow from "TableRowArrow" /* 7388 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 7390 */;
-import Badge from "Badge" /* 7391 */;
-import TableRowBadge from "TableRowBadge" /* 7393 */;
-import DragIcon from "DragIcon" /* 7394 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import useToken from "useToken" /* 5902 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import useFontScale from "useFontScale" /* 5944 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 7444 */;
+import Card from "Card" /* 7445 */;
+import TableRowDivider from "TableRowDivider" /* 7453 */;
+import TableRowArrow from "TableRowArrow" /* 7456 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 7458 */;
+import Badge from "Badge" /* 7459 */;
+import TableRowBadge from "TableRowBadge" /* 7461 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,8 +27,8 @@ class TableRow {
     if (variant === undefined) {
       variant = "default";
     }
-    ({ draggable, dragHandlePressableProps, height } = global);
-    merged = Object.assign(global, Object.assign({ label: 0, subLabel: 0, icon: 0, trailing: 0, badge: 0, arrow: 0, onPress: 0, disabled: 0, start: 0, end: 0, labelLineClamp: 0, subLabelLineClamp: 0, variant: 0, draggable: 0, dragHandlePressableProps: 0, height: 0 }));
+    draggable = global.draggable;
+    merged = Object.assign(global, Object.assign({ label: 0, subLabel: 0, icon: 0, trailing: 0, badge: 0, arrow: 0, onPress: 0, disabled: 0, start: 0, end: 0, labelLineClamp: 0, subLabelLineClamp: 0, variant: 0, draggable: 0, height: 0 }));
     tmp2 = closure_0;
     tmp3 = closure_2;
     context = closure_3.useContext(closure_0(closure_2[5]).TableRowGroupContext);
@@ -41,7 +40,7 @@ class TableRow {
     tmp2Result = tmp2(tmp3[6]);
     tmp7 = jsx;
     token = tmp2Result.useToken(closure_1(tmp3[4]).modules.mobile.TABLE_ROW_BORDER_RADIUS);
-    obj1 = { radius: token, shadow: "none", border: "none", variant: "muted", start: null, end: null, onPress: null, disabled: null, style: null };
+    obj1 = { radius: token, shadow: "none", border: "none", padding: "none", variant: "muted", start: null, end: null, onPress: null, disabled: null, draggable: null };
     tmp8 = !context;
     if (!context) {
       flag2 = true;
@@ -51,9 +50,9 @@ class TableRow {
     obj1.end = tmp5;
     obj1.onPress = onPress;
     obj1.disabled = disabled;
-    obj1.style = closure_9;
+    obj1.draggable = draggable;
     merged1 = Object.assign(merged);
-    obj1.children = tmp7(TableRowInner, { height, label, subLabel, icon, trailing, badge, arrow, disabled, labelLineClamp, subLabelLineClamp, variant, draggable, dragHandlePressableProps });
+    obj1.children = tmp7(TableRowInner, { height: global.height, label, subLabel, icon, trailing, badge, arrow, disabled, labelLineClamp, subLabelLineClamp, variant, draggable });
     tmp7Result = tmp7(tmp2(tmp3[7]).InternalCard, obj1);
     tmp11 = tmp7Result;
     if (!context) {
@@ -64,8 +63,9 @@ class TableRow {
         obj5 = { children: null };
         items = [, ];
         items[0] = tmp7Result;
-        obj6 = { adjustSpacingForIcon: null };
+        obj6 = { adjustSpacingForIcon: null, adjustSpacingForDragHandle: null };
         obj6.adjustSpacingForIcon = null != icon;
+        obj6.adjustSpacingForDragHandle = draggable;
         items[1] = tmp7(tmp2(tmp3[8]).TableRowDivider, obj6);
         obj5.children = items;
         tmp11 = jsxs(Fragment, obj5);
@@ -85,7 +85,6 @@ class TableRowInner {
     if (flag === undefined) {
       flag = false;
     }
-    dragHandlePressableProps = global.dragHandlePressableProps;
     obj = closure_3;
     ({ borderRadius, height } = global);
     tmp = undefined;
@@ -108,7 +107,7 @@ class TableRowInner {
       num = 1.5;
       tmp7 = fontScale > 1.5;
     }
-    tmp8 = closure_10(true === disabled, null != tmp, tmp7);
+    tmp8 = closure_8(true === disabled, true === flag, null != tmp, tmp7);
     tmp9 = null;
     if (null != badge) {
       tmp10 = jsx;
@@ -123,164 +122,154 @@ class TableRowInner {
     tmp4Result2 = tmp4(tmp5[6]);
     tmp15 = jsxs;
     tmp16 = View;
-    obj21 = { style: null, children: null };
+    obj19 = { style: null, children: null };
     items = [, ];
     items[0] = tmp8.row;
     items[1] = { borderRadius, height };
-    obj21.style = items;
-    tmp17 = flag;
+    obj19.style = items;
+    tmp17 = null != icon;
     token1 = tmp4Result2.useToken(closure_1(tmp5[4]).modules.mobile.TABLE_ROW_LABEL_COLOR);
-    if (flag) {
+    if (tmp17) {
       tmp18 = jsx;
-      tmp19 = Pressable;
-      obj22 = {};
-      tmp20 = obj22;
-      tmp21 = dragHandlePressableProps;
-      merged1 = Object.assign(dragHandlePressableProps);
-      obj23 = { size: "xs", style: null };
-      obj23.style = tmp8.dragHandle;
-      obj22.children = jsx(tmp4(tmp5[16]).DragIcon, obj23);
-      tmp17 = jsx(Pressable, obj22);
+      obj20 = { style: null, children: null };
+      obj20.style = tmp8.iconContainer;
+      obj20.children = icon;
+      tmp17 = jsx(tmp16, obj20);
     }
-    items1 = [, , , , , ];
+    items1 = [, , , , ];
     items1[0] = tmp17;
-    tmp23 = null != icon;
-    if (tmp23) {
-      tmp24 = jsx;
-      obj24 = { style: null, children: null };
-      obj24.style = tmp8.iconContainer;
-      obj24.children = icon;
-      tmp23 = jsx(tmp16, obj24);
-    }
-    items1[1] = tmp23;
-    obj25 = { style: tmp8.content, children: null };
-    obj26 = { style: tmp8.labels, accessible: null, accessibilityRole: null, children: null };
-    tmp25 = flag;
-    obj26.accessible = tmp25;
+    obj21 = { style: tmp8.content, children: null };
+    obj22 = { style: tmp8.labels, accessible: null, accessibilityRole: null, children: null };
+    tmp19 = flag;
+    obj22.accessible = tmp19;
     str = undefined;
     if (flag) {
       str = "text";
     }
-    obj26.accessibilityRole = str;
-    tmp27Result = label;
+    obj22.accessibilityRole = str;
+    tmp21Result = label;
     if (!obj.isValidElement(label)) {
-      tmp27 = jsx;
-      obj27 = { variant: null, color: null, lineClamp: null, includeFontPadding: true, children: null };
-      obj27.variant = token;
+      tmp21 = jsx;
+      obj23 = { variant: null, color: null, lineClamp: null, includeFontPadding: true, children: null };
+      obj23.variant = token;
       str2 = "text-feedback-critical";
       str3 = "danger";
       if ("danger" !== variant) {
         str2 = token1;
       }
-      obj27.color = str2;
-      obj27.lineClamp = labelLineClamp;
-      obj27.children = label;
-      tmp27Result = tmp27(tmp4(tmp5[17]).Text, obj27);
+      obj23.color = str2;
+      obj23.lineClamp = labelLineClamp;
+      obj23.children = label;
+      tmp21Result = tmp21(tmp4(tmp5[16]).Text, obj23);
     }
     items2 = [, ];
-    items2[0] = tmp27Result;
-    tmp28 = null != subLabel;
-    if (tmp28) {
-      tmp30Result = subLabel;
+    items2[0] = tmp21Result;
+    tmp22 = null != subLabel;
+    if (tmp22) {
+      tmp24Result = subLabel;
       if (!obj.isValidElement(subLabel)) {
-        tmp30 = jsx;
+        tmp24 = jsx;
         str4 = "text-subtle";
         str5 = "danger";
         if ("danger" === variant) {
           str4 = "text-feedback-critical";
         }
-        obj28 = { variant: "body-xs/medium", color: null, lineClamp: null, includeFontPadding: true, children: null };
-        obj28.color = str4;
-        obj28.lineClamp = subLabelLineClamp;
-        obj28.children = subLabel;
-        tmp30Result = tmp30(tmp4(tmp5[17]).Text, obj28);
+        obj24 = { variant: "body-xs/medium", color: null, lineClamp: null, includeFontPadding: true, children: null };
+        obj24.color = str4;
+        obj24.lineClamp = subLabelLineClamp;
+        obj24.children = subLabel;
+        tmp24Result = tmp24(tmp4(tmp5[16]).Text, obj24);
       }
-      tmp28 = tmp30Result;
+      tmp22 = tmp24Result;
     }
-    items2[1] = tmp28;
-    obj26.children = items2;
+    items2[1] = tmp22;
+    obj22.children = items2;
     items3 = [, ];
-    items3[0] = tmp15(tmp16, obj26);
-    tmp31 = null != tmp;
-    if (!tmp31) {
-      items3[1] = tmp31;
-      obj25.children = items3;
-      items1[2] = tmp15(tmp16, obj25);
-      tmp36 = null != tmp9 && null == tmp;
-      if (tmp36) {
-        tmp37 = jsx;
-        obj29 = { style: null, children: null };
-        obj29.style = tmp8.badge;
-        obj29.children = tmp9;
-        tmp36 = jsx(tmp16, obj29);
+    items3[0] = tmp15(tmp16, obj22);
+    tmp25 = null != tmp;
+    if (!tmp25) {
+      items3[1] = tmp25;
+      obj21.children = items3;
+      items1[1] = tmp15(tmp16, obj21);
+      tmp30 = null != tmp9 && null == tmp;
+      if (tmp30) {
+        tmp31 = jsx;
+        obj25 = { style: null, children: null };
+        obj25.style = tmp8.badge;
+        obj25.children = tmp9;
+        tmp30 = jsx(tmp16, obj25);
       }
-      items1[3] = tmp36;
-      tmp39Result = null != trailing && null == tmp;
-      if (tmp39Result) {
+      items1[2] = tmp30;
+      tmp33Result = null != trailing && null == tmp;
+      if (tmp33Result) {
         items4 = [, ];
         items4[0] = tmp8.trailing;
         trailingAfterBadge = null != tmp9;
-        tmp39 = jsx;
+        tmp33 = jsx;
         if (trailingAfterBadge) {
           trailingAfterBadge = tmp8.trailingAfterBadge;
         }
-        obj30 = { style: null, children: null };
+        obj26 = { style: null, children: null };
         items4[1] = trailingAfterBadge;
-        obj30.style = items4;
-        obj30.children = trailing;
-        tmp39Result = tmp39(tmp16, obj30);
+        obj26.style = items4;
+        obj26.children = trailing;
+        tmp33Result = tmp33(tmp16, obj26);
       }
-      items1[4] = tmp39Result;
+      items1[3] = tmp33Result;
       if (arrow) {
-        tmp40 = jsx;
+        tmp34 = jsx;
         arrow = jsx(tmp4(tmp5[10]).TableRowArrow, {});
       }
-      items1[5] = arrow;
-      obj21.children = items1;
-      return tmp15(tmp16, obj21);
+      items1[4] = arrow;
+      obj19.children = items1;
+      return tmp15(tmp16, obj19);
     } else {
       if (null != tmp9) {
-        obj31 = { style: null, children: null };
+        obj27 = { style: null, children: null };
         items5 = [, , ];
         ({ trailing: arr6[0], trailingText: arr6[1], trailingTextWithBadge: arr6[2] } = tmp8);
-        obj31.style = items5;
+        obj27.style = items5;
         items6 = [, ];
         items6[0] = tmp9;
-        tmp34 = jsx;
-        obj32 = { style: null, children: null };
-        obj32.style = tmp8.trailingTextContent;
-        obj32.children = tmp;
-        items6[1] = jsx(tmp16, obj32);
-        obj31.children = items6;
-        tmp15Result = tmp15(tmp16, obj31);
+        tmp28 = jsx;
+        obj28 = { style: null, children: null };
+        obj28.style = tmp8.trailingTextContent;
+        obj28.children = tmp;
+        items6[1] = jsx(tmp16, obj28);
+        obj27.children = items6;
+        tmp15Result = tmp15(tmp16, obj27);
       } else {
-        tmp32 = jsx;
-        obj33 = { style: null, children: null };
+        tmp26 = jsx;
+        obj29 = { style: null, children: null };
         items7 = [, ];
         ({ trailing: arr5[0], trailingText: arr5[1] } = tmp8);
-        obj33.style = items7;
-        obj33.children = tmp;
-        tmp15Result = jsx(tmp16, obj33);
+        obj29.style = items7;
+        obj29.children = tmp;
+        tmp15Result = jsx(tmp16, obj29);
       }
-      tmp35 = tmp15Result;
+      tmp29 = tmp15Result;
     }
     return;
   }
 }
-get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const React6 = { padding: 0 };
-const createStyles = fn(5243);
-const refs = createStyles.createStyles((arg0, arg1, arg2) => {
-  const obj = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: nativeDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
-  let num = 1;
-  if (arg0) {
-    num = 0.5;
+({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
+const createStyles = fn(5306);
+const React5 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
+  const obj = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING, paddingStart: null, minHeight: null, flexDirection: "row", alignItems: "center", opacity: null, borderRadius: null };
+  let num;
+  if (arg1) {
+    num = 0;
   }
-  const obj2 = { row: null, iconContainer: null, trailing: null, trailingAfterBadge: null, badge: null, trailingTextWithBadge: null, trailingTextContent: null, content: null, labels: null, trailingText: null, dragHandle: null };
-  obj.opacity = num;
+  obj.paddingStart = num;
+  obj.minHeight = nativeDefault.modules.mobile.TABLE_ROW_HEIGHT;
+  let num2 = 1;
+  if (arg0) {
+    num2 = 0.5;
+  }
+  const obj2 = { row: null, iconContainer: null, trailing: null, trailingAfterBadge: null, badge: null, trailingTextWithBadge: null, trailingTextContent: null, content: null, labels: null, trailingText: null };
+  obj.opacity = num2;
   obj.borderRadius = nativeDefault.radii.md;
   obj2.row = obj;
   obj2.iconContainer = { minWidth: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, marginEnd: nativeDefault.modules.mobile.TABLE_ROW_PADDING, alignItems: "center", justifyContent: "center" };
@@ -290,52 +279,51 @@ const refs = createStyles.createStyles((arg0, arg1, arg2) => {
   obj2.trailingTextWithBadge = { flexDirection: "row", alignItems: "center", gap: 8 };
   obj2.trailingTextContent = { flexShrink: 1 };
   let str = "row";
-  if (arg2) {
+  if (arg3) {
     str = "column";
   }
   const obj4 = { flexShrink: 1, flexGrow: 1, flexDirection: str, alignItems: null, justifyContent: "space-between" };
   let str2 = "center";
-  if (arg2) {
+  if (arg3) {
     str2 = "stretch";
   }
   obj4.alignItems = str2;
   obj2.content = obj4;
   let str3 = "100%";
-  if (arg1) {
+  if (arg2) {
     str3 = "100%";
   }
   const obj5 = { width: str3, flexGrow: null, flexShrink: null, maxWidth: null };
-  let num2;
-  if (arg1) {
-    if (!arg2) {
-      num2 = 1;
+  let num3;
+  if (arg2) {
+    if (!arg3) {
+      num3 = 1;
     }
   }
-  obj5.flexGrow = num2;
-  let num3 = 1;
-  if (arg1) {
-    num3 = 1;
+  obj5.flexGrow = num3;
+  let num4 = 1;
+  if (arg2) {
+    num4 = 1;
   }
-  obj5.flexShrink = num3;
+  obj5.flexShrink = num4;
   let str4;
-  if (arg1) {
-    if (!arg2) {
+  if (arg2) {
+    if (!arg3) {
       str4 = "70%";
     }
   }
   obj5.maxWidth = str4;
   obj2.labels = obj5;
-  let num4 = 18;
-  if (arg2) {
-    num4 = 0;
+  let num5 = 18;
+  if (arg3) {
+    num5 = 0;
   }
-  obj2.trailingText = { flexShrink: 1, marginStart: num4 };
-  obj2.dragHandle = { marginEnd: 8 };
+  obj2.trailingText = { flexShrink: 1, marginStart: num5 };
   return obj2;
 });
-TableRow.Icon = fn(7387).TableRowIcon;
-TableRow.Arrow = fn(7388).TableRowArrow;
-TableRow.TrailingText = fn(7390).TableRowTrailingText;
+TableRow.Icon = fn(7455).TableRowIcon;
+TableRow.Arrow = fn(7456).TableRowArrow;
+TableRow.TrailingText = fn(7458).TableRowTrailingText;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
 

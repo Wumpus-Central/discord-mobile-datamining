@@ -1,59 +1,59 @@
-// === Module 19829: VoicePanelHeader ===
+// === Module 19985: VoicePanelHeader ===
 
-// Module 19829 (VoicePanelHeader)
+// Module 19985 (VoicePanelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5842 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import springPresets from "springPresets" /* 5877 */;
-import useChannelName from "useChannelName" /* 5891 */;
-import NativeViewDefault from "NativeView" /* 7656 */;
-import _modDef10492 from "module_10492" /* 10492 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11918 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11925 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 12846 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12979 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19734 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19735 */;
-import MobileGoLiveEntrypointExperimentDefault from "MobileGoLiveEntrypointExperiment" /* 19830 */;
-import useVoicePanelNavArrowPressedDefault from "useVoicePanelNavArrowPressed" /* 19831 */;
-import useStableParticipant from "useStableParticipant" /* 19832 */;
-import VoicePanelTitleButtonDefault from "VoicePanelTitleButton" /* 19835 */;
-import VoicePanelHeaderSpeakerDefault from "VoicePanelHeaderSpeaker" /* 19837 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5905 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import springPresets from "springPresets" /* 5940 */;
+import useChannelName from "useChannelName" /* 5954 */;
+import NativeViewDefault from "NativeView" /* 7722 */;
+import _modDef10561 from "module_10561" /* 10561 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11991 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 12942 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 13075 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19229 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19944 */;
+import MobileGoLiveEntrypointExperimentDefault from "MobileGoLiveEntrypointExperiment" /* 19986 */;
+import useVoicePanelNavArrowPressedDefault from "useVoicePanelNavArrowPressed" /* 19987 */;
+import useStableParticipant from "useStableParticipant" /* 19988 */;
+import VoicePanelTitleButtonDefault from "VoicePanelTitleButton" /* 19991 */;
+import VoicePanelHeaderSpeakerDefault from "VoicePanelHeaderSpeaker" /* 19993 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6953 */;
-import ExperimentStore from "ExperimentStore" /* 5469 */;
-import StageMusicStore from "StageMusicStore" /* 12839 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
+import ExperimentStore from "ExperimentStore" /* 5532 */;
+import StageMusicStore from "StageMusicStore" /* 12935 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import RelationshipStore from "RelationshipStore" /* 5185 */;
-import SpeakingStore from "SpeakingStore" /* 6878 */;
-import UserStore from "UserStore" /* 1385 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+import RelationshipStore from "RelationshipStore" /* 5248 */;
+import SpeakingStore from "SpeakingStore" /* 6941 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 const useStableParticipantDefault = useStableParticipant;
 
 require = fn;
 function MusicMuteButton(channelId) {
   channelId = channelId.channelId;
   let stateFromStores;
-  const tmp3 = stateFromStores(12979)(channelId);
+  const tmp3 = stateFromStores(13075)(channelId);
   if (tmp3 != null) {
     const speaker = tmp3.speaker;
   }
   items = [StageMusicStore];
   stateFromStores = channelId(504).useStateFromStores(items, () => muted.isMuted());
   const obj = channelId(504);
-  const showStageMusicMuteButton = channelId(12841).useShowStageMusicMuteButton(channelId);
-  const obj2 = channelId(12841);
+  const showStageMusicMuteButton = channelId(12937).useShowStageMusicMuteButton(channelId);
+  const obj2 = channelId(12937);
   const items1 = [ChannelStore];
   const items2 = [channelId];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId), items2);
-  channelId(11885);
+  channelId(11951);
   let tmp10 = null;
   if (showStageMusicMuteButton) {
     if (!speaker) {
@@ -69,30 +69,30 @@ function MusicMuteButton(channelId) {
     }
     const obj4 = {
       accessibilityLabel: stringResult,
-      icon: tmp(stateFromStores ? 12845 : 9275),
+      icon: tmp(stateFromStores ? 12941 : 9342),
       onPress() {
           return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
         }
     };
-    closure_24(tmp(19734), obj4);
-    const tmpResult = tmp(19734);
+    closure_24(tmp(19944), obj4);
+    const tmpResult = tmp(19944);
   }
   return tmp10;
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11919);
+const VoicePanelConstants = fn(11985);
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({ UI_SHOW_HIDE_PHYSICS: closure_16, VoicePanelModes: closure_17, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(11922).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
-const DOCK_PULL_SNAP_DISTANCE = fn(11942).DOCK_PULL_SNAP_DISTANCE;
-const ParticipantTypes = fn(5920).ParticipantTypes;
+const EDGE_GUTTER = fn(11988).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
+const DOCK_PULL_SNAP_DISTANCE = fn(12009).DOCK_PULL_SNAP_DISTANCE;
+const ParticipantTypes = fn(5983).ParticipantTypes;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_24, jsxs: closure_25 } = jsxProd);
 let closure_26 = { duration: 300 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { headerWrapper: { zIndex: 1, position: "absolute", top: 0, left: 0, width: "100%" }, headerSurface: null, blurStyles: null, leftWrapper: null, rightWrapper: null, headerOuter: null, headerInner: null, headerContentWrapper: null, stroke: null, strokeAlt: null, strokeContainer: null, focusedSpeakingDotWrapper: null, focusedSpeakingDot: null, shieldIconMargin: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -154,7 +154,7 @@ let closure_33 = noop.memo(function HeaderBlur(arg0) {
   VoicePanelHeaderTsx1.__closure = items1;
   VoicePanelHeaderTsx1.__workletHash = 11813925576343;
   VoicePanelHeaderTsx1.__initData = tmp4;
-  const derivedValue = _mod1652.useDerivedValue(VoicePanelHeaderTsx1);
+  const derivedValue = _mod1655.useDerivedValue(VoicePanelHeaderTsx1);
   const items2 = [closure_31, spring_spring.withSpring, derivedValue, springPresets.Reanimated3DefaultSpringConfig];
   c0 = undefined;
   c1 = undefined;
@@ -175,8 +175,8 @@ let closure_33 = noop.memo(function HeaderBlur(arg0) {
   VoicePanelHeaderTsx2.__closure = items3;
   VoicePanelHeaderTsx2.__workletHash = 16070581711409;
   VoicePanelHeaderTsx2.__initData = tmp9;
-  const animatedProps = _mod1652.useAnimatedProps(VoicePanelHeaderTsx2);
-  const tmp2Result = _mod1652;
+  const animatedProps = _mod1655.useAnimatedProps(VoicePanelHeaderTsx2);
+  const tmp2Result = _mod1655;
   const items4 = [closure_32, spring_spring.withSpring, derivedValue, obj5];
   c0 = undefined;
   c1 = undefined;
@@ -197,20 +197,20 @@ let closure_33 = noop.memo(function HeaderBlur(arg0) {
   VoicePanelHeaderTsx3.__closure = items5;
   VoicePanelHeaderTsx3.__workletHash = 16349033493456;
   VoicePanelHeaderTsx3.__initData = tmp14;
-  const animatedStyle = _mod1652.useAnimatedStyle(VoicePanelHeaderTsx3);
+  const animatedStyle = _mod1655.useAnimatedStyle(VoicePanelHeaderTsx3);
   const obj2 = { style: null, pointerEvents: "none", children: null };
   const items6 = [StyleSheet.absoluteFill, animatedStyle];
   obj2.style = items6;
   const items7 = [dependencyMap3(VisualEffectViewAnimatedDefault, { style: tmp.blurStyles, blurStyle: "ultra-thin", blurTheme: "dark", animatedProps }), ];
   const obj4 = { style: tmp.strokeContainer, children: null };
   const obj3 = { style: tmp.blurStyles, blurStyle: "ultra-thin", blurTheme: "dark", animatedProps };
-  const tmp2Result2 = _mod1652;
+  const tmp2Result2 = _mod1655;
   obj5 = { style: tmp.stroke };
   const items8 = [dependencyMap3(NativeViewDefault, obj5), dependencyMap3(NativeViewDefault, { style: tmp.strokeAlt })];
   obj4.children = items8;
   items7[1] = closure_1_25(NativeViewDefault, obj4);
   obj2.children = items7;
-  return closure_1_25(_modDef1652.View, obj2);
+  return closure_1_25(_modDef1655.View, obj2);
 });
 let closure_34 = { code: "(function VoicePanelHeaderTsx4(){let[focused,controlsSpecs,VoicePanelControlsModes,speaking]=this.__closure;return focused.get()!=null&&controlsSpecs.get().mode!==VoicePanelControlsModes.HIDDEN&&speaking.get();})" };
 let closure_35 = { code: "(function VoicePanelHeaderTsx5(){let[showSpeakingIndicator]=this.__closure;return{opacity:showSpeakingIndicator.get()?1:0};})" };
@@ -219,7 +219,7 @@ let closure_36 = noop.memo(function FocusedSpeakingDot() {
   _require = id;
   const context = noop.useContext(VoicePanelStateContextDefault);
   ({ focused, controlsSpecs } = context);
-  const sharedValue = require("module_1652").useSharedValue(SpeakingStore.isSpeaking(id));
+  const sharedValue = require("module_1655").useSharedValue(SpeakingStore.isSpeaking(id));
   items = [id, sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     function handleChange() {
@@ -232,7 +232,7 @@ let closure_36 = noop.memo(function FocusedSpeakingDot() {
     };
   }, items);
   const tmp8 = closure_27();
-  const obj = require("module_1652");
+  const obj = require("module_1655");
   const tmp5 = _require;
   const items1 = [closure_34, focused, controlsSpecs, VoicePanelControlsModes, sharedValue];
   _require = undefined;
@@ -259,8 +259,8 @@ let closure_36 = noop.memo(function FocusedSpeakingDot() {
   VoicePanelHeaderTsx4.__closure = items2;
   VoicePanelHeaderTsx4.__workletHash = 16194275628888;
   VoicePanelHeaderTsx4.__initData = tmp9;
-  const derivedValue = require("module_1652").useDerivedValue(VoicePanelHeaderTsx4);
-  const obj2 = require("module_1652");
+  const derivedValue = require("module_1655").useDerivedValue(VoicePanelHeaderTsx4);
+  const obj2 = require("module_1655");
   const items3 = [closure_35, derivedValue];
   _require = undefined;
   [tmp15, tmp16] = items3;
@@ -277,11 +277,11 @@ let closure_36 = noop.memo(function FocusedSpeakingDot() {
   VoicePanelHeaderTsx5.__closure = items4;
   VoicePanelHeaderTsx5.__workletHash = 8700465895227;
   VoicePanelHeaderTsx5.__initData = tmp15;
-  const animatedStyle = tmp5(1652).useAnimatedStyle(VoicePanelHeaderTsx5);
+  const animatedStyle = tmp5(1655).useAnimatedStyle(VoicePanelHeaderTsx5);
   const obj3 = { style: null, pointerEvents: "none", children: closure_24(NativeViewDefault, { style: tmp8.focusedSpeakingDot }) };
   const items5 = [tmp8.focusedSpeakingDotWrapper, animatedStyle];
   obj3.style = items5;
-  return closure_24(_modDef1652.View, obj3);
+  return closure_24(_modDef1655.View, obj3);
 });
 let closure_38 = { code: "(function VoicePanelHeaderTsx6(){let[focused]=this.__closure;var _focused$get;return(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id;})" };
 let closure_39 = { code: "(function VoicePanelHeaderTsx7(manualId,previousManualId){let[scheduleOnRN,handleFocusChange]=this.__closure;if(manualId!==previousManualId){scheduleOnRN(handleFocusChange,manualId);}})" };
@@ -366,7 +366,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   VoicePanelHeaderTsx6.__closure = items6;
   VoicePanelHeaderTsx6.__workletHash = 14454401854438;
   VoicePanelHeaderTsx6.__initData = tmp15;
-  const items7 = [closure_39, require("module_1705").scheduleOnRN, callback];
+  const items7 = [closure_39, require("module_1708").scheduleOnRN, callback];
   _require = undefined;
   importDefault = undefined;
   [tmp17, tmp18, tmp19] = items7;
@@ -384,8 +384,8 @@ export default noop.memo(function VoicePanelHeader(layout) {
   VoicePanelHeaderTsx7.__closure = items8;
   VoicePanelHeaderTsx7.__workletHash = 10422398338840;
   VoicePanelHeaderTsx7.__initData = tmp17;
-  const animatedReaction = require("module_1652").useAnimatedReaction(VoicePanelHeaderTsx6, VoicePanelHeaderTsx7);
-  const obj6 = require("module_1652");
+  const animatedReaction = require("module_1655").useAnimatedReaction(VoicePanelHeaderTsx6, VoicePanelHeaderTsx7);
+  const obj6 = require("module_1655");
   const token = require("useToken").useToken(tmp2(575).modules.mobile.VOICE_PANEL_GUTTER);
   const tmp5Result = require("useToken");
   const items9 = [closure_40, isDockEnabled, calculateVoicePanelHeaderSpecsDefault, safeArea, token, mode, closure_17, gestureState, connected, EDGE_GUTTER];
@@ -434,9 +434,9 @@ export default noop.memo(function VoicePanelHeader(layout) {
   VoicePanelHeaderTsx8.__closure = items10;
   VoicePanelHeaderTsx8.__workletHash = 9510822083837;
   VoicePanelHeaderTsx8.__initData = tmp24;
-  const derivedValue = require("module_1652").useDerivedValue(VoicePanelHeaderTsx8);
-  const tmp5Result15 = require("module_1652");
-  const items11 = [closure_41, calculateVoicePanelHeaderSpecsDefault, safeArea, token, connected, EDGE_GUTTER, isDockEnabled, wrapperDimensions, dockHeight, DOCK_PULL_SNAP_DISTANCE, require("module_1652").interpolate, dockMinimizeProgress, require("module_1652").Extrapolation];
+  const derivedValue = require("module_1655").useDerivedValue(VoicePanelHeaderTsx8);
+  const tmp5Result15 = require("module_1655");
+  const items11 = [closure_41, calculateVoicePanelHeaderSpecsDefault, safeArea, token, connected, EDGE_GUTTER, isDockEnabled, wrapperDimensions, dockHeight, DOCK_PULL_SNAP_DISTANCE, require("module_1655").interpolate, dockMinimizeProgress, require("module_1655").Extrapolation];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -494,8 +494,8 @@ export default noop.memo(function VoicePanelHeader(layout) {
   VoicePanelHeaderTsx9.__closure = items12;
   VoicePanelHeaderTsx9.__workletHash = 12871873065494;
   VoicePanelHeaderTsx9.__initData = tmp35;
-  const derivedValue1 = require("module_1652").useDerivedValue(VoicePanelHeaderTsx9);
-  const tmp5Result16 = require("module_1652");
+  const derivedValue1 = require("module_1655").useDerivedValue(VoicePanelHeaderTsx9);
+  const tmp5Result16 = require("module_1655");
   const items13 = [closure_42, require("calculateVoicePanelHeaderSpecs").BASE_VOICE_PANEL_HEADER_HEIGHT, derivedValue1];
   _require = undefined;
   importDefault = undefined;
@@ -510,8 +510,8 @@ export default noop.memo(function VoicePanelHeader(layout) {
   VoicePanelHeaderTsx10.__closure = items14;
   VoicePanelHeaderTsx10.__workletHash = 6113996517866;
   VoicePanelHeaderTsx10.__initData = tmp49;
-  const animatedStyle = require("module_1652").useAnimatedStyle(VoicePanelHeaderTsx10);
-  const tmp5Result17 = require("module_1652");
+  const animatedStyle = require("module_1655").useAnimatedStyle(VoicePanelHeaderTsx10);
+  const tmp5Result17 = require("module_1655");
   const items15 = [closure_43, calculateVoicePanelHeaderSpecsDefault, safeArea, token, isDockEnabled, mode, closure_17, connected, derivedValue1, require("timing/timing").withTiming, closure_26, require("spring/spring").withSpring, derivedValue, wrapperOffset, closure_18, closure_16];
   _require = undefined;
   importDefault = undefined;
@@ -590,8 +590,8 @@ export default noop.memo(function VoicePanelHeader(layout) {
   VoicePanelHeaderTsx11.__closure = items16;
   VoicePanelHeaderTsx11.__workletHash = 4008001347556;
   VoicePanelHeaderTsx11.__initData = tmp54;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(VoicePanelHeaderTsx11);
-  const tmp5Result18 = require("module_1652");
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(VoicePanelHeaderTsx11);
+  const tmp5Result18 = require("module_1655");
   const items17 = [closure_44, controlsSpecs, VoicePanelControlsModes, isScreenReaderEnabled];
   _require = undefined;
   importDefault = undefined;
@@ -611,8 +611,8 @@ export default noop.memo(function VoicePanelHeader(layout) {
   VoicePanelHeaderTsx12.__closure = items18;
   VoicePanelHeaderTsx12.__workletHash = 5987598000217;
   VoicePanelHeaderTsx12.__initData = tmp71;
-  const derivedValue2 = require("module_1652").useDerivedValue(VoicePanelHeaderTsx12);
-  const tmp5Result19 = require("module_1652");
+  const derivedValue2 = require("module_1655").useDerivedValue(VoicePanelHeaderTsx12);
+  const tmp5Result19 = require("module_1655");
   const items19 = [closure_45, calculateVoicePanelHeaderSpecsDefault, safeArea, token, require("timing/timing").withTiming, derivedValue2, closure_26, require("spring/spring").withSpring, MODE_CHANGE_PHYSICS];
   _require = undefined;
   importDefault = undefined;
@@ -648,8 +648,8 @@ export default noop.memo(function VoicePanelHeader(layout) {
   VoicePanelHeaderTsx13.__closure = items20;
   VoicePanelHeaderTsx13.__workletHash = 16242469850853;
   VoicePanelHeaderTsx13.__initData = tmp76;
-  const animatedStyle2 = require("module_1652").useAnimatedStyle(VoicePanelHeaderTsx13);
-  const tmp5Result20 = require("module_1652");
+  const animatedStyle2 = require("module_1655").useAnimatedStyle(VoicePanelHeaderTsx13);
+  const tmp5Result20 = require("module_1655");
   const items21 = [closure_46, derivedValue2];
   _require = undefined;
   [tmp86, tmp87] = items21;
@@ -674,7 +674,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   VoicePanelHeaderTsx14.__closure = items22;
   VoicePanelHeaderTsx14.__workletHash = 8929282510088;
   VoicePanelHeaderTsx14.__initData = tmp86;
-  const animatedProps = require("module_1652").useAnimatedProps(VoicePanelHeaderTsx14);
+  const animatedProps = require("module_1655").useAnimatedProps(VoicePanelHeaderTsx14);
   const tmp89 = useMyCurrentStageChannelRoleDefault(channelId);
   let flag;
   if (tmp89 != null) {
@@ -684,9 +684,9 @@ export default noop.memo(function VoicePanelHeader(layout) {
     flag = false;
   }
   if (channelType !== require("ChannelTypes").ChannelTypes.GUILD_STAGE_VOICE) {
-    flag = obj4.useConfig({ location: "VoicePanelHeader" }).treatment === tmp5(19830).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
+    flag = obj4.useConfig({ location: "VoicePanelHeader" }).treatment === tmp5(19986).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
   }
-  const tmp5Result21 = require("module_1652");
+  const tmp5Result21 = require("module_1655");
   let canInviteMembers = require("useCanInviteMembers").useCanInviteMembers(channelId);
   const tmp5Result22 = require("useCanInviteMembers");
   const tmp5Result23 = require("useInviteMembersCallback");
@@ -830,8 +830,8 @@ export default noop.memo(function VoicePanelHeader(layout) {
     tmp107Result = null;
     if (!isDockEnabled) {
       const obj10 = { baseColor: tmp2(575).colors.BLACK, minHeight: 0 };
-      tmp107Result = closure_24(tmp2(19167), obj10);
-      const tmp2Result7 = tmp2(19167);
+      tmp107Result = closure_24(tmp2(19359), obj10);
+      const tmp2Result7 = tmp2(19359);
     }
   }
   items28[1] = tmp107Result;
@@ -839,7 +839,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   let tmp107Result7 = null;
   if (tmp13 === ParticipantTypes.USER) {
     const obj12 = { isHeaderHidden: derivedValue2 };
-    tmp107Result7 = closure_24(tmp2(19833), obj12);
+    tmp107Result7 = closure_24(tmp2(19989), obj12);
   }
   const items29 = [tmp107Result7, ];
   const obj13 = { style: null, animatedProps, children: null };
@@ -849,7 +849,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   const tmp5Result28 = require("useIsSecureFramesVerified");
   const obj15 = { icon: null, accessibilityLabel: null, onPress: null, style: null };
   const tmp2Result8 = NativeViewDefault;
-  obj15.icon = _modDef10492;
+  obj15.icon = _modDef10561;
   obj15.accessibilityLabel = stringResult;
   obj15.onPress = tmp92;
   obj15.style = memo;
@@ -862,7 +862,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
     tmp107Result8 = null;
     if (flag2) {
       const obj17 = { size: "xs", color: tmp2(575).colors.TEXT_SUBTLE, style: tmp.shieldIconMargin };
-      tmp107Result8 = closure_24(tmp5(10746).ShieldLockIcon, obj17);
+      tmp107Result8 = closure_24(tmp5(10815).ShieldLockIcon, obj17);
     }
   }
   items32[1] = tmp107Result8;
@@ -882,24 +882,24 @@ export default noop.memo(function VoicePanelHeader(layout) {
   let tmp107Result10 = null;
   if (null != stateFromStores) {
     const obj20 = { channel: stateFromStores, inCall: tmp107Result12 };
-    tmp107Result10 = closure_24(tmp2(19846), obj20);
+    tmp107Result10 = closure_24(tmp2(20002), obj20);
   }
   items34[3] = tmp107Result10;
   if (canInviteMembers) {
-    const obj21 = { icon: tmp2(10913), accessibilityLabel: null, onPress: null };
+    const obj21 = { icon: tmp2(10982), accessibilityLabel: null, onPress: null };
     let intl3 = tmp5(1113).intl;
     const obj22 = { channelName: stateFromStores1 };
     obj21.accessibilityLabel = intl3.formatToPlainString(tmp5(1113).t["dHHb/2"], obj22);
     obj21.onPress = inviteMembersCallback;
-    canInviteMembers = closure_24(tmp2(19734), obj21);
-    const tmp2Result11 = tmp2(19734);
+    canInviteMembers = closure_24(tmp2(19944), obj21);
+    const tmp2Result11 = tmp2(19944);
   }
   items34[4] = canInviteMembers;
   let tmp107Result11 = null;
   if (null != stateFromStores2) {
-    const obj23 = { icon: tmp2(19848), onPress: callback1, accessibilityLabel: stateFromStores2 };
-    tmp107Result11 = closure_24(tmp2(19734), obj23);
-    const tmp2Result12 = tmp2(19734);
+    const obj23 = { icon: tmp2(20004), onPress: callback1, accessibilityLabel: stateFromStores2 };
+    tmp107Result11 = closure_24(tmp2(19944), obj23);
+    const tmp2Result12 = tmp2(19944);
   }
   items34[5] = tmp107Result11;
   if (tmp107Result12) {
@@ -907,17 +907,17 @@ export default noop.memo(function VoicePanelHeader(layout) {
   }
   if (tmp107Result12) {
     const obj24 = { channelId };
-    tmp107Result12 = closure_24(tmp2(19849), obj24);
+    tmp107Result12 = closure_24(tmp2(20005), obj24);
   }
   items34[6] = tmp107Result12;
   obj18.children = items34;
-  items33[1] = closure_25(_modDef1652.View, obj18);
+  items33[1] = closure_25(_modDef1655.View, obj18);
   obj13.children = items33;
-  items29[1] = closure_25(_modDef1652.View, obj13);
+  items29[1] = closure_25(_modDef1655.View, obj13);
   obj11.children = items29;
-  items28[2] = closure_25(_modDef1652.View, obj11);
+  items28[2] = closure_25(_modDef1655.View, obj11);
   obj9.children = items28;
-  obj8.children = closure_25(_modDef1652.View, obj9);
-  obj7.children = closure_24(_modDef1652.View, obj8);
+  obj8.children = closure_25(_modDef1655.View, obj9);
+  obj7.children = closure_24(_modDef1655.View, obj8);
   return closure_24(require("native").ThemeContextProvider, obj7);
 });

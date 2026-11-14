@@ -1,11 +1,11 @@
-// === Module 20368: useLoadGuildStickerWithCreator ===
+// === Module 20523: useLoadGuildStickerWithCreator ===
 
-// Module 20368 (useLoadGuildStickerWithCreator)
+// Module 20523 (useLoadGuildStickerWithCreator)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
-import GuildStickersStore from "GuildStickersStore" /* 6948 */;
+import UserStore from "UserStore" /* 1388 */;
+import GuildStickersStore from "GuildStickersStore" /* 7011 */;
 
 const require = globalThis.__r;
 

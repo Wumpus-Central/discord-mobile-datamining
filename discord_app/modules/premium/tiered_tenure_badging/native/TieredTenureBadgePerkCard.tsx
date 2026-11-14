@@ -1,21 +1,21 @@
-// === Module 10008: TieredTenureBadgePerkCard ===
+// === Module 10075: TieredTenureBadgePerkCard ===
 
-// Module 10008 (TieredTenureBadgePerkCard)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import BadgeId from "BadgeId" /* 8414 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10043 */;
-import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 15172 */;
+// Module 10075 (TieredTenureBadgePerkCard)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import BadgeId from "BadgeId" /* 8480 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10110 */;
+import TieredTenureBadgeActionSheet from "TieredTenureBadgeActionSheet" /* 15286 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_9 = createStyles.createStyles({ badgeNameContainer: { flexDirection: "row" }, tenureRequirements: { marginStart: 4 }, image: { width: "100%", height: "100%" }, imageContainer: { height: 238, paddingVertical: 32 }, upcomingBadge: { opacity: 0.4 }, title: { marginTop: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx");

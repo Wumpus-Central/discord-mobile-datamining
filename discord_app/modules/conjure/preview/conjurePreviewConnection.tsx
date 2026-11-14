@@ -1,24 +1,24 @@
-// === Module 7329: conjurePreviewConnection ===
+// === Module 7393: conjurePreviewConnection ===
 
-// Module 7329 (conjurePreviewConnection)
+// Module 7393 (conjurePreviewConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 7265 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 7271 */;
-import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 7274 */;
-import conjureChatConnection from "conjureChatConnection" /* 7318 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 7330 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 7332 */;
-import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 12172 */;
-import conjurePreviewModeRequests from "conjurePreviewModeRequests" /* 13042 */;
-import conjurePreviewControlLease from "conjurePreviewControlLease" /* 13047 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 13063 */;
-import conjurePreviewAppPublished from "conjurePreviewAppPublished" /* 13092 */;
-import conjureWorkerFetch from "conjureWorkerFetch" /* 13113 */;
-import conjureMediaTickets from "conjureMediaTickets" /* 13114 */;
-import conjurePreviewClaims from "conjurePreviewClaims" /* 15858 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7329 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7335 */;
+import prefetchConjurePreviewFrame from "prefetchConjurePreviewFrame" /* 7338 */;
+import conjureChatConnection from "conjureChatConnection" /* 7382 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 7394 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 7396 */;
+import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 12268 */;
+import conjurePreviewModeRequests from "conjurePreviewModeRequests" /* 13137 */;
+import conjurePreviewControlLease from "conjurePreviewControlLease" /* 13142 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 13158 */;
+import conjurePreviewAppPublished from "conjurePreviewAppPublished" /* 13191 */;
+import conjureWorkerFetch from "conjureWorkerFetch" /* 13219 */;
+import conjureMediaTickets from "conjureMediaTickets" /* 13220 */;
+import conjurePreviewClaims from "conjurePreviewClaims" /* 15978 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1385 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
+import UserStore from "UserStore" /* 1388 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
 
 require = fn;
 let closure_6 = async function _refetchWidgetData() {

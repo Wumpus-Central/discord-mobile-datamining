@@ -1,7 +1,7 @@
-// === Module 5944: intlFormatDate ===
+// === Module 6007: intlFormatDate ===
 
-// Module 5944 (intlFormatDate)
-import LocaleStore from "LocaleStore" /* 2186 */;
+// Module 6007 (intlFormatDate)
+import LocaleStore from "LocaleStore" /* 2189 */;
 
 const require = fn;
 function makeIntlFormatter(locale, arg1) {

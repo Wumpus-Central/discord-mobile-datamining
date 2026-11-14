@@ -1,7 +1,7 @@
-// === Module 8642: PlayStationVoiceExperiment ===
+// === Module 8709: PlayStationVoiceExperiment ===
 
-// Module 8642 (PlayStationVoiceExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1450 */;
+// Module 8709 (PlayStationVoiceExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
 
 const obj = { kind: "user", name: "2026-03-churro", defaultConfig: { allowPlayStationStaging: false }, variations: null };
 const obj2 = { 1: null };

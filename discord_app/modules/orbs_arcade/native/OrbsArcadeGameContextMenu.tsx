@@ -1,13 +1,13 @@
-// === Module 17571: OrbsArcadeGameContextMenu ===
+// === Module 17689: OrbsArcadeGameContextMenu ===
 
-// Module 17571 (OrbsArcadeGameContextMenu)
+// Module 17689 (OrbsArcadeGameContextMenu)
 import util from "util" /* 1113 */;
-import CircleQuestionIcon from "CircleQuestionIcon" /* 9992 */;
-import RefreshIcon from "RefreshIcon" /* 13200 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17535 */;
+import CircleQuestionIcon from "CircleQuestionIcon" /* 10059 */;
+import RefreshIcon from "RefreshIcon" /* 13308 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 17653 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 let closure_7 = async function _handleResetGame(arg0) {
@@ -55,9 +55,9 @@ export default function OrbsArcadeGameContextMenu(game) {
     obj.label = intl.string(util.t["3AT3DL"]);
     obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
     obj.action = function action() {
-      const result = game(17539).trackOrbsArcadeCtaClicked(id, game(17539).OrbsArcadeCta.WHAT_IS_ORBS_ARCADE, game(17539).OrbsArcadeCtaLocation.GAME_TILE, surface);
-      const obj = game(17539);
-      const result1 = game(17540).openOrbsArcadeInfoSheet(id.id, surface);
+      const result = game(17657).trackOrbsArcadeCtaClicked(id, game(17657).OrbsArcadeCta.WHAT_IS_ORBS_ARCADE, game(17657).OrbsArcadeCtaLocation.GAME_TILE, surface);
+      const obj = game(17657);
+      const result1 = game(17658).openOrbsArcadeInfoSheet(id.id, surface);
     };
     items = [obj];
     return items;
@@ -89,7 +89,7 @@ export default function OrbsArcadeGameContextMenu(game) {
   } else {
     items4 = [memo];
   }
-  return jsx(game(9081).ContextMenu, {
+  return jsx(game(9148).ContextMenu, {
     items: items4,
     triggerOnTap: true,
     children(ref) {
@@ -98,12 +98,12 @@ export default function OrbsArcadeGameContextMenu(game) {
       const merged1 = Object.assign(merged);
       obj.variant = "secondary-overlay";
       obj.size = "sm";
-      obj.icon = surface(7357);
+      obj.icon = surface(7421);
       const intl = game(1113).intl;
       obj.accessibilityLabel = intl.string(game(1113).t.reWgFH);
       const intl2 = game(1113).intl;
       obj.accessibilityHint = intl2.string(game(1113).t.hd0b7t);
-      return jsx(game(7922).IconButton, { ref: ref.ref });
+      return jsx(game(7988).IconButton, { ref: ref.ref });
     }
   });
 };

@@ -1,10 +1,10 @@
-// === Module 6988: hasSecondaryViewChat ===
+// === Module 7051: hasSecondaryViewChat ===
 
-// Module 6988 (hasSecondaryViewChat)
+// Module 7051 (hasSecondaryViewChat)
 import Constants from "Constants" /* 1072 */;
-import ChannelRecord from "ChannelRecord" /* 5096 */;
-import conjureDMAppChannel from "conjureDMAppChannel" /* 6989 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
+import ChannelRecord from "ChannelRecord" /* 5159 */;
+import conjureDMAppChannel from "conjureDMAppChannel" /* 7052 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
 import size from "module_2" /* 2 */;
 
 const isChannelChatInSidebar = ChannelRecord.isChannelChatInSidebar;

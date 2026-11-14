@@ -1,10 +1,10 @@
-// === Module 20045: ConjureProjectReconnectManager ===
+// === Module 20203: ConjureProjectReconnectManager ===
 
-// Module 20045 (ConjureProjectReconnectManager)
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6990 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 7265 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6954 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
+// Module 20203 (ConjureProjectReconnectManager)
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 7053 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7329 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 require = fn;
 function handlePostConnectionOpen() {

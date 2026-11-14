@@ -1,9 +1,9 @@
-// === Module 8186: CreditCardIcon ===
+// === Module 8252: CreditCardIcon ===
 
-// Module 8186 (CreditCardIcon)
+// Module 8252 (CreditCardIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 5956 */;
-import _mod8187 from "module_8187" /* 8187 */;
+import BaseIconImage from "BaseIconImage" /* 6019 */;
+import _mod8253 from "module_8253" /* 8253 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function CreditCardIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8187, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8253, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

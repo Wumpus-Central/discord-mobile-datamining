@@ -1,6 +1,6 @@
-// === Module 5248: MessageConstants ===
+// === Module 5311: MessageConstants ===
 
-// Module 5248 (MessageConstants)
+// Module 5311 (MessageConstants)
 import Constants from "Constants" /* 1072 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import Backoff from "Backoff" /* 559 */;

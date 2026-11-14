@@ -1,12 +1,12 @@
-// === Module 8164: ExpressiveModalV2Experiment ===
+// === Module 8230: ExpressiveModalV2Experiment ===
 
-// Module 8164 (ExpressiveModalV2Experiment)
+// Module 8230 (ExpressiveModalV2Experiment)
 import initialize from "initialize" /* 504 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8139 */;
-import SafetyHubStore from "SafetyHubStore" /* 8165 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8205 */;
+import SafetyHubStore from "SafetyHubStore" /* 8231 */;
 
 require = fn;
-const ApexExperiment = fn(1449);
+const ApexExperiment = fn(1452);
 let obj2 = { kind: "user", name: "2026-07-expressive-modal-v2", defaultConfig: { enabled: false }, variations: null };
 const obj3 = { 1: null, 2: { enabled: true } };
 obj3[2] = { enabled: true };

@@ -1,13 +1,13 @@
-// === Module 8602: Clickstream ===
+// === Module 8669: Clickstream ===
 
-// Module 8602 (Clickstream)
+// Module 8669 (Clickstream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ClickstreamExperiment from "ClickstreamExperiment" /* 8603 */;
-import ClickstreamEvents from "ClickstreamEvents" /* 8604 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import ClickstreamExperiment from "ClickstreamExperiment" /* 8670 */;
+import ClickstreamEvents from "ClickstreamEvents" /* 8671 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6008 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6071 */;
 
 require = fn;
 function isClickstreamEnabled() {

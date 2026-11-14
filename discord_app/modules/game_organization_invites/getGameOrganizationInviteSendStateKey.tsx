@@ -1,6 +1,6 @@
-// === Module 12470: getGameOrganizationInviteSendStateKey ===
+// === Module 12566: getGameOrganizationInviteSendStateKey ===
 
-// Module 12470 (getGameOrganizationInviteSendStateKey)
+// Module 12566 (getGameOrganizationInviteSendStateKey)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/getGameOrganizationInviteSendStateKey.tsx");

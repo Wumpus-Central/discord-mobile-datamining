@@ -1,6 +1,6 @@
-// === Module 17795: HappeningNowConstants ===
+// === Module 17915: HappeningNowConstants ===
 
-// Module 17795 (HappeningNowConstants)
+// Module 17915 (HappeningNowConstants)
 import native from "native" /* 1187 */;
 import size from "module_2" /* 2 */;
 

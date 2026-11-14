@@ -1,15 +1,15 @@
-// === Module 11560: AppliedForumTag ===
+// === Module 11627: AppliedForumTag ===
 
-// Module 11560 (AppliedForumTag)
+// Module 11627 (AppliedForumTag)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1411 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import EmojiDefault from "Emoji" /* 7828 */;
-import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 11561 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import EmojiDefault from "Emoji" /* 7894 */;
+import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 11628 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6906 */;
+import EmojiStore from "EmojiStore" /* 6969 */;
 
 require = fn;
 class AppliedForumTag {
@@ -82,10 +82,10 @@ class AppliedForumTag {
   }
 }
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = { pill: { height: 24, paddingHorizontal: 8, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: 4, flexShrink: 1 }, disableEndMargin: { marginRight: 0 }, emoji: { height: 12, width: 12, marginRight: 4, flexShrink: 0 }, textEmoji: { fontSize: 10, marginRight: 4 }, tagName: { flexShrink: 1 }, container: { display: "flex", flexDirection: "row", alignItems: "center" } };
 const React5 = createStyles.createStyles(obj2);
 const size = fn(2);

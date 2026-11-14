@@ -1,25 +1,25 @@
-// === Module 20604: GuildRoleSubscriptionTierConfirmationModal ===
+// === Module 20759: GuildRoleSubscriptionTierConfirmationModal ===
 
-// Module 20604 (GuildRoleSubscriptionTierConfirmationModal)
+// Module 20759 (GuildRoleSubscriptionTierConfirmationModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import FastImageDefault from "FastImage" /* 5957 */;
-import TableRowGroup from "TableRowGroup" /* 7680 */;
-import FormStylesDefault from "FormStyles" /* 20573 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20575 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 20583 */;
-import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 20605 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import FastImageDefault from "FastImage" /* 6020 */;
+import TableRowGroup from "TableRowGroup" /* 7746 */;
+import FormStylesDefault from "FormStyles" /* 20728 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 20730 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 20738 */;
+import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 20760 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 20572 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 20727 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { coverPhoto: null };
 let size = { height: 114, width: "100%", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.coverPhoto = size;

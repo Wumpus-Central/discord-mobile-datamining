@@ -1,7 +1,7 @@
-// === Module 15530: ChatLoadingIndicatorExperiment ===
+// === Module 15644: ChatLoadingIndicatorExperiment ===
 
-// Module 15530 (ChatLoadingIndicatorExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 15644 (ChatLoadingIndicatorExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-01-chat-loading-indicator", kind: "user", defaultConfig: { enabled: false }, variations: null };

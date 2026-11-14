@@ -1,7 +1,7 @@
-// === Module 16386: MuteAwareNoiseCancellationExperiment ===
+// === Module 16509: MuteAwareNoiseCancellationExperiment ===
 
-// Module 16386 (MuteAwareNoiseCancellationExperiment)
-import ApexExperiment from "ApexExperiment" /* 1449 */;
+// Module 16509 (MuteAwareNoiseCancellationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-08-mute-aware-noise-cancellation", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

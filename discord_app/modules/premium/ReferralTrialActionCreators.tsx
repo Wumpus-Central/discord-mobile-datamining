@@ -1,13 +1,13 @@
-// === Module 9227: ReferralTrialActionCreators ===
+// === Module 9294: ReferralTrialActionCreators ===
 
-// Module 9227 (ReferralTrialActionCreators)
+// Module 9294 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 9228 */;
-import UserRecord from "UserRecord" /* 1404 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5146 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 9295 */;
+import UserRecord from "UserRecord" /* 1407 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
 import Backoff from "Backoff" /* 559 */;
 
 require = fn;

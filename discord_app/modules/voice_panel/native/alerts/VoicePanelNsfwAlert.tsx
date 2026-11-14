@@ -1,12 +1,12 @@
-// === Module 19933: VoicePanelNsfwAlert ===
+// === Module 20090: VoicePanelNsfwAlert ===
 
-// Module 19933 (VoicePanelNsfwAlert)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6854 */;
+// Module 20090 (VoicePanelNsfwAlert)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6917 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5114 */;
+import GuildStore from "GuildStore" /* 5177 */;
 
 const require = fn;
-const isGuildNSFW = fn(5110).isGuildNSFW;
+const isGuildNSFW = fn(5173).isGuildNSFW;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const size = fn(2);
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/Voi
 export default function VoicePanelNsfwAlert(guildId) {
   guildId = guildId.guildId;
   const onConnect = guildId.onConnect;
-  dependencyMap = guildId(6211).useDismissModalCallback();
+  dependencyMap = guildId(6274).useDismissModalCallback();
   const tmp3 = isGuildNSFW(GuildStore.getGuild(guildId));
   const intl = guildId(1113).intl;
   const string = intl.string;
@@ -47,7 +47,7 @@ export default function VoicePanelNsfwAlert(guildId) {
   };
   const intl3 = tmp(1113).intl;
   obj4.text = intl3.string(guildId(1113).t.wVq7uo);
-  items = [closure_5(guildId(6211).AlertActionButton, obj4, "confirm"), ];
+  items = [closure_5(guildId(6274).AlertActionButton, obj4, "confirm"), ];
   const obj5 = {
     variant: "secondary",
     onPress: function handleDisagree() {
@@ -58,9 +58,9 @@ export default function VoicePanelNsfwAlert(guildId) {
   };
   const intl4 = tmp(1113).intl;
   obj5.text = intl4.string(guildId(1113).t["/g10LC"]);
-  items[1] = closure_5(guildId(6211).AlertActionButton, obj5, "add-profile-picture");
+  items[1] = closure_5(guildId(6274).AlertActionButton, obj5, "add-profile-picture");
   obj3.children = items;
-  obj2.actions = closure_6(guildId(6211).AlertActions, obj3);
-  return closure_5(guildId(6211).AlertModal, obj2);
+  obj2.actions = closure_6(guildId(6274).AlertActions, obj3);
+  return closure_5(guildId(6274).AlertModal, obj2);
 };
 export const VOICE_PANEL_NSFW_KEY = "voice-panel-nsfw";

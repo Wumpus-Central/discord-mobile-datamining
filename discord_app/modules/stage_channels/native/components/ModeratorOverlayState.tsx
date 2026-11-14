@@ -1,8 +1,8 @@
-// === Module 12810: ModeratorOverlayState ===
+// === Module 12906: ModeratorOverlayState ===
 
-// Module 12810 (ModeratorOverlayState)
-import _mod5158 from "module_5158" /* 5158 */;
-import identity from "module_1254" /* 1254 */;
+// Module 12906 (ModeratorOverlayState)
+import _mod5221 from "module_5221" /* 5221 */;
+import identity from "module_1258" /* 1258 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
@@ -13,7 +13,7 @@ let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
     dismissOverlay(arg0) {
       const overlayDismissedChannelIds = dependencyMap().overlayDismissedChannelIds;
       overlayDismissedChannelIds.add(arg0);
-      overlayDismissedChannelIds(1259).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
+      overlayDismissedChannelIds(1263).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
     }
   };
   return obj;
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 
 export function useModeratorOverlayChannelState(id) {
   closure_0 = id;
-  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod5158.shallow);
-  items = [!closure_2((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _mod5158.shallow).has(id), () => closure_1(closure_0)];
+  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod5221.shallow);
+  items = [!closure_2((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _mod5221.shallow).has(id), () => closure_1(closure_0)];
   return items;
 }

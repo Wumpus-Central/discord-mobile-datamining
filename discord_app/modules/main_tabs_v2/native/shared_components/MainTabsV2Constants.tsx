@@ -1,6 +1,6 @@
-// === Module 8985: MainTabsV2Constants ===
+// === Module 9052: MainTabsV2Constants ===
 
-// Module 8985 (MainTabsV2Constants)
+// Module 9052 (MainTabsV2Constants)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

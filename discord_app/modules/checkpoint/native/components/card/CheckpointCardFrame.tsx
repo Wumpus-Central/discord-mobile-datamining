@@ -1,10 +1,10 @@
-// === Module 14169: CheckpointCardFrame ===
+// === Module 14279: CheckpointCardFrame ===
 
-// Module 14169 (CheckpointCardFrame)
+// Module 14279 (CheckpointCardFrame)
 import nativeDefault from "native" /* 575 */;
-import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2021 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6335 */;
-import inlineStylesDefault from "inlineStyles" /* 8197 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 2024 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6398 */;
+import inlineStylesDefault from "inlineStyles" /* 8263 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,17 +15,14 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-let c10 = 284;
-let c11 = 44;
-let c12 = 43.5;
-let c13 = -1;
-let c14 = 0;
-let c15 = 432;
-let c16 = 326;
+let c10 = -1;
+let c11 = 0;
+let c12 = 432;
+let c13 = 326;
 const styles = { x: -1, y: 0, width: 433, height: 469 };
-const createStyles = fn(5243);
-let closure_18 = createStyles.createStyles({ canvas: { overflow: "hidden", transformOrigin: "top left" }, layer: { position: "absolute", top: 0, left: 0 }, shareCardTexture: { isolation: "isolate" }, textureOverlay: { mixBlendMode: "overlay" }, logo: { position: "absolute", top: 4, left: 4, width: 40, height: 40, alignItems: "center", justifyContent: "center" } });
-let closure_19 = { code: "(function CheckpointCardFrameTsx1(){let[isCharacterSettled,withTiming,CARD_ART_FADE_IN_DURATION_MS]=this.__closure;return{opacity:isCharacterSettled?withTiming(1,{duration:CARD_ART_FADE_IN_DURATION_MS}):0};})" };
+const createStyles = fn(5306);
+let closure_15 = createStyles.createStyles({ canvas: { overflow: "hidden", transformOrigin: "top left" }, layer: { position: "absolute", top: 0, left: 0 }, cardTexture: { isolation: "isolate" }, textureOverlay: { mixBlendMode: "overlay" }, logo: { position: "absolute", top: 0, left: 0, width: 44, height: 44, alignItems: "center", justifyContent: "center" } });
+let closure_16 = { code: "(function CheckpointCardFrameTsx1(){let[isCharacterSettled,withTiming,CARD_ART_FADE_IN_DURATION_MS]=this.__closure;return{opacity:isCharacterSettled?withTiming(1,{duration:CARD_ART_FADE_IN_DURATION_MS}):0};})" };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/card/CheckpointCardFrame.tsx");
 
@@ -49,31 +46,22 @@ export default function CheckpointCardFrame(character) {
   if (flag === undefined) {
     flag = false;
   }
-  let size1;
   let memo;
   let joined;
   closure_9 = undefined;
-  height = undefined;
-  const tmp = closure_18();
+  let x;
+  const tmp = closure_15();
   const id = clydeSize.useId();
   const cardColors = require("CheckpointCardColors").getCardColors(character.cardColorPalette);
-  const secondaryBackgroundColor = cardColors.secondaryBackgroundColor;
-  ({ primaryBackgroundColor, recapCardBackgroundImage } = cardColors);
-  if (flag) {
-    let combined = concat(canvasWidth, " ", num, "H0V44H33L44 32.999V0H", canvasWidth, "Z");
-  } else {
-    combined = concat(canvasWidth, "V284H0V43.5H34L38 38L44 34Z");
-  }
-  const bound = Math.max(1, (canvasWidth - c11) / 156, (num - c12) / 224.5);
-  let size = { x: c11 * (1 - bound), y: c12 * (1 - bound), width: 200 * bound, height: 268 * bound };
-  size1 = undefined;
+  let size;
+  ({ primaryBackgroundColor, secondaryBackgroundColor } = cardColors);
   if (characterLayout != null) {
-    size1 = characterLayout.size;
+    size = characterLayout.size;
   }
-  items = [character, size1];
+  items = [character, size];
   memo = obj.useMemo(() => {
     if (null != c0) {
-      if (null != size1) {
+      if (null != size) {
         const _Math = Math;
         const characterLayerUrls = checkpoint_CheckpointMessageComponentUtils.getCharacterLayerUrls(tmp, Math.round(tmp2 * getDevicePixelRatioDefault()));
       }
@@ -86,13 +74,13 @@ export default function CheckpointCardFrame(character) {
   obj3.urls = new Set();
   closure_9 = obj.useRef(obj3);
   let set = new Set();
-  [tmp15, c10] = num2(clydeSize.useState(null), 2);
-  const tmp14 = num2(clydeSize.useState(null), 2);
-  const items1 = [closure_19, tmp15 === joined, require("timing/timing").withTiming, 150];
+  [tmp10, c10] = num2(clydeSize.useState(null), 2);
+  const tmp9 = num2(clydeSize.useState(null), 2);
+  const items1 = [closure_16, tmp10 === joined, require("timing/timing").withTiming, 150];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
-  [tmp16, tmp17, tmp18, tmp19] = items1;
+  [tmp11, tmp12, tmp13, tmp14] = items1;
   class CheckpointCardFrameTsx1 {
     constructor() {
       opacity = 0;
@@ -107,33 +95,33 @@ export default function CheckpointCardFrame(character) {
       return { opacity };
     }
   }
-  const items2 = [tmp17, tmp18, tmp19];
+  const items2 = [tmp12, tmp13, tmp14];
   CheckpointCardFrameTsx1.__closure = items2;
   CheckpointCardFrameTsx1.__workletHash = 2849175625109;
-  CheckpointCardFrameTsx1.__initData = tmp16;
+  CheckpointCardFrameTsx1.__initData = tmp11;
   const items3 = [canvasWidth, num, num2];
-  const animatedStyle = require("module_1652").useAnimatedStyle(CheckpointCardFrameTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(CheckpointCardFrameTsx1);
   const items4 = [canvasWidth, num, num2];
   const memo1 = obj.useMemo(() => {
-    const size = { width: c1 * num2, height: c2 * num2 };
+    size = { width: c1 * num2, height: c2 * num2 };
     return size;
   }, items3);
   const items5 = [clydeSize];
   const memo2 = obj.useMemo(() => {
-    const size = { width, height: _undefined, transform: null };
+    size = { width, height: _undefined, transform: null };
     items = [{ scale: num2 }];
     size.transform = items;
     return size;
   }, items4);
   const items6 = [characterLayout];
   const memo3 = obj.useMemo(() => {
-    const size = { width: clydeSize, height: clydeSize };
+    size = { width: clydeSize, height: clydeSize };
     return size;
   }, items5);
   const memo4 = obj.useMemo(() => {
     let tmp2;
     if (null != characterLayout) {
-      const size = { position: "absolute", top: null, left: null, width: null, height: null };
+      size = { position: "absolute", top: null, left: null, width: null, height: null };
       ({ top: obj.top, left: obj.left, size: obj.width, size: obj.height } = characterLayout);
       tmp2 = size;
     }
@@ -143,72 +131,57 @@ export default function CheckpointCardFrame(character) {
   const obj5 = { style: null, children: null };
   const items7 = [tmp.canvas, memo2];
   obj5.style = items7;
-  const size2 = { style: tmp.layer, width: canvasWidth, height, children: null };
-  const tmp3Result = require("module_1652");
-  size2.children = memo(require("inlineStyles").Path, { d: combined, fill: secondaryBackgroundColor });
-  const items8 = [memo(inlineStylesDefault, size2), , , , ];
-  const items9 = [tmp.layer, ];
-  let shareCardTexture = flag;
-  if (flag) {
-    shareCardTexture = tmp.shareCardTexture;
-  }
-  const obj6 = { style: items9, children: null };
-  items9[1] = shareCardTexture;
+  const obj6 = { style: null, children: null };
+  const items8 = [, ];
+  ({ layer: arr10[0], cardTexture: arr10[1] } = tmp);
+  obj6.style = items8;
+  const size1 = { width: canvasWidth, height: num, children: null };
+  const tmp3Result = require("module_1655");
+  size1.children = memo(require("inlineStyles").Rect, { width: canvasWidth, height: num, fill: secondaryBackgroundColor });
+  const items9 = [memo(inlineStylesDefault, size1), ];
   if (flag) {
     const obj7 = { children: null };
-    const size3 = { width: canvasWidth, height: num, children: null };
-    const obj8 = { d: combined, fill: secondaryBackgroundColor };
-    size3.children = tmp25(tmp3(8197).Path, obj8);
-    const items10 = [tmp25(tmp28(8197), size3), , ];
-    const size4 = { style: null, width: null, height: null, children: null };
-    const items11 = [, ];
+    const size2 = { style: null, width: null, height: null, children: null };
+    const items10 = [, ];
     ({ layer: arr14[0], textureOverlay: arr14[1] } = tmp);
-    size4.style = items11;
-    size4.width = canvasWidth;
-    size4.height = num;
-    const tmp28Result = tmp28(8197);
-    const obj9 = { children: null };
-    const obj10 = { id: null, children: null };
+    size2.style = items10;
+    size2.width = canvasWidth;
+    size2.height = num;
+    const obj8 = { children: null };
+    const obj9 = { id: null, children: null };
     const _HermesInternal2 = HermesInternal;
-    obj10.id = "" + id + "-top";
-    const obj11 = { d: combined };
-    obj10.children = tmp25(tmp3(8197).Path, obj11);
-    obj9.children = tmp25(tmp3(8197).ClipPath, obj10);
-    const items12 = [tmp25(tmp3(8197).Defs, obj9), ];
-    const obj12 = { clipPath: null, children: null };
+    obj9.id = "" + id + "-top";
+    const size3 = { width: canvasWidth, height: num };
+    obj9.children = tmp20(tmp3(8263).Rect, size3);
+    obj8.children = tmp20(tmp3(8263).ClipPath, obj9);
+    const items11 = [tmp20(tmp3(8263).Defs, obj8), ];
+    const obj10 = { clipPath: null, children: null };
     const _HermesInternal3 = HermesInternal;
-    obj12.clipPath = "url(#" + id + "-top)";
-    const obj13 = { rotation: 180, origin: null, children: null };
+    obj10.clipPath = "url(#" + id + "-top)";
+    const obj11 = { rotation: 180, origin: null, children: null };
     const _HermesInternal4 = HermesInternal;
-    obj13.origin = "" + x + width / 2 + ", " + c14 + c16 / 2;
-    const size5 = { href: tmp28(14170), x, y: c14 - 0.4348 * c16, width, height: 1.4348 * c16, preserveAspectRatio: "none" };
-    obj13.children = tmp25(tmp3(8197).Image, size5);
-    obj12.children = tmp25(tmp3(8197).G, obj13);
-    items12[1] = tmp25(tmp3(8197).G, obj12);
-    size4.children = items12;
-    items10[1] = tmp27(tmp28(8197), size4);
-    const size6 = { style: null, width: null, height: null, children: null };
+    obj11.origin = "" + x + width / 2 + ", " + c11 + c13 / 2;
+    const size4 = { href: tmp23(14280), x, y: c11 - 0.4348 * c13, width, height: 1.4348 * c13, preserveAspectRatio: "none" };
+    obj11.children = tmp20(tmp3(8263).Image, size4);
+    obj10.children = tmp20(tmp3(8263).G, obj11);
+    items11[1] = tmp20(tmp3(8263).G, obj10);
+    size2.children = items11;
+    const items12 = [tmp22(tmp23(8263), size2), ];
+    const size5 = { style: null, width: null, height: null, children: null };
     const items13 = [, ];
-    ({ layer: arr16[0], textureOverlay: arr16[1] } = tmp);
-    size6.style = items13;
-    size6.width = canvasWidth;
-    size6.height = num;
-    const tmp28Result5 = tmp28(8197);
-    const obj14 = { children: null };
-    const obj15 = { id: null, children: null };
+    ({ layer: arr17[0], textureOverlay: arr17[1] } = tmp);
+    size5.style = items13;
+    size5.width = canvasWidth;
+    size5.height = num;
+    const tmp23Result = tmp23(8263);
+    const obj12 = { children: null };
+    const obj13 = { id: null, children: null };
     const _HermesInternal5 = HermesInternal;
-    obj15.id = "" + id + "-bottom";
-    const obj16 = { d: combined };
-    obj15.children = tmp25(tmp3(8197).Path, obj16);
-    obj14.children = tmp25(tmp3(8197).ClipPath, obj15);
-    const items14 = [tmp25(tmp3(8197).Defs, obj14), ];
-    const obj17 = { clipPath: null, children: null };
-    const _HermesInternal6 = HermesInternal;
-    obj17.clipPath = "url(#" + id + "-bottom)";
-    const obj18 = { rotation: 180, origin: null, children: null };
-    const _HermesInternal7 = HermesInternal;
-    obj18.origin = "" + styles.x + styles.width / 2 + ", " + styles.y + styles.height / 2;
-    const obj19 = { href: null };
+    obj13.id = "" + id + "-bottom";
+    const size6 = { width: canvasWidth, height: num };
+    obj13.children = tmp20(tmp3(8263).Rect, size6);
+    obj12.children = tmp20(tmp3(8263).ClipPath, obj13);
+    const items14 = [tmp20(tmp3(8263).Defs, obj12), ];
     class CheckpointCardFrameTsx1 {
       constructor() {
         opacity = 0;
@@ -223,58 +196,65 @@ export default function CheckpointCardFrame(character) {
         return { opacity };
       }
     }
-    obj19.href = tmp28(14170);
+    const _HermesInternal6 = HermesInternal;
+    tmp34[0] = "url(#" + id + "-bottom)";
+    const obj14 = { rotation: 180, origin: null, children: null };
+    const _HermesInternal7 = HermesInternal;
+    obj14.origin = "" + styles.x + styles.width / 2 + ", " + styles.y + styles.height / 2;
+    const obj15 = { href: tmp23(14280) };
     const merged = Object.assign(styles);
-    obj19.opacity = 0.5;
-    obj19.preserveAspectRatio = "xMidYMid slice";
-    obj18.children = tmp25(tmp44, obj19);
-    obj17.children = tmp25(tmp3(8197).G, obj18);
-    items14[1] = tmp25(tmp3(8197).G, obj17);
-    size6.children = items14;
-    items10[2] = tmp27(tmp28(8197), size6);
-    obj7.children = items10;
-    let tmp27Result = tmp27(closure_9, obj7);
-    const tmp28Result6 = tmp28(8197);
+    obj15.opacity = 0.5;
+    obj15.preserveAspectRatio = "xMidYMid slice";
+    obj14.children = tmp20(tmp3(8263).Image, obj15);
+    tmp34[1] = tmp20(tmp3(8263).G, obj14);
+    items14[1] = tmp20(tmp3(8263).G, tmp34);
+    size5.children = items14;
+    items12[1] = tmp22(tmp23(8263), size5);
+    obj7.children = items12;
+    let tmp22Result = tmp22(closure_9, obj7);
+    const tmp23Result4 = tmp23(8263);
   } else {
-    const size7 = { width: canvasWidth, height: num, children: null };
-    const obj20 = { children: null };
-    const obj21 = { id, children: null };
-    const obj22 = { d: combined };
-    obj21.children = tmp25(tmp3(8197).Path, obj22);
-    obj20.children = tmp25(tmp3(8197).ClipPath, obj21);
-    const items15 = [tmp25(tmp3(8197).Defs, obj20), ];
-    const obj23 = { href: null };
-    const obj24 = { uri: recapCardBackgroundImage };
-    obj23.href = obj24;
-    const merged1 = Object.assign(size);
-    obj23.preserveAspectRatio = "xMidYMid slice";
+    const size7 = { style: null, width: null, height: null, children: null };
+    const items15 = [, ];
+    ({ layer: arr12[0], textureOverlay: arr12[1] } = tmp);
+    size7.style = items15;
+    size7.width = canvasWidth;
+    size7.height = num;
+    const obj16 = { children: null };
+    const obj17 = { id, children: null };
+    const size8 = { width: canvasWidth, height: num };
+    obj17.children = tmp20(tmp3(8263).Rect, size8);
+    obj16.children = tmp20(tmp3(8263).ClipPath, obj17);
+    const items16 = [tmp20(tmp3(8263).Defs, obj16), ];
+    const size9 = { href: tmp23(14280), width: canvasWidth, height: num, preserveAspectRatio: "xMidYMid slice", clipPath: null };
     const _HermesInternal = HermesInternal;
-    obj23.clipPath = "url(#" + id + ")";
-    items15[1] = tmp25(tmp3(8197).Image, obj23);
-    size7.children = items15;
-    tmp27Result = tmp27(tmp28(8197), size7);
-    const tmp28Result7 = tmp28(8197);
+    size9.clipPath = "url(#" + id + ")";
+    items16[1] = tmp20(tmp3(8263).Image, size9);
+    size7.children = items16;
+    tmp22Result = tmp22(tmp23(8263), size7);
+    const tmp23Result5 = tmp23(8263);
   }
-  obj6.children = tmp27Result;
-  items8[1] = memo(size1, obj6);
-  const obj25 = { style: tmp.logo, children: null };
-  const size8 = { style: characterLayout.absoluteFill, width: 40, height: 40, children: null };
-  size8.children = memo(require("inlineStyles").Path, { d: "M0 40H30L40 30V0H10L0 10V40Z", fill: primaryBackgroundColor });
-  const items16 = [memo(inlineStylesDefault, size8), ];
-  const tmp28Result8 = inlineStylesDefault;
-  items16[1] = memo(require("ClydeIcon").ClydeIcon, { size: "custom", color: nativeDefault.colors.BLACK, style: memo3 });
-  obj25.children = items16;
-  items8[2] = joined(size1, obj25);
-  items8[3] = character.children;
-  let tmp25Result = null != memo4;
-  if (tmp25Result) {
-    tmp25Result = memo.length > 0;
+  items9[1] = tmp22Result;
+  obj6.children = items9;
+  const items17 = [joined(size, obj6), , , ];
+  const obj18 = { style: tmp.logo, children: null };
+  const size10 = { style: characterLayout.absoluteFill, width: 44, height: 44, children: null };
+  size10.children = memo(require("inlineStyles").Path, { d: "M0 0H44V33L33 44H0Z", fill: primaryBackgroundColor });
+  const items18 = [memo(inlineStylesDefault, size10), ];
+  const tmp23Result6 = inlineStylesDefault;
+  items18[1] = memo(require("ClydeIcon").ClydeIcon, { size: "custom", color: nativeDefault.colors.BLACK, style: memo3 });
+  obj18.children = items18;
+  items17[1] = joined(size, obj18);
+  items17[2] = character.children;
+  let tmp20Result = null != memo4;
+  if (tmp20Result) {
+    tmp20Result = memo.length > 0;
   }
-  if (tmp25Result) {
-    const obj27 = { style: null, children: null };
-    const items17 = [memo4, animatedStyle];
-    obj27.style = items17;
-    obj27.children = memo.map((uri) => {
+  if (tmp20Result) {
+    const obj20 = { style: null, children: null };
+    const items19 = [memo4, animatedStyle];
+    obj20.style = items19;
+    obj20.children = memo.map((uri) => {
       closure_0 = uri;
       return memo(width(_undefined[14]), {
         source: { uri },
@@ -310,11 +290,11 @@ export default function CheckpointCardFrame(character) {
       }, uri);
     });
     const _HermesInternal8 = HermesInternal;
-    tmp25Result = tmp25(tmp28(1652).View, obj27, "character-" + joined);
+    tmp20Result = tmp20(tmp23(1655).View, obj20, "character-" + joined);
   }
-  items8[4] = tmp25Result;
-  obj5.children = items8;
-  obj4.children = joined(size1, obj5);
-  return memo(size1, obj4);
+  items17[3] = tmp20Result;
+  obj5.children = items17;
+  obj4.children = joined(size, obj5);
+  return memo(size, obj4);
 };
 export const CHECKPOINT_CARD_HEIGHT = 284;

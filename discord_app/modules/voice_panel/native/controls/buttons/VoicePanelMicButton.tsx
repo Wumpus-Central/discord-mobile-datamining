@@ -1,26 +1,26 @@
-// === Module 19925: VoicePanelMicButton ===
+// === Module 20082: VoicePanelMicButton ===
 
-// Module 19925 (VoicePanelMicButton)
+// Module 20082 (VoicePanelMicButton)
 import LoggerDefault from "Logger" /* 3 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import HapticUtils from "HapticUtils" /* 5491 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 10533 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11909 */;
-import useMuteStates from "useMuteStates" /* 12926 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 12950 */;
-import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 12951 */;
-import useDeafStates from "useDeafStates" /* 12965 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import HapticUtils from "HapticUtils" /* 5554 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5598 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 10602 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 11975 */;
+import useMuteStates from "useMuteStates" /* 13022 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 13046 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 13047 */;
+import useDeafStates from "useDeafStates" /* 13061 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 6009 */;
-import ImpersonateStore from "ImpersonateStore" /* 5148 */;
+import GameConsoleStore from "GameConsoleStore" /* 6072 */;
+import ImpersonateStore from "ImpersonateStore" /* 5211 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import MediaEngineStore from "MediaEngineStore" /* 2130 */;
-import PermissionStore from "PermissionStore" /* 5175 */;
-import UserStore from "UserStore" /* 1385 */;
-import VoiceStateStore from "VoiceStateStore" /* 5918 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import MediaEngineStore from "MediaEngineStore" /* 2133 */;
+import PermissionStore from "PermissionStore" /* 5238 */;
+import UserStore from "UserStore" /* 1388 */;
+import VoiceStateStore from "VoiceStateStore" /* 5981 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = new LoggerDefault("VoicePanelMicButton");
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_17 = createStyles.createStyles({ text: { position: "absolute", left: 0, right: 0, bottom: 4, textAlign: "center", opacity: 0.5 } });
 let closure_18 = { code: "(function VoicePanelMicButtonTsx1(event,manager){let[State,scheduleOnRN,handleDragStart]=this.__closure;if(event.state!==State.BEGAN)return;manager.activate();scheduleOnRN(handleDragStart);})" };
 let closure_19 = { code: "(function VoicePanelMicButtonTsx2(){let[scheduleOnRN,handlePTTEnd]=this.__closure;scheduleOnRN(handlePTTEnd);})" };
@@ -110,7 +110,7 @@ export function PTTButton(arg0) {
     onPress2 = tmp9;
   }
   const obj3 = require("initialize");
-  sharedValue = require("module_1652").useSharedValue(false);
+  sharedValue = require("module_1655").useSharedValue(false);
   const tmp11 = onPress2(sharedValue[19])();
   _slicedToArray = tmp11;
   noop = obj.useRef({ active: false, dragging: false });
@@ -157,7 +157,7 @@ export function PTTButton(arg0) {
   const memo = obj.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
-    items = [closure_18, LegacyBaseButton.State, _mod1705.scheduleOnRN, callback3];
+    items = [closure_18, LegacyBaseButton.State, _mod1708.scheduleOnRN, callback3];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -179,7 +179,7 @@ export function PTTButton(arg0) {
     VoicePanelMicButtonTsx1.__workletHash = 6924573797989;
     VoicePanelMicButtonTsx1.__initData = tmp3;
     const manualActivationResult = Gesture.Pan().manualActivation(true);
-    const items2 = [closure_19, _mod1705.scheduleOnRN, callback1];
+    const items2 = [closure_19, _mod1708.scheduleOnRN, callback1];
     c0 = undefined;
     c1 = undefined;
     [tmp7, tmp8, tmp9] = items2;
@@ -196,7 +196,7 @@ export function PTTButton(arg0) {
     return Gesture.Pan().manualActivation(true).onTouchesMove(VoicePanelMicButtonTsx1).onFinalize(VoicePanelMicButtonTsx2);
   }, items8);
   const effect = obj.useEffect(() => () => callback1(), items9);
-  const tmp6Result = require("module_1652");
+  const tmp6Result = require("module_1655");
   const voicePanelButtonStyles = require("VoicePanelStyles").useVoicePanelButtonStyles(wrapperSpecs);
   const obj4 = { gesture: memo, children: null };
   const element = { onPressIn, onPressOut: callback2, props, pressed: sharedValue, accessibilityLabel: null, style: null, children: null };

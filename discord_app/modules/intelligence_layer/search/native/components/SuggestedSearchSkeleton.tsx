@@ -1,23 +1,23 @@
-// === Module 19337: SuggestedSearchSkeleton ===
+// === Module 19529: SuggestedSearchSkeleton ===
 
-// Module 19337 (SuggestedSearchSkeleton)
+// Module 19529 (SuggestedSearchSkeleton)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import timing_timing from "timing/timing" /* 5485 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import timing_timing from "timing/timing" /* 5548 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
-const obj2 = { row: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(8999).SEARCH_ROW_TAP_STATE_PADDING }, icon: null, labels: null, line: null };
+const createStyles = fn(5306);
+const obj2 = { row: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9066).SEARCH_ROW_TAP_STATE_PADDING }, icon: null, labels: null, line: null };
 let size = { width: 18, height: 18, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: nativeDefault.space.PX_12 };
 obj2.icon = size;
-obj2.labels = { flex: 1, height: fn(14629).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
+obj2.labels = { flex: 1, height: fn(14742).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
 const size1 = { height: 16, width: "72%", borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.line = size1;
 let closure_7 = createStyles.createStyles(obj2);
@@ -27,14 +27,14 @@ let result = size.fileFinishedImporting("modules/intelligence_layer/search/nativ
 
 export default function SuggestedSearchSkeleton() {
   const tmp = closure_7();
-  const sharedValue = require("module_1652").useSharedValue(0.4);
+  const sharedValue = require("module_1655").useSharedValue(0.4);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const obj = _mod1652;
+    const obj = _mod1655;
     const result = _undefined.set(obj.withRepeat(timing_timing.withTiming(1, { duration: 700 }), -1, true));
   }, items);
-  let obj = require("module_1652");
+  let obj = require("module_1655");
   const items1 = [closure_8, sharedValue];
   _require = undefined;
   [tmp5, tmp6] = items1;
@@ -48,7 +48,7 @@ export default function SuggestedSearchSkeleton() {
   SuggestedSearchSkeletonTsx1.__closure = items2;
   SuggestedSearchSkeletonTsx1.__workletHash = 13808253704974;
   SuggestedSearchSkeletonTsx1.__initData = tmp5;
-  const animatedStyle = require("module_1652").useAnimatedStyle(SuggestedSearchSkeletonTsx1);
+  const animatedStyle = require("module_1655").useAnimatedStyle(SuggestedSearchSkeletonTsx1);
   const obj3 = { style: null, "aria-hidden": true, children: null };
   const items3 = [tmp.row, animatedStyle];
   obj3.style = items3;
@@ -56,5 +56,5 @@ export default function SuggestedSearchSkeleton() {
   const obj5 = { style: tmp.labels, children: closure_5(View, { style: tmp.line }) };
   items4[1] = closure_5(View, obj5);
   obj3.children = items4;
-  return closure_6(_modDef1652.View, obj3);
+  return closure_6(_modDef1655.View, obj3);
 };

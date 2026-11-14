@@ -1,8 +1,8 @@
-// === Module 17665: useQuestDockAnimatedBorderRadius ===
+// === Module 17785: useQuestDockAnimatedBorderRadius ===
 
-// Module 17665 (useQuestDockAnimatedBorderRadius)
-import _mod1652 from "module_1652" /* 1652 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 17584 */;
+// Module 17785 (useQuestDockAnimatedBorderRadius)
+import _mod1655 from "module_1655" /* 1655 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 17702 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ export default function useQuestDockAnimatedBorderRadius(arg0) {
   if (arg1 === undefined) {
     num = 0;
   }
-  items = [closure_3, _mod1652.interpolate, noop.useContext(QuestDockExternalCoordinationContext.QuestDockExternalCoordinationContext).questDockOffset, num, arg0, _mod1652.Extrapolation];
+  items = [closure_3, _mod1655.interpolate, noop.useContext(QuestDockExternalCoordinationContext.QuestDockExternalCoordinationContext).questDockOffset, num, arg0, _mod1655.Extrapolation];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -30,5 +30,5 @@ export default function useQuestDockAnimatedBorderRadius(arg0) {
   useQuestDockAnimatedBorderRadiusTsx1.__closure = items1;
   useQuestDockAnimatedBorderRadiusTsx1.__workletHash = 16041776927081;
   useQuestDockAnimatedBorderRadiusTsx1.__initData = tmp;
-  return _mod1652.useDerivedValue(useQuestDockAnimatedBorderRadiusTsx1);
+  return _mod1655.useDerivedValue(useQuestDockAnimatedBorderRadiusTsx1);
 };

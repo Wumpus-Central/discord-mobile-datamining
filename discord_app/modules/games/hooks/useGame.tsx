@@ -1,10 +1,10 @@
-// === Module 9466: useGame ===
+// === Module 9533: useGame ===
 
-// Module 9466 (useGame)
+// Module 9533 (useGame)
 import DurationsDefault from "Durations" /* 1089 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2138 */;
+import GameStore from "GameStore" /* 2141 */;
 
 const require = fn;
 const initialize = fn(504);
@@ -56,7 +56,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
     flag = false;
   }
   closure_130_1 = flag;
-  return "flexDirection";
+  return "Path";
 });
 obj2.load = function load() {
   const self = this;

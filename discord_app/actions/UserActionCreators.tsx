@@ -1,15 +1,15 @@
-// === Module 7286: UserActionCreators ===
+// === Module 7350: UserActionCreators ===
 
-// Module 7286 (UserActionCreators)
+// Module 7350 (UserActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AnalyticsSchema from "AnalyticsSchema" /* 1346 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6788 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import AnalyticsSchema from "AnalyticsSchema" /* 1349 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6851 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserRecord from "UserRecord" /* 1404 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserRecord from "UserRecord" /* 1407 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
 
@@ -62,7 +62,7 @@ let closure_9 = async function _fetchProfile(arg0) {
           closure_131_12 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

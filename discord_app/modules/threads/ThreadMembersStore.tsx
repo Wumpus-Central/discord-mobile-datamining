@@ -1,11 +1,11 @@
-// === Module 8803: ThreadMembersStore ===
+// === Module 8870: ThreadMembersStore ===
 
-// Module 8803 (ThreadMembersStore)
+// Module 8870 (ThreadMembersStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ChannelRecord from "ChannelRecord" /* 5096 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
+import ChannelRecord from "ChannelRecord" /* 5159 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
 import size from "module_2" /* 2 */;
 
 function updateFromGuild(threads) {

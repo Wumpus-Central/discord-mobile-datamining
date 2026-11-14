@@ -1,13 +1,13 @@
-// === Module 16479: ThumbnailImage ===
+// === Module 16602: ThumbnailImage ===
 
-// Module 16479 (ThumbnailImage)
+// Module 16602 (ThumbnailImage)
 import noop from "module_19" /* 19 */;
 
 let _default = fn(17).Image;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 if (PlatformUtils.isAndroid()) {
-  _default = fn(16480).default;
+  _default = fn(16603).default;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/ThumbnailImage/native/ThumbnailImage.tsx");

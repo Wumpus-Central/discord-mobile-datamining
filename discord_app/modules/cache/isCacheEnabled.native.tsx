@@ -1,6 +1,6 @@
-// === Module 8689: isCacheEnabled ===
+// === Module 8756: isCacheEnabled ===
 
-// Module 8689 (isCacheEnabled)
+// Module 8756 (isCacheEnabled)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/cache/isCacheEnabled.native.tsx");

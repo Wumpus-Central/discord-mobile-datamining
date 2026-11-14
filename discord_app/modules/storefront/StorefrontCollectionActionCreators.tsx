@@ -1,14 +1,14 @@
-// === Module 10390: StorefrontCollectionActionCreators ===
+// === Module 10459: StorefrontCollectionActionCreators ===
 
-// Module 10390 (StorefrontCollectionActionCreators)
+// Module 10459 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import StoreUtils from "StoreUtils" /* 6703 */;
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8515 */;
-import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 8516 */;
+import StoreUtils from "StoreUtils" /* 6766 */;
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8581 */;
+import getStorefrontNativeStoreQuery from "getStorefrontNativeStoreQuery" /* 8582 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2186 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9383 */;
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 8436 */;
+import LocaleStore from "LocaleStore" /* 2189 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9451 */;
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 8502 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
@@ -79,7 +79,7 @@ let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
           closure_130_9 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -289,7 +289,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
           closure_130_20 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -620,7 +620,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp7) {

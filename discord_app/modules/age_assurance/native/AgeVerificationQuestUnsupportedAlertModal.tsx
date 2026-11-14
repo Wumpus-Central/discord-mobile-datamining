@@ -1,10 +1,10 @@
-// === Module 8161: AgeVerificationQuestUnsupportedAlertModal ===
+// === Module 8227: AgeVerificationQuestUnsupportedAlertModal ===
 
-// Module 8161 (AgeVerificationQuestUnsupportedAlertModal)
+// Module 8227 (AgeVerificationQuestUnsupportedAlertModal)
 import util from "util" /* 1113 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import _modDef3273 from "module_3273" /* 3273 */;
-import AlertModal from "AlertModal" /* 6211 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1264 */;
+import _modDef3321 from "module_3321" /* 3321 */;
+import AlertModal from "AlertModal" /* 6274 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,9 +15,9 @@ const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerif
 export default function AgeVerificationQuestUnsupportedAlertModal() {
   const obj = { title: null, content: null, actions: null, trackingProps: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3273.gUqXQN);
+  obj.title = intl.string(_modDef3321.gUqXQN);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef3273.yBHwMy);
+  obj.content = intl2.string(_modDef3321.yBHwMy);
   const obj2 = { children: null };
   const obj3 = { text: null };
   const intl3 = util.intl;

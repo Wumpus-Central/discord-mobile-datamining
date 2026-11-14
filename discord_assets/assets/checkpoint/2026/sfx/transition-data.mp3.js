@@ -1,6 +1,6 @@
-// === Module 14188: ? ===
+// === Module 14295: ? ===
 
-// Module 14188
+// Module 14295
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/sfx/transition-data.mp3.js");

@@ -1,6 +1,6 @@
-// === Module 16794: ConjureVoiceGeometry ===
+// === Module 16917: ConjureVoiceGeometry ===
 
-// Module 16794 (ConjureVoiceGeometry)
+// Module 16917 (ConjureVoiceGeometry)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/voice/ConjureVoiceGeometry.tsx");

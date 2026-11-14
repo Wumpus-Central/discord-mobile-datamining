@@ -1,13 +1,13 @@
-// === Module 20099: MemberVerificationApplicationManager ===
+// === Module 20259: MemberVerificationApplicationManager ===
 
-// Module 20099 (MemberVerificationApplicationManager)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5289 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6206 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6861 */;
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6869 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5286 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5287 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7816 */;
+// Module 20259 (MemberVerificationApplicationManager)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5352 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6269 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6924 */;
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6932 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5349 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5350 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
 
 require = fn;
 const prototype = function MemberVerificationApplicationManager() {

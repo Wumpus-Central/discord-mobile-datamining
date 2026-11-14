@@ -1,6 +1,6 @@
-// === Module 17226: SpendingLimitUtils ===
+// === Module 17349: SpendingLimitUtils ===
 
-// Module 17226 (SpendingLimitUtils)
+// Module 17349 (SpendingLimitUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/parent_tools/SpendingLimitUtils.tsx");

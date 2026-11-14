@@ -1,14 +1,14 @@
-// === Module 7856: useAuthorizedAppsToken ===
+// === Module 7922: useAuthorizedAppsToken ===
 
-// Module 7856 (useAuthorizedAppsToken)
-import GlobalUtils from "GlobalUtils" /* 1380 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7346 */;
+// Module 7922 (useAuthorizedAppsToken)
+import GlobalUtils from "GlobalUtils" /* 1255 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7410 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7158 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7221 */;
 
 require = fn;
-function useAuthorizedAppsTokens(noop, arg1) {
-  _require = noop;
+function useAuthorizedAppsTokens(flatMapResult, arg1) {
+  _require = flatMapResult;
   let obj = arg1;
   if (arg1 == null) {
     obj = {};
@@ -16,11 +16,11 @@ function useAuthorizedAppsTokens(noop, arg1) {
   const disableFetch = obj.disableFetch;
   closure_1 = tmp;
   items = [AuthorizedAppsStore];
-  const items1 = [noop];
+  const items1 = [flatMapResult];
   const tokens = require("initialize").useStateFromStoresArray(items, () => {
     let found;
-    if (noop != null) {
-      const mapped = noop.map((item) => newestTokenForApplication.getNewestTokenForApplication(item));
+    if (closure_0 != null) {
+      const mapped = closure_0.map((item) => newestTokenForApplication.getNewestTokenForApplication(item));
       found = mapped.filter(GlobalUtils.isNotNullish);
     }
     if (found == null) {
@@ -30,11 +30,11 @@ function useAuthorizedAppsTokens(noop, arg1) {
   }, items1);
   const obj2 = require("initialize");
   const items2 = [AuthorizedAppsStore];
-  const items3 = [noop];
+  const items3 = [flatMapResult];
   const fetched = require("initialize").useStateFromStores(items2, () => {
     let flag;
-    if (noop != null) {
-      flag = noop.every((item) => fetchStateForApplication.getFetchStateForApplication(item) === constants.FETCHED);
+    if (closure_0 != null) {
+      flag = closure_0.every((item) => fetchStateForApplication.getFetchStateForApplication(item) === constants.FETCHED);
     }
     if (flag == null) {
       flag = false;
@@ -43,11 +43,11 @@ function useAuthorizedAppsTokens(noop, arg1) {
   }, items3);
   const obj3 = require("initialize");
   const items4 = [AuthorizedAppsStore];
-  const items5 = [noop];
+  const items5 = [flatMapResult];
   stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items4, () => {
     let found;
-    if (noop != null) {
-      found = noop.filter((item) => fetchStateForApplication.getFetchStateForApplication(item) === constants.NOT_FETCHED);
+    if (closure_0 != null) {
+      found = closure_0.filter((item) => fetchStateForApplication.getFetchStateForApplication(item) === constants.NOT_FETCHED);
     }
     if (found == null) {
       found = [];
@@ -66,14 +66,14 @@ function useAuthorizedAppsTokens(noop, arg1) {
   }, items6);
   return { tokens, fetched };
 }
-const FetchState = fn(7158).FetchState;
+const FetchState = fn(7221).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx");
 
 export { useAuthorizedAppsTokens };
-export function useAuthorizedAppsToken(parentId, arg1) {
-  closure_0 = parentId;
-  items = [parentId];
+export function useAuthorizedAppsToken(BLOONS_TD_BATTLES_2_APPLICATION_ID, arg1) {
+  closure_0 = BLOONS_TD_BATTLES_2_APPLICATION_ID;
+  items = [BLOONS_TD_BATTLES_2_APPLICATION_ID];
   const fetched = useAuthorizedAppsTokens(noop.useMemo(() => {
     let tmp2 = null;
     if (null != closure_0) {

@@ -1,13 +1,13 @@
-// === Module 12631: useDraggablePip ===
+// === Module 12727: useDraggablePip ===
 
-// Module 12631 (useDraggablePip)
+// Module 12727 (useDraggablePip)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let useChannelCallStore = fn(10934).useChannelCallStore;
-const Constants = fn(12618);
+let useChannelCallStore = fn(11003).useChannelCallStore;
+const Constants = fn(12714);
 ({ PIP_FOCUS_SCALE: closure_4, PIP_GESTURE_ACTIVE_OFFSET: hasOwnProperty } = Constants);
 let closure_6 = { mass: 1, stiffness: 250, overshootClamping: true, damping: 20 };
 let closure_7 = { code: "(function useDraggablePipTsx1(){let[withTiming,pipFocus,PIP_FOCUS_SCALE,STANDARD_EASING]=this.__closure;return withTiming(pipFocus?PIP_FOCUS_SCALE:1,{easing:STANDARD_EASING,duration:250});})" };
@@ -53,8 +53,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx1.__closure = items1;
   useDraggablePipTsx1.__workletHash = 10550433910574;
   useDraggablePipTsx1.__initData = tmp4;
-  const derivedValue = require("module_1652").useDerivedValue(useDraggablePipTsx1);
-  let obj = require("module_1652");
+  const derivedValue = require("module_1655").useDerivedValue(useDraggablePipTsx1);
+  let obj = require("module_1655");
   const items2 = [c8, width];
   _require = undefined;
   [tmp10, tmp11] = items2;
@@ -65,8 +65,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx2.__closure = items3;
   useDraggablePipTsx2.__workletHash = 13080281623020;
   useDraggablePipTsx2.__initData = tmp10;
-  const derivedValue1 = require("module_1652").useDerivedValue(useDraggablePipTsx2);
-  const tmp2Result = require("module_1652");
+  const derivedValue1 = require("module_1655").useDerivedValue(useDraggablePipTsx2);
+  const tmp2Result = require("module_1655");
   const items4 = [c9, height];
   _require = undefined;
   [tmp13, tmp14] = items4;
@@ -77,8 +77,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx3.__closure = items5;
   useDraggablePipTsx3.__workletHash = 13817744495277;
   useDraggablePipTsx3.__initData = tmp13;
-  const derivedValue2 = require("module_1652").useDerivedValue(useDraggablePipTsx3);
-  const tmp2Result14 = require("module_1652");
+  const derivedValue2 = require("module_1655").useDerivedValue(useDraggablePipTsx3);
+  const tmp2Result14 = require("module_1655");
   const items6 = [c10, derivedValue, width];
   _require = undefined;
   [tmp16, tmp17, tmp18] = items6;
@@ -89,8 +89,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx4.__closure = items7;
   useDraggablePipTsx4.__workletHash = 4679088203701;
   useDraggablePipTsx4.__initData = tmp16;
-  const derivedValue3 = require("module_1652").useDerivedValue(useDraggablePipTsx4);
-  const tmp2Result15 = require("module_1652");
+  const derivedValue3 = require("module_1655").useDerivedValue(useDraggablePipTsx4);
+  const tmp2Result15 = require("module_1655");
   const items8 = [c11, derivedValue, height];
   _require = undefined;
   [tmp20, tmp21, tmp22] = items8;
@@ -101,8 +101,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx5.__closure = items9;
   useDraggablePipTsx5.__workletHash = 14486531035348;
   useDraggablePipTsx5.__initData = tmp20;
-  const derivedValue4 = require("module_1652").useDerivedValue(useDraggablePipTsx5);
-  const tmp2Result16 = require("module_1652");
+  const derivedValue4 = require("module_1655").useDerivedValue(useDraggablePipTsx5);
+  const tmp2Result16 = require("module_1655");
   const items10 = [closure_12, containerWidth];
   _require = undefined;
   [tmp24, tmp25] = items10;
@@ -113,8 +113,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx6.__closure = items11;
   useDraggablePipTsx6.__workletHash = 10331837421608;
   useDraggablePipTsx6.__initData = tmp24;
-  const derivedValue5 = require("module_1652").useDerivedValue(useDraggablePipTsx6);
-  const tmp2Result17 = require("module_1652");
+  const derivedValue5 = require("module_1655").useDerivedValue(useDraggablePipTsx6);
+  const tmp2Result17 = require("module_1655");
   const items12 = [closure_13, containerHeight];
   _require = undefined;
   [tmp27, tmp28] = items12;
@@ -125,18 +125,18 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx7.__closure = items13;
   useDraggablePipTsx7.__workletHash = 15634754187305;
   useDraggablePipTsx7.__initData = tmp27;
-  const derivedValue6 = require("module_1652").useDerivedValue(useDraggablePipTsx7);
-  const tmp2Result18 = require("module_1652");
-  const sharedValue = require("module_1652").useSharedValue(0);
-  const tmp2Result19 = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(sharedValue.get());
-  const tmp2Result20 = require("module_1652");
-  const sharedValue2 = require("module_1652").useSharedValue(0);
-  const tmp2Result21 = require("module_1652");
-  const sharedValue3 = require("module_1652").useSharedValue(sharedValue2.get());
-  const tmp2Result22 = require("module_1652");
-  const sharedValue4 = require("module_1652").useSharedValue(false);
-  const tmp2Result23 = require("module_1652");
+  const derivedValue6 = require("module_1655").useDerivedValue(useDraggablePipTsx7);
+  const tmp2Result18 = require("module_1655");
+  const sharedValue = require("module_1655").useSharedValue(0);
+  const tmp2Result19 = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(sharedValue.get());
+  const tmp2Result20 = require("module_1655");
+  const sharedValue2 = require("module_1655").useSharedValue(0);
+  const tmp2Result21 = require("module_1655");
+  const sharedValue3 = require("module_1655").useSharedValue(sharedValue2.get());
+  const tmp2Result22 = require("module_1655");
+  const sharedValue4 = require("module_1655").useSharedValue(false);
+  const tmp2Result23 = require("module_1655");
   const items14 = [closure_14, containerWidth, derivedValue3, sharedValue1];
   _require = undefined;
   [tmp33, tmp34, tmp35, tmp36] = items14;
@@ -174,8 +174,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx9.__closure = items17;
   useDraggablePipTsx9.__workletHash = 11336346908651;
   useDraggablePipTsx9.__initData = tmp38;
-  const animatedReaction = require("module_1652").useAnimatedReaction(useDraggablePipTsx8, useDraggablePipTsx9);
-  const tmp2Result24 = require("module_1652");
+  const animatedReaction = require("module_1655").useAnimatedReaction(useDraggablePipTsx8, useDraggablePipTsx9);
+  const tmp2Result24 = require("module_1655");
   const items18 = [closure_16, containerHeight, derivedValue4, sharedValue3];
   _require = undefined;
   [tmp44, tmp45, tmp46, tmp47] = items18;
@@ -216,14 +216,14 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx11.__closure = items21;
   useDraggablePipTsx11.__workletHash = 14934070264554;
   useDraggablePipTsx11.__initData = tmp48;
-  const animatedReaction1 = require("module_1652").useAnimatedReaction(useDraggablePipTsx10, useDraggablePipTsx11);
-  const Gesture = tmp2(5535).Gesture;
-  const tmp2Result25 = require("module_1652");
+  const animatedReaction1 = require("module_1655").useAnimatedReaction(useDraggablePipTsx10, useDraggablePipTsx11);
+  const Gesture = tmp2(5598).Gesture;
+  const tmp2Result25 = require("module_1655");
   const items22 = [-c5, c5];
   const PanResult = Gesture.Pan();
   const items23 = [-c5, c5];
   const activeOffsetXResult = Gesture.Pan().activeOffsetX(items22);
-  const items24 = [closure_18, sharedValue1, sharedValue, sharedValue3, sharedValue2, sharedValue4, onMoved, require("module_1705").scheduleOnRN];
+  const items24 = [closure_18, sharedValue1, sharedValue, sharedValue3, sharedValue2, sharedValue4, onMoved, require("module_1708").scheduleOnRN];
   _require = undefined;
   c6 = undefined;
   [tmp54, tmp55, tmp56, tmp57, tmp58, tmp59, tmp60, tmp61] = items24;
@@ -329,9 +329,9 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx13.__workletHash = 12738554963651;
   useDraggablePipTsx13.__initData = tmp62;
   const onUpdateResult = Gesture.Pan().activeOffsetX(items22).activeOffsetY(items23).onUpdate(useDraggablePipTsx12);
-  const Gesture2 = tmp2(5535).Gesture;
+  const Gesture2 = tmp2(5598).Gesture;
   const onEndResult = Gesture.Pan().activeOffsetX(items22).activeOffsetY(items23).onUpdate(useDraggablePipTsx12).onEnd(useDraggablePipTsx13);
-  const items28 = [closure_20, onPress, require("module_1705").scheduleOnRN];
+  const items28 = [closure_20, onPress, require("module_1708").scheduleOnRN];
   [tmp76, tmp77, tmp78] = items28;
   function useDraggablePipTsx14() {
     if (null != c0) {
@@ -343,7 +343,7 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx14.__workletHash = 16181399743221;
   useDraggablePipTsx14.__initData = tmp76;
   const TapResult = Gesture2.Tap();
-  const Gesture3 = tmp2(5535).Gesture;
+  const Gesture3 = tmp2(5598).Gesture;
   const onStartResult = Gesture2.Tap().onStart(useDraggablePipTsx14);
   const RaceResult = Gesture3.Race(onEndResult, Gesture2.Tap().onStart(useDraggablePipTsx14));
   const items30 = [closure_21, sharedValue1, derivedValue3, derivedValue1, sharedValue3, derivedValue4, derivedValue2, derivedValue];
@@ -375,6 +375,6 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx15.__closure = items31;
   useDraggablePipTsx15.__workletHash = 13245105428304;
   useDraggablePipTsx15.__initData = tmp81;
-  const tmp2Result26 = require("module_1652");
-  return { gesture: RaceResult, draggableGridItemStyles: require("module_1652").useAnimatedStyle(useDraggablePipTsx15) };
+  const tmp2Result26 = require("module_1655");
+  return { gesture: RaceResult, draggableGridItemStyles: require("module_1655").useAnimatedStyle(useDraggablePipTsx15) };
 }

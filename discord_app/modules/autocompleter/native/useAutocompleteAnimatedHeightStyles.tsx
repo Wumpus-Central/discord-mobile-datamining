@@ -1,10 +1,10 @@
-// === Module 14696: useAutocompleteAnimatedHeightStyles ===
+// === Module 14809: useAutocompleteAnimatedHeightStyles ===
 
-// Module 14696 (useAutocompleteAnimatedHeightStyles)
-import _mod1652 from "module_1652" /* 1652 */;
-import ScreenIndexFrozen from "ScreenIndexFrozen" /* 5439 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import timingPresets from "timingPresets" /* 5488 */;
+// Module 14809 (useAutocompleteAnimatedHeightStyles)
+import _mod1655 from "module_1655" /* 1655 */;
+import ScreenIndexFrozen from "ScreenIndexFrozen" /* 5502 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import timingPresets from "timingPresets" /* 5551 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = { code: "(function useAutocompleteAnimatedHeightStylesTsx1(){let[withTiming,height,timingStandard,isFrozenSharedValue]=this.__closure;return{height:withTiming(height,timingStandard),display:!isFrozenSharedValue.get()?'flex':'none'};})" };
@@ -31,5 +31,5 @@ export default function useAutocompleteAnimatedHeightStyles(arg0, arg1) {
   useAutocompleteAnimatedHeightStylesTsx1.__closure = items1;
   useAutocompleteAnimatedHeightStylesTsx1.__workletHash = 1718162287415;
   useAutocompleteAnimatedHeightStylesTsx1.__initData = tmp2;
-  return _mod1652.useAnimatedStyle(useAutocompleteAnimatedHeightStylesTsx1);
+  return _mod1655.useAnimatedStyle(useAutocompleteAnimatedHeightStylesTsx1);
 };

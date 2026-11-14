@@ -1,9 +1,9 @@
-// === Module 9595: shop_coachmark ===
+// === Module 9662: shop_coachmark ===
 
-// Module 9595 (shop_coachmark)
+// Module 9662 (shop_coachmark)
 import _mod1197 from "module_1197" /* 1197 */;
-import localized_string from "localized_string" /* 9563 */;
-import theme_aware_asset from "theme_aware_asset" /* 9573 */;
+import localized_string from "localized_string" /* 9630 */;
+import theme_aware_asset from "theme_aware_asset" /* 9640 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

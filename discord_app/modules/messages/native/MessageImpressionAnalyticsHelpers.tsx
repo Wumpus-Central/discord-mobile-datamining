@@ -1,15 +1,15 @@
-// === Module 11820: MessageImpressionAnalyticsHelpers ===
+// === Module 11886: MessageImpressionAnalyticsHelpers ===
 
-// Module 11820 (MessageImpressionAnalyticsHelpers)
-import InviteCodeUtils from "InviteCodeUtils" /* 5990 */;
-import CodedLink from "CodedLink" /* 5992 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 8774 */;
-import MessageViewTrackingManager from "MessageViewTrackingManager" /* 11821 */;
-import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 11822 */;
-import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 11823 */;
+// Module 11886 (MessageImpressionAnalyticsHelpers)
+import InviteCodeUtils from "InviteCodeUtils" /* 6053 */;
+import CodedLink from "CodedLink" /* 6055 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 8841 */;
+import MessageViewTrackingManager from "MessageViewTrackingManager" /* 11887 */;
+import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 11888 */;
+import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 11889 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 5989 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6011 */;
+import InviteStore from "InviteStore" /* 6052 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 6074 */;
 
 const require = globalThis.__r;
 
@@ -56,8 +56,8 @@ function getVoiceInviteEmbedRenderInfo(state) {
 }
 const Constants = fn(1072);
 ({ ChannelTypes: closure_6, GuildFeatures: metroImportDefault, InviteStates: closure_8, MessageFlags: closure_9 } = Constants);
-const LinkType = fn(8727).LinkType;
-const InviteTypes = fn(8775).InviteTypes;
+const LinkType = fn(8794).LinkType;
+const InviteTypes = fn(8842).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/MessageImpressionAnalyticsHelpers.tsx");
 

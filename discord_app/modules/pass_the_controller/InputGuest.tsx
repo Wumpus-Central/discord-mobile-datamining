@@ -1,9 +1,9 @@
-// === Module 15995: InputGuest ===
+// === Module 16116: InputGuest ===
 
-// Module 15995 (InputGuest)
+// Module 16116 (InputGuest)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import InputEvent from "InputEvent" /* 15990 */;
+import InputEvent from "InputEvent" /* 16111 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -225,6 +225,8 @@ prototype["_releaseMouse"] = function _releaseMouse() {
 };
 prototype["shutdown"] = function shutdown() {
   this.isShutdown = true;
+  const logger = this.logger;
+  logger.log("Sending drop to " + this._host);
   const connection = this.connection;
   connection.sendDrop(this.sessionId);
   this._releaseMouse();

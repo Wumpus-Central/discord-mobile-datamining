@@ -1,13 +1,13 @@
-// === Module 17543: OrbsArcadeRewardChainCell ===
+// === Module 17661: OrbsArcadeRewardChainCell ===
 
-// Module 17543 (OrbsArcadeRewardChainCell)
+// Module 17661 (OrbsArcadeRewardChainCell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import _mod1652 from "module_1652" /* 1652 */;
+import _mod1655 from "module_1655" /* 1655 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 let c11 = 1.6666666666666667;
 const start = { x: 0, y: 0 };
 const end = { x: 0, y: 1 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { cell: { width: 50, height: 50, alignItems: "center", justifyContent: "center" }, circle: null, ring: null, confetti: null, stem: null, grantedStem: null, checkBadge: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -33,7 +33,7 @@ const obj4 = { borderWidth: 1.6666666666666667, borderColor: nativeDefault.color
 obj2.grantedStem = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE, opacity: 0.4 };
 obj2.checkBadge = { position: "absolute", right: -1, bottom: -1 };
 let closure_14 = createStyles.createStyles(obj2);
-let items = [{ code: "(function getWindowProgress_OrbsArcadeRewardChainCellTsx1(timeMs,startMs,durationMs){let[interpolate,Extrapolation]=this.__closure;if(startMs==null){return 1;}return interpolate(timeMs,[startMs,startMs+durationMs],[0,1],Extrapolation.CLAMP);})" }, fn(1652).interpolate, fn(1652).Extrapolation];
+let items = [{ code: "(function getWindowProgress_OrbsArcadeRewardChainCellTsx1(timeMs,startMs,durationMs){let[interpolate,Extrapolation]=this.__closure;if(startMs==null){return 1;}return interpolate(timeMs,[startMs,startMs+durationMs],[0,1],Extrapolation.CLAMP);})" }, fn(1655).interpolate, fn(1655).Extrapolation];
 let closure_129_0;
 let closure_129_1;
 [tmp5, tmp6, tmp7] = items;
@@ -101,8 +101,8 @@ export default function OrbsArcadeRewardChainCell(arg0) {
   OrbsArcadeRewardChainCellTsx3.__closure = items1;
   OrbsArcadeRewardChainCellTsx3.__workletHash = 11819610046638;
   OrbsArcadeRewardChainCellTsx3.__initData = tmp12;
-  const derivedValue = require("module_1652").useDerivedValue(OrbsArcadeRewardChainCellTsx3);
-  const tmp2Result = require("module_1652");
+  const derivedValue = require("module_1655").useDerivedValue(OrbsArcadeRewardChainCellTsx3);
+  const tmp2Result = require("module_1655");
   const items2 = [closure_18, getWindowProgress, timeline, focusRingAtMs, 500];
   _require = undefined;
   importDefault = undefined;
@@ -118,8 +118,8 @@ export default function OrbsArcadeRewardChainCell(arg0) {
   OrbsArcadeRewardChainCellTsx4.__closure = items3;
   OrbsArcadeRewardChainCellTsx4.__workletHash = 12936805051177;
   OrbsArcadeRewardChainCellTsx4.__initData = tmp18;
-  const derivedValue1 = require("module_1652").useDerivedValue(OrbsArcadeRewardChainCellTsx4);
-  const tmp2Result8 = require("module_1652");
+  const derivedValue1 = require("module_1655").useDerivedValue(OrbsArcadeRewardChainCellTsx4);
+  const tmp2Result8 = require("module_1655");
   const items4 = [closure_19, getWindowProgress, timeline, sum2, 300];
   _require = undefined;
   importDefault = undefined;
@@ -135,7 +135,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
   OrbsArcadeRewardChainCellTsx5.__closure = items5;
   OrbsArcadeRewardChainCellTsx5.__workletHash = 15419288936808;
   OrbsArcadeRewardChainCellTsx5.__initData = tmp24;
-  const derivedValue2 = require("module_1652").useDerivedValue(OrbsArcadeRewardChainCellTsx5);
+  const derivedValue2 = require("module_1655").useDerivedValue(OrbsArcadeRewardChainCellTsx5);
   const callback = obj4.useCallback(() => {
     const current = _undefined2.current;
     let playResult;
@@ -144,7 +144,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     }
     return playResult;
   }, []);
-  const tmp2Result9 = require("module_1652");
+  const tmp2Result9 = require("module_1655");
   const items6 = [closure_20, sum1, timeline];
   _require = undefined;
   importDefault = undefined;
@@ -163,7 +163,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
   OrbsArcadeRewardChainCellTsx6.__closure = items7;
   OrbsArcadeRewardChainCellTsx6.__workletHash = 11506455557581;
   OrbsArcadeRewardChainCellTsx6.__initData = tmp31;
-  const items8 = [closure_21, require("module_1705").scheduleOnRN, callback];
+  const items8 = [closure_21, require("module_1708").scheduleOnRN, callback];
   _require = undefined;
   importDefault = undefined;
   [tmp34, tmp35, tmp36] = items8;
@@ -187,7 +187,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
   OrbsArcadeRewardChainCellTsx7.__closure = items9;
   OrbsArcadeRewardChainCellTsx7.__workletHash = 5869540871165;
   OrbsArcadeRewardChainCellTsx7.__initData = tmp34;
-  const animatedReaction = require("module_1652").useAnimatedReaction(OrbsArcadeRewardChainCellTsx6, OrbsArcadeRewardChainCellTsx7);
+  const animatedReaction = require("module_1655").useAnimatedReaction(OrbsArcadeRewardChainCellTsx6, OrbsArcadeRewardChainCellTsx7);
   const items10 = [token1];
   const items11 = [token1];
   const memo = obj4.useMemo(() => {
@@ -204,7 +204,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     items = [_modDef671(c0).alpha(0).css(), c0];
     return items;
   }, items11);
-  const tmp2Result10 = require("module_1652");
+  const tmp2Result10 = require("module_1655");
   const items12 = [closure_22, derivedValue];
   _require = undefined;
   [tmp40, tmp41] = items12;
@@ -218,9 +218,9 @@ export default function OrbsArcadeRewardChainCell(arg0) {
   OrbsArcadeRewardChainCellTsx8.__closure = items13;
   OrbsArcadeRewardChainCellTsx8.__workletHash = 16220502073133;
   OrbsArcadeRewardChainCellTsx8.__initData = tmp40;
-  const animatedStyle = require("module_1652").useAnimatedStyle(OrbsArcadeRewardChainCellTsx8);
-  const tmp2Result11 = require("module_1652");
-  const items14 = [closure_23, require("module_1652").interpolate, getWindowProgress, timeline, sum, 150, 250];
+  const animatedStyle = require("module_1655").useAnimatedStyle(OrbsArcadeRewardChainCellTsx8);
+  const tmp2Result11 = require("module_1655");
+  const items14 = [closure_23, require("module_1655").interpolate, getWindowProgress, timeline, sum, 150, 250];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -242,8 +242,8 @@ export default function OrbsArcadeRewardChainCell(arg0) {
   OrbsArcadeRewardChainCellTsx9.__closure = items15;
   OrbsArcadeRewardChainCellTsx9.__workletHash = 15751771266873;
   OrbsArcadeRewardChainCellTsx9.__initData = tmp43;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(OrbsArcadeRewardChainCellTsx9);
-  require("module_1652");
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(OrbsArcadeRewardChainCellTsx9);
+  require("module_1655");
   const items16 = [closure_24, stemLength, derivedValue2];
   _require = undefined;
   importDefault = undefined;
@@ -285,10 +285,10 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     let tmp59Result = null;
     if (!isStemTargetGranted) {
       const obj7 = { style: StyleSheet.absoluteFill, start, end, colors: memo1 };
-      tmp59Result = closure_8(tmp4(5830), obj7);
+      tmp59Result = closure_8(tmp4(5893), obj7);
     }
     obj6.children = tmp59Result;
-    tmp59Result2 = closure_8(tmp4(1652).View, obj6);
+    tmp59Result2 = closure_8(tmp4(1655).View, obj6);
   }
   const tmp65 = status !== require("OrbsArcadeTypes").OrbsArcadeRewardStatus.LOCKED;
   const items19 = [tmp59Result2, , , , , , ];
@@ -299,7 +299,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
   items19[1] = closure_8(View, obj8);
   if (isFocused) {
     const obj9 = { color: token, progress: derivedValue1, rewardSize: 50, strokeWidth };
-    let tmp66Result = closure_8(tmp4(17544), obj9);
+    let tmp66Result = closure_8(tmp4(17662), obj9);
   } else {
     tmp66Result = null;
   }
@@ -311,22 +311,22 @@ export default function OrbsArcadeRewardChainCell(arg0) {
       const obj10 = { style: null };
       const items21 = [tmp.circle, memo, animatedStyle];
       obj10.style = items21;
-      tmp66Result5 = closure_8(tmp4(1652).View, obj10);
+      tmp66Result5 = closure_8(tmp4(1655).View, obj10);
     }
     const obj11 = { children: null };
     const items22 = [tmp66Result5, ];
     const obj12 = { color: token1, progress: derivedValue, rewardSize: 50, strokeWidth };
-    items22[1] = closure_8(tmp4(17544), obj12);
+    items22[1] = closure_8(tmp4(17662), obj12);
     obj11.children = items22;
     tmp56Result = closure_10(closure_9, obj11);
-    tmp2Result14 = tmp2(5250);
+    tmp2Result14 = tmp2(5313);
   }
   items19[3] = tmp56Result;
   if (reward.type === require("OrbsArcadeTypes").OrbsArcadeRewardType.FRACTIONAL_PREMIUM) {
-    let tmp66Result6 = closure_8(tmp2(10355).NitroCoinSpotIllustration, { height: 30 });
+    let tmp66Result6 = closure_8(tmp2(10424).NitroCoinSpotIllustration, { height: 30 });
   } else {
     const obj13 = { reward, size: 38 };
-    tmp66Result6 = closure_8(tmp4(17545), obj13);
+    tmp66Result6 = closure_8(tmp4(17663), obj13);
   }
   items19[4] = tmp66Result6;
   let tmp66Result7 = null;
@@ -335,8 +335,8 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     const items23 = [tmp.checkBadge, animatedStyle1];
     obj14.style = items23;
     const obj15 = { size: "xs", color: tmp4(575).colors.STATUS_POSITIVE, secondaryColor: tmp4(575).colors.WHITE };
-    obj14.children = closure_8(tmp2(7864).CircleCheckIcon, obj15);
-    tmp66Result7 = closure_8(tmp4(1652).View, obj14);
+    obj14.children = closure_8(tmp2(7930).CircleCheckIcon, obj15);
+    tmp66Result7 = closure_8(tmp4(1655).View, obj14);
   }
   items19[5] = tmp66Result7;
   let tmp66Result8 = null;
@@ -344,10 +344,10 @@ export default function OrbsArcadeRewardChainCell(arg0) {
     tmp66Result8 = null;
     if (null != grantAtMs) {
       const obj16 = { pointerEvents: "none", style: tmp.confetti, children: null };
-      const obj17 = { ref, source: tmp2(17546), autoPlay: false, loop: false };
-      obj16.children = closure_8(tmp4(5860), obj17);
+      const obj17 = { ref, source: tmp2(17664), autoPlay: false, loop: false };
+      obj16.children = closure_8(tmp4(5923), obj17);
       tmp66Result8 = closure_8(View, obj16);
-      const tmp4Result = tmp4(5860);
+      const tmp4Result = tmp4(5923);
     }
   }
   items19[6] = tmp66Result8;
@@ -356,7 +356,7 @@ export default function OrbsArcadeRewardChainCell(arg0) {
 };
 export function useOrbsArcadeRewardChainRowStyle(arg0) {
   ({ isGranted, isFocused, timeline, focusRingAtMs } = arg0);
-  items = [closure_16, isGranted, isFocused, 0.4, getWindowProgress, timeline, focusRingAtMs, 500, _mod1652.interpolate];
+  items = [closure_16, isGranted, isFocused, 0.4, getWindowProgress, timeline, focusRingAtMs, 500, _mod1655.interpolate];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -399,7 +399,7 @@ export function useOrbsArcadeRewardChainRowStyle(arg0) {
   OrbsArcadeRewardChainCellTsx2.__closure = items1;
   OrbsArcadeRewardChainCellTsx2.__workletHash = 17555703606007;
   OrbsArcadeRewardChainCellTsx2.__initData = tmp;
-  return _mod1652.useAnimatedStyle(OrbsArcadeRewardChainCellTsx2);
+  return _mod1655.useAnimatedStyle(OrbsArcadeRewardChainCellTsx2);
 }
 export function useOrbsArcadeRewardChainTimeline(arg0) {
   ({ grantedRewardIds: require, focusedRewardId: importDefault, grantAnimatedOnOpenRewardIds: dependencyMap } = arg0);
@@ -432,14 +432,14 @@ export function useOrbsArcadeRewardChainTimeline(arg0) {
       return obj;
     }
   }), 1)[0];
-  const sharedValue = _mod1652.useSharedValue(0);
+  const sharedValue = _mod1655.useSharedValue(0);
   const items1 = [first, sharedValue];
   const effect = first.useEffect(() => {
     if (null != first) {
       const _requestAnimationFrame = requestAnimationFrame;
       closure_0 = requestAnimationFrame(() => {
         const obj = require("timing/timing");
-        return sharedValue.set(obj.withTiming(first.endMs, { duration: first.endMs, easing: require("module_1652").Easing.linear }));
+        return sharedValue.set(obj.withTiming(first.endMs, { duration: first.endMs, easing: require("module_1655").Easing.linear }));
       });
       return () => cancelAnimationFrame(closure_0);
     }

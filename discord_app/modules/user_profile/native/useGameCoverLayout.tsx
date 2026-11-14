@@ -1,8 +1,8 @@
-// === Module 12054: useGameCoverLayout ===
+// === Module 12103: useGameCoverLayout ===
 
-// Module 12054 (useGameCoverLayout)
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7929 */;
-import UserProfileGameWidgetConstants from "UserProfileGameWidgetConstants" /* 12042 */;
+// Module 12103 (useGameCoverLayout)
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7994 */;
+import UserProfileGameWidgetConstants from "UserProfileGameWidgetConstants" /* 12104 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/native/useGameCoverLayout.tsx");
@@ -17,5 +17,5 @@ export default function useGameCoverLayout() {
   }
   const sum = num + UserProfileGameWidgetConstants.GAME_COVER_GRID_GAP;
   const bound = Math.max(3, Math.ceil(sum / (120 + UserProfileGameWidgetConstants.GAME_COVER_GRID_GAP)));
-  return { ref, onLayout, isMeasured: num > 0, columns: bound, coverWidth: (num - UserProfileGameWidgetConstants.GAME_COVER_GRID_GAP * (bound - 1)) / bound };
+  return { ref, onLayout, width: num, isMeasured: num > 0, columns: bound, coverWidth: (num - UserProfileGameWidgetConstants.GAME_COVER_GRID_GAP * (bound - 1)) / bound };
 };

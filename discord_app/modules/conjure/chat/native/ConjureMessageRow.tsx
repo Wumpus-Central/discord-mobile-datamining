@@ -1,19 +1,19 @@
-// === Module 13515: ConjureMessageRow ===
+// === Module 13618: ConjureMessageRow ===
 
-// Module 13515 (ConjureMessageRow)
+// Module 13618 (ConjureMessageRow)
 import nativeDefault from "native" /* 575 */;
-import conjureChatTurns from "conjureChatTurns" /* 7258 */;
-import ConjureVersionRestoreConfirm from "ConjureVersionRestoreConfirm" /* 13173 */;
-import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 13181 */;
-import ConjureDesignFeedback from "ConjureDesignFeedback" /* 13196 */;
-import conjureQueuedMessage from "conjureQueuedMessage" /* 13466 */;
-import ConjureTimelineTree from "ConjureTimelineTree" /* 13471 */;
-import ConjureTodoAgents from "ConjureTodoAgents" /* 13486 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 13521 */;
-import ConjureChatRestore from "ConjureChatRestore" /* 13526 */;
-import ConjureActivityBox from "ConjureActivityBox" /* 13551 */;
+import conjureChatTurns from "conjureChatTurns" /* 7322 */;
+import ConjureVersionRestoreConfirm from "ConjureVersionRestoreConfirm" /* 13282 */;
+import ConjureNativeMarkdown from "ConjureNativeMarkdown" /* 13290 */;
+import ConjureDesignFeedback from "ConjureDesignFeedback" /* 13304 */;
+import conjureQueuedMessage from "conjureQueuedMessage" /* 13569 */;
+import ConjureTimelineTree from "ConjureTimelineTree" /* 13574 */;
+import ConjureTodoAgents from "ConjureTodoAgents" /* 13589 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 13624 */;
+import ConjureChatRestore from "ConjureChatRestore" /* 13629 */;
+import ConjureActivityBox from "ConjureActivityBox" /* 13654 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1385 */;
+import UserStore from "UserStore" /* 1388 */;
 
 const ConjureActivityBoxDefault = ConjureActivityBox;
 
@@ -22,26 +22,26 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5243);
-let obj = { row: { position: "relative", paddingLeft: fn(13507).MESSAGE_CONTENT_INSET, paddingRight: fn(13507).MESSAGE_EDGE_INSET, paddingVertical: fn(13516).ROW_PAD, gap: fn(13516).BLOCK_GAP }, rowGroupStart: null, boundaryRow: null, avatar: null, spoken: null, avatarSpoken: null, avatarSpokenReplying: null, header: null, activityBox: null };
-let obj3 = { position: "relative", paddingLeft: fn(13507).MESSAGE_CONTENT_INSET, paddingRight: fn(13507).MESSAGE_EDGE_INSET, paddingVertical: fn(13516).ROW_PAD, gap: fn(13516).BLOCK_GAP };
-obj.rowGroupStart = { marginTop: fn(13516).GROUP_GAP };
-let obj4 = { marginTop: fn(13516).GROUP_GAP };
-obj.boundaryRow = { paddingHorizontal: fn(13507).MESSAGE_EDGE_INSET, paddingVertical: fn(13516).ROW_PAD };
-const rect = { position: "absolute", left: fn(13507).MESSAGE_EDGE_INSET, top: fn(13516).ROW_PAD };
+const createStyles = fn(5306);
+let obj = { row: { position: "relative", paddingLeft: fn(13610).MESSAGE_CONTENT_INSET, paddingRight: fn(13610).MESSAGE_EDGE_INSET, paddingVertical: fn(13619).ROW_PAD, gap: fn(13619).BLOCK_GAP }, rowGroupStart: null, boundaryRow: null, avatar: null, spoken: null, avatarSpoken: null, avatarSpokenReplying: null, header: null, activityBox: null };
+let obj3 = { position: "relative", paddingLeft: fn(13610).MESSAGE_CONTENT_INSET, paddingRight: fn(13610).MESSAGE_EDGE_INSET, paddingVertical: fn(13619).ROW_PAD, gap: fn(13619).BLOCK_GAP };
+obj.rowGroupStart = { marginTop: fn(13619).GROUP_GAP };
+let obj4 = { marginTop: fn(13619).GROUP_GAP };
+obj.boundaryRow = { paddingHorizontal: fn(13610).MESSAGE_EDGE_INSET, paddingVertical: fn(13619).ROW_PAD };
+const rect = { position: "absolute", left: fn(13610).MESSAGE_EDGE_INSET, top: fn(13619).ROW_PAD };
 obj.avatar = rect;
-let obj5 = { paddingHorizontal: fn(13507).MESSAGE_EDGE_INSET, paddingVertical: fn(13516).ROW_PAD };
-obj.spoken = { position: "relative", gap: fn(13516).BLOCK_GAP };
-const rect1 = { left: fn(13507).MESSAGE_EDGE_INSET - fn(13507).MESSAGE_CONTENT_INSET, top: 0 };
+let obj5 = { paddingHorizontal: fn(13610).MESSAGE_EDGE_INSET, paddingVertical: fn(13619).ROW_PAD };
+obj.spoken = { position: "relative", gap: fn(13619).BLOCK_GAP };
+const rect1 = { left: fn(13610).MESSAGE_EDGE_INSET - fn(13610).MESSAGE_CONTENT_INSET, top: 0 };
 obj.avatarSpoken = rect1;
-let obj6 = { position: "relative", gap: fn(13516).BLOCK_GAP };
-obj.avatarSpokenReplying = { top: fn(13517).REPLY_PREVIEW_HEIGHT + fn(13516).BLOCK_GAP };
-let obj7 = { top: fn(13517).REPLY_PREVIEW_HEIGHT + fn(13516).BLOCK_GAP };
+let obj6 = { position: "relative", gap: fn(13619).BLOCK_GAP };
+obj.avatarSpokenReplying = { top: fn(13620).REPLY_PREVIEW_HEIGHT + fn(13619).BLOCK_GAP };
+let obj7 = { top: fn(13620).REPLY_PREVIEW_HEIGHT + fn(13619).BLOCK_GAP };
 obj.header = { marginBottom: -nativeDefault.space.PX_4 };
 let obj8 = { marginBottom: -nativeDefault.space.PX_4 };
-obj.activityBox = { marginLeft: -fn(13516).RAIL_INDENT };
+obj.activityBox = { marginLeft: -fn(13619).RAIL_INDENT };
 let closure_10 = createStyles.createStyles(obj);
-let obj9 = { marginLeft: -fn(13516).RAIL_INDENT };
+let obj9 = { marginLeft: -fn(13619).RAIL_INDENT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureMessageRow.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 13068: conjurePublishFailureMessage ===
+// === Module 13163: conjurePublishFailureMessage ===
 
-// Module 13068 (conjurePublishFailureMessage)
+// Module 13163 (conjurePublishFailureMessage)
 import util from "util" /* 1113 */;
-import _modDef4079 from "module_4079" /* 4079 */;
+import _modDef4131 from "module_4131" /* 4131 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishFailureMessage.tsx");
@@ -19,10 +19,10 @@ export default function conjurePublishFailureMessage(detail) {
   }
   if (20088 === detail.code) {
     const intl2 = util.intl;
-    intl2.string(_modDef4079.UXEDPw);
+    intl2.string(_modDef4131.UXEDPw);
   } else {
     const intl = util.intl;
-    intl.string(_modDef4079.gMWZeG);
+    intl.string(_modDef4131.gMWZeG);
   }
 };
 export const PREVIEW_BOT_NOT_INSTALLED_CODE = 20088;

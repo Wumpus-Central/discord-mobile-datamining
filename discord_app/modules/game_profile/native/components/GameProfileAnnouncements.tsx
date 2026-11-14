@@ -1,21 +1,21 @@
-// === Module 10333: GameProfileAnnouncements ===
+// === Module 10402: GameProfileAnnouncements ===
 
-// Module 10333 (GameProfileAnnouncements)
+// Module 10402 (GameProfileAnnouncements)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import DateUtils from "DateUtils" /* 5065 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import FastImageDefault from "FastImage" /* 5957 */;
-import CustomMarkupAll from "CustomMarkup" /* 6278 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7705 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 10212 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10217 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 10315 */;
-import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 10334 */;
-import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 10335 */;
-import ImageWithPlaceholder from "ImageWithPlaceholder" /* 10338 */;
-import ReactionIcon from "ReactionIcon" /* 10340 */;
-import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 10345 */;
+import DateUtils from "DateUtils" /* 5128 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import FastImageDefault from "FastImage" /* 6020 */;
+import CustomMarkupAll from "CustomMarkup" /* 6341 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7771 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 10281 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 10286 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 10384 */;
+import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 10403 */;
+import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 10404 */;
+import ImageWithPlaceholder from "ImageWithPlaceholder" /* 10407 */;
+import ReactionIcon from "ReactionIcon" /* 10409 */;
+import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 10414 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
@@ -291,7 +291,7 @@ function PollAnnouncementCard(message) {
     };
     const obj3 = { style: tmp.cardBody, children: null };
     const obj4 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: poll.question.text };
-    items = [closure_8(message(5866).Text, obj4), , ];
+    items = [closure_8(message(5929).Text, obj4), , ];
     const obj5 = { style: tmp.pollAnswers, children: null };
     const items1 = [
       substr.map((poll_media) => {
@@ -311,7 +311,7 @@ function PollAnnouncementCard(message) {
       const intl = tmp13(1113).intl;
       const obj6 = { count: diff };
       obj.children = intl.format(tmp13(1113).t["mv/nIa"], obj6);
-      tmp9Result = closure_8(tmp13(5866).Text, obj);
+      tmp9Result = closure_8(tmp13(5929).Text, obj);
     }
     items1[1] = tmp9Result;
     obj5.children = items1;
@@ -323,9 +323,9 @@ function PollAnnouncementCard(message) {
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj9.createdAt = date;
-    obj9.expiryLabel = message(10335).getPollExpiryLabel(poll);
+    obj9.expiryLabel = message(10404).getPollExpiryLabel(poll);
     obj8.children = intl2.format(message(1113).t.t0FTsH, obj9);
-    obj7.children = closure_8(message(5866).Text, obj8);
+    obj7.children = closure_8(message(5929).Text, obj8);
     items[2] = closure_8(closure_5, obj7);
     obj3.children = items;
     obj2.children = closure_9(closure_5, obj3);
@@ -334,12 +334,12 @@ function PollAnnouncementCard(message) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const MAX_VISIBLE_ANNOUNCEMENTS = fn(10247).MAX_VISIBLE_ANNOUNCEMENTS;
+const MAX_VISIBLE_ANNOUNCEMENTS = fn(10316).MAX_VISIBLE_ANNOUNCEMENTS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let closure_11 = null;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { smallCardsScroller: { marginHorizontal: -nativeDefault.space.PX_16, overflow: "visible" }, skeletonCardsScroller: null, smallCardsContainer: null, skeletonCardsContainer: null, card: null, cardBody: null, smallCardMedia: null, mediaImage: null, metadataRow: null, reactionInfo: null, embedContentArea: null, embedAuthorRow: null, embedAuthorIcon: null, embedProviderIcon: null, embedMedia: null, pollAnswers: null, pollAnswerOption: null, pollMoreOptions: null, skeletonCard: null, skeletonCardLarge: null, skeletonAnimationRoot: null, skeletonCardImage: null, skeletonCardBody: null, skeletonCardContent: null, skeletonCardMetadata: null };
 let obj4 = { marginHorizontal: -nativeDefault.space.PX_16, overflow: "visible" };
 obj.skeletonCardsScroller = { marginHorizontal: -nativeDefault.space.PX_16 };

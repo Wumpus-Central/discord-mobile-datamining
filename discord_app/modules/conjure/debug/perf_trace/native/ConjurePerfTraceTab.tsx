@@ -1,21 +1,21 @@
-// === Module 13897: ConjurePerfTraceTab ===
+// === Module 14002: ConjurePerfTraceTab ===
 
-// Module 13897 (ConjurePerfTraceTab)
+// Module 14002 (ConjurePerfTraceTab)
 import nativeDefault from "native" /* 575 */;
-import v1 from "v1" /* 1266 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2118 */;
-import Text_Text from "Text/Text" /* 5866 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6785 */;
-import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 7323 */;
-import Card from "Card" /* 7381 */;
-import FileManagerUtils from "FileManagerUtils" /* 8499 */;
-import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 13900 */;
-import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 13902 */;
-import ConjurePerfTraceList from "ConjurePerfTraceList" /* 13905 */;
+import v1 from "v1" /* 1269 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import Text_Text from "Text/Text" /* 5929 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6848 */;
+import ConjurePerfTraceLayout from "ConjurePerfTraceLayout" /* 7387 */;
+import Card from "Card" /* 7445 */;
+import FileManagerUtils from "FileManagerUtils" /* 8565 */;
+import ConjurePerfTraceFormat from "ConjurePerfTraceFormat" /* 14005 */;
+import ConjurePerfTraceStats from "ConjurePerfTraceStats" /* 14007 */;
+import ConjurePerfTraceList from "ConjurePerfTraceList" /* 14010 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 7302 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 7366 */;
 
 require = fn;
 function PerfTraceRow(arg0) {
@@ -31,7 +31,7 @@ function PerfTraceRow(arg0) {
   const obj2 = {
     variant: "primary",
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13898, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14003, dependencyMap.paths), { projectId, traceId: trace.id }, "CONJURE_PERF_TRACE_MODAL");
     },
     accessibilityLabel: trace.name,
     children: null
@@ -39,7 +39,7 @@ function PerfTraceRow(arg0) {
   const obj3 = { style: tmp.rowBody, children: null };
   const obj4 = { style: tmp.rowTop, children: null };
   const obj5 = { status: null };
-  const tmp9 = trace(13904);
+  const tmp9 = trace(14009);
   obj5.status = ConjurePerfTraceLayout.perfTraceStatus(trace);
   items = [closure_8(tmp9, obj5), closure_8(Text_Text.Text, { variant: "body-sm/semibold", color: "text-default", style: tmp.rowName, lineClamp: 1, children: trace.name }), ];
   const obj8 = { variant: "body-xs/normal", color: "text-subtle", children: null };
@@ -65,7 +65,7 @@ function PerfTraceRow(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { list: { paddingHorizontal: nativeDefault.space.PX_16 }, placeholder: null, header: null, tools: null, search: null, rowSlot: null, rowBody: null, rowTop: null, rowName: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.placeholder = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
@@ -173,7 +173,7 @@ export default function ConjurePerfTraceTab(projectId) {
               combined = tmp4;
               c1 = 1;
               dependencyMap = 1;
-              const obj6 = { value: combined(8499).clearFolder("cache", combined1), done: false };
+              const obj6 = { value: combined(8565).clearFolder("cache", combined1), done: false };
               return obj6;
             }
           } else if (1 === tmp4) {
@@ -187,7 +187,7 @@ export default function ConjurePerfTraceTab(projectId) {
             } else {
               c1 = 2;
               dependencyMap = 1;
-              const obj8 = { value: combined(8499).removeFile("cache", closure_128_1), done: false };
+              const obj8 = { value: combined(8565).removeFile("cache", closure_128_1), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {
@@ -259,5 +259,5 @@ export default function ConjurePerfTraceTab(projectId) {
   return tmp16Result2;
 };
 export function openPerfTrace(projectId, traceId) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13898, dependencyMap.paths), { projectId, traceId }, "CONJURE_PERF_TRACE_MODAL");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14003, dependencyMap.paths), { projectId, traceId }, "CONJURE_PERF_TRACE_MODAL");
 }

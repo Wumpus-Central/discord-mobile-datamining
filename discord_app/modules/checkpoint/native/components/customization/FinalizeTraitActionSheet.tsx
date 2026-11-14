@@ -1,48 +1,35 @@
-// === Module 14424: FinalizeTraitActionSheet ===
+// === Module 14545: FinalizeTraitActionSheet ===
 
-// Module 14424 (FinalizeTraitActionSheet)
+// Module 14545 (FinalizeTraitActionSheet)
 import jsxProd from "jsxProd" /* 21 */;
-import _modDef3269 from "module_3269" /* 3269 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5489 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6681 */;
+import _modDef3317 from "module_3317" /* 3317 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5552 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6744 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const items = [{ option: CheckpointCustomizationUtils.CheckpointCustomizationOption.AURA, subtitle: _modDef3269.f4BaUg }, , , , , ];
-let obj = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.AURA, subtitle: _modDef3269.f4BaUg };
-items[1] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.WEARABLE, subtitle: _modDef3269.gpEOaS };
-let obj2 = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.WEARABLE, subtitle: _modDef3269.gpEOaS };
-items[2] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.SHOES, subtitle: _modDef3269["l/tCAO"] };
-let obj3 = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.SHOES, subtitle: _modDef3269["l/tCAO"] };
-items[3] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.HAT, subtitle: _modDef3269["+oFzYq"] };
-const obj4 = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.HAT, subtitle: _modDef3269["+oFzYq"] };
-items[4] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT, subtitle: _modDef3269.xa55WX };
-const obj5 = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT, subtitle: _modDef3269.xa55WX };
-items[5] = { option: CheckpointCustomizationUtils.CheckpointCustomizationOption.FACE, subtitle: _modDef3269["1dd6Fx"] };
+const items = [CheckpointCustomizationUtils.CheckpointCustomizationOption.AURA, CheckpointCustomizationUtils.CheckpointCustomizationOption.WEARABLE, CheckpointCustomizationUtils.CheckpointCustomizationOption.SHOES, CheckpointCustomizationUtils.CheckpointCustomizationOption.HAT, CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT, CheckpointCustomizationUtils.CheckpointCustomizationOption.FACE];
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/FinalizeTraitActionSheet.tsx");
 
 export default function FinalizeTraitActionSheet(onSelectOption) {
   onSelectOption = onSelectOption.onSelectOption;
   let obj = { startExpanded: true, header: null, children: null };
   const obj2 = { title: null };
-  let intl = onSelectOption(1113).intl;
-  obj2.title = intl.string(_modDef3269.Zl5vPW);
-  obj.header = jsx(onSelectOption(7847).BottomSheetTitleHeader, { title: null });
+  const intl = onSelectOption(1113).intl;
+  obj2.title = intl.string(_modDef3317.Zl5vPW);
+  obj.header = jsx(onSelectOption(7913).BottomSheetTitleHeader, { title: null });
   const obj3 = { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null };
   const intl2 = onSelectOption(1113).intl;
-  obj3.accessibilityLabel = intl2.string(_modDef3269.Zl5vPW);
+  obj3.accessibilityLabel = intl2.string(_modDef3317.Zl5vPW);
   obj3.defaultValue = onSelectOption.selectedOption;
   obj3.onChange = function onChange(arg0) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     onSelectOption(arg0);
   };
-  obj3.children = items.map((option) => {
-    option = option.option;
-    const obj = { value: option, label: onSelectOption(6681).getCustomizationOptionName(option), subLabel: null };
-    const intl = onSelectOption(1113).intl;
-    obj.subLabel = intl.string(option.subtitle);
-    return jsx(onSelectOption(7681).TableRadioRow, { value: option, label: onSelectOption(6681).getCustomizationOptionName(option), subLabel: null }, option);
+  obj3.children = items.map((value) => {
+    const obj = { value, label: onSelectOption(6744).getCustomizationOptionName(value) };
+    return jsx(onSelectOption(7747).TableRadioRow, { value, label: onSelectOption(6744).getCustomizationOptionName(value) }, value);
   });
-  obj.children = jsx(onSelectOption(7679).TableRadioGroup, { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null });
-  return jsx(onSelectOption(7885).ActionSheet, { startExpanded: true, header: null, children: null });
+  obj.children = jsx(onSelectOption(7745).TableRadioGroup, { hasIcons: false, accessibilityLabel: null, defaultValue: null, onChange: null, children: null });
+  return jsx(onSelectOption(7951).ActionSheet, { startExpanded: true, header: null, children: null });
 };

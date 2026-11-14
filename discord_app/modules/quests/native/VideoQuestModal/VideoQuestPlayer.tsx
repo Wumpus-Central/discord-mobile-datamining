@@ -1,24 +1,24 @@
-// === Module 17620: VideoQuestPlayer ===
+// === Module 17738: VideoQuestPlayer ===
 
-// Module 17620 (VideoQuestPlayer)
-import ClientInfoUtils from "ClientInfoUtils" /* 1376 */;
-import QuestActionCreators from "QuestActionCreators" /* 10065 */;
-import AssetUtils from "AssetUtils" /* 10077 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 15135 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 17436 */;
-import SimpleMuxWrapper from "SimpleMuxWrapper" /* 17623 */;
-import VideoQuestCaptions from "VideoQuestCaptions" /* 17631 */;
+// Module 17738 (VideoQuestPlayer)
+import ClientInfoUtils from "ClientInfoUtils" /* 1379 */;
+import QuestActionCreators from "QuestActionCreators" /* 10133 */;
+import AssetUtils from "AssetUtils" /* 10146 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 15249 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 17554 */;
+import SimpleMuxWrapper from "SimpleMuxWrapper" /* 17741 */;
+import VideoQuestCaptions from "VideoQuestCaptions" /* 17749 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 8743 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 8810 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5275).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5338).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
 
-export const PlayerState = fn(17436).PlayerState;
+export const PlayerState = fn(17554).PlayerState;
 export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
   onLoad = onLoad.onLoad;
   const onEnd = onLoad.onEnd;
@@ -435,29 +435,32 @@ export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
   if (null == memo2) {
     return null;
   } else {
-    let obj5 = { source: memo2, initialProgress: tmp13, contentDuration: targetSeconds, allowUnrestrictedSeeking: tmp6, disableResumeOnLoad: tmp6, style, isFullscreen, externallyPaused, contentInsets, renderCaptions: callback14, onLoadStart: callback7, onLoad: callback2, onReadyForDisplay: callback1, onSeekStart: callback3, onSeek: callback4, onBuffer: callback13, onError: callback8, onEnd: callback6, onPlayerStateChange: callback, onResumePlayback: callback11, onPausePlayback: callback12, onProgress: callback5, onVideoTracks: callback9, onVideoLayout: callback10, videoRef: ref, bufferingSpinnerPlacement: null, captionsEnabled: null, showCaptionsButton: null, showTranscriptButton: null, showFullscreenButton: null, showProgress: null, onToggleCaptions: null, onOpenTranscript: null, onToggleFullscreen: null };
+    let obj5 = { source: memo2, initialProgress: tmp13, contentDuration: targetSeconds, allowUnrestrictedSeeking: tmp6, disableResumeOnLoad: tmp6, style, isFullscreen, externallyPaused, contentInsets, renderCaptions: callback14, onLoadStart: callback7, onLoad: callback2, onReadyForDisplay: callback1, onSeekStart: callback3, onSeek: callback4, onBuffer: callback13, onError: callback8, onEnd: callback6, onPlayerStateChange: callback, onResumePlayback: callback11, onPausePlayback: callback12, onProgress: callback5, onVideoTracks: callback9, onVideoLayout: callback10, videoRef: ref, bufferingSpinnerPlacement: null, captionsEnabled: null, disableNativeCaptions: null, showCaptionsButton: null, showTranscriptButton: null, showFullscreenButton: null, showProgress: null, onToggleCaptions: null, onOpenTranscript: null, onToggleFullscreen: null };
     let str2 = "top-left";
     if ("landscape" === orientation) {
       str2 = "center";
     }
     obj5.bufferingSpinnerPlacement = str2;
     obj5.captionsEnabled = flag;
-    let tmp41 = tmp43;
+    const tmp45 = questTaskDetails;
+    const tmpResult2 = tmp(tmp2[18]);
+    obj5.disableNativeCaptions = tmp(tmp2[18]).isIOS() && hasCaptionAsset;
+    let tmp42 = tmp44;
     if ("landscape" === orientation) {
-      tmp41 = hasCaptionAsset;
+      tmp42 = hasCaptionAsset;
     }
-    obj5.showCaptionsButton = tmp41;
-    let tmp42 = tmp43;
+    obj5.showCaptionsButton = tmp42;
+    let tmp43 = tmp44;
     if ("landscape" === orientation) {
-      tmp42 = flag2;
+      tmp43 = flag2;
     }
-    obj5.showTranscriptButton = tmp42;
+    obj5.showTranscriptButton = tmp43;
     obj5.showFullscreenButton = "landscape" === orientation;
     obj5.showProgress = "landscape" === orientation;
     obj5.onToggleCaptions = handleToggleCaptions;
     obj5.onOpenTranscript = handleOpenTranscript;
     obj5.onToggleFullscreen = tmp40;
-    return questTaskDetails(tmp(tmp2[17]).AdVideoPlayer, obj5);
+    return tmp45(tmp(tmp2[17]).AdVideoPlayer, obj5);
   }
   const tmpResult = onLoad(onToggleFullscreen[11]);
 });

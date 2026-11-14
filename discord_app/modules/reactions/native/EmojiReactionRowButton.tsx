@@ -1,27 +1,27 @@
-// === Module 12574: EmojiReactionRowButton ===
+// === Module 12670: EmojiReactionRowButton ===
 
-// Module 12574 (EmojiReactionRowButton)
+// Module 12670 (EmojiReactionRowButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import EmojiTypes from "EmojiTypes" /* 5192 */;
-import shared from "shared" /* 5250 */;
-import Pressables from "Pressables" /* 7364 */;
-import EmojiDefault from "Emoji" /* 7828 */;
-import ReactionIcon from "ReactionIcon" /* 10340 */;
+import EmojiTypes from "EmojiTypes" /* 5255 */;
+import shared from "shared" /* 5313 */;
+import Pressables from "Pressables" /* 7428 */;
+import EmojiDefault from "Emoji" /* 7894 */;
+import ReactionIcon from "ReactionIcon" /* 10409 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Platform = fn(17).Platform;
-const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = { emojiContainer: null };
   const size = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
   obj.emojiContainer = size;
   return obj;
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let closure_7 = createStyles.createStyles((width, fontSize, lineHeight) => {
   const obj = { emojiImage: { width, height: width }, emojiText: null };
   const size = { lineHeight, fontSize, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: lineHeight, height: lineHeight };
@@ -82,7 +82,7 @@ export function EmojiReactionRowButton(emoji) {
     }
     obj5.name = str;
     if (null != animated.id) {
-      const emojiURL = getEmojiURL(1411);
+      const emojiURL = getEmojiURL(1414);
       getEmojiURL = emojiURL.getEmojiURL;
       obj = { id: null, animated: null, size: null };
       ({ id: obj.id, animated } = animated);

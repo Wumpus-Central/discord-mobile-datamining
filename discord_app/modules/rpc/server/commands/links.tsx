@@ -1,23 +1,23 @@
-// === Module 16819: links ===
+// === Module 16942: links ===
 
-// Module 16819 (links)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PlatformUtils from "PlatformUtils" /* 1377 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5164 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5249 */;
-import RPCErrorDefault from "RPCError" /* 7239 */;
-import openUserSettings from "openUserSettings" /* 8537 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 12770 */;
-import RPCHelpers from "RPCHelpers" /* 12773 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 16792 */;
-import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 16820 */;
-import internalDeepLinks from "internalDeepLinks" /* 16821 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 16822 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 16824 */;
-import getFrameChannelIdDefault from "getFrameChannelId" /* 16827 */;
+// Module 16942 (links)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import PlatformUtils from "PlatformUtils" /* 1380 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 5227 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5312 */;
+import RPCErrorDefault from "RPCError" /* 7303 */;
+import openUserSettings from "openUserSettings" /* 8604 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 12866 */;
+import RPCHelpers from "RPCHelpers" /* 12869 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 16915 */;
+import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 16943 */;
+import internalDeepLinks from "internalDeepLinks" /* 16944 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 16945 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 16947 */;
+import getFrameChannelIdDefault from "getFrameChannelId" /* 16950 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5091 */;
-import ApplicationStore from "ApplicationStore" /* 2162 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
+import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 require = fn;
 function trackExternalLink(application, arg1, arg2) {
@@ -162,7 +162,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(5945)(href);
+                  closure_1(6008)(href);
                   const str = new URL(href);
                   let tmp5 = "client.vibeyard.tools" === str.hostname;
                   if (tmp5) {
@@ -179,7 +179,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   if (application != null) {
                     id = application.id;
                   }
-                  const tmpResult = closure_1(1252);
+                  const tmpResult = closure_1(1256);
                   tmpResult.track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url: str.toString(), opened: true });
                   closure_0({ opened: true });
                   const obj = { application_id: id, url: str.toString(), opened: true };
@@ -201,7 +201,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   if (application != null) {
                     id = application.id;
                   }
-                  const obj = closure_1(1252);
+                  const obj = closure_1(1256);
                   obj.track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url: str.toString(), opened: false });
                   closure_0({ opened: false });
                   const obj2 = { application_id: id, url: str.toString(), opened: false };
@@ -225,17 +225,17 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(6698);
+let Constants = fn(6761);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1072);
 ({ RPCCommands, RPCErrors: closure_6, UserSettingsSections: metroImportDefault, AnalyticEvents: closure_8 } = Constants);
-Constants = fn(2142);
+Constants = fn(2145);
 const items = [, ];
 ({ AM_HARMONY_PRD_APPLICATION_ID: arr[0], AM_HARMONY_STG_APPLICATION_ID: arr[1] } = Constants);
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(16799);
+let CONTEXT_MENU_ICON_NAMES = fn(16922);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -367,16 +367,16 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(16799);
+CONTEXT_MENU_ICON_NAMES = fn(16922);
 let obj6 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     ({ custom_id: importDefault, message: dependencyMap, link_id: asyncGeneratorStep } = socket.args);
-    let result = socket(12773).validatePostMessageTransport(socket.transport);
-    let obj = socket(12773);
+    let result = socket(12869).validatePostMessageTransport(socket.transport);
+    let obj = socket(12869);
     let tmp = socket;
-    const validateApplicationResult = socket(12773).validateApplication(socket.application);
+    const validateApplicationResult = socket(12869).validateApplication(socket.application);
     c4 = validateApplicationResult;
     if (null == validateApplicationResult) {
       const obj3 = { errorCode: constants.INVALID_COMMAND };
@@ -407,9 +407,9 @@ let obj6 = {
         const tmp10 = new RPCErrorDefault(obj4, "This application cannot access this API");
         throw tmp10;
       }
-      tmpResult = tmp(2148);
+      tmpResult = tmp(2151);
     }
-    let obj2 = socket(12773);
+    let obj2 = socket(12869);
   }
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];

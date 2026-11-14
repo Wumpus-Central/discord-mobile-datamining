@@ -1,29 +1,29 @@
-// === Module 11249: EmojiPickerCategoriesItem ===
+// === Module 11316: EmojiPickerCategoriesItem ===
 
-// Module 11249 (EmojiPickerCategoriesItem)
+// Module 11316 (EmojiPickerCategoriesItem)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import _mod1705 from "module_1705" /* 1705 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import timingPresets from "timingPresets" /* 5488 */;
-import Pressables from "Pressables" /* 7364 */;
-import GuildIcon from "GuildIcon" /* 7654 */;
-import LockIcon from "LockIcon" /* 8027 */;
-import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 11250 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import _mod1708 from "module_1708" /* 1708 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import timingPresets from "timingPresets" /* 5551 */;
+import Pressables from "Pressables" /* 7428 */;
+import GuildIcon from "GuildIcon" /* 7720 */;
+import LockIcon from "LockIcon" /* 8092 */;
+import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon" /* 11317 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const EmojiCategoryTypes = fn(6909).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6972).EmojiCategoryTypes;
 const Constants = fn(1072);
 ({ CATEGORY_ICON_RIPPLE_CONFIG: metroImportDefault, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { itemInner: null, fadedItem: { backgroundColor: nativeDefault.colors.ICON_TRANSPARENT }, activeItem: null, guildItem: null, lockContainer: null, lock: null };
 let size = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
 obj.itemInner = size;
@@ -75,7 +75,7 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
   EmojiPickerCategoriesItemTsx1.__closure = items1;
   EmojiPickerCategoriesItemTsx1.__workletHash = 13103741049438;
   EmojiPickerCategoriesItemTsx1.__initData = tmp4;
-  const animatedStyle = _mod1652.useAnimatedStyle(EmojiPickerCategoriesItemTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(EmojiPickerCategoriesItemTsx1);
   [tmp13, tmp14] = noop.useState(() => _undefined2.get() === c3);
   const tmp12 = _slicedToArray(noop.useState(() => _undefined2.get() === c3), 2);
   const items2 = [closure_12, categoryIndexActive, index];
@@ -91,7 +91,7 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
   EmojiPickerCategoriesItemTsx2.__closure = items3;
   EmojiPickerCategoriesItemTsx2.__workletHash = 5439677363570;
   EmojiPickerCategoriesItemTsx2.__initData = tmp15;
-  const items4 = [closure_13, _mod1705.scheduleOnRN, tmp14];
+  const items4 = [closure_13, _mod1708.scheduleOnRN, tmp14];
   c0 = undefined;
   c1 = undefined;
   [tmp18, tmp19, tmp20] = items4;
@@ -109,7 +109,7 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
   EmojiPickerCategoriesItemTsx3.__closure = items5;
   EmojiPickerCategoriesItemTsx3.__workletHash = 17327361424281;
   EmojiPickerCategoriesItemTsx3.__initData = tmp18;
-  const animatedReaction = _mod1652.useAnimatedReaction(EmojiPickerCategoriesItemTsx2, EmojiPickerCategoriesItemTsx3);
+  const animatedReaction = _mod1655.useAnimatedReaction(EmojiPickerCategoriesItemTsx2, EmojiPickerCategoriesItemTsx3);
   const items6 = [handlePressCategory, index, category];
   const callback = noop.useCallback(() => _undefined3(c3, c0), items6);
   const obj3 = { androidRippleConfig, style, onPress: callback, accessibilityRole: "tab", accessibilityLabel: null, accessibilityState: null, children: null };
@@ -140,6 +140,6 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
   }
   items8[1] = locked;
   obj4.children = items8;
-  obj3.children = React6(_modDef1652.View, obj4);
+  obj3.children = React6(_modDef1655.View, obj4);
   return React5(Pressables.PressableOpacity, obj3);
 });

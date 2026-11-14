@@ -1,9 +1,9 @@
-// === Module 8113: TextInput/TextInput ===
+// === Module 8179: TextInput/TextInput ===
 
-// Module 8113 (TextInput/TextInput)
+// Module 8179 (TextInput/TextInput)
 import nativeDefault from "native" /* 575 */;
-import ColorUtils from "ColorUtils" /* 5240 */;
-import shared from "shared" /* 5250 */;
+import ColorUtils from "ColorUtils" /* 5303 */;
+import shared from "shared" /* 5313 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,7 +47,7 @@ const TextInput = fn(17).TextInput;
 const Constants = fn(1072);
 ({ KeyboardThemes: closure_4, Fonts } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { input: { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT }, placeholderTextColor: null };
 let obj3 = { fontSize: 16, alignSelf: "center", fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.TEXT_DEFAULT };
 obj2.placeholderTextColor = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };

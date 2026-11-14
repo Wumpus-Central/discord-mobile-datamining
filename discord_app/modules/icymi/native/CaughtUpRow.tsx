@@ -1,13 +1,13 @@
-// === Module 19153: CaughtUpRow ===
+// === Module 19345: CaughtUpRow ===
 
-// Module 19153 (CaughtUpRow)
+// Module 19345 (CaughtUpRow)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
-import LinearGradientDefault from "LinearGradient" /* 5830 */;
+import LinearGradientDefault from "LinearGradient" /* 5893 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import module_1652 from "module_1652" /* 1652 */;
+import module_1655 from "module_1655" /* 1655 */;
 
 const require = globalThis.__r;
 
@@ -15,8 +15,8 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-let closure_9 = module_1652.createAnimatedComponent(fn(5866).Text);
-const createICYMIStyles = fn(19092);
+let closure_9 = module_1655.createAnimatedComponent(fn(5929).Text);
+const createICYMIStyles = fn(19284);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = { container: { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 }, textContainer: null, recommendedGuildsContainer: null, iconWrapper: null, icon: null, headerText: null, subtitleText: null, buttonContainer: null, gradient: null };
   const obj2 = { flex: 1, display: "flex", alignItems: "center", justifyContent: "center", marginVertical: nativeDefault.space.PX_32 };
@@ -44,7 +44,7 @@ export default function ExploreServersRow(visible) {
   visible = visible.visible;
   _require = visible;
   const tmp = closure_10();
-  const sharedValue = require("module_1652").useSharedValue(false);
+  const sharedValue = require("module_1655").useSharedValue(false);
   items = [visible, sharedValue];
   const effect = noop.useEffect(() => {
     let tmp2 = c0;
@@ -85,14 +85,14 @@ export default function ExploreServersRow(visible) {
             return obj3;
           } else {
             dependencyMap(true);
-            v1(10148).itemInteracted("caught_up", "caught_up", "press_explore");
-            const obj5 = v1(10148);
+            v1(10217).itemInteracted("caught_up", "caught_up", "press_explore");
+            const obj5 = v1(10217);
             const obj4 = { itemId: "caught_up", itemType: "caught_up", actionParameters: { actionGestureType: "press", actionTargetElement: "browse_servers_button", actionIntentType: "open", actionDestinationType: null } };
-            v1(10148).feedItemActioned(obj4);
-            const obj6 = v1(10148);
+            v1(10217).feedItemActioned(obj4);
+            const obj6 = v1(10217);
             v1 = 1;
             dependencyMap = 1;
-            const obj7 = { value: tmp4(19109).maybeFetchGuildDiscoveryCategories(), done: false };
+            const obj7 = { value: tmp4(19301).maybeFetchGuildDiscoveryCategories(), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -129,8 +129,8 @@ export default function ExploreServersRow(visible) {
       rootNavigationRef.navigate("tabs", { screen: "guilds" });
     }
   }, []);
-  let obj = require("module_1652");
-  const items1 = [closure_11, sharedValue, require("timing/timing").withTiming, require("module_1652").Easing];
+  let obj = require("module_1655");
+  const items1 = [closure_11, sharedValue, require("timing/timing").withTiming, require("module_1655").Easing];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -179,9 +179,9 @@ export default function ExploreServersRow(visible) {
   CaughtUpRowTsx1.__closure = items2;
   CaughtUpRowTsx1.__workletHash = 808134122268;
   CaughtUpRowTsx1.__initData = tmp9;
-  const animatedStyle = require("module_1652").useAnimatedStyle(CaughtUpRowTsx1);
-  let obj2 = require("module_1652");
-  const items3 = [closure_12, sharedValue, require("module_1652").withDelay, require("module_1652").withSequence, require("timing/timing").withTiming, require("module_1652").Easing];
+  const animatedStyle = require("module_1655").useAnimatedStyle(CaughtUpRowTsx1);
+  let obj2 = require("module_1655");
+  const items3 = [closure_12, sharedValue, require("module_1655").withDelay, require("module_1655").withSequence, require("timing/timing").withTiming, require("module_1655").Easing];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -216,9 +216,9 @@ export default function ExploreServersRow(visible) {
   CaughtUpRowTsx2.__closure = items4;
   CaughtUpRowTsx2.__workletHash = 5492465188513;
   CaughtUpRowTsx2.__initData = tmp14;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(CaughtUpRowTsx2);
-  const tmp2Result = require("module_1652");
-  const items5 = [closure_13, sharedValue, require("module_1652").withDelay, require("module_1652").withSequence, require("timing/timing").withTiming, require("module_1652").Easing];
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(CaughtUpRowTsx2);
+  const tmp2Result = require("module_1655");
+  const items5 = [closure_13, sharedValue, require("module_1655").withDelay, require("module_1655").withSequence, require("timing/timing").withTiming, require("module_1655").Easing];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -253,8 +253,8 @@ export default function ExploreServersRow(visible) {
   CaughtUpRowTsx3.__closure = items6;
   CaughtUpRowTsx3.__workletHash = 13859124718008;
   CaughtUpRowTsx3.__initData = tmp21;
-  const animatedStyle2 = require("module_1652").useAnimatedStyle(CaughtUpRowTsx3);
-  const tmp2Result3 = require("module_1652");
+  const animatedStyle2 = require("module_1655").useAnimatedStyle(CaughtUpRowTsx3);
+  const tmp2Result3 = require("module_1655");
   const token = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BRAND);
   let obj3 = { children: null };
   let obj4 = { style: tmp.container, children: null };
@@ -262,7 +262,7 @@ export default function ExploreServersRow(visible) {
   let obj6 = { style: null, children: closure_7(require("FlashIcon").FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }) };
   const items7 = [tmp.iconWrapper, animatedStyle];
   obj6.style = items7;
-  const items8 = [closure_7(module_1652.View, obj6), , ];
+  const items8 = [closure_7(module_1655.View, obj6), , ];
   const obj8 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: null, children: null };
   const items9 = [tmp.headerText, animatedStyle1];
   obj8.style = items9;

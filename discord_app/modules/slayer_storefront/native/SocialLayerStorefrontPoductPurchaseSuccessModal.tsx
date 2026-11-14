@@ -1,24 +1,24 @@
-// === Module 11726: SocialLayerStorefrontPoductPurchaseSuccessModal ===
+// === Module 11792: SocialLayerStorefrontPoductPurchaseSuccessModal ===
 
-// Module 11726 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 11792 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import _mod1652 from "module_1652" /* 1652 */;
-import _modDef3949 from "module_3949" /* 3949 */;
-import UserUtilsDefault from "UserUtils" /* 5309 */;
-import timing_timing from "timing/timing" /* 5485 */;
-import HapticUtils from "HapticUtils" /* 5491 */;
-import spring_spring from "spring/spring" /* 5876 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7181 */;
-import XSmallIcon from "XSmallIcon" /* 7483 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7871 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 11663 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
+import _mod1655 from "module_1655" /* 1655 */;
+import _modDef4031 from "module_4031" /* 4031 */;
+import UserUtilsDefault from "UserUtils" /* 5372 */;
+import timing_timing from "timing/timing" /* 5548 */;
+import HapticUtils from "HapticUtils" /* 5554 */;
+import spring_spring from "spring/spring" /* 5939 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7244 */;
+import XSmallIcon from "XSmallIcon" /* 7549 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 11729 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 717 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5244 */;
-import SKUStore from "SKUStore" /* 7007 */;
+import AccessibilityStore from "AccessibilityStore" /* 5307 */;
+import SKUStore from "SKUStore" /* 7070 */;
 
 const require = globalThis.__r;
 
@@ -40,16 +40,16 @@ function PurchaseSuccessModalBase(sku) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   closure_129_0 = stateFromStores;
   let obj = require("initialize");
-  const sharedValue = require("module_1652").useSharedValue(0);
+  const sharedValue = require("module_1655").useSharedValue(0);
   closure_129_1 = sharedValue;
-  let obj2 = require("module_1652");
-  const sharedValue1 = require("module_1652").useSharedValue(0);
+  let obj2 = require("module_1655");
+  const sharedValue1 = require("module_1655").useSharedValue(0);
   closure_129_2 = sharedValue1;
   const items1 = [sharedValue, stateFromStores, sharedValue1];
   const effect = isScreenLandscape.useEffect(() => {
     let num = 1;
     if (!c0) {
-      const obj = _mod1652;
+      const obj = _mod1655;
       const obj3 = { duration: null, dampingRatio: 0.7 };
       const _Math = Math;
       obj3.duration = Math.round(333.3333333333333);
@@ -58,13 +58,13 @@ function PurchaseSuccessModalBase(sku) {
     const result = closure_1.set(num);
     let num4 = 1;
     if (!c0) {
-      const obj4 = _mod1652;
+      const obj4 = _mod1655;
       num4 = obj4.withDelay(200, timing_timing.withTiming(1, { duration: 200 }));
     }
     const result1 = callback1.set(num4);
   }, items1);
-  let obj3 = require("module_1652");
-  const items2 = [closure_18, require("module_1652").interpolate, sharedValue];
+  let obj3 = require("module_1655");
+  const items2 = [closure_18, require("module_1655").interpolate, sharedValue];
   _require = undefined;
   importDefault = undefined;
   [tmp9, tmp10, tmp11] = items2;
@@ -82,9 +82,9 @@ function PurchaseSuccessModalBase(sku) {
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx1.__closure = items3;
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx1.__workletHash = 1000739966762;
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx1.__initData = tmp9;
-  const animatedStyle = require("module_1652").useAnimatedStyle(SocialLayerStorefrontPoductPurchaseSuccessModalTsx1);
-  let obj5 = require("module_1652");
-  const items4 = [closure_19, require("module_1652").interpolate, sharedValue];
+  const animatedStyle = require("module_1655").useAnimatedStyle(SocialLayerStorefrontPoductPurchaseSuccessModalTsx1);
+  let obj5 = require("module_1655");
+  const items4 = [closure_19, require("module_1655").interpolate, sharedValue];
   _require = undefined;
   importDefault = undefined;
   [tmp13, tmp14, tmp15] = items4;
@@ -102,9 +102,9 @@ function PurchaseSuccessModalBase(sku) {
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx2.__closure = items5;
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx2.__workletHash = 3853789941754;
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx2.__initData = tmp13;
-  const animatedStyle1 = require("module_1652").useAnimatedStyle(SocialLayerStorefrontPoductPurchaseSuccessModalTsx2);
-  const tmp4Result = require("module_1652");
-  const items6 = [closure_20, require("module_1652").interpolate, sharedValue1];
+  const animatedStyle1 = require("module_1655").useAnimatedStyle(SocialLayerStorefrontPoductPurchaseSuccessModalTsx2);
+  const tmp4Result = require("module_1655");
+  const items6 = [closure_20, require("module_1655").interpolate, sharedValue1];
   _require = undefined;
   importDefault = undefined;
   [tmp17, tmp18, tmp19] = items6;
@@ -118,8 +118,8 @@ function PurchaseSuccessModalBase(sku) {
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx3.__closure = items7;
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx3.__workletHash = 10933347757;
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx3.__initData = tmp17;
-  const animatedStyle2 = require("module_1652").useAnimatedStyle(SocialLayerStorefrontPoductPurchaseSuccessModalTsx3);
-  const tmp4Result3 = require("module_1652");
+  const animatedStyle2 = require("module_1655").useAnimatedStyle(SocialLayerStorefrontPoductPurchaseSuccessModalTsx3);
+  const tmp4Result3 = require("module_1655");
   isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   const tmp22 = isScreenLandscape ? closure_12 : closure_13;
   [first, closure_7] = isScreenLandscape.useState(null);
@@ -209,7 +209,7 @@ function PurchaseSuccessModalBase(sku) {
   items16[1] = textLandscape2;
   items15[1] = closure_14(require("Text/Text").Text, { variant: "body-md/medium", color: "text-overlay-light", style: items16, children: body });
   obj6.children = items15;
-  const tmp31Result = closure_15(require("module_1652").View, obj6);
+  const tmp31Result = closure_15(require("module_1655").View, obj6);
   const items17 = [tmp.footer, ];
   let footerLandscape = isScreenLandscape;
   if (isScreenLandscape) {
@@ -277,7 +277,7 @@ function PurchaseSuccessModalBase(sku) {
   };
   const intl2 = tmp4(tmp3[21]).intl;
   obj16.accessibilityLabel = intl2.string(require("util").t.cpT0Cq);
-  obj15.children = closure_14(require("module_7434").HeaderBackButton, obj16);
+  obj15.children = closure_14(require("module_7500").HeaderBackButton, obj16);
   const items23 = [closure_14(closure_7, obj15), , ];
   const obj17 = { style: tmp.scroll, contentContainerStyle: null, onLayout: null, alwaysBounceVertical: false, children: null };
   const items24 = [tmp.body, ];
@@ -302,7 +302,7 @@ function PurchaseSuccessModalBase(sku) {
     tmp32Result4 = closure_14(tmp2(tmp3[27]), obj19);
   }
   obj18.children = tmp32Result4;
-  const items26 = [closure_14(require("module_1652").View, obj18), ];
+  const items26 = [closure_14(require("module_1655").View, obj18), ];
   let tmp31Result4 = tmp31Result;
   if (isScreenLandscape) {
     const obj20 = { style: tmp.contentColumnLandscape, children: null };
@@ -323,18 +323,18 @@ function PurchaseSuccessModalBase(sku) {
   const obj21 = { style: null, pointerEvents: "none" };
   const items28 = [tmp.curtain, animatedStyle2];
   obj21.style = items28;
-  items22[3] = closure_14(require("module_1652").View, obj21);
+  items22[3] = closure_14(require("module_1655").View, obj21);
   obj11.children = items22;
   return closure_15(closure_7, obj11);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-let numDays = fn(7184).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(7247).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, backdropImage: { position: "absolute", inset: 0, opacity: 0.45 }, backdropGradient: { position: "absolute", inset: 0 }, curtain: null, main: null, header: null, closeButtonIcon: null, scroll: null, body: null, bodyLandscape: null, preview: null, previewLandscape: null, messages: null, messagesLandscape: null, contentColumnLandscape: null, title: null, description: null, textLandscape: null, footer: null, footerLandscape: null, cta: null, ctaLandscape: null, finePrint: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 obj2.curtain = { position: "absolute", inset: 0, backgroundColor: nativeDefault.colors.BLACK };
@@ -369,7 +369,7 @@ obj2.ctaLandscape = { marginHorizontal: nativeDefault.space.PX_16 };
 const obj14 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.finePrint = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj17 = { linkAccountIcon: null };
 let obj15 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 obj17.linkAccountIcon = { marginRight: nativeDefault.space.PX_4 };
@@ -549,7 +549,7 @@ export function SocialLayerStorefrontProductSelfPurchaseSuccessModal(skuId) {
           str = "";
         }
         const obj = { applicationName: str };
-        formatToPlainStringResult = formatToPlainString(_modDef3949.eNNnIG, obj);
+        formatToPlainStringResult = formatToPlainString(_modDef4031.eNNnIG, obj);
       }
     }
     return formatToPlainStringResult;

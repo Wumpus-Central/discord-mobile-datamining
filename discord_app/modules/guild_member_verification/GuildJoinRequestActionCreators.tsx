@@ -1,12 +1,12 @@
-// === Module 6869: GuildJoinRequestActionCreators ===
+// === Module 6932: GuildJoinRequestActionCreators ===
 
-// Module 6869 (GuildJoinRequestActionCreators)
+// Module 6932 (GuildJoinRequestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import HTTPUtils from "HTTPUtils" /* 1282 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5289 */;
-import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6871 */;
+import HTTPUtils from "HTTPUtils" /* 1285 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5352 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6934 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6870 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6933 */;
 
 require = fn;
 let closure_9 = async function _fetchGuildJoinRequests(arg0) {
@@ -68,7 +68,7 @@ let closure_9 = async function _fetchGuildJoinRequests(arg0) {
             closure_130_9 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "Path", done: true };
           }
         } else if (1 === tmp7) {
           if (arg0 === 1) {
@@ -331,8 +331,8 @@ let closure_13 = async function _updateGuildJoinRequest() {
       obj2.title = intl.string(closure_1_0(1113).t.DxJj4e);
       const intl2 = closure_1_0(1113).intl;
       obj2.body = intl2.string(closure_1_0(1113).t.rSAOk9);
-      closure_1_1(6205).show(obj2);
-      const obj = closure_1_1(6205);
+      closure_1_1(6268).show(obj2);
+      const obj = closure_1_1(6268);
     }
     return Promise.reject(error);
   });
@@ -350,7 +350,7 @@ let closure_13 = async function _updateGuildJoinRequest() {
   }
   closure_133_3 = APPROVED;
   closure_133_4 = closure_4;
-  return "flexDirection";
+  return "Path";
 };
 let closure_14 = async function _resetGuildJoinRequest(arg0) {
   if (c6 === 2) {
@@ -523,7 +523,7 @@ let closure_17 = async function _createOrEnterJoinRequestInterview(arg0) {
           closure_130_3 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -567,8 +567,8 @@ let closure_17 = async function _createOrEnterJoinRequestInterview(arg0) {
     }
   }
 };
-let closure_4 = fn(5096).createChannelRecordFromServer;
-const joinRequestFromServer = fn(5287).joinRequestFromServer;
+let closure_4 = fn(5159).createChannelRecordFromServer;
+const joinRequestFromServer = fn(5350).joinRequestFromServer;
 const Constants = fn(1072);
 ({ AbortCodes: metroImportDefault, Endpoints: closure_8 } = Constants);
 const size = fn(2);

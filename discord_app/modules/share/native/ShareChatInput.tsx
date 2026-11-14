@@ -1,12 +1,12 @@
-// === Module 15078: ShareChatInput ===
+// === Module 15192: ShareChatInput ===
 
-// Module 15078 (ShareChatInput)
+// Module 15192 (ShareChatInput)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Pressables from "Pressables" /* 7364 */;
-import FormInputDefault from "FormInput" /* 8047 */;
-import ReactionIcon from "ReactionIcon" /* 10340 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 11090 */;
+import Pressables from "Pressables" /* 7428 */;
+import FormInputDefault from "FormInput" /* 8112 */;
+import ReactionIcon from "ReactionIcon" /* 10409 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 11157 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,12 +14,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 }, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
 let obj3 = { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.chatInput = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };
 const obj5 = { fontSize: 16, lineHeight: 20, fontFamily: fn(1072).Fonts.PRIMARY_NORMAL, color: nativeDefault.colors.TEXT_STRONG, paddingTop: null, paddingBottom: null };
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let num = 2;
 if (PlatformUtils.isAndroid()) {
   num = 0;

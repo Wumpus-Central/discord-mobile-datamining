@@ -1,19 +1,19 @@
-// === Module 12695: CouchSpotIllustration ===
+// === Module 12791: CouchSpotIllustration ===
 
-// Module 12695 (CouchSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7689 */;
-import _modDef12696 from "module_12696" /* 12696 */;
-import _modDef12697 from "module_12697" /* 12697 */;
-import _modDef12698 from "module_12698" /* 12698 */;
+// Module 12791 (CouchSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7755 */;
+import _modDef12792 from "module_12792" /* 12792 */;
+import _modDef12793 from "module_12793" /* 12793 */;
+import _modDef12794 from "module_12794" /* 12794 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12696 }, 3: null };
-let obj2 = { uri: _modDef12696 };
-obj[2] = { uri: _modDef12697 };
-const obj3 = { uri: _modDef12697 };
-obj[3] = { uri: _modDef12698 };
+let obj = { 1: null, 2: { uri: _modDef12792 }, 3: null };
+let obj2 = { uri: _modDef12792 };
+obj[2] = { uri: _modDef12793 };
+const obj3 = { uri: _modDef12793 };
+obj[3] = { uri: _modDef12794 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/CouchSpotIllustration.native.tsx");
 

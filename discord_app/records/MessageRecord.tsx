@@ -1,12 +1,12 @@
-// === Module 5186: MessageRecord ===
+// === Module 5249: MessageRecord ===
 
-// Module 5186 (MessageRecord)
-import FlagUtils from "FlagUtils" /* 1403 */;
-import ReactionUtils from "ReactionUtils" /* 5187 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5857 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5889 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5890 */;
-import Record from "Record" /* 1405 */;
+// Module 5249 (MessageRecord)
+import FlagUtils from "FlagUtils" /* 1406 */;
+import ReactionUtils from "ReactionUtils" /* 5250 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5920 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5952 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5953 */;
+import Record from "Record" /* 1408 */;
 
 require = fn;
 const Constants = fn(1072);

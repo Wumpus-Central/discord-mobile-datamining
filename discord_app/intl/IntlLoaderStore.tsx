@@ -1,13 +1,13 @@
-// === Module 2187: IntlLoaderStore ===
+// === Module 2190: IntlLoaderStore ===
 
-// Module 2187 (IntlLoaderStore)
+// Module 2190 (IntlLoaderStore)
 import util from "util" /* 1113 */;
-import _modDef2188 from "module_2188" /* 2188 */;
-import bg from "bg" /* 4517 */;
-import formatjs from "formatjs" /* 4992 */;
-import moment from "moment" /* 5023 */;
+import _modDef2191 from "module_2191" /* 2191 */;
+import bg from "bg" /* 4580 */;
+import formatjs from "formatjs" /* 5055 */;
+import moment from "moment" /* 5086 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import module_2025 from "module_2025" /* 2025 */;
+import module_2028 from "module_2028" /* 2028 */;
 
 require = fn;
 let closure_6 = async function _setAppLocale(arg0) {
@@ -73,7 +73,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                     closure_0 = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: closure_0(2198).preloadAllIntlMessageFiles(), done: false };
+                    const obj6 = { value: closure_0(2201).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -203,7 +203,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
             const obj4 = { value: tmp20(), done: false };
             return obj4;
           } else {
-            state.setLocaleData(_modDef2188);
+            state.setLocaleData(_modDef2191);
             c3 = 3;
           }
         }
@@ -341,7 +341,7 @@ let closure_9 = async function _setMomentLocale(arg0) {
     }
   }
 };
-const identity = fn(1254);
+const identity = fn(1258);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
@@ -349,13 +349,13 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     isLoading: false,
     inProgressLocale: "Boolean",
     error: "channelId",
-    localeData: _modDef2188,
+    localeData: _modDef2191,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "channelId" });
+        closure_0({ isLoading: false, inProgressLocale: "description", error: "Array" });
       }
     },
     setLoadingFailed(error, arg1) {
@@ -396,7 +396,7 @@ export function setAppLocale() {
 export function useLocaleData() {
   let tmp = withEqualityFn((localeData) => localeData.localeData);
   if (tmp == null) {
-    tmp = _modDef2188;
+    tmp = _modDef2191;
   }
   return tmp;
 }

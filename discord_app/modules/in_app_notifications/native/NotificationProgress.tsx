@@ -1,17 +1,17 @@
-// === Module 11021: NotificationProgress ===
+// === Module 11090: NotificationProgress ===
 
-// Module 11021 (NotificationProgress)
+// Module 11090 (NotificationProgress)
 import nativeDefault from "native" /* 575 */;
-import _mod1652 from "module_1652" /* 1652 */;
+import _mod1655 from "module_1655" /* 1655 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { progress: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 4 }, progressContainerBottom: { width: "100%", position: "absolute", bottom: -1 } };
 let closure_7 = createStyles.createStyles(obj2);
 let closure_8 = { code: "(function NotificationProgressTsx1(){let[percent,width]=this.__closure;const percentRemaining=(typeof percent==='number'?percent:percent.get())/100;return{transform:[{translateX:-width+width*percentRemaining}]};})" };
@@ -47,10 +47,10 @@ export default function NotificationProgress(percent) {
   NotificationProgressTsx1.__workletHash = 14085017050901;
   NotificationProgressTsx1.__initData = tmp6;
   let obj2 = { onLayout: callback, style: tmp.progressContainerBottom, children: null };
-  const animatedStyle = _mod1652.useAnimatedStyle(NotificationProgressTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(NotificationProgressTsx1);
   const obj3 = { style: null };
   const items2 = [tmp.progress, animatedStyle];
   obj3.style = items2;
-  obj2.children = jsx(_modDef1652.View, { style: null });
+  obj2.children = jsx(_modDef1655.View, { style: null });
   return <View onLayout={callback} style={tmp.progressContainerBottom}>{null}</View>;
 };

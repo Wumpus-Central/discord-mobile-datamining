@@ -1,15 +1,15 @@
-// === Module 9098: GuildAutomodMessageStore ===
+// === Module 9165: GuildAutomodMessageStore ===
 
-// Module 9098 (GuildAutomodMessageStore)
+// Module 9165 (GuildAutomodMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6311 */;
-import AutomodMessageUtils from "AutomodMessageUtils" /* 8644 */;
-import MessageQueue from "MessageQueue" /* 8949 */;
-import AutomodErrorUtils from "AutomodErrorUtils" /* 9099 */;
-import ChannelStore from "ChannelStore" /* 5092 */;
-import MessageStore from "MessageStore" /* 6309 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6374 */;
+import AutomodMessageUtils from "AutomodMessageUtils" /* 8711 */;
+import MessageQueue from "MessageQueue" /* 9016 */;
+import AutomodErrorUtils from "AutomodErrorUtils" /* 9166 */;
+import ChannelStore from "ChannelStore" /* 5155 */;
+import MessageStore from "MessageStore" /* 6372 */;
 
 require = fn;
 function handleMessageSendFailedAutomod(messageData) {
@@ -150,7 +150,7 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(DispatcherDefault,
     message = message.message;
     let flag = null != message;
     if (flag) {
-      const obj = { id: message.id, messageData: "flexDirection", isBlockedEdit: null, errorMessage: tmp };
+      const obj = { id: message.id, messageData: "Path", isBlockedEdit: null, errorMessage: tmp };
       closure_8[message.id] = obj;
       closure_9 = closure_9 + 1;
       flag = true;
