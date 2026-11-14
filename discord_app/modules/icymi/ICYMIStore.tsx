@@ -690,7 +690,7 @@ function handleAck(channelId) {
   }
   arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
-let GuildScheduledEventStore = fn(6966);
+let GuildScheduledEventStore = fn(7029);
 ({
   eventScheduledToStartWithin: metroImportDefault,
   isGuildEventEnded: closure_8,
@@ -699,7 +699,7 @@ let GuildScheduledEventStore = fn(6966);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_23, GuildFeatures: closure_24, Permissions: closure_25 } = Constants);
-const ContentInventoryFeedKey = fn(10144).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(10213).ContentInventoryFeedKey;
 const DAY = DurationsDefault.Millis.DAY;
 const icymi_store = "icymi_store";
 let closure_29 = 3 * DurationsDefault.Millis.DAY;
@@ -732,7 +732,7 @@ let focused = false;
 let c57 = false;
 let timestamp = 0;
 let takenAt = 0;
-let closure_60 = fn(10145).EMPTY_DISCOVER_SNAPSHOT;
+let closure_60 = fn(10214).EMPTY_DISCOVER_SNAPSHOT;
 let identity = null;
 const PersistedStore = initializeDefault.PersistedStore;
 class ICYMIStore extends PersistedStore {}
@@ -1085,7 +1085,8 @@ obj = {
   DISCOVER_REQUEST_FAILED: function handleDiscoverRequestFailed(identity) {
     identity = identity.identity;
     if (canApplyDiscover(identity)) {
-      closure_60 = DiscoverRequestState.reduceDiscoverSnapshot(closure_60, { type: "error" });
+      const obj2 = { type: "error", retryAfterAt: identity.retryAfterAt };
+      closure_60 = DiscoverRequestState.reduceDiscoverSnapshot(closure_60, obj2);
     } else {
       return false;
     }
@@ -1185,12 +1186,12 @@ obj = {
         return false;
       }
     }
-    set1 = new Set(set1(10141).SUPPORTED_ITEM_TYPES);
+    set1 = new Set(set1(10210).SUPPORTED_ITEM_TYPES);
     const map = new Map();
-    set = new Set(set1(10141).SUPPORTED_ITEM_TYPES);
+    set = new Set(set1(10210).SUPPORTED_ITEM_TYPES);
     if (obj.getWaterwheelsDiscoverEnabled(icymi_store)) {
-      let discoverSnapshot = tmp2(10154).selectDiscoverSnapshot(items, (arg0, arg1) => map.set(arg0, arg1));
-      let tmp2Result = tmp2(10154);
+      let discoverSnapshot = tmp2(10223).selectDiscoverSnapshot(items, (arg0, arg1) => map.set(arg0, arg1));
+      let tmp2Result = tmp2(10223);
     } else {
       discoverSnapshot = [];
     }
@@ -1260,14 +1261,18 @@ obj = {
     });
     if (null != discoverRequest) {
       const obj2 = { type: "success", items: discoverSnapshot, loadId };
-      closure_60 = tmp2(10145).reduceDiscoverSnapshot(closure_60, obj2);
-      const tmp2Result4 = tmp2(10145);
+      closure_60 = tmp2(10214).reduceDiscoverSnapshot(closure_60, obj2);
+      const tmp2Result4 = tmp2(10214);
     }
     finalizeNewDehydratedItemsContent();
-    const obj3 = {
-      load_id: loadId,
-      load_time_millis: Date.now() - startTime,
-      feed_item_ids: closure_33.flatMap((item) => {
+    if (null != discoverRequest) {
+      if ("none" === loadId) {
+        let tmp8 = null;
+      }
+      const obj3 = { load_id: tmp8, load_time_millis: null, feed_item_ids: null };
+      const _Date = Date;
+      obj3.load_time_millis = Date.now() - startTime;
+      obj3.feed_item_ids = closure_33.flatMap((item) => {
         const dehydratedAnalyticsItemId = set1(dependencyMap[28]).getDehydratedAnalyticsItemId(item);
         if (null == dehydratedAnalyticsItemId) {
           items = [];
@@ -1275,107 +1280,109 @@ obj = {
           items = [dehydratedAnalyticsItemId];
         }
         return items;
-      }),
-    };
-    const items1 = [];
-    closure_129_0 = items1;
-    const items2 = [];
-    closure_129_1 = items2;
-    const items3 = [];
-    closure_129_2 = items3;
-    const item = closure_33.forEach((id) => {
-      const tmp = null != ICYMIUnreadStateStore.getReadTimestamp(id.id);
-      let tmp4 = id.type === ICYMITypes.ICYMIItemTypes.MESSAGE;
-      if (tmp4) {
-        const message_context = id.data.message_context;
-        let prop;
-        if (message_context != null) {
-          prop = message_context.external_content_application_id;
-        }
-        tmp4 = null == prop;
-      }
-      let tmp6 = tmp;
-      if (tmp4) {
-        let tmp7 = tmp;
-        if (!tmp) {
-          tmp7 = !isItemUnreadInChannel.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-          const tmp2Result = isItemUnreadInChannel;
-        }
-        tmp6 = tmp7;
-      }
-      if (tmp6) {
-        set1.push(id);
-      } else {
-        if (id.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
-          if (id.data.has_mention) {
-            dependencyMap.push(id);
+      });
+      const items1 = [];
+      closure_129_0 = items1;
+      const items2 = [];
+      closure_129_1 = items2;
+      const items3 = [];
+      closure_129_2 = items3;
+      const item = closure_33.forEach((id) => {
+        const tmp = null != ICYMIUnreadStateStore.getReadTimestamp(id.id);
+        let tmp4 = id.type === ICYMITypes.ICYMIItemTypes.MESSAGE;
+        if (tmp4) {
+          const message_context = id.data.message_context;
+          let prop;
+          if (message_context != null) {
+            prop = message_context.external_content_application_id;
           }
+          tmp4 = null == prop;
         }
-        map.push(id);
-      }
-    });
-    const items4 = [...items2];
-    const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[22]).compareGravityUnreadIds(id.id, id2.id))];
-    obj = set1(10146);
-    [arr10, arr11] = items5;
-    let tmp9 = _slicedToArray(items5, 2);
-    if (c44) {
-      if (0 !== c41) {
-        if (!isInitialLoad) {
-          if (c41 > 0) {
-            c46 = null;
+        let tmp6 = tmp;
+        if (tmp4) {
+          let tmp7 = tmp;
+          if (!tmp) {
+            tmp7 = !isItemUnreadInChannel.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
+            const tmp2Result = isItemUnreadInChannel;
           }
-          const tmp10 = arr12.length > tmp2(10141).MIN_ITEMS_FOR_NEW_PILL;
-          if (!isReloading) {
-            hasNewContent = tmp10;
-          }
-          if (tmp10) {
-            const tmp2Result5 = tmp2(10147);
-            const items6 = [];
-            HermesBuiltin.arraySpread(arr11, HermesBuiltin.arraySpread(arr10, 0));
-            tmp2Result5.hydrateItems(items6, 0, tmp2(10141).ICYMI_PAGE_SIZE, closure_37);
-            if (arr10.length + arr11.length === 0) {
-              c57 = true;
+          tmp6 = tmp7;
+        }
+        if (tmp6) {
+          set1.push(id);
+        } else {
+          if (id.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
+            if (id.data.has_mention) {
+              dependencyMap.push(id);
             }
           }
-          const obj4 = {
-            newTrackingProps: obj3,
-            hasNewContent,
-            unreadFeedItems: arr10,
-            readFeedItems: arr11,
-            homeSessionId: null,
-          };
-          let str = "background_load";
-          if (focused) {
-            str = "foreground_load";
+          map.push(id);
+        }
+      });
+      const items4 = [];
+      HermesBuiltin.arraySpread(items2, HermesBuiltin.arraySpread(items3, 0));
+      const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[22]).compareGravityUnreadIds(id.id, id2.id))];
+      [arr10, arr11] = items5;
+      const tmp18 = _slicedToArray(items5, 2);
+      if (c44) {
+        if (0 !== c41) {
+          if (!isInitialLoad) {
+            if (c41 > 0) {
+              c46 = null;
+            }
+            const tmp21 = arr12.length > tmp2(10210).MIN_ITEMS_FOR_NEW_PILL;
+            if (!isReloading) {
+              hasNewContent = tmp21;
+            }
+            if (tmp21) {
+              const tmp2Result5 = tmp2(10216);
+              const items6 = [];
+              HermesBuiltin.arraySpread(arr11, HermesBuiltin.arraySpread(arr10, 0));
+              tmp2Result5.hydrateItems(items6, 0, tmp2(10210).ICYMI_PAGE_SIZE, closure_37);
+              if (arr10.length + arr11.length === 0) {
+                c57 = true;
+              }
+            }
+            const obj4 = {
+              newTrackingProps: obj3,
+              hasNewContent,
+              unreadFeedItems: arr10,
+              readFeedItems: arr11,
+              homeSessionId: null,
+            };
+            let str2 = "background_load";
+            if (focused) {
+              str2 = "foreground_load";
+            }
+            obj4.homeSessionId = str2;
+            tmp2(10227).trackFeedLoaded(obj4);
+            const tmp2Result6 = tmp2(10227);
           }
-          obj4.homeSessionId = str;
-          tmp2(10158).trackFeedLoaded(obj4);
-          const tmp2Result6 = tmp2(10158);
         }
       }
-    }
-    c41 = 0;
-    if (!focused) {
-      const _Date = Date;
-      const diff = Date.now() - closure_32;
-      let flag2 = false;
-      if (diff > 6 * map(1089).Millis.HOUR) {
-        const _Set = Set;
-        set1 = new Set(arr10.map((id) => id.id));
-        const substr = arr14.slice(0, 20);
-        flag2 = substr.filter((id) => set1.has(id.id)).length >= 3;
+      c41 = 0;
+      if (!focused) {
+        const _Date2 = Date;
+        const diff = Date.now() - closure_32;
+        let flag2 = false;
+        if (diff > 6 * map(1089).Millis.HOUR) {
+          const _Set = Set;
+          set1 = new Set(arr10.map((id) => id.id));
+          const substr = arr14.slice(0, 20);
+          flag2 = substr.filter((id) => set1.has(id.id)).length >= 3;
+        }
+        if (flag2) {
+          hasNewContent = true;
+          c42 = true;
+        }
+        const obj5 = { newUnread: arr10, newRead: arr11 };
+        reload(obj5);
+        arr14 = closure_33;
       }
-      if (flag2) {
-        hasNewContent = true;
-        c42 = true;
-      }
-      const obj5 = { newUnread: arr10, newRead: arr11 };
-      reload(obj5);
-      arr14 = closure_33;
+      hasNewContent = false;
+      arr12 = getNewUnreadItems(arr10);
     }
-    hasNewContent = false;
-    arr12 = getNewUnreadItems(arr10);
+    tmp8 = loadId;
+    obj = set1(10215);
   },
   LOAD_ICYMI_HYDRATED: function handleLoadHydratedItems(arg0) {
     ({ messageItems, activityItems, requestMessageItems, requestActivityItems, startingIndex, endingIndex } = arg0);

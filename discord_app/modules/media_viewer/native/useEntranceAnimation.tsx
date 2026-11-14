@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/useEntranceAnimation.tsx
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod1705 from "../../../../_runtime/metro/01705__.js";
+import _mod1708 from "../../../../_runtime/metro/01708__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -33,7 +33,7 @@ export function useEntranceAnimation(entranceAnimationDriver) {
   const handleLoadStart = noop.useCallback(() => {
     obj = ReactBatchUpdates;
     obj.batchUpdates(() => state.setState({ isComplete: false }));
-    items = [closure_7, _mod1705.scheduleOnRN, setUseEntranceAnimationState];
+    items = [closure_7, _mod1708.scheduleOnRN, setUseEntranceAnimationState];
     c0 = undefined;
     c1 = undefined;
     [tmp4, tmp5, tmp6] = items;
@@ -52,7 +52,7 @@ export function useEntranceAnimation(entranceAnimationDriver) {
     if (1 !== entranceAnimationDriver.get()) {
       ReactBatchUpdates.batchUpdates(() => state.setState({ isComplete: false }));
       const obj3 = timing_timing;
-      items = [closure_8, _mod1705.scheduleOnRN, setUseEntranceAnimationState, callback];
+      items = [closure_8, _mod1708.scheduleOnRN, setUseEntranceAnimationState, callback];
       c0 = undefined;
       c1 = undefined;
       c2 = undefined;

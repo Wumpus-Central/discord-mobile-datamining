@@ -1,7 +1,7 @@
 // discord_app/modules/virtual_currency/native/BalanceWidgetPillButton.tsx
 import util from "../../../intl/index.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef9375 from "../../../../_runtime/metro/09375__.js";
+import _modDef9443 from "../../../../_runtime/metro/09443__.js";
 import IndicatorDot from "../../../design/components/IndicatorDot/native/IndicatorDot.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -82,7 +82,7 @@ class BalanceWidgetPillButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const timestampProducer = createStyles.createStyles({ notificationBadge: { position: "absolute", top: 0, end: 0 } });
 BalanceWidgetPillButton.displayName = "BalanceWidgetPillButton";
 const size = fn(2);

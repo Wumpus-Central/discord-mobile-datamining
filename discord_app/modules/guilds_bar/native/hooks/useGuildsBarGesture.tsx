@@ -3,11 +3,11 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import shared from "../../../../design/shared.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05535_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
 import FastList from "../../../../lib/native/FastList.tsx";
 import ContextMenuState from "../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 import roundToNearestPixelDefault from "../../../voice_panel/native/utils/roundToNearestPixel.tsx";
@@ -242,7 +242,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
     sectionItemFromPosition = current.getSectionItemFromPosition(bound, map);
   }
   if (sectionItemFromPosition == null) {
-    sectionItemFromPosition = { item: "delete", positionPercentage: false };
+    sectionItemFromPosition = { item: "description", positionPercentage: false };
   }
   const item = sectionItemFromPosition.item;
   if (null == item) {
@@ -274,18 +274,18 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, c4, map) {
   }
 }
 const Dimensions = fn(17).Dimensions;
-const GuildsNodeType = fn(6893).GuildsNodeType;
-const GuildsBarConstants = fn(18906);
+const GuildsNodeType = fn(6956).GuildsNodeType;
+const GuildsBarConstants = fn(19060);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let obj = { pan: null, itemMeasurements: null, activeIndex: null };
-let module_1652 = fn(1652);
-obj.pan = module_1652.makeMutable(-1);
-module_1652 = fn(1652);
-obj.itemMeasurements = module_1652.makeMutable([]);
-module_1652 = fn(1652);
-obj.activeIndex = module_1652.makeMutable(-1);
-let closure_15 = debounce(fn(5491).triggerHapticFeedback, 16);
+let module_1655 = fn(1655);
+obj.pan = module_1655.makeMutable(-1);
+module_1655 = fn(1655);
+obj.itemMeasurements = module_1655.makeMutable([]);
+module_1655 = fn(1655);
+obj.activeIndex = module_1655.makeMutable(-1);
+let closure_15 = debounce(fn(5554).triggerHapticFeedback, 16);
 let closure_16 = debounce((intl) => {
   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
@@ -340,13 +340,13 @@ export default function useGuildsBarGesture() {
   let tmp = _require;
   const token = require("useToken").useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   let obj2 = require("useToken");
-  const scrollerRef = require("../../../../../_runtime/metro/01652__.js").useAnimatedRef();
+  const scrollerRef = require("../../../../../_runtime/metro/01655__.js").useAnimatedRef();
   const fastListRef = noop.useRef(null);
   noop = fastListRef;
-  let obj3 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj5 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let obj3 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj5 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   let tmp9 = frameCallback(
     (gestureState) => ({
       gestureState: gestureState.gestureState,
@@ -356,7 +356,7 @@ export default function useGuildsBarGesture() {
       listInsets: gestureState.listInsets,
       dragDropInProgress: gestureState.dragDropInProgress,
     }),
-    require("../../../../../_runtime/metro/05158__.js").shallow,
+    require("../../../../../_runtime/metro/05221__.js").shallow,
   );
   let gestureState = tmp9.gestureState;
   let scrollPosition = tmp9.scrollPosition;
@@ -379,7 +379,7 @@ export default function useGuildsBarGesture() {
       arr = Array.from(set);
     }
     return arr;
-  }, require("../../../../../_runtime/metro/05158__.js").shallow);
+  }, require("../../../../../_runtime/metro/05221__.js").shallow);
   const effect = noop.useEffect(() => {
     const current = _undefined5.current;
     scrollPosition = undefined;
@@ -423,14 +423,14 @@ export default function useGuildsBarGesture() {
     }
     tmp7 = num2 === range.min && num3 === range.max;
   });
-  let obj6 = require("../../../../../_runtime/metro/01652__.js");
+  let obj6 = require("../../../../../_runtime/metro/01655__.js");
   items = [
     closure_23,
     gestureState,
     sharedValue1,
     16.666666666666668,
     sharedValue,
-    require("../../../../../_runtime/metro/01652__.js").scrollTo,
+    require("../../../../../_runtime/metro/01655__.js").scrollTo,
     scrollerRef,
     roundToNearestPixelDefault,
     scrollPosition,
@@ -465,7 +465,7 @@ export default function useGuildsBarGesture() {
   useGuildsBarGestureTsx1.__closure = items1;
   useGuildsBarGestureTsx1.__workletHash = 2533042180415;
   useGuildsBarGestureTsx1.__initData = tmp12;
-  frameCallback = require("../../../../../_runtime/metro/01652__.js").useFrameCallback(useGuildsBarGestureTsx1, false);
+  frameCallback = require("../../../../../_runtime/metro/01655__.js").useFrameCallback(useGuildsBarGestureTsx1, false);
   let items2 = [sharedValue, sharedValue1, frameCallback];
   state = obj4.useCallback((event) => {
     const state1 = GuildsBarDnDStore.getState();
@@ -644,7 +644,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "flexDirection" });
+    state1.setStateShallow({ dragSpecs: "disabled", overSpecs: "isArray" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -843,10 +843,10 @@ export default function useGuildsBarGesture() {
         id1 = node.id;
       }
       if (id !== id1) {
-        const ContextMenuStore = tmp66(9082).ContextMenuStore;
+        const ContextMenuStore = tmp66(9149).ContextMenuStore;
         if (null != ContextMenuStore.getState().menu) {
-          tmp66(9082).hideContextMenu();
-          const tmp66Result = tmp66(9082);
+          tmp66(9149).hideContextMenu();
+          const tmp66Result = tmp66(9149);
         }
         node2 = node;
         overPercentage2 = overPercentage;
@@ -887,9 +887,9 @@ export default function useGuildsBarGesture() {
                 str3 = "self";
                 if (node3.id !== node2.id) {
                   const type2 = item3.type;
-                  if (tmp66(7781).FastListItemTypes.SECTION === type2) {
+                  if (tmp66(7847).FastListItemTypes.SECTION === type2) {
                     let type = item2.type;
-                    if (tmp66(7781).FastListItemTypes.SECTION === type) {
+                    if (tmp66(7847).FastListItemTypes.SECTION === type) {
                       const str5 = "self";
                       if (item2.recyclerKey !== item3.recyclerKey) {
                         let str6 = "after";
@@ -1025,7 +1025,7 @@ export default function useGuildsBarGesture() {
         if (!isActive) {
           frameCallback.setActive(true);
         }
-        tmp66 = tmp66(1259);
+        tmp66 = tmp66(1263);
         batchUpdates = tmp66.batchUpdates;
         batchUpdates(() => {
           if (null != obj2) {
@@ -1063,9 +1063,9 @@ export default function useGuildsBarGesture() {
     }
     obj = { overSpecs, dragSpecs: obj2, windowSize, gestureState: gestureState.get() };
   }, items4);
-  let obj7 = require("../../../../../_runtime/metro/01652__.js");
+  let obj7 = require("../../../../../_runtime/metro/01655__.js");
   let items5 = [callback4];
-  const onFastListScrollWorklet = tmp(17584).useExternalScrollEventHandler({ id: "guilds" });
+  const onFastListScrollWorklet = tmp(17702).useExternalScrollEventHandler({ id: "guilds" });
   let items6 = [
     dragDropInProgress,
     dragRegion,
@@ -1091,7 +1091,7 @@ export default function useGuildsBarGesture() {
   const gesture1 = obj4.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const Gesture2 = LegacyBaseButton.Gesture;
-    items = [closure_24, scrollPosition, c7, dragRegion, _mod1705.scheduleOnRN, callback1];
+    items = [closure_24, scrollPosition, c7, dragRegion, _mod1708.scheduleOnRN, callback1];
     c3 = undefined;
     [tmp4, tmp5, tmp6, tmp7, tmp8, tmp9] = items;
     function useGuildsBarGestureTsx2(changedTouches, fail) {
@@ -1134,7 +1134,7 @@ export default function useGuildsBarGesture() {
     useGuildsBarGestureTsx3.__workletHash = 1106386279759;
     useGuildsBarGestureTsx3.__initData = tmp10;
     const onTouchesDownResult = Gesture2.LongPress().onTouchesDown(useGuildsBarGestureTsx2);
-    const items4 = [closure_26, c7, _mod1705.scheduleOnRN, callback2];
+    const items4 = [closure_26, c7, _mod1708.scheduleOnRN, callback2];
     [tmp12, tmp13, tmp14, tmp15] = items4;
     function useGuildsBarGestureTsx4(arg0) {
       ({ absoluteX, absoluteY } = arg0);
@@ -1149,7 +1149,7 @@ export default function useGuildsBarGesture() {
     const onTouchesMoveResult = Gesture2.LongPress()
       .onTouchesDown(useGuildsBarGestureTsx2)
       .onTouchesMove(useGuildsBarGestureTsx3);
-    const items6 = [closure_27, c7, _mod1705.scheduleOnRN, callback];
+    const items6 = [closure_27, c7, _mod1708.scheduleOnRN, callback];
     [tmp17, tmp18, tmp19, tmp20] = items6;
     function useGuildsBarGestureTsx5() {
       if ("cancel" === _undefined.get().mode) {
@@ -1164,7 +1164,7 @@ export default function useGuildsBarGesture() {
       .onTouchesDown(useGuildsBarGestureTsx2)
       .onTouchesMove(useGuildsBarGestureTsx3)
       .onStart(useGuildsBarGestureTsx4);
-    const items8 = [closure_28, c7, _mod1705.scheduleOnRN, callback];
+    const items8 = [closure_28, c7, _mod1708.scheduleOnRN, callback];
     c0 = undefined;
     [tmp21, tmp22, tmp23, tmp24] = items8;
     function useGuildsBarGestureTsx6() {
@@ -1195,7 +1195,7 @@ export default function useGuildsBarGesture() {
     const PanResult = Gesture3.Pan();
     let result = Gesture3.Pan().manualActivation(true).simultaneousWithExternalGesture(c3, c0);
     let result1 = result.shouldCancelWhenOutside(false);
-    const items10 = [closure_29, c7, dragDropInProgress, 10, _mod1705.scheduleOnRN, callback3, callback4];
+    const items10 = [closure_29, c7, dragDropInProgress, 10, _mod1708.scheduleOnRN, callback3, callback4];
     [tmp28, tmp29, tmp30, tmp31, tmp32, tmp33, tmp34] = items10;
     function useGuildsBarGestureTsx7(arg0, activate) {
       const first = arg0.changedTouches[0];
@@ -1247,7 +1247,7 @@ export default function useGuildsBarGesture() {
     useGuildsBarGestureTsx7.__workletHash = 11364152475385;
     useGuildsBarGestureTsx7.__initData = tmp28;
     const manualActivationResult = Gesture3.Pan().manualActivation(true);
-    const items12 = [closure_30, c7, listInsets, c12, windowSize, _mod1705.scheduleOnRN, callback4, callback3];
+    const items12 = [closure_30, c7, listInsets, c12, windowSize, _mod1708.scheduleOnRN, callback4, callback3];
     c3 = undefined;
     c4 = undefined;
     c5 = undefined;
@@ -1288,7 +1288,7 @@ export default function useGuildsBarGesture() {
     useGuildsBarGestureTsx8.__workletHash = 17309616979285;
     useGuildsBarGestureTsx8.__initData = tmp35;
     const onTouchesMoveResult1 = result1.onTouchesMove(useGuildsBarGestureTsx7);
-    const items14 = [closure_31, c7, _mod1705.scheduleOnRN, callback];
+    const items14 = [closure_31, c7, _mod1708.scheduleOnRN, callback];
     c2 = undefined;
     [tmp43, tmp44, tmp45, tmp46] = items14;
     function useGuildsBarGestureTsx9() {
@@ -1305,7 +1305,7 @@ export default function useGuildsBarGesture() {
     useGuildsBarGestureTsx9.__workletHash = 16673204581970;
     useGuildsBarGestureTsx9.__initData = tmp43;
     const onUpdateResult = result1.onTouchesMove(useGuildsBarGestureTsx7).onUpdate(useGuildsBarGestureTsx8);
-    const items16 = [closure_32, _mod1705.scheduleOnRN, callback];
+    const items16 = [closure_32, _mod1708.scheduleOnRN, callback];
     c0 = undefined;
     c1 = undefined;
     [tmp47, tmp48, tmp49] = items16;

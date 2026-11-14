@@ -7,8 +7,8 @@ import QuestDockStore from "QuestDockStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const QuestDockMode = fn(5275).QuestDockMode;
-let closure_5 = fn(17580).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
+const QuestDockMode = fn(5338).QuestDockMode;
+let closure_5 = fn(17698).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
 const jsx = fn(21).jsx;
 const SECOND = DurationsDefault.Millis.SECOND;
 let obj = {
@@ -17,15 +17,15 @@ let obj = {
   lastScrollEventSourceId: null,
   questDockOffset: null,
 };
-let ReanimatedHelperTypes = fn(7782);
+let ReanimatedHelperTypes = fn(7848);
 obj.restingQuestDockMode = ReanimatedHelperTypes.createFakeSharedValue(QuestDockMode.COLLAPSED);
 obj.setRestingQuestDockMode = function setRestingQuestDockMode() {};
-ReanimatedHelperTypes = fn(7782);
+ReanimatedHelperTypes = fn(7848);
 obj.lastScrollEventSourceId = ReanimatedHelperTypes.createFakeSharedValue(null);
-ReanimatedHelperTypes = fn(7782);
+ReanimatedHelperTypes = fn(7848);
 obj.questDockOffset = ReanimatedHelperTypes.createFakeSharedValue(0);
 let context = noop.createContext(obj);
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let closure_9 = PlatformUtils.isAndroid();
 let closure_10 = {
   code: "(function QuestDockExternalCoordinationContextTsx1(){let[restingQuestDockMode]=this.__closure;return restingQuestDockMode.get();})",
@@ -121,7 +121,7 @@ export function useExternalScrollEventHandler(id) {
   QuestDockExternalCoordinationContextTsx1.__closure = items2;
   QuestDockExternalCoordinationContextTsx1.__workletHash = 4531016347305;
   QuestDockExternalCoordinationContextTsx1.__initData = tmp6;
-  const items3 = [c11, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, callback1];
+  const items3 = [c11, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, callback1];
   _require = undefined;
   dependencyMap = undefined;
   [tmp8, tmp9, tmp10] = items3;
@@ -139,14 +139,14 @@ export function useExternalScrollEventHandler(id) {
   QuestDockExternalCoordinationContextTsx2.__closure = items4;
   QuestDockExternalCoordinationContextTsx2.__workletHash = 3450868736561;
   QuestDockExternalCoordinationContextTsx2.__initData = tmp8;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     QuestDockExternalCoordinationContextTsx1,
     QuestDockExternalCoordinationContextTsx2,
   );
-  const obj2 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const tmp4Result = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const obj2 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const tmp4Result = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
   const items5 = [sharedValue1];
   const effect = obj.useEffect(() => {
     const timeout = setTimeout(() => {
@@ -164,7 +164,7 @@ export function useExternalScrollEventHandler(id) {
     sharedValue,
     lastScrollEventSourceId,
     id,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     callback1,
     c9,
     callback,

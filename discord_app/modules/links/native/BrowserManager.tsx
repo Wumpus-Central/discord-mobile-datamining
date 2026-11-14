@@ -1,7 +1,7 @@
 // discord_app/modules/links/native/BrowserManager.tsx
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
-import PlatformUtils2 from "../../../utils/PlatformUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import PlatformUtils2 from "../../../utils/PlatformUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import NativeBrowserManagerModule from "../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModule.tsx";
 import NativeBrowserManagerModuleIOSDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeBrowserManagerModuleIOS.tsx";
@@ -60,7 +60,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
   }
 };
 const AppState = fn(17).AppState;
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = NativeBrowserManagerModuleDefault;
 } else {

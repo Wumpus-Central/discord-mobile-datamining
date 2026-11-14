@@ -146,8 +146,8 @@ let closure_26 = async function _probeHardware() {
     videoEncoders: closure_131_6,
   };
 };
-const getSystemAnalyticsInfo = fn(6027).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8778);
+const getSystemAnalyticsInfo = fn(6090).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8845);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_15,
   CLIPS_DEFAULT_SETTINGS_VERSION: closure_16,
@@ -157,8 +157,8 @@ const ClipsConstants = fn(8778);
 } = ClipsConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, RTCConnectionStates: closure_21 } = Constants);
-const StreamTypes = fn(6740).StreamTypes;
-const Features = fn(6012).Features;
+const StreamTypes = fn(6803).StreamTypes;
+const Features = fn(6075).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -391,7 +391,7 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
         } else {
           const result = closure_129_2.applyNativeClipsSettings();
           if (null != closure_129_1) {
-            const ClipsAllowVoiceRecording = classification(5068).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = classification(5131).ClipsAllowVoiceRecording;
             setting = ClipsAllowVoiceRecording.getSetting();
             const clips = settings.settings.clips;
             let allowVoiceRecording;
@@ -431,8 +431,8 @@ prototype["applyClipsDefaultSettings"] = function applyClipsDefaultSettings(
             }
             obj8.actual_allow_voice_recording = tmp36;
             obj8.clip_runtime = clip_runtime;
-            decision(1252).track(constants.CLIPS_DEFAULT_SETTINGS_APPLIED, obj8);
-            const obj = decision(1252);
+            decision(1256).track(constants.CLIPS_DEFAULT_SETTINGS_APPLIED, obj8);
+            const obj = decision(1256);
           }
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
@@ -471,7 +471,7 @@ prototype["updateAllowVoiceRecordingDefault"] = function updateAllowVoiceRecordi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const ClipsAllowVoiceRecording = tmp4(5068).ClipsAllowVoiceRecording;
+            const ClipsAllowVoiceRecording = tmp4(5131).ClipsAllowVoiceRecording;
             v1 = 1;
             c2 = 1;
             const obj4 = { value: ClipsAllowVoiceRecording.updateSetting(tmp4), done: false };

@@ -1,7 +1,7 @@
 // discord_app/components_native/common/Alerts.tsx
 import discord_common_shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../_runtime/metro/01655__.js";
 import native from "../../../discord_common/js/packages/design/native.tsx";
 import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
 import OverlayViewDefault from "../../design/void/OverlayView/native/OverlayView.tsx";
@@ -12,7 +12,6 @@ import noop from "../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../modules/a11y/AccessibilityStore.tsx";
 import PermissionSpeakStore from "../../stores/PermissionSpeakStore.tsx";
 import PermissionVADStore from "../../stores/PermissionVADStore.tsx";
-import SurveyStore from "../../stores/SurveyStore.tsx";
 import AlertStore from "../../stores/native/AlertStore.tsx";
 
 const require = globalThis.__r;
@@ -28,13 +27,13 @@ function AlertWrapper(item) {
   ({ renderAlert, renderKey } = item);
   let tmp = closure_15();
   items = [c7];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => _undefined7.useReducedMotion);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => _undefined6.useReducedMotion);
   let obj = require("initialize");
   let num = 0;
   if (transitionState === require("native").TransitionStates.MOUNTED) {
     num = 1;
   }
-  const sharedValue = require("../../../_runtime/metro/01652__.js").useSharedValue(num);
+  const sharedValue = require("../../../_runtime/metro/01655__.js").useSharedValue(num);
   let items1 = [transitionState, sharedValue];
   const effect = noop.useEffect(() => {
     let num = 1;
@@ -43,17 +42,17 @@ function AlertWrapper(item) {
     }
     const result = _undefined3.set(num);
   }, items1);
-  let obj2 = require("../../../_runtime/metro/01652__.js");
-  let obj3 = noop;
+  let obj2 = require("../../../_runtime/metro/01655__.js");
+  const obj3 = noop;
   const items2 = [
     closure_17,
     sharedValue,
     require("timing/timing").withTiming,
-    require("../../../_runtime/metro/01652__.js").Easing,
+    require("../../../_runtime/metro/01655__.js").Easing,
     closure_16,
     transitionState,
     require("native").TransitionStates,
-    require("../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../_runtime/metro/01708__.js").scheduleOnRN,
     item.cleanUp,
   ];
   _require = undefined;
@@ -128,16 +127,17 @@ function AlertWrapper(item) {
   AlertsTsx2.__closure = items3;
   AlertsTsx2.__workletHash = 13015713816035;
   AlertsTsx2.__initData = tmp7;
-  const animatedStyle = require("../../../_runtime/metro/01652__.js").useAnimatedStyle(AlertsTsx2);
-  const tmp2Result = require("../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../_runtime/metro/01655__.js").useAnimatedStyle(AlertsTsx2);
+  const tmp2Result = require("../../../_runtime/metro/01655__.js");
   const items4 = [
     closure_18,
     stateFromStores,
     sharedValue,
+    require("timing/timing").withTiming,
+    require("../../../_runtime/metro/01655__.js").Easing,
     require("spring/spring").withSpring,
     require("springPresets").SUBTLE_SPRING,
-    require("timing/timing").withTiming,
-    require("../../../_runtime/metro/01652__.js").Easing,
+    0.7,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -145,46 +145,60 @@ function AlertWrapper(item) {
   noop = undefined;
   StyleSheet = undefined;
   c5 = undefined;
-  [tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23] = items4;
+  c6 = undefined;
+  [tmp17, tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24] = items4;
   class AlertsTsx3 {
     constructor() {
-      obj = { transform: null };
       if (closure_0) {
+        obj1 = { transform: null };
         items = [];
         items[0] = { scale: 1 };
-        obj.transform = items;
-        tmp7 = obj;
+        obj1.transform = items;
+        return obj1;
       } else {
         tmp = closure_1;
         num = 1;
-        if (1 === closure_1.get()) {
-          tmp5 = closure_2;
-          tmp6 = closure_3;
-          tmp4 = closure_2(1, closure_3);
-        } else {
-          tmp2 = closure_4;
-          obj1 = { duration: 100, easing: null };
-          tmp3 = closure_5;
-          obj1.easing = closure_5.in(closure_5.ease);
-          num2 = 0;
-          tmp4 = closure_4(0, obj1);
+        tmp2 = 1 === closure_1.get();
+        tmp3 = closure_2;
+        num2 = 0;
+        if (tmp2) {
+          num2 = 1;
         }
-        obj4 = { scale: null };
-        obj4.scale = tmp4;
+        num3 = 100;
+        if (tmp2) {
+          num3 = 150;
+        }
+        obj = { opacity: null, transform: null };
+        obj7 = { duration: null, easing: null };
+        obj7.duration = num3;
+        obj3 = closure_3;
+        obj7.easing = closure_3.linear;
+        obj.opacity = tmp3(num2, obj7);
+        if (tmp2) {
+          tmp6 = closure_4;
+          tmp7 = closure_5;
+          tmp3Result = closure_4(1, closure_5);
+        } else {
+          tmp4 = closure_6;
+          obj8 = { duration: 100, easing: null };
+          obj8.easing = obj3.in(obj3.ease);
+          tmp3Result = tmp3(closure_6, obj8);
+        }
+        obj9 = { scale: null };
+        obj9.scale = tmp3Result;
         items1 = [];
-        items1[0] = obj4;
+        items1[0] = obj9;
         obj.transform = items1;
-        tmp7 = obj;
+        return obj;
       }
-      return tmp7;
     }
   }
-  const items5 = [tmp18, tmp19, tmp20, tmp21, tmp22, tmp23];
+  const items5 = [tmp18, tmp19, tmp20, tmp21, tmp22, tmp23, tmp24];
   AlertsTsx3.__closure = items5;
-  AlertsTsx3.__workletHash = 14456934053891;
+  AlertsTsx3.__workletHash = 2489423342319;
   AlertsTsx3.__initData = tmp17;
   const items6 = [isDismissable];
-  const animatedStyle1 = require("../../../_runtime/metro/01652__.js").useAnimatedStyle(AlertsTsx3);
+  const animatedStyle1 = require("../../../_runtime/metro/01655__.js").useAnimatedStyle(AlertsTsx3);
   const callback = obj3.useCallback(() => {
     if (c0) {
       actions_AlertActionCreatorsDefault.close();
@@ -192,10 +206,10 @@ function AlertWrapper(item) {
     return true;
   }, items6);
   useBackPressHandlerDefault(callback);
-  const tmp2Result2 = require("../../../_runtime/metro/01652__.js");
-  const obj4 = { onClose: actions_AlertActionCreatorsDefault.close };
-  const obj5 = { dialogKey: renderKey, onDismiss: callback, children: null };
-  const obj6 = { style: null, children: null };
+  const tmp2Result2 = require("../../../_runtime/metro/01655__.js");
+  let obj4 = { onClose: actions_AlertActionCreatorsDefault.close };
+  let obj5 = { dialogKey: renderKey, onDismiss: callback, children: null };
+  let obj6 = { style: null, children: null };
   const items7 = [StyleSheet.absoluteFill, tmp.alertContentWrapper];
   obj6.style = items7;
   const obj7 = {
@@ -210,14 +224,14 @@ function AlertWrapper(item) {
   const obj8 = { style: null };
   const items8 = [tmp.alertWrapper, animatedStyle];
   obj8.style = items8;
-  obj7.children = closure_12(_modDef1652.View, obj8);
+  obj7.children = closure_11(_modDef1655.View, obj8);
   const items9 = [
-    closure_12(c5, obj7),
-    closure_12(_modDef1652.View, { style: animatedStyle1, children: renderAlertResult }),
+    closure_11(c5, obj7),
+    closure_11(_modDef1655.View, { style: animatedStyle1, children: renderAlertResult }),
   ];
   obj6.children = items9;
-  obj5.children = closure_13(KeyboardAwareViewDefault, obj6);
-  return closure_12(require("Dialog").Dialog, obj5);
+  obj5.children = closure_12(KeyboardAwareViewDefault, obj6);
+  return closure_11(require("Dialog").Dialog, obj5);
 }
 function getAlertItemKey(renderKey) {
   return renderKey.renderKey;
@@ -225,15 +239,15 @@ function getAlertItemKey(renderKey) {
 function wrapAlerts(children) {
   const obj = {
     style: StyleSheet.absoluteFill,
-    children: application_id(timestampProducer, { style: StyleSheet.absoluteFill, children }),
+    children: closure_1_11(timestampProducer, { style: StyleSheet.absoluteFill, children }),
   };
-  return application_id(OverlayViewDefault, obj);
+  return closure_1_11(OverlayViewDefault, obj);
 }
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ TouchableWithoutFeedback: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let obj = {
   stores: null,
   center: true,
@@ -246,7 +260,7 @@ let obj = {
 };
 let items = [PermissionSpeakStore];
 obj.stores = items;
-let items1 = [obj, ,];
+let items1 = [obj];
 let obj2 = {
   stores: null,
   center: true,
@@ -260,30 +274,17 @@ let obj2 = {
 let items2 = [PermissionVADStore];
 obj2.stores = items2;
 items1[1] = obj2;
-let obj3 = {
-  stores: null,
-  center: true,
-  isOpen() {
-    return null != SurveyStore.getCurrentSurvey();
-  },
-  getComponent() {
-    return require("MobileSurvey").default;
-  },
-};
-let items3 = [SurveyStore];
-obj3.stores = items3;
-items1[2] = obj3;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(5243);
-let obj4 = { alertWrapper: null, alertContentWrapper: null };
-let obj6 = {};
+const createStyles = fn(5306);
+let obj3 = { alertWrapper: null, alertContentWrapper: null };
+let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj6.backgroundColor = nativeDefault.colors.BACKGROUND_SCRIM;
-obj6.justifyContent = "center";
-obj6.alignItems = "center";
-obj4.alertWrapper = obj6;
-obj4.alertContentWrapper = { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" };
-let closure_15 = createStyles.createStyles(obj4);
+obj5.backgroundColor = nativeDefault.colors.BACKGROUND_SCRIM;
+obj5.justifyContent = "center";
+obj5.alignItems = "center";
+obj3.alertWrapper = obj5;
+obj3.alertContentWrapper = { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" };
+let closure_15 = createStyles.createStyles(obj3);
 let closure_16 = {
   code: "(function AlertsTsx1(finished){let[visible,transitionState,TransitionStates,scheduleOnRN,cleanUp]=this.__closure;if(finished&&visible.get()===0&&transitionState===TransitionStates.YEETED){scheduleOnRN(cleanUp);}})",
 };
@@ -291,13 +292,13 @@ let closure_17 = {
   code: "(function AlertsTsx2(){let[visible,withTiming,Easing,_worklet_9983200573389_init_data,transitionState,TransitionStates,scheduleOnRN,cleanUp]=this.__closure;const isVisible=visible.get()===1;return{opacity:withTiming(visible.get(),{duration:isVisible?250:100,easing:Easing.linear},'animate-always',function AlertsTsx1Factory([_worklet_9983200573389_init_data,visible,transitionState,TransitionStates,scheduleOnRN,cleanUp]){const AlertsTsx1=function(finished){if(finished&&visible.get()===0&&transitionState===TransitionStates.YEETED){scheduleOnRN(cleanUp);}};AlertsTsx1.__closure=[visible,transitionState,TransitionStates,scheduleOnRN,cleanUp];AlertsTsx1.__workletHash=9983200573389;AlertsTsx1.__initData=_worklet_9983200573389_init_data;return AlertsTsx1;}([_worklet_9983200573389_init_data,visible,transitionState,TransitionStates,scheduleOnRN,cleanUp]))};})",
 };
 let closure_18 = {
-  code: "(function AlertsTsx3(){let[useReducedMotion,visible,withSpring,SUBTLE_SPRING,withTiming,Easing]=this.__closure;if(useReducedMotion){return{transform:[{scale:1}]};}return{transform:[{scale:visible.get()===1?withSpring(1,SUBTLE_SPRING):withTiming(0,{duration:100,easing:Easing.in(Easing.ease)})}]};})",
+  code: "(function AlertsTsx3(){let[useReducedMotion,visible,withTiming,Easing,withSpring,SUBTLE_SPRING,HIDDEN_CONTENT_SCALE]=this.__closure;if(useReducedMotion){return{transform:[{scale:1}]};}const isVisible=visible.get()===1;return{opacity:withTiming(isVisible?1:0,{duration:isVisible?150:100,easing:Easing.linear}),transform:[{scale:isVisible?withSpring(1,SUBTLE_SPRING):withTiming(HIDDEN_CONTENT_SCALE,{duration:100,easing:Easing.in(Easing.ease)})}]};})",
 };
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
-  return application_id(AlertWrapper, { item, transitionState, cleanUp }, arg0);
+  return closure_1_11(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "a", renderKey: "isArray", props: "isArray" });
-let tmp7 = new ModalRegistryDefault(items1);
+let closure_23 = Object.freeze({ renderAlert: "channel_id", renderKey: "flex", props: "analyticsLocations" });
+const tmp6 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
 
@@ -328,7 +329,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "a", renderKey: "isArray", props: "isArray" };
+        return { renderAlert: "channel_id", renderKey: "flex", props: "analyticsLocations" };
       }
     }
   });
@@ -336,6 +337,7 @@ export default noop.memo(function Alerts() {
     closure_0.current = stateFromStoresObject;
   });
   let obj = require("initialize");
+  const tmp = stateFromStores;
   let items1 = [AlertStore];
   stateFromStores = require("initialize").useStateFromStores(items1, () => alertDismissable.isAlertDismissable());
   renderAlert = stateFromStoresObject.renderAlert;
@@ -351,10 +353,18 @@ export default noop.memo(function Alerts() {
     }
     return items1;
   }, items2);
-  return closure_12(require("native").TransitionGroup, {
-    items: memo,
-    renderItem: renderAlertItem,
-    getItemKey: getAlertItemKey,
-    wrapChildren: wrapAlerts,
-  });
+  const children = [
+    closure_11(require("native").TransitionGroup, {
+      items: memo,
+      renderItem: renderAlertItem,
+      getItemKey: getAlertItemKey,
+      wrapChildren: wrapAlerts,
+    }),
+  ];
+  let tmp8Result = null;
+  if (null == renderAlert) {
+    tmp8Result = closure_11(stateFromStoresObject(tmp[25]), {});
+  }
+  children[1] = tmp8Result;
+  return closure_12(closure_13, { children });
 });

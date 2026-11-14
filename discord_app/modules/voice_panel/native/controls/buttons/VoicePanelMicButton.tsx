@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelMicButton.tsx
 import LoggerDefault from "../../../../debug/Logger.tsx";
-import _mod1705 from "../../../../../../_runtime/metro/01705__.js";
+import _mod1708 from "../../../../../../_runtime/metro/01708__.js";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05535_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05598_LegacyBaseButton.js";
 import MicrophoneDenyIcon from "../../../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
 import MediaEngineActionCreators from "../../../../media_engine/MediaEngineActionCreators.tsx";
 import useMuteStates from "../../../../video_calls/useMuteStates.tsx";
@@ -26,7 +26,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = new LoggerDefault("VoicePanelMicButton");
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_17 = createStyles.createStyles({
   text: { position: "absolute", left: 0, right: 0, bottom: 4, textAlign: "center", opacity: 0.5 },
 });
@@ -129,7 +129,7 @@ export function PTTButton(arg0) {
     onPress2 = tmp9;
   }
   const obj3 = require("initialize");
-  sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(false);
   const tmp11 = onPress2(sharedValue[19])();
   _slicedToArray = tmp11;
   noop = obj.useRef({ active: false, dragging: false });
@@ -176,7 +176,7 @@ export function PTTButton(arg0) {
   const memo = obj.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
-    items = [closure_18, LegacyBaseButton.State, _mod1705.scheduleOnRN, callback3];
+    items = [closure_18, LegacyBaseButton.State, _mod1708.scheduleOnRN, callback3];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -198,7 +198,7 @@ export function PTTButton(arg0) {
     VoicePanelMicButtonTsx1.__workletHash = 6924573797989;
     VoicePanelMicButtonTsx1.__initData = tmp3;
     const manualActivationResult = Gesture.Pan().manualActivation(true);
-    const items2 = [closure_19, _mod1705.scheduleOnRN, callback1];
+    const items2 = [closure_19, _mod1708.scheduleOnRN, callback1];
     c0 = undefined;
     c1 = undefined;
     [tmp7, tmp8, tmp9] = items2;
@@ -218,7 +218,7 @@ export function PTTButton(arg0) {
       .onFinalize(VoicePanelMicButtonTsx2);
   }, items8);
   const effect = obj.useEffect(() => () => callback1(), items9);
-  const tmp6Result = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp6Result = require("../../../../../../_runtime/metro/01655__.js");
   const voicePanelButtonStyles = require("VoicePanelStyles").useVoicePanelButtonStyles(wrapperSpecs);
   const obj4 = { gesture: memo, children: null };
   const element = {

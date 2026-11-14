@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/glow/native/ConjureDither.android.tsx
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import inlineStyles from "../../../../../_runtime/08197_inlineStyles.js";
-import _mod13491 from "../../../../../_runtime/metro/13491__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
+import inlineStyles from "../../../../../_runtime/08263_inlineStyles.js";
+import _mod13594 from "../../../../../_runtime/metro/13594__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -31,9 +31,9 @@ function BandPicture(width) {
     const size = {
       x: item.x,
       y: item.y,
-      width: _mod13491.CELL,
-      height: _mod13491.CELL,
-      rx: _mod13491.CORNER,
+      width: _mod13594.CELL,
+      height: _mod13594.CELL,
+      rx: _mod13594.CORNER,
       fill,
       fillOpacity,
     };
@@ -55,10 +55,10 @@ function BandPicture(width) {
   items[2] = BLOBS.map((peak, index) => {
     const obj = { id: "blob-" + combined + "-" + index, children: null };
     const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-    const obj3 = _mod13491;
+    const obj3 = _mod13594;
     ({ peak, radius } = peak);
-    const blobReachResult = _mod13491.blobReach(peak, radius, closure_5 + _mod13491.FADE_HALF);
-    obj2.offset = obj3.isoStop(blobReachResult, _mod13491.blobReach(peak.peak, peak.radius, bound));
+    const blobReachResult = _mod13594.blobReach(peak, radius, closure_5 + _mod13594.FADE_HALF);
+    obj2.offset = obj3.isoStop(blobReachResult, _mod13594.blobReach(peak.peak, peak.radius, bound));
     items = [
       timestampProducer(inlineStyles.Stop, obj2),
       timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 }),
@@ -84,7 +84,7 @@ function BandPicture(width) {
   const items2 = [tmp9Result];
   const BLOBS1 = tmp(tmp2[3]).BLOBS;
   items2[1] = BLOBS1.map((peak, index) => {
-    const blobReachResult = _mod13491.blobReach(peak.peak, peak.radius, bound);
+    const blobReachResult = _mod13594.blobReach(peak.peak, peak.radius, bound);
     if (blobReachResult <= 0) {
       return null;
     } else {
@@ -141,19 +141,19 @@ export default function ConjureDither(width) {
   let sharedValue2;
   closure_6 = undefined;
   closure_7 = undefined;
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj = require("../../../../../_runtime/metro/01655__.js");
   let num = 1;
   let num2 = 1;
   if (thinking) {
     num2 = 3;
   }
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num2);
-  const obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num2);
+  const obj2 = require("../../../../../_runtime/metro/01655__.js");
   if (thinking) {
     num = 3;
   }
-  sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num);
+  sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
   items = [sharedValue2, thinking];
   const effect = noop.useEffect(() => {
     let num = 1;
@@ -162,7 +162,7 @@ export default function ConjureDither(width) {
     }
     const result = sharedValue2.set(num);
   }, items);
-  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult = require("../../../../../_runtime/metro/01655__.js");
   const items1 = [closure_10, 80, sharedValue1, sharedValue2, sharedValue, 9000];
   _require = undefined;
   c1 = undefined;
@@ -191,8 +191,8 @@ export default function ConjureDither(width) {
   ConjureDitherAndroidTsx1.__closure = items2;
   ConjureDitherAndroidTsx1.__workletHash = 13577503851898;
   ConjureDitherAndroidTsx1.__initData = tmp7;
-  require("../../../../../_runtime/metro/01652__.js").useFrameCallback(ConjureDitherAndroidTsx1);
-  const tmpResult4 = require("../../../../../_runtime/metro/01652__.js");
+  require("../../../../../_runtime/metro/01655__.js").useFrameCallback(ConjureDitherAndroidTsx1);
+  const tmpResult4 = require("../../../../../_runtime/metro/01655__.js");
   const items3 = [closure_11, sharedValue];
   _require = undefined;
   [tmp14, tmp15] = items3;
@@ -206,8 +206,8 @@ export default function ConjureDither(width) {
   ConjureDitherAndroidTsx2.__closure = items4;
   ConjureDitherAndroidTsx2.__workletHash = 2589685812342;
   ConjureDitherAndroidTsx2.__initData = tmp14;
-  closure_6 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ConjureDitherAndroidTsx2);
-  const tmpResult5 = require("../../../../../_runtime/metro/01652__.js");
+  closure_6 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(ConjureDitherAndroidTsx2);
+  const tmpResult5 = require("../../../../../_runtime/metro/01655__.js");
   const items5 = [closure_12, sharedValue];
   _require = undefined;
   [tmp16, tmp17] = items5;
@@ -221,11 +221,11 @@ export default function ConjureDither(width) {
   ConjureDitherAndroidTsx3.__closure = items6;
   ConjureDitherAndroidTsx3.__workletHash = 9176560266449;
   ConjureDitherAndroidTsx3.__initData = tmp16;
-  closure_7 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ConjureDitherAndroidTsx3);
+  closure_7 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(ConjureDitherAndroidTsx3);
   let tmp18 = null;
   if (width > 0) {
     const obj3 = { style: absoluteFill.absoluteFill, pointerEvents: "none", children: null };
-    const LEVELS = tmp(13491).LEVELS;
+    const LEVELS = tmp(13594).LEVELS;
     obj3.children = LEVELS.map((item, index) =>
       items.map((item, state) => {
         items = [React4.absoluteFill];
@@ -233,7 +233,7 @@ export default function ConjureDither(width) {
         items[1] = 0 === state ? closure_6 : closure_7;
         const size = { band: index, state, width: index, height, fill, fillOpacity };
         obj.children = timestampProducer(BandPicture, size);
-        return timestampProducer(_modDef1652.View, obj, "" + index + "-" + state);
+        return timestampProducer(_modDef1655.View, obj, "" + index + "-" + state);
       }),
     );
     tmp18 = closure_6(sharedValue2, obj3);

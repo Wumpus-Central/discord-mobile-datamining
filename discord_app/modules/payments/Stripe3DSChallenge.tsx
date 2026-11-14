@@ -163,7 +163,7 @@ let closure_7 = async function _authenticateStripePaymentIntent() {
   closure_2 = tmp2;
   ({ client_secret: closure_130_0, payment_method_id: closure_130_1 } = closure_0);
   closure_130_2 = closure_1;
-  return "flexDirection";
+  return "Path";
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/Stripe3DSChallenge.tsx");

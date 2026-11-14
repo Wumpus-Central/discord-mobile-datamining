@@ -1,23 +1,19 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05830_LinearGradient.js";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef7467 from "../../../../_runtime/metro/07467__.js";
 import UserProfileSharedStyles from "../../user_profile/native/UserProfileSharedStyles.tsx";
 import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import UserProfileApplicationWidgetFieldUtils from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 import UserProfileApplicationWidgetSkeletons from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
+import UserProfileApplicationWidgetHeroImageDefault from "UserProfileApplicationWidgetHeroImage.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HorizontalGradient = fn(1072).HorizontalGradient;
-const CARD_PADDING = fn(7896).CARD_PADDING;
+const CARD_PADDING = fn(7962).CARD_PADDING;
 const jsxProd = fn(21);
-({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const colors = ["transparent", "black"];
-const createStyles = fn(5243);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
+const createStyles = fn(5306);
 let obj2 = {
   root: { position: "relative" },
   contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 },
@@ -25,9 +21,6 @@ let obj2 = {
   heroImageColumn: null,
   heroImageSkeleton: null,
   heroImagePositioner: null,
-  heroImageMask: null,
-  heroImageFadeGradient: null,
-  heroImageMaskRemainder: null,
 };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 };
 obj2.heroText = { flex: 1, minWidth: 120, gap: nativeDefault.space.PX_4, justifyContent: "center" };
@@ -42,21 +35,30 @@ obj2.heroImagePositioner = {
   bottom: 0,
   overflow: "hidden",
 };
-obj2.heroImageMask = { flex: 1, flexDirection: "row" };
-obj2.heroImageFadeGradient = { width: 130 };
-obj2.heroImageMaskRemainder = { flex: 1, backgroundColor: "black" };
-let closure_10 = createStyles.createStyles(obj2);
+let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);
-let result = size.fileFinishedImporting(
+const result = size.fileFinishedImporting(
   "modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx",
 );
 
 export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   ({ topConfig, resolveFieldValue, numberFormat } = header);
   c0 = undefined;
-  const tmp = closure_10();
-  [tmp3, c0] = noop.useState(null);
-  const tmp2 = _slicedToArray(noop.useState(null), 2);
+  c1 = undefined;
+  const tmp = closure_8();
+  [tmp3, c0] = noop.useState();
+  const tmp2 = _slicedToArray(noop.useState(), 2);
+  [tmp5, c1] = noop.useState();
+  let tmp19Result3 = null != tmp3;
+  const callback = noop.useCallback((nativeEvent) => {
+    const layout = nativeEvent.nativeEvent.layout;
+    _undefined(layout.width);
+    _undefined2(layout.height);
+  }, []);
+  if (tmp19Result3) {
+    tmp19Result3 = null != tmp5;
+  }
+  const tmp4 = _slicedToArray(noop.useState(), 2);
   const textComponentValues = resolvedValuesFromUserApplicationIdentityProfile.resolveTextComponentValues(
     topConfig.components.title,
     resolveFieldValue,
@@ -91,78 +93,55 @@ export default function UserProfileApplicationWidgetTopHeroLayout(header) {
   const obj7 = { style: tmp.heroText, children: null };
   const userProfileCardRadius = UserProfileSharedStyles.useUserProfileCardRadius();
   const items2 = [
-    metroImportDefault(UserProfileApplicationWidgetFieldUtils.FieldText, {
+    timestampProducer(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues,
       variant: "body-lg/medium",
       color: "text-default",
     }),
-    metroImportDefault(UserProfileApplicationWidgetFieldUtils.FieldText, {
+    timestampProducer(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues1,
       variant: "body-sm/normal",
       color: "text-muted",
     }),
-    metroImportDefault(UserProfileApplicationWidgetFieldUtils.FieldText, {
+    timestampProducer(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues2,
       variant: "body-sm/normal",
       color: "text-muted",
     }),
-    metroImportDefault(UserProfileApplicationWidgetFieldUtils.FieldText, {
+    timestampProducer(UserProfileApplicationWidgetFieldUtils.FieldText, {
       field: textComponentValues3,
       variant: "body-sm/normal",
       color: "text-muted",
     }),
   ];
   obj7.children = items2;
-  const items3 = [React5(View, obj7)];
+  const items3 = [metroImportDefault(View, obj7)];
   const obj8 = { style: tmp.heroImageColumn, children: null };
-  let tmp15Result = null == fieldValue || null == tmp3;
-  if (tmp15Result) {
+  let tmp19Result = null == fieldValue || !tmp19Result3;
+  if (tmp19Result) {
     const obj9 = { style: tmp.heroImageSkeleton };
-    tmp15Result = metroImportDefault(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj9);
+    tmp19Result = timestampProducer(UserProfileApplicationWidgetSkeletons.ImageSkeleton, obj9);
   }
-  obj8.children = tmp15Result;
-  items3[1] = metroImportDefault(View, obj8);
+  obj8.children = tmp19Result;
+  items3[1] = timestampProducer(View, obj8);
   obj6.children = items3;
-  items1[1] = React5(View, obj6);
-  let tmp15Result4 = null != fieldValue;
-  if (tmp15Result4) {
+  items1[1] = metroImportDefault(View, obj6);
+  let tmp19Result4 = null != fieldValue;
+  if (tmp19Result4) {
     const obj10 = { style: null, pointerEvents: "none", onLayout: null, children: null };
     const items4 = [tmp.heroImagePositioner];
     const obj11 = { borderTopRightRadius: userProfileCardRadius };
     items4[1] = obj11;
     obj10.style = items4;
-    obj10.onLayout = function onLayout(nativeEvent) {
-      const layout = nativeEvent.nativeEvent.layout;
-      const size = { width: layout.width, height: layout.height };
-      _undefined(size);
-    };
-    let tmp15Result3 = null != tmp3;
-    if (tmp15Result3) {
-      const result = fieldValue.media.height * (tmp3.width / fieldValue.media.width);
-      const obj12 = { style: null, androidRenderingMode: "software", maskElement: null, children: null };
-      let size = { width: tmp3.width, height: result };
-      obj12.style = size;
-      const obj13 = { style: tmp.heroImageMask, children: null };
-      const obj14 = { start: null, end: null, colors: null, style: null };
-      ({ START: obj16.start, END: obj16.end } = HorizontalGradient);
-      obj14.colors = colors;
-      obj14.style = tmp.heroImageFadeGradient;
-      const items5 = [metroImportDefault(LinearGradientDefault, obj14)];
-      const obj15 = { style: tmp.heroImageMaskRemainder };
-      items5[1] = metroImportDefault(View, obj15);
-      obj13.children = items5;
-      obj12.maskElement = React5(View, obj13);
-      const obj17 = { source: null, style: null };
-      const obj18 = { uri: fieldValue.media.url };
-      obj17.source = obj18;
-      obj17.style = { width: "100%", height: "100%" };
-      obj12.children = metroImportDefault(FastImageDefault, obj17);
-      tmp15Result3 = metroImportDefault(_modDef7467, obj12);
+    obj10.onLayout = callback;
+    if (tmp19Result3) {
+      const size = { media: fieldValue.media, width: tmp3, height: tmp5 };
+      tmp19Result3 = timestampProducer(UserProfileApplicationWidgetHeroImageDefault, size);
     }
-    obj10.children = tmp15Result3;
-    tmp15Result4 = metroImportDefault(View, obj10);
+    obj10.children = tmp19Result3;
+    tmp19Result4 = timestampProducer(View, obj10);
   }
-  items1[2] = tmp15Result4;
+  items1[2] = tmp19Result4;
   obj5.children = items1;
-  return React5(View, obj5);
+  return metroImportDefault(View, obj5);
 }

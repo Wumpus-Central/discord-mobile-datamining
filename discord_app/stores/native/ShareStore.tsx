@@ -1,9 +1,9 @@
 // discord_app/stores/native/ShareStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import NativeShareManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx";
 import AuthenticationStore from "../AuthenticationStore.tsx";
 import ChannelStore from "../ChannelStore.tsx";

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import FavoritesUtils from "../../favorites/FavoritesUtils.tsx";
 import shared from "../../../design/shared.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
@@ -22,7 +22,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function GuildInfoHeader(arg0) {
@@ -46,7 +46,7 @@ function GuildInfoHeader(arg0) {
   RedesignGuildHeaderTsx1.__closure = items1;
   RedesignGuildHeaderTsx1.__workletHash = 13966142429483;
   RedesignGuildHeaderTsx1.__initData = tmp4;
-  const animatedStyle = _mod1652.useAnimatedStyle(RedesignGuildHeaderTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(RedesignGuildHeaderTsx1);
   const items2 = [closure_19, scrollPosition, bannerHeight];
   c0 = undefined;
   c1 = undefined;
@@ -65,15 +65,15 @@ function GuildInfoHeader(arg0) {
   RedesignGuildHeaderTsx2.__closure = items3;
   RedesignGuildHeaderTsx2.__workletHash = 1812402588726;
   RedesignGuildHeaderTsx2.__initData = tmp8;
-  const animatedStyle1 = _mod1652.useAnimatedStyle(RedesignGuildHeaderTsx2);
-  const tmp2Result = _mod1652;
+  const animatedStyle1 = _mod1655.useAnimatedStyle(RedesignGuildHeaderTsx2);
+  const tmp2Result = _mod1655;
   const isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(guild.id);
   const obj2 = { style: null, children: null };
   const items4 = [animatedStyle, { overflow: "hidden" }];
   obj2.style = items4;
   const tmp2Result2 = FavoritesUtils;
   const items5 = [
-    state(_modDef1652.View, {
+    state(_modDef1655.View, {
       style: animatedStyle1,
       children: state(ThemedGradientDefault, { absolute: true, tall: true }),
     }),
@@ -89,7 +89,7 @@ function GuildInfoHeader(arg0) {
   };
   items5[1] = state(hasOwnProperty, obj4);
   obj2.children = items5;
-  return gesture(_modDef1652.View, obj2);
+  return gesture(_modDef1655.View, obj2);
 }
 function ReanimatedGuildBanner(guild) {
   guild = guild.guild;
@@ -110,7 +110,7 @@ function ReanimatedGuildBanner(guild) {
   let obj = require("initialize");
   const isFocused = require("Link").useIsFocused();
   const obj2 = require("Link");
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
   let items1 = [sharedValue];
   let items2 = [sharedValue];
   const callback = noop.useCallback(() => {
@@ -126,11 +126,11 @@ function ReanimatedGuildBanner(guild) {
     }
     openGuildActionSheetDefault(c0);
   }, items3);
-  const obj3 = require("../../../../_runtime/metro/01652__.js");
+  const obj3 = require("../../../../_runtime/metro/01655__.js");
   const items4 = [
     closure_21,
     guild.scrollPosition,
-    require("../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../_runtime/metro/01655__.js").interpolate,
     bannerHeight,
     bannerHeight,
   ];
@@ -177,9 +177,9 @@ function ReanimatedGuildBanner(guild) {
   RedesignGuildHeaderTsx3.__closure = items5;
   RedesignGuildHeaderTsx3.__workletHash = 15340906770479;
   RedesignGuildHeaderTsx3.__initData = tmp12;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(RedesignGuildHeaderTsx3);
-  const obj4 = require("../../../../_runtime/metro/01652__.js");
-  const items6 = [closure_22, require("../../../../_runtime/metro/01652__.js").interpolate, sharedValue];
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(RedesignGuildHeaderTsx3);
+  const obj4 = require("../../../../_runtime/metro/01655__.js");
+  const items6 = [closure_22, require("../../../../_runtime/metro/01655__.js").interpolate, sharedValue];
   _require = undefined;
   importDefault = undefined;
   [tmp18, tmp19, tmp20] = items6;
@@ -194,7 +194,7 @@ function ReanimatedGuildBanner(guild) {
   RedesignGuildHeaderTsx4.__workletHash = 5027618291385;
   RedesignGuildHeaderTsx4.__initData = tmp18;
   const items8 = [tmp3, bannerWidth, bannerHeight];
-  const animatedStyle1 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(RedesignGuildHeaderTsx4);
+  const animatedStyle1 = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(RedesignGuildHeaderTsx4);
   if (null == guild.banner) {
     return null;
   } else {
@@ -209,7 +209,7 @@ function ReanimatedGuildBanner(guild) {
       const features = guild.features;
       hasItem = features.has(GuildFeatures.ANIMATED_BANNER);
     }
-    const animatableSourceWithFallback = tmp(1411).getAnimatableSourceWithFallback(hasItem, (hasItem) =>
+    const animatableSourceWithFallback = tmp(1414).getAnimatableSourceWithFallback(hasItem, (hasItem) =>
       AvatarUtilsDefault.getGuildBannerSource({ id: _undefined.id, banner: _undefined.banner }, hasItem),
     );
     const obj5 = { style: animatedStyle, children: null };
@@ -229,25 +229,25 @@ function ReanimatedGuildBanner(guild) {
     obj6.onPressIn = callback;
     obj6.onPressOut = callback1;
     const obj7 = { style: tmp22, source: animatableSourceWithFallback };
-    const items9 = [closure_13(tmp(5957), obj7)];
+    const items9 = [closure_13(tmp(6020), obj7)];
     const obj8 = { style: null };
     const items10 = [tmp3.bannerOverlay, animatedStyle1];
     obj8.style = items10;
-    items9[1] = closure_13(tmp(1652).View, obj8);
+    items9[1] = closure_13(tmp(1655).View, obj8);
     obj6.children = items9;
     const items11 = [closure_14(closure_6, obj6)];
     if (tmp28Result) {
-      tmp28Result = closure_13(tmp(18765), {});
+      tmp28Result = closure_13(tmp(18894), {});
     }
     items11[1] = tmp28Result;
     obj5.children = items11;
-    return closure_14(tmp(1652).View, obj5);
+    return closure_14(tmp(1655).View, obj5);
   }
-  const tmp4Result = require("../../../../_runtime/metro/01652__.js");
+  const tmp4Result = require("../../../../_runtime/metro/01655__.js");
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: closure_6 } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(5997);
+const RedesignChannelListConstants = fn(6060);
 ({
   STICKY_BANNER_ASPECT_RATIO: closure_9,
   BANNER_MAX_HEIGHT_PERCENTAGE: closure_10,
@@ -256,9 +256,9 @@ const RedesignChannelListConstants = fn(5997);
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let closure_15 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
-createStyles = fn(5243);
+createStyles = fn(5306);
 let closure_16 = createStyles.createStyles((arg0) => {
   const obj = {
     bannerWrapper: { width: "100%", maxHeight: arg0 * refs, aspectRatio, overflow: "hidden" },
@@ -271,7 +271,7 @@ let closure_16 = createStyles.createStyles((arg0) => {
   obj.bannerOverlay = obj3;
   return obj;
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let result = createStyles.experimental_createToken((gradient) => {
   if (null != gradient.gradient) {
     let PANEL_BG = nativeDefault.colors.BACKGROUND_BASE_LOW;
@@ -280,7 +280,7 @@ let result = createStyles.experimental_createToken((gradient) => {
   }
   return PANEL_BG;
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let closure_17 = createStyles.createStyles({ headerWrapper: { backgroundColor: result } });
 let closure_18 = {
   code: "(function RedesignGuildHeaderTsx1(){let[scrollPosition,bannerHeight]=this.__closure;return{transform:[{translateY:Math.max(0,scrollPosition.get()-bannerHeight)}]};})",

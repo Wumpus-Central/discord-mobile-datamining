@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/share/native/openConjureProjectAboutSheet.tsx
-import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -11,7 +11,7 @@ export default function openConjureProjectAboutSheet(applicationId, source) {
   if (arg2 === undefined) {
     tmp = null;
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13672, dependencyMap.paths), ConjureProjectAboutSheet, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13777, dependencyMap.paths), ConjureProjectAboutSheet, {
     applicationId,
     source,
     ticket: tmp,

@@ -56,7 +56,7 @@ const prototype = function NativeOnDemandResourceManager() {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             if (applyArgumentsResult.isPastConnectionOpen) {
-              const obj2 = tmp2(20158);
+              const obj2 = tmp2(20318);
               let hasOnDemandResourceResult;
               if (obj2 != null) {
                 hasOnDemandResourceResult = obj2.hasOnDemandResource("krisp");
@@ -67,12 +67,12 @@ const prototype = function NativeOnDemandResourceManager() {
                 if (modeOptions.getModeOptions().autoThreshold) {
                   const Storage = tmp5(510).Storage;
                   const result = Storage.set(constants2.RESTORE_AUTO_THRESHOLD_KEY, true);
-                  tmp2(6162).setMode(modeOptions.getMode(), { autoThreshold: false });
-                  const obj5 = tmp2(6162);
+                  tmp2(6225).setMode(modeOptions.getMode(), { autoThreshold: false });
+                  const obj5 = tmp2(6225);
                 }
                 if (state.getState() === constants.ACTIVE) {
                   applyArgumentsResult.hasFetchedKrisp = true;
-                  const obj6 = tmp2(20158);
+                  const obj6 = tmp2(20318);
                   let onDemandResource;
                   if (obj6 != null) {
                     onDemandResource = obj6.fetchOnDemandResource("krisp");
@@ -96,7 +96,7 @@ const prototype = function NativeOnDemandResourceManager() {
         } else {
           closure_128_0 = value;
           let result1;
-          const obj10 = tmp2(20158);
+          const obj10 = tmp2(20318);
           if (obj10 != null) {
             result1 = obj10.isOnDemandResourcingAvailable();
           }

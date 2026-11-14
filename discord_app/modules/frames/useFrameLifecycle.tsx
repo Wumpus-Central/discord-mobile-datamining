@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const FramesConstants = fn(6957);
+const FramesConstants = fn(7020);
 ({ isLaunched: closure_6, makeFrameId: metroImportDefault } = FramesConstants);
 const FrameLifecycleState = {
   Loading: "loading",
@@ -60,7 +60,7 @@ export default function useFrameLifecycle(applicationId) {
         const obj7 = { state: noop.Loading, frame: tmp3 };
         obj10 = obj7;
       } else if (isLoading) {
-        const obj8 = { state: noop.Loading, frame: "a" };
+        const obj8 = { state: noop.Loading, frame: "y" };
         obj10 = obj8;
       } else {
         if (null != data) {

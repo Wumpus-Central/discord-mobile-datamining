@@ -9,11 +9,11 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = {
   wrapper: {
     position: "relative",
-    backgroundColor: fn(14791).PROGRESS_BACKGROUND_COLOR,
+    backgroundColor: fn(14905).PROGRESS_BACKGROUND_COLOR,
     borderRadius: nativeDefault.radii.xs,
     height: 8,
   },
@@ -21,7 +21,7 @@ const obj2 = {
 };
 let obj3 = {
   position: "relative",
-  backgroundColor: fn(14791).PROGRESS_BACKGROUND_COLOR,
+  backgroundColor: fn(14905).PROGRESS_BACKGROUND_COLOR,
   borderRadius: nativeDefault.radii.xs,
   height: 8,
 };
@@ -42,12 +42,12 @@ export default function GuildProgressBar(percent) {
   percent = percent.percent;
   _require = percent;
   const tmp = closure_6();
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   items = [percent, sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(timing_timing.withTiming(c0, timingPresets.timingSlow));
   }, items);
-  const obj = require("../../../../../_runtime/metro/01652__.js");
+  const obj = require("../../../../../_runtime/metro/01655__.js");
   const items1 = [closure_7, sharedValue];
   _require = undefined;
   [tmp5, tmp6] = items1;
@@ -64,10 +64,10 @@ export default function GuildProgressBar(percent) {
   const obj3 = { style: null, children: null };
   const items3 = [tmp.wrapper, percent.style];
   obj3.style = items3;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(GuildProgressBarTsx1);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(GuildProgressBarTsx1);
   const obj4 = { style: null };
   const items4 = [tmp.progress, animatedStyle];
   obj4.style = items4;
-  obj3.children = jsx(sharedValue(1652).View, { style: null });
+  obj3.children = jsx(sharedValue(1655).View, { style: null });
   return <View style={null}>{null}</View>;
 }

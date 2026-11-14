@@ -1,16 +1,16 @@
 // discord_app/modules/waterwheels/interest/native/InterestScrollHeader.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_5 = createStyles.createStyles({
   title: { flex: 1, alignItems: "center", justifyContent: "center", minWidth: 0 },
   normal: { maxWidth: "100%" },
@@ -41,8 +41,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestScrollHeader.tsx");
 
 export function useInterestScrollHeader(onScroll) {
-  const sharedValue = _mod1652.useSharedValue(0);
-  items = [closure_6, sharedValue, onScroll, _mod1705.scheduleOnRN];
+  const sharedValue = _mod1655.useSharedValue(0);
+  items = [closure_6, sharedValue, onScroll, _mod1708.scheduleOnRN];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -61,7 +61,7 @@ export function useInterestScrollHeader(onScroll) {
   InterestScrollHeaderTsx1.__closure = items1;
   InterestScrollHeaderTsx1.__workletHash = 6332981046127;
   InterestScrollHeaderTsx1.__initData = tmp2;
-  return { scrollY: sharedValue, onScroll: _mod1652.useAnimatedScrollHandler(InterestScrollHeaderTsx1) };
+  return { scrollY: sharedValue, onScroll: _mod1655.useAnimatedScrollHandler(InterestScrollHeaderTsx1) };
 }
 export { interestHeaderElevation };
 export function InterestCompactTitle(collapseOffset) {
@@ -88,7 +88,7 @@ export function InterestCompactTitle(collapseOffset) {
   InterestScrollHeaderTsx3.__workletHash = 14684811456024;
   InterestScrollHeaderTsx3.__initData = tmp4;
   const obj2 = { style: tmp.title, collapsable: false, children: null };
-  const animatedStyle = _mod1652.useAnimatedStyle(InterestScrollHeaderTsx3);
+  const animatedStyle = _mod1655.useAnimatedStyle(InterestScrollHeaderTsx3);
   const obj3 = {
     pointerEvents: "none",
     accessibilityElementsHidden: true,
@@ -98,7 +98,7 @@ export function InterestCompactTitle(collapseOffset) {
   };
   const items2 = [tmp.normal, animatedStyle];
   obj3.style = items2;
-  obj2.children = jsx(_modDef1652.View, {
+  obj2.children = jsx(_modDef1655.View, {
     pointerEvents: "none",
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",

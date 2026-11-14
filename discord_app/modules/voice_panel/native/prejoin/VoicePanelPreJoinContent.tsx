@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useTrackImpressionDefault from "../../../app_analytics/useTrackImpression.tsx";
 import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
@@ -131,7 +131,7 @@ function ActivityInfo(activity) {
   VoicePanelPreJoinContentTsx1.__closure = items2;
   VoicePanelPreJoinContentTsx1.__workletHash = 4150408530277;
   VoicePanelPreJoinContentTsx1.__initData = tmp9;
-  const items3 = [closure_32, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp8, EDGE_GUTTER];
+  const items3 = [closure_32, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp8, EDGE_GUTTER];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -153,11 +153,11 @@ function ActivityInfo(activity) {
   VoicePanelPreJoinContentTsx2.__closure = items4;
   VoicePanelPreJoinContentTsx2.__workletHash = 12447763002016;
   VoicePanelPreJoinContentTsx2.__initData = tmp11;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     VoicePanelPreJoinContentTsx1,
     VoicePanelPreJoinContentTsx2,
   );
-  let obj4 = require("../../../../../_runtime/metro/01652__.js");
+  let obj4 = require("../../../../../_runtime/metro/01655__.js");
   const tmp4Result = require("getEmbeddedActivityJoinability");
   embeddedActivityJoinability = tmp4Result.useEmbeddedActivityJoinability({
     userId: AuthenticationStore.getId(),
@@ -205,12 +205,12 @@ function ActivityInfo(activity) {
                   analyticsLocations: num3,
                 };
                 v3 = num3;
-                const obj7 = { value: v3(12751).maybeJoinEmbeddedActivity(obj6), done: false };
+                const obj7 = { value: v3(12847).maybeJoinEmbeddedActivity(obj6), done: false };
                 return obj7;
               }
             } else {
-              const voiceChannel = _undefined2(6872).selectVoiceChannel(channelId);
-              const obj2 = _undefined2(6872);
+              const voiceChannel = _undefined2(6935).selectVoiceChannel(channelId);
+              const obj2 = _undefined2(6935);
             }
           } else {
             num3 = 1;
@@ -249,7 +249,7 @@ function ActivityInfo(activity) {
     const intl = tmp4(1113).intl;
     let obj7 = { n: arr2.length };
     obj6.children = intl.format(tmp4(1113).t["n/IJ6Y"], obj7);
-    const items6 = [closure_25(tmp4(5866).Text, obj6)];
+    const items6 = [closure_25(tmp4(5929).Text, obj6)];
     const obj8 = {
       activeOpacity: 0.7,
       onPress: callback,
@@ -258,12 +258,12 @@ function ActivityInfo(activity) {
       children: null,
     };
     const obj9 = { style: tmp.previewImage, children: null };
-    const tmp2Result = tmp2(7656);
+    const tmp2Result = tmp2(7722);
     const obj10 = { imageBackground: tmp19, aspectRatio: 1.7777777777777777 };
-    obj9.children = closure_25(tmp2(19870), obj10);
-    const items7 = [closure_25(tmp2(7656), obj9)];
+    obj9.children = closure_25(tmp2(20027), obj10);
+    const items7 = [closure_25(tmp2(7722), obj9)];
     const obj11 = { style: tmp.joinButtonWrapper, children: null };
-    const tmp2Result3 = tmp2(7656);
+    const tmp2Result3 = tmp2(7722);
     const obj12 = {
       text: null,
       size: "sm",
@@ -284,15 +284,15 @@ function ActivityInfo(activity) {
     }
     tmp27[0] = iconURL;
     obj14.source = tmp27;
-    obj12.icon = closure_25(tmp4(5873).Button.Icon, obj14);
+    obj12.icon = closure_25(tmp4(5936).Button.Icon, obj14);
     obj12.onPress = callback;
-    obj11.children = closure_25(tmp4(5873).Button, obj12);
-    items7[1] = closure_25(tmp2(7656), obj11);
+    obj11.children = closure_25(tmp4(5936).Button, obj12);
+    items7[1] = closure_25(tmp2(7722), obj11);
     obj8.children = items7;
-    items6[1] = closure_26(tmp4(7364).PressableOpacity, obj8);
+    items6[1] = closure_26(tmp4(7428).PressableOpacity, obj8);
     obj5.children = items6;
     tmp21Result = closure_26(tmp2Result, obj5);
-    const tmp2Result4 = tmp2(7656);
+    const tmp2Result4 = tmp2(7722);
   }
   return tmp21Result;
 }
@@ -447,11 +447,11 @@ function PreJoinTransitioner(arg0) {
     transitionState,
     require("native").TransitionStates,
     require("springPresets").Reanimated3DefaultSpringConfig,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     useReducedMotion,
     MODE_CHANGE_PHYSICS,
     closure_39,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     transitionCleanUp,
   ];
   _require = undefined;
@@ -542,7 +542,7 @@ function PreJoinTransitioner(arg0) {
   VoicePanelPreJoinContentTsx4.__workletHash = 13025653846611;
   VoicePanelPreJoinContentTsx4.__initData = tmp6;
   let items2 = [preJoinContentSize];
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     VoicePanelPreJoinContentTsx4,
   );
   const callback = obj.useCallback((nativeEvent) => {
@@ -550,30 +550,30 @@ function PreJoinTransitioner(arg0) {
   }, items2);
   const obj3 = { style: animatedStyle, collapsable: false, children: null };
   const obj4 = { onLayout: callback, collapsable: false, style: tmp2.contentWrapper, children: null };
-  let obj2 = require("../../../../../_runtime/metro/01652__.js");
+  let obj2 = require("../../../../../_runtime/metro/01655__.js");
   const obj5 = {};
   const merged1 = Object.assign(merged);
   obj4.children = closure_25(closure_38, obj5);
   obj3.children = closure_25(NativeViewDefault, obj4);
-  return closure_25(_modDef1652.View, obj3);
+  return closure_25(_modDef1655.View, obj3);
 }
 function renderItem(arg0, arg1, transitionState, transitionCleanUp) {
   const merged = Object.assign(arg1);
   return closure_1_25(PreJoinTransitioner, { transitionState, transitionCleanUp }, arg0);
 }
 const StyleSheet = fn(17).StyleSheet;
-const MODE_CHANGE_PHYSICS = fn(11919).MODE_CHANGE_PHYSICS;
-const EDGE_GUTTER = fn(11922).EDGE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(11985).MODE_CHANGE_PHYSICS;
+const EDGE_GUTTER = fn(11988).EDGE_GUTTER;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(16117).VoiceChannelWarningSurfaces;
-const Features = fn(6012).Features;
+const constants4 = fn(16238).VoiceChannelWarningSurfaces;
+const Features = fn(6075).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   contentWrapper: {
-    paddingTop: EDGE_GUTTER + fn(11925).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
+    paddingTop: EDGE_GUTTER + fn(11991).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
     gap: 24,
     paddingBottom: 16,
   },
@@ -589,7 +589,7 @@ let obj = {
   consolePreJoinPadding: null,
 };
 let obj3 = {
-  paddingTop: EDGE_GUTTER + fn(11925).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
+  paddingTop: EDGE_GUTTER + fn(11991).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER,
   gap: 24,
   paddingBottom: 16,
 };
@@ -858,10 +858,10 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinContent.tsx");
 
 export default noop.memo(function VoicePanelPreJoinWrapper() {
-  const context = noop.useContext(guildId(11918));
+  const context = noop.useContext(guildId(11984));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(19735)(channelId);
+  const tmp2 = guildId(19229)(channelId);
   dependencyMap = tmp2;
   items = [
     SortedVoiceStateStore,
@@ -911,7 +911,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       }
     },
     items1,
-    channelId(19887).areVoicePanelPreJoinContentPropsEqual,
+    channelId(20044).areVoicePanelPreJoinContentPropsEqual,
   );
-  return closure_25(channelId(5314).TransitionItem, { item: stateFromStores, renderItem });
+  return closure_25(channelId(5377).TransitionItem, { item: stateFromStores, renderItem });
 });

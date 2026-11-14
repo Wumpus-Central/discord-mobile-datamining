@@ -94,7 +94,7 @@ let closure_9 = async function _authorize(arg0) {
           } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -231,7 +231,7 @@ let closure_10 = async function _fetchAuthorization(arg0) {
           } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -466,9 +466,9 @@ export function fetchChannels() {
   }
   return applyArgumentsResult;
 }
-export function logoutWithRedirect(pathname, TTI_test) {
+export function logoutWithRedirect(pathname, arg1) {
   const obj = AuthenticationActionCreatorsDefault;
-  obj.logout(TTI_test, utils_PathUtils.getLoginPath(pathname.pathname + pathname.search, false));
+  obj.logout(arg1, utils_PathUtils.getLoginPath(pathname.pathname + pathname.search, false));
 }
 export function verifyUserCode() {
   const self = this;

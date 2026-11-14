@@ -1,5 +1,5 @@
 // discord_app/modules/favorites/native/buildFavoritesSectionButtons.tsx
-import _modDef3629 from "../intl/FavoritesGuild.messages.js";
+import _modDef3679 from "../intl/FavoritesGuild.messages.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
@@ -116,8 +116,8 @@ export default function buildFavoritesSectionButtons(channelId) {
   } else if (tmp) {
     const obj2 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
     const intl2 = channelId(1113).intl;
-    obj2.label = intl2.string(_modDef3629.TN4nAX);
-    obj2.IconComponent = channelId(10114).StarIcon;
+    obj2.label = intl2.string(_modDef3679.TN4nAX);
+    obj2.IconComponent = channelId(10183).StarIcon;
     obj2.onPress = function onPress() {
       return (function removeChannelFromFavorites() {
         const self = this;
@@ -133,8 +133,8 @@ export default function buildFavoritesSectionButtons(channelId) {
   } else if (!tmp2) {
     const obj = { label: null, IconComponent: null, onPress: null };
     const intl = channelId(1113).intl;
-    obj.label = intl.string(_modDef3629.G9fGlP);
-    obj.IconComponent = channelId(10112).StarOutlineIcon;
+    obj.label = intl.string(_modDef3679.G9fGlP);
+    obj.IconComponent = channelId(10181).StarOutlineIcon;
     obj.onPress = function onPress() {
       return (function addChannelToFavorites() {
         const self = this;

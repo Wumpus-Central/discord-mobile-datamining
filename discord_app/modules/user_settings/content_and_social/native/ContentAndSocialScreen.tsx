@@ -15,11 +15,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const MobileUserSettings = fn(9135).MobileUserSettings;
+const MobileUserSettings = fn(9202).MobileUserSettings;
 const HelpdeskArticles = fn(1072).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { loadingIndicator: { marginTop: nativeDefault.space.PX_32 }, emptyContainer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_32 };
 obj2.emptyContainer = {
@@ -119,7 +119,7 @@ export function DiscordPermissionsPage() {
     obj11.label = intl7.string(util.t["6x5uWQ"]);
     const items7 = [MobileUserSettings.ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY];
     obj11.settings = items7;
-    const items8 = [obj11, , , , , , , , , ,];
+    const items8 = [obj11, , , , , , , , , , ,];
     const obj12 = { settings: null };
     const items9 = [MobileUserSettings.ACTIVITY_PRIVACY_DEFAULT_SHARING];
     obj12.settings = items9;
@@ -129,85 +129,89 @@ export function DiscordPermissionsPage() {
     obj13.settings = items10;
     items8[2] = obj13;
     const obj14 = { settings: null };
-    const items11 = [MobileUserSettings.NOTIFY_SERVER_MEMBERS_ON_GO_LIVE];
+    const items11 = [MobileUserSettings.NOTIFY_FRIENDS_ON_CUSTOM_STATUS_UPDATE];
     obj14.settings = items11;
     items8[3] = obj14;
-    const obj15 = { label: null, settings: null, subLabel: null };
+    const obj15 = { settings: null };
+    const items12 = [MobileUserSettings.NOTIFY_SERVER_MEMBERS_ON_GO_LIVE];
+    obj15.settings = items12;
+    items8[4] = obj15;
+    const obj16 = { label: null, settings: null, subLabel: null };
     const intl8 = util.intl;
-    obj15.label = intl8.string(util.t.MeYuqs);
+    obj16.label = intl8.string(util.t.MeYuqs);
     let tmp9 = items6;
     if (!allServersOptionSelected) {
-      const items12 = [];
+      const items13 = [];
       HermesBuiltin.arraySpread(
         SafetyGuildSettingGuildSelect.GUILD_SPECIFIC_SETTINGS,
         HermesBuiltin.arraySpread(items6, 0),
       );
-      tmp9 = items12;
+      tmp9 = items13;
       const arraySpreadResult = HermesBuiltin.arraySpread(items6, 0);
     }
-    obj15.settings = tmp9;
+    obj16.settings = tmp9;
     let tmp15;
     if (allServersOptionSelected) {
       if (tmp8) {
         tmp15 = React6(AgeNoticeSettingsNoticesLazy.MessageRequestsNotice, {});
       }
     }
-    obj15.subLabel = tmp15;
-    items8[4] = obj15;
-    const obj16 = { label: null, settings: null };
-    const intl9 = util.intl;
-    obj16.label = intl9.string(util.t.XlGG9c);
-    const items13 = [, ,];
-    ({
-      SAFETY_SEND_FRIEND_REQUESTS_EVERYONE: arr14[0],
-      SAFETY_SEND_FRIEND_REQUESTS_MUTUAL_FRIENDS: arr14[1],
-      SAFETY_SEND_FRIEND_REQUESTS_MUTUAL_GUILDS: arr14[2],
-    } = MobileUserSettings);
-    obj16.settings = items13;
+    obj16.subLabel = tmp15;
     items8[5] = obj16;
-    const obj17 = { settings: null };
-    const items14 = [MobileUserSettings.FRIEND_REQUEST_NOTES];
+    const obj17 = { label: null, settings: null };
+    const intl9 = util.intl;
+    obj17.label = intl9.string(util.t.XlGG9c);
+    const items14 = [, ,];
+    ({
+      SAFETY_SEND_FRIEND_REQUESTS_EVERYONE: arr15[0],
+      SAFETY_SEND_FRIEND_REQUESTS_MUTUAL_FRIENDS: arr15[1],
+      SAFETY_SEND_FRIEND_REQUESTS_MUTUAL_GUILDS: arr15[2],
+    } = MobileUserSettings);
     obj17.settings = items14;
     items8[6] = obj17;
-    const obj18 = { label: null, settings: null, subLabel: null };
-    const intl10 = util.intl;
-    obj18.label = intl10.string(util.t["3wRort"]);
-    const items15 = [,];
-    ({ ACCOUNT_BLOCKED_USERS_V2: arr16[0], ACCOUNT_IGNORED_USERS: arr16[1] } = MobileUserSettings);
+    const obj18 = { settings: null };
+    const items15 = [MobileUserSettings.FRIEND_REQUEST_NOTES];
     obj18.settings = items15;
-    const intl11 = util.intl;
-    const obj19 = { helpArticle: null };
-    tmp8 = null != ageNoticeMessageRequestsNoticeVariant;
-    obj19.helpArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STEALTH_REMEDIATION_FEATURE_GUIDE);
-    obj18.subLabel = intl11.format(util.t["0aNQo9"], obj19);
     items8[7] = obj18;
-    const obj20 = { label: null, settings: null, subLabel: null };
+    const obj19 = { label: null, settings: null, subLabel: null };
+    const intl10 = util.intl;
+    obj19.label = intl10.string(util.t["3wRort"]);
+    const items16 = [,];
+    ({ ACCOUNT_BLOCKED_USERS_V2: arr17[0], ACCOUNT_IGNORED_USERS: arr17[1] } = MobileUserSettings);
+    obj19.settings = items16;
+    const intl11 = util.intl;
+    const obj20 = { helpArticle: null };
+    tmp8 = null != ageNoticeMessageRequestsNoticeVariant;
+    obj20.helpArticle = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STEALTH_REMEDIATION_FEATURE_GUIDE);
+    obj19.subLabel = intl11.format(util.t["0aNQo9"], obj20);
+    items8[8] = obj19;
+    const obj21 = { label: null, settings: null, subLabel: null };
     const intl12 = util.intl;
-    obj20.label = intl12.string(util.t.bGSsnc);
-    const items16 = [, ,];
+    obj21.label = intl12.string(util.t.bGSsnc);
+    const items17 = [, ,];
     ({
-      SYNC_CONTACTS: arr17[0],
-      SYNC_CONTACTS_NAME: arr17[1],
-      STAFF_ONLY_FIND_YOUR_FRIENDS_DELETION: arr17[2],
+      SYNC_CONTACTS: arr18[0],
+      SYNC_CONTACTS_NAME: arr18[1],
+      STAFF_ONLY_FIND_YOUR_FRIENDS_DELETION: arr18[2],
     } = MobileUserSettings);
-    obj20.settings = items16;
+    obj21.settings = items17;
     const intl13 = util.intl;
     const tmp4Result = HelpdeskUtilsDefault;
-    obj20.subLabel = intl13.format(util.t["TWz/S+"], { onClick: ContactSyncUtils.handleOpenLearnMoreLink });
-    items8[8] = obj20;
-    const obj22 = { label: null, settings: null };
-    const intl14 = util.intl;
-    obj22.label = intl14.string(util.t["aBZ/oQ"]);
-    const items17 = [,];
-    ({ DISCOVERY_BY_PHONE: arr18[0], DISCOVERY_BY_EMAIL: arr18[1] } = MobileUserSettings);
-    obj22.settings = items17;
-    items8[9] = obj22;
+    obj21.subLabel = intl13.format(util.t["TWz/S+"], { onClick: ContactSyncUtils.handleOpenLearnMoreLink });
+    items8[9] = obj21;
     const obj23 = { label: null, settings: null };
-    const intl15 = util.intl;
-    obj23.label = intl15.string(util.t["+KNdnt"]);
-    const items18 = [MobileUserSettings.IOS_CONVERSATION_SUGGESTIONS];
+    const intl14 = util.intl;
+    obj23.label = intl14.string(util.t["aBZ/oQ"]);
+    const items18 = [,];
+    ({ DISCOVERY_BY_PHONE: arr19[0], DISCOVERY_BY_EMAIL: arr19[1] } = MobileUserSettings);
     obj23.settings = items18;
     items8[10] = obj23;
+    const obj24 = { label: null, settings: null };
+    const intl15 = util.intl;
+    obj24.label = intl15.string(util.t["+KNdnt"]);
+    const items19 = [MobileUserSettings.IOS_CONVERSATION_SUGGESTIONS];
+    obj24.settings = items19;
+    items8[11] = obj24;
     HermesBuiltin.arraySpread(items8, tmp6);
     return items5;
   }, items);

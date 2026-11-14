@@ -2,6 +2,7 @@
 import UserSettings from "../user_settings/UserSettings.tsx";
 import AccessibilityStore from "../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../user_settings/ThemeStore.tsx";
+import StreamerModeStore from "../../stores/StreamerModeStore.tsx";
 
 require = fn;
 function getDiscordCustomTheme() {
@@ -9,7 +10,7 @@ function getDiscordCustomTheme() {
     const _window = window;
     if (typeof window !== "undefined") {
       const _document = document;
-      const found = closure_8.filter((item) => {
+      const found = closure_9.filter((item) => {
         const classList = documentElement.classList;
         return classList.contains(item);
       });
@@ -37,11 +38,11 @@ function getDiscordCustomTheme() {
   }
   return null;
 }
-const UIDensityConstants = fn(12755);
+const UIDensityConstants = fn(12851);
 ({
-  RESPONSIVE_DENSITY_FALLBACK: closure_4,
-  RESPONSIVE_DENSITY_MEDIA_QUERY: hasOwnProperty,
-  resolveUIDensity: closure_6,
+  RESPONSIVE_DENSITY_FALLBACK: hasOwnProperty,
+  RESPONSIVE_DENSITY_MEDIA_QUERY: closure_6,
+  resolveUIDensity: metroImportDefault,
 } = UIDensityConstants);
 const frozen = Object.freeze({
   baseTheme: "dark",
@@ -54,8 +55,9 @@ const frozen = Object.freeze({
   forcedColors: false,
   underlineLinks: false,
   formFactor: "desktop",
+  hidePersonalInformation: false,
 });
-let closure_8 = ["custom-theme-background", "custom-client-theme"];
+let closure_9 = ["custom-theme-background", "custom-client-theme"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/DiscordEnvironment.tsx");
 
@@ -77,15 +79,15 @@ export function getDiscordUIDensity() {
     if (typeof window.matchMedia === "function") {
       const _window = window;
       let str = "compact";
-      if (window.matchMedia(hasOwnProperty).matches) {
+      if (window.matchMedia(timestampProducer).matches) {
         str = "cozy";
       }
       let tmp = str;
     }
     const UIDensitySetting = UserSettings.UIDensitySetting;
-    return timestampProducer(UIDensitySetting.getSetting(), tmp);
+    return metroImportDefault(UIDensitySetting.getSetting(), tmp);
   }
-  tmp = React4;
+  tmp = hasOwnProperty;
 }
 export function getDiscordFontScale() {
   const fontScale = AccessibilityStore.fontScale;
@@ -120,19 +122,20 @@ export function getDiscordEnvironment(useReducedMotion) {
     forcedColors: null,
     underlineLinks: null,
     formFactor: "mobile",
+    hidePersonalInformation: null,
   };
   if (typeof window !== "undefined") {
     const _window2 = window;
     if (typeof window.matchMedia === "function") {
       const _window = window;
       let str4 = "compact";
-      if (window.matchMedia(hasOwnProperty).matches) {
+      if (window.matchMedia(timestampProducer).matches) {
         str4 = "cozy";
       }
       let tmp = str4;
     }
     const UIDensitySetting = UserSettings.UIDensitySetting;
-    obj.uiDensity = timestampProducer(UIDensitySetting.getSetting(), tmp);
+    obj.uiDensity = metroImportDefault(UIDensitySetting.getSetting(), tmp);
     const MessageDisplayCompact = UserSettings.MessageDisplayCompact;
     obj.messageDisplayCompact = MessageDisplayCompact.getSetting();
     const fontScale = AccessibilityStore.fontScale;
@@ -150,9 +153,10 @@ export function getDiscordEnvironment(useReducedMotion) {
       useForcedColors: obj.forcedColors,
       alwaysShowLinkDecorations: obj.underlineLinks,
     } = AccessibilityStore);
+    obj.hidePersonalInformation = StreamerModeStore.hidePersonalInformation;
     return obj;
   }
-  tmp = React4;
+  tmp = hasOwnProperty;
 }
 export function getDiscordEnvQueryParams() {
   const theme = ThemeStore.theme;
@@ -175,19 +179,20 @@ export function getDiscordEnvQueryParams() {
     high_contrast: null,
     forced_colors: null,
     underline_links: null,
+    hide_personal_information: null,
   };
   if (typeof window !== "undefined") {
     const _window2 = window;
     if (typeof window.matchMedia === "function") {
       const _window = window;
       let str4 = "compact";
-      if (window.matchMedia(hasOwnProperty).matches) {
+      if (window.matchMedia(timestampProducer).matches) {
         str4 = "cozy";
       }
       let tmp = str4;
     }
     const UIDensitySetting = UserSettings.UIDensitySetting;
-    obj.ui_density = timestampProducer(UIDensitySetting.getSetting(), tmp);
+    obj.ui_density = metroImportDefault(UIDensitySetting.getSetting(), tmp);
     const _String = String;
     const MessageDisplayCompact = UserSettings.MessageDisplayCompact;
     obj.message_display_compact = String(MessageDisplayCompact.getSetting());
@@ -208,7 +213,9 @@ export function getDiscordEnvQueryParams() {
     obj.forced_colors = String(AccessibilityStore.useForcedColors);
     const _String5 = String;
     obj.underline_links = String(AccessibilityStore.alwaysShowLinkDecorations);
+    const _String6 = String;
+    obj.hide_personal_information = String(StreamerModeStore.hidePersonalInformation);
     return obj;
   }
-  tmp = React4;
+  tmp = hasOwnProperty;
 }

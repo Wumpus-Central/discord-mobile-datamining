@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerThumbnails.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import VisualEffectViewDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
@@ -28,7 +28,7 @@ function ObscuredView(source) {
       }
       const obj3 = { blurTheme: str, style: absoluteFill.absoluteFill, android_fallbackColor: tmp8 };
       obj2.children = React5(tmp7Result, obj3);
-      tmp10Result = React5(_modDef1652.View, obj2);
+      tmp10Result = React5(_modDef1655.View, obj2);
       tmpResult = PlatformUtils;
     } else {
       tmp10Result = null;
@@ -38,11 +38,11 @@ function ObscuredView(source) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
-const Constants = fn(10125);
+const Constants = fn(10194);
 ({ THUMBNAIL_WIDTH_MARGIN: metroImportDefault, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_11 = createStyles.createStyles({
   containerPortrait: { height: 60 },
   thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 },
@@ -87,7 +87,7 @@ let closure_12 = noop.memo(function MediaThumbnail(source) {
   ];
   obj2.children = items3;
   obj.children = React6(hasOwnProperty, obj2);
-  return React5(_modDef1652.View, obj);
+  return React5(_modDef1655.View, obj);
 });
 let closure_13 = {
   code: "(function MediaViewerThumbnailsTsx1(){let[scrollEnabled]=this.__closure;return{scrollEnabled:scrollEnabled.get()};})",
@@ -160,11 +160,11 @@ export default function MediaViewerThumbnails(syncer) {
   MediaViewerThumbnailsTsx1.__workletHash = 12189184507540;
   MediaViewerThumbnailsTsx1.__initData = tmp9;
   const items5 = [headerBufferStyle];
-  const animatedProps = require("../../../../../_runtime/metro/01652__.js").useAnimatedProps(MediaViewerThumbnailsTsx1);
+  const animatedProps = require("../../../../../_runtime/metro/01655__.js").useAnimatedProps(MediaViewerThumbnailsTsx1);
   const items6 = [footerBufferStyle];
-  const callback1 = obj.useCallback(() => React5(_modDef1652.View, { style: headerBufferStyle }), items5);
+  const callback1 = obj.useCallback(() => React5(_modDef1655.View, { style: headerBufferStyle }), items5);
   const items7 = [index];
-  const callback2 = obj.useCallback(() => React5(_modDef1652.View, { style: footerBufferStyle }), items6);
+  const callback2 = obj.useCallback(() => React5(_modDef1655.View, { style: footerBufferStyle }), items6);
   const memo2 = obj.useMemo(() => index.get(), items7);
   return selectedIndex(tmp4(tmp5[14]).AnimatedFastList, {
     ref,

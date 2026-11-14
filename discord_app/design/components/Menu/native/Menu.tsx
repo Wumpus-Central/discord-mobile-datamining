@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../../modules/screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import timing_timing from "../../../animation/reanimated/timing/timing.tsx";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
@@ -23,8 +23,8 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1072).NOOP;
 const jsx = fn(21).jsx;
 let closure_8 = { mass: 1, stiffness: 300, damping: 25 };
-let obj = { duration: 250, easing: fn(16313).STANDARD_EASING };
-const createStyles = fn(5243);
+let obj = { duration: 250, easing: fn(16438).STANDARD_EASING };
+const createStyles = fn(5306);
 let obj2 = { backdrop: null, menu: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -42,8 +42,8 @@ let items = [
   {
     code: "(function measureButtonRef_MenuTsx1(ref,setDimensions){let[measure,scheduleOnRN]=this.__closure;const measurements=measure(ref);if(measurements==null)return;scheduleOnRN(setDimensions,measurements);})",
   },
-  fn(1652).measure,
-  fn(1705).scheduleOnRN,
+  fn(1655).measure,
+  fn(1708).scheduleOnRN,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -107,11 +107,11 @@ export function Menu(toggleButtonRef) {
   importDefault = noop.useRef(null);
   [size2, _slicedToArray] = noop.useState(null);
   dependencyMap = size2;
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   noop = sharedValue;
-  let obj2 = require("../../../../../_runtime/metro/01652__.js");
+  let obj2 = require("../../../../../_runtime/metro/01655__.js");
   const tmp5 = _slicedToArray;
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue({ width: 0, height: 0 });
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue({ width: 0, height: 0 });
   c5 = sharedValue1;
   items = [toggleButtonRef, size2];
   const layoutEffect = noop.useLayoutEffect(() => {
@@ -124,7 +124,7 @@ export function Menu(toggleButtonRef) {
       tmp3 = null == c2;
     }
     if (tmp3) {
-      _mod1705.scheduleOnUI(measureButtonRef, ref, c3);
+      _mod1708.scheduleOnUI(measureButtonRef, ref, c3);
     }
   }, items);
   if (onClose == null) {
@@ -133,7 +133,7 @@ export function Menu(toggleButtonRef) {
   let items1 = [onClose, sharedValue];
   menuClose = obj.useCallback(() => {
     obj = timing_timing;
-    items = [closure_14, _mod1705.scheduleOnRN, onClose];
+    items = [closure_14, _mod1708.scheduleOnRN, onClose];
     c0 = undefined;
     c1 = undefined;
     [tmp3, tmp4, tmp5] = items;
@@ -161,8 +161,8 @@ export function Menu(toggleButtonRef) {
   useBackPressHandlerDefault(callback2);
   const items4 = [menuClose, callback1];
   const memo = obj.useMemo(() => ({ menuClose, menuDismiss: callback1 }), items4);
-  const obj3 = require("../../../../../_runtime/metro/01652__.js");
-  const boxShadowStyle = require("Shadows").generateBoxShadowStyle(tmp2(16314).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+  const obj3 = require("../../../../../_runtime/metro/01655__.js");
+  const boxShadowStyle = require("Shadows").generateBoxShadowStyle(tmp2(16439).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
   if ("left" === position) {
     let str2 = "column";
   } else {
@@ -250,7 +250,7 @@ export function Menu(toggleButtonRef) {
     closure_15,
     sharedValue,
     noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext).reducedMotion.enabled,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     tmp28,
     sharedValue1,
     offsetAnimated,
@@ -349,7 +349,7 @@ export function Menu(toggleButtonRef) {
   MenuTsx4.__closure = items7;
   MenuTsx4.__workletHash = 14672287725499;
   MenuTsx4.__initData = tmp30;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(MenuTsx4);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(MenuTsx4);
   let obj5 = {
     style: tmp.backdrop,
     accessibilityViewIsModal: true,
@@ -358,14 +358,14 @@ export function Menu(toggleButtonRef) {
     onAccessibilityEscape: callback1,
     children: null,
   };
-  const tmp2Result2 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result2 = require("../../../../../_runtime/metro/01655__.js");
   let obj6 = {
     accessibilityRole: "list",
     style: null,
     onLayout: function handleOpen(nativeEvent) {
       const size = { width: nativeEvent.nativeEvent.layout.width, height: nativeEvent.nativeEvent.layout.height };
       const result = _undefined2.set(size);
-      items = [closure_13, _mod1705.scheduleOnRN, c6];
+      items = [closure_13, _mod1708.scheduleOnRN, c6];
       c0 = undefined;
       c1 = undefined;
       [tmp4, tmp5, tmp6] = items;
@@ -400,6 +400,6 @@ export function Menu(toggleButtonRef) {
   });
   obj7.children = onClose(context.Provider, obj8);
   obj6.children = onClose(c5, obj7);
-  obj5.children = onClose(_modDef1652.View, obj6);
+  obj5.children = onClose(_modDef1655.View, obj6);
   return onClose(PassthroughTouchViewDefault, obj5);
 }

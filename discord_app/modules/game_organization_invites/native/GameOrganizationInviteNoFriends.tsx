@@ -1,7 +1,7 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationInviteNoFriends.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2549 from "../GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2565 from "../GameOrganizationInvitesUntranslated.messages.js";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -20,7 +20,7 @@ function handleAddFriends() {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { alignItems: "center", padding: nativeDefault.space.PX_48 },
   centeredText: { textAlign: "center" },
@@ -31,9 +31,8 @@ const result = size.fileFinishedImporting(
   "modules/game_organization_invites/native/GameOrganizationInviteNoFriends.tsx",
 );
 
-export default function GameOrganizationInviteNoFriends() {
+export default function GameOrganizationInviteNoFriends(noun) {
   const tmp = closure_5();
-  const intl = util.intl;
   const obj = { spacing: nativeDefault.space.PX_16, style: tmp.container, children: null };
   const obj2 = { spacing: nativeDefault.space.PX_8, children: null };
   const obj3 = {
@@ -42,18 +41,18 @@ export default function GameOrganizationInviteNoFriends() {
     style: tmp.centeredText,
     children: null,
   };
-  const intl2 = util.intl;
-  obj3.children = intl2.string(_modDef2549["3qrm/9"]);
+  const intl = util.intl;
+  obj3.children = intl.string(_modDef2565["3qrm/9"]);
   items = [React3(Text_Text.Heading, obj3)];
   const obj4 = { variant: "body-md/medium", color: "text-muted", style: tmp.centeredText, children: null };
-  const intl3 = util.intl;
-  obj4.children = intl3.formatToPlainString(_modDef2549["NyR+6P"], { noun: intl.string(_modDef2549.xXXGsq) });
+  const intl2 = util.intl;
+  obj4.children = intl2.formatToPlainString(_modDef2565["NyR+6P"], { noun: noun.noun });
   items[1] = React3(Text_Text.Text, obj4);
   obj2.children = items;
   const items1 = [React4(Stack_Stack.Stack, obj2)];
   const obj5 = { text: null, onPress: null };
-  const intl4 = util.intl;
-  obj5.text = intl4.string(_modDef2549.kdLF2T);
+  const intl3 = util.intl;
+  obj5.text = intl3.string(_modDef2565.kdLF2T);
   obj5.onPress = handleAddFriends;
   items1[1] = React3(components_Button_Button.Button, obj5);
   obj.children = items1;

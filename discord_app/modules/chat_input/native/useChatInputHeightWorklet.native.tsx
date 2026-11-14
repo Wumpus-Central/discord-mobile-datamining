@@ -22,9 +22,9 @@ let result = size.fileFinishedImporting("modules/chat_input/native/useChatInputH
 export default function useChatInputHeightWorklet(arg0) {
   ({ textFieldHeight, textFieldMinHeight } = arg0);
   _require = undefined;
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
   _require = sharedValue;
-  let obj = require("../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../_runtime/metro/01655__.js");
   items = [
     c4,
     sharedValue,
@@ -42,10 +42,10 @@ export default function useChatInputHeightWorklet(arg0) {
   useChatInputHeightWorkletNativeTsx1.__closure = items1;
   useChatInputHeightWorkletNativeTsx1.__workletHash = 620916776372;
   useChatInputHeightWorkletNativeTsx1.__initData = tmp4;
-  const event = require("../../../../_runtime/metro/01652__.js").useEvent(useChatInputHeightWorkletNativeTsx1, [
+  const event = require("../../../../_runtime/metro/01655__.js").useEvent(useChatInputHeightWorkletNativeTsx1, [
     "onChangeContentSize",
   ]);
-  const obj2 = require("../../../../_runtime/metro/01652__.js");
+  const obj2 = require("../../../../_runtime/metro/01655__.js");
   const tmpResult = require("PlatformUtils");
   const isAndroidResult = require("PlatformUtils").isAndroid();
   const tmp11 = useKeyboardStateSharedValueDefault();
@@ -96,7 +96,7 @@ export default function useChatInputHeightWorklet(arg0) {
   useChatInputHeightWorkletNativeTsx3.__closure = items5;
   useChatInputHeightWorkletNativeTsx3.__workletHash = 14811065728720;
   useChatInputHeightWorkletNativeTsx3.__initData = tmp17;
-  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     useChatInputHeightWorkletNativeTsx2,
     useChatInputHeightWorkletNativeTsx3,
   );

@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/settings/native/routes/RedesignSettingsCategoryCallsMessagesScreen.tsx
 import SettingBuilders from "../../../../settings/native/renderer/SettingBuilders.tsx";
 import MobileNotifSettingsRouteBuilders from "../MobileNotifSettingsRouteBuilders.tsx";
-import EffectiveNotifSettingsLayoutDefault from "../EffectiveNotifSettingsLayout.tsx";
+import SystemNotifPermissionLayoutDefault from "../SystemNotifPermissionLayout.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -19,5 +19,5 @@ export default noop.memo(function RedesignSettingsCategoryCallsMessagesScreen() 
     obj2.sections = items;
     return obj.createList(obj2);
   }, []);
-  return jsx(EffectiveNotifSettingsLayoutDefault, { node });
+  return jsx(SystemNotifPermissionLayoutDefault, { node, category: "111_realtime" });
 });

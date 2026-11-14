@@ -1,5 +1,5 @@
 // discord_app/design/animation/reanimated/timing/timing.tsx
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import ReanimatedConstants from "../ReanimatedConstants.tsx";
 import reanimated_AccessibilityPreferencesSharedValue from "../AccessibilityPreferencesSharedValue.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -10,24 +10,24 @@ const items = [
   },
   reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue,
   ReanimatedConstants.CONFIG_NEVER_ANIMATE_TIMING,
-  _mod1652.ReduceMotion,
-  _mod1652.withTiming,
+  _mod1655.ReduceMotion,
+  _mod1655.withTiming,
 ];
 let c0;
 let c1;
 let c2;
 let c3;
 [tmp2, tmp3, tmp4, tmp5, tmp6] = items;
-function withTiming(c0, timingStandard, arg2) {
+function withTiming(c0, timingSlow, arg2) {
   let str = arg2;
   if (arg2 === undefined) {
     str = "respect-motion-settings";
   }
   if ("animate-always" === str) {
-    let tmp5 = timingStandard;
+    let tmp5 = timingSlow;
     if (tmp2) {
-      let obj = timingStandard;
-      if (timingStandard == null) {
+      let obj = timingSlow;
+      if (timingSlow == null) {
         obj = {};
       }
       const obj2 = {};

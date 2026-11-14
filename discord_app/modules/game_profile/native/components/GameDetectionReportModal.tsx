@@ -132,7 +132,7 @@ function ReportContent(applicationId) {
         }, 100);
       },
       hasIcons: null,
-      children: "35520300000000",
+      children: "35520500000000",
     };
     const obj8 = { value: "wrong_game_shown", label: null };
     const intl5 = tmp2(tmp3[12]).intl;
@@ -239,7 +239,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "game-detection-report";
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   content: null,

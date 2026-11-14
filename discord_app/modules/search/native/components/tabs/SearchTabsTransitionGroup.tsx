@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsTransitionGroup.tsx
-import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
 import native from "../../../../../../discord_common/js/packages/design/native.tsx";
 import Tabs_Tabs from "../../../../../design/components/Tabs/native/Tabs.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -18,8 +18,8 @@ function AnimatedTabs(cleanUp) {
   if (transitionState === require("native").TransitionStates.MOUNTED) {
     num = 1;
   }
-  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(num);
-  let obj = require("../../../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(num);
+  let obj = require("../../../../../../_runtime/metro/01655__.js");
   items = [
     c7,
     require("spring/spring").withSpring,
@@ -28,7 +28,7 @@ function AnimatedTabs(cleanUp) {
     c6,
     transitionState,
     require("native").TransitionStates,
-    require("../../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     cleanUp.cleanUp,
   ];
   _require = undefined;
@@ -96,7 +96,7 @@ function AnimatedTabs(cleanUp) {
   SearchTabsTransitionGroupTsx2.__workletHash = 1226548959062;
   SearchTabsTransitionGroupTsx2.__initData = tmp4;
   const items2 = [sharedValue, transitionState];
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     SearchTabsTransitionGroupTsx2,
   );
   const effect = noop.useEffect(() => {
@@ -106,7 +106,7 @@ function AnimatedTabs(cleanUp) {
     }
     const result = _undefined2.set(num);
   }, items2);
-  const tmpResult = require("../../../../../../_runtime/metro/01652__.js");
+  const tmpResult = require("../../../../../../_runtime/metro/01655__.js");
   const setting = require("UserSettings").SearchResultExactCountEnabled.useSetting();
   closure_129_0 = setting;
   const items3 = [setting];
@@ -120,7 +120,7 @@ function AnimatedTabs(cleanUp) {
     }
     combined = "(" + Tabs_Tabs.defaultCountFormatter(toLocaleString) + ")";
   }, items3);
-  const context = noop.useContext(tmp(14737).SwipeForMemberListContext);
+  const context = noop.useContext(tmp(14850).SwipeForMemberListContext);
   const items4 = [closure_8, context];
   _require = undefined;
   [tmp19, tmp20] = items4;
@@ -173,7 +173,7 @@ function AnimatedTabs(cleanUp) {
   SearchTabsTransitionGroupTsx5.__closure = items10;
   SearchTabsTransitionGroupTsx5.__workletHash = 15943463641590;
   SearchTabsTransitionGroupTsx5.__initData = tmp24;
-  const animatedReaction = require("../../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     SearchTabsTransitionGroupTsx4,
     SearchTabsTransitionGroupTsx5,
   );
@@ -190,7 +190,7 @@ function AnimatedTabs(cleanUp) {
   }
   obj3.onEndDrag = tmp29;
   obj2.children = jsx(require("Tabs/Tabs").Tabs, obj3);
-  return jsx(_modDef1652.View, obj2);
+  return jsx(_modDef1655.View, obj2);
 }
 function renderItem(key, state, transitionState, cleanUp) {
   return <AnimatedTabs key={key} state={state} transitionState={transitionState} cleanUp={cleanUp} />;

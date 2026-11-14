@@ -1,18 +1,18 @@
 // discord_app/modules/chat_input/native/ChatFloatingNavButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { pill: null, icon: null };
 let size = {
   height: nativeDefault.modules.mobile.JUMP_TO_PRESENT_BUTTON_SIZE,
@@ -40,14 +40,14 @@ let result = size.fileFinishedImporting("modules/chat_input/native/ChatFloatingN
 export default function ChatFloatingNavButton(arg0) {
   ({ accessibilityLabel, icon, onPress } = arg0);
   const tmp = closure_6();
-  const sharedValue = _mod1652.useSharedValue(0);
+  const sharedValue = _mod1655.useSharedValue(0);
   const token = useToken.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND);
   const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
   const token2 = useToken.useToken(nativeDefault.colors.CHAT_INPUT_ICON_DEFAULT_TINT);
   items = [
     closure_7,
     spring_spring.withSpring,
-    _mod1652.interpolateColor,
+    _mod1655.interpolateColor,
     sharedValue,
     token,
     token1,
@@ -75,7 +75,7 @@ export default function ChatFloatingNavButton(arg0) {
   ChatFloatingNavButtonTsx1.__workletHash = 13689460805797;
   ChatFloatingNavButtonTsx1.__initData = tmp8;
   const items2 = [sharedValue];
-  const animatedStyle = _mod1652.useAnimatedStyle(ChatFloatingNavButtonTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(ChatFloatingNavButtonTsx1);
   const items3 = [sharedValue];
   const callback = noop.useCallback(() => {
     const result = _undefined.set(1);
@@ -97,7 +97,7 @@ export default function ChatFloatingNavButton(arg0) {
   const items5 = [tmp.icon, { tintColor: token2 }];
   obj8.style = items5;
   obj7.children = jsx(FastImageDefault, { source: icon, style: null });
-  obj6.children = jsx(_modDef1652.View, { style: null, children: null });
+  obj6.children = jsx(_modDef1655.View, { style: null, children: null });
   return (
     <Pressable
       accessibilityRole="button"

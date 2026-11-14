@@ -204,11 +204,11 @@ function ActivityRow(section) {
     bot = application.bot;
   }
   obj2.bot = bot;
-  const applicationIconSource = onPress(1411).getApplicationIconSource(obj2);
+  const applicationIconSource = onPress(1414).getApplicationIconSource(obj2);
   let tmp5 = null != applicationIconSource;
   if (tmp5) {
     let obj3 = { iconSource: applicationIconSource };
-    tmp5 = closure_19(onPress(13283), obj3);
+    tmp5 = closure_19(onPress(13388), obj3);
   }
   items = [section];
   const items1 = [section, onPress];
@@ -247,7 +247,7 @@ function ActivityRow(section) {
   const callback = noop.useCallback(() => {
     onPress(section);
   }, items1);
-  return closure_19(section(7379).TableRow, {
+  return closure_19(section(7443).TableRow, {
     icon: tmp5,
     label: section.application.name,
     subLabel: memo,
@@ -274,7 +274,7 @@ function ActivityItemTuple(arg0) {
   items = [containerWidth];
   let size = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "Array", height: "flexDirection" };
+      return { width: "disabled", height: "isArray" };
     } else {
       const tmp5 = roundToNearestPixelDefault(tmp / 2 - DEFAULT_CONTENT_PADDING - 6);
       const size = { width: tmp5, height: roundToNearestPixelDefault(tmp5 / c22) };
@@ -462,7 +462,7 @@ function RecommendationItemTuple(isLastTuple) {
   const items1 = [containerWidth, num];
   styles = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "Array", height: "flexDirection" };
+      return { width: "disabled", height: "isArray" };
     } else {
       const tmp6 = roundToNearestPixelDefault((tmp - 2 * DEFAULT_CONTENT_PADDING - 12 * (2 - 1)) / 2);
       const size = { width: tmp6, height: roundToNearestPixelDefault(tmp6 / c22) };
@@ -674,20 +674,20 @@ function getRecommendationItemsWithViewAll(found1, in_this_server, stringResult)
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, StyleSheet } = get_ActivityIndicator);
-const ApplicationCommandIndexStore = fn(11339);
+const ApplicationCommandIndexStore = fn(11406);
 ({ useContextIndexState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
-const AppLauncherNativeConstants = fn(1498);
+const AppLauncherNativeConstants = fn(1501);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 let closure_15 = AppLauncherNativeConstants.FLASH_LIST_ITEM_IMPRESSION_VIEWABILITY_CONFIG;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_16, Permissions: closure_17 } = Constants);
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
 let c22 = 1.7777777777777777;
 let closure_23 = [];
-const APP_LAUNCHER_IN_TEXT = fn(13303).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
-const createStyles = fn(5243);
+const APP_LAUNCHER_IN_TEXT = fn(13408).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
+const createStyles = fn(5306);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1 },
   topBackgroundFill: null,
@@ -1068,7 +1068,7 @@ export default function AppLauncherHomeScreen(route) {
             isLastTuple: false,
           };
           const diff1 = arr.length - 1;
-          obj2.type = tmp8(13314).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
+          obj2.type = tmp8(13419).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
           obj2.shelfItem1 = arr[arr.length - 1];
           obj2.shelfItem2 = undefined;
           obj2.shelfItem1SectionPosition = diff1;
@@ -1077,7 +1077,7 @@ export default function AppLauncherHomeScreen(route) {
         }
         items[items.length - 1].isLastTuple = true;
         const obj5 = {
-          type: tmp8(13314).AppLauncherHomeListItemType.SECTION_HEADER,
+          type: tmp8(13419).AppLauncherHomeListItemType.SECTION_HEADER,
           section: null,
           sectionName: "activities",
           numItems: null,
@@ -1236,17 +1236,17 @@ export default function AppLauncherHomeScreen(route) {
           obj.numVisibleItems = bound;
           items.push(obj);
           const mapped = application_directory_collection_items.map((type, sectionPosition) => {
-            if (type.type === found1(12604).ApplicationDirectoryCollectionItemType.APPLICATION) {
+            if (type.type === found1(12700).ApplicationDirectoryCollectionItemType.APPLICATION) {
               let collectionItemAssetUrl;
               if (tmp4) {
                 ({ id: obj2.itemId, image_hash: obj2.hash } = type);
-                collectionItemAssetUrl = found1(13350).getCollectionItemAssetUrl({ itemId: null, hash: null });
+                collectionItemAssetUrl = found1(13455).getCollectionItemAssetUrl({ itemId: null, hash: null });
                 const obj = { itemId: null, hash: null };
-                const tmpResult = found1(13350);
+                const tmpResult = found1(13455);
               }
               const obj3 = {
                 application: type.application,
-                showsPromoted: found1(1403).hasFlag(type.flags, found1(13351).ApplicationCollectionItemFlags.PROMOTED),
+                showsPromoted: found1(1406).hasFlag(type.flags, found1(13456).ApplicationCollectionItemFlags.PROMOTED),
                 overrideImageUrl: collectionItemAssetUrl,
                 sectionPosition,
               };
@@ -1275,10 +1275,10 @@ export default function AppLauncherHomeScreen(route) {
         } else if (type === ApplicationDirectoryCollectionType.ApplicationDirectoryCollectionType.EXPANDABLE_LIST) {
           const prop = title.application_directory_collection_items;
           const mapped1 = prop.map((type) => {
-            if (type.type === found1(12604).ApplicationDirectoryCollectionItemType.APPLICATION) {
+            if (type.type === found1(12700).ApplicationDirectoryCollectionItemType.APPLICATION) {
               const obj = {
                 application: type.application,
-                showsPromoted: found1(1403).hasFlag(type.flags, found1(13351).ApplicationCollectionItemFlags.PROMOTED),
+                showsPromoted: found1(1406).hasFlag(type.flags, found1(13456).ApplicationCollectionItemFlags.PROMOTED),
               };
               return obj;
             }
@@ -1784,7 +1784,7 @@ export default function AppLauncherHomeScreen(route) {
       items: memo,
       onAppSelected: callback3,
       onViewAllSelected: function onViewAllInThisServer() {
-        const found = memo.find((type) => type.type === context(13314).AppLauncherHomeListItemType.VIEW_ALL);
+        const found = memo.find((type) => type.type === context(13419).AppLauncherHomeListItemType.VIEW_ALL);
         let mapped;
         if (found != null) {
           const applications = found.applications;
@@ -1801,7 +1801,7 @@ export default function AppLauncherHomeScreen(route) {
             applications: mapped,
             sectionItemType: FrecencySection.SectionItemType.APPS,
             commands: [],
-            sectionDescriptors: mapped.map((item) => context(8657).getApplicationCommandSection(item)),
+            sectionDescriptors: mapped.map((item) => context(8724).getApplicationCommandSection(item)),
             title: null,
           };
           const intl = util.intl;

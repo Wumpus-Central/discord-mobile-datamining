@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native2 from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
@@ -18,17 +18,17 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6, TouchableOpacity: metroImportDefault } = get_ActivityIndicator);
-let closure_10 = fn(11799).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(11865).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1072).PictureInPicturePositions;
-const ParticipantTypes = fn(5920).ParticipantTypes;
+const ParticipantTypes = fn(5983).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   container: { flex: 1, marginLeft: 12, marginRight: 12 },
   elevationShadow: null,
@@ -276,11 +276,11 @@ export default function PictureInPictureGlobal(channel) {
   PictureInPictureGlobalTsx1.__closure = items1;
   PictureInPictureGlobalTsx1.__workletHash = 16919925230637;
   PictureInPictureGlobalTsx1.__initData = tmp5;
-  const derivedValue = _mod1652.useDerivedValue(PictureInPictureGlobalTsx1);
-  const tmp2Result = _mod1652;
+  const derivedValue = _mod1655.useDerivedValue(PictureInPictureGlobalTsx1);
+  const tmp2Result = _mod1655;
   const items2 = [
     closure_21,
-    _mod1652.interpolate,
+    _mod1655.interpolate,
     derivedValue,
     NavigatorConstants.NAV_BAR_HEIGHT,
     12,
@@ -312,7 +312,7 @@ export default function PictureInPictureGlobal(channel) {
   PictureInPictureGlobalTsx2.__closure = items3;
   PictureInPictureGlobalTsx2.__workletHash = 6177116209527;
   PictureInPictureGlobalTsx2.__initData = tmp10;
-  const animatedStyle = _mod1652.useAnimatedStyle(PictureInPictureGlobalTsx2);
+  const animatedStyle = _mod1655.useAnimatedStyle(PictureInPictureGlobalTsx2);
   const rect = useSafeAreaInsetsDefault();
   const obj2 = { style: null, pointerEvents: "box-none", children: null };
   const items4 = [absoluteFill.absoluteFill, { paddingLeft: rect.left, paddingRight: rect.right }];
@@ -320,6 +320,6 @@ export default function PictureInPictureGlobal(channel) {
   const obj3 = { style: null, pointerEvents: "box-none", children: colors(closure_19, { channel: channel.channel }) };
   const items5 = [tmp.container, animatedStyle];
   obj3.style = items5;
-  obj2.children = colors(_modDef1652.View, obj3);
+  obj2.children = colors(_modDef1655.View, obj3);
   return colors(hasOwnProperty, obj2);
 }

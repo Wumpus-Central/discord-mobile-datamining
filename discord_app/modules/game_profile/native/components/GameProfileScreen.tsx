@@ -33,7 +33,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   loadingContainer: {
     flex: 1,
@@ -117,7 +117,7 @@ export default function GameProfileScreen(gameId) {
     name = data.name;
   }
   const tmp12 = useGameProfileObscuredDefault(data);
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   ref = obj2.useRef(false);
   closure_10 = obj2.useRef(false);
   items = [gameId, num];
@@ -148,16 +148,16 @@ export default function GameProfileScreen(gameId) {
     items1,
   );
   let id;
-  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
   if (data != null) {
     id = data.id;
   }
   useInAppBrowserReturnDefault({ gameId: id, scrollY: sharedValue });
   const tmp5Result = useInAppBrowserReturnDefault;
-  sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const tmp2Result8 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const tmp2Result9 = require("../../../../../_runtime/metro/01652__.js");
+  sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const tmp2Result8 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const tmp2Result9 = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [sharedValue3, sharedValue1, sharedValue, 56];
   _require = undefined;
   importDefault = undefined;
@@ -202,14 +202,14 @@ export default function GameProfileScreen(gameId) {
   GameProfileScreenTsx2.__closure = items5;
   GameProfileScreenTsx2.__workletHash = 34778771479;
   GameProfileScreenTsx2.__initData = tmp28;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     GameProfileScreenTsx1,
     GameProfileScreenTsx2,
   );
-  const tmp2Result10 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result10 = require("../../../../../_runtime/metro/01655__.js");
   const items6 = [
     gameProfileStoreWebsites,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     sharedValue2,
     56,
   ];
@@ -235,12 +235,12 @@ export default function GameProfileScreen(gameId) {
   GameProfileScreenTsx3.__closure = items7;
   GameProfileScreenTsx3.__workletHash = 8094450176409;
   GameProfileScreenTsx3.__initData = tmp32;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(GameProfileScreenTsx3);
-  const tmp2Result11 = require("../../../../../_runtime/metro/01652__.js");
-  sharedValue3 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(Infinity);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(GameProfileScreenTsx3);
+  const tmp2Result11 = require("../../../../../_runtime/metro/01655__.js");
+  sharedValue3 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(Infinity);
   const tmp8Result = num(noop.useState(false), 2);
   first2 = tmp8Result[0];
-  const tmp2Result12 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result12 = require("../../../../../_runtime/metro/01655__.js");
   const items8 = [memo, sharedValue, sharedValue3, 56];
   _require = undefined;
   importDefault = undefined;
@@ -256,7 +256,7 @@ export default function GameProfileScreen(gameId) {
   GameProfileScreenTsx4.__closure = items9;
   GameProfileScreenTsx4.__workletHash = 6575373828455;
   GameProfileScreenTsx4.__initData = tmp40;
-  const items10 = [ref2, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp8Result[1]];
+  const items10 = [ref2, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp8Result[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp44, tmp45, tmp46] = items10;
@@ -274,11 +274,11 @@ export default function GameProfileScreen(gameId) {
   GameProfileScreenTsx5.__closure = items11;
   GameProfileScreenTsx5.__workletHash = 2265918368241;
   GameProfileScreenTsx5.__initData = tmp44;
-  const animatedReaction1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     GameProfileScreenTsx4,
     GameProfileScreenTsx5,
   );
-  const tmp2Result13 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result13 = require("../../../../../_runtime/metro/01655__.js");
   gameProfileStoreWebsites = require("useGameProfileStoreWebsites").useGameProfileStoreWebsites(data);
   const items12 = [gameProfileStoreWebsites];
   memo = obj2.useMemo(() => {
@@ -379,9 +379,9 @@ export default function GameProfileScreen(gameId) {
   const items20 = [gameId, source, sourceUserId, viewId];
   const effect4 = obj2.useEffect(
     () => () => {
-      const guildIdAndVerifiedFromInvite = gameId(10217).getGuildIdAndVerifiedFromInvite(ref2.current);
+      const guildIdAndVerifiedFromInvite = gameId(10286).getGuildIdAndVerifiedFromInvite(ref2.current);
       ({ guildId, isVerified } = guildIdAndVerifiedFromInvite);
-      const obj = gameId(10217);
+      const obj = gameId(10286);
       const obj3 = {
         viewId,
         gameId,
@@ -406,8 +406,8 @@ export default function GameProfileScreen(gameId) {
       obj3.similarGames = similarGames;
       obj3.guildId = guildId;
       obj3.isVerified = isVerified;
-      const result = gameId(10217).trackGameProfileClose(obj3);
-      const obj2 = gameId(10217);
+      const result = gameId(10286).trackGameProfileClose(obj3);
+      const obj2 = gameId(10286);
     },
     items20,
   );
@@ -448,7 +448,7 @@ export default function GameProfileScreen(gameId) {
         children: null,
       };
       const obj6 = { obscured: tmp12, children: null };
-      let tmp72Result = selectedTab === tmp2(10242).GameProfileNavTab.OVERVIEW;
+      let tmp72Result = selectedTab === tmp2(10311).GameProfileNavTab.OVERVIEW;
       if (tmp72Result) {
         const obj7 = {
           game: data,
@@ -457,52 +457,52 @@ export default function GameProfileScreen(gameId) {
           source,
           trackAction: callback1,
           onGuildInviteResolved: tmp13[1],
-          closeModal: tmp5(5489).hideAllActionSheets,
+          closeModal: tmp5(5552).hideAllActionSheets,
           scrollY: sharedValue,
           websiteButtons: memo,
           onStoreLinksMeasured: callback5,
           onHeaderHeightMeasured: callback4,
         };
-        tmp72Result = tmp72(tmp5(10246), obj7);
-        const tmp5Result5 = tmp5(10246);
+        tmp72Result = tmp72(tmp5(10315), obj7);
+        const tmp5Result5 = tmp5(10315);
       }
       const items24 = [tmp72Result];
-      let tmp72Result4 = selectedTab === tmp2(10242).GameProfileNavTab.COMMUNITIES;
+      let tmp72Result4 = selectedTab === tmp2(10311).GameProfileNavTab.COMMUNITIES;
       if (tmp72Result4) {
         const obj8 = {
           game: data,
           viewId,
           scrollY: sharedValue,
           trackAction: callback1,
-          closeModal: tmp5(5489).hideAllActionSheets,
+          closeModal: tmp5(5552).hideAllActionSheets,
         };
-        tmp72Result4 = tmp72(tmp5(10428), obj8);
-        const tmp5Result6 = tmp5(10428);
+        tmp72Result4 = tmp72(tmp5(10497), obj8);
+        const tmp5Result6 = tmp5(10497);
       }
       items24[1] = tmp72Result4;
       obj6.children = items24;
-      obj5.children = tmp65(tmp5(10244), obj6);
-      let tmp72Result5 = tmp72(tmp2(5507).BottomSheetScrollView, obj5);
-      const tmp5Result4 = tmp5(10244);
+      obj5.children = tmp65(tmp5(10313), obj6);
+      let tmp72Result5 = tmp72(tmp2(5570).BottomSheetScrollView, obj5);
+      const tmp5Result4 = tmp5(10313);
     }
     const items25 = [tmp72Result5, , ,];
     const obj9 = { style: null, pointerEvents: "box-none", children: null };
     const items26 = [tmp.stickyHeader, animatedStyle];
     obj9.style = items26;
     const obj10 = { game: data, headerRight: memo2 };
-    obj9.children = tmp72(tmp5(10438), obj10);
-    items25[1] = tmp72(tmp5(1652).View, obj9);
+    obj9.children = tmp72(tmp5(10507), obj10);
+    items25[1] = tmp72(tmp5(1655).View, obj9);
     let tmp72Result6 = !isLoading;
     if (!isLoading) {
       tmp72Result6 = null != data;
     }
     if (tmp72Result6) {
       const obj11 = { game: data, navigation, onLayout: callback2 };
-      tmp72Result6 = tmp72(tmp5(10439), obj11);
+      tmp72Result6 = tmp72(tmp5(10508), obj11);
     }
     items25[2] = tmp72Result6;
     const obj12 = { variant: "overlay", onPress: bottomSheetClose };
-    items25[3] = tmp72(tmp2(5838).ActionSheetHeaderBar, obj12);
+    items25[3] = tmp72(tmp2(5901).ActionSheetHeaderBar, obj12);
     obj4.children = items25;
     return tmp65(tmp66, obj4);
   }

@@ -97,7 +97,7 @@ export function getCheckpointCharacterTextureRole(name) {
     }
   }
 }
-export function getCheckpointCharacterTextureScale(c4, height, arg2) {
+export function getCheckpointCharacterTextureScale(c3, height, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -107,7 +107,7 @@ export function getCheckpointCharacterTextureScale(c4, height, arg2) {
     return closure_12;
   } else {
     const _Math = Math;
-    const result = Math.max(c4, height) / 1440;
+    const result = Math.max(c3, height) / 1440;
     closure_0 = result * getDevicePixelRatioDefault();
     let found = items.find((item) => item >= closure_0);
     if (found == null) {

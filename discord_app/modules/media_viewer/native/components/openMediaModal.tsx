@@ -102,7 +102,7 @@ let closure_7 = async function _openMediaModal() {
       openAs: 0,
     }),
   );
-  return "flexDirection";
+  return "Path";
 };
 const MEDIA_MODAL_KEY = fn(1072).MEDIA_MODAL_KEY;
 let size = fn(2);

@@ -142,12 +142,12 @@ prototype["getResolution"] = function getResolution(arg0) {
 };
 
 export { SdkCanonicalGameResolutionType };
-export function withProcessIdentity(processGame) {
-  processGame = processGame.processGame;
-  let tmp = processGame;
+export function withProcessIdentity(gameForPID) {
+  const processGame = gameForPID.processGame;
+  let tmp = gameForPID;
   if (null != processGame) {
     const obj = {};
-    const merged = Object.assign(processGame);
+    const merged = Object.assign(gameForPID);
     ({ id: obj.id, name: obj.name } = processGame);
     obj.processGame = undefined;
     tmp = obj;

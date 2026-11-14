@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/AutomodStore.tsx
-import _mod5158 from "../../../_runtime/metro/05158__.js";
+import _mod5221 from "../../../_runtime/metro/05221__.js";
 import SystemRulesUtils from "SystemRulesUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -8,10 +8,10 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(14059).AutomodTriggerType;
+const AutomodTriggerType = fn(14166).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
-const identity = fn(1254);
+const identity = fn(1258);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   dependencyMap = arg1;
@@ -52,7 +52,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         mapped[HermesBuiltin.arraySpread(found, 0)] = guildId;
       }
       someResult = items.some((id) => id.id === closure_1_2);
-      guildId(1259).batchUpdates(() => {
+      guildId(1263).batchUpdates(() => {
         obj = { rules: null, error: null };
         const obj2 = {};
         const merged = Object.assign(rules);
@@ -79,7 +79,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         acc[NumberResult] = items.filter((id) => id.id !== closure_1_0);
         return acc;
       }, {});
-      closure_0(1259).batchUpdates(() => {
+      closure_0(1263).batchUpdates(() => {
         const obj = { rules: null, error: null };
         const obj2 = {};
         const merged = Object.assign(rules);
@@ -240,7 +240,7 @@ export function useSyncAutomodRules(arg0) {
       items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, _mod5158.shallow),
+    }, _mod5221.shallow),
     2,
   );
   const first = tmp2[0];
@@ -326,7 +326,7 @@ export function useSyncAutomodRulesEffect(arg0) {
       items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, require("../../../_runtime/metro/05158__.js").shallow),
+    }, require("../../../_runtime/metro/05221__.js").shallow),
     2,
   );
   first = tmp2[0];
@@ -468,5 +468,5 @@ export function useAutomodRulesList(arg0) {
       obj = {};
     }
     return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-  }, require("../../../_runtime/metro/05158__.js").shallow);
+  }, require("../../../_runtime/metro/05221__.js").shallow);
 }

@@ -52,10 +52,10 @@ export function queryMentionables(type, query, channelId, arg3) {
       request: flag,
       limit: 15,
     };
-    let obj2 = channel(6899);
-    ({ users, roles } = channel(6899).queryMentionResults(obj3));
+    let obj2 = channel(6962);
+    ({ users, roles } = channel(6962).queryMentionResults(obj3));
     items = [];
-    const queryMentionResultsResult = channel(6899).queryMentionResults(obj3);
+    const queryMentionResultsResult = channel(6962).queryMentionResults(obj3);
     HermesBuiltin.arraySpread(
       roles.map((id) => ({ type: channelId(dependencyMap[10]).SelectOptionType.ROLE, value: id.id, label: id.name })),
       HermesBuiltin.arraySpread(
@@ -102,7 +102,7 @@ export function getInitialSnowflakeSelectOptions(selectActionComponent, containe
   );
   const defaultValues = selectActionComponent.defaultValues;
   let channelTypes;
-  if (selectActionComponent.type === channelTypes(2116).ComponentType.CHANNEL_SELECT) {
+  if (selectActionComponent.type === channelTypes(2119).ComponentType.CHANNEL_SELECT) {
     channelTypes = selectActionComponent.channelTypes;
   }
   if (channelTypes === undefined) {
@@ -171,23 +171,23 @@ export function getInitialSnowflakeSelectOptions(selectActionComponent, containe
         }
       }
     });
-    let found = mapped.filter(tmp2(1380).isNotNullish);
+    let found = mapped.filter(tmp2(1255).isNotNullish);
   }
   let type;
   if (interactionComponentState != null) {
     type = interactionComponentState.type;
   }
-  if (type !== channelTypes(2116).ComponentType.USER_SELECT) {
+  if (type !== channelTypes(2119).ComponentType.USER_SELECT) {
     let type1;
     if (interactionComponentState != null) {
       type1 = interactionComponentState.type;
     }
-    if (type1 !== tmp2(2116).ComponentType.ROLE_SELECT) {
+    if (type1 !== tmp2(2119).ComponentType.ROLE_SELECT) {
       let type2;
       if (interactionComponentState != null) {
         type2 = interactionComponentState.type;
       }
-      if (type2 !== tmp2(2116).ComponentType.MENTIONABLE_SELECT) {
+      if (type2 !== tmp2(2119).ComponentType.MENTIONABLE_SELECT) {
         let type3;
         if (interactionComponentState != null) {
           type3 = interactionComponentState.type;
@@ -269,6 +269,6 @@ export function getSnowflakeSelectDefaultValues(defaultValues, guild_id) {
         }
       }
     });
-    return mapped.filter(items(1380).isNotNullish);
+    return mapped.filter(items(1255).isNotNullish);
   }
 }

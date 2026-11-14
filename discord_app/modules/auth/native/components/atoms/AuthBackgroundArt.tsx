@@ -24,13 +24,13 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/atoms/AuthBackgroundArt.tsx");
 
 export default noop.memo(function AuthBackgroundArt() {
-  const tmp3 = sharedValue(7647)();
+  const tmp3 = sharedValue(7713)();
   _require = tmp3;
   let num = 0;
   if ("square" === tmp3) {
     num = 1;
   }
-  sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(num);
+  sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(num);
   items = [tmp3, sharedValue];
   const effect = noop.useEffect(() => {
     let num = 0;
@@ -39,7 +39,7 @@ export default noop.memo(function AuthBackgroundArt() {
     }
     const result = sharedValue.set(timing_timing.withTiming(num, timingPresets.timingStandard));
   }, items);
-  let obj = require("../../../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../../../_runtime/metro/01655__.js");
   const items1 = [closure_9, sharedValue];
   _require = undefined;
   [tmp7, tmp8] = items1;
@@ -61,19 +61,19 @@ export default noop.memo(function AuthBackgroundArt() {
     importantForAccessibility: "no-hide-descendants",
     children: null,
   };
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AuthBackgroundArtTsx1);
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(AuthBackgroundArtTsx1);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  const tmp4Result = require("../../../../../../_runtime/metro/01652__.js");
-  obj3.backgroundImageSource = sharedValue(7651);
-  const items3 = [closure_6(sharedValue(7648), obj3)];
+  const tmp4Result = require("../../../../../../_runtime/metro/01655__.js");
+  obj3.backgroundImageSource = sharedValue(7717);
+  const items3 = [closure_6(sharedValue(7714), obj3)];
   const obj4 = { style: null, children: null };
   const items4 = [StyleSheet.absoluteFill, animatedStyle];
   obj4.style = items4;
   const obj5 = { backgroundImageSource: null, backgroundImageCover: true };
-  const tmpResult = sharedValue(7648);
-  obj5.backgroundImageSource = sharedValue(7652);
-  obj4.children = closure_6(sharedValue(7648), obj5);
-  items3[1] = closure_6(sharedValue(1652).View, obj4);
+  const tmpResult = sharedValue(7714);
+  obj5.backgroundImageSource = sharedValue(7718);
+  obj4.children = closure_6(sharedValue(7714), obj5);
+  items3[1] = closure_6(sharedValue(1655).View, obj4);
   obj2.children = items3;
   return closure_7(View, obj2);
 });

@@ -4,16 +4,16 @@ import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../../image_upload/ImageLoaderUtils.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useEaseInEaseOutLayoutAnimationsDefault from "../../animations/native/useEaseInEaseOutLayoutAnimations.tsx";
 import InviteDetailsDefault from "InviteDetails.tsx";
 import InviteErrorDefault from "InviteError.tsx";
-import _modDef14973 from "../../../../_runtime/metro/14973__.js";
+import _modDef15087 from "../../../../_runtime/metro/15087__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const module_1652 = _mod1652;
+const module_1655 = _mod1655;
 
 require = fn;
 function InviteResolving() {
@@ -80,7 +80,7 @@ function AcceptInviteCardComponent(invite) {
           const tmp2Result = InviteDetailsDefault;
         }
         const obj3 = { style: tmp.cardState, entering, exiting, children: tmp14Result };
-        return timestampProducer(module_1652.View, obj3, LOADING);
+        return timestampProducer(module_1655.View, obj3, LOADING);
       }
       let tmp18 = null != invite;
       if (tmp18) {
@@ -103,7 +103,7 @@ get_ActivityIndicator = fn(17);
 const InviteStates = fn(1072).InviteStates;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   parentContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -139,7 +139,7 @@ obj2.cardContent = { padding: 16, flex: 1, justifyContent: "center", alignItems:
 obj2.cardState = { alignSelf: "stretch", alignItems: "center", justifyContent: "center" };
 obj2.resolvingContainer = { padding: 64 };
 let closure_8 = createStyles.createStyles(obj2);
-let closure_9 = module_1652.createAnimatedComponent(fn(7381).Card);
+let closure_9 = module_1655.createAnimatedComponent(fn(7445).Card);
 const constants = { LOADING: 0, [0]: "LOADING", DETAILS: 1, [1]: "DETAILS", ERROR: 2, [2]: "ERROR" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/accept_invite/native/AcceptInvite.tsx");
@@ -159,7 +159,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef14973;
+    let guildSplashSource = _modDef15087;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);
@@ -183,7 +183,7 @@ export default function AcceptInvite(invite) {
   obj10.children = timestampProducer(AcceptInviteCardComponent, { invite });
   obj9.children = timestampProducer(React4, obj10);
   obj8.children = timestampProducer(closure_9, obj9);
-  items2[1] = timestampProducer(_mod1652.LayoutAnimationConfig, obj8);
+  items2[1] = timestampProducer(_mod1655.LayoutAnimationConfig, obj8);
   obj5.children = items2;
   return metroImportDefault(React4, obj5);
 }

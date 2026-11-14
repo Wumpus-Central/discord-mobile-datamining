@@ -1,15 +1,15 @@
 // discord_app/modules/markup/MarkupSubtextRule.tsx
-import _mod2067 from "../../../_runtime/metro/02067__.js";
+import _mod2070 from "../../../_runtime/metro/02070__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-const _modDef2067 = _mod2067;
+const _modDef2070 = _mod2070;
 
 const re2 = /\n$/;
 const re3 = /^ *-# +((?!-#)[^\n]+)(?:\n|$)/;
 const result = size.fileFinishedImporting("modules/markup/MarkupSubtextRule.tsx");
 
 export default {
-  order: _modDef2067.defaultRules.heading.order,
+  order: _modDef2070.defaultRules.heading.order,
   requiredFirstCharacters: ["-"],
   match(arg0, allowSubtext, str) {
     let tmp = null;
@@ -20,7 +20,7 @@ export default {
         }
         tmp = tmp4;
       }
-      tmp4 = _mod2067.anyScopeRegex(re3)(arg0, allowSubtext, str);
+      tmp4 = _mod2070.anyScopeRegex(re3)(arg0, allowSubtext, str);
     }
     return tmp;
   },
@@ -30,7 +30,7 @@ export default {
     const trimmed = arg0[1].trim();
     const merged = Object.assign(arg2);
     obj3.allowSubtext = false;
-    obj.content = _mod2067.parseInline(arg1, trimmed, obj3);
+    obj.content = _mod2070.parseInline(arg1, trimmed, obj3);
     return obj;
   },
 };

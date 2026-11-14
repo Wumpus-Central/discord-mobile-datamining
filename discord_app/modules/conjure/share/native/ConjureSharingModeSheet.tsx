@@ -26,7 +26,7 @@ export default function ConjureSharingModeSheet(onChange) {
   let obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(onChange(4079).ujIxRm);
+  obj2.title = intl.string(onChange(4131).ujIxRm);
   obj.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: null });
   obj.children = jsx(TableRadioGroup.TableRadioGroup, {
     value,

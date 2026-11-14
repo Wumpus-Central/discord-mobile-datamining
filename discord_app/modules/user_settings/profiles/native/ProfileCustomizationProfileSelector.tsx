@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-let closure_4 = fn(17079).PROFILE_SELECTOR_ACTION_SHEET_KEY;
+let closure_4 = fn(17202).PROFILE_SELECTOR_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: {
     paddingTop: nativeDefault.space.PX_4,
@@ -36,21 +36,39 @@ export default function ProfileCustomizationProfileSelector(guild) {
     const intl = tmp3(1113).intl;
     name = intl.string(tmp3(1113).t["2p07FR"]);
   }
-  const obj2 = { label: name, labelLineClamp: 1, icon: null, trailing: null, accessibilityHint: null, onPress: null };
+  const obj2 = {
+    label: name,
+    labelLineClamp: 1,
+    icon: null,
+    trailing: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    onPress: null,
+  };
   if (null != guild) {
-    const obj3 = { guild, size: tmp3(7654).GuildIconSizes.XSMALL };
-    let tmpResult = jsx(GuildIconDefault, { guild, size: tmp3(7654).GuildIconSizes.XSMALL });
+    const obj3 = { guild, size: tmp3(7720).GuildIconSizes.XSMALL };
+    let tmpResult = jsx(GuildIconDefault, { guild, size: tmp3(7720).GuildIconSizes.XSMALL });
     let tmp8 = importDefault;
   } else {
     const obj4 = { size: "md", color: nativeDefault.colors.ICON_DEFAULT };
-    tmpResult = jsx(tmp3(11673).ClydeIcon, { size: "md", color: nativeDefault.colors.ICON_DEFAULT });
+    tmpResult = jsx(tmp3(11739).ClydeIcon, { size: "md", color: nativeDefault.colors.ICON_DEFAULT });
     tmp8 = importDefault;
   }
-  const obj5 = { hasIcons: true, children: null };
   obj2.icon = tmpResult;
-  obj2.trailing = jsx(guild(10491).ChevronSmallDownIcon, { size: "sm", color: tmp8(575).colors.ICON_SUBTLE });
+  obj2.trailing = jsx(guild(10560).ChevronSmallDownIcon, { size: "sm", color: tmp8(575).colors.ICON_SUBTLE });
   const intl2 = tmp3(1113).intl;
-  obj2.accessibilityHint = intl2.string(guild(1113).t["5h07Mp"]);
+  let name1;
+  if (guild != null) {
+    name1 = guild.name;
+  }
+  if (name1 == null) {
+    const intl3 = tmp3(1113).intl;
+    name1 = intl3.string(tmp3(1113).t["2p07FR"]);
+  }
+  const obj6 = { hasIcons: true, children: null };
+  obj2.accessibilityLabel = intl2.formatToPlainString(guild(1113).t.u9XiCz, { profileName: name1 });
+  const intl4 = tmp3(1113).intl;
+  obj2.accessibilityHint = intl4.string(guild(1113).t["5h07Mp"]);
   obj2.onPress = function handlePress() {
     markAccessibilityFocusDefault();
     closure_1_1(() => {
@@ -68,14 +86,15 @@ export default function ProfileCustomizationProfileSelector(guild) {
       });
     });
   };
-  obj5.children = jsx(guild(7379).TableRow, {
+  obj6.children = jsx(guild(7443).TableRow, {
     label: name,
     labelLineClamp: 1,
     icon: null,
     trailing: null,
+    accessibilityLabel: null,
     accessibilityHint: null,
     onPress: null,
   });
-  obj.children = jsx(guild(7680).TableRowGroup, { hasIcons: true, children: null });
+  obj.children = jsx(guild(7746).TableRowGroup, { hasIcons: true, children: null });
   return <View style={closure_6().container}>{null}</View>;
 }

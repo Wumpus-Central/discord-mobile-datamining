@@ -15,7 +15,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const obj = {
   linkCalloutContainer: { maxHeight: 250 },
-  emphasis: { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
+  emphasis: { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE },
 };
 let closure_6 = createStyles.createStyles(obj);
 const result = size.fileFinishedImporting("modules/masked_link/components/native/MaskedLinkModal.tsx");

@@ -2539,7 +2539,7 @@ class LifecyclePlan_RampStep$Type extends MessageType13 {
         return closure_1_32;
       },
     };
-    items = [, , , ,];
+    items = [, , , , , ,];
     items[0] = obj;
     items[1] = {
       no: 2,
@@ -2550,14 +2550,14 @@ class LifecyclePlan_RampStep$Type extends MessageType13 {
       },
     };
     items[2] = { no: 3, name: "require_manual_approval", kind: "scalar", T: 8 };
-    obj1 = { no: 4, name: "started_at", kind: "message", T: null };
-    class T {
-      constructor() {
-        return closure_1_0(closure_1_1[2]).Timestamp;
-      }
-    }
-    obj1.T = T;
-    items[3] = obj1;
+    items[3] = {
+      no: 4,
+      name: "started_at",
+      kind: "message",
+      T() {
+        return require("timestamp").Timestamp;
+      },
+    };
     items[4] = {
       no: 5,
       name: "status",
@@ -2565,6 +2565,22 @@ class LifecyclePlan_RampStep$Type extends MessageType13 {
       T() {
         items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj18, "STEP_STATUS_"];
         return items;
+      },
+    };
+    obj1 = { no: 6, name: "paused_at", kind: "message", T: null };
+    class T {
+      constructor() {
+        return closure_1_0(closure_1_1[2]).Timestamp;
+      }
+    }
+    obj1.T = T;
+    items[5] = obj1;
+    items[6] = {
+      no: 7,
+      name: "paused_duration",
+      kind: "message",
+      T() {
+        return require("duration").Duration;
       },
     };
     tmp1 = new tmp("discord_protos.discord_experimentation.v1.LifecyclePlan.RampStep", items, T);
@@ -2597,15 +2613,21 @@ prototype13["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
         let variationBuckets = obj.variationBuckets;
         let arr = variationBuckets.push(closure_32.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else if (2 === tmp5) {
-        let Duration = duration.Duration;
-        obj.holdDuration = Duration.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.holdDuration);
+        let Duration2 = duration.Duration;
+        obj.holdDuration = Duration2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.holdDuration);
       } else if (3 === tmp5) {
         obj.requireManualApproval = pos.bool();
       } else if (4 === tmp5) {
-        let Timestamp = timestamp.Timestamp;
-        obj.startedAt = Timestamp.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.startedAt);
+        let Timestamp2 = timestamp.Timestamp;
+        obj.startedAt = Timestamp2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.startedAt);
       } else if (5 === tmp5) {
         obj.status = pos.int32();
+      } else if (6 === tmp5) {
+        let Timestamp = timestamp.Timestamp;
+        obj.pausedAt = Timestamp.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.pausedAt);
+      } else if (7 === tmp5) {
+        let Duration = duration.Duration;
+        obj.pausedDuration = Duration.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.pausedDuration);
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -2684,6 +2706,34 @@ prototype13["internalBinaryWrite"] = function internalBinaryWrite(variationBucke
     tag.tag(5, _mod1197.WireType.Varint).int32(variationBuckets.status);
     const tagResult4 = tag.tag(5, _mod1197.WireType.Varint);
   }
+  if (variationBuckets.pausedAt) {
+    const Timestamp2 = timestamp.Timestamp;
+    const tagResult5 = tag.tag(6, _mod1197.WireType.LengthDelimited);
+    const joined3 = Timestamp2.internalBinaryWrite(
+      variationBuckets.pausedAt,
+      tag.tag(6, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult3 = Timestamp2.internalBinaryWrite(
+      variationBuckets.pausedAt,
+      tag.tag(6, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
+  if (variationBuckets.pausedDuration) {
+    const Duration2 = duration.Duration;
+    const tagResult6 = tag.tag(7, _mod1197.WireType.LengthDelimited);
+    const joined4 = Duration2.internalBinaryWrite(
+      variationBuckets.pausedDuration,
+      tag.tag(7, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult4 = Duration2.internalBinaryWrite(
+      variationBuckets.pausedDuration,
+      tag.tag(7, _mod1197.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -2721,17 +2771,33 @@ const items9 = [
       return require("timestamp").Timestamp;
     },
   },
+  {
+    no: 5,
+    name: "status",
+    kind: "enum",
+    T() {
+      items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj18, "STEP_STATUS_"];
+      return items;
+    },
+  },
+  {
+    no: 6,
+    name: "paused_at",
+    kind: "message",
+    T() {
+      return require("timestamp").Timestamp;
+    },
+  },
 ];
 const obj29 = {
-  no: 5,
-  name: "status",
-  kind: "enum",
+  no: 7,
+  name: "paused_duration",
+  kind: "message",
   T() {
-    items = ["discord_protos.discord_experimentation.v1.LifecyclePlan.StepStatus", obj18, "STEP_STATUS_"];
-    return items;
+    return require("duration").Duration;
   },
 };
-items9[4] = obj29;
+items9[6] = obj29;
 const lifecyclePlan_RolloutPlanType = new LifecyclePlan_RolloutPlan$Type(
   "discord_protos.discord_experimentation.v1.LifecyclePlan.RampStep",
   items9,

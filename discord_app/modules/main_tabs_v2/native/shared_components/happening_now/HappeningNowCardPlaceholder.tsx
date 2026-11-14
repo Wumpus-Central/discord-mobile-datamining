@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardPlaceholder.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../../_runtime/metro/01705__.js";
+import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../../_runtime/metro/01708__.js";
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -9,10 +9,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HAPPENING_NOW_CONTENT_HEIGHT = fn(17795).HAPPENING_NOW_CONTENT_HEIGHT;
+const HAPPENING_NOW_CONTENT_HEIGHT = fn(17915).HAPPENING_NOW_CONTENT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   placeholderContainer: { flexDirection: "row", alignItems: "center" },
   placeholderIcon: null,
@@ -54,10 +54,10 @@ export function HappeningNowCardPlaceholder(panelVariant) {
   _require = 1000;
   importDefault = 0.6;
   let sharedValue;
-  sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(0.3);
+  sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(0.3);
   items = [sharedValue, 1000, 0.6];
   const effect = noop.useEffect(() => {
-    items = [closure_8, sharedValue, _mod1652.withRepeat, timing_timing.withTiming, c1, c0, _mod1652.Easing];
+    items = [closure_8, sharedValue, _mod1655.withRepeat, timing_timing.withTiming, c1, c0, _mod1655.Easing];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -76,9 +76,9 @@ export function HappeningNowCardPlaceholder(panelVariant) {
     HappeningNowCardPlaceholderTsx1.__closure = items1;
     HappeningNowCardPlaceholderTsx1.__workletHash = 2445184542345;
     HappeningNowCardPlaceholderTsx1.__initData = tmp;
-    _mod1705.scheduleOnUI(HappeningNowCardPlaceholderTsx1);
+    _mod1708.scheduleOnUI(HappeningNowCardPlaceholderTsx1);
   }, items);
-  const obj = require("../../../../../../_runtime/metro/01652__.js");
+  const obj = require("../../../../../../_runtime/metro/01655__.js");
   let items1 = [closure_9, sharedValue];
   _require = undefined;
   [tmp5, tmp6] = items1;
@@ -92,11 +92,11 @@ export function HappeningNowCardPlaceholder(panelVariant) {
   HappeningNowCardPlaceholderTsx2.__closure = items2;
   HappeningNowCardPlaceholderTsx2.__workletHash = 8479372261668;
   HappeningNowCardPlaceholderTsx2.__initData = tmp5;
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     HappeningNowCardPlaceholderTsx2,
   );
   let str = "medium";
-  const obj2 = require("../../../../../../_runtime/metro/01652__.js");
+  const obj2 = require("../../../../../../_runtime/metro/01655__.js");
   const tmp9 = importDefault;
   if (panelVariant.fullWidth) {
     str = "full";

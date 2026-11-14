@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomAnimated.android.tsx
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import useChannelSafeAreaHeightSharedValue from "useChannelSafeAreaHeightSharedValue.android.tsx";
 import useIsChannelFullyOpenDefault from "useIsChannelFullyOpen.tsx";
 import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles.tsx";
 import MobileRTCV2Experiment from "../../../voice_panel/native/dock/MobileRTCV2Experiment.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 const useChannelSafeAreaHeightSharedValueDefault = useChannelSafeAreaHeightSharedValue;
 
 require = fn;
@@ -25,7 +25,7 @@ function useChannelSafeAreaAnimatedStyles() {
   ChannelSafeAreaBottomAnimatedAndroidTsx1.__closure = items1;
   ChannelSafeAreaBottomAnimatedAndroidTsx1.__workletHash = 14690382113580;
   ChannelSafeAreaBottomAnimatedAndroidTsx1.__initData = tmp2;
-  return _mod1652.useAnimatedStyle(ChannelSafeAreaBottomAnimatedAndroidTsx1);
+  return _mod1655.useAnimatedStyle(ChannelSafeAreaBottomAnimatedAndroidTsx1);
 }
 function KeyboardAwareChannelSafeAreaBottom(channelId) {
   const tmp = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
@@ -34,7 +34,7 @@ function KeyboardAwareChannelSafeAreaBottom(channelId) {
   items = [React3.absoluteFill, tmp];
   obj2.style = items;
   obj.children = <React4 style={null} />;
-  return jsx(_modDef1652.View, { style: useChannelSafeAreaAnimatedStyles(), children: null });
+  return jsx(_modDef1655.View, { style: useChannelSafeAreaAnimatedStyles(), children: null });
 }
 function DockAwareChannelSafeAreaBottom(channelId) {
   const tmp3 = useChannelSafeAreaBottomStylesDefault(channelId.channelId);
@@ -46,7 +46,7 @@ function DockAwareChannelSafeAreaBottom(channelId) {
     items = [React3.absoluteFill, tmp3];
     obj3.style = items;
     obj2.children = <React4 style={null} />;
-    let tmp6Result = jsx(_modDef1652.View, { style: tmp4, children: null });
+    let tmp6Result = jsx(_modDef1655.View, { style: tmp4, children: null });
   } else {
     const obj4 = { style: null, children: null };
     const obj5 = { height: channelSafeAreaRestingHeight };

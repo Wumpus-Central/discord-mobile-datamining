@@ -15,16 +15,26 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
-  container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
+  container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   messageRequestContent: { flex: 1 },
   tabContainer: null,
 };
-let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
-obj.tabContainer = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };
+let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.tabContainer = {
+  minHeight: 32,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  paddingTop: nativeDefault.space.PX_8,
+  paddingBottom: nativeDefault.space.PX_4,
+};
 let closure_8 = createStyles.createStyles(obj);
-let obj4 = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };
+let obj4 = {
+  minHeight: 32,
+  paddingHorizontal: nativeDefault.space.PX_16,
+  paddingTop: nativeDefault.space.PX_8,
+  paddingBottom: nativeDefault.space.PX_4,
+};
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx",

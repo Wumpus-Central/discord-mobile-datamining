@@ -4,6 +4,7 @@ import StorefrontTypes from "../../storefront/StorefrontTypes.tsx";
 import CollectiblesProductUtils from "CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import StorefrontCollectiblesTypes from "../../storefront/collectibles/StorefrontCollectiblesTypes.tsx";
+import CollectiblesPromotionDiscountUtils from "CollectiblesPromotionDiscountUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesTargetedOfferPromotionUtils.tsx");
@@ -101,38 +102,27 @@ export function getTargetedOfferPromotionPurchaseCtaText(targetedOfferPromotionF
       }
     }
   }
+  let v302tKP = dependencyMap;
   let tmp4 = null;
   if (type === StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.TARGETED_OFFER) {
-    let discount1;
+    let discount;
     if (targetedOfferPromotionForCollectiblesProduct != null) {
       const rewardConfig = targetedOfferPromotionForCollectiblesProduct.rewardConfig;
       if (rewardConfig != null) {
-        discount1 = rewardConfig.discount;
+        discount = rewardConfig.discount;
       }
     }
     tmp4 = null;
-    if (null != discount1) {
-      const rewardConfig2 = targetedOfferPromotionForCollectiblesProduct.rewardConfig;
-      let type1;
-      if (rewardConfig2 != null) {
-        const discount = rewardConfig2.discount;
-        if (discount != null) {
-          type1 = discount.type;
-        }
-      }
-      let tmp7 = type1 === StorefrontTypes.StorefrontDiscountTypes.PERCENT;
-      if (tmp7) {
-        tmp7 = 100 === targetedOfferPromotionForCollectiblesProduct.rewardConfig.discount.amount;
-      }
-      const intl = util.intl;
-      const string = intl.string;
-      let t = util.t;
-      if (tmp7) {
-        t = t["302tKP"];
-        let stringResult = string(t);
+    if (null != discount) {
+      if (100 === tmp2Result.getPromotionPercentOff(targetedOfferPromotionForCollectiblesProduct)) {
+        const intl2 = util.intl;
+        v302tKP = util.t["302tKP"];
+        let stringResult = intl2.string(v302tKP);
       } else {
-        stringResult = string(t["7EGhnE"]);
+        const intl = util.intl;
+        stringResult = intl.string(util.t["7EGhnE"]);
       }
+      tmp2Result = CollectiblesPromotionDiscountUtils;
     }
   }
   return tmp4;
@@ -148,18 +138,21 @@ export function hasFiatExclusiveTargetedOfferPromotion(targetedOfferPromotionFor
       }
     }
   }
-  if (type === StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.TARGETED_OFFER) {
-    let discount;
+  let tmp2 = type === StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.TARGETED_OFFER;
+  if (tmp2) {
+    let fiatEnabled;
     if (targetedOfferPromotionForCollectiblesProduct != null) {
       const rewardConfig = targetedOfferPromotionForCollectiblesProduct.rewardConfig;
       if (rewardConfig != null) {
-        discount = rewardConfig.discount;
+        const discount = rewardConfig.discount;
+        if (discount != null) {
+          fiatEnabled = discount.fiatEnabled;
+        }
       }
     }
-    return null != discount && discount.fiatEnabled;
-  } else {
-    return false;
+    tmp2 = true === fiatEnabled;
   }
+  return tmp2;
 }
 export function getTargetedOfferPromotionFlavorStyleOTPCheckout(arg0) {
   let str = "collectibles";

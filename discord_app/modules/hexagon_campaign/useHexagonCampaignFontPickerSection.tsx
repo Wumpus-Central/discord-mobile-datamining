@@ -2,13 +2,13 @@
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const HexagonCampaignConstants = fn(5268);
+const HexagonCampaignConstants = fn(5331);
 ({
   HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: c3,
   HexagonCampaignPerk: closure_4,
   HexagonCampaignPerkAvailability: hasOwnProperty,
 } = HexagonCampaignConstants);
-const HEXAGON_CAMPAIGN_FONTS = fn(1394).HEXAGON_CAMPAIGN_FONTS;
+const HEXAGON_CAMPAIGN_FONTS = fn(1397).HEXAGON_CAMPAIGN_FONTS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/useHexagonCampaignFontPickerSection.tsx");
 
@@ -22,9 +22,9 @@ export function useHexagonCampaignFontPickerSection(DisplayNameStylesFontPickerS
     flag = false;
   }
   let visibleFontOrder;
-  visibleFontOrder = visibleFontOrder(17837).useVisibleFontOrder({ includeCampaignFonts: true });
-  const obj2 = visibleFontOrder(17837);
-  const hexagonCampaignPerkAvailability = visibleFontOrder(5273).useHexagonCampaignPerkAvailability(
+  visibleFontOrder = visibleFontOrder(17957).useVisibleFontOrder({ includeCampaignFonts: true });
+  const obj2 = visibleFontOrder(17957);
+  const hexagonCampaignPerkAvailability = visibleFontOrder(5336).useHexagonCampaignPerkAvailability(
     constants.DISPLAY_NAME_STYLE,
     DisplayNameStylesFontPickerSheet,
   );
@@ -41,18 +41,18 @@ export function useHexagonCampaignFontPickerSection(DisplayNameStylesFontPickerS
   if (hasItem) {
     hasItem = visibleFontOrder.includes(closure_3);
   }
-  const obj4 = visibleFontOrder(5273);
+  const obj4 = visibleFontOrder(5336);
   let tmp7 = hasItem;
   if (hasItem) {
     tmp7 = !isTryItOut;
   }
-  const trackHexagonCampaignContentViewed = visibleFontOrder(16962).useTrackHexagonCampaignContentViewed(
-    tmp(5278).QuestContent.DISPLAY_NAME_STYLES_SETTINGS,
-    tmp(16962).HexagonCampaignContentSurface.FONT_PICKER,
+  const trackHexagonCampaignContentViewed = visibleFontOrder(17085).useTrackHexagonCampaignContentViewed(
+    tmp(5341).QuestContent.DISPLAY_NAME_STYLES_SETTINGS,
+    tmp(17085).HexagonCampaignContentSurface.FONT_PICKER,
     tmp7,
   );
   items = [visibleFontOrder];
-  const tmpResult = visibleFontOrder(16962);
+  const tmpResult = visibleFontOrder(17085);
   return {
     visibleFontOrder,
     gridFontOrder: noop.useMemo(() => visibleFontOrder.filter((item) => !closure_1_6.includes(item)), items),

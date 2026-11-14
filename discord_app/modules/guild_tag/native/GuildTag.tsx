@@ -1,7 +1,7 @@
 // discord_app/modules/guild_tag/native/GuildTag.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
@@ -11,10 +11,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let GuildTagBadgeSize = fn(8344).GuildTagBadgeSize;
+let GuildTagBadgeSize = fn(8410).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   container: {
     flexDirection: "row",
@@ -27,13 +27,13 @@ let obj = {
   },
   tag: null,
 };
-let PlatformUtils = fn(1377);
+let PlatformUtils = fn(1380);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
 let obj4 = { lineHeight: num, textAlignVertical: null, overflow: "hidden" };
-PlatformUtils = fn(1377);
+PlatformUtils = fn(1380);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";

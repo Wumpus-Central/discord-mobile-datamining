@@ -1,8 +1,8 @@
 // discord_app/modules/conjure/server_share/native/openConjureMakePersonalAlert.tsx
-import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4131 from "../../intl/ConjureUntranslated.messages.js";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import useConjureMakePersonalDefault from "../useConjureMakePersonal.tsx";
 import ConjureChangeListDefault from "ConjureChangeList.tsx";
+import useConjureMakePersonalDefault from "../useConjureMakePersonal.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -72,12 +72,12 @@ function ConjureMakePersonalAlert(project) {
   ({ appName, rows } = tmp3);
   const obj = { title: null, extraContent: null, actions: null };
   const intl = require("util").intl;
-  obj.title = intl.formatToPlainString(_modDef4079.cAxBIL, { app: appName });
+  obj.title = intl.formatToPlainString(_modDef4131.cAxBIL, { app: appName });
   items = [closure_4(ConjureChangeListDefault, { rows }), ,];
   let tmp4Result = null;
   if (null != keptChannels) {
     let obj2 = { variant: "body-sm/normal", color: "text-muted", children: keptChannels };
-    tmp4Result = closure_4(tmp5(5866).Text, obj2);
+    tmp4Result = closure_4(tmp5(5929).Text, obj2);
   }
   items[1] = tmp4Result;
   let tmp4Result2 = null;
@@ -88,14 +88,14 @@ function ConjureMakePersonalAlert(project) {
       accessibilityRole: "alert",
       children: error,
     };
-    tmp4Result2 = closure_4(tmp5(5866).Text, obj3);
+    tmp4Result2 = closure_4(tmp5(5929).Text, obj3);
   }
   items[2] = tmp4Result2;
   obj.extraContent = closure_5(require("Stack/Stack").Stack, { spacing: 12, children: items });
   let obj4 = { children: null };
   let obj5 = { variant: "destructive", text: null, onPress: null };
   const intl2 = tmp5(1113).intl;
-  obj5.text = intl2.string(_modDef4079.VAb6aE);
+  obj5.text = intl2.string(_modDef4131.VAb6aE);
   obj5.onPress = function submit() {
     const self = this;
     const apply = closure_1.apply;

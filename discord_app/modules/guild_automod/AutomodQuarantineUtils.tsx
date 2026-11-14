@@ -16,7 +16,7 @@ const require = globalThis.__r;
 require = fn;
 const Constants = fn(1072);
 ({ Permissions: closure_9, UserSettingsSections: closure_10 } = Constants);
-const GuildMemberFlags = fn(5161).GuildMemberFlags;
+const GuildMemberFlags = fn(5224).GuildMemberFlags;
 let closure_12 = fn(1082).ProfileCustomizationSubsection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodQuarantineUtils.tsx");
@@ -49,7 +49,7 @@ export function useGuildAutomodProfileQuarantineErrors(id) {
       if (closure_0 == null) {
         guildId = SelectedGuildStore.getGuildId();
       }
-      const obj = { nick: "Array", bio: "flexDirection" };
+      const obj = { nick: "disabled", bio: "isArray" };
       guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         if (null != guildId) {

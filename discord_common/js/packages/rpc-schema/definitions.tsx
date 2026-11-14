@@ -2548,7 +2548,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "flexDirection",
+    response: "Path",
   },
   [discord_common_helpers.RPCCommand.GET_CONTEXT]: obj44,
   [discord_common_helpers.RPCCommand.GET_USER]: {
@@ -2642,7 +2642,7 @@ export const RPCCommandSchemas = {
       obj.message = string.string().max(1000).required();
       return obj;
     },
-    response: "flexDirection",
+    response: "Path",
   },
   [discord_common_helpers.RPCCommand.ENCOURAGE_HW_ACCELERATION]: obj57,
   [discord_common_helpers.RPCCommand.GET_PLATFORM_BEHAVIORS]: obj58,
@@ -2663,7 +2663,7 @@ export const RPCCommandSchemas = {
       obj.grid_lock_state = joiEnum(number, "EmbeddedActivityOrientationLockState", { nullable: true }).optional();
       return obj;
     },
-    response: "flexDirection",
+    response: "Path",
   },
   [discord_common_helpers.RPCCommand.SET_CONFIG]: {
     embeddedAppSDK: true,
@@ -2676,7 +2676,7 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "channelId", response: "" },
+  [discord_common_helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "channel_id", response: "" },
   [discord_common_helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

@@ -2,11 +2,10 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import APNGPlayer from "../../../image/native/APNGPlayer.android.tsx";
 import BountiesMobileQuestBarExperiment2 from "../../experiments/BountiesMobileQuestBarExperiment.tsx";
 import QuestDockHooks from "QuestDockHooks.tsx";
 import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible.tsx";
-import _modDef17693 from "../../../../../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js";
+import _modDef17813 from "../../../../../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -82,62 +81,41 @@ function IllustrationFrame(arg0) {
     </View>
   );
 }
-function QuestDock3DOrbsAPNGPlayer(shouldAnimate) {
-  shouldAnimate = shouldAnimate.shouldAnimate;
-  const ref = noop.useRef(null);
-  const tmp = closure_8();
-  const aPNGPlayerControls = APNGPlayer.useAPNGPlayerControls(ref);
-  items = [aPNGPlayerControls, shouldAnimate];
-  const effect = noop.useEffect(() => {
-    if (shouldAnimate) {
-      aPNGPlayerControls.play();
-    } else {
-      aPNGPlayerControls.pause();
-    }
-  }, items);
-  return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef17693, style: tmp.fill, autoplay: false });
-}
 function QuestDock3DOrbsIllustration() {
   const tmp = closure_8();
   items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp6 = useIsQuestDockContentVisibleDefault();
-  let tmp7 = tmp6;
-  if (tmp6) {
-    tmp7 = !obj2.useIsQuestDockExpanded();
+  const tmp5 = useIsQuestDockContentVisibleDefault();
+  let tmp6 = tmp5;
+  if (tmp5) {
+    tmp6 = !obj2.useIsQuestDockExpanded();
   }
-  if (tmp7) {
-    tmp7 = !stateFromStores;
-  }
+  const obj3 = {
+    source: null,
+    style: null,
+    resizeMode: "contain",
+    enableAnimation: null,
+    paused: null,
+    accessible: false,
+  };
+  const obj4 = { uri: null };
   obj2 = QuestDockHooks;
-  if (tmp2Result.isAndroid()) {
-    const obj3 = { shouldAnimate: tmp7 };
-    let tmp8Result = <QuestDock3DOrbsAPNGPlayer shouldAnimate={tmp7} />;
-  } else {
-    const obj4 = {
-      source: null,
-      style: null,
-      resizeMode: "contain",
-      enableAnimation: null,
-      paused: null,
-      accessible: false,
-    };
-    const obj5 = { uri: _modDef17693 };
-    obj4.source = obj5;
-    obj4.style = tmp.fill;
-    obj4.enableAnimation = !stateFromStores;
-    obj4.paused = !tmp7;
-    tmp8Result = jsx(FastImageDefault, {
-      source: null,
-      style: null,
-      resizeMode: "contain",
-      enableAnimation: null,
-      paused: null,
-      accessible: false,
-    });
-    const tmp5Result = FastImageDefault;
+  obj4.uri = _modDef17813;
+  obj3.source = obj4;
+  obj3.style = tmp.fill;
+  obj3.enableAnimation = !stateFromStores;
+  if (tmp6) {
+    tmp6 = !stateFromStores;
   }
-  return tmp8Result;
+  obj3.paused = !tmp6;
+  return jsx(FastImageDefault, {
+    source: null,
+    style: null,
+    resizeMode: "contain",
+    enableAnimation: null,
+    paused: null,
+    accessible: false,
+  });
 }
 function QuestDock2DOrbsIllustration() {
   return jsx(native.QuestBar_2DOrbsRive, {
@@ -154,11 +132,11 @@ function QuestDockOrbHandsIllustration() {
   });
 }
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(5275).QuestsExperimentLocations;
-const QuestDockConstants = fn(17580);
+const QuestsExperimentLocations = fn(5338).QuestsExperimentLocations;
+const QuestDockConstants = fn(17698);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT } = QuestDockConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   frame: { marginRight: -QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT + 5 },
   hands: null,

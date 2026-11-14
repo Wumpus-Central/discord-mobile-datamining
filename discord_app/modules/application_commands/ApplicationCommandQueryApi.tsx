@@ -52,7 +52,7 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(11339);
+let ApplicationCommandIndexStore = fn(11406);
 ({
   useContextIndexState: closure_6,
   useDiscoveryState: metroImportDefault,
@@ -60,17 +60,17 @@ let ApplicationCommandIndexStore = fn(11339);
   useUserIndexState: closure_9,
 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(6282).BuiltInSectionId;
+const BuiltInSectionId = fn(6345).BuiltInSectionId;
 const NOOP = fn(1072).NOOP;
-let items = [fn(2116).ApplicationCommandType.CHAT];
-let section = { id: "placeholder-section", type: fn(5922).ApplicationCommandSectionType.APPLICATION, name: "" };
+let items = [fn(2119).ApplicationCommandType.CHAT];
+let section = { id: "placeholder-section", type: fn(5985).ApplicationCommandSectionType.APPLICATION, name: "" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "a", command: "isArray", section: "isArray" };
+    return { application: "channel_id", command: "flex", section: "analyticsLocations" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -121,7 +121,7 @@ export function getCachedCommand(type, commandId, applicationId) {
         }
       }
     }
-    return { application: "a", command: "isArray", section: "isArray" };
+    return { application: "channel_id", command: "flex", section: "analyticsLocations" };
   }
 }
 export function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -462,7 +462,7 @@ export function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "flexDirection" };
+    return { command: "disabled", application: "isArray" };
   }, items);
 }
 export function useCommandsForApplication(arg0, arg1, arg2) {

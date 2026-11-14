@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import useChannelDockHeightDefault from "useChannelDockHeight.tsx";
+import VoicePanelDockLayout from "../../../voice_panel/native/dock/VoicePanelDockLayout.tsx";
 import MainTabsNavigatorPanelContextDefault from "../panels/MainTabsNavigatorPanelContext.tsx";
 import useSafeAreaInsetsSharedValueDefault from "../../../safe_area/useSafeAreaInsetsSharedValue.native.tsx";
 import useSafeAreaBottomKeyboardInfoControllerDefault from "useSafeAreaBottomKeyboardInfoController.tsx";
@@ -31,19 +31,20 @@ export default function useChannelSafeAreaHeightSharedValue() {
   const keyboardWillOpenSharedValue = require("useKeyboardType").useKeyboardWillOpenSharedValue();
   const minimum = useKeyboardActionSheetHeightDefault().minimum;
   const obj2 = require("useKeyboardType");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(minimum);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(minimum);
   let result = sharedValue.set(minimum);
-  const obj3 = require("../../../../../_runtime/metro/01652__.js");
+  const obj3 = require("../../../../../_runtime/metro/01655__.js");
   const token = require("useToken").useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM);
-  const tmp7 = useChannelDockHeightDefault();
-  _require = tmp7;
   const obj5 = require("useToken");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(tmp7);
-  const obj6 = require("../../../../../_runtime/metro/01652__.js");
+  const channelDockHeight = require("VoicePanelDockLayout").useChannelDockHeight();
+  _require = channelDockHeight;
+  const obj6 = require("VoicePanelDockLayout");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(channelDockHeight);
+  const obj7 = require("../../../../../_runtime/metro/01655__.js");
   const isChannelFullyOpen = require("useIsChannelFullyOpen").getIsChannelFullyOpen(
     noop.useContext(MainTabsNavigatorPanelContextDefault),
   );
-  items = [tmp7, sharedValue1, isChannelFullyOpen];
+  items = [channelDockHeight, sharedValue1, isChannelFullyOpen];
   const effect = noop.useEffect(() => {
     if (c2) {
       let withSpringResult = spring_spring.withSpring(c0, VoicePanelSheetMorph.DOCK_SPACE_SPRING_CONFIG);
@@ -52,7 +53,7 @@ export default function useChannelSafeAreaHeightSharedValue() {
     }
     const result = _undefined2.set(withSpringResult);
   }, items);
-  const obj7 = require("useIsChannelFullyOpen");
+  const obj8 = require("useIsChannelFullyOpen");
   const items1 = [
     c4,
     sharedValue1,
@@ -99,11 +100,11 @@ export default function useChannelSafeAreaHeightSharedValue() {
   useChannelSafeAreaHeightSharedValueAndroidTsx1.__closure = items2;
   useChannelSafeAreaHeightSharedValueAndroidTsx1.__workletHash = 15573495853475;
   useChannelSafeAreaHeightSharedValueAndroidTsx1.__initData = tmp11;
-  return require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+  return require("../../../../../_runtime/metro/01655__.js").useDerivedValue(
     useChannelSafeAreaHeightSharedValueAndroidTsx1,
   );
 }
 export function useChannelSafeAreaRestingHeight() {
   const token = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_OFFSET_MINIMUM);
-  return Math.max(useSafeAreaInsetsDefault().bottom, token, useChannelDockHeightDefault());
+  return Math.max(useSafeAreaInsetsDefault().bottom, token, VoicePanelDockLayout.useChannelDockHeight());
 }

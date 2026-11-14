@@ -9,7 +9,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ Fragment: closure_4, jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = [];
-let closure_8 = { item: "delete", positionPercentage: false };
+let closure_8 = { item: "description", positionPercentage: false };
 let closure_9 = { zIndex: 5 };
 let closure_10 = {
   code: "(function ChannelListLegendListTsx1(event){let[scrollPosValue,onScrollWorklet,onScroll,scheduleOnRN]=this.__closure;scrollPosValue.set(event.contentOffset.y);onScrollWorklet(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);if(onScroll!=null){scheduleOnRN(onScroll);}})",
@@ -84,7 +84,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
       return Math.max(0, Math.min(diff, contentSize + c2 - c3));
     }
   }, []);
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(memo);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(memo);
   const ref2 = noop.useRef(tmp3);
   ref2.current = tmp3;
   const ref3 = noop.useRef(0);
@@ -299,14 +299,14 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   }, items);
   const items1 = [memo1];
   const imperativeHandle = noop.useImperativeHandle(ref, () => memo1, items1);
-  let obj2 = require("../../../../_runtime/metro/01652__.js");
+  let obj2 = require("../../../../_runtime/metro/01655__.js");
   const tmp5 = _require;
   const items2 = [
     index,
     sharedValue,
     onScrollWorklet,
     onScroll,
-    require("../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01708__.js").scheduleOnRN,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -333,7 +333,7 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   ChannelListLegendListTsx1.__workletHash = 15385241443618;
   ChannelListLegendListTsx1.__initData = tmp11;
   const items4 = [renderItem, renderSectionFooter, renderSectionHeader];
-  const obj3 = require("../../../../_runtime/metro/01652__.js");
+  const obj3 = require("../../../../_runtime/metro/01655__.js");
   const callback = obj.useCallback((item) => {
     item = item.item;
     const type = item.type;
@@ -394,10 +394,10 @@ export default noop.memo(function ChannelListLegendList(listViewportHeight) {
   obj4.ListHeaderComponentStyle = ref1;
   obj4.onEndReached = onEndReached;
   obj4.onEndReachedThreshold = num;
-  obj4.onScroll = require("../../../../_runtime/metro/01652__.js").useAnimatedScrollHandler(ChannelListLegendListTsx1);
+  obj4.onScroll = require("../../../../_runtime/metro/01655__.js").useAnimatedScrollHandler(ChannelListLegendListTsx1);
   obj4.renderItem = callback;
   obj4.scrollIndicatorInsets = memo4;
-  const items8 = [renderItem(tmp5(15063).AnimatedLegendList, obj4), renderAccessory(memo1)];
+  const items8 = [renderItem(tmp5(15177).AnimatedLegendList, obj4), renderAccessory(memo1)];
   obj5.children = items8;
   return renderSectionFooter(renderHeader, obj5);
 });

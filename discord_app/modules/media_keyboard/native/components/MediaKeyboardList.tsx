@@ -19,12 +19,12 @@ const MediaKeyboardItemDefault = MediaKeyboardItem;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-let closure_6 = fn(1623).InAppCameraUsedCameraPreviewTypes;
-let closure_7 = fn(5504).ACTION_SHEET_START_HEIGHT_RATIO;
-const NativePermissionStatus = fn(6839).NativePermissionStatus;
+let closure_6 = fn(1626).InAppCameraUsedCameraPreviewTypes;
+let closure_7 = fn(5567).ACTION_SHEET_START_HEIGHT_RATIO;
+const NativePermissionStatus = fn(6902).NativePermissionStatus;
 const jsx = fn(21).jsx;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PhotoLibraryHelper);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   listContainer: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -147,7 +147,7 @@ export default noop.memo(function MediaKeyboardList(channel) {
   const items4 = [
     closure_15,
     require("cheapWorkletShallowEqual").cheapWorkletArrayShallowEqual,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     tmp16[1],
     height,
     result,
@@ -189,15 +189,15 @@ export default noop.memo(function MediaKeyboardList(channel) {
   MediaKeyboardListTsx4.__closure = items5;
   MediaKeyboardListTsx4.__workletHash = 5873312059707;
   MediaKeyboardListTsx4.__initData = tmp19;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     MediaKeyboardListTsx3,
     MediaKeyboardListTsx4,
   );
-  const obj6 = require("../../../../../_runtime/metro/01652__.js");
+  const obj6 = require("../../../../../_runtime/metro/01655__.js");
   [tmp28, tmp29] = noop.useState(false);
   const tmp3Result = _slicedToArray(noop.useState(false), 2);
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const tmp9Result = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const tmp9Result = require("../../../../../_runtime/metro/01655__.js");
   const items6 = [disableWhenReachedLimit, animatedIndex];
   _require = undefined;
   [tmp31, tmp32] = items6;
@@ -210,7 +210,7 @@ export default noop.memo(function MediaKeyboardList(channel) {
   MediaKeyboardListTsx1.__closure = items7;
   MediaKeyboardListTsx1.__workletHash = 906652326218;
   MediaKeyboardListTsx1.__initData = tmp31;
-  const items8 = [ref, sharedValue, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp29];
+  const items8 = [ref, sharedValue, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp29];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -237,14 +237,14 @@ export default noop.memo(function MediaKeyboardList(channel) {
   MediaKeyboardListTsx2.__closure = items9;
   MediaKeyboardListTsx2.__workletHash = 8642745285010;
   MediaKeyboardListTsx2.__initData = tmp33;
-  const animatedReaction1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     MediaKeyboardListTsx1,
     MediaKeyboardListTsx2,
   );
-  const tmp9Result5 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp9Result5 = require("../../../../../_runtime/metro/01655__.js");
   if (flag) {
-    flag = tmp9(8814).isImageCaptureIntentSupported();
-    const tmp9Result6 = tmp9(8814);
+    flag = tmp9(8881).isImageCaptureIntentSupported();
+    const tmp9Result6 = tmp9(8881);
   }
   let num;
   if (assets != null) {
@@ -361,7 +361,7 @@ export default noop.memo(function MediaKeyboardList(channel) {
       ),
     items13,
   );
-  width = tmp6(1493)().width;
+  width = tmp6(1496)().width;
   const items14 = [width, itemsPerRow];
   const items15 = [onViewAll, flag2];
   const memo1 = obj.useMemo(() => {
@@ -453,16 +453,16 @@ export default noop.memo(function MediaKeyboardList(channel) {
     obj8.onScroll = callback;
     const intl = tmp9(1113).intl;
     obj8.accessibilityLabel = intl.string(tmp9(1113).t.XONG6A);
-    obj8.footerSize = tmp9(11588).FOOTER_HEIGHT;
+    obj8.footerSize = tmp9(11655).FOOTER_HEIGHT;
     obj8.renderFooter = callback4;
     obj8.chunkBase = minimum;
     let prop;
     if (!tmp28) {
-      prop = tmp9(7781).MINIMUM_BATCHES_TO_RENDER;
+      prop = tmp9(7847).MINIMUM_BATCHES_TO_RENDER;
     }
     obj8.batchesToRender = prop;
-    mediaEmptyStateComponentOrNull = extensions(tmp6(7781), obj8);
-    let tmp6Result = tmp6(7781);
+    mediaEmptyStateComponentOrNull = extensions(tmp6(7847), obj8);
+    let tmp6Result = tmp6(7847);
   }
   return mediaEmptyStateComponentOrNull;
 });

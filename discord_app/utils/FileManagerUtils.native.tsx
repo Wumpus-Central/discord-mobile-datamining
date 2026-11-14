@@ -39,7 +39,7 @@ let closure_5 = async function _readFile(arg0) {
               if (!obj.isAndroid()) {
                 return closure_1_1(1149).getConstants().SharedDirPath;
               }
-              obj = closure_1_0(1377);
+              obj = closure_1_0(1380);
             }
             if ("cache" === arg0) {
               let DocumentsDirPath = closure_1_1(1149).getConstants().CacheDirPath;

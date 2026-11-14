@@ -9,6 +9,10 @@ import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 require = fn;
 function ShareToServerSheet(projectId) {
   projectId = projectId.projectId;
+  ({ guildId, publishOptions, addingToAnother } = projectId);
+  if (addingToAnother === undefined) {
+    addingToAnother = false;
+  }
   dependencyMap = undefined;
   guild = undefined;
   let sharing;
@@ -61,7 +65,7 @@ function ShareToServerSheet(projectId) {
                 shared = !closure_130_5.current;
               }
               if (shared) {
-                tmp2(5489).hideActionSheet(ConjureShareToServerSheet);
+                tmp2(5552).hideActionSheet(ConjureShareToServerSheet);
                 if ("publish" === closure_129_0.next) {
                   c3 = 2;
                   c4 = 1;
@@ -70,9 +74,9 @@ function ShareToServerSheet(projectId) {
                 } else {
                   const intl = server(1113).intl;
                   if ("added" === closure_129_0.next) {
-                    let o2xHEb = tmp2(4079)["4WtS+v"];
+                    let o2xHEb = tmp2(4131)["4WtS+v"];
                   } else {
-                    o2xHEb = tmp2(4079).o2xHEb;
+                    o2xHEb = tmp2(4131).o2xHEb;
                   }
                   const obj8 = { app: closure_130_1, server: null };
                   let name;
@@ -86,10 +90,10 @@ function ShareToServerSheet(projectId) {
                   const obj9 = { text: null, variant: "success" };
                   obj8.server = server;
                   obj9.text = intl.formatToPlainString(o2xHEb, obj8);
-                  tmp2(5952).open(ConjureShareToServerSheet, obj9);
-                  const obj10 = tmp2(5952);
+                  tmp2(6015).open(ConjureShareToServerSheet, obj9);
+                  const obj10 = tmp2(6015);
                 }
-                const obj2 = tmp2(5489);
+                const obj2 = tmp2(5552);
               }
             }
           } else if (arg0 === 1) {
@@ -109,7 +113,6 @@ function ShareToServerSheet(projectId) {
       }
     }
   };
-  ({ guildId, publishOptions } = projectId);
   const tmp = closure_10();
   items = [closure_6];
   const items1 = [projectId];
@@ -125,12 +128,13 @@ function ShareToServerSheet(projectId) {
   if (str == null) {
     str = "";
   }
-  const tmp6 = str(13090)(projectId, guildId, publishOptions);
+  const tmp6 = str(13189)(projectId, guildId, publishOptions, addingToAnother);
   dependencyMap = tmp6;
   ({ guilds, guild } = tmp6);
   sharing = tmp6.sharing;
   const error = tmp6.error;
   let intl = tmp2(1113).intl;
+  const tmp7 = str(4131);
   let obj = projectId(504);
   closure_5 = sharing.useRef(false);
   const effect = sharing.useEffect(() => {
@@ -140,35 +144,49 @@ function ShareToServerSheet(projectId) {
     };
   }, []);
   let obj2 = {
-    header: closure_7(projectId(7847).BottomSheetTitleHeader, {
-      title: intl.formatToPlainString(str(4079).N3Ryqz, { app: str }),
+    header: closure_7(projectId(7913).BottomSheetTitleHeader, {
+      title: intl.formatToPlainString(addingToAnother ? tmp7["Aet9+Z"] : tmp7.N3Ryqz, { app: str }),
     }),
     children: null,
   };
   let obj3 = { style: tmp.content, children: null };
-  let tmp9Result = null;
+  let tmp10Result = null;
   if (null != guild) {
-    tmp9Result = null;
-    if (guilds.length > 1) {
+    if (addingToAnother) {
       let obj4 = { title: null, hasIcons: false, value: null, onChange: null, children: null };
       const intl2 = tmp2(1113).intl;
-      obj4.title = intl2.string(tmp5(4079).Uq5hU9);
+      obj4.title = intl2.string(tmp5(4131).Uq5hU9);
       obj4.value = guild.id;
       obj4.onChange = tmp6.pickGuild;
       obj4.children = guilds.map((id) =>
         metroImportDefault(TableRadioRow.TableRadioRow, { value: id.id, label: id.name, disabled: sharing }, id.id),
       );
-      tmp9Result = closure_7(tmp2(7679).TableRadioGroup, obj4);
+      tmp10Result = closure_7(tmp2(7745).TableRadioGroup, obj4);
+    } else {
+      tmp10Result = null;
     }
   }
-  const items2 = [tmp9Result, , , ,];
-  let obj5 = { rows: null };
-  const formatToPlainStringResult = intl.formatToPlainString(str(4079).N3Ryqz, { app: str });
-  const tmp11 = closure_5;
-  const tmp5Result = str(13212);
-  obj5.rows = projectId(13210).conjureShareRows(stateFromStores);
-  items2[1] = closure_7(tmp5Result, obj5);
-  let tmp9Result2 = null;
+  const items2 = [tmp10Result, , , , ,];
+  const formatToPlainStringResult = intl.formatToPlainString(addingToAnother ? tmp7["Aet9+Z"] : tmp7.N3Ryqz, {
+    app: str,
+  });
+  const tmp12 = closure_5;
+  const tmp2Result = projectId(13316);
+  if (addingToAnother) {
+    let result = tmp2Result.conjureAddToAnotherServerRows(stateFromStores);
+  } else {
+    result = tmp2Result.conjureShareRows(stateFromStores);
+  }
+  items2[1] = closure_7(str(13313), { rows: result });
+  let tmp10Result3 = null;
+  if (addingToAnother) {
+    let obj5 = { variant: "body-sm/normal", color: "text-muted", children: null };
+    const intl3 = tmp2(1113).intl;
+    obj5.children = intl3.string(tmp5(4131).Ewprwt);
+    tmp10Result3 = closure_7(tmp2(5929).Text, obj5);
+  }
+  items2[2] = tmp10Result3;
+  let tmp10Result4 = null;
   if (null != error) {
     let obj6 = {
       variant: "body-sm/medium",
@@ -176,46 +194,49 @@ function ShareToServerSheet(projectId) {
       accessibilityRole: "alert",
       children: error,
     };
-    tmp9Result2 = closure_7(tmp2(5866).Text, obj6);
+    tmp10Result4 = closure_7(tmp2(5929).Text, obj6);
   }
-  items2[2] = tmp9Result2;
-  let obj7 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
-  const intl3 = tmp2(1113).intl;
-  obj7.text = intl3.string(str(4079)["+ysSG7"]);
-  obj7.loading = sharing;
-  obj7.disabled = null == guild;
-  obj7.onPress = function confirm() {
-    const self = this;
-    const apply = closure_6.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  };
-  items2[3] = closure_7(projectId(5873).Button, obj7);
-  let obj8 = { variant: "secondary", text: null, disabled: null, onPress: null };
+  items2[3] = tmp10Result4;
   const intl4 = tmp2(1113).intl;
-  obj8.text = intl4.string(projectId(1113).t["ETE/oC"]);
+  const tmp5Result2 = str(4131);
+  const tmp5Result = str(13313);
+  items2[4] = closure_7(projectId(5936).Button, {
+    variant: "primary",
+    text: intl4.string(addingToAnother ? tmp5Result2["+uQwxA"] : tmp5Result2["+ysSG7"]),
+    loading: sharing,
+    disabled: null == guild,
+    onPress: function confirm() {
+      const self = this;
+      const apply = closure_6.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    },
+  });
+  let obj8 = { variant: "secondary", text: null, disabled: null, onPress: null };
+  const intl5 = tmp2(1113).intl;
+  obj8.text = intl5.string(projectId(1113).t["ETE/oC"]);
   obj8.disabled = sharing;
   obj8.onPress = function onPress() {
     return str(closure_2[11]).hideActionSheet(ConjureShareToServerSheet);
   };
-  items2[4] = closure_7(projectId(5873).Button, obj8);
+  items2[5] = closure_7(projectId(5936).Button, obj8);
   obj3.children = items2;
-  obj2.children = closure_8(tmp11, obj3);
-  return closure_7(projectId(7885).ActionSheet, obj2);
+  obj2.children = closure_8(tmp12, obj3);
+  return closure_7(projectId(7951).ActionSheet, obj2);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const ConjureShareToServerSheet = "ConjureShareToServerSheet";
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/server_share/native/showConjureShareToServerSheet.tsx");
+let result = size.fileFinishedImporting("modules/conjure/server_share/native/showConjureShareToServerSheet.tsx");
 
 export default function showConjureShareToServerSheet(arg0) {
   const obj2 = { key: ConjureShareToServerSheet, content: null };

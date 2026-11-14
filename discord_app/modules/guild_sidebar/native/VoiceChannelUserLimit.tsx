@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef15978 from "../../../../_runtime/metro/15978__.js";
+import _modDef16098 from "../../../../_runtime/metro/16098__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let rect = { videoIcon: null, wrapper: null, left: null, mid: null, right: null };
 let size = { height: 16, width: 16, marginRight: 4, tintColor: nativeDefault.colors.VOICE_CHANNEL_USER_LIMIT_ICON };
 rect.videoIcon = size;
@@ -17,7 +17,7 @@ rect.wrapper = {
   backgroundColor: nativeDefault.colors.VOICE_CHANNEL_USER_LIMIT_BACKGROUND,
   alignItems: "center",
   flexDirection: "row",
-  borderRadius: 10,
+  borderRadius: nativeDefault.radii.round,
   borderWidth: nativeDefault.modules.mobile.VOICE_CHANNEL_USER_LIMIT_BORDER_WIDTH,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   overflow: "hidden",
@@ -26,7 +26,7 @@ let obj = {
   backgroundColor: nativeDefault.colors.VOICE_CHANNEL_USER_LIMIT_BACKGROUND,
   alignItems: "center",
   flexDirection: "row",
-  borderRadius: 10,
+  borderRadius: nativeDefault.radii.round,
   borderWidth: nativeDefault.modules.mobile.VOICE_CHANNEL_USER_LIMIT_BORDER_WIDTH,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   overflow: "hidden",
@@ -38,6 +38,8 @@ rect.left = {
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.VOICE_CHANNEL_USER_LIMIT_BACKGROUND,
+  borderTopLeftRadius: nativeDefault.radii.round,
+  borderBottomLeftRadius: nativeDefault.radii.round,
 };
 let obj3 = {
   height: 20,
@@ -46,6 +48,8 @@ let obj3 = {
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.VOICE_CHANNEL_USER_LIMIT_BACKGROUND,
+  borderTopLeftRadius: nativeDefault.radii.round,
+  borderBottomLeftRadius: nativeDefault.radii.round,
 };
 rect.mid = {
   borderTopWidth: 20,
@@ -73,6 +77,8 @@ rect.right = {
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.VOICE_CHANNEL_USER_LIMIT_ACCENT_BACKGROUND,
+  borderTopRightRadius: nativeDefault.radii.round,
+  borderBottomRightRadius: nativeDefault.radii.round,
 };
 let closure_6 = createStyles.createStyles(rect);
 let obj5 = {
@@ -83,6 +89,8 @@ let obj5 = {
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.VOICE_CHANNEL_USER_LIMIT_ACCENT_BACKGROUND,
+  borderTopRightRadius: nativeDefault.radii.round,
+  borderBottomRightRadius: nativeDefault.radii.round,
 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceChannelUserLimit.tsx");
@@ -94,7 +102,7 @@ export default noop.memo(function VoiceChannelUserLimit(videoLimit) {
   const obj2 = { style: rect.left, children: null };
   let tmp3 = null;
   if (videoLimit.videoLimit) {
-    const obj3 = { source: _modDef15978, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
+    const obj3 = { source: _modDef16098, size: native.Icon.Sizes.REFRESH_SMALL_16, style: rect.videoIcon };
     tmp3 = React4(native.Icon, obj3);
   }
   items = [tmp3];

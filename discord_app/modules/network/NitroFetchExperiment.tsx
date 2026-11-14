@@ -1,6 +1,6 @@
 // discord_app/modules/network/NitroFetchExperiment.tsx
 import ApexExperiment2 from "../experiments/apex/index.tsx";
-import _mod9005 from "../../../_runtime/metro/09005__.js";
+import _mod9072 from "../../../_runtime/metro/09072__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
@@ -9,7 +9,7 @@ function synchronizeNetworkLayer() {
   if (tmp !== closure_7) {
     if (tmp) {
       if (null == closure_8) {
-        closure_8 = _mod9005;
+        closure_8 = _mod9072;
       }
       global.XMLHttpRequest = closure_8.XMLHttpRequest;
     } else {
@@ -19,7 +19,7 @@ function synchronizeNetworkLayer() {
   }
 }
 const obj = { networkLayer: "react_native", messagePrefetchEnabled: false };
-const ApexExperiment = fn(1449);
+const ApexExperiment = fn(1452);
 let closure_4 = ApexExperiment.createApexExperiment({
   name: "2026-10-android-nitro-fetch",
   kind: "user",
@@ -48,7 +48,7 @@ export function initializeNitroFetchExperiment() {
     if (tmp5 !== closure_7) {
       if (tmp5) {
         if (null == closure_8) {
-          closure_8 = tmp(9005);
+          closure_8 = tmp(9072);
         }
         tmp = global;
         _XMLHttpRequest = closure_8.XMLHttpRequest;

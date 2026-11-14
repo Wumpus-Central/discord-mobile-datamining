@@ -32,7 +32,7 @@ export function removeFrozenScreenIndexesChangedListener(arg0) {
 }
 export function useIsScreenIndexFrozenSharedValue(arg0) {
   _require = arg0;
-  sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(set.has(arg0));
+  sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(set.has(arg0));
   items = [arg0, sharedValue];
   const effect = noop.useEffect(() => {
     const fn = () => {

@@ -19,8 +19,18 @@ export function getDiscoverActionParameters(type, arg1) {
     str = "item_header";
   }
   type = type.type;
-  if (WaterwheelsCardTypes.WaterwheelsActionType.JOIN_GUILD === type) {
+  if ("guild_profile" === type) {
     const obj2 = {
+      actionType: "press_guild_profile",
+      gestureType: "press",
+      targetElement: str,
+      intentType: "navigate",
+      destinationType: "guild_profile",
+      guildId: type.guildId,
+    };
+    return obj2;
+  } else if (WaterwheelsCardTypes.WaterwheelsActionType.JOIN_GUILD === type) {
+    const obj3 = {
       actionType: "press_join_guild",
       gestureType: "press",
       targetElement: str,
@@ -28,13 +38,13 @@ export function getDiscoverActionParameters(type, arg1) {
       destinationType: "guild",
       guildId: type.value.guild_id,
     };
-    return obj2;
+    return obj3;
   } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_GUILD === type) {
     let str2 = "press";
     if (tmp) {
       str2 = "press_header";
     }
-    const obj3 = {
+    const obj4 = {
       actionType: str2,
       gestureType: "press",
       targetElement: str,
@@ -42,9 +52,9 @@ export function getDiscoverActionParameters(type, arg1) {
       destinationType: "guild",
       guildId: type.value.guild_id,
     };
-    return obj3;
+    return obj4;
   } else if (WaterwheelsCardTypes.WaterwheelsActionType.OPEN_NUDGE === type) {
-    const obj4 = {
+    const obj5 = {
       actionType: "press",
       gestureType: "press",
       targetElement: str,
@@ -52,7 +62,7 @@ export function getDiscoverActionParameters(type, arg1) {
       destinationType: "none",
       guildId: null,
     };
-    return obj4;
+    return obj5;
   } else {
     const obj = {
       actionType: "press",

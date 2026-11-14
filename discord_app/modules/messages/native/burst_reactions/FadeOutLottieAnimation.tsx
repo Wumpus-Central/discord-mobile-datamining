@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_7 = createStyles.createStyles({ content: { width: "100%" } });
 let closure_8 = {
   code: "(function FadeOutLottieAnimationTsx1(finished){let[scheduleOnRN,setIsFadeOut]=this.__closure;if(finished)scheduleOnRN(setIsFadeOut,false);})",
@@ -33,14 +33,14 @@ export default function FadeOutLottieAnimation(onComplete) {
   const effect = noop.useEffect(() => {
     _undefined2(false);
   }, []);
-  require("../../../../../_runtime/metro/01652__.js");
+  require("../../../../../_runtime/metro/01655__.js");
   let items1 = [
     closure_9,
     tmp4,
     first,
     require("timing/timing").withTiming,
     closure_8,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     tmp5[1],
   ];
   _require = undefined;
@@ -118,7 +118,7 @@ export default function FadeOutLottieAnimation(onComplete) {
     };
     const merged1 = Object.assign(merged);
     obj2.children = jsx(LottieAnimationViewDefault, { style: tmp2.content, speed: null, onAnimationFinish: null });
-    let tmp20Result = jsx(_modDef1652.View, { style: tmp18, children: null });
+    let tmp20Result = jsx(_modDef1655.View, { style: tmp18, children: null });
   } else {
     tmp20Result = null;
   }

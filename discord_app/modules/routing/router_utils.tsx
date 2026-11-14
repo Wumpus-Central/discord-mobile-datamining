@@ -91,15 +91,23 @@ function transitionTo(CHANNELResult, guildScheduledEvent2) {
 ({ Routes: hasOwnProperty, PageAnalyticsLocations: closure_6, ComponentActions: metroImportDefault } = Constants);
 const logger = new LoggerDefault("Routing/Utils");
 const items = [Constants.RelativeMarketingURLs.DEVELOPER_PORTAL];
+const set = new Set();
 let _extends = _extends_mod;
 _extends = _extends.createMemoryHistory();
-let closure_10 = _extends.listen((arg0, arg1) => {
+let closure_11 = _extends.listen((arg0, arg1) => {
   if ("REPLACE" !== arg1) {
-    closure_10();
+    closure_11();
   }
 });
 const result = size.fileFinishedImporting("modules/routing/router_utils.tsx");
 
+export function addNavigationBlocker(arg0) {
+  closure_0 = arg0;
+  set.add(arg0);
+  return () => {
+    set.delete(closure_0);
+  };
+}
 export function shouldNavigate() {
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   return !ComponentDispatch.hasSubscribers(constants2.MODAL_CLOSE);

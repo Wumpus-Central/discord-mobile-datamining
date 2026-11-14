@@ -2,7 +2,7 @@
 import apply from "../../../../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../../intl/index.native.tsx";
-import _modDef1652 from "../../../../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../../../../_runtime/metro/01655__.js";
 import Text_Text from "../../../../../../../design/components/Text/native/Text.tsx";
 import SearchPlatformUtils from "../../../../SearchPlatformUtils.tsx";
 import usePlaceholderStyles from "../../../../hooks/usePlaceholderStyles.tsx";
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(8999);
+const SearchConstants = fn(9066);
 ({
   MEDIA_NUM_COLUMNS: hasOwnProperty,
   MEDIA_ITEM_GAP_WIDTH: closure_6,
@@ -22,7 +22,7 @@ const SearchConstants = fn(8999);
 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { zIndex: 1, position: "absolute", width: "100%" },
   recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING },
@@ -56,7 +56,7 @@ export default function MediaGridPlaceholderItem(arg0) {
   };
   items = [containerStyle, placeholderAnimatedStyle];
   obj2.style = items;
-  return metroImportDefault(_modDef1652.View, obj2);
+  return metroImportDefault(_modDef1655.View, obj2);
 }
 export function RecentsMediaGridPlaceholder(visible) {
   ({ size: require, numRows } = visible);
@@ -123,5 +123,5 @@ export function RecentsMediaGridPlaceholder(visible) {
     }),
   ];
   obj2.children = items4;
-  return closure_8(numRows(1652).View, obj2);
+  return closure_8(numRows(1655).View, obj2);
 }

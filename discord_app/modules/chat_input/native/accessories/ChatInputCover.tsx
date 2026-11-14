@@ -32,13 +32,13 @@ class ChatInputCover {
                 tmp = setFocused;
               }
               if (tmp) {
-                tmp = dependencyMap !== flag(1625).KeyboardTypes.SYSTEM;
+                tmp = dependencyMap !== flag(1628).KeyboardTypes.SYSTEM;
               }
               if (tmp) {
                 tmp = closure_1_3;
               }
               if (tmp) {
-                const obj = { type: flag(1625).KeyboardTypes.SYSTEM };
+                const obj = { type: flag(1628).KeyboardTypes.SYSTEM };
                 closure_1_2(obj);
               }
             },

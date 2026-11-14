@@ -24,10 +24,10 @@ function MainPage() {
   });
 }
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7896).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7962).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   tabbedContainer: { marginTop: nativeDefault.space.PX_24, marginHorizontal: -PROFILE_SIDE_PADDING },
   page: null,
@@ -79,7 +79,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
     num2 = 1;
   }
   [first, closure_5] = first.useState(num2);
-  arr = tmp2(12048)(userId);
+  arr = tmp2(12121)(userId);
   closure_7 = tmp8;
   let items1 = [arr];
   const memo = first.useMemo(() => arr.filter(UserProfileGameWidgetTypes.isGameWidget), items1);
@@ -156,7 +156,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   UserProfileEditFormTabsTsx2.__closure = items6;
   UserProfileEditFormTabsTsx2.__workletHash = 6535287831650;
   UserProfileEditFormTabsTsx2.__initData = tmp19;
-  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     UserProfileEditFormTabsTsx1,
     UserProfileEditFormTabsTsx2,
   );
@@ -168,7 +168,7 @@ export default noop.memo(function UserProfileEditFormTabs(userId) {
   }
   obj6.variant = str;
   const items7 = [
-    arr(tmp10(13153).Tabs, obj6),
+    arr(tmp10(13262).Tabs, obj6),
     arr(UserProfileTabPagesDefault, { state: segmentedControlState, pageHeights, scrollPosition, scrollViewRef }),
   ];
   obj5.children = items7;

@@ -39,3 +39,38 @@ export function getPromotionForCollectiblesProduct(selectedProduct, tenantMetada
     }
   }
 }
+export function isPromotionInInvoicePreview(getDiscountIdIfExists, rewardConfig) {
+  let id;
+  if (rewardConfig != null) {
+    rewardConfig = rewardConfig.rewardConfig;
+    if (rewardConfig != null) {
+      const discount = rewardConfig.discount;
+      if (discount != null) {
+        id = discount.id;
+      }
+    }
+  }
+  let tmp2 = null != id;
+  if (tmp2) {
+    let discountIdIfExists;
+    if (getDiscountIdIfExists != null) {
+      discountIdIfExists = getDiscountIdIfExists.getDiscountIdIfExists();
+    }
+    const _String = String;
+    tmp2 = discountIdIfExists === String(id);
+  }
+  return tmp2;
+}
+export function hasFiatDiscountPromotion(rewardConfig) {
+  let fiatEnabled;
+  if (rewardConfig != null) {
+    rewardConfig = rewardConfig.rewardConfig;
+    if (rewardConfig != null) {
+      const discount = rewardConfig.discount;
+      if (discount != null) {
+        fiatEnabled = discount.fiatEnabled;
+      }
+    }
+  }
+  return true === fiatEnabled;
+}

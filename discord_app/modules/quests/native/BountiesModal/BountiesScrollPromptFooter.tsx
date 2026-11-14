@@ -2,7 +2,7 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import AnimatedEnterExitItemDefault from "../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import BountiesModalTransitionsRefactorExperiment from "../../experiments/BountiesModalTransitionsRefactorExperiment.tsx";
@@ -41,25 +41,25 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj3.children = closure_7(zIndex(5380).BountiesScrollGradientRive, {
+  obj3.children = closure_7(zIndex(5443).BountiesScrollGradientRive, {
     stateMachine: "State Machine 1",
     fit: "fill",
     alignment: "bottom-center",
     withReducedMotion: str,
   });
-  const items5 = [closure_7(_modDef1652.View, obj3)];
+  const items5 = [closure_7(_modDef1655.View, obj3)];
   const obj4 = { style: null, onLayout: onContentLayout, children };
   const items6 = [tmp.content, memo1, opacityStyle];
   obj4.style = items6;
-  items5[1] = closure_7(_modDef1652.View, obj4);
+  items5[1] = closure_7(_modDef1655.View, obj4);
   obj2.children = items5;
-  return closure_8(_modDef1652.View, obj2);
+  return closure_8(_modDef1655.View, obj2);
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5275).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5338).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_9 = createStyles.createStyles(() => {
   const obj = {
     root: { position: "absolute", bottom: 0, left: 0, right: 0 },
@@ -80,8 +80,8 @@ let items = [
   {
     code: "(function BountiesScrollPromptFooterTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})",
   },
-  fn(5485).withTiming,
-  fn(5488).timingStandard,
+  fn(5548).withTiming,
+  fn(5551).timingStandard,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -100,8 +100,8 @@ let items2 = [
   {
     code: "(function BountiesScrollPromptFooterTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})",
   },
-  fn(5485).withTiming,
-  fn(5488).timingStandard,
+  fn(5548).withTiming,
+  fn(5551).timingStandard,
 ];
 let closure_130_0;
 let closure_130_1;

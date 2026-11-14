@@ -51,7 +51,7 @@ function handleLogout(source) {
   }
   const dispatchResult = DispatcherDefault.dispatch(obj2);
 }
-const setPromoEmailConsentState = fn(6782).setPromoEmailConsentState;
+const setPromoEmailConsentState = fn(6845).setPromoEmailConsentState;
 const Constants = fn(1072);
 ({
   Endpoints: closure_9,
@@ -60,7 +60,7 @@ const Constants = fn(1072);
   AbortCodes: closure_12,
   Routes: map1,
 } = Constants);
-const PushNotificationConstants = fn(6784);
+const PushNotificationConstants = fn(6847);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_14, getDevicePushProvider: closure_15 } = PushNotificationConstants);
 const logger = new LoggerDefault("AuthenticationActionCreators");
 const PasswordResetResult = { MFA: "MFA", SUCCESS: "SUCCESS" };
@@ -220,7 +220,7 @@ export default {
     }
     obj2.login_instance_id = loginInstanceId;
     request.body = obj2;
-    let obj = self(6788);
+    let obj = self(6851);
     request.trackedActionData = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_LOGIN_MFA };
     const obj3 = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_LOGIN_MFA };
     const postResult = obj.post(request);
@@ -303,7 +303,7 @@ export default {
               const obj13 = tmp3(572);
               c4 = 2;
               c5 = 1;
-              const obj6 = { value: closure_0(6789).fetchWebAuthnPasswordlessChallenge(), done: false };
+              const obj6 = { value: closure_0(6852).fetchWebAuthnPasswordlessChallenge(), done: false };
               return obj6;
             }
           } else if (1 === tmp8) {
@@ -361,10 +361,10 @@ export default {
               if (obj3.isUnknownPasskeyError(closure_128_4)) {
                 c4 = 6;
                 c5 = 1;
-                const obj16 = { value: tmp3(6791).signalUnknownCredential(closure_128_3), done: false };
+                const obj16 = { value: tmp3(6854).signalUnknownCredential(closure_128_3), done: false };
                 return obj16;
               }
-              obj3 = closure_0(6790);
+              obj3 = closure_0(6853);
             } else if (5 === tmp8) {
               if (arg0 === 1) {
                 c5 = 3;
@@ -415,9 +415,9 @@ export default {
       trackedActionData: null,
       rejectWithError: true,
     };
-    let obj = self(6788);
-    request.trackedActionData = { event: isMultiAccount(1260).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
-    let obj2 = { event: isMultiAccount(1260).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
+    let obj = self(6851);
+    request.trackedActionData = { event: isMultiAccount(1264).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
+    let obj2 = { event: isMultiAccount(1264).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
     const postResult = obj.post(request);
     return obj
       .post(request)
@@ -510,18 +510,18 @@ export default {
               };
               const obj4 = { ticket };
               request.body = obj4;
-              const obj6 = { event: ticket(1260).NetworkActionNames.USER_ONE_TIME_LOGIN };
+              const obj6 = { event: ticket(1264).NetworkActionNames.USER_ONE_TIME_LOGIN };
               request.trackedActionData = obj6;
               c4 = 2;
               c5 = 1;
-              const obj7 = { value: tmp3(6788).post(request), done: false };
+              const obj7 = { value: tmp3(6851).post(request), done: false };
               return obj7;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = closure_2;
             const obj8 = { type: "LOGIN_FAILURE", error: null };
-            const v6OrEarlierAPIError = new ticket(6694).V6OrEarlierAPIError(closure_128_1);
+            const v6OrEarlierAPIError = new ticket(6757).V6OrEarlierAPIError(closure_128_1);
             obj8.error = v6OrEarlierAPIError;
             tmp3(572).dispatch(obj8);
             throw closure_128_1;
@@ -594,10 +594,10 @@ export default {
     });
     const dispatchResult = DispatcherDefault.dispatch(obj2);
   },
-  logout(TTI_test) {
-    _require = TTI_test;
-    let DEFAULT_LOGGED_OUT = LOGIN;
-    if (LOGIN === undefined) {
+  logout(logout_source, arg1) {
+    _require = logout_source;
+    let DEFAULT_LOGGED_OUT = arg1;
+    if (arg1 === undefined) {
       DEFAULT_LOGGED_OUT = constants2.DEFAULT_LOGGED_OUT;
     }
     importAll = id;
@@ -609,11 +609,11 @@ export default {
     const Storage2 = require("Storage").Storage;
     obj2.voip_token = Storage2.get(closure_11);
     request.body = obj2;
-    const obj = DEFAULT_LOGGED_OUT(6788);
+    const obj = DEFAULT_LOGGED_OUT(6851);
     const tmp3 = _require;
     request.trackedActionData = {
       event: require("discord_common/AnalyticsUtils").NetworkActionNames.USER_LOGOUT,
-      properties: { logout_source: TTI_test },
+      properties: { logout_source },
     };
     let tmp4 = null != id;
     if (tmp4) {
@@ -629,10 +629,10 @@ export default {
     const merged = Object.assign(tmp4);
     const obj3 = {
       event: require("discord_common/AnalyticsUtils").NetworkActionNames.USER_LOGOUT,
-      properties: { logout_source: TTI_test },
+      properties: { logout_source },
     };
-    request.rejectWithError = tmp3(1282).rejectWithMigratedError();
-    const tmp3Result = tmp3(1282);
+    request.rejectWithError = tmp3(1285).rejectWithMigratedError();
+    const tmp3Result = tmp3(1285);
     return obj.post(request).finally(() => {
       let tmp2 = null != closure_2;
       if (tmp2) {
@@ -703,14 +703,14 @@ export default {
       const request = {
         url: constants.VERIFY,
         body: { token },
-        trackedActionData: { event: token(1260).NetworkActionNames.USER_VERIFY },
+        trackedActionData: { event: token(1264).NetworkActionNames.USER_VERIFY },
         rejectWithError: null,
       };
       {
-        event: token(1260).NetworkActionNames.USER_VERIFY;
+        event: token(1264).NetworkActionNames.USER_VERIFY;
       }
-      request.rejectWithError = token(1282).rejectWithMigratedError();
-      await tmp2(6788).post(request);
+      request.rejectWithError = token(1285).rejectWithMigratedError();
+      await tmp2(6851).post(request);
       closure_128_0 = value;
       tmp2(572).dispatch({ type: "LOGIN_SUCCESS", token: closure_128_0.body.token });
       return closure_128_0.body.user_id;
@@ -887,10 +887,10 @@ export default {
         url: constants.RESET_PASSWORD,
         body: { code, ticket, password, token, source, method },
         oldFormErrors: true,
-        trackedActionData: { event: tmp4(1260).NetworkActionNames.USER_RESET_PASSWORD, properties: { mfa: true } },
+        trackedActionData: { event: tmp4(1264).NetworkActionNames.USER_RESET_PASSWORD, properties: { mfa: true } },
         rejectWithError: true,
       };
-      await v1(6788).post(request);
+      await v1(6851).post(request);
       closure_128_0 = value;
       const body = closure_128_0.body;
       if (body != null) {
@@ -941,10 +941,10 @@ export default {
               };
               const obj5 = { login };
               request.body = obj5;
-              const obj7 = { event: login(1260).NetworkActionNames.FORGOT_PASSWORD };
+              const obj7 = { event: login(1264).NetworkActionNames.FORGOT_PASSWORD };
               request.trackedActionData = obj7;
-              const obj13 = tmp3(6788);
-              request.rejectWithError = login(1282).rejectWithMigratedError();
+              const obj13 = tmp3(6851);
+              request.rejectWithError = login(1285).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
               const obj8 = { value: obj13.post(request), done: false };
@@ -953,7 +953,7 @@ export default {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_2 = closure_2;
-            const v6OrEarlierAPIError = new login(6694).V6OrEarlierAPIError(closure_128_2);
+            const v6OrEarlierAPIError = new login(6757).V6OrEarlierAPIError(closure_128_2);
             closure_128_1 = v6OrEarlierAPIError;
             if (closure_128_1.code === constants2.PHONE_VERIFICATION_REQUIRED) {
               const obj9 = { type: "LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION", credentials: null };

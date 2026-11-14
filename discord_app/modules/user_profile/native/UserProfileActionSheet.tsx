@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/native/UserProfileActionSheet.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import isChangelogUserDefault from "../../changelog/utils/isChangelogUser.tsx";
-import BottomSheetModal from "../../../../_runtime/05507_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05570_BottomSheetModal.js";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
@@ -20,7 +20,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import UserProfileSettingsStore from "../UserProfileSettingsStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function UseAnimatedPosition(animatedPosition) {
@@ -49,12 +49,12 @@ function UseAnimatedPosition(animatedPosition) {
   UserProfileActionSheetTsx2.__closure = items3;
   UserProfileActionSheetTsx2.__workletHash = 15025652485949;
   UserProfileActionSheetTsx2.__initData = tmp3;
-  const animatedReaction = _mod1652.useAnimatedReaction(UserProfileActionSheetTsx1, UserProfileActionSheetTsx2);
+  const animatedReaction = _mod1655.useAnimatedReaction(UserProfileActionSheetTsx1, UserProfileActionSheetTsx2);
   return null;
 }
 function ActionSheetAlignedView(arg0) {
   ({ animatedPosition, animatedIndex, safeAreaTop, children } = arg0);
-  items = [closure_22, animatedPosition, safeAreaTop, _mod1652.interpolate, animatedIndex, _mod1652.Extrapolation];
+  items = [closure_22, animatedPosition, safeAreaTop, _mod1655.interpolate, animatedIndex, _mod1655.Extrapolation];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -76,21 +76,21 @@ function ActionSheetAlignedView(arg0) {
   UserProfileActionSheetTsx3.__closure = items1;
   UserProfileActionSheetTsx3.__workletHash = 8011994194653;
   UserProfileActionSheetTsx3.__initData = tmp2;
-  const animatedStyle = _mod1652.useAnimatedStyle(UserProfileActionSheetTsx3);
+  const animatedStyle = _mod1655.useAnimatedStyle(UserProfileActionSheetTsx3);
   const obj2 = { style: null, pointerEvents: "box-none", children };
   const items2 = [absoluteFill.absoluteFill, animatedStyle];
   obj2.style = items2;
-  return closure_1_16(_modDef1652.View, obj2);
+  return closure_1_16(_modDef1655.View, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7896).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7962).UserProfileThemeTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5504).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5567).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_18 = createStyles.createStyles({
   container: { flex: 1 },
   profileContainer: { position: "relative" },
@@ -157,11 +157,11 @@ export default noop.memo(function UserProfileActionSheet(userId) {
   }
   let tmp = closure_18();
   const tmp3 = localUser;
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(-1);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(-1);
   const top = channelId(localUser[14])().top;
-  let obj2 = require("../../../../_runtime/metro/01652__.js");
+  let obj2 = require("../../../../_runtime/metro/01655__.js");
   items = [top];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(c0));
   let obj4 = stateFromStores;
@@ -221,7 +221,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
   const bottomSheetClose = bottomSheetRef.bottomSheetClose;
   const ref = onClose.useRef(null);
   const tmp2Result14 = require("useBottomSheetRef");
-  sharedValue2 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  sharedValue2 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
   const items5 = [sharedValue2];
   const memo = onClose.useMemo(() => {
     closure_0 = sharedValue2;
@@ -273,7 +273,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
       return obj3;
     };
   }, items5);
-  const tmp2Result15 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result15 = require("../../../../_runtime/metro/01655__.js");
   const items6 = [closure_25, sharedValue2];
   _require = undefined;
   [tmp23, tmp24] = items6;
@@ -296,7 +296,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
   UserProfileActionSheetTsx5.__closure = items7;
   UserProfileActionSheetTsx5.__workletHash = 4107598224583;
   UserProfileActionSheetTsx5.__initData = tmp23;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(UserProfileActionSheetTsx5);
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(UserProfileActionSheetTsx5);
   const tmp26 = navigationReplace(onClose.useState(false), 2);
   first = tmp26[0];
   closure_18 = tmp26[1];
@@ -308,7 +308,7 @@ export default noop.memo(function UserProfileActionSheet(userId) {
   }, []);
   const ProfileVisibility = tmp2(tmp3[20]).ProfileVisibility;
   const setting = ProfileVisibility.useSetting();
-  const tmp2Result16 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result16 = require("../../../../_runtime/metro/01655__.js");
   const items8 = [stateFromStores];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items8, () =>
     stateFromStores.getPendingChanges(),
@@ -688,7 +688,8 @@ export default noop.memo(function UserProfileActionSheet(userId) {
         obj19.scrollEventsHandlersHook = tmp80;
         obj19.ref = ref;
         const obj21 = { style: tmp.profileContainer, onLayout: callback, children: null };
-        const obj22 = {
+        const obj22 = { value: ref, children: null };
+        const obj23 = {
           user: obj4,
           channel: stateFromStores1,
           guildId: null,
@@ -712,31 +713,31 @@ export default noop.memo(function UserProfileActionSheet(userId) {
         if (showGuildProfile) {
           tmp82 = guild_id;
         }
-        obj22.guildId = tmp82;
-        obj22.displayProfile = tmp6ResultResult;
-        obj22.disableCalls = disableCalls;
-        obj22.disableMessage = disableMessage;
-        obj22.navigationReplace = navigationReplace;
-        obj22.isVoiceContext = isVoiceContext;
-        obj22.location = _location;
-        obj22.disableStatus = memo3;
-        obj22.scrollViewRef = ref;
-        obj22.isPreviewingChanges = isPreviewingChanges;
+        obj23.guildId = tmp82;
+        obj23.displayProfile = tmp6ResultResult;
+        obj23.disableCalls = disableCalls;
+        obj23.disableMessage = disableMessage;
+        obj23.navigationReplace = navigationReplace;
+        obj23.isVoiceContext = isVoiceContext;
+        obj23.location = _location;
+        obj23.disableStatus = memo3;
+        obj23.scrollViewRef = ref;
+        obj23.isPreviewingChanges = isPreviewingChanges;
         let avatarDecoration1;
         if (collectibleProfileOverrides != null) {
           avatarDecoration1 = collectibleProfileOverrides.avatarDecoration;
         }
-        obj22.avatarDecorationOverride = avatarDecoration1;
-        obj22.navigateToShop = function navigateToShop() {
+        obj23.avatarDecorationOverride = avatarDecoration1;
+        obj23.navigateToShop = function navigateToShop() {
           return openUserSettings.openUserSettings({
             screen: constants2.COLLECTIBLES_SHOP,
             onClose: handleUserSettingsClose,
           });
         };
-        obj22.navigateToPremium = function navigateToPremium() {
+        obj23.navigateToPremium = function navigateToPremium() {
           return openUserSettings.openUserSettings({ screen: constants2.PREMIUM, onClose: handleUserSettingsClose });
         };
-        obj22.showUserProfileActionSheet = function showUserProfileActionSheetWithParams() {
+        obj23.showUserProfileActionSheet = function showUserProfileActionSheetWithParams() {
           const merged = Object.assign(createUserProfileAnalyticsContext);
           showUserProfileActionSheetDefault({
             navigationReplace,
@@ -744,61 +745,62 @@ export default noop.memo(function UserProfileActionSheet(userId) {
             localUser,
           });
         };
-        obj22.initialSection = userId.initialSection;
+        obj23.initialSection = userId.initialSection;
         tmp2Result23 = tmp2(tmp3[56]);
         let tmp84;
         if (tmp2Result24.isIOS()) {
           tmp84 = sharedValue2;
         }
-        obj22.scrollPosition = tmp84;
+        obj23.scrollPosition = tmp84;
         if (obj4.isNonUserBot()) {
-          const obj23 = {};
-          let merged = Object.assign(obj22);
-          let tmp111Result6 = tmp111(tmp6(tmp3[58]), obj23);
-          const tmp6Result15 = tmp6(tmp3[58]);
-        } else if (obj4.bot) {
           const obj24 = {};
-          const merged1 = Object.assign(obj22);
-          tmp111Result6 = tmp111(tmp6(tmp3[59]), obj24);
-          const tmp6Result16 = tmp6(tmp3[59]);
-        } else {
+          let merged = Object.assign(obj23);
+          let tmp111Result6 = tmp111(tmp6(tmp3[59]), obj24);
+          const tmp6Result15 = tmp6(tmp3[59]);
+        } else if (obj4.bot) {
           const obj25 = {};
-          const merged2 = Object.assign(obj22);
+          const merged1 = Object.assign(obj23);
           tmp111Result6 = tmp111(tmp6(tmp3[60]), obj25);
-          const tmp6Result17 = tmp6(tmp3[60]);
+          const tmp6Result16 = tmp6(tmp3[60]);
+        } else {
+          const obj26 = {};
+          const merged2 = Object.assign(obj23);
+          tmp111Result6 = tmp111(tmp6(tmp3[61]), obj26);
+          const tmp6Result17 = tmp6(tmp3[61]);
         }
-        const items18 = [tmp111Result6];
+        obj22.children = tmp111Result6;
+        const items18 = [sharedValue2(tmp6(tmp3[57]).Provider, obj22)];
         let tmp111Result7 = null != tmp51Result;
         if (tmp111Result7) {
-          const obj26 = { style: null, pointerEvents: "none", children: null };
+          const obj27 = { style: null, pointerEvents: "none", children: null };
           const items19 = [tmp.profileEffect, ,];
-          const obj27 = { height: diff };
-          items19[1] = obj27;
+          const obj28 = { height: diff };
+          items19[1] = obj28;
           items19[2] = animatedStyle;
-          obj26.style = items19;
-          const obj28 = { skuId: tmp51Result.skuId, bannerAdjustment: 0 };
-          obj26.children = tmp111(tmp6(tmp3[61]), obj28);
-          tmp111Result7 = tmp111(tmp6(tmp3[13]).View, obj26);
+          obj27.style = items19;
+          const obj29 = { skuId: tmp51Result.skuId, bannerAdjustment: 0 };
+          obj27.children = tmp111(tmp6(tmp3[62]), obj29);
+          tmp111Result7 = tmp111(tmp6(tmp3[13]).View, obj27);
         }
-        const obj29 = { children: null };
+        const obj30 = { children: null };
         items18[1] = tmp111Result7;
         obj21.children = items18;
-        obj29.children = first(prop, obj21);
-        obj19.children = sharedValue2(prop, obj29);
+        obj30.children = first(prop, obj21);
+        obj19.children = sharedValue2(prop, obj30);
         items17[2] = sharedValue2(tmp2(tmp3[12]).BottomSheetScrollView, obj19);
         let tmp111Result8 = !tmp112Result;
         if (!tmp112Result) {
-          const obj30 = { variant: "floating", tabStyle: null, onPress: null };
-          const obj31 = { backgroundColor: token };
-          obj30.tabStyle = obj31;
-          obj30.onPress = bottomSheetClose;
-          tmp111Result8 = tmp111(tmp2(tmp3[62]).ActionSheetHeaderBar, obj30);
+          const obj31 = { variant: "floating", tabStyle: null, onPress: null };
+          const obj32 = { backgroundColor: token };
+          obj31.tabStyle = obj32;
+          obj31.onPress = bottomSheetClose;
+          tmp111Result8 = tmp111(tmp2(tmp3[63]).ActionSheetHeaderBar, obj31);
         }
         items17[3] = tmp111Result8;
         obj16.children = items17;
         const items20 = [first(tmp2(tmp3[50]).BottomSheet, obj16), ,];
         if (tmp112Result) {
-          const obj32 = {
+          const obj33 = {
             animatedPosition: sharedValue,
             safeAreaTop: top,
             animatedIndex: sharedValue1,
@@ -806,23 +808,23 @@ export default noop.memo(function UserProfileActionSheet(userId) {
           };
           let tmp111Result9 = null != tmp6Result2Result;
           if (tmp111Result9) {
-            const obj33 = {
+            const obj34 = {
               frame: tmp6Result2Result,
               profileThemeType: obj4.ACTION_SHEET,
               frameOrder: tmp2(tmp3[28]).ProfileFrameLayerOrder.FRONT,
               containerWidth: first1,
             };
-            tmp111Result9 = tmp111(tmp6(tmp3[27]), obj33);
+            tmp111Result9 = tmp111(tmp6(tmp3[27]), obj34);
             const tmp6Result18 = tmp6(tmp3[27]);
           }
           const items21 = [tmp111Result9];
-          const obj34 = { variant: "floating", tabStyle: null, onPress: null };
-          const obj35 = { backgroundColor: token };
-          obj34.tabStyle = obj35;
-          obj34.onPress = bottomSheetClose;
-          items21[1] = tmp111(tmp2(tmp3[62]).ActionSheetHeaderBar, obj34);
-          obj32.children = items21;
-          tmp112Result = tmp112(profileFrame1, obj32);
+          const obj35 = { variant: "floating", tabStyle: null, onPress: null };
+          const obj36 = { backgroundColor: token };
+          obj35.tabStyle = obj36;
+          obj35.onPress = bottomSheetClose;
+          items21[1] = tmp111(tmp2(tmp3[63]).ActionSheetHeaderBar, obj35);
+          obj33.children = items21;
+          tmp112Result = tmp112(profileFrame1, obj33);
         }
         items20[1] = tmp112Result;
         if (!isPreviewingChanges) {
@@ -832,16 +834,16 @@ export default noop.memo(function UserProfileActionSheet(userId) {
           obj13.children = tmp111(tmp2(tmp3[17]).AnalyticsLocationProvider, obj14);
           tmp111Result10 = tmp111(tmp2(tmp3[54]).ThemeContextProvider, obj13);
         } else {
-          const obj36 = { theme: tmp62, primaryColor: null, secondaryColor: null, children: null };
+          const obj37 = { theme: tmp62, primaryColor: null, secondaryColor: null, children: null };
           const intl = tmp2(tmp3[53]).intl;
-          if (setting === tmp2(tmp3[64]).ProfileVisibility.FRIENDS_ONLY) {
+          if (setting === tmp2(tmp3[65]).ProfileVisibility.FRIENDS_ONLY) {
             let mNZcD8 = tmp2(tmp3[53]).t.mNZcD8;
           } else {
             mNZcD8 = tmp2(tmp3[53]).t["wSnI/0"];
           }
-          const obj37 = { text: intl.string(mNZcD8), isExpanded: true };
-          obj36.children = tmp111(tmp2(tmp3[63]).ActionSheetBackdropToast, obj37);
-          tmp111(tmp2(tmp3[54]).ThemeContextProvider, obj36);
+          const obj38 = { text: intl.string(mNZcD8), isExpanded: true };
+          obj37.children = tmp111(tmp2(tmp3[64]).ActionSheetBackdropToast, obj38);
+          tmp111(tmp2(tmp3[54]).ThemeContextProvider, obj37);
         }
         tmp2Result24 = tmp2(tmp3[56]);
       }

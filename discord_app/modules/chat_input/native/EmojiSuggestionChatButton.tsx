@@ -1,8 +1,8 @@
 // discord_app/modules/chat_input/native/EmojiSuggestionChatButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import _mod1705 from "../../../../_runtime/metro/01705__.js";
-import LegacyBaseButton from "../../../../_runtime/05535_LegacyBaseButton.js";
+import _mod1708 from "../../../../_runtime/metro/01708__.js";
+import LegacyBaseButton from "../../../../_runtime/05598_LegacyBaseButton.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -14,11 +14,11 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_12 = createStyles.createStyles((height, marginVertical) => {
   const obj = {
     swipeArea: { marginVertical: -marginVertical, paddingVertical: marginVertical },
@@ -127,7 +127,7 @@ export function EmojiSuggestionChatButton(arg0) {
   if (null != first) {
     num = 1;
   }
-  sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(num);
+  sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(num);
   items = [emojiIdentity];
   const effect = obj6.useEffect(() => {
     if (null != first) {
@@ -136,7 +136,7 @@ export function EmojiSuggestionChatButton(arg0) {
     } else {
       const obj2 = spring_spring;
       const ITEM_ENTRANCE_SPRING_CONFIG = EmojiSuggestionBarUtils.ITEM_ENTRANCE_SPRING_CONFIG;
-      items = [closure_13, _mod1705.scheduleOnRN, _undefined2];
+      items = [closure_13, _mod1708.scheduleOnRN, _undefined2];
       c0 = undefined;
       c1 = undefined;
       [tmp2, tmp3, tmp4] = items;
@@ -159,7 +159,7 @@ export function EmojiSuggestionChatButton(arg0) {
       );
     }
   }, items);
-  const tmp2Result5 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result5 = require("../../../../_runtime/metro/01655__.js");
   let items1 = [closure_14, sharedValue];
   _require = undefined;
   [tmp16, tmp17] = items1;
@@ -177,10 +177,10 @@ export function EmojiSuggestionChatButton(arg0) {
   EmojiSuggestionChatButtonTsx2.__closure = items2;
   EmojiSuggestionChatButtonTsx2.__workletHash = 5109148724809;
   EmojiSuggestionChatButtonTsx2.__initData = tmp16;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     EmojiSuggestionChatButtonTsx2,
   );
-  const tmp2Result6 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result6 = require("../../../../_runtime/metro/01655__.js");
   let items3 = [closure_15, sharedValue];
   _require = undefined;
   [tmp19, tmp20] = items3;
@@ -195,7 +195,7 @@ export function EmojiSuggestionChatButton(arg0) {
   EmojiSuggestionChatButtonTsx3.__workletHash = 9498675997018;
   EmojiSuggestionChatButtonTsx3.__initData = tmp19;
   const items5 = [dismissCoachmark, onPress, unlockedEmojis, lockedEmojis];
-  const animatedStyle1 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     EmojiSuggestionChatButtonTsx3,
   );
   const items6 = [first, handlePress];
@@ -240,7 +240,7 @@ export function EmojiSuggestionChatButton(arg0) {
       .blocksExternalGesture.apply(items1)
       .activeOffsetX(-15)
       .failOffsetX(15);
-    const items2 = [closure_16, _mod1705.scheduleOnRN, callback1];
+    const items2 = [closure_16, _mod1708.scheduleOnRN, callback1];
     c0 = undefined;
     c1 = undefined;
     [tmp3, tmp4, tmp5] = items2;

@@ -3,7 +3,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import BackoffDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import privDefault from "../../../_runtime/01453_priv.js";
+import privDefault from "../../../_runtime/01456_priv.js";
 import BadgeIdResolution from "BadgeIdResolution.tsx";
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -52,8 +52,8 @@ prototype["hasCatalogFor"] = function hasCatalogFor(id) {
   }
   return flag;
 };
-prototype["isCatalogStaleFor"] = function isCatalogStaleFor(displayedUserId) {
-  const peekResult = closure_5.peek(displayedUserId);
+prototype["isCatalogStaleFor"] = function isCatalogStaleFor(id) {
+  const peekResult = closure_5.peek(id);
   let fetchedAt;
   if (peekResult != null) {
     fetchedAt = peekResult.fetchedAt;
@@ -377,6 +377,15 @@ const badgeDirectoryStore = new BadgeDirectoryStore(DispatcherDefault, {
         info_label = info_label1;
       }
       obj3.info_label = info_label;
+      let stats = badge.stats;
+      if (stats == null) {
+        let stats1;
+        if (value2 != null) {
+          stats1 = value2.stats;
+        }
+        stats = stats1;
+      }
+      obj3.stats = stats;
       const result = badges2.set(badge.badge_id, obj3);
       const result1 = closure_5.set(userId, peekResult);
     }

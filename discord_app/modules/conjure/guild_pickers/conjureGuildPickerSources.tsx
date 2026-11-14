@@ -57,32 +57,32 @@ export function conjureMemberUsername(id, stateFromStores1) {
   }
   return UserUtils.getUserTag(id, { identifiable });
 }
-export function useConjureMemberRequests(conjureSettingsGuildId) {
-  closure_0 = conjureSettingsGuildId;
+export function useConjureMemberRequests(guildId) {
+  closure_0 = guildId;
   items = result;
   if (result === undefined) {
     items = [];
   }
-  const items1 = [conjureSettingsGuildId];
+  const items1 = [guildId];
   const effect = noop.useEffect(() => {
     if (null != closure_0) {
       const members = GuildUtilsDefault.requestMembers(tmp, "", 25);
     }
   }, items1);
   const joined = items.join(",");
-  const items2 = [conjureSettingsGuildId, joined];
+  const items2 = [guildId, joined];
   const effect1 = noop.useEffect(() => {
     if (null != closure_0) {
       if ("" !== joined) {
         const parts = joined.split(",");
-        const found = parts.filter((item) => !member.isMember(conjureSettingsGuildId, item));
+        const found = parts.filter((item) => !member.isMember(guildId, item));
         if (found.length > 0) {
           const membersById = GuildActionCreatorsDefault.requestMembersById(tmp, found);
         }
       }
     }
   }, items2);
-  const items3 = [conjureSettingsGuildId];
+  const items3 = [guildId];
   return noop.useCallback((str) => {
     const trimmed = str.trim();
     let tmp3 = null != closure_0;

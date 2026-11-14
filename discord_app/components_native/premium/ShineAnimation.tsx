@@ -1,13 +1,13 @@
 // discord_app/components_native/premium/ShineAnimation.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../_runtime/metro/00671__.js";
-import _mod1652 from "../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../_runtime/metro/01655__.js";
 import timing_timing from "../../design/animation/reanimated/timing/timing.tsx";
 import FastImageDefault from "../common/FastImage.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = Object.freeze({ FLASH_TIME_PERCENT: 0.72, FLASH_DURATION_PERCENT: 0.08 });
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { container: { overflow: "hidden" }, shineContainer: null, shine: null, shineInner: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.shineContainer = {};
@@ -40,18 +40,18 @@ export default noop.memo(function ShineAnimation(arg0) {
   _require = undefined;
   ({ source, style } = arg0);
   const tmp = closure_8();
-  const sharedValue = require("../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../_runtime/metro/01655__.js").useSharedValue(0);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const obj = _mod1652;
-    const obj2 = _mod1652;
+    const obj = _mod1655;
+    const obj2 = _mod1655;
     const result = _undefined.set(
       obj.withDelay(400, obj2.withRepeat(timing_timing.withTiming(1, { duration: 1000 }), -1, false)),
     );
   }, items);
-  let obj = require("../../../_runtime/metro/01652__.js");
-  let items1 = [closure_9, require("../../../_runtime/metro/01652__.js").interpolate, sharedValue];
+  let obj = require("../../../_runtime/metro/01655__.js");
+  let items1 = [closure_9, require("../../../_runtime/metro/01655__.js").interpolate, sharedValue];
   _require = undefined;
   importDefault = undefined;
   [tmp6, tmp7, tmp8] = items1;
@@ -65,8 +65,8 @@ export default noop.memo(function ShineAnimation(arg0) {
   ShineAnimationTsx1.__closure = items2;
   ShineAnimationTsx1.__workletHash = 2390175696032;
   ShineAnimationTsx1.__initData = tmp6;
-  const animatedStyle = require("../../../_runtime/metro/01652__.js").useAnimatedStyle(ShineAnimationTsx1);
-  let obj2 = require("../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../_runtime/metro/01655__.js").useAnimatedStyle(ShineAnimationTsx1);
+  let obj2 = require("../../../_runtime/metro/01655__.js");
   const tmp11Result = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360);
   const alphaResult = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360).alpha(0.2);
   const hexResult = _modDef671(nativeDefault.unsafe_rawColors.BRAND_360).alpha(0.2).hex();
@@ -76,7 +76,7 @@ export default noop.memo(function ShineAnimation(arg0) {
   const items3 = [
     closure_10,
     closure_7,
-    require("../../../_runtime/metro/01652__.js").interpolateColor,
+    require("../../../_runtime/metro/01655__.js").interpolateColor,
     sharedValue,
     hexResult,
     hexResult1,
@@ -110,16 +110,16 @@ export default noop.memo(function ShineAnimation(arg0) {
   ShineAnimationTsx2.__closure = items4;
   ShineAnimationTsx2.__workletHash = 15848815967493;
   ShineAnimationTsx2.__initData = tmp15;
-  const animatedStyle1 = require("../../../_runtime/metro/01652__.js").useAnimatedStyle(ShineAnimationTsx2);
+  const animatedStyle1 = require("../../../_runtime/metro/01655__.js").useAnimatedStyle(ShineAnimationTsx2);
   const obj3 = { style: null, children: null };
   const items5 = [tmp.container, style, animatedStyle1];
   obj3.style = items5;
   const obj4 = { style: tmp.shineContainer, children: null };
-  const items6 = [closure_5(_modDef1652.View, { style: animatedStyle })];
+  const items6 = [closure_5(_modDef1655.View, { style: animatedStyle })];
   const obj5 = { style: tmp.shine, children: closure_5(c4, { style: tmp.shineInner }) };
   items6[1] = closure_5(c4, obj5);
   obj4.children = items6;
   const items7 = [closure_6(c4, obj4), closure_5(FastImageDefault, { source })];
   obj3.children = items7;
-  return closure_6(_modDef1652.View, obj3);
+  return closure_6(_modDef1655.View, obj3);
 });

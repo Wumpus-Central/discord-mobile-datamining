@@ -66,8 +66,8 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               closure_1 = tmp3;
               closure_0 = tmp5;
@@ -78,21 +78,21 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
               const differenceResult = closure_2_1(12).difference(closure_0, ref.current);
               closure_128_0 = differenceResult;
               if (!c3) {
-                if (!tmp46) {
+                if (!tmp42) {
                   if (0 !== arr.length) {
                     if (0 !== differenceResult.length) {
                       c3 = 1;
                       ref = 2;
                       v3 = 1;
-                      const obj7 = { value: memo2(9619).loadInAppSkus(differenceResult), done: false };
-                      return obj7;
+                      const obj6 = { value: memo2(9686).loadInAppSkus(differenceResult), done: false };
+                      return obj6;
                     }
                   }
                 }
               }
               arr = closure_0;
-              const obj4 = closure_2_1(12);
-              tmp46 = closure_1;
+              const obj3 = closure_2_1(12);
+              tmp42 = closure_1;
             }
           } else {
             if (1 === tmp8) {
@@ -100,8 +100,6 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
               closure_128_1 = closure_2;
               logger.error("Unable to fetch product IDs from google play store: ", closure_128_1);
               v3("Unable to fetch");
-              const result = memo2(5055).captureBillingException(closure_128_1);
-              const obj3 = memo2(5055);
             } else if (arg0 === 1) {
               v3 = 3;
               throw value;
@@ -113,15 +111,15 @@ function useGoogleSkuIds(memo2, arg1, arg2) {
             }
             c3 = 0;
             v3 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            const obj7 = { value, done: true };
+            return obj7;
           }
           v3 = 3;
-        } catch (tmp38) {
-          closure_2 = tmp38;
+        } catch (tmp34) {
+          closure_2 = tmp34;
           if (tmp4 === c3) {
             v3 = tmp2;
-            throw tmp38;
+            throw tmp34;
           } else {
             ref = tmp;
           }
@@ -158,8 +156,8 @@ function useLoadedGoogleSkuIds(memo1) {
   ];
   const effect = noop.useEffect(() => {
     c0 = true;
-    const obj = memo1(9619);
-    ({ settled, release: first } = memo1(9619).retainInAppSkus(c0));
+    const obj = memo1(9686);
+    ({ settled, release: first } = memo1(9686).retainInAppSkus(c0));
     settled.then(() => {
       if (c0) {
         closure_2((arg0) => {
@@ -249,7 +247,7 @@ function useMobileStoreFront() {
 let closure_8 = new LoggerDefault("NativePaymentHooks.android.tsx");
 let closure_9 = { nativePaymentsConnected: true, storeFront: null, canMakePayments: true };
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/payments/native/hooks/NativePaymentHooks.android.tsx");
+const result = size.fileFinishedImporting("modules/payments/native/hooks/NativePaymentHooks.android.tsx");
 
 export default {
   useNativeIAPPayments,

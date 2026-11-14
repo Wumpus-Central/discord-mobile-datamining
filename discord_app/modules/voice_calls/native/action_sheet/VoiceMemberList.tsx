@@ -5,7 +5,7 @@ import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLoc
 import Form from "../../../../design/void/Form/native/index.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
-import _modDef10913 from "../../../../../_runtime/metro/10913__.js";
+import _modDef10982 from "../../../../../_runtime/metro/10982__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import GuildEventVoiceBannerDefault from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
 import VoiceMemberUser from "VoiceMemberUser.tsx";
@@ -64,7 +64,7 @@ function extractKey(id) {
 function VoiceSectionRow(arg0) {
   ({ item, isActionSheet } = arg0);
   ({ channelId, onPressUser } = arg0);
-  importDefault = isActionSheet(11230).useAnalyticsContext();
+  importDefault = isActionSheet(11297).useAnalyticsContext();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   if (tmp3) {
     dependencyMap = async function _onItemPress(arg0) {
@@ -152,15 +152,15 @@ function VoiceSectionRow(arg0) {
       },
       isActionSheet,
     };
-    return closure_21(tmp2(15972), obj2);
+    return closure_21(tmp2(16092), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_21(tmp2(15973), obj3);
+    return closure_21(tmp2(16093), obj3);
   }
-  let obj = isActionSheet(11230);
+  let obj = isActionSheet(11297);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
 }
 get_ActivityIndicator = fn(17);
@@ -168,11 +168,11 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = Constants);
 const FORM_ROW_VERTICAL_PADDING = fn(1191).FORM_ROW_VERTICAL_PADDING;
-const ACTION_SHEET_MAX_WIDTH = fn(5504).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5567).ACTION_SHEET_MAX_WIDTH;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_24 = createStyles.createStyles({
   container: { flex: 1, flexShrink: 1 },
   sectionContainer: { paddingTop: 16, paddingHorizontal: 16 },
@@ -198,9 +198,9 @@ let closure_26 = noop.memo(function Footer(channel) {
       const obj3 = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1113).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1113).t["6Qgrev"]);
-      obj3.source = _modDef10913;
-      obj3.size = tmp4(15220).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_21(tmp4(15220).CircularIconButton, obj3);
+      obj3.source = _modDef10982;
+      obj3.size = tmp4(15334).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_21(tmp4(15334).CircularIconButton, obj3);
       const intl2 = tmp4(1113).intl;
       obj2.label = intl2.string(tmp4(1113).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -211,7 +211,7 @@ let closure_26 = noop.memo(function Footer(channel) {
           const result = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(channel, obj2);
         }
       };
-      items[1] = closure_21(tmp4(8041).FormRow, obj2);
+      items[1] = closure_21(tmp4(8106).FormRow, obj2);
       obj.children = items;
       tmp7 = closure_22(noop.Fragment, obj);
     }
@@ -398,7 +398,7 @@ export default function VoiceMemberList(channel) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(15972);
+                tmp4 = tmp4(16092);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

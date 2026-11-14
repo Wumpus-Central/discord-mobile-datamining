@@ -5,7 +5,7 @@ import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore.t
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
 
@@ -36,7 +36,7 @@ export function useSelectedDismissibleContentShared(visibleContent, markAsDismis
         }
         let tmp6 = content !== visibleContent;
         if (!tmp6) {
-          let result = closure_0(5083).isGuildDismissibleContent(tmp5);
+          let result = closure_0(5146).isGuildDismissibleContent(tmp5);
           if (result) {
             const lastDismissed2 = tmp2.lastDismissed;
             guildId = undefined;
@@ -46,7 +46,7 @@ export function useSelectedDismissibleContentShared(visibleContent, markAsDismis
             result = guildId !== closure_1_2;
           }
           tmp6 = result;
-          const obj = closure_0(5083);
+          const obj = closure_0(5146);
         }
         tmp = tmp6;
         tmp2 = lastDismissed;

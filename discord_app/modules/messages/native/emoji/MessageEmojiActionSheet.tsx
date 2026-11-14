@@ -39,7 +39,7 @@ function MessageCustomEmojiActionSheet(emojiNode) {
   if (emojiAndSource.isFetching) {
     return null;
   } else {
-    const v4Result = tmp2(1266).v4();
+    const v4Result = tmp2(1269).v4();
     _require = v4Result;
     const obj3 = {
       startExpanded: true,
@@ -68,7 +68,7 @@ function MessageCustomEmojiActionSheet(emojiNode) {
       nonce: v4Result,
     });
     obj3.children = <View style={tmp.contentWrapper}>{null}</View>;
-    return jsx(tmp2(5503).BottomSheet, {
+    return jsx(tmp2(5566).BottomSheet, {
       startExpanded: true,
       onDismiss() {
         AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });
@@ -82,8 +82,8 @@ function MessageCustomEmojiActionSheet(emojiNode) {
 const View = fn(17).View;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
-const PlatformUtils = fn(1377);
+const createStyles = fn(5306);
+const PlatformUtils = fn(1380);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;

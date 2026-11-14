@@ -15,12 +15,12 @@ import AuthorizedAppsStore from "../../../oauth2/AuthorizedAppsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const FetchState = fn(7158).FetchState;
+const FetchState = fn(7221).FetchState;
 const Constants = fn(1072);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   spinner: { padding: nativeDefault.space.PX_16 },
   emptyText: null,
@@ -62,12 +62,12 @@ export function useAuthorizedApps() {
   }));
   appAuthTokens = stateFromStoresObject.appAuthTokens;
   const obj = appAuthTokens(504);
-  const focusEffect = appAuthTokens(1500).useFocusEffect(
+  const focusEffect = appAuthTokens(1503).useFocusEffect(
     noop.useCallback(() => closure_1(dependencyMap[13]).fetch(), []),
   );
   closure_1 = tmp3;
   const items1 = [appAuthTokens, stateFromStoresObject.fetchState !== FetchState.FETCHED];
-  const obj2 = appAuthTokens(1500);
+  const obj2 = appAuthTokens(1503);
   return {
     loading: stateFromStoresObject.fetchState !== FetchState.FETCHED,
     apps: noop.useMemo(() => {
@@ -112,7 +112,7 @@ export function AuthorizedAppsEmpty(loading) {
 export function AuthorizedAppRow(app) {
   app = app.app;
   ({ start, end } = app);
-  importDefault = app(1499).useNavigation();
+  importDefault = app(1502).useNavigation();
   const obj2 = {
     icon: closure_10(TableRowApplicationIconDefault, { application: app.application }),
     label: app.application.name,
@@ -130,5 +130,5 @@ export function AuthorizedAppRow(app) {
     start,
     end,
   };
-  return closure_10(app(7379).TableRow, obj2);
+  return closure_10(app(7443).TableRow, obj2);
 }

@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsAppLauncher.tsx
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import useStateFromSharedValueDefault from "../../../reanimated/native/useStateFromSharedValue.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import AppLauncherNavigatorDefault from "../../../app_launcher/native/AppLauncherNavigator.tsx";
@@ -12,12 +12,12 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelControlsConstants = fn(11917);
+const VoicePanelControlsConstants = fn(11983);
 ({ VoicePanelControlsModes: hasOwnProperty, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsConstants);
 const ComponentActions = fn(1072).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_10 = createStyles.createStyles({ container: { width: "100%", paddingTop: CONTROLS_DRAWER_HEADER_SIZE } });
 let closure_11 = {
   code: "(function VoicePanelControlsAppLauncherTsx1(){let[gestureSpecs]=this.__closure;return gestureSpecs.get().active;})",
@@ -64,10 +64,10 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   const obj4 = require("AppLauncherContext");
   const ref = noop.useRef(require("AppLauncherContext").AppLauncherKeyboardCloseReason.DISMISSED);
   const ref1 = noop.useRef(undefined);
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj5 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj6 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const obj5 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const obj6 = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [closure_11, gestureSpecs];
   _require = undefined;
   [tmp17, tmp18] = items2;
@@ -80,10 +80,10 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   VoicePanelControlsAppLauncherTsx1.__closure = items3;
   VoicePanelControlsAppLauncherTsx1.__workletHash = 16735872110268;
   VoicePanelControlsAppLauncherTsx1.__initData = tmp17;
-  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(
     VoicePanelControlsAppLauncherTsx1,
   );
-  const obj7 = require("../../../../../_runtime/metro/01652__.js");
+  const obj7 = require("../../../../../_runtime/metro/01655__.js");
   const items4 = [closure_12, gestureSpecs];
   _require = undefined;
   [tmp20, tmp21] = items4;
@@ -96,10 +96,10 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   VoicePanelControlsAppLauncherTsx2.__closure = items5;
   VoicePanelControlsAppLauncherTsx2.__workletHash = 13454461717534;
   VoicePanelControlsAppLauncherTsx2.__initData = tmp20;
-  const derivedValue1 = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+  const derivedValue1 = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(
     VoicePanelControlsAppLauncherTsx2,
   );
-  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
   const items6 = [closure_13, derivedValue, derivedValue1, tmp7, rect];
   _require = undefined;
   importDefault = undefined;
@@ -124,13 +124,13 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   VoicePanelControlsAppLauncherTsx3.__workletHash = 7444393630336;
   VoicePanelControlsAppLauncherTsx3.__initData = tmp23;
   const obj8 = { children: null };
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     VoicePanelControlsAppLauncherTsx3,
   );
   const obj9 = { style: null, children: null };
   const items8 = [tmp.container, gradientTop, animatedStyle];
   obj9.style = items8;
-  const tmp2Result2 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result2 = require("../../../../../_runtime/metro/01655__.js");
   const items9 = [
     closure_7(AppLauncherNavigatorDefault, {
       bottomSheetIndex: sharedValue1,
@@ -160,6 +160,6 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   obj11.title = intl.string(require("util").t.shUONg);
   items9[1] = closure_7(VoicePanelControlsDrawerTitleDefault, obj11);
   obj9.children = items9;
-  obj8.children = closure_8(_modDef1652.View, obj9);
+  obj8.children = closure_8(_modDef1655.View, obj9);
   return closure_7(closure_9, obj8);
 });

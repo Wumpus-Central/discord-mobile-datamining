@@ -4,8 +4,8 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/application_account_linking/AccountLinkingActionCreators.tsx");
 
-export function accountLinkAuthorizationStarted(id, accountLinkCallbacks) {
-  DispatcherDefault.dispatch({ type: "ACCOUNT_LINK_AUTHORIZATION_STARTED", applicationId: id, accountLinkCallbacks });
+export function accountLinkAuthorizationStarted(applicationId, accountLinkCallbacks) {
+  DispatcherDefault.dispatch({ type: "ACCOUNT_LINK_AUTHORIZATION_STARTED", applicationId, accountLinkCallbacks });
 }
 export function accountLinkAuthorizationCompleted(applicationId) {
   DispatcherDefault.dispatch({ type: "ACCOUNT_LINK_AUTHORIZATION_COMPLETED", applicationId });

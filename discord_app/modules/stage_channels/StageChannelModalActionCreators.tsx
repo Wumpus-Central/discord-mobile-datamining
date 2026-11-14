@@ -48,7 +48,7 @@ let closure_10 = async function _connectOrLurkStage(arg0) {
           closure_131_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -202,15 +202,15 @@ function connectAndOpen(channel) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(6840).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(6903).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(6840);
+    const obj2 = flag2(6903);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(6840).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(6840);
+      flag2(6903).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(6903);
     }
   }
 }

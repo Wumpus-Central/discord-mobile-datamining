@@ -18,11 +18,11 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(12819).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(12915).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1072).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { bgNeutral: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, bg: null, container: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.bg = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -107,12 +107,12 @@ export default function ConnectivityGlobalStatusContent() {
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(5429).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(5429);
+    isScreenLandscape = tmp5(5492).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(5492);
   }
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(1377).isAndroid();
-    const tmp5Result6 = tmp5(1377);
+    isScreenLandscape = tmp5(1380).isAndroid();
+    const tmp5Result6 = tmp5(1380);
   }
   let num = 0;
   if (!isScreenLandscape) {

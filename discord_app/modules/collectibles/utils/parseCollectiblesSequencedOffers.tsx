@@ -8,6 +8,7 @@ function parseSequencedOffer(assets) {
     cardShape: assets.card_shape,
     assets: {
       locked: assets.locked,
+      calendarLocked: assets.calendar_locked,
       hint: assets.hint,
       idleAnimation: assets.idle_animation,
       revealAnimation: assets.reveal_animation,

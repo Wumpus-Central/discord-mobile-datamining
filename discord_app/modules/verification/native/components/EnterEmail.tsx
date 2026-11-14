@@ -8,7 +8,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(7676);
+const ChangeEmailStore = fn(7742);
 ({
   useChangeEmailError: closure_10,
   useChangeEmailStore: closure_11,
@@ -17,7 +17,7 @@ const ChangeEmailStore = fn(7676);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { paddingVertical: 12, paddingHorizontal: 16 },

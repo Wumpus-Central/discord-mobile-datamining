@@ -1,6 +1,6 @@
 // discord_app/modules/activities/ActivitySessionAnalytics.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../_runtime/01266_v1.js";
+import v1 from "../../../_runtime/01269_v1.js";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import getPlatformDefault from "utils/getPlatform.tsx";
 import ThermalUtilsDefault from "../device/ThermalUtils.native.tsx";

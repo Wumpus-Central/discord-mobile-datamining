@@ -9,6 +9,7 @@ const QuestDockMode = QuestConstants.QuestDockMode;
 let COLLAPSED = QuestDockMode.COLLAPSED;
 let c3 = null;
 let isEligibleToBeVisible = false;
+let isExpandedOnScreen = false;
 const PersistedStore = initializeDefault.PersistedStore;
 class QuestDockStore extends PersistedStore {}
 const prototype = QuestDockStore.prototype;
@@ -39,6 +40,12 @@ Object.defineProperty(prototype, "isEligibleToBeVisible", {
   },
   set: undefined,
 });
+Object.defineProperty(prototype, "isExpandedOnScreen", {
+  get: function isExpandedOnScreen() {
+    return isExpandedOnScreen;
+  },
+  set: undefined,
+});
 QuestDockStore.displayName = "QuestDockStore";
 QuestDockStore.persistKey = "QuestDockStore";
 const questDockStore = new QuestDockStore(DispatcherDefault, {
@@ -60,6 +67,16 @@ const questDockStore = new QuestDockStore(DispatcherDefault, {
   },
   QUESTS_DOCK_VISIBILITY_ELIGIBILITY_UPDATE: function handleQuestDockEligibilityUpdate(isEligibleToBeVisible) {
     isEligibleToBeVisible = isEligibleToBeVisible.isEligibleToBeVisible;
+    if (!isEligibleToBeVisible) {
+      isExpandedOnScreen = false;
+    }
+  },
+  QUESTS_DOCK_EXPANDED_ON_SCREEN_UPDATE: function handleQuestDockExpandedOnScreenUpdate(isExpandedOnScreen) {
+    if (isExpandedOnScreen.isExpandedOnScreen === isExpandedOnScreen) {
+      return false;
+    } else {
+      isExpandedOnScreen = isExpandedOnScreen.isExpandedOnScreen;
+    }
   },
 });
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockStore.tsx");

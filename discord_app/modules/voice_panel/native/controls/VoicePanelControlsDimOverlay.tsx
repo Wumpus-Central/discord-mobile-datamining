@@ -5,10 +5,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(16311).BACKDROP_OPAQUE_MAX_OPACITY;
-const VoicePanelConstants = fn(11919);
+let closure_4 = fn(16436).BACKDROP_OPAQUE_MAX_OPACITY;
+const VoicePanelConstants = fn(11985);
 ({ PANEL_CONTROLS_HEIGHT_PHYSICS: hasOwnProperty, VoicePanelModes: closure_6 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
 let jsx = fn(21).jsx;
 let closure_9 = {
   code: "(function VoicePanelControlsDimOverlayTsx1(){let[windowDimensions,getDrawerSpec,safeArea,controlsSpecs,VoicePanelControlsModes,mode,VoicePanelModes,interpolate,wrapperSpecs,BACKDROP_OPAQUE_MAX_OPACITY]=this.__closure;const{height:height}=windowDimensions.get();const{minHeight:minHeight,maxHeight:maxHeight}=getDrawerSpec(height,safeArea.get().top);if(controlsSpecs.get().mode!==VoicePanelControlsModes.DRAWER||mode.get()!==VoicePanelModes.PANEL){return 0;}return interpolate(wrapperSpecs.get().height,[minHeight,maxHeight],[0,BACKDROP_OPAQUE_MAX_OPACITY],'clamp');})",
@@ -39,7 +39,7 @@ export default noop.memo(function VoicePanelControlsDimOverlay(wrapperSpecs) {
     c7,
     mode,
     c6,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     wrapperSpecs.wrapperSpecs,
     c4,
   ];
@@ -85,11 +85,11 @@ export default noop.memo(function VoicePanelControlsDimOverlay(wrapperSpecs) {
   VoicePanelControlsDimOverlayTsx1.__closure = items1;
   VoicePanelControlsDimOverlayTsx1.__workletHash = 15211606332422;
   VoicePanelControlsDimOverlayTsx1.__initData = tmp4;
-  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(
     VoicePanelControlsDimOverlayTsx1,
   );
   let obj = noop;
-  const obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const obj2 = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [closure_10, derivedValue];
   _require = undefined;
   [tmp16, tmp17] = items2;
@@ -102,10 +102,10 @@ export default noop.memo(function VoicePanelControlsDimOverlay(wrapperSpecs) {
   VoicePanelControlsDimOverlayTsx2.__closure = items3;
   VoicePanelControlsDimOverlayTsx2.__workletHash = 14055617662103;
   VoicePanelControlsDimOverlayTsx2.__initData = tmp16;
-  const derivedValue1 = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+  const derivedValue1 = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(
     VoicePanelControlsDimOverlayTsx2,
   );
-  const tmp3Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp3Result = require("../../../../../_runtime/metro/01655__.js");
   const items4 = [
     closure_11,
     require("spring/spring").withSpring,
@@ -139,8 +139,8 @@ export default noop.memo(function VoicePanelControlsDimOverlay(wrapperSpecs) {
   VoicePanelControlsDimOverlayTsx3.__closure = items5;
   VoicePanelControlsDimOverlayTsx3.__workletHash = 6945037469681;
   VoicePanelControlsDimOverlayTsx3.__initData = tmp19;
-  const style = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(VoicePanelControlsDimOverlayTsx3);
-  const tmp3Result3 = require("../../../../../_runtime/metro/01652__.js");
+  const style = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(VoicePanelControlsDimOverlayTsx3);
+  const tmp3Result3 = require("../../../../../_runtime/metro/01655__.js");
   const items6 = [closure_12, derivedValue1];
   _require = undefined;
   [tmp26, tmp27] = items6;
@@ -158,7 +158,7 @@ export default noop.memo(function VoicePanelControlsDimOverlay(wrapperSpecs) {
   VoicePanelControlsDimOverlayTsx4.__workletHash = 10220341121843;
   VoicePanelControlsDimOverlayTsx4.__initData = tmp26;
   const items8 = [setControlsMode];
-  const animatedProps = require("../../../../../_runtime/metro/01652__.js").useAnimatedProps(
+  const animatedProps = require("../../../../../_runtime/metro/01655__.js").useAnimatedProps(
     VoicePanelControlsDimOverlayTsx4,
   );
   const onDismiss = obj.useCallback(() => {

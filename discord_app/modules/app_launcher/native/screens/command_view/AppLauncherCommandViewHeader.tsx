@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/screens/command_view/AppLauncherCommandViewHeader.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
 import useAvatarColorDefault from "../../../../avatar/useAvatarColor.tsx";
 import AppLauncherNativeUtils from "../../AppLauncherNativeUtils.tsx";
 import AppLauncherBackButtonDefault from "../../base_components/AppLauncherBackButton.tsx";
@@ -11,13 +11,13 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AppLauncherNativeConstants = fn(1498);
+const AppLauncherNativeConstants = fn(1501);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const sum = fn(13357).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(13462).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 let closure_8 = sum - 56;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   headerContainer: {
     alignItems: "center",
@@ -39,7 +39,7 @@ let obj2 = {
   icon: null,
   headerBannerOverlay: null,
 };
-let size = { width: fn(13357).BACK_BUTTON_SIZE, height: fn(13357).BACK_BUTTON_SIZE };
+let size = { width: fn(13462).BACK_BUTTON_SIZE, height: fn(13462).BACK_BUTTON_SIZE };
 obj2.overflowMenuContainer = size;
 const rect = {
   position: "absolute",
@@ -92,7 +92,7 @@ export function AppLauncherCommandViewHeader(onPress) {
   }, items);
   let items1 = [
     closure_10,
-    require("../../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../../_runtime/metro/01655__.js").interpolate,
     scrollOffsetY,
     closure_8,
   ];
@@ -120,16 +120,16 @@ export function AppLauncherCommandViewHeader(onPress) {
   AppLauncherCommandViewHeaderTsx1.__closure = items2;
   AppLauncherCommandViewHeaderTsx1.__workletHash = 372054850912;
   AppLauncherCommandViewHeaderTsx1.__initData = tmp6;
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     AppLauncherCommandViewHeaderTsx1,
   );
-  let obj = require("../../../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../../../_runtime/metro/01655__.js");
   let items3 = [
     closure_11,
     72,
     4,
     c5,
-    require("../../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../../_runtime/metro/01655__.js").interpolate,
     scrollOffsetY,
     closure_8,
   ];
@@ -169,13 +169,13 @@ export function AppLauncherCommandViewHeader(onPress) {
   AppLauncherCommandViewHeaderTsx2.__closure = items4;
   AppLauncherCommandViewHeaderTsx2.__workletHash = 16894585624155;
   AppLauncherCommandViewHeaderTsx2.__initData = tmp11;
-  const animatedStyle1 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     AppLauncherCommandViewHeaderTsx2,
   );
-  const tmp3Result = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp3Result = require("../../../../../../_runtime/metro/01655__.js");
   const items5 = [
     closure_12,
-    require("../../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../../_runtime/metro/01655__.js").interpolate,
     scrollOffsetY,
     closure_8,
   ];
@@ -196,10 +196,10 @@ export function AppLauncherCommandViewHeader(onPress) {
   AppLauncherCommandViewHeaderTsx3.__closure = items6;
   AppLauncherCommandViewHeaderTsx3.__workletHash = 3726184428877;
   AppLauncherCommandViewHeaderTsx3.__initData = tmp19;
-  const animatedStyle2 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle2 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     AppLauncherCommandViewHeaderTsx3,
   );
-  const tmp3Result3 = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp3Result3 = require("../../../../../../_runtime/metro/01655__.js");
   let str = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   let tmp26 = memo;
   const tmp3Result4 = require("useToken");
@@ -215,7 +215,7 @@ export function AppLauncherCommandViewHeader(onPress) {
   }
   if (null != memo) {
     let obj2 = { style: tmp.appIcon, source: memo };
-    let tmp31 = closure_6(tmp24(5957), obj2);
+    let tmp31 = closure_6(tmp24(6020), obj2);
     let tmp32 = closure_6;
   } else {
     let obj3 = { style: null };
@@ -237,7 +237,7 @@ export function AppLauncherCommandViewHeader(onPress) {
   const items9 = [tmp.headerBannerOverlay, animatedStyle2];
   obj5.style = items9;
   const items10 = [
-    tmp32(_modDef1652.View, obj5),
+    tmp32(_modDef1655.View, obj5),
     tmp32(AppLauncherBackButtonDefault, { onPress: onPress.onPressBack }),
     ,
     ,
@@ -272,7 +272,7 @@ export function AppLauncherCommandViewHeader(onPress) {
   const obj8 = { style: null, children: tmp31 };
   const items12 = [tmp.appIconMask, animatedStyle1];
   obj8.style = items12;
-  items10[4] = tmp32(_modDef1652.View, obj8);
+  items10[4] = tmp32(_modDef1655.View, obj8);
   obj4.children = items10;
   return closure_7(c4, obj4);
 }

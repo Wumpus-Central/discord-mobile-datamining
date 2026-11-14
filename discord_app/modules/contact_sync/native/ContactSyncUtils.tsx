@@ -52,7 +52,7 @@ let closure_18 = async function _uploadContacts(arg0) {
           let body;
           c4 = 1;
           c5 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -107,13 +107,13 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(14882);
+const ContactSyncPersistedStore = fn(14996);
 ({
   useContactSyncStore: closure_6,
   clearDismissState: metroImportDefault,
   deleteStoredContacts: closure_8,
 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(14881);
+const ContactSyncConstants = fn(14995);
 ({
   CONTACT_SYNC_MODAL_KEY: closure_9,
   ContactPermissions: closure_10,

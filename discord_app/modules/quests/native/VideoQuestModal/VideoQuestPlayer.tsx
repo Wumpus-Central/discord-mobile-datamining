@@ -11,12 +11,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import VideoQuestUIStore from "../../VideoQuestUIStore.tsx";
 
 require = fn;
-const QuestsExperimentLocations = fn(5275).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5338).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
 
-export const PlayerState = fn(17436).PlayerState;
+export const PlayerState = fn(17554).PlayerState;
 export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
   onLoad = onLoad.onLoad;
   const onEnd = onLoad.onEnd;
@@ -513,6 +513,7 @@ export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
       videoRef: ref,
       bufferingSpinnerPlacement: null,
       captionsEnabled: null,
+      disableNativeCaptions: null,
       showCaptionsButton: null,
       showTranscriptButton: null,
       showFullscreenButton: null,
@@ -527,22 +528,25 @@ export const VideoQuestPlayer = noop.memo(function VideoQuestPlayer(onLoad) {
     }
     obj5.bufferingSpinnerPlacement = str2;
     obj5.captionsEnabled = flag;
-    let tmp41 = tmp43;
+    const tmp45 = questTaskDetails;
+    const tmpResult2 = tmp(tmp2[18]);
+    obj5.disableNativeCaptions = tmp(tmp2[18]).isIOS() && hasCaptionAsset;
+    let tmp42 = tmp44;
     if ("landscape" === orientation) {
-      tmp41 = hasCaptionAsset;
+      tmp42 = hasCaptionAsset;
     }
-    obj5.showCaptionsButton = tmp41;
-    let tmp42 = tmp43;
+    obj5.showCaptionsButton = tmp42;
+    let tmp43 = tmp44;
     if ("landscape" === orientation) {
-      tmp42 = flag2;
+      tmp43 = flag2;
     }
-    obj5.showTranscriptButton = tmp42;
+    obj5.showTranscriptButton = tmp43;
     obj5.showFullscreenButton = "landscape" === orientation;
     obj5.showProgress = "landscape" === orientation;
     obj5.onToggleCaptions = handleToggleCaptions;
     obj5.onOpenTranscript = handleOpenTranscript;
     obj5.onToggleFullscreen = tmp40;
-    return questTaskDetails(tmp(tmp2[17]).AdVideoPlayer, obj5);
+    return tmp45(tmp(tmp2[17]).AdVideoPlayer, obj5);
   }
   const tmpResult = onLoad(onToggleFullscreen[11]);
 });

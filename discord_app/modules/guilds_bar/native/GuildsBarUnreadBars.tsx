@@ -202,7 +202,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               }
               return tmp37;
             }
-            let obj6 = { beforeItem: null, afterItem: "a" };
+            let obj6 = { beforeItem: null, afterItem: "y" };
             let obj7 = { section: sum, row: tmp32.item, mention: true };
             obj6.beforeItem = obj7;
             return obj6;
@@ -214,18 +214,18 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(6893).GuildsNodeType;
-const GuildsBarConstants = fn(18906);
+const GuildsNodeType = fn(6956).GuildsNodeType;
+const GuildsBarConstants = fn(19060);
 ({ FastListRenderSections: closure_10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(17583);
+const YouBarConstants = fn(17701);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_15 = createStyles.createStyles({
   wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH },
 });
-let closure_17 = { beforeItem: "Array", afterItem: "flexDirection" };
-let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "a" };
+let closure_17 = { beforeItem: "disabled", afterItem: "isArray" };
+let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "y" };
 let closure_20 = {
   code: "(function GuildsBarUnreadBarsTsx1(){let[scrollPosValue]=this.__closure;return scrollPosValue.get();})",
 };
@@ -331,7 +331,7 @@ export default noop.memo(function GuildsBarUnreadBars(fastList) {
   GuildsBarUnreadBarsTsx1.__closure = items3;
   GuildsBarUnreadBarsTsx1.__workletHash = 8498913632251;
   GuildsBarUnreadBarsTsx1.__initData = tmp9;
-  const items4 = [closure_21, require("../../../../_runtime/metro/01705__.js").scheduleOnRN, memo];
+  const items4 = [closure_21, require("../../../../_runtime/metro/01708__.js").scheduleOnRN, memo];
   _require = undefined;
   top2 = undefined;
   [tmp11, tmp12, tmp13] = items4;
@@ -349,7 +349,7 @@ export default noop.memo(function GuildsBarUnreadBars(fastList) {
   GuildsBarUnreadBarsTsx2.__closure = items5;
   GuildsBarUnreadBarsTsx2.__workletHash = 12582382943587;
   GuildsBarUnreadBarsTsx2.__initData = tmp11;
-  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     GuildsBarUnreadBarsTsx1,
     GuildsBarUnreadBarsTsx2,
   );
@@ -358,7 +358,7 @@ export default noop.memo(function GuildsBarUnreadBars(fastList) {
   const tmp15 = closure_15();
   _require = tmp15;
   top2 = tmp(tmp2[11])().top;
-  const obj2 = require("../../../../_runtime/metro/01652__.js");
+  const obj2 = require("../../../../_runtime/metro/01655__.js");
   mobileQuestDockHeight = require("QuestHooks").useMobileQuestDockHeight();
   const tmp8Result = require("QuestHooks");
   let num = 8;

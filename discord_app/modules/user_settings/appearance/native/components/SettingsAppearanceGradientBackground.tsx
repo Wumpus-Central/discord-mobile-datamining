@@ -6,20 +6,20 @@ import SettingsAppearancePickerUtils from "../SettingsAppearancePickerUtils.tsx"
 import getGradientStartPontDefault from "../hooks/getGradientStartPont.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import SettingsAppearanceConstants from "../SettingsAppearanceConstants.tsx";
-import module_1652_mod from "../../../../../../_runtime/metro/01652__.js";
+import module_1655_mod from "../../../../../../_runtime/metro/01655__.js";
 
 const require = globalThis.__r;
 
 require = fn;
 let StyleSheet = fn(17).StyleSheet;
 let jsx = fn(21).jsx;
-let module_1652 = fn(1652);
-let num = module_1652.processColor("rgba(0, 0, 0, 0)");
+let module_1655 = fn(1655);
+let num = module_1655.processColor("rgba(0, 0, 0, 0)");
 if (num == null) {
   num = 0;
 }
-let module_1652 = module_1652_mod;
-let closure_7 = module_1652.createAnimatedComponent(fn(5830).LinearGradientNativeComponent);
+let module_1655 = module_1655_mod;
+let closure_7 = module_1655.createAnimatedComponent(fn(5893).LinearGradientNativeComponent);
 let obj = { colors: null, locations: [], startPoint: { x: 0, y: 0 }, endPoint: { x: 0, y: 0 } };
 let items = [num, num];
 obj.colors = items;
@@ -68,13 +68,13 @@ export default noop.memo(function SettingsAppearanceGradientBackground(isDimmed)
   }
   closure_129_0 = tmp8;
   const obj2 = require("SettingsAppearancePickerUtils");
-  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue({
+  const sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue({
     themePrev: tmp8,
     themeCurrent: tmp8,
   });
   closure_129_1 = sharedValue;
-  const tmp5Result = require("../../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const tmp5Result = require("../../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   closure_129_2 = sharedValue1;
   const items1 = [tmp8, sharedValue, sharedValue1, launchWelcomeSystemTheme];
   const effect = obj.useEffect(() => {
@@ -83,25 +83,25 @@ export default noop.memo(function SettingsAppearanceGradientBackground(isDimmed)
     obj = { themePrev: _undefined.get().themeCurrent, themeCurrent };
     const result2 = _undefined2.set(timing_timing.withTiming(1, timingPresets.timingStandard));
   }, items1);
-  const tmp5Result4 = require("../../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../../_runtime/metro/01652__.js").useSharedValue({ width: 0, height: 0 });
+  const tmp5Result4 = require("../../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../../_runtime/metro/01655__.js").useSharedValue({ width: 0, height: 0 });
   const items2 = [sharedValue2];
   const callback = obj.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     const size = { width: nativeEvent.layout.width, height: nativeEvent.layout.height };
     const result = _undefined5.set(size);
   }, items2);
-  const tmp5Result5 = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp5Result5 = require("../../../../../../_runtime/metro/01655__.js");
   const items3 = [
     closure_9,
     sharedValue2,
     noop,
     sharedValue,
-    require("../../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../../_runtime/metro/01655__.js").interpolate,
     sharedValue1,
     getGradientStartPontDefault,
-    require("../../../../../../_runtime/metro/01652__.js").processColor,
-    require("../../../../../../_runtime/metro/01652__.js").interpolateColor,
+    require("../../../../../../_runtime/metro/01655__.js").processColor,
+    require("../../../../../../_runtime/metro/01655__.js").interpolateColor,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -165,7 +165,7 @@ export default noop.memo(function SettingsAppearanceGradientBackground(isDimmed)
   SettingsAppearanceGradientBackgroundTsx1.__workletHash = 1728256022641;
   SettingsAppearanceGradientBackgroundTsx1.__initData = tmp15;
   const obj3 = { style: StyleSheet.absoluteFill, onLayout: callback };
-  const animatedProps = require("../../../../../../_runtime/metro/01652__.js").useAnimatedProps(
+  const animatedProps = require("../../../../../../_runtime/metro/01655__.js").useAnimatedProps(
     SettingsAppearanceGradientBackgroundTsx1,
   );
   const merged = Object.assign(noop);

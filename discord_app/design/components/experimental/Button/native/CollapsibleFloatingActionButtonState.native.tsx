@@ -1,5 +1,5 @@
 // discord_app/design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx
-import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,7 +12,7 @@ let result = size.fileFinishedImporting(
 );
 
 export function useCollapsibleFloatingActionButtonState() {
-  const obj = { collapseText: _mod1652.useSharedValue(0) };
+  const obj = { collapseText: _mod1655.useSharedValue(0) };
   return obj;
 }
 export function useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActionButtonState) {
@@ -21,7 +21,7 @@ export function useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActi
   if (UNDETERMINED === undefined) {
     num = 0;
   }
-  const sharedValue = _mod1652.useSharedValue(num);
+  const sharedValue = _mod1655.useSharedValue(num);
   items = [_undefined2, num, sharedValue, 10, collapseText, 10];
   c0 = undefined;
   c1 = undefined;

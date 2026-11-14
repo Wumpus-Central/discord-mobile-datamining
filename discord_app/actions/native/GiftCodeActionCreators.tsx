@@ -1,5 +1,5 @@
 // discord_app/actions/native/GiftCodeActionCreators.tsx
-import asyncRequireImpl from "../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02121_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../ModalActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -59,7 +59,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
           closure_129_9 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -160,7 +160,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
 };
 function openGiftCodeRedeemModal(c0, fromServer) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(12287, dependencyMap.paths),
+    asyncRequireImpl(12382, dependencyMap.paths),
     { code: _require, giftCodeDebugOverride: fromServer },
     "GIFT_CODE_REDEEM_MODAL_KEY",
   );

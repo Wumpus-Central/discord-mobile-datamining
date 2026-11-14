@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3369 from "../../age_assurance/ManualReview.messages.js";
+import _modDef3417 from "../../age_assurance/ManualReview.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
@@ -71,7 +71,7 @@ function ClassificationHeader(classificationTypeText) {
       return intl.format(util.t["39jfOz"], obj2);
     }
   }, items);
-  obj.children = closure_13(classificationTypeText(5866).Text, {
+  obj.children = closure_13(classificationTypeText(5929).Text, {
     variant: "body-lg/normal",
     style: tmp.headerText,
     color: "mobile-text-heading-primary",
@@ -156,7 +156,7 @@ function ManualReviewDecidedUnderageActionsTaken() {
   const obj3 = { style: tmp.actionsTaken, children: null };
   const obj4 = { large: true, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3369.rn3Gto);
+  obj4.children = intl2.string(_modDef3417.rn3Gto);
   obj3.children = state(BulletRow, obj4);
   items[1] = state(React4, obj3);
   obj.children = items;
@@ -179,7 +179,7 @@ function ManualReviewDecidedUnderageGuidance() {
   const obj3 = { style: tmp.actionsTaken, children: null };
   const obj4 = { large: true, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3369["yV/t/V"]);
+  obj4.children = intl2.string(_modDef3417["yV/t/V"]);
   obj3.children = state(BulletRow, obj4);
   items[1] = state(React4, obj3);
   obj.children = items;
@@ -214,7 +214,7 @@ function ClassificationPolicyCard(classificationDescription) {
   };
   const obj3 = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj3.children = closure_13(policyExplainerLink(11157).ShieldIcon, {
+  obj3.children = closure_13(policyExplainerLink(11224).ShieldIcon, {
     size: "sm",
     color: nativeDefault.colors.TEXT_LINK,
   });
@@ -225,7 +225,7 @@ function ClassificationPolicyCard(classificationDescription) {
   obj6.children = intl.format(policyExplainerLink(1113).t.zxUdpj, {
     classificationDescription: classificationDescription.classificationTypeText,
   });
-  obj5.children = closure_13(policyExplainerLink(5866).Text, obj6);
+  obj5.children = closure_13(policyExplainerLink(5929).Text, obj6);
   items[1] = closure_13(closure_4, obj5);
   obj2.children = items;
   obj.children = closure_14(tmp2, obj2);
@@ -303,7 +303,7 @@ function ManualReviewDecidedUnderageFooter(arg0) {
   ({ tosLink, communityGuidelinesLink } = arg0);
   const obj = { variant: "body-sm/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3369.vPOpia, { tosLink, communityGuidelinesLink });
+  obj.children = intl.format(_modDef3417.vPOpia, { tosLink, communityGuidelinesLink });
   return state(Text_Text.Text, obj);
 }
 function ManualReviewDecidedUnderageView() {
@@ -330,7 +330,7 @@ function ClassificationDetailFooter(onClose) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8140);
+const SafetyHubConstants = fn(8206);
 ({
   SafetyHubAnalyticsActionSource: closure_9,
   SafetyHubAnalyticsActions: closure_10,
@@ -339,7 +339,7 @@ const SafetyHubConstants = fn(8140);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   container: null,

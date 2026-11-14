@@ -2,8 +2,8 @@
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment.tsx";
 import AttachmentImageLadder from "AttachmentImageLadder.tsx";
-import privDefault from "../../../_runtime/01453_priv.js";
-import _modDef1487 from "../../../_runtime/metro/01487__.js";
+import privDefault from "../../../_runtime/01456_priv.js";
+import _modDef1490 from "../../../_runtime/metro/01490__.js";
 import ImageUtils from "../../utils/ImageUtils.tsx";
 import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -41,10 +41,10 @@ function getSrcWithWidthAndHeight(quality) {
     if (!obj.isDiscordCdnUrl(src)) {
       [tmp8, tmp9] = src.split("?");
       const tmp7 = _slicedToArray(src.split("?"), 2);
-      const parsed = _modDef1487.parse(tmp9);
+      const parsed = _modDef1490.parse(tmp9);
       delete tmp2[tmp];
       items = [tmp8, parsed];
-      const tmp4Result = _modDef1487;
+      const tmp4Result = _modDef1490;
       [tmp12, tmp13] = items;
       if (null != format) {
         tmp13.format = format;
@@ -103,7 +103,7 @@ function getSrcWithWidthAndHeight(quality) {
       const fitResult = ImageUtils.fit(size1);
       let text = tmp12;
       if (!tmp4Result3.isEmpty(tmp13)) {
-        _modDef1487;
+        _modDef1490;
         text = `${tmp12}?${obj9.stringify(tmp13)}`;
       }
       return text;
@@ -261,7 +261,7 @@ export function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F124490 */ function() { ... });
+                            image.onerror = closure_2_4(/* F125892 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

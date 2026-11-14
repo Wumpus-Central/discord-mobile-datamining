@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestDock/WreathIcon.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../../../design/components/Icon/native/BaseIconImage.tsx";
-import _mod17590 from "../../../../../_runtime/metro/17590__.js";
+import _mod17708 from "../../../../../_runtime/metro/17708__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export default function WreathIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17590, color: INTERACTIVE_TEXT_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod17708, color: INTERACTIVE_TEXT_DEFAULT, style: color.style });
 }

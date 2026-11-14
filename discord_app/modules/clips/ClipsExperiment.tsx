@@ -8,8 +8,8 @@ import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const PremiumTypes = fn(1387).PremiumTypes;
-const Features = fn(6012).Features;
+const PremiumTypes = fn(1390).PremiumTypes;
+const Features = fn(6075).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 
@@ -41,6 +41,27 @@ export function areClipsAvailable() {
   }
   return isPremiumAtLeastResult;
 }
+export function useIsClipsPlatformSupported() {
+  const mediaEngine = MediaEngineStore.getMediaEngine();
+  let isDesktopResult = PlatformUtilsAll.isDesktop();
+  if (isDesktopResult) {
+    isDesktopResult = mediaEngine.supports(Features.CLIPS);
+  }
+  if (isDesktopResult) {
+    isDesktopResult = mediaEngine.hasClipsV3Support();
+  }
+  items = [DevSettingsStore, DeveloperExperimentStore];
+  if (!isDesktopResult) {
+    isDesktopResult = obj3.useStateFromStores(items, () => {
+      isDeveloper = isDeveloper.isDeveloper;
+      if (isDeveloper) {
+        isDeveloper = DevSettingsStore.get("clips_ignore_platform_requirement");
+      }
+      return isDeveloper;
+    });
+  }
+  return isDesktopResult;
+}
 export function useIsClipsAvailable() {
   const mediaEngine = MediaEngineStore.getMediaEngine();
   let isDesktopResult = PlatformUtilsAll.isDesktop();
@@ -51,29 +72,28 @@ export function useIsClipsAvailable() {
     isDesktopResult = mediaEngine.hasClipsV3Support();
   }
   items = [DevSettingsStore, DeveloperExperimentStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => {
-    isDeveloper = isDeveloper.isDeveloper;
-    if (isDeveloper) {
-      isDeveloper = DevSettingsStore.get("clips_ignore_platform_requirement");
-    }
-    return isDeveloper;
-  });
-  const items1 = [UserStore];
-  let stateFromStores1 = initialize.useStateFromStores(items1, () => {
-    currentUser = currentUser.getCurrentUser();
-    let premiumType;
-    if (currentUser != null) {
-      premiumType = currentUser.premiumType;
-    }
-    return PremiumUtilsDefault.isPremiumAtLeast(premiumType, TIER_2.TIER_2);
-  });
-  if (stateFromStores1) {
-    if (!isDesktopResult) {
-      isDesktopResult = stateFromStores;
-    }
-    stateFromStores1 = isDesktopResult;
+  if (!isDesktopResult) {
+    isDesktopResult = obj3.useStateFromStores(items, () => {
+      isDeveloper = isDeveloper.isDeveloper;
+      if (isDeveloper) {
+        isDeveloper = DevSettingsStore.get("clips_ignore_platform_requirement");
+      }
+      return isDeveloper;
+    });
   }
-  return stateFromStores1;
+  obj3 = initialize;
+  const items1 = [UserStore];
+  const tmp4Result = initialize;
+  return (
+    initialize.useStateFromStores(items1, () => {
+      currentUser = currentUser.getCurrentUser();
+      let premiumType;
+      if (currentUser != null) {
+        premiumType = currentUser.premiumType;
+      }
+      return PremiumUtilsDefault.isPremiumAtLeast(premiumType, TIER_2.TIER_2);
+    }) && isDesktopResult
+  );
 }
 export function isUserPremiumTypeForClipsEarlyAccess(currentUser) {
   let premiumType;

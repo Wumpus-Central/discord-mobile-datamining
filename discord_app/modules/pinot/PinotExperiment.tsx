@@ -4,35 +4,35 @@ import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let ApexExperiment = fn(1449);
+let ApexExperiment = fn(1452);
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-10-pinot-admin",
   kind: "guild",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-ApexExperiment = fn(1449);
+ApexExperiment = fn(1452);
 const apexExperiment1 = ApexExperiment.createApexExperiment({
   name: "2026-10-pinot-summary-management",
   kind: "guild",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-ApexExperiment = fn(1449);
+ApexExperiment = fn(1452);
 const apexExperiment2 = ApexExperiment.createApexExperiment({
   name: "2026-10-pinot-member",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-ApexExperiment = fn(1449);
+ApexExperiment = fn(1452);
 const apexExperiment3 = ApexExperiment.createApexExperiment({
   name: "2026-10-pinot-member-notice",
   kind: "guild",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
-ApexExperiment = fn(1449);
+ApexExperiment = fn(1452);
 const apexExperiment4 = ApexExperiment.createApexExperiment({
   name: "2026-10-pinot-channel-discoverable",
   kind: "guild",

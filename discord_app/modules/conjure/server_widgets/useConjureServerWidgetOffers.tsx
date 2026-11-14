@@ -398,7 +398,7 @@ export default function useConjureServerWidgetOffers() {
   );
   const items9 = [stateFromStoresArray, stateFromStores4, stateFromStores5, tmp11Result];
   return noop.useMemo(() => {
-    const found = closure_1.filter((item) => item instanceof stateFromStoresArray(7293).ApplicationWidget);
+    const found = closure_1.filter((item) => item instanceof stateFromStoresArray(7357).ApplicationWidget);
     const map = new Map();
     const iter = stateFromStoresArray[Symbol.iterator]();
     const nextResult = iter.next();
@@ -410,7 +410,7 @@ export default function useConjureServerWidgetOffers() {
       let found1;
       if (arr2 != null) {
         found1 = arr2.find(
-          (status) => status.status === stateFromStoresArray(15690).ApplicationWidgetConfigStatus.PUBLISHED,
+          (status) => status.status === stateFromStoresArray(15809).ApplicationWidgetConfigStatus.PUBLISHED,
         );
       }
       let tmp6 = found1;

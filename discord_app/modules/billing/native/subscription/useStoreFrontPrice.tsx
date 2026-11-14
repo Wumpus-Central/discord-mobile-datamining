@@ -3,7 +3,6 @@ import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_3 = fn(1072).PriceSetAssignmentPurchaseTypes;
 const PriceStates = {
   PRICE_AVAILABLE: "PRICE_AVAILABLE",
   SUBSCRIPTION_PLAN_UNAVAILABLE: "SUBSCRIPTION_PLAN_UNAVAILABLE",
@@ -14,10 +13,11 @@ const PriceStates = {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/subscription/useStoreFrontPrice.tsx");
 
-export default function useStoreFrontPrice(arg0, arg1) {
+export default function useStoreFrontPrice(arg0, arg1, purchaseType) {
   const user = arg0;
   closure_1 = arg1;
-  items = [arg0, arg1];
+  noop = purchaseType;
+  items = [arg0, arg1, purchaseType];
   return noop.useMemo(() => {
     if (null == user) {
       let priceState = obj.SUBSCRIPTION_PLAN_UNAVAILABLE;
@@ -27,14 +27,14 @@ export default function useStoreFrontPrice(arg0, arg1) {
       const prices = user.prices;
       let tmp3;
       if (prices != null) {
-        tmp3 = prices[constants.MOBILE];
+        tmp3 = prices[purchaseType];
       }
       if (null == tmp3) {
         priceState = obj.COUNTRY_PRICE_UNAVAILABLE;
       } else {
         obj = PremiumUtils;
-        const countryPrices = obj.getCountryPrices(user.id, constants.MOBILE);
-        const obj3 = { purchaseType: constants.MOBILE, currency: closure_1.currency };
+        const countryPrices = obj.getCountryPrices(user.id, purchaseType);
+        const obj3 = { purchaseType, currency: closure_1.currency };
         const experimentalGetPriceResult = PremiumUtils.experimentalGetPrice(user.id, obj3);
         if (countryPrices.countryCode !== closure_1.country) {
           priceState = obj.MISMATCHING_COUNTRIES;

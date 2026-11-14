@@ -6,7 +6,7 @@ const require = globalThis.__r;
 
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
 
-export default function useOpenGameProfileModal(arg0) {
+export default function useOpenGameProfileModal(arg0, arg1) {
   importDefault = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -32,7 +32,7 @@ export default function useOpenGameProfileModal(arg0) {
         obj2.gameProfileModalChecks = gameProfileModalChecks;
         GameProfileActionCreatorsDefault.openGameProfileModal(obj2);
         if (onOpened != null) {
-          onOpened();
+          onOpened(gameId);
         }
       };
     }

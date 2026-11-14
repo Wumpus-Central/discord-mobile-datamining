@@ -20,7 +20,7 @@ function CommunityPill(guildVisibility) {
   _require = intl.string(tmp4 ? t.op2cJ6 : t.TME4LJ);
   let ExperimentalWebIcon;
   if (tmp4) {
-    ExperimentalWebIcon = tmp2(12247).ExperimentalWebIcon;
+    ExperimentalWebIcon = tmp2(12342).ExperimentalWebIcon;
   }
   const obj = {
     style: tmp.communityPill,
@@ -37,10 +37,10 @@ function CommunityPill(guildVisibility) {
       secondaryColor: ExperimentalWebIcon(575).colors.BADGE_INVERTED_TEXT,
       style: tmp.communityPillIcon,
     };
-    let tmp7Result = closure_9(tmp2(10324).ExperimentalWebBadgeIcon, obj2);
+    let tmp7Result = closure_9(tmp2(10393).ExperimentalWebBadgeIcon, obj2);
     let tmp10 = closure_9;
   } else {
-    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(10328), disableColor: true };
+    const obj3 = { style: tmp.communityPillIcon, source: ExperimentalWebIcon(10397), disableColor: true };
     tmp7Result = closure_9(tmp2(1187).Icon, obj3);
     tmp10 = closure_9;
   }
@@ -57,7 +57,7 @@ const View = fn(17).View;
 const GuildFeatures = fn(1072).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   content: { padding: 16 },
   avatar: { borderRadius: 14.117647058823529, height: 60, width: 60 },
@@ -98,7 +98,7 @@ obj2.communityPill = {
   borderRadius: nativeDefault.radii.round,
 };
 obj2.communityPillIcon = { width: 16, height: 16, marginRight: 6 };
-const PlatformUtils = fn(1357);
+const PlatformUtils = fn(1360);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

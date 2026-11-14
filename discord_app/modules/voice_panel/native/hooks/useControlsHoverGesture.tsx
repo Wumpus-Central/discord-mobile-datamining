@@ -1,11 +1,11 @@
 // discord_app/modules/voice_panel/native/hooks/useControlsHoverGesture.tsx
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
-import LegacyBaseButton from "../../../../../_runtime/05535_LegacyBaseButton.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
+import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const VoicePanelModes = fn(11919).VoicePanelModes;
-const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
+const VoicePanelModes = fn(11985).VoicePanelModes;
+const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
 let closure_6 = {
   code: "(function useControlsHoverGestureTsx1(){let[connected,mode,VoicePanelModes,controlsSpecs,VoicePanelControlsModes,scheduleOnRN,showControls,lastIdleRefreshMillis,IDLE_REFRESH_DEBOUNCE_MILLIS,refreshIdleTimeout]=this.__closure;if(!connected.get())return;if(mode.get()!==VoicePanelModes.PANEL)return;const controlsHidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;if(controlsHidden){scheduleOnRN(showControls);return;}const currentTimeMillis=Date.now();if(currentTimeMillis-lastIdleRefreshMillis.get()<IDLE_REFRESH_DEBOUNCE_MILLIS)return;lastIdleRefreshMillis.set(currentTimeMillis);refreshIdleTimeout();})",
 };
@@ -30,7 +30,7 @@ export default function useControlsHoverGesture() {
       VoicePanelModes,
       controlsSpecs,
       VoicePanelControlsModes,
-      _mod1705.scheduleOnRN,
+      _mod1708.scheduleOnRN,
       showControls,
       sharedValue,
       500,

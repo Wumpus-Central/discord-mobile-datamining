@@ -67,6 +67,7 @@ const obj = {
   CommunicationDisabledManager: null,
   ConjureBackgroundFramesManager: null,
   ConjureProjectReconnectManager: null,
+  ConjurePublishEvalManager: null,
   ConjureTurnNotificationManager: null,
   ContactSyncLifecycleManager: null,
   CustomStatusManager: null,
@@ -187,6 +188,7 @@ const obj = {
   PlayableProgressManager: null,
   QuestProgressManager: null,
   AccountLinkManagerNative: null,
+  AccountLinkingCampaignManager: null,
 };
 obj.ATTManager = {
   actions: PlatformUtils.isIOS()
@@ -294,6 +296,12 @@ obj.ConjureProjectReconnectManager = {
   actions: ["POST_CONNECTION_OPEN"],
   inlineRequire() {
     return require("ConjureProjectReconnectManager").default;
+  },
+};
+obj.ConjurePublishEvalManager = {
+  actions: ["POST_CONNECTION_OPEN", "CONJURE_PUBLISH_EVAL_PENDING"],
+  inlineRequire() {
+    return require("ConjurePublishEvalManager").default;
   },
 };
 obj.ConjureTurnNotificationManager = {
@@ -1431,6 +1439,13 @@ obj.AccountLinkManagerNative = {
     return require("AccountLinkManagerNative").default;
   },
   loadRightBeforeConnectionOpen: true,
+};
+obj.AccountLinkingCampaignManager = {
+  actions: ["LOGOUT", "POST_CONNECTION_OPEN"],
+  inlineRequire() {
+    return require("AccountLinkingCampaignManager").default;
+  },
+  neverLoadBeforeConnectionOpen: true,
 };
 ManagerRegistryShared.initialize(obj);
 const result = size.fileFinishedImporting("modules/app_startup/ManagerRegistry.native.tsx");

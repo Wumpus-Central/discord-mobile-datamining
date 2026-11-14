@@ -1,9 +1,11 @@
 // discord_app/modules/waterwheels/interest/native/InterestGameCover.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useInterestCoverColor from "useInterestCoverColor.tsx";
+import InterestPickerPerformance from "InterestPickerPerformance.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 function NoCover(imageWidth) {
@@ -28,7 +30,7 @@ function NoCover(imageWidth) {
   if (tmp10) {
     tmp10 = iconURL !== tmp9[0];
   }
-  const tmp11 = tmp4(18981)(game.id, iconURL1);
+  const tmp11 = tmp4(19034)(game.id, iconURL1);
   let tmp12 = !compact;
   if (!compact) {
     tmp12 = tmp10;
@@ -58,7 +60,7 @@ function NoCover(imageWidth) {
     const obj3 = { uri: iconURL };
     obj2.source = obj3;
     obj2.style = tmp6.texture;
-    tmp18 = React5(tmp4(5957), obj2);
+    tmp18 = React5(tmp4(6020), obj2);
   }
   const items1 = [tmp18, , ,];
   let tmp20 = tmp12;
@@ -73,7 +75,7 @@ function NoCover(imageWidth) {
     obj5.onError = function onError() {
       return closure_1(iconURL);
     };
-    obj4.children = React5(tmp4(5957), obj5);
+    obj4.children = React5(tmp4(6020), obj5);
     tmp20 = React5(timestampProducer, obj4);
   }
   items1[1] = tmp20;
@@ -89,7 +91,7 @@ function NoCover(imageWidth) {
     obj7.onError = function onError() {
       return closure_1(iconURL);
     };
-    tmp10 = React5(tmp4(5957), obj7);
+    tmp10 = React5(tmp4(6020), obj7);
   }
   items1[2] = tmp10;
   let tmp24Result = !compact;
@@ -112,9 +114,9 @@ function NoCover(imageWidth) {
       num = 2;
     }
     obj10.maxLines = num;
-    obj9.children = React5(tmp4(18982), obj10);
+    obj9.children = React5(tmp4(19035), obj10);
     tmp24Result = React5(timestampProducer, obj9);
-    const tmp4Result = tmp4(18982);
+    const tmp4Result = tmp4(19035);
   }
   items1[3] = tmp24Result;
   obj.children = items1;
@@ -122,12 +124,12 @@ function NoCover(imageWidth) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-const TILE_ASPECT_RATIO = fn(18979).TILE_ASPECT_RATIO;
+const TILE_ASPECT_RATIO = fn(19025).TILE_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
 const PX_8 = nativeDefault.space.PX_8;
-const TextVariantsFlat = fn(5867).TextVariantsFlat;
+const TextVariantsFlat = fn(5930).TextVariantsFlat;
 const found = TextVariantsFlat.find((name) => "body-xs/semibold" === name.name);
 let num;
 if (found != null) {
@@ -137,7 +139,7 @@ if (num == null) {
   num = 16;
 }
 const sum = 2 * num + PX_6 + PX_8;
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let obj2 = {
   cover: null,
   image: null,
@@ -176,7 +178,7 @@ let obj4 = {
 obj2.icon = { borderRadius: nativeDefault.radii.xs };
 let obj6 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj6.opacity = fn(18981).COVER_TEXTURE_OPACITY;
+obj6.opacity = fn(19034).COVER_TEXTURE_OPACITY;
 obj2.texture = obj6;
 const rect = {
   position: "absolute",
@@ -203,7 +205,7 @@ const rect1 = {
 };
 obj2.banner = rect1;
 let closure_11 = createStyles.createStyles(obj2);
-createStyles = fn(5243);
+createStyles = fn(5306);
 let closure_12 = createStyles.createStyles((height, width, minHeight, backgroundColor) => {
   if (null == backgroundColor) {
     let obj = {};
@@ -226,40 +228,98 @@ let closure_12 = createStyles.createStyles((height, width, minHeight, background
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/waterwheels/interest/native/InterestGameCover.tsx");
 
-export default function InterestGameCover(imageWidth) {
-  ({ game, width, compact } = imageWidth);
+export default function InterestGameCover(game) {
+  game = game.game;
+  ({ width, compact } = game);
   if (compact === undefined) {
     compact = false;
   }
-  imageWidth = imageWidth.imageWidth;
+  let imageWidth = game.imageWidth;
   if (imageWidth === undefined) {
     imageWidth = width;
   }
+  ({ performanceTracker: importDefault, gridPosition } = game);
+  if (gridPosition === undefined) {
+    gridPosition = 0;
+  }
+  noop = undefined;
+  closure_5 = undefined;
   const tmp = closure_11();
-  const coverURL = game.getCoverURL(Math.ceil(imageWidth * hasOwnProperty.get()));
-  const tmp3 = _slicedToArray(noop.useState(null), 2);
-  closure_1 = tmp3[1];
+  const coverURL = game.getCoverURL(Math.ceil(imageWidth * closure_5.get()));
+  const tmp3 = coverURL(noop.useState(null), 2);
+  noop = tmp3[1];
   let tmp4 = null == coverURL || coverURL === tmp3[0];
-  const obj = { accessible: false, pointerEvents: "none", style: tmp.cover, children: null };
-  let tmp7 = !tmp4;
+  closure_5 = tmp4;
+  items = [coverURL];
+  closure_6 = obj.useMemo(() => {
+    const interestCoverLoad = new InterestPickerPerformance.InterestCoverLoad(coverURL);
+    return interestCoverLoad;
+  }, items);
+  const effect = obj.useEffect(() => {
+    if (closure_5) {
+      let str = "error";
+      if (null == coverURL) {
+        str = "fallback";
+      }
+      const finishResult = closure_6.finish(str);
+      if (null != finishResult) {
+        if (importDefault != null) {
+          const obj2 = { game_id: game.id, grid_position: gridPosition };
+          const merged = Object.assign(finishResult);
+          importDefault.settle(obj2);
+        }
+      }
+    }
+  });
+  let obj2 = { accessible: false, pointerEvents: "none", style: tmp.cover, children: null };
+  let tmp8 = !tmp4;
   if (!tmp4) {
-    const obj2 = { source: null, style: null, resizeMode: "cover", fadeDuration: 0, onError: null };
-    const obj3 = { uri: coverURL };
-    obj2.source = obj3;
-    obj2.style = tmp.image;
-    obj2.onError = function onError() {
-      return closure_1(coverURL);
+    const obj3 = {
+      source: null,
+      style: null,
+      resizeMode: "cover",
+      fadeDuration: 0,
+      onLoadStart: null,
+      onLoad: null,
+      onError: null,
     };
-    tmp7 = React5(FastImageDefault, obj2);
+    const obj4 = { uri: coverURL };
+    obj3.source = obj4;
+    obj3.style = tmp.image;
+    obj3.onLoadStart = function onLoadStart() {
+      return closure_6.start();
+    };
+    obj3.onLoad = function onLoad() {
+      const finishResult = closure_6.finish("loaded");
+      if (null != finishResult) {
+        if (importDefault != null) {
+          const obj2 = { game_id: game.id, grid_position: gridPosition };
+          const merged = Object.assign(finishResult);
+          importDefault.settle(obj2);
+        }
+      }
+    };
+    obj3.onError = function onError() {
+      const finishResult = closure_6.finish("error");
+      if (null != finishResult) {
+        if (importDefault != null) {
+          const obj2 = { game_id: game.id, grid_position: gridPosition };
+          const merged = Object.assign(finishResult);
+          importDefault.settle(obj2);
+        }
+      }
+      closure_4(coverURL);
+    };
+    tmp8 = closure_8(require("FastImage"), obj3, coverURL);
   }
-  items = [tmp7];
+  const items1 = [tmp8];
   if (tmp4) {
-    const obj4 = { game, width, compact, imageWidth };
-    tmp4 = React5(NoCover, obj4);
+    const obj5 = { game, width, compact, imageWidth };
+    tmp4 = closure_8(NoCover, obj5);
   }
-  items[1] = tmp4;
-  obj.children = items;
-  return React6(timestampProducer, obj);
+  items1[1] = tmp4;
+  obj2.children = items1;
+  return closure_9(closure_6, obj2);
 }
 export const BIG_ICON_BANNER_PADDING_TOP = PX_6;
 export const BIG_ICON_BANNER_PADDING_BOTTOM = PX_8;

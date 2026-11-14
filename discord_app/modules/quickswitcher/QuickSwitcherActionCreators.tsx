@@ -365,8 +365,8 @@ let closure_27 = async function _openInviteFromQuickSwitcher(arg0) {
     }
   }
 };
-const InAppNavigationType = fn(6900).InAppNavigationType;
-const ChannelRecordBase = fn(5096).ChannelRecordBase;
+const InAppNavigationType = fn(6963).InAppNavigationType;
+const ChannelRecordBase = fn(5159).ChannelRecordBase;
 const Constants = fn(1072);
 ({
   Layers,
@@ -376,26 +376,26 @@ const Constants = fn(1072);
   AnalyticsLocations: closure_16,
   AnalyticsPages: closure_17,
 } = Constants);
-const isStaticChannelRoute = fn(5099).isStaticChannelRoute;
+const isStaticChannelRoute = fn(5162).isStaticChannelRoute;
 const CollectibleShopTab = fn(1074).CollectibleShopTab;
 let obj = {};
-obj[fn(10178).AutocompleterQuerySymbols.USER] = fn(10178).AutocompleterResultTypes.USER;
-obj[fn(10178).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(10178).AutocompleterResultTypes.TEXT_CHANNEL;
-obj[fn(10178).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(10178).AutocompleterResultTypes.VOICE_CHANNEL;
-obj[fn(10178).AutocompleterQuerySymbols.GUILD] = fn(10178).AutocompleterResultTypes.GUILD;
-obj[fn(10178).AutocompleterQuerySymbols.GAME_PROFILE] = fn(10178).AutocompleterResultTypes.GAME_PROFILE;
+obj[fn(10247).AutocompleterQuerySymbols.USER] = fn(10247).AutocompleterResultTypes.USER;
+obj[fn(10247).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(10247).AutocompleterResultTypes.TEXT_CHANNEL;
+obj[fn(10247).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(10247).AutocompleterResultTypes.VOICE_CHANNEL;
+obj[fn(10247).AutocompleterQuerySymbols.GUILD] = fn(10247).AutocompleterResultTypes.GUILD;
+obj[fn(10247).AutocompleterQuerySymbols.GAME_PROFILE] = fn(10247).AutocompleterResultTypes.GAME_PROFILE;
 let closure_20 = Object.freeze(obj);
 const regExp = new RegExp(
   "^" +
-    fn(10178).AutocompleterQuerySymbols.USER +
+    fn(10247).AutocompleterQuerySymbols.USER +
     "|" +
-    fn(10178).AutocompleterQuerySymbols.TEXT_CHANNEL +
+    fn(10247).AutocompleterQuerySymbols.TEXT_CHANNEL +
     "|" +
-    fn(10178).AutocompleterQuerySymbols.VOICE_CHANNEL +
+    fn(10247).AutocompleterQuerySymbols.VOICE_CHANNEL +
     "|\\" +
-    fn(10178).AutocompleterQuerySymbols.GUILD +
+    fn(10247).AutocompleterQuerySymbols.GUILD +
     "|\\" +
-    fn(10178).AutocompleterQuerySymbols.GAME_PROFILE,
+    fn(10247).AutocompleterQuerySymbols.GAME_PROFILE,
 );
 let items = [, ,];
 ({ SETTINGS: arr[0], PLAYGROUND: arr[1], SHOP_ORBS_TAB: arr[2] } = InAppNavigationType);
@@ -497,7 +497,7 @@ export function switchToResultInNewTab(type) {
                           obj5.recipientIds = items;
                           dependencyMap = 1;
                           c3 = 1;
-                          const obj6 = { value: tmp2(8069).openPrivateChannel(obj5), done: false };
+                          const obj6 = { value: tmp2(8134).openPrivateChannel(obj5), done: false };
                           return obj6;
                         }
                       } else if (arg0 === 1) {
@@ -509,7 +509,7 @@ export function switchToResultInNewTab(type) {
                         return obj7;
                       } else {
                         closure_128_0 = value;
-                        const obj = tmp5(10210);
+                        const obj = tmp5(10279);
                         obj.openChannelTabActive(closure_128_0, null, "quick_switcher", closure_129_1);
                         c3 = 3;
                         return { value: "HermesInternal", done: null };
@@ -551,7 +551,7 @@ export function switchToResultInNewTab(type) {
                           obj5.recipientIds = items;
                           dependencyMap = 1;
                           c3 = 1;
-                          const obj6 = { value: tmp2(8069).openPrivateChannel(obj5), done: false };
+                          const obj6 = { value: tmp2(8134).openPrivateChannel(obj5), done: false };
                           return obj6;
                         }
                       } else if (arg0 === 1) {
@@ -563,7 +563,7 @@ export function switchToResultInNewTab(type) {
                         return obj7;
                       } else {
                         closure_128_0 = value;
-                        const obj = tmp5(10210);
+                        const obj = tmp5(10279);
                         obj.openChannelTabActive(closure_128_0, null, "quick_switcher", closure_129_1);
                         c3 = 3;
                         return { value: "HermesInternal", done: null };

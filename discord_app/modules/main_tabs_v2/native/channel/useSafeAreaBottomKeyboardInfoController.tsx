@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let MetaQuestUtils = fn(1624);
+let MetaQuestUtils = fn(1627);
 MetaQuestUtils = MetaQuestUtils.isMetaQuest();
 let closure_5 = {
   code: "(function useSafeAreaBottomKeyboardInfoControllerTsx1(e){let[scheduleOnRN,KeyboardStateDebugging,IS_SYSTEM_KEYBOARD_EXTERNAL,keyboardOverlapsCurrentAppEntry,keyboardOpenedHeight]=this.__closure;scheduleOnRN(KeyboardStateDebugging.keyboardControllerWorkletEvent,'onStart',e.height);if(IS_SYSTEM_KEYBOARD_EXTERNAL)return;if(e.height>0&&keyboardOverlapsCurrentAppEntry.get()){keyboardOpenedHeight.set(e.height);}})",
@@ -24,7 +24,7 @@ export default function useSafeAreaBottomKeyboardInfoController() {
   _require = appEntryKey;
   let num = 0;
   if (!c4) {
-    const KeyboardController = tmp(1641).KeyboardController;
+    const KeyboardController = tmp(1644).KeyboardController;
     const stateResult = KeyboardController.state();
     let num2;
     if (stateResult != null) {
@@ -38,12 +38,12 @@ export default function useSafeAreaBottomKeyboardInfoController() {
   let tmp7 = 0 !== num;
   if (tmp7) {
     closure_129_0 = appEntryKey;
-    let isAndroidResult = tmp(1377).isAndroid();
+    let isAndroidResult = tmp(1380).isAndroid();
     let tmp9 = !isAndroidResult;
     if (isAndroidResult) {
       let tmp11 = NativeSafeAreaInsetsModuleDefault.getImeInsets(false, appEntryKey) > 0;
       if (!tmp11) {
-        let APP_ENTRY_KEYS = tmp(1640).APP_ENTRY_KEYS;
+        let APP_ENTRY_KEYS = tmp(1643).APP_ENTRY_KEYS;
         let someResult = APP_ENTRY_KEYS.some((item) => {
           let tmp = item !== closure_0;
           if (tmp) {
@@ -61,18 +61,18 @@ export default function useSafeAreaBottomKeyboardInfoController() {
       tmp9 = tmp11;
     }
     tmp7 = true === tmp9;
-    const tmpResult = tmp(1377);
+    const tmpResult = tmp(1380);
   }
   let num3 = 0;
   if (tmp7) {
     num3 = num;
   }
   let obj = require("AppEntryKeyContext");
-  const keyboardOpenedHeight = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num3);
-  const tmpResult5 = require("../../../../../_runtime/metro/01652__.js");
-  const keyboardOpenOrOpening = require("../../../../../_runtime/metro/01652__.js").useSharedValue(tmp7);
-  const tmpResult6 = require("../../../../../_runtime/metro/01652__.js");
-  const keyboardOverlapsCurrentAppEntry = require("../../../../../_runtime/metro/01652__.js").useSharedValue(tmp7);
+  const keyboardOpenedHeight = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num3);
+  const tmpResult5 = require("../../../../../_runtime/metro/01655__.js");
+  const keyboardOpenOrOpening = require("../../../../../_runtime/metro/01655__.js").useSharedValue(tmp7);
+  const tmpResult6 = require("../../../../../_runtime/metro/01655__.js");
+  const keyboardOverlapsCurrentAppEntry = require("../../../../../_runtime/metro/01655__.js").useSharedValue(tmp7);
   noop = keyboardOverlapsCurrentAppEntry;
   items = [appEntryKey, keyboardOpenOrOpening, keyboardOpenedHeight, keyboardOverlapsCurrentAppEntry];
   const effect = noop.useEffect(() => {
@@ -155,10 +155,10 @@ export default function useSafeAreaBottomKeyboardInfoController() {
       };
     }
   }, items);
-  const tmpResult7 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult7 = require("../../../../../_runtime/metro/01655__.js");
   const items1 = [
     closure_5,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     KeyboardStateDebuggingDefault,
     c4,
     keyboardOverlapsCurrentAppEntry,
@@ -187,7 +187,7 @@ export default function useSafeAreaBottomKeyboardInfoController() {
   obj2.onStart = useSafeAreaBottomKeyboardInfoControllerTsx1;
   const items3 = [
     closure_6,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     KeyboardStateDebuggingDefault,
     c4,
     keyboardOverlapsCurrentAppEntry,

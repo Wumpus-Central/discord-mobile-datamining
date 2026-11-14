@@ -8,16 +8,17 @@ import AdCreativeType from "../../../discord_common/js/shared/shared-constants/A
 import AdDecisionUtils from "utils/AdDecisionUtils.tsx";
 
 require = fn;
-let closure_9 = 30 * DurationsDefault.Millis.SECOND;
-let closure_10 = 10 * DurationsDefault.Millis.MINUTE;
+let closure_9 = [];
+let closure_10 = 30 * DurationsDefault.Millis.SECOND;
+let closure_11 = 10 * DurationsDefault.Millis.MINUTE;
 new Map();
 let closure_4 = 0;
 let map1 = new Map();
 let map = new Map();
 let map3 = new Map();
 let map4 = new Map();
-let closure_11 = null;
-let c12 = false;
+let closure_12 = null;
+let c13 = false;
 const Store = initializeDefault.Store;
 class AdDeliveryStore extends Store {}
 const prototype = AdDeliveryStore.prototype;
@@ -27,20 +28,20 @@ Object.defineProperty(prototype, "lastFetchedQuestToDeliver", {
   },
   set: undefined,
 });
-prototype["isFetchingAdToDeliverByPlacement"] = function isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP) {
+prototype["isFetchingAdToDeliverByPlacement"] = function isFetchingAdToDeliverByPlacement(current) {
   let flag;
   if (map != null) {
-    flag = map.get(QUEST_HOME_BANNER_DESKTOP);
+    flag = map.get(current);
   }
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
-prototype["canRefreshAd"] = function canRefreshAd(QUEST_HOME_BANNER_DESKTOP) {
+prototype["canRefreshAd"] = function canRefreshAd(current) {
   value = undefined;
   if (map4 != null) {
-    value = map4.get(QUEST_HOME_BANNER_DESKTOP);
+    value = map4.get(current);
   }
   let tmp3 = null == value;
   if (!tmp3) {
@@ -55,6 +56,13 @@ Object.defineProperty(prototype, "deliveryAdDecisionByPlacement", {
   },
   set: undefined,
 });
+prototype["getAdDecisionsForPlacement"] = function getAdDecisionsForPlacement(MOBILE_HOME_DOCK_AREA) {
+  value = map1.get(MOBILE_HOME_DOCK_AREA);
+  if (value == null) {
+    value = closure_9;
+  }
+  return value;
+};
 prototype["getNoFillForPlacement"] = function getNoFillForPlacement(arg0) {
   value = map.get(arg0);
   let tmp2 = null;
@@ -70,16 +78,16 @@ prototype["getNoFillForPlacement"] = function getNoFillForPlacement(arg0) {
   return tmp2;
 };
 prototype["isFetchingQuestHomeHero"] = function isFetchingQuestHomeHero() {
-  return c12;
+  return c13;
 };
 prototype["getLastFetchedQuestHomeHero"] = function getLastFetchedQuestHomeHero() {
-  return closure_11;
+  return closure_12;
 };
 prototype["getQuestHomeHero"] = function getQuestHomeHero() {
-  value = map1.get(AdPlacement.AdPlacement.QUEST_HOME_BANNER_DESKTOP);
+  const first = this.getAdDecisionsForPlacement(AdPlacement.AdPlacement.QUEST_HOME_BANNER_DESKTOP)[0];
   let creative;
-  if (value != null) {
-    creative = value.creative;
+  if (first != null) {
+    creative = first.creative;
   }
   let type;
   if (creative != null) {
@@ -100,8 +108,8 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
     map = new Map();
     map3 = new Map();
     map4 = new Map();
-    closure_11 = null;
-    c12 = false;
+    closure_12 = null;
+    c13 = false;
   },
   QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: function handleFetchQuestToDeliverBegin(placement) {
     map = new Map(map);
@@ -162,7 +170,8 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
         const _Map = Map;
         const map2 = new Map(map1);
         map1 = map2;
-        const result2 = map2.set(placement, obj2);
+        items = [obj2];
+        const result2 = map2.set(placement, items);
       }
     }
     map.delete(placement);
@@ -177,7 +186,7 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
     const result = map1.set(placement, false);
     value = map3.get(placement);
     if (null == value) {
-      const tmp9 = new BackoffDefault(closure_9, closure_10);
+      const tmp9 = new BackoffDefault(closure_10, closure_11);
       const result1 = map3.set(placement, tmp9);
       value = tmp9;
     }
@@ -191,16 +200,17 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
     const result = map.set(placement, false);
     const obj = { creative: null, fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(responseTtlSeconds) };
     map1 = new Map(map1);
-    const result1 = map1.set(placement, obj);
+    items = [obj];
+    const result1 = map1.set(placement, items);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function handleFetchQuestHomeHeroBegin(placement) {
-    c12 = true;
+    c13 = true;
     map = new Map(map);
     const result = map.set(placement.placement, true);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: function handleFetchQuestHomeHeroSuccess(fetchedAt) {
-    c12 = false;
-    closure_11 = Date.now();
+    c13 = false;
+    closure_12 = Date.now();
     map = new Map(map);
     const result = map.set(fetchedAt.placement, false);
     value = map3.get(fetchedAt.placement);
@@ -231,16 +241,17 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
       provenanceMetadataSealed: obj4.provenanceMetadataSealed,
     } = fetchedAt);
     map1 = new Map(map1);
-    const result1 = map1.set(fetchedAt.placement, obj2);
+    items = [obj2];
+    const result1 = map1.set(fetchedAt.placement, items);
   },
   QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function handleFetchQuestHomeHeroFailure(placement) {
     placement = placement.placement;
-    c12 = false;
+    c13 = false;
     map = new Map(map);
     const result = map.set(placement, false);
     value = map3.get(placement);
     if (null == value) {
-      const tmp8 = new BackoffDefault(closure_9, closure_10);
+      const tmp8 = new BackoffDefault(closure_10, closure_11);
       const result1 = map3.set(placement, tmp8);
       value = tmp8;
     }

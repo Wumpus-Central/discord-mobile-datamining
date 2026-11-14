@@ -1,11 +1,11 @@
 // discord_app/design/components/ContextMenu/native/ContextMenuItem.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import IconDefault from "../../../void/Icon/native/Icon.tsx";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import 01652__ from "../../../../../_runtime/metro/01652__.js";
+import 01655__ from "../../../../../_runtime/metro/01655__.js";
 
 const require = globalThis.__r;
 
@@ -14,8 +14,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let closure_7 = module_1652.createAnimatedComponent(Pressable);
-const createStyles = fn(5243);
+let closure_7 = module_1655.createAnimatedComponent(Pressable);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { container: { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 }, containerRefresh: { justifyContent: "flex-start" }, roundedTop: null, roundedBottom: null, border: null, pressed: null, icon: null, label: null, trailingIndicator: null };
   const obj2 = { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
@@ -56,15 +56,15 @@ export function ContextMenuItem(accessibilityRole) {
   if (str === undefined) {
     str = "button";
   }
-  const animatedRef = require("../../../../../_runtime/metro/01652__.js").useAnimatedRef();
+  const animatedRef = require("../../../../../_runtime/metro/01655__.js").useAnimatedRef();
   let tmp4 = c8(variant);
   const itemMeasurements = state.itemMeasurements;
   importDefault = itemMeasurements;
   const activeIndex = state.activeIndex;
   dependencyMap = activeIndex;
-  const obj = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const obj = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const obj2 = require("../../../../../_runtime/metro/01655__.js");
   items = [closure_9, state.pan];
   _require = undefined;
   [tmp6, tmp7] = items;
@@ -77,7 +77,7 @@ export function ContextMenuItem(accessibilityRole) {
   ContextMenuItemNativeTsx1.__closure = items1;
   ContextMenuItemNativeTsx1.__workletHash = 10932936281465;
   ContextMenuItemNativeTsx1.__initData = tmp6;
-  const items2 = [closure_10, require("../../../../../_runtime/metro/01652__.js").measure, animatedRef, index, require("ContextMenuState").INDEX_BOUNDS_OFFSET, itemMeasurements, require("ContextMenuState").INDEX_BOUNDS_PAGE_X_OFFSET, require("ContextMenuState").INDEX_BOUNDS_PAGE_Y_OFFSET, require("ContextMenuState").INDEX_BOUNDS_WIDTH_OFFSET, require("ContextMenuState").INDEX_BOUNDS_HEIGHT_OFFSET];
+  const items2 = [closure_10, require("../../../../../_runtime/metro/01655__.js").measure, animatedRef, index, require("ContextMenuState").INDEX_BOUNDS_OFFSET, itemMeasurements, require("ContextMenuState").INDEX_BOUNDS_PAGE_X_OFFSET, require("ContextMenuState").INDEX_BOUNDS_PAGE_Y_OFFSET, require("ContextMenuState").INDEX_BOUNDS_WIDTH_OFFSET, require("ContextMenuState").INDEX_BOUNDS_HEIGHT_OFFSET];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -120,8 +120,8 @@ export function ContextMenuItem(accessibilityRole) {
   ContextMenuItemNativeTsx2.__closure = items3;
   ContextMenuItemNativeTsx2.__workletHash = 15799031050779;
   ContextMenuItemNativeTsx2.__initData = tmp8;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(ContextMenuItemNativeTsx1, ContextMenuItemNativeTsx2);
-  const obj3 = require("../../../../../_runtime/metro/01652__.js");
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(ContextMenuItemNativeTsx1, ContextMenuItemNativeTsx2);
+  const obj3 = require("../../../../../_runtime/metro/01655__.js");
   const items4 = [closure_11, activeIndex, index, sharedValue, require("spring/spring").withSpring, tmp4.pressed.backgroundColor, require("springPresets").SUBTLE_SPRING];
   _require = undefined;
   importDefault = undefined;
@@ -151,7 +151,7 @@ export function ContextMenuItem(accessibilityRole) {
   ContextMenuItemNativeTsx3.__closure = items5;
   ContextMenuItemNativeTsx3.__workletHash = 5959605672534;
   ContextMenuItemNativeTsx3.__initData = tmp19;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ContextMenuItemNativeTsx3);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(ContextMenuItemNativeTsx3);
   if (null != IconComponent) {
     const obj4 = { size: "sm", color: tmp4.icon.tintColor };
     let tmp27 = c5(IconComponent, obj4);
@@ -210,7 +210,7 @@ export function ContextMenuItem(accessibilityRole) {
     ContextMenuItemNativeTsx5.__closure = items1;
     ContextMenuItemNativeTsx5.__workletHash = 3832423612687;
     ContextMenuItemNativeTsx5.__initData = tmp;
-    _mod1705.runOnUISync(ContextMenuItemNativeTsx5);
+    _mod1708.runOnUISync(ContextMenuItemNativeTsx5);
   }, items7);
   const obj7 = { ref: animatedRef, style: null, onLayout: null, onPressIn: null, onPressOut: null, onPress: null, accessibilityRole: null, children: null };
   const items9 = [, , , , , ];

@@ -8,10 +8,10 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 require = fn;
-const GuildRecord = fn(5110);
+const GuildRecord = fn(5173);
 ({ getGuildIconSource: hasOwnProperty, getGuildIconURL: closure_6 } = GuildRecord);
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { guildIcon: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -153,7 +153,7 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     selected: stateFromStores,
     sharedId: sharedValue,
     circle: !stateFromStores,
-    overState: "flexDirection",
+    overState: "Path",
     unread: null,
     label: null,
     config: null,
@@ -199,7 +199,7 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     selected: stateFromStores,
     sharedId: sharedValue,
     circle: !stateFromStores,
-    overState: "flexDirection",
+    overState: "Path",
     unread: null,
     label: null,
     config: null,

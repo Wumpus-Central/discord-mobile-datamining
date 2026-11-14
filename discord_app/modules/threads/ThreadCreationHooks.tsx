@@ -412,13 +412,13 @@ let closure_26 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(8658).DraftType;
-const SlowmodeType = fn(8725).SlowmodeType;
+const DraftType = fn(8725).DraftType;
+const SlowmodeType = fn(8792).SlowmodeType;
 const ThreadConstants = fn(1112);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
 const Constants = fn(1072);
 ({ AbortCodes: closure_14, AnalyticEvents: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, LoggingInviteTypes: closure_18, MAX_MESSAGES_PER_CHANNEL: closure_19, MessageFlags: closure_20 } = Constants);
-const MessageSendLocation = fn(5248).MessageSendLocation;
+const MessageSendLocation = fn(5311).MessageSendLocation;
 const PrivateThreadMode = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadCreationHooks.tsx");
@@ -559,17 +559,17 @@ export function useCreateThreadCommon(parentChannel) {
                 }
                 if (null != items1) {
                   if (items1.length > 0) {
-                    const obj4 = closure_1_1(8593);
+                    const obj4 = closure_1_1(8660);
                     id = id.id;
                     const obj3 = { location: constants.THREAD_CREATION };
-                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(8719).parse(id, arg1), obj3);
-                    const obj5 = closure_1_1(8719);
+                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(8786).parse(id, arg1), obj3);
+                    const obj5 = closure_1_1(8786);
                   }
                   return sendStickersResult;
                 }
-                obj = closure_1_1(8593);
-                sendStickersResult = obj.sendMessage(id.id, closure_1_1(8719).parse(id, arg1), undefined, { location: constants.THREAD_CREATION });
-                const obj2 = closure_1_1(8719);
+                obj = closure_1_1(8660);
+                sendStickersResult = obj.sendMessage(id.id, closure_1_1(8786).parse(id, arg1), undefined, { location: constants.THREAD_CREATION });
+                const obj2 = closure_1_1(8786);
                 const obj6 = { location: constants.THREAD_CREATION };
               })(closure_132_7, closure_132_0, closure_132_1, closure_132_2, c7);
               const obj9 = parentMessageId(threadSettings[19]);

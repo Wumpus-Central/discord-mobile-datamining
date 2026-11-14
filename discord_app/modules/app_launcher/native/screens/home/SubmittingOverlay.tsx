@@ -1,14 +1,14 @@
 // discord_app/modules/app_launcher/native/screens/home/SubmittingOverlay.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
 import spring_spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 import ButtonEllipsis from "../../../../../design/components/Button/native/ButtonEllipsis.native.tsx";
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 const jsx = jsxProd.jsx;
 const obj = {
@@ -43,7 +43,7 @@ export function SubmittingOverlay(submitting) {
   SubmittingOverlayTsx1.__closure = items1;
   SubmittingOverlayTsx1.__workletHash = 16951680167717;
   SubmittingOverlayTsx1.__initData = tmp4;
-  const animatedStyle = _mod1652.useAnimatedStyle(SubmittingOverlayTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(SubmittingOverlayTsx1);
   const obj2 = { style: null, children: null };
   const items2 = [submitting.style, tmp.ellipsis, animatedStyle];
   obj2.style = items2;
@@ -51,5 +51,5 @@ export function SubmittingOverlay(submitting) {
     submitting = jsx(ButtonEllipsis.Ellipsis, { variant: "active", size: "md" });
   }
   obj2.children = submitting;
-  return jsx(_modDef1652.View, { style: null, children: null });
+  return jsx(_modDef1655.View, { style: null, children: null });
 }

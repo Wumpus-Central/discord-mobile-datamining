@@ -1,7 +1,7 @@
 // discord_app/modules/age_assurance/age_notice/native/AgeNoticePromoSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef3305 from "../intl/AgeNotice.messages.js";
+import _modDef3353 from "../intl/AgeNotice.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AgeVerificationAnalyticsUtils from "../../AgeVerificationAnalyticsUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../AgeVerificationActionCreators.native.tsx";
@@ -10,13 +10,13 @@ import openAgeNoticePromoSheet from "openAgeNoticePromoSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const AGE_NOTICE_BLOG_URL = fn(6778).AGE_NOTICE_BLOG_URL;
+const AGE_NOTICE_BLOG_URL = fn(6841).AGE_NOTICE_BLOG_URL;
 const Constants = fn(1072);
 ({ HelpdeskArticles: hasOwnProperty, UserSettingsSections: closure_6 } = Constants);
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { illustration: null, actions: null };
 let size = { width: 198, height: 132, marginTop: nativeDefault.space.PX_16 };
 obj2.illustration = size;
@@ -28,9 +28,9 @@ let result = size.fileFinishedImporting("modules/age_assurance/age_notice/native
 export default function AgeNoticePromoSheet(markAsDismissed) {
   let dismissOnce;
   const tmp = closure_10();
-  const isVerifiedTeen = dismissOnce(6767).useIsVerifiedTeen();
-  let obj = dismissOnce(6767);
-  dismissOnce = dismissOnce(17123).useDismissOnce(markAsDismissed.markAsDismissed);
+  const isVerifiedTeen = dismissOnce(6830).useIsVerifiedTeen();
+  let obj = dismissOnce(6830);
+  dismissOnce = dismissOnce(17246).useDismissOnce(markAsDismissed.markAsDismissed);
   items = [dismissOnce];
   const items1 = [dismissOnce];
   const callback = noop.useCallback(() => {
@@ -68,7 +68,7 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   }, items4);
   const intl = dismissOnce(1113).intl;
   const string = intl.string;
-  const tmp13 = _modDef3305;
+  const tmp13 = _modDef3353;
   if (isVerifiedTeen) {
     obj3.text = string(tmp13["+7NlgO"]);
     obj3.onPress = callback3;
@@ -82,15 +82,15 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   }
   const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
   const obj5 = { source: null, style: null, resizeMode: "contain" };
-  let obj2 = dismissOnce(17123);
-  obj5.source = tmp14(17124);
+  let obj2 = dismissOnce(17246);
+  obj5.source = tmp14(17247);
   obj5.style = tmp.illustration;
-  obj4.illustration = closure_8(tmp14(5957), obj5);
+  obj4.illustration = closure_8(tmp14(6020), obj5);
   const intl2 = tmp2(1113).intl;
-  obj4.title = intl2.string(tmp14(3305).GdTVPF);
+  obj4.title = intl2.string(tmp14(3353).GdTVPF);
   const intl3 = tmp2(1113).intl;
   const format = intl3.format;
-  const tmp14Result2 = tmp14(3305);
+  const tmp14Result2 = tmp14(3353);
   if (isVerifiedTeen) {
     const obj6 = { handleOnConfirmAgeHook: callback2 };
     let formatResult = format(tmp14Result2["Ga2z/E"], obj6);
@@ -101,13 +101,13 @@ export default function AgeNoticePromoSheet(markAsDismissed) {
   obj4.description = formatResult;
   obj4.onDismiss = callback;
   const obj8 = { size: "lg", style: tmp.actions, children: null };
-  const items5 = [closure_8(dismissOnce(5873).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress })];
+  const items5 = [closure_8(dismissOnce(5936).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress })];
   const obj10 = { size: "lg", variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1113).intl;
   obj10.text = intl4.string(dismissOnce(1113).t["NX+WJN"]);
   obj10.onPress = callback1;
-  items5[1] = closure_8(dismissOnce(5873).Button, obj10);
+  items5[1] = closure_8(dismissOnce(5936).Button, obj10);
   obj8.children = items5;
-  obj4.actions = closure_9(dismissOnce(6888).ButtonGroup, obj8);
-  return closure_8(dismissOnce(10644).PromoSheet, obj4);
+  obj4.actions = closure_9(dismissOnce(6951).ButtonGroup, obj8);
+  return closure_8(dismissOnce(10713).PromoSheet, obj4);
 }

@@ -1,7 +1,7 @@
 // discord_app/modules/in_app_notifications/native/Notification.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../_runtime/metro/01705__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../_runtime/metro/01708__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import InAppNotificationUtils from "InAppNotificationUtils.tsx";
@@ -10,10 +10,10 @@ import NotificationProgressDefault from "NotificationProgress.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
-const InAppNotificationConstants = fn(10957);
+const InAppNotificationConstants = fn(11026);
 ({
   MIN_SWIPE_VELOCITY: closure_4,
   STARTED_SWIPE_THRESHOLD: hasOwnProperty,
@@ -22,7 +22,7 @@ const InAppNotificationConstants = fn(10957);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { shadow: null, container: null };
 let obj3 = {};
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -88,12 +88,12 @@ export function NotificationPressable(notification) {
   const initialized = inAppNotificationContext.initialized;
   const panning = inAppNotificationContext.panning;
   let obj2 = require("InAppNotificationContext");
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(1);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(1);
   let items1 = [sharedValue];
   const items2 = [sharedValue];
   const callback = guildId.useCallback(() => sharedValue.set(0.95), items1);
   const callback1 = guildId.useCallback(() => sharedValue.set(1), items2);
-  const obj3 = require("../../../../_runtime/metro/01652__.js");
+  const obj3 = require("../../../../_runtime/metro/01655__.js");
   const items3 = [panning, require("spring/spring").withSpring, sharedValue, initialized];
   _require = undefined;
   importDefault = undefined;
@@ -113,10 +113,10 @@ export function NotificationPressable(notification) {
   NotificationTsx1.__closure = items4;
   NotificationTsx1.__workletHash = 8384259234867;
   NotificationTsx1.__initData = tmp10;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(NotificationTsx1);
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(NotificationTsx1);
   const memo1 = obj.useMemo(() => ({ foreground: true }), []);
-  const obj4 = require("../../../../_runtime/metro/01652__.js");
-  sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(100);
+  const obj4 = require("../../../../_runtime/metro/01655__.js");
+  sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(100);
   closure_14 = tmp17;
   const items5 = [
     initialized,
@@ -132,8 +132,8 @@ export function NotificationPressable(notification) {
         if (closure_14) {
           value = sharedValue1.get();
           const obj = timing_timing;
-          const obj2 = { duration: (value / 100) * tmp, easing: _mod1652.Easing.linear };
-          items = [closure_12, _mod1705.scheduleOnRN, handleDismissNotification];
+          const obj2 = { duration: (value / 100) * tmp, easing: _mod1655.Easing.linear };
+          items = [closure_12, _mod1708.scheduleOnRN, handleDismissNotification];
           c0 = undefined;
           c1 = undefined;
           [tmp11, tmp12, tmp13] = items;
@@ -236,5 +236,5 @@ export function NotificationPressable(notification) {
   items11[1] = tmp23Result;
   obj6.children = items11;
   obj5.children = velocityY(require("Pressables").PressableHighlight, obj6);
-  return notificationGestureY(_modDef1652.View, obj5);
+  return notificationGestureY(_modDef1655.View, obj5);
 }

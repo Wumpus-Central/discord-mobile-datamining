@@ -1,7 +1,10 @@
 // discord_app/modules/conjure/settings/useConjureSettingPickerOptions.tsx
+import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
+import GuildStore from "../../../stores/GuildStore.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import StreamerModeStore from "../../../stores/StreamerModeStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -10,15 +13,15 @@ import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
+let closure_11 = [];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/settings/useConjureSettingPickerOptions.tsx");
 
 export default function useConjureSettingPickerOptions(arg0, type) {
   _require = arg0;
-  dependencyMap = type;
-  items = [conjureGuildRoles];
+  items = [stateFromStores1];
   const items1 = [arg0, type.type];
-  const stateFromStores = require("initialize").useStateFromStores(
+  stateFromStores = require("initialize").useStateFromStores(
     items,
     () => {
       let channels = null;
@@ -37,7 +40,7 @@ export default function useConjureSettingPickerOptions(arg0, type) {
   if ("role" === type.type) {
     tmp4 = arg0;
   }
-  conjureGuildRoles = require("conjureGuildPickerSources").useConjureGuildRoles(tmp4);
+  const conjureGuildRoles = require("conjureGuildPickerSources").useConjureGuildRoles(tmp4);
   let obj2 = require("conjureGuildPickerSources");
   let tmp6 = null;
   if ("user" === type.type) {
@@ -45,15 +48,15 @@ export default function useConjureSettingPickerOptions(arg0, type) {
   }
   const conjureGuildMemberUsers = require("conjureGuildPickerSources").useConjureGuildMemberUsers(tmp6);
   const tmpResult = require("conjureGuildPickerSources");
-  const items2 = [stateFromStores1];
-  stateFromStores1 = require("initialize").useStateFromStores(items2, () => stateFromStores1.hidePersonalInformation);
+  const items2 = [StreamerModeStore];
+  stateFromStores1 = require("initialize").useStateFromStores(items2, () => StreamerModeStore.hidePersonalInformation);
   const items3 = [stateFromStores, , , , , ,];
   ({ channel_filter: arr4[1], type: arr4[2] } = type);
   items3[3] = arg0;
   items3[4] = stateFromStores1;
   items3[5] = conjureGuildRoles;
   items3[6] = conjureGuildMemberUsers;
-  return stateFromStores.useMemo(() => {
+  return conjureGuildMemberUsers.useMemo(() => {
     type = type.type;
     if ("channel" === type) {
       let mapped = null;
@@ -62,7 +65,7 @@ export default function useConjureSettingPickerOptions(arg0, type) {
         mapped = result.map((id) => {
           const obj = {
             id: id.id,
-            label: closure_1_0(5891).computeChannelName(id, closure_1_6, conjureGuildMemberUsers),
+            label: closure_1_0(stateFromStores[15]).computeChannelName(id, closure_1_9, closure_1_7),
           };
           return obj;
         });
@@ -72,10 +75,10 @@ export default function useConjureSettingPickerOptions(arg0, type) {
       return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
     } else if ("user" === type) {
       return conjureGuildMemberUsers.map((id) => {
-        const result = closure_0(13130).conjureMemberUsername(id, stateFromStores1);
+        const result = closure_0(stateFromStores[14]).conjureMemberUsername(id, stateFromStores1);
         const obj2 = { id: id.id, label: null };
-        const obj = closure_0(13130);
-        obj2.label = closure_0(6288).getName(closure_1_0, null, id);
+        const obj = closure_0(stateFromStores[14]);
+        obj2.label = closure_0(stateFromStores[16]).getName(closure_1_0, null, id);
         if ("" === result) {
           let obj4 = {};
         } else {
@@ -166,14 +169,82 @@ export function withPickCap(items1, first1) {
   }
   return mapped;
 }
-export function useConjureSettingsGuildId(projectId, isPreview) {
+export function useConjureSettingsGuildId(projectId, flag) {
   _require = projectId;
-  dependencyMap = isPreview;
+  closure_1 = flag;
   items = [ConjureProjectStore];
-  const items1 = [isPreview, projectId];
+  const items1 = [flag, projectId];
   return require("initialize").useStateFromStores(
     items,
-    () => ConjureUtils.conjureSettingsGuildId(ConjureProjectStore.getProject(closure_0), closure_1),
+    () => ConjureUtils.conjureSettingsGuildId(ConjureProjectStore.getProject(closure_0), stateFromStores),
     items1,
   );
+}
+export function useConjureSettingsServers(projectId, flag) {
+  _require = projectId;
+  items = [ConjureProjectStore, GuildStore];
+  const items1 = [projectId];
+  const stateFromStores = require("initialize").useStateFromStores(
+    items,
+    () => {
+      const project = ConjureProjectStore.getProject(closure_0);
+      if (null == project) {
+        let mapped = closure_11;
+      } else {
+        const result = ConjureProjectTypes.conjureProjectServerIds(project);
+        mapped = result.map((guildId) => {
+          const obj = { guildId, name: null };
+          guild = guild.getGuild(guildId);
+          let name;
+          if (guild != null) {
+            name = guild.name;
+          }
+          if (name == null) {
+            const intl = projectId(1113).intl;
+            name = intl.string(stateFromStores(4131)["6bhivN"]);
+          }
+          obj.name = name;
+          return obj;
+        });
+      }
+      return mapped;
+    },
+    items1,
+    require("apply").isEqual,
+  );
+  closure_129_0 = projectId;
+  closure_129_1 = flag;
+  let obj = require("initialize");
+  const items2 = [ConjureProjectStore];
+  const items3 = [flag, projectId];
+  const stateFromStores1 = require("initialize").useStateFromStores(
+    items2,
+    () => ConjureUtils.conjureSettingsGuildId(ConjureProjectStore.getProject(closure_0), stateFromStores),
+    items3,
+  );
+  const tmp3 = _slicedToArray(noop.useState(null), 2);
+  const items4 = [tmp3[0], stateFromStores1];
+  let found = items4.find((item) => {
+    closure_0 = item;
+    let someResult = null != item;
+    if (someResult) {
+      someResult = stateFromStores.some((guildId) => guildId.guildId === closure_0);
+    }
+    return someResult;
+  });
+  const obj3 = { servers: stateFromStores, serverId: null, setServerId: null };
+  if (found == null) {
+    const first = stateFromStores[0];
+    let guildId;
+    if (first != null) {
+      guildId = first.guildId;
+    }
+    found = guildId;
+  }
+  if (found == null) {
+    found = null;
+  }
+  obj3.serverId = found;
+  obj3.setServerId = tmp3[1];
+  return obj3;
 }

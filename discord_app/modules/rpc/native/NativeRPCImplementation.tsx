@@ -17,8 +17,9 @@ import ClientThemesBackgroundStore from "../../client_themes/ClientThemesBackgro
 import CustomThemeMobileStore from "../../client_themes/native/CustomThemeMobileStore.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
+import StreamerModeStore from "../../../stores/StreamerModeStore.tsx";
 
-const merged = Object.assign(fn(16805).crossPlatformCommands);
+const merged = Object.assign(fn(16928).crossPlatformCommands);
 const activities = Object.assign(commands_activitiesDefault);
 const audioSession = Object.assign(audioSessionDefault);
 const auth = Object.assign(authDefault);
@@ -29,12 +30,12 @@ const pictureInPictureInteractive = Object.assign(pictureInPictureInteractiveDef
 const voiceSettings = Object.assign(voiceSettingsDefault);
 const unsupported = Object.assign(unsupportedDefault);
 Object.assign(crossPlatformRPCEventHandlersDefault);
-const discordEnvironmentEvents = fn(16877);
+const discordEnvironmentEvents = fn(17000);
 const merged11 = Object.assign(
   discordEnvironmentEvents.createDiscordEnvironmentEvents(true, getNativeDiscordCustomThemeDefault),
 );
-const merged12 = Object.assign(fn(16879).screenCaptureEvents);
-const merged13 = Object.assign(fn(16880).voiceSettingsEventHandlers);
+const merged12 = Object.assign(fn(17002).screenCaptureEvents);
+const merged13 = Object.assign(fn(17003).voiceSettingsEventHandlers);
 const obj4 = {
   server: NativeRPCServerDefault,
   commands: {},
@@ -49,6 +50,7 @@ const items = [
   UserSettingsProtoStore,
   ClientThemesBackgroundStore,
   CustomThemeMobileStore,
+  StreamerModeStore,
 ];
 obj4.stores = items;
 const items1 = [WebViewPostMessageTransportDefault];

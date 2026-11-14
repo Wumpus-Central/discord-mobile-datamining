@@ -94,7 +94,7 @@ let closure_6 = async function _openConjureNativeImages(arg0) {
                             closure_131_3 = undefined;
                             c5 = 1;
                             c6 = 1;
-                            return { value: "flexDirection", done: true };
+                            return { value: "Path", done: true };
                           }
                         } else if (1 === tmp5) {
                           if (arg0 === 1) {

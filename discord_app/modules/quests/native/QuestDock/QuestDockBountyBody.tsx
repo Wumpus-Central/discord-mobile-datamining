@@ -13,7 +13,7 @@ import BountiesModalTypes from "../BountiesModal/BountiesModalTypes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5275).QuestDockMode;
+const QuestDockMode = fn(5338).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");
@@ -114,7 +114,7 @@ export default noop.memo(function QuestDockBountyBody() {
       withAnimation: null,
     }),
     contentBadge: jsx(setRestingQuestDockMode(getQuestImpressionId[21]), {}),
-    title: null,
+    title: questDockBounty.productName,
     description: null,
     ctaText: null,
     onCtaPress: null,
@@ -122,11 +122,6 @@ export default noop.memo(function QuestDockBountyBody() {
     secondaryCta: null,
   };
   obj4.withAnimation = isQuestDockExpanded;
-  let str = questDockBounty.productName;
-  if (str == null) {
-    str = "";
-  }
-  obj5.title = str;
   let intl = tmp3(tmp2[8]).intl;
   obj5.description = intl.string(questDockBounty(getQuestImpressionId[8]).t["1uzE2S"]);
   obj5.ctaText = memo;
@@ -148,7 +143,7 @@ export default noop.memo(function QuestDockBountyBody() {
         withAnimation: null,
       })}
       contentBadge={jsx(setRestingQuestDockMode(getQuestImpressionId[21]), {})}
-      title={null}
+      title={questDockBounty.productName}
       description={null}
       ctaText={null}
       onCtaPress={null}

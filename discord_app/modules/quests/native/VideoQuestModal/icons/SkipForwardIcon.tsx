@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/VideoQuestModal/icons/SkipForwardIcon.tsx
-import inlineStyles from "../../../../../../_runtime/08197_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/08263_inlineStyles.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;

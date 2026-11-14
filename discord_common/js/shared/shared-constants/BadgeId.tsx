@@ -48,4 +48,6 @@ export const BadgeId = {
   [21]: "GAME_VARIETY",
   STAFF: 22,
   [22]: "STAFF",
+  ORB_VOID: 23,
+  [23]: "ORB_VOID",
 };

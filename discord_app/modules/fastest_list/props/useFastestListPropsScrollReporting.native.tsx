@@ -1,5 +1,5 @@
 // discord_app/modules/fastest_list/props/useFastestListPropsScrollReporting.native.tsx
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_2 = { code: "(function useFastestListPropsScrollReportingNativeTsx1(event){let[scrollPosition,horizontal]=this.__closure;if(scrollPosition!=null){scrollPosition.set(horizontal?event.contentOffset.x:event.contentOffset.y);}})" };
@@ -10,7 +10,7 @@ export default function useFastestListPropsScrollReporting(scrollReporting, arg1
   if ("animatedScrollPosition" === scrollReporting.scrollReporting) {
     scrollPosition = scrollReporting.scrollPosition;
   }
-  _mod1652;
+  _mod1655;
   items = [closure_2, scrollPosition, arg1];
   c0 = undefined;
   c1 = undefined;

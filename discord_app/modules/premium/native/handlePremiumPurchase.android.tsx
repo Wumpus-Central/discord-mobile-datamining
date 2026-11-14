@@ -62,7 +62,7 @@ let closure_15 = async function _validatePurchase(arg0) {
           } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -128,7 +128,7 @@ let closure_15 = async function _validatePurchase(arg0) {
   }
 };
 let closure_3 = ["succeededOnlyFields"];
-const setGPlayAnalytics = fn(9546).setGPlayAnalytics;
+const setGPlayAnalytics = fn(9613).setGPlayAnalytics;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12 } = Constants);
 const PaymentGateways = fn(1083).PaymentGateways;
@@ -245,14 +245,14 @@ export function useHandlePremiumPurchase() {
           }
           if (null != offerIds) {
             if (null != price1) {
-              const tmp13 = premiumSubscription(8514).TrialIdToProductOfferId[price1.trialId];
+              const tmp13 = premiumSubscription(8580).TrialIdToProductOfferId[price1.trialId];
               let tmp14;
               if (tmp13 != null) {
                 tmp14 = tmp13[arg0];
               }
               return tmp14;
             } else if (null != dependencyMap) {
-              const tmp9 = premiumSubscription(8514).DiscountIdToProductOfferId[dependencyMap.discountId];
+              const tmp9 = premiumSubscription(8580).DiscountIdToProductOfferId[dependencyMap.discountId];
               let tmp10;
               if (tmp9 != null) {
                 tmp10 = tmp9[arg0];
@@ -263,8 +263,8 @@ export function useHandlePremiumPurchase() {
           let BOGO_OFFER_ID = null;
           if (c3) {
             BOGO_OFFER_ID = null;
-            if (arg0 === premiumSubscription(8514).ProductIds.PREMIUM_TIER_2_MONTHLY) {
-              BOGO_OFFER_ID = premiumSubscription(8514).BOGO_OFFER_ID;
+            if (arg0 === premiumSubscription(8580).ProductIds.PREMIUM_TIER_2_MONTHLY) {
+              BOGO_OFFER_ID = premiumSubscription(8580).BOGO_OFFER_ID;
             }
           }
           return BOGO_OFFER_ID;
@@ -378,15 +378,15 @@ export function useHandlePremiumPurchase() {
       const result1 = premiumSubscription(premiumDiscountOffer[24]).captureBillingException(closure_132_26);
       (function showPurchaseErrorModal(message) {
         let billingError = message;
-        if (!(message instanceof premiumSubscription(6694).BillingError)) {
-          billingError = new premiumSubscription(6694).BillingError(message);
+        if (!(message instanceof premiumSubscription(6757).BillingError)) {
+          billingError = new premiumSubscription(6757).BillingError(message);
         }
         if (tmpResult.isSpendingLimitError(billingError)) {
-          const result = premiumSubscription(9548).showSpendingLimitReachedAlert();
-          const tmpResult2 = premiumSubscription(9548);
+          const result = premiumSubscription(9615).showSpendingLimitReachedAlert();
+          const tmpResult2 = premiumSubscription(9615);
         } else {
           const intl = premiumSubscription(1113).intl;
-          let tmp8 = billingError.code !== premiumSubscription(5063).ErrorCodes.UNKNOWN;
+          let tmp8 = billingError.code !== premiumSubscription(5126).ErrorCodes.UNKNOWN;
           if (tmp8) {
             tmp8 = -1 !== billingError.code;
           }
@@ -402,10 +402,10 @@ export function useHandlePremiumPurchase() {
           const intl2 = premiumSubscription(1113).intl;
           obj.title = intl2.string(premiumSubscription(1113).t["U+H+kd"]);
           obj.body = message;
-          price1(6205).show(obj);
-          const obj2 = price1(6205);
+          price1(6268).show(obj);
+          const obj2 = price1(6268);
         }
-        tmpResult = premiumSubscription(9548);
+        tmpResult = premiumSubscription(9615);
       })(closure_132_26);
       if (closure_132_26 instanceof premiumTrialOffer(premiumDiscountOffer[10])) {
         throw closure_132_26;
@@ -509,7 +509,7 @@ export function useHandlePremiumPurchase() {
       onPurchaseComplete: closure_132_12,
       onPurchaseError: closure_132_13,
     } = premiumSubscription);
-    return "flexDirection";
+    return "Path";
   });
   const items1 = [
     null != stateFromStores,

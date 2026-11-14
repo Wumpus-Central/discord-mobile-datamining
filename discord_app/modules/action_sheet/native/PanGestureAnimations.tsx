@@ -1,8 +1,8 @@
 // discord_app/modules/action_sheet/native/PanGestureAnimations.tsx
 import native from "../../../design/void/native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../_runtime/05535_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05598_LegacyBaseButton.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -166,8 +166,8 @@ export default function usePanGesture(swipeVelocityThreshold) {
     vertical = true;
   }
   const isGestureInProgress = swipeVelocityThreshold.isGestureInProgress;
-  const sharedValue = _mod1652.useSharedValue(0);
-  const sharedValue1 = _mod1652.useSharedValue(0);
+  const sharedValue = _mod1655.useSharedValue(0);
+  const sharedValue1 = _mod1655.useSharedValue(0);
   const Gesture = LegacyBaseButton.Gesture;
   items = [_undefined6, sharedValue, translate, sharedValue1, isGestureInProgress, onStart];
   c0 = undefined;

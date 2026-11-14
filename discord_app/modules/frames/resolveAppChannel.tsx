@@ -50,7 +50,7 @@ let closure_7 = async function _resolveAppChannel(arg0) {
           closure_131_7 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

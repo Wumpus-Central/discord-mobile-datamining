@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -15,7 +15,7 @@ import ChannelRowDefault from "ChannelRow.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function Placeholder(arg0) {
@@ -40,13 +40,14 @@ function PlaceholderSection() {
   return metroImportDefault(View, {});
 }
 const View = fn(17).View;
-const UsersFastListConstants = fn(10509);
+const UsersFastListConstants = fn(10578);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
-  sectionHeader: { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING },
+  sectionHeader: { flex: 1, overflow: "hidden" },
+  stickySectionContent: { top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING },
   stickyHeader: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   list: null,
   emptySection: null,
@@ -57,7 +58,7 @@ let obj = {
   badgeWrapper: null,
   badge: null,
 };
-let obj3 = { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING };
+let obj3 = { top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING };
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.list = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: 16 };
 obj.emptySection = { paddingBottom: USERS_LIST_PADDING_BETWEEN_SECTIONS };
@@ -91,11 +92,12 @@ let closure_15 = {
 };
 let closure_16 = noop.memo(function UserSectionInner(arg0) {
   ({ title, colorOverride } = arg0);
-  ({ actionTitle, badge, disableThemedGradient, titleLeading, onTitlePress } = arg0);
+  ({ actionTitle, badge, disableStickySections } = arg0);
+  ({ disableThemedGradient, titleLeading, onTitlePress } = arg0);
   let animatedStyle;
-  ({ action, scrollPosValue, stickyAt, disableStickySections } = arg0);
+  ({ action, scrollPosValue, stickyAt } = arg0);
   const tmp = closure_10();
-  closure_2 = tmp;
+  closure_3 = tmp;
   items = [colorOverride];
   const memo = noop.useMemo(() => {
     let tmp2 = null != c0;
@@ -106,12 +108,16 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
     return tmp2;
   }, items);
   const clientThemesOverride = ClientThemesOverrides.useClientThemesOverride();
-  const items1 = [, , ,];
-  ({ section: arr2[0], interactiveSection: arr2[1] } = tmp);
-  items1[2] = onTitlePress;
-  items1[3] = clientThemesOverride;
+  const items1 = [tmp, disableStickySections, onTitlePress, clientThemesOverride];
   const memo1 = noop.useMemo(() => {
-    items = [closure_2.section, null != c1 && closure_2.interactiveSection, clientThemesOverride];
+    items = [closure_3.section, , ,];
+    let stickySectionContent = !c1;
+    if (!c1) {
+      stickySectionContent = closure_3.stickySectionContent;
+    }
+    items[1] = stickySectionContent;
+    items[2] = null != onTitlePress && closure_3.interactiveSection;
+    items[3] = clientThemesOverride;
     return items;
   }, items1);
   const items2 = [closure_13, scrollPosValue, stickyAt];
@@ -141,7 +147,7 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
   UsersFastListTsx1.__closure = items3;
   UsersFastListTsx1.__workletHash = 5651317094590;
   UsersFastListTsx1.__initData = tmp7;
-  const derivedValue = _mod1652.useDerivedValue(UsersFastListTsx1);
+  const derivedValue = _mod1655.useDerivedValue(UsersFastListTsx1);
   const items4 = [closure_14, derivedValue, tmp];
   c0 = undefined;
   c1 = undefined;
@@ -160,13 +166,13 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
   UsersFastListTsx2.__closure = items5;
   UsersFastListTsx2.__workletHash = 3082250653169;
   UsersFastListTsx2.__initData = tmp11;
-  animatedStyle = _mod1652.useAnimatedStyle(UsersFastListTsx2);
+  animatedStyle = _mod1655.useAnimatedStyle(UsersFastListTsx2);
   const items6 = [tmp.sectionHeader, animatedStyle];
   const memo2 = noop.useMemo(() => {
-    items = [closure_2.sectionHeader, animatedStyle];
+    items = [closure_3.sectionHeader, animatedStyle];
     return items;
   }, items6);
-  const tmp3Result = _mod1652;
+  const tmp3Result = _mod1655;
   const items7 = [closure_15, derivedValue];
   c0 = undefined;
   [tmp16, tmp17] = items7;
@@ -183,7 +189,7 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
   UsersFastListTsx3.__closure = items8;
   UsersFastListTsx3.__workletHash = 4870088856322;
   UsersFastListTsx3.__initData = tmp16;
-  const animatedStyle1 = _mod1652.useAnimatedStyle(UsersFastListTsx3);
+  const animatedStyle1 = _mod1655.useAnimatedStyle(UsersFastListTsx3);
   if (null == title) {
     if (null == actionTitle) {
       const obj4 = { style: tmp.emptySection };
@@ -258,11 +264,11 @@ let closure_16 = noop.memo(function UserSectionInner(arg0) {
         style: animatedStyle1,
         children: metroImportDefault(ThemedGradientDefault, { absolute: true, tall: true, wide: true, mix: true }),
       };
-      tmp35 = metroImportDefault(_modDef1652.View, obj15);
+      tmp35 = metroImportDefault(_modDef1655.View, obj15);
     }
     const items12 = [tmp35, tmp19Result5];
     obj14.children = items12;
-    tmp19Result6 = React5(_modDef1652.View, obj14);
+    tmp19Result6 = React5(_modDef1655.View, obj14);
   }
   return tmp19Result6;
 });

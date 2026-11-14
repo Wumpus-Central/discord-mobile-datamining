@@ -12,8 +12,8 @@ import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import PollsUtils from "../PollsUtils.tsx";
 import formatPollMessageChatData from "../chat/formatPollMessageChatData.tsx";
-import _modDef12567 from "../../../../_runtime/metro/12567__.js";
-import _modDef12568 from "../../../../_runtime/metro/12568__.js";
+import _modDef12663 from "../../../../_runtime/metro/12663__.js";
+import _modDef12664 from "../../../../_runtime/metro/12664__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -407,7 +407,7 @@ function VotersList(channelId) {
   if (0 === reactors.length) {
     num = 0;
   }
-  sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(num);
+  sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(num);
   const items2 = [sharedValue, reactors.length];
   const effect = obj4.useEffect(() => {
     if (0 !== reactors.length) {
@@ -416,7 +416,7 @@ function VotersList(channelId) {
       const result1 = sharedValue.set(0);
     }
   }, items2);
-  const obj5 = require("../../../../_runtime/metro/01652__.js");
+  const obj5 = require("../../../../_runtime/metro/01655__.js");
   const items3 = [closure_19, sharedValue];
   _require = undefined;
   [tmp11, tmp12] = items3;
@@ -430,7 +430,7 @@ function VotersList(channelId) {
   PollVotesActionSheetTsx1.__closure = items4;
   PollVotesActionSheetTsx1.__workletHash = 11579760846087;
   PollVotesActionSheetTsx1.__initData = tmp11;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(PollVotesActionSheetTsx1);
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(PollVotesActionSheetTsx1);
   const obj6 = {
     style: animatedStyle,
     children: closure_13(require("../../../../discord_common/js/packages/flash-list/index.js").BottomSheetFlashList, {
@@ -449,9 +449,9 @@ function NoResults() {
   const tmp4 = useThemeDefault();
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef12567;
+    let tmp2Result = _modDef12663;
   } else {
-    tmp2Result = _modDef12568;
+    tmp2Result = _modDef12664;
   }
   obj2.source = tmp2Result;
   items = [state(tmp8, obj2), ,];
@@ -475,7 +475,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   headerText: { textAlign: "center", paddingHorizontal: 16 },
   subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 },

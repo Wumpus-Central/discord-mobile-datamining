@@ -1,5 +1,5 @@
 // discord_app/modules/interaction_components/native/actions/RadioGroupActionComponent.tsx
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -90,7 +90,7 @@ export default noop.memo(function RadioGroupActionComponent(type) {
   RadioGroupActionComponentTsx1.__closure = items3;
   RadioGroupActionComponentTsx1.__workletHash = 382181795595;
   RadioGroupActionComponentTsx1.__initData = tmp9;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     RadioGroupActionComponentTsx1,
   );
   let str = memo1;
@@ -99,7 +99,7 @@ export default noop.memo(function RadioGroupActionComponent(type) {
   }
   const tmp14 = memo1;
   const tmp15 = executeStateUpdate;
-  const tmp3Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp3Result = require("../../../../../_runtime/metro/01655__.js");
   const children = [
     state(require("TableRadioGroup").TableRadioGroup, {
       hasIcons: false,
@@ -143,8 +143,8 @@ export default noop.memo(function RadioGroupActionComponent(type) {
     }
     obj5.importantForAccessibility = str2;
     const obj6 = { icon: null, label: null, onPress: null, start: true, end: true };
-    const obj7 = { IconComponent: tmp3(7483).XSmallIcon };
-    obj6.icon = tmp16(tmp3(7379).TableRow.Icon, obj7);
+    const obj7 = { IconComponent: tmp3(7549).XSmallIcon };
+    obj6.icon = tmp16(tmp3(7443).TableRow.Icon, obj7);
     const intl = tmp3(1113).intl;
     obj6.label = intl.string(tmp3(1113).t["5uAtZN"]);
     obj6.onPress = function onPress() {
@@ -154,8 +154,8 @@ export default noop.memo(function RadioGroupActionComponent(type) {
         current.setValue("");
       }
     };
-    obj5.children = tmp16(tmp3(7379).TableRow, obj6);
-    tmp16Result = tmp16(_modDef1652.View, obj5);
+    obj5.children = tmp16(tmp3(7443).TableRow, obj6);
+    tmp16Result = tmp16(_modDef1655.View, obj5);
   }
   children[1] = tmp16Result;
   return tmp14(tmp15, { children });

@@ -1,18 +1,18 @@
 // discord_app/design/components/Forms/native/FormCheckbox.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
 import IconDefault from "../../../void/Icon/native/Icon.tsx";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
-import _modDef7669 from "../../../../../_runtime/metro/07669__.js";
+import _modDef7735 from "../../../../../_runtime/metro/07735__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const module_1652 = _mod1652;
+const module_1655 = _mod1655;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { checkbox: null, unselected: null, selected: null, checkmark: null };
 let size = {
   width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT,
@@ -44,7 +44,7 @@ const obj4 = {
 };
 obj2.checkmark = { tintColor: nativeDefault.colors.CHECKBOX_ICON_ACTIVE };
 let closure_5 = createStyles.createStyles(obj2);
-const Icon = module_1652.createAnimatedComponent(IconDefault);
+const Icon = module_1655.createAnimatedComponent(IconDefault);
 let closure_7 = {
   code: "(function FormCheckboxNativeTsx1(){let[withSpring,checked,selected,unselected,SUBTLE_SPRING]=this.__closure;const defaultAnimation={borderColor:withSpring(checked?selected.borderColor:unselected.borderColor,SUBTLE_SPRING,'animate-always'),backgroundColor:withSpring(checked?selected.backgroundColor:unselected.backgroundColor,SUBTLE_SPRING,'animate-always')};return defaultAnimation;})",
 };
@@ -94,7 +94,7 @@ export function FormCheckbox(checked) {
   FormCheckboxNativeTsx1.__closure = items1;
   FormCheckboxNativeTsx1.__workletHash = 16653690425039;
   FormCheckboxNativeTsx1.__initData = tmp5;
-  const animatedStyle = _mod1652.useAnimatedStyle(FormCheckboxNativeTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(FormCheckboxNativeTsx1);
   const items2 = [
     closure_8,
     noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled,
@@ -136,13 +136,13 @@ export function FormCheckbox(checked) {
   FormCheckboxNativeTsx2.__closure = items3;
   FormCheckboxNativeTsx2.__workletHash = 5917557474474;
   FormCheckboxNativeTsx2.__initData = tmp12;
-  const animatedStyle1 = _mod1652.useAnimatedStyle(FormCheckboxNativeTsx2);
+  const animatedStyle1 = _mod1655.useAnimatedStyle(FormCheckboxNativeTsx2);
   const obj2 = { style: null, children: null };
   const items4 = [tmp.checkbox, animatedStyle];
   obj2.style = items4;
-  const obj3 = { source: _modDef7669, size: IconDefault.Sizes.SMALL_20, style: null };
+  const obj3 = { source: _modDef7735, size: IconDefault.Sizes.SMALL_20, style: null };
   const items5 = [tmp.checkmark, animatedStyle1];
   obj3.style = items5;
-  obj2.children = <Icon source={_modDef7669} size={IconDefault.Sizes.SMALL_20} style={null} />;
-  return jsx(module_1652.View, { style: null, children: null });
+  obj2.children = <Icon source={_modDef7735} size={IconDefault.Sizes.SMALL_20} style={null} />;
+  return jsx(module_1655.View, { style: null, children: null });
 }

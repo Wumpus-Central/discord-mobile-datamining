@@ -68,7 +68,7 @@ function handleSubscriptionStoreUpdate() {
 function handleReferralTrialStoreUpdate() {
   return false;
 }
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({
   ANNUAL_DISCOUNT_IDS: closure_10,
   CHURN_DISCOUNT_IDS: closure_11,
@@ -83,7 +83,7 @@ let cooldownExpirationTimestamps = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: {},
   userDiscountOffers: {},
-  userDiscounts: "\u{1F9D9}\u{1F3FC}",
+  userDiscounts: "\u{1F9D9}\u{1F3FC}\u200D\u2640\uFE0F",
   isFetching: true,
   lastFetchSuccessful: null,
   shouldTriggerOffer: 10,

@@ -9,3 +9,4 @@ export const PIPReferenceDimensions = { width: 200, height: 200 };
 export const SquarePIPReferenceDimensions = { width: 120, height: 120 };
 export const SquareActivityPIPReferenceDimensions = { width: 96, height: 96 };
 export const DEFAULT_PIP_POSITION_OFFSET = 72;
+export const PIP_FIRST_FRAME_DELAY_MS = 200;

@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEmbeddedActivity.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02121_asyncRequireImpl.js";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -11,12 +11,12 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(17795);
+const HappeningNowConstants = fn(17915);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: metroImportDefault } = HappeningNowConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   content: { flexShrink: 1, gap: 2 },
   cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12 },
@@ -131,12 +131,12 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     const items1 = [userId];
     obj2.highlighted_user_ids = items1;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
-    asyncRequireImpl(13932, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(14037, dependencyMap.paths).then((result) => {
       if (null != channelId) {
         tmp(tmp2, true);
       }
     });
-    const promise = asyncRequireImpl(13932, dependencyMap.paths);
+    const promise = asyncRequireImpl(14037, dependencyMap.paths);
   }, items3);
   context = obj4.useContext(tmp2(tmp3[16]).ViewableHappeningNowCardKeysContext);
   cardKey.useRef(cardKey);
@@ -171,7 +171,7 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
   HappeningNowCardEmbeddedActivityTsx1.__closure = items6;
   HappeningNowCardEmbeddedActivityTsx1.__workletHash = 14378880099274;
   HappeningNowCardEmbeddedActivityTsx1.__initData = tmp16;
-  const items7 = [closure_13, require("../../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp8Result[1]];
+  const items7 = [closure_13, require("../../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp8Result[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp19, tmp20, tmp21] = items7;
@@ -195,11 +195,11 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
   HappeningNowCardEmbeddedActivityTsx2.__closure = items8;
   HappeningNowCardEmbeddedActivityTsx2.__workletHash = 1153066654263;
   HappeningNowCardEmbeddedActivityTsx2.__initData = tmp19;
-  const animatedReaction = require("../../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     HappeningNowCardEmbeddedActivityTsx1,
     HappeningNowCardEmbeddedActivityTsx2,
   );
-  const tmp2Result = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp2Result = require("../../../../../../_runtime/metro/01655__.js");
   if (tmp8Result[0]) {
     const obj3 = {
       type: tmp2(tmp3[20]).ImpressionTypes.VIEW,

@@ -65,26 +65,39 @@ export function reduceDiscoverSnapshot(tmp2Result4, type) {
     return obj;
   } else if ("commit" === type) {
     if (type.enabled) {
-      const obj3 = {};
-      const merged = Object.assign(tmp8);
-      obj3.status = "loading";
-      let tmp9 = obj3;
+      const obj2 = {};
+      const merged = Object.assign(tmp2Result4);
+      obj2.status = "loading";
+      let tmp11 = obj2;
     } else {
-      tmp9 = tmp8;
+      tmp11 = obj;
     }
-    return tmp9;
+    return tmp11;
   } else if ("start" === type) {
-    const obj4 = {};
+    const obj3 = {};
     const merged1 = Object.assign(tmp2Result4);
-    obj4.status = "loading";
-    return obj4;
+    obj3.status = "loading";
+    return obj3;
   } else if ("success" === type) {
-    ({ items: obj2.items, loadId: obj2.loadId } = type);
-    return { status: "success", items: null, hasSnapshot: true, loadId: null };
+    const obj4 = { status: "success", items: type.items, hasSnapshot: true, loadId: null, loadedAt: null };
+    if ("none" !== type.loadId) {
+      let loadId = type.loadId;
+    } else {
+      loadId = null;
+    }
+    obj4.loadId = loadId;
+    const _Date = Date;
+    obj4.loadedAt = Date.now();
+    return obj4;
   } else if ("error" === type) {
     obj = {};
     const merged2 = Object.assign(tmp2Result4);
     obj.status = "error";
+    let retryAfterAt = type.retryAfterAt;
+    if (retryAfterAt == null) {
+      retryAfterAt = null;
+    }
+    obj.retryAfterAt = retryAfterAt;
     return obj;
   }
 }

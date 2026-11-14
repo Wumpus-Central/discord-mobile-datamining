@@ -2,7 +2,12 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 
-let obj = { hasAppliedPerk: false, hasVisitedDisplayNameStyles: false, previousPerkValues: {} };
+let obj = {
+  hasAppliedPerk: false,
+  hasVisitedDisplayNameStyles: false,
+  previousPerkValues: {},
+  hasRestoredExpiredClientTheme: false,
+};
 let closure_1 = obj;
 const PersistedStore = initializeDefault.PersistedStore;
 class HexagonCampaignPersistedStore extends PersistedStore {}
@@ -36,6 +41,12 @@ Object.defineProperty(prototype, "previousPerkValues", {
   },
   set: undefined,
 });
+Object.defineProperty(prototype, "hasRestoredExpiredClientTheme", {
+  get: function hasRestoredExpiredClientTheme() {
+    return closure_1.hasRestoredExpiredClientTheme;
+  },
+  set: undefined,
+});
 HexagonCampaignPersistedStore.displayName = "HexagonCampaignPersistedStore";
 HexagonCampaignPersistedStore.persistKey = "HexagonCampaignPersistedStore";
 const items = [
@@ -63,6 +74,19 @@ const items = [
       previousPerkValues = {};
     }
     obj.previousPerkValues = previousPerkValues;
+    return obj;
+  },
+  (hasRestoredExpiredClientTheme) => {
+    obj = {};
+    const merged = Object.assign(hasRestoredExpiredClientTheme);
+    let flag;
+    if (hasRestoredExpiredClientTheme != null) {
+      flag = hasRestoredExpiredClientTheme.hasRestoredExpiredClientTheme;
+    }
+    if (flag == null) {
+      flag = false;
+    }
+    obj.hasRestoredExpiredClientTheme = flag;
     return obj;
   },
 ];
@@ -97,6 +121,16 @@ const hexagonCampaignPersistedStore = new HexagonCampaignPersistedStore(Dispatch
     const merged2 = Object.assign(previousPerkValues.previousPerkValues);
     obj.previousPerkValues = {};
     closure_1 = obj;
+  },
+  HEXAGON_CAMPAIGN_EXPIRED_CLIENT_THEME_RESTORED: function handleExpiredClientThemeRestored() {
+    if (closure_1.hasRestoredExpiredClientTheme) {
+      return false;
+    } else {
+      obj = {};
+      const merged = Object.assign(closure_1);
+      obj.hasRestoredExpiredClientTheme = true;
+      closure_1 = obj;
+    }
   },
   LOGOUT: function handleLogout() {
     closure_1 = obj;

@@ -3,7 +3,7 @@ import applyDefault from "../../_runtime/00012_apply.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import Storage2 from "../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import v1 from "../../_runtime/01266_v1.js";
+import v1 from "../../_runtime/01269_v1.js";
 import LayoutStoreTypes from "LayoutStoreTypes.tsx";
 import LayoutUtils from "../utils/LayoutUtils.tsx";
 import LayoutRecord from "../records/LayoutRecord.tsx";
@@ -11,7 +11,7 @@ import WidgetRecord from "../records/WidgetRecord.tsx";
 
 require = fn;
 const OverlayWidgets = fn(1072).OverlayWidgets;
-const OverlayLayoutConstants = fn(16064);
+const OverlayLayoutConstants = fn(16185);
 const OVERLAY_LEGACY_LAYOUT_VERSION = OverlayLayoutConstants.OVERLAY_LEGACY_LAYOUT_VERSION;
 ({ OVERLAY_V3_LAYOUT_VERSION, CONJURE_OVERLAY_WIDGET_CHROME } = OverlayLayoutConstants);
 const migrated = "migrated";
@@ -20,9 +20,9 @@ obj[OverlayWidgets.GUILDS] = {
   resizeX: false,
   resizeY: true,
   dragAnywhere: false,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.OPTIONAL,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.OPTIONAL,
   defaultSettings: {
-    anchor: { left: 0.175, top: 0.05, bottom: "match", right: "intl" },
+    anchor: { left: 0.175, top: 0.05, bottom: "__d", right: "indexOf" },
     size: { width: "auto", height: 0.65 },
     pinned: false,
     minSize: { width: 312, height: 300 },
@@ -33,9 +33,9 @@ let obj2 = {
   resizeX: false,
   resizeY: true,
   dragAnywhere: false,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.OPTIONAL,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.OPTIONAL,
   defaultSettings: {
-    anchor: { left: 0.175, top: 0.05, bottom: "match", right: "intl" },
+    anchor: { left: 0.175, top: 0.05, bottom: "__d", right: "indexOf" },
     size: { width: "auto", height: 0.65 },
     pinned: false,
     minSize: { width: 312, height: 300 },
@@ -46,9 +46,9 @@ obj[OverlayWidgets.TEXT] = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: false,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.OPTIONAL,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.OPTIONAL,
   defaultSettings: {
-    anchor: { left: 0.26, top: 0.05, bottom: "match", right: "c" },
+    anchor: { left: 0.26, top: 0.05, bottom: "__d", right: "c" },
     size: { width: 0.565, height: 0.65 },
     pinned: true,
     minSize: { width: 430, height: 300 },
@@ -59,9 +59,9 @@ let obj3 = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: false,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.OPTIONAL,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.OPTIONAL,
   defaultSettings: {
-    anchor: { left: 0.26, top: 0.05, bottom: "match", right: "c" },
+    anchor: { left: 0.26, top: 0.05, bottom: "__d", right: "c" },
     size: { width: 0.565, height: 0.65 },
     pinned: true,
     minSize: { width: 430, height: 300 },
@@ -72,9 +72,9 @@ obj[OverlayWidgets.VOICE] = {
   resizeX: false,
   resizeY: false,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: 0.011, top: 0.011, bottom: "description", right: "T" },
+    anchor: { left: 0.011, top: 0.011, bottom: "ip", right: "T" },
     size: { width: "auto", height: "auto" },
     pinned: true,
     minSize: { width: 272, height: 100 },
@@ -85,9 +85,9 @@ let obj4 = {
   resizeX: false,
   resizeY: false,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: 0.011, top: 0.011, bottom: "description", right: "T" },
+    anchor: { left: 0.011, top: 0.011, bottom: "ip", right: "T" },
     size: { width: "auto", height: "auto" },
     pinned: true,
     minSize: { width: 272, height: 100 },
@@ -98,9 +98,9 @@ obj[OverlayWidgets.GUILDS_TEXT] = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: false,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.OPTIONAL_DEFAULT,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.OPTIONAL_DEFAULT,
   defaultSettings: {
-    anchor: { left: "WireType", top: true, bottom: true, right: true },
+    anchor: { left: "__closure", top: true, bottom: true, right: true },
     size: { width: 0.6, height: 0.45 },
     pinned: false,
     minSize: { height: 300, width: 610 },
@@ -111,9 +111,9 @@ let obj5 = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: false,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.OPTIONAL_DEFAULT,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.OPTIONAL_DEFAULT,
   defaultSettings: {
-    anchor: { left: "WireType", top: true, bottom: true, right: true },
+    anchor: { left: "__closure", top: true, bottom: true, right: true },
     size: { width: 0.6, height: 0.45 },
     pinned: false,
     minSize: { height: 300, width: 610 },
@@ -124,9 +124,9 @@ obj[OverlayWidgets.VOICE_V3] = {
   resizeX: false,
   resizeY: false,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: 0.01, top: 0.35, bottom: "description", right: "T" },
+    anchor: { left: 0.01, top: 0.35, bottom: "ip", right: "T" },
     size: { width: "auto", height: "auto" },
     pinned: true,
     minSize: { width: 272, height: 24 },
@@ -137,9 +137,9 @@ const obj6 = {
   resizeX: false,
   resizeY: false,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: 0.01, top: 0.35, bottom: "description", right: "T" },
+    anchor: { left: 0.01, top: 0.35, bottom: "ip", right: "T" },
     size: { width: "auto", height: "auto" },
     pinned: true,
     minSize: { width: 272, height: 24 },
@@ -150,9 +150,9 @@ obj[OverlayWidgets.VIDEO] = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.OPTIONAL_DEFAULT,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.OPTIONAL_DEFAULT,
   defaultSettings: {
-    anchor: { left: 0.01, top: "WireType", bottom: -515396076, right: 1631556730 },
+    anchor: { left: 0.01, top: "__closure", bottom: -515396076, right: 1631556730 },
     size: { fixed: true, width: 408, height: 128 },
     pinned: true,
     minSize: { width: 128, height: 128 },
@@ -163,9 +163,9 @@ const obj7 = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.OPTIONAL_DEFAULT,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.OPTIONAL_DEFAULT,
   defaultSettings: {
-    anchor: { left: 0.01, top: "WireType", bottom: -515396076, right: 1631556730 },
+    anchor: { left: 0.01, top: "__closure", bottom: -515396076, right: 1631556730 },
     size: { fixed: true, width: 408, height: 128 },
     pinned: true,
     minSize: { width: 128, height: 128 },
@@ -176,9 +176,9 @@ obj[OverlayWidgets.GO_LIVE] = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.OPTIONAL_DEFAULT,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.OPTIONAL_DEFAULT,
   defaultSettings: {
-    anchor: { left: "match", top: "duration", bottom: true, right: true },
+    anchor: { left: "__d", top: "enabled", bottom: true, right: true },
     size: { fixed: true, width: 256, height: 144 },
     pinned: false,
     minSize: { width: 276, height: 164 },
@@ -189,9 +189,9 @@ const obj8 = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.OPTIONAL_DEFAULT,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.OPTIONAL_DEFAULT,
   defaultSettings: {
-    anchor: { left: "match", top: "duration", bottom: true, right: true },
+    anchor: { left: "__d", top: "enabled", bottom: true, right: true },
     size: { fixed: true, width: 256, height: 144 },
     pinned: false,
     minSize: { width: 276, height: 164 },
@@ -202,9 +202,9 @@ obj[OverlayWidgets.QUICK_ACTIONS] = {
   resizeX: false,
   resizeY: false,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: 0.34, top: 0.02, bottom: "description", right: "skuId" },
+    anchor: { left: 0.34, top: 0.02, bottom: "ip", right: "skuId" },
     size: { width: "auto", height: "auto" },
     pinned: false,
     minSize: { width: 216, height: 56 },
@@ -215,9 +215,9 @@ const obj9 = {
   resizeX: false,
   resizeY: false,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: 0.34, top: 0.02, bottom: "description", right: "skuId" },
+    anchor: { left: 0.34, top: 0.02, bottom: "ip", right: "skuId" },
     size: { width: "auto", height: "auto" },
     pinned: false,
     minSize: { width: 216, height: 56 },
@@ -228,9 +228,9 @@ obj[OverlayWidgets.NOTIFICATIONS] = {
   resizeX: false,
   resizeY: false,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: 0.01, top: 0.02, bottom: "HermesInternal", right: "description" },
+    anchor: { left: 0.01, top: 0.02, bottom: "HermesInternal", right: "ip" },
     size: { height: "auto", width: "auto" },
     pinned: true,
     minSize: { width: 320, height: 100 },
@@ -241,9 +241,9 @@ const obj10 = {
   resizeX: false,
   resizeY: false,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: 0.01, top: 0.02, bottom: "HermesInternal", right: "description" },
+    anchor: { left: 0.01, top: 0.02, bottom: "HermesInternal", right: "ip" },
     size: { height: "auto", width: "auto" },
     pinned: true,
     minSize: { width: 320, height: 100 },
@@ -254,9 +254,9 @@ obj[OverlayWidgets.ACTIVITY] = {
   resizeX: false,
   resizeY: false,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: "WireType", top: "count", bottom: "count", right: "count" },
+    anchor: { left: "__closure", top: "create", bottom: "create", right: "create" },
     size: { height: "auto", width: "auto" },
     pinned: false,
     minSize: { width: 320, height: 100 },
@@ -267,9 +267,9 @@ const obj11 = {
   resizeX: false,
   resizeY: false,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: "WireType", top: "count", bottom: "count", right: "count" },
+    anchor: { left: "__closure", top: "create", bottom: "create", right: "create" },
     size: { height: "auto", width: "auto" },
     pinned: false,
     minSize: { width: 320, height: 100 },
@@ -280,9 +280,9 @@ obj[OverlayWidgets.TEXT_CHAT_V3] = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: false,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: "WireType", top: "mode", bottom: "Object", right: "ind" },
+    anchor: { left: "__closure", top: "mode", bottom: "Object", right: "flags" },
     size: { fixed: true, height: 372, width: 500 },
     minSize: { width: 350, height: 100 },
     pinned: false,
@@ -293,9 +293,9 @@ const obj12 = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: false,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: "WireType", top: "mode", bottom: "Object", right: "ind" },
+    anchor: { left: "__closure", top: "mode", bottom: "Object", right: "flags" },
     size: { fixed: true, height: 372, width: 500 },
     minSize: { width: 350, height: 100 },
     pinned: false,
@@ -307,9 +307,9 @@ obj[OverlayWidgets.FRIENDS] = {
   resizeY: true,
   dragAnywhere: true,
   constrainAutoSizeToExplicitResizeEvents: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: "__closure", top: "mode", bottom: "Object", right: "ind" },
+    anchor: { left: "__esModule", top: "mode", bottom: "Object", right: "flags" },
     size: { fixed: true, height: "auto", width: 350 },
     minSize: { width: 350, height: 350 },
     pinned: false,
@@ -321,9 +321,9 @@ const obj13 = {
   resizeY: true,
   dragAnywhere: true,
   constrainAutoSizeToExplicitResizeEvents: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.REQUIRED,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.REQUIRED,
   defaultSettings: {
-    anchor: { left: "__closure", top: "mode", bottom: "Object", right: "ind" },
+    anchor: { left: "__esModule", top: "mode", bottom: "Object", right: "flags" },
     size: { fixed: true, height: "auto", width: 350 },
     minSize: { width: 350, height: 350 },
     pinned: false,
@@ -334,9 +334,9 @@ obj[OverlayWidgets.CLICK_ZONE_DEBUG] = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.DEBUG,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.DEBUG,
   defaultSettings: {
-    anchor: { left: "WireType", top: "count", bottom: "count", right: "count" },
+    anchor: { left: "__closure", top: "create", bottom: "create", right: "create" },
     size: { height: "auto", width: "auto" },
     pinned: true,
     minSize: { width: 50, height: 50 },
@@ -347,9 +347,9 @@ const obj14 = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.DEBUG,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.DEBUG,
   defaultSettings: {
-    anchor: { left: "WireType", top: "count", bottom: "count", right: "count" },
+    anchor: { left: "__closure", top: "create", bottom: "create", right: "create" },
     size: { height: "auto", width: "auto" },
     pinned: true,
     minSize: { width: 50, height: 50 },
@@ -360,9 +360,9 @@ obj[OverlayWidgets.PERFORMANCE_DEBUG] = {
   resizeX: false,
   resizeY: false,
   dragAnywhere: true,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.DEBUG,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.DEBUG,
   defaultSettings: {
-    anchor: { left: "WireType", top: true, bottom: true, right: true },
+    anchor: { left: "__closure", top: true, bottom: true, right: true },
     size: { height: "auto", width: "auto" },
     pinned: true,
     minSize: { width: 120, height: 300 },
@@ -373,16 +373,11 @@ const obj16 = {
   resizeX: true,
   resizeY: true,
   dragAnywhere: false,
-  layoutPolicy: fn(16065).OverlayWidgetLayoutPolicy.OPTIONAL,
+  layoutPolicy: fn(16186).OverlayWidgetLayoutPolicy.OPTIONAL,
   defaultSettings: null,
   version: OVERLAY_V3_LAYOUT_VERSION,
 };
-const obj17 = {
-  anchor: { left: 0.35, top: 0.2, bottom: "description", right: "c" },
-  size: null,
-  pinned: false,
-  minSize: null,
-};
+const obj17 = { anchor: { left: 0.35, top: 0.2, bottom: "ip", right: "c" }, size: null, pinned: false, minSize: null };
 let size = {
   fixed: true,
   width: 400 + CONJURE_OVERLAY_WIDGET_CHROME.width,

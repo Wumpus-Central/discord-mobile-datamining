@@ -5,10 +5,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const useIsVoiceChatFocused = fn(10934).useIsVoiceChatFocused;
+const useIsVoiceChatFocused = fn(11003).useIsVoiceChatFocused;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj = {
   chat: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignSelf: "stretch" },
   chatHeaderSpacer: null,
@@ -55,10 +55,10 @@ export default noop.memo(function ChannelVoice(channel) {
   const effect = noop.useEffect(() => {
     const messages = MessageManagerDefault.fetchMessages({ guildId: guild_id, channelId: id });
   }, items);
-  const tmp6 = guild_id(1627)();
+  const tmp6 = guild_id(1630)();
   const top = tmp6.top;
   ({ left, right } = tmp6);
-  const voiceChatNavigationContext = id(10940).useVoiceChatNavigationContext();
+  const voiceChatNavigationContext = id(11009).useVoiceChatNavigationContext();
   let openVoice;
   if (voiceChatNavigationContext != null) {
     openVoice = voiceChatNavigationContext.openVoice;
@@ -66,11 +66,11 @@ export default noop.memo(function ChannelVoice(channel) {
   if (openVoice == null) {
     openVoice = tmp4(12).noop;
   }
-  const obj2 = id(10940);
-  const isConnectedToVoiceChannel = id(10938).useIsConnectedToVoiceChannel(channel.channel);
-  const tmp7Result = id(10938);
+  const obj2 = id(11009);
+  const isConnectedToVoiceChannel = id(11007).useIsConnectedToVoiceChannel(channel.channel);
+  const tmp7Result = id(11007);
   let str = "no-hide-descendants";
-  guild_id(5484)();
+  guild_id(5547)();
   if (tmp2) {
     str = "yes";
   }
@@ -83,7 +83,7 @@ export default noop.memo(function ChannelVoice(channel) {
   }
   items1[1] = tmp15;
   obj3.style = items1;
-  const items2 = [closure_6(guild_id(10202), { absolute: true, tall: true })];
+  const items2 = [closure_6(guild_id(10271), { absolute: true, tall: true })];
   const obj5 = { guildId: guild_id, channelId: id, children: null };
   let tmp16Result = null;
   if (!flag) {
@@ -91,13 +91,13 @@ export default noop.memo(function ChannelVoice(channel) {
     if (isConnectedToVoiceChannel) {
       let str2 = "light-content";
     } else {
-      tmp7(5250);
+      tmp7(5313);
       str2 = "dark-content";
     }
     obj6.barStyle = str2;
-    tmp16Result = closure_6(tmp4(11761), obj6);
+    tmp16Result = closure_6(tmp4(11827), obj6);
     const tmp19 = !tmp2;
-    const tmp4Result = tmp4(11761);
+    const tmp4Result = tmp4(11827);
   }
   const items3 = [tmp16Result, , , ,];
   const items4 = [tmp.safeAreaTop];
@@ -116,7 +116,7 @@ export default noop.memo(function ChannelVoice(channel) {
   }
   items5[1] = { display: str4 };
   items3[2] = closure_6(View, { style: items5 });
-  items3[3] = closure_6(guild_id(11910), {
+  items3[3] = closure_6(guild_id(11976), {
     guildId: guild_id,
     channelId: id,
     chatInputRef: noop.useRef(null),
@@ -142,17 +142,17 @@ export default noop.memo(function ChannelVoice(channel) {
   obj10.accessibilityLabel = intl.string(id(1113).t["13/7kX"]);
   obj10.style = tmp.chatHeaderBackIconContainer;
   const ref = noop.useRef(null);
-  obj10.children = closure_6(id(1187).Icon, { source: guild_id(12403), size: id(1187).Icon.Sizes.MEDIUM });
-  const items7 = [closure_6(id(7364).PressableOpacity, obj10)];
-  const obj11 = { source: guild_id(12403), size: id(1187).Icon.Sizes.MEDIUM };
+  obj10.children = closure_6(id(1187).Icon, { source: guild_id(12498), size: id(1187).Icon.Sizes.MEDIUM });
+  const items7 = [closure_6(id(7428).PressableOpacity, obj10)];
+  const obj11 = { source: guild_id(12498), size: id(1187).Icon.Sizes.MEDIUM };
   items7[1] = closure_6(View, {
     style: tmp.chatHeaderTitleContainer,
-    children: closure_6(id(15025).ChannelTitle, { guildId: guild_id, channelId: id }),
+    children: closure_6(id(15139).ChannelTitle, { guildId: guild_id, channelId: id }),
   });
   obj9.children = items7;
   items3[4] = closure_7(View, obj9);
   obj5.children = items3;
-  items2[1] = closure_7(id(10941).ChannelContainer, obj5);
+  items2[1] = closure_7(id(11010).ChannelContainer, obj5);
   obj3.children = items2;
   return closure_7(View, obj3);
 });

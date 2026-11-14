@@ -113,7 +113,7 @@ function ChildItem(child) {
   }
   if (stateFromStores) {
     const obj3 = { style: tmp.debugText, variant: "body-xs/normal", color: "text-muted", children: report_type };
-    stateFromStores = closure_16(tmp5(5866).Text, obj3);
+    stateFromStores = closure_16(tmp5(5929).Text, obj3);
   }
   obj2.children = stateFromStores;
   return closure_16(InAppReportsOptionRowDefault, obj2);
@@ -142,14 +142,14 @@ function NullComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(12004).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(12002).IN_APP_REPORTS_NODE;
+const REMEDIATION_ELEMENT_TYPES = fn(12071).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(12069).IN_APP_REPORTS_NODE;
 const Constants = fn(1072);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = Constants);
 const Permissions = fn(1083).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: {
     flex: 1,

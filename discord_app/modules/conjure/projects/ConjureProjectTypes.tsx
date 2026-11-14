@@ -19,6 +19,7 @@ export const MIN_PROJECT_NAME_LENGTH = 2;
 export const MAX_PROJECT_NAME_LENGTH = 128;
 export const MAX_APP_DESCRIPTION_LENGTH = 400;
 export const MAX_PROJECT_COLLABORATOR_ROLES = 25;
+export const MAX_PROJECT_SERVERS = 10;
 export const ConjureProjectFlags = frozen1;
 export function isProjectGuildCollaborationEnabled(stateFromStores) {
   let num = stateFromStores.flags;
@@ -26,6 +27,20 @@ export function isProjectGuildCollaborationEnabled(stateFromStores) {
     num = 0;
   }
   return num & frozen1.GUILD_COLLABORATION;
+}
+export function conjureProjectServerIds(project) {
+  if (null != project.guild_ids) {
+    let guild_ids = project.guild_ids;
+  } else {
+    if ("guild" === project.install_scope) {
+      if (null != project.guild_id) {
+        items = [project.guild_id];
+        guild_ids = items;
+      }
+    }
+    guild_ids = [];
+  }
+  return guild_ids;
 }
 export function usesPreviewApp(project) {
   return null == project.preview_application_id || project.preview_application_id !== project.application_id;

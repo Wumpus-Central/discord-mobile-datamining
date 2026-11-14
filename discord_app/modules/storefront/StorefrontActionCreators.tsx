@@ -280,7 +280,7 @@ let closure_16 = async function _fetchStorefrontPricesForApplicationId(arg0) {
     await "HermesInternal";
     closure_1 = tmp2;
     applicationId2 = applicationId.applicationId;
-    return "flexDirection";
+    return "Path";
   })();
   iter.next();
   return iter;
@@ -294,7 +294,7 @@ let closure_17 = async function _fetchStorefrontPricesForSkuIds(arg0) {
     await "HermesInternal";
     closure_1 = tmp2;
     skuIds2 = skuIds.skuIds;
-    return "flexDirection";
+    return "Path";
   })();
   iter.next();
   return iter;

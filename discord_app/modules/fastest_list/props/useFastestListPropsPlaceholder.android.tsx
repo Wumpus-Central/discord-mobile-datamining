@@ -15,29 +15,29 @@ function createNativePlaceholderConfig(listFooter) {
   }
   const size = {
     borderRadius: "Array",
-    borderTopLeftRadius: "context",
-    borderTopRightRadius: "paddingHorizontal",
-    borderBottomLeftRadius: "l",
-    borderBottomRightRadius: "code",
+    borderTopLeftRadius: "text",
+    borderTopRightRadius: "alignItems",
+    borderBottomLeftRadius: "url",
+    borderBottomRightRadius: "applicationId",
     divider: "Array",
     dividerColor: "isArray",
     dividerPaddingLeft: "Array",
-    dividerPaddingRight: "paddingHorizontal",
-    placeholderShape: "op",
-    placeholderShapeColor: "o",
-    placeholderShapeCount: "r",
+    dividerPaddingRight: "alignItems",
+    placeholderShape: "ti",
+    placeholderShapeColor: "st",
+    placeholderShapeCount: "Array",
     placeholderShapeGap: "isArray",
-    placeholderShapePaddingHorizontal: "channelId",
-    placeholderShapePaddingVertical: "round",
-    placeholderFeedBackgroundColor: "setTimeout",
-    placeholderFeedColor: "paddingHorizontal",
-    placeholderFeedLabelPadding: "setTimeout",
-    placeholderFeedLabelPaddingInnerRatio: "Number",
-    placeholderFeedLabelSize: "a",
-    placeholderFeedLabelSecondarySize: "isArray",
-    placeholderFeedPadding: "Array",
-    placeholderFeedShape: "channel",
-    placeholderFeedShapeSize: "map",
+    placeholderShapePaddingHorizontal: "alignItems",
+    placeholderShapePaddingVertical: "count",
+    placeholderFeedBackgroundColor: "Path",
+    placeholderFeedColor: "a",
+    placeholderFeedLabelPadding: "isArray",
+    placeholderFeedLabelPaddingInnerRatio: "Array",
+    placeholderFeedLabelSize: "channelId",
+    placeholderFeedLabelSecondarySize: "dispatch",
+    placeholderFeedPadding: "x",
+    placeholderFeedShape: "e",
+    placeholderFeedShapeSize: "isArray",
     placeholderType: NONE,
     width: false,
     height: false,
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(7771).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(7837).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

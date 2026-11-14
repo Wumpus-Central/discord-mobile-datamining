@@ -270,7 +270,7 @@ let closure_13 = async function _removeMonetization() {
   return value;
 };
 const Endpoints = fn(1072).Endpoints;
-const ApplicationTypes = fn(1362).ApplicationTypes;
+const ApplicationTypes = fn(1365).ApplicationTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx",

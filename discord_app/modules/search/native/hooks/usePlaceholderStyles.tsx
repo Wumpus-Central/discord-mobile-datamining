@@ -2,12 +2,12 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import native from "../../../../design/void/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-let closure_4 = fn(8999).FADE_LAYOUT_ANIMATION_DURATION;
+let closure_4 = fn(9066).FADE_LAYOUT_ANIMATION_DURATION;
 let closure_5 = {
   code: "(function usePlaceholderStylesTsx1(){let[useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION]=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};})",
 };
@@ -25,8 +25,8 @@ export function usePlaceholderAnimatedStyle(visible) {
     easing,
     stateFromStores,
     visible,
-    _mod1652.withRepeat,
-    _mod1652.withSequence,
+    _mod1655.withRepeat,
+    _mod1655.withSequence,
     timing_timing.withTiming,
     native.STANDARD_EASING,
     _undefined3,
@@ -66,5 +66,5 @@ export function usePlaceholderAnimatedStyle(visible) {
   usePlaceholderStylesTsx1.__closure = items2;
   usePlaceholderStylesTsx1.__workletHash = 3033147489043;
   usePlaceholderStylesTsx1.__initData = tmp2;
-  return _mod1652.useAnimatedStyle(usePlaceholderStylesTsx1);
+  return _mod1655.useAnimatedStyle(usePlaceholderStylesTsx1);
 }

@@ -26,7 +26,7 @@ export function dismissAlerts() {
     2,
   );
   const first = tmp[0];
-  first(1259).batchUpdates(() => {
+  first(1263).batchUpdates(() => {
     obj3.setState({ alerts: arr4 });
     const item = first.forEach((onDismiss) => {
       onDismiss = onDismiss.onDismiss;
@@ -38,9 +38,9 @@ export function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(6208)();
+    arr4(6271)();
   }
-  const obj = first(1259);
+  const obj = first(1263);
   tmp4 = 0 === tmp[1].length && first.length > 0;
 }
 export function dismissAlert(c6) {
@@ -70,7 +70,7 @@ export function dismissAlert(c6) {
       }
     });
     if (tmp2) {
-      found(6208)();
+      found(6271)();
     }
     let obj = require("ReactBatchUpdates");
   }

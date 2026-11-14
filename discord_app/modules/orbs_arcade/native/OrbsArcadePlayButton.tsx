@@ -18,7 +18,7 @@ function OrbsArcadePaidPlayLabel(count) {
     count: count.orbCost,
     orbIconHook() {
       return jsx(
-        size(9374).OrbsIcon,
+        size(9442).OrbsIcon,
         { size: "xs", color: closure_1(575).colors.CONTROL_PRIMARY_TEXT_DEFAULT },
         "orbs-icon",
       );
@@ -61,7 +61,7 @@ function OrbsArcadePaidPlayLabel(count) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({
   paidPlayLabel: { flexDirection: "row", alignItems: "center" },
   paidPlayText: { flexShrink: 1 },

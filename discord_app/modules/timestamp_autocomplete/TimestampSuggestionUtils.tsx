@@ -1,25 +1,25 @@
 // discord_app/modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2166 from "../../../_runtime/metro/02166__.js";
-import _mod11356 from "../../../_runtime/metro/11356__.js";
+import _modDef2169 from "../../../_runtime/metro/02169__.js";
+import _mod11423 from "../../../_runtime/metro/11423__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 
 require = fn;
 let items = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm", "ha", "h a", "H", "LT", "LTS"];
-let items1 = [_modDef2166.ISO_8601];
+let items1 = [_modDef2169.ISO_8601];
 const items2 = [...items];
 HermesBuiltin.arraySpread(new Set(items2), 1);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx");
 
 export function preloadTimestampParser() {
-  _mod11356;
+  _mod11423;
 }
 export function queryTimestampSuggestions(arg0) {
   let obj = cloneResult1;
   if (cloneResult1 === undefined) {
-    obj = _modDef2166();
+    obj = _modDef2169();
   }
   if ("" === arg0) {
     let parsed;
@@ -46,7 +46,7 @@ export function queryTimestampSuggestions(arg0) {
     if (tmp14) {
       tmp14 = first.text === arg0;
     }
-    const obj2 = _modDef2166;
+    const obj2 = _modDef2169;
     if (tmp14) {
       const start = first.start;
       let invalidResult = obj2(start.date());
@@ -74,7 +74,7 @@ export function queryTimestampSuggestions(arg0) {
           if (!start2.isCertain("hour")) {
             const _Math = Math;
             const result = Math.round(cloneResult.valueOf() / 900000) * 900000;
-            obj5 = tmp20(2166)(result);
+            obj5 = tmp20(2169)(result);
           }
         }
         if (tmp14) {
@@ -233,7 +233,7 @@ export function queryTimestampSuggestions(arg0) {
     }
     return items1;
   } else {
-    const tmp6 = _mod11356;
+    const tmp6 = _mod11423;
     const locale = LocaleStore.locale;
     if ("en-US" === locale) {
       let en = tmp6.en;

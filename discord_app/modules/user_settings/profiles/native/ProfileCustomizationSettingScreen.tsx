@@ -32,7 +32,7 @@ const Constants = fn(1072);
 ({ AnalyticEvents: closure_15, AnalyticsSections: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   container: { height: "100%" },
   controls: { paddingTop: 4 },
@@ -230,10 +230,10 @@ export default noop.memo(function ProfileCustomizationSettingScreen() {
   }, items5);
   const effect2 = obj5.useEffect(
     () => () => {
-      const result = closure_1_0(7734).resetAndCloseUserProfileForm();
+      const result = closure_1_0(7800).resetAndCloseUserProfileForm();
       hasUnsavedChanges.resetState();
-      const obj = closure_1_0(7734);
-      token(12026).clearPendingWidgets();
+      const obj = closure_1_0(7800);
+      token(12093).clearPendingWidgets();
     },
     [],
   );

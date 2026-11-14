@@ -1,6 +1,6 @@
 // discord_app/modules/calls/native/VideoBackground.tsx
 import native from "../../../design/void/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05830_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05893_LinearGradient.js";
 import VideoBackgroundManagerDefault from "VideoBackgroundManager.tsx";
 import useProfileTileGradientDefault from "useProfileTileGradient.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -16,11 +16,11 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(8548)();
+  const tmp5 = first(8615)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8549).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8616).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = require("ColorUtils").hexToRgb(tmp3(575).unsafe_rawColors.PRIMARY_800);
@@ -39,11 +39,11 @@ function useDominantRGBFromImage(arg0, arg1) {
       let nextPromise = dependencyMap;
       if (null == VideoBackgroundManagerDefault.cachedDominantColors[closure_0]) {
         if (typeof first === "number") {
-          const dominantColorsLocalAsset = getDominantColorsLocalAsset(2022);
+          const dominantColorsLocalAsset = getDominantColorsLocalAsset(2025);
           getDominantColorsLocalAsset = dominantColorsLocalAsset.getDominantColorsLocalAsset;
           let dominantColorsLocalAsset1 = getDominantColorsLocalAsset(timestampProducer.resolveAssetSource(first));
         } else {
-          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(2022);
+          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(2025);
           dominantColorsLocalAsset1 = dominantColorsLocalAsset2.getDominantColors(
             timestampProducer.resolveAssetSource(first),
           );
@@ -53,13 +53,13 @@ function useDominantRGBFromImage(arg0, arg1) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = closure_3(result[0], 3);
             closure_1_3(obj);
-            first(8549).cachedDominantColors[closure_1_0] = obj;
+            first(8616).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = closure_3(result[0], 3);
           }
         });
         nextPromise.catch(NOOP);
       } else {
-        closure_3(getDominantColorsLocalAsset(8549).cachedDominantColors[tmp4]);
+        closure_3(getDominantColorsLocalAsset(8616).cachedDominantColors[tmp4]);
       }
     }
   }, items);
@@ -169,7 +169,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const refs = createStyles.createStyles({
   videoBackground: { alignItems: "center" },
   videoDetailsSpacer: { paddingTop: 12 },

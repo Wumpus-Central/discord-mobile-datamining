@@ -81,6 +81,7 @@ const items = [
   dismissible_content.DismissibleContent.GAME_SHOP_NEW_BADGE,
   dismissible_content.DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE,
   dismissible_content.DismissibleContent.MOBILE_SHOP_BROWSE_ALL_NITRO_UPSELL,
+  dismissible_content.DismissibleContent.SHOP_TWELVE_DAYS_MOBILE_HOME_NAGBAR,
   dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
   dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA,
   dismissible_content.DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO,
@@ -112,6 +113,9 @@ const items = [
   dismissible_content.DismissibleContent.PINOT_MEMBER_COACHMARK,
   dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_STYLING_BADGE,
   dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_RTC_NUDGE_ACKNOWLEDGMENT,
+  dismissible_content.DismissibleContent.HEXAGON_CAMPAIGN_PERKS_EXPIRED_PROMO_SHEET,
+  dismissible_content.DismissibleContent.AUTOCLIPPING_EARLY_ACCESS_FIRST_AUTO_CLIPS_RECAP,
+  dismissible_content.DismissibleContent.VOICE_PANEL_STREAM_VOLUME_MOVED_NOTICE,
 ];
 const set = new Set(items);
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFatigueConfig.tsx");

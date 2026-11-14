@@ -13,13 +13,13 @@ const require = globalThis.__r;
 require = fn;
 let closure_8 = {
   user: "a",
-  profile: "flexDirection",
-  wishlistId: "st",
-  wishlist: 331,
-  updatedAt: null,
-  storedUpdatedAt: 1,
-  fetching: "heading-md/semibold",
-  error: "mobile-text-heading-primary",
+  profile: "Path",
+  wishlistId: "container",
+  wishlist: "animal",
+  updatedAt: "chipmunk",
+  storedUpdatedAt: "squirrel",
+  fetching: "animal",
+  error: "hedgehog",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting(

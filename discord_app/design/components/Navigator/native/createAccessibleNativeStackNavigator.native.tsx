@@ -1,7 +1,7 @@
 // discord_app/design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx
-import Link from "../../../../../_runtime/01500_Link.js";
+import Link from "../../../../../_runtime/01503_Link.js";
 import Navigator from "Navigator.native.tsx";
-import NativeStackNavigator from "../../../../../_runtime/09061_NativeStackNavigator.js";
+import NativeStackNavigator from "../../../../../_runtime/09128_NativeStackNavigator.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

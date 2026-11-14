@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx
-import inlineStyles from "../../../../../_runtime/08197_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08263_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;

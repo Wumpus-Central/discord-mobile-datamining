@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding_home/native/NewMemberActionsCompletedModal.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../_runtime/metro/01655__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = {
   screen: {
     flex: 1,
@@ -48,16 +48,16 @@ export default function NewMemberActionsCompleted(arg0) {
   _require = undefined;
   ({ initialPercent, numActions } = arg0);
   const tmp = closure_7();
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(initialPercent);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(initialPercent);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
     const result = _undefined.set(1);
   }, items);
-  const obj = require("../../../../_runtime/metro/01652__.js");
+  const obj = require("../../../../_runtime/metro/01655__.js");
   const items1 = [
     closure_8,
-    require("../../../../_runtime/metro/01652__.js").withDelay,
+    require("../../../../_runtime/metro/01655__.js").withDelay,
     require("timing/timing").withTiming,
     sharedValue,
   ];
@@ -75,12 +75,12 @@ export default function NewMemberActionsCompleted(arg0) {
   NewMemberActionsCompletedModalTsx1.__closure = items2;
   NewMemberActionsCompletedModalTsx1.__workletHash = 7122689544809;
   NewMemberActionsCompletedModalTsx1.__initData = tmp6;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     NewMemberActionsCompletedModalTsx1,
   );
   const effect1 = noop.useEffect(() => {
     const timerId = setTimeout(
-      () => _undefined2(6785).popWithKey(_undefined(7018).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+      () => _undefined2(6848).popWithKey(_undefined(7081).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
       2500,
     );
   }, []);
@@ -93,7 +93,7 @@ export default function NewMemberActionsCompleted(arg0) {
   const obj7 = { style: null };
   const items4 = [tmp.progressForeground, animatedStyle];
   obj7.style = items4;
-  obj6.children = closure_5(_modDef1652.View, obj7);
+  obj6.children = closure_5(_modDef1655.View, obj7);
   items3[1] = closure_5(View, obj6);
   obj4.children = items3;
   return closure_6(View, obj4);

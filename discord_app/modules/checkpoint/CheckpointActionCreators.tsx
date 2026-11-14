@@ -9,8 +9,8 @@ import CheckpointStore from "CheckpointStore.tsx";
 
 require = fn;
 let closure_8 = async function _fetchCheckpointData(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
+  if (c8 === 2) {
+    c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp6 === 3) {
     if (arg0 === 1) {
@@ -23,117 +23,132 @@ let closure_8 = async function _fetchCheckpointData(arg0) {
     }
   } else {
     try {
-      c6 = 2;
-      if (0 === c5) {
+      c8 = 2;
+      if (0 === c7) {
         if (arg0 === 1) {
-          c6 = 3;
+          c8 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          c8 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
-          closure_3 = tmp3;
-          closure_2 = tmp7;
-          closure_130_0 = closure_0;
-          let body;
-          let compact_assets;
-          closure_130_3 = undefined;
-          closure_130_4 = undefined;
+          closure_5 = tmp3;
+          closure_4 = tmp7;
+          closure_132_0 = closure_0;
+          closure_132_1 = undefined;
+          closure_132_2 = undefined;
+          closure_132_3 = undefined;
+          closure_132_4 = undefined;
+          closure_132_5 = undefined;
           CheckpointStore.initializeIfNeeded();
           if (CheckpointStore.isFetching) {
-            c6 = 3;
-            const obj8 = { value: constants.FETCHING, done: true };
-            return obj8;
+            c8 = 3;
+            let obj4 = { value: constants.FETCHING, done: true };
+            return obj4;
           } else {
             DispatcherDefault.dispatch({ type: "CHECKPOINT_FETCH_START" });
-            c4 = 1;
-            const HTTP = HTTPUtils.HTTP;
-            const obj10 = { url: constants2.CHECKPOINT, rejectWithError: true };
-            c5 = 2;
             c6 = 1;
-            const obj12 = { value: HTTP.get(obj10), done: false };
-            return obj12;
+            function checkpointResponseFromServer(body) {
+              let statsFromServerResult = null;
+              if (null != body.stats) {
+                statsFromServerResult = closure_1_0(6747).statsFromServer(body.stats);
+                const obj = closure_1_0(6747);
+              }
+              const obj4 = {
+                stats: statsFromServerResult,
+                globalStats: closure_1_0(6747).globalStatsFromServer(body.global_stats),
+                character: null,
+                compactAssets: null,
+                availability: null,
+              };
+              ({ character: obj2.character, compact_assets: obj2.compactAssets, availability } = body);
+              if (availability == null) {
+                availability = closure_1_0(14254).CheckpointAvailability.FULL;
+              }
+              obj4.availability = availability;
+              return obj4;
+            }
+            const HTTP = HTTPUtils.HTTP;
+            const obj6 = { url: constants2.CHECKPOINT, rejectWithError: true };
+            c7 = 2;
+            c8 = 1;
+            const obj8 = { value: HTTP.get(obj6), done: false };
+            return obj8;
           }
         }
       } else if (1 === tmp7) {
-        c4 = 0;
-        closure_131_1(closure_131_2[4]).dispatch({ type: "CHECKPOINT_FETCH_FAILED" });
-        c6 = 3;
-        const obj13 = { value: closure_131_6.ERROR, done: true };
-        return obj13;
+        c6 = 0;
+        closure_133_1(closure_133_2[4]).dispatch({ type: "CHECKPOINT_FETCH_FAILED" });
+        c8 = 3;
+        const obj9 = { value: closure_133_6.ERROR, done: true };
+        return obj9;
       } else if (arg0 === 1) {
-        c6 = 3;
+        c8 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj14 = { value, done: true };
-        return obj14;
+        c6 = 0;
+        c8 = 3;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
-        body = value.body;
-        compact_assets = body.compact_assets;
-        const availability = body.availability;
-        let FULL = availability;
-        if (availability == null) {
-          FULL = closure_131_0(closure_131_2[7]).CheckpointAvailability.FULL;
+        closure_132_1 = checkpointResponseFromServer(value.body);
+        let stats1;
+        if (closure_132_0 != null) {
+          stats1 = closure_132_0.stats;
         }
-        closure_130_3 = FULL;
-        let character = null;
-        if (closure_130_3 === closure_131_0(closure_131_2[7]).CheckpointAvailability.FULL) {
-          character = body.character;
-        }
-        closure_130_4 = character;
-        if (null != closure_130_0) {
-          const obj15 = {
-            type: "CHECKPOINT_FETCH_SUCCESS",
-            stats: null,
-            globalStats: null,
-            character: null,
-            compactAssets: null,
-            availability: null,
-          };
-          const obj4 = closure_131_1(closure_131_2[4]);
-          obj15.stats = closure_131_0(closure_131_2[8]).getMockCheckpointStats(closure_130_0);
-          const obj6 = closure_131_0(closure_131_2[8]);
-          obj15.globalStats = closure_131_0(closure_131_2[9]).globalStatsFromServer(body.global_stats);
-          obj15.compactAssets = compact_assets;
-          obj15.availability = closure_130_3;
-          obj4.dispatch(obj15);
-          const SUCCESS2 = closure_131_6.SUCCESS;
-          const obj7 = closure_131_0(closure_131_2[9]);
+        if (undefined !== stats1) {
+          let stats = closure_132_0.stats;
         } else {
-          let statsFromServerResult = null;
-          if (null != body.stats) {
-            statsFromServerResult = closure_131_0(closure_131_2[9]).statsFromServer(body.stats);
-            const obj = closure_131_0(closure_131_2[9]);
-          }
-          const obj16 = {
-            type: "CHECKPOINT_FETCH_SUCCESS",
-            stats: statsFromServerResult,
-            globalStats: null,
-            character: null,
-            compactAssets: null,
-            availability: null,
-          };
-          const obj17 = closure_131_1(closure_131_2[4]);
-          obj16.globalStats = closure_131_0(closure_131_2[9]).globalStatsFromServer(body.global_stats);
-          obj16.character = closure_130_4;
-          obj16.compactAssets = compact_assets;
-          obj16.availability = closure_130_3;
-          obj17.dispatch(obj16);
-          const SUCCESS = closure_131_6.SUCCESS;
-          const obj3 = closure_131_0(closure_131_2[9]);
+          stats = closure_132_1.stats;
         }
-        c4 = 0;
-        c6 = 3;
+        closure_132_2 = stats;
+        let character1;
+        if (closure_132_0 != null) {
+          character1 = closure_132_0.character;
+        }
+        if (undefined !== character1) {
+          let character = closure_132_0.character;
+        } else {
+          character = closure_132_1.character;
+        }
+        closure_132_3 = character;
+        let compactAssets;
+        if (closure_132_0 != null) {
+          compactAssets = closure_132_0.compactAssets;
+        }
+        if (compactAssets == null) {
+          compactAssets = closure_132_1.compactAssets;
+        }
+        closure_132_4 = compactAssets;
+        let availability;
+        if (closure_132_0 != null) {
+          availability = closure_132_0.availability;
+        }
+        if (availability == null) {
+          availability = closure_132_1.availability;
+        }
+        closure_132_5 = availability;
+        const obj11 = {
+          type: "CHECKPOINT_FETCH_SUCCESS",
+          stats: closure_132_2,
+          globalStats: closure_132_1.globalStats,
+          character: closure_132_3,
+          compactAssets: closure_132_4,
+          availability: closure_132_5,
+        };
+        closure_133_1(closure_133_2[4]).dispatch(obj11);
+        c6 = 0;
+        c8 = 3;
+        const obj12 = { value: closure_133_6.SUCCESS, done: true };
+        return obj12;
       }
-    } catch (tmp64) {
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp64;
+    } catch (tmp52) {
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp52;
       } else {
-        c5 = tmp;
+        c7 = tmp;
       }
     }
   }
@@ -288,8 +303,8 @@ let closure_11 = async function _sendSidekickMessage() {
     const error = new Error("Failed to open private channel");
     throw error;
   }
-  closure_130_4 = closure_131_1(closure_131_2[11]).parse(channel, closure_130_0);
-  await closure_131_1(closure_131_2[12]).sendMessage(channel.id, closure_130_4, false, {
+  closure_130_4 = closure_131_1(closure_131_2[10]).parse(channel, closure_130_0);
+  await closure_131_1(closure_131_2[11]).sendMessage(channel.id, closure_130_4, false, {
     location: "checkpoint-sidekick",
   });
   closure_130_5 = value;
@@ -347,7 +362,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
           let obj5 = { value, done: true };
           return obj5;
         } else {
-          closure_133_2 = value.filter(closure_134_0(closure_134_2[14]).isNotNullish);
+          closure_133_2 = value.filter(closure_134_0(closure_134_2[13]).isNotNullish);
           let _Promise = Promise;
           c9 = 2;
           c10 = 1;
@@ -356,10 +371,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
               closure_133_2.map((item) => {
                 channel = channel.getChannel(item);
                 if (null != channel) {
-                  const obj = checkpointCardType(8593);
+                  const obj = checkpointCardType(8660);
                   const id = channel.id;
                   const obj3 = { location: "checkpoint", checkpointCardType };
-                  return obj.sendMessage(id, checkpointCardType(8719).parse(channel, closure_1_0), false, obj3);
+                  return obj.sendMessage(id, checkpointCardType(8786).parse(channel, closure_1_0), false, obj3);
                 }
               }),
             ),
@@ -400,7 +415,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
-const CheckpointFetchStates = fn(14146).CheckpointFetchStates;
+const CheckpointFetchStates = fn(14253).CheckpointFetchStates;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");

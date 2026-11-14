@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx
-import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
 import SelectedDismissibleContentDefault from "../../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -10,10 +10,10 @@ const require = globalThis.__r;
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(19894, dependencyMap.paths);
+  return asyncRequireImpl(20051, dependencyMap.paths);
 }
-const VoicePanelModes = fn(11919).VoicePanelModes;
-const isActivityParticipant = fn(5920).isActivityParticipant;
+const VoicePanelModes = fn(11985).VoicePanelModes;
+const isActivityParticipant = fn(5983).isActivityParticipant;
 const jsx = fn(21).jsx;
 let closure_10 = {
   code: "(function VoicePanelDismissableContentTsx1(){let[mode,VoicePanelModes,focused]=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;})",
@@ -62,7 +62,7 @@ export default noop.memo(function VoicePanelDismissibleContent() {
   VoicePanelDismissableContentTsx1.__closure = items2;
   VoicePanelDismissableContentTsx1.__workletHash = 2390811461540;
   VoicePanelDismissableContentTsx1.__initData = tmp7;
-  const items3 = [closure_11, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, callback];
+  const items3 = [closure_11, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, callback];
   _require = undefined;
   importDefault = undefined;
   [tmp11, tmp12, tmp13] = items3;
@@ -80,12 +80,12 @@ export default noop.memo(function VoicePanelDismissibleContent() {
   VoicePanelDismissableContentTsx2.__closure = items4;
   VoicePanelDismissableContentTsx2.__workletHash = 15261631446843;
   VoicePanelDismissableContentTsx2.__initData = tmp11;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     VoicePanelDismissableContentTsx1,
     VoicePanelDismissableContentTsx2,
   );
   if (tmp4[0]) {
-    const items5 = [tmp6(5076).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX];
+    const items5 = [tmp6(5139).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX];
     let items6 = items5;
   } else {
     items6 = [];

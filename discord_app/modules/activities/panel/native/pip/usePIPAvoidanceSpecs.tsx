@@ -1,5 +1,5 @@
 // discord_app/modules/activities/panel/native/pip/usePIPAvoidanceSpecs.tsx
-import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
 import cheapWorkletShallowEqual from "../../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import updateSharedValueIfChangedDefault from "../../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import useAnimatedKeyboardHeightDefault from "../../../../keyboard/native/useAnimatedKeyboardHeight.tsx";
@@ -17,7 +17,7 @@ let closure_4 = {
 const result = size.fileFinishedImporting("modules/activities/panel/native/pip/usePIPAvoidanceSpecs.tsx");
 
 export default function usePIPAvoidanceSpecs(arg0) {
-  const sharedValue = _mod1652.useSharedValue({ top: 0, bottom: 0 });
+  const sharedValue = _mod1655.useSharedValue({ top: 0, bottom: 0 });
   const tmp5 = useAnimatedKeyboardHeightDefault();
   const tmp6 = useScreenNameSharedValueDefault();
   items = [_undefined4, tmp5, arg0, tmp6];
@@ -56,6 +56,6 @@ export default function usePIPAvoidanceSpecs(arg0) {
   usePIPAvoidanceSpecsTsx2.__closure = items3;
   usePIPAvoidanceSpecsTsx2.__workletHash = 12351742460170;
   usePIPAvoidanceSpecsTsx2.__initData = tmp11;
-  const animatedReaction = _mod1652.useAnimatedReaction(usePIPAvoidanceSpecsTsx1, usePIPAvoidanceSpecsTsx2);
+  const animatedReaction = _mod1655.useAnimatedReaction(usePIPAvoidanceSpecsTsx1, usePIPAvoidanceSpecsTsx2);
   return sharedValue;
 }

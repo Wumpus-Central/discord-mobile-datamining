@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItemSummary.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import ButtonPill from "../../../../../design/components/Button/native/ButtonPill.native.tsx";
 import ButtonEllipsis from "../../../../../design/components/Button/native/ButtonEllipsis.native.tsx";
@@ -30,7 +30,7 @@ function ParticipantsSummary(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   ongoingActivityContainer: {
     position: "absolute",
@@ -52,7 +52,7 @@ let obj3 = {
   backgroundColor: null,
   marginBottom: 8,
 };
-const ColorUtils = fn(5240);
+const ColorUtils = fn(5303);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.64);
 obj2.overlayActivityName = obj3;
 obj2.overlayActivityNameText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -89,7 +89,7 @@ export default function ActivityShelfItemSummary(submitting) {
     tmp7Result = hasOwnProperty(ButtonEllipsis.Ellipsis, { variant: "active", size: "md" });
   }
   obj5.children = tmp7Result;
-  items[1] = hasOwnProperty(_modDef1652.View, obj5);
+  items[1] = hasOwnProperty(_modDef1655.View, obj5);
   obj3.children = items;
   const items2 = [timestampProducer(View, obj3), hasOwnProperty(ParticipantsSummary, { channelId, applicationId })];
   obj2.children = items2;

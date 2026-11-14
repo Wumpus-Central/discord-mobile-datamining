@@ -40,7 +40,17 @@ function watchStream(stream, forceMultiple) {
         forceMultiple =
           allActiveStreamsForChannel.filter((ownerId) => ownerId.ownerId !== id.getId()).length >= MAX_VALUE;
       }
-      const obj4 = { type: "STREAM_WATCH", streamKey: encodeStreamKeyResult, allowMultiple: forceMultiple };
+      const obj4 = {
+        type: "STREAM_WATCH",
+        streamKey: encodeStreamKeyResult,
+        allowMultiple: forceMultiple,
+        analyticsLocations: null,
+      };
+      let analyticsLocations;
+      if (forceMultiple != null) {
+        analyticsLocations = forceMultiple.analyticsLocations;
+      }
+      obj4.analyticsLocations = analyticsLocations;
       DispatcherDefault.dispatch(obj4);
       if (null != guildId) {
         const result = GuildRoomActionCreators.maybeSetGuildRoomVideoOverlay(true, guildId, channelId);
@@ -50,8 +60,8 @@ function watchStream(stream, forceMultiple) {
       if (forceMultiple != null) {
         forceFocus = forceMultiple.forceFocus;
       }
-      let tmp22 = true !== forceFocus;
-      if (tmp22) {
+      let tmp23 = true !== forceFocus;
+      if (tmp23) {
         if (!forceMultiple) {
           let noFocus;
           if (forceMultiple != null) {
@@ -59,9 +69,9 @@ function watchStream(stream, forceMultiple) {
           }
           forceMultiple = noFocus;
         }
-        tmp22 = forceMultiple;
+        tmp23 = forceMultiple;
       }
-      if (!tmp22) {
+      if (!tmp23) {
         const participant = ChannelRTCActionCreatorsDefault.selectParticipant(stream.channelId, encodeStreamKeyResult);
         const tmp18Result = ChannelRTCActionCreatorsDefault;
       }
@@ -127,7 +137,7 @@ let closure_19 = async function _fetchStreamPreview() {
               const obj7 = { type: "STREAM_PREVIEW_FETCH_START", streamKey: HTTPResult };
               DispatcherDefault.dispatch(obj7);
               c6 = 1;
-              HTTP = obj6(1282).HTTP;
+              HTTP = obj6(1285).HTTP;
               const request = {
                 url: closure_2_13.STREAM_PREVIEW(HTTPResult),
                 query: null,
@@ -138,7 +148,7 @@ let closure_19 = async function _fetchStreamPreview() {
               timestamp = Date.now();
               obj9.version = timestamp;
               request.query = obj9;
-              obj6 = obj6(1282);
+              obj6 = obj6(1285);
               result = obj6.rejectWithMigratedError();
               request.rejectWithError = result;
               value = HTTP.get(request);
@@ -208,7 +218,7 @@ let closure_20 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1072);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(6740).StreamTypes;
+const StreamTypes = fn(6803).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -365,15 +375,15 @@ export function joinPrivateChannelAndWatchStream(arg0, streamKey) {
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(6836)(closure_1_1);
+          closure_1(6899)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(6293).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(6293);
+          closure_0(6356).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(6356);
         }
       }
     };

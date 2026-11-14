@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 const useRef = fn(19).useRef;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_7 = createStyles.createStyles((width, marginHorizontal) => {
   const obj = { containerRefresh: null, animationRefresh: null };
   const size = {
@@ -68,7 +68,7 @@ export function PremiumAnimatedGiftButton(arg0) {
   }, items1);
   let FadeOut;
   if (!stateFromStores) {
-    FadeOut = tmp(1652).FadeOut;
+    FadeOut = tmp(1655).FadeOut;
   }
   const obj5 = { exiting: FadeOut, children: null };
   const items2 = [tmp7.containerRefresh, style];
@@ -88,7 +88,7 @@ export function PremiumAnimatedGiftButton(arg0) {
   const merged = Object.assign(accessibilityState);
   obj6.accessibilityState = { disabled };
   const merged1 = Object.assign(arg0);
-  obj6.children = jsx(tmp3(5860), {
+  obj6.children = jsx(tmp3(5923), {
     ref: tmp9,
     style: tmp7.animationRefresh,
     source: { uri: animationDataUrl },
@@ -102,5 +102,5 @@ export function PremiumAnimatedGiftButton(arg0) {
     accessibilityRole: "button",
     accessibilityState: null,
   });
-  return jsx(stateFromStores(1652).View, { exiting: FadeOut, children: null });
+  return jsx(stateFromStores(1655).View, { exiting: FadeOut, children: null });
 }

@@ -1,7 +1,7 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoriesItem.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../../_runtime/metro/01705__.js";
+import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../../_runtime/metro/01708__.js";
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
@@ -11,17 +11,17 @@ import EmojiPickerCategoryIconDefault from "EmojiPickerCategoryIcon.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const EmojiCategoryTypes = fn(6909).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6972).EmojiCategoryTypes;
 const Constants = fn(1072);
 ({ CATEGORY_ICON_RIPPLE_CONFIG: metroImportDefault, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   itemInner: null,
   fadedItem: { backgroundColor: nativeDefault.colors.ICON_TRANSPARENT },
@@ -112,7 +112,7 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
   EmojiPickerCategoriesItemTsx1.__closure = items1;
   EmojiPickerCategoriesItemTsx1.__workletHash = 13103741049438;
   EmojiPickerCategoriesItemTsx1.__initData = tmp4;
-  const animatedStyle = _mod1652.useAnimatedStyle(EmojiPickerCategoriesItemTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(EmojiPickerCategoriesItemTsx1);
   [tmp13, tmp14] = noop.useState(() => _undefined2.get() === c3);
   const tmp12 = _slicedToArray(
     noop.useState(() => _undefined2.get() === c3),
@@ -131,7 +131,7 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
   EmojiPickerCategoriesItemTsx2.__closure = items3;
   EmojiPickerCategoriesItemTsx2.__workletHash = 5439677363570;
   EmojiPickerCategoriesItemTsx2.__initData = tmp15;
-  const items4 = [closure_13, _mod1705.scheduleOnRN, tmp14];
+  const items4 = [closure_13, _mod1708.scheduleOnRN, tmp14];
   c0 = undefined;
   c1 = undefined;
   [tmp18, tmp19, tmp20] = items4;
@@ -149,7 +149,7 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
   EmojiPickerCategoriesItemTsx3.__closure = items5;
   EmojiPickerCategoriesItemTsx3.__workletHash = 17327361424281;
   EmojiPickerCategoriesItemTsx3.__initData = tmp18;
-  const animatedReaction = _mod1652.useAnimatedReaction(EmojiPickerCategoriesItemTsx2, EmojiPickerCategoriesItemTsx3);
+  const animatedReaction = _mod1655.useAnimatedReaction(EmojiPickerCategoriesItemTsx2, EmojiPickerCategoriesItemTsx3);
   const items6 = [handlePressCategory, index, category];
   const callback = noop.useCallback(() => _undefined3(c3, c0), items6);
   const obj3 = {
@@ -188,6 +188,6 @@ export default noop.memo(function EmojiPickerCategoriesItem(category) {
   }
   items8[1] = locked;
   obj4.children = items8;
-  obj3.children = React6(_modDef1652.View, obj4);
+  obj3.children = React6(_modDef1655.View, obj4);
   return React5(Pressables.PressableOpacity, obj3);
 });

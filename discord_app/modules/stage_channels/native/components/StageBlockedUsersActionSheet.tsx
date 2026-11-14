@@ -45,7 +45,7 @@ function RestrictedUser(guildId) {
   ];
   if (speaker) {
     const obj6 = { style: tmp.iconContainer, children: null };
-    const obj7 = { style: tmp.icon, source: user(12976), color: user(575).unsafe_rawColors.WHITE };
+    const obj7 = { style: tmp.icon, source: user(13072), color: user(575).unsafe_rawColors.WHITE };
     obj6.children = closure_9(native.Icon, obj7);
     speaker = closure_9(View, obj6);
   }
@@ -162,10 +162,10 @@ function StageBlockedUsersActionSheetHeader(arg0) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(6843).STAGE_BLOCKED_USERS_SHEET_KEY;
+let closure_8 = fn(6906).STAGE_BLOCKED_USERS_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { paddingHorizontal: 16 },
   header: { padding: 16 },
@@ -229,9 +229,9 @@ export default function StageBlockedUsersActionSheet(channel) {
   const tmp = closure_11();
   const tmp2 = items1(noop.useState(0), 2);
   dependencyMap = tmp2[1];
-  const stageBlockedUsers = channel(12816).useStageBlockedUsers(channel.id);
-  const obj = channel(12816);
-  const stageIgnoredUsers = channel(12816).useStageIgnoredUsers(channel.id);
+  const stageBlockedUsers = channel(12912).useStageBlockedUsers(channel.id);
+  const obj = channel(12912);
+  const stageIgnoredUsers = channel(12912).useStageIgnoredUsers(channel.id);
   const callback = noop.useCallback((nativeEvent) => {
     dependencyMap(nativeEvent.nativeEvent.layout.height);
   }, []);
@@ -243,17 +243,17 @@ export default function StageBlockedUsersActionSheet(channel) {
     onAccept(channel);
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_8);
   };
-  items = [closure_9(channel(5873).Button, obj4)];
+  items = [closure_9(channel(5936).Button, obj4)];
   const obj5 = { variant: "secondary", text: null, onPress: null };
   const intl2 = channel(1113).intl;
   obj5.text = intl2.string(channel(1113).t.CZGqeT);
   obj5.onPress = function handleDismiss() {
-    onAccept(5489).hideActionSheet(closure_1_8);
+    onAccept(5552).hideActionSheet(closure_1_8);
   };
-  items[1] = closure_9(channel(5873).Button, obj5);
+  items[1] = closure_9(channel(5936).Button, obj5);
   obj3.children = items;
   items1 = [];
-  const obj2 = channel(12816);
+  const obj2 = channel(12912);
   HermesBuiltin.arraySpread(stageIgnoredUsers, HermesBuiltin.arraySpread(stageBlockedUsers, 0));
   const obj6 = {
     scrollable: true,
@@ -261,7 +261,7 @@ export default function StageBlockedUsersActionSheet(channel) {
       blockedUserCount: stageBlockedUsers.length,
       ignoredUserCount: stageIgnoredUsers.length,
     }),
-    footer: closure_10(channel(7351).SafeAreaPaddingView, obj3),
+    footer: closure_10(channel(7415).SafeAreaPaddingView, obj3),
     children: null,
   };
   const obj7 = {
@@ -272,7 +272,7 @@ export default function StageBlockedUsersActionSheet(channel) {
     renderItem: null,
     itemSize: null,
   };
-  const tmp4 = closure_10(channel(7351).SafeAreaPaddingView, obj3);
+  const tmp4 = closure_10(channel(7415).SafeAreaPaddingView, obj3);
   const intl3 = channel(1113).intl;
   obj7.accessibilityLabel = intl3.string(channel(1113).t["3VoRLH"]);
   const items2 = [items1.length];
@@ -283,7 +283,7 @@ export default function StageBlockedUsersActionSheet(channel) {
   obj7.itemSize = function getRowHeight() {
     return 48;
   };
-  const items3 = [closure_9(onAccept(7781), obj7), closure_9(View, { style: { height: tmp2[0] } })];
+  const items3 = [closure_9(onAccept(7847), obj7), closure_9(View, { style: { height: tmp2[0] } })];
   obj6.children = items3;
-  return closure_10(channel(5503).BottomSheet, obj6);
+  return closure_10(channel(5566).BottomSheet, obj6);
 }

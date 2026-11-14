@@ -3,7 +3,7 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02121_asyncRequireImpl.js";
 import utils_StringUtils from "../../../../../../discord_common/js/shared/utils/StringUtils.tsx";
 import UserUtils from "../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
@@ -74,12 +74,12 @@ function UserRowSubLabel(arg0) {
   }
 }
 const View = fn(17).View;
-const UserRowModes = fn(10175).UserRowModes;
+const UserRowModes = fn(10244).UserRowModes;
 const Constants = fn(1072);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const PlatformUtils = fn(1357);
+const PlatformUtils = fn(1360);
 if (PlatformUtils.isIOS()) {
   let obj = { lineHeight: "r" };
 }
@@ -93,7 +93,7 @@ let closure_18 = {
   IGNORE_SUGGESTION: "ignore-suggestion",
   TOGGLE: "toggle",
 };
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let closure_19 = createStyles.createStyles({
   avatar: { flexShrink: 0, flexGrow: 0 },
   actions: { flexDirection: "row" },
@@ -104,7 +104,7 @@ let closure_19 = createStyles.createStyles({
   usernameLabelContainer: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 },
   usernameLabel: { display: "flex", flexShrink: 1 },
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj3 = { activityText: { color: nativeDefault.colors.TEXT_SUBTLE }, gameContainer: null, gameIcon: null };
 let obj6 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj3.gameContainer = { flexDirection: "row", gap: 4, cornerRadius: nativeDefault.radii.xs };
@@ -245,7 +245,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "a" };
+      let obj2 = { accessibilityActions: items, actions: "y" };
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {
@@ -306,11 +306,11 @@ export default noop.memo(function UserRow(type) {
             location: isMobileOnline,
             onConfirm() {
               if (null != closure_0) {
-                const result = type(5951).presentGameFriendRequestAcceptedToast();
-                const obj2 = type(5951);
+                const result = type(6014).presentGameFriendRequestAcceptedToast();
+                const obj2 = type(6014);
               } else {
-                const result1 = type(5951).presentFriendRequestAcceptedToast();
-                obj = type(5951);
+                const result1 = type(6014).presentFriendRequestAcceptedToast();
+                obj = type(6014);
               }
             },
           });
@@ -419,14 +419,14 @@ export default noop.memo(function UserRow(type) {
               channel = channel.getChannel(result);
               if (null != channel) {
                 user(38)(channel.isPrivate(), "must be a DM");
-                const obj2 = user(10513)(channel, false);
+                const obj2 = user(10582)(channel, false);
                 if (!obj2.inCall) {
                   obj2.onPress();
                 }
                 const tmp3 = user(38);
                 obj = { recipientIds: current.id };
-                user(8069).openPrivateChannel(obj);
-                const tmpResult = user(8069);
+                user(8134).openPrivateChannel(obj);
+                const tmpResult = user(8134);
               }
             });
         };
@@ -475,14 +475,14 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10513)(channel, false);
+          const obj2 = user(10582)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }
           const tmp3 = user(38);
           obj = { recipientIds: current.id };
-          user(8069).openPrivateChannel(obj);
-          const tmpResult = user(8069);
+          user(8134).openPrivateChannel(obj);
+          const tmpResult = user(8134);
         }
       });
       const ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(user.id);
@@ -500,11 +500,11 @@ export default noop.memo(function UserRow(type) {
         location: Friends_v2,
         onConfirm() {
           if (null != closure_0) {
-            const result = type(5951).presentGameFriendRequestAcceptedToast();
-            const obj2 = type(5951);
+            const result = type(6014).presentGameFriendRequestAcceptedToast();
+            const obj2 = type(6014);
           } else {
-            const result1 = type(5951).presentFriendRequestAcceptedToast();
-            obj = type(5951);
+            const result1 = type(6014).presentFriendRequestAcceptedToast();
+            obj = type(6014);
           }
         },
       };
@@ -536,10 +536,10 @@ export default noop.memo(function UserRow(type) {
   }, items7);
   const callback2 = flag2.useCallback(() => {
     if (null == onLongPress) {
-      asyncRequireImpl(8410, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8476, dependencyMap.paths).then((result) =>
         result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8410, dependencyMap.paths);
+      const promise = asyncRequireImpl(8476, dependencyMap.paths);
     } else {
       tmp(user);
     }

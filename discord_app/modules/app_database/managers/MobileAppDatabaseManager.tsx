@@ -34,6 +34,7 @@ const items = [
       "GUILD_CREATE",
       "GUILD_DELETE",
       "GUILD_MEMBER_UPDATE",
+      "GUILD_ROLE_DELETE",
       "GUILD_ROLE_UPDATE",
       "GUILD_UPDATE",
       "POST_CONNECTION_OPEN",

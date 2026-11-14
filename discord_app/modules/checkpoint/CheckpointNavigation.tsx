@@ -120,8 +120,8 @@ const result = size.fileFinishedImporting("modules/checkpoint/CheckpointNavigati
 
 export const CheckpointFlow = { SHARED_DATA: "shared_data", NO_SHARED_DATA: "no_shared_data" };
 export const CheckpointRoute = obj;
-export function isCheckpointCustomizationRoute(route) {
-  return set.has(route);
+export function isCheckpointCustomizationRoute(stepName) {
+  return set.has(stepName);
 }
 export const CheckpointCharacterStage = obj2;
 export const CheckpointStatsScreen = obj3;

@@ -10,8 +10,8 @@ const result = size.fileFinishedImporting("modules/activities/native/useIsViewin
 export function useIsViewingActivity(channelId) {
   channelId = channelId.channelId;
   let tmp = useIsActivityFocusedDefault(channelId);
-  const isModalOpen = channelId(5429).useIsModalOpen(ChannelCallModalDefault);
-  const obj = channelId(5429);
+  const isModalOpen = channelId(5492).useIsModalOpen(ChannelCallModalDefault);
+  const obj = channelId(5492);
   items = [ChannelRTCStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(

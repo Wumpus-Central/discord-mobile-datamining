@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/native/FavoritesGuildActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
-import _modDef3629 from "../intl/FavoritesGuild.messages.js";
+import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
+import _modDef3679 from "../intl/FavoritesGuild.messages.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useFavoritesGuildHideActionDefault from "../hooks/useFavoritesGuildHideAction.tsx";
 import useFavoritesGuildResetActionDefault from "../hooks/useFavoritesGuildResetAction.tsx";
@@ -26,61 +26,61 @@ export default function FavoritesGuildActionSheet(onClose) {
   const obj3 = { title: null };
   const intl = onClose(1113).intl;
   obj3.title = intl.string(onClose(1113).t.wMWyci);
-  obj2.header = closure_4(onClose(7847).BottomSheetTitleHeader, obj3);
+  obj2.header = closure_4(onClose(7913).BottomSheetTitleHeader, obj3);
   const obj4 = { hasIcons: true, children: null };
   const obj5 = { label: null, icon: null, onPress: null };
   const intl2 = onClose(1113).intl;
-  obj5.label = intl2.string(_modDef3629.hklnjs);
+  obj5.label = intl2.string(_modDef3679.hklnjs);
   const obj = onClose(504);
-  obj5.icon = closure_4(onClose(7887).ActionSheetRow.Icon, { IconComponent: onClose(8006).ThreadIcon });
+  obj5.icon = closure_4(onClose(7953).ActionSheetRow.Icon, { IconComponent: onClose(8071).ThreadIcon });
   obj5.onPress = function onPress() {
     onClose();
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(18729, dependencyMap.paths),
+      asyncRequireImpl(18858, dependencyMap.paths),
       undefined,
       "FavoritesGuildCleanupModal",
     );
   };
-  obj4.children = closure_4(onClose(7887).ActionSheetRow, obj5);
-  const items1 = [closure_4(onClose(7887).ActionSheetRow.Group, obj4), ,];
+  obj4.children = closure_4(onClose(7953).ActionSheetRow, obj5);
+  const items1 = [closure_4(onClose(7953).ActionSheetRow.Group, obj4), ,];
   let tmp7Result = null;
   if (stateFromStores) {
     const obj7 = { hasIcons: true, children: null };
     const obj8 = { label: null, icon: null, onPress: null };
     const intl3 = tmp4(1113).intl;
     obj8.label = intl3.string(tmp4(1113).t["0dOFq+"]);
-    const obj9 = { IconComponent: tmp4(13382).ArrowsUpDownIcon };
-    obj8.icon = closure_4(tmp4(7887).ActionSheetRow.Icon, obj9);
+    const obj9 = { IconComponent: tmp4(12100).ArrowsUpDownIcon };
+    obj8.icon = closure_4(tmp4(7953).ActionSheetRow.Icon, obj9);
     obj8.onPress = function onPress() {
       onClose();
       openFavoritesGuildChannelSortModalDefault();
     };
-    obj7.children = closure_4(tmp4(7887).ActionSheetRow, obj8);
-    tmp7Result = closure_4(tmp4(7887).ActionSheetRow.Group, obj7);
+    obj7.children = closure_4(tmp4(7953).ActionSheetRow, obj8);
+    tmp7Result = closure_4(tmp4(7953).ActionSheetRow.Group, obj7);
   }
   items1[1] = tmp7Result;
   const obj10 = { label: tmp2.label, subLabel: tmp2.subLabel, icon: null, variant: "danger", onPress: null };
-  const obj6 = { IconComponent: onClose(8006).ThreadIcon };
-  obj10.icon = closure_4(onClose(7887).ActionSheetRow.Icon, { IconComponent: onClose(7567).EyeSlashIcon });
+  const obj6 = { IconComponent: onClose(8071).ThreadIcon };
+  obj10.icon = closure_4(onClose(7953).ActionSheetRow.Icon, { IconComponent: onClose(7633).EyeSlashIcon });
   obj10.onPress = function onPress() {
     onClose();
     closure_1.perform();
   };
-  const items2 = [closure_4(onClose(7887).ActionSheetRow, obj10)];
+  const items2 = [closure_4(onClose(7953).ActionSheetRow, obj10)];
   let tmp7Result2 = null;
   if (tmp3.isAvailable) {
     const obj13 = { label: null, subLabel: null, icon: null, variant: "danger", onPress: null };
     ({ label: obj12.label, subLabel: obj12.subLabel } = tmp3);
-    const obj25 = { IconComponent: tmp4(5977).TrashIcon };
-    obj13.icon = closure_4(tmp4(7887).ActionSheetRow.Icon, obj25);
+    const obj25 = { IconComponent: tmp4(6040).TrashIcon };
+    obj13.icon = closure_4(tmp4(7953).ActionSheetRow.Icon, obj25);
     obj13.onPress = function onPress() {
       onClose();
       closure_2.perform();
     };
-    tmp7Result2 = closure_4(tmp4(7887).ActionSheetRow, obj13);
+    tmp7Result2 = closure_4(tmp4(7953).ActionSheetRow, obj13);
   }
   items2[1] = tmp7Result2;
-  items1[2] = closure_5(onClose(7887).ActionSheetRow.Group, { hasIcons: true, children: items2 });
+  items1[2] = closure_5(onClose(7953).ActionSheetRow.Group, { hasIcons: true, children: items2 });
   obj2.children = items1;
-  return closure_5(onClose(7885).ActionSheet, obj2);
+  return closure_5(onClose(7951).ActionSheet, obj2);
 }

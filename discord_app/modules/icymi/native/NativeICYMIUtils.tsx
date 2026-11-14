@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/native/NativeICYMIUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import ICYMIInfoModalTypes from "info_modal/ICYMIInfoModalTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -10,7 +10,7 @@ export function pushICYMIInfoModal(arg0) {
   ({ extendedOnboarding, skipIntro } = arg0);
   const obj = ModalActionCreatorsDefault;
   obj.pushLazy(
-    asyncRequireImpl(19106, dependencyMap.paths),
+    asyncRequireImpl(19298, dependencyMap.paths),
     { extendedOnboarding, skipIntro },
     ICYMIInfoModalTypes.ICYMI_INFO_MODAL_KEY,
     { presentation: "fullScreenModal" },

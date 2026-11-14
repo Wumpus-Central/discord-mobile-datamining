@@ -3,7 +3,7 @@ import checkGameOrganizationJoinEligibilityDefault from "../checkGameOrganizatio
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let closure_4 = async function _openGameOrganizationJoinModal(arg0) {
+let closure_5 = async function _openGameOrganizationJoinModal(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -49,27 +49,29 @@ let closure_4 = async function _openGameOrganizationJoinModal(arg0) {
         if ("noop" === closure_129_1) {
           c4 = 3;
         } else if ("eligible" !== closure_129_1) {
-          closure_130_1(closure_130_2[2])(closure_129_0, closure_129_1);
+          closure_130_1(closure_130_2[3])(closure_129_0, closure_129_1);
         }
         const obj6 = { code: closure_129_0 };
-        closure_130_1(closure_130_2[3]).pushLazy(
-          closure_130_0(closure_130_2[5])(closure_130_2[4], closure_130_2.paths),
+        closure_130_1(closure_130_2[4]).pushLazy(
+          closure_130_0(closure_130_2[6])(closure_130_2[5], closure_130_2.paths),
           obj6,
+          closure_130_4,
         );
-        const obj = closure_130_1(closure_130_2[3]);
+        const obj = closure_130_1(closure_130_2[4]);
       }
-    } catch (tmp24) {
+    } catch (tmp25) {
       c4 = tmp;
-      throw tmp24;
+      throw tmp25;
     }
   }
 };
+let closure_4 = fn(12369).GAME_ORGANIZATION_JOIN_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/openGameOrganizationJoinModal.tsx");
 
 export default function openGameOrganizationJoinModal() {
   const self = this;
-  const apply = closure_4.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,6 +1,6 @@
 // discord_app/modules/hexagon_campaign/native/HexagonCampaignDaysLeftBadge.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4464 from "../HexagonCampaign.messages.js";
+import _modDef4516 from "../HexagonCampaign.messages.js";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import Badge from "../../../design/components/Badge/native/Badge.native.tsx";
 import useHexagonCampaignDaysLeft from "../useHexagonCampaignDaysLeft.tsx";
@@ -20,7 +20,7 @@ export default function HexagonCampaignDaysLeftBadge(variant) {
   const obj2 = { type: null, variant: null, icon: null };
   const obj3 = { text: null };
   const intl = util.intl;
-  obj3.text = intl.formatToPlainString(_modDef4464["noGK/D"], { days: hexagonCampaignDaysLeft });
+  obj3.text = intl.formatToPlainString(_modDef4516["noGK/D"], { days: hexagonCampaignDaysLeft });
   obj2.type = obj3;
   obj2.variant = str;
   obj2.icon = ClockIcon.ClockIcon;

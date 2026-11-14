@@ -1,5 +1,5 @@
 // discord_common/js/packages/i18n/markdownRules.tsx
-import t_mod from "../../../../_runtime/metro/02067__.js";
+import t_mod from "../../../../_runtime/metro/02070__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const link = t.defaultRules.link;

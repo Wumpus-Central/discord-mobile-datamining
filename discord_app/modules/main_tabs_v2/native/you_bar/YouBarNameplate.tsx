@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarNameplate.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import NameplateDefault from "../../../collectibles/nameplates/native/Nameplate.tsx";
@@ -9,10 +9,10 @@ import useQuestDockAnimatedBorderRadiusDefault from "../../../quests/native/Ques
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(17583).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(17701).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 let closure_6 = {
   code: "(function YouBarNameplateTsx1(){let[withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG]=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};})",
@@ -51,7 +51,7 @@ export default noop.memo(function YouBarNameplate(arg0) {
   YouBarNameplateTsx1.__closure = items2;
   YouBarNameplateTsx1.__workletHash = 1217151381395;
   YouBarNameplateTsx1.__initData = tmp6;
-  const animatedStyle = _mod1652.useAnimatedStyle(YouBarNameplateTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(YouBarNameplateTsx1);
   const rect = {
     position: "absolute",
     top: 0,
@@ -82,5 +82,5 @@ export default noop.memo(function YouBarNameplate(arg0) {
   }
   obj5.animate = str;
   obj4.children = jsx(NameplateDefault, { nameplate, isFocused: true, animate: null });
-  return jsx(_modDef1652.View, { style: null, pointerEvents: "none", children: null });
+  return jsx(_modDef1655.View, { style: null, pointerEvents: "none", children: null });
 });

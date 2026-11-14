@@ -11,7 +11,7 @@ import dismissible_content from "../../../../discord_common/js/packages/protos/d
 import shared from "../../../design/shared.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05830_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05893_LinearGradient.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import ReferralProgramUtils from "../referral_program/ReferralProgramUtils.tsx";
@@ -21,7 +21,7 @@ import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.ts
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import MarketingSurfaceType from "../../../../discord_common/js/shared/shared-constants/MarketingSurfaceType.tsx";
 import usePromotionMarketingSurface from "../hooks/usePromotionMarketingSurface.tsx";
-import _modDef17388 from "../../../../_runtime/metro/17388__.js";
+import _modDef17511 from "../../../../_runtime/metro/17511__.js";
 import PremiumTabBadgeCopy from "../promotions/PremiumTabBadgeCopy.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -57,7 +57,7 @@ function OfferBadge(componentId) {
   useTrackImpressionDefault(obj, { disableTrack: null == componentId });
   if (acked) {
     const obj3 = { style: tmp.acked, children: null };
-    const obj4 = { source: _modDef17388, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
+    const obj4 = { source: _modDef17511, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
     items = [React5(native.Icon, obj4)];
     const obj5 = { variant: "body-xs/semibold", color: "interactive-text-default", style: null, children: null };
     const items1 = [,];
@@ -74,11 +74,11 @@ function OfferBadge(componentId) {
   return tmp9;
 }
 const View = fn(17).View;
-let closure_6 = fn(1387).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-const Gradients = fn(9367).Gradients;
+let closure_6 = fn(1390).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+const Gradients = fn(9435).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   tag: { paddingVertical: 4, paddingHorizontal: 8, borderRadius: nativeDefault.radii.round },
   badge: null,
@@ -190,14 +190,14 @@ export default function PremiumTabBadge() {
       const tmp12Result = _slicedToArray(tmp16(items2, { bypassAutoDismiss: true }), 2);
       const isEligibleSenderForReferralProgram =
         useIsEligibleSenderForReferralProgram.useIsEligibleSenderForReferralProgram();
-      const tmp2Result12 = useIsEligibleSenderForReferralProgram;
+      const tmp2Result13 = useIsEligibleSenderForReferralProgram;
       const isReferralProgramEntrypointBadgeAcknowledged =
         ReferralProgramUtils.useIsReferralProgramEntrypointBadgeAcknowledged();
-      const tmp2Result13 = ReferralProgramUtils;
+      const tmp2Result14 = ReferralProgramUtils;
       const promotionMarketingSurface = usePromotionMarketingSurface.usePromotionMarketingSurface(
         MarketingSurfaceType.MarketingSurfaceType.PREMIUM_TAB,
       );
-      const tmp2Result15 = useSelectedDismissibleContent;
+      const tmp2Result16 = useSelectedDismissibleContent;
       let prop = null;
       if (null != promotionMarketingSurface) {
         prop = dismissible_content.DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
@@ -210,32 +210,36 @@ export default function PremiumTabBadge() {
         str = "";
       }
       const tmp12Result2 = _slicedToArray(
-        tmp2Result15.useSelectedSnowflakeBoundDismissibleContent(prop, str, undefined, true),
+        tmp2Result16.useSelectedSnowflakeBoundDismissibleContent(prop, str, undefined, true),
         2,
       );
       let premiumTabBadgeCopy = null;
       if (null != promotionMarketingSurface) {
         premiumTabBadgeCopy = PremiumTabBadgeCopy.getPremiumTabBadgeCopy(promotionMarketingSurface);
-        const tmp2Result16 = PremiumTabBadgeCopy;
+        const tmp2Result17 = PremiumTabBadgeCopy;
       }
       if (null != promotionMarketingSurface) {
         if (null != premiumTabBadgeCopy) {
-          const obj3 = {
-            acked: null,
-            badgeCopy: null,
-            ackedBadgeCopy: null,
-            componentId: null,
-            componentType: null,
-            promotionId: null,
-          };
           ({ id, promotionId, componentType } = promotionMarketingSurface);
-          obj3.acked =
+          const tmp56 =
             tmp12Result2[0] !== dismissible_content.DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
-          ({ badgeCopy: obj25.badgeCopy, acknowledgedBadgeCopy: obj25.ackedBadgeCopy } = premiumTabBadgeCopy);
-          obj3.componentId = id;
-          obj3.componentType = componentType;
-          obj3.promotionId = promotionId;
-          return React5(OfferBadge, obj3);
+          let tmp57 = null;
+          if (tmp2Result18.hasVisiblePremiumTabBadgeCopy(premiumTabBadgeCopy, tmp56)) {
+            const obj3 = {
+              acked: tmp56,
+              badgeCopy: null,
+              ackedBadgeCopy: null,
+              componentId: null,
+              componentType: null,
+              promotionId: null,
+            };
+            ({ badgeCopy: obj26.badgeCopy, acknowledgedBadgeCopy: obj26.ackedBadgeCopy } = premiumTabBadgeCopy);
+            obj3.componentId = id;
+            obj3.componentType = componentType;
+            obj3.promotionId = promotionId;
+            tmp57 = React5(OfferBadge, obj3);
+          }
+          return tmp57;
         }
       }
       if (tmp14 === dismissible_content.DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE) {
@@ -267,7 +271,7 @@ export default function PremiumTabBadge() {
         const items3 = [tmp.uppercase];
         const tmp52 = LinearGradientDefault;
         let text;
-        if (tmp2Result17.isAndroid()) {
+        if (tmp2Result19.isAndroid()) {
           text = tmp.text;
         }
         const obj8 = { variant: "body-xs/semibold", color: "text-overlay-light", style: null, children: null };
@@ -278,7 +282,7 @@ export default function PremiumTabBadge() {
         tmp = React5(Text_Text.Text, obj8);
         obj7.children = tmp;
         let tmp47Result = React5(tmp52, obj7);
-        tmp2Result17 = PlatformUtils;
+        tmp2Result19 = PlatformUtils;
       } else if (null != premiumTrialOffer) {
         let hasAcknowledged;
         if (premiumTrialOffer != null) {
@@ -297,7 +301,7 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = tmp);
           obj10.style = items4;
           const obj11 = {
-            source: _modDef17388,
+            source: _modDef17511,
             size: native.Icon.Sizes.EXTRA_SMALL,
             color: tmp.icon.color,
             style: tmp.icon,
@@ -342,7 +346,7 @@ export default function PremiumTabBadge() {
           const items8 = [tmp.uppercase];
           const tmp34 = LinearGradientDefault;
           let text1;
-          if (tmp2Result18.isAndroid()) {
+          if (tmp2Result20.isAndroid()) {
             text1 = tmp.text;
           }
           const obj16 = { variant: "body-xs/semibold", color: "text-overlay-light", style: null, children: null };
@@ -351,10 +355,10 @@ export default function PremiumTabBadge() {
           obj16.children = stringResult;
           obj15.children = React5(Text_Text.Text, obj16);
           tmp47Result = React5(tmp34, obj15);
-          tmp2Result18 = PlatformUtils;
+          tmp2Result20 = PlatformUtils;
         }
       }
-      const tmp2Result14 = usePromotionMarketingSurface;
+      const tmp2Result15 = usePromotionMarketingSurface;
     }
     items2 = [];
     const tmp13 = _slicedToArray(tmp11(items1, { bypassAutoDismiss: true }), 2);

@@ -1,5 +1,5 @@
 // discord_app/modules/launchpad/native/useLaunchPadState.native.tsx
-import _mod1705 from "../../../../_runtime/metro/01705__.js";
+import _mod1708 from "../../../../_runtime/metro/01708__.js";
 import updateSharedValueIfChangedDefault from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import useSafeAreaInsetsSharedValue from "../../safe_area/useSafeAreaInsetsSharedValue.native.tsx";
 import useWindowDimensionsSharedValue from "../../screen/useWindowDimensionsSharedValue.native.tsx";
@@ -7,7 +7,7 @@ import LaunchPadPullTabCache2 from "LaunchPadPullTabCache.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const LaunchPadConstants = fn(12307);
+const LaunchPadConstants = fn(12402);
 ({ LAUNCH_PAD_PULL_TAB_MAX_POSITION: closure_4, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: hasOwnProperty } =
   LaunchPadConstants);
 let closure_6 = {
@@ -23,7 +23,7 @@ let closure_6 = {
   startShown: false,
 };
 let obj = { position: null, scale: 1, offset: 0, minimized: false };
-const LaunchPadPullTabCache = fn(19650);
+const LaunchPadPullTabCache = fn(19860);
 obj.position = LaunchPadPullTabCache.getLaunchPadPullTabPositionCached();
 let closure_8 = {
   code: "(function setLaunchPadShown_useLaunchPadStateNativeTsx1(shown){let[launchPadShown]=this.__closure;launchPadShown.set(shown);})",
@@ -94,7 +94,7 @@ export default function useLaunchPadState() {
         useSafeAreaInsetsSharedValue.getSafeAreaInsetsWorklet,
         hasOwnProperty,
         updateSharedValueIfChangedDefault,
-        _mod1705.scheduleOnRN,
+        _mod1708.scheduleOnRN,
         LaunchPadPullTabCache2.persistLaunchPadPullTabPosition,
       ];
       c2 = undefined;

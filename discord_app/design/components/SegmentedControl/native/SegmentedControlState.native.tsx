@@ -30,23 +30,23 @@ export function useSegmentedControlState(pageWidth) {
   let callback1;
   const enabled = onPageChange.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext)
     .reducedMotion.enabled;
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue([]);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue([]);
   let obj = onPageChange;
-  let obj2 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(-1);
-  let obj3 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj4 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue3 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj5 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue4 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num);
-  const obj6 = require("../../../../../_runtime/metro/01652__.js");
+  let obj2 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(-1);
+  let obj3 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj4 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue3 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const obj5 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue4 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
+  const obj6 = require("../../../../../_runtime/metro/01655__.js");
   const items1 = [num, num];
-  const sharedValue5 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(items1);
-  const obj7 = require("../../../../../_runtime/metro/01652__.js");
-  const animatedRef = require("../../../../../_runtime/metro/01652__.js").useAnimatedRef();
-  const obj8 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue6 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(-1);
+  const sharedValue5 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(items1);
+  const obj7 = require("../../../../../_runtime/metro/01655__.js");
+  const animatedRef = require("../../../../../_runtime/metro/01655__.js").useAnimatedRef();
+  const obj8 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue6 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(-1);
   const onPageChangeRef = onPageChange.useRef(onPageChange);
   const items2 = [onPageChange];
   const layoutEffect = onPageChange.useLayoutEffect(() => {

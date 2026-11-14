@@ -6,7 +6,7 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import _modDef9224 from "../../../../_runtime/metro/09224__.js";
+import _modDef9291 from "../../../../_runtime/metro/09291__.js";
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel.tsx";
 import GroupDMNitroCapExperimentDefault from "../GroupDMNitroCapExperiment.tsx";
 import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction.tsx";
@@ -37,9 +37,9 @@ function FloatingBanner(children) {
   if (visible) {
     num = 0.4;
   }
-  sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(num);
-  let obj3 = require("../../../../_runtime/metro/01652__.js");
-  sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(PX_16);
+  sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(num);
+  let obj3 = require("../../../../_runtime/metro/01655__.js");
+  sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(PX_16);
   const bound = Math.max(125, tmp8 + PX_40);
   bound1 = Math.max(tmp2(tmp3[6]).space.PX_12, tmp8 - PX_8 + PX_24);
   items = [bound1, onListInsetChange, visible];
@@ -93,7 +93,7 @@ function FloatingBanner(children) {
     const result3 = sharedValue1.set(spring_spring.withSpring(num3, closure_16));
     const tmp8Result = spring_spring;
   }, items2);
-  const tmp5Result = require("../../../../_runtime/metro/01652__.js");
+  const tmp5Result = require("../../../../_runtime/metro/01655__.js");
   const items3 = [closure_18, sharedValue, sharedValue1];
   _require = undefined;
   importDefault = undefined;
@@ -112,8 +112,8 @@ function FloatingBanner(children) {
   GroupDMNitroUpsellBannerTsx1.__closure = items4;
   GroupDMNitroUpsellBannerTsx1.__workletHash = 13790129208113;
   GroupDMNitroUpsellBannerTsx1.__initData = tmp17;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(GroupDMNitroUpsellBannerTsx1);
-  const tmp5Result3 = require("../../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(GroupDMNitroUpsellBannerTsx1);
+  const tmp5Result3 = require("../../../../_runtime/metro/01655__.js");
   const items5 = [closure_19, tmp4, bottom];
   _require = undefined;
   importDefault = undefined;
@@ -128,7 +128,7 @@ function FloatingBanner(children) {
   GroupDMNitroUpsellBannerTsx2.__closure = items6;
   GroupDMNitroUpsellBannerTsx2.__workletHash = 11189258336600;
   GroupDMNitroUpsellBannerTsx2.__initData = tmp21;
-  const animatedStyle1 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     GroupDMNitroUpsellBannerTsx2,
   );
   const obj4 = {
@@ -168,12 +168,12 @@ function FloatingBanner(children) {
   }
   const items9 = [tmp25Result, closure_9(bound1, { onLayout: callback, children: children.children })];
   obj5.children = items9;
-  obj4.children = closure_10(require("../../../../_runtime/metro/01652__.js").View, obj5);
-  return closure_9(require("../../../../_runtime/metro/01652__.js").View, obj4);
+  obj4.children = closure_10(require("../../../../_runtime/metro/01655__.js").View, obj5);
+  return closure_9(require("../../../../_runtime/metro/01655__.js").View, obj4);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const number = fn(12447).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(12543).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
@@ -182,7 +182,7 @@ const PX_24 = nativeDefault.space.PX_24;
 const PX_8 = nativeDefault.space.PX_8;
 const locations = [0, 0.225, 1];
 let closure_16 = { mass: 0.8, stiffness: 400, damping: 32, overshootClamping: true };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   floatingOverlay: { position: "absolute", left: 0, right: 0, bottom: 0 },
   floatingContent: { justifyContent: "flex-end" },
@@ -245,7 +245,7 @@ export default function GroupDMNitroUpsellBanner(wrapperStyle) {
     tmp15 = !stateFromStores;
   }
   obj7.shiny = tmp15;
-  obj7.icon = _modDef9224;
+  obj7.icon = _modDef9291;
   obj7.onPress = tmp7Result;
   obj6.trailing = React6(components_Button_Button.Button, obj7);
   const obj8 = { variant: "body-md/semibold", color: "mobile-text-heading-primary", children: null };

@@ -1,7 +1,7 @@
 // discord_app/modules/tabs/ChannelTabRoutes.tsx
 import Constants from "../../Constants.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef4079 from "../conjure/intl/ConjureUntranslated.messages.js";
+import _modDef4131 from "../conjure/intl/ConjureUntranslated.messages.js";
 import ChannelConstants from "../channel/ChannelConstants.tsx";
 import matchPathCompat from "../routing/matchPathCompat.tsx";
 import RouteUtils from "../routing/RouteUtils.tsx";
@@ -49,7 +49,7 @@ export function getRouteTabForLocation(location) {
       const _HermesInternal = HermesInternal;
       obj7.routePath = "" + pathname + search + str;
       const intl = util.intl;
-      obj7.routeLabel = intl.string(_modDef4079.uk6jhJ);
+      obj7.routeLabel = intl.string(_modDef4131.uk6jhJ);
       tmp5 = obj7;
     }
     obj = matchPathCompat;

@@ -18,6 +18,7 @@ export default function useGameCoverLayout() {
   return {
     ref,
     onLayout,
+    width: num,
     isMeasured: num > 0,
     columns: bound,
     coverWidth: (num - UserProfileGameWidgetConstants.GAME_COVER_GRID_GAP * (bound - 1)) / bound,

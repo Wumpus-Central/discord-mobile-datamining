@@ -1,8 +1,8 @@
 // discord_app/design/components/Modal/native/ModalFloatingAction.native.tsx
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
+import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles({
   floating: { position: "absolute", bottom: 0, width: "100%", paddingHorizontal: 16 },
   spacer: { height: 96 },
@@ -36,9 +36,9 @@ export function ModalFloatingAction(isVisible) {
   if (isVisible) {
     num = 1;
   }
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
   items = [isVisible, sharedValue];
-  let obj = require("../../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../../_runtime/metro/01655__.js");
   const effect = noop.useEffect(() => {
     let num = 0;
     if (c0) {
@@ -49,7 +49,7 @@ export function ModalFloatingAction(isVisible) {
   const tmp7 = useSafeAreaInsetsDefault();
   let items1 = [
     closure_9,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     sharedValue,
     floatingBackgroundColor,
     noop.useContext(require("AccessibilityPreferencesContext").AccessibilityPreferencesContext).reducedMotion.enabled,
@@ -88,7 +88,7 @@ export function ModalFloatingAction(isVisible) {
   ModalFloatingActionNativeTsx1.__closure = items2;
   ModalFloatingActionNativeTsx1.__workletHash = 5863322493848;
   ModalFloatingActionNativeTsx1.__initData = tmp9;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     ModalFloatingActionNativeTsx1,
   );
   let obj2 = { style: null, pointerEvents: null, children: null };
@@ -100,7 +100,7 @@ export function ModalFloatingAction(isVisible) {
   }
   obj2.pointerEvents = str;
   const obj3 = { colors: null, locations: null, style: null };
-  const tmp3Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp3Result = require("../../../../../_runtime/metro/01655__.js");
   const tmp6Result = LinearGradientDefault;
   const obj5 = _modDef671(floatingBackgroundColor);
   const items4 = [_modDef671(floatingBackgroundColor).alpha(0).hex(), floatingBackgroundColor];
@@ -113,7 +113,7 @@ export function ModalFloatingAction(isVisible) {
   obj4.variant = "primary";
   items5[1] = closure_6(require("ModalActionButton").ModalActionButton, obj4);
   obj2.children = items5;
-  return closure_7(_modDef1652.View, obj2);
+  return closure_7(_modDef1655.View, obj2);
 }
 export function ModalFloatingActionSpacer() {
   return timestampProducer(hasOwnProperty, { style: closure_8().spacer });

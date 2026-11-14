@@ -2,19 +2,19 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import InterestScrollHeader from "InterestScrollHeader.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { backing: null, shadow: null, bar: null, barAndroid: null, fill: null };
 const rect = {
   position: "absolute",
@@ -72,7 +72,7 @@ export default function InterestSearchShadow(arg0) {
   InterestSearchShadowTsx1.__closure = items1;
   InterestSearchShadowTsx1.__workletHash = 15648602916327;
   InterestSearchShadowTsx1.__initData = tmp6;
-  const animatedStyle = _mod1652.useAnimatedStyle(InterestSearchShadowTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(InterestSearchShadowTsx1);
   const items2 = [React4(View, { pointerEvents: "none", style: tmp.backing }), ,];
   const items3 = [tmp.bar, ,];
   const obj3 = { pointerEvents: "none", style: tmp.backing };
@@ -80,7 +80,7 @@ export default function InterestSearchShadow(arg0) {
   const obj4 = { children: null };
   items3[1] = PlatformUtils.isAndroid() && tmp.barAndroid;
   items3[2] = animatedStyle;
-  items2[1] = React4(_modDef1652.View, { pointerEvents: "none", style: items3 });
+  items2[1] = React4(_modDef1655.View, { pointerEvents: "none", style: items3 });
   const obj5 = { pointerEvents: "none", style: null, children: null };
   const items4 = [tmp.shadow, animatedStyle];
   obj5.style = items4;
@@ -92,7 +92,7 @@ export default function InterestSearchShadow(arg0) {
   items5[1] = _modDef671(token).alpha(0).hex();
   obj6.colors = items5;
   obj5.children = React4(tmp4Result, obj6);
-  items2[2] = React4(_modDef1652.View, obj5);
+  items2[2] = React4(_modDef1655.View, obj5);
   obj4.children = items2;
   return timestampProducer(hasOwnProperty, obj4);
 }

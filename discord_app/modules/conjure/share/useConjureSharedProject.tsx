@@ -9,7 +9,7 @@ import ConjureSharedProjectStore from "ConjureSharedProjectStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const canRemixProject = fn(6954).canRemixProject;
+const canRemixProject = fn(7017).canRemixProject;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/share/useConjureSharedProject.tsx");
 

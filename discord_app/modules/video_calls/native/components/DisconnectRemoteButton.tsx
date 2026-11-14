@@ -19,7 +19,7 @@ export function DisconnectRemoteButton(channel) {
   }));
   const remoteSessionId = stateFromStoresObject.remoteSessionId;
   let obj2 = {
-    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7366 : 12899),
+    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7430 : 12995),
     accessibilityLabel: null,
     isSmallSize: null,
     onPress: null,
@@ -36,7 +36,7 @@ export function DisconnectRemoteButton(channel) {
     }
   };
   return jsx(CallBarActionAll.PrimaryActionButton, {
-    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7366 : 12899),
+    source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 7430 : 12995),
     accessibilityLabel: null,
     isSmallSize: null,
     onPress: null,

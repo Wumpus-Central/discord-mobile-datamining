@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/components/StageChannelCallNavigator.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import MessageManagerDefault from "../../../messages/MessageManager.tsx";
@@ -14,7 +14,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function ModeratorViewOverlay(channel) {
@@ -43,7 +43,7 @@ function ModeratorViewOverlay(channel) {
   StageChannelCallNavigatorTsx1.__workletHash = 5590822981710;
   StageChannelCallNavigatorTsx1.__initData = tmp7;
   const items2 = [first];
-  const animatedStyle = _mod1652.useAnimatedStyle(StageChannelCallNavigatorTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(StageChannelCallNavigatorTsx1);
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
       if (!closure_0) {
@@ -64,7 +64,7 @@ function ModeratorViewOverlay(channel) {
     obj4.style = items3;
     const obj6 = { channel, onSkip: tmp13 };
     obj4.children = React5(ModeratorStartStageViewDefault, obj6);
-    tmp14 = React5(_modDef1652.View, obj4);
+    tmp14 = React5(_modDef1655.View, obj4);
   }
   return tmp14;
 }
@@ -90,7 +90,7 @@ function JoinStageOverlay(channel) {
   StageChannelCallNavigatorTsx2.__closure = items1;
   StageChannelCallNavigatorTsx2.__workletHash = 5763143772621;
   StageChannelCallNavigatorTsx2.__initData = tmp3;
-  const animatedStyle = _mod1652.useAnimatedStyle(StageChannelCallNavigatorTsx2);
+  const animatedStyle = _mod1655.useAnimatedStyle(StageChannelCallNavigatorTsx2);
   const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
       closure_0(true);
@@ -105,7 +105,7 @@ function JoinStageOverlay(channel) {
   items2[2] = animatedStyle;
   obj3.style = items2;
   obj3.children = React5(JoinStageViewDefault, { channel: channel.channel });
-  return React5(_modDef1652.View, obj3);
+  return React5(_modDef1655.View, obj3);
 }
 function StagePromptWrapper(channel) {
   return React5(ThemeContextProvider_RootThemeContextProvider.DisableCustomTheme, {
@@ -132,7 +132,7 @@ let closure_13 = {
 let closure_15 = {
   code: "(function StageChannelCallNavigatorTsx2(){let[withSpring,showOverlay,viewAnimationConfig]=this.__closure;return{opacity:withSpring(showOverlay?1:0,viewAnimationConfig)};})",
 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { startStagePrompt: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_17 = createStyles.createStyles(obj2);
 const size = fn(2);

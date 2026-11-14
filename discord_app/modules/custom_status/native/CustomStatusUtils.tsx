@@ -1,5 +1,5 @@
 // discord_app/modules/custom_status/native/CustomStatusUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/custom_status/native/CustomSt
 export function openEditCustomStatusModal(arg0) {
   ({ analyticsLocations, prompt: _prompt } = arg0);
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(9469, dependencyMap.paths),
+    asyncRequireImpl(9536, dependencyMap.paths),
     { analyticsLocations, prompt: _prompt },
     undefined,
     { presentation: "modal" },

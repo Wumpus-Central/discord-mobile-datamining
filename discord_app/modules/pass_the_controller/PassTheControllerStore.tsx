@@ -6,14 +6,21 @@ import BaseConnectionEvent from "../../../discord_common/js/packages/media-engin
 import StreamKeyUtils from "../go_live/utils/StreamKeyUtils.tsx";
 import InputHostDefault from "InputHost.tsx";
 import InputGuestDefault from "InputGuest.tsx";
+import RunningGameStore from "../game_detection/RunningGameStore.native.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import StreamRTCConnectionStore from "../../stores/StreamRTCConnectionStore.tsx";
 
 require = fn;
-function handleControllerHolderChange(arg0) {
-  if (arg0 !== c13) {
-    c13 = arg0;
+function handleControllerGrab(arg0) {
+  if (arg0 !== c15) {
+    c15 = arg0;
+    passTheControllerStore.emitChange();
+  }
+}
+function handleControllerDrop() {
+  if (null != c15) {
+    c15 = null;
     passTheControllerStore.emitChange();
   }
 }
@@ -35,7 +42,7 @@ function stopGuest(streamKey) {
     }
     let tmp10 = null != _null;
     if (tmp10) {
-      tmp10 = null == c11;
+      tmp10 = null == c13;
     }
     if (tmp10) {
       tmp10 = null == _null3;
@@ -49,30 +56,27 @@ function stopGuest(streamKey) {
   }
   return flag;
 }
+let closure_7 = fn(16109).isPassTheControllerBlocked;
 const Constants = fn(1072);
-({
-  ApplicationStreamDeleteReasons: closure_6,
-  RTCConnectionStates: metroImportDefault,
-  VoiceFlags: closure_8,
-} = Constants);
-const StreamTypes = fn(6740).StreamTypes;
-let c10 = null;
-let c11 = null;
+({ ApplicationStreamDeleteReasons: closure_8, RTCConnectionStates: closure_9, VoiceFlags: closure_10 } = Constants);
+const StreamTypes = fn(6803).StreamTypes;
 let c12 = null;
 let c13 = null;
+let c14 = null;
+let c15 = null;
 const set = new Set();
 const Store = initializeDefault.Store;
 class PassTheControllerStore extends Store {}
 const prototype = PassTheControllerStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(AuthenticationStore, RTCConnectionStore, StreamRTCConnectionStore);
+  this.waitFor(AuthenticationStore, RTCConnectionStore, RunningGameStore, StreamRTCConnectionStore);
 };
-prototype["isSelfPassingController"] = function isSelfPassingController(tmp2Result) {
+prototype["isSelfPassingController"] = function isSelfPassingController(encodeStreamKeyResult) {
   let streamKey;
   if (_null2 != null) {
     streamKey = _null2.streamKey;
   }
-  return streamKey === tmp2Result;
+  return streamKey === encodeStreamKeyResult;
 };
 prototype["isStreamPassingController"] = function isStreamPassingController(arg0) {
   return set.has(arg0);
@@ -95,14 +99,14 @@ prototype["getInputGuest"] = function getInputGuest(arg0) {
   }
   return inputGuest;
 };
-prototype["getControllerHolderId"] = function getControllerHolderId(arg0) {
+prototype["getControllerHolderId"] = function getControllerHolderId(encodeStreamKeyResult) {
   let streamKey;
   if (_null2 != null) {
     streamKey = _null2.streamKey;
   }
   let tmp2 = null;
-  if (streamKey === arg0) {
-    tmp2 = c13;
+  if (streamKey === encodeStreamKeyResult) {
+    tmp2 = c15;
   }
   return tmp2;
 };
@@ -116,13 +120,13 @@ prototype["getGuestStreamKey"] = function getGuestStreamKey() {
   }
   return streamKey;
 };
-prototype["getGuestHostId"] = function getGuestHostId(arg0) {
+prototype["getGuestHostId"] = function getGuestHostId(guestStreamKey) {
   let streamKey;
   if (_null3 != null) {
     streamKey = _null3.streamKey;
   }
   let host = null;
-  if (streamKey === arg0) {
+  if (streamKey === guestStreamKey) {
     host = _null3.inputGuest.host;
   }
   return host;
@@ -134,7 +138,7 @@ PassTheControllerStore.displayName = "PassTheControllerStore";
 const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     set.clear();
-    c13 = null;
+    c15 = null;
   },
   PASS_THE_CONTROLLER_UPDATE: function handlePassTheController(isHost) {
     ({ streamKey, host, active } = isHost);
@@ -152,68 +156,71 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
           const streamPid = StreamRTCConnectionStore.getStreamPid(streamKey);
           flag5 = false;
           if (null != streamPid) {
-            if (null != inputConnection1) {
-              let tmp54 = inputConnection1;
-            } else {
-              connectResult = RTCConnectionStore;
-              const rTCConnection = RTCConnectionStore.getRTCConnection();
-              tmp54 = null;
-              if (null != rTCConnection) {
-                const inputConnection = new inputConnection1(15989).InputConnection(
-                  rTCConnection,
-                  AuthenticationStore.getId(),
-                );
-                closure_129_0 = inputConnection;
-                inputConnection.on(inputConnection1(15990).InputEvent.Disconnect, () => {
-                  if (c10 === inputConnection1) {
-                    if (null != _null) {
-                      obj2 = {
-                        type: "PASS_THE_CONTROLLER_UPDATE",
-                        streamKey: _null.streamKey,
-                        isHost: true,
-                        host: AuthenticationStore.getId(),
-                        active: false,
-                      };
-                      DispatcherDefault.dispatch(obj2);
+            flag5 = false;
+            if (!closure_7(streamKey)) {
+              if (null != inputConnection1) {
+                let tmp55 = inputConnection1;
+              } else {
+                connectResult = RTCConnectionStore;
+                const rTCConnection = RTCConnectionStore.getRTCConnection();
+                tmp55 = null;
+                if (null != rTCConnection) {
+                  const inputConnection = new inputConnection1(16110).InputConnection(
+                    rTCConnection,
+                    AuthenticationStore.getId(),
+                  );
+                  closure_129_0 = inputConnection;
+                  inputConnection.on(inputConnection1(16111).InputEvent.Disconnect, () => {
+                    if (c12 === inputConnection1) {
+                      if (null != _null) {
+                        obj2 = {
+                          type: "PASS_THE_CONTROLLER_UPDATE",
+                          streamKey: _null.streamKey,
+                          isHost: true,
+                          host: AuthenticationStore.getId(),
+                          active: false,
+                        };
+                        DispatcherDefault.dispatch(obj2);
+                      }
+                      if (null != obj2) {
+                        const obj4 = {
+                          type: "PASS_THE_CONTROLLER_UPDATE",
+                          streamKey: obj2.streamKey,
+                          isHost: false,
+                          host: obj2.inputGuest.host,
+                          active: false,
+                        };
+                        DispatcherDefault.dispatch(obj4);
+                      }
                     }
-                    if (null != obj2) {
-                      const obj4 = {
-                        type: "PASS_THE_CONTROLLER_UPDATE",
-                        streamKey: obj2.streamKey,
-                        isHost: false,
-                        host: obj2.inputGuest.host,
-                        active: false,
-                      };
-                      DispatcherDefault.dispatch(obj4);
-                    }
-                  }
-                });
-                connectResult = inputConnection.connect();
-                inputConnection1 = inputConnection;
-                tmp54 = inputConnection;
+                  });
+                  connectResult = inputConnection.connect();
+                  inputConnection1 = inputConnection;
+                  tmp55 = inputConnection;
+                }
               }
+              let flag7 = null != tmp55;
+              if (flag7) {
+                if (_null2 != null) {
+                  const inputHost2 = _null2.inputHost;
+                  inputHost2.shutdown();
+                }
+                c15 = null;
+                let obj = { streamKey, inputHost: null };
+                const tmp59 = InputHostDefault;
+                let guildId = inputConnection1(6808).decodeStreamKey(streamKey).guildId;
+                if (guildId == null) {
+                  guildId = null;
+                }
+                const tmp592 = new tmp59(tmp55, streamPid, guildId, handleControllerGrab, handleControllerDrop);
+                connectResult = tmp592;
+                obj.inputHost = tmp592;
+                _null2 = obj;
+                flag7 = true;
+                const obj7 = inputConnection1(6808);
+              }
+              flag5 = flag7;
             }
-            let flag7 = null != tmp54;
-            if (flag7) {
-              if (_null2 != null) {
-                const inputHost2 = _null2.inputHost;
-                inputHost2.shutdown();
-              }
-              c13 = null;
-              let obj = { streamKey, inputHost: null };
-              const tmp58 = InputHostDefault;
-              streamKey = inputConnection1(6745).decodeStreamKey(streamKey).guildId;
-              if (streamKey == null) {
-                streamKey = null;
-              }
-              const tmp582 = new tmp58(tmp54, streamPid, streamKey, handleControllerHolderChange);
-              connectResult = tmp582;
-              obj.inputHost = tmp582;
-              _null2 = obj;
-              flag7 = true;
-              const obj7 = inputConnection1(6745);
-            }
-            flag5 = flag7;
           }
         }
         let flag6 = flag5;
@@ -227,7 +234,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
           const inputHost = _null2.inputHost;
           inputHost.shutdown();
           _null2 = null;
-          c13 = null;
+          c15 = null;
           let tmp39 = null != inputConnection1;
           if (tmp39) {
             tmp39 = null == _null2;
@@ -257,12 +264,12 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
             const rTCConnection1 = RTCConnectionStore.getRTCConnection();
             tmp14 = null;
             if (null != rTCConnection1) {
-              inputConnection1 = new inputConnection1(15989).InputConnection(
+              inputConnection1 = new inputConnection1(16110).InputConnection(
                 rTCConnection1,
                 AuthenticationStore.getId(),
               );
-              inputConnection1.on(inputConnection1(15990).InputEvent.Disconnect, () => {
-                if (c10 === inputConnection1) {
+              inputConnection1.on(inputConnection1(16111).InputEvent.Disconnect, () => {
+                if (c12 === inputConnection1) {
                   if (null != _null) {
                     obj2 = {
                       type: "PASS_THE_CONTROLLER_UPDATE",
@@ -324,7 +331,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
       streamKey = _null2.streamKey;
     }
     if (streamKey === streamKey.streamKey) {
-      if (null != c13) {
+      if (null != c15) {
         const inputHost = _null2.inputHost;
         inputHost.takeBackController();
       }
@@ -357,7 +364,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
       const inputHost = _null2.inputHost;
       inputHost.shutdown();
       _null2 = null;
-      c13 = null;
+      c15 = null;
       let tmp7 = null != _null;
       if (tmp7) {
         tmp7 = null == _null2;
@@ -403,13 +410,13 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
         const inputHost = _null2.inputHost;
         inputHost.shutdown();
         _null2 = null;
-        c13 = null;
+        c15 = null;
         let tmp10 = null != _null;
         if (tmp10) {
           tmp10 = null == _null2;
         }
         if (tmp10) {
-          tmp10 = null == c12;
+          tmp10 = null == c14;
         }
         flag = true;
         if (tmp10) {
@@ -433,13 +440,13 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
       const inputHost = _null2.inputHost;
       inputHost.shutdown();
       _null2 = null;
-      c13 = null;
+      c15 = null;
       let tmp5 = null != _null;
       if (tmp5) {
         tmp5 = null == _null2;
       }
       if (tmp5) {
-        tmp5 = null == c12;
+        tmp5 = null == c14;
       }
       flag = true;
       if (tmp5) {
@@ -482,7 +489,7 @@ const passTheControllerStore = new PassTheControllerStore(DispatcherDefault, {
     if (tmp3) {
       let tmp6 = null != _null2;
       if (tmp6) {
-        tmp6 = userId === c13;
+        tmp6 = userId === c15;
       }
       if (tmp6) {
         const inputHost = _null2.inputHost;

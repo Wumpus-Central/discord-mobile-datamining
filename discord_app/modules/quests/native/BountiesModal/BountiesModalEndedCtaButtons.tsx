@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalEndedCtaButtons.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
@@ -54,7 +54,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
   BountiesModalEndedCtaButtonsTsx1.__closure = items1;
   BountiesModalEndedCtaButtonsTsx1.__workletHash = 17030874897727;
   BountiesModalEndedCtaButtonsTsx1.__initData = tmp4;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     BountiesModalEndedCtaButtonsTsx1,
   );
   require("BountyCtaHelpers");
@@ -82,7 +82,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
         });
       },
     };
-    const items3 = [closure_3(tmp2(5873).Button, obj4)];
+    const items3 = [closure_3(tmp2(5936).Button, obj4)];
     let tmp13Result = null;
     if (showCloseButton) {
       const obj5 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
@@ -90,11 +90,11 @@ export default function BountiesModalEndedCtaButtons(bounty) {
       obj5.text = intl.string(tmp2(1113).t.cpT0Cq);
       obj5.disabled = flag;
       obj5.onPress = bounty.onClose;
-      tmp13Result = closure_3(tmp2(5873).Button, obj5);
+      tmp13Result = closure_3(tmp2(5936).Button, obj5);
     }
     items3[1] = tmp13Result;
     obj3.children = items3;
-    visible = closure_4(_modDef1652.View, obj3);
+    visible = closure_4(_modDef1655.View, obj3);
   }
   return visible;
 }

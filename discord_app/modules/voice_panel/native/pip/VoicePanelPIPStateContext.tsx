@@ -2,15 +2,15 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 let size = {
-  id: "ip",
+  id: "disabled",
   mode: "isArray",
   width: false,
   height: null,
-  containerHeight: 6825665,
-  showSecondaryPIP: 30,
-  scale: 90,
+  containerHeight: "yes",
+  showSecondaryPIP: null,
+  scale: "x-sm",
 };
-const ReanimatedHelperTypes = fn(7782);
+const ReanimatedHelperTypes = fn(7848);
 size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);
 const context = noop.createContext(size);
 size = fn(2);

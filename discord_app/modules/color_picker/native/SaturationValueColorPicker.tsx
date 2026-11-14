@@ -1,14 +1,14 @@
 // discord_app/modules/color_picker/native/SaturationValueColorPicker.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../_runtime/metro/01705__.js";
-import LegacyBaseButton from "../../../../_runtime/05535_LegacyBaseButton.js";
-import LinearGradientDefault from "../../../../_runtime/05830_LinearGradient.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../_runtime/metro/01708__.js";
+import LegacyBaseButton from "../../../../_runtime/05598_LegacyBaseButton.js";
+import LinearGradientDefault from "../../../../_runtime/05893_LinearGradient.js";
 import ColorPickerUtils from "ColorPickerUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function ColorBox(arg0) {
@@ -30,7 +30,7 @@ function ColorBox(arg0) {
   SaturationValueColorPickerTsx1.__closure = items1;
   SaturationValueColorPickerTsx1.__workletHash = 16511625483345;
   SaturationValueColorPickerTsx1.__initData = tmp7;
-  const items2 = [closure_10, _mod1705.scheduleOnRN, tmp4];
+  const items2 = [closure_10, _mod1708.scheduleOnRN, tmp4];
   c0 = undefined;
   c1 = undefined;
   [tmp10, tmp11, tmp12] = items2;
@@ -55,7 +55,7 @@ function ColorBox(arg0) {
   SaturationValueColorPickerTsx2.__closure = items3;
   SaturationValueColorPickerTsx2.__workletHash = 3512294390005;
   SaturationValueColorPickerTsx2.__initData = tmp10;
-  const animatedReaction = _mod1652.useAnimatedReaction(SaturationValueColorPickerTsx1, SaturationValueColorPickerTsx2);
+  const animatedReaction = _mod1655.useAnimatedReaction(SaturationValueColorPickerTsx1, SaturationValueColorPickerTsx2);
   const obj2 = { style: null, colors: null, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 }, children: null };
   const items4 = [tmp.colorBox, colorBoxStyle];
   obj2.style = items4;
@@ -73,7 +73,7 @@ function ColorBox(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { justifyContent: "center", alignItems: "center", position: "relative" },
   selector: null,
@@ -129,7 +129,7 @@ export default function SaturationValueColorPicker(arg0) {
     value,
     first1,
     onPanUpdate,
-    _mod1705.scheduleOnRN,
+    _mod1708.scheduleOnRN,
   ];
   c0 = undefined;
   c1 = undefined;
@@ -164,7 +164,7 @@ export default function SaturationValueColorPicker(arg0) {
     value,
     first1,
     onPanUpdate,
-    _mod1705.scheduleOnRN,
+    _mod1708.scheduleOnRN,
   ];
   c0 = undefined;
   c1 = undefined;
@@ -190,7 +190,7 @@ export default function SaturationValueColorPicker(arg0) {
   SaturationValueColorPickerTsx4.__workletHash = 11287600813869;
   SaturationValueColorPickerTsx4.__initData = tmp18;
   obj3.onUpdate = SaturationValueColorPickerTsx4;
-  const items4 = [closure_14, onPanFinalize, _mod1705.scheduleOnRN];
+  const items4 = [closure_14, onPanFinalize, _mod1708.scheduleOnRN];
   c0 = undefined;
   c1 = undefined;
   [tmp26, tmp27, tmp28] = items4;
@@ -242,7 +242,7 @@ export default function SaturationValueColorPicker(arg0) {
   SaturationValueColorPickerTsx6.__closure = items7;
   SaturationValueColorPickerTsx6.__workletHash = 2440308818282;
   SaturationValueColorPickerTsx6.__initData = tmp30;
-  const animatedStyle = _mod1652.useAnimatedStyle(SaturationValueColorPickerTsx6);
+  const animatedStyle = _mod1655.useAnimatedStyle(SaturationValueColorPickerTsx6);
   const callback = noop.useCallback((nativeEvent) => {
     const layout = nativeEvent.nativeEvent.layout;
     _undefined2(layout.width);
@@ -264,7 +264,7 @@ export default function SaturationValueColorPicker(arg0) {
   ];
   obj4.style = items9;
   const obj5 = { gesture: panGesture, children: null };
-  const tmp8Result = _mod1652;
+  const tmp8Result = _mod1655;
   obj5.children = timestampProducer(View, {
     onLayout: callback,
     hitSlop: { top: result, bottom: result, left: result, right: result },
@@ -274,7 +274,7 @@ export default function SaturationValueColorPicker(arg0) {
   const obj7 = { onLayout: callback1, pointerEvents: "box-none", style: null };
   const items11 = [tmp.selector, animatedStyle, selectorStyle];
   obj7.style = items11;
-  items10[1] = timestampProducer(_modDef1652.View, obj7);
+  items10[1] = timestampProducer(_modDef1655.View, obj7);
   obj4.children = items10;
   return metroImportDefault(View, obj4);
 }

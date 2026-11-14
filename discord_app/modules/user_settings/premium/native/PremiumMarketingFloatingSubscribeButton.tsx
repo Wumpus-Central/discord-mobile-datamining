@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
+import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import NitroUpsellButtonDefault from "../../../premium/components/native/NitroUpsellButton.tsx";
 import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment.tsx";
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 1 },
   gradient: { position: "absolute", left: 0, right: 0, bottom: 0, top: -64 },
@@ -99,10 +99,10 @@ export default function PremiumMarketingFloatingSubscribeButton(style) {
   PremiumMarketingFloatingSubscribeButtonTsx1.__closure = items3;
   PremiumMarketingFloatingSubscribeButtonTsx1.__workletHash = 2100931871963;
   PremiumMarketingFloatingSubscribeButtonTsx1.__initData = tmp9;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     PremiumMarketingFloatingSubscribeButtonTsx1,
   );
-  let obj2 = require("../../../../../_runtime/metro/01652__.js");
+  let obj2 = require("../../../../../_runtime/metro/01655__.js");
   const items4 = [closure_11, isVisible];
   _require = undefined;
   [tmp16, tmp17] = items4;
@@ -126,7 +126,7 @@ export default function PremiumMarketingFloatingSubscribeButton(style) {
   PremiumMarketingFloatingSubscribeButtonTsx2.__closure = items5;
   PremiumMarketingFloatingSubscribeButtonTsx2.__workletHash = 4354740509872;
   PremiumMarketingFloatingSubscribeButtonTsx2.__initData = tmp16;
-  const animatedProps = tmp4(1652).useAnimatedProps(PremiumMarketingFloatingSubscribeButtonTsx2);
+  const animatedProps = tmp4(1655).useAnimatedProps(PremiumMarketingFloatingSubscribeButtonTsx2);
   const obj3 = { animatedProps, style: null, children: null };
   const items6 = [tmp.container, animatedStyle];
   obj3.style = items6;
@@ -150,12 +150,12 @@ export default function PremiumMarketingFloatingSubscribeButton(style) {
     start: VerticalGradient.START,
     end: VerticalGradient.END,
   };
-  const tmp4Result = tmp4(1652);
+  const tmp4Result = tmp4(1655);
   items8[1] = { paddingBottom: Math.max(useSafeAreaInsetsDefault().bottom, nativeDefault.space.PX_16) };
   items8[2] = style.style;
   obj5.style = items8;
   obj5.children = closure_7(NitroUpsellButtonDefault, { onPress: openPayment, text: buttonText });
   items7[1] = closure_7(c4, obj5);
   obj3.children = items7;
-  return closure_8(_modDef1652.View, obj3);
+  return closure_8(_modDef1655.View, obj3);
 }

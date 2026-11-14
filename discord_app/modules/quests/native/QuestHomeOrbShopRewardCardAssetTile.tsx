@@ -7,7 +7,7 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CollectiblesProductUtils from "../../collectibles/utils/CollectiblesProductUtils.tsx";
 import AvatarDecorationSampleV2 from "../../collectibles/native/AvatarDecorationSampleV2.tsx";
-import _modDef9434 from "../../../../_runtime/metro/09434__.js";
+import _modDef9501 from "../../../../_runtime/metro/09501__.js";
 import CutoutableAvatarDecorationDefault from "../../collectibles/native/components/CutoutableAvatarDecoration.tsx";
 import CollectiblesShopCardV2 from "../../collectibles/native/CollectiblesShopCardV2.tsx";
 import useDefaultVariantIndex from "../../collectibles/hooks/useDefaultVariantIndex.tsx";
@@ -24,7 +24,7 @@ function CompactAvatarDecorationPreview(arg0) {
   );
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.avatar, resizeMode: "contain", source: null, accessible: false };
-  obj2.source = _modDef9434;
+  obj2.source = _modDef9501;
   items = [metroImportDefault(FastImageDefault, obj2)];
   items[1] = metroImportDefault(hasOwnProperty, {
     style: tmp.avatarDecoration,
@@ -42,11 +42,11 @@ function ProductPreviewInner(cardHeight) {
     flag = false;
   }
   let tmp = closure_15();
-  const shopProductItems = cardWidth(9335).useShopProductItems(product);
+  const shopProductItems = cardWidth(9402).useShopProductItems(product);
   ({ firstProfileEffect, firstAvatarDecoration, firstNameplate } = shopProductItems);
   const tmp5 =
-    cardWidth < cardWidth(10347).COLLECTIBLES_SHOP_CARD_WIDTH ||
-    cardHeight < cardWidth(10347).COLLECTIBLES_SHOP_CARD_HEIGHT;
+    cardWidth < cardWidth(10416).COLLECTIBLES_SHOP_CARD_WIDTH ||
+    cardHeight < cardWidth(10416).COLLECTIBLES_SHOP_CARD_HEIGHT;
   dependencyMap = tmp5;
   items = [cardHeight, cardWidth, tmp5];
   const memo = noop.useMemo(() => {
@@ -79,7 +79,7 @@ function ProductPreviewInner(cardHeight) {
     }
     return size1;
   }, items1);
-  if (product.type === cardWidth(2111).CollectiblesItemType.BUNDLE) {
+  if (product.type === cardWidth(2114).CollectiblesItemType.BUNDLE) {
     const obj2 = {
       deco: firstAvatarDecoration,
       pfx: firstProfileEffect,
@@ -89,29 +89,29 @@ function ProductPreviewInner(cardHeight) {
       disableStaticBackground: true,
       targetSize: memo1,
     };
-    return closure_7(cardHeight(9420), obj2);
+    return closure_7(cardHeight(9489), obj2);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     const obj3 = { source: null, style: null };
-    const obj4 = { uri: cardHeight(10353) };
+    const obj4 = { uri: cardHeight(10422) };
     obj3.source = obj4;
     obj3.style = tmp.externalProductImage;
-    return closure_7(cardHeight(5957), obj3);
+    return closure_7(cardHeight(6020), obj3);
   } else {
     const ALL = cardWidth(1075).FractionalPremiumSKUsSets.ALL;
     if (ALL.has(product.skuId)) {
       size = {
         skuId: product.skuId,
-        width: cardWidth(10354).FRACTIONAL_NITRO_COIN_SIZE.CARD,
-        height: cardWidth(10354).FRACTIONAL_NITRO_COIN_SIZE.CARD,
+        width: cardWidth(10423).FRACTIONAL_NITRO_COIN_SIZE.CARD,
+        height: cardWidth(10423).FRACTIONAL_NITRO_COIN_SIZE.CARD,
       };
-      return closure_7(cardWidth(10354).FractionalNitroCoinIllustration, size);
+      return closure_7(cardWidth(10423).FractionalNitroCoinIllustration, size);
     } else {
       const first = memo(product.items, 1)[0];
       let type;
       if (first != null) {
         type = first.type;
       }
-      if (cardWidth(2111).CollectiblesItemType.AVATAR_DECORATION === type) {
+      if (cardWidth(2114).CollectiblesItemType.AVATAR_DECORATION === type) {
         if (flag) {
           const obj5 = { item: first, size: null };
           let avatarDecorationSize;
@@ -125,15 +125,15 @@ function ProductPreviewInner(cardHeight) {
           let tmp24Result = closure_7(CompactAvatarDecorationPreview, obj5);
         } else {
           const obj6 = { item: first, size };
-          tmp24Result = closure_7(cardHeight(9433), obj6);
+          tmp24Result = closure_7(cardHeight(9500), obj6);
         }
         return tmp24Result;
-      } else if (cardWidth(2111).CollectiblesItemType.PROFILE_EFFECT === type) {
+      } else if (cardWidth(2114).CollectiblesItemType.PROFILE_EFFECT === type) {
         const obj7 = { style: tmp.profileEffectContainer, children: null };
         const obj8 = { item: first, hideBackground: true };
-        obj7.children = closure_7(cardHeight(9422), obj8);
+        obj7.children = closure_7(cardHeight(9491), obj8);
         return closure_7(closure_5, obj7);
-      } else if (cardWidth(2111).CollectiblesItemType.PROFILE_FRAME === type) {
+      } else if (cardWidth(2114).CollectiblesItemType.PROFILE_FRAME === type) {
         if (flag) {
           if (null != memo) {
             const items2 = [,];
@@ -147,7 +147,7 @@ function ProductPreviewInner(cardHeight) {
             prop = memo.profileFramePreviewWidth;
           }
           if (prop == null) {
-            prop = cardWidth(10347).COLLECTIBLES_SHOP_CARD_WIDTH - PX_32;
+            prop = cardWidth(10416).COLLECTIBLES_SHOP_CARD_WIDTH - PX_32;
           }
           obj10.previewWidth = prop;
           let prop1;
@@ -159,19 +159,19 @@ function ProductPreviewInner(cardHeight) {
           }
           obj10.previewHeight = prop1;
           obj10.profileBackgroundColor = cardHeight(575).colors.BACKGROUND_BASE_LOW;
-          obj9.children = closure_7(cardHeight(9445), obj10);
+          obj9.children = closure_7(cardHeight(9512), obj10);
           return closure_7(tmp15, obj9);
         }
         profileFrameContainer = tmp.profileFrameContainer;
-      } else if (cardWidth(2111).CollectiblesItemType.NAMEPLATE === type) {
+      } else if (cardWidth(2114).CollectiblesItemType.NAMEPLATE === type) {
         const obj11 = { item: first };
-        return closure_7(cardHeight(9447), obj11);
+        return closure_7(cardHeight(9514), obj11);
       } else {
         return null;
       }
     }
   }
-  const obj = cardWidth(9335);
+  const obj = cardWidth(9402);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
@@ -179,10 +179,10 @@ const EXTERNAL_PRODUCT_SKU_IDS = fn(1074).EXTERNAL_PRODUCT_SKU_IDS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = 100;
-const diff = fn(10347).COLLECTIBLES_SHOP_CARD_HEIGHT - 2 * nativeDefault.space.PX_16;
+const diff = fn(10416).COLLECTIBLES_SHOP_CARD_HEIGHT - 2 * nativeDefault.space.PX_16;
 const PX_32 = nativeDefault.space.PX_32;
 let closure_12 = 2 * nativeDefault.space.PX_16;
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let closure_13 = createStyles.createStyles((width) => {
   const obj = {
     container: { width, height: width, justifyContent: "center", alignItems: "center" },
@@ -200,7 +200,7 @@ let closure_13 = createStyles.createStyles((width) => {
   obj.avatarDecoration = { position: "absolute", width, height: width, justifyContent: "center", alignItems: "center" };
   return obj;
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj = {
   assetContainer: null,
   overlayContainer: null,

@@ -2,7 +2,7 @@
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let closure_4 = fn(12274).GameOrganizationInviteAcceptStatus;
+let closure_4 = fn(12369).GameOrganizationInviteAcceptStatus;
 const Endpoints = fn(1072).Endpoints;
 let obj = {
   resolveGameOrganizationInvite(arg0) {
@@ -132,7 +132,7 @@ let obj = {
             } else {
               const guild_ids = tmp5;
               let body;
-              const HTTP = guild_ids(1282).HTTP;
+              const HTTP = guild_ids(1285).HTTP;
               const request = { url: constants.GAME_ORGANIZATIONS_INVITABLE, query: null, rejectWithError: true };
               const obj4 = { guild_ids };
               request.query = obj4;
@@ -194,7 +194,7 @@ let obj = {
               return obj3;
             } else {
               let body;
-              const HTTP = tmp5(1282).HTTP;
+              const HTTP = tmp5(1285).HTTP;
               const obj4 = { url: Endpoints.GAME_ORGANIZATION_INVITE_CHARACTERS(tmp5), rejectWithError: true };
               dependencyMap = 1;
               c3 = 1;

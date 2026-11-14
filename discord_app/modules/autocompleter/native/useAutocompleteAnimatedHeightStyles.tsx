@@ -1,5 +1,5 @@
 // discord_app/modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import ScreenIndexFrozen from "../../channel/native/ScreenIndexFrozen.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
@@ -31,5 +31,5 @@ export default function useAutocompleteAnimatedHeightStyles(arg0, arg1) {
   useAutocompleteAnimatedHeightStylesTsx1.__closure = items1;
   useAutocompleteAnimatedHeightStylesTsx1.__workletHash = 1718162287415;
   useAutocompleteAnimatedHeightStylesTsx1.__initData = tmp2;
-  return _mod1652.useAnimatedStyle(useAutocompleteAnimatedHeightStylesTsx1);
+  return _mod1655.useAnimatedStyle(useAutocompleteAnimatedHeightStylesTsx1);
 }

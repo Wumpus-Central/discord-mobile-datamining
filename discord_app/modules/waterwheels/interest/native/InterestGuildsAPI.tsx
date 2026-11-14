@@ -14,13 +14,13 @@ export function createInterestGuildsResource() {
     c2 = 0;
     c1 = 0;
     return (async (arg0) => {
-      const HTTP = game_ids(1282).HTTP;
+      const HTTP = game_ids(1285).HTTP;
       const request = {
         url,
         query: { game_ids },
         retries: 0,
         timeout: 10000,
-        rejectWithError: game_ids(1282).rejectWithMigratedError(),
+        rejectWithError: game_ids(1285).rejectWithMigratedError(),
       };
       await HTTP.get(request);
       return value.body;

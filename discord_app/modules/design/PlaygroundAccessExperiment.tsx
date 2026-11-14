@@ -3,7 +3,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ApexExperiment = fn(1449);
+const ApexExperiment = fn(1452);
 const obj2 = {
   name: "2026-02-mana-playground-access",
   kind: "user",

@@ -108,7 +108,7 @@ function IconWithBadge(includeNotificationsCount) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   badgeWrapper: { position: "absolute", top: 16, left: 12 },
   backIcon: { height: 24, width: 24 },

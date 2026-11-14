@@ -337,7 +337,7 @@ let closure_22 = async function _fetchAssetIds(arg0) {
     num13 = 1;
   }
   closure_131_2 = num13;
-  return "flexDirection";
+  return "Path";
 };
 const Constants = fn(1072);
 ({ Endpoints: closure_6, PlatformTypes } = Constants);

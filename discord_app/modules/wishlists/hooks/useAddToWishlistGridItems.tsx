@@ -3,7 +3,7 @@ import WishlistUtils from "../WishlistUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PremiumSubscriptionSKUs = fn(1387).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1390).PremiumSubscriptionSKUs;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
 

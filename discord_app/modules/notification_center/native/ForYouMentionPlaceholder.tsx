@@ -1,6 +1,6 @@
 // discord_app/modules/notification_center/native/ForYouMentionPlaceholder.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../_runtime/metro/01655__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   placeholder: { flexDirection: "row", marginBottom: 16, marginHorizontal: 24 },
   placeholderImage: null,
@@ -61,12 +61,12 @@ export function ForYouMentionPlaceholder() {
   items = [AccessibilityStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = require("initialize");
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0.3);
-  const obj2 = require("../../../../_runtime/metro/01652__.js");
-  const obj4 = require("../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0.3);
+  const obj2 = require("../../../../_runtime/metro/01655__.js");
+  const obj4 = require("../../../../_runtime/metro/01655__.js");
   const obj3 = { duration: 1000, easing: null };
-  const Easing = require("../../../../_runtime/metro/01652__.js").Easing;
-  obj3.easing = Easing.inOut(require("../../../../_runtime/metro/01652__.js").Easing.ease);
+  const Easing = require("../../../../_runtime/metro/01655__.js").Easing;
+  obj3.easing = Easing.inOut(require("../../../../_runtime/metro/01655__.js").Easing.ease);
   const result = sharedValue.set(obj4.withRepeat(require("timing/timing").withTiming(0.7, obj3), -1, true));
   const obj5 = require("timing/timing");
   const items1 = [closure_9, stateFromStores, sharedValue];
@@ -87,13 +87,13 @@ export function ForYouMentionPlaceholder() {
   ForYouMentionPlaceholderTsx1.__closure = items2;
   ForYouMentionPlaceholderTsx1.__workletHash = 12937076119429;
   ForYouMentionPlaceholderTsx1.__initData = tmp5;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(ForYouMentionPlaceholderTsx1);
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(ForYouMentionPlaceholderTsx1);
   const obj6 = { style: null, children: null };
   const items3 = [tmp.placeholder, animatedStyle];
   obj6.style = items3;
   const items4 = [closure_5(View, { style: tmp.placeholderImage })];
   const obj9 = { children: null };
-  const obj7 = require("../../../../_runtime/metro/01652__.js");
+  const obj7 = require("../../../../_runtime/metro/01655__.js");
   const obj8 = { style: tmp.placeholderImage };
   const items5 = [
     closure_5(View, {
@@ -113,5 +113,5 @@ export function ForYouMentionPlaceholder() {
   obj9.children = items5;
   items4[1] = closure_6(View, obj9);
   obj6.children = items4;
-  return closure_6(_modDef1652.View, obj6);
+  return closure_6(_modDef1655.View, obj6);
 }

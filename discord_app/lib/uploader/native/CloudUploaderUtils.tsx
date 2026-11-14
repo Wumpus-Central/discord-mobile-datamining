@@ -12,7 +12,7 @@ function getUploadPayload(self) {
     filename: self.filename,
     file_size: self.currentSize,
     id: applyDefault.uniqueId(),
-    original_content_type: "a",
+    original_content_type: "Path",
   };
   return obj;
 }

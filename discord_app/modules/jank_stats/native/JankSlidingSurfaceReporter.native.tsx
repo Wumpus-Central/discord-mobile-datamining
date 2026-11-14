@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const JankScreenConstants = fn(18596);
+const JankScreenConstants = fn(18725);
 ({ INTERACTION_NONE: closure_4, INTERACTION_TRANSITION: hasOwnProperty } = JankScreenConstants);
 let closure_6 = {
   code: "(function JankSlidingSurfaceReporterNativeTsx1(){let[position]=this.__closure;return position.get();})",
@@ -43,8 +43,8 @@ export default function JankSlidingSurfaceReporter(resolveOpenName) {
     }
     obj.setScreenContext(getJankSurfaceName.composeJankSurfaceName(resolveClosedName), arg1);
   }, []);
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj = require("../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj = require("../../../../_runtime/metro/01655__.js");
   const tmp3 = _require;
   const items1 = [c6, position];
   _require = undefined;
@@ -58,7 +58,7 @@ export default function JankSlidingSurfaceReporter(resolveOpenName) {
   JankSlidingSurfaceReporterNativeTsx1.__closure = items2;
   JankSlidingSurfaceReporterNativeTsx1.__workletHash = 2008471193072;
   JankSlidingSurfaceReporterNativeTsx1.__initData = tmp6;
-  const items3 = [c7, openAt, closedAt, 1, 2, 3, sharedValue, tmp3(1705).scheduleOnRN, callback, c4, c5];
+  const items3 = [c7, openAt, closedAt, 1, 2, 3, sharedValue, tmp3(1708).scheduleOnRN, callback, c4, c5];
   _require = undefined;
   c1 = undefined;
   dependencyMap = undefined;
@@ -117,7 +117,7 @@ export default function JankSlidingSurfaceReporter(resolveOpenName) {
   JankSlidingSurfaceReporterNativeTsx2.__closure = items4;
   JankSlidingSurfaceReporterNativeTsx2.__workletHash = 17561289534023;
   JankSlidingSurfaceReporterNativeTsx2.__initData = tmp8;
-  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     JankSlidingSurfaceReporterNativeTsx1,
     JankSlidingSurfaceReporterNativeTsx2,
   );

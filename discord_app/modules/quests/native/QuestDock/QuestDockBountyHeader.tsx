@@ -8,13 +8,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const QuestDockMode = fn(5275).QuestDockMode;
-const QuestDockConstants = fn(17580);
+const QuestDockMode = fn(5338).QuestDockMode;
+const QuestDockConstants = fn(17698);
 ({ QUEST_DOCK_COLLAPSED_HEADER_PADDING_LEFT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_6 } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PX_32 = nativeDefault.space.PX_32;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   wrapper: {
     alignItems: "center",
@@ -74,11 +74,8 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(function QuestDockBountyHeader() {
   const questDockBounty = width(bountyCreative[7]).useQuestDockBounty();
   const tmp4 = closure_9();
-  let str = questDockBounty.productName;
-  if (str == null) {
-    str = "";
-  }
-  const activeQuestDockMode = noop.useContext(tmp(tmp2[8]).QuestDockGestureContext).activeQuestDockMode;
+  const productName = questDockBounty.productName;
+  const activeQuestDockMode = noop.useContext(width(bountyCreative[8]).QuestDockGestureContext).activeQuestDockMode;
   let obj = width(bountyCreative[7]);
   items = [closure_10, width(bountyCreative[10]).withSpring, activeQuestDockMode, QuestDockMode, closure_6];
   width = undefined;
@@ -102,7 +99,7 @@ export default noop.memo(function QuestDockBountyHeader() {
   QuestDockBountyHeaderTsx1.__workletHash = 10424459914452;
   QuestDockBountyHeaderTsx1.__initData = tmp7;
   const animatedStyle = width(bountyCreative[9]).useAnimatedStyle(QuestDockBountyHeaderTsx1);
-  const tmpResult = width(bountyCreative[9]);
+  const obj3 = width(bountyCreative[9]);
   const items2 = [closure_11, width(bountyCreative[10]).withSpring, activeQuestDockMode, QuestDockMode, 0.7, closure_6];
   width = undefined;
   height = undefined;
@@ -127,7 +124,7 @@ export default noop.memo(function QuestDockBountyHeader() {
   QuestDockBountyHeaderTsx2.__initData = tmp13;
   const animatedStyle1 = width(bountyCreative[9]).useAnimatedStyle(QuestDockBountyHeaderTsx2);
   const tmp21 = height(bountyCreative[11])(activeQuestDockMode) === QuestDockMode.EXPANDED;
-  const tmpResult6 = width(bountyCreative[9]);
+  const tmpResult = width(bountyCreative[9]);
   let size = width(bountyCreative[12]).useSmokeArtSize();
   width = size.width;
   height = size.height;
@@ -136,11 +133,11 @@ export default noop.memo(function QuestDockBountyHeader() {
     const size = { width, height };
     return size;
   }, items4);
-  const tmpResult7 = width(bountyCreative[12]);
+  const tmpResult5 = width(bountyCreative[12]);
   bountyCreative = width(bountyCreative[7]).useBountyCreative(questDockBounty);
-  const tmpResult8 = width(bountyCreative[7]);
+  const tmpResult6 = width(bountyCreative[7]);
   const items5 = [bountyCreative];
-  const tmpResult9 = width(bountyCreative[13]);
+  const tmpResult7 = width(bountyCreative[13]);
   const callback = obj2.useCallback(() => {
     const obj2 = { creative: bountyCreative, isTargetedDisclosure: true, trackingCtx: null };
     const obj = QuestDisclosureModalActionCreatorsDefault;
@@ -151,7 +148,7 @@ export default noop.memo(function QuestDockBountyHeader() {
     };
     obj.showModal(obj2);
   }, items5);
-  const obj3 = {
+  const obj4 = {
     onSubmenuPress: width(bountyCreative[13]).useActionSheetPressHandler(bountyCreative),
     hideBlurWhenCollapsed: true,
     promotedLabelLeading: true,
@@ -160,9 +157,9 @@ export default noop.memo(function QuestDockBountyHeader() {
     children: null,
   };
   const actionSheetPressHandler = width(bountyCreative[13]).useActionSheetPressHandler(bountyCreative);
-  obj3.collapsedContent = closure_7(height(bountyCreative[18]), {});
-  obj3.secondaryContentWidth = width(bountyCreative[18]).QUEST_DOCK_BOUNTY_ILLUSTRATION_RESERVED_WIDTH;
-  const obj4 = {
+  obj4.collapsedContent = closure_7(height(bountyCreative[18]), {});
+  obj4.secondaryContentWidth = width(bountyCreative[18]).QUEST_DOCK_BOUNTY_ILLUSTRATION_RESERVED_WIDTH;
+  const obj5 = {
     style: null,
     pointerEvents: "none",
     accessible: false,
@@ -170,91 +167,91 @@ export default noop.memo(function QuestDockBountyHeader() {
     children: null,
   };
   const items6 = [tmp4.smokeArt, memo];
-  obj4.style = items6;
-  const obj5 = { style: null, needsOffscreenAlphaCompositing: null, children: null };
+  obj5.style = items6;
+  const obj6 = { style: null, needsOffscreenAlphaCompositing: null, children: null };
   const items7 = [tmp4.smokeArtFade, animatedStyle];
-  obj5.style = items7;
+  obj6.style = items7;
   const tmp27 = height(bountyCreative[17]);
-  obj5.needsOffscreenAlphaCompositing = width(bountyCreative[19]).isAndroid();
-  const obj6 = { surface: null, paused: null };
-  const tmpResult10 = width(bountyCreative[19]);
-  obj6.surface = width(bountyCreative[12]).QuestDockBountySmokeSurface.COLLAPSED;
-  obj6.paused = tmp21;
-  obj5.children = closure_7(height(bountyCreative[12]), obj6);
-  obj4.children = closure_7(height(bountyCreative[9]).View, obj5);
-  const items8 = [closure_7(c4, obj4)];
-  const obj7 = { style: tmp4.wrapper, children: null };
+  obj6.needsOffscreenAlphaCompositing = width(bountyCreative[19]).isAndroid();
+  const obj7 = { surface: null, paused: null };
+  const tmpResult8 = width(bountyCreative[19]);
+  obj7.surface = width(bountyCreative[12]).QuestDockBountySmokeSurface.COLLAPSED;
+  obj7.paused = tmp21;
+  obj6.children = closure_7(height(bountyCreative[12]), obj7);
+  obj5.children = closure_7(height(bountyCreative[9]).View, obj6);
+  const items8 = [closure_7(c4, obj5)];
+  const obj8 = { style: tmp4.wrapper, children: null };
   let tmp28Result = null != questDockBounty.productIcon;
   if (tmp28Result) {
-    const obj8 = {
+    const obj9 = {
       style: tmp4.productIcon,
       source: null,
       resizeMode: "cover",
       accessible: false,
       importantForAccessibility: "no",
     };
-    const obj9 = { uri: questDockBounty.productIcon };
-    obj8.source = obj9;
-    tmp28Result = closure_7(tmp20(tmp2[20]), obj8);
+    const obj10 = { uri: questDockBounty.productIcon };
+    obj9.source = obj10;
+    tmp28Result = closure_7(tmp20(tmp2[20]), obj9);
   }
   const items9 = [tmp28Result];
-  const obj10 = { style: tmp4.crossFadeWrapper, children: null };
-  const obj11 = { style: null, children: null };
+  const obj11 = { style: tmp4.crossFadeWrapper, children: null };
+  const obj12 = { style: null, children: null };
   const items10 = [tmp4.copy, animatedStyle];
-  obj11.style = items10;
-  const obj12 = {
+  obj12.style = items10;
+  const obj13 = {
     accessible: true,
     accessibilityRole: "text",
-    accessibilityLabel: str,
+    accessibilityLabel: productName,
     accessibilityElementsHidden: tmp21,
     importantForAccessibility: null,
     children: null,
   };
-  let str2 = "yes";
+  let str = "yes";
   if (tmp21) {
-    str2 = "no-hide-descendants";
+    str = "no-hide-descendants";
   }
-  obj12.importantForAccessibility = str2;
-  obj12.children = closure_7(width(bountyCreative[21]).Text, {
+  obj13.importantForAccessibility = str;
+  obj13.children = closure_7(width(bountyCreative[21]).Text, {
     variant: "body-sm/medium",
     color: "text-strong",
     lineClamp: 2,
     accessible: false,
     style: tmp4.title,
-    children: str,
+    children: productName,
   });
-  obj11.children = closure_7(c4, obj12);
-  const items11 = [closure_7(height(bountyCreative[9]).View, obj11)];
-  const obj14 = { style: null, children: null };
+  obj12.children = closure_7(c4, obj13);
+  const items11 = [closure_7(height(bountyCreative[9]).View, obj12)];
+  const obj15 = { style: null, children: null };
   const items12 = [tmp4.promotedLabel, animatedStyle1];
-  obj14.style = items12;
-  let str3 = "none";
+  obj15.style = items12;
+  let str2 = "none";
   if (tmp21) {
-    str3 = "auto";
+    str2 = "auto";
   }
-  const obj15 = {
-    pointerEvents: str3,
+  const obj16 = {
+    pointerEvents: str2,
     accessibilityElementsHidden: !tmp21,
     importantForAccessibility: null,
     children: null,
   };
-  let str4 = "no-hide-descendants";
+  let str3 = "no-hide-descendants";
   if (tmp21) {
-    str4 = "yes";
+    str3 = "yes";
   }
-  obj15.importantForAccessibility = str4;
-  const obj16 = { onPress: callback, accessibilityRole: "button", children: null };
-  const obj17 = { variant: "body-sm/medium", color: "text-default", children: null };
+  obj16.importantForAccessibility = str3;
+  const obj17 = { onPress: callback, accessibilityRole: "button", children: null };
+  const obj18 = { variant: "body-sm/medium", color: "text-default", children: null };
   const intl = tmp(tmp2[23]).intl;
-  obj17.children = intl.string(width(bountyCreative[23]).t.o6FLcF);
-  obj16.children = closure_7(width(bountyCreative[21]).Text, obj17);
-  obj15.children = closure_7(width(bountyCreative[22]).PressableOpacity, obj16);
-  obj14.children = closure_7(c4, obj15);
-  items11[1] = closure_7(height(bountyCreative[9]).View, obj14);
-  obj10.children = items11;
-  items9[1] = closure_8(c4, obj10);
-  obj7.children = items9;
-  items8[1] = closure_8(c4, obj7);
-  obj3.children = items8;
-  return closure_8(tmp27, obj3);
+  obj18.children = intl.string(width(bountyCreative[23]).t.o6FLcF);
+  obj17.children = closure_7(width(bountyCreative[21]).Text, obj18);
+  obj16.children = closure_7(width(bountyCreative[22]).PressableOpacity, obj17);
+  obj15.children = closure_7(c4, obj16);
+  items11[1] = closure_7(height(bountyCreative[9]).View, obj15);
+  obj11.children = items11;
+  items9[1] = closure_8(c4, obj11);
+  obj8.children = items9;
+  items8[1] = closure_8(c4, obj8);
+  obj4.children = items8;
+  return closure_8(tmp27, obj4);
 });

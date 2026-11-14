@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/components/SpeakerPulse.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let c9 = 0.16;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { pulse: { backgroundColor: nativeDefault.colors.WHITE }, border: null };
 let obj3 = { backgroundColor: nativeDefault.colors.WHITE };
 obj2.border = { backgroundColor: nativeDefault.colors.STATUS_SPEAKING };
@@ -36,27 +36,27 @@ export default function SpeakerPulse(style) {
   _require = stateFromStores;
   const obj = require("initialize");
   const tmp2 = _require;
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(c9);
-  let obj2 = require("../../../../../_runtime/metro/01652__.js");
-  sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(c9);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(c9);
+  let obj2 = require("../../../../../_runtime/metro/01655__.js");
+  sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(c9);
   const items1 = [stateFromStores, sharedValue, sharedValue1];
   const effect = noop.useEffect(() => {
     if (c0) {
       const result = set(0);
       const result1 = sharedValue1.set(0);
-      const obj2 = _mod1652;
-      const obj3 = _mod1652;
-      const obj4 = _mod1652;
+      const obj2 = _mod1655;
+      const obj3 = _mod1655;
+      const obj4 = _mod1655;
       const withDelayResult = obj4.withDelay(100, timing_timing.withTiming(c9, { duration: 250 }));
-      const obj6 = _mod1652;
+      const obj6 = _mod1655;
       const withRepeatResult = obj2.withRepeat(
         obj3.withSequence(withDelayResult, obj6.withDelay(250, timing_timing.withTiming(0, { duration: 500 }))),
         -1,
         false,
       );
-      const obj8 = _mod1652;
-      const obj9 = _mod1652;
-      const obj10 = _mod1652;
+      const obj8 = _mod1655;
+      const obj9 = _mod1655;
+      const obj10 = _mod1655;
       const withDelayResult1 = obj10.withDelay(350, timing_timing.withTiming(c9, { duration: 250 }));
       const result2 = sharedValue.set(withRepeatResult);
       const result3 = sharedValue1.set(
@@ -72,7 +72,7 @@ export default function SpeakerPulse(style) {
       const result5 = sharedValue1.set(c9);
     }
   }, items1);
-  let obj3 = require("../../../../../_runtime/metro/01652__.js");
+  let obj3 = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [closure_11, sharedValue];
   _require = undefined;
   [tmp8, tmp9] = items2;
@@ -86,8 +86,8 @@ export default function SpeakerPulse(style) {
   SpeakerPulseTsx1.__closure = items3;
   SpeakerPulseTsx1.__workletHash = 867418052896;
   SpeakerPulseTsx1.__initData = tmp8;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(SpeakerPulseTsx1);
-  let obj4 = require("../../../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(SpeakerPulseTsx1);
+  let obj4 = require("../../../../../_runtime/metro/01655__.js");
   const items4 = [closure_12, sharedValue1];
   _require = undefined;
   [tmp11, tmp12] = items4;

@@ -4,8 +4,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let useChannelCallStore = fn(10934).useChannelCallStore;
-const Constants = fn(12618);
+let useChannelCallStore = fn(11003).useChannelCallStore;
+const Constants = fn(12714);
 ({ PIP_FOCUS_SCALE: closure_4, PIP_GESTURE_ACTIVE_OFFSET: hasOwnProperty } = Constants);
 let closure_6 = { mass: 1, stiffness: 250, overshootClamping: true, damping: 20 };
 let closure_7 = {
@@ -79,8 +79,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx1.__closure = items1;
   useDraggablePipTsx1.__workletHash = 10550433910574;
   useDraggablePipTsx1.__initData = tmp4;
-  const derivedValue = require("../../../../_runtime/metro/01652__.js").useDerivedValue(useDraggablePipTsx1);
-  let obj = require("../../../../_runtime/metro/01652__.js");
+  const derivedValue = require("../../../../_runtime/metro/01655__.js").useDerivedValue(useDraggablePipTsx1);
+  let obj = require("../../../../_runtime/metro/01655__.js");
   const items2 = [c8, width];
   _require = undefined;
   [tmp10, tmp11] = items2;
@@ -91,8 +91,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx2.__closure = items3;
   useDraggablePipTsx2.__workletHash = 13080281623020;
   useDraggablePipTsx2.__initData = tmp10;
-  const derivedValue1 = require("../../../../_runtime/metro/01652__.js").useDerivedValue(useDraggablePipTsx2);
-  const tmp2Result = require("../../../../_runtime/metro/01652__.js");
+  const derivedValue1 = require("../../../../_runtime/metro/01655__.js").useDerivedValue(useDraggablePipTsx2);
+  const tmp2Result = require("../../../../_runtime/metro/01655__.js");
   const items4 = [c9, height];
   _require = undefined;
   [tmp13, tmp14] = items4;
@@ -103,8 +103,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx3.__closure = items5;
   useDraggablePipTsx3.__workletHash = 13817744495277;
   useDraggablePipTsx3.__initData = tmp13;
-  const derivedValue2 = require("../../../../_runtime/metro/01652__.js").useDerivedValue(useDraggablePipTsx3);
-  const tmp2Result14 = require("../../../../_runtime/metro/01652__.js");
+  const derivedValue2 = require("../../../../_runtime/metro/01655__.js").useDerivedValue(useDraggablePipTsx3);
+  const tmp2Result14 = require("../../../../_runtime/metro/01655__.js");
   const items6 = [c10, derivedValue, width];
   _require = undefined;
   [tmp16, tmp17, tmp18] = items6;
@@ -115,8 +115,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx4.__closure = items7;
   useDraggablePipTsx4.__workletHash = 4679088203701;
   useDraggablePipTsx4.__initData = tmp16;
-  const derivedValue3 = require("../../../../_runtime/metro/01652__.js").useDerivedValue(useDraggablePipTsx4);
-  const tmp2Result15 = require("../../../../_runtime/metro/01652__.js");
+  const derivedValue3 = require("../../../../_runtime/metro/01655__.js").useDerivedValue(useDraggablePipTsx4);
+  const tmp2Result15 = require("../../../../_runtime/metro/01655__.js");
   const items8 = [c11, derivedValue, height];
   _require = undefined;
   [tmp20, tmp21, tmp22] = items8;
@@ -127,8 +127,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx5.__closure = items9;
   useDraggablePipTsx5.__workletHash = 14486531035348;
   useDraggablePipTsx5.__initData = tmp20;
-  const derivedValue4 = require("../../../../_runtime/metro/01652__.js").useDerivedValue(useDraggablePipTsx5);
-  const tmp2Result16 = require("../../../../_runtime/metro/01652__.js");
+  const derivedValue4 = require("../../../../_runtime/metro/01655__.js").useDerivedValue(useDraggablePipTsx5);
+  const tmp2Result16 = require("../../../../_runtime/metro/01655__.js");
   const items10 = [closure_12, containerWidth];
   _require = undefined;
   [tmp24, tmp25] = items10;
@@ -139,8 +139,8 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx6.__closure = items11;
   useDraggablePipTsx6.__workletHash = 10331837421608;
   useDraggablePipTsx6.__initData = tmp24;
-  const derivedValue5 = require("../../../../_runtime/metro/01652__.js").useDerivedValue(useDraggablePipTsx6);
-  const tmp2Result17 = require("../../../../_runtime/metro/01652__.js");
+  const derivedValue5 = require("../../../../_runtime/metro/01655__.js").useDerivedValue(useDraggablePipTsx6);
+  const tmp2Result17 = require("../../../../_runtime/metro/01655__.js");
   const items12 = [closure_13, containerHeight];
   _require = undefined;
   [tmp27, tmp28] = items12;
@@ -151,18 +151,18 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx7.__closure = items13;
   useDraggablePipTsx7.__workletHash = 15634754187305;
   useDraggablePipTsx7.__initData = tmp27;
-  const derivedValue6 = require("../../../../_runtime/metro/01652__.js").useDerivedValue(useDraggablePipTsx7);
-  const tmp2Result18 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const tmp2Result19 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(sharedValue.get());
-  const tmp2Result20 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const tmp2Result21 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue3 = require("../../../../_runtime/metro/01652__.js").useSharedValue(sharedValue2.get());
-  const tmp2Result22 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue4 = require("../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const tmp2Result23 = require("../../../../_runtime/metro/01652__.js");
+  const derivedValue6 = require("../../../../_runtime/metro/01655__.js").useDerivedValue(useDraggablePipTsx7);
+  const tmp2Result18 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const tmp2Result19 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(sharedValue.get());
+  const tmp2Result20 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const tmp2Result21 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue3 = require("../../../../_runtime/metro/01655__.js").useSharedValue(sharedValue2.get());
+  const tmp2Result22 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue4 = require("../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const tmp2Result23 = require("../../../../_runtime/metro/01655__.js");
   const items14 = [closure_14, containerWidth, derivedValue3, sharedValue1];
   _require = undefined;
   [tmp33, tmp34, tmp35, tmp36] = items14;
@@ -206,11 +206,11 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx9.__closure = items17;
   useDraggablePipTsx9.__workletHash = 11336346908651;
   useDraggablePipTsx9.__initData = tmp38;
-  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     useDraggablePipTsx8,
     useDraggablePipTsx9,
   );
-  const tmp2Result24 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result24 = require("../../../../_runtime/metro/01655__.js");
   const items18 = [closure_16, containerHeight, derivedValue4, sharedValue3];
   _require = undefined;
   [tmp44, tmp45, tmp46, tmp47] = items18;
@@ -257,12 +257,12 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx11.__closure = items21;
   useDraggablePipTsx11.__workletHash = 14934070264554;
   useDraggablePipTsx11.__initData = tmp48;
-  const animatedReaction1 = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     useDraggablePipTsx10,
     useDraggablePipTsx11,
   );
-  const Gesture = tmp2(5535).Gesture;
-  const tmp2Result25 = require("../../../../_runtime/metro/01652__.js");
+  const Gesture = tmp2(5598).Gesture;
+  const tmp2Result25 = require("../../../../_runtime/metro/01655__.js");
   const items22 = [-c5, c5];
   const PanResult = Gesture.Pan();
   const items23 = [-c5, c5];
@@ -275,7 +275,7 @@ export function useDraggablePip(size1) {
     sharedValue2,
     sharedValue4,
     onMoved,
-    require("../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01708__.js").scheduleOnRN,
   ];
   _require = undefined;
   c6 = undefined;
@@ -396,13 +396,13 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx13.__workletHash = 12738554963651;
   useDraggablePipTsx13.__initData = tmp62;
   const onUpdateResult = Gesture.Pan().activeOffsetX(items22).activeOffsetY(items23).onUpdate(useDraggablePipTsx12);
-  const Gesture2 = tmp2(5535).Gesture;
+  const Gesture2 = tmp2(5598).Gesture;
   const onEndResult = Gesture.Pan()
     .activeOffsetX(items22)
     .activeOffsetY(items23)
     .onUpdate(useDraggablePipTsx12)
     .onEnd(useDraggablePipTsx13);
-  const items28 = [closure_20, onPress, require("../../../../_runtime/metro/01705__.js").scheduleOnRN];
+  const items28 = [closure_20, onPress, require("../../../../_runtime/metro/01708__.js").scheduleOnRN];
   [tmp76, tmp77, tmp78] = items28;
   function useDraggablePipTsx14() {
     if (null != c0) {
@@ -414,7 +414,7 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx14.__workletHash = 16181399743221;
   useDraggablePipTsx14.__initData = tmp76;
   const TapResult = Gesture2.Tap();
-  const Gesture3 = tmp2(5535).Gesture;
+  const Gesture3 = tmp2(5598).Gesture;
   const onStartResult = Gesture2.Tap().onStart(useDraggablePipTsx14);
   const RaceResult = Gesture3.Race(onEndResult, Gesture2.Tap().onStart(useDraggablePipTsx14));
   const items30 = [
@@ -455,9 +455,9 @@ export function useDraggablePip(size1) {
   useDraggablePipTsx15.__closure = items31;
   useDraggablePipTsx15.__workletHash = 13245105428304;
   useDraggablePipTsx15.__initData = tmp81;
-  const tmp2Result26 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result26 = require("../../../../_runtime/metro/01655__.js");
   return {
     gesture: RaceResult,
-    draggableGridItemStyles: require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(useDraggablePipTsx15),
+    draggableGridItemStyles: require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(useDraggablePipTsx15),
   };
 }

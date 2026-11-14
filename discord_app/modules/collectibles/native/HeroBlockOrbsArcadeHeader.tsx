@@ -7,9 +7,9 @@ import native from "../../../../discord_common/js/packages/design/native.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import inlineStyles from "../../../../_runtime/08197_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08263_inlineStyles.js";
 import QuestUtils from "../../quests/native/QuestUtils.native.tsx";
-import _modDef18373 from "../../../../discord_assets/assets/orbs_arcade/shop_header.mp4.js";
+import _modDef18496 from "../../../../discord_assets/assets/orbs_arcade/shop_header.mp4.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -255,12 +255,12 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 let c12 = 289;
 const PX_16 = nativeDefault.space.PX_16;
-const AssetUtils = fn(10077);
-const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef18373);
+const AssetUtils = fn(10146);
+const metadata = AssetUtils.convertVideoToFirstFrameImageWithMediaProxy(_modDef18496);
 const PX_48 = nativeDefault.space.PX_48;
 const ellipse = { cx: 85.5, cy: 267.5, rx: 329, ry: 217, rotation: 63 };
 const ellipse2 = { cx: 67, cy: 231, rx: 185, ry: 155 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj4 = {
   header: { justifyContent: "flex-end" },
   art: null,

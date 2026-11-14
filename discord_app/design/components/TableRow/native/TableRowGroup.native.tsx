@@ -29,7 +29,7 @@ class TableRowGroupTitle {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { flexShrink: 0 },
   content: {
@@ -62,7 +62,14 @@ const result = size.fileFinishedImporting("design/components/TableRow/native/Tab
 
 export { TableRowGroupTitle };
 export function TableRowGroup(accessibilityLabel) {
-  ({ title, description, helperText, hasIcons: require, hasTrailingText } = accessibilityLabel);
+  ({
+    title,
+    description,
+    helperText,
+    hasIcons: require,
+    isSortable: importDefault,
+    hasTrailingText,
+  } = accessibilityLabel);
   if (hasTrailingText === undefined) {
     hasTrailingText = false;
   }
@@ -71,20 +78,20 @@ export function TableRowGroup(accessibilityLabel) {
     str = "none";
   }
   const tmp = closure_8();
-  importDefault = false;
+  dependencyMap = false;
   const Children = noop.Children;
   const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
   const mapped = Children.map(accessibilityLabel.children, (arg0) => {
     if (null == arg0) {
       return null;
-    } else if (c1) {
+    } else if (c2) {
       const obj = { children: null };
-      const obj2 = { adjustSpacingForIcon };
+      const obj2 = { adjustSpacingForIcon, adjustSpacingForDragHandle };
       items = [hasOwnProperty(TableRowDivider.TableRowDivider, obj2), arg0];
       obj.children = items;
       const tmp2 = metroImportDefault(timestampProducer, obj);
     } else {
-      c1 = true;
+      c2 = true;
     }
   });
   let obj2 = { style: tmp.container, children: null };

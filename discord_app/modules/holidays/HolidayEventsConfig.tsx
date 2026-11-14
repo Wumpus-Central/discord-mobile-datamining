@@ -2,8 +2,8 @@
 import util from "../../intl/index.native.tsx";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import Constants from "../soundpacks/Constants.tsx";
-import _modDef20103 from "../../../_runtime/metro/20103__.js";
-import _modDef20104 from "../../../_runtime/metro/20104__.js";
+import _modDef20263 from "../../../_runtime/metro/20263__.js";
+import _modDef20264 from "../../../_runtime/metro/20264__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
@@ -19,7 +19,7 @@ const obj = {
   isDesktopOnly: true,
   soundpack: Constants.Soundpacks.HALLOWEEN,
   soundpackLabel: util.t["+LasFV"],
-  appSpinnerSources: { webmDark: _modDef20103, webmLight: _modDef20104 },
+  appSpinnerSources: { webmDark: _modDef20263, webmLight: _modDef20264 },
   getLoadingTips() {
     const intl = util.intl;
     items = [intl.string(util.t.ydMZ2o), , , , , , , , , , , ,];

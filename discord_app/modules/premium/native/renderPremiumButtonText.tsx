@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function PremiumText(basePlanId) {
-  ({ style, isCurrentPlan, isGift, product, text } = basePlanId);
+  ({ style, isCurrentPlan, isGift, product, priceString, text } = basePlanId);
   const tmp = closure_9();
   const intervalType = PremiumUtilsDefault.getInterval(basePlanId.basePlanId).intervalType;
   let combined = null;
@@ -41,9 +41,12 @@ function PremiumText(basePlanId) {
     obj2.children = items;
     return React5(View, obj2);
   } else {
-    let priceString;
-    if (product != null) {
-      priceString = product.priceString;
+    if (priceString == null) {
+      let priceString1;
+      if (product != null) {
+        priceString1 = product.priceString;
+      }
+      priceString = priceString1;
     }
     if (priceString == null) {
       priceString = hasOwnProperty;
@@ -73,7 +76,7 @@ function PremiumText(basePlanId) {
   }
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({
   PREMIUM_YEARLY_DISCOUNT_PERCENT: closure_4,
   PRICE_PLACEHOLDER: hasOwnProperty,
@@ -81,10 +84,10 @@ const PremiumConstants = fn(1387);
 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { discount: null, premiumText: null };
 let obj3 = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
-const ColorUtils = fn(5240);
+const ColorUtils = fn(5303);
 obj3.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.3);
 obj2.discount = obj3;
 obj2.premiumText = { flexDirection: "row" };

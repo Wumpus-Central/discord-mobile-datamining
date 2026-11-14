@@ -3,6 +3,7 @@ import WidgetType from "../../../discord_common/js/shared/shared-constants/Widge
 import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
+  WidgetType.WidgetType.APPLICATION,
   WidgetType.WidgetType.FAVORITE_GAMES,
   WidgetType.WidgetType.PLAYED_GAMES,
   WidgetType.WidgetType.CURRENT_GAMES,

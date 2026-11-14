@@ -8,7 +8,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1072);
 ({ ME: closure_6, Routes: metroImportDefault } = Constants);
-const MessageSendLocation = fn(5248).MessageSendLocation;
+const MessageSendLocation = fn(5311).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWave.native.tsx");
 

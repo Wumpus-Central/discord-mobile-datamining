@@ -47,7 +47,7 @@ let closure_4 = async function _openFrameInAppChannel(arg0) {
     analyticsContext: closure_129_2,
     launch: closure_129_3,
   } = closure_0);
-  return "flexDirection";
+  return "Path";
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/openFrameInAppChannel.tsx");

@@ -3,11 +3,11 @@ import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx
 import util from "../../intl/index.native.tsx";
 import native from "../../design/void/native.tsx";
 import useWindowDimensions from "../../modules/screen/useWindowDimensions.native.tsx";
-import _mod1652 from "../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../_runtime/metro/01655__.js";
 import timing_timing from "../../design/animation/reanimated/timing/timing.tsx";
 import spring_spring from "../../design/animation/reanimated/spring/spring.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7582 from "../../../_runtime/metro/07582__.js";
+import _modDef7648 from "../../../_runtime/metro/07648__.js";
 import Upload from "../../lib/uploader/Upload.tsx";
 import AttachmentPreviewDefault from "../../modules/media/native/AttachmentPreview.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmentActionCreators.tsx";
@@ -18,7 +18,7 @@ import UploadAttachmentStore from "../../stores/UploadAttachmentStore.tsx";
 
 require = fn;
 function useTileEntranceAnimatedStyle(itemKey) {
-  const sharedValue = _mod1652.useSharedValue(0);
+  const sharedValue = _mod1655.useSharedValue(0);
   items = [sharedValue, itemKey];
   const effect = noop.useEffect(() => {
     const result = _undefined.set(1);
@@ -45,7 +45,7 @@ function useTileEntranceAnimatedStyle(itemKey) {
   ImageCarouselTsx1.__closure = items2;
   ImageCarouselTsx1.__workletHash = 15302288183822;
   ImageCarouselTsx1.__initData = tmp3;
-  return _mod1652.useAnimatedStyle(ImageCarouselTsx1);
+  return _mod1655.useAnimatedStyle(ImageCarouselTsx1);
 }
 function Tile(onEdit) {
   onEdit = onEdit.onEdit;
@@ -384,14 +384,14 @@ class ImageCarouselRow {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(8658).DraftType;
-const ImageCarouselConstants = fn(11565);
+const DraftType = fn(8725).DraftType;
+const ImageCarouselConstants = fn(11632);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   container: { width: "100%" },
   pressableContainer: { marginHorizontal: 4 },

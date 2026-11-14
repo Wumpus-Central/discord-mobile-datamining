@@ -1,16 +1,16 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/sort/CommandListSortButton.tsx
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../../../_runtime/02121_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const CommandListSortOrder = fn(13365).CommandListSortOrder;
+const CommandListSortOrder = fn(13470).CommandListSortOrder;
 const ANDROID_FOREGROUND_RIPPLE = fn(1191).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { overflow: "hidden", borderRadius: nativeDefault.radii.xxl }, button: null };
 const obj3 = { overflow: "hidden", borderRadius: nativeDefault.radii.xxl };
 obj2.button = {
@@ -45,7 +45,7 @@ export default function CommandListSortButton(sortOrder) {
     style: tmp.container,
     onPress: function handlePress() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(13381, dependencyMap.paths),
+        asyncRequireImpl(13486, dependencyMap.paths),
         "CommandListSortActionSheet",
         {
           sortOrder,
@@ -60,10 +60,10 @@ export default function CommandListSortButton(sortOrder) {
   };
   const obj2 = { style: tmp.button, children: null };
   items = [
-    closure_6(sortOrder(5866).Text, { variant: "body-sm/medium", color: "text-default", children: stringResult }),
-    closure_6(sortOrder(10491).ChevronSmallDownIcon, { size: "xs", color: onSortOptionPress(575).colors.TEXT_DEFAULT }),
+    closure_6(sortOrder(5929).Text, { variant: "body-sm/medium", color: "text-default", children: stringResult }),
+    closure_6(sortOrder(10560).ChevronSmallDownIcon, { size: "xs", color: onSortOptionPress(575).colors.TEXT_DEFAULT }),
   ];
   obj2.children = items;
   obj.children = closure_7(View, obj2);
-  return closure_6(sortOrder(7364).PressableOpacity, obj);
+  return closure_6(sortOrder(7428).PressableOpacity, obj);
 }

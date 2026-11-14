@@ -3,8 +3,8 @@ import useStateFromStores from "../../../../discord_common/js/packages/flux/useS
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef1652 from "../../../../_runtime/metro/01652__.js";
-import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
+import _modDef1655 from "../../../../_runtime/metro/01655__.js";
+import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -115,7 +115,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   obj3.type = require("discord_common/AnalyticsUtils").ImpressionTypes.VIEW;
   obj3.name = require("discord_common/AnalyticsUtils").ImpressionNames.DOUBLE_TAP_REACT_UPSELL;
   useTrackImpressionDefault(obj3);
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
   const items1 = [sharedValue, first, first1];
   const effect = easing.useEffect(() => {
     if (first1) {
@@ -124,12 +124,12 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
       const result1 = set(c3);
     }
   }, items1);
-  const obj4 = require("../../../../_runtime/metro/01652__.js");
+  const obj4 = require("../../../../_runtime/metro/01655__.js");
   const items2 = [
     closure_15,
     stateFromStores,
     sharedValue,
-    require("../../../../_runtime/metro/01652__.js").withDelay,
+    require("../../../../_runtime/metro/01655__.js").withDelay,
     require("timing/timing").withTiming,
     require("native").DECELERATED_EASING,
   ];
@@ -164,7 +164,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   DoubleTapToReactChatInputBannerTsx1.__closure = items3;
   DoubleTapToReactChatInputBannerTsx1.__workletHash = 11366133549482;
   DoubleTapToReactChatInputBannerTsx1.__initData = tmp14;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     DoubleTapToReactChatInputBannerTsx1,
   );
   const items4 = [emoji, markAsDismissed];
@@ -174,7 +174,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   const items5 = [markAsDismissed];
   const callback1 = obj.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14679, dependencyMap.paths),
+      asyncRequireImpl(14792, dependencyMap.paths),
       "DoubleTapToReactActionSheet",
       { emoji },
     );
@@ -198,7 +198,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
       _undefined2(ContentDismissActionType.AUTO_DISMISS);
     }
   }, items6);
-  const obj5 = require("../../../../_runtime/metro/01652__.js");
+  const obj5 = require("../../../../_runtime/metro/01655__.js");
   const unmountEffect = require("hooks/useMountEffect").useUnmountEffect(() => {
     _undefined2(ContentDismissActionType.AUTO_DISMISS);
   });
@@ -225,17 +225,17 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
     androidRippleConfig,
     children: closure_9(DoubleTapToReactChatInputBannerInner, { emoji, handleDismissBanner: callback2 }),
   });
-  items7[1] = closure_9(_modDef1652.View, obj8);
+  items7[1] = closure_9(_modDef1655.View, obj8);
   obj6.children = items7;
   return closure_10(closure_11, obj6);
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
-const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
 const androidRippleConfig = { cornerRadius: 0 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   animatedContainer: {
     borderTopWidth: 1,
@@ -274,13 +274,13 @@ obj2.emojiContainer = {
   padding: 12,
 };
 obj2.emoji = { width: 28, height: 28 };
-let PlatformUtils = fn(1377);
+let PlatformUtils = fn(1380);
 let num = 22;
 if (PlatformUtils.isIOS()) {
   num = 28;
 }
 let obj7 = { fontSize: num, textAlign: "center", lineHeight: null, color: null };
-PlatformUtils = fn(1377);
+PlatformUtils = fn(1380);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;

@@ -2,8 +2,8 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ComponentDispatchUtils from "../../../utils/ComponentDispatchUtils.tsx";
 import util from "../../../intl/index.native.tsx";
-import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ThermalUtilsDefault from "../../device/ThermalUtils.native.tsx";
@@ -19,7 +19,7 @@ import EmbeddedActivitiesManager from "../EmbeddedActivitiesManager.tsx";
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, ComponentActions: metroImportDefault } = Constants);
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);

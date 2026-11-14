@@ -19,6 +19,7 @@ export const GAME_COVER_ASPECT_RATIO = 0.75;
 export const GAME_COVER_BORDER_RADIUS = nativeDefault.radii.sm;
 export const GAME_COVER_GRID_GAP = nativeDefault.space.PX_16;
 export const GAME_COVER_DETAILS_GAP = nativeDefault.space.PX_12;
+export const WIDGET_FOCUS_DELAY_MS = 100;
 export const WIDGET_GAME_TAG_METADATA = widgetGameTagMetadata;
 export function getWidgetGameTagMetadata(item) {
   let tmp2 = null;

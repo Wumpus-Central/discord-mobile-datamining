@@ -2,8 +2,8 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3237 from "../../Checkpoint.messages.js";
-import _modDef3269 from "../../Checkpoint2026.messages.js";
+import _modDef3285 from "../../Checkpoint.messages.js";
+import _modDef3317 from "../../Checkpoint2026.messages.js";
 import CheckpointCustomizationUtils from "../../CheckpointCustomizationUtils.tsx";
 import CheckpointStatsUtils from "../../CheckpointStatsUtils.tsx";
 import GameControllerIcon from "../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
@@ -21,10 +21,10 @@ import CheckpointStore from "../../CheckpointStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6314).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6377).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   stat: { maxWidth: 144, alignItems: "flex-start" },
   label: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 },
@@ -58,7 +58,7 @@ export default function CheckpointCustomizationStat(customizationOption) {
     }
     obj2.percentile = prop;
     const intl6 = util.intl;
-    obj2.title = intl6.string(_modDef3269["3/T12E"]);
+    obj2.title = intl6.string(_modDef3317["3/T12E"]);
     let tmp8 = obj2;
   } else if (CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT === customizationOption) {
     const obj3 = { Icon: ChatIcon.ChatIcon, statType: "messages", value: null, percentile: null, title: null };
@@ -79,7 +79,7 @@ export default function CheckpointCustomizationStat(customizationOption) {
     }
     obj3.percentile = prop1;
     const intl5 = util.intl;
-    obj3.title = intl5.string(_modDef3237.wWKySP);
+    obj3.title = intl5.string(_modDef3285.wWKySP);
     tmp8 = obj3;
   } else if (CheckpointCustomizationUtils.CheckpointCustomizationOption.HAT === customizationOption) {
     const obj4 = { Icon: ServerIcon.ServerIcon, statType: "topServerDays", value: null, percentile: null, title: null };
@@ -106,7 +106,7 @@ export default function CheckpointCustomizationStat(customizationOption) {
     }
     obj4.percentile = prop2;
     const intl4 = util.intl;
-    obj4.title = intl4.string(_modDef3269["M+a+t1"]);
+    obj4.title = intl4.string(_modDef3317["M+a+t1"]);
     tmp8 = obj4;
   } else if (CheckpointCustomizationUtils.CheckpointCustomizationOption.SHOES === customizationOption) {
     const obj5 = {
@@ -133,7 +133,7 @@ export default function CheckpointCustomizationStat(customizationOption) {
     }
     obj5.percentile = prop3;
     const intl3 = util.intl;
-    obj5.title = intl3.string(_modDef3269.ZTDCIv);
+    obj5.title = intl3.string(_modDef3317.ZTDCIv);
     tmp8 = obj5;
   } else if (CheckpointCustomizationUtils.CheckpointCustomizationOption.WEARABLE === customizationOption) {
     const obj6 = {
@@ -160,7 +160,7 @@ export default function CheckpointCustomizationStat(customizationOption) {
     }
     obj6.percentile = prop4;
     const intl2 = util.intl;
-    obj6.title = intl2.string(_modDef3269.HM2fjf);
+    obj6.title = intl2.string(_modDef3317.HM2fjf);
     tmp8 = obj6;
   } else {
     tmp8 = null;
@@ -189,7 +189,7 @@ export default function CheckpointCustomizationStat(customizationOption) {
       }
       obj7.percentile = prop5;
       const intl = util.intl;
-      obj7.title = intl.string(_modDef3269["4N5p4D"]);
+      obj7.title = intl.string(_modDef3317["4N5p4D"]);
       tmp8 = obj7;
     }
   }
@@ -209,7 +209,7 @@ export default function CheckpointCustomizationStat(customizationOption) {
     if (null != checkpointTopPercent) {
       const intl7 = util.intl;
       const obj8 = { percent: checkpointTopPercent };
-      formatToPlainStringResult = intl7.formatToPlainString(_modDef3269.fOGKA4, obj8);
+      formatToPlainStringResult = intl7.formatToPlainString(_modDef3317.fOGKA4, obj8);
     }
     const tmp2Result3 = CheckpointStatsUtils;
     const result1 = CheckpointNumberUtils.formatCheckpointStatAccessibilityLabel(tmp8.statType, rounded);
@@ -217,7 +217,7 @@ export default function CheckpointCustomizationStat(customizationOption) {
     if (null != formatToPlainStringResult) {
       const intl8 = util.intl;
       const obj9 = { stat: result1, percentile: formatToPlainStringResult };
-      formatToPlainStringResult1 = intl8.formatToPlainString(_modDef3269.OxxTjh, obj9);
+      formatToPlainStringResult1 = intl8.formatToPlainString(_modDef3317.OxxTjh, obj9);
     }
     const obj10 = { style: tmp.stat, accessible: true, accessibilityLabel: formatToPlainStringResult1, children: null };
     let tmp41 = null != formatToPlainStringResult;

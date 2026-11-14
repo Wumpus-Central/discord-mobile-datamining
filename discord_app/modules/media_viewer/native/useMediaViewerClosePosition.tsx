@@ -62,7 +62,7 @@ export default function useMediaViewerClosePosition(index) {
   useMediaViewerClosePositionTsx1.__closure = items2;
   useMediaViewerClosePositionTsx1.__workletHash = 7521936949267;
   useMediaViewerClosePositionTsx1.__initData = tmp6;
-  const items3 = [closure_7, require("../../../../_runtime/metro/01705__.js").scheduleOnRN, callback];
+  const items3 = [closure_7, require("../../../../_runtime/metro/01708__.js").scheduleOnRN, callback];
   _require = undefined;
   importDefault = undefined;
   [tmp8, tmp9, tmp10] = items3;
@@ -73,7 +73,7 @@ export default function useMediaViewerClosePosition(index) {
   useMediaViewerClosePositionTsx2.__closure = items4;
   useMediaViewerClosePositionTsx2.__workletHash = 6277806213986;
   useMediaViewerClosePositionTsx2.__initData = tmp8;
-  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     useMediaViewerClosePositionTsx1,
     useMediaViewerClosePositionTsx2,
   );

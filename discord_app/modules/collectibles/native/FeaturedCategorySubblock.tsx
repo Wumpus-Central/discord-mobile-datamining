@@ -7,14 +7,14 @@ import VisibilitySensorDefault from "VisibilitySensor.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
-const FastImageDefault = tmp12(5957);
+const FastImageDefault = tmp12(6020);
 require = fn;
 let closure_4 = fn(1074).CollectiblesMobileShopScreen;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, UserSettingsSections: closure_6 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_9 = createStyles.createStyles({
   container: { position: "relative" },
   bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" },
@@ -26,13 +26,13 @@ let result = size.fileFinishedImporting("modules/collectibles/native/FeaturedCat
 export default function _default(subblock) {
   subblock = subblock.subblock;
   const tmp = closure_9();
-  importDefault = subblock(1499).useNavigation();
-  let obj = subblock(1499);
-  dependencyMap = subblock(9352).useCollectiblesAnalyticsContext();
+  importDefault = subblock(1502).useNavigation();
+  let obj = subblock(1502);
+  dependencyMap = subblock(9420).useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
-  let obj2 = subblock(9352);
-  closure_3 = subblock(10377).useIsInImprovedMobileShopLoading();
-  const obj3 = subblock(10377);
+  let obj2 = subblock(9420);
+  closure_3 = subblock(10446).useIsInImprovedMobileShopLoading();
+  const obj3 = subblock(10446);
   items = [closure_3];
   const stateFromStores = subblock(504).useStateFromStores(items, () =>
     CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId),
@@ -52,14 +52,14 @@ export default function _default(subblock) {
     date = new Date(unpublishedAt);
   }
   let obj6 = {
-    onChange: subblock(18376).useTrackProductCardImpression(
+    onChange: subblock(18499).useTrackProductCardImpression(
       subblock.categoryStoreListingId,
       "mobile_home",
       "featured_block",
     ).handleCardVisibilityChange,
     children: null,
   };
-  let obj5 = subblock(18376);
+  let obj5 = subblock(18499);
   const obj7 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -148,13 +148,13 @@ export default function _default(subblock) {
   }
   const items1 = [tmp11Result];
   const obj9 = { radius: nativeDefault.radii.lg };
-  let result = subblock(8431).shouldShowLimitedTimeBadge(date);
+  let result = subblock(8497).shouldShowLimitedTimeBadge(date);
   if (result) {
     const obj12 = { style: tmp.limitedTimeBadge };
-    result = closure_7(tmp2(9365).LimitedTimeBadge, obj12);
+    result = closure_7(tmp2(9433).LimitedTimeBadge, obj12);
   }
   items1[1] = result;
   obj7.children = items1;
-  obj6.children = closure_8(subblock(7364).PressableOpacity, obj7);
+  obj6.children = closure_8(subblock(7428).PressableOpacity, obj7);
   return closure_7(tmp13, obj6);
 }

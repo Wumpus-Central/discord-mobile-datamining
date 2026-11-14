@@ -4,18 +4,18 @@ import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import KeyboardTypes from "KeyboardTypes.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import KeyboardChatScrollView from "../../../../_runtime/01641_KeyboardChatScrollView.js";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import KeyboardChatScrollView from "../../../../_runtime/01644_KeyboardChatScrollView.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import useKeyboardType from "useKeyboardType.tsx";
-import Portal from "../../../../_runtime/05445_Portal.js";
+import Portal from "../../../../_runtime/05508_Portal.js";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { keyboardStickyFooter: null };
 const rect = {
   position: "absolute",
@@ -56,7 +56,7 @@ export default function PortalKeyboardFooterIOS(portalHostName) {
   const keyboardTypeSharedValue = useKeyboardType.useKeyboardTypeSharedValue();
   items = [
     _undefined4,
-    _mod1652.interpolate,
+    _mod1655.interpolate,
     progress,
     useSafeAreaInsetsDefault().bottom,
     flag,
@@ -115,7 +115,7 @@ export default function PortalKeyboardFooterIOS(portalHostName) {
   PortalKeyboardFooterIOSIosTsx1.__closure = items1;
   PortalKeyboardFooterIOSIosTsx1.__workletHash = 5822849225954;
   PortalKeyboardFooterIOSIosTsx1.__initData = tmp8;
-  animatedStyle = _mod1652.useAnimatedStyle(PortalKeyboardFooterIOSIosTsx1);
+  animatedStyle = _mod1655.useAnimatedStyle(PortalKeyboardFooterIOSIosTsx1);
   let items2 = [animatedStyle, tmp, flag2, bottomSheetContainerStyle];
   const memo = noop.useMemo(() => {
     items = [_undefined.keyboardStickyFooter, animatedStyle];
@@ -126,5 +126,5 @@ export default function PortalKeyboardFooterIOS(portalHostName) {
     items[2] = tmp;
     return items;
   }, items2);
-  return jsx(_modDef1652.View, { style: memo, children: jsx(Portal.PortalHost, { name: str }) });
+  return jsx(_modDef1655.View, { style: memo, children: jsx(Portal.PortalHost, { name: str }) });
 }

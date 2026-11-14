@@ -1,16 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import ClientThemesOverrides from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: {
     position: "absolute",
@@ -42,7 +42,7 @@ export default function ChannelScreenAnimatedFrame(arg0) {
   ({ translateX, maxWidth, isChatLockedOpen } = arg0);
   const tmp = closure_6();
   const top = useSafeAreaInsetsDefault().top;
-  items = [closure_7, isChatLockedOpen, _mod1652.interpolate, translateX, maxWidth, _mod1652.Extrapolation];
+  items = [closure_7, isChatLockedOpen, _mod1655.interpolate, translateX, maxWidth, _mod1655.Extrapolation];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -70,8 +70,8 @@ export default function ChannelScreenAnimatedFrame(arg0) {
   ChannelScreenAnimatedFrameTsx1.__closure = items1;
   ChannelScreenAnimatedFrameTsx1.__workletHash = 9515959290845;
   ChannelScreenAnimatedFrameTsx1.__initData = tmp5;
-  const animatedStyle = _mod1652.useAnimatedStyle(ChannelScreenAnimatedFrameTsx1);
-  const items2 = [closure_8, isChatLockedOpen, _mod1652.interpolate, translateX, maxWidth, _mod1652.Extrapolation];
+  const animatedStyle = _mod1655.useAnimatedStyle(ChannelScreenAnimatedFrameTsx1);
+  const items2 = [closure_8, isChatLockedOpen, _mod1655.interpolate, translateX, maxWidth, _mod1655.Extrapolation];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -100,18 +100,18 @@ export default function ChannelScreenAnimatedFrame(arg0) {
   ChannelScreenAnimatedFrameTsx2.__closure = items3;
   ChannelScreenAnimatedFrameTsx2.__workletHash = 11289548854911;
   ChannelScreenAnimatedFrameTsx2.__initData = tmp12;
-  const animatedStyle1 = _mod1652.useAnimatedStyle(ChannelScreenAnimatedFrameTsx2);
-  const tmp4Result = _mod1652;
+  const animatedStyle1 = _mod1655.useAnimatedStyle(ChannelScreenAnimatedFrameTsx2);
+  const tmp4Result = _mod1655;
   const obj2 = { children: null };
   const gradientTop = ClientThemesOverrides.useGradientTop();
   const obj3 = { pointerEvents: "none", style: null };
   const items4 = [tmp.container, { height: top }, gradientTop, animatedStyle];
   obj3.style = items4;
-  const items5 = [React3(_modDef1652.View, obj3)];
+  const items5 = [React3(_modDef1655.View, obj3)];
   const obj4 = { pointerEvents: "none", style: null };
   const items6 = [tmp.splitDivider, { top }, animatedStyle1];
   obj4.style = items6;
-  items5[1] = React3(_modDef1652.View, obj4);
+  items5[1] = React3(_modDef1655.View, obj4);
   obj2.children = items5;
   return hasOwnProperty(constants, obj2);
 }

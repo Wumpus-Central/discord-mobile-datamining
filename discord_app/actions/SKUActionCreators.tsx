@@ -326,7 +326,7 @@ let closure_11 = async function _fetchTestSKUsForApplication(arg0) {
           let body;
           c4 = 1;
           c5 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -422,7 +422,7 @@ let closure_12 = async function _previewPurchaseSku(arg0) {
           closure_129_9 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -825,6 +825,7 @@ let closure_16 = async function _purchaseSKU() {
           }
           const obj14 = {
             type: "SKU_PURCHASE_FAIL",
+            loadId: closure_135_8,
             applicationId: closure_135_0,
             skuId: closure_135_1,
             error: closure_135_18,
@@ -993,17 +994,17 @@ let closure_16 = async function _purchaseSKU() {
             obj.redirectConfirmation = false;
             c9 = 0;
             c12 = 3;
-            const tmp164 = closure_136_1(closure_136_2[4]);
+            const tmp165 = closure_136_1(closure_136_2[4]);
           }
           if (null != closure_135_9) {
             closure_135_14.country_code = closure_135_9;
           }
         }
-      } catch (tmp152) {
-        closure_10 = tmp152;
+      } catch (tmp153) {
+        closure_10 = tmp153;
         if (tmp4 === c9) {
           c12 = tmp2;
-          throw tmp152;
+          throw tmp153;
         } else {
           c11 = tmp;
         }

@@ -6,15 +6,15 @@ import InputFieldContainer from "../../Input/native/InputFieldContainer.native.t
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = prop(1113);
-const Text_Text = prop(5866);
-const NativeTextInput = prop(7576);
-const propsForNativeTextInput = prop(7579);
-const useCharacterLimitAnnouncement = prop(7795);
+const Text_Text = prop(5929);
+const NativeTextInput = prop(7642);
+const propsForNativeTextInput = prop(7645);
+const useCharacterLimitAnnouncement = prop(7861);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { area: { height: 128, textAlignVertical: "top" }, maxLengthIndicator: null };
 const rect = { position: "absolute", bottom: nativeDefault.space.PX_4, right: nativeDefault.space.PX_16 };
 obj2.maxLengthIndicator = rect;

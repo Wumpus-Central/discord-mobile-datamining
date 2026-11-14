@@ -1,6 +1,6 @@
 // discord_app/modules/launchpad/native/useLaunchPadAnimatedStyles.native.tsx
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import LaunchPadConstants from "LaunchPadConstants.tsx";
 import useAnimatedKeyboardHeightDefault from "../../keyboard/native/useAnimatedKeyboardHeight.tsx";
@@ -35,7 +35,7 @@ export default function useLaunchpadAnimatedStyles(launchPadSharedState) {
   items = [
     closure_7,
     spring_spring.withSpring,
-    _mod1652.interpolate,
+    _mod1655.interpolate,
     launchPadSharedState,
     tmp4,
     LAUNCH_PAD_SPRING_CONFIG,
@@ -100,11 +100,11 @@ export default function useLaunchpadAnimatedStyles(launchPadSharedState) {
   useLaunchPadAnimatedStylesNativeTsx2.__closure = items1;
   useLaunchPadAnimatedStylesNativeTsx2.__workletHash = 1394437830917;
   useLaunchPadAnimatedStylesNativeTsx2.__initData = tmp7;
-  const animatedStyle = _mod1652.useAnimatedStyle(useLaunchPadAnimatedStylesNativeTsx2);
+  const animatedStyle = _mod1655.useAnimatedStyle(useLaunchPadAnimatedStylesNativeTsx2);
   let items2 = [
     closure_8,
     spring_spring.withSpring,
-    _mod1652.interpolate,
+    _mod1655.interpolate,
     launchPadSharedState,
     LAUNCH_PAD_SPRING_CONFIG,
   ];
@@ -121,7 +121,7 @@ export default function useLaunchpadAnimatedStyles(launchPadSharedState) {
   useLaunchPadAnimatedStylesNativeTsx3.__workletHash = 7887737074117;
   useLaunchPadAnimatedStylesNativeTsx3.__initData = tmp19;
   let obj2 = { launchPadCoverStyles: null, launchPadStyles: null };
-  const items4 = [tmp.launchPadCover, _mod1652.useAnimatedStyle(useLaunchPadAnimatedStylesNativeTsx3)];
+  const items4 = [tmp.launchPadCover, _mod1655.useAnimatedStyle(useLaunchPadAnimatedStylesNativeTsx3)];
   obj2.launchPadCoverStyles = items4;
   const items5 = [tmp.launchPad, animatedStyle, { paddingTop: useSafeAreaInsetsDefault().top }];
   obj2.launchPadStyles = items5;

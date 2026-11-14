@@ -1,8 +1,8 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingPersistentCta.tsx
 import useStateFromStores from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
@@ -10,7 +10,7 @@ import GuildBoostingSubscribeButtonDefault from "../GuildBoostingSubscribeButton
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 const GuildIconDefault = GuildIcon;
 
 require = fn;
@@ -19,7 +19,7 @@ const AnalyticsSections = fn(1072).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { stiffness: 70, damping: 10 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   wrapper: { display: "flex", alignItems: "center", position: "absolute", width: "100%", zIndex: 1, bottom: -76 },
   innerWraper: null,
@@ -109,7 +109,7 @@ export default function GuildBoostingMarketingPersistentCta(guild) {
   GuildBoostingMarketingPersistentCtaTsx1.__closure = items2;
   GuildBoostingMarketingPersistentCtaTsx1.__workletHash = 5251879028260;
   GuildBoostingMarketingPersistentCtaTsx1.__initData = tmp5;
-  const animatedStyle = _mod1652.useAnimatedStyle(GuildBoostingMarketingPersistentCtaTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(GuildBoostingMarketingPersistentCtaTsx1);
   const obj3 = { style: null, children: null };
   const items3 = [tmp.wrapper, animatedStyle];
   obj3.style = items3;
@@ -161,6 +161,6 @@ export default function GuildBoostingMarketingPersistentCta(guild) {
   obj5.children = items6;
   obj4.children = metroImportDefault(View, obj5);
   obj3.children = timestampProducer(tmp12, obj4);
-  return timestampProducer(_modDef1652.View, obj3);
+  return timestampProducer(_modDef1655.View, obj3);
 }
 export const VISIBILITY_OFFSET = 120;

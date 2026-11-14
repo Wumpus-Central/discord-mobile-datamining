@@ -37,12 +37,12 @@ let closure_8 = async function _trackHexagonCampaignContentClicked(arg0) {
       sourceQuestContent = content;
     }
     closure_132_2 = sourceQuestContent;
-    return "flexDirection";
+    return "Path";
   })();
   iter.next();
   return iter;
 };
-const HexagonCampaignConstants = fn(5268);
+const HexagonCampaignConstants = fn(5331);
 ({ HEXAGON_CAMPAIGN_AD_CONTENT_ID: hasOwnProperty, HEXAGON_CAMPAIGN_PERK_ANALYTICS_ACTION: closure_6 } =
   HexagonCampaignConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
@@ -57,6 +57,9 @@ export const HexagonCampaignContentSurface = {
   APP_ICON_PICKER: "APP_ICON_PICKER",
   USER_PROFILE: "USER_PROFILE",
   GUILD_PROFILE: "GUILD_PROFILE",
+  EXPIRING_SOON_SHEET: "EXPIRING_SOON_SHEET",
+  EXPIRED_SHEET: "EXPIRED_SHEET",
+  EXPIRING_SOON_POPOVER: "EXPIRING_SOON_POPOVER",
 };
 export function trackHexagonCampaignContentViewed(contentSurface) {
   ({ content, sourceQuestContent } = contentSurface);

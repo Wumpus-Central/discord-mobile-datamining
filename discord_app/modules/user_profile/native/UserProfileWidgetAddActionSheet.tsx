@@ -2,19 +2,19 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef4079 from "../../conjure/intl/ConjureUntranslated.messages.js";
+import _modDef4131 from "../../conjure/intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import BottomSheetModal from "../../../../_runtime/05507_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05570_BottomSheetModal.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ConjureMobileExperiment from "../../conjure/experiments/ConjureMobileExperiment.tsx";
 import useConjureServerWidgetOffersDefault from "../../conjure/server_widgets/useConjureServerWidgetOffers.tsx";
 import turnOnConjureServerWidgetDefault from "../../conjure/server_widgets/native/turnOnConjureServerWidget.tsx";
 import UserProfileWidgetOptionAddButtonDefault from "UserProfileWidgetOptionAddButton.tsx";
+import UserProfileAddableWidgetCategories from "../UserProfileAddableWidgetCategories.tsx";
 import useAddProfileWidgetDefault from "../hooks/native/useAddProfileWidget.tsx";
 import ConjureCustomWidget from "../../conjure/custom_widget/ConjureCustomWidget.tsx";
 import UserProfileWidgetOptionConjureButtonDefault from "UserProfileWidgetOptionConjureButton.tsx";
 import useStableAddableWidgetsDefault from "../hooks/useStableAddableWidgets.tsx";
-import UserProfileAddableWidgetCategories from "../UserProfileAddableWidgetCategories.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -93,7 +93,7 @@ function hideSheet() {
 }
 function ServerWidgetOptionRow(widget) {
   widget = widget.widget;
-  const getOrFetchApplication = widget(7196).useGetOrFetchApplication(widget.applicationId);
+  const getOrFetchApplication = widget(7259).useGetOrFetchApplication(widget.applicationId);
   let str;
   if (getOrFetchApplication != null) {
     str = getOrFetchApplication.name;
@@ -102,15 +102,15 @@ function ServerWidgetOptionRow(widget) {
     str = "";
   }
   const obj2 = { icon: null, label: null, subLabel: null, onPress: null };
-  const obj = widget(7196);
-  obj2.icon = closure_6(widget(7379).TableRow.Icon, { IconComponent: widget(13361).CirclePlusIcon });
+  const obj = widget(7259);
+  obj2.icon = closure_6(widget(7443).TableRow.Icon, { IconComponent: widget(13466).CirclePlusIcon });
   obj2.label = str;
   const intl = tmp(1113).intl;
-  obj2.subLabel = intl.formatToPlainString(_modDef4079.ZZywee, { applicationName: str });
+  obj2.subLabel = intl.formatToPlainString(_modDef4131.ZZywee, { applicationName: str });
   obj2.onPress = function onPress() {
     return turnOnConjureServerWidgetDefault(widget.applicationId, hideSheet);
   };
-  return closure_6(widget(7379).TableRow, obj2);
+  return closure_6(widget(7443).TableRow, obj2);
 }
 function ServerWidgetsOptionsPage(offers) {
   offers = offers.offers;
@@ -141,7 +141,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const UserProfileWidgetAddActionSheet = "UserProfileWidgetAddActionSheet";
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { flex: 1, gap: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8 },
   tabs: null,
@@ -184,7 +184,7 @@ export default function UserProfileWidgetAddActionSheet() {
   const intl2 = require("util").intl;
   const stringResult1 = intl2.string(require("util").t.EKR8Ps);
   const intl3 = require("util").intl;
-  const stringResult2 = intl3.string(_modDef4079.OUrOHL);
+  const stringResult2 = intl3.string(_modDef4131.OUrOHL);
   const obj3 = { pageWidth: tmp2[0], items: null };
   const obj2 = require("SegmentedControlState");
   const items1 = [

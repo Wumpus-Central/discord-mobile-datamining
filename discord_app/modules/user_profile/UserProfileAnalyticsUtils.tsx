@@ -281,8 +281,8 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(AnalyticEvents.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(7158).FetchState;
-const constants = fn(8413).TrackUserProfileProperties;
+const FetchState = fn(7221).FetchState;
+const constants = fn(8479).TrackUserProfileProperties;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const StatusTypes = fn(1083).StatusTypes;
 const size = fn(2);
@@ -717,18 +717,18 @@ export function trackDmProfileToggled(displayProfile) {
   obj2.profile_has_theme_animation = null != prop;
   AnalyticsUtilsDefault.track(AnalyticEvents.DM_PROFILE_TOGGLED, obj2);
 }
-export function trackUserProfileEditAction(dependencyMap) {
-  ({ action, applicationId } = dependencyMap);
+export function trackUserProfileEditAction(result2) {
+  ({ action, applicationId } = result2);
   const obj = {};
-  ({ guildId, channelId, analyticsLocations, widgetEdited, gameId, numResults, numCharacters } = dependencyMap);
-  const merged = Object.assign(dependencyMap);
+  ({ guildId, channelId, analyticsLocations, widgetEdited, gameId, numResults, numCharacters } = result2);
+  const merged = Object.assign(result2);
   obj.action = action;
   trackUserProfileAction(obj);
   const obj3 = {};
   const obj2 = AnalyticsUtilsDefault;
   const merged1 = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
   const merged2 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(channelId));
-  const merged3 = Object.assign(getTrackUserProfileProperties(dependencyMap));
+  const merged3 = Object.assign(getTrackUserProfileProperties(result2));
   const obj6 = { application_id: applicationId, application_linked: null };
   let tmp6 = null;
   if (null != applicationId) {

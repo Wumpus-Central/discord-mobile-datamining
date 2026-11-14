@@ -3,7 +3,7 @@ import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import setAccessibilityFocus from "../../../../modules/a11y/native/setAccessibilityFocus.android.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import 01652__ from "../../../../../_runtime/metro/01652__.js";
+import 01655__ from "../../../../../_runtime/metro/01655__.js";
 
 const require = globalThis.__r;
 
@@ -42,8 +42,8 @@ function SegmentedControlPage(reportedPageIndex) {
   SegmentedControlPagesNativeTsx13.__closure = items1;
   SegmentedControlPagesNativeTsx13.__workletHash = 8284708217376;
   SegmentedControlPagesNativeTsx13.__initData = tmp4;
-  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(SegmentedControlPagesNativeTsx13);
-  let obj = require("../../../../../_runtime/metro/01652__.js");
+  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(SegmentedControlPagesNativeTsx13);
+  let obj = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [closure_20, reportedPageIndex, index];
   _require = undefined;
   importDefault = undefined;
@@ -61,11 +61,11 @@ function SegmentedControlPage(reportedPageIndex) {
   SegmentedControlPagesNativeTsx14.__closure = items3;
   SegmentedControlPagesNativeTsx14.__workletHash = 17363978333434;
   SegmentedControlPagesNativeTsx14.__initData = tmp9;
-  const animatedProps = require("../../../../../_runtime/metro/01652__.js").useAnimatedProps(SegmentedControlPagesNativeTsx14);
+  const animatedProps = require("../../../../../_runtime/metro/01655__.js").useAnimatedProps(SegmentedControlPagesNativeTsx14);
   const tmp14 = activePageRangeEnd(accessibilityElementsHidden.useState(() => _undefined.get() !== c1), 2);
   accessibilityElementsHidden = tmp14[0];
   const tmp13 = activePageRangeEnd;
-  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
   const items4 = [closure_21, reportedPageIndex, index];
   _require = undefined;
   importDefault = undefined;
@@ -79,7 +79,7 @@ function SegmentedControlPage(reportedPageIndex) {
   SegmentedControlPagesNativeTsx15.__closure = items5;
   SegmentedControlPagesNativeTsx15.__workletHash = 2423172957373;
   SegmentedControlPagesNativeTsx15.__initData = tmp16;
-  const items6 = [closure_22, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp14[1]];
+  const items6 = [closure_22, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp14[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp19, tmp20, tmp21] = items6;
@@ -93,7 +93,7 @@ function SegmentedControlPage(reportedPageIndex) {
   SegmentedControlPagesNativeTsx16.__closure = items7;
   SegmentedControlPagesNativeTsx16.__workletHash = 13860997207969;
   SegmentedControlPagesNativeTsx16.__initData = tmp19;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(SegmentedControlPagesNativeTsx15, SegmentedControlPagesNativeTsx16);
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(SegmentedControlPagesNativeTsx15, SegmentedControlPagesNativeTsx16);
   obj3.useRef(null);
   ref = obj3.useRef(accessibilityElementsHidden);
   const items8 = [accessibilityElementsHidden];
@@ -111,7 +111,7 @@ function SegmentedControlPage(reportedPageIndex) {
       const result = setAccessibilityFocus.setAccessibilityFocus(obj3);
     }
   }, items8);
-  const tmp2Result4 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result4 = require("../../../../../_runtime/metro/01655__.js");
   const items9 = [closure_23, derivedValue];
   _require = undefined;
   [tmp25, tmp26] = items9;
@@ -128,8 +128,8 @@ function SegmentedControlPage(reportedPageIndex) {
   SegmentedControlPagesNativeTsx17.__closure = items10;
   SegmentedControlPagesNativeTsx17.__workletHash = 15945321321692;
   SegmentedControlPagesNativeTsx17.__initData = tmp25;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(SegmentedControlPagesNativeTsx17);
-  const tmp2Result5 = require("../../../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(SegmentedControlPagesNativeTsx17);
+  const tmp2Result5 = require("../../../../../_runtime/metro/01655__.js");
   [tmp29, tmp30] = tmp13(accessibilityElementsHidden.useState(() => {
     let tmp2 = c1 >= _undefined3.get();
     if (tmp2) {
@@ -160,7 +160,7 @@ function SegmentedControlPage(reportedPageIndex) {
   SegmentedControlPagesNativeTsx18.__closure = items12;
   SegmentedControlPagesNativeTsx18.__workletHash = 10512750394690;
   SegmentedControlPagesNativeTsx18.__initData = tmp31;
-  const items13 = [closure_25, index, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp30];
+  const items13 = [closure_25, index, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp30];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -182,7 +182,7 @@ function SegmentedControlPage(reportedPageIndex) {
   SegmentedControlPagesNativeTsx19.__closure = items14;
   SegmentedControlPagesNativeTsx19.__workletHash = 9520394351574;
   SegmentedControlPagesNativeTsx19.__initData = tmp34;
-  const animatedReaction1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(SegmentedControlPagesNativeTsx18, SegmentedControlPagesNativeTsx19);
+  const animatedReaction1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(SegmentedControlPagesNativeTsx18, SegmentedControlPagesNativeTsx19);
   let obj2 = { ref };
   const merged1 = Object.assign(merged);
   obj2.animatedProps = animatedProps;
@@ -192,12 +192,12 @@ function SegmentedControlPage(reportedPageIndex) {
   }
   obj2.importantForAccessibility = str;
   obj2.accessibilityElementsHidden = accessibilityElementsHidden;
-  const obj4 = { freeze: tmp29, children: ref(module_1652.View, { style: animatedStyle, children: item.page }) };
+  const obj4 = { freeze: tmp29, children: ref(module_1655.View, { style: animatedStyle, children: item.page }) };
   obj2.children = ref(require("Suspender").Freeze, obj4);
-  return ref(module_1652.View, obj2, index);
+  return ref(module_1655.View, obj2, index);
 }
 let jsx = fn(21).jsx;
-let closure_6 = module_1652.createAnimatedComponent(fn(17).ScrollView);
+let closure_6 = module_1655.createAnimatedComponent(fn(17).ScrollView);
 let closure_7 = { code: "(function SegmentedControlPagesNativeTsx1(){let[activeIndex]=this.__closure;return activeIndex.get();})" };
 let closure_8 = { code: "(function SegmentedControlPagesNativeTsx2(value){let[scheduleOnRN,updateCurrentActiveIndex]=this.__closure;scheduleOnRN(updateCurrentActiveIndex,value);})" };
 let closure_9 = { code: "(function SegmentedControlPagesNativeTsx3(){let[pageIndex]=this.__closure;return pageIndex.get();})" };
@@ -240,19 +240,19 @@ export function SegmentedControlPages(arg0) {
   c3 = pageWidth;
   ({ style, bounces, onBeginDragWorklet, onEndDragWorklet, onScrollWorklet } = arg0);
   ({ visiblePageRange, scrollOverflow, pressedIndex } = state);
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(activeIndex.get());
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(activeIndex.get());
   noop = sharedValue;
-  let obj = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(activeIndex.get());
+  let obj = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(activeIndex.get());
   jsx = sharedValue1;
-  const obj2 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(undefined);
+  const obj2 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(undefined);
   c6 = noop.useRef(false);
   c7 = noop.useRef(activeIndex.get());
   const callback = noop.useCallback((current) => {
     c7.current = current;
   }, []);
-  const obj3 = require("../../../../../_runtime/metro/01652__.js");
+  const obj3 = require("../../../../../_runtime/metro/01655__.js");
   const items1 = [c7, activeIndex];
   _require = undefined;
   [tmp7, tmp8] = items1;
@@ -265,7 +265,7 @@ export function SegmentedControlPages(arg0) {
   SegmentedControlPagesNativeTsx1.__closure = items2;
   SegmentedControlPagesNativeTsx1.__workletHash = 10084739164293;
   SegmentedControlPagesNativeTsx1.__initData = tmp7;
-  const items3 = [c8, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, callback];
+  const items3 = [c8, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, callback];
   _require = undefined;
   c1 = undefined;
   [tmp9, tmp10, tmp11] = items3;
@@ -279,8 +279,8 @@ export function SegmentedControlPages(arg0) {
   SegmentedControlPagesNativeTsx2.__closure = items4;
   SegmentedControlPagesNativeTsx2.__workletHash = 8813808345172;
   SegmentedControlPagesNativeTsx2.__initData = tmp9;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(SegmentedControlPagesNativeTsx1, SegmentedControlPagesNativeTsx2);
-  const obj5 = require("../../../../../_runtime/metro/01652__.js");
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(SegmentedControlPagesNativeTsx1, SegmentedControlPagesNativeTsx2);
+  const obj5 = require("../../../../../_runtime/metro/01655__.js");
   const items5 = [memo, sharedValue];
   _require = undefined;
   [tmp13, tmp14] = items5;
@@ -306,7 +306,7 @@ export function SegmentedControlPages(arg0) {
   SegmentedControlPagesNativeTsx4.__closure = items8;
   SegmentedControlPagesNativeTsx4.__workletHash = 6338583262078;
   SegmentedControlPagesNativeTsx4.__initData = tmp15;
-  const animatedReaction1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(SegmentedControlPagesNativeTsx3, SegmentedControlPagesNativeTsx4);
+  const animatedReaction1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(SegmentedControlPagesNativeTsx3, SegmentedControlPagesNativeTsx4);
   const items9 = [onPageChangeRef];
   const callback1 = obj4.useCallback((AUTO_DISMISS) => {
     if (ref != null) {
@@ -339,7 +339,7 @@ export function SegmentedControlPages(arg0) {
       }
     }
   }, items11);
-  const items12 = [c11, pageWidth, sharedValue, require("MathUtils").roundIfClose, sharedValue1, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, callback1];
+  const items12 = [c11, pageWidth, sharedValue, require("MathUtils").roundIfClose, sharedValue1, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, callback1];
   _require = undefined;
   c1 = undefined;
   dependencyMap = undefined;
@@ -386,7 +386,7 @@ export function SegmentedControlPages(arg0) {
   SegmentedControlPagesNativeTsx5.__initData = tmp21;
   const items14 = [callback1, sharedValue, pageWidth, sharedValue1];
   const callback3 = obj4.useCallback(SegmentedControlPagesNativeTsx5, items14);
-  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult = require("../../../../../_runtime/metro/01655__.js");
   const items15 = [derivedValue, scrollTarget, onBeginDragWorklet];
   _require = undefined;
   c1 = undefined;
@@ -424,7 +424,7 @@ export function SegmentedControlPages(arg0) {
   SegmentedControlPagesNativeTsx7.__workletHash = 10732648958284;
   SegmentedControlPagesNativeTsx7.__initData = tmp32;
   obj6.onEndDrag = SegmentedControlPagesNativeTsx7;
-  const items19 = [closure_14, scrollTarget, require("MathUtils").roundIfClose, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, callback2, callback3];
+  const items19 = [closure_14, scrollTarget, require("MathUtils").roundIfClose, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, callback2, callback3];
   _require = undefined;
   c1 = undefined;
   dependencyMap = undefined;
@@ -456,7 +456,7 @@ export function SegmentedControlPages(arg0) {
   SegmentedControlPagesNativeTsx8.__workletHash = 1962375899423;
   SegmentedControlPagesNativeTsx8.__initData = tmp34;
   obj6.onMomentumEnd = SegmentedControlPagesNativeTsx8;
-  const items21 = [closure_15, sharedValue2, onScrollWorklet, items.length, pageWidth, activeIndex, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, callback2, scrollOverflow, scrollTarget, require("MathUtils").roundIfClose, callback3];
+  const items21 = [closure_15, sharedValue2, onScrollWorklet, items.length, pageWidth, activeIndex, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, callback2, scrollOverflow, scrollTarget, require("MathUtils").roundIfClose, callback3];
   _require = undefined;
   c1 = undefined;
   dependencyMap = undefined;
@@ -527,7 +527,7 @@ export function SegmentedControlPages(arg0) {
   SegmentedControlPagesNativeTsx9.__initData = tmp40;
   obj6.onScroll = SegmentedControlPagesNativeTsx9;
   const items23 = [pageWidth];
-  const tmpResult8 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult8 = require("../../../../../_runtime/metro/01655__.js");
   memo = obj4.useMemo(() => ({ flex: 1, width }), items23);
   const items24 = [sharedValue, pageWidth];
   const memo1 = obj4.useMemo(() => {
@@ -538,10 +538,10 @@ export function SegmentedControlPages(arg0) {
     const point = { x: num * c3, y: 0 };
     return point;
   }, items24);
-  const animatedScrollHandler = require("../../../../../_runtime/metro/01652__.js").useAnimatedScrollHandler(obj6);
-  const sharedValue3 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(activeIndex.get());
-  const tmpResult9 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue4 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(activeIndex.get());
+  const animatedScrollHandler = require("../../../../../_runtime/metro/01655__.js").useAnimatedScrollHandler(obj6);
+  const sharedValue3 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(activeIndex.get());
+  const tmpResult9 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue4 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(activeIndex.get());
   const items25 = [closure_27, sharedValue3, sharedValue4];
   _require = undefined;
   c1 = undefined;
@@ -559,7 +559,7 @@ export function SegmentedControlPages(arg0) {
   SegmentedControlPagesNativeTsx20.__initData = tmp57;
   const items27 = [sharedValue4, sharedValue3];
   const callback4 = obj4.useCallback(SegmentedControlPagesNativeTsx20, items27);
-  const tmpResult10 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult10 = require("../../../../../_runtime/metro/01655__.js");
   const items28 = [closure_28, activeIndex, pressedIndex];
   _require = undefined;
   c1 = undefined;
@@ -598,9 +598,9 @@ export function SegmentedControlPages(arg0) {
   SegmentedControlPagesNativeTsx22.__closure = items31;
   SegmentedControlPagesNativeTsx22.__workletHash = 3512419339638;
   SegmentedControlPagesNativeTsx22.__initData = tmp64;
-  const animatedReaction2 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(SegmentedControlPagesNativeTsx21, SegmentedControlPagesNativeTsx22);
+  const animatedReaction2 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(SegmentedControlPagesNativeTsx21, SegmentedControlPagesNativeTsx22);
   const items32 = [sharedValue3, sharedValue4];
-  const tmpResult11 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult11 = require("../../../../../_runtime/metro/01655__.js");
   [c10, c11] = c3(items32, 2);
   const tmp67 = c3(items32, 2);
   const items33 = [closure_16, scrollTarget, require("MathUtils").roundIfClose, pageWidth];
@@ -625,8 +625,8 @@ export function SegmentedControlPages(arg0) {
   SegmentedControlPagesNativeTsx10.__closure = items34;
   SegmentedControlPagesNativeTsx10.__workletHash = 2040972920411;
   SegmentedControlPagesNativeTsx10.__initData = tmp68;
-  derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(SegmentedControlPagesNativeTsx10);
-  const tmpResult12 = require("../../../../../_runtime/metro/01652__.js");
+  derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(SegmentedControlPagesNativeTsx10);
+  const tmpResult12 = require("../../../../../_runtime/metro/01655__.js");
   const items35 = [closure_17, sharedValue, derivedValue];
   _require = undefined;
   c1 = undefined;
@@ -672,7 +672,7 @@ export function SegmentedControlPages(arg0) {
   SegmentedControlPagesNativeTsx12.__closure = items38;
   SegmentedControlPagesNativeTsx12.__workletHash = 15097469489206;
   SegmentedControlPagesNativeTsx12.__initData = tmp76;
-  const animatedReaction3 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(SegmentedControlPagesNativeTsx11, SegmentedControlPagesNativeTsx12);
+  const animatedReaction3 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(SegmentedControlPagesNativeTsx11, SegmentedControlPagesNativeTsx12);
   if (0 === pageWidth) {
     return null;
   } else {
@@ -693,9 +693,9 @@ export function SegmentedControlPages(arg0) {
     let tmp83Result2 = tmp83Result;
     if (null != nativeGesture) {
       const obj8 = { gesture: nativeGesture, children: tmp83Result };
-      tmp83Result2 = tmp83(tmp(5535).GestureDetector, obj8);
+      tmp83Result2 = tmp83(tmp(5598).GestureDetector, obj8);
     }
     return tmp83Result2;
   }
-  const tmpResult13 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult13 = require("../../../../../_runtime/metro/01655__.js");
 }

@@ -7,7 +7,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-const isProjectOwner = fn(6954).isProjectOwner;
+const isProjectOwner = fn(7017).isProjectOwner;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/app_channel/useConjureChannelProject.tsx");

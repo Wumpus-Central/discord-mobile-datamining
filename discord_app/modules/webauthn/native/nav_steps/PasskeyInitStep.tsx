@@ -21,11 +21,11 @@ function CredentialList(navigation) {
   [c2, c3] = noop.useState(false);
   if (0 === credentials.length) {
     let obj2 = { style: tmp3.upsellContainer, children: null };
-    const items1 = [closure_9(tmp(17181).PasskeysSpotIllustration, { scale: 0.6 })];
+    const items1 = [closure_9(tmp(17304).PasskeysSpotIllustration, { scale: 0.6 })];
     let obj3 = { variant: "body-md/normal", style: tmp3.upsellText, children: null };
     let intl2 = tmp(1113).intl;
     obj3.children = intl2.string(tmp(1113).t.FSNwFW);
-    items1[1] = closure_9(tmp(5866).Text, obj3);
+    items1[1] = closure_9(tmp(5929).Text, obj3);
     obj2.children = items1;
     return closure_10(View, obj2);
   } else {
@@ -234,7 +234,7 @@ function CredentialList(navigation) {
       obj.subLabel = formatResult;
       return closure_1_9(navigation(_undefined[25]).TableRow, obj, label.id);
     });
-    return closure_9(tmp(7680).TableRowGroup, obj4);
+    return closure_9(tmp(7746).TableRowGroup, obj4);
   }
   const tmp4 = _slicedToArray(noop.useState(false), 2);
 }
@@ -242,7 +242,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: {
     flex: 1,

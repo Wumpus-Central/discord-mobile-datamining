@@ -1,5 +1,5 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardAccessoriesContainer.tsx
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import NativeMenuStore from "../../../native_menu/native/NativeMenuStore.tsx";
 
@@ -7,9 +7,9 @@ const require = globalThis.__r;
 
 const require = fn;
 let jsx = fn(21).jsx;
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let closure_6 = PlatformUtils.isAndroid();
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj3 = { androidContainer: { flex: 1 }, iosContainer: null };
 let merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj3.iosContainer = {};
@@ -34,7 +34,7 @@ export default function MediaKeyboardAccessoriesContainer(arg0) {
     return obj;
   }, items);
   noop.useRef(false);
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
   const items1 = [sharedValue];
   const callback = noop.useCallback(() => {
     if (!_undefined.current) {
@@ -42,7 +42,7 @@ export default function MediaKeyboardAccessoriesContainer(arg0) {
       const result = _undefined2.set(true);
     }
   }, items1);
-  let obj = require("../../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../../_runtime/metro/01655__.js");
   const tmp3 = _require;
   const items2 = [
     closure_8,
@@ -51,7 +51,7 @@ export default function MediaKeyboardAccessoriesContainer(arg0) {
     animatedIndex,
     initialPosition,
     animatedPosition,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     c6,
   ];
   _require = undefined;
@@ -102,10 +102,10 @@ export default function MediaKeyboardAccessoriesContainer(arg0) {
   MediaKeyboardAccessoriesContainerTsx1.__closure = items3;
   MediaKeyboardAccessoriesContainerTsx1.__workletHash = 1441834817653;
   MediaKeyboardAccessoriesContainerTsx1.__initData = tmp7;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     MediaKeyboardAccessoriesContainerTsx1,
   );
-  let obj2 = require("../../../../../_runtime/metro/01652__.js");
+  let obj2 = require("../../../../../_runtime/metro/01655__.js");
   const items4 = [c4];
   const stateFromStores = tmp3(504).useStateFromStores(items4, () => _undefined3.isOpen());
   let str;
@@ -115,5 +115,5 @@ export default function MediaKeyboardAccessoriesContainer(arg0) {
   let obj3 = { importantForAccessibility: str, style: null, onLayout: callback, pointerEvents: "box-none", children };
   const items5 = [memo, animatedStyle];
   obj3.style = items5;
-  return jsx(_modDef1652.View, obj3);
+  return jsx(_modDef1655.View, obj3);
 }

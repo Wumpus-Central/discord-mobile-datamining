@@ -98,7 +98,7 @@ let closure_11 = async function _fetchBookmarks() {
           let body;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {

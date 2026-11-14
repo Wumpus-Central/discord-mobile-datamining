@@ -44,7 +44,7 @@ let closure_3 = async function _swapTextures(arg0) {
           closure_129_6 = undefined;
           c2 = 1;
           c3 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp5) {

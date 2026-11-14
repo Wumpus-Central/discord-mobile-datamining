@@ -1,15 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarBackground.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import _modDef7467 from "../../../../../_runtime/metro/07467__.js";
+import _modDef7533 from "../../../../../_runtime/metro/07533__.js";
 import useQuestDockAnimatedBorderRadiusDefault from "../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function YouBarMaskedBackground(barWidth) {
@@ -57,7 +57,7 @@ function YouBarMaskedBackground(barWidth) {
       backgroundColor: "black",
     },
   };
-  const tmp3 = _modDef7467;
+  const tmp3 = _modDef7533;
   const tmp4 = LinearGradientDefault;
   const obj9 = _modDef671("#000000");
   const items1 = [_modDef671("#000000").alpha(0).hex(), "#000000"];
@@ -120,7 +120,7 @@ function YouBarAnimatedBackground(arg0) {
   YouBarBackgroundTsx1.__closure = items1;
   YouBarBackgroundTsx1.__workletHash = 17537455487253;
   YouBarBackgroundTsx1.__initData = tmp8;
-  const animatedStyle = _mod1652.useAnimatedStyle(YouBarBackgroundTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(YouBarBackgroundTsx1);
   const obj3 = { style: null };
   const items2 = [
     { position: "absolute" },
@@ -130,15 +130,15 @@ function YouBarAnimatedBackground(arg0) {
     animatedStyle,
   ];
   obj3.style = items2;
-  return timestampProducer(_modDef1652.View, obj3);
+  return timestampProducer(_modDef1655.View, obj3);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(17583);
+const YouBarConstants = fn(17701);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   youRowFloating: {
     borderWidth: 1,

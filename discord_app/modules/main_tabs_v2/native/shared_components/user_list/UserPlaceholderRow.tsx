@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_8 = createStyles.createStyles((height) => {
   const obj = {
     row: { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height },
@@ -60,9 +60,9 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   _require = undefined;
   flag = undefined;
   const tmp3 = closure_8(height);
-  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(1);
+  const sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(1);
   _require = sharedValue;
-  let obj = require("../../../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../../../_runtime/metro/01655__.js");
   const tmp4 = _require;
   items = [AccessibilityStore];
   if (flag) {
@@ -71,8 +71,8 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   const items1 = [flag, sharedValue];
   const effect = noop.useEffect(() => {
     if (flag) {
-      const obj = _mod1652;
-      const obj2 = _mod1652;
+      const obj = _mod1655;
+      const obj2 = _mod1655;
       const obj4 = { duration: 2 * timingPresets.timingSlowDuration };
       const withTimingResult = timing_timing.withTiming(0.3, obj4);
       const obj6 = { duration: 2 * timingPresets.timingSlowDuration };
@@ -97,7 +97,7 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   UserPlaceholderRowTsx1.__closure = items3;
   UserPlaceholderRowTsx1.__workletHash = 5854204937948;
   UserPlaceholderRowTsx1.__initData = tmp8;
-  const animatedStyle = tmp4(1652).useAnimatedStyle(UserPlaceholderRowTsx1);
+  const animatedStyle = tmp4(1655).useAnimatedStyle(UserPlaceholderRowTsx1);
   let obj3 = { style: null, collapsable: false, children: null };
   const items4 = [tmp3.row, animatedStyle];
   obj3.style = items4;
@@ -115,5 +115,5 @@ export default noop.memo(function UserPlaceholderRow(animate) {
   obj5.children = closure_6(View, obj6);
   items5[1] = closure_6(View, obj5);
   obj3.children = items5;
-  return closure_7(flag(1652).View, obj3);
+  return closure_7(flag(1655).View, obj3);
 });

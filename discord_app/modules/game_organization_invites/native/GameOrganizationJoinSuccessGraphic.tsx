@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = 78;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { dots: { width: "auto" }, dot: null };
 let size = {
   width: nativeDefault.space.PX_6,

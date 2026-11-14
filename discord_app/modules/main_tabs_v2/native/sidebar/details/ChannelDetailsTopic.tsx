@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsTopic.tsx
-import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import MarkupUtilsDefault from "../../../../markup/MarkupUtils.tsx";
 import ChannelUtils from "../../../../../utils/ChannelUtils.tsx";
@@ -27,12 +27,12 @@ function GuildChannelDetailsTopic(channel) {
   let obj = require("ChannelDetailsTopicGradient");
   [tmp10, c6] = noop.useState();
   const tmp9 = _slicedToArray(noop.useState(), 2);
-  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(undefined);
-  const obj3 = require("../../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(undefined);
-  const obj4 = require("../../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(constants.HIDDEN);
-  const obj5 = require("../../../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(undefined);
+  const obj3 = require("../../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(undefined);
+  const obj4 = require("../../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(constants.HIDDEN);
+  const obj5 = require("../../../../../../_runtime/metro/01655__.js");
   items = [closure_17, sharedValue1, sharedValue, , , ,];
   let expanded = closure_15;
   items[3] = closure_15;
@@ -71,10 +71,10 @@ function GuildChannelDetailsTopic(channel) {
   ChannelDetailsTopicTsx1.__closure = items1;
   ChannelDetailsTopicTsx1.__workletHash = 13417147111917;
   ChannelDetailsTopicTsx1.__initData = tmp15;
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     ChannelDetailsTopicTsx1,
   );
-  const obj6 = require("../../../../../../_runtime/metro/01652__.js");
+  const obj6 = require("../../../../../../_runtime/metro/01655__.js");
   const tmp14 = sharedValue2;
   const items2 = [closure_18, sharedValue1, expanded];
   _require = undefined;
@@ -96,10 +96,10 @@ function GuildChannelDetailsTopic(channel) {
   ChannelDetailsTopicTsx2.__closure = items3;
   ChannelDetailsTopicTsx2.__workletHash = 9247180573864;
   ChannelDetailsTopicTsx2.__initData = tmp23;
-  const animatedStyle1 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     ChannelDetailsTopicTsx2,
   );
-  const tmp2Result = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp2Result = require("../../../../../../_runtime/metro/01655__.js");
   const items4 = [closure_19, require("spring/spring").withSpring, sharedValue2, tmp14];
   _require = undefined;
   importDefault = undefined;
@@ -116,7 +116,7 @@ function GuildChannelDetailsTopic(channel) {
   ChannelDetailsTopicTsx3.__workletHash = 16443247307275;
   ChannelDetailsTopicTsx3.__initData = tmp27;
   const items6 = [sharedValue2, first1];
-  const animatedStyle2 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle2 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     ChannelDetailsTopicTsx3,
   );
   const callback = obj2.useCallback((nativeEvent) => {
@@ -189,7 +189,7 @@ function GuildChannelDetailsTopic(channel) {
   if (null == memo) {
     let PressableOpacity = c5;
   } else {
-    PressableOpacity = tmp2(7364).PressableOpacity;
+    PressableOpacity = tmp2(7428).PressableOpacity;
   }
   const obj7 = {
     style: tmp.hidden,
@@ -252,7 +252,7 @@ function GuildChannelDetailsTopic(channel) {
     const obj16 = { children: null };
     const obj17 = { children: null };
     obj14.children = memo1;
-    obj17.children = closure_11(tmp2(5866).Text, obj14);
+    obj17.children = closure_11(tmp2(5929).Text, obj14);
     obj13.children = closure_11(tmp43, obj17);
     obj12.children = closure_11(PressableOpacity, obj13);
     const items16 = [closure_11(tmp45, obj12)];
@@ -262,10 +262,10 @@ function GuildChannelDetailsTopic(channel) {
     const obj19 = { style: tmp.gradient, start: null, end: null, colors: null };
     ({ START: obj23.start, END: obj23.end } = VerticalGradient);
     obj19.colors = channelTopicGradientBackground;
-    obj18.children = closure_11(tmp44(5830), obj19);
-    items16[1] = closure_11(tmp44(1652).View, obj18);
+    obj18.children = closure_11(tmp44(5893), obj19);
+    items16[1] = closure_11(tmp44(1655).View, obj18);
     obj11.children = items16;
-    items13[2] = closure_12(_modDef1652.View, obj11);
+    items13[2] = closure_12(_modDef1655.View, obj11);
     obj16.children = items13;
     return closure_12(closure_13, obj16);
   } else {
@@ -293,7 +293,7 @@ function GuildChannelDetailsTopic(channel) {
     onLayout: callback2,
     children: memo2,
   };
-  const tmp2Result2 = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp2Result2 = require("../../../../../../_runtime/metro/01655__.js");
   tmp43 = c5;
 }
 function PrivateChannelDetailsTopic(channel) {
@@ -317,7 +317,7 @@ function PrivateChannelDetailsTopic(channel) {
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5866).Text, obj2);
+    tmp4 = closure_11(channel(5929).Text, obj2);
   }
   return tmp4;
 }
@@ -333,18 +333,18 @@ function GroupDMChannelDetailsTopic(channel) {
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(5866).Text, obj2);
+    tmp4 = closure_11(channel(5929).Text, obj2);
   }
   return tmp4;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(10828);
+const ChannelDetailsConstants = fn(10897);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1072).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 },
   topic: { overflow: "hidden" },
@@ -352,7 +352,7 @@ let obj = {
   expanded: { textAlign: "center" },
   topicText: null,
 };
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let obj3 = null;
 if (!PlatformUtils.isAndroid()) {
   obj3 = { lineHeight: "r" };

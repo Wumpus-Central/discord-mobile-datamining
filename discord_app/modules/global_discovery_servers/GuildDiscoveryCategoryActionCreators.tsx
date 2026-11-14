@@ -205,7 +205,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
           let about;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

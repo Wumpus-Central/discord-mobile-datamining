@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
-import _modDef3949 from "../intl/SlayerStorefront.messages.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
+import _modDef4031 from "../intl/SlayerStorefront.messages.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
@@ -38,16 +38,16 @@ function PurchaseSuccessModalBase(sku) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   closure_129_0 = stateFromStores;
   let obj = require("initialize");
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
   closure_129_1 = sharedValue;
-  let obj2 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let obj2 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
   closure_129_2 = sharedValue1;
   const items1 = [sharedValue, stateFromStores, sharedValue1];
   const effect = isScreenLandscape.useEffect(() => {
     let num = 1;
     if (!c0) {
-      const obj = _mod1652;
+      const obj = _mod1655;
       const obj3 = { duration: null, dampingRatio: 0.7 };
       const _Math = Math;
       obj3.duration = Math.round(333.3333333333333);
@@ -56,13 +56,13 @@ function PurchaseSuccessModalBase(sku) {
     const result = closure_1.set(num);
     let num4 = 1;
     if (!c0) {
-      const obj4 = _mod1652;
+      const obj4 = _mod1655;
       num4 = obj4.withDelay(200, timing_timing.withTiming(1, { duration: 200 }));
     }
     const result1 = callback1.set(num4);
   }, items1);
-  let obj3 = require("../../../../_runtime/metro/01652__.js");
-  const items2 = [closure_18, require("../../../../_runtime/metro/01652__.js").interpolate, sharedValue];
+  let obj3 = require("../../../../_runtime/metro/01655__.js");
+  const items2 = [closure_18, require("../../../../_runtime/metro/01655__.js").interpolate, sharedValue];
   _require = undefined;
   importDefault = undefined;
   [tmp9, tmp10, tmp11] = items2;
@@ -80,11 +80,11 @@ function PurchaseSuccessModalBase(sku) {
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx1.__closure = items3;
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx1.__workletHash = 1000739966762;
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx1.__initData = tmp9;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     SocialLayerStorefrontPoductPurchaseSuccessModalTsx1,
   );
-  let obj5 = require("../../../../_runtime/metro/01652__.js");
-  const items4 = [closure_19, require("../../../../_runtime/metro/01652__.js").interpolate, sharedValue];
+  let obj5 = require("../../../../_runtime/metro/01655__.js");
+  const items4 = [closure_19, require("../../../../_runtime/metro/01655__.js").interpolate, sharedValue];
   _require = undefined;
   importDefault = undefined;
   [tmp13, tmp14, tmp15] = items4;
@@ -102,11 +102,11 @@ function PurchaseSuccessModalBase(sku) {
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx2.__closure = items5;
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx2.__workletHash = 3853789941754;
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx2.__initData = tmp13;
-  const animatedStyle1 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     SocialLayerStorefrontPoductPurchaseSuccessModalTsx2,
   );
-  const tmp4Result = require("../../../../_runtime/metro/01652__.js");
-  const items6 = [closure_20, require("../../../../_runtime/metro/01652__.js").interpolate, sharedValue1];
+  const tmp4Result = require("../../../../_runtime/metro/01655__.js");
+  const items6 = [closure_20, require("../../../../_runtime/metro/01655__.js").interpolate, sharedValue1];
   _require = undefined;
   importDefault = undefined;
   [tmp17, tmp18, tmp19] = items6;
@@ -120,10 +120,10 @@ function PurchaseSuccessModalBase(sku) {
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx3.__closure = items7;
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx3.__workletHash = 10933347757;
   SocialLayerStorefrontPoductPurchaseSuccessModalTsx3.__initData = tmp17;
-  const animatedStyle2 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle2 = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     SocialLayerStorefrontPoductPurchaseSuccessModalTsx3,
   );
-  const tmp4Result3 = require("../../../../_runtime/metro/01652__.js");
+  const tmp4Result3 = require("../../../../_runtime/metro/01655__.js");
   isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   const tmp22 = isScreenLandscape ? closure_12 : closure_13;
   [first, closure_7] = isScreenLandscape.useState(null);
@@ -225,7 +225,7 @@ function PurchaseSuccessModalBase(sku) {
     children: body,
   });
   obj6.children = items15;
-  const tmp31Result = closure_15(require("../../../../_runtime/metro/01652__.js").View, obj6);
+  const tmp31Result = closure_15(require("../../../../_runtime/metro/01655__.js").View, obj6);
   const items17 = [tmp.footer];
   let footerLandscape = isScreenLandscape;
   if (isScreenLandscape) {
@@ -303,7 +303,7 @@ function PurchaseSuccessModalBase(sku) {
   };
   const intl2 = tmp4(tmp3[21]).intl;
   obj16.accessibilityLabel = intl2.string(require("util").t.cpT0Cq);
-  obj15.children = closure_14(require("../../../../_runtime/metro/07434__.js").HeaderBackButton, obj16);
+  obj15.children = closure_14(require("../../../../_runtime/metro/07500__.js").HeaderBackButton, obj16);
   const items23 = [closure_14(closure_7, obj15), ,];
   const obj17 = {
     style: tmp.scroll,
@@ -334,7 +334,7 @@ function PurchaseSuccessModalBase(sku) {
     tmp32Result4 = closure_14(tmp2(tmp3[27]), obj19);
   }
   obj18.children = tmp32Result4;
-  const items26 = [closure_14(require("../../../../_runtime/metro/01652__.js").View, obj18)];
+  const items26 = [closure_14(require("../../../../_runtime/metro/01655__.js").View, obj18)];
   let tmp31Result4 = tmp31Result;
   if (isScreenLandscape) {
     const obj20 = { style: tmp.contentColumnLandscape, children: null };
@@ -355,18 +355,18 @@ function PurchaseSuccessModalBase(sku) {
   const obj21 = { style: null, pointerEvents: "none" };
   const items28 = [tmp.curtain, animatedStyle2];
   obj21.style = items28;
-  items22[3] = closure_14(require("../../../../_runtime/metro/01652__.js").View, obj21);
+  items22[3] = closure_14(require("../../../../_runtime/metro/01655__.js").View, obj21);
   obj11.children = items22;
   return closure_15(closure_7, obj11);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-let numDays = fn(7184).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(7247).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let obj2 = {
   root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK },
   backdropImage: { position: "absolute", inset: 0, opacity: 0.45 },
@@ -451,7 +451,7 @@ obj2.finePrint = {
   marginBottom: nativeDefault.space.PX_12,
 };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj17 = { linkAccountIcon: null };
 let obj15 = {
   textAlign: "center",
@@ -657,7 +657,7 @@ export function SocialLayerStorefrontProductSelfPurchaseSuccessModal(skuId) {
           str = "";
         }
         const obj = { applicationName: str };
-        formatToPlainStringResult = formatToPlainString(_modDef3949.eNNnIG, obj);
+        formatToPlainStringResult = formatToPlainString(_modDef4031.eNNnIG, obj);
       }
     }
     return formatToPlainStringResult;

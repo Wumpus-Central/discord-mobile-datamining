@@ -1,14 +1,14 @@
 // discord_app/modules/connections/console_coachmark/native/useConsoleConnectionCoachmark.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef19439 from "../../../../../discord_assets/assets/discovery/controller.png.js";
+import _modDef19631 from "../../../../../discord_assets/assets/discovery/controller.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/connections/console_coachmark/native/useConsoleConnectionCoachmark.tsx",
@@ -22,11 +22,11 @@ export function useConsoleConnectionCoachmark(disabled) {
   require("useSelectedDismissibleContent");
   if (isConsoleConnectionCoachmarkEligible) {
     if (!disabled.disabled) {
-      items = [tmp(5076).DismissibleContent.CONSOLE_CONNECTION_COACHMARK];
+      items = [tmp(5139).DismissibleContent.CONSOLE_CONNECTION_COACHMARK];
     }
     const tmp7 = _slicedToArray(tmp5(items), 2);
     _require = tmp8;
-    const tmp9 = tmp7[0] === tmp(5076).DismissibleContent.CONSOLE_CONNECTION_COACHMARK;
+    const tmp9 = tmp7[0] === tmp(5139).DismissibleContent.CONSOLE_CONNECTION_COACHMARK;
     visible = tmp9;
     const items1 = [tmp9, tmp7[1]];
     let tmp12 = null;

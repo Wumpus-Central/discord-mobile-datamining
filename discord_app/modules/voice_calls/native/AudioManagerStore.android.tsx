@@ -153,13 +153,13 @@ let closure_17 = async function _setActiveAudioDevice() {
   })();
 };
 const RTCConnectionStates = fn(1072).RTCConnectionStates;
-const MediaEngineContextTypes = fn(6012).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(6075).MediaEngineContextTypes;
 const nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAudioManagerModuleDefault);
 let closure_8 = new LoggerDefault("AudioManagerStore");
 let global = [];
-let NativeAudioManagerModule = fn(10516);
+let NativeAudioManagerModule = fn(10585);
 global = NativeAudioManagerModule.getInvalidAndroidDevice();
-NativeAudioManagerModule = fn(10516);
+NativeAudioManagerModule = fn(10585);
 let device = NativeAudioManagerModule.getInvalidAndroidDevice();
 let c12 = false;
 const Store = initializeDefault.Store;

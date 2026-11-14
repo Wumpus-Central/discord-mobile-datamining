@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/RegistrationStepsUtils.tsx
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import Link from "../../../../_runtime/01500_Link.js";
+import Link from "../../../../_runtime/01503_Link.js";
 import LoginDefault from "components/Login.tsx";
 import WelcomeDefault from "components/Welcome.tsx";
 import RegistrationUtils from "RegistrationUtils.tsx";
@@ -146,10 +146,10 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   }
   return value;
 };
-const usePromoEmailConsentStore = fn(6782).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(18519);
+const usePromoEmailConsentStore = fn(6845).usePromoEmailConsentStore;
+const RegistrationUIStore = fn(18648);
 ({ setRegistrationErrors: closure_6, setSubmitting: metroImportDefault, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(18520);
+const RegistrationConstants = fn(18649);
 ({ authStateToRegisterTransitionStep: closure_10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const AuthStates = fn(1072).AuthStates;
 const jsx = fn(21).jsx;
@@ -303,7 +303,7 @@ export function getAllAuthScreens() {
     headerTitle,
     render(arg0, arg1) {
       closure_0 = arg1;
-      return closure_15(closure_1(7757), {
+      return closure_15(closure_1(7823), {
         onClose() {
           return closure_0.pop();
         },

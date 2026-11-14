@@ -61,7 +61,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           closure_131_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -128,7 +128,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
     }
   }
 };
-const PromotionFlags = fn(1387).PromotionFlags;
+const PromotionFlags = fn(1390).PromotionFlags;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: closure_10 } = Constants);
 const size = fn(2);

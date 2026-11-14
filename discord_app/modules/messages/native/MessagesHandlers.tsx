@@ -6,7 +6,7 @@ import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Server from "../../../flow/Server.tsx";
-import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
@@ -136,19 +136,19 @@ import SelfPresenceStore from "../../../stores/SelfPresenceStore.tsx";
 import UploadStore from "../../../stores/UploadStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
-const InviteCodeUtils = trackInviteEmbedActioned(5990);
-const CodedLink = trackInviteEmbedActioned(5992);
-const InstantInviteActionCreators = trackInviteEmbedActioned(7594);
-const InviteTypeUtils = trackInviteEmbedActioned(8774);
-const SocialLayerStorefrontNativeActionCreators = trackInviteEmbedActioned(11663);
-const VoiceChannelListInviteExperiment = trackInviteEmbedActioned(11822);
-const VoiceChannelListInviteEmbed = trackInviteEmbedActioned(11823);
-const build_overrides_BuildOverrideUtils = trackInviteEmbedActioned(13954);
+const InviteCodeUtils = trackInviteEmbedActioned(6053);
+const CodedLink = trackInviteEmbedActioned(6055);
+const InstantInviteActionCreators = trackInviteEmbedActioned(7660);
+const InviteTypeUtils = trackInviteEmbedActioned(8841);
+const SocialLayerStorefrontNativeActionCreators = trackInviteEmbedActioned(11729);
+const VoiceChannelListInviteExperiment = trackInviteEmbedActioned(11888);
+const VoiceChannelListInviteEmbed = trackInviteEmbedActioned(11889);
+const build_overrides_BuildOverrideUtils = trackInviteEmbedActioned(14059);
 require = fn;
 let closure_4 = ["messageId"];
 let closure_5 = ["messageId"];
-let closure_15 = fn(6966).isGuildScheduledEventActive;
-const SeparatorAction = fn(9093).SeparatorAction;
+let closure_15 = fn(7029).isGuildScheduledEventActive;
+const SeparatorAction = fn(9160).SeparatorAction;
 const Constants = fn(1072);
 ({
   ActivityActionTypes: closure_38,
@@ -171,13 +171,13 @@ const Constants = fn(1072);
   UserSettingsSections: closure_55,
   WebBrowserType: closure_56,
 } = Constants);
-const GameOrganizationInviteConstants = fn(12274);
+const GameOrganizationInviteConstants = fn(12369);
 ({ GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY: closure_57, GameOrganizationInviteStates: closure_58 } =
   GameOrganizationInviteConstants);
-const InviteTypes = fn(8775).InviteTypes;
-const PremiumConstants = fn(1387);
+const InviteTypes = fn(8842).InviteTypes;
+const PremiumConstants = fn(1390);
 ({ PremiumTypes: closure_60, PremiumUpsellTypes: closure_61 } = PremiumConstants);
-let closure_62 = fn(8140).SafetySystemNotificationCtaType;
+let closure_62 = fn(8206).SafetySystemNotificationCtaType;
 let closure_63 = fn(1112).OpenThreadAnalyticsLocations;
 let items = [AnalyticsLocationDefault.PREMIUM_GIFT_INTENT_CARD];
 const size = fn(2);
@@ -249,10 +249,10 @@ class MessagesHandlers {
       if (!obj.isModalOrActionsheetObstructing()) {
         obj = MessageDataSnowflakeUtils;
         const data = obj.getNativeSyntheticEventData(nativeEvent).data;
-        asyncRequireImpl(12408, dependencyMap.paths).then((handleMessagesLongPressChannel) => {
+        asyncRequireImpl(12503, dependencyMap.paths).then((handleMessagesLongPressChannel) => {
           const result = handleMessagesLongPressChannel.handleMessagesLongPressChannel({ data });
         });
-        const promise = asyncRequireImpl(12408, dependencyMap.paths);
+        const promise = asyncRequireImpl(12503, dependencyMap.paths);
       }
     };
     obj.handleTapAttachmentLink = function handleTapAttachmentLink(arg0) {
@@ -380,10 +380,10 @@ class MessagesHandlers {
       if (!obj.isModalOrActionsheetObstructing()) {
         obj = MessageDataSnowflakeUtils;
         const gameId = obj.getNativeSyntheticEventData(nativeEvent);
-        asyncRequireImpl(12487, dependencyMap.paths).then((handleMessagesTapGameMention) => {
+        asyncRequireImpl(12583, dependencyMap.paths).then((handleMessagesTapGameMention) => {
           const result = handleMessagesTapGameMention.handleMessagesTapGameMention({ gameId: gameId.gameId });
         });
-        const promise = asyncRequireImpl(12487, dependencyMap.paths);
+        const promise = asyncRequireImpl(12583, dependencyMap.paths);
       }
     };
     obj.handleTapGuildEventLink = function handleTapGuildEventLink(node) {
@@ -596,7 +596,7 @@ class MessagesHandlers {
         if (null != messageId) {
           if (tmpResult.isPublicSystemMessage(message)) {
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(12523, dependencyMap.paths),
+              asyncRequireImpl(12619, dependencyMap.paths),
               "PublicGuildAnnouncementProfile",
             );
           } else {
@@ -611,11 +611,11 @@ class MessagesHandlers {
                 const tmp10Result = ActionSheetActionCreatorsDefault;
                 const obj2 = { guildId: guild_id };
                 tmp10Result.openLazy(
-                  asyncRequireImpl(10586, dependencyMap.paths),
+                  asyncRequireImpl(10655, dependencyMap.paths),
                   "GuildProfileActionSheet:" + guild_id,
                   obj2,
                 );
-                const tmp20 = asyncRequireImpl(10586, dependencyMap.paths);
+                const tmp20 = asyncRequireImpl(10655, dependencyMap.paths);
               }
             }
             tmp7 = user1;
@@ -638,11 +638,11 @@ class MessagesHandlers {
                           const tmp10Result2 = ActionSheetActionCreatorsDefault;
                           const obj3 = { guildId: guild_id2 };
                           tmp10Result2.openLazy(
-                            asyncRequireImpl(10586, dependencyMap.paths),
+                            asyncRequireImpl(10655, dependencyMap.paths),
                             "GuildProfileActionSheet:" + guild_id2,
                             obj3,
                           );
-                          const tmp17 = asyncRequireImpl(10586, dependencyMap.paths);
+                          const tmp17 = asyncRequireImpl(10655, dependencyMap.paths);
                         }
                       }
                     }
@@ -714,7 +714,7 @@ class MessagesHandlers {
         if (null != findSummaryResult) {
           const obj3 = { summary: findSummaryResult };
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(12526, dependencyMap.paths),
+            asyncRequireImpl(12622, dependencyMap.paths),
             "SummaryActionSheet",
             obj3,
           );
@@ -1740,9 +1740,9 @@ class MessagesHandlers {
                   const combined = "GuildProfileActionSheet:" + invite.guild.id;
                   obj15.context = useGuildProfileCTA.GuildProfileCTAContext.INVITE;
                   obj15.inviteKey = tmp8.code;
-                  obj23.openLazy(asyncRequireImpl(10586, dependencyMap.paths), combined, obj15);
+                  obj23.openLazy(asyncRequireImpl(10655, dependencyMap.paths), combined, obj15);
                   str9 = "show profile";
-                  const tmp53 = asyncRequireImpl(10586, dependencyMap.paths);
+                  const tmp53 = asyncRequireImpl(10655, dependencyMap.paths);
                 } else if (isMemberResult) {
                   const result7 = obj2.handleTransitionToInviteChannel(invite);
                   str9 = "transition";
@@ -1957,8 +1957,8 @@ class MessagesHandlers {
                 }
               }
               obj3.emojiName = name;
-              tmp12Result2.pushLazy(asyncRequireImpl(12287, dependencyMap.paths), obj3);
-              const tmp15 = asyncRequireImpl(12287, dependencyMap.paths);
+              tmp12Result2.pushLazy(asyncRequireImpl(12382, dependencyMap.paths), obj3);
+              const tmp15 = asyncRequireImpl(12382, dependencyMap.paths);
             }
           }
         } else {
@@ -2055,7 +2055,7 @@ class MessagesHandlers {
           channelId: giftIntentCtaContext.channel.id,
           giftIntentType: giftIntentCtaContext.giftIntentType,
         };
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14008, dependencyMap.paths), obj4);
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14115, dependencyMap.paths), obj4);
       }
       tmp2 = null != giftIntentCtaContext && null != giftIntentCtaContext.channel;
     };
@@ -2154,7 +2154,7 @@ class MessagesHandlers {
       if (!obj.isModalOrActionsheetObstructing()) {
         obj = ActionSheetActionCreatorsDefault;
         const obj2 = { applicationId: gameApplicationId, messageTimestamp: timestamp };
-        obj.openLazy(asyncRequireImpl(14012, dependencyMap.paths), "MessageGameIconActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(14119, dependencyMap.paths), "MessageGameIconActionSheet", obj2);
       }
     };
     obj.handleTapSuppressNotificationsIcon = function handleTapSuppressNotificationsIcon() {
@@ -2313,8 +2313,8 @@ class MessagesHandlers {
             const obj3 = { selectionActionComponent: value };
             const combined = "StringSelectComponentActionSheet:" + messageId;
             const merged = Object.assign(obj2);
-            obj9.openLazy(asyncRequireImpl(14015, dependencyMap.paths), combined, obj3);
-            const tmp19 = asyncRequireImpl(14015, dependencyMap.paths);
+            obj9.openLazy(asyncRequireImpl(14122, dependencyMap.paths), combined, obj3);
+            const tmp19 = asyncRequireImpl(14122, dependencyMap.paths);
           } else {
             if (Server.ComponentType.USER_SELECT !== type) {
               if (Server.ComponentType.ROLE_SELECT !== type) {
@@ -2325,8 +2325,8 @@ class MessagesHandlers {
                     const obj4 = { selectionActionComponent: value };
                     const combined1 = "ChannelSelectComponentActionSheet:" + messageId;
                     const merged1 = Object.assign(obj2);
-                    obj12.openLazy(asyncRequireImpl(14019, dependencyMap.paths), combined1, obj4);
-                    const tmp28 = asyncRequireImpl(14019, dependencyMap.paths);
+                    obj12.openLazy(asyncRequireImpl(14126, dependencyMap.paths), combined1, obj4);
+                    const tmp28 = asyncRequireImpl(14126, dependencyMap.paths);
                   }
                 }
               }
@@ -2336,8 +2336,8 @@ class MessagesHandlers {
             const obj5 = { selectionActionComponent: value };
             const combined2 = "MentionableSelectComponentActionSheet:" + messageId;
             const merged2 = Object.assign(obj2);
-            obj7.openLazy(asyncRequireImpl(14017, dependencyMap.paths), combined2, obj5);
-            const tmp11 = asyncRequireImpl(14017, dependencyMap.paths);
+            obj7.openLazy(asyncRequireImpl(14124, dependencyMap.paths), combined2, obj5);
+            const tmp11 = asyncRequireImpl(14124, dependencyMap.paths);
           }
           const tmpResult6 = InteractionComponentUtils;
         }
@@ -2404,7 +2404,7 @@ class MessagesHandlers {
                     const tmpResult6 = GuildAntiRaidUtils;
                     const obj4 = { guild, analyticsData: obj3 };
                     ActionSheetActionCreatorsDefault.openLazy(
-                      asyncRequireImpl(14022, dependencyMap.paths),
+                      asyncRequireImpl(14129, dependencyMap.paths),
                       "GuildIncidentActionsActionSheet",
                       obj4,
                     );
@@ -2446,7 +2446,7 @@ class MessagesHandlers {
                 if (tmpResult6.isAutomodNotification(message)) {
                   const obj2 = { guildId: channel.guild_id, messageId };
                   ActionSheetActionCreatorsDefault.openLazy(
-                    asyncRequireImpl(14057, dependencyMap.paths),
+                    asyncRequireImpl(14164, dependencyMap.paths),
                     "GuildRaidResolveActionSheet",
                     obj2,
                   );

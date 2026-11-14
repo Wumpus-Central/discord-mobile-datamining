@@ -48,6 +48,9 @@ export default {
         if (null != closure_2.extra) {
           setTags.setExtras(closure_2.extra);
         }
+        if (null != closure_2.fingerprint) {
+          setTags.setFingerprint(closure_2.fingerprint);
+        }
       }
       closure_1 = _modAll674.captureException(closure_0);
     });
@@ -213,7 +216,7 @@ export default {
                   event_id: timestamp.event_id,
                   timestamp: result,
                   level: formatted,
-                  tags: "BULK_ACK",
+                  tags: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2Rldl90b29scw==",
                 };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";

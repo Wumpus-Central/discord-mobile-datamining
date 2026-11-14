@@ -3,13 +3,13 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import VisualEffectViewThemedDefault from "../../visual_effect_view/native/VisualEffectViewThemed.tsx";
 import UserProfileBannerDefault from "UserProfileBanner.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import 01652__ from "../../../../_runtime/metro/01652__.js";
+import 01655__ from "../../../../_runtime/metro/01655__.js";
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const VisualEffectViewThemed = module_1652.createAnimatedComponent(VisualEffectViewThemedDefault);
+const VisualEffectViewThemed = module_1655.createAnimatedComponent(VisualEffectViewThemedDefault);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileOverscrollBanner.tsx");
 
@@ -28,6 +28,6 @@ export default function UserProfileOverscrollBanner(arg0) {
   }
   items[1] = tmp2Result;
   obj2.children = items;
-  obj.children = hasOwnProperty(module_1652.View, obj2);
-  return React4(module_1652.View, obj);
+  obj.children = hasOwnProperty(module_1655.View, obj2);
+  return React4(module_1655.View, obj);
 };

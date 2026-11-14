@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/agent_activity/native/ConjureFloatingActivity.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
+import _modDef4131 from "../../intl/ConjureUntranslated.messages.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = { root: null, pill: null, pillMain: null, checklistButton: null, panel: null, label: null };
 const rect = {
   position: "absolute",
@@ -83,14 +83,14 @@ export default function ConjureFloatingActivity(agents) {
   _require = undefined;
   importDefault = undefined;
   const tmp = closure_8();
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
     const result = _undefined.set(timing_timing.withTiming(1, { duration: 150 }));
     return () => c0(dependencyMap[6]).cancelAnimation(_undefined);
   }, items);
-  const obj = require("../../../../../_runtime/metro/01652__.js");
+  const obj = require("../../../../../_runtime/metro/01655__.js");
   const items1 = [closure_9, sharedValue];
   _require = undefined;
   [tmp6, tmp7] = items1;
@@ -104,10 +104,10 @@ export default function ConjureFloatingActivity(agents) {
   ConjureFloatingActivityTsx1.__closure = items2;
   ConjureFloatingActivityTsx1.__workletHash = 8355728640531;
   ConjureFloatingActivityTsx1.__initData = tmp6;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     ConjureFloatingActivityTsx1,
   );
-  const obj3 = require("../../../../../_runtime/metro/01652__.js");
+  const obj3 = require("../../../../../_runtime/metro/01655__.js");
   [tmp10, c1] = noop.useState(false);
   const callback = noop.useCallback(() => _undefined2((arg0) => !arg0), []);
   const obj4 = { style: null, pointerEvents: "box-none", children: null };
@@ -119,7 +119,7 @@ export default function ConjureFloatingActivity(agents) {
     if (null != todos) {
       const obj5 = { style: tmp.panel, children: null };
       const obj6 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-      obj5.children = closure_6(tmp13(13601), obj6);
+      obj5.children = closure_6(tmp13(13704), obj6);
       tmp14 = closure_6(View, obj5);
     }
   }
@@ -134,7 +134,7 @@ export default function ConjureFloatingActivity(agents) {
     children: null,
   };
   const intl = tmp2(1113).intl;
-  obj8.accessibilityLabel = intl.formatToPlainString(_modDef4079.xuQfOT, { activity: line });
+  obj8.accessibilityLabel = intl.formatToPlainString(_modDef4131.xuQfOT, { activity: line });
   obj8.onPress = onJumpToActivity;
   const tmp9 = _slicedToArray(noop.useState(false), 2);
   const items5 = [
@@ -158,20 +158,20 @@ export default function ConjureFloatingActivity(agents) {
     const obj12 = {
       variant: "default",
       size: "sm",
-      icon: tmp13(6867),
+      icon: tmp13(6930),
       pressed: tmp10,
       accessibilityLabel: null,
       onPress: null,
     };
     const intl2 = tmp2(1113).intl;
-    obj12.accessibilityLabel = intl2.string(tmp13(4079).Qp2isI);
+    obj12.accessibilityLabel = intl2.string(tmp13(4131).Qp2isI);
     obj12.onPress = callback;
-    obj11.children = closure_6(tmp2(13658).ToggleIconButton, obj12);
+    obj11.children = closure_6(tmp2(13762).ToggleIconButton, obj12);
     tmp18Result = closure_6(View, obj11);
   }
   items6[1] = tmp18Result;
   obj7.children = items6;
   items4[1] = closure_7(View, obj7);
   obj4.children = items4;
-  return closure_7(_modDef1652.View, obj4);
+  return closure_7(_modDef1655.View, obj4);
 }

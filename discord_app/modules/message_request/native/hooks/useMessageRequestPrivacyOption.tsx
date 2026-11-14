@@ -8,10 +8,10 @@ require = fn;
 function MessageRequestRestrictedGuildPrivacyOption(guild) {
   guild = guild.guild;
   const id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(5068).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(5131).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   const hasItem = setting.includes(id);
-  const RestrictedGuildIds = id(5068).RestrictedGuildIds;
+  const RestrictedGuildIds = id(5131).RestrictedGuildIds;
   const setting1 = RestrictedGuildIds.useSetting();
   const hasItem1 = setting1.includes(guild.id);
   items = [id];
@@ -37,7 +37,7 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj.value = tmp5;
   obj.onValueChange = callback;
   obj.disabled = hasItem1;
-  return jsx(id(7887).ActionSheetSwitchRow, {
+  return jsx(id(7953).ActionSheetSwitchRow, {
     label: null,
     subLabel: null,
     value: null,

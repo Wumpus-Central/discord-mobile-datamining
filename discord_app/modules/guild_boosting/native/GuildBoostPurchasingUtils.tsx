@@ -62,7 +62,7 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
           closure_130_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp6) {
@@ -165,14 +165,14 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
               let num3 = 0;
               const sum = interval.numPremiumGuild + num2;
               if (null != closure_1_6) {
-                const numPremiumGuildSubscriptions = closure_0(2171).getNumPremiumGuildSubscriptions(
+                const numPremiumGuildSubscriptions = closure_0(2174).getNumPremiumGuildSubscriptions(
                   closure_1_6.additionalPlans,
                 );
-                const obj = closure_0(2171);
+                const obj = closure_0(2174);
                 num3 =
                   numPremiumGuildSubscriptions +
-                  c1(2171).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
-                const obj2 = c1(2171);
+                  c1(2174).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                const obj2 = c1(2174);
               }
               tmp = sum > num3;
             }
@@ -204,7 +204,7 @@ const Constants = fn(1072);
   AnalyticsSections: closure_6,
   SubscriptionStatusTypes: metroImportDefault,
 } = Constants);
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({
   NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8,
   PremiumTypes: closure_9,

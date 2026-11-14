@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -27,28 +27,28 @@ function AnimatedContainer(children) {
   if (animateOnMount) {
     num = 0;
   }
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
   noop = sharedValue;
-  const obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const obj2 = require("../../../../../_runtime/metro/01655__.js");
   let num2 = 0;
   if (!animateOnMount) {
     num2 = translateY;
   }
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num2);
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num2);
   c4 = sharedValue1;
-  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
   let num3 = 0;
   if (!animateOnMount) {
     num3 = translateX;
   }
-  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num3);
+  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num3);
   c5 = sharedValue2;
-  const tmp2Result4 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result4 = require("../../../../../_runtime/metro/01655__.js");
   let result = scale;
   if (animateOnMount) {
     result = scale / 2;
   }
-  const sharedValue3 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(result);
+  const sharedValue3 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(result);
   items1 = [sharedValue, sharedValue3, sharedValue1, sharedValue2, scale, translateY, translateX];
   const effect = noop.useEffect(() => {
     const result = _undefined3.set(1);
@@ -56,7 +56,7 @@ function AnimatedContainer(children) {
     const result2 = _undefined4.set(c2);
     const result3 = _undefined5.set(c1);
   }, items1);
-  const tmp2Result5 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result5 = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [closure_14, require("timing/timing").withTiming, sharedValue, stateFromStores, sharedValue2, require("spring/spring").withSpring, closure_11, sharedValue1, sharedValue3, closure_10];
   _require = undefined;
   importDefault = undefined;
@@ -111,11 +111,11 @@ function AnimatedContainer(children) {
   GroupAvatarTsx1.__closure = items3;
   GroupAvatarTsx1.__workletHash = 10803845888973;
   GroupAvatarTsx1.__initData = tmp11;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(GroupAvatarTsx1);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(GroupAvatarTsx1);
   const obj3 = { style: null, children: children.children };
   const items4 = [tmp.avatarContainer, animatedStyle];
   obj3.style = items4;
-  return c6(_modDef1652.View, obj3);
+  return c6(_modDef1655.View, obj3);
 }
 function GroupMemberCount(count) {
   count = count.count;
@@ -161,7 +161,7 @@ const createElement = fn(19).createElement;
 let c9 = 38;
 let closure_10 = { damping: 30, stiffness: 400 };
 let closure_11 = { damping: 30, stiffness: 400 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { groupContainer: { position: "relative" }, shadowContainer: { borderRadius: nativeDefault.radii.sm }, shadowContainerBackground: {}, shadowContainerBackgroundLight: { opacity: 0.4 }, shadowContainerBackgroundDark: { opacity: 0.15 }, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, avatar: null, avatarWrapper: null, overflowCount: null };
   const size = { width: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, height: nativeDefault.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: nativeDefault.radii.sm };

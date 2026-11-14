@@ -5,8 +5,8 @@ import QuestTaskUtils from "QuestTaskUtils.tsx";
 import VQRemainingTimeTruncationExperimentDefault from "../experiments/VQRemainingTimeTruncationExperiment.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-function formatWatchRemainingDurationShort(watchVideoTaskDetailsFromProgress, truncate) {
-  const time = QuestTaskUtils.getRemainingTaskTime(watchVideoTaskDetailsFromProgress);
+function formatWatchRemainingDurationShort(percentComplete, truncate) {
+  const time = QuestTaskUtils.getRemainingTaskTime(percentComplete);
   let num = 60;
   truncate = 60 * time.minutes + time.seconds;
   let truncate1;
@@ -31,38 +31,55 @@ function formatWatchRemainingDurationShort(watchVideoTaskDetailsFromProgress, tr
     return intl.formatToPlainString(tmp4 ? t["spl/XS"] : t.rUfeQx, obj2);
   }
 }
+function getWatchCtaText(percentComplete, hideDuration) {
+  let flag = hideDuration.hideDuration;
+  if (flag === undefined) {
+    flag = false;
+  }
+  const intl = util.intl;
+  if (flag) {
+    const string = intl.string;
+    let pk9XKF = util.t;
+    if (tmp) {
+      pk9XKF = pk9XKF.pk9XKF;
+      let stringResult = string(pk9XKF);
+    } else {
+      stringResult = string(pk9XKF.kfks9Y);
+    }
+  } else {
+    const formatToPlainString = intl.formatToPlainString;
+    const t = util.t;
+    if (tmp) {
+      const obj2 = { durationShort: formatWatchRemainingDurationShort(percentComplete) };
+      let formatToPlainStringResult = formatToPlainString(t["pF/deA"], obj2);
+    } else {
+      const obj = { durationShort: null };
+      const obj3 = { truncate: hideDuration.truncateMoreThanSeconds };
+      obj.durationShort = formatWatchRemainingDurationShort(percentComplete, obj3);
+      formatToPlainStringResult = formatToPlainString(t.CHrvqg, obj);
+    }
+    return formatToPlainStringResult;
+  }
+}
 const QuestsExperimentLocations = QuestConstants.QuestsExperimentLocations;
 const result = size.fileFinishedImporting("modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx");
 
 export { formatWatchRemainingDurationShort };
 export function getVideoQuestWatchCtaText(questTaskDetails) {
-  VQRemainingTimeTruncationExperimentDefault;
-  if (questTaskDetails.percentComplete > 0) {
-    const intl2 = util.intl;
-    const obj2 = { durationShort: formatWatchRemainingDurationShort(questTaskDetails) };
-    let formatToPlainStringResult = intl2.formatToPlainString(util.t["pF/deA"], obj2);
-  } else {
-    const intl = util.intl;
-    const obj = { durationShort: null };
-    const obj3 = { truncate: tmp3 };
-    obj.durationShort = formatWatchRemainingDurationShort(questTaskDetails, obj3);
-    formatToPlainStringResult = intl.formatToPlainString(util.t.CHrvqg, obj);
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
   }
-  return formatToPlainStringResult;
+  const obj = {
+    truncateMoreThanSeconds: VQRemainingTimeTruncationExperimentDefault.getConfig({
+      location: QuestsExperimentLocations.QUESTS_CARD,
+    }).truncateMoreThanSeconds,
+    hideDuration: flag,
+  };
+  return getWatchCtaText(questTaskDetails, obj);
 }
 export function getBountyWatchCtaText(watchVideoTaskDetailsFromProgress) {
-  if (watchVideoTaskDetailsFromProgress.percentComplete > 0) {
-    const intl2 = util.intl;
-    const obj2 = { durationShort: formatWatchRemainingDurationShort(watchVideoTaskDetailsFromProgress) };
-    let formatToPlainStringResult = intl2.formatToPlainString(util.t["pF/deA"], obj2);
-  } else {
-    const intl = util.intl;
-    const obj = { durationShort: null };
-    const obj3 = { truncate: null };
-    obj.durationShort = formatWatchRemainingDurationShort(watchVideoTaskDetailsFromProgress, obj3);
-    formatToPlainStringResult = intl.formatToPlainString(util.t.CHrvqg, obj);
-  }
-  return formatToPlainStringResult;
+  return getWatchCtaText(watchVideoTaskDetailsFromProgress, { truncateMoreThanSeconds: null });
 }
 export function getVideoQuestWatchCtaAccessibilityLabel(questTaskDetails) {
   const remainingTaskTime = QuestTaskUtils.getRemainingTaskTime(questTaskDetails);

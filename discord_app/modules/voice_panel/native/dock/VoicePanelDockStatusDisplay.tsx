@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockStatusDisplay.tsx
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import _modDef3205 from "VoicePanelDock.messages.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _modDef3253 from "VoicePanelDock.messages.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function StatusText(status) {
@@ -22,13 +22,13 @@ function StatusText(status) {
     if ("speaker" !== kind) {
       if ("joined" === kind) {
         const intl3 = require("util").intl;
-        stringResult = intl3.string(_modDef3205.f9Cdb5);
+        stringResult = intl3.string(_modDef3253.f9Cdb5);
       } else if ("left" === kind) {
         const intl2 = require("util").intl;
-        stringResult = intl2.string(_modDef3205.aZoM2c);
+        stringResult = intl2.string(_modDef3253.aZoM2c);
       } else if ("streaming" === kind) {
         const intl = require("util").intl;
-        stringResult = intl.string(_modDef3205.syN59i);
+        stringResult = intl.string(_modDef3253.syN59i);
       }
     }
   }
@@ -51,13 +51,13 @@ function StatusText(status) {
     if ("speaker" !== kind2) {
       if ("joined" === kind2) {
         const intl6 = require("util").intl;
-        stringResult1 = intl6.string(_modDef3205.f9Cdb5);
+        stringResult1 = intl6.string(_modDef3253.f9Cdb5);
       } else if ("left" === kind2) {
         const intl5 = require("util").intl;
-        stringResult1 = intl5.string(_modDef3205.aZoM2c);
+        stringResult1 = intl5.string(_modDef3253.aZoM2c);
       } else if ("streaming" === kind2) {
         const intl4 = require("util").intl;
-        stringResult1 = intl4.string(_modDef3205.syN59i);
+        stringResult1 = intl4.string(_modDef3253.syN59i);
       }
     }
   }
@@ -66,11 +66,11 @@ function StatusText(status) {
   if (null != stringResult) {
     num = 1;
   }
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
   items = [sharedValue, null != stringResult];
   const effect = obj.useEffect(() => {
     if (c0) {
-      const tmp2Result = _mod1652;
+      const tmp2Result = _mod1655;
       let withDelayResult = tmp2Result.withDelay(70, timing_timing.withTiming(1, { duration: 175 }));
     } else {
       withDelayResult = spring_spring.withSpring(0, closure_10);
@@ -78,15 +78,15 @@ function StatusText(status) {
     }
     const result = _undefined2.set(withDelayResult);
   }, items);
-  let obj2 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(lineHeight);
-  const tmp26Result = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(lineHeight);
+  let obj2 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(lineHeight);
+  const tmp26Result = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(lineHeight);
   const items1 = [sharedValue1];
   const items2 = [sharedValue2];
   const callback = obj.useCallback((nativeEvent) => _undefined3.set(nativeEvent.nativeEvent.layout.height), items1);
   const callback1 = obj.useCallback((nativeEvent) => _undefined4.set(nativeEvent.nativeEvent.layout.height), items2);
-  const tmp26Result4 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp26Result4 = require("../../../../../_runtime/metro/01655__.js");
   const items3 = [closure_15, 1, sharedValue1, lineHeight, sharedValue, sharedValue2];
   _require = undefined;
   importDefault = undefined;
@@ -111,19 +111,19 @@ function StatusText(status) {
   VoicePanelDockStatusDisplayTsx1.__closure = items4;
   VoicePanelDockStatusDisplayTsx1.__workletHash = 4330268106479;
   VoicePanelDockStatusDisplayTsx1.__initData = tmp35;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     VoicePanelDockStatusDisplayTsx1,
   );
-  const tmp26Result5 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp26Result5 = require("../../../../../_runtime/metro/01655__.js");
   const items5 = [
     closure_16,
     sharedValue1,
     1,
     lineHeight,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     sharedValue,
     0.5,
-    require("../../../../../_runtime/metro/01652__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -147,16 +147,16 @@ function StatusText(status) {
   VoicePanelDockStatusDisplayTsx2.__closure = items6;
   VoicePanelDockStatusDisplayTsx2.__workletHash = 5280168993712;
   VoicePanelDockStatusDisplayTsx2.__initData = tmp42;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     VoicePanelDockStatusDisplayTsx2,
   );
   let obj3 = { style: animatedStyle, children: null };
   const obj4 = { onLayout: callback, children: null };
   if (null != status.userId) {
     const obj5 = { userId: status.userId, dimmed: "left" === status.kind };
-    let tmp53Result = closure_8(tmp26(19817).DockUserTitle, obj5);
+    let tmp53Result = closure_8(tmp26(19203).DockUserTitle, obj5);
   } else {
-    tmp53Result = closure_8(tmp26(19817).DockChannelTitle, {});
+    tmp53Result = closure_8(tmp26(19203).DockChannelTitle, {});
   }
   obj4.children = tmp53Result;
   const items7 = [closure_8(c5, obj4)];
@@ -171,12 +171,12 @@ function StatusText(status) {
       str4 = "text-muted";
     }
     const obj7 = { variant: "body-xs/medium", color: str4, lineClamp: 1, children: stringResult1 };
-    obj6.children = closure_8(tmp26(5866).Text, obj7);
-    tmp53Result2 = closure_8(_modDef1652.View, obj6);
+    obj6.children = closure_8(tmp26(5929).Text, obj7);
+    tmp53Result2 = closure_8(_modDef1655.View, obj6);
   }
   items7[1] = tmp53Result2;
   obj3.children = items7;
-  return closure_9(_modDef1652.View, obj3);
+  return closure_9(_modDef1655.View, obj3);
 }
 function StatusLayer(exit) {
   ({ status, enter } = exit);
@@ -211,8 +211,8 @@ function StatusLayer(exit) {
   if (num == null) {
     num = 0;
   }
-  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num);
-  let obj = require("../../../../../_runtime/metro/01652__.js");
+  sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
+  let obj = require("../../../../../_runtime/metro/01655__.js");
   let num2;
   if (enter != null) {
     num2 = enter.x;
@@ -220,8 +220,8 @@ function StatusLayer(exit) {
   if (num2 == null) {
     num2 = 0;
   }
-  sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num2);
-  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
+  sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num2);
+  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
   let num3;
   if (enter != null) {
     num3 = enter.y;
@@ -229,8 +229,8 @@ function StatusLayer(exit) {
   if (num3 == null) {
     num3 = 0;
   }
-  sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num3);
-  const tmp2Result8 = require("../../../../../_runtime/metro/01652__.js");
+  sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num3);
+  const tmp2Result8 = require("../../../../../_runtime/metro/01655__.js");
   let num4;
   if (enter != null) {
     num4 = enter.y;
@@ -238,25 +238,25 @@ function StatusLayer(exit) {
   if (num4 == null) {
     num4 = 0;
   }
-  sharedValue3 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num4);
-  const tmp2Result9 = require("../../../../../_runtime/metro/01652__.js");
+  sharedValue3 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num4);
+  const tmp2Result9 = require("../../../../../_runtime/metro/01655__.js");
   let num5 = 1;
   let num6 = 1;
   if (null != enter) {
     num6 = 0;
   }
-  sharedValue4 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num6);
-  const tmp2Result10 = require("../../../../../_runtime/metro/01652__.js");
+  sharedValue4 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num6);
+  const tmp2Result10 = require("../../../../../_runtime/metro/01655__.js");
   if (null != enter) {
     num5 = 0;
   }
-  sharedValue5 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num5);
-  const tmp2Result11 = require("../../../../../_runtime/metro/01652__.js");
+  sharedValue5 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num5);
+  const tmp2Result11 = require("../../../../../_runtime/metro/01655__.js");
   let tmp10 = enter;
   if (enter == null) {
     tmp10 = point;
   }
-  sharedValue6 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(tmp10.fadeStartProgress);
+  sharedValue6 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(tmp10.fadeStartProgress);
   let tmp12 = _slicedToArray(noop.useState(null == enter), 2);
   closure_13 = tmp12[1];
   items = [
@@ -327,11 +327,11 @@ function StatusLayer(exit) {
       if (closure_2) {
         num2 = num + _undefined.fadeDelayMs;
       }
-      const obj = _mod1652;
+      const obj = _mod1655;
       const result = sharedValue.set(obj.withDelay(num, spring_spring.withSpring(_undefined2.x, _undefined.spring)));
-      const obj3 = _mod1652;
+      const obj3 = _mod1655;
       const result1 = sharedValue2.set(obj3.withDelay(num, spring_spring.withSpring(_undefined2.y, _undefined.spring)));
-      const obj5 = _mod1652;
+      const obj5 = _mod1655;
       const result2 = sharedValue4.set(
         obj5.withDelay(
           num2,
@@ -417,13 +417,13 @@ function StatusLayer(exit) {
       animateView(sharedValue1, sharedValue3, sharedValue5, tmp4.textLagMs);
     }
   }, items);
-  const tmp2Result12 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result12 = require("../../../../../_runtime/metro/01655__.js");
   let items1 = [
     closure_20,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     sharedValue4,
     sharedValue6,
-    require("../../../../../_runtime/metro/01652__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
     sharedValue,
     sharedValue2,
   ];
@@ -455,16 +455,16 @@ function StatusLayer(exit) {
   VoicePanelDockStatusDisplayTsx5.__closure = items2;
   VoicePanelDockStatusDisplayTsx5.__workletHash = 7517298836265;
   VoicePanelDockStatusDisplayTsx5.__initData = tmp14;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     VoicePanelDockStatusDisplayTsx5,
   );
-  const tmp2Result13 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result13 = require("../../../../../_runtime/metro/01655__.js");
   let items3 = [
     closure_21,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     sharedValue5,
     sharedValue6,
-    require("../../../../../_runtime/metro/01652__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
     sharedValue1,
     sharedValue3,
   ];
@@ -497,7 +497,7 @@ function StatusLayer(exit) {
   VoicePanelDockStatusDisplayTsx6.__workletHash = 17078561971370;
   VoicePanelDockStatusDisplayTsx6.__initData = tmp22;
   let obj2 = { style: tmp.layer, pointerEvents: "none", children: null };
-  const animatedStyle1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     VoicePanelDockStatusDisplayTsx6,
   );
   let obj3 = { style: null, children: null };
@@ -505,17 +505,17 @@ function StatusLayer(exit) {
   obj3.style = items5;
   if (null != status.userId) {
     let obj4 = { userId: status.userId, dimmed: "left" === status.kind, entered: tmp12[0] };
-    let tmp32Result = tmp32(tmp2(19817).DockFace, obj4);
+    let tmp32Result = tmp32(tmp2(19203).DockFace, obj4);
   } else {
     let obj5 = { streaming: status.streaming };
-    tmp32Result = tmp32(tmp2(19817).DockChannelIcon, obj5);
+    tmp32Result = tmp32(tmp2(19203).DockChannelIcon, obj5);
   }
   obj3.children = tmp32Result;
-  const items6 = [sharedValue2(_modDef1652.View, obj3)];
+  const items6 = [sharedValue2(_modDef1655.View, obj3)];
   let obj6 = { style: null, children: sharedValue2(StatusText, { status }) };
   const items7 = [tmp.textSlot, animatedStyle1];
   obj6.style = items7;
-  items6[1] = sharedValue2(_modDef1652.View, obj6);
+  items6[1] = sharedValue2(_modDef1655.View, obj6);
   obj2.children = items6;
   return sharedValue3(c5, obj2);
 }
@@ -528,16 +528,16 @@ function getStatusItemKey(status) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelDockStatusStore = fn(19814);
+const VoicePanelDockStatusStore = fn(19202);
 ({ useDockHasStreamers: closure_6, useDockSubject: metroImportDefault } = VoicePanelDockStatusStore);
-const VoicePanelDockConstants = fn(11942);
+const VoicePanelDockConstants = fn(12009);
 ({ DOCK_TILE_SIZE, DOCK_GAP } = VoicePanelDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const spring = { mass: 0.6, stiffness: 560, damping: 24 };
-fn(5866).TextStyleSheet["body-md/medium"].lineHeight;
-const lineHeight = fn(5866).TextStyleSheet["body-xs/medium"].lineHeight;
-const createStyles = fn(5243);
+fn(5929).TextStyleSheet["body-md/medium"].lineHeight;
+const lineHeight = fn(5929).TextStyleSheet["body-xs/medium"].lineHeight;
+const createStyles = fn(5306);
 let obj = {
   display: { flexGrow: 1, flexShrink: 1, height: DOCK_TILE_SIZE },
   layer: null,
@@ -567,8 +567,8 @@ let point = {
   fadeEasing: null,
   spring: null,
 };
-let Easing = fn(1652).Easing;
-point.fadeEasing = Easing.inOut(fn(1652).Easing.quad);
+let Easing = fn(1655).Easing;
+point.fadeEasing = Easing.inOut(fn(1655).Easing.quad);
 point.spring = { mass: 0.5, stiffness: 300, damping: 15 };
 let closure_15 = {
   code: "(function VoicePanelDockStatusDisplayTsx1(){let[SUBTEXT_GAP,nameHeight,NAME_LINE_HEIGHT,progress,subtextHeight]=this.__closure;const gap=SUBTEXT_GAP*nameHeight.get()/NAME_LINE_HEIGHT;return{transform:[{translateY:-progress.get()*(subtextHeight.get()+gap)/2}]};})",

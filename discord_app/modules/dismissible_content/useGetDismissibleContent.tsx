@@ -22,7 +22,7 @@ function checksNewUsersWithHook(kind) {
   }
   return tmp;
 }
-function useScopedDismissibleContentSelection(items1, groupName) {
+function useScopedDismissibleContentSelection(items1, groupName, deduplicateImpressions) {
   _require = groupName;
   const found = items1.filter((kind) => {
     let tmp = "snowflake_bound_guild" === kind.kind;
@@ -58,7 +58,7 @@ function useScopedDismissibleContentSelection(items1, groupName) {
       return items1;
     }),
   );
-  items1 = [closure_5];
+  items1 = [deduplicateImpressions];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => {
     const userContent = UserSettingsProtoStore.settings.userContent;
     let tmp;
@@ -83,7 +83,7 @@ function useScopedDismissibleContentSelection(items1, groupName) {
   });
   ({ dismissedContents, recurringStates } = stateFromStoresObject);
   let obj = require("initialize");
-  const items2 = [closure_5];
+  const items2 = [deduplicateImpressions];
   closure_129_3 = require("initialize").useStateFromStoresArray(items2, () =>
     groupName2.map((item) => guildDismissedContentState.getGuildDismissedContentState(item)),
   );
@@ -106,9 +106,9 @@ function useScopedDismissibleContentSelection(items1, groupName) {
     found1.map((content) => content.content),
   );
   let obj4 = require("NewUserDismissibleContentRegistry");
-  const items3 = [closure_5];
+  const items3 = [deduplicateImpressions];
   _slicedToArray = require("initialize").useStateFromStores(items3, () =>
-    closure_5.hasLoaded(constants.PRELOADED_USER_SETTINGS),
+    deduplicateImpressions.hasLoaded(constants.PRELOADED_USER_SETTINGS),
   );
   let found2 = found.find((kind) => {
     let tmp = "single_use" === kind.kind;
@@ -128,13 +128,13 @@ function useScopedDismissibleContentSelection(items1, groupName) {
     found2 = null;
   }
   if (null != found2) {
-    let dismissibleContentShowing = tmp(9496).getDismissibleContentShowing(found2);
-    const tmpResult = tmp(9496);
+    let dismissibleContentShowing = tmp(9563).getDismissibleContentShowing(found2);
+    const tmpResult = tmp(9563);
   } else {
     dismissibleContentShowing = closure_12;
   }
   ({ version, snowflakeId } = dismissibleContentShowing);
-  closure_5 = found.some((item) => !groupName(groupName2[13]).isGuildScopedDismissibleContent(item));
+  deduplicateImpressions = found.some((item) => !groupName(groupName2[13]).isGuildScopedDismissibleContent(item));
   const obj5 = require("initialize");
   const items4 = [guildId];
   const stateFromStores = require("initialize").useStateFromStores(items4, () => {
@@ -150,7 +150,7 @@ function useScopedDismissibleContentSelection(items1, groupName) {
     if (tmpResult7.isGuildScopedDismissibleContent(found2)) {
       guildId = found2.scope.guildId;
     }
-    tmpResult7 = tmp(9496);
+    tmpResult7 = tmp(9563);
   }
   let content;
   if (found2 != null) {
@@ -164,6 +164,7 @@ function useScopedDismissibleContentSelection(items1, groupName) {
   closure_130_2 = groupName;
   closure_130_3 = version;
   closure_130_4 = snowflakeId;
+  closure_130_5 = deduplicateImpressions;
   const tmpResult6 = require("initialize");
   const tmp10 = DismissibleContentShownStateStore((currentlyShown) => {
     let hasItem = null != closure_0;
@@ -174,12 +175,12 @@ function useScopedDismissibleContentSelection(items1, groupName) {
     return hasItem;
   });
   [first] = require("OverlayTrackingUtils").useOverlayLockState();
-  closure_130_5 = first;
-  closure_130_6 = tmp13;
+  closure_130_6 = first;
+  closure_130_7 = tmp13;
   let result = null != content;
   if (result) {
-    result = tmp(5077).isDismissibleContentBlockedByOverlay(content, first, tmp13);
-    const tmpResult9 = tmp(5077);
+    result = tmp(5140).isDismissibleContentBlockedByOverlay(content, first, tmp13);
+    const tmpResult9 = tmp(5140);
   }
   const tmpResult8 = require("OverlayTrackingUtils");
   const items5 = [DismissibleContentFrameworkStore];
@@ -191,9 +192,9 @@ function useScopedDismissibleContentSelection(items1, groupName) {
     return hasUserHitDCCapResult;
   });
   const ref = found2.useRef(guildId);
-  closure_130_7 = ref;
+  closure_130_8 = ref;
   ref.current = guildId;
-  const items6 = [content, groupName, stateFromStores1, result, version, snowflakeId];
+  const items6 = [content, groupName, stateFromStores1, result, version, snowflakeId, deduplicateImpressions];
   const effect = found2.useEffect(() => {
     if (null != closure_0) {
       if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
@@ -227,17 +228,23 @@ function useScopedDismissibleContentSelection(items1, groupName) {
         AnalyticsUtilsDefault.track(AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, obj2);
       }
       obj3 = DismissibleContentUtils;
-      const obj4 = { groupName: groupName2, guildId: ref.current, version, snowflakeId: found2 };
+      const obj4 = {
+        groupName: groupName2,
+        guildId: ref.current,
+        version,
+        snowflakeId: found2,
+        deduplicateImpressions,
+      };
       const markDismissibleContentAsShown = obj3.requestMarkDismissibleContentAsShown(
         closure_0,
         obj4,
-        closure_5,
         guildId,
+        DismissibleContentFrameworkStore,
       );
       return () => {
         if (null != closure_1_0) {
           const obj = { content: tmp, groupName };
-          removeCandidateContent(obj, !ref.hasUserHitDCCap());
+          removeCandidateContent(obj, !DismissibleContentFrameworkStore.hasUserHitDCCap());
         }
       };
     }
@@ -262,7 +269,7 @@ function useScopedDismissibleContentSelection(items1, groupName) {
     }, items7),
   };
 }
-const removeCandidateContent = fn(5084).removeCandidateContent;
+const removeCandidateContent = fn(5147).removeCandidateContent;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const UserSettingsTypes = fn(1082).UserSettingsTypes;
 let closure_12 = {};

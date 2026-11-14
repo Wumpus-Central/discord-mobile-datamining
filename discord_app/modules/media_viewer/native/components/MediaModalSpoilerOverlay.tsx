@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import VisualEffectViewDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 },
   obscureContentContainer: {
@@ -37,7 +37,7 @@ let obj4 = {
   alignItems: "center",
   alignSelf: "center",
 };
-let PlatformUtils = fn(1377);
+let PlatformUtils = fn(1380);
 PlatformUtils = PlatformUtils.isAndroid();
 const unsafe_rawColors = nativeDefault.unsafe_rawColors;
 obj4.backgroundColor = PlatformUtils ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;
@@ -102,7 +102,7 @@ export default noop.memo(function MediaModalSpoilerOverlay(source) {
     obj5 = timestampProducer(hasOwnProperty, obj5);
     items1[1] = obj5;
     obj3.children = items1;
-    metroImportDefault(_modDef1652.View, obj3);
+    metroImportDefault(_modDef1655.View, obj3);
     const tmp3Result = VisualEffectViewDefault;
   }
   tmp5 = _slicedToArray(useMediaItemSpoilerState.useMediaItemSpoilerState(index), 2);

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/agent_activity/native/ConjureThinkingOverlay.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4131 from "../../intl/ConjureUntranslated.messages.js";
 import ConjureNativeMarkdownDefault from "../../chat/native/ConjureNativeMarkdown.tsx";
 import conjureThinkingTail from "../conjureThinkingTail.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -59,7 +59,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { root: null, opaque: null, body: null, header: null, panel: null };
 const rect = {
   position: "absolute",
@@ -106,17 +106,17 @@ export default function ConjureThinkingOverlay(projectId) {
   if (tmp5) {
     tmp5 = "end" !== stateFromStores.phase;
   }
-  const text = projectId(13183).useConjureRevealedText(str, { streaming: tmp5 }).text;
+  const text = projectId(13292).useConjureRevealedText(str, { streaming: tmp5 }).text;
   const obj3 = { style: tmp.root, children: null };
   const obj4 = { style: tmp.opaque, children: null };
   const obj5 = { style: tmp.body, children: null };
   const obj6 = { style: tmp.header, children: null };
-  const obj2 = projectId(13183);
-  const items2 = [closure_7(projectId(11251).LightbulbIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND })];
+  const obj2 = projectId(13292);
+  const items2 = [closure_7(projectId(11318).LightbulbIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND })];
   const obj8 = { variant: "body-sm/semibold", color: "text-strong", children: null };
   const intl = tmp2(1113).intl;
-  obj8.children = intl.string(_modDef4079.XXYIeI);
-  items2[1] = closure_7(projectId(5866).Text, obj8);
+  obj8.children = intl.string(_modDef4131.XXYIeI);
+  items2[1] = closure_7(projectId(5929).Text, obj8);
   obj6.children = items2;
   const items3 = [closure_8(closure_5, obj6)];
   if ("" !== text) {
@@ -125,13 +125,13 @@ export default function ConjureThinkingOverlay(projectId) {
   } else {
     const obj10 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl2 = tmp2(1113).intl;
-    obj10.children = intl2.string(_modDef4079.LfoD6c);
-    tmp6Result = closure_7(tmp2(5866).Text, obj10);
+    obj10.children = intl2.string(_modDef4131.LfoD6c);
+    tmp6Result = closure_7(tmp2(5929).Text, obj10);
   }
   const obj7 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
   items3[1] = tmp6Result;
   obj5.children = items3;
-  obj4.children = closure_7(projectId(7381).Card, {
+  obj4.children = closure_7(projectId(7445).Card, {
     variant: "primary",
     shadow: "high",
     children: closure_8(closure_5, obj5),

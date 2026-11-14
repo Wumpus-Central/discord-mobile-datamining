@@ -21,11 +21,11 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 let obj2 = {
-  guildId: "delete",
+  guildId: "description",
   channelId: "isArray",
   channelType: "isArray",
   numMediaItems: "Array",
-  hasMediaOptions: "channel",
+  hasMediaOptions: "channelId",
   source: false,
   incrementableActions: false,
 };

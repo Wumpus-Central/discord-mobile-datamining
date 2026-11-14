@@ -96,7 +96,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
   if (favoriteChannels == null) {
     favoriteChannels = FavoriteStore.getFavoriteChannels();
   }
-  new Set(favoriteChannels(10904).getAutoAddedThreadsCategoryIds(favoriteChannels));
+  new Set(favoriteChannels(10973).getAutoAddedThreadsCategoryIds(favoriteChannels));
   const isGuildCollapsedResult = UserGuildSettingsStore.isGuildCollapsed(id);
   dependencyMap = isGuildCollapsedResult;
   channel2 = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
@@ -275,8 +275,8 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined,
   });
-  let obj2 = favoriteChannels(10904);
-  const favoritesCategories = favoriteChannels(10876).getFavoritesCategories(favoriteChannels);
+  let obj2 = favoriteChannels(10973);
+  const favoritesCategories = favoriteChannels(10945).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -422,7 +422,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
                 isPrivate.id,
               );
             });
-            const found = mapped.filter(items(1380).isNotNullish);
+            const found = mapped.filter(items(1255).isNotNullish);
             const arr = closure_1(12)(items);
             closure_1 = found
               .sortBy((arg0) => {
@@ -650,12 +650,12 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
   };
 }
-const ChannelRecord = fn(5096);
+const ChannelRecord = fn(5159);
 ({ THREAD_CHANNEL_TYPES: closure_8, isGuildReadableType: closure_9, isVoiceChannel: closure_10 } = ChannelRecord);
-let closure_19 = fn(5174).createFavoritesGuildChannelRecord;
-const FavoritesConstants = fn(5105);
+let closure_19 = fn(5237).createFavoritesGuildChannelRecord;
+const FavoritesConstants = fn(5168);
 ({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = FavoritesConstants);
-const constants = fn(8670).ChannelListChannelNoticeRow;
+const constants = fn(8737).ChannelListChannelNoticeRow;
 const Permissions = fn(1083).Permissions;
 let items = [
   EmbeddedActivitiesStore,

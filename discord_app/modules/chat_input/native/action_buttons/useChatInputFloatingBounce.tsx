@@ -1,6 +1,6 @@
 // discord_app/modules/chat_input/native/action_buttons/useChatInputFloatingBounce.tsx
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChatInputConstants = fn(13699);
+const ChatInputConstants = fn(13804);
 ({
   CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4,
   CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty,
@@ -53,13 +53,13 @@ export default function useChatInputFloatingBounce(visible) {
   if (initiallyVisible) {
     num2 = 1;
   }
-  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num2);
-  let obj = require("../../../../../_runtime/metro/01652__.js");
+  sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num2);
+  let obj = require("../../../../../_runtime/metro/01655__.js");
   let num3 = 1;
   if (!initiallyVisible) {
     num3 = closure_5;
   }
-  sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num3);
+  sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num3);
   const tmp5 = onExitComplete(sharedValue.useState(initiallyVisible), 2);
   closure_5 = tmp6;
   const tmp7 = onExitComplete(sharedValue.useState(visible), 2);
@@ -86,7 +86,7 @@ export default function useChatInputFloatingBounce(visible) {
   const effect1 = obj3.useEffect(() => {
     if (c0) {
       const obj3 = timing_timing;
-      items = [closure_8, _mod1705.scheduleOnRN, closure_5];
+      items = [closure_8, _mod1708.scheduleOnRN, closure_5];
       c0 = undefined;
       c1 = undefined;
       [tmp29, tmp30, tmp31] = items;
@@ -107,20 +107,20 @@ export default function useChatInputFloatingBounce(visible) {
       );
       let withDelayResult = withTimingResult;
       if (c1 > 0) {
-        withDelayResult = _mod1652.withDelay(tmp37, withTimingResult);
+        withDelayResult = _mod1655.withDelay(tmp37, withTimingResult);
       }
       const result = sharedValue.set(withDelayResult);
       const withSpringResult = spring_spring.withSpring(1, React4, "respect-motion-settings");
       let withDelayResult1 = withSpringResult;
       if (c1 > 0) {
-        withDelayResult1 = _mod1652.withDelay(tmp37, withSpringResult);
+        withDelayResult1 = _mod1655.withDelay(tmp37, withSpringResult);
       }
       const result1 = sharedValue1.set(withDelayResult1);
     } else {
       const obj = timing_timing;
       const items2 = [
         closure_9,
-        _mod1705.scheduleOnRN,
+        _mod1708.scheduleOnRN,
         function handleExitFinished() {
           const current = ref.current;
           let currentResult;
@@ -150,7 +150,7 @@ export default function useChatInputFloatingBounce(visible) {
       );
     }
   }, items1);
-  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult = require("../../../../../_runtime/metro/01655__.js");
   let items2 = [closure_10, sharedValue, sharedValue1];
   _require = undefined;
   dependencyMap = undefined;
@@ -165,9 +165,9 @@ export default function useChatInputFloatingBounce(visible) {
   useChatInputFloatingBounceTsx3.__closure = items3;
   useChatInputFloatingBounceTsx3.__workletHash = 19796400512;
   useChatInputFloatingBounceTsx3.__initData = tmp14;
-  const tmpResult2 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult2 = require("../../../../../_runtime/metro/01655__.js");
   return {
-    animatedStyle: require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(useChatInputFloatingBounceTsx3),
+    animatedStyle: require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(useChatInputFloatingBounceTsx3),
     isInteractive: tmp10,
   };
 }

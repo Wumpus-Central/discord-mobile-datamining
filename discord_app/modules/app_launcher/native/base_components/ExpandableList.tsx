@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/base_components/ExpandableList.tsx
 import util from "../../../../intl/index.native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -9,12 +9,12 @@ import TableRow from "../../../../design/components/TableRow/native/TableRow.nat
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = tmp4(1652);
+const _modDef1655 = tmp4(1655);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_9 = createStyles.createStyles({
   animatedListContainer: { overflow: "hidden" },
   expandCTALabelContainer: { alignItems: "center" },
@@ -71,8 +71,8 @@ export default function ExpandableList(onExpand) {
   if (null == showsExpandCTAOverride) {
     showsExpandCTAOverride = items.length > bound;
   }
-  sharedValue = _mod1652.useSharedValue(0);
-  sharedValue1 = _mod1652.useSharedValue(0);
+  sharedValue = _mod1655.useSharedValue(0);
+  sharedValue1 = _mod1655.useSharedValue(0);
   const items3 = [closure_10, first, sharedValue, sharedValue1];
   memo1 = undefined;
   importDefault = undefined;
@@ -101,7 +101,7 @@ export default function ExpandableList(onExpand) {
   ExpandableListTsx1.__workletHash = 3023496786140;
   ExpandableListTsx1.__initData = tmp12;
   const items5 = [items, bound];
-  const derivedValue = _mod1652.useDerivedValue(ExpandableListTsx1);
+  const derivedValue = _mod1655.useDerivedValue(ExpandableListTsx1);
   const memo = noop.useMemo(() => memo1.slice(0, bound), items5);
   const items6 = [items, bound];
   noop.useMemo(() => memo1.slice(bound, memo1.length), items6);
@@ -130,7 +130,7 @@ export default function ExpandableList(onExpand) {
   ExpandableListTsx2.__closure = items8;
   ExpandableListTsx2.__workletHash = 10519564962816;
   ExpandableListTsx2.__initData = tmp17;
-  const animatedStyle = _mod1652.useAnimatedStyle(ExpandableListTsx2);
+  const animatedStyle = _mod1655.useAnimatedStyle(ExpandableListTsx2);
   let obj2 = { style: null, children: null };
   const items9 = [tmp.animatedListContainer, animatedStyle];
   obj2.style = items9;
@@ -176,7 +176,7 @@ export default function ExpandableList(onExpand) {
   }
   items10[1] = tmp25Result;
   obj2.children = items10;
-  const items11 = [metroImportDefault(_modDef1652.View, obj2)];
+  const items11 = [metroImportDefault(_modDef1655.View, obj2)];
   if (!showsExpandCTAOverride) {
     const obj8 = { children: null };
     items11[1] = showsExpandCTAOverride;
@@ -219,6 +219,6 @@ export default function ExpandableList(onExpand) {
     obj12.children = obj10;
     timestampProducer(View, obj12);
   }
-  const tmp9Result = _mod1652;
+  const tmp9Result = _mod1655;
 }
 export const COLLAPSED_LIST_ITEM_MAX = 4;

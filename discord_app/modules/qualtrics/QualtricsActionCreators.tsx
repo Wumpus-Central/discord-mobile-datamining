@@ -289,7 +289,7 @@ let closure_13 = async function _fireSurveyAction() {
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: constants.EMBEDDED_SURVEY_ACTION,
-      query: { force_survey_id },
+      query: { force_survey_id, supports_native: false },
       body: obj4,
       rejectWithError: true,
     };
@@ -315,8 +315,8 @@ let closure_13 = async function _fireSurveyAction() {
     return value;
   })();
 };
-const useQualtricsResponseStore = fn(6829).useQualtricsResponseStore;
-const QualtricsConstants = fn(6831);
+const useQualtricsResponseStore = fn(6892).useQualtricsResponseStore;
+const QualtricsConstants = fn(6894);
 ({ QuestionSelectorEnum: closure_8, QuestionTypeEnum: closure_9 } = QualtricsConstants);
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);

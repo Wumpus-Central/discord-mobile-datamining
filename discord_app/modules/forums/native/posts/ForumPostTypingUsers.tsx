@@ -1,7 +1,7 @@
 // discord_app/modules/forums/native/posts/ForumPostTypingUsers.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 },
   lastTypingUser: { marginEnd: 0 },
@@ -86,7 +86,7 @@ export default function ForumPostTypingUsers(hasUnreads) {
   ForumPostTypingUsersTsx1.__closure = items1;
   ForumPostTypingUsersTsx1.__workletHash = 15202435957297;
   ForumPostTypingUsersTsx1.__initData = tmp8;
-  animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ForumPostTypingUsersTsx1);
+  animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(ForumPostTypingUsersTsx1);
   let str = "text-muted";
   if (hasUnreads.hasUnreads) {
     str = "text-default";
@@ -112,7 +112,7 @@ export default function ForumPostTypingUsers(hasUnreads) {
             }),
           };
           items[2] = lastTypingUser;
-          return React4(_modDef1652.View, obj, getAvatarSource.id);
+          return React4(_modDef1655.View, obj, getAvatarSource.id);
         }),
         ,
       ];

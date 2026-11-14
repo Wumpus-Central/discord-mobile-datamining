@@ -1,5 +1,6 @@
 // discord_app/modules/experiments/apex/ApexExperiment.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import ApexUnitUtils from "ApexUnitUtils.tsx";
 import FingerprintUtils from "../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import discord_common_apex_ApexExperimentDefault from "../../../../discord_common/js/packages/apex/ApexExperiment.tsx";
@@ -8,21 +9,6 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import ApexExperimentStore from "ApexExperimentStore.tsx";
 
 require = fn;
-function getUnitId(type, guildId) {
-  if ("guild" === type) {
-    return guildId.guildId;
-  } else if ("user" === type) {
-    return AuthenticationStore.getId();
-  } else if ("installation" === type) {
-    let str2 = FingerprintUtils.maybeExtractId(AuthenticationStore.getInstallationForTracking());
-    if (str2 == null) {
-      str2 = "";
-    }
-    return str2;
-  } else {
-    GlobalUtils.assertNever(type);
-  }
-}
 function useUnitId(type, guildId) {
   items = [AuthenticationStore];
   _slicedToArray(
@@ -50,8 +36,8 @@ function useUnitId(type, guildId) {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/ApexExperiment.tsx");
 
-export default function createApexExperiment(arg0) {
-  return discord_common_apex_ApexExperimentDefault(arg0, ApexExperimentStore, getUnitId, useUnitId);
+export default function createApexExperiment(definition) {
+  return discord_common_apex_ApexExperimentDefault(definition, ApexExperimentStore, ApexUnitUtils.getUnitId, useUnitId);
 }
-export const ApexExperiment = fn(1451).ApexExperiment;
-export { getUnitId };
+export const ApexExperiment = fn(1454).ApexExperiment;
+export const getUnitId = fn(1253).getUnitId;

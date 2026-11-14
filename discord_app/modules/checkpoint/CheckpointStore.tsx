@@ -4,6 +4,8 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
 import CheckpointCharacterTraits from "CheckpointCharacterTraits.tsx";
 import CheckpointTrait from "../../../discord_common/js/shared/shared-constants/CheckpointTrait.tsx";
+import CheckpointNavigation from "CheckpointNavigation.tsx";
+import CheckpointFlows from "CheckpointFlows.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
@@ -132,6 +134,19 @@ const items = [
     const merged = Object.assign(arg0);
     return { volume: 1 };
   },
+  (progress) => {
+    obj = {};
+    const merged = Object.assign(progress);
+    let tmp2 = null;
+    if (null != progress.progress) {
+      obj2 = {};
+      const merged1 = Object.assign(progress.progress);
+      obj2.availability = require("CheckpointAvailability").CheckpointAvailability.FULL;
+      tmp2 = obj2;
+    }
+    obj.progress = tmp2;
+    return obj;
+  },
 ];
 CheckpointStore.migrations = items;
 const checkpointStore = new CheckpointStore(DispatcherDefault, {
@@ -154,39 +169,51 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
   CHECKPOINT_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
     ({ stats: c7, globalStats: c8, character: c9, compactAssets: c10, availability: c11 } = arg0);
     INIT = obj.SUCCESS;
-    if (c11 === require("CheckpointAvailability").CheckpointAvailability.FULL) {
-      if (null == c9) {
-        if (null != obj.progress) {
-          selectedCharacterTraits = (function getUnlockedTraits(selectedCharacterTraits) {
-            obj2 = {};
-            const values = Object.values(CheckpointTrait.CheckpointTrait);
-            const iter = values[Symbol.iterator]();
-            const nextResult = iter.next();
-            while (iter !== undefined) {
-              let tmp4 = nextResult;
-              let tmp5 = selectedCharacterTraits[nextResult];
-              let tmp6 = tmp5;
-              let result = null == tmp5;
-              if (!result) {
-                let obj3 = CheckpointCharacterTraits;
-                let obj4 = { stats, hasNitro: isPremiumResult, savedCharacter };
-                result = obj3.isTraitSelectionLocked(tmp4, tmp6, obj4);
-              }
-              if (!result) {
-                obj2[tmp4] = tmp6;
-              }
-              continue;
+    const progress = obj.progress;
+    if (null != progress) {
+      if (c11 !== require("CheckpointAvailability").CheckpointAvailability.UNAVAILABLE) {
+        let tmp5 = null;
+      }
+      tmp.progress = tmp5;
+      selectedCharacterTraits = null;
+      const progress2 = obj.progress;
+      let tmp10 = c11 === require("CheckpointAvailability").CheckpointAvailability.FULL;
+      if (tmp10) {
+        tmp10 = null == c9;
+      }
+      if (tmp10) {
+        tmp10 = null != progress2;
+      }
+      if (tmp10) {
+        selectedCharacterTraits = (function getUnlockedTraits(selectedCharacterTraits) {
+          obj2 = {};
+          const values = Object.values(CheckpointTrait.CheckpointTrait);
+          const iter = values[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let tmp4 = nextResult;
+            let tmp5 = selectedCharacterTraits[nextResult];
+            let tmp6 = tmp5;
+            let result = null == tmp5;
+            if (!result) {
+              let obj3 = CheckpointCharacterTraits;
+              let obj4 = { stats, hasNitro: isPremiumResult, savedCharacter };
+              result = obj3.isTraitSelectionLocked(tmp4, tmp6, obj4);
             }
-            return obj2;
-          })(obj.progress.selectedCharacterTraits);
-          obj = {};
-          const merged = Object.assign(obj.progress);
-          obj.selectedCharacterTraits = selectedCharacterTraits;
-          obj.progress = obj;
-        }
+            if (!result) {
+              obj2[tmp4] = tmp6;
+            }
+            continue;
+          }
+          return obj2;
+        })(progress2.selectedCharacterTraits);
+        obj = {};
+        const merged = Object.assign(progress2);
+        obj.selectedCharacterTraits = selectedCharacterTraits;
+        obj.progress = obj;
       }
     }
-    selectedCharacterTraits = null;
+    tmp5 = progress;
   },
   CHECKPOINT_FETCH_FAILED: function handleFetchFailed() {
     INIT = obj.ERROR;
@@ -228,24 +255,47 @@ const checkpointStore = new CheckpointStore(DispatcherDefault, {
   },
   CHECKPOINT_SAVE_PROGRESS: function handleSaveProgress(stage) {
     stage = stage.stage;
-    let tmp = c13;
-    if (c13 == null) {
-      tmp = c9;
-    }
-    if (tmp == null) {
-      tmp = closure_5;
-    }
-    const progress = obj.progress;
-    let stage1;
-    if (progress != null) {
-      stage1 = progress.stage;
-    }
-    if (stage1 === stage) {
-      if (progress.selectedCharacterTraits === tmp) {
+    if (null == availability) {
+      return false;
+    } else {
+      const obj3 = {
+        stats,
+        character,
+        isCharacterCreatorEnabled: availability === require("CheckpointAvailability").CheckpointAvailability.FULL,
+      };
+      if (obj2.hasCheckpointSummaryRoute(obj3)) {
+        const progress = obj.progress;
+        let stage1;
+        if (progress != null) {
+          stage1 = progress.stage;
+        }
+        if (stage1 === CheckpointNavigation.CheckpointCharacterStage.SUMMARY) {
+          return false;
+        } else {
+          let tmp3 = c13;
+          if (c13 == null) {
+            tmp3 = character;
+          }
+          if (tmp3 == null) {
+            tmp3 = closure_5;
+          }
+          let stage2;
+          if (progress != null) {
+            stage2 = progress.stage;
+          }
+          if (stage2 === stage) {
+            if (progress.selectedCharacterTraits === tmp3) {
+              return false;
+            }
+          }
+          obj = { stage, selectedCharacterTraits: tmp3, availability };
+          obj.progress = obj;
+        }
+      } else {
         return false;
       }
+      obj2 = CheckpointFlows;
     }
-    obj.progress = { stage, selectedCharacterTraits: tmp };
   },
   LOGOUT: function handleLogout() {
     obj = {};

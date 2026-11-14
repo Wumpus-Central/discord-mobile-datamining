@@ -73,7 +73,7 @@ let closure_12 = async function _joinFrameActivity(arg0) {
             };
             c9 = 1;
             c10 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "Path", done: true };
           }
           break;
         case 1:
@@ -530,10 +530,10 @@ let closure_14 = async function _getActivityChannelId() {
   }
   return channel_id1;
 };
-const makeFrameId = fn(6957).makeFrameId;
+const makeFrameId = fn(7020).makeFrameId;
 const Constants = fn(1072);
 ({ AbortCodes: closure_8, ChannelTypes: closure_9, RPCEvents: closure_10 } = Constants);
-const ActivityIntent = fn(12610).ActivityIntent;
+const ActivityIntent = fn(12706).ActivityIntent;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/joinFrameActivity.tsx");
 

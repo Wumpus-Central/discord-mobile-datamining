@@ -1,21 +1,24 @@
 // discord_app/modules/badges/BadgeUnreadStateExperiment.tsx
-import ApexExperiment from "../experiments/apex/index.tsx";
-import size from "../../../_runtime/metro/00002__.js";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import noop from "../../../_runtime/metro/00019__.js";
 
-let closure_2 = ApexExperiment.createApexExperiment({
+const require = fn;
+const ApexExperiment = fn(1452);
+let closure_4 = ApexExperiment.createApexExperiment({
   name: "2026-10-badges-unread-state",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/BadgeUnreadStateExperiment.tsx");
 
 export function useIsBadgeUnreadStateEnabled(location) {
   const _location = location.location;
   const hasUnread = location.hasUnread;
-  items = [_location(hasUnread[0]).ApexExperimentStore];
+  items = [_location(hasUnread[2]).ApexExperimentStore];
   const items1 = [hasUnread, _location];
-  return _location(hasUnread[1]).useStateFromStores(
+  let stateFromStores = _location(hasUnread[3]).useStateFromStores(
     items,
     () => {
       let enabled = hasUnread;
@@ -27,4 +30,17 @@ export function useIsBadgeUnreadStateEnabled(location) {
     },
     items1,
   );
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  const first = tmp2[0];
+  let tmp4 = stateFromStores;
+  if (stateFromStores) {
+    tmp4 = !first;
+  }
+  if (tmp4) {
+    tmp2[1](true);
+  }
+  if (!stateFromStores) {
+    stateFromStores = first;
+  }
+  return stateFromStores;
 }

@@ -18,7 +18,7 @@ import useSafeAreaAvoidingInputsDefault from "../../safe_area/useSafeAreaAvoidin
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
 import MobileWidgetEditingExperiment from "../experiments/MobileWidgetEditingExperiment.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef16943 from "../../../../_runtime/metro/16943__.js";
+import _modDef17066 from "../../../../_runtime/metro/17066__.js";
 import useOpenChangeBannerActionSheetDefault from "../hooks/native/useOpenChangeBannerActionSheet.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles.tsx";
@@ -44,16 +44,16 @@ import ProfileCustomizationNavigationStore from "../../profile_customization/Pro
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
-const useMeasuredLayoutDefault = tmp(7929);
-const useProfileThemeDefault = tmp(8524);
-const useUserProfileBannerHeightDefault = tmp(8527);
-const UserProfileFixedBackgroundDefault = tmp(8534);
-const useBadgesDefault = tmp(8541);
-const UserProfileCustomStatusBubbleDefault = tmp(9464);
-const useTryItOutUpsellScrollTrackingDefault = tmp(16966);
-const useScrollToUserProfileEditFormSectionDefault = tmp(16967);
-const EditUserProfileAvatarDefault = tmp(17052);
-const UserProfilePremiumTryItOutUpsellDefault = tmp(17062);
+const useMeasuredLayoutDefault = tmp(7994);
+const useProfileThemeDefault = tmp(8590);
+const useUserProfileBannerHeightDefault = tmp(8593);
+const UserProfileFixedBackgroundDefault = tmp(8600);
+const useBadgesDefault = tmp(8608);
+const UserProfileCustomStatusBubbleDefault = tmp(9531);
+const useTryItOutUpsellScrollTrackingDefault = tmp(17089);
+const useScrollToUserProfileEditFormSectionDefault = tmp(17090);
+const EditUserProfileAvatarDefault = tmp(17175);
+const UserProfilePremiumTryItOutUpsellDefault = tmp(17185);
 require = fn;
 function EditUserProfileBanner(arg0) {
   ({
@@ -192,9 +192,9 @@ function UserProfileEditFormContent(currentUser) {
   let obj2 = require("BioMaxLengthExperiment");
   const ref1 = isTryItOut.useRef(null);
   const tmp5 = useKeyboardIsOpenDefault();
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj4 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj4 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(false);
   const ref2 = isTryItOut.useRef(null);
   const ref3 = isTryItOut.useRef(null);
   const ref4 = isTryItOut.useRef(null);
@@ -207,7 +207,7 @@ function UserProfileEditFormContent(currentUser) {
   ];
   let obj9 = { ref: ref4, offset: null };
   let obj10 = { type: "toValue", value: null };
-  let obj5 = require("../../../../_runtime/metro/01652__.js");
+  let obj5 = require("../../../../_runtime/metro/01655__.js");
   let obj7 = { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } };
   let obj8 = { ref: ref3, offset: { type: "toRef", ref: ref4, extraOffset: PX_16 } };
   obj10.value = nativeDefault.space.PX_64;
@@ -410,7 +410,7 @@ function UserProfileEditFormContent(currentUser) {
   UserProfileEditFormTsx1.__workletHash = 15732737689317;
   UserProfileEditFormTsx1.__initData = tmp37;
   const items8 = [sharedValue, tmp36];
-  const derivedValue = require("../../../../_runtime/metro/01652__.js").useDerivedValue(UserProfileEditFormTsx1);
+  const derivedValue = require("../../../../_runtime/metro/01655__.js").useDerivedValue(UserProfileEditFormTsx1);
   let tmp42 = tmp26;
   const callback = obj3.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.contentOffset.y);
@@ -616,7 +616,7 @@ function UserProfileEditFormContent(currentUser) {
         obj6.value = tmp16;
         obj6.onFocus = onFocus;
         obj6.onChange = function onChange(globalName) {
-          return _undefined(9331).setPendingChanges({ globalName });
+          return _undefined(9398).setPendingChanges({ globalName });
         };
         obj6.placeholder = _undefined.toString();
         obj6.maxLength = maxLength;
@@ -657,7 +657,7 @@ function UserProfileEditFormContent(currentUser) {
           obj8.value = tmp30;
           obj8.onFocus = onFocus;
           obj8.onChange = function onChange(pronouns) {
-            return _undefined(9331).setPendingChanges({ pronouns });
+            return _undefined(9398).setPendingChanges({ pronouns });
           };
           obj8.maxLength = maxLength2;
           obj8.disabled = isSubmitting;
@@ -691,7 +691,7 @@ function UserProfileEditFormContent(currentUser) {
           obj10.value = tmp41;
           obj10.onFocus = onFocus;
           obj10.onChange = function onChange(bio) {
-            return _undefined(9331).setPendingChanges({ bio });
+            return _undefined(9398).setPendingChanges({ bio });
           };
           obj10.autoFocus = c1 === isSubmitting.BIO;
           obj10.maxLength = maxLength;
@@ -708,7 +708,7 @@ function UserProfileEditFormContent(currentUser) {
           if (tmp25) {
             let fn = UserProfileActionCreators.setTryItOutThemeColors;
           } else {
-            fn = (themeColors) => _undefined(9331).setPendingChanges({ themeColors });
+            fn = (themeColors) => _undefined(9398).setPendingChanges({ themeColors });
           }
           obj11.onProfileThemeColorsChanged = fn;
           obj11.pendingAvatarSrc = pendingAvatarSrc;
@@ -769,7 +769,7 @@ function UserProfileEditFormContent(currentUser) {
               currentUser: _undefined,
               onLayout: closure_50.onTryItOutSectionLayout,
               onPreviewPremium() {
-                return _undefined(17048).openPremiumTryItOutModal();
+                return _undefined(17171).openPremiumTryItOutModal();
               },
             };
             tmp12Result9 = colors(UserProfilePremiumTryItOutSectionDefault, obj21);
@@ -836,7 +836,7 @@ function UserProfileEditFormContent(currentUser) {
     items9[2] = tmp25;
     obj16.children = items9;
     obj15.children = tmp51(tmp52, obj16);
-    return tmp50(tmp4(5314).ThemeContextProvider, obj15);
+    return tmp50(tmp4(5377).ThemeContextProvider, obj15);
   } else if (enabled) {
     tmp = UserProfilePremiumTryItOutUpsellDefault;
     obj = {
@@ -848,27 +848,27 @@ function UserProfileEditFormContent(currentUser) {
     let tmp50Result = tmp50(tmp, obj);
   } else {
     let obj25 = { isTryItOut };
-    tmp50Result = tmp50(tmp4(17063).UserProfilePremiumUpsellCard, obj25);
+    tmp50Result = tmp50(tmp4(17186).UserProfilePremiumUpsellCard, obj25);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7896).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7962).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1072);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: closure_10 } = Constants);
-const HexagonCampaignConstants = fn(5268);
+const HexagonCampaignConstants = fn(5331);
 ({ HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 let closure_13 = fn(1082).ProfileCustomizationScrollPositions;
-let closure_14 = fn(16942).UserProfileEditAutoFocusElement;
+let closure_14 = fn(17065).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = [1];
 let obj = {
-  assetOrigin: fn(7742).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef16943,
-  staticImageUri: _modDef16943,
+  assetOrigin: fn(7808).AssetOriginTypes.NEW_ASSET,
+  imageUri: _modDef17066,
+  staticImageUri: _modDef17066,
   description: "",
-  originalAsset: "paddingHorizontal",
+  originalAsset: "__d",
 };
 let closure_23 = {
   code: "(function UserProfileEditFormTsx1(){let[isScrolledAboveTryItOutSection,isBoardTabOnScreen]=this.__closure;return isScrolledAboveTryItOutSection.get()&&!isBoardTabOnScreen.get();})",

@@ -1,10 +1,10 @@
 // discord_app/design/components/Button/native/ButtonPill.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import shared from "../../../shared.tsx";
 import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
@@ -15,7 +15,7 @@ import ButtonEllipsis from "ButtonEllipsis.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function PillWrapper(expressivePressState) {
@@ -75,7 +75,7 @@ function PillWrapper(expressivePressState) {
       obj12.style = items4;
       const items5 = [children, tmp7];
       obj12.children = items5;
-      items3[1] = React5(_modDef1652.View, obj12);
+      items3[1] = React5(_modDef1655.View, obj12);
       obj11.children = items3;
     }
     return React5(tmp10, obj11);
@@ -94,7 +94,7 @@ function PillWrapper(expressivePressState) {
   obj15.style = items8;
   const items9 = [children, tmp7];
   obj15.children = items9;
-  items7[1] = React5(_modDef1652.View, obj15);
+  items7[1] = React5(_modDef1655.View, obj15);
   obj14.children = items7;
   obj11 = obj14;
   const tmp6Result = LinearGradientDefault;
@@ -239,7 +239,7 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
     flag,
     springPresets.SUBTLE_SPRING,
     enabled,
-    _mod1652.withDelay,
+    _mod1655.withDelay,
     300,
     num,
   ];
@@ -296,15 +296,15 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
   ButtonPillNativeTsx1.__closure = items1;
   ButtonPillNativeTsx1.__workletHash = 14635715851420;
   ButtonPillNativeTsx1.__initData = tmp3;
-  const animatedStyle = _mod1652.useAnimatedStyle(ButtonPillNativeTsx1);
-  let tmpResult = _mod1652;
+  const animatedStyle = _mod1655.useAnimatedStyle(ButtonPillNativeTsx1);
+  let tmpResult = _mod1655;
   const items2 = [
     closure_18,
     spring_spring.withSpring,
     flag,
     springPresets.SUBTLE_SPRING,
     enabled,
-    _mod1652.withDelay,
+    _mod1655.withDelay,
     300,
     num,
   ];
@@ -359,26 +359,26 @@ function useLoadingStyles(flag, DEFAULT_BUTTON_SIZE) {
   ButtonPillNativeTsx2.__closure = items3;
   ButtonPillNativeTsx2.__workletHash = 5746320300361;
   ButtonPillNativeTsx2.__initData = tmp12;
-  const items4 = [animatedStyle, _mod1652.useAnimatedStyle(ButtonPillNativeTsx2)];
+  const items4 = [animatedStyle, _mod1655.useAnimatedStyle(ButtonPillNativeTsx2)];
   return items4;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-let ButtonConstants = fn(5879);
-const paddingVertical = ButtonConstants.getButtonPadding(fn(5879).SMALL_BUTTON_HEIGHT, fn(5879).SMALL_BUTTON_ICON_SIZE);
-ButtonConstants = fn(5879);
+let ButtonConstants = fn(5942);
+const paddingVertical = ButtonConstants.getButtonPadding(fn(5942).SMALL_BUTTON_HEIGHT, fn(5942).SMALL_BUTTON_ICON_SIZE);
+ButtonConstants = fn(5942);
 const paddingVertical2 = ButtonConstants.getButtonPadding(
-  fn(5879).MEDIUM_BUTTON_HEIGHT,
-  fn(5879).MEDIUM_BUTTON_ICON_SIZE,
+  fn(5942).MEDIUM_BUTTON_HEIGHT,
+  fn(5942).MEDIUM_BUTTON_ICON_SIZE,
 );
-ButtonConstants = fn(5879);
+ButtonConstants = fn(5942);
 const paddingVertical3 = ButtonConstants.getButtonPadding(
-  fn(5879).LARGE_BUTTON_HEIGHT,
-  fn(5879).LARGE_BUTTON_ICON_SIZE,
+  fn(5942).LARGE_BUTTON_HEIGHT,
+  fn(5942).LARGE_BUTTON_ICON_SIZE,
 );
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const state = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     const obj2 = {

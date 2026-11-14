@@ -1,6 +1,6 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOO.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../design/animation/reanimated/spring/springPresets.tsx";
 import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
@@ -13,7 +13,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import DevSettingsStore from "../../../devtools/dev_settings/DevSettingsStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function VisualEffectViewOverrideOverlay_(arg0) {
@@ -48,7 +48,7 @@ function VisualEffectViewOverrideOverlay_(arg0) {
   VEVOOTsx1.__closure = items1;
   VEVOOTsx1.__workletHash = 4442371406619;
   VEVOOTsx1.__initData = tmp5;
-  const animatedStyle = _mod1652.useAnimatedStyle(VEVOOTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(VEVOOTsx1);
   const obj2 = { style: null, children: null };
   const items2 = [tmp.wrapper, animatedStyle];
   obj2.style = items2;
@@ -67,13 +67,13 @@ function VisualEffectViewOverrideOverlay_(arg0) {
   obj5.onPress = onClose;
   items4[1] = timestampProducer(ActionButtonDefault, obj5);
   obj2.children = items4;
-  return metroImportDefault(_modDef1652.View, obj2);
+  return metroImportDefault(_modDef1655.View, obj2);
 }
 const ScrollView = fn(17).ScrollView;
 const DEV_WIDGET_SIZE = fn(573).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 const styles = createStyles.createStyles({
   zeroPadding: { paddingVertical: 0, paddingHorizontal: 0 },
   zeroPaddingVertical: { paddingVertical: 0 },
@@ -81,7 +81,7 @@ const styles = createStyles.createStyles({
   zeroHeight: { height: 0 },
   enabledSwitchStyle: { alignSelf: "flex-start" },
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj = { wrapper: null, scrollView: null, scrollViewContent: null, close: null };
 let size = {
   borderColor: nativeDefault.colors.BORDER_SUBTLE,

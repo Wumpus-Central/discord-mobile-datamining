@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/application_view/Header.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
 import ToastUtils from "../../../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../../../utils/ClipboardUtils.native.tsx";
 import useAvatarColorDefault from "../../../../avatar/useAvatarColor.tsx";
@@ -16,14 +16,14 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const AppLauncherNativeConstants = fn(1498);
+const AppLauncherNativeConstants = fn(1501);
 ({ DEFAULT_CONTENT_PADDING, SCREEN_BACKGROUND_COLOR } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const xl = nativeDefault.radii.xl;
 let c10 = 105;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   headerContainer: { position: "absolute", top: -16, left: 0, right: 0, minHeight: 161 },
   expandedHeaderBanner: { height: 105 },
@@ -105,8 +105,8 @@ export default function Header(application) {
   const tmp3 = closure_11();
   let appLauncherIconSource = null;
   if (null != application) {
-    appLauncherIconSource = tmp(13278).getAppLauncherIconSource(application);
-    const tmpResult = tmp(13278);
+    appLauncherIconSource = tmp(13383).getAppLauncherIconSource(application);
+    const tmpResult = tmp(13383);
   }
   let obj = require("initialize");
   let str = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
@@ -125,14 +125,14 @@ export default function Header(application) {
   const tmp6Result = useAvatarColorDefault(tmp7, str);
   if (null != appLauncherIconSource) {
     let obj2 = { iconSource: appLauncherIconSource, iconBorderRadius: xl, iconSize: 72 };
-    let tmp12 = closure_7(tmp5(13283), obj2);
+    let tmp12 = closure_7(tmp5(13388), obj2);
     let tmp13 = closure_7;
   } else {
     let obj3 = { style: tmp3.loadingIcon };
     tmp12 = closure_7(id, obj3);
     tmp13 = closure_7;
   }
-  let items1 = [closure_12, require("../../../../../../_runtime/metro/01652__.js").interpolate, scrollOffsetY, c10];
+  let items1 = [closure_12, require("../../../../../../_runtime/metro/01655__.js").interpolate, scrollOffsetY, c10];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -156,9 +156,9 @@ export default function Header(application) {
   HeaderTsx1.__closure = items2;
   HeaderTsx1.__workletHash = 2041267875989;
   HeaderTsx1.__initData = tmp17;
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HeaderTsx1);
-  const tmpResult10 = require("../../../../../../_runtime/metro/01652__.js");
-  const items3 = [closure_13, require("../../../../../../_runtime/metro/01652__.js").interpolate, scrollOffsetY, c10];
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(HeaderTsx1);
+  const tmpResult10 = require("../../../../../../_runtime/metro/01655__.js");
+  const items3 = [closure_13, require("../../../../../../_runtime/metro/01655__.js").interpolate, scrollOffsetY, c10];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -182,9 +182,9 @@ export default function Header(application) {
   HeaderTsx2.__closure = items4;
   HeaderTsx2.__workletHash = 12593717419899;
   HeaderTsx2.__initData = tmp22;
-  const animatedStyle1 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HeaderTsx2);
-  const tmpResult11 = require("../../../../../../_runtime/metro/01652__.js");
-  const items5 = [closure_14, require("../../../../../../_runtime/metro/01652__.js").interpolate, scrollOffsetY, c10];
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(HeaderTsx2);
+  const tmpResult11 = require("../../../../../../_runtime/metro/01655__.js");
+  const items5 = [closure_14, require("../../../../../../_runtime/metro/01655__.js").interpolate, scrollOffsetY, c10];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -211,9 +211,9 @@ export default function Header(application) {
   HeaderTsx3.__closure = items6;
   HeaderTsx3.__workletHash = 17390115934490;
   HeaderTsx3.__initData = tmp27;
-  const animatedStyle2 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HeaderTsx3);
-  const tmpResult12 = require("../../../../../../_runtime/metro/01652__.js");
-  const items7 = [closure_15, require("../../../../../../_runtime/metro/01652__.js").interpolate, scrollOffsetY, c10];
+  const animatedStyle2 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(HeaderTsx3);
+  const tmpResult12 = require("../../../../../../_runtime/metro/01655__.js");
+  const items7 = [closure_15, require("../../../../../../_runtime/metro/01655__.js").interpolate, scrollOffsetY, c10];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -233,18 +233,18 @@ export default function Header(application) {
   HeaderTsx4.__workletHash = 5671647822967;
   HeaderTsx4.__initData = tmp32;
   let str2 = "";
-  const animatedStyle3 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HeaderTsx4);
+  const animatedStyle3 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(HeaderTsx4);
   if (null != application) {
-    str2 = tmp(12602).getSectionName(application);
-    const tmpResult14 = tmp(12602);
+    str2 = tmp(12698).getSectionName(application);
+    const tmpResult14 = tmp(12698);
   }
   let result = null != application;
   if (result) {
     result = "flags" in application;
   }
   if (result) {
-    result = tmp(2148).supportsEmbeddedSurface(application, tmp(5914).EmbeddedSurfaceType.MAIN);
-    const tmpResult15 = tmp(2148);
+    result = tmp(2151).supportsEmbeddedSurface(application, tmp(5977).EmbeddedSurfaceType.MAIN);
+    const tmpResult15 = tmp(2151);
   }
   dependencyMap = result;
   id = UserStore.getCurrentUser();
@@ -261,11 +261,11 @@ export default function Header(application) {
   const obj8 = { style: null, pointerEvents: "none" };
   const items13 = [tmp3.collapsedHeaderBannerOverlay, animatedStyle3];
   obj8.style = items13;
-  const items14 = [tmp13(_modDef1652.View, obj8), tmp13(AppLauncherBackButtonDefault, { onPress: onPressBack }), ,];
+  const items14 = [tmp13(_modDef1655.View, obj8), tmp13(AppLauncherBackButtonDefault, { onPress: onPressBack }), ,];
   let obj6 = { style: tmp3.appIconMask, children: tmp12 };
   const tmp39 = id;
-  const tmpResult13 = require("../../../../../../_runtime/metro/01652__.js");
-  items14[2] = tmp13(_modDef1652.View, {
+  const tmpResult13 = require("../../../../../../_runtime/metro/01655__.js");
+  items14[2] = tmp13(_modDef1655.View, {
     style: animatedStyle2,
     pointerEvents: "none",
     children: tmp13(require("Text/Text").Heading, {
@@ -276,7 +276,7 @@ export default function Header(application) {
   });
   items14[3] = tmp13(require("native").Spacer, { size: 32, pointerEvents: "none" });
   obj7.children = items14;
-  items11[1] = closure_8(_modDef1652.View, obj7);
+  items11[1] = closure_8(_modDef1655.View, obj7);
   let tmp38Result = null;
   if (null != application) {
     tmp38Result = null;
@@ -285,7 +285,7 @@ export default function Header(application) {
       const obj11 = {
         size: "sm",
         variant: "secondary-overlay",
-        icon: tmp5(5967),
+        icon: tmp5(6030),
         onPress() {
           AnalyticsUtilsDefault.track(AnalyticEvents.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
             application_id: _undefined.id,
@@ -316,17 +316,17 @@ export default function Header(application) {
       };
       const intl = tmp(1113).intl;
       obj11.accessibilityLabel = intl.string(tmp(1113).t.XWDihq);
-      const items15 = [tmp13(tmp(7922).IconButton, obj11)];
+      const items15 = [tmp13(tmp(7988).IconButton, obj11)];
       const obj12 = { application, onAddAppMenuClick };
-      items15[1] = tmp13(tmp5(13359), obj12);
+      items15[1] = tmp13(tmp5(13464), obj12);
       obj10.children = items15;
       tmp38Result = closure_8(tmp39, obj10);
     }
-    tmpResult16 = tmp(12602);
+    tmpResult16 = tmp(12698);
   }
   items11[2] = tmp38Result;
   obj4.children = items11;
-  return closure_8(_modDef1652.View, obj4);
+  return closure_8(_modDef1655.View, obj4);
 }
 export const SHEET_HANDLE_CONTAINER_HEIGHT = 16;
 export const EXPANDED_HEADER_HEIGHT = 161;

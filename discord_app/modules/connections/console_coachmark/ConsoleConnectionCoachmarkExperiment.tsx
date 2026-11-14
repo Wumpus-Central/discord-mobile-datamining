@@ -9,7 +9,7 @@ const Constants = fn(1072);
 let items = [, ,];
 ({ PLAYSTATION: arr[0], PLAYSTATION_STAGING: arr[1], XBOX: arr[2] } = PlatformTypes);
 const set = new Set(items);
-const ApexExperiment = fn(1449);
+const ApexExperiment = fn(1452);
 let obj2 = {
   name: "2026-11-console-connection-coachmark",
   kind: "user",

@@ -7,12 +7,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const DisplayNameStylesConstants = fn(1394);
+const DisplayNameStylesConstants = fn(1397);
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: hasOwnProperty, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: closure_6 } =
   DisplayNameStylesConstants);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   body: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -45,12 +45,12 @@ let result = size.fileFinishedImporting(
 export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   onSelect = onSelect.onSelect;
   const tmp = closure_9();
-  let obj = onSelect(1652);
-  let obj2 = onSelect(1393);
+  let obj = onSelect(1655);
+  let obj2 = onSelect(1396);
   const sharedValue = obj.useSharedValue(obj2.wrapHue(onSelect(1090).int2hslRaw(onSelect.initialColor).h));
   items = [sharedValue, onSelect];
   const callback = noop.useCallback(() => {
-    const result = onSelect(5491).triggerHapticFeedback(onSelect(5491).HapticFeedbackTypes.IMPACT_LIGHT);
+    const result = onSelect(5554).triggerHapticFeedback(onSelect(5554).HapticFeedbackTypes.IMPACT_LIGHT);
   }, []);
   const callback1 = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -66,19 +66,19 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   const intl2 = onSelect(1113).intl;
   obj6.text = intl2.string(onSelect(1113).t.XqMe3N);
   obj6.onPress = callback1;
-  obj5.trailing = closure_7(onSelect(5873).Button, obj6);
-  obj4.header = closure_7(sharedValue(17841), obj5);
+  obj5.trailing = closure_7(onSelect(5936).Button, obj6);
+  obj4.header = closure_7(sharedValue(17961), obj5);
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.previewWrapper, children: null };
-  const tmp5 = sharedValue(17841);
+  const tmp5 = sharedValue(17961);
   obj8.children = closure_7(View, {
     style: tmp.preview,
-    children: closure_7(sharedValue(17849), { hue: sharedValue }),
+    children: closure_7(sharedValue(17969), { hue: sharedValue }),
   });
   const items1 = [closure_7(View, obj8)];
   const obj10 = {
     style: tmp.huePickerInset,
-    children: closure_7(sharedValue(16954), {
+    children: closure_7(sharedValue(17077), {
       hue: sharedValue,
       onPanFinalize: callback,
       saturation,
@@ -89,5 +89,5 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   items1[1] = closure_7(View, obj10);
   obj7.children = items1;
   obj4.children = closure_8(View, obj7);
-  return closure_7(onSelect(5503).BottomSheet, obj4);
+  return closure_7(onSelect(5566).BottomSheet, obj4);
 }

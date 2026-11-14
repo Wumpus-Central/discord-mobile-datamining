@@ -1,7 +1,7 @@
 // discord_app/modules/color_picker/native/HuePicker.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../_runtime/05830_LinearGradient.js";
+import _modDef1655 from "../../../../_runtime/metro/01655__.js";
+import LinearGradientDefault from "../../../../_runtime/05893_LinearGradient.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = [0, 60, 120, 180, 240, 300, 360];
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { justifyContent: "center", alignItems: "center" },
   containerFullWidth: { alignSelf: "stretch", overflow: "visible" },
@@ -72,21 +72,21 @@ export default function HuePicker(lightness) {
     flag = false;
   }
   let tmp = closure_9();
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(tmp.slider.height);
-  const obj2 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../_runtime/metro/01652__.js").useSharedValue(tmp.colorBarInner.height);
-  let obj3 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue3 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj4 = require("../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const obj = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(tmp.slider.height);
+  const obj2 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../_runtime/metro/01655__.js").useSharedValue(tmp.colorBarInner.height);
+  let obj3 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue3 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj4 = require("../../../../_runtime/metro/01655__.js");
   items = [
     closure_10,
     hue,
     require("ColorPickerUtils").normalizeValue,
     sharedValue3,
     onPanUpdate,
-    require("../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01708__.js").scheduleOnRN,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -116,7 +116,7 @@ export default function HuePicker(lightness) {
     require("ColorPickerUtils").normalizeValue,
     sharedValue3,
     onPanUpdate,
-    require("../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01708__.js").scheduleOnRN,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -139,7 +139,7 @@ export default function HuePicker(lightness) {
   HuePickerTsx2.__workletHash = 1340523300494;
   HuePickerTsx2.__initData = tmp14;
   obj6.onUpdate = HuePickerTsx2;
-  const items4 = [closure_12, onPanFinalize, require("../../../../_runtime/metro/01705__.js").scheduleOnRN];
+  const items4 = [closure_12, onPanFinalize, require("../../../../_runtime/metro/01708__.js").scheduleOnRN];
   _require = undefined;
   importDefault = undefined;
   [tmp20, tmp21, tmp22] = items4;
@@ -212,7 +212,7 @@ export default function HuePicker(lightness) {
   HuePickerTsx4.__workletHash = 9466436421270;
   HuePickerTsx4.__initData = tmp25;
   const items9 = [sharedValue];
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(HuePickerTsx4);
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(HuePickerTsx4);
   const items10 = [sharedValue3];
   const callback = obj7.useCallback((nativeEvent) => {
     const result = s.set(nativeEvent.nativeEvent.layout.width);
@@ -220,7 +220,7 @@ export default function HuePicker(lightness) {
   const callback1 = obj7.useCallback((nativeEvent) => {
     const result = l.set(nativeEvent.nativeEvent.layout.width);
   }, items10);
-  const tmp2Result = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result = require("../../../../_runtime/metro/01655__.js");
   const items11 = [closure_14, sharedValue1, sharedValue2, flag, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -251,7 +251,7 @@ export default function HuePicker(lightness) {
   HuePickerTsx5.__closure = items12;
   HuePickerTsx5.__workletHash = 7167757714665;
   HuePickerTsx5.__initData = tmp36;
-  const animatedStyle1 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(HuePickerTsx5);
+  const animatedStyle1 = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(HuePickerTsx5);
   const items13 = [tmp.container, , ,];
   let containerFullWidth = flag;
   if (flag) {
@@ -265,7 +265,7 @@ export default function HuePicker(lightness) {
   const obj10 = { colors: memo, start: { x: 0, y: 0.5 }, end: { x: 1, y: 0.5 }, style: null, children: null };
   const items14 = [tmp.colorBar];
   let colorBarFullWidth = flag;
-  const tmp2Result2 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result2 = require("../../../../_runtime/metro/01655__.js");
   if (flag) {
     colorBarFullWidth = tmp.colorBarFullWidth;
   }
@@ -285,7 +285,7 @@ export default function HuePicker(lightness) {
   const obj12 = { onLayout: callback, pointerEvents: "box-none", style: null };
   const items17 = [tmp.slider, sliderStyle, animatedStyle];
   obj12.style = items17;
-  items16[1] = c6(_modDef1652.View, obj12);
+  items16[1] = c6(_modDef1655.View, obj12);
   obj8.children = items16;
-  return closure_7(_modDef1652.View, obj8);
+  return closure_7(_modDef1655.View, obj8);
 }

@@ -14,7 +14,7 @@ function addSubscriptionPlan(fromServer) {
     const _Object = Object;
     set = new Set(Object.keys(tmp.paymentSourcePrices));
     closure_14[fromServer.id] = set;
-    set1 = dependencyMap2[fromServer.skuId];
+    set1 = dependencyMap3[fromServer.skuId];
     if (set1 == null) {
       const _Set = Set;
       set1 = new Set();
@@ -24,10 +24,10 @@ function addSubscriptionPlan(fromServer) {
     const _Array = Array;
     HermesBuiltin.arraySpread(Array.from(set), HermesBuiltin.arraySpread(Array.from(set1), 0));
     const set2 = new Set(items);
-    dependencyMap2[fromServer.skuId] = set2;
+    dependencyMap3[fromServer.skuId] = set2;
     const arraySpreadResult = HermesBuiltin.arraySpread(Array.from(set1), 0);
   }
-  if (null != dependencyMap[skuId]) {
+  if (null != dependencyMap2[skuId]) {
     obj.add(fromServer.id);
   } else {
     const _Set3 = Set;
@@ -70,16 +70,16 @@ function reset() {
 }
 const Constants = fn(1072);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({ SubscriptionIntervalTypes, SubscriptionPlanInfo } = PremiumConstants);
 const SubscriptionPlans = PremiumConstants.SubscriptionPlans;
 ({ PremiumSubscriptionSKUs: closure_8, ACTIVE_PREMIUM_SKUS: closure_9 } = PremiumConstants);
-let closure_10 = {};
 const dependencyMap = {};
+const dependencyMap2 = {};
 let set = new Set();
 let set1 = new Set();
 let closure_14 = {};
-const dependencyMap2 = {};
+const dependencyMap3 = {};
 let items = [
   SubscriptionPlanInfo[SubscriptionPlans.NONE_MONTH],
   SubscriptionPlanInfo[SubscriptionPlans.NONE_YEAR],
@@ -109,7 +109,7 @@ const prototype = SubscriptionPlanStore.prototype;
 prototype["getPlanIdsForSkus"] = function getPlanIdsForSkus(items) {
   items = [];
   while (tmp !== undefined) {
-    set = dependencyMap[tmp2];
+    set = dependencyMap2[tmp2];
     if (set == null) {
       let _Set = Set;
       let tmp5 = new.target;
@@ -136,11 +136,11 @@ prototype["getFetchedSKUIDs"] = function getFetchedSKUIDs() {
   return SnowflakeUtilsDefault.keys(closure_11);
 };
 prototype["getForSKU"] = function getForSKU(arg0) {
-  items = dependencyMap[arg0];
+  items = dependencyMap2[arg0];
   if (items == null) {
     items = [];
   }
-  return Array.from(items).map((item) => closure_1_10[item]);
+  return Array.from(items).map((item) => dependencyMap[item]);
 };
 prototype["getForSkuAndInterval"] = function getForSkuAndInterval(GUILD, interval) {
   closure_0 = interval;
@@ -157,7 +157,7 @@ prototype["getForSkuAndInterval"] = function getForSkuAndInterval(GUILD, interva
   });
 };
 prototype["get"] = function get(arg0) {
-  return closure_10[arg0];
+  return dependencyMap[arg0];
 };
 prototype["isFetchingForSKU"] = function isFetchingForSKU(arg0) {
   return set.has(arg0);
@@ -172,7 +172,7 @@ prototype["isLoadedForSKU"] = function isLoadedForSKU(TIER_2) {
     const hasItem = set.has(TIER_2);
     let tmp4 = !hasItem;
     if (!hasItem) {
-      tmp4 = null != dependencyMap[TIER_2];
+      tmp4 = null != dependencyMap2[TIER_2];
     }
     hasItem1 = tmp4;
   }
@@ -209,7 +209,7 @@ prototype["getPaymentSourceIds"] = function getPaymentSourceIds() {
 prototype["hasPaymentSourceForSKUId"] = function hasPaymentSourceForSKUId(arg0, item) {
   let tmp = constants2.NONE === item;
   if (!tmp) {
-    let hasItem = null != dependencyMap2[item];
+    let hasItem = null != dependencyMap3[item];
     if (hasItem) {
       hasItem = tmp2[item].has(arg0);
     }
@@ -250,14 +250,22 @@ const subscriptionPlanStore = new SubscriptionPlanStore(DispatcherDefault, {
     }
   },
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function handleEntitlementGiftsFetchSuccess(arg0) {
+    let flag = false;
     const iter = arg0.entitlements[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      if (null != nextResult.subscription_plan) {
-        let tmp5 = addSubscriptionPlanFromServer(tmp2.subscription_plan);
+      let tmp2 = nextResult;
+      let tmp3 = null != nextResult.subscription_plan;
+      if (tmp3) {
+        tmp3 = null == dependencyMap[tmp2.subscription_plan.id];
+      }
+      if (tmp3) {
+        let tmp8 = addSubscriptionPlanFromServer(tmp2.subscription_plan);
+        flag = true;
       }
       continue;
     }
+    return flag;
   },
   LOGOUT: reset,
 });

@@ -18,7 +18,8 @@ export function useCheckpointStepAnalytics(route) {
 }
 export function useCheckpointCloseAnalytics() {
   const unmountEffect = useMountEffect.useUnmountEffect(() => {
-    const obj = Tracking;
-    const result = obj.trackCheckpoint2026Closed(CheckpointSessionAnalyticsManagerDefault.getStepName());
+    CheckpointSessionAnalyticsManagerDefault.stop();
+    const obj2 = Tracking;
+    const result = obj2.trackCheckpoint2026Closed(CheckpointSessionAnalyticsManagerDefault.getStepName());
   });
 }

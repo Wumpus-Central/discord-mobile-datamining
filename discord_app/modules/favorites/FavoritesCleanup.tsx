@@ -85,8 +85,8 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(5096).THREAD_CHANNEL_TYPES;
-const FavoritesConstants = fn(5105);
+const THREAD_CHANNEL_TYPES = fn(5159).THREAD_CHANNEL_TYPES;
+const FavoritesConstants = fn(5168);
 ({
   FAVORITES_AUTO_ADD_THREADS_PER_GUILD: closure_10,
   FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_11,

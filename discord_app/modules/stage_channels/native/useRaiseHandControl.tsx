@@ -17,8 +17,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/useRaiseHandControl.tsx");
 
 export default function useRaiseHandControl(id) {
-  [tmp2, require] = shouldAgeVerifyToSpeakForCurrentUser(first(12868)(id), 2);
-  let tmp = shouldAgeVerifyToSpeakForCurrentUser(first(12868)(id), 2);
+  [tmp2, require] = shouldAgeVerifyToSpeakForCurrentUser(first(12964)(id), 2);
+  let tmp = shouldAgeVerifyToSpeakForCurrentUser(first(12964)(id), 2);
   const tmp3 = shouldAgeVerifyToSpeakForCurrentUser(
     useLocalStorageState.useLocalStorageState("age-verification-stage-popover-dismissed", false),
     2,

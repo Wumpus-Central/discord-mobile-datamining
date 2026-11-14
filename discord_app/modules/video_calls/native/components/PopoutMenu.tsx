@@ -4,9 +4,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
-import Patterns from "../../../../../_runtime/05493_Patterns.js";
-import LegacyBaseButton from "../../../../../_runtime/05535_LegacyBaseButton.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
+import Patterns from "../../../../../_runtime/05556_Patterns.js";
+import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
 import FormRowDefault from "../../../../design/void/Form/native/FormRow.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -14,7 +14,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const _modDef1652 = tmp2(1652);
+const _modDef1655 = tmp2(1655);
 require = fn;
 function PopoutMenuRow(onClose) {
   ({ icon, onClick } = onClose);
@@ -45,7 +45,7 @@ function PopoutMenuRow(onClose) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: {
     position: "absolute",
@@ -180,7 +180,7 @@ export default function PopoutMenu(onClose) {
     require("native").STANDARD_EASING,
     250,
     ref2,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     callback,
     8,
   ];
@@ -243,7 +243,7 @@ export default function PopoutMenu(onClose) {
   PopoutMenuTsx2.__closure = items6;
   PopoutMenuTsx2.__workletHash = 5794060579369;
   PopoutMenuTsx2.__initData = tmp22;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(PopoutMenuTsx2);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(PopoutMenuTsx2);
   onClose = obj.useCallback(() => _undefined3(true), []);
   const items7 = [onOpen];
   callback1 = obj.useCallback(() => {
@@ -258,7 +258,7 @@ export default function PopoutMenu(onClose) {
     const obj3 = { gesture: tmp33, children: null };
     const obj4 = { ref: ref1, children: trigger };
     obj3.children = c6(c5, obj4);
-    const items8 = [c6(tmp21(5535).GestureDetector, obj3)];
+    const items8 = [c6(tmp21(5598).GestureDetector, obj3)];
     let tmp35Result = null;
     if (first1) {
       const obj5 = { ref: ref2, style: null, onLayout: null, children: null };
@@ -278,7 +278,7 @@ export default function PopoutMenu(onClose) {
       const items10 = [tmp37Result, ,];
       let tmp37Result2 = null;
       if (null != title) {
-        tmp37Result2 = tmp37(tmp21(8041).FormDivider, {});
+        tmp37Result2 = tmp37(tmp21(8106).FormDivider, {});
       }
       items10[1] = tmp37Result2;
       items10[2] = rows.map((item, index) => {
@@ -288,7 +288,7 @@ export default function PopoutMenu(onClose) {
         return timestampProducer(PopoutMenuRow, obj, index);
       });
       obj5.children = items10;
-      tmp35Result = tmp35(_modDef1652.View, obj5);
+      tmp35Result = tmp35(_modDef1655.View, obj5);
     }
     const obj7 = { children: null };
     items8[1] = tmp35Result;

@@ -8,22 +8,22 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 const require = globalThis.__r;
 
-const _modDef1652 = tmp(1652);
-const isVoiceEmbeddedActivityDefault = tmp(5917);
-const EmbeddedActivityViewDefault = tmp(12752);
-const FrameRenderTargetDefault = tmp(13250);
-const getActivityContainerPIPStylesSpecDefault = tmp(19719);
+const _modDef1655 = tmp(1655);
+const isVoiceEmbeddedActivityDefault = tmp(5980);
+const EmbeddedActivityViewDefault = tmp(12848);
+const FrameRenderTargetDefault = tmp(13355);
+const getActivityContainerPIPStylesSpecDefault = tmp(19929);
 const require = fn;
-const ActivityPanelModes = fn(5896).ActivityPanelModes;
-const FramesConstants = fn(6957);
+const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const FramesConstants = fn(7020);
 ({
   asLaunched: closure_8,
   FrameLayoutModes: closure_9,
   getPipOrientationLockStateForFrame: closure_10,
 } = FramesConstants);
-const ActivityLayoutMode = fn(12610).ActivityLayoutMode;
+const ActivityLayoutMode = fn(12706).ActivityLayoutMode;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_13 = createStyles.createStyles({
   activityContainer: { flex: 1 },
   wrapper: { position: "absolute", left: "50%", top: "50%" },
@@ -119,7 +119,7 @@ export default function VoicePanelSecondaryPIPContent() {
   VoicePanelSecondaryPIPContentTsx1.__workletHash = 16590500926098;
   VoicePanelSecondaryPIPContentTsx1.__initData = tmp8;
   let tmp12 = null != connectedEmbeddedActivity;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     VoicePanelSecondaryPIPContentTsx1,
   );
   if (tmp12) {
@@ -135,7 +135,7 @@ export default function VoicePanelSecondaryPIPContent() {
   if (tmp14) {
     pipOrientationLockState = framePipOrientationLockState;
   }
-  const obj6 = require("../../../../../_runtime/metro/01652__.js");
+  const obj6 = require("../../../../../_runtime/metro/01655__.js");
   const items5 = [
     closure_15,
     pIPState,
@@ -178,7 +178,7 @@ export default function VoicePanelSecondaryPIPContent() {
   VoicePanelSecondaryPIPContentTsx2.__closure = items6;
   VoicePanelSecondaryPIPContentTsx2.__workletHash = 3337225503971;
   VoicePanelSecondaryPIPContentTsx2.__initData = tmp16;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     VoicePanelSecondaryPIPContentTsx2,
   );
   if (!tmp12) {
@@ -201,7 +201,7 @@ export default function VoicePanelSecondaryPIPContent() {
     obj8.children = tmp23Result;
     obj8 = <tmp24 {...obj8} />;
     obj7.children = obj8;
-    jsx(_modDef1652.View, obj7);
+    jsx(_modDef1655.View, obj7);
   }
   const obj10 = {
     frameId: mainFrameId,
@@ -213,5 +213,5 @@ export default function VoicePanelSecondaryPIPContent() {
   tmp23Result = (
     <tmp frameId={mainFrameId} level={require("FrameStackLevel").FrameStackLevel.AboveAppContent} presentation={null} />
   );
-  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
 }

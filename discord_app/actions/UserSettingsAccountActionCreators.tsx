@@ -57,7 +57,7 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
           let token;
           c4 = 1;
           c5 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -134,7 +134,7 @@ const Constants = fn(1072);
   DEVICE_TOKEN: closure_6,
   DEVICE_VOIP_TOKEN: metroImportDefault,
 } = Constants);
-const PushNotificationConstants = fn(6784);
+const PushNotificationConstants = fn(6847);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
@@ -227,8 +227,8 @@ export function saveProfileAndAccountChanges(avatar) {
   if (undefined !== typingIndicatorStyle) {
     let result = null;
     if (null != typingIndicatorStyle) {
-      result = avatar(1407).serializeTypingIndicatorStyle(typingIndicatorStyle);
-      const obj3 = avatar(1407);
+      result = avatar(1410).serializeTypingIndicatorStyle(typingIndicatorStyle);
+      const obj3 = avatar(1410);
     }
     user.typing_indicator_style = result;
   }
@@ -252,10 +252,10 @@ export function saveProfileAndAccountChanges(avatar) {
   const obj4 = { headers: null };
   const obj = avatarId(572);
   tmp13 = null != tmp12 && null != value;
-  obj4.headers = avatarId(7735).buildHeadersForMd5({
-    [avatar(7739).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
+  obj4.headers = avatarId(7801).buildHeadersForMd5({
+    [avatar(7805).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
   });
-  let tmpResult = avatarId(7735);
+  let tmpResult = avatarId(7801);
   return saveProfileAndAccountRequest(user, obj4).then(
     (result) => {
       DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });

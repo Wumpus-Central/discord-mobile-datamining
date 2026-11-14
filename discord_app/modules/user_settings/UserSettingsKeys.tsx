@@ -415,6 +415,8 @@ export const WebUserSettings = {
   ACTIVITY_PRIVACY_NOTIFY_FRIENDS_ONLINE_SETTING: "activity_privacy_notify_friends_online_setting",
   ACTIVITY_PRIVACY_NOTIFY_SERVER_MEMBERS_ON_GO_LIVE_SETTING:
     "activity_privacy_notify_server_members_on_go_live_setting",
+  ACTIVITY_PRIVACY_NOTIFY_FRIENDS_ON_CUSTOM_STATUS_UPDATE_SETTING:
+    "activity_privacy_notify_friends_on_custom_status_update_setting",
   REGISTERED_GAMES_SIDEBAR_ITEM: "registered_games_sidebar_item",
   REGISTERED_GAMES_PANEL: "registered_games_panel",
   REGISTERED_GAMES_CURRENT_GAME_CATEGORY: "registered_games_current_game_category",

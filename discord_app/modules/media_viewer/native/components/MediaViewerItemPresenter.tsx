@@ -4,7 +4,7 @@ import getMediaViewerStateForScreenDefault from "../getMediaViewerStateForScreen
 import MediaViewerItemTransformPresenterDefault from "MediaViewerItemTransformPresenter.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = tmp5(1652);
+const _modDef1655 = tmp5(1655);
 require = fn;
 function MediaViewerItemPresenter(windowHeight) {
   ({ source, originLayout, renderMedia, windowWidth } = windowHeight);
@@ -137,8 +137,8 @@ function MediaViewerItemPresenter(windowHeight) {
   let items2 = [
     c9,
     entranceAnimationDriver,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
-    require("../../../../../_runtime/metro/01652__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
     height2,
     height,
     width2,
@@ -199,7 +199,7 @@ function MediaViewerItemPresenter(windowHeight) {
   MediaViewerItemPresenterTsx1.__workletHash = 5465877012081;
   MediaViewerItemPresenterTsx1.__initData = tmp22;
   let items4 = [windowWidth, windowHeight, width, height];
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     MediaViewerItemPresenterTsx1,
   );
   const memo = obj3.useMemo(() => {
@@ -215,7 +215,7 @@ function MediaViewerItemPresenter(windowHeight) {
   const obj9 = { style: null, children: items1 };
   let items5 = [memo.presenter, animatedStyle];
   obj9.style = items5;
-  obj8.children = jsx(_modDef1652.View, { style: null, children: items1 });
+  obj8.children = jsx(_modDef1655.View, { style: null, children: items1 });
   obj7.children = <c4 style={memo.child}>{null}</c4>;
   return (
     <c4 collapsable={false} style={memo.container}>
@@ -227,10 +227,10 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
 let closure_7 = { platformStyles: { position: "absolute", width: "100%", height: "100%" } };
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 if (PlatformUtils.isAndroid()) {
   const _parseInt = parseInt;
-  obj2 = fn(5200);
+  obj2 = fn(5263);
 }
 let closure_9 = {
   code: "(function MediaViewerItemPresenterTsx1(){let[entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,BORDER_RADIUS_END,startScale]=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,BORDER_RADIUS_END]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};})",

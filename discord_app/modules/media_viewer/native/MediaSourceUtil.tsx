@@ -883,18 +883,18 @@ export function extractMediaFromMessageComponents(getContentMessage, contentMess
       let type = nextResult.type;
       if (Server.ComponentType.MEDIA_GALLERY === type) {
         items = tmp4.items;
-        for (const item10035 of items) {
-          let tmp18 = toMediaSourceFromUnfurledMedia(
+        for (const item10029 of items) {
+          let tmp16 = toMediaSourceFromUnfurledMedia(
             arg0,
             arg2,
-            item10035.media,
-            item10035.description,
-            item10035.spoiler,
+            item10029.media,
+            item10029.description,
+            item10029.spoiler,
           );
-          if (null != tmp18) {
+          if (null != tmp16) {
             let obj = { sources: null, unfurledMediaItem: null };
-            obj.sources = tmp19;
-            obj.unfurledMediaItem = item10035.media;
+            obj.sources = tmp17;
+            obj.unfurledMediaItem = item10029.media;
             let arr = items1.push(obj);
           }
           continue;
@@ -1026,7 +1026,7 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
     return null;
   } else {
     const type = value.type;
-    if (tmp(2116).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(2119).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -1047,9 +1047,9 @@ export function extractMediaSourcesFromComponent(message2, components, guild_id,
         }
         return tmp;
       });
-      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1380).isNotNullish) };
+      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1255).isNotNullish) };
       return obj2;
-    } else if (tmp(2116).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(2119).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {

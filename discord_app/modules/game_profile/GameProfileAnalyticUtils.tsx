@@ -1,12 +1,12 @@
 // discord_app/modules/game_profile/GameProfileAnalyticUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../_runtime/01266_v1.js";
+import v1 from "../../../_runtime/01269_v1.js";
 import ContentInventoryStore from "../content_inventory/ContentInventoryStore.tsx";
 
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
-const ContentInventoryFeedKey = fn(10144).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(10213).ContentInventoryFeedKey;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
 
@@ -154,6 +154,8 @@ export const GameProfileSources = {
   GlobalDiscoveryGamesBecauseYouPlayed: "global_discovery_games_because_you_played",
   GlobalDiscoveryGamesTrendingShelf: "global_discovery_games_trending_shelf",
   GlobalDiscoveryGamesTrendingTab: "global_discovery_games_trending_tab",
+  GlobalDiscoveryGamesSearch: "global_discovery_games_search",
+  GuildActionSheet: "guild_action_sheet",
 };
 export const GameProfileTypes = { FullProfile: "full_profile", MiniProfile: "mini_profile" };
 export function getGuildIdAndVerifiedFromInvite(current) {

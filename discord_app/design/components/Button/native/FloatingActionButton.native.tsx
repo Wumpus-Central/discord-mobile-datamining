@@ -1,16 +1,16 @@
 // discord_app/design/components/Button/native/FloatingActionButton.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import ButtonConstants from "ButtonConstants.native.tsx";
 import BaseIconButton from "BaseIconButton.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const styles = createStyles.createStyles(() => {
   const obj = { button: null, iconButtonPill: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -68,7 +68,7 @@ export function FloatingActionButton(icon) {
   FloatingActionButtonNativeTsx1.__closure = items1;
   FloatingActionButtonNativeTsx1.__workletHash = 14949608342118;
   FloatingActionButtonNativeTsx1.__initData = tmp5;
-  const animatedStyle = _mod1652.useAnimatedStyle(FloatingActionButtonNativeTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(FloatingActionButtonNativeTsx1);
   const obj2 = { style: animatedStyle, children: null };
   const obj5 = {};
   const merged1 = Object.assign(merged);
@@ -83,5 +83,5 @@ export function FloatingActionButton(icon) {
   obj5.icon = cloneElementResult;
   ({ button: obj3.style, iconButtonPill: obj3.pillStyle } = tmp2);
   obj2.children = jsx(BaseIconButton.BaseIconButton, {});
-  return jsx(_modDef1652.View, { style: animatedStyle, children: null });
+  return jsx(_modDef1655.View, { style: animatedStyle, children: null });
 }

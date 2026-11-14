@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
@@ -23,7 +23,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import BountyStore from "../../BountyStore.tsx";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function ItemSeparator(trailingItem) {
@@ -48,9 +48,9 @@ function BountiesScrollVideoItemContainer(arg0) {
     slotHeight,
     isPeekEnabled,
     0.8,
-    _mod1652.interpolate,
+    _mod1655.interpolate,
     0.3,
-    _mod1652.Extrapolation,
+    _mod1655.Extrapolation,
   ];
   c0 = undefined;
   c1 = undefined;
@@ -91,11 +91,11 @@ function BountiesScrollVideoItemContainer(arg0) {
   BountiesModalContentScrollTsx2.__closure = items1;
   BountiesModalContentScrollTsx2.__workletHash = 5598409177263;
   BountiesModalContentScrollTsx2.__initData = tmp2;
-  const animatedStyle = _mod1652.useAnimatedStyle(BountiesModalContentScrollTsx2);
+  const animatedStyle = _mod1655.useAnimatedStyle(BountiesModalContentScrollTsx2);
   const obj2 = { style: null, children };
   const items2 = [style, animatedStyle];
   obj2.style = items2;
-  return closure_1_17(_modDef1652.View, obj2);
+  return closure_1_17(_modDef1655.View, obj2);
 }
 function BountiesModalContentScrollInner(initialBountyId) {
   initialBountyId = initialBountyId.initialBountyId;
@@ -187,8 +187,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
   }, items1);
   adContentId = c8;
   let obj2 = require("hooks/QuestHooks");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj3 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj3 = require("../../../../../_runtime/metro/01655__.js");
   [tmp16, c11] = c3(noop.useState(null), 2);
   const ref = noop.useRef(null);
   noop.useRef(0);
@@ -297,11 +297,11 @@ function BountiesModalContentScrollInner(initialBountyId) {
   const first3 = tmp43[0];
   closure_29 = tmp43[1];
   const tmp40 = c3(noop.useState(false), 2);
-  sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj7 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj8 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue3 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj7 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj8 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue3 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   const memo6 = noop.useMemo(() => bountyId(_undefined[27]).v4(), []);
   const ref3 = noop.useRef(0);
   const ref4 = noop.useRef(0);
@@ -350,7 +350,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     callback3(arg0);
     tmp = 0 === first3 && arg0 > 0 && hasRecurringSwipeUpNux;
   }, items12);
-  const obj9 = require("../../../../../_runtime/metro/01652__.js");
+  const obj9 = require("../../../../../_runtime/metro/01655__.js");
   const orbAmount = require("useBountiesRecapOrbCount").useBountiesRecapOrbCount({
     scrollY: sharedValue3,
     lastBountyScrollOffset: result,
@@ -492,7 +492,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   const items22 = [
     orbAmount,
     stateFromStores > 0,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     obj6.useBountiesRecapScroll({ listRef: ref, enabled: stateFromStores > 0, offsets: memo4 }).handleRecapMomentumEnd,
     sharedValue1,
   ];
@@ -518,8 +518,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx6.__workletHash = 11833509470853;
   BountiesModalContentScrollTsx6.__initData = tmp67;
   obj12.onMomentumEnd = BountiesModalContentScrollTsx6;
-  const obj11 = require("../../../../../_runtime/metro/01652__.js");
-  const animatedScrollHandler = require("../../../../../_runtime/metro/01652__.js").useAnimatedScrollHandler(obj12);
+  const obj11 = require("../../../../../_runtime/metro/01655__.js");
+  const animatedScrollHandler = require("../../../../../_runtime/metro/01655__.js").useAnimatedScrollHandler(obj12);
   const items24 = [onClose, sharedValue3, sum, diff];
   _require = undefined;
   importDefault = undefined;
@@ -534,7 +534,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx7.__closure = items25;
   BountiesModalContentScrollTsx7.__workletHash = 15263335344329;
   BountiesModalContentScrollTsx7.__initData = tmp73;
-  const items26 = [animatedStyle, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, callback4];
+  const items26 = [animatedStyle, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, callback4];
   _require = undefined;
   importDefault = undefined;
   [tmp77, tmp78, tmp79] = items26;
@@ -552,11 +552,11 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx8.__closure = items27;
   BountiesModalContentScrollTsx8.__workletHash = 7117021770762;
   BountiesModalContentScrollTsx8.__initData = tmp77;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     BountiesModalContentScrollTsx7,
     BountiesModalContentScrollTsx8,
   );
-  const tmp5Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result = require("../../../../../_runtime/metro/01655__.js");
   const items28 = [
     first4,
     stateFromStores > 0,
@@ -585,7 +585,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx9.__closure = items29;
   BountiesModalContentScrollTsx9.__workletHash = 1510735356441;
   BountiesModalContentScrollTsx9.__initData = tmp81;
-  const items30 = [memo10, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp42];
+  const items30 = [memo10, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp42];
   _require = undefined;
   importDefault = undefined;
   [tmp86, tmp87, tmp88] = items30;
@@ -603,11 +603,11 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx10.__closure = items31;
   BountiesModalContentScrollTsx10.__workletHash = 9911843745367;
   BountiesModalContentScrollTsx10.__initData = tmp86;
-  const animatedReaction1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     BountiesModalContentScrollTsx9,
     BountiesModalContentScrollTsx10,
   );
-  const tmp5Result12 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result12 = require("../../../../../_runtime/metro/01655__.js");
   const items32 = [isPeekEnabled, stateFromStores > 0, sharedValue3, result];
   _require = undefined;
   importDefault = undefined;
@@ -628,7 +628,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx11.__closure = items33;
   BountiesModalContentScrollTsx11.__workletHash = 6652015407036;
   BountiesModalContentScrollTsx11.__initData = tmp90;
-  const items34 = [hasRecurringSwipeUpNux, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp33[1]];
+  const items34 = [hasRecurringSwipeUpNux, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp33[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp94, tmp95, tmp96] = items34;
@@ -646,11 +646,11 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx12.__closure = items35;
   BountiesModalContentScrollTsx12.__workletHash = 7535649681310;
   BountiesModalContentScrollTsx12.__initData = tmp94;
-  const animatedReaction2 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction2 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     BountiesModalContentScrollTsx11,
     BountiesModalContentScrollTsx12,
   );
-  const tmp5Result13 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result13 = require("../../../../../_runtime/metro/01655__.js");
   const items36 = [
     closure_43,
     stateFromStores > 0,
@@ -679,7 +679,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx13.__closure = items37;
   BountiesModalContentScrollTsx13.__workletHash = 2596573002466;
   BountiesModalContentScrollTsx13.__initData = tmp98;
-  const items38 = [closure_44, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp35[1]];
+  const items38 = [closure_44, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp35[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp103, tmp104, tmp105] = items38;
@@ -697,7 +697,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx14.__closure = items39;
   BountiesModalContentScrollTsx14.__workletHash = 9994976909562;
   BountiesModalContentScrollTsx14.__initData = tmp103;
-  const animatedReaction3 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction3 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     BountiesModalContentScrollTsx13,
     BountiesModalContentScrollTsx14,
   );
@@ -710,7 +710,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     }
     return tmp;
   }, items40);
-  const tmp5Result14 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result14 = require("../../../../../_runtime/metro/01655__.js");
   const items41 = [closure_45, sharedValue, ref, memo1, c11, memo, 97];
   _require = undefined;
   importDefault = undefined;
@@ -737,7 +737,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx15.__closure = items42;
   BountiesModalContentScrollTsx15.__workletHash = 11345166526440;
   BountiesModalContentScrollTsx15.__initData = tmp108;
-  animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(BountiesModalContentScrollTsx15);
+  animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(BountiesModalContentScrollTsx15);
   const items43 = [animatedStyle, tmp.listWrapper, ,];
   ({ left: arr45[2], width: arr45[3] } = memo);
   const memo8 = obj.useMemo(() => {
@@ -749,7 +749,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   }, items43);
   const tmp6Result = tmp6(noop.useState(false), 2);
   first4 = tmp6Result[0];
-  const tmp5Result15 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result15 = require("../../../../../_runtime/metro/01655__.js");
   const items44 = [closure_46, sharedValue];
   _require = undefined;
   [tmp119, tmp120] = items44;
@@ -762,7 +762,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx16.__closure = items45;
   BountiesModalContentScrollTsx16.__workletHash = 13605926420267;
   BountiesModalContentScrollTsx16.__initData = tmp119;
-  const items46 = [closure_47, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp6Result[1]];
+  const items46 = [closure_47, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp6Result[1]];
   _require = undefined;
   importDefault = undefined;
   [tmp121, tmp122, tmp123] = items46;
@@ -780,7 +780,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx17.__closure = items47;
   BountiesModalContentScrollTsx17.__workletHash = 2131624119443;
   BountiesModalContentScrollTsx17.__initData = tmp121;
-  const animatedReaction4 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction4 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     BountiesModalContentScrollTsx16,
     BountiesModalContentScrollTsx17,
   );
@@ -831,7 +831,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     items[1] = size;
     return items;
   }, items51);
-  const tmp5Result16 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result16 = require("../../../../../_runtime/metro/01655__.js");
   const items52 = [closure_48, require("useBountiesRecapScroll").getRevealProgress, sharedValue3, result, height3];
   _require = undefined;
   importDefault = undefined;
@@ -847,15 +847,15 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx18.__closure = items53;
   BountiesModalContentScrollTsx18.__workletHash = 3609524767718;
   BountiesModalContentScrollTsx18.__initData = tmp129;
-  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(
+  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(
     BountiesModalContentScrollTsx18,
   );
-  const tmp5Result17 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result17 = require("../../../../../_runtime/metro/01655__.js");
   const items54 = [
     closure_49,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     derivedValue,
-    require("../../../../../_runtime/metro/01652__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -871,17 +871,17 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx19.__closure = items55;
   BountiesModalContentScrollTsx19.__workletHash = 12052812104767;
   BountiesModalContentScrollTsx19.__initData = tmp135;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     BountiesModalContentScrollTsx19,
   );
-  const tmp5Result18 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result18 = require("../../../../../_runtime/metro/01655__.js");
   const items56 = [
     closure_50,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     derivedValue,
     0.05,
     0.1,
-    require("../../../../../_runtime/metro/01652__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -903,10 +903,10 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx20.__closure = items57;
   BountiesModalContentScrollTsx20.__workletHash = 12251993225876;
   BountiesModalContentScrollTsx20.__initData = tmp140;
-  const animatedStyle2 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle2 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     BountiesModalContentScrollTsx20,
   );
-  const tmp5Result19 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result19 = require("../../../../../_runtime/metro/01655__.js");
   const items58 = [
     closure_51,
     sharedValue3,
@@ -915,10 +915,10 @@ function BountiesModalContentScrollInner(initialBountyId) {
     derivedValue,
     require("useBountiesRecapScroll").getRevealProgress,
     height3,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     0.05,
     0.1,
-    require("../../../../../_runtime/metro/01652__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -957,7 +957,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx21.__initData = tmp147;
   const items60 = [tmp.peekGradient, , , ,];
   ({ left: arr62[1], width: arr62[2], top: arr62[3], height: arr62[4] } = memo);
-  const animatedStyle3 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle3 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     BountiesModalContentScrollTsx21,
   );
   let tmp160 = tmp24;
@@ -982,13 +982,13 @@ function BountiesModalContentScrollInner(initialBountyId) {
   if (hasRecurringSwipeUpNux) {
     hasRecurringSwipeUpNux = tmp24;
   }
-  const tmp5Result20 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result20 = require("../../../../../_runtime/metro/01655__.js");
   const items61 = [
     closure_52,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     sharedValue3,
     sum,
-    require("../../../../../_runtime/metro/01652__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -1008,10 +1008,10 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx22.__closure = items62;
   BountiesModalContentScrollTsx22.__workletHash = 7822704338666;
   BountiesModalContentScrollTsx22.__initData = tmp161;
-  const animatedStyle4 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle4 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     BountiesModalContentScrollTsx22,
   );
-  const tmp5Result21 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result21 = require("../../../../../_runtime/metro/01655__.js");
   const items63 = [closure_53, derivedValue, 0.1];
   _require = undefined;
   importDefault = undefined;
@@ -1025,7 +1025,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx23.__closure = items64;
   BountiesModalContentScrollTsx23.__workletHash = 4049505759859;
   BountiesModalContentScrollTsx23.__initData = tmp167;
-  const items65 = [closure_54, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp39];
+  const items65 = [closure_54, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp39];
   _require = undefined;
   importDefault = undefined;
   [tmp170, tmp171, tmp172] = items65;
@@ -1043,7 +1043,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   BountiesModalContentScrollTsx24.__closure = items66;
   BountiesModalContentScrollTsx24.__workletHash = 16546668186590;
   BountiesModalContentScrollTsx24.__initData = tmp170;
-  const animatedReaction5 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction5 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     BountiesModalContentScrollTsx23,
     BountiesModalContentScrollTsx24,
   );
@@ -1110,7 +1110,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     let tmp178 = null;
     if (tmp41) {
       const obj13 = { orbAmount: stateFromStores };
-      tmp178 = callback2(tmp5(17473).BountiesScrollRecapFooter, obj13);
+      tmp178 = callback2(tmp5(17591).BountiesScrollRecapFooter, obj13);
     }
     const obj14 = { value: memo3, children: null };
     const obj15 = { style: tmp.root, children: null };
@@ -1126,8 +1126,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
       obj16.pointerEvents = str;
       const obj17 = {
         adContentId,
-        adCreativeType: tmp5(5282).AdCreativeType.BOUNTY,
-        questContent: tmp5(5280).QuestContent.BOUNTIES_END_INTERSTITIAL,
+        adCreativeType: tmp5(5345).AdCreativeType.BOUNTY,
+        questContent: tmp5(5343).QuestContent.BOUNTIES_END_INTERSTITIAL,
         overrideVisibility: first2,
         sourceQuestContent,
         children() {
@@ -1138,8 +1138,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
           });
         },
       };
-      obj16.children = tmp179(tmp5(15150).QuestContentImpressionTrackerNative, obj17);
-      tmp179Result = tmp179(tmp2(1652).View, obj16);
+      obj16.children = tmp179(tmp5(15264).QuestContentImpressionTrackerNative, obj17);
+      tmp179Result = tmp179(tmp2(1655).View, obj16);
     }
     const items70 = [tmp179Result, , , , ,];
     const obj18 = { style: memo8, children: null };
@@ -1164,8 +1164,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
       scrollEnabled: !tmp17,
       contentContainerStyle: memo9,
     };
-    obj18.children = callback2(tmp5(7822).AnimatedFlashList, obj19);
-    items70[1] = callback2(tmp2(1652).View, obj18);
+    obj18.children = callback2(tmp5(7888).AnimatedFlashList, obj19);
+    items70[1] = callback2(tmp2(1655).View, obj18);
     let tmp179Result4 = null;
     if (null != tmp16) {
       const obj20 = {
@@ -1182,7 +1182,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
         onOverlaySurfaceClick: obj32.onOverlaySurfaceClick,
         onCarouselScroll: obj32.onCarouselScroll,
       } = tmp16);
-      tmp179Result4 = tmp179(tmp2(17478), obj20);
+      tmp179Result4 = tmp179(tmp2(17596), obj20);
     }
     items70[2] = tmp179Result4;
     let tmp179Result5 = null;
@@ -1193,8 +1193,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
         const items71 = [memo13, animatedStyle4];
         obj21.style = items71;
         const obj22 = { colors: first1, style: absoluteFill.absoluteFill };
-        obj21.children = tmp179(tmp2(5830), obj22);
-        tmp179Result5 = tmp179(tmp2(1652).View, obj21);
+        obj21.children = tmp179(tmp2(5893), obj22);
+        tmp179Result5 = tmp179(tmp2(1655).View, obj21);
       }
     }
     items70[3] = tmp179Result5;
@@ -1209,10 +1209,10 @@ function BountiesModalContentScrollInner(initialBountyId) {
     let tmp179Result6 = null;
     if (tmp38) {
       const obj24 = { onPress: callback5 };
-      tmp179Result6 = tmp179(tmp2(17479), obj24);
+      tmp179Result6 = tmp179(tmp2(17597), obj24);
     }
     obj23.children = tmp179Result6;
-    items70[4] = callback2(tmp2(1652).View, obj23);
+    items70[4] = callback2(tmp2(1655).View, obj23);
     const obj25 = {
       visible: tmp41,
       onContentLayout: callback,
@@ -1220,18 +1220,18 @@ function BountiesModalContentScrollInner(initialBountyId) {
       opacityStyle: animatedStyle3,
       children: tmp178,
     };
-    items70[5] = callback2(tmp2(17429), obj25);
+    items70[5] = callback2(tmp2(17547), obj25);
     obj15.children = items70;
     obj14.children = hasRecurringSwipeUpNux(questHomeBounties, obj15);
-    return callback2(tmp5(17438).BountyVideoEndAppStoreProvider, obj14);
+    return callback2(tmp5(17556).BountyVideoEndAppStoreProvider, obj14);
   }
-  const tmp5Result22 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result22 = require("../../../../../_runtime/metro/01655__.js");
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const QuestConstants = fn(5275);
+const QuestConstants = fn(5338);
 ({ BOUNTY_ORB_AMOUNT: closure_8, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(17428);
+const BountiesModalConstants = fn(17546);
 ({
   getBountyVideoEndAppStoreSheetHeight: closure_10,
   getBountyVideoEndPeekClipHeight: closure_11,
@@ -1240,10 +1240,10 @@ const BountiesModalConstants = fn(17428);
 } = BountiesModalConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, ComponentActions: closure_15 } = Constants);
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const PlatformUtils = fn(1357);
+const PlatformUtils = fn(1360);
 let closure_19 = PlatformUtils.isAndroid();
 let c20 = 0;
 let c21 = 1;
@@ -1263,7 +1263,7 @@ function isScrollEventInBounds(contentOffset) {
 }
 isScrollEventInBounds.__workletHash = 3579964422615;
 isScrollEventInBounds.__initData = tmp7;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_30 = createStyles.createStyles(() => {
   const obj = {
     root: { flex: 1 },

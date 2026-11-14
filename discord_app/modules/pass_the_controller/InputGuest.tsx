@@ -305,6 +305,8 @@ prototype["_releaseMouse"] = function _releaseMouse() {
 };
 prototype["shutdown"] = function shutdown() {
   this.isShutdown = true;
+  const logger = this.logger;
+  logger.log("Sending drop to " + this._host);
   const connection = this.connection;
   connection.sendDrop(this.sessionId);
   this._releaseMouse();

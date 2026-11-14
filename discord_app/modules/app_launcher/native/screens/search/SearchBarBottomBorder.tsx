@@ -1,15 +1,15 @@
 // discord_app/modules/app_launcher/native/screens/search/SearchBarBottomBorder.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
 import spring_spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = { border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 let closure_6 = {
@@ -24,7 +24,7 @@ export function usePinnedSearchBarBottomBorder(arg0) {
     triggerScrollHeight = 1;
   }
   const tmp = closure_5();
-  const sharedValue = _mod1652.useSharedValue(0);
+  const sharedValue = _mod1655.useSharedValue(0);
   items = [key, sharedValue];
   const effect = noop.useEffect(() => {
     const result = _undefined.set(0);
@@ -55,10 +55,10 @@ export function usePinnedSearchBarBottomBorder(arg0) {
   SearchBarBottomBorderTsx1.__workletHash = 6638827003107;
   SearchBarBottomBorderTsx1.__initData = tmp6;
   const obj3 = { scrollHandler: callback, bottomBorderComponent: null };
-  const animatedStyle = _mod1652.useAnimatedStyle(SearchBarBottomBorderTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(SearchBarBottomBorderTsx1);
   const obj4 = { style: null };
   const items4 = [tmp.border, animatedStyle];
   obj4.style = items4;
-  obj3.bottomBorderComponent = jsx(_modDef1652.View, { style: null }, key);
+  obj3.bottomBorderComponent = jsx(_modDef1655.View, { style: null }, key);
   return obj3;
 }

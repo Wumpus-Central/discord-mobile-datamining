@@ -1,13 +1,13 @@
 // discord_app/modules/stage_channels/native/components/StageChannelAnimationUtils.tsx
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useIsInvitedToSpeakDefault from "../../useIsInvitedToSpeak.tsx";
 import StageChannelHeightHooks from "../../StageChannelHeightHooks.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let obj = { duration: 250, easing: null };
-const Easing = _mod1652.Easing;
+const Easing = _mod1655.Easing;
 obj.easing = Easing.bezier(0.66, 0, 0.2, 1);
 let closure_4 = {
   code: "(function StageChannelAnimationUtilsTsx1(){let[isInvited,actionBarHeight,ACTION_BAR_SAFE_AREA_PADDING,safeAreaTop,controlPadding]=this.__closure;return isInvited?actionBarHeight+ACTION_BAR_SAFE_AREA_PADDING+safeAreaTop:controlPadding;})",
@@ -45,7 +45,7 @@ export function useStageActionBarAnimation(channelId, arg1) {
   StageChannelAnimationUtilsTsx1.__closure = items1;
   StageChannelAnimationUtilsTsx1.__workletHash = 554637474683;
   StageChannelAnimationUtilsTsx1.__initData = tmp5;
-  const derivedValue = _mod1652.useDerivedValue(StageChannelAnimationUtilsTsx1);
+  const derivedValue = _mod1655.useDerivedValue(StageChannelAnimationUtilsTsx1);
   const items2 = [closure_5, timing_timing.withTiming, derivedValue, obj];
   c0 = undefined;
   c1 = undefined;
@@ -61,5 +61,5 @@ export function useStageActionBarAnimation(channelId, arg1) {
   StageChannelAnimationUtilsTsx2.__closure = items3;
   StageChannelAnimationUtilsTsx2.__workletHash = 6071132596271;
   StageChannelAnimationUtilsTsx2.__initData = tmp12;
-  return _mod1652.useAnimatedStyle(StageChannelAnimationUtilsTsx2);
+  return _mod1655.useAnimatedStyle(StageChannelAnimationUtilsTsx2);
 }

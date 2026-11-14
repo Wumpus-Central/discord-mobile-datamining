@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/BannerBase.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
-import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../../_runtime/05830_LinearGradient.js";
+import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
+import LinearGradientDefault from "../../../../../../_runtime/05893_LinearGradient.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 let closure_9 = { mass: 1, stiffness: 100, damping: 15 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   banner: null,
   bannerGradientColor: null,
@@ -35,7 +35,7 @@ const rect = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: PX_12,
   flexDirection: "row",
-  minHeight: fn(13277).APP_ICON_SIZE + 2 * PX_12 + 4,
+  minHeight: fn(13382).APP_ICON_SIZE + 2 * PX_12 + 4,
   bottom: nativeDefault.space.PX_16,
   left: nativeDefault.space.PX_16,
 };
@@ -71,10 +71,10 @@ export default function BannerBase(children) {
   const tmp = closure_10();
   [tmp3, c0] = noop.useState(0);
   const tmp2 = _slicedToArray(noop.useState(0), 2);
-  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(false);
   const diff = useWindowDimensionsDefault().width - 2 * nativeDefault.space.PX_16;
   const backgroundColor = tmp.bannerGradientColor.backgroundColor;
-  const obj = require("../../../../../../_runtime/metro/01652__.js");
+  const obj = require("../../../../../../_runtime/metro/01655__.js");
   items = [require("ColorUtils").hexOpacityToRgba(backgroundColor, 0.2)];
   let obj2 = require("ColorUtils");
   items[1] = require("ColorUtils").hexOpacityToRgba(backgroundColor, 0);
@@ -85,7 +85,7 @@ export default function BannerBase(children) {
   const items2 = [
     closure_11,
     sharedValue,
-    require("../../../../../../_runtime/metro/01652__.js").withDelay,
+    require("../../../../../../_runtime/metro/01655__.js").withDelay,
     require("spring/spring").withSpring,
     closure_9,
   ];
@@ -125,7 +125,7 @@ export default function BannerBase(children) {
   BannerBaseTsx1.__closure = items3;
   BannerBaseTsx1.__workletHash = 11568759794709;
   BannerBaseTsx1.__initData = tmp10;
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(BannerBaseTsx1);
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(BannerBaseTsx1);
   const items4 = [tmp.banner, ,];
   let num = 0;
   if (tmp3 > 0) {
@@ -155,11 +155,11 @@ export default function BannerBase(children) {
   let tmp16Result = null != image;
   if (tmp16Result) {
     const obj8 = { style: tmp.imageContainer, children: null };
-    const obj9 = { style: tmp.trinketsLottie, source: tmp4(13289), autoPlay: !stateFromStores };
-    const items7 = [closure_7(tmp7(5860), obj9), image];
+    const obj9 = { style: tmp.trinketsLottie, source: tmp4(13394), autoPlay: !stateFromStores };
+    const items7 = [closure_7(tmp7(5923), obj9), image];
     obj8.children = items7;
     tmp16Result = closure_8(View, obj8);
-    const tmp7Result = tmp7(5860);
+    const tmp7Result = tmp7(5923);
   }
   items6[1] = tmp16Result;
   const items8 = [tmp.bannerTextContainer];
@@ -179,5 +179,5 @@ export default function BannerBase(children) {
   });
   items6[2] = closure_7(View, obj10);
   obj6.children = items6;
-  return closure_8(_modDef1652.View, obj6);
+  return closure_8(_modDef1655.View, obj6);
 }

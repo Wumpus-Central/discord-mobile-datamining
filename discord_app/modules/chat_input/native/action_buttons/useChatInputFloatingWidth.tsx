@@ -1,12 +1,12 @@
 // discord_app/modules/chat_input/native/action_buttons/useChatInputFloatingWidth.tsx
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_3 = fn(13699).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
+let closure_3 = fn(13804).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
 let closure_4 = {
   code: "(function useChatInputFloatingWidthTsx1(){let[collapsedWidth,expandedWidth,progress]=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};})",
 };
@@ -27,13 +27,13 @@ export default function useChatInputFloatingWidth(expanded) {
   if (expanded) {
     num2 = 1;
   }
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num2);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num2);
   noop = sharedValue;
   items = [expanded, num, sharedValue];
   const effect = noop.useEffect(() => {
     if (c0) {
       if (c1 > 0) {
-        const obj2 = _mod1652;
+        const obj2 = _mod1655;
         const result = _undefined.set(
           obj2.withDelay(tmp2, timing_timing.withTiming(1, closure_3, "respect-motion-settings")),
         );
@@ -45,7 +45,7 @@ export default function useChatInputFloatingWidth(expanded) {
     }
     const result1 = _undefined.set(timing_timing.withTiming(num2, closure_3, "respect-motion-settings"));
   }, items);
-  let obj = require("../../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../../_runtime/metro/01655__.js");
   const items1 = [closure_4, collapsedWidth, expandedWidth, sharedValue];
   _require = undefined;
   dependencyMap = undefined;
@@ -61,8 +61,8 @@ export default function useChatInputFloatingWidth(expanded) {
   useChatInputFloatingWidthTsx1.__closure = items2;
   useChatInputFloatingWidthTsx1.__workletHash = 7676837604130;
   useChatInputFloatingWidthTsx1.__initData = tmp5;
-  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult = require("../../../../../_runtime/metro/01655__.js");
   return {
-    animatedStyle: require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(useChatInputFloatingWidthTsx1),
+    animatedStyle: require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(useChatInputFloatingWidthTsx1),
   };
 }

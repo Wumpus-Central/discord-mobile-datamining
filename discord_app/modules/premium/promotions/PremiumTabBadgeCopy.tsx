@@ -28,3 +28,6 @@ export function getPremiumTabBadgeCopy(promotionMarketingSurface) {
     }
   }
 }
+export function hasVisiblePremiumTabBadgeCopy(premiumTabBadgeCopy, arg1) {
+  return "" !== arg1 ? premiumTabBadgeCopy.acknowledgedBadgeCopy : premiumTabBadgeCopy.badgeCopy.trim();
+}

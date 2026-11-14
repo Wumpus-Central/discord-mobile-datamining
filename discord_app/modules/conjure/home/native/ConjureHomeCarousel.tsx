@@ -1,12 +1,12 @@
 // discord_app/modules/conjure/home/native/ConjureHomeCarousel.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useMeasuredLayoutDefault from "../../../screen/native/useMeasuredLayout.tsx";
 import conjureHomeCarouselFan from "../conjureHomeCarouselFan.tsx";
-import SvgCss from "../../../../../_runtime/13714_SvgCss.js";
+import SvgCss from "../../../../../_runtime/13819_SvgCss.js";
 import conjureHomeInspirationArtDefault from "conjureHomeInspirationArt.tsx";
 import conjureHomeInspirationEntries from "../conjureHomeInspirationEntries.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -14,9 +14,9 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
-const _modDef4079 = tmp7(4079);
+const _modDef4131 = tmp7(4131);
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1072).AppStates;
@@ -27,14 +27,14 @@ const sum = 36 + 2 * nativeDefault.space.PX_6 + 2;
 const sum1 = sum + nativeDefault.space.PX_12;
 const PX_24 = nativeDefault.space.PX_24;
 let obj = {
-  games: fn(7374).GameControllerIcon,
-  apps: fn(8036).AppsIcon,
-  profile_widget: fn(13711).WidgetsIcon,
-  overlay_widget: fn(10398).ScreenIcon,
-  automod: fn(11157).ShieldIcon,
-  chat_bot: fn(12586).RobotIcon,
+  games: fn(7438).GameControllerIcon,
+  apps: fn(8101).AppsIcon,
+  profile_widget: fn(13816).WidgetsIcon,
+  overlay_widget: fn(10467).ScreenIcon,
+  automod: fn(11224).ShieldIcon,
+  chat_bot: fn(12682).RobotIcon,
 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   carousel: { height: sum1 + 135 + 54 + PX_24, overflow: "hidden" },
   item: null,
@@ -118,7 +118,7 @@ let closure_14 = noop.memo(function ConjureHomeCarouselItem(inspiration) {
   inspiration = inspiration.inspiration;
   ({ index, count, offset, viewportWidth } = inspiration);
   const tmp = closure_12();
-  obj = _mod1652;
+  obj = _mod1655;
   items = [
     closure_13,
     conjureHomeCarouselFan.wrapConjureHomeCarouselDistance,
@@ -213,7 +213,7 @@ let closure_14 = noop.memo(function ConjureHomeCarouselItem(inspiration) {
   obj7.children = items5;
   items4[1] = React6(View, obj7);
   obj2.children = items4;
-  return React6(_modDef1652.View, obj2);
+  return React6(_modDef1655.View, obj2);
 });
 let closure_15 = {
   code: "(function ConjureHomeCarouselTsx2(frame){let[offset,CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND,loop]=this.__closure;var _frame$timeSincePrevi;const elapsed=(_frame$timeSincePrevi=frame.timeSincePreviousFrame)!==null&&_frame$timeSincePrevi!==void 0?_frame$timeSincePrevi:0;offset.set((offset.get()+CONJURE_HOME_CAROUSEL_SPEED_PX_PER_SECOND*elapsed/1000)%loop);})",
@@ -255,9 +255,9 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
   }
   importDefault = num;
   const obj4 = require("Link");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   let result = closure_10 * memo.length;
-  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [
     closure_15,
     sharedValue,
@@ -282,7 +282,7 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
   ConjureHomeCarouselTsx2.__closure = items3;
   ConjureHomeCarouselTsx2.__workletHash = 453717571992;
   ConjureHomeCarouselTsx2.__initData = tmp11;
-  frameCallback = require("../../../../../_runtime/metro/01652__.js").useFrameCallback(ConjureHomeCarouselTsx2, false);
+  frameCallback = require("../../../../../_runtime/metro/01655__.js").useFrameCallback(ConjureHomeCarouselTsx2, false);
   onScreen = !stateFromStores;
   if (!stateFromStores) {
     onScreen = stateFromStores1;
@@ -309,7 +309,7 @@ export default noop.memo(function ConjureHomeCarousel(onScreen) {
     children: null,
   };
   const intl = tmp2(1113).intl;
-  obj5.accessibilityLabel = intl.string(_modDef4079.Qc4S39);
+  obj5.accessibilityLabel = intl.string(_modDef4131.Qc4S39);
   obj5.ref = ref;
   obj5.onLayout = onLayout;
   let mapped = null;

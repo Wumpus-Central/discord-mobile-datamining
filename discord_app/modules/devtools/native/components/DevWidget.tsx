@@ -1,8 +1,8 @@
 // discord_app/modules/devtools/native/components/DevWidget.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
-import LegacyBaseButton from "../../../../../_runtime/05535_LegacyBaseButton.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
+import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../design/animation/reanimated/spring/springPresets.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -14,7 +14,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import DevToolsSettingsStore from "../../DevToolsSettingsStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function DraggableContainer(arg0) {
@@ -24,11 +24,11 @@ function DraggableContainer(arg0) {
   }
   ({ onChangePosition, children } = arg0);
   const tmp = closure_9();
-  const sharedValue = _mod1652.useSharedValue(x.get());
-  const sharedValue1 = _mod1652.useSharedValue(y.get());
+  const sharedValue = _mod1655.useSharedValue(x.get());
+  const sharedValue1 = _mod1655.useSharedValue(y.get());
   const tmp7 = useSafeAreaInsetsSharedValueDefault();
   const tmp8 = useWindowDimensionsSharedValueDefault();
-  items = [closure_10, tmp8, tmp7, _mod1652.clamp, dragBoundsPadding, contentWidth, contentHeight];
+  items = [closure_10, tmp8, tmp7, _mod1655.clamp, dragBoundsPadding, contentWidth, contentHeight];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -94,7 +94,7 @@ function DraggableContainer(arg0) {
   DevWidgetTsx3.__workletHash = 9152627460216;
   DevWidgetTsx3.__initData = tmp23;
   obj3.onUpdate = DevWidgetTsx3;
-  const items7 = [closure_13, _mod1705.scheduleOnRN, onChangePosition, x, y];
+  const items7 = [closure_13, _mod1708.scheduleOnRN, onChangePosition, x, y];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -139,18 +139,18 @@ function DraggableContainer(arg0) {
   DevWidgetTsx5.__closure = items10;
   DevWidgetTsx5.__workletHash = 4562461506226;
   DevWidgetTsx5.__initData = tmp35;
-  const animatedStyle = _mod1652.useAnimatedStyle(DevWidgetTsx5);
+  const animatedStyle = _mod1655.useAnimatedStyle(DevWidgetTsx5);
   const obj4 = { gesture: panGesture, children: null };
   const obj5 = { style: null, children };
   const items11 = [tmp.widgetContainer, animatedStyle];
   obj5.style = items11;
-  obj4.children = timestampProducer(_modDef1652.View, obj5);
+  obj4.children = timestampProducer(_modDef1655.View, obj5);
   return timestampProducer(LegacyBaseButton.GestureDetector, obj4);
 }
 const DEV_WIDGET_SIZE = fn(573).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { widgetContainer: { position: "absolute" }, widget: null };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -194,8 +194,8 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default function DevWidget() {
-  const sharedValue = _mod1652.useSharedValue(DevToolsSettingsStore.devWidgetPosition.x);
-  const sharedValue1 = _mod1652.useSharedValue(DevToolsSettingsStore.devWidgetPosition.y);
+  const sharedValue = _mod1655.useSharedValue(DevToolsSettingsStore.devWidgetPosition.x);
+  const sharedValue1 = _mod1655.useSharedValue(DevToolsSettingsStore.devWidgetPosition.y);
   const obj3 = { children: null };
   items = [timestampProducer(VEVOODefault, { x: sharedValue, y: sharedValue1 })];
   const point = {

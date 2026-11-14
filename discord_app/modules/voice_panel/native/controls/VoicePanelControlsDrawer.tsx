@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import Suspender from "../../../../../_runtime/06236_Suspender.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
+import Suspender from "../../../../../_runtime/06299_Suspender.js";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import VoicePanelChatViewDefault from "VoicePanelChatView.tsx";
@@ -23,11 +23,11 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11919);
+const VoicePanelConstants = fn(11985);
 ({ MODE_CHANGE_PHYSICS: metroImportDefault, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { drawer: { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo(function LazyContentFreezer(shown) {
@@ -129,10 +129,10 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   VoicePanelControlsDrawerTsx1.__closure = items1;
   VoicePanelControlsDrawerTsx1.__workletHash = 12678028952961;
   VoicePanelControlsDrawerTsx1.__initData = tmp11;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     VoicePanelControlsDrawerTsx1,
   );
-  const obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const obj2 = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [closure_15, wrapperSpecs, mode];
   _require = undefined;
   importDefault = undefined;
@@ -153,7 +153,7 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
     closure_16,
     require("cheapWorkletShallowEqual").cheapWorkletArrayShallowEqual,
     closure_8,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     tmp7,
   ];
   closure_129_0 = undefined;
@@ -194,7 +194,7 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   VoicePanelControlsDrawerTsx3.__closure = items5;
   VoicePanelControlsDrawerTsx3.__workletHash = 8293489565998;
   VoicePanelControlsDrawerTsx3.__initData = tmp23;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     VoicePanelControlsDrawerTsx2,
     VoicePanelControlsDrawerTsx3,
   );
@@ -208,11 +208,11 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   const obj3 = { style: null, children: null };
   const items8 = [tmp4.drawer, animatedStyle];
   obj3.style = items8;
-  const tmp10Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp10Result = require("../../../../../_runtime/metro/01655__.js");
   let tmp32 = null;
   if (tmp10Result2.isJankScreenReportingEnabled()) {
     const obj4 = { channelId, tab, wrapperSpecs, mode };
-    tmp32 = closure_9(tmp(19948), obj4);
+    tmp32 = closure_9(tmp(20105), obj4);
   }
   const items9 = [tmp32, , ,];
   let tmp36 = !tmp6;
@@ -231,6 +231,6 @@ export default noop.memo(function VoicePanelControlsDrawer(openTab) {
   }
   items9[3] = closure_9(closure_12, { shown: tmp38, renderContent: callback1 });
   obj3.children = items9;
-  return closure_10(_modDef1652.View, obj3);
+  return closure_10(_modDef1655.View, obj3);
 });
 export const LazyContentFreezer = memoResult;

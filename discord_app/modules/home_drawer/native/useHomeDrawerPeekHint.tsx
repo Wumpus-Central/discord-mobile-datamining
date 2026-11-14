@@ -11,12 +11,12 @@ const require = globalThis.__r;
 
 require = fn;
 const ME = fn(1072).ME;
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 let c8 = 2000;
-const Easing = fn(1652).Easing;
-let closure_9 = Easing.inOut(fn(1652).Easing.cubic);
+const Easing = fn(1655).Easing;
+let closure_9 = Easing.inOut(fn(1655).Easing.cubic);
 let closure_10 = [];
-let items = [fn(5076).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX];
+let items = [fn(5139).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX];
 let closure_12 = {
   code: "(function useHomeDrawerPeekHintTsx1(){let[gestureState,panelX,PEEK_HINT_DRAWER_DRAG_THRESHOLD]=this.__closure;return gestureState.get().active&&panelX.get()>PEEK_HINT_DRAWER_DRAG_THRESHOLD;})",
 };
@@ -98,17 +98,17 @@ export function useHomeDrawerPeekHint(enablePeekHint, sharedValue8) {
       closure_11.current = setTimeout(() => {
         ref3.current = null;
         ref4.current = false;
-        const result = _undefined.set(c0(5876).withSpring(0, c0(18613).HOME_DRAWER_FLING_PHYSICS));
+        const result = _undefined.set(c0(5939).withSpring(0, c0(18742).HOME_DRAWER_FLING_PHYSICS));
         const current = ref.current;
         if (current != null) {
           current(first1.AUTO_DISMISS);
         }
         closure_1_8(false);
-        const obj = c0(5876);
+        const obj = c0(5939);
       }, 2500);
       const obj2 = { duration: 1500, easing };
     }, items1);
-    const tmp25 = tmp8Result2[0] === tmp3(5076).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX;
+    const tmp25 = tmp8Result2[0] === tmp3(5139).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX;
     closure_15 = tmp25;
     const items2 = [tmp25, callback, tmp8Result2[1]];
     const effect = obj6.useEffect(() => {
@@ -214,7 +214,7 @@ export function useHomeDrawerPeekHint(enablePeekHint, sharedValue8) {
     useHomeDrawerPeekHintTsx1.__closure = items9;
     useHomeDrawerPeekHintTsx1.__workletHash = 12843932440959;
     useHomeDrawerPeekHintTsx1.__initData = tmp34;
-    const items10 = [ref5, tmp25, tmp3(1705).scheduleOnRN, callback2];
+    const items10 = [ref5, tmp25, tmp3(1708).scheduleOnRN, callback2];
     _require = undefined;
     dependencyMap = undefined;
     _slicedToArray = undefined;
@@ -238,7 +238,7 @@ export function useHomeDrawerPeekHint(enablePeekHint, sharedValue8) {
     useHomeDrawerPeekHintTsx2.__closure = items11;
     useHomeDrawerPeekHintTsx2.__workletHash = 16017025377880;
     useHomeDrawerPeekHintTsx2.__initData = tmp40;
-    const animatedReaction = tmp3(1652).useAnimatedReaction(useHomeDrawerPeekHintTsx1, useHomeDrawerPeekHintTsx2);
+    const animatedReaction = tmp3(1655).useAnimatedReaction(useHomeDrawerPeekHintTsx1, useHomeDrawerPeekHintTsx2);
   }
   tmp20 = ref2;
 }

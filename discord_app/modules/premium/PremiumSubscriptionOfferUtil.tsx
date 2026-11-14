@@ -1,7 +1,7 @@
 // discord_app/modules/premium/PremiumSubscriptionOfferUtil.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import Server from "../../flow/Server.tsx";
-import _modDef2166 from "../../../_runtime/metro/02166__.js";
+import _modDef2169 from "../../../_runtime/metro/02169__.js";
 import usePremiumTrialOffer from "hooks/usePremiumTrialOffer.android.tsx";
 import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil.tsx";
 import usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer.android.tsx";
@@ -63,7 +63,7 @@ function getDiscountInfo(active_discount_id) {
   }
   return { duration: 1, percentage: 30, discountId: active_discount_id };
 }
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({
   PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID: closure_6,
   PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID: metroImportDefault,
@@ -95,8 +95,8 @@ function useHasDiscountApplied() {
   let tmp4 = null != prop;
   if (tmp4) {
     const _Date = Date;
-    tmp4 = _modDef2166(Date.now()) <= _modDef2166(prop);
-    const tmp6Result = _modDef2166(Date.now());
+    tmp4 = _modDef2169(Date.now()) <= _modDef2169(prop);
+    const tmp6Result = _modDef2169(Date.now());
   }
   return tmp4;
 }
@@ -120,8 +120,8 @@ export function useIsInPremiumOfferExperience() {
     let tmp11 = null != prop;
     if (tmp11) {
       const _Date = Date;
-      tmp11 = _modDef2166(Date.now()) <= _modDef2166(prop);
-      const tmp13Result = _modDef2166(Date.now());
+      tmp11 = _modDef2169(Date.now()) <= _modDef2169(prop);
+      const tmp13Result = _modDef2169(Date.now());
     }
     return null != premiumTrialOffer || hasActiveTrial || null != tmp6 || tmp11;
   } else {
@@ -224,8 +224,8 @@ export function useShouldFetchChurnOffer() {
     let tmp8 = null != prop;
     if (tmp8) {
       const _Date = Date;
-      tmp8 = _modDef2166(Date.now()) <= _modDef2166(prop);
-      const tmp10Result = _modDef2166(Date.now());
+      tmp8 = _modDef2169(Date.now()) <= _modDef2169(prop);
+      const tmp10Result = _modDef2169(Date.now());
     }
     let tmp13 = null !== stateFromStores && stateFromStores.hasPremiumNitroMonthly && !tmp8;
     if (tmp13) {

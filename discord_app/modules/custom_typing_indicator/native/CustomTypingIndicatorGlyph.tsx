@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_5 = createStyles.createStyles({ emojiRow: { flexDirection: "row", alignItems: "center" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorGlyph.tsx");
@@ -15,10 +15,10 @@ export default function CustomTypingIndicatorGlyph(config) {
   const size = config.size;
   let emojisKey;
   const tmp = closure_5();
-  dependencyMap = config(1407).getEffectiveCustomTypingIndicatorAnimation(config);
-  const obj = config(1407);
+  dependencyMap = config(1410).getEffectiveCustomTypingIndicatorAnimation(config);
+  const obj = config(1410);
   if (obj2.hasCustomTypingIndicatorEmojis(config.emojis)) {
-    emojisKey = tmp2(1407).getCustomTypingIndicatorEmojisKey(config.emojis);
+    emojisKey = tmp2(1410).getCustomTypingIndicatorEmojisKey(config.emojis);
     items = [tmp.emojiRow];
     if (null == size) {
       let PX_4 = size(575).space.PX_4;
@@ -41,5 +41,5 @@ export default function CustomTypingIndicatorGlyph(config) {
   } else {
     return jsx(tmp2(1187).Ellipsis, {});
   }
-  obj2 = config(1407);
+  obj2 = config(1410);
 }

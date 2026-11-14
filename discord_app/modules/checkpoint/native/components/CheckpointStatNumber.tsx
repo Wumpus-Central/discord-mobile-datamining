@@ -8,7 +8,7 @@ function getTextPixels(value) {
   let num = 0;
   const StringResult = String(value);
   while (tmp2 !== undefined) {
-    let num2 = closure_8[tmp3];
+    let num2 = closure_9[tmp3];
     if (num2 == null) {
       num2 = 5;
     }
@@ -18,10 +18,11 @@ function getTextPixels(value) {
   return Math.max(num - 1, 0);
 }
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6314).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6377).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
-let c7 = 28.7;
-let closure_8 = {
+let c7 = 0.08675000000000001;
+let c8 = 28.7;
+let closure_9 = {
   1: 3,
   2: 4,
   3: 4,
@@ -39,8 +40,8 @@ let closure_8 = {
   m: 6,
   p: 4,
 };
-const createStyles = fn(5243);
-let closure_9 = createStyles.createStyles({ rive: { position: "absolute", top: 0, left: 0 } });
+const createStyles = fn(5306);
+let closure_10 = createStyles.createStyles({ rive: { position: "absolute", top: 0, left: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointStatNumber.tsx");
 
@@ -58,14 +59,14 @@ export default function CheckpointStatNumber(isStepHeading) {
   c4 = undefined;
   const tmp3 = getTextPixels(value);
   let num2 = 1;
-  if (tmp3 > c7) {
-    num2 = c7 / tmp3;
+  if (tmp3 > c8) {
+    num2 = c8 / tmp3;
   }
   let num3 = num;
   if (num === undefined) {
     num3 = 40;
   }
-  const result = Math.min(getTextPixels(value), c7) * num3 * 0.08675000000000001;
+  const result = Math.min(getTextPixels(value), c8) * num3 * c7;
   c4 = result;
   items = [num, result];
   const items1 = [num2, num, result];
@@ -82,10 +83,10 @@ export default function CheckpointStatNumber(isStepHeading) {
   const memo2 = noop.useMemo(() => ({ DisplayValueString: String(value), TextColor: color }), items2);
   const obj = { style: memo, children: null };
   const obj2 = { style: null, children: null };
-  const items4 = [closure_9().rive, memo1];
+  const items4 = [closure_10().rive, memo1];
   obj2.style = items4;
   const memo3 = noop.useMemo(() => ({ color }), items3);
-  const tmp = closure_9();
+  const tmp = closure_10();
   obj2.children = jsx(CheckpointNumbersRive.CheckpointNumbersRive, {
     stateMachine: "State Machine 1",
     fit: "contain",
@@ -101,11 +102,19 @@ export default function CheckpointStatNumber(isStepHeading) {
   obj.children = <View style={null}>{null}</View>;
   return <View style={memo}>{null}</View>;
 }
+export function getCheckpointStatNumberShrinkRatio(c0) {
+  const tmp = getTextPixels(c0);
+  let num = 1;
+  if (tmp > c8) {
+    num = c8 / tmp;
+  }
+  return num;
+}
 export function isCheckpointStatNumberShrunk(result) {
   const tmp = getTextPixels(result);
   let num = 1;
-  if (tmp > c7) {
-    num = c7 / tmp;
+  if (tmp > c8) {
+    num = c8 / tmp;
   }
   return num < 1;
 }
@@ -114,5 +123,18 @@ export function getCheckpointStatNumberWidth(c1) {
   if (size === undefined) {
     num = 40;
   }
-  return Math.min(getTextPixels(c1), c7) * num * 0.08675000000000001;
+  return Math.min(getTextPixels(c1), c8) * num * c7;
+}
+export function getCheckpointStatNumberDigitHeight(c0, arg1) {
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 40;
+  }
+  const result = 7 * num;
+  const tmp3 = getTextPixels(c0);
+  let num2 = 1;
+  if (tmp3 > c8) {
+    num2 = c8 / tmp3;
+  }
+  return result * c7 * num2;
 }

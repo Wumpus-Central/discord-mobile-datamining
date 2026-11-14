@@ -1,11 +1,11 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControls.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05535_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import native2 from "../../../../design/components/experimental/native.tsx";
@@ -14,10 +14,10 @@ import VoicePanelStateContextDefault from "../VoicePanelStateContext.tsx";
 import calculateVoicePanelHeaderSpecsDefault from "../header/calculateVoicePanelHeaderSpecs.tsx";
 import useWindowDimensionsSharedValueDefault from "../../../screen/useWindowDimensionsSharedValue.native.tsx";
 import VoicePanelControlsUtils from "../utils/VoicePanelControlsUtils.tsx";
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened.tsx";
 import useIsConnectedToVoiceChannelDefault from "../hooks/useIsConnectedToVoiceChannel.tsx";
 import VoicePanelFloatingCTAUtils from "utils/VoicePanelFloatingCTAUtils.tsx";
 import useControlsLockDefault from "useControlsLock.tsx";
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened.tsx";
 import VoicePanelAccessibilityViewDefault from "../VoicePanelAccessibilityView.tsx";
 import useDrawerToggleDefault from "useDrawerToggle.tsx";
 import useConsoleConnectingInfoDefault from "../hooks/useConsoleConnectingInfo.tsx";
@@ -34,12 +34,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11919);
+const VoicePanelConstants = fn(11985);
 ({
   UI_SHOW_HIDE_PHYSICS: metroImportDefault,
   MODE_CHANGE_PHYSICS: closure_8,
@@ -47,16 +47,16 @@ const VoicePanelConstants = fn(11919);
   PANEL_CONTROLS_HEIGHT_PHYSICS: closure_10,
   VoicePanelModes: closure_11,
 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(11922);
+const VoicePanelCardConstants = fn(11988);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(11917);
+const VoicePanelControlsConstants = fn(11983);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } =
   VoicePanelControlsConstants);
 const Constants = fn(1072);
 ({ ComponentActions: closure_16, ThemeTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { accessibilityWrapper: null, wrapper: null, buttonsWrapper: null, actionSheetDragHandleWrapper: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -88,7 +88,7 @@ obj.actionSheetDragHandleWrapper = { position: "absolute", top: 0, left: 0, righ
 let closure_21 = createStyles.createStyles(obj);
 let c22 = 200;
 let c23 = 200;
-const MetaQuestUtils = fn(1624);
+const MetaQuestUtils = fn(1627);
 let closure_25 = noop.memo(function Handle(openTab) {
   const tmp = closure_21();
   const tmp2 = useDrawerToggleDefault(openTab.openTab);
@@ -281,7 +281,7 @@ let closure_39 = noop.memo(function VoicePanelButtonsInner(sharedTab) {
   VoicePanelControlsTsx12.__closure = items1;
   VoicePanelControlsTsx12.__workletHash = 5526761748144;
   VoicePanelControlsTsx12.__initData = tmp8;
-  const animatedStyle = _mod1652.useAnimatedStyle(VoicePanelControlsTsx12);
+  const animatedStyle = _mod1655.useAnimatedStyle(VoicePanelControlsTsx12);
   const effect = noop.useEffect(() => {
     c2.current = false;
   }, []);
@@ -289,8 +289,8 @@ let closure_39 = noop.memo(function VoicePanelButtonsInner(sharedTab) {
   let obj4 = { style: null, children: arr.map((props) => props.render(props.key, { props, openTab, wrapperSpecs })) };
   const items2 = [tmp5.buttonsWrapper, animatedStyle];
   obj4.style = items2;
-  obj3.children = collapsedCategories(_modDef1652.View, obj4);
-  return collapsedCategories(_mod1652.LayoutAnimationConfig, obj3);
+  obj3.children = collapsedCategories(_modDef1655.View, obj4);
+  return collapsedCategories(_mod1655.LayoutAnimationConfig, obj3);
 });
 let closure_40 = {
   code: "(function VoicePanelControlsTsx13(){let[wrapperSpecs,CALL_TILE_GUTTER,accessoryHeights]=this.__closure;return wrapperSpecs.get().height+CALL_TILE_GUTTER+accessoryHeights.get();})",
@@ -337,12 +337,12 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   c3 = first;
   noop = tmp8[1];
   let obj = require("useIsScreenReaderEnabled");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(first);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(first);
   c5 = sharedValue;
   const layoutEffect = noop.useLayoutEffect(() => {
     const result = drawerTransitionHeight.set(c3);
   });
-  let obj3 = require("../../../../../_runtime/metro/01652__.js");
+  let obj3 = require("../../../../../_runtime/metro/01655__.js");
   let tmp13 = useShowConnectedControlsDefault(channelId);
   let tmp12 = useIsConnectedToVoiceChannelDefault(channelId);
   const maybeFetchSoundboardSounds = require("SoundboardHooks").useMaybeFetchSoundboardSounds({ shouldFetch: tmp12 });
@@ -423,7 +423,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(19799).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(19187).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "chat", source });
     }
@@ -433,7 +433,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(19799).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(19187).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "app_launcher", source });
     }
@@ -455,7 +455,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   const rect = require("useSafeAreaInsets").getSafeAreaInsets();
   let obj5 = require("useSafeAreaInsets");
   let size = { width: null, height: 0, x: 0, y: 0, drawerMode: false, hidden: false };
-  let obj6 = require("../../../../../_runtime/metro/01652__.js");
+  let obj6 = require("../../../../../_runtime/metro/01655__.js");
   let obj8 = require("VoicePanelControlsUtils");
   size.width = obj8.getControlsDefaultWidth(
     require("useWindowDimensions").getWindowDimensions().width,
@@ -479,10 +479,10 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx13.__closure = items4;
   VoicePanelControlsTsx13.__workletHash = 3098126671150;
   VoicePanelControlsTsx13.__initData = tmp20;
-  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(VoicePanelControlsTsx13);
-  let obj10 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(null);
-  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(VoicePanelControlsTsx13);
+  let obj10 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(null);
+  const tmpResult = require("../../../../../_runtime/metro/01655__.js");
   let items5 = [closure_41, dockJoinMorphOrigin];
   _require = undefined;
   [tmp26, tmp27] = items5;
@@ -520,11 +520,11 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx15.__closure = items8;
   VoicePanelControlsTsx15.__workletHash = 5348461441179;
   VoicePanelControlsTsx15.__initData = tmp28;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     VoicePanelControlsTsx14,
     VoicePanelControlsTsx15,
   );
-  const tmpResult16 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult16 = require("../../../../../_runtime/metro/01655__.js");
   const token = require("useToken").useToken(tmp4(575).modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS);
   const tmpResult17 = require("useToken");
   let items9 = [
@@ -752,14 +752,14 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx16.__closure = items10;
   VoicePanelControlsTsx16.__workletHash = 13552589010327;
   VoicePanelControlsTsx16.__initData = tmp33;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(VoicePanelControlsTsx16);
-  const tmpResult18 = require("../../../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(VoicePanelControlsTsx16);
+  const tmpResult18 = require("../../../../../_runtime/metro/01655__.js");
   closure_129_0 = first;
   closure_129_1 = sharedValue;
   closure_129_2 = sharedValue1;
   closure_129_3 = callback;
   ({ hiddenProps, hiddenStyles } = useControlsHiddenPresentationDefault(mode, sharedValue1));
-  const context1 = obj2.useContext(tmp4(11918));
+  const context1 = obj2.useContext(tmp4(11984));
   const controlsSpecs2 = context1.controlsSpecs;
   closure_129_4 = controlsSpecs2;
   const windowDimensions = context1.windowDimensions;
@@ -780,21 +780,21 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     drawerTransitionHeight,
     interFloatingTransitionHeight,
   };
-  const sharedValue3 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(point);
+  const sharedValue3 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(point);
   closure_129_8 = sharedValue3;
-  const tmpResult19 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue4 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const tmpResult19 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue4 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   closure_129_9 = sharedValue4;
-  const tmpResult20 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue5 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const tmpResult20 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue5 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
   closure_129_10 = sharedValue5;
-  const tmpResult21 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue6 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const tmpResult21 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue6 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   closure_129_11 = sharedValue6;
   const ref = noop.useRef(undefined);
   closure_129_12 = ref;
-  const tmpResult22 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue7 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const tmpResult22 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue7 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
   closure_129_13 = sharedValue7;
   let items11 = [ref, sharedValue5, sharedValue7, sharedValue6];
   const memo = obj2.useMemo(
@@ -803,7 +803,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   );
   const tmp63 = useControlsLockDefault();
   closure_129_14 = tmp63;
-  const tmpResult23 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult23 = require("../../../../../_runtime/metro/01655__.js");
   const token1 = require("useToken").useToken(tmp4(575).modules.mobile.VOICE_PANEL_GUTTER);
   closure_129_15 = token1;
   let items12 = [
@@ -862,7 +862,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     VoicePanelControlsTsx1.__initData = tmp10;
     const tmp3 = c9;
     const withRefResult = result.withRef(c12);
-    const items2 = [closure_27, _mod1705.scheduleOnRN, c14];
+    const items2 = [closure_27, _mod1708.scheduleOnRN, c14];
     c0 = undefined;
     c1 = undefined;
     [tmp19, tmp20, tmp21] = items2;
@@ -893,7 +893,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
       c22,
       c23,
       c0,
-      _mod1705.scheduleOnRN,
+      _mod1708.scheduleOnRN,
       c3,
       trackVoicePanelTabOpened.VoicePanelTabAnalyticsSources,
       c13,
@@ -1074,7 +1074,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
       c5,
       c6,
       c4,
-      _mod1705.scheduleOnRN,
+      _mod1708.scheduleOnRN,
       HapticUtils.triggerHapticFeedback,
       HapticUtils.HapticFeedbackTypes,
       VoicePanelControlsUtils.getControlsDefaultWidth,
@@ -1183,7 +1183,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     const tmp44 = c7;
     const tmp45 = c15;
     const tmp46 = c6;
-    const items8 = [closure_30, c13, c10, c8, _mod1705.scheduleOnRN, c14];
+    const items8 = [closure_30, c13, c10, c8, _mod1708.scheduleOnRN, c14];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -1224,7 +1224,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
       c8,
       c13,
       c10,
-      _mod1705.scheduleOnRN,
+      _mod1708.scheduleOnRN,
       c14,
     ];
     c0 = undefined;
@@ -1289,7 +1289,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
       .onTouchesMove(VoicePanelControlsTsx3)
       .onChange(VoicePanelControlsTsx4)
       .onTouchesCancelled(VoicePanelControlsTsx5);
-    const items12 = [closure_32, c13, c10, _mod1705.scheduleOnRN, c14];
+    const items12 = [closure_32, c13, c10, _mod1708.scheduleOnRN, c14];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -1332,7 +1332,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx8.__initData = tmp66;
   const items15 = [
     closure_34,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     require("HapticUtils").triggerHapticFeedback,
     require("HapticUtils").HapticFeedbackTypes,
   ];
@@ -1355,14 +1355,14 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx9.__closure = items16;
   VoicePanelControlsTsx9.__workletHash = 1613558861571;
   VoicePanelControlsTsx9.__initData = tmp68;
-  const animatedReaction1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     VoicePanelControlsTsx8,
     VoicePanelControlsTsx9,
   );
-  const tmpResult25 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult25 = require("../../../../../_runtime/metro/01655__.js");
   const isScreenReaderEnabled1 = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   const tmpResult26 = require("useIsScreenReaderEnabled");
-  const context2 = obj2.useContext(tmp4(11918));
+  const context2 = obj2.useContext(tmp4(11984));
   ({
     controlsSpecs: controlsSpecs3,
     windowDimensions: windowDimensions2,
@@ -1405,7 +1405,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     c11,
     sharedValue1,
     c15,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     setControlsMode2,
     isScreenReaderEnabled1,
     c13,
@@ -1516,12 +1516,12 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx11.__closure = items20;
   VoicePanelControlsTsx11.__workletHash = 3913287750376;
   VoicePanelControlsTsx11.__initData = tmp84;
-  const animatedReaction2 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction2 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     VoicePanelControlsTsx10,
     VoicePanelControlsTsx11,
   );
   const tmp83 = c15;
-  const tmpResult27 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult27 = require("../../../../../_runtime/metro/01655__.js");
   [tmp98, tmp99] = c3(noop.useState(false), 2);
   const tmp7Result = c3(noop.useState(false), 2);
   const items21 = [closure_44, controlsSpecs];
@@ -1540,7 +1540,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     closure_45,
     isScreenReaderEnabled,
     tmp83,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     tmp99,
   ];
   _require = undefined;
@@ -1576,11 +1576,11 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx18.__closure = items24;
   VoicePanelControlsTsx18.__workletHash = 11440892714817;
   VoicePanelControlsTsx18.__initData = tmp102;
-  const animatedReaction3 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction3 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     VoicePanelControlsTsx17,
     VoicePanelControlsTsx18,
   );
-  const tmpResult28 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult28 = require("../../../../../_runtime/metro/01655__.js");
   [tmp109, tmp110] = c3(noop.useState(false), 2);
   const tmp7Result2 = c3(noop.useState(false), 2);
   const items25 = [closure_46, sharedValue1];
@@ -1595,7 +1595,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx19.__closure = items26;
   VoicePanelControlsTsx19.__workletHash = 16288224560950;
   VoicePanelControlsTsx19.__initData = tmp111;
-  const items27 = [closure_47, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp110];
+  const items27 = [closure_47, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp110];
   _require = undefined;
   importDefault = undefined;
   [tmp113, tmp114, tmp115] = items27;
@@ -1613,7 +1613,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   VoicePanelControlsTsx20.__closure = items28;
   VoicePanelControlsTsx20.__workletHash = 8307481518393;
   VoicePanelControlsTsx20.__initData = tmp113;
-  const animatedReaction4 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction4 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     VoicePanelControlsTsx19,
     VoicePanelControlsTsx20,
   );
@@ -1635,7 +1635,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
     pointerEvents: "box-none",
     children: null,
   };
-  const tmpResult29 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult29 = require("../../../../../_runtime/metro/01655__.js");
   let obj12 = { gesture: memo1, children: null };
   const items31 = [tmp6.wrapper, animatedStyle];
   let tmp122;
@@ -1675,7 +1675,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   }
   items33[2] = tmp120Result;
   obj13.children = items33;
-  obj12.children = closure_20(_modDef1652.View, obj13);
+  obj12.children = closure_20(_modDef1655.View, obj13);
   obj11.children = c18(require("LegacyBaseButton").GestureDetector, obj12);
   items30[2] = c18(tmp4Result, obj11);
   obj7.children = items30;

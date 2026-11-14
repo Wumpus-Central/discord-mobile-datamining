@@ -16,7 +16,7 @@ export default function useControlAccessoryHeight() {
   const isConnectingOrConnectedToConsole =
     require("useConsoleConnectingInfo")(channelId).isConnectingOrConnectedToConsole;
   _require = isConnectingOrConnectedToConsole;
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   items = [sharedValue, isConnectingOrConnectedToConsole];
   const effect = sharedValue1.useEffect(() => {
     let num = 0;
@@ -25,11 +25,11 @@ export default function useControlAccessoryHeight() {
     }
     const result = _undefined2.set(num);
   }, items);
-  const obj = require("../../../../../_runtime/metro/01652__.js");
+  const obj = require("../../../../../_runtime/metro/01655__.js");
   shouldShowFloatingCTA = require("VoicePanelFloatingCTAUtils").useShouldShowFloatingCTA(channelId);
   const obj2 = require("VoicePanelFloatingCTAUtils");
-  sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj3 = require("../../../../../_runtime/metro/01652__.js");
+  sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const obj3 = require("../../../../../_runtime/metro/01655__.js");
   const floatingCTATotalViewHeight = require("VoicePanelFloatingCTAContainer").getFloatingCTATotalViewHeight();
   const items1 = [sharedValue1, shouldShowFloatingCTA, floatingCTATotalViewHeight];
   const effect1 = sharedValue1.useEffect(() => {
@@ -52,5 +52,5 @@ export default function useControlAccessoryHeight() {
   useControlAccessoryHeightTsx1.__closure = items3;
   useControlAccessoryHeightTsx1.__workletHash = 1979848822852;
   useControlAccessoryHeightTsx1.__initData = tmp7;
-  return require("../../../../../_runtime/metro/01652__.js").useDerivedValue(useControlAccessoryHeightTsx1);
+  return require("../../../../../_runtime/metro/01655__.js").useDerivedValue(useControlAccessoryHeightTsx1);
 }

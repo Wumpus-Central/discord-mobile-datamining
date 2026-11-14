@@ -321,8 +321,8 @@ function currentSession() {
   }
   return { userId: id, generation: ConjureProjectStore.getSessionGeneration() };
 }
-function isCurrentSession(session) {
-  let tmp = session.generation === ConjureProjectStore.getSessionGeneration();
+function isCurrentSession(generation) {
+  let tmp = generation.generation === ConjureProjectStore.getSessionGeneration();
   if (tmp) {
     const currentUser = UserStore.getCurrentUser();
     let id;
@@ -332,7 +332,7 @@ function isCurrentSession(session) {
     if (id == null) {
       id = null;
     }
-    tmp = session.userId === id;
+    tmp = generation.userId === id;
   }
   return tmp;
 }
@@ -1579,7 +1579,7 @@ function refreshConjureInstallState(id) {
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
 const Endpoints = fn(1072).Endpoints;
-const ReadStateTypes = fn(6896).ReadStateTypes;
+const ReadStateTypes = fn(6959).ReadStateTypes;
 const logger = new fn(4).Logger("ConjureActionCreators");
 let c14 = null;
 let c15 = null;

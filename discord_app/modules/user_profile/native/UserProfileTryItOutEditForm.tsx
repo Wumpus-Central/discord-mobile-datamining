@@ -53,7 +53,7 @@ function EditableBanner(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-let closure_6 = fn(7896).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
+let closure_6 = fn(7962).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const size = fn(2);

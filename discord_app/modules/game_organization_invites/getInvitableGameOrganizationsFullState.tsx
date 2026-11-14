@@ -1,7 +1,8 @@
 // discord_app/modules/game_organization_invites/getInvitableGameOrganizationsFullState.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2549 from "GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2565 from "GameOrganizationInvitesUntranslated.messages.js";
 import isGameOrganizationFullDefault from "../game_organizations/isGameOrganizationFull.tsx";
+import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 let closure_3 = { kind: "available" };
@@ -29,11 +30,15 @@ export default function getInvitableGameOrganizationsFullState(arg0) {
   tmp = closure_3;
 }
 export function getGameOrganizationFullSubLabel(data) {
+  let tmp = stateFromStores;
+  if (stateFromStores === undefined) {
+    tmp = null;
+  }
   const intl = util.intl;
-  const obj = { orgName: data.name, noun: null };
-  const intl2 = util.intl;
-  obj.noun = intl2.string(_modDef2549.xXXGsq);
-  return intl.formatToPlainString(_modDef2549.xuM052, obj);
+  return intl.formatToPlainString(_modDef2565.xuM052, {
+    orgName: data.name,
+    noun: getGameOrganizationDisplayNounDefault({ displayNoun: tmp, lowercase: true }),
+  });
 }
 export function getInvitableGameOrganizationsFullSubLabel(kind) {
   kind = kind.kind;
@@ -41,12 +46,12 @@ export function getInvitableGameOrganizationsFullSubLabel(kind) {
     if ("single_full" === kind) {
       const intl2 = util.intl;
       const obj = { orgName: kind.organization.name, noun: null };
-      const intl3 = util.intl;
-      obj.noun = intl3.string(_modDef2549.xXXGsq);
-      return intl2.formatToPlainString(_modDef2549.xuM052, obj);
+      const obj2 = { displayNoun: null, lowercase: true };
+      obj.noun = getGameOrganizationDisplayNounDefault(obj2);
+      return intl2.formatToPlainString(_modDef2565.xuM052, obj);
     } else if ("all_full" === kind) {
       const intl = util.intl;
-      return intl.string(_modDef2549.bY80Jh);
+      return intl.string(_modDef2565.bY80Jh);
     }
   }
 }

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import DurationsDefault from "../../../utils/Durations.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef1652 from "../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../_runtime/metro/01655__.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -28,7 +28,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 let closure_7 = 6 * DurationsDefault.Millis.SECOND;
 let closure_8 = 2 * DurationsDefault.Millis.SECOND;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   voiceChannelEffectEmojiContainer: null,
   voiceChannelEffectEmojiContainerTileNotch: null,
@@ -95,13 +95,13 @@ export default function AnimatedEffectEmoji(onComplete) {
       }
     };
   }, items1);
-  require("../../../../_runtime/metro/01652__.js");
+  require("../../../../_runtime/metro/01655__.js");
   const items2 = [
     closure_11,
-    require("../../../../_runtime/metro/01652__.js").withSequence,
+    require("../../../../_runtime/metro/01655__.js").withSequence,
     require("timing/timing").withTiming,
     -120,
-    require("../../../../_runtime/metro/01652__.js").withDelay,
+    require("../../../../_runtime/metro/01655__.js").withDelay,
     stateFromStores,
     require("native").STANDARD_EASING,
   ];
@@ -160,12 +160,12 @@ export default function AnimatedEffectEmoji(onComplete) {
     const obj3 = { style: tmp.voiceChannelEffectEmoji, children: null };
     const obj4 = { url: null, surrogates: null };
     let tmp2Result = tmp2(1187);
-    obj4.url = tmp2(12714).getEffectUrl(emoji);
+    obj4.url = tmp2(12810).getEffectUrl(emoji);
     obj4.surrogates = emoji.name;
     obj3.children = <Emoji url={null} surrogates={null} />;
     obj2.children = <c4 style={tmp.voiceChannelEffectEmoji}>{null}</c4>;
-    tmp16Result = jsx(_modDef1652.View, { style: null, children: null });
-    const tmp2Result2 = tmp2(12714);
+    tmp16Result = jsx(_modDef1655.View, { style: null, children: null });
+    const tmp2Result2 = tmp2(12810);
   }
   return tmp16Result;
 }

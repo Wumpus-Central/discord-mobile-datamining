@@ -1,7 +1,7 @@
 // discord_app/modules/custom_typing_indicator/native/FloatingApplyButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1652 from "../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../_runtime/metro/01655__.js";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -9,7 +9,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(1623).MEDIA_PICKER_SEND_BUTTON_SPRING;
+let closure_5 = fn(1626).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
 let closure_7 = {
   code: "(function FloatingApplyButtonTsx1(){let[visible]=this.__closure;return{pointerEvents:visible?'box-none':'none'};})",
@@ -43,8 +43,8 @@ export default function FloatingApplyButton(renderButton) {
   FloatingApplyButtonTsx1.__closure = items2;
   FloatingApplyButtonTsx1.__workletHash = 4329148887087;
   FloatingApplyButtonTsx1.__initData = tmp5;
-  const animatedProps = require("../../../../_runtime/metro/01652__.js").useAnimatedProps(FloatingApplyButtonTsx1);
-  const obj2 = require("../../../../_runtime/metro/01652__.js");
+  const animatedProps = require("../../../../_runtime/metro/01655__.js").useAnimatedProps(FloatingApplyButtonTsx1);
+  const obj2 = require("../../../../_runtime/metro/01655__.js");
   const items3 = [closure_8, visible, nativeDefault, stateFromStores, require("spring/spring").withSpring, closure_5];
   _require = undefined;
   importDefault = undefined;
@@ -110,7 +110,7 @@ export default function FloatingApplyButton(renderButton) {
   FloatingApplyButtonTsx2.__workletHash = 13112691757829;
   FloatingApplyButtonTsx2.__initData = tmp8;
   const items5 = [onPress];
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(FloatingApplyButtonTsx2);
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(FloatingApplyButtonTsx2);
   const callback = noop.useCallback(() => {
     const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
     _undefined();
@@ -124,7 +124,7 @@ export default function FloatingApplyButton(renderButton) {
   }
   if (renderButtonResult == null) {
     const obj6 = { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: renderButton.loading };
-    renderButtonResult = jsx(tmp(5873).Button, {
+    renderButtonResult = jsx(tmp(5936).Button, {
       variant: "primary",
       size: "lg",
       disabled,
@@ -134,10 +134,10 @@ export default function FloatingApplyButton(renderButton) {
     });
   }
   obj4.children = renderButtonResult;
-  obj3.children = jsx(_modDef1652.View, {
+  obj3.children = jsx(_modDef1655.View, {
     style: { marginBottom: useSafeAreaInsetsDefault().bottom },
     animatedProps,
     children: null,
   });
-  return jsx(_modDef1652.View, { style: animatedStyle, children: null });
+  return jsx(_modDef1655.View, { style: animatedStyle, children: null });
 }

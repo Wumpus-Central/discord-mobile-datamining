@@ -5,10 +5,10 @@ import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import DurationsDefault from "Durations.tsx";
 import util from "../intl/index.native.tsx";
 import PremiumTypeUtils from "PremiumTypeUtils.tsx";
-import _modDef2166 from "../../_runtime/metro/02166__.js";
+import _modDef2169 from "../../_runtime/metro/02169__.js";
 import PremiumSubscription from "../modules/premium/PremiumSubscription.tsx";
-import _modDef2749 from "../modules/premium/gifting/PremiumGifting.messages.js";
-import _modDef3465 from "../modules/premium/premium_group/PremiumGroup.messages.js";
+import _modDef2765 from "../modules/premium/gifting/PremiumGifting.messages.js";
+import _modDef3513 from "../modules/premium/premium_group/PremiumGroup.messages.js";
 import BillingUtils from "BillingUtils.tsx";
 import DateUtils from "DateUtils.tsx";
 import openURLDefault from "../lib/openURL.tsx";
@@ -319,7 +319,7 @@ function getIntervalString(interval, arg1, arg2) {
       const formatToPlainString = intl9.formatToPlainString;
       if (flag) {
         const obj2 = { intervalCount: num };
-        let formatToPlainStringResult1 = formatToPlainString(_modDef2749.G1Q40N, obj2);
+        let formatToPlainStringResult1 = formatToPlainString(_modDef2765.G1Q40N, obj2);
       } else {
         const obj3 = { intervalCount: num };
         formatToPlainStringResult1 = formatToPlainString(util.t["0UlZnH"], obj3);
@@ -470,7 +470,7 @@ function getDisplayName(planId, arg1, arg2) {
       let stringResult = intl10.string(util.t.SmVbHc);
     } else {
       const obj5 = { premiumGroupProductName: closure_46() };
-      stringResult = intl10.formatToPlainString(_modDef3465["8bPDtb"], obj5);
+      stringResult = intl10.formatToPlainString(_modDef3513["8bPDtb"], obj5);
     }
     return stringResult;
   } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === planId) {
@@ -773,8 +773,8 @@ function getPlanDescription(arg0) {
                 } else if (constants4.PAUSE_PENDING === CANCELED) {
                   let diffResult = null;
                   if (null != subscription.pauseEndsAt) {
-                    diffResult = _modDef2166(subscription.pauseEndsAt).diff(subscription.currentPeriodEnd, "days");
-                    const obj19 = _modDef2166(subscription.pauseEndsAt);
+                    diffResult = _modDef2169(subscription.pauseEndsAt).diff(subscription.currentPeriodEnd, "days");
+                    const obj19 = _modDef2169(subscription.pauseEndsAt);
                   }
                   if (null != diffResult) {
                     const intl11 = util.intl;
@@ -796,8 +796,8 @@ function getPlanDescription(arg0) {
                 } else if (constants4.BILLING_RETRY === CANCELED) {
                   const intl8 = util.intl;
                   const obj15 = { endDate: null };
-                  const obj16 = _modDef2166(subscription.currentPeriodStart);
-                  obj15.endDate = _modDef2166(subscription.currentPeriodStart).add(closure_1_29, "days").toDate();
+                  const obj16 = _modDef2169(subscription.currentPeriodStart);
+                  obj15.endDate = _modDef2169(subscription.currentPeriodStart).add(closure_1_29, "days").toDate();
                   return intl8.format(util.t["IlJ/HV"], obj15);
                 } else if (constants4.PAST_DUE === CANCELED) {
                   const intl7 = util.intl;
@@ -906,8 +906,8 @@ function getPlanDescription(arg0) {
             } else if (constants4.PAUSE_PENDING === CANCELED) {
               let diffResult1 = null;
               if (null != subscription.pauseEndsAt) {
-                diffResult1 = _modDef2166(subscription.pauseEndsAt).diff(subscription.currentPeriodEnd, "days");
-                const obj32 = _modDef2166(subscription.pauseEndsAt);
+                diffResult1 = _modDef2169(subscription.pauseEndsAt).diff(subscription.currentPeriodEnd, "days");
+                const obj32 = _modDef2169(subscription.pauseEndsAt);
               }
               if (null != diffResult1) {
                 const intl18 = util.intl;
@@ -976,8 +976,8 @@ function getPlanDescription(arg0) {
         } else if (constants4.PAUSE_PENDING === CANCELED) {
           let diffResult2 = null;
           if (null != subscription.pauseEndsAt) {
-            diffResult2 = _modDef2166(subscription.pauseEndsAt).diff(subscription.currentPeriodEnd, "days");
-            const obj42 = _modDef2166(subscription.pauseEndsAt);
+            diffResult2 = _modDef2169(subscription.pauseEndsAt).diff(subscription.currentPeriodEnd, "days");
+            const obj42 = _modDef2169(subscription.pauseEndsAt);
           }
           if (null != diffResult2) {
             const intl25 = util.intl;
@@ -1081,9 +1081,9 @@ function getBillingGracePeriodDaysAndExpiresDate(subscription) {
       prop = metadata.apple_grace_period_expires_date;
     }
     if (null != prop) {
-      const obj11 = _modDef2166(subscription.metadata.apple_grace_period_expires_date);
+      const obj11 = _modDef2169(subscription.metadata.apple_grace_period_expires_date);
       const obj3 = { days: null, expiresDate: null };
-      obj3.days = _modDef2166.duration(obj11.diff(subscription.currentPeriodStart)).days();
+      obj3.days = _modDef2169.duration(obj11.diff(subscription.currentPeriodStart)).days();
       obj3.expiresDate = obj11;
       return obj3;
     }
@@ -1101,10 +1101,10 @@ function getBillingGracePeriodDaysAndExpiresDate(subscription) {
         prop2 = metadata3.google_original_expires_date;
       }
       if (null != prop2) {
-        const obj7 = _modDef2166(subscription.metadata.google_grace_period_expires_date);
+        const obj7 = _modDef2169(subscription.metadata.google_grace_period_expires_date);
         const obj4 = { days: null, expiresDate: null };
-        const tmp20 = _modDef2166(subscription.metadata.google_original_expires_date);
-        obj4.days = _modDef2166.duration(obj7.diff(tmp20)).days();
+        const tmp20 = _modDef2169(subscription.metadata.google_original_expires_date);
+        obj4.days = _modDef2169.duration(obj7.diff(tmp20)).days();
         obj4.expiresDate = obj7;
         return obj4;
       }
@@ -1112,7 +1112,7 @@ function getBillingGracePeriodDaysAndExpiresDate(subscription) {
   }
   if (subscription.isPurchasedExternally) {
     const tmp15 = subscription.isPurchasedViaApple ? closure_1_17 : collapsedCategories;
-    const obj5 = { days: tmp15, expiresDate: _modDef2166(subscription.currentPeriodStart).add(tmp15, "days") };
+    const obj5 = { days: tmp15, expiresDate: _modDef2169(subscription.currentPeriodStart).add(tmp15, "days") };
     return obj5;
   } else {
     const metadata4 = subscription.metadata;
@@ -1127,12 +1127,12 @@ function getBillingGracePeriodDaysAndExpiresDate(subscription) {
         prop4 = metadata5.grace_period_expires_date;
       }
       const obj8 = { days: null, expiresDate: null };
-      obj8.days = _modDef2166(prop4).diff(subscription.currentPeriodStart, "days");
-      obj8.expiresDate = _modDef2166(subscription.metadata.grace_period_expires_date);
+      obj8.days = _modDef2169(prop4).diff(subscription.currentPeriodStart, "days");
+      obj8.expiresDate = _modDef2169(subscription.metadata.grace_period_expires_date);
       return obj8;
     } else {
       const tmp8 = null == subscription.paymentSourceId ? expandedHeight : closure_1_30;
-      obj = { days: tmp8, expiresDate: _modDef2166(subscription.currentPeriodStart).add(tmp8, "days") };
+      obj = { days: tmp8, expiresDate: _modDef2169(subscription.currentPeriodStart).add(tmp8, "days") };
       return obj;
     }
   }
@@ -1142,7 +1142,7 @@ function getExpectedRenewalDate(premiumSubscription, fractionalPremiumInfo) {
   let toDateResult = date;
   if (!tmp2) {
     const unactivatedUnits = fractionalPremiumInfo.unactivatedUnits;
-    obj = _modDef2166(date);
+    obj = _modDef2169(date);
     let addResult = obj;
     if (unactivatedUnits.length > 0) {
       const mapped = unactivatedUnits.map((skuId) => skuId.skuId);
@@ -1180,10 +1180,10 @@ function getBillingInformationString(status, subscriptionPeriodStart, arg2) {
       isFractionalPremiumActive: false,
       fetched: true,
       fractionalState: constants6.NONE,
-      startsAt: _modDef2166(0),
-      endsAt: _modDef2166(0),
+      startsAt: _modDef2169(0),
+      endsAt: _modDef2169(0),
       currentEntitlementId: "",
-      currentEntitlementEndsAt: _modDef2166(0),
+      currentEntitlementEndsAt: _modDef2169(0),
       unactivatedUnits: [],
     };
     tmp2 = obj;
@@ -1280,7 +1280,7 @@ function getBillingInformationString(status, subscriptionPeriodStart, arg2) {
       isPurchasedViaGoogle = null != prop;
     }
     if (isPurchasedViaGoogle) {
-      expiresDate = _modDef2166(status.metadata.google_grace_period_expires_date);
+      expiresDate = _modDef2169(status.metadata.google_grace_period_expires_date);
     }
     let isPurchasedViaApple = status.isPurchasedViaApple;
     if (isPurchasedViaApple) {
@@ -1292,7 +1292,7 @@ function getBillingInformationString(status, subscriptionPeriodStart, arg2) {
       isPurchasedViaApple = null != prop1;
     }
     if (isPurchasedViaApple) {
-      expiresDate = _modDef2166(status.metadata.apple_grace_period_expires_date);
+      expiresDate = _modDef2169(status.metadata.apple_grace_period_expires_date);
     }
     const intl9 = tmp14(1113).intl;
     const format2 = intl9.format;
@@ -1381,7 +1381,7 @@ function getBillingInformationString(status, subscriptionPeriodStart, arg2) {
           let toDateResult = date;
           if (!tmp26) {
             const unactivatedUnits = tmp2.unactivatedUnits;
-            const obj3 = _modDef2166(date);
+            const obj3 = _modDef2169(date);
             let addResult = obj3;
             if (unactivatedUnits.length > 0) {
               const mapped1 = unactivatedUnits.map((skuId) => skuId.skuId);
@@ -1421,8 +1421,8 @@ function getBillingInformationString(status, subscriptionPeriodStart, arg2) {
         }
       }
     }
-    const obj10 = _modDef2166(status.currentPeriodStart);
-    const toDateResult1 = _modDef2166(status.currentPeriodStart)
+    const obj10 = _modDef2169(status.currentPeriodStart);
+    const toDateResult1 = _modDef2169(status.currentPeriodStart)
       .add(status.status === constants4.BILLING_RETRY ? closure_1_29 : closure_1_26, "days")
       .toDate();
     if (status.isPurchasedExternally) {
@@ -1452,7 +1452,7 @@ function getBillingInformationString(status, subscriptionPeriodStart, arg2) {
         }
         PAYMENT_SOURCE_MANAGEMENT = constants9.PAYMENT_SOURCE_MANAGEMENT;
       } else {
-        tmp14(2183);
+        tmp14(2186);
       }
       const intl8 = tmp14(1113).intl;
       const obj19 = { endDate: toDateResult1 };
@@ -1462,7 +1462,7 @@ function getBillingInformationString(status, subscriptionPeriodStart, arg2) {
       const obj20 = { endDate: toDateResult1, price: formatPriceResult };
       return intl6.format(tmp14(1113).t.EMTLOT, obj20);
     }
-    const addResult1 = _modDef2166(status.currentPeriodStart).add(
+    const addResult1 = _modDef2169(status.currentPeriodStart).add(
       status.status === constants4.BILLING_RETRY ? closure_1_29 : closure_1_26,
       "days",
     );
@@ -1478,7 +1478,7 @@ function extendDateWithUnconsumedFractionalPremium(
   if (!excludeReverseTrialFromCountdown) {
     tmp4 = date;
   }
-  const tmp3Result = _modDef2166(tmp4);
+  const tmp3Result = _modDef2169(tmp4);
   let addResult = tmp3Result;
   if (unactivatedFractionalPremiumUnits.length > 0) {
     const mapped = unactivatedFractionalPremiumUnits.map((skuId) => skuId.skuId);
@@ -1502,7 +1502,7 @@ function extendDateWithUnconsumedFractionalPremium(
   if (!excludeReverseTrialFromCountdown) {
     addResult1 = addResult;
     if (undefined !== diff) {
-      const diffResult = diff.diff(_modDef2166(), "hours", true);
+      const diffResult = diff.diff(_modDef2169(), "hours", true);
       addResult1 = addResult;
       if (diffResult > 0) {
         addResult1 = addResult.add(diffResult, "hours");
@@ -1799,7 +1799,7 @@ function getBillingReviewSubheader(arg0, id, arg2) {
   } else if (SubscriptionPlans.PREMIUM_GROUP_MONTH === id) {
     const intl4 = util.intl;
     const obj2 = { premiumGroupProductName: closure_46() };
-    return intl4.formatToPlainString(_modDef3465.LwdrNi, obj2);
+    return intl4.formatToPlainString(_modDef3513.LwdrNi, obj2);
   } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === id) {
     const intl3 = util.intl;
     const string = intl3.string;
@@ -2191,14 +2191,14 @@ function calculateYearlyPlanMonthlyRateAmount(interval) {
     return tmp5;
   }
 }
-function getDaysSincePremium(premiumSince) {
+function getDaysSincePremium(arg0) {
   let num = 0;
-  if (null != premiumSince) {
+  if (null != arg0) {
     const _Math = Math;
     const _Date = Date;
     const date = new Date();
     const _Date2 = Date;
-    const date1 = new Date(premiumSince);
+    const date1 = new Date(arg0);
     num = Math.max(DateUtils.differenceInCalendarDays(date, date1), 0);
   }
   return num;
@@ -2208,7 +2208,7 @@ function getDaysRemainingUntilSubscriptionCurrentPeriodEnds(currentPeriodEnd) {
   const date = new Date(currentPeriodEnd.currentPeriodEnd);
   return Math.max(1, Math.ceil(obj.differenceInDays(date, new Date())));
 }
-const isNoneSubscription = fn(2168).isNoneSubscription;
+const isNoneSubscription = fn(2171).isNoneSubscription;
 let Constants = fn(1072);
 ({
   InvoiceStatusTypes: closure_11,
@@ -2216,7 +2216,7 @@ let Constants = fn(1072);
   PriceSetAssignmentPurchaseTypes: map1,
   SubscriptionStatusTypes: closure_14,
 } = Constants);
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({
   DISCOUNTS: closure_15,
   ANNUAL_DISCOUNT_PERCENTAGE_FALLBACK: closure_16,
@@ -2252,7 +2252,7 @@ const PremiumConstants = fn(1387);
   USER_PREMIUM_OFFER_EXPIRES_APPROACHING_4_DAY_THRESHOLD: closure_44,
   USER_PREMIUM_OFFER_EXPIRES_APPROACHING_7_DAY_THRESHOLD: closure_45,
 } = PremiumConstants);
-let closure_46 = fn(2184).getPremiumGroupProductName;
+let closure_46 = fn(2187).getPremiumGroupProductName;
 Constants = fn(1083);
 ({
   CurrencyCodes: closure_47,
@@ -2297,9 +2297,9 @@ let set = new Set(items);
 let tmp5 = new LoggerDefault("PremiumUtils.tsx");
 const frozen = Object.freeze({
   isNewUser,
-  isPremiumAtLeast: fn(2107).isPremiumAtLeast,
-  isPremium: fn(2107).isPremium,
-  isPremiumExactly: fn(2107).isPremiumExactly,
+  isPremiumAtLeast: fn(2110).isPremiumAtLeast,
+  isPremium: fn(2110).isPremium,
+  isPremiumExactly: fn(2110).isPremiumExactly,
   isPremiumEligible,
   getPrice,
   getDefaultPrice,
@@ -2316,7 +2316,7 @@ const frozen = Object.freeze({
     return skuId === regex.TIER_0 || skuId === regex.TIER_1 || skuId === regex.TIER_2;
   },
   getIntervalMonths,
-  getUserMaxFileSize: fn(11146).getUserMaxFileSize,
+  getUserMaxFileSize: fn(11213).getUserMaxFileSize,
   getSkuIdForPlan(planId) {
     if (null == dependencyMap2[planId]) {
       const _Error = Error;
@@ -2431,35 +2431,35 @@ const frozen = Object.freeze({
   calculateYearlyPlanMonthlyRateAmount,
   getDaysSincePremium,
   getDaysRemainingUntilSubscriptionCurrentPeriodEnds,
-  canUseAnimatedEmojis: fn(10014).canUseAnimatedEmojis,
-  canUseEmojisEverywhere: fn(10014).canUseEmojisEverywhere,
-  canUseSoundboardEverywhere: fn(10014).canUseSoundboardEverywhere,
-  canUseCustomCallSounds: fn(10014).canUseCustomCallSounds,
-  canUploadLargeFiles: fn(10014).canUploadLargeFiles,
-  canUseBadges: fn(10014).canUseBadges,
-  canUseHighVideoUploadQuality: fn(10014).canUseHighVideoUploadQuality,
-  canEditDiscriminator: fn(10014).canEditDiscriminator,
-  hasBoostDiscount: fn(10014).hasBoostDiscount,
-  canUseAnimatedAvatar: fn(10014).canUseAnimatedAvatar,
-  canInstallPremiumApplications: fn(10014).canInstallPremiumApplications,
-  canUseIncreasedMessageLength: fn(10014).canUseIncreasedMessageLength,
-  canUseIncreasedGuildCap: fn(10014).canUseIncreasedGuildCap,
-  canRedeemPremiumPerks: fn(10014).canRedeemPremiumPerks,
-  canUsePremiumProfileCustomization: fn(10014).canUsePremiumProfileCustomization,
-  canUsePremiumAppIcons: fn(10014).canUsePremiumAppIcons,
-  canUsePremiumGuildMemberProfile: fn(10014).canUsePremiumGuildMemberProfile,
-  canUseClientThemes: fn(10014).canUseClientThemes,
-  canStreamQuality: fn(10014).canStreamQuality,
-  canUseQuestOrbMultiplier: fn(10014).canUseQuestOrbMultiplier,
-  hasFreeBoosts: fn(10014).hasFreeBoosts,
-  canUseCustomStickersEverywhere: fn(10014).canUseCustomStickersEverywhere,
-  canUseCustomBackgrounds: fn(10014).canUseCustomBackgrounds,
-  canUseCollectibles: fn(10014).canUseCollectibles,
-  canUseMonthlyOrbs: fn(10014).canUseMonthlyOrbs,
-  canUseShopDiscounts: fn(10014).canUseShopDiscounts,
-  canUseMoreQuestOrbs: fn(10014).canUseMoreQuestOrbs,
+  canUseAnimatedEmojis: fn(10081).canUseAnimatedEmojis,
+  canUseEmojisEverywhere: fn(10081).canUseEmojisEverywhere,
+  canUseSoundboardEverywhere: fn(10081).canUseSoundboardEverywhere,
+  canUseCustomCallSounds: fn(10081).canUseCustomCallSounds,
+  canUploadLargeFiles: fn(10081).canUploadLargeFiles,
+  canUseBadges: fn(10081).canUseBadges,
+  canUseHighVideoUploadQuality: fn(10081).canUseHighVideoUploadQuality,
+  canEditDiscriminator: fn(10081).canEditDiscriminator,
+  hasBoostDiscount: fn(10081).hasBoostDiscount,
+  canUseAnimatedAvatar: fn(10081).canUseAnimatedAvatar,
+  canInstallPremiumApplications: fn(10081).canInstallPremiumApplications,
+  canUseIncreasedMessageLength: fn(10081).canUseIncreasedMessageLength,
+  canUseIncreasedGuildCap: fn(10081).canUseIncreasedGuildCap,
+  canRedeemPremiumPerks: fn(10081).canRedeemPremiumPerks,
+  canUsePremiumProfileCustomization: fn(10081).canUsePremiumProfileCustomization,
+  canUsePremiumAppIcons: fn(10081).canUsePremiumAppIcons,
+  canUsePremiumGuildMemberProfile: fn(10081).canUsePremiumGuildMemberProfile,
+  canUseClientThemes: fn(10081).canUseClientThemes,
+  canStreamQuality: fn(10081).canStreamQuality,
+  canUseQuestOrbMultiplier: fn(10081).canUseQuestOrbMultiplier,
+  hasFreeBoosts: fn(10081).hasFreeBoosts,
+  canUseCustomStickersEverywhere: fn(10081).canUseCustomStickersEverywhere,
+  canUseCustomBackgrounds: fn(10081).canUseCustomBackgrounds,
+  canUseCollectibles: fn(10081).canUseCollectibles,
+  canUseMonthlyOrbs: fn(10081).canUseMonthlyOrbs,
+  canUseShopDiscounts: fn(10081).canUseShopDiscounts,
+  canUseMoreQuestOrbs: fn(10081).canUseMoreQuestOrbs,
   formatPriceString,
-  StreamQuality: fn(10014).StreamQuality,
+  StreamQuality: fn(10081).StreamQuality,
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/PremiumUtils.tsx");
@@ -3458,12 +3458,12 @@ export function getPremiumTypeFromPlanId(arg0) {
 export function isNitroLockedState(arg0) {
   return "isNitroLocked" in arg0;
 }
-export const isPremiumAtLeast = fn(2107).isPremiumAtLeast;
-export const isPremiumAtMost = fn(2107).isPremiumAtMost;
-export const isPremium = fn(2107).isPremium;
-export const isPremiumExactly = fn(2107).isPremiumExactly;
-export const getMaxFileSizeForPremiumType = fn(10014).getMaxFileSizeForPremiumType;
-export const StreamQuality = fn(10014).StreamQuality;
+export const isPremiumAtLeast = fn(2110).isPremiumAtLeast;
+export const isPremiumAtMost = fn(2110).isPremiumAtMost;
+export const isPremium = fn(2110).isPremium;
+export const isPremiumExactly = fn(2110).isPremiumExactly;
+export const getMaxFileSizeForPremiumType = fn(10081).getMaxFileSizeForPremiumType;
+export const StreamQuality = fn(10081).StreamQuality;
 export function useHasTier2Premium() {
   items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());

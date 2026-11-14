@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { card: { gap: nativeDefault.space.PX_4 }, line: null };
 let obj3 = { gap: nativeDefault.space.PX_4 };
 obj2.line = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -33,7 +33,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
   let obj = { variant: "secondary", border: "subtle", style: tmp.card, children: null };
   let obj2 = { style: tmp.line, children: null };
   const items1 = [
-    closure_6(metricKey(5866).Text, { variant: "body-md/medium", color: "text-subtle", children: title }),
+    closure_6(metricKey(5929).Text, { variant: "body-md/medium", color: "text-subtle", children: title }),
   ];
   let tmp7Result = null;
   if (null != description) {
@@ -45,7 +45,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       children: null,
     };
     const obj4 = { size: "xs", color: description(575).colors.INTERACTIVE_ICON_DEFAULT };
-    obj3.children = closure_6(tmp4(5974).CircleInformationIcon, obj4);
+    obj3.children = closure_6(tmp4(6037).CircleInformationIcon, obj4);
     tmp7Result = closure_6(closure_4, obj3);
   }
   items1[1] = tmp7Result;
@@ -61,7 +61,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
     localizedNumber = intl.string(tmp4(1113).t.jHpxwo);
   }
   obj5.children = localizedNumber;
-  items2[1] = closure_6(metricKey(5866).Text, obj5);
+  items2[1] = closure_6(metricKey(5929).Text, obj5);
   let tmp3Result = null;
   if (null != subtext) {
     const obj6 = { style: tmp.line, children: null };
@@ -75,7 +75,7 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       };
       const intl2 = tmp4(1113).intl;
       obj7.accessibilityLabel = intl2.string(tmp4(1113).t["8mcccd"]);
-      tmp7Result3 = closure_6(tmp4(12261).ArrowLargeUpIcon, obj7);
+      tmp7Result3 = closure_6(tmp4(12356).ArrowLargeUpIcon, obj7);
     }
     const items3 = [tmp7Result3, ,];
     let tmp7Result4 = null;
@@ -88,15 +88,15 @@ export default function GuildSettingsAnalyticsCard(metricKey) {
       };
       const intl3 = tmp4(1113).intl;
       obj8.accessibilityLabel = intl3.string(tmp4(1113).t.NLl6Q3);
-      tmp7Result4 = closure_6(tmp4(20495).ArrowLargeDownIcon, obj8);
+      tmp7Result4 = closure_6(tmp4(20650).ArrowLargeDownIcon, obj8);
     }
     items3[1] = tmp7Result4;
     const obj9 = { variant: "body-xs/normal", color: "text-subtle", children: subtext };
-    items3[2] = closure_6(tmp4(5866).Text, obj9);
+    items3[2] = closure_6(tmp4(5929).Text, obj9);
     obj6.children = items3;
     tmp3Result = closure_7(closure_5, obj6);
   }
   items2[2] = tmp3Result;
   obj.children = items2;
-  return closure_7(metricKey(7381).Card, obj);
+  return closure_7(metricKey(7445).Card, obj);
 }

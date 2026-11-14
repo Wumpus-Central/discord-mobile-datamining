@@ -52,7 +52,7 @@ export default function CheckpointCountUpStatNumber(start) {
     }
   }, items1);
   const tmp4 = _slicedToArray(closure_6(num), 2);
-  const result = size(14383).formatCheckpointStatNumber(end);
+  const result = size(14506).formatCheckpointStatNumber(end);
   importDefault = result;
   const items2 = [result, size];
   const obj2 = {
@@ -63,8 +63,8 @@ export default function CheckpointCountUpStatNumber(start) {
     children: null,
   };
   const obj3 = { value: null, size: null };
-  const tmpResult = size(14383);
-  obj3.value = size(14383).formatCheckpointStatNumber(end);
+  const tmpResult = size(14506);
+  obj3.value = size(14506).formatCheckpointStatNumber(end);
   obj3.size = size;
   obj2.children = <tmp8 value={null} size={null} />;
   return (

@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriendsHeader.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _mod1652 from "../../../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../../../_runtime/metro/01655__.js";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import ThemedGradientDefault from "../../../../../client_themes/native/ThemedGradient.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -11,8 +11,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const sum = fn(5866).TextStyleSheet["body-md/semibold"].lineHeight + nativeDefault.space.PX_24;
-const createStyles = fn(5243);
+const sum = fn(5929).TextStyleSheet["body-md/semibold"].lineHeight + nativeDefault.space.PX_24;
+const createStyles = fn(5306);
 let obj = {
   headerContainer: { height: sum, justifyContent: "center", overflow: "hidden" },
   stickyOverlay: null,
@@ -56,7 +56,7 @@ export default noop.memo(function MessagesItemSuggestedFriendsHeader(stickyLeft)
   MessagesItemSuggestedFriendsHeaderTsx1.__closure = items1;
   MessagesItemSuggestedFriendsHeaderTsx1.__workletHash = 9510203774773;
   MessagesItemSuggestedFriendsHeaderTsx1.__initData = tmp4;
-  const derivedValue = _mod1652.useDerivedValue(MessagesItemSuggestedFriendsHeaderTsx1);
+  const derivedValue = _mod1655.useDerivedValue(MessagesItemSuggestedFriendsHeaderTsx1);
   const items2 = [stickyLeft, stickyTop];
   const obj2 = { style: tmp.headerContainer, collapsable: false, children: null };
   let tmp11Result = null;

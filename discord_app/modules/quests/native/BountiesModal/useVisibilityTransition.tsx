@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/BountiesModal/useVisibilityTransition.tsx
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -42,7 +42,7 @@ export function useVisibilityTransition(visible) {
     entranceTiming,
     exitTiming,
     closure_4,
-    _mod1705.scheduleOnRN,
+    _mod1708.scheduleOnRN,
     callback,
   ];
   c0 = undefined;
@@ -72,7 +72,7 @@ export function useVisibilityTransition(visible) {
   useVisibilityTransitionTsx2.__closure = items1;
   useVisibilityTransitionTsx2.__workletHash = 9776140762994;
   useVisibilityTransitionTsx2.__initData = tmp7;
-  const obj3 = { opacityStyle: _mod1652.useAnimatedStyle(useVisibilityTransitionTsx2), shouldRender: null };
+  const obj3 = { opacityStyle: _mod1655.useAnimatedStyle(useVisibilityTransitionTsx2), shouldRender: null };
   if (!visible) {
     visible = tmp[0];
   }

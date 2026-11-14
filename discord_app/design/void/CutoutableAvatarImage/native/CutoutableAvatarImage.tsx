@@ -1,9 +1,9 @@
 // discord_app/design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx
 import LoggerDefault from "../../../../modules/debug/Logger.tsx";
 import discord_common_shallowEqualDefault from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import v1 from "../../../../../_runtime/01266_v1.js";
+import v1 from "../../../../../_runtime/01269_v1.js";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ClipView from "../../../components/Icon/native/ClipView.tsx";
@@ -13,8 +13,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ClipViewDefault = ClipView;
 
-const inlineStyles = Circle(8197);
-const inlineStylesDefault = tmp9(8197);
+const inlineStyles = Circle(8263);
+const inlineStylesDefault = tmp9(8263);
 require = fn;
 function StaticNativeCutoutAvatarImage(cutout) {
   cutout = cutout.cutout;
@@ -75,7 +75,7 @@ function AnimatedNativeCutoutAvatarImage(arg0) {
   CutoutableAvatarImageTsx1.__closure = items1;
   CutoutableAvatarImageTsx1.__workletHash = 1467452427852;
   CutoutableAvatarImageTsx1.__initData = tmp3;
-  const animatedProps = _mod1652.useAnimatedProps(CutoutableAvatarImageTsx1);
+  const animatedProps = _mod1655.useAnimatedProps(CutoutableAvatarImageTsx1);
   obj2 = { style, animatedProps, children: null };
   const obj3 = { style: null, source: getReactNativeSVGImageSourceDefault(source), usesSmallCache: true };
   const items2 = [obj2.image, imageStyle];
@@ -203,7 +203,7 @@ function CutoutAvatarImage(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHANNEL_SPRING_CONFIG = fn(15633).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(15747).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const logger = new LoggerDefault("UIKit - AvatarImage");

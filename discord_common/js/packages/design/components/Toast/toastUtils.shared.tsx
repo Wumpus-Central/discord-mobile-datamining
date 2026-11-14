@@ -1,11 +1,11 @@
 // discord_common/js/packages/design/components/Toast/toastUtils.shared.tsx
-import 05254__ from "../../../../../../_runtime/metro/05254__.js";
+import 05317__ from "../../../../../../_runtime/metro/05317__.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
 let c2 = 1;
-const useToastStore = module_5254.create(() => {
+const useToastStore = module_5317.create(() => {
   const obj = { currentToastMap: new Map(), queuedToastsMap: null };
   const map = new Map();
   obj.queuedToastsMap = new Map();
@@ -68,7 +68,7 @@ export function popToast(arg0) {
   if (arg0 === undefined) {
     str = "app";
   }
-  str(1259).batchUpdates(() => {
+  str(1263).batchUpdates(() => {
     obj.setState((queuedToastsMap) => {
       queuedToastsMap = queuedToastsMap.queuedToastsMap;
       items = queuedToastsMap.get(str);

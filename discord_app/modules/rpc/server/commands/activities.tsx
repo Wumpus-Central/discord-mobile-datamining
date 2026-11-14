@@ -7,20 +7,20 @@ require = fn;
 const Constants = fn(1072);
 ({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(16799);
+let CONTEXT_MENU_ICON_NAMES = fn(16922);
 obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS,
   {
-    scope: fn(16798).activityInstanceConnectedParticipantsScope,
+    scope: fn(16921).activityInstanceConnectedParticipantsScope,
     handler(socket) {
       const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
       return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
     },
   },
 );
-CONTEXT_MENU_ICON_NAMES = fn(16799);
+CONTEXT_MENU_ICON_NAMES = fn(16922);
 let obj3 = {
-  scope: fn(16798).activityInstanceConnectedParticipantsScope,
+  scope: fn(16921).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
@@ -29,7 +29,7 @@ let obj3 = {
 obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
   RPCCommands.REQUEST_PROXY_TICKET_REFRESH,
   {
-    scope: fn(16798).activityInstanceConnectedParticipantsScope,
+    scope: fn(16921).activityInstanceConnectedParticipantsScope,
     handler(socket) {
       socket = socket.socket;
       return (async () => {

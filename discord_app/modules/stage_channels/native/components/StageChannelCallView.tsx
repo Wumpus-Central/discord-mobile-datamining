@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/components/StageChannelCallView.tsx
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import FocusedControls from "../../../video_calls/native/components/FocusedControls.tsx";
 import StageChannelAnimationUtils from "StageChannelAnimationUtils.tsx";
@@ -20,12 +20,12 @@ function StageChannelCallBackground(arg0) {
   const obj3 = { style: null, children };
   items = [tmp.container, stageActionBarAnimation];
   obj3.style = items;
-  obj2.children = React3(_modDef1652.View, obj3);
+  obj2.children = React3(_modDef1655.View, obj3);
   return React3(StageChannelBackgroundDefault, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_6 = createStyles.createStyles({ container: { flex: 1, paddingHorizontal: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallView.tsx");

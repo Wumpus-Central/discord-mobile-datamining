@@ -10,13 +10,13 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(12311);
+const SettingBuilders = fn(12406);
 const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.pEAl4b);
   },
-  parent: fn(9135).MobileUserSettings.VOICE,
+  parent: fn(9202).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useStreamVolumeSettingValue() {
     items = [ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];
@@ -68,7 +68,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
           }
         }
         return null != tmp2;
-      }) && obj.getConfig({ location: "StreamOutputVolumeSetting" }).audioOutputPresent
+      }) && obj.useConfig({ location: "StreamOutputVolumeSetting" }).audioOutputPresent
     );
   },
   useSearchTerms() {

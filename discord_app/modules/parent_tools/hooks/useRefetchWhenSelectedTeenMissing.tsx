@@ -49,31 +49,29 @@ export default function useRefetchWhenSelectedTeenMissing() {
       return applyArgumentsResult;
     };
     if (hasActiveLinks) {
-      let current = !isInitialized;
-      if (isInitialized) {
-        current = FamilyCenterStore.isLoading();
+      if (null == selectedTeenId) {
+        let current = !isInitialized;
+        if (isInitialized) {
+          current = FamilyCenterStore.isLoading();
+        }
+        if (!current) {
+          current = ref.current;
+        }
+        if (!current) {
+          ref.current = true;
+          (function refetch() {
+            const self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          })();
+        }
       }
-      if (!current) {
-        current = null != selectedTeenId;
-      }
-      if (!current) {
-        current = ref.current;
-      }
-      if (!current) {
-        ref.current = true;
-        (function refetch() {
-          const self = this;
-          const apply = closure_0.apply;
-          if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-          } else {
-            applyArgumentsResult = apply(self, arguments);
-          }
-          return applyArgumentsResult;
-        })();
-      }
-    } else {
-      ref.current = false;
     }
+    ref.current = false;
   }, items1);
 }

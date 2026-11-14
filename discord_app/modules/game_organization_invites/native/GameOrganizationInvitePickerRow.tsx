@@ -1,13 +1,13 @@
 // discord_app/modules/game_organization_invites/native/GameOrganizationInvitePickerRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2549 from "../GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2565 from "../GameOrganizationInvitesUntranslated.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import GroupIcon from "../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import _modDef7862 from "../../../../_runtime/metro/07862__.js";
+import _modDef7928 from "../../../../_runtime/metro/07928__.js";
 import getGameOrganizationInviteSendStateKey from "../getGameOrganizationInviteSendStateKey.tsx";
 import InviteButtonDefault from "../../instant_invite/native/components/InviteButton.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -15,11 +15,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSendStateKey;
 
 require = fn;
-let closure_4 = fn(12469).useInstantInviteSendStates;
-const InviteSendStates = fn(8775).InviteSendStates;
+let closure_4 = fn(12565).useInstantInviteSendStates;
+const InviteSendStates = fn(8842).InviteSendStates;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { icon: null };
 let size = {
   width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
@@ -56,7 +56,7 @@ export default noop.memo(function GameOrganizationInvitePickerRow(organization) 
     const obj2 = { uri: organization.iconUrl };
     let tmp2Result = obj2;
   } else {
-    tmp2Result = _modDef7862;
+    tmp2Result = _modDef7928;
   }
   const obj3 = {
     icon: timestampProducer(FastImageDefault, { source: tmp2Result, style: tmp.icon }),
@@ -75,7 +75,7 @@ export default noop.memo(function GameOrganizationInvitePickerRow(organization) 
       const obj7 = { variant: "body-xs/medium", color: "text-muted", children: null };
       const intl = util.intl;
       const obj8 = { count: memberCount, max: maxMembers };
-      obj7.children = intl.formatToPlainString(_modDef2549.VuENGl, obj8);
+      obj7.children = intl.formatToPlainString(_modDef2565.VuENGl, obj8);
       items1[1] = timestampProducer(Text_Text.Text, obj7);
       obj5.children = items1;
       tmp11 = metroImportDefault(Stack_Stack.Stack, obj5);

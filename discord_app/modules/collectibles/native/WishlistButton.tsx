@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/WishlistButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef1652 from "../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../_runtime/metro/01655__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import CollectiblesWishlistUtils from "../../wishlists/CollectiblesWishlistUtils.tsx";
@@ -127,7 +127,7 @@ class WishlistButtonBase {
         let result = sharedValue.set(0);
         const _requestAnimationFrame = requestAnimationFrame;
         closure_0 = requestAnimationFrame(() => {
-          items = [closure_2_18, c0(1705).scheduleOnRN, closure_1_12];
+          items = [closure_2_18, c0(1708).scheduleOnRN, closure_1_12];
           c0 = undefined;
           c1 = undefined;
           [tmp3, tmp4, tmp5] = items;
@@ -146,8 +146,8 @@ class WishlistButtonBase {
           WishlistButtonTsx1.__closure = items1;
           WishlistButtonTsx1.__workletHash = 12515096529687;
           WishlistButtonTsx1.__initData = tmp3;
-          const result = sharedValue.set(c0(5485).withTiming(1, obj, "animate-always", WishlistButtonTsx1));
-          obj = c0(5485);
+          const result = sharedValue.set(c0(5548).withTiming(1, obj, "animate-always", WishlistButtonTsx1));
+          obj = c0(5548);
         });
         return () => cancelAnimationFrame(closure_0);
       }
@@ -454,11 +454,11 @@ const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = { duration: 400, easing: null };
-const Easing = fn(1652).Easing;
+const Easing = fn(1655).Easing;
 obj.easing = Easing.bezier(0.67, 0, 0.26, 1);
-let obj2 = { sm: fn(5879).SMALL_BUTTON_HEIGHT, md: fn(5879).MEDIUM_BUTTON_HEIGHT };
+let obj2 = { sm: fn(5942).SMALL_BUTTON_HEIGHT, md: fn(5942).MEDIUM_BUTTON_HEIGHT };
 let value = { sm: "sm", md: "md" };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_17 = createStyles.createStyles((arg0) => {
   obj = {
     button: null,

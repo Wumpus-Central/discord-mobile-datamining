@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/chat/native/ConjureMentionSuggestions.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef4131 from "../../intl/ConjureUntranslated.messages.js";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { fileThumbnail: null };
 let size = {
   width: nativeDefault.space.PX_24,
@@ -33,7 +33,7 @@ export default function ConjureMentionSuggestions(arg0) {
     if (found.length > 0) {
       let obj = { title: null, hasIcons: true, children: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef4079.Vb3sUg);
+      obj.title = intl.string(_modDef4131.Vb3sUg);
       obj.children = found.map((user) => {
         closure_0 = user;
         const obj = {
@@ -61,7 +61,7 @@ export default function ConjureMentionSuggestions(arg0) {
     if (found1.length > 0) {
       let obj2 = { title: null, hasIcons: true, children: null };
       const intl2 = util.intl;
-      obj2.title = intl2.string(_modDef4079.zA5KLM);
+      obj2.title = intl2.string(_modDef4131.zA5KLM);
       obj2.children = found1.map((file) => {
         projectId = file;
         const obj = {

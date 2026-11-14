@@ -2,15 +2,15 @@
 import updateSharedValueIfChangedDefault from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore.tsx";
 
-const module_1652 = fn(1652);
+const module_1655 = fn(1655);
 const obj2 = { customKeyboardHeight: null, keyboardHeight: null, keyboardType: null };
-const useCustomKeyboardHeight = fn(5851);
+const useCustomKeyboardHeight = fn(5914);
 obj2.customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();
-const useSystemKeyboardHeight = fn(2020);
+const useSystemKeyboardHeight = fn(2023);
 obj2.keyboardHeight = useSystemKeyboardHeight.getSystemKeyboardHeight();
-const useKeyboardType = fn(5440);
+const useKeyboardType = fn(5503);
 obj2.keyboardType = useKeyboardType.getKeyboardType();
-const mutable = module_1652.makeMutable(obj2);
+const mutable = module_1655.makeMutable(obj2);
 subscribeToKeyboardUIStore((arg0) => {
   ({ customKeyboardHeight, keyboardHeight, keyboardType } = arg0);
   updateSharedValueIfChangedDefault(mutable, { customKeyboardHeight, keyboardHeight, keyboardType });

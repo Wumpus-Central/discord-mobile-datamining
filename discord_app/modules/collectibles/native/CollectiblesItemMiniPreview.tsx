@@ -6,20 +6,20 @@ import ProfileEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import NameplateDefault from "../nameplates/native/Nameplate.tsx";
 import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import _modDef9446 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef9513 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(8424).isAvatarDecorationRecord;
-const isNameplateRecord = fn(2109).isNameplateRecord;
-const isProfileEffectRecord = fn(8425).isProfileEffectRecord;
-const isProfileFrameRecord = fn(8426).isProfileFrameRecord;
-let closure_8 = fn(8518).PROFILE_FRAME_ASPECT_RATIO;
+const isAvatarDecorationRecord = fn(8490).isAvatarDecorationRecord;
+const isNameplateRecord = fn(2112).isNameplateRecord;
+const isProfileEffectRecord = fn(8491).isProfileEffectRecord;
+const isProfileFrameRecord = fn(8492).isProfileFrameRecord;
+let closure_8 = fn(8584).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj = {
   tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" },
   framePreview: {
@@ -38,7 +38,7 @@ const obj = {
 };
 let size = { overflow: "hidden", width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
 obj.profileEffect = size;
-obj.sampleProfile = { aspectRatio: fn(9421).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(9490).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj.nameplate = {
   overflow: "hidden",
   borderTopRightRadius: nativeDefault.radii.xs,
@@ -80,7 +80,7 @@ export default noop.memo(function CollectiblesItemMiniPreview(arg0) {
     const obj7 = { style: items, children: null };
     const obj8 = { style: tmp.profileEffect, accessible: false, importantForAccessibility: "no", children: null };
     const obj9 = { source: null, style: null, resizeMode: "cover" };
-    const obj10 = { uri: _modDef9446 };
+    const obj10 = { uri: _modDef9513 };
     obj9.source = obj10;
     obj9.style = tmp.sampleProfile;
     const items1 = [React6(FastImageDefault, obj9)];

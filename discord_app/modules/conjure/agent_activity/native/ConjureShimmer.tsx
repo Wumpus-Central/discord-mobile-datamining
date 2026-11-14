@@ -1,15 +1,15 @@
 // discord_app/modules/conjure/agent_activity/native/ConjureShimmer.tsx
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
-import _modDef7467 from "../../../../../_runtime/metro/07467__.js";
+import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
+import _modDef7533 from "../../../../../_runtime/metro/07533__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -19,7 +19,7 @@ const jsxProd = fn(21);
 const locations = [0, 0.4, 0.5, 0.6, 1];
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_13 = createStyles.createStyles({
   root: { position: "relative" },
   band: { position: "absolute", top: 0, bottom: 0 },
@@ -47,7 +47,7 @@ export default function ConjureShimmer(epoch) {
   const tmp2 = _require;
   [tmp6, c1] = live(noop.useState(0), 2);
   const tmp5 = live(noop.useState(0), 2);
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   dependencyMap = sharedValue;
   if (live) {
     live = !stateFromStores;
@@ -59,12 +59,12 @@ export default function ConjureShimmer(epoch) {
   const effect = noop.useEffect(() => {
     if (live) {
       const result = _undefined2.set(0);
-      const obj2 = _mod1652;
-      const obj4 = { duration: 2000, easing: _mod1652.Easing.linear };
+      const obj2 = _mod1655;
+      const obj4 = { duration: 2000, easing: _mod1655.Easing.linear };
       const result1 = _undefined2.set(obj2.withRepeat(timing_timing.withTiming(1, obj4), -1, false));
       const fn = () => c0(c2[7]).cancelAnimation(_undefined2);
     } else {
-      _mod1652.cancelAnimation(_undefined2);
+      _mod1655.cancelAnimation(_undefined2);
       const result2 = _undefined2.set(0);
     }
     return fn;
@@ -81,7 +81,7 @@ export default function ConjureShimmer(epoch) {
     items[4] = cssResult;
     return items;
   }, items2);
-  let obj3 = require("../../../../../_runtime/metro/01652__.js");
+  let obj3 = require("../../../../../_runtime/metro/01655__.js");
   const items3 = [closure_14, result, sharedValue, tmp6];
   _require = undefined;
   importDefault = undefined;
@@ -103,7 +103,7 @@ export default function ConjureShimmer(epoch) {
   ConjureShimmerTsx1.__closure = items4;
   ConjureShimmerTsx1.__workletHash = 6512928925171;
   ConjureShimmerTsx1.__initData = tmp11;
-  const animatedStyle = tmp2(1652).useAnimatedStyle(ConjureShimmerTsx1);
+  const animatedStyle = tmp2(1655).useAnimatedStyle(ConjureShimmerTsx1);
   let obj4 = {
     style: tmp.root,
     onLayout: noop.useCallback((nativeEvent) => {
@@ -139,8 +139,8 @@ export default function ConjureShimmer(epoch) {
     obj8.style = items6;
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
     obj8.children = closure_8(LinearGradientDefault, obj10);
-    obj6.children = closure_8(_modDef1652.View, obj8);
-    obj5.children = closure_8(_modDef7467, obj6);
+    obj6.children = closure_8(_modDef1655.View, obj8);
+    obj5.children = closure_8(_modDef7533, obj6);
     tmp18 = closure_8(closure_6, obj5);
   }
   items5[1] = tmp18;

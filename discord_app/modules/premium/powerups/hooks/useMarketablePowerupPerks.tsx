@@ -6,12 +6,12 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5461);
+const GuildPowerupsConstants = fn(5524);
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
 let items = [
   ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET),
   ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET),
-  fn(5464).VANITY_URL_POWERUP_SKU_ID,
+  fn(5527).VANITY_URL_POWERUP_SKU_ID,
 ];
 let set = new Set(items);
 const size = fn(2);
@@ -31,7 +31,7 @@ export default function useMarketablePowerupPerks(guildId) {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(10718)(guildId);
+  let tmp2 = stateFromStores(10787)(guildId);
   dependencyMap = tmp2;
   const obj = require("initialize");
   const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(

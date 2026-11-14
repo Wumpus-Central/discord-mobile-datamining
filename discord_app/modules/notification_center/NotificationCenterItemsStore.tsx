@@ -201,7 +201,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6966).isGuildEventEnded;
+const isGuildEventEnded = fn(7029).isGuildEventEnded;
 const RelationshipTypes = fn(1072).RelationshipTypes;
 let obj = {
   loading: false,
@@ -213,9 +213,9 @@ let obj = {
   notifCenterIds: new Set(),
   notifCenterLocalItems: [],
   paginationHasMore: true,
-  paginationCursor: "PX_8",
-  notifCenterActive: 175,
-  notifCenterTabFocused: null,
+  paginationCursor: "Promise",
+  notifCenterActive: "paddingVertical",
+  notifCenterTabFocused: true,
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -397,9 +397,9 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterIds: new Set(),
       notifCenterLocalItems: null,
       paginationHasMore: true,
-      paginationCursor: "PX_8",
-      notifCenterActive: 175,
-      notifCenterTabFocused: null,
+      paginationCursor: "Promise",
+      notifCenterActive: "paddingVertical",
+      notifCenterTabFocused: true,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -539,9 +539,9 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterIds: new Set(),
       notifCenterLocalItems: null,
       paginationHasMore: true,
-      paginationCursor: "PX_8",
-      notifCenterActive: 175,
-      notifCenterTabFocused: null,
+      paginationCursor: "Promise",
+      notifCenterActive: "paddingVertical",
+      notifCenterTabFocused: true,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -599,7 +599,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         items = [];
-        obj = id(6971);
+        obj = id(7034);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,
@@ -710,9 +710,9 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterIds: new Set(),
       notifCenterLocalItems: null,
       paginationHasMore: true,
-      paginationCursor: "PX_8",
-      notifCenterActive: 175,
-      notifCenterTabFocused: null,
+      paginationCursor: "Promise",
+      notifCenterActive: "paddingVertical",
+      notifCenterTabFocused: true,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

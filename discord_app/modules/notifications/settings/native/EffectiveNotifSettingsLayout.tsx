@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/settings/native/EffectiveNotifSettingsLayout.tsx
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3013 from "../../NotificationSettings.messages.js";
+import _modDef3029 from "../../NotificationSettings.messages.js";
 import EffectiveNotifSettingsActionCreators from "../EffectiveNotifSettingsActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserSettingsProtoStore from "../../../user_settings/UserSettingsProtoStore.tsx";
@@ -38,7 +38,7 @@ function EffectiveSettingsHeader() {
     let obj3 = { type: str, role: "status", message: null, action: null };
     let intl = loading(1113).intl;
     let string = intl.string;
-    const tmp12 = _modDef3013;
+    const tmp12 = _modDef3029;
     obj3.message = string(loading ? tmp12.Ns127F : tmp12.Nu2TMI);
     const obj4 = { text: null, onPress: null, loading: null };
     intl = loading(1113).intl;
@@ -48,15 +48,15 @@ function EffectiveSettingsHeader() {
     obj4.onPress = callback;
     obj4.loading = loading;
     obj3.action = obj4;
-    obj3 = closure_7(loading(8094).InlineNotice, obj3);
+    obj3 = closure_7(loading(8159).InlineNotice, obj3);
     obj.children = obj3;
-    closure_7(loading(6274).Stack, obj);
+    closure_7(loading(6337).Stack, obj);
   }
   tmp = closure_10();
 }
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { notice: { paddingTop: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj);
 const redux = noop.createContext({ unavailable: false, loading: false });

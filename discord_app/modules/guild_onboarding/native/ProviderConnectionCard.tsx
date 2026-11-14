@@ -70,8 +70,8 @@ export default function ProviderConnectionCard(connection) {
                 return obj3;
               } else {
                 const obj4 = {};
-                const obj5 = v3(1252);
-                const merged = Object.assign(provider_id(6004).collectGuildAnalyticsMetadata(guildId));
+                const obj5 = v3(1256);
+                const merged = Object.assign(provider_id(6067).collectGuildAnalyticsMetadata(guildId));
                 obj4.connection_type = "provider";
                 provider_id = connection.provider_id;
                 if (provider_id == null) {

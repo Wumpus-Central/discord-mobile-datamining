@@ -71,7 +71,7 @@ let closure_11 = async function _performSuggestedSearchesFetch(arg0) {
           closure_132_8 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -236,7 +236,7 @@ let closure_12 = async function _fetchInitialSuggestedSearches(arg0) {
     }
   }
 };
-const SmartSearchConstants = fn(14629);
+const SmartSearchConstants = fn(14742);
 ({
   SUGGESTED_SEARCHES_REQUEST_LIMIT: hasOwnProperty,
   SUGGESTED_SEARCHES_RETRY_MIN_MS,

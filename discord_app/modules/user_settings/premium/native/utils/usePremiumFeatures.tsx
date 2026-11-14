@@ -2,7 +2,7 @@
 import util from "../../../../../intl/index.native.tsx";
 import user from "../../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
-import _modDef3465 from "../../../../premium/premium_group/PremiumGroup.messages.js";
+import _modDef3513 from "../../../../premium/premium_group/PremiumGroup.messages.js";
 import FriendsIcon from "../../../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
 import ScreenStreamIcon from "../../../../../design/components/Icon/native/redesign/generated/ScreenStreamIcon.tsx";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
@@ -16,9 +16,9 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
-const TOTAL_PREMIUM_GROUP_USERS = fn(2184).TOTAL_PREMIUM_GROUP_USERS;
+const TOTAL_PREMIUM_GROUP_USERS = fn(2187).TOTAL_PREMIUM_GROUP_USERS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/utils/usePremiumFeatures.tsx");
 
@@ -42,7 +42,7 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: false,
     };
     const intl = util.intl;
-    obj.label = intl.formatToPlainString(_modDef3465.gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
+    obj.label = intl.formatToPlainString(_modDef3513.gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
     items = [hasOwnProperty.TIER_2];
     obj.premiumTypes = new Set(items);
     const items1 = [user.PremiumSubscriptionGroupRole.PRIMARY];
@@ -56,7 +56,7 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: false,
     };
     const intl2 = util.intl;
-    obj3.label = intl2.string(_modDef3465["G6K/+s"]);
+    obj3.label = intl2.string(_modDef3513["G6K/+s"]);
     const items3 = [hasOwnProperty.TIER_2];
     const obj2 = { totalSeats: TOTAL_PREMIUM_GROUP_USERS };
     const set = new Set(items);
@@ -163,7 +163,7 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: false,
     };
     const intl8 = util.intl;
-    obj11.label = intl8.formatToPlainString(_modDef3465.HVCRVf, { numBoosts });
+    obj11.label = intl8.formatToPlainString(_modDef3513.HVCRVf, { numBoosts });
     const items15 = [hasOwnProperty.TIER_2];
     const obj12 = { numBoosts };
     const set6 = new Set(items13);

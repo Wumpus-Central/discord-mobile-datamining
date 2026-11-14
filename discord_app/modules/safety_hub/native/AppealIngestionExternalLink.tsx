@@ -4,14 +4,14 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _mod12007 from "../../../../_runtime/metro/12007__.js";
+import _mod12074 from "../../../../_runtime/metro/12074__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   childButton: { marginBottom: 8, borderRadius: nativeDefault.radii.xs },
   childContainer: null,
@@ -69,7 +69,7 @@ export default function AppealIngestionExternalLink(children) {
       color: "mobile-text-heading-primary",
       children: children.text,
     }),
-    closure_4(native.Icon, { source: _mod12007, color: tmp.chevron.color }),
+    closure_4(native.Icon, { source: _mod12074, color: tmp.chevron.color }),
   ];
   obj2.children = items;
   obj.children = closure_5(View, obj2);

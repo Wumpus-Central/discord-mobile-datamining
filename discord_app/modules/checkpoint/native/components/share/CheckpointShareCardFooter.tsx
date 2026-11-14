@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import inlineStyles from "../../../../../../_runtime/08197_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/08263_inlineStyles.js";
 import CheckpointShareCardContext from "CheckpointShareCardContext.tsx";
 import ArrowLargeRightIcon from "../../../../../design/components/Icon/native/redesign/generated/ArrowLargeRightIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let size = { width: 145, height: 28 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   footer: null,
   portraitFooter: null,

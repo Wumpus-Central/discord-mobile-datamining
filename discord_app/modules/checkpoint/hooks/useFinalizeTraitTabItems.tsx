@@ -6,7 +6,7 @@ import CheckpointStore from "../CheckpointStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let items = [fn(6681).CheckpointCustomizationOption.BASE, fn(6681).CheckpointCustomizationOption.OUTFIT_COLOR];
+let items = [fn(6744).CheckpointCustomizationOption.BASE, fn(6744).CheckpointCustomizationOption.OUTFIT_COLOR];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/hooks/useFinalizeTraitTabItems.tsx");
 

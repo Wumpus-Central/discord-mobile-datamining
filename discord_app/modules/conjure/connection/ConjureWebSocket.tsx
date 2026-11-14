@@ -70,6 +70,19 @@ prototype["sendPublishScheduleMessage"] = function sendPublishScheduleMessage(ma
   const error = new Error("WebSocket not open");
   throw error;
 };
+prototype["sendPublishEval"] = function sendPublishEval(arg0) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      socket.send(JSON.stringify(arg0));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
 prototype["sendUserMessage"] = function sendUserMessage(content, nonce, attachment_ids) {
   const self = this;
   if (null != this.socket) {

@@ -23,9 +23,9 @@ function isStreamRequestActivity(platform) {
   return tmp;
 }
 let items = [
-  fn(7406).ActivityGamePlatforms.XBOX,
-  fn(7406).ActivityGamePlatforms.PLAYSTATION_4,
-  fn(7406).ActivityGamePlatforms.PLAYSTATION_5,
+  fn(7472).ActivityGamePlatforms.XBOX,
+  fn(7472).ActivityGamePlatforms.PLAYSTATION_4,
+  fn(7472).ActivityGamePlatforms.PLAYSTATION_5,
 ];
 const set = new Set(items);
 const size = fn(2);

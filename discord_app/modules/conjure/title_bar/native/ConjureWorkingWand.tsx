@@ -1,15 +1,15 @@
 // discord_app/modules/conjure/title_bar/native/ConjureWorkingWand.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import inlineStyles from "../../../../../_runtime/08197_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08263_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 const require = globalThis.__r;
 const inlineStylesDefault = inlineStyles;
-const module_1652 = _mod1652;
+const module_1655 = _mod1655;
 
 require = fn;
 function WandPart(fill) {
@@ -37,7 +37,7 @@ function WandPart(fill) {
   ConjureWorkingWandTsx2.__closure = items1;
   ConjureWorkingWandTsx2.__workletHash = 15414694029355;
   ConjureWorkingWandTsx2.__initData = tmp4;
-  const animatedProps = _mod1652.useAnimatedProps(ConjureWorkingWandTsx2);
+  const animatedProps = _mod1655.useAnimatedProps(ConjureWorkingWandTsx2);
   const size1 = { width: size, height: size, viewBox: "0 0 24 24", children: null };
   const items2 = [metroImportDefault(inlineStyles.Path, { d: path, fill: fill.color })];
   let tmp8Result = null;
@@ -92,7 +92,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const Easing = fn(1652).Easing;
+const Easing = fn(1655).Easing;
 let closure_10 = Easing.bezier(0.42, 0, 0.58, 1);
 let c11 = -33.6;
 let result = _modDef671(nativeDefault.unsafe_rawColors.ILLO_PURPLE_40).set("oklch.l", "*0.95");
@@ -106,8 +106,8 @@ let obj4 = _modDef671(nativeDefault.unsafe_rawColors.ILLO_PURPLE_30);
 let result4 = _modDef671(nativeDefault.unsafe_rawColors.ILLO_PINK_40).set("oklch.l", "*0.95");
 let result5 = result4.set("oklch.c", "*0.8");
 const fill = result5.hex();
-let closure_15 = module_1652.createAnimatedComponent(fn(8197).Rect);
-const createStyles = fn(5243);
+let closure_15 = module_1655.createAnimatedComponent(fn(8263).Rect);
+const createStyles = fn(5306);
 let closure_16 = createStyles.createStyles((width) => ({
   root: { width, height: width },
   sparkleSmall: { transformOrigin: "33.6% 18.6%" },
@@ -153,36 +153,36 @@ export default function ConjureWorkingWand(arg0) {
   const tmp4 = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion) || paused;
   _require = tmp4;
   let obj = require("initialize");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(1);
-  const tmp2Result5 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(c11);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(1);
+  const tmp2Result5 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(c11);
   noop = sharedValue2;
   const items1 = [tmp4, sharedValue, sharedValue1, sharedValue2];
   const effect = noop.useEffect(() => {
     if (!c0) {
       let obj = { duration: 1000, easing };
       const result = _undefined.set(0);
-      obj2 = _mod1652;
+      obj2 = _mod1655;
       const result1 = _undefined.set(obj2.withRepeat(timing_timing.withTiming(1, obj), -1, true));
       const result2 = _undefined2.set(1);
-      const obj4 = _mod1652;
+      const obj4 = _mod1655;
       const result3 = _undefined2.set(obj4.withRepeat(timing_timing.withTiming(0, obj), -1, true));
       const result4 = _undefined3.set(c11);
-      const obj6 = _mod1652;
-      const obj8 = { duration: 2000, easing: _mod1652.Easing.linear };
+      const obj6 = _mod1655;
+      const obj8 = { duration: 2000, easing: _mod1655.Easing.linear };
       const result5 = _undefined3.set(obj6.withRepeat(timing_timing.withTiming(38.4, obj8), -1, false));
       return () => {
-        c0(1652).cancelAnimation(_undefined);
-        const obj = c0(1652);
-        c0(1652).cancelAnimation(dependencyMap);
-        obj2 = c0(1652);
-        c0(1652).cancelAnimation(_undefined3);
+        c0(1655).cancelAnimation(_undefined);
+        const obj = c0(1655);
+        c0(1655).cancelAnimation(dependencyMap);
+        obj2 = c0(1655);
+        c0(1655).cancelAnimation(_undefined3);
       };
     }
   }, items1);
-  const tmp2Result6 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result6 = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [closure_21, tmp4, obj2, twinkle, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -205,8 +205,8 @@ export default function ConjureWorkingWand(arg0) {
   ConjureWorkingWandTsx3.__closure = items3;
   ConjureWorkingWandTsx3.__workletHash = 10450060011100;
   ConjureWorkingWandTsx3.__initData = tmp11;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ConjureWorkingWandTsx3);
-  const tmp2Result7 = require("../../../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(ConjureWorkingWandTsx3);
+  const tmp2Result7 = require("../../../../../_runtime/metro/01655__.js");
   const tmp9 = obj2;
   const items4 = [closure_22, tmp4, tmp9, twinkle, sharedValue1];
   _require = undefined;
@@ -231,12 +231,12 @@ export default function ConjureWorkingWand(arg0) {
   ConjureWorkingWandTsx4.__workletHash = 16092104502971;
   ConjureWorkingWandTsx4.__initData = tmp17;
   let tmp23 = null;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ConjureWorkingWandTsx4);
+  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(ConjureWorkingWandTsx4);
   if (!tmp4) {
     tmp23 = sharedValue2;
   }
   obj2 = { style: tmp.root, children: null };
-  const tmp2Result8 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result8 = require("../../../../../_runtime/metro/01655__.js");
   const items6 = [closure_7(WandPart, { path: require("conjureWandGeometry").WAND_PATH, color, size, band: tmp23 }), ,];
   let obj4 = { style: null, children: null };
   const items7 = [closure_4.absoluteFill, tmp.sparkleSmall, animatedStyle];
@@ -248,7 +248,7 @@ export default function ConjureWorkingWand(arg0) {
     size,
     band: tmp23,
   });
-  items6[1] = closure_7(module_1652.View, obj4);
+  items6[1] = closure_7(module_1655.View, obj4);
   let obj6 = { style: null, children: null };
   const items8 = [closure_4.absoluteFill, tmp.sparkleLarge, animatedStyle1];
   obj6.style = items8;
@@ -259,7 +259,7 @@ export default function ConjureWorkingWand(arg0) {
     size,
     band: tmp23,
   });
-  items6[2] = closure_7(module_1652.View, obj6);
+  items6[2] = closure_7(module_1655.View, obj6);
   obj2.children = items6;
   return closure_8(closure_5, obj2);
 }

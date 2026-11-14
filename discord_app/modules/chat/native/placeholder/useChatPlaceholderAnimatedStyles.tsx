@@ -1,6 +1,6 @@
 // discord_app/modules/chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -23,8 +23,8 @@ export default function useChatPlaceholderAnimatedStyles(arg0) {
     visible,
     animated,
     stateFromStores,
-    _mod1652.withRepeat,
-    _mod1652.withSequence,
+    _mod1655.withRepeat,
+    _mod1655.withSequence,
     timing_timing.withTiming,
     timingPresets.timingNone,
     obj,
@@ -57,5 +57,5 @@ export default function useChatPlaceholderAnimatedStyles(arg0) {
   useChatPlaceholderAnimatedStylesTsx1.__closure = items2;
   useChatPlaceholderAnimatedStylesTsx1.__workletHash = 17414638142691;
   useChatPlaceholderAnimatedStylesTsx1.__initData = tmp2;
-  return _mod1652.useAnimatedStyle(useChatPlaceholderAnimatedStylesTsx1);
+  return _mod1655.useAnimatedStyle(useChatPlaceholderAnimatedStylesTsx1);
 }

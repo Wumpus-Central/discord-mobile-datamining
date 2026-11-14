@@ -34,7 +34,7 @@ export function useTrackTabPerformance(GUILDS) {
         tmp3.layoutEffectTime = performance.now();
         items = [
           closure_1_7,
-          GUILDS(1705).scheduleOnRN,
+          GUILDS(1708).scheduleOnRN,
           function log() {
             if (tmp2) {
               const _performance = performance;
@@ -81,8 +81,8 @@ export function useTrackTabPerformance(GUILDS) {
         TabsPerformanceTrackerTsx1.__closure = items1;
         TabsPerformanceTrackerTsx1.__workletHash = 9222398850673;
         TabsPerformanceTrackerTsx1.__initData = tmp9;
-        GUILDS(1705).scheduleOnUI(TabsPerformanceTrackerTsx1);
-        const obj2 = GUILDS(1705);
+        GUILDS(1708).scheduleOnUI(TabsPerformanceTrackerTsx1);
+        const obj2 = GUILDS(1708);
       }
     }
     let obj = dependencyMap2[tmp2];
@@ -100,7 +100,7 @@ export function useTrackTabPerformance(GUILDS) {
         tmp3.effectTime = performance.now();
         items = [
           closure_1_8,
-          GUILDS(1705).scheduleOnRN,
+          GUILDS(1708).scheduleOnRN,
           function log() {
             if (tmp2) {
               const _performance = performance;
@@ -147,8 +147,8 @@ export function useTrackTabPerformance(GUILDS) {
         TabsPerformanceTrackerTsx2.__closure = items1;
         TabsPerformanceTrackerTsx2.__workletHash = 6249772318354;
         TabsPerformanceTrackerTsx2.__initData = tmp9;
-        GUILDS(1705).scheduleOnUI(TabsPerformanceTrackerTsx2);
-        const obj2 = GUILDS(1705);
+        GUILDS(1708).scheduleOnUI(TabsPerformanceTrackerTsx2);
+        const obj2 = GUILDS(1708);
       }
     }
     let obj = dependencyMap2[tmp2];

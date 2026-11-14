@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useFontScale from "../../../screen/native/useFontScale.tsx";
 import useScaledTextLineHeight from "../../../screen/native/useScaledTextLineHeight.android.tsx";
-import inlineStyles from "../../../../../_runtime/08197_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08263_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -11,13 +11,13 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(6314).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6377).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const PlatformUtils = fn(1357);
-const CheckpointCustomizationUtils = fn(6681);
+const PlatformUtils = fn(1360);
+const CheckpointCustomizationUtils = fn(6744);
 const points = CheckpointCustomizationUtils.getChamferedRectPoints(75, 22, 5.5);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj4 = {
   container: { paddingHorizontal: nativeDefault.space.PX_6 },
   emphasis: { flexDirection: "row", alignItems: "center" },

@@ -361,6 +361,20 @@ export function fromBackgroundSync(properties, guildTheme) {
   return tmp;
 }
 export function fromGuild(guild, guild2) {
+  const obj = {};
+  const merged = Object.assign(guild);
+  if (undefined !== guild.game_application_ids) {
+    let game_application_ids = guild.game_application_ids;
+  } else {
+    game_application_ids = undefined;
+    if (guild2 != null) {
+      game_application_ids = guild2.gameApplicationIds;
+    }
+    if (game_application_ids == null) {
+      game_application_ids = null;
+    }
+  }
+  obj.game_application_ids = game_application_ids;
   if (null != guild.joined_at) {
     const _Date = Date;
     let date = new Date(guild.joined_at);
@@ -374,7 +388,7 @@ export function fromGuild(guild, guild2) {
     }
   }
   return fromGuildPropertiesWithAdditionalFields(
-    guild,
+    obj,
     { joinedAt: date, premiumSubscriberCount: guild.premium_subscription_count },
     guild2,
   );

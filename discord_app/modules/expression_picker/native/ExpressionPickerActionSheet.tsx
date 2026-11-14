@@ -4,7 +4,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
@@ -16,8 +16,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
-let closure_5 = fn(5504).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(11177).STICKER_FORMATS;
+let closure_5 = fn(5567).ACTION_SHEET_START_HEIGHT_RATIO;
+const STICKER_FORMATS = fn(11244).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
@@ -27,7 +27,7 @@ export default function ExpressionPickerActionSheet(arg0) {
   ({ channelId: require, onPressEmoji: importDefault, onPressSticker: dependencyMap, onPressGIF: noop } = arg0);
   ({ hideGifFavorites, onDismiss, visibleTabs, initialGifQuery } = arg0);
   const ref = noop.useRef(null);
-  const sharedValue = _mod1652.useSharedValue(-1);
+  const sharedValue = _mod1655.useSharedValue(-1);
   const obj2 = useKeyboardType;
   items = [ChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => ChannelStore.getChannel(require));

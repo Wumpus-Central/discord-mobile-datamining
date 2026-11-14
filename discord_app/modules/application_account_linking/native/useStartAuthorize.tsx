@@ -1,13 +1,11 @@
 // discord_app/modules/application_account_linking/native/useStartAuthorize.tsx
-import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import LinkingDefault from "../../../lib/native/Linking.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 const require = fn;
-const AuthorizeFlow = fn(7854).AuthorizeFlow;
+const AuthorizeFlow = fn(7920).AuthorizeFlow;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");
@@ -21,16 +19,6 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   const debug = obj.debug;
   const authorizationApp = require("useAuthorizationApp").useAuthorizationApp(getOfficialApplicationId);
   _require = authorizationApp;
-  let prop;
-  if (authorizationApp != null) {
-    prop = authorizationApp.connectionEntrypointUrl;
-  }
-  let WEB = null;
-  if (null != prop) {
-    WEB = AuthorizeFlow.WEB;
-  }
-  let obj2 = require("useAuthorizationApp");
-  const tmp = undefined !== debug && debug;
   let parentId;
   if (authorizationApp != null) {
     parentId = authorizationApp.parentId;
@@ -42,6 +30,16 @@ export default function useStartAuthorize(getOfficialApplicationId) {
     }
     parentId = id;
   }
+  let prop;
+  if (authorizationApp != null) {
+    prop = authorizationApp.connectionEntrypointUrl;
+  }
+  let WEB = null;
+  if (null != prop) {
+    WEB = AuthorizeFlow.WEB;
+  }
+  let obj2 = require("useAuthorizationApp");
+  const tmp = undefined !== debug && debug;
   const authorizedAppsToken = require("useAuthorizedAppsToken").useAuthorizedAppsToken(parentId);
   ({ token, fetched } = authorizedAppsToken);
   _require = asyncGeneratorStep(async (arg0) => {
@@ -76,16 +74,17 @@ export default function useStartAuthorize(getOfficialApplicationId) {
             if (closure_0 != null) {
               prop = closure_0.connectionEntrypointUrl;
             }
-            if (null == prop) {
-              c6 = 3;
-              return { value: false, done: true };
-            } else {
-              c4 = 1;
-              c5 = 2;
-              c6 = 1;
-              const obj5 = { value: LinkingDefault.openURL(closure_0.connectionEntrypointUrl), done: false };
-              return obj5;
+            if (null != prop) {
+              if (null != closure_1) {
+                c4 = 1;
+                c5 = 2;
+                c6 = 1;
+                const obj5 = { value: parentId(6012).openURL(closure_0.connectionEntrypointUrl), done: false };
+                return obj5;
+              }
             }
+            c6 = 3;
+            return { value: false, done: true };
           }
         } else if (1 === tmp8) {
           c4 = 0;
@@ -114,25 +113,26 @@ export default function useStartAuthorize(getOfficialApplicationId) {
             application_id: closure_0.id,
             flow_type: constants.WEB,
           };
-          AnalyticsUtilsDefault.track(constants2.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj8);
+          parentId(1256).track(constants2.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj8);
+          const obj = parentId(1256);
           const obj9 = { onSuccess: closure_129_0.onSuccess, onError: closure_129_0.onError };
-          const result = closure_0(7857).accountLinkAuthorizationStarted(closure_0.id, obj9);
+          const result = closure_0(7923).accountLinkAuthorizationStarted(closure_1, obj9);
           c4 = 0;
           c6 = 3;
           return { value: true, done: true };
         }
-      } catch (tmp36) {
-        closure_3 = tmp36;
+      } catch (tmp37) {
+        closure_3 = tmp37;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp36;
+          throw tmp37;
         } else {
           c5 = tmp;
         }
       }
     }
   });
-  items = [authorizationApp];
+  items = [authorizationApp, parentId];
   const obj3 = {
     fetched,
     hasAlreadyLinked: null,
@@ -177,7 +177,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
       prop1 = authorizationApp.connectionEntrypointUrl;
     }
     obj4.hasConnectionEntrypointUrl = null != prop1;
-    if (tmp6) {
+    if (tmp8) {
       const items1 = [AuthorizeFlow.WEB];
       let items2 = items1;
     } else {

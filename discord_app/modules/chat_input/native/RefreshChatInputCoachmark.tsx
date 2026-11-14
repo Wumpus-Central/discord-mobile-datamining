@@ -2,14 +2,14 @@
 import util from "../../../intl/index.native.tsx";
 import OmnibuttonCoachmarkRive from "../../../../discord_common/js/packages/design/components/Rive/native/generated/OmnibuttonCoachmarkRive.tsx";
 import useCoachmark from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
-import _modDef14486 from "../../../../_runtime/metro/14486__.js";
+import _modDef14598 from "../../../../_runtime/metro/14598__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(5089).ContentDismissActionType;
+const ContentDismissActionType = fn(5152).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");
 
@@ -55,7 +55,7 @@ export function useRefreshChatInputCoachmark(disabled) {
         closure_1_0(constants.USER_DISMISS);
       };
       if (reducedMotion.enabled) {
-        const obj2 = { type: "image", src: _modDef14486, aspectRatio: "16/9" };
+        const obj2 = { type: "image", src: _modDef14598, aspectRatio: "16/9" };
         let obj3 = obj2;
       } else {
         obj3 = { type: "rive", rive: OmnibuttonCoachmarkRive.OmnibuttonCoachmarkRive, aspectRatio: "16/9" };

@@ -1,10 +1,10 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayFooter.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../../_runtime/metro/01705__.js";
+import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../../_runtime/metro/01708__.js";
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05535_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/05598_LegacyBaseButton.js";
 import useMessagePreviewHeight from "../../useMessagePreviewHeight.tsx";
 import useMediaModalFooterBackgroundDefault from "useMediaModalFooterBackground.android.tsx";
 import MediaMessagePreviewDefault from "../message_preview/MediaMessagePreview.tsx";
@@ -12,15 +12,15 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
-  drawerContainer: { overflow: "hidden", backgroundColor: "WireType" },
+  drawerContainer: { overflow: "hidden", backgroundColor: "__esModule" },
   drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 },
   drawerHeader: { backgroundColor: "r" },
   messagePreviewContainer: { marginLeft: 6 },
@@ -100,10 +100,10 @@ export function MediaModalOverlayFooter(channelId) {
   if (tmp81Result) {
     num2 = 60;
   }
-  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(true);
+  const sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(true);
   c3 = sharedValue;
-  let obj = require("../../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(c9);
+  let obj = require("../../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(c9);
   noop = sharedValue1;
   const tmp8 = c3(noop.useState(false), 2);
   const first = tmp8[0];
@@ -123,9 +123,9 @@ export function MediaModalOverlayFooter(channelId) {
   const effect1 = noop.useEffect(() => {
     _undefined(c5);
   }, items1);
-  let obj2 = require("../../../../../../_runtime/metro/01652__.js");
+  let obj2 = require("../../../../../../_runtime/metro/01655__.js");
   const tmp7 = c3;
-  const sharedValue2 = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue2 = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   let items2 = [sharedValue2, sharedValue1, sharedValue];
   const callback = noop.useCallback(() => {
     let result = easing.set(1);
@@ -212,7 +212,7 @@ export function MediaModalOverlayFooter(channelId) {
   const callback4 = noop.useCallback((arg0) => {
     _undefined8(arg0 + 17);
   }, items6);
-  const obj4 = require("../../../../../../_runtime/metro/01652__.js");
+  const obj4 = require("../../../../../../_runtime/metro/01655__.js");
   const items7 = [
     sharedValue2,
     first3,
@@ -220,7 +220,7 @@ export function MediaModalOverlayFooter(channelId) {
     2,
     sharedValue2,
     0,
-    require("../../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../../_runtime/metro/01655__.js").interpolate,
     1,
     2,
     first2,
@@ -281,13 +281,13 @@ export function MediaModalOverlayFooter(channelId) {
   MediaModalOverlayFooterTsx4.__closure = items8;
   MediaModalOverlayFooterTsx4.__workletHash = 14957520672262;
   MediaModalOverlayFooterTsx4.__initData = tmp27;
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     MediaModalOverlayFooterTsx4,
   );
-  const obj5 = require("../../../../../../_runtime/metro/01652__.js");
+  const obj5 = require("../../../../../../_runtime/metro/01655__.js");
   const items9 = [
     callback,
-    require("../../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../../_runtime/metro/01655__.js").interpolate,
     sharedValue2,
     0,
     1,
@@ -320,7 +320,7 @@ export function MediaModalOverlayFooter(channelId) {
   MediaModalOverlayFooterTsx5.__workletHash = 3232524289494;
   MediaModalOverlayFooterTsx5.__initData = tmp39;
   const items11 = [tmp16[1], num, sharedValue, sharedValue1];
-  const animatedStyle1 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     MediaModalOverlayFooterTsx5,
   );
   const callback5 = obj3.useCallback((nativeEvent) => {
@@ -336,8 +336,8 @@ export function MediaModalOverlayFooter(channelId) {
       closure_12(height);
     }
   }, items11);
-  const tmp3Result = require("../../../../../../_runtime/metro/01652__.js");
-  const items12 = [callback1, require("../../../../../../_runtime/metro/01652__.js").interpolate, sharedValue2, 0, 1];
+  const tmp3Result = require("../../../../../../_runtime/metro/01655__.js");
+  const items12 = [callback1, require("../../../../../../_runtime/metro/01655__.js").interpolate, sharedValue2, 0, 1];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -357,18 +357,18 @@ export function MediaModalOverlayFooter(channelId) {
   MediaModalOverlayFooterTsx6.__closure = items13;
   MediaModalOverlayFooterTsx6.__workletHash = 1997603737745;
   MediaModalOverlayFooterTsx6.__initData = tmp47;
-  const animatedStyle2 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle2 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     MediaModalOverlayFooterTsx6,
   );
   const tmp54 = useMediaModalFooterBackgroundDefault();
   ({ r, g, b, a } = tmp54.mediaModalFooterBackgroundColorRgba);
-  const tmp3Result4 = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp3Result4 = require("../../../../../../_runtime/metro/01655__.js");
   const items14 = [
     callback2,
     r,
     g,
     b,
-    require("../../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../../_runtime/metro/01655__.js").interpolate,
     sharedValue2,
     0,
     1,
@@ -423,7 +423,7 @@ export function MediaModalOverlayFooter(channelId) {
   MediaModalOverlayFooterTsx7.__closure = items15;
   MediaModalOverlayFooterTsx7.__workletHash = 8200199729064;
   MediaModalOverlayFooterTsx7.__initData = tmp55;
-  const animatedStyle3 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle3 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     MediaModalOverlayFooterTsx7,
   );
   const ref = obj3.useRef(undefined);
@@ -434,7 +434,7 @@ export function MediaModalOverlayFooter(channelId) {
   const memo = obj3.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const FlingResult = Gesture.Fling();
-    items = [closure_17, _mod1705.scheduleOnRN, callback2];
+    items = [closure_17, _mod1708.scheduleOnRN, callback2];
     c0 = undefined;
     c1 = undefined;
     [tmp, tmp2, tmp3] = items;
@@ -475,7 +475,7 @@ export function MediaModalOverlayFooter(channelId) {
       native.STANDARD_EASING,
       closure_18,
       0,
-      _mod1705.scheduleOnRN,
+      _mod1708.scheduleOnRN,
       callback2,
     ];
     c0 = undefined;
@@ -551,7 +551,7 @@ export function MediaModalOverlayFooter(channelId) {
     const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
     const maxPointersResult = Gesture.Pan().maxPointers(1);
-    items = [closure_20, c4, 2, clamp, c9, c2, c7, 0, 1, sharedValue2, 0.4, _mod1705.scheduleOnRN, c6, 3, 40, 2];
+    items = [closure_20, c4, 2, clamp, c9, c2, c7, 0, 1, sharedValue2, 0.4, _mod1708.scheduleOnRN, c6, 3, 40, 2];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -618,12 +618,12 @@ export function MediaModalOverlayFooter(channelId) {
       closure_23,
       sharedValue2,
       0.75,
-      _mod1705.scheduleOnRN,
+      _mod1708.scheduleOnRN,
       tmp5,
       c3,
       0,
       tmp3,
-      _mod1652.withDelay,
+      _mod1655.withDelay,
       timing_timing.withTiming,
       c9,
       native.STANDARD_EASING,
@@ -767,7 +767,7 @@ export function MediaModalOverlayFooter(channelId) {
       .onEnd(MediaModalOverlayFooterTsx14)
       .enabled(tmp37);
   }, items18);
-  const tmp3Result5 = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp3Result5 = require("../../../../../../_runtime/metro/01655__.js");
   const items19 = [closure_24, overlayEnabled, sharedValue2];
   _require = undefined;
   importDefault = undefined;
@@ -807,7 +807,7 @@ export function MediaModalOverlayFooter(channelId) {
   MediaModalOverlayFooterTsx16.__closure = items22;
   MediaModalOverlayFooterTsx16.__workletHash = 2620357650006;
   MediaModalOverlayFooterTsx16.__initData = tmp76;
-  const animatedReaction = require("../../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     MediaModalOverlayFooterTsx15,
     MediaModalOverlayFooterTsx16,
   );
@@ -828,7 +828,7 @@ export function MediaModalOverlayFooter(channelId) {
   };
   const items25 = [animatedStyle2, tmp.drawerContainer];
   obj8.style = items25;
-  const items26 = [c6(_modDef1652.View, obj8), channelId.sliderElement];
+  const items26 = [c6(_modDef1655.View, obj8), channelId.sliderElement];
   const obj10 = { onLayout: callback5, style: animatedStyle, children: null };
   const obj11 = {
     style: tmp.messagePreviewContainer,
@@ -854,16 +854,16 @@ export function MediaModalOverlayFooter(channelId) {
     const items28 = [animatedStyle1, tmp.thumbnailsContainer];
     obj13.style = items28;
     const obj14 = { syncer };
-    obj13.children = tmp81(tmp53(15088), obj14);
-    tmp81Result = tmp81(tmp53(1652).View, obj13);
+    obj13.children = tmp81(tmp53(15202), obj14);
+    tmp81Result = tmp81(tmp53(1655).View, obj13);
   }
   const rect = { bottom: true, left: true, right: true, children: null };
   items27[1] = tmp81Result;
   obj10.children = items27;
-  items26[2] = c7(_modDef1652.View, obj10);
+  items26[2] = c7(_modDef1655.View, obj10);
   rect.children = items26;
   items24[1] = c7(require("common/SafeAreaView").SafeAreaPaddingView, rect);
   obj7.children = items24;
-  obj6.children = c7(_modDef1652.View, obj7);
+  obj6.children = c7(_modDef1655.View, obj7);
   return c6(require("LegacyBaseButton").GestureDetector, obj6);
 }

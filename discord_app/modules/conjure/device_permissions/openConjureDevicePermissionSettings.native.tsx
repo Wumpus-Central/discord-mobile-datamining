@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/device_permissions/openConjureDevicePermissionSettings.native.tsx
-import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureDevicePermissionSettingsSheet from "native/ConjureDevicePermissionSettingsSheet.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -12,7 +12,7 @@ export default function _default(arg0) {
   ({ applicationId, appName } = arg0);
   const obj = ActionSheetActionCreatorsDefault;
   obj.openLazy(
-    asyncRequireImpl(15512, dependencyMap.paths),
+    asyncRequireImpl(15626, dependencyMap.paths),
     ConjureDevicePermissionSettingsSheet.CONJURE_DEVICE_PERMISSION_SETTINGS_SHEET_KEY,
     { applicationId, appName },
   );

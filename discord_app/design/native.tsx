@@ -46,6 +46,7 @@ import HeaderActionButton from "components/Navigator/native/HeaderActionButton.n
 import TableRow from "components/TableRow/native/TableRow.native.tsx";
 import TableRowGroupContext from "components/TableRow/native/TableRowGroupContext.native.tsx";
 import Card from "components/Card/native/Card.native.tsx";
+import DragHandle from "components/DragHandle/native/DragHandle.native.tsx";
 import TableRowConstants from "components/TableRow/native/TableRowConstants.tsx";
 import TableRowIcon from "components/TableRow/native/TableRowIcon.native.tsx";
 import TableRowArrow from "components/TableRow/native/TableRowArrow.native.tsx";
@@ -129,6 +130,8 @@ import TabsGradientDefault from "components/Tabs/native/TabsGradient.native.tsx"
 import ModalFloatingAction from "components/Modal/native/ModalFloatingAction.native.tsx";
 import ModalActionButton from "components/Modal/native/ModalActionButton.native.tsx";
 import AvatarPile from "components/Pile/native/AvatarPile.native.tsx";
+import TableSliderRow from "components/TableRow/native/TableSliderRow.native.tsx";
+import Slider from "components/Slider/native/Slider.native.tsx";
 import ImageButton from "components/Button/native/ImageButton.native.tsx";
 import Checkbox from "components/Checkbox/native/Checkbox.native.tsx";
 import RowGroup from "components/RowGroup/native/RowGroup.native.tsx";
@@ -154,8 +157,6 @@ import NitroGem18Lottie from "components/LottieIcon/native/generated/NitroGem18L
 import NitroGem24Lottie from "components/LottieIcon/native/generated/NitroGem24Lottie.tsx";
 import MessageRequestLottie from "components/LottieIcon/native/generated/MessageRequestLottie.tsx";
 import ToggleButton from "components/Button/native/ToggleButton.native.tsx";
-import TableSliderRow from "components/TableRow/native/TableSliderRow.native.tsx";
-import Slider from "components/Slider/native/Slider.native.tsx";
 import ContextMenuItem from "components/ContextMenu/native/ContextMenuItem.native.tsx";
 import ContextMenuContainer from "components/ContextMenu/native/ContextMenuContainer.native.tsx";
 import useManaTextMigrationHighlightRestartNotice from "components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx";
@@ -341,6 +342,9 @@ export const ToggleIconButtonProps = ToggleIconButton.ToggleIconButtonProps;
 export const ToggleIconButtonVariant = ToggleIconButton.ToggleIconButtonVariant;
 export const IconButton = IconButton.IconButton;
 export const IconButtonProps = IconButton.IconButtonProps;
+export const DragHandle = DragHandle.DragHandle;
+export const DragHandleProps = DragHandle.DragHandleProps;
+export const DragHandleEventProps = DragHandle.DragHandleEventProps;
 export const useLoadingStyles = ButtonPill.useLoadingStyles;
 export const ImageButton = ImageButton.ImageButton;
 export const ImageButtonProps = ImageButton.ImageButtonProps;

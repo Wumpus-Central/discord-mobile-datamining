@@ -44,8 +44,19 @@ export function trackCheckpoint2026Completed() {
   const merged = Object.assign(CheckpointSessionAnalyticsManagerDefault.getAnalyticsProperties());
   obj.track(AnalyticEvents.CHECKPOINT_2026_COMPLETED, obj2);
 }
-export function trackCheckpoint2026CharacterChoiceSelected(trait_type, option_id) {
-  const obj2 = { trait_type, option_id, step_name: null };
+export function trackCheckpoint2026CharacterChoiceSelected(
+  trait_type,
+  option_id,
+  traitOptionStatus,
+  traitOptionRarity,
+) {
+  const obj2 = {
+    trait_type,
+    option_id,
+    option_lock_status: traitOptionStatus,
+    option_rarity: traitOptionRarity,
+    step_name: null,
+  };
   const obj = AnalyticsUtilsDefault;
   obj2.step_name = CheckpointSessionAnalyticsManagerDefault.getStepName();
   const merged = Object.assign(CheckpointSessionAnalyticsManagerDefault.getAnalyticsProperties());

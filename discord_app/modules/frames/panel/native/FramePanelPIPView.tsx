@@ -7,13 +7,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6957);
+const FramesConstants = fn(7020);
 ({
   asLaunched: hasOwnProperty,
   FrameLayoutModes: closure_6,
   getPipOrientationLockStateForFrame: metroImportDefault,
 } = FramesConstants);
-let closure_8 = fn(19585).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_8 = fn(19778).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelPIPView.tsx");

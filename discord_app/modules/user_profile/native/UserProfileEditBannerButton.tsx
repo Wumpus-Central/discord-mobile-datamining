@@ -3,37 +3,38 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import useMeasuredLayoutDefault from "../../screen/native/useMeasuredLayout.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
+import UserProfileAnalyticsUtils from "../UserProfileAnalyticsUtils.tsx";
 import useUserProfileBannerHeightDefault from "../hooks/native/useUserProfileBannerHeight.tsx";
 import UserProfileBannerDefault from "UserProfileBanner.tsx";
 import PencilIcon from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EditButtonDefault = tmp(16958);
+const EditButtonDefault = tmp(17081);
 require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
   let analyticsLocations;
   let context;
-  analyticsLocations = analyticsLocations(context[5])().analyticsLocations;
-  const tmp = closure_7();
-  context = userId(context[6]).useUserProfileAnalyticsContext().context;
+  analyticsLocations = analyticsLocations(context[6])().analyticsLocations;
+  const tmp = closure_8();
+  context = userId(context[7]).useUserProfileAnalyticsContext().context;
   items = [userId, context, analyticsLocations];
   let tmp5 = null;
   if (null != userId) {
-    const obj2 = {
+    let obj2 = {
       style: tmp.previewButton,
       onPress: tmp4,
       accessibilityRole: "button",
       accessibilityLabel: null,
       children: null,
     };
-    const intl = tmp3(tmp2[9]).intl;
-    obj2.accessibilityLabel = intl.string(tmp3(tmp2[9]).t["3Qcx6K"]);
-    const obj3 = { variant: "body-sm/semibold", color: "text-overlay-light", children: null };
-    const intl2 = tmp3(tmp2[9]).intl;
-    obj3.children = intl2.string(tmp3(tmp2[9]).t["3Qcx6K"]);
-    obj2.children = closure_5(tmp3(tmp2[10]).Text, obj3);
-    tmp5 = closure_5(tmp3(tmp2[8]).PressableOpacity, obj2);
+    const intl = tmp3(tmp2[11]).intl;
+    obj2.accessibilityLabel = intl.string(tmp3(tmp2[11]).t["3Qcx6K"]);
+    let obj3 = { variant: "body-sm/semibold", color: "text-overlay-light", children: null };
+    const intl2 = tmp3(tmp2[11]).intl;
+    obj3.children = intl2.string(tmp3(tmp2[11]).t["3Qcx6K"]);
+    obj2.children = closure_6(tmp3(tmp2[12]).Text, obj3);
+    tmp5 = closure_6(tmp3(tmp2[10]).PressableOpacity, obj2);
   }
   return tmp5;
 }
@@ -48,17 +49,18 @@ function EditButton(disabled) {
     accessibilityLabel,
     onPress,
     disabled: flag,
-    style: closure_7().editButton,
+    style: closure_8().editButton,
     children: null,
   };
-  const tmp = closure_7();
-  obj.children = hasOwnProperty(PencilIcon.PencilIcon, { size: "xs", color: nativeDefault.colors.WHITE });
-  return hasOwnProperty(Pressables.PressableOpacity, obj);
+  const tmp = closure_8();
+  obj.children = timestampProducer(PencilIcon.PencilIcon, { size: "xs", color: nativeDefault.colors.WHITE });
+  return timestampProducer(Pressables.PressableOpacity, obj);
 }
 const View = fn(17).View;
+let closure_5 = fn(8479).TrackUserProfileEditActions;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
+const createStyles = fn(5306);
 let obj2 = {
   container: { position: "relative" },
   editButton: null,
@@ -91,9 +93,9 @@ const rect = {
 };
 obj2.previewButton = rect;
 obj2.refreshEditButtonContainer = { position: "absolute", top: 12, right: 12 };
-let closure_7 = createStyles.createStyles(obj2);
+let closure_8 = createStyles.createStyles(obj2);
 size = fn(2);
-const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditBannerButton.tsx");
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditBannerButton.tsx");
 
 export default function UserProfileEditBannerButton(isUserProfileEditingRefresh) {
   ({ user, showProfilePreviewButton, showEditButton } = isUserProfileEditingRefresh);
@@ -106,14 +108,14 @@ export default function UserProfileEditBannerButton(isUserProfileEditingRefresh)
   if (editDisabled === undefined) {
     editDisabled = false;
   }
-  let refreshEditButtonContainer = closure_7();
+  let refreshEditButtonContainer = closure_8();
   let tmp = importDefault;
   let obj = dependencyMap;
   ({ ref, onLayout, width } = useMeasuredLayoutDefault());
   const obj2 = { ref, style: refreshEditButtonContainer.container, onLayout, children: null };
   const tmp2 = useMeasuredLayoutDefault();
   items = [
-    hasOwnProperty(UserProfileBannerDefault, {
+    timestampProducer(UserProfileBannerDefault, {
       user,
       displayProfile,
       pendingBanner,
@@ -127,13 +129,13 @@ export default function UserProfileEditBannerButton(isUserProfileEditingRefresh)
   ];
   if (showProfilePreviewButton) {
     const obj3 = { userId: user.id };
-    showProfilePreviewButton = hasOwnProperty(ProfilePreviewButton, obj3);
+    showProfilePreviewButton = timestampProducer(ProfilePreviewButton, obj3);
   }
   items[1] = showProfilePreviewButton;
   if (!showEditButton) {
     items[2] = showEditButton;
     obj2.children = items;
-    return timestampProducer(View, obj2);
+    return metroImportDefault(View, obj2);
   } else if (isUserProfileEditingRefresh.isUserProfileEditingRefresh) {
     tmp = EditButtonDefault;
     obj = { style: null, onPress: null, accessibilityLabel: null, disabled: null, variant: "secondary-overlay" };
@@ -142,10 +144,10 @@ export default function UserProfileEditBannerButton(isUserProfileEditingRefresh)
     obj.onPress = onPressEdit;
     obj.accessibilityLabel = editButtonAccessibilityLabel;
     obj.disabled = editDisabled;
-    let tmp6Result = hasOwnProperty(tmp, obj);
+    let tmp6Result = timestampProducer(tmp, obj);
   } else {
     const obj4 = { onPress: onPressEdit, accessibilityLabel: editButtonAccessibilityLabel, disabled: editDisabled };
-    tmp6Result = hasOwnProperty(EditButton, obj4);
+    tmp6Result = timestampProducer(EditButton, obj4);
   }
   const tmp3 = useUserProfileBannerHeightDefault(width);
 }

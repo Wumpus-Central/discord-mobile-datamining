@@ -1,27 +1,27 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalTimer.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const module_1652 = _mod1652;
+const module_1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let c7 = "#2ECC71";
-let result = (fn(5879).SMALL_BUTTON_HEIGHT - 4) / 2;
+let result = (fn(5942).SMALL_BUTTON_HEIGHT - 4) / 2;
 const strokeDasharray = 2 * Math.PI * result;
-const Easing = fn(1652).Easing;
+const Easing = fn(1655).Easing;
 let closure_10 = Easing.bezier(0.15, 0.21, 0.58, 1);
-const Easing2 = fn(1652).Easing;
+const Easing2 = fn(1655).Easing;
 let closure_11 = Easing2.bezier(0.61, 0, 0.58, 1);
-const Easing3 = fn(1652).Easing;
+const Easing3 = fn(1655).Easing;
 let closure_12 = Easing3.bezier(0.42, 0, 0.58, 1);
-let closure_13 = module_1652.createAnimatedComponent(fn(8197).Circle);
-const createStyles = fn(5243);
+let closure_13 = module_1655.createAnimatedComponent(fn(8263).Circle);
+const createStyles = fn(5306);
 let obj = {
   progress: null,
   ring: null,
@@ -36,8 +36,8 @@ let size = {
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT,
   borderRadius: nativeDefault.radii.round,
-  width: fn(5879).SMALL_BUTTON_HEIGHT,
-  height: fn(5879).SMALL_BUTTON_HEIGHT,
+  width: fn(5942).SMALL_BUTTON_HEIGHT,
+  height: fn(5942).SMALL_BUTTON_HEIGHT,
 };
 obj.progress = size;
 let obj3 = { position: "absolute", transform: null };
@@ -46,7 +46,7 @@ obj3.transform = items;
 obj.ring = obj3;
 obj.trackPath = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 let obj5 = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, lineHeight: null };
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;
@@ -97,11 +97,11 @@ export default function BountiesModalTimer(arg0) {
       num2 = diff;
     }
   }
-  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num2);
-  let obj = require("../../../../../_runtime/metro/01652__.js");
-  sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj2 = require("../../../../../_runtime/metro/01652__.js");
-  sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num2);
+  let obj = require("../../../../../_runtime/metro/01655__.js");
+  sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj2 = require("../../../../../_runtime/metro/01655__.js");
+  sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   items = [sharedValue, num2];
   const effect = sharedValue1.useEffect(() => {
     const result = sharedValue.set(timing_timing.withTiming(c1, { duration: 500 }, "animate-always"));
@@ -114,14 +114,14 @@ export default function BountiesModalTimer(arg0) {
     let withDelay = sharedValue1.set;
     if (c0) {
       if (ref.current) {
-        const obj = _mod1652;
+        const obj = _mod1655;
         const obj3 = { duration: 267, easing };
         const withTimingResult = timing_timing.withTiming(1.65, obj3);
         const obj5 = { duration: 233, easing: easing2 };
         withDelay(obj.withSequence(withTimingResult, timing_timing.withTiming(1, obj5)));
-        tmp = _mod1652;
+        tmp = _mod1655;
         withDelay = tmp.withDelay;
-        const obj6 = _mod1652;
+        const obj6 = _mod1655;
         const obj8 = { duration: 167, easing: easing3 };
         const withTimingResult1 = timing_timing.withTiming(1.25, obj8);
         const obj10 = { duration: 333, easing: easing3 };
@@ -137,7 +137,7 @@ export default function BountiesModalTimer(arg0) {
       const result2 = sharedValue2.set(0);
     }
   }, items1);
-  let obj3 = require("../../../../../_runtime/metro/01652__.js");
+  let obj3 = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [closure_15, strokeDasharray, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -152,8 +152,8 @@ export default function BountiesModalTimer(arg0) {
   BountiesModalTimerTsx1.__closure = items3;
   BountiesModalTimerTsx1.__workletHash = 1981431490589;
   BountiesModalTimerTsx1.__initData = tmp13;
-  const animatedProps = require("../../../../../_runtime/metro/01652__.js").useAnimatedProps(BountiesModalTimerTsx1);
-  let obj4 = require("../../../../../_runtime/metro/01652__.js");
+  const animatedProps = require("../../../../../_runtime/metro/01655__.js").useAnimatedProps(BountiesModalTimerTsx1);
+  let obj4 = require("../../../../../_runtime/metro/01655__.js");
   const items4 = [closure_16, sharedValue1];
   _require = undefined;
   [tmp17, tmp18] = items4;
@@ -171,8 +171,8 @@ export default function BountiesModalTimer(arg0) {
   BountiesModalTimerTsx2.__closure = items5;
   BountiesModalTimerTsx2.__workletHash = 3015849196897;
   BountiesModalTimerTsx2.__initData = tmp17;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(BountiesModalTimerTsx2);
-  const tmp5Result = require("../../../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(BountiesModalTimerTsx2);
+  const tmp5Result = require("../../../../../_runtime/metro/01655__.js");
   const items6 = [closure_17, sharedValue2];
   _require = undefined;
   [tmp20, tmp21] = items6;
@@ -191,9 +191,9 @@ export default function BountiesModalTimer(arg0) {
   BountiesModalTimerTsx3.__workletHash = 10659255628480;
   BountiesModalTimerTsx3.__initData = tmp20;
   let obj5 = { style: tmp.progress, children: null };
-  const animatedStyle1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(BountiesModalTimerTsx3);
+  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(BountiesModalTimerTsx3);
   const size = { height: null, width: null, style: null, children: null };
-  const tmp5Result2 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result2 = require("../../../../../_runtime/metro/01655__.js");
   size.height = require("ButtonConstants").SMALL_BUTTON_HEIGHT;
   size.width = require("ButtonConstants").SMALL_BUTTON_HEIGHT;
   size.style = tmp.ring;
@@ -238,7 +238,7 @@ export default function BountiesModalTimer(arg0) {
   let obj9 = { style: null, children: ref(sharedValue2, { style: tmp.checkmarkBackground }) };
   const items10 = [tmp.checkmarkLayer, animatedStyle];
   obj9.style = items10;
-  items9[2] = ref(require("../../../../../_runtime/metro/01652__.js").View, obj9);
+  items9[2] = ref(require("../../../../../_runtime/metro/01655__.js").View, obj9);
   const obj11 = { style: null, children: null };
   const items11 = [tmp.checkmarkLayer, animatedStyle1];
   obj11.style = items11;
@@ -259,7 +259,7 @@ export default function BountiesModalTimer(arg0) {
     color: require("native").colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT,
     style: tmp.checkmarkIcon,
   });
-  items9[3] = ref(require("../../../../../_runtime/metro/01652__.js").View, obj11);
+  items9[3] = ref(require("../../../../../_runtime/metro/01655__.js").View, obj11);
   obj5.children = items9;
   return closure_6(sharedValue2, obj5);
 }

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ModerationIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod20280 from "../../../../../../../_runtime/metro/20280__.js";
+import _mod20435 from "../../../../../../../_runtime/metro/20435__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export function ModerationIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod20280, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod20435, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

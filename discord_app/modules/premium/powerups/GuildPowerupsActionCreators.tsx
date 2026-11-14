@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/GuildPowerupsActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import Constants from "../../../Constants.tsx";
-import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
+import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import storeListingToGuildPowerupDefault from "utils/storeListingToGuildPowerup.tsx";
 import GuildPowerupsConstants from "constants/GuildPowerupsConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

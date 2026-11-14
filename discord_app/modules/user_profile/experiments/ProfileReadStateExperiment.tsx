@@ -34,7 +34,7 @@ function getProfileReadStateConfigPeek() {
 }
 const obj = { enabled: false };
 const obj2 = { 0: obj, 1: { enabled: true } };
-const ApexExperiment = fn(1449);
+const ApexExperiment = fn(1452);
 const apexExperiment = ApexExperiment.createApexExperiment({
   name: "2026-10-profile-read-state",
   kind: "user",

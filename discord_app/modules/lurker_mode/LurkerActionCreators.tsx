@@ -70,7 +70,7 @@ let closure_8 = async function _stopLurkingAll() {
                           _null = null;
                         }
                         closure_130_1 = _null;
-                        const HTTP = closure_0(1282).HTTP;
+                        const HTTP = closure_0(1285).HTTP;
                         const request = {
                           url: closure_2_6.GUILD_LEAVE(closure_0),
                           body: { lurking: true },
@@ -162,7 +162,7 @@ let closure_9 = async function _stopLurking() {
     tmp19 = null;
   }
   closure_129_0 = tmp19;
-  return "flexDirection";
+  return "Path";
 };
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);

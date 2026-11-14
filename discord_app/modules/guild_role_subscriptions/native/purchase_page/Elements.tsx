@@ -7,7 +7,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import _modDef19190 from "../../../../../_runtime/metro/19190__.js";
+import _modDef19382 from "../../../../../_runtime/metro/19382__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SubscriptionPlanStore from "../../../../stores/billing/SubscriptionPlanStore.tsx";
@@ -17,9 +17,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
+const constants = fn(1072).PriceSetAssignmentPurchaseTypes;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5306);
 let obj2 = {
   toggleTruncateButton: {
     alignSelf: "flex-start",
@@ -55,7 +56,7 @@ let obj4 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
 obj2.arrowButtonIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-let closure_11 = createStyles.createStyles(obj2);
+let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/Elements.tsx");
 
@@ -68,7 +69,7 @@ export function TruncatedText(lineClamp) {
   c1 = undefined;
   first = undefined;
   closure_3 = undefined;
-  const tmp2 = closure_11();
+  const tmp2 = closure_12();
   [tmp4, c1] = noop.useState(false);
   [first, closure_3] = noop.useState(false);
   noop.useRef(false);
@@ -105,9 +106,9 @@ export function TruncatedText(lineClamp) {
         closure_3(nativeEvent.nativeEvent.lines.length > num);
       }
     };
-    items = [React6(Text_Text.Text, obj3), first];
+    items = [refs(Text_Text.Text, obj3), first];
     obj2.children = items;
-    return refs(timestampProducer, obj2);
+    return closure_1_11(timestampProducer, obj2);
   } else {
     const obj = { style: tmp2.toggleTruncateButton, children: null };
     const intl = util.intl;
@@ -119,27 +120,27 @@ export function TruncatedText(lineClamp) {
       stringResult = string(t.Fbrd8J);
     }
     const obj4 = { variant: "body-sm/medium", color: "text-default", children: stringResult };
-    t = React6(Text_Text.Text, obj4);
+    t = refs(Text_Text.Text, obj4);
     obj.children = t;
-    React6(metroImportDefault, obj);
+    refs(metroImportDefault, obj);
   }
   const tmp3 = _slicedToArray(noop.useState(false), 2);
 }
 export function ArrowButton(arg0) {
   ({ text, onPress } = arg0);
-  const tmp = closure_11();
+  const tmp = closure_12();
   const obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
   items = [
-    React6(Text_Text.Text, {
+    refs(Text_Text.Text, {
       variant: "body-md/semibold",
       color: "text-default",
       style: tmp.arrowButtonText,
       children: text,
     }),
-    React6(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef19190, style: tmp.arrowButtonIcon }),
+    refs(native.Icon, { size: native.Icon.Sizes.SMALL, source: _modDef19382, style: tmp.arrowButtonIcon }),
   ];
   obj.children = items;
-  return refs(Pressables.PressableOpacity, obj);
+  return closure_1_11(Pressables.PressableOpacity, obj);
 }
 export function useFormattedSubscriptionPlan(listingId) {
   const mobileStoreFront = NativePaymentHooksDefault.useMobileStoreFront();
@@ -149,12 +150,12 @@ export function useFormattedSubscriptionPlan(listingId) {
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     SubscriptionPlanStore.get(id.id),
   );
-  const price = useStoreFrontPriceDefault(stateFromStores, mobileStoreFront).price;
+  const price = useStoreFrontPriceDefault(stateFromStores, mobileStoreFront, constants.MOBILE).price;
   let str = "No Price Available";
   if (null != price) {
     const _HermesInternal = HermesInternal;
-    str = "" + tmp3(7190).formatPrice(price.amount, price.currency) + "/mo.";
-    const tmp3Result = tmp3(7190);
+    str = "" + tmp3(7253).formatPrice(price.amount, price.currency) + "/mo.";
+    const tmp3Result = tmp3(7253);
   }
   return str;
 }

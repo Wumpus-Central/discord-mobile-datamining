@@ -1,5 +1,5 @@
 // discord_app/modules/guild_tag/native/openGuildTagCreateFlow.tsx
-import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
 import Powerups from "../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openGuildPowerupsModalDefault from "../../premium/powerups/native/utils/openGuildPowerupsModal.tsx";
@@ -11,7 +11,7 @@ export default function openGuildTagCreateFlow(guilds, analyticsLocation) {
   if (1 !== guilds.length) {
     const obj3 = { guilds, analyticsLocation };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(10732, dependencyMap.paths),
+      asyncRequireImpl(10801, dependencyMap.paths),
       "GuildTagCreateGuildListBottomSheet",
       obj3,
     );

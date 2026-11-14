@@ -704,10 +704,10 @@ function isMessageRenderable(message) {
   }
   return true;
 }
-const ImageSizes = fn(2142).ImageSizes;
-const promiseDeduper = new fn(5373).PromiseDeduper();
-const promiseDeduper3 = new fn(5373).PromiseDeduper();
-const promiseDeduper4 = new fn(5373).PromiseDeduper();
+const ImageSizes = fn(2145).ImageSizes;
+const promiseDeduper = new fn(5436).PromiseDeduper();
+const promiseDeduper3 = new fn(5436).PromiseDeduper();
+const promiseDeduper4 = new fn(5436).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/interaction_components/content_inventory_entry/native/useLoadMessageContentEntries.tsx",

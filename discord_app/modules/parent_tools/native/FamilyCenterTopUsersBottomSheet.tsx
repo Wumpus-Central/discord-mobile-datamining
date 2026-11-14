@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef2685 from "../FamilyCenter.messages.js";
+import _modDef2701 from "../FamilyCenter.messages.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -32,7 +32,7 @@ function UserRow(userActivity) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");
@@ -42,7 +42,7 @@ export default function FamilyCenterTopUsersBottomSheet(topUserActivities) {
   const obj = { children: null };
   const obj2 = { variant: "body-md/semibold", style: closure_6().header, children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2685.BxbvS7);
+  obj2.children = intl.string(_modDef2701.BxbvS7);
   items = [React4(Text_Text.Text, obj2)];
   const tmp = closure_6();
   items[1] = React4(TableRowGroup.TableRowGroup, {

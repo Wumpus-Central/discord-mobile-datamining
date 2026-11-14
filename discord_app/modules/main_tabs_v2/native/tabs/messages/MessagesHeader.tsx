@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/MessagesHeader.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
 import ButtonConstants from "../../../../../design/components/Button/native/ButtonConstants.native.tsx";
-import _modDef5961 from "../../../../../../_runtime/metro/05961__.js";
+import _modDef6024 from "../../../../../../_runtime/metro/06024__.js";
 import useScaledTextLineHeight from "../../../../screen/native/useScaledTextLineHeight.android.tsx";
 import HeaderDebugOverlayDefault from "../../../../devtools/design_toggles/HeaderDebugOverlay.native.tsx";
-import _modDef7761 from "../../../../../../_runtime/metro/07761__.js";
+import _modDef7827 from "../../../../../../_runtime/metro/07827__.js";
 import MobileVisualRefreshExperiment from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
 import MessageRequestsButtonDefault from "../../shared_components/MessageRequestsButton.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   headerPanel: {
     position: "relative",
@@ -49,7 +49,7 @@ let obj4 = {
   justifyContent: "space-between",
 };
 obj.headerPanelButtons = {
-  height: fn(5879).SMALL_BUTTON_HEIGHT,
+  height: fn(5942).SMALL_BUTTON_HEIGHT,
   gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
   flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
   alignItems: "center",
@@ -65,7 +65,7 @@ let closure_11 = {
   code: "(function MessagesHeaderTsx1(){let[withSpring,scrollPosition,Reanimated3DefaultSpringConfig]=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0,Reanimated3DefaultSpringConfig)};})",
 };
 let obj5 = {
-  height: fn(5879).SMALL_BUTTON_HEIGHT,
+  height: fn(5942).SMALL_BUTTON_HEIGHT,
   gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
   flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
   alignItems: "center",
@@ -107,8 +107,8 @@ export default noop.memo(function MessagesHeader(height) {
   MessagesHeaderTsx1.__closure = items2;
   MessagesHeaderTsx1.__workletHash = 7032090280260;
   MessagesHeaderTsx1.__initData = tmp5;
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(MessagesHeaderTsx1);
-  let obj2 = require("../../../../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(MessagesHeaderTsx1);
+  let obj2 = require("../../../../../../_runtime/metro/01655__.js");
   const isHomeDrawerEnabled = require("useHomeDrawerGesture").useIsHomeDrawerEnabled();
   const callback = noop.useCallback(() => {
     const rootNavigationRef = height(_undefined2[13]).getRootNavigationRef();
@@ -169,7 +169,7 @@ export default noop.memo(function MessagesHeader(height) {
   });
   const items3 = [closure_6(closure_4, obj6), , ,];
   const obj7 = { style: tmp.headerPanelButtons, children: null };
-  const obj8 = { onPress: callback2, variant: "secondary", size: "sm", icon: _modDef7761, accessibilityLabel: null };
+  const obj8 = { onPress: callback2, variant: "secondary", size: "sm", icon: _modDef7827, accessibilityLabel: null };
   const intl3 = tmp3(1113).intl;
   obj8.accessibilityLabel = intl3.string(require("util").t["5h0QOP"]);
   const items4 = [
@@ -182,7 +182,7 @@ export default noop.memo(function MessagesHeader(height) {
     grow: true,
     shrink: true,
     size: "sm",
-    icon: _modDef5961,
+    icon: _modDef6024,
     onPress: callback1,
     maxFontSizeMultiplier: 1,
     text: null,
@@ -196,7 +196,7 @@ export default noop.memo(function MessagesHeader(height) {
   const obj10 = { style: null };
   const items5 = [tmp.headerBorder, animatedStyle];
   obj10.style = items5;
-  items3[2] = closure_6(_modDef1652.View, obj10);
+  items3[2] = closure_6(_modDef1655.View, obj10);
   items3[3] = tmp16;
   obj5.children = items3;
   return closure_7(closure_4, obj5);

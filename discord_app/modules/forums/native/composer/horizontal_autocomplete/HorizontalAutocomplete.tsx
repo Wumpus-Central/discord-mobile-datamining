@@ -2,7 +2,7 @@
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
@@ -10,7 +10,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
-import _modDef11558 from "../../../../../../_runtime/metro/11558__.js";
+import _modDef11625 from "../../../../../../_runtime/metro/11625__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
@@ -24,12 +24,12 @@ function HorizontalAutocompleteOption(arg0) {
   _require = undefined;
   ({ children, onPress } = arg0);
   const tmp = closure_13();
-  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   _require = sharedValue;
   useMountEffectDefault(() => {
     const result = _undefined.set(timing_timing.withTiming(1));
   });
-  const obj = require("../../../../../../_runtime/metro/01652__.js");
+  const obj = require("../../../../../../_runtime/metro/01655__.js");
   items = [closure_14, sharedValue];
   _require = undefined;
   [tmp6, tmp7] = items;
@@ -44,13 +44,13 @@ function HorizontalAutocompleteOption(arg0) {
   HorizontalAutocompleteTsx1.__workletHash = 16766132942652;
   HorizontalAutocompleteTsx1.__initData = tmp6;
   const obj3 = { onPress, children: null };
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     HorizontalAutocompleteTsx1,
   );
   const obj4 = { style: null, children };
   const items2 = [tmp.horizontalAutocompleteOption, animatedStyle];
   obj4.style = items2;
-  obj3.children = closure_11(_modDef1652.View, obj4);
+  obj3.children = closure_11(_modDef1655.View, obj4);
   return closure_11(closure_3, obj3);
 }
 get_ActivityIndicator = fn(17);
@@ -59,7 +59,7 @@ const Constants = fn(1072);
 ({ ChannelTypes: closure_10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   emoji: { width: 32, height: 32 },
   emojiImage: { resizeMode: "contain" },
@@ -176,17 +176,17 @@ export default {
     channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef11558;
+      let channelIconWithGuild = _modDef11625;
     } else {
-      channelIconWithGuild = tmp2(7968).getChannelIconWithGuild(channel, tmp5);
-      const tmp2Result = tmp2(7968);
+      channelIconWithGuild = tmp2(8033).getChannelIconWithGuild(channel, tmp5);
+      const tmp2Result = tmp2(8033);
     }
     const tmp = closure_13();
     const tmp8 = closure_11(channel(1187).Icon, { source: channelIconWithGuild });
     const obj = { onPress: channel.onPress, children: null };
     items = [tmp8];
-    const channelName = channel(5891).computeChannelName(channel, UserStore, RelationshipStore);
-    items[1] = closure_11(channel(5866).Text, {
+    const channelName = channel(5954).computeChannelName(channel, UserStore, RelationshipStore);
+    items[1] = closure_11(channel(5929).Text, {
       style: tmp.channelName,
       variant: "body-sm/semibold",
       children: channelName,

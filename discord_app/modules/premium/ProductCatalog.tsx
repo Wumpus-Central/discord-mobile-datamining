@@ -4,64 +4,64 @@ import PerksStateUtils from "perks_state/PerksStateUtils.tsx";
 import OverridePremiumTypeStore from "OverridePremiumTypeStore.tsx";
 
 require = fn;
-const PremiumTypes = fn(1387).PremiumTypes;
+const PremiumTypes = fn(1390).PremiumTypes;
 const logger = new LoggerDefault("ProductCatalog.tsx");
 const obj = {};
 const items = [
-  fn(1398).Perk.ANIMATED_EMOJIS,
-  fn(1398).Perk.EMOJIS_EVERYWHERE,
-  fn(1398).Perk.STICKERS_EVERYWHERE,
-  fn(1398).Perk.PROFILE_BADGES,
-  fn(1398).Perk.VIDEO_FILTER_ASSETS,
-  fn(1398).Perk.INCREASED_VIDEO_UPLOAD_QUALITY,
-  fn(1398).Perk.INCREASED_FILE_UPLOAD_SIZE,
-  fn(1398).Perk.APP_ICONS,
+  fn(1401).Perk.ANIMATED_EMOJIS,
+  fn(1401).Perk.EMOJIS_EVERYWHERE,
+  fn(1401).Perk.STICKERS_EVERYWHERE,
+  fn(1401).Perk.PROFILE_BADGES,
+  fn(1401).Perk.VIDEO_FILTER_ASSETS,
+  fn(1401).Perk.INCREASED_VIDEO_UPLOAD_QUALITY,
+  fn(1401).Perk.INCREASED_FILE_UPLOAD_SIZE,
+  fn(1401).Perk.APP_ICONS,
 ];
 const tmp2 = new LoggerDefault("ProductCatalog.tsx");
 obj[PremiumTypes.TIER_0] = new Set(items);
 const items1 = [
-  fn(1398).Perk.ANIMATED_EMOJIS,
-  fn(1398).Perk.EMOJIS_EVERYWHERE,
-  fn(1398).Perk.ANIMATED_AVATAR,
-  fn(1398).Perk.CUSTOM_DISCRIMINATOR,
-  fn(1398).Perk.PROFILE_BADGES,
-  fn(1398).Perk.BOOST_DISCOUNT,
-  fn(1398).Perk.STREAM_MID_QUALITY,
-  fn(1398).Perk.INCREASED_VIDEO_UPLOAD_QUALITY,
-  fn(1398).Perk.INCREASED_FILE_UPLOAD_SIZE,
-  fn(1398).Perk.APP_ICONS,
+  fn(1401).Perk.ANIMATED_EMOJIS,
+  fn(1401).Perk.EMOJIS_EVERYWHERE,
+  fn(1401).Perk.ANIMATED_AVATAR,
+  fn(1401).Perk.CUSTOM_DISCRIMINATOR,
+  fn(1401).Perk.PROFILE_BADGES,
+  fn(1401).Perk.BOOST_DISCOUNT,
+  fn(1401).Perk.STREAM_MID_QUALITY,
+  fn(1401).Perk.INCREASED_VIDEO_UPLOAD_QUALITY,
+  fn(1401).Perk.INCREASED_FILE_UPLOAD_SIZE,
+  fn(1401).Perk.APP_ICONS,
 ];
 const set = new Set(items);
 obj[PremiumTypes.TIER_1] = new Set(items1);
 const items2 = [
-  fn(1398).Perk.ANIMATED_EMOJIS,
-  fn(1398).Perk.EMOJIS_EVERYWHERE,
-  fn(1398).Perk.STICKERS_EVERYWHERE,
-  fn(1398).Perk.SOUNDBOARD_EVERYWHERE,
-  fn(1398).Perk.CUSTOM_CALL_SOUNDS,
-  fn(1398).Perk.ANIMATED_AVATAR,
-  fn(1398).Perk.CUSTOM_DISCRIMINATOR,
-  fn(1398).Perk.PREMIUM_GUILD_MEMBER_PROFILE,
-  fn(1398).Perk.PROFILE_BADGES,
-  fn(1398).Perk.PROFILE_PREMIUM_FEATURES,
-  fn(1398).Perk.CLIENT_THEMES,
-  fn(1398).Perk.BOOST_DISCOUNT,
-  fn(1398).Perk.FREE_BOOSTS,
-  fn(1398).Perk.STREAM_MID_QUALITY,
-  fn(1398).Perk.STREAM_HIGH_QUALITY,
-  fn(1398).Perk.INSTALL_PREMIUM_APPLICATIONS,
-  fn(1398).Perk.VIDEO_FILTER_ASSETS,
-  fn(1398).Perk.INCREASED_GUILD_LIMIT,
-  fn(1398).Perk.INCREASED_MESSAGE_LENGTH,
-  fn(1398).Perk.INCREASED_VIDEO_UPLOAD_QUALITY,
-  fn(1398).Perk.INCREASED_FILE_UPLOAD_SIZE,
-  fn(1398).Perk.APP_ICONS,
-  fn(1398).Perk.PREMIUM_COLLECTIBLES,
-  fn(1398).Perk.PREMIUM_TENURE_BADGE,
+  fn(1401).Perk.ANIMATED_EMOJIS,
+  fn(1401).Perk.EMOJIS_EVERYWHERE,
+  fn(1401).Perk.STICKERS_EVERYWHERE,
+  fn(1401).Perk.SOUNDBOARD_EVERYWHERE,
+  fn(1401).Perk.CUSTOM_CALL_SOUNDS,
+  fn(1401).Perk.ANIMATED_AVATAR,
+  fn(1401).Perk.CUSTOM_DISCRIMINATOR,
+  fn(1401).Perk.PREMIUM_GUILD_MEMBER_PROFILE,
+  fn(1401).Perk.PROFILE_BADGES,
+  fn(1401).Perk.PROFILE_PREMIUM_FEATURES,
+  fn(1401).Perk.CLIENT_THEMES,
+  fn(1401).Perk.BOOST_DISCOUNT,
+  fn(1401).Perk.FREE_BOOSTS,
+  fn(1401).Perk.STREAM_MID_QUALITY,
+  fn(1401).Perk.STREAM_HIGH_QUALITY,
+  fn(1401).Perk.INSTALL_PREMIUM_APPLICATIONS,
+  fn(1401).Perk.VIDEO_FILTER_ASSETS,
+  fn(1401).Perk.INCREASED_GUILD_LIMIT,
+  fn(1401).Perk.INCREASED_MESSAGE_LENGTH,
+  fn(1401).Perk.INCREASED_VIDEO_UPLOAD_QUALITY,
+  fn(1401).Perk.INCREASED_FILE_UPLOAD_SIZE,
+  fn(1401).Perk.APP_ICONS,
+  fn(1401).Perk.PREMIUM_COLLECTIBLES,
+  fn(1401).Perk.PREMIUM_TENURE_BADGE,
 ];
 const set1 = new Set(items1);
 obj[PremiumTypes.TIER_2] = new Set(items2);
-const items3 = [fn(1398).Perk.BOOST_DISCOUNT, fn(1398).Perk.FREE_BOOSTS, fn(1398).Perk.PREMIUM_TENURE_BADGE];
+const items3 = [fn(1401).Perk.BOOST_DISCOUNT, fn(1401).Perk.FREE_BOOSTS, fn(1401).Perk.PREMIUM_TENURE_BADGE];
 const set3 = new Set(items3);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/ProductCatalog.tsx");

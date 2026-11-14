@@ -1,25 +1,25 @@
 // discord_app/design/components/TagListInput/native/TagListInput.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
 import useInitialValueDefault from "../../../../hooks/useInitialValue.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
-import _modDef7467 from "../../../../../_runtime/metro/07467__.js";
+import _modDef7533 from "../../../../../_runtime/metro/07533__.js";
 import useBottomSheetKeyboardHandlingDefault from "../../Sheet/native/useBottomSheetKeyboardHandling.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const TextInput_TextInputDefault = tmp18(8113);
+const TextInput_TextInputDefault = tmp18(8179);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6, StyleSheet: metroImportDefault } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let closure_10 = createStyles.createStyles(() => {
   const obj = {
     placeholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },
@@ -70,7 +70,7 @@ let closure_10 = createStyles.createStyles(() => {
 let closure_11 = { x: 0, y: 0.5 };
 let closure_12 = { x: 1, y: 0.5 };
 let closure_13 = ["transparent", "black"];
-createStyles = fn(5243);
+createStyles = fn(5306);
 let closure_14 = createStyles.createStyles(() => {
   const obj = { fill: { flex: 1 }, mask: null, leadingFade: null, leadingCover: null, maskRemainder: null };
   const obj2 = {};
@@ -313,12 +313,12 @@ export default noop.memo(function TagListInput(accessibilityHint) {
     }
   }, items3);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp2(5507).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp2(5570).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = onChangeText;
   }
   if (inActionSheet) {
-    let BottomSheetTextInput = tmp2(8112).BottomSheetTextInput;
+    let BottomSheetTextInput = tmp2(8178).BottomSheetTextInput;
   } else {
     BottomSheetTextInput = TextInput_TextInputDefault;
   }
@@ -345,7 +345,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   }
   closure_129_2 = tmp34;
   const tmp9Result = tmp9(ref.useState(0), 2);
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
   closure_129_3 = sharedValue;
   const items4 = [tmp34, onScroll, sharedValue];
   const callback2 = obj2.useCallback((nativeEvent) => {
@@ -356,7 +356,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       tmp3(nativeEvent);
     }
   }, items4);
-  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
   const items5 = [length, require("spring/spring").withSpring, sharedValue, require("springPresets").springStandard];
   _require = undefined;
   importDefault = undefined;
@@ -377,7 +377,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   TagListInputNativeTsx1.__closure = items6;
   TagListInputNativeTsx1.__workletHash = 825720958529;
   TagListInputNativeTsx1.__initData = tmp37;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(TagListInputNativeTsx1);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(TagListInputNativeTsx1);
   closure_129_4 = animatedStyle;
   const items7 = [tmp34, tmp33, animatedStyle];
   let tmp43 = tmp34;
@@ -392,7 +392,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       const obj5 = { style: null };
       const items1 = [_undefined2.leadingCover, ref];
       obj5.style = items1;
-      items[1] = React5(_modDef1652.View, obj5);
+      items[1] = React5(_modDef1655.View, obj5);
       obj3.children = items;
       const items2 = [React6(hasOwnProperty, obj3)];
       const obj6 = { style: _undefined2.maskRemainder };
@@ -400,7 +400,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       obj2.children = items2;
       obj.maskElement = React6(hasOwnProperty, obj2);
       obj.children = children;
-      tmp = React5(_modDef7467, obj);
+      tmp = React5(_modDef7533, obj);
     }
     return tmp;
   }, items7);
@@ -634,11 +634,11 @@ export default noop.memo(function TagListInput(accessibilityHint) {
   const items13 = [{ minHeight: result, overflow: "hidden" }, style];
   obj12.style = items13;
   const obj8 = { maxHeight: 3 * result1 };
-  const tmp2Result2 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result2 = require("../../../../../_runtime/metro/01655__.js");
   const obj13 = { size: "sm", disabled, isFocused, children: null };
   if (null == icon) {
     const obj14 = { style: tmp.iconLeft, size: "xs", color: "interactive-text-default" };
-    icon = tmp46(tmp2(7760).MagnifyingGlassIcon, obj14);
+    icon = tmp46(tmp2(7826).MagnifyingGlassIcon, obj14);
   }
   const items14 = [icon, obj6.wrap(c8(BottomSheetScrollView, obj7))];
   if (null == footer) {

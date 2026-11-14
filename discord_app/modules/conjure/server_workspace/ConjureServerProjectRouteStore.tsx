@@ -5,7 +5,7 @@ import conjureServerProject from "conjureServerProject.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 require = fn;
-const StaticChannelRoute = fn(5099).StaticChannelRoute;
+const StaticChannelRoute = fn(5162).StaticChannelRoute;
 let map = new Map();
 const Store = initializeDefault.Store;
 class ConjureServerProjectRouteStore extends Store {}
@@ -18,7 +18,7 @@ prototype["getReturnProjectId"] = function getReturnProjectId(id) {
   let tmp2 = null;
   if (null != value) {
     let tmp6 = null;
-    if (obj.conjureServerProjectGuildId(ConjureProjectStore.getProject(value)) === id) {
+    if (obj.isConjureServerProjectIn(ConjureProjectStore.getProject(value), id)) {
       tmp6 = value;
     }
     tmp2 = tmp6;

@@ -1,16 +1,16 @@
 // discord_app/design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: c3, View: closure_4 } = get_ActivityIndicator);
-const ActionSheetDragHandleConstants = fn(7933);
+const ActionSheetDragHandleConstants = fn(7998);
 ({ DRAG_HANDLE_BAR_HEIGHT, DRAG_HANDLE_PADDING, DRAG_HANDLE_HEIGHT } = ActionSheetDragHandleConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   container: { height: DRAG_HANDLE_HEIGHT },
   containerOverlay: { position: "absolute", top: 0, left: 0, right: 0 },
@@ -58,7 +58,7 @@ export const ActionSheetDragHandle = noop.memo(function DragHandle(accessibility
     const obj3 = { style: null };
     const items1 = [tmp3.bar, animatedBarStyles];
     obj3.style = items1;
-    let tmp4Result = jsx(_modDef1652.View, { style: null });
+    let tmp4Result = jsx(_modDef1655.View, { style: null });
   } else {
     const obj4 = { style: tmp3.bar };
     tmp4Result = <React4 style={tmp3.bar} />;

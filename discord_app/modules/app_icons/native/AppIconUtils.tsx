@@ -130,7 +130,7 @@ let closure_16 = async function _setAppIcon(arg0) {
           closure_131_2 = flag;
           c7 = 1;
           c8 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -194,7 +194,7 @@ let closure_16 = async function _setAppIcon(arg0) {
     }
   }
 };
-const AppIconConstants = fn(11112);
+const AppIconConstants = fn(11179);
 ({
   getDefaultIcon: closure_6,
   getIconById: metroImportDefault,
@@ -203,7 +203,7 @@ const AppIconConstants = fn(11112);
 } = AppIconConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, UserSettingsSections: closure_11 } = Constants);
-const PremiumTypes = fn(1387).PremiumTypes;
+const PremiumTypes = fn(1390).PremiumTypes;
 let closure_13 = new LoggerDefault("AppIconUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconUtils.tsx");

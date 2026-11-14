@@ -1,5 +1,5 @@
 // discord_app/design/animation/reanimated/spring/spring.tsx
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import ReanimatedConstants from "../ReanimatedConstants.tsx";
 import reanimated_AccessibilityPreferencesSharedValue from "../AccessibilityPreferencesSharedValue.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -10,8 +10,8 @@ const items = [
   },
   reanimated_AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue,
   ReanimatedConstants.CONFIG_NEVER_ANIMATE,
-  _mod1652.ReduceMotion,
-  _mod1652.withSpring,
+  _mod1655.ReduceMotion,
+  _mod1655.withSpring,
 ];
 let c0;
 let c1;

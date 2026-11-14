@@ -1,6 +1,6 @@
 // discord_app/design/visual-identities/ai/AIShimmer/AIShimmer.native.tsx
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import Text_Text from "../../../components/Text/native/Text.tsx";
 import AIGlyphText from "../AIGlyphText.native.tsx";
 import AIShimmerTypes from "AIShimmerTypes.tsx";
@@ -9,7 +9,7 @@ import createWaveTransition from "createWaveTransition.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function AIShimmerInner(arg0) {
@@ -218,8 +218,8 @@ function ShimmerLayers(pass) {
   AIShimmerNativeTsx9.__closure = items1;
   AIShimmerNativeTsx9.__workletHash = 5793871475453;
   AIShimmerNativeTsx9.__initData = tmp8;
-  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(AIShimmerNativeTsx9);
-  const obj5 = require("../../../../../_runtime/metro/01652__.js");
+  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(AIShimmerNativeTsx9);
+  const obj5 = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [closure_25, crossFadeOpacity2];
   _require = undefined;
   [tmp16, tmp17] = items2;
@@ -233,8 +233,8 @@ function ShimmerLayers(pass) {
   AIShimmerNativeTsx10.__closure = items3;
   AIShimmerNativeTsx10.__workletHash = 4137951391928;
   AIShimmerNativeTsx10.__initData = tmp16;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AIShimmerNativeTsx10);
-  const tmp6Result = require("../../../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(AIShimmerNativeTsx10);
+  const tmp6Result = require("../../../../../_runtime/metro/01655__.js");
   const items4 = [closure_26, derivedValue];
   _require = undefined;
   [tmp19, tmp20] = items4;
@@ -253,8 +253,8 @@ function ShimmerLayers(pass) {
   AIShimmerNativeTsx11.__closure = items5;
   AIShimmerNativeTsx11.__workletHash = 14375697888926;
   AIShimmerNativeTsx11.__initData = tmp19;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AIShimmerNativeTsx11);
-  const tmp6Result4 = require("../../../../../_runtime/metro/01652__.js");
+  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(AIShimmerNativeTsx11);
+  const tmp6Result4 = require("../../../../../_runtime/metro/01655__.js");
   const items6 = [closure_27, derivedValue, clippingWindowWidth2];
   _require = undefined;
   importDefault = undefined;
@@ -274,8 +274,8 @@ function ShimmerLayers(pass) {
   AIShimmerNativeTsx12.__closure = items7;
   AIShimmerNativeTsx12.__workletHash = 1324009353313;
   AIShimmerNativeTsx12.__initData = tmp22;
-  const animatedStyle2 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AIShimmerNativeTsx12);
-  const tmp6Result5 = require("../../../../../_runtime/metro/01652__.js");
+  const animatedStyle2 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(AIShimmerNativeTsx12);
+  const tmp6Result5 = require("../../../../../_runtime/metro/01655__.js");
   const items8 = [closure_28, derivedValue, clippingWindowWidth2];
   _require = undefined;
   importDefault = undefined;
@@ -295,7 +295,7 @@ function ShimmerLayers(pass) {
   AIShimmerNativeTsx13.__workletHash = 1661222839154;
   AIShimmerNativeTsx13.__initData = tmp26;
   const items10 = [pass.slotA];
-  const animatedStyle3 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AIShimmerNativeTsx13);
+  const animatedStyle3 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(AIShimmerNativeTsx13);
   const items11 = [pass.slotB];
   const memo = noop.useMemo(() => waveTransition2.shiftedLineFor(_undefined.slotA), items10);
   const memo1 = noop.useMemo(() => waveTransition2.shiftedLineFor(_undefined.slotB), items11);
@@ -350,11 +350,11 @@ function ShimmerLayers(pass) {
   };
   const items16 = [styles.layer, { width: glyphCount * glyphFontSize }, animatedStyle3];
   obj11.style = items16;
-  obj10.children = closure_7(_modDef1652.View, obj11);
-  obj9.children = closure_7(_modDef1652.View, obj10);
-  items13[2] = closure_7(_modDef1652.View, obj9);
+  obj10.children = closure_7(_modDef1655.View, obj11);
+  obj9.children = closure_7(_modDef1655.View, obj10);
+  items13[2] = closure_7(_modDef1655.View, obj9);
   obj6.children = items13;
-  return closure_8(_modDef1652.View, obj6);
+  return closure_8(_modDef1655.View, obj6);
 }
 function ShimmerTextSlot(arg0) {
   ({ variant, color, animationWidth, clippingWindowWidth, animatedStyles, styles } = arg0);
@@ -375,8 +375,8 @@ function ShimmerTextSlot(arg0) {
   };
   const items1 = [styles.layer, { width: animationWidth }, animatedStyles.plainText];
   obj3.style = items1;
-  obj2.children = metroImportDefault(_modDef1652.View, obj3);
-  const items2 = [metroImportDefault(_modDef1652.View, obj2)];
+  obj2.children = metroImportDefault(_modDef1655.View, obj3);
+  const items2 = [metroImportDefault(_modDef1655.View, obj2)];
   const obj4 = { style: null, children: null };
   const items3 = [styles.window, { width: clippingWindowWidth }, animatedStyles.shiftedOuterWindow];
   obj4.style = items3;
@@ -395,9 +395,9 @@ function ShimmerTextSlot(arg0) {
   };
   const items5 = [styles.layer, { width: animationWidth }, animatedStyles.shiftedText];
   obj6.style = items5;
-  obj5.children = metroImportDefault(_modDef1652.View, obj6);
-  obj4.children = metroImportDefault(_modDef1652.View, obj5);
-  items2[1] = metroImportDefault(_modDef1652.View, obj4);
+  obj5.children = metroImportDefault(_modDef1655.View, obj6);
+  obj4.children = metroImportDefault(_modDef1655.View, obj5);
+  items2[1] = metroImportDefault(_modDef1655.View, obj4);
   obj.children = items2;
   return React5(React6, obj);
 }
@@ -434,7 +434,7 @@ function useAnimatedSlotStyles(clippingWindowWidth) {
   AIShimmerNativeTsx3.__closure = items1;
   AIShimmerNativeTsx3.__workletHash = 1280666156005;
   AIShimmerNativeTsx3.__initData = tmp3;
-  const derivedValue = _mod1652.useDerivedValue(AIShimmerNativeTsx3);
+  const derivedValue = _mod1655.useDerivedValue(AIShimmerNativeTsx3);
   const items2 = [closure_18, derivedValue, clippingWindowWidth];
   c0 = undefined;
   c1 = undefined;
@@ -458,8 +458,8 @@ function useAnimatedSlotStyles(clippingWindowWidth) {
   AIShimmerNativeTsx4.__closure = items3;
   AIShimmerNativeTsx4.__workletHash = 9334787013812;
   AIShimmerNativeTsx4.__initData = tmp11;
-  const animatedStyle = _mod1652.useAnimatedStyle(AIShimmerNativeTsx4);
-  const tmpResult = _mod1652;
+  const animatedStyle = _mod1655.useAnimatedStyle(AIShimmerNativeTsx4);
+  const tmpResult = _mod1655;
   const items4 = [closure_19, derivedValue, clippingWindowWidth];
   c0 = undefined;
   c1 = undefined;
@@ -484,8 +484,8 @@ function useAnimatedSlotStyles(clippingWindowWidth) {
   AIShimmerNativeTsx5.__closure = items5;
   AIShimmerNativeTsx5.__workletHash = 10286408218584;
   AIShimmerNativeTsx5.__initData = tmp15;
-  const animatedStyle1 = _mod1652.useAnimatedStyle(AIShimmerNativeTsx5);
-  const tmpResult5 = _mod1652;
+  const animatedStyle1 = _mod1655.useAnimatedStyle(AIShimmerNativeTsx5);
+  const tmpResult5 = _mod1655;
   const items6 = [closure_20, derivedValue, waveTransition2.SHIFTED_OPACITY];
   c0 = undefined;
   c1 = undefined;
@@ -508,8 +508,8 @@ function useAnimatedSlotStyles(clippingWindowWidth) {
   AIShimmerNativeTsx6.__closure = items7;
   AIShimmerNativeTsx6.__workletHash = 9677475424724;
   AIShimmerNativeTsx6.__initData = tmp19;
-  const animatedStyle2 = _mod1652.useAnimatedStyle(AIShimmerNativeTsx6);
-  const tmpResult6 = _mod1652;
+  const animatedStyle2 = _mod1655.useAnimatedStyle(AIShimmerNativeTsx6);
+  const tmpResult6 = _mod1655;
   const items8 = [closure_21, derivedValue, clippingWindowWidth];
   c0 = undefined;
   c1 = undefined;
@@ -533,8 +533,8 @@ function useAnimatedSlotStyles(clippingWindowWidth) {
   AIShimmerNativeTsx7.__closure = items9;
   AIShimmerNativeTsx7.__workletHash = 15141224175259;
   AIShimmerNativeTsx7.__initData = tmp23;
-  const animatedStyle3 = _mod1652.useAnimatedStyle(AIShimmerNativeTsx7);
-  const tmpResult7 = _mod1652;
+  const animatedStyle3 = _mod1655.useAnimatedStyle(AIShimmerNativeTsx7);
+  const tmpResult7 = _mod1655;
   const items10 = [closure_22, derivedValue, clippingWindowWidth];
   c0 = undefined;
   c1 = undefined;
@@ -559,20 +559,20 @@ function useAnimatedSlotStyles(clippingWindowWidth) {
   AIShimmerNativeTsx8.__closure = items11;
   AIShimmerNativeTsx8.__workletHash = 11355419187929;
   AIShimmerNativeTsx8.__initData = tmp27;
-  const tmpResult8 = _mod1652;
+  const tmpResult8 = _mod1655;
   return {
     plainWindow: animatedStyle,
     plainText: animatedStyle1,
     shiftedOuterWindow: animatedStyle2,
     shiftedInnerWindow: animatedStyle3,
-    shiftedText: _mod1652.useAnimatedStyle(AIShimmerNativeTsx8),
+    shiftedText: _mod1655.useAnimatedStyle(AIShimmerNativeTsx8),
   };
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_10 = createStyles.createStyles((height, height2) => {
   const obj = {
     container: { alignSelf: "flex-start", height },
@@ -619,7 +619,7 @@ let closure_16 = noop.memo(function GlyphBand(glyphChoices) {
   AIShimmerNativeTsx1.__closure = items1;
   AIShimmerNativeTsx1.__workletHash = 11538958195002;
   AIShimmerNativeTsx1.__initData = tmp6;
-  const items2 = [closure_15, _mod1705.scheduleOnRN, tmp3];
+  const items2 = [closure_15, _mod1708.scheduleOnRN, tmp3];
   c0 = undefined;
   c1 = undefined;
   [tmp13, tmp14, tmp15] = items2;
@@ -637,7 +637,7 @@ let closure_16 = noop.memo(function GlyphBand(glyphChoices) {
   AIShimmerNativeTsx2.__closure = items3;
   AIShimmerNativeTsx2.__workletHash = 3832507172693;
   AIShimmerNativeTsx2.__initData = tmp13;
-  const animatedReaction = _mod1652.useAnimatedReaction(AIShimmerNativeTsx1, AIShimmerNativeTsx2);
+  const animatedReaction = _mod1655.useAnimatedReaction(AIShimmerNativeTsx1, AIShimmerNativeTsx2);
   return metroImportDefault(AIGlyphText.AIGlyphText, {
     size,
     color,

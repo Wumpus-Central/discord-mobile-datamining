@@ -1,4 +1,5 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPHandoff.tsx
+import VoicePanelPIPCardThawDefault from "VoicePanelPIPCardThaw.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const size = fn(2);
@@ -13,6 +14,8 @@ class VoicePanelPIPHandoff {
     obj.listeners = set;
     obj.inPIPLayout = 0;
     obj.inFlight = 0;
+    tmp4 = new closure_0(closure_1[1])();
+    obj.cardThaw = tmp4;
     obj.subscribe = function subscribe(arg0) {
       closure_0 = arg0;
       let listeners = closure_0.listeners;

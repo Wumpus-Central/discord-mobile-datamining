@@ -1,18 +1,17 @@
 // discord_app/modules/chat/native/SlowModeIndicator.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import SlowmodeUtils from "../SlowmodeUtils.tsx";
-import TimerIcon from "../../../design/components/Icon/native/redesign/generated/TimerIcon.tsx";
+import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SlowmodeStore from "../../../stores/SlowmodeStore.tsx";
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_7 = createStyles.createStyles(obj);
-let obj3 = { marginLeft: nativeDefault.space.PX_4 };
+const obj3 = { marginLeft: nativeDefault.space.PX_4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/SlowModeIndicator.tsx");
 
@@ -20,17 +19,21 @@ export default noop.memo(function SlowModeIndicator(channel) {
   channel = channel.channel;
   const hasTypingText = channel.hasTypingText;
   const slowmodeType = channel.slowmodeType;
-  let canBypassSlowmode;
+  let visible;
   const tmp = closure_7();
-  items = [canBypassSlowmode];
-  const stateFromStores = channel(slowmodeType[5]).useStateFromStores(items, () =>
+  const ref = visible.useRef(null);
+  const tmp3 = slowmodeType(visible.useState(false), 2);
+  visible = tmp3[0];
+  closure_4 = tmp3[1];
+  items = [closure_4];
+  const stateFromStores = channel(hasTypingText[6]).useStateFromStores(items, () =>
     SlowmodeStore.getSlowmodeCooldownGuess(channel.id, slowmodeType),
   );
-  let obj = channel(slowmodeType[5]);
-  canBypassSlowmode = channel(slowmodeType[6]).useCanBypassSlowmode(channel);
+  let obj = channel(hasTypingText[6]);
+  const canBypassSlowmode = channel(hasTypingText[7]).useCanBypassSlowmode(channel);
   const items1 = [hasTypingText, canBypassSlowmode, stateFromStores];
-  const items2 = [channel.rateLimitPerUser];
-  const memo = stateFromStores.useMemo(() => {
+  const items2 = [channel.rateLimitPerUser, visible];
+  const memo = visible.useMemo(() => {
     if (hasTypingText) {
       if (!canBypassSlowmode) {
         let slowmodeIndicatorText = null;
@@ -39,24 +42,33 @@ export default noop.memo(function SlowModeIndicator(channel) {
     }
     slowmodeIndicatorText = SlowmodeUtils.getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
   }, items1);
-  const callback = stateFromStores.useCallback(() => {
-    const obj2 = { text: null, icon: null };
-    const obj = ToastActionCreatorsDefault;
-    obj2.text = SlowmodeUtils.getSlowmodeDescription(channel.rateLimitPerUser);
-    obj2.icon = TimerIcon.TimerIcon;
-    obj.open("CHANNEL_SLOWMODE_INFO", obj2);
+  const memo1 = visible.useMemo(() => {
+    const obj = {
+      label: SlowmodeUtils.getSlowmodeTooltipLabel(channel.rateLimitPerUser),
+      position: "top",
+      visible,
+      onPress() {
+        return closure_1_4(false);
+      },
+    };
+    return obj;
   }, items2);
-  const obj3 = { onPress: callback, style: tmp.container, children: null };
+  const obj2 = channel(hasTypingText[7]);
+  const tooltip = channel(hasTypingText[8]).useTooltip(ref, memo1);
+  const callback = visible.useCallback(() => {
+    closure_4((arg0) => !arg0);
+  }, []);
+  const obj4 = { ref, onPress: callback, style: tmp.container, children: null };
   const items3 = [
-    closure_5(channel(slowmodeType[10]).Text, {
+    stateFromStores(channel(hasTypingText[10]).Text, {
       lineClamp: 1,
       allowFontScaling: false,
       variant: "body-xs/medium",
       color: "interactive-text-default",
       children: memo,
     }),
-    closure_5(channel(slowmodeType[8]).TimerIcon, { style: tmp.icon, size: "xxs" }),
+    stateFromStores(channel(hasTypingText[11]).TimerIcon, { style: tmp.icon, size: "xxs" }),
   ];
-  obj3.children = items3;
-  return closure_6(channel(slowmodeType[9]).PressableOpacity, obj3);
+  obj4.children = items3;
+  return canBypassSlowmode(channel(hasTypingText[9]).PressableOpacity, obj4);
 });

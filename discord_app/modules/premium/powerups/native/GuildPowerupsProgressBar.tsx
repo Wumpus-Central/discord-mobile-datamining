@@ -1,14 +1,14 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsProgressBar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import openGuildPowerupsModalDefault from "utils/openGuildPowerupsModal.tsx";
 import GuildBoostingProgressBarActionCreators from "../../../guild_boosting/GuildBoostingProgressBarActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildBoostingProgressBarPersistedStore from "../../../guild_boosting/GuildBoostingProgressBarPersistedStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
-import 01652__ from "../../../../../_runtime/metro/01652__.js";
+import 01655__ from "../../../../../_runtime/metro/01655__.js";
 
 const require = globalThis.__r;
 
@@ -19,8 +19,8 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const colors = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
 let result = 2 * nativeDefault.space.PX_4;
-const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
-const createStyles = fn(5243);
+const LinearGradient = module_1655.createAnimatedComponent(LinearGradientDefault);
+const createStyles = fn(5306);
 let obj = { container: { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 }, track: null, fillContainer: null, fill: null, fillShadow: null, textContainer: null, headerText: null, rightContent: null, descriptionText: null };
 const obj3 = { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.track = { height: 30, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, justifyContent: "center" };
@@ -84,13 +84,13 @@ export default function GuildPowerupsProgressBar(guildId) {
     num2 = Math.min(stateFromStores1 / tmp6 * 100, 100);
   }
   const obj2 = require("useStateFromStores");
-  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num2);
-  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
+  sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num2);
+  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
   let num4 = 0;
   if (num2 > 0) {
     num4 = 1;
   }
-  sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num4);
+  sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num4);
   const items5 = [sharedValue, sharedValue1, num2];
   const effect1 = obj3.useEffect(() => {
     const result = sharedValue.set(timing_timing.withTiming(num2, { duration: 500 }));
@@ -105,7 +105,7 @@ export default function GuildPowerupsProgressBar(guildId) {
       c0(num[6]).cancelAnimation(sharedValue1);
     };
   }, items5);
-  const tmp2Result3 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result3 = require("../../../../../_runtime/metro/01655__.js");
   const items6 = [closure_12, sharedValue, sharedValue1];
   _require = undefined;
   importDefault = undefined;
@@ -121,7 +121,7 @@ export default function GuildPowerupsProgressBar(guildId) {
   GuildPowerupsProgressBarTsx1.__workletHash = 14308508651993;
   GuildPowerupsProgressBarTsx1.__initData = tmp13;
   const items8 = [guildId];
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(GuildPowerupsProgressBarTsx1);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(GuildPowerupsProgressBarTsx1);
   const callback = obj3.useCallback(() => {
     const obj = { guildId, analyticsLocation: AnalyticsLocationDefault.GUILD_BOOSTING_SIDEBAR_DISPLAY };
     openGuildPowerupsModalDefault(obj);
@@ -165,7 +165,7 @@ export default function GuildPowerupsProgressBar(guildId) {
   const obj12 = { style: tmp.rightContent, children: null };
   const items12 = [closure_7(require("Text/Text").Text, { variant: "body-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.descriptionText, children: formatToPlainStringResult }), ];
   const obj13 = { variant: "body-xs/semibold", color: "text-default", lineClamp: 1, style: tmp.descriptionText, children: formatToPlainStringResult };
-  const tmp2Result4 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result4 = require("../../../../../_runtime/metro/01655__.js");
   items12[1] = closure_7(require("ChevronSmallRightIcon").ChevronSmallRightIcon, { size: "sm", color: require("native").colors.TEXT_DEFAULT });
   obj12.children = items12;
   items11[1] = closure_8(sharedValue, obj12);

@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/VoicePanelVoiceChannelApp.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../_runtime/metro/01655__.js";
 import useSystemKeyboardHeightDefault from "../../keyboard/native/useSystemKeyboardHeight.native.tsx";
 import VoicePanelStateContextDefault from "VoicePanelStateContext.tsx";
 import useIsConnectedToVoiceChannelDefault from "hooks/useIsConnectedToVoiceChannel.tsx";
@@ -42,7 +42,7 @@ function VoiceChannelAppLayer(applicationId) {
   const items3 = [
     closure_10,
     require("voiceChannelAppLayerLayout").shouldRestoreVoiceChannelAppControls,
-    require("../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01708__.js").scheduleOnRN,
     showControls,
   ];
   _require = undefined;
@@ -63,11 +63,11 @@ function VoiceChannelAppLayer(applicationId) {
   VoicePanelVoiceChannelAppTsx2.__closure = items4;
   VoicePanelVoiceChannelAppTsx2.__workletHash = 6881977336877;
   VoicePanelVoiceChannelAppTsx2.__initData = tmp12;
-  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     VoicePanelVoiceChannelAppTsx1,
     VoicePanelVoiceChannelAppTsx2,
   );
-  const obj2 = require("../../../../_runtime/metro/01652__.js");
+  const obj2 = require("../../../../_runtime/metro/01655__.js");
   const items5 = [
     closure_11,
     require("voiceChannelAppLayerLayout").getVoiceChannelAppLayerInsets,
@@ -97,7 +97,7 @@ function VoiceChannelAppLayer(applicationId) {
   VoicePanelVoiceChannelAppTsx3.__closure = items6;
   VoicePanelVoiceChannelAppTsx3.__workletHash = 7326712047373;
   VoicePanelVoiceChannelAppTsx3.__initData = tmp17;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     VoicePanelVoiceChannelAppTsx3,
   );
   const obj3 = {
@@ -110,7 +110,7 @@ function VoiceChannelAppLayer(applicationId) {
   };
   const items7 = [tmp.layer, animatedStyle];
   obj3.style = items7;
-  return jsx(_modDef1652.View, {
+  return jsx(_modDef1655.View, {
     style: null,
     children: jsx(VoiceChannelAppSurfaceDefault, {
       applicationId: applicationId.applicationId,
@@ -137,9 +137,9 @@ function VoicePanelVoiceChannelAppForChannel(channel) {
   }
   return tmp5;
 }
-const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { layer: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

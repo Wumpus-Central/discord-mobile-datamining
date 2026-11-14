@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/native/InAppMessageSoundsStore.tsx
 import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
-import _mod5158 from "../../../../_runtime/metro/05158__.js";
-import identity from "../../../../_runtime/metro/01254__.js";
+import _mod5221 from "../../../../_runtime/metro/05221__.js";
+import identity from "../../../../_runtime/metro/01258__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const InAppMessageSoundsEnabled = "InAppMessageSoundsEnabled";
@@ -24,5 +24,5 @@ export function setInAppMessageSoundsEnabled(isEnabled) {
   closure_3.setState({ isEnabled });
 }
 export function useInAppMessageSoundsEnabled() {
-  return closure_3((isEnabled) => isEnabled.isEnabled, _mod5158.shallow);
+  return closure_3((isEnabled) => isEnabled.isEnabled, _mod5221.shallow);
 }

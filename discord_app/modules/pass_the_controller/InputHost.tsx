@@ -1,4 +1,5 @@
 // discord_app/modules/pass_the_controller/InputHost.tsx
+import LoggerDefault from "../debug/Logger.tsx";
 import RTCConnection from "../../lib/RTCConnection.tsx";
 import InputEvent from "InputEvent.tsx";
 import PassTheControllerExperimentDefault from "PassTheControllerExperiment.tsx";
@@ -8,12 +9,13 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/pass_the_controller/InputHost.tsx");
 class InputHost {
-  constructor(arg0, arg1, arg2, arg3) {
+  constructor(arg0, arg1, arg2, arg3, arg4) {
     merged = Object.assign({ holderSessionId: null, holderUserId: null });
     merged.pid = fn;
     merged.connection = global;
     merged.guildId = importDefault;
-    merged.onHolderChange = importAll;
+    merged.onGrab = importAll;
+    merged.onDrop = module;
     merged.hook = null;
     _connectHookResult = merged._connectHook(fn);
     _handleKey = merged._handleKey;
@@ -26,11 +28,13 @@ class InputHost {
     merged.grabHandler = _handleGrab.bind(merged);
     _handleDrop = merged._handleDrop;
     merged.dropHandler = _handleDrop.bind(merged);
-    onResult = global.on(closure_0(closure_2[1]).InputEvent.Key, merged.keyHandler);
-    onResult1 = global.on(closure_0(closure_2[1]).InputEvent.MouseButton, merged.mouseButtonHandler);
-    onResult2 = global.on(closure_0(closure_2[1]).InputEvent.MouseMove, merged.mouseMoveHandler);
-    onResult3 = global.on(closure_0(closure_2[1]).InputEvent.Grab, merged.grabHandler);
-    onResult4 = global.on(closure_0(closure_2[1]).InputEvent.Drop, merged.dropHandler);
+    tmp2 = new closure_1(closure_2[1])("InputHost");
+    merged.logger = tmp2;
+    onResult = global.on(closure_0(closure_2[2]).InputEvent.Key, merged.keyHandler);
+    onResult1 = global.on(closure_0(closure_2[2]).InputEvent.MouseButton, merged.mouseButtonHandler);
+    onResult2 = global.on(closure_0(closure_2[2]).InputEvent.MouseMove, merged.mouseMoveHandler);
+    onResult3 = global.on(closure_0(closure_2[2]).InputEvent.Grab, merged.grabHandler);
+    onResult4 = global.on(closure_0(closure_2[2]).InputEvent.Drop, merged.dropHandler);
     setHostingResult = global.setHosting(true);
     return merged;
   }
@@ -68,7 +72,7 @@ prototype["_connectHook"] = function _connectHook(pid) {
             c1 = 1;
             c2 = 1;
             const obj5 = {
-              value: pid(c2[2]).connectToHook(pid, _handleHookConnect.bind(self), () => {}),
+              value: pid(c2[3]).connectToHook(pid, _handleHookConnect.bind(self), () => {}),
               done: false,
             };
             return obj5;
@@ -122,15 +126,17 @@ prototype["_handleGrab"] = function _handleGrab(holderUserId, holderSessionId) {
   self.holderUserId = holderUserId;
   const connection4 = self.connection;
   connection4.sendGrabAllow(holderSessionId);
-  self.onHolderChange(RTCConnection.castUserId(holderUserId.toString()));
+  self.onGrab(RTCConnection.castUserId(holderUserId.toString()));
   tmp = null != this.holderSessionId && holderUserId === self.holderUserId;
 };
 prototype["_handleDrop"] = function _handleDrop(arg0) {
   const self = this;
+  const logger = this.logger;
+  logger.log("Received drop for session " + arg0);
   if (arg0 === this.holderSessionId) {
     self.holderSessionId = null;
     self.holderUserId = null;
-    self.onHolderChange(null);
+    self.onDrop();
   }
 };
 prototype["takeBackController"] = function takeBackController() {
@@ -140,7 +146,7 @@ prototype["takeBackController"] = function takeBackController() {
     connection.sendDrop(self.holderSessionId);
     self.holderSessionId = null;
     self.holderUserId = null;
-    self.onHolderChange(null);
+    self.onDrop();
   }
 };
 prototype["_handleKey"] = function _handleKey(arg0, keycode, down) {

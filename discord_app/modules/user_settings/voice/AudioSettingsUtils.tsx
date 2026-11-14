@@ -8,16 +8,16 @@ import size from "../../../../_runtime/metro/00002__.js";
 const constants = UserSettingsConstants.ProtoAudioSettingsContextTypes;
 let result = size.fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
 
-export function snapVolumeToDefault(USER, DEFAULT) {
+export function snapVolumeToDefault(effectiveVolume, DEFAULT) {
   if (DEFAULT === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-    USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.STREAM;
+    let USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.STREAM;
   } else {
     USER = AudioSettingsDefaultVolumes.AudioSettingsDefaultVolumes.USER;
   }
-  let tmp3 = USER;
+  let tmp3 = effectiveVolume;
   const result = PerceptualVolumeUtils.amplitudeToPerceptual(USER);
   const tmpResult = PerceptualVolumeUtils;
-  if (Math.abs(result - tmpResult2.amplitudeToPerceptual(USER)) < 1) {
+  if (Math.abs(result - tmpResult2.amplitudeToPerceptual(effectiveVolume)) < 1) {
     tmp3 = USER;
   }
   return tmp3;

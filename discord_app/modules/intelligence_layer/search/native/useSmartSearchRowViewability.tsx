@@ -10,18 +10,18 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchRowViewability.tsx");
 
 export function useSmartSearchRowViewability() {
-  const currentNavigationRouteName = stateFromStores(5429).useCurrentNavigationRouteName();
-  const context = noop.useContext(stateFromStores(14737).SwipeForMemberListContext);
-  const obj = stateFromStores(5429);
-  const isFocused = stateFromStores(1500).useIsFocused();
+  const currentNavigationRouteName = stateFromStores(5492).useCurrentNavigationRouteName();
+  const context = noop.useContext(stateFromStores(14850).SwipeForMemberListContext);
+  const obj = stateFromStores(5492);
+  const isFocused = stateFromStores(1503).useIsFocused();
   let isChatLockedOpen = useChatLayoutDefault().isChatLockedOpen;
-  const obj3 = stateFromStores(1500);
-  let tmp6 = null != stateFromStores(5429).coerceChannelRoute({ name: currentNavigationRouteName });
+  const obj3 = stateFromStores(1503);
+  let tmp6 = null != stateFromStores(5492).coerceChannelRoute({ name: currentNavigationRouteName });
   if (!tmp6) {
     if (isChatLockedOpen) {
       const obj5 = { name: currentNavigationRouteName };
-      isChatLockedOpen = null != tmp(5429).coerceGuildsRoute(obj5);
-      const tmpResult = tmp(5429);
+      isChatLockedOpen = null != tmp(5492).coerceGuildsRoute(obj5);
+      const tmpResult = tmp(5492);
     }
     tmp6 = isChatLockedOpen;
   }
@@ -38,7 +38,7 @@ export function useSmartSearchRowViewability() {
       SearchSessionAnalyticsManagerDefault,
     );
   }, items);
-  const obj4 = stateFromStores(5429);
+  const obj4 = stateFromStores(5492);
   const items1 = [AppStateStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items1, () => {
     state = state.getState();
@@ -50,7 +50,7 @@ export function useSmartSearchRowViewability() {
   }, items2);
   const effect2 = noop.useEffect(
     () => () => {
-      closure_1_1(14651).setIsRowViewable(false, closure_1_1(14649));
+      closure_1_1(14764).setIsRowViewable(false, closure_1_1(14762));
     },
     [],
   );

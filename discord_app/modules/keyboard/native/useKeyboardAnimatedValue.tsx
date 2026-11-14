@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const Easing = fn(1652).Easing;
+const Easing = fn(1655).Easing;
 const bezierResult = Easing.bezier(0.2, 0, 0, 1);
 let c3 = bezierResult;
 const size = fn(2);
@@ -19,7 +19,7 @@ export default function useKeyboardAnimatedValue(UNDETERMINED) {
   if (arg1 === undefined) {
     flag = true;
   }
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(UNDETERMINED);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(UNDETERMINED);
   items = [sharedValue, UNDETERMINED, flag];
   const effect = sharedValue.useEffect(() => {
     if (flag) {

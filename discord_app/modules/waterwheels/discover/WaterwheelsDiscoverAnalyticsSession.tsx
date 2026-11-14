@@ -1,5 +1,5 @@
 // discord_app/modules/waterwheels/discover/WaterwheelsDiscoverAnalyticsSession.tsx
-import v1 from "../../../../_runtime/01266_v1.js";
+import v1 from "../../../../_runtime/01269_v1.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
@@ -127,11 +127,11 @@ prototype["trackSeenBatch"] = function trackSeenBatch(dwellItems) {
     });
   }
 };
-prototype["trackAction"] = function trackAction(dependencyMap, discoverActionParameters, arg2) {
+prototype["trackAction"] = function trackAction(dependencyMap, discoverActionParameters) {
   const self = this;
   const parameters = discoverActionParameters;
-  let flag = arg2;
-  if (arg2 === undefined) {
+  let flag = identity;
+  if (identity === undefined) {
     flag = false;
   }
   c3 = undefined;

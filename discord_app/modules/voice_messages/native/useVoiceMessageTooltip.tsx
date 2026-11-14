@@ -1,13 +1,9 @@
 // discord_app/modules/voice_messages/native/useVoiceMessageTooltip.tsx
 import util from "../../../intl/index.native.tsx";
-import useKeyboardIsOpen from "../../keyboard/native/useKeyboardIsOpen.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import subscribeToKeyboardUIStore from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
-
-const require = globalThis.__r;
 
 require = fn;
-const VoiceMessagesUIStore = fn(14458);
+const VoiceMessagesUIStore = fn(14570);
 ({
   hideVoiceMessagesTooltip: closure_4,
   showVoiceMessagesTooltip: hasOwnProperty,
@@ -18,10 +14,16 @@ const result = size.fileFinishedImporting("modules/voice_messages/native/useVoic
 
 export default function useVoiceMessageTooltip() {
   const ref = noop.useRef(null);
-  const tmp2 = closure_6((showVoiceMessagesTooltip) => showVoiceMessagesTooltip.showVoiceMessagesTooltip);
-  _require = tmp2;
-  items = [tmp2];
-  const items1 = [tmp2];
+  targetBottomInset = targetBottomInset(14665)().targetBottomInset;
+  let tmp3 = targetBottomInset(6836)(targetBottomInset);
+  if (tmp3 == null) {
+    tmp3 = targetBottomInset;
+  }
+  targetBottomInset = tmp3;
+  const tmp4 = closure_6((showVoiceMessagesTooltip) => showVoiceMessagesTooltip.showVoiceMessagesTooltip);
+  dependencyMap = tmp4;
+  items = [tmp4];
+  const items1 = [targetBottomInset, tmp3];
   const memo = noop.useMemo(() => {
     const obj = { position: "top", label: null, visible: null };
     const intl = util.intl;
@@ -30,24 +32,22 @@ export default function useVoiceMessageTooltip() {
     return obj;
   }, items);
   const effect = noop.useEffect(() => {
-    if (keyboardIsOpen) {
-      keyboardIsOpen = useKeyboardIsOpen.getKeyboardIsOpen({ includeCustomKeyboard: true });
-      closure_1 = subscribeToKeyboardUIStore(function keyboardChangeListener() {
-        if (closure_0 !== obj.getKeyboardIsOpen({ includeCustomKeyboard: true })) {
-          closure_2_4();
-        }
-        obj = closure_0(dependencyMap[4]);
-      });
+    if (targetBottomInset !== targetBottomInset) {
+      React4();
+    }
+  }, items1);
+  const items2 = [tmp4];
+  const effect1 = noop.useEffect(() => {
+    if (closure_2) {
       const _setTimeout = setTimeout;
       const timeout = setTimeout(() => {
         closure_1_4();
       }, 2000);
       return () => {
-        clearTimeout(closure_2);
-        closure_1();
+        clearTimeout(closure_0);
       };
     }
-  }, items1);
-  const tooltip = require("useTooltip").useTooltip(ref, memo);
+  }, items2);
+  const tooltip = targetBottomInset(9426).useTooltip(ref, memo);
   return { tooltipTargetRef: ref, showVoiceMessagesTooltip };
 }

@@ -1,13 +1,13 @@
 // discord_app/modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx
 import util from "../../../intl/index.native.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef3369 from "../ManualReview.messages.js";
+import _modDef3417 from "../ManualReview.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(6769).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(6832).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
@@ -21,9 +21,9 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
         variant: "body-md/normal",
         color: "text-link",
         onPress() {
-          const obj = closure_1_1(8124);
+          const obj = closure_1_1(8190);
           const intl = closure_1_0(1113).intl;
-          return obj.openUrl(closure_1_1(2185).getArticleURL(intl.string(closure_1_1(3369).agiNYw)));
+          return obj.openUrl(closure_1_1(2188).getArticleURL(intl.string(closure_1_1(3417).agiNYw)));
         },
         children,
       },
@@ -32,10 +32,10 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
   }
   let obj = { title: null, content: null, actions: null, trackingProps: null };
   let intl = util.intl;
-  obj.title = intl.string(_modDef3369.AA3xYb);
+  obj.title = intl.string(_modDef3417.AA3xYb);
   const intl2 = util.intl;
   const format = intl2.format;
-  const tmp4 = _modDef3369;
+  const tmp4 = _modDef3417;
   if (teenAgeRange.decidedPassed) {
     if (teenAgeRange == null) {
       teenAgeRange = FALLBACK_TEEN_AGE_RANGE;

@@ -1,11 +1,11 @@
 // discord_app/modules/share/native/ShareAttachments.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05830_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05893_LinearGradient.js";
 import utils_UploadUtils from "../../../utils/native/UploadUtils.tsx";
 import AttachmentPreviewDefault from "../../media/native/AttachmentPreview.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import 01652__ from "../../../../_runtime/metro/01652__.js";
+import 01655__ from "../../../../_runtime/metro/01655__.js";
 
 const require = globalThis.__r;
 
@@ -13,9 +13,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
+const LinearGradient = module_1655.createAnimatedComponent(LinearGradientDefault);
 let obj = { duration: 300, easing: fn(1187).STANDARD_EASING };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { containerRevamp: { marginHorizontal: -nativeDefault.space.PX_16 }, attachmentPreviewContentContainer: null, attachmentPreviewContentContainerRevamp: null, attachmentPreview: null, leftGradient: null, rightGradient: null, gradient: null };
 let obj4 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.attachmentPreviewContentContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -41,12 +41,12 @@ export default function ShareAttachments(arg0) {
   }
   let tmp = closure_9();
   _require = tmp;
-  obj = require("../../../../_runtime/metro/01652__.js");
+  obj = require("../../../../_runtime/metro/01655__.js");
   const sharedValue = obj.useSharedValue(0);
-  const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj2 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj3 = require("../../../../_runtime/metro/01652__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const obj2 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj3 = require("../../../../_runtime/metro/01655__.js");
   items = [closure_10, require("timing/timing").withTiming, sharedValue, obj];
   _require = undefined;
   importDefault = undefined;
@@ -67,8 +67,8 @@ export default function ShareAttachments(arg0) {
   ShareAttachmentsTsx1.__closure = items1;
   ShareAttachmentsTsx1.__workletHash = 2089299746555;
   ShareAttachmentsTsx1.__initData = tmp8;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(ShareAttachmentsTsx1);
-  const obj4 = require("../../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(ShareAttachmentsTsx1);
+  const obj4 = require("../../../../_runtime/metro/01655__.js");
   const tmp7 = obj;
   const items2 = [closure_11, require("timing/timing").withTiming, sharedValue, sharedValue2, sharedValue1, tmp7];
   _require = undefined;
@@ -94,8 +94,8 @@ export default function ShareAttachments(arg0) {
   ShareAttachmentsTsx2.__closure = items3;
   ShareAttachmentsTsx2.__workletHash = 8432492365025;
   ShareAttachmentsTsx2.__initData = tmp13;
-  const animatedStyle1 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(ShareAttachmentsTsx2);
-  const tmp2Result = require("../../../../_runtime/metro/01652__.js");
+  const animatedStyle1 = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(ShareAttachmentsTsx2);
+  const tmp2Result = require("../../../../_runtime/metro/01655__.js");
   const items4 = [closure_12, sharedValue, sharedValue1, sharedValue2];
   _require = undefined;
   importDefault = undefined;
@@ -114,7 +114,7 @@ export default function ShareAttachments(arg0) {
   ShareAttachmentsTsx3.__workletHash = 11612093533242;
   ShareAttachmentsTsx3.__initData = tmp20;
   const items6 = [sharedValue2];
-  const tmp2Result2 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result2 = require("../../../../_runtime/metro/01655__.js");
   const items7 = [sharedValue1];
   const callback = noop.useCallback((nativeEvent) => {
     const result = _undefined3.set(nativeEvent.nativeEvent.layout.width);
@@ -177,7 +177,7 @@ export default function ShareAttachments(arg0) {
       obj.children = hasOwnProperty(tmp, size);
       return hasOwnProperty(View, obj, index);
     });
-    items11[2] = closure_5(module_1652.ScrollView, obj8);
+    items11[2] = closure_5(module_1655.ScrollView, obj8);
     obj5.children = items11;
     tmp34Result = closure_6(c4, obj5);
   }

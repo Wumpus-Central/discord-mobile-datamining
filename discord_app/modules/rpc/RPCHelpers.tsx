@@ -2,7 +2,7 @@
 import applyDefault from "../../../_runtime/00012_apply.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import UrlDefault from "../../../_runtime/01381_Url.js";
+import UrlDefault from "../../../_runtime/01383_Url.js";
 import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import transformUserDefault from "helpers/transformUser.tsx";
@@ -245,8 +245,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(5096).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6698);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(5159).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6761);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1072);
 ({
@@ -489,7 +489,7 @@ export function transformChannel(channel, result, arg2) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(6288).getName(dependencyMap, id.id, user),
+            nick: closure_1(6351).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -498,7 +498,7 @@ export function transformChannel(channel, result, arg2) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(7237)(user);
+          obj.user = closure_1(7301)(user);
           return obj;
         }
       });

@@ -1,5 +1,5 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerItemTransformPresenter.tsx
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import getMediaViewerStateForScreenDefault from "../getMediaViewerStateForScreen.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -175,8 +175,8 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
   let items2 = [
     c9,
     entranceAnimationDriver,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
-    require("../../../../../_runtime/metro/01652__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
     width2,
     width,
     height2,
@@ -240,19 +240,19 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
   MediaViewerItemTransformPresenterTsx2.__closure = items3;
   MediaViewerItemTransformPresenterTsx2.__workletHash = 7865873276369;
   MediaViewerItemTransformPresenterTsx2.__initData = tmp23;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     MediaViewerItemTransformPresenterTsx2,
   );
   const tmp22 = c8;
-  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult = require("../../../../../_runtime/metro/01655__.js");
   let items4 = [
     c10,
     entranceAnimationDriver,
     tmp22,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     width2,
     width,
-    require("../../../../../_runtime/metro/01652__.js").Extrapolation,
+    require("../../../../../_runtime/metro/01655__.js").Extrapolation,
     height2,
     height,
   ];
@@ -291,7 +291,7 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
   MediaViewerItemTransformPresenterTsx3.__workletHash = 10330717925602;
   MediaViewerItemTransformPresenterTsx3.__initData = tmp36;
   const items6 = [windowWidth, windowHeight, width, height];
-  const animatedStyle1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     MediaViewerItemTransformPresenterTsx3,
   );
   const memo = obj3.useMemo(() => {
@@ -310,8 +310,8 @@ export default function MediaViewerItemTransformPresenter(windowHeight) {
   const obj10 = { style: null, children: items1 };
   const items8 = [StyleSheet.absoluteFill, animatedStyle1];
   obj10.style = items8;
-  obj9.children = jsx(_modDef1652.View, { style: null, children: items1 });
-  obj8.children = jsx(_modDef1652.View, { style: null, children: null });
+  obj9.children = jsx(_modDef1655.View, { style: null, children: items1 });
+  obj8.children = jsx(_modDef1655.View, { style: null, children: null });
   obj7.children = <c4 style={memo.child}>{null}</c4>;
   return (
     <c4 collapsable={false} style={memo.container}>

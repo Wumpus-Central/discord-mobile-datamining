@@ -67,22 +67,21 @@ class QuestDecisionRoundtripTracker {
   }
 }
 const prototype = QuestDecisionRoundtripTracker.prototype;
-prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource, arg2) {
+prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endpoint, callerSource) {
   const self = this;
-  let tmp = arg2;
-  if (arg2 === undefined) {
+  let tmp = MOBILE_HOME_DOCK_AREA;
+  if (MOBILE_HOME_DOCK_AREA === undefined) {
     tmp = null;
   }
   const SymbolResult = Symbol();
   c0 = SymbolResult;
   let tmp3 = null;
   if (null != tmp) {
-    const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
-    value = deliveryAdDecisionByPlacement.get(tmp);
-    if (value == null) {
-      value = null;
+    let first = AdDeliveryStore.getAdDecisionsForPlacement(tmp)[0];
+    if (first == null) {
+      first = null;
     }
-    tmp3 = value;
+    tmp3 = first;
   }
   let pendingRequests = this.pendingRequests;
   const result = pendingRequests.set(SymbolResult, {

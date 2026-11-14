@@ -1,10 +1,10 @@
 // discord_app/design/visual-identities/ai/AILoader/AILoader.native.tsx
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../animation/reanimated/timing/timing.tsx";
 import AIGlyphText from "../AIGlyphText.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function Slot(index) {
@@ -15,23 +15,23 @@ function Slot(index) {
   const stagger = index.stagger;
   const tmp = closure_13(size);
   const glyph = tmp;
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   items = [cycle, index, sharedValue, stagger];
   const effect = cycle.useEffect(() => {
     const result = sharedValue.set(0);
     const result1 = c0 * stagger;
-    const obj = _mod1652;
-    const obj2 = _mod1652;
+    const obj = _mod1655;
+    const obj2 = _mod1655;
     const obj3 = timing_timing;
     const result2 = sharedValue.set(
       obj.withDelay(
         result1,
-        obj2.withRepeat(obj3.withTiming(1, { duration: cycle, easing: _mod1652.Easing.linear }, "animate-always"), -1),
+        obj2.withRepeat(obj3.withTiming(1, { duration: cycle, easing: _mod1655.Easing.linear }, "animate-always"), -1),
       ),
     );
     return () => c0(c2[5]).cancelAnimation(sharedValue);
   }, items);
-  let obj = require("../../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../../_runtime/metro/01655__.js");
   const items1 = [closure_14, trackStepAt, sharedValue, size];
   _require = undefined;
   importDefault = undefined;
@@ -52,9 +52,9 @@ function Slot(index) {
   AILoaderNativeTsx2.__workletHash = 5441538311625;
   AILoaderNativeTsx2.__initData = tmp5;
   let obj3 = { style: tmp.slot, children: null };
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AILoaderNativeTsx2);
-  let obj2 = require("../../../../../_runtime/metro/01652__.js");
-  obj3.children = jsx(_modDef1652.View, {
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(AILoaderNativeTsx2);
+  let obj2 = require("../../../../../_runtime/metro/01655__.js");
+  obj3.children = jsx(_modDef1655.View, {
     style: animatedStyle,
     children: closure_7.map((children) =>
       jsx(AIGlyphText.AIGlyphText, { size, color, allowFontScaling: false, style: glyph.glyph, children }, children),
@@ -63,7 +63,7 @@ function Slot(index) {
   return <stagger style={tmp.slot}>{null}</stagger>;
 }
 const View = fn(17).View;
-const AILoaderConstants = fn(13245);
+const AILoaderConstants = fn(13350);
 ({
   AI_LOADER_CYCLE_MS: hasOwnProperty,
   AI_LOADER_GAP_EM: closure_6,
@@ -101,7 +101,7 @@ let items1 = [tmp4, tmp5, tmp6];
 trackStepAt.__closure = items1;
 trackStepAt.__workletHash = 8339432593103;
 trackStepAt.__initData = tmp3;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_13 = createStyles.createStyles((width) => {
   const obj = {
     loader: { flexDirection: "row", gap: width * timestampProducer },
@@ -127,7 +127,7 @@ export const AILoader = noop.memo(function AILoader(size) {
   }
   const accessibilityLabel = size.accessibilityLabel;
   let num2;
-  const reducedMotion = num2.useContext(num(5314).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = num2.useContext(num(5377).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
   num2 = 0;
   if (!reducedMotion.enabled) {

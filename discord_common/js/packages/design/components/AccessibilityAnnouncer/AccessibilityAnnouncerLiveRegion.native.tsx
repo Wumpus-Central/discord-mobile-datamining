@@ -4,8 +4,8 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, Text: closure_0 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const module_5254 = fn(5254);
-const state = module_5254.create(() => ({ message: "delete", version: false }));
+const module_5317 = fn(5317);
+const state = module_5317.create(() => ({ message: "description", version: false }));
 const liveRegion = StyleSheet.create({
   liveRegion: { position: "absolute", top: 0, left: 0, width: 1, height: 1, opacity: 0 },
 });

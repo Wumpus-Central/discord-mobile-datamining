@@ -1,8 +1,8 @@
 // discord_app/modules/forums/ForumPostMediaUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import utils_ColorUtils from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
+import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
@@ -227,7 +227,7 @@ function useForumPostEmbeds(embeds, flag) {
             }
             tmp = null == thumbnail && null != image.images;
           });
-          let found = mapped.filter(tmp(1380).isNotNullish);
+          let found = mapped.filter(tmp(1255).isNotNullish);
         }
         return found;
       }

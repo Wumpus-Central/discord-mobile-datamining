@@ -304,7 +304,7 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
           closure_132_5 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -394,7 +394,7 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
                       let tmp43 = closure_2_26(favoriteChannels.favoriteChannels);
                       let tmp46 = closure_2_27(favoriteChannels.favoriteChannels, tmp7);
                       flag = true;
-                      let obj3 = closure_0(10902);
+                      let obj3 = closure_0(10971);
                       let type;
                       if (tmp31 != null) {
                         type = tmp31.type;
@@ -418,7 +418,7 @@ let closure_36 = async function _addFavoriteChannelsToParent(arg0) {
                     if (flag) {
                       let BoolValue = closure_0(1227).BoolValue;
                       favoriteChannels.guildVisible = BoolValue.create({ value: true });
-                      let obj4 = closure_0(10902);
+                      let obj4 = closure_0(10971);
                       let str = "auto";
                       let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                     }
@@ -464,7 +464,7 @@ let closure_37 = async function _addFavoriteChannels() {
   await "HermesInternal";
   closure_2 = tmp2;
   ({ channelIds: closure_130_0, parentId: closure_130_1, source: closure_130_2 } = closure_0);
-  return "flexDirection";
+  return "Path";
 };
 function removeFavoriteChannel(id, arg1) {
   _require = id;
@@ -581,7 +581,7 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
           const obj4 = {
             update(favoriteChannels) {
               const favoritesCleanupCandidates =
-                favoriteChannels(10904).getFavoritesCleanupCandidates(favoriteChannels);
+                favoriteChannels(10973).getFavoritesCleanupCandidates(favoriteChannels);
               const found = favoritesCleanupCandidates.filter((id) => {
                 let hasItem = set.has(id.id);
                 if (hasItem) {
@@ -599,7 +599,7 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
                   favoriteChannels = arg0.favoriteChannels;
                   let id = item10015.id;
                   delete tmp2[tmp];
-                  let obj2 = favoriteChannels(10902);
+                  let obj2 = favoriteChannels(10971);
                   let result = obj2.trackFavoritesGuildRemoveFromFavorites(
                     item10015.type,
                     closure_1_28(arg0.favoriteChannels),
@@ -607,7 +607,7 @@ let closure_40 = async function _removeInactiveFavoriteThreads(arg0) {
                   continue;
                 }
               }
-              const obj = favoriteChannels(10904);
+              const obj = favoriteChannels(10973);
             },
           };
           c3 = 1;
@@ -781,7 +781,7 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
                   const obj2 = { limit: tmp5, canUpsell: false };
                   let tmp6 = obj2;
                 } else {
-                  const favoritesLimits = closure_0(10876).getFavoritesLimits();
+                  const favoritesLimits = closure_0(10945).getFavoritesLimits();
                   ({ favoriteLimit, canUpsellFavoriteLimit } = favoritesLimits);
                   tmp6 = null;
                   if (closure_0(1196).FavoriteChannelType.CATEGORY !== closure_0(1196).FavoriteChannelType.CATEGORY) {
@@ -797,12 +797,12 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
                     }
                     tmp4Result = closure_1(12);
                   }
-                  const tmpResult = closure_0(10876);
+                  const tmpResult = closure_0(10945);
                 }
                 if (null != tmp6) {
                   const limit = tmp6.limit;
                   if (tmp6.canUpsell) {
-                    closure_1(10878)(limit);
+                    closure_1(10947)(limit);
                   } else {
                     const obj4 = { title: null, body: null };
                     const intl = closure_0(1113).intl;
@@ -810,8 +810,8 @@ let closure_45 = async function _addFavoriteCategory(arg0) {
                     const intl2 = closure_0(1113).intl;
                     const obj5 = { count: limit };
                     obj4.body = intl2.formatToPlainString(closure_0(1113).t.JaIyFi, obj5);
-                    closure_1(6205).show(obj4);
-                    const tmp4Result2 = closure_1(6205);
+                    closure_1(6268).show(obj4);
+                    const tmp4Result2 = closure_1(6268);
                   }
                   return false;
                 } else {
@@ -857,7 +857,7 @@ let closure_46 = async function _addFavoriteChannelsToCategory() {
   await "HermesInternal";
   closure_1 = tmp2;
   ({ channelIds: closure_129_0, categoryName: closure_129_1, source: closure_129_2 } = closure_0);
-  return "flexDirection";
+  return "Path";
 };
 let closure_47 = async function _autoAddJoinedThreadToFavorites(arg0) {
   if (c2 === 2) {
@@ -948,9 +948,9 @@ let closure_47 = async function _autoAddJoinedThreadToFavorites(arg0) {
     }
   }
 };
-const resetFatigueCooldown = fn(5084).resetFatigueCooldown;
-const THREAD_CHANNEL_TYPES = fn(5096).THREAD_CHANNEL_TYPES;
-const FavoritesConstants = fn(5105);
+const resetFatigueCooldown = fn(5147).resetFatigueCooldown;
+const THREAD_CHANNEL_TYPES = fn(5159).THREAD_CHANNEL_TYPES;
+const FavoritesConstants = fn(5168);
 ({
   FAVORITES_AUTO_ADD_THREADS_NEVER: map1,
   FAVORITES_AUTO_ADD_THREADS_OWN_CATEGORY: closure_14,
@@ -1125,10 +1125,10 @@ export function setFavoritesAutoAddJoinedThreads(autoAdd) {
               const intl2 = util.intl;
               const obj2 = { count: tmp14.limit };
               obj.body = intl2.formatToPlainString(util.t.JaIyFi, obj2);
-              tmp10(6205).show(obj);
-              const tmp10Result2 = tmp10(6205);
+              tmp10(6268).show(obj);
+              const tmp10Result2 = tmp10(6268);
             }
-            str = tmp10(10878)(CATEGORY);
+            str = tmp10(10947)(CATEGORY);
             obj5 = applyDefault;
           }
         }
@@ -1407,8 +1407,8 @@ export function setFavoritesGuildVisibilityFromSettings(value) {
   );
   let isFavoritesGuildIdResult = !value;
   if (!value) {
-    isFavoritesGuildIdResult = tmp(5117).isFavoritesGuildId(SelectedGuildStore.getGuildId());
-    const tmpResult = tmp(5117);
+    isFavoritesGuildIdResult = tmp(5180).isFavoritesGuildId(SelectedGuildStore.getGuildId());
+    const tmpResult = tmp(5180);
   }
   if (isFavoritesGuildIdResult) {
     tmp(1099).transitionTo(closure_22.ME);

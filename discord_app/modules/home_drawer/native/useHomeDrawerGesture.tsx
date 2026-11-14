@@ -1,13 +1,13 @@
 // discord_app/modules/home_drawer/native/useHomeDrawerGesture.tsx
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../_runtime/metro/01705__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../_runtime/metro/01708__.js";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../_runtime/05535_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05598_LegacyBaseButton.js";
 import useLaunchPadTypeDefault from "../../launchpad/native/useLaunchPadType.tsx";
 import HomeDrawerAnimations from "HomeDrawerAnimations.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -18,9 +18,9 @@ import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let computeMaxX = fn(18607).computeMaxX;
+let computeMaxX = fn(18736).computeMaxX;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const GestureConstants = fn(11943);
+const GestureConstants = fn(12010);
 ({
   FLING_MIN_DISTANCE: closure_9,
   FLING_MIN_VELOCITY: closure_10,
@@ -28,7 +28,7 @@ const GestureConstants = fn(11943);
   PULL_GESTURE_RESISTANCE,
 } = GestureConstants);
 ({ PULL_GESTURE_SNAP_TIMING: map1, PULL_GESTURE_UNSNAP_TIMING: closure_14 } = GestureConstants);
-const LaunchPadTypes = fn(12307).LaunchPadTypes;
+const LaunchPadTypes = fn(12402).LaunchPadTypes;
 let c16 = 144;
 let result = 144 * (1 - 1 / PULL_GESTURE_RESISTANCE);
 let closure_18 = 48 + result;
@@ -102,17 +102,17 @@ let obj = {
   guildsBarDrawerStyle: null,
   guildsBarPullX: null,
 };
-let Gesture = fn(5535).Gesture;
+let Gesture = fn(5598).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7782);
+let ReanimatedHelperTypes = fn(7848);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7782);
+ReanimatedHelperTypes = fn(7848);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7782);
+ReanimatedHelperTypes = fn(7848);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(7782);
+ReanimatedHelperTypes = fn(7848);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 const size = fn(2);
@@ -136,22 +136,22 @@ export function useHomeGesture() {
   const setPanelX = tmp4.setPanelX;
   const isPanelTouchActive = tmp4.isPanelTouchActive;
   const noteInteraction = tmp4.noteInteraction;
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj2 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj3 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue3 = require("../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj4 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue4 = require("../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj5 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue5 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj6 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue6 = require("../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj7 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue7 = require("../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj8 = require("../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const obj2 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj3 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue3 = require("../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj4 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue4 = require("../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj5 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue5 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const obj6 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue6 = require("../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj7 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue7 = require("../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj8 = require("../../../../_runtime/metro/01655__.js");
   const navigation = require("Link").useNavigation();
   const callback = noop.useCallback((action) => {
     panelX(_undefined2[10]).track(_undefined5.SERVER_DRAWER_INTERACT, { action });
@@ -171,8 +171,8 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx1.__closure = items1;
   useHomeDrawerGestureTsx1.__workletHash = 3177392550602;
   useHomeDrawerGestureTsx1.__initData = tmp14;
-  derivedValue = require("../../../../_runtime/metro/01652__.js").useDerivedValue(useHomeDrawerGestureTsx1);
-  const obj12 = require("../../../../_runtime/metro/01652__.js");
+  derivedValue = require("../../../../_runtime/metro/01655__.js").useDerivedValue(useHomeDrawerGestureTsx1);
+  const obj12 = require("../../../../_runtime/metro/01655__.js");
   let items2 = [closure_21, derivedValue];
   _require = undefined;
   [tmp19, tmp20] = items2;
@@ -191,7 +191,7 @@ export function useHomeGesture() {
     require("timing/timing").withTiming,
     sharedValue7,
     sharedValue3,
-    require("../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01708__.js").scheduleOnRN,
     require("HapticUtils").triggerHapticFeedback,
     require("HapticUtils").HapticFeedbackTypes,
     sharedValue5,
@@ -237,7 +237,7 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx3.__closure = items5;
   useHomeDrawerGestureTsx3.__workletHash = 16083884898345;
   useHomeDrawerGestureTsx3.__initData = tmp22;
-  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     useHomeDrawerGestureTsx2,
     useHomeDrawerGestureTsx3,
   );
@@ -254,14 +254,14 @@ export function useHomeGesture() {
   }
   const tmp21 = sharedValue7;
   tmp40 = tmp39 === sharedValue5.GESTURE_FULL || tmp39 === sharedValue5.GESTURE_EDGE;
-  const tmpResult = require("../../../../_runtime/metro/01652__.js");
+  const tmpResult = require("../../../../_runtime/metro/01655__.js");
   let isFocused = enableHome;
   if (enableHome) {
     isFocused = tmpResult11.useIsFocused();
   }
   tmpResult11 = require("Link");
-  const sharedValue8 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const tmpResult12 = require("../../../../_runtime/metro/01652__.js");
+  const sharedValue8 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const tmpResult12 = require("../../../../_runtime/metro/01655__.js");
   let enablePeekHint = enableHome;
   if (enableHome) {
     enablePeekHint = config.enablePeekHint;
@@ -398,8 +398,8 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx4.__closure = items11;
   useHomeDrawerGestureTsx4.__workletHash = 13135043941592;
   useHomeDrawerGestureTsx4.__initData = tmp54;
-  const derivedValue1 = require("../../../../_runtime/metro/01652__.js").useDerivedValue(useHomeDrawerGestureTsx4);
-  const tmpResult15 = require("../../../../_runtime/metro/01652__.js");
+  const derivedValue1 = require("../../../../_runtime/metro/01655__.js").useDerivedValue(useHomeDrawerGestureTsx4);
+  const tmpResult15 = require("../../../../_runtime/metro/01655__.js");
   let items12 = [isFocused, derivedValue1];
   _require = undefined;
   [tmp59, tmp60] = items12;
@@ -413,8 +413,8 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx5.__closure = items13;
   useHomeDrawerGestureTsx5.__workletHash = 3831081045453;
   useHomeDrawerGestureTsx5.__initData = tmp59;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(useHomeDrawerGestureTsx5);
-  const tmpResult16 = require("../../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(useHomeDrawerGestureTsx5);
+  const tmpResult16 = require("../../../../_runtime/metro/01655__.js");
   let items14 = [drawerOpen, isOpenTarget, isPanelTouchActive, derivedValue1];
   [tmp62, tmp63, tmp64, tmp65] = items14;
   function useHomeDrawerGestureTsx6() {
@@ -449,11 +449,11 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx7.__closure = items17;
   useHomeDrawerGestureTsx7.__workletHash = 818068477594;
   useHomeDrawerGestureTsx7.__initData = tmp66;
-  const animatedReaction1 = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     useHomeDrawerGestureTsx6,
     useHomeDrawerGestureTsx7,
   );
-  const tmpResult17 = require("../../../../_runtime/metro/01652__.js");
+  const tmpResult17 = require("../../../../_runtime/metro/01655__.js");
   let items18 = [ref, derivedValue1, sharedValue4, navigation, 48, tmp21];
   _require = undefined;
   [tmp69, tmp70, tmp71, tmp72, tmp73, tmp74] = items18;
@@ -479,8 +479,8 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx8.__closure = items19;
   useHomeDrawerGestureTsx8.__workletHash = 4744333108989;
   useHomeDrawerGestureTsx8.__initData = tmp69;
-  const derivedValue2 = require("../../../../_runtime/metro/01652__.js").useDerivedValue(useHomeDrawerGestureTsx8);
-  const tmpResult18 = require("../../../../_runtime/metro/01652__.js");
+  const derivedValue2 = require("../../../../_runtime/metro/01655__.js").useDerivedValue(useHomeDrawerGestureTsx8);
+  const tmpResult18 = require("../../../../_runtime/metro/01655__.js");
   const items20 = [
     derivedValue1,
     require("reanimated/AccessibilityPreferencesSharedValue").accessibilityPreferencesSharedValue,
@@ -508,8 +508,8 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx9.__closure = items21;
   useHomeDrawerGestureTsx9.__workletHash = 7013202740043;
   useHomeDrawerGestureTsx9.__initData = tmp76;
-  const derivedValue3 = require("../../../../_runtime/metro/01652__.js").useDerivedValue(useHomeDrawerGestureTsx9);
-  const tmpResult19 = require("../../../../_runtime/metro/01652__.js");
+  const derivedValue3 = require("../../../../_runtime/metro/01655__.js").useDerivedValue(useHomeDrawerGestureTsx9);
+  const tmpResult19 = require("../../../../_runtime/metro/01655__.js");
   const items22 = [animatedStyle, derivedValue3];
   _require = undefined;
   [tmp83, tmp84] = items22;
@@ -523,7 +523,7 @@ export function useHomeGesture() {
   useHomeDrawerGestureTsx10.__closure = items23;
   useHomeDrawerGestureTsx10.__workletHash = 3575476532345;
   useHomeDrawerGestureTsx10.__initData = tmp83;
-  const guildsBarDrawerStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const guildsBarDrawerStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     useHomeDrawerGestureTsx10,
   );
   const items24 = [
@@ -570,7 +570,7 @@ export function useHomeGesture() {
       c6,
       HomeDrawerAnimations.HOME_DRAWER_SETTLE_TIMING,
       c2,
-      _mod1705.scheduleOnRN,
+      _mod1708.scheduleOnRN,
       NavigationRouteUtils.setHomeDrawerState,
     ];
     [tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp18, tmp19, tmp20] = items2;
@@ -593,11 +593,11 @@ export function useHomeGesture() {
       sharedValue7,
       sharedValue4,
       sharedValue5,
-      _mod1652.clamp,
+      _mod1655.clamp,
       derivedValue2,
       12,
       16,
-      _mod1652.withSequence,
+      _mod1655.withSequence,
       timing_timing.withTiming,
       HomeDrawerAnimations.HOME_DRAWER_FLING_THROW_TIMING,
       HomeDrawerAnimations.HOME_DRAWER_FLING_RETURN_TIMING,
@@ -802,7 +802,7 @@ export function useHomeGesture() {
       sharedValue6,
       fireThrow,
       c16,
-      _mod1705.scheduleOnRN,
+      _mod1708.scheduleOnRN,
       HapticUtils.triggerHapticFeedback,
       HapticUtils.HapticFeedbackTypes,
       shouldOpenFromPosition,
@@ -914,7 +914,7 @@ export function useHomeGesture() {
       settleDrawer,
       shouldOpenFromPosition,
       tmp53,
-      _mod1705.scheduleOnRN,
+      _mod1708.scheduleOnRN,
       c9,
       c10,
       c11,
@@ -975,7 +975,7 @@ export function useHomeGesture() {
     return obj;
   }, items25);
   const items26 = [memo1, enableHome, landOnHome];
-  const tmpResult20 = require("../../../../_runtime/metro/01652__.js");
+  const tmpResult20 = require("../../../../_runtime/metro/01655__.js");
   return {
     gesture: memo,
     panelStyles: animatedStyle,

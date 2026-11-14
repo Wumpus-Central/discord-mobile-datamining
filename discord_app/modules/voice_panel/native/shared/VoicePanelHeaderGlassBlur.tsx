@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelHeaderGlassBlur.tsx
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import VisualEffectViewAnimatedDefault from "../../../visual_effect_view/native/VisualEffectViewAnimated.tsx";
@@ -8,13 +8,13 @@ import springPresets from "../../../../design/animation/reanimated/spring/spring
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_6 = createStyles.createStyles({
   blur: { position: "absolute", top: 0, left: 0, right: 0 },
   strokeContainer: {
@@ -28,7 +28,7 @@ let closure_6 = createStyles.createStyles({
   strokeAlt: { height: StyleSheet.hairlineWidth, opacity: 0.8, backgroundColor: "black" },
   strokeAltLight: { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" },
 });
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let closure_7 = PlatformUtils.isAndroid();
 let closure_8 = {
   code: "(function VoicePanelHeaderGlassBlurTsx1(){let[shown,IS_ANDROID]=this.__closure;return{opacity:shown.get()?IS_ANDROID?0.7:1:0};})",
@@ -65,7 +65,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   VoicePanelHeaderGlassBlurTsx1.__closure = items1;
   VoicePanelHeaderGlassBlurTsx1.__workletHash = 4561654385020;
   VoicePanelHeaderGlassBlurTsx1.__initData = tmp4;
-  const animatedStyle = _mod1652.useAnimatedStyle(VoicePanelHeaderGlassBlurTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(VoicePanelHeaderGlassBlurTsx1);
   const items2 = [closure_9, spring_spring.withSpring, shown, springPresets.Reanimated3DefaultSpringConfig];
   c0 = undefined;
   c1 = undefined;
@@ -86,12 +86,12 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   VoicePanelHeaderGlassBlurTsx2.__closure = items3;
   VoicePanelHeaderGlassBlurTsx2.__workletHash = 10192062827186;
   VoicePanelHeaderGlassBlurTsx2.__initData = tmp8;
-  const animatedProps = _mod1652.useAnimatedProps(VoicePanelHeaderGlassBlurTsx2);
+  const animatedProps = _mod1655.useAnimatedProps(VoicePanelHeaderGlassBlurTsx2);
   const tmp14 = useThemeDefault();
   const obj2 = { style: null, children: null };
   const items4 = [tmp.blur, style, animatedStyle];
   obj2.style = items4;
-  const tmp2Result = _mod1652;
+  const tmp2Result = _mod1655;
   const tmp17 = VisualEffectViewAnimatedDefault;
   let str = "light";
   if (tmp2Result3.isThemeDark(tmp14)) {
@@ -112,5 +112,5 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   obj4.children = items7;
   items6[1] = hasOwnProperty(tmp13Result, obj4);
   obj2.children = items6;
-  return hasOwnProperty(_modDef1652.View, obj2);
+  return hasOwnProperty(_modDef1655.View, obj2);
 });

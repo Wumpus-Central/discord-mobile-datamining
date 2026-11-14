@@ -14,7 +14,7 @@ import ThemeStore from "../../ThemeStore.tsx";
 require = fn;
 const SystemThemeState = fn(1195).SystemThemeState;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const constants = fn(1387).AnalyticsPremiumFeatureNames;
+const constants = fn(1390).AnalyticsPremiumFeatureNames;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 

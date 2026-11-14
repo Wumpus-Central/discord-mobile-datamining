@@ -1,19 +1,19 @@
 // discord_app/modules/dice_roll/native/DiceRollBar.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
-const useDiceRollState = fn(14457).useDiceRollState;
+const useDiceRollState = fn(14569).useDiceRollState;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   animatedContainer: { overflow: "hidden" },
   container: {
@@ -46,13 +46,13 @@ export default function DiceRollBar(channelId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => easing.useReducedMotion);
   _require = stateFromStores;
   let obj = require("initialize");
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
   importDefault = sharedValue;
-  let obj2 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let obj2 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
   dependencyMap = sharedValue1;
-  let obj3 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  let obj3 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
   noop = sharedValue2;
   c4 = tmp9;
   let flag;
@@ -79,14 +79,14 @@ export default function DiceRollBar(channelId) {
   const effect1 = noop.useEffect(() => {
     if (c5) {
       if (!c0) {
-        const obj = _mod1652;
-        const obj3 = { duration: 800, easing: _mod1652.Easing.linear };
+        const obj = _mod1655;
+        const obj3 = { duration: 800, easing: _mod1655.Easing.linear };
         const result = _undefined4.set(obj.withRepeat(timing_timing.withTiming(360, obj3), -1, false));
       }
     }
     const result1 = _undefined4.set(0);
   }, items2);
-  const obj4 = require("../../../../_runtime/metro/01652__.js");
+  const obj4 = require("../../../../_runtime/metro/01655__.js");
   const items3 = [
     closure_10,
     stateFromStores,
@@ -135,8 +135,8 @@ export default function DiceRollBar(channelId) {
   DiceRollBarTsx1.__closure = items4;
   DiceRollBarTsx1.__workletHash = 2869558544264;
   DiceRollBarTsx1.__initData = tmp12;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(DiceRollBarTsx1);
-  require("../../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(DiceRollBarTsx1);
+  require("../../../../_runtime/metro/01655__.js");
   const items5 = [closure_11, sharedValue2];
   _require = undefined;
   [tmp21, tmp22] = items5;
@@ -157,18 +157,18 @@ export default function DiceRollBar(channelId) {
   if (null == tmp2) {
     return null;
   } else {
-    const barText = tmp3(14682).getBarText(flag, tmp2.results);
+    const barText = tmp3(14795).getBarText(flag, tmp2.results);
     const obj5 = { style: null, children: null };
     const items7 = [animatedStyle, tmp.animatedContainer];
     obj5.style = items7;
     const obj6 = { style: tmp.container, children: null };
-    const obj7 = { style: tmp23, children: closure_7(tmp3(9369).DiceIcon, { size: "md" }) };
-    const items8 = [closure_7(_modDef1652.View, obj7)];
+    const obj7 = { style: tmp23, children: closure_7(tmp3(9437).DiceIcon, { size: "md" }) };
+    const items8 = [closure_7(_modDef1655.View, obj7)];
     const obj8 = { variant: "body-sm/normal", color: "text-default", children: barText };
-    items8[1] = closure_7(tmp3(5866).Text, obj8);
+    items8[1] = closure_7(tmp3(5929).Text, obj8);
     obj6.children = items8;
     obj5.children = closure_8(c4, obj6);
-    return closure_7(_modDef1652.View, obj5);
+    return closure_7(_modDef1655.View, obj5);
   }
-  const tmp3Result = require("../../../../_runtime/metro/01652__.js");
+  const tmp3Result = require("../../../../_runtime/metro/01655__.js");
 }

@@ -3,10 +3,9 @@ import util from "../../../intl/index.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import StickersUtils from "../StickersUtils.tsx";
 import StickersTypes from "../StickersTypes.tsx";
-import _modDef7829 from "../../../../_runtime/metro/07829__.js";
-import _modDef7830 from "../../../../_runtime/metro/07830__.js";
+import _modDef7895 from "../../../../_runtime/metro/07895__.js";
+import _modDef7896 from "../../../../_runtime/metro/07896__.js";
 import NativeLottieView from "NativeLottieView.tsx";
-import NativeAPNGViewDefault from "../../../components_native/common/NativeAPNGView.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
@@ -37,11 +36,11 @@ export default function Sticker(opaque) {
   } else if (sticker.format_type === StickersTypes.StickerFormat.APNG) {
     const obj = { isPreview: !animated, size };
     str = StickersUtils.getStickerAssetUrl(sticker, obj);
-    const tmpResult6 = StickersUtils;
+    const tmpResult4 = StickersUtils;
   } else {
     const obj2 = { isPreview: !animated, size: PixelRatio.getPixelSizeForLayoutSize(size) };
     str = StickersUtils.getStickerAssetUrl(sticker, obj2);
-    const tmpResult7 = StickersUtils;
+    const tmpResult5 = StickersUtils;
   }
   if (str == null) {
     str = "";
@@ -58,18 +57,18 @@ export default function Sticker(opaque) {
       renderMode: null,
       accessibilityLabel: null,
     };
-    let str4 = sticker.id;
-    if (str4 == null) {
-      str4 = "";
+    let str2 = sticker.id;
+    if (str2 == null) {
+      str2 = "";
     }
-    size1.asset = str4;
+    size1.asset = str2;
     size1.width = size;
     size1.height = size;
     size1.opacity = num;
     const NativeLottieRenderMode = NativeLottieView.NativeLottieRenderMode;
     size1.renderMode = animated ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
     size1.accessibilityLabel = formatToPlainStringResult;
-    return jsx(NativeLottieViewDefault, {
+    jsx(NativeLottieViewDefault, {
       url: str,
       asset: null,
       width: null,
@@ -79,23 +78,7 @@ export default function Sticker(opaque) {
       accessibilityLabel: null,
     });
   } else {
-    if (sticker.format_type === StickersTypes.StickerFormat.APNG) {
-      if ("type" in sticker) {
-        StickersUtils;
-      }
-      const obj4 = { style: null, url: null, name: null, accessibilityLabel: null };
-      const size2 = { height: size, width: size, opacity: num };
-      obj4.style = size2;
-      obj4.url = str;
-      const _HermesInternal = HermesInternal;
-      obj4.name = "" + sticker.id + "." + StickersUtils.getStickerExtensionFromFormatType(sticker.format_type);
-      obj4.accessibilityLabel = formatToPlainStringResult;
-      const obj5 = {};
-      const tmpResult9 = StickersUtils;
-      const merged = Object.assign(obj4);
-      return jsx(NativeAPNGViewDefault, {});
-    }
-    const obj6 = {
+    const obj4 = {
       enableAnimation: animated,
       resizeMode: "contain",
       style: null,
@@ -104,19 +87,19 @@ export default function Sticker(opaque) {
       accessible: true,
       accessibilityLabel: null,
     };
-    const size3 = { height: size, width: size, opacity: num };
-    obj6.style = size3;
-    if (tmpResult10.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef7829;
+    const size2 = { height: size, width: size, opacity: num };
+    obj4.style = size2;
+    if (tmpResult6.isThemeDark(ThemeStore.theme)) {
+      let tmp11Result = _modDef7895;
     } else {
-      tmp13Result = _modDef7830;
+      tmp11Result = _modDef7896;
     }
-    obj6.placeholder = tmp13Result;
-    const obj7 = { uri: str };
-    obj6.source = obj7;
-    obj6.accessibilityLabel = formatToPlainStringResult;
+    obj4.placeholder = tmp11Result;
+    const obj5 = { uri: str };
+    obj4.source = obj5;
+    obj4.accessibilityLabel = formatToPlainStringResult;
     return (
-      <tmp14
+      <tmp12
         enableAnimation={animated}
         resizeMode="contain"
         style={null}

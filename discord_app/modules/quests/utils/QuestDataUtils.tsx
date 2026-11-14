@@ -46,37 +46,14 @@ function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) 
   if (null != tmp) {
     return tmp;
   } else {
-    const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
-    value = deliveryAdDecisionByPlacement.get(questPlacementFromQuestContent);
-    if (questPlacementFromQuestContent === QuestTypes.AdPlacement.QUEST_HOME_BANNER_DESKTOP) {
-      if (null != value) {
-        const obj5 = {
-          questId: AdDecisionUtils.getDeliveredQuestId(value.creative),
-          adCreativeId: null,
-          adDecisionData: null,
-          adContext: null,
-          metadataSealed: null,
-          trafficMetadataSealed: null,
-          provenanceMetadataSealed: null,
-        };
-        const tmp11Result = AdDecisionUtils;
-        obj5.adCreativeId = AdDecisionUtils.getDeliveredAdCreativeId(value.creative);
-        ({
-          adDecisionData: obj7.adDecisionData,
-          adContext: obj7.adContext,
-          metadataSealed: obj7.metadataSealed,
-          trafficMetadataSealed: obj7.trafficMetadataSealed,
-          provenanceMetadataSealed: obj7.provenanceMetadataSealed,
-        } = value);
-        let tmp8 = obj5;
-        const tmp11Result4 = AdDecisionUtils;
-      }
-      return tmp8;
+    let first = AdDeliveryStore.getAdDecisionsForPlacement(questPlacementFromQuestContent)[0];
+    if (first == null) {
+      first = null;
     }
-    tmp8 = null;
-    if (null != value) {
-      const obj6 = {
-        questId: AdDecisionUtils.getDeliveredQuestId(value.creative),
+    let tmp9 = null;
+    if (null != first) {
+      const obj7 = {
+        questId: AdDecisionUtils.getDeliveredQuestId(first.creative),
         adCreativeId: null,
         adDecisionData: null,
         adContext: null,
@@ -84,21 +61,20 @@ function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) 
         trafficMetadataSealed: null,
         provenanceMetadataSealed: null,
       };
-      const tmp11Result5 = AdDecisionUtils;
-      obj6.adCreativeId = AdDecisionUtils.getDeliveredAdCreativeId(value.creative);
+      obj7.adCreativeId = AdDecisionUtils.getDeliveredAdCreativeId(first.creative);
       ({
         adDecisionData: obj4.adDecisionData,
         adContext: obj4.adContext,
         metadataSealed: obj4.metadataSealed,
         trafficMetadataSealed: obj4.trafficMetadataSealed,
         provenanceMetadataSealed: obj4.provenanceMetadataSealed,
-      } = value);
-      tmp8 = obj6;
-      const tmp11Result6 = AdDecisionUtils;
+      } = first);
+      tmp9 = obj7;
     }
+    return tmp9;
   }
 }
-const QuestConstants = fn(5275);
+const QuestConstants = fn(5338);
 ({
   DismissibleQuestContentFlags: metroImportDefault,
   BILLABLE_PLACEMENTS: closure_8,
@@ -107,14 +83,14 @@ const QuestConstants = fn(5275);
 } = QuestConstants);
 let c11 = 2592000000;
 let obj = {};
-obj[fn(5278).QuestContent.QUEST_BAR] = fn(5278).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(5278).QuestContent.QUEST_BAR_V2] = fn(5278).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(5278).QuestContent.QUEST_BAR_MOBILE] = fn(5278).AdPlacement.MOBILE_HOME_DOCK_AREA;
-obj[fn(5278).QuestContent.QUEST_HOME_HERO] = fn(5278).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(5278).QuestContent.QUEST_HOME_HERO_SHELF] = fn(5278).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(5278).QuestContent.QUEST_HOME_HERO_BANNER] = fn(5278).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(5278).QuestContent.VIDEO_MODAL_MOBILE] = fn(5278).AdPlacement.VIDEO_MODAL_MOBILE;
-let items = [fn(5278).AdPlacement.VIDEO_MODAL_MOBILE];
+obj[fn(5341).QuestContent.QUEST_BAR] = fn(5341).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(5341).QuestContent.QUEST_BAR_V2] = fn(5341).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(5341).QuestContent.QUEST_BAR_MOBILE] = fn(5341).AdPlacement.MOBILE_HOME_DOCK_AREA;
+obj[fn(5341).QuestContent.QUEST_HOME_HERO] = fn(5341).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(5341).QuestContent.QUEST_HOME_HERO_SHELF] = fn(5341).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(5341).QuestContent.QUEST_HOME_HERO_BANNER] = fn(5341).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(5341).QuestContent.VIDEO_MODAL_MOBILE] = fn(5341).AdPlacement.VIDEO_MODAL_MOBILE;
+let items = [fn(5341).AdPlacement.VIDEO_MODAL_MOBILE];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");
@@ -245,11 +221,10 @@ export function getBountyByPlacementAndId(questPlacementFromQuestContent, bounty
       return deliveredBounty;
     }
   }
-  const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
-  value = deliveryAdDecisionByPlacement.get(questPlacementFromQuestContent);
+  const first = AdDeliveryStore.getAdDecisionsForPlacement(questPlacementFromQuestContent)[0];
   let creative1;
-  if (value != null) {
-    creative1 = value.creative;
+  if (first != null) {
+    creative1 = first.creative;
   }
   if (creative1 == null) {
     creative1 = null;

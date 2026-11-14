@@ -181,9 +181,9 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(5096).isGuildTextChannelType;
+const isGuildTextChannelType = fn(5159).isGuildTextChannelType;
 const dependencyMap = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(5268).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5331).HexagonCampaignPerk;
 const SystemThemeState = fn(1195).SystemThemeState;
 let closure_15 = true;
 let c16 = false;
@@ -356,6 +356,12 @@ Object.defineProperty(prototype, "hasHiddenHexagonCampaignPreset", {
 Object.defineProperty(prototype, "isPreview", {
   get: function isPreview() {
     return closure_15;
+  },
+  set: undefined,
+});
+Object.defineProperty(prototype, "isUpsellGradientPreview", {
+  get: function isUpsellGradientPreview() {
+    return c17;
   },
   set: undefined,
 });

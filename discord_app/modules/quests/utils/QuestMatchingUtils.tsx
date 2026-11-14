@@ -79,13 +79,13 @@ function questMatchesApplicationId(arg0, quest) {
   const allApplicationIds = QuestTaskUtils.getAllApplicationIds(quest);
   return null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
 }
-const QuestConstants = fn(5275);
+const QuestConstants = fn(5338);
 ({
   DISCORD_APPLICATION_ID: closure_6,
   PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: metroImportDefault,
   PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_8,
 } = QuestConstants);
-let closure_9 = fn(2142).XBOX_ACTIVITY_APPLICATION_ID;
+let closure_9 = fn(2145).XBOX_ACTIVITY_APPLICATION_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestMatchingUtils.tsx");
 
@@ -156,8 +156,8 @@ export function getEligibleQuestsForApplicationId(quests, applicationId, arg2) {
         if (userStatus != null) {
           completedAt = userStatus.completedAt;
         }
-        canLaunchActivityResult = null == completedAt || flag;
-        const tmp8 = null == completedAt || flag;
+        canLaunchActivityResult = null == completedAt || c1;
+        const tmp8 = null == completedAt || c1;
       }
       if (canLaunchActivityResult) {
         const userStatus2 = userStatus.userStatus;
@@ -165,14 +165,91 @@ export function getEligibleQuestsForApplicationId(quests, applicationId, arg2) {
         if (userStatus2 != null) {
           enrolledAt = userStatus2.enrolledAt;
         }
-        canLaunchActivityResult = null == enrolledAt || flag;
-        const tmp10 = null == enrolledAt || flag;
+        canLaunchActivityResult = null == enrolledAt || c1;
+        const tmp10 = null == enrolledAt || c1;
       }
       return canLaunchActivityResult;
     });
     const arr = Array.from(quests.values());
   }
   return items;
+}
+export function getActivityQuestForApplicationId(quests, validateApplicationResult) {
+  closure_0 = validateApplicationResult;
+  c1 = true;
+  if (null == validateApplicationResult) {
+    items = [];
+  } else {
+    const _Array = Array;
+    items = Array.from(quests.values()).filter((userStatus) => {
+      const activityApplicationId = QuestTaskUtils.getActivityApplicationId(userStatus);
+      let canLaunchActivityResult = null != userStatus;
+      if (canLaunchActivityResult) {
+        canLaunchActivityResult = utils_QuestUtils.canLaunchActivity(userStatus);
+        const tmpResult = utils_QuestUtils;
+      }
+      if (canLaunchActivityResult) {
+        canLaunchActivityResult = !QuestExpirationUtils.isQuestExpired(userStatus);
+        const tmpResult2 = QuestExpirationUtils;
+      }
+      if (canLaunchActivityResult) {
+        canLaunchActivityResult = activityApplicationId === closure_0;
+      }
+      if (canLaunchActivityResult) {
+        canLaunchActivityResult = activityApplicationId !== timestampProducer;
+      }
+      if (canLaunchActivityResult) {
+        userStatus = userStatus.userStatus;
+        let completedAt;
+        if (userStatus != null) {
+          completedAt = userStatus.completedAt;
+        }
+        canLaunchActivityResult = null == completedAt || c1;
+        const tmp8 = null == completedAt || c1;
+      }
+      if (canLaunchActivityResult) {
+        const userStatus2 = userStatus.userStatus;
+        let enrolledAt;
+        if (userStatus2 != null) {
+          enrolledAt = userStatus2.enrolledAt;
+        }
+        canLaunchActivityResult = null == enrolledAt || c1;
+        const tmp10 = null == enrolledAt || c1;
+      }
+      return canLaunchActivityResult;
+    });
+    const arr = Array.from(quests.values());
+  }
+  return items.sort((userStatus, userStatus2) => {
+    userStatus = userStatus.userStatus;
+    let enrolledAt1;
+    if (userStatus != null) {
+      enrolledAt1 = userStatus.enrolledAt;
+    }
+    userStatus2 = userStatus2.userStatus;
+    if (userStatus2 != null) {
+      const enrolledAt = userStatus2.enrolledAt;
+    }
+    if (null != enrolledAt1) {
+      let num2 = 1;
+      if (null != enrolledAt1) {
+        let num3 = -1;
+        if (null != enrolledAt) {
+          const _Date = Date;
+          const date = new Date(enrolledAt1);
+          const _Date2 = Date;
+          const time = date.getTime();
+          const date1 = new Date(enrolledAt);
+          num3 = time - date1.getTime();
+        }
+        num2 = num3;
+      }
+      let num = num2;
+    } else {
+      num = 0;
+    }
+    return num;
+  })[0];
 }
 export function getQuestApplicationIdsForRunningGame(pid, arg1) {
   const obj = getApplicationIdsForGameDefault(arg1);

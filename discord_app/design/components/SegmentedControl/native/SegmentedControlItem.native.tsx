@@ -1,7 +1,7 @@
 // discord_app/design/components/SegmentedControl/native/SegmentedControlItem.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import Text_Text from "../../Text/native/Text.tsx";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import useStateFromSharedValue from "../../../../modules/reanimated/native/useStateFromSharedValue.tsx";
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let closure_8 = createStyles.createStyles((arg0) => {
   const item = {
     borderRadius: nativeDefault.radii.lg,
@@ -28,7 +28,7 @@ let closure_8 = createStyles.createStyles((arg0) => {
   item.paddingVertical = num;
   return { item, label: { flexDirection: "column", alignItems: "center", gap: 8 } };
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let closure_9 = createStyles.createStyleProperties({
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
@@ -92,7 +92,7 @@ export function SegmentedControlItem(index) {
   };
   const items2 = [tmp.item, style];
   obj3.style = items2;
-  const animatedStyle = _mod1652.useAnimatedStyle(SegmentedControlItemNativeTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(SegmentedControlItemNativeTsx1);
   let formatToPlainStringResult;
   if (tmp3Result.isAndroid()) {
     const intl = util.intl;

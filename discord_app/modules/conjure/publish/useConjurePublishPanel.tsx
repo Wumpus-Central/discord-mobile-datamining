@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/publish/useConjurePublishPanel.tsx
-import _modDef4079 from "../intl/ConjureUntranslated.messages.js";
+import _modDef4131 from "../intl/ConjureUntranslated.messages.js";
 import ChannelPermissionsUtils from "../../channel_permissions/ChannelPermissionsUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -10,18 +10,18 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let isProjectOwner = fn(6954).isProjectOwner;
+let isProjectOwner = fn(7017).isProjectOwner;
 const Constants = fn(1072);
 ({ ChannelTypes: closure_9, Permissions: closure_10 } = Constants);
-let items = [fn(6955).ConjureSupportedSurface.BOT, _modDef4079.UnoAgo];
+let items = [fn(7018).ConjureSupportedSurface.BOT, _modDef4131.UnoAgo];
 let items1 = [items, , , ,];
-let items2 = [fn(6955).ConjureSupportedSurface.ACTIVITY, _modDef4079["I88/iG"]];
+let items2 = [fn(7018).ConjureSupportedSurface.ACTIVITY, _modDef4131["I88/iG"]];
 items1[1] = items2;
-let items3 = [fn(6955).ConjureSupportedSurface.VOICE_CHANNEL, _modDef4079.skjf5I];
+let items3 = [fn(7018).ConjureSupportedSurface.VOICE_CHANNEL, _modDef4131.skjf5I];
 items1[2] = items3;
-let items4 = [fn(6955).ConjureSupportedSurface.PROFILE_WIDGET, _modDef4079.gXY1x1];
+let items4 = [fn(7018).ConjureSupportedSurface.PROFILE_WIDGET, _modDef4131.gXY1x1];
 items1[3] = items4;
-const items5 = [fn(6955).ConjureSupportedSurface.AUTOMOD, _modDef4079.Q9ruoM];
+const items5 = [fn(7018).ConjureSupportedSurface.AUTOMOD, _modDef4131.Q9ruoM];
 items1[4] = items5;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishPanel.tsx");
@@ -314,6 +314,6 @@ export function conjurePublishComponents(arg0) {
   });
 }
 export const CONJURE_PUBLISH_PERMISSION_LABELS = {
-  screen_capture: _modDef4079["8/7kE7"],
-  connect_user_to_voice: _modDef4079.uvDWXa,
+  screen_capture: _modDef4131["8/7kE7"],
+  connect_user_to_voice: _modDef4131.uvDWXa,
 };

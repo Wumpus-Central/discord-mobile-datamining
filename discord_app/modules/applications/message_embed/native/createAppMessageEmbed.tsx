@@ -1,7 +1,7 @@
 // discord_app/modules/applications/message_embed/native/createAppMessageEmbed.tsx
 import util from "../../../../intl/index.native.tsx";
-import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
+import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
 import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
 import KeyboardTypes from "../../../keyboard/native/KeyboardTypes.tsx";
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
@@ -27,9 +27,9 @@ import ApplicationAssetsStore from "../../ApplicationAssetsStore.tsx";
 import ApplicationStore from "../../ApplicationStore.tsx";
 
 require = fn;
-const FetchState = fn(7250).FetchState;
-const AppLauncherRouteName = fn(1498).AppLauncherRouteName;
-const CodedLinkExtendedType = fn(11825).CodedLinkExtendedType;
+const FetchState = fn(7314).FetchState;
+const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
+const CodedLinkExtendedType = fn(11891).CodedLinkExtendedType;
 let closure_10 = ["embedded_cover"];
 let c11 = 512;
 const size = fn(2);

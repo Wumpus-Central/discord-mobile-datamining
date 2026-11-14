@@ -3,7 +3,7 @@ import AvatarUtils from "../AvatarUtils.tsx";
 import utils_AvatarUtils from "AvatarUtils.tsx";
 import AttachmentImageLadderExperiment from "../../modules/image_upload/AttachmentImageLadderExperiment.tsx";
 import AttachmentImageLadder from "../../modules/image_upload/AttachmentImageLadder.tsx";
-import _modDef1487 from "../../../_runtime/metro/01487__.js";
+import _modDef1490 from "../../../_runtime/metro/01490__.js";
 import useWindowDimensions from "../../modules/screen/useWindowDimensions.native.tsx";
 import getDevicePixelRatioDefault from "../getDevicePixelRatio.native.tsx";
 import NativeImageManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
@@ -21,7 +21,7 @@ function getSrcWithWidthAndHeight(animated) {
   }
   [tmp4, tmp5] = src.split("?");
   const tmp3 = _slicedToArray(src.split("?"), 2);
-  const parsed = _modDef1487.parse(tmp5);
+  const parsed = _modDef1490.parse(tmp5);
   delete tmp2[tmp];
   items = [tmp4, parsed];
   [tmp10, tmp11] = items;
@@ -70,7 +70,7 @@ function getSrcWithWidthAndHeight(animated) {
   const tmp9 = _slicedToArray(items, 2);
   let text = tmp10;
   if (!tmp6Result.isEmpty(tmp11)) {
-    _modDef1487;
+    _modDef1490;
     text = `${tmp10}?${obj6.stringify(tmp11)}`;
   }
   return text;

@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockStatusStore.tsx
-import _mod5158 from "../../../../../_runtime/metro/05158__.js";
+import _mod5221 from "../../../../../_runtime/metro/05221__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
@@ -28,13 +28,17 @@ let closure_3 = { joined: 3000, left: 1500, streaming: 3000 };
 let c4 = null;
 let closure_5 = [];
 let c6 = null;
-const identity = fn(1254);
-let closure_7 = identity.createWithEqualityFn(() => ({
-  channelId: null,
-  moment: null,
-  speakerUserId: null,
-  hasStreamers: false,
-}));
+const identity = fn(1258);
+let closure_7 = identity.createWithEqualityFn(() => {
+  const obj = {
+    channelId: null,
+    moment: null,
+    speakerUserId: null,
+    hasStreamers: false,
+    playingSoundboardSounds: new Map(),
+  };
+  return obj;
+});
 let apply = fn(12);
 let closure_8 = apply.throttle((speakerUserId) => {
   let hasItem = null == speakerUserId;
@@ -68,11 +72,27 @@ export function useDockSubject(arg0) {
         moment = obj;
       }
     }
-  }, _mod5158.shallow);
+  }, _mod5221.shallow);
 }
 export function useDockHasStreamers(arg0) {
   closure_0 = arg0;
   return closure_7((channelId) => channelId.channelId === closure_0 && channelId.hasStreamers);
+}
+export function useDockUserPlayingSoundboardId(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return closure_7((channelId) => {
+    let tmp = null;
+    if (channelId.channelId === closure_0) {
+      const playingSoundboardSounds = channelId.playingSoundboardSounds;
+      value = playingSoundboardSounds.get(closure_1);
+      if (value == null) {
+        value = null;
+      }
+      tmp = value;
+    }
+    return tmp;
+  });
 }
 export function setDockHasStreamers(arg0, hasStreamers) {
   if (closure_7.getState().channelId === arg0) {
@@ -80,9 +100,11 @@ export function setDockHasStreamers(arg0, hasStreamers) {
     closure_7.setState(obj2);
   }
 }
-export function setDockSpeakingIds(arg0, arr) {
+export function setDockActiveSpeakers(arg0, arr, playingSoundboardSounds) {
   if (closure_7.getState().channelId === arg0) {
     closure_5 = arr;
+    const obj2 = { playingSoundboardSounds };
+    closure_7.setState(obj2);
     let atResult = arr.at(-1);
     if (atResult == null) {
       atResult = null;
@@ -134,7 +156,8 @@ export function initDockStatus(channelId) {
   closure_9.cancel();
   closure_5 = [];
   c6 = null;
-  closure_7.setState({ channelId, moment: null, speakerUserId: null, hasStreamers: false });
+  const obj = { channelId, moment: null, speakerUserId: null, hasStreamers: false, playingSoundboardSounds: new Map() };
+  closure_7.setState(obj);
 }
 export function releaseDockStatus(arg0) {
   if (closure_7.getState().channelId === arg0) {
@@ -147,6 +170,16 @@ export function releaseDockStatus(arg0) {
     closure_9.cancel();
     closure_5 = [];
     c6 = null;
-    closure_7.setState({ channelId: null, moment: null, speakerUserId: null, hasStreamers: false });
+    const obj2 = {
+      channelId: null,
+      moment: null,
+      speakerUserId: null,
+      hasStreamers: false,
+      playingSoundboardSounds: null,
+    };
+    const _Map = Map;
+    const map = new Map();
+    obj2.playingSoundboardSounds = map;
+    closure_7.setState(obj2);
   }
 }

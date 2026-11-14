@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_5 = 60 * DurationsDefault.Millis.SECOND;
-let closure_6 = Object.values(fn(5268).HexagonCampaignPerk);
+let closure_6 = Object.values(fn(5331).HexagonCampaignPerk);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/useHexagonCampaignDaysLeft.tsx");
 
@@ -39,7 +39,7 @@ export function useHexagonCampaignDaysLeft(perk) {
     }
     return hexagonCampaignPerkCutoffMs;
   }, items1);
-  const tmp3 = stateFromStores(9372)(memo, closure_5);
+  const tmp3 = stateFromStores(9440)(memo, closure_5);
   let num = 0;
   if (tmp3.hours > 0) {
     num = 1;

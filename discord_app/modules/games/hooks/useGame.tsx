@@ -57,7 +57,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
     flag = false;
   }
   closure_130_1 = flag;
-  return "flexDirection";
+  return "Path";
 });
 obj2.load = function load() {
   const self = this;

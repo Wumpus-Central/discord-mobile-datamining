@@ -10,4 +10,5 @@ export const GameSearchSurface = {
   DETECTION_REPORT: "detection_report",
   CHAT_MENTION: "chat_mention",
   INTEREST_PICKER: "interest_picker",
+  GLOBAL_DISCOVERY_GAMES: "global_discovery_games",
 };

@@ -5,6 +5,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useGameNameAndCoverImageDefault from "../../games/hooks/useGameNameAndCoverImage.tsx";
 import CirclePlusIcon from "../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
 import AddWidgetButtonConfig from "../AddWidgetButtonConfig.tsx";
+import UserProfileApplicationWidgetPreviewDefault from "UserProfileApplicationWidgetPreview.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -74,10 +75,10 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const NUMBER_OF_COLUMNS_BY_VARIANT = { default: 4, compact: 3 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj3 = {
   button: {
-    backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+    backgroundColor: nativeDefault.colors.CARD_MUTED_BG,
     borderWidth: 1,
     borderColor: nativeDefault.colors.BORDER_MUTED,
     borderRadius: nativeDefault.radii.md,
@@ -93,7 +94,7 @@ let obj3 = {
   overlay: null,
 };
 let obj4 = {
-  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
+  backgroundColor: nativeDefault.colors.CARD_MUTED_BG,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_MUTED,
   borderRadius: nativeDefault.radii.md,
@@ -140,52 +141,62 @@ export default function UserProfileWidgetOptionAddButton(onPress) {
   }
   const tmp3 = closure_8();
   const button = tmp3;
-  const obj = {
+  const addWidgetPlaceholder = AddWidgetButtonConfig.getAddWidgetPlaceholder(widget);
+  const obj2 = {
     onPress: onPress.onPress,
     accessibilityRole: "button",
-    accessibilityLabel: AddWidgetButtonConfig.getAddWidgetAriaLabel(widget),
-    style(pressed) {
-      pressed = pressed.pressed;
-      items = [button.button, { padding }, ,];
-      let tmp2 = null != require;
-      if (tmp2) {
-        const obj2 = { width: tmp };
-        tmp2 = obj2;
-      }
-      items[2] = tmp2;
-      if (pressed) {
-        pressed = { opacity: 0.8 };
-      }
-      items[3] = pressed;
-      return items;
-    },
+    accessibilityLabel: null,
+    style: null,
     children: null,
   };
-  const addWidgetPlaceholder = AddWidgetButtonConfig.getAddWidgetPlaceholder(widget);
+  obj2.accessibilityLabel = AddWidgetButtonConfig.getAddWidgetAriaLabel(widget);
+  obj2.style = function style(pressed) {
+    pressed = pressed.pressed;
+    items = [button.button, , ,];
+    let num = 0;
+    if ("application-widget" !== addWidgetPlaceholder.variant) {
+      num = padding;
+    }
+    items[1] = { padding: num };
+    let tmp2 = null != require;
+    if (tmp2) {
+      const obj = { width: tmp };
+      tmp2 = obj;
+    }
+    items[2] = tmp2;
+    if (pressed) {
+      pressed = { opacity: 0.8 };
+    }
+    items[3] = pressed;
+    return items;
+  };
   const variant2 = addWidgetPlaceholder.variant;
-  if ("grid" === variant2) {
-    const obj4 = { gameIds: addWidgetPlaceholder.applicationIds, variant };
-    let tmp9 = hasOwnProperty(PlaceholderCoverGrid, obj4);
+  if ("application-widget" === variant2) {
+    const obj4 = { applicationId: addWidgetPlaceholder.applicationId };
+    let tmp9 = hasOwnProperty(UserProfileApplicationWidgetPreviewDefault, obj4);
+  } else if ("grid" === variant2) {
+    const obj5 = { gameIds: addWidgetPlaceholder.applicationIds, variant };
+    tmp9 = hasOwnProperty(PlaceholderCoverGrid, obj5);
   } else {
     tmp9 = null;
     if ("details" === variant2) {
-      const obj5 = { gameId: addWidgetPlaceholder.applicationId, variant };
-      tmp9 = hasOwnProperty(PlaceholderDetailsCard, obj5);
+      const obj6 = { gameId: addWidgetPlaceholder.applicationId, variant };
+      tmp9 = hasOwnProperty(PlaceholderDetailsCard, obj6);
     }
   }
   items = [tmp9];
-  const obj6 = { style: tmp3.overlay, children: null };
+  const obj7 = { style: tmp3.overlay, children: null };
   const items1 = [
     hasOwnProperty(CirclePlusIcon.CirclePlusIcon, { size: "md", color: nativeDefault.colors.TEXT_DEFAULT }),
   ];
-  const obj8 = { variant: "body-md/medium", color: "text-strong", children: null };
-  const obj7 = { size: "md", color: nativeDefault.colors.TEXT_DEFAULT };
-  obj8.children = AddWidgetButtonConfig.getAddWidgetTitle(widget);
-  items1[1] = hasOwnProperty(Text_Text.Text, obj8);
-  obj6.children = items1;
-  items[1] = timestampProducer(React4, obj6);
-  obj.children = items;
-  return timestampProducer(React3, obj);
+  const obj9 = { variant: "body-md/medium", color: "text-strong", children: null };
+  const obj8 = { size: "md", color: nativeDefault.colors.TEXT_DEFAULT };
+  obj9.children = AddWidgetButtonConfig.getAddWidgetTitle(widget);
+  items1[1] = hasOwnProperty(Text_Text.Text, obj9);
+  obj7.children = items1;
+  items[1] = timestampProducer(React4, obj7);
+  obj2.children = items;
+  return timestampProducer(React3, obj2);
 }
 export { NUMBER_OF_COLUMNS_BY_VARIANT };
 export const GRID_GAP_TO_COVER_RATIO = 0.1;

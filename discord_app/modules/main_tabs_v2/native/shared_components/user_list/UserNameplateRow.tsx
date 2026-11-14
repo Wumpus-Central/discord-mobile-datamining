@@ -12,7 +12,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { card: { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -32,7 +32,7 @@ export function UserNameplateRow(onPressOut) {
   if (variant === undefined) {
     variant = "default";
   }
-  ({ isPreviewRow, draggable, dragHandlePressableProps, nameplate } = onPressOut);
+  ({ draggable, isPreviewRow, dragHandlePressableProps, nameplate } = onPressOut);
   if (isPreviewRow === undefined) {
     isPreviewRow = false;
   }
@@ -86,6 +86,7 @@ export function UserNameplateRow(onPressOut) {
   const obj2 = {
     shadow: "none",
     border: "none",
+    padding: "none",
     radius: token,
     start: null,
     end: null,
@@ -94,6 +95,8 @@ export function UserNameplateRow(onPressOut) {
     onPressOut: null,
     disabled: null,
     style: null,
+    draggable: null,
+    dragHandlePressableProps: null,
   };
   let tmp13 = !context;
   if (!context) {
@@ -106,6 +109,8 @@ export function UserNameplateRow(onPressOut) {
   obj2.onPressOut = callback1;
   obj2.disabled = flag;
   obj2.style = tmp2.card;
+  obj2.draggable = draggable;
+  obj2.dragHandlePressableProps = dragHandlePressableProps;
   const merged1 = Object.assign(merged);
   const items2 = [
     hasOwnProperty(NameplateDefault, {
@@ -127,7 +132,6 @@ export function UserNameplateRow(onPressOut) {
       subLabelLineClamp,
       variant,
       draggable,
-      dragHandlePressableProps,
     }),
   ];
   obj2.children = items2;

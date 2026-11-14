@@ -20,7 +20,7 @@ export default function UserProfileEditNoteModal(arg0) {
   }
   navigation = undefined;
   onSave = undefined;
-  navigation = navigation(1499).useNavigation();
+  navigation = navigation(1502).useNavigation();
   [_slicedToArray, onSave] = handleClose.useState(false);
   items = [navigation];
   const effect = handleClose.useEffect(
@@ -32,9 +32,9 @@ export default function UserProfileEditNoteModal(arg0) {
       }),
     items,
   );
-  navigation(1357);
+  navigation(1360);
   const obj3 = { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null };
-  let obj = navigation(1499);
+  let obj = navigation(1502);
   let obj4;
   if (!tmpResult.isAndroid()) {
     obj4 = { height: 56 };
@@ -48,16 +48,16 @@ export default function UserProfileEditNoteModal(arg0) {
     const obj = { variant: "heading-md/semibold", accessibilityRole: "header", children: null };
     const intl = navigation(1113).intl;
     obj.children = intl.string(navigation(1113).t.sHHsOM);
-    return jsx(navigation(5866).Text, { variant: "heading-md/semibold", accessibilityRole: "header", children: null });
+    return jsx(navigation(5929).Text, { variant: "heading-md/semibold", accessibilityRole: "header", children: null });
   };
-  tmpResult = navigation(1357);
-  obj6.headerLeft = navigation(7427).getHeaderCloseButton(handleClose);
+  tmpResult = navigation(1360);
+  obj6.headerLeft = navigation(7493).getHeaderCloseButton(handleClose);
   obj6.render = function render() {
     return jsx(UserProfileEditNote.default, { userId: navigation, onSave, onClose: handleClose, shouldFocusInput });
   };
   obj5.root = obj6;
   obj3.screens = obj5;
-  return jsx(navigation(7424).Navigator, {
+  return jsx(navigation(7490).Navigator, {
     initialRouteName: "root",
     headerStatusBarHeight: 12,
     headerStyle: null,

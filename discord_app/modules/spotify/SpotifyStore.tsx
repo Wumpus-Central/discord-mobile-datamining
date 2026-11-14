@@ -79,7 +79,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_30);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(5087).Interval();
+    const interval = new obj(5150).Interval();
     obj.pingInterval = interval;
     const tmp14 = new BackoffDefault(undefined, MINUTE);
     obj.backoff = tmp14;
@@ -747,7 +747,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(7227);
+const SpotifyConstants = fn(7291);
 ({
   getSpotifyResourceType: closure_14,
   isSpotifyParty: closure_15,
@@ -772,11 +772,11 @@ const message = "message";
 const ping = "ping";
 const single = "single";
 const logger = new LoggerDefault("Spotify");
-let timeout = new fn(5087).Timeout();
-const timeout1 = new fn(5087).Timeout();
-const timeout2 = new fn(5087).Timeout();
-const timeout3 = new fn(5087).Timeout();
-const timeout4 = new fn(5087).Timeout();
+let timeout = new fn(5150).Timeout();
+const timeout1 = new fn(5150).Timeout();
+const timeout2 = new fn(5150).Timeout();
+const timeout3 = new fn(5150).Timeout();
+const timeout4 = new fn(5150).Timeout();
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -867,7 +867,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(7228).SpotifyAPI;
+    const SpotifyAPI = self(7292).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1657,7 +1657,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_36.stop(), false);
-        obj9 = device(6963);
+        obj9 = device(7026);
       }
       if (null != tmp10) {
         if (!tmp43) {
@@ -1725,8 +1725,8 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
                 obj7.author_ids = artists.map((id) => id.id);
                 const artists1 = tmp10.artists;
                 obj7.author_names = artists1.map((name) => name.name);
-                tmp50(1252).track(constants4.ACTIVITY_UPDATED, obj7);
-                const tmp50Result2 = tmp50(1252);
+                tmp50(1256).track(constants4.ACTIVITY_UPDATED, obj7);
+                const tmp50Result2 = tmp50(1256);
               }
             } else {
               tmp80 = flag;

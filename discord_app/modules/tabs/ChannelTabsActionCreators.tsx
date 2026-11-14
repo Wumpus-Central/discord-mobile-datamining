@@ -132,9 +132,10 @@ function trackChannelTabOpened(tabs, close, is_new_tab, focused) {
     friends: obj4.friends_tab_count,
     shop: obj4.shop_tab_count,
     quests: obj4.quests_tab_count,
+    nitro: obj4.nitro_tab_count,
     conjure: obj4.conjure_tab_count,
+    other: obj4.other_page_tab_count,
   } = obj);
-  obj2.other_page_tab_count = obj.other + obj.nitro;
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_OPENED, obj2);
 }
 function navigateActiveTabHistory(arg0) {
@@ -232,7 +233,7 @@ function selectChannelTab(id, keyboard_cycle) {
 }
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_6, Routes: metroImportDefault } = Constants);
-const StaticChannelRoute = fn(5099).StaticChannelRoute;
+const StaticChannelRoute = fn(5162).StaticChannelRoute;
 const TabHistoryNavResult = { Passthrough: "passthrough", Noop: "noop", Navigated: "navigated" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tabs/ChannelTabsActionCreators.tsx");
@@ -419,29 +420,25 @@ export function moveChannelTab(tabId, toIndex) {
 }
 export function setChannelTabPinned(tabId, pinned, source) {
   closure_0 = tabId;
-  let tmp = arg3;
-  if (arg3 === undefined) {
-    tmp = null;
-  }
   const tabs = ChannelTabsStore.getTabs();
   const found = tabs.find((id) => id.id === closure_0);
   pinned = undefined;
   if (found != null) {
     pinned = found.pinned;
   }
-  DispatcherDefault.dispatch({ type: "CHANNEL_TABS_SET_PINNED", tabId, pinned, scope: tmp });
+  DispatcherDefault.dispatch({ type: "CHANNEL_TABS_SET_PINNED", tabId, pinned });
   const tabs1 = ChannelTabsStore.getTabs();
   const found1 = tabs1.find((id) => id.id === closure_0);
-  if (tmp8) {
+  if (tmp7) {
     const obj4 = {};
     const merged = Object.assign(getTabProperties(found1));
     obj4.source = source;
     obj4.pinned = found1.pinned;
     AppAnalyticsUtilsDefault.trackWithMetadata(constants.CHANNEL_TAB_PIN_TOGGLED, obj4);
-    const tmp4Result = AppAnalyticsUtilsDefault;
+    const tmp3Result = AppAnalyticsUtilsDefault;
   }
-  const obj3 = { type: "CHANNEL_TABS_SET_PINNED", tabId, pinned, scope: tmp };
-  tmp8 = null != found1 && pinned !== found1.pinned;
+  const obj3 = { type: "CHANNEL_TABS_SET_PINNED", tabId, pinned };
+  tmp7 = null != found1 && pinned !== found1.pinned;
 }
 export function trackChannelTabPinToggled(pinned, source) {
   const obj2 = {};

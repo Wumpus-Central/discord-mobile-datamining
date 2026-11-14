@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
 import Server from "../../../../../flow/Server.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05830_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05893_LinearGradient.js";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import BaseTextButton from "../../../../../design/components/Button/native/BaseTextButton.native.tsx";
@@ -23,21 +23,21 @@ import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
 import AppLauncherUtils from "../../../utils/AppLauncherUtils.tsx";
 import AppLauncherNativeUtils from "../../AppLauncherNativeUtils.tsx";
 import ApplicationCommandOptionValueParser from "../../../../chat_input/native/ApplicationCommandOptionValueParser.tsx";
-import _modDef13341 from "../../../../../../_runtime/metro/13341__.js";
-import _modDef13342 from "../../../../../../_runtime/metro/13342__.js";
+import _modDef13446 from "../../../../../../_runtime/metro/13446__.js";
+import _modDef13447 from "../../../../../../_runtime/metro/13447__.js";
 import AppLauncherCommandViewHeader from "AppLauncherCommandViewHeader.tsx";
 import ApplicationCommandValidationUtils from "../../../../application_commands/ApplicationCommandValidationUtils.tsx";
 import application_commands_ApplicationCommandValidationUtils from "../../../../application_commands/native/ApplicationCommandValidationUtils.tsx";
 import useLatchDefault from "../../hooks/useLatch.tsx";
 import CommandOptionViewDefault from "CommandOptionView.tsx";
-import _modDef13426 from "../../../../../../_runtime/metro/13426__.js";
-import _modDef13427 from "../../../../../../_runtime/metro/13427__.js";
+import _modDef13529 from "../../../../../../_runtime/metro/13529__.js";
+import _modDef13530 from "../../../../../../_runtime/metro/13530__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
-import 01652__ from "../../../../../../_runtime/metro/01652__.js";
+import 01655__ from "../../../../../../_runtime/metro/01655__.js";
 
 require = fn;
 function AppLauncherCommandViewFooter(onHeightChange) {
@@ -50,7 +50,7 @@ function AppLauncherCommandViewFooter(onHeightChange) {
   const obj = require("initialize");
   [tmp7, c2] = noop.useState(false);
   const tmp6 = _slicedToArray(noop.useState(false), 2);
-  let items1 = [closure_26, stateFromStores, tmp7, require("../../../../../../_runtime/metro/01652__.js").withDelay, require("timing/timing").withTiming, require("timingPresets").timingStandard, closure_25, require("../../../../../../_runtime/metro/01705__.js").scheduleOnRN, require("HapticUtils").triggerHapticFeedback, require("HapticUtils").HapticFeedbackTypes, isSending];
+  let items1 = [closure_26, stateFromStores, tmp7, require("../../../../../../_runtime/metro/01655__.js").withDelay, require("timing/timing").withTiming, require("timingPresets").timingStandard, closure_25, require("../../../../../../_runtime/metro/01708__.js").scheduleOnRN, require("HapticUtils").triggerHapticFeedback, require("HapticUtils").HapticFeedbackTypes, isSending];
   _require = undefined;
   importDefault = undefined;
   c2 = undefined;
@@ -139,8 +139,8 @@ function AppLauncherCommandViewFooter(onHeightChange) {
   AppLauncherCommandViewScreenTsx2.__closure = items2;
   AppLauncherCommandViewScreenTsx2.__workletHash = 1083775890910;
   AppLauncherCommandViewScreenTsx2.__initData = tmp8;
-  const animatedStyle1 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AppLauncherCommandViewScreenTsx2);
-  let obj2 = require("../../../../../../_runtime/metro/01652__.js");
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(AppLauncherCommandViewScreenTsx2);
+  let obj2 = require("../../../../../../_runtime/metro/01655__.js");
   let items3 = [closure_27, footerStickyInsetBottom];
   _require = undefined;
   [tmp20, tmp21] = items3;
@@ -154,7 +154,7 @@ function AppLauncherCommandViewFooter(onHeightChange) {
   AppLauncherCommandViewScreenTsx3.__closure = items4;
   AppLauncherCommandViewScreenTsx3.__workletHash = 2219062280688;
   AppLauncherCommandViewScreenTsx3.__initData = tmp20;
-  const animatedStyle2 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AppLauncherCommandViewScreenTsx3);
+  const animatedStyle2 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(AppLauncherCommandViewScreenTsx3);
   let obj3 = {
     onLayout(nativeEvent) {
       const height = nativeEvent.nativeEvent.layout.height;
@@ -174,7 +174,7 @@ function AppLauncherCommandViewFooter(onHeightChange) {
   obj4.style = items6;
   const point = { x: 0, y: 12 / (tmp2[0] + 12) };
   obj4.end = point;
-  const tmp3Result = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp3Result = require("../../../../../../_runtime/metro/01655__.js");
   const items7 = [require("ColorUtils").hexWithOpacity(tmp.linearGradient.backgroundColor, 0), tmp.linearGradient.backgroundColor];
   obj4.colors = items7;
   const items8 = [closure_20(LinearGradient, obj4), ];
@@ -197,10 +197,10 @@ function AppLauncherCommandViewFooter(onHeightChange) {
   const obj6 = { style: animatedStyle1, children: null };
   const tmp3Result2 = require("ColorUtils");
   obj6.children = closure_20(require("SendMessageIcon").SendMessageIcon, { style: { marginLeft: 8 }, color: nativeDefault.unsafe_rawColors.WHITE, size: "sm" });
-  obj5.icon = closure_20(module_1652.View, obj6);
+  obj5.icon = closure_20(module_1655.View, obj6);
   items8[1] = closure_20(require("BaseTextButton").BaseTextButton, obj5);
   obj3.children = items8;
-  return closure_21(module_1652.View, obj3);
+  return closure_21(module_1655.View, obj3);
 }
 function AppLauncherCommandViewInner(command) {
   command = command.command;
@@ -369,9 +369,9 @@ function AppLauncherCommandViewInner(command) {
   sum1 = sum + nativeDefault.space.PX_16;
   let sum2 = useSafeAreaInsetsKeyboardAwareDefault({ includeCustomKeyboardHeight: false, includeKeyboardHeight: true }).insets.bottom + nativeDefault.space.PX_16;
   const set2 = new Set();
-  sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const tmp3Result6 = require("../../../../../../_runtime/metro/01652__.js");
-  sharedValue1 = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const tmp3Result6 = require("../../../../../../_runtime/metro/01655__.js");
+  sharedValue1 = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   const items3 = [first4, sum1, sharedValue1];
   callback1 = obj2.useCallback((required) => {
     const diff = first4 - sum1;
@@ -533,7 +533,7 @@ function AppLauncherCommandViewInner(command) {
       const obj = command(sectionName[32]);
     }
   }, items5);
-  const tmp3Result7 = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp3Result7 = require("../../../../../../_runtime/metro/01655__.js");
   commandContext = require("useCommandContext").useCommandContext(context);
   const items6 = [callback1, chatInputRef, command, commandContext, sharedValue, keyboardCloseReasonRef, onCommandExecuted, first2, sectionName];
   callback3 = obj2.useCallback(() => {
@@ -573,9 +573,9 @@ function AppLauncherCommandViewInner(command) {
         const result1 = tmp14Result3.executeAppLauncherCommand(obj4);
         const tmp14Result4 = ApplicationCommandOptionValueParser;
         result1.then(() => {
-          const result = c0(5491).triggerHapticFeedback(c0(5491).HapticFeedbackTypes.IMPACT_MEDIUM);
+          const result = c0(5554).triggerHapticFeedback(c0(5554).HapticFeedbackTypes.IMPACT_MEDIUM);
           const timerId = setTimeout(() => {
-            closure_1_8.current = command(12482).AppLauncherKeyboardCloseReason.COMMAND;
+            closure_1_8.current = command(12578).AppLauncherKeyboardCloseReason.COMMAND;
             const current = ref.current;
             if (current != null) {
               current.closeCustomKeyboard();
@@ -589,9 +589,9 @@ function AppLauncherCommandViewInner(command) {
           const result = sharedValue.set(false);
         });
         const nextPromise = result1.then(() => {
-          const result = c0(5491).triggerHapticFeedback(c0(5491).HapticFeedbackTypes.IMPACT_MEDIUM);
+          const result = c0(5554).triggerHapticFeedback(c0(5554).HapticFeedbackTypes.IMPACT_MEDIUM);
           const timerId = setTimeout(() => {
-            closure_1_8.current = command(12482).AppLauncherKeyboardCloseReason.COMMAND;
+            closure_1_8.current = command(12578).AppLauncherKeyboardCloseReason.COMMAND;
             const current = ref.current;
             if (current != null) {
               current.closeCustomKeyboard();
@@ -691,7 +691,7 @@ function AppLauncherCommandViewInner(command) {
   AppLauncherCommandViewScreenTsx4.__workletHash = 8988942426348;
   AppLauncherCommandViewScreenTsx4.__initData = tmp49;
   const items10 = [first3, callback1];
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(AppLauncherCommandViewScreenTsx4);
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(AppLauncherCommandViewScreenTsx4);
   onStartEditing = obj2.useCallback((name) => {
     first3.delete(name.name);
     closure_37(new Set(first3));
@@ -1029,7 +1029,7 @@ function AppLauncherCommandViewInner(command) {
   if (entrypoint === require("AppLauncherTypes").AppLauncherEntrypoint.VOICE) {
     let BottomSheetScrollView = entrypoint;
   } else {
-    BottomSheetScrollView = tmp3(5507).BottomSheetScrollView;
+    BottomSheetScrollView = tmp3(5570).BottomSheetScrollView;
   }
   if (loading) {
     let tmp77Result2 = ref6(optionValues, {});
@@ -1047,9 +1047,9 @@ function AppLauncherCommandViewInner(command) {
     obj4.onLayout = callback10;
     let obj6 = { style: tmp.commandNameContainer, children: null };
     let obj7 = { variant: "heading-lg/semibold", color: "text-default", children: command.displayName };
-    const items19 = [ref6(tmp3(5866).Text, obj7), ];
+    const items19 = [ref6(tmp3(5929).Text, obj7), ];
     let obj8 = { variant: "heading-xs/medium", color: "text-default", children: command.displayDescription };
-    items19[1] = ref6(tmp3(5866).Text, obj8);
+    items19[1] = ref6(tmp3(5929).Text, obj8);
     obj6.children = items19;
     const items20 = [ref7(closure_7, obj6), , , , , ];
     let tmp80Result = tmp70;
@@ -1093,7 +1093,7 @@ function AppLauncherCommandViewInner(command) {
       const obj11 = { variant: "body-sm/medium", color: "text-strong", style: { textAlign: "center" }, children: null };
       const intl = tmp3(1113).intl;
       obj11.children = intl.string(tmp3(1113).t.HS2KtY);
-      obj10.children = tmp80(tmp3(5866).Text, obj11);
+      obj10.children = tmp80(tmp3(5929).Text, obj11);
       tmp80Result3 = tmp80(tmp79, obj10);
     }
     items20[2] = tmp80Result3;
@@ -1103,7 +1103,7 @@ function AppLauncherCommandViewInner(command) {
       const obj13 = { variant: "body-sm/medium", color: "text-muted", style: { textAlign: "center" }, children: null };
       const intl2 = tmp3(1113).intl;
       obj13.children = intl2.string(tmp3(1113).t.G8lEFB);
-      obj12.children = tmp80(tmp3(5866).Text, obj13);
+      obj12.children = tmp80(tmp3(5929).Text, obj13);
       tmp80Result4 = tmp80(tmp79, obj12);
     }
     items20[3] = tmp80Result4;
@@ -1112,7 +1112,7 @@ function AppLauncherCommandViewInner(command) {
       const obj15 = { style: tmp.optionalOptionsSectionTitle, variant: "body-md/normal", color: "text-default", children: null };
       const intl3 = tmp3(1113).intl;
       obj15.children = intl3.string(tmp3(1113).t["5C107K"]);
-      const items21 = [tmp80(tmp3(5866).Text, obj15), , ];
+      const items21 = [tmp80(tmp3(5929).Text, obj15), , ];
       const obj16 = {
         style: tmp.optionalOptionsContainer,
         onLayout: callback8,
@@ -1134,10 +1134,10 @@ function AppLauncherCommandViewInner(command) {
             })
       };
       items21[1] = tmp80(tmp79, obj16);
-      const obj17 = { layout: tmp3(13393).LayoutAnimation, collapsable: false, children: null };
+      const obj17 = { layout: tmp3(13496).LayoutAnimation, collapsable: false, children: null };
       const obj18 = { style: tmp.optionalOptionList, options: tmp20, onSelectOption: callback9 };
-      obj17.children = tmp80(tmp31(13425), obj18);
-      items21[2] = tmp80(tmp31(1652).View, obj17);
+      obj17.children = tmp80(tmp31(13528), obj18);
+      items21[2] = tmp80(tmp31(1655).View, obj17);
       obj14.children = items21;
       tmp77Result = tmp77(tmp78, obj14);
     }
@@ -1335,7 +1335,7 @@ function NotFoundState(onPress) {
   const tmp = closure_24();
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.COMMAND_NOT_FOUND);
   const obj2 = { style: tmp.emptyStateContainer, children: null };
-  const obj3 = { style: tmp.emptyState, lightSource: _modDef13426, darkSource: _modDef13427, title: null, body: null, children: null };
+  const obj3 = { style: tmp.emptyState, lightSource: _modDef13529, darkSource: _modDef13530, title: null, body: null, children: null };
   const intl = util.intl;
   obj3.title = intl.string(util.t["pX/qb9"]);
   const intl2 = util.intl;
@@ -1356,7 +1356,7 @@ function NoPermsState(command) {
   items = [dependencyMap(Text_Text.Text, { variant: "heading-lg/semibold", color: "text-default", children: command.displayName }), dependencyMap(Text_Text.Text, { variant: "heading-xs/medium", color: "text-default", children: command.displayDescription })];
   obj3.children = items;
   const items1 = [guild(metroImportDefault, obj3), ];
-  const obj6 = { style: tmp.emptyState, lightSource: _modDef13341, darkSource: _modDef13342, title: null, body: null, children: null };
+  const obj6 = { style: tmp.emptyState, lightSource: _modDef13446, darkSource: _modDef13447, title: null, body: null, children: null };
   const intl = util.intl;
   obj6.title = intl.string(util.t.TzufcR);
   const intl2 = util.intl;
@@ -1371,20 +1371,20 @@ function NoPermsState(command) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ActivityIndicator: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ApplicationCommandIndexStore = fn(11339);
+const ApplicationCommandIndexStore = fn(11406);
 ({ useContextIndexState: closure_11, useUserIndexState: closure_12 } = ApplicationCommandIndexStore);
-const AppLauncherNativeConstants = fn(1498);
+const AppLauncherNativeConstants = fn(1501);
 ({ AppLauncherOptionAutoFocusType: closure_14, useAppLauncherNavigation: closure_15, DEFAULT_CONTENT_PADDING } = AppLauncherNativeConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_16, NOOP: closure_17, VerticalGradient: closure_18 } = Constants);
-const MediaKeyboardTarget = fn(1623).MediaKeyboardTarget;
+const MediaKeyboardTarget = fn(1626).MediaKeyboardTarget;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21, Fragment: closure_22 } = jsxProd);
-const LinearGradient = module_1652.createAnimatedComponent(LinearGradientDefault);
-const createStyles = fn(5243);
+const LinearGradient = module_1655.createAnimatedComponent(LinearGradientDefault);
+const createStyles = fn(5306);
 let obj = { container: { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND }, optionsContainer: null, requiredOptionsContainer: null, optionalOptionsContainer: null, optionalOptionsChild: null, optionalOptionsFirstChild: null, optionalOptionsLastChild: null, footerContainer: null, submitButton: null, optionalOptionsSectionTitle: null, optionalOptionList: null, noRequiredOptionsCalloutContainer: null, noOptionCalloutContainer: null, emptyState: null, emptyStateContainer: null, failureStateButtonWrapper: null, failureStateButtonPill: null, commandNameContainer: null, linearGradient: null };
 let obj3 = { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
-obj.optionsContainer = { paddingTop: fn(13385).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: DEFAULT_CONTENT_PADDING, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
+obj.optionsContainer = { paddingTop: fn(13488).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: DEFAULT_CONTENT_PADDING, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj.requiredOptionsContainer = { marginTop: 24, gap: 24 };
 obj.optionalOptionsContainer = {};
 obj.optionalOptionsChild = { marginBottom: 24 };
@@ -1394,15 +1394,15 @@ obj.footerContainer = { position: "absolute", left: 0, bottom: 0, right: 0, padd
 obj.submitButton = { flex: 1, overflow: "hidden" };
 obj.optionalOptionsSectionTitle = { marginTop: 36 };
 obj.optionalOptionList = { marginTop: 12 };
-let obj4 = { paddingTop: fn(13385).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: DEFAULT_CONTENT_PADDING, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
+let obj4 = { paddingTop: fn(13488).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: DEFAULT_CONTENT_PADDING, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj.noRequiredOptionsCalloutContainer = { paddingVertical: 16, paddingHorizontal: 12, backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, marginTop: 24, borderRadius: nativeDefault.radii.lg };
 let obj5 = { paddingVertical: 16, paddingHorizontal: 12, backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, marginTop: 24, borderRadius: nativeDefault.radii.lg };
 obj.noOptionCalloutContainer = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginTop: 24, borderRadius: nativeDefault.radii.lg };
 obj.emptyState = { backgroundColor: "transparent", justifyContent: "flex-start", paddingTop: 30 };
 let obj6 = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginTop: 24, borderRadius: nativeDefault.radii.lg };
-obj.emptyStateContainer = { paddingTop: fn(13385).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
+obj.emptyStateContainer = { paddingTop: fn(13488).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
 obj.failureStateButtonWrapper = { marginTop: 24, alignSelf: "center" };
-let obj7 = { paddingTop: fn(13385).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
+let obj7 = { paddingTop: fn(13488).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
 obj.failureStateButtonPill = { borderRadius: nativeDefault.radii.xxl, paddingHorizontal: 12, paddingVertical: 8 };
 obj.commandNameContainer = { alignItems: "center", justifyContent: "center", textAlign: "center" };
 let obj8 = { borderRadius: nativeDefault.radii.xxl, paddingHorizontal: 12, paddingVertical: 8 };

@@ -1,19 +1,19 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalProgress.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { progressContainer: { height: 4 }, progressTrack: null, progressBar: null, progressBarGlowLayer: null };
   const obj2 = {};
@@ -93,7 +93,7 @@ export default function BountiesModalProgress(progress) {
   BountiesModalProgressTsx1.__closure = items1;
   BountiesModalProgressTsx1.__workletHash = 13607903947935;
   BountiesModalProgressTsx1.__initData = tmp11;
-  const animatedStyle = _mod1652.useAnimatedStyle(BountiesModalProgressTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(BountiesModalProgressTsx1);
   const items2 = [
     closure_11,
     timing_timing.withTiming,
@@ -118,7 +118,7 @@ export default function BountiesModalProgress(progress) {
   BountiesModalProgressTsx2.__closure = items3;
   BountiesModalProgressTsx2.__workletHash = 7029081522716;
   BountiesModalProgressTsx2.__initData = tmp16;
-  const animatedStyle1 = _mod1652.useAnimatedStyle(BountiesModalProgressTsx2);
+  const animatedStyle1 = _mod1655.useAnimatedStyle(BountiesModalProgressTsx2);
   const obj2 = { style: null, children: null };
   const items4 = [tmp.progressContainer, style, animatedStyle];
   obj2.style = items4;
@@ -126,12 +126,12 @@ export default function BountiesModalProgress(progress) {
   const obj4 = { style: null };
   const items6 = [tmp.progressBarGlowLayer, animatedStyle1];
   obj4.style = items6;
-  items5[1] = metroImportDefault(_modDef1652.View, obj4);
+  items5[1] = metroImportDefault(_modDef1655.View, obj4);
   const obj5 = { style: null };
   const items7 = [tmp.progressBar, animatedStyle1];
   obj5.style = items7;
-  items5[2] = metroImportDefault(_modDef1652.View, obj5);
+  items5[2] = metroImportDefault(_modDef1655.View, obj5);
   obj2.children = items5;
-  return React5(_modDef1652.View, obj2);
+  return React5(_modDef1655.View, obj2);
 }
 export const PROGRESS_BAR_HEIGHT = 4;

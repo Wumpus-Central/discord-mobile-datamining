@@ -1,7 +1,7 @@
 // discord_app/modules/checkout/native/stores/NativeCheckoutStoreProvider.tsx
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../../../_runtime/01266_v1.js";
+import v1 from "../../../../../_runtime/01269_v1.js";
 import PaymentFlowStartedTriggerPoint from "../../../experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -20,7 +20,7 @@ function NativeCheckoutStoreProvider(children) {
     checkoutAnalyticsFields: View,
     analyticsInitialStep: closure_7,
   } = children);
-  const contextMetadata = order(5854)(() => {
+  const contextMetadata = order(5917)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -33,7 +33,7 @@ function NativeCheckoutStoreProvider(children) {
     const obj3 = { message: "Checkout session ID: " + id };
     return { loadId: id, startTime: Date.now() };
   });
-  redux = order(5854)(() => {
+  redux = order(5917)(() => {
     const obj = {};
     const merged = Object.assign(View);
     obj.load_id = contextMetadata.loadId;
@@ -55,7 +55,7 @@ function NativeCheckoutStoreProvider(children) {
     ),
     1,
   )[0];
-  order(5836)(() => {
+  order(5899)(() => {
     if (null != View) {
       const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
       const obj3 = {};
@@ -72,8 +72,8 @@ function NativeCheckoutStoreProvider(children) {
           checkoutSucceeded = purchaseInFlight;
         }
         if (!checkoutSucceeded) {
-          order(1252).track(first.PAYMENT_FLOW_CANCELED, analyticsFields);
-          const obj = order(1252);
+          order(1256).track(first.PAYMENT_FLOW_CANCELED, analyticsFields);
+          const obj = order(1256);
         }
       };
     }
@@ -100,8 +100,8 @@ function NativeCheckoutStoreProvider(children) {
         const obj2 = { checkoutSucceeded: tmp2, order: null };
         ({ id: obj3.id, status: obj3.status } = orderRecord);
         obj2.order = { id: null, status: null };
-        checkoutInitParameters(9657).discardDraftOrder(obj2);
-        const obj = checkoutInitParameters(9657);
+        checkoutInitParameters(9724).discardDraftOrder(obj2);
+        const obj = checkoutInitParameters(9724);
         const obj5 = { id: null, status: null };
       }
     },
@@ -114,17 +114,17 @@ function NativeCheckoutStoreProvider(children) {
   );
 }
 const View = fn(17).View;
-const NativeCheckoutStore = fn(9525);
+const NativeCheckoutStore = fn(9592);
 ({
   createNativeStore: metroImportDefault,
   NativeCheckoutStoreContext: closure_8,
   NativeCheckoutStoreContextOrNull: closure_9,
 } = NativeCheckoutStore);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const ItemPurchaseType = fn(5987).ItemPurchaseType;
+const ItemPurchaseType = fn(6050).ItemPurchaseType;
 const PaymentGateways = fn(1083).PaymentGateways;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_14 = createStyles.createStyles({
   loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" },
 });
@@ -204,7 +204,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
     yield "HermesInternal";
     paymentGateway = tmp2;
     ({ orderLineItems: closure_129_0, subscriptionFacet: closure_129_1 } = closure_0);
-    return "flexDirection";
+    return "Path";
   });
   items = [paymentGateway, onOrderCreated, isGift, mobileStoreFront, initialExternalGatewayFacet];
   callback = obj.useCallback(function () {

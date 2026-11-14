@@ -1,9 +1,9 @@
 // discord_app/modules/home_drawer/native/HomeDrawerStore.tsx
 import Constants from "../../../Constants.tsx";
-import _mod5158 from "../../../../_runtime/metro/05158__.js";
+import _mod5221 from "../../../../_runtime/metro/05221__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import HomeDrawerAnimations from "HomeDrawerAnimations.tsx";
-import identity from "../../../../_runtime/metro/01254__.js";
+import identity from "../../../../_runtime/metro/01258__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   dependencyMap = arg1;
   let obj = {
-    panelX: require("../../../../_runtime/metro/01652__.js").makeMutable(0),
+    panelX: require("../../../../_runtime/metro/01655__.js").makeMutable(0),
     snapX: null,
     isOpenTarget: null,
     gestureState: null,
@@ -24,20 +24,20 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     updateMaxX: null,
     noteInteraction: null,
   };
-  const obj2 = require("../../../../_runtime/metro/01652__.js");
-  obj.snapX = require("../../../../_runtime/metro/01652__.js").makeMutable(0);
-  let obj3 = require("../../../../_runtime/metro/01652__.js");
-  obj.isOpenTarget = require("../../../../_runtime/metro/01652__.js").makeMutable(false);
-  const obj4 = require("../../../../_runtime/metro/01652__.js");
-  obj.gestureState = require("../../../../_runtime/metro/01652__.js").makeMutable({
+  const obj2 = require("../../../../_runtime/metro/01655__.js");
+  obj.snapX = require("../../../../_runtime/metro/01655__.js").makeMutable(0);
+  let obj3 = require("../../../../_runtime/metro/01655__.js");
+  obj.isOpenTarget = require("../../../../_runtime/metro/01655__.js").makeMutable(false);
+  const obj4 = require("../../../../_runtime/metro/01655__.js");
+  obj.gestureState = require("../../../../_runtime/metro/01655__.js").makeMutable({
     active: false,
     initialX: 0,
     initialY: 0,
     panelX: 0,
   });
   obj.lastInteractionAt = { current: 0 };
-  const obj5 = require("../../../../_runtime/metro/01652__.js");
-  obj.isPanelTouchActive = require("../../../../_runtime/metro/01652__.js").makeMutable(false);
+  const obj5 = require("../../../../_runtime/metro/01655__.js");
+  obj.isPanelTouchActive = require("../../../../_runtime/metro/01655__.js").makeMutable(false);
   obj.setPanelX = function setPanelX(arg0) {
     const tmp = closure_1();
     ({ panelX, snapX, isOpenTarget, gestureState } = tmp);
@@ -67,7 +67,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     closure_1().lastInteractionAt.current = Date.now();
   };
   return obj;
-}, _mod5158.shallow);
+}, _mod5221.shallow);
 let result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
 
 export default withEqualityFn;

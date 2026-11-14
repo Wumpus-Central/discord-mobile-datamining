@@ -4,7 +4,7 @@ import OrbCheckoutUtils from "OrbCheckoutUtils.tsx";
 import OrbCheckoutHooks from "OrbCheckoutHooks.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import OrderRecord from "../../payments/records/OrderRecord.tsx";
-import v1 from "../../../../_runtime/01266_v1.js";
+import v1 from "../../../../_runtime/01269_v1.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({ useContext: c2, useMemo: c3 } = noop);
@@ -13,7 +13,7 @@ let obj = {
   skuId: "123",
   skuProductLine: null,
   skuApplicationId: "r",
-  loadId: "PX_8",
+  loadId: "Promise",
   analyticsLocations: null,
   analyticsSourceLocation: null,
   isRedeeming: null,

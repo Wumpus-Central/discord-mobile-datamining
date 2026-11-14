@@ -74,7 +74,8 @@ export default function InterestPickerFlow(arm) {
   } else {
     const obj3 = {
       catalog: arm.catalog,
-      onRowSeen: callback,
+      performanceContext: null,
+      onRowSeen: null,
       title: null,
       subtitle: null,
       minSelection: 1,
@@ -84,6 +85,11 @@ export default function InterestPickerFlow(arm) {
       onContinue: null,
       onSkip: null,
     };
+    const obj4 = {};
+    let merged = Object.assign(memo);
+    obj4.surface = "onboarding";
+    obj3.performanceContext = obj4;
+    obj3.onRowSeen = callback;
     const intl = tmp(tmp2[10]).intl;
     obj3.title = intl.string(onComplete(tmp2[11])["5MUKTF"]);
     const intl2 = tmp(tmp2[10]).intl;

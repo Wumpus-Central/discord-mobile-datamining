@@ -1,5 +1,5 @@
 // discord_app/utils/ErrorUtils.tsx
-import BAGGAGE_HEADER_NAME from "../../_runtime/09724_BAGGAGE_HEADER_NAME.js";
+import BAGGAGE_HEADER_NAME from "../../_runtime/09791_BAGGAGE_HEADER_NAME.js";
 import size from "../../_runtime/metro/00002__.js";
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {

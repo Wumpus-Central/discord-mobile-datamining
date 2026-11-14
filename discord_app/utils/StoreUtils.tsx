@@ -143,7 +143,7 @@ let closure_12 = async function _httpGetWithCountryCodeQuery(arg0) {
           closure_132_5 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -240,14 +240,14 @@ let closure_12 = async function _httpGetWithCountryCodeQuery(arg0) {
 };
 const Constants = fn(1072);
 ({ Endpoints: metroImportDefault, OperatingSystems: closure_8 } = Constants);
-const isMobile = fn(6199).isMobile;
+const isMobile = fn(6262).isMobile;
 let tmp3 = !isMobile;
 if (!isMobile) {
-  tmp3 = !fn(6199).isTablet;
+  tmp3 = !fn(6262).isTablet;
 }
 if (tmp3) {
-  tmp3 = -1 !== fn(6115).getChromeVersion();
-  let obj = fn(6115);
+  tmp3 = -1 !== fn(6178).getChromeVersion();
+  let obj = fn(6178);
 }
 let closure_9 = tmp3;
 const size = fn(2);

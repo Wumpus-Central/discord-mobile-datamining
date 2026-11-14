@@ -3,12 +3,12 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import useColorThemeBackgroundDefault from "../../../client_themes/native/useColorThemeBackground.tsx";
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
-import BottomSheetModalDefault from "../../../../../_runtime/05507_BottomSheetModal.js";
+import BottomSheetModalDefault from "../../../../../_runtime/05570_BottomSheetModal.js";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import useCustomKeyboardBottomSheetConfigDefault from "../../../action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -33,17 +33,17 @@ function MediaKeyboardBackground(arg0) {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const MediaKeyboardConstants = fn(1623);
+const MediaKeyboardConstants = fn(1626);
 ({ HEADER_HANDLE_HEIGHT: closure_6, MediaPickerActionSheetEngagedActions: metroImportDefault } =
   MediaKeyboardConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const MetaQuestUtils = fn(1624);
+const MetaQuestUtils = fn(1627);
 let closure_11 = MetaQuestUtils.isMetaQuest();
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let closure_12 = PlatformUtils.isIOS();
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   background: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -170,7 +170,7 @@ export default noop.memo(function MediaKeyboardBottomSheet(onClose) {
   MediaKeyboardBottomSheetTsx1.__closure = items3;
   MediaKeyboardBottomSheetTsx1.__workletHash = 5695849548059;
   MediaKeyboardBottomSheetTsx1.__initData = tmp18;
-  const items4 = [closure_16, closure_12, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, callback3];
+  const items4 = [closure_16, closure_12, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, callback3];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -198,11 +198,11 @@ export default noop.memo(function MediaKeyboardBottomSheet(onClose) {
   MediaKeyboardBottomSheetTsx2.__closure = items5;
   MediaKeyboardBottomSheetTsx2.__workletHash = 6228277612359;
   MediaKeyboardBottomSheetTsx2.__initData = tmp20;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     MediaKeyboardBottomSheetTsx1,
     MediaKeyboardBottomSheetTsx2,
   );
-  const tmp5Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result = require("../../../../../_runtime/metro/01655__.js");
   const items6 = [closure_17, animatedIndex];
   _require = undefined;
   [tmp25, tmp26] = items6;
@@ -215,7 +215,7 @@ export default noop.memo(function MediaKeyboardBottomSheet(onClose) {
   MediaKeyboardBottomSheetTsx3.__closure = items7;
   MediaKeyboardBottomSheetTsx3.__workletHash = 4645791951827;
   MediaKeyboardBottomSheetTsx3.__initData = tmp25;
-  const items8 = [closure_18, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, tmp15];
+  const items8 = [closure_18, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, tmp15];
   _require = undefined;
   importDefault = undefined;
   [tmp27, tmp28, tmp29] = items8;
@@ -233,7 +233,7 @@ export default noop.memo(function MediaKeyboardBottomSheet(onClose) {
   MediaKeyboardBottomSheetTsx4.__closure = items9;
   MediaKeyboardBottomSheetTsx4.__workletHash = 10381616509048;
   MediaKeyboardBottomSheetTsx4.__initData = tmp27;
-  const animatedReaction1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     MediaKeyboardBottomSheetTsx3,
     MediaKeyboardBottomSheetTsx4,
   );
@@ -266,7 +266,7 @@ export default noop.memo(function MediaKeyboardBottomSheet(onClose) {
       }
     }
   }, items10);
-  const tmp5Result2 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result2 = require("../../../../../_runtime/metro/01655__.js");
   ({ left, right } = useSafeAreaInsetsDefault());
   let obj3 = { gradient: tmp7, children: null };
   const obj4 = {
@@ -287,7 +287,7 @@ export default noop.memo(function MediaKeyboardBottomSheet(onClose) {
     onClose: null,
   };
   const tmp33 = useSafeAreaInsetsDefault();
-  obj4.BodyComponent = _modDef1652.View;
+  obj4.BodyComponent = _modDef1655.View;
   obj4.ref = bottomSheetRef;
   obj4.animationConfigs = animationConfigs;
   obj4.animatedIndex = animatedIndex;

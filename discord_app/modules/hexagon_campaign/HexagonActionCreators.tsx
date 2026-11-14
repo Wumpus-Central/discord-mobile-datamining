@@ -254,7 +254,7 @@ let closure_12 = async function _enrollAndClearPendingHexagonCampaignEnrollment(
     }
   }
 };
-let closure_5 = fn(5268).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
+let closure_5 = fn(5331).HEXAGON_CAMPAIGN_ENROLL_ENDPOINT;
 let closure_6 = new LoggerDefault("HexagonActionCreators");
 const result = 10 * DurationsDefault.Millis.SECOND;
 const metroImportDefault = result;
@@ -295,6 +295,9 @@ export function clearHexagonCampaignAppliedPerks() {
 }
 export function markHexagonCampaignDisplayNameStylesVisited() {
   DispatcherDefault.dispatch({ type: "HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES_VISITED" });
+}
+export function markHexagonCampaignExpiredClientThemeRestored() {
+  DispatcherDefault.dispatch({ type: "HEXAGON_CAMPAIGN_EXPIRED_CLIENT_THEME_RESTORED" });
 }
 export function saveHexagonCampaignPreviousPerkValues(previousPerkValues) {
   DispatcherDefault.dispatch({ type: "HEXAGON_CAMPAIGN_PREVIOUS_PERK_VALUES_SAVED", previousPerkValues });

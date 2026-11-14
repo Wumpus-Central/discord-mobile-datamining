@@ -16,23 +16,23 @@ export default function useTrackActivityPip(arg0) {
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream(),
   );
-  let tmp2 = stateFromStores(6773)(stateFromStores);
+  const tmp2 = stateFromStores(6836)(stateFromStores);
   dependencyMap = tmp2;
-  const tmp3 = stateFromStores(12747)();
+  let tmp3 = stateFromStores(12843)();
   noop = tmp3;
   const items1 = [stateFromStores, tmp2, arg0, tmp3];
   const effect = noop.useEffect(() => {
     compositeInstanceId = closure_3;
     if (null != closure_3) {
       if (null != closure_2) {
-        if (stateFromStores !== tmp8) {
+        if (stateFromStores !== tmp) {
           const track = AnalyticsUtilsDefault.track;
           const obj = { channel_id: null, guild_id: null, application_id: null, activity_session_id: null };
           ({ id: obj.channel_id, guild_id: obj.guild_id } = closure_0);
           ({ applicationId: obj.application_id, compositeInstanceId } = compositeInstanceId);
           obj.activity_session_id = compositeInstanceId;
-          track(tmp ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN, obj);
-          const tmp2 = tmp ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN;
+          track(tmp2 ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN, obj);
+          const tmp3 = tmp2 ? track.ACTIVITY_VIDEO_PIP_SHOWN : track.ACTIVITY_VIDEO_PIP_HIDDEN;
         }
       }
     }

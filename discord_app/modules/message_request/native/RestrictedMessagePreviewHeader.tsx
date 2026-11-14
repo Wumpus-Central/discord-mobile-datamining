@@ -1,6 +1,6 @@
 // discord_app/modules/message_request/native/RestrictedMessagePreviewHeader.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
@@ -9,10 +9,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(14759).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_5 = fn(14873).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 },
   avatar: null,
@@ -48,16 +48,16 @@ export default function RestrictedMessagePreviewHeader(channel) {
   }, items1);
   let obj3 = { style: tmp.container, children: null };
   const callback2 = userTag.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14816, dependencyMap.paths), "MutualGuildsActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14930, dependencyMap.paths), "MutualGuildsActionSheet", {
       user,
       onPressMutualGuild(arg0) {
-        const result = channel(8480).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = channel(8480);
-        channel(7168).transitionToGuild(arg0);
-        const obj2 = channel(7168);
-        user(5489).hideActionSheet();
-        const obj3 = user(5489);
-        user(6785).popWithKey(closure_1_5);
+        const result = channel(8546).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj = channel(8546);
+        channel(7231).transitionToGuild(arg0);
+        const obj2 = channel(7231);
+        user(5552).hideActionSheet();
+        const obj3 = user(5552);
+        user(6848).popWithKey(closure_1_5);
       },
     });
   }, items2);

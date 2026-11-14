@@ -1,6 +1,6 @@
 // discord_app/design/components/Sheet/native/BottomSheetRotationResync.native.tsx
 import BottomSheetSnapPoints from "BottomSheetSnapPoints.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05535_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -39,11 +39,11 @@ export function BottomSheetRotationResync(bottomSheetRef) {
   const animatedHandleGestureState = bottomSheetInternal.animatedHandleGestureState;
   ({ animatedContainerHeight, animatedIndex, animatedAnimationState } = bottomSheetInternal);
   let obj = require("BottomSheetModal");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(-1);
-  const obj2 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj3 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(-1);
+  const obj2 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj3 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
   const ref = noop.useRef(null);
   noop.useRef(null);
   items = [
@@ -113,7 +113,7 @@ export function BottomSheetRotationResync(bottomSheetRef) {
     },
     [],
   );
-  const obj4 = require("../../../../../_runtime/metro/01652__.js");
+  const obj4 = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [c3, animatedIndex, animatedAnimationState, require("BottomSheetModal").ANIMATION_STATE, sharedValue2];
   _require = undefined;
   dependencyMap = undefined;
@@ -167,11 +167,11 @@ export function BottomSheetRotationResync(bottomSheetRef) {
   BottomSheetRotationResyncNativeTsx2.__closure = items5;
   BottomSheetRotationResyncNativeTsx2.__workletHash = 5550662404596;
   BottomSheetRotationResyncNativeTsx2.__initData = tmp15;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     BottomSheetRotationResyncNativeTsx1,
     BottomSheetRotationResyncNativeTsx2,
   );
-  const obj5 = require("../../../../../_runtime/metro/01652__.js");
+  const obj5 = require("../../../../../_runtime/metro/01655__.js");
   const items6 = [sharedValue, animatedContainerHeight];
   _require = undefined;
   [tmp20, tmp21] = items6;
@@ -184,7 +184,7 @@ export function BottomSheetRotationResync(bottomSheetRef) {
   BottomSheetRotationResyncNativeTsx3.__closure = items7;
   BottomSheetRotationResyncNativeTsx3.__workletHash = 91405314278;
   BottomSheetRotationResyncNativeTsx3.__initData = tmp20;
-  const items8 = [sharedValue1, sharedValue2, require("../../../../../_runtime/metro/01652__.js").runOnJS, callback1];
+  const items8 = [sharedValue1, sharedValue2, require("../../../../../_runtime/metro/01655__.js").runOnJS, callback1];
   _require = undefined;
   dependencyMap = undefined;
   noop = undefined;
@@ -218,11 +218,11 @@ export function BottomSheetRotationResync(bottomSheetRef) {
   BottomSheetRotationResyncNativeTsx4.__closure = items9;
   BottomSheetRotationResyncNativeTsx4.__workletHash = 10618511840168;
   BottomSheetRotationResyncNativeTsx4.__initData = tmp22;
-  const animatedReaction1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     BottomSheetRotationResyncNativeTsx3,
     BottomSheetRotationResyncNativeTsx4,
   );
-  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult = require("../../../../../_runtime/metro/01655__.js");
   const items10 = [sharedValue2, animatedSnapPoints];
   _require = undefined;
   [tmp27, tmp28] = items10;
@@ -235,7 +235,7 @@ export function BottomSheetRotationResync(bottomSheetRef) {
   BottomSheetRotationResyncNativeTsx5.__closure = items11;
   BottomSheetRotationResyncNativeTsx5.__workletHash = 8125636855552;
   BottomSheetRotationResyncNativeTsx5.__initData = tmp27;
-  const items12 = [ref, sharedValue2, require("../../../../../_runtime/metro/01652__.js").runOnJS, callback1];
+  const items12 = [ref, sharedValue2, require("../../../../../_runtime/metro/01655__.js").runOnJS, callback1];
   _require = undefined;
   dependencyMap = undefined;
   noop = undefined;
@@ -260,7 +260,7 @@ export function BottomSheetRotationResync(bottomSheetRef) {
   BottomSheetRotationResyncNativeTsx6.__closure = items13;
   BottomSheetRotationResyncNativeTsx6.__workletHash = 16028021278103;
   BottomSheetRotationResyncNativeTsx6.__initData = tmp29;
-  const animatedReaction2 = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction2 = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     BottomSheetRotationResyncNativeTsx5,
     BottomSheetRotationResyncNativeTsx6,
   );

@@ -11,12 +11,12 @@ export default {
   addFiles(draftType) {
     ({ files, channelId } = draftType);
     draftType = draftType.draftType;
-    if (files.some(channelId(11087).itemNeedsImagePreConversion)) {
+    if (files.some(channelId(11154).itemNeedsImagePreConversion)) {
       function dispatch(files) {
         DispatcherDefault.dispatch({ type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType });
       }
-      Promise.all(files.map(channelId(11087).maybePreConvertImageItem)).then(dispatch);
-      const allPromises = Promise.all(files.map(channelId(11087).maybePreConvertImageItem));
+      Promise.all(files.map(channelId(11154).maybePreConvertImageItem)).then(dispatch);
+      const allPromises = Promise.all(files.map(channelId(11154).maybePreConvertImageItem));
     } else {
       const obj2 = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType };
       draftType(572).dispatch(obj2);

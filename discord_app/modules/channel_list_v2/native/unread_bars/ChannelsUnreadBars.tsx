@@ -200,11 +200,11 @@ function findNearestUnreadItem(c0, c1, headerHeight, youBarTotalHeight) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const getScaledChannelRowHeight = fn(5997).getScaledChannelRowHeight;
-const UnreadSetting = fn(6896).UnreadSetting;
+const getScaledChannelRowHeight = fn(6060).getScaledChannelRowHeight;
+const UnreadSetting = fn(6959).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_16 = createStyles.createStyles({ wrapper: StyleSheet.absoluteFillObject });
 const constants = { MENTION: "mention", UNREAD: "unread" };
 let closure_18 = { beforeItem: null, afterItem: null };
@@ -299,7 +299,7 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
   ChannelsUnreadBarsTsx1.__closure = items3;
   ChannelsUnreadBarsTsx1.__workletHash = 16683573593754;
   ChannelsUnreadBarsTsx1.__initData = tmp8;
-  const items4 = [closure_23, require("../../../../../_runtime/metro/01705__.js").scheduleOnRN, memo];
+  const items4 = [closure_23, require("../../../../../_runtime/metro/01708__.js").scheduleOnRN, memo];
   _require = undefined;
   importDefault = undefined;
   [tmp10, tmp11, tmp12] = items4;
@@ -317,7 +317,7 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
   ChannelsUnreadBarsTsx2.__closure = items5;
   ChannelsUnreadBarsTsx2.__workletHash = 10887635959554;
   ChannelsUnreadBarsTsx2.__initData = tmp10;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     ChannelsUnreadBarsTsx1,
     ChannelsUnreadBarsTsx2,
   );
@@ -364,7 +364,7 @@ export default noop.memo(function ChannelUnreadBarsComponent(fastList) {
     }
     str = str3;
   }
-  let obj3 = require("../../../../../_runtime/metro/01652__.js");
+  let obj3 = require("../../../../../_runtime/metro/01655__.js");
   const items7 = [youBarTotalHeight];
   stateFromStores = require("initialize").useStateFromStores(items7, () => youBarTotalHeight.useReducedMotion);
   const items8 = [beforeItem, stateFromStores, fastList];

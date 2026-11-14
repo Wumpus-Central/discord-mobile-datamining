@@ -1,14 +1,14 @@
 // discord_app/modules/conjure/builder/native/ConjureModeTabBar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useStateFromSharedValue from "../../../reanimated/native/useStateFromSharedValue.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function ConjureModeTab(index) {
@@ -73,7 +73,7 @@ function ConjureModeTab(index) {
   ConjureModeTabBarTsx5.__workletHash = 1750569862445;
   ConjureModeTabBarTsx5.__initData = tmp8;
   onShowMenu = undefined;
-  const animatedStyle = _mod1652.useAnimatedStyle(ConjureModeTabBarTsx5);
+  const animatedStyle = _mod1655.useAnimatedStyle(ConjureModeTabBarTsx5);
   if (extras != null) {
     onShowMenu = extras.onShowMenu;
   }
@@ -125,7 +125,7 @@ function ConjureModeTab(index) {
     accessibilityHint: null,
     children: null,
   };
-  const tmp2Result = _mod1652;
+  const tmp2Result = _mod1655;
   let formatToPlainStringResult;
   if (tmp2Result2.isAndroid()) {
     const intl = util.intl;
@@ -166,7 +166,7 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let closure_11 = createStyles.createStyles((borderRadius, arg1) => {
   const obj = {
     scrollContentContainer: { flexGrow: 1 },
@@ -226,7 +226,7 @@ let closure_11 = createStyles.createStyles((borderRadius, arg1) => {
   obj.prefix = { flexShrink: 0 };
   return obj;
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let closure_12 = createStyles.createStyleProperties({
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
@@ -266,11 +266,11 @@ export default function ConjureModeTabBar(arg0) {
   );
   c5 = tmp3;
   let obj = require("useToken");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   c6 = sharedValue;
-  const obj2 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj3 = require("../../../../../_runtime/metro/01652__.js");
+  const obj2 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const obj3 = require("../../../../../_runtime/metro/01655__.js");
   const items1 = [closure_13, sharedValue];
   _require = undefined;
   [tmp6, tmp7] = items1;
@@ -299,16 +299,16 @@ export default function ConjureModeTabBar(arg0) {
   ConjureModeTabBarTsx2.__closure = items4;
   ConjureModeTabBarTsx2.__workletHash = 12016602073272;
   ConjureModeTabBarTsx2.__initData = tmp8;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     ConjureModeTabBarTsx1,
     ConjureModeTabBarTsx2,
   );
   const items5 = [sharedValue];
   c7 = noop.useCallback((nativeEvent) => _undefined3.set(nativeEvent.nativeEvent.layout.width), items5);
-  const obj4 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(activeIndex.get());
+  const obj4 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(activeIndex.get());
   c8 = sharedValue2;
-  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult = require("../../../../../_runtime/metro/01655__.js");
   const items6 = [closure_15, activeIndex, items.length];
   _require = undefined;
   importDefault = undefined;
@@ -322,8 +322,8 @@ export default function ConjureModeTabBar(arg0) {
   ConjureModeTabBarTsx3.__closure = items7;
   ConjureModeTabBarTsx3.__workletHash = 12987911031538;
   ConjureModeTabBarTsx3.__initData = tmp12;
-  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(ConjureModeTabBarTsx3);
-  const tmpResult5 = require("../../../../../_runtime/metro/01652__.js");
+  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(ConjureModeTabBarTsx3);
+  const tmpResult5 = require("../../../../../_runtime/metro/01655__.js");
   const items8 = [
     closure_16,
     derivedValue,
@@ -410,7 +410,7 @@ export default function ConjureModeTabBar(arg0) {
   ConjureModeTabBarTsx4.__closure = items9;
   ConjureModeTabBarTsx4.__workletHash = 680934149064;
   ConjureModeTabBarTsx4.__initData = tmp16;
-  closure_9 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ConjureModeTabBarTsx4);
+  closure_9 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(ConjureModeTabBarTsx4);
   const mapped = items.map((id, index) => {
     const tmp = _undefined5.get() === index;
     let tmp3;
@@ -420,7 +420,7 @@ export default function ConjureModeTabBar(arg0) {
     const obj = { onLayout: tmp3, style: null };
     items = [_undefined2.indicator, tmp ? closure_9 : _undefined2.indicatorHidden];
     obj.style = items;
-    return metroImportDefault(_modDef1652.View, obj, id.id);
+    return metroImportDefault(_modDef1655.View, obj, id.id);
   });
   const mapped1 = items.map((id, index) => {
     id = id.id;
@@ -454,7 +454,7 @@ export default function ConjureModeTabBar(arg0) {
     return metroImportDefault(ConjureModeTab, obj, id);
   });
   const tmp30 = c5;
-  const tmpResult6 = require("../../../../../_runtime/metro/01652__.js");
+  const tmpResult6 = require("../../../../../_runtime/metro/01655__.js");
   let str;
   if (tmpResult7.isIOS()) {
     str = "tabbar";

@@ -1,6 +1,6 @@
 // discord_app/modules/badges/native/useBadgeColor.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import privDefault from "../../../../_runtime/01453_priv.js";
+import privDefault from "../../../../_runtime/01456_priv.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 const NEUTRAL_35 = nativeDefault.unsafe_rawColors.NEUTRAL_35;
 let closure_7 = new privDefault({ max: 50 });
-const promiseDeduper = new fn(5373).PromiseDeduper();
+const promiseDeduper = new fn(5436).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/native/useBadgeColor.tsx");
 
@@ -56,9 +56,9 @@ export function useBadgeColor(rasterUrl) {
                   uri,
                   asyncGeneratorStep(async () => {
                     closure_3 = tmp2;
-                    const tmp14 = value(15168);
+                    const tmp14 = value(15281);
                     const pickBadgeColor = tmp14.pickBadgeColor;
-                    await pickBadgeColor(2022).getDominantColors({ uri });
+                    await pickBadgeColor(2025).getDominantColors({ uri });
                     const tmp8 = pickBadgeColor(value);
                     value = tmp8;
                     if (tmp8 == null) {

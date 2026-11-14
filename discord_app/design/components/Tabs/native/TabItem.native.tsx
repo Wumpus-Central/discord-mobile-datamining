@@ -1,13 +1,13 @@
 // discord_app/design/components/Tabs/native/TabItem.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import Text_Text from "../../Text/native/Text.tsx";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const module_1652 = _mod1652;
+const module_1655 = _mod1655;
 
 require = fn;
 function useAnimatedTextStyle(arg0) {
@@ -46,17 +46,17 @@ function useAnimatedTextStyle(arg0) {
   TabItemNativeTsx1.__closure = items1;
   TabItemNativeTsx1.__workletHash = 3107632073840;
   TabItemNativeTsx1.__initData = tmp2;
-  return _mod1652.useAnimatedStyle(TabItemNativeTsx1);
+  return _mod1655.useAnimatedStyle(TabItemNativeTsx1);
 }
 function TabItemCount(arg0) {
   ({ count, index, activeIndex, pressed, variant } = arg0);
   const tmp = closure_10();
-  const sharedValue = _mod1652.useSharedValue(0);
+  const sharedValue = _mod1655.useSharedValue(0);
   items = [sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     const result = _undefined.set(1);
   }, items);
-  const items1 = [closure_15, spring_spring.withSpring, sharedValue, closure_9, _mod1652.interpolate];
+  const items1 = [closure_15, spring_spring.withSpring, sharedValue, closure_9, _mod1655.interpolate];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -76,7 +76,7 @@ function TabItemCount(arg0) {
   TabItemNativeTsx2.__closure = items2;
   TabItemNativeTsx2.__workletHash = 15126685663834;
   TabItemNativeTsx2.__initData = tmp6;
-  const animatedStyle = _mod1652.useAnimatedStyle(TabItemNativeTsx2);
+  const animatedStyle = _mod1655.useAnimatedStyle(TabItemNativeTsx2);
   const obj3 = {
     style: null,
     children: hasOwnProperty(Text_Text.Text, {
@@ -89,16 +89,16 @@ function TabItemCount(arg0) {
   };
   const items3 = [tmp.count, animatedStyle];
   obj3.style = items3;
-  return hasOwnProperty(module_1652.View, obj3);
+  return hasOwnProperty(module_1655.View, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let closure_7 = module_1652.createAnimatedComponent(Pressable);
+let closure_7 = module_1655.createAnimatedComponent(Pressable);
 let closure_8 = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 let closure_9 = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let obj = {
   item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" },
   count: { marginLeft: nativeDefault.space.PX_8 },
@@ -107,14 +107,14 @@ let obj = {
 let obj3 = { marginLeft: nativeDefault.space.PX_8 };
 obj.indicatorDot = { marginLeft: nativeDefault.space.PX_4, alignSelf: "center" };
 let closure_10 = createStyles.createStyles(obj);
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj4 = { marginLeft: nativeDefault.space.PX_4, alignSelf: "center" };
 let closure_11 = createStyles.createStyleProperties({
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_BRAND,
   pressed: nativeDefault.colors.TEXT_BRAND,
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj5 = {
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_BRAND,
@@ -174,9 +174,9 @@ export function TabItem(arg0) {
   TabItemNativeTsx3.__workletHash = 5168414867841;
   TabItemNativeTsx3.__initData = tmp5;
   let num = 0;
-  const animatedProps = require("../../../../../_runtime/metro/01652__.js").useAnimatedProps(TabItemNativeTsx3);
+  const animatedProps = require("../../../../../_runtime/metro/01655__.js").useAnimatedProps(TabItemNativeTsx3);
   const items2 = [tmp2.item];
-  let obj = require("../../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../../_runtime/metro/01655__.js");
   if (grow) {
     num = 1;
   }
@@ -184,7 +184,7 @@ export function TabItem(arg0) {
   items2[1] = { flexGrow: num };
   const merged1 = Object.assign(merged);
   obj2.onLayout = function handleLayout(nativeEvent) {
-    _mod1705.scheduleOnUI(c1, c0, nativeEvent.nativeEvent.layout);
+    _mod1708.scheduleOnUI(c1, c0, nativeEvent.nativeEvent.layout);
   };
   obj2.accessibilityRole = "tab";
   const tmp9 = useAnimatedTextStyle({ index, activeIndex, pressed, variant });
@@ -222,7 +222,7 @@ export function TabItem(arg0) {
       str = "neutral";
     }
     const obj6 = { variant: str };
-    obj5.children = closure_5(tmp3(9418).IndicatorDot, obj6);
+    obj5.children = closure_5(tmp3(9487).IndicatorDot, obj6);
     tmp14Result2 = closure_5(closure_4, obj5);
   }
   items3[2] = tmp14Result2;

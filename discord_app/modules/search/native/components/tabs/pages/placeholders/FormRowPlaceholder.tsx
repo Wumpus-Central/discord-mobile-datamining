@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/FormRowPlaceholder.tsx
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../../../../_runtime/metro/01655__.js";
 import usePlaceholderStyles from "../../../../hooks/usePlaceholderStyles.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
@@ -8,14 +8,14 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   itemContainer: {
     flexDirection: "row",
     paddingHorizontal: 16,
     overflow: "hidden",
     height: 64,
-    paddingVertical: fn(8999).SEARCH_ROW_TAP_STATE_PADDING,
+    paddingVertical: fn(9066).SEARCH_ROW_TAP_STATE_PADDING,
     alignItems: "center",
   },
   avatar: null,
@@ -66,5 +66,5 @@ export default function FormRowPlaceholderItem(style) {
   obj4.children = items2;
   items1[1] = hasOwnProperty(View, obj4);
   obj2.children = items1;
-  return hasOwnProperty(_modDef1652.View, obj2);
+  return hasOwnProperty(_modDef1655.View, obj2);
 }

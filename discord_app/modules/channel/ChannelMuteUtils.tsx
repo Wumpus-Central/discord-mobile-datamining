@@ -1,5 +1,5 @@
 // discord_app/modules/channel/ChannelMuteUtils.tsx
-import _modDef2166 from "../../../_runtime/metro/02166__.js";
+import _modDef2169 from "../../../_runtime/metro/02169__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/channel/ChannelMuteUtils.tsx");
@@ -8,9 +8,9 @@ export function getMuteSettings(selected_time_window) {
   const mute_config = { selected_time_window, end_time: null };
   let toISOStringResult = null;
   if (selected_time_window > 0) {
-    const obj2 = _modDef2166();
-    toISOStringResult = _modDef2166().add(selected_time_window, "second").toISOString();
-    const addResult = _modDef2166().add(selected_time_window, "second");
+    const obj2 = _modDef2169();
+    toISOStringResult = _modDef2169().add(selected_time_window, "second").toISOString();
+    const addResult = _modDef2169().add(selected_time_window, "second");
   }
   mute_config.end_time = toISOStringResult;
   return { muted: true, mute_config };

@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/native/useTryItOutUpsellScrollTracking.tsx
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -9,7 +9,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/useTryItOut
 export default function useTryItOutUpsellScrollTracking(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  const sharedValue = _mod1652.useSharedValue(true);
+  const sharedValue = _mod1655.useSharedValue(true);
   noop.useRef({ contentHeight: 0, viewportHeight: 0, tryItOutSectionHeight: 0 });
   items = [arg0, sharedValue, arg1];
   const callback = noop.useCallback((arg0) => {

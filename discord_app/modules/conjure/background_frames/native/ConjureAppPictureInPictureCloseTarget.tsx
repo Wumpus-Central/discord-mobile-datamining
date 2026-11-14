@@ -1,28 +1,28 @@
 // discord_app/modules/conjure/background_frames/native/ConjureAppPictureInPictureCloseTarget.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import DoorExitIcon from "../../../../design/components/Icon/native/redesign/generated/DoorExitIcon.tsx";
 import conjureAppPictureInPictureLayout from "conjureAppPictureInPictureLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let closure_5 = { mass: 0.4, damping: 18, stiffness: 300 };
 let closure_6 = { duration: 150 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { target: null, fill: null };
 let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(19704).CLOSE_TARGET_SIZE,
-  height: fn(19704).CLOSE_TARGET_SIZE,
-  borderRadius: fn(19704).CLOSE_TARGET_SIZE / 2,
+  width: fn(19914).CLOSE_TARGET_SIZE,
+  height: fn(19914).CLOSE_TARGET_SIZE,
+  borderRadius: fn(19914).CLOSE_TARGET_SIZE / 2,
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST,
@@ -37,7 +37,7 @@ const rect = {
   left: 0,
   right: 0,
   bottom: 0,
-  borderRadius: fn(19704).CLOSE_TARGET_SIZE / 2,
+  borderRadius: fn(19914).CLOSE_TARGET_SIZE / 2,
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: nativeDefault.colors.STATUS_DANGER,
@@ -119,7 +119,7 @@ export default function ConjureAppPictureInPictureCloseTarget(shown) {
   ConjureAppPictureInPictureCloseTargetTsx1.__closure = items1;
   ConjureAppPictureInPictureCloseTargetTsx1.__workletHash = 2190508399799;
   ConjureAppPictureInPictureCloseTargetTsx1.__initData = tmp5;
-  const animatedStyle = _mod1652.useAnimatedStyle(ConjureAppPictureInPictureCloseTargetTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(ConjureAppPictureInPictureCloseTargetTsx1);
   const items2 = [closure_9, timing_timing.withTiming, hovered, closure_6];
   c0 = undefined;
   c1 = undefined;
@@ -140,18 +140,18 @@ export default function ConjureAppPictureInPictureCloseTarget(shown) {
   ConjureAppPictureInPictureCloseTargetTsx2.__closure = items3;
   ConjureAppPictureInPictureCloseTargetTsx2.__workletHash = 5767236237381;
   ConjureAppPictureInPictureCloseTargetTsx2.__initData = tmp17;
-  const animatedStyle1 = _mod1652.useAnimatedStyle(ConjureAppPictureInPictureCloseTargetTsx2);
+  const animatedStyle1 = _mod1655.useAnimatedStyle(ConjureAppPictureInPictureCloseTargetTsx2);
   let obj2 = { style: null, pointerEvents: "none", importantForAccessibility: "no-hide-descendants", children: null };
   const items4 = [tmp.target, animatedStyle];
   obj2.style = items4;
-  const tmp2Result = _mod1652;
+  const tmp2Result = _mod1655;
   const items5 = [React3(DoorExitIcon.DoorExitIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG })];
   let obj4 = { style: null, children: null };
   const items6 = [tmp.fill, animatedStyle1];
   obj4.style = items6;
   let obj3 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
   obj4.children = React3(DoorExitIcon.DoorExitIcon, { size: "md", color: nativeDefault.colors.WHITE });
-  items5[1] = React3(_modDef1652.View, obj4);
+  items5[1] = React3(_modDef1655.View, obj4);
   obj2.children = items5;
-  return React4(_modDef1652.View, obj2);
+  return React4(_modDef1655.View, obj2);
 }

@@ -26,7 +26,7 @@ class Separator {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, Fragment: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { section: { gap: 14 }, separator: null };
 let size = {
   width: "100%",
@@ -58,7 +58,7 @@ export function Content(arg0) {
   items = [
     closure_6(SectionTitle, obj7),
     closure_6(guildId(1187).Spacer, { size: 8 }),
-    closure_6(guildId(17736).GuildRoleSubscriptionMemberPreview, { guildId, role }),
+    closure_6(guildId(17856).GuildRoleSubscriptionMemberPreview, { guildId, role }),
   ];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , ,];
@@ -115,5 +115,5 @@ export function Content(arg0) {
   }
   items1[3] = tmp5Result4;
   obj5.children = items1;
-  return closure_8(guildId(17735).SeparatedList, obj5);
+  return closure_8(guildId(17855).SeparatedList, obj5);
 }

@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2717 from "../GuildPowerups.messages.js";
+import _modDef2733 from "../GuildPowerups.messages.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AppliedGuildBoostStore from "../../../../stores/AppliedGuildBoostStore.tsx";
 
@@ -54,10 +54,10 @@ export default function useGuildPowerupsWarningConfig(arg0, arg1) {
     } else {
       obj = { shouldShow: true, title: null, description: null, requiredBoostCount: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef2717.n5hQhc);
+      obj.title = intl.string(_modDef2733.n5hQhc);
       const intl2 = util.intl;
       const obj2 = { boostCount: diff, perksString: closure_1.join(", ") };
-      obj.description = intl2.formatToPlainString(_modDef2717.iAaAiG, obj2);
+      obj.description = intl2.formatToPlainString(_modDef2733.iAaAiG, obj2);
       obj.requiredBoostCount = diff;
     }
     return obj;

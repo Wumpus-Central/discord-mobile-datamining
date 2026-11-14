@@ -1,12 +1,12 @@
 // discord_app/records/GiftCodeRecord.tsx
-import _modDef2166 from "../../_runtime/metro/02166__.js";
+import _modDef2169 from "../../_runtime/metro/02169__.js";
 import Record from "../lib/Record.tsx";
 import SubscriptionTrialRecord from "../modules/billing/records/SubscriptionTrialRecord.tsx";
 import PromotionRecord from "PromotionRecord.tsx";
 import SubscriptionPlanRecord from "SubscriptionPlanRecord.tsx";
 
 const require = fn;
-let closure_6 = fn(1387).PremiumSubscriptionSKUToPremiumType;
+let closure_6 = fn(1390).PremiumSubscriptionSKUToPremiumType;
 const frozen = Object.freeze({
   PAYMENT_SOURCE_REQUIRED: 1,
   EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
@@ -34,6 +34,7 @@ class GiftCodeRecord extends tmp2 {
       subscriptionTrial: tmp.subscriptionTrial,
       promotion: tmp.promotion,
       giftStyle: tmp.giftStyle,
+      giftSubscriptionAgreement: tmp.giftSubscriptionAgreement,
     } = global);
     return tmp;
   }
@@ -51,7 +52,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let tmp5 = null;
   if (null != user.expires_at) {
-    tmp5 = _modDef2166(user.expires_at);
+    tmp5 = _modDef2169(user.expires_at);
   }
   const redeemed = user.redeemed;
   if (null != user.subscription_plan) {
@@ -73,19 +74,19 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let fromServer1 = null;
   if (null != user.subscription_trial) {
+    let tmp12 = SubscriptionTrialRecord;
     fromServer1 = SubscriptionTrialRecord.createFromServer(user.subscription_trial);
   }
-  const promotion = user.promotion;
   let fromServer2 = null;
-  if (null != promotion) {
+  if (null != user.promotion) {
+    tmp12 = PromotionRecord;
     fromServer2 = PromotionRecord.createFromServer(user.promotion);
   }
   if (typeof GiftCodeRecord === "function") {
-    const tmp18 = new GiftCodeRecord(
+    const tmp19 = new GiftCodeRecord(
       tmp,
-      SubscriptionTrialRecord,
-      PromotionRecord,
-      promotion,
+      tmp12,
+      tmp13,
       GiftCodeRecord,
       new.target,
       id,
@@ -100,25 +101,28 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
       subscription_plan_id,
       fromServer,
       entitlement_branches,
+      num,
+      fromServer1,
     );
-    tmp18.userId = id;
-    tmp18.code = code;
-    tmp18.skuId = sku_id;
-    tmp18.applicationId = application_id;
-    tmp18.uses = uses;
-    tmp18.maxUses = max_uses;
-    tmp18.expiresAt = tmp5;
-    tmp18.redeemed = redeemed;
-    tmp18.storeListingId = id1;
-    tmp18.subscriptionPlanId = subscription_plan_id;
-    tmp18.subscriptionPlan = fromServer;
-    tmp18.revoked = false;
-    tmp18.entitlementBranches = entitlement_branches;
-    tmp18.flags = num;
-    tmp18.subscriptionTrial = fromServer1;
-    tmp18.promotion = fromServer2;
-    tmp18.giftStyle = user.gift_style;
-    return tmp18;
+    tmp19.userId = id;
+    tmp19.code = code;
+    tmp19.skuId = sku_id;
+    tmp19.applicationId = application_id;
+    tmp19.uses = uses;
+    tmp19.maxUses = max_uses;
+    tmp19.expiresAt = tmp5;
+    tmp19.redeemed = redeemed;
+    tmp19.storeListingId = id1;
+    tmp19.subscriptionPlanId = subscription_plan_id;
+    tmp19.subscriptionPlan = fromServer;
+    tmp19.revoked = false;
+    tmp19.entitlementBranches = entitlement_branches;
+    tmp19.flags = num;
+    tmp19.subscriptionTrial = fromServer1;
+    tmp19.promotion = fromServer2;
+    tmp19.giftStyle = user.gift_style;
+    tmp19.giftSubscriptionAgreement = tmp15;
+    return tmp19;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
@@ -127,8 +131,8 @@ prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;
   let isAfterResult = null != expiresAt;
   if (isAfterResult) {
-    isAfterResult = _modDef2166().isAfter(expiresAt);
-    const obj = _modDef2166();
+    isAfterResult = _modDef2169().isAfter(expiresAt);
+    const obj = _modDef2169();
   }
   return isAfterResult;
 };

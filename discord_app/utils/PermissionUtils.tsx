@@ -368,11 +368,11 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(5096);
+const ChannelRecord = fn(5159);
 ({ THREAD_CHANNEL_TYPES: metroImportDefault, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(5110);
+const GuildRecord = fn(5173);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: closure_10 } = GuildRecord);
-const hasPermission = fn(5150).hasPermission;
+const hasPermission = fn(5213).hasPermission;
 const Constants = fn(1072);
 const Permissions = Constants.Permissions;
 ({
@@ -444,6 +444,8 @@ let closure_29 = BigFlagUtils.combine(
   Permissions.READ_MESSAGE_HISTORY,
   Permissions.CHANGE_NICKNAME,
 );
+const items1 = [fn(5224).GuildMemberFlags.IS_GUEST, ...fn(5244).AUTOMOD_QUARANTINED_PROFILE_FLAGS];
+const reduced = items1.reduce((acc, item) => acc | item, 0);
 let BigFlagUtils = BigFlagUtils_mod;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/PermissionUtils.tsx");
@@ -532,6 +534,7 @@ function computePermissionsForRoles(excludeGuildPermissions) {
 export const NONE = deserializeResult;
 export const ALL = applyResult;
 export const DEFAULT = combineResult;
+export const PERMISSION_MEMBER_FLAGS_MASK = reduced;
 export const VIEW_GUILD_SETTINGS = BigFlagUtils.combine(
   Permissions.MANAGE_GUILD,
   Permissions.MANAGE_ROLES,
@@ -563,7 +566,7 @@ export function areChannelsLocked(c18, c19, appChannelBotUserId) {
           if (null == obj2[guild_id]) {
             let obj = {
               id: guild_id,
-              type: obj2(2116).PermissionOverwriteType.ROLE,
+              type: obj2(2119).PermissionOverwriteType.ROLE,
               allow: deserializeResult,
               deny: deserializeResult,
             };

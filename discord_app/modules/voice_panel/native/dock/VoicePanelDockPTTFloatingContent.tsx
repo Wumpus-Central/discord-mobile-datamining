@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/dock/VoicePanelDockPTTFloatingContent.tsx
 import native from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import VisualEffectViewDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
@@ -9,7 +9,7 @@ import useDockBoxShadowDefault from "useDockBoxShadow.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const nativeDefault = native;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -18,8 +18,8 @@ const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = 66 + nativeDefault.space.PX_16;
-let closure_8 = fn(11942).DOCK_TILE_SIZE / 56;
-const createStyles = fn(5243);
+let closure_8 = fn(12009).DOCK_TILE_SIZE / 56;
+const createStyles = fn(5306);
 let obj2 = {
   host: { position: "absolute", top: 0, left: 0, width: 0, height: 0, overflow: "visible" },
   indicator: null,
@@ -60,7 +60,7 @@ export default function VoicePanelDockPTTFloatingContent(arg0) {
   const tmp = closure_9();
   const tmp4Result = useDockBoxShadowDefault(native.Shadow.SHADOW_HIGH);
   const tmp7 = useThemeDefault();
-  items = [closure_10, anchor, progress, 76, _mod1652.interpolate, _mod1652.Extrapolation, dragX, dragY, 0.5];
+  items = [closure_10, anchor, progress, 76, _mod1655.interpolate, _mod1655.Extrapolation, dragX, dragY, 0.5];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -115,14 +115,14 @@ export default function VoicePanelDockPTTFloatingContent(arg0) {
   VoicePanelDockPTTFloatingContentTsx1.__closure = items1;
   VoicePanelDockPTTFloatingContentTsx1.__workletHash = 477439147398;
   VoicePanelDockPTTFloatingContentTsx1.__initData = tmp8;
-  const animatedStyle = _mod1652.useAnimatedStyle(VoicePanelDockPTTFloatingContentTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(VoicePanelDockPTTFloatingContentTsx1);
   let items2 = [
     closure_11,
     anchor,
     progress,
     56,
-    _mod1652.interpolate,
-    _mod1652.Extrapolation,
+    _mod1655.interpolate,
+    _mod1655.Extrapolation,
     dragX,
     _undefined7,
     dragY,
@@ -196,11 +196,11 @@ export default function VoicePanelDockPTTFloatingContent(arg0) {
     accessibilityElementsHidden: true,
     children: null,
   };
-  const animatedStyle1 = _mod1652.useAnimatedStyle(VoicePanelDockPTTFloatingContentTsx2);
+  const animatedStyle1 = _mod1655.useAnimatedStyle(VoicePanelDockPTTFloatingContentTsx2);
   let obj3 = { style: null, children: null };
   const items4 = [tmp.indicator, animatedStyle];
   obj3.style = items4;
-  const tmp5Result = _mod1652;
+  const tmp5Result = _mod1655;
   const tmp2Result = VisualEffectViewDefault;
   let str = "light";
   if (tmp5Result2.isThemeDark(tmp7)) {
@@ -217,7 +217,7 @@ export default function VoicePanelDockPTTFloatingContent(arg0) {
     hasOwnProperty(View, { style: tmp.indicatorFill }),
   ];
   obj3.children = items5;
-  const items6 = [timestampProducer(_modDef1652.View, obj3)];
+  const items6 = [timestampProducer(_modDef1655.View, obj3)];
   const obj6 = { style: null, children: null };
   const items7 = [tmp.tile, { boxShadow: tmp4Result }, animatedStyle1];
   obj6.style = items7;
@@ -234,7 +234,7 @@ export default function VoicePanelDockPTTFloatingContent(arg0) {
     size: "md",
     color: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT,
   });
-  items6[1] = hasOwnProperty(_modDef1652.View, obj6);
+  items6[1] = hasOwnProperty(_modDef1655.View, obj6);
   obj2.children = items6;
   return timestampProducer(View, obj2);
 }

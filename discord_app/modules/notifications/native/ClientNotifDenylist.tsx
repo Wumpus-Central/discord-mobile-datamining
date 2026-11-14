@@ -13,52 +13,106 @@ const require = globalThis.__r;
 require = fn;
 function getClientNotifTypeChoices() {
   if (fn === undefined) {
-    fn = function t(arg0) {
-      return setting.getSetting(arg0);
+    fn = function t(map) {
+      return guildDisabledTypes.getSetting(map);
     };
   }
-  const assignedNotifSettingsAndMappings =
-    notifications_NotificationSettingsUtils.getAssignedNotifSettingsAndMappings();
-  ({ settings, mappings } = assignedNotifSettingsAndMappings);
+  let assignedNotifSettingsAndMappings = arg1;
+  if (arg1 === undefined) {
+    assignedNotifSettingsAndMappings = fn(map[6]).getAssignedNotifSettingsAndMappings();
+    const obj = fn(map[6]);
+  }
+  c1 = undefined;
+  c8 = undefined;
+  c9 = undefined;
+  ({ settings, mappings, redesignState: c1 } = assignedNotifSettingsAndMappings);
+  map = new Map(
+    settings.map((id) => {
+      items = [id.id, id];
+      return items;
+    }),
+  );
   const disabledTypes = [];
   const enabledTypes = [];
-  const iter = mappings[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let notifSetting = nextResult.notifSetting;
-    let tmp3 = notifSetting;
-    let notifType = nextResult.notifType;
-    value = map.get(notifSetting);
-    let tmp5 = value;
+  const radioTypes = [];
+  const dmDisabledTypes = [];
+  const guildDisabledTypes = [];
+  function _loop() {
+    value = map.get(c8);
     if (null != value) {
-      if (set.has(tmp3)) {
-        if (!("systemOnly" in tmp5)) {
-          let fnResult = fn(tmp3);
-          let radio;
-          let tmp12 = fnResult;
-          if (fnResult != null) {
-            radio = fnResult.radio;
-          }
-          if (0 === radio) {
-            if (false === tmp12.toggle) {
-              let arr = disabledTypes.push(notifType);
-            } else {
-              let arr2 = enabledTypes.push(notifType);
+      const tmp4 = fn(c8);
+      let radio = tmp4;
+      if ("radioScopesByValue" in value) {
+        if (null != value.radioScopesByValue) {
+          if (c1) {
+            if (null != tmp4) {
+              if (!tmp4.toggle) {
+                const _Object = Object;
+                const entries = Object.entries(value.radioScopesByValue);
+                const found = entries.find((item) => {
+                  [tmp] = item;
+                  return Number(tmp) === radio.radio;
+                });
+                let tmp16;
+                if (found != null) {
+                  tmp16 = found[1];
+                }
+                if (null == tmp16) {
+                  return 0;
+                } else {
+                  const _Set = Set;
+                  set = new Set(tmp16);
+                  radioTypes.push(c9);
+                  if (!set.has("dm")) {
+                    dmDisabledTypes.push(c9);
+                  }
+                  if (!set.has("guild")) {
+                    guildDisabledTypes.push(c9);
+                  }
+                  return 0;
+                }
+              }
             }
           }
+          return 0;
         }
       }
+      let num2 = 0;
+      if (set.has(c8)) {
+        radio = undefined;
+        if (tmp4 != null) {
+          radio = tmp4.radio;
+        }
+        if (0 !== radio) {
+          num2 = 0;
+        } else if (false === tmp4.toggle) {
+          disabledTypes.push(c9);
+        } else {
+          enabledTypes.push(c9);
+        }
+      }
+      return num2;
     }
+    return 0;
+  }
+  const iter = mappings[Symbol.iterator]();
+  while (iter !== undefined) {
+    ({ notifSetting: c8, notifType: c9 } = nextResult);
+    let _loopResult = _loop();
     continue;
   }
-  return { disabledTypes, enabledTypes };
+  return { disabledTypes, enabledTypes, radioTypes, dmDisabledTypes, guildDisabledTypes };
 }
 function syncClientNotifDenylist(map) {
   if (set === undefined) {
     const _Set = Set;
     set = new Set();
   }
-  let set1;
+  if (set1 === undefined) {
+    const _Set2 = Set;
+    set1 = new Set();
+  }
+  let set2;
   const str = AuthenticationStore.getId();
   let str2;
   if (str != null) {
@@ -67,70 +121,113 @@ function syncClientNotifDenylist(map) {
   if (str2 == null) {
     str2 = "";
   }
-  items = [];
+  const enforcing = TurboModuleRegistry.getEnforcing("NativeNotifSettingsModule");
+  disabledTypes = [];
+  dmDisabledTypes = [];
+  guildDisabledTypes = [];
+  radioTypes = [];
   try {
-    if ("" !== str2) {
+    const assignedNotifSettingsAndMappings =
+      notifications_NotificationSettingsUtils.getAssignedNotifSettingsAndMappings();
+    let redesignState = assignedNotifSettingsAndMappings.redesignState;
+    let flag = redesignState;
+    if (redesignState) {
+      redesignState = "" !== str2;
+    }
+    if (!redesignState) {
+      const result = enforcing.setAndroidNotifScopeDenylist(str2, [], [], [], true);
+    }
+    if (tmp17) {
       let fn;
       if (null != map) {
         fn = (arg0) => map.get(arg0);
       }
-      const tmp30Result = getClientNotifTypeChoices(fn);
-      items = tmp30Result.disabledTypes;
+      const tmp19Result = getClientNotifTypeChoices(fn, tmp13);
+      ({ disabledTypes, dmDisabledTypes, guildDisabledTypes, radioTypes } = tmp19Result);
       if (null != map) {
-        const items1 = [];
-        HermesBuiltin.arraySpread(tmp30Result.enabledTypes, HermesBuiltin.arraySpread(items, 0));
-        for (const item10027 of items1) {
-          let addResult = set.add(item10027);
+        items = [];
+        HermesBuiltin.arraySpread(
+          tmp19Result.radioTypes,
+          HermesBuiltin.arraySpread(tmp19Result.enabledTypes, HermesBuiltin.arraySpread(disabledTypes, 0)),
+        );
+        for (const item10068 of items) {
+          let addResult = set.add(item10068);
           continue;
         }
-        const _Set2 = Set;
-        set1 = new Set(items);
+        for (const item10077 of radioTypes) {
+          let addResult1 = set1.add(item10077);
+          continue;
+        }
+        const items1 = [];
+        HermesBuiltin.arraySpread(set1, 0);
+        radioTypes = items1;
+        const _Set3 = Set;
+        set2 = new Set(disabledTypes);
         const items2 = [];
         HermesBuiltin.arraySpread(set, 0);
-        const found = items2.filter((item) => !set1.has(item));
+        const found = items2.filter((item) => !set2.has(item));
       }
     }
-    const enforcing = TurboModuleRegistry.getEnforcing("NativeNotifSettingsModule");
     if (null != found) {
-      const result = enforcing.updateAndroidNotifTypeDenylist(str2, items, found);
+      const result1 = enforcing.updateAndroidNotifTypeDenylist(str2, disabledTypes, found);
     } else {
-      const result1 = enforcing.setAndroidNotifTypeDenylist(str2, items);
+      const result2 = enforcing.setAndroidNotifTypeDenylist(str2, disabledTypes);
     }
-  } catch (tmp20) {
-    items = [];
-    obj.clear();
-    SentryUtilsDefault.captureException(tmp20);
+    if (flag) {
+      flag = "" !== str2;
+    }
+    if (flag) {
+      const result3 = enforcing.setAndroidNotifScopeDenylist(
+        str2,
+        dmDisabledTypes,
+        guildDisabledTypes,
+        radioTypes,
+        null == map,
+      );
+    }
+    tmp13 = assignedNotifSettingsAndMappings;
+    tmp17 = "" !== str2;
+  } catch (tmp40) {
+    disabledTypes = [];
+    obj3.clear();
+    dmDisabledTypes = [];
+    guildDisabledTypes = [];
+    obj2.clear();
+    radioTypes = [];
+    flag = false;
+    const result4 = obj.setAndroidNotifScopeDenylist(tmp2, [], [], [], true);
+    SentryUtilsDefault.captureException(tmp40);
   }
 }
 const TurboModuleRegistry = fn(17).TurboModuleRegistry;
 let items = [
-  fn(16776).NotifSettings.CALLS,
-  fn(16776).NotifSettings.FRIEND_REQUESTS,
-  fn(16776).NotifSettings.POLLS,
-  fn(16776).NotifSettings.REACTIONS,
-  fn(16776).NotifSettings.MISSED_MESSAGES_LOW,
-  fn(16776).NotifSettings.MISSED_MESSAGES_DEFAULT,
-  fn(16776).NotifSettings.VOICE_ACTIVITY_LOW,
-  fn(16776).NotifSettings.VOICE_ACTIVITY_DEFAULT,
-  fn(16776).NotifSettings.VOICE_CHANNEL_ACTIVITY,
-  fn(16776).NotifSettings.GO_LIVE,
-  fn(16776).NotifSettings.FRIENDS_GAMING_LOW,
-  fn(16776).NotifSettings.FRIENDS_GAMING_DEFAULT,
-  fn(16776).NotifSettings.GAMING_OTHER,
-  fn(16776).NotifSettings.CUSTOM_STATUS_UPDATE,
-  fn(16776).NotifSettings.PROFILE_UPDATES,
-  fn(16776).NotifSettings.FRIEND_ONLINE,
-  fn(16776).NotifSettings.FRIEND_REQUEST_REMINDER,
-  fn(16776).NotifSettings.FRIEND_SUGGESTIONS,
-  fn(16776).NotifSettings.NUDGE_NEW_FRIEND_DM,
-  fn(16776).NotifSettings.FORUM_NOTIFICATIONS,
-  fn(16776).NotifSettings.GUILD_EVENT_NOTIFICATIONS,
-  fn(16776).NotifSettings.STAGE_NOTIFICATIONS,
-  fn(16776).NotifSettings.OTHER_GUILD,
-  fn(16776).NotifSettings.SAFETY_ALERTS,
-  fn(16776).NotifSettings.INVITES_RECONNECTING,
-  fn(16776).NotifSettings.TRENDING_SUGGESTIONS,
-  fn(16776).NotifSettings.UPDATES_OFFERS,
+  fn(16899).NotifSettings.CALLS,
+  fn(16899).NotifSettings.FRIEND_REQUESTS,
+  fn(16899).NotifSettings.POLLS,
+  fn(16899).NotifSettings.REACTIONS,
+  fn(16899).NotifSettings.MISSED_MESSAGES_LOW,
+  fn(16899).NotifSettings.MISSED_MESSAGES_DEFAULT,
+  fn(16899).NotifSettings.VOICE_ACTIVITY_LOW,
+  fn(16899).NotifSettings.VOICE_ACTIVITY_DEFAULT,
+  fn(16899).NotifSettings.VOICE_CHANNEL_ACTIVITY,
+  fn(16899).NotifSettings.GO_LIVE,
+  fn(16899).NotifSettings.FRIENDS_GAMING_LOW,
+  fn(16899).NotifSettings.FRIENDS_GAMING_DEFAULT,
+  fn(16899).NotifSettings.GAMING_OTHER,
+  fn(16899).NotifSettings.CUSTOM_STATUS_UPDATE,
+  fn(16899).NotifSettings.PROFILE_UPDATES,
+  fn(16899).NotifSettings.FRIEND_ONLINE,
+  fn(16899).NotifSettings.FRIEND_REQUEST_REMINDER,
+  fn(16899).NotifSettings.FRIEND_SUGGESTIONS,
+  fn(16899).NotifSettings.NUDGE_NEW_FRIEND_DM,
+  fn(16899).NotifSettings.FORUM_NOTIFICATIONS,
+  fn(16899).NotifSettings.GUILD_EVENT_NOTIFICATIONS,
+  fn(16899).NotifSettings.STAGE_NOTIFICATIONS,
+  fn(16899).NotifSettings.OTHER_GUILD,
+  fn(16899).NotifSettings.SAFETY_ALERTS,
+  fn(16899).NotifSettings.INVITES_RECONNECTING,
+  fn(16899).NotifSettings.TRENDING_SUGGESTIONS,
+  fn(16899).NotifSettings.UPDATES_OFFERS,
 ];
 let set = new Set(items);
 const size = fn(2);
@@ -149,29 +246,30 @@ export function initializeClientNotifDenylist() {
     if (hasLoaded) {
       id = AuthenticationStore.getId();
       set.clear();
+      set1.clear();
     }
     if (null != map) {
-      const tmp26 = map[Symbol.iterator]();
-      while (tmp26 !== undefined) {
-        let tmp8 = _slicedToArray(tmp5, 2);
-        [tmp9, tmp11] = tmp8;
-        let setting = NotifSettingsProtoStore.getSetting(tmp9);
+      const tmp28 = map[Symbol.iterator]();
+      while (tmp28 !== undefined) {
+        let tmp10 = _slicedToArray(tmp7, 2);
+        [tmp11, tmp13] = tmp10;
+        let setting = NotifSettingsProtoStore.getSetting(tmp11);
         let toggle;
-        let tmp14 = setting;
+        let tmp16 = setting;
         if (setting != null) {
           toggle = setting.toggle;
         }
-        let tmp17 = toggle === tmp11.toggle;
-        if (tmp17) {
-          tmp17 = tmp14.radio === tmp11.radio;
+        let tmp19 = toggle === tmp13.toggle;
+        if (tmp19) {
+          tmp19 = tmp16.radio === tmp13.radio;
         }
-        if (!tmp17) {
-          let deleteResult = map.delete(tmp9);
+        if (!tmp19) {
+          let deleteResult = map.delete(tmp11);
         }
         continue;
       }
     }
-    syncClientNotifDenylist(map, set);
+    syncClientNotifDenylist(map, set, set1);
   }
   function onEdit(updatedSettingId) {
     updatedSettingId = updatedSettingId.updatedSettingId;
@@ -192,9 +290,10 @@ export function initializeClientNotifDenylist() {
   }
   importDefault = AuthenticationStore.getId();
   set = new Set();
+  const set1 = new Set();
   NotifSettingsProtoStore.addChangeListener(sync);
   AuthenticationStore.addChangeListener(sync);
-  ApexExperimentStore.addChangeListener(sync);
+  onEdit.addChangeListener(sync);
   const subscription = require("Dispatcher").subscribe("APP_STATE_UPDATE", sync);
   let obj = require("Dispatcher");
   const subscription1 = require("Dispatcher").subscribe("DECLARATIVE_NOTIFICATION_SETTINGS_EDIT", onEdit);

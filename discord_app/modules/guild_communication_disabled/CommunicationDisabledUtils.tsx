@@ -3,11 +3,11 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");
 
-export function isCommunicationDisabled(communicationDisabledUserMap) {
-  let tmp = null != communicationDisabledUserMap;
+export function isCommunicationDisabled(communicationDisabledUntil) {
+  let tmp = null != communicationDisabledUntil;
   if (tmp) {
     const _Date = Date;
-    const date = new Date(communicationDisabledUserMap);
+    const date = new Date(communicationDisabledUntil);
     const _Date2 = Date;
     const date1 = new Date();
     tmp = date > date1;

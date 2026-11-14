@@ -26,8 +26,8 @@ export function isConjurePagePath(pathname) {
   return null != matchPathCompat.matchPath(pathname, { path: items, exact: true });
 }
 export const CONJURE_SERVER_PROJECT_PATH = CHANNELResult;
-export function conjureServerProjectRoute(result, arg1) {
-  return Routes.CHANNEL(result, StaticChannelRoute.CONJURE_PROJECT, arg1);
+export function conjureServerProjectRoute(guildId, arg1) {
+  return Routes.CHANNEL(guildId, StaticChannelRoute.CONJURE_PROJECT, arg1);
 }
 export function conjureServerHomeRoute(arg0) {
   return Routes.CHANNEL(arg0, StaticChannelRoute.CONJURE);

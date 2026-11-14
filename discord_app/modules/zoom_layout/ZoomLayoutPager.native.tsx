@@ -1,7 +1,7 @@
 // discord_app/modules/zoom_layout/ZoomLayoutPager.native.tsx
-import _modDef1652 from "../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../_runtime/metro/01705__.js";
-import LegacyBaseButton from "../../../_runtime/05535_LegacyBaseButton.js";
+import _modDef1655 from "../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../_runtime/metro/01708__.js";
+import LegacyBaseButton from "../../../_runtime/05598_LegacyBaseButton.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 let jsx = fn(21).jsx;
 let obj = {};
-let merged = Object.assign(fn(5877).springStandard);
+let merged = Object.assign(fn(5940).springStandard);
 obj.stiffness = 100;
 obj.overshootClamping = true;
 let closure_8 = {
@@ -104,13 +104,13 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
   );
   const first = tmp[0];
   closure_15 = tmp[1];
-  const sharedValue = require("../../../_runtime/metro/01652__.js").useSharedValue(first);
-  const obj2 = require("../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../_runtime/metro/01652__.js").useSharedValue(-first * width);
-  const obj3 = require("../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../_runtime/metro/01652__.js").useSharedValue(-first * width);
-  const obj4 = require("../../../_runtime/metro/01652__.js");
-  const sharedValue3 = require("../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const sharedValue = require("../../../_runtime/metro/01655__.js").useSharedValue(first);
+  const obj2 = require("../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../_runtime/metro/01655__.js").useSharedValue(-first * width);
+  const obj3 = require("../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../_runtime/metro/01655__.js").useSharedValue(-first * width);
+  const obj4 = require("../../../_runtime/metro/01655__.js");
+  const sharedValue3 = require("../../../_runtime/metro/01655__.js").useSharedValue(false);
   items = [onPageChanged];
   const callback = noop.useCallback((arg0) => {
     closure_15(arg0);
@@ -120,7 +120,7 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
   }, items);
   let items1 = [
     c8,
-    require("../../../_runtime/metro/01652__.js").cancelAnimation,
+    require("../../../_runtime/metro/01655__.js").cancelAnimation,
     sharedValue1,
     sharedValue3,
     onEndDrag,
@@ -164,7 +164,7 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
     callback1,
     pageCount,
     sharedValue,
-    require("../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../_runtime/metro/01708__.js").scheduleOnRN,
     callback,
     isPaging,
     onMomentumBegin,
@@ -519,7 +519,7 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
     }
     return tmpResult;
   }, items8);
-  const obj5 = require("../../../_runtime/metro/01652__.js");
+  const obj5 = require("../../../_runtime/metro/01655__.js");
   let items9 = [sharedValue, sharedValue1];
   _require = undefined;
   [tmp36, tmp37] = items9;
@@ -552,11 +552,11 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
   ZoomLayoutPagerNativeTsx10.__closure = items12;
   ZoomLayoutPagerNativeTsx10.__workletHash = 10461805768773;
   ZoomLayoutPagerNativeTsx10.__initData = tmp38;
-  const animatedReaction = require("../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../_runtime/metro/01655__.js").useAnimatedReaction(
     ZoomLayoutPagerNativeTsx9,
     ZoomLayoutPagerNativeTsx10,
   );
-  const tmp3Result = require("../../../_runtime/metro/01652__.js");
+  const tmp3Result = require("../../../_runtime/metro/01655__.js");
   const items13 = [sharedValue2, selectedPage, isPaging];
   _require = undefined;
   importDefault = undefined;
@@ -594,7 +594,7 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
   ZoomLayoutPagerNativeTsx12.__closure = items16;
   ZoomLayoutPagerNativeTsx12.__workletHash = 10042999683418;
   ZoomLayoutPagerNativeTsx12.__initData = tmp45;
-  const animatedReaction1 = require("../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../_runtime/metro/01655__.js").useAnimatedReaction(
     ZoomLayoutPagerNativeTsx11,
     ZoomLayoutPagerNativeTsx12,
   );
@@ -613,7 +613,7 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
     ZoomLayoutPagerNativeTsx13.__closure = items1;
     ZoomLayoutPagerNativeTsx13.__workletHash = 9355468723939;
     ZoomLayoutPagerNativeTsx13.__initData = tmp;
-    _mod1705.scheduleOnUI(ZoomLayoutPagerNativeTsx13);
+    _mod1708.scheduleOnUI(ZoomLayoutPagerNativeTsx13);
   }, items17);
   const imperativeHandle = obj.useImperativeHandle(pageCount.ref, () => ({
     goToPage(arg0) {
@@ -652,7 +652,7 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
     const size = { position: "absolute", top: 0, width: _undefined4, height };
     return size;
   }, items20);
-  const tmp3Result3 = require("../../../_runtime/metro/01652__.js");
+  const tmp3Result3 = require("../../../_runtime/metro/01655__.js");
   const items21 = [callback2, sharedValue1, pageCount, width, height];
   _require = undefined;
   importDefault = undefined;
@@ -675,11 +675,11 @@ export default noop.memo(function ZoomLayoutPager(pageCount) {
   ZoomLayoutPagerNativeTsx14.__closure = items22;
   ZoomLayoutPagerNativeTsx14.__workletHash = 9683182820627;
   ZoomLayoutPagerNativeTsx14.__initData = tmp52;
-  const animatedStyle = require("../../../_runtime/metro/01652__.js").useAnimatedStyle(ZoomLayoutPagerNativeTsx14);
+  const animatedStyle = require("../../../_runtime/metro/01655__.js").useAnimatedStyle(ZoomLayoutPagerNativeTsx14);
   const obj6 = { gesture: memo1, children: null };
   const obj7 = { collapsable: false, style: memo3, children: null };
-  const tmp3Result4 = require("../../../_runtime/metro/01652__.js");
-  obj7.children = jsx(_modDef1652.View, {
+  const tmp3Result4 = require("../../../_runtime/metro/01655__.js");
+  obj7.children = jsx(_modDef1655.View, {
     style: animatedStyle,
     children: memo2.map((item) => {
       obj = {

@@ -1,10 +1,10 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollEndCard.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
 import AnimatedEnterExitItemDefault from "../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
 import BountiesModalTransitionsRefactorExperiment from "../../experiments/BountiesModalTransitionsRefactorExperiment.tsx";
 import useVisibilityTransition from "useVisibilityTransition.tsx";
@@ -13,7 +13,7 @@ import BountiesModalEndedCtaButtonsDefault from "BountiesModalEndedCtaButtons.ts
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function BountiesScrollEndCardContent(arg0) {
@@ -55,7 +55,7 @@ function BountiesScrollEndCardContent(arg0) {
   BountiesScrollEndCardTsx3.__closure = items1;
   BountiesScrollEndCardTsx3.__workletHash = 11141440579356;
   BountiesScrollEndCardTsx3.__initData = tmp3;
-  const animatedStyle = _mod1652.useAnimatedStyle(BountiesScrollEndCardTsx3);
+  const animatedStyle = _mod1655.useAnimatedStyle(BountiesScrollEndCardTsx3);
   const obj2 = { style: null, pointerEvents: "box-none", children: null };
   const items2 = [tmp.container, opacityStyle];
   obj2.style = items2;
@@ -85,16 +85,16 @@ function BountiesScrollEndCardContent(arg0) {
   };
   items5[1] = React5(hasOwnProperty, obj7);
   obj5.children = items5;
-  items3[2] = React6(_modDef1652.View, obj5);
+  items3[2] = React6(_modDef1655.View, obj5);
   obj2.children = items3;
-  return React6(_modDef1652.View, obj2);
+  return React6(_modDef1655.View, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5275).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5338).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_10 = createStyles.createStyles(() => {
   const obj = {
     container: null,
@@ -129,8 +129,8 @@ let items = [
   {
     code: "(function BountiesScrollEndCardTsx1(visible){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};})",
   },
-  fn(5485).withTiming,
-  fn(5488).timingStandard,
+  fn(5548).withTiming,
+  fn(5551).timingStandard,
 ];
 let closure_129_0;
 let closure_129_1;
@@ -149,8 +149,8 @@ let items2 = [
   {
     code: "(function BountiesScrollEndCardTsx2(visible,cleanUp){let[withTiming,timingStandard]=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};})",
   },
-  fn(5485).withTiming,
-  fn(5488).timingStandard,
+  fn(5548).withTiming,
+  fn(5551).timingStandard,
 ];
 let closure_130_0;
 let closure_130_1;

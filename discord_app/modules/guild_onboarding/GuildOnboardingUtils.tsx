@@ -78,11 +78,11 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(5173).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(7155).OnboardingConnectionType;
+let closure_7 = fn(5236).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(7218).OnboardingConnectionType;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(5161).GuildMemberFlags;
+const GuildMemberFlags = fn(5224).GuildMemberFlags;
 let date = new Date(1682488800000);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingUtils.tsx");

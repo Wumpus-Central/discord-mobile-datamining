@@ -1,16 +1,19 @@
 // discord_app/modules/conjure/builder/native/ConjureChatMoreSheet.tsx
-import _modDef4079 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import useConjureShareToServer from "../../server_share/useConjureShareToServer.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
+import GuildStore from "../../../../stores/GuildStore.tsx";
+import PermissionStore from "../../../../stores/PermissionStore.tsx";
+import UserStore from "../../../../stores/UserStore.tsx";
 
-const require = fn;
+require = fn;
 function MoreRow(row) {
   row = row.row;
   if ("switch" === row.kind) {
     const obj2 = { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null };
     ({ label: obj3.label, subLabel: obj3.subLabel } = row);
     const obj4 = { IconComponent: row.IconComponent };
-    obj2.icon = jsx(row(7387).TableRowIcon, { IconComponent: row.IconComponent });
+    obj2.icon = jsx(row(7455).TableRowIcon, { IconComponent: row.IconComponent });
     ({ value: obj3.value, disabled: obj3.disabled } = row);
     obj2.onValueChange = function onValueChange(arg0) {
       let tmp = arg0;
@@ -22,7 +25,7 @@ function MoreRow(row) {
       }
       row.onValueChange(arg0);
     };
-    return jsx(row(7888).TableSwitchRow, {
+    return jsx(row(7954).TableSwitchRow, {
       label: null,
       subLabel: null,
       icon: null,
@@ -37,19 +40,19 @@ function MoreRow(row) {
     }
     let obj = { label: row.label, variant: str, icon: null, onPress: null };
     const obj7 = { IconComponent: row.IconComponent, variant: str };
-    obj.icon = jsx(row(7387).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
+    obj.icon = jsx(row(7455).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
     obj.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet(ConjureChatMoreSheet);
       row.onPress();
     };
-    return jsx(row(7379).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
+    return jsx(row(7443).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
   }
 }
-const conjureDesignFeedbackStore = fn(13195);
+const conjureDesignFeedbackStore = fn(13303);
 ({
-  enterConjureDesignFeedback: c3,
-  exitConjureDesignFeedback: closure_4,
-  useConjureDesignFeedback: hasOwnProperty,
+  enterConjureDesignFeedback: closure_6,
+  exitConjureDesignFeedback: metroImportDefault,
+  useConjureDesignFeedback: closure_8,
 } = conjureDesignFeedbackStore);
 const jsx = fn(21).jsx;
 const ConjureChatMoreSheet = "ConjureChatMoreSheet";
@@ -59,41 +62,56 @@ let result = size.fileFinishedImporting("modules/conjure/builder/native/ConjureC
 export default function ConjureChatMoreSheet(canAnnotate) {
   let tmp = null;
   const merged = Object.assign(canAnnotate, Object.assign({ canAnnotate: 0 }));
+  let removeTarget;
   const id = merged.project.id;
-  const isConjureProjectMuted = id(7268).useIsConjureProjectMuted(id);
-  const obj = id(7268);
-  const conjureControlActive = id(13047).useConjureControlActive(id);
-  const obj2 = id(13047);
-  const obj4 = {};
+  const isConjureProjectMuted = id(removeTarget[10]).useIsConjureProjectMuted(id);
+  const obj = id(removeTarget[10]);
+  const project = merged.project;
+  removeTarget = merged.removeTarget;
+  const conjureControlActive = id(removeTarget[11]).useConjureControlActive(id);
+  const obj2 = id(removeTarget[11]);
+  const conjureViewedRemoveTarget = id(removeTarget[12]).useConjureViewedRemoveTarget(id, merged.guildId);
+  const obj3 = id(removeTarget[12]);
+  items = [UserStore, GuildStore, PermissionStore, id(removeTarget[14]).ApexExperimentStore];
+  const items1 = [project, removeTarget];
+  const stateFromStores = id(removeTarget[13]).useStateFromStores(
+    items,
+    () => useConjureShareToServer.canAddConjureProjectToAnotherServer(project, removeTarget, "ConjureChatMoreSheet"),
+    items1,
+  );
+  const obj4 = id(removeTarget[13]);
+  const obj6 = {};
   const merged1 = Object.assign(merged);
-  obj4.muted = isConjureProjectMuted;
+  obj6.muted = isConjureProjectMuted;
+  obj6.serverRemoveTarget = conjureViewedRemoveTarget;
+  obj6.canAddToAnotherServer = stateFromStores;
   if (canAnnotate.canAnnotate) {
-    const obj5 = {
-      active: closure_5(id).active,
+    const obj7 = {
+      active: closure_8(id).active,
       busy: conjureControlActive,
       onToggle(arg0) {
         if (arg0) {
-          let tmp3 = React3(id);
+          let tmp3 = timestampProducer(id);
         } else {
-          tmp3 = React4(id);
+          tmp3 = metroImportDefault(id);
         }
         return tmp3;
       },
     };
-    tmp = obj5;
+    tmp = obj7;
   }
-  obj4.annotate = tmp;
-  const result = id(13197).conjureChatMoreSections(obj4);
-  const obj6 = { dismissAccessibilityLabel: null, children: null };
-  const intl = tmp3(1113).intl;
-  obj6.dismissAccessibilityLabel = intl.string(_modDef4079.OsD9T0);
-  obj6.children = result.map((arr) =>
+  obj6.annotate = tmp;
+  const result = id(removeTarget[16]).conjureChatMoreSections(obj6);
+  const obj8 = { dismissAccessibilityLabel: null, children: null };
+  const intl = tmp3(tmp4[18]).intl;
+  obj8.dismissAccessibilityLabel = intl.string(project(removeTarget[19]).OsD9T0);
+  obj8.children = result.map((arr) =>
     jsx(
-      id(dependencyMap[13]).TableRowGroup,
-      { hasIcons: true, children: arr.map((row) => closure_1_6(closure_1_8, { row }, row.key)) },
+      id(removeTarget[20]).TableRowGroup,
+      { hasIcons: true, children: arr.map((row) => closure_1_9(closure_1_11, { row }, row.key)) },
       arr[0].key,
     ),
   );
-  return jsx(id(7885).ActionSheet, { dismissAccessibilityLabel: null, children: null });
+  return jsx(id(removeTarget[17]).ActionSheet, { dismissAccessibilityLabel: null, children: null });
 }
 export const CONJURE_CHAT_MORE_SHEET_KEY = "ConjureChatMoreSheet";

@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/native/NativeRPCServer.tsx
-import root from "../../../../_runtime/07235_root.js";
+import root from "../../../../_runtime/07299_root.js";
 import RPCServerDefault from "../RPCServer.tsx";
 
 require = fn;

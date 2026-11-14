@@ -2,8 +2,8 @@
 import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import applyDefault from "../../../../../../_runtime/00012_apply.js";
 import router_utils from "../../../../routing/router_utils.tsx";
-import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
+import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ActiveChannelsStore from "../../../../guild_home/ActiveChannelsStore.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -12,13 +12,13 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const MAX_STORED_MESSAGES = fn(16090).MAX_STORED_MESSAGES;
-let closure_10 = fn(17795).HappeningNowCardTrackingType;
+const MAX_STORED_MESSAGES = fn(16211).MAX_STORED_MESSAGES;
+let closure_10 = fn(17915).HappeningNowCardTrackingType;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, Routes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_15 = createStyles.createStyles({
   content: { flexShrink: 1, marginLeft: 4, gap: 2 },
   avatarsWrapper: { marginBottom: 2 },

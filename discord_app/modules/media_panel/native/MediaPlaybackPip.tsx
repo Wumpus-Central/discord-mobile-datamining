@@ -1,7 +1,7 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPip.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef1652 from "../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../_runtime/metro/01655__.js";
 import useChannelName from "../../channel/useChannelName.tsx";
 import safeTransitionToDefault from "../../links/safeTransitionTo.native.tsx";
 import PlayIcon2 from "../../../design/components/Icon/native/redesign/generated/PlayIcon.tsx";
@@ -24,8 +24,8 @@ function MediaInfo(message) {
   noop = undefined;
   ({ isVoiceMessage, isControlVisible } = message);
   const tmp = closure_17();
-  const token = message(5839).useToken(first(575).colors.BACKGROUND_SURFACE_HIGH);
-  let obj = message(5839);
+  const token = message(5902).useToken(first(575).colors.BACKGROUND_SURFACE_HIGH);
+  let obj = message(5902);
   items = [ChannelStore, UserStore, RelationshipStore];
   const items1 = [message];
   const stateFromStores = message(504).useStateFromStores(
@@ -66,7 +66,7 @@ function MediaInfo(message) {
           if (contentMessage.attachments.length > 0) {
             str2 = "";
             if (null != activeMediaPlayerSource.attachmentIndex) {
-              str2 = tmp4(8578)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
+              str2 = tmp4(8645)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
             }
           }
         }
@@ -79,7 +79,7 @@ function MediaInfo(message) {
           },
           children: str2,
         };
-        const tmp14 = closure_15(tmp2(5866).Text, obj3);
+        const tmp14 = closure_15(tmp2(5929).Text, obj3);
         const obj4 = {
           accessibilityElementsHidden: isControlVisible,
           style: tmp.infoContent,
@@ -93,7 +93,7 @@ function MediaInfo(message) {
         if (memo) {
           const obj6 = { style: { flex: 1 }, children: null };
           const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
-          const items3 = [closure_15(tmp2(19969).Marquee, obj7)];
+          const items3 = [closure_15(tmp2(20127).Marquee, obj7)];
           const obj8 = {
             start: { x: 0, y: 0 },
             end: { x: 1, y: 0 },
@@ -104,7 +104,7 @@ function MediaInfo(message) {
           const items4 = [token, `${tmp5}CC`, `${tmp5}00`, `${tmp5}00`, `${tmp5}CC`, token];
           obj8.colors = items4;
           obj8.style = tmp.infoContainerGradient;
-          items3[1] = closure_15(tmp4(5830), obj8);
+          items3[1] = closure_15(tmp4(5893), obj8);
           obj6.children = items3;
           tmp16Result = closure_16(closure_7, obj6);
         }
@@ -112,7 +112,7 @@ function MediaInfo(message) {
         let tmp13Result = null != stateFromStores;
         if (tmp13Result) {
           const obj9 = { variant: "body-xs/medium", color: "text-subtle", lineClamp: 1, children: stateFromStores };
-          tmp13Result = closure_15(tmp2(5866).Text, obj9);
+          tmp13Result = closure_15(tmp2(5929).Text, obj9);
         }
         items5[1] = tmp13Result;
         obj5.children = items5;
@@ -168,7 +168,7 @@ function PiPControls(message) {
   MediaPlaybackPipTsx1.__closure = items2;
   MediaPlaybackPipTsx1.__workletHash = 16892004000938;
   MediaPlaybackPipTsx1.__initData = tmp5;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(MediaPlaybackPipTsx1);
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(MediaPlaybackPipTsx1);
   const intl = tmp3(1113).intl;
   const string = intl.string;
   const t = tmp3(1113).t;
@@ -216,16 +216,16 @@ function PiPControls(message) {
   obj4.style = items6;
   items4[2] = closure_15(closure_6, obj4);
   obj2.children = items4;
-  return closure_16(_modDef1652.View, obj2);
+  return closure_16(_modDef1655.View, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(19699).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(19909).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: {
     justifyContent: "center",

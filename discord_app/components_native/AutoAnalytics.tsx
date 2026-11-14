@@ -1,6 +1,6 @@
 // discord_app/components_native/AutoAnalytics.tsx
-import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
+import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
 import FavoritesUtils from "../modules/favorites/FavoritesUtils.tsx";
 import AppAnalyticsUtils from "../modules/app_analytics/AppAnalyticsUtils.tsx";
 import getChannelOpenedMetadata from "../modules/app_analytics/track/channel_opened/getChannelOpenedMetadata.tsx";
@@ -29,7 +29,7 @@ import UserStore from "../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_18, GuildFeatures: closure_19 } = Constants);
-const isStaticChannelRoute = fn(5099).isStaticChannelRoute;
+const isStaticChannelRoute = fn(5162).isStaticChannelRoute;
 const jsx = fn(21).jsx;
 const PureComponent = noop.PureComponent;
 class AutoAnalytics extends PureComponent {}

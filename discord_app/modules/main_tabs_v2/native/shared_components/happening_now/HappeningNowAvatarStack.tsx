@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAvatarStack.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../../_runtime/metro/01705__.js";
+import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../../_runtime/metro/01708__.js";
 import spring_spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import ClipView from "../../../../../design/components/Icon/native/ClipView.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -14,11 +14,11 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(15633).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(15747).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { damping: 17, stiffness: 320, mass: 0.5 };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_11 = createStyles.createStyles((arg0, marginLeft) => {
   const obj = {
     avatarStack: { flexDirection: "row" },
@@ -153,12 +153,12 @@ export function HappeningNowAvatarStack(userLimit) {
   if (isTyping) {
     num4 = 1;
   }
-  sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(num4);
-  let obj2 = require("../../../../../../_runtime/metro/01652__.js");
+  sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(num4);
+  let obj2 = require("../../../../../../_runtime/metro/01655__.js");
   items = [c6];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => _undefined3.locale);
   const tmp6Result = require("useStateFromStores");
-  let items1 = [closure_12, require("../../../../../../_runtime/metro/01652__.js").interpolate, sharedValue, 28];
+  let items1 = [closure_12, require("../../../../../../_runtime/metro/01655__.js").interpolate, sharedValue, 28];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -177,7 +177,7 @@ export function HappeningNowAvatarStack(userLimit) {
   HappeningNowAvatarStackTsx1.__workletHash = 15788813600806;
   HappeningNowAvatarStackTsx1.__initData = tmp10;
   const items3 = [isTyping, sharedValue];
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     HappeningNowAvatarStackTsx1,
   );
   const effect = obj.useEffect(() => {
@@ -185,7 +185,7 @@ export function HappeningNowAvatarStack(userLimit) {
     if (c1) {
       num = 1;
     }
-    items = [closure_13, _mod1705.scheduleOnRN, c7, c1];
+    items = [closure_13, _mod1708.scheduleOnRN, c7, c1];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -244,7 +244,7 @@ export function HappeningNowAvatarStack(userLimit) {
     obj2.children = tmp2Result;
     return React5(View, obj2, user.id);
   });
-  const tmp6Result5 = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp6Result5 = require("../../../../../../_runtime/metro/01655__.js");
   const items4 = [
     closure_14,
     isStage,
@@ -297,7 +297,7 @@ export function HappeningNowAvatarStack(userLimit) {
   HappeningNowAvatarStackTsx3.__closure = items5;
   HappeningNowAvatarStackTsx3.__workletHash = 14791568232776;
   HappeningNowAvatarStackTsx3.__initData = tmp18;
-  const animatedStyle1 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     HappeningNowAvatarStackTsx3,
   );
   let obj3 = { style: null, children: null };
@@ -308,16 +308,16 @@ export function HappeningNowAvatarStack(userLimit) {
     const items7 = [tmp3.avatars, animatedStyle1];
     obj4.style = items7;
     obj4.children = mapped;
-    const items8 = [sharedValue(_modDef1652.View, obj4)];
+    const items8 = [sharedValue(_modDef1655.View, obj4)];
     const obj5 = {
       color: "text-default",
       variant: "body-xs/semibold",
-      children: tmp6(2024).humanizeValue(userCount, stateFromStores),
+      children: tmp6(2027).humanizeValue(userCount, stateFromStores),
     };
-    items8[1] = sharedValue(tmp6(5866).Text, obj5);
+    items8[1] = sharedValue(tmp6(5929).Text, obj5);
     obj3.children = items8;
     let tmp33 = obj3;
-    const tmp6Result7 = tmp6(2024);
+    const tmp6Result7 = tmp6(2027);
   } else {
     const items9 = [tmp3.avatarStack, style];
     obj3.style = items9;
@@ -330,15 +330,15 @@ export function HappeningNowAvatarStack(userLimit) {
     if (diff > 0) {
       const obj8 = { style: tmp3.userCounter, children: null };
       const obj9 = { color: "text-default", variant: "footnote/semibold", allowFontScaling: false, children: null };
-      const items12 = ["+", tmp6(2024).humanizeValue(diff, stateFromStores)];
+      const items12 = ["+", tmp6(2027).humanizeValue(diff, stateFromStores)];
       obj9.children = items12;
-      obj8.children = tmp28(tmp6(5866).Text, obj9);
+      obj8.children = tmp28(tmp6(5929).Text, obj9);
       tmp31Result = tmp31(tmp29, obj8);
-      const tmp6Result8 = tmp6(2024);
+      const tmp6Result8 = tmp6(2027);
     }
     items11[1] = tmp31Result;
     obj6.children = items11;
-    const items13 = [tmp28(_modDef1652.View, obj6)];
+    const items13 = [tmp28(_modDef1655.View, obj6)];
     if (!tmp31Result2) {
       tmp31Result2 = isTyping;
     }
@@ -347,8 +347,8 @@ export function HappeningNowAvatarStack(userLimit) {
       const items14 = [tmp3.ellipsisWrapper, animatedStyle];
       obj10.style = items14;
       const obj11 = { style: tmp3.ellipsisBorder };
-      obj10.children = tmp31(tmp6(18676).TypingIndicator, obj11);
-      tmp31Result2 = tmp31(tmp30(1652).View, obj10);
+      obj10.children = tmp31(tmp6(18805).TypingIndicator, obj11);
+      tmp31Result2 = tmp31(tmp30(1655).View, obj10);
     }
     items13[1] = tmp31Result2;
     obj3.children = items13;

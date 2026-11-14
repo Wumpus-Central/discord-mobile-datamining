@@ -5,7 +5,7 @@ import ThemeStore from "../user_settings/ThemeStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const HexagonCampaignPerk = fn(5268).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5331).HexagonCampaignPerk;
 const SystemTheme = fn(1195).SystemTheme;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hexagon_campaign/getAppliedHexagonCampaignPerks.tsx");
@@ -42,7 +42,8 @@ export function isHexagonCampaignClientThemeApplied() {
       id = gradientPreset.id;
     }
     tmp6 =
-      HexagonCampaignUtils.isHexagonCampaignClientThemePreset(id) ||
+      (HexagonCampaignUtils.isHexagonCampaignClientThemePreset(id) &&
+        !ClientThemesBackgroundStore.isUpsellGradientPreview) ||
       ClientThemesBackgroundStore.hasHiddenHexagonCampaignPreset;
     const tmpResult = HexagonCampaignUtils;
   }

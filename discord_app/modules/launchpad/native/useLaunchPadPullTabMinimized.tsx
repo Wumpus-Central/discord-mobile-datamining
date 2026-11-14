@@ -22,7 +22,7 @@ export default function useLaunchPadPullTabMinimized(arg0) {
   _require = undefined;
   const isVoicePanelFullscreen = require("VoicePanelUtils").useIsVoicePanelFullscreen();
   const obj = require("VoicePanelUtils");
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(false);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
@@ -49,7 +49,7 @@ export default function useLaunchPadPullTabMinimized(arg0) {
       }
     };
   }, items);
-  const obj2 = require("../../../../_runtime/metro/01652__.js");
+  const obj2 = require("../../../../_runtime/metro/01655__.js");
   const items1 = [closure_4, launchPadPullTabState, isVoicePanelFullscreen, launchPadSharedState, sharedValue];
   _require = undefined;
   dependencyMap = undefined;
@@ -70,5 +70,5 @@ export default function useLaunchPadPullTabMinimized(arg0) {
   useLaunchPadPullTabMinimizedTsx1.__closure = items2;
   useLaunchPadPullTabMinimizedTsx1.__workletHash = 11967190027017;
   useLaunchPadPullTabMinimizedTsx1.__initData = tmp4;
-  return require("../../../../_runtime/metro/01652__.js").useDerivedValue(useLaunchPadPullTabMinimizedTsx1);
+  return require("../../../../_runtime/metro/01655__.js").useDerivedValue(useLaunchPadPullTabMinimizedTsx1);
 }

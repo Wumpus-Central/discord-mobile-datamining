@@ -8,7 +8,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import inlineStyles from "../../../../_runtime/08197_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08263_inlineStyles.js";
 import CustomStatusUtils from "../../custom_status/native/CustomStatusUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -155,16 +155,16 @@ function EmojiOnlyStatusContent(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10, Fragment: closure_11 } = jsxProd);
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let str = "";
 if (PlatformUtils.isAndroid()) {
   str = "\u00A0";
 }
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let closure_13 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { position: "relative" },
@@ -214,7 +214,7 @@ let closure_15 = {
   statusBubblePaddingVertical: 7,
 };
 let closure_16 = {
-  [fn(7896).UserProfileThemeTypes.PREVIEW]: {
+  [fn(7962).UserProfileThemeTypes.PREVIEW]: {
     textVariant: "body-sm/normal",
     emojiOnlyEmojiSize: 26,
     textMinWidth: 53,
@@ -222,7 +222,7 @@ let closure_16 = {
     statusBubblePaddingVertical: 6,
   },
 };
-createStyles = fn(5243);
+createStyles = fn(5306);
 let closure_19 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileCustomStatusBubble.tsx");

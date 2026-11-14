@@ -1,5 +1,5 @@
 // discord_app/modules/markup_v2/native/parseNativeMarkup.tsx
-import Syntax from "../../../../_runtime/09299_Syntax.js";
+import Syntax from "../../../../_runtime/09366_Syntax.js";
 import transformNativeMarkupNode from "transformNativeMarkupNode.tsx";
 import apply from "../../../../_runtime/00012_apply.js";
 

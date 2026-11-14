@@ -1,6 +1,6 @@
 // discord_app/modules/mobile_web_handoff/native/MobileWebHandoffLinking.tsx
-import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import FingerprintUtils from "../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
+import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import MobileWebHandoffUtilsDefault from "../MobileWebHandoffUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
@@ -85,7 +85,7 @@ let closure_10 = async function _redirectWithHandoffToken(arg0) {
           closure_131_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

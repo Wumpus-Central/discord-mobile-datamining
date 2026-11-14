@@ -184,7 +184,7 @@ let closure_9 = async function _saveChannel(arg0) {
           let channel;
           c4 = 1;
           c5 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -318,8 +318,8 @@ let closure_9 = async function _saveChannel(arg0) {
               tmp5 = isThreadResult;
             }
             if (!tmp5) {
-              const result = closure_1(8062).checkGuildTemplateDirty(guildId);
-              const tmpResult = closure_1(8062);
+              const result = closure_1(8127).checkGuildTemplateDirty(guildId);
+              const tmpResult = closure_1(8127);
             }
             return arg0;
           },

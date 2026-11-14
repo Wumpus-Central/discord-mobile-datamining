@@ -1,13 +1,13 @@
 // discord_app/design/components/Input/native/InputFieldContainer.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
 import InputTypes from "InputTypes.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function useInputStyles(size) {
@@ -62,7 +62,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -204,7 +204,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj9.leadingDividerText = { flexGrow: 0 };
   return obj9;
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let closure_10 = createStyles.createStyleProperties({
   error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT,
   default: "transparent",
@@ -292,11 +292,11 @@ export function InputFieldContainer(isFocused) {
   const items2 = [, , ,];
   ({ container: arr3[0], background: arr3[1], radius: arr3[2], minHeight: arr3[3] } = tmp4Result);
   obj3.style = items2;
-  const animatedStyle = _mod1652.useAnimatedStyle(InputFieldContainerNativeTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(InputFieldContainerNativeTsx1);
   const obj4 = { style: null };
   const items3 = [React3.absoluteFill, tmp4Result.radius, animatedStyle];
   obj4.style = items3;
-  const items4 = [hasOwnProperty(_modDef1652.View, obj4), children];
+  const items4 = [hasOwnProperty(_modDef1655.View, obj4), children];
   obj3.children = items4;
   return timestampProducer(React4, obj3);
 }

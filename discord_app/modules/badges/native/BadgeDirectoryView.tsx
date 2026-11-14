@@ -68,7 +68,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   content: null,
@@ -146,14 +146,14 @@ export default function BadgeDirectoryView(arg0) {
   let isBadgeUnreadStateEnabled;
   let badgeIndicatorIds;
   let stringResult1 = dependencyMap;
-  let isBadgeManagementEnabled = targetUsername(10011).useIsBadgeManagementEnabled({ location: "BadgeDirectoryView" });
+  let isBadgeManagementEnabled = targetUsername(10078).useIsBadgeManagementEnabled({ location: "BadgeDirectoryView" });
   const tmp4 = closure_12();
-  const diff = stateFromStores(1493)().width - 2 * stateFromStores(575).space.PX_16;
+  const diff = stateFromStores(1496)().width - 2 * stateFromStores(575).space.PX_16;
   let result = 3 * stateFromStores(575).space.PX_12;
   items = [tmp4.footer];
-  let obj = targetUsername(10011);
-  items[1] = { paddingBottom: stateFromStores(1627)().bottom + stateFromStores(575).space.PX_16 };
-  let obj2 = { paddingBottom: stateFromStores(1627)().bottom + stateFromStores(575).space.PX_16 };
+  let obj = targetUsername(10078);
+  items[1] = { paddingBottom: stateFromStores(1630)().bottom + stateFromStores(575).space.PX_16 };
+  let obj2 = { paddingBottom: stateFromStores(1630)().bottom + stateFromStores(575).space.PX_16 };
   const items1 = [UserStore];
   stateFromStores = targetUsername(504).useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
@@ -236,12 +236,12 @@ export default function BadgeDirectoryView(arg0) {
   if (!(null != targetUserId && targetUserId !== stateFromStores)) {
     someResult = stateFromStoresArray.some((has_updates) => true === has_updates.has_updates);
   }
-  isBadgeUnreadStateEnabled = targetUsername(11753).useIsBadgeUnreadStateEnabled({
+  isBadgeUnreadStateEnabled = targetUsername(11819).useIsBadgeUnreadStateEnabled({
     location: "BadgeDirectoryView",
     hasUnread: someResult,
   });
-  const tmpResult7 = targetUsername(11753);
-  badgeIndicatorIds = targetUsername(15164).useBadgeDirectoryBadgeIndicators({
+  const tmpResult7 = targetUsername(11819);
+  badgeIndicatorIds = targetUsername(15278).useBadgeDirectoryBadgeIndicators({
     badges: stateFromStoresArray,
     enabled: tmp32Result,
   }).badgeIndicatorIds;
@@ -307,21 +307,21 @@ export default function BadgeDirectoryView(arg0) {
         const obj6 = { variant: "body-md/semibold", children: null };
         const intl3 = targetUsername(1113).intl;
         obj6.children = intl3.string(targetUsername(1113).t.iufib1);
-        const items14 = [closure_10(targetUsername(5866).Text, obj6), ,];
+        const items14 = [closure_10(targetUsername(5929).Text, obj6), ,];
         const obj7 = { variant: "body-md/normal", color: "text-subtle", children: null };
         const intl4 = targetUsername(1113).intl;
         obj7.children = intl4.string(targetUsername(1113).t.eAn6z2);
-        items14[1] = closure_10(targetUsername(5866).Text, obj7);
+        items14[1] = closure_10(targetUsername(5929).Text, obj7);
         const obj9 = { variant: "secondary", size: "sm", onPress: callback, text: null };
         const intl5 = targetUsername(1113).intl;
         obj9.text = intl5.string(targetUsername(1113).t["7NqTJn"]);
-        items14[2] = closure_10(targetUsername(5873).Button, obj9);
+        items14[2] = closure_10(targetUsername(5936).Button, obj9);
         obj5.children = items14;
         return closure_11(isBadgeUnreadStateEnabled, obj5);
       }
     }
     if (!stateFromStores1) {
-      const obj10 = { style: tmp4.centered, children: closure_10(targetUsername(7354).ActivityIndicator, {}) };
+      const obj10 = { style: tmp4.centered, children: closure_10(targetUsername(7418).ActivityIndicator, {}) };
       closure_10(isBadgeUnreadStateEnabled, obj10);
     }
     let result1 = (diff - result) / 4;
@@ -364,7 +364,7 @@ export default function BadgeDirectoryView(arg0) {
       string = intl9.string;
       stringResult1 = string(targetUsername(1113).t.msyp90);
       obj16.text = stringResult1;
-      items = closure_10(targetUsername(5873).Button, obj16);
+      items = closure_10(targetUsername(5936).Button, obj16);
       obj15.children = items;
       isBadgeManagementEnabled = closure_10(tmp30, obj15);
     } else {
@@ -376,7 +376,7 @@ export default function BadgeDirectoryView(arg0) {
         const obj18 = { variant: "secondary", onPress: callback1, text: null };
         const intl8 = targetUsername(1113).intl;
         obj18.text = intl8.string(targetUsername(1113).t["6CLLyH"]);
-        obj17.children = closure_10(targetUsername(5873).Button, obj18);
+        obj17.children = closure_10(targetUsername(5936).Button, obj18);
         isBadgeManagementEnabled = closure_10(tmp30, obj17);
       }
     }
@@ -386,5 +386,5 @@ export default function BadgeDirectoryView(arg0) {
   }
   const intl = targetUsername(1113).intl;
   formatToPlainStringResult = intl.string(targetUsername(1113).t.UqnlQF);
-  const tmpResult8 = targetUsername(15164);
+  const tmpResult8 = targetUsername(15278);
 }

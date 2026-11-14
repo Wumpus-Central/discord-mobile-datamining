@@ -56,7 +56,7 @@ const View = fn(17).View;
 const AuthStates = fn(1072).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     password: { marginTop: 24 },
@@ -270,7 +270,7 @@ export default function Login(isMultiAccount) {
             let authenticationErrorsFromV6OrEarlierAPIError;
             c7 = 1;
             c8 = 1;
-            return { value: "flexDirection", done: true };
+            return { value: "Path", done: true };
           }
         } else if (1 === tmp7) {
           if (isMultiAccount === 1) {

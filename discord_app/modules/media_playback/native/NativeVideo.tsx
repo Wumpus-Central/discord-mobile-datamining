@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 0;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { overflow: "hidden" }, content: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.content = {};
@@ -127,7 +127,7 @@ export default function NativeVideo(ref) {
           num = 100;
         }
         if (null != ref.current) {
-          const Commands = merged(9668).Commands;
+          const Commands = merged(9735).Commands;
           Commands.seek(tmp.current, arg0, num);
         }
       },
@@ -149,7 +149,7 @@ export default function NativeVideo(ref) {
           tmp3 = null != ref.current;
         }
         if (tmp3) {
-          const Commands = merged(9668).Commands;
+          const Commands = merged(9735).Commands;
           Commands.reset(ref.current);
         }
         dependencyMap((arg0) => {
@@ -172,186 +172,207 @@ export default function NativeVideo(ref) {
   };
   const items1 = [tmp2.container, obj2.style];
   obj5.style = items1;
-  const items2 = [
-    ref(ref(9668), {
-      ref,
-      style: tmp2.content,
-      sourceId: id,
-      sourceUri: first.uri,
-      sourceHeaders: first.headers,
-      paused: obj2.paused,
-      muted: obj2.muted,
-      volume: obj2.volume,
-      rate: obj2.rate,
-      repeat: obj2.repeat,
-      controls: obj2.controls,
-      resizeMode: obj2.resizeMode,
-      audioPolicy: obj2.mixWithOthers,
-      disableFocus: obj2.disableFocus,
-      httpEngine: obj2.httpEngine,
-      bufferConfig: obj2.bufferConfig,
-      playInBackground: obj2.playInBackground,
-      playWhenInactive: obj2.playWhenInactive,
-      pictureInPicture: obj2.pictureInPicture,
-      preventsDisplaySleepDuringVideoPlayback: obj2.preventsDisplaySleepDuringVideoPlayback,
-      automaticallyWaitsToMinimizeStalling: obj2.automaticallyWaitsToMinimizeStalling,
-      maxBitRate: obj2.maxBitRate,
-      preferredForwardBufferDuration: obj2.preferredForwardBufferDuration,
-      onPlaybackEvent: function handleEvent(nativeEvent) {
-        nativeEvent = nativeEvent.nativeEvent;
-        if (nativeEvent.sourceId === id) {
-          switch (nativeEvent.type) {
-            case "loading":
-              const onLoadStart = obj2.onLoadStart;
-              if (onLoadStart != null) {
-                onLoadStart();
-              }
-              break;
-            case "loaded":
-              const onLoad = obj2.onLoad;
-              if (onLoad != null) {
-                const obj3 = {
-                  currentTime: nativeEvent.positionMs / 1000,
-                  duration: nativeEvent.durationMs / 1000,
-                  naturalSize: null,
-                  canPlayFastForward: null,
-                  canPlayReverse: null,
-                  canPlaySlowForward: null,
-                  canPlaySlowReverse: null,
-                  canStepBackward: null,
-                  canStepForward: null,
-                };
-                const size = { width: null, height: null, orientation: null };
-                ({ width: obj10.width, height: obj10.height } = nativeEvent);
-                let str2 = "portrait";
-                if (nativeEvent.width >= nativeEvent.height) {
-                  str2 = "landscape";
-                }
-                size.orientation = str2;
-                obj3.naturalSize = size;
-                ({
-                  canPlayFastForward: obj9.canPlayFastForward,
-                  canPlayReverse: obj9.canPlayReverse,
-                  canPlaySlowForward: obj9.canPlaySlowForward,
-                  canPlaySlowReverse: obj9.canPlaySlowReverse,
-                  canStepBackward: obj9.canStepBackward,
-                  canStepForward: obj9.canStepForward,
-                } = nativeEvent);
-                onLoad(obj3);
-              }
-              break;
-            case "firstFrame":
-              _undefined2(tmp);
-              const onReadyForDisplay = obj2.onReadyForDisplay;
-              if (onReadyForDisplay != null) {
-                onReadyForDisplay();
-              }
-              break;
-            case "tracks":
-              const onVideoTracks = obj2.onVideoTracks;
-              if (onVideoTracks != null) {
-                const obj4 = { videoTracks: nativeEvent.videoTracks, selectedVideoTrackId: null };
-                if ("" !== nativeEvent.selectedTrackId) {
-                  str = nativeEvent.selectedTrackId;
-                } else {
-                  const first = nativeEvent.videoTracks[0];
-                  str = undefined;
-                  if (first != null) {
-                    str = first.trackId;
-                  }
-                  if (str == null) {
-                    str = "";
-                  }
-                }
-                obj4.selectedVideoTrackId = str;
-                onVideoTracks(obj4);
-              }
-              break;
-            case "buffering":
-              const onBuffer = obj2.onBuffer;
-              if (onBuffer != null) {
-                const obj5 = { isBuffering: nativeEvent.buffering };
-                onBuffer(obj5);
-              }
-              break;
-            case "downloadProgress":
-              const onDownloadProgress = obj2.onDownloadProgress;
-              if (onDownloadProgress != null) {
-                const obj6 = { progressPercent: nativeEvent.downloadProgress };
-                onDownloadProgress(obj6);
-              }
-              break;
-            case "progress":
-              const onProgress = obj2.onProgress;
-              if (onProgress != null) {
-                const obj7 = {
-                  currentTime: nativeEvent.positionMs / 1000,
-                  playableDuration: nativeEvent.bufferedPositionMs / 1000,
-                  seekableDuration: nativeEvent.durationMs / 1000,
-                };
-                onProgress(obj7);
-              }
-              break;
-            case "seek":
-              const onSeek = obj2.onSeek;
-              if (onSeek != null) {
-                const obj8 = {
-                  currentTime: nativeEvent.positionMs / 1000,
-                  seekTime: nativeEvent.requestedPositionMs / 1000,
-                };
-                onSeek(obj8);
-              }
-              break;
-            case "rate":
-              const onPlaybackRateChange = obj2.onPlaybackRateChange;
-              if (onPlaybackRateChange != null) {
-                const obj18 = { playbackRate: nativeEvent.playbackRate };
-                onPlaybackRateChange(obj18);
-              }
-              break;
-            case "stalled":
-              const onPlaybackStalled = obj2.onPlaybackStalled;
-              if (onPlaybackStalled != null) {
-                onPlaybackStalled();
-              }
-              break;
-            case "resumed":
-              const onPlaybackResume = obj2.onPlaybackResume;
-              if (onPlaybackResume != null) {
-                onPlaybackResume();
-              }
-              break;
-            case "ended":
-              const onEnd = obj2.onEnd;
-              if (onEnd != null) {
-                onEnd();
-              }
-              break;
-            case "error":
-              const onError = obj2.onError;
-              if (onError != null) {
-                const obj = { error: null };
-                ({
-                  errorMessage: obj2[""],
-                  errorCode: obj2.code,
-                  errorDomain: obj2.domain,
-                  errorMessage: obj2.localizedDescription,
-                } = nativeEvent);
-                obj.error = { "": null, code: null, domain: null, localizedDescription: null };
-                onError(obj);
-                const obj19 = { "": null, code: null, domain: null, localizedDescription: null };
-              }
-              break;
+  let obj6 = {
+    ref,
+    style: tmp2.content,
+    sourceId: id,
+    sourceUri: first.uri,
+    sourceHeaders: first.headers,
+    paused: obj2.paused,
+    muted: obj2.muted,
+    volume: obj2.volume,
+    rate: obj2.rate,
+    repeat: obj2.repeat,
+    controls: obj2.controls,
+    resizeMode: obj2.resizeMode,
+    audioPolicy: obj2.mixWithOthers,
+    disableFocus: obj2.disableFocus,
+    disableTextTracks: null,
+    httpEngine: null,
+    bufferConfig: null,
+    playInBackground: null,
+    playWhenInactive: null,
+    pictureInPicture: null,
+    preventsDisplaySleepDuringVideoPlayback: null,
+    automaticallyWaitsToMinimizeStalling: null,
+    maxBitRate: null,
+    preferredForwardBufferDuration: null,
+    onPlaybackEvent: null,
+  };
+  const selectedTextTrack = obj2.selectedTextTrack;
+  let type;
+  const tmp24 = c7;
+  const tmp26 = ref;
+  const tmp4Result2 = str(id.useState(null), 2);
+  if (selectedTextTrack != null) {
+    type = selectedTextTrack.type;
+  }
+  obj6.disableTextTracks = "disabled" === type;
+  ({
+    httpEngine: obj7.httpEngine,
+    bufferConfig: obj7.bufferConfig,
+    playInBackground: obj7.playInBackground,
+    playWhenInactive: obj7.playWhenInactive,
+    pictureInPicture: obj7.pictureInPicture,
+    preventsDisplaySleepDuringVideoPlayback: obj7.preventsDisplaySleepDuringVideoPlayback,
+    automaticallyWaitsToMinimizeStalling: obj7.automaticallyWaitsToMinimizeStalling,
+    maxBitRate: obj7.maxBitRate,
+    preferredForwardBufferDuration: obj7.preferredForwardBufferDuration,
+  } = obj2);
+  obj6.onPlaybackEvent = function handleEvent(nativeEvent) {
+    nativeEvent = nativeEvent.nativeEvent;
+    if (nativeEvent.sourceId === id) {
+      switch (nativeEvent.type) {
+        case "loading":
+          const onLoadStart = obj2.onLoadStart;
+          if (onLoadStart != null) {
+            onLoadStart();
           }
-        }
-      },
-    }),
-  ];
+          break;
+        case "loaded":
+          const onLoad = obj2.onLoad;
+          if (onLoad != null) {
+            const obj3 = {
+              currentTime: nativeEvent.positionMs / 1000,
+              duration: nativeEvent.durationMs / 1000,
+              naturalSize: null,
+              canPlayFastForward: null,
+              canPlayReverse: null,
+              canPlaySlowForward: null,
+              canPlaySlowReverse: null,
+              canStepBackward: null,
+              canStepForward: null,
+            };
+            const size = { width: null, height: null, orientation: null };
+            ({ width: obj10.width, height: obj10.height } = nativeEvent);
+            let str2 = "portrait";
+            if (nativeEvent.width >= nativeEvent.height) {
+              str2 = "landscape";
+            }
+            size.orientation = str2;
+            obj3.naturalSize = size;
+            ({
+              canPlayFastForward: obj9.canPlayFastForward,
+              canPlayReverse: obj9.canPlayReverse,
+              canPlaySlowForward: obj9.canPlaySlowForward,
+              canPlaySlowReverse: obj9.canPlaySlowReverse,
+              canStepBackward: obj9.canStepBackward,
+              canStepForward: obj9.canStepForward,
+            } = nativeEvent);
+            onLoad(obj3);
+          }
+          break;
+        case "firstFrame":
+          _undefined2(tmp);
+          const onReadyForDisplay = obj2.onReadyForDisplay;
+          if (onReadyForDisplay != null) {
+            onReadyForDisplay();
+          }
+          break;
+        case "tracks":
+          const onVideoTracks = obj2.onVideoTracks;
+          if (onVideoTracks != null) {
+            const obj4 = { videoTracks: nativeEvent.videoTracks, selectedVideoTrackId: null };
+            if ("" !== nativeEvent.selectedTrackId) {
+              str = nativeEvent.selectedTrackId;
+            } else {
+              const first = nativeEvent.videoTracks[0];
+              str = undefined;
+              if (first != null) {
+                str = first.trackId;
+              }
+              if (str == null) {
+                str = "";
+              }
+            }
+            obj4.selectedVideoTrackId = str;
+            onVideoTracks(obj4);
+          }
+          break;
+        case "buffering":
+          const onBuffer = obj2.onBuffer;
+          if (onBuffer != null) {
+            const obj5 = { isBuffering: nativeEvent.buffering };
+            onBuffer(obj5);
+          }
+          break;
+        case "downloadProgress":
+          const onDownloadProgress = obj2.onDownloadProgress;
+          if (onDownloadProgress != null) {
+            const obj6 = { progressPercent: nativeEvent.downloadProgress };
+            onDownloadProgress(obj6);
+          }
+          break;
+        case "progress":
+          const onProgress = obj2.onProgress;
+          if (onProgress != null) {
+            const obj7 = {
+              currentTime: nativeEvent.positionMs / 1000,
+              playableDuration: nativeEvent.bufferedPositionMs / 1000,
+              seekableDuration: nativeEvent.durationMs / 1000,
+            };
+            onProgress(obj7);
+          }
+          break;
+        case "seek":
+          const onSeek = obj2.onSeek;
+          if (onSeek != null) {
+            const obj8 = {
+              currentTime: nativeEvent.positionMs / 1000,
+              seekTime: nativeEvent.requestedPositionMs / 1000,
+            };
+            onSeek(obj8);
+          }
+          break;
+        case "rate":
+          const onPlaybackRateChange = obj2.onPlaybackRateChange;
+          if (onPlaybackRateChange != null) {
+            const obj18 = { playbackRate: nativeEvent.playbackRate };
+            onPlaybackRateChange(obj18);
+          }
+          break;
+        case "stalled":
+          const onPlaybackStalled = obj2.onPlaybackStalled;
+          if (onPlaybackStalled != null) {
+            onPlaybackStalled();
+          }
+          break;
+        case "resumed":
+          const onPlaybackResume = obj2.onPlaybackResume;
+          if (onPlaybackResume != null) {
+            onPlaybackResume();
+          }
+          break;
+        case "ended":
+          const onEnd = obj2.onEnd;
+          if (onEnd != null) {
+            onEnd();
+          }
+          break;
+        case "error":
+          const onError = obj2.onError;
+          if (onError != null) {
+            const obj = { error: null };
+            ({
+              errorMessage: obj2[""],
+              errorCode: obj2.code,
+              errorDomain: obj2.domain,
+              errorMessage: obj2.localizedDescription,
+            } = nativeEvent);
+            obj.error = { "": null, code: null, domain: null, localizedDescription: null };
+            onError(obj);
+            const obj19 = { "": null, code: null, domain: null, localizedDescription: null };
+          }
+          break;
+      }
+    }
+  };
+  const items2 = [ref(ref(9735), obj6)];
   let tmp25Result = null != obj2.poster && tmp20 !== id;
   if (tmp25Result) {
-    let obj7 = { accessible: false, style: tmp2.content, source: null, resizeMode: null };
-    let obj8 = { uri: obj2.poster };
-    obj7.source = obj8;
+    let obj8 = { accessible: false, style: tmp2.content, source: null, resizeMode: null };
+    const obj9 = { uri: obj2.poster };
+    obj8.source = obj9;
     let str2 = "center";
     if ("none" !== obj2.posterResizeMode) {
       let str4 = obj2.posterResizeMode;
@@ -360,11 +381,11 @@ export default function NativeVideo(ref) {
       }
       str2 = str4;
     }
-    obj7.resizeMode = str2;
-    tmp25Result = ref(ref(5957), obj7);
-    const tmp26Result = ref(5957);
+    obj8.resizeMode = str2;
+    tmp25Result = tmp25(tmp26(6020), obj8);
+    const tmp26Result = tmp26(6020);
   }
   items2[1] = tmp25Result;
   obj5.children = items2;
-  return closure_9(c7, obj5);
+  return closure_9(tmp24, obj5);
 }

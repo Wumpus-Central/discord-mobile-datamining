@@ -4,10 +4,10 @@ import CheckpointPressableDefault from "CheckpointPressable.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const Pressable = fn(17).Pressable;
-const CheckpointConstants = fn(6314);
+const CheckpointConstants = fn(6377);
 ({ CHECKPOINT_CONTROL_SIZE, CHECKPOINT_BUTTON_DISABLED_BORDER_MOBILE, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = {
   button: {
     width: CHECKPOINT_CONTROL_SIZE,
@@ -17,16 +17,16 @@ const obj2 = {
   },
   shadowContainer: {
     justifyContent: "center",
-    marginRight: -fn(14400).SHADOW_OFFSET,
-    marginBottom: -fn(14400).SHADOW_OFFSET,
+    marginRight: -fn(14491).SHADOW_OFFSET,
+    marginBottom: -fn(14491).SHADOW_OFFSET,
   },
   shadow: null,
   shadowDisabled: null,
 };
 const obj3 = {
   justifyContent: "center",
-  marginRight: -fn(14400).SHADOW_OFFSET,
-  marginBottom: -fn(14400).SHADOW_OFFSET,
+  marginRight: -fn(14491).SHADOW_OFFSET,
+  marginBottom: -fn(14491).SHADOW_OFFSET,
 };
 obj2.shadow = { backgroundColor: nativeDefault.colors.BLACK, borderWidth: 2, borderColor: CHECKPOINT_DARK_CYAN };
 obj2.shadowDisabled = { borderColor: CHECKPOINT_BUTTON_DISABLED_BORDER_MOBILE };
@@ -40,22 +40,25 @@ export function CheckpointButton(disabled) {
   if (flag === undefined) {
     flag = false;
   }
+  ({ hitSlop, style } = disabled);
   const obj = {
     style: null,
     onPress: null,
     onPressIn: null,
     disabled: null,
+    hitSlop: null,
     accessibilityRole: "button",
     accessibilityLabel: null,
     accessibilityHint: null,
     accessibilityState: null,
     children: null,
   };
-  items = [closure_4().button, disabled.style];
+  items = [closure_4().button, style];
   obj.style = items;
   obj.onPress = onPress;
   obj.onPressIn = onPressIn;
   obj.disabled = flag;
+  obj.hitSlop = hitSlop;
   obj.accessibilityLabel = accessibilityLabel;
   obj.accessibilityHint = accessibilityHint;
   obj.accessibilityState = { disabled: flag };
@@ -66,6 +69,7 @@ export function CheckpointButton(disabled) {
       onPress={null}
       onPressIn={null}
       disabled={null}
+      hitSlop={null}
       accessibilityRole="button"
       accessibilityLabel={null}
       accessibilityHint={null}

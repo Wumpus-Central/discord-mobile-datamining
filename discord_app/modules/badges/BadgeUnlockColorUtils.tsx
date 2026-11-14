@@ -27,10 +27,3 @@ export function pickBadgeColor(arr) {
   }
   return rgbToHexResult;
 }
-export function getBadgeHaloColor(PRIMARY_800) {
-  ({ r, g, b } = ColorUtils.hexToRgb(PRIMARY_800));
-  const hexToRgbResult = ColorUtils.hexToRgb(PRIMARY_800);
-  ({ hue, saturation } = ColorUtils.rawRgbToHsl(r, g, b));
-  const rawRgbToHslResult = ColorUtils.rawRgbToHsl(r, g, b);
-  return ColorUtils.hslToHex(hue, 100 * saturation, 70);
-}

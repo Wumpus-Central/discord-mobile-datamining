@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/controls/utils/useAnimatedScrollLock.tsx
-import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../../_runtime/metro/01705__.js";
+import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../../_runtime/metro/01708__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let closure_3 = PlatformUtils.isAndroid();
 let context = noop.createContext(null);
 let closure_5 = {
@@ -34,10 +34,10 @@ export function useAnimatedScrollLock(arg0) {
   ({ onScrollHandler, onScrollHandlerWorkletized } = obj);
   context = noop.useContext(context);
   const ref = noop.useRef(undefined);
-  const sharedValue = _mod1652.useSharedValue(false);
-  const sharedValue1 = _mod1652.useSharedValue(0);
+  const sharedValue = _mod1655.useSharedValue(false);
+  const sharedValue1 = _mod1655.useSharedValue(0);
   let gestureRef;
-  const sharedValue2 = _mod1652.useSharedValue(false);
+  const sharedValue2 = _mod1655.useSharedValue(false);
   if (context != null) {
     gestureRef = context.gestureRef;
   }
@@ -65,8 +65,8 @@ export function useAnimatedScrollLock(arg0) {
   if (isDragScrolling == null) {
     isDragScrolling = sharedValue2;
   }
-  const animatedRef = _mod1652.useAnimatedRef();
-  const tmp3Result = _mod1652;
+  const animatedRef = _mod1655.useAnimatedRef();
+  const tmp3Result = _mod1655;
   items = [_undefined5, isDragScrolling];
   [tmp13, tmp14] = items;
   const obj5 = { onBeginDrag: null, onEndDrag: null, onMomentumEnd: null, onScroll: null };
@@ -130,12 +130,12 @@ export function useAnimatedScrollLock(arg0) {
     closure_8,
     isDragScrolling,
     closure_3,
-    _mod1652.scrollTo,
+    _mod1655.scrollTo,
     animatedRef,
     scrollOffsetValue,
     scrollLocked,
     onScrollHandler,
-    _mod1705.scheduleOnRN,
+    _mod1708.scheduleOnRN,
     onScrollHandlerWorkletized,
   ];
   c1 = undefined;
@@ -188,8 +188,8 @@ export function useAnimatedScrollLock(arg0) {
   onScroll.__workletHash = 12056309843492;
   onScroll.__initData = tmp21;
   obj5.onScroll = onScroll;
-  const tmp3Result3 = _mod1652;
-  const animatedScrollHandler = _mod1652.useAnimatedScrollHandler(obj5);
+  const tmp3Result3 = _mod1655;
+  const animatedScrollHandler = _mod1655.useAnimatedScrollHandler(obj5);
   const items8 = [closure_9, scrollLocked];
   c0 = undefined;
   [tmp32, tmp33] = items8;
@@ -200,10 +200,10 @@ export function useAnimatedScrollLock(arg0) {
   useAnimatedScrollLockTsx5.__closure = items9;
   useAnimatedScrollLockTsx5.__workletHash = 5672658583564;
   useAnimatedScrollLockTsx5.__initData = tmp32;
-  const tmp3Result4 = _mod1652;
+  const tmp3Result4 = _mod1655;
   return {
     onScroll: animatedScrollHandler,
-    animatedProps: _mod1652.useAnimatedProps(useAnimatedScrollLockTsx5),
+    animatedProps: _mod1655.useAnimatedProps(useAnimatedScrollLockTsx5),
     scrollerRef: animatedRef,
     gestureRef,
   };

@@ -5,7 +5,7 @@ import useTrialOffer from "../useTrialOffer.tsx";
 import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 
 require = fn;
-const PremiumConstants = fn(1387);
+const PremiumConstants = fn(1390);
 ({
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c3,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_4,

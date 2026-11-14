@@ -371,11 +371,11 @@ let closure_14 = async function _drainPendingEdits(arg0) {
                       const channel = tmp50.getChannel(closure_2_0);
                       let channelPermissionOverwrite;
                       if (null != channel) {
-                        channelPermissionOverwrite = closure_0(19501).getChannelPermissionOverwrite(
+                        channelPermissionOverwrite = closure_0(19694).getChannelPermissionOverwrite(
                           channel,
                           closure_2_1,
                         );
-                        const obj10 = closure_0(19501);
+                        const obj10 = closure_0(19694);
                       }
                       if (null == channelPermissionOverwrite) {
                         c6 = 1;
@@ -387,7 +387,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
                         while (closure_0 !== undefined) {
                           c5 = 1;
                           ({ flag, value } = nextResult);
-                          let obj11 = closure_0(19501);
+                          let obj11 = closure_0(19694);
                           channelPermissionOverwrite = obj11.applyChannelPermissionOverwriteEdit(
                             channelPermissionOverwrite,
                             flag,
@@ -401,7 +401,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
                         c6 = 6;
                         c7 = 1;
                         const obj6 = {
-                          value: readyEdits(8069).updatePermissionOverwrite(closure_2_0, channelPermissionOverwrite),
+                          value: readyEdits(8134).updatePermissionOverwrite(closure_2_0, channelPermissionOverwrite),
                           done: false,
                         };
                         return obj6;
@@ -589,7 +589,7 @@ let closure_14 = async function _drainPendingEdits(arg0) {
     }
   }
 };
-let closure_6 = fn(19500).getChannelPermissionOverwriteResourceKey;
+let closure_6 = fn(19693).getChannelPermissionOverwriteResourceKey;
 let closure_7 = 0;
 const set = new Set();
 const size = fn(2);

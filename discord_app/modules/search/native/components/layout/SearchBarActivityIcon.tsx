@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/layout/SearchBarActivityIcon.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import SearchUtils from "../../../SearchUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -11,10 +11,10 @@ const require = globalThis.__r;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(8999).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_7 = fn(9066).SEARCH_MESSAGE_TAB_SENTINEL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   spinnerColor: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },
   spinner: { width: 18, height: 18, alignItems: "center", justifyContent: "center", position: "absolute" },
@@ -60,7 +60,7 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
     items1,
   );
   let obj = require("useStateFromStores");
-  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(obj4.START);
+  const sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(obj4.START);
   const items2 = [stateFromStores, sharedValue];
   const effect = noop.useEffect(() => {
     const withTiming = timing_timing.withTiming;
@@ -70,8 +70,8 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
       const result1 = set(withTiming(obj4.START));
     }
   }, items2);
-  const obj2 = require("../../../../../../_runtime/metro/01652__.js");
-  const items3 = [closure_14, require("../../../../../../_runtime/metro/01652__.js").interpolate, sharedValue, items];
+  const obj2 = require("../../../../../../_runtime/metro/01655__.js");
+  const items3 = [closure_14, require("../../../../../../_runtime/metro/01655__.js").interpolate, sharedValue, items];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -86,12 +86,12 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
   SearchBarActivityIconTsx1.__closure = items4;
   SearchBarActivityIconTsx1.__workletHash = 14380742529421;
   SearchBarActivityIconTsx1.__initData = tmp8;
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     SearchBarActivityIconTsx1,
   );
-  const obj3 = require("../../../../../../_runtime/metro/01652__.js");
+  const obj3 = require("../../../../../../_runtime/metro/01655__.js");
   const tmp7 = items;
-  const items5 = [closure_15, require("../../../../../../_runtime/metro/01652__.js").interpolate, sharedValue, tmp7];
+  const items5 = [closure_15, require("../../../../../../_runtime/metro/01655__.js").interpolate, sharedValue, tmp7];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -106,7 +106,7 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
   SearchBarActivityIconTsx2.__closure = items6;
   SearchBarActivityIconTsx2.__workletHash = 4711746497812;
   SearchBarActivityIconTsx2.__initData = tmp13;
-  const animatedStyle1 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     SearchBarActivityIconTsx2,
   );
   obj4 = { style: animatedStyle, children: null };
@@ -115,10 +115,10 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
   ({ icon: arr8[0], spinner: arr8[1] } = tmp);
   obj5.style = items7;
   obj4.children = closure_8(ActivityIndicator, obj5);
-  const items8 = [closure_8(_modDef1652.View, obj4)];
+  const items8 = [closure_8(_modDef1655.View, obj4)];
   const obj6 = { style: animatedStyle1, children: null };
   const obj7 = { style: tmp.icon, size: null, color: "interactive-text-default" };
-  const tmp2Result = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp2Result = require("../../../../../../_runtime/metro/01655__.js");
   let str = "xs";
   if (tmp2Result2.isAndroid()) {
     str = "sm";
@@ -126,7 +126,7 @@ export default noop.memo(function SearchBarActivityIcon(searchContext) {
   const obj8 = { children: null };
   obj7.size = str;
   obj6.children = closure_8(require("MagnifyingGlassIcon").MagnifyingGlassIcon, obj7);
-  items8[1] = closure_8(_modDef1652.View, obj6);
+  items8[1] = closure_8(_modDef1655.View, obj6);
   obj8.children = items8;
   return closure_10(closure_9, obj8);
 });

@@ -24,7 +24,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(5173);
+let GuildChannelStore = fn(5236);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1072);
@@ -35,13 +35,13 @@ const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/shared/ConjureUtils.tsx");
 
-export function conjureSettingsGuildId(project, arg1) {
+export function conjureSettingsGuildId(project, stateFromStores) {
   let tmp = null;
   if (null != project) {
     tmp = null;
     if ("guild" === project.install_scope) {
       let preview_guild_id = null;
-      if (arg1) {
+      if (stateFromStores) {
         preview_guild_id = project.preview_guild_id;
       }
       if (preview_guild_id == null) {

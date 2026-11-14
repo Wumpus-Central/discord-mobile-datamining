@@ -1,19 +1,19 @@
 // discord_app/modules/share/native/ShareFooterLayout.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   footer: {
     display: "flex",
@@ -83,7 +83,7 @@ export default function ShareFooterLayout(arg0) {
   ShareFooterLayoutTsx1.__closure = items1;
   ShareFooterLayoutTsx1.__workletHash = 16457312043220;
   ShareFooterLayoutTsx1.__initData = tmp6;
-  const animatedStyle = _mod1652.useAnimatedStyle(ShareFooterLayoutTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(ShareFooterLayoutTsx1);
   const obj2 = { style: null, children: null };
   const items2 = [tmp.footer, animatedStyle];
   obj2.style = items2;
@@ -111,5 +111,5 @@ export default function ShareFooterLayout(arg0) {
   obj5.children = items6;
   items4[1] = timestampProducer(View, obj5);
   obj2.children = items4;
-  return timestampProducer(_modDef1652.View, obj2);
+  return timestampProducer(_modDef1655.View, obj2);
 }

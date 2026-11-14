@@ -530,6 +530,7 @@ export function isExternalProduct(arg0) {
 export const ALL_FILTERS = items1;
 export const SORT_OPTIONS = items2;
 export const CollectiblesMobileShopScreen = { FEATURED_PAGE: "featured-page", SHOP_ALL: "shop-all", ORBS: "orbs" };
+export const TWELVE_DAYS_COLLECTION_SKU_ID = "1569803532339519578";
 export const REWARD_CATEGORY_AND_REWARD_SKU_IDS = items3;
 export const ShopCtaEnum = {
   BUY_WITH_FIAT: "buy_with_fiat",

@@ -68,11 +68,11 @@ function AppLauncherApplicationViewScreenInner(application) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const AppLauncherNativeConstants = fn(1498);
+const AppLauncherNativeConstants = fn(1501);
 ({ AppLauncherRouteName: metroImportDefault, SCREEN_BACKGROUND_COLOR } = AppLauncherNativeConstants);
-const BuiltInSectionId = fn(6282).BuiltInSectionId;
+const BuiltInSectionId = fn(6345).BuiltInSectionId;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_10 = createStyles.createStyles({ container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -114,7 +114,7 @@ export default function AppLauncherApplicationViewScreen(route) {
   }
   const tmpResult = require("useGetOrFetchApplications");
   items = [id, context, installOnDemand];
-  const sharedValue = require("../../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   const effect = navigation.useEffect(() => {
     let tmp2 = null != id;
     if (tmp2) {

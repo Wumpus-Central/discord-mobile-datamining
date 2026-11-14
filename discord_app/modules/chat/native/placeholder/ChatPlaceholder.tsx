@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import useKeyboardAnimatedValueDefault from "../../../keyboard/native/useKeyboardAnimatedValue.tsx";
 import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles.tsx";
@@ -13,9 +13,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(11799).useChatInputContainerHeight;
+let closure_4 = fn(11865).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { placeholder: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -57,7 +57,7 @@ export default noop.memo(function ChatPlaceholder(screenIndex) {
   ChatPlaceholderTsx1.__workletHash = 13868441581206;
   ChatPlaceholderTsx1.__initData = tmp8;
   _require = undefined;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ChatPlaceholderTsx1);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(ChatPlaceholderTsx1);
   _require = callback.useRef([]);
   callback = callback.useCallback((arg0) => {
     let tmp2 = ref.current[arg0];
@@ -71,7 +71,7 @@ export default noop.memo(function ChatPlaceholder(screenIndex) {
     return tmp2;
   }, []);
   const items2 = [height, sum, tmp2, callback];
-  let obj = require("../../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../../_runtime/metro/01655__.js");
   const memo = callback.useMemo(() => {
     let diff;
     items = [];
@@ -95,5 +95,5 @@ export default noop.memo(function ChatPlaceholder(screenIndex) {
     useChatPlaceholderAnimatedStylesDefault({ visible: true, animated: true }),
   ];
   obj2.style = items3;
-  return jsx(_modDef1652.View, { style: null, pointerEvents: "none", children: memo });
+  return jsx(_modDef1655.View, { style: null, pointerEvents: "none", children: memo });
 });

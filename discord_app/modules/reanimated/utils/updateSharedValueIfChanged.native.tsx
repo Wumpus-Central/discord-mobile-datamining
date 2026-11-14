@@ -1,12 +1,12 @@
 // discord_app/modules/reanimated/utils/updateSharedValueIfChanged.native.tsx
-import _mod1705 from "../../../../_runtime/metro/01705__.js";
+import _mod1708 from "../../../../_runtime/metro/01708__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const items = [
   {
     code: "(function updateSharedValueIfChanged_updateSharedValueIfChangedNativeTsx1(sharedValue,value){const updateSharedValueIfChanged_updateSharedValueIfChangedNativeTsx1=this._recur;let[scheduleOnUI]=this.__closure;if(!_WORKLET){scheduleOnUI(updateSharedValueIfChanged_updateSharedValueIfChangedNativeTsx1,sharedValue,value);}else{const _sharedValue=sharedValue.get();const newValue={..._sharedValue,...value};for(const key in newValue){if(_sharedValue[key]!==newValue[key]){sharedValue.set(newValue);break;}}}})",
   },
-  _mod1705.scheduleOnUI,
+  _mod1708.scheduleOnUI,
 ];
 let c0;
 [tmp2, tmp3] = items;
@@ -37,7 +37,7 @@ const items2 = [
   {
     code: "(function updateSharedValueArrayIfChanged_updateSharedValueIfChangedNativeTsx2(sharedValue,value){const updateSharedValueArrayIfChanged_updateSharedValueIfChangedNativeTsx2=this._recur;let[scheduleOnUI]=this.__closure;if(!_WORKLET){scheduleOnUI(updateSharedValueArrayIfChanged_updateSharedValueIfChangedNativeTsx2,sharedValue,value);}else{const _sharedValue=sharedValue.get();if(_sharedValue.length!==value.length){sharedValue.set(value);}for(let i=0;i<value.length;i++){if(_sharedValue[i]!==value[i]){sharedValue.set(value);}}}})",
   },
-  _mod1705.scheduleOnUI,
+  _mod1708.scheduleOnUI,
 ];
 let closure_129_0;
 [tmp4, tmp5] = items2;

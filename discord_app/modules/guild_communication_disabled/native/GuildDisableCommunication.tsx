@@ -17,7 +17,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_6, ScrollView: metroImportDefault } = get_ActivityIndicator);
-const GuildDisableCommunicationConstants = fn(5157);
+const GuildDisableCommunicationConstants = fn(5220);
 ({
   DisableCommunicationDuration,
   GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8,
@@ -70,7 +70,7 @@ let items = [
     },
   },
 ];
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   reasonTextArea: null,
@@ -122,7 +122,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(14036);
+            const obj4 = tmp4(14143);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = {
@@ -145,8 +145,8 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           return obj6;
         } else {
           const intl = user(1113).intl;
-          const obj8 = tmp4(5952);
-          const name = tmp4(6288).getName(closure_129_1, null, closure_129_0);
+          const obj8 = tmp4(6015);
+          const name = tmp4(6351).getName(closure_129_1, null, closure_129_0);
           user = name;
           if (name == null) {
             user = "";

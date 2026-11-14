@@ -1,6 +1,6 @@
 // discord_app/design/mana/components/Toast/ToastContainer.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import TransitionGroup_TransitionGroup from "../../../../../discord_common/js/packages/design/components/TransitionGroup/TransitionGroup.tsx";
 import OverlayViewDefault from "../../../void/OverlayView/native/OverlayView.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -13,16 +13,16 @@ function AnimatedToast(cleanUp) {
   cleanUp = cleanUp.cleanUp;
   ({ entry, enterDelayMs } = cleanUp);
   let tmp = c12();
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  obj = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  obj = require("../../../../../_runtime/metro/01655__.js");
   const tmp2 = _require;
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(c8.HIDDEN);
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(c8.HIDDEN);
   _slicedToArray = sharedValue1;
-  obj2 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  obj2 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
   noop = sharedValue2;
   [first, c6] = noop.useState(false);
-  const obj3 = require("../../../../../_runtime/metro/01652__.js");
+  const obj3 = require("../../../../../_runtime/metro/01655__.js");
   items = [
     c14,
     position,
@@ -31,15 +31,15 @@ function AnimatedToast(cleanUp) {
     sharedValue1,
     c8,
     _slicedToArray(noop.useState(enterDelayMs), 1)[0],
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     c9,
-    require("../../../../../_runtime/metro/01652__.js").withDelay,
+    require("../../../../../_runtime/metro/01655__.js").withDelay,
     require("timing/timing").withTiming,
     c10,
     c13,
     state,
     require("TransitionGroup/TransitionGroup").TransitionStates,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     cleanUp,
   ];
   _require = undefined;
@@ -190,7 +190,7 @@ function AnimatedToast(cleanUp) {
   ToastContainerNativeTsx2.__workletHash = 2210438006804;
   ToastContainerNativeTsx2.__initData = tmp9;
   let items2 = [sharedValue1, cleanUp, sharedValue2, first, state];
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ToastContainerNativeTsx2);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(ToastContainerNativeTsx2);
   const effect = obj4.useEffect(() => {
     if (c0 === TransitionGroup_TransitionGroup.TransitionStates.YEETED) {
       if (_undefined4.get()) {
@@ -216,8 +216,8 @@ function AnimatedToast(cleanUp) {
   let items4 = [tmp.toast, "top" === position ? tmp.toastTop : tmp.toastBottom, animatedStyle];
   obj6.style = items4;
   const merged = Object.assign(entry.toast);
-  obj6.children = jsx(tmp2(16358).Toast, {});
-  return jsx(_modDef1652.View, obj6);
+  obj6.children = jsx(tmp2(16481).Toast, {});
+  return jsx(_modDef1655.View, obj6);
 }
 function getItemKey(key) {
   return String(key.key);
@@ -232,10 +232,10 @@ let items = [,];
 let obj2 = { duration: null, easing: null };
 const ANIMATION_DURATION_MS = nativeDefault.modules.toast.ANIMATION_DURATION_MS;
 obj2.duration = ANIMATION_DURATION_MS.resolve({});
-obj2.easing = fn(1652).Easing.linear;
+obj2.easing = fn(1655).Easing.linear;
 const QUEUE_ENTER_DELAY_MS = nativeDefault.modules.toast.QUEUE_ENTER_DELAY_MS;
 let closure_11 = QUEUE_ENTER_DELAY_MS.resolve({});
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj4 = { container: null, bounds: null, toast: null, toastTop: null, toastBottom: null };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -1,18 +1,18 @@
 // discord_app/modules/screen/useWindowDimensionsSharedValue.native.tsx
 import updateSharedValueIfChangedDefault from "../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions.native.tsx";
-import module_1652_mod from "../../../_runtime/metro/01652__.js";
+import module_1655_mod from "../../../_runtime/metro/01655__.js";
 import useWindowDimensions_mod from "useWindowDimensions.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let module_1652 = module_1652_mod;
+let module_1655 = module_1655_mod;
 let useWindowDimensions = useWindowDimensions_mod;
 const merged = Object.assign(useWindowDimensions.getWindowDimensions());
-const mutable = module_1652.makeMutable({});
-let module_1652 = module_1652_mod;
+const mutable = module_1655.makeMutable({});
+let module_1655 = module_1655_mod;
 let useWindowDimensions = useWindowDimensions_mod;
 const merged1 = Object.assign(useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }));
-const mutable1 = module_1652.makeMutable({});
+const mutable1 = module_1655.makeMutable({});
 subscribeToWindowDimensionsDefault((arg0, arg1) => {
   updateSharedValueIfChangedDefault(mutable, arg0);
   updateSharedValueIfChangedDefault(mutable1, arg1);

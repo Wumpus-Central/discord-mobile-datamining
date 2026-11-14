@@ -5,8 +5,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11919).VoicePanelModes;
-const VoicePanelControlsModes = fn(11917).VoicePanelControlsModes;
+const VoicePanelModes = fn(11985).VoicePanelModes;
+const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
 const map = new Map();
 let items = [
   {
@@ -103,7 +103,7 @@ export default noop.memo(function JankVoicePanelTabReporter(channelId) {
   JankVoicePanelTabReporterNativeTsx2.__closure = items3;
   JankVoicePanelTabReporterNativeTsx2.__workletHash = 2083564958222;
   JankVoicePanelTabReporterNativeTsx2.__initData = tmp5;
-  const items4 = [closure_8, require("../../../../_runtime/metro/01705__.js").scheduleOnRN, callback];
+  const items4 = [closure_8, require("../../../../_runtime/metro/01708__.js").scheduleOnRN, callback];
   _require = undefined;
   dependencyMap = undefined;
   [tmp10, tmp11, tmp12] = items4;
@@ -123,7 +123,7 @@ export default noop.memo(function JankVoicePanelTabReporter(channelId) {
   JankVoicePanelTabReporterNativeTsx3.__closure = items5;
   JankVoicePanelTabReporterNativeTsx3.__workletHash = 4126589190035;
   JankVoicePanelTabReporterNativeTsx3.__initData = tmp10;
-  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     JankVoicePanelTabReporterNativeTsx2,
     JankVoicePanelTabReporterNativeTsx3,
   );

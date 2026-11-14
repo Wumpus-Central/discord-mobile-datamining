@@ -1,8 +1,11 @@
 // discord_app/modules/conjure/server_share/useConjureShareToServer.tsx
+import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
+import ConjureUtils from "../shared/ConjureUtils.tsx";
 import ConjurePublishTypes from "../publish/ConjurePublishTypes.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
+import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 import ConjurePublishStatusStore from "../publish/ConjurePublishStatusStore.tsx";
@@ -14,72 +17,72 @@ function refreshUntilBotJoins(arg0, arg1) {
   closure_0 = arg0;
   c1 = 6;
   const timerId = setTimeout(() => {
-    let integrationStatus = closure_2_7.getIntegrationStatus(closure_1_0);
+    let integrationStatus = closure_2_8.getIntegrationStatus(closure_1_0);
     let prop;
     if (integrationStatus != null) {
       prop = integrationStatus.integration_installed;
     }
     if (true !== prop) {
-      let result = closure_2_0(closure_2_2[12]).refreshConjureInstallState(closure_1_0);
+      let result = closure_2_0(closure_2_2[15]).refreshConjureInstallState(closure_1_0);
       if (1 < closure_1_1) {
         closure_0 = closure_1_0;
         closure_1 = tmp7 - 1;
         let _setTimeout = setTimeout;
         let timerId = setTimeout(() => {
-          let integrationStatus = closure_2_7.getIntegrationStatus(closure_1_0);
+          let integrationStatus = closure_2_8.getIntegrationStatus(closure_1_0);
           let prop;
           if (integrationStatus != null) {
             prop = integrationStatus.integration_installed;
           }
           if (true !== prop) {
-            let result = closure_2_0(closure_2_2[12]).refreshConjureInstallState(closure_1_0);
+            let result = closure_2_0(closure_2_2[15]).refreshConjureInstallState(closure_1_0);
             if (1 < closure_1_1) {
               closure_0 = closure_1_0;
               closure_1 = tmp7 - 1;
               let _setTimeout = setTimeout;
               let timerId = setTimeout(() => {
-                let integrationStatus = closure_2_7.getIntegrationStatus(closure_1_0);
+                let integrationStatus = closure_2_8.getIntegrationStatus(closure_1_0);
                 let prop;
                 if (integrationStatus != null) {
                   prop = integrationStatus.integration_installed;
                 }
                 if (true !== prop) {
-                  let result = closure_2_0(closure_2_2[12]).refreshConjureInstallState(closure_1_0);
+                  let result = closure_2_0(closure_2_2[15]).refreshConjureInstallState(closure_1_0);
                   if (1 < closure_1_1) {
                     closure_0 = closure_1_0;
                     closure_1 = tmp7 - 1;
                     let _setTimeout = setTimeout;
                     let timerId = setTimeout(() => {
-                      let integrationStatus = closure_2_7.getIntegrationStatus(closure_1_0);
+                      let integrationStatus = closure_2_8.getIntegrationStatus(closure_1_0);
                       let prop;
                       if (integrationStatus != null) {
                         prop = integrationStatus.integration_installed;
                       }
                       if (true !== prop) {
-                        let result = closure_2_0(closure_2_2[12]).refreshConjureInstallState(closure_1_0);
+                        let result = closure_2_0(closure_2_2[15]).refreshConjureInstallState(closure_1_0);
                         if (1 < closure_1_1) {
                           closure_0 = closure_1_0;
                           closure_1 = tmp7 - 1;
                           let _setTimeout = setTimeout;
-                          let timerId = setTimeout(/* F105460 */ function() { ... }, 1500);
+                          let timerId = setTimeout(/* F106671 */ function() { ... }, 1500);
                         }
-                        let obj = closure_2_0(closure_2_2[12]);
+                        let obj = closure_2_0(closure_2_2[15]);
                       }
                     }, 1500);
                   }
-                  let obj = closure_2_0(closure_2_2[12]);
+                  let obj = closure_2_0(closure_2_2[15]);
                 }
               }, 1500);
             }
-            let obj = closure_2_0(closure_2_2[12]);
+            let obj = closure_2_0(closure_2_2[15]);
           }
         }, 1500);
       }
-      let obj = closure_2_0(closure_2_2[12]);
+      let obj = closure_2_0(closure_2_2[15]);
     }
   }, 1500);
 }
-let closure_12 = async function _waitForPublishStatus(arg0) {
+let closure_13 = async function _waitForPublishStatus(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -121,14 +124,14 @@ let closure_12 = async function _waitForPublishStatus(arg0) {
               return obj4;
             }
           }
-          closure_130_13(closure_129_0);
+          closure_130_14(closure_129_0);
           c4 = 3;
         }
       } else if (arg0 === 1) {
         c4 = 3;
         throw value;
       } else if (arg0 !== 2) {
-        if (!closure_130_13(closure_129_0)) {
+        if (!closure_130_14(closure_129_0)) {
           const _Date = Date;
         }
       }
@@ -153,21 +156,31 @@ function isPublishable(id) {
   }
   return canPublishResult;
 }
-const isProjectOwner = fn(6954).isProjectOwner;
+let isProjectOwner = fn(7017).isProjectOwner;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/server_share/useConjureShareToServer.tsx");
+let result = size.fileFinishedImporting("modules/conjure/server_share/useConjureShareToServer.tsx");
 
 export default function useConjureShareToServer(arg0, arg1, arg2) {
   _require = arg0;
   closure_1 = arg2;
-  items = [ConjureProjectStore];
+  let flag = arg3;
+  if (arg3 === undefined) {
+    flag = false;
+  }
+  let first;
+  let guilds;
+  closure_7 = undefined;
+  guild = undefined;
+  isProjectOwner = undefined;
+  c10 = undefined;
+  items = [guild];
   const items1 = [arg0];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ConjureProjectStore.getProject(closure_0), items1);
   let obj = require("initialize");
   const tmp = _require;
-  const tmp2 = conjureEligibleGuilds;
-  const items2 = [ConjureProjectStore];
+  const tmp2 = flag;
+  const items2 = [guild];
   const items3 = [arg0];
   const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
     const integrationStatus = ConjureProjectStore.getIntegrationStatus(closure_0);
@@ -178,7 +191,7 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
     return true === preview_ready;
   }, items3);
   let obj2 = require("initialize");
-  conjureEligibleGuilds = require("useConjureProjects").useConjureEligibleGuilds("ConjureShareToServer");
+  const conjureEligibleGuilds = require("useConjureProjects").useConjureEligibleGuilds("ConjureShareToServer");
   let available = null != stateFromStores;
   if (available) {
     available = "user" === stateFromStores.install_scope;
@@ -186,13 +199,27 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
   if (available) {
     available = isProjectOwner(stateFromStores);
   }
+  first = conjureEligibleGuilds(first.useState(() => {
+    if (flag) {
+      if (null != stateFromStores) {
+        const result = ConjureProjectTypes.conjureProjectServerIds(tmp);
+      }
+      return [];
+    }
+  }), 1)[0];
   let obj3 = require("useConjureProjects");
-  const items4 = [PermissionStore];
-  const items5 = [conjureEligibleGuilds];
-  const guilds = tmp(tmp2[7]).useStateFromStoresArray(items4, () => conjureEligibleGuilds.filter((item) => closure_1_6.can(constants.MANAGE_GUILD, item)), items5);
-  const tmp9 = _slicedToArray(guild.useState(null), 2);
-  _slicedToArray = tmp9[1];
-  const items6 = [tmp9[0], , ];
+  const items4 = [closure_7];
+  const items5 = [conjureEligibleGuilds, first];
+  guilds = tmp(tmp2[10]).useStateFromStoresArray(items4, () => conjureEligibleGuilds.filter((id) => {
+    let canResult = closure_7.can(constants.MANAGE_GUILD, id);
+    if (canResult) {
+      canResult = !first.includes(id.id);
+    }
+    return canResult;
+  }), items5);
+  const tmp10 = conjureEligibleGuilds(first.useState(null), 2);
+  closure_7 = tmp10[1];
+  const items6 = [tmp10[0], , ];
   let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
@@ -210,16 +237,16 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
   if (guild == null) {
     guild = null;
   }
-  const tmpResult = tmp(tmp2[7]);
-  [tmp13, PermissionStore] = guild.useState(false);
-  const tmp8Result = _slicedToArray(guild.useState(false), 2);
-  [tmp15, ConjureProjectStore] = guild.useState(null);
-  const pickGuild = obj5.useCallback((arg0) => {
-    closure_4(arg0);
-    ConjureProjectStore(null);
+  const tmpResult = tmp(tmp2[10]);
+  [tmp14, c9] = conjureEligibleGuilds(first.useState(false), 2);
+  const tmp8Result = conjureEligibleGuilds(first.useState(false), 2);
+  [tmp16, c10] = conjureEligibleGuilds(first.useState(null), 2);
+  const pickGuild = obj4.useCallback((arg0) => {
+    closure_7(arg0);
+    _undefined(null);
   }, []);
-  const items7 = [guild, arg0];
-  const share = obj5.useCallback(guilds(function*() {
+  const items7 = [flag, guild, arg0];
+  const share = obj4.useCallback(stateFromStores(function*() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -251,8 +278,8 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
             let project2;
             closure_128_5 = undefined;
             closure_128_6 = undefined;
-            const intl = tmp5(tmp53[9]).intl;
-            const stringResult = intl.string(tmp3(tmp53[10]).qDjkvv);
+            const intl = tmp5(tmp63[12]).intl;
+            const stringResult = intl.string(tmp3(tmp63[13]).qDjkvv);
             closure_128_0 = stringResult;
             if (null == guild) {
               const obj4 = { shared: false, error: stringResult };
@@ -260,21 +287,27 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
               const obj5 = { value: obj4, done: true };
               return obj5;
             } else {
-              PermissionStore(true);
-              ConjureProjectStore(null);
-              closure_128_1 = tmp5(tmp53[11]).nextConjurePreviewAppPublished(tmp5, 30000);
+              _undefined(true);
+              publishStatus(null);
+              let result = null;
+              if (!flag) {
+                result = tmp5(tmp63[14]).nextConjurePreviewAppPublished(tmp5, 30000);
+                const obj12 = tmp5(tmp63[14]);
+              }
+              closure_128_1 = result;
               c3 = 1;
-              const obj16 = tmp5(tmp53[11]);
               c4 = 2;
               c5 = 1;
-              const obj6 = { value: tmp5(tmp53[12]).shareConjureProject(tmp5, tmp76.id), done: false };
+              const obj6 = { value: tmp5(tmp63[15]).shareConjureProject(tmp5, tmp88.id), done: false };
               return obj6;
             }
           }
         } else if (1 === tmp8) {
           c3 = 0;
-          closure_128_7 = tmp53;
-          closure_128_1.cancel();
+          closure_128_7 = tmp63;
+          if (closure_128_1 != null) {
+            obj11.cancel();
+          }
           let message;
           if (closure_128_7 != null) {
             const body = closure_128_7.body;
@@ -284,15 +317,16 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
           }
           closure_128_2 = message;
           if (typeof closure_128_2 === "string") {
-            let tmp45 = closure_128_2;
+            let tmp48 = closure_128_2;
           } else {
-            tmp45 = closure_128_0;
+            tmp48 = closure_128_0;
           }
-          closure_128_3 = tmp45;
-          closure_129_7(closure_128_3);
-          closure_129_6(false);
+          closure_128_3 = tmp48;
+          closure_129_10(closure_128_3);
+          closure_129_9(false);
           { shared: false, error: null }[1] = closure_128_3;
           c5 = 3;
+          obj11 = closure_128_1;
         } else if (2 === tmp8) {
           if (arg0 === 1) {
             c5 = 3;
@@ -304,35 +338,42 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
             return obj7;
           } else {
             c3 = 0;
-            project2 = project.getProject(closure_129_0);
-            if (null != project2) {
-              if (!obj15.usesPreviewApp(project2)) {
-                closure_128_1.cancel();
-                closure_129_6(false);
-                publishStatus = publishStatus.getPublishStatus(closure_129_0);
-                let publishState;
-                if (publishStatus != null) {
-                  publishState = publishStatus.publishState;
+            if (null == closure_128_1) {
+              closure_129_9(false);
+              c5 = 3;
+              const obj8 = { value: { shared: true, next: "added" }, done: true };
+              return obj8;
+            } else {
+              project2 = project.getProject(closure_129_0);
+              if (null != project2) {
+                if (!obj19.usesPreviewApp(project2)) {
+                  closure_128_1.cancel();
+                  closure_129_9(false);
+                  publishStatus = publishStatus.getPublishStatus(closure_129_0);
+                  let publishState;
+                  if (publishStatus != null) {
+                    publishState = publishStatus.publishState;
+                  }
+                  closure_128_5 = "not_live" === publishState;
+                  if (!closure_128_5) {
+                    refreshUntilBotJoins(closure_129_0, 6);
+                  }
+                  let str2 = "added";
+                  if (closure_128_5) {
+                    str2 = "publish";
+                  }
+                  const obj9 = { shared: true, next: str2 };
+                  c5 = 3;
+                  const obj10 = { value: obj9, done: true };
+                  return obj10;
                 }
-                closure_128_5 = "not_live" === publishState;
-                if (!closure_128_5) {
-                  refreshUntilBotJoins(closure_129_0, 6);
-                }
-                let str2 = "added";
-                if (closure_128_5) {
-                  str2 = "publish";
-                }
-                const obj8 = { shared: true, next: str2 };
-                c5 = 3;
-                const obj9 = { value: obj8, done: true };
-                return obj9;
+                obj19 = tmp5(tmp63[8]);
               }
-              obj15 = tmp5(tmp53[13]);
+              c4 = 3;
+              c5 = 1;
+              const obj14 = { value: closure_128_1.published, done: false };
+              return obj14;
             }
-            c4 = 3;
-            c5 = 1;
-            const obj10 = { value: closure_128_1.published, done: false };
-            return obj10;
           }
         } else {
           if (3 === tmp8) {
@@ -341,15 +382,15 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj11 = { value, done: true };
-              return obj11;
+              const obj15 = { value, done: true };
+              return obj15;
             } else if (value) {
               c4 = 4;
               c5 = 1;
-              const obj12 = {
+              const obj16 = {
                 value: (function waitForPublishStatus() {
                             const self = this;
-                            const apply = closure_1_12.apply;
+                            const apply = closure_1_13.apply;
                             if (typeof apply === "unknown") {
                               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                             } else {
@@ -359,7 +400,7 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
                           })(closure_129_0),
                 done: false
               };
-              return obj12;
+              return obj16;
             }
           } else if (arg0 === 1) {
             c5 = 3;
@@ -370,20 +411,20 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
             return obj;
           }
           closure_128_6 = value;
-          closure_129_6(false);
+          closure_129_9(false);
           let str = "await_test_app";
           if (closure_128_6) {
             str = "publish";
           }
-          const obj13 = { shared: true, next: str };
+          const obj17 = { shared: true, next: str };
           c5 = 3;
-          const obj14 = { value: obj13, done: true };
-          return obj14;
+          const obj18 = { value: obj17, done: true };
+          return obj18;
         }
-      } catch (tmp53) {
+      } catch (tmp63) {
         if (tmp4 === c3) {
           c5 = tmp2;
-          throw tmp53;
+          throw tmp63;
         } else {
           c4 = tmp;
         }
@@ -391,7 +432,7 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
     }
   }), items7);
   const items8 = [guild, arg0, arg2];
-  const publish = obj5.useCallback(guilds(function*() {
+  const publish = obj4.useCallback(stateFromStores(function*() {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -421,7 +462,7 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
               const obj5 = { platform: tmp18.platform, guildId: tmp7.id };
               c1 = 2;
               v3 = 1;
-              const obj6 = { value: v3(c2[14]).runConjurePublishAction(closure_0, "share", obj5), done: false };
+              const obj6 = { value: v3(c2[16]).runConjurePublishAction(closure_0, "share", obj5), done: false };
               return obj6;
             }
           }
@@ -458,3 +499,33 @@ export default function useConjureShareToServer(arg0, arg1, arg2) {
   }
   return { available, guilds, guild, pickGuild, sharing, error, share, publish };
 };
+export function canAddConjureProjectToAnotherServer(project, removeTarget, ConjureChatMoreSheet) {
+  _require = ConjureChatMoreSheet;
+  const guild_ids = project.guild_ids;
+  const tmp = isProjectOwner(project);
+  let tmp2 = !tmp;
+  if (tmp) {
+    tmp2 = null == removeTarget;
+  }
+  if (!tmp2) {
+    tmp2 = null == guild_ids;
+  }
+  let tmp6 = !tmp2;
+  if (!tmp2) {
+    let someResult = guild_ids.length < require("ConjureProjectTypes").MAX_PROJECT_SERVERS;
+    if (someResult) {
+      const _Object = Object;
+      const values = Object.values(GuildStore.getGuilds());
+      someResult = values.some((id) => {
+        const hasItem = guild_ids.includes(id.id);
+        let result = !hasItem;
+        if (!hasItem) {
+          result = ConjureUtils.canStartConjureProject(id, closure_0);
+        }
+        return result;
+      });
+    }
+    tmp6 = someResult;
+  }
+  return tmp6;
+}

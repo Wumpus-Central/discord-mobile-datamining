@@ -52,7 +52,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
           closure_129_12 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -183,7 +183,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
     }
   }
 };
-fn(7595).addPostConnectionCallback;
+fn(7661).addPostConnectionCallback;
 const Routes = fn(1072).Routes;
 let c6 = null;
 const size = fn(2);

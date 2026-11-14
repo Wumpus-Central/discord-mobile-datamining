@@ -11,12 +11,12 @@ const require = fn;
 const View = fn(17).View;
 const AgeGateConstants = fn(1097);
 ({ AgeGateAnalyticAction: closure_8, AgeGateSource: closure_9 } = AgeGateConstants);
-let closure_10 = fn(20007).ExistingUserAgeGateScreens;
+let closure_10 = fn(20165).ExistingUserAgeGateScreens;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_11, HelpdeskArticles: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_15 = createStyles.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 8, textAlign: "center" }, body: { textAlign: "center", lineHeight: 20, marginBottom: 16 }, inputGroup: { marginBottom: 16, width: "100%" }, buttonWrapper: { width: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/components/ExistingUserAgeGate.tsx");
@@ -153,7 +153,7 @@ export default function ExistingUserAgeGate(source) {
             return obj3;
           } else {
             v1(38)(null != date, "Cannot submit null birthday.");
-            const diffResult = v1(2166)().diff(date, "years");
+            const diffResult = v1(2169)().diff(date, "years");
             if (diffResult < 18) {
               const obj4 = {
                 source,
@@ -169,7 +169,7 @@ export default function ExistingUserAgeGate(source) {
               const obj5 = { value: submitBirthday(date), done: false };
               return obj5;
             }
-            const obj6 = v1(2166)();
+            const obj6 = v1(2169)();
           }
         } else if (arg0 === 1) {
           c0 = 3;

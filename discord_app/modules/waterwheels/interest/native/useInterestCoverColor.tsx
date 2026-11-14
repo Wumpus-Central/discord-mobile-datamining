@@ -1,6 +1,6 @@
 // discord_app/modules/waterwheels/interest/native/useInterestCoverColor.tsx
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import privDefault from "../../../../../_runtime/01453_priv.js";
+import privDefault from "../../../../../_runtime/01456_priv.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -160,7 +160,7 @@ function fetchInterestCoverColor(arg0, uri) {
     return obj2.pending;
   }
 }
-const sum = fn(5250).WCAGContrastRatios.Text + 0.3;
+const sum = fn(5313).WCAGContrastRatios.Text + 0.3;
 let closure_7 = new privDefault({ max: 256 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/waterwheels/interest/native/useInterestCoverColor.tsx");

@@ -1,6 +1,6 @@
 // discord_app/modules/settings/native/renderer/SettingListItemHighlight.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserSettingSearchStore from "../../../user_settings/UserSettingSearchStore.tsx";
 
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 const require = fn;
 let StyleSheet = fn(17).StyleSheet;
 let jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = { background: { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_HOVER } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = {
@@ -61,12 +61,12 @@ export default noop.memo(function SettingListItemHighlight(start) {
   let tmp = closure_7();
   let items1 = [
     closure_9,
-    require("../../../../../_runtime/metro/01652__.js").withSequence,
-    require("../../../../../_runtime/metro/01652__.js").withDelay,
+    require("../../../../../_runtime/metro/01655__.js").withSequence,
+    require("../../../../../_runtime/metro/01655__.js").withDelay,
     require("timing/timing").withTiming,
-    require("../../../../../_runtime/metro/01652__.js").Easing,
+    require("../../../../../_runtime/metro/01655__.js").Easing,
     closure_8,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     callback,
   ];
   _require = undefined;
@@ -117,11 +117,11 @@ export default noop.memo(function SettingListItemHighlight(start) {
   SettingListItemHighlightTsx2.__closure = items2;
   SettingListItemHighlightTsx2.__workletHash = 15031503673005;
   SettingListItemHighlightTsx2.__initData = tmp5;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     SettingListItemHighlightTsx2,
   );
   let obj2 = { pointerEvents: "none", style: null };
   const items3 = [StyleSheet.absoluteFill, tmp.background, memo, animatedStyle, start.style];
   obj2.style = items3;
-  return jsx(_modDef1652.View, { pointerEvents: "none", style: null });
+  return jsx(_modDef1655.View, { pointerEvents: "none", style: null });
 });

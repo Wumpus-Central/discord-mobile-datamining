@@ -4,14 +4,14 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const setEmailToken = fn(7676).setEmailToken;
+const setEmailToken = fn(7742).setEmailToken;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
 
 export default function ConfirmEmailChangeCode(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
-  const navigation = isChangeEmail(1499).useNavigation();
+  const navigation = isChangeEmail(1502).useNavigation();
   items = [isChangeEmail, navigation];
   const callback = noop.useCallback((arg0) => {
     let tmp = arg0;
@@ -28,7 +28,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
     }
   }, items);
   const obj2 = { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null };
-  let obj = isChangeEmail(1499);
+  let obj = isChangeEmail(1502);
   closure_129_0 = asyncGeneratorStep(async (arg0) => {
     await closure_0(c2[7]).confirmEmailChange(closure_0);
     return value;
@@ -95,7 +95,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
   obj2.headerText = intl.string(isChangeEmail(1113).t["2x/2Uo"]);
   const intl2 = isChangeEmail(1113).intl;
   obj2.confirmButtonText = intl2.string(isChangeEmail(1113).t.PDTjLN);
-  return jsx(navigation(7700), {
+  return jsx(navigation(7766), {
     onFormSubmit: null,
     onSuccess: null,
     onResend: null,

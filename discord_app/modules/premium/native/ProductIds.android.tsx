@@ -348,18 +348,18 @@ export const DiscountIdToProductOfferId = {
   },
 };
 export const BOGO_OFFER_ID = "premium-tier-2-monthly-bogo";
-export function getProductIdForGift(planIdForPremiumType) {
-  if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === planIdForPremiumType) {
+export function getProductIdForGift(arg0) {
+  if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === arg0) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_0;
-  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_0 === planIdForPremiumType) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_0 === arg0) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_0;
-  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_1 === planIdForPremiumType) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_1 === arg0) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_1;
-  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_1 === planIdForPremiumType) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_1 === arg0) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_1;
-  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_2 === planIdForPremiumType) {
+  } else if (SubscriptionPlans.PREMIUM_MONTH_TIER_2 === arg0) {
     return frozen.PREMIUM_GIFT_MONTH_TIER_2;
-  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === planIdForPremiumType) {
+  } else if (SubscriptionPlans.PREMIUM_YEAR_TIER_2 === arg0) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_2;
   } else {
     const _Error = Error;

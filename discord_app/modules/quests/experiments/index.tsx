@@ -80,14 +80,7 @@ const apexExperiment5 = ApexExperiment.createApexExperiment({
   },
 });
 let ApexExperiment = ApexExperiment_mod;
-const apexExperiment6 = ApexExperiment.createApexExperiment({
-  name: "2026-05-bounty-stale-refresh-quest-home",
-  kind: "user",
-  defaultConfig: { enabled: false },
-  variations: { 0: { enabled: false }, 1: { enabled: true } },
-});
-let ApexExperiment = ApexExperiment_mod;
-const obj16 = {
+const obj15 = {
   CONTROL: 0,
   [0]: "CONTROL",
   NEW_LAYOUT_WITH_SEARCH: 1,
@@ -99,37 +92,37 @@ const obj16 = {
   REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER: 4,
   [4]: "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER",
 };
-const apexExperiment7 = ApexExperiment.createApexExperiment({
+const apexExperiment6 = ApexExperiment.createApexExperiment({
   name: "2026-09-mobile-quest-home-sort-priority",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
 let ApexExperiment = ApexExperiment_mod;
-const obj17 = {
+const obj16 = {
   name: "2026-06-quest-home-layout-visual-tweaks",
   kind: "user",
-  defaultConfig: { enabled: false, variant: obj16.CONTROL },
+  defaultConfig: { enabled: false, variant: obj15.CONTROL },
   variations: {
-    0: { enabled: false, variant: obj16.CONTROL },
-    1: { enabled: true, variant: obj16.NEW_LAYOUT_WITH_SEARCH },
-    2: { enabled: true, variant: obj16.LARGE_MASK_MARGIN },
-    3: { enabled: true, variant: obj16.REMOVE_QUEST_TITLE_SUFFIX },
-    4: { enabled: true, variant: obj16.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER },
+    0: { enabled: false, variant: obj15.CONTROL },
+    1: { enabled: true, variant: obj15.NEW_LAYOUT_WITH_SEARCH },
+    2: { enabled: true, variant: obj15.LARGE_MASK_MARGIN },
+    3: { enabled: true, variant: obj15.REMOVE_QUEST_TITLE_SUFFIX },
+    4: { enabled: true, variant: obj15.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER },
   },
 };
-const apexExperiment8 = ApexExperiment.createApexExperiment(obj17);
+const apexExperiment7 = ApexExperiment.createApexExperiment(obj16);
 let ApexExperiment = ApexExperiment_mod;
-const obj19 = {
+const obj18 = {
   name: "2026-09-quest-mobile-bar-secondary-cta",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: null,
 };
-const obj20 = { 1: null };
-obj20[1] = { enabled: true };
-obj19.variations = obj20;
-const obj21 = {
+const obj19 = { 1: null };
+obj19[1] = { enabled: true };
+obj18.variations = obj19;
+const obj20 = {
   DEFAULT: 0,
   [0]: "DEFAULT",
   ALL_TIERS: 1,
@@ -141,43 +134,43 @@ const obj21 = {
   TIER_3_VISUALS: 4,
   [4]: "TIER_3_VISUALS",
 };
-const apexExperiment9 = ApexExperiment.createApexExperiment(obj19);
+const apexExperiment8 = ApexExperiment.createApexExperiment(obj18);
 let ApexExperiment = ApexExperiment_mod;
-const obj22 = {
+const obj21 = {
   name: "2026-09-new-orb-reward-visuals",
   kind: "user",
-  defaultConfig: { variant: obj21.DEFAULT },
+  defaultConfig: { variant: obj20.DEFAULT },
   variations: {
-    0: { variant: obj21.DEFAULT },
-    1: { variant: obj21.ALL_TIERS },
-    2: { variant: obj21.TIER_2_VISUALS },
-    3: { variant: obj21.TIER_3_VISUALS },
-    4: { variant: obj21.TIER_1_VISUALS },
+    0: { variant: obj20.DEFAULT },
+    1: { variant: obj20.ALL_TIERS },
+    2: { variant: obj20.TIER_2_VISUALS },
+    3: { variant: obj20.TIER_3_VISUALS },
+    4: { variant: obj20.TIER_1_VISUALS },
   },
 };
-const apexExperiment10 = ApexExperiment.createApexExperiment(obj22);
+const apexExperiment9 = ApexExperiment.createApexExperiment(obj21);
 let ApexExperiment = ApexExperiment_mod;
-const obj24 = {
+const obj23 = {
   name: "2026-09-mobile-quest-reward-button-to-secondary-button",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: null,
 };
-const obj25 = { 1: null };
-obj25[1] = { enabled: true };
-obj24.variations = obj25;
-const apexExperiment11 = ApexExperiment.createApexExperiment(obj24);
+const obj24 = { 1: null };
+obj24[1] = { enabled: true };
+obj23.variations = obj24;
+const apexExperiment10 = ApexExperiment.createApexExperiment(obj23);
 let ApexExperiment = ApexExperiment_mod;
-const obj26 = {
+const obj25 = {
   name: "2026-10-clickable-hero-banner",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: null,
 };
-const obj27 = { 1: null };
-obj27[1] = { enabled: true };
-obj26.variations = obj27;
-const obj28 = {
+const obj26 = { 1: null };
+obj26[1] = { enabled: true };
+obj25.variations = obj26;
+const obj27 = {
   newLayoutWithSearch: false,
   iconOnlyCTA: false,
   badge: { duration: false, new: false, countdown: false },
@@ -186,12 +179,13 @@ const obj28 = {
   compactReward: false,
   shorterHeight: false,
   gameIconReward: false,
+  underlinedMultiplier: false,
 };
-const apexExperiment12 = ApexExperiment.createApexExperiment(obj26);
+const apexExperiment11 = ApexExperiment.createApexExperiment(obj25);
 let ApexExperiment = ApexExperiment_mod;
-const obj29 = { name: "2026-11-quest-home-tile-single-elements", kind: "user", defaultConfig: obj28, variations: null };
-const obj30 = {
-  0: obj28,
+const obj28 = { name: "2026-11-quest-home-tile-single-elements", kind: "user", defaultConfig: obj27, variations: null };
+const obj29 = {
+  0: obj27,
   1: null,
   2: null,
   3: null,
@@ -203,63 +197,69 @@ const obj30 = {
   9: null,
   10: null,
   11: null,
+  12: null,
 };
+const obj30 = {};
+const merged = Object.assign(obj27);
+obj30.newLayoutWithSearch = true;
+obj29[1] = obj30;
 const obj31 = {};
-const merged = Object.assign(obj28);
+const merged1 = Object.assign(obj27);
 obj31.newLayoutWithSearch = true;
-obj30[1] = obj31;
+obj31.iconOnlyCTA = true;
+obj29[2] = obj31;
 const obj32 = {};
-const merged1 = Object.assign(obj28);
+const merged2 = Object.assign(obj27);
 obj32.newLayoutWithSearch = true;
-obj32.iconOnlyCTA = true;
-obj30[2] = obj32;
+obj32.badge = { duration: true, new: false, countdown: false };
+obj29[3] = obj32;
 const obj33 = {};
-const merged2 = Object.assign(obj28);
+const merged3 = Object.assign(obj27);
 obj33.newLayoutWithSearch = true;
-obj33.badge = { duration: true, new: false, countdown: false };
-obj30[3] = obj33;
+obj33.badge = { duration: false, new: true, countdown: false };
+obj29[4] = obj33;
 const obj34 = {};
-const merged3 = Object.assign(obj28);
+const merged4 = Object.assign(obj27);
 obj34.newLayoutWithSearch = true;
-obj34.badge = { duration: false, new: true, countdown: false };
-obj30[4] = obj34;
+obj34.badge = { duration: false, new: false, countdown: true };
+obj29[5] = obj34;
 const obj35 = {};
-const merged4 = Object.assign(obj28);
+const merged5 = Object.assign(obj27);
 obj35.newLayoutWithSearch = true;
-obj35.badge = { duration: false, new: false, countdown: true };
-obj30[5] = obj35;
+obj35.showGameLogo = false;
+obj29[6] = obj35;
 const obj36 = {};
-const merged5 = Object.assign(obj28);
+const merged6 = Object.assign(obj27);
 obj36.newLayoutWithSearch = true;
-obj36.showGameLogo = false;
-obj30[6] = obj36;
+obj36.showQuestTitle = false;
+obj29[7] = obj36;
 const obj37 = {};
-const merged6 = Object.assign(obj28);
+const merged7 = Object.assign(obj27);
 obj37.newLayoutWithSearch = true;
-obj37.showQuestTitle = false;
-obj30[7] = obj37;
+obj37.compactReward = true;
+obj29[8] = obj37;
 const obj38 = {};
-const merged7 = Object.assign(obj28);
+const merged8 = Object.assign(obj27);
 obj38.newLayoutWithSearch = true;
-obj38.compactReward = true;
-obj30[8] = obj38;
+obj38.shorterHeight = true;
+obj29[9] = obj38;
 const obj39 = {};
-const merged8 = Object.assign(obj28);
+const merged9 = Object.assign(obj27);
 obj39.newLayoutWithSearch = true;
-obj39.shorterHeight = true;
-obj30[9] = obj39;
+obj39.gameIconReward = true;
+obj29[10] = obj39;
 const obj40 = {};
-const merged9 = Object.assign(obj28);
+const merged10 = Object.assign(obj27);
 obj40.newLayoutWithSearch = true;
-obj40.gameIconReward = true;
-obj30[10] = obj40;
+obj40.badge = { duration: true, new: true, countdown: false };
+obj29[11] = obj40;
 const obj41 = {};
-const merged10 = Object.assign(obj28);
+const merged11 = Object.assign(obj27);
 obj41.newLayoutWithSearch = true;
-obj41.badge = { duration: true, new: true, countdown: false };
-obj30[11] = obj41;
-obj29.variations = obj30;
-const apexExperiment13 = ApexExperiment.createApexExperiment(obj29);
+obj41.underlinedMultiplier = true;
+obj29[12] = obj41;
+obj28.variations = obj29;
+const apexExperiment12 = ApexExperiment.createApexExperiment(obj28);
 const result = size.fileFinishedImporting("modules/quests/experiments/index.tsx");
 
 export const VideoEndCardV2Experiment = apexExperiment;
@@ -284,14 +284,13 @@ export function useQuestOrbsMultiplierMarketing(location) {
   };
 }
 export const QuestHomeTileRedesignExperiment = apexExperiment5;
-export const BountyStaleRefreshQuestHomeExperiment = apexExperiment6;
-export const MobileQuestHomeSortPriorityExperiment = apexExperiment7;
-export const QuestHomeLayoutVisualTweakVariant = obj16;
-export const QuestHomeLayoutVisualTweaksExperiment = apexExperiment8;
-export const QuestMobileBarSecondaryCtaExperiment = apexExperiment9;
-export const QuestOrbTierVariant = obj21;
-export const QuestOrbTierExperiment = apexExperiment10;
-export const MobileQuestRewardButtonToSecondaryButtonExperiment = apexExperiment11;
-export const ClickableHeroBannerExperiment = apexExperiment12;
-export const QUEST_HOME_TILE_SINGLE_ELEMENTS_CONTROL = obj28;
-export const QuestHomeTileSingleElementsExperiment = apexExperiment13;
+export const MobileQuestHomeSortPriorityExperiment = apexExperiment6;
+export const QuestHomeLayoutVisualTweakVariant = obj15;
+export const QuestHomeLayoutVisualTweaksExperiment = apexExperiment7;
+export const QuestMobileBarSecondaryCtaExperiment = apexExperiment8;
+export const QuestOrbTierVariant = obj20;
+export const QuestOrbTierExperiment = apexExperiment9;
+export const MobileQuestRewardButtonToSecondaryButtonExperiment = apexExperiment10;
+export const ClickableHeroBannerExperiment = apexExperiment11;
+export const QUEST_HOME_TILE_SINGLE_ELEMENTS_CONTROL = obj27;
+export const QuestHomeTileSingleElementsExperiment = apexExperiment12;

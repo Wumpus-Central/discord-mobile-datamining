@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const _modDef1652 = tmp(1652);
+const _modDef1655 = tmp(1655);
 require = fn;
 const ScrollView = fn(17).ScrollView;
 let jsx = fn(21).jsx;
@@ -67,16 +67,16 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   }, items);
   ({ activeIndex, visiblePageRange } = state);
   const tmp3 = c3(noop.useState(0), 2);
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj2 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../_runtime/metro/01652__.js").useSharedValue(-1);
-  const obj3 = require("../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj4 = require("../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj2 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../_runtime/metro/01655__.js").useSharedValue(-1);
+  const obj3 = require("../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj4 = require("../../../../_runtime/metro/01655__.js");
   const useReducedMotion = state.useReducedMotion;
   _require = scrollViewRef;
   const items1 = [scrollViewRef, sharedValue1, useReducedMotion];
-  const sharedValue3 = require("../../../../_runtime/metro/01652__.js").useSharedValue(-1);
+  const sharedValue3 = require("../../../../_runtime/metro/01655__.js").useSharedValue(-1);
   const callback1 = noop.useCallback((arg0, arg1) => {
     _undefined = arg0;
     closure_1 = arg1;
@@ -111,7 +111,7 @@ export default noop.memo(function UserProfileTabPages(arg0) {
       });
     }
   }, items1);
-  const obj5 = require("../../../../_runtime/metro/01652__.js");
+  const obj5 = require("../../../../_runtime/metro/01655__.js");
   const items2 = [closure_7, sharedValue2, activeIndex, pageHeights];
   _require = undefined;
   importDefault = undefined;
@@ -148,7 +148,7 @@ export default noop.memo(function UserProfileTabPages(arg0) {
     tmp4,
     sharedValue,
     pageHeights,
-    require("../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../_runtime/metro/01708__.js").scheduleOnRN,
     callback1,
   ];
   _require = undefined;
@@ -195,11 +195,11 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   UserProfileTabPagesTsx2.__closure = items5;
   UserProfileTabPagesTsx2.__workletHash = 17354990160146;
   UserProfileTabPagesTsx2.__initData = tmp17;
-  const animatedReaction = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     UserProfileTabPagesTsx1,
     UserProfileTabPagesTsx2,
   );
-  const obj6 = require("../../../../_runtime/metro/01652__.js");
+  const obj6 = require("../../../../_runtime/metro/01655__.js");
   const items6 = [closure_9, pageHeights, visiblePageRange, tmp4, scrollPosition, sharedValue1];
   closure_129_0 = undefined;
   closure_129_1 = undefined;
@@ -289,11 +289,11 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   UserProfileTabPagesTsx4.__closure = items9;
   UserProfileTabPagesTsx4.__workletHash = 12442150107490;
   UserProfileTabPagesTsx4.__initData = tmp32;
-  const animatedReaction1 = require("../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction1 = require("../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     UserProfileTabPagesTsx3,
     UserProfileTabPagesTsx4,
   );
-  const tmp7Result = require("../../../../_runtime/metro/01652__.js");
+  const tmp7Result = require("../../../../_runtime/metro/01655__.js");
   const items10 = [closure_11, sharedValue];
   _require = undefined;
   [tmp38, tmp39] = items10;
@@ -328,7 +328,7 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   UserProfileTabPagesTsx6.__workletHash = 5669274193379;
   UserProfileTabPagesTsx6.__initData = tmp41;
   const items14 = [sharedValue2];
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(UserProfileTabPagesTsx5);
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(UserProfileTabPagesTsx5);
   const items15 = [closure_13, sharedValue2];
   _require = undefined;
   [tmp44, tmp45] = items15;
@@ -345,8 +345,8 @@ export default noop.memo(function UserProfileTabPages(arg0) {
   const items17 = [sharedValue2];
   const callback2 = obj.useCallback(UserProfileTabPagesTsx6, items14);
   const callback3 = obj.useCallback(UserProfileTabPagesTsx7, items17);
-  const tmp7Result2 = require("../../../../_runtime/metro/01652__.js");
-  return jsx(_modDef1652.View, {
+  const tmp7Result2 = require("../../../../_runtime/metro/01655__.js");
+  return jsx(_modDef1655.View, {
     ref,
     onLayout: callback,
     style: animatedStyle,
@@ -360,7 +360,7 @@ export default noop.memo(function UserProfileTabPages(arg0) {
 });
 export function useMeasuredTabItems(memo) {
   _require = memo;
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue([]);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue([]);
   dependencyMap = noop.useRef([]);
   items = [sharedValue];
   const callback = noop.useCallback((arg0, arg1) => {

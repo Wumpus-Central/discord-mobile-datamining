@@ -144,7 +144,7 @@ import SelectWebBrowserSettingDefault from "../../defs/native/SelectWebBrowserSe
 import ClearWebBrowserDataSettingDefault from "../../defs/native/ClearWebBrowserDataSetting.tsx";
 import NotificationsSettingDefault from "../../defs/native/NotificationsSetting.tsx";
 import InAppNotificationsSetting from "../../defs/native/InAppNotificationsSetting.tsx";
-import SystemNotificationsSettingDefault from "../../defs/native/SystemNotificationsSetting.tsx";
+import SystemNotificationsSetting from "../../defs/native/SystemNotificationsSetting.tsx";
 import ReactionNotificationsSettingsDefault from "../../defs/native/ReactionNotificationsSettings.tsx";
 import CustomStatusNotificationSettingsDefault from "../../defs/native/CustomStatusNotificationSettings.tsx";
 import IOSNativePhoneIntegrationSetting from "../../defs/native/IOSNativePhoneIntegrationSetting.tsx";
@@ -155,8 +155,12 @@ import AndroidNotificationLightsSetting from "../../defs/native/AndroidNotificat
 import AndroidNotificationVibrationsSetting from "../../defs/native/AndroidNotificationVibrationsSetting.tsx";
 import AndroidNotificationSoundsSetting from "../../defs/native/AndroidNotificationSoundsSetting.tsx";
 import InAppMessageSoundsSetting from "../../defs/native/InAppMessageSoundsSetting.tsx";
+import CommunityActivityAlertsSetting from "../../defs/native/CommunityActivityAlertsSetting.tsx";
+import HighlightNotificationsSetting from "../../defs/native/HighlightNotificationsSetting.tsx";
+import FriendAnniversaryNotificationSetting from "../../defs/native/FriendAnniversaryNotificationSetting.tsx";
+import ScreenDowntimeScheduleSetting from "../../defs/native/ScreenDowntimeScheduleSetting.tsx";
+import ScreenDowntimeReminderSetting from "../../defs/native/ScreenDowntimeReminderSetting.tsx";
 import FriendStreamNotificationsSettingDefault from "../../defs/native/FriendStreamNotificationsSetting.tsx";
-import FriendAnniversaryNotificationSettingDefault from "../../defs/native/FriendAnniversaryNotificationSetting.tsx";
 import VoiceActivityNotificationSettingDefault from "../../defs/native/VoiceActivityNotificationSetting.tsx";
 import FriendOnlineNotificationSettingDefault from "../../defs/native/FriendOnlineNotificationSetting.tsx";
 import FriendGamingActivityNotificationSettingDefault from "../../defs/native/FriendGamingActivityNotificationSetting.tsx";
@@ -164,10 +168,6 @@ import ProfileUpdatesNotificationSettingDefault from "../../defs/native/ProfileU
 import ServerTrendingNotificationSettingDefault from "../../defs/native/ServerTrendingNotificationSetting.tsx";
 import UpcomingServerEventNotificationSettingDefault from "../../defs/native/UpcomingServerEventNotificationSetting.tsx";
 import SummaryReminderNotificationSettingDefault from "../../defs/native/SummaryReminderNotificationSetting.tsx";
-import ScreenDowntimeReminderSettingDefault from "../../defs/native/ScreenDowntimeReminderSetting.tsx";
-import ScreenDowntimeScheduleSettingDefault from "../../defs/native/ScreenDowntimeScheduleSetting.tsx";
-import CommunityActivityAlertsSettingDefault from "../../defs/native/CommunityActivityAlertsSetting.tsx";
-import HighlightNotificationsSettingDefault from "../../defs/native/HighlightNotificationsSetting.tsx";
 import AppIconsSettingDefault from "../../defs/native/AppIconsSetting.tsx";
 import AdvancedSettingDefault from "../../defs/native/AdvancedSetting.tsx";
 import DeveloperModeSettingDefault from "../../defs/native/DeveloperModeSetting.tsx";
@@ -222,6 +222,7 @@ import DesignSystemBadgeSettingDefault from "../../defs/native/DesignSystemBadge
 import DesignSystemSheetsSettingDefault from "../../defs/native/DesignSystemSheetsSetting.tsx";
 import DesignSystemFormPrimitivesSettingDefault from "../../defs/native/DesignSystemFormPrimitivesSetting.tsx";
 import DesignSystemHapticsSettingDefault from "../../defs/native/DesignSystemHapticsSetting.tsx";
+import DesignSystemDragHandleSettingDefault from "../../defs/native/DesignSystemDragHandleSetting.tsx";
 import DesignSystemAILoaderSettingDefault from "../../defs/native/DesignSystemAILoaderSetting.tsx";
 import DesignSystemAIShimmerSettingDefault from "../../defs/native/DesignSystemAIShimmerSetting.tsx";
 import PremiumProfileCustomizationTryItOutSettingDefault from "../../defs/native/PremiumProfileCustomizationTryItOutSetting.tsx";
@@ -270,6 +271,7 @@ import ActivityPrivacyShareMyActivitySettingDefault from "../../defs/native/Acti
 import ActivityPrivacyDefaultSharingSettingDefault from "../../defs/native/ActivityPrivacyDefaultSharingSetting.tsx";
 import FriendRequestsNotesSettingDefault from "../../defs/native/FriendRequestsNotesSetting.tsx";
 import NotifyFriendsOnComeOnlineSettingDefault from "../../defs/native/NotifyFriendsOnComeOnlineSetting.tsx";
+import NotifyFriendsOnCustomStatusUpdateSettingDefault from "../../defs/native/NotifyFriendsOnCustomStatusUpdateSetting.tsx";
 import NotifyFriendsOnProfileUpdateSettingDefault from "../../defs/native/NotifyFriendsOnProfileUpdateSetting.tsx";
 import NotifyServerMembersOnGoLiveSettingDefault from "../../defs/native/NotifyServerMembersOnGoLiveSetting.tsx";
 import VideoBackgroundSettingDefault from "../../defs/native/VideoBackgroundSetting.tsx";
@@ -277,6 +279,7 @@ import MobileNotifSettingsRendererConfig from "../../notifications/native/codege
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const InAppNotificationsSettingDefault = InAppNotificationsSetting;
+const SystemNotificationsSettingDefault = SystemNotificationsSetting;
 const IOSNativePhoneIntegrationSettingDefault = IOSNativePhoneIntegrationSetting;
 const EmailNotificationsSettingDefault = EmailNotificationsSetting;
 const AndroidMessageNotificationsSettingDefault = AndroidMessageNotificationsSetting;
@@ -284,6 +287,11 @@ const AndroidNotificationLightsSettingDefault = AndroidNotificationLightsSetting
 const AndroidNotificationVibrationsSettingDefault = AndroidNotificationVibrationsSetting;
 const AndroidNotificationSoundsSettingDefault = AndroidNotificationSoundsSetting;
 const InAppMessageSoundsSettingDefault = InAppMessageSoundsSetting;
+const CommunityActivityAlertsSettingDefault = CommunityActivityAlertsSetting;
+const HighlightNotificationsSettingDefault = HighlightNotificationsSetting;
+const FriendAnniversaryNotificationSettingDefault = FriendAnniversaryNotificationSetting;
+const ScreenDowntimeScheduleSettingDefault = ScreenDowntimeScheduleSetting;
+const ScreenDowntimeReminderSettingDefault = ScreenDowntimeReminderSetting;
 const UseDataForQuestsSettingDefault = UseDataForQuestsSetting;
 const UseDataForQuests3PSettingDefault = UseDataForQuests3PSetting;
 
@@ -456,6 +464,12 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   REDESIGN_ANDROID_NOTIFICATION_VIBRATIONS,
   REDESIGN_ANDROID_NOTIFICATION_SOUNDS,
   REDESIGN_IOS_NATIVE_PHONE_INTEGRATION,
+  REDESIGN_SYSTEM_NOTIFICATIONS,
+  REDESIGN_COMMUNITY_ACTIVITY_ALERTS,
+  REDESIGN_HIGHLIGHT_NOTIFICATIONS,
+  REDESIGN_FRIEND_ANNIVERSARY_NOTIFICATIONS,
+  REDESIGN_SCREEN_DOWNTIME_SCHEDULE_NOTIFICATIONS,
+  REDESIGN_SCREEN_DOWNTIME_REMINDER_NOTIFICATIONS,
   REDESIGN_EMAIL_NOTIFICATIONS,
   REDESIGN_EMAIL_COMMUNICATION,
   REDESIGN_EMAIL_SOCIAL,
@@ -530,6 +544,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   DESIGN_SYSTEM_SHEETS,
   DESIGN_SYSTEM_FORM_PRIMITIVES,
   DESIGN_SYSTEM_HAPTICS,
+  DESIGN_SYSTEM_DRAG_HANDLE,
   DESIGN_SYSTEM_AI_LOADER,
   DESIGN_SYSTEM_AI_SHIMMER,
   PREMIUM_PROFILE_CUSTOMIZATION_TRY_IT_OUT,
@@ -564,7 +579,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   DOUBLE_TAP_TO_REACT_ENABLED,
   PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   PARENTAL_CONTROLS_DIRECT_MESSAGES,
-  PARENTAL_CONTROLS_MESSAGE_REQUESTS,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -737,6 +751,15 @@ const frozen = Object.freeze({
     AndroidNotificationVibrationsSetting.RedesignAndroidNotificationVibrationsSetting,
   [REDESIGN_ANDROID_NOTIFICATION_SOUNDS]: AndroidNotificationSoundsSetting.RedesignAndroidNotificationSoundsSetting,
   [REDESIGN_IOS_NATIVE_PHONE_INTEGRATION]: IOSNativePhoneIntegrationSetting.RedesignIOSNativePhoneIntegrationSetting,
+  [REDESIGN_SYSTEM_NOTIFICATIONS]: SystemNotificationsSetting.RedesignSystemNotificationsSetting,
+  [REDESIGN_COMMUNITY_ACTIVITY_ALERTS]: CommunityActivityAlertsSetting.RedesignCommunityActivityAlertsSetting,
+  [REDESIGN_HIGHLIGHT_NOTIFICATIONS]: HighlightNotificationsSetting.RedesignHighlightNotificationsSetting,
+  [REDESIGN_FRIEND_ANNIVERSARY_NOTIFICATIONS]:
+    FriendAnniversaryNotificationSetting.RedesignFriendAnniversaryNotificationSetting,
+  [REDESIGN_SCREEN_DOWNTIME_SCHEDULE_NOTIFICATIONS]:
+    ScreenDowntimeScheduleSetting.RedesignScreenDowntimeScheduleSetting,
+  [REDESIGN_SCREEN_DOWNTIME_REMINDER_NOTIFICATIONS]:
+    ScreenDowntimeReminderSetting.RedesignScreenDowntimeReminderSetting,
   [REDESIGN_EMAIL_NOTIFICATIONS]: EmailNotificationsSetting.RedesignEmailNotificationsSetting,
   [REDESIGN_EMAIL_COMMUNICATION]: EmailCategoryNotificationSettings.RedesignEmailSettings.communication,
   [REDESIGN_EMAIL_SOCIAL]: EmailCategoryNotificationSettings.RedesignEmailSettings.social,
@@ -814,6 +837,7 @@ const frozen = Object.freeze({
   [DESIGN_SYSTEM_SHEETS]: DesignSystemSheetsSettingDefault,
   [DESIGN_SYSTEM_FORM_PRIMITIVES]: DesignSystemFormPrimitivesSettingDefault,
   [DESIGN_SYSTEM_HAPTICS]: DesignSystemHapticsSettingDefault,
+  [DESIGN_SYSTEM_DRAG_HANDLE]: DesignSystemDragHandleSettingDefault,
   [DESIGN_SYSTEM_AI_LOADER]: DesignSystemAILoaderSettingDefault,
   [DESIGN_SYSTEM_AI_SHIMMER]: DesignSystemAIShimmerSettingDefault,
   [PREMIUM_PROFILE_CUSTOMIZATION_TRY_IT_OUT]: PremiumProfileCustomizationTryItOutSettingDefault,
@@ -848,7 +872,7 @@ const frozen = Object.freeze({
   [DOUBLE_TAP_TO_REACT_ENABLED]: DoubleTapToReactSettingDefault,
   [PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS]: ParentalControlsSensitiveContentFilterSettingDefault,
   [PARENTAL_CONTROLS_DIRECT_MESSAGES]: ParentalControlsDirectMessagesDefault,
-  [PARENTAL_CONTROLS_MESSAGE_REQUESTS]: ParentalControlsMessageRequestsDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_MESSAGE_REQUESTS]: ParentalControlsMessageRequestsDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE]: ParentalControlsFriendRequestsEveryoneSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS]:
     ParentalControlsFriendRequestsMutualFriendsSettingDefault,
@@ -871,6 +895,7 @@ const frozen = Object.freeze({
   [MobileUserSettings.ACTIVITY_PRIVACY_DEFAULT_SHARING]: ActivityPrivacyDefaultSharingSettingDefault,
   [MobileUserSettings.FRIEND_REQUEST_NOTES]: FriendRequestsNotesSettingDefault,
   [MobileUserSettings.NOTIFY_FRIENDS_ON_COME_ONLINE]: NotifyFriendsOnComeOnlineSettingDefault,
+  [MobileUserSettings.NOTIFY_FRIENDS_ON_CUSTOM_STATUS_UPDATE]: NotifyFriendsOnCustomStatusUpdateSettingDefault,
   [MobileUserSettings.NOTIFY_FRIENDS_ON_PROFILE_UPDATE]: NotifyFriendsOnProfileUpdateSettingDefault,
   [MobileUserSettings.NOTIFY_SERVER_MEMBERS_ON_GO_LIVE]: NotifyServerMembersOnGoLiveSettingDefault,
   [MobileUserSettings.VIDEO_BACKGROUND]: VideoBackgroundSettingDefault,

@@ -4,10 +4,10 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../../modules/screen/useWindowDimensions.native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../_runtime/metro/01705__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../_runtime/metro/01708__.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05535_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
 import Backdrop from "../../Backdrop/native/Backdrop.native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import spring_spring from "../../../animation/reanimated/spring/spring.tsx";
@@ -69,13 +69,13 @@ function ContextMenuBackdrop(hasEntered) {
   }
   obj2.accessibilityLabel = stringResult;
   obj.children = metroImportDefault(Backdrop.Backdrop, obj2);
-  return metroImportDefault(_modDef1652.View, obj);
+  return metroImportDefault(_modDef1655.View, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let obj2 = { container: null, titleContainer: null, divider: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj2.container = {
@@ -84,7 +84,7 @@ obj2.container = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(9083).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(9150).CONTEXT_MENU_MIN_WIDTH,
 };
 let obj3 = {
   position: "absolute",
@@ -92,12 +92,12 @@ let obj3 = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(9083).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(9150).CONTEXT_MENU_MIN_WIDTH,
 };
-obj2.titleContainer = { padding: fn(9083).CONTEXT_MENU_ITEM_PADDING };
-let obj4 = { padding: fn(9083).CONTEXT_MENU_ITEM_PADDING };
+obj2.titleContainer = { padding: fn(9150).CONTEXT_MENU_ITEM_PADDING };
+let obj4 = { padding: fn(9150).CONTEXT_MENU_ITEM_PADDING };
 obj2.divider = {
-  borderBottomWidth: fn(9083).CONTEXT_MENU_DIVIDER_HEIGHT,
+  borderBottomWidth: fn(9150).CONTEXT_MENU_DIVIDER_HEIGHT,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 let closure_10 = createStyles.createStyles(obj2);
@@ -105,7 +105,7 @@ let items = [
   {
     code: "(function getCollapsedOffset_ContextMenuPopoutNativeTsx1(width,height,positionX,positionY){let[CONTEXT_MENU_MIN_SCALE]=this.__closure;const scaleOffset=1-CONTEXT_MENU_MIN_SCALE;return{translateX:(positionX==='left'?-1:1)*(width/2)*scaleOffset,translateY:(positionY==='below'?-1:1)*(height/2)*scaleOffset};})",
   },
-  fn(9083).CONTEXT_MENU_MIN_SCALE,
+  fn(9150).CONTEXT_MENU_MIN_SCALE,
 ];
 let closure_129_0;
 [tmp5, tmp6] = items;
@@ -144,7 +144,7 @@ let closure_15 = {
 let closure_16 = {
   code: "(function ContextMenuPopoutNativeTsx6(){let[state,scheduleOnRN,requestClose]=this.__closure;const{activeIndex:activeIndex}=state;const isDismiss=activeIndex.get()===-1;scheduleOnRN(requestClose,isDismiss);})",
 };
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj7 = { accessibleDismiss: null };
 let obj8 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
@@ -155,8 +155,8 @@ let items2 = [
   {
     code: "(function backdropEnteringAnimation_ContextMenuPopoutNativeTsx7(){let[withSpring,CONTEXT_MENU_SPRING]=this.__closure;return{initialValues:{opacity:0},animations:{opacity:withSpring(1,CONTEXT_MENU_SPRING)}};})",
   },
-  fn(5876).withSpring,
-  fn(9083).CONTEXT_MENU_SPRING,
+  fn(5939).withSpring,
+  fn(9150).CONTEXT_MENU_SPRING,
 ];
 let closure_130_0;
 let closure_130_1;
@@ -247,10 +247,10 @@ export function ContextMenuPopout(cleanUp) {
   const callback = noop.useCallback(ContextMenuPopoutNativeTsx2, items4);
   if ("below" === positionY) {
     const diff1 = diff - bottom;
-    let diff2 = diff1 - tmp6(9083).CONTEXT_MENU_EDGE_OFFSET;
+    let diff2 = diff1 - tmp6(9150).CONTEXT_MENU_EDGE_OFFSET;
   } else {
     const diff3 = diff - top;
-    diff2 = diff3 - tmp6(9083).CONTEXT_MENU_EDGE_OFFSET;
+    diff2 = diff3 - tmp6(9150).CONTEXT_MENU_EDGE_OFFSET;
   }
   c7 = diff2;
   const tmp20 = scale(noop.useState(menu.height >= diff2), 2);
@@ -270,7 +270,7 @@ export function ContextMenuPopout(cleanUp) {
   let obj4 = require("useKeyboardDuration");
   [tmp23, tmp24] = scale(noop.useState(false), 2);
   const tmp19Result = scale(noop.useState(false), 2);
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
   const items5 = [
     closure_13,
     callback5,
@@ -280,7 +280,7 @@ export function ContextMenuPopout(cleanUp) {
     require("spring/spring").withSpring,
     require("ContextMenuConstants").CONTEXT_MENU_SPRING,
     sharedValue,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     tmp24,
   ];
   _require = undefined;
@@ -335,7 +335,7 @@ export function ContextMenuPopout(cleanUp) {
   items8[5] = require("spring/spring").withSpring;
   items8[6] = require("ContextMenuConstants").CONTEXT_MENU_SPRING;
   items8[7] = require("ContextMenuConstants").CONTEXT_MENU_MIN_SCALE;
-  items8[8] = require("../../../../../_runtime/metro/01705__.js").scheduleOnRN;
+  items8[8] = require("../../../../../_runtime/metro/01708__.js").scheduleOnRN;
   items8[9] = onClose;
   _require = undefined;
   importDefault = undefined;
@@ -403,7 +403,7 @@ export function ContextMenuPopout(cleanUp) {
     const PanResult = Gesture.Pan();
     const enabledResult = Gesture.Pan().enabled(!c8);
     const onStartResult = Gesture.Pan().enabled(!c8).onStart(update);
-    const items2 = [closure_16, c3, _mod1705.scheduleOnRN, c4];
+    const items2 = [closure_16, c3, _mod1708.scheduleOnRN, c4];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -521,7 +521,7 @@ export function ContextMenuPopout(cleanUp) {
     if (!tmp6Result2.isAndroid()) {
       tmp58 = callback;
     }
-    tmp6Result2 = tmp6(1377);
+    tmp6Result2 = tmp6(1380);
   }
   obj7.layout = tmp58;
   obj7.keyboardShouldPersistTaps = str;
@@ -535,7 +535,7 @@ export function ContextMenuPopout(cleanUp) {
       accessibilityRole: "header",
       children: title,
     };
-    obj9.children = tmp57(tmp6(5866).Text, obj10);
+    obj9.children = tmp57(tmp6(5929).Text, obj10);
     const items18 = [tmp57(c5, obj9), tmp57(ContextMenuDivider, {})];
     obj8.children = items18;
     tmp55Result = tmp55(tmp56, obj8);
@@ -543,7 +543,7 @@ export function ContextMenuPopout(cleanUp) {
   const obj11 = { children: null };
   const items19 = [tmp55Result, memo1];
   obj7.children = items19;
-  obj6.children = closure_9(_modDef1652.ScrollView, obj7);
+  obj6.children = closure_9(_modDef1655.ScrollView, obj7);
   items16[1] = c7(require("LegacyBaseButton").GestureDetector, obj6);
   obj11.children = items16;
   return closure_9(c8, obj11);

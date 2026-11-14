@@ -1,13 +1,14 @@
 // discord_app/modules/user_profile/native/GuildProfileEditForm.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
+import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
@@ -18,6 +19,7 @@ import UserProfileUpsellCardDefault from "UserProfileUpsellCard.tsx";
 import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
+import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import UserProfileStore from "../UserProfileStore.tsx";
 
@@ -57,7 +59,7 @@ function EditGuildProfileBanner(user) {
         onGifBannerSelect: null,
       };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(16945, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(17068, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -66,16 +68,16 @@ function EditGuildProfileBanner(user) {
       const intl = util.intl;
       obj.removeText = intl.string(util.t.jHlJNS);
       obj.onBannerChange = function onBannerChange(banner) {
-        return user(dependencyMap[17]).setPendingChanges({ guildId, banner });
+        return user(dependencyMap[18]).setPendingChanges({ guildId, banner });
       };
       obj.onGifBannerSelect = function openGifPicker() {
         ActionSheetActionCreatorsDefault.hideActionSheet();
         const obj3 = { profileAssetType: null, selectionContext: null, guildId: null };
         const obj2 = ActionSheetActionCreatorsDefault;
-        obj3.profileAssetType = user(dependencyMap[19]).ProfileAssetType.BANNER;
-        obj3.selectionContext = user(dependencyMap[19]).GIFSelectionContext.PROFILE_EDIT;
+        obj3.profileAssetType = user(dependencyMap[20]).ProfileAssetType.BANNER;
+        obj3.selectionContext = user(dependencyMap[20]).GIFSelectionContext.PROFILE_EDIT;
         obj3.guildId = guildId;
-        obj2.openLazy(user(dependencyMap[14])(dependencyMap[18], dependencyMap.paths), "Select GIF Banner", obj3);
+        obj2.openLazy(user(dependencyMap[15])(dependencyMap[19], dependencyMap.paths), "Select GIF Banner", obj3);
       };
       tmpResult.openLazy(tmp13, "Change Banner", obj);
     } else {
@@ -100,8 +102,8 @@ function EditGuildProfileBanner(user) {
   let intl = tmp5(1113).intl;
   obj3.editButtonAccessibilityLabel = intl.string(user(1113).t["95hPAe"]);
   obj3.editDisabled = disabled;
-  obj2.children = closure_16(UserProfileEditBannerButtonDefault, obj3);
-  return closure_16(user(7852).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_17(UserProfileEditBannerButtonDefault, obj3);
+  return closure_17(user(7918).AnalyticsLocationProvider, obj2);
 }
 function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
   onButtonPress = onButtonPress.onButtonPress;
@@ -120,7 +122,7 @@ function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
     obj2.buttonText = intl4.string(util.t.pj0XBN);
     obj2.onButtonPress = onButtonPress;
     obj2.onLayout = onButtonPress.onLayout;
-    let tmp6Result = closure_1_16(UserProfileFloatingUpsellDefault, obj2);
+    let tmp6Result = closure_1_17(UserProfileFloatingUpsellDefault, obj2);
     const tmp3Result = UserProfileFloatingUpsellDefault;
   } else {
     const obj3 = { style: null, ctaText: null, onPress: null, children: null };
@@ -134,8 +136,8 @@ function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
     const obj5 = { variant: "body-sm/normal", children: null };
     const intl2 = util.intl;
     obj5.children = intl2.string(util.t.YIZS5B);
-    obj3.children = closure_1_16(Text_Text.Text, obj5);
-    tmp6Result = closure_1_16(UserProfileUpsellCardDefault, obj3);
+    obj3.children = closure_1_17(Text_Text.Text, obj5);
+    tmp6Result = closure_1_17(UserProfileUpsellCardDefault, obj3);
     const tmp3Result2 = UserProfileUpsellCardDefault;
   }
   return tmp6Result;
@@ -144,18 +146,18 @@ let closure_3 = ["nick", "bio", "guild_tag"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_6, View: metroImportDefault } = get_ActivityIndicator);
 const Constants = fn(1072);
-({ AnalyticsObjects: closure_10, AnalyticsSections } = Constants);
+({ AnalyticsObjects: closure_11, AnalyticsSections } = Constants);
 ({
-  DISPLAY_NAME_MAX_LENGTH: closure_12,
-  PRONOUNS_MAX_LENGTH: map1,
-  UpsellTypes: closure_14,
+  DISPLAY_NAME_MAX_LENGTH: map1,
+  PRONOUNS_MAX_LENGTH: closure_14,
+  UpsellTypes: closure_15,
   AnalyticsPages,
 } = Constants);
-const PremiumUpsellTypes = fn(1387).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1390).PremiumUpsellTypes;
 const jsxProd = fn(21);
-({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-let closure_18 = [1];
-let closure_19 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE };
+({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
+let closure_19 = [1];
+let closure_20 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/GuildProfileEditForm.tsx");
 
@@ -163,34 +165,37 @@ export default function GuildProfileEditForm(currentUser) {
   currentUser = currentUser.currentUser;
   const header = currentUser.header;
   guild = undefined;
+  let isBadgeManagementEnabled;
   let analyticsLocations;
-  const tmp3 = guild(analyticsLocations[28])();
-  const tmp4 = guild(analyticsLocations[22])();
-  const bioMaxLength = currentUser(analyticsLocations[29]).useBioMaxLength({ location: "guild_profile_edit_form" });
-  let obj = currentUser(analyticsLocations[29]);
+  const tmp3 = guild(isBadgeManagementEnabled[29])();
+  const tmp4 = guild(isBadgeManagementEnabled[23])();
+  const bioMaxLength = currentUser(isBadgeManagementEnabled[30]).useBioMaxLength({
+    location: "guild_profile_edit_form",
+  });
+  let obj = currentUser(isBadgeManagementEnabled[30]);
   const ref = noop.useRef(null);
   const ref1 = noop.useRef(null);
   const ref2 = noop.useRef(null);
   const ref3 = noop.useRef(null);
-  const insets = guild(analyticsLocations[23])({ includeKeyboardHeight: true }).insets;
-  const PX_16 = guild(analyticsLocations[26]).space.PX_16;
-  let obj2 = { insets, inputs: null, scrollViewRef: null };
+  const insets = guild(isBadgeManagementEnabled[24])({ includeKeyboardHeight: true }).insets;
+  const PX_16 = guild(isBadgeManagementEnabled[27]).space.PX_16;
+  const obj3 = { insets, inputs: null, scrollViewRef: null };
   items = [
     { ref: ref1, offset: { type: "toRef", ref: ref2, extraOffset: PX_16 } },
     { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } },
   ];
-  const obj5 = { ref: ref3, offset: null };
-  const obj6 = { type: "toValue", value: null };
-  const obj3 = { ref: ref1, offset: { type: "toRef", ref: ref2, extraOffset: PX_16 } };
-  const obj4 = { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } };
-  const tmp7 = guild(analyticsLocations[30])();
-  obj6.value = guild(analyticsLocations[26]).space.PX_64;
-  obj5.offset = obj6;
-  items[2] = obj5;
-  obj2.inputs = items;
-  obj2.scrollViewRef = ref;
-  const onFocus = guild(analyticsLocations[31])(obj2).onFocus;
-  const tmp13 = guild(analyticsLocations[32])();
+  const obj6 = { ref: ref3, offset: null };
+  const obj7 = { type: "toValue", value: null };
+  const obj4 = { ref: ref1, offset: { type: "toRef", ref: ref2, extraOffset: PX_16 } };
+  const obj5 = { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } };
+  const tmp7 = guild(isBadgeManagementEnabled[31])();
+  obj7.value = guild(isBadgeManagementEnabled[27]).space.PX_64;
+  obj6.offset = obj7;
+  items[2] = obj6;
+  obj3.inputs = items;
+  obj3.scrollViewRef = ref;
+  const onFocus = guild(isBadgeManagementEnabled[32])(obj3).onFocus;
+  const tmp13 = guild(isBadgeManagementEnabled[33])();
   guild = tmp13.guild;
   ({
     errors,
@@ -207,18 +212,18 @@ export default function GuildProfileEditForm(currentUser) {
     pendingNameplate,
     pendingDisplayNameStyles,
   } = tmp13);
-  const tmp12 = guild(analyticsLocations[31]);
+  const tmp12 = guild(isBadgeManagementEnabled[32]);
   const items1 = [GuildMemberStore];
-  const stateFromStores = currentUser(analyticsLocations[33]).useStateFromStores(items1, () => {
+  const stateFromStores = currentUser(isBadgeManagementEnabled[34]).useStateFromStores(items1, () => {
     let member = null;
     if (null != guild) {
       member = GuildMemberStore.getMember(tmp.id, currentUser.id);
     }
     return member;
   });
-  const obj7 = currentUser(analyticsLocations[33]);
+  const obj8 = currentUser(isBadgeManagementEnabled[34]);
   const items2 = [UserProfileStore];
-  const stateFromStores1 = currentUser(analyticsLocations[33]).useStateFromStores(items2, () => {
+  const stateFromStores1 = currentUser(isBadgeManagementEnabled[34]).useStateFromStores(items2, () => {
     let guildMemberProfile = null;
     if (null != guild) {
       let id;
@@ -230,39 +235,55 @@ export default function GuildProfileEditForm(currentUser) {
     return guildMemberProfile;
   });
   let id;
-  const obj8 = currentUser(analyticsLocations[33]);
+  const obj9 = currentUser(isBadgeManagementEnabled[34]);
   if (guild != null) {
     id = guild.id;
   }
-  const tmp16Result = guild(analyticsLocations[34])(currentUser.id, id);
-  const tmp16 = guild(analyticsLocations[34]);
-  const customStatusActivity = currentUser(analyticsLocations[35]).useCustomStatusActivity();
-  const tmp5Result = currentUser(analyticsLocations[35]);
-  const tmp20 = guild(analyticsLocations[36])(tmp16Result);
-  const pendingAvatarSrc = currentUser(analyticsLocations[37]).getPendingAvatarSrc({
+  const tmp16Result = guild(isBadgeManagementEnabled[35])(currentUser.id, id);
+  const tmp16 = guild(isBadgeManagementEnabled[35]);
+  const customStatusActivity = currentUser(isBadgeManagementEnabled[36]).useCustomStatusActivity();
+  const tmp5Result = currentUser(isBadgeManagementEnabled[36]);
+  const tmp20 = guild(isBadgeManagementEnabled[37])(tmp16Result);
+  isBadgeManagementEnabled = currentUser(isBadgeManagementEnabled[38]).useIsBadgeManagementEnabled({
+    location: "GuildProfileEditForm",
+  });
+  const items3 = [currentUser.id, isBadgeManagementEnabled];
+  const effect = noop.useEffect(() => {
+    if (isBadgeManagementEnabled) {
+      if (!tmp2) {
+        const badgeDirectory = BadgeDirectoryActionCreators.fetchBadgeDirectory(currentUser.id);
+      }
+      tmp2 =
+        BadgeDirectoryStore.hasCatalogFor(currentUser.id) && !BadgeDirectoryStore.isCatalogStaleFor(currentUser.id);
+    }
+  }, items3);
+  const tmp5Result7 = currentUser(isBadgeManagementEnabled[38]);
+  const pendingAvatarSrc = currentUser(isBadgeManagementEnabled[40]).getPendingAvatarSrc({
     userId: currentUser.id,
     image: pendingAvatar,
   });
-  const obj9 = { userId: currentUser.id, image: pendingAvatar };
-  const tmp5Result6 = currentUser(analyticsLocations[37]);
-  const canEditNickname = currentUser(analyticsLocations[38]).useGuildActionSheetPermissions(guild).canEditNickname;
-  const tmp5Result7 = currentUser(analyticsLocations[38]);
-  const result = guild(analyticsLocations[8]).canUsePremiumGuildMemberProfile(currentUser);
-  const tmpResult = guild(analyticsLocations[8]);
+  const obj10 = { userId: currentUser.id, image: pendingAvatar };
+  const tmp5Result8 = currentUser(isBadgeManagementEnabled[40]);
+  const canEditNickname = currentUser(isBadgeManagementEnabled[41]).useGuildActionSheetPermissions(
+    guild,
+  ).canEditNickname;
+  const tmp5Result9 = currentUser(isBadgeManagementEnabled[41]);
+  const result = guild(isBadgeManagementEnabled[9]).canUsePremiumGuildMemberProfile(currentUser);
+  const tmpResult = guild(isBadgeManagementEnabled[9]);
   let themeColors;
   if (stateFromStores1 != null) {
     themeColors = stateFromStores1.themeColors;
   }
-  let tmp61Result8 = !result;
-  const tmp5Result8 = currentUser(analyticsLocations[39]);
+  let tmp63Result8 = !result;
+  const tmp5Result10 = currentUser(isBadgeManagementEnabled[42]);
   if (!result) {
-    tmp61Result8 = !tmp7;
+    tmp63Result8 = !tmp7;
   }
-  const canResetThemeColorsResult = currentUser(analyticsLocations[39]).canResetThemeColors(
+  const canResetThemeColorsResult = currentUser(isBadgeManagementEnabled[42]).canResetThemeColors(
     pendingThemeColors,
     themeColors,
   );
-  const floatingUpsellHeight = currentUser(analyticsLocations[24]).useFloatingUpsellHeight();
+  const floatingUpsellHeight = currentUser(isBadgeManagementEnabled[25]).useFloatingUpsellHeight();
   let str;
   ({ height, onLayout } = floatingUpsellHeight);
   if (stateFromStores != null) {
@@ -302,17 +323,21 @@ export default function GuildProfileEditForm(currentUser) {
   if (str5 == null) {
     str5 = "";
   }
-  const tmp5Result9 = currentUser(analyticsLocations[24]);
-  const items3 = [guild(analyticsLocations[10]).USER_SETTINGS];
-  analyticsLocations = guild(analyticsLocations[9])(items3).analyticsLocations;
-  const tmpResult9 = guild(analyticsLocations[9]);
-  ({ theme, primaryColor, secondaryColor } = guild(analyticsLocations[40])({
+  const tmp5Result11 = currentUser(isBadgeManagementEnabled[25]);
+  const items4 = [guild(isBadgeManagementEnabled[11]).USER_SETTINGS];
+  analyticsLocations = guild(isBadgeManagementEnabled[10])(items4).analyticsLocations;
+  const tmpResult9 = guild(isBadgeManagementEnabled[10]);
+  ({ theme, primaryColor, secondaryColor } = guild(isBadgeManagementEnabled[43])({
     user: currentUser,
     displayProfile: tmp16Result,
     pendingThemeColors,
   }));
-  const tmp28 = guild(analyticsLocations[40])({ user: currentUser, displayProfile: tmp16Result, pendingThemeColors });
-  const userProfileColors = currentUser(analyticsLocations[41]).useUserProfileColors({
+  const tmp30 = guild(isBadgeManagementEnabled[43])({
+    user: currentUser,
+    displayProfile: tmp16Result,
+    pendingThemeColors,
+  });
+  const userProfileColors = currentUser(isBadgeManagementEnabled[44]).useUserProfileColors({
     theme,
     primaryColor,
     secondaryColor,
@@ -320,14 +345,14 @@ export default function GuildProfileEditForm(currentUser) {
   ({ gradientSecondaryBackground, containerBackground } = userProfileColors);
   let num = 0;
   ({ gradientFallbackBackground, avatarBackground } = userProfileColors);
-  if (tmp61Result8) {
+  if (tmp63Result8) {
     num = height;
   }
   const sum = insets.bottom + num;
-  const obj10 = { backgroundColor: avatarBackground };
+  const obj11 = { backgroundColor: avatarBackground };
   ({ nick, bio, guild_tag } = errors);
-  const sum1 = sum + tmp(tmp2[26]).space.PX_16;
-  const tmp5Result10 = currentUser(analyticsLocations[41]);
+  const sum1 = sum + tmp(tmp2[27]).space.PX_16;
+  const tmp5Result12 = currentUser(isBadgeManagementEnabled[44]);
   if (nick != null) {
     const first = nick[0];
   }
@@ -344,36 +369,36 @@ export default function GuildProfileEditForm(currentUser) {
   if (null == guild) {
     return null;
   } else {
-    const obj11 = { theme, primaryColor, secondaryColor, children: null };
-    const obj12 = { style: null, children: null };
-    const items4 = [tmp4.container];
-    const obj13 = { backgroundColor: gradientSecondaryBackground };
-    items4[1] = obj13;
-    obj12.style = items4;
-    const obj14 = {
+    const obj12 = { theme, primaryColor, secondaryColor, children: null };
+    const obj13 = { style: null, children: null };
+    const items5 = [tmp4.container];
+    const obj14 = { backgroundColor: gradientSecondaryBackground };
+    items5[1] = obj14;
+    obj13.style = items5;
+    const obj15 = {
       ref,
       stickyHeaderIndices: null,
       stickyHeaderHiddenOnScroll: null,
       keyboardShouldPersistTaps: null,
       children: null,
     };
-    let tmp37;
+    let tmp39;
     if (null != header) {
-      tmp37 = closure_18;
+      tmp39 = closure_19;
     }
-    obj14.stickyHeaderIndices = tmp37;
-    obj14.stickyHeaderHiddenOnScroll = null != header;
+    obj15.stickyHeaderIndices = tmp39;
+    obj15.stickyHeaderHiddenOnScroll = null != header;
     let str6;
     if (null != header) {
       str6 = "handled";
     }
-    obj14.keyboardShouldPersistTaps = str6;
-    const obj15 = { style: tmp4.bounceOffset };
-    const items5 = [closure_16(closure_7, obj15), header];
-    const obj16 = { style: null, children: null };
-    const obj17 = { backgroundColor: gradientSecondaryBackground };
-    obj16.style = obj17;
-    const obj18 = {
+    obj15.keyboardShouldPersistTaps = str6;
+    const obj16 = { style: tmp4.bounceOffset };
+    const items6 = [closure_17(closure_7, obj16), header];
+    const obj17 = { style: null, children: null };
+    const obj18 = { backgroundColor: gradientSecondaryBackground };
+    obj17.style = obj18;
+    const obj19 = {
       user: currentUser,
       displayProfile: tmp16Result,
       guildId: guild.id,
@@ -384,114 +409,115 @@ export default function GuildProfileEditForm(currentUser) {
       pendingThemeColors,
       disabled: isDisabled,
     };
-    const items6 = [closure_16(EditGuildProfileBanner, obj18)];
-    let tmp61Result = null;
+    const items7 = [closure_17(EditGuildProfileBanner, obj19)];
+    let tmp63Result = null;
     if (null != guild) {
-      const obj19 = { style: null, children: null };
-      const items7 = [, , ,];
-      ({ avatarBackground: arr7[0], avatarPosition: arr7[1] } = tmp3);
-      items7[2] = tmp4.avatarContainer;
-      items7[3] = obj10;
-      obj19.style = items7;
-      const obj20 = { userId: currentUser.id, disabled: null, disableStatus: false, guildId: null, statusStyle: null };
-      let tmp41 = isDisabled;
+      const obj20 = { style: null, children: null };
+      const items8 = [, , ,];
+      ({ avatarBackground: arr8[0], avatarPosition: arr8[1] } = tmp3);
+      items8[2] = tmp4.avatarContainer;
+      items8[3] = obj11;
+      obj20.style = items8;
+      const obj21 = { userId: currentUser.id, disabled: null, disableStatus: false, guildId: null, statusStyle: null };
+      let tmp43 = isDisabled;
       if (!isDisabled) {
-        tmp41 = !result;
+        tmp43 = !result;
       }
-      obj20.disabled = tmp41;
+      obj21.disabled = tmp43;
       let id1;
       if (guild != null) {
         id1 = guild.id;
       }
-      obj20.guildId = id1;
-      obj20.statusStyle = obj10;
-      obj19.children = closure_16(tmp(tmp2[43]), obj20);
-      tmp61Result = closure_16(closure_7, obj19);
-      const tmpResult10 = tmp(tmp2[43]);
+      obj21.guildId = id1;
+      obj21.statusStyle = obj11;
+      obj20.children = closure_17(tmp(tmp2[46]), obj21);
+      tmp63Result = closure_17(closure_7, obj20);
+      const tmpResult10 = tmp(tmp2[46]);
     }
-    const items8 = [tmp61Result];
-    const obj21 = {
+    const items9 = [tmp63Result];
+    const obj22 = {
       fallbackBackground: gradientFallbackBackground,
       primaryColor,
       secondaryColor,
       containerStyle: null,
       children: null,
     };
-    const items9 = [, ,];
-    ({ profileContentWrapper: arr9[0], profileContent: arr9[1] } = tmp3);
-    const obj22 = { paddingTop: 0, paddingBottom: sum1 };
-    items9[2] = obj22;
-    obj21.containerStyle = items9;
-    const obj23 = {
+    const items10 = [, ,];
+    ({ profileContentWrapper: arr10[0], profileContent: arr10[1] } = tmp3);
+    const obj23 = { paddingTop: 0, paddingBottom: sum1 };
+    items10[2] = obj23;
+    obj22.containerStyle = items10;
+    const obj24 = {
       customStatusActivity,
       hasCustomProfileTheme: null != primaryColor,
       style: null,
       emojiOnlyStyle: null,
       editEnabled: true,
     };
-    ({ customStatusBubble: obj26.style, emojiOnlyCustomStatusBubble: obj26.emojiOnlyStyle } = tmp3);
-    const items10 = [closure_16(tmp(tmp2[45]), obj23), ,];
-    const obj24 = {
+    ({ customStatusBubble: obj28.style, emojiOnlyCustomStatusBubble: obj28.emojiOnlyStyle } = tmp3);
+    const items11 = [closure_17(tmp(tmp2[48]), obj24), ,];
+    const obj25 = {
       user: currentUser,
       displayName: null,
       pronouns: null,
       badges: null,
       badgeContainerBackground: null,
       displayNameAccessibilityRole: "header",
+      showsBadgeUnreadDot: true,
       guildId: null,
       pendingDisplayNameStyles: null,
     };
-    let tmp45 = pendingNickname;
-    const tmpResult11 = tmp(tmp2[44]);
+    let tmp47 = pendingNickname;
+    const tmpResult11 = tmp(tmp2[47]);
     if (pendingNickname == null) {
-      tmp45 = str;
+      tmp47 = str;
     }
-    obj24.displayName = tmp45;
-    let tmp46 = str3;
+    obj25.displayName = tmp47;
+    let tmp48 = str3;
     if ("" !== pendingPronouns) {
-      tmp46 = pendingPronouns;
+      tmp48 = pendingPronouns;
     }
-    obj24.pronouns = tmp46;
-    obj24.badges = tmp20;
-    obj24.badgeContainerBackground = containerBackground;
-    obj24.guildId = guild.id;
-    obj24.pendingDisplayNameStyles = pendingDisplayNameStyles;
-    items10[1] = closure_16(tmp(tmp2[46]), obj24);
-    let tmp62Result = null;
+    obj25.pronouns = tmp48;
+    obj25.badges = tmp20;
+    obj25.badgeContainerBackground = containerBackground;
+    obj25.guildId = guild.id;
+    obj25.pendingDisplayNameStyles = pendingDisplayNameStyles;
+    items11[1] = closure_17(tmp(tmp2[49]), obj25);
+    let tmp64Result = null;
     if (null != guild) {
-      const obj25 = { style: null, children: null };
-      const items11 = [tmp4.formContainer];
+      const obj26 = { style: null, children: null };
+      const items12 = [tmp4.formContainer];
       const obj27 = { backgroundColor: containerBackground, paddingBottom: 20 };
-      items11[1] = obj27;
-      obj25.style = items11;
-      let tmp48 = null;
+      items12[1] = obj27;
+      obj26.style = items12;
+      let tmp50 = null;
       if (null == first2) {
-        tmp48 = null;
+        tmp50 = null;
         if (null == first) {
           if (null == first3) {
             const _Object = Object;
             let stringResult = null;
-            if (Object.keys(tmp32).length > 0) {
-              const intl = tmp5(tmp2[16]).intl;
-              stringResult = intl.string(tmp5(tmp2[16]).t.s35OuK);
+            if (Object.keys(tmp34).length > 0) {
+              const intl = tmp5(tmp2[17]).intl;
+              stringResult = intl.string(tmp5(tmp2[17]).t.s35OuK);
             }
             first3 = stringResult;
           }
-          let tmp61Result5 = null;
+          let tmp63Result5 = null;
           if (null != first3) {
-            tmp61Result5 = null;
+            tmp63Result5 = null;
             if ("" !== first3) {
-              const obj28 = { style: tmp4.errorContainer, children: null };
-              const obj29 = { variant: "body-sm/semibold", color: "text-feedback-critical", children: first3 };
-              obj28.children = closure_16(tmp5(tmp2[27]).Text, obj29);
-              tmp61Result5 = closure_16(closure_7, obj28);
+              const obj29 = { style: tmp4.errorContainer, children: null };
+              const obj30 = { variant: "body-sm/semibold", color: "text-feedback-critical", children: first3 };
+              obj29.children = closure_17(tmp5(tmp2[28]).Text, obj30);
+              tmp63Result5 = closure_17(closure_7, obj29);
             }
           }
-          tmp48 = tmp61Result5;
+          tmp50 = tmp63Result5;
         }
       }
-      const items12 = [tmp48, , , , , , , , ,];
-      const obj30 = {
+      const items13 = [tmp50, , , , , , , , ,];
+      const obj31 = {
         inputRef: ref1,
         label: null,
         errorMessage: null,
@@ -502,33 +528,33 @@ export default function GuildProfileEditForm(currentUser) {
         maxLength: null,
         disabled: null,
       };
-      const intl2 = tmp5(tmp2[16]).intl;
-      obj30.label = intl2.string(tmp5(tmp2[16]).t.me1lRk);
-      obj30.errorMessage = first;
+      const intl2 = tmp5(tmp2[17]).intl;
+      obj31.label = intl2.string(tmp5(tmp2[17]).t.me1lRk);
+      obj31.errorMessage = first;
       if (pendingNickname == null) {
         pendingNickname = str;
       }
-      obj30.value = pendingNickname;
-      obj30.onFocus = onFocus;
-      obj30.onChange = function onChange(nickname) {
+      obj31.value = pendingNickname;
+      obj31.onFocus = onFocus;
+      obj31.onChange = function onChange(nickname) {
         return UserProfileSettingsActionCreators.setPendingChanges({ guildId: guild.id, nickname });
       };
-      const tmpResult13 = tmp(tmp2[47]);
-      obj30.placeholder = tmp(tmp2[48]).getName(currentUser);
-      obj30.maxLength = maxLength;
-      let tmp54 = !canEditNickname;
+      const tmpResult13 = tmp(tmp2[50]);
+      obj31.placeholder = tmp(tmp2[51]).getName(currentUser);
+      obj31.maxLength = maxLength;
+      let tmp56 = !canEditNickname;
       if (canEditNickname) {
-        tmp54 = isDisabled;
+        tmp56 = isDisabled;
       }
-      obj30.disabled = tmp54;
-      items12[1] = closure_16(tmpResult13, obj30);
-      let tmp61Result6 = result;
+      obj31.disabled = tmp56;
+      items13[1] = closure_17(tmpResult13, obj31);
+      let tmp63Result6 = result;
       if (result) {
-        const obj31 = { user: currentUser, guildId: guild.id };
-        tmp61Result6 = closure_16(tmp(tmp2[49]), obj31);
+        const obj32 = { user: currentUser, guildId: guild.id };
+        tmp63Result6 = closure_17(tmp(tmp2[52]), obj32);
       }
-      items12[2] = tmp61Result6;
-      const obj32 = {
+      items13[2] = tmp63Result6;
+      const obj33 = {
         inputRef: ref2,
         label: null,
         errorMessage: null,
@@ -542,24 +568,24 @@ export default function GuildProfileEditForm(currentUser) {
         autoCorrect: false,
         disabled: null,
       };
-      const tmpResult14 = tmp(tmp2[48]);
-      const intl3 = tmp5(tmp2[16]).intl;
-      obj32.label = intl3.string(tmp5(tmp2[16]).t["+T3RI/"]);
-      obj32.errorMessage = first1;
-      const intl4 = tmp5(tmp2[16]).intl;
-      obj32.description = intl4.string(tmp5(tmp2[16]).t.NZqtIp);
-      obj32.value = pendingPronouns;
-      obj32.onFocus = onFocus;
-      obj32.onChange = function onChange(pronouns) {
+      const tmpResult14 = tmp(tmp2[51]);
+      const intl3 = tmp5(tmp2[17]).intl;
+      obj33.label = intl3.string(tmp5(tmp2[17]).t["+T3RI/"]);
+      obj33.errorMessage = first1;
+      const intl4 = tmp5(tmp2[17]).intl;
+      obj33.description = intl4.string(tmp5(tmp2[17]).t.NZqtIp);
+      obj33.value = pendingPronouns;
+      obj33.onFocus = onFocus;
+      obj33.onChange = function onChange(pronouns) {
         return UserProfileSettingsActionCreators.setPendingChanges({ guildId: guild.id, pronouns });
       };
-      obj32.placeholder = str3;
-      obj32.maxLength = maxLength2;
-      obj32.disabled = isDisabled;
-      items12[3] = closure_16(tmp(tmp2[47]), obj32);
-      let tmp61Result7 = null;
+      obj33.placeholder = str3;
+      obj33.maxLength = maxLength2;
+      obj33.disabled = isDisabled;
+      items13[3] = closure_17(tmp(tmp2[50]), obj33);
+      let tmp63Result7 = null;
       if (result) {
-        const obj33 = {
+        const obj34 = {
           inputRef: ref3,
           label: null,
           errorMessage: null,
@@ -572,27 +598,27 @@ export default function GuildProfileEditForm(currentUser) {
           numberOfLines: 5,
           disabled: null,
         };
-        const intl5 = tmp5(tmp2[16]).intl;
-        obj33.label = intl5.string(tmp5(tmp2[16]).t.ZzAR2Y);
-        obj33.errorMessage = first2;
-        const intl6 = tmp5(tmp2[16]).intl;
-        obj33.description = intl6.string(tmp5(tmp2[16]).t.S5O8U2);
+        const intl5 = tmp5(tmp2[17]).intl;
+        obj34.label = intl5.string(tmp5(tmp2[17]).t.ZzAR2Y);
+        obj34.errorMessage = first2;
+        const intl6 = tmp5(tmp2[17]).intl;
+        obj34.description = intl6.string(tmp5(tmp2[17]).t.S5O8U2);
         if (pendingBio == null) {
           pendingBio = str4;
         }
-        obj33.value = pendingBio;
-        obj33.onFocus = onFocus;
-        obj33.onChange = function onChange(bio) {
+        obj34.value = pendingBio;
+        obj34.onFocus = onFocus;
+        obj34.onChange = function onChange(bio) {
           return UserProfileSettingsActionCreators.setPendingChanges({ guildId: guild.id, bio });
         };
-        obj33.placeholder = str5;
-        obj33.maxLength = bioMaxLength;
-        obj33.disabled = isDisabled;
-        tmp61Result7 = closure_16(tmp(tmp2[47]), obj33);
-        const tmpResult16 = tmp(tmp2[47]);
+        obj34.placeholder = str5;
+        obj34.maxLength = bioMaxLength;
+        obj34.disabled = isDisabled;
+        tmp63Result7 = closure_17(tmp(tmp2[50]), obj34);
+        const tmpResult16 = tmp(tmp2[50]);
       }
-      items12[4] = tmp61Result7;
-      const obj34 = {
+      items13[4] = tmp63Result7;
+      const obj35 = {
         pendingAvatarSrc,
         pendingThemeColors,
         user: currentUser,
@@ -602,35 +628,35 @@ export default function GuildProfileEditForm(currentUser) {
         },
         showResetMenu: canResetThemeColorsResult,
       };
-      items12[5] = closure_16(tmp(tmp2[50]), obj34);
-      const obj35 = { user: currentUser, guildId: guild.id, pendingAvatarDecoration };
-      items12[6] = closure_16(tmp(tmp2[51]), obj35);
-      const obj36 = { user: currentUser, guildId: guild.id, pendingProfileEffect, displayProfile: tmp16Result };
-      items12[7] = closure_16(tmp(tmp2[52]), obj36);
-      const obj37 = { user: currentUser, guildId: guild.id, pendingProfileFrame, displayProfile: tmp16Result };
-      items12[8] = closure_16(tmp(tmp2[53]), obj37);
-      const obj38 = { user: currentUser, pendingNameplate, guildId: guild.id };
-      items12[9] = closure_16(tmp(tmp2[54]), obj38);
-      obj25.children = items12;
-      tmp62Result = closure_17(closure_7, obj25);
-      const tmpResult15 = tmp(tmp2[47]);
+      items13[5] = closure_17(tmp(tmp2[53]), obj35);
+      const obj36 = { user: currentUser, guildId: guild.id, pendingAvatarDecoration };
+      items13[6] = closure_17(tmp(tmp2[54]), obj36);
+      const obj37 = { user: currentUser, guildId: guild.id, pendingProfileEffect, displayProfile: tmp16Result };
+      items13[7] = closure_17(tmp(tmp2[55]), obj37);
+      const obj38 = { user: currentUser, guildId: guild.id, pendingProfileFrame, displayProfile: tmp16Result };
+      items13[8] = closure_17(tmp(tmp2[56]), obj38);
+      const obj39 = { user: currentUser, pendingNameplate, guildId: guild.id };
+      items13[9] = closure_17(tmp(tmp2[57]), obj39);
+      obj26.children = items13;
+      tmp64Result = closure_18(closure_7, obj26);
+      const tmpResult15 = tmp(tmp2[50]);
     }
-    const obj39 = { children: null };
-    items10[2] = tmp62Result;
-    obj21.children = items10;
-    items8[1] = closure_17(tmpResult11, obj21);
-    obj39.children = items8;
-    items6[1] = closure_17(closure_7, obj39);
-    obj16.children = items6;
-    items5[2] = closure_17(closure_7, obj16);
-    obj14.children = items5;
-    const items13 = [closure_17(closure_6, obj14)];
-    if (tmp61Result8) {
-      const obj40 = {
+    const obj40 = { children: null };
+    items11[2] = tmp64Result;
+    obj22.children = items11;
+    items9[1] = closure_18(tmpResult11, obj22);
+    obj40.children = items9;
+    items7[1] = closure_18(closure_7, obj40);
+    obj17.children = items7;
+    items6[2] = closure_18(closure_7, obj17);
+    obj15.children = items6;
+    const items14 = [closure_18(closure_6, obj15)];
+    if (tmp63Result8) {
+      const obj41 = {
         onButtonPress: function handleUpsellPress() {
           const obj = { analyticsLocation: null, analyticsLocations: null, premiumFeatureCardOrder: null };
           const obj2 = {};
-          const merged = Object.assign(closure_19);
+          const merged = Object.assign(closure_20);
           obj2.object = constants.BUTTON_CTA;
           obj.analyticsLocation = obj2;
           obj.analyticsLocations = analyticsLocations;
@@ -639,12 +665,12 @@ export default function GuildProfileEditForm(currentUser) {
         },
         onLayout,
       };
-      tmp61Result8 = closure_16(GuildProfileTryItOutUpsellExperimentWrapper, obj40);
+      tmp63Result8 = closure_17(GuildProfileTryItOutUpsellExperimentWrapper, obj41);
     }
-    items13[1] = tmp61Result8;
-    obj12.children = items13;
-    obj11.children = closure_17(closure_7, obj12);
-    return closure_16(tmp5(tmp2[42]).ThemeContextProvider, obj11);
+    items14[1] = tmp63Result8;
+    obj13.children = items14;
+    obj12.children = closure_18(closure_7, obj13);
+    return closure_17(tmp5(tmp2[45]).ThemeContextProvider, obj12);
   }
-  tmp32 = _objectWithoutProperties(errors, closure_3);
+  tmp34 = _objectWithoutProperties(errors, analyticsLocations);
 }

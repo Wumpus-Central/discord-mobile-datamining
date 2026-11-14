@@ -58,6 +58,14 @@ export function getDeliveredPlayable(creative) {
   }
   return playable;
 }
+export function isAdDecisionValid(stateFromStores) {
+  let timestamp = arg1;
+  if (arg1 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  return null != stateFromStores && stateFromStores.fetchedAt + stateFromStores.ttlMillis >= timestamp;
+}
 export function resolveResponseTtl(responseTtlSeconds) {
   if (null == responseTtlSeconds) {
     return result;

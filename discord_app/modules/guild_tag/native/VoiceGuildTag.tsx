@@ -5,15 +5,15 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8344).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8410).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-let PlatformUtils = fn(1377);
+let PlatformUtils = fn(1380);
 let num = 10;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj3 = {
   gapContainer: { height: num },
   tagContainer: {
@@ -30,7 +30,7 @@ let obj3 = {
   tag: null,
 };
 let num2 = 16;
-PlatformUtils = fn(1377);
+PlatformUtils = fn(1380);
 if (PlatformUtils.isAndroid()) {
   num2 = 13;
 }
@@ -50,20 +50,20 @@ export default function VoiceGuildTagChiplet(userId) {
   if (stateFromStores != null) {
     primaryGuild = stateFromStores.primaryGuild;
   }
-  const userPrimaryGuild = userId(8343).getUserPrimaryGuild(primaryGuild);
+  const userPrimaryGuild = userId(8409).getUserPrimaryGuild(primaryGuild);
   ({ tag, guildId } = userPrimaryGuild);
   if (null != guildId) {
     if (null != tag) {
       const obj3 = { style: tmp.gapContainer, children: null };
       const obj4 = { style: tmp.tagContainer, children: null };
-      const guildTagBadgeUrl = tmp2(8343).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
+      const guildTagBadgeUrl = tmp2(8409).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
       const obj5 = { source: null, size: null };
       const obj6 = { uri: guildTagBadgeUrl };
       obj5.source = obj6;
       obj5.size = GuildTagBadgeSize.SIZE_12;
-      const items2 = [closure_5(tmp2(10585).GuildTagBadge, obj5)];
+      const items2 = [closure_5(tmp2(10654).GuildTagBadge, obj5)];
       const obj7 = { variant: "body-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
-      items2[1] = closure_5(tmp2(5866).Text, obj7);
+      items2[1] = closure_5(tmp2(5929).Text, obj7);
       obj4.children = items2;
       obj3.children = closure_6(View, obj4);
       return closure_5(View, obj3);

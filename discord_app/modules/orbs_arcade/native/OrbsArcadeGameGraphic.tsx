@@ -9,7 +9,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   graphic: {
     width: nativeDefault.modules.mobile.PROMO_SHEET_GRAPHIC_MAX_WIDTH,
@@ -69,7 +69,7 @@ export default function OrbsArcadeGameGraphic(game) {
         obj3.onError = function onError() {
           return closure_1(sheetVideoAsset.url);
         };
-        let tmp7Result = jsx(tmp2(9663).VideoComponent, {
+        let tmp7Result = jsx(tmp2(9730).VideoComponent, {
           style: tmp.graphicMedia,
           source: null,
           poster: null,

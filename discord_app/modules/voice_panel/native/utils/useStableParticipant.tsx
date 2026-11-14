@@ -22,7 +22,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(5920).ParticipantTypes;
+const ParticipantTypes = fn(5983).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 
@@ -48,10 +48,10 @@ export default function useStableParticipant(id, channelId, guildId) {
               canRenderVideo: false,
               userNick: null,
               userAvatarDecoration: null,
-              streamId: "PX_8",
+              streamId: "Promise",
               ringing: null,
-              hasVideo: 0.016,
-              isSelf: 1,
+              hasVideo: 44,
+              isSelf: "center",
             };
             id = AuthenticationStore.getId();
             obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);

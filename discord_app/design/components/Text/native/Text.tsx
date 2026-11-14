@@ -6,10 +6,10 @@ import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/P
 import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight.tsx";
 import PlainTextExperimentContext from "PlainTextExperimentContext.tsx";
 import PlainTextEligibility from "PlainTextEligibility.tsx";
-import _modDef5872 from "../../../../../_runtime/metro/05872__.js";
+import _modDef5935 from "../../../../../_runtime/metro/05935__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import 01652__ from "../../../../../_runtime/metro/01652__.js";
+import 01655__ from "../../../../../_runtime/metro/01655__.js";
 
 require = fn;
 class Text {
@@ -135,7 +135,7 @@ const Text2 = get_ActivityIndicator.Text;
 let closure_7 = get_ActivityIndicator.unstable_TextAncestorContext;
 const Fonts = fn(1083).Fonts;
 const jsx = fn(21).jsx;
-let closure_9 = module_1652.createAnimatedComponent(Text2);
+let closure_9 = module_1655.createAnimatedComponent(Text2);
 let items = [{ includeFontPadding: true }];
 let closure_11 = [];
 const keys = Object.keys(nativeDefault.colors);
@@ -150,7 +150,7 @@ obj3[700] = Fonts.GINTO_DISCORD_NORD_BOLD;
 ({ GINTO_DISCORD_NORD_BOLD_ITALIC: obj5[700], GINTO_DISCORD_NORD_BLACK_ITALIC: obj5[900] } = Fonts);
 const dependencyMap = { nitro: obj3, primary: { 400: null, 500: null, 600: null, 700: null, 800: null }, code: { 400: null, 700: null } };
 let closure_14 = { nitro: { 700: null, 900: null } };
-const TextVariantsFlat = fn(5867).TextVariantsFlat;
+const TextVariantsFlat = fn(5930).TextVariantsFlat;
 const mapped = TextVariantsFlat.map((fontSize) => {
   const letterSpacing = fontSize.letterSpacing;
   items = [fontSize.name, ];
@@ -186,9 +186,9 @@ const mapped = TextVariantsFlat.map((fontSize) => {
   }
 });
 const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
-const useManaTextMigrationHighlight = fn(5868);
+const useManaTextMigrationHighlight = fn(5931);
 let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEntriesResult);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_16 = createStyles.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {

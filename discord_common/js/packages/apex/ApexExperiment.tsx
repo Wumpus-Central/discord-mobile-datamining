@@ -7,27 +7,26 @@ const logger = new fn(4).Logger("ApexExperiment");
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/apex/ApexExperiment.tsx");
 
-export default function createApexExperimentCommon(definition, registerExperiment, arg2, arg3) {
-  let evaluationAndAssignment = registerExperiment;
-  dependencyMap = arg2;
-  closure_2 = arg3;
+export default function createApexExperimentCommon(definition, registerExperiment, getUnitId, useUnitId) {
+  let configEvaluationAndAssignment = registerExperiment;
+  dependencyMap = getUnitId;
   ({ name: logger, kind: closure_5, variations: closure_6, defaultConfig: closure_7 } = definition);
   registerExperiment.registerExperiment(definition);
   closure_8 = null;
   return {
     definition,
-    useConfig(location, arg1) {
-      evaluationAndAssignment = location;
-      let tmp = closure_2(revision, location);
+    useConfig(location, autoTrackExposure) {
+      configEvaluationAndAssignment = location;
+      const tmp = useUnitId(revision, location);
       dependencyMap = tmp;
-      const tmp2 = closure_2("user", location);
-      closure_2 = tmp2;
-      items = [evaluationAndAssignment];
+      let tmp2 = useUnitId("user", location);
+      useUnitId = tmp2;
+      items = [configEvaluationAndAssignment];
       const items1 = [tmp, tmp2];
-      const tmp3 = closure_2(
-        evaluationAndAssignment(504).useStateFromStoresArray(
+      const tmp3 = useUnitId(
+        configEvaluationAndAssignment(504).useStateFromStoresArray(
           items,
-          () => _location.getEvaluationAndAssignment(closure_2_5, closure_1, logger, closure_2),
+          () => _location.getConfigEvaluationAndAssignment(closure_2_5, closure_1, logger, closure_2),
           items1,
         ),
         2,
@@ -89,9 +88,9 @@ export default function createApexExperimentCommon(definition, registerExperimen
         tmp12 = closure_8;
       }
       closure_9 = tmp14;
-      let autoTrackExposure;
-      if (arg1 != null) {
-        autoTrackExposure = arg1.autoTrackExposure;
+      autoTrackExposure = undefined;
+      if (autoTrackExposure != null) {
+        autoTrackExposure = autoTrackExposure.autoTrackExposure;
       }
       closure_10 = tmp16;
       const items2 = [
@@ -107,29 +106,36 @@ export default function createApexExperimentCommon(definition, registerExperimen
         null == tmp12,
       ];
       tmp8(() => {
-        let tmp = closure_10;
+        let tmp2 = closure_9;
+        if (!closure_9) {
+          tmp2 = true === closure_8;
+        }
+        if (!tmp2) {
+          _location.onConfigApplied(closure_2_5, closure_1, logger);
+        }
+        let tmp9 = closure_10;
         if (closure_10) {
-          tmp = null != closure_3;
+          tmp9 = null != closure_3;
         }
-        if (tmp) {
-          tmp = null != trackedVariantId;
+        if (tmp9) {
+          tmp9 = null != trackedVariantId;
         }
-        if (tmp) {
-          tmp = null != revision;
+        if (tmp9) {
+          tmp9 = null != revision;
         }
-        if (tmp) {
-          tmp = false === isOverride;
+        if (tmp9) {
+          tmp9 = false === isOverride;
         }
-        if (tmp) {
-          tmp = true === prop;
+        if (tmp9) {
+          tmp9 = true === prop;
         }
-        if (tmp) {
-          tmp = true !== closure_8;
+        if (tmp9) {
+          tmp9 = true !== closure_8;
         }
-        if (tmp) {
-          tmp = !closure_9;
+        if (tmp9) {
+          tmp9 = !closure_9;
         }
-        if (tmp) {
+        if (tmp9) {
           const result = _location.trackExperimentExposure(
             closure_3,
             logger,
@@ -153,7 +159,12 @@ export default function createApexExperimentCommon(definition, registerExperimen
         const obj = { location: location.location };
         tmpResult = dependencyMap("user", obj);
       }
-      [tmp7, tmp8] = evaluationAndAssignment.getEvaluationAndAssignment(closure_1_5, tmp3, logger, tmpResult);
+      [tmp7, tmp8] = configEvaluationAndAssignment.getConfigEvaluationAndAssignment(
+        closure_1_5,
+        tmp3,
+        logger,
+        tmpResult,
+      );
       let variantId;
       if (tmp8 != null) {
         variantId = tmp8.variantId;
@@ -205,27 +216,34 @@ export default function createApexExperimentCommon(definition, registerExperimen
         }
         tmp13 = closure_8;
       }
+      let tmp15 = null != tmp13;
+      if (tmp15) {
+        tmp15 = true !== useAsEligibility;
+      }
+      if (tmp15) {
+        configEvaluationAndAssignment.onConfigApplied(closure_1_5, tmp3, logger);
+      }
       autoTrackExposure = undefined;
       if (autoTrackExposure != null) {
         autoTrackExposure = autoTrackExposure.autoTrackExposure;
       }
-      let tmp16 =
+      let tmp18 =
         false !== autoTrackExposure &&
         null != tmp7 &&
         null != trackedVariantId &&
         null != revision &&
         false === isOverride;
-      if (tmp16) {
-        tmp16 = true === exposureTrackingEnabled;
+      if (tmp18) {
+        tmp18 = true === exposureTrackingEnabled;
       }
-      if (tmp16) {
-        tmp16 = true !== useAsEligibility;
+      if (tmp18) {
+        tmp18 = true !== useAsEligibility;
       }
-      if (tmp16) {
-        tmp16 = null != tmp13;
+      if (tmp18) {
+        tmp18 = null != tmp13;
       }
-      if (tmp16) {
-        const result = evaluationAndAssignment.trackExperimentExposure(
+      if (tmp18) {
+        const result = configEvaluationAndAssignment.trackExperimentExposure(
           tmp7,
           logger,
           location.location,
@@ -240,7 +258,7 @@ export default function createApexExperimentCommon(definition, registerExperimen
       }
       tmp13 = closure_1_7;
       const tmp6 = _slicedToArray(
-        evaluationAndAssignment.getEvaluationAndAssignment(closure_1_5, tmp3, logger, tmpResult),
+        configEvaluationAndAssignment.getConfigEvaluationAndAssignment(closure_1_5, tmp3, logger, tmpResult),
         2,
       );
     },

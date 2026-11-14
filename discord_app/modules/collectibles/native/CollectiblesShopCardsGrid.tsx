@@ -12,9 +12,9 @@ function ShopCardGridItem(index) {
   ({ product, cardWidth, preferVCPrice, unpublishedAt, disableBundleStaticBackground, muteBundleStaticBackground } =
     index);
   const memo = noop.useMemo(() => ({ tilePosition: index }), items);
-  return jsx(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, {
+  return metroImportDefault(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, {
     newValue: memo,
-    children: jsx(CollectiblesShopCardV2Default, {
+    children: metroImportDefault(CollectiblesShopCardV2Default, {
       unpublishedAt,
       product,
       cardWidth,
@@ -26,10 +26,11 @@ function ShopCardGridItem(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const createStyles = fn(5243);
-let obj2 = { rowContainer: { flexDirection: "row", gap: fn(10347).COLLECTIBLES_SHOP_CARD_GAP } };
-let closure_8 = createStyles.createStyles(obj2);
+const jsxProd = fn(21);
+({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(5306);
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(10416).COLLECTIBLES_SHOP_CARD_GAP } };
+let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
 
@@ -40,9 +41,9 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
     scrollEnabled = false;
   }
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
-  ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
-  const rowContainer = closure_8();
-  const cardLayout = products(18391).useCardLayout();
+  ({ onScroll, paddingTop, paddingBottom, header } = accessibilityLabel);
+  const rowContainer = closure_9();
+  const cardLayout = products(18514).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
   items = [products, columns];
@@ -59,58 +60,51 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
     contentContainerStyle: null,
     children: null,
   };
-  let obj = products(18391);
+  let obj = products(18514);
   obj2.contentContainerStyle = {
-    gap: products(10347).COLLECTIBLES_SHOP_CARD_GAP,
+    gap: products(10416).COLLECTIBLES_SHOP_CARD_GAP,
     paddingTop,
     paddingBottom,
     width: rowWidth,
     alignSelf: "center",
   };
-  obj2.children = memo.map((arr, index) => {
-    closure_0 = index;
-    return cardWidth(
-      muteBundleStaticBackground,
-      {
-        style: rowContainer.rowContainer,
-        children: arr.map((product, index) => {
-          let categoryForProduct = importDefault;
-          if (importDefault == null) {
-            categoryForProduct = CollectiblesCategoryStore.getCategoryForProduct(product.skuId);
-          }
-          const obj = {
-            product,
-            index: closure_0 * columns + index,
-            cardWidth,
-            unpublishedAt: null,
-            preferVCPrice: null,
-            disableBundleStaticBackground: null,
-            muteBundleStaticBackground: null,
-          };
-          let unpublishedAt;
-          if (categoryForProduct != null) {
-            unpublishedAt = categoryForProduct.unpublishedAt;
-          }
-          obj.unpublishedAt = unpublishedAt;
-          obj.preferVCPrice = preferVCPrice;
-          obj.disableBundleStaticBackground = disableBundleStaticBackground;
-          obj.muteBundleStaticBackground = muteBundleStaticBackground;
-          return (
-            <ShopCardGridItem
-              key={product.skuId}
-              product={product}
-              index={closure_0 * columns + index}
-              cardWidth={cardWidth}
-              unpublishedAt={null}
-              preferVCPrice={null}
-              disableBundleStaticBackground={null}
-              muteBundleStaticBackground={null}
-            />
-          );
-        }),
-      },
-      index,
-    );
-  });
-  return cardWidth(rowContainer, obj2);
+  const items1 = [
+    header,
+    memo.map((arr, index) => {
+      closure_0 = index;
+      return cardWidth(
+        muteBundleStaticBackground,
+        {
+          style: rowContainer.rowContainer,
+          children: arr.map((product, index) => {
+            let categoryForProduct = importDefault;
+            if (importDefault == null) {
+              categoryForProduct = CollectiblesCategoryStore.getCategoryForProduct(product.skuId);
+            }
+            const obj = {
+              product,
+              index: closure_0 * columns + index,
+              cardWidth,
+              unpublishedAt: null,
+              preferVCPrice: null,
+              disableBundleStaticBackground: null,
+              muteBundleStaticBackground: null,
+            };
+            let unpublishedAt;
+            if (categoryForProduct != null) {
+              unpublishedAt = categoryForProduct.unpublishedAt;
+            }
+            obj.unpublishedAt = unpublishedAt;
+            obj.preferVCPrice = preferVCPrice;
+            obj.disableBundleStaticBackground = disableBundleStaticBackground;
+            obj.muteBundleStaticBackground = muteBundleStaticBackground;
+            return metroImportDefault(ShopCardGridItem, obj, product.skuId);
+          }),
+        },
+        index,
+      );
+    }),
+  ];
+  obj2.children = items1;
+  return closure_8(rowContainer, obj2);
 }

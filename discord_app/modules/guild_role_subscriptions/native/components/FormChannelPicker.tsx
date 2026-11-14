@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormChannelPicker.tsx
-import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -19,13 +19,13 @@ export default function FormChannelPicker(channelId) {
   stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   let tmp5Result = useChannelNameDefault(stateFromStores);
   if (null != stateFromStores) {
-    let TextIcon = tmp(17741).getChannelIconComponentOrDefault(stateFromStores);
-    const tmpResult = tmp(17741);
+    let TextIcon = tmp(17861).getChannelIconComponentOrDefault(stateFromStores);
+    const tmpResult = tmp(17861);
   } else {
-    TextIcon = tmp(8013).TextIcon;
+    TextIcon = tmp(8078).TextIcon;
   }
   let obj2 = {
-    icon: jsx(channelId(7379).TableRow.Icon, { IconComponent: TextIcon }),
+    icon: jsx(channelId(7443).TableRow.Icon, { IconComponent: TextIcon }),
     label: null,
     arrow: true,
     onPress: null,
@@ -34,7 +34,7 @@ export default function FormChannelPicker(channelId) {
     const obj3 = { variant: "body-md/medium", color: "text-muted", children: null };
     const intl = tmp(1113).intl;
     obj3.children = intl.string(tmp(1113).t.r2ptsz);
-    tmp5Result = jsx(tmp(5866).Text, { variant: "body-md/medium", color: "text-muted", children: null });
+    tmp5Result = jsx(tmp(5929).Text, { variant: "body-md/medium", color: "text-muted", children: null });
   }
   obj2.label = tmp5Result;
   obj2.onPress = function handleSelectChannel() {
@@ -46,10 +46,10 @@ export default function FormChannelPicker(channelId) {
     }
     obj2.selectedChannelId = id;
     obj2.onChannelSelected = onChannelSelected;
-    obj.openLazy(asyncRequireImpl(20596, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+    obj.openLazy(asyncRequireImpl(20751, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
   };
-  return jsx(channelId(7379).TableRow, {
-    icon: jsx(channelId(7379).TableRow.Icon, { IconComponent: TextIcon }),
+  return jsx(channelId(7443).TableRow, {
+    icon: jsx(channelId(7443).TableRow.Icon, { IconComponent: TextIcon }),
     label: null,
     arrow: true,
     onPress: null,

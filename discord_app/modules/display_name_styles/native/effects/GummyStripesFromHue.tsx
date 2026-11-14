@@ -1,5 +1,5 @@
 // discord_app/modules/display_name_styles/native/effects/GummyStripesFromHue.tsx
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -27,18 +27,18 @@ function AnimatedStripe(overlap) {
   GummyStripesFromHueTsx1.__closure = items1;
   GummyStripesFromHueTsx1.__workletHash = 15518574329470;
   GummyStripesFromHueTsx1.__initData = tmp3;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(GummyStripesFromHueTsx1);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(GummyStripesFromHueTsx1);
   const style = [tmp.stripe, ,];
   if (stripeOverlap) {
     stripeOverlap = tmp.stripeOverlap;
   }
   style[1] = stripeOverlap;
   style[2] = animatedStyle;
-  return l(_modDef1652.View, { style });
+  return l(_modDef1655.View, { style });
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_6 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
 let closure_7 = {
   code: '(function GummyStripesFromHueTsx1(){let[hue,shift,hslToRgbWorklet,saturation,lightness]=this.__closure;const h=((hue.get()+shift)%360+360)%360;const[r,g,b]=hslToRgbWorklet({h:h,s:saturation,l:lightness});return{backgroundColor:"rgb("+r+", "+g+", "+b+")"};})',
@@ -49,7 +49,7 @@ const result = size.fileFinishedImporting("modules/display_name_styles/native/ef
 export default function GummyStripesFromHue(hue) {
   hue = hue.hue;
   const obj = { children: null };
-  const GUMMY_STRIPES = hue(1393).GUMMY_STRIPES;
+  const GUMMY_STRIPES = hue(1396).GUMMY_STRIPES;
   obj.children = GUMMY_STRIPES.map((hueShift, index) =>
     l(
       AnimatedStripe,

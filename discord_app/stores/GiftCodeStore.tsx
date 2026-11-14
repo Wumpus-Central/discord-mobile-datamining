@@ -1,114 +1,119 @@
 // discord_app/stores/GiftCodeStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef2166 from "../../_runtime/metro/02166__.js";
+import _modDef2169 from "../../_runtime/metro/02169__.js";
 import GiftCodeUtils from "../utils/GiftCodeUtils.tsx";
 import GiftCodeActionCreatorsDefault from "../actions/GiftCodeActionCreators.tsx";
 import GiftCodeRecord from "../records/GiftCodeRecord.tsx";
+import AuthenticationStore from "AuthenticationStore.tsx";
 
 require = fn;
 function updateGiftCode(giftCode) {
   const fromServer = GiftCodeRecord.createFromServer(giftCode);
   const code = fromServer.code;
-  if (map.has(code)) {
-    value = map.get(code);
-    const result = set(code, value.merge(fromServer));
+  value = map.get(code);
+  if (null != value) {
+    let result = fromServer;
+    if (undefined === fromServer.giftSubscriptionAgreement) {
+      result = fromServer.set("giftSubscriptionAgreement", value.giftSubscriptionAgreement);
+    }
+    const result1 = map.set(code, value.merge(result));
   } else {
-    const result1 = set(code, fromServer);
+    const result2 = map.set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(5087).Timeout();
+      const timeout = new code(5150).Timeout();
       dependencyMap[code] = timeout;
       const value2 = map.get(code);
       if (null != value2) {
         if (null != value2.expiresAt) {
           const expiresAt = value2.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - _modDef2166().valueOf();
+          const diff = valueOfResult - _modDef2169().valueOf();
           if (diff <= 0) {
             map.delete(code);
-            delete tmp2[tmp];
+            delete tmp[tmp2];
             giftCodeStore.emitChange();
           } else if (null != dependencyMap[code]) {
             const _Math = Math;
-            obj2.start(Math.min(closure_5, diff), () => {
+            obj4.start(Math.min(closure_6, diff), () => {
               closure_0 = closure_1_0;
-              let value = closure_2_8.get(closure_1_0);
+              let value = closure_2_10.get(closure_1_0);
               if (null != value) {
                 if (null != value.expiresAt) {
                   let expiresAt = value.expiresAt;
                   let valueOfResult = expiresAt.valueOf();
-                  let diff = valueOfResult - closure_2_1(closure_2_2[3])().valueOf();
+                  let diff = valueOfResult - closure_2_1(closure_2_2[4])().valueOf();
                   if (diff <= 0) {
-                    closure_2_8.delete(closure_1_0);
+                    closure_2_10.delete(closure_1_0);
                     delete tmp[tmp2];
-                    closure_2_18.emitChange();
-                  } else if (null != closure_2_7[closure_1_0]) {
+                    closure_2_20.emitChange();
+                  } else if (null != closure_2_9[closure_1_0]) {
                     let _Math = Math;
-                    obj2.start(Math.min(closure_2_5, diff), () => {
+                    obj2.start(Math.min(closure_2_6, diff), () => {
                       closure_0 = closure_1_0;
-                      let value = closure_2_8.get(closure_1_0);
+                      let value = closure_2_10.get(closure_1_0);
                       if (null != value) {
                         if (null != value.expiresAt) {
                           let expiresAt = value.expiresAt;
                           let valueOfResult = expiresAt.valueOf();
-                          let diff = valueOfResult - closure_2_1(closure_2_2[3])().valueOf();
+                          let diff = valueOfResult - closure_2_1(closure_2_2[4])().valueOf();
                           if (diff <= 0) {
-                            closure_2_8.delete(closure_1_0);
+                            closure_2_10.delete(closure_1_0);
                             delete tmp[tmp2];
-                            closure_2_18.emitChange();
-                          } else if (null != closure_2_7[closure_1_0]) {
+                            closure_2_20.emitChange();
+                          } else if (null != closure_2_9[closure_1_0]) {
                             let _Math = Math;
-                            obj2.start(Math.min(closure_2_5, diff), () => {
+                            obj2.start(Math.min(closure_2_6, diff), () => {
                               closure_0 = closure_1_0;
-                              let value = closure_2_8.get(closure_1_0);
+                              let value = closure_2_10.get(closure_1_0);
                               if (null != value) {
                                 if (null != value.expiresAt) {
                                   let expiresAt = value.expiresAt;
                                   let valueOfResult = expiresAt.valueOf();
-                                  let diff = valueOfResult - closure_2_1(closure_2_2[3])().valueOf();
+                                  let diff = valueOfResult - closure_2_1(closure_2_2[4])().valueOf();
                                   if (diff <= 0) {
-                                    closure_2_8.delete(closure_1_0);
+                                    closure_2_10.delete(closure_1_0);
                                     delete tmp[tmp2];
-                                    closure_2_18.emitChange();
-                                  } else if (null != closure_2_7[closure_1_0]) {
+                                    closure_2_20.emitChange();
+                                  } else if (null != closure_2_9[closure_1_0]) {
                                     let _Math = Math;
-                                    obj2.start(Math.min(closure_2_5, diff), () => {
+                                    obj2.start(Math.min(closure_2_6, diff), () => {
                                       closure_0 = closure_1_0;
-                                      let value = closure_2_8.get(closure_1_0);
+                                      let value = closure_2_10.get(closure_1_0);
                                       if (null != value) {
                                         if (null != value.expiresAt) {
                                           let expiresAt = value.expiresAt;
                                           let valueOfResult = expiresAt.valueOf();
-                                          let diff = valueOfResult - closure_2_1(closure_2_2[3])().valueOf();
+                                          let diff = valueOfResult - closure_2_1(closure_2_2[4])().valueOf();
                                           if (diff <= 0) {
-                                            closure_2_8.delete(closure_1_0);
+                                            closure_2_10.delete(closure_1_0);
                                             delete tmp[tmp2];
-                                            closure_2_18.emitChange();
-                                          } else if (null != closure_2_7[closure_1_0]) {
+                                            closure_2_20.emitChange();
+                                          } else if (null != closure_2_9[closure_1_0]) {
                                             let _Math = Math;
-                                            obj2.start(Math.min(closure_2_5, diff), /* F103696 */ function() { ... });
+                                            obj2.start(Math.min(closure_2_6, diff), /* F104898 */ function() { ... });
                                           }
-                                          let obj3 = closure_2_1(closure_2_2[3])();
+                                          let obj3 = closure_2_1(closure_2_2[4])();
                                         }
                                       }
                                     });
                                   }
-                                  let obj3 = closure_2_1(closure_2_2[3])();
+                                  let obj3 = closure_2_1(closure_2_2[4])();
                                 }
                               }
                             });
                           }
-                          let obj3 = closure_2_1(closure_2_2[3])();
+                          let obj3 = closure_2_1(closure_2_2[4])();
                         }
                       }
                     });
                   }
-                  let obj3 = closure_2_1(closure_2_2[3])();
+                  let obj3 = closure_2_1(closure_2_2[4])();
                 }
               }
             });
           }
-          const obj4 = _modDef2166();
+          const obj5 = _modDef2169();
         }
       }
     }
@@ -119,13 +124,15 @@ function resolveMessageGiftCodes(message, arg1) {
   if (arg1 === undefined) {
     flag = false;
   }
+  _require = undefined;
   if (flag) {
     if (!set1.has(message.channel_id)) {
       return false;
     }
   }
-  const isGiftCodeEmbedResult = GiftCodeUtils.isGiftCodeEmbed(message);
-  const findGiftCodes = GiftCodeUtils.findGiftCodes;
+  let obj = require("GiftCodeUtils");
+  const isGiftCodeEmbedResult = require("GiftCodeUtils").isGiftCodeEmbed(message);
+  const findGiftCodes = require("GiftCodeUtils").findGiftCodes;
   if (isGiftCodeEmbedResult) {
     let embeds;
     if (message != null) {
@@ -143,23 +150,36 @@ function resolveMessageGiftCodes(message, arg1) {
   } else {
     findGiftCodesResult = findGiftCodes(message.content);
   }
-  if (0 !== findGiftCodesResult.length) {
+  if (0 === findGiftCodesResult.length) {
+    return false;
+  } else {
+    let tmp9 = message.type === constants2.CUSTOM_GIFT;
+    if (!tmp9) {
+      let tmp11 = null != message.author;
+      if (tmp11) {
+        tmp11 = message.author.id === AuthenticationStore.getId();
+      }
+      tmp9 = tmp11;
+    }
+    _require = tmp9;
     const item = findGiftCodesResult.forEach((item) => {
       let hasItem = items.includes(item);
       if (!hasItem) {
-        hasItem = closure_1_11.includes(item);
+        hasItem = items.includes(item);
       }
       if (!hasItem) {
         if (!items.includes(item)) {
           items = [];
           items[HermesBuiltin.arraySpread(items, 0)] = item;
         }
-        const giftCode = GiftCodeActionCreatorsDefault.resolveGiftCode(item, false, true);
-        giftCode.catch(closure_1_6);
+        const obj2 = { withSubscriptionPlan: true, withGiftSubscriptionAgreement };
+        const giftCode = GiftCodeActionCreatorsDefault.resolveGiftCode(item, obj2);
+        giftCode.catch(React5);
       }
     });
+    return false;
   }
-  return false;
+  const tmp3 = require("GiftCodeUtils");
 }
 function handleMessage(message) {
   resolveMessageGiftCodes(message.message, true);
@@ -185,20 +205,23 @@ function handleLoadThreadsSuccess(firstMessages) {
   }
 }
 const Constants = fn(1072);
-({ AbortCodes: closure_4, MAX_TIMEOUT_MS: hasOwnProperty, NOOP_NULL: closure_6 } = Constants);
+({ AbortCodes: hasOwnProperty, MAX_TIMEOUT_MS: closure_6, MessageTypes: metroImportDefault, NOOP_NULL: closure_8 } = Constants);
 const dependencyMap = {};
 const map = new Map();
-let closure_9 = [];
-let closure_10 = [];
 let items = [];
+let closure_12 = [];
+items = [];
 const set = new Set();
-let closure_13 = {};
-let closure_14 = {};
+let closure_15 = {};
+let closure_16 = {};
 const set1 = new Set();
 const Store = initializeDefault.Store;
 class GiftCodeStore extends Store {
 }
 const prototype = GiftCodeStore.prototype;
+prototype["initialize"] = function initialize() {
+  this.waitFor(AuthenticationStore);
+};
 prototype["get"] = function get(arg0) {
   value = map.get(arg0);
   let tmp = null;
@@ -213,7 +236,7 @@ prototype["get"] = function get(arg0) {
 prototype["getError"] = function getError(arg0) {
   let tmp = null;
   if (null != arg0) {
-    tmp = closure_14[arg0];
+    tmp = closure_16[arg0];
   }
   return tmp;
 };
@@ -237,29 +260,29 @@ prototype["getForGifterSKUAndPlan"] = function getForGifterSKUAndPlan(id, skuId,
   });
 };
 prototype["getIsResolving"] = function getIsResolving(arg0) {
-  return closure_9.includes(arg0);
+  return items.includes(arg0);
 };
 prototype["getIsResolved"] = function getIsResolved(giftCode) {
   return items.includes(giftCode);
 };
 prototype["getIsAccepting"] = function getIsAccepting(code) {
-  return closure_10.includes(code);
+  return closure_12.includes(code);
 };
 prototype["getUserGiftCodesFetchingForSKUAndPlan"] = function getUserGiftCodesFetchingForSKUAndPlan(skuId, subscriptionPlanId) {
   return set.has(GiftCodeUtils.makeComboId(skuId, subscriptionPlanId));
 };
 prototype["getUserGiftCodesLoadedAtForSKUAndPlan"] = function getUserGiftCodesLoadedAtForSKUAndPlan(skuId, subscriptionPlanId) {
   const obj = GiftCodeUtils;
-  return closure_13[obj.makeComboId(obj, skuId, subscriptionPlanId)];
+  return closure_15[obj.makeComboId(obj, skuId, subscriptionPlanId)];
 };
 prototype["getResolvingCodes"] = function getResolvingCodes() {
-  return closure_9;
+  return items;
 };
 prototype["getResolvedCodes"] = function getResolvedCodes() {
   return items;
 };
 prototype["getAcceptingCodes"] = function getAcceptingCodes() {
-  return closure_10;
+  return closure_12;
 };
 GiftCodeStore.displayName = "GiftCodeStore";
 const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
@@ -276,15 +299,14 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
   },
   GIFT_CODE_RESOLVE: function handleGiftCodeResolve(code) {
     code = code.code;
-    if (!closure_9.includes(code)) {
+    if (!items.includes(code)) {
       items = [];
-      items[HermesBuiltin.arraySpread(closure_9, 0)] = code;
-      closure_9 = items;
+      items[HermesBuiltin.arraySpread(items, 0)] = code;
     }
   },
   GIFT_CODE_RESOLVE_SUCCESS: function handleGiftCodeResolveSuccess(giftCode) {
     giftCode = giftCode.giftCode;
-    closure_9 = closure_9.filter((item) => item !== giftCode.code);
+    items = items.filter((item) => item !== giftCode.code);
     if (!items.includes(giftCode.code)) {
       items = [];
       items[HermesBuiltin.arraySpread(items, 0)] = giftCode.code;
@@ -294,26 +316,26 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
   GIFT_CODE_RESOLVE_FAILURE: function handleGiftCodeResolveFailure(code) {
     code = code.code;
     const error = code.error;
-    closure_9 = closure_9.filter((item) => item !== code);
+    items = items.filter((item) => item !== code);
     if (!items.includes(code)) {
       items = [];
       items[HermesBuiltin.arraySpread(items, 0)] = code;
     }
     if (null != error) {
-      closure_14[code] = error;
+      closure_16[code] = error;
     }
   },
   GIFT_CODE_REDEEM: function handleGiftCodeAccept(code) {
     code = code.code;
-    if (!closure_10.includes(code)) {
+    if (!closure_12.includes(code)) {
       items = [];
-      items[HermesBuiltin.arraySpread(closure_10, 0)] = code;
-      closure_10 = items;
+      items[HermesBuiltin.arraySpread(closure_12, 0)] = code;
+      closure_12 = items;
     }
   },
   GIFT_CODE_REDEEM_SUCCESS: function handleGiftCodeAcceptSuccess(code) {
     code = code.code;
-    closure_10 = closure_10.filter((item) => item !== code);
+    closure_12 = closure_12.filter((item) => item !== code);
     value = map.get(code);
     if (null != value) {
       const obj2 = { redeemed: true, uses: value.uses + 1 };
@@ -323,9 +345,9 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
   GIFT_CODE_REDEEM_FAILURE: function handleGiftCodeAcceptFailure(code) {
     code = code.code;
     const error = code.error;
-    closure_10 = closure_10.filter((item) => item !== code);
+    closure_12 = closure_12.filter((item) => item !== code);
     value = map.get(code);
-    closure_14[code] = error;
+    closure_16[code] = error;
     if (null != value) {
       const code2 = error.code;
       if (constants.UNKNOWN_GIFT_CODE === code2) {
@@ -359,7 +381,7 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
     ({ skuId, subscriptionPlanId } = giftCodes);
     const item = giftCodes.forEach(updateGiftCode);
     const comboId = GiftCodeUtils.makeComboId(skuId, subscriptionPlanId);
-    closure_13[comboId] = Date.now();
+    closure_15[comboId] = Date.now();
     set.delete(comboId);
   },
   GIFT_CODES_FETCH_FAILURE: function handleGiftCodesFetchFail(arg0) {
@@ -391,7 +413,7 @@ const giftCodeStore = new GiftCodeStore(DispatcherDefault, {
       messages = messages.messages;
       let item = messages.forEach((arr) => {
         const item = arr.forEach((item) => {
-          closure_1_17(item);
+          closure_1_19(item);
           return false;
         });
       });

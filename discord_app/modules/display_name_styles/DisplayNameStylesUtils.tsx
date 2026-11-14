@@ -9,7 +9,17 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1394);
+function isValidDisplayNameColor(arg0) {
+  let isIntegerResult = Number.isInteger(arg0);
+  if (isIntegerResult) {
+    isIntegerResult = arg0 >= 0;
+  }
+  if (isIntegerResult) {
+    isIntegerResult = arg0 <= 16777215;
+  }
+  return isIntegerResult;
+}
+const DisplayNameStylesConstants = fn(1397);
 ({
   DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4,
   DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty,
@@ -17,10 +27,10 @@ const DisplayNameStylesConstants = fn(1394);
   HEXAGON_CAMPAIGN_FONTS: metroImportDefault,
 } = DisplayNameStylesConstants);
 let items = [
-  fn(1396).DisplayNameEffect.NEON,
-  fn(1396).DisplayNameEffect.TOON,
-  fn(1396).DisplayNameEffect.POP,
-  fn(1396).DisplayNameEffect.GUMMY,
+  fn(1399).DisplayNameEffect.NEON,
+  fn(1399).DisplayNameEffect.TOON,
+  fn(1399).DisplayNameEffect.POP,
+  fn(1399).DisplayNameEffect.GUMMY,
 ];
 const set = new Set(items);
 const items1 = [
@@ -162,11 +172,13 @@ export function rebuildGummySourceColor(color) {
 export function hueToGummyColor(sharedValue) {
   return _modDef671.hsl(sharedValue, hasOwnProperty, React4).num();
 }
+export { isValidDisplayNameColor };
 export function parseServerDisplayNameStyles(display_name_styles) {
   let tmp = null;
   if (null != display_name_styles) {
     const obj = { fontId: null, effectId: null, colors: null };
-    ({ font_id: obj.fontId, effect_id: obj.effectId, colors: obj.colors } = display_name_styles);
+    ({ font_id: obj.fontId, effect_id: obj.effectId, colors } = display_name_styles);
+    obj.colors = colors.filter(isValidDisplayNameColor);
     tmp = obj;
   }
   return tmp;

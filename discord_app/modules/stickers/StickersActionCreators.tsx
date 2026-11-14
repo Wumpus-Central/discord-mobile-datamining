@@ -71,7 +71,7 @@ let closure_13 = async function _fetchStickerPacks() {
           let sticker_packs;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else {
         if (1 === tmp6) {

@@ -4,7 +4,7 @@ import useFractionalPremiumInfoDefault from "../../../billing/hooks/useFractiona
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const FractionalPremiumStates = fn(1387).FractionalPremiumStates;
+const FractionalPremiumStates = fn(1390).FractionalPremiumStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");
 

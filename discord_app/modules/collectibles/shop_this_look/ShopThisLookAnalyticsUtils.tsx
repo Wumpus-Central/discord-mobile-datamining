@@ -14,6 +14,7 @@ const ShopThisLookProductType = {
 const result = size.fileFinishedImporting("modules/collectibles/shop_this_look/ShopThisLookAnalyticsUtils.tsx");
 
 export const ShopThisLookMenuAction = {
+  LOOK_OPENED: "look_opened",
   MENU_VIEWED: "menu_viewed",
   COACHMARK_VIEWED: "coachmark_viewed",
   COACHMARK_CTA_CLICKED: "coachmark_cta_clicked",

@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/nameplates/native/Nameplate.tsx
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -44,22 +44,22 @@ function NameplateInner(isFocused) {
   const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = closure_7(flag3, isPressed, flag, flag2, flag5);
   let obj = require("initialize");
-  const tmp6 = sharedValue(5484)();
+  const tmp6 = sharedValue(5547)();
   let num = 1;
   if (flag6) {
     num = 0;
   }
-  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num);
+  sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
   const items1 = [sharedValue, flag6];
   const effect = noop.useEffect(() => {
     if (c0) {
       const obj2 = { duration: 100, easing: null };
-      const Easing = _mod1652.Easing;
-      obj2.easing = Easing.in(_mod1652.Easing.ease);
+      const Easing = _mod1655.Easing;
+      obj2.easing = Easing.in(_mod1655.Easing.ease);
       const result = sharedValue.set(timing_timing.withTiming(1, obj2));
     }
   }, items1);
-  let obj2 = require("../../../../../_runtime/metro/01652__.js");
+  let obj2 = require("../../../../../_runtime/metro/01655__.js");
   const items2 = [closure_8, sharedValue];
   _require = undefined;
   [tmp9, tmp10] = items2;
@@ -73,10 +73,10 @@ function NameplateInner(isFocused) {
   NameplateTsx1.__closure = items3;
   NameplateTsx1.__workletHash = 2118555458479;
   NameplateTsx1.__initData = tmp9;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(NameplateTsx1);
-  const tmpResult = require("../../../../../_runtime/metro/01652__.js");
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(NameplateTsx1);
+  const tmpResult = require("../../../../../_runtime/metro/01655__.js");
   const backgroundGradientColors = require("utils").getBackgroundGradientColors(nameplate.palette, tmp6);
-  const tmpResult4 = require("utils");
+  const tmpResult3 = require("utils");
   const nameplateAssets = require("NameplateUtils").getNameplateAssets(nameplate);
   let str = nameplateAssets.staticImageUrl;
   let tmp14 = true === flag7;
@@ -108,27 +108,24 @@ function NameplateInner(isFocused) {
     const items5 = [,];
     ({ left: arr6[0], right: arr6[1] } = backgroundGradientColors);
     obj4.colors = items5;
-    tmp17Result = closure_5(tmp5(5830), obj4);
-    const tmp5Result = tmp5(5830);
+    tmp17Result = closure_5(tmp5(5893), obj4);
+    const tmp5Result = tmp5(5893);
   }
-  const items6 = [tmp17Result];
-  const tmpResult5 = require("NameplateUtils");
-  if (tmpResult6.isAndroid()) {
-    if (tmp14) {
-      const obj5 = { url: str, style: tmp4.img, autoplay: true };
-      let tmp19 = closure_5(tmp(9431).APNGPlayer, obj5);
-    }
-    items6[1] = tmp19;
-    obj3.children = items6;
-    return closure_6(tmp5(1652).View, obj3);
-  }
-  tmp19 = closure_5(tmp5(5957), { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" });
-  const obj6 = { source: { uri: str }, style: tmp4.img, accessibilityRole: "image" };
-  tmpResult6 = require("PlatformUtils");
+  const items6 = [
+    tmp17Result,
+    closure_5(sharedValue(6020), {
+      source: { uri: str },
+      style: tmp4.img,
+      accessibilityRole: "image",
+      enableAnimation: tmp14,
+    }),
+  ];
+  obj3.children = items6;
+  return closure_6(sharedValue(1655).View, obj3);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_7 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4) => {
   const obj = {
     container: { position: "absolute", overflow: "hidden", top: 0, bottom: 0, left: 0, right: 0 },

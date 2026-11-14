@@ -287,7 +287,12 @@ function loadSelectedChannelIfNecessary() {
     if (null != channel) {
       if (isTextChannel(channel.type)) {
         const orCreate = ChannelMessagesDefault.getOrCreate(channelId);
-        if (!tmp7) {
+        let loadingMore = orCreate.loadingMore;
+        if (!loadingMore) {
+          loadingMore = orCreate.ready && orCreate.hasFetched;
+          const tmp7 = orCreate.ready && orCreate.hasFetched;
+        }
+        if (!loadingMore) {
           const obj6 = { guildId: channel.getGuildId(), channelId: null, messageId: null };
           ({ id: obj3.channelId, id: id2 } = channel);
           obj4 = matchPathCompat;
@@ -314,7 +319,6 @@ function loadSelectedChannelIfNecessary() {
           };
           fetchMessages(obj9);
         }
-        tmp7 = orCreate.ready && orCreate.hasFetched;
       } else {
         const id = channel.id;
         const guildId1 = channel.getGuildId();
@@ -493,7 +497,7 @@ function handleAppWillBecomeActive() {
     const newLocalMessages = MessageActionCreatorsDefault.fetchNewLocalMessages(channelId, gesture);
   }
 }
-const isTextChannel = fn(5096).isTextChannel;
+const isTextChannel = fn(5159).isTextChannel;
 const Constants = fn(1072);
 ({
   MAX_MESSAGES_PER_CHANNEL: closure_14,
@@ -504,7 +508,7 @@ const Constants = fn(1072);
   Routes: closure_19,
   ChannelTypesSets: closure_20,
 } = Constants);
-const isStaticChannelRoute = fn(5099).isStaticChannelRoute;
+const isStaticChannelRoute = fn(5162).isStaticChannelRoute;
 let closure_22 = 10 * DurationsDefault.Millis.SECOND;
 const logger = new LoggerDefault("MessageManager");
 let closure_26 = 90 * DurationsDefault.Millis.DAY;

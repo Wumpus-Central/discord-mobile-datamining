@@ -1,5 +1,5 @@
 // discord_app/modules/color_picker/native/HSVColorPicker.tsx
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import SaturationValueColorPickerDefault from "SaturationValueColorPicker.tsx";
 import HuePickerDefault from "HuePicker.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_6 = createStyles.createStyles({ hsvColorPicker: { alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/color_picker/native/HSVColorPicker.tsx");
@@ -25,10 +25,10 @@ export default function HSVColorPicker(arg0) {
     hueSliderStyle,
   } = arg0);
   const tmp = closure_6();
-  const sharedValue = _mod1652.useSharedValue(0);
-  const sharedValue1 = _mod1652.useSharedValue(1);
+  const sharedValue = _mod1655.useSharedValue(0);
+  const sharedValue1 = _mod1655.useSharedValue(1);
   const obj4 = { style: tmp.hsvColorPicker, children: null };
-  const sharedValue2 = _mod1652.useSharedValue(1);
+  const sharedValue2 = _mod1655.useSharedValue(1);
   let tmp11 = hue;
   if (hue == null) {
     tmp11 = sharedValue;

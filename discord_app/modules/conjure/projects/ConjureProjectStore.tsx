@@ -6,13 +6,13 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-function isProjectOwner(item10010) {
+function isProjectOwner(project) {
   const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
-  return item10010.owner_user_id === id;
+  return project.owner_user_id === id;
 }
 function isRailProject(owner_user_id) {
   const currentUser = UserStore.getCurrentUser();

@@ -3,25 +3,25 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import GuildBadgeDefault from "../../../guild/native/GuildBadge.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(7642);
+const MemberVerificationFormConstants = fn(7708);
 ({ AVATAR_BORDER_WIDTH, AVATAR_SIZE } = MemberVerificationFormConstants);
 ({ useBannerHeight: hasOwnProperty, SHEET_RADIUS } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   header: { alignItems: "center", marginBottom: 12 },
   headerContent: {
@@ -97,8 +97,8 @@ export default function MemberVerificationGuildHeader(scrollTop) {
   MemberVerificationGuildHeaderTsx3.__closure = items1;
   MemberVerificationGuildHeaderTsx3.__workletHash = 12898463786096;
   MemberVerificationGuildHeaderTsx3.__initData = tmp5;
-  const derivedValue = _mod1652.useDerivedValue(MemberVerificationGuildHeaderTsx3);
-  let items2 = [closure_12, _mod1652.interpolate, derivedValue, tmp2, 1.20225424859375, AVATAR_SIZE];
+  const derivedValue = _mod1655.useDerivedValue(MemberVerificationGuildHeaderTsx3);
+  let items2 = [closure_12, _mod1655.interpolate, derivedValue, tmp2, 1.20225424859375, AVATAR_SIZE];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -133,19 +133,19 @@ export default function MemberVerificationGuildHeader(scrollTop) {
   MemberVerificationGuildHeaderTsx4.__initData = tmp8;
   let obj2 = { style: tmp.header, children: null };
   let obj3 = { style: tmp.headerContent, children: null };
-  const animatedStyle = _mod1652.useAnimatedStyle(MemberVerificationGuildHeaderTsx4);
+  const animatedStyle = _mod1655.useAnimatedStyle(MemberVerificationGuildHeaderTsx4);
   const obj4 = { style: null, children: null };
   let items4 = [tmp.avatarContainer, animatedStyle];
   obj4.style = items4;
   const obj5 = { style: tmp.avatar, guild, size: null, animate: true };
-  const tmp3Result = _mod1652;
+  const tmp3Result = _mod1655;
   obj5.size = GuildIcon.GuildIconSizes.XLARGE;
   const items5 = [
     timestampProducer(GuildIconDefault, obj5),
     timestampProducer(GuildBadgeDefault, { style: tmp.featureIcon, guild, disableColor: true }),
   ];
   obj4.children = items5;
-  const items6 = [metroImportDefault(_modDef1652.View, obj4), ,];
+  const items6 = [metroImportDefault(_modDef1655.View, obj4), ,];
   const obj7 = {
     style: tmp.headerTitle,
     variant: "heading-xl/semibold",
@@ -195,9 +195,9 @@ export function MemberVerificationGuildBanner(arg0) {
   MemberVerificationGuildHeaderTsx1.__closure = items1;
   MemberVerificationGuildHeaderTsx1.__workletHash = 246931836658;
   MemberVerificationGuildHeaderTsx1.__initData = tmp6;
-  const derivedValue = _mod1652.useDerivedValue(MemberVerificationGuildHeaderTsx1);
-  _mod1652;
-  let items2 = [closure_10, tmp2, _mod1652.interpolate, scrollTop, useSafeAreaInsetsDefault().top, derivedValue];
+  const derivedValue = _mod1655.useDerivedValue(MemberVerificationGuildHeaderTsx1);
+  _mod1655;
+  let items2 = [closure_10, tmp2, _mod1655.interpolate, scrollTop, useSafeAreaInsetsDefault().top, derivedValue];
   c0 = undefined;
   c1 = undefined;
   c2 = undefined;
@@ -256,7 +256,7 @@ export function MemberVerificationGuildBanner(arg0) {
         return -1 * closure_0.get();
       }
     }
-    tmp19 = metroImportDefault(_modDef1652.View, obj4);
+    tmp19 = metroImportDefault(_modDef1655.View, obj4);
     const tmp3Result2 = AvatarUtilsDefault;
   }
   return tmp19;

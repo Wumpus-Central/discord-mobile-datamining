@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingPromptOptionButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import useGuildRoleMemberCountsDefault from "../../guild_role_subscriptions/useGuildRoleMemberCounts.tsx";
@@ -11,17 +11,17 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1388).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let obj = { duration: 200, easing: null };
-let Easing = fn(1652).Easing;
-obj.easing = Easing.out(fn(1652).Easing.ease);
-const createStyles = fn(5243);
+let Easing = fn(1655).Easing;
+obj.easing = Easing.out(fn(1655).Easing.ease);
+const createStyles = fn(5306);
 let obj3 = {
   container: {
     borderRadius: nativeDefault.radii.md,
@@ -137,9 +137,9 @@ export default function PromptOptionButton(option) {
     closure_13,
     selected,
     require("timing/timing").withTiming,
-    require("../../../../_runtime/metro/01652__.js").Easing,
+    require("../../../../_runtime/metro/01655__.js").Easing,
     stateFromStores1,
-    require("../../../../_runtime/metro/01652__.js").withSequence,
+    require("../../../../_runtime/metro/01655__.js").withSequence,
     require("spring/spring").withSpring,
   ];
   _require = undefined;
@@ -182,7 +182,7 @@ export default function PromptOptionButton(option) {
   GuildOnboardingPromptOptionButtonTsx1.__closure = items3;
   GuildOnboardingPromptOptionButtonTsx1.__workletHash = 7034596428204;
   GuildOnboardingPromptOptionButtonTsx1.__initData = tmp6;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     GuildOnboardingPromptOptionButtonTsx1,
   );
   const tmp15 = useGuildRoleMemberCountsDefault(option.guildId);
@@ -240,14 +240,14 @@ export default function PromptOptionButton(option) {
       ref.current = false;
     }
   }, items6);
-  let obj3 = require("../../../../_runtime/metro/01652__.js");
+  let obj3 = require("../../../../_runtime/metro/01655__.js");
   let obj4 = noop;
   const items7 = [
     closure_14,
     first,
-    require("../../../../_runtime/metro/01652__.js").withDelay,
+    require("../../../../_runtime/metro/01655__.js").withDelay,
     require("timing/timing").withTiming,
-    require("../../../../_runtime/metro/01652__.js").Easing,
+    require("../../../../_runtime/metro/01655__.js").Easing,
     stateFromStores1,
   ];
   _require = undefined;
@@ -297,11 +297,11 @@ export default function PromptOptionButton(option) {
   GuildOnboardingPromptOptionButtonTsx2.__closure = items8;
   GuildOnboardingPromptOptionButtonTsx2.__workletHash = 13064995616524;
   GuildOnboardingPromptOptionButtonTsx2.__initData = tmp25;
-  const animatedStyle1 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle1 = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     GuildOnboardingPromptOptionButtonTsx2,
   );
-  const tmp2Result = require("../../../../_runtime/metro/01652__.js");
-  sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(1);
+  const tmp2Result = require("../../../../_runtime/metro/01655__.js");
+  sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(1);
   let isUnseen = canBeNew;
   if (canBeNew) {
     isUnseen = option.isUnseen;
@@ -369,7 +369,7 @@ export default function PromptOptionButton(option) {
       title = _undefined.title;
     }
   }, items9);
-  const tmp2Result11 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result11 = require("../../../../_runtime/metro/01655__.js");
   const token = require("useToken").useToken(tmp14(575).colors.BORDER_SUBTLE);
   const tmp2Result12 = require("useToken");
   const token1 = require("useToken").useToken(tmp14(575).colors.BACKGROUND_BRAND);
@@ -397,10 +397,10 @@ export default function PromptOptionButton(option) {
   GuildOnboardingPromptOptionButtonTsx3.__closure = items11;
   GuildOnboardingPromptOptionButtonTsx3.__workletHash = 16230189294602;
   GuildOnboardingPromptOptionButtonTsx3.__initData = tmp43;
-  const derivedValue = require("../../../../_runtime/metro/01652__.js").useDerivedValue(
+  const derivedValue = require("../../../../_runtime/metro/01655__.js").useDerivedValue(
     GuildOnboardingPromptOptionButtonTsx3,
   );
-  const tmp2Result16 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result16 = require("../../../../_runtime/metro/01655__.js");
   const tmp42 = closure_11;
   const items12 = [closure_16, require("timing/timing").withTiming, isUnseen, tmp42];
   _require = undefined;
@@ -421,13 +421,13 @@ export default function PromptOptionButton(option) {
   GuildOnboardingPromptOptionButtonTsx4.__closure = items13;
   GuildOnboardingPromptOptionButtonTsx4.__workletHash = 4904550127725;
   GuildOnboardingPromptOptionButtonTsx4.__initData = tmp48;
-  const derivedValue1 = require("../../../../_runtime/metro/01652__.js").useDerivedValue(
+  const derivedValue1 = require("../../../../_runtime/metro/01655__.js").useDerivedValue(
     GuildOnboardingPromptOptionButtonTsx4,
   );
-  const tmp2Result17 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result17 = require("../../../../_runtime/metro/01655__.js");
   const items14 = [
     closure_17,
-    require("../../../../_runtime/metro/01652__.js").interpolateColor,
+    require("../../../../_runtime/metro/01655__.js").interpolateColor,
     derivedValue1,
     token,
     token1,
@@ -464,10 +464,10 @@ export default function PromptOptionButton(option) {
   GuildOnboardingPromptOptionButtonTsx5.__closure = items15;
   GuildOnboardingPromptOptionButtonTsx5.__workletHash = 8397718874501;
   GuildOnboardingPromptOptionButtonTsx5.__initData = tmp53;
-  const animatedStyle2 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle2 = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     GuildOnboardingPromptOptionButtonTsx5,
   );
-  const tmp2Result18 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result18 = require("../../../../_runtime/metro/01655__.js");
   const items16 = [closure_18, stateFromStores1, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -492,10 +492,10 @@ export default function PromptOptionButton(option) {
   GuildOnboardingPromptOptionButtonTsx6.__closure = items17;
   GuildOnboardingPromptOptionButtonTsx6.__workletHash = 14710088829666;
   GuildOnboardingPromptOptionButtonTsx6.__initData = tmp62;
-  const animatedStyle3 = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle3 = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     GuildOnboardingPromptOptionButtonTsx6,
   );
-  const tmp2Result19 = require("../../../../_runtime/metro/01652__.js");
+  const tmp2Result19 = require("../../../../_runtime/metro/01655__.js");
   const checkboxA11yNative = require("useA11yRolesNative").useCheckboxA11yNative({ checked: selected });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   let obj5 = { style: null, children: null };
@@ -511,17 +511,17 @@ export default function PromptOptionButton(option) {
       }
     },
     onPressIn() {
-      obj = _mod1652;
+      obj = _mod1655;
       const withTimingResult = timing_timing.withTiming(1, { duration: 0 });
       const obj4 = { duration: 200, easing: null };
-      const Easing = _mod1652.Easing;
-      obj4.easing = Easing.out(_mod1652.Easing.ease);
+      const Easing = _mod1655.Easing;
+      obj4.easing = Easing.out(_mod1655.Easing.ease);
       const result = sharedValue.set(obj.withSequence(withTimingResult, timing_timing.withTiming(1.02, obj4)));
     },
     onPressOut() {
       const obj2 = { duration: 100, easing: null };
-      const Easing = _mod1652.Easing;
-      obj2.easing = Easing.out(_mod1652.Easing.ease);
+      const Easing = _mod1655.Easing;
+      obj2.easing = Easing.out(_mod1655.Easing.ease);
       const result = sharedValue.set(timing_timing.withTiming(1, obj2));
     },
     accessibilityRole,
@@ -556,8 +556,8 @@ export default function PromptOptionButton(option) {
       const obj9 = { id: null, animated: null, size: null };
       ({ id: obj21.id, animated: obj21.animated } = stateFromStores);
       obj9.size = size;
-      emojiURL = tmp14(1411).getEmojiURL(obj9);
-      const tmp14Result2 = tmp14(1411);
+      emojiURL = tmp14(1414).getEmojiURL(obj9);
+      const tmp14Result2 = tmp14(1414);
     }
     obj8.src = emojiURL;
     let str;
@@ -571,9 +571,9 @@ export default function PromptOptionButton(option) {
       str = "";
     }
     obj8.name = str;
-    obj7.children = ref(tmp14(7828), obj8);
+    obj7.children = ref(tmp14(7894), obj8);
     tmp71Result = tmp71(c5, obj7);
-    const tmp14Result = tmp14(7828);
+    const tmp14Result = tmp14(7894);
   }
   const items19 = [tmp71Result];
   const obj10 = { style: tmp.optionText, children: null };
@@ -587,7 +587,7 @@ export default function PromptOptionButton(option) {
   let tmp77Result = null != option.description && option.description.length > 0;
   if (tmp77Result) {
     const obj12 = { variant: "body-xs/medium", color: "text-default", children: option.description };
-    tmp77Result = tmp77(tmp2(5866).Text, obj12);
+    tmp77Result = tmp77(tmp2(5929).Text, obj12);
   }
   items20[1] = tmp77Result;
   obj10.children = items20;
@@ -609,8 +609,8 @@ export default function PromptOptionButton(option) {
     let intl = tmp2(1113).intl;
     const obj15 = { memberCount: num };
     obj14.children = intl.format(tmp2(1113).t.EgKsZA, obj15);
-    obj13.children = tmp77(tmp2(5866).Text, obj14);
-    tmp77Result2 = tmp77(tmp14(1652).View, obj13);
+    obj13.children = tmp77(tmp2(5929).Text, obj14);
+    tmp77Result2 = tmp77(tmp14(1655).View, obj13);
   }
   items21[1] = tmp77Result2;
   const obj16 = { style: null, children: null };
@@ -622,7 +622,7 @@ export default function PromptOptionButton(option) {
     size: "xs",
     color: nativeDefault.colors.WHITE,
   });
-  items21[2] = ref(_modDef1652.View, obj16);
+  items21[2] = ref(_modDef1655.View, obj16);
   if (canBeNew) {
     canBeNew = !selected;
   }
@@ -638,5 +638,5 @@ export default function PromptOptionButton(option) {
   }
   items21[3] = canBeNew;
   obj5.children = items21;
-  return sharedValue(_modDef1652.View, obj5);
+  return sharedValue(_modDef1655.View, obj5);
 }

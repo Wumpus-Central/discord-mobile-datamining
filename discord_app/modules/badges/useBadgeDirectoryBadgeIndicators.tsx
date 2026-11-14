@@ -8,10 +8,10 @@ require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/useBadgeDirectoryBadgeIndicators.tsx");
 
-export const NEW_INDICATOR_BADGE_IDS = fn(10045).BETA_BADGE_IDS;
-export function isNewIndicatorBadgeId(arg0) {
+export const NEW_INDICATOR_BADGE_IDS = fn(10113).BETA_BADGE_IDS;
+export function isNewIndicatorBadgeId(badgeId) {
   const BETA_BADGE_IDS = BadgeUtils.BETA_BADGE_IDS;
-  return BETA_BADGE_IDS.has(arg0);
+  return BETA_BADGE_IDS.has(badgeId);
 }
 export function dismissBadgeDirectoryBadgeIndicator(badgeId) {
   const BETA_BADGE_IDS = BadgeUtils.BETA_BADGE_IDS;

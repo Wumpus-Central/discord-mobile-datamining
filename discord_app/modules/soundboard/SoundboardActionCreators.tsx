@@ -45,14 +45,14 @@ let closure_11 = async function _fetchDefaultSoundsFromApi2() {
 function _maybeFetchDefaultSounds() {
   if (SoundboardStore.shouldFetchDefaultSounds()) {
     DispatcherDefault.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS" });
-    const SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS = "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS";
+    closure_0 = ["SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS", "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE"];
     const promise = new Promise((arg0) => {
       closure_0 = arg0;
       function onSoundboardActionCompleted() {
-        DispatcherDefault.unsubscribe(SOUNDBOARD_SOUNDS_RECEIVED, onSoundboardActionCompleted);
+        const item = closure_0.forEach((item) => DispatcherDefault.unsubscribe(item, onSoundboardActionCompleted));
         const timerId = setTimeout(closure_0, 0);
       }
-      const subscription = DispatcherDefault.subscribe(closure_0, onSoundboardActionCompleted);
+      let item = closure_0.forEach((item) => DispatcherDefault.subscribe(item, onSoundboardActionCompleted));
     });
     (function _fetchDefaultSoundsFromApi() {
       const self = this;
@@ -70,25 +70,25 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7166).getGuildIdsToFetchSoundsFor();
+  const guildIdsToFetchSoundsFor = require("useGuildIdsToFetchSoundsFor").getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
   } else {
-    SOUNDBOARD_SOUNDS_RECEIVED = "SOUNDBOARD_SOUNDS_RECEIVED";
+    _require = ["SOUNDBOARD_SOUNDS_RECEIVED"];
     const promise = new Promise((arg0) => {
       closure_0 = arg0;
       function onSoundboardActionCompleted() {
-        DispatcherDefault.unsubscribe(SOUNDBOARD_SOUNDS_RECEIVED, onSoundboardActionCompleted);
+        const item = closure_0.forEach((item) => DispatcherDefault.unsubscribe(item, onSoundboardActionCompleted));
         const timerId = setTimeout(closure_0, 0);
       }
-      const subscription = DispatcherDefault.subscribe(closure_0, onSoundboardActionCompleted);
+      let item = closure_0.forEach((item) => DispatcherDefault.subscribe(item, onSoundboardActionCompleted));
     });
     DispatcherDefault.dispatch({ type: "GUILD_SOUNDBOARD_FETCH" });
     const obj4 = { type: "REQUEST_SOUNDBOARD_SOUNDS", guildIds: guildIdsToFetchSoundsFor };
     DispatcherDefault.dispatch(obj4);
     return promise;
   }
-  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7166);
+  const obj = require("useGuildIdsToFetchSoundsFor");
 }
 let closure_14 = async function _maybeFetchSoundboardSounds(arg0) {
   let disableAnalytics = arg0;
@@ -173,7 +173,7 @@ let closure_15 = async function _uploadSound(arg0) {
           closure_129_6 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -270,7 +270,7 @@ let closure_16 = async function _updateSound(arg0) {
           closure_129_6 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flexDirection", done: true };
+          return { value: "Path", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -450,7 +450,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(6308).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6371).DEFAULT_SOUND_GUILD_ID;
 const Constants = fn(1072);
 ({ Endpoints: closure_6, AnalyticEvents: metroImportDefault } = Constants);
 const UserSettingsConstants = fn(1082);

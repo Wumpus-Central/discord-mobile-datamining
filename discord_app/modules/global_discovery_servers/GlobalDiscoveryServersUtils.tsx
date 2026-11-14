@@ -1,7 +1,7 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
 import util from "../../intl/index.native.tsx";
-import v1 from "../../../_runtime/01266_v1.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
+import v1 from "../../../_runtime/01269_v1.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 
@@ -29,9 +29,9 @@ let closure_13 = async function _navigateToGuild() {
     analyticsLocation: closure_129_4,
     options: closure_129_5,
   } = closure_0);
-  return "flexDirection";
+  return "Path";
 };
-const GlobalDiscoveryServersConstants = fn(8340);
+const GlobalDiscoveryServersConstants = fn(8406);
 ({
   GlobalDiscoveryServerTab: closure_6,
   FEATURED_GUILDS_CACHE_DURATION: metroImportDefault,
@@ -216,15 +216,16 @@ export function fromDiscoverableGuildSearchResult(id) {
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "description",
-    discoverySplash: null,
-    emojis: [],
+    preferredLocale: "isArray",
+    discoverySplash: true,
+    emojis: "/assets/design/components/Icon/native/redesign/generated/images",
   };
   ({
     approximate_presence_count: obj.presenceCount,
     approximate_member_count: obj.memberCount,
     discovery_splash: obj.discoverySplash,
   } = id);
+  obj.emojis = [];
   return obj;
 }
 export function getLanguageCodeFallback() {

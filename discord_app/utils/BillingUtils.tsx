@@ -68,7 +68,7 @@ let closure_6 = async function _createGatewayCheckoutContext(arg0) {
     }
   })();
 };
-const StripeErrorTypes = fn(5056).StripeErrorTypes;
+const StripeErrorTypes = fn(5119).StripeErrorTypes;
 const PaymentGateways = fn(1083).PaymentGateways;
 const set = new Set(["card_error", "api_connection_error", "validation_error"]);
 const size = fn(2);
@@ -89,12 +89,12 @@ export function createGatewayCheckoutContext() {
   }
   return applyArgumentsResult;
 }
-export function captureBillingException(error, merged) {
+export function captureBillingException(error, options) {
   const obj2 = {};
-  merged = Object.assign(merged);
+  const merged = Object.assign(options);
   let tags;
-  if (merged != null) {
-    tags = merged.tags;
+  if (options != null) {
+    tags = options.tags;
   }
   const obj3 = {};
   const merged1 = Object.assign(tags);

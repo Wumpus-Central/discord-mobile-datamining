@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerPager.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05535_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05598_LegacyBaseButton.js";
 import useMediaViewerSources from "../useMediaViewerSources.tsx";
 import MediaViewerItemPresenterDefault from "MediaViewerItemPresenter.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -76,12 +76,12 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
   ref = obj.useRef(null);
   ref1 = obj.useRef(undefined);
   const tmp14 = require("getMediaViewerStateForScreen")(windowWidth, windowHeight, sources[first]);
-  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const tmp7Result = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(1);
+  sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const tmp7Result = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(1);
   overlayEnabled = panGestureConfig.overlayEnabled;
   ({ isInteracting, isClosing } = panGestureConfig);
-  const tmp7Result5 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp7Result5 = require("../../../../../_runtime/metro/01655__.js");
   items = [originLayout, sharedValue1, isClosing];
   _require = undefined;
   importDefault = undefined;
@@ -100,8 +100,8 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
   MediaViewerPagerTsx1.__closure = items1;
   MediaViewerPagerTsx1.__workletHash = 2156756597178;
   MediaViewerPagerTsx1.__initData = tmp19;
-  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(MediaViewerPagerTsx1);
-  const tmp7Result6 = require("../../../../../_runtime/metro/01652__.js");
+  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(MediaViewerPagerTsx1);
+  const tmp7Result6 = require("../../../../../_runtime/metro/01655__.js");
   const mediaViewerPanGesture = require("useMediaViewerPanGesture").useMediaViewerPanGesture(
     panGestureConfig,
     derivedValue,
@@ -262,7 +262,7 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
   MediaViewerPagerTsx4.__closure = items11;
   MediaViewerPagerTsx4.__workletHash = 3436017293841;
   MediaViewerPagerTsx4.__initData = tmp34;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     MediaViewerPagerTsx3,
     MediaViewerPagerTsx4,
   );
@@ -301,7 +301,7 @@ export default noop.memo(function MediaViewerPager(entranceAnimationDriver) {
     maximumZoomScale,
     children: null,
   };
-  const tmp7Result8 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp7Result8 = require("../../../../../_runtime/metro/01655__.js");
   const obj5 = {};
   const tmp10Result = require("ZoomLayoutGesture");
   const merged = Object.assign(onScrollWorklets);

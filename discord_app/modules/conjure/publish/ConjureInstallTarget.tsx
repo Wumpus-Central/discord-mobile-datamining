@@ -1,4 +1,5 @@
 // discord_app/modules/conjure/publish/ConjureInstallTarget.tsx
+import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -63,25 +64,32 @@ let closure_3 = async function _repairConjureGuildHints(arg0, arg1) {
   })();
 };
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/publish/ConjureInstallTarget.tsx");
+let result = size.fileFinishedImporting("modules/conjure/publish/ConjureInstallTarget.tsx");
 
 export function conjureInstallGuildId(project, integrationStatus, guildId) {
-  let prop;
-  if (integrationStatus != null) {
-    prop = integrationStatus.integration_installed;
+  let guild_id1;
+  if (project != null) {
+    guild_id1 = project.guild_id;
   }
-  let guild_id = guildId;
-  if (true === prop) {
-    let guild_id1;
-    if (project != null) {
-      guild_id1 = project.guild_id;
+  if (null == guild_id1) {
+    return guildId;
+  } else {
+    let hasItem = guildId !== project.guild_id;
+    if (hasItem) {
+      const result = ConjureProjectTypes.conjureProjectServerIds(project);
+      hasItem = result.includes(guildId);
     }
-    guild_id = guildId;
-    if (null != guild_id1) {
-      guild_id = project.guild_id;
+    let prop;
+    if (integrationStatus != null) {
+      prop = integrationStatus.integration_installed;
     }
+    if (true === prop) {
+      let guild_id = project.guild_id;
+    } else {
+      guild_id = guildId;
+    }
+    return guild_id;
   }
-  return guild_id;
 }
 export function repairConjureGuildHints() {
   const self = this;

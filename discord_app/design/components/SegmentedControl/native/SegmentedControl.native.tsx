@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_9 = createStyles.createStyles((borderRadius, paddingVertical) => {
   const obj = {
     scrollContentContainer: { flexGrow: 1 },
@@ -98,13 +98,13 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   c7 = tmp4;
   c8 = length;
   let obj = require("useToken");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(-1);
-  const obj2 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(-1);
+  const obj2 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   c9 = sharedValue1;
-  const obj3 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj4 = require("../../../../../_runtime/metro/01652__.js");
+  const obj3 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const obj4 = require("../../../../../_runtime/metro/01655__.js");
   let items1 = [c10, sharedValue1];
   _require = undefined;
   [tmp8, tmp9] = items1;
@@ -133,7 +133,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   SegmentedControlNativeTsx2.__closure = items4;
   SegmentedControlNativeTsx2.__workletHash = 4382534066101;
   SegmentedControlNativeTsx2.__initData = tmp10;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     SegmentedControlNativeTsx1,
     SegmentedControlNativeTsx2,
   );
@@ -142,10 +142,10 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
     const result = _undefined7.set(nativeEvent.nativeEvent.layout.width);
   }, items5);
   c10 = callback;
-  const obj5 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue3 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(activeIndex.get());
+  const obj5 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue3 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(activeIndex.get());
   c11 = sharedValue3;
-  const tmp2Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp2Result = require("../../../../../_runtime/metro/01655__.js");
   const items6 = [animatedStyle, activeIndex, items.length];
   _require = undefined;
   importDefault = undefined;
@@ -159,8 +159,8 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   SegmentedControlNativeTsx3.__closure = items7;
   SegmentedControlNativeTsx3.__workletHash = 609070730457;
   SegmentedControlNativeTsx3.__initData = tmp15;
-  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(SegmentedControlNativeTsx3);
-  const tmp2Result6 = require("../../../../../_runtime/metro/01652__.js");
+  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(SegmentedControlNativeTsx3);
+  const tmp2Result6 = require("../../../../../_runtime/metro/01655__.js");
   const items8 = [c13, derivedValue, sharedValue3, sharedValue1];
   _require = undefined;
   importDefault = undefined;
@@ -177,8 +177,8 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   SegmentedControlNativeTsx4.__closure = items9;
   SegmentedControlNativeTsx4.__workletHash = 2708340331974;
   SegmentedControlNativeTsx4.__initData = tmp19;
-  const derivedValue1 = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(SegmentedControlNativeTsx4);
-  const tmp2Result7 = require("../../../../../_runtime/metro/01652__.js");
+  const derivedValue1 = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(SegmentedControlNativeTsx4);
+  const tmp2Result7 = require("../../../../../_runtime/metro/01655__.js");
   const items10 = [
     closure_14,
     derivedValue1,
@@ -187,7 +187,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
     0.04,
     sharedValue1,
     state.scrollOverflow,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     50,
     0.9,
     num,
@@ -326,7 +326,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   SegmentedControlNativeTsx5.__closure = items11;
   SegmentedControlNativeTsx5.__workletHash = 11542678716522;
   SegmentedControlNativeTsx5.__initData = tmp24;
-  animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(SegmentedControlNativeTsx5);
+  animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(SegmentedControlNativeTsx5);
   const items12 = [items, sharedValue3, callback, tmp4.indicator, animatedStyle];
   const items13 = [items, items.length, num, state, pressedIndex, "experimental_Large" === str, str, setActiveIndex];
   const memo = obj6.useMemo(
@@ -401,8 +401,8 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
       }),
     items13,
   );
-  const Gesture = tmp2(5535).Gesture;
-  const tmp2Result8 = require("../../../../../_runtime/metro/01652__.js");
+  const Gesture = tmp2(5598).Gesture;
+  const tmp2Result8 = require("../../../../../_runtime/metro/01655__.js");
   const items16 = [closure_16, sharedValue, activeIndex];
   _require = undefined;
   importDefault = undefined;
@@ -423,7 +423,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
     closure_17,
     sharedValue,
     activeIndex,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     setActiveIndex,
   ];
   _require = undefined;
@@ -477,7 +477,7 @@ export function SegmentedControl(keyboardShouldPersistTaps) {
   });
   if ("experimental_Large" === str) {
     const obj10 = { gesture: onEndResult, children: tmp57 };
-    tmp56Result = tmp56(tmp2(5535).GestureDetector, obj10);
+    tmp56Result = tmp56(tmp2(5598).GestureDetector, obj10);
   }
   return tmp56Result;
 }

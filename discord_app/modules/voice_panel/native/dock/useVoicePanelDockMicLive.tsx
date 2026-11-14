@@ -20,7 +20,7 @@ export default function useVoicePanelDockMicLive(arg0) {
   if (mute) {
     num = 0;
   }
-  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(num);
+  sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(num);
   const items1 = [mute, sharedValue];
   const effect = noop.useEffect(() => {
     let num = 1;

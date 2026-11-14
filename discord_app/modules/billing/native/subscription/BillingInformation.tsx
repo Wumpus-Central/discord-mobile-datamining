@@ -28,7 +28,7 @@ export function useBillingInformationNative(subscription, subscriptionPeriodStar
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
-    const tmp2Result = tmp2(2171);
+    const tmp2Result = tmp2(2174);
     const billingInformationString = tmp2Result.getBillingInformationString(
       subscription,
       subscriptionPeriodStart,

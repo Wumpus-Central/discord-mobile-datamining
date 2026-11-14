@@ -20,6 +20,7 @@ export function useSelectedScopedDismissibleContent(items1) {
   const scopedDismissibleContentSelection = useGetDismissibleContent.useScopedDismissibleContentSelection(
     items1,
     groupName,
+    obj.deduplicateImpressions,
   );
   ({ visibleContent, markAsDismissed } = scopedDismissibleContentSelection);
   let candidate = null;
@@ -59,6 +60,7 @@ export function useSelectedDismissibleContent(items, arg1) {
   const scopedDismissibleContentSelection = useGetDismissibleContent.useScopedDismissibleContentSelection(
     flatMapResult,
     groupName,
+    obj.deduplicateImpressions,
   );
   ({ visibleContent, markAsDismissed } = scopedDismissibleContentSelection);
   let candidate = null;

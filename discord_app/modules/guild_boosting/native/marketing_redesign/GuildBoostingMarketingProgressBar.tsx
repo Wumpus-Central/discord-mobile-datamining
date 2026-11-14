@@ -1,8 +1,8 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05830_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05893_LinearGradient.js";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
 import GuildBoostingMarketingProgressBarMarker from "GuildBoostingMarketingProgressBarMarker.tsx";
@@ -18,14 +18,14 @@ const View = fn(17).View;
 const BoostedGuildTiers = fn(1072).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   progressBarContainer: {
     display: "flex",
     alignItems: "center",
     width: "100%",
     marginTop: 40,
-    paddingHorizontal: fn(15888).MARKER_DIMENSIONS / 2 + 34,
+    paddingHorizontal: fn(16008).MARKER_DIMENSIONS / 2 + 34,
   },
   progressBar: { height: 54, maxWidth: 660, width: "100%" },
   progressBarScrubber: null,
@@ -38,12 +38,12 @@ const obj3 = {
   alignItems: "center",
   width: "100%",
   marginTop: 40,
-  paddingHorizontal: fn(15888).MARKER_DIMENSIONS / 2 + 34,
+  paddingHorizontal: fn(16008).MARKER_DIMENSIONS / 2 + 34,
 };
 obj2.progressBarScrubber = {
   height: 8,
-  top: fn(15888).MARKER_DIMENSIONS / 2 - 4,
-  marginHorizontal: fn(15888).MARKER_DIMENSIONS / 2 + 2,
+  top: fn(16008).MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: fn(16008).MARKER_DIMENSIONS / 2 + 2,
 };
 let size = {
   borderRadius: 8,
@@ -88,12 +88,12 @@ export default function ProgressBar(guild) {
   );
   importDefault = stateFromStores;
   let obj = require("useStateFromStores");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
   dependencyMap = sharedValue;
   const tmp9 = _slicedToArray(fillFactor.useState(BoostedGuildTiers.NONE), 2);
   const first = tmp9[0];
   _slicedToArray = first;
-  const obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const obj2 = require("../../../../../_runtime/metro/01655__.js");
   const items1 = [closure_13, sharedValue];
   _require = undefined;
   [tmp11, tmp12] = items1;
@@ -107,10 +107,10 @@ export default function ProgressBar(guild) {
   GuildBoostingMarketingProgressBarTsx1.__closure = items2;
   GuildBoostingMarketingProgressBarTsx1.__workletHash = 12429210936939;
   GuildBoostingMarketingProgressBarTsx1.__initData = tmp11;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     GuildBoostingMarketingProgressBarTsx1,
   );
-  const obj4 = require("../../../../../_runtime/metro/01652__.js");
+  const obj4 = require("../../../../../_runtime/metro/01655__.js");
   const items3 = [closure_14, sharedValue];
   _require = undefined;
   [tmp14, tmp15] = items3;
@@ -128,7 +128,7 @@ export default function ProgressBar(guild) {
     BoostedGuildTiers,
     5,
     first,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     tmp9[1],
   ];
   _require = undefined;
@@ -163,7 +163,7 @@ export default function ProgressBar(guild) {
   GuildBoostingMarketingProgressBarTsx3.__closure = items6;
   GuildBoostingMarketingProgressBarTsx3.__workletHash = 1273150541408;
   GuildBoostingMarketingProgressBarTsx3.__initData = tmp16;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     GuildBoostingMarketingProgressBarTsx2,
     GuildBoostingMarketingProgressBarTsx3,
   );
@@ -192,7 +192,7 @@ export default function ProgressBar(guild) {
   const obj8 = { style: null, children: null };
   const items9 = [tmp.progressBarFill, animatedStyle];
   obj8.style = items9;
-  const tmp5Result = require("../../../../../_runtime/metro/01652__.js");
+  const tmp5Result = require("../../../../../_runtime/metro/01655__.js");
   const tmp2Result = LinearGradientDefault;
   let str = "#515359";
   if (!tmp5Result2.isThemeDark(tmp4)) {
@@ -208,7 +208,7 @@ export default function ProgressBar(guild) {
   const items10 = [str, "#AB77F2"];
   obj9.colors = items10;
   obj8.children = closure_8(tmp2Result, obj9);
-  const items11 = [closure_8(_modDef1652.View, obj8), closure_8(View, { style: tmp.progressBarTrack })];
+  const items11 = [closure_8(_modDef1655.View, obj8), closure_8(View, { style: tmp.progressBarTrack })];
   obj7.children = items11;
   const items12 = [
     closure_9(View, obj7),

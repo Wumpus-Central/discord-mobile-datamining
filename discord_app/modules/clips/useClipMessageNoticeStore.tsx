@@ -1,10 +1,16 @@
 // discord_app/modules/clips/useClipMessageNoticeStore.tsx
-import 00560__ from "../../../_runtime/metro/00560__.js";
+import module_560_mod from "../../../_runtime/metro/00560__.js";
 import Dispatcher from "../../Dispatcher.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+let module_560 = module_560_mod;
 let closure_0 = module_560.create(() => ({}));
-const subscription = Dispatcher.subscribe("LOGOUT", () => closure_0.setState({}, true));
+let module_560 = module_560_mod;
+let closure_1 = module_560.create(() => ({}));
+const subscription = Dispatcher.subscribe("LOGOUT", () => {
+  closure_0.setState({}, true);
+  closure_1.setState({}, true);
+});
 const result = size.fileFinishedImporting("modules/clips/useClipMessageNoticeStore.tsx");
 
 export function claimClipMessageNotice(manual_sent, id) {
@@ -27,4 +33,18 @@ export function releaseClipMessageNotice(arg0, arg1) {
 export function useClipMessageNoticeOwner(arg0) {
   closure_0 = arg0;
   return closure_0((arg0) => arg0[closure_0]);
+}
+export function useClipMessageNoticeOwners() {
+  return closure_0((arg0) => arg0);
+}
+export function markClipMessageNoticeShown(arg0, arg1) {
+  if (null == closure_1.getState()[arg0]) {
+    const obj2 = {};
+    obj2[arg0] = arg1;
+    closure_1.setState(obj2);
+  }
+}
+export function useShownClipMessageNotice(arg0) {
+  closure_0 = arg0;
+  return closure_1((arg0) => arg0[closure_0]);
 }

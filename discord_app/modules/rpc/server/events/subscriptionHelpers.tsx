@@ -11,9 +11,9 @@ import QuestStore from "../../../quests/QuestStore.tsx";
 
 require = fn;
 const RPCEvents = fn(1072).RPCEvents;
-const ActivityScreenOrientation = fn(2142).ActivityScreenOrientation;
-const FrameLayoutModes = fn(6957).FrameLayoutModes;
-const ActivityLayoutMode = fn(12610).ActivityLayoutMode;
+const ActivityScreenOrientation = fn(2145).ActivityScreenOrientation;
+const FrameLayoutModes = fn(7020).FrameLayoutModes;
+const ActivityLayoutMode = fn(12706).ActivityLayoutMode;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 

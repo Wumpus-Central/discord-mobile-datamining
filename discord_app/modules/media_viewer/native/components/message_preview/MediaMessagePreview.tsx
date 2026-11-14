@@ -2,9 +2,9 @@
 import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
-import _mod1705 from "../../../../../../_runtime/metro/01705__.js";
-import LegacyBaseButton from "../../../../../../_runtime/05535_LegacyBaseButton.js";
+import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
+import _mod1708 from "../../../../../../_runtime/metro/01708__.js";
+import LegacyBaseButton from "../../../../../../_runtime/05598_LegacyBaseButton.js";
 import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
 import RowGeneratorTypes from "../../../../messages/native/renderer/RowGeneratorTypes.tsx";
@@ -111,7 +111,7 @@ function MeasureMessageAfterEntrance(entranceAnimationDriver) {
   MediaMessagePreviewTsx1.__closure = items1;
   MediaMessagePreviewTsx1.__workletHash = 9963261096022;
   MediaMessagePreviewTsx1.__initData = tmp7;
-  const items2 = [closure_20, _mod1705.scheduleOnRN, tmp4];
+  const items2 = [closure_20, _mod1708.scheduleOnRN, tmp4];
   c0 = undefined;
   c1 = undefined;
   [tmp9, tmp10, tmp11] = items2;
@@ -130,7 +130,7 @@ function MeasureMessageAfterEntrance(entranceAnimationDriver) {
   MediaMessagePreviewTsx2.__closure = items3;
   MediaMessagePreviewTsx2.__workletHash = 11835366583947;
   MediaMessagePreviewTsx2.__initData = tmp9;
-  const animatedReaction = _mod1652.useAnimatedReaction(MediaMessagePreviewTsx1, MediaMessagePreviewTsx2);
+  const animatedReaction = _mod1655.useAnimatedReaction(MediaMessagePreviewTsx1, MediaMessagePreviewTsx2);
   let tmp13 = null;
   if (tmp3) {
     const obj2 = {};
@@ -164,7 +164,7 @@ obj.setOptions({
   forcedTheme: ThemeTypes.DARK,
   forceHideSimpleEmbedContent: true,
 });
-let createStyles = fn(5243);
+let createStyles = fn(5306);
 let closure_17 = createStyles.createStyles({
   dummyLayout: { position: "absolute", top: 0, left: -9999, width: "100%", opacity: 0 },
 });
@@ -174,7 +174,7 @@ let closure_19 = {
 let closure_20 = {
   code: "(function MediaMessagePreviewTsx2(isFinished){let[scheduleOnRN,setHasEntranceFinished]=this.__closure;if(isFinished){scheduleOnRN(setHasEntranceFinished,true);}})",
 };
-createStyles = fn(5243);
+createStyles = fn(5306);
 let closure_22 = createStyles.createNativeStyleProperties({
   reactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT,
   reactionBorderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT,
@@ -183,7 +183,7 @@ let closure_22 = createStyles.createNativeStyleProperties({
   activeReactionBorderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
   activeReactionTextColor: nativeDefault.colors.REACTION_TEXT_REACTED_DEFAULT,
 });
-createStyles = fn(5243);
+createStyles = fn(5306);
 let obj2 = {
   renderCodedLinks: false,
   renderGiftCode: false,

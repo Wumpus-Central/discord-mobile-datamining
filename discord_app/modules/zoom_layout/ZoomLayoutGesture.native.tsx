@@ -1,6 +1,6 @@
 // discord_app/modules/zoom_layout/ZoomLayoutGesture.native.tsx
-import _modDef1652 from "../../../_runtime/metro/01652__.js";
-import LegacyBaseButton from "../../../_runtime/05535_LegacyBaseButton.js";
+import _modDef1655 from "../../../_runtime/metro/01655__.js";
+import LegacyBaseButton from "../../../_runtime/05598_LegacyBaseButton.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -30,11 +30,11 @@ let items2 = [
     code: "(function releaseTranslation_ZoomLayoutGestureNativeTsx3(translation,bound,velocity){let[MAX_PAN_VELOCITY,accessibilityPreferencesSharedValue,withSpring,SPRING_CONFIG,MAX_FLING_OVERSHOOT,withDecay,PAN_DECELERATION,_worklet_10161841114284_init_data]=this.__closure;const position=translation.get();const clamped=Math.max(-bound,Math.min(bound,position));const releaseVelocity=Math.max(-MAX_PAN_VELOCITY,Math.min(MAX_PAN_VELOCITY,velocity));if(accessibilityPreferencesSharedValue.get().reduceMotion){translation.set(clamped);}else if(position!==clamped||bound===0){translation.set(withSpring(clamped,SPRING_CONFIG));}else{const overshoot=Math.min(MAX_FLING_OVERSHOOT,Math.abs(releaseVelocity)*0.02);translation.set(withDecay({velocity:releaseVelocity,deceleration:PAN_DECELERATION,clamp:[-bound-overshoot,bound+overshoot]},function releaseTranslation_ZoomLayoutGestureNativeTsx3([_worklet_10161841114284_init_data,bound,translation,withSpring,SPRING_CONFIG]){const ZoomLayoutGestureNativeTsx2=function(finished){if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));};ZoomLayoutGestureNativeTsx2.__closure=[bound,translation,withSpring,SPRING_CONFIG];ZoomLayoutGestureNativeTsx2.__workletHash=10161841114284;ZoomLayoutGestureNativeTsx2.__initData=_worklet_10161841114284_init_data;return ZoomLayoutGestureNativeTsx2;}([_worklet_10161841114284_init_data,bound,translation,withSpring,SPRING_CONFIG])));}})",
   },
   4000,
-  fn(5487).accessibilityPreferencesSharedValue,
-  fn(5876).withSpring,
+  fn(5550).accessibilityPreferencesSharedValue,
+  fn(5939).withSpring,
   deceleration,
   48,
-  fn(1652).withDecay,
+  fn(1655).withDecay,
   0.998,
   {
     code: "(function ZoomLayoutGestureNativeTsx2(finished){let[bound,translation,withSpring,SPRING_CONFIG]=this.__closure;if(!finished)return;const restingPosition=Math.max(-bound,Math.min(bound,translation.get()));if(restingPosition!==translation.get())translation.set(withSpring(restingPosition,SPRING_CONFIG));})",
@@ -106,7 +106,7 @@ let items3 = [tmp5, tmp6, tmp7, tmp8, tmp9, tmp10, tmp11, tmp12];
 releaseTranslation.__closure = items3;
 releaseTranslation.__workletHash = 13668627211373;
 releaseTranslation.__initData = tmp4;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_9 = createStyles.createStyles({ container: { flex: 1, overflow: "hidden" }, content: { flex: 1 } });
 let closure_10 = {
   code: "(function ZoomLayoutGestureNativeTsx4(){let[cancelAnimation,scale,translateX,translateY]=this.__closure;cancelAnimation(scale);cancelAnimation(translateX);cancelAnimation(translateY);})",
@@ -190,25 +190,25 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
   let memo;
   let memo1;
   const tmp = sharedValue3();
-  const sharedValue = require("../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj = require("../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj2 = require("../../../_runtime/metro/01652__.js");
-  const sharedValue2 = require("../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj3 = require("../../../_runtime/metro/01652__.js");
-  sharedValue3 = require("../../../_runtime/metro/01652__.js").useSharedValue(0);
-  const obj4 = require("../../../_runtime/metro/01652__.js");
-  const sharedValue4 = require("../../../_runtime/metro/01652__.js").useSharedValue({ x: 0, y: 0 });
-  const obj5 = require("../../../_runtime/metro/01652__.js");
-  const sharedValue5 = require("../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj6 = require("../../../_runtime/metro/01652__.js");
-  const sharedValue6 = require("../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj7 = require("../../../_runtime/metro/01652__.js");
-  const sharedValue7 = require("../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj8 = require("../../../_runtime/metro/01652__.js");
-  const sharedValue8 = require("../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj9 = require("../../../_runtime/metro/01652__.js");
-  const sharedValue9 = require("../../../_runtime/metro/01652__.js").useSharedValue({
+  const sharedValue = require("../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj = require("../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj2 = require("../../../_runtime/metro/01655__.js");
+  const sharedValue2 = require("../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj3 = require("../../../_runtime/metro/01655__.js");
+  sharedValue3 = require("../../../_runtime/metro/01655__.js").useSharedValue(0);
+  const obj4 = require("../../../_runtime/metro/01655__.js");
+  const sharedValue4 = require("../../../_runtime/metro/01655__.js").useSharedValue({ x: 0, y: 0 });
+  const obj5 = require("../../../_runtime/metro/01655__.js");
+  const sharedValue5 = require("../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj6 = require("../../../_runtime/metro/01655__.js");
+  const sharedValue6 = require("../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj7 = require("../../../_runtime/metro/01655__.js");
+  const sharedValue7 = require("../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj8 = require("../../../_runtime/metro/01655__.js");
+  const sharedValue8 = require("../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj9 = require("../../../_runtime/metro/01655__.js");
+  const sharedValue9 = require("../../../_runtime/metro/01655__.js").useSharedValue({
     scale: 1,
     x: 0,
     y: 0,
@@ -219,7 +219,7 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
   });
   items = [
     sharedValue4,
-    require("../../../_runtime/metro/01652__.js").cancelAnimation,
+    require("../../../_runtime/metro/01655__.js").cancelAnimation,
     zoomScale,
     sharedValue2,
     sharedValue3,
@@ -792,7 +792,7 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
     }
     return SimultaneousResult;
   }, items14);
-  const obj10 = require("../../../_runtime/metro/01652__.js");
+  const obj10 = require("../../../_runtime/metro/01655__.js");
   const items15 = [closure_23, sharedValue2, sharedValue3, zoomScale];
   _require = undefined;
   importDefault = undefined;
@@ -817,7 +817,7 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
   ZoomLayoutGestureNativeTsx17.__workletHash = 12652072835214;
   ZoomLayoutGestureNativeTsx17.__initData = tmp40;
   const items17 = [sharedValue, sharedValue1, onLayout];
-  const animatedStyle = require("../../../_runtime/metro/01652__.js").useAnimatedStyle(ZoomLayoutGestureNativeTsx17);
+  const animatedStyle = require("../../../_runtime/metro/01655__.js").useAnimatedStyle(ZoomLayoutGestureNativeTsx17);
   const callback4 = obj11.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
     const result1 = sharedValue1.set(nativeEvent.nativeEvent.layout.height);
@@ -1040,7 +1040,7 @@ export default noop.memo(function ZoomLayoutGesture(onCreateGesture) {
   const obj14 = { style: null, children };
   const items19 = [tmp.content, animatedStyle];
   obj14.style = items19;
-  obj13.children = jsx(_modDef1652.View, { style: null, children });
+  obj13.children = jsx(_modDef1655.View, { style: null, children });
   obj12.children = (
     <c4 collapsable={false} style={null} onLayout={callback4}>
       {null}

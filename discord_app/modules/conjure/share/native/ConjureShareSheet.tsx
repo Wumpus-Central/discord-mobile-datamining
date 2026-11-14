@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/share/native/ConjureShareSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
@@ -37,10 +37,10 @@ function ShareLinkRow(project) {
   return closure_9(require("TableRow").TableRow, obj);
 }
 const View = fn(17).View;
-const isProjectOwner = fn(6954).isProjectOwner;
+const isProjectOwner = fn(7017).isProjectOwner;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { body: { gap: nativeDefault.space.PX_16 }, notice: null, noticeText: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.notice = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -249,7 +249,7 @@ export default function ConjureShareSheet(projectId) {
   const callback1 = obj2.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(13229, dependencyMap.paths),
+      asyncRequireImpl(13334, dependencyMap.paths),
       ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY,
       {
         options: memo,

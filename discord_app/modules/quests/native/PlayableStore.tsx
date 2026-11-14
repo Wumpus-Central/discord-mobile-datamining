@@ -70,8 +70,8 @@ function handleVisibilityChange() {
   }
   return tmp;
 }
-const ActivityPanelModes = fn(5896).ActivityPanelModes;
-const asLaunched = fn(6957).asLaunched;
+const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const asLaunched = fn(7020).asLaunched;
 let obj = null;
 let set = new Set();
 const Store = initializeDefault.Store;
@@ -130,11 +130,13 @@ obj = {
     if (null != obj) {
       return false;
     } else {
-      const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
-      value = deliveryAdDecisionByPlacement.get(QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA);
+      let first = AdDeliveryStore.getAdDecisionsForPlacement(QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA)[0];
+      if (first == null) {
+        first = null;
+      }
       let creative;
-      if (value != null) {
-        creative = value.creative;
+      if (first != null) {
+        creative = first.creative;
       }
       const deliveredPlayable = AdDecisionUtils.getDeliveredPlayable(creative);
       if (null != deliveredPlayable) {

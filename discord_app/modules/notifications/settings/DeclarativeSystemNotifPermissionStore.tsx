@@ -6,9 +6,9 @@ import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPer
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
-function handlePermissionsUpdated(result) {
+function handlePermissionsUpdated(disabledCategories) {
   obj = {};
-  const iter = result.disabledSettings[Symbol.iterator]();
+  const iter = disabledCategories.disabledSettings[Symbol.iterator]();
   while (iter !== undefined) {
     obj[iter.next()] = true;
     continue;
@@ -16,6 +16,7 @@ function handlePermissionsUpdated(result) {
   const obj2 = {};
   const merged = Object.assign(obj);
   obj2.disabledSettings = obj;
+  obj2.disabledCategories = disabledCategories.disabledCategories;
   obj = obj2;
 }
 let obj = { disabledSettings: {} };
@@ -43,6 +44,14 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 prototype["isDisabled"] = function isDisabled(arg0) {
   return true === obj.disabledSettings[arg0];
+};
+prototype["isCategoryDisabled"] = function isCategoryDisabled(arg0) {
+  const disabledCategories = obj.disabledCategories;
+  let hasItem;
+  if (disabledCategories != null) {
+    hasItem = disabledCategories.includes(arg0);
+  }
+  return true === hasItem;
 };
 prototype["getDisabledSettings"] = function getDisabledSettings() {
   items = [];

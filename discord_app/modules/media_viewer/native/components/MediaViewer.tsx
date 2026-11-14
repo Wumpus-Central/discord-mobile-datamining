@@ -1,5 +1,5 @@
 // discord_app/modules/media_viewer/native/components/MediaViewer.tsx
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import useBackPressHandlerDefault from "../../../routing/native/useBackPressHandler.tsx";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
@@ -39,12 +39,12 @@ function MediaViewer(arg0) {
     windowWidth: width,
   });
   let obj2 = require("MediaViewerDimensionsContext");
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(0);
-  let obj3 = require("../../../../../_runtime/metro/01652__.js");
-  const sharedValue1 = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj4 = require("../../../../../_runtime/metro/01652__.js");
-  const animatedRef = require("../../../../../_runtime/metro/01652__.js").useAnimatedRef();
-  const obj5 = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(0);
+  let obj3 = require("../../../../../_runtime/metro/01655__.js");
+  const sharedValue1 = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj4 = require("../../../../../_runtime/metro/01655__.js");
+  const animatedRef = require("../../../../../_runtime/metro/01655__.js").useAnimatedRef();
+  const obj5 = require("../../../../../_runtime/metro/01655__.js");
   const isMediaViewerImprovementsEnabled =
     require("MediaViewerImprovementsExperiment").useIsMediaViewerImprovementsEnabled();
   const obj6 = require("MediaViewerImprovementsExperiment");
@@ -85,7 +85,7 @@ function MediaViewer(arg0) {
     isMediaViewerEntranceJankFixEnabled,
     memo,
     sharedValue,
-    require("../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../_runtime/metro/01655__.js").interpolate,
     translatePos,
     tmp10,
   ];
@@ -118,10 +118,10 @@ function MediaViewer(arg0) {
   MediaViewerTsx3.__workletHash = 1493258125771;
   MediaViewerTsx3.__initData = tmp22;
   const obj10 = {};
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(MediaViewerTsx3);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(MediaViewerTsx3);
   let merged = Object.assign(StyleSheet.absoluteFillObject);
   obj10.backgroundColor = "transparent";
-  const obj9 = require("../../../../../_runtime/metro/01652__.js");
+  const obj9 = require("../../../../../_runtime/metro/01655__.js");
   const tmp30 = StyleSheet;
   const items5 = [
     closure_16,
@@ -130,9 +130,9 @@ function MediaViewer(arg0) {
     overlayEnabled,
     isInteracting,
     require("timing/timing").withTiming,
-    require("../../../../../_runtime/metro/01652__.js").Easing,
+    require("../../../../../_runtime/metro/01655__.js").Easing,
     closure_15,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     tmp7,
   ];
   _require = undefined;
@@ -206,13 +206,13 @@ function MediaViewer(arg0) {
   MediaViewerTsx5.__closure = items6;
   MediaViewerTsx5.__workletHash = 1237930573376;
   MediaViewerTsx5.__initData = tmp32;
-  const animatedStyle1 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(MediaViewerTsx5);
-  const tmp8Result = require("../../../../../_runtime/metro/01652__.js");
+  const animatedStyle1 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(MediaViewerTsx5);
+  const tmp8Result = require("../../../../../_runtime/metro/01655__.js");
   const items7 = [
     closure_17,
     overlayEnabled,
     isInteracting,
-    require("../../../../../_runtime/metro/01705__.js").scheduleOnRN,
+    require("../../../../../_runtime/metro/01708__.js").scheduleOnRN,
     tmp7,
   ];
   _require = undefined;
@@ -240,8 +240,8 @@ function MediaViewer(arg0) {
   MediaViewerTsx6.__closure = items8;
   MediaViewerTsx6.__workletHash = 15736275157365;
   MediaViewerTsx6.__initData = tmp43;
-  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(MediaViewerTsx6);
-  const tmp8Result4 = require("../../../../../_runtime/metro/01652__.js");
+  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(MediaViewerTsx6);
+  const tmp8Result4 = require("../../../../../_runtime/metro/01655__.js");
   const items9 = [
     closure_18,
     isMediaViewerEntranceJankFixEnabled,
@@ -249,7 +249,7 @@ function MediaViewer(arg0) {
     translatePos,
     sharedValue1,
     require("timing/timing").withTiming,
-    require("../../../../../_runtime/metro/01652__.js").Easing,
+    require("../../../../../_runtime/metro/01655__.js").Easing,
   ];
   _require = undefined;
   importDefault = undefined;
@@ -288,7 +288,7 @@ function MediaViewer(arg0) {
   MediaViewerTsx7.__closure = items10;
   MediaViewerTsx7.__workletHash = 12989144735041;
   MediaViewerTsx7.__initData = tmp50;
-  const animatedStyle2 = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(MediaViewerTsx7);
+  const animatedStyle2 = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(MediaViewerTsx7);
   StyleSheet = obj.useRef(null);
   const items11 = [sources.length > 1, animatedRef, sharedValue1];
   callback = obj.useCallback(() => {
@@ -328,7 +328,7 @@ function MediaViewer(arg0) {
       const result = useVideoControls.unpauseCurrentVideoIfNeeded();
     }
   }, items14);
-  const tmp8Result5 = require("../../../../../_runtime/metro/01652__.js");
+  const tmp8Result5 = require("../../../../../_runtime/metro/01655__.js");
   const orientationListener = require("DeviceOrientation").useOrientationListener(callback2);
   let tmp63Result = callback(closure_13, {
     entranceAnimationDriver: sharedValue,
@@ -351,7 +351,7 @@ function MediaViewer(arg0) {
   const obj13 = { style: null };
   const items16 = [memo, animatedStyle];
   obj13.style = items16;
-  items15[1] = callback(_modDef1652.View, obj13);
+  items15[1] = callback(_modDef1655.View, obj13);
   const obj14 = { ref: animatedRef, style: null, children: null };
   const items17 = [pan.pan, animatedStyle2];
   obj14.style = items17;
@@ -370,10 +370,10 @@ function MediaViewer(arg0) {
       windowHeight: height,
       zoomed,
     };
-    tmp63Result = tmp63(tmp(15124), obj15);
+    tmp63Result = tmp63(tmp(15238), obj15);
   }
   obj14.children = tmp63Result;
-  items15[2] = callback(_modDef1652.View, obj14);
+  items15[2] = callback(_modDef1655.View, obj14);
   const obj16 = { style: null, pointerEvents: null, children: null };
   const items18 = [tmp4(noop.useState(obj10), 1)[0], animatedStyle1];
   obj16.style = items18;
@@ -383,7 +383,7 @@ function MediaViewer(arg0) {
   }
   obj16.pointerEvents = str;
   obj16.children = renderOverlay(dismiss, overlayEnabled, sharedValue);
-  items15[3] = callback(_modDef1652.View, obj16);
+  items15[3] = callback(_modDef1655.View, obj16);
   items15[4] = callback(HomeIndicatorDefault, {});
   obj11.children = items15;
   const children = ref2(c5, obj11);
@@ -396,7 +396,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1377);
+const PlatformUtils = fn(1380);
 let closure_9 = PlatformUtils.isAndroid();
 let obj = { pan: null };
 let obj3 = {};
@@ -425,8 +425,8 @@ let closure_13 = noop.memo(function MediaViewer(entranceAnimationDriver) {
   const zoomed = entranceAnimationDriver.zoomed;
   let panGestureGenerator;
   ({ onContentSizeChange, onScroll, ref, index } = entranceAnimationDriver);
-  const sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(false);
-  const obj = require("../../../../../_runtime/metro/01652__.js");
+  const sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(false);
+  const obj = require("../../../../../_runtime/metro/01655__.js");
   items = [panGestureGenerator, zoomed, sharedValue];
   _require = undefined;
   importDefault = undefined;
@@ -446,7 +446,7 @@ let closure_13 = noop.memo(function MediaViewer(entranceAnimationDriver) {
   MediaViewerTsx1.__closure = items1;
   MediaViewerTsx1.__workletHash = 3986226128458;
   MediaViewerTsx1.__initData = tmp4;
-  const derivedValue = require("../../../../../_runtime/metro/01652__.js").useDerivedValue(MediaViewerTsx1);
+  const derivedValue = require("../../../../../_runtime/metro/01655__.js").useDerivedValue(MediaViewerTsx1);
   const items2 = [sharedValue];
   const items3 = [sharedValue];
   const callback = renderMedia.useCallback(
@@ -454,7 +454,7 @@ let closure_13 = noop.memo(function MediaViewer(entranceAnimationDriver) {
     items2,
   );
   const callback1 = renderMedia.useCallback(() => sharedValue.set(false), items3);
-  const obj2 = require("../../../../../_runtime/metro/01652__.js");
+  const obj2 = require("../../../../../_runtime/metro/01655__.js");
   const mediaViewerPanGesture = require("useMediaViewerPanGesture").useMediaViewerPanGesture(
     panGestureConfig,
     derivedValue,
@@ -505,8 +505,8 @@ let closure_13 = noop.memo(function MediaViewer(entranceAnimationDriver) {
   MediaViewerTsx2.__closure = items6;
   MediaViewerTsx2.__workletHash = 8145051155624;
   MediaViewerTsx2.__initData = tmp12;
-  const animatedProps = require("../../../../../_runtime/metro/01652__.js").useAnimatedProps(MediaViewerTsx2);
-  const tmpResult2 = require("../../../../../_runtime/metro/01652__.js");
+  const animatedProps = require("../../../../../_runtime/metro/01655__.js").useAnimatedProps(MediaViewerTsx2);
+  const tmpResult2 = require("../../../../../_runtime/metro/01655__.js");
   const obj3 = { gesture: mediaViewerPanGesture.nativeGesture, children: null };
   const obj4 = {
     ref,

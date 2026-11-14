@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LegacyBaseButton from "../../../../_runtime/05535_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/05598_LegacyBaseButton.js";
 import LayerScope from "../../../design/components/Layers/native/LayerScope.native.tsx";
 import spring_spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import cheapWorkletShallowEqual from "../../reanimated/native/cheapWorkletShallowEqual.tsx";
@@ -18,18 +18,18 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SafeAreaDisabledStore from "../../panels/morphable/native/SafeAreaDisabledStore.tsx";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(16897);
+const MediaPlaybackPanelConstants = fn(17020);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: metroImportDefault, MediaPlaybackPanelModes: closure_8 } =
   MediaPlaybackPanelConstants);
-const IS_IOS = fn(11920).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(11919).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(11986).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(11985).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = {
   wrapperAnimationPresets: { opacity: 0 },
   wrapper: { position: "absolute", top: 0, left: 0, zIndex: 1 },
@@ -115,7 +115,7 @@ export default function MediaPlaybackPanelUI() {
   MediaPlaybackPanelUITsx7.__closure = items1;
   MediaPlaybackPanelUITsx7.__workletHash = 14613297430420;
   MediaPlaybackPanelUITsx7.__initData = tmp8;
-  const animatedStyle = _mod1652.useAnimatedStyle(MediaPlaybackPanelUITsx7);
+  const animatedStyle = _mod1655.useAnimatedStyle(MediaPlaybackPanelUITsx7);
   const tmpResult = closure_12();
   const tmp12 = useSafeAreaInsetsDefault();
   const tmp13 = useWindowDimensionsDefault();
@@ -178,16 +178,16 @@ export default function MediaPlaybackPanelUI() {
   MediaPlaybackPanelUITsx2.__closure = items5;
   MediaPlaybackPanelUITsx2.__workletHash = 13340145341918;
   MediaPlaybackPanelUITsx2.__initData = tmp20;
-  const animatedReaction = _mod1652.useAnimatedReaction(MediaPlaybackPanelUITsx1, MediaPlaybackPanelUITsx2);
-  let tmp7Result = _mod1652;
-  const sharedValue = _mod1652.useSharedValue(0);
-  const tmp7Result9 = _mod1652;
-  const sharedValue1 = _mod1652.useSharedValue(0);
-  const tmp7Result10 = _mod1652;
-  const sharedValue2 = _mod1652.useSharedValue(0);
-  const tmp7Result11 = _mod1652;
-  const sharedValue3 = _mod1652.useSharedValue(false);
-  const tmp7Result12 = _mod1652;
+  const animatedReaction = _mod1655.useAnimatedReaction(MediaPlaybackPanelUITsx1, MediaPlaybackPanelUITsx2);
+  let tmp7Result = _mod1655;
+  const sharedValue = _mod1655.useSharedValue(0);
+  const tmp7Result9 = _mod1655;
+  const sharedValue1 = _mod1655.useSharedValue(0);
+  const tmp7Result10 = _mod1655;
+  const sharedValue2 = _mod1655.useSharedValue(0);
+  const tmp7Result11 = _mod1655;
+  const sharedValue3 = _mod1655.useSharedValue(false);
+  const tmp7Result12 = _mod1655;
   const tmp31 = SafeAreaDisabledStore((shouldDisableSafeAreas) => shouldDisableSafeAreas.shouldDisableSafeAreas());
   const items6 = [closure_15, mode, wrapperDimensions, pipAvoidanceSpecs, wrapperOffset, tmp13, tmp12, pipState];
   c0 = undefined;
@@ -323,7 +323,7 @@ export default function MediaPlaybackPanelUI() {
   MediaPlaybackPanelUITsx4.__closure = items9;
   MediaPlaybackPanelUITsx4.__workletHash = 13851512553920;
   MediaPlaybackPanelUITsx4.__initData = tmp40;
-  const animatedReaction1 = _mod1652.useAnimatedReaction(MediaPlaybackPanelUITsx3, MediaPlaybackPanelUITsx4);
+  const animatedReaction1 = _mod1655.useAnimatedReaction(MediaPlaybackPanelUITsx3, MediaPlaybackPanelUITsx4);
   if (mode.get() === React5.PIP) {
     if (IS_IOS) {
       let maskEmptyElevation = tmpResult.maskElevation;
@@ -408,9 +408,9 @@ export default function MediaPlaybackPanelUI() {
       MediaPlaybackPanelUITsx5.__closure = items11;
       MediaPlaybackPanelUITsx5.__workletHash = 9950483941301;
       MediaPlaybackPanelUITsx5.__initData = tmp56;
-      const animatedStyle1 = _mod1652.useAnimatedStyle(MediaPlaybackPanelUITsx5);
+      const animatedStyle1 = _mod1655.useAnimatedStyle(MediaPlaybackPanelUITsx5);
       c1 = animatedStyle1;
-      _mod1652;
+      _mod1655;
       const items12 = [closure_18, , , ,];
       class MediaPlaybackPanelUITsx1 {
         constructor() {
@@ -478,7 +478,7 @@ export default function MediaPlaybackPanelUI() {
         items = [closure_2, _undefined.mask];
         return items;
       }, items16);
-      const tmp7Result14 = _mod1652;
+      const tmp7Result14 = _mod1655;
       [tmp81, tmp82] = items15;
       const tmp80 = _slicedToArray(items15, 2);
       const items17 = [closure_20, tmp2];
@@ -501,11 +501,11 @@ export default function MediaPlaybackPanelUI() {
       MediaPlaybackPanelUITsx8.__closure = items18;
       MediaPlaybackPanelUITsx8.__workletHash = 3864933015194;
       MediaPlaybackPanelUITsx8.__initData = tmp85;
-      const animatedStyle2 = _mod1652.useAnimatedStyle(MediaPlaybackPanelUITsx8);
+      const animatedStyle2 = _mod1655.useAnimatedStyle(MediaPlaybackPanelUITsx8);
       const context1 = noop.useContext(MediaPlaybackPanelStateContextDefault);
       ({ wrapperOffset: wrapperOffset2, pipState: pipState2 } = context1);
       const obj3 = { panGestureEnabled: true, mode: null, pipState: null, wrapperOffset: null };
-      const tmp7Result16 = _mod1652;
+      const tmp7Result16 = _mod1655;
       obj3.mode = useMorphablePanelGesture.MorphablePanelModes.PIP;
       obj3.pipState = pipState2;
       obj3.wrapperOffset = wrapperOffset2;
@@ -533,13 +533,13 @@ export default function MediaPlaybackPanelUI() {
       const items19 = [tmp2.content, animatedStyle2];
       obj9.style = items19;
       obj9.children = jsx(MediaPlaybackPipDefault, {});
-      obj8.children = jsx(_modDef1652.View, { style: null, children: null });
+      obj8.children = jsx(_modDef1655.View, { style: null, children: null });
       obj7.children = jsx(LegacyBaseButton.GestureDetector, {
         gesture: useMorphablePanelGestureDefault(obj3),
         children: null,
       });
-      obj6.children = jsx(_modDef1652.View, { style: tmp82, children: null });
-      obj5.children = jsx(_modDef1652.View, { style: tmp81, children: null });
+      obj6.children = jsx(_modDef1655.View, { style: tmp82, children: null });
+      obj5.children = jsx(_modDef1655.View, { style: tmp81, children: null });
       obj4.children = (
         <tmp92 style={animatedStyle} pointerEvents="box-none">
           {null}
@@ -550,5 +550,5 @@ export default function MediaPlaybackPanelUI() {
     maskEmptyElevation2 = tmpResult.maskEmptyElevation;
   }
   maskEmptyElevation = tmpResult.maskEmptyElevation;
-  const tmp7Result13 = _mod1652;
+  const tmp7Result13 = _mod1655;
 }

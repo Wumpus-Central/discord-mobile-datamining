@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/age_notice/native/AgeNoticeSettingsNotices.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3305 from "../intl/AgeNotice.messages.js";
+import _modDef3353 from "../intl/AgeNotice.messages.js";
 import RegionalFeatureConfigUtils from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeVerificationUtils from "../../AgeVerificationUtils.tsx";
 import AgeVerificationAnalyticsUtils from "../../AgeVerificationAnalyticsUtils.tsx";
@@ -30,7 +30,7 @@ function TeenNotice(noticeType) {
   const obj2 = { type: "info", message: null, role: "status" };
   const intl = noticeType(1113).intl;
   obj2.message = intl.format(noticeType.message, { handleOnAgeGatedContentHook: callback });
-  obj.children = jsx(noticeType(8094).InlineNotice, { type: "info", message: null, role: "status" });
+  obj.children = jsx(noticeType(8159).InlineNotice, { type: "info", message: null, role: "status" });
   return <View style={closure_10().container}>{null}</View>;
 }
 class MessageRequestsTeenNotice {
@@ -77,7 +77,7 @@ function UnconfirmedNotice(message) {
   obj3.text = intl2.string(AGE_CONFIRMATION_NOTICE(1113).t.FDSSia);
   obj3.onPress = callback1;
   obj2.action = obj3;
-  obj.children = jsx(AGE_CONFIRMATION_NOTICE(8094).InlineNotice, {
+  obj.children = jsx(AGE_CONFIRMATION_NOTICE(8159).InlineNotice, {
     type: "info",
     message: null,
     role: "status",
@@ -92,22 +92,22 @@ class MessageRequestsUnconfirmedNotice {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(6778).AGE_NOTICE_SETTINGS_LOCATION;
-const Constants = fn(6847);
+let closure_6 = fn(6841).AGE_NOTICE_SETTINGS_LOCATION;
+const Constants = fn(6910);
 ({ SafetySettingsNoticeAction: metroImportDefault, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/age_notice/native/AgeNoticeSettingsNotices.tsx");
 
 export function ContentFiltersTeenNotice() {
-  return <TeenNotice message={_modDef3305.HBnyJM} noticeType={constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />;
+  return <TeenNotice message={_modDef3353.HBnyJM} noticeType={constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />;
 }
 export { MessageRequestsTeenNotice };
 export function ContentFiltersUnconfirmedNotice() {
-  return <UnconfirmedNotice message={_modDef3305.HGJo1F} />;
+  return <UnconfirmedNotice message={_modDef3353.HGJo1F} />;
 }
 export { MessageRequestsUnconfirmedNotice };
 export function useIsEnabled() {

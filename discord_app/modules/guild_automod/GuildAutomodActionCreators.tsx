@@ -1,8 +1,8 @@
 // discord_app/modules/guild_automod/GuildAutomodActionCreators.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import AutomodFeedback from "AutomodFeedback.tsx";
 import DataUtils from "DataUtils.tsx";

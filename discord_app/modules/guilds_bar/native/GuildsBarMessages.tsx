@@ -48,10 +48,10 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "SKU_PURCHASE_CLEAR_ERROR",
-    externalChildren: "SKU_PURCHASE_SHOW_CONFIRMATION_STEP",
-    expandedChildren: "SKU_PURCHASE_UPDATE_IS_GIFT",
-    children: null,
+    label: "red_car",
+    externalChildren: "automobile",
+    expandedChildren: 1441464323,
+    children: -2041511935,
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -68,9 +68,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "SKU_PURCHASE_CLEAR_ERROR",
-    externalChildren: "SKU_PURCHASE_SHOW_CONFIRMATION_STEP",
-    expandedChildren: "SKU_PURCHASE_UPDATE_IS_GIFT",
-    children: null,
+    label: "red_car",
+    externalChildren: "automobile",
+    expandedChildren: 1441464323,
+    children: -2041511935,
   });
 });

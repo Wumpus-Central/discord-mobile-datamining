@@ -6,7 +6,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod17170 from "../../../../../../_runtime/metro/17170__.js";
+import _mod17293 from "../../../../../../_runtime/metro/17293__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: {
     alignSelf: "stretch",
@@ -111,7 +111,7 @@ export default function TwoFASetupSuccess() {
               ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
               c5 = 1;
               c6 = 1;
-              return { value: "flexDirection", done: true };
+              return { value: "Path", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -127,7 +127,7 @@ export default function TwoFASetupSuccess() {
               c5 = 3;
               c6 = 1;
               const obj5 = {
-                value: setRegistering(6789).finishRegisterWebAuthnCredential(
+                value: setRegistering(6852).finishRegisterWebAuthnCredential(
                   intl.string(setRegistering(1113).t["8H5RmH"]),
                   closure_129_0,
                   closure_129_1,
@@ -145,9 +145,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(17158).close();
+              setError(17281).close();
               c4 = 0;
-              const obj = setError(17158);
+              const obj = setError(17281);
             }
             c4 = 0;
             c6 = 3;
@@ -185,7 +185,7 @@ export default function TwoFASetupSuccess() {
   let obj3 = { source: null, style: null };
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  obj3.source = _mod17170;
+  obj3.source = _mod17293;
   obj3.style = tmp.image;
   items[1] = closure_7(FastImageDefault, obj3);
   let obj4 = { style: tmp.success, variant: "body-lg/semibold", color: "mobile-text-heading-primary", children: null };

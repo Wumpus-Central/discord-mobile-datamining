@@ -74,7 +74,7 @@ export function useCurrentUserCommunicationDisabled(guild_id) {
   }
   const items3 = [prop];
   const tmpResult = id(504);
-  items3[1] = id(5162).isMemberCommunicationDisabled(stateFromStores1);
+  items3[1] = id(5225).isMemberCommunicationDisabled(stateFromStores1);
   return items3;
 }
 export function userCommunicationDisabled(id, guildId) {

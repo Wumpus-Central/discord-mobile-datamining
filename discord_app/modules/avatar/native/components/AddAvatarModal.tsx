@@ -53,7 +53,7 @@ function AddAvatarScreen() {
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(8812).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(8879).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (noop === 1) {
@@ -69,23 +69,23 @@ function AddAvatarScreen() {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(16946);
-              obj11.description = tmp2(9334).generateAvatarDescription();
+              const obj = tmp2(17069);
+              obj11.description = tmp2(9401).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(9334);
+              const obj3 = tmp2(9401);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(9331).setPendingChanges(obj12);
-            const obj4 = tmp2(9331);
+            tmp2(9398).setPendingChanges(obj12);
+            const obj4 = tmp2(9398);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
             }
-            const result = tmp2(8475).announcePendingAvatarChange(str);
+            const result = tmp2(8541).announcePendingAvatarChange(str);
             closure_129_2(undefined);
             c3 = 3;
-            const obj6 = tmp2(8475);
+            const obj6 = tmp2(8541);
           }
           closure_129_0(true);
         }
@@ -100,7 +100,7 @@ function AddAvatarScreen() {
   const tmp4 = _slicedToArray(noop.useState(), 2);
   const selectedAvatar = tmp4[0];
   dependencyMap = tmp6;
-  const bottom = selectedAvatar(1627)().bottom;
+  const bottom = selectedAvatar(1630)().bottom;
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   items = [UserProfileSettingsStore];
   let pendingImage;
@@ -146,7 +146,7 @@ function AddAvatarScreen() {
   obj5.children = items2;
   const items3 = [closure_10(View, obj5), ,];
   const memoizedImageSourceResult = VideoBackground.memoizedImageSource(imageUri);
-  items3[1] = closure_9(selectedAvatar(20172), {
+  items3[1] = closure_9(selectedAvatar(20332), {
     avatarSource: VideoBackground.memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
@@ -172,7 +172,7 @@ function AddAvatarScreen() {
   obj4.children = items3;
   const items4 = [
     closure_10(View, obj4),
-    closure_9(selectedAvatar(20163), { onAvatarSelect: tmp4[1], selectedAvatar }),
+    closure_9(selectedAvatar(20323), { onAvatarSelect: tmp4[1], selectedAvatar }),
   ];
   let obj11 = { style: tmp.buttonContainer, children: null };
   let obj12 = { text: null, grow: true, onPress: null, disabled: null };
@@ -200,7 +200,7 @@ class AddAvatarModal {
           obj.onPress = function onPress() {
             return closure_1_0(dependencyMap[25]).showSkipAvatarModal();
           };
-          return closure_1_9(closure_1_0(7363).HeaderActionButton, obj);
+          return closure_1_9(closure_1_0(7427).HeaderActionButton, obj);
         },
         headerLeft() {
           return null;
@@ -223,13 +223,13 @@ const Constants = fn(1072);
 ({ UPLOAD_MEDIUM_SIZE: closure_8, Fonts, ModalAnimation } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   container: {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     justifyContent: "center",
-    paddingTop: fn(5829).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(5892).NAV_BAR_HEIGHT + 32,
     alignItems: "center",
   },
   headerContainer: { display: "flex", alignItems: "center" },

@@ -19,12 +19,12 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
-const isGuildOwner = fn(5110).isGuildOwner;
+const isGuildOwner = fn(5173).isGuildOwner;
 const Constants = fn(1072);
 ({ PermissionOverrideType: closure_17, HelpdeskArticles: closure_18, Permissions: closure_19 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   containerContent: null,
@@ -88,15 +88,15 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
   let first;
   let tmp = closure_23();
   dependencyMap = tmp;
-  const navigation = channelId(1499).useNavigation();
-  let obj = channelId(1499);
+  const navigation = channelId(1502).useNavigation();
+  let obj = channelId(1502);
   let tmp5 = id;
   items = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let obj2 = channelId(504);
-  const appChannelApplication = channelId(7198).useAppChannelApplication(stateFromStores);
-  let obj3 = channelId(7198);
-  const appChannelBotUserId = channelId(12464).useAppChannelBotUserId(stateFromStores);
+  const appChannelApplication = channelId(7261).useAppChannelApplication(stateFromStores);
+  let obj3 = channelId(7261);
+  const appChannelBotUserId = channelId(12560).useAppChannelBotUserId(stateFromStores);
   let tmp9 = null;
   if (appChannelBotUserId === id) {
     tmp9 = appChannelApplication;
@@ -149,7 +149,7 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
                             c1 = 1;
                             c0 = 1;
                             const obj5 = {
-                              value: v3(8068).checkChattableChannelThresholdMetAfterChannelPermissionDeny(channel, v3),
+                              value: v3(8133).checkChattableChannelThresholdMetAfterChannelPermissionDeny(channel, v3),
                               done: false,
                             };
                             return obj5;
@@ -221,8 +221,8 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
             const intl4 = channelId(section[30]).intl;
             obj6.confirmText = intl4.string(channelId(section[30]).t.psXQHP);
             obj6.onConfirm = function onConfirm() {
-              const obj = id(5949);
-              obj.openURL(id(2185).getArticleURL(constants.PERMISSIONS_TUTORIAL));
+              const obj = id(6012);
+              obj.openURL(id(2188).getArticleURL(constants.PERMISSIONS_TUTORIAL));
             };
             id(section[29]).show(obj6);
             let obj4 = id(section[29]);
@@ -301,19 +301,19 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
           };
           const intl = channelId(1113).intl;
           obj.label = intl.string(channelId(1113).t.i4jeWR);
-          return closure_2_20(channelId(8984).HeaderTextButton, obj);
+          return closure_2_20(channelId(9051).HeaderTextButton, obj);
         },
       };
       navigation.setOptions(obj);
     }
   }, items3);
   let obj5 = { variant: "body-md/medium", color: "text-muted", children: null };
-  let obj4 = channelId(12464);
-  obj5.children = channelId(5891).computeChannelName(stateFromStores, UserStore, RelationshipStore, true);
-  const tmp12 = closure_20(channelId(5866).Text, obj5);
+  let obj4 = channelId(12560);
+  obj5.children = channelId(5954).computeChannelName(stateFromStores, UserStore, RelationshipStore, true);
+  const tmp12 = closure_20(channelId(5929).Text, obj5);
   if (channelId.type === constants.MEMBER) {
     let obj6 = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp12 };
-    let tmp11Result = closure_20(tmp5(10860), obj6);
+    let tmp11Result = closure_20(tmp5(10929), obj6);
   } else {
     let role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;
@@ -324,10 +324,10 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
       str = "";
     }
     let obj7 = { end: true, label: str, start: true, trailing: tmp12 };
-    tmp11Result = closure_20(tmp2(7379).TableRow, obj7);
+    tmp11Result = closure_20(tmp2(7443).TableRow, obj7);
   }
   const obj8 = { style: tmp.container, contentContainerStyle: null, children: null };
-  const items4 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1627)().bottom }];
+  const items4 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1630)().bottom }];
   obj8.contentContainerStyle = items4;
   const items5 = [closure_20(closure_7, { style: tmp.section, children: tmp11Result }), ,];
   let tmp11Result2 = null;
@@ -337,7 +337,7 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
     let intl = tmp2(1113).intl;
     const obj12 = { appName: tmp9.name };
     obj11.message = intl.format(tmp2(1113).t["Xq++FA"], obj12);
-    obj10.children = closure_20(tmp2(8094).InlineNotice, obj11);
+    obj10.children = closure_20(tmp2(8159).InlineNotice, obj11);
     tmp11Result2 = closure_20(closure_7, obj10);
   }
   items5[1] = tmp11Result2;
@@ -357,23 +357,23 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
         const obj = {
           variant: "body-xs/medium",
           color: "text-subtle",
-          children: channelId(19510).renderDescription(description.description),
+          children: channelId(19703).renderDescription(description.description),
         };
-        items = [closure_2_20(channelId(5866).Text, obj)];
+        items = [closure_2_20(channelId(5929).Text, obj)];
         let tmp5Result = null;
         if (false !== tmp) {
           tmp5Result = null;
           if ("" !== tmp) {
             const obj3 = { variant: "body-xs/medium", color: "text-feedback-critical", children: tmp };
-            tmp5Result = closure_2_20(channelId(5866).Text, obj3);
+            tmp5Result = closure_2_20(channelId(5929).Text, obj3);
           }
         }
         items[1] = tmp5Result;
-        const obj2 = channelId(19510);
+        const obj2 = channelId(19703);
         const tmp3Result = closure_2_22(closure_2_21, { children: items });
-        const tmp6Result = channelId(1377);
+        const tmp6Result = channelId(1380);
         const obj4 = {
-          accessible: channelId(1377).isAndroid() || undefined,
+          accessible: channelId(1380).isAndroid() || undefined,
           disabled: false !== tmp,
           label: title,
           subLabel: tmp3Result,
@@ -388,15 +388,15 @@ export default function ChannelSettingsPermissionsOverrides(channelId) {
           disabled: null,
           onValueChange: null,
         };
-        const tmp10 = channelId(1377).isAndroid() || undefined;
-        obj5.savedValue = channelId(19501).getChannelPermissionOverwriteValue(
+        const tmp10 = channelId(1380).isAndroid() || undefined;
+        obj5.savedValue = channelId(19694).getChannelPermissionOverwriteValue(
           permissionOverwrites.permissionOverwrites[overwriteId],
           flag,
         );
         obj5.disabled = false !== tmp;
         obj5.onValueChange = onValueChange;
         obj4.trailing = closure_2_20(closure_2_24, obj5);
-        return closure_2_20(channelId(7379).TableRow, obj4, "row-" + index);
+        return closure_2_20(channelId(7443).TableRow, obj4, "row-" + index);
       }),
     });
     return dependencyMap(metroImportDefault, obj, "section-" + index);

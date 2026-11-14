@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/native/ConjurePublishRating.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
-import asyncRequireImpl from "../../../../../_runtime/02118_asyncRequireImpl.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
+import asyncRequireImpl from "../../../../../_runtime/02121_asyncRequireImpl.js";
 import timing_timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import spring_spring from "../../../../design/animation/reanimated/spring/spring.tsx";
@@ -24,7 +24,7 @@ function Star(rating) {
   }
   dependencyMap = tmp2;
   let tmp = closure_9();
-  sharedValue = require("../../../../../_runtime/metro/01652__.js").useSharedValue(1);
+  sharedValue = require("../../../../../_runtime/metro/01655__.js").useSharedValue(1);
   items = [tmp2, rating, reducedMotion, sharedValue];
   const effect = noop.useEffect(() => {
     let tmp = closure_2;
@@ -33,8 +33,8 @@ function Star(rating) {
     }
     if (tmp) {
       const result = 30 * c0;
-      const obj = _mod1652;
-      const obj2 = _mod1652;
+      const obj = _mod1655;
+      const obj2 = _mod1655;
       const withTimingResult = timing_timing.withTiming(1.35, { duration: 140 });
       const result1 = sharedValue.set(
         obj.withDelay(
@@ -44,7 +44,7 @@ function Star(rating) {
       );
     }
   }, items);
-  let obj = require("../../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../../_runtime/metro/01655__.js");
   const items1 = [closure_10, sharedValue];
   _require = undefined;
   [tmp7, tmp8] = items1;
@@ -62,11 +62,11 @@ function Star(rating) {
   ConjurePublishRatingTsx1.__closure = items2;
   ConjurePublishRatingTsx1.__workletHash = 4902118440263;
   ConjurePublishRatingTsx1.__initData = tmp7;
-  const animatedStyle = require("../../../../../_runtime/metro/01652__.js").useAnimatedStyle(ConjurePublishRatingTsx1);
+  const animatedStyle = require("../../../../../_runtime/metro/01655__.js").useAnimatedStyle(ConjurePublishRatingTsx1);
   if (tmp2) {
-    let StarOutlineIcon = tmp3(10114).StarIcon;
+    let StarOutlineIcon = tmp3(10183).StarIcon;
   } else {
-    StarOutlineIcon = tmp3(10112).StarOutlineIcon;
+    StarOutlineIcon = tmp3(10181).StarOutlineIcon;
   }
   let obj3 = {
     style: tmp.star,
@@ -77,7 +77,7 @@ function Star(rating) {
     onPress: null,
     children: null,
   };
-  let obj2 = require("../../../../../_runtime/metro/01652__.js");
+  let obj2 = require("../../../../../_runtime/metro/01655__.js");
   obj3.accessibilityLabel = require("conjurePublishRatings").conjurePublishRatingOptionLabel(rating);
   obj3.disabled = null != picked;
   obj3.hitSlop = reducedMotion(575).space.PX_8;
@@ -85,13 +85,13 @@ function Star(rating) {
   let obj4 = { style: animatedStyle, children: null };
   colors = reducedMotion(575).colors;
   obj4.children = closure_7(StarOutlineIcon, { size: "sm", color: tmp2 ? colors.ICON_BRAND : colors.ICON_MUTED });
-  obj3.children = closure_7(reducedMotion(1652).View, obj4);
+  obj3.children = closure_7(reducedMotion(1655).View, obj4);
   return closure_7(require("Pressables").PressableOpacity, obj3);
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8 },
   stars: { flexDirection: "row" },
@@ -182,11 +182,11 @@ export default function ConjurePublishRating(arg0) {
         const obj = ActionSheetActionCreatorsDefault;
         const obj2 = { rating: tmp2 };
         obj.openLazy(
-          asyncRequireImpl(13650, dependencyMap.paths),
+          asyncRequireImpl(13754, dependencyMap.paths),
           ConjureRatingFeedbackSheet.CONJURE_RATING_FEEDBACK_SHEET_KEY,
           obj2,
         );
-        const tmp6 = asyncRequireImpl(13650, dependencyMap.paths);
+        const tmp6 = asyncRequireImpl(13754, dependencyMap.paths);
       }
     };
     return closure_1_7(Star, obj, rating);

@@ -1,10 +1,10 @@
 // discord_common/js/packages/markup/native/MarkupParser.tsx
-import _modDef2067 from "../../../../../_runtime/metro/02067__.js";
+import _modDef2070 from "../../../../../_runtime/metro/02070__.js";
 import MarkupASTUtils from "../MarkupASTUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-function saferParse(fn, value, inline, arg3, arg4) {
-  let text = value;
+function saferParse(fn, arg1, inline, arg3, arg4) {
+  let text = arg1;
   let tmp6 = arg3;
   if (arg3 === undefined) {
     tmp6 = null;
@@ -35,10 +35,10 @@ let result = size.fileFinishedImporting("../discord_common/js/packages/markup/na
 
 export default {
   astParserFor(importDefaultResultResult) {
-    closure_0 = _modDef2067.parserFor(importDefaultResultResult);
-    return () => {
-      let str = value;
-      if (value === undefined) {
+    closure_0 = _modDef2070.parserFor(importDefaultResultResult);
+    return (arg0) => {
+      let str = arg0;
+      if (arg0 === undefined) {
         str = "";
       }
       let obj = arg2;
@@ -63,12 +63,12 @@ export default {
     };
   },
   reactParserFor(rules) {
-    closure_0 = _modDef2067.parserFor(rules);
-    let obj2 = _modDef2067;
-    importDefault = obj2.reactFor(_modDef2067.ruleOutput(rules, "react"));
+    closure_0 = _modDef2070.parserFor(rules);
+    let obj2 = _modDef2070;
+    importDefault = obj2.reactFor(_modDef2070.ruleOutput(rules, "react"));
     return () => {
-      let str = value;
-      if (value === undefined) {
+      let str = arg0;
+      if (arg0 === undefined) {
         str = "";
       }
       let flag = arg1;

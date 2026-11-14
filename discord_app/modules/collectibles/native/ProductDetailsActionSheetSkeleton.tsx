@@ -1,17 +1,17 @@
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetSkeleton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 const obj2 = {
   container: { flex: 1 },
   scrollArea: { flex: 1 },
@@ -63,7 +63,7 @@ let obj6 = {
   paddingTop: nativeDefault.space.PX_8,
   paddingBottom: nativeDefault.space.PX_16,
 };
-obj2.purchaseButton = { height: fn(5879).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+obj2.purchaseButton = { height: fn(5942).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 let closure_7 = createStyles.createStyles(obj2);
 let closure_8 = {
   code: "(function ProductDetailsActionSheetSkeletonTsx1(){let[opacity]=this.__closure;return{opacity:opacity.get()};})",
@@ -74,14 +74,14 @@ let result = size.fileFinishedImporting("modules/collectibles/native/ProductDeta
 export default function ProductDetailsActionSheetSkeleton() {
   const tmp = closure_7();
   _require = undefined;
-  const sharedValue = require("../../../../_runtime/metro/01652__.js").useSharedValue(0.3);
+  const sharedValue = require("../../../../_runtime/metro/01655__.js").useSharedValue(0.3);
   _require = sharedValue;
   items = [sharedValue];
   const effect = noop.useEffect(() => {
-    const obj = _mod1652;
+    const obj = _mod1655;
     const result = _undefined.set(obj.withRepeat(timing_timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj = require("../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../_runtime/metro/01655__.js");
   const items1 = [closure_8, sharedValue];
   _require = undefined;
   [tmp5, tmp6] = items1;
@@ -95,7 +95,7 @@ export default function ProductDetailsActionSheetSkeleton() {
   ProductDetailsActionSheetSkeletonTsx1.__closure = items2;
   ProductDetailsActionSheetSkeletonTsx1.__workletHash = 8439265984765;
   ProductDetailsActionSheetSkeletonTsx1.__initData = tmp5;
-  const animatedStyle = require("../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  const animatedStyle = require("../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     ProductDetailsActionSheetSkeletonTsx1,
   );
   const obj3 = { style: tmp.container, children: null };
@@ -105,26 +105,26 @@ export default function ProductDetailsActionSheetSkeleton() {
   ({ block: arr4[0], preview: arr4[1] } = tmp);
   items3[2] = animatedStyle;
   obj5.style = items3;
-  const items4 = [closure_5(_modDef1652.View, obj5)];
+  const items4 = [closure_5(_modDef1655.View, obj5)];
   const obj6 = { style: tmp.info, children: null };
   const obj7 = { style: null };
   const items5 = [, ,];
   ({ block: arr6[0], title: arr6[1] } = tmp);
   items5[2] = animatedStyle;
   obj7.style = items5;
-  const items6 = [closure_5(_modDef1652.View, obj7), ,];
+  const items6 = [closure_5(_modDef1655.View, obj7), ,];
   const obj8 = { style: null };
   const items7 = [, ,];
   ({ block: arr8[0], description: arr8[1] } = tmp);
   items7[2] = animatedStyle;
   obj8.style = items7;
-  items6[1] = closure_5(_modDef1652.View, obj8);
+  items6[1] = closure_5(_modDef1655.View, obj8);
   const obj9 = { style: null };
   const items8 = [, ,];
   ({ block: arr9[0], price: arr9[1] } = tmp);
   items8[2] = animatedStyle;
   obj9.style = items8;
-  items6[2] = closure_5(_modDef1652.View, obj9);
+  items6[2] = closure_5(_modDef1655.View, obj9);
   obj6.children = items6;
   items4[1] = closure_6(View, obj6);
   obj4.children = items4;
@@ -135,7 +135,7 @@ export default function ProductDetailsActionSheetSkeleton() {
   ({ block: arr11[0], purchaseButton: arr11[1] } = tmp);
   items10[2] = animatedStyle;
   obj11.style = items10;
-  obj10.children = closure_5(_modDef1652.View, obj11);
+  obj10.children = closure_5(_modDef1655.View, obj11);
   items9[1] = closure_5(View, obj10);
   obj3.children = items9;
   return closure_6(View, obj3);

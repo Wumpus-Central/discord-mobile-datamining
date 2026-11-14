@@ -11,13 +11,13 @@ require = fn;
 let StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
 const BLACK = nativeDefault.unsafe_rawColors.BLACK;
-let ColorUtils = fn(5240);
+let ColorUtils = fn(5303);
 let closure_6 = ColorUtils.hexWithOpacity(BLACK, 0);
-ColorUtils = fn(5240);
+ColorUtils = fn(5303);
 let closure_7 = ColorUtils.hexWithOpacity(BLACK, 0.2);
-ColorUtils = fn(5240);
+ColorUtils = fn(5303);
 let closure_8 = ColorUtils.hexWithOpacity(BLACK, 0.4);
-ColorUtils = fn(5240);
+ColorUtils = fn(5303);
 let closure_9 = ColorUtils.hexWithOpacity(BLACK, 0.5);
 let closure_10 = {
   code: "(function BackgroundBlurFillNativeTsx1(){let[withSpring,interpolateColor,pressed,fallbackColor,fallbackColorPressed,ON_PRESS_SPRING]=this.__closure;return{backgroundColor:withSpring(interpolateColor(pressed.get(),[0,1],[fallbackColor,fallbackColorPressed]),ON_PRESS_SPRING,'animate-always')};})",
@@ -30,8 +30,8 @@ const result = size.fileFinishedImporting(
   "design/components/experimental/BackgroundBlurView/native/BackgroundBlurFill.native.tsx",
 );
 
-export const BlurTheme = fn(5843).BlurTheme;
-export const BlurStyle = fn(5843).BlurStyle;
+export const BlurTheme = fn(5906).BlurTheme;
+export const BlurStyle = fn(5906).BlurStyle;
 export function BackgroundBlurFill(arg0) {
   ({ blurTheme, blurStyle, tintColor, android_fallbackColor } = arg0);
   ({ style, blurAmount, android_blurTargetViewNativeId } = arg0);
@@ -53,8 +53,8 @@ export function BackgroundBlurFill(arg0) {
   if (tintColor == null) {
     tintColor = noop.useMemo(() => (VisualEffectView.isBlurThemeLight(blurTheme) ? closure_6 : closure_8), items1);
   }
-  obj = blurTheme(5314);
-  const tmpResult = blurTheme(5839);
+  obj = blurTheme(5377);
+  const tmpResult = blurTheme(5902);
   if (android_fallbackColor == null) {
     android_fallbackColor = tmpResult.useToken(
       nativeDefault.colors.BACKGROUND_SCRIM,
@@ -103,8 +103,8 @@ export function BackgroundBlurFillAnimated(arg0) {
   if (tintColor == null) {
     tintColor = noop.useMemo(() => (VisualEffectView.isBlurThemeLight(blurTheme) ? closure_6 : closure_8), items1);
   }
-  obj = blurTheme(5314);
-  const tmpResult = blurTheme(5839);
+  obj = blurTheme(5377);
+  const tmpResult = blurTheme(5902);
   if (android_fallbackColor == null) {
     android_fallbackColor = tmpResult.useToken(
       nativeDefault.colors.BACKGROUND_SCRIM,
@@ -123,7 +123,7 @@ export function BackgroundBlurFillAnimated(arg0) {
   const items2 = [StyleSheet.absoluteFill, style];
   obj3.style = items2;
   let tmp6 = null != animatedProps;
-  tmpResult2 = blurTheme(5843);
+  tmpResult2 = blurTheme(5906);
   if (tmp6) {
     const obj4 = { animatedProps };
     tmp6 = obj4;
@@ -170,7 +170,7 @@ export function BackgroundBlurFillWithPress(style) {
   const items1 = [
     closure_10,
     require("spring/spring").withSpring,
-    require("../../../../../../_runtime/metro/01652__.js").interpolateColor,
+    require("../../../../../../_runtime/metro/01655__.js").interpolateColor,
     pressed,
     token,
     token1,
@@ -197,15 +197,15 @@ export function BackgroundBlurFillWithPress(style) {
   BackgroundBlurFillNativeTsx1.__closure = items2;
   BackgroundBlurFillNativeTsx1.__workletHash = 9525556178957;
   BackgroundBlurFillNativeTsx1.__initData = tmp12;
-  let animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(
+  let animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(
     BackgroundBlurFillNativeTsx1,
   );
-  const tmp2Result13 = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp2Result13 = require("../../../../../../_runtime/metro/01655__.js");
   const items3 = [
     closure_11,
     isBlurDisabledResult,
     require("spring/spring").withSpring,
-    require("../../../../../../_runtime/metro/01652__.js").interpolateColor,
+    require("../../../../../../_runtime/metro/01655__.js").interpolateColor,
     pressed,
     tmp6,
     tmp7,
@@ -242,13 +242,13 @@ export function BackgroundBlurFillWithPress(style) {
   BackgroundBlurFillNativeTsx2.__closure = items4;
   BackgroundBlurFillNativeTsx2.__workletHash = 6005645675156;
   BackgroundBlurFillNativeTsx2.__initData = tmp19;
-  const animatedProps = require("../../../../../../_runtime/metro/01652__.js").useAnimatedProps(
+  const animatedProps = require("../../../../../../_runtime/metro/01655__.js").useAnimatedProps(
     BackgroundBlurFillNativeTsx2,
   );
   const obj2 = { blurTheme, blurStyle: memo, style: null };
   const items5 = [StyleSheet.absoluteFill, style.style];
   const tmp28 = c5;
-  const tmp2Result14 = require("../../../../../../_runtime/metro/01652__.js");
+  const tmp2Result14 = require("../../../../../../_runtime/metro/01655__.js");
   if (!isBlurDisabledResult) {
     animatedStyle = {};
   }

@@ -3,7 +3,7 @@ import applyDefault from "../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 
-const SemanticColorContext = obj(5417);
+const SemanticColorContext = obj(5480);
 require = fn;
 const map = new Map();
 const keys = Object.keys(nativeDefault.colors);

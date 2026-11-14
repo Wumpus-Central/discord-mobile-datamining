@@ -3,19 +3,19 @@ import AppEntryKeyContext from "../window/native/AppEntryKeyContext.tsx";
 import AppEntryKey from "../window/native/AppEntryKey.tsx";
 import updateSharedValueIfChangedDefault from "../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets.native.tsx";
-import module_1652_mod from "../../../_runtime/metro/01652__.js";
+import module_1655_mod from "../../../_runtime/metro/01655__.js";
 import useSafeAreaInsets_mod from "useSafeAreaInsets.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 let obj = { main: null, share: null };
-let module_1652 = module_1652_mod;
+let module_1655 = module_1655_mod;
 let useSafeAreaInsets = useSafeAreaInsets_mod;
 const merged = Object.assign(useSafeAreaInsets.getSafeAreaInsets("main"));
-obj.main = module_1652.makeMutable({});
-let module_1652 = module_1652_mod;
+obj.main = module_1655.makeMutable({});
+let module_1655 = module_1655_mod;
 let useSafeAreaInsets = useSafeAreaInsets_mod;
 const merged1 = Object.assign(useSafeAreaInsets.getSafeAreaInsets("share"));
-obj.share = module_1652.makeMutable({});
+obj.share = module_1655.makeMutable({});
 function _loop(iter) {
   closure_0 = iter;
   subscribeToSafeAreaInsetsDefault((arg0) => {

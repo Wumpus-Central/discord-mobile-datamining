@@ -32,9 +32,9 @@ export function getGuildAcronymCharacter(guildName) {
   }
   return toLocaleUpperCaseResult;
 }
-export function formatCheckpointCompactNumber(stateFromStores1) {
+export function formatCheckpointCompactNumber(checkpointOdysseyCopies) {
   const numberFormat = new Intl.NumberFormat(util.intl.currentLocale, { notation: "compact", compactDisplay: "long" });
-  return numberFormat.format(stateFromStores1);
+  return numberFormat.format(checkpointOdysseyCopies);
 }
 export function getCheckpointOdysseyCopies(stateFromStores1) {
   return stateFromStores1 / 87765;

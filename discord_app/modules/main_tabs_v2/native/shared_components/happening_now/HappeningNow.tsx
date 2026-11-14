@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx
 import apply from "../../../../../../_runtime/00012_apply.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/05535_LegacyBaseButton.js";
+import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
+import LegacyBaseButton from "../../../../../../_runtime/05598_LegacyBaseButton.js";
 import updateSharedValueIfChanged from "../../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import HappeningNowAnalytics from "HappeningNowAnalytics.tsx";
 import happeningNowRankingUtils from "happeningNowRankingUtils.tsx";
@@ -174,7 +174,7 @@ function getItemType(kind) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(17795);
+const HappeningNowConstants = fn(17915);
 ({
   HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: metroImportDefault,
   HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8,
@@ -183,9 +183,9 @@ const HappeningNowConstants = fn(17795);
 } = HappeningNowConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsx = fn(21).jsx;
-const ReanimatedHelperTypes = fn(7782);
+const ReanimatedHelperTypes = fn(7848);
 const context = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue([]));
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   containerInner: {
     paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING,
@@ -194,7 +194,7 @@ let obj = {
   loading: { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 },
 };
 let closure_13 = createStyles.createStyles(obj);
-const Gesture = fn(5535).Gesture;
+const Gesture = fn(5598).Gesture;
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
 const gesture = Gesture.Native().disallowInterruption(true);
 const maintainVisibleContentPosition = { disabled: true };
@@ -215,7 +215,7 @@ export default noop.memo(function HappeningNow(listRef) {
   const obj2 = {
     withoutUserCards: "HermesInternal",
     guildId: "Array",
-    showMultipleActivitiesPerChannel: "message",
+    showMultipleActivitiesPerChannel: "flag_ic",
     isFocused: isFocused1,
   };
   const tmp7 = _slicedToArray(isFocused1(children[15])(listRef.cards, obj2), 2);

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_PlatformUtils from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
-import _mod1652 from "../../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../../_runtime/metro/01655__.js";
 import setAccessibilityFocus from "../../../../a11y/native/setAccessibilityFocus.android.tsx";
 import ThemedGradientDefault from "../../../../client_themes/native/ThemedGradient.tsx";
 import roundToNearestPixelDefault from "../../../../voice_panel/native/utils/roundToNearestPixel.tsx";
@@ -11,7 +11,7 @@ import GuildsBarDefault from "../../../../guilds_bar/native/GuildsBar.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import HomeDrawerStore from "../../../../home_drawer/native/HomeDrawerStore.tsx";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function ContentMaskGradient(offsetX) {
@@ -37,7 +37,7 @@ function ContentMaskGradient(offsetX) {
   HomePanelContentTsx1.__closure = items1;
   HomePanelContentTsx1.__workletHash = 2135715759940;
   HomePanelContentTsx1.__initData = tmp3;
-  const animatedStyle = _mod1652.useAnimatedStyle(HomePanelContentTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(HomePanelContentTsx1);
   const obj3 = { pointerEvents: "none", style: null, children: null };
   const items2 = [absoluteFill.absoluteFill, animatedStyle];
   obj3.style = items2;
@@ -48,7 +48,7 @@ function ContentMaskGradient(offsetX) {
     mix: true,
     componentStyles: { height: useWindowDimensionsDefault({ ignoreKeyboard: true }).height },
   });
-  return React6(_modDef1652.View, obj3);
+  return React6(_modDef1655.View, obj3);
 }
 function HomeDrawerPanelContent() {
   const tmp2 = closure_11();
@@ -72,7 +72,7 @@ function HomeDrawerPanelContent() {
     closure_14,
     isClientThemeOrCustomThemeActive,
     tmp9,
-    require("../../../../../../_runtime/metro/01652__.js").interpolateColor,
+    require("../../../../../../_runtime/metro/01655__.js").interpolateColor,
     panelTranslateX,
     token,
     token1,
@@ -111,7 +111,7 @@ function HomeDrawerPanelContent() {
   HomePanelContentTsx2.__closure = items1;
   HomePanelContentTsx2.__workletHash = 7998740320749;
   HomePanelContentTsx2.__initData = tmp14;
-  const animatedStyle = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HomePanelContentTsx2);
+  const animatedStyle = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(HomePanelContentTsx2);
   obj3.useRef(false);
   let items2 = [drawerOpen];
   const effect = obj3.useEffect(() => {
@@ -126,15 +126,15 @@ function HomeDrawerPanelContent() {
     }
     obj = utils_PlatformUtils;
   }, items2);
-  const obj8 = require("../../../../../../_runtime/metro/01652__.js");
+  const obj8 = require("../../../../../../_runtime/metro/01655__.js");
   const items3 = [
     closure_15,
-    require("../../../../../../_runtime/metro/01652__.js").interpolate,
+    require("../../../../../../_runtime/metro/01655__.js").interpolate,
     panelTranslateX,
     require("useHomeDrawerGesture").INITIAL_OPEN_WIDTH,
-    require("../../../../../../_runtime/metro/01652__.js").Extrapolation,
+    require("../../../../../../_runtime/metro/01655__.js").Extrapolation,
     isClientThemeOrCustomThemeActive,
-    require("../../../../../../_runtime/metro/01652__.js").interpolateColor,
+    require("../../../../../../_runtime/metro/01655__.js").interpolateColor,
     tmp9,
     token,
     token1,
@@ -180,7 +180,7 @@ function HomeDrawerPanelContent() {
   HomePanelContentTsx3.__closure = items4;
   HomePanelContentTsx3.__workletHash = 9398673657751;
   HomePanelContentTsx3.__initData = tmp23;
-  const animatedStyle1 = require("../../../../../../_runtime/metro/01652__.js").useAnimatedStyle(HomePanelContentTsx3);
+  const animatedStyle1 = require("../../../../../../_runtime/metro/01655__.js").useAnimatedStyle(HomePanelContentTsx3);
   const obj9 = { style: null, children: null };
   const items5 = [tmp2.container, animatedStyle];
   obj9.style = items5;
@@ -200,23 +200,23 @@ function HomeDrawerPanelContent() {
     tmp34Result = closure_9(ContentMaskGradient, obj12);
   }
   obj11.children = tmp34Result;
-  items7[1] = closure_9(_modDef1652.View, obj11);
+  items7[1] = closure_9(_modDef1655.View, obj11);
   let tmp34Result2 = null;
   if (doesLandOnHomeDrawer) {
-    tmp34Result2 = closure_9(tmp11(18999), {});
+    tmp34Result2 = closure_9(tmp11(19135), {});
   }
   items7[2] = tmp34Result2;
   obj10.children = items7;
-  obj9.children = closure_10(_modDef1652.View, obj10);
-  return closure_9(_modDef1652.View, obj9);
+  obj9.children = closure_10(_modDef1655.View, obj10);
+  return closure_9(_modDef1655.View, obj9);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const DM_WIDTH = fn(1072).DM_WIDTH;
-const GUILD_LIST_WIDTH = fn(18906).GUILD_LIST_WIDTH;
+const GUILD_LIST_WIDTH = fn(19060).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let closure_11 = createStyles.createStyles((width) => {
   const obj = {
     container: { flex: 1 },

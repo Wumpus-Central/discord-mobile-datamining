@@ -63,6 +63,7 @@ const items1 = [
   dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX,
   dismissible_content.DismissibleContent.CONTEXTUAL_REFERRAL_GDM_MEMBER_LIST_EMBED,
   dismissible_content.DismissibleContent.CONTEXTUAL_REFERRAL_SERVER_CHANNEL_MEMBER_LIST_EMBED,
+  dismissible_content.DismissibleContent.LAUNCH_ACCOUNT_LINKING_CAMPAIGN_ACTION_SHEET,
 ];
 const items2 = [
   dismissible_content.DismissibleContent.GIFTING_PROMOTION_ICON,
@@ -74,7 +75,6 @@ const items2 = [
   dismissible_content.DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
   dismissible_content.DismissibleContent.DISCOUNT_OFFER_ACTION_SHEET,
   dismissible_content.DismissibleContent.MOBILE_PREMIUM_TRIAL_OFFER_ACTION_SHEET,
-  dismissible_content.DismissibleContent.PREMIUM_ORBS_REWARDS_DROP_POPOVER,
   dismissible_content.DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2,
   dismissible_content.DismissibleContent.REFERRAL_PROGRAM_POPOVER_RECURRING_REMINDER,
   dismissible_content.DismissibleContent.MOBILE_REFERRAL_PROGRAM_BOTTOM_SHEET_ENTRYPOINT,

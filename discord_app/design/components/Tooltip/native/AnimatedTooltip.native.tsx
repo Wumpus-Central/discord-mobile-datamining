@@ -1,5 +1,5 @@
 // discord_app/design/components/Tooltip/native/AnimatedTooltip.native.tsx
-import _modDef1652 from "../../../../../_runtime/metro/01652__.js";
+import _modDef1655 from "../../../../../_runtime/metro/01655__.js";
 import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
 import Tooltip from "Tooltip.native.tsx";
 import TooltipConstants from "TooltipConstants.native.tsx";
@@ -21,7 +21,7 @@ function renderTooltipItem(arg0, arg1) {
     tmpResult = jsx(Tooltip.Tooltip, {});
   }
   obj.children = tmpResult;
-  return jsx(_modDef1652.View, { style: null, pointerEvents: "box-none", children: null });
+  return jsx(_modDef1655.View, { style: null, pointerEvents: "box-none", children: null });
 }
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Tooltip/native/AnimatedTooltip.native.tsx");

@@ -2,20 +2,18 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
-import _modDef3269 from "../../../Checkpoint2026.messages.js";
+import _modDef3317 from "../../../Checkpoint2026.messages.js";
 import useWindowSizeClassifier from "../../../../screen/native/useWindowSizeClassifier.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
 import CheckpointActionCreators from "../../../CheckpointActionCreators.tsx";
 import CheckpointTextDefault from "../CheckpointText.tsx";
-import TraitOptionListDefault from "TraitOptionList.tsx";
-import TraitOptionDetails from "TraitOptionDetails.tsx";
 import useTraitPickerOptions from "../../../hooks/useTraitPickerOptions.tsx";
+import TraitOptionListDefault from "TraitOptionList.tsx";
+import TraitOptionDetailsDefault from "TraitOptionDetails.tsx";
 import useAutoSelectTraitOption from "../../../hooks/useAutoSelectTraitOption.tsx";
 import FinalizeTraitTabs from "FinalizeTraitTabs.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
-
-const TraitOptionDetailsDefault = TraitOptionDetails;
 
 require = fn;
 function EarnedCountHeader(customizationOption) {
@@ -29,7 +27,7 @@ function EarnedCountHeader(customizationOption) {
     "" +
     customizationOptionName +
     ", " +
-    intl.formatToPlainString(_modDef3269.Vfq58K, {
+    intl.formatToPlainString(_modDef3317.Vfq58K, {
       earnedCount,
       totalCount,
       countHook(arg0) {
@@ -45,7 +43,7 @@ function EarnedCountHeader(customizationOption) {
     children: null,
   };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3269.Vfq58K, {
+  obj3.children = intl2.format(_modDef3317.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(children, arg1) {
@@ -55,10 +53,10 @@ function EarnedCountHeader(customizationOption) {
   return metroImportDefault(Text_Text.Text, obj3);
 }
 function TraitPickerDetails(arg0) {
-  ({ asset, descriptionVisibility } = arg0);
+  ({ asset, hideRarity } = arg0);
   return metroImportDefault(hasOwnProperty, {
     style: closure_10().details,
-    children: metroImportDefault(TraitOptionDetailsDefault, { asset, descriptionVisibility }),
+    children: metroImportDefault(TraitOptionDetailsDefault, { asset, hideRarity }),
   });
 }
 function TraitPickerPortrait(selectedAsset) {
@@ -66,16 +64,14 @@ function TraitPickerPortrait(selectedAsset) {
   ({ header, optionList, isRarityVisible } = selectedAsset);
   const obj = { style: closure_10().container, children: null };
   items = [header, optionList];
-  if (null == selectedAsset) {
-    items[2] = tmp3;
-    obj.children = items;
-    return tmp(tmp2, obj);
-  } else {
-    const obj2 = { asset: selectedAsset, descriptionVisibility: null };
-    const DescriptionVisibility = TraitOptionDetails.DescriptionVisibility;
-    obj2.descriptionVisibility = isRarityVisible ? DescriptionVisibility.VISIBLE : DescriptionVisibility.INVISIBLE;
-    metroImportDefault(TraitPickerDetails, obj2);
+  let tmp3 = null != selectedAsset;
+  if (tmp3) {
+    const obj2 = { asset: selectedAsset, hideRarity: !isRarityVisible };
+    tmp3 = metroImportDefault(TraitPickerDetails, obj2);
   }
+  items[2] = tmp3;
+  obj.children = items;
+  return React5(hasOwnProperty, obj);
 }
 function TraitPickerLandscape(selectedAsset) {
   selectedAsset = selectedAsset.selectedAsset;
@@ -89,50 +85,41 @@ function TraitPickerLandscape(selectedAsset) {
     ,
     ,
   ];
-  if (null == selectedAsset) {
-    items[3] = tmp6;
-    items[4] = optionList;
-    const obj4 = { style: tmp.landscapeGap };
-    items[5] = metroImportDefault(hasOwnProperty, obj4);
-    obj.children = items;
-    return React5(React4, obj);
-  } else {
-    let tmp4Result2 = TraitPickerDetails;
-    let obj5 = { asset: selectedAsset, descriptionVisibility: null };
-    const prop = { children: null };
-    obj5.descriptionVisibility = isRarityVisible ? prop.VISIBLE : prop.GONE;
-    obj5 = [,];
-    obj5[0] = metroImportDefault(tmp4Result2, obj5);
+  let tmp2Result = null != selectedAsset;
+  if (tmp2Result) {
+    const obj4 = { children: null };
+    const obj5 = { asset: selectedAsset, hideRarity: !isRarityVisible };
+    const items1 = [metroImportDefault(TraitPickerDetails, obj5)];
     const obj6 = { style: tmp.landscapeGap };
-    tmp4Result2 = metroImportDefault(hasOwnProperty, obj6);
-    obj5[1] = tmp4Result2;
-    prop.children = obj5;
-    React5(React6, prop);
-    const tmp11 = isRarityVisible ? prop.VISIBLE : prop.GONE;
-    const tmp4Result = metroImportDefault(tmp4Result2, obj5);
+    items1[1] = metroImportDefault(hasOwnProperty, obj6);
+    obj4.children = items1;
+    tmp2Result = React5(React6, obj4);
   }
-  const obj2 = { style: tmp.landscapeGap };
-  const obj3 = { style: tmp.landscapeGap };
+  items[3] = tmp2Result;
+  items[4] = optionList;
+  items[5] = metroImportDefault(hasOwnProperty, { style: tmp.landscapeGap });
+  obj.children = items;
+  return React5(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const rarityOrder = fn(6314).CHECKPOINT_RARITY_ORDER_MOBILE;
+const rarityOrder = fn(6377).CHECKPOINT_RARITY_ORDER_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
-  container: { gap: fn(14417).TRAIT_OPTION_SPACING },
+  container: { gap: fn(14539).TRAIT_OPTION_SPACING },
   earnedRow: null,
   landscapeGap: null,
   details: null,
   landscapeScrollContent: null,
 };
-let obj3 = { gap: fn(14417).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(14417).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(14417).CONTENT_INSET };
+let obj3 = { gap: fn(14539).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(14539).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(14539).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(14417).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(14539).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -186,7 +173,7 @@ export default function TraitPicker(selectedOptionId) {
     const obj6 = {
       activeCustomizationOption: customizationOption,
       onSelectOption: onSelectFinalizeOption,
-      disableSwitching: isCurrentTraitBlocked,
+      isCurrentTraitBlocked,
       disabled,
     };
     let tmp8Result = metroImportDefault(FinalizeTraitTabs.FinalizeTraitTabs, obj6);

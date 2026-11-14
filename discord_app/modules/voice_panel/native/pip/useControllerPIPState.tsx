@@ -13,11 +13,11 @@ import PIPSpeakerStore from "PIPSpeakerStore.tsx";
 
 const require = globalThis.__r;
 
-const useExternalPipSelectedTileDefault = tmp6(19785);
+const useExternalPipSelectedTileDefault = tmp6(19974);
 require = fn;
-const VoicePanelModes = fn(11919).VoicePanelModes;
-const ActivityPanelModes = fn(5896).ActivityPanelModes;
-const asLaunched = fn(6957).asLaunched;
+const VoicePanelModes = fn(11985).VoicePanelModes;
+const ActivityPanelModes = fn(5959).ActivityPanelModes;
+const asLaunched = fn(7020).asLaunched;
 let closure_12 = {
   code: "(function useControllerPIPStateTsx1(){let[scale,pipAvoidanceSpecs,windowDimensions,safeArea]=this.__closure;return{scale:scale.get(),pipAvoidanceSpecs:pipAvoidanceSpecs.get(),windowDimensions:windowDimensions.get(),safeArea:safeArea.get()};})",
 };
@@ -37,15 +37,15 @@ export function useControllerPIPState(channelId) {
   const mode = channelId.mode;
   _slicedToArray = undefined;
   ({ windowDimensions, pipAvoidanceSpecs, safeArea } = channelId);
-  let obj = require("../../../../../_runtime/metro/01652__.js");
+  let obj = require("../../../../../_runtime/metro/01655__.js");
   const sharedValue = obj.useSharedValue(require("VoicePanelPIPScaleCache").getVoicePanelPIPScaleCached());
   const size = {
-    id: "ip",
+    id: "disabled",
     mode: "isArray",
     width: false,
     height: null,
-    containerHeight: 6825665,
-    showSecondaryPIP: 30,
+    containerHeight: "yes",
+    showSecondaryPIP: null,
     scale: sharedValue,
   };
   const ref = noop.useRef(size);
@@ -217,7 +217,7 @@ export function useControllerPIPState(channelId) {
   useControllerPIPStateTsx2.__closure = items6;
   useControllerPIPStateTsx2.__workletHash = 16873305114518;
   useControllerPIPStateTsx2.__initData = tmp24;
-  const animatedReaction = require("../../../../../_runtime/metro/01652__.js").useAnimatedReaction(
+  const animatedReaction = require("../../../../../_runtime/metro/01655__.js").useAnimatedReaction(
     useControllerPIPStateTsx1,
     useControllerPIPStateTsx2,
   );

@@ -1,6 +1,6 @@
 // discord_app/modules/pinot/native/PinotChannelLabel.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3337 from "../Pinot.messages.js";
+import _modDef3385 from "../Pinot.messages.js";
 import PinotChannelLabelAnchor from "PinotChannelLabelAnchor.tsx";
 import useAttachPinotMemberCoachmark from "useAttachPinotMemberCoachmark.tsx";
 import ChannelHeaderShared from "../../main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx";
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/pinot/native/PinotChannelLabe
 
 export function getPinotChannelLabelText() {
   const intl = util.intl;
-  return intl.string(_modDef3337.uneDIi);
+  return intl.string(_modDef3385.uneDIi);
 }
 export function PinotChannelLabel(channel) {
   channel = channel.channel;
@@ -38,7 +38,7 @@ export function PinotChannelLabel(channel) {
   };
   const obj4 = { children: null };
   const intl = util.intl;
-  obj4.children = intl.string(_modDef3337.uneDIi);
+  obj4.children = intl.string(_modDef3385.uneDIi);
   obj3.children = jsx(ChannelHeaderShared.SubtitleText, { children: null });
   return (
     <View

@@ -1,16 +1,16 @@
 // discord_app/design/void/CarouselPagination/native/CarouselPagination.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import timing_timing from "../../../animation/reanimated/timing/timing.tsx";
 import Easing_Easing from "../../Easing/native/Easing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj = {
   container: {
     position: "relative",
@@ -61,12 +61,12 @@ let closure_8 = noop.memo(function Dot(active) {
   CarouselPaginationTsx1.__closure = items1;
   CarouselPaginationTsx1.__workletHash = 5504332160978;
   CarouselPaginationTsx1.__initData = tmp4;
-  const derivedValue = _mod1652.useDerivedValue(CarouselPaginationTsx1);
+  const derivedValue = _mod1655.useDerivedValue(CarouselPaginationTsx1);
   const items2 = [
     closure_7,
-    _mod1652.interpolate,
+    _mod1655.interpolate,
     derivedValue,
-    _mod1652.interpolateColor,
+    _mod1655.interpolateColor,
     tmp.dot.backgroundColor,
     nativeDefault.unsafe_rawColors.BRAND_500,
   ];
@@ -94,11 +94,11 @@ let closure_8 = noop.memo(function Dot(active) {
   CarouselPaginationTsx2.__closure = items3;
   CarouselPaginationTsx2.__workletHash = 9539116065290;
   CarouselPaginationTsx2.__initData = tmp10;
-  const animatedStyle = _mod1652.useAnimatedStyle(CarouselPaginationTsx2);
+  const animatedStyle = _mod1655.useAnimatedStyle(CarouselPaginationTsx2);
   const obj2 = { style: null };
   const items4 = [tmp.dot, animatedStyle];
   obj2.style = items4;
-  return jsx(_modDef1652.View, { style: null });
+  return jsx(_modDef1655.View, { style: null });
 });
 size = fn(2);
 const result = size.fileFinishedImporting("design/void/CarouselPagination/native/CarouselPagination.tsx");

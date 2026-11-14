@@ -1,13 +1,13 @@
 // discord_app/modules/safety_hub/SafetyWarningAgeUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2166 from "../../../_runtime/metro/02166__.js";
+import _modDef2169 from "../../../_runtime/metro/02169__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyWarningAgeUtils.tsx");
 
 export function getDaysAgo(parsed) {
-  const obj = _modDef2166();
-  return obj.diff(_modDef2166.unix(parsed), "days");
+  const obj = _modDef2169();
+  return obj.diff(_modDef2169.unix(parsed), "days");
 }
 export function formatSafetyWarningAge(daysAgo, isSafetyWarningAgeTextEnabled) {
   if (isSafetyWarningAgeTextEnabled) {

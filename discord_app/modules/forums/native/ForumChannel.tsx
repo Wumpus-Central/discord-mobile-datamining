@@ -2,7 +2,7 @@
 import TTITrackerDefault from "../../tti_analytics/TTITracker.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02118_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02121_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
@@ -145,7 +145,7 @@ function SortAndViewOptions(channel) {
   items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15014, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15128, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -161,12 +161,12 @@ function SortAndViewOptions(channel) {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_15(id(5873).Button, {
+  return closure_15(id(5936).Button, {
     variant: "secondary",
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_15(id(13382).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_15(id(12100).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
@@ -176,13 +176,13 @@ function TagFilter(channel) {
   obj.text = intl.string(channel(1113).t["112vVE"]);
   obj.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15015, dependencyMap.paths),
+      asyncRequireImpl(15129, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
   };
-  obj.icon = closure_15(channel(9454).TagIcon, { size: "xxs" });
-  return closure_15(channel(5873).Button, obj);
+  obj.icon = closure_15(channel(9521).TagIcon, { size: "xxs" });
+  return closure_15(channel(5936).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";
@@ -471,10 +471,10 @@ function onCreatePostWithoutPermission() {
   ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(14498).useForumChannelStore;
+const useForumChannelStore = fn(14610).useForumChannelStore;
 const Constants = fn(1072);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
-let closure_14 = fn(11942).getVoicePanelDockButtonsTop;
+let closure_14 = fn(12009).getVoicePanelDockButtonsTop;
 const Fonts = fn(1083).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
@@ -491,7 +491,7 @@ let items = [
   "loading_section",
 ];
 const set = new Set(items);
-const createStyles = fn(5243);
+const createStyles = fn(5306);
 let obj2 = {
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerRow: {
@@ -566,7 +566,7 @@ export default function ForumChannel(channel) {
   let obj3 = { channelId: channel.id };
   let tmp2Result = channel(analyticsLocations[18]);
   showMemberVerificationGate = channel(analyticsLocations[50]).useShowMemberVerificationGate(channel.guild_id);
-  const tmp2Result6 = channel(analyticsLocations[50]);
+  const tmp2Result7 = channel(analyticsLocations[50]);
   const items1 = [DraftStore];
   const items2 = [channel.id];
   stateFromStores1 = channel(analyticsLocations[20]).useStateFromStores(
@@ -574,10 +574,10 @@ export default function ForumChannel(channel) {
     () => DraftStore.getThreadSettings(channel.id),
     items2,
   );
-  const tmp2Result7 = channel(analyticsLocations[20]);
+  const tmp2Result8 = channel(analyticsLocations[20]);
   const tmp11 = require("useShowChannelOptInNotice")(channel);
   const pinotMemberNotice = channel(analyticsLocations[52]).usePinotMemberNotice(channel, "mobile_forum_channel");
-  const tmp2Result8 = channel(analyticsLocations[52]);
+  const tmp2Result9 = channel(analyticsLocations[52]);
   const items3 = [channel.id];
   const isForumChannelSearchActive = channel(analyticsLocations[53]).useIsForumChannelSearchActive(channel.id);
   const effect = searchQuery.useEffect(
@@ -687,11 +687,11 @@ export default function ForumChannel(channel) {
     tmp17 = tmp18;
   }
   const insets = tmp7(tmp3[63])({ includeKeyboardHeight: true }).insets;
-  const tmp2Result9 = channel(analyticsLocations[53]);
+  const tmp2Result10 = channel(analyticsLocations[53]);
   const clientThemesOverride = channel(analyticsLocations[15]).useClientThemesOverride(tmp.noHeight);
-  const tmp2Result10 = channel(analyticsLocations[15]);
-  const tmp21 = require("useVoicePanelDockHeight")() > 0;
-  if (tmp21) {
+  const tmp2Result11 = channel(analyticsLocations[15]);
+  const chatDockHeight = channel(analyticsLocations[64]).useChatDockHeight();
+  if (chatDockHeight > 0) {
     const _Math = Math;
     let bottom = Math.max(tmp22, insets.bottom);
   } else {
@@ -739,7 +739,7 @@ export default function ForumChannel(channel) {
   items6[3] = closure_15(showMemberVerificationGate, obj11);
   const obj12 = { style: tmp.container, children: null };
   const obj13 = { channel, paddingBottom: null, searchQuery: null };
-  if (tmp21) {
+  if (chatDockHeight > 0) {
     let bottom2 = sum + tmp2(tmp3[66]).FAB_BUTTON_SIZE;
   } else {
     bottom2 = insets.bottom;
@@ -760,7 +760,7 @@ export default function ForumChannel(channel) {
   };
   const intl = tmp2(tmp3[17]).intl;
   obj14.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-  obj14.icon = require("../../../../_runtime/metro/15024__.js");
+  obj14.icon = require("../../../../_runtime/metro/15138__.js");
   obj14.disabled = tmp17;
   obj14.positionBottom = sum;
   obj14.onPress = callback1;

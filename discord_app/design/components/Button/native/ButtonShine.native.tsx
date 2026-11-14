@@ -1,6 +1,6 @@
 // discord_app/design/components/Button/native/ButtonShine.native.tsx
 import _modDef671 from "../../../../../_runtime/metro/00671__.js";
-import _mod1652 from "../../../../../_runtime/metro/01652__.js";
+import _mod1655 from "../../../../../_runtime/metro/01655__.js";
 import createStyles from "../../Styles/native/createStyles.tsx";
 import shared from "../../../shared.tsx";
 import timing_timing from "../../../animation/reanimated/timing/timing.tsx";
@@ -8,7 +8,7 @@ import ButtonHooks from "ButtonHooks.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const _modDef1652 = _mod1652;
+const _modDef1655 = _mod1655;
 
 require = fn;
 function useShineEffectStyles(arg0, variant) {
@@ -22,10 +22,10 @@ function useShineEffectStyles(arg0, variant) {
     120,
     noop.useContext(shared.AccessibilityPreferencesContext).reducedMotion.enabled,
     56,
-    _mod1652.withRepeat,
-    _mod1652.withSequence,
+    _mod1655.withRepeat,
+    _mod1655.withSequence,
     timing_timing.withTiming,
-    _mod1652.withDelay,
+    _mod1655.withDelay,
     750,
     2000,
   ];
@@ -95,7 +95,7 @@ function useShineEffectStyles(arg0, variant) {
   ButtonShineNativeTsx1.__workletHash = 2724629163487;
   ButtonShineNativeTsx1.__initData = tmp5;
   let obj3 = { shineStyles: null, shineAnimatedStyle: null };
-  const animatedStyle = _mod1652.useAnimatedStyle(ButtonShineNativeTsx1);
+  const animatedStyle = _mod1655.useAnimatedStyle(ButtonShineNativeTsx1);
   let obj5 = {
     shineContainer: { width: "100%", height: "200%", position: "absolute", overflow: "hidden" },
     shine: null,
@@ -138,12 +138,12 @@ export function ButtonShine(variant) {
   };
   items = [shineStyles.shineContainer, tmp2.shineAnimatedStyle];
   obj.style = items;
-  const obj2 = { style: shineStyles.shine, children: jsx(_modDef1652.View, { style: shineStyles.shineInner }) };
-  obj.children = jsx(_modDef1652.View, {
+  const obj2 = { style: shineStyles.shine, children: jsx(_modDef1655.View, { style: shineStyles.shineInner }) };
+  obj.children = jsx(_modDef1655.View, {
     style: shineStyles.shine,
-    children: jsx(_modDef1652.View, { style: shineStyles.shineInner }),
+    children: jsx(_modDef1655.View, { style: shineStyles.shineInner }),
   });
-  return jsx(_modDef1652.View, {
+  return jsx(_modDef1655.View, {
     onLayout(nativeEvent) {
       return closure_0(nativeEvent.nativeEvent.layout.width);
     },
