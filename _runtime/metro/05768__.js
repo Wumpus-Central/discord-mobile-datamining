@@ -1,34 +1,8 @@
 // _runtime/metro/05768__.js
-import RecyclerViewManager from "../05769_RecyclerViewManager.js";
-import _slicedToArray from "05748__.js";
+import _mod17 from "00017__.js";
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
+const StyleSheet = _mod17.StyleSheet;
 
-export (data) => {
-  let recyclerViewManager = velocityTracker(closure_5(() => {
-    recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
-    return recyclerViewManager;
-  }), 1)[0];
-  velocityTracker = velocityTracker(closure_5(() => {
-    velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
-    return velocityTracker;
-  }), 1)[0];
-  items = [data];
-  closure_4(() => {
-    recyclerViewManager.updateProps(closure_0);
-  }, items);
-  const items1 = [data.data];
-  closure_4(() => {
-    recyclerViewManager.processDataUpdate();
-  }, items1);
-  closure_3(() => {
-    recyclerViewManager.restoreIfNeeded();
-    return () => {
-      recyclerViewManager.dispose();
-      velocityTracker.cleanUp();
-    };
-  }, []);
-  return { recyclerViewManager, velocityTracker };
-}
+export const styles = StyleSheet.create({
+  container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 },
+});

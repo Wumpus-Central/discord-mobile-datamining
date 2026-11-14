@@ -1,72 +1,19 @@
 // _runtime/metro/09782__.js
-const require = arg1;
-const dependencyMap = arg6;
-function getFilenameToDebugIdMap(arg0) {
-  _require = arg0;
-  _sentryDebugIds = require("09731__.js").GLOBAL_OBJ._sentryDebugIds;
-  if (_sentryDebugIds) {
-    const _Object = Object;
-    const keys = Object.keys(_sentryDebugIds);
-    if (reduced) {
-      return reduced;
-    }
-    reduced = keys.reduce((acc, item) => {
-      let filename;
-      let tmp = obj;
-      if (!obj) {
-        obj = {};
-        tmp = obj;
-      }
-      if (tmp[item]) {
-        acc[tmp2[0]] = tmp2[1];
-      } else {
-        const arr = closure_0(item);
-        let diff = arr.length - 1;
-        if (0 <= diff) {
-          while (true) {
-            let tmp5 = arr[diff];
-            filename = tmp5;
-            if (tmp5) {
-              filename = tmp5.filename;
-            }
-            if (filename) {
-              if (_sentryDebugIds[item]) {
-                break;
-              }
-            }
-            diff = diff - 1;
-          }
-          acc[filename] = tmp8;
-          items = [filename, tmp8];
-          obj[item] = items;
-        }
-      }
-      return acc;
-    }, {});
-  } else {
-    return {};
-  }
-}
+const require = globalThis.__r;
 
-export function getDebugImagesForResources(arg0, arg1) {
-  const tmp = getFilenameToDebugIdMap(arg0);
-  items = [];
-  if (tmp) {
-    const iter = arg1[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp7 = nextResult;
-      if (nextResult) {
-        obj = { type: "sourcemap", code_file: null, debug_id: null };
-        obj.code_file = tmp7;
-        obj.debug_id = tmp[tmp7];
-        let arr = items.push(obj);
-      }
-      continue;
-    }
-    return items;
-  } else {
-    return items;
-  }
+for (const key10013 in require("RNIapAmazonModule")) {
+  arg5[key10013] = require("RNIapAmazonModule")[key10013];
+  continue;
 }
-export { getFilenameToDebugIdMap };
+for (const key10017 in require("09775__.js")) {
+  arg5[key10017] = require("09775__.js")[key10017];
+  continue;
+}
+for (const key10021 in require("09776__.js")) {
+  arg5[key10021] = require("09776__.js")[key10021];
+  continue;
+}
+for (const key10025 in require("09783__.js")) {
+  arg5[key10025] = require("09783__.js")[key10025];
+  continue;
+}

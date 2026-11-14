@@ -1,13 +1,14 @@
 // _runtime/metro/11490__.js
-import AbstractParserWithWordBoundaryChecking from "../11369_AbstractParserWithWordBoundaryChecking.js";
-import REGEX_PARTS from "../11491_REGEX_PARTS.js";
+import repeatedTimeunitPattern from "../11429_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../11436_AbstractParserWithWordBoundaryChecking.js";
+import _mod11491 from "11491__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const RUTimeUnitWithinFormatParser = require;
+const FRWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,17 +27,18 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let closure_6 =
-  "(?:(?:\u043E\u043A\u043E\u043B\u043E|\u043F\u0440\u0438\u043C\u0435\u0440\u043D\u043E)\\s*(?:~\\s*)?)?(" +
-  REGEX_PARTS.TIME_UNITS_PATTERN +
-  ")" +
-  REGEX_PARTS.REGEX_PARTS.rightBoundary;
-class RUTimeUnitWithinFormatParser {
+const regExp = new RegExp(
+  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(?:ce)\\s*)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod11491.WEEKDAY_DICTIONARY) +
+    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(dernier|prochain)\\s*)?(?=\\W|\\d|$)",
+  "i",
+);
+class FRWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, RUTimeUnitWithinFormatParser);
+    tmp = c2(this, FRWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(RUTimeUnitWithinFormatParser);
+    obj = closure_4(FRWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,41 +53,35 @@ class RUTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(FRWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternLeftBoundary",
-  value: function patternLeftBoundary() {
-    return RUTimeUnitWithinFormatParser(11491).REGEX_PARTS.leftBoundary;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "innerPattern",
-    value: function innerPattern(option) {
-      const _RegExp = RegExp;
-      if (option.option.forwardDate) {
-        let _RegExp1 = new _RegExp(closure_6, RUTimeUnitWithinFormatParser(11491).REGEX_PARTS.flags);
-      } else {
-        const _HermesInternal = HermesInternal;
-        const combined =
-          "(?:\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435|\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0438)\\s*" +
-          closure_6;
-        _RegExp1 = new _RegExp(combined, RUTimeUnitWithinFormatParser(11491).REGEX_PARTS.flags);
-      }
-      return _RegExp1;
-    },
-  },
-  {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const ParsingComponents = RUTimeUnitWithinFormatParser(11365).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        RUTimeUnitWithinFormatParser(11491).parseDuration(arg1[1]),
-      );
+      const formatted = arg1[1].toLowerCase();
+      const tmp4 = FRWeekdayParser(11491).WEEKDAY_DICTIONARY[formatted];
+      if (undefined === tmp4) {
+        return null;
+      } else {
+        const formatted1 = arg1[2] || "".toLowerCase();
+        let str4 = "last";
+        if ("dernier" != formatted1) {
+          str4 = null;
+          if ("prochain" == formatted1) {
+            str4 = "next";
+          }
+        }
+        return FRWeekdayParser(11456).createParsingComponentsAtWeekday(reference.reference, tmp4, str4);
+      }
     },
   },
 ];
 
-export default _createClass(RUTimeUnitWithinFormatParser, items);
+export default _createClass(FRWeekdayParser, items);

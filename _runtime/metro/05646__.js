@@ -1,49 +1,61 @@
 // _runtime/metro/05646__.js
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
-import _slicedToArray from "00032__.js";
 
-const noop = fn(19);
-({ useEffect: c2, useState: c3 } = noop);
-const AccessibilityInfo = fn(17).AccessibilityInfo;
-
-export function useIsScreenReaderEnabled() {
-  const tmp = _slicedToArray(closure_3(false), 2);
-  closure_0 = tmp[1];
-  closure_2(() => {
-    closure_129_0 = closure_0(function* () {
-      closure_1 = tmp3;
-      yield screenReaderEnabled.isScreenReaderEnabled();
-      if (1 === tmp7) {
-        c3 = 0;
-        const _console = console;
-        console.warn("Could not read accessibility info: defaulting to false");
-        c5 = 3;
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        closure_128_0 = value;
-        closure_0(closure_128_0);
-        c3 = 0;
+export function assignRef(fn, current) {
+  if (typeof fn === "function") {
+    const tmp = fn(current);
+    let tmp2;
+    if (typeof tmp === "function") {
+      tmp2 = tmp;
+    }
+    return tmp2;
+  } else if (fn) {
+    fn.current = current;
+  }
+}
+export function isHostInstance(preferHostInstanceResult) {
+  let prop;
+  if (preferHostInstanceResult != null) {
+    prop = preferHostInstanceResult.__internalInstanceHandle;
+  }
+  return undefined !== prop;
+}
+export function preferHostInstance(__internalInstanceHandle) {
+  if (null != __internalInstanceHandle) {
+    let prop;
+    if (__internalInstanceHandle != null) {
+      prop = __internalInstanceHandle.__internalInstanceHandle;
+    }
+    if (undefined === prop) {
+      const getNativeScrollRef = __internalInstanceHandle.getNativeScrollRef;
+      let nativeScrollRef;
+      if (getNativeScrollRef != null) {
+        nativeScrollRef = getNativeScrollRef();
       }
-      return value;
-    });
-    (function checkStatus() {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
+      let prop1;
+      if (nativeScrollRef != null) {
+        prop1 = nativeScrollRef.__internalInstanceHandle;
       }
-      return applyArgumentsResult;
-    })();
-    closure_0 = AccessibilityInfo.addEventListener("screenReaderChanged", (event) => {
-      closure_0(event);
-    });
-    return () => {
-      closure_0.remove();
-    };
-  }, []);
-  return tmp[0];
+      let tmp4 = __internalInstanceHandle;
+      if (undefined !== prop1) {
+        tmp4 = nativeScrollRef;
+      }
+      return tmp4;
+    }
+  }
+  return __internalInstanceHandle;
+}
+export function resolveHostInstance(viewRef) {
+  let getHostInstance;
+  if (viewRef != null) {
+    getHostInstance = viewRef.getHostInstance;
+  }
+  let tmp2 = viewRef;
+  if (typeof getHostInstance === "function") {
+    let hostInstance = viewRef.getHostInstance();
+    if (hostInstance == null) {
+      hostInstance = viewRef;
+    }
+    tmp2 = hostInstance;
+  }
+  return tmp2;
 }

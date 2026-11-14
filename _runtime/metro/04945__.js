@@ -1,46 +1,26 @@
 // _runtime/metro/04945__.js
-import module_4526_mod from "04526__.js";
-import _typeof_mod from "04522__.js";
-import module_4935_mod from "04935__.js";
-import requiredArgs_mod from "../04523_requiredArgs.js";
+import module_4937_mod from "04937__.js";
+import requiredArgs_mod from "../04586_requiredArgs.js";
 
-let module_4526 = module_4526_mod;
-if (!module_4526) {
-  const obj = { default: module_4526 };
+let module_4937 = module_4937_mod;
+if (!module_4937) {
+  const obj = { default: module_4937 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4526;
+  tmp3 = module_4937;
 }
-module_4526 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let module_4935 = module_4935_mod;
-if (!module_4935) {
-  const obj3 = { default: module_4935 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4935;
-}
-module_4935 = tmp7;
+module_4937 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function setQuarter(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const diff = module_4526.default(arg1) - (Math.floor(defaultResult1.getMonth() / 3) + 1);
-  return module_4935.default(defaultResult1, defaultResult1.getMonth() + 3 * diff);
+export default function isThisQuarter(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4937.default(Date.now(), arg0);
 };
 export default exports.default;

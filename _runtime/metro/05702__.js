@@ -1,80 +1,33 @@
 // _runtime/metro/05702__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import value2 from "../05508_value2.js";
-import _mod5703 from "05703__.js";
-import noop_mod from "00019__.js";
-import get_ActivityIndicator from "00017__.js";
+import _mod17 from "00017__.js";
 
-let noop = noop_mod;
-({ useMemo: c2, useRef: c3 } = noop);
-let noop = noop_mod;
-({ StatusBar: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo(function BottomSheetHostingContainerComponent(bottomInset) {
-  ({ containerHeight: require, containerOffset: dependencyMap, topInset } = bottomInset);
-  if (topInset === undefined) {
-    topInset = 0;
-  }
-  let num = bottomInset.bottomInset;
-  if (num === undefined) {
-    num = 0;
-  }
-  let flag = bottomInset.shouldCalculateHeight;
-  if (flag === undefined) {
-    flag = true;
-  }
-  const detached = bottomInset.detached;
-  const style = bottomInset.style;
-  const tmp = num(null);
-  const ref = tmp;
-  items = [style, detached, topInset, num];
-  const tmp2 = topInset(() => {
-    items = [style, _mod5703.styles.container];
-    const rect = { top: topInset, bottom: num, overflow: null };
-    let str = "hidden";
-    if (detached) {
-      str = "visible";
+const Platform = _mod17.Platform;
+
+export function getTVProps(focusable) {
+  if (Platform.isTV) {
+    let flag = focusable.focusable;
+    if (flag == null) {
+      flag = focusable.isTVSelectable;
     }
-    rect.overflow = str;
-    items[2] = rect;
-    return items;
-  }, items);
-  const obj2 = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
-  let stableCallback;
-  if (flag) {
-    stableCallback = obj.useStableCallback(function handleLayoutEvent(nativeEvent) {
-      const height = nativeEvent.nativeEvent.layout.height;
-      height.value = height;
-      const current = ref.current;
-      if (current != null) {
-        current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-          if (value.value) {
-            num = arg5;
-            let num2 = arg5;
-            if (arg5 == null) {
-              num2 = 0;
-            }
-            const rect = { top: num2, left: 0, right: 0, bottom: null };
-            if (num == null) {
-              num = 0;
-            }
-            let num3 = currentHeight.currentHeight;
-            const sum = num + height;
-            if (num3 == null) {
-              num3 = 0;
-            }
-            rect.bottom = Math.max(0, value2.WINDOW_HEIGHT - (sum + num3));
-            tmp.value = rect;
-          }
-        });
-      }
-    });
+    if (flag == null) {
+      flag = true;
+    }
+    const obj2 = { isTVSelectable: flag };
+    let obj = obj2;
+  } else {
+    obj = {};
   }
-  obj2.onLayout = stableCallback;
-  obj2.style = tmp2;
-  obj2.children = bottomInset.children;
-  return ref(style, obj2);
-});
-memoResult.displayName = "BottomSheetHostingContainer";
-
-export const BottomSheetHostingContainer = memoResult;
+  return obj;
+}
+export function applyRelationProp(arg0, arg1, arg2) {
+  if (arg2) {
+    const _Array = Array;
+    if (Array.isArray(arg2)) {
+      items = [];
+      HermesBuiltin.arraySpread(arg2, 0);
+      HermesBuiltin.apply(items, arg0);
+    } else {
+      tmp4(arg2);
+    }
+  }
+}

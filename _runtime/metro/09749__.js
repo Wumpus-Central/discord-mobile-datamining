@@ -1,21 +1,41 @@
 // _runtime/metro/09749__.js
-import _mod9748 from "09748__.js";
+import colorPropType from "../09742_colorPropType.js";
 import _mod9750 from "09750__.js";
+import merged12 from "../09751_merged1.js";
+import merged22 from "../09752_merged2.js";
+import emptyFunction_mod from "05357__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const obj = {};
+const size = Object.assign(_mod9750);
+const merged1 = Object.assign(merged12);
+const merged2 = Object.assign(merged22);
+let emptyFunction = emptyFunction_mod;
+obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
+obj.backgroundColor = colorPropType;
+obj.borderColor = colorPropType;
+obj.borderTopColor = colorPropType;
+obj.borderRightColor = colorPropType;
+obj.borderBottomColor = colorPropType;
+obj.borderLeftColor = colorPropType;
+obj.borderStartColor = colorPropType;
+obj.borderEndColor = colorPropType;
+obj.borderRadius = emptyFunction.number;
+obj.borderTopLeftRadius = emptyFunction.number;
+obj.borderTopRightRadius = emptyFunction.number;
+obj.borderTopStartRadius = emptyFunction.number;
+obj.borderTopEndRadius = emptyFunction.number;
+obj.borderBottomLeftRadius = emptyFunction.number;
+obj.borderBottomRightRadius = emptyFunction.number;
+obj.borderBottomStartRadius = emptyFunction.number;
+obj.borderBottomEndRadius = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.borderStyle = emptyFunction.oneOf(["solid", "dotted", "dashed"]);
+obj.borderWidth = emptyFunction.number;
+obj.borderTopWidth = emptyFunction.number;
+obj.borderRightWidth = emptyFunction.number;
+obj.borderBottomWidth = emptyFunction.number;
+obj.borderLeftWidth = emptyFunction.number;
+obj.opacity = emptyFunction.number;
+obj.elevation = emptyFunction.number;
 
-export function getAsyncContextStrategy(mainCarrier) {
-  const sentryCarrier = _mod9748.getSentryCarrier(mainCarrier);
-  if (sentryCarrier.acs) {
-    let acs = sentryCarrier.acs;
-  } else {
-    acs = _mod9750.getStackAsyncContextStrategy();
-    const tmpResult = _mod9750;
-  }
-  return acs;
-}
-export function setAsyncContextStrategy(acs) {
-  const mainCarrier = _mod9748.getMainCarrier();
-  _mod9748.getSentryCarrier(mainCarrier).acs = acs;
-}
+export default obj;

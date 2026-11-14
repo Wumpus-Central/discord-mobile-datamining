@@ -1,28 +1,138 @@
 // _runtime/metro/09806__.js
-import eventFromMessage from "../09790_eventFromMessage.js";
-import _mod9807 from "09807__.js";
-import setupIntegration from "09786__.js";
+import _mod9804 from "09804__.js";
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+require = arg1;
+const dependencyMap = arg6;
+
+export function isMatchingPattern(arr, test) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
   }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod9807.applyAggregateErrorsToEvent(
-        eventFromMessage.exceptionFromError,
-        options.stackParser,
-        options.maxValueLength,
-        closure_1,
-        closure_0,
-        exception,
-        originalException,
-      );
-    },
-  };
-});
+  const isStringResult = _mod9804.isString(arr);
+  if (!isStringResult) {
+    return isStringResult;
+  } else {
+    if (tmpResult.isRegExp(test)) {
+      let isMatch = test.test(arr);
+    } else {
+      isMatch = _mod9804.isString(test);
+      if (isMatch) {
+        if (flag) {
+          let hasItem = arr === test;
+        } else {
+          hasItem = arr.includes(test);
+        }
+      }
+      const tmpResult2 = _mod9804;
+    }
+    tmpResult = _mod9804;
+  }
+}
+export function safeJoin(arg0, arg1) {
+  if (Array.isArray(arg0)) {
+    items = [];
+    let num = 0;
+    if (0 < arg0.length) {
+      try {
+        const push = items.push;
+        if (obj.isVueViewModel(tmp2)) {
+          push("[VueViewModel]");
+        } else {
+          const _String = String;
+          push(String(tmp2));
+        }
+        num = num + 1;
+        obj = _mod9804;
+      } catch (err) {
+        arr.push(tmp);
+      }
+    }
+    return items.join(arg1);
+  } else {
+    return "";
+  }
+}
+export function snipLine(arr, lineno) {
+  if (arr.length <= 150) {
+    return arr;
+  } else {
+    let tmp = lineno;
+    if (lineno > length) {
+      tmp = length;
+    }
+    const _Math = Math;
+    let num3 = Math.max(tmp - 60, 0);
+    if (num3 < 5) {
+      num3 = 0;
+    }
+    const _Math2 = Math;
+    let bound = Math.min(num3 + 140, length);
+    if (bound > length - 5) {
+      bound = length;
+    }
+    if (bound === length) {
+      const _Math3 = Math;
+      num3 = Math.max(bound - 140, 0);
+    }
+    const substr = arr.slice(num3, bound);
+    let combined = substr;
+    if (num3 > 0) {
+      const _HermesInternal = HermesInternal;
+      combined = "'{snip} " + substr;
+    }
+    let text = combined;
+    if (bound < length) {
+      text = `${tmp6} {snip}`;
+    }
+    return text;
+  }
+}
+export function stringMatchesSomePattern(transaction) {
+  if (items === undefined) {
+    items = [];
+  }
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  return items.some((test) => {
+    const isStringResult = _mod9804.isString(transaction);
+    if (!isStringResult) {
+      return isStringResult;
+    } else {
+      if (tmpResult.isRegExp(test)) {
+        let isMatch = test.test(transaction);
+      } else {
+        isMatch = _mod9804.isString(test);
+        if (isMatch) {
+          if (flag) {
+            let hasItem = transaction === test;
+          } else {
+            hasItem = transaction.includes(test);
+          }
+        }
+        const tmpResult2 = _mod9804;
+      }
+      tmpResult = _mod9804;
+    }
+  });
+}
+export function truncate(str) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 0;
+  }
+  let combined = str;
+  if (typeof str === "string") {
+    combined = str;
+    if (0 !== num) {
+      combined = str;
+      if (str.length > num) {
+        const _HermesInternal = HermesInternal;
+        combined = "" + str.slice(0, num) + "...";
+      }
+    }
+  }
+  return combined;
+}

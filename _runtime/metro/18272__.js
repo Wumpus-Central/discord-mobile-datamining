@@ -3,11 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "ec58bf96c6588d5215316bd58185df8c",
-  name: "HashmarkIcon",
-  type: "png",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
+  scales: [1],
+  hash: "e4ac8b113e95c131d649a62479390987",
+  name: "lt.messages.e4ac8b113e95c131d649a62479390987.compiled.messages",
+  type: "jsona",
 });

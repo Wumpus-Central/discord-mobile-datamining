@@ -1,8 +1,0 @@
-// _runtime/metro/02028__.js
-import MessageFormat from "../02029_MessageFormat.js";
-import 01328__ from "01328__.js";
-
-const _default = MessageFormat.default;
-_default.default = _default;
-
-export default _default;

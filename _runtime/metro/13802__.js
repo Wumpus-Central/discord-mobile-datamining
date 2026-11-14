@@ -1,63 +1,13 @@
 // _runtime/metro/13802__.js
-import _mod13726 from "13726__.js";
+import registerAsset from "01119__.js";
 
-function consumeRaw(arg0) {
-  return this.Raw(arg0, null, false);
-}
-const WhiteSpace = _mod13726.TYPE.WhiteSpace;
-const Comment = _mod13726.TYPE.Comment;
-const AtKeyword = _mod13726.TYPE.AtKeyword;
-const CDO = _mod13726.TYPE.CDO;
-const CDC = _mod13726.TYPE.CDC;
-const obj = {
-  name: "StyleSheet",
-  structure: null,
-  parse() {
-    const self = this;
-    const list = this.createList();
-    if (!this.scanner.eof) {
-      do {
-        let tokenType = self.scanner.tokenType;
-        if (WhiteSpace === tokenType) {
-          let iter2 = self.scanner;
-          let nextResult = iter2.next();
-        } else {
-          if (Comment === tokenType) {
-            let source = self.scanner.source;
-            if (33 !== source.charCodeAt(self.scanner.tokenStart + 2)) {
-              let iter = self.scanner;
-              let nextResult1 = iter.next();
-            } else {
-              let CommentResult = self.Comment();
-            }
-          } else if (CDO === tokenType) {
-            CommentResult = self.CDO();
-          } else if (CDC === tokenType) {
-            CommentResult = self.CDC();
-          } else if (AtKeyword === tokenType) {
-            CommentResult = self.parseWithFallback(self.Atrule, consumeRaw);
-          } else {
-            CommentResult = self.parseWithFallback(self.Rule, consumeRaw);
-          }
-          let arr = list.push(CommentResult);
-        }
-      } while (!self.scanner.eof);
-    }
-    const element = {
-      type: "StyleSheet",
-      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
-      children: list,
-    };
-    return element;
-  },
-  generate(arg0) {
-    this.children(arg0);
-  },
-  walkContext: "stylesheet",
-};
-const obj2 = { children: null };
-const items = [["Comment", "CDO", "CDC", "Atrule", "Rule", "Raw"]];
-obj2.children = items;
-obj.structure = obj2;
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "a223df53550492950018c2a994e89fed",
+  name: "FiltersHorizontalIcon",
+  type: "png",
+});

@@ -1,13 +1,3 @@
 // _runtime/metro/15910__.js
-import registerAsset from "01119__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_boosting/native/images",
-  width: 424,
-  height: 254,
-  scales: [1],
-  hash: "16c887e8a2a3597bff0b1e42c0c69934",
-  name: "top_perk_vanity_url",
-  type: "png",
-});
+export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";

@@ -1,13 +1,16 @@
 // _runtime/metro/07541__.js
-import registerAsset from "01119__.js";
+import HeaderHeightContext from "../07540_HeaderHeightContext.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "1a98a09be102b24c083fe11e00ab3c2d",
-  name: "PlayIcon",
-  type: "png",
-});
+require = arg1;
+
+export function useHeaderHeight() {
+  const context = noop.useContext(HeaderHeightContext.HeaderHeightContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the header height. Are you inside a screen in a navigator with a header?");
+    throw error;
+  } else {
+    return context;
+  }
+}

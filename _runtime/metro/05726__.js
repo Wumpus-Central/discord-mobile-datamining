@@ -1,4 +1,4 @@
 // _runtime/metro/05726__.js
-import _modDef5727 from "05727__.js";
+import PressableDefault from "../05727_Pressable.js";
 
-export default _modDef5727;
+export default PressableDefault;

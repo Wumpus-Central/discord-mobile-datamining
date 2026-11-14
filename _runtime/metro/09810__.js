@@ -1,119 +1,187 @@
 // _runtime/metro/09810__.js
-import extractRequestData from "../09811_extractRequestData.js";
-import _slicedToArray from "00032__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import setupIntegration from "09786__.js";
+import _mod9796 from "09796__.js";
+import _mod9797 from "09797__.js";
+import _mod9804 from "09804__.js";
 
-let closure_4 = ["ip", "user"];
-let obj = {
-  include: {
-    cookies: true,
-    data: true,
-    headers: true,
-    ip: false,
-    query_string: true,
-    url: true,
-    user: { id: true, username: true, email: true },
-  },
-  transactionNamingScheme: "methodPath",
-};
+require = arg1;
+const dependencyMap = arg6;
+let c2 = "sentry-";
+const tmp2 = /^sentry-/;
+const re3 = tmp2;
+let c4 = 8192;
 
-export const requestDataIntegration = setupIntegration.defineIntegration(() => {
-  obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  let obj2 = {};
-  const merged = Object.assign(obj);
-  const merged1 = Object.assign(obj);
-  let obj3 = {};
-  const merged2 = Object.assign(obj.include);
-  const merged3 = Object.assign(obj.include);
-  if (obj.include) {
-    if (typeof obj.include.user === "boolean") {
-      let user = obj.include.user;
+export const BAGGAGE_HEADER_NAME = "baggage";
+export const MAX_BAGGAGE_STRING_LENGTH = 8192;
+export const SENTRY_BAGGAGE_KEY_PREFIX = "sentry-";
+export const SENTRY_BAGGAGE_KEY_PREFIX_REGEX = tmp2;
+export function baggageHeaderToDynamicSamplingContext(arr) {
+  if (arr) {
+    if (!obj.isString(arr)) {
+      const _Array = Array;
     }
-    obj3.user = user;
-    obj2.include = obj3;
-    const obj4 = {
-      name: "RequestData",
-      processEvent(sdkProcessingMetadata) {
-        let prop = sdkProcessingMetadata.sdkProcessingMetadata;
-        if (undefined === prop) {
-          prop = {};
+    const _Array2 = Array;
+    if (Array.isArray(arr)) {
+      let reduced = arr.reduce((acc, item) => {
+        closure_0 = acc;
+        let parts = item.split(",");
+        const mapped = parts.map((item) => {
+          const parts = item.split("=");
+          return parts.map((item) => decodeURIComponent(item.trim()));
+        });
+        const entries = Object.entries(
+          mapped.reduce((acc, item) => {
+            [tmp, tmp2] = item;
+            let tmp3 = tmp;
+            if (tmp) {
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              acc[tmp] = tmp2;
+            }
+            return acc;
+          }, {}),
+        );
+        item = entries.forEach((item) => {
+          [tmp, tmp2] = item;
+          closure_0[tmp] = tmp2;
+        });
+        return acc;
+      }, {});
+    } else {
+      let parts = arr.split(",");
+      let mapped = parts.map((item) => {
+        const parts = item.split("=");
+        return parts.map((item) => decodeURIComponent(item.trim()));
+      });
+      reduced = mapped.reduce((acc, item) => {
+        [tmp, tmp2] = item;
+        let tmp3 = tmp;
+        if (tmp) {
+          tmp3 = tmp2;
         }
-        ({ request, normalizedRequest } = prop);
-        const tmp = (function convertReqDataIntegrationOptsToAddReqDataOpts(include) {
-          include = include.include;
-          const user = include.user;
-          items = ["method"];
-          const entries = Object.entries(closure_1_3(include, closure_1_4));
-          while (tmp2 !== undefined) {
-            let tmp5 = closure_1_2(tmp3, 2);
-            let first = tmp5[0];
-            if (tmp5[1]) {
-              let arr = items.push(first);
-            }
-            continue;
-          }
-          let flag = true;
-          if (undefined !== user) {
-            flag = user;
-            if (typeof user !== "boolean") {
-              const items1 = [];
-              const _Object = Object;
-              const entries1 = Object.entries(user);
-              flag = items1;
-              for (const item10032 of entries1) {
-                let tmp11 = closure_1_2(item10032, 2);
-                let first1 = tmp11[0];
-                if (tmp11[1]) {
-                  let arr2 = items1.push(first1);
-                }
-                continue;
-              }
-            }
-          }
-          const include2 = { ip: include.ip, user: flag, request: null, transaction: null };
-          let tmp15;
-          if (0 !== items.length) {
-            tmp15 = items;
-          }
-          include2.request = tmp15;
-          include2.transaction = include.transactionNamingScheme;
-          return { include: include2 };
-        })(obj2);
-        if (normalizedRequest) {
-          let tmp5;
-          if (request) {
-            let ip = request.ip;
-            if (!ip) {
-              ip = request.socket && request.socket.remoteAddress;
-              const tmp6 = request.socket && request.socket.remoteAddress;
-            }
-            tmp5 = ip;
-          }
-          let user;
-          if (request) {
-            user = request.user;
-          }
-          const obj3 = extractRequestData;
-          obj = { ipAddress: tmp5, user };
-          const result = obj3.addNormalizedRequestDataToEvent(sdkProcessingMetadata, normalizedRequest, obj, tmp);
-          return sdkProcessingMetadata;
-        } else {
-          let result1 = sdkProcessingMetadata;
-          if (request) {
-            obj2 = extractRequestData;
-            result1 = obj2.addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
-          }
-          return result1;
+        if (tmp3) {
+          acc[tmp] = tmp2;
         }
-      },
-    };
-    return obj4;
+        return acc;
+      }, {});
+    }
+    obj = _mod9804;
   }
-  user = {};
-  const merged4 = Object.assign(obj.include.user);
-  const merged5 = Object.assign(obj.include || {}.user);
-});
+  if (undefined) {
+    const _Object = Object;
+    let entries = Object.entries(tmp);
+    const reduced1 = entries.reduce((acc, item) => {
+      [str, tmp] = item;
+      if (str.match(closure_1_3)) {
+        acc[str.slice(7)] = tmp;
+      }
+      return acc;
+    }, {});
+    const _Object2 = Object;
+    let tmp10;
+    if (Object.keys(reduced1).length > 0) {
+      tmp10 = reduced1;
+    }
+    return tmp10;
+  }
+}
+export function dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan) {
+  if (dynamicSamplingContextFromSpan) {
+    const _Object = Object;
+    const entries = Object.entries(dynamicSamplingContextFromSpan);
+    const reduced = entries.reduce((acc, item) => {
+      [tmp, tmp2] = item;
+      if (tmp2) {
+        const _HermesInternal = HermesInternal;
+        acc["" + closure_1_2 + tmp] = tmp2;
+      }
+      return acc;
+    }, {});
+    const _Object2 = Object;
+    let reduced1;
+    if (0 !== Object.keys(reduced).length) {
+      const _Object3 = Object;
+      const entries1 = Object.entries(reduced);
+      reduced1 = entries1.reduce((acc, item, index) => {
+        [tmp, tmp2] = item;
+        const combined = "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
+        let combined1 = combined;
+        if (0 !== index) {
+          const _HermesInternal = HermesInternal;
+          combined1 = "" + acc + "," + combined;
+        }
+        if (combined1.length > closure_1_4) {
+          combined1 = acc;
+          if (_mod9796.DEBUG_BUILD) {
+            const logger = _mod9797.logger;
+            const _HermesInternal2 = HermesInternal;
+            logger.warn(
+              "Not adding key: " +
+                tmp +
+                " with val: " +
+                tmp2 +
+                " to baggage header due to exceeding baggage size limits.",
+            );
+            combined1 = acc;
+          }
+        }
+        return combined1;
+      }, "");
+    }
+    return reduced1;
+  }
+}
+export function parseBaggageHeader(arr) {
+  if (arr) {
+    if (!obj.isString(arr)) {
+      const _Array = Array;
+    }
+    const _Array2 = Array;
+    if (Array.isArray(arr)) {
+      let reduced = arr.reduce((acc, item) => {
+        closure_0 = acc;
+        let parts = item.split(",");
+        const mapped = parts.map((item) => {
+          const parts = item.split("=");
+          return parts.map((item) => decodeURIComponent(item.trim()));
+        });
+        const entries = Object.entries(
+          mapped.reduce((acc, item) => {
+            [tmp, tmp2] = item;
+            let tmp3 = tmp;
+            if (tmp) {
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              acc[tmp] = tmp2;
+            }
+            return acc;
+          }, {}),
+        );
+        item = entries.forEach((item) => {
+          [tmp, tmp2] = item;
+          closure_0[tmp] = tmp2;
+        });
+        return acc;
+      }, {});
+    } else {
+      const parts = arr.split(",");
+      const mapped = parts.map((item) => {
+        const parts = item.split("=");
+        return parts.map((item) => decodeURIComponent(item.trim()));
+      });
+      reduced = mapped.reduce((acc, item) => {
+        [tmp, tmp2] = item;
+        let tmp3 = tmp;
+        if (tmp) {
+          tmp3 = tmp2;
+        }
+        if (tmp3) {
+          acc[tmp] = tmp2;
+        }
+        return acc;
+      }, {});
+    }
+    return reduced;
+  }
+}

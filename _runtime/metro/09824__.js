@@ -1,179 +1,69 @@
 // _runtime/metro/09824__.js
-import _mod9737 from "09737__.js";
-import _mod9739 from "09739__.js";
-import setupIntegration from "09786__.js";
+import _mod9798 from "09798__.js";
+import _mod9803 from "09803__.js";
+import _mod9815 from "09815__.js";
+import _mod9816 from "09816__.js";
+import ScopeClass from "../09818_ScopeClass.js";
 
-function flattenIssue(path) {
-  const obj = {};
-  const merged = Object.assign(path);
-  let joined;
-  if ("path" in path) {
-    const _Array = Array;
-    if (Array.isArray(path.path)) {
-      path = path.path;
-      joined = path.join(".");
-    }
-  }
-  obj.path = joined;
-  let json;
-  if ("keys" in path) {
-    const _JSON = JSON;
-    json = JSON.stringify(path.keys);
-  }
-  obj.keys = json;
-  let json1;
-  if ("unionErrors" in path) {
-    const _JSON2 = JSON;
-    json1 = JSON.stringify(path.unionErrors);
-  }
-  obj.unionErrors = json1;
-  return obj;
+require = arg1;
+const dependencyMap = arg6;
+
+export function getClient() {
+  const mainCarrier = _mod9815.getMainCarrier();
+  const asyncContextStrategy = _mod9816.getAsyncContextStrategy(mainCarrier);
+  const currentScope = asyncContextStrategy.getCurrentScope();
+  return currentScope.getClient();
 }
-function flattenIssuePath(arr) {
-  const mapped = arr.map((item) => {
-    let str = "<array>";
-    if (typeof item !== "number") {
-      str = item;
-    }
-    return str;
+export function getCurrentScope() {
+  const mainCarrier = _mod9815.getMainCarrier();
+  const asyncContextStrategy = _mod9816.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getCurrentScope();
+}
+export function getGlobalScope() {
+  return _mod9798.getGlobalSingleton("globalScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
   });
-  return mapped.join(".");
 }
-function formatIssueMessage(issues) {
-  const set = new Set();
-  while (tmp !== undefined) {
-    let arr = flattenIssuePath(tmp2.path);
-    if (arr.length > 0) {
-      let addResult = set.add(tmp4);
+export function getIsolationScope() {
+  const mainCarrier = _mod9815.getMainCarrier();
+  const asyncContextStrategy = _mod9816.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getIsolationScope();
+}
+export function getTraceContextFromScope(getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  ({ traceId, spanId, parentSpanId } = propagationContext);
+  return _mod9803.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
+}
+export function withIsolationScope() {
+  items = [...arguments];
+  const mainCarrier = _mod9815.getMainCarrier();
+  const asyncContextStrategy = _mod9816.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
+    } else {
+      result = asyncContextStrategy.withIsolationScope(tmp3);
     }
-    continue;
-  }
-  const arr2 = Array.from(set);
-  if (0 === arr2.length) {
-    let str4 = "variable";
-    if (issues.issues.length > 0) {
-      const first = issues.issues[0];
-      let tmp10 = undefined !== first;
-      if (tmp10) {
-        tmp10 = "expected" in first;
-      }
-      if (tmp10) {
-        tmp10 = typeof first.expected === "string";
-      }
-      str4 = "variable";
-      if (tmp10) {
-        str4 = first.expected;
-      }
-    }
-    const _HermesInternal2 = HermesInternal;
-    return "Failed to validate " + str4;
+    return result;
   } else {
-    const _HermesInternal = HermesInternal;
-    return "Failed to validate keys: " + _mod9739.truncate(arr2.join(", "), 100);
+    return asyncContextStrategy.withIsolationScope(items[0]);
   }
-  tmp = issues.issues[Symbol.iterator]();
 }
-function applyZodErrorsToEvent(arg0, arg1) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  if (exception.exception) {
-    if (exception.exception.values) {
-      if (originalException) {
-        if (originalException.originalException) {
-          if (
-            (function originalExceptionIsZodError(originalException) {
-              let isErrorResult = _mod9737.isError(originalException);
-              if (isErrorResult) {
-                isErrorResult = "ZodError" === originalException.name;
-              }
-              if (isErrorResult) {
-                const _Array = Array;
-                isErrorResult = Array.isArray(originalException.issues);
-              }
-              return isErrorResult;
-            })(originalException.originalException)
-          ) {
-            if (0 !== originalException.originalException.issues.length) {
-              try {
-                const issues = originalException.originalException.issues;
-                if (flag) {
-                  let substr = issues;
-                } else {
-                  substr = issues.slice(0, arg0);
-                }
-                const mapped = substr.map(flattenIssue);
-                if (flag) {
-                  let _Array = Array;
-                  if (!Array.isArray(originalException.attachments)) {
-                    originalException.attachments = [];
-                  }
-                  const attachments = originalException.attachments;
-                  const obj = { filename: "zod_issues.json", data: null };
-                  const _JSON = JSON;
-                  const obj2 = { issues: mapped };
-                  obj.data = JSON.stringify(obj2);
-                  attachments.push(obj);
-                }
-                const obj3 = {};
-                const merged = Object.assign(exception);
-                const obj4 = {};
-                const merged1 = Object.assign(exception.exception);
-                const obj5 = {};
-                const merged2 = Object.assign(exception.exception.values[0]);
-                obj5.value = formatIssueMessage(originalException.originalException);
-                items = [obj5];
-                const values = exception.exception.values;
-                HermesBuiltin.arraySpread(values.slice(1), 1);
-                obj4.values = items;
-                obj3.exception = obj4;
-                const obj6 = {};
-                const merged3 = Object.assign(exception.extra);
-                obj6["zoderror.issues"] = mapped.slice(0, arg0);
-                obj3.extra = obj6;
-                return obj3;
-              } catch (error) {
-                const obj7 = {};
-                const merged4 = Object.assign(tmp);
-                const obj8 = {};
-                const merged5 = Object.assign(tmp.extra);
-                const _Error = Error;
-                let str = "unknown";
-                if (error instanceof Error) {
-                  const _HermesInternal = HermesInternal;
-                  str = "" + error.name + ": " + error.message + "\n" + error.stack;
-                }
-                const obj9 = {
-                  message: "an exception was thrown while processing ZodError within applyZodErrorsToEvent()",
-                  error: str,
-                };
-                obj8["zoderrors sentry integration parse error"] = obj9;
-                obj7.extra = obj8;
-                return obj7;
-              }
-            }
-          }
-        }
-      }
+export function withScope() {
+  items = [...arguments];
+  const mainCarrier = _mod9815.getMainCarrier();
+  const asyncContextStrategy = _mod9816.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
+    } else {
+      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
     }
+    return withSetScopeResult;
+  } else {
+    return asyncContextStrategy.withScope(items[0]);
   }
-  return exception;
 }
-
-export { applyZodErrorsToEvent };
-export { flattenIssue };
-export { flattenIssuePath };
-export { formatIssueMessage };
-export const zodErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  return {
-    name: "ZodErrors",
-    processEvent(arg0, arg1) {
-      return applyZodErrorsToEvent(num, obj.saveZodIssuesAsAttachment, arg0, arg1);
-    },
-  };
-});

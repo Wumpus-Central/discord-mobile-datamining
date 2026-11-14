@@ -1,13 +1,6 @@
 // _runtime/metro/11115__.js
-import registerAsset from "01119__.js";
+import _mod17 from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/MidnightPrismIcon",
-  width: 60,
-  height: 60,
-  scales: [2, 3],
-  hash: "44efb56cf36c8202533bcbc557ebf8e5",
-  name: "MidnightPrismIcon",
-  type: "png",
-});
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+
+export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");

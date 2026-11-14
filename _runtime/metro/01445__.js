@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 256,
-  height: 256,
+  httpServerLocation: "/assets/images",
+  width: 498,
+  height: 498,
   scales: [1],
-  hash: "c3359f2e4aef01a86f637754d719562b",
-  name: "icon-group",
+  hash: "df3228db1e67e406cba743551d2b055e",
+  name: "clyde-avatar",
   type: "png",
 });

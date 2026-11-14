@@ -1,73 +1,76 @@
 // _runtime/metro/09809__.js
-import _mod9731 from "09731__.js";
+import generatePropagationContext from "../09807_generatePropagationContext.js";
+import _mod9810 from "09810__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-function getMetadataForUrl(fn, arg1) {
-  (function ensureMetadataStacksAreParsed(fn) {
-    if (_mod9731.GLOBAL_OBJ._sentryModuleMetadata) {
-      const _Object = Object;
-      const keys = Object.keys(_mod9731.GLOBAL_OBJ._sentryModuleMetadata);
-      for (const item10026 of keys) {
-        let tmp16 = _mod9731.GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        if (!set.has(item10026)) {
-          let addResult = set.add(item10026);
-          let obj2 = arg0(item10026);
-          let reversed = obj2.reverse();
-          for (const item10050 of reversed) {
-            if (item10050.filename) {
-              let result = map.set(tmp22.filename, tmp16);
-              obj3.return();
-              break;
-            }
-            continue;
-          }
-        }
-        continue;
-      }
-    }
-  })(fn);
-  return map.get(arg1);
-}
-const map = new Map();
-const set = new Set();
+const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
 
-export function addMetadataToStackFrames(arg0, exception) {
-  closure_0 = arg0;
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp = stacktrace.stacktrace.frames || [];
-        for (const item10010 of tmp) {
-          if (item10010.filename) {
-            if (!item10010.module_metadata) {
-              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
-              if (tmp9) {
-                item10010.module_metadata = tmp10;
-              }
-            }
-          }
-          continue;
+export const TRACEPARENT_REGEXP = regExp;
+export function extractTraceparentData(str) {
+  if (str) {
+    const match = str.match(regExp);
+    if (match) {
+      let flag = true;
+      if ("1" !== match[3]) {
+        if ("0" === match[3]) {
+          flag = false;
         }
       }
-    });
-  } catch (err) {}
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      return obj;
+    }
+  }
 }
-export { getMetadataForUrl };
-export function stripMetadataFromStackFrames(exception) {
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp3 = stacktrace.stacktrace.frames || [];
-        const iter = tmp3[Symbol.iterator]();
-        iter.next();
-        while (iter !== undefined) {
-          delete tmp2[tmp];
-          continue;
+export function generateSentryTraceHeader() {
+  if (traceId === undefined) {
+    traceId = generatePropagationContext.generateTraceId();
+  }
+  if (spanId === undefined) {
+    spanId = generatePropagationContext.generateSpanId();
+  }
+  let str = "";
+  if (undefined !== sampled) {
+    let str2 = "-0";
+    if (sampled) {
+      str2 = "-1";
+    }
+    str = str2;
+  }
+  return "" + traceId + "-" + spanId + str;
+}
+export function propagationContextFromHeaders(str, _slicedToArray) {
+  let tmp;
+  if (str) {
+    const match = str.match(regExp);
+    if (match) {
+      let flag = true;
+      if ("1" !== match[3]) {
+        if ("0" === match[3]) {
+          flag = false;
         }
       }
-    });
-  } catch (err) {}
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      tmp = obj;
+    }
+  }
+  let result = _mod9810.baggageHeaderToDynamicSamplingContext(_slicedToArray);
+  if (tmp) {
+    if (tmp.traceId) {
+      const obj3 = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
+      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
+      obj3.spanId = generatePropagationContext.generateSpanId();
+      obj3.sampled = parentSampled;
+      if (!result) {
+        result = {};
+      }
+      obj3.dsc = result;
+      return obj3;
+    }
+  }
+  const obj4 = { traceId: null, spanId: null };
+  obj4.traceId = generatePropagationContext.generateTraceId();
+  const tmp4Result3 = generatePropagationContext;
+  obj4.spanId = generatePropagationContext.generateSpanId();
+  return obj4;
 }

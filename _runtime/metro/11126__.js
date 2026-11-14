@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/GalaxyIcon",
-  width: 60,
-  height: 60,
-  scales: [2, 3],
-  hash: "2bb189919203a7299ceda12e2b9f8582",
-  name: "GalaxyIcon",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 32,
+  scales: [1, 2, 3],
+  hash: "127a752466784cf57691500bcfc955ae",
+  name: "ic_file_small_acrobat",
   type: "png",
 });

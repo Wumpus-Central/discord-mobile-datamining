@@ -1,12 +1,9 @@
 // _runtime/metro/16751__.js
 
-export default () => (arg0) => {
-  closure_0 = arg0;
-  return {
-    features: {
-      clear() {
-        return closure_0.send("clear");
-      },
-    },
-  };
+export default (fn) => {
+  try {
+    return fn();
+  } catch (err) {
+    return true;
+  }
 };

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "4a45d5464752b264a97efb61145f651f",
-  name: "img_account_sync_ebay_white",
+  hash: "2eb4a3a7eee9d2c37d6ab83a1bbe761d",
+  name: "img_account_sync_steam_light",
   type: "png",
 });

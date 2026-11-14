@@ -1,13 +1,15 @@
 // _runtime/metro/09884__.js
-import registerAsset from "01119__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 449.5,
-  height: 245,
-  scales: [2, 3],
-  hash: "ee35a42e9eee806c9e4a6146b7529edb",
-  name: "img_logo_nitro_tier_0_light",
-  type: "png",
-});
+export function severityLevelFromString(level) {
+  let str = "warning";
+  if ("warn" !== level) {
+    items = ["fatal", "error", "warning", "log", "info", "debug"];
+    let str2 = "log";
+    if (items.includes(level)) {
+      str2 = level;
+    }
+    str = str2;
+  }
+  return str;
+}
+export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];

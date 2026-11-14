@@ -1,29 +1,28 @@
 // _runtime/metro/05760__.js
-import _mod5761 from "05761__.js";
+import _mod19 from "00019__.js";
+import _mod5593 from "05593__.js";
 
-export default function toPrimitive(arg0, arg1) {
-  if ("object" == obj.default(arg0)) {
-    if (arg0) {
-      let str = arg1;
-      const _Symbol = Symbol;
-      if (undefined !== arg0[Symbol.toPrimitive]) {
-        const call = tmp4.call;
-        if (!str) {
-          str = "default";
+const useLayoutEffect = _mod19.useLayoutEffect;
+
+export function useBoundingClientRect(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  if (obj.isFabricInstalled()) {
+    useLayoutEffect(() => {
+      if (closure_0) {
+        if (closure_0.current) {
+          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
+            if (typeof closure_0.current.getBoundingClientRect === "function") {
+              const current2 = closure_0.current;
+              closure_1(current2.getBoundingClientRect());
+            }
+          } else {
+            const current = closure_0.current;
+            closure_1(current.unstable_getBoundingClientRect());
+          }
         }
-        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
-        if ("object" != tmpResult.default(tmp5)) {
-          return tmp5;
-        } else {
-          const _TypeError = TypeError;
-          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
-          throw typeError;
-        }
-        tmpResult = _mod5761;
-      } else {
-        return "string" === str ? String : Number(arg0);
       }
-    }
+    });
   }
-  return arg0;
+  obj = _mod5593;
 }

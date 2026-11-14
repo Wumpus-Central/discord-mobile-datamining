@@ -1,17 +1,9 @@
 // _runtime/metro/02004__.js
 import noop from "00019__.js";
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
+const jsxProd = fn(21);
+({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
 
-export const ToolbarContext = context;
-export () => {
-  const tmp = useContext(context);
-  if (tmp) {
-    return tmp;
-  } else {
-    const _Error = Error;
-    const error = new Error("KeyboardToolbar.* component must be used inside <KeyboardToolbar>");
-    throw error;
-  }
+export default function _default(children) {
+  return duration(React, { children: children.children });
 }

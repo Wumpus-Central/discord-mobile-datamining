@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/plan_selection",
-  width: 80,
-  height: 80,
+  httpServerLocation: "/assets/modules/premium/referral_program/native/images",
+  width: 180,
+  height: 180,
   scales: [1],
-  hash: "e2676a24ea3247f11452fad9b442341d",
-  name: "img_wumpus_nitro",
+  hash: "7d7d766e7ebb30cec66584e69b89634d",
+  name: "Glow",
   type: "png",
 });

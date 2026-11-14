@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 20,
+  height: 20,
   scales: [2, 3],
-  hash: "9e19181651828ca952221179ae78d318",
-  name: "BadgeIcon",
+  hash: "680bf4fd0485a160338f41e352ddc0a6",
+  name: "grid",
   type: "png",
 });

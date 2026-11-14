@@ -1,8 +1,18 @@
 // _runtime/metro/05705__.js
-import _mod17 from "00017__.js";
+import noop from "00019__.js";
 
-const StyleSheet = _mod17.StyleSheet;
+const jsx = fn(21).jsx;
 
-export const styles = StyleSheet.create({
-  container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 },
-});
+export default function _default(simultaneousWith) {
+  const merged = Object.assign(simultaneousWith);
+  return jsx(
+    importDefault(
+      null != simultaneousWith.simultaneousWith ||
+        null != simultaneousWith.requireToFail ||
+        null != simultaneousWith.block
+        ? 5706
+        : 5717,
+    ),
+    {},
+  );
+}

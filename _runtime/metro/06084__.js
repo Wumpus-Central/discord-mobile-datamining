@@ -1,15 +1,16 @@
 // _runtime/metro/06084__.js
-import identity from "../00549_identity.js";
-import _mod668 from "00668__.js";
-import constant from "../06085_constant.js";
+import _mod6085 from "06085__.js";
 
-if (_mod668) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod668(arg0, "toString", obj);
-  };
-} else {
-  fn = identity;
+export default function toInteger(arg0) {
+  const tmp = _mod6085(arg0);
+  const result = tmp % 1;
+  let num = 0;
+  if (tmp == tmp) {
+    let diff = tmp;
+    if (result) {
+      diff = tmp - result;
+    }
+    num = diff;
+  }
+  return num;
 }
-
-export default fn;

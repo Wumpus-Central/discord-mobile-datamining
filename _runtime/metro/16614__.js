@@ -1,25 +1,13 @@
 // _runtime/metro/16614__.js
-const require = globalThis.__r;
+import registerAsset from "01119__.js";
 
-const require = arg1;
-const dependencyMap = arg6;
-
-export function getSupportedTimeZones(locale) {
-  _require = locale;
-  const timezones = require("16615__.js").timezones;
-  return timezones.filter((item) =>
-    (function isSupported(timeZone, arg1) {
-      let str = arg1;
-      if (undefined === arg1) {
-        str = "en";
-      }
-      try {
-        const obj = { timeZone };
-        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
-        return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
-      } catch (err) {
-        return false;
-      }
-    })(item, closure_0),
-  );
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/status",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "7730e55139737e3f08bf4e9540ae6591",
+  name: "StatusOffline",
+  type: "png",
+});

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/premium/native/images/perks",
+  width: 300.5,
+  height: 175,
   scales: [2, 3],
-  hash: "80a1b67e775ddb8de80fde27e63a5302",
-  name: "CircleQuestionIcon-secondary",
+  hash: "767971903774f3e283939a2d77b5c958",
+  name: "server_boosts",
   type: "png",
 });

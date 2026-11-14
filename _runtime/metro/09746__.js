@@ -1,68 +1,89 @@
 // _runtime/metro/09746__.js
-import _mod9736 from "09736__.js";
-import _slicedToArray from "00032__.js";
+import _mod9744 from "09744__.js";
+import _mod9749 from "09749__.js";
+import _mod9753 from "09753__.js";
+import flattenStyle from "09747__.js";
+import emptyFunction_mod from "05357__.js";
 
-const _sentryMetrics = "_sentryMetrics";
+const obj = {
+  accessible: null,
+  accessibilityLabel: null,
+  accessibilityHint: null,
+  accessibilityActions: null,
+  accessibilityIgnoresInvertColors: null,
+  accessibilityRole: null,
+  accessibilityState: null,
+  accessibilityValue: null,
+  accessibilityLiveRegion: null,
+  importantForAccessibility: null,
+  accessibilityViewIsModal: null,
+  accessibilityElementsHidden: null,
+  onAccessibilityAction: null,
+  onAccessibilityTap: null,
+  onMagicTap: null,
+  testID: null,
+  nativeID: null,
+  onResponderGrant: null,
+  onResponderMove: null,
+  onResponderReject: null,
+  onResponderRelease: null,
+  onResponderTerminate: null,
+  onResponderTerminationRequest: null,
+  onStartShouldSetResponder: null,
+  onStartShouldSetResponderCapture: null,
+  onMoveShouldSetResponder: null,
+  onMoveShouldSetResponderCapture: null,
+  hitSlop: null,
+  onLayout: null,
+  pointerEvents: null,
+  style: null,
+  removeClippedSubviews: null,
+  renderToHardwareTextureAndroid: null,
+  shouldRasterizeIOS: null,
+  collapsable: null,
+  needsOffscreenAlphaCompositing: null,
+};
+const module_9749 = flattenStyle(_mod9749);
+obj.accessible = emptyFunction.bool;
+obj.accessibilityLabel = emptyFunction.node;
+obj.accessibilityHint = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
+obj.accessibilityActions = emptyFunction.arrayOf(emptyFunction.string);
+obj.accessibilityIgnoresInvertColors = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+obj.accessibilityRole = emptyFunction.oneOf(_mod9753.DeprecatedAccessibilityRoles);
+obj.accessibilityState = emptyFunction.object;
+obj.accessibilityValue = emptyFunction.object;
+let emptyFunction = emptyFunction_mod;
+obj.accessibilityLiveRegion = emptyFunction.oneOf(["none", "polite", "assertive"]);
+let emptyFunction = emptyFunction_mod;
+obj.importantForAccessibility = emptyFunction.oneOf(["auto", "yes", "no", "no-hide-descendants"]);
+obj.accessibilityViewIsModal = emptyFunction.bool;
+obj.accessibilityElementsHidden = emptyFunction.bool;
+obj.onAccessibilityAction = emptyFunction.func;
+obj.onAccessibilityTap = emptyFunction.func;
+obj.onMagicTap = emptyFunction.func;
+obj.testID = emptyFunction.string;
+obj.nativeID = emptyFunction.string;
+obj.onResponderGrant = emptyFunction.func;
+obj.onResponderMove = emptyFunction.func;
+obj.onResponderReject = emptyFunction.func;
+obj.onResponderRelease = emptyFunction.func;
+obj.onResponderTerminate = emptyFunction.func;
+obj.onResponderTerminationRequest = emptyFunction.func;
+obj.onStartShouldSetResponder = emptyFunction.func;
+obj.onStartShouldSetResponderCapture = emptyFunction.func;
+obj.onMoveShouldSetResponder = emptyFunction.func;
+obj.onMoveShouldSetResponderCapture = emptyFunction.func;
+obj.hitSlop = _mod9744;
+obj.onLayout = emptyFunction.func;
+let emptyFunction = emptyFunction_mod;
+obj.pointerEvents = emptyFunction.oneOf(["box-none", "none", "box-only", "auto"]);
+obj.style = module_9749;
+obj.removeClippedSubviews = emptyFunction.bool;
+obj.renderToHardwareTextureAndroid = emptyFunction.bool;
+obj.shouldRasterizeIOS = emptyFunction.bool;
+obj.collapsable = emptyFunction.bool;
+obj.needsOffscreenAlphaCompositing = emptyFunction.bool;
 
-export function getMetricSummaryJsonForSpan(self) {
-  if (self[_sentryMetrics]) {
-    const obj = {};
-    const tmp3 = tmp[Symbol.iterator]();
-    while (tmp3 !== undefined) {
-      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
-      [tmp9, tmp11] = tmp8;
-      let arr = obj[tmp9];
-      if (!arr) {
-        items = [];
-        obj[tmp10] = items;
-        arr = items;
-      }
-      let obj2 = _mod9736;
-      let arr2 = arr.push(obj2.dropUndefinedKeys(tmp11));
-      continue;
-    }
-    return obj;
-  }
-}
-export function updateMetricSummaryOnSpan(
-  activeSpan,
-  metricType,
-  sanitizeMetricKeyResult,
-  min,
-  sanitizeUnitResult,
-  tags,
-  bucketKey,
-) {
-  let obj = activeSpan[_sentryMetrics];
-  if (!obj) {
-    const _Map = Map;
-    const map = new Map();
-    activeSpan[tmp] = map;
-    obj = map;
-  }
-  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
-  value = obj.get(bucketKey);
-  if (value) {
-    const range = _slicedToArray(value, 2)[1];
-    items = [combined];
-    const range1 = { min: null, max: null, count: null, sum: null, tags: null };
-    const _Math = Math;
-    range1.min = Math.min(range.min, min);
-    const _Math2 = Math;
-    range1.max = Math.max(range.max, min);
-    const sum = range.count + 1;
-    range.count = sum;
-    range1.count = sum;
-    const sum1 = range.sum + min;
-    range.sum = sum1;
-    range1.sum = sum1;
-    range1.tags = range.tags;
-    items[1] = range1;
-    const result = obj.set(bucketKey, items);
-  } else {
-    const items1 = [combined];
-    const range2 = { min, max: min, count: 1, sum: min, tags };
-    items1[1] = range2;
-    const result1 = obj.set(bucketKey, items1);
-  }
-}
+export default obj;

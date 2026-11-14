@@ -1,107 +1,53 @@
 // _runtime/metro/01971__.js
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
+import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
+import _mod1972 from "01972__.js";
 
-let c2 = true;
-let obj = { height: 0, duration: 0, timestamp: null, target: -1, type: "default", appearance: "light" };
-obj.timestamp = new Date().getTime();
-let global = obj;
-let KeyboardEvents = fn(1642).KeyboardEvents;
-KeyboardEvents.addListener("keyboardDidHide", (arg0) => {
-  c2 = true;
-  global = arg0;
-});
-const KeyboardEvents2 = fn(1642).KeyboardEvents;
-KeyboardEvents2.addListener("keyboardWillShow", (arg0) => {
-  c2 = false;
-  global = arg0;
-});
-let closure_0 = asyncGeneratorStep(async (arg0) => {
-  if (c3 === 2) {
-    c3 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c3 = 2;
-      if (arg0 === 1) {
-        c3 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c3 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        let keepFocus;
-        if (closure_0 != null) {
-          keepFocus = tmp18.keepFocus;
+const useRef = _mod19.useRef;
+const Animated = _mod17.Animated;
+
+export function useEventHandlerRegistration(arg0) {
+  return (workletEventHandler) => {
+    if (workletEventHandler.current) {
+      let findNodeHandleResult = ref(dependencyMap[2]).findNodeHandle(tmp.current);
+      if (findNodeHandleResult) {
+        if ("workletEventHandler" in workletEventHandler) {
+          workletEventHandler.workletEventHandler.registerForEvents(findNodeHandleResult);
+        } else {
+          workletEventHandler.registerForEvents(findNodeHandleResult);
         }
-        c1 = keepFocus;
-        if (keepFocus == null) {
-          c1 = false;
-        }
-        closure_0 = c1;
-        let animated;
-        if (closure_0 != null) {
-          animated = tmp18.animated;
-        }
-        c2 = animated;
-        if (animated == null) {
-          c2 = true;
-        }
-        dependencyMap = c2;
-        const promise = new Promise((fn) => {
-          closure_0 = fn;
-          if (c2) {
-            fn();
-          } else {
-            const KeyboardEvents = closure_0(1642).KeyboardEvents;
-            closure_1 = KeyboardEvents.addListener("keyboardDidHide", () => {
-              closure_0(undefined);
-              closure_1.remove();
-            });
-            const KeyboardControllerNative = closure_0(1642).KeyboardControllerNative;
-            KeyboardControllerNative.dismiss(closure_0, closure_1);
-          }
-        });
-        c3 = 3;
-        const obj = { value: promise, done: true };
-        return obj;
       }
-    } catch (tmp13) {
-      c3 = tmp;
-      throw tmp13;
-    }
-  }
-});
-const date = new Date();
-
-export const KeyboardController = {
-  setDefaultMode: fn(1642).KeyboardControllerNative.setDefaultMode,
-  setInputMode: fn(1642).KeyboardControllerNative.setInputMode,
-  setFocusTo: fn(1642).KeyboardControllerNative.setFocusTo,
-  preload: fn(1642).KeyboardControllerNative.preload,
-  dismiss(arg0) {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      const obj = ref(dependencyMap[2]);
     } else {
-      applyArgumentsResult = apply(self, arguments);
+      const _queueMicrotask = queueMicrotask;
+      queueMicrotask(function attachWorkletHandlers() {
+        const findNodeHandleResult = _mod1972.findNodeHandle(workletEventHandler.current);
+        if (findNodeHandleResult) {
+          if ("workletEventHandler" in workletEventHandler) {
+            obj2.workletEventHandler.registerForEvents(findNodeHandleResult);
+          } else {
+            obj2.registerForEvents(findNodeHandleResult);
+          }
+        }
+      });
     }
-    return applyArgumentsResult;
-  },
-  isVisible() {
-    return !c2;
-  },
-  state() {
-    return global;
-  },
-};
+    return () => {
+      const findNodeHandleResult = _mod1972.findNodeHandle(workletEventHandler.current);
+      if (findNodeHandleResult) {
+        if ("workletEventHandler" in workletEventHandler) {
+          obj2.workletEventHandler.unregisterFromEvents(findNodeHandleResult);
+        } else {
+          obj2.unregisterFromEvents(findNodeHandleResult);
+        }
+      }
+    };
+  };
+}
+export function useAnimatedValue(arg0, arg1) {
+  const tmp = useRef(null);
+  if (null === tmp.current) {
+    value = new Animated.Value(arg0, arg1);
+    tmp.current = value;
+  }
+  return tmp.current;
+}

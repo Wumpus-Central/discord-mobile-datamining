@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_onboarding/native/images",
-  width: 45,
-  height: 34.5,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "5048f3c6d8b18fc7809b7e99f1c62a70",
-  name: "stamp-wave",
+  hash: "166185917b52ede00e3e20d3f1f7faeb",
+  name: "CheckmarkSmallIcon",
   type: "png",
 });

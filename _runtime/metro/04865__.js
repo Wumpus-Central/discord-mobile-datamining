@@ -1,15 +1,15 @@
 // _runtime/metro/04865__.js
-import _typeof_mod from "04522__.js";
-import requiredArgs_mod from "../04523_requiredArgs.js";
+import module_4864_mod from "04864__.js";
+import requiredArgs_mod from "../04586_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4864 = module_4864_mod;
+if (!module_4864) {
+  const obj = { default: module_4864 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4864;
 }
-_typeof = tmp3;
+module_4864 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isMonday(arg0) {
+export default function getUnixTime(arg0) {
   requiredArgs.default(1, arguments);
-  return 1 === _typeof.default(arg0).getDay();
+  return Math.floor(module_4864.default(arg0) / 1000);
 };
 export default exports.default;

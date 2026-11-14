@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1cda1329ef5dd669ec53160c74e5d945",
-  name: "ArrowSmallRightIcon",
+  hash: "70ec4d21f0658b5914c9170f9e0a91d6",
+  name: "TvIcon",
   type: "png",
 });

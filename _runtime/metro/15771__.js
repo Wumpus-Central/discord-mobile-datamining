@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 160.5,
-  height: 140,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "ad61eda1bea496e5c4dfb770ef28c56b",
-  name: "server-invite-envelope",
+  hash: "ef42f58d92ae3022fbec5decb610cbf2",
+  name: "ThreadMinusIcon",
   type: "png",
 });

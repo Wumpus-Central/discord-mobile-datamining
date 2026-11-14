@@ -1,37 +1,26 @@
 // _runtime/metro/04943__.js
-import module_4526_mod from "04526__.js";
-import _typeof_mod from "04522__.js";
-import requiredArgs_mod from "../04523_requiredArgs.js";
+import module_4935_mod from "04935__.js";
+import requiredArgs_mod from "../04586_requiredArgs.js";
 
-let module_4526 = module_4526_mod;
-if (!module_4526) {
-  const obj = { default: module_4526 };
+let module_4935 = module_4935_mod;
+if (!module_4935) {
+  const obj = { default: module_4935 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4526;
+  tmp3 = module_4935;
 }
-module_4526 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
+module_4935 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function setMilliseconds(module_4526, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_4526);
-  defaultResult1.setMilliseconds(module_4526.default(arg1));
-  return defaultResult1;
+export default function isThisMinute(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4935.default(Date.now(), arg0);
 };
 export default exports.default;

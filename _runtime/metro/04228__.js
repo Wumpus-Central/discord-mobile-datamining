@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zdGFnZV9jaGFubmVscw==",
+  httpServerLocation: "/assets/modules/friends",
   scales: [1],
-  hash: "deaa129ac1eab3dc94229fa202ef5a86",
-  name: "pl.messages.deaa129ac1eab3dc94229fa202ef5a86.compiled.messages",
+  hash: "a104fe5ede94645fb2df317a74cf6e09",
+  name: "Friends.compiled.messages",
   type: "jsona",
 });

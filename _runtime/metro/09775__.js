@@ -1,219 +1,201 @@
 // _runtime/metro/09775__.js
-import stackParserFromStackParserOptions from "../09733_stackParserFromStackParserOptions.js";
-import _mod9736 from "09736__.js";
-import _mod9737 from "09737__.js";
-import memoBuilder from "../09776_memoBuilder.js";
-import _slicedToArray from "00032__.js";
+import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
 
-function normalize(arg0) {
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 100;
-  }
-  let num2 = arg2;
-  if (arg2 === undefined) {
-    num2 = Infinity;
-  }
-  try {
-    return visit("", arg0, num, num2);
-  } catch (tmp5) {
-    const obj = { ERROR: null };
-    const _HermesInternal = HermesInternal;
-    obj.ERROR = "**non-serializable** (" + tmp5 + ")";
-    return obj;
-  }
-}
-function visit(arg0, __sentry_skip_normalization__) {
-  let num = arg2;
-  if (arg2 === undefined) {
-    num = Infinity;
-  }
-  let num2 = arg3;
-  if (arg3 === undefined) {
-    num2 = Infinity;
-  }
-  let memoBuilderResult = arg4;
-  if (arg4 === undefined) {
-    memoBuilderResult = memoBuilder.memoBuilder();
-  }
-  _slicedToArray(memoBuilderResult, 2);
-  if (null != __sentry_skip_normalization__) {
-    items = ["boolean", "string"];
-    if (!items.includes(typeof __sentry_skip_normalization__)) {
-      if (typeof __sentry_skip_normalization__ === "number") {
-        let _Number = Number;
-      }
-      let str = (function stringifyValue(arg0, _events) {
-        try {
-          if ("domain" === arg0) {
-            if (_events) {
-              if (typeof _events === "object") {
-                if (_events._events) {
-                  return "[Domain]";
-                }
-              }
-            }
-          }
-          if ("domainEmitter" === arg0) {
-            return "[DomainEmitter]";
-          } else {
-            if (undefined !== global) {
-              if (_events === global) {
-                return "[Global]";
-              }
-            }
-            const _window = window;
-            if (typeof window !== "undefined") {
-              const _window2 = window;
-              if (_events === window) {
-                return "[Window]";
-              }
-            }
-            const _document = document;
-            if (typeof document !== "undefined") {
-              const _document2 = document;
-              if (_events === document) {
-                return "[Document]";
-              }
-            }
-            if (obj.isVueViewModel(_events)) {
-              return "[VueViewModel]";
-            } else {
-              if (tmp4Result.isSyntheticEvent(_events)) {
-                return "[SyntheticEvent]";
-              } else {
-                if (typeof _events === "number") {
-                  const _Number = Number;
-                  if (!Number.isFinite(_events)) {
-                    const _HermesInternal = HermesInternal;
-                    return "[" + _events + "]";
-                  }
-                }
-                if (typeof _events === "function") {
-                  const _HermesInternal4 = HermesInternal;
-                  return "[Function: " + stackParserFromStackParserOptions.getFunctionName(_events) + "]";
-                } else if (typeof _events === "symbol") {
-                  const _String2 = String;
-                  const _HermesInternal3 = HermesInternal;
-                  return "[" + String(_events) + "]";
-                } else if (typeof _events === "bigint") {
-                  const _String = String;
-                  const _HermesInternal2 = HermesInternal;
-                  return "[BigInt: " + String(_events) + "]";
-                } else {
-                  const tmp9 = (function getConstructorName(_events) {
-                    const prototypeOf = Object.getPrototypeOf(_events);
-                    let str = "null prototype";
-                    if (prototypeOf) {
-                      str = prototypeOf.constructor.name;
-                    }
-                    return str;
-                  })(_events);
-                  const _HermesInternal6 = HermesInternal;
-                  if (obj4.test(tmp9)) {
-                    let combined = concat(tmp10, "]");
-                  } else {
-                    combined = concat(tmp10, "]");
-                  }
-                  return combined;
-                }
-              }
-              tmp4Result = _mod9737;
-            }
-            obj = _mod9737;
-          }
-        } catch (tmp7) {
-          const _HermesInternal5 = HermesInternal;
-          return "**non-serializable** (" + tmp7 + ")";
-        }
-      })(arg0, __sentry_skip_normalization__);
-      if (str.startsWith("[object ")) {
-        if (__sentry_skip_normalization__.__sentry_skip_normalization__) {
-          return __sentry_skip_normalization__;
+get_ActivityIndicator = fn(17);
+({ Linking: c2, NativeModules } = get_ActivityIndicator);
+({ RNIapModule: c3, RNIapModule } = NativeModules);
+let closure_0 = asyncGeneratorStep(async (arg0) => {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
-          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ === "number") {
-            num = __sentry_skip_normalization__.__sentry_override_normalization_depth__;
-          }
-          if (0 === num) {
-            return str.replace("object ", "");
-          } else if (tmp6(__sentry_skip_normalization__)) {
-            return "[Circular ~]";
-          } else {
-            if (__sentry_skip_normalization__) {
-              if (typeof __sentry_skip_normalization__.toJSON === "function") {
-                try {
-                  return visit("", __sentry_skip_normalization__.toJSON(), num - 1, num2, tmp8);
-                } catch (err) {}
-              }
-            }
-            const _Array = Array;
-            const tmp14 = Array.isArray(__sentry_skip_normalization__) ? [] : {};
-            const convertToPlainObjectResult = _mod9736.convertToPlainObject(__sentry_skip_normalization__);
-            const keys = Object.keys();
-            if (keys !== undefined) {
-              while (keys[tmp] !== undefined) {
-                let _Object = Object;
-                hasOwnProperty = Object.prototype.hasOwnProperty;
-                let call = hasOwnProperty.call;
-                let tmp28 = tmp21;
-                if (!(typeof call === "unknown" ? hasOwnProperty(tmp21) : call(convertToPlainObjectResult, tmp21))) {
-                  continue;
-                } else {
-                  if (tmp20 >= num2) {
-                    let str4 = "[MaxProperties ~]";
-                    tmp14[tmp21] = "[MaxProperties ~]";
-                    break;
-                  } else {
-                    tmp14[tmp21] = visit(tmp28, convertToPlainObjectResult[tmp21], num - 1, num2, tmp8);
-                    let num6 = tmp20 + 1;
-                    continue;
-                  }
-                  break;
-                }
-                break;
-              }
-            }
-            tmp7(__sentry_skip_normalization__);
-            return tmp14;
-          }
+          const packageName = tmp5;
+          closure_4 = tmp2;
+          let sku;
+          sku = closure_0.sku;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Path", done: true };
         }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          const result = closure_0(openURL[3]).checkNativeAndroidAvailable();
+          openURL = openURL.openURL;
+          c5 = 2;
+          c6 = 1;
+          const obj6 = { value: packageName.getPackageName(), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
       } else {
-        return str;
+        const _HermesInternal = HermesInternal;
+        c6 = 3;
+        const obj = { value: openURL("https://play.google.com/store/account/subscriptions?package=" + value + "&sku=" + sku), done: true };
+        return obj;
       }
+    } catch (tmp18) {
+      c6 = tmp;
+      throw tmp18;
     }
   }
-  return __sentry_skip_normalization__;
-}
-function normalizeToSize(arg0) {
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 3;
+});
+let closure_129_0 = asyncGeneratorStep(async (arg0) => {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          ({ packageName: closure_129_0, productId: closure_129_1, productToken: closure_129_2, accessToken: closure_129_3, isSub: closure_129_4 } = closure_0);
+          closure_129_5 = undefined;
+          closure_129_6 = undefined;
+          c2 = 1;
+          c3 = 1;
+          return { value: "Path", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          let str = "products";
+          if (closure_129_4) {
+            str = "subscriptions";
+          }
+          const _HermesInternal = HermesInternal;
+          closure_129_5 = "https://androidpublisher.googleapis.com/androidpublisher/v3/applications/" + tmp30 + "/purchases/" + str + "/" + closure_129_1 + "/tokens/" + closure_129_2 + "?access_token=" + closure_129_3;
+          const _fetch = fetch;
+          const obj5 = { method: "GET", headers: { "Content-Type": "application/json" } };
+          c2 = 2;
+          c3 = 1;
+          const obj6 = { value: fetch(closure_129_5, obj5), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_129_6 = value;
+        if (closure_129_6.ok) {
+          c3 = 3;
+          const obj8 = { value: closure_129_6.json(), done: true };
+          return obj8;
+        } else {
+          const _Object = Object;
+          const _Error = Error;
+          const error = new Error(closure_129_6.statusText);
+          const obj = { statusCode: closure_129_6.status };
+          throw Object.assign(error, obj);
+        }
+      }
+    } catch (tmp21) {
+      c3 = tmp;
+      throw tmp21;
+    }
   }
-  let num2 = arg2;
-  if (arg2 === undefined) {
-    num2 = 102400;
-  }
-  let tmp = normalize(arg0, num);
-  if (~-str.split(/%..|./).length > num2) {
-    tmp = normalizeToSize(arg0, num - 1, num2);
-  }
-  return tmp;
-}
+});
 
-export { normalize };
-export { normalizeToSize };
-export function normalizeUrlToBase(arg0, str) {
-  const replaced = str.replace(/\\/g, "/");
-  try {
-    const _decodeURI = decodeURI;
-    str = decodeURI(arg0);
-    const str2 = str.replace(/\\/g, "/");
-    const _RegExp = RegExp;
-    const _HermesInternal = HermesInternal;
-    const regExp = new RegExp("(file://)?/*" + tmp2 + "/*", "ig");
-    return str
-      .replace(/\\/g, "/")
-      .replace(/webpack:\/?/g, "")
-      .replace(regExp, "app:///");
-  } catch (err) {}
+export const AndroidModule = RNIapModule;
+export () => {
+  const InstallSourceAndroid = closure_0(9767).InstallSourceAndroid;
+  return React3 ? InstallSourceAndroid.GOOGLE_PLAY : InstallSourceAndroid.AMAZON;
+}
+export function deepLinkToSubscriptionsAndroid(arg0) {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+export function validateReceiptAndroid(arg0) {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+export (arg0) => {
+  ({ token, developerPayload } = arg0);
+  const androidModule = closure_0(9768).getAndroidModule();
+  return androidModule.acknowledgePurchase(token, developerPayload);
+}
+export (arg0) => {
+  if (closure_0(9768).isAndroid) {
+    if (React3) {
+      let isFeatureSupportedResult = RNIapModule.isFeatureSupported(arg0);
+    }
+    return isFeatureSupportedResult;
+  }
+  isFeatureSupportedResult = Promise.reject("This is only available on Android clients");
 }

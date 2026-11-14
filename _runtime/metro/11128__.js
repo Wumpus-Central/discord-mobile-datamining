@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/CherryBlossomIcon",
-  width: 60,
-  height: 60,
-  scales: [2, 3],
-  hash: "0958a3140b1354fdc2a2c5ce3e4f3233",
-  name: "CherryBlossomIcon",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 32,
+  scales: [1, 2, 3],
+  hash: "40c0d9a37382b6f4efeb6b9b20cf23ba",
+  name: "ic_file_small_ai",
   type: "png",
 });

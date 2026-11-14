@@ -1,11 +1,21 @@
 // _runtime/metro/08220__.js
-import _mod26 from "00026__.js";
-import weakSet from "../00106_weakSet.js";
-import 00065__ from "00065__.js";
+import _mod17 from "00017__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGGroup", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true };
+const StyleSheet = _mod17.StyleSheet;
 
-export default module_65.get("RNSVGGroup", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default StyleSheet.create({
+  container: { flex: 1, overflow: "hidden" },
+  loadingOrErrorView: {
+    position: "absolute",
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100%",
+    width: "100%",
+    backgroundColor: "white",
+  },
+  loadingProgressBar: { height: 20 },
+  errorText: { fontSize: 14, textAlign: "center", marginBottom: 2 },
+  errorTextTitle: { fontSize: 15, fontWeight: "500", marginBottom: 10 },
+  webView: { backgroundColor: "#ffffff" },
+});

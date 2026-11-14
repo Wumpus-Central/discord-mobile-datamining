@@ -1,22 +1,67 @@
 // _runtime/metro/05781__.js
-import _mod5782 from "05782__.js";
+import _mod5783 from "05783__.js";
+import noop_mod from "00019__.js";
+import get_ActivityIndicator from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
 
-export default function _inherits(value, fn) {
-  if (typeof fn !== "function") {
-    if (null !== fn) {
-      const _TypeError = TypeError;
-      const typeError = new TypeError("Super expression must either be null or a function");
-      throw typeError;
-    }
+let noop = noop_mod;
+const useMemo = noop.useMemo;
+let noop = noop_mod;
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
+const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
+  style = style.style;
+  const indicatorStyle = style.indicatorStyle;
+  let DEFAULT_ACCESSIBLE = style.accessible;
+  if (DEFAULT_ACCESSIBLE === undefined) {
+    DEFAULT_ACCESSIBLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBLE;
   }
-  let prototype = fn;
-  if (fn) {
-    prototype = fn.prototype;
+  let DEFAULT_ACCESSIBILITY_ROLE = style.accessibilityRole;
+  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
+    DEFAULT_ACCESSIBILITY_ROLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_ROLE;
   }
-  value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
-  Object.defineProperty(value, "prototype", { writable: false });
-  if (fn) {
-    _mod5782(value, fn);
+  let DEFAULT_ACCESSIBILITY_LABEL = style.accessibilityLabel;
+  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
+    DEFAULT_ACCESSIBILITY_LABEL = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_LABEL;
   }
-  const obj = { constructor: { value, writable: true, configurable: true } };
-}
+  let DEFAULT_ACCESSIBILITY_HINT = style.accessibilityHint;
+  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
+    DEFAULT_ACCESSIBILITY_HINT = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_HINT;
+  }
+  items = [style];
+  const items1 = [indicatorStyle];
+  const obj = {
+    style: useMemo(() => {
+      items = [_mod5783.styles.container, React3.flatten(style)];
+      return items;
+    }, items),
+    accessible: null,
+    accessibilityRole: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    collapsable: true,
+    children: null,
+  };
+  const tmp9 = useMemo(() => {
+    items = [_mod5783.styles.container, React3.flatten(style)];
+    return items;
+  }, items);
+  obj.accessible = DEFAULT_ACCESSIBLE;
+  obj.accessibilityRole = DEFAULT_ACCESSIBILITY_ROLE;
+  obj.accessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL;
+  obj.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
+  const items2 = [
+    closure_5(closure_4, {
+      style: useMemo(() => {
+        items = [_mod5783.styles.indicator, React3.flatten(indicatorStyle)];
+        return items;
+      }, items1),
+    }),
+    style.children,
+  ];
+  obj.children = items2;
+  return closure_6(closure_4, obj);
+});
+memoResult.displayName = "BottomSheetHandle";
+
+export default memoResult;

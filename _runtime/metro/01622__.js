@@ -1,13 +1,17 @@
 // _runtime/metro/01622__.js
-import registerAsset from "01119__.js";
+import _mod1613 from "01613__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 64,
-  height: 64,
-  scales: [2, 3],
-  hash: "bf72a3c3e6e6f62a6b213dc37c4f0f29",
-  name: "ic_application_command_built_in",
-  type: "png",
-});
+require = arg1;
+
+export function useLocale() {
+  const context = noop.useContext(_mod1613.LocaleDirContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't determine the text direction. Is your component inside NavigationContainer?");
+    throw error;
+  } else {
+    const obj = { direction: context };
+    return obj;
+  }
+}

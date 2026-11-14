@@ -1,16 +1,86 @@
 // _runtime/metro/05720__.js
-import _mod17 from "00017__.js";
-import value2 from "../05508_value2.js";
+import tagMessage from "../05602_tagMessage.js";
+import _mod5603 from "05603__.js";
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
-const size = {
-  alignSelf: "center",
-  width: (7.5 * value2.WINDOW_WIDTH) / 100,
-  height: 4,
-  borderRadius: 4,
-  backgroundColor: "rgba(0, 0, 0, 0.75)",
-};
-obj.indicator = size;
+const items = [
+  {
+    code: "(function pnpm_gestureStateManagerTs1(handlerTag,state){let[tagMessage]=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}})",
+  },
+  tagMessage.tagMessage,
+];
+let c0;
+[tmp2, tmp3] = items;
+function pnpm_gestureStateManagerTs1(arg0, arg1) {
+  const _globalThis = globalThis;
+  if (globalThis._setGestureStateSync) {
+    _globalThis._setGestureStateSync(arg0, arg1);
+  } else if (_globalThis._setGestureStateAsync) {
+    const _globalThis2 = globalThis;
+    const result = globalThis._setGestureStateAsync(arg0, arg1);
+  } else {
+    const _Error = Error;
+    const error = new Error(_undefined("Failed to set gesture state"));
+    throw error;
+  }
+}
+const items1 = [tmp3];
+pnpm_gestureStateManagerTs1.__closure = items1;
+pnpm_gestureStateManagerTs1.__workletHash = 7329582373210;
+pnpm_gestureStateManagerTs1.__initData = tmp2;
+const items2 = [
+  {
+    code: "(function activate_Pnpm_gestureStateManagerTs2(handlerTag){let[setGestureState,State]=this.__closure;setGestureState(handlerTag,State.ACTIVE);})",
+  },
+  pnpm_gestureStateManagerTs1,
+  _mod5603.State,
+];
+let closure_129_0;
+let closure_129_1;
+[tmp4, tmp5, tmp6] = items2;
+const obj = { activate: null, fail: null, deactivate: null };
+function activate(arg0) {
+  _undefined(arg0, constants.ACTIVE);
+}
+const items3 = [tmp5, tmp6];
+activate.__closure = items3;
+activate.__workletHash = 1857335023251;
+activate.__initData = tmp4;
+obj.activate = activate;
+const items4 = [
+  {
+    code: "(function fail_Pnpm_gestureStateManagerTs3(handlerTag){let[setGestureState,State]=this.__closure;setGestureState(handlerTag,State.FAILED);})",
+  },
+  pnpm_gestureStateManagerTs1,
+  _mod5603.State,
+];
+let closure_130_0;
+let closure_130_1;
+[tmp7, tmp8, tmp9] = items4;
+function fail(arg0) {
+  _undefined(arg0, constants.FAILED);
+}
+const items5 = [tmp8, tmp9];
+fail.__closure = items5;
+fail.__workletHash = 2377190791686;
+fail.__initData = tmp7;
+obj.fail = fail;
+const items6 = [
+  {
+    code: "(function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){let[setGestureState,State]=this.__closure;setGestureState(handlerTag,State.END);})",
+  },
+  pnpm_gestureStateManagerTs1,
+  _mod5603.State,
+];
+let closure_131_0;
+let closure_131_1;
+[tmp10, tmp11, tmp12] = items6;
+function deactivate(arg0) {
+  _undefined(arg0, constants.END);
+}
+const items7 = [tmp11, tmp12];
+deactivate.__closure = items7;
+deactivate.__workletHash = 3880091307703;
+deactivate.__initData = tmp10;
+obj.deactivate = deactivate;
 
-export const styles = StyleSheet.create(obj);
+export const GestureStateManager = obj;

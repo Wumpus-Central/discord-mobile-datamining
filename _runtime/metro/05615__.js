@@ -1,12 +1,11 @@
 // _runtime/metro/05615__.js
-import RNGestureHandlerModuleDefault from "../05564_RNGestureHandlerModule.js";
+import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
+import _modDef5616 from "05616__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
+const use = _mod19.use;
+const Platform = _mod17.Platform;
 
-export function getModuleId() {
-  if (moduleId == null) {
-    moduleId = RNGestureHandlerModuleDefault.getModuleId();
-  }
-  return moduleId;
+export function useEnsureGestureHandlerRootView() {
+  use(_modDef5616);
 }

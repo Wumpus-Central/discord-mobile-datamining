@@ -1,9 +1,13 @@
 // _runtime/metro/01595__.js
-import NavigationFocusedRouteStateContext from "../01567_NavigationFocusedRouteStateContext.js";
+import NOT_INITIALIZED_ERROR from "../01528_NOT_INITIALIZED_ERROR.js";
 import noop from "00019__.js";
 
 require = arg1;
 
-export function useStateForPath() {
-  return noop.useContext(NavigationFocusedRouteStateContext.NavigationFocusedRouteStateContext);
+export function useNavigationContainerRef() {
+  const ref = noop.useRef(null);
+  if (null == ref.current) {
+    ref.current = NOT_INITIALIZED_ERROR.createNavigationContainerRef();
+  }
+  return ref.current;
 }

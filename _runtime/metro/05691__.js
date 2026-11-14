@@ -1,14 +1,23 @@
 // _runtime/metro/05691__.js
-import _mod19 from "00019__.js";
-import _mod5519 from "05519__.js";
+import reanimatedWrapper from "../05642_reanimatedWrapper.js";
 
-const useContext = _mod19.useContext;
+require = arg1;
+const dependencyMap = arg6;
 
-export () => {
-  const tmp = useContext(_mod5519.BottomSheetGestureHandlersContext);
-  if (null === tmp) {
-    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
-  } else {
-    return tmp;
+export function createLastUpdateEventMap() {
+  const Worklets = reanimatedWrapper.Worklets;
+  let createShareable;
+  if (Worklets != null) {
+    createShareable = Worklets.createShareable;
+  }
+  if (undefined !== createShareable) {
+    if (undefined !== reanimatedWrapper.Worklets.UIRuntimeId) {
+      if (undefined !== reanimatedWrapper.Reanimated) {
+        const Worklets2 = reanimatedWrapper.Worklets;
+        const _Map = Map;
+        const map = new Map();
+        return Worklets2.createShareable(reanimatedWrapper.Worklets.UIRuntimeId, map);
+      }
+    }
   }
 }

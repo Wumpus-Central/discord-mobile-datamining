@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "7902227dc6dc99bcea15f3cdebd9f65f",
-  name: "EmojiRollingOnTheFloorLaughingIcon",
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 160,
+  scales: [1],
+  hash: "4410c16931512594c3c3f276c24fe456",
+  name: "nelly_1",
   type: "png",
 });

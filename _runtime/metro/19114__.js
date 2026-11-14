@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/icymi/native/images",
-  width: 77,
-  height: 95.5,
+  httpServerLocation: "/assets/images/native",
+  width: 46,
+  height: 46,
   scales: [2, 3],
-  hash: "ebbb7db0461de915440e3bdd6a8249c9",
-  name: "flash",
+  hash: "812d0ec6cbf43741fa947b18063ae5e5",
+  name: "server-error",
   type: "png",
 });

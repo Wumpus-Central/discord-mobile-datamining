@@ -1,13 +1,27 @@
 // _runtime/metro/13887__.js
-import registerAsset from "01119__.js";
+import keys2 from "../13827_keys2.js";
+import _mod13831 from "13831__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "9efbede8b87c94f401364acf34876922",
-  name: "HammerIcon",
-  type: "png",
-});
+const Dimension = _mod13831.TYPE.Dimension;
+const obj = {
+  name: "Dimension",
+  structure: { value: String, unit: String },
+  parse() {
+    const tokenStart = this.scanner.tokenStart;
+    const consumeNumberResult = keys2.consumeNumber(this.scanner.source, tokenStart);
+    this.eat(Dimension);
+    const obj2 = {
+      type: "Dimension",
+      loc: this.getLocation(tokenStart, this.scanner.tokenStart),
+      value: this.scanner.source.substring(tokenStart, consumeNumberResult),
+      unit: this.scanner.source.substring(consumeNumberResult, this.scanner.tokenStart),
+    };
+    return obj2;
+  },
+  generate(value) {
+    this.chunk(value.value);
+    this.chunk(value.unit);
+  },
+};
+
+export default obj;

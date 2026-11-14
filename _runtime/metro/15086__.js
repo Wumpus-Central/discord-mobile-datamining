@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/media_viewer/native/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "05e33949de588de2bb105d38c549ac02",
-  name: "ic_eye_hidden",
+  httpServerLocation: "/assets/images/native",
+  width: 48,
+  height: 48,
+  scales: [1, 2, 3],
+  hash: "079f1f5099b5396d01af5ed23e7bac76",
+  name: "ic_invites_disabled",
   type: "png",
 });

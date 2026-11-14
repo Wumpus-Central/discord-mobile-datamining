@@ -1,69 +1,55 @@
 // _runtime/metro/09757__.js
-import _mod9731 from "09731__.js";
-import _mod9736 from "09736__.js";
-import _mod9748 from "09748__.js";
-import _mod9749 from "09749__.js";
-import ScopeClass from "../09751_ScopeClass.js";
+import colorPropType from "../09742_colorPropType.js";
+import _mod9744 from "09744__.js";
+import _mod9758 from "09758__.js";
+import flattenStyle from "09747__.js";
+import emptyFunction_mod from "05357__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const obj = {
+  ellipsizeMode: null,
+  numberOfLines: null,
+  textBreakStrategy: null,
+  onLayout: null,
+  onPress: null,
+  onLongPress: null,
+  pressRetentionOffset: null,
+  selectable: null,
+  selectionColor: null,
+  suppressHighlighting: null,
+  style: null,
+  testID: null,
+  nativeID: null,
+  allowFontScaling: null,
+  maxFontSizeMultiplier: null,
+  accessible: null,
+  adjustsFontSizeToFit: null,
+  minimumFontScale: null,
+  disabled: null,
+  dataDetectorType: null,
+};
+const module_9758 = flattenStyle(_mod9758);
+let emptyFunction = emptyFunction_mod;
+obj.ellipsizeMode = emptyFunction.oneOf(["head", "middle", "tail", "clip"]);
+obj.numberOfLines = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
+obj.onLayout = emptyFunction.func;
+obj.onPress = emptyFunction.func;
+obj.onLongPress = emptyFunction.func;
+obj.pressRetentionOffset = _mod9744;
+obj.selectable = emptyFunction.bool;
+obj.selectionColor = colorPropType;
+obj.suppressHighlighting = emptyFunction.bool;
+obj.style = module_9758;
+obj.testID = emptyFunction.string;
+obj.nativeID = emptyFunction.string;
+obj.allowFontScaling = emptyFunction.bool;
+obj.maxFontSizeMultiplier = emptyFunction.number;
+obj.accessible = emptyFunction.bool;
+obj.adjustsFontSizeToFit = emptyFunction.bool;
+obj.minimumFontScale = emptyFunction.number;
+obj.disabled = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+obj.dataDetectorType = emptyFunction.oneOf(["phoneNumber", "link", "email", "none", "all"]);
 
-export function getClient() {
-  const mainCarrier = _mod9748.getMainCarrier();
-  const asyncContextStrategy = _mod9749.getAsyncContextStrategy(mainCarrier);
-  const currentScope = asyncContextStrategy.getCurrentScope();
-  return currentScope.getClient();
-}
-export function getCurrentScope() {
-  const mainCarrier = _mod9748.getMainCarrier();
-  const asyncContextStrategy = _mod9749.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getCurrentScope();
-}
-export function getGlobalScope() {
-  return _mod9731.getGlobalSingleton("globalScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-}
-export function getIsolationScope() {
-  const mainCarrier = _mod9748.getMainCarrier();
-  const asyncContextStrategy = _mod9749.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getIsolationScope();
-}
-export function getTraceContextFromScope(getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  ({ traceId, spanId, parentSpanId } = propagationContext);
-  return _mod9736.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
-}
-export function withIsolationScope() {
-  items = [...arguments];
-  const mainCarrier = _mod9748.getMainCarrier();
-  const asyncContextStrategy = _mod9749.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
-    } else {
-      result = asyncContextStrategy.withIsolationScope(tmp3);
-    }
-    return result;
-  } else {
-    return asyncContextStrategy.withIsolationScope(items[0]);
-  }
-}
-export function withScope() {
-  items = [...arguments];
-  const mainCarrier = _mod9748.getMainCarrier();
-  const asyncContextStrategy = _mod9749.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
-    } else {
-      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
-    }
-    return withSetScopeResult;
-  } else {
-    return asyncContextStrategy.withScope(items[0]);
-  }
-}
+export default obj;

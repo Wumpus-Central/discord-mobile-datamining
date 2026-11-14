@@ -1,14 +1,13 @@
 // _runtime/metro/16023__.js
-let num = 0;
-let num2 = 0;
-let tmp2 = num;
-do {
-  do {
-    let tmp3 = tmp2 >>> 1;
-    let tmp5 = 1 & tmp2 ? 3988292384 ^ tmp3 : tmp3;
-    num2 = num2 + 1;
-    tmp2 = tmp5;
-  } while (num2 < 8);
-  tmp[num] = tmp5;
-  num = num + 1;
-} while (num < 256);
+import registerAsset from "01119__.js";
+
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 30,
+  height: 30,
+  scales: [2, 3],
+  hash: "565bfab9e414d3cdf97ad89eaffbf2b3",
+  name: "member_list_icon",
+  type: "png",
+});

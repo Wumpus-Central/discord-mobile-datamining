@@ -1,13 +1,10 @@
 // _runtime/metro/11116__.js
-import registerAsset from "01119__.js";
+import _mod11115 from "11115__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/ColorWaveIcon",
-  width: 60,
-  height: 60,
-  scales: [2, 3],
-  hash: "c1f01c1cb21b1b0825a7707e0be435be",
-  name: "ColorWaveIcon",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export function keepLocalCopy(arg0) {
+  const NativeDocumentPicker = _mod11115.NativeDocumentPicker;
+  return NativeDocumentPicker.keepLocalCopy(arg0);
+}

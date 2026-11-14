@@ -1,11 +1,13 @@
 // _runtime/metro/18055__.js
-import _mod18060 from "18060__.js";
-import 12912__ from "12912__.js";
+import registerAsset from "01119__.js";
 
-const require = globalThis.__r;
-
-
-export const getYoutubeMeta = require("18056__.js").getYoutubeMeta;
-export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
-export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
-export default module_12912(_mod18060).default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
+  width: 70,
+  height: 47,
+  scales: [1],
+  hash: "43a01bb0fa7bd2e9d7fb4172be185309",
+  name: "es-419",
+  type: "png",
+});

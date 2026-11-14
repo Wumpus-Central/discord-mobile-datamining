@@ -1,339 +1,299 @@
 // _runtime/metro/13856__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import _slicedToArray from "00032__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
-import "module_19";
+import _mod13833 from "13833__.js";
 
-const WithLocalSvg = fn;
-let duration = dependencyMap;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+function isValidLocation(start) {
+  let BooleanResult = Boolean(start);
+  if (BooleanResult) {
+    const offset = start.offset;
+    let isFiniteResult = typeof offset === "number";
+    if (typeof offset === "number") {
+      const _isFinite = isFinite;
+      isFiniteResult = isFinite(offset);
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-function loadAndroidRawResource(uri) {
-  const self = this;
-  const apply = closure_15.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    if (isFiniteResult) {
+      const _Math = Math;
+      isFiniteResult = Math.floor(offset) === offset;
+    }
+    if (isFiniteResult) {
+      isFiniteResult = offset >= 0;
+    }
+    BooleanResult = isFiniteResult;
   }
-  return applyArgumentsResult;
-}
-let closure_15 = async function _loadAndroidRawResource(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
+  if (BooleanResult) {
+    const line = start.line;
+    let isFiniteResult1 = typeof line === "number";
+    if (typeof line === "number") {
+      const _isFinite2 = isFinite;
+      isFiniteResult1 = isFinite(line);
     }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c2) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+    if (isFiniteResult1) {
+      const _Math2 = Math;
+      isFiniteResult1 = Math.floor(line) === line;
+    }
+    if (isFiniteResult1) {
+      isFiniteResult1 = line >= 0;
+    }
+    BooleanResult = isFiniteResult1;
+  }
+  if (BooleanResult) {
+    const column = start.column;
+    let isFiniteResult2 = typeof column === "number";
+    if (typeof column === "number") {
+      const _isFinite3 = isFinite;
+      isFiniteResult2 = isFinite(column);
+    }
+    if (isFiniteResult2) {
+      const _Math3 = Math;
+      isFiniteResult2 = Math.floor(column) === column;
+    }
+    if (isFiniteResult2) {
+      isFiniteResult2 = column >= 0;
+    }
+    BooleanResult = isFiniteResult2;
+  }
+  return BooleanResult;
+}
+
+export default {
+  getStructureFromConfig(node) {
+    const obj = {};
+    if (node.node) {
+      for (const key10016 in arg0.node) {
+        let call = hasOwnProperty.call;
+        node = arg0.node;
+        if (typeof call === "unknown") {
+          let callResult = hasOwnProperty(key10016);
         } else {
-          closure_1 = tmp6;
-          c4 = 1;
-          c2 = 2;
-          c5 = 1;
-          const obj4 = { value: WithLocalSvg(dependencyMap[12]).default.getRawResource(closure_0), done: false };
-          return obj4;
+          callResult = call(node, key10016);
         }
-      } else if (1 === tmp6) {
-        c4 = 0;
-        closure_129_0 = closure_3;
-        const _console = console;
-        console.error(
-          "Error in RawResourceUtils while trying to natively load an Android raw resource: ",
-          closure_129_0,
-        );
-        c5 = 3;
-        return { value: null, done: true };
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 0;
-        c5 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
-      } else {
-        c4 = 0;
-        c5 = 3;
-        const obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp15) {
-      closure_3 = tmp15;
-      if (tmp3 === c4) {
-        c5 = tmp2;
-        throw tmp15;
-      } else {
-        c2 = tmp;
-      }
-    }
-  }
-};
-function loadLocalRawResourceAndroid(source) {
-  const assetSource = closure_1_11.resolveAssetSource(source);
-  let uri;
-  if (assetSource != null) {
-    uri = assetSource.uri;
-  }
-  if (uri) {
-    let tmp3 = typeof uri === "string";
-    if (typeof uri === "string") {
-      tmp3 = uri.indexOf("/") <= -1;
-    }
-    if (tmp3) {
-      let text = loadAndroidRawResource(uri);
-    }
-    return text;
-  }
-  text = WithLocalSvg(8197).fetchText(uri);
-  const obj = WithLocalSvg(8197);
-}
-class LocalSvg {
-  constructor(arg0) {
-    asset = global.asset;
-    tmp = closure_7(global, closure_2);
-    tmp2 = closure_6(useState(null), 2);
-    closure_1 = tmp2[1];
-    items = [];
-    items[0] = asset;
-    tmp3 = useEffect(() => {
-      if (typeof loadLocalRawResourceAndroid === "function") {
-        const assetSource = closure_2_11.resolveAssetSource(tmp);
-        let uri;
-        if (assetSource != null) {
-          uri = assetSource.uri;
-        }
-        if (uri) {
-          let tmp6 = typeof uri === "string";
-          if (typeof uri === "string") {
-            tmp6 = uri.indexOf("/") <= -1;
-          }
-          if (tmp6) {
-            let text = loadAndroidRawResource(uri);
-          }
-          text.then(dependencyMap);
-        }
-        text = WithLocalSvg(dependencyMap[11]).fetchText(uri);
-        const obj = WithLocalSvg(dependencyMap[11]);
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    }, items);
-    obj = { xml: tmp2[0] };
-    merged = Object.assign(tmp);
-    return jsx(asset(closure_1[13]).SvgCss, obj);
-  }
-}
-let closure_2 = ["asset"];
-_possibleConstructorReturnDefault;
-const noop = fn(19);
-({ useState: closure_9, useEffect: closure_10, Component } = noop);
-get_ActivityIndicator = fn(17);
-({ Image: closure_11, Platform } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-duration = undefined;
-class WithLocalSvg {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    tmp = closure_3(this, WithLocalSvg);
-    items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(WithLocalSvg);
-    tmp3 = closure_4;
-    if (closure_13()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.state = { xml: null };
-    return tmp3Result;
-  }
-}
-_inherits(WithLocalSvg, Component);
-const entry = {
-  key: "componentDidMount",
-  value: function componentDidMount() {
-    this.load(this.props.asset);
-  },
-};
-let items = [
-  entry,
-  {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(asset) {
-      const self = this;
-      asset = this.props.asset;
-      if (asset !== asset.asset) {
-        self.load(asset);
-      }
-    },
-  },
-  ,
-];
-const entry1 = { key: "load", value: null };
-duration = asyncGeneratorStep(async function (arg0) {
-  const self = this;
-  closure_1 = arg0;
-  c8 = 0;
-  c9 = 0;
-  c6 = 0;
-  return (async (arg0) => {
-    if (c9 === 2) {
-      c9 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp5 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c9 = 2;
-        if (0 === c8) {
-          if (arg0 === 1) {
-            c9 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c9 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_5 = self;
-            closure_4 = closure_1;
-            c6 = 1;
-            setState = self.setState;
-            closure_2 = {};
-            let tmp7 = null;
-            if (closure_1) {
-              c8 = 2;
-              c9 = 1;
-              const obj4 = { value: loadLocalRawResourceAndroid(closure_1), done: false };
-              return obj4;
-            } else {
-              closure_2.xml = tmp7;
-              setState(closure_2);
-              c6 = 0;
+        if (!callResult) {
+          continue;
+        } else {
+          let tmp4 = arg0.node[key10016];
+          if (tmp4.structure) {
+            let structure = tmp4.structure;
+            let obj2 = { type: null, loc: true };
+            let _String = String;
+            obj2.type = String;
+            let obj3 = { type: '"' + key10016 + '"' };
+            for (const key10038 in structure) {
+              let call2 = hasOwnProperty.call;
+              if (typeof call2 === "unknown") {
+                let call2Result = hasOwnProperty(key10038);
+              } else {
+                call2Result = call2(structure, key10038);
+              }
+              if (false === call2Result) {
+                continue;
+              } else {
+                let _Array = Array;
+                let arr = structure[key10038];
+                if (Array.isArray(structure[key10038])) {
+                  let substr = arr.slice();
+                } else {
+                  substr = [arr];
+                }
+                items = [];
+                obj2[key10038] = substr;
+                let num3 = 0;
+                if (0 < substr.length) {
+                  while (true) {
+                    let tmp11 = substr[num3];
+                    let _String2 = String;
+                    if (tmp11 !== String) {
+                      let _Boolean = Boolean;
+                      if (tmp11 !== Boolean) {
+                        if (null === tmp11) {
+                          let arr2 = items.push("null");
+                        } else if (typeof tmp11 === "string") {
+                          let arr3 = items.push("<" + tmp11 + ">");
+                        } else {
+                          let _Array2 = Array;
+                          if (Array.isArray(tmp11)) {
+                            let arr7 = items.push("List");
+                          } else {
+                            let _Error2 = Error;
+                            let str9 = "Wrong value `";
+                            let str10 = "` in `";
+                            let str11 = ".";
+                            let tmp13 = new.target;
+                            let str12 = "` structure definition";
+                            let tmp14 = new.target;
+                            let error = new Error(
+                              "Wrong value `" + tmp11 + "` in `" + key10016 + "." + key10038 + "` structure definition",
+                            );
+                            throw error;
+                          }
+                        }
+                      }
+                      num3 = num3 + 1;
+                      if (num3 >= substr.length) {
+                        break;
+                      }
+                    }
+                    let arr8 = items.push(tmp11.name);
+                  }
+                }
+                obj3[key10038] = items.join(" | ");
+                continue;
+              }
+              continue;
             }
-          }
-        } else if (1 === tmp6) {
-          c6 = 0;
-          closure_132_0 = closure_7;
-          const _console = console;
-          console.error(closure_132_0);
-        } else if (arg0 === 1) {
-          c9 = 3;
-          throw value;
-        } else {
-          tmp7 = value;
-          if (arg0 === 2) {
-            c6 = 0;
-            c9 = 3;
-            const obj = { value, done: true };
-            return obj;
+            let obj4 = {
+              docs: obj3,
+              check: function checkNode(type, fn) {
+                if (type) {
+                  const _Object = Object;
+                  if (type.constructor === Object) {
+                    for (const key10005 in arg0) {
+                      let call2 = hasOwnProperty.call;
+                      if (typeof call2 === "unknown") {
+                        let call2Result = hasOwnProperty(key10005);
+                      } else {
+                        call2Result = call2(arg0, key10005);
+                      }
+                      if (false === call2Result) {
+                        continue;
+                      } else {
+                        if ("type" === key10005) {
+                          let flag = true;
+                          let tmp5 = key10005;
+                          if (arg0.type !== key10016) {
+                            let tmp15 = arg1(arg0, "Wrong node type `" + arg0.type + "`, expected `" + tmp14 + "`");
+                            flag = true;
+                            tmp5 = key10005;
+                          }
+                          if (flag) {
+                            continue;
+                          } else {
+                            let tmp17 = arg1(arg0, "Bad value for `" + key10016 + "." + tmp5 + "`");
+                            continue;
+                          }
+                          continue;
+                        } else if ("loc" === key10005) {
+                          if (null === arg0.loc) {
+                            continue;
+                          } else {
+                            let text = key10005;
+                            if (arg0.loc) {
+                              let _Object2 = Object;
+                              text = key10005;
+                              if (arg0.loc.constructor === Object) {
+                                if (typeof arg0.loc.source !== "string") {
+                                  text = `${key10005}.source`;
+                                } else if (isValidLocation(arg0.loc.start)) {
+                                  if (isValidLocation(arg0.loc.end)) {
+                                    continue;
+                                  } else {
+                                    text = `${key10005}.end`;
+                                  }
+                                } else {
+                                  text = `${key10005}.start`;
+                                }
+                                continue;
+                              }
+                            }
+                            tmp5 = text;
+                            flag = false;
+                          }
+                        } else if (obj2.hasOwnProperty(key10005)) {
+                          let num = 0;
+                          let flag2 = false;
+                          flag = false;
+                          tmp5 = key10005;
+                          if (0 < obj2[key10005].length) {
+                            while (true) {
+                              let tmp7 = obj2[key10005][num];
+                              let _String = String;
+                              let tmp9 = flag2;
+                              if (String === tmp7) {
+                                tmp9 = typeof arg0[key10005] === "string";
+                              } else {
+                                let _Boolean = Boolean;
+                                if (Boolean === tmp7) {
+                                  tmp9 = typeof arg0[key10005] === "boolean";
+                                } else if (null === tmp7) {
+                                  tmp9 = null === arg0[key10005];
+                                } else if (typeof tmp7 === "string") {
+                                  let tmp12 = arg0[key10005];
+                                  if (tmp12) {
+                                    tmp12 = arg0[key10005].type === tmp7;
+                                  }
+                                  tmp9 = tmp12;
+                                } else {
+                                  let _Array = Array;
+                                  if (Array.isArray(tmp7)) {
+                                    tmp9 = arg0[key10005] instanceof _mod13833;
+                                  }
+                                }
+                              }
+                              flag = tmp9;
+                              tmp5 = key10005;
+                              if (tmp9) {
+                                break;
+                              } else {
+                                num = num + 1;
+                                flag2 = tmp9;
+                                flag = tmp9;
+                                tmp5 = key10005;
+                                if (num < obj2[key10005].length) {
+                                  continue;
+                                } else {
+                                  break;
+                                }
+                                break;
+                              }
+                            }
+                          }
+                        } else {
+                          let tmp4 = arg1(arg0, "Unknown field `" + key10005 + "` for " + key10016 + " node type");
+                          flag = true;
+                          tmp5 = key10005;
+                        }
+                        continue;
+                      }
+                      continue;
+                    }
+                    const keys = Object.keys();
+                    if (keys !== undefined) {
+                      const first = keys[0];
+                      while (first !== undefined) {
+                        let call3 = hasOwnProperty.call;
+                        let tmp21 = typeof call3 === "unknown" ? hasOwnProperty(first) : call3(obj2, first);
+                        if (!tmp21) {
+                          if (!tmp21) {
+                            continue;
+                          } else {
+                            let tmp25 = fn(type, `Field \`${key10016}.${tmp20}\` is missed`);
+                            continue;
+                          }
+                          continue;
+                        } else {
+                          let call = hasOwnProperty.call;
+                          let tmp23 = false === (typeof call === "unknown" ? hasOwnProperty(first) : call(type, first));
+                        }
+                      }
+                    }
+                  }
+                }
+                return fn(type, "Type of node should be an Object");
+              },
+            };
+            obj[key10016] = obj4;
+            continue;
+          } else {
+            let _Error = Error;
+            let str7 = "Missed `structure` field in `";
+            let tmp5 = new.target;
+            let str8 = "` node type definition";
+            let tmp6 = new.target;
+            let error1 = new Error("Missed `structure` field in `" + key10016 + "` node type definition");
+            throw error1;
           }
         }
-        c9 = 3;
-      } catch (tmp19) {
-        closure_7 = tmp19;
-        if (tmp3 === c6) {
-          c9 = tmp2;
-          throw tmp19;
-        } else {
-          c8 = tmp;
-        }
+        continue;
       }
     }
-  })();
-});
-entry1.value = function load(arg0) {
-  const self = this;
-  const apply = closure_1.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-items[2] = entry1;
-items[3] = {
-  key: "render",
-  value: function render() {
-    return jsx(WithLocalSvg(13715).SvgWithCss, { xml: this.state.xml, override: this.props });
+    return obj;
   },
 };
-
-export default LocalSvg;
-export function getUriFromSource(source) {
-  const assetSource = closure_1_11.resolveAssetSource(source);
-  let uri;
-  if (assetSource != null) {
-    uri = assetSource.uri;
-  }
-  return uri;
-}
-export function loadLocalRawResourceDefault(source) {
-  const assetSource = closure_1_11.resolveAssetSource(source);
-  let uri;
-  if (assetSource != null) {
-    uri = assetSource.uri;
-  }
-  return WithLocalSvg(8197).fetchText(uri);
-}
-export function isUriAnAndroidResourceIdentifier(str) {
-  let tmp = typeof str === "string";
-  if (typeof str === "string") {
-    tmp = str.indexOf("/") <= -1;
-  }
-  return tmp;
-}
-export { loadAndroidRawResource };
-export { loadLocalRawResourceAndroid };
-export const loadLocalRawResource = loadLocalRawResourceAndroid;
-export { LocalSvg };
-export const WithLocalSvg = _createClass(WithLocalSvg, items);

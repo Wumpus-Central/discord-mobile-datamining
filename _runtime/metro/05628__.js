@@ -1,23 +1,6 @@
 // _runtime/metro/05628__.js
-import reanimatedWrapper from "../05579_reanimatedWrapper.js";
+import _mod17 from "00017__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export function createLastUpdateEventMap() {
-  const Worklets = reanimatedWrapper.Worklets;
-  let createShareable;
-  if (Worklets != null) {
-    createShareable = Worklets.createShareable;
-  }
-  if (undefined !== createShareable) {
-    if (undefined !== reanimatedWrapper.Worklets.UIRuntimeId) {
-      if (undefined !== reanimatedWrapper.Reanimated) {
-        const Worklets2 = reanimatedWrapper.Worklets;
-        const _Map = Map;
-        const map = new Map();
-        return Worklets2.createShareable(reanimatedWrapper.Worklets.UIRuntimeId, map);
-      }
-    }
-  }
-}
+export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");

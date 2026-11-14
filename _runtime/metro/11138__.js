@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/HexagonIcon",
-  width: 102,
-  height: 102,
-  scales: [2, 3],
-  hash: "6fc713ff4969740a35633ad9d71eaf93",
-  name: "HexagonIcon",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 32,
+  scales: [1, 2, 3],
+  hash: "b193e2a038165601eb12e283d0af80aa",
+  name: "ic_file_small_webcode",
   type: "png",
 });

@@ -1,6 +1,10 @@
 // _runtime/metro/05828__.js
-import LegacyBaseButton from "../05535_LegacyBaseButton.js";
+import PlatformConfig2 from "../05826_PlatformConfig.js";
 
-export const TouchableOpacity = LegacyBaseButton.TouchableOpacity;
-export const TouchableHighlight = LegacyBaseButton.TouchableHighlight;
-export const TouchableWithoutFeedback = LegacyBaseButton.TouchableWithoutFeedback;
+require = arg1;
+const dependencyMap = arg6;
+
+export function getInvertedTransformStyle(horizontal) {
+  const PlatformConfig = PlatformConfig2.PlatformConfig;
+  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
+}

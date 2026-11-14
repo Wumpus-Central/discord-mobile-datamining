@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "aadd4fcf699494399b151b52e5493160",
-  name: "ic_community_guild_badge_premium_24px",
+  hash: "4ff7b09e67486edcd0ad75a5131670be",
+  name: "CirclePlayIcon-primary",
   type: "png",
 });

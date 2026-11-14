@@ -1,132 +1,94 @@
 // _runtime/metro/05609__.js
-import _mod19 from "00019__.js";
-import TouchEventType from "../05542_TouchEventType.js";
-import CallbackType from "../05556_CallbackType.js";
+import GestureDetectorType from "../05610_GestureDetectorType.js";
+import NativeDetector2 from "../05656_NativeDetector.js";
+import VirtualDetector from "../05681_VirtualDetector.js";
+import transformTapProps from "../05684_transformTapProps.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import noop from "00019__.js";
 
-const useMemo = _mod19.useMemo;
-let items = [
-  {
-    code: "(function getHandler_Pnpm_eventHandlersUtilsTs1(type,callbacks){let[CallbackType]=this.__closure;switch(type){case CallbackType.BEGAN:return callbacks.onBegin;case CallbackType.START:return callbacks.onActivate;case CallbackType.UPDATE:return callbacks.onUpdate;case CallbackType.END:return callbacks.onDeactivate;case CallbackType.FINALIZE:return callbacks.onFinalize;case CallbackType.TOUCHES_DOWN:return callbacks.onTouchesDown;case CallbackType.TOUCHES_MOVE:return callbacks.onTouchesMove;case CallbackType.TOUCHES_UP:return callbacks.onTouchesUp;case CallbackType.TOUCHES_CANCEL:return callbacks.onTouchesCancel;}})",
-  },
-  CallbackType.CallbackType,
-];
-let closure_129_0;
-[tmp2, tmp3] = items;
-function getHandler(arg0, onBegin) {
-  if (useMemo.BEGAN === arg0) {
-    return onBegin.onBegin;
-  } else if (useMemo.START === arg0) {
-    return onBegin.onActivate;
-  } else if (useMemo.UPDATE === arg0) {
-    return onBegin.onUpdate;
-  } else if (useMemo.END === arg0) {
-    return onBegin.onDeactivate;
-  } else if (useMemo.FINALIZE === arg0) {
-    return onBegin.onFinalize;
-  } else if (useMemo.TOUCHES_DOWN === arg0) {
-    return onBegin.onTouchesDown;
-  } else if (useMemo.TOUCHES_MOVE === arg0) {
-    return onBegin.onTouchesMove;
-  } else if (useMemo.TOUCHES_UP === arg0) {
-    return onBegin.onTouchesUp;
-  } else {
-    return useMemo.TOUCHES_CANCEL === arg0 ? onBegin.onTouchesCancel : undefined;
-  }
-}
-const items1 = [tmp3];
-getHandler.__closure = items1;
-getHandler.__workletHash = 13046541192109;
-getHandler.__initData = tmp2;
-const items2 = [
-  {
-    code: "(function touchEventTypeToCallbackType_Pnpm_eventHandlersUtilsTs2(eventType){let[TouchEventType,CallbackType]=this.__closure;switch(eventType){case TouchEventType.TOUCHES_DOWN:return CallbackType.TOUCHES_DOWN;case TouchEventType.TOUCHES_MOVE:return CallbackType.TOUCHES_MOVE;case TouchEventType.TOUCHES_UP:return CallbackType.TOUCHES_UP;case TouchEventType.TOUCHES_CANCEL:return CallbackType.TOUCHES_CANCEL;}return CallbackType.UNDEFINED;})",
-  },
-  TouchEventType.TouchEventType,
-  CallbackType.CallbackType,
-];
-let closure_130_0;
-let closure_130_1;
-[tmp4, tmp5, tmp6] = items2;
-function touchEventTypeToCallbackType(arg0) {
-  if (useMemo.TOUCHES_DOWN === arg0) {
-    return constants.TOUCHES_DOWN;
-  } else if (useMemo.TOUCHES_MOVE === arg0) {
-    return constants.TOUCHES_MOVE;
-  } else if (useMemo.TOUCHES_UP === arg0) {
-    return constants.TOUCHES_UP;
-  } else if (useMemo.TOUCHES_CANCEL === arg0) {
-    return constants.TOUCHES_CANCEL;
-  } else {
-    return constants.UNDEFINED;
-  }
-}
-const items3 = [tmp5, tmp6];
-touchEventTypeToCallbackType.__closure = items3;
-touchEventTypeToCallbackType.__workletHash = 6698033145431;
-touchEventTypeToCallbackType.__initData = tmp4;
-const items4 = [
-  {
-    code: "(function runCallback_Pnpm_eventHandlersUtilsTs3(type,callbacks,event){let[getHandler]=this.__closure;const handler=getHandler(type,callbacks);if(!handler){return;}handler(event);})",
-  },
-  getHandler,
-];
-let closure_131_0;
-[tmp7, tmp8] = items4;
-function runCallback(arg0, arg1, arg2) {
-  const tmp = useMemo(arg0, arg1);
-  if (tmp) {
-    tmp(arg2);
-  }
-}
-const items5 = [tmp8];
-runCallback.__closure = items5;
-runCallback.__workletHash = 179583064692;
-runCallback.__initData = tmp7;
+const require = globalThis.__r;
 
-export function useMemoizedGestureCallbacks(disableReanimated) {
-  items = [, , , , , , , ,];
-  ({
-    onActivate: arr[0],
-    onBegin: arr[1],
-    onDeactivate: arr[2],
-    onFinalize: arr[3],
-    onTouchesCancel: arr[4],
-    onTouchesDown: arr[5],
-    onTouchesMove: arr[6],
-    onTouchesUp: arr[7],
-    onUpdate: arr[8],
-  } = disableReanimated);
-  return useMemo(() => {
-    const obj = {};
-    if (disableReanimated.onBegin) {
-      obj.onBegin = disableReanimated.onBegin;
+require = fn;
+let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
+const useEffect = fn(19).useEffect;
+const jsx = fn(21).jsx;
+
+export default function createNativeWrapper(displayName, arg1) {
+  _require = displayName;
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  let Native = Intercepting;
+  if (Intercepting === undefined) {
+    Native = require("GestureDetectorType").GestureDetectorType.Native;
+  }
+  let str;
+  if (displayName != null) {
+    str = displayName.displayName;
+  }
+  if (!str) {
+    let name;
+    if (displayName != null) {
+      const render = displayName.render;
+      if (render != null) {
+        name = render.name;
+      }
     }
-    if (disableReanimated.onActivate) {
-      obj.onActivate = disableReanimated.onActivate;
+    str = name;
+  }
+  if (!str) {
+    let tmp4 = typeof displayName === "string";
+    if (typeof displayName === "string") {
+      tmp4 = displayName;
     }
-    if (disableReanimated.onDeactivate) {
-      obj.onDeactivate = disableReanimated.onDeactivate;
+    str = tmp4;
+  }
+  if (!str) {
+    str = "ComponentWrapper";
+  }
+  class ComponentWrapper {
+    constructor(arg0) {
+      closure_0 = displayName;
+      onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER = displayName.onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      closure_1 = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      keys = Object.keys(closure_3(displayName, closure_2));
+      obj = { gestureHandlerProps: null, childProps: null };
+      obj1 = {};
+      merged = Object.assign(closure_1);
+      obj.gestureHandlerProps = obj1;
+      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
+      reduced = keys.reduce(/* F127577 */ function() { ... }, obj);
+      ({ gestureHandlerProps, childProps } = reduced);
+      if (undefined === gestureHandlerProps.disableReanimated) {
+        flag = true;
+        gestureHandlerProps.disableReanimated = true;
+      }
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      obj3 = closure_0(closure_1[5]);
+      nativeGesture = obj3.useNativeGesture(gestureHandlerProps);
+      closure_2 = nativeGesture;
+      items = [, ];
+      items[0] = nativeGesture;
+      items[1] = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      tmp6 = useEffect(/* F127578 */ function() { ... }, items);
+      tmp7 = Native;
+      if (Native === closure_0(closure_1[3]).GestureDetectorType.Intercepting) {
+        NativeDetector = tmp3(tmp4[3]).InterceptingGestureDetector;
+      } else if (tmp7 === tmp3(tmp4[3]).GestureDetectorType.Virtual) {
+        NativeDetector = tmp3(tmp4[6]).VirtualDetector;
+      } else {
+        NativeDetector = tmp3(tmp4[7]).NativeDetector;
+      }
+      obj6 = { gesture: nativeGesture, children: null };
+      obj7 = {};
+      merged1 = Object.assign(childProps);
+      obj7.ref = displayName.ref;
+      obj6.children = jsx(closure_0, obj7);
+      return jsx(NativeDetector, obj6);
     }
-    if (disableReanimated.onFinalize) {
-      obj.onFinalize = disableReanimated.onFinalize;
-    }
-    if (disableReanimated.onUpdate) {
-      obj.onUpdate = disableReanimated.onUpdate;
-    }
-    if (disableReanimated.onTouchesDown) {
-      obj.onTouchesDown = disableReanimated.onTouchesDown;
-    }
-    if (disableReanimated.onTouchesMove) {
-      obj.onTouchesMove = disableReanimated.onTouchesMove;
-    }
-    if (disableReanimated.onTouchesUp) {
-      obj.onTouchesUp = disableReanimated.onTouchesUp;
-    }
-    if (disableReanimated.onTouchesCancel) {
-      obj.onTouchesCancel = disableReanimated.onTouchesCancel;
-    }
-    return obj;
-  }, items);
-}
-export { touchEventTypeToCallbackType };
-export { runCallback };
+  }
+  ComponentWrapper.displayName = str;
+  return ComponentWrapper;
+};

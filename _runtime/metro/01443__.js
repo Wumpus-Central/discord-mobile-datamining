@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images",
-  width: 400,
-  height: 400,
+  httpServerLocation: "/assets/images/group_dms",
+  width: 96,
+  height: 96,
   scales: [1],
-  hash: "212a10d1e3da5ff0492c97f7e14e9d29",
-  name: "nitro_wumpus_avatar",
+  hash: "3cb840d03313467838d658bbec801fcd",
+  name: "icon7",
   type: "png",
 });

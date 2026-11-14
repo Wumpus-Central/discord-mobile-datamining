@@ -6,8 +6,8 @@ import noop from "metro/00019__.js";
 
 const require = globalThis.__r;
 
-function instrumentReactRouter(f124218, arg1, arg2, location, reactrouter_v4) {
-  _require = f124218;
+function instrumentReactRouter(f125620, arg1, arg2, location, reactrouter_v4) {
+  _require = f125620;
   dependencyMap = reactrouter_v4;
   items = _slicedToArray;
   if (_slicedToArray === undefined) {
@@ -53,7 +53,7 @@ function instrumentReactRouter(f124218, arg1, arg2, location, reactrouter_v4) {
       obj3[require("metro/00681__.js").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + reactrouter_v4;
       obj3[require("metro/00681__.js").SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
       obj2.attributes = obj3;
-      let result = require("feedbackAsyncIntegration").startBrowserTracingPageLoadSpan(f124218, obj2);
+      let result = require("feedbackAsyncIntegration").startBrowserTracingPageLoadSpan(f125620, obj2);
       let obj = require("feedbackAsyncIntegration");
     }
   }
@@ -167,7 +167,7 @@ function matchRoutes(pathname, search, arg2) {
                           if (items === undefined) {
                             items = [];
                           }
-                          routes.some(/* F82377 */ function() { ... });
+                          routes.some(/* F83441 */ function() { ... });
                         }
                       }
                       return match;
@@ -201,9 +201,9 @@ export function reactRouterV4BrowserTracingIntegration(instrumentNavigation) {
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;
   const obj3 = {};
   const merged1 = Object.assign(result);
-  obj3.afterAllSetup = function afterAllSetup(f124218) {
-    result.afterAllSetup(f124218);
-    instrumentReactRouter(f124218, closure_4, closure_5, dependencyMap, "reactrouter_v4", _slicedToArray, noop);
+  obj3.afterAllSetup = function afterAllSetup(f125620) {
+    result.afterAllSetup(f125620);
+    instrumentReactRouter(f125620, closure_4, closure_5, dependencyMap, "reactrouter_v4", _slicedToArray, noop);
   };
   return obj3;
 }
@@ -220,9 +220,9 @@ export function reactRouterV5BrowserTracingIntegration(instrumentNavigation) {
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;
   const obj3 = {};
   const merged1 = Object.assign(result);
-  obj3.afterAllSetup = function afterAllSetup(f124218) {
-    result.afterAllSetup(f124218);
-    instrumentReactRouter(f124218, closure_4, closure_5, dependencyMap, "reactrouter_v5", _slicedToArray, noop);
+  obj3.afterAllSetup = function afterAllSetup(f125620) {
+    result.afterAllSetup(f125620);
+    instrumentReactRouter(f125620, closure_4, closure_5, dependencyMap, "reactrouter_v5", _slicedToArray, noop);
   };
   return obj3;
 }

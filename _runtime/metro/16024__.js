@@ -1,21 +1,13 @@
 // _runtime/metro/16024__.js
-import _mod16016 from "16016__.js";
+import registerAsset from "01119__.js";
 
-let c2 = true;
-let c3 = true;
-try {
-  const _String = String;
-  fromCharCode.apply(null, [0]);
-  try {
-    const _String2 = String;
-    const _Uint8Array = Uint8Array;
-    const uint8Array = new Uint8Array(1);
-    fromCharCode2.apply(null, uint8Array);
-    const buf8 = new _mod16016.Buf8(256);
-    require = 252;
-  } catch (err) {
-    c3 = false;
-  }
-} catch (err) {
-  c2 = false;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 34,
+  height: 34,
+  scales: [2, 3],
+  hash: "36d299b9a20b89def78675ec02a95049",
+  name: "badge_2",
+  type: "png",
+});

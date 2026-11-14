@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "083faee7a509c219e7bce51121e503e3",
-  name: "StageChannel.compiled.messages",
+  hash: "cc14ed92a0bdb04bcea63a0826108d4b",
+  name: "fr.messages.cc14ed92a0bdb04bcea63a0826108d4b.compiled.messages",
   type: "jsona",
 });

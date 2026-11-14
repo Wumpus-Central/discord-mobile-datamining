@@ -1,7 +1,11 @@
 // _runtime/metro/16524__.js
-Object.defineProperty(Intl, "Locale", {
-  value: fn(16525).Locale,
-  writable: true,
-  enumerable: false,
-  configurable: true,
-});
+import _mod16517 from "16517__.js";
+
+export default (arg0, arg1) => {
+  const tmp = _mod16517(arg0, arg1);
+  let version = null;
+  if (tmp) {
+    version = tmp.version;
+  }
+  return version;
+};

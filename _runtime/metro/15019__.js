@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/forums/native/images",
-  width: 120,
-  height: 80,
+  httpServerLocation: "/assets/modules/contact_sync/native/images",
+  width: 156.5,
+  height: 118,
   scales: [2, 3],
-  hash: "78be237a71ac693684ba99bcd912e5ac",
-  name: "img_forum_empty_state_dark",
+  hash: "273d7cc721dbd2991c78c1e8d926e220",
+  name: "empty-suggestions-header",
   type: "png",
 });

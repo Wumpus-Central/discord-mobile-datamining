@@ -1,112 +1,138 @@
 // _runtime/metro/11476__.js
-import AbstractParserWithWordBoundaryChecking from "../11369_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 
-const ZHHantDateParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-class ZHHantDateParser {
+const DESpecificTimeExpressionParser = require;
+const regExp = new RegExp(
+  "(^|\\s|T)(?:(?:um|von)\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)",
+  "i",
+);
+const regExp1 = new RegExp(
+  "^\\s*(\\-|\\\u2013|\\~|\\\u301C|bis(?:\\s+um)?|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)",
+  "i",
+);
+class DESpecificTimeExpressionParser {
   constructor() {
-    self = this;
-    tmp = c2(this, ZHHantDateParser);
-    tmp2 = closure_4;
-    obj = closure_4(ZHHantDateParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = c2(this, DESpecificTimeExpressionParser);
+    return;
   }
 }
-_inherits(ZHHantDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    const keys = Object.keys(ZHHantDateParser(11477).NUMBER);
-    const text = `(\\d{2,4}|[${obj.join("")}`;
-    const keys1 = Object.keys(ZHHantDateParser(11477).NUMBER);
-    const text1 = `${`(\\d{2,4}|[${obj.join("")}`}]{4}|[${obj2.join("")}`;
-    const keys2 = Object.keys(ZHHantDateParser(11477).NUMBER);
-    const text2 = `${tmp2}]{2})?(?:\\s*)(?:年)?(?:[\\s|,|，]*)(\\d{1,2}|[${obj3.join("")}`;
-    const keys3 = Object.keys(ZHHantDateParser(11477).NUMBER);
-    const regExp = new RegExp(
-      text2 + "]{1,2})(?:\\s*)(?:\u6708)(?:\\s*)(\\d{1,2}|[" + keys3.join("") + "]{1,2})?(?:\\s*)(?:\u65E5|\u865F)?",
-    );
+  key: "pattern",
+  value: function pattern(arg0) {
     return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const parsed = parseInt(index[2]);
-      let zhStringToNumberResult = parsed;
-      if (isNaN(parsed)) {
-        zhStringToNumberResult = ZHHantDateParser(11477).zhStringToNumber(index[2]);
-      }
-      const start = parsingResult.start;
-      start.assign("month", zhStringToNumberResult);
-      if (index[3]) {
-        const _parseInt = parseInt;
-        const parsed1 = parseInt(index[3]);
-        const _isNaN = isNaN;
-        let zhStringToNumberResult1 = parsed1;
-        if (isNaN(parsed1)) {
-          zhStringToNumberResult1 = ZHHantDateParser(11477).zhStringToNumber(index[3]);
-        }
-        const start3 = parsingResult.start;
-        start3.assign("day", zhStringToNumberResult1);
+    key: "extract",
+    value: function extract(createParsingResult, index) {
+      const sum = index.index + index[1].length;
+      const parsingResult = createParsingResult.createParsingResult(sum, index[0].substring(index[1].length));
+      if (str2.match(/^\d{4}$/)) {
+        index.index = index.index + index[0].length;
+        return null;
       } else {
-        const start2 = parsingResult.start;
-        const refDate = createParsingResult.refDate;
-        start2.imply("day", refDate.getDate());
-      }
-      if (index[1]) {
-        const _parseInt2 = parseInt;
-        let parsed2 = parseInt(index[1]);
-        const _isNaN2 = isNaN;
-        if (isNaN(parsed2)) {
-          parsed2 = ZHHantDateParser(11477).zhStringToYear(index[1]);
+        const start = parsingResult.start;
+        parsingResult.start = DESpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
+        if (parsingResult.start) {
+          const match = regex.exec(createParsingResult.text.substring(index.index + index[0].length));
+          if (match) {
+            const start2 = parsingResult.start;
+            parsingResult.end = DESpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
+            if (parsingResult.end) {
+              parsingResult.text = parsingResult.text + match[0];
+            }
+          }
+          return parsingResult;
+        } else {
+          index.index = index.index + index[0].length;
+          return null;
         }
-        const start5 = parsingResult.start;
-        start5.assign("year", parsed2);
-      } else {
-        const start4 = parsingResult.start;
-        const refDate2 = createParsingResult.refDate;
-        start4.imply("year", refDate2.getFullYear());
       }
-      return parsingResult;
+      str2 = parsingResult.text;
     },
   },
 ];
+const entry1 = {
+  key: "extractTimeComponent",
+  value: function extractTimeComponent(assign, arg1) {
+    const parsed = parseInt(arg1[2]);
+    let num = 0;
+    if (null != arg1[3]) {
+      const _parseInt = parseInt;
+      num = parseInt(arg1[3]);
+    }
+    if (num < 60) {
+      if (parsed <= 24) {
+        let PM1 = null;
+        if (parsed >= 12) {
+          PM1 = DESpecificTimeExpressionParser(11434).Meridiem.PM;
+        }
+        let tmp5 = PM1;
+        let tmp6 = parsed;
+        if (null != arg1[5]) {
+          if (parsed > 12) {
+            return null;
+          } else {
+            const str8 = arg1[5].toLowerCase();
+            let tmp9 = parsed;
+            if (str8.match(/morgen|vormittag/)) {
+              let num2 = parsed;
+              if (12 == parsed) {
+                num2 = 0;
+              }
+              tmp9 = num2;
+              PM1 = DESpecificTimeExpressionParser(11434).Meridiem.AM;
+            }
+            let tmp10 = tmp9;
+            if (str8.match(/nachmittag|abend/)) {
+              let sum = tmp9;
+              if (12 != tmp9) {
+                sum = tmp9 + 12;
+              }
+              tmp10 = sum;
+              PM1 = DESpecificTimeExpressionParser(11434).Meridiem.PM;
+            }
+            tmp5 = PM1;
+            tmp6 = tmp10;
+            if (str8.match(/nacht/)) {
+              if (12 == tmp10) {
+                let PM = DESpecificTimeExpressionParser(11434).Meridiem.AM;
+              } else if (tmp10 < 6) {
+                PM = DESpecificTimeExpressionParser(11434).Meridiem.AM;
+              } else {
+                PM = DESpecificTimeExpressionParser(11434).Meridiem.PM;
+                const num4 = tmp10 + 12;
+              }
+            }
+          }
+        }
+        assign.assign("hour", tmp6);
+        assign.assign("minute", num);
+        if (null !== tmp5) {
+          assign.assign("meridiem", tmp5);
+        } else if (tmp6 < 12) {
+          assign.imply("meridiem", DESpecificTimeExpressionParser(11434).Meridiem.AM);
+        } else {
+          assign.imply("meridiem", DESpecificTimeExpressionParser(11434).Meridiem.PM);
+        }
+        if (null != arg1[4]) {
+          const _parseInt2 = parseInt;
+          const parsed1 = parseInt(arg1[4]);
+          if (parsed1 >= 60) {
+            return null;
+          } else {
+            assign.assign("second", parsed1);
+          }
+        }
+        return assign;
+      }
+    }
+    return null;
+  },
+};
+const items1 = [entry1];
 
-export default _createClass(ZHHantDateParser, items);
+export default _createClass(DESpecificTimeExpressionParser, items, items1);

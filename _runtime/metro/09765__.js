@@ -1,39 +1,31 @@
 // _runtime/metro/09765__.js
-import _mod9737 from "09737__.js";
+const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function handleCallbackErrors(fn, arg1) {
-  fn = arg2;
-  if (arg2 === undefined) {
-    fn = function t() {};
-  }
-  try {
-    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
-      closure_0 = arg1;
-      closure_1 = fn;
-      if (obj.isThenable(promise)) {
-        return promise.then(
-          (result) => {
-            closure_1();
-            return result;
-          },
-          (arg0) => {
-            closure_0(arg0);
-            closure_1();
-            throw arg0;
-          },
-        );
-      } else {
-        fn();
-        return promise;
-      }
-      obj = _mod9737;
-    })(fn(), arg1, fn);
-  } catch (tmp5) {
-    tmp3(tmp5);
-    tmp2();
-    throw tmp5;
-  }
+for (const key10013 in require("09766__.js")) {
+  arg5[key10013] = require("09766__.js")[key10013];
+  continue;
+}
+for (const key10017 in require("ReplacementModesAndroid")) {
+  arg5[key10017] = require("ReplacementModesAndroid")[key10017];
+  continue;
+}
+for (const key10021 in require("purchaseUpdatedListener")) {
+  arg5[key10021] = require("purchaseUpdatedListener")[key10021];
+  continue;
+}
+for (const key10025 in require("09780__.js")) {
+  arg5[key10025] = require("09780__.js")[key10025];
+  continue;
+}
+for (const key10029 in require("09781__.js")) {
+  arg5[key10029] = require("09781__.js")[key10029];
+  continue;
+}
+for (const key10033 in require("PurchaseError")) {
+  arg5[key10033] = require("PurchaseError")[key10033];
+  continue;
+}
+for (const key10037 in require("09782__.js")) {
+  arg5[key10037] = require("09782__.js")[key10037];
+  continue;
 }

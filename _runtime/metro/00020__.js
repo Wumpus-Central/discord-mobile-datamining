@@ -389,17 +389,17 @@ export const Children = {
       items = [];
       c2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f79444.call;
+        const call = f80508.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f79444(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f80508(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
       return items;
     }
   },
   forEach(element, arg1, arg2) {
-    const f79442 = function() {
+    const f80506 = function() {
       const self = this;
-      const apply = f79442.apply;
+      const apply = f80506.apply;
       if (typeof apply === "unknown") {
         HermesBuiltin.applyArguments(self);
       } else {
@@ -410,9 +410,9 @@ export const Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f79444.call;
+        const call = f80508.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f79444(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f80508(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
     }
   },
@@ -423,23 +423,23 @@ export const Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f79444.call;
+        const call = f80508.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f79444(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f80508(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
     }
     return closure_0;
   },
   toArray(element) {
-    const f79444 = (arg0) => arg0;
+    const f80508 = (arg0) => arg0;
     let items1 = element;
     if (null != element) {
       items = [];
       closure_2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f79444.call;
+        const call = f80508.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f79444(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f80508(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
       items1 = items;
     }
@@ -630,11 +630,11 @@ export (_result) => {
   obj = { $$typeof: _typeof6, _payload: { _status: -1, _result }, _init: lazyInitializer };
   return obj;
 }
-export (stateFromStores, size2) => {
+export (stateFromStores, size1) => {
   obj = { $$typeof: _typeof5, type: stateFromStores, compare: null };
   let tmp = null;
-  if (undefined !== size2) {
-    tmp = size2;
+  if (undefined !== size1) {
+    tmp = size1;
   }
   obj.compare = tmp;
   return obj;

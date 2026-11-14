@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/.cache/intl/aW50bA==",
   scales: [1],
-  hash: "85124022fb354e03373db395beb1d5d8",
-  name: "vi.messages.85124022fb354e03373db395beb1d5d8.compiled.messages",
+  hash: "7ac67de6c7c279d944cda284e727bd5c",
+  name: "vi.messages.7ac67de6c7c279d944cda284e727bd5c.compiled.messages",
   type: "jsona",
 });

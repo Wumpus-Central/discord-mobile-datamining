@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/create_guild/native/images",
-  width: 48,
-  height: 48,
+  httpServerLocation: "/assets/images/native",
+  width: 36,
+  height: 36,
   scales: [2, 3],
-  hash: "fcd5f78c5aaa2fef71964631510c3784",
-  name: "img_artists_creators",
+  hash: "bde7994716d98a3897a327489b8b2f6d",
+  name: "gif",
   type: "png",
 });

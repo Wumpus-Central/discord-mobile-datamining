@@ -1,39 +1,11 @@
 // _runtime/metro/05452__.js
-import _mod5448 from "05448__.js";
-import ACTIONS from "../05449_ACTIONS.js";
-import PortalHost from "../05450_PortalHost.js";
-import registerHost from "../05453_registerHost.js";
-import _slicedToArray from "00032__.js";
-import noop_mod from "00019__.js";
+import registerAsset from "01119__.js";
 
-require = fn;
-let noop = fn(19);
-({ useReducer: c3, memo } = noop);
-let noop = noop_mod;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const memoResult = memo((rootHostName) => {
-  let str = rootHostName.rootHostName;
-  if (str === undefined) {
-    str = "root";
-  }
-  let flag = rootHostName.shouldAddRootHost;
-  if (flag === undefined) {
-    flag = true;
-  }
-  [tmp4, tmp5] = React3(registerHost.reducer, ACTIONS.INITIAL_STATE);
-  const obj = { value: tmp5, children: null };
-  const obj2 = { value: tmp4, children: null };
-  items = [rootHostName.children];
-  if (flag) {
-    const obj3 = { name: str };
-    flag = React4(PortalHost.PortalHost, obj3);
-  }
-  items[1] = flag;
-  obj2.children = items;
-  obj.children = hasOwnProperty(_mod5448.PortalStateContext.Provider, obj2);
-  return React4(_mod5448.PortalDispatchContext.Provider, obj);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/../discord_common/js/packages/design/components/Rive/native/generated/rives",
+  scales: [1],
+  hash: "55f61166c3a14f05bf149ad73e3d6952",
+  name: "CheckpointCharacter",
+  type: "riv",
 });
-memoResult.displayName = "PortalProvider";
-
-export const PortalProvider = memoResult;

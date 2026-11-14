@@ -1,9 +1,10 @@
 // _runtime/metro/11487__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod11380 from "11380__.js";
+import AbstractTimeExpressionParser from "../11443_AbstractTimeExpressionParser.js";
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
 function _isNativeReflectConstruct() {
@@ -26,29 +27,14 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class ZHHansMergeDateRangeRefiner {
+class FRTimeExpressionParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ZHHansMergeDateRangeRefiner);
+    tmp = closure_0(this, FRTimeExpressionParser);
     tmp2 = c2;
-    obj = c2(ZHHansMergeDateRangeRefiner);
+    obj = c2(FRTimeExpressionParser);
     tmp3 = closure_1;
-    if (closure_3()) {
+    if (closure_4()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -61,14 +47,38 @@ class ZHHansMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ZHHansMergeDateRangeRefiner;
-_inherits(ZHHansMergeDateRangeRefiner, fn(_mod11380).default);
+_classCallCheck = FRTimeExpressionParser;
+_inherits(FRTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(至|到|-|~|～|－|ー)\s*$/i;
+  key: "primaryPrefix",
+  value: function primaryPrefix() {
+    return "(?:(?:[\u00E0a])\\s*)?";
   },
 };
-const items = [entry];
+let items = [
+  entry,
+  {
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*";
+    },
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      let fnResult = null;
+      if (!str.match(/^\s*\d{4}\s*$/)) {
+        const self = this;
+        let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "extractPrimaryTimeComponents", this);
+        if (typeof fn === "function") {
+          fn = (items) => fn.apply(self, items);
+        }
+        items = [arg0, arg1];
+        fnResult = fn(items);
+      }
+      return fnResult;
+    },
+  },
+];
 
-export default _createClass(ZHHansMergeDateRangeRefiner, items);
+export default _createClass(FRTimeExpressionParser, items);

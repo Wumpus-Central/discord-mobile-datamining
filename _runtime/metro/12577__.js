@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4efa5140d546996fe7cb2ba013410d48",
-  name: "ArrowAngleLeftUpIcon",
+  hash: "eac553938fe05ac1b820e85a05890a1f",
+  name: "SlashBoxIcon",
   type: "png",
 });

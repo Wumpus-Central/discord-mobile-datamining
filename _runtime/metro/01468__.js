@@ -1,83 +1,125 @@
 // _runtime/metro/01468__.js
-import _mod1469 from "01469__.js";
+import _mod1297 from "01297__.js";
+import _mod1301 from "01301__.js";
+import callBoundIntrinsic from "../01329_callBoundIntrinsic.js";
+import _mod1463 from "01463__.js";
+import availableTypedArrays from "../01469_availableTypedArrays.js";
+import _mod1471 from "01471__.js";
+import callBind from "../01473_callBind.js";
 
-export default function forEach(str, call, arg2) {
-  if (_mod1469(call)) {
-    call = toString.call;
-    if ("[object Array]" === (typeof call === "unknown" ? toString() : call(str))) {
-      let num4 = 0;
-      if (0 < str.length) {
-        do {
-          let call4 = hasOwnProperty.call;
-          let tmp20 = num4;
-          if (typeof call4 === "unknown" ? hasOwnProperty(num4) : call4(str, num4)) {
-            if (null == tmp6) {
-              let tmp23 = call(str[num4], num4, str);
-            } else {
-              let call5 = call.call;
-              let tmp21 = str[num4];
-              if (typeof call5 === "unknown") {
-                let tmp22 = call(tmp21, num4, str);
-              } else {
-                let call5Result = call5(tmp6, tmp21, tmp20, str);
+const require = globalThis.__r;
+
+let closure_2 = callBoundIntrinsic("Object.prototype.toString");
+let tmp = _mod1463();
+let closure_3 = tmp;
+if (typeof globalThis !== "undefined") {
+  const global = globalThis;
+}
+const tmp2 = availableTypedArrays();
+let closure_5 = tmp2;
+let closure_6 = callBoundIntrinsic("String.prototype.slice");
+let closure_7 =
+  callBoundIntrinsic("Array.prototype.indexOf", true) ||
+  function indexOf(arg0, arg1) {
+    let num = 0;
+    if (0 < arg0.length) {
+      while (arg0[num] !== arg1) {
+        num = num + 1;
+      }
+      return num;
+    }
+    return -1;
+  };
+let closure_8 = Object.create(null);
+if (tmp) {
+  if (_mod1297) {
+    if (_mod1301) {
+      _mod1471(tmp2, (arg0) => {
+        const tmp = new global[arg0]();
+        if (Symbol.toStringTag in tmp) {
+          if (_mod1301) {
+            const tmp4 = _mod1301(tmp);
+            const _Symbol = Symbol;
+            const tmp5 = _mod1297(tmp4, Symbol.toStringTag);
+            let tmp6 = tmp5;
+            if (!tmp5) {
+              tmp6 = tmp5;
+              if (tmp4) {
+                const _Symbol2 = Symbol;
+                tmp6 = _mod1297(_mod1301(tmp4), Symbol.toStringTag);
+                const tmp7 = _mod1301(tmp4);
               }
             }
+            const text = `$${arg0}`;
+            closure_8[`$${arg0}`] = callBind(tmp6.get);
           }
-          num4 = num4 + 1;
-        } while (num4 < length2);
-      }
-    } else if (typeof str === "string") {
-      let num2 = 0;
-      if (0 < str.length) {
-        do {
-          if (null == tmp6) {
-            let tmp17 = call(str.charAt(num2), num2, str);
-          } else {
-            let call3 = call.call;
-            let charAtResult = str.charAt(num2);
-            if (typeof call3 === "unknown") {
-              let tmp16 = call(charAtResult, num2, str);
-            } else {
-              let call3Result = call3(tmp6, charAtResult, tmp14, str);
-            }
-          }
-          num2 = num2 + 1;
-        } while (num2 < length);
-      }
-    } else {
-      for (const key10024 in arg0) {
-        let call6 = hasOwnProperty.call;
-        if (typeof call6 === "unknown") {
-          let call6Result = hasOwnProperty(key10024);
-        } else {
-          call6Result = call6(arg0, key10024);
         }
-        if (!call6Result) {
-          continue;
-        } else {
-          if (null == tmp6) {
-            let tmp12 = arg1(arg0[key10024], key10024, arg0);
-            continue;
-          } else {
-            let call2 = arg1.call;
-            let tmp10 = arg0[key10024];
-            if (typeof call2 === "unknown") {
-              let tmp11 = arg1(tmp10, key10024, arg0);
-              continue;
-            } else {
-              let call2Result = call2(tmp6, tmp10, key10024, arg0);
-              continue;
-            }
-            continue;
-          }
-          continue;
-        }
-        continue;
-      }
+      });
     }
-  } else {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("iterator must be a function");
-    throw typeError;
+    module.exports = function whichTypedArray(obj) {
+      if (obj) {
+        if (typeof obj === "object") {
+          if (closure_3) {
+            let tmp14 = null;
+            if (require("01297__.js")) {
+              closure_129_0 = obj;
+              closure_129_1 = false;
+              require("01471__.js")(closure_8, (fn, arg1) => {
+                if (!closure_1) {
+                  try {
+                    if ("$" + fn(closure_0) === arg1) {
+                      closure_1 = closure_6(arg1, 1);
+                    }
+                  } catch (err) {}
+                }
+              });
+              tmp14 = closure_129_1;
+            }
+            return tmp14;
+          } else {
+            const tmp3 = closure_6(closure_2(obj), 8, -1);
+            let tmp6 = tmp3;
+            if (closure_7(closure_5, tmp3) <= -1) {
+              let tmp7 = "Object" === tmp3;
+              if (tmp7) {
+                _require = obj;
+                dependencyMap = false;
+                require("01471__.js")(closure_8, (fn, arg1) => {
+                  if (!closure_1) {
+                    try {
+                      fn(closure_0);
+                      closure_1 = closure_6(arg1, 1);
+                    } catch (err) {}
+                  }
+                });
+                tmp7 = dependencyMap;
+              }
+              tmp6 = tmp7;
+            }
+            return tmp6;
+          }
+        }
+      }
+      return false;
+    };
   }
 }
+_mod1471(tmp2, (arg0) => {
+  const arr = new global[arg0]();
+  if (arr.slice || arr.set) {
+    const text = `$${arg0}`;
+    closure_8[`$${arg0}`] = callBind(tmp);
+  }
+});
+let tmp3 =
+  callBoundIntrinsic("Array.prototype.indexOf", true) ||
+  function indexOf(arg0, arg1) {
+    let num = 0;
+    if (0 < arg0.length) {
+      while (arg0[num] !== arg1) {
+        num = num + 1;
+      }
+      return num;
+    }
+    return -1;
+  };

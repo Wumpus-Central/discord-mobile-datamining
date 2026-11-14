@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/game_invite_channels",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb252ZXJzYXRpb25z",
   scales: [1],
-  hash: "1f9ab1ee6385662cdd6891a4feb70a40",
-  name: "GameInviteChannels.compiled.messages",
+  hash: "5f0978c99127782e251f612071af0309",
+  name: "hu.messages.5f0978c99127782e251f612071af0309.compiled.messages",
   type: "jsona",
 });

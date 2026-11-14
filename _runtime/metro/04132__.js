@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb25uZWN0ZWRfZGV2aWNlcw==",
+  httpServerLocation: "/assets/modules/conjure/intl",
   scales: [1],
-  hash: "5f7d021c8029267e8b532de7d7a2bbd2",
-  name: "no.messages.5f7d021c8029267e8b532de7d7a2bbd2.compiled.messages",
+  hash: "a6ffa1c320d6b3b4fad346701b1aee77",
+  name: "ConjureUntranslated.compiled.messages",
   type: "jsona",
 });

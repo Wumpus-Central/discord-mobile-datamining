@@ -1,7 +1,12 @@
 // _runtime/metro/04607__.js
-let closure_0 = { lastWeek: "'Pra\u0117jus\u012F' eeee p", yesterday: "'Vakar' p", today: "'\u0160iandien' p", tomorrow: "'Rytoj' p", nextWeek: "eeee p", other: "P" };
+import 02194__ from "02194__.js";
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
+if (!module_2194) {
+  const obj2 = { default: module_2194 };
+  let obj = obj2;
+} else {
+  obj = module_2194;
+}
+
+export default { date: obj.default({ formats: { full: "EEEE, do MMMM y", long: "do MMMM y", medium: "do MMM y", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'um' {{time}}", long: "{{date}} 'um' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

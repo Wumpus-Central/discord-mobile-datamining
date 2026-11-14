@@ -1,39 +1,30 @@
 // _runtime/metro/05814__.js
-import _mod5766 from "05766__.js";
-import _slicedToArray from "05748__.js";
+import _mod5815 from "05815__.js";
 
-require = fn;
-const noop = fn(19);
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
-
-export function useRecyclingState(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg2;
-  let tmp = hasOwnProperty(undefined);
-  [r10015, tmp3] = _mod5766.useLayoutState(0);
-  React4(() => {
-    let tmpResult = closure_0;
-    if (typeof closure_0 === "function") {
-      tmpResult = tmp();
-    }
-    closure_2.current = tmpResult;
-    if (closure_1 != null) {
-      tmp3();
-    }
-  }, arg1);
-  items = [tmp3];
-  const items1 = [
-    tmp.current,
-    React3((fn, arg1) => {
-      let tmp = fn;
-      if (typeof fn === "function") {
-        tmp = fn(ref.current);
+export default function _unsupportedIterableToArray(str, arg1) {
+  if (str) {
+    if (typeof str === "string") {
+      return _mod5815(str, arg1);
+    } else {
+      const toString = {}.toString;
+      const call = toString.call;
+      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
+      let name = substr;
+      if (tmp3) {
+        name = str.constructor.name;
       }
-      if (tmp !== ref.current) {
-        tmp2.current = tmp;
-        arg1((arg0) => arg0 + 1, arg1);
+      if ("Map" !== name) {
+        if ("Set" !== name) {
+          if ("Arguments" === name) {
+            let arr2 = _mod5815(str, arg1);
+          }
+        }
+        return arr2;
       }
-    }, items),
-  ];
-  return items1;
+      const _Array = Array;
+      arr2 = Array.from(str);
+      const arr = typeof call === "unknown" ? toString() : call(str);
+      tmp3 = "Object" === substr && "Object".constructor;
+    }
+  }
 }

@@ -1,21 +1,32 @@
 // _runtime/metro/01524__.js
 import noop from "00019__.js";
 
-export function useKeyedChildListeners() {
-  const current = noop.useRef(Object.assign(Object.create(null), { getState: {}, beforeRemove: {} })).current;
-  items = [current];
-  return {
-    keyedListeners: current,
-    addKeyedListener: noop.useCallback((arg0, arg1, arg2) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      closure_2 = arg2;
-      closure_0[arg0][arg1] = arg2;
-      return () => {
-        if (current[closure_0][closure_1] === closure_2) {
-          current[closure_0][tmp] = undefined;
-        }
-      };
-    }, items),
-  };
+if (typeof document !== "undefined") {
+  let useEffect = noop.useLayoutEffect;
+} else {
+  const _navigator = navigator;
+  if (typeof navigator !== "undefined") {
+    const _navigator2 = navigator;
+  }
+  useEffect = noop.useEffect;
+}
+
+export default function useLatestCallback(current) {
+  noop.useRef(current);
+  useEffect(() => {
+    closure_1.current = current;
+  });
+  return noop.useRef(function latestCallback() {
+    items = [];
+    let num = 0;
+    if (0 < arguments.length) {
+      do {
+        items[num] = arguments[num];
+        num = num + 1;
+        length = arguments.length;
+      } while (num < length);
+    }
+    current = ref.current;
+    return current.apply(this, items);
+  }).current;
 }

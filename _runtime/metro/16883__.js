@@ -1,13 +1,31 @@
 // _runtime/metro/16883__.js
-import registerAsset from "01119__.js";
+import emptyPromise from "../16866_emptyPromise.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "f6cc137da3a192935ccaaac37e4eb9a2",
-  name: "ic_call_status_green_24px",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export default () => (log) => {
+  const result = emptyPromise.assertHasLoggerPlugin(log);
+  closure_0 = log;
+  return {
+    onConnect() {
+      log = console.log;
+      console.log = () => {
+        items = [...arguments];
+        log(...items);
+        const items1 = [...items];
+        log.log.apply(items1);
+      };
+      console.warn = () => {
+        items = [...arguments];
+        warn(...items);
+        log.warn(items[0]);
+      };
+      console.debug = () => {
+        items = [...arguments];
+        debug(...items);
+        log.debug(items[0]);
+      };
+    },
+  };
+};

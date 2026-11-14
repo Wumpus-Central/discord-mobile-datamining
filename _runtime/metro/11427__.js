@@ -1,12 +1,13 @@
 // _runtime/metro/11427__.js
-import AbstractParserWithWordBoundaryChecking from "../11369_AbstractParserWithWordBoundaryChecking.js";
+import _mod11428 from "11428__.js";
+import AbstractParserWithWordBoundaryChecking from "../11436_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FRTimeUnitAgoFormatParser = require;
+const ENTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +26,30 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FRTimeUnitAgoFormatParser {
-  constructor() {
+const regExp = new RegExp(
+  "(?:(?:within|in|for)\\s*)?(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(" +
+    _mod11428.TIME_UNITS_PATTERN +
+    ")(?=\\W|$)",
+  "i",
+);
+const regExp1 = new RegExp(
+  "(?:within|in|for)\\s*(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(" +
+    _mod11428.TIME_UNITS_PATTERN +
+    ")(?=\\W|$)",
+  "i",
+);
+const regExp2 = new RegExp(
+  "(?:within|in|for)\\s*(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(" +
+    _mod11428.TIME_UNITS_NO_ABBR_PATTERN +
+    ")(?=\\W|$)",
+  "i",
+);
+class ENTimeUnitWithinFormatParser {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, FRTimeUnitAgoFormatParser);
+    tmp = c2(this, ENTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(FRTimeUnitAgoFormatParser);
+    obj = closure_4(ENTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp5 = globalThis;
@@ -39,18 +58,21 @@ class FRTimeUnitAgoFormatParser {
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
 }
-_inherits(FRTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
-  value: function innerPattern() {
-    const regExp = new RegExp(
-      "il y a\\s*(" + FRTimeUnitAgoFormatParser(11424).TIME_UNITS_PATTERN + ")(?=(?:\\W|$))",
-      "i",
-    );
-    return regExp;
+  value: function innerPattern(option) {
+    if (this.strictMode) {
+      let tmp2 = regExp2;
+    } else {
+      tmp2 = option.option.forwardDate ? regExp : regExp1;
+    }
+    return tmp2;
   },
 };
 const items = [
@@ -58,14 +80,23 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const parseDurationResult = FRTimeUnitAgoFormatParser(11424).parseDuration(arg1[1]);
-      const ParsingComponents = FRTimeUnitAgoFormatParser(11365).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        FRTimeUnitAgoFormatParser(11364).reverseDuration(FRTimeUnitAgoFormatParser(11424).parseDuration(arg1[1])),
-      );
+      if (str.match(/^for\s*the\s*\w+/)) {
+        return null;
+      } else {
+        const parseDurationResult = ENTimeUnitWithinFormatParser(11428).parseDuration(arg1[1]);
+        let relativeFromReference = null;
+        if (parseDurationResult) {
+          const ParsingComponents = ENTimeUnitWithinFormatParser(11432).ParsingComponents;
+          relativeFromReference = ParsingComponents.createRelativeFromReference(
+            reference.reference,
+            parseDurationResult,
+          );
+        }
+        return relativeFromReference;
+      }
+      str = arg1[0];
     },
   },
 ];
 
-export default _createClass(FRTimeUnitAgoFormatParser, items);
+export default _createClass(ENTimeUnitWithinFormatParser, items);

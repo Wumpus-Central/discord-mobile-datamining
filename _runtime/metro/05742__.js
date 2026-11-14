@@ -1,48 +1,117 @@
 // _runtime/metro/05742__.js
+import _modDef5741 from "05741__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import noop_mod from "00019__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import hasOwnProperty from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
-let noop = fn(19);
-const forwardRef = noop.forwardRef;
-({ useMemo: closure_6, memo } = noop);
-let noop = noop_mod;
+const TouchableNativeFeedback = importDefault;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let closure_2 = ["style"];
+const Platform = fn(17).Platform;
 const jsx = fn(21).jsx;
-try {
-  const FlashList = fn(5743);
-  const memoResult = memo(
-    forwardRef((focusHook, ref) => {
-      focusHook = focusHook.focusHook;
-      const scrollEventsHandlersHook = focusHook.scrollEventsHandlersHook;
-      const enableFooterMarginAdjustment = focusHook.enableFooterMarginAdjustment;
-      closure_6(() => {
-        if (!FlashList) {
-          throw "You need to install FlashList first, `yarn install @shopify/flash-list`";
-        }
-      }, []);
-      items = [focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment];
-      const tmp = _objectWithoutProperties(focusHook, enableFooterMarginAdjustment);
-      let merged = Object.assign(tmp);
-      return (
-        <FlashList.FlashList
-          ref={ref}
-          renderScrollComponent={closure_6(
-            () =>
-              forwardRef((arg0, ref) => {
-                const merged = Object.assign(arg0, Object.assign({ data: 0 }));
-                const obj = { ref };
-                const merged1 = Object.assign(merged);
-                obj.focusHook = focusHook;
-                obj.scrollEventsHandlersHook = scrollEventsHandlersHook;
-                obj.enableFooterMarginAdjustment = enableFooterMarginAdjustment;
-                return jsx(focusHook(scrollEventsHandlersHook[4]), { ref });
-              }),
-            items,
-          )}
-        />
-      );
-    }),
-  );
-  exports.default = memoResult;
-  exports.BottomSheetFlashList = memoResult;
-} catch (err) {}
+class TouchableNativeFeedback {
+  constructor() {
+    self = this;
+    tmp = closure_4(this, TouchableNativeFeedback);
+    tmp2 = closure_6;
+    obj = closure_6(TouchableNativeFeedback);
+    tmp3 = hasOwnProperty;
+    if (closure_9()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(TouchableNativeFeedback, fn(19).Component);
+const entry = {
+  key: "getExtraButtonProps",
+  value: function getExtraButtonProps() {
+    const obj = {};
+    let rippleRadius = this.props.background;
+    if (!rippleRadius) {
+      obj.foreground = this.props.useForeground;
+      return obj;
+    } else {
+      if ("RippleAndroid" === rippleRadius.type) {
+        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
+      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
+        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
+      }
+      rippleRadius = rippleRadius.rippleRadius;
+      obj.rippleRadius = rippleRadius;
+    }
+  },
+};
+const items = [
+  entry,
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let style = props.style;
+      if (undefined === style) {
+        style = {};
+      }
+      const obj = {};
+      const tmp = _objectWithoutProperties(props, closure_2);
+      const merged = Object.assign(tmp);
+      obj.style = style;
+      obj.extraButtonProps = self.getExtraButtonProps();
+      return jsx(TouchableNativeFeedback(5741), {});
+    },
+  },
+];
+const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
+let obj = {};
+let merged = Object.assign(_modDef5741.defaultProps);
+obj.useForeground = true;
+obj.extraButtonProps = { rippleColor: null };
+importDefaultResultResult.defaultProps = obj;
+importDefaultResultResult.SelectableBackground = (rippleRadius) => ({
+  type: "ThemeAttrAndroid",
+  attribute: "selectableItemBackground",
+  rippleRadius,
+});
+importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({
+  type: "ThemeAttrAndroid",
+  attribute: "selectableItemBackgroundBorderless",
+  rippleRadius,
+});
+importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({
+  type: "RippleAndroid",
+  color,
+  borderless,
+  rippleRadius,
+});
+importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
+
+export default importDefaultResultResult;

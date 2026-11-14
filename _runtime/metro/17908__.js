@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "ff4cda738b093bde991020eaaa4e76a1",
-  name: "EmojiSmilingFaceWithHeartsIcon",
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 161,
+  scales: [1],
+  hash: "ef28aab39cdce9136a8e704ac5e2fd6b",
+  name: "mac_2",
   type: "png",
 });

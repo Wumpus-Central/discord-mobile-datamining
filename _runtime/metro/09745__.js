@@ -1,0 +1,40 @@
+// _runtime/metro/09745__.js
+import _mod9746 from "09746__.js";
+import _mod9754 from "09754__.js";
+import flattenStyle from "09747__.js";
+import "module_5357";
+import emptyFunction_mod from "05357__.js";
+
+const obj = {};
+const module_9746 = Object.assign(_mod9746);
+obj.style = flattenStyle(_mod9754);
+let emptyFunction = emptyFunction_mod;
+const obj2 = { uri: emptyFunction.string, headers: null };
+let emptyFunction = emptyFunction_mod;
+obj2.headers = emptyFunction.objectOf(emptyFunction.string);
+const items = [emptyFunction.shape(obj2), emptyFunction.number];
+let emptyFunction = emptyFunction_mod;
+const size = { uri: emptyFunction.string, width: emptyFunction.number, height: emptyFunction.number, headers: null };
+let emptyFunction = emptyFunction_mod;
+size.headers = emptyFunction.objectOf(emptyFunction.string);
+items[2] = emptyFunction.arrayOf(emptyFunction.shape(size));
+obj.source = emptyFunction.oneOfType(items);
+obj.blurRadius = emptyFunction.number;
+obj.defaultSource = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+const items1 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
+obj.loadingIndicatorSource = emptyFunction.oneOfType(items1);
+obj.progressiveRenderingEnabled = emptyFunction.bool;
+obj.fadeDuration = emptyFunction.number;
+obj.internal_analyticTag = emptyFunction.string;
+obj.onLoadStart = emptyFunction.func;
+obj.onError = emptyFunction.func;
+obj.onLoad = emptyFunction.func;
+obj.onLoadEnd = emptyFunction.func;
+obj.testID = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
+obj.resizeMethod = emptyFunction.oneOf(["auto", "resize", "scale"]);
+let emptyFunction = emptyFunction_mod;
+obj.resizeMode = emptyFunction.oneOf(["cover", "contain", "stretch", "repeat", "center"]);
+
+export default obj;

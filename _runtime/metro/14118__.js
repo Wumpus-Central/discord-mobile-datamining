@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/parent_tools/images",
-  width: 240,
-  height: 150,
-  scales: [1, 2, 3],
-  hash: "c4741f3af333f4c01fe224682f3a547f",
-  name: "family_center_activity_checklist_image",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "2bf7738cbb1d2827663b492fedbd65fb",
+  name: "MedalIcon",
   type: "png",
 });

@@ -1,15 +1,15 @@
 // _runtime/metro/04883__.js
-import module_4875_mod from "04875__.js";
-import requiredArgs_mod from "../04523_requiredArgs.js";
+import _typeof_mod from "04585__.js";
+import requiredArgs_mod from "../04586_requiredArgs.js";
 
-let module_4875 = module_4875_mod;
-if (!module_4875) {
-  const obj = { default: module_4875 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4875;
+  tmp3 = _typeof;
 }
-module_4875 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisSecond(arg0) {
+export default function isFirstDayOfMonth(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4875.default(Date.now(), arg0);
+  return 1 === _typeof.default(arg0).getDate();
 };
 export default exports.default;

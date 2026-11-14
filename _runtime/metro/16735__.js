@@ -1,14 +1,29 @@
 // _runtime/metro/16735__.js
-import _mod16736 from "16736__.js";
-import get_ActivityIndicator from "00017__.js";
+const require = globalThis.__r;
 
-export default function getReactNativeDimensions() {
-  try {
-    const Dimensions = get_ActivityIndicator.Dimensions;
-    try {
-      const Dimensions2 = get_ActivityIndicator.Dimensions;
-      value = Dimensions2.get("window");
-      return _mod16736.getReactNativeDimensionsWithDimensions(tmp2, value);
-    } catch (err) {}
-  } catch (err) {}
+const require = arg1;
+const dependencyMap = arg6;
+
+export function getSupportedNumberingSystems(locale) {
+  _require = locale;
+  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
+  return numberingSystemNames.filter((item) =>
+    (function isSupportedNumberingSystem(item, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const concat = "".concat;
+        const combined = "".concat(str, "-u-nu-");
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
+        if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+          if ("123" === memoizedNumberFormat.format(123)) {
+            return false;
+          }
+        }
+        return true;
+      } catch (err) {}
+    })(item, closure_0),
+  );
 }

@@ -1,11 +1,37 @@
 // _runtime/metro/05403__.js
-import registerAsset from "01119__.js";
+import _mod17 from "00017__.js";
+import _modAll65 from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/packages/design/components/Rive/native/generated/rives",
-  scales: [1],
-  hash: "1cf90953773f1995f76b7541cdaa4483",
-  name: "Microphone",
-  type: "riv",
-});
+const Platform = _mod17.Platform;
+
+export function getHostComponent(RiveView, arg1) {
+  closure_0 = arg1;
+  if (null == _modAll65) {
+    const _Error = Error;
+    const error = new Error("NativeComponentRegistry is not available on android!");
+    throw error;
+  } else {
+    return _modAll65.get(RiveView, () => {
+      const tmp = closure_0();
+      const validAttributes = tmp.validAttributes;
+      (function wrapValidAttributes(validAttributes) {
+        const keys = Object.keys(validAttributes);
+        for (const item10009 of keys) {
+          let obj = {
+            diff(arg0, arg1) {
+              return arg0 !== arg1;
+            },
+            process(arg0) {
+              return arg0;
+            },
+          };
+          arg0[item10009] = obj;
+          continue;
+        }
+        return validAttributes;
+      })(validAttributes);
+      tmp.validAttributes = validAttributes;
+      return tmp;
+    });
+  }
+}

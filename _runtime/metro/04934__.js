@@ -1,105 +1,28 @@
 // _runtime/metro/04934__.js
-import _typeof_mod from "04522__.js";
-import module_4935_mod from "04935__.js";
-import module_4526_mod from "04526__.js";
-import requiredArgs_mod from "../04523_requiredArgs.js";
+import startOfISOWeekYear_mod from "../04746_startOfISOWeekYear.js";
+import requiredArgs_mod from "../04586_requiredArgs.js";
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj = { default: startOfISOWeekYear };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfISOWeekYear;
 }
-_typeof = tmp3;
-let module_4935 = module_4935_mod;
-if (!module_4935) {
-  const obj2 = { default: module_4935 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4935;
-}
-module_4935 = tmp5;
-let module_4526 = module_4526_mod;
-if (!module_4526) {
-  const obj3 = { default: module_4526 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4526;
-}
-module_4526 = tmp7;
+startOfISOWeekYear = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function set(arg0, year) {
+export default function isSameISOWeekYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  if ("object" === _typeof(year)) {
-    if (null !== year) {
-      const defaultResult1 = _typeof.default(arg0);
-      const _isNaN = isNaN;
-      if (isNaN(defaultResult1.getTime())) {
-        const _Date = Date;
-        const date = new Date(NaN);
-        return date;
-      } else {
-        if (null != year.year) {
-          defaultResult1.setFullYear(year.year);
-        }
-        let defaultResult2 = defaultResult1;
-        if (null != year.month) {
-          defaultResult2 = module_4935.default(defaultResult1, year.month);
-        }
-        if (null != year.date) {
-          defaultResult2.setDate(module_4526.default(year.date));
-        }
-        if (null != year.hours) {
-          defaultResult2.setHours(module_4526.default(year.hours));
-        }
-        if (null != year.minutes) {
-          defaultResult2.setMinutes(module_4526.default(year.minutes));
-        }
-        if (null != year.seconds) {
-          defaultResult2.setSeconds(module_4526.default(year.seconds));
-        }
-        if (null != year.milliseconds) {
-          defaultResult2.setMilliseconds(module_4526.default(year.milliseconds));
-        }
-        return defaultResult2;
-      }
-    }
-  }
-  const rangeError = new RangeError("values parameter must be an object");
-  throw rangeError;
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfISOWeekYear.default(arg1).getTime();
 };
 export default exports.default;

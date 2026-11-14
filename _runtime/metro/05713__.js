@@ -1,6 +1,12 @@
 // _runtime/metro/05713__.js
-import BottomSheetFooter from "../05714_BottomSheetFooter.js";
-import BottomSheetFooterContainer from "../05716_BottomSheetFooterContainer.js";
+import ComposedGestureName from "../05660_ComposedGestureName.js";
+import _mod5714 from "05714__.js";
 
-export const BottomSheetFooter = BottomSheetFooter.BottomSheetFooter;
-export const BottomSheetFooterContainer = BottomSheetFooterContainer.BottomSheetFooterContainer;
+require = arg1;
+const dependencyMap = arg6;
+
+export function useCompetingGestures() {
+  items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
+  return _mod5714.useComposedGesture.apply(items1);
+}

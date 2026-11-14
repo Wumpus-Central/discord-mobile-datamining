@@ -1,4 +1,7 @@
 // _runtime/metro/01846__.js
-import decay from "../01847_decay.js";
+import mutablesNative from "01847__.js";
 
-export const withDecay = decay.withDecay;
+export function isReducedMotionEnabledInSystem() {
+  return global._REANIMATED_IS_REDUCED_MOTION;
+}
+export const ReducedMotionManager = mutablesNative.createReducedMotionManager(global._REANIMATED_IS_REDUCED_MOTION);

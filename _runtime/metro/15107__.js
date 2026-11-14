@@ -1,12 +1,13 @@
 // _runtime/metro/15107__.js
+import registerAsset from "01119__.js";
 
-export default function basePropertyOf(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    let tmp2;
-    if (null != closure_0) {
-      tmp2 = tmp[arg0];
-    }
-    return tmp2;
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/hub/native/images",
+  width: 120,
+  height: 80,
+  scales: [2, 3],
+  hash: "8a1b4cbcf69c94f39bb256787c4e1df8",
+  name: "search_empty_state",
+  type: "png",
+});

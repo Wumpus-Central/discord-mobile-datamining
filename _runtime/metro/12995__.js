@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 16,
-  height: 16,
-  scales: [1, 2, 3],
-  hash: "98e013109b389eb9fdfad5277cb35b88",
-  name: "ic_moderator",
+  httpServerLocation: "/assets/images/native/icons/voice_calls",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "c9f854c83b9079fe0ab040df65e3caf2",
+  name: "nav_header_disconnect",
   type: "png",
 });

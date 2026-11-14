@@ -1,13 +1,13 @@
 // _runtime/metro/16020__.js
+import registerAsset from "01119__.js";
 
-export default {
-  2: "need dictionary",
-  1: "stream end",
-  0: "",
-  "-1": "file error",
-  "-2": "stream error",
-  "-3": "data error",
-  "-4": "insufficient memory",
-  "-5": "buffer error",
-  "-6": "incompatible version",
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/guild_boosting/native/images",
+  width: 18,
+  height: 15,
+  scales: [2, 3],
+  hash: "dc018ce302b0357451a31422d7180d84",
+  name: "sparkle_star_pointed",
+  type: "png",
+});

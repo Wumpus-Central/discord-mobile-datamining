@@ -1,28 +1,17 @@
 // _runtime/metro/05697__.js
-import _mod19 from "00019__.js";
-import _mod5530 from "05530__.js";
+import ComposedGestureName from "../05660_ComposedGestureName.js";
+import resolveInternalConfigProps from "../05669_resolveInternalConfigProps.js";
+import _mod5686 from "05686__.js";
 
-const useLayoutEffect = _mod19.useLayoutEffect;
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export function useBoundingClientRect(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  if (obj.isFabricInstalled()) {
-    useLayoutEffect(() => {
-      if (closure_0) {
-        if (closure_0.current) {
-          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
-            if (typeof closure_0.current.getBoundingClientRect === "function") {
-              const current2 = closure_0.current;
-              closure_1(current2.getBoundingClientRect());
-            }
-          } else {
-            const current = closure_0.current;
-            closure_1(current.unstable_getBoundingClientRect());
-          }
-        }
-      }
-    });
+export function useManualGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
   }
-  obj = _mod5530;
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5686.useGesture(ComposedGestureName.SingleGestureName.Manual, clonedAndRemappedConfig);
 }

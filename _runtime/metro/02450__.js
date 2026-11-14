@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/collectibles/web",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi",
   scales: [1],
-  hash: "badc2ccdf19fd542b091b55c09e8bee9",
-  name: "ShopExternalSkus.compiled.messages",
+  hash: "9115ce81f0a4cb016dda71b24f984910",
+  name: "lt.messages.9115ce81f0a4cb016dda71b24f984910.compiled.messages",
   type: "jsona",
 });

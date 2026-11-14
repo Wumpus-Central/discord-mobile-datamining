@@ -1,16 +1,16 @@
 // _runtime/metro/16762__.js
+import _mod16763 from "16763__.js";
 
-export function getHostFromUrl(scriptURL) {
-  const match = scriptURL.match(/^(?:https?:\/\/)?(\[[^\]]+\]|[^/:\s]+)(?::\d+)?(?:[/?#]|$)/);
-  let tmp2;
-  if (match != null) {
-    tmp2 = match[1];
+export default (arg0, arg1) => {
+  let tmp3 = _mod16763[arg0];
+  if (!tmp3) {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
+    }
+    _mod16763[arg0] = obj;
+    tmp3 = obj;
+    const tmpResult = _mod16763;
   }
-  if (typeof tmp2 !== "string") {
-    const _Error = Error;
-    const error = new Error("Invalid URL - host not found");
-    throw error;
-  } else {
-    return tmp2;
-  }
-}
+  return tmp3;
+};

@@ -1,45 +1,51 @@
 // _runtime/metro/08914__.js
-import _mod8871 from "08871__.js";
-import get0thIfdOffset from "../08891_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../08892_IFD_TYPE_0TH.js";
+import _mod8910 from "08910__.js";
+import _mod8911 from "08911__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export default {
-  read(byteLength, sum, arg2, byteOrder, arg4) {
-    const ifd = get0thIfdOffset.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
-    let tmp6 = ifd;
-    if (ifd.ShotInfo) {
-      value = ifd.ShotInfo.value;
-      const obj2 = {};
-      if (undefined !== value[27]) {
-        const obj3 = { value: value[27], description: null };
-        let str = "None";
-        if (0 !== value[27]) {
-          let str2 = "Rotate 90 CW";
-          if (1 !== tmp7) {
-            let str3 = "Rotate 180";
-            if (2 !== tmp7) {
-              let str4 = "Unknown";
-              if (3 === tmp7) {
-                str4 = "Rotate 270 CW";
-              }
-              str3 = str4;
-            }
-            str2 = str3;
-          }
-          str = str2;
-        }
-        obj3.description = str;
-        obj2.AutoRotate = obj3;
-      }
-      const tmp3Result = _mod8871;
-      delete tmp[tmp2];
-      tmp6 = _mod8871.objectAssign({}, ifd, obj2);
-      const objectAssignResult = _mod8871.objectAssign({}, ifd, obj2);
+export function isAAC(fileChunk, excludeSimilarTypes) {
+  fileChunk = _mod8910.getFileChunk(fileChunk);
+  const FileTypes = _mod8911.FileTypes;
+  let checkByFileTypeResult1 = FileTypes.checkByFileType(fileChunk, "aac");
+  if (!checkByFileTypeResult1) {
+    excludeSimilarTypes = undefined;
+    if (null != excludeSimilarTypes) {
+      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
     }
-    return tmp6;
-  },
-  SHOT_INFO_AUTO_ROTATE: 27,
-};
+    let checkByFileTypeResult = !excludeSimilarTypes;
+    if (!excludeSimilarTypes) {
+      const fileChunk1 = _mod8910.getFileChunk(fileChunk);
+      const FileTypes2 = _mod8911.FileTypes;
+      checkByFileTypeResult = FileTypes2.checkByFileType(fileChunk1, "m4a");
+    }
+    checkByFileTypeResult1 = checkByFileTypeResult;
+  }
+  return checkByFileTypeResult1;
+}
+export function isAMR(fileChunk) {
+  fileChunk = _mod8910.getFileChunk(fileChunk);
+  const FileTypes = _mod8911.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "amr");
+}
+export function isFLAC(fileChunk) {
+  fileChunk = _mod8910.getFileChunk(fileChunk);
+  const FileTypes = _mod8911.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flac");
+}
+export function isM4A(fileChunk) {
+  fileChunk = _mod8910.getFileChunk(fileChunk);
+  const FileTypes = _mod8911.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4a");
+}
+export function isMP3(fileChunk) {
+  fileChunk = _mod8910.getFileChunk(fileChunk);
+  const FileTypes = _mod8911.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mp3");
+}
+export function isWAV(fileChunk) {
+  fileChunk = _mod8910.getFileChunk(fileChunk);
+  const FileTypes = _mod8911.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "wav");
+}
