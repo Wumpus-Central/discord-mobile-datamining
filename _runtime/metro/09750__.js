@@ -1,234 +1,133 @@
 // === Module 9750: ? ===
 
 // Module 9750
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import emptyFunction_mod from "module_5357" /* 5357 */;
 
-let AsyncContextStack = require;
-function withScope(arg0) {
-  const mainCarrier = AsyncContextStack(9748).getMainCarrier();
-  const obj = AsyncContextStack(9748);
-  const sentryCarrier = AsyncContextStack(9748).getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const defaultCurrentScope = AsyncContextStack(9756).getDefaultCurrentScope();
-    const tmpResult = AsyncContextStack(9756);
-    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(9756).getDefaultIsolationScope());
-    const tmpResult2 = AsyncContextStack(9756);
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(arg0);
-}
-function withSetScope(scope, arg1) {
-  closure_1 = arg1;
-  const mainCarrier = AsyncContextStack(9748).getMainCarrier();
-  const obj = AsyncContextStack(9748);
-  const sentryCarrier = AsyncContextStack(9748).getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const defaultCurrentScope = AsyncContextStack(9756).getDefaultCurrentScope();
-    const tmpResult = AsyncContextStack(9756);
-    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(9756).getDefaultIsolationScope());
-    const tmpResult2 = AsyncContextStack(9756);
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(() => {
-    stack.getStackTop().scope = scope;
-    return closure_1(scope);
-  });
-}
-function withIsolationScope(arg0) {
-  AsyncContextStack = arg0;
-  const mainCarrier = AsyncContextStack(9748).getMainCarrier();
-  const obj = AsyncContextStack(9748);
-  const sentryCarrier = AsyncContextStack(9748).getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const defaultCurrentScope = tmp(9756).getDefaultCurrentScope();
-    const tmpResult = tmp(9756);
-    stack = new closure_3(defaultCurrentScope, tmp(9756).getDefaultIsolationScope());
-    const tmpResult2 = tmp(9756);
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(() => {
-    const mainCarrier = AsyncContextStack(9748).getMainCarrier();
-    const obj = AsyncContextStack(9748);
-    const sentryCarrier = AsyncContextStack(9748).getSentryCarrier(mainCarrier);
-    let stack = sentryCarrier.stack;
-    if (!stack) {
-      const defaultCurrentScope = AsyncContextStack(9756).getDefaultCurrentScope();
-      const tmp2Result = AsyncContextStack(9756);
-      stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(9756).getDefaultIsolationScope());
-      const tmp2Result2 = AsyncContextStack(9756);
-    }
-    sentryCarrier.stack = stack;
-    return closure_0(stack.getIsolationScope());
-  });
-}
-class AsyncContextStack {
-  constructor(arg0, arg1) {
-    self = this;
-    scope = global;
-    tmp2 = c2(this, AsyncContextStack);
-    if (!global) {
-      tmp3 = closure_0;
-      tmp4 = closure_1;
-      tmp5 = new.target;
-      tmp6 = new.target;
-      scope = new closure_0(closure_1[2]).Scope();
-    }
-    scope1 = require;
-    if (!require) {
-      tmp8 = closure_0;
-      tmp9 = closure_1;
-      tmp10 = new.target;
-      tmp11 = new.target;
-      scope1 = new closure_0(closure_1[2]).Scope();
-    }
-    items = [];
-    items[0] = { scope };
-    self._stack = items;
-    self._isolationScope = scope1;
-    return;
-  }
-}
-const entry = {
-  key: "withScope",
-  value: function withScope(fn) {
-    const self = this;
-    try {
-      const promise = fn(tmp);
-      if (obj2.isThenable(promise)) {
-        let nextPromise = promise.then((result) => {
-          self._popScope();
-          return result;
-        }, (arg0) => {
-          self._popScope();
-          throw arg0;
-        });
-      } else {
-        self._popScope();
-        nextPromise = promise;
-      }
-      return nextPromise;
-    } catch (tmp9) {
-      obj._popScope();
-      throw tmp9;
-    }
-  }
-};
-let items = [
-  entry,
-  {
-    key: "getClient",
-    value: function getClient() {
-      return this.getStackTop().client;
-    }
-  },
-  {
-    key: "getScope",
-    value: function getScope() {
-      return this.getStackTop().scope;
-    }
-  },
-  {
-    key: "getIsolationScope",
-    value: function getIsolationScope() {
-      return this._isolationScope;
-    }
-  },
-  {
-    key: "getStackTop",
-    value: function getStackTop() {
-      return this._stack[this._stack.length - 1];
-    }
-  },
-  {
-    key: "_pushScope",
-    value: function _pushScope() {
-      const scope = this.getScope();
-      const cloneResult = scope.clone();
-      const _stack = this._stack;
-      _stack.push({ client: this.getClient(), scope: cloneResult });
-      return cloneResult;
-    }
-  },
-  {
-    key: "_popScope",
-    value: function _popScope() {
-      let arr = this._stack.length > 1;
-      if (arr) {
-        const _stack = this._stack;
-        arr = _stack.pop();
-      }
-      return arr;
-    }
-  }
-];
-const _moduleResult = _createClass(AsyncContextStack, items);
-let c3 = _moduleResult;
+const size = { display: null, width: null, height: null, start: null, end: null, top: null, left: null, right: null, bottom: null, minWidth: null, maxWidth: null, minHeight: null, maxHeight: null, margin: null, marginVertical: null, marginHorizontal: null, marginTop: null, marginBottom: null, marginLeft: null, marginRight: null, marginStart: null, marginEnd: null, padding: null, paddingVertical: null, paddingHorizontal: null, paddingTop: null, paddingBottom: null, paddingLeft: null, paddingRight: null, paddingStart: null, paddingEnd: null, borderWidth: null, borderTopWidth: null, borderStartWidth: null, borderEndWidth: null, borderRightWidth: null, borderBottomWidth: null, borderLeftWidth: null, position: null, flexDirection: null, flexWrap: null, justifyContent: null, alignItems: null, alignSelf: null, alignContent: null, overflow: null, flex: null, flexGrow: null, flexShrink: null, flexBasis: null, aspectRatio: null, zIndex: null, direction: null };
+let emptyFunction = emptyFunction_mod;
+size.display = emptyFunction.oneOf(["none", "flex"]);
+let emptyFunction = emptyFunction_mod;
+const items = [emptyFunction.number, emptyFunction.string];
+size.width = emptyFunction.oneOfType(items);
+let emptyFunction = emptyFunction_mod;
+const items1 = [emptyFunction.number, emptyFunction.string];
+size.height = emptyFunction.oneOfType(items1);
+let emptyFunction = emptyFunction_mod;
+const items2 = [emptyFunction.number, emptyFunction.string];
+size.start = emptyFunction.oneOfType(items2);
+let emptyFunction = emptyFunction_mod;
+const items3 = [emptyFunction.number, emptyFunction.string];
+size.end = emptyFunction.oneOfType(items3);
+let emptyFunction = emptyFunction_mod;
+const items4 = [emptyFunction.number, emptyFunction.string];
+size.top = emptyFunction.oneOfType(items4);
+let emptyFunction = emptyFunction_mod;
+const items5 = [emptyFunction.number, emptyFunction.string];
+size.left = emptyFunction.oneOfType(items5);
+let emptyFunction = emptyFunction_mod;
+const items6 = [emptyFunction.number, emptyFunction.string];
+size.right = emptyFunction.oneOfType(items6);
+let emptyFunction = emptyFunction_mod;
+const items7 = [emptyFunction.number, emptyFunction.string];
+size.bottom = emptyFunction.oneOfType(items7);
+let emptyFunction = emptyFunction_mod;
+const items8 = [emptyFunction.number, emptyFunction.string];
+size.minWidth = emptyFunction.oneOfType(items8);
+let emptyFunction = emptyFunction_mod;
+const items9 = [emptyFunction.number, emptyFunction.string];
+size.maxWidth = emptyFunction.oneOfType(items9);
+let emptyFunction = emptyFunction_mod;
+const items10 = [emptyFunction.number, emptyFunction.string];
+size.minHeight = emptyFunction.oneOfType(items10);
+let emptyFunction = emptyFunction_mod;
+const items11 = [emptyFunction.number, emptyFunction.string];
+size.maxHeight = emptyFunction.oneOfType(items11);
+let emptyFunction = emptyFunction_mod;
+const items12 = [emptyFunction.number, emptyFunction.string];
+size.margin = emptyFunction.oneOfType(items12);
+let emptyFunction = emptyFunction_mod;
+const items13 = [emptyFunction.number, emptyFunction.string];
+size.marginVertical = emptyFunction.oneOfType(items13);
+let emptyFunction = emptyFunction_mod;
+const items14 = [emptyFunction.number, emptyFunction.string];
+size.marginHorizontal = emptyFunction.oneOfType(items14);
+let emptyFunction = emptyFunction_mod;
+const items15 = [emptyFunction.number, emptyFunction.string];
+size.marginTop = emptyFunction.oneOfType(items15);
+let emptyFunction = emptyFunction_mod;
+const items16 = [emptyFunction.number, emptyFunction.string];
+size.marginBottom = emptyFunction.oneOfType(items16);
+let emptyFunction = emptyFunction_mod;
+const items17 = [emptyFunction.number, emptyFunction.string];
+size.marginLeft = emptyFunction.oneOfType(items17);
+let emptyFunction = emptyFunction_mod;
+const items18 = [emptyFunction.number, emptyFunction.string];
+size.marginRight = emptyFunction.oneOfType(items18);
+let emptyFunction = emptyFunction_mod;
+const items19 = [emptyFunction.number, emptyFunction.string];
+size.marginStart = emptyFunction.oneOfType(items19);
+let emptyFunction = emptyFunction_mod;
+const items20 = [emptyFunction.number, emptyFunction.string];
+size.marginEnd = emptyFunction.oneOfType(items20);
+let emptyFunction = emptyFunction_mod;
+const items21 = [emptyFunction.number, emptyFunction.string];
+size.padding = emptyFunction.oneOfType(items21);
+let emptyFunction = emptyFunction_mod;
+const items22 = [emptyFunction.number, emptyFunction.string];
+size.paddingVertical = emptyFunction.oneOfType(items22);
+let emptyFunction = emptyFunction_mod;
+const items23 = [emptyFunction.number, emptyFunction.string];
+size.paddingHorizontal = emptyFunction.oneOfType(items23);
+let emptyFunction = emptyFunction_mod;
+const items24 = [emptyFunction.number, emptyFunction.string];
+size.paddingTop = emptyFunction.oneOfType(items24);
+let emptyFunction = emptyFunction_mod;
+const items25 = [emptyFunction.number, emptyFunction.string];
+size.paddingBottom = emptyFunction.oneOfType(items25);
+let emptyFunction = emptyFunction_mod;
+const items26 = [emptyFunction.number, emptyFunction.string];
+size.paddingLeft = emptyFunction.oneOfType(items26);
+let emptyFunction = emptyFunction_mod;
+const items27 = [emptyFunction.number, emptyFunction.string];
+size.paddingRight = emptyFunction.oneOfType(items27);
+let emptyFunction = emptyFunction_mod;
+const items28 = [emptyFunction.number, emptyFunction.string];
+size.paddingStart = emptyFunction.oneOfType(items28);
+let emptyFunction = emptyFunction_mod;
+const items29 = [emptyFunction.number, emptyFunction.string];
+size.paddingEnd = emptyFunction.oneOfType(items29);
+size.borderWidth = emptyFunction.number;
+size.borderTopWidth = emptyFunction.number;
+size.borderStartWidth = emptyFunction.number;
+size.borderEndWidth = emptyFunction.number;
+size.borderRightWidth = emptyFunction.number;
+size.borderBottomWidth = emptyFunction.number;
+size.borderLeftWidth = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+size.position = emptyFunction.oneOf(["absolute", "relative"]);
+let emptyFunction = emptyFunction_mod;
+size.flexDirection = emptyFunction.oneOf(["row", "row-reverse", "column", "column-reverse"]);
+let emptyFunction = emptyFunction_mod;
+size.flexWrap = emptyFunction.oneOf(["wrap", "nowrap", "wrap-reverse"]);
+let emptyFunction = emptyFunction_mod;
+size.justifyContent = emptyFunction.oneOf(["flex-start", "flex-end", "center", "space-between", "space-around", "space-evenly"]);
+let emptyFunction = emptyFunction_mod;
+size.alignItems = emptyFunction.oneOf(["flex-start", "flex-end", "center", "stretch", "baseline"]);
+let emptyFunction = emptyFunction_mod;
+size.alignSelf = emptyFunction.oneOf(["auto", "flex-start", "flex-end", "center", "stretch", "baseline"]);
+let emptyFunction = emptyFunction_mod;
+size.alignContent = emptyFunction.oneOf(["flex-start", "flex-end", "center", "stretch", "space-between", "space-around"]);
+let emptyFunction = emptyFunction_mod;
+size.overflow = emptyFunction.oneOf(["visible", "hidden", "scroll"]);
+size.flex = emptyFunction.number;
+size.flexGrow = emptyFunction.number;
+size.flexShrink = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+const items30 = [emptyFunction.number, emptyFunction.string];
+size.flexBasis = emptyFunction.oneOfType(items30);
+size.aspectRatio = emptyFunction.number;
+size.zIndex = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+size.direction = emptyFunction.oneOf(["inherit", "ltr", "rtl"]);
 
-export const AsyncContextStack = _moduleResult;
-export function getStackAsyncContextStrategy() {
-  return {
-    withIsolationScope,
-    withScope,
-    withSetScope,
-    withSetIsolationScope(arg0, arg1) {
-      closure_0 = arg1;
-      let mainCarrier = closure_0(9748).getMainCarrier();
-      let obj = closure_0(9748);
-      let sentryCarrier = closure_0(9748).getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        let defaultCurrentScope = tmp(9756).getDefaultCurrentScope();
-        const tmpResult = tmp(9756);
-        stack = new closure_3(defaultCurrentScope, tmp(9756).getDefaultIsolationScope());
-        const tmpResult2 = tmp(9756);
-      }
-      sentryCarrier.stack = stack;
-      return stack.withScope(() => {
-        const mainCarrier = AsyncContextStack(9748).getMainCarrier();
-        const obj = AsyncContextStack(9748);
-        const sentryCarrier = AsyncContextStack(9748).getSentryCarrier(mainCarrier);
-        let stack = sentryCarrier.stack;
-        if (!stack) {
-          const defaultCurrentScope = AsyncContextStack(9756).getDefaultCurrentScope();
-          const tmp2Result = AsyncContextStack(9756);
-          stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(9756).getDefaultIsolationScope());
-          const tmp2Result2 = AsyncContextStack(9756);
-        }
-        sentryCarrier.stack = stack;
-        return closure_0(stack.getIsolationScope());
-      });
-    },
-    getCurrentScope() {
-      const mainCarrier = AsyncContextStack(9748).getMainCarrier();
-      const obj = AsyncContextStack(9748);
-      const sentryCarrier = AsyncContextStack(9748).getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        const defaultCurrentScope = AsyncContextStack(9756).getDefaultCurrentScope();
-        const tmpResult = AsyncContextStack(9756);
-        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(9756).getDefaultIsolationScope());
-        const tmpResult2 = AsyncContextStack(9756);
-      }
-      sentryCarrier.stack = stack;
-      return stack.getScope();
-    },
-    getIsolationScope() {
-      const mainCarrier = AsyncContextStack(9748).getMainCarrier();
-      const obj = AsyncContextStack(9748);
-      const sentryCarrier = AsyncContextStack(9748).getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        const defaultCurrentScope = AsyncContextStack(9756).getDefaultCurrentScope();
-        const tmpResult = AsyncContextStack(9756);
-        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(9756).getDefaultIsolationScope());
-        const tmpResult2 = AsyncContextStack(9756);
-      }
-      sentryCarrier.stack = stack;
-      return stack.getIsolationScope();
-    }
-  };
-}
+export default size;

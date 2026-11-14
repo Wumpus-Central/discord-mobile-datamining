@@ -1,17 +1,7 @@
 // === Module 7502: ? ===
 
 // Module 7502
-import _mod7503 from "module_7503" /* 7503 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function getDistanceForDirection(layout, gestureDirection, arg2) {
-  const invertedMultiplier = _mod7503.getInvertedMultiplier(gestureDirection, arg2);
-  if ("vertical" !== gestureDirection) {
-    if ("vertical-inverted" !== gestureDirection) {
-      return layout.width * invertedMultiplier;
-    }
-  }
-  return layout.height * invertedMultiplier;
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_shb2al3n4oohkkhnm35rfpv56i/node_modules/@react-navigation/elements/lib/module/assets", width: 50, height: 85, scales: [1], hash: "0a328cd9c1afd0afe8e3b1ec5165b1b4", name: "back-icon-mask", type: "png" });

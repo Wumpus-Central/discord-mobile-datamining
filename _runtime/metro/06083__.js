@@ -1,23 +1,30 @@
 // === Module 6083: ? ===
 
 // Module 6083
+import baseIteratee from "baseIteratee" /* 583 */;
+import _mod6084 from "module_6084" /* 6084 */;
+import baseFindIndex from "baseFindIndex" /* 6086 */;
 
-export default function shortOut(arg0) {
-  closure_0 = arg0;
-  c1 = 0;
-  closure_2 = 0;
-  return () => {
-    const tmp = now();
-    closure_2 = tmp;
-    if (0 < 16 - (tmp - closure_2)) {
-      const sum = c1 + 1;
-      c1 = sum;
-      if (800 <= sum) {
-        return arguments[0];
-      }
+
+export default function findLastIndex(arg0, arg1, arg2) {
+  let num = 0;
+  if (null != arg0) {
+    num = arg0.length;
+  }
+  if (num) {
+    const diff = num - 1;
+    if (undefined === arg2) {
+      return baseFindIndex(arg0, baseIteratee(arg1, 3), diff, true);
     } else {
-      c1 = 0;
+      let sum = _mod6084(arg2);
+      if (arg2 < 0) {
+        sum = num + sum;
+        let tmp7 = max(sum, 0);
+      } else {
+        tmp7 = min(sum, num - 1);
+      }
     }
-    return closure_0(...arguments);
-  };
+  } else {
+    return -1;
+  }
 };

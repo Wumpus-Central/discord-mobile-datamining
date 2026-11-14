@@ -74,7 +74,7 @@ export function wrapMcpServerWithSentry(arg0, recordInputs) {
                     closure_131_2 = undefined;
                     c6 = 1;
                     c7 = 1;
-                    return { value: "flexDirection", done: true };
+                    return { value: "Path", done: true };
                   }
                 } else if (1 === tmp5) {
                   if (arg0 === 1) {

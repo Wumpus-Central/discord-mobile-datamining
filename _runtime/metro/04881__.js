@@ -1,17 +1,17 @@
 // === Module 4881: ? ===
 
 // Module 4881
-import module_4873_mod from "module_4873" /* 4873 */;
-import requiredArgs_mod from "requiredArgs" /* 4523 */;
+import _typeof_mod from "module_4585" /* 4585 */;
+import requiredArgs_mod from "requiredArgs" /* 4586 */;
 
-let module_4873 = module_4873_mod;
-if (!module_4873) {
-  const obj = { default: module_4873 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4873;
+  tmp3 = _typeof;
 }
-module_4873 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4873.default(Date.now(), arg0);
+export default function isEqual(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === _typeof.default(arg1).getTime();
 };
 export default exports.default;

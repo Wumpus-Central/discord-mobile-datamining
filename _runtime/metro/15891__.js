@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/simple", width: 32, height: 32, scales: [2, 3], hash: "1b3ea47fa559c5b08fa13d985346d3b8", name: "tier_3_32px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 160.5, height: 140, scales: [2, 3], hash: "ad61eda1bea496e5c4dfb770ef28c56b", name: "server-invite-envelope", type: "png" });

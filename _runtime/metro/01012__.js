@@ -118,12 +118,12 @@ function checkRouteForAsyncHandler(item10034, processResolvedRoutes) {
 
 export { checkRouteForAsyncHandler };
 export { createAsyncHandlerProxy };
-export function handleAsyncHandlerResult(promise, key, arg2, fn, f, height) {
-  _require = key;
+export function handleAsyncHandlerResult(promise, arg1, arg2, fn, arg4, arg5) {
+  _require = arg1;
   dependencyMap = arg2;
   closure_2 = fn;
-  closure_3 = f;
-  closure_4 = height;
+  closure_3 = arg4;
+  closure_4 = arg5;
   if (obj.isThenable(promise)) {
     promise.then((result) => {
       if (Array.isArray(result)) {
@@ -144,7 +144,7 @@ export function handleAsyncHandlerResult(promise, key, arg2, fn, f, height) {
   } else {
     const _Array = Array;
     if (Array.isArray(promise)) {
-      fn(promise, key, tmp, height);
+      fn(promise, arg1, tmp, arg5);
     }
   }
 }

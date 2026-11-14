@@ -1,24 +1,18 @@
 // === Module 1542: ? ===
 
 // Module 1542
-import NavigationContainerRefContext from "NavigationContainerRefContext" /* 1530 */;
-import NavigationContext from "NavigationContext" /* 1543 */;
+import _mod1543 from "module_1543" /* 1543 */;
 import noop from "module_19" /* 19 */;
 
 require = arg1;
 
-export function useNavigation() {
-  const context = noop.useContext(NavigationContainerRefContext.NavigationContainerRefContext);
-  let context1 = noop.useContext(NavigationContext.NavigationContext);
-  if (undefined === context1) {
-    if (undefined === context) {
-      const _Error = Error;
-      const error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
-      throw error;
-    }
+export function useRoute() {
+  const context = noop.useContext(_mod1543.NavigationRouteContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find a route object. Is your component inside a screen in a navigator?");
+    throw error;
+  } else {
+    return context;
   }
-  if (context1 == null) {
-    context1 = context;
-  }
-  return context1;
 }

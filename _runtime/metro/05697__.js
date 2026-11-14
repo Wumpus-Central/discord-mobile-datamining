@@ -1,30 +1,19 @@
 // === Module 5697: ? ===
 
 // Module 5697
-import _mod19 from "module_19" /* 19 */;
-import _mod5530 from "module_5530" /* 5530 */;
+import ComposedGestureName from "ComposedGestureName" /* 5660 */;
+import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5669 */;
+import _mod5686 from "module_5686" /* 5686 */;
 
-const useLayoutEffect = _mod19.useLayoutEffect;
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export function useBoundingClientRect(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  if (obj.isFabricInstalled()) {
-    useLayoutEffect(() => {
-      if (closure_0) {
-        if (closure_0.current) {
-          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
-            if (typeof closure_0.current.getBoundingClientRect === "function") {
-              const current2 = closure_0.current;
-              closure_1(current2.getBoundingClientRect());
-            }
-          } else {
-            const current = closure_0.current;
-            closure_1(current.unstable_getBoundingClientRect());
-          }
-        }
-      }
-    });
+export function useManualGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
   }
-  obj = _mod5530;
+  const clonedAndRemappedConfig = resolveInternalConfigProps.useClonedAndRemappedConfig(tmp);
+  return _mod5686.useGesture(ComposedGestureName.SingleGestureName.Manual, clonedAndRemappedConfig);
 }

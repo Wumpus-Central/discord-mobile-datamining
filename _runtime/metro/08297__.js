@@ -1,14 +1,87 @@
 // === Module 8297: ? ===
 
 // Module 8297
-import _mod26 from "module_26" /* 26 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8287 from "module_8287" /* 8287 */;
+import _modDef8298 from "module_8298" /* 8298 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGTSpan", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-const point = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true, dx: true, dy: true, x: true, y: true, rotate: true, inlineSize: true, textLength: true, baselineShift: true, lengthAdjust: true, alignmentBaseline: true, verticalAlign: true, content: true };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = point;
+const Ellipse = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class Ellipse {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, Ellipse);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Ellipse);
+    tmp3 = closure_4;
+    if (metroImportDefault()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(Ellipse, _modDef8287);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    const obj = {};
+    ({ cx, cy, rx, ry } = props);
+    const merged = Object.assign(Ellipse(8278).extract(this, props));
+    obj.cx = cx;
+    obj.cy = cy;
+    obj.rx = rx;
+    obj.ry = ry;
+    const obj2 = Ellipse(8278);
+    const obj3 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8298, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
+  }
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(Ellipse, items);
+importDefaultResultResult.displayName = "Ellipse";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
 
-export default module_65.get("RNSVGTSpan", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

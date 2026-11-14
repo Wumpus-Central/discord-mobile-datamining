@@ -1,0 +1,27 @@
+// === Module 5756: ? ===
+
+// Module 5756
+import noop from "module_19" /* 19 */;
+
+({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
+
+export function useStableCallback(current) {
+  React3(undefined);
+  React2(() => {
+    closure_1.current = current;
+  });
+  duration(() => () => {
+    ref.current = undefined;
+  }, []);
+  return React(() => {
+    items = [...arguments];
+    current = ref.current;
+    let applyResult;
+    if (current != null) {
+      const items1 = [];
+      HermesBuiltin.arraySpread(items, 0);
+      applyResult = HermesBuiltin.apply(items1, ref);
+    }
+    return applyResult;
+  }, []);
+}

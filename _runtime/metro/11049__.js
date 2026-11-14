@@ -1,12 +1,7 @@
 // === Module 11049: ? ===
 
 // Module 11049
-import _mod11048 from "module_11048" /* 11048 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod11048.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c5c262e40462204afd9dba1d0529e9ea", name: "AttachmentIcon", type: "png" });

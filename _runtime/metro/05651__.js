@@ -1,77 +1,25 @@
 // === Module 5651: ? ===
 
 // Module 5651
-import resolveInternalConfigProps from "resolveInternalConfigProps" /* 5606 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef5634 from "module_5634" /* 5634 */;
+import _mod5646 from "module_5646" /* 5646 */;
 
-const require = globalThis.__r;
+_mod19.useCallback;
 
-require = arg1;
-let dependencyMap = arg6;
-
-export function useComposedGesture(type) {
-  _require = type;
-  const substr = [...arguments].slice();
-  const flatMapResult = substr.flatMap((type) => {
-    if (obj.isComposedGesture(type)) {
-      if (type.type === closure_0) {
-        let gestures = type.gestures;
+export function useViewRefHandler(current, detectorUpdater) {
+  const previousViewTag = current;
+  items = [current, detectorUpdater];
+  return useCallback((viewRef) => {
+    if (null !== viewRef) {
+      previousViewTag.viewRef = viewRef;
+      if (-1 === previousViewTag.previousViewTag) {
+        const tmp4 = _modDef5634;
+        previousViewTag.previousViewTag = tmp4(_mod5646.resolveHostInstance(previousViewTag.viewRef));
       }
-      return gestures;
-    }
-    gestures = [type];
-    obj = resolveInternalConfigProps;
-  });
-  dependencyMap = flatMapResult;
-  const flatMapResult1 = flatMapResult.flatMap((handlerTags) => {
-    if (obj.isComposedGesture(handlerTags)) {
-      handlerTags = handlerTags.handlerTags;
-    } else {
-      handlerTags = [];
-      handlerTags[0] = handlerTags.handlerTag;
-    }
-    return handlerTags;
-  });
-  if (obj2.containsDuplicates(flatMapResult1)) {
-    const _Error2 = Error;
-    const error = new Error(tmp2(5539).tagMessage("Each gesture can be used only once in the gesture composition."));
-    throw error;
-  } else {
-    let obj = { shouldUseReanimatedDetector: flatMapResult.some((config) => config.config.shouldUseReanimatedDetector), dispatchesAnimatedEvents: flatMapResult.some((config) => config.config.dispatchesAnimatedEvents) };
-    if (obj.shouldUseReanimatedDetector) {
-      if (obj.dispatchesAnimatedEvents) {
-        const _Error = Error;
-        const error1 = new Error(tmp2(5539).tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."));
-        throw error1;
+      if (!previousViewTag.firstRender) {
+        detectorUpdater(true);
       }
     }
-    const Reanimated = tmp2(5579).Reanimated;
-    let composedEventHandler;
-    if (Reanimated != null) {
-      composedEventHandler = Reanimated.useComposedEventHandler(flatMapResult.map((detectorCallbacks) => detectorCallbacks.detectorCallbacks.reanimatedEventHandler || null));
-    }
-    const found = flatMapResult.filter((detectorCallbacks) => undefined !== detectorCallbacks.detectorCallbacks.animatedEventHandler);
-    let animatedEventHandler;
-    if (found.length > 0) {
-      animatedEventHandler = found[0].detectorCallbacks.animatedEventHandler;
-    }
-    const obj3 = { handlerTags: flatMapResult1, type, config: obj, detectorCallbacks: null, externalSimultaneousHandlers: null, gestures: null };
-    const obj4 = {
-      jsEventHandler(arg0) {
-          for (const item10007 of c1) {
-            if (item10007.detectorCallbacks.jsEventHandler) {
-              let detectorCallbacks = tmp.detectorCallbacks;
-              let jsEventHandlerResult = detectorCallbacks.jsEventHandler(arg0);
-            }
-            continue;
-          }
-        },
-      reanimatedEventHandler: composedEventHandler,
-      animatedEventHandler
-    };
-    obj3.detectorCallbacks = obj4;
-    obj3.externalSimultaneousHandlers = [];
-    obj3.gestures = flatMapResult;
-    return obj3;
-  }
-  obj2 = require("resolveInternalConfigProps");
+  }, items);
 }

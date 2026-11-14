@@ -1,168 +1,212 @@
 // === Module 1881: ? ===
 
 // Module 1881
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-const LayoutAnimationConfig = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+export function getViewInfo(findHostInstanceResult) {
+  let uiViewClassName;
+  if (findHostInstanceResult != null) {
+    const __viewConfig = findHostInstanceResult.__viewConfig;
+    if (__viewConfig != null) {
+      uiViewClassName = __viewConfig.uiViewClassName;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
   }
-}
-function SkipEntering(children) {
-  const tmp = refs(children.shouldSkip);
-  closure_0 = tmp;
-  items = [tmp];
-  React6(() => {
-    closure_0.current = false;
-  }, items);
-  return <context value={tmp}>{children.children}</context>;
-}
-const noop = fn(19);
-({ Children: hasOwnProperty, cloneElement: closure_6, Fragment: metroImportDefault, isValidElement: closure_8, useEffect: closure_9, useRef: closure_10, Component, createContext } = noop);
-const jsx = fn(21).jsx;
-const context = createContext(null);
-class LayoutAnimationConfig {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, LayoutAnimationConfig);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(LayoutAnimationConfig);
-    tmp3 = closure_3;
-    if (closure_12()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result._childInstance = null;
-    tmp3Result._setChildInstance = (_childInstance) => {
-      closure_0._childInstance = _childInstance;
-    };
-    return tmp3Result;
-  }
-}
-_inherits(LayoutAnimationConfig, Component);
-const entry = {
-  key: "_getMergedRef",
-  value: function _getMergedRef(ref) {
-    const self = this;
-    if (!tmp) {
-      self._mergedRefSource = ref;
-      self._mergedRef = LayoutAnimationConfig(1877).mergeRefs(ref, self._setChildInstance);
-      const obj = LayoutAnimationConfig(1877);
-    }
-    return self._mergedRef;
-  }
-};
-let items = [
-  entry,
-  {
-    key: "getComponentViewTag",
-    value: function getComponentViewTag() {
-      let num = LayoutAnimationConfig(1878).getViewTagFromInstance(this._childInstance);
-      if (num == null) {
-        num = -1;
+  if (uiViewClassName == null) {
+    let uiViewClassName1;
+    if (findHostInstanceResult != null) {
+      const _viewConfig = findHostInstanceResult._viewConfig;
+      if (_viewConfig != null) {
+        uiViewClassName1 = _viewConfig.uiViewClassName;
       }
-      return num;
     }
-  },
-  {
-    key: "getMaybeWrappedChildren",
-    value: function getMaybeWrappedChildren() {
-      const self = this;
-      if (hasOwnProperty.count(this.props.children) > 1) {
-        if (self.props.skipExiting) {
-          let mapped = hasOwnProperty.map(self.props.children, (children) => <LayoutAnimationConfig skipExiting>{children}</LayoutAnimationConfig>);
+    uiViewClassName = uiViewClassName1;
+  }
+  if (uiViewClassName == null) {
+    let type;
+    if (findHostInstanceResult != null) {
+      const __internalInstanceHandle = findHostInstanceResult.__internalInstanceHandle;
+      if (__internalInstanceHandle != null) {
+        type = __internalInstanceHandle.type;
+      }
+    }
+    uiViewClassName = type;
+  }
+  if (uiViewClassName == null) {
+    let elementType;
+    if (findHostInstanceResult != null) {
+      const __internalInstanceHandle2 = findHostInstanceResult.__internalInstanceHandle;
+      if (__internalInstanceHandle2 != null) {
+        elementType = __internalInstanceHandle2.elementType;
+      }
+    }
+    uiViewClassName = elementType;
+  }
+  const obj = { reactViewName: uiViewClassName, viewTag: null };
+  let __nativeTag;
+  if (findHostInstanceResult != null) {
+    __nativeTag = findHostInstanceResult.__nativeTag;
+  }
+  obj.viewTag = __nativeTag;
+  return obj;
+}
+export function getViewTagFromInstance(_childInstance) {
+  if (_childInstance) {
+    if (typeof _childInstance.getComponentViewTag === "function") {
+      const componentViewTag = _childInstance.getComponentViewTag();
+      if (-1 !== componentViewTag) {
+        return componentViewTag;
+      }
+    }
+    let uiViewClassName;
+    if (_childInstance != null) {
+      const __viewConfig = _childInstance.__viewConfig;
+      if (__viewConfig != null) {
+        uiViewClassName = __viewConfig.uiViewClassName;
+      }
+    }
+    if (uiViewClassName == null) {
+      let uiViewClassName1;
+      if (_childInstance != null) {
+        const _viewConfig = _childInstance._viewConfig;
+        if (_viewConfig != null) {
+          uiViewClassName1 = _viewConfig.uiViewClassName;
         }
-        return mapped;
       }
-      mapped = self.getMaybeRefTrackedChild();
+      uiViewClassName = uiViewClassName1;
     }
-  },
-  {
-    key: "getMaybeRefTrackedChild",
-    value: function getMaybeRefTrackedChild() {
-      const self = this;
-      const children = this.props.children;
-      let tmp = children;
-      if (undefined !== this.props.skipExiting) {
-        tmp = children;
-        if (React5(children)) {
-          tmp = children;
-          if (children.type !== metroImportDefault) {
-            const obj = { ref: self._getMergedRef(children.props.ref) };
-            tmp = timestampProducer(children, obj);
+    if (uiViewClassName == null) {
+      let type;
+      if (_childInstance != null) {
+        const __internalInstanceHandle = _childInstance.__internalInstanceHandle;
+        if (__internalInstanceHandle != null) {
+          type = __internalInstanceHandle.type;
+        }
+      }
+      uiViewClassName = type;
+    }
+    if (uiViewClassName == null) {
+      if (_childInstance != null) {
+        const __internalInstanceHandle2 = _childInstance.__internalInstanceHandle;
+        if (__internalInstanceHandle2 != null) {
+          const elementType = __internalInstanceHandle2.elementType;
+        }
+      }
+    }
+    let __nativeTag;
+    if (_childInstance != null) {
+      __nativeTag = _childInstance.__nativeTag;
+    }
+    if (undefined !== __nativeTag) {
+      return __nativeTag;
+    } else {
+      const getNativeScrollRef = _childInstance.getNativeScrollRef;
+      let nativeScrollRef;
+      if (getNativeScrollRef != null) {
+        nativeScrollRef = getNativeScrollRef();
+      }
+      if (nativeScrollRef) {
+        let uiViewClassName2;
+        if (nativeScrollRef != null) {
+          const __viewConfig3 = nativeScrollRef.__viewConfig;
+          if (__viewConfig3 != null) {
+            uiViewClassName2 = __viewConfig3.uiViewClassName;
           }
         }
-      }
-      return tmp;
-    }
-  },
-  {
-    key: "setShouldAnimateExiting",
-    value: function setShouldAnimateExiting() {
-      const self = this;
-      if (1 === hasOwnProperty.count(this.props.children)) {
-        let viewTagFromInstance = LayoutAnimationConfig(1878).getViewTagFromInstance(self._childInstance);
-        if (viewTagFromInstance == null) {
-          viewTagFromInstance = LayoutAnimationConfig(1866).findNodeHandle(self);
-          const tmpResult = LayoutAnimationConfig(1866);
+        if (uiViewClassName2 == null) {
+          let uiViewClassName3;
+          if (nativeScrollRef != null) {
+            const _viewConfig3 = nativeScrollRef._viewConfig;
+            if (_viewConfig3 != null) {
+              uiViewClassName3 = _viewConfig3.uiViewClassName;
+            }
+          }
+          uiViewClassName2 = uiViewClassName3;
         }
-        if (viewTagFromInstance) {
-          const result = LayoutAnimationConfig(1827).setShouldAnimateExitingForTag(viewTagFromInstance, !self.props.skipExiting);
-          const tmpResult2 = LayoutAnimationConfig(1827);
+        if (uiViewClassName2 == null) {
+          let type1;
+          if (nativeScrollRef != null) {
+            const __internalInstanceHandle5 = nativeScrollRef.__internalInstanceHandle;
+            if (__internalInstanceHandle5 != null) {
+              type1 = __internalInstanceHandle5.type;
+            }
+          }
+          uiViewClassName2 = type1;
         }
-        const obj = LayoutAnimationConfig(1878);
+        if (uiViewClassName2 == null) {
+          if (nativeScrollRef != null) {
+            const __internalInstanceHandle6 = nativeScrollRef.__internalInstanceHandle;
+            if (__internalInstanceHandle6 != null) {
+              const elementType3 = __internalInstanceHandle6.elementType;
+            }
+          }
+        }
+        let __nativeTag1;
+        if (nativeScrollRef != null) {
+          __nativeTag1 = nativeScrollRef.__nativeTag;
+        }
+        if (__nativeTag1 == null) {
+          __nativeTag1 = null;
+        }
+        return __nativeTag1;
+      } else {
+        const getScrollableNode = _childInstance.getScrollableNode;
+        let scrollableNode;
+        if (getScrollableNode != null) {
+          scrollableNode = getScrollableNode();
+        }
+        let tmp9 = scrollableNode;
+        if (typeof scrollableNode !== "number") {
+          let tmp14 = null;
+          if (scrollableNode) {
+            let uiViewClassName4;
+            if (scrollableNode != null) {
+              const __viewConfig2 = scrollableNode.__viewConfig;
+              if (__viewConfig2 != null) {
+                uiViewClassName4 = __viewConfig2.uiViewClassName;
+              }
+            }
+            if (uiViewClassName4 == null) {
+              let uiViewClassName5;
+              if (scrollableNode != null) {
+                const _viewConfig2 = scrollableNode._viewConfig;
+                if (_viewConfig2 != null) {
+                  uiViewClassName5 = _viewConfig2.uiViewClassName;
+                }
+              }
+              uiViewClassName4 = uiViewClassName5;
+            }
+            if (uiViewClassName4 == null) {
+              let type2;
+              if (scrollableNode != null) {
+                const __internalInstanceHandle3 = scrollableNode.__internalInstanceHandle;
+                if (__internalInstanceHandle3 != null) {
+                  type2 = __internalInstanceHandle3.type;
+                }
+              }
+              uiViewClassName4 = type2;
+            }
+            if (uiViewClassName4 == null) {
+              if (scrollableNode != null) {
+                const __internalInstanceHandle4 = scrollableNode.__internalInstanceHandle;
+                if (__internalInstanceHandle4 != null) {
+                  const elementType2 = __internalInstanceHandle4.elementType;
+                }
+              }
+            }
+            let __nativeTag2;
+            if (scrollableNode != null) {
+              __nativeTag2 = scrollableNode.__nativeTag;
+            }
+            if (__nativeTag2 == null) {
+              __nativeTag2 = null;
+            }
+            tmp14 = __nativeTag2;
+          }
+          tmp9 = tmp14;
+        }
+        return tmp9;
       }
     }
-  },
-  {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      const self = this;
-      if (undefined !== this.props.skipExiting) {
-        const result = self.setShouldAnimateExiting();
-      }
-    }
-  },
-  {
-    key: "render",
-    value: function render() {
-      const maybeWrappedChildren = this.getMaybeWrappedChildren();
-      let tmp2 = maybeWrappedChildren;
-      if (undefined !== this.props.skipEntering) {
-        const obj = { shouldSkip: this.props.skipEntering, children: maybeWrappedChildren };
-        tmp2 = <SkipEntering shouldSkip={this.props.skipEntering}>{maybeWrappedChildren}</SkipEntering>;
-      }
-      return tmp2;
-    }
+  } else {
+    return null;
   }
-];
-
-export const SkipEnteringContext = context;
-export const LayoutAnimationConfig = _createClass(LayoutAnimationConfig, items);
+}

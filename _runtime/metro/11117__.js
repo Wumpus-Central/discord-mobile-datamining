@@ -1,7 +1,11 @@
 // === Module 11117: ? ===
 
 // Module 11117
-import registerAsset from "module_1119" /* 1119 */;
+import _mod17 from "module_17" /* 17 */;
 
+const Platform = _mod17.Platform;
+const frozen = Object.freeze({ allFiles: "*/*", audio: "audio/*", csv: ["text/csv", "text/comma-separated-values"], doc: "application/msword", docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document", images: "image/*", pdf: "application/pdf", plainText: "text/plain", json: "application/json", ppt: "application/vnd.ms-powerpoint", pptx: "application/vnd.openxmlformats-officedocument.presentationml.presentation", video: "video/*", xls: "application/vnd.ms-excel", xlsx: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", zip: "application/zip" });
+const frozen1 = Object.freeze({ allFiles: "public.item", audio: "public.audio", csv: "public.comma-separated-values-text", doc: "com.microsoft.word.doc", docx: "org.openxmlformats.wordprocessingml.document", images: "public.image", pdf: "com.adobe.pdf", plainText: "public.plain-text", json: "public.json", ppt: "com.microsoft.powerpoint.ppt", pptx: "org.openxmlformats.presentationml.presentation", video: "public.movie", xls: "com.microsoft.excel.xls", xlsx: "org.openxmlformats.spreadsheetml.sheet", zip: "public.zip-archive" });
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/BlurpleTwilightIcon", width: 60, height: 60, scales: [2, 3], hash: "f385b38a044809a0b451d707fc7cd058", name: "BlurpleTwilightIcon", type: "png" });
+export const types = frozen;
+export const typesAreEqual = true;

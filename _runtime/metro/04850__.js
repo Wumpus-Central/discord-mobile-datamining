@@ -1,9 +1,8 @@
 // === Module 4850: ? ===
 
 // Module 4850
-import _typeof_mod from "module_4522" /* 4522 */;
-import requiredArgs_mod from "requiredArgs" /* 4523 */;
-import module_4526_mod from "module_4526" /* 4526 */;
+import _typeof_mod from "module_4585" /* 4585 */;
+import requiredArgs_mod from "requiredArgs" /* 4586 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,30 +20,15 @@ if (!requiredArgs) {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-let module_4526 = module_4526_mod;
-if (!module_4526) {
-  const obj3 = { default: module_4526 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4526;
-}
-module_4526 = tmp7;
 
-export default function setUTCISODay(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = module_4526.default(arg1);
-  let diff = defaultResult1;
-  if (defaultResult1 % 7 === 0) {
-    diff = defaultResult1 - 7;
-  }
-  const defaultResult2 = _typeof.default(arg0);
-  let num = 0;
-  const uTCDay = defaultResult2.getUTCDay();
-  if ((diff % 7 + 7) % 7 < 1) {
-    num = 7;
-  }
-  const diff1 = num + diff - uTCDay;
-  defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff1);
-  return defaultResult2;
+export default function getDaysInMonth(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  const month = defaultResult1.getMonth();
+  const date = new Date(0);
+  date.setFullYear(fullYear, month + 1, 0);
+  date.setHours(0, 0, 0, 0);
+  return date.getDate();
 };
 export default exports.default;

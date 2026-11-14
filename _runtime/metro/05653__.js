@@ -1,14 +1,26 @@
 // === Module 5653: ? ===
 
 // Module 5653
-import ComposedGestureName from "ComposedGestureName" /* 5597 */;
-import _mod5651 from "module_5651" /* 5651 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function useSimultaneousGestures() {
-  items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
-  return _mod5651.useComposedGesture.apply(items1);
+let tmp3 = typeof window === "undefined";
+if (typeof window !== "undefined") {
+  const _window2 = window;
+  tmp3 = undefined === window.document;
 }
+if (!tmp3) {
+  const _window = window;
+  tmp3 = undefined === window.document.createElement;
+}
+let tmp4 = typeof navigator !== "undefined";
+if (typeof navigator !== "undefined") {
+  const _navigator = navigator;
+  tmp4 = "ReactNative" === navigator.product;
+}
+if (tmp3) {
+  if (!tmp4) {
+    let useLayoutEffect = noop.useEffect;
+  }
+  exports.useIsomorphicLayoutEffect = useLayoutEffect;
+}
+useLayoutEffect = noop.useLayoutEffect;

@@ -2,23 +2,8 @@
 
 // Module 5812
 
-export function useDataMultiplier(arg0, arg1) {
-  const array = new Array(arg1);
-  let flag = false;
-  if (typeof arg0[0] === "object") {
-    flag = true;
+export default function _arrayWithHoles(arg0) {
+  if (Array.isArray(arg0)) {
+    return arg0;
   }
-  for (let num = 0; num < arg1; num = num + 1) {
-    let tmp3 = arg0[num % tmp];
-    if (flag) {
-      let obj = {};
-      let merged = Object.assign(tmp3);
-      let tmp5 = obj;
-    } else {
-      tmp5 = tmp3;
-    }
-    array[num] = tmp5;
-  }
-  items = [array];
-  return items;
-}
+};

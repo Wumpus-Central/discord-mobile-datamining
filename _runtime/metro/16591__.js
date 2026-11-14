@@ -1,49 +1,7 @@
 // === Module 16591: ? ===
 
 // Module 16591
-import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 16592 */;
-import compareKV from "compareKV" /* 16593 */;
-import likelySubtags from "likelySubtags" /* 16596 */;
-import _mod16597 from "module_16597" /* 16597 */;
-import e_mod from "e" /* 1159 */;
+import registerAsset from "module_1119" /* 1119 */;
 
-const require = globalThis.__r;
 
-let e = e_mod;
-e.__exportStar(emitUnicodeLanguageId, exports);
-let e = e_mod;
-e.__exportStar(_mod16597, exports);
-let e = e_mod;
-e.__exportStar(likelySubtags, exports);
-
-export function getCanonicalLocales(items) {
-  if (undefined === items) {
-    items = [];
-  } else {
-    let arr3 = items;
-    if (typeof items === "string") {
-      const items1 = [items];
-      arr3 = items1;
-    }
-    const items2 = [];
-    let num3 = 0;
-    items = items2;
-    if (0 < arr3.length) {
-      do {
-        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require("module_16595").parseUnicodeLocaleId(arr3[num3])));
-        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
-          let arr = items2.push(emitUnicodeLocaleIdResult);
-        }
-        num3 = num3 + 1;
-        items = items2;
-      } while (num3 < arr3.length);
-    }
-  }
-  return items;
-}
-export const isStructurallyValidLanguageTag = require("module_16595").isStructurallyValidLanguageTag;
-export const isUnicodeLanguageSubtag = require("module_16595").isUnicodeLanguageSubtag;
-export const isUnicodeRegionSubtag = require("module_16595").isUnicodeRegionSubtag;
-export const isUnicodeScriptSubtag = require("module_16595").isUnicodeScriptSubtag;
-export const parseUnicodeLanguageId = require("module_16595").parseUnicodeLanguageId;
-export const parseUnicodeLocaleId = require("module_16595").parseUnicodeLocaleId;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "4d498b99244dd74c9e2dd5b1de10ead7", name: "ic_radio_square_checked_24px", type: "png" });

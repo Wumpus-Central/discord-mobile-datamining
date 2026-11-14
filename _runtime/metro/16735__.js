@@ -1,19 +1,30 @@
 // === Module 16735: ? ===
 
 // Module 16735
-import _mod16736 from "module_16736" /* 16736 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default function getReactNativeDimensions() {
-  try {
-    const Dimensions = get_ActivityIndicator.Dimensions;
+export function getSupportedNumberingSystems(locale) {
+  _require = locale;
+  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
+  return numberingSystemNames.filter((item) => (function isSupportedNumberingSystem(item, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
     try {
-      const Dimensions2 = get_ActivityIndicator.Dimensions;
-      value = Dimensions2.get("window");
-      return _mod16736.getReactNativeDimensionsWithDimensions(tmp2, value);
+      const concat = "".concat;
+      const combined = "".concat(str, "-u-nu-");
+      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
+      if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+        if ("123" === memoizedNumberFormat.format(123)) {
+          return false;
+        }
+      }
+      return true;
     } catch (err) {
     }
-  } catch (err) {
-  }
-};
+  })(item, closure_0));
+}

@@ -1,31 +1,26 @@
 // === Module 9798: ? ===
 
 // Module 9798
+import _mod9799 from "module_9799" /* 9799 */;
 
-export function isSentryRequestUrl(arr, getDsn) {
-  let dsn = getDsn;
-  if (getDsn) {
-    dsn = getDsn.getDsn();
+require = arg1;
+const dependencyMap = arg6;
+
+export const GLOBAL_OBJ = globalThis;
+export function getGlobalSingleton(globalMetricsAggregators, fn, arg2) {
+  let tmp = arg2;
+  if (!arg2) {
+    tmp = globalThis;
   }
-  let tunnel = getDsn;
-  if (getDsn) {
-    tunnel = getDsn.getOptions().tunnel;
+  const tmp2 = tmp.__SENTRY__ || {};
+  tmp.__SENTRY__ = tmp2;
+  const tmp3 = tmp2[_mod9799.SDK_VERSION] || {};
+  tmp2[_mod9799.SDK_VERSION] = tmp3;
+  let tmp4 = tmp3[globalMetricsAggregators];
+  if (!tmp4) {
+    const tmp6 = fn();
+    tmp3[globalMetricsAggregators] = tmp6;
+    tmp4 = tmp6;
   }
-  let tmp2 = dsn && arr.includes(dsn.host);
-  if (!tmp2) {
-    let flag = false;
-    if (tunnel) {
-      let substr = arr;
-      if ("/" === arr[arr.length - 1]) {
-        substr = arr.slice(0, -1);
-      }
-      let substr1 = tunnel;
-      if ("/" === tunnel[tunnel.length - 1]) {
-        substr1 = tunnel.slice(0, -1);
-      }
-      flag = substr === substr1;
-    }
-    tmp2 = flag;
-  }
-  return tmp2;
+  return tmp4;
 }

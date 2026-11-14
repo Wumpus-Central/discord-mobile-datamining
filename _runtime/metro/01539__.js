@@ -1,18 +1,9 @@
 // === Module 1539: ? ===
 
 // Module 1539
-import _mod1540 from "module_1540" /* 1540 */;
 import noop from "module_19" /* 19 */;
 
-require = arg1;
+const context = noop.createContext(undefined);
+context.displayName = "ThemeContext";
 
-export function useRoute() {
-  const context = noop.useContext(_mod1540.NavigationRouteContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find a route object. Is your component inside a screen in a navigator?");
-    throw error;
-  } else {
-    return context;
-  }
-}
+export const ThemeContext = context;

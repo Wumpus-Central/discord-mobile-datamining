@@ -1,40 +1,33 @@
 // === Module 9765: ? ===
 
 // Module 9765
-import _mod9737 from "module_9737" /* 9737 */;
+const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export function handleCallbackErrors(fn, arg1) {
-  fn = arg2;
-  if (arg2 === undefined) {
-    fn = function t() {
-
-    };
-  }
-  try {
-    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
-      closure_0 = arg1;
-      closure_1 = fn;
-      if (obj.isThenable(promise)) {
-        return promise.then((result) => {
-          closure_1();
-          return result;
-        }, (arg0) => {
-          closure_0(arg0);
-          closure_1();
-          throw arg0;
-        });
-      } else {
-        fn();
-        return promise;
-      }
-      obj = _mod9737;
-    })(fn(), arg1, fn);
-  } catch (tmp5) {
-    tmp3(tmp5);
-    tmp2();
-    throw tmp5;
-  }
+for (const key10013 in require("module_9766")) {
+  arg5[key10013] = require("module_9766")[key10013];
+  continue;
+}
+for (const key10017 in require("ReplacementModesAndroid")) {
+  arg5[key10017] = require("ReplacementModesAndroid")[key10017];
+  continue;
+}
+for (const key10021 in require("purchaseUpdatedListener")) {
+  arg5[key10021] = require("purchaseUpdatedListener")[key10021];
+  continue;
+}
+for (const key10025 in require("module_9780")) {
+  arg5[key10025] = require("module_9780")[key10025];
+  continue;
+}
+for (const key10029 in require("module_9781")) {
+  arg5[key10029] = require("module_9781")[key10029];
+  continue;
+}
+for (const key10033 in require("PurchaseError")) {
+  arg5[key10033] = require("PurchaseError")[key10033];
+  continue;
+}
+for (const key10037 in require("module_9782")) {
+  arg5[key10037] = require("module_9782")[key10037];
+  continue;
 }

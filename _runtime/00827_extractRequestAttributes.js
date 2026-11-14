@@ -149,7 +149,7 @@ export function instrumentOpenAiClient(arg0, arg1) {
                       closure_129_4 = undefined;
                       c3 = 1;
                       c4 = 1;
-                      return { value: "flexDirection", done: true };
+                      return { value: "Path", done: true };
                     }
                   } else if (arg0 === 1) {
                     c4 = 3;
@@ -178,8 +178,8 @@ export function instrumentOpenAiClient(arg0, arg1) {
                       obj9.op = str(tmp2[2]).getSpanOperation(tmp2);
                       obj9.attributes = closure_129_1;
                       obj5.startSpanManual(obj9, (() => {
-                        closure_0 = closure_2(/* F144734 */ function() { ... });
-                        return /* F144735 */ function() { ... };
+                        closure_0 = closure_2(/* F146369 */ function() { ... });
+                        return /* F146370 */ function() { ... };
                       })());
                       let obj7 = str(tmp2[2]);
                     }
@@ -191,8 +191,8 @@ export function instrumentOpenAiClient(arg0, arg1) {
                     obj10.op = str(tmp2[2]).getSpanOperation(tmp2);
                     obj10.attributes = closure_129_1;
                     obj2.startSpan(obj10, (() => {
-                      closure_0 = closure_2(/* F144736 */ function() { ... });
-                      return /* F144737 */ function() { ... };
+                      closure_0 = closure_2(/* F146371 */ function() { ... });
+                      return /* F146372 */ function() { ... };
                     })());
                     let obj4 = str(tmp2[2]);
                   }
@@ -272,7 +272,7 @@ export function instrumentOpenAiClient(arg0, arg1) {
                                       closure_129_4 = undefined;
                                       c3 = 1;
                                       c4 = 1;
-                                      return { value: "flexDirection", done: true };
+                                      return { value: "Path", done: true };
                                     }
                                   } else if (arg0 === 1) {
                                     c4 = 3;
@@ -300,7 +300,7 @@ export function instrumentOpenAiClient(arg0, arg1) {
                                       let obj5 = str(tmp2[5]);
                                       obj9.op = str(tmp2[2]).getSpanOperation(tmp2);
                                       obj9.attributes = closure_129_1;
-                                      obj5.startSpanManual(obj9, (/* F143243 */ function() { ... })());
+                                      obj5.startSpanManual(obj9, (/* F144863 */ function() { ... })());
                                       let obj7 = str(tmp2[2]);
                                     }
                                     let obj = str(tmp2[2]);
@@ -310,7 +310,7 @@ export function instrumentOpenAiClient(arg0, arg1) {
                                     let obj2 = str(tmp2[5]);
                                     obj10.op = str(tmp2[2]).getSpanOperation(tmp2);
                                     obj10.attributes = closure_129_1;
-                                    obj2.startSpan(obj10, (/* F143244 */ function() { ... })());
+                                    obj2.startSpan(obj10, (/* F144864 */ function() { ... })());
                                     let obj4 = str(tmp2[2]);
                                   }
                                 } catch (tmp40) {
@@ -356,7 +356,7 @@ export function instrumentOpenAiClient(arg0, arg1) {
                                             closure_0 = [...arguments];
                                             c3 = 0;
                                             c4 = 0;
-                                            const iter = (/* F138238 */ function*() { ... })();
+                                            const iter = (/* F139820 */ function*() { ... })();
                                             iter.next();
                                             return iter;
                                           });
@@ -390,7 +390,7 @@ export function instrumentOpenAiClient(arg0, arg1) {
                                                           closure_1 = methodPath;
                                                           closure_2 = self;
                                                           closure_3 = closure_1_1;
-                                                          closure_2_2(/* F123816 */ function() { ... });
+                                                          closure_2_2(/* F125218 */ function() { ... });
                                                           function instrumentedMethod() { ... }
                                                         }
                                                         return instrumentedMethod;

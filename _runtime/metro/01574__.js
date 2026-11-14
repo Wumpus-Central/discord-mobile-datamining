@@ -1,25 +1,18 @@
 // === Module 1574: ? ===
 
 // Module 1574
-import _slicedToArray from "module_32" /* 32 */;
+import _mod1539 from "module_1539" /* 1539 */;
 import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = arg1;
 
-export function useRegisterNavigator() {
-  const first = _slicedToArray(noop.useState(() => first(context[2]).nanoid()), 1)[0];
-  context = noop.useContext(first(context[3]).SingleNavigatorContext);
-  if (undefined === context) {
+export function useTheme() {
+  const context = noop.useContext(_mod1539.ThemeContext);
+  if (null == context) {
     const _Error = Error;
-    const error = new Error("Couldn't register the navigator. Have you wrapped your app with 'NavigationContainer'?\n\nThis can also happen if there are multiple copies of '@react-navigation' packages installed.");
+    const error = new Error("Couldn't find a theme. Is your component inside NavigationContainer or does it have a theme?");
     throw error;
   } else {
-    items = [context, first];
-    const effect = noop.useEffect(() => {
-      const unregister = context.unregister;
-      context.register(unregister);
-      return () => unregister(first);
-    }, items);
-    return first;
+    return context;
   }
 }

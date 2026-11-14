@@ -1,5 +1,0 @@
-// === Module 1762: ANIMATION_NAME_PREFIX ===
-
-// Module 1762 (ANIMATION_NAME_PREFIX)
-
-export const ANIMATION_NAME_PREFIX = "REA-CSS-";

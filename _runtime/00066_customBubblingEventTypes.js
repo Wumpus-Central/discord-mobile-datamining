@@ -12,15 +12,15 @@ const map1 = new Map();
 
 export { customBubblingEventTypes };
 export const customDirectEventTypes = obj2;
-export function register(APNGDecorationView, fn) {
-  _modDef38(!map.has(APNGDecorationView), "Tried to register two views with the same name %s", APNGDecorationView);
+export function register(AccessibilityFocusView, fn) {
+  _modDef38(!map.has(AccessibilityFocusView), "Tried to register two views with the same name %s", AccessibilityFocusView);
   let str = "null";
   if (null !== fn) {
     str = typeof fn;
   }
-  _modDef38(typeof fn === "function", "View config getter callback for component `%s` must be a function (received `%s`)", APNGDecorationView, str);
-  const result = map.set(APNGDecorationView, fn);
-  return APNGDecorationView;
+  _modDef38(typeof fn === "function", "View config getter callback for component `%s` must be a function (received `%s`)", AccessibilityFocusView, str);
+  const result = map.set(AccessibilityFocusView, fn);
+  return AccessibilityFocusView;
 }
 export function get(arg0) {
   value = map1.get(arg0);

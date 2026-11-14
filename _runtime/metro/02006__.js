@@ -1,49 +1,58 @@
 // === Module 2006: ? ===
 
 // Module 2006
-import _mod1971 from "module_1971" /* 1971 */;
-import disabledDefault from "disabled" /* 1998 */;
-import _modDef1999 from "module_1999" /* 1999 */;
-import noop from "module_19" /* 19 */;
+import _mod1974 from "module_1974" /* 1974 */;
+import "module_19";
 
 require = fn;
-fn(19).useCallback;
+const noop = fn(19);
+({ useCallback: c3, useMemo: closure_4 } = noop);
+get_ActivityIndicator = fn(17);
+({ StyleSheet, Text: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
+const doneButtonContainer = StyleSheet.create({ doneButton: { fontWeight: "600", fontSize: 15 }, doneButtonContainer: { marginRight: 16, marginLeft: 8 } });
 
-export default function _default(icon) {
-  ({ children, onPress } = icon);
-  ({ disabled, button } = icon);
-  ({ rippleRadius, style } = icon);
+export default function _default(rippleRadius) {
+  ({ children, onPress } = rippleRadius);
+  let num = rippleRadius.rippleRadius;
+  if (num === undefined) {
+    num = 28;
+  }
+  ({ button, text } = rippleRadius);
   if (button === undefined) {
-    button = disabledDefault;
+    button = keyboardState(theme[3]);
   }
-  icon = icon.icon;
-  if (icon === undefined) {
-    icon = _modDef1999;
-  }
-  const toolbarContext = onPress(2004).useToolbarContext();
-  const theme = toolbarContext.theme;
-  if (disabled == null) {
-    disabled = toolbarContext.isPrevDisabled;
-  }
-  items = [onPress];
-  const obj2 = { accessibilityHint: "Moves focus to the previous field", accessibilityLabel: "Previous", disabled, rippleRadius, style, testID: null, theme: null, onPress: null, children: null };
-  const obj = onPress(2004);
-  obj2.testID = onPress(1997).TEST_ID_KEYBOARD_TOOLBAR_PREVIOUS;
-  obj2.theme = theme;
-  obj2.onPress = useCallback((isDefaultPrevented) => {
+  theme = undefined;
+  keyboardState = onPress(theme[4]).useKeyboardState((appearance) => appearance.appearance);
+  const obj = onPress(theme[4]);
+  theme = onPress(theme[5]).useToolbarContext().theme;
+  items = [keyboardState, theme];
+  const items1 = [onPress];
+  const obj2 = onPress(theme[5]);
+  const obj3 = { accessibilityHint: "Closes the keyboard", accessibilityLabel: "Done", rippleRadius: num, style: doneButtonContainer.doneButtonContainer, testID: null, theme: null, onPress: null, children: null };
+  const tmp4 = closure_4(() => {
+    items = [doneButton.doneButton, { color: theme[keyboardState].primary }];
+    return items;
+  }, items);
+  obj3.testID = onPress(theme[7]).TEST_ID_KEYBOARD_TOOLBAR_DONE;
+  obj3.theme = theme;
+  obj3.onPress = closure_3((isDefaultPrevented) => {
     if (onPress != null) {
       tmp(isDefaultPrevented);
     }
     if (!isDefaultPrevented.isDefaultPrevented()) {
-      const KeyboardController = _mod1971.KeyboardController;
-      KeyboardController.setFocusTo("prev");
+      const KeyboardController = _mod1974.KeyboardController;
+      KeyboardController.dismiss();
     }
-  }, items);
+  }, items1);
+  const obj4 = { maxFontSizeMultiplier: 1.3, style: tmp4, children: null };
   if (children == null) {
-    const obj3 = { disabled, theme, type: "prev" };
-    children = <icon disabled={disabled} theme={theme} type="prev" />;
+    children = text;
   }
-  obj2.children = children;
-  return <button accessibilityHint="Moves focus to the previous field" accessibilityLabel="Previous" disabled={disabled} rippleRadius={rippleRadius} style={style} testID={null} theme={null} onPress={null}>{null}</button>;
+  if (children == null) {
+    children = "Done";
+  }
+  obj4.children = children;
+  obj3.children = <closure_5 maxFontSizeMultiplier={1.3} style={tmp4}>{null}</closure_5>;
+  return <button accessibilityHint="Closes the keyboard" accessibilityLabel="Done" rippleRadius={num} style={doneButtonContainer.doneButtonContainer} testID={null} theme={null} onPress={null}>{null}</button>;
 };

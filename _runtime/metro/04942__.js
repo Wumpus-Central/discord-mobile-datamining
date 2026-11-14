@@ -1,49 +1,28 @@
 // === Module 4942: ? ===
 
 // Module 4942
-import module_4526_mod from "module_4526" /* 4526 */;
-import _typeof_mod from "module_4522" /* 4522 */;
-import module_4794_mod from "module_4794" /* 4794 */;
-import requiredArgs_mod from "requiredArgs" /* 4523 */;
+import module_4932_mod from "module_4932" /* 4932 */;
+import requiredArgs_mod from "requiredArgs" /* 4586 */;
 
-let module_4526 = module_4526_mod;
-if (!module_4526) {
-  const obj = { default: module_4526 };
+let module_4932 = module_4932_mod;
+if (!module_4932) {
+  const obj = { default: module_4932 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4526;
+  tmp3 = module_4932;
 }
-module_4526 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let module_4794 = module_4794_mod;
-if (!module_4794) {
-  const obj3 = { default: module_4794 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4794;
-}
-module_4794 = tmp7;
+module_4932 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function setISOWeek(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const diff = module_4794.default(defaultResult1) - module_4526.default(arg1);
-  defaultResult1.setDate(defaultResult1.getDate() - 7 * diff);
-  return defaultResult1;
+export default function isThisISOWeek(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4932.default(arg0, Date.now());
 };
 export default exports.default;

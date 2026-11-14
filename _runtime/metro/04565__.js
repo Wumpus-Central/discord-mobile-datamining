@@ -1,9 +1,7 @@
 // === Module 4565: ? ===
 
 // Module 4565
-let closure_0 = { lastWeek: "'viime' eeee 'klo' p", yesterday: "'eilen klo' p", today: "'t\u00E4n\u00E4\u00E4n klo' p", tomorrow: "'huomenna klo' p", nextWeek: "'ensi' eeee 'klo' p", other: "P" };
+import registerAsset from "module_1119" /* 1119 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
-export default exports.default;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy91c2VyX3NldHRpbmdzL2Nvbm5lY3RlZF9hcHBz", scales: [1], hash: "b738c2d9419329178077f279d901f75f", name: "lt.messages.b738c2d9419329178077f279d901f75f.compiled.messages", type: "jsona" });

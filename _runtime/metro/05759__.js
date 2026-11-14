@@ -1,14 +1,49 @@
 // === Module 5759: ? ===
 
 // Module 5759
-import _mod5760 from "module_5760" /* 5760 */;
+import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
 
-export default function toPropertyKey(arg0) {
-  const tmp = _mod5760(arg0, "string");
-  let text = tmp;
-  if ("symbol" != obj.default(tmp)) {
-    text = `${tmp}`;
+({ useEffect: c2, useRef: c3 } = noop);
+
+export (INITIAL_CONTAINER_HEIGHT) => {
+  const tmp = closure_3(null);
+  const tmp2 = closure_3(null);
+  _require = tmp2;
+  let tmp3 = INITIAL_CONTAINER_HEIGHT;
+  if (INITIAL_CONTAINER_HEIGHT) {
+    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
   }
-  return text;
-};
+  if (tmp3) {
+    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
+  }
+  if (!tmp3) {
+    if (null === tmp2.current) {
+      tmp.current = INITIAL_CONTAINER_HEIGHT;
+      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
+        const obj2 = {};
+        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
+        let mutable = require("module_1655").makeMutable(obj2);
+        let obj = require("module_1655");
+      } else {
+        mutable = require("module_1655").makeMutable(INITIAL_CONTAINER_HEIGHT);
+        const obj3 = require("module_1655");
+      }
+      tmp2.current = mutable;
+    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
+      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
+    }
+  }
+  closure_2(() => () => {
+    if (ref.current) {
+      ref(dependencyMap[1]).cancelAnimation(tmp.current);
+      const obj = ref(dependencyMap[1]);
+    }
+  }, []);
+  let current = tmp2.current;
+  if (current == null) {
+    current = INITIAL_CONTAINER_HEIGHT;
+  }
+  return current;
+}

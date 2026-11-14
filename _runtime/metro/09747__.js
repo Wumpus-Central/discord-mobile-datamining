@@ -1,87 +1,90 @@
 // === Module 9747: ? ===
 
 // Module 9747
+const require = globalThis.__r;
 
-export const SPAN_STATUS_ERROR = 2;
-export const SPAN_STATUS_OK = 1;
-export const SPAN_STATUS_UNSET = 0;
-export function getSpanStatusFromHttpCode(arg0) {
-  if (arg0 < 400) {
-    if (arg0 >= 100) {
-      return { code: 1 };
-    }
-  }
-  if (arg0 >= 400) {
-    if (arg0 < 500) {
-      if (401 === arg0) {
-        return { code: 2, message: "unauthenticated" };
-      } else if (403 === arg0) {
-        return { code: 2, message: "permission_denied" };
-      } else if (404 === arg0) {
-        return { code: 2, message: "not_found" };
-      } else if (409 === arg0) {
-        return { code: 2, message: "already_exists" };
-      } else if (413 === arg0) {
-        return { code: 2, message: "failed_precondition" };
-      } else if (429 === arg0) {
-        return { code: 2, message: "resource_exhausted" };
+function flattenStyle(obj) {
+  if (null !== obj) {
+    if (typeof obj === "object") {
+      const _Array = Array;
+      if (Array.isArray(obj)) {
+        obj = {};
+        for (let num3 = 0; num3 < length; num3 = num3 + 1) {
+          let tmp3 = flattenStyle(obj[num3]);
+          if (tmp3) {
+            for (const key10019 in tmp3) {
+              obj[key10019] = tmp3[key10019];
+              continue;
+            }
+          }
+        }
+        return obj;
       } else {
-        return 499 === arg0 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
+        return obj;
       }
     }
   }
-  if (arg0 >= 500) {
-    if (arg0 < 600) {
-      if (501 === arg0) {
-        return { code: 2, message: "unimplemented" };
-      } else if (503 === arg0) {
-        return { code: 2, message: "unavailable" };
-      } else {
-        return 504 === arg0 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
-      }
-    }
-  }
-  return { code: 2, message: "unknown_error" };
 }
-export function setHttpStatus(setAttribute, arg1) {
-  const attr = setAttribute.setAttribute("http.response.status_code", arg1);
-  if (arg1 < 400) {
-    if (arg1 >= 100) {
-      let obj = { code: 1 };
-    }
-    if ("unknown_error" !== obj.message) {
-      setAttribute.setStatus(obj);
-    }
-  }
-  if (arg1 >= 400) {
-    if (arg1 < 500) {
-      if (401 === arg1) {
-        obj = { code: 2, message: "unauthenticated" };
-      } else if (403 === arg1) {
-        obj = { code: 2, message: "permission_denied" };
-      } else if (404 === arg1) {
-        obj = { code: 2, message: "not_found" };
-      } else if (409 === arg1) {
-        obj = { code: 2, message: "already_exists" };
-      } else if (413 === arg1) {
-        obj = { code: 2, message: "failed_precondition" };
-      } else if (429 === arg1) {
-        obj = { code: 2, message: "resource_exhausted" };
-      } else {
-        obj = 499 === arg1 ? { code: 2, message: "cancelled" } : { code: 2, message: "invalid_argument" };
+
+export default function DeprecatedStyleSheetPropType(arg0) {
+  _require = require("deprecatedCreateStrictShapeTypeChecker")(arg0);
+  return (arg0, arg1, arg2, arg3) => {
+    const substr = [...arguments].slice();
+    if (arg0[arg1]) {
+      let tmp4;
+      if (null !== arg0[arg1]) {
+        if (typeof arr === "object") {
+          const _Array = Array;
+          tmp4 = arr;
+          if (Array.isArray(arr)) {
+            const obj = {};
+            let num3 = 0;
+            tmp4 = obj;
+            if (0 < arr.length) {
+              do {
+                let arr2 = arr[num3];
+                let tmp6;
+                if (null !== arr2) {
+                  if (typeof arr2 === "object") {
+                    let _Array2 = Array;
+                    tmp6 = arr2;
+                    if (Array.isArray(arr2)) {
+                      let obj2 = {};
+                      let length2 = arr2.length;
+                      let num4 = 0;
+                      tmp6 = obj2;
+                      if (0 < length2) {
+                        do {
+                          let tmp8 = flattenStyle(arr2[num4]);
+                          if (tmp8) {
+                            for (const key10029 in tmp8) {
+                              obj2[key10029] = tmp8[key10029];
+                              continue;
+                            }
+                          }
+                          num4 = num4 + 1;
+                          tmp6 = obj2;
+                        } while (num4 < length2);
+                      }
+                    }
+                  }
+                }
+                if (tmp6) {
+                  for (const key10032 in tmp6) {
+                    obj[key10032] = tmp6[key10032];
+                    continue;
+                  }
+                }
+                num3 = num3 + 1;
+                tmp4 = obj;
+              } while (num3 < length);
+            }
+          }
+        }
       }
+      const obj3 = {};
+      obj3[arg1] = tmp4;
     }
-  }
-  if (arg1 >= 500) {
-    if (arg1 < 600) {
-      if (501 === arg1) {
-        obj = { code: 2, message: "unimplemented" };
-      } else if (503 === arg1) {
-        obj = { code: 2, message: "unavailable" };
-      } else {
-        obj = 504 === arg1 ? { code: 2, message: "deadline_exceeded" } : { code: 2, message: "internal_error" };
-      }
-    }
-  }
-  obj = { code: 2, message: "unknown_error" };
-}
+    return closure_0(arg1, arg2, arg3, ...substr);
+  };
+};

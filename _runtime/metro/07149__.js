@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 128, height: 128, scales: [1], hash: "1301559e28a24a2331fbb1cb62dbbbc5", name: "img_meta_quest_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 228, height: 60, scales: [1], hash: "0bb27de2f1b5a855e060166d68a98581", name: "img_account_sync_samsung_light_and_dark", type: "png" });

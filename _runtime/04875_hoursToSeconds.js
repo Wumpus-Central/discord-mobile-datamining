@@ -1,0 +1,20 @@
+// === Module 4875: hoursToSeconds ===
+
+// Module 4875 (hoursToSeconds)
+import daysInWeek from "daysInWeek" /* 4764 */;
+import requiredArgs_mod from "requiredArgs" /* 4586 */;
+
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj = { default: requiredArgs };
+  let tmp3 = obj;
+} else {
+  tmp3 = requiredArgs;
+}
+requiredArgs = tmp3;
+
+export default function hoursToSeconds(arg0) {
+  requiredArgs.default(1, arguments);
+  return Math.floor(arg0 * daysInWeek.secondsInHour);
+};
+export default exports.default;

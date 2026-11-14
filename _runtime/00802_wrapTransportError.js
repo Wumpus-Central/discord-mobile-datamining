@@ -161,7 +161,7 @@ export function wrapTransportSend(send, arg1) {
                   closure_130_0 = undefined;
                   c6 = 1;
                   c7 = 1;
-                  return { value: "flexDirection", done: true };
+                  return { value: "Path", done: true };
                 }
               } else {
                 if (1 === tmp7) {

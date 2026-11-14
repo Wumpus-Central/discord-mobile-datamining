@@ -1,9 +1,7 @@
 // === Module 18066: ? ===
 
 // Module 18066
-const require = globalThis.__r;
+import registerAsset from "module_1119" /* 1119 */;
 
-const require = arg1;
-const dependencyMap = arg6;
 
-export const WebView = require("WebView").WebView;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "fcdf14841cd468de3f43704be16fa303", name: "no", type: "png" });

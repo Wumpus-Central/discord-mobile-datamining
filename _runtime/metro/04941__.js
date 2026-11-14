@@ -1,56 +1,28 @@
 // === Module 4941: ? ===
 
 // Module 4941
-import module_4526_mod from "module_4526" /* 4526 */;
-import _typeof_mod from "module_4522" /* 4522 */;
-import module_4670_mod from "module_4670" /* 4670 */;
-import module_4793_mod from "module_4793" /* 4793 */;
-import requiredArgs_mod from "requiredArgs" /* 4523 */;
+import module_4930_mod from "module_4930" /* 4930 */;
+import requiredArgs_mod from "requiredArgs" /* 4586 */;
 
-let module_4526 = module_4526_mod;
-if (!module_4526) {
-  const obj = { default: module_4526 };
+let module_4930 = module_4930_mod;
+if (!module_4930) {
+  const obj = { default: module_4930 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4526;
+  tmp3 = module_4930;
 }
-module_4526 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let module_4670 = module_4670_mod;
-if (!module_4670) {
-  const obj3 = { default: module_4670 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4670;
-}
-module_4670 = tmp7;
-let module_4793 = module_4793_mod;
-if (!module_4793) {
-  const obj4 = { default: module_4793 };
-  let tmp9 = obj4;
-} else {
-  tmp9 = module_4793;
-}
-module_4793 = tmp9;
+module_4930 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj5 = { default: requiredArgs };
-  let tmp11 = obj5;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp11 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp11;
+requiredArgs = tmp5;
 
-export default function setISODay(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  return module_4670.default(defaultResult1, module_4526.default(arg1) - module_4793.default(defaultResult1));
+export default function isThisHour(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4930.default(Date.now(), arg0);
 };
 export default exports.default;

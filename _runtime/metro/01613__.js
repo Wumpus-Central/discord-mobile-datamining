@@ -1,14 +1,9 @@
 // === Module 1613: ? ===
 
 // Module 1613
-import equalDefault from "equal" /* 1575 */;
 import noop from "module_19" /* 19 */;
 
+const context = noop.createContext("ltr");
+context.displayName = "LocaleDirContext";
 
-export function useDeepStableValue(current) {
-  const ref = noop.useRef(current);
-  if (!equalDefault(ref.current, current)) {
-    ref.current = current;
-  }
-  return ref.current;
-}
+export const LocaleDirContext = context;

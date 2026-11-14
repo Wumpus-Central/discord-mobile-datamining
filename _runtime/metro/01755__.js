@@ -1,17 +1,22 @@
 // === Module 1755: ? ===
 
 // Module 1755
-const require = globalThis.__r;
+import NativeWorklets from "NativeWorklets" /* 1712 */;
+import registerCustomSerializable from "registerCustomSerializable" /* 1719 */;
 
-for (const key10013 in require("normalizeAnimationKeyframes")) {
-  arg5[key10013] = require("normalizeAnimationKeyframes")[key10013];
-  continue;
-}
-for (const key10017 in require("normalizeDelay")) {
-  arg5[key10017] = require("normalizeDelay")[key10017];
-  continue;
-}
-for (const key10021 in require("normalizeCSSTransitionProperties")) {
-  arg5[key10021] = require("normalizeCSSTransitionProperties")[key10021];
-  continue;
+require = arg1;
+const dependencyMap = arg6;
+
+export function createShareable(arg0, __initData, arg2) {
+  let obj = arg2;
+  if (!arg2) {
+    obj = {};
+  }
+  const guestDecorator = obj.guestDecorator;
+  ({ hostDecorator, initSynchronously } = obj);
+  const WorkletsModule = NativeWorklets.WorkletsModule;
+  const serializable = registerCustomSerializable.createSerializable(__initData);
+  const tmp2 = !initSynchronously;
+  const serializable1 = registerCustomSerializable.createSerializable(hostDecorator);
+  return globalThis.__shareableGuestUnpacker(arg0, WorkletsModule.createShareable(arg0, serializable, !tmp2, serializable1, registerCustomSerializable.createSerializable(guestDecorator)), guestDecorator);
 }

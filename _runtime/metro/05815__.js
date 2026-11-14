@@ -1,21 +1,15 @@
 // === Module 5815: ? ===
 
 // Module 5815
-import _mod19 from "module_19" /* 19 */;
-import _mod5767 from "module_5767" /* 5767 */;
 
-_mod19.useCallback;
-
-export () => {
-  const recyclerViewContext = _mod5767.useRecyclerViewContext();
-  const obj2 = { getMappingKey: null };
-  items = [recyclerViewContext];
-  obj2.getMappingKey = useCallback((arg0, arg1) => {
-    let tmp = arg0;
-    if (recyclerViewContext) {
-      tmp = arg1;
-    }
-    return tmp;
-  }, items);
-  return obj2;
-}
+export default function _arrayLikeToArray(arg0, arg1) {
+  length = arg1;
+  if (tmp) {
+    length = arg0.length;
+  }
+  const ArrayResult = Array(length);
+  for (let num = 0; num < length; num = num + 1) {
+    ArrayResult[num] = arg0[num];
+  }
+  return ArrayResult;
+};

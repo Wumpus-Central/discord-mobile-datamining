@@ -33,8 +33,8 @@ function distanceToMatch(nodeType, fn) {
   }
   return num3;
 }
-function hookSetter(headers, arg1, arg2, arg3) {
-  closure_0 = headers;
+function hookSetter(_exports, arg1, arg2, arg3) {
+  closure_0 = _exports;
   closure_1 = arg1;
   let tmp = arg2;
   closure_2 = arg2;
@@ -43,7 +43,7 @@ function hookSetter(headers, arg1, arg2, arg3) {
     _window = window;
   }
   const _Object = _window.Object;
-  const ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(headers, arg1);
+  const ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(_exports, arg1);
   const _Object2 = _window.Object;
   if (!arg3) {
     const obj = {
@@ -73,7 +73,7 @@ function hookSetter(headers, arg1, arg2, arg3) {
     };
     tmp = obj;
   }
-  _Object2.defineProperty(headers, arg1, tmp);
+  _Object2.defineProperty(_exports, arg1, tmp);
   return () => {
     obj = closure_1_3;
     if (!closure_1_3) {
@@ -118,7 +118,7 @@ function hookSetter(headers, arg1, arg2, arg3) {
           let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(closure_1_0, closure_1_1);
           let _Object2 = window.Object;
           _Object2.defineProperty(closure_1_0, closure_1_1, obj);
-          return /* F82164 */ function() { ... };
+          return /* F83228 */ function() { ... };
         };
       };
     };
@@ -529,7 +529,8 @@ function initCanvasContextObserver(HTMLCanvasElement, arg1, arg2, arg3, arg4) {
     console.error("failed to patch HTMLCanvasElement.prototype.getContext");
   }
 }
-function patchGLPrototype(headers, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
+function patchGLPrototype(exports, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
+  let _exports = exports;
   closure_1 = arg1;
   closure_2 = arg2;
   closure_3 = arg3;
@@ -537,16 +538,16 @@ function patchGLPrototype(headers, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
   closure_5 = arg5;
   closure_6 = arg7;
   items = [];
-  const ownPropertyNames = Object.getOwnPropertyNames(headers);
+  const ownPropertyNames = Object.getOwnPropertyNames(exports);
   for (const item10017 of ownPropertyNames) {
     let tmp2 = (function _loop2(item10017) {
-      headers = item10017;
+      _exports = item10017;
       items = ["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"];
       if (items.includes(item10017)) {
         return 0;
       } else {
         try {
-          if (typeof headers[item10017] !== "function") {
+          if (typeof _exports[item10017] !== "function") {
             return 0;
           } else {
             items.push(patch(tmp3, item10017, (property) => function() {
@@ -577,7 +578,7 @@ function patchGLPrototype(headers, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
                   closure_2(this.canvas, obj);
                 }
           };
-          items.push(hookSetter(headers, tmp, obj));
+          items.push(hookSetter(_exports, tmp, obj));
         }
       }
     })(item10017);

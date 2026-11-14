@@ -1,11 +1,15 @@
 // === Module 1595: ? ===
 
 // Module 1595
-import NavigationFocusedRouteStateContext from "NavigationFocusedRouteStateContext" /* 1567 */;
+import NOT_INITIALIZED_ERROR from "NOT_INITIALIZED_ERROR" /* 1528 */;
 import noop from "module_19" /* 19 */;
 
 require = arg1;
 
-export function useStateForPath() {
-  return noop.useContext(NavigationFocusedRouteStateContext.NavigationFocusedRouteStateContext);
+export function useNavigationContainerRef() {
+  const ref = noop.useRef(null);
+  if (null == ref.current) {
+    ref.current = NOT_INITIALIZED_ERROR.createNavigationContainerRef();
+  }
+  return ref.current;
 }

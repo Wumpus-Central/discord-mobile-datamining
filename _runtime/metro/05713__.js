@@ -1,9 +1,14 @@
 // === Module 5713: ? ===
 
 // Module 5713
-import BottomSheetFooter from "BottomSheetFooter" /* 5714 */;
-import BottomSheetFooterContainer from "BottomSheetFooterContainer" /* 5716 */;
+import ComposedGestureName from "ComposedGestureName" /* 5660 */;
+import _mod5714 from "module_5714" /* 5714 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export const BottomSheetFooter = BottomSheetFooter.BottomSheetFooter;
-export const BottomSheetFooterContainer = BottomSheetFooterContainer.BottomSheetFooterContainer;
+export function useCompetingGestures() {
+  items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
+  return _mod5714.useComposedGesture.apply(items1);
+}

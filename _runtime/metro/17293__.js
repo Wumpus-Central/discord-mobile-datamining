@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/parent_tools/images", width: 76, height: 76, scales: [1], hash: "357b6ff4f5f31060d463e9e4858af437", name: "family_center_chat_check_icon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 288, height: 128, scales: [2, 3], hash: "eadd5a45fc81983d8eab2051527e663f", name: "img_security", type: "png" });

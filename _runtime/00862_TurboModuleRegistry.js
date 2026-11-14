@@ -64,8 +64,8 @@ obj.ReactNativeVersion = { version: reactNativeVersion };
 obj.TurboModuleRegistry = TurboModuleRegistry;
 obj.AppRegistry = AppRegistry;
 obj.ReactNative = {
-  requireNativeComponent(APNGStickerView) {
-    return get_ActivityIndicator.requireNativeComponent(APNGStickerView);
+  requireNativeComponent(DCDImageWithThumbhashPlaceholderView) {
+    return get_ActivityIndicator.requireNativeComponent(DCDImageWithThumbhashPlaceholderView);
   }
 };
 

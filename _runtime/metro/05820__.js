@@ -1,8 +1,11 @@
 // === Module 5820: ? ===
 
 // Module 5820
-import _mod17 from "module_17" /* 17 */;
 
-const StyleSheet = _mod17.StyleSheet;
-
-export const styles = StyleSheet.create({ container: {} });
+export default function _classCallCheck(arg0, arg1) {
+  if (!(arg0 instanceof arg1)) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Cannot call a class as a function");
+    throw typeError;
+  }
+};

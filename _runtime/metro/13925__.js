@@ -1,7 +1,15 @@
 // === Module 13925: ? ===
 
 // Module 13925
-import registerAsset from "module_1119" /* 1119 */;
+const obj = {
+  parse: {
+    prelude() {
+      return this.createSingleNodeList(this.SelectorList());
+    },
+    block() {
+      return this.Block(true);
+    }
+  }
+};
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "66946e5f24d9f7d485f69d93acc2bd06", name: "CloudDownloadIcon", type: "png" });
+export default obj;

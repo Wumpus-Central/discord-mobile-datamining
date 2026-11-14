@@ -1,18 +1,7 @@
 // === Module 16431: ? ===
 
 // Module 16431
-import _mod16424 from "module_16424" /* 16424 */;
+import registerAsset from "module_1119" /* 1119 */;
 
 
-export default (arg0, arg1) => {
-  try {
-    const tmp8 = new _mod16424(arg0, arg1);
-    let str = tmp8.range;
-    if (!str) {
-      str = "*";
-    }
-    return str;
-  } catch (err) {
-    return null;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/nitro_icons", width: 16, height: 16, scales: [2, 3], hash: "e31ee2ef368806b54cff2e8c81e8cd97", name: "img_nitro_icon_filled", type: "png" });

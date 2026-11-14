@@ -2,19 +2,15 @@
 
 // Module 8299
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import appendTransformPropsDefault from "appendTransformProps" /* 8205 */;
-import extractFontDefault from "extractFont" /* 8219 */;
-import _modDef8221 from "module_8221" /* 8221 */;
-import _modDef8296 from "module_8296" /* 8296 */;
 import _modDef8300 from "module_8300" /* 8300 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _modDef8302 from "module_8302" /* 8302 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const TextPath = fn;
+const FeBlend = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,93 +30,54 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_3 = ["children", "xlinkHref", "href", "startOffset", "method", "spacing", "side", "alignmentBaseline", "midLine"];
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class TextPath {
+class FeBlend {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = hasOwnProperty(this, TextPath);
-    items1 = [...items];
-    tmp2 = metroImportDefault;
-    obj = metroImportDefault(TextPath);
-    tmp3 = closure_6;
-    if (closure_9()) {
-      tmp5 = globalThis;
+    tmp = closure_3(this, FeBlend);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeBlend);
+    tmp3 = closure_4;
+    if (metroImportDefault()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const merged = Object.assign(matrix, TextPath(8213).pickNotNil(extractFontDefault(matrix, true)));
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(matrix);
-      }
-      const obj = TextPath(8213);
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(TextPath, _modDef8221);
+_inherits(FeBlend, _modDef8302);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    ({ children, href } = props);
-    if (undefined === href) {
-      href = props.xlinkHref;
-    }
-    const startOffset = props.startOffset;
-    let num = 0;
-    if (undefined !== startOffset) {
-      num = startOffset;
-    }
-    ({ method, spacing, side, alignmentBaseline, midLine } = props);
-    let match = href;
-    if (href) {
-      match = href.match(TextPath(8213).idPattern);
-    }
-    let tmp5 = match;
-    if (match) {
-      tmp5 = match[1];
-    }
-    if (tmp5) {
-      const withoutXYResult = TextPath(8212).withoutXY(self, tmp);
-      const _Object = Object;
-      const obj3 = { children };
-      const obj4 = { href: tmp5, startOffset: num, method, spacing, side, alignmentBaseline, midLine };
-      const merged = Object.assign(withoutXYResult, extractFontDefault(obj3, true), obj4);
-      withoutXYResult.ref = self.refMethod;
-      const obj5 = {};
-      const obj2 = TextPath(8212);
-      const merged1 = Object.assign(withoutXYResult);
-      return jsx(_modDef8300, {});
-    } else {
-      const _console = console;
-      console.warn(`Invalid \`href\` prop for \`TextPath\` element, expected a href like "#id", but got: "${href}"`);
-      const obj = { ref: self.refMethod, children };
-      return jsx(_modDef8296, { ref: self.refMethod, children });
-    }
-    tmp = _objectWithoutProperties(props, closure_3);
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeBlend(8301).extractFilter(this.props));
+    const obj2 = FeBlend(8301);
+    const merged1 = Object.assign(FeBlend(8301).extractIn(this.props));
+    const obj3 = FeBlend(8301);
+    const merged2 = Object.assign(FeBlend(8301).extractFeBlend(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(TextPath, items);
-importDefaultResultResult.displayName = "TextPath";
+const items = [entry];
+const importDefaultResultResult = _createClass(FeBlend, items);
+importDefaultResultResult.displayName = "FeBlend";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.mode = "normal";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

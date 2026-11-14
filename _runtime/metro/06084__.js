@@ -1,17 +1,19 @@
 // === Module 6084: ? ===
 
 // Module 6084
-import identity from "identity" /* 549 */;
-import _mod668 from "module_668" /* 668 */;
-import constant from "constant" /* 6085 */;
+import _mod6085 from "module_6085" /* 6085 */;
 
-if (_mod668) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod668(arg0, "toString", obj);
-  };
-} else {
-  fn = identity;
-}
 
-export default fn;
+export default function toInteger(arg0) {
+  const tmp = _mod6085(arg0);
+  const result = tmp % 1;
+  let num = 0;
+  if (tmp == tmp) {
+    let diff = tmp;
+    if (result) {
+      diff = tmp - result;
+    }
+    num = diff;
+  }
+  return num;
+};

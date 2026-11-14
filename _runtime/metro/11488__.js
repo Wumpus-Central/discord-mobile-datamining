@@ -2,7 +2,7 @@
 
 // Module 11488
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod11383 from "module_11383" /* 11383 */;
+import _mod11450 from "module_11450" /* 11450 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
@@ -44,12 +44,12 @@ if (!fn) {
     return tmp;
   };
 }
-class ZHHansMergeDateTimeRefiner {
+class FRMergeDateTimeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, ZHHansMergeDateTimeRefiner);
+    tmp = closure_0(this, FRMergeDateTimeRefiner);
     tmp2 = c2;
-    obj = c2(ZHHansMergeDateTimeRefiner);
+    obj = c2(FRMergeDateTimeRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -64,14 +64,15 @@ class ZHHansMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ZHHansMergeDateTimeRefiner;
-_inherits(ZHHansMergeDateTimeRefiner, fn(_mod11383).default);
+_classCallCheck = FRMergeDateTimeRefiner;
+_inherits(FRMergeDateTimeRefiner, fn(_mod11450).default);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    return /^\s*$/i;
+    const regExp = new RegExp("^\\s*(T|\u00E0|a|au|vers|de|,|-)?\\s*$");
+    return regExp;
   }
 };
 const items = [entry];
 
-export default _createClass(ZHHansMergeDateTimeRefiner, items);
+export default _createClass(FRMergeDateTimeRefiner, items);

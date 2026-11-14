@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/emojis/default_emojis", scales: [1], hash: "42fa967858ccf5cd0fc49ce9badfefd4", name: "DefaultEmojis.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRlbGxpZ2VuY2VfbGF5ZXIvc2VhcmNo", scales: [1], hash: "04fd0bdad009aecc2a5f316e70840fb7", name: "hi.messages.04fd0bdad009aecc2a5f316e70840fb7.compiled.messages", type: "jsona" });

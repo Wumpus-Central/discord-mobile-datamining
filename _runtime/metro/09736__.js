@@ -1,267 +1,561 @@
 // === Module 9736: ? ===
 
 // Module 9736
-import _mod9729 from "module_9729" /* 9729 */;
-import _mod9730 from "module_9730" /* 9730 */;
-import _mod9737 from "module_9737" /* 9737 */;
-import _mod9738 from "module_9738" /* 9738 */;
-import _mod9739 from "module_9739" /* 9739 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef9739 from "module_9739" /* 9739 */;
+import _modDef9740 from "module_9740" /* 9740 */;
+import _modDef9759 from "module_9759" /* 9759 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
+import emptyFunction_mod from "module_5357" /* 5357 */;
+import "module_5357";
 
-require = arg1;
-const dependencyMap = arg6;
-function addNonEnumerableProperty(arg0, arg1, value) {
+const Video = importDefault;
+function _isNativeReflectConstruct() {
   try {
-    const _Object = Object;
-    const obj = { value, writable: true, configurable: true };
-    Object.defineProperty(arg0, arg1, obj);
-  } catch (err) {
-    if (_mod9729.DEBUG_BUILD) {
-      const logger = _mod9730.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Failed to add non-enumerable property \"" + tmp2 + "\" to object", tmp);
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-  }
-}
-function markFunctionWrapped(arg0, arg1) {
-  try {
-    let prototype = arg1.prototype;
-    if (!prototype) {
-      prototype = {};
-    }
-    arg1.prototype = prototype;
-    arg0.prototype = prototype;
-    addNonEnumerableProperty(arg0, "__sentry_original__", arg1);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
   } catch (err) {
   }
 }
-function convertToPlainObject(type) {
-  if (obj.isError(type)) {
-    const error = { message: null, name: null, stack: null };
-    ({ message: obj6.message, name: obj6.name, stack: obj6.stack } = type);
-    if (typeof type === "object") {
-      if (null !== type) {
-        const obj2 = {};
-        let obj3 = obj2;
-        const keys = Object.keys();
-        if (keys !== undefined) {
-          obj3 = obj2;
-          while (keys[tmp] !== undefined) {
-            let _Object2 = Object;
-            let call2 = hasOwnProperty2.call;
-            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(type, tmp17))) {
-              continue;
-            } else {
-              obj2[tmp17] = type[tmp17];
-              continue;
-            }
-            continue;
-          }
-        }
-      }
-      const merged = Object.assign(obj3);
-      return error;
-    }
-    obj3 = {};
-  } else {
-    if (tmp2Result.isEvent(type)) {
-      const obj4 = { type: type.type, target: serializeEventTarget(type.target), currentTarget: serializeEventTarget(type.currentTarget) };
-      if (typeof type === "object") {
-        if (null !== type) {
-          const obj5 = {};
-          let obj7 = obj5;
-          const keys1 = Object.keys();
-          if (keys1 !== undefined) {
-            obj7 = obj5;
-            while (keys1[tmp] !== undefined) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(type, tmp8))) {
-                continue;
-              } else {
-                obj5[tmp8] = type[tmp8];
-                continue;
-              }
-              continue;
-            }
-          }
-        }
-        const merged1 = Object.assign(obj7);
-        let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
-        if (typeof globalThis.CustomEvent !== "undefined") {
-          isInstanceOfResult = _mod9737.isInstanceOf(type, globalThis.CustomEvent);
-          const tmp2Result2 = _mod9737;
-        }
-        if (isInstanceOfResult) {
-          obj4.detail = type.detail;
-        }
-        return obj4;
-      }
-      obj7 = {};
+_possibleConstructorReturnDefault;
+get_ActivityIndicator = fn(17);
+const StyleSheet = get_ActivityIndicator.StyleSheet;
+({ NativeModules: metroImportDefault, View: closure_8, Image: closure_9, Platform, findNodeHandle: closure_10, UIManager: closure_11, requireNativeComponent } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const base = StyleSheet.create({ base: { overflow: "hidden" } });
+class Video {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_3(this, Video);
+    items = [];
+    items[0] = global;
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Video);
+    tmp3 = closure_4;
+    if (closure_2_14()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      return type;
+      constructResult = obj.apply(self, items);
     }
-    tmp2Result = _mod9737;
-  }
-  obj = _mod9737;
-}
-function serializeEventTarget(arg0) {
-  try {
-    if (obj.isElement(arg0)) {
-      let htmlTreeAsStringResult = _mod9738.htmlTreeAsString(arg0);
-      const tmp2Result = _mod9738;
-    } else {
-      const _Object = Object;
-      const call = toString.call;
-      if (typeof call === "unknown") {
-        htmlTreeAsStringResult = toString();
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.seek = (seek) => {
+      if (isNaN(seek)) {
+        const _Error = Error;
+        const error = new Error("Specified time is not a number");
+        throw error;
       } else {
-        htmlTreeAsStringResult = call(arg0);
+        const obj = { seek };
+        closure_0.setNativeProps(obj);
       }
-    }
-    return htmlTreeAsStringResult;
-  } catch (err) {
-    return "<unknown>";
+    };
+    tmp3Result.presentFullscreenPlayer = () => {
+      closure_0.setNativeProps({ fullscreen: true });
+    };
+    tmp3Result.dismissFullscreenPlayer = () => {
+      closure_0.setNativeProps({ fullscreen: false });
+    };
+    closure_0 = undefined;
+    closure_0 = c2(async (arg0) => {
+      const _root = arg0;
+      c2 = 0;
+      c1 = 0;
+      return (async (arg0) => {
+        const VideoManager = closure_2_7.VideoManager;
+        await VideoManager.save(_root, closure_2_10(_root._root));
+        return value;
+      })();
+    });
+    tmp3Result.save = function(arg0) {
+      const self = this;
+      const apply = closure_0.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    };
+    tmp3Result.restoreUserInterfaceForPictureInPictureStopCompleted = (restoreUserInterfaceForPIPStopCompletionHandler) => {
+      closure_0.setNativeProps({ restoreUserInterfaceForPIPStopCompletionHandler });
+    };
+    tmp3Result._assignRoot = (_root) => {
+      closure_0._root = _root;
+    };
+    tmp3Result._hidePoster = () => {
+      if (closure_0.state.showPoster) {
+        closure_0.setState({ showPoster: false });
+      }
+    };
+    tmp3Result._onLoadStart = (nativeEvent) => {
+      if (closure_0.props.onLoadStart) {
+        const props = tmp.props;
+        props.onLoadStart(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onLoad = (nativeEvent) => {
+      if (closure_0.props.onLoad) {
+        const props = tmp.props;
+        props.onLoad(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onError = (nativeEvent) => {
+      if (closure_0.props.onError) {
+        const props = tmp.props;
+        props.onError(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onProgress = (nativeEvent) => {
+      if (closure_0.props.onProgress) {
+        const props = tmp.props;
+        props.onProgress(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onBandwidthUpdate = (nativeEvent) => {
+      if (closure_0.props.onBandwidthUpdate) {
+        const props = tmp.props;
+        props.onBandwidthUpdate(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onSeek = (nativeEvent) => {
+      if (closure_0.props.onSeek) {
+        const props = tmp.props;
+        props.onSeek(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onEnd = (nativeEvent) => {
+      if (closure_0.props.onEnd) {
+        const props = tmp.props;
+        props.onEnd(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onTimedMetadata = (nativeEvent) => {
+      if (closure_0.props.onTimedMetadata) {
+        const props = tmp.props;
+        props.onTimedMetadata(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onFullscreenPlayerWillPresent = (nativeEvent) => {
+      if (closure_0.props.onFullscreenPlayerWillPresent) {
+        const props = tmp.props;
+        const result = props.onFullscreenPlayerWillPresent(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onFullscreenPlayerDidPresent = (nativeEvent) => {
+      if (closure_0.props.onFullscreenPlayerDidPresent) {
+        const props = tmp.props;
+        const result = props.onFullscreenPlayerDidPresent(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onFullscreenPlayerWillDismiss = (nativeEvent) => {
+      if (closure_0.props.onFullscreenPlayerWillDismiss) {
+        const props = tmp.props;
+        const result = props.onFullscreenPlayerWillDismiss(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onFullscreenPlayerDidDismiss = (nativeEvent) => {
+      if (closure_0.props.onFullscreenPlayerDidDismiss) {
+        const props = tmp.props;
+        const result = props.onFullscreenPlayerDidDismiss(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onReadyForDisplay = (nativeEvent) => {
+      if (!closure_0.props.audioOnly) {
+        closure_0._hidePoster();
+      }
+      if (closure_0.props.onReadyForDisplay) {
+        const props = closure_0.props;
+        props.onReadyForDisplay(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onPlaybackStalled = (nativeEvent) => {
+      if (closure_0.props.onPlaybackStalled) {
+        const props = tmp.props;
+        props.onPlaybackStalled(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onPlaybackResume = (nativeEvent) => {
+      if (closure_0.props.onPlaybackResume) {
+        const props = tmp.props;
+        props.onPlaybackResume(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onPlaybackRateChange = (nativeEvent) => {
+      if (closure_0.props.onPlaybackRateChange) {
+        const props = tmp.props;
+        props.onPlaybackRateChange(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onExternalPlaybackChange = (nativeEvent) => {
+      if (closure_0.props.onExternalPlaybackChange) {
+        const props = tmp.props;
+        const result = props.onExternalPlaybackChange(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onAudioBecomingNoisy = () => {
+      if (closure_0.props.onAudioBecomingNoisy) {
+        const props = closure_0.props;
+        props.onAudioBecomingNoisy();
+      }
+    };
+    tmp3Result._onPictureInPictureStatusChanged = (nativeEvent) => {
+      if (closure_0.props.onPictureInPictureStatusChanged) {
+        const props = tmp.props;
+        const result = props.onPictureInPictureStatusChanged(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onRestoreUserInterfaceForPictureInPictureStop = (arg0) => {
+      if (closure_0.props.onRestoreUserInterfaceForPictureInPictureStop) {
+        const props = closure_0.props;
+        const result = props.onRestoreUserInterfaceForPictureInPictureStop();
+      }
+    };
+    tmp3Result._onAudioFocusChanged = (nativeEvent) => {
+      if (closure_0.props.onAudioFocusChanged) {
+        const props = tmp.props;
+        props.onAudioFocusChanged(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onBuffer = (nativeEvent) => {
+      if (closure_0.props.onBuffer) {
+        const props = tmp.props;
+        props.onBuffer(nativeEvent.nativeEvent);
+      }
+    };
+    tmp3Result._onGetLicense = (nativeEvent) => {
+      if (closure_0.props.drm) {
+        const _Function = Function;
+        if (closure_0.props.drm.getLicense instanceof Function) {
+          nativeEvent = nativeEvent.nativeEvent;
+          if (nativeEvent) {
+            if (nativeEvent.spcBase64) {
+              const drm = closure_0.props.drm;
+              const resolved = Promise.resolve(drm.getLicense(nativeEvent.spcBase64, nativeEvent.contentId, nativeEvent.licenseUrl));
+              resolved.then((result) => {
+                if (undefined !== result) {
+                  const VideoManager2 = closure_2_7.VideoManager;
+                  VideoManager2.setLicenseResult(result, closure_2_10(closure_1_0._root));
+                } else if (closure_2_7.VideoManager.setLicenseError) {
+                  const VideoManager = closure_2_7.VideoManager;
+                  VideoManager.setLicenseError("Empty license result", closure_2_10(closure_1_0._root));
+                }
+              }).catch((error) => {
+                if (closure_2_7.VideoManager.setLicenseError) {
+                  const VideoManager = tmp.VideoManager;
+                  VideoManager.setLicenseError(error, closure_2_10(closure_1_0._root));
+                }
+              });
+              const nextPromise = resolved.then((result) => {
+                if (undefined !== result) {
+                  const VideoManager2 = closure_2_7.VideoManager;
+                  VideoManager2.setLicenseResult(result, closure_2_10(closure_1_0._root));
+                } else if (closure_2_7.VideoManager.setLicenseError) {
+                  const VideoManager = closure_2_7.VideoManager;
+                  VideoManager.setLicenseError("Empty license result", closure_2_10(closure_1_0._root));
+                }
+              });
+            }
+          }
+          if (metroImportDefault.VideoManager.setLicenseError) {
+            let VideoManager = metroImportDefault.VideoManager;
+            VideoManager.setLicenseError("No spc received", refs(closure_0._root));
+          }
+        }
+      }
+    };
+    tmp3Result.getViewManagerConfig = (arg0) => {
+      if (getViewManagerConfig.getViewManagerConfig) {
+        let viewManagerConfig = getViewManagerConfig.getViewManagerConfig(arg0);
+      } else {
+        viewManagerConfig = getViewManagerConfig[arg0];
+      }
+      return viewManagerConfig;
+    };
+    tmp3Result.state = { showPoster: global.poster };
+    return tmp3Result;
   }
 }
-function _dropUndefinedKeys(arr, map) {
-  if ((function isPojo(arr) {
-    if (obj.isPlainObject(arr)) {
-      try {
-        const _Object = Object;
-        const name = Object.getPrototypeOf(arr).constructor.name;
-        let tmp3 = !name;
-        if (name) {
-          tmp3 = "Object" === tmp2;
-        }
-        return tmp3;
-      } catch (err) {
-        return true;
+_inherits(Video, fn(19).Component);
+const entry = {
+  key: "setNativeProps",
+  value: function setNativeProps(arg0) {
+    const self = this;
+    if (this._root) {
+      if (self._root.setNativeProps) {
+        const _root = self._root;
+        _root.setNativeProps(arg0);
       }
-    } else {
-      return false;
     }
-  })(arr)) {
-    value = map.get(arr);
-    if (undefined !== value) {
-      return value;
-    } else {
-      const obj = {};
-      const result = map.set(arr, obj);
-      let _Object = Object;
-      const ownPropertyNames = Object.getOwnPropertyNames(arr);
-      for (const item10030 of ownPropertyNames) {
-        if (undefined !== arg0[item10030]) {
-          obj[item10030] = _dropUndefinedKeys(arg0[item10030], arg1);
+    console.warn("Video component not ready for setNativeProps call");
+  }
+};
+let items = [
+  entry,
+  {
+    key: "toTypeString",
+    value: function toTypeString(toISOString) {
+      if ("object" === typeof toISOString) {
+        const _Date = Date;
+        if (toISOString instanceof Date) {
+          let toISOStringResult = toISOString.toISOString();
+        } else {
+          const _JSON = JSON;
+          toISOStringResult = JSON.stringify(toISOString);
         }
-        continue;
+        return toISOStringResult;
+      } else if ("undefined" === tmp) {
+        return "";
+      } else {
+        return toISOString.toString();
       }
+    }
+  },
+  {
+    key: "stringsOnlyObject",
+    value: function stringsOnlyObject(headers) {
+      const self = this;
+      const obj = {};
+      const keys = Object.keys(headers);
+      const item = keys.forEach((item) => {
+        obj[item] = self.toTypeString(headers[item]);
+      });
       return obj;
     }
-  } else {
-    const _Array = Array;
-    if (Array.isArray(arr)) {
-      const value2 = map.get(arr);
-      if (undefined !== value2) {
-        return value2;
-      } else {
-        items = [];
-        const result1 = map.set(arr, items);
-        const item = arr.forEach((item) => {
-          items.push(_dropUndefinedKeys(item, closure_0));
-        });
-        return items;
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const resizeMode = this.props.resizeMode;
+      const tmp3 = Video(81)(this.props.source) || {};
+      let str = tmp3.uri;
+      if (!str) {
+        str = "";
       }
-    } else {
-      return arr;
-    }
-  }
-}
-
-export { addNonEnumerableProperty };
-export { convertToPlainObject };
-export function dropUndefinedKeys(arr) {
-  return _dropUndefinedKeys(arr, new Map());
-}
-export function extractExceptionKeysForMessage(name) {
-  let num = maxValueLength;
-  if (maxValueLength === undefined) {
-    num = 40;
-  }
-  const keys = Object.keys(convertToPlainObject(name));
-  const sorted = keys.sort();
-  const first = keys[0];
-  if (first) {
-    if (first.length >= num) {
-      return _mod9739.truncate(first, num);
-    } else {
-      length = keys.length;
-      if (length > 0) {
-        const substr = keys.slice(0, length);
-        const joined = substr.join(", ");
-        while (joined.length > num) {
-          length = length - 1;
-        }
-        let truncateResult = joined;
-        if (length !== keys.length) {
-          truncateResult = _mod9739.truncate(joined, num);
-        }
-        return truncateResult;
+      let match = str;
+      if (str) {
+        match = str.match(/^\//);
       }
-      return "";
-    }
-  } else {
-    return "[object has no keys]";
-  }
-}
-export function fill(GLOBAL_OBJ, fetch, fn) {
-  if (fetch in GLOBAL_OBJ) {
-    const tmp6 = fn(GLOBAL_OBJ[fetch]);
-    if (typeof tmp6 === "function") {
-      markFunctionWrapped(tmp6, tmp5);
-    }
-    try {
-      GLOBAL_OBJ[fetch] = tmp6;
-    } catch (err) {
-      if (_mod9729.DEBUG_BUILD) {
-        const logger = _mod9730.logger;
+      let str2 = str;
+      if (match) {
         const _HermesInternal = HermesInternal;
-        logger.log("Failed to replace method \"" + tmp3 + "\" in object", tmp2);
+        str2 = "file://" + str;
       }
+      if (!str2) {
+        const _console = console;
+        console.warn("Trying to load empty source.");
+      }
+      let tmp9 = !str2;
+      if (str2) {
+        tmp9 = !str2.match(/^https?:/);
+      }
+      let tmp10 = !str2;
+      if (str2) {
+        tmp10 = !str2.match(/^(assets-library|ipod-library|file|content|ms-appx|ms-appdata):/);
+      }
+      const viewManagerConfig = self.getViewManagerConfig("RNVVideo");
+      if (resizeMode === Video(9737).stretch) {
+        let ScaleNone = viewManagerConfig.Constants.ScaleToFill;
+      } else if (resizeMode === Video(9737).contain) {
+        ScaleNone = viewManagerConfig.Constants.ScaleAspectFit;
+      } else if (resizeMode === Video(9737).cover) {
+        ScaleNone = viewManagerConfig.Constants.ScaleAspectFill;
+      } else {
+        ScaleNone = viewManagerConfig.Constants.ScaleNone;
+      }
+      const merged = Object.assign({}, self.props);
+      const obj = { style: null, resizeMode: ScaleNone, src: null, onVideoLoadStart: null, onVideoLoad: null, onVideoError: null, onVideoProgress: null, onVideoSeek: null, onVideoEnd: null, onVideoBuffer: null, onVideoBandwidthUpdate: null, onTimedMetadata: null, onVideoAudioBecomingNoisy: null, onVideoExternalPlaybackChange: null, onVideoFullscreenPlayerWillPresent: null, onVideoFullscreenPlayerDidPresent: null, onVideoFullscreenPlayerWillDismiss: null, onVideoFullscreenPlayerDidDismiss: null, onReadyForDisplay: null, onPlaybackStalled: null, onPlaybackResume: null, onPlaybackRateChange: null, onAudioFocusChanged: null, onAudioBecomingNoisy: null, onGetLicense: null, onPictureInPictureStatusChanged: null, onRestoreUserInterfaceForPictureInPictureStop: null };
+      items = [base.base, merged.style];
+      obj.style = items;
+      const obj2 = { uri: str2, isNetwork: !tmp9, isAsset: !tmp10, shouldCache: !tmp3.__packager_asset, type: null, mainVer: null, patchVer: null, requestHeaders: null };
+      let str5 = tmp3.type;
+      if (!str5) {
+        str5 = "";
+      }
+      obj2.type = str5;
+      obj2.mainVer = tmp3.mainVer || 0;
+      obj2.patchVer = tmp3.patchVer || 0;
+      if (tmp3.headers) {
+        let stringsOnlyObjectResult = self.stringsOnlyObject(tmp3.headers);
+      } else {
+        stringsOnlyObjectResult = {};
+      }
+      obj2.requestHeaders = stringsOnlyObjectResult;
+      obj.src = obj2;
+      ({ _onLoadStart: obj.onVideoLoadStart, _onLoad: obj.onVideoLoad, _onError: obj.onVideoError, _onProgress: obj.onVideoProgress, _onSeek: obj.onVideoSeek, _onEnd: obj.onVideoEnd, _onBuffer: obj.onVideoBuffer, _onBandwidthUpdate: obj.onVideoBandwidthUpdate, _onTimedMetadata: obj.onTimedMetadata, _onAudioBecomingNoisy: obj.onVideoAudioBecomingNoisy, _onExternalPlaybackChange: obj.onVideoExternalPlaybackChange, _onFullscreenPlayerWillPresent: obj.onVideoFullscreenPlayerWillPresent, _onFullscreenPlayerDidPresent: obj.onVideoFullscreenPlayerDidPresent, _onFullscreenPlayerWillDismiss: obj.onVideoFullscreenPlayerWillDismiss, _onFullscreenPlayerDidDismiss: obj.onVideoFullscreenPlayerDidDismiss, _onReadyForDisplay: obj.onReadyForDisplay, _onPlaybackStalled: obj.onPlaybackStalled, _onPlaybackResume: obj.onPlaybackResume, _onPlaybackRateChange: obj.onPlaybackRateChange, _onAudioFocusChanged: obj.onAudioFocusChanged, _onAudioBecomingNoisy: obj.onAudioBecomingNoisy } = self);
+      obj.onGetLicense = merged.drm && merged.drm.getLicense && self._onGetLicense;
+      ({ _onPictureInPictureStatusChanged: obj.onPictureInPictureStatusChanged, _onRestoreUserInterfaceForPictureInPictureStop: obj.onRestoreUserInterfaceForPictureInPictureStop } = self);
+      const merged1 = Object.assign(merged, obj);
+      const obj3 = {};
+      const merged2 = Object.assign(StyleSheet.absoluteFillObject);
+      obj3.resizeMode = self.props.posterResizeMode || "contain";
+      const obj4 = { style: merged.style, children: null };
+      const obj5 = { ref: self._assignRoot };
+      const merged3 = Object.assign(merged);
+      obj5.style = StyleSheet.absoluteFill;
+      const items1 = [application_id(closure_16, obj5), ];
+      let showPoster = self.state.showPoster;
+      if (showPoster) {
+        const obj6 = { style: obj3, source: null };
+        const obj7 = { uri: self.props.poster };
+        obj6.source = obj7;
+        showPoster = application_id(React6, obj6);
+      }
+      items1[1] = showPoster;
+      obj4.children = items1;
+      return state(React5, obj4);
     }
   }
-}
-export function getOriginalFunction(__sentry_original__) {
-  return __sentry_original__.__sentry_original__;
-}
-export { markFunctionWrapped };
-export function objectify(arg0) {
-  if (null == arg0 === true) {
-    const _String = String;
-    let string = new String(arg0);
-  } else {
-    let tmp = typeof arg0 === "symbol";
-    if (typeof arg0 !== "symbol") {
-      tmp = typeof arg0 === "bigint";
-    }
-    if (tmp === true) {
-      const _Object = Object;
-      string = Object(arg0);
-    } else {
-      string = arg0;
-      if (obj.isPrimitive(arg0) === true) {
-        string = new arg0.constructor(arg0);
-      }
-      obj = _mod9737;
-    }
-  }
-  return string;
-}
-export function urlEncode(arg0) {
-  const entries = Object.entries(arg0);
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
-  });
-  return mapped.join("&");
-}
+];
+const importDefaultResultResult = _createClass(Video, items);
+let obj = { filter: null, filterEnabled: null, src: null, seek: null, fullscreen: null, onVideoLoadStart: null, onVideoLoad: null, onVideoBuffer: null, onVideoError: null, onVideoProgress: null, onVideoBandwidthUpdate: null, onVideoSeek: null, onVideoEnd: null, onTimedMetadata: null, onVideoAudioBecomingNoisy: null, onVideoExternalPlaybackChange: null, onVideoFullscreenPlayerWillPresent: null, onVideoFullscreenPlayerDidPresent: null, onVideoFullscreenPlayerWillDismiss: null, onVideoFullscreenPlayerDidDismiss: null, source: null, drm: null, minLoadRetryCount: null, maxBitRate: null, resizeMode: null, poster: null, posterResizeMode: null, repeat: null, automaticallyWaitsToMinimizeStalling: null, allowsExternalPlayback: null, selectedAudioTrack: null, selectedVideoTrack: null, selectedTextTrack: null, textTracks: null, paused: null, muted: null, volume: null, bufferConfig: null, stereoPan: null, rate: null, pictureInPicture: null, playInBackground: null, preferredForwardBufferDuration: null, playWhenInactive: null, ignoreSilentSwitch: null, reportBandwidth: null, disableFocus: null, controls: null, audioOnly: null, currentTime: null, fullscreenAutorotate: null, fullscreenOrientation: null, progressUpdateInterval: null, useTextureView: null, hideShutterView: null, onLoadStart: null, onLoad: null, onBuffer: null, onError: null, onProgress: null, onBandwidthUpdate: null, onSeek: null, onEnd: null, onFullscreenPlayerWillPresent: null, onFullscreenPlayerDidPresent: null, onFullscreenPlayerWillDismiss: null, onFullscreenPlayerDidDismiss: null, onReadyForDisplay: null, onPlaybackStalled: null, onPlaybackResume: null, onPlaybackRateChange: null, onAudioFocusChanged: null, onAudioBecomingNoisy: null, onPictureInPictureStatusChanged: null, needsToRestoreUserInterfaceForPictureInPictureStop: null, onExternalPlaybackChange: null, scaleX: null, scaleY: null, translateX: null, translateY: null, rotation: null };
+let emptyFunction = emptyFunction_mod;
+let items1 = [_modDef9739.NONE, _modDef9739.INVERT, _modDef9739.MONOCHROME, _modDef9739.POSTERIZE, _modDef9739.FALSE, _modDef9739.MAXIMUMCOMPONENT, _modDef9739.MINIMUMCOMPONENT, _modDef9739.CHROME, _modDef9739.FADE, _modDef9739.INSTANT, _modDef9739.MONO, _modDef9739.NOIR, _modDef9739.PROCESS, _modDef9739.TONAL, _modDef9739.TRANSFER, _modDef9739.SEPIA];
+obj.filter = emptyFunction.oneOf(items1);
+obj.filterEnabled = emptyFunction.bool;
+obj.src = emptyFunction.object;
+let emptyFunction = emptyFunction_mod;
+const items2 = [emptyFunction.number, emptyFunction.object];
+obj.seek = emptyFunction.oneOfType(items2);
+obj.fullscreen = emptyFunction.bool;
+obj.onVideoLoadStart = emptyFunction.func;
+obj.onVideoLoad = emptyFunction.func;
+obj.onVideoBuffer = emptyFunction.func;
+obj.onVideoError = emptyFunction.func;
+obj.onVideoProgress = emptyFunction.func;
+obj.onVideoBandwidthUpdate = emptyFunction.func;
+obj.onVideoSeek = emptyFunction.func;
+obj.onVideoEnd = emptyFunction.func;
+obj.onTimedMetadata = emptyFunction.func;
+obj.onVideoAudioBecomingNoisy = emptyFunction.func;
+obj.onVideoExternalPlaybackChange = emptyFunction.func;
+obj.onVideoFullscreenPlayerWillPresent = emptyFunction.func;
+obj.onVideoFullscreenPlayerDidPresent = emptyFunction.func;
+obj.onVideoFullscreenPlayerWillDismiss = emptyFunction.func;
+obj.onVideoFullscreenPlayerDidDismiss = emptyFunction.func;
+let emptyFunction = emptyFunction_mod;
+const items3 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
+obj.source = emptyFunction.oneOfType(items3);
+let obj3 = { type: null, licenseServer: null, headers: null, base64Certificate: null, certificateUrl: null, getLicense: null };
+let emptyFunction = emptyFunction_mod;
+const items4 = [_modDef9740.CLEARKEY, _modDef9740.FAIRPLAY, _modDef9740.WIDEVINE, _modDef9740.PLAYREADY];
+obj3.type = emptyFunction.oneOf(items4);
+obj3.licenseServer = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
+obj3.headers = emptyFunction.shape({});
+obj3.base64Certificate = emptyFunction.bool;
+obj3.certificateUrl = emptyFunction.string;
+obj3.getLicense = emptyFunction.func;
+obj.drm = emptyFunction.shape(obj3);
+obj.minLoadRetryCount = emptyFunction.number;
+obj.maxBitRate = emptyFunction.number;
+obj.resizeMode = emptyFunction.string;
+obj.poster = emptyFunction.string;
+obj.posterResizeMode = fn(9741).ImagePropTypes.resizeMode;
+obj.repeat = emptyFunction.bool;
+obj.automaticallyWaitsToMinimizeStalling = emptyFunction.bool;
+obj.allowsExternalPlayback = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+let obj4 = { type: emptyFunction.string.isRequired, value: null };
+let emptyFunction = emptyFunction_mod;
+const items5 = [emptyFunction.string, emptyFunction.number];
+obj4.value = emptyFunction.oneOfType(items5);
+obj.selectedAudioTrack = emptyFunction.shape(obj4);
+let emptyFunction = emptyFunction_mod;
+let obj5 = { type: emptyFunction.string.isRequired, value: null };
+let emptyFunction = emptyFunction_mod;
+const items6 = [emptyFunction.string, emptyFunction.number];
+obj5.value = emptyFunction.oneOfType(items6);
+obj.selectedVideoTrack = emptyFunction.shape(obj5);
+let emptyFunction = emptyFunction_mod;
+let obj6 = { type: emptyFunction.string.isRequired, value: null };
+let emptyFunction = emptyFunction_mod;
+const items7 = [emptyFunction.string, emptyFunction.number];
+obj6.value = emptyFunction.oneOfType(items7);
+obj.selectedTextTrack = emptyFunction.shape(obj6);
+let emptyFunction = emptyFunction_mod;
+let obj7 = { title: emptyFunction.string, uri: emptyFunction.string.isRequired, type: null, language: null };
+let emptyFunction = emptyFunction_mod;
+const items8 = [_modDef9759.SRT, _modDef9759.TTML, _modDef9759.VTT];
+obj7.type = emptyFunction.oneOf(items8);
+obj7.language = emptyFunction.string.isRequired;
+obj.textTracks = emptyFunction.arrayOf(emptyFunction.shape(obj7));
+obj.paused = emptyFunction.bool;
+obj.muted = emptyFunction.bool;
+obj.volume = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+let obj2 = { uri: emptyFunction.string };
+obj.bufferConfig = emptyFunction.shape({ minBufferMs: emptyFunction.number, maxBufferMs: emptyFunction.number, bufferForPlaybackMs: emptyFunction.number, bufferForPlaybackAfterRebufferMs: emptyFunction.number });
+obj.stereoPan = emptyFunction.number;
+obj.rate = emptyFunction.number;
+obj.pictureInPicture = emptyFunction.bool;
+obj.playInBackground = emptyFunction.bool;
+obj.preferredForwardBufferDuration = emptyFunction.number;
+obj.playWhenInactive = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+obj.ignoreSilentSwitch = emptyFunction.oneOf(["ignore", "obey"]);
+obj.reportBandwidth = emptyFunction.bool;
+obj.disableFocus = emptyFunction.bool;
+obj.controls = emptyFunction.bool;
+obj.audioOnly = emptyFunction.bool;
+obj.currentTime = emptyFunction.number;
+obj.fullscreenAutorotate = emptyFunction.bool;
+let emptyFunction = emptyFunction_mod;
+obj.fullscreenOrientation = emptyFunction.oneOf(["all", "landscape", "portrait"]);
+obj.progressUpdateInterval = emptyFunction.number;
+obj.useTextureView = emptyFunction.bool;
+obj.hideShutterView = emptyFunction.bool;
+obj.onLoadStart = emptyFunction.func;
+obj.onLoad = emptyFunction.func;
+obj.onBuffer = emptyFunction.func;
+obj.onError = emptyFunction.func;
+obj.onProgress = emptyFunction.func;
+obj.onBandwidthUpdate = emptyFunction.func;
+obj.onSeek = emptyFunction.func;
+obj.onEnd = emptyFunction.func;
+obj.onFullscreenPlayerWillPresent = emptyFunction.func;
+obj.onFullscreenPlayerDidPresent = emptyFunction.func;
+obj.onFullscreenPlayerWillDismiss = emptyFunction.func;
+obj.onFullscreenPlayerDidDismiss = emptyFunction.func;
+obj.onReadyForDisplay = emptyFunction.func;
+obj.onPlaybackStalled = emptyFunction.func;
+obj.onPlaybackResume = emptyFunction.func;
+obj.onPlaybackRateChange = emptyFunction.func;
+obj.onAudioFocusChanged = emptyFunction.func;
+obj.onAudioBecomingNoisy = emptyFunction.func;
+obj.onPictureInPictureStatusChanged = emptyFunction.func;
+obj.needsToRestoreUserInterfaceForPictureInPictureStop = emptyFunction.func;
+obj.onExternalPlaybackChange = emptyFunction.func;
+obj.scaleX = emptyFunction.number;
+obj.scaleY = emptyFunction.number;
+obj.translateX = emptyFunction.number;
+obj.translateY = emptyFunction.number;
+obj.rotation = emptyFunction.number;
+let merged = Object.assign(fn(9741).ViewPropTypes);
+importDefaultResultResult.propTypes = obj;
+let closure_16 = requireNativeComponent("RNVVideo", importDefaultResultResult, { nativeOnly: { src: true, seek: true, fullscreen: true } });
+
+export default importDefaultResultResult;
+export const TextTrackType = _modDef9759;
+export const FilterType = _modDef9739;
+export const DRMType = _modDef9740;

@@ -1,46 +1,28 @@
 // === Module 4949: ? ===
 
 // Module 4949
-import module_4526_mod from "module_4526" /* 4526 */;
-import _typeof_mod from "module_4522" /* 4522 */;
-import requiredArgs_mod from "requiredArgs" /* 4523 */;
+import _typeof_mod from "module_4585" /* 4585 */;
+import requiredArgs_mod from "requiredArgs" /* 4586 */;
 
-let module_4526 = module_4526_mod;
-if (!module_4526) {
-  const obj = { default: module_4526 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4526;
-}
-module_4526 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp3 = _typeof;
 }
-_typeof = tmp5;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function setYear(date, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(date);
-  if (isNaN(defaultResult1.getTime())) {
-    const _Date = Date;
-    date = new Date(NaN);
-    return date;
-  } else {
-    defaultResult1.setFullYear(defaultResult2);
-    return defaultResult1;
-  }
-  defaultResult2 = module_4526.default(arg1);
+export default function isThursday(arg0) {
+  requiredArgs.default(1, arguments);
+  return 4 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

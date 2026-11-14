@@ -1,7 +1,18 @@
 // === Module 16885: ? ===
 
 // Module 16885
-import registerAsset from "module_1119" /* 1119 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [2, 3], hash: "ace4c89a8bfdf8264b175190674b9348", name: "ic_call_status_unknown_24px", type: "png" });
+export function getHostFromUrl(scriptURL) {
+  const match = scriptURL.match(/^(?:https?:\/\/)?(\[[^\]]+\]|[^/:\s]+)(?::\d+)?(?:[/?#]|$)/);
+  let tmp2;
+  if (match != null) {
+    tmp2 = match[1];
+  }
+  if (typeof tmp2 !== "string") {
+    const _Error = Error;
+    const error = new Error("Invalid URL - host not found");
+    throw error;
+  } else {
+    return tmp2;
+  }
+}

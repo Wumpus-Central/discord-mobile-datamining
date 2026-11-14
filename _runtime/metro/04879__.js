@@ -1,17 +1,17 @@
 // === Module 4879: ? ===
 
 // Module 4879
-import module_4869_mod from "module_4869" /* 4869 */;
-import requiredArgs_mod from "requiredArgs" /* 4523 */;
+import _typeof_mod from "module_4585" /* 4585 */;
+import requiredArgs_mod from "requiredArgs" /* 4586 */;
 
-let module_4869 = module_4869_mod;
-if (!module_4869) {
-  const obj = { default: module_4869 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4869;
+  tmp3 = _typeof;
 }
-module_4869 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisISOWeek(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4869.default(arg0, Date.now());
+export default function isAfter(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  return time > _typeof.default(arg1).getTime();
 };
 export default exports.default;

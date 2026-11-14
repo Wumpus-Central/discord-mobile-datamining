@@ -1,7 +1,33 @@
 // === Module 9871: ? ===
 
 // Module 9871
-import registerAsset from "module_1119" /* 1119 */;
+import setupIntegration from "module_9853" /* 9853 */;
 
+const weakMap = new WeakMap();
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 52, height: 46, scales: [2, 3], hash: "5dd914546a21d2f37ba762b2209e8ec8", name: "img_bundle_mobile", type: "png" });
+export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
+  name: "FunctionToString",
+  setupOnce() {
+    toString = Function.prototype.toString;
+    try {
+      const _Function = Function;
+      Function.prototype.toString = function() {
+        items = [...arguments];
+        const originalFunction = closure_1_0(9803).getOriginalFunction(this);
+        const obj = closure_1_0(9803);
+        let self = this;
+        if (set.has(obj2.getClient())) {
+          self = this;
+          if (undefined !== originalFunction) {
+            self = originalFunction;
+          }
+        }
+        return toString.apply(self, items);
+      };
+    } catch (err) {
+    }
+  },
+  setup(arg0) {
+    const result = weakMap.set(arg0, true);
+  }
+}));

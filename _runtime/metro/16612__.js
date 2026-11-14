@@ -1,30 +1,7 @@
 // === Module 16612: ? ===
 
 // Module 16612
-const require = globalThis.__r;
+import registerAsset from "module_1119" /* 1119 */;
 
-const require = arg1;
-const dependencyMap = arg6;
 
-export function getSupportedNumberingSystems(locale) {
-  _require = locale;
-  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
-  return numberingSystemNames.filter((item) => (function isSupportedNumberingSystem(item, arg1) {
-    let str = arg1;
-    if (undefined === arg1) {
-      str = "en";
-    }
-    try {
-      const concat = "".concat;
-      const combined = "".concat(str, "-u-nu-");
-      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
-      if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
-        if ("123" === memoizedNumberFormat.format(123)) {
-          return false;
-        }
-      }
-      return true;
-    } catch (err) {
-    }
-  })(item, closure_0));
-}
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "b452f17f7046013be582dffe125561c0", name: "StatusIdle", type: "png" });

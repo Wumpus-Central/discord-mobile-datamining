@@ -1,71 +1,30 @@
 // === Module 9815: ? ===
 
 // Module 9815
-import _mod9757 from "module_9757" /* 9757 */;
-import _mod9817 from "module_9817" /* 9817 */;
-import setupIntegration from "module_9786" /* 9786 */;
+import _mod9798 from "module_9798" /* 9798 */;
+import _mod9799 from "module_9799" /* 9799 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+export function getMainCarrier() {
+  const GLOBAL_OBJ = _mod9798.GLOBAL_OBJ;
+  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
+  GLOBAL_OBJ.__SENTRY__ = tmp3;
+  tmp3.version = tmp3.version || _mod9799.SDK_VERSION;
+  const tmp4 = tmp3.version || _mod9799.SDK_VERSION;
+  tmp3[_mod9799.SDK_VERSION] = tmp3[_mod9799.SDK_VERSION] || {};
+  return _mod9798.GLOBAL_OBJ;
+}
+export function getSentryCarrier(__SENTRY__) {
+  const tmp = __SENTRY__.__SENTRY__ || {};
+  __SENTRY__.__SENTRY__ = tmp;
+  let SDK_VERSION = tmp.version;
+  if (!SDK_VERSION) {
+    SDK_VERSION = _mod9799.SDK_VERSION;
   }
-  let handled;
-  let CONSOLE_LEVELS = obj.levels;
-  if (!CONSOLE_LEVELS) {
-    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
-  }
-  handled = obj.handled;
-  return {
-    name: "CaptureConsole",
-    setup(arg0) {
-      closure_0 = arg0;
-      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
-        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
-          ({ args, level } = arg0);
-          let hasItem = _mod9757.getClient() === args;
-          if (hasItem) {
-            hasItem = CONSOLE_LEVELS.includes(level);
-          }
-          if (hasItem) {
-            closure_2 = handled;
-            let obj2 = { level: _mod9817.severityLevelFromString(level), extra: null };
-            const obj3 = { arguments: args };
-            obj2.extra = obj3;
-            const tmpResult = _mod9817;
-            _mod9757.withScope((addEventProcessor) => {
-              addEventProcessor.addEventProcessor((arg0) => {
-                arg0.logger = "console";
-                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
-                return arg0;
-              });
-              if ("assert" !== level) {
-                const found = args.find((item) => item instanceof Error);
-                if (found) {
-                  args(9778).captureException(found, obj2);
-                  const tmp14Result = args(9778);
-                } else {
-                  const tmp14Result2 = args(9739);
-                  const safeJoinResult = args(9739).safeJoin(args, " ");
-                  args(9778).captureMessage(safeJoinResult, obj2);
-                  const obj4 = args(9778);
-                }
-              } else if (!args[0]) {
-                const obj = args(9739);
-                const _HermesInternal = HermesInternal;
-                const combined = "Assertion failed: " + args(9739).safeJoin(args.slice(1), " ") || "console.assert";
-                addEventProcessor.setExtra("arguments", args.slice(1));
-                obj2 = args(9778);
-                obj2.captureMessage(combined, obj2);
-                const tmp4 = args(9739).safeJoin(args.slice(1), " ") || "console.assert";
-              }
-            });
-            const tmpResult2 = _mod9757;
-          }
-        });
-        let tmpResult = CONSOLE_LEVELS(handled[2]);
-      }
-    }
-  };
-});
+  tmp.version = SDK_VERSION;
+  const tmp4 = tmp[_mod9799.SDK_VERSION] || {};
+  tmp[_mod9799.SDK_VERSION] = tmp4;
+  return tmp4;
+}

@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2JmX2RlYWxz", scales: [1], hash: "e0e38815a5dc0f8d272cf2fd3fe8c28d", name: "lt.messages.e0e38815a5dc0f8d272cf2fd3fe8c28d.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/youtube_3pp", scales: [1], hash: "b232dc8b1c4206b9d3d075b332eb50ce", name: "Youtube3PP.compiled.messages", type: "jsona" });

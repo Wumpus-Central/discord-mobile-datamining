@@ -226,13 +226,13 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
             if ("transaction" === type.type) {
               str = "transaction";
             }
-            const obj3 = { category: `sentry.${str}`, event_id: null, level: null, message: null };
-            ({ event_id: obj2.event_id, level: obj2.level } = type);
-            const tmpResult = obj2(681);
-            obj3.message = obj2(681).getEventDescription(type);
+            obj2 = { category: `sentry.${str}`, event_id: null, level: null, message: null };
+            ({ event_id: obj3.event_id, level: obj3.level } = type);
+            const tmpResult = tmp(681);
+            obj2.message = tmp(681).getEventDescription(type);
             const obj4 = { event: type };
-            tmpResult.addBreadcrumb(obj3, obj4);
-            const tmpResult2 = obj2(681);
+            tmpResult.addBreadcrumb(obj2, obj4);
+            const tmpResult2 = tmp(681);
           }
           obj = obj2(681);
         });

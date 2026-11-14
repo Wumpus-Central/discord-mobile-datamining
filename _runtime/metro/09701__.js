@@ -1,17 +1,7 @@
 // === Module 9701: ? ===
 
 // Module 9701
-const require = globalThis.__r;
+import registerAsset from "module_1119" /* 1119 */;
 
-for (const key10013 in require("enhancedFetch")) {
-  arg5[key10013] = require("enhancedFetch")[key10013];
-  continue;
-}
-for (const key10017 in require("fillProductsWithAdditionalData")) {
-  arg5[key10017] = require("fillProductsWithAdditionalData")[key10017];
-  continue;
-}
-for (const key10021 in require("RNIapIos")) {
-  arg5[key10021] = require("RNIapIos")[key10021];
-  continue;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 278.5, height: 48, scales: [2, 3], hash: "fd5849efd39a217c9ef72fb828af8485", name: "img_nitro_tier_0_activated_light", type: "png" });

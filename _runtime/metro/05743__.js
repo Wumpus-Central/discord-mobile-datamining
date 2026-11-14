@@ -1,52 +1,123 @@
 // === Module 5743: ? ===
 
 // Module 5743
-import ErrorMessages from "ErrorMessages" /* 5745 */;
-import FlashList from "FlashList" /* 5746 */;
-import _mod5766 from "module_5766" /* 5766 */;
-import _mod5767 from "module_5767" /* 5767 */;
-import _mod5805 from "module_5805" /* 5805 */;
-import RenderTargetOptions from "RenderTargetOptions" /* 5806 */;
-import _modDef5807 from "module_5807" /* 5807 */;
-import _mod5808 from "module_5808" /* 5808 */;
-import Cancellable from "Cancellable" /* 5809 */;
-import JSFPSMonitor from "JSFPSMonitor" /* 5810 */;
-import _mod5812 from "module_5812" /* 5812 */;
-import runScrollBenchmark from "runScrollBenchmark" /* 5813 */;
-import _mod5814 from "module_5814" /* 5814 */;
-import _mod5815 from "module_5815" /* 5815 */;
-import _modDef5816 from "module_5816" /* 5816 */;
-import LayoutCommitObserver from "LayoutCommitObserver" /* 5817 */;
-import get_ActivityIndicator from "module_5744" /* 5744 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef5741 from "module_5741" /* 5741 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-if (get_ActivityIndicator.isNewArch()) {
-  exports.FlashList = FlashList.FlashList;
-  exports.FlashListRef = _mod5805.FlashListRef;
-  exports.FlashListProps = RenderTargetOptions.FlashListProps;
-  exports.ListRenderItem = RenderTargetOptions.ListRenderItem;
-  exports.ListRenderItemInfo = RenderTargetOptions.ListRenderItemInfo;
-  exports.RenderTarget = RenderTargetOptions.RenderTarget;
-  exports.RenderTargetOptions = RenderTargetOptions.RenderTargetOptions;
-  exports.AnimatedFlashList = _modDef5807;
-  exports.useBenchmark = _mod5808.useBenchmark;
-  exports.BenchmarkParams = _mod5808.BenchmarkParams;
-  exports.BenchmarkResult = _mod5808.BenchmarkResult;
-  exports.useDataMultiplier = _mod5812.useDataMultiplier;
-  exports.useFlatListBenchmark = runScrollBenchmark.useFlatListBenchmark;
-  exports.FlatListBenchmarkParams = runScrollBenchmark.FlatListBenchmarkParams;
-  exports.useLayoutState = _mod5766.useLayoutState;
-  exports.useRecyclingState = _mod5814.useRecyclingState;
-  exports.useMappingHelper = _mod5815.useMappingHelper;
-  exports.JSFPSMonitor = JSFPSMonitor.JSFPSMonitor;
-  exports.JSFPSResult = JSFPSMonitor.JSFPSResult;
-  exports.autoScroll = Cancellable.autoScroll;
-  exports.Cancellable = Cancellable.Cancellable;
-  exports.ViewToken = _modDef5816;
-  exports.useFlashListContext = _mod5767.useFlashListContext;
-  exports.LayoutCommitObserver = LayoutCommitObserver.LayoutCommitObserver;
-  exports.LayoutCommitObserverProps = LayoutCommitObserver.LayoutCommitObserverProps;
-} else {
-  const _Error = Error;
-  const error = new Error(ErrorMessages.ErrorMessages.flashListV2OnlySupportsNewArchitecture);
-  throw error;
+const TouchableOpacity = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
 }
+let closure_3 = ["style"];
+_possibleConstructorReturnDefault;
+get_ActivityIndicator = fn(17);
+({ Animated: closure_8, Easing: closure_9, StyleSheet: closure_10, View: closure_11 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+class TouchableOpacity {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = hasOwnProperty(this, TouchableOpacity);
+    items1 = [...items];
+    tmp2 = metroImportDefault;
+    obj = metroImportDefault(TouchableOpacity);
+    tmp3 = closure_6;
+    if (closure_13()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.getChildStyleOpacityWithDefault = () => {
+      const tmp = refs.flatten(closure_0.props.style) || {};
+      let num = 1;
+      if (null != tmp.opacity) {
+        const opacity = tmp.opacity;
+        num = opacity.valueOf();
+      }
+      return num;
+    };
+    value = new closure_8.Value(tmp3Result.getChildStyleOpacityWithDefault());
+    tmp3Result.opacity = value;
+    tmp3Result.setOpacityTo = (toValue, duration) => {
+      const obj = { toValue, duration, easing: React6.inOut(React6.quad), useNativeDriver: null };
+      let flag = closure_0.props.useNativeAnimations;
+      if (flag == null) {
+        flag = true;
+      }
+      obj.useNativeDriver = flag;
+      React5.timing(closure_0.opacity, obj).start();
+      const timingResult = React5.timing(closure_0.opacity, obj);
+    };
+    tmp3Result.onStateChange = (arg0, arg1) => {
+      if (arg1 === TouchableOpacity(5741).TOUCHABLE_STATE.BEGAN) {
+        closure_0.setOpacityTo(closure_0.props.activeOpacity, 0);
+      } else {
+        if (!tmp3) {
+          closure_0.setOpacityTo(closure_0.getChildStyleOpacityWithDefault(), 150);
+        }
+        tmp3 = arg1 !== TouchableOpacity(5741).TOUCHABLE_STATE.UNDETERMINED && arg1 !== TouchableOpacity(5741).TOUCHABLE_STATE.MOVED_OUTSIDE;
+      }
+    };
+    return tmp3Result;
+  }
+}
+_inherits(TouchableOpacity, fn(19).Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    let style = props.style;
+    if (undefined === style) {
+      style = {};
+    }
+    const obj = {};
+    const tmp = _objectWithoutProperties(props, closure_3);
+    const merged = Object.assign(tmp);
+    items = [style, { opacity: self.opacity }];
+    obj.style = items;
+    obj.onStateChange = self.onStateChange;
+    if (self.props.children) {
+      let children = self.props.children;
+    } else {
+      children = <closure_1_11 />;
+    }
+    obj.children = children;
+    return jsx(_modDef5741, {});
+  }
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(TouchableOpacity, items);
+let obj = {};
+let merged = Object.assign(_modDef5741.defaultProps);
+obj.activeOpacity = 0.2;
+importDefaultResultResult.defaultProps = obj;
+
+export default importDefaultResultResult;

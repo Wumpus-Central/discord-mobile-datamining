@@ -15,10 +15,10 @@ export function setRuntimeConfigProvider(arg0) {
     global = arg0;
   }
 }
-export function get(APNGDecorationView, arg1) {
-  closure_0 = APNGDecorationView;
+export function get(AccessibilityFocusView, arg1) {
+  closure_0 = AccessibilityFocusView;
   closure_1 = arg1;
-  customBubblingEventTypesAll.register(APNGDecorationView, () => {
+  customBubblingEventTypesAll.register(AccessibilityFocusView, () => {
     let tmpResult;
     if (global != null) {
       tmpResult = tmp(closure_0);
@@ -63,7 +63,7 @@ export function get(APNGDecorationView, arg1) {
     }
     return viewConfig1;
   });
-  return APNGDecorationView;
+  return AccessibilityFocusView;
 }
 export function getWithFallback_DEPRECATED(framebus, arg1) {
   if (null == global) {

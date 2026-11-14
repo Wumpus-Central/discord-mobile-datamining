@@ -1,7 +1,26 @@
 // === Module 12225: ? ===
 
 // Module 12225
-import registerAsset from "module_1119" /* 1119 */;
+import _mod12226 from "module_12226" /* 12226 */;
 
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+const sourceShape = fn(_mod12226);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d36bc1b1c0c4b7686eb847b7455190cc", name: "EducationIcon", type: "png" });
+export default function default_1() {
+  return sourceShape.default();
+};
+export default exports.default;

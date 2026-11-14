@@ -1,9 +1,12 @@
 // === Module 5828: ? ===
 
 // Module 5828
-import LegacyBaseButton from "LegacyBaseButton" /* 5535 */;
+import PlatformConfig2 from "PlatformConfig" /* 5826 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export const TouchableOpacity = LegacyBaseButton.TouchableOpacity;
-export const TouchableHighlight = LegacyBaseButton.TouchableHighlight;
-export const TouchableWithoutFeedback = LegacyBaseButton.TouchableWithoutFeedback;
+export function getInvertedTransformStyle(horizontal) {
+  const PlatformConfig = PlatformConfig2.PlatformConfig;
+  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
+}

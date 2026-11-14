@@ -1,33 +1,21 @@
 // === Module 5744: ? ===
 
 // Module 5744
-import _mod17 from "module_17" /* 17 */;
+import _modDef5741 from "module_5741" /* 5741 */;
+import noop from "module_19" /* 19 */;
 
-const Platform = _mod17.Platform;
+const jsx = fn(21).jsx;
 
-export function isNewArch() {
-  if (undefined !== c1) {
-    return c1;
-  } else {
-    try {
-      let prop;
-      if (global != null) {
-        prop = global.nativeFabricUIManager;
-      }
-      let flag = Boolean(prop);
-      if (global != null) {
-        const __turboModuleProxy = global.__turboModuleProxy;
-      }
-      if (!flag) {
-        flag = Boolean(__turboModuleProxy);
-      }
-      if (!flag) {
-        flag = false;
-      }
-      c1 = flag;
-      return c1;
-    } catch (err) {
-      c1 = true;
-    }
+export default function _default(delayLongPress) {
+  let num = delayLongPress.delayLongPress;
+  if (num === undefined) {
+    num = 600;
   }
-}
+  let extraButtonProps = delayLongPress.extraButtonProps;
+  if (extraButtonProps === undefined) {
+    extraButtonProps = { rippleColor: "transparent", exclusive: true };
+  }
+  const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
+  const merged1 = Object.assign(merged);
+  return jsx(_modDef5741, { delayLongPress: num, extraButtonProps });
+};

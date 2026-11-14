@@ -1,5 +1,9 @@
 // === Module 1467: ? ===
 
 // Module 1467
+import _mod1468 from "module_1468" /* 1468 */;
 
-export default ["Float16Array", "Float32Array", "Float64Array", "Int8Array", "Int16Array", "Int32Array", "Uint8Array", "Uint8ClampedArray", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array"];
+
+export default function isTypedArray(arg0) {
+  return _mod1468(arg0);
+};

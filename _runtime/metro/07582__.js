@@ -1,7 +1,18 @@
 // === Module 7582: ? ===
 
 // Module 7582
-import registerAsset from "module_1119" /* 1119 */;
+import CardAnimationContext from "CardAnimationContext" /* 7576 */;
+import noop from "module_19" /* 19 */;
 
+require = arg1;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "2f67acde4c60441cfd2d6684d11b6d76", name: "ic_close_circle_24px", type: "png" });
+export function useCardAnimation() {
+  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
+    throw error;
+  } else {
+    return context;
+  }
+}

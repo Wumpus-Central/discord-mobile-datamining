@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/BlushIcon", width: 60, height: 60, scales: [2, 3], hash: "def0b6d35103453cf4894471df6b84ad", name: "BlushIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 32, scales: [1, 2, 3], hash: "4f3507228f76eea58da6db7d8807bb01", name: "ic_file_small_ps", type: "png" });

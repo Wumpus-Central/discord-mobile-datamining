@@ -1,54 +1,30 @@
 // === Module 1584: ? ===
 
 // Module 1584
+import NavigationBuilderContext from "NavigationBuilderContext" /* 1532 */;
 import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = arg1;
 
-export function useOnGetState(getState) {
-  getState = getState.getState;
-  const getStateListeners = getState.getStateListeners;
-  let addKeyedListener;
-  let callback;
-  addKeyedListener = addKeyedListener.useContext(getState(getStateListeners[1]).NavigationBuilderContext).addKeyedListener;
-  const context = addKeyedListener.useContext(getState(getStateListeners[2]).NavigationRouteContext);
-  let str = "root";
-  if (context) {
-    str = context.key;
-  }
-  items = [getState, getStateListeners];
-  callback = obj.useCallback(() => {
+export function useOnRouteFocus(router) {
+  router = router.router;
+  const getState = router.getState;
+  const key = router.key;
+  const setState = router.setState;
+  const onRouteFocus = noop.useContext(NavigationBuilderContext.NavigationBuilderContext).onRouteFocus;
+  items = [getState, onRouteFocus, router, setState, key];
+  return noop.useCallback((arg0) => {
     const tmp = getState();
-    const routes = tmp.routes;
-    const mapped = routes.map((state) => {
-      let tmpResult;
-      if (getStateListeners[state.key] != null) {
-        tmpResult = tmp();
-      }
-      let tmp3 = state;
-      if (state.state !== tmpResult) {
-        const obj = {};
-        const merged = Object.assign(state);
-        obj.state = tmpResult;
-        tmp3 = obj;
-      }
-      return tmp3;
-    });
-    let tmp3 = tmp;
-    if (!obj.isArrayEqual(tmp.routes, mapped)) {
-      const obj2 = {};
-      let merged = Object.assign(tmp);
-      obj2.routes = mapped;
-      tmp3 = obj2;
+    const stateForRouteFocus = router.getStateForRouteFocus(tmp, arg0);
+    if (stateForRouteFocus !== tmp) {
+      setState(stateForRouteFocus);
     }
-    return tmp3;
+    let tmp6 = undefined !== onRouteFocus;
+    if (tmp6) {
+      tmp6 = undefined !== key;
+    }
+    if (tmp6) {
+      onRouteFocus(key);
+    }
   }, items);
-  const items1 = [addKeyedListener, callback, str];
-  const effect = obj.useEffect(() => {
-    let tmpResult;
-    if (addKeyedListener != null) {
-      tmpResult = tmp("getState", str, callback);
-    }
-    return tmpResult;
-  }, items1);
 }

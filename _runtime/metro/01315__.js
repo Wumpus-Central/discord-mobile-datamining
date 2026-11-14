@@ -2,4 +2,4 @@
 
 // Module 1315
 
-export default URIError;
+export default RangeError;

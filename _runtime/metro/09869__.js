@@ -1,7 +1,16 @@
 // === Module 9869: ? ===
 
 // Module 9869
-import registerAsset from "module_1119" /* 1119 */;
+import _mod9868 from "module_9868" /* 9868 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "9bb60b01d276e09f678fc61b96446517", name: "img_boost_subheader_error_mobile", type: "png" });
+export function getTraceMetaTags() {
+  const entries = Object.entries(_mod9868.getTraceData());
+  const mapped = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
+  });
+  return mapped.join("\n");
+}

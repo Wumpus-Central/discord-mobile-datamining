@@ -1,7 +1,30 @@
 // === Module 13864: ? ===
 
 // Module 13864
-import registerAsset from "module_1119" /* 1119 */;
+import _mod13833 from "module_13833" /* 13833 */;
 
+function clone(obj) {
+  obj = {};
+  for (const key10006 in arg0) {
+    let arr = arg0[key10006];
+    if (!arr) {
+      obj[key10006] = arr;
+      continue;
+    } else {
+      let _Array = Array;
+      if (!Array.isArray(arr)) {
+        if (!(arr instanceof _mod13833)) {
+          let _Object = Object;
+          let mapped = arr;
+          if (arr.constructor === Object) {
+            mapped = clone(arr);
+          }
+        }
+      }
+      mapped = arr.map(clone);
+    }
+  }
+  return obj;
+}
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/conjure/home/images", width: 640, height: 360, scales: [1], hash: "1959740f5a804a73d247c5716c4838a6", name: "conjure-home-aram-widget", type: "svg" });
+export default clone;

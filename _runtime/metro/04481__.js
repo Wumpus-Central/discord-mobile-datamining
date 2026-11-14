@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9oZXhhZ29uX2NhbXBhaWdu", scales: [1], hash: "b8c3173f360de9f59dab67b3614bf3fc", name: "lt.messages.b8c3173f360de9f59dab67b3614bf3fc.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/promotions/third_party/macaron", scales: [1], hash: "a7545cdfe95ea5258ea978b753aaaa14", name: "MacaronPhase1.compiled.messages", type: "jsona" });

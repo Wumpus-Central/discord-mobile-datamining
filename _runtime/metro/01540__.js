@@ -1,29 +1,50 @@
 // === Module 1540: ? ===
 
 // Module 1540
-import context12 from "context1" /* 1541 */;
-import NavigationContext from "NavigationContext" /* 1543 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-let context = noop.createContext(undefined);
+const require = arg1;
 
-export const NavigationRouteContext = context;
-export const NamedRouteContextListContext = noop.createContext(undefined);
-export function NavigationProvider(route) {
-  route = route.route;
-  ({ navigation, children } = route);
-  context = noop.useContext(context12.IsFocusedContext);
-  let tmp5 = null != context;
-  const context1 = noop.useContext(context12.FocusedRouteKeyContext);
-  if (tmp5) {
-    tmp5 = !context;
+export function createNavigatorFactory(AccessibleNativeStackNavigator) {
+  let Navigator = AccessibleNativeStackNavigator;
+  let str = AccessibleNativeStackNavigator.displayName;
+  if (str == null) {
+    str = AccessibleNativeStackNavigator.name;
   }
-  let tmp6 = !tmp5;
-  if (!tmp5) {
-    tmp6 = context1 === route.key;
+  if (str == null) {
+    str = "Navigator";
   }
-  const obj = { value: route, children: jsx(NavigationContext.NavigationContext.Provider, { value: navigation, children: jsx(context12.IsFocusedContext.Provider, { value: tmp6, children }) }) };
-  return <context.Provider value={route}>{jsx(NavigationContext.NavigationContext.Provider, { value: navigation, children: jsx(context12.IsFocusedContext.Provider, { value: tmp6, children }) })}</context.Provider>;
+  return function createNavigator(config) {
+    Navigator = config;
+    if (null != config) {
+      const obj3 = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group, config };
+      Navigator = Navigator(str[1]).createComponentForStaticNavigation(obj3, Navigator);
+      const obj4 = {
+        config,
+        with(arg0) {
+            config = arg0;
+            class WithComponent {
+              constructor() {
+                obj = { Navigator: closure_1 };
+                return closure_2.createElement(closure_0, obj);
+              }
+            }
+            WithComponent.displayName = "" + Navigator + "With";
+            return {
+              config,
+              getComponent() {
+                return WithComponent;
+              }
+            };
+          },
+        getComponent() {
+            return closure_1;
+          }
+      };
+      return obj4;
+    } else {
+      const obj = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group };
+      return obj;
+    }
+  };
 }

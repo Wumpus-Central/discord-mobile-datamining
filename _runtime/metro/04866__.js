@@ -1,29 +1,50 @@
 // === Module 4866: ? ===
 
 // Module 4866
-import _typeof_mod from "module_4522" /* 4522 */;
-import requiredArgs_mod from "requiredArgs" /* 4523 */;
+import startOfWeek_mod from "startOfWeek" /* 4744 */;
+import startOfWeekYear_mod from "startOfWeekYear" /* 4867 */;
+import _typeof_mod from "module_4585" /* 4585 */;
+import requiredArgs_mod from "requiredArgs" /* 4586 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfWeek;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+startOfWeek = tmp3;
+let startOfWeekYear = startOfWeekYear_mod;
+if (!startOfWeekYear) {
+  const obj2 = { default: startOfWeekYear };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = startOfWeekYear;
 }
-requiredArgs = tmp5;
+startOfWeekYear = tmp5;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj3 = { default: _typeof };
+  let tmp7 = obj3;
+} else {
+  tmp7 = _typeof;
+}
+_typeof = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function isPast(date) {
+export default function getWeek(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  const time = _typeof.default(date).getTime();
-  return time < Date.now();
+  const defaultResult1 = _typeof.default(arg0);
+  const time = startOfWeek.default(defaultResult1, arg1).getTime();
+  const defaultResult2 = startOfWeek.default(defaultResult1, arg1);
+  return Math.round((time - startOfWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
 };
 export default exports.default;

@@ -2,14 +2,14 @@
 
 // Module 627 (arrayMap)
 
-export default function arrayMap(f, fn) {
+export default function arrayMap(arg0, fn) {
   let num = 0;
-  if (null != f) {
-    num = f.length;
+  if (null != arg0) {
+    num = arg0.length;
   }
   const ArrayResult = Array(num);
   for (let num2 = 0; num2 < num; num2 = num2 + 1) {
-    ArrayResult[num2] = fn(f[num2], num2, f);
+    ArrayResult[num2] = fn(arg0[num2], num2, arg0);
   }
   return ArrayResult;
 };

@@ -2,14 +2,14 @@
 
 // Module 648 (arraySome)
 
-export default function arraySome(f, fn) {
+export default function arraySome(arg0, fn) {
   let num = 0;
-  if (null != f) {
-    num = f.length;
+  if (null != arg0) {
+    num = arg0.length;
   }
   let num2 = 0;
   if (0 < num) {
-    while (!fn(f[num2], num2, f)) {
+    while (!fn(arg0[num2], num2, arg0)) {
       num2 = num2 + 1;
     }
     return true;

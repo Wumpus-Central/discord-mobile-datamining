@@ -4,4 +4,4 @@
 import registerAsset from "module_1119" /* 1119 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hexagon_campaign", scales: [1], hash: "43885154023dd96b16fe6091aeca270f", name: "HexagonCampaign.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvY29kZV9ibHVycGxlL2JsdWVwcmludA==", scales: [1], hash: "5397ccf2967d330c0aeb3484b96ab038", name: "hi.messages.5397ccf2967d330c0aeb3484b96ab038.compiled.messages", type: "jsona" });
