@@ -1,10 +1,10 @@
-// === Module 5964: getURLForApplication ===
+// === Module 5968: getURLForApplication ===
 
-// Module 5964 (getURLForApplication)
+// Module 5968 (getURLForApplication)
 import URLUtilsDefault from "URLUtils" /* 1381 */;
 import _slicedToArray from "module_32" /* 32 */;
-import TestModeStore from "TestModeStore" /* 5965 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5966 */;
+import TestModeStore from "TestModeStore" /* 5969 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5970 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getURLForApplication.tsx");

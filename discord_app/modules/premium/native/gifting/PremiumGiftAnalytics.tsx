@@ -1,11 +1,11 @@
-// === Module 11842: PremiumGiftAnalytics ===
+// === Module 15251: PremiumGiftAnalytics ===
 
-// Module 11842 (PremiumGiftAnalytics)
+// Module 15251 (PremiumGiftAnalytics)
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 9684 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 9714 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 9697 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 9727 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

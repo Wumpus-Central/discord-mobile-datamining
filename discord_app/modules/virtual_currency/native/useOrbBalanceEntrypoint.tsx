@@ -1,18 +1,18 @@
-// === Module 17526: useOrbBalanceEntrypoint ===
+// === Module 17563: useOrbBalanceEntrypoint ===
 
-// Module 17526 (useOrbBalanceEntrypoint)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
-import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 15948 */;
-import VirtualCurrencyAnalyticsUtil from "VirtualCurrencyAnalyticsUtil" /* 17528 */;
-import OrbchievementsExperiment from "OrbchievementsExperiment" /* 17539 */;
+// Module 17563 (useOrbBalanceEntrypoint)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7947 */;
+import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 15986 */;
+import VirtualCurrencyAnalyticsUtil from "VirtualCurrencyAnalyticsUtil" /* 17565 */;
+import OrbchievementsExperiment from "OrbchievementsExperiment" /* 17576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(17527).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_5 = fn(17564).ORB_WALLET_ACTION_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/useOrbBalanceEntrypoint.tsx");
 
@@ -168,10 +168,10 @@ export function useOrbBalanceEntrypoint(location) {
   const tmp3 = require("OrbchievementsExperiment").useIsOrbchievementsMobileEnabled({ location: location.location }) && obj.useVirtualCurrencyMobileEnabled().enabled;
   _require = tmp3;
   let obj2 = require("OrbchievementsExperiment");
-  const orbChallengeUnreadState = tmp(17531).useOrbChallengeUnreadState({ enabled: tmp3 });
+  const orbChallengeUnreadState = tmp(17568).useOrbChallengeUnreadState({ enabled: tmp3 });
   items = [tmp3];
   ({ hasUnreadUpdate, notificationType } = orbChallengeUnreadState);
-  const tmpResult = tmp(17531);
+  const tmpResult = tmp(17568);
   return {
     isOrbchievementsEnabled: tmp3,
     hasUnreadUpdate,

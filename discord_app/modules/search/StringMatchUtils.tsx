@@ -1,6 +1,6 @@
-// === Module 17225: StringMatchUtils ===
+// === Module 17262: StringMatchUtils ===
 
-// Module 17225 (StringMatchUtils)
+// Module 17262 (StringMatchUtils)
 import size from "module_2" /* 2 */;
 
 function calculateJaroWinklerDistance(formatted, item) {

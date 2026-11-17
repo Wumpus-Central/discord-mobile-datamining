@@ -1,9 +1,9 @@
-// === Module 7347: releaseConjurePreviewFrame ===
+// === Module 7357: releaseConjurePreviewFrame ===
 
-// Module 7347 (releaseConjurePreviewFrame)
-import conjurePreviewSurface from "conjurePreviewSurface" /* 7339 */;
-import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 7348 */;
-import leaveFrame from "leaveFrame" /* 7349 */;
+// Module 7357 (releaseConjurePreviewFrame)
+import conjurePreviewSurface from "conjurePreviewSurface" /* 7349 */;
+import frameRunsInBackgroundDefault from "frameRunsInBackground" /* 7358 */;
+import leaveFrame from "leaveFrame" /* 7359 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1194 */;
 
 require = fn;

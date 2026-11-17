@@ -1,8 +1,8 @@
-// === Module 13371: useActivityShelfItems ===
+// === Module 13528: useActivityShelfItems ===
 
-// Module 13371 (useActivityShelfItems)
+// Module 13528 (useActivityShelfItems)
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5966 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5970 */;
 
 const require = fn;
 const size = fn(2);
@@ -16,11 +16,11 @@ export default function useActivityShelfItems(enableFilter) {
   items = [DeveloperActivityShelfStore];
   const filter = flag(504).useStateFromStoresObject(items, () => ({ filter: filter.getFilter() })).filter;
   const obj = flag(504);
-  const activityShelfData = flag(13372).useActivityShelfData(enableFilter.guildId);
-  const tmp2 = filter(13373)(activityShelfData);
+  const activityShelfData = flag(13529).useActivityShelfData(enableFilter.guildId);
+  const tmp2 = filter(13530)(activityShelfData);
   dependencyMap = tmp2;
-  const obj2 = flag(13372);
-  const developerActivityShelfItems = flag(13374).useDeveloperActivityShelfItems();
+  const obj2 = flag(13529);
+  const developerActivityShelfItems = flag(13531).useDeveloperActivityShelfItems();
   const items1 = [developerActivityShelfItems, flag, filter, tmp2];
   return developerActivityShelfItems.useMemo(() => {
     function shouldKeepShelfItem(application) {

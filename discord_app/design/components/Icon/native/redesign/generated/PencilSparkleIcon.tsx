@@ -1,9 +1,9 @@
-// === Module 11855: PencilSparkleIcon ===
+// === Module 12336: PencilSparkleIcon ===
 
-// Module 11855 (PencilSparkleIcon)
+// Module 12336 (PencilSparkleIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod11856 from "module_11856" /* 11856 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod12337 from "module_12337" /* 12337 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function PencilSparkleIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11856, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12337, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

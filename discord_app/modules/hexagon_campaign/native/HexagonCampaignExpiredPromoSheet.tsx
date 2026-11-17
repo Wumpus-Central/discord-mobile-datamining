@@ -1,8 +1,8 @@
-// === Module 19846: HexagonCampaignExpiredPromoSheet ===
+// === Module 19891: HexagonCampaignExpiredPromoSheet ===
 
-// Module 19846 (HexagonCampaignExpiredPromoSheet)
-import _modDef4516 from "module_4516" /* 4516 */;
-import Text_Text from "Text/Text" /* 5919 */;
+// Module 19891 (HexagonCampaignExpiredPromoSheet)
+import _modDef4520 from "module_4520" /* 4520 */;
+import Text_Text from "Text/Text" /* 5923 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignExpiredPromoSheet.tsx");
@@ -185,16 +185,16 @@ export default function HexagonCampaignExpiredPromoSheet(markAsDismissed) {
     callback(ContentDismissActionType.USER_DISMISS);
   }, items2);
   noop = noop.useCallback(() => {
-    const obj = closure_0(17085);
-    const result = obj.trackHexagonCampaignContentClicked({ content: closure_0(6957).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8834).QuestContentCTA.LEARN_MORE });
-    const obj2 = { content: closure_0(6957).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8834).QuestContentCTA.LEARN_MORE };
-    const result1 = closure_0(17104).openHexagonCampaignLearnMore();
+    const obj = closure_0(17120);
+    const result = obj.trackHexagonCampaignContentClicked({ content: closure_0(6965).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8845).QuestContentCTA.LEARN_MORE });
+    const obj2 = { content: closure_0(6965).QuestContent.AD_PERK_MODAL, questContentCTA: closure_0(8845).QuestContentCTA.LEARN_MORE };
+    const result1 = closure_0(17140).openHexagonCampaignLearnMore();
   }, []);
   let obj3 = { illustration: jsx(require("BundleAbstractUI").BundleAbstractUI, { accessible: false }), title: null, description: null, onDismiss: null, actions: null };
   let intl = require("util").intl;
-  obj3.title = intl.string(_modDef4516.bZTNDw);
+  obj3.title = intl.string(_modDef4520.bZTNDw);
   const intl2 = require("util").intl;
-  obj3.description = intl2.format(_modDef4516.uL0TOA, {
+  obj3.description = intl2.format(_modDef4520.uL0TOA, {
     learnMoreHook(children, key) {
       return jsx(Text_Text.Text, { variant: "heading-md/medium", color: "text-link", accessibilityRole: "link", onPress, children }, key);
     }

@@ -1,9 +1,9 @@
-// === Module 14459: ? ===
+// === Module 13324: ? ===
 
-// Module 14459
+// Module 13324
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_wearable_09_mechWings.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/b671fb212481e511e935dd760a6c18c271fe0f5cc216ba06037df67d93f11c43.webp";
-export const metadata = { fileBytes: 42682 };
+export default "https://cdn.discordapp.com/assets/content/8ecaf8d5340231cd9a94e6e48d20fcaad58e934f67735afb9957a1ef0294dc75.webp";
+export const metadata = { fileBytes: 124976 };

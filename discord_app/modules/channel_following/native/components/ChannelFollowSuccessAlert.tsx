@@ -1,11 +1,11 @@
-// === Module 11967: ChannelFollowSuccessAlert ===
+// === Module 12412: ChannelFollowSuccessAlert ===
 
-// Module 11967 (ChannelFollowSuccessAlert)
+// Module 12412 (ChannelFollowSuccessAlert)
 import applyDefault from "apply" /* 12 */;
 import util from "util" /* 1113 */;
-import useThemeDefault from "useTheme" /* 5537 */;
-import FastImageDefault from "FastImage" /* 6010 */;
-import common_AlertDefault from "common/Alert" /* 6330 */;
+import useThemeDefault from "useTheme" /* 5541 */;
+import FastImageDefault from "FastImage" /* 6014 */;
+import common_AlertDefault from "common/Alert" /* 6338 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,8 +13,8 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let items = [fn(11968), fn(11969), fn(11970)];
-let items1 = [fn(11971), fn(11972), fn(11973)];
+let items = [fn(12413), fn(12414), fn(12415)];
+let items1 = [fn(12416), fn(12417), fn(12418)];
 const items2 = [
   () => {
     const intl = util.intl;
@@ -57,7 +57,7 @@ const items2 = [
     return intl.string(util.t.jgC65t);
   }
 ];
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_8 = createStyles.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" }, image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx");

@@ -1,7 +1,7 @@
-// === Module 19859: updateTheme ===
+// === Module 19904: updateTheme ===
 
-// Module 19859 (updateTheme)
-import NativeThemeModuleDefault from "NativeThemeModule" /* 16891 */;
+// Module 19904 (updateTheme)
+import NativeThemeModuleDefault from "NativeThemeModule" /* 16926 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/themes/native/updateTheme.tsx");

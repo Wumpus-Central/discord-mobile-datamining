@@ -1,25 +1,25 @@
-// === Module 16906: VoiceNotificationManager ===
+// === Module 16941: VoiceNotificationManager ===
 
-// Module 16906 (VoiceNotificationManager)
+// Module 16941 (VoiceNotificationManager)
 import nativeDefault from "native" /* 575 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 8857 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 13080 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 8868 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 11740 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5158 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildStore from "GuildStore" /* 5177 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6804 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import GuildStore from "GuildStore" /* 5181 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
-import RelationshipStore from "RelationshipStore" /* 5248 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6068 */;
+import RelationshipStore from "RelationshipStore" /* 5252 */;
 import UserStore from "UserStore" /* 1388 */;
 import LifecycleManager from "LifecycleManager" /* 2123 */;
 
 let obj2 = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, processColor } = get_ActivityIndicator);
-const GuildRecord = fn(5173);
+const GuildRecord = fn(5177);
 ({ getGuildAcronym: metroImportDefault, getGuildIconURL: closure_8 } = GuildRecord);
 const InputModes = fn(1072).InputModes;
 let closure_17 = processColor(nativeDefault.unsafe_rawColors.BRAND_500);
@@ -29,7 +29,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "s", connectionState: "container", selfMute: false, deafened: "configure", isPushToTalk: null, embeddedActivity: "\u{1FAF8}", isStreaming: true };
+    obj.state = { channelId: "s", connectionState: "content", selfMute: false, deafened: "i\u00E7ilebilir su", isPushToTalk: "i\u00E7me suyu", embeddedActivity: "i\u015Faret", isStreaming: "musluk" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
       state = RTCConnectionStore.getState();
@@ -148,15 +148,15 @@ class VoiceNotificationManager {
               name = application.name;
             }
             const _HermesInternal = HermesInternal;
-            str2 = " - " + tmp16(10859)(name);
-            const tmp16Result = tmp16(10859);
+            str2 = " - " + tmp16(14144)(name);
+            const tmp16Result = tmp16(14144);
           }
           obj = { title: null, content: null, priority: null, contentAction: null, auxiliaryActions: null, type: null, usesGateway: true, icon: null, color: null, acquireWifiLock: null, hangUpAction: null, callIcon: null };
           const obj3 = RTCConnectionUtilsDefault;
-          obj.title = obj2(5944).computeChannelName(channel, UserStore, RelationshipStore);
+          obj.title = obj2(5948).computeChannelName(channel, UserStore, RelationshipStore);
           const _HermesInternal2 = HermesInternal;
           obj.content = "" + obj3.getStatus(connectionState).connectionStatusText + str2;
-          obj.priority = obj2(8859).ServiceNotificationPriority.HIGH;
+          obj.priority = obj2(8870).ServiceNotificationPriority.HIGH;
           obj.contentAction = updateServiceHandlerResult.createAction(channel, "SelectVoiceChannel", undefined);
           const intl = obj2(1113).intl;
           const string = intl.string;
@@ -177,21 +177,21 @@ class VoiceNotificationManager {
           }
           items[1] = updateServiceHandlerResult.createAction(channel, "ToggleDeafen", string2Result);
           obj.auxiliaryActions = items;
-          let intl3 = tmp23(8859).ServiceNotificationType;
+          let intl3 = tmp23(8870).ServiceNotificationType;
           obj.type = isStreaming ? intl3.SCREEN_SHARE : intl3.VOICE_CALL;
           obj.icon = stringResult1;
           obj.color = callIcon;
-          const obj5 = obj2(5944);
-          obj.acquireWifiLock = obj2(16907).shouldAcquireCallWifiLock();
+          const obj5 = obj2(5948);
+          obj.acquireWifiLock = obj2(16942).shouldAcquireCallWifiLock();
           intl3 = tmp23(1113).intl;
           stringResult1 = intl3.string(obj2(1113).t["6vrfgt"]);
           obj.hangUpAction = updateServiceHandlerResult.createAction(channel, "Disconnect", stringResult1);
           callIcon = updateServiceHandlerResult.getCallIcon(channel);
           obj.callIcon = callIcon;
-          tmp16 = tmp16(8857);
+          tmp16 = tmp16(8868);
           updateServiceHandler = tmp16.updateServiceHandler;
           updateServiceHandlerResult = updateServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId, obj);
-          const tmp23Result = obj2(16907);
+          const tmp23Result = obj2(16942);
         } else {
           obj2 = ForegroundServiceManagerDefault;
           obj2.removeServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId);
@@ -225,8 +225,8 @@ prototype["getCallIcon"] = function getCallIcon(channel) {
   if (null != guild) {
     let channelIconURL = React5(guild, 128);
   } else {
-    channelIconURL = obj2(15561).getChannelIconURL(channel, 128);
-    const obj = obj2(15561);
+    channelIconURL = obj2(15595).getChannelIconURL(channel, 128);
+    const obj = obj2(15595);
   }
   let tmp6 = channelIconURL;
   if (typeof channelIconURL === "number") {
@@ -247,7 +247,7 @@ prototype["getCallIcon"] = function getCallIcon(channel) {
 };
 obj2 = Object.create(VoiceNotificationManager.prototype);
 obj2.voiceServiceHandlerId = 9000;
-obj2.state = { channelId: "s", connectionState: "container", selfMute: false, deafened: "configure", isPushToTalk: null, embeddedActivity: "\u{1FAF8}", isStreaming: true };
+obj2.state = { channelId: "s", connectionState: "content", selfMute: false, deafened: "i\u00E7ilebilir su", isPushToTalk: "i\u00E7me suyu", embeddedActivity: "i\u015Faret", isStreaming: "musluk" };
 obj2.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
   state = RTCConnectionStore.getState();
@@ -366,15 +366,15 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
           name = application.name;
         }
         const _HermesInternal = HermesInternal;
-        str2 = " - " + tmp16(10859)(name);
-        const tmp16Result = tmp16(10859);
+        str2 = " - " + tmp16(14144)(name);
+        const tmp16Result = tmp16(14144);
       }
       obj = { title: null, content: null, priority: null, contentAction: null, auxiliaryActions: null, type: null, usesGateway: true, icon: null, color: null, acquireWifiLock: null, hangUpAction: null, callIcon: null };
       const obj3 = RTCConnectionUtilsDefault;
-      obj.title = obj2(5944).computeChannelName(channel, UserStore, RelationshipStore);
+      obj.title = obj2(5948).computeChannelName(channel, UserStore, RelationshipStore);
       const _HermesInternal2 = HermesInternal;
       obj.content = "" + obj3.getStatus(connectionState).connectionStatusText + str2;
-      obj.priority = obj2(8859).ServiceNotificationPriority.HIGH;
+      obj.priority = obj2(8870).ServiceNotificationPriority.HIGH;
       obj.contentAction = updateServiceHandlerResult.createAction(channel, "SelectVoiceChannel", undefined);
       const intl = obj2(1113).intl;
       const string = intl.string;
@@ -395,21 +395,21 @@ obj2.handleUpdate = function handleUpdate(connectionState) {
       }
       items[1] = updateServiceHandlerResult.createAction(channel, "ToggleDeafen", string2Result);
       obj.auxiliaryActions = items;
-      let intl3 = tmp23(8859).ServiceNotificationType;
+      let intl3 = tmp23(8870).ServiceNotificationType;
       obj.type = isStreaming ? intl3.SCREEN_SHARE : intl3.VOICE_CALL;
       obj.icon = stringResult1;
       obj.color = callIcon;
-      const obj5 = obj2(5944);
-      obj.acquireWifiLock = obj2(16907).shouldAcquireCallWifiLock();
+      const obj5 = obj2(5948);
+      obj.acquireWifiLock = obj2(16942).shouldAcquireCallWifiLock();
       intl3 = tmp23(1113).intl;
       stringResult1 = intl3.string(obj2(1113).t["6vrfgt"]);
       obj.hangUpAction = updateServiceHandlerResult.createAction(channel, "Disconnect", stringResult1);
       callIcon = updateServiceHandlerResult.getCallIcon(channel);
       obj.callIcon = callIcon;
-      tmp16 = tmp16(8857);
+      tmp16 = tmp16(8868);
       updateServiceHandler = tmp16.updateServiceHandler;
       updateServiceHandlerResult = updateServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId, obj);
-      const tmp23Result = obj2(16907);
+      const tmp23Result = obj2(16942);
     } else {
       obj2 = ForegroundServiceManagerDefault;
       obj2.removeServiceHandler(updateServiceHandlerResult.voiceServiceHandlerId);

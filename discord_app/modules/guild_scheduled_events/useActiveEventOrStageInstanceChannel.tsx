@@ -1,9 +1,9 @@
-// === Module 18906: useActiveEventOrStageInstanceChannel ===
+// === Module 18947: useActiveEventOrStageInstanceChannel ===
 
-// Module 18906 (useActiveEventOrStageInstanceChannel)
-import useGuildScheduledEvents from "useGuildScheduledEvents" /* 8426 */;
-import useLiveStageChannelsDefault from "useLiveStageChannels" /* 18905 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
+// Module 18947 (useActiveEventOrStageInstanceChannel)
+import useGuildScheduledEvents from "useGuildScheduledEvents" /* 8437 */;
+import useLiveStageChannelsDefault from "useLiveStageChannels" /* 18946 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
 
 require = fn;
 const size = fn(2);

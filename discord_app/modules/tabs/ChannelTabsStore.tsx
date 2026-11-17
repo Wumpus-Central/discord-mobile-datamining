@@ -1,16 +1,16 @@
-// === Module 10275: ChannelTabsStore ===
+// === Module 10701: ChannelTabsStore ===
 
-// Module 10275 (ChannelTabsStore)
+// Module 10701 (ChannelTabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1360 */;
-import TabsExperimentDefault from "TabsExperiment" /* 10276 */;
-import ChannelTabRoutes from "ChannelTabRoutes" /* 10278 */;
+import TabsExperimentDefault from "TabsExperiment" /* 10702 */;
+import ChannelTabRoutes from "ChannelTabRoutes" /* 10704 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 5343 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 5347 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5213 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5343 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -218,7 +218,7 @@ function handleChannelDelete(channel) {
     return false;
   }
 }
-const isStaticChannelRoute = fn(5162).isStaticChannelRoute;
+const isStaticChannelRoute = fn(5166).isStaticChannelRoute;
 let tabs = [];
 let c11 = null;
 let closure_12 = [];
@@ -686,7 +686,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
               }
             });
           }
-          obj4 = obj3(10277);
+          obj4 = obj3(10703);
         }
         return tmp7;
       }
@@ -748,7 +748,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                   }
                 });
               }
-              obj4 = obj3(10277);
+              obj4 = obj3(10703);
             }
             return tmp7;
           }
@@ -807,11 +807,11 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         return tmp6;
       } else {
         const obj4 = { pathname: DefaultRouteStore.defaultRoute };
-        const routeTabForLocation = set(10278).getRouteTabForLocation(obj4);
-        const obj5 = set(10278);
+        const routeTabForLocation = set(10704).getRouteTabForLocation(obj4);
+        const obj5 = set(10704);
         const tmp13 = set;
         const _window = window;
-        const routeTabForLocation1 = set(10278).getRouteTabForLocation(window.location);
+        const routeTabForLocation1 = set(10704).getRouteTabForLocation(window.location);
         if (tmp10 != routeTabForLocation1) {
           const obj6 = { kind: "route" };
           let merged = Object.assign(routeTabForLocation1);
@@ -888,7 +888,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
                 });
                 flag3 = true;
               }
-              tmp13Result = tmp13(10277);
+              tmp13Result = tmp13(10703);
             } else {
               const currentUser1 = UserStore.getCurrentUser();
               let isStaffResult1;
@@ -903,7 +903,7 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
         items1[HermesBuiltin.arraySpread(items1, 0)] = tmp46;
         tmp10 = activateTab(tmp46.id);
         flag3 = true;
-        const obj7 = set(10278);
+        const obj7 = set(10704);
       }
     } else {
       return false;

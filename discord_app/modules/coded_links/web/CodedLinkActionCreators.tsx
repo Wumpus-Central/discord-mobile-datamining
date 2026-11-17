@@ -1,6 +1,6 @@
-// === Module 12380: CodedLinkActionCreators ===
+// === Module 12584: CodedLinkActionCreators ===
 
-// Module 12380 (CodedLinkActionCreators)
+// Module 12584 (CodedLinkActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ConferenceModeConstants from "ConferenceModeConstants" /* 1079 */;
 import size from "module_2" /* 2 */;

@@ -1,24 +1,24 @@
-// === Module 18318: PasskeyUpsellPromoSheet ===
+// === Module 18359: PasskeyUpsellPromoSheet ===
 
-// Module 18318 (PasskeyUpsellPromoSheet)
-import FastImageDefault from "FastImage" /* 6010 */;
-import NativeCeremoniesDefault from "NativeCeremonies" /* 7775 */;
-import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 18317 */;
-import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 18320 */;
+// Module 18359 (PasskeyUpsellPromoSheet)
+import FastImageDefault from "FastImage" /* 6014 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 7785 */;
+import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 18358 */;
+import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 18361 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const UserSettingsSections = fn(1072).UserSettingsSections;
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoSheet.tsx");
 
 export default function PasswordlessUpsellPromoSheet() {
-  let obj = { source: require("module_18319"), style: { height: 190, width: 220, resizeMode: "contain" } };
+  let obj = { source: require("module_18360"), style: { height: 190, width: 220, resizeMode: "contain" } };
   _require = noop.useRef(false);
   let obj2 = { illustration: closure_6(FastImageDefault, obj), title: null, description: null, onDismiss: null, actions: null };
   let intl = require("util").intl;
@@ -56,7 +56,7 @@ export default function PasswordlessUpsellPromoSheet() {
               const intl = ref(1113).intl;
               obj3.name = intl.string(ref(1113).t["8H5RmH"]);
               obj2.params = obj3;
-              ref(8604).openUserSettings(obj2);
+              ref(8615).openUserSettings(obj2);
             }
         };
         NativeCeremoniesDefault.registerPasskey(obj4).catch(() => {

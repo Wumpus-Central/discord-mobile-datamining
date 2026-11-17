@@ -1,9 +1,9 @@
-// === Module 13167: conjurePublishEvalConnection ===
+// === Module 14408: conjurePublishEvalConnection ===
 
-// Module 13167 (conjurePublishEvalConnection)
+// Module 14408 (conjurePublishEvalConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import v1 from "v1" /* 1269 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 7335 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7345 */;
 import size from "module_2" /* 2 */;
 
 function rejectPendingPublishEval(projectId) {

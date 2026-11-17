@@ -1,25 +1,25 @@
-// === Module 17671: OrbsArcadePlayButton ===
+// === Module 17709: OrbsArcadePlayButton ===
 
-// Module 17671 (OrbsArcadePlayButton)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import ButtonConstants from "ButtonConstants" /* 5932 */;
-import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 17657 */;
-import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 17674 */;
+// Module 17709 (OrbsArcadePlayButton)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import ButtonConstants from "ButtonConstants" /* 5936 */;
+import OrbsArcadeAnalytics from "OrbsArcadeAnalytics" /* 17695 */;
+import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 17712 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 10129 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17647 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 10574 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17685 */;
 
 require = fn;
 function OrbsArcadePaidPlayLabel(count) {
   const size = count.size;
-  const tmp = closure_8();
+  const tmp = closure_9();
   closure_1 = tmp;
   const intl = size(1113).intl;
   const formatResult = intl.format(size(1113).t.oSWYca, {
     count: count.orbCost,
     orbIconHook() {
-      return jsx(size(9442).OrbsIcon, { size: "xs", color: closure_1(575).colors.CONTROL_PRIMARY_TEXT_DEFAULT }, "orbs-icon");
+      return jsx(size(9452).OrbsIcon, { size: "xs", color: closure_1(575).colors.CONTROL_PRIMARY_TEXT_DEFAULT }, "orbs-icon");
     }
   });
   let arr = formatResult;
@@ -38,9 +38,10 @@ function OrbsArcadePaidPlayLabel(count) {
   })}</View>;
 }
 const View = fn(17).View;
+const QuestHomeSection = fn(10574).QuestHomeSection;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
-let closure_8 = createStyles.createStyles({ paidPlayLabel: { flexDirection: "row", alignItems: "center" }, paidPlayText: { flexShrink: 1 } });
+const createStyles = fn(5310);
+let closure_9 = createStyles.createStyles({ paidPlayLabel: { flexDirection: "row", alignItems: "center" }, paidPlayText: { flexShrink: 1 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/orbs_arcade/native/OrbsArcadePlayButton.tsx");
 
@@ -69,7 +70,7 @@ export default function OrbsArcadePlayButton(game) {
   const callback = analyticsLocations.useCallback(() => {
     const result = OrbsArcadeAnalytics.trackOrbsArcadeCtaClicked(game, OrbsArcadeAnalytics.OrbsArcadeCta.EARN_ORBS, _location, surface);
     ActionSheetActionCreatorsDefault.hideActionSheet();
-    QuestHomeNavigationStore.setState({ scrollToQuestsSection: true });
+    QuestHomeNavigationStore.setState({ scrollToSection: QuestHomeSection.QUESTS });
   }, items4);
   const callback1 = analyticsLocations.useCallback(() => {
     const result = OrbsArcadeAnalytics.trackOrbsArcadeCtaClicked(game, OrbsArcadeAnalytics.OrbsArcadeCta.PLAY, _location, surface);

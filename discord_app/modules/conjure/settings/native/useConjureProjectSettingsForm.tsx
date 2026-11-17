@@ -1,13 +1,15 @@
-// === Module 13195: useConjureProjectSettingsForm ===
+// === Module 14416: useConjureProjectSettingsForm ===
 
-// Module 13195 (useConjureProjectSettingsForm)
+// Module 14416 (useConjureProjectSettingsForm)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7018 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7026 */;
+import ConjureSharingModeSheet from "ConjureSharingModeSheet" /* 14439 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 5212 */;
+import GuildRoleStore from "GuildRoleStore" /* 5216 */;
 
 const require = globalThis.__r;
 
@@ -79,12 +81,12 @@ function ConjureCollaboratorRolesSheet(guildId) {
   let obj2 = { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES };
   const obj3 = { startExpanded: true, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: null, footer: null, header: null, children: null };
   const intl2 = guildId(onSave[12]).intl;
-  obj3.dismissAccessibilityLabel = intl2.string(require("module_4131").un99lK);
-  let formatToPlainStringResult = intl.formatToPlainString(require("module_4131").g5I05P, { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES });
-  obj3.footer = closure_9(closure_6, { style: tmp.roleListFooter, children: closure_9(guildId(onSave[15]).Text, { variant: "body-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_4131").g5I05P, { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES }) }) });
+  obj3.dismissAccessibilityLabel = intl2.string(require("module_4133").un99lK);
+  let formatToPlainStringResult = intl.formatToPlainString(require("module_4133").g5I05P, { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES });
+  obj3.footer = closure_9(closure_6, { style: tmp.roleListFooter, children: closure_9(guildId(onSave[15]).Text, { variant: "body-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_4133").g5I05P, { count: first.size, max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES }) }) });
   const obj5 = { title: null, trailing: null };
   const intl3 = guildId(onSave[12]).intl;
-  obj5.title = intl3.string(require("module_4131")["pO3+p5"]);
+  obj5.title = intl3.string(require("module_4133")["pO3+p5"]);
   const obj6 = { label: null, onPress: null };
   const intl4 = guildId(onSave[12]).intl;
   obj6.label = intl4.string(guildId(onSave[12]).t.i4jeWR);
@@ -138,7 +140,7 @@ function ConjureCollaboratorRolesSheet(guildId) {
           if (tmp3) {
             const intl = guildId(onSave[12]).intl;
             const obj4 = { max: guildId(onSave[10]).MAX_PROJECT_COLLABORATOR_ROLES };
-            formatToPlainStringResult = intl.formatToPlainString(require("module_4131")["dH7+/Z"], obj4);
+            formatToPlainStringResult = intl.formatToPlainString(require("module_4133")["dH7+/Z"], obj4);
           }
           obj2.accessibilityHint = formatToPlainStringResult;
           obj2.onPress = function onPress(arg0) {
@@ -159,7 +161,7 @@ const DEFAULT_ROLE_COLOR_HEX = fn(1072).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 ConjureCollaboratorRolesSheet = "ConjureCollaboratorRolesSheet";
-let createStyles = fn(5306);
+let createStyles = fn(5310);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, roleLabel: null, roleListContent: null, roleListEmpty: null, roleListFooter: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.roleLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -170,7 +172,7 @@ obj2.roleListEmpty = { alignItems: "center", paddingVertical: nativeDefault.spac
 let obj6 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
 obj2.roleListFooter = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_12 = createStyles.createStyles(obj2);
-createStyles = fn(5306);
+createStyles = fn(5310);
 let closure_13 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -190,24 +192,30 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   if (flag === undefined) {
     flag = false;
   }
+  importDefault = undefined;
+  sharingOptions = undefined;
   selectedRoleIds = undefined;
-  dependencyMap = undefined;
+  c4 = undefined;
+  noop = undefined;
   handleRoleSelectionChange = undefined;
   const tmp = closure_12();
-  const tmp4 = selectedRoleIds(13196)(projectId, arg1);
-  ({ liveReload, isGuildCollaboration, selectedRoleIds } = tmp4);
-  ({ supportsVisibility, saving, saveError, experimentalError, handleFlagChange: c2, handleRoleSelectionChange } = tmp4);
+  const tmp3 = sharingOptions;
+  const tmp4 = require("useConjureProjectSettingsDraft")(projectId, arg1);
+  ({ liveReload, sharingMode: c1, sharingOptions } = tmp4);
+  ({ canChangeSharing, isGuildCollaboration, selectedRoleIds } = tmp4);
+  ({ supportsVisibility, saving, saveError, experimentalError, handleFlagChange: c4, handleSharingModeChange: c5, handleRoleSelectionChange } = tmp4);
   const ensureAppInGuild = tmp4.ensureAppInGuild;
-  let tmp5 = saving;
-  ({ iconURL, description, smartContext, hostApproval, name, nameError, nameChanged, isPublic, usesPreviewApp, canChangePreviewApp, supportsCollaboration, supportsCollaboratorRoles, checkingAppInGuild, canSave, handleIconChange, handleNameChange, handleDescriptionChange, handleUsesPreviewAppChange, handleLiveReloadChange, handleSmartContextChange, handleRequireHostApprovalChange, submit } = tmp4);
+  ({ iconURL, description, smartContext, hostApproval, name, nameError, nameChanged, usesPreviewApp, canChangePreviewApp, supportsCollaboration, supportsCollaboratorRoles, checkingAppInGuild, canSave, handleIconChange, handleNameChange, handleDescriptionChange, handleUsesPreviewAppChange, handleLiveReloadChange, handleSmartContextChange, handleRequireHostApprovalChange, submit } = tmp4);
+  const found = sharingOptions.find((value) => value.value === c1);
+  let tmp6 = saving;
   if (!saving) {
-    tmp5 = flag;
+    tmp6 = flag;
   }
   const isConjureManagedCopy = require("useConjureManagedCopy").useIsConjureManagedCopy(projectId);
   items = [ensureAppInGuild, arg1, handleRoleSelectionChange, selectedRoleIds];
   let obj3 = { style: tmp.content, children: null };
-  let tmp11 = null;
-  const callback = noop.useCallback(handleRoleSelectionChange(function*() {
+  let tmp12 = null;
+  const callback = noop.useCallback(selectedRoleIds(function*() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -234,7 +242,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
           } else {
             closure_1 = tmp3;
             if (null != tmp3) {
-              dependencyMap = 1;
+              sharingOptions = 1;
               c3 = 2;
               c4 = 1;
               const obj4 = { value: ensureAppInGuild(), done: false };
@@ -244,39 +252,39 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
             }
           }
         } else if (1 === tmp7) {
-          dependencyMap = 0;
+          sharingOptions = 0;
           c4 = 3;
           return { value: "HermesInternal", done: null };
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          dependencyMap = 0;
+          sharingOptions = 0;
           if (value) {
             const obj5 = { content: null, key: null, stackingBehavior: "stack" };
             const obj6 = { guildId: closure_129_0, initialSelectedRoleIds: null, onSave: null };
             const _Set = Set;
-            const set = new Set(closure_129_1);
+            const set = new Set(closure_129_3);
             obj6.initialSelectedRoleIds = set;
             obj6.onSave = function onSave(arg0) {
               items = [...arg0];
-              return closure_1_3(items);
+              return closure_1_6(items);
             };
             obj5.content = closure_1_9(ConjureCollaboratorRolesSheet, obj6);
             obj5.key = key;
-            tmp3(dependencyMap[11]).showActionSheet(obj5);
-            const obj = tmp3(dependencyMap[11]);
+            tmp3(sharingOptions[11]).showActionSheet(obj5);
+            const obj = tmp3(sharingOptions[11]);
           } else {
             c4 = 3;
             return { value: "HermesInternal", done: null };
           }
         }
-        dependencyMap = 0;
+        sharingOptions = 0;
         c4 = 3;
         const obj7 = { value, done: true };
         return obj7;
       } catch (tmp24) {
-        if (tmp4 === dependencyMap) {
+        if (tmp4 === sharingOptions) {
           c4 = tmp2;
           throw tmp24;
         } else {
@@ -287,172 +295,185 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   }), items);
   if (flag) {
     let obj4 = { variant: "body-sm/normal", color: "text-muted", children: null };
-    const intl = tmp6(1113).intl;
-    obj4.children = intl.string(tmp2(4131).s7VnVF);
-    tmp11 = closure_9(tmp6(5919).Text, obj4);
+    const intl = tmp7(tmp3[12]).intl;
+    obj4.children = intl.string(tmp2(tmp3[13]).s7VnVF);
+    tmp12 = closure_9(tmp7(tmp3[15]).Text, obj4);
   }
-  const items1 = [tmp11, , , , , , , , , ];
+  const items1 = [tmp12, , , , , , , , , ];
   if (isConjureManagedCopy) {
     let obj5 = { projectId };
-    let tmp13Result = closure_9(tmp2(13202), obj5);
-    let tmp15 = closure_9;
+    let tmp14Result = closure_9(tmp2(tmp3[23]), obj5);
+    let tmp16 = closure_9;
   } else {
-    let obj6 = { iconURL, onIconChange: handleIconChange, name, nameError, onNameChange: handleNameChange, description, onDescriptionChange: handleDescriptionChange, disabled: tmp5 };
-    tmp13Result = closure_9(tmp6(13184).ConjureAppIdentitySection, obj6);
-    tmp15 = closure_9;
+    let obj6 = { iconURL, onIconChange: handleIconChange, name, nameError, onNameChange: handleNameChange, description, onDescriptionChange: handleDescriptionChange, disabled: tmp6 };
+    tmp14Result = closure_9(tmp7(tmp3[24]).ConjureAppIdentitySection, obj6);
+    tmp16 = closure_9;
   }
-  items1[1] = tmp13Result;
-  let tmp15Result = null;
+  items1[1] = tmp14Result;
+  let tmp16Result10 = null;
   if (supportsVisibility) {
-    tmp15Result = null;
+    tmp16Result10 = null;
     if (!isConjureManagedCopy) {
-      let obj7 = { hasIcons: false, children: null };
-      const obj8 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-      const intl2 = tmp6(1113).intl;
-      obj8.label = intl2.string(tmp2(4131).ujIxRm);
-      const intl3 = tmp6(1113).intl;
-      obj8.subLabel = intl3.string(tmp2(4131).gT8zk1);
-      obj8.checked = isPublic;
-      obj8.disabled = tmp5;
-      obj8.onPress = function onPress(arg0) {
-        return _undefined(ConjureProjectTypes.ConjureProjectFlags.PUBLIC, arg0);
+      let obj7 = { label: null, trailing: null, arrow: null, disabled: null, onPress: null };
+      const intl2 = tmp7(tmp3[12]).intl;
+      obj7.label = intl2.string(tmp2(tmp3[13]).jDBYrs);
+      let tmp16Result;
+      if (null != found) {
+        const obj8 = { text: found.label };
+        tmp16Result = tmp16(tmp7(tmp3[25]).TableRow.TrailingText, obj8);
+      }
+      obj7.trailing = tmp16Result;
+      let tmp19 = !tmp6;
+      if (!tmp6) {
+        tmp19 = canChangeSharing;
+      }
+      obj7.arrow = tmp19;
+      let tmp20 = tmp6;
+      if (!tmp6) {
+        tmp20 = !canChangeSharing;
+      }
+      const obj9 = { hasIcons: false, children: null };
+      obj7.disabled = tmp20;
+      obj7.onPress = function onPress() {
+        const obj = ActionSheetActionCreatorsDefault;
+        return obj.openLazy(asyncRequireImpl(14439, dependencyMap.paths), ConjureSharingModeSheet.CONJURE_SHARING_MODE_SHEET_KEY, { options: sharingOptions, value, onChange }, "stack");
       };
-      obj7.children = tmp15(tmp6(7733).TableCheckboxRow, obj8);
-      tmp15Result = tmp15(tmp6(7746).TableRowGroup, obj7);
+      obj9.children = tmp16(tmp7(tmp3[25]).TableRow, obj7);
+      tmp16Result10 = tmp16(tmp7(tmp3[19]).TableRowGroup, obj9);
     }
   }
-  items1[2] = tmp15Result;
-  let tmp15Result9 = null;
+  items1[2] = tmp16Result10;
+  let tmp16Result11 = null;
   if (!flag) {
-    const obj9 = { projectId };
-    tmp15Result9 = tmp15(tmp2(13204), obj9);
+    const obj10 = { projectId };
+    tmp16Result11 = tmp16(tmp2(tmp3[29]), obj10);
   }
-  items1[3] = tmp15Result9;
-  let tmp15Result10 = null;
+  items1[3] = tmp16Result11;
+  let tmp16Result12 = null;
   if (supportsVisibility) {
-    tmp15Result10 = null;
+    tmp16Result12 = null;
     if (supportsCollaboration) {
-      const obj10 = { hasIcons: false, children: null };
-      const obj11 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-      const intl4 = tmp6(1113).intl;
-      obj11.label = intl4.string(tmp2(4131).lVvR4E);
-      const intl5 = tmp6(1113).intl;
-      obj11.subLabel = intl5.string(tmp2(4131).SQZGoV);
-      obj11.checked = isGuildCollaboration;
-      obj11.disabled = tmp5;
-      obj11.onPress = function onPress(arg0) {
+      const obj11 = { hasIcons: false, children: null };
+      const obj12 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
+      const intl3 = tmp7(tmp3[12]).intl;
+      obj12.label = intl3.string(tmp2(tmp3[13]).lVvR4E);
+      const intl4 = tmp7(tmp3[12]).intl;
+      obj12.subLabel = intl4.string(tmp2(tmp3[13]).SQZGoV);
+      obj12.checked = isGuildCollaboration;
+      obj12.disabled = tmp6;
+      obj12.onPress = function onPress(arg0) {
         return _undefined(ConjureProjectTypes.ConjureProjectFlags.GUILD_COLLABORATION, arg0);
       };
-      obj10.children = tmp15(tmp6(7733).TableCheckboxRow, obj11);
-      tmp15Result10 = tmp15(tmp6(7746).TableRowGroup, obj10);
+      obj11.children = tmp16(tmp7(tmp3[20]).TableCheckboxRow, obj12);
+      tmp16Result12 = tmp16(tmp7(tmp3[19]).TableRowGroup, obj11);
     }
   }
-  items1[4] = tmp15Result10;
-  let tmp15Result11 = null;
+  items1[4] = tmp16Result12;
+  let tmp16Result13 = null;
   if (canChangePreviewApp) {
-    const obj12 = { hasIcons: false, children: null };
-    const obj13 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-    const intl6 = tmp6(1113).intl;
-    obj13.label = intl6.string(tmp2(4131).DV2hcV);
-    const intl7 = tmp6(1113).intl;
-    obj13.subLabel = intl7.string(tmp2(4131).yjWIzb);
-    obj13.checked = usesPreviewApp;
-    obj13.disabled = tmp5;
-    obj13.onPress = handleUsesPreviewAppChange;
-    obj12.children = tmp15(tmp6(7733).TableCheckboxRow, obj13);
-    tmp15Result11 = tmp15(tmp6(7746).TableRowGroup, obj12);
+    const obj13 = { hasIcons: false, children: null };
+    const obj14 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
+    const intl5 = tmp7(tmp3[12]).intl;
+    obj14.label = intl5.string(tmp2(tmp3[13]).DV2hcV);
+    const intl6 = tmp7(tmp3[12]).intl;
+    obj14.subLabel = intl6.string(tmp2(tmp3[13]).yjWIzb);
+    obj14.checked = usesPreviewApp;
+    obj14.disabled = tmp6;
+    obj14.onPress = handleUsesPreviewAppChange;
+    obj13.children = tmp16(tmp7(tmp3[20]).TableCheckboxRow, obj14);
+    tmp16Result13 = tmp16(tmp7(tmp3[19]).TableRowGroup, obj13);
   }
-  items1[5] = tmp15Result11;
-  let tmp15Result12 = null;
+  items1[5] = tmp16Result13;
+  let tmp16Result14 = null;
   if (liveReload.available) {
-    const obj14 = { hasIcons: false, children: null };
-    const obj16 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-    const intl8 = tmp6(1113).intl;
-    obj16.label = intl8.string(tmp2(4131).eEo0ye);
-    ({ description: obj15.subLabel, checked: obj15.checked } = liveReload);
-    obj16.disabled = tmp5;
-    obj16.onPress = handleLiveReloadChange;
-    obj14.children = tmp15(tmp6(7733).TableCheckboxRow, obj16);
-    tmp15Result12 = tmp15(tmp6(7746).TableRowGroup, obj14);
+    const obj15 = { hasIcons: false, children: null };
+    const obj17 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
+    const intl7 = tmp7(tmp3[12]).intl;
+    obj17.label = intl7.string(tmp2(tmp3[13]).eEo0ye);
+    ({ description: obj16.subLabel, checked: obj16.checked } = liveReload);
+    obj17.disabled = tmp6;
+    obj17.onPress = handleLiveReloadChange;
+    obj15.children = tmp16(tmp7(tmp3[20]).TableCheckboxRow, obj17);
+    tmp16Result14 = tmp16(tmp7(tmp3[19]).TableRowGroup, obj15);
   }
-  items1[6] = tmp15Result12;
-  let tmp15Result13 = null;
+  items1[6] = tmp16Result14;
+  let tmp16Result15 = null;
   if (supportsCollaboratorRoles) {
-    const obj17 = { label: null, subLabel: null, arrow: true, disabled: null, accessibilityHint: null, onPress: null };
-    const intl9 = tmp6(1113).intl;
-    obj17.label = intl9.string(tmp2(4131)["pO3+p5"]);
-    const intl10 = tmp6(1113).intl;
-    obj17.subLabel = intl10.string(tmp2(4131)["9MdtK9"]);
-    if (!tmp5) {
-      tmp5 = !isGuildCollaboration;
+    const obj18 = { label: null, subLabel: null, arrow: true, disabled: null, accessibilityHint: null, onPress: null };
+    const intl8 = tmp7(tmp3[12]).intl;
+    obj18.label = intl8.string(tmp2(tmp3[13])["pO3+p5"]);
+    const intl9 = tmp7(tmp3[12]).intl;
+    obj18.subLabel = intl9.string(tmp2(tmp3[13])["9MdtK9"]);
+    if (!tmp6) {
+      tmp6 = !isGuildCollaboration;
     }
-    if (!tmp5) {
-      tmp5 = checkingAppInGuild;
+    if (!tmp6) {
+      tmp6 = checkingAppInGuild;
     }
-    obj17.disabled = tmp5;
+    obj18.disabled = tmp6;
     let stringResult;
     if (!isGuildCollaboration) {
-      const intl11 = tmp6(1113).intl;
-      stringResult = intl11.string(tmp2(4131).nZw5r9);
+      const intl10 = tmp7(tmp3[12]).intl;
+      stringResult = intl10.string(tmp2(tmp3[13]).nZw5r9);
     }
-    const obj18 = { hasIcons: false, children: null };
-    obj17.accessibilityHint = stringResult;
-    obj17.onPress = callback;
-    obj18.children = tmp15(tmp6(7443).TableRow, obj17);
-    tmp15Result13 = tmp15(tmp6(7746).TableRowGroup, obj18);
+    const obj19 = { hasIcons: false, children: null };
+    obj18.accessibilityHint = stringResult;
+    obj18.onPress = callback;
+    obj19.children = tmp16(tmp7(tmp3[25]).TableRow, obj18);
+    tmp16Result15 = tmp16(tmp7(tmp3[19]).TableRowGroup, obj19);
   }
-  items1[7] = tmp15Result13;
-  let tmp15Result14 = null;
+  items1[7] = tmp16Result15;
+  let tmp16Result16 = null;
   if (!flag) {
-    const obj19 = { projectId };
-    tmp15Result14 = tmp15(tmp2(13205), obj19);
+    const obj20 = { projectId };
+    tmp16Result16 = tmp16(tmp2(tmp3[30]), obj20);
   }
-  items1[8] = tmp15Result14;
-  let tmp15Result15 = null;
+  items1[8] = tmp16Result16;
+  let tmp16Result17 = null;
   if (null != saveError) {
-    const obj20 = { accessibilityRole: "alert", children: null };
-    const obj21 = { variant: "body-xs/normal", color: "text-feedback-critical", children: saveError };
-    obj20.children = tmp15(tmp6(5919).Text, obj21);
-    tmp15Result15 = tmp15(View, obj20);
+    const obj21 = { accessibilityRole: "alert", children: null };
+    const obj22 = { variant: "body-xs/normal", color: "text-feedback-critical", children: saveError };
+    obj21.children = tmp16(tmp7(tmp3[15]).Text, obj22);
+    tmp16Result17 = tmp16(tmp11, obj21);
   }
-  const obj22 = { fields: closure_10(View, obj3), experimentalFields: null, canSave: null, saving: null, nameChanged: null, submit: null };
-  items1[9] = tmp15Result15;
+  const obj23 = { fields: closure_10(handleRoleSelectionChange, obj3), experimentalFields: null, canSave: null, saving: null, nameChanged: null, submit: null };
+  items1[9] = tmp16Result17;
   obj3.children = items1;
-  const obj23 = { style: tmp.content, children: null };
-  const obj24 = { hasIcons: false, children: null };
-  const obj25 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-  const intl12 = tmp6(1113).intl;
-  obj25.label = intl12.string(selectedRoleIds(4131)["4liZ45"]);
-  const intl13 = tmp6(1113).intl;
-  obj25.subLabel = intl13.string(selectedRoleIds(4131).I5cl7p);
-  obj25.checked = smartContext.checked;
-  obj25.disabled = saving;
-  obj25.onPress = handleSmartContextChange;
-  const items2 = [tmp15(require("TableCheckboxRow").TableCheckboxRow, obj25), ];
+  const obj24 = { style: tmp.content, children: null };
+  const obj25 = { hasIcons: false, children: null };
   const obj26 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-  const intl14 = tmp6(1113).intl;
-  obj26.label = intl14.string(selectedRoleIds(4131).mpjaVm);
-  const intl15 = tmp6(1113).intl;
-  obj26.subLabel = intl15.string(selectedRoleIds(4131)["2PxChh"]);
-  obj26.checked = hostApproval.checked;
+  const intl11 = tmp7(tmp3[12]).intl;
+  obj26.label = intl11.string(require("module_4133")["4liZ45"]);
+  const intl12 = tmp7(tmp3[12]).intl;
+  obj26.subLabel = intl12.string(require("module_4133").I5cl7p);
+  obj26.checked = smartContext.checked;
   obj26.disabled = saving;
-  obj26.onPress = handleRequireHostApprovalChange;
-  items2[1] = tmp15(require("TableCheckboxRow").TableCheckboxRow, obj26);
-  obj24.children = items2;
-  const items3 = [closure_10(require("TableRowGroup").TableRowGroup, obj24), tmp15(require("host_approval/ConjureHostApproval").ConjureAllowedHostsSetting, { projectId }), ];
-  let tmp15Result16 = null;
+  obj26.onPress = handleSmartContextChange;
+  const items2 = [tmp16(require("TableCheckboxRow").TableCheckboxRow, obj26), ];
+  const obj27 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
+  const intl13 = tmp7(tmp3[12]).intl;
+  obj27.label = intl13.string(require("module_4133").mpjaVm);
+  const intl14 = tmp7(tmp3[12]).intl;
+  obj27.subLabel = intl14.string(require("module_4133")["2PxChh"]);
+  obj27.checked = hostApproval.checked;
+  obj27.disabled = saving;
+  obj27.onPress = handleRequireHostApprovalChange;
+  items2[1] = tmp16(require("TableCheckboxRow").TableCheckboxRow, obj27);
+  obj25.children = items2;
+  const items3 = [closure_10(require("TableRowGroup").TableRowGroup, obj25), tmp16(require("host_approval/ConjureHostApproval").ConjureAllowedHostsSetting, { projectId }), ];
+  let tmp16Result18 = null;
   if (null != experimentalError) {
-    const obj28 = { accessibilityRole: "alert", children: null };
-    const obj54 = { variant: "body-xs/normal", color: "text-feedback-critical", children: experimentalError };
-    obj28.children = tmp15(tmp6(5919).Text, obj54);
-    tmp15Result16 = tmp15(View, obj28);
+    const obj29 = { accessibilityRole: "alert", children: null };
+    const obj56 = { variant: "body-xs/normal", color: "text-feedback-critical", children: experimentalError };
+    obj29.children = tmp16(tmp7(tmp3[15]).Text, obj56);
+    tmp16Result18 = tmp16(tmp11, obj29);
   }
-  items3[2] = tmp15Result16;
-  obj23.children = items3;
-  obj22.experimentalFields = closure_10(View, obj23);
-  obj22.canSave = canSave;
-  obj22.saving = saving;
-  obj22.nameChanged = nameChanged;
-  obj22.submit = submit;
-  return obj22;
+  items3[2] = tmp16Result18;
+  obj24.children = items3;
+  obj23.experimentalFields = closure_10(handleRoleSelectionChange, obj24);
+  obj23.canSave = canSave;
+  obj23.saving = saving;
+  obj23.nameChanged = nameChanged;
+  obj23.submit = submit;
+  return obj23;
 };

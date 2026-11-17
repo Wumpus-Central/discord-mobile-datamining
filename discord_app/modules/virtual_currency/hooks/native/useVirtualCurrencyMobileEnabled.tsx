@@ -1,6 +1,6 @@
-// === Module 15948: useVirtualCurrencyMobileEnabled ===
+// === Module 15986: useVirtualCurrencyMobileEnabled ===
 
-// Module 15948 (useVirtualCurrencyMobileEnabled)
+// Module 15986 (useVirtualCurrencyMobileEnabled)
 import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 7968: useGuildScheduledEventUserCount ===
+// === Module 7979: useGuildScheduledEventUserCount ===
 
-// Module 7968 (useGuildScheduledEventUserCount)
+// Module 7979 (useGuildScheduledEventUserCount)
 import _mod19 from "module_19" /* 19 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 7969 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7029 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 7980 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7037 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

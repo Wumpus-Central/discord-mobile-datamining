@@ -1,6 +1,6 @@
-// === Module 18152: UpcomingServerEventExperiment ===
+// === Module 18193: UpcomingServerEventExperiment ===
 
-// Module 18152 (UpcomingServerEventExperiment)
+// Module 18193 (UpcomingServerEventExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

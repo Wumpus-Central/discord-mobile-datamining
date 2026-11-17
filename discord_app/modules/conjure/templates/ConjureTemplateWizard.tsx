@@ -1,16 +1,16 @@
-// === Module 13993: ConjureTemplateWizard ===
+// === Module 15014: ConjureTemplateWizard ===
 
-// Module 13993 (ConjureTemplateWizard)
+// Module 15014 (ConjureTemplateWizard)
 import util from "util" /* 1113 */;
-import _modDef4131 from "module_4131" /* 4131 */;
-import ConjureUtils from "ConjureUtils" /* 7260 */;
-import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 13994 */;
+import _modDef4133 from "module_4133" /* 4133 */;
+import ConjureUtils from "ConjureUtils" /* 7270 */;
+import conjureTemplateIntakeRequests from "conjureTemplateIntakeRequests" /* 15015 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 function conjureTemplateStartMessage(templateName) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef4131["/qSx7+"], { templateName, locale: util.intl.currentLocale });
+  return intl.formatToPlainString(_modDef4133["/qSx7+"], { templateName, locale: util.intl.currentLocale });
 }
 let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
   closure_0 = arg0;
@@ -75,7 +75,7 @@ let closure_7 = async function _startConjureTemplateWizard(arg0, arg1) {
     }
   })();
 };
-const ConjureConnectionStore = fn(7365);
+const ConjureConnectionStore = fn(7375);
 ({ prepareTemplate: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/templates/ConjureTemplateWizard.tsx");
@@ -196,9 +196,9 @@ export function conjureWizardServerCopy(stateFromStores1) {
   if (server == null) {
     const obj = { title: null, hint: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef4131.vcxYIA);
+    obj.title = intl.string(_modDef4133.vcxYIA);
     const intl2 = util.intl;
-    obj.hint = intl2.string(_modDef4131.auUHPZ);
+    obj.hint = intl2.string(_modDef4133.auUHPZ);
     server = obj;
   }
   return server;

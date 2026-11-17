@@ -1,39 +1,39 @@
-// === Module 20071: VoicePanelControls ===
+// === Module 20118: VoicePanelControls ===
 
-// Module 20071 (VoicePanelControls)
+// Module 20118 (VoicePanelControls)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import native from "native" /* 5367 */;
-import HapticUtils from "HapticUtils" /* 5544 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
-import spring_spring from "spring/spring" /* 5929 */;
-import useRefValueDefault from "useRefValue" /* 7416 */;
-import native2 from "native" /* 7997 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10576 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11991 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13809 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 14677 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19189 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19231 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 19961 */;
-import useControlsLockDefault from "useControlsLock" /* 19980 */;
-import VoicePanelAccessibilityViewDefault from "VoicePanelAccessibilityView" /* 20051 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 20072 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 20074 */;
-import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 20078 */;
-import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 20079 */;
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 20080 */;
-import useControlsButtonsDefault from "useControlsButtons" /* 20083 */;
-import useShowConnectedControlsDefault from "useShowConnectedControls" /* 20106 */;
-import useControlAccessoryHeightDefault from "useControlAccessoryHeight" /* 20108 */;
-import VoicePanelControlsDimOverlayDefault from "VoicePanelControlsDimOverlay" /* 20109 */;
-import VoicePanelControlsDrawerDefault from "VoicePanelControlsDrawer" /* 20110 */;
+import native from "native" /* 5371 */;
+import HapticUtils from "HapticUtils" /* 5548 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5592 */;
+import spring_spring from "spring/spring" /* 5933 */;
+import useRefValueDefault from "useRefValue" /* 7426 */;
+import native2 from "native" /* 8008 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10711 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12427 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12433 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13522 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 13755 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 19234 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19276 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 20007 */;
+import useControlsLockDefault from "useControlsLock" /* 20026 */;
+import VoicePanelAccessibilityViewDefault from "VoicePanelAccessibilityView" /* 20097 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 20119 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 20121 */;
+import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 20125 */;
+import useControlsHiddenPresentationDefault from "useControlsHiddenPresentation" /* 20126 */;
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 20127 */;
+import useControlsButtonsDefault from "useControlsButtons" /* 20130 */;
+import useShowConnectedControlsDefault from "useShowConnectedControls" /* 20154 */;
+import useControlAccessoryHeightDefault from "useControlAccessoryHeight" /* 20156 */;
+import VoicePanelControlsDimOverlayDefault from "VoicePanelControlsDimOverlay" /* 20157 */;
+import VoicePanelControlsDrawerDefault from "VoicePanelControlsDrawer" /* 20158 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7024 */;
 
 const require = globalThis.__r;
 const _modDef1655 = _mod1655;
@@ -41,17 +41,17 @@ const _modDef1655 = _mod1655;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11985);
+const VoicePanelConstants = fn(12428);
 ({ UI_SHOW_HIDE_PHYSICS: metroImportDefault, MODE_CHANGE_PHYSICS: closure_8, BORDER_RADIUS_PHYSICS: closure_9, PANEL_CONTROLS_HEIGHT_PHYSICS: closure_10, VoicePanelModes: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(11988);
+const VoicePanelCardConstants = fn(12431);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(11983);
+const VoicePanelControlsConstants = fn(12426);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } = VoicePanelControlsConstants);
 const Constants = fn(1072);
 ({ ComponentActions: closure_16, ThemeTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { accessibilityWrapper: null, wrapper: null, buttonsWrapper: null, actionSheetDragHandleWrapper: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -322,7 +322,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(19189).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(19234).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "chat", source });
     }
@@ -332,7 +332,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
         source = source.source;
       }
       if (source == null) {
-        source = handleOpenChatTab(19189).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
+        source = handleOpenChatTab(19234).VoicePanelTabAnalyticsSources.HEADER_BUTTON;
       }
       interFloatingTransitionHeight({ tab: "app_launcher", source });
     }
@@ -572,7 +572,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   closure_129_2 = sharedValue1;
   closure_129_3 = callback;
   ({ hiddenProps, hiddenStyles } = useControlsHiddenPresentationDefault(mode, sharedValue1));
-  const context1 = obj2.useContext(tmp4(11984));
+  const context1 = obj2.useContext(tmp4(12427));
   const controlsSpecs2 = context1.controlsSpecs;
   closure_129_4 = controlsSpecs2;
   const windowDimensions = context1.windowDimensions;
@@ -1007,7 +1007,7 @@ export default noop.memo(function VoicePanelControls(gestureState) {
   const tmpResult25 = require("module_1655");
   const isScreenReaderEnabled1 = require("useIsScreenReaderEnabled").useIsScreenReaderEnabled();
   const tmpResult26 = require("useIsScreenReaderEnabled");
-  const context2 = obj2.useContext(tmp4(11984));
+  const context2 = obj2.useContext(tmp4(12427));
   ({ controlsSpecs: controlsSpecs3, windowDimensions: windowDimensions2, mode: mode2, setControlsMode: setControlsMode2, safeArea: safeArea2, connected } = context2);
   const tmp74 = useWindowDimensionsSharedValueDefault({ ignoreKeyboard: true });
   const items17 = [closure_35, connected, controlsSpecs3, mode2, windowDimensions2, tmp74, safeArea2];

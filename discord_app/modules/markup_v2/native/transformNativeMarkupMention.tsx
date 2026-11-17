@@ -1,11 +1,11 @@
-// === Module 9375: transformNativeMarkupMention ===
+// === Module 9384: transformNativeMarkupMention ===
 
-// Module 9375 (transformNativeMarkupMention)
-import MarkupTypes from "MarkupTypes" /* 6332 */;
-import MarkupRules from "MarkupRules" /* 6334 */;
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 6344 */;
-import PlatformMarkupRules from "PlatformMarkupRules" /* 9376 */;
-import StaticMentionRoutes from "StaticMentionRoutes" /* 9381 */;
+// Module 9384 (transformNativeMarkupMention)
+import MarkupTypes from "MarkupTypes" /* 6340 */;
+import MarkupRules from "MarkupRules" /* 6342 */;
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 6352 */;
+import PlatformMarkupRules from "PlatformMarkupRules" /* 9385 */;
+import StaticMentionRoutes from "StaticMentionRoutes" /* 9390 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMention.tsx");
@@ -27,9 +27,9 @@ export function transformNativeMention(value, allowGameMentions) {
     obj5.id = str1;
     return MarkupRules.hydrateUserMention(obj5, allowGameMentions);
   } else if ("everyone" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "alignItems", everyoneOrHere: 1758358114839606400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "alignItems", everyoneOrHere: "handshake_light_skin_tone_medium_light_skin_tone" }, allowGameMentions);
   } else if ("here" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "alignItems", everyoneOrHere: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017538905119719508 }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "alignItems", everyoneOrHere: "<string:1716584450>" }, allowGameMentions);
   } else if ("role" === type) {
     return MarkupRules.hydrateRoleMention(value.value.toString(), allowGameMentions);
   } else if ("game" === type) {

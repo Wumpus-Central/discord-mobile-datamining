@@ -1,19 +1,19 @@
-// === Module 10656: GuildProfileSheetBody ===
+// === Module 10365: GuildProfileSheetBody ===
 
-// Module 10656 (GuildProfileSheetBody)
+// Module 10365 (GuildProfileSheetBody)
 import nativeDefault from "native" /* 575 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8158 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 8169 */;
 import noop from "module_19" /* 19 */;
-import GuildProfileStore from "GuildProfileStore" /* 8156 */;
+import GuildProfileStore from "GuildProfileStore" /* 8167 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildProfileFetchStatus = fn(8156).GuildProfileFetchStatus;
-const INVALID_ACCESS_ERROR_CODE = fn(10549).INVALID_ACCESS_ERROR_CODE;
+const GuildProfileFetchStatus = fn(8167).GuildProfileFetchStatus;
+const INVALID_ACCESS_ERROR_CODE = fn(10366).INVALID_ACCESS_ERROR_CODE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { loadingContainer: { paddingTop: nativeDefault.space.PX_40 }, footerStack: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_40 };
 obj2.footerStack = { gap: nativeDefault.space.PX_8 };

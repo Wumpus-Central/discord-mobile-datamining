@@ -1,9 +1,9 @@
-// === Module 12726: useIsViewingActivity ===
+// === Module 11332: useIsViewingActivity ===
 
-// Module 12726 (useIsViewingActivity)
-import ChannelCallModalDefault from "ChannelCallModal" /* 12713 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 12716 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
+// Module 11332 (useIsViewingActivity)
+import ChannelCallModalDefault from "ChannelCallModal" /* 11320 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 11323 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7024 */;
 
 const require = fn;
 const size = fn(2);
@@ -12,8 +12,8 @@ const result = size.fileFinishedImporting("modules/activities/native/useIsViewin
 export function useIsViewingActivity(channelId) {
   channelId = channelId.channelId;
   let tmp = useIsActivityFocusedDefault(channelId);
-  const isModalOpen = channelId(5482).useIsModalOpen(ChannelCallModalDefault);
-  const obj = channelId(5482);
+  const isModalOpen = channelId(5486).useIsModalOpen(ChannelCallModalDefault);
+  const obj = channelId(5486);
   items = [ChannelRTCStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelRTCStore.getChatOpen(channelId), items1);

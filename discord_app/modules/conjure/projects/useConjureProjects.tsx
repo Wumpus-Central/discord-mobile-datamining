@@ -1,16 +1,16 @@
-// === Module 13190: useConjureProjects ===
+// === Module 14533: useConjureProjects ===
 
-// Module 13190 (useConjureProjects)
+// Module 14533 (useConjureProjects)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import UserProfileStore from "UserProfileStore" /* 7352 */;
-import GuildChannelStore from "GuildChannelStore" /* 5236 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import PermissionStore from "PermissionStore" /* 5238 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
-import ConjureChatStore from "ConjureChatStore" /* 7321 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
+import UserProfileStore from "UserProfileStore" /* 7362 */;
+import GuildChannelStore from "GuildChannelStore" /* 5240 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import PermissionStore from "PermissionStore" /* 5242 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5343 */;
+import ConjureChatStore from "ConjureChatStore" /* 7331 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
 
 const require = globalThis.__r;
 
@@ -39,16 +39,16 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
     const _location = nextExpiry;
     function add(item10063, owned) {
       if (!set.has(item10063.id)) {
-        const result = nextExpiry(7237).conjureProjectGuildId(item10063);
+        const result = nextExpiry(7245).conjureProjectGuildId(item10063);
         if (null == result) {
           set.add(item10063.id);
           let num = closure_2_10.getFinishedAt(item10063.id);
           const isThinkingResult = closure_2_10.isThinking(item10063.id);
           const obj4 = { thinking: isThinkingResult, finishedAt: num, now };
-          const conjureActivityResult = nextExpiry(7237).conjureActivity(obj4);
+          const conjureActivityResult = nextExpiry(7245).conjureActivity(obj4);
           if ("done" === conjureActivityResult) {
             if (null != num) {
-              const sum = num + nextExpiry(7237).CONJURE_DONE_WINDOW_MS;
+              const sum = num + nextExpiry(7245).CONJURE_DONE_WINDOW_MS;
               bound = sum;
               if (null != bound) {
                 const _Math = Math;
@@ -92,18 +92,18 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
           }
           obj5.sortTime = num;
           items.push(obj5);
-          const tmpResult = nextExpiry(7237);
+          const tmpResult = nextExpiry(7245);
         } else {
           value = map.get(result);
           if (null == value) {
             const obj6 = { guildId: result, location: _location };
-            const result1 = nextExpiry(7053).isConjureGuildEnabled(obj6);
+            const result1 = nextExpiry(7061).isConjureGuildEnabled(obj6);
             const result2 = map.set(result, result1);
             value = result1;
-            const tmpResult2 = nextExpiry(7053);
+            const tmpResult2 = nextExpiry(7061);
           }
         }
-        const obj2 = nextExpiry(7237);
+        const obj2 = nextExpiry(7245);
       }
     }
     function isEnabled(id) {
@@ -112,7 +112,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
         return value;
       } else {
         const obj3 = { guildId: id, location: _location };
-        const result = nextExpiry(7053).isConjureGuildEnabled(obj3);
+        const result = nextExpiry(7061).isConjureGuildEnabled(obj3);
         const result1 = map.set(id, result);
         return result;
       }
@@ -144,7 +144,7 @@ export function useConjureProjects(ConjureClarificationProjectPicker) {
       }
       continue;
     }
-    let obj2 = { entries: _location(7237).sortConjureProjects(items), nextExpiry: bound };
+    let obj2 = { entries: _location(7245).sortConjureProjects(items), nextExpiry: bound };
     return obj2;
   })(nextExpiry), items1, conjureEntriesEqual);
   nextExpiry = stateFromStores.nextExpiry;

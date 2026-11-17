@@ -1,8 +1,8 @@
-// === Module 5314: design/shared ===
+// === Module 5318: design/shared ===
 
-// Module 5314 (design/shared)
+// Module 5318 (design/shared)
 import size from "module_2" /* 2 */;
-import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 5321 */;
+import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 5325 */;
 
 const require = globalThis.__r;
 

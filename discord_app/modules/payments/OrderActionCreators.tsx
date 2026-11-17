@@ -1,13 +1,14 @@
-// === Module 7258: OrderActionCreators ===
+// === Module 7267: OrderActionCreators ===
 
-// Module 7258 (OrderActionCreators)
+// Module 7267 (OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
+import OrderSigningErrors from "OrderSigningErrors" /* 7268 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BillingError_mod from "BillingError" /* 5126 */;
+import BillingError_mod from "BillingError" /* 5130 */;
 
 require = fn;
-let closure_7 = async function _signOrder(arg0) {
+let closure_8 = async function _signOrder(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -66,8 +67,8 @@ let closure_7 = async function _signOrder(arg0) {
             closure_129_6.gateway_checkout_context = closure_129_4;
           }
           c4 = 1;
-          const HTTP = closure_130_0(closure_130_1[5]).HTTP;
-          const request = { url: closure_130_3.ORDER_SIGN(closure_129_0), body: closure_129_6, context: null, rejectWithError: true };
+          const HTTP = closure_130_0(closure_130_1[6]).HTTP;
+          const request = { url: closure_130_4.ORDER_SIGN(closure_129_0), body: closure_129_6, context: null, rejectWithError: true };
           let tmp55;
           if (null != closure_129_2) {
             if ("" !== closure_129_2) {
@@ -84,7 +85,7 @@ let closure_7 = async function _signOrder(arg0) {
       } else if (2 === tmp7) {
         c4 = 0;
         closure_129_7 = closure_3;
-        if (closure_129_7 instanceof closure_130_0(closure_130_1[5]).HTTPResponseError) {
+        if (closure_129_7 instanceof closure_130_0(closure_130_1[6]).HTTPResponseError) {
           if (400 === closure_129_7.status) {
             if ((function isOrderShape(body) {
               let tmp = null != body && typeof body === "object";
@@ -96,7 +97,7 @@ let closure_7 = async function _signOrder(arg0) {
               }
               return tmp;
             })(closure_129_7.body)) {
-              throw new closure_130_6(closure_129_7.body);
+              throw new closure_130_7(closure_129_7.body);
             }
           }
         }
@@ -133,7 +134,7 @@ let closure_7 = async function _signOrder(arg0) {
     }
   }
 };
-let closure_8 = async function _getOrder(arg0) {
+let closure_9 = async function _getOrder(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -173,11 +174,11 @@ let closure_8 = async function _getOrder(arg0) {
         c4 = 0;
         closure_129_1 = closure_3;
         const obj7 = { error: closure_129_1, orderId: closure_129_0 };
-        closure_130_4.error("failed to fetch order", obj7);
+        closure_130_5.error("failed to fetch order", obj7);
         const obj8 = { tags: { source: "OrderActionCreators_getOrder" }, extra: null };
         const obj9 = { orderId: closure_129_0 };
         obj8.extra = obj9;
-        const result = closure_130_0(closure_130_1[6]).captureBillingException(closure_129_1, obj8);
+        const result = closure_130_0(closure_130_1[7]).captureBillingException(closure_129_1, obj8);
         c6 = 3;
         return { value: null, done: true };
       } else if (arg0 === 1) {
@@ -211,7 +212,7 @@ let closure_8 = async function _getOrder(arg0) {
 };
 function fetchOrderEntitlements() {
   const self = this;
-  const apply = closure_10.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -219,7 +220,7 @@ function fetchOrderEntitlements() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _fetchOrderEntitlements(arg0) {
+let closure_11 = async function _fetchOrderEntitlements(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -288,7 +289,7 @@ let closure_10 = async function _fetchOrderEntitlements(arg0) {
     }
   }
 };
-let closure_12 = async function _fetchOrderEntitlementsWithRetry(arg0) {
+let closure_13 = async function _fetchOrderEntitlementsWithRetry(arg0) {
   if (c12 === 2) {
     c12 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -383,7 +384,7 @@ let closure_12 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                     } else {
                       c2 = 2;
                       c3 = 1;
-                      const obj6 = { value: closure_1_9(closure_129_0), done: false };
+                      const obj6 = { value: closure_1_10(closure_129_0), done: false };
                       return obj6;
                     }
                   } else if (arg0 === 1) {
@@ -404,9 +405,9 @@ let closure_12 = async function _fetchOrderEntitlementsWithRetry(arg0) {
                 }
               }
             };
-            closure_2 = closure_136_11;
-            closure_2 = closure_136_11;
-            length = closure_136_11[Symbol.iterator]();
+            closure_2 = closure_136_12;
+            closure_2 = closure_136_12;
+            length = closure_136_12[Symbol.iterator]();
             if (length !== undefined) {
               c9 = 1;
               closure_135_3 = tmp35;
@@ -510,29 +511,57 @@ let closure_12 = async function _fetchOrderEntitlementsWithRetry(arg0) {
     }
   }
 };
+const ConstraintReasonCode = fn(7266).ConstraintReasonCode;
 const Endpoints = fn(1072).Endpoints;
-let closure_4 = new LoggerDefault("OrderActionCreators");
-let obj = { [SPENDING_LIMIT_REACHED]: fn(5126).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED, [SPENDING_LIMIT_WILL_EXCEED]: fn(5126).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED };
-({ SPENDING_LIMIT_REACHED, SPENDING_LIMIT_WILL_EXCEED } = fn(7257).ConstraintReasonCode);
+let closure_5 = new LoggerDefault("OrderActionCreators");
+let obj = { [SPENDING_LIMIT_REACHED]: fn(5130).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED, [SPENDING_LIMIT_WILL_EXCEED]: fn(5130).ErrorCodes.BILLING_SPENDING_LIMIT_WILL_EXCEED };
+({ SPENDING_LIMIT_REACHED, SPENDING_LIMIT_WILL_EXCEED } = ConstraintReasonCode);
 let BillingError = BillingError_mod;
 class OrderSigningFailedWithConstraintsError extends tmp3 {
   constructor(arg0) {
-    tmp21 = new tmp2("Order signing failed due to unsatisfied constraints", (function getConstraintErrorCode(unsatisfied_constraints) {
-      let prop = unsatisfied_constraints.unsatisfied_constraints;
-      if (prop == null) {
-        prop = [];
-      }
-      for (const item10008 of prop) {
-        let tmp2 = closure_1_5[item10008.reason_code];
-        if (null != tmp2) {
-          obj.return();
-          return tmp2;
+    unsatisfied_constraints = global.unsatisfied_constraints;
+    someResult = undefined;
+    if (unsatisfied_constraints != null) {
+      someResult = unsatisfied_constraints.some((reason_code) => reason_code.reason_code === constants.PURCHASE_RESTRICTED);
+    }
+    orderSigningError = null;
+    if (someResult) {
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      obj = closure_0(closure_1[5]);
+      orderSigningError = obj.getOrderSigningError(global);
+    }
+    str = undefined;
+    if (orderSigningError != null) {
+      str = orderSigningError.message;
+    }
+    if (str == null) {
+      str = "Order signing failed due to unsatisfied constraints";
+    }
+    code = undefined;
+    if (orderSigningError != null) {
+      code = orderSigningError.code;
+    }
+    if (code == null) {
+      num = 0;
+      code = (function getConstraintErrorCode(unsatisfied_constraints) {
+        let prop = unsatisfied_constraints.unsatisfied_constraints;
+        if (prop == null) {
+          prop = [];
         }
-      }
-      return null;
-    })(global), new.target, tmp2, tmp);
-    tmp21.order = global;
-    return tmp21;
+        for (const item10008 of prop) {
+          let tmp2 = closure_1_6[item10008.reason_code];
+          if (null != tmp2) {
+            obj.return();
+            return tmp2;
+          }
+        }
+        return null;
+      })(global);
+    }
+    unsatisfied_constraints1 = new unsatisfied_constraints(str, code, unsatisfied_constraints);
+    unsatisfied_constraints1.order = global;
+    return unsatisfied_constraints1;
   }
 }
 let BillingError = BillingError_mod;
@@ -541,7 +570,7 @@ const prototype = function OrderProcessingPendingError() {
 }.prototype;
 class prototype extends tmp4 {
 }
-let closure_11 = [250, 500, 1000, 1500, 2500, 4250];
+let closure_12 = [250, 500, 1000, 1500, 2500, 4250];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/OrderActionCreators.tsx");
 
@@ -549,7 +578,7 @@ export { OrderSigningFailedWithConstraintsError };
 export const OrderProcessingPendingError = prototype;
 export function signOrder() {
   const self = this;
-  const apply = closure_7.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -559,7 +588,7 @@ export function signOrder() {
 }
 export function getOrder() {
   const self = this;
-  const apply = closure_8.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -570,7 +599,7 @@ export function getOrder() {
 export { fetchOrderEntitlements };
 export function fetchOrderEntitlementsWithRetry() {
   const self = this;
-  const apply = closure_12.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

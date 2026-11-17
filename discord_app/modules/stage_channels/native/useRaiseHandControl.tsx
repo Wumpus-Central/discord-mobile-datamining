@@ -1,13 +1,13 @@
-// === Module 12963: useRaiseHandControl ===
+// === Module 11594: useRaiseHandControl ===
 
-// Module 12963 (useRaiseHandControl)
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5542 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6823 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6898 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8190 */;
-import useLocalStorageState from "useLocalStorageState" /* 12965 */;
-import useCanRaiseHand from "useCanRaiseHand" /* 12966 */;
-import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 12967 */;
+// Module 11594 (useRaiseHandControl)
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5546 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6818 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 6906 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8201 */;
+import useLocalStorageState from "useLocalStorageState" /* 11596 */;
+import useCanRaiseHand from "useCanRaiseHand" /* 11597 */;
+import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 11598 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,8 +19,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/useRaiseHandControl.tsx");
 
 export default function useRaiseHandControl(id) {
-  [tmp2, require] = shouldAgeVerifyToSpeakForCurrentUser(first(12964)(id), 2);
-  let tmp = shouldAgeVerifyToSpeakForCurrentUser(first(12964)(id), 2);
+  [tmp2, require] = shouldAgeVerifyToSpeakForCurrentUser(first(11595)(id), 2);
+  let tmp = shouldAgeVerifyToSpeakForCurrentUser(first(11595)(id), 2);
   const tmp3 = shouldAgeVerifyToSpeakForCurrentUser(useLocalStorageState.useLocalStorageState("age-verification-stage-popover-dismissed", false), 2);
   first = tmp3[0];
   dependencyMap = tmp5;

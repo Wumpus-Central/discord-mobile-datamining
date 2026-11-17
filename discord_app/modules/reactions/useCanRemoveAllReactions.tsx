@@ -1,7 +1,7 @@
-// === Module 11871: useCanRemoveAllReactions ===
+// === Module 11069: useCanRemoveAllReactions ===
 
-// Module 11871 (useCanRemoveAllReactions)
-import PermissionStore from "PermissionStore" /* 5238 */;
+// Module 11069 (useCanRemoveAllReactions)
+import PermissionStore from "PermissionStore" /* 5242 */;
 
 const require = globalThis.__r;
 

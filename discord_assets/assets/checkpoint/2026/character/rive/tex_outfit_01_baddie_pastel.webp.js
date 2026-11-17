@@ -1,9 +1,9 @@
-// === Module 14369: ? ===
+// === Module 13234: ? ===
 
-// Module 14369
+// Module 13234
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_01_baddie_pastel.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/cb13824a08fd2eb0115bf56399c4ba1ef9aaa4aaa44a3dc551270ed5e7885250.webp";
-export const metadata = { fileBytes: 48534 };
+export default "https://cdn.discordapp.com/assets/content/20928b435b0ce3f20fa899e27eec24efa6126112de3536ffd5a7bfba3cb513e0.webp";
+export const metadata = { fileBytes: 114268 };

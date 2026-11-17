@@ -1,23 +1,23 @@
-// === Module 19168: ConjureYouBarButton ===
+// === Module 19213: ConjureYouBarButton ===
 
-// Module 19168 (ConjureYouBarButton)
+// Module 19213 (ConjureYouBarButton)
 import nativeDefault from "native" /* 575 */;
 import Link from "Link" /* 1503 */;
-import useConjureWandStatusDefault from "useConjureWandStatus" /* 10519 */;
-import MagicWandIcon from "MagicWandIcon" /* 10528 */;
-import ConjureWorkingWandDefault from "ConjureWorkingWand" /* 10530 */;
-import openConjureProjectsSheetDefault from "openConjureProjectsSheet" /* 10532 */;
-import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin" /* 10538 */;
-import YouBarButtonDefault from "YouBarButton" /* 19169 */;
+import MagicWandIcon from "MagicWandIcon" /* 14434 */;
+import openConjureProjectsSheetDefault from "openConjureProjectsSheet" /* 15020 */;
+import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin" /* 15025 */;
+import useConjureWandStatusDefault from "useConjureWandStatus" /* 15092 */;
+import ConjureWorkingWandDefault from "ConjureWorkingWand" /* 15097 */;
+import YouBarButtonDefault from "YouBarButton" /* 19214 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function confirmUnpin() {
   confirmConjureYouBarPinDefault(false);
 }
-const YOU_BAR_BUTTON_ICON_SIZE = fn(17701).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(17739).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND } };
 let closure_5 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };

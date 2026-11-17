@@ -1,9 +1,9 @@
-// === Module 5433: BountiesScrollGradientRive ===
+// === Module 5437: BountiesScrollGradientRive ===
 
-// Module 5433 (BountiesScrollGradientRive)
-import BaseRive from "BaseRive" /* 5375 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5428 */;
-import _modDef5434 from "module_5434" /* 5434 */;
+// Module 5437 (BountiesScrollGradientRive)
+import BaseRive from "BaseRive" /* 5379 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5432 */;
+import _modDef5438 from "module_5438" /* 5438 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ function BountiesScrollGradientRiveInner(defaultViewModelInstance) {
   }
   const tmp2 = _objectWithoutProperties(defaultViewModelInstance, closure_3);
   const merged = Object.assign(tmp2);
-  return jsx(BaseRive.BaseRive, { ref: defaultViewModelInstance.ref, src: _modDef5434, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
+  return jsx(BaseRive.BaseRive, { ref: defaultViewModelInstance.ref, src: _modDef5438, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
 }
 let closure_3 = ["ref", "fallback", "artboard", "stateMachine", "defaultViewModelInstance"];
 const jsx = fn(21).jsx;

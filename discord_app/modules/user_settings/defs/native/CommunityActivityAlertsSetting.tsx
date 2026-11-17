@@ -1,18 +1,18 @@
-// === Module 18131: CommunityActivityAlertsSetting ===
+// === Module 18172: CommunityActivityAlertsSetting ===
 
-// Module 18131 (CommunityActivityAlertsSetting)
+// Module 18172 (CommunityActivityAlertsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11013 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11779 */;
 
 require = fn;
-let SettingBuilders = fn(12406);
+let SettingBuilders = fn(12612);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.D9yVAH);
   },
-  parent: fn(9202).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(9213).MobileUserSettings.NOTIFICATIONS,
   useDescription: function useCommunityActivityAlertsSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["0PhAOH"]);
@@ -28,10 +28,10 @@ const route = SettingBuilders.createRoute({
     }
   }
 });
-SettingBuilders = fn(12406);
+SettingBuilders = fn(12612);
 const obj4 = {};
 const merged = Object.assign(route);
-obj4.parent = fn(18113).MobileNotifSettings.NOTIF_CATEGORY_SERVERS;
+obj4.parent = fn(18154).MobileNotifSettings.NOTIF_CATEGORY_SERVERS;
 const route1 = SettingBuilders.createRoute(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx");

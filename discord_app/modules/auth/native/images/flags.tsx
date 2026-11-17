@@ -1,39 +1,39 @@
-// === Module 18048: flags ===
+// === Module 18089: flags ===
 
-// Module 18048 (flags)
-import _mod18049 from "module_18049" /* 18049 */;
-import _mod18050 from "module_18050" /* 18050 */;
-import _mod18051 from "module_18051" /* 18051 */;
-import _mod18052 from "module_18052" /* 18052 */;
-import _mod18053 from "module_18053" /* 18053 */;
-import _mod18054 from "module_18054" /* 18054 */;
-import _mod18055 from "module_18055" /* 18055 */;
-import _mod18056 from "module_18056" /* 18056 */;
-import _mod18057 from "module_18057" /* 18057 */;
-import _mod18058 from "module_18058" /* 18058 */;
-import _mod18059 from "module_18059" /* 18059 */;
-import _mod18060 from "module_18060" /* 18060 */;
-import _mod18061 from "module_18061" /* 18061 */;
-import _mod18062 from "module_18062" /* 18062 */;
-import _mod18063 from "module_18063" /* 18063 */;
-import _mod18064 from "module_18064" /* 18064 */;
-import _mod18065 from "module_18065" /* 18065 */;
-import _mod18066 from "module_18066" /* 18066 */;
-import _mod18067 from "module_18067" /* 18067 */;
-import _mod18068 from "module_18068" /* 18068 */;
-import _mod18069 from "module_18069" /* 18069 */;
-import _mod18070 from "module_18070" /* 18070 */;
-import _mod18071 from "module_18071" /* 18071 */;
-import _mod18072 from "module_18072" /* 18072 */;
-import _mod18073 from "module_18073" /* 18073 */;
-import _mod18074 from "module_18074" /* 18074 */;
-import _mod18075 from "module_18075" /* 18075 */;
-import _mod18076 from "module_18076" /* 18076 */;
-import _mod18077 from "module_18077" /* 18077 */;
-import _mod18078 from "module_18078" /* 18078 */;
-import _mod18079 from "module_18079" /* 18079 */;
+// Module 18089 (flags)
+import _mod18090 from "module_18090" /* 18090 */;
+import _mod18091 from "module_18091" /* 18091 */;
+import _mod18092 from "module_18092" /* 18092 */;
+import _mod18093 from "module_18093" /* 18093 */;
+import _mod18094 from "module_18094" /* 18094 */;
+import _mod18095 from "module_18095" /* 18095 */;
+import _mod18096 from "module_18096" /* 18096 */;
+import _mod18097 from "module_18097" /* 18097 */;
+import _mod18098 from "module_18098" /* 18098 */;
+import _mod18099 from "module_18099" /* 18099 */;
+import _mod18100 from "module_18100" /* 18100 */;
+import _mod18101 from "module_18101" /* 18101 */;
+import _mod18102 from "module_18102" /* 18102 */;
+import _mod18103 from "module_18103" /* 18103 */;
+import _mod18104 from "module_18104" /* 18104 */;
+import _mod18105 from "module_18105" /* 18105 */;
+import _mod18106 from "module_18106" /* 18106 */;
+import _mod18107 from "module_18107" /* 18107 */;
+import _mod18108 from "module_18108" /* 18108 */;
+import _mod18109 from "module_18109" /* 18109 */;
+import _mod18110 from "module_18110" /* 18110 */;
+import _mod18111 from "module_18111" /* 18111 */;
+import _mod18112 from "module_18112" /* 18112 */;
+import _mod18113 from "module_18113" /* 18113 */;
+import _mod18114 from "module_18114" /* 18114 */;
+import _mod18115 from "module_18115" /* 18115 */;
+import _mod18116 from "module_18116" /* 18116 */;
+import _mod18117 from "module_18117" /* 18117 */;
+import _mod18118 from "module_18118" /* 18118 */;
+import _mod18119 from "module_18119" /* 18119 */;
+import _mod18120 from "module_18120" /* 18120 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
-export const flags = { bg: _mod18049, cs: _mod18050, da: _mod18051, de: _mod18052, el: _mod18053, "en-GB": _mod18054, "en-US": _mod18055, "es-ES": _mod18056, "es-419": _mod18057, fi: _mod18058, fr: _mod18059, hi: _mod18060, hr: _mod18061, hu: _mod18062, it: _mod18063, ja: _mod18064, ko: _mod18065, lt: _mod18066, nl: _mod18067, no: _mod18068, pl: _mod18069, "pt-BR": _mod18070, ro: _mod18071, ru: _mod18072, "sv-SE": _mod18073, th: _mod18074, tr: _mod18075, uk: _mod18076, vi: _mod18077, "zh-CN": _mod18078, "zh-TW": _mod18079 };
+export const flags = { bg: _mod18090, cs: _mod18091, da: _mod18092, de: _mod18093, el: _mod18094, "en-GB": _mod18095, "en-US": _mod18096, "es-ES": _mod18097, "es-419": _mod18098, fi: _mod18099, fr: _mod18100, hi: _mod18101, hr: _mod18102, hu: _mod18103, it: _mod18104, ja: _mod18105, ko: _mod18106, lt: _mod18107, nl: _mod18108, no: _mod18109, pl: _mod18110, "pt-BR": _mod18111, ro: _mod18112, ru: _mod18113, "sv-SE": _mod18114, th: _mod18115, tr: _mod18116, uk: _mod18117, vi: _mod18118, "zh-CN": _mod18119, "zh-TW": _mod18120 };

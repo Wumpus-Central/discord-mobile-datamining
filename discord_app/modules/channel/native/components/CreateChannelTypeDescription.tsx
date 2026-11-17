@@ -1,15 +1,15 @@
-// === Module 8155: CreateChannelTypeDescription ===
+// === Module 8166: CreateChannelTypeDescription ===
 
-// Module 8155 (CreateChannelTypeDescription)
+// Module 8166 (CreateChannelTypeDescription)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import GuildProfileVisibility from "GuildProfileVisibility" /* 7690 */;
-import useGuildProfile from "useGuildProfile" /* 8157 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import GuildProfileVisibility from "GuildProfileVisibility" /* 7700 */;
+import useGuildProfile from "useGuildProfile" /* 8168 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(8156).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(8167).GuildProfileFetchStatus;
 const ChannelTypes = fn(1072).ChannelTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);

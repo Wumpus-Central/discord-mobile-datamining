@@ -1,6 +1,6 @@
-// === Module 15892: InstantInviteShareApps ===
+// === Module 15930: InstantInviteShareApps ===
 
-// Module 15892 (InstantInviteShareApps)
+// Module 15930 (InstantInviteShareApps)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,10 +8,10 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: closure_6 } = get_ActivityIndicator);
-const InstantInviteConstants = fn(15893);
+const InstantInviteConstants = fn(15931);
 ({ SHARE_ITEMS: metroImportDefault, SHARE_ITEMS_DEFAULT: closure_8 } = InstantInviteConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { contentContainer: { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, alignItems: "center" } };
 let closure_10 = createStyles.createStyles(obj);
 let obj3 = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, alignItems: "center" };
@@ -22,11 +22,11 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
   onItemPressed = onItemPressed.onItemPressed;
   dependencyMap = undefined;
   const tmp = closure_10();
-  closure_1 = onItemPressed(5934).useFontScale();
-  let obj = onItemPressed(5934);
+  closure_1 = onItemPressed(5938).useFontScale();
+  let obj = onItemPressed(5938);
   [arr, c2] = noop.useState(closure_8);
   const tmp2 = _slicedToArray(noop.useState(closure_8), 2);
-  gesture = onItemPressed(5588).useNativeGesture({ disallowInterruption: true });
+  gesture = onItemPressed(5592).useNativeGesture({ disallowInterruption: true });
   const effect = noop.useEffect(() => {
     Promise.all(metroImportDefault.map((isAvailable) => isAvailable.isAvailable)).then((arr) => {
       items = [];
@@ -143,5 +143,5 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
     obj.children = tmpResult;
     return <closure_1_5 key={type.type} style={{ maxWidth: 76 * closure_1 }}>{null}</closure_1_5>;
   })}</closure_6>;
-  return jsx(onItemPressed(5588).GestureDetector, { gesture, children });
+  return jsx(onItemPressed(5592).GestureDetector, { gesture, children });
 });

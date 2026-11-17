@@ -1,20 +1,22 @@
-// === Module 19953: FramePanelFocusedView ===
+// === Module 19998: FramePanelFocusedView ===
 
-// Module 19953 (FramePanelFocusedView)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 12743 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 13355 */;
-import FrameStackLevel from "FrameStackLevel" /* 13359 */;
-import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 19436 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19934 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 19950 */;
+// Module 19998 (FramePanelFocusedView)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11300 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 14595 */;
+import FrameStackLevel from "FrameStackLevel" /* 14599 */;
+import ConjureFrameUpdateBarDefault from "ConjureFrameUpdateBar" /* 19481 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 19979 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 19995 */;
+import PlayableFrameBannerDefault from "PlayableFrameBanner" /* 20001 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 7019 */;
+import FramesStore from "FramesStore" /* 7027 */;
 
 require = fn;
-const FramesConstants = fn(7020);
+const FramesConstants = fn(7028);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: closure_6 } = FramesConstants);
-const ActivityPanelModes = fn(5949).ActivityPanelModes;
-const jsx = fn(21).jsx;
+const ActivityPanelModes = fn(5953).ActivityPanelModes;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelFocusedView.tsx");
 
@@ -37,7 +39,7 @@ export default noop.memo(function FramePanelFocusedView(transitionState) {
   const baseActivityPanelFocusedView = obj2.useBaseActivityPanelFocusedView({ context: transitionCleanUp(stateFromStores[7]) });
   const portraitSafeAreasConfig = baseActivityPanelFocusedView.portraitSafeAreasConfig;
   landscapeSafeAreasConfig = baseActivityPanelFocusedView.landscapeSafeAreasConfig;
-  const memo = portraitSafeAreasConfig.useMemo(() => jsx(transitionCleanUp(stateFromStores[8]), {}), []);
+  const memo = portraitSafeAreasConfig.useMemo(() => closure_1_8(transitionCleanUp(stateFromStores[8]), {}), []);
   const items1 = [stateFromStores];
   const updateActivityPanelModeToPIP = portraitSafeAreasConfig.useCallback(() => {
     if (null != stateFromStores) {
@@ -47,7 +49,7 @@ export default noop.memo(function FramePanelFocusedView(transitionState) {
   const items2 = [stateFromStores, memo, landscapeSafeAreasConfig, portraitSafeAreasConfig, transitionCleanUp, transitionState, updateActivityPanelModeToPIP];
   return portraitSafeAreasConfig.useMemo(() => {
     const obj = { transitionState, transitionCleanUp, updateActivityPanelModeToPIP, hasActivity: null != stateFromStores, context: FramePanelStateContextDefault, header: memo, children: null };
-    let tmpResult = null;
+    let tmp5 = null;
     if (null != stateFromStores) {
       const obj2 = { frameId: stateFromStores, children: null };
       const obj3 = { frameId: stateFromStores, level: null, presentation: null };
@@ -55,11 +57,14 @@ export default noop.memo(function FramePanelFocusedView(transitionState) {
       obj3.level = FrameStackLevel.FrameStackLevel.AboveAppContent;
       const obj4 = { layoutMode: constants.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig };
       obj3.presentation = obj4;
-      obj2.children = jsx(FrameRenderTargetDefault, { frameId: stateFromStores, level: null, presentation: null });
-      tmpResult = <tmp6Result frameId={stateFromStores}>{null}</tmp6Result>;
+      items = [React5(FrameRenderTargetDefault, obj3), ];
+      const obj5 = { frameId: stateFromStores };
+      items[1] = React5(PlayableFrameBannerDefault, obj5, stateFromStores);
+      obj2.children = items;
+      tmp5 = React6(tmp6Result, obj2);
       const tmp6Result2 = FrameRenderTargetDefault;
     }
-    obj.children = tmpResult;
-    return jsx(ActivityPanelFocusedView.BaseActivityPanelFocusedView, { transitionState, transitionCleanUp, updateActivityPanelModeToPIP, hasActivity: null != stateFromStores, context: FramePanelStateContextDefault, header: memo, children: null });
+    obj.children = tmp5;
+    return React5(ActivityPanelFocusedView.BaseActivityPanelFocusedView, obj);
   }, items2);
 });

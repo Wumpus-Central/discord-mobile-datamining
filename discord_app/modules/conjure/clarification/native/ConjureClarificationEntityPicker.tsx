@@ -1,21 +1,21 @@
-// === Module 13740: ConjureClarificationEntityPicker ===
+// === Module 14790: ConjureClarificationEntityPicker ===
 
-// Module 13740 (ConjureClarificationEntityPicker)
+// Module 14790 (ConjureClarificationEntityPicker)
 import util from "util" /* 1113 */;
-import _modDef4131 from "module_4131" /* 4131 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5542 */;
-import ConjureUtils from "ConjureUtils" /* 7260 */;
-import TableRow from "TableRow" /* 7443 */;
-import TableRowGroup from "TableRowGroup" /* 7746 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11964 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 13238 */;
-import ConjureClarification from "ConjureClarification" /* 13571 */;
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 13584 */;
-import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 13741 */;
-import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 13742 */;
+import _modDef4133 from "module_4133" /* 4133 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5546 */;
+import ConjureUtils from "ConjureUtils" /* 7270 */;
+import TableRow from "TableRow" /* 7453 */;
+import TableRowGroup from "TableRowGroup" /* 7756 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12409 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 14470 */;
+import ConjureClarification from "ConjureClarification" /* 14621 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 14634 */;
+import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 14791 */;
+import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 14792 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 5236 */;
-import GuildStore from "GuildStore" /* 5177 */;
+import GuildChannelStore from "GuildChannelStore" /* 5240 */;
+import GuildStore from "GuildStore" /* 5181 */;
 
 require = fn;
 function ServerPicker(onChange) {
@@ -207,7 +207,7 @@ function GuildEntityPicker(value) {
                                     let obj = { content: null, key: null, stackingBehavior: "stack" };
                                     obj4.selectedChannel = found;
                                     const intl = util.intl;
-                                    obj4.noChannelOptionLabel = intl.string(_modDef4131["jtBVV+"]);
+                                    obj4.noChannelOptionLabel = intl.string(_modDef4133["jtBVV+"]);
                                     obj4.onSelect = function onSelect(stateFromStores1) {
                                       if (null == stateFromStores1) {
                                         items = [];

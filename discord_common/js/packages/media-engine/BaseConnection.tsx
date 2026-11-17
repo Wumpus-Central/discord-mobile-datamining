@@ -1,16 +1,16 @@
-// === Module 6099: BaseConnection ===
+// === Module 6106: BaseConnection ===
 
-// Module 6099 (BaseConnection)
-import VideoQualityManager from "VideoQualityManager" /* 6100 */;
-import ConnectionEventFramerateReducer from "ConnectionEventFramerateReducer" /* 6102 */;
-import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 6103 */;
-import _modDef6104 from "module_6104" /* 6104 */;
-import flatRestDefault from "flatRest" /* 6133 */;
+// Module 6106 (BaseConnection)
+import VideoQualityManager from "VideoQualityManager" /* 6107 */;
+import ConnectionEventFramerateReducer from "ConnectionEventFramerateReducer" /* 6109 */;
+import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 6110 */;
+import _modDef6111 from "module_6111" /* 6111 */;
+import flatRestDefault from "flatRest" /* 6140 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 6089 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 6096 */;
 
 require = fn;
-const Constants = fn(6065);
+const Constants = fn(6072);
 ({ ConnectionStates: closure_4, DEFAULT_VOICE_BITRATE: hasOwnProperty, MediaTypes: closure_6, ResolutionTypes: metroImportDefault, MediaEngineContextTypes: closure_8, VIDEO_QUALITY_FRAMERATE: closure_9, SIMULCAST_HQ_QUALITY: closure_10 } = Constants);
 let closure_11 = 0;
 class BaseConnection extends tmp3 {
@@ -33,6 +33,7 @@ class BaseConnection extends tmp3 {
     tmp4.videoSupported = false;
     tmp4.useElectronVideo = false;
     tmp4.spatialAudioEnabled = false;
+    tmp4.spatialAudioActive = false;
     tmp4.voiceBitrate = DEFAULT_VOICE_BITRATE;
     tmp4.remoteSinkWantsMaxFramerate = VIDEO_QUALITY_FRAMERATE;
     set = new Set();
@@ -133,7 +134,7 @@ prototype["presentDesktopSourcePicker"] = function presentDesktopSourcePicker(ar
 
 };
 prototype["getStreamParameters"] = function getStreamParameters() {
-  return _modDef6104(this.videoStreamParameters);
+  return _modDef6111(this.videoStreamParameters);
 };
 prototype["setExperimentFlag"] = function setExperimentFlag(arg0, arg1) {
   const experimentFlags = this.experimentFlags;
@@ -158,7 +159,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(React6) {
   }
   const result = self.applyQualityConstraints({}, self.videoStreamParameters[num].ssrc);
   ({ quality, constraints } = result);
-  const tmp2 = _modDef6104(self.videoStreamParameters);
+  const tmp2 = _modDef6111(self.videoStreamParameters);
   if (null != quality) {
     ({ bitrateMax: tmp2[num].maxBitrate, bitrateMin: tmp2[num].minBitrate, bitrateTarget } = quality);
     if (bitrateTarget == null) {
@@ -208,7 +209,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(React6) {
       tmp6 = tmp11;
     } while (num2 < self.videoStreamParameters.length);
   }
-  tmp5.streamParameters = _modDef6104(self.videoStreamParameters);
+  tmp5.streamParameters = _modDef6111(self.videoStreamParameters);
   const prop = self.videoStreamParameters;
   items = [
     ...prop.map((maxPixelCount) => {
@@ -374,6 +375,17 @@ prototype["setSpatialAudioEnabled"] = function setSpatialAudioEnabled(arg0) {
   }
   self.spatialAudioEnabled = tmp;
 };
+prototype["getSpatialAudioActive"] = function getSpatialAudioActive() {
+  return this.spatialAudioActive;
+};
+prototype["setSpatialAudioActive"] = function setSpatialAudioActive(arg0) {
+  const self = this;
+  let tmp = arg0;
+  if (arg0) {
+    tmp = self.context === constants3.DEFAULT;
+  }
+  self.spatialAudioActive = tmp;
+};
 prototype["setCalcMaxBitrateFunc"] = function setCalcMaxBitrateFunc(calcMaxBitrateFunc) {
   this.calcMaxBitrateFunc = calcMaxBitrateFunc;
 };
@@ -385,4 +397,4 @@ let size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnection.tsx");
 
 export default BaseConnection;
-export const BaseConnectionEvent = fn(6103).BaseConnectionEvent;
+export const BaseConnectionEvent = fn(6110).BaseConnectionEvent;

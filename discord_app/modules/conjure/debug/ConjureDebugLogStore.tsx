@@ -1,9 +1,9 @@
-// === Module 7371: ConjureDebugLogStore ===
+// === Module 7381: ConjureDebugLogStore ===
 
-// Module 7371 (ConjureDebugLogStore)
+// Module 7381 (ConjureDebugLogStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import ConjureSequencedBuffer from "ConjureSequencedBuffer" /* 7372 */;
+import ConjureSequencedBuffer from "ConjureSequencedBuffer" /* 7382 */;
 
 require = fn;
 function logSeq(log) {

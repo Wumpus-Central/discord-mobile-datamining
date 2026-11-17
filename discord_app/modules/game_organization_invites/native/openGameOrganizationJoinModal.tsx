@@ -1,7 +1,7 @@
-// === Module 14065: openGameOrganizationJoinModal ===
+// === Module 12889: openGameOrganizationJoinModal ===
 
-// Module 14065 (openGameOrganizationJoinModal)
-import checkGameOrganizationJoinEligibilityDefault from "checkGameOrganizationJoinEligibility" /* 14066 */;
+// Module 12889 (openGameOrganizationJoinModal)
+import checkGameOrganizationJoinEligibilityDefault from "checkGameOrganizationJoinEligibility" /* 12890 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -63,7 +63,7 @@ let closure_5 = async function _openGameOrganizationJoinModal(arg0) {
     }
   }
 };
-let closure_4 = fn(12369).GAME_ORGANIZATION_JOIN_MODAL_KEY;
+let closure_4 = fn(12573).GAME_ORGANIZATION_JOIN_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/native/openGameOrganizationJoinModal.tsx");
 

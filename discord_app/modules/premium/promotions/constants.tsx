@@ -1,6 +1,6 @@
-// === Module 9669: constants ===
+// === Module 9682: constants ===
 
-// Module 9669 (constants)
+// Module 9682 (constants)
 import size from "module_2" /* 2 */;
 
 const items = ["logitech", "youtube", "best_buy", "call_of_duty"];
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/premium/promotions/constants.
 
 export const CountryListMode = { BLOCKLIST: "blocklist", ALLOWLIST: "allowlist" };
 export const PromotionTypes = { THIRD_PARTY: 0, [0]: "THIRD_PARTY", BOGO: 1, [1]: "BOGO", THIRD_PARTY_DIRECT_FULFILLMENT: 2, [2]: "THIRD_PARTY_DIRECT_FULFILLMENT", THIRD_PARTY_INBOUND: 3, [3]: "THIRD_PARTY_INBOUND", THIRD_PARTY_OUTBOUND: 4, [4]: "THIRD_PARTY_OUTBOUND", MARKETING_MOMENT: 5, [5]: "MARKETING_MOMENT", GIFT_PROMOTION: 6, [6]: "GIFT_PROMOTION", THIRD_PARTY_OUTBOUND_RECURRING: 7, [7]: "THIRD_PARTY_OUTBOUND_RECURRING" };
-export const RECURRING_PARTNERS = { steelseries: { id: "steelseries", label: "SteelSeries" }, logitech: { id: "logitech", label: "Logitech" } };
+export const RECURRING_PARTNERS = { steelseries: { id: "steelseries", label: "SteelSeries" }, logitech: { id: "logitech", label: "Logitech" }, voicemod: { id: "voicemod", label: "Voicemod" } };
 export const STEELSERIES_PARTNER_ID = "steelseries";
 export const LOGITECH_PARTNER_ID = "logitech";
 export const XBOX_PARTNER_ID = "xbox";
@@ -18,6 +18,7 @@ export const RUST_PARTNER_ID = "rust";
 export const BLOONS_PARTNER_ID = "bloons";
 export const BEST_BUY_PARTNER_ID = "best_buy";
 export const CALL_OF_DUTY_PARTNER_ID = "call_of_duty";
+export const VOICEMOD_PARTNER_ID = "voicemod";
 export const DEDICATED_SURFACE_PARTNER_IDS = new Set(items);
 export const RECURRING_3P_PARTNER_ORDER = items1;
 export const FALLBACK_PROMOTION_PRIORITY = 101;

@@ -1,8 +1,8 @@
-// === Module 15148: getConjureAppSoundButton ===
+// === Module 15175: getConjureAppSoundButton ===
 
-// Module 15148 (getConjureAppSoundButton)
-import _modDef4131 from "module_4131" /* 4131 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 12743 */;
+// Module 15175 (getConjureAppSoundButton)
+import _modDef4133 from "module_4133" /* 4133 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 11300 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,12 +13,12 @@ export default function getConjureAppSoundButton(arg0, arg1) {
   _require = arg0;
   importDefault = arg1;
   const intl = require("util").intl;
-  const tmp3 = _modDef4131;
+  const tmp3 = _modDef4133;
   const obj = { label: intl.string(arg1 ? tmp3.bd0Ufh : tmp3.dxBzpe), IconComponent: null, onPress: null };
   if (arg1) {
-    let VoiceXIcon = tmp(7432).VoiceNormalIcon;
+    let VoiceXIcon = tmp(7442).VoiceNormalIcon;
   } else {
-    VoiceXIcon = tmp(13018).VoiceXIcon;
+    VoiceXIcon = tmp(11659).VoiceXIcon;
   }
   obj.IconComponent = VoiceXIcon;
   obj.onPress = function onPress() {

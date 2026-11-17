@@ -1,6 +1,6 @@
-// === Module 17791: QuestBarExpandRateV1Experiment ===
+// === Module 17831: QuestBarExpandRateV1Experiment ===
 
-// Module 17791 (QuestBarExpandRateV1Experiment)
+// Module 17831 (QuestBarExpandRateV1Experiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

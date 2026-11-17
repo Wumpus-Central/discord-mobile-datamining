@@ -1,7 +1,7 @@
-// === Module 7979: useEventException ===
+// === Module 7990: useEventException ===
 
-// Module 7979 (useEventException)
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7029 */;
+// Module 7990 (useEventException)
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7037 */;
 
 const require = globalThis.__r;
 

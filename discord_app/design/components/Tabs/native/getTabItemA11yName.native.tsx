@@ -1,6 +1,6 @@
-// === Module 13264: getTabItemA11yName ===
+// === Module 14157: getTabItemA11yName ===
 
-// Module 13264 (getTabItemA11yName)
+// Module 14157 (getTabItemA11yName)
 import util from "util" /* 1113 */;
 import _modDef2202 from "module_2202" /* 2202 */;
 import size from "module_2" /* 2 */;

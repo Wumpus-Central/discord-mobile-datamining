@@ -1,14 +1,14 @@
-// === Module 17516: PremiumManageSubscriptionsSetting ===
+// === Module 17553: PremiumManageSubscriptionsSetting ===
 
-// Module 17516 (PremiumManageSubscriptionsSetting)
+// Module 17553 (PremiumManageSubscriptionsSetting)
 import util from "util" /* 1113 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 9585 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 9788 */;
-import MapleSyrupExperiments from "MapleSyrupExperiments" /* 10511 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 9597 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 9801 */;
+import MapleSyrupExperiments from "MapleSyrupExperiments" /* 10565 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(12406);
+const SettingBuilders = fn(12612);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const mapleSyrup2Treatment = MapleSyrupExperiments.useMapleSyrup2Treatment("useTitle");
@@ -25,7 +25,7 @@ const route = SettingBuilders.createRoute({
     return stringResult;
   },
   parent: null,
-  IconComponent: fn(17517).SubscriptionIcon,
+  IconComponent: fn(17554).SubscriptionIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();

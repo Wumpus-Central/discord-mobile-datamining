@@ -1,8 +1,8 @@
-// === Module 17052: AccessibilityPreferencesContextProvider ===
+// === Module 17087: AccessibilityPreferencesContextProvider ===
 
-// Module 17052 (AccessibilityPreferencesContextProvider)
+// Module 17087 (AccessibilityPreferencesContextProvider)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5307 */;
+import AccessibilityStore from "AccessibilityStore" /* 5311 */;
 
 const require = fn;
 const jsx = fn(21).jsx;

@@ -1,13 +1,13 @@
-// === Module 13258: ConjureEffortPicker ===
+// === Module 14488: ConjureEffortPicker ===
 
-// Module 13258 (ConjureEffortPicker)
+// Module 14488 (ConjureEffortPicker)
 import util from "util" /* 1113 */;
-import _modDef4131 from "module_4131" /* 4131 */;
-import TableRadioRow from "TableRadioRow" /* 7747 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7913 */;
-import ActionSheet from "ActionSheet" /* 7951 */;
-import ConjureEffortTiers from "ConjureEffortTiers" /* 13259 */;
-import ConjureModelLabels from "ConjureModelLabels" /* 13260 */;
+import _modDef4133 from "module_4133" /* 4133 */;
+import TableRadioRow from "TableRadioRow" /* 7757 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7923 */;
+import ActionSheet from "ActionSheet" /* 7961 */;
+import ConjureEffortTiers from "ConjureEffortTiers" /* 14489 */;
+import ConjureModelLabels from "ConjureModelLabels" /* 14490 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -71,7 +71,7 @@ class ConjureEffortPicker {
         const tmp2Result = ConjureEffortTiers;
       } else {
         const intl = util.intl;
-        result = intl.string(_modDef4131["17yEQw"]);
+        result = intl.string(_modDef4133["17yEQw"]);
       }
       obj.subLabel = result;
       obj.value = value;
@@ -207,7 +207,7 @@ export function ConjureEffortPickerSheet(onChange) {
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef4131.aBPQxX);
+  obj2.title = intl.string(_modDef4133.aBPQxX);
   obj.header = timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = timestampProducer(View, { children: timestampProducer(ConjureEffortPicker, { settings: tmp[0], tiers, choices, disabled: false, onChange: callback, hideTitle: true }) });
   return timestampProducer(ActionSheet.ActionSheet, obj);

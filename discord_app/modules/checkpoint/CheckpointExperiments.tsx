@@ -1,6 +1,6 @@
-// === Module 6738: CheckpointExperiments ===
+// === Module 6746: CheckpointExperiments ===
 
-// Module 6738 (CheckpointExperiments)
+// Module 6746 (CheckpointExperiments)
 import ApexExperiment_mod from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
@@ -10,6 +10,8 @@ let ApexExperiment = ApexExperiment_mod;
 let closure_1 = ApexExperiment.createApexExperiment({ name: "2026-09-build-a-bear-cards", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let ApexExperiment = ApexExperiment_mod;
 let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-10-build-a-bear-qa", kind: "user", defaultConfig: { mode: "off" }, variations: { 0: { mode: "off" }, 1: { mode: "all" }, 2: { mode: "reset_only" } } });
+let ApexExperiment = ApexExperiment_mod;
+let closure_3 = ApexExperiment.createApexExperiment({ name: "2026-11-checkpoint-intro", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointExperiments.tsx");
 
 export function useIsCheckpointEnabled(CheckpointProfileEntrypoint) {
@@ -26,4 +28,7 @@ export function getIsCheckpointCardEnabled(transformCheckpointCardToRowGenerated
 }
 export function useCheckpointQAMode(CheckpointProfileEntrypoint) {
   return closure_2.useConfig({ location: CheckpointProfileEntrypoint }).mode;
+}
+export function useIsCheckpointIntroEnabled(location) {
+  return closure_3.useConfig({ location }).enabled;
 }

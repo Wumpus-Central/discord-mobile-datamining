@@ -1,23 +1,23 @@
-// === Module 15029: CreateGuildIcons ===
+// === Module 14241: CreateGuildIcons ===
 
-// Module 15029 (CreateGuildIcons)
-import _modDef14723 from "module_14723" /* 14723 */;
-import _modDef14724 from "module_14724" /* 14724 */;
-import _modDef14725 from "module_14725" /* 14725 */;
-import _modDef14726 from "module_14726" /* 14726 */;
-import _modDef14727 from "module_14727" /* 14727 */;
-import _modDef14728 from "module_14728" /* 14728 */;
-import _modDef14729 from "module_14729" /* 14729 */;
-import PencilIllocon from "PencilIllocon" /* 15030 */;
-import ControllerIllocon from "ControllerIllocon" /* 15033 */;
-import HeartIllocon from "HeartIllocon" /* 15037 */;
-import AppleIllocon from "AppleIllocon" /* 15041 */;
-import BookIllocon from "BookIllocon" /* 15045 */;
-import PaintIllocon from "PaintIllocon" /* 15049 */;
-import LeafIllocon from "LeafIllocon" /* 15053 */;
+// Module 14241 (CreateGuildIcons)
+import _modDef13801 from "module_13801" /* 13801 */;
+import _modDef13802 from "module_13802" /* 13802 */;
+import _modDef13803 from "module_13803" /* 13803 */;
+import _modDef13804 from "module_13804" /* 13804 */;
+import _modDef13805 from "module_13805" /* 13805 */;
+import _modDef13806 from "module_13806" /* 13806 */;
+import _modDef13807 from "module_13807" /* 13807 */;
+import PencilIllocon from "PencilIllocon" /* 14242 */;
+import ControllerIllocon from "ControllerIllocon" /* 14245 */;
+import HeartIllocon from "HeartIllocon" /* 14249 */;
+import AppleIllocon from "AppleIllocon" /* 14253 */;
+import BookIllocon from "BookIllocon" /* 14257 */;
+import PaintIllocon from "PaintIllocon" /* 14261 */;
+import LeafIllocon from "LeafIllocon" /* 14265 */;
 import size from "module_2" /* 2 */;
 
-const obj = { CREATE: _modDef14723, GAMING: _modDef14727, FRIENDS: _modDef14725, STUDY: _modDef14726, CLUBS: _modDef14728, CREATORS: _modDef14729, LOCAL_COMMUNITY: _modDef14724, SCHOOL_CLUB: _modDef14728 };
+const obj = { CREATE: _modDef13801, GAMING: _modDef13805, FRIENDS: _modDef13803, STUDY: _modDef13804, CLUBS: _modDef13806, CREATORS: _modDef13807, LOCAL_COMMUNITY: _modDef13802, SCHOOL_CLUB: _modDef13806 };
 const result = size.fileFinishedImporting("modules/create_guild/native/CreateGuildIcons.tsx");
 
 export const GUILD_TEMPLATE_ICONS = obj;

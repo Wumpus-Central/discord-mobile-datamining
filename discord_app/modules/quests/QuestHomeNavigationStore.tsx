@@ -1,10 +1,11 @@
-// === Module 10129: QuestHomeNavigationStore ===
+// === Module 10574: QuestHomeNavigationStore ===
 
-// Module 10129 (QuestHomeNavigationStore)
-import ZustandStore from "ZustandStore" /* 5495 */;
+// Module 10574 (QuestHomeNavigationStore)
+import ZustandStore from "ZustandStore" /* 5499 */;
 import size from "module_2" /* 2 */;
 
-const zustandStore = ZustandStore.createZustandStore(() => ({ sort: null, filter: null, scrollToQuestId: null, scrollToQuestsSection: false }));
+const zustandStore = ZustandStore.createZustandStore(() => ({ sort: null, filter: null, scrollToQuestId: null, scrollToSection: null }));
 const result = size.fileFinishedImporting("modules/quests/QuestHomeNavigationStore.tsx");
 
 export default zustandStore;
+export const QuestHomeSection = { ORBS_ARCADE: "orbs_arcade", QUESTS: "quests" };

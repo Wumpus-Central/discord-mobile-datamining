@@ -1,23 +1,23 @@
-// === Module 19362: MainTabsChannelScreenStack ===
+// === Module 19407: MainTabsChannelScreenStack ===
 
-// Module 19362 (MainTabsChannelScreenStack)
+// Module 19407 (MainTabsChannelScreenStack)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import native from "native" /* 5367 */;
-import useChatLayout from "useChatLayout" /* 5485 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5487 */;
-import useThemeDefault from "useTheme" /* 5537 */;
-import Suspender from "Suspender" /* 6289 */;
-import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 12011 */;
-import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 12422 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18717 */;
-import MainTabsBackgroundChat from "MainTabsBackgroundChat" /* 18719 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18720 */;
-import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 19366 */;
-import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 19367 */;
-import ChannelScreenFrameContainerDefault from "ChannelScreenFrameContainer" /* 19368 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 19369 */;
+import native from "native" /* 5371 */;
+import useChatLayout from "useChatLayout" /* 5489 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5491 */;
+import useThemeDefault from "useTheme" /* 5541 */;
+import Suspender from "Suspender" /* 6297 */;
+import MainTabsNavigatorPanelContextDefault from "MainTabsNavigatorPanelContext" /* 12448 */;
+import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 12628 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 18758 */;
+import MainTabsBackgroundChat from "MainTabsBackgroundChat" /* 18760 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18761 */;
+import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 19411 */;
+import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 19412 */;
+import ChannelScreenFrameContainerDefault from "ChannelScreenFrameContainer" /* 19413 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 19414 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -223,14 +223,14 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: closure_6, View: metroImportDefault } = get_ActivityIndicator);
-const setVisibleChannelScreen = fn(19363).setVisibleChannelScreen;
-const ONYX_BORDER_WIDTH = fn(9052).ONYX_BORDER_WIDTH;
+const setVisibleChannelScreen = fn(19408).setVisibleChannelScreen;
+const ONYX_BORDER_WIDTH = fn(9063).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: closure_10, AnalyticsSections: closure_11 } = Constants);
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_15 = createStyles.createStyles({ onyxContainerStyles: { marginTop: -ONYX_BORDER_WIDTH, marginLeft: -ONYX_BORDER_WIDTH } });
 let closure_16 = { code: "(function MainTabsChannelScreenStackTsx1(){let[isStackVisible,highestFullyRenderedScreenIndex,index,alwaysVisible,translateX,maxWidth]=this.__closure;return isStackVisible&&highestFullyRenderedScreenIndex.get()<=index&&(alwaysVisible||translateX.get()<maxWidth);})" };
 let closure_17 = { code: "(function MainTabsChannelScreenStackTsx2(visible,wasVisible){let[scheduleOnRN,setIsVisible]=this.__closure;if(visible===wasVisible)return;scheduleOnRN(setIsVisible,visible);})" };

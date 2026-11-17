@@ -1,9 +1,9 @@
-// === Module 14389: ? ===
+// === Module 13254: ? ===
 
-// Module 14389
+// Module 13254
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_05_athlete_checkered.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/f04c24b3330c703e0f9e012ffd4e50680c8f62e0e73df713450cf3268b60bb3d.webp";
-export const metadata = { fileBytes: 33804 };
+export default "https://cdn.discordapp.com/assets/content/f02e0c0748217a994ac0b399eaae937961c78e45a8b3a0b813d0dd4decac8a12.webp";
+export const metadata = { fileBytes: 83642 };

@@ -1,8 +1,8 @@
-// === Module 16280: reactParserFor ===
+// === Module 6052: reactParserFor ===
 
-// Module 16280 (reactParserFor)
-import Spoiler from "Spoiler" /* 6049 */;
-import markup_MarkupParserDefault from "markup/MarkupParser" /* 9217 */;
+// Module 6052 (reactParserFor)
+import MarkupParserDefault from "MarkupParser" /* 6053 */;
+import Spoiler from "Spoiler" /* 6055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/markup/native/reactParserFor.
 export default function reactParserFor() {
   items = [...arguments];
   const items1 = [...items];
-  closure_0 = markup_MarkupParserDefault.reactParserFor.apply(items1);
+  closure_0 = MarkupParserDefault.reactParserFor.apply(items1);
   return function parseWithSpoilers() {
     items = [...arguments];
     const tmp = closure_0(...items);

@@ -1,6 +1,6 @@
-// === Module 12756: openFrameInAppChannel ===
+// === Module 11365: openFrameInAppChannel ===
 
-// Module 12756 (openFrameInAppChannel)
+// Module 11365 (openFrameInAppChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

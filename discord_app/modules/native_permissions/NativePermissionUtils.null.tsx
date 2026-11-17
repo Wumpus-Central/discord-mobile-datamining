@@ -1,7 +1,7 @@
-// === Module 8194: requestPermissionCore ===
+// === Module 8205: requestPermissionCore ===
 
-// Module 8194 (requestPermissionCore)
-import NativePermissionBaseUtils2 from "NativePermissionBaseUtils" /* 8195 */;
+// Module 8205 (requestPermissionCore)
+import NativePermissionBaseUtils2 from "NativePermissionBaseUtils" /* 8206 */;
 import size from "module_2" /* 2 */;
 
 const NativePermissionBaseUtils = NativePermissionBaseUtils2.NativePermissionBaseUtils;

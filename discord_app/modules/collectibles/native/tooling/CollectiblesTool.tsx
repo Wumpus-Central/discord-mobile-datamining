@@ -1,18 +1,18 @@
-// === Module 18369: CollectiblesTool ===
+// === Module 18410: CollectiblesTool ===
 
-// Module 18369 (CollectiblesTool)
+// Module 18410 (CollectiblesTool)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import BaseTextButton from "BaseTextButton" /* 5927 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 10020 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 10416 */;
-import actions_GiftCodeActionCreators from "actions/GiftCodeActionCreators" /* 12381 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import BaseTextButton from "BaseTextButton" /* 5931 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 10033 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 10166 */;
+import actions_GiftCodeActionCreators from "actions/GiftCodeActionCreators" /* 12585 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 11665 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10090 */;
 import UserStore from "UserStore" /* 1388 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8485 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8500 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8496 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8511 */;
 
 const require = globalThis.__r;
 
@@ -119,12 +119,12 @@ function FramePreviewOverrideSection() {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_11 = fn(8563).useFramePreviewOverrideStore;
+let closure_11 = fn(8574).useFramePreviewOverrideStore;
 const application_id = fn(1072).COLLECTIBLES_APPLICATION_ID;
 const PremiumGiftStyles = fn(1390).PremiumGiftStyles;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollContainer: null, contentContainer: null, section: null, sectionHeader: null, sectionTitle: null, inputContainer: null, inputWrapper: null, inputLabel: null, statusText: null, statusSuccess: null, statusError: null, statusLoading: null, previewContainer: null, previewButton: null, secondaryButton: null, description: null, placeholder: null, placeholderText: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };

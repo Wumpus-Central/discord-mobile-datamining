@@ -1,10 +1,10 @@
-// === Module 15151: VoiceChannelAppActionCreators ===
+// === Module 15178: VoiceChannelAppActionCreators ===
 
-// Module 15151 (VoiceChannelAppActionCreators)
+// Module 15178 (VoiceChannelAppActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import leaveFrame from "leaveFrame" /* 7349 */;
-import voiceChannelAppSession from "voiceChannelAppSession" /* 14041 */;
-import FramesStore from "FramesStore" /* 7019 */;
+import leaveFrame from "leaveFrame" /* 7359 */;
+import voiceChannelAppSession from "voiceChannelAppSession" /* 12863 */;
+import FramesStore from "FramesStore" /* 7027 */;
 
 require = fn;
 const size = fn(2);

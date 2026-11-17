@@ -1,13 +1,13 @@
-// === Module 6007: ? ===
+// === Module 6011: ? ===
 
-// Module 6007
-import module_5317 from "module_5317" /* 5317 */;
+// Module 6011
+import module_5321 from "module_5321" /* 5321 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 let c2 = 1;
-const useToastStore = module_5317.create(() => {
+const useToastStore = module_5321.create(() => {
   const obj = { currentToastMap: new Map(), queuedToastsMap: null };
   const map = new Map();
   obj.queuedToastsMap = new Map();

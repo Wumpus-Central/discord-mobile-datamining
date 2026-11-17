@@ -1,6 +1,6 @@
-// === Module 7234: conjureGuildReturnsToProject ===
+// === Module 7242: conjureGuildReturnsToProject ===
 
-// Module 7234 (conjureGuildReturnsToProject)
+// Module 7242 (conjureGuildReturnsToProject)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/builder/conjureGuildReturnsToProject.native.tsx");

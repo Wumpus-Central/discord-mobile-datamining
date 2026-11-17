@@ -1,13 +1,13 @@
-// === Module 5331: HexagonCampaignConstants ===
+// === Module 5335: HexagonCampaignConstants ===
 
-// Module 5331 (HexagonCampaignConstants)
+// Module 5335 (HexagonCampaignConstants)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
 import PremiumConstants from "PremiumConstants" /* 1390 */;
 import DisplayNameFont from "DisplayNameFont" /* 1398 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1399 */;
 import user from "user" /* 1401 */;
-import AppIconTypes from "AppIconTypes" /* 5332 */;
-import HexagonCampaignDates from "HexagonCampaignDates" /* 5333 */;
+import AppIconTypes from "AppIconTypes" /* 5336 */;
+import HexagonCampaignDates from "HexagonCampaignDates" /* 5337 */;
 import size from "module_2" /* 2 */;
 
 const PremiumTypes = PremiumConstants.PremiumTypes;

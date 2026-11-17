@@ -1,11 +1,11 @@
-// === Module 13302: ConjureChatMoreSheet ===
+// === Module 14529: ConjureChatMoreSheet ===
 
-// Module 13302 (ConjureChatMoreSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import useConjureShareToServer from "useConjureShareToServer" /* 13189 */;
+// Module 14529 (ConjureChatMoreSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import useConjureShareToServer from "useConjureShareToServer" /* 14532 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import PermissionStore from "PermissionStore" /* 5238 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import PermissionStore from "PermissionStore" /* 5242 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -15,7 +15,7 @@ function MoreRow(row) {
     const obj2 = { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null };
     ({ label: obj3.label, subLabel: obj3.subLabel } = row);
     const obj4 = { IconComponent: row.IconComponent };
-    obj2.icon = jsx(row(7455).TableRowIcon, { IconComponent: row.IconComponent });
+    obj2.icon = jsx(row(7465).TableRowIcon, { IconComponent: row.IconComponent });
     ({ value: obj3.value, disabled: obj3.disabled } = row);
     obj2.onValueChange = function onValueChange(arg0) {
       let tmp = arg0;
@@ -27,7 +27,7 @@ function MoreRow(row) {
       }
       row.onValueChange(arg0);
     };
-    return jsx(row(7954).TableSwitchRow, { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null });
+    return jsx(row(7964).TableSwitchRow, { label: null, subLabel: null, icon: null, value: null, disabled: null, onValueChange: null });
   } else {
     let str = "default";
     if (true === row.destructive) {
@@ -35,15 +35,15 @@ function MoreRow(row) {
     }
     let obj = { label: row.label, variant: str, icon: null, onPress: null };
     const obj7 = { IconComponent: row.IconComponent, variant: str };
-    obj.icon = jsx(row(7455).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
+    obj.icon = jsx(row(7465).TableRowIcon, { IconComponent: row.IconComponent, variant: str });
     obj.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet(ConjureChatMoreSheet);
       row.onPress();
     };
-    return jsx(row(7443).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
+    return jsx(row(7453).TableRow, { label: row.label, variant: str, icon: null, onPress: null });
   }
 }
-const conjureDesignFeedbackStore = fn(13303);
+const conjureDesignFeedbackStore = fn(14530);
 ({ enterConjureDesignFeedback: closure_6, exitConjureDesignFeedback: metroImportDefault, useConjureDesignFeedback: closure_8 } = conjureDesignFeedbackStore);
 const jsx = fn(21).jsx;
 const ConjureChatMoreSheet = "ConjureChatMoreSheet";

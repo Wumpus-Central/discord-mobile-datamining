@@ -1,17 +1,17 @@
-// === Module 19090: GuildsBarFavorites ===
+// === Module 19131: GuildsBarFavorites ===
 
-// Module 19090 (GuildsBarFavorites)
+// Module 19131 (GuildsBarFavorites)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import StarIcon from "StarIcon" /* 10183 */;
-import FavoritesHooks from "FavoritesHooks" /* 10945 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 19074 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 19077 */;
-import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 19091 */;
-import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 19092 */;
+import StarIcon from "StarIcon" /* 10628 */;
+import FavoritesHooks from "FavoritesHooks" /* 11898 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 19115 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 19118 */;
+import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 19132 */;
+import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 19133 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 5158 */;
+import FavoriteStore from "FavoriteStore" /* 5162 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
@@ -32,10 +32,10 @@ export default noop.memo(function GuildsBarFavorites() {
   ({ badge: badge2, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge }));
   const memo = noop.useMemo(() => ({
     onPress() {
-      closure_1_1(19025)(closure_1_5);
+      closure_1_1(19066)(closure_1_5);
     },
     onLongPress() {
-      closure_1_1(18856)();
+      closure_1_1(18897)();
     }
   }), []);
   const memo1 = noop.useMemo(() => {
@@ -53,7 +53,7 @@ export default noop.memo(function GuildsBarFavorites() {
     return obj;
   }, []);
   ({ accessibilityActions, onAccessibilityAction } = memo1);
-  const obj4 = { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: 1, externalChildren: null, expandedChildren: 8, children: 46 };
+  const obj4 = { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: null, externalChildren: false, expandedChildren: "UserProfileContent", children: "body-md/semibold" };
   const tmp5 = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge });
   let intl = util.intl;
   obj4.label = intl.string(util.t.wMWyci);
@@ -61,5 +61,5 @@ export default noop.memo(function GuildsBarFavorites() {
   obj4.expandedChildren = jsx(HomeDrawerFavoritesRow.HomeDrawerFavoritesRowExpandedChildren, {});
   colors = nativeDefault.colors;
   obj4.children = jsx(StarIcon.StarIcon, { color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: 1, externalChildren: null, expandedChildren: 8, children: 46 });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: null, externalChildren: false, expandedChildren: "UserProfileContent", children: "body-md/semibold" });
 });

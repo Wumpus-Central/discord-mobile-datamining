@@ -1,11 +1,11 @@
-// === Module 11418: useCanToggleCommunicationDisableOnUser ===
+// === Module 11193: useCanToggleCommunicationDisableOnUser ===
 
-// Module 11418 (useCanToggleCommunicationDisableOnUser)
+// Module 11193 (useCanToggleCommunicationDisableOnUser)
 import Constants from "Constants" /* 1072 */;
-import GuildRecord from "GuildRecord" /* 5173 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import PermissionStore from "PermissionStore" /* 5238 */;
+import GuildRecord from "GuildRecord" /* 5177 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5247 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import PermissionStore from "PermissionStore" /* 5242 */;
 import UserStore from "UserStore" /* 1388 */;
 import size from "module_2" /* 2 */;
 

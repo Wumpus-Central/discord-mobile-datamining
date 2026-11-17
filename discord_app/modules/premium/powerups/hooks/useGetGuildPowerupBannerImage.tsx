@@ -1,8 +1,8 @@
-// === Module 10718: useGetGuildPowerupBannerImage ===
+// === Module 14033: useGetGuildPowerupBannerImage ===
 
-// Module 10718 (useGetGuildPowerupBannerImage)
+// Module 14033 (useGetGuildPowerupBannerImage)
 import initialize from "initialize" /* 504 */;
-import AccessibilityStore from "AccessibilityStore" /* 5307 */;
+import AccessibilityStore from "AccessibilityStore" /* 5311 */;
 
 require = fn;
 const size = fn(2);

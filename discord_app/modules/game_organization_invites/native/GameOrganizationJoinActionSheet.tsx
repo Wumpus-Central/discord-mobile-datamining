@@ -1,20 +1,20 @@
-// === Module 14100: GameOrganizationJoinActionSheet ===
+// === Module 12936: GameOrganizationJoinActionSheet ===
 
-// Module 14100 (GameOrganizationJoinActionSheet)
+// Module 12936 (GameOrganizationJoinActionSheet)
 import nativeDefault from "native" /* 575 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import openGameOrganizationJoinModalDefault from "openGameOrganizationJoinModal" /* 14065 */;
-import prefetchGameOrganizationAccountLinkStateDefault from "prefetchGameOrganizationAccountLinkState" /* 14101 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import openGameOrganizationJoinModalDefault from "openGameOrganizationJoinModal" /* 12889 */;
+import prefetchGameOrganizationAccountLinkStateDefault from "prefetchGameOrganizationAccountLinkState" /* 12937 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(12369).GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY;
+let closure_7 = fn(12573).GAME_ORGANIZATION_JOIN_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { loading: { paddingVertical: nativeDefault.space.PX_32 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

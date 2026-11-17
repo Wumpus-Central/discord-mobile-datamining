@@ -1,8 +1,8 @@
-// === Module 14944: SegmentedControlPages ===
+// === Module 14158: SegmentedControlPages ===
 
-// Module 14944 (SegmentedControlPages)
+// Module 14158 (SegmentedControlPages)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6321 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6329 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import module_1655 from "module_1655" /* 1655 */;
@@ -695,7 +695,7 @@ export function SegmentedControlPages(arg0) {
     let tmp83Result2 = tmp83Result;
     if (null != nativeGesture) {
       const obj8 = { gesture: nativeGesture, children: tmp83Result };
-      tmp83Result2 = tmp83(tmp(5588).GestureDetector, obj8);
+      tmp83Result2 = tmp83(tmp(5592).GestureDetector, obj8);
     }
     return tmp83Result2;
   }

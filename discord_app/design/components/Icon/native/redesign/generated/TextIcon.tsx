@@ -1,9 +1,9 @@
-// === Module 8078: TextIcon ===
+// === Module 8089: TextIcon ===
 
-// Module 8078 (TextIcon)
+// Module 8089 (TextIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod8037 from "module_8037" /* 8037 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod8048 from "module_8048" /* 8048 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function TextIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8037, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8048, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

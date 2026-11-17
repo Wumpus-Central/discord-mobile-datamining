@@ -1,16 +1,16 @@
-// === Module 19906: ExternalPipViewVideo ===
+// === Module 19951: ExternalPipViewVideo ===
 
-// Module 19906 (ExternalPipViewVideo)
+// Module 19951 (ExternalPipViewVideo)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 6027 */;
-import ExternalPipDefault from "ExternalPip" /* 6171 */;
-import VideoActionCreators from "VideoActionCreators" /* 19908 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 19909 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 6031 */;
+import ExternalPipDefault from "ExternalPip" /* 6179 */;
+import VideoActionCreators from "VideoActionCreators" /* 19953 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 19954 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -44,17 +44,17 @@ function ExternalPipViewVideoUser(userId) {
     return guild_id;
   });
   const obj3 = userId(504);
-  const avatarDecoration = userId(7027).useAvatarDecoration(stateFromStores, stateFromStores1);
+  const avatarDecoration = userId(7035).useAvatarDecoration(stateFromStores, stateFromStores1);
   const obj2 = { userId, guildId: stateFromStores1, avatarURI: null, location: "ExternalPipViewVideo-native" };
   let avatarURL;
-  const obj4 = userId(7027);
+  const obj4 = userId(7035);
   const tmp6 = channelId;
   if (stateFromStores != null) {
     avatarURL = stateFromStores.getAvatarURL(stateFromStores1, 80, false);
   }
   obj2.avatarURI = avatarURL;
-  const tmp7 = channelId(19907);
-  ({ gradientStops, backgroundColor } = channelId(19907)(obj2));
+  const tmp7 = channelId(19952);
+  ({ gradientStops, backgroundColor } = channelId(19952)(obj2));
   const items2 = [tmp.user, backgroundColor];
   const obj5 = {
     style: noop.useMemo(() => {
@@ -66,7 +66,7 @@ function ExternalPipViewVideoUser(userId) {
   let tmp12 = null;
   if (null != gradientStops) {
     const obj6 = { colors: gradientStops, start, end, style: StyleSheet.absoluteFill, pointerEvents: "none" };
-    tmp12 = closure_11(tmp6(5883), obj6);
+    tmp12 = closure_11(tmp6(5887), obj6);
   }
   const items3 = [tmp12, ];
   let tmp17 = null;
@@ -83,7 +83,7 @@ function ExternalPipViewVideoStream(streamId) {
   first = 300;
   _slicedToArray = undefined;
   noop = undefined;
-  const surfaceDirectRendererExperiment = streamId(6187).useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
+  const surfaceDirectRendererExperiment = streamId(6195).useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
   [first, _slicedToArray] = noop.useState(undefined);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   noop = tmp4[1];
@@ -121,8 +121,8 @@ function ExternalPipViewVideoStream(streamId) {
     items[1] = { opacity: num };
     return items;
   }, items3);
-  let obj = streamId(6187);
-  const token = streamId(5892).useToken(first(575).colors.TEXT_FEEDBACK_INFO);
+  let obj = streamId(6195);
+  const token = streamId(5896).useToken(first(575).colors.TEXT_FEEDBACK_INFO);
   value = closure_8.get();
   _slicedToArray = value;
   const items4 = [streamId, value];
@@ -133,7 +133,7 @@ function ExternalPipViewVideoStream(streamId) {
       VideoActionCreators.updateVideoSize(tmp, size, 1);
     }
   }, items4);
-  const children = [closure_11(first(12803), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
+  const children = [closure_11(first(11411), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
   let tmp15Result = null;
   if (null == first) {
     tmp15Result = null;
@@ -152,7 +152,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, PixelRatio: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { container: null, video: null, videoUnavailableWrap: null, videoUnavailableSpinner: null, unavailable: null, unavailableText: null, user: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -1,23 +1,23 @@
-// === Module 8755: GuildBasicChannels ===
+// === Module 8766: GuildBasicChannels ===
 
-// Module 8755 (GuildBasicChannels)
+// Module 8766 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 5184 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5225 */;
-import PermissionUtils from "PermissionUtils" /* 5243 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 5247 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 5188 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 5229 */;
+import PermissionUtils from "PermissionUtils" /* 5247 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 5251 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6790 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6798 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberStore from "GuildMemberStore" /* 5218 */;
-import GuildRoleStore from "GuildRoleStore" /* 5212 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import PermissionStore from "PermissionStore" /* 5238 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 5156 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import GuildMemberStore from "GuildMemberStore" /* 5222 */;
+import GuildRoleStore from "GuildRoleStore" /* 5216 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import PermissionStore from "PermissionStore" /* 5242 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 5160 */;
 
 require = fn;
 function hasBasicChannelChanged(basicChannel, nextResult) {
@@ -253,8 +253,8 @@ function isCurrentSyncStatus(version) {
   }
   return false;
 }
-let closure_7 = fn(5159).createChannelRecordFromServer;
-const ChannelLoader = fn(5155).ChannelLoader;
+let closure_7 = fn(5163).createChannelRecordFromServer;
+const ChannelLoader = fn(5159).ChannelLoader;
 let closure_16 = new LoggerDefault("GuildBasicChannels");
 const re17 = /^\d+$/;
 class GuildBasicChannels {
@@ -314,9 +314,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    items = [tmp3(5184).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(5184).basicChannels(closure_0);
-    items[1] = tmp3(5184).syncedBasicChannels(closure_0).getKvEntries();
+    items = [tmp3(5188).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(5188).basicChannels(closure_0);
+    items[1] = tmp3(5188).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);

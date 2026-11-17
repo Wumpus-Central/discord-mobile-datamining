@@ -1,9 +1,9 @@
-// === Module 14064: gameOrganizationAccountLinkStatus ===
+// === Module 12888: gameOrganizationAccountLinkStatus ===
 
-// Module 14064 (gameOrganizationAccountLinkStatus)
-import useAuthorizationApp from "useAuthorizationApp" /* 7921 */;
+// Module 12888 (gameOrganizationAccountLinkStatus)
+import useAuthorizationApp from "useAuthorizationApp" /* 7931 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7221 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7229 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ function getGameOrganizationAccountLinkStatus(id) {
     return str;
   }
 }
-const FetchState = fn(7221).FetchState;
+const FetchState = fn(7229).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_organization_invites/gameOrganizationAccountLinkStatus.tsx");
 

@@ -1,7 +1,8 @@
-// === Module 20891: PlayableActionCreators ===
+// === Module 17861: PlayableActionCreators ===
 
-// Module 20891 (PlayableActionCreators)
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8665 */;
+// Module 17861 (PlayableActionCreators)
+import DispatcherDefault from "Dispatcher" /* 572 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 8676 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -128,4 +129,7 @@ export function claimPlayableReward() {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
+}
+export function recordPlayableLaunch(questDockPlayable) {
+  DispatcherDefault.dispatch({ type: "PLAYABLE_LAUNCH", playable: questDockPlayable });
 }

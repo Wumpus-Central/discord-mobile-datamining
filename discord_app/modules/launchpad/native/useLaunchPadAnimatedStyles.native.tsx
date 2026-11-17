@@ -1,14 +1,14 @@
-// === Module 19865: useLaunchPadAnimatedStyles ===
+// === Module 19908: useLaunchPadAnimatedStyles ===
 
-// Module 19865 (useLaunchPadAnimatedStyles)
+// Module 19908 (useLaunchPadAnimatedStyles)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import spring_spring from "spring/spring" /* 5929 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 12402 */;
-import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 13129 */;
-import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13809 */;
+import spring_spring from "spring/spring" /* 5933 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 12608 */;
+import useAnimatedKeyboardHeightDefault from "useAnimatedKeyboardHeight" /* 13398 */;
+import useWindowDimensionsSharedValueDefault from "useWindowDimensionsSharedValue" /* 13522 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import createStyles from "createStyles" /* 5306 */;
+import createStyles from "createStyles" /* 5310 */;
 import size from "module_2" /* 2 */;
 
 const LAUNCH_PAD_SPRING_CONFIG = LaunchPadConstants.LAUNCH_PAD_SPRING_CONFIG;

@@ -1,16 +1,16 @@
-// === Module 13123: convertRouteToNavigation ===
+// === Module 14369: convertRouteToNavigation ===
 
-// Module 13123 (convertRouteToNavigation)
+// Module 14369 (convertRouteToNavigation)
 import Constants from "Constants" /* 1072 */;
-import matchPathCompat from "matchPathCompat" /* 5344 */;
-import RouteUtils from "RouteUtils" /* 5357 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
-import RootNavigationRef from "RootNavigationRef" /* 5483 */;
-import useChatLayout from "useChatLayout" /* 5485 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 7053 */;
-import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9068 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10536 */;
-import handleConjureRouteDefault from "handleConjureRoute" /* 13124 */;
+import matchPathCompat from "matchPathCompat" /* 5348 */;
+import RouteUtils from "RouteUtils" /* 5361 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5486 */;
+import RootNavigationRef from "RootNavigationRef" /* 5487 */;
+import useChatLayout from "useChatLayout" /* 5489 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 7061 */;
+import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9079 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 12956 */;
+import handleConjureRouteDefault from "handleConjureRoute" /* 14370 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -92,7 +92,7 @@ export function convertRouteToNavigation(pathname) {
                     const tmpResult24 = NavigationRouteUtils;
                   }
                   if (tmp21) {
-                    const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "Array" };
+                    const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "a" };
                     NavigationRouteUtils.navigateToChannel(obj10);
                     const tmpResult25 = NavigationRouteUtils;
                   }

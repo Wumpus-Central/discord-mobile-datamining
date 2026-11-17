@@ -1,18 +1,18 @@
-// === Module 15935: resolveInvite ===
+// === Module 15973: resolveInvite ===
 
-// Module 15935 (resolveInvite)
+// Module 15973 (resolveInvite)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import TypeUtils from "TypeUtils" /* 5167 */;
-import InviteTargetTypes from "InviteTargetTypes" /* 7665 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 8841 */;
+import TypeUtils from "TypeUtils" /* 5171 */;
+import InviteTargetTypes from "InviteTargetTypes" /* 7675 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 8852 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 5177 */;
+import GuildStore from "GuildStore" /* 5181 */;
 
 const require = globalThis.__r;
 
-const TrackedHTTPUtilsDefault = tmp4(6841);
+const TrackedHTTPUtilsDefault = tmp4(6836);
 require = fn;
-const InviteTypes = fn(8842).InviteTypes;
+const InviteTypes = fn(8853).InviteTypes;
 const Constants = fn(1072);
 ({ Endpoints: closure_6, AnalyticEvents: metroImportDefault, LoggingInviteTypes: closure_8, AbortCodes: closure_9 } = Constants);
 const map = new Map();

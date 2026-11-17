@@ -1,12 +1,12 @@
-// === Module 8900: UploadTargets ===
+// === Module 8911: UploadTargets ===
 
-// Module 8900 (UploadTargets)
-import UploadUtils from "UploadUtils" /* 8846 */;
-import FileUtilsAll from "FileUtils" /* 8875 */;
-import UploadLimits from "UploadLimits" /* 8890 */;
-import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 8901 */;
-import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 8903 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
+// Module 8911 (UploadTargets)
+import UploadUtils from "UploadUtils" /* 8857 */;
+import FileUtilsAll from "FileUtils" /* 8886 */;
+import UploadLimits from "UploadLimits" /* 8901 */;
+import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 8912 */;
+import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 8914 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
 
 require = fn;
 const Constants = fn(1072);

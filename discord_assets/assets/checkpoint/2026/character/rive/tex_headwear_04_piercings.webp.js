@@ -1,9 +1,9 @@
-// === Module 14355: ? ===
+// === Module 13220: ? ===
 
-// Module 14355
+// Module 13220
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_headwear_04_piercings.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/cab0de0a14c34a595a7773cb81c56af3e90603b2b9760723cde97f61a161922a.webp";
-export const metadata = { fileBytes: 12166 };
+export default "https://cdn.discordapp.com/assets/content/798f9fa0977bad98ba128edf786dac742e3e524ee42db1e2ccdc2badefb01be1.webp";
+export const metadata = { fileBytes: 29614 };

@@ -1,13 +1,13 @@
-// === Module 18629: RedesignSettingsCategoryDiscoveryHighlightsScreen ===
+// === Module 18670: RedesignSettingsCategoryDiscoveryHighlightsScreen ===
 
-// Module 18629 (RedesignSettingsCategoryDiscoveryHighlightsScreen)
-import SettingBuilders from "SettingBuilders" /* 12406 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18620 */;
-import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 18621 */;
+// Module 18670 (RedesignSettingsCategoryDiscoveryHighlightsScreen)
+import SettingBuilders from "SettingBuilders" /* 12612 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18661 */;
+import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 18662 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(9202).MobileUserSettings;
+const MobileUserSettings = fn(9213).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsCategoryDiscoveryHighlightsScreen.tsx");

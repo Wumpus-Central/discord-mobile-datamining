@@ -1,11 +1,11 @@
-// === Module 13490: ApplicationCommandValidationUtils ===
+// === Module 13646: ApplicationCommandValidationUtils ===
 
-// Module 13490 (ApplicationCommandValidationUtils)
+// Module 13646 (ApplicationCommandValidationUtils)
 import util from "util" /* 1113 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5975 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6335 */;
-import ApplicationCommandOptionUtils from "ApplicationCommandOptionUtils" /* 11398 */;
-import ApplicationCommandValidatorsDefault from "ApplicationCommandValidators" /* 13491 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5979 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 6343 */;
+import ApplicationCommandOptionUtils from "ApplicationCommandOptionUtils" /* 11356 */;
+import ApplicationCommandValidatorsDefault from "ApplicationCommandValidators" /* 13647 */;
 import size from "module_2" /* 2 */;
 
 function validateOptionContent(allowEmptyValues) {

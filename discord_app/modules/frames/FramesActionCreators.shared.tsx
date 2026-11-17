@@ -1,14 +1,14 @@
-// === Module 12745: _launchFrame ===
+// === Module 11302: _launchFrame ===
 
-// Module 12745 (_launchFrame)
+// Module 11302 (_launchFrame)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 7022 */;
-import createProxyTicket from "createProxyTicket" /* 7341 */;
-import leaveFrame from "leaveFrame" /* 7349 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 12746 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 7030 */;
+import createProxyTicket from "createProxyTicket" /* 7351 */;
+import leaveFrame from "leaveFrame" /* 7359 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 11303 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 7019 */;
+import FramesStore from "FramesStore" /* 7027 */;
 
 require = fn;
 let closure_13 = async function _launchFrame(arg0) {
@@ -221,7 +221,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(7349);
+    obj2 = obj2(7359);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -354,9 +354,9 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
     }
   }
 };
-const FramesConstants = fn(7020);
+const FramesConstants = fn(7028);
 ({ FrameIntent: closure_6, FrameLayoutModes: metroImportDefault, getFrameIntentForSurface: closure_8, isLaunched: closure_9, makeFrameId: closure_10 } = FramesConstants);
-const ActivityPanelModes = fn(5949).ActivityPanelModes;
+const ActivityPanelModes = fn(5953).ActivityPanelModes;
 let c12 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");

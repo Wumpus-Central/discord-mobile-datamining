@@ -1,15 +1,15 @@
-// === Module 20837: AVErrorStreamSendLowFPS ===
+// === Module 20884: AVErrorStreamSendLowFPS ===
 
-// Module 20837 (AVErrorStreamSendLowFPS)
+// Module 20884 (AVErrorStreamSendLowFPS)
 import DurationsDefault from "Durations" /* 1089 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 6242 */;
-import AVError from "AVError" /* 6247 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6798 */;
-import AVErrorContext from "AVErrorContext" /* 20831 */;
-import AVErrorUtils from "AVErrorUtils" /* 20834 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6792 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 6250 */;
+import AVError from "AVError" /* 6255 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6805 */;
+import AVErrorContext from "AVErrorContext" /* 20878 */;
+import AVErrorUtils from "AVErrorUtils" /* 20881 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7024 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6804 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 6800 */;
 
 require = fn;
 const ApplicationStreamStates = fn(1072).ApplicationStreamStates;

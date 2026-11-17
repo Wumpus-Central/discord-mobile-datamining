@@ -1,8 +1,8 @@
-// === Module 13809: useWindowDimensionsSharedValue ===
+// === Module 13522: useWindowDimensionsSharedValue ===
 
-// Module 13809 (useWindowDimensionsSharedValue)
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11989 */;
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 13810 */;
+// Module 13522 (useWindowDimensionsSharedValue)
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 12432 */;
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 13523 */;
 import module_1655_mod from "module_1655" /* 1655 */;
 import useWindowDimensions_mod from "useWindowDimensions" /* 1496 */;
 import size from "module_2" /* 2 */;

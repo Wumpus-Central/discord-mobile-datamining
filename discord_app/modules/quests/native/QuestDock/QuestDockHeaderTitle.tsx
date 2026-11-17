@@ -1,12 +1,12 @@
-// === Module 17799: QuestDockHeaderTitle ===
+// === Module 17839: QuestDockHeaderTitle ===
 
-// Module 17799 (QuestDockHeaderTitle)
-import Text_Text from "Text/Text" /* 5919 */;
+// Module 17839 (QuestDockHeaderTitle)
+import Text_Text from "Text/Text" /* 5923 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_3 = createStyles.createStyles({ title: { lineHeight: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockHeaderTitle.tsx");

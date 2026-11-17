@@ -1,8 +1,8 @@
-// === Module 13251: conjureLinkedAppData ===
+// === Module 14480: conjureLinkedAppData ===
 
-// Module 13251 (conjureLinkedAppData)
+// Module 14480 (conjureLinkedAppData)
 import util from "util" /* 1113 */;
-import _modDef4131 from "module_4131" /* 4131 */;
+import _modDef4133 from "module_4133" /* 4133 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ function settingOption(targetLive, data, arg2, arg3) {
     if (!targetLive.targetLive) {
       const intl = util.intl;
       obj = { target: targetLive.target };
-      let formatToPlainStringResult = intl.formatToPlainString(_modDef4131.GNcOoY, obj);
+      let formatToPlainStringResult = intl.formatToPlainString(_modDef4133.GNcOoY, obj);
     }
     obj2 = { data, label: null, description: null, disabled: null };
     const intl3 = util.intl;
@@ -30,15 +30,15 @@ function settingOption(targetLive, data, arg2, arg3) {
     if ("preview" === data) {
       if (targetLive.callerLiveOnVibeyard) {
         const intl2 = util.intl;
-        stringResult = intl2.string(_modDef4131.bSQXpN);
+        stringResult = intl2.string(_modDef4133.bSQXpN);
       }
     }
   }
   formatToPlainStringResult = stringResult;
 }
-let obj = { live: _modDef4131.MLa86y, preview: _modDef4131["6uafcy"] };
-let obj2 = { live: _modDef4131["PeX+1n"], preview: _modDef4131["Gtd/KL"] };
-let obj3 = { gets: _modDef4131.aiHmSc, sends: _modDef4131.i1D8eM, both: _modDef4131.QEIP5j };
+let obj = { live: _modDef4133.MLa86y, preview: _modDef4133["6uafcy"] };
+let obj2 = { live: _modDef4133["PeX+1n"], preview: _modDef4133["Gtd/KL"] };
+let obj3 = { gets: _modDef4133.aiHmSc, sends: _modDef4133.i1D8eM, both: _modDef4133.QEIP5j };
 const result = size.fileFinishedImporting("modules/conjure/linked_apps/conjureLinkedAppData.tsx");
 
 export function linkedAppCallerSides(project_id, has_preview) {
@@ -54,7 +54,7 @@ export function linkedAppChatData(targetHasPreview, build) {
     if ("preview" === build) {
       obj3 = { sentence: null, options: null };
       const intl5 = util.intl;
-      obj3.sentence = intl5.formatToPlainString(_modDef4131.Q0D9Ie, obj2);
+      obj3.sentence = intl5.formatToPlainString(_modDef4133.Q0D9Ie, obj2);
       obj3.options = [];
       return obj3;
     } else if (targetHasPreview.callerHasPreview) {
@@ -63,9 +63,9 @@ export function linkedAppChatData(targetHasPreview, build) {
       }
       const intl2 = util.intl;
       if ("live" === str) {
-        let FKHnHv = _modDef4131["9iFuxr"];
+        let FKHnHv = _modDef4133["9iFuxr"];
       } else {
-        FKHnHv = _modDef4131.FKHnHv;
+        FKHnHv = _modDef4133.FKHnHv;
       }
       const obj4 = { sentence: intl2.formatToPlainString(FKHnHv, obj2), options: null };
       if (targetHasPreview.targetLive) {
@@ -87,7 +87,7 @@ export function linkedAppChatData(targetHasPreview, build) {
     } else {
       const obj7 = { sentence: null, options: null };
       const intl = util.intl;
-      obj7.sentence = intl.formatToPlainString(_modDef4131.QhPlAe, obj2);
+      obj7.sentence = intl.formatToPlainString(_modDef4133.QhPlAe, obj2);
       obj7.options = [];
       return obj7;
     }
@@ -108,7 +108,7 @@ export function linkedAppSettings(targetHasPreview, build) {
       str3 = str2;
     }
     const intl = require("util").intl;
-    const tmp5 = require("module_4131");
+    const tmp5 = require("module_4133");
     if (targetHasPreview.callerHasPreview) {
       let YbEDjJ = tmp5.zxQdoh;
       let tmp6 = tmp4;
@@ -177,7 +177,7 @@ export function linkedAppDataSummary(linkedAppTargetSidesResult, build) {
   if (linkedAppTargetSidesResult.targetHasPreview) {
     const intl = util.intl;
     const formatToPlainString = intl.formatToPlainString;
-    const tmp6 = _modDef4131;
+    const tmp6 = _modDef4133;
     if (linkedAppTargetSidesResult.callerHasPreview) {
       obj2 = { caller: linkedAppTargetSidesResult.caller, preview: null, live: null };
       let str5 = "preview";
@@ -227,7 +227,7 @@ export function linkedAppPurpose(purpose) {
 export function linkedAppHeaderAria(caller, flow) {
   const intl = util.intl;
   if (null == flow) {
-    let tkCyiM = _modDef4131.tkCyiM;
+    let tkCyiM = _modDef4133.tkCyiM;
   } else {
     tkCyiM = obj3[flow];
   }
@@ -235,5 +235,5 @@ export function linkedAppHeaderAria(caller, flow) {
 }
 export function linkedAppChatAria(caller) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef4131.rCqv8t, { caller: caller.caller, target: caller.target });
+  return intl.formatToPlainString(_modDef4133.rCqv8t, { caller: caller.caller, target: caller.target });
 }

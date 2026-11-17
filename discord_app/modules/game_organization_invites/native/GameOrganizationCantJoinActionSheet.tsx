@@ -1,19 +1,19 @@
-// === Module 14071: GameOrganizationCantJoinActionSheet ===
+// === Module 12895: GameOrganizationCantJoinActionSheet ===
 
-// Module 14071 (GameOrganizationCantJoinActionSheet)
+// Module 12895 (GameOrganizationCantJoinActionSheet)
 import _modDef2565 from "module_2565" /* 2565 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import transitionToGuild from "transitionToGuild" /* 7231 */;
-import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12539 */;
-import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 14072 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import transitionToGuild from "transitionToGuild" /* 7239 */;
+import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12734 */;
+import useResolvedGameOrganizationInviteDefault from "useResolvedGameOrganizationInvite" /* 12896 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5177 */;
+import GuildStore from "GuildStore" /* 5181 */;
 
 require = fn;
 function hideSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet(hasOwnProperty);
 }
-const GameOrganizationInviteConstants = fn(12369);
+const GameOrganizationInviteConstants = fn(12573);
 ({ GAME_ORGANIZATION_CANT_JOIN_ACTION_SHEET_KEY: hasOwnProperty, GameOrganizationCantJoinReasons: closure_6 } = GameOrganizationInviteConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -45,7 +45,7 @@ export default function GameOrganizationCantJoinActionSheet(arg0) {
     } else {
       lXyJMS = _modDef2565["IIR/NZ"];
     }
-    const obj3 = { header: jsx(tmp5(7913).BottomSheetTitleHeader, { title: null }), title: null, description: null, actions: null };
+    const obj3 = { header: jsx(tmp5(7923).BottomSheetTitleHeader, { title: null }), title: null, description: null, actions: null };
     const intl = tmp5(1113).intl;
     const obj4 = { noun: tmp11 };
     obj3.title = intl.formatToPlainString(_modDef2565.DinVUQ, obj4);
@@ -64,8 +64,8 @@ export default function GameOrganizationCantJoinActionSheet(arg0) {
       obj7.text = intl3.string(tmp5(1113).t.cpT0Cq);
       obj7.onPress = hideSheet;
     }
-    obj3.actions = jsx(tmp5(5926).Button, obj7);
-    return jsx(tmp5(10713).PromoSheet, { header: jsx(tmp5(7913).BottomSheetTitleHeader, { title: null }), title: null, description: null, actions: null });
+    obj3.actions = jsx(tmp5(5930).Button, obj7);
+    return jsx(tmp5(11903).PromoSheet, { header: jsx(tmp5(7923).BottomSheetTitleHeader, { title: null }), title: null, description: null, actions: null });
   }
   let obj = guildId(504);
 };

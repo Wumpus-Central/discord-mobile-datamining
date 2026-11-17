@@ -1,10 +1,10 @@
-// === Module 14098: StepModal ===
+// === Module 12934: StepModal ===
 
-// Module 14098 (StepModal)
+// Module 12934 (StepModal)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import NavigatorHeader from "NavigatorHeader" /* 7493 */;
-import Modal from "Modal" /* 12523 */;
-import ModalStepIndicator from "ModalStepIndicator" /* 14099 */;
+import NavigatorHeader from "NavigatorHeader" /* 7503 */;
+import Modal from "Modal" /* 12718 */;
+import ModalStepIndicator from "ModalStepIndicator" /* 12935 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_8 = createStyles.createStyles({ container: { height: "100%" }, stepContainer: { flexDirection: "column", alignItems: "center", justifyContent: "center", top: 0, left: 0, right: 0, zIndex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/StepModal.native.tsx");

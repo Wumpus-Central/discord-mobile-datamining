@@ -1,6 +1,6 @@
-// === Module 10331: useGameProfileMediaDimensions ===
+// === Module 10441: useGameProfileMediaDimensions ===
 
-// Module 10331 (useGameProfileMediaDimensions)
+// Module 10441 (useGameProfileMediaDimensions)
 import privDefault from "priv" /* 1456 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

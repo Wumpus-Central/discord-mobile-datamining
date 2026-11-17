@@ -1,6 +1,6 @@
-// === Module 10573: showChannelTabLimitToast ===
+// === Module 10708: showChannelTabLimitToast ===
 
-// Module 10573 (showChannelTabLimitToast)
+// Module 10708 (showChannelTabLimitToast)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tabs/showChannelTabLimitToast.native.tsx");

@@ -1,6 +1,6 @@
-// === Module 7832: useFastestListComputedStyles ===
+// === Module 7842: useFastestListComputedStyles ===
 
-// Module 7832 (useFastestListComputedStyles)
+// Module 7842 (useFastestListComputedStyles)
 import noop from "module_19" /* 19 */;
 
 const StyleSheet = fn(17).StyleSheet;

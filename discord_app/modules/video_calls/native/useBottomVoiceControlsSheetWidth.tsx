@@ -1,8 +1,8 @@
-// === Module 12730: useBottomVoiceControlsSheetWidth ===
+// === Module 11337: useBottomVoiceControlsSheetWidth ===
 
-// Module 12730 (useBottomVoiceControlsSheetWidth)
+// Module 11337 (useBottomVoiceControlsSheetWidth)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import ChannelCallConstants from "ChannelCallConstants" /* 11004 */;
+import ChannelCallConstants from "ChannelCallConstants" /* 11315 */;
 import size from "module_2" /* 2 */;
 
 ({ BOX_MODE_ACTIONSHEET_WIDTH: c2, BOX_MODE_THRESHOLD_WIDTH: c3 } = ChannelCallConstants);

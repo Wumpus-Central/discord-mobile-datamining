@@ -1,6 +1,6 @@
-// === Module 10614: DisplayableCode ===
+// === Module 10314: DisplayableCode ===
 
-// Module 10614 (DisplayableCode)
+// Module 10314 (DisplayableCode)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/DisplayableCode.ts");

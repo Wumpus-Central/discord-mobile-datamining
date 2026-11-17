@@ -1,9 +1,9 @@
-// === Module 7067: isChangelogChannel ===
+// === Module 7075: isChangelogChannel ===
 
-// Module 7067 (isChangelogChannel)
-import ChannelStore from "ChannelStore" /* 5155 */;
+// Module 7075 (isChangelogChannel)
+import ChannelStore from "ChannelStore" /* 5159 */;
 
-const SYSTEM_UPDATES_USER_ID = fn(5208).SYSTEM_UPDATES_USER_ID;
+const SYSTEM_UPDATES_USER_ID = fn(5212).SYSTEM_UPDATES_USER_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/changelog/utils/isChangelogChannel.tsx");
 

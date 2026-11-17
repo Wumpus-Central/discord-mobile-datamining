@@ -1,14 +1,14 @@
-// === Module 12917: GlobalStatusIndicator ===
+// === Module 11535: GlobalStatusIndicator ===
 
-// Module 12917 (GlobalStatusIndicator)
+// Module 11535 (GlobalStatusIndicator)
 import _mod1655 from "module_1655" /* 1655 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6890 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 6898 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5543 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
-import NativeMenuStore from "NativeMenuStore" /* 11041 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import ActionSheetStore from "ActionSheetStore" /* 5547 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7024 */;
+import NativeMenuStore from "NativeMenuStore" /* 11536 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6068 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

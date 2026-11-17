@@ -1,18 +1,18 @@
-// === Module 10802: GuildProfileCTA ===
+// === Module 15118: GuildProfileCTA ===
 
-// Module 10802 (GuildProfileCTA)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5342 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6912 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6914 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7230 */;
-import transitionToGuild from "transitionToGuild" /* 7231 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7660 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7684 */;
-import GuildProfileTypes from "GuildProfileTypes" /* 7689 */;
-import handleNSFWGuildInvite from "handleNSFWGuildInvite" /* 10805 */;
+// Module 15118 (GuildProfileCTA)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5346 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6920 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6922 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7238 */;
+import transitionToGuild from "transitionToGuild" /* 7239 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 7670 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 7694 */;
+import GuildProfileTypes from "GuildProfileTypes" /* 7699 */;
+import handleNSFWGuildInvite from "handleNSFWGuildInvite" /* 11199 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 6042 */;
+import InviteStore from "InviteStore" /* 6046 */;
 
 require = fn;
 const AnalyticsObjects = fn(1072).AnalyticsObjects;

@@ -1,36 +1,36 @@
-// === Module 19987: VoicePanelHeader ===
+// === Module 20033: VoicePanelHeader ===
 
-// Module 19987 (VoicePanelHeader)
+// Module 20033 (VoicePanelHeader)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5895 */;
-import spring_spring from "spring/spring" /* 5929 */;
-import springPresets from "springPresets" /* 5930 */;
-import useChannelName from "useChannelName" /* 5944 */;
-import NativeViewDefault from "NativeView" /* 7722 */;
-import _modDef10561 from "module_10561" /* 10561 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11991 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 12942 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 13075 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19231 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19946 */;
-import MobileGoLiveEntrypointExperimentDefault from "MobileGoLiveEntrypointExperiment" /* 19988 */;
-import useVoicePanelNavArrowPressedDefault from "useVoicePanelNavArrowPressed" /* 19989 */;
-import useStableParticipant from "useStableParticipant" /* 19990 */;
-import VoicePanelTitleButtonDefault from "VoicePanelTitleButton" /* 19993 */;
-import VoicePanelHeaderSpeakerDefault from "VoicePanelHeaderSpeaker" /* 19995 */;
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5899 */;
+import spring_spring from "spring/spring" /* 5933 */;
+import springPresets from "springPresets" /* 5934 */;
+import useChannelName from "useChannelName" /* 5948 */;
+import NativeViewDefault from "NativeView" /* 7732 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 11573 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 11735 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12427 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12433 */;
+import _modDef13419 from "module_13419" /* 13419 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 19276 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 19991 */;
+import MobileGoLiveEntrypointExperimentDefault from "MobileGoLiveEntrypointExperiment" /* 20034 */;
+import useVoicePanelNavArrowPressedDefault from "useVoicePanelNavArrowPressed" /* 20035 */;
+import useStableParticipant from "useStableParticipant" /* 20036 */;
+import VoicePanelTitleButtonDefault from "VoicePanelTitleButton" /* 20039 */;
+import VoicePanelHeaderSpeakerDefault from "VoicePanelHeaderSpeaker" /* 20041 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
-import ExperimentStore from "ExperimentStore" /* 5522 */;
-import StageMusicStore from "StageMusicStore" /* 12935 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7024 */;
+import ExperimentStore from "ExperimentStore" /* 5526 */;
+import StageMusicStore from "StageMusicStore" /* 11558 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RelationshipStore from "RelationshipStore" /* 5248 */;
-import SpeakingStore from "SpeakingStore" /* 6931 */;
+import RelationshipStore from "RelationshipStore" /* 5252 */;
+import SpeakingStore from "SpeakingStore" /* 6939 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -41,19 +41,19 @@ require = fn;
 function MusicMuteButton(channelId) {
   channelId = channelId.channelId;
   let stateFromStores;
-  const tmp3 = stateFromStores(13075)(channelId);
+  const tmp3 = stateFromStores(11735)(channelId);
   if (tmp3 != null) {
     const speaker = tmp3.speaker;
   }
   items = [StageMusicStore];
   stateFromStores = channelId(504).useStateFromStores(items, () => muted.isMuted());
   const obj = channelId(504);
-  const showStageMusicMuteButton = channelId(12937).useShowStageMusicMuteButton(channelId);
-  const obj2 = channelId(12937);
+  const showStageMusicMuteButton = channelId(11560).useShowStageMusicMuteButton(channelId);
+  const obj2 = channelId(11560);
   const items1 = [ChannelStore];
   const items2 = [channelId];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId), items2);
-  channelId(11951);
+  channelId(11533);
   let tmp10 = null;
   if (showStageMusicMuteButton) {
     if (!speaker) {
@@ -69,30 +69,30 @@ function MusicMuteButton(channelId) {
     }
     const obj4 = {
       accessibilityLabel: stringResult,
-      icon: tmp(stateFromStores ? 12941 : 9342),
+      icon: tmp(stateFromStores ? 11571 : 9351),
       onPress() {
           return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
         }
     };
-    closure_24(tmp(19946), obj4);
-    const tmpResult = tmp(19946);
+    closure_24(tmp(19991), obj4);
+    const tmpResult = tmp(19991);
   }
   return tmp10;
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11985);
+const VoicePanelConstants = fn(12428);
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({ UI_SHOW_HIDE_PHYSICS: closure_16, VoicePanelModes: closure_17, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(11988).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
-const DOCK_PULL_SNAP_DISTANCE = fn(12009).DOCK_PULL_SNAP_DISTANCE;
-const ParticipantTypes = fn(5973).ParticipantTypes;
+const EDGE_GUTTER = fn(12431).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12426).VoicePanelControlsModes;
+const DOCK_PULL_SNAP_DISTANCE = fn(12446).DOCK_PULL_SNAP_DISTANCE;
+const ParticipantTypes = fn(5977).ParticipantTypes;
 const ThemeTypes = fn(1083).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_24, jsxs: closure_25 } = jsxProd);
 let closure_26 = { duration: 300 };
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { headerWrapper: { zIndex: 1, position: "absolute", top: 0, left: 0, width: "100%" }, headerSurface: null, blurStyles: null, leftWrapper: null, rightWrapper: null, headerOuter: null, headerInner: null, headerContentWrapper: null, stroke: null, strokeAlt: null, strokeContainer: null, focusedSpeakingDotWrapper: null, focusedSpeakingDot: null, shieldIconMargin: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -684,7 +684,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
     flag = false;
   }
   if (channelType !== require("ChannelTypes").ChannelTypes.GUILD_STAGE_VOICE) {
-    flag = obj4.useConfig({ location: "VoicePanelHeader" }).treatment === tmp5(19988).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
+    flag = obj4.useConfig({ location: "VoicePanelHeader" }).treatment === tmp5(20034).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT;
   }
   const tmp5Result21 = require("module_1655");
   let canInviteMembers = require("useCanInviteMembers").useCanInviteMembers(channelId);
@@ -830,8 +830,8 @@ export default noop.memo(function VoicePanelHeader(layout) {
     tmp107Result = null;
     if (!isDockEnabled) {
       const obj10 = { baseColor: tmp2(575).colors.BLACK, minHeight: 0 };
-      tmp107Result = closure_24(tmp2(19361), obj10);
-      const tmp2Result7 = tmp2(19361);
+      tmp107Result = closure_24(tmp2(19406), obj10);
+      const tmp2Result7 = tmp2(19406);
     }
   }
   items28[1] = tmp107Result;
@@ -839,7 +839,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   let tmp107Result7 = null;
   if (tmp13 === ParticipantTypes.USER) {
     const obj12 = { isHeaderHidden: derivedValue2 };
-    tmp107Result7 = closure_24(tmp2(19991), obj12);
+    tmp107Result7 = closure_24(tmp2(20037), obj12);
   }
   const items29 = [tmp107Result7, ];
   const obj13 = { style: null, animatedProps, children: null };
@@ -849,7 +849,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   const tmp5Result28 = require("useIsSecureFramesVerified");
   const obj15 = { icon: null, accessibilityLabel: null, onPress: null, style: null };
   const tmp2Result8 = NativeViewDefault;
-  obj15.icon = _modDef10561;
+  obj15.icon = _modDef13419;
   obj15.accessibilityLabel = stringResult;
   obj15.onPress = tmp92;
   obj15.style = memo;
@@ -862,7 +862,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
     tmp107Result8 = null;
     if (flag2) {
       const obj17 = { size: "xs", color: tmp2(575).colors.TEXT_SUBTLE, style: tmp.shieldIconMargin };
-      tmp107Result8 = closure_24(tmp5(10815).ShieldLockIcon, obj17);
+      tmp107Result8 = closure_24(tmp5(15120).ShieldLockIcon, obj17);
     }
   }
   items32[1] = tmp107Result8;
@@ -882,24 +882,24 @@ export default noop.memo(function VoicePanelHeader(layout) {
   let tmp107Result10 = null;
   if (null != stateFromStores) {
     const obj20 = { channel: stateFromStores, inCall: tmp107Result12 };
-    tmp107Result10 = closure_24(tmp2(20004), obj20);
+    tmp107Result10 = closure_24(tmp2(20050), obj20);
   }
   items34[3] = tmp107Result10;
   if (canInviteMembers) {
-    const obj21 = { icon: tmp2(10982), accessibilityLabel: null, onPress: null };
+    const obj21 = { icon: tmp2(11733), accessibilityLabel: null, onPress: null };
     let intl3 = tmp5(1113).intl;
     const obj22 = { channelName: stateFromStores1 };
     obj21.accessibilityLabel = intl3.formatToPlainString(tmp5(1113).t["dHHb/2"], obj22);
     obj21.onPress = inviteMembersCallback;
-    canInviteMembers = closure_24(tmp2(19946), obj21);
-    const tmp2Result11 = tmp2(19946);
+    canInviteMembers = closure_24(tmp2(19991), obj21);
+    const tmp2Result11 = tmp2(19991);
   }
   items34[4] = canInviteMembers;
   let tmp107Result11 = null;
   if (null != stateFromStores2) {
-    const obj23 = { icon: tmp2(20006), onPress: callback1, accessibilityLabel: stateFromStores2 };
-    tmp107Result11 = closure_24(tmp2(19946), obj23);
-    const tmp2Result12 = tmp2(19946);
+    const obj23 = { icon: tmp2(20052), onPress: callback1, accessibilityLabel: stateFromStores2 };
+    tmp107Result11 = closure_24(tmp2(19991), obj23);
+    const tmp2Result12 = tmp2(19991);
   }
   items34[5] = tmp107Result11;
   if (tmp107Result12) {
@@ -907,7 +907,7 @@ export default noop.memo(function VoicePanelHeader(layout) {
   }
   if (tmp107Result12) {
     const obj24 = { channelId };
-    tmp107Result12 = closure_24(tmp2(20007), obj24);
+    tmp107Result12 = closure_24(tmp2(20053), obj24);
   }
   items34[6] = tmp107Result12;
   obj18.children = items34;

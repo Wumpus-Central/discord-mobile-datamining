@@ -1,6 +1,6 @@
-// === Module 11253: useStateFromSharedValue ===
+// === Module 11276: useStateFromSharedValue ===
 
-// Module 11253 (useStateFromSharedValue)
+// Module 11276 (useStateFromSharedValue)
 import _mod1708 from "module_1708" /* 1708 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,11 +13,10 @@ let closure_7 = { code: "(function useStateFromSharedValueTsx2(id,sharedValue){s
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reanimated/native/useStateFromSharedValue.tsx");
 
-export default function useStateFromSharedValue(arg0) {
-  const tmp = _slicedToArray(noop.useState(() => closure_0.get()), 2);
-  closure_0 = arg0;
+export default function useStateFromSharedValue(tmp12Result5) {
+  const tmp = _slicedToArray(noop.useState(() => tmp12Result5.get()), 2);
   closure_1 = tmp2;
-  items = [arg0, tmp[1]];
+  items = [tmp12Result5, tmp[1]];
   const layoutEffect = noop.useLayoutEffect(() => {
     value = map.get(c0);
     if (value == null) {

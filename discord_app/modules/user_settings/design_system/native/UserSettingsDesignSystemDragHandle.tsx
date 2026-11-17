@@ -1,15 +1,15 @@
-// === Module 18466: UserSettingsDesignSystemDragHandle ===
+// === Module 18507: UserSettingsDesignSystemDragHandle ===
 
-// Module 18466 (UserSettingsDesignSystemDragHandle)
+// Module 18507 (UserSettingsDesignSystemDragHandle)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5883 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import Stack_Stack from "Stack/Stack" /* 6327 */;
-import TableRow from "TableRow" /* 7443 */;
-import Card from "Card" /* 7445 */;
-import DragHandle from "DragHandle" /* 7447 */;
-import TableRowGroup from "TableRowGroup" /* 7746 */;
-import SettingsIcon from "SettingsIcon" /* 10569 */;
+import LinearGradientDefault from "LinearGradient" /* 5887 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import Stack_Stack from "Stack/Stack" /* 6335 */;
+import TableRow from "TableRow" /* 7453 */;
+import Card from "Card" /* 7455 */;
+import DragHandle from "DragHandle" /* 7457 */;
+import TableRowGroup from "TableRowGroup" /* 7756 */;
+import SettingsIcon from "SettingsIcon" /* 11049 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -86,7 +86,7 @@ const NOOP = fn(1072).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
 const colors = ["purple", "orange"];
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, handles: null, handleWithLabel: null, heading: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.handles = { flexDirection: "row", alignItems: "center", gap: 24, padding: 16, borderRadius: nativeDefault.radii.md };

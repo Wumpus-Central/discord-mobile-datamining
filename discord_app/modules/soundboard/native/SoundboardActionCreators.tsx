@@ -1,10 +1,10 @@
-// === Module 19210: soundboard/SoundboardActionCreators ===
+// === Module 19255: soundboard/SoundboardActionCreators ===
 
-// Module 19210 (soundboard/SoundboardActionCreators)
+// Module 19255 (soundboard/SoundboardActionCreators)
 import Constants from "Constants" /* 1072 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
 import size from "module_2" /* 2 */;
 
 const ComponentActions = Constants.ComponentActions;
@@ -12,11 +12,11 @@ const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardA
 
 export function openSoundboardSoundPickerActionSheet(arg0) {
   ({ channel, analyticsSource, startExpanded } = arg0);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19211, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource, startExpanded });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19256, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource, startExpanded });
 }
 export function showSoundboardSoundPickerActionSheet(arg0) {
   ({ channel, analyticsSource, startExpanded } = arg0);
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   ComponentDispatch.dispatch(ComponentActions.TOGGLE_CALL_CONTROL_DRAWER);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19211, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource, startExpanded });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(19256, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource, startExpanded });
 }

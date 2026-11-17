@@ -1,13 +1,13 @@
-// === Module 19559: useSmartSearchMessages ===
+// === Module 19604: useSmartSearchMessages ===
 
-// Module 19559 (useSmartSearchMessages)
-import SmartSearchUtils from "SmartSearchUtils" /* 14743 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 14745 */;
+// Module 19604 (useSmartSearchMessages)
+import SmartSearchUtils from "SmartSearchUtils" /* 13821 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 13823 */;
 import noop from "module_19" /* 19 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 14741 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 13819 */;
 
 require = fn;
-const SearchListItemTypes = fn(9066).SearchListItemTypes;
+const SearchListItemTypes = fn(9077).SearchListItemTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchMessages.tsx");
 

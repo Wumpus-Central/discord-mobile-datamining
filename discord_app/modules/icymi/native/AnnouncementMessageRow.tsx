@@ -1,25 +1,25 @@
-// === Module 19323: AnnouncementMessageRow ===
+// === Module 19368: AnnouncementMessageRow ===
 
-// Module 19323 (AnnouncementMessageRow)
+// Module 19368 (AnnouncementMessageRow)
 import nativeDefault from "native" /* 575 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6907 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10217 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10894 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 12630 */;
-import ICYMIShared from "ICYMIShared" /* 19325 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6915 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10660 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 12789 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 15146 */;
+import ICYMIShared from "ICYMIShared" /* 19370 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import RelationshipStore from "RelationshipStore" /* 5248 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6948 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import RelationshipStore from "RelationshipStore" /* 5252 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6956 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const View = fn(17).View;
-const ITEM_PADDING = fn(19324).ITEM_PADDING;
+const ITEM_PADDING = fn(19369).ITEM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(19286);
+const createICYMIStyles = fn(19331);
 let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset }, footer: { marginVertical: paddingLeft.margin, gap: nativeDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: paddingLeft.inset } };
   return obj;

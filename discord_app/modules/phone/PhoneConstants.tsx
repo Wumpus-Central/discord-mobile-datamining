@@ -1,6 +1,6 @@
-// === Module 7818: PhoneConstants ===
+// === Module 7828: PhoneConstants ===
 
-// Module 7818 (PhoneConstants)
+// Module 7828 (PhoneConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/phone/PhoneConstants.tsx");

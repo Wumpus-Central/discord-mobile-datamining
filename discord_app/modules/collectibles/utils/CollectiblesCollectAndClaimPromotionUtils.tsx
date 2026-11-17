@@ -1,9 +1,9 @@
-// === Module 9450: CollectiblesCollectAndClaimPromotionUtils ===
+// === Module 9460: CollectiblesCollectAndClaimPromotionUtils ===
 
-// Module 9450 (CollectiblesCollectAndClaimPromotionUtils)
-import CollectiblesUtils from "CollectiblesUtils" /* 8497 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9451 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8485 */;
+// Module 9460 (CollectiblesCollectAndClaimPromotionUtils)
+import CollectiblesUtils from "CollectiblesUtils" /* 8508 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9461 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8496 */;
 
 require = fn;
 function getCollectionQualifyingSkuCount(bundledProducts, collectionId) {
@@ -53,7 +53,7 @@ function getCollectionQualifyingSkuCount(bundledProducts, collectionId) {
   }
   obj = require("CollectiblesUtils");
 }
-let closure_3 = fn(9416).getCollectiblesCollectAndClaim;
+let closure_3 = fn(9425).getCollectiblesCollectAndClaim;
 const CollectibleShopTab = fn(1074).CollectibleShopTab;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesCollectAndClaimPromotionUtils.tsx");

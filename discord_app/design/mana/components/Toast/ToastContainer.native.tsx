@@ -1,10 +1,10 @@
-// === Module 16485: ToastContainer ===
+// === Module 16521: ToastContainer ===
 
-// Module 16485 (ToastContainer)
+// Module 16521 (ToastContainer)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import TransitionGroup_TransitionGroup from "TransitionGroup/TransitionGroup" /* 5372 */;
-import OverlayViewDefault from "OverlayView" /* 6265 */;
+import TransitionGroup_TransitionGroup from "TransitionGroup/TransitionGroup" /* 5376 */;
+import OverlayViewDefault from "OverlayView" /* 6273 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -165,7 +165,7 @@ function AnimatedToast(cleanUp) {
   let items4 = [tmp.toast, "top" === position ? tmp.toastTop : tmp.toastBottom, animatedStyle];
   obj6.style = items4;
   const merged = Object.assign(entry.toast);
-  obj6.children = jsx(tmp2(16481).Toast, {});
+  obj6.children = jsx(tmp2(16517).Toast, {});
   return jsx(_modDef1655.View, obj6);
 }
 function getItemKey(key) {
@@ -184,7 +184,7 @@ obj2.duration = ANIMATION_DURATION_MS.resolve({});
 obj2.easing = fn(1655).Easing.linear;
 const QUEUE_ENTER_DELAY_MS = nativeDefault.modules.toast.QUEUE_ENTER_DELAY_MS;
 let closure_11 = QUEUE_ENTER_DELAY_MS.resolve({});
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj4 = { container: null, bounds: null, toast: null, toastTop: null, toastBottom: null };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

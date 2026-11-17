@@ -1,16 +1,16 @@
-// === Module 18630: RedesignSettingsCategoryFriendsActivityScreen ===
+// === Module 18671: RedesignSettingsCategoryFriendsActivityScreen ===
 
-// Module 18630 (RedesignSettingsCategoryFriendsActivityScreen)
+// Module 18671 (RedesignSettingsCategoryFriendsActivityScreen)
 import util from "util" /* 1113 */;
-import useMountEffectDefault from "useMountEffect" /* 5889 */;
-import SettingBuilders from "SettingBuilders" /* 12406 */;
-import FamilyCenterAgeGroupPrefetch from "FamilyCenterAgeGroupPrefetch" /* 18111 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18620 */;
-import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 18621 */;
+import useMountEffectDefault from "useMountEffect" /* 5893 */;
+import SettingBuilders from "SettingBuilders" /* 12612 */;
+import FamilyCenterAgeGroupPrefetch from "FamilyCenterAgeGroupPrefetch" /* 18152 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 18661 */;
+import SystemNotifPermissionLayoutDefault from "SystemNotifPermissionLayout" /* 18662 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(9202).MobileUserSettings;
+const MobileUserSettings = fn(9213).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notifications/settings/native/routes/RedesignSettingsCategoryFriendsActivityScreen.tsx");

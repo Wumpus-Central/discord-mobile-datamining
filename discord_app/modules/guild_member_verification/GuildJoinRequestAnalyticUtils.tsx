@@ -1,9 +1,9 @@
-// === Module 6924: GuildJoinRequestAnalyticUtils ===
+// === Module 6932: GuildJoinRequestAnalyticUtils ===
 
-// Module 6924 (GuildJoinRequestAnalyticUtils)
+// Module 6932 (GuildJoinRequestAnalyticUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import GuildMemberStore from "GuildMemberStore" /* 5222 */;
 
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

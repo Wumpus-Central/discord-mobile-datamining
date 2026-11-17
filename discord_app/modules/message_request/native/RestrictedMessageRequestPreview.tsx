@@ -1,12 +1,12 @@
-// === Module 19764: RestrictedMessageRequestPreview ===
+// === Module 19809: RestrictedMessageRequestPreview ===
 
-// Module 19764 (RestrictedMessageRequestPreview)
+// Module 19809 (RestrictedMessageRequestPreview)
 import nativeDefault from "native" /* 575 */;
-import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 14929 */;
+import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 14121 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import MessageStore from "MessageStore" /* 6362 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import MessageStore from "MessageStore" /* 6370 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, hidden: { opacity: 0 }, scrollContent: null, scrollContentEmpty: null, emptyChat: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };
@@ -125,13 +125,13 @@ export default function RestrictedMessageRequestPreview(channelId) {
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items9 = [closure_10(tmp2(19765), obj6), , ];
+      const items9 = [closure_10(tmp2(19810), obj6), , ];
       const obj7 = { channelId };
-      items9[1] = closure_10(tmp2(19767), obj7);
+      items9[1] = closure_10(tmp2(19812), obj7);
       let tmp19Result = null;
       if (isEmpty) {
         const obj8 = { style: tmp.emptyChat };
-        tmp19Result = closure_10(tmp2(14953), obj8);
+        tmp19Result = closure_10(tmp2(14165), obj8);
       }
       items9[2] = tmp19Result;
       obj5.children = items9;
@@ -142,7 +142,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
       items11[1] = obj10;
       obj9.style = items11;
       const obj11 = { channel: stateFromStores };
-      obj9.children = closure_10(tmp2(14870), obj11);
+      obj9.children = closure_10(tmp2(13951), obj11);
       items10[1] = closure_10(isEmpty, obj9);
       obj4.children = items10;
       tmp14Result = closure_11(tmp15, obj4);

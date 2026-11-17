@@ -1,6 +1,6 @@
-// === Module 5163: StageChannelPermissions ===
+// === Module 5167: StageChannelPermissions ===
 
-// Module 5163 (StageChannelPermissions)
+// Module 5167 (StageChannelPermissions)
 import Constants from "Constants" /* 1072 */;
 import BigFlagUtils_mod from "BigFlagUtils" /* 1084 */;
 import "BigFlagUtils";

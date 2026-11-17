@@ -1,12 +1,12 @@
-// === Module 10017: navigateToSocialLayerStorefront ===
+// === Module 10030: navigateToSocialLayerStorefront ===
 
-// Module 10017 (navigateToSocialLayerStorefront)
+// Module 10030 (navigateToSocialLayerStorefront)
 import router_utils from "router_utils" /* 1099 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7244 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10018 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7253 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10031 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7246 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7255 */;
 
 require = fn;
 function navigateToSocialLayerStorefrontWithGuildPreview() {

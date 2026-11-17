@@ -1,19 +1,19 @@
-// === Module 10877: MedalFirstBadge ===
+// === Module 15130: MedalFirstBadge ===
 
-// Module 10877 (MedalFirstBadge)
-import assetHelpers from "assetHelpers" /* 7755 */;
-import _modDef10878 from "module_10878" /* 10878 */;
-import _modDef10879 from "module_10879" /* 10879 */;
-import _modDef10880 from "module_10880" /* 10880 */;
+// Module 15130 (MedalFirstBadge)
+import assetHelpers from "assetHelpers" /* 7765 */;
+import _modDef15131 from "module_15131" /* 15131 */;
+import _modDef15132 from "module_15132" /* 15132 */;
+import _modDef15133 from "module_15133" /* 15133 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef10878 }, 3: null };
-let obj2 = { uri: _modDef10878 };
-obj[2] = { uri: _modDef10879 };
-const obj3 = { uri: _modDef10879 };
-obj[3] = { uri: _modDef10880 };
+let obj = { 1: null, 2: { uri: _modDef15131 }, 3: null };
+let obj2 = { uri: _modDef15131 };
+obj[2] = { uri: _modDef15132 };
+const obj3 = { uri: _modDef15132 };
+obj[3] = { uri: _modDef15133 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MedalFirstBadge.native.tsx");
 

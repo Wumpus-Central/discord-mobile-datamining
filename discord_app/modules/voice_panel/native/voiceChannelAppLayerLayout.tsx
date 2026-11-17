@@ -1,9 +1,9 @@
-// === Module 20048: voiceChannelAppLayerLayout ===
+// === Module 20094: voiceChannelAppLayerLayout ===
 
-// Module 20048 (voiceChannelAppLayerLayout)
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11991 */;
+// Module 20094 (voiceChannelAppLayerLayout)
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12433 */;
 
-const items = [{ code: "(function getVoiceChannelAppLayerInsets_voiceChannelAppLayerLayoutTsx1({safeArea:safeArea,edgeGutter:edgeGutter,controlsHeight:controlsHeight,keyboardHeight:keyboardHeight}){let[calculateVoicePanelHeaderSpecs,EDGE_GUTTER]=this.__closure;const{height:top}=calculateVoicePanelHeaderSpecs(safeArea,edgeGutter);const aboveControls=controlsHeight+Math.max(safeArea.bottom,EDGE_GUTTER);return{top:top,bottom:Math.max(aboveControls,keyboardHeight)};})" }, calculateVoicePanelHeaderSpecsDefault, fn(11988).EDGE_GUTTER];
+const items = [{ code: "(function getVoiceChannelAppLayerInsets_voiceChannelAppLayerLayoutTsx1({safeArea:safeArea,edgeGutter:edgeGutter,controlsHeight:controlsHeight,keyboardHeight:keyboardHeight}){let[calculateVoicePanelHeaderSpecs,EDGE_GUTTER]=this.__closure;const{height:top}=calculateVoicePanelHeaderSpecs(safeArea,edgeGutter);const aboveControls=controlsHeight+Math.max(safeArea.bottom,EDGE_GUTTER);return{top:top,bottom:Math.max(aboveControls,keyboardHeight)};})" }, calculateVoicePanelHeaderSpecsDefault, fn(12431).EDGE_GUTTER];
 let c0;
 let c1;
 [tmp2, tmp3, tmp4] = items;
@@ -17,7 +17,7 @@ const items1 = [tmp3, tmp4];
 getVoiceChannelAppLayerInsets.__closure = items1;
 getVoiceChannelAppLayerInsets.__workletHash = 7735597438766;
 getVoiceChannelAppLayerInsets.__initData = tmp2;
-const items2 = [{ code: "(function shouldRestoreVoiceChannelAppControls_voiceChannelAppLayerLayoutTsx2(mode,previousMode){let[VoicePanelControlsModes]=this.__closure;return mode===VoicePanelControlsModes.HIDDEN&&previousMode!==VoicePanelControlsModes.HIDDEN;})" }, fn(11983).VoicePanelControlsModes];
+const items2 = [{ code: "(function shouldRestoreVoiceChannelAppControls_voiceChannelAppLayerLayoutTsx2(mode,previousMode){let[VoicePanelControlsModes]=this.__closure;return mode===VoicePanelControlsModes.HIDDEN&&previousMode!==VoicePanelControlsModes.HIDDEN;})" }, fn(12426).VoicePanelControlsModes];
 let closure_129_0;
 [tmp5, tmp6] = items2;
 function shouldRestoreVoiceChannelAppControls(arg0, arg1) {

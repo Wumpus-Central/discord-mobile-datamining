@@ -1,7 +1,7 @@
-// === Module 9216: MarkupParser ===
+// === Module 9227: markup/MarkupParser ===
 
-// Module 9216 (MarkupParser)
-import markup_MarkupParser from "markup/MarkupParser" /* 9217 */;
+// Module 9227 (markup/MarkupParser)
+import MarkupParser from "MarkupParser" /* 6053 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -16,5 +16,5 @@ for (const key10030 in require("MarkupParserTypes")) {
   continue;
 }
 
-export const reactParserFor = markup_MarkupParser.default.reactParserFor;
-export const astParserFor = markup_MarkupParser.default.astParserFor;
+export const reactParserFor = MarkupParser.default.reactParserFor;
+export const astParserFor = MarkupParser.default.astParserFor;

@@ -1,8 +1,8 @@
-// === Module 10891: GroupDMAvatar ===
+// === Module 10742: GroupDMAvatar ===
 
-// Module 10891 (GroupDMAvatar)
+// Module 10742 (GroupDMAvatar)
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import ClipView from "ClipView" /* 9503 */;
+import ClipView from "ClipView" /* 9515 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 
@@ -70,7 +70,7 @@ class FacepileGroupDMAvatar {
     merged = Object.assign(obj11);
     items3 = [, ];
     items3[0] = tmp11(tmp2(tmp3[4]).Avatar, obj9);
-    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "sentry-feedback-form-title" };
+    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "AMEX_NETWORK_ERROR" };
     obj12.animate = animate;
     if (null == users) {
       obj13 = { source: null };
@@ -98,7 +98,7 @@ obj[fn(1187).AvatarSizes.REFRESH_MEDIUM_32] = fn(1187).AvatarSizes.XSMALL_20;
 obj[fn(1187).AvatarSizes.XSMALL] = fn(1187).AvatarSizes.SIZE_16;
 obj[fn(1187).AvatarSizes.SIZE_16] = fn(1187).AvatarSizes.XXSMALL_10;
 obj[fn(1187).AvatarSizes.NORMAL] = fn(1187).AvatarSizes.XSMALL;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 const React5 = createStyles.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.tsx");

@@ -1,15 +1,15 @@
-// === Module 10862: VoiceActivityStatus ===
+// === Module 14147: VoiceActivityStatus ===
 
-// Module 10862 (VoiceActivityStatus)
+// Module 14147 (VoiceActivityStatus)
 import util from "util" /* 1113 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10853 */;
-import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 10863 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 14139 */;
+import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 14148 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_6 = createStyles.createStyles({ icon: { flexShrink: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/VoiceActivityStatus.tsx");

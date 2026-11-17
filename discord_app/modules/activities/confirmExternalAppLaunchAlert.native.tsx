@@ -1,20 +1,20 @@
-// === Module 12776: confirmExternalAppLaunchAlert ===
+// === Module 11385: confirmExternalAppLaunchAlert ===
 
-// Module 12776 (confirmExternalAppLaunchAlert)
+// Module 11385 (confirmExternalAppLaunchAlert)
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import components_Button_Button from "components/Button/Button" /* 5926 */;
-import LinkingDefault from "Linking" /* 6002 */;
-import FastImageDefault from "FastImage" /* 6010 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 6258 */;
-import _modDef12777 from "module_12777" /* 12777 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import components_Button_Button from "components/Button/Button" /* 5930 */;
+import LinkingDefault from "Linking" /* 6006 */;
+import FastImageDefault from "FastImage" /* 6014 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 6266 */;
+import _modDef11386 from "module_11386" /* 11386 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_7();
   const obj = { style: tmp.alertContainer, children: null };
-  const obj2 = { source: _modDef12777, style: tmp.announcementBirb };
+  const obj2 = { source: _modDef11386, style: tmp.announcementBirb };
   items = [hasOwnProperty(FastImageDefault, obj2), , , ];
   const obj3 = { style: tmp.alertEyebrowText, variant: "body-sm/medium", children: null };
   const intl = util.intl;
@@ -50,7 +50,7 @@ const View = fn(17).View;
 const PRIVATE_APPS_HELP_ARTICLE = fn(2145).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_7 = createStyles.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");

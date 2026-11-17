@@ -1,7 +1,7 @@
-// === Module 12739: openIgnoreThermalStateAlert ===
+// === Module 11347: openIgnoreThermalStateAlert ===
 
-// Module 12739 (openIgnoreThermalStateAlert)
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
+// Module 11347 (openIgnoreThermalStateAlert)
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6267 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

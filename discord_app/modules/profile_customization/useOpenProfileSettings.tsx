@@ -1,14 +1,14 @@
-// === Module 10034: useOpenProfileSettings ===
+// === Module 10047: useOpenProfileSettings ===
 
-// Module 10034 (useOpenProfileSettings)
+// Module 10047 (useOpenProfileSettings)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1072 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1082 */;
-import openUserSettings from "openUserSettings" /* 8604 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10037 */;
+import openUserSettings from "openUserSettings" /* 8615 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 10050 */;
 import UserStore from "UserStore" /* 1388 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10035 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8542 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10048 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8553 */;
 import size from "module_2" /* 2 */;
 
 _mod19.useCallback;
@@ -34,10 +34,14 @@ export default function useOpenProfileSettings() {
     } else {
       USER_PROFILE = constants.USER_PROFILE;
     }
-    ProfileCustomizationNavigationStore.setState({ subsection: USER_PROFILE, scrollPosition });
+    const obj2 = { subsection: USER_PROFILE, scrollPosition, editingTab: null };
+    let str = initialTab;
+    if (initialTab == null) {
+      str = "main";
+    }
+    obj2.editingTab = str;
+    ProfileCustomizationNavigationStore.setState(obj2);
+    openUserSettings.openUserSettings({ screen: UserSettingsSections.PROFILE_CUSTOMIZATION, params: { initialTab } });
     const obj3 = { screen: UserSettingsSections.PROFILE_CUSTOMIZATION, params: { initialTab } };
-    openUserSettings.openUserSettings(obj3);
-    const obj2 = { subsection: USER_PROFILE, scrollPosition };
-    const obj4 = { initialTab };
   }, items);
 };

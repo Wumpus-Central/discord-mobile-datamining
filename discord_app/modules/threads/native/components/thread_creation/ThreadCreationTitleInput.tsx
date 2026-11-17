@@ -1,10 +1,10 @@
-// === Module 19428: ThreadCreationTitleInput ===
+// === Module 19473: ThreadCreationTitleInput ===
 
-// Module 19428 (ThreadCreationTitleInput)
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 8147 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 9004 */;
+// Module 19473 (ThreadCreationTitleInput)
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 8158 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 9015 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
 
 const require = fn;
 const MAX_CHANNEL_NAME_LENGTH = fn(1072).MAX_CHANNEL_NAME_LENGTH;

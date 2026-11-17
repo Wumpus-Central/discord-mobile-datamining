@@ -1,8 +1,8 @@
-// === Module 20049: VoiceChannelAppSurface ===
+// === Module 20095: VoiceChannelAppSurface ===
 
-// Module 20049 (VoiceChannelAppSurface)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 13345 */;
+// Module 20095 (VoiceChannelAppSurface)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5971 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 14585 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

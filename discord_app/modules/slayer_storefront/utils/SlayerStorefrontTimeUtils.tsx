@@ -1,11 +1,11 @@
-// === Module 11685: SlayerStorefrontTimeUtils ===
+// === Module 10127: SlayerStorefrontTimeUtils ===
 
-// Module 11685 (SlayerStorefrontTimeUtils)
+// Module 10127 (SlayerStorefrontTimeUtils)
 import DurationsDefault from "Durations" /* 1089 */;
 import util from "util" /* 1113 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import _modDef4031 from "module_4031" /* 4031 */;
-import useIntervalDefault from "useInterval" /* 9441 */;
+import _modDef4033 from "module_4033" /* 4033 */;
+import useIntervalDefault from "useInterval" /* 9451 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,13 +45,13 @@ function formatLimitedOfferTimeLeft(arg0) {
     } else if (hours > 0) {
       const intl2 = util.intl;
       const obj3 = { hours };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef4031.PPaJSw, obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef4033.PPaJSw, obj3);
     } else {
       const intl = util.intl;
       const obj = { minutes: null };
       const _Math = Math;
       obj.minutes = Math.max(tmp12, 1);
-      formatToPlainStringResult = intl.formatToPlainString(_modDef4031["7Z+aIf"], obj);
+      formatToPlainStringResult = intl.formatToPlainString(_modDef4033["7Z+aIf"], obj);
     }
     return formatToPlainStringResult;
   }

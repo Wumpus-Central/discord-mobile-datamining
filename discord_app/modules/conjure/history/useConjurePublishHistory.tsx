@@ -1,10 +1,10 @@
-// === Module 13288: useConjurePublishHistory ===
+// === Module 14515: useConjurePublishHistory ===
 
-// Module 13288 (useConjurePublishHistory)
+// Module 14515 (useConjurePublishHistory)
 import util from "util" /* 1113 */;
 import _modDef2169 from "module_2169" /* 2169 */;
-import _modDef4131 from "module_4131" /* 4131 */;
-import conjurePublishHistoryRequests from "conjurePublishHistoryRequests" /* 13289 */;
+import _modDef4133 from "module_4133" /* 4133 */;
+import conjurePublishHistoryRequests from "conjurePublishHistoryRequests" /* 14516 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/conjure/history/useConjurePubli
 export function publishHistoryTitle(publishedAt) {
   const intl = util.intl;
   const obj = { date: _modDef2169(publishedAt).format("LLL") };
-  return intl.formatToPlainString(_modDef4131["/spQzC"], obj);
+  return intl.formatToPlainString(_modDef4133["/spQzC"], obj);
 }
 export function useConjurePublishHistory(projectId) {
   _require = projectId;

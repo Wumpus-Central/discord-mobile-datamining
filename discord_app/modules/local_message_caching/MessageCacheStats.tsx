@@ -1,6 +1,6 @@
-// === Module 8691: MessageCacheStats ===
+// === Module 8702: MessageCacheStats ===
 
-// Module 8691 (MessageCacheStats)
+// Module 8702 (MessageCacheStats)
 import size from "module_2" /* 2 */;
 
 class MessageCacheStats {

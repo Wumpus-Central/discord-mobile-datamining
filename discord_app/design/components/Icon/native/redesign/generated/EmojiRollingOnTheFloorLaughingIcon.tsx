@@ -1,9 +1,9 @@
-// === Module 18027: EmojiRollingOnTheFloorLaughingIcon ===
+// === Module 18068: EmojiRollingOnTheFloorLaughingIcon ===
 
-// Module 18027 (EmojiRollingOnTheFloorLaughingIcon)
+// Module 18068 (EmojiRollingOnTheFloorLaughingIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod18028 from "module_18028" /* 18028 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod18069 from "module_18069" /* 18069 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiRollingOnTheFloorLaughingIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod18028, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18069, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,9 +1,9 @@
-// === Module 9021: UploadStore ===
+// === Module 9032: UploadStore ===
 
-// Module 9021 (UploadStore)
+// Module 9032 (UploadStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageStore from "MessageStore" /* 6362 */;
+import MessageStore from "MessageStore" /* 6370 */;
 
 const re1 = /^(assets-library|ph|file):\/\//;
 const re2 = /^content:\/\//;

@@ -1,23 +1,23 @@
-// === Module 19847: HexagonCampaignExpiringPromoSheet ===
+// === Module 19892: HexagonCampaignExpiringPromoSheet ===
 
-// Module 19847 (HexagonCampaignExpiringPromoSheet)
-import Text_Text from "Text/Text" /* 5919 */;
-import QuestTypes from "QuestTypes" /* 6957 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9579 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 10954 */;
-import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 17085 */;
+// Module 19892 (HexagonCampaignExpiringPromoSheet)
+import Text_Text from "Text/Text" /* 5923 */;
+import QuestTypes from "QuestTypes" /* 6965 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8845 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9591 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 11183 */;
+import HexagonCampaignAnalytics from "HexagonCampaignAnalytics" /* 17120 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const premiumEndDate = fn(5331).HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS;
+const premiumEndDate = fn(5335).HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS;
 const Constants = fn(1072);
 ({ AnalyticsObjects: hasOwnProperty, AnalyticsPages: closure_6 } = Constants);
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const EXPIRING_SOON_SHEET = fn(17085).HexagonCampaignContentSurface.EXPIRING_SOON_SHEET;
+const EXPIRING_SOON_SHEET = fn(17120).HexagonCampaignContentSurface.EXPIRING_SOON_SHEET;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignExpiringPromoSheet.tsx");
 
@@ -61,9 +61,9 @@ export default function HexagonCampaignExpiringPromoSheet(markAsDismissed) {
   }, items2);
   let obj3 = { illustration: jsx(markAsDismissed(callback[13]).BundleAbstractUI, { accessible: false }), title: null, description: null, onDismiss: null, actions: null };
   const intl = markAsDismissed(callback[14]).intl;
-  obj3.title = intl.string(require("module_4516").sL4EQm);
+  obj3.title = intl.string(require("module_4520").sL4EQm);
   const intl2 = markAsDismissed(callback[14]).intl;
-  obj3.description = intl2.format(require("module_4516")["8WoUjt"], {
+  obj3.description = intl2.format(require("module_4520")["8WoUjt"], {
     premiumEndDate,
     learnMoreHook(children, key) {
       return jsx(Text_Text.Text, { variant: "heading-md/medium", color: "text-link", accessibilityRole: "link", onPress, children }, key);

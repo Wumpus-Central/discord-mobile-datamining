@@ -1,7 +1,7 @@
-// === Module 7805: safetyScannedUploadSurfaces ===
+// === Module 7815: safetyScannedUploadSurfaces ===
 
-// Module 7805 (safetyScannedUploadSurfaces)
-import ImageCroppingConstants from "ImageCroppingConstants" /* 7806 */;
+// Module 7815 (safetyScannedUploadSurfaces)
+import ImageCroppingConstants from "ImageCroppingConstants" /* 7816 */;
 import size from "module_2" /* 2 */;
 
 const UploadTypes = ImageCroppingConstants.UploadTypes;

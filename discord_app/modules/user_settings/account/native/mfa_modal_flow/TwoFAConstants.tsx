@@ -1,6 +1,6 @@
-// === Module 17283: TwoFAConstants ===
+// === Module 17320: TwoFAConstants ===
 
-// Module 17283 (TwoFAConstants)
+// Module 17320 (TwoFAConstants)
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 

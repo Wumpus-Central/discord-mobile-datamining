@@ -1,22 +1,22 @@
-// === Module 13777: ConjureProjectAboutSheet ===
+// === Module 12943: ConjureProjectAboutSheet ===
 
-// Module 13777 (ConjureProjectAboutSheet)
+// Module 12943 (ConjureProjectAboutSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4131 from "module_4131" /* 4131 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import Stack_Stack from "Stack/Stack" /* 6327 */;
-import useMeasuredLayoutDefault from "useMeasuredLayout" /* 7994 */;
-import openConjureProjectAboutSheet from "openConjureProjectAboutSheet" /* 13776 */;
-import useConjureSharedProjectDefault from "useConjureSharedProject" /* 13778 */;
-import useConjureSharedProjectCoverActionDefault from "useConjureSharedProjectCoverAction" /* 13779 */;
-import ConjureSharedProjectCoverDefault from "ConjureSharedProjectCover" /* 13783 */;
-import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 13784 */;
-import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 13785 */;
-import useConjureProjectCreator from "useConjureProjectCreator" /* 13786 */;
-import ConjureCreatorBylineDefault from "ConjureCreatorByline" /* 13788 */;
-import openConjureSharedProjectRemixSheetDefault from "openConjureSharedProjectRemixSheet" /* 13790 */;
+import _modDef4133 from "module_4133" /* 4133 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import Stack_Stack from "Stack/Stack" /* 6335 */;
+import useMeasuredLayoutDefault from "useMeasuredLayout" /* 8005 */;
+import openConjureProjectAboutSheet from "openConjureProjectAboutSheet" /* 12942 */;
+import useConjureSharedProjectDefault from "useConjureSharedProject" /* 12944 */;
+import useConjureSharedProjectCoverActionDefault from "useConjureSharedProjectCoverAction" /* 12945 */;
+import ConjureSharedProjectCoverDefault from "ConjureSharedProjectCover" /* 12948 */;
+import ConjureAppSheetIconDefault from "ConjureAppSheetIcon" /* 12949 */;
+import conjureSharedProjectSurfaces from "conjureSharedProjectSurfaces" /* 12950 */;
+import useConjureProjectCreator from "useConjureProjectCreator" /* 12951 */;
+import ConjureCreatorBylineDefault from "ConjureCreatorByline" /* 12953 */;
+import openConjureSharedProjectRemixSheetDefault from "openConjureSharedProjectRemixSheet" /* 12955 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,7 +32,7 @@ function Surfaces(project) {
     const obj2 = { spacing: nativeDefault.space.PX_4, children: null };
     const obj3 = { variant: "body-xs/semibold", color: "text-muted", children: null };
     const intl = util.intl;
-    obj3.children = intl.string(_modDef4131["cF++B3"]);
+    obj3.children = intl.string(_modDef4133["cF++B3"]);
     items = [timestampProducer(Text_Text.Text, obj3), ];
     const obj4 = { variant: "body-sm/normal", color: "text-default", children: result.join(" \u00B7 ") };
     items[1] = timestampProducer(Text_Text.Text, obj4);
@@ -81,7 +81,7 @@ function RemixActions(project) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { scroll: { flex: 1, minHeight: 0 }, body: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: arg0 + nativeDefault.space.PX_16 }, identity: null, details: null, footer: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: arg0 + nativeDefault.space.PX_16 };
@@ -173,8 +173,8 @@ export default function ConjureProjectAboutSheet(arg0) {
           return obj5;
         } else {
           if (value) {
-            v1(5542).hideActionSheet(tmp4(13776).CONJURE_PROJECT_ABOUT_SHEET_KEY);
-            const obj = v1(5542);
+            v1(5546).hideActionSheet(tmp4(12942).CONJURE_PROJECT_ABOUT_SHEET_KEY);
+            const obj = v1(5546);
           }
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
@@ -193,20 +193,20 @@ export default function ConjureProjectAboutSheet(arg0) {
   } else {
     const intl = tmp8(1113).intl;
     if ("expired" === tmp3.type) {
-      let mQma36 = _modDef4131.wahvH2;
+      let mQma36 = _modDef4133.wahvH2;
     } else {
-      mQma36 = _modDef4131.mQma36;
+      mQma36 = _modDef4133.mQma36;
     }
     name = intl.string(mQma36);
   }
-  let obj2 = { scrollable: true, header: closure_6(run(7913).BottomSheetTitleHeader, { title: name }), footer: null, children: null };
+  let obj2 = { scrollable: true, header: closure_6(run(7923).BottomSheetTitleHeader, { title: name }), footer: null, children: null };
   let tmp14Result;
   if (null != tmp9) {
     let obj3 = { style: tmp5Result.footer, ref, onLayout, children: null };
     let obj4 = { bottom: true, children: null };
     let obj5 = { project: tmp9, guildId: source.guildId, ticket };
     obj4.children = closure_6(RemixActions, obj5);
-    obj3.children = closure_6(tmp8(7415).SafeAreaPaddingView, obj4);
+    obj3.children = closure_6(tmp8(7425).SafeAreaPaddingView, obj4);
     tmp14Result = closure_6(View, obj3);
   }
   obj2.footer = tmp14Result;
@@ -219,8 +219,8 @@ export default function ConjureProjectAboutSheet(arg0) {
     if (launchFailed) {
       const obj8 = { variant: "body-sm/normal", color: "text-feedback-critical", children: null };
       const intl3 = tmp8(1113).intl;
-      obj8.children = intl3.string(_modDef4131.hh2nuX);
-      tmp14Result4 = closure_6(tmp8(5919).Text, obj8);
+      obj8.children = intl3.string(_modDef4133.hh2nuX);
+      tmp14Result4 = closure_6(tmp8(5923).Text, obj8);
     }
     items1[1] = tmp14Result4;
     const obj9 = { style: tmp5Result.identity, children: null };
@@ -228,13 +228,13 @@ export default function ConjureProjectAboutSheet(arg0) {
     const items2 = [closure_6(ConjureAppSheetIconDefault, obj10), ];
     const obj11 = { style: tmp5Result.details, children: null };
     const obj12 = { variant: "body-md/semibold", color: "text-strong", lineClamp: 1, children: application.name };
-    const items3 = [closure_6(tmp8(5919).Text, obj12), ];
+    const items3 = [closure_6(tmp8(5923).Text, obj12), ];
     let tmp14Result5 = null;
     if (null != application.description) {
       tmp14Result5 = null;
       if ("" !== str3.trim()) {
         const obj13 = { variant: "body-sm/normal", color: "text-default", children: application.description.trim() };
-        tmp14Result5 = closure_6(tmp8(5919).Text, obj13);
+        tmp14Result5 = closure_6(tmp8(5923).Text, obj13);
       }
       str3 = application.description;
     }
@@ -264,11 +264,11 @@ export default function ConjureProjectAboutSheet(arg0) {
   if ("info_only" === tmp3.type) {
     const obj18 = { variant: "body-sm/normal", color: "text-muted", children: null };
     const intl4 = tmp8(1113).intl;
-    obj18.children = intl4.string(_modDef4131["2DSRxV"]);
-    tmp14Result6 = closure_6(tmp8(5919).Text, obj18);
+    obj18.children = intl4.string(_modDef4133["2DSRxV"]);
+    tmp14Result6 = closure_6(tmp8(5923).Text, obj18);
   }
   items4[2] = tmp14Result6;
   obj6.children = items4;
-  obj2.children = closure_7(run(5560).BottomSheetScrollView, obj6);
-  return closure_6(run(7951).ActionSheet, obj2);
+  obj2.children = closure_7(run(5564).BottomSheetScrollView, obj6);
+  return closure_6(run(7961).ActionSheet, obj2);
 };

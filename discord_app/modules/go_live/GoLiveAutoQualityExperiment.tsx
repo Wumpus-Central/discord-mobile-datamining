@@ -1,14 +1,14 @@
-// === Module 12985: GoLiveAutoQualityExperiment ===
+// === Module 11618: GoLiveAutoQualityExperiment ===
 
-// Module 12985 (GoLiveAutoQualityExperiment)
+// Module 11618 (GoLiveAutoQualityExperiment)
 import Storage3 from "Storage" /* 510 */;
-import StreamActionCreators from "StreamActionCreators" /* 6852 */;
+import StreamActionCreators from "StreamActionCreators" /* 6860 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6243 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 6251 */;
 import ApexExperiment from "apex/ApexExperiment" /* 1453 */;
 
 require = fn;
-const ApplicationStreamPresets = fn(6161).ApplicationStreamPresets;
+const ApplicationStreamPresets = fn(6168).ApplicationStreamPresets;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
 const obj2 = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };

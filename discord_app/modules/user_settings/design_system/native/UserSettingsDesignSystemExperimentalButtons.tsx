@@ -1,20 +1,20 @@
-// === Module 18420: UserSettingsDesignSystemExperimentalButtons ===
+// === Module 18461: UserSettingsDesignSystemExperimentalButtons ===
 
-// Module 18420 (UserSettingsDesignSystemExperimentalButtons)
+// Module 18461 (UserSettingsDesignSystemExperimentalButtons)
 import nativeDefault from "native" /* 575 */;
-import native from "native" /* 5367 */;
-import LinearGradientDefault from "LinearGradient" /* 5883 */;
-import useToken from "useToken" /* 5892 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import components_Button_Button from "components/Button/Button" /* 5926 */;
-import _modDef6024 from "module_6024" /* 6024 */;
-import Stack_Stack from "Stack/Stack" /* 6327 */;
-import _modDef7457 from "module_7457" /* 7457 */;
-import TableRowGroup from "TableRowGroup" /* 7746 */;
-import _modDef7827 from "module_7827" /* 7827 */;
-import native2 from "native" /* 7997 */;
-import RowButton from "RowButton" /* 8108 */;
-import _modDef10570 from "module_10570" /* 10570 */;
+import native from "native" /* 5371 */;
+import LinearGradientDefault from "LinearGradient" /* 5887 */;
+import useToken from "useToken" /* 5896 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import components_Button_Button from "components/Button/Button" /* 5930 */;
+import _modDef6028 from "module_6028" /* 6028 */;
+import Stack_Stack from "Stack/Stack" /* 6335 */;
+import _modDef7467 from "module_7467" /* 7467 */;
+import TableRowGroup from "TableRowGroup" /* 7756 */;
+import _modDef7837 from "module_7837" /* 7837 */;
+import native2 from "native" /* 8008 */;
+import RowButton from "RowButton" /* 8119 */;
+import _modDef11050 from "module_11050" /* 11050 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
 
     },
     text: "Channel Name",
-    icon: _modDef7457,
+    icon: _modDef7467,
     iconPosition: "end",
     accessibilityHint: "double-tap for more options",
     iconOpticalOffsetMargin: -6
@@ -55,7 +55,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
 
     },
     text: "Channel Name",
-    icon: _modDef7457,
+    icon: _modDef7467,
     iconPosition: "end",
     accessibilityHint: "double-tap for more options",
     iconOpticalOffsetMargin: -6
@@ -67,7 +67,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
       },
       size: "lg",
       text: "Search",
-      icon: _modDef7827,
+      icon: _modDef7837,
       round: true
     }),
 
@@ -78,7 +78,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     },
     size: "lg",
     text: "Search",
-    icon: _modDef7827,
+    icon: _modDef7837,
     round: true
   };
   items1[1] = timestampProducer(native2.InputButton, {
@@ -87,7 +87,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     },
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: _modDef6024,
+    icon: _modDef6028,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   });
@@ -127,7 +127,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     },
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: _modDef6024,
+    icon: _modDef6028,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   };
@@ -154,7 +154,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   const obj23 = { title: "Experimental Blur Background Row Button", description: "Row Button Row Buttons are full-width, high-emphasis buttons that are used as primary CTAs in a page.", hasIcons: false, children: timestampProducer(React3, {}) };
   const tmp3 = LinearGradientDefault;
   obj25.children = timestampProducer(RowButton.RowButton, {
-    icon: _modDef10570,
+    icon: _modDef11050,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
@@ -165,7 +165,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   obj24.children = timestampProducer(tmp3, obj25);
   items[5] = timestampProducer(native.ThemeContextProvider, obj24);
   const obj26 = {
-    icon: _modDef10570,
+    icon: _modDef11050,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
@@ -179,7 +179,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   const items3 = [timestampProducer(React4, obj5), ];
   const obj27 = { title: "Collapsible Floating Action Button", description: "A variation of the FloatingActionButton which will display some text until the user scrolls. We currently recommend the use of the FloatingActionButton over the CollapsibleFloatingActionButton, as a singular icon button without animation is more compact, understandable, and predictable.", hasIcons: false, children: timestampProducer(React3, { style: { padding: 48 } }) };
   items3[1] = timestampProducer(native2.CollapsibleFloatingActionButton, {
-    icon: _modDef10570,
+    icon: _modDef11050,
     onPress() {
 
     },

@@ -1,14 +1,14 @@
-// === Module 13611: ConjureShimmer ===
+// === Module 14662: ConjureShimmer ===
 
-// Module 13611 (ConjureShimmer)
+// Module 14662 (ConjureShimmer)
 import _modDef671 from "module_671" /* 671 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import timing_timing from "timing/timing" /* 5538 */;
-import LinearGradientDefault from "LinearGradient" /* 5883 */;
-import _modDef7533 from "module_7533" /* 7533 */;
+import timing_timing from "timing/timing" /* 5542 */;
+import LinearGradientDefault from "LinearGradient" /* 5887 */;
+import _modDef7543 from "module_7543" /* 7543 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5307 */;
+import AccessibilityStore from "AccessibilityStore" /* 5311 */;
 
 const require = globalThis.__r;
 const _modDef1655 = _mod1655;
@@ -21,7 +21,7 @@ const jsxProd = fn(21);
 const locations = [0, 0.4, 0.5, 0.6, 1];
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_13 = createStyles.createStyles({ root: { position: "relative" }, band: { position: "absolute", top: 0, bottom: 0 }, fill: { flex: 1 } });
 let closure_14 = { code: "(function ConjureShimmerTsx1(){let[bandWidth,progress,width]=this.__closure;return{transform:[{translateX:-bandWidth+progress.get()*(bandWidth+width)}]};})" };
 const size = fn(2);
@@ -130,7 +130,7 @@ export default function ConjureShimmer(epoch) {
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
     obj8.children = closure_8(LinearGradientDefault, obj10);
     obj6.children = closure_8(_modDef1655.View, obj8);
-    obj5.children = closure_8(_modDef7533, obj6);
+    obj5.children = closure_8(_modDef7543, obj6);
     tmp18 = closure_8(closure_6, obj5);
   }
   items5[1] = tmp18;

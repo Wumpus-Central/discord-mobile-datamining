@@ -1,9 +1,9 @@
-// === Module 16492: createAccessibleNativeStackNavigator ===
+// === Module 16528: createAccessibleNativeStackNavigator ===
 
-// Module 16492 (createAccessibleNativeStackNavigator)
+// Module 16528 (createAccessibleNativeStackNavigator)
 import Link from "Link" /* 1503 */;
-import Navigator from "Navigator" /* 7490 */;
-import NativeStackNavigator from "NativeStackNavigator" /* 9128 */;
+import Navigator from "Navigator" /* 7500 */;
+import NativeStackNavigator from "NativeStackNavigator" /* 9139 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

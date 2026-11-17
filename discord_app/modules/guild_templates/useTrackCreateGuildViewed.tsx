@@ -1,10 +1,10 @@
-// === Module 14047: useTrackCreateGuildViewed ===
+// === Module 12870: useTrackCreateGuildViewed ===
 
-// Module 14047 (useTrackCreateGuildViewed)
+// Module 12870 (useTrackCreateGuildViewed)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import noop from "module_19" /* 19 */;
 
-const GuildTemplateStates = fn(8130).GuildTemplateStates;
+const GuildTemplateStates = fn(8141).GuildTemplateStates;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_templates/useTrackCreateGuildViewed.tsx");

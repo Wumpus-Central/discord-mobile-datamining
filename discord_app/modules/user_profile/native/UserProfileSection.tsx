@@ -1,19 +1,19 @@
-// === Module 12501: UserProfileSection ===
+// === Module 12700: UserProfileSection ===
 
-// Module 12501 (UserProfileSection)
+// Module 12700 (UserProfileSection)
 import nativeDefault from "native" /* 575 */;
-import ColorUtils from "ColorUtils" /* 5303 */;
-import native from "native" /* 5367 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7939 */;
-import FormDivider from "FormDivider" /* 8110 */;
+import ColorUtils from "ColorUtils" /* 5307 */;
+import native from "native" /* 5371 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7949 */;
+import FormDivider from "FormDivider" /* 8121 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" }, title: { flexDirection: "row" }, section: { marginHorizontal: 12, marginTop: 12, marginBottom: 8 }, contentContainer: { borderWidth: 1, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

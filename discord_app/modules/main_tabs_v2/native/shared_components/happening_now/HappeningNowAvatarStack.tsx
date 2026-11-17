@@ -1,12 +1,12 @@
-// === Module 18806: HappeningNowAvatarStack ===
+// === Module 18847: HappeningNowAvatarStack ===
 
-// Module 18806 (HappeningNowAvatarStack)
+// Module 18847 (HappeningNowAvatarStack)
 import nativeDefault from "native" /* 575 */;
 import native from "native" /* 1187 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import spring_spring from "spring/spring" /* 5929 */;
-import ClipView from "ClipView" /* 9503 */;
+import spring_spring from "spring/spring" /* 5933 */;
+import ClipView from "ClipView" /* 9515 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
@@ -16,11 +16,11 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(15747).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(15781).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { damping: 17, stiffness: 320, mass: 0.5 };
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_11 = createStyles.createStyles((arg0, marginLeft) => {
   const obj = { avatarStack: { flexDirection: "row" }, stageAvatarStack: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 }, avatarBubbles: { display: "flex", flexDirection: "row" }, avatars: { display: "flex", flexDirection: "row" }, shiftedAvatar: { marginLeft: -marginLeft }, userCounter: null, ellipsisWrapper: null, ellipsisBorder: null };
   const obj2 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 };
@@ -214,7 +214,7 @@ export function HappeningNowAvatarStack(userLimit) {
     obj4.children = mapped;
     const items8 = [sharedValue(_modDef1655.View, obj4), ];
     const obj5 = { color: "text-default", variant: "body-xs/semibold", children: tmp6(2027).humanizeValue(userCount, stateFromStores) };
-    items8[1] = sharedValue(tmp6(5919).Text, obj5);
+    items8[1] = sharedValue(tmp6(5923).Text, obj5);
     obj3.children = items8;
     let tmp33 = obj3;
     const tmp6Result7 = tmp6(2027);
@@ -232,7 +232,7 @@ export function HappeningNowAvatarStack(userLimit) {
       const obj9 = { color: "text-default", variant: "footnote/semibold", allowFontScaling: false, children: null };
       const items12 = ["+", tmp6(2027).humanizeValue(diff, stateFromStores)];
       obj9.children = items12;
-      obj8.children = tmp28(tmp6(5919).Text, obj9);
+      obj8.children = tmp28(tmp6(5923).Text, obj9);
       tmp31Result = tmp31(tmp29, obj8);
       const tmp6Result8 = tmp6(2027);
     }
@@ -247,7 +247,7 @@ export function HappeningNowAvatarStack(userLimit) {
       const items14 = [tmp3.ellipsisWrapper, animatedStyle];
       obj10.style = items14;
       const obj11 = { style: tmp3.ellipsisBorder };
-      obj10.children = tmp31(tmp6(18807).TypingIndicator, obj11);
+      obj10.children = tmp31(tmp6(18848).TypingIndicator, obj11);
       tmp31Result2 = tmp31(tmp30(1655).View, obj10);
     }
     items13[1] = tmp31Result2;

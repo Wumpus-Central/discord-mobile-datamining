@@ -1,31 +1,31 @@
-// === Module 18744: useHomeDrawerGesture ===
+// === Module 18785: useHomeDrawerGesture ===
 
-// Module 18744 (useHomeDrawerGesture)
+// Module 18785 (useHomeDrawerGesture)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
-import useChatLayoutDefault from "useChatLayout" /* 5485 */;
-import timing_timing from "timing/timing" /* 5538 */;
-import HapticUtils from "HapticUtils" /* 5544 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 12403 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18739 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5486 */;
+import useChatLayoutDefault from "useChatLayout" /* 5489 */;
+import timing_timing from "timing/timing" /* 5542 */;
+import HapticUtils from "HapticUtils" /* 5548 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5592 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 12609 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 18780 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 18738 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 18745 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 18779 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 18786 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let computeMaxX = fn(18738).computeMaxX;
+let computeMaxX = fn(18779).computeMaxX;
 const AnalyticEvents = fn(1072).AnalyticEvents;
-const GestureConstants = fn(12010);
+const GestureConstants = fn(12447);
 ({ FLING_MIN_DISTANCE: closure_9, FLING_MIN_VELOCITY: closure_10, PULL_GESTURE_ACTIVATION_DISTANCE: closure_11, PULL_GESTURE_RESISTANCE } = GestureConstants);
 ({ PULL_GESTURE_SNAP_TIMING: map1, PULL_GESTURE_UNSNAP_TIMING: closure_14 } = GestureConstants);
-const LaunchPadTypes = fn(12402).LaunchPadTypes;
+const LaunchPadTypes = fn(12608).LaunchPadTypes;
 let c16 = 144;
 let result = 144 * (1 - 1 / PULL_GESTURE_RESISTANCE);
 let closure_18 = 48 + result;
@@ -51,17 +51,17 @@ let closure_37 = { code: "(function useHomeDrawerGestureTsx18(event){let[gesture
 let closure_38 = { code: "(function useHomeDrawerGestureTsx19(event){let[activationOffsetX,dragOffsetX,FLING_MIN_VELOCITY,FLING_MIN_DISTANCE,snappedByDrag,fireThrow,INITIAL_OPEN_WIDTH,scheduleOnRN,triggerHapticFeedback,HapticFeedbackTypes,shouldOpenFromPosition,settleDrawer,didSettle,gestureState,trackServerDrawerInteract,ServerDrawerInteractAction]=this.__closure;const flingDistanceX=activationOffsetX.get()+dragOffsetX.get();const passesOpeningVelocity=event.velocityX>FLING_MIN_VELOCITY;const passesMinDistance=flingDistanceX>FLING_MIN_DISTANCE;const isBlockedByDragSnap=snappedByDrag.get();const isOpeningFling=passesOpeningVelocity&&passesMinDistance;const shouldAttemptThrow=isOpeningFling&&!isBlockedByDragSnap;if(shouldAttemptThrow){fireThrow();}let shouldOpen;if(isOpeningFling){shouldOpen=true;if(flingDistanceX<INITIAL_OPEN_WIDTH){scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.IMPACT_MEDIUM);}}else if(event.velocityX<-FLING_MIN_VELOCITY&&flingDistanceX<-FLING_MIN_DISTANCE){shouldOpen=false;scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.SOFT);}else{shouldOpen=shouldOpenFromPosition();}settleDrawer(shouldOpen);didSettle.set(true);const wasOpenAtStart=gestureState.get().panelX>0;if(shouldOpen&&!wasOpenAtStart){scheduleOnRN(trackServerDrawerInteract,ServerDrawerInteractAction.OPEN);}else if(!wasOpenAtStart){scheduleOnRN(trackServerDrawerInteract,ServerDrawerInteractAction.PEEK);}})" };
 let closure_39 = { code: "(function useHomeDrawerGestureTsx20(){let[gestureState,didSettle,settleDrawer,shouldOpenFromPosition,isPanelTouchActive,scheduleOnRN,noteInteraction,dragOffsetX,activationOffsetX]=this.__closure;if(gestureState.get().active&&!didSettle.get()){settleDrawer(shouldOpenFromPosition());}isPanelTouchActive.set(false);scheduleOnRN(noteInteraction);gestureState.set({active:false,initialX:0,initialY:0,panelX:0});dragOffsetX.set(0);activationOffsetX.set(0);})" };
 let obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, panelTranslateX: null, guildsBarDrawerStyle: null, guildsBarPullX: null };
-let Gesture = fn(5588).Gesture;
+let Gesture = fn(5592).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7848);
+let ReanimatedHelperTypes = fn(7858);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7848);
+ReanimatedHelperTypes = fn(7858);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7848);
+ReanimatedHelperTypes = fn(7858);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(7848);
+ReanimatedHelperTypes = fn(7858);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 const size = fn(2);

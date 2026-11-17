@@ -1,6 +1,6 @@
-// === Module 17648: OrbsArcadeTypes ===
+// === Module 17686: OrbsArcadeTypes ===
 
-// Module 17648 (OrbsArcadeTypes)
+// Module 17686 (OrbsArcadeTypes)
 import _slicedToArray from "module_32" /* 32 */;
 
 function _rewardFromServer(type) {

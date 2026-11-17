@@ -1,33 +1,33 @@
-// === Module 15563: GuildScheduledEventEmbed ===
+// === Module 15597: GuildScheduledEventEmbed ===
 
-// Module 15563 (GuildScheduledEventEmbed)
+// Module 15597 (GuildScheduledEventEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 5169 */;
-import useChannelName from "useChannelName" /* 5944 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 7969 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 7970 */;
-import ScheduleUtils from "ScheduleUtils" /* 7972 */;
-import EntityUtils from "EntityUtils" /* 7975 */;
-import useEventSchedule from "useEventSchedule" /* 7980 */;
-import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 7985 */;
-import GuildEventUtils from "GuildEventUtils" /* 8417 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8655 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 9163 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9170 */;
-import _modDef9173 from "module_9173" /* 9173 */;
-import icons_ShareDefault from "icons/Share" /* 12626 */;
-import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 15564 */;
-import _modDef15566 from "module_15566" /* 15566 */;
-import _modDef15567 from "module_15567" /* 15567 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 5173 */;
+import useChannelName from "useChannelName" /* 5948 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 7980 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 7981 */;
+import ScheduleUtils from "ScheduleUtils" /* 7983 */;
+import EntityUtils from "EntityUtils" /* 7986 */;
+import useEventSchedule from "useEventSchedule" /* 7991 */;
+import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 7996 */;
+import GuildEventUtils from "GuildEventUtils" /* 8428 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8666 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 9174 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 9181 */;
+import _modDef9184 from "module_9184" /* 9184 */;
+import icons_ShareDefault from "icons/Share" /* 12785 */;
+import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 15598 */;
+import _modDef15600 from "module_15600" /* 15600 */;
+import _modDef15601 from "module_15601" /* 15601 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7029 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import RelationshipStore from "RelationshipStore" /* 5248 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7037 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import RelationshipStore from "RelationshipStore" /* 5252 */;
 import UserStore from "UserStore" /* 1388 */;
-import MarkupUtils from "MarkupUtils" /* 6047 */;
+import MarkupUtils from "MarkupUtils" /* 6051 */;
 
 require = fn;
 function createGuildScheduledEventEmbed(type) {
@@ -63,7 +63,7 @@ function createGuildScheduledEventEmbed(type) {
   const stringResult = intl.string(util.t.DlcqlU);
   const obj5 = { titleColor: colors.titleColor, borderColor: colors.borderColor, backgroundColor: colors.backgroundColor, thumbnailCornerRadius: 15, embedCanBeTapped: null != guild };
   const tmp7Result = GuildScheduledEventHeaderUtils;
-  const assetUriForEmbed1 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9173);
+  const assetUriForEmbed1 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9184);
   const tmp7Result12 = renderer_EmbedUtils;
   const assetUriForEmbed2 = renderer_EmbedUtils.getAssetUriForEmbed(icons_ShareDefault);
   if (null != guild) {
@@ -79,7 +79,7 @@ function createGuildScheduledEventEmbed(type) {
       const acceptLabelActiveBackgroundColor2 = colors.acceptLabelActiveBackgroundColor;
     } else if (result1) {
       acceptLabelActiveBackgroundColor = colors.backgroundColor;
-      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15566);
+      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15600);
       acceptLabelGreenColor = colors.acceptLabelDisabledTextColor;
       let tmp21 = assetUriForEmbed2;
       let stringResult2 = stringResult;
@@ -153,7 +153,7 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj8.badgeCount = toLocaleStringResult;
   const tmpResult4 = GuildScheduledEventManagerDefault;
-  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15567);
+  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef15601);
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
     assetUriForEmbed4 = renderer_EmbedUtils.getAssetUriForEmbed(eventLocationIconSource);
@@ -202,13 +202,13 @@ function createGuildScheduledEventEmbed(type) {
   return obj8;
 }
 const processColor = fn(17).processColor;
-let GuildScheduledEventStore = fn(7029);
+let GuildScheduledEventStore = fn(7037);
 ({ isGuildEventEnded: closure_6, isGuildScheduledEventActive: metroImportDefault } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const getGuildIconSource = fn(5173).getGuildIconSource;
-const CodedLinkExtendedType = fn(11891).CodedLinkExtendedType;
-const constants = fn(5161).GuildScheduledEventEntityTypes;
-const InviteTypes = fn(8842).InviteTypes;
+const getGuildIconSource = fn(5177).getGuildIconSource;
+const CodedLinkExtendedType = fn(11091).CodedLinkExtendedType;
+const constants = fn(5165).GuildScheduledEventEntityTypes;
+const InviteTypes = fn(8853).InviteTypes;
 let closure_17 = MarkupUtils.astParserFor(MarkupUtils.guildEventLocationRules);
 const map = new Map();
 const size = fn(2);
@@ -272,8 +272,8 @@ export function createGuildScheduledEventLinkEmbed(code, theme) {
   let nextRecurrenceIdInEvent = tmp[2];
   const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(tmp3);
   if (nextRecurrenceIdInEvent == null) {
-    nextRecurrenceIdInEvent = first(7972).getNextRecurrenceIdInEvent(guildScheduledEvent);
-    let obj2 = first(7972);
+    nextRecurrenceIdInEvent = first(7983).getNextRecurrenceIdInEvent(guildScheduledEvent);
+    let obj2 = first(7983);
   }
   if (null != guildScheduledEvent) {
     if (!closure_6(guildScheduledEvent)) {
@@ -293,8 +293,8 @@ export function createGuildScheduledEventLinkEmbed(code, theme) {
       return createGuildScheduledEventEmbed(obj4);
     }
   }
-  let obj5 = first(7976);
-  first(7976).guardGuildEventFetch(first, tmp[1], asyncGeneratorStep(async () => {
+  let obj5 = first(7987);
+  first(7987).guardGuildEventFetch(first, tmp[1], asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -323,13 +323,13 @@ export function createGuildScheduledEventLinkEmbed(code, theme) {
             let guildScheduledEvent2;
             value = map.get(first);
             if (null == value) {
-              const result = tmp5(7977).scheduleGuildEventEmbedFetch(() => closure_1(c2[30]).fetchGuildEventsForGuild(closure_1_0));
+              const result = tmp5(7988).scheduleGuildEventEmbedFetch(() => closure_1(c2[30]).fetchGuildEventsForGuild(closure_1_0));
               const cleanupPromise = result.finally(() => {
                 map.delete(closure_1_0);
               });
               const result1 = map.set(first, cleanupPromise);
               value = cleanupPromise;
-              const obj3 = tmp5(7977);
+              const obj3 = tmp5(7988);
             }
             dependencyMap = 1;
             c3 = 1;
@@ -352,7 +352,7 @@ export function createGuildScheduledEventLinkEmbed(code, theme) {
               return obj;
             }
           }
-          const guildEventUnavailableError = new tmp5(7976).GuildEventUnavailableError("guild event not found");
+          const guildEventUnavailableError = new tmp5(7987).GuildEventUnavailableError("guild event not found");
           throw guildEventUnavailableError;
         }
       } catch (tmp23) {

@@ -1,14 +1,14 @@
-// === Module 19419: GuildSettingsModalMemberApplications ===
+// === Module 19464: GuildSettingsModalMemberApplications ===
 
-// Module 19419 (GuildSettingsModalMemberApplications)
+// Module 19464 (GuildSettingsModalMemberApplications)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5342 */;
-import UserUtilsDefault from "UserUtils" /* 5362 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 19420 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5346 */;
+import UserUtilsDefault from "UserUtils" /* 5366 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 19465 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6923 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6931 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 }, spinnerContainer: { padding: 32 }, footerSpinner: { paddingVertical: 16 }, spinner: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 };
 obj.spinner = { color: nativeDefault.colors.TEXT_BRAND };
@@ -61,7 +61,7 @@ let closure_12 = noop.memo(function GuildSettingsModalMemberApplication(joinRequ
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(7443).TableRow, obj2);
+      return closure_7(joinRequest(7453).TableRow, obj2);
     }
   }
 });

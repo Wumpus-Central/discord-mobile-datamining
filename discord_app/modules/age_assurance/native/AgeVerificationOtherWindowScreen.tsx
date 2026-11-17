@@ -1,20 +1,20 @@
-// === Module 8257: AgeVerificationOtherWindowScreen ===
+// === Module 8268: AgeVerificationOtherWindowScreen ===
 
-// Module 8257 (AgeVerificationOtherWindowScreen)
+// Module 8268 (AgeVerificationOtherWindowScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef3321 from "module_3321" /* 3321 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import Stack_Stack from "Stack/Stack" /* 6327 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 7786 */;
-import ModalScreen from "ModalScreen" /* 8208 */;
-import ModalContent from "ModalContent" /* 8210 */;
+import _modDef3323 from "module_3323" /* 3323 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import Stack_Stack from "Stack/Stack" /* 6335 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 7796 */;
+import ModalScreen from "ModalScreen" /* 8219 */;
+import ModalContent from "ModalContent" /* 8221 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_5 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch" }, text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationOtherWindowScreen.tsx");
@@ -28,7 +28,7 @@ export default function AgeVerificationOtherWindowScreen(copy) {
   }
   if (title == null) {
     const intl = util.intl;
-    title = intl.string(_modDef3321.MLPgsX);
+    title = intl.string(_modDef3323.MLPgsX);
   }
   let description;
   if (copy != null) {
@@ -36,7 +36,7 @@ export default function AgeVerificationOtherWindowScreen(copy) {
   }
   if (description == null) {
     const intl2 = util.intl;
-    description = intl2.string(_modDef3321.VcZF1q);
+    description = intl2.string(_modDef3323.VcZF1q);
   }
   const obj = { children: null };
   const obj2 = { children: null };

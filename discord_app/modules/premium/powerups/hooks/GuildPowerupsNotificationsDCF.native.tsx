@@ -1,10 +1,10 @@
-// === Module 10701: GuildPowerupsNotificationsDCF ===
+// === Module 14016: GuildPowerupsNotificationsDCF ===
 
-// Module 10701 (GuildPowerupsNotificationsDCF)
-import dismissible_content from "dismissible_content" /* 5139 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9560 */;
-import GuildPowerupsNotification from "GuildPowerupsNotification" /* 10695 */;
-import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 10702 */;
+// Module 14016 (GuildPowerupsNotificationsDCF)
+import dismissible_content from "dismissible_content" /* 5143 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 9572 */;
+import GuildPowerupsNotification from "GuildPowerupsNotification" /* 14010 */;
+import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 14017 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx");

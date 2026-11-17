@@ -1,12 +1,12 @@
-// === Module 13252: ConjureLinkedAppHeader ===
+// === Module 14481: ConjureLinkedAppHeader ===
 
-// Module 13252 (ConjureLinkedAppHeader)
+// Module 14481 (ConjureLinkedAppHeader)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import AppsIcon from "AppsIcon" /* 8101 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 10543 */;
-import conjureLinkedAppData from "conjureLinkedAppData" /* 13251 */;
-import ConjureLinkedAppConnectorDefault from "ConjureLinkedAppConnector" /* 13253 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import AppsIcon from "AppsIcon" /* 8112 */;
+import conjureLinkedAppData from "conjureLinkedAppData" /* 14480 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 14482 */;
+import ConjureLinkedAppConnectorDefault from "ConjureLinkedAppConnector" /* 14483 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ function AppName(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { header: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, app: null, name: null, iconPlaceholder: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.app = { flexDirection: "row", alignItems: "center", flexShrink: 1, gap: nativeDefault.space.PX_8 };

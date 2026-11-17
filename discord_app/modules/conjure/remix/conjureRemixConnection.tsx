@@ -1,9 +1,9 @@
-// === Module 10980: conjureRemixConnection ===
+// === Module 12959: conjureRemixConnection ===
 
-// Module 10980 (conjureRemixConnection)
+// Module 12959 (conjureRemixConnection)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 7335 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7336 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 7345 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 7346 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

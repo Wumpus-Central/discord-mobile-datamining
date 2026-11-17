@@ -1,10 +1,10 @@
-// === Module 19368: ChannelScreenFrameContainer ===
+// === Module 19413: ChannelScreenFrameContainer ===
 
-// Module 19368 (ChannelScreenFrameContainer)
+// Module 19413 (ChannelScreenFrameContainer)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import useToken from "useToken" /* 5892 */;
-import useAppFrameDefault from "useAppFrame" /* 18715 */;
+import useToken from "useToken" /* 5896 */;
+import useAppFrameDefault from "useAppFrame" /* 18756 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
@@ -89,7 +89,7 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { clip: { overflow: "hidden" }, border: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

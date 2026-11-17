@@ -1,8 +1,8 @@
-// === Module 18544: useSecureFramesUserVerifiedKeys ===
+// === Module 18585: useSecureFramesUserVerifiedKeys ===
 
-// Module 18544 (useSecureFramesUserVerifiedKeys)
+// Module 18585 (useSecureFramesUserVerifiedKeys)
 import applyDefault from "apply" /* 12 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 10611 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 10311 */;
 
 const require = globalThis.__r;
 

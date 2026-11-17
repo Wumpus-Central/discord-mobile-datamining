@@ -1,9 +1,9 @@
-// === Module 13018: VoiceXIcon ===
+// === Module 11659: VoiceXIcon ===
 
-// Module 13018 (VoiceXIcon)
+// Module 11659 (VoiceXIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod13019 from "module_13019" /* 13019 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod11660 from "module_11660" /* 11660 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function VoiceXIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13019, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11660, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

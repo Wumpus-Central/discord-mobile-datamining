@@ -1,6 +1,6 @@
-// === Module 15243: IosAttributionNativeModule ===
+// === Module 11287: IosAttributionNativeModule ===
 
-// Module 15243 (IosAttributionNativeModule)
+// Module 11287 (IosAttributionNativeModule)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionNativeModule.tsx");

@@ -1,6 +1,6 @@
-// === Module 6650: ? ===
+// === Module 6658: ? ===
 
-// Module 6650
+// Module 6658
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/hat/elven_headpiece.png.js");

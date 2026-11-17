@@ -1,6 +1,6 @@
-// === Module 12896: allowPopups ===
+// === Module 11510: allowPopups ===
 
-// Module 12896 (allowPopups)
+// Module 11510 (allowPopups)
 import Constants from "Constants" /* 2145 */;
 import size from "module_2" /* 2 */;
 

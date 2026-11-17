@@ -1,21 +1,21 @@
-// === Module 12112: GameCoverImage ===
+// === Module 10846: GameCoverImage ===
 
-// Module 12112 (GameCoverImage)
+// Module 10846 (GameCoverImage)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import GameCoverArt from "GameCoverArt" /* 10321 */;
+import GameCoverArt from "GameCoverArt" /* 10431 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { cover: null, coverArt: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
-obj.cover = { aspectRatio: fn(12104).GAME_COVER_ASPECT_RATIO, borderRadius: fn(12104).GAME_COVER_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+obj.cover = { aspectRatio: fn(10838).GAME_COVER_ASPECT_RATIO, borderRadius: fn(10838).GAME_COVER_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj.coverArt = { width: "100%", height: "100%" };
 let closure_4 = createStyles.createStyles(obj);
-const obj3 = { aspectRatio: fn(12104).GAME_COVER_ASPECT_RATIO, borderRadius: fn(12104).GAME_COVER_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+const obj3 = { aspectRatio: fn(10838).GAME_COVER_ASPECT_RATIO, borderRadius: fn(10838).GAME_COVER_BORDER_RADIUS, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/GameCoverImage.tsx");
 

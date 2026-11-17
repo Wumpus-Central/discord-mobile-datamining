@@ -1,17 +1,17 @@
-// === Module 12272: useIsOwnedConjureApplication ===
+// === Module 11018: useIsOwnedConjureApplication ===
 
-// Module 12272 (useIsOwnedConjureApplication)
+// Module 11018 (useIsOwnedConjureApplication)
 import BackoffDefault from "Backoff" /* 559 */;
-import ConjureUtils from "ConjureUtils" /* 7260 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 7329 */;
+import ConjureUtils from "ConjureUtils" /* 7270 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7339 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isProjectOwner = fn(7017).isProjectOwner;
+const isProjectOwner = fn(7025).isProjectOwner;
 let closure_6 = new BackoffDefault(30000, 300000);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/useIsOwnedConjureApplication.tsx");

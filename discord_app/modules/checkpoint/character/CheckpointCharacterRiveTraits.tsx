@@ -1,12 +1,12 @@
-// === Module 14469: CheckpointCharacterRiveTraits ===
+// === Module 13334: CheckpointCharacterRiveTraits ===
 
-// Module 14469 (CheckpointCharacterRiveTraits)
-import CheckpointCharacterBase from "CheckpointCharacterBase" /* 6414 */;
-import CheckpointCharacterOutfit from "CheckpointCharacterOutfit" /* 6474 */;
-import CheckpointCharacterHat from "CheckpointCharacterHat" /* 6646 */;
-import CheckpointCharacterWearable from "CheckpointCharacterWearable" /* 6675 */;
-import CheckpointCharacterAura from "CheckpointCharacterAura" /* 6704 */;
-import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 14303 */;
+// Module 13334 (CheckpointCharacterRiveTraits)
+import CheckpointCharacterBase from "CheckpointCharacterBase" /* 6422 */;
+import CheckpointCharacterOutfit from "CheckpointCharacterOutfit" /* 6482 */;
+import CheckpointCharacterHat from "CheckpointCharacterHat" /* 6654 */;
+import CheckpointCharacterWearable from "CheckpointCharacterWearable" /* 6683 */;
+import CheckpointCharacterAura from "CheckpointCharacterAura" /* 6712 */;
+import CheckpointCharacterTextureAssets from "CheckpointCharacterTextureAssets" /* 13168 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "tex_none", url: CheckpointCharacterTextureAssets.CHECKPOINT_CHARACTER_TEXTURE_NAME_TO_ASSET.tex_none.url };

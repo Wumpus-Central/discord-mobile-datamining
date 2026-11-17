@@ -1,20 +1,20 @@
-// === Module 6928: StageChannelPermissionUtils ===
+// === Module 6936: StageChannelPermissionUtils ===
 
-// Module 6928 (StageChannelPermissionUtils)
+// Module 6936 (StageChannelPermissionUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 5163 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
-import LurkingStore from "LurkingStore" /* 5239 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 5167 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5247 */;
+import LurkingStore from "LurkingStore" /* 5243 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import PermissionStore from "PermissionStore" /* 5238 */;
-import StageInstanceStore from "StageInstanceStore" /* 5160 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import PermissionStore from "PermissionStore" /* 5242 */;
+import StageInstanceStore from "StageInstanceStore" /* 5164 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(5173).isGuildOwner;
+const isGuildOwner = fn(5177).isGuildOwner;
 const Constants = fn(1072);
 ({ GuildFeatures: closure_10, Permissions: closure_11 } = Constants);
 const size = fn(2);

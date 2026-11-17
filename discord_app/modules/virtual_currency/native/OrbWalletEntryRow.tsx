@@ -1,14 +1,14 @@
-// === Module 18343: OrbWalletEntryRow ===
+// === Module 18384: OrbWalletEntryRow ===
 
-// Module 18343 (OrbWalletEntryRow)
+// Module 18384 (OrbWalletEntryRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import _modDef2333 from "module_2333" /* 2333 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import Card from "Card" /* 7445 */;
-import Badge from "Badge" /* 7459 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7963 */;
-import OrbsIcon from "OrbsIcon" /* 9442 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import Card from "Card" /* 7455 */;
+import Badge from "Badge" /* 7469 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7973 */;
+import OrbsIcon from "OrbsIcon" /* 9452 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,10 +28,10 @@ function OrbWalletEntryBadge(notificationType) {
   }
 }
 const View = fn(17).View;
-const constants = fn(16242).ClientUnreadNotificationType;
+const constants = fn(16279).ClientUnreadNotificationType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_24 }, balance: null, balanceText: null, trailing: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_24 };
 obj2.balance = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };

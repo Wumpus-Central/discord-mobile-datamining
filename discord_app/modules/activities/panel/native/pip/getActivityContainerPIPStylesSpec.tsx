@@ -1,9 +1,9 @@
-// === Module 19931: getActivityContainerPIPStylesSpec ===
+// === Module 19976: getActivityContainerPIPStylesSpec ===
 
-// Module 19931 (getActivityContainerPIPStylesSpec)
+// Module 19976 (getActivityContainerPIPStylesSpec)
 import EmbeddedActivityOrientationLockState from "EmbeddedActivityOrientationLockState" /* 2146 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5949 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10576 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5953 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10711 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ code: "(function getActivityContainerPipStylesSpec_getActivityContainerPIPStylesSpecTsx1({pipWidth:pipWidth,pipHeight:pipHeight,pipOrientationLockState:pipOrientationLockState,isLandscape:isLandscape}){let[EmbeddedActivityOrientationLockState,LANDSCAPE_ACTIVITY_ASPECT_RATIO,roundToNearestPixel]=this.__closure;const nonNullPipOrientationLockState=pipOrientationLockState!==null&&pipOrientationLockState!==void 0?pipOrientationLockState:EmbeddedActivityOrientationLockState.UNLOCKED;const shouldUsePortraitAspectRatio=nonNullPipOrientationLockState===EmbeddedActivityOrientationLockState.PORTRAIT||nonNullPipOrientationLockState===EmbeddedActivityOrientationLockState.UNLOCKED&&!isLandscape;let width=pipWidth;let height=pipHeight;let shouldHorizontallyCenter=false;let shouldVerticallyCenter=false;let marginLeft=0;let marginTop=0;if(shouldUsePortraitAspectRatio){width=pipWidth;height=width*LANDSCAPE_ACTIVITY_ASPECT_RATIO;shouldVerticallyCenter=true;marginTop=roundToNearestPixel(height/2)*-1;}else{height=pipHeight;width=height*LANDSCAPE_ACTIVITY_ASPECT_RATIO;shouldHorizontallyCenter=true;marginLeft=roundToNearestPixel(width/2)*-1;}return{width:width,height:height,shouldHorizontallyCenter:shouldHorizontallyCenter,shouldVerticallyCenter:shouldVerticallyCenter,marginLeft:marginLeft,marginTop:marginTop};})" }, EmbeddedActivityOrientationLockState.EmbeddedActivityOrientationLockState, ActivityPanelConstants.LANDSCAPE_ACTIVITY_ASPECT_RATIO, roundToNearestPixelDefault];

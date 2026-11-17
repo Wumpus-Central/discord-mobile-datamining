@@ -1,22 +1,22 @@
-// === Module 14517: CheckpointEmojiStatsScreen ===
+// === Module 13385: CheckpointEmojiStatsScreen ===
 
-// Module 14517 (CheckpointEmojiStatsScreen)
+// Module 13385 (CheckpointEmojiStatsScreen)
 import nativeDefault from "native" /* 575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5307 */;
-import CheckpointStore from "CheckpointStore" /* 14253 */;
+import AccessibilityStore from "AccessibilityStore" /* 5311 */;
+import CheckpointStore from "CheckpointStore" /* 13119 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6367);
+const CheckpointConstants = fn(6375);
 ({ CHECKPOINT_PRIMARY: closure_8, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 let closure_11 = { name: "\u{1F622}", animated: false };
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { container: { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, emojiCubeContainer: { flexGrow: 1, height: "50%", justifyContent: "center", alignItems: "center" }, copy: { flexShrink: 1 }, title: null, titleText: null, titleSpacing: null, number: null, emojis: null, emojiChip: null, emoji: null, customEmoji: null, textEmoji: null, rankText: null, wideContainer: null, wideCubeContainer: null, wideCopy: null };
 let obj3 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -47,8 +47,8 @@ obj10.color = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
 obj2.textEmoji = obj10;
 obj2.rankText = { fontSize: 14, lineHeight: 18 };
 let obj8 = { gap: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_4, paddingRight: nativeDefault.space.PX_8, borderWidth: 1, borderColor: CHECKPOINT_DARK_CYAN, backgroundColor: nativeDefault.colors.BLACK };
-obj2.wideContainer = { flexGrow: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(14485).CHECKPOINT_WIDE_MAX_WIDTH };
-let obj12 = { flexGrow: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(14485).CHECKPOINT_WIDE_MAX_WIDTH };
+obj2.wideContainer = { flexGrow: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(13350).CHECKPOINT_WIDE_MAX_WIDTH };
+let obj12 = { flexGrow: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", width: "100%", maxWidth: fn(13350).CHECKPOINT_WIDE_MAX_WIDTH };
 obj2.wideCubeContainer = { width: "50%", alignSelf: "stretch", alignItems: "center", justifyContent: "center", paddingRight: nativeDefault.space.PX_32 };
 let obj13 = { width: "50%", alignSelf: "stretch", alignItems: "center", justifyContent: "center", paddingRight: nativeDefault.space.PX_32 };
 obj2.wideCopy = { width: "50%", paddingLeft: nativeDefault.space.PX_32 };

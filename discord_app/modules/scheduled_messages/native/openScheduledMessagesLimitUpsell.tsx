@@ -1,8 +1,8 @@
-// === Module 9034: openScheduledMessagesLimitUpsell ===
+// === Module 9045: openScheduledMessagesLimitUpsell ===
 
-// Module 9034 (openScheduledMessagesLimitUpsell)
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9035 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9037 */;
+// Module 9045 (openScheduledMessagesLimitUpsell)
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9046 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 9048 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/scheduled_messages/native/openScheduledMessagesLimitUpsell.tsx");

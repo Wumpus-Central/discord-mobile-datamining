@@ -1,20 +1,20 @@
-// === Module 14792: DoubleTapToReactActionSheet ===
+// === Module 13872: DoubleTapToReactActionSheet ===
 
-// Module 14792 (DoubleTapToReactActionSheet)
+// Module 13872 (DoubleTapToReactActionSheet)
 import nativeDefault from "native" /* 575 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import UserSettings from "UserSettings" /* 5131 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
-import timing_timing from "timing/timing" /* 5538 */;
-import spring_spring from "spring/spring" /* 5929 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 9196 */;
+import UserSettings from "UserSettings" /* 5135 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5256 */;
+import timing_timing from "timing/timing" /* 5542 */;
+import spring_spring from "spring/spring" /* 5933 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 9207 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5307 */;
-import EmojiStore from "EmojiStore" /* 6969 */;
+import AccessibilityStore from "AccessibilityStore" /* 5311 */;
+import EmojiStore from "EmojiStore" /* 6977 */;
 
 const require = globalThis.__r;
 const _modDef1655 = _mod1655;
@@ -121,7 +121,7 @@ const AnalyticEvents = fn(1072).AnalyticEvents;
 const EMOJI_URL_BASE_SIZE = fn(1391).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { emoji: { width: 48, height: 48, zIndex: 2 }, selectedCustomEmoji: { width: 48, height: 48 }, selectedTextEmoji: null, selectedEmojiText: null, content: null, emojiContainer: null, alignCenter: null, emojiSelectRow: null, header: null, emojiName: null, burstContainer: null };
 let PlatformUtils = fn(1380);
 let num = 36;
@@ -337,7 +337,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
           } else {
             let tmp22 = tmp2;
             if (memo) {
-              const DoubleTapReactionEmoji = tmp2(5131).DoubleTapReactionEmoji;
+              const DoubleTapReactionEmoji = tmp2(5135).DoubleTapReactionEmoji;
               const obj5 = { emojiId: first.id, emojiName: null, animated: null, disableDoubleTap: false };
               tmp22 = first;
               obj5.emojiName = first.name;
@@ -356,7 +356,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
           const obj = { value, done: true };
           return obj;
         }
-        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7937).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
+        const obj7 = { emoji_id: closure_129_2.id, emoji_name: closure_129_2.name, emoji_animated: closure_129_2.animated, recommended: closure_129_4.current, location: tmp22(7947).DOUBLE_TAP_TO_REACT_ACTION_SHEET };
         tmp22(1256).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
         const _setTimeout = setTimeout;
         const timerId = setTimeout(() => closure_0(emoji[24]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);

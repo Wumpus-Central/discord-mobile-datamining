@@ -1,10 +1,10 @@
-// === Module 13761: ConjureFloatingActivity ===
+// === Module 14811: ConjureFloatingActivity ===
 
-// Module 13761 (ConjureFloatingActivity)
+// Module 14811 (ConjureFloatingActivity)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import _modDef4131 from "module_4131" /* 4131 */;
-import timing_timing from "timing/timing" /* 5538 */;
+import _modDef4133 from "module_4133" /* 4133 */;
+import timing_timing from "timing/timing" /* 5542 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 const obj2 = { root: null, pill: null, pillMain: null, checklistButton: null, panel: null, label: null };
 const rect = { position: "absolute", left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, alignItems: "center" };
 obj2.root = rect;
@@ -76,7 +76,7 @@ export default function ConjureFloatingActivity(agents) {
     if (null != todos) {
       const obj5 = { style: tmp.panel, children: null };
       const obj6 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-      obj5.children = closure_6(tmp13(13704), obj6);
+      obj5.children = closure_6(tmp13(14755), obj6);
       tmp14 = closure_6(View, obj5);
     }
   }
@@ -84,7 +84,7 @@ export default function ConjureFloatingActivity(agents) {
   const obj7 = { style: tmp.pill, children: null };
   const obj8 = { style: tmp.pillMain, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 8, onPress: null, children: null };
   const intl = tmp2(1113).intl;
-  obj8.accessibilityLabel = intl.formatToPlainString(_modDef4131.xuQfOT, { activity: line });
+  obj8.accessibilityLabel = intl.formatToPlainString(_modDef4133.xuQfOT, { activity: line });
   obj8.onPress = onJumpToActivity;
   const tmp9 = _slicedToArray(noop.useState(false), 2);
   const items5 = [closure_6(require("MagicWandIcon").MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }), ];
@@ -95,11 +95,11 @@ export default function ConjureFloatingActivity(agents) {
   let tmp18Result = null;
   if (null != todos) {
     const obj11 = { style: tmp.checklistButton, children: null };
-    const obj12 = { variant: "default", size: "sm", icon: tmp13(6920), pressed: tmp10, accessibilityLabel: null, onPress: null };
+    const obj12 = { variant: "default", size: "sm", icon: tmp13(6928), pressed: tmp10, accessibilityLabel: null, onPress: null };
     const intl2 = tmp2(1113).intl;
-    obj12.accessibilityLabel = intl2.string(tmp13(4131).Qp2isI);
+    obj12.accessibilityLabel = intl2.string(tmp13(4133).Qp2isI);
     obj12.onPress = callback;
-    obj11.children = closure_6(tmp2(13762).ToggleIconButton, obj12);
+    obj11.children = closure_6(tmp2(14812).ToggleIconButton, obj12);
     tmp18Result = closure_6(View, obj11);
   }
   items6[1] = tmp18Result;

@@ -1,20 +1,20 @@
-// === Module 10889: UserNameplateRow ===
+// === Module 15142: UserNameplateRow ===
 
-// Module 10889 (UserNameplateRow)
+// Module 15142 (UserNameplateRow)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5892 */;
-import TableRow from "TableRow" /* 7443 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 7444 */;
-import Card from "Card" /* 7445 */;
-import TableRowDivider from "TableRowDivider" /* 7453 */;
-import NameplateDefault from "Nameplate" /* 9508 */;
+import useToken from "useToken" /* 5896 */;
+import TableRow from "TableRow" /* 7453 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 7454 */;
+import Card from "Card" /* 7455 */;
+import TableRowDivider from "TableRowDivider" /* 7463 */;
+import NameplateDefault from "Nameplate" /* 9520 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6, Fragment: metroImportDefault } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { card: { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

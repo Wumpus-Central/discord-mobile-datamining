@@ -1,6 +1,6 @@
-// === Module 10114: useLegacyNoDateText ===
+// === Module 15292: useLegacyNoDateText ===
 
-// Module 10114 (useLegacyNoDateText)
+// Module 15292 (useLegacyNoDateText)
 import util from "util" /* 1113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

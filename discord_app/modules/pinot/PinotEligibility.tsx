@@ -1,11 +1,11 @@
-// === Module 8167: PinotEligibility ===
+// === Module 8178: PinotEligibility ===
 
-// Module 8167 (PinotEligibility)
+// Module 8178 (PinotEligibility)
 import Constants from "Constants" /* 1072 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
-import PinotTypes from "PinotTypes" /* 8168 */;
-import PinotConstants from "PinotConstants" /* 8145 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5247 */;
+import PinotTypes from "PinotTypes" /* 8179 */;
+import PinotConstants from "PinotConstants" /* 8156 */;
 import size from "module_2" /* 2 */;
 
 function isChannelPinotPromotableForFeature(id, guild_id, guildFeature) {

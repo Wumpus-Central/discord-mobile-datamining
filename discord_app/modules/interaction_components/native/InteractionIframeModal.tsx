@@ -1,11 +1,11 @@
-// === Module 20286: InteractionIframeModal ===
+// === Module 20334: InteractionIframeModal ===
 
-// Module 20286 (InteractionIframeModal)
+// Module 20334 (InteractionIframeModal)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
-import makeIframeIdDefault from "makeIframeId" /* 12853 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 20287 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6009 */;
+import makeIframeIdDefault from "makeIframeId" /* 11466 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 20335 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1365).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" }, headerCenterContainer: { flexDirection: "column", alignItems: "center" }, headerTitleContainer: { flexDirection: "row", marginBottom: 2 }, closeButton: { marginEnd: 8 }, spacerView: { marginStart: 8, width: 32 }, botTag: { marginStart: 4 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

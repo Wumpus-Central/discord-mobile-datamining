@@ -1,7 +1,7 @@
-// === Module 18323: CheckpointMockData ===
+// === Module 18364: CheckpointMockData ===
 
-// Module 18323 (CheckpointMockData)
-import CheckpointAvailability from "CheckpointAvailability" /* 14254 */;
+// Module 18364 (CheckpointMockData)
+import CheckpointAvailability from "CheckpointAvailability" /* 13120 */;
 import size from "module_2" /* 2 */;
 
 const obj = { FAKE_DATA: { stats: { voice: { totalVoiceMinutes: 54423, totalVoiceMinutesPercentile: 92 } }, character: null }, GLOBAL_STATS: { stats: null, character: null, didPlayerShareDataWithDiscord: false }, ZERO_STATS: null, UNAVAILABLE: { availability: CheckpointAvailability.CheckpointAvailability.UNAVAILABLE }, NO_CHARACTER: null, COMPACT_ASSETS: null };

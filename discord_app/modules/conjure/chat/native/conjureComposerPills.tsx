@@ -1,14 +1,14 @@
-// === Module 13792: conjureComposerPills ===
+// === Module 14827: conjureComposerPills ===
 
-// Module 13792 (conjureComposerPills)
+// Module 14827 (conjureComposerPills)
 import util from "util" /* 1113 */;
-import _modDef4131 from "module_4131" /* 4131 */;
-import UserUtils from "UserUtils" /* 5362 */;
-import _modDef11074 from "module_11074" /* 11074 */;
-import ChatInputParser from "ChatInputParser" /* 13793 */;
+import _modDef4133 from "module_4133" /* 4133 */;
+import UserUtils from "UserUtils" /* 5366 */;
+import _modDef11827 from "module_11827" /* 11827 */;
+import ChatInputParser from "ChatInputParser" /* 13480 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1388 */;
-import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 13227 */;
+import ConjureStoredAttachmentStore from "ConjureStoredAttachmentStore" /* 14460 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/chat/native/conjureComposerPills.tsx");
 
 export function conjureFilePillIcon() {
-  return Image.resolveAssetSource(_modDef11074).uri;
+  return Image.resolveAssetSource(_modDef11827).uri;
 }
 export function conjurePillText(current, name, combined) {
   combined = "\u2060" + name;
@@ -60,7 +60,7 @@ export function conjureUserPillLabel(id) {
 export function decodeConjurePills(draft) {
   const map = new Map();
   return {
-    text: draft.replace(map(13621).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
+    text: draft.replace(map(14672).CONJURE_ANY_MENTION, (raw, arg1, arg2) => {
       if (null != arg1) {
         const user = UserStore.getUser(arg1);
         let name = arg1;
@@ -77,7 +77,7 @@ export function decodeConjurePills(draft) {
         }
         if (combined == null) {
           const intl = util.intl;
-          combined = intl.string(_modDef4131.ff9Q4C);
+          combined = intl.string(_modDef4133.ff9Q4C);
         }
       }
       const combined1 = "\u2060" + combined;
@@ -111,7 +111,7 @@ export function decodeConjurePills(draft) {
       const obj3 = { raw, icon: null };
       let uri = null;
       if (null == arg1) {
-        uri = Image.resolveAssetSource(_modDef11074).uri;
+        uri = Image.resolveAssetSource(_modDef11827).uri;
       }
       obj3.icon = uri;
       const result = map.set(tmp16, obj3);

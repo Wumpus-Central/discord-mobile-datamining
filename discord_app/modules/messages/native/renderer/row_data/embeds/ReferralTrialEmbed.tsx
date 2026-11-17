@@ -1,25 +1,25 @@
-// === Module 9318: ReferralTrialEmbed ===
+// === Module 9327: ReferralTrialEmbed ===
 
-// Module 9318 (ReferralTrialEmbed)
+// Module 9327 (ReferralTrialEmbed)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
 import PremiumUtils from "PremiumUtils" /* 2174 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import createStyles from "createStyles" /* 5306 */;
-import UserUtilsDefault from "UserUtils" /* 5362 */;
-import ProductIds from "ProductIds" /* 8580 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8655 */;
-import _modDef9291 from "module_9291" /* 9291 */;
-import useTrialOffer from "useTrialOffer" /* 9305 */;
-import ReferralProgramUtils from "ReferralProgramUtils" /* 9306 */;
-import _modDef9319 from "module_9319" /* 9319 */;
-import _modDef9320 from "module_9320" /* 9320 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
+import createStyles from "createStyles" /* 5310 */;
+import UserUtilsDefault from "UserUtils" /* 5366 */;
+import ProductIds from "ProductIds" /* 8591 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8666 */;
+import _modDef9300 from "module_9300" /* 9300 */;
+import useTrialOffer from "useTrialOffer" /* 9314 */;
+import ReferralProgramUtils from "ReferralProgramUtils" /* 9315 */;
+import _modDef9328 from "module_9328" /* 9328 */;
+import _modDef9329 from "module_9329" /* 9329 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
 import UserStore from "UserStore" /* 1388 */;
 import SubscriptionStore from "SubscriptionStore" /* 2179 */;
-import UserOfferStore from "UserOfferStore" /* 9298 */;
-import IAPStore from "IAPStore" /* 9302 */;
+import UserOfferStore from "UserOfferStore" /* 9307 */;
+import IAPStore from "IAPStore" /* 9311 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
@@ -38,13 +38,13 @@ export function createReferralTrialEmbedRedeemable(message, theme, id, relevantU
     const channel = ChannelStore.getChannel(message.getChannelId());
     if (null != channel) {
       if (channel.isDM()) {
-        const obj = { backgroundColor, borderColor: backgroundColor, thumbnailCornerRadius: 3, headerLogoUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef9319), headerText: null, headerColor: null, thumbnailUrl: null };
+        const obj = { backgroundColor, borderColor: backgroundColor, thumbnailCornerRadius: 3, headerLogoUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef9328), headerText: null, headerColor: null, thumbnailUrl: null };
         const intl = util.intl;
         const tmp44Result = renderer_EmbedUtils;
         obj.headerText = intl.string(util.t.gtNqJQ).toLocaleLowerCase();
         obj.headerColor = headerTextColor;
         const stringResult = intl.string(util.t.gtNqJQ);
-        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9320);
+        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9329);
         let userId;
         if (relevantUserTrialOffer != null) {
           userId = relevantUserTrialOffer.userId;
@@ -158,7 +158,7 @@ export function createReferralTrialEmbedRedeemable(message, theme, id, relevantU
                     const intl8 = util.intl;
                     obj11.acceptLabelText = intl8.string(util.t.bXTClc);
                     obj11.acceptLabelColor = acceptLabelColor;
-                    obj11.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9291);
+                    obj11.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef9300);
                     tmp33 = obj11;
                     const tmp44Result11 = renderer_EmbedUtils;
                   }

@@ -1,10 +1,10 @@
-// === Module 16110: InputConnection ===
+// === Module 16147: InputConnection ===
 
-// Module 16110 (InputConnection)
+// Module 16147 (InputConnection)
 import LoggerDefault from "Logger" /* 3 */;
-import RTCConnectionEvent from "RTCConnectionEvent" /* 6179 */;
-import InputEvent from "InputEvent" /* 16111 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 6089 */;
+import RTCConnectionEvent from "RTCConnectionEvent" /* 6187 */;
+import InputEvent from "InputEvent" /* 16148 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 6096 */;
 
 require = fn;
 const React3 = { Closed: 0, [0]: "Closed", Connecting: 1, [1]: "Connecting", Connected: 2, [2]: "Connected" };
@@ -50,7 +50,7 @@ prototype["connect"] = function connect() {
   const self = this;
   this.state = Connecting.Connecting;
   let rtc = this.rtc;
-  rtc.on(self(6179).RTCConnectionEvent.WebTransportAck, this.webTransportAck);
+  rtc.on(self(6187).RTCConnectionEvent.WebTransportAck, this.webTransportAck);
   const rtc2 = this.rtc;
   rtc2.startWebTransport();
   const timerId = setTimeout(() => {
@@ -111,6 +111,13 @@ prototype["sendKey"] = function sendKey(sessionId, arg1, arg2) {
     worker.postMessage(items);
   }
 };
+prototype["sendMouseWheel"] = function sendMouseWheel(sessionId, arg1) {
+  const worker = this.worker;
+  if (worker != null) {
+    items = [InputEvent.InputCommand.SendMouseWheel, sessionId, arg1];
+    worker.postMessage(items);
+  }
+};
 prototype["sendMouseMove"] = function sendMouseMove(sessionId, movementX, movementY) {
   const worker = this.worker;
   if (worker != null) {
@@ -122,6 +129,34 @@ prototype["sendMouseButton"] = function sendMouseButton(sessionId, button, arg2)
   const worker = this.worker;
   if (worker != null) {
     items = [InputEvent.InputCommand.SendMouseButton, sessionId, button, arg2];
+    worker.postMessage(items);
+  }
+};
+prototype["sendControllerButton"] = function sendControllerButton(sessionId, item, flag) {
+  const worker = this.worker;
+  if (worker != null) {
+    items = [InputEvent.InputCommand.SendControllerButton, sessionId, item, flag];
+    worker.postMessage(items);
+  }
+};
+prototype["sendControllerStick"] = function sendControllerStick(sessionId, arg1, bound2, bound3) {
+  const worker = this.worker;
+  if (worker != null) {
+    items = [InputEvent.InputCommand.SendControllerStick, sessionId, arg1, bound2, bound3];
+    worker.postMessage(items);
+  }
+};
+prototype["sendControllerTrigger"] = function sendControllerTrigger(sessionId, arg1, bound) {
+  const worker = this.worker;
+  if (worker != null) {
+    items = [InputEvent.InputCommand.SendControllerTrigger, sessionId, arg1, bound];
+    worker.postMessage(items);
+  }
+};
+prototype["sendControllerPlug"] = function sendControllerPlug(sessionId, arg1) {
+  const worker = this.worker;
+  if (worker != null) {
+    items = [InputEvent.InputCommand.SendControllerPlug, sessionId, arg1];
     worker.postMessage(items);
   }
 };

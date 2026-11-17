@@ -1,6 +1,6 @@
-// === Module 6248: RTCBandwidthMonitor ===
+// === Module 6256: RTCBandwidthMonitor ===
 
-// Module 6248 (RTCBandwidthMonitor)
+// Module 6256 (RTCBandwidthMonitor)
 import applyDefault from "apply" /* 12 */;
 import size from "module_2" /* 2 */;
 

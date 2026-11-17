@@ -1,14 +1,14 @@
-// === Module 11271: PremiumUpsellGradientBackground ===
+// === Module 11974: PremiumUpsellGradientBackground ===
 
-// Module 11271 (PremiumUpsellGradientBackground)
+// Module 11974 (PremiumUpsellGradientBackground)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
-import LinearGradientDefault from "LinearGradient" /* 5883 */;
+import LinearGradientDefault from "LinearGradient" /* 5887 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Gradients = fn(9435).Gradients;
+const Gradients = fn(9445).Gradients;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 const obj2 = { gradient: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj2.gradient = { opacity: 0.1 };

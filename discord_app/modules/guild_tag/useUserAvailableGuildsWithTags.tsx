@@ -1,9 +1,9 @@
-// === Module 17136: useUserAvailableGuildsWithTags ===
+// === Module 17172: useUserAvailableGuildsWithTags ===
 
-// Module 17136 (useUserAvailableGuildsWithTags)
+// Module 17172 (useUserAvailableGuildsWithTags)
 import initialize from "initialize" /* 504 */;
-import GuildMemberStore from "GuildMemberStore" /* 5218 */;
-import GuildStore from "GuildStore" /* 5177 */;
+import GuildMemberStore from "GuildMemberStore" /* 5222 */;
+import GuildStore from "GuildStore" /* 5181 */;
 
 require = fn;
 const size = fn(2);

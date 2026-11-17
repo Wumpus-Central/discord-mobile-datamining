@@ -1,8 +1,8 @@
-// === Module 19006: WaterwheelsJoinOutcome ===
+// === Module 19047: WaterwheelsJoinOutcome ===
 
-// Module 19006 (WaterwheelsJoinOutcome)
+// Module 19047 (WaterwheelsJoinOutcome)
 import Constants from "Constants" /* 1072 */;
-import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6912 */;
+import JoinGuildRefusedError from "JoinGuildRefusedError" /* 6920 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;

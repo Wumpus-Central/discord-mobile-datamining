@@ -1,10 +1,10 @@
-// === Module 11930: ForLaterCardReminderHeader ===
+// === Module 12381: ForLaterCardReminderHeader ===
 
-// Module 11930 (ForLaterCardReminderHeader)
+// Module 12381 (ForLaterCardReminderHeader)
 import jsxProd from "jsxProd" /* 21 */;
-import ClockIcon from "ClockIcon" /* 6032 */;
-import SavedMessageUtils from "SavedMessageUtils" /* 11919 */;
-import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 11931 */;
+import ClockIcon from "ClockIcon" /* 6036 */;
+import SavedMessageUtils from "SavedMessageUtils" /* 12372 */;
+import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 12382 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

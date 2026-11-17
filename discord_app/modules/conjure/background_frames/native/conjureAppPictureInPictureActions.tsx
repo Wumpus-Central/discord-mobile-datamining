@@ -1,23 +1,23 @@
-// === Module 19918: conjureAppPictureInPictureActions ===
+// === Module 19963: conjureAppPictureInPictureActions ===
 
-// Module 19918 (conjureAppPictureInPictureActions)
-import _modDef4131 from "module_4131" /* 4131 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 7339 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7949 */;
-import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 12881 */;
-import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 14926 */;
-import getConjureAppSoundButtonDefault from "getConjureAppSoundButton" /* 15148 */;
-import closeFrameDefault from "closeFrame" /* 15149 */;
-import conjureBackgroundFrames from "conjureBackgroundFrames" /* 16988 */;
-import FramesStore from "FramesStore" /* 7019 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
+// Module 19963 (conjureAppPictureInPictureActions)
+import _modDef4133 from "module_4133" /* 4133 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 7349 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7959 */;
+import EmbeddedAppShimExperiment from "EmbeddedAppShimExperiment" /* 11495 */;
+import openConjureProjectInBuilderDefault from "openConjureProjectInBuilder" /* 14118 */;
+import getConjureAppSoundButtonDefault from "getConjureAppSoundButton" /* 15175 */;
+import closeFrameDefault from "closeFrame" /* 15176 */;
+import conjureBackgroundFrames from "conjureBackgroundFrames" /* 17023 */;
+import FramesStore from "FramesStore" /* 7027 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
 
 require = fn;
 function getConjureAppPictureInPictureActions(id, c8, c9) {
   _require = id;
   let obj = { label: null, IconComponent: null, onPress: null };
   const intl = require("util").intl;
-  obj.label = intl.formatToPlainString(_modDef4131.dPf03z, { appName });
+  obj.label = intl.formatToPlainString(_modDef4133.dPf03z, { appName });
   obj.IconComponent = require("WindowLaunchIcon").WindowLaunchIcon;
   obj.onPress = function onPress() {
     if (obj.isConjurePreviewSurface(id.surface)) {
@@ -45,7 +45,7 @@ function getConjureAppPictureInPictureActions(id, c8, c9) {
   items.push(obj3);
   return items;
 }
-const asLaunched = fn(7020).asLaunched;
+const asLaunched = fn(7028).asLaunched;
 const ConjureAppPictureInPicture = "ConjureAppPictureInPicture";
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/native/conjureAppPictureInPictureActions.tsx");

@@ -1,22 +1,22 @@
-// === Module 17013: EmbeddedActivitiesNativeManager ===
+// === Module 17048: EmbeddedActivitiesNativeManager ===
 
-// Module 17013 (EmbeddedActivitiesNativeManager)
+// Module 17048 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import util from "util" /* 1113 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import ChatInputUtils from "ChatInputUtils" /* 5491 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 6254 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 12741 */;
-import activityWebViewController from "activityWebViewController" /* 12852 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 17014 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 17015 */;
+import ChatInputUtils from "ChatInputUtils" /* 5495 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6009 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 6262 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6267 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 11349 */;
+import activityWebViewController from "activityWebViewController" /* 11465 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 17049 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6068 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5158 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 17050 */;
 
 require = fn;
 const Constants = fn(1072);

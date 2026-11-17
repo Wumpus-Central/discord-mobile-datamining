@@ -1,6 +1,6 @@
-// === Module 17065: UserProfileEditConstants ===
+// === Module 17100: UserProfileEditConstants ===
 
-// Module 17065 (UserProfileEditConstants)
+// Module 17100 (UserProfileEditConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserProfileEditConstants.tsx");

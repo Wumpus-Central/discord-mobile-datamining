@@ -1,6 +1,6 @@
-// === Module 13247: ConjurePublishScheduleError ===
+// === Module 14476: ConjurePublishScheduleError ===
 
-// Module 13247 (ConjurePublishScheduleError)
+// Module 14476 (ConjurePublishScheduleError)
 import size from "module_2" /* 2 */;
 
 const prototype = function ConjurePublishScheduleError() {

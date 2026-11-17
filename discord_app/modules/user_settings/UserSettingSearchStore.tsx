@@ -1,7 +1,7 @@
-// === Module 17215: UserSettingSearchStore ===
+// === Module 17252: UserSettingSearchStore ===
 
-// Module 17215 (UserSettingSearchStore)
-import ZustandStore from "ZustandStore" /* 5495 */;
+// Module 17252 (UserSettingSearchStore)
+import ZustandStore from "ZustandStore" /* 5499 */;
 import size from "module_2" /* 2 */;
 
 const zustandStore = ZustandStore.createZustandStore(() => ({ query: "", isActive: false, isFocused: false, selected: null }));

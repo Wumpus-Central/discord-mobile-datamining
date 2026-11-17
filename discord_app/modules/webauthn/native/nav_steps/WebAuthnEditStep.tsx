@@ -1,8 +1,8 @@
-// === Module 17323: WebAuthnEditStep ===
+// === Module 17360: WebAuthnEditStep ===
 
-// Module 17323 (WebAuthnEditStep)
+// Module 17360 (WebAuthnEditStep)
 import nativeDefault from "native" /* 575 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6842 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6837 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { inputField: { marginBottom: nativeDefault.space.PX_16 }, form: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.form = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -19,9 +19,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnEditStep.tsx");
 
 export default function WebAuthnEditStep() {
-  credential = credential(7812).useSettingNavigationRoute().params.credential;
+  credential = credential(7822).useSettingNavigationRoute().params.credential;
   const tmp3 = closure_8();
-  let obj = credential(7812);
+  let obj = credential(7822);
   closure_1 = credential(1502).useNavigation();
   let obj2 = credential(1502);
   [tmp5, dependencyMap] = value(noop.useState(false), 2);
@@ -36,7 +36,7 @@ export default function WebAuthnEditStep() {
   obj4.placeholder = credential.name;
   obj4.disabled = tmp5;
   obj4.clearButtonVisibility = credential(1187).ClearButtonVisibility.WITH_CONTENT;
-  items = [closure_6(credential(8106).FormInput, obj4), closure_6(credential(8106).FormDivider, {}), ];
+  items = [closure_6(credential(8117).FormInput, obj4), closure_6(credential(8117).FormDivider, {}), ];
   const obj5 = {
     onPress() {
       dependencyMap(true);
@@ -46,14 +46,14 @@ export default function WebAuthnEditStep() {
         const obj2 = { text: null, variant: "success" };
         const intl = credential(1113).intl;
         obj2.text = intl.string(credential(1113).t.IV13mH);
-        closure_1(6005).open("WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", obj2);
+        closure_1(6009).open("WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", obj2);
         closure_1_1.popTo(constants.WEBAUTHN_VIEW);
       });
       result.then(() => {
         const obj2 = { text: null, variant: "success" };
         const intl = credential(1113).intl;
         obj2.text = intl.string(credential(1113).t.IV13mH);
-        closure_1(6005).open("WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", obj2);
+        closure_1(6009).open("WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", obj2);
         closure_1_1.popTo(constants.WEBAUTHN_VIEW);
       }).catch((error) => {
         closure_1_4(error.body.message);
@@ -75,7 +75,7 @@ export default function WebAuthnEditStep() {
   obj5.loading = tmp5;
   const intl2 = tmp(1113).intl;
   obj5.text = intl2.string(credential(1113).t["7asiR3"]);
-  items[2] = closure_6(credential(5926).Button, obj5);
+  items[2] = closure_6(credential(5930).Button, obj5);
   obj3.children = items;
-  return closure_7(credential(8106).Form, obj3);
+  return closure_7(credential(8117).Form, obj3);
 };

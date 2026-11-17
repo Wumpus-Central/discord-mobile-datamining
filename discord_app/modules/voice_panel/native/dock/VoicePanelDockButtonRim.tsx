@@ -1,10 +1,10 @@
-// === Module 19232: VoicePanelDockButtonRim ===
+// === Module 19277: VoicePanelDockButtonRim ===
 
-// Module 19232 (VoicePanelDockButtonRim)
+// Module 19277 (VoicePanelDockButtonRim)
 import nativeDefault from "native" /* 575 */;
-import timing_timing from "timing/timing" /* 5538 */;
-import useToken from "useToken" /* 5892 */;
-import inlineStyles from "inlineStyles" /* 8263 */;
+import timing_timing from "timing/timing" /* 5542 */;
+import useToken from "useToken" /* 5896 */;
+import inlineStyles from "inlineStyles" /* 8274 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const DOCK_FADE_TIMING = fn(12009).DOCK_FADE_TIMING;
+const DOCK_FADE_TIMING = fn(12446).DOCK_FADE_TIMING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = noop.memo(function ButtonRimGradient(arg0) {

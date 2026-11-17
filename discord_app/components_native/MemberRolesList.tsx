@@ -1,14 +1,14 @@
-// === Module 14163: MemberRolesList ===
+// === Module 13036: MemberRolesList ===
 
-// Module 14163 (MemberRolesList)
-import RolePillDefault from "RolePill" /* 10935 */;
+// Module 13036 (MemberRolesList)
+import RolePillDefault from "RolePill" /* 12881 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 5212 */;
+import GuildRoleStore from "GuildRoleStore" /* 5216 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_6 = createStyles.createStyles({ wrapper: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/MemberRolesList.tsx");

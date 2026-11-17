@@ -1,17 +1,17 @@
-// === Module 12854: createWebViewController ===
+// === Module 11467: createWebViewController ===
 
-// Module 12854 (createWebViewController)
+// Module 11467 (createWebViewController)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 12860 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 11473 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(12855).EMBEDDED_APP_DISALLOWED_NAVIGATION_MESSAGE;
+let closure_4 = fn(11468).EMBEDDED_APP_DISALLOWED_NAVIGATION_MESSAGE;
 let ComponentActions = fn(1072).ComponentActions;
-const TransportTypes = fn(6751).TransportTypes;
+const TransportTypes = fn(6759).TransportTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/embedded_apps/native/webview/createWebViewController.tsx");
 
@@ -30,7 +30,7 @@ export default function createWebViewController(id, contextSource) {
   }
   ComponentActions = async function _postMessageToWebView(arg0) {
     closure_3 = tmp3;
-    await webViewProxy.injectJavaScript(closure_1(12856)(closure_0, closure_1));
+    await webViewProxy.injectJavaScript(closure_1(11469)(closure_0, closure_1));
     if (1 === tmp7) {
       c5 = 0;
       closure_130_0 = closure_4;

@@ -1,15 +1,15 @@
-// === Module 19977: usePanelOpenState ===
+// === Module 20023: usePanelOpenState ===
 
-// Module 19977 (usePanelOpenState)
+// Module 20023 (usePanelOpenState)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoicePanelStore from "VoicePanelStore" /* 6891 */;
+import VoicePanelStore from "VoicePanelStore" /* 6899 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11985).VoicePanelModes;
+const VoicePanelModes = fn(12428).VoicePanelModes;
 const Constants = fn(1072);
 ({ ComponentActions: metroImportDefault, Routes: closure_8 } = Constants);
 let closure_9 = { code: "(function usePanelOpenStateTsx1(){let[connected]=this.__closure;return{connected:connected.get()};})" };
@@ -88,16 +88,16 @@ export default function usePanelOpenState(arg0, arg1, arg2, arg3) {
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items4);
-  [first, closure_5] = first.useState(() => _undefined2(13121).getHistory().location.pathname);
+  [first, closure_5] = first.useState(() => _undefined2(14367).getHistory().location.pathname);
   const items5 = [arg0, first];
   const effect1 = first.useEffect(() => {
-    closure_0 = _undefined2(13121).addRouteChangeListener((pathname) => {
+    closure_0 = _undefined2(14367).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
         closure_1_5(tmp);
         const obj2 = { path: null };
-        const RouteParam = c0(5357).RouteParam;
-        const obj = c0(5344);
-        const RouteParam2 = c0(5357).RouteParam;
+        const RouteParam = c0(5361).RouteParam;
+        const obj = c0(5348);
+        const RouteParam2 = c0(5361).RouteParam;
         obj2.path = closure_2_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
         const matchPathResult = obj.matchPath(pathname.pathname, obj2);
         const guildIdResult = RouteParam.guildId();
@@ -107,10 +107,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, arg3) {
             tmp2 = matchPathResult.params.channelId === closure_0;
           }
           if (!tmp2) {
-            c1(12744)();
+            c1(11301)();
           }
         }
-        obj3 = c0(13114);
+        obj3 = c0(14360);
       }
     });
     return () => {

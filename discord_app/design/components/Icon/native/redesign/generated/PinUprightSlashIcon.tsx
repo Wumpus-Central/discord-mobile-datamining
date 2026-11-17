@@ -1,9 +1,9 @@
-// === Module 10541: PinUprightSlashIcon ===
+// === Module 15026: PinUprightSlashIcon ===
 
-// Module 10541 (PinUprightSlashIcon)
+// Module 15026 (PinUprightSlashIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod10542 from "module_10542" /* 10542 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod15027 from "module_15027" /* 15027 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function PinUprightSlashIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10542, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15027, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,40 +1,52 @@
-// === Module 18120: SettingsEmailNotificationsScreen ===
+// === Module 18161: SettingsEmailNotificationsScreen ===
 
-// Module 18120 (SettingsEmailNotificationsScreen)
+// Module 18161 (SettingsEmailNotificationsScreen)
+import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import SettingBuilders from "SettingBuilders" /* 12406 */;
-import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 18121 */;
+import SettingBuilders from "SettingBuilders" /* 12612 */;
+import EmailSettingsActionCreators from "EmailSettingsActionCreators" /* 18163 */;
 import noop from "module_19" /* 19 */;
-import EmailSettingsStore from "EmailSettingsStore" /* 16241 */;
+import EmailSettingsStore from "EmailSettingsStore" /* 16278 */;
 
 require = fn;
-function initializeEmailSettings() {
-  if (!EmailSettingsStore.getEmailSettings().initialized) {
-    const emailSettings = EmailSettingsActionCreators.fetchEmailSettings();
-  }
-}
-const MobileUserSettings = fn(9202).MobileUserSettings;
+const MobileUserSettings = fn(9213).MobileUserSettings;
 const jsx = fn(21).jsx;
-let obj = { categories: null, unsubscribeFromAllMarketing: MobileUserSettings.EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING };
+const createStyles = fn(5310);
+let obj = { notice: { padding: nativeDefault.space.PX_16 } };
+let closure_6 = createStyles.createStyles(obj);
+let obj4 = { categories: null, unsubscribeFromAllMarketing: MobileUserSettings.EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING };
 let items = [, , , , ];
 ({ EMAIL_COMMUNICATION: arr[0], EMAIL_SOCIAL: arr[1], EMAIL_UPDATES_AND_ANNOUNCEMENTS: arr[2], EMAIL_TIPS: arr[3], EMAIL_RECOMMENDATIONS_AND_EVENTS: arr[4] } = MobileUserSettings);
-obj.categories = items;
-let obj2 = { categories: null, unsubscribeFromAllMarketing: MobileUserSettings.REDESIGN_EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING };
+obj4.categories = items;
+let obj5 = { categories: null, unsubscribeFromAllMarketing: MobileUserSettings.REDESIGN_EMAIL_UNSUBSCRIBE_FROM_ALL_MARKETING };
 let items1 = [, , , , ];
 ({ REDESIGN_EMAIL_COMMUNICATION: arr2[0], REDESIGN_EMAIL_SOCIAL: arr2[1], REDESIGN_EMAIL_UPDATES_AND_ANNOUNCEMENTS: arr2[2], REDESIGN_EMAIL_TIPS: arr2[3], REDESIGN_EMAIL_RECOMMENDATIONS_AND_EVENTS: arr2[4] } = MobileUserSettings);
-obj2.categories = items1;
+obj5.categories = items1;
+let obj3 = { padding: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/notifications/native/SettingsEmailNotificationsScreen.tsx");
 
 export default noop.memo(function SettingsEmailNotificationsScreen() {
-  isDeclarativeSettingsUIAvailable = isDeclarativeSettingsUIAvailable(16902).useIsDeclarativeSettingsUIAvailable("SettingsEmailNotificationsScreen");
-  obj = isDeclarativeSettingsUIAvailable(16902);
-  enabled = enabled(18124).useConfig({ location: "SettingsEmailNotificationsScreen" }).enabled;
-  items = [isDeclarativeSettingsUIAvailable, enabled];
-  const node = noop.useMemo(() => {
-    const tmp = isDeclarativeSettingsUIAvailable ? obj2 : obj;
-    obj = SettingBuilders;
-    obj2 = { settings: tmp.categories, subLabel: null };
+  let tmp = closure_6();
+  isDeclarativeSettingsUIAvailable = isDeclarativeSettingsUIAvailable(stateFromStores[6]).useIsDeclarativeSettingsUIAvailable("SettingsEmailNotificationsScreen");
+  let obj = isDeclarativeSettingsUIAvailable(stateFromStores[6]);
+  enabled = enabled(stateFromStores[7]).useConfig({ location: "SettingsEmailNotificationsScreen" }).enabled;
+  let obj2 = enabled(stateFromStores[7]);
+  items = [EmailSettingsStore];
+  stateFromStores = isDeclarativeSettingsUIAvailable(stateFromStores[8]).useStateFromStores(items, () => null != emailSettings.getEmailSettings().initialized);
+  let obj3 = isDeclarativeSettingsUIAvailable(stateFromStores[8]);
+  let items1 = [EmailSettingsStore];
+  const items2 = [stateFromStores];
+  const stateFromStores1 = isDeclarativeSettingsUIAvailable(stateFromStores[8]).useStateFromStores(items1, () => emailSettings.isFetching);
+  const layoutEffect = noop.useLayoutEffect(() => {
+    if (!stateFromStores) {
+      emailSettings = EmailSettingsActionCreators.fetchEmailSettings();
+    }
+  }, items2);
+  const items3 = [isDeclarativeSettingsUIAvailable, enabled];
+  const memo = noop.useMemo(() => {
+    const tmp = isDeclarativeSettingsUIAvailable ? obj5 : obj4;
+    const obj2 = { settings: tmp.categories, subLabel: null };
     let stringResult;
     if (enabled) {
       const intl = util.intl;
@@ -43,13 +55,33 @@ export default noop.memo(function SettingsEmailNotificationsScreen() {
     const obj3 = { sections: null };
     obj2.subLabel = stringResult;
     items = [obj2, ];
-    const obj4 = { settings: null };
+    obj4 = { settings: null };
     const items1 = [tmp.unsubscribeFromAllMarketing];
     obj4.settings = items1;
     items[1] = obj4;
     obj3.sections = items;
-    return obj.createList(obj3);
-  }, items);
-  enabled(5889)(initializeEmailSettings);
-  return jsx(enabled(17213), { node });
+    return SettingBuilders.createList(obj3);
+  }, items3);
+  if (isDeclarativeSettingsUIAvailable) {
+    if (!stateFromStores) {
+      if (stateFromStores1) {
+        let tmp10Result = jsx(tmp2(tmp3[12]).SceneLoadingIndicator, {});
+      } else {
+        obj5 = { style: tmp.notice, children: null };
+        const obj6 = { type: "warning", role: "status", message: null, action: null };
+        let intl = tmp2(tmp3[11]).intl;
+        obj6.message = intl.string(tmp5(tmp3[15]).Nu2TMI);
+        const obj7 = { text: null, onPress: null };
+        const intl2 = tmp2(tmp3[11]).intl;
+        obj7.text = intl2.string(tmp2(tmp3[11]).t["5911Lb"]);
+        obj7.onPress = tmp2(tmp3[9]).fetchEmailSettings;
+        obj6.action = obj7;
+        obj5.children = jsx(tmp2(tmp3[14]).InlineNotice, { type: "warning", role: "status", message: null, action: null });
+        tmp10Result = jsx(tmp2(tmp3[13]).Stack, { style: tmp.notice, children: null });
+      }
+    }
+    return tmp10Result;
+  }
+  tmp10Result = jsx(tmp5(tmp3[16]), { node: memo });
+  obj4 = isDeclarativeSettingsUIAvailable(stateFromStores[8]);
 });

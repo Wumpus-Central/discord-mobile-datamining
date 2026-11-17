@@ -1,13 +1,13 @@
-// === Module 11799: OrbCheckoutAmountTag ===
+// === Module 15212: OrbCheckoutAmountTag ===
 
-// Module 11799 (OrbCheckoutAmountTag)
+// Module 15212 (OrbCheckoutAmountTag)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import OrbsIcon from "OrbsIcon" /* 9442 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import OrbsIcon from "OrbsIcon" /* 9452 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5306 */;
+import createStyles from "createStyles" /* 5310 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

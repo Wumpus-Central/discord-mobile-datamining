@@ -1,11 +1,11 @@
-// === Module 16986: frameRelaunchDeepLink ===
+// === Module 17021: frameRelaunchDeepLink ===
 
-// Module 16986 (frameRelaunchDeepLink)
-import RPCErrorDefault from "RPCError" /* 7303 */;
-import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 16914 */;
-import Constants_mod from "Constants" /* 6751 */;
+// Module 17021 (frameRelaunchDeepLink)
+import RPCErrorDefault from "RPCError" /* 7313 */;
+import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 16949 */;
+import Constants_mod from "Constants" /* 6759 */;
 import Constants_mod from "Constants" /* 1072 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 16922 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 16957 */;
 import size from "module_2" /* 2 */;
 
 let Constants = Constants_mod;
@@ -32,20 +32,20 @@ let obj2 = {
       } else {
         substr = hash1;
       }
-      const frameDeepLinkChannelId = socket(15993).getFrameDeepLinkChannelId(frame);
+      const frameDeepLinkChannelId = socket(16030).getFrameDeepLinkChannelId(frame);
       const subscriptions = socket.server.subscriptions;
       let tmp8 = null != frameDeepLinkChannelId;
-      const obj = socket(15993);
+      const obj = socket(16030);
       if (tmp8) {
-        tmp8 = !tmp4(7339).isConjurePreviewSurface(frame.surface);
-        const tmp4Result = tmp4(7339);
+        tmp8 = !tmp4(7349).isConjurePreviewSurface(frame.surface);
+        const tmp4Result = tmp4(7349);
       }
       if (tmp8) {
         tmp8 = someResult;
       }
       if (tmp8) {
-        const result = tmp4(15993).setFrameRelaunchDeepLink(frameDeepLinkChannelId, frame.applicationId, substr);
-        const tmp4Result2 = tmp4(15993);
+        const result = tmp4(16030).setFrameRelaunchDeepLink(frameDeepLinkChannelId, frame.applicationId, substr);
+        const tmp4Result2 = tmp4(16030);
       }
       const obj3 = { hash: substr };
       return obj3;

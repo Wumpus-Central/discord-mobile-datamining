@@ -1,6 +1,6 @@
-// === Module 17748: VideoQoEMetricsExperiment ===
+// === Module 17788: VideoQoEMetricsExperiment ===
 
-// Module 17748 (VideoQoEMetricsExperiment)
+// Module 17788 (VideoQoEMetricsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

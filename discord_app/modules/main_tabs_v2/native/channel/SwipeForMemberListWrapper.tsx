@@ -1,23 +1,23 @@
-// === Module 19443: SwipeForMemberListWrapper ===
+// === Module 19488: SwipeForMemberListWrapper ===
 
-// Module 19443 (SwipeForMemberListWrapper)
+// Module 19488 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
-import RootNavigationRef from "RootNavigationRef" /* 5483 */;
-import useChatLayout from "useChatLayout" /* 5485 */;
-import ChatInputUtils from "ChatInputUtils" /* 5491 */;
-import useThemeDefault from "useTheme" /* 5537 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6322 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10271 */;
-import useChatWidthDefault from "useChatWidth" /* 12421 */;
-import VoicePanelDockScrimDefault from "VoicePanelDockScrim" /* 15122 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18720 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 18731 */;
-import ChannelDetailsDefault from "ChannelDetails" /* 19445 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5486 */;
+import RootNavigationRef from "RootNavigationRef" /* 5487 */;
+import useChatLayout from "useChatLayout" /* 5489 */;
+import ChatInputUtils from "ChatInputUtils" /* 5495 */;
+import useThemeDefault from "useTheme" /* 5541 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6064 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6330 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10279 */;
+import useChatWidthDefault from "useChatWidth" /* 12627 */;
+import VoicePanelDockScrimDefault from "VoicePanelDockScrim" /* 14336 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 18761 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 18772 */;
+import ChannelDetailsDefault from "ChannelDetails" /* 19490 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,15 +28,15 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(9064);
+const ChannelDetailsStore = fn(9075);
 ({ getIsChannelDetailsSearchActive: metroImportDefault, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(9052).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9063).ONYX_BORDER_WIDTH;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { memberListPreview: null, content: null, memberListContainer: null, onyxBorder: null, onyxRightOverflow: null };
 const tmp6 = new LoggerDefault("SwipeForMemberListWrapper");
 obj2.memberListPreview = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -307,12 +307,12 @@ export default function _default(channelId) {
   gesture3 = undefined;
   disallowGesture2 = undefined;
   disallowGesture3 = undefined;
-  const context = obj.useContext(tmp2(12011));
+  const context = obj.useContext(tmp2(12448));
   const gesture2 = context.gesture;
   importDefault = gesture2;
   const disallowGesture = context.disallowGesture;
   dependencyMap = disallowGesture;
-  let context1 = obj.useContext(tmp12(12011).MainTabsChannelScreenStackContext);
+  let context1 = obj.useContext(tmp12(12448).MainTabsChannelScreenStackContext);
   if (context1 == null) {
     context1 = {};
   }
@@ -470,9 +470,9 @@ export default function _default(channelId) {
   const tmp12Result15 = require("module_1655");
   let tmp63 = null;
   if (tmp12Result16.isJankScreenReportingEnabled()) {
-    let obj4 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp12(18726).getBaseScreenName, resolveClosedName: tmp12(18726).getBaseScreenName, onCoveringChange: callback2 };
-    tmp63 = navigation(tmp2(18729), obj4);
-    const tmp2Result = tmp2(18729);
+    let obj4 = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: tmp12(18767).getBaseScreenName, resolveClosedName: tmp12(18767).getBaseScreenName, onCoveringChange: callback2 };
+    tmp63 = navigation(tmp2(18770), obj4);
+    const tmp2Result = tmp2(18770);
   }
   const items30 = [tmp63, ];
   let obj5 = { gesture: memo2, children: null };
@@ -513,11 +513,14 @@ export default function _default(channelId) {
   tmp12Result16 = require("isJankScreenReportingEnabled");
   const tmp70 = !derivedStateFromSharedValue;
   items34[1] = navigation(require("LayerScope").LayerScope, { children: navigation(ChannelDetailsDefault, { isShowing: derivedStateFromSharedValue, channelId: tmp5[0], isSearchLocked: false, onBackPress: callback5, componentWidth: tmp8, onChannelDeleted: callback4 }) });
-  items34[2] = navigation(VoicePanelDockScrimDefault, {});
-  const obj10 = { style: null, children: navigation(panelGestureContext, { style: tmp.memberListPreview }) };
+  const obj10 = { background: null, ignoreTheme: true };
+  let obj9 = { children: navigation(ChannelDetailsDefault, { isShowing: derivedStateFromSharedValue, channelId: tmp5[0], isSearchLocked: false, onBackPress: callback5, componentWidth: tmp8, onChannelDeleted: callback4 }) };
+  obj10.background = nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND;
+  items34[2] = navigation(VoicePanelDockScrimDefault, obj10);
+  const obj11 = { style: null, children: navigation(panelGestureContext, { style: tmp.memberListPreview }) };
   const items35 = [disallowGesture3.absoluteFill, animatedStyle];
-  obj10.style = items35;
-  items34[3] = navigation(_modDef1655.View, obj10);
+  obj11.style = items35;
+  items34[3] = navigation(_modDef1655.View, obj11);
   obj8.children = items34;
   items32[1] = closure_14(_modDef1655.View, obj8);
   obj6.children = items32;

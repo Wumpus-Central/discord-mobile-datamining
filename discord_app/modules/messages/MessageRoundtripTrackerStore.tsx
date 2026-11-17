@@ -1,15 +1,15 @@
-// === Module 8662: MessageRoundtripTrackerStore ===
+// === Module 8673: MessageRoundtripTrackerStore ===
 
-// Module 8662 (MessageRoundtripTrackerStore)
+// Module 8673 (MessageRoundtripTrackerStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import NetStats from "NetStats" /* 8663 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 8781 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
-import NetworkStore from "NetworkStore" /* 6200 */;
+import NetStats from "NetStats" /* 8674 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 8792 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5530 */;
+import NetworkStore from "NetworkStore" /* 6208 */;
 
 require = fn;
 function trackRoundtrip(channelId) {

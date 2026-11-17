@@ -1,24 +1,24 @@
-// === Module 8443: StartStageChannelModal ===
+// === Module 8454: StartStageChannelModal ===
 
-// Module 8443 (StartStageChannelModal)
+// Module 8454 (StartStageChannelModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 2020 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6838 */;
-import Pressables from "Pressables" /* 7428 */;
-import GuildIcon from "GuildIcon" /* 7720 */;
-import _modDef7863 from "module_7863" /* 7863 */;
-import Form from "Form" /* 8106 */;
-import StageSparkleDefault from "StageSparkle" /* 8444 */;
-import HotspotStore2 from "HotspotStore" /* 8447 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6833 */;
+import Pressables from "Pressables" /* 7438 */;
+import GuildIcon from "GuildIcon" /* 7730 */;
+import _modDef7873 from "module_7873" /* 7873 */;
+import Form from "Form" /* 8117 */;
+import StageSparkleDefault from "StageSparkle" /* 8455 */;
+import HotspotStore2 from "HotspotStore" /* 8458 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 5160 */;
+import StageInstanceStore from "StageInstanceStore" /* 5164 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -38,7 +38,7 @@ function NavigationBar(guild) {
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj2.onPress = closeModal;
-    const obj3 = { source: _modDef7863 };
+    const obj3 = { source: _modDef7873 };
     obj2.children = gesture(native.Icon, obj3);
     obj.children = gesture(Pressables.PressableOpacity, obj2);
     tmp2 = gesture(metroImportDefault, obj);
@@ -99,13 +99,13 @@ class NotificationToggle {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroImportDefault, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(6896);
+const StageChannelsConstants = fn(6904);
 ({ MAX_STAGE_TOPIC_LENGTH: closure_10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
-let constants = fn(5161).GuildScheduledEventPrivacyLevel;
+let constants = fn(5165).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { keyboardAwareView: { flex: 1 }, closeButtonContainer: { right: 10 }, container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: { paddingHorizontal: 16 }, contentTopSpacing: { paddingTop: 16 }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, textInput: null, startButton: null, error: null, optionExplanation: null, guildIcon: null, label: null, pill: null, pillLabel: null, notificationToggle: null, ageVerificationNotice: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.textInput = { padding: 12, width: "100%", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 16 };
@@ -179,10 +179,10 @@ export default function StartStageChannelModal(arg0) {
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  const obj8 = { value: tmp66(6899).editStage(channel, first1, first2), done: false };
+                  const obj8 = { value: tmp66(6907).editStage(channel, first1, first2), done: false };
                   return obj8;
                 } else {
-                  obj5 = tmp66(6899);
+                  obj5 = tmp66(6907);
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
@@ -196,7 +196,7 @@ export default function StartStageChannelModal(arg0) {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(6747).APIError(closure_128_1);
+            const aPIError = new closure_0(6755).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);
@@ -211,8 +211,8 @@ export default function StartStageChannelModal(arg0) {
                   tmp8 = closure_129_13;
                 }
                 if (tmp8) {
-                  tmp66(8450).hideHotspot(closure_0(8447).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
-                  const obj2 = tmp66(8450);
+                  tmp66(8461).hideHotspot(closure_0(8458).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                  const obj2 = tmp66(8461);
                 }
               }
             } else if (arg0 === 1) {
@@ -260,7 +260,7 @@ export default function StartStageChannelModal(arg0) {
       const tmp = c16();
       const intl = require("util").intl;
       obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
-      obj.source = require("module_7863");
+      obj.source = require("module_7873");
       obj.onPress = onPress;
       return obj5(require("TouchableHitBox"), obj);
     }

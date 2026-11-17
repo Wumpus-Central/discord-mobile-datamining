@@ -1,8 +1,8 @@
-// === Module 6352: WebViewWebmSupportTest ===
+// === Module 6360: WebViewWebmSupportTest ===
 
-// Module 6352 (WebViewWebmSupportTest)
+// Module 6360 (WebViewWebmSupportTest)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import DeviceUtils from "DeviceUtils" /* 5263 */;
+import DeviceUtils from "DeviceUtils" /* 5267 */;
 import size from "module_2" /* 2 */;
 
 const ARM64_ = "ARM64_";

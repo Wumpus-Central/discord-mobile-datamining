@@ -1,11 +1,11 @@
-// === Module 6219: CertifiedDeviceStore ===
+// === Module 6227: CertifiedDeviceStore ===
 
-// Module 6219 (CertifiedDeviceStore)
+// Module 6227 (CertifiedDeviceStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import Constants from "Constants" /* 6065 */;
+import Constants from "Constants" /* 6072 */;
 import size from "module_2" /* 2 */;
 
 const DeviceTypes = Constants.DeviceTypes;

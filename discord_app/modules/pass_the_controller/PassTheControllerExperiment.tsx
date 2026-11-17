@@ -1,6 +1,6 @@
-// === Module 16115: PassTheControllerExperiment ===
+// === Module 16152: PassTheControllerExperiment ===
 
-// Module 16115 (PassTheControllerExperiment)
+// Module 16152 (PassTheControllerExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

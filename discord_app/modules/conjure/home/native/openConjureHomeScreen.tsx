@@ -1,12 +1,12 @@
-// === Module 10536: openConjureHomeScreen ===
+// === Module 12956: openConjureHomeScreen ===
 
-// Module 10536 (openConjureHomeScreen)
+// Module 12956 (openConjureHomeScreen)
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 2020 */;
-import RootNavigationRef from "RootNavigationRef" /* 5483 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 7053 */;
-import PostConnectionCallbackStore from "PostConnectionCallbackStore" /* 7661 */;
-import ConjureMobileExperiment from "ConjureMobileExperiment" /* 10516 */;
+import RootNavigationRef from "RootNavigationRef" /* 5487 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 7061 */;
+import PostConnectionCallbackStore from "PostConnectionCallbackStore" /* 7671 */;
+import ConjureMobileExperiment from "ConjureMobileExperiment" /* 10571 */;
 import size from "module_2" /* 2 */;
 
 function openConjureHomeScreen(projectId, arg1) {

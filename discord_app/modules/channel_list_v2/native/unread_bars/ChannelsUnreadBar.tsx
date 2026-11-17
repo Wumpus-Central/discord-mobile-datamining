@@ -1,9 +1,9 @@
-// === Module 18901: ChannelsUnreadBar ===
+// === Module 18942: ChannelsUnreadBar ===
 
-// Module 18901 (ChannelsUnreadBar)
+// Module 18942 (ChannelsUnreadBar)
 import nativeDefault from "native" /* 575 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9061 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6064 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9072 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import module_1655 from "module_1655" /* 1655 */;
@@ -11,13 +11,13 @@ import module_1655 from "module_1655" /* 1655 */;
 const require = globalThis.__r;
 
 const require = fn;
-const RedesignChannelListConstants = fn(6050);
+const RedesignChannelListConstants = fn(6056);
 ({ getScaledSearchBarHeight: hasOwnProperty, VIEWABILITY_CONFIG: closure_6 } = RedesignChannelListConstants);
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = module_1655.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_11 = createStyles.createStyles((arg0, arg1) => {
   let num = 5;
   if (arg0) {
@@ -267,11 +267,11 @@ export default noop.memo(function ChannelsUnreadBar(position) {
   ChannelsUnreadBarTsx1.__initData = tmp25;
   const animatedStyle = require("module_1655").useAnimatedStyle(ChannelsUnreadBarTsx1);
   if (first) {
-    let ArrowSmallUpIcon = tmp7(8087).AtIcon;
+    let ArrowSmallUpIcon = tmp7(8098).AtIcon;
   } else if ("bottom" === position) {
-    ArrowSmallUpIcon = tmp7(14033).ArrowSmallDownIcon;
+    ArrowSmallUpIcon = tmp7(15070).ArrowSmallDownIcon;
   } else {
-    ArrowSmallUpIcon = tmp7(14031).ArrowSmallUpIcon;
+    ArrowSmallUpIcon = tmp7(15068).ArrowSmallUpIcon;
   }
   const tmp4Result = nativeDefault;
   if (first) {

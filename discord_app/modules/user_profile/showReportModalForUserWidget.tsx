@@ -1,7 +1,7 @@
-// === Module 12096: showReportModalForUserWidget ===
+// === Module 10830: showReportModalForUserWidget ===
 
-// Module 12096 (showReportModalForUserWidget)
-import ReportModals from "ReportModals" /* 12063 */;
+// Module 10830 (showReportModalForUserWidget)
+import ReportModals from "ReportModals" /* 10794 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 const require = globalThis.__r;

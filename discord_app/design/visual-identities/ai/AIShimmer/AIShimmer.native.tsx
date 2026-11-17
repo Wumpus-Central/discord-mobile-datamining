@@ -1,13 +1,13 @@
-// === Module 13765: AIShimmer ===
+// === Module 14815: AIShimmer ===
 
-// Module 13765 (AIShimmer)
+// Module 14815 (AIShimmer)
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import AIGlyphText from "AIGlyphText" /* 13351 */;
-import AIShimmerTypes from "AIShimmerTypes" /* 13766 */;
-import waveTransition2 from "waveTransition" /* 13767 */;
-import createWaveTransition from "createWaveTransition" /* 13769 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import AIGlyphText from "AIGlyphText" /* 14591 */;
+import AIShimmerTypes from "AIShimmerTypes" /* 14816 */;
+import waveTransition2 from "waveTransition" /* 14817 */;
+import createWaveTransition from "createWaveTransition" /* 14819 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -457,7 +457,7 @@ get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_10 = createStyles.createStyles((height, height2) => {
   const obj = { container: { alignSelf: "flex-start", height }, sizer: { opacity: 0 }, layer: { position: "absolute", top: 0, left: 0, height }, glyphLayer: null, window: { position: "absolute", top: 0, left: 0, height, overflow: "hidden" } };
   const rect = { position: "absolute", top: (height - height2) / 2, left: 0, height: height2 };

@@ -1,11 +1,11 @@
-// === Module 19959: useTransitionToConnectedActivityInVoice ===
+// === Module 20005: useTransitionToConnectedActivityInVoice ===
 
-// Module 19959 (useTransitionToConnectedActivityInVoice)
+// Module 20005 (useTransitionToConnectedActivityInVoice)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5213 */;
 
 require = fn;
 const ComponentActions = fn(1072).ComponentActions;
@@ -76,14 +76,14 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  embeddedActivityLocationChannelId = handler(5227).getEmbeddedActivityLocationChannelId(_location2);
+                  embeddedActivityLocationChannelId = handler(5231).getEmbeddedActivityLocationChannelId(_location2);
                   if (null != embeddedActivityLocationChannelId) {
-                    if (closure_2_1(5970)(embeddedActivityLocationChannelId)) {
+                    if (closure_2_1(5974)(embeddedActivityLocationChannelId)) {
                       if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                         const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;
                         c4 = 1;
-                        const obj6 = { value: closure_2_1(12780)(obj5), done: false };
+                        const obj6 = { value: closure_2_1(11389)(obj5), done: false };
                         return obj6;
                       }
                     }
@@ -107,7 +107,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(12712)(closure_1_3, _location);
+                closure_3_1(11313)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }

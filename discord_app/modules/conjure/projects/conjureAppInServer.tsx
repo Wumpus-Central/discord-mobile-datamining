@@ -1,13 +1,13 @@
-// === Module 7351: conjureAppInServer ===
+// === Module 7361: conjureAppInServer ===
 
-// Module 7351 (conjureAppInServer)
-import ConjureUtils from "ConjureUtils" /* 7260 */;
+// Module 7361 (conjureAppInServer)
+import ConjureUtils from "ConjureUtils" /* 7270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
-import UserProfileStore from "UserProfileStore" /* 7352 */;
-import GuildChannelStore from "GuildChannelStore" /* 5236 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import PermissionStore from "PermissionStore" /* 5238 */;
+import UserProfileStore from "UserProfileStore" /* 7362 */;
+import GuildChannelStore from "GuildChannelStore" /* 5240 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import PermissionStore from "PermissionStore" /* 5242 */;
 
 require = fn;
 function conjureProductionBotUserId(project) {
@@ -84,7 +84,7 @@ let closure_12 = async function _fetchConjureAppInGuild() {
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj5 = { value: closure_0(closure_2_1[7]).fetchProfile(tmp25, { withMutualGuilds: true }), done: false };
+                const obj5 = { value: closure_0(closure_2_1[7]).fetchProfile(tmp16, { withMutualGuilds: true }), done: false };
                 return obj5;
               }
             }
@@ -111,10 +111,10 @@ let closure_12 = async function _fetchConjureAppInGuild() {
             const obj = { value: someResult, done: true };
             return obj;
           }
-        } catch (tmp18) {
+        } catch (tmp19) {
           if (tmp4 === c3) {
             c5 = tmp2;
-            throw tmp18;
+            throw tmp19;
           } else {
             c4 = tmp;
           }
@@ -143,7 +143,7 @@ let closure_12 = async function _fetchConjureAppInGuild() {
   }
   return hasItem;
 };
-let closure_6 = fn(5236).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_6 = fn(5240).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureAppInServer.tsx");
@@ -248,7 +248,7 @@ export function readConjureAppServerPresence(install_scope) {
               } else {
                 tmp7 = null;
               }
-              obj2 = application_id(7018);
+              obj2 = application_id(7026);
             }
             str2 = tmp7;
           }

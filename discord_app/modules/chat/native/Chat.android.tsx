@@ -1,16 +1,16 @@
-// === Module 14196: Chat ===
+// === Module 11102: Chat ===
 
-// Module 14196 (Chat)
+// Module 11102 (Chat)
 import initialize from "initialize" /* 504 */;
-import ChatNativeComponentDefault from "ChatNativeComponent" /* 11883 */;
-import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 14203 */;
+import ChatNativeComponentDefault from "ChatNativeComponent" /* 11083 */;
+import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 11109 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5307 */;
+import AccessibilityStore from "AccessibilityStore" /* 5311 */;
 
 require = fn;
 function DCDChatList() {
   const tmp = closure_7();
-  navigationTTIContentPainted = navigationTTIContentPainted(14197).useNavigationTTIContentPainted();
+  navigationTTIContentPainted = navigationTTIContentPainted(11103).useNavigationTTIContentPainted();
   items = [navigationTTIContentPainted];
   const memo = noop.useMemo(() => {
     const Gesture = navigationTTIContentPainted(dependencyMap[5]).Gesture;
@@ -20,14 +20,14 @@ function DCDChatList() {
   const callback = noop.useCallback((nativeEvent) => navigationTTIContentPainted(nativeEvent.nativeEvent), items);
   const obj2 = { gesture: memo, children: null };
   const obj3 = { style: tmp.chatList, floatingChatInputEnabled: true, onContentPaintStateChange: callback, children: null };
-  const obj = navigationTTIContentPainted(14197);
-  obj3.children = closure_5(navigationTTIContentPainted(14204).TTIFirstContentfulPaint, { label: "chat_list_android" });
+  const obj = navigationTTIContentPainted(11103);
+  obj3.children = closure_5(navigationTTIContentPainted(11110).TTIFirstContentfulPaint, { label: "chat_list_android" });
   obj2.children = closure_5(ChatListNativeComponentDefault, obj3);
-  return closure_5(navigationTTIContentPainted(5588).GestureDetector, obj2);
+  return closure_5(navigationTTIContentPainted(5592).GestureDetector, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_7 = createStyles.createStyles({ chatList: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/Chat.android.tsx");

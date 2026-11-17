@@ -1,9 +1,9 @@
-// === Module 13161: useConjurePublishButton ===
+// === Module 14402: useConjurePublishButton ===
 
-// Module 13161 (useConjurePublishButton)
+// Module 14402 (useConjurePublishButton)
 import util from "util" /* 1113 */;
-import _modDef4131 from "module_4131" /* 4131 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 13162 */;
+import _modDef4133 from "module_4133" /* 4133 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 14403 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ function publishButtonText(upToDate, arg1) {
     return arg1;
   } else if (null == upToDate) {
     const intl2 = util.intl;
-    let label = intl2.string(_modDef4131["120EFN"]);
+    let label = intl2.string(_modDef4133["120EFN"]);
   } else {
     let tmp = null != upToDate && upToDate.upToDate;
     if (tmp) {
@@ -25,7 +25,7 @@ function publishButtonText(upToDate, arg1) {
     if (tmp) {
       if (!upToDate.publishing) {
         const intl = util.intl;
-        label = intl.string(_modDef4131.kAfbEN);
+        label = intl.string(_modDef4133.kAfbEN);
       }
     }
     label = upToDate.label;
@@ -80,7 +80,7 @@ export default function useConjurePublishButton(arg0, guildId, busy, arg3) {
   if (true !== publishing) {
     tmp11 = tmp2;
   }
-  const obj2 = { publishOptions: memo1, publish: tmp7, publishing: true === publishing, confirmation: tmp11, variant: null, text: null, label: null, indicator: null };
+  const obj2 = { publishOptions: memo1, publish: tmp7, publishing: true === publishing, confirmation: tmp11, variant: null, text: null, label: null, indicator: null, pendingChanges: null };
   let tmp12 = null != tmp7 && tmp7.upToDate;
   if (tmp12) {
     tmp12 = "publish" === tmp7.action;
@@ -115,5 +115,19 @@ export default function useConjurePublishButton(arg0, guildId, busy, arg3) {
     tmp13 = str3;
   }
   obj2.indicator = tmp13;
+  let tmp16 = null != tmp7;
+  if (tmp16) {
+    let isUpdate = tmp7.isUpdate;
+    if (!isUpdate) {
+      const status = tmp7.status;
+      let publishState;
+      if (status != null) {
+        publishState = status.publishState;
+      }
+      isUpdate = "not_live" === publishState;
+    }
+    tmp16 = isUpdate;
+  }
+  obj2.pendingChanges = tmp16;
   return obj2;
 };

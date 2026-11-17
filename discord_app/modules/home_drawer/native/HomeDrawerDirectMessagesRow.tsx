@@ -1,15 +1,15 @@
-// === Module 19089: HomeDrawerDirectMessagesRow ===
+// === Module 19130: HomeDrawerDirectMessagesRow ===
 
-// Module 19089 (HomeDrawerDirectMessagesRow)
+// Module 19130 (HomeDrawerDirectMessagesRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5488 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 19086 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5492 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 19127 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 6058 */;
-import RelationshipStore from "RelationshipStore" /* 5248 */;
+import PresenceStore from "PresenceStore" /* 6065 */;
+import RelationshipStore from "RelationshipStore" /* 5252 */;
 
 require = fn;
 function HomeDrawerDMsRow() {
@@ -44,7 +44,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1072).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_STATUS_ONLINE };
 obj2.onlineDot = size;

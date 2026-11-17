@@ -1,8 +1,8 @@
-// === Module 20731: FormStyles ===
+// === Module 20778: FormStyles ===
 
-// Module 20731 (FormStyles)
+// Module 20778 (FormStyles)
 import nativeDefault from "native" /* 575 */;
-import createStyles from "createStyles" /* 5306 */;
+import createStyles from "createStyles" /* 5310 */;
 import size from "module_2" /* 2 */;
 
 const obj = { container: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };

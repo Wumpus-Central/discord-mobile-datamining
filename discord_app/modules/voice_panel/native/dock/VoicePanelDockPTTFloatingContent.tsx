@@ -1,13 +1,13 @@
-// === Module 19233: VoicePanelDockPTTFloatingContent ===
+// === Module 19278: VoicePanelDockPTTFloatingContent ===
 
-// Module 19233 (VoicePanelDockPTTFloatingContent)
+// Module 19278 (VoicePanelDockPTTFloatingContent)
 import native from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import shared from "shared" /* 5313 */;
-import useThemeDefault from "useTheme" /* 5537 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5896 */;
-import MicrophoneIcon from "MicrophoneIcon" /* 13048 */;
-import useDockBoxShadowDefault from "useDockBoxShadow" /* 19206 */;
+import shared from "shared" /* 5317 */;
+import useThemeDefault from "useTheme" /* 5541 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5900 */;
+import MicrophoneIcon from "MicrophoneIcon" /* 11689 */;
+import useDockBoxShadowDefault from "useDockBoxShadow" /* 19251 */;
 import noop from "module_19" /* 19 */;
 
 const nativeDefault = native;
@@ -20,8 +20,8 @@ const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 let closure_7 = 66 + nativeDefault.space.PX_16;
-let closure_8 = fn(12009).DOCK_TILE_SIZE / 56;
-const createStyles = fn(5306);
+let closure_8 = fn(12446).DOCK_TILE_SIZE / 56;
+const createStyles = fn(5310);
 let obj2 = { host: { position: "absolute", top: 0, left: 0, width: 0, height: 0, overflow: "visible" }, indicator: null, indicatorFill: null, tile: null };
 let size = { position: "absolute", width: 76, height: 76, borderRadius: nativeDefault.radii.round, overflow: "hidden" };
 obj2.indicator = size;

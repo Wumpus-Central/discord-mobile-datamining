@@ -1,26 +1,26 @@
-// === Module 14178: ExplicitMediaLearnMoreActionSheet ===
+// === Module 13052: ExplicitMediaLearnMoreActionSheet ===
 
-// Module 14178 (ExplicitMediaLearnMoreActionSheet)
+// Module 13052 (ExplicitMediaLearnMoreActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import _modDef3417 from "module_3417" /* 3417 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import LinkingDefault from "Linking" /* 6002 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6823 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8190 */;
-import openUserSettings from "openUserSettings" /* 8604 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8853 */;
+import _modDef3419 from "module_3419" /* 3419 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import LinkingDefault from "Linking" /* 6006 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6818 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8201 */;
+import openUserSettings from "openUserSettings" /* 8615 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 8864 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(8637).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_5 = fn(8648).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { container: { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24, justifyContent: "center" }, art: null, infoHeader: null, info: null, infoDesc: null, buttonsContainer: null, linkSubtext: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_24, justifyContent: "center" };
 obj2.art = { alignSelf: "center", marginBottom: nativeDefault.space.PX_16 };
@@ -107,7 +107,7 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
       callback(ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
       const obj = AgeVerificationActionCreatorsDefault;
       const intl = util.intl;
-      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(intl.string(_modDef3417.agiNYw)));
+      obj.openUrl(HelpdeskUtilsDefault.getArticleURL(intl.string(_modDef3419.agiNYw)));
     }
     const intl5 = tmp4(tmp2[15]).intl;
     const obj8 = { handleOnTeenAgeGroupHook: handleNavigateToTeenAgeGroupArticle };

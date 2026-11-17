@@ -1,9 +1,9 @@
-// === Module 10386: ExperimentalGameControllerLinkIcon ===
+// === Module 10496: ExperimentalGameControllerLinkIcon ===
 
-// Module 10386 (ExperimentalGameControllerLinkIcon)
+// Module 10496 (ExperimentalGameControllerLinkIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod10387 from "module_10387" /* 10387 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod10497 from "module_10497" /* 10497 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function ExperimentalGameControllerLinkIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10387, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10497, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

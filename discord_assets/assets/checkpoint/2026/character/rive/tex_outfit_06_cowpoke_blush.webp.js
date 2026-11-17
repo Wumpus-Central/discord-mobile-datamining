@@ -1,9 +1,9 @@
-// === Module 14393: ? ===
+// === Module 13258: ? ===
 
-// Module 14393
+// Module 13258
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_06_cowpoke_blush.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/6db99f429cf7bc5dd70523fa8ca891042ffafc4455065d8a7d4865edbbe25568.webp";
-export const metadata = { fileBytes: 40130 };
+export default "https://cdn.discordapp.com/assets/content/b98eb8bdaa4e4d27e13b5bcea6a6d0ab181066058770ae4d6217c2d3329ae87a.webp";
+export const metadata = { fileBytes: 106776 };

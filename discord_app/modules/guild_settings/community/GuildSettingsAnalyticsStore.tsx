@@ -1,9 +1,9 @@
-// === Module 20634: GuildSettingsAnalyticsStore ===
+// === Module 20681: GuildSettingsAnalyticsStore ===
 
-// Module 20634 (GuildSettingsAnalyticsStore)
+// Module 20681 (GuildSettingsAnalyticsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import _modDef20635 from "module_20635" /* 20635 */;
+import _modDef20682 from "module_20682" /* 20682 */;
 
 function handleFetchSuccess(arg0) {
   ({ guildId, stats } = arg0);
@@ -15,7 +15,7 @@ function handleFetchSuccess(arg0) {
   if (null != first) {
     const item = first.forEach((item) => {
       if (null != first[item]) {
-        const tmp8 = _modDef20635(item);
+        const tmp8 = _modDef20682(item);
         let tmp2 = null != dependencyMap;
         if (tmp2) {
           tmp2 = 0 !== dependencyMap[item];

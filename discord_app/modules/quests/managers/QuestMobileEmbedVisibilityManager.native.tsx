@@ -1,33 +1,33 @@
-// === Module 20814: QuestMobileEmbedVisibilityManager ===
+// === Module 20861: QuestMobileEmbedVisibilityManager ===
 
-// Module 20814 (QuestMobileEmbedVisibilityManager)
+// Module 20861 (QuestMobileEmbedVisibilityManager)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import ChannelTypes from "ChannelTypes" /* 1093 */;
 import privDefault from "priv" /* 1456 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
-import RootNavigationRef from "RootNavigationRef" /* 5483 */;
-import useAlertStore2 from "useAlertStore" /* 6260 */;
-import QuestTypes from "QuestTypes" /* 6957 */;
-import AdCreativeType from "AdCreativeType" /* 6961 */;
-import getQuestLogger from "getQuestLogger" /* 8816 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 15265 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5486 */;
+import RootNavigationRef from "RootNavigationRef" /* 5487 */;
+import useAlertStore2 from "useAlertStore" /* 6268 */;
+import QuestTypes from "QuestTypes" /* 6965 */;
+import AdCreativeType from "AdCreativeType" /* 6969 */;
+import getQuestLogger from "getQuestLogger" /* 8827 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8845 */;
+import ContentImpressionTracker from "ContentImpressionTracker" /* 15084 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ActionSheetStore from "ActionSheetStore" /* 5543 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
-import VoicePanelStore from "VoicePanelStore" /* 6891 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import AlertStore from "AlertStore" /* 12461 */;
+import ActionSheetStore from "ActionSheetStore" /* 5547 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7024 */;
+import VoicePanelStore from "VoicePanelStore" /* 6899 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5213 */;
+import AlertStore from "AlertStore" /* 11207 */;
 import AppStateStore from "AppStateStore" /* 2120 */;
-import QuestStore from "QuestStore" /* 8808 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
+import QuestStore from "QuestStore" /* 8819 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7892 */;
 
 require = fn;
-const ChannelDetailsStore = fn(9064);
+const ChannelDetailsStore = fn(9075);
 ({ useChannelDetailsStore: metroImportDefault, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const isTextChannel = fn(5159).isTextChannel;
-let closure_16 = fn(10137).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+const isTextChannel = fn(5163).isTextChannel;
+let closure_16 = fn(10581).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1072).MessageStates;
 function log() {
   if (questLogger == null) {
@@ -82,7 +82,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const set = new Set();
       codedLinks = codedLinks.codedLinks;
       const item = codedLinks.forEach((type, questContentPosition) => {
-        if (type.type === applyArgumentsResult(6045).CodedLinkType.QUESTS_EMBED) {
+        if (type.type === applyArgumentsResult(6049).CodedLinkType.QUESTS_EMBED) {
           const code = type.code;
           if (!set.has(code)) {
             const obj3 = { questId: code, questContentPosition, messageId: null, channelId: null };
@@ -206,8 +206,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(7048).isChannelFocused();
-      applyArgumentsResult(5482);
+      let isChannelFocusedResult = applyArgumentsResult(7056).isChannelFocused();
+      applyArgumentsResult(5486);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }

@@ -1,6 +1,6 @@
-// === Module 15055: ? ===
+// === Module 14267: ? ===
 
-// Module 15055
+// Module 14267
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/LeafIllocon-2x.png.js");

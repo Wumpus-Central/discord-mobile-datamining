@@ -1,9 +1,9 @@
-// === Module 8807: BountyStore ===
+// === Module 8818: BountyStore ===
 
-// Module 8807 (BountyStore)
+// Module 8818 (BountyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AdCreativeType from "AdCreativeType" /* 6961 */;
+import AdCreativeType from "AdCreativeType" /* 6969 */;
 
 require = fn;
 function resetStateForDeliveredBounties(items) {
@@ -57,9 +57,6 @@ prototype["getCompletedBountyCount"] = function getCompletedBountyCount(c7) {
 };
 prototype["isClaimingBountyReward"] = function isClaimingBountyReward(bountyId) {
   return set.has(bountyId);
-};
-prototype["areAllBountiesCompleted"] = function areAllBountiesCompleted() {
-  return closure_3.every((id) => set.has(id.id));
 };
 prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByPlacementAndAdCreativeId(questPlacementFromQuestContent, bountyId) {
   value = map.get(questPlacementFromQuestContent);

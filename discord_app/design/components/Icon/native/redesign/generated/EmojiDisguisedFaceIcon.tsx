@@ -1,9 +1,9 @@
-// === Module 17995: EmojiDisguisedFaceIcon ===
+// === Module 18036: EmojiDisguisedFaceIcon ===
 
-// Module 17995 (EmojiDisguisedFaceIcon)
+// Module 18036 (EmojiDisguisedFaceIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod17996 from "module_17996" /* 17996 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod18037 from "module_18037" /* 18037 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function EmojiDisguisedFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod17996, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod18037, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

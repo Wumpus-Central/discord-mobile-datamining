@@ -1,6 +1,6 @@
-// === Module 7387: ConjurePerfTraceLayout ===
+// === Module 7397: ConjurePerfTraceLayout ===
 
-// Module 7387 (ConjurePerfTraceLayout)
+// Module 7397 (ConjurePerfTraceLayout)
 import _slicedToArray from "module_32" /* 32 */;
 
 function walkNodes(findPerfTraceNodeResult, fn) {
@@ -386,7 +386,7 @@ export function visiblePerfTraceRows(key, arg1) {
 }
 export function overviewView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f94065 = (depth) => {
+  const f94268 = (depth) => {
     let tmp = depth.depth > 0;
     if (tmp) {
       const children = depth.children;
@@ -398,7 +398,7 @@ export function overviewView(children) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f94081(children);
+      tmp = f94284(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -427,7 +427,7 @@ export function extendView(collapsed, memo, current) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f94081(children);
+      tmp = f94284(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -462,12 +462,12 @@ export function perfTraceKeys(memo) {
 }
 export function expandedView(children) {
   const obj = { collapsed: new Set(), revealed: null };
-  const f94080 = () => true;
+  const f94283 = () => true;
   const set1 = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f94081(children);
+      tmp = f94284(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -483,12 +483,12 @@ export function expandedView(children) {
 }
 export function collapsedView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f94081 = (depth) => depth.depth > 0;
+  const f94284 = (depth) => depth.depth > 0;
   const set = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f94081(children);
+      tmp = f94284(children);
     }
     if (tmp) {
       set.add(children.key);

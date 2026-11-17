@@ -1,20 +1,20 @@
-// === Module 13688: SpiderIllocon ===
+// === Module 14739: SpiderIllocon ===
 
-// Module 13688 (SpiderIllocon)
-import FastImageDefault from "FastImage" /* 6010 */;
-import assetHelpers from "assetHelpers" /* 7755 */;
-import _modDef13689 from "module_13689" /* 13689 */;
-import _modDef13690 from "module_13690" /* 13690 */;
-import _modDef13691 from "module_13691" /* 13691 */;
+// Module 14739 (SpiderIllocon)
+import FastImageDefault from "FastImage" /* 6014 */;
+import assetHelpers from "assetHelpers" /* 7765 */;
+import _modDef14740 from "module_14740" /* 14740 */;
+import _modDef14741 from "module_14741" /* 14741 */;
+import _modDef14742 from "module_14742" /* 14742 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13689 }, 3: null };
-const obj2 = { uri: _modDef13689 };
-obj[2] = { uri: _modDef13690 };
-const obj3 = { uri: _modDef13690 };
-obj[3] = { uri: _modDef13691 };
+let obj = { 1: null, 2: { uri: _modDef14740 }, 3: null };
+const obj2 = { uri: _modDef14740 };
+obj[2] = { uri: _modDef14741 };
+const obj3 = { uri: _modDef14741 };
+obj[3] = { uri: _modDef14742 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/SpiderIllocon.native.tsx");
 
@@ -30,7 +30,7 @@ export function SpiderIllocon(size) {
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(7755).getAssetSource(obj);
+  obj.source = num(7765).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

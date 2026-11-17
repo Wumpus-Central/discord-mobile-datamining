@@ -1,16 +1,16 @@
-// === Module 19629: useConsoleConnectionCoachmark ===
+// === Module 19674: useConsoleConnectionCoachmark ===
 
-// Module 19629 (useConsoleConnectionCoachmark)
+// Module 19674 (useConsoleConnectionCoachmark)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef19633 from "module_19633" /* 19633 */;
+import _modDef19678 from "module_19678" /* 19678 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/console_coachmark/native/useConsoleConnectionCoachmark.tsx");
 
@@ -21,11 +21,11 @@ export function useConsoleConnectionCoachmark(disabled) {
   require("useSelectedDismissibleContent");
   if (isConsoleConnectionCoachmarkEligible) {
     if (!disabled.disabled) {
-      items = [tmp(5139).DismissibleContent.CONSOLE_CONNECTION_COACHMARK];
+      items = [tmp(5143).DismissibleContent.CONSOLE_CONNECTION_COACHMARK];
     }
     const tmp7 = _slicedToArray(tmp5(items), 2);
     _require = tmp8;
-    const tmp9 = tmp7[0] === tmp(5139).DismissibleContent.CONSOLE_CONNECTION_COACHMARK;
+    const tmp9 = tmp7[0] === tmp(5143).DismissibleContent.CONSOLE_CONNECTION_COACHMARK;
     visible = tmp9;
     const items1 = [tmp9, tmp7[1]];
     let tmp12 = null;

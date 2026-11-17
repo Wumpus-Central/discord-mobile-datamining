@@ -1,20 +1,20 @@
-// === Module 14538: TraitPicker ===
+// === Module 13409: TraitPicker ===
 
-// Module 14538 (TraitPicker)
+// Module 13409 (TraitPicker)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import _modDef3317 from "module_3317" /* 3317 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5486 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6734 */;
-import CheckpointActionCreators from "CheckpointActionCreators" /* 14260 */;
-import CheckpointTextDefault from "CheckpointText" /* 14271 */;
-import useTraitPickerOptions from "useTraitPickerOptions" /* 14537 */;
-import TraitOptionListDefault from "TraitOptionList" /* 14539 */;
-import TraitOptionDetailsDefault from "TraitOptionDetails" /* 14541 */;
-import useAutoSelectTraitOption from "useAutoSelectTraitOption" /* 14543 */;
-import FinalizeTraitTabs from "FinalizeTraitTabs" /* 14544 */;
+import _modDef3319 from "module_3319" /* 3319 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5490 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6742 */;
+import CheckpointActionCreators from "CheckpointActionCreators" /* 13126 */;
+import CheckpointTextDefault from "CheckpointText" /* 13137 */;
+import useTraitPickerOptions from "useTraitPickerOptions" /* 13408 */;
+import TraitOptionListDefault from "TraitOptionList" /* 13410 */;
+import TraitOptionDetailsDefault from "TraitOptionDetails" /* 13412 */;
+import useAutoSelectTraitOption from "useAutoSelectTraitOption" /* 13414 */;
+import FinalizeTraitTabs from "FinalizeTraitTabs" /* 13415 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,20 +23,20 @@ function EarnedCountHeader(customizationOption) {
   const tmp = closure_10();
   const customizationOptionName = CheckpointCustomizationUtils.getCustomizationOptionName(customizationOption.customizationOption);
   const intl = util.intl;
-  const combined = "" + customizationOptionName + ", " + intl.formatToPlainString(_modDef3317.Vfq58K, {
+  const combined = "" + customizationOptionName + ", " + intl.formatToPlainString(_modDef3319.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(arg0) {
       return arg0;
     }
   });
-  const obj3 = { variant: "body-sm/medium", color: "text-default", style: tmp.earnedRow, accessibilityRole: "header", accessibilityLabel: combined, children: null };
+  const obj3 = { variant: "body-md/medium", color: "text-default", style: tmp.earnedRow, accessibilityRole: "header", accessibilityLabel: combined, children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.format(_modDef3317.Vfq58K, {
+  obj3.children = intl2.format(_modDef3319.Vfq58K, {
     earnedCount,
     totalCount,
     countHook(children, arg1) {
-      return closure_1_7(CheckpointTextDefault, { variant: "mono-md/bold", children }, arg1);
+      return closure_1_7(CheckpointTextDefault, { variant: "body-md/semibold", tabularNumbers: true, children }, arg1);
     }
   });
   return metroImportDefault(Text_Text.Text, obj3);
@@ -83,17 +83,17 @@ function TraitPickerLandscape(selectedAsset) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const rarityOrder = fn(6367).CHECKPOINT_RARITY_ORDER_MOBILE;
+const rarityOrder = fn(6375).CHECKPOINT_RARITY_ORDER_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5306);
-let obj2 = { container: { gap: fn(14539).TRAIT_OPTION_SPACING }, earnedRow: null, landscapeGap: null, details: null, landscapeScrollContent: null };
-let obj3 = { gap: fn(14539).TRAIT_OPTION_SPACING };
-obj2.earnedRow = { paddingHorizontal: fn(14539).CONTENT_INSET };
-let obj4 = { paddingHorizontal: fn(14539).CONTENT_INSET };
+const createStyles = fn(5310);
+let obj2 = { container: { gap: fn(13410).TRAIT_OPTION_SPACING }, earnedRow: null, landscapeGap: null, details: null, landscapeScrollContent: null };
+let obj3 = { gap: fn(13410).TRAIT_OPTION_SPACING };
+obj2.earnedRow = { paddingHorizontal: fn(13410).CONTENT_INSET };
+let obj4 = { paddingHorizontal: fn(13410).CONTENT_INSET };
 obj2.landscapeGap = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
 let obj5 = { flexGrow: 1, minHeight: nativeDefault.space.PX_8, maxHeight: nativeDefault.space.PX_16 };
-obj2.details = { paddingHorizontal: fn(14539).CONTENT_INSET };
+obj2.details = { paddingHorizontal: fn(13410).CONTENT_INSET };
 obj2.landscapeScrollContent = { flexGrow: 1, justifyContent: "center" };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

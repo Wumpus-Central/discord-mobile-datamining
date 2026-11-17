@@ -1,9 +1,9 @@
-// === Module 14424: ? ===
+// === Module 13289: ? ===
 
-// Module 14424
+// Module 13289
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_12_mech_sandstorm.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/66c6c521ebe635d15c9213cc1422cbb76f9c1bb71d7359ae397d16b86ac26168.webp";
-export const metadata = { fileBytes: 32424 };
+export default "https://cdn.discordapp.com/assets/content/dba2cf636a3929d4f6d189e877dae3ac4177d1f482b5442ed91e9561d95a7fde.webp";
+export const metadata = { fileBytes: 74576 };

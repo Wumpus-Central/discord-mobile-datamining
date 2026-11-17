@@ -1,6 +1,6 @@
-// === Module 12088: WidgetAssetUtils ===
+// === Module 10820: WidgetAssetUtils ===
 
-// Module 12088 (WidgetAssetUtils)
+// Module 10820 (WidgetAssetUtils)
 import AvatarUtils from "AvatarUtils" /* 1414 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 12104: UserProfileGameWidgetConstants ===
+// === Module 10838: UserProfileGameWidgetConstants ===
 
-// Module 12104 (UserProfileGameWidgetConstants)
+// Module 10838 (UserProfileGameWidgetConstants)
 import nativeDefault from "native" /* 575 */;
-import FriendsIcon from "FriendsIcon" /* 6008 */;
-import ThumbsUpIcon from "ThumbsUpIcon" /* 9142 */;
-import ThumbsDownIcon from "ThumbsDownIcon" /* 9144 */;
-import RibbonIcon from "RibbonIcon" /* 12106 */;
-import UserProfileGameWidgetTagMetadata from "UserProfileGameWidgetTagMetadata" /* 12105 */;
+import FriendsIcon from "FriendsIcon" /* 6012 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 9153 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 9155 */;
+import RibbonIcon from "RibbonIcon" /* 10840 */;
+import UserProfileGameWidgetTagMetadata from "UserProfileGameWidgetTagMetadata" /* 10839 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};

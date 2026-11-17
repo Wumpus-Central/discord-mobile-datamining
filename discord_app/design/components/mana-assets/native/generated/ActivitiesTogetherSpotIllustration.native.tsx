@@ -1,19 +1,19 @@
-// === Module 18775: ActivitiesTogetherSpotIllustration ===
+// === Module 18816: ActivitiesTogetherSpotIllustration ===
 
-// Module 18775 (ActivitiesTogetherSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7755 */;
-import _modDef18776 from "module_18776" /* 18776 */;
-import _modDef18777 from "module_18777" /* 18777 */;
-import _modDef18778 from "module_18778" /* 18778 */;
+// Module 18816 (ActivitiesTogetherSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7765 */;
+import _modDef18817 from "module_18817" /* 18817 */;
+import _modDef18818 from "module_18818" /* 18818 */;
+import _modDef18819 from "module_18819" /* 18819 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18776 }, 3: null };
-let obj2 = { uri: _modDef18776 };
-obj[2] = { uri: _modDef18777 };
-const obj3 = { uri: _modDef18777 };
-obj[3] = { uri: _modDef18778 };
+let obj = { 1: null, 2: { uri: _modDef18817 }, 3: null };
+let obj2 = { uri: _modDef18817 };
+obj[2] = { uri: _modDef18818 };
+const obj3 = { uri: _modDef18818 };
+obj[3] = { uri: _modDef18819 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ActivitiesTogetherSpotIllustration.native.tsx");
 

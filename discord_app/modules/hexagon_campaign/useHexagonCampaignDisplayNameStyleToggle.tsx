@@ -1,9 +1,9 @@
-// === Module 17107: useHexagonCampaignDisplayNameStyleToggle ===
+// === Module 17143: useHexagonCampaignDisplayNameStyleToggle ===
 
-// Module 17107 (useHexagonCampaignDisplayNameStyleToggle)
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5334 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6740 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 9398 */;
+// Module 17143 (useHexagonCampaignDisplayNameStyleToggle)
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5338 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6748 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 9407 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -12,7 +12,7 @@ import UserStore from "UserStore" /* 1388 */;
 const require = globalThis.__r;
 
 require = fn;
-const HexagonCampaignConstants = fn(5331);
+const HexagonCampaignConstants = fn(5335);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES: metroImportDefault, HexagonCampaignPerk: closure_8 } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/useHexagonCampaignDisplayNameStyleToggle.tsx");
@@ -23,8 +23,8 @@ export function useHexagonCampaignDisplayNameStyleToggle(user, showEnrollmentErr
   const tmp3 = useDisplayNameStylesDefault({ userId: user.id, pendingDisplayNameStyles: require("ProfileCustomizationUtils").useGuildMemberOrUserPendingDisplayNameStyles(user).pendingDisplayNameStyles, ignoreDisabledStylesSetting: true });
   let result = null != tmp3;
   if (result) {
-    result = tmp(5334).isHexagonCampaignDisplayNameStyle(tmp3);
-    const tmpResult = tmp(5334);
+    result = tmp(5338).isHexagonCampaignDisplayNameStyle(tmp3);
+    const tmpResult = tmp(5338);
   }
   let obj2 = { userId: user.id, pendingDisplayNameStyles: require("ProfileCustomizationUtils").useGuildMemberOrUserPendingDisplayNameStyles(user).pendingDisplayNameStyles, ignoreDisabledStylesSetting: true };
   [tmp6, importDefault] = noop.useState(false);

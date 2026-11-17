@@ -1,25 +1,25 @@
-// === Module 19182: VoicePanelDock ===
+// === Module 19227: VoicePanelDock ===
 
-// Module 19182 (VoicePanelDock)
+// Module 19227 (VoicePanelDock)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import timing_timing from "timing/timing" /* 5538 */;
-import HapticUtils from "HapticUtils" /* 5544 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
-import ExternalPipDefault from "ExternalPip" /* 6171 */;
-import ContextMenu from "ContextMenu" /* 9148 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9150 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11984 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11989 */;
-import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 12017 */;
-import useMeasureDockGlowOffsetDefault from "useMeasureDockGlowOffset" /* 19181 */;
-import useVoicePanelDockContextMenuItemsDefault from "useVoicePanelDockContextMenuItems" /* 19183 */;
-import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 19203 */;
-import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19208 */;
+import timing_timing from "timing/timing" /* 5542 */;
+import HapticUtils from "HapticUtils" /* 5548 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5592 */;
+import ExternalPipDefault from "ExternalPip" /* 6179 */;
+import ContextMenu from "ContextMenu" /* 9159 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9160 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12427 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 12432 */;
+import VoicePanelSheetMorph from "VoicePanelSheetMorph" /* 12453 */;
+import useMeasureDockGlowOffsetDefault from "useMeasureDockGlowOffset" /* 19226 */;
+import useVoicePanelDockContextMenuItemsDefault from "useVoicePanelDockContextMenuItems" /* 19228 */;
+import VoicePanelDockStatusDisplayDefault from "VoicePanelDockStatusDisplay" /* 19248 */;
+import VoicePanelDockControlsDefault from "VoicePanelDockControls" /* 19253 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
 
 const require = globalThis.__r;
 const _modDef1655 = _mod1655;
@@ -77,14 +77,14 @@ function DockPressTargetGuard(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const VoicePanelModes = fn(11985).VoicePanelModes;
-const VoicePanelDockConstants = fn(12009);
+const VoicePanelModes = fn(12428).VoicePanelModes;
+const VoicePanelDockConstants = fn(12446);
 ({ DOCK_EXPAND_GESTURE_CANCEL_DISTANCE: closure_8, DOCK_PULL_SNAP_DISTANCE: closure_9, DOCK_PULL_SNAP_GIVE: closure_10, DOCK_TAP_MAX_MOVEMENT: closure_11, getDockInset: closure_12, DOCK_DRAG_HANDLE_TOP, DOCK_DRAG_HANDLE_WIDTH, DOCK_GAP, DOCK_PADDING_TOP, DOCK_ROW_HEIGHT } = VoicePanelDockConstants);
-const GestureConstants = fn(12010);
+const GestureConstants = fn(12447);
 ({ FLING_MIN_DISTANCE: map1, FLING_MIN_VELOCITY: closure_14, PULL_GESTURE_ACTIVATION_DISTANCE: closure_15, PULL_GESTURE_RESISTANCE: closure_16, PULL_GESTURE_SNAP_TIMING: closure_17, PULL_GESTURE_UNSNAP_TIMING: closure_18 } = GestureConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { dock: { position: "absolute", top: 0, left: 0, paddingTop: DOCK_PADDING_TOP, zIndex: 10 }, pressTarget: { position: "absolute", top: 0, left: 0, right: 0 }, contextMenuAnchor: { position: "absolute", top: 0, alignSelf: "center", width: 220, height: 0 }, dragHandle: null, row: null, identity: null };
 let size = { position: "absolute", top: DOCK_DRAG_HANDLE_TOP, alignSelf: "center", width: DOCK_DRAG_HANDLE_WIDTH, height: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj.dragHandle = size;
@@ -103,7 +103,7 @@ let closure_32 = { code: "(function VoicePanelDockTsx9(event){let[DOCK_PULL_SNAP
 let closure_33 = { code: "(function VoicePanelDockTsx10(event){let[contextMenuOpened,FLING_MIN_VELOCITY,FLING_MIN_DISTANCE,pullSnapped,scheduleOnRN,triggerHapticFeedback,HapticFeedbackTypes,committedMode,VoicePanelModes,handleExpand]=this.__closure;if(contextMenuOpened.get()){return;}const distance=Math.max(-event.translationY,0);const flungOpen=event.velocityY<-FLING_MIN_VELOCITY&&distance>FLING_MIN_DISTANCE;const flungClosed=event.velocityY>FLING_MIN_VELOCITY;const opens=flungOpen||!flungClosed&&pullSnapped.get();if(opens){if(!pullSnapped.get()){scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.IMPACT_MEDIUM);}committedMode.set(VoicePanelModes.PANEL);scheduleOnRN(handleExpand);}else if(pullSnapped.get()){scheduleOnRN(triggerHapticFeedback,HapticFeedbackTypes.SOFT);}})" };
 let closure_34 = { code: "(function VoicePanelDockTsx11(){let[dockTouched,pullActive,pullSnapped,pullSnapOffset,updateSharedValueIfChanged,wrapperOffset]=this.__closure;dockTouched.set(false);pullActive.set(false);pullSnapped.set(false);pullSnapOffset.set(0);updateSharedValueIfChanged(wrapperOffset,{gestureActive:false,x:0,y:0});})" };
 let closure_35 = { code: "(function VoicePanelDockTsx12(){let[dockPressProgress]=this.__closure;return{opacity:dockPressProgress.get()};})" };
-let closure_36 = { code: "(function VoicePanelDockTsx13(){let[dockMinimizeProgress,wrapperDimensions,isDockConnected,getDockInset,dockPressProgress,safeArea,dockRestWidth,isInSlot,dockHeight,getDockRowOpacity,isDockExpanding,dockContentSwap,isDockRowTouchable]=this.__closure;const progress=1-dockMinimizeProgress.get();const{drawerWidth:drawerWidth,drawerHeight:drawerHeight}=wrapperDimensions.get();if(!isDockConnected.get()||drawerHeight<=0){return{opacity:0,pointerEvents:'none'};}const inset=getDockInset(dockPressProgress.get());const{left:left,right:right}=safeArea.get();const restWidth=dockRestWidth.get();const isBesideChat=restWidth>0&&restWidth<drawerWidth;return{width:isInSlot?'100%':isBesideChat?restWidth:drawerWidth,height:dockHeight.get(),opacity:getDockRowOpacity(progress,isDockExpanding.get(),dockContentSwap.get()),pointerEvents:isDockRowTouchable(progress)?'auto':'none',paddingLeft:left+inset,paddingRight:(isBesideChat?0:right)+inset};})" };
+let closure_36 = { code: "(function VoicePanelDockTsx13(){let[dockMinimizeProgress,wrapperDimensions,isDockConnected,getDockInset,dockPressProgress,safeArea,dockRestWidth,isInSlot,dockHeight,getDockRowOpacity,isDockExpanding,dockContentSwap,isDockRowTouchable,dockRestLeft]=this.__closure;const progress=1-dockMinimizeProgress.get();const{drawerWidth:drawerWidth,drawerHeight:drawerHeight}=wrapperDimensions.get();if(!isDockConnected.get()||drawerHeight<=0){return{opacity:0,pointerEvents:'none'};}const inset=getDockInset(dockPressProgress.get());const{left:left,right:right}=safeArea.get();const restWidth=dockRestWidth.get();const isBesideChat=restWidth>0&&restWidth<drawerWidth;return{width:isInSlot?'100%':isBesideChat?restWidth:drawerWidth,height:dockHeight.get(),opacity:getDockRowOpacity(progress,isDockExpanding.get(),dockContentSwap.get()),pointerEvents:isDockRowTouchable(progress)?'auto':'none',paddingLeft:(isBesideChat?dockRestLeft.get():left)+inset,paddingRight:(isBesideChat?0:right)+inset};})" };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDock.tsx");
 
@@ -116,7 +116,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
   c10 = undefined;
   c11 = undefined;
   c12 = undefined;
-  let sharedValue2;
+  c13 = undefined;
   let sharedValue3;
   let sharedValue4;
   let sharedValue5;
@@ -142,7 +142,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
   c8 = wrapperDimensions;
   const wrapperOffset = context.wrapperOffset;
   c9 = wrapperOffset;
-  ({ dockRestWidth, isDockConnected, isDockExpanding, safeArea, mode } = context);
+  ({ dockRestLeft, dockRestWidth, isDockConnected, isDockExpanding, safeArea, mode } = context);
   items = [closure_25, dockMinimizeProgress, require("VoicePanelSheetMorph").SHEET_MORPH_PHYSICS];
   _require = undefined;
   importDefault = undefined;
@@ -207,7 +207,8 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
   const sharedValue1 = require("module_1655").useSharedValue(0);
   c12 = sharedValue1;
   const tmp5Result14 = require("module_1655");
-  sharedValue2 = require("module_1655").useSharedValue(false);
+  const sharedValue2 = require("module_1655").useSharedValue(false);
+  c13 = sharedValue2;
   let items5 = [callback, sharedValue1];
   const callback1 = obj.useCallback(() => {
     if (_undefined13.get() <= closure_2_11) {
@@ -295,7 +296,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
     const activeOffsetYResult = Gesture.Pan().hitSlop({ bottom: -c0 }).activeOffsetY(-colors);
     items = [-React5, React5];
     const failOffsetYResult = Gesture.Pan().hitSlop({ bottom: -c0 }).activeOffsetY(-colors).failOffsetY(colors);
-    const items1 = [closure_29, c5, c11, c12, sharedValue2];
+    const items1 = [closure_29, c5, c11, c12, c13];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -319,7 +320,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
     const tmp3 = c5;
     const tmp4 = c11;
     let tmp5 = c12;
-    const items3 = [closure_30, sharedValue2, tmp4, tmp5];
+    const items3 = [closure_30, c13, tmp4, tmp5];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -444,7 +445,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
     VoicePanelDockTsx9.__workletHash = 9262954094286;
     VoicePanelDockTsx9.__initData = tmp33;
     const onStartResult = Gesture.Pan().hitSlop({ bottom: -c0 }).activeOffsetY(-colors).failOffsetY(colors).failOffsetX(items).onBegin(VoicePanelDockTsx6).onTouchesMove(VoicePanelDockTsx7).onStart(VoicePanelDockTsx8);
-    const items9 = [closure_33, sharedValue2, gesture, state, sharedValue5, _mod1708.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, c1, VoicePanelModes, c10];
+    const items9 = [closure_33, c13, gesture, state, sharedValue5, _mod1708.scheduleOnRN, HapticUtils.triggerHapticFeedback, HapticUtils.HapticFeedbackTypes, c1, VoicePanelModes, c10];
     c0 = undefined;
     c1 = undefined;
     c2 = undefined;
@@ -537,7 +538,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
     const result = _undefined5.set(false);
   }, items12);
   const callback4 = obj.useCallback(() => {
-    const result = sharedValue2.set(true);
+    const result = _undefined14.set(true);
     const result1 = _undefined5.set(false);
   }, items13);
   const tmp5Result20 = require("module_1655");
@@ -556,7 +557,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
   VoicePanelDockTsx12.__initData = tmp41;
   const animatedStyle = require("module_1655").useAnimatedStyle(VoicePanelDockTsx12);
   const tmp5Result21 = require("module_1655");
-  const items16 = [closure_36, dockMinimizeProgress, wrapperDimensions, isDockConnected, c12, dockPressProgress, safeArea, dockRestWidth, flag, dockHeight, require("VoicePanelSheetMorph").getDockRowOpacity, isDockExpanding, dockContentSwap, require("VoicePanelSheetMorph").isDockRowTouchable];
+  const items16 = [closure_36, dockMinimizeProgress, wrapperDimensions, isDockConnected, c12, dockPressProgress, safeArea, dockRestWidth, flag, dockHeight, require("VoicePanelSheetMorph").getDockRowOpacity, isDockExpanding, dockContentSwap, require("VoicePanelSheetMorph").isDockRowTouchable, dockRestLeft];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -570,7 +571,8 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
   c10 = undefined;
   c11 = undefined;
   c12 = undefined;
-  [tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57] = items16;
+  c13 = undefined;
+  [tmp44, tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58] = items16;
   class VoicePanelDockTsx13 {
     constructor() {
       diff = 1 - closure_0.get();
@@ -579,20 +581,20 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
       if (closure_2.get()) {
         num = 0;
         if (value.drawerHeight > 0) {
-          tmp11 = closure_3;
-          tmp12 = closure_4;
-          tmp13 = closure_3(closure_4.get());
-          tmp14 = closure_5;
-          value1 = closure_5.get();
+          tmp12 = closure_3;
+          tmp13 = closure_4;
+          tmp14 = closure_3(closure_4.get());
+          tmp15 = closure_5;
+          rect = closure_5.get();
+          left = rect.left;
           tmp16 = closure_6;
-          ({ left, right } = value1);
-          value2 = closure_6.get();
-          tmp3 = value2 > 0 && value2 < drawerWidth;
+          value1 = closure_6.get();
+          tmp3 = value1 > 0 && value1 < drawerWidth;
           tmp4 = closure_7;
           str = "100%";
           if (!closure_7) {
             if (tmp3) {
-              drawerWidth = value2;
+              drawerWidth = value1;
             }
             str = drawerWidth;
           }
@@ -603,34 +605,38 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
           tmp6 = closure_9;
           tmp7 = closure_10;
           tmp9 = closure_11;
-          value3 = closure_10.get();
-          size.opacity = closure_9(diff, value3, closure_11.get());
+          value2 = closure_10.get();
+          size.opacity = closure_9(diff, value2, closure_11.get());
           tmp10 = closure_12;
           str2 = "none";
           if (closure_12(diff)) {
             str2 = "auto";
           }
           size.pointerEvents = str2;
-          size.paddingLeft = left + tmp13;
+          if (tmp3) {
+            tmp11 = closure_13;
+            left = closure_13.get();
+          }
+          size.paddingLeft = left + tmp14;
           num2 = 0;
           if (!tmp3) {
-            num2 = right;
+            num2 = rect.right;
           }
-          size.paddingRight = num2 + tmp13;
+          size.paddingRight = num2 + tmp14;
           return size;
         }
       }
       return { opacity: 0, pointerEvents: "none" };
     }
   }
-  const items17 = [tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57];
+  const items17 = [tmp45, tmp46, tmp47, tmp48, tmp49, tmp50, tmp51, tmp52, tmp53, tmp54, tmp55, tmp56, tmp57, tmp58];
   VoicePanelDockTsx13.__closure = items17;
-  VoicePanelDockTsx13.__workletHash = 5034155994972;
+  VoicePanelDockTsx13.__workletHash = 7399426325973;
   VoicePanelDockTsx13.__initData = tmp44;
   const animatedStyle1 = require("module_1655").useAnimatedStyle(VoicePanelDockTsx13);
   const tmp5Result22 = require("module_1655");
   ({ dockRef, handleDockLayout, measureGlowOffset } = useMeasureDockGlowOffsetDefault());
-  const tmp59 = useMeasureDockGlowOffsetDefault();
+  const tmp60 = useMeasureDockGlowOffsetDefault();
   const animatedRef = require("module_1655").useAnimatedRef();
   const tmp5Result23 = require("module_1655");
   const tmp5Result24 = require("KeyboardChatScrollView");
@@ -642,7 +648,7 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
   dependencyMap = undefined;
   noop = undefined;
   c4 = undefined;
-  [tmp62, tmp63, tmp64, tmp65, tmp66, tmp67] = items18;
+  [tmp63, tmp64, tmp65, tmp66, tmp67, tmp68] = items18;
   class VoicePanelDockTsx1 {
     constructor() {
       tmp = -closure_0.get();
@@ -680,10 +686,10 @@ export default noop.memo(function VoicePanelDock(isInSlot) {
       return { opacity: 1, pointerEvents: "box-none" };
     }
   }
-  const items19 = [tmp63, tmp64, tmp65, tmp66, tmp67];
+  const items19 = [tmp64, tmp65, tmp66, tmp67, tmp68];
   VoicePanelDockTsx1.__closure = items19;
   VoicePanelDockTsx1.__workletHash = 17112345546547;
-  VoicePanelDockTsx1.__initData = tmp62;
+  VoicePanelDockTsx1.__initData = tmp63;
   const animatedStyle2 = require("module_1655").useAnimatedStyle(VoicePanelDockTsx1);
   const obj3 = { gesture: memo, children: null };
   const obj4 = { ref: dockRef, style: null, onLayout: handleDockLayout, children: null };

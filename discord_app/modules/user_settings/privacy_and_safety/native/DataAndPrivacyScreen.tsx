@@ -1,14 +1,14 @@
-// === Module 18561: DataAndPrivacyScreen ===
+// === Module 18602: DataAndPrivacyScreen ===
 
-// Module 18561 (DataAndPrivacyScreen)
+// Module 18602 (DataAndPrivacyScreen)
 import util from "util" /* 1113 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 10627 */;
-import SettingBuilders from "SettingBuilders" /* 12406 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 10327 */;
+import SettingBuilders from "SettingBuilders" /* 12612 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6836 */;
+import ConsentStore from "ConsentStore" /* 6831 */;
 
 require = fn;
-const MobileUserSettings = fn(9202).MobileUserSettings;
+const MobileUserSettings = fn(9213).MobileUserSettings;
 const Constants = fn(1072);
 ({ HelpdeskArticles: closure_6, UserSettingsSections: metroImportDefault } = Constants);
 const jsxProd = fn(21);
@@ -20,13 +20,13 @@ export default function DataAndPrivacySettings() {
   stackNavigation = stackNavigation(1502).useStackNavigation();
   closure_129_0 = stackNavigation;
   let obj = stackNavigation(1502);
-  const pinotDataPrivacySections = stackNavigation(18553).usePinotDataPrivacySections();
+  const pinotDataPrivacySections = stackNavigation(18594).usePinotDataPrivacySections();
   let obj3 = { settings: null, subLabel: null };
   items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
   obj3.settings = items;
   let intl = stackNavigation(1113).intl;
   let obj4 = { helpdeskArticle: null };
-  let obj2 = stackNavigation(18553);
+  let obj2 = stackNavigation(18594);
   obj4.helpdeskArticle = items1(2188).getArticleURL(constants.DATA_PRIVACY_CONTROLS);
   obj3.subLabel = intl.format(stackNavigation(1113).t["igTSG/"], obj4);
   items1 = [obj3, , , ];
@@ -85,11 +85,11 @@ export default function DataAndPrivacySettings() {
   items1.push(obj20);
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(17385).fetchConsents();
-      const obj = stackNavigation(17385);
+      const consents = stackNavigation(17422).fetchConsents();
+      const obj = stackNavigation(17422);
     }
-    const harvestStatus = stackNavigation(17388).fetchHarvestStatus();
-    const obj2 = stackNavigation(17388);
+    const harvestStatus = stackNavigation(17425).fetchHarvestStatus();
+    const obj2 = stackNavigation(17425);
   }, []);
   const items8 = [stackNavigation, items1];
   const obj21 = { children: null };
@@ -133,8 +133,8 @@ export default function DataAndPrivacySettings() {
       return stackNavigation.navigate(constants2.CONTENT_AND_SOCIAL);
     }
   };
-  obj22.screen = stackNavigation(17342).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(17342), obj22), closure_8(items1(17213), { node: memo })];
+  obj22.screen = stackNavigation(17379).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(17379), obj22), closure_8(items1(17250), { node: memo })];
   obj21.children = items9;
   return closure_10(closure_9, obj21);
 };

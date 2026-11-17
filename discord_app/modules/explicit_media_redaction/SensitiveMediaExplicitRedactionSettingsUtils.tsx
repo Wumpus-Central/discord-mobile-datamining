@@ -1,11 +1,12 @@
-// === Module 8641: SensitiveMediaExplicitRedactionSettingsUtils ===
+// === Module 8652: SensitiveMediaExplicitRedactionSettingsUtils ===
 
-// Module 8641 (SensitiveMediaExplicitRedactionSettingsUtils)
+// Module 8652 (SensitiveMediaExplicitRedactionSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import UserSettings from "UserSettings" /* 5131 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5985 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5993 */;
-import SensitiveMediaRedactionSettingUtils from "SensitiveMediaRedactionSettingUtils" /* 8642 */;
+import UserSettings from "UserSettings" /* 5135 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5989 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 5997 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6815 */;
+import SensitiveMediaRedactionSettingUtils from "SensitiveMediaRedactionSettingUtils" /* 8653 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -24,66 +25,65 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
     }
   }
   const currentUser = UserStore.getCurrentUser();
-  let ExplicitContentRedaction = dependencyMap;
   obj = RegionalFeatureConfigUtils;
   if (obj.isSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SENSITIVE_CONTENT)) {
-    if (isDm === undefined) {
-      isDm = false;
-    }
-    if (flag === undefined) {
-      flag = false;
-    }
-    if (isDm) {
-      if (!flag) {
-        let BLUR2 = preloaded_user_settings.ExplicitContentRedaction.BLOCK;
-      }
-    }
-    ExplicitContentRedaction = preloaded_user_settings.ExplicitContentRedaction;
-    BLUR2 = ExplicitContentRedaction.BLUR;
-  } else {
-    let nsfwAllowed;
-    if (currentUser != null) {
-      nsfwAllowed = currentUser.nsfwAllowed;
-    }
-    if (false === nsfwAllowed) {
-      let flag5 = isDm;
+    if (!tmp4Result.isVerifiedAdult()) {
+      let flag2 = isDm;
       if (isDm === undefined) {
-        flag5 = false;
+        flag2 = false;
       }
-      let flag6 = flag;
+      let flag3 = flag;
       if (flag === undefined) {
-        flag6 = false;
-      }
-      if (!flag5) {
-        const BLUR = preloaded_user_settings.ExplicitContentRedaction.BLUR;
-      }
-      const ExplicitContentFilter2 = UserSettings.ExplicitContentFilter;
-      const setting1 = ExplicitContentFilter2.getSetting();
-    } else {
-      let flag3 = isDm;
-      if (isDm === undefined) {
         flag3 = false;
       }
-      let flag4 = flag;
-      if (flag === undefined) {
-        flag4 = false;
-      }
-      if (flag3) {
-        const ExplicitContentFilter = UserSettings.ExplicitContentFilter;
-        const setting2 = ExplicitContentFilter.getSetting();
-        if (flag4) {
-          let SHOW = obj[setting2];
-        } else {
-          SHOW = obj2[setting2];
+      if (flag2) {
+        if (!flag3) {
+          let BLUR = preloaded_user_settings.ExplicitContentRedaction.BLOCK;
         }
-      } else {
-        SHOW = preloaded_user_settings.ExplicitContentRedaction.SHOW;
+        return BLUR;
       }
-      return SHOW;
+      BLUR = preloaded_user_settings.ExplicitContentRedaction.BLUR;
+    }
+    tmp4Result = AgeVerificationUtils;
+  }
+  let nsfwAllowed;
+  if (currentUser != null) {
+    nsfwAllowed = currentUser.nsfwAllowed;
+  }
+  if (false !== nsfwAllowed) {
+    let flag4 = isDm;
+    if (isDm === undefined) {
+      flag4 = false;
+    }
+    let flag5 = flag;
+    if (flag === undefined) {
+      flag5 = false;
+    }
+    if (flag4) {
+      const ExplicitContentFilter = UserSettings.ExplicitContentFilter;
+      const setting1 = ExplicitContentFilter.getSetting();
+      if (flag5) {
+        let SHOW = obj[setting1];
+      } else {
+        SHOW = obj2[setting1];
+      }
+    } else {
+      SHOW = preloaded_user_settings.ExplicitContentRedaction.SHOW;
     }
   }
+  if (isDm === undefined) {
+    isDm = false;
+  }
+  if (flag === undefined) {
+    flag = false;
+  }
+  if (!isDm) {
+    const BLUR2 = preloaded_user_settings.ExplicitContentRedaction.BLUR;
+  }
+  const ExplicitContentFilter2 = UserSettings.ExplicitContentFilter;
+  const setting2 = ExplicitContentFilter2.getSetting();
 }
-const ExplicitContentFilterTypes = fn(5133).ExplicitContentFilterTypes;
+const ExplicitContentFilterTypes = fn(5137).ExplicitContentFilterTypes;
 let obj = {};
 const DISABLED = ExplicitContentFilterTypes.DISABLED;
 obj[DISABLED.valueOf()] = fn(1196).ExplicitContentRedaction.SHOW;

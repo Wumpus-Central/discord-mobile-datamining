@@ -1,13 +1,13 @@
-// === Module 15818: UserProfileWidgetsEmptyState ===
+// === Module 15852: UserProfileWidgetsEmptyState ===
 
-// Module 15818 (UserProfileWidgetsEmptyState)
+// Module 15852 (UserProfileWidgetsEmptyState)
 import nativeDefault from "native" /* 575 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2121 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8546 */;
-import useAddableWidgetsDefault from "useAddableWidgets" /* 15810 */;
-import UserProfileWidgetOptionAddButton from "UserProfileWidgetOptionAddButton" /* 15819 */;
-import UserProfileAddableWidgetCategories from "UserProfileAddableWidgetCategories" /* 15823 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8557 */;
+import useAddableWidgetsDefault from "useAddableWidgets" /* 15844 */;
+import UserProfileWidgetOptionAddButton from "UserProfileWidgetOptionAddButton" /* 15853 */;
+import UserProfileAddableWidgetCategories from "UserProfileAddableWidgetCategories" /* 15857 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -17,15 +17,15 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-let closure_8 = fn(8479).TrackUserProfileEditActions;
-const PROFILE_SIDE_PADDING = fn(7962).PROFILE_SIDE_PADDING;
+let closure_8 = fn(8490).TrackUserProfileEditActions;
+const PROFILE_SIDE_PADDING = fn(7972).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_10, jsxs: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 let closure_14 = [1.3, 1.6, 2.3, 3.3];
 const UserProfileWidgetsEmptyState = "UserProfileWidgetsEmptyState";
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" }, textContainer: null, centeredText: null, scroller: null, scrollerContent: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24, alignItems: "center" };
 obj2.textContainer = { alignSelf: "stretch", gap: nativeDefault.space.PX_8 };
@@ -63,7 +63,7 @@ export default function UserProfileWidgetsEmptyState() {
   const callback = obj2.useCallback((nativeEvent) => {
     dependencyMap(nativeEvent.nativeEvent.layout.width);
   }, []);
-  closure_6 = tmp4(15824)();
+  closure_6 = tmp4(15858)();
   const tmp6 = _slicedToArray(compact.useState(0), 2);
   const canConjureCustomWidget = require("ConjureCustomWidget").useCanConjureCustomWidget(UserProfileWidgetsEmptyState);
   const tmp2Result = require("ConjureCustomWidget");
@@ -90,7 +90,7 @@ export default function UserProfileWidgetsEmptyState() {
     const items4 = [
       memo.map((widget) => {
           closure_0 = widget;
-          return closure_1_10(closure_1(15819), {
+          return closure_1_10(closure_1(15853), {
             widget,
             variant: "compact",
             width,
@@ -104,7 +104,7 @@ export default function UserProfileWidgetsEmptyState() {
     ];
     if (isConjureMobileEnabled) {
       const obj8 = { width: result, padding: PX_16 };
-      isConjureMobileEnabled = closure_10(tmp4(15826), obj8);
+      isConjureMobileEnabled = closure_10(tmp4(15860), obj8);
     }
     items4[1] = isConjureMobileEnabled;
     obj7.children = items4;
@@ -117,7 +117,7 @@ export default function UserProfileWidgetsEmptyState() {
   obj10.onPress = function onPress() {
     const result = UserProfileAnalyticsUtils.trackUserProfileEditAction({ userId, action: constants.PRESS_ADD_WIDGET });
     const obj2 = { userId, action: constants.PRESS_ADD_WIDGET };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15828, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15862, dependencyMap.paths), "UserProfileWidgetAddActionSheet");
   };
   items3[2] = closure_10(require("components/Button/Button").Button, obj10);
   obj3.children = items3;

@@ -1,8 +1,8 @@
-// === Module 20308: resolveUserProfileCodedLink ===
+// === Module 20356: resolveUserProfileCodedLink ===
 
-// Module 20308 (resolveUserProfileCodedLink)
+// Module 20356 (resolveUserProfileCodedLink)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
 
 const require = fn;
 const MessageCodedLinkManager = "MessageCodedLinkManager";
@@ -17,13 +17,13 @@ export default function resolveUserProfileCodedLink(arg0, arg1) {
   }
   let guild_id;
   if (flag) {
-    let isUserProfileEmbedRenderingMobileEnabled = tmp(15583).getIsUserProfileEmbedRenderingMobileEnabled(MessageCodedLinkManager);
+    let isUserProfileEmbedRenderingMobileEnabled = tmp(15617).getIsUserProfileEmbedRenderingMobileEnabled(MessageCodedLinkManager);
     let tmp6 = tmp;
-    const tmpResult = tmp(15583);
+    const tmpResult = tmp(15617);
   } else {
-    isUserProfileEmbedRenderingMobileEnabled = tmp(20309).getIsUserProfileEmbedRenderingEnabled(MessageCodedLinkManager);
+    isUserProfileEmbedRenderingMobileEnabled = tmp(20357).getIsUserProfileEmbedRenderingEnabled(MessageCodedLinkManager);
     tmp6 = tmp;
-    const tmpResult2 = tmp(20309);
+    const tmpResult2 = tmp(20357);
   }
   if (isUserProfileEmbedRenderingMobileEnabled) {
     let tmp10;
@@ -36,7 +36,7 @@ export default function resolveUserProfileCodedLink(arg0, arg1) {
       tmp10 = guild_id;
     }
     guild_id = tmp10;
-    const result = tmp6(20301).queueMessageLinkFetch(asyncGeneratorStep(async () => {
+    const result = tmp6(20349).queueMessageLinkFetch(asyncGeneratorStep(async () => {
       c2 = 1;
       await v2(c2[5])(closure_0, undefined, { guildId: guild_id, withMutualGuilds: true, withMutualFriends: true });
       if (1 === tmp6) {
@@ -51,6 +51,6 @@ export default function resolveUserProfileCodedLink(arg0, arg1) {
       c2 = 0;
       return value;
     }));
-    const tmp6Result = tmp6(20301);
+    const tmp6Result = tmp6(20349);
   }
 };

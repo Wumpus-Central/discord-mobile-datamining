@@ -1,15 +1,15 @@
-// === Module 18791: happeningNowRankingUtils ===
+// === Module 18832: happeningNowRankingUtils ===
 
-// Module 18791 (happeningNowRankingUtils)
+// Module 18832 (happeningNowRankingUtils)
 import apply from "apply" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1255 */;
-import RelationshipStore from "RelationshipStore" /* 5248 */;
-import VoiceStateStore from "VoiceStateStore" /* 5971 */;
+import RelationshipStore from "RelationshipStore" /* 5252 */;
+import VoiceStateStore from "VoiceStateStore" /* 5975 */;
 
 const applyDefault = apply;
 
 require = fn;
-const HappeningNowConstants = fn(17917);
+const HappeningNowConstants = fn(17958);
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: hasOwnProperty, HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: closure_6, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: metroImportDefault } = HappeningNowConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx");

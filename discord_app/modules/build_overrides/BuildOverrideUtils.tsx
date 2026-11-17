@@ -2,6 +2,7 @@
 
 // Module 1377 (BuildOverrideUtils)
 import Constants from "Constants" /* 1072 */;
+import GlobalUtils from "GlobalUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import BuildOverrideConstants from "BuildOverrideConstants" /* 1378 */;
 import URLUtilsDefault from "URLUtils" /* 1381 */;
@@ -60,20 +61,28 @@ const result = size.fileFinishedImporting("modules/build_overrides/BuildOverride
 export const APP_VERSION = Version;
 export { getAPIEndpoint };
 export function getBuildOverride() {
-  const safeParseWithQueryResult = URLUtilsDefault.safeParseWithQuery("" + location.protocol + "//" + location.host + "/__development/build_overrides");
-  if (null == safeParseWithQueryResult) {
-    let resolved = Promise.resolve(null);
+  if (obj.isDiscordBackendDevelopment()) {
+    return Promise.resolve(null);
   } else {
-    safeParseWithQueryResult.search = null;
-    if (Version) {
-      safeParseWithQueryResult.query.version = tmp3;
+    const _location = location;
+    const _location2 = location;
+    const _HermesInternal = HermesInternal;
+    const safeParseWithQueryResult = URLUtilsDefault.safeParseWithQuery("" + location.protocol + "//" + location.host + "/__development/build_overrides");
+    if (null == safeParseWithQueryResult) {
+      let resolved = Promise.resolve(null);
+    } else {
+      safeParseWithQueryResult.search = null;
+      if (Version) {
+        safeParseWithQueryResult.query.version = tmp7;
+      }
+      const HTTP = HTTPUtils.HTTP;
+      const obj3 = { url: UrlAll.format(safeParseWithQueryResult), oldFormErrors: true, rejectWithError: false };
+      value = HTTP.get(obj3);
+      resolved = value.then((body) => body.body || null, () => null);
     }
-    const HTTP = HTTPUtils.HTTP;
-    const obj2 = { url: UrlAll.format(safeParseWithQueryResult), oldFormErrors: true, rejectWithError: false };
-    value = HTTP.get(obj2);
-    resolved = value.then((body) => body.body || null, () => null);
+    return resolved;
   }
-  return resolved;
+  obj = GlobalUtils;
 }
 export function getBuildOverrideMeta(url) {
   if (obj.isAdsManagerBuildOverrideLink(url)) {

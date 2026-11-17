@@ -21,7 +21,7 @@ class ApexExperimentStore extends tmp2 {
           },
       CONNECTION_OPEN_STATE_UPDATE(apexExperiments) {
             const result = closure_0.updateLaunchLatchUnits();
-            const result1 = closure_0.setExperimentAssignments(apexExperiments.apexExperiments);
+            const result1 = closure_0.setGatewayExperimentAssignments(apexExperiments.apexExperiments, undefined, AuthenticationStore.getId());
             if (null != apexExperiments.apexExperiments) {
               const result2 = closure_0.drainLaunchLatchReceipts();
             }
@@ -52,17 +52,22 @@ class ApexExperimentStore extends tmp2 {
             return closure_0.setExperimentsMetadata(experiments.experiments);
           },
       APEX_EXPERIMENTS_FETCH_START(unitId) {
-            return closure_0.handleFetchStart(unitId.unitId);
+            return closure_0.handleFetchStart(unitId.unitId, unitId.request);
           },
       APEX_EXPERIMENTS_FETCH_SUCCESS(unitId) {
             const result = closure_0.updateLaunchLatchUnits();
-            closure_0.handleFetchSuccess(unitId.unitId, unitId.experiments);
-            if (null != unitId.experiments) {
+            const handleFetchSuccessResult = closure_0.handleFetchSuccess(unitId.unitId, unitId.experiments, unitId.request);
+            let tmp3 = false !== handleFetchSuccessResult;
+            if (tmp3) {
+              tmp3 = null != unitId.experiments;
+            }
+            if (tmp3) {
               const result1 = closure_0.drainLaunchLatchReceipts();
             }
+            return handleFetchSuccessResult;
           },
       APEX_EXPERIMENTS_FETCH_FAILURE(unitId) {
-            return closure_0.handleFetchFailure(unitId.unitId);
+            return closure_0.handleFetchFailure(unitId.unitId, unitId.request);
           },
       LOGOUT(isSwitchingAccount) {
             return closure_0.handleLogout(isSwitchingAccount.isSwitchingAccount);
@@ -79,6 +84,10 @@ class ApexExperimentStore extends tmp2 {
     tmp1.surface = "discord_app";
     addChangeListenerResult = tmp1.addChangeListener(() => closure_0.maybeEmitDebugExperimentEvent());
     return tmp1;
+  }
+  trackCommonTriggerPointExposures(arg0) {
+    result = super.trackCommonTriggerPointExposures(global, closure_4.getId());
+    return;
   }
   handleLogout(arg0) {
     launchLatch = this.launchLatch;
@@ -160,12 +169,12 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(guilds) {
   const self = this;
   const result = this.updateLaunchLatchUnits();
   guilds = guilds.guilds;
-  const result1 = this.setExperimentAssignments(guilds.apexExperiments, guilds.reduce((acc, experiments) => {
+  const result1 = this.setGatewayExperimentAssignments(guilds.apexExperiments, guilds.reduce((acc, experiments) => {
     if (null != experiments.experiments) {
       acc[experiments.id] = experiments.experiments;
     }
     return acc;
-  }, {}));
+  }, {}), guilds.user.id);
   if (null != guilds.apexExperiments) {
     const result2 = self.drainLaunchLatchReceipts();
   }

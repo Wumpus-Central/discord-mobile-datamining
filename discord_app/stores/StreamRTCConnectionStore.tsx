@@ -1,20 +1,20 @@
-// === Module 6792: StreamRTCConnectionStore ===
+// === Module 6800: StreamRTCConnectionStore ===
 
-// Module 6792 (StreamRTCConnectionStore)
+// Module 6800 (StreamRTCConnectionStore)
 import applyDefault from "apply" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 6086 */;
-import StreamRTCConnection from "StreamRTCConnection" /* 6795 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6798 */;
-import canSpectateDefault from "canSpectate" /* 6850 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8468 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 6093 */;
+import StreamRTCConnection from "StreamRTCConnection" /* 6803 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6805 */;
+import canSpectateDefault from "canSpectate" /* 6845 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 8479 */;
 import RunningGameStore from "RunningGameStore" /* 2140 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import PresenceStore from "PresenceStore" /* 6058 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import PresenceStore from "PresenceStore" /* 6065 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6068 */;
 import Dispatcher from "Dispatcher" /* 572 */;
 
 const StreamRTCConnectionDefault = StreamRTCConnection;
@@ -22,7 +22,7 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 require = fn;
 const Constants = fn(1072);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(6793).StreamTypes;
+const StreamTypes = fn(6801).StreamTypes;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -296,7 +296,7 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
         appContext = appContext.appContext;
         const streamKey = appContext.streamKey;
-        closure_11[streamKey] = { appContext, analyticsLocations: "y" };
+        closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
         const item = applyDefault.forEach(closure_18, (analyticsContext) => {
           analyticsContext = analyticsContext.analyticsContext;
           analyticsContext.setActionContext(appContext);

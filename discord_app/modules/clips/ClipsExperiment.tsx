@@ -1,17 +1,17 @@
-// === Module 15812: ClipsExperiment ===
+// === Module 15846: ClipsExperiment ===
 
-// Module 15812 (ClipsExperiment)
+// Module 15846 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
 import PlatformUtilsAll from "PlatformUtils" /* 1380 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import DevSettingsStore from "DevSettingsStore" /* 5922 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 8827 */;
+import DevSettingsStore from "DevSettingsStore" /* 5926 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 8838 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
 const PremiumTypes = fn(1390).PremiumTypes;
-const Features = fn(6065).Features;
+const Features = fn(6072).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/clips/ClipsExperiment.tsx");
 
@@ -95,12 +95,30 @@ export function useIsClipsAvailable() {
     return PremiumUtilsDefault.isPremiumAtLeast(premiumType, TIER_2.TIER_2);
   }) && isDesktopResult;
 }
+export function isClipsPlatformRequirementIgnored() {
+  let isDeveloper = DeveloperExperimentStore.isDeveloper;
+  if (isDeveloper) {
+    isDeveloper = DevSettingsStore.get("clips_ignore_platform_requirement");
+  }
+  return isDeveloper;
+}
 export function isUserPremiumTypeForClipsEarlyAccess(currentUser) {
   let premiumType;
   if (currentUser != null) {
     premiumType = currentUser.premiumType;
   }
   return PremiumUtilsDefault.isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
+}
+export function useIsUserPremiumTypeForClipsEarlyAccess() {
+  items = [UserStore];
+  return initialize.useStateFromStores(items, () => {
+    currentUser = currentUser.getCurrentUser();
+    let premiumType;
+    if (currentUser != null) {
+      premiumType = currentUser.premiumType;
+    }
+    return PremiumUtilsDefault.isPremiumAtLeast(premiumType, TIER_2.TIER_2);
+  });
 }
 export function isScreenshotKeybindEnabled() {
   return false;

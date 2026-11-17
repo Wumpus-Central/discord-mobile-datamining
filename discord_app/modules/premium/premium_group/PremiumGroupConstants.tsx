@@ -2,14 +2,14 @@
 
 // Module 2187 (PremiumGroupConstants)
 import util from "util" /* 1113 */;
-import _modDef3513 from "module_3513" /* 3513 */;
+import _modDef3515 from "module_3515" /* 3515 */;
 import Constants from "Constants" /* 1072 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2188 */;
 import size from "module_2" /* 2 */;
 
 ({ SubscriptionStatusTypes, HelpdeskArticles } = Constants);
-const items = [, , , , ];
-({ CANCELED: arr[0], PAUSED: arr[1], PAST_DUE: arr[2], ACCOUNT_HOLD: arr[3], BILLING_RETRY: arr[4] } = SubscriptionStatusTypes);
+const items = [, , , ];
+({ PAUSED: arr[0], PAST_DUE: arr[1], ACCOUNT_HOLD: arr[2], BILLING_RETRY: arr[3] } = SubscriptionStatusTypes);
 const articleURL = HelpdeskUtils.getArticleURL(HelpdeskArticles.PREMIUM_GROUP_ABOUT);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupConstants.tsx");
 
@@ -21,7 +21,7 @@ export const HELP_CENTER_LINK = articleURL;
 export const CANNOT_INVITE_STATUSES = items;
 export function getPremiumGroupProductName() {
   const intl = util.intl;
-  return intl.string(_modDef3513.aFBQ3d);
+  return intl.string(_modDef3515.aFBQ3d);
 }
 export function getPremiumGroupCountryName() {
   const intl = util.intl;

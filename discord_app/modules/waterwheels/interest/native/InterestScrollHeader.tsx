@@ -1,10 +1,10 @@
-// === Module 19042: InterestScrollHeader ===
+// === Module 19083: InterestScrollHeader ===
 
-// Module 19042 (InterestScrollHeader)
+// Module 19083 (InterestScrollHeader)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
 import _mod1708 from "module_1708" /* 1708 */;
-import Text_Text from "Text/Text" /* 5919 */;
+import Text_Text from "Text/Text" /* 5923 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
@@ -12,7 +12,7 @@ const _modDef1655 = _mod1655;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_5 = createStyles.createStyles({ title: { flex: 1, alignItems: "center", justifyContent: "center", minWidth: 0 }, normal: { maxWidth: "100%" } });
 let closure_6 = { code: "(function InterestScrollHeaderTsx1(event){let[scrollY,onViewportScroll,scheduleOnRN]=this.__closure;scrollY.set(event.contentOffset.y);if(onViewportScroll!=null)scheduleOnRN(onViewportScroll,event.contentOffset.y,event.layoutMeasurement.height);})" };
 let items = [{ code: "(function interestHeaderElevation_InterestScrollHeaderTsx2(scrollOffset,collapseOffset){let[tokens]=this.__closure;const progress=Math.max(0,Math.min(1,(scrollOffset-collapseOffset-tokens.space.PX_16)/tokens.space.PX_48));return progress*progress*(3-2*progress);})" }, nativeDefault];

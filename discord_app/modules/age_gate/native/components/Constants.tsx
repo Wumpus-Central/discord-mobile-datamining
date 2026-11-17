@@ -1,6 +1,6 @@
-// === Module 10807: Constants ===
+// === Module 11201: Constants ===
 
-// Module 10807 (Constants)
+// Module 11201 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/age_gate/native/components/Constants.tsx");

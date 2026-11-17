@@ -1,8 +1,8 @@
-// === Module 13262: Tabs/Tabs ===
+// === Module 14155: Tabs/Tabs ===
 
-// Module 13262 (Tabs/Tabs)
+// Module 14155 (Tabs/Tabs)
 import nativeDefault from "native" /* 575 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5592 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import module_1655 from "module_1655" /* 1655 */;
@@ -19,7 +19,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
 let closure_8 = module_1655.createAnimatedComponent(ScrollView);
 let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, overshootClamping: true };
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_10 = createStyles.createStyles((gap, arg1) => {
   const obj = { container: { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, controlsContainer: null, indicatorContainer: null, indicator: null };
   const obj2 = { display: "flex", flexGrow: 1, minWidth: "100%", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
@@ -412,7 +412,7 @@ export function Tabs(state) {
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return _undefined7(state(13263).TabItem, obj, id);
+      return _undefined7(state(14156).TabItem, obj, id);
     })
   }), items19);
   const memo1 = obj2.useMemo(() => {
@@ -446,7 +446,7 @@ export function Tabs(state) {
   let tmp55Result = tmp53Result;
   if (null != memo1) {
     const obj8 = { gesture: memo1, children: tmp53Result };
-    tmp55Result = c6(tmp2(5588).GestureDetector, obj8);
+    tmp55Result = c6(tmp2(5592).GestureDetector, obj8);
   }
   return tmp55Result;
 }

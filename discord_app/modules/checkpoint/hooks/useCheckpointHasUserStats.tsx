@@ -1,11 +1,11 @@
-// === Module 14478: useCheckpointHasUserStats ===
+// === Module 13343: useCheckpointHasUserStats ===
 
-// Module 14478 (useCheckpointHasUserStats)
+// Module 13343 (useCheckpointHasUserStats)
 import initialize from "initialize" /* 504 */;
-import CheckpointStore from "CheckpointStore" /* 14253 */;
+import CheckpointStore from "CheckpointStore" /* 13119 */;
 
 require = fn;
-const CheckpointFetchStates = fn(14253).CheckpointFetchStates;
+const CheckpointFetchStates = fn(13119).CheckpointFetchStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/hooks/useCheckpointHasUserStats.tsx");
 

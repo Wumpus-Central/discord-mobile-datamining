@@ -1,9 +1,9 @@
-// === Module 20500: HomeIcon ===
+// === Module 20547: HomeIcon ===
 
-// Module 20500 (HomeIcon)
+// Module 20547 (HomeIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod20501 from "module_20501" /* 20501 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod20548 from "module_20548" /* 20548 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function HomeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod20501, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod20548, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

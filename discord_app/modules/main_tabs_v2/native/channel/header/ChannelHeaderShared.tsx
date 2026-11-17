@@ -1,26 +1,26 @@
-// === Module 12346: ChannelHeaderShared ===
+// === Module 12545: ChannelHeaderShared ===
 
-// Module 12346 (ChannelHeaderShared)
+// Module 12545 (ChannelHeaderShared)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import useToken from "useToken" /* 5892 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import useChannelName from "useChannelName" /* 5944 */;
-import FastImageDefault from "FastImage" /* 6010 */;
-import Pressables from "Pressables" /* 7428 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8033 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10064 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 10546 */;
-import BotTagDefault from "BotTag" /* 10870 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10891 */;
-import _modDef12347 from "module_12347" /* 12347 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 12348 */;
+import useToken from "useToken" /* 5896 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import useChannelName from "useChannelName" /* 5948 */;
+import FastImageDefault from "FastImage" /* 6014 */;
+import Pressables from "Pressables" /* 7438 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8044 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10077 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10742 */;
+import BotTagDefault from "BotTag" /* 11065 */;
+import _modDef12546 from "module_12546" /* 12546 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 12547 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 12548 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 5248 */;
+import RelationshipStore from "RelationshipStore" /* 5252 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -75,7 +75,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef12347, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef12546, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -97,7 +97,7 @@ function GroupDMIcon(channel) {
 function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: null, isMobileOnline: null, isVROnline: null, style: null, autoStatusCutout: null };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: "done", isMobileOnline: true, isVROnline: null, style: "heading-xs/semibold", autoStatusCutout: null };
   let tmp3 = null;
   if (!user.isSystemUser()) {
     tmp3 = status;
@@ -215,7 +215,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 let c11 = 16;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 }, channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 }, nameWithArrow: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, channelNameContainer: { flexShrink: 1 }, channelName: { flexShrink: 1 }, arrowIcon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 }, channelIcon: { marginRight: 12, flexShrink: 0 }, channelIconWrapper: { width: 32, height: 32, justifyContent: "center", alignItems: "center" }, guildChannelIcon: null, subTitleContainer: null, appSubTitle: null, appIcon: null, appName: null, noApp: null, skeletonIcon: null, skeletonName: null, parentChannelName: null };
   const obj2 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 };

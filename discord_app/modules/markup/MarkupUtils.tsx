@@ -1,34 +1,54 @@
-// === Module 6047: MarkupUtils ===
+// === Module 6051: MarkupUtils ===
 
-// Module 6047 (MarkupUtils)
-import MarkupReactRules from "MarkupReactRules" /* 6048 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 6333 */;
-import MarkupRulesDefault from "MarkupRules" /* 6334 */;
-import MarkupParserAll from "MarkupParser" /* 9216 */;
-import reactParserFor from "reactParserFor" /* 16280 */;
+// Module 6051 (MarkupUtils)
+import reactParserFor2 from "reactParserFor" /* 6052 */;
+import MarkupReactRules from "MarkupReactRules" /* 6059 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 6341 */;
+import MarkupRulesDefault from "MarkupRules" /* 6342 */;
+import markup_MarkupParserAll from "markup/MarkupParser" /* 9227 */;
 import apply_mod from "apply" /* 12 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;
 
 require = fn;
+function reactParserFor(link) {
+  link = link.link;
+  let react;
+  if (link != null) {
+    react = link.react;
+  }
+  let tmp2 = link;
+  if (null == react) {
+    const obj2 = {};
+    const merged = Object.assign(link);
+    const obj3 = {};
+    const merged1 = Object.assign(link.link);
+    obj3.react = function react(content, fn, arg2) {
+      return fn(content.content, arg2);
+    };
+    obj2.link = obj3;
+    tmp2 = obj2;
+  }
+  return reactParserFor2.default(tmp2);
+}
 const args = ["url", "autolink", "link", "mailto", "tel"];
 const defaultReactRuleOptions = { enableBuildOverrides: false, enableEmojiClick: true };
 let apply = apply_mod;
-let closure_6 = apply.once(() => {
+let closure_7 = apply.once(() => {
   items = [MarkupReactRulesDefault({ enableBuildOverrides: true })];
   const items1 = [MarkupRulesDefault.RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_7 = apply.once(() => {
-  items = [closure_6(), ];
+let closure_8 = apply.once(() => {
+  items = [closure_7(), ];
   const tmp = combineMarkupRulesDefault;
   items[1] = MarkupReactRules.createFetchingGameMentionRule();
   return tmp(items);
 });
 let apply = apply_mod;
-let closure_8 = apply.once(() => {
+let closure_9 = apply.once(() => {
   const obj = apply;
   items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.RULES, ];
@@ -36,7 +56,7 @@ let closure_8 = apply.once(() => {
   return obj.omit(combineMarkupRulesDefault(items1), "paragraph", "newline");
 });
 let apply = apply_mod;
-let closure_9 = apply.once(() => {
+let closure_10 = apply.once(() => {
   const obj = {};
   const merged = Object.assign(obj);
   obj.emojiTooltipPosition = "bottom";
@@ -54,7 +74,7 @@ let closure_9 = apply.once(() => {
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_10 = apply.once(() => {
+let closure_11 = apply.once(() => {
   const obj = {};
   const merged = Object.assign(obj);
   obj.emojiTooltipPosition = "bottom";
@@ -72,7 +92,7 @@ let closure_10 = apply.once(() => {
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_11 = apply.once(() => {
+let closure_12 = apply.once(() => {
   const obj = {};
   const merged = Object.assign(obj);
   obj.enableEmojiClick = false;
@@ -82,36 +102,36 @@ let closure_11 = apply.once(() => {
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_12 = apply.once(() => {
+let closure_13 = apply.once(() => {
   items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.EMBED_TITLE_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_13 = apply.once(() => {
+let closure_14 = apply.once(() => {
   const obj = apply;
   items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.EMBED_TITLE_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  return obj.omit(combineMarkupRulesDefault(items1), closure_4);
+  return obj.omit(combineMarkupRulesDefault(items1), closure_5, "channelOrMessageUrl", "mediaPostLink");
 });
 let apply = apply_mod;
-let closure_14 = apply.once(() => {
+let closure_15 = apply.once(() => {
   items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.INLINE_REPLY_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_15 = apply.once(() => {
+let closure_16 = apply.once(() => {
   items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.GUILD_VERIFICATION_FORM_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_16 = apply.once(() => {
+let closure_17 = apply.once(() => {
   const obj = {};
   const merged = Object.assign(obj);
   obj.shouldStopPropagation = true;
@@ -121,59 +141,347 @@ let closure_16 = apply.once(() => {
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_17 = apply.once(() => apply.omit(closure_16(), "subtext"));
+let closure_18 = apply.once(() => apply.omit(closure_17(), "subtext"));
 let apply = apply_mod;
-let closure_18 = apply.once(() => {
+let closure_19 = apply.once(() => {
   items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, ];
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
   return combineMarkupRulesDefault(items1);
 });
 let apply = apply_mod;
-let closure_19 = apply.once(() => {
+let closure_20 = apply.once(() => {
   items = [MarkupReactRulesDefault(obj)];
   const items1 = [MarkupRulesDefault.RULES, ];
   const tmp = apply;
   items1[HermesBuiltin.arraySpread(items, 1)] = {};
-  const items2 = [combineMarkupRulesDefault(items1), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "list", "heading", "subtext", ...closure_4];
+  const items2 = [combineMarkupRulesDefault(items1), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "list", "heading", "subtext", ...closure_5];
   return tmp.omit.apply(items2);
 });
 let apply = apply_mod;
-let closure_20 = apply.once(() => reactParserFor.default(closure_6()));
+let closure_21 = apply.once(() => {
+  const tmp = closure_7();
+  if (typeof reactParserFor === "function") {
+    const link = tmp.link;
+    let react;
+    if (link != null) {
+      react = link.react;
+    }
+    let tmp6 = tmp;
+    if (null == react) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = {};
+      const merged1 = Object.assign(tmp.link);
+      obj3.react = function react(content, fn, arg2) {
+        return fn(content.content, arg2);
+      };
+      obj2.link = obj3;
+      tmp6 = obj2;
+    }
+    return reactParserFor2.default(tmp6);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 let apply = apply_mod;
-let closure_21 = apply.once(() => reactParserFor.default(closure_7()));
+let closure_22 = apply.once(() => {
+  const tmp = closure_8();
+  if (typeof reactParserFor === "function") {
+    const link = tmp.link;
+    let react;
+    if (link != null) {
+      react = link.react;
+    }
+    let tmp6 = tmp;
+    if (null == react) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = {};
+      const merged1 = Object.assign(tmp.link);
+      obj3.react = function react(content, fn, arg2) {
+        return fn(content.content, arg2);
+      };
+      obj2.link = obj3;
+      tmp6 = obj2;
+    }
+    return reactParserFor2.default(tmp6);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 let apply = apply_mod;
-let closure_22 = apply.once(() => reactParserFor.default(closure_9()));
+let closure_23 = apply.once(() => {
+  const tmp = closure_10();
+  if (typeof reactParserFor === "function") {
+    const link = tmp.link;
+    let react;
+    if (link != null) {
+      react = link.react;
+    }
+    let tmp6 = tmp;
+    if (null == react) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = {};
+      const merged1 = Object.assign(tmp.link);
+      obj3.react = function react(content, fn, arg2) {
+        return fn(content.content, arg2);
+      };
+      obj2.link = obj3;
+      tmp6 = obj2;
+    }
+    return reactParserFor2.default(tmp6);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 let apply = apply_mod;
-let closure_23 = apply.once(() => reactParserFor.default(closure_10()));
+let closure_24 = apply.once(() => {
+  const tmp = closure_11();
+  if (typeof reactParserFor === "function") {
+    const link = tmp.link;
+    let react;
+    if (link != null) {
+      react = link.react;
+    }
+    let tmp6 = tmp;
+    if (null == react) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = {};
+      const merged1 = Object.assign(tmp.link);
+      obj3.react = function react(content, fn, arg2) {
+        return fn(content.content, arg2);
+      };
+      obj2.link = obj3;
+      tmp6 = obj2;
+    }
+    return reactParserFor2.default(tmp6);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 let apply = apply_mod;
-let closure_24 = apply.once(() => reactParserFor.default(closure_11()));
+let closure_25 = apply.once(() => {
+  const tmp = closure_12();
+  if (typeof reactParserFor === "function") {
+    const link = tmp.link;
+    let react;
+    if (link != null) {
+      react = link.react;
+    }
+    let tmp6 = tmp;
+    if (null == react) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = {};
+      const merged1 = Object.assign(tmp.link);
+      obj3.react = function react(content, fn, arg2) {
+        return fn(content.content, arg2);
+      };
+      obj2.link = obj3;
+      tmp6 = obj2;
+    }
+    return reactParserFor2.default(tmp6);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 let apply = apply_mod;
-let closure_25 = apply.once(() => reactParserFor.default(closure_12()));
+let closure_26 = apply.once(() => {
+  const tmp = closure_13();
+  if (typeof reactParserFor === "function") {
+    const link = tmp.link;
+    let react;
+    if (link != null) {
+      react = link.react;
+    }
+    let tmp6 = tmp;
+    if (null == react) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = {};
+      const merged1 = Object.assign(tmp.link);
+      obj3.react = function react(content, fn, arg2) {
+        return fn(content.content, arg2);
+      };
+      obj2.link = obj3;
+      tmp6 = obj2;
+    }
+    return reactParserFor2.default(tmp6);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 let apply = apply_mod;
-let closure_26 = apply.once(() => reactParserFor.default(closure_13()));
+let closure_27 = apply.once(() => {
+  const tmp = closure_14();
+  if (typeof reactParserFor === "function") {
+    const link = tmp.link;
+    let react;
+    if (link != null) {
+      react = link.react;
+    }
+    let tmp6 = tmp;
+    if (null == react) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = {};
+      const merged1 = Object.assign(tmp.link);
+      obj3.react = function react(content, fn, arg2) {
+        return fn(content.content, arg2);
+      };
+      obj2.link = obj3;
+      tmp6 = obj2;
+    }
+    return reactParserFor2.default(tmp6);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 let apply = apply_mod;
-let closure_27 = apply.once(() => reactParserFor.default(closure_14()));
+let closure_28 = apply.once(() => {
+  const tmp = closure_15();
+  if (typeof reactParserFor === "function") {
+    const link = tmp.link;
+    let react;
+    if (link != null) {
+      react = link.react;
+    }
+    let tmp6 = tmp;
+    if (null == react) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = {};
+      const merged1 = Object.assign(tmp.link);
+      obj3.react = function react(content, fn, arg2) {
+        return fn(content.content, arg2);
+      };
+      obj2.link = obj3;
+      tmp6 = obj2;
+    }
+    return reactParserFor2.default(tmp6);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 let apply = apply_mod;
-let closure_28 = apply.once(() => reactParserFor.default(closure_15()));
+let closure_29 = apply.once(() => {
+  const tmp = closure_16();
+  if (typeof reactParserFor === "function") {
+    const link = tmp.link;
+    let react;
+    if (link != null) {
+      react = link.react;
+    }
+    let tmp6 = tmp;
+    if (null == react) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = {};
+      const merged1 = Object.assign(tmp.link);
+      obj3.react = function react(content, fn, arg2) {
+        return fn(content.content, arg2);
+      };
+      obj2.link = obj3;
+      tmp6 = obj2;
+    }
+    return reactParserFor2.default(tmp6);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 let apply = apply_mod;
-let closure_29 = apply.once(() => reactParserFor.default(closure_16()));
+let closure_30 = apply.once(() => {
+  const tmp = closure_17();
+  if (typeof reactParserFor === "function") {
+    const link = tmp.link;
+    let react;
+    if (link != null) {
+      react = link.react;
+    }
+    let tmp6 = tmp;
+    if (null == react) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = {};
+      const merged1 = Object.assign(tmp.link);
+      obj3.react = function react(content, fn, arg2) {
+        return fn(content.content, arg2);
+      };
+      obj2.link = obj3;
+      tmp6 = obj2;
+    }
+    return reactParserFor2.default(tmp6);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 let apply = apply_mod;
-let closure_30 = apply.once(() => reactParserFor.default(closure_18()));
+let closure_31 = apply.once(() => {
+  const tmp = closure_19();
+  if (typeof reactParserFor === "function") {
+    const link = tmp.link;
+    let react;
+    if (link != null) {
+      react = link.react;
+    }
+    let tmp6 = tmp;
+    if (null == react) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = {};
+      const merged1 = Object.assign(tmp.link);
+      obj3.react = function react(content, fn, arg2) {
+        return fn(content.content, arg2);
+      };
+      obj2.link = obj3;
+      tmp6 = obj2;
+    }
+    return reactParserFor2.default(tmp6);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 let apply = apply_mod;
-let closure_31 = apply.once(() => reactParserFor.default(closure_8()));
+let closure_32 = apply.once(() => {
+  const tmp = closure_9();
+  if (typeof reactParserFor === "function") {
+    const link = tmp.link;
+    let react;
+    if (link != null) {
+      react = link.react;
+    }
+    let tmp6 = tmp;
+    if (null == react) {
+      const obj2 = {};
+      const merged = Object.assign(tmp);
+      const obj3 = {};
+      const merged1 = Object.assign(tmp.link);
+      obj3.react = function react(content, fn, arg2) {
+        return fn(content.content, arg2);
+      };
+      obj2.link = obj3;
+      tmp6 = obj2;
+    }
+    return reactParserFor2.default(tmp6);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 let apply = apply_mod;
-let closure_32 = apply.once(() => MarkupParserAll.astParserFor(closure_6()));
+let closure_33 = apply.once(() => markup_MarkupParserAll.astParserFor(closure_7()));
 let apply = apply_mod;
-let closure_33 = apply.once(() => MarkupParserAll.astParserFor(closure_9()));
+let closure_34 = apply.once(() => markup_MarkupParserAll.astParserFor(closure_10()));
 let apply = apply_mod;
-let closure_34 = apply.once(() => MarkupParserAll.astParserFor(closure_12()));
+let closure_35 = apply.once(() => markup_MarkupParserAll.astParserFor(closure_13()));
 let apply = apply_mod;
-let closure_35 = apply.once(() => MarkupParserAll.astParserFor(closure_13()));
+let closure_36 = apply.once(() => markup_MarkupParserAll.astParserFor(closure_14()));
 let apply = apply_mod;
-let closure_36 = apply.once(() => MarkupParserAll.astParserFor(closure_14()));
+let closure_37 = apply.once(() => markup_MarkupParserAll.astParserFor(closure_15()));
 let apply = apply_mod;
-let closure_37 = apply.once(() => MarkupParserAll.astParserFor(closure_18()));
+let closure_38 = apply.once(() => markup_MarkupParserAll.astParserFor(closure_19()));
 let obj3 = {
   combineAndInjectMentionRule(arg0, arg1) {
     items = [arg0, ];
@@ -183,85 +491,85 @@ let obj3 = {
   createReactRules: MarkupReactRulesDefault,
   defaultReactRuleOptions
 };
-Object.defineProperty(obj3, "defaultRules", { get: () => closure_6(), set: undefined });
-Object.defineProperty(obj3, "topicRules", { get: () => closure_9(), set: undefined });
-Object.defineProperty(obj3, "guildEventRules", { get: () => closure_16(), set: undefined });
-Object.defineProperty(obj3, "guildEventLocationRules", { get: () => closure_17(), set: undefined });
-Object.defineProperty(obj3, "notifCenterV2MessagePreviewRules", { get: () => closure_19(), set: undefined });
+Object.defineProperty(obj3, "defaultRules", { get: () => closure_7(), set: undefined });
+Object.defineProperty(obj3, "topicRules", { get: () => closure_10(), set: undefined });
+Object.defineProperty(obj3, "guildEventRules", { get: () => closure_17(), set: undefined });
+Object.defineProperty(obj3, "guildEventLocationRules", { get: () => closure_18(), set: undefined });
+Object.defineProperty(obj3, "notifCenterV2MessagePreviewRules", { get: () => closure_20(), set: undefined });
 obj3.lockscreenWidgetMessageRules = { text: MarkupRulesDefault.RULES.text };
-obj3.astParserFor = MarkupParserAll.astParserFor;
-obj3.reactParserFor = fn(16280).default;
+obj3.astParserFor = markup_MarkupParserAll.astParserFor;
+obj3.reactParserFor = reactParserFor;
 obj3.parse = function parse() {
   items = [...arguments];
-  return closure_20()(...items);
+  return closure_21()(...items);
 };
 obj3.parseRichEmbedText = function parseRichEmbedText(arg0, arg1, arg2, arg3) {
   const merged = Object.assign(arg2);
-  return closure_21()(arg0, arg1, { allowGameMentions: true }, arg3);
+  return closure_22()(arg0, arg1, { allowGameMentions: true }, arg3);
 };
 obj3.parseTopic = function parseTopic(topic, arg1, arg2, arg3) {
   const merged = Object.assign(arg2);
-  return closure_22()(topic, arg1, { allowLinks: true, allowGameMentions: true }, arg3);
+  return closure_23()(topic, arg1, { allowLinks: true, allowGameMentions: true }, arg3);
 };
 obj3.parseTruncatedTopic = function parseTruncatedTopic(arg0, arg1, arg2, arg3) {
   const merged = Object.assign(arg2);
-  return closure_23()(arg0, arg1, { allowLinks: true, allowGameMentions: true }, arg3);
+  return closure_24()(arg0, arg1, { allowLinks: true, allowGameMentions: true }, arg3);
 };
 obj3.parseVoiceChannelStatus = function parseVoiceChannelStatus() {
   items = [...arguments];
-  return closure_24()(...items);
+  return closure_25()(...items);
 };
 obj3.parseEmbedTitle = function parseEmbedTitle() {
   items = [...arguments];
-  return closure_25()(...items);
+  return closure_26()(...items);
 };
 obj3.parseEmbedTitleWithoutLinks = function parseEmbedTitleWithoutLinks() {
   items = [...arguments];
-  return closure_26()(...items);
+  return closure_27()(...items);
 };
 obj3.parseInlineReply = function parseInlineReply() {
   items = [...arguments];
-  return closure_27()(...items);
+  return closure_28()(...items);
 };
 obj3.parseGuildVerificationFormRule = function parseGuildVerificationFormRule() {
   items = [...arguments];
-  return closure_28()(...items);
+  return closure_29()(...items);
 };
 obj3.parseGuildEventDescription = function parseGuildEventDescription() {
   items = [...arguments];
-  return closure_29()(...items);
+  return closure_30()(...items);
 };
 obj3.parseAutoModerationSystemMessage = function parseAutoModerationSystemMessage() {
   items = [...arguments];
-  return closure_30()(...items);
+  return closure_31()(...items);
 };
 obj3.parseForumPostGuidelines = function parseForumPostGuidelines() {
   items = [...arguments];
-  return closure_31()(...items);
+  return closure_32()(...items);
 };
 obj3.parseToAST = function parseToAST() {
   items = [...arguments];
-  return closure_32()(...items);
+  return closure_33()(...items);
 };
 obj3.parseTopicToAST = function parseTopicToAST() {
   items = [...arguments];
-  return closure_33()(...items);
+  return closure_34()(...items);
 };
 obj3.parseEmbedTitleToAST = function parseEmbedTitleToAST() {
   items = [...arguments];
-  return closure_34()(...items);
+  return closure_35()(...items);
 };
 obj3.parseEmbedTitleWithoutLinksToAST = function parseEmbedTitleWithoutLinksToAST() {
   items = [...arguments];
-  return closure_35()(...items);
+  return closure_36()(...items);
 };
 obj3.parseInlineReplyToAST = function parseInlineReplyToAST() {
   items = [...arguments];
-  return closure_36()(...items);
+  return closure_37()(...items);
 };
 obj3.parseAutoModerationSystemMessageToAST = function parseAutoModerationSystemMessageToAST() {
   items = [...arguments];
-  return closure_37()(...items);
+  return closure_38()(...items);
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/MarkupUtils.tsx");

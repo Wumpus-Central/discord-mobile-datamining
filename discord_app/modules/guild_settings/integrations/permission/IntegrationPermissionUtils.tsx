@@ -1,8 +1,8 @@
-// === Module 8727: IntegrationPermissionUtils ===
+// === Module 8738: IntegrationPermissionUtils ===
 
-// Module 8727 (IntegrationPermissionUtils)
+// Module 8738 (IntegrationPermissionUtils)
 import Server from "Server" /* 2119 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5975 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5979 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

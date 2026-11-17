@@ -1,16 +1,16 @@
-// === Module 10973: FavoritesCleanup ===
+// === Module 11910: FavoritesCleanup ===
 
-// Module 10973 (FavoritesCleanup)
+// Module 11910 (FavoritesCleanup)
 import DurationsDefault from "Durations" /* 1089 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1196 */;
-import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 7068 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 10974 */;
+import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 7076 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 11911 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import PermissionStore from "PermissionStore" /* 5238 */;
-import ReadStateStore from "ReadStateStore" /* 7015 */;
-import FavoriteStore from "FavoriteStore" /* 5158 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import PermissionStore from "PermissionStore" /* 5242 */;
+import ReadStateStore from "ReadStateStore" /* 7023 */;
+import FavoriteStore from "FavoriteStore" /* 5162 */;
 
 require = fn;
 function getFavoriteThreadIdsForCleanup(categoryIds) {
@@ -84,8 +84,8 @@ let closure_15 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(5159).THREAD_CHANNEL_TYPES;
-const FavoritesConstants = fn(5168);
+const THREAD_CHANNEL_TYPES = fn(5163).THREAD_CHANNEL_TYPES;
+const FavoritesConstants = fn(5172);
 ({ FAVORITES_AUTO_ADD_THREADS_PER_GUILD: closure_10, FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME: closure_11, FAVORITES_PRUNE_WHEN_ARCHIVED: closure_12 } = FavoritesConstants);
 const Permissions = fn(1083).Permissions;
 const size = fn(2);

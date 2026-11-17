@@ -1,15 +1,15 @@
-// === Module 14605: LegacyCommands ===
+// === Module 13484: LegacyCommands ===
 
-// Module 14605 (LegacyCommands)
-import UserSettings from "UserSettings" /* 5131 */;
-import ReactionUtils from "ReactionUtils" /* 5250 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6057 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 8660 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8863 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 11417 */;
+// Module 13484 (LegacyCommands)
+import UserSettings from "UserSettings" /* 5135 */;
+import ReactionUtils from "ReactionUtils" /* 5254 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 6064 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 8671 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8874 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 11128 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 6969 */;
-import MessageStore from "MessageStore" /* 6362 */;
+import EmojiStore from "EmojiStore" /* 6977 */;
+import MessageStore from "MessageStore" /* 6370 */;
 import t_mod from "module_2070" /* 2070 */;
 
 require = fn;

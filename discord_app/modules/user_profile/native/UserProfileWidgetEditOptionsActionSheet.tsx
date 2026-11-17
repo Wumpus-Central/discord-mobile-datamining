@@ -1,12 +1,12 @@
-// === Module 12099: UserProfileWidgetEditOptionsActionSheet ===
+// === Module 10833: UserProfileWidgetEditOptionsActionSheet ===
 
-// Module 12099 (UserProfileWidgetEditOptionsActionSheet)
+// Module 10833 (UserProfileWidgetEditOptionsActionSheet)
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = fn;
-let closure_5 = fn(8479).TrackUserProfileEditActions;
-const widgetShowsGameDetails = fn(7355).widgetShowsGameDetails;
+let closure_5 = fn(8490).TrackUserProfileEditActions;
+const widgetShowsGameDetails = fn(7365).widgetShowsGameDetails;
 const jsx = fn(21).jsx;
 const constants = { REORDER_GAMES: "reorder-games", REMOVE: "remove-widget" };
 const size = fn(2);
@@ -34,9 +34,6 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
   }, items);
   let isGameWidgetResult = widget(header[10]).isGameWidget(widget);
   if (isGameWidgetResult) {
-    isGameWidgetResult = widgetShowsGameDetails(widget.type);
-  }
-  if (isGameWidgetResult) {
     isGameWidgetResult = tmp(tmp2[6]).widgetMaxGames(widget.type) > 1;
     const tmpResult5 = tmp(tmp2[6]);
   }
@@ -55,96 +52,112 @@ export default function UserProfileWidgetEditOptionsActionSheet(widget) {
   obj2.label = intl2.string(widget(header[9]).t.Mm07Yc);
   obj2.IconComponent = widget(header[12]).TrashIcon;
   items1.push(obj2);
-  let obj3 = { header: jsx(widget(header[20]).BottomSheetTitleHeader, { title: header }), dismissAccessibilityLabel: null, children: null };
+  let obj3 = { header: jsx(widget(header[21]).BottomSheetTitleHeader, { title: header }), dismissAccessibilityLabel: null, children: null };
   const intl3 = tmp(tmp2[9]).intl;
   obj3.dismissAccessibilityLabel = intl3.formatToPlainString(widget(header[9]).t.X5Fk6g, { widgetName: header });
   const tmpResult4 = widget(header[10]);
-  obj3.children = jsx(widget(header[21]).TableRowGroup, {
+  obj3.children = jsx(widget(header[22]).TableRowGroup, {
     hasIcons: true,
     children: items1.map((label) => {
       let obj = {
         label: label.label,
         variant: label.variant,
         disabled: label.disabled,
-        icon: jsx(widget(header[22]).TableRow.Icon, { IconComponent: label.IconComponent, variant: label.variant }),
+        icon: jsx(widget(header[23]).TableRow.Icon, { IconComponent: label.IconComponent, variant: label.variant }),
         onPress() {
           if (constants2.REORDER_GAMES === label.key) {
             if (obj.isGameWidget(widget)) {
               closure_3.current = false;
-              closure_1_1(5542).hideActionSheet(label(12098).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-              let obj2 = closure_1_1(5542);
-              const obj4 = { widgetType: widget.type, returnFocusRef };
-              closure_1_1(5542).openLazy(label(2121)(12102, dependencyMap.paths), "UserProfileWidgetGamesReorderActionSheet", obj4);
-              const obj3 = closure_1_1(5542);
+              closure_1_1(5546).hideActionSheet(label(10832).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+              let obj2 = closure_1_1(5546);
+              const tmp9 = closure_1_6(widget.type);
+              const openLazy = closure_1_1(5546).openLazy;
+              const tmp2Result = label(2121);
+              if (tmp9) {
+                const obj3 = { widgetType: widget.type, returnFocusRef };
+                openLazy(tmp2Result(10836, dependencyMap.paths), "UserProfileWidgetGameDetailsReorderActionSheet", obj3);
+              } else {
+                const obj4 = { widgetType: widget.type, returnFocusRef };
+                openLazy(tmp2Result(10858, dependencyMap.paths), "UserProfileWidgetGameCoverGridReorderActionSheet", obj4);
+              }
+              const tmp10 = closure_1_1(5546);
             }
-            obj = label(7354);
+            obj = label(7364);
           } else if (tmp.REMOVE === key) {
             closure_3.current = false;
-            closure_1_1(5542).hideActionSheet(label(12098).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-            const obj5 = closure_1_1(5542);
+            closure_1_1(5546).hideActionSheet(label(10832).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+            const obj5 = closure_1_1(5546);
             const obj7 = {
               widgetName: header,
               onConfirm() {
-                  const result = profileEditAnalyticsOptions(12090).removeWidgetFromPending(profileEditAnalyticsOptions);
-                  const obj = profileEditAnalyticsOptions(12090);
-                  const obj2 = profileEditAnalyticsOptions(8546);
+                  const result = profileEditAnalyticsOptions(10822).removeWidgetFromPending(profileEditAnalyticsOptions);
+                  const obj = profileEditAnalyticsOptions(10822);
+                  const obj2 = profileEditAnalyticsOptions(8557);
                   const merged = Object.assign(profileEditAnalyticsOptions.getProfileEditAnalyticsOptions());
                   const result1 = obj2.trackUserProfileEditAction({ userId: id.getId(), action: constants.WIDGET_REMOVED });
-                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5315).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5319).AccessibilityAnnouncer;
                   const intl = profileEditAnalyticsOptions(1113).intl;
                   AccessibilityAnnouncer.announce(intl.string(profileEditAnalyticsOptions(1113).t.zzsK7h));
                 },
               onDismissWithoutRemoving() {
-                  return profileEditAnalyticsOptions(6321).setAccessibilityFocus({ ref, delay: 100 });
+                  return profileEditAnalyticsOptions(6329).setAccessibilityFocus({ ref, delay: 100 });
                 }
             };
-            label(12123).confirmRemoveWidget(obj7);
-            const obj6 = label(12123);
+            label(10859).confirmRemoveWidget(obj7);
+            const obj6 = label(10859);
           }
         }
       };
-      return jsx(widget(header[22]).TableRow, {
+      return jsx(widget(header[23]).TableRow, {
         label: label.label,
         variant: label.variant,
         disabled: label.disabled,
-        icon: jsx(widget(header[22]).TableRow.Icon, { IconComponent: label.IconComponent, variant: label.variant }),
+        icon: jsx(widget(header[23]).TableRow.Icon, { IconComponent: label.IconComponent, variant: label.variant }),
         onPress() {
           if (constants2.REORDER_GAMES === label.key) {
             if (obj.isGameWidget(widget)) {
               closure_3.current = false;
-              closure_1_1(5542).hideActionSheet(label(12098).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-              let obj2 = closure_1_1(5542);
-              const obj4 = { widgetType: widget.type, returnFocusRef };
-              closure_1_1(5542).openLazy(label(2121)(12102, dependencyMap.paths), "UserProfileWidgetGamesReorderActionSheet", obj4);
-              const obj3 = closure_1_1(5542);
+              closure_1_1(5546).hideActionSheet(label(10832).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+              let obj2 = closure_1_1(5546);
+              const tmp9 = closure_1_6(widget.type);
+              const openLazy = closure_1_1(5546).openLazy;
+              const tmp2Result = label(2121);
+              if (tmp9) {
+                const obj3 = { widgetType: widget.type, returnFocusRef };
+                openLazy(tmp2Result(10836, dependencyMap.paths), "UserProfileWidgetGameDetailsReorderActionSheet", obj3);
+              } else {
+                const obj4 = { widgetType: widget.type, returnFocusRef };
+                openLazy(tmp2Result(10858, dependencyMap.paths), "UserProfileWidgetGameCoverGridReorderActionSheet", obj4);
+              }
+              const tmp10 = closure_1_1(5546);
             }
-            obj = label(7354);
+            obj = label(7364);
           } else if (tmp.REMOVE === key) {
             closure_3.current = false;
-            closure_1_1(5542).hideActionSheet(label(12098).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
-            const obj5 = closure_1_1(5542);
+            closure_1_1(5546).hideActionSheet(label(10832).USER_PROFILE_WIDGET_EDIT_OPTIONS_ACTION_SHEET_KEY);
+            const obj5 = closure_1_1(5546);
             const obj7 = {
               widgetName: header,
               onConfirm() {
-                  const result = profileEditAnalyticsOptions(12090).removeWidgetFromPending(profileEditAnalyticsOptions);
-                  const obj = profileEditAnalyticsOptions(12090);
-                  const obj2 = profileEditAnalyticsOptions(8546);
+                  const result = profileEditAnalyticsOptions(10822).removeWidgetFromPending(profileEditAnalyticsOptions);
+                  const obj = profileEditAnalyticsOptions(10822);
+                  const obj2 = profileEditAnalyticsOptions(8557);
                   const merged = Object.assign(profileEditAnalyticsOptions.getProfileEditAnalyticsOptions());
                   const result1 = obj2.trackUserProfileEditAction({ userId: id.getId(), action: constants.WIDGET_REMOVED });
-                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5315).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = profileEditAnalyticsOptions(5319).AccessibilityAnnouncer;
                   const intl = profileEditAnalyticsOptions(1113).intl;
                   AccessibilityAnnouncer.announce(intl.string(profileEditAnalyticsOptions(1113).t.zzsK7h));
                 },
               onDismissWithoutRemoving() {
-                  return profileEditAnalyticsOptions(6321).setAccessibilityFocus({ ref, delay: 100 });
+                  return profileEditAnalyticsOptions(6329).setAccessibilityFocus({ ref, delay: 100 });
                 }
             };
-            label(12123).confirmRemoveWidget(obj7);
-            const obj6 = label(12123);
+            label(10859).confirmRemoveWidget(obj7);
+            const obj6 = label(10859);
           }
         }
       }, label.key);
     })
   });
-  return jsx(widget(header[19]).ActionSheet, { header: jsx(widget(header[20]).BottomSheetTitleHeader, { title: header }), dismissAccessibilityLabel: null, children: null });
+  return jsx(widget(header[20]).ActionSheet, { header: jsx(widget(header[21]).BottomSheetTitleHeader, { title: header }), dismissAccessibilityLabel: null, children: null });
 };

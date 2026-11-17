@@ -1,6 +1,6 @@
-// === Module 7645: propsForNativeTextInput ===
+// === Module 7655: propsForNativeTextInput ===
 
-// Module 7645 (propsForNativeTextInput)
+// Module 7655 (propsForNativeTextInput)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 let closure_0 = ["disabled", "centered", "round", "clearable", "revealable"];

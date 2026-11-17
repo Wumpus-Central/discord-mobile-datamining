@@ -1,28 +1,28 @@
-// === Module 8134: ChannelActionCreators ===
+// === Module 8145: ChannelActionCreators ===
 
-// Module 8134 (ChannelActionCreators)
+// Module 8145 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import shared from "shared" /* 5313 */;
-import RootNavigationRef from "RootNavigationRef" /* 5483 */;
-import transitionToChannel from "transitionToChannel" /* 6053 */;
-import preloadChannelDefault from "preloadChannel" /* 6055 */;
-import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6879 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 6886 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6925 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 7067 */;
+import shared from "shared" /* 5317 */;
+import RootNavigationRef from "RootNavigationRef" /* 5487 */;
+import transitionToChannel from "transitionToChannel" /* 6060 */;
+import preloadChannelDefault from "preloadChannel" /* 6062 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 6887 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 6894 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6933 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 7075 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 8135 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import ReadStateStore from "ReadStateStore" /* 7015 */;
+import ChangelogStore from "ChangelogStore" /* 8146 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import ReadStateStore from "ReadStateStore" /* 7023 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(5159).createChannelRecordFromServer;
+let closure_6 = fn(5163).createChannelRecordFromServer;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_9, AbortCodes: closure_10, Endpoints: closure_11, Routes: closure_12, ChannelTypes: map1 } = Constants);
 const size = fn(2);
@@ -305,8 +305,8 @@ export default {
       await HTTP.post(request);
       closure_128_0 = value;
       if (closure_128_0.body.type === constants2.GROUP_DM) {
-        tmp5(6879).fireSurveyAction(tmp2(6886).SurveyActionTypes.GROUP_DM_CREATED);
-        tmp5(6879);
+        tmp5(6887).fireSurveyAction(tmp2(6894).SurveyActionTypes.GROUP_DM_CREATED);
+        tmp5(6887);
       }
       closure_128_1 = closure_1_6(closure_128_0.body);
       tmp5(572).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
@@ -435,14 +435,14 @@ export default {
     if (flag3 == null) {
       flag3 = false;
     }
-    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "alignItems" }, silent: flag2 });
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 });
     if (flag) {
       flag3(1099).transitionTo(constants2.FRIENDS);
       const obj6 = flag3(1099);
     }
     const HTTP = flag3(1285).HTTP;
     const request = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "alignItems" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = flag3(1285).rejectWithMigratedError();
     const obj8 = flag3(1285);
@@ -559,8 +559,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(8127).checkGuildTemplateDirty(closure_128_2);
-        name(8127);
+        const result = name(8138).checkGuildTemplateDirty(closure_128_2);
+        name(8138);
       }
       return closure_128_1;
     })();

@@ -1,15 +1,15 @@
-// === Module 19013: useWaterwheelsDiscoverAnalytics ===
+// === Module 19054: useWaterwheelsDiscoverAnalytics ===
 
-// Module 19013 (useWaterwheelsDiscoverAnalytics)
+// Module 19054 (useWaterwheelsDiscoverAnalytics)
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10225 */;
-import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 19005 */;
-import WaterwheelsDiscoverFeedState from "WaterwheelsDiscoverFeedState" /* 19012 */;
-import WaterwheelsDiscoverAnalytics from "WaterwheelsDiscoverAnalytics" /* 19015 */;
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10668 */;
+import WaterwheelsDiscoverJoinAttribution from "WaterwheelsDiscoverJoinAttribution" /* 19046 */;
+import WaterwheelsDiscoverFeedState from "WaterwheelsDiscoverFeedState" /* 19053 */;
+import WaterwheelsDiscoverAnalytics from "WaterwheelsDiscoverAnalytics" /* 19056 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5343 */;
 
 const require = globalThis.__r;
 

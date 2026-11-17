@@ -1,18 +1,18 @@
-// === Module 13461: application_view/Header ===
+// === Module 13616: application_view/Header ===
 
-// Module 13461 (application_view/Header)
+// Module 13616 (application_view/Header)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import ToastUtils from "ToastUtils" /* 6004 */;
-import ClipboardUtils from "ClipboardUtils" /* 7943 */;
-import useAvatarColorDefault from "useAvatarColor" /* 8538 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 12698 */;
-import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 13462 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 13463 */;
+import ToastUtils from "ToastUtils" /* 6008 */;
+import ClipboardUtils from "ClipboardUtils" /* 7953 */;
+import useAvatarColorDefault from "useAvatarColor" /* 8549 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 11352 */;
+import AppLauncherBackButtonDefault from "AppLauncherBackButton" /* 13617 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 13618 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
-import AppLauncherStore from "AppLauncherStore" /* 12699 */;
+import AppLauncherStore from "AppLauncherStore" /* 11353 */;
 
 const require = globalThis.__r;
 
@@ -25,7 +25,7 @@ const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8 } = jsxProd);
 const xl = nativeDefault.radii.xl;
 let c10 = 105;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { headerContainer: { position: "absolute", top: -16, left: 0, right: 0, minHeight: 161 }, expandedHeaderBanner: { height: 105 }, appIconMask: null, collapsedHeaderBanner: null, collapsedHeaderBannerOverlay: null, loadingIcon: null, actionsWrapper: null };
 const rect = { position: "absolute", padding: 4, bottom: -40, left: 16, backgroundColor: SCREEN_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xl + 4 };
 obj2.appIconMask = rect;
@@ -56,8 +56,8 @@ export default function Header(application) {
   const tmp3 = closure_11();
   let appLauncherIconSource = null;
   if (null != application) {
-    appLauncherIconSource = tmp(13383).getAppLauncherIconSource(application);
-    const tmpResult = tmp(13383);
+    appLauncherIconSource = tmp(13540).getAppLauncherIconSource(application);
+    const tmpResult = tmp(13540);
   }
   let obj = require("initialize");
   let str = require("useToken").useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
@@ -76,7 +76,7 @@ export default function Header(application) {
   const tmp6Result = useAvatarColorDefault(tmp7, str);
   if (null != appLauncherIconSource) {
     let obj2 = { iconSource: appLauncherIconSource, iconBorderRadius: xl, iconSize: 72 };
-    let tmp12 = closure_7(tmp5(13388), obj2);
+    let tmp12 = closure_7(tmp5(13545), obj2);
     let tmp13 = closure_7;
   } else {
     let obj3 = { style: tmp3.loadingIcon };
@@ -186,15 +186,15 @@ export default function Header(application) {
   let str2 = "";
   const animatedStyle3 = require("module_1655").useAnimatedStyle(HeaderTsx4);
   if (null != application) {
-    str2 = tmp(12698).getSectionName(application);
-    const tmpResult14 = tmp(12698);
+    str2 = tmp(11352).getSectionName(application);
+    const tmpResult14 = tmp(11352);
   }
   let result = null != application;
   if (result) {
     result = "flags" in application;
   }
   if (result) {
-    result = tmp(2151).supportsEmbeddedSurface(application, tmp(5967).EmbeddedSurfaceType.MAIN);
+    result = tmp(2151).supportsEmbeddedSurface(application, tmp(5971).EmbeddedSurfaceType.MAIN);
     const tmpResult15 = tmp(2151);
   }
   dependencyMap = result;
@@ -228,7 +228,7 @@ export default function Header(application) {
       const obj11 = {
         size: "sm",
         variant: "secondary-overlay",
-        icon: tmp5(6020),
+        icon: tmp5(6024),
         onPress() {
               AnalyticsUtilsDefault.track(AnalyticEvents.APP_LAUNCHER_APPLICATION_LINK_COPIED, { application_id: _undefined.id, source });
               const obj2 = { application_id: _undefined.id, source };
@@ -256,13 +256,13 @@ export default function Header(application) {
       };
       const intl = tmp(1113).intl;
       obj11.accessibilityLabel = intl.string(tmp(1113).t.XWDihq);
-      const items15 = [tmp13(tmp(7988).IconButton, obj11), ];
+      const items15 = [tmp13(tmp(7999).IconButton, obj11), ];
       const obj12 = { application, onAddAppMenuClick };
-      items15[1] = tmp13(tmp5(13464), obj12);
+      items15[1] = tmp13(tmp5(13619), obj12);
       obj10.children = items15;
       tmp38Result = closure_8(tmp39, obj10);
     }
-    tmpResult16 = tmp(12698);
+    tmpResult16 = tmp(11352);
   }
   items11[2] = tmp38Result;
   obj4.children = items11;

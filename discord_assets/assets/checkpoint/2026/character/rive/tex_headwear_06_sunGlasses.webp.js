@@ -1,9 +1,9 @@
-// === Module 14357: ? ===
+// === Module 13222: ? ===
 
-// Module 14357
+// Module 13222
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_headwear_06_sunGlasses.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/0a1c73f81e29ad53e8889ae38ba6b3a5a16e4d7dda9eb4b0e070f6dc562e593f.webp";
-export const metadata = { fileBytes: 48746 };
+export default "https://cdn.discordapp.com/assets/content/68df4258904c28d5690db05450566aa72ee50b8014200022ece682608e34edb1.webp";
+export const metadata = { fileBytes: 125326 };

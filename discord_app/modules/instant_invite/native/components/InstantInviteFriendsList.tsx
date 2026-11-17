@@ -1,16 +1,16 @@
-// === Module 15924: InstantInviteFriendsList ===
+// === Module 15962: InstantInviteFriendsList ===
 
-// Module 15924 (InstantInviteFriendsList)
+// Module 15962 (InstantInviteFriendsList)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import RootNavigationRef from "RootNavigationRef" /* 5483 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import Pressables from "Pressables" /* 7428 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 15067 */;
+import RootNavigationRef from "RootNavigationRef" /* 5487 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import Pressables from "Pressables" /* 7438 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 14279 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 6816 */;
+import TextStyles_mod from "TextStyles" /* 6811 */;
 
 require = fn;
 function keyExtractor(item) {
@@ -54,7 +54,7 @@ function FriendsEmptyComponent() {
 const Fonts = fn(1072).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: closure_6 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 const obj2 = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;

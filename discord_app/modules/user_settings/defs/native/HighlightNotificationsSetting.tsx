@@ -1,22 +1,22 @@
-// === Module 18133: HighlightNotificationsSetting ===
+// === Module 18174: HighlightNotificationsSetting ===
 
-// Module 18133 (HighlightNotificationsSetting)
+// Module 18174 (HighlightNotificationsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import GuildStore from "GuildStore" /* 5177 */;
+import GuildStore from "GuildStore" /* 5181 */;
 
 require = fn;
 function useHighlightNotifications() {
   items = [GuildStore];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
-let SettingBuilders = fn(12406);
+let SettingBuilders = fn(12612);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.o8Bypv);
   },
-  parent: fn(9202).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(9213).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
     const intl = util.intl;
     return intl.string(util.t["Vw/Xn8"]);
@@ -29,10 +29,10 @@ const route = SettingBuilders.createRoute({
     }
   }
 });
-SettingBuilders = fn(12406);
+SettingBuilders = fn(12612);
 const obj4 = {};
 const merged = Object.assign(route);
-obj4.parent = fn(18113).MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS;
+obj4.parent = fn(18154).MobileNotifSettings.NOTIF_CATEGORY_DISCOVERY_HIGHLIGHTS;
 const route1 = SettingBuilders.createRoute(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");

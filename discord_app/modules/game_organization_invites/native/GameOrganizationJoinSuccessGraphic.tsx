@@ -1,11 +1,11 @@
-// === Module 14084: GameOrganizationJoinSuccessGraphic ===
+// === Module 12908: GameOrganizationJoinSuccessGraphic ===
 
-// Module 14084 (GameOrganizationJoinSuccessGraphic)
+// Module 12908 (GameOrganizationJoinSuccessGraphic)
 import nativeDefault from "native" /* 575 */;
-import Stack_Stack from "Stack/Stack" /* 6327 */;
-import GameOrganizationIconDefault from "GameOrganizationIcon" /* 14076 */;
-import CharacterFallbackAbstractUI from "CharacterFallbackAbstractUI" /* 14085 */;
-import GuildFallbackAbstractUI from "GuildFallbackAbstractUI" /* 14089 */;
+import Stack_Stack from "Stack/Stack" /* 6335 */;
+import GameOrganizationIconDefault from "GameOrganizationIcon" /* 12900 */;
+import CharacterFallbackAbstractUI from "CharacterFallbackAbstractUI" /* 12909 */;
+import GuildFallbackAbstractUI from "GuildFallbackAbstractUI" /* 12913 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = 78;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { dots: { width: "auto" }, dot: null };
 let size = { width: nativeDefault.space.PX_6, height: nativeDefault.space.PX_6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.ICON_MUTED };
 obj2.dot = size;

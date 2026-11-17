@@ -1,16 +1,16 @@
-// === Module 15824: useAddProfileWidget ===
+// === Module 15858: useAddProfileWidget ===
 
-// Module 15824 (useAddProfileWidget)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5482 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8546 */;
-import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 10034 */;
-import WidgetUtils from "WidgetUtils" /* 12090 */;
+// Module 15858 (useAddProfileWidget)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5486 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8557 */;
+import useOpenProfileSettingsDefault from "useOpenProfileSettings" /* 10047 */;
+import WidgetUtils from "WidgetUtils" /* 10822 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-let closure_5 = fn(8479).TrackUserProfileEditActions;
+let closure_5 = fn(8490).TrackUserProfileEditActions;
 const UserSettingsSections = fn(1072).UserSettingsSections;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useAddProfileWidget.tsx");

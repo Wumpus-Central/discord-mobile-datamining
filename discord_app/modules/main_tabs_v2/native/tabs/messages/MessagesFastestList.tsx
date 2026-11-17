@@ -1,21 +1,21 @@
-// === Module 18824: MessagesFastestList ===
+// === Module 18865: MessagesFastestList ===
 
-// Module 18824 (MessagesFastestList)
+// Module 18865 (MessagesFastestList)
 import nativeDefault from "native" /* 575 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7837 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 7839 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 18752 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18762 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18763 */;
-import useMessagesData from "useMessagesData" /* 18766 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 18819 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7847 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 7849 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 18793 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 18803 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 18804 */;
+import useMessagesData from "useMessagesData" /* 18807 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 18860 */;
 import noop from "module_19" /* 19 */;
 
 const MessagesItemSeparatorDefault = MessagesItemSeparator;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_5 = createStyles.createStyles(() => {
   const obj = { placeholder: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
   return obj;

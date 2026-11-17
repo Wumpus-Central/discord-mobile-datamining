@@ -1,10 +1,10 @@
-// === Module 11909: SavedMessagesStore ===
+// === Module 12362: SavedMessagesStore ===
 
-// Module 11909 (SavedMessagesStore)
+// Module 12362 (SavedMessagesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6364 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 11905 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6372 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 12358 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
@@ -68,11 +68,12 @@ function upsertSavedMessage(saveData) {
 }
 function resetSavedMessages(bookmarkIds) {
   secondaryIndexMap.clear();
+  set.clear();
   map.clear();
   set2.clear();
   set1.clear();
-  while (tmp5 !== undefined) {
-    let addResult = set1.add(tmp6);
+  while (tmp6 !== undefined) {
+    let addResult = set1.add(tmp7);
     continue;
   }
   nextBefore = null;
@@ -84,7 +85,7 @@ function resetSavedMessages(bookmarkIds) {
     LOADED_FINISHED = SavedMessagesTypes.BookmarksFetchState.LOADED_FINISHED;
   }
   FAILED = LOADED_FINISHED;
-  tmp5 = bookmarkIds[Symbol.iterator]();
+  tmp6 = bookmarkIds[Symbol.iterator]();
 }
 function nullifyMessageObject(channelId) {
   const combined = "" + channelId.channelId + "-" + channelId.messageId;
@@ -115,7 +116,7 @@ function handleGuild() {
   return tmp;
 }
 let c3 = 10000000000000;
-const secondaryIndexMap = new fn(5233).SecondaryIndexMap((saveData) => {
+const secondaryIndexMap = new fn(5237).SecondaryIndexMap((saveData) => {
   items = [SavedMessagesTypes.SavedMessageSortTypes.ALL, ];
   if (null != saveData.saveData.dueAt) {
     let BOOKMARK = SavedMessagesTypes.SavedMessageSortTypes.REMINDER;
@@ -138,7 +139,7 @@ let closure_7 = 0;
 let set = new Set();
 const set1 = new Set();
 let nextBefore = null;
-let FAILED = fn(11905).BookmarksFetchState.LOADED_FINISHED;
+let FAILED = fn(12358).BookmarksFetchState.LOADED_FINISHED;
 let c12 = false;
 let c13 = null;
 const set2 = new Set();

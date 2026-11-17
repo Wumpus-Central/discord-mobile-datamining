@@ -1,7 +1,7 @@
-// === Module 10417: useDefaultVariantIndex ===
+// === Module 10167: useDefaultVariantIndex ===
 
-// Module 10417 (useDefaultVariantIndex)
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8500 */;
+// Module 10167 (useDefaultVariantIndex)
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 8511 */;
 
 const require = globalThis.__r;
 

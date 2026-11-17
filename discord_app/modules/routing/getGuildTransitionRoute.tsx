@@ -1,24 +1,24 @@
-// === Module 7232: getGuildTransitionRoute ===
+// === Module 7240: getGuildTransitionRoute ===
 
-// Module 7232 (getGuildTransitionRoute)
-import FavoritesUtils from "FavoritesUtils" /* 5180 */;
-import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7079 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7244 */;
-import ConjureUtils from "ConjureUtils" /* 7260 */;
-import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7233 */;
-import ConjureServerProjectRouteStore from "ConjureServerProjectRouteStore" /* 7235 */;
-import FavoriteStore from "FavoriteStore" /* 5158 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 7239 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildChannelStore from "GuildChannelStore" /* 5236 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7240 */;
+// Module 7240 (getGuildTransitionRoute)
+import FavoritesUtils from "FavoritesUtils" /* 5184 */;
+import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7087 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7253 */;
+import ConjureUtils from "ConjureUtils" /* 7270 */;
+import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7241 */;
+import ConjureServerProjectRouteStore from "ConjureServerProjectRouteStore" /* 7243 */;
+import FavoriteStore from "FavoriteStore" /* 5162 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7247 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import GuildChannelStore from "GuildChannelStore" /* 5240 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5213 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7248 */;
 
 require = fn;
 const Constants = fn(1072);
 ({ ME: closure_11, WATERWHEELS: closure_12 } = Constants);
-const StaticChannelRoute = fn(5162).StaticChannelRoute;
+const StaticChannelRoute = fn(5166).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");
 

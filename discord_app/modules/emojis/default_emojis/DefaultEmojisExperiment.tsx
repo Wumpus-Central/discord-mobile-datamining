@@ -1,6 +1,6 @@
-// === Module 5258: DefaultEmojisExperiment ===
+// === Module 5262: DefaultEmojisExperiment ===
 
-// Module 5258 (DefaultEmojisExperiment)
+// Module 5262 (DefaultEmojisExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

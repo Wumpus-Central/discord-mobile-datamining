@@ -1,9 +1,9 @@
-// === Module 14352: ? ===
+// === Module 13217: ? ===
 
-// Module 14352
+// Module 13217
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_headwear_01_elvenHeadpiece.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/41903840a79ad543f21fa9f40f1b7c076ac16a8f4a193f6951ce1bc8da21dbe4.webp";
-export const metadata = { fileBytes: 16936 };
+export default "https://cdn.discordapp.com/assets/content/28b536f7927d3342a56e98def8d772fad9caf50a3e84c4b395b69311996fa1bc.webp";
+export const metadata = { fileBytes: 42958 };

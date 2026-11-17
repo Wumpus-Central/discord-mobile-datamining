@@ -1,18 +1,18 @@
-// === Module 17345: AgeNoticeSettingsNotices ===
+// === Module 17382: AgeNoticeSettingsNotices ===
 
-// Module 17345 (AgeNoticeSettingsNotices)
+// Module 17382 (AgeNoticeSettingsNotices)
 import nativeDefault from "native" /* 575 */;
-import _modDef3353 from "module_3353" /* 3353 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5985 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6820 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6823 */;
-import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6832 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8190 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10812 */;
-import useUserIsTeen from "useUserIsTeen" /* 12029 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 17212 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 17252 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 17346 */;
+import _modDef3355 from "module_3355" /* 3355 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5989 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6815 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6818 */;
+import AgeNoticeExperiment from "AgeNoticeExperiment" /* 6827 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8201 */;
+import useUserIsTeen from "useUserIsTeen" /* 10810 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 11204 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 17249 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 17289 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 17383 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
 
@@ -32,7 +32,7 @@ function TeenNotice(noticeType) {
   const obj2 = { type: "info", message: null, role: "status" };
   const intl = noticeType(1113).intl;
   obj2.message = intl.format(noticeType.message, { handleOnAgeGatedContentHook: callback });
-  obj.children = jsx(noticeType(8159).InlineNotice, { type: "info", message: null, role: "status" });
+  obj.children = jsx(noticeType(8170).InlineNotice, { type: "info", message: null, role: "status" });
   return <View style={closure_10().container}>{null}</View>;
 }
 class MessageRequestsTeenNotice {
@@ -68,7 +68,7 @@ function UnconfirmedNotice(message) {
   obj3.text = intl2.string(AGE_CONFIRMATION_NOTICE(1113).t.FDSSia);
   obj3.onPress = callback1;
   obj2.action = obj3;
-  obj.children = jsx(AGE_CONFIRMATION_NOTICE(8159).InlineNotice, { type: "info", message: null, role: "status", action: null });
+  obj.children = jsx(AGE_CONFIRMATION_NOTICE(8170).InlineNotice, { type: "info", message: null, role: "status", action: null });
   return <View style={closure_10().container}>{null}</View>;
 }
 class MessageRequestsUnconfirmedNotice {
@@ -78,22 +78,22 @@ class MessageRequestsUnconfirmedNotice {
   }
 }
 const View = fn(17).View;
-let closure_6 = fn(6831).AGE_NOTICE_SETTINGS_LOCATION;
-const Constants = fn(6900);
+let closure_6 = fn(6826).AGE_NOTICE_SETTINGS_LOCATION;
+const Constants = fn(6908);
 ({ SafetySettingsNoticeAction: metroImportDefault, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/age_notice/native/AgeNoticeSettingsNotices.tsx");
 
 export function ContentFiltersTeenNotice() {
-  return <TeenNotice message={_modDef3353.HBnyJM} noticeType={constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />;
+  return <TeenNotice message={_modDef3355.HBnyJM} noticeType={constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />;
 }
 export { MessageRequestsTeenNotice };
 export function ContentFiltersUnconfirmedNotice() {
-  return <UnconfirmedNotice message={_modDef3353.HGJo1F} />;
+  return <UnconfirmedNotice message={_modDef3355.HGJo1F} />;
 }
 export { MessageRequestsUnconfirmedNotice };
 export function useIsEnabled() {

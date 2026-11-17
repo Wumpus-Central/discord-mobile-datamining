@@ -1,23 +1,23 @@
-// === Module 13057: FocusedExpandedControls ===
+// === Module 11715: FocusedExpandedControls ===
 
-// Module 13057 (FocusedExpandedControls)
+// Module 11715 (FocusedExpandedControls)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import FastImageDefault from "FastImage" /* 6010 */;
-import Form from "Form" /* 8106 */;
-import CallsUtils from "CallsUtils" /* 10583 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 10590 */;
-import useScreenshareUtilsDefault from "useScreenshareUtils" /* 12981 */;
-import VolumeSliderDefault from "VolumeSlider" /* 13017 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 13046 */;
-import _modDef13058 from "module_13058" /* 13058 */;
-import _modDef13059 from "module_13059" /* 13059 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 13060 */;
-import useDeafStatesDefault from "useDeafStates" /* 13061 */;
+import FastImageDefault from "FastImage" /* 6014 */;
+import Form from "Form" /* 8117 */;
+import CallsUtils from "CallsUtils" /* 10283 */;
+import showAudioOutputSelector from "showAudioOutputSelector" /* 10290 */;
+import useScreenshareUtilsDefault from "useScreenshareUtils" /* 11614 */;
+import VolumeSliderDefault from "VolumeSlider" /* 11658 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 11687 */;
+import _modDef11716 from "module_11716" /* 11716 */;
+import _modDef11717 from "module_11717" /* 11717 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 11718 */;
+import useDeafStatesDefault from "useDeafStates" /* 11719 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6804 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -33,10 +33,10 @@ function ExpandedControlItemIcon(iconSource) {
     if (iconSource.showIconSparkle) {
       const obj = { children: null };
       items = [tmp11, , ];
-      const obj3 = { style: tmp.sparkle2, source: _modDef13058 };
+      const obj3 = { style: tmp.sparkle2, source: _modDef11716 };
       items[1] = metroImportDefault(FastImageDefault, obj3);
       const obj4 = { style: tmp.sparkle, source: null };
-      obj4.source = _modDef13059;
+      obj4.source = _modDef11717;
       items[2] = metroImportDefault(FastImageDefault, obj4);
       obj.children = items;
       tmp7 = React5(View, obj);
@@ -65,10 +65,10 @@ function ExpandedControlItem(iconSource) {
   return metroImportDefault(Form.FormRow, obj2);
 }
 const View = fn(17).View;
-const MediaEngineContextTypes = fn(6065).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(6072).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { formTintColor: { tintColor: nativeDefault.colors.ICON_STRONG }, formColor: null, sparkle: null, sparkle2: null };
 let obj3 = { tintColor: nativeDefault.colors.ICON_STRONG };
 obj2.formColor = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -152,7 +152,7 @@ export function DeafenButton(disabled) {
   }
   const tmp3 = useDeafStatesDefault(disabled.channel);
   const deafHandler = VoiceActionUtils.createDeafHandler(tmp3);
-  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 13062 : 13063), label: null };
+  const obj2 = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 11720 : 11721), label: null };
   const intl = util.intl;
   obj2.label = intl.string(util.t.wjcRFX);
   return metroImportDefault(ExpandedControlItem, obj2);

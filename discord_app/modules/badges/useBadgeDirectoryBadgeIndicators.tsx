@@ -1,16 +1,16 @@
-// === Module 15278: useBadgeDirectoryBadgeIndicators ===
+// === Module 15312: useBadgeDirectoryBadgeIndicators ===
 
-// Module 15278 (useBadgeDirectoryBadgeIndicators)
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8552 */;
-import BadgeUtils from "BadgeUtils" /* 10113 */;
+// Module 15312 (useBadgeDirectoryBadgeIndicators)
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8563 */;
+import BadgeUtils from "BadgeUtils" /* 15291 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 10112 */;
+import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 15290 */;
 
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/badges/useBadgeDirectoryBadgeIndicators.tsx");
 
-export const NEW_INDICATOR_BADGE_IDS = fn(10113).BETA_BADGE_IDS;
+export const NEW_INDICATOR_BADGE_IDS = fn(15291).BETA_BADGE_IDS;
 export function isNewIndicatorBadgeId(badgeId) {
   const BETA_BADGE_IDS = BadgeUtils.BETA_BADGE_IDS;
   return BETA_BADGE_IDS.has(badgeId);

@@ -1,8 +1,8 @@
-// === Module 19697: ChannelSettingsPermissionsOverrideCheckbox ===
+// === Module 19742: ChannelSettingsPermissionsOverrideCheckbox ===
 
-// Module 19697 (ChannelSettingsPermissionsOverrideCheckbox)
+// Module 19742 (ChannelSettingsPermissionsOverrideCheckbox)
 import nativeDefault from "native" /* 575 */;
-import PermissionUtils from "PermissionUtils" /* 5243 */;
+import PermissionUtils from "PermissionUtils" /* 5247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -85,7 +85,7 @@ const rect1 = { top: PX_4, right: PX_4 / 2, bottom: PX_4, left: PX_4 / 2 };
 let closure_7 = Object.freeze(rect1);
 const rect2 = { top: PX_4, right: PX_4, bottom: PX_4, left: PX_4 / 2 };
 let closure_8 = Object.freeze(rect2);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { ternaryCheckBox: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: nativeDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" }, iconWrapper: { borderRadius: md - PX_4, marginHorizontal: PX_4 / 2, justifyContent: "center", height: "100%" }, icon: null, denyActive: null, denySelected: null, allowActive: null, allowSelected: null, passthroughSelected: null, passthroughActive: null, disabled: null };
 let obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: nativeDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" };
 obj.icon = { marginHorizontal: nativeDefault.space.PX_8 };
@@ -103,7 +103,7 @@ const obj9 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELE
 obj.passthroughActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 obj.disabled = { opacity: 0.3 };
 let closure_9 = createStyles.createStyles(obj);
-let items = [fn(5243).DENY, fn(5243).PASSTHROUGH, fn(5243).ALLOW];
+let items = [fn(5247).DENY, fn(5247).PASSTHROUGH, fn(5247).ALLOW];
 const obj10 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx");

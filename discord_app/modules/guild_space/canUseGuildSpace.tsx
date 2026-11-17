@@ -1,20 +1,21 @@
-// === Module 7242: canUseGuildSpace ===
+// === Module 7250: canUseGuildSpace ===
 
-// Module 7242 (canUseGuildSpace)
-import GuildStore from "GuildStore" /* 5177 */;
-import PermissionStore from "PermissionStore" /* 5238 */;
+// Module 7250 (canUseGuildSpace)
+import GuildSpaceTypes from "GuildSpaceTypes" /* 7251 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import PermissionStore from "PermissionStore" /* 5242 */;
 
 const require = globalThis.__r;
 
-const require = fn;
+require = fn;
 const Permissions = fn(1072).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/canUseGuildSpace.tsx");
 
-export function isGuildSpaceAdmin(arg0) {
-  let canResult = null != arg0;
+export function isGuildSpaceAdmin(guild) {
+  let canResult = null != guild;
   if (canResult) {
-    canResult = PermissionStore.can(Permissions.MANAGE_GUILD, arg0);
+    canResult = PermissionStore.can(Permissions.MANAGE_GUILD, guild);
   }
   return canResult;
 }
@@ -29,6 +30,35 @@ export function useIsGuildSpaceAdmin(arg0) {
     }
     return canResult;
   }, items1);
+}
+export function isGuildSpaceVisibleToMembers(guild) {
+  const guildSpaceSettings = guild.guildSpaceSettings;
+  let tmp = null != guildSpaceSettings && guildSpaceSettings.enabled;
+  if (tmp) {
+    tmp = guildSpaceSettings.publish_status === GuildSpaceTypes.GuildSpacePublishStatus.PUBLISHED;
+  }
+  return tmp;
+}
+export function isGuildSpaceVisible(guild, arg1) {
+  const guildSpaceSettings = guild.guildSpaceSettings;
+  let enabled;
+  if (guildSpaceSettings != null) {
+    enabled = guildSpaceSettings.enabled;
+  }
+  let tmp3 = !tmp2;
+  if (false !== enabled) {
+    let tmp4 = arg1;
+    if (!arg1) {
+      const guildSpaceSettings2 = guild.guildSpaceSettings;
+      let tmp5 = null != guildSpaceSettings2 && guildSpaceSettings2.enabled;
+      if (tmp5) {
+        tmp5 = guildSpaceSettings2.publish_status === GuildSpaceTypes.GuildSpacePublishStatus.PUBLISHED;
+      }
+      tmp4 = tmp5;
+    }
+    tmp3 = tmp4;
+  }
+  return tmp3;
 }
 export function canUseGuildSpace(guild, getChannelIdForGuildTransition) {
   return false;

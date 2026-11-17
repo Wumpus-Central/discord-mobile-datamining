@@ -1,26 +1,26 @@
-// === Module 13126: ConjureStandaloneScreen ===
+// === Module 14372: ConjureStandaloneScreen ===
 
-// Module 13126 (ConjureStandaloneScreen)
+// Module 14372 (ConjureStandaloneScreen)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import _modDef4131 from "module_4131" /* 4131 */;
-import ConjureActivity from "ConjureActivity" /* 7237 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 7329 */;
-import NavigatorHeader from "NavigatorHeader" /* 7493 */;
-import GuildIcon from "GuildIcon" /* 7720 */;
-import ConjureChatSceneDefault from "ConjureChatScene" /* 13127 */;
-import conjureStandaloneScenes from "conjureStandaloneScenes" /* 13139 */;
-import selectConjureChannelDefault from "selectConjureChannel" /* 13813 */;
-import ConjureHomeLandingDefault from "ConjureHomeLanding" /* 13814 */;
-import ConjureProjectListDefault from "ConjureProjectList" /* 13979 */;
-import ConjureDebugSceneDefault from "ConjureDebugScene" /* 14001 */;
+import _modDef4133 from "module_4133" /* 4133 */;
+import ConjureActivity from "ConjureActivity" /* 7245 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 7339 */;
+import NavigatorHeader from "NavigatorHeader" /* 7503 */;
+import GuildIcon from "GuildIcon" /* 7730 */;
+import ConjureChatSceneDefault from "ConjureChatScene" /* 14373 */;
+import conjureStandaloneScenes from "conjureStandaloneScenes" /* 14382 */;
+import selectConjureChannelDefault from "selectConjureChannel" /* 14834 */;
+import ConjureHomeLandingDefault from "ConjureHomeLanding" /* 14835 */;
+import ConjureProjectListDefault from "ConjureProjectList" /* 15000 */;
+import ConjureDebugSceneDefault from "ConjureDebugScene" /* 15038 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 5218 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import PermissionStore from "PermissionStore" /* 5238 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
-import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7233 */;
+import GuildMemberStore from "GuildMemberStore" /* 5222 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import PermissionStore from "PermissionStore" /* 5242 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
+import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7241 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -30,12 +30,12 @@ function ServerProjectsHeader(guild) {
   if (null == guild) {
     const obj = { title: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef4131.uk6jhJ);
+    obj.title = intl.string(_modDef4133.uk6jhJ);
     let obj2 = obj;
   } else {
     obj2 = { title: guild.name, subtitle: null, icon: null };
     const intl2 = util.intl;
-    obj2.subtitle = intl2.string(_modDef4131.IF7qLs);
+    obj2.subtitle = intl2.string(_modDef4133.IF7qLs);
     const obj3 = { style: tmp.headerGuildIcon, children: null };
     const obj4 = { guild, size: GuildIcon.GuildIconSizes.XSMALL_20, selected: false };
     obj3.children = application_id(GuildIconDefault, obj4);
@@ -60,7 +60,7 @@ function GlobalChatScene(projectId) {
     }
     return result;
   }, items1);
-  return closure_12(fallbackGuildId(13127), { guildId, projectId, entryPoint, onExit });
+  return closure_12(fallbackGuildId(14373), { guildId, projectId, entryPoint, onExit });
 }
 function RoutedProjectOpener(guildId) {
   guildId = guildId.guildId;
@@ -112,7 +112,7 @@ const View = fn(17).View;
 const Permissions = fn(1072).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { headerGuildIcon: { flexShrink: 0, marginRight: nativeDefault.space.PX_8 } };
 let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -254,7 +254,7 @@ export default function ConjureStandaloneScreen(guildId) {
     if (closure_5) {
       const obj2 = { title: null };
       const intl = util.intl;
-      obj2.title = intl.string(_modDef4131.uk6jhJ);
+      obj2.title = intl.string(_modDef4133.uk6jhJ);
       let tmpResult = application_id(NavigatorHeader.NavigatorHeader, obj2);
     } else {
       const obj = { guild: stateFromStores };

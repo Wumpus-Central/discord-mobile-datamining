@@ -1,9 +1,9 @@
-// === Module 17657: OrbsArcadeAnalytics ===
+// === Module 17695: OrbsArcadeAnalytics ===
 
-// Module 17657 (OrbsArcadeAnalytics)
+// Module 17695 (OrbsArcadeAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 10039 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 17647 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 10052 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 17685 */;
 
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const size = fn(2);

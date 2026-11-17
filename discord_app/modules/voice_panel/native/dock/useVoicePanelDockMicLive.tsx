@@ -1,9 +1,9 @@
-// === Module 19234: useVoicePanelDockMicLive ===
+// === Module 19279: useVoicePanelDockMicLive ===
 
-// Module 19234 (useVoicePanelDockMicLive)
-import timing_timing from "timing/timing" /* 5538 */;
+// Module 19279 (useVoicePanelDockMicLive)
+import timing_timing from "timing/timing" /* 5542 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
 
 const require = globalThis.__r;
 

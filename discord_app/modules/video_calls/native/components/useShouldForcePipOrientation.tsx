@@ -1,14 +1,14 @@
-// === Module 12722: useShouldForcePipOrientation ===
+// === Module 11328: useShouldForcePipOrientation ===
 
-// Module 12722 (useShouldForcePipOrientation)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 7025 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 12723 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5154 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
+// Module 11328 (useShouldForcePipOrientation)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 7033 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11329 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 5158 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7024 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const CallConstants = fn(5973);
+const CallConstants = fn(5977);
 ({ isStreamParticipant: closure_6, ParticipantTypes: metroImportDefault } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
@@ -77,17 +77,17 @@ export function useShouldForcePipOrientation(channel) {
   if (null != focusedEmbeddedActivityParticipant) {
     if (closure_6(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(10041).OrientationType.LANDSCAPE;
+        return tmp2(10054).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === channel(2146).EmbeddedActivityOrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(10041).OrientationType;
+    OrientationType = tmp2(10054).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp2(2146).EmbeddedActivityOrientationLockState.PORTRAIT) {
-      LANDSCAPE = tmp2(10041).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(10054).OrientationType.PORTRAIT;
     }
   }
   const obj3 = channel(504);

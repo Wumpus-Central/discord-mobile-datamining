@@ -1,7 +1,7 @@
-// === Module 13085: StageChannelListStore ===
+// === Module 11745: StageChannelListStore ===
 
-// Module 13085 (StageChannelListStore)
-import _mod5221 from "module_5221" /* 5221 */;
+// Module 11745 (StageChannelListStore)
+import _mod5225 from "module_5225" /* 5225 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ export function useActiveSpeakerPillScrollHandler() {
     items = [, ];
     ({ listRef: arr[0], setListRef: arr[1] } = arg0);
     return items;
-  }, _mod5221.shallow), 2);
+  }, _mod5225.shallow), 2);
   const first = tmp[0];
   closure_1 = tmp3;
   items = [tmp[1]];
@@ -51,5 +51,5 @@ export function useActiveSpeakerPillState() {
     items = [, ];
     ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
     return items;
-  }, _mod5221.shallow);
+  }, _mod5225.shallow);
 }

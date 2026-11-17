@@ -1,9 +1,9 @@
-// === Module 20311: resolveStorefrontCodedLink ===
+// === Module 20359: resolveStorefrontCodedLink ===
 
-// Module 20311 (resolveStorefrontCodedLink)
+// Module 20359 (resolveStorefrontCodedLink)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SKUStore from "SKUStore" /* 7070 */;
+import SKUStore from "SKUStore" /* 7078 */;
 
 const require = fn;
 const set = new Set();
@@ -11,9 +11,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/resolveStorefrontCodedLink.tsx");
 
 export default function resolveStorefrontCodedLink(arg0, code) {
-  const result = obj3(12434).parseStorefrontCodedLink(code);
+  const result = obj3(12640).parseStorefrontCodedLink(code);
   if (null != result) {
-    if (arg0 === tmp(6045).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+    if (arg0 === tmp(6049).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       let obj2 = { type: "application", applicationId: result.scopeId };
       obj3 = obj2;
     } else {
@@ -52,10 +52,10 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                   } else if ("application" === obj3.type) {
                     c1 = 2;
                     v3 = 1;
-                    const obj6 = { value: v3(10018).fetchSocialLayerStorefrontForApplication(tmp14.applicationId, { eager: false }), done: false };
+                    const obj6 = { value: v3(10031).fetchSocialLayerStorefrontForApplication(tmp14.applicationId, { eager: false }), done: false };
                     return obj6;
                   } else {
-                    obj3 = v3(10018);
+                    obj3 = v3(10031);
                     c1 = 1;
                     v3 = 1;
                     const obj7 = { value: obj3.fetchSocialLayerStorefront(tmp14.guildId, { eager: false }), done: false };
@@ -90,7 +90,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
           });
           if (!set.has(combined)) {
             set.add(combined);
-            const result1 = tmp(20301).queueMessageLinkFetch(asyncGeneratorStep(async () => {
+            const result1 = tmp(20349).queueMessageLinkFetch(asyncGeneratorStep(async () => {
               if (c4 === 2) {
                 c4 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -152,12 +152,12 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                 }
               }
             }));
-            const tmpResult6 = tmp(20301);
+            const tmpResult6 = tmp(20349);
           }
         }
-        tmpResult5 = tmp(12436);
+        tmpResult5 = tmp(12642);
       }
-      tmpResult = tmp(12435);
+      tmpResult = tmp(12641);
     } else {
       const skuId = _slicedToArray(result.skuIds, 1)[0];
       if (!tmp4) {
@@ -165,7 +165,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         skuId(572).dispatch(obj5);
         let obj4 = skuId(572);
         items = [skuId];
-        const storefrontCodedLink = tmp(12434).makeStorefrontCodedLink(items, result.scopeId);
+        const storefrontCodedLink = tmp(12640).makeStorefrontCodedLink(items, result.scopeId);
         closure_129_0 = storefrontCodedLink;
         closure_129_1 = asyncGeneratorStep(async () => {
           if (v3 === 2) {
@@ -235,7 +235,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         });
         if (!set.has(storefrontCodedLink)) {
           set.add(storefrontCodedLink);
-          const result2 = tmp(20301).queueMessageLinkFetch(asyncGeneratorStep(async () => {
+          const result2 = tmp(20349).queueMessageLinkFetch(asyncGeneratorStep(async () => {
             if (c4 === 2) {
               c4 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -297,12 +297,12 @@ export default function resolveStorefrontCodedLink(arg0, code) {
               }
             }
           }));
-          const tmpResult8 = tmp(20301);
+          const tmpResult8 = tmp(20349);
         }
-        const tmpResult7 = tmp(12434);
+        const tmpResult7 = tmp(12640);
       }
       tmp4 = null != SKUStore.get(skuId) || SKUStore.isFetching(skuId) || SKUStore.didFetchingSkuFail(skuId);
     }
   }
-  let obj = obj3(12434);
+  let obj = obj3(12640);
 };

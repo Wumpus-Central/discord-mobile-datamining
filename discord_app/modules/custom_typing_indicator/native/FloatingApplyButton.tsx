@@ -1,12 +1,12 @@
-// === Module 18031: FloatingApplyButton ===
+// === Module 18072: FloatingApplyButton ===
 
-// Module 18031 (FloatingApplyButton)
+// Module 18072 (FloatingApplyButton)
 import nativeDefault from "native" /* 575 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import HapticUtils from "HapticUtils" /* 5544 */;
+import HapticUtils from "HapticUtils" /* 5548 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5307 */;
+import AccessibilityStore from "AccessibilityStore" /* 5311 */;
 
 const require = globalThis.__r;
 
@@ -112,7 +112,7 @@ export default function FloatingApplyButton(renderButton) {
   }
   if (renderButtonResult == null) {
     const obj6 = { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: renderButton.loading };
-    renderButtonResult = jsx(tmp(5926).Button, { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: renderButton.loading });
+    renderButtonResult = jsx(tmp(5930).Button, { variant: "primary", size: "lg", disabled, onPress: callback, text, loading: renderButton.loading });
   }
   obj4.children = renderButtonResult;
   obj3.children = jsx(_modDef1655.View, { style: { marginBottom: useSafeAreaInsetsDefault().bottom }, animatedProps, children: null });

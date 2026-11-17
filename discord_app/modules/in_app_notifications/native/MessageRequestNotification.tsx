@@ -1,6 +1,6 @@
-// === Module 11947: MessageRequestNotification ===
+// === Module 12398: MessageRequestNotification ===
 
-// Module 11947 (MessageRequestNotification)
+// Module 12398 (MessageRequestNotification)
 import util from "util" /* 1113 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,9 +21,9 @@ export default function MessageRequestInAppNotification(notification) {
     return obj;
   }, items);
   const callback = noop.useCallback(() => {
-    numMutualGuilds(11027).clearNotification();
-    const obj = numMutualGuilds(11027);
-    const rootNavigationRef = author(5483).getRootNavigationRef();
+    numMutualGuilds(11793).clearNotification();
+    const obj = numMutualGuilds(11793);
+    const rootNavigationRef = author(5487).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }
@@ -32,8 +32,8 @@ export default function MessageRequestInAppNotification(notification) {
   const obj3 = { text: null };
   let intl = author(1113).intl;
   obj3.text = intl.string(author(1113).t["Bx4/Lf"]);
-  obj.children = jsx(author(11043).SystemMessageText, { text: null });
+  obj.children = jsx(author(11801).SystemMessageText, { text: null });
   obj.onPress = callback;
   obj.notification = notification;
-  return jsx(author(11087).NotificationPressable, { icon: jsx(author(1187).Avatar, { user: author, size: author(1187).AvatarSizes.NORMAL, guildId: "Array" }), header: memo, children: null, onPress: null, notification: null });
+  return jsx(author(11838).NotificationPressable, { icon: jsx(author(1187).Avatar, { user: author, size: author(1187).AvatarSizes.NORMAL, guildId: "Array" }), header: memo, children: null, onPress: null, notification: null });
 };

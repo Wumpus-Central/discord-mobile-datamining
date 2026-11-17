@@ -1,20 +1,20 @@
-// === Module 17939: DmsMessagePreviewsSetting ===
+// === Module 17980: DmsMessagePreviewsSetting ===
 
-// Module 17939 (DmsMessagePreviewsSetting)
+// Module 17980 (DmsMessagePreviewsSetting)
 import util from "util" /* 1113 */;
-import UserSettings from "UserSettings" /* 5131 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5984 */;
-import useMessagePreviews from "useMessagePreviews" /* 17940 */;
+import UserSettings from "UserSettings" /* 5135 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5988 */;
+import useMessagePreviews from "useMessagePreviews" /* 17981 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(12406);
+const SettingBuilders = fn(12612);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OAOUoQ);
   },
-  parent: fn(9202).MobileUserSettings.APPEARANCE,
+  parent: fn(9213).MobileUserSettings.APPEARANCE,
   useValue: function useDMsMessagePreviewsValue() {
     return useMessagePreviews.useMessagePreviewSetting();
   },

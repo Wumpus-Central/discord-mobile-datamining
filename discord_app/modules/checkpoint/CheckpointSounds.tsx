@@ -1,15 +1,15 @@
-// === Module 14292: CheckpointSounds ===
+// === Module 13157: CheckpointSounds ===
 
-// Module 14292 (CheckpointSounds)
-import CheckpointNavigation from "CheckpointNavigation" /* 6735 */;
-import _modDef14293 from "module_14293" /* 14293 */;
-import _modDef14294 from "module_14294" /* 14294 */;
-import _modDef14295 from "module_14295" /* 14295 */;
-import _modDef14296 from "module_14296" /* 14296 */;
-import _modDef14297 from "module_14297" /* 14297 */;
+// Module 13157 (CheckpointSounds)
+import CheckpointNavigation from "CheckpointNavigation" /* 6743 */;
+import _modDef13158 from "module_13158" /* 13158 */;
+import _modDef13159 from "module_13159" /* 13159 */;
+import _modDef13160 from "module_13160" /* 13160 */;
+import _modDef13161 from "module_13161" /* 13161 */;
+import _modDef13162 from "module_13162" /* 13162 */;
 
 require = fn;
-let items = [_modDef14293, _modDef14294, _modDef14295, _modDef14296, _modDef14297];
+let items = [_modDef13158, _modDef13159, _modDef13160, _modDef13161, _modDef13162];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointSounds.tsx");
 
@@ -28,9 +28,9 @@ export function getCheckpointRouteSounds(arg0) {
   }
   items = [];
   if (route === CheckpointNavigation.CheckpointRoute.INTRODUCTION) {
-    const obj = { source: _modDef14293, delayMs: 0 };
+    const obj = { source: _modDef13158, delayMs: 0 };
     items.push(obj);
-    const obj2 = { source: _modDef14294, delayMs: 2800 };
+    const obj2 = { source: _modDef13159, delayMs: 2800 };
     items.push(obj2);
   } else {
     let tmp4 = previousRoute !== CheckpointNavigation.CheckpointRoute.HOME;
@@ -40,7 +40,7 @@ export function getCheckpointRouteSounds(arg0) {
     }
     if (tmp4) {
       if (null != tmpResult4.getCheckpointRoutePresentation(route).statsScreen) {
-        const obj3 = { source: _modDef14295, delayMs: 0 };
+        const obj3 = { source: _modDef13160, delayMs: 0 };
         items.push(obj3);
       }
       tmpResult4 = CheckpointNavigation;
@@ -55,7 +55,7 @@ export function getCheckpointRouteSounds(arg0) {
       tmp7 = tmp8;
     }
     if (tmp7) {
-      const obj4 = { source: _modDef14296, delayMs: 0 };
+      const obj4 = { source: _modDef13161, delayMs: 0 };
       items.push(obj4);
     }
     const tmpResult5 = CheckpointNavigation;

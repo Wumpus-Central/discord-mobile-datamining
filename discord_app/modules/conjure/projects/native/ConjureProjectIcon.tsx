@@ -1,14 +1,14 @@
-// === Module 10543: ConjureProjectIcon ===
+// === Module 14482: ConjureProjectIcon ===
 
-// Module 10543 (ConjureProjectIcon)
+// Module 14482 (ConjureProjectIcon)
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
-import useToken from "useToken" /* 5892 */;
-import FastImageDefault from "FastImage" /* 6010 */;
-import MagicWandIcon from "MagicWandIcon" /* 10528 */;
-import useConjureProjectIcon from "useConjureProjectIcon" /* 10544 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 10546 */;
+import useToken from "useToken" /* 5896 */;
+import FastImageDefault from "FastImage" /* 6014 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 12548 */;
+import useConjureProjectIcon from "useConjureProjectIcon" /* 12551 */;
+import MagicWandIcon from "MagicWandIcon" /* 14434 */;
 import noop from "module_19" /* 19 */;
 
 const useConjureProjectIconDefault = useConjureProjectIcon;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: closure_6 } = jsxProd);
 const dependencyMap = { header: 20, list: 32, card: 40, dialog: 48 };
-let createStyles = fn(5306);
+let createStyles = fn(5310);
 let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   const obj = { frame: { width, height: width, borderRadius, overflow: "hidden", alignItems: "center", justifyContent: "center" }, image: { width, height: width }, border: null, glyph: null };
   const obj2 = {};
@@ -31,7 +31,7 @@ let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   obj.glyph = { width: width2, height: width2 };
   return obj;
 });
-createStyles = fn(5306);
+createStyles = fn(5310);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { tile: { backgroundColor } };
   return obj;

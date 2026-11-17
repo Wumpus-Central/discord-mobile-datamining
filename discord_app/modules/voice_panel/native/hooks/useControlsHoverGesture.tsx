@@ -1,13 +1,13 @@
-// === Module 19986: useControlsHoverGesture ===
+// === Module 20032: useControlsHoverGesture ===
 
-// Module 19986 (useControlsHoverGesture)
+// Module 20032 (useControlsHoverGesture)
 import _mod1708 from "module_1708" /* 1708 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5588 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5592 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const VoicePanelModes = fn(11985).VoicePanelModes;
-const VoicePanelControlsModes = fn(11983).VoicePanelControlsModes;
+const VoicePanelModes = fn(12428).VoicePanelModes;
+const VoicePanelControlsModes = fn(12426).VoicePanelControlsModes;
 let closure_6 = { code: "(function useControlsHoverGestureTsx1(){let[connected,mode,VoicePanelModes,controlsSpecs,VoicePanelControlsModes,scheduleOnRN,showControls,lastIdleRefreshMillis,IDLE_REFRESH_DEBOUNCE_MILLIS,refreshIdleTimeout]=this.__closure;if(!connected.get())return;if(mode.get()!==VoicePanelModes.PANEL)return;const controlsHidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;if(controlsHidden){scheduleOnRN(showControls);return;}const currentTimeMillis=Date.now();if(currentTimeMillis-lastIdleRefreshMillis.get()<IDLE_REFRESH_DEBOUNCE_MILLIS)return;lastIdleRefreshMillis.set(currentTimeMillis);refreshIdleTimeout();})" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useControlsHoverGesture.tsx");

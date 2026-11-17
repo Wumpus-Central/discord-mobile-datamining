@@ -1,11 +1,11 @@
-// === Module 15816: conjureServerWidgetConsent ===
+// === Module 15850: conjureServerWidgetConsent ===
 
-// Module 15816 (conjureServerWidgetConsent)
+// Module 15850 (conjureServerWidgetConsent)
 import URLUtilsDefault from "URLUtils" /* 1381 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 12093 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 10825 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import WidgetStore from "WidgetStore" /* 12091 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
+import WidgetStore from "WidgetStore" /* 10823 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
 
 const require = globalThis.__r;
 

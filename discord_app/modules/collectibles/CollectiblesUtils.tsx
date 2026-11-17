@@ -1,6 +1,6 @@
-// === Module 8497: CollectiblesUtils ===
+// === Module 8508: CollectiblesUtils ===
 
-// Module 8497 (CollectiblesUtils)
+// Module 8508 (CollectiblesUtils)
 import apply from "apply" /* 12 */;
 import Constants2 from "Constants" /* 1083 */;
 import util from "util" /* 1113 */;
@@ -11,12 +11,12 @@ import NameplateRecord from "NameplateRecord" /* 2112 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;
 import EntitlementTypes from "EntitlementTypes" /* 2173 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
-import PriceUtils from "PriceUtils" /* 7253 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 8490 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 8491 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 8492 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8496 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 8498 */;
+import PriceUtils from "PriceUtils" /* 7262 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 8501 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 8502 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 8503 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 8507 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 8509 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1074 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
@@ -625,8 +625,7 @@ export function getLogoSize(arg0) {
   return 3.8 * arg0;
 }
 export function getDaysRemaining(date) {
-  let timestamp = arg1;
-  if (arg1 === undefined) {
+  if (timestamp === undefined) {
     const _Date = Date;
     timestamp = Date.now();
   }

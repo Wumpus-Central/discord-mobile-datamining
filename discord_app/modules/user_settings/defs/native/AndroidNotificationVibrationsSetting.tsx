@@ -1,13 +1,13 @@
-// === Module 18128: AndroidNotificationVibrationsSetting ===
+// === Module 18169: AndroidNotificationVibrationsSetting ===
 
-// Module 18128 (AndroidNotificationVibrationsSetting)
+// Module 18169 (AndroidNotificationVibrationsSetting)
 import util from "util" /* 1113 */;
 import PlatformUtils from "PlatformUtils" /* 1380 */;
-import SettingsConstants from "SettingsConstants" /* 9202 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 18109 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 18113 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 18107 */;
-import SettingBuilders_mod from "SettingBuilders" /* 12406 */;
+import SettingsConstants from "SettingsConstants" /* 9213 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 18150 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 18154 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 18148 */;
+import SettingBuilders_mod from "SettingBuilders" /* 12612 */;
 import size from "module_2" /* 2 */;
 
 ({ useAndroidNotificationVibrationsEnabled: c2, setAndroidNotificationVibrationsEnabled } = AndroidNotificationSettingsStore);

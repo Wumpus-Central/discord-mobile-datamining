@@ -1,15 +1,7 @@
-// === Module 6391: CheckpointCardColors ===
+// === Module 6399: CheckpointCardColors ===
 
-// Module 6391 (CheckpointCardColors)
-import CheckpointCardColorPalette from "CheckpointCardColorPalette" /* 6389 */;
-import _modDef6392 from "module_6392" /* 6392 */;
-import _modDef6393 from "module_6393" /* 6393 */;
-import _modDef6394 from "module_6394" /* 6394 */;
-import _modDef6395 from "module_6395" /* 6395 */;
-import _modDef6396 from "module_6396" /* 6396 */;
-import _modDef6397 from "module_6397" /* 6397 */;
-import _modDef6398 from "module_6398" /* 6398 */;
-import _modDef6399 from "module_6399" /* 6399 */;
+// Module 6399 (CheckpointCardColors)
+import CheckpointCardColorPalette from "CheckpointCardColorPalette" /* 6397 */;
 import _modDef6400 from "module_6400" /* 6400 */;
 import _modDef6401 from "module_6401" /* 6401 */;
 import _modDef6402 from "module_6402" /* 6402 */;
@@ -20,15 +12,23 @@ import _modDef6406 from "module_6406" /* 6406 */;
 import _modDef6407 from "module_6407" /* 6407 */;
 import _modDef6408 from "module_6408" /* 6408 */;
 import _modDef6409 from "module_6409" /* 6409 */;
-import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6410 */;
+import _modDef6410 from "module_6410" /* 6410 */;
+import _modDef6411 from "module_6411" /* 6411 */;
+import _modDef6412 from "module_6412" /* 6412 */;
+import _modDef6413 from "module_6413" /* 6413 */;
+import _modDef6414 from "module_6414" /* 6414 */;
+import _modDef6415 from "module_6415" /* 6415 */;
+import _modDef6416 from "module_6416" /* 6416 */;
+import _modDef6417 from "module_6417" /* 6417 */;
+import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6418 */;
 import size from "module_2" /* 2 */;
 
-const obj2 = { primaryBackgroundColor: "#34E2F1", secondaryBackgroundColor: "#94CCD1", tertiaryBackgroundColor: "#A5E3E9", shadowColor: "#0C9BA7", backgroundGradientStartColor: "#12606D", recapCardBackgroundImage: _modDef6395, clydeLogoImage: _modDef6396, clydeLogoStaticImage: _modDef6397 };
-const obj = { primaryBackgroundColor: "#7D53DE", secondaryBackgroundColor: "#BCB1D5", tertiaryBackgroundColor: "#CFC3EB", shadowColor: "#411D96", backgroundGradientStartColor: "#2F156B", recapCardBackgroundImage: _modDef6392, clydeLogoImage: _modDef6393, clydeLogoStaticImage: _modDef6394 };
-const obj3 = { primaryBackgroundColor: "#FF4CD2", secondaryBackgroundColor: "#D5A9D6", tertiaryBackgroundColor: "#E9BBE9", shadowColor: "#B20086", backgroundGradientStartColor: "#80005F", recapCardBackgroundImage: _modDef6398, clydeLogoImage: _modDef6399, clydeLogoStaticImage: _modDef6400 };
-const obj4 = { primaryBackgroundColor: "#35ED7E", secondaryBackgroundColor: "#B2C5B1", tertiaryBackgroundColor: "#B5DCB3", shadowColor: "#0FA44A", backgroundGradientStartColor: "#0A7535", recapCardBackgroundImage: _modDef6401, clydeLogoImage: _modDef6402, clydeLogoStaticImage: _modDef6403 };
-const obj5 = { primaryBackgroundColor: "#EF3054", secondaryBackgroundColor: "#E5A1AE", tertiaryBackgroundColor: "#F6AFBC", shadowColor: "#A60D2A", backgroundGradientStartColor: "#76091E", recapCardBackgroundImage: _modDef6404, clydeLogoImage: _modDef6405, clydeLogoStaticImage: _modDef6406 };
-let closure_3 = { [CheckpointCardColorPalette.CheckpointCardColorPalette.NONE]: obj2, [CheckpointCardColorPalette.CheckpointCardColorPalette.CYAN]: obj2, [CheckpointCardColorPalette.CheckpointCardColorPalette.PURPLE]: obj, [CheckpointCardColorPalette.CheckpointCardColorPalette.PINK]: obj3, [CheckpointCardColorPalette.CheckpointCardColorPalette.GREEN]: obj4, [CheckpointCardColorPalette.CheckpointCardColorPalette.RED]: obj5, [CheckpointCardColorPalette.CheckpointCardColorPalette.YELLOW]: { primaryBackgroundColor: "#FFE047", secondaryBackgroundColor: "#E6CBA8", tertiaryBackgroundColor: "#FFE0B8", shadowColor: "#B29400", backgroundGradientStartColor: "#806A00", recapCardBackgroundImage: _modDef6407, clydeLogoImage: _modDef6408, clydeLogoStaticImage: _modDef6409 } };
+const obj2 = { primaryBackgroundColor: "#34E2F1", secondaryBackgroundColor: "#94CCD1", tertiaryBackgroundColor: "#A5E3E9", shadowColor: "#0C9BA7", backgroundGradientStartColor: "#12606D", recapCardBackgroundImage: _modDef6403, clydeLogoImage: _modDef6404, clydeLogoStaticImage: _modDef6405 };
+const obj = { primaryBackgroundColor: "#7D53DE", secondaryBackgroundColor: "#BCB1D5", tertiaryBackgroundColor: "#CFC3EB", shadowColor: "#411D96", backgroundGradientStartColor: "#2F156B", recapCardBackgroundImage: _modDef6400, clydeLogoImage: _modDef6401, clydeLogoStaticImage: _modDef6402 };
+const obj3 = { primaryBackgroundColor: "#FF4CD2", secondaryBackgroundColor: "#D5A9D6", tertiaryBackgroundColor: "#E9BBE9", shadowColor: "#B20086", backgroundGradientStartColor: "#80005F", recapCardBackgroundImage: _modDef6406, clydeLogoImage: _modDef6407, clydeLogoStaticImage: _modDef6408 };
+const obj4 = { primaryBackgroundColor: "#35ED7E", secondaryBackgroundColor: "#B2C5B1", tertiaryBackgroundColor: "#B5DCB3", shadowColor: "#0FA44A", backgroundGradientStartColor: "#0A7535", recapCardBackgroundImage: _modDef6409, clydeLogoImage: _modDef6410, clydeLogoStaticImage: _modDef6411 };
+const obj5 = { primaryBackgroundColor: "#EF3054", secondaryBackgroundColor: "#E5A1AE", tertiaryBackgroundColor: "#F6AFBC", shadowColor: "#A60D2A", backgroundGradientStartColor: "#76091E", recapCardBackgroundImage: _modDef6412, clydeLogoImage: _modDef6413, clydeLogoStaticImage: _modDef6414 };
+let closure_3 = { [CheckpointCardColorPalette.CheckpointCardColorPalette.NONE]: obj2, [CheckpointCardColorPalette.CheckpointCardColorPalette.CYAN]: obj2, [CheckpointCardColorPalette.CheckpointCardColorPalette.PURPLE]: obj, [CheckpointCardColorPalette.CheckpointCardColorPalette.PINK]: obj3, [CheckpointCardColorPalette.CheckpointCardColorPalette.GREEN]: obj4, [CheckpointCardColorPalette.CheckpointCardColorPalette.RED]: obj5, [CheckpointCardColorPalette.CheckpointCardColorPalette.YELLOW]: { primaryBackgroundColor: "#FFE047", secondaryBackgroundColor: "#E6CBA8", tertiaryBackgroundColor: "#FFE0B8", shadowColor: "#B29400", backgroundGradientStartColor: "#806A00", recapCardBackgroundImage: _modDef6415, clydeLogoImage: _modDef6416, clydeLogoStaticImage: _modDef6417 } };
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointCardColors.tsx");
 
 export function getCharacterCardColorPalette(stateFromStores) {

@@ -1,28 +1,28 @@
-// === Module 15717: UserProfileActivityBadges ===
+// === Module 15751: UserProfileActivityBadges ===
 
-// Module 15717 (UserProfileActivityBadges)
+// Module 15751 (UserProfileActivityBadges)
 import nativeDefault from "native" /* 575 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import ActivityTypes from "ActivityTypes" /* 6059 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 7328 */;
-import GroupIcon from "GroupIcon" /* 7436 */;
-import GameControllerIcon from "GameControllerIcon" /* 7438 */;
-import AppsIcon2 from "AppsIcon" /* 8101 */;
-import utils from "utils" /* 8419 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8469 */;
-import TvIcon from "TvIcon" /* 10851 */;
-import MusicIcon from "MusicIcon" /* 10856 */;
-import HourglassIcon from "HourglassIcon" /* 12277 */;
-import TopicsIcon from "TopicsIcon" /* 12623 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 15719 */;
-import Badges from "Badges" /* 15720 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import ActivityTypes from "ActivityTypes" /* 6066 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 7338 */;
+import GroupIcon from "GroupIcon" /* 7446 */;
+import GameControllerIcon from "GameControllerIcon" /* 7448 */;
+import AppsIcon2 from "AppsIcon" /* 8112 */;
+import utils from "utils" /* 8430 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 8480 */;
+import HourglassIcon from "HourglassIcon" /* 11026 */;
+import MusicIcon from "MusicIcon" /* 11572 */;
+import TopicsIcon from "TopicsIcon" /* 12782 */;
+import TvIcon from "TvIcon" /* 14137 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 15753 */;
+import Badges from "Badges" /* 15754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_6 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityBadges.tsx");

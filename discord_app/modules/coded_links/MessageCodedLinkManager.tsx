@@ -1,14 +1,14 @@
-// === Module 20300: MessageCodedLinkManager ===
+// === Module 20348: MessageCodedLinkManager ===
 
-// Module 20300 (MessageCodedLinkManager)
-import findCodedLinksDefault from "findCodedLinks" /* 6041 */;
-import resolveUserProfileCodedLinkDefault from "resolveUserProfileCodedLink" /* 20308 */;
-import resolveStorefrontCodedLinkDefault from "resolveStorefrontCodedLink" /* 20311 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 20312 */;
+// Module 20348 (MessageCodedLinkManager)
+import findCodedLinksDefault from "findCodedLinks" /* 6045 */;
+import resolveUserProfileCodedLinkDefault from "resolveUserProfileCodedLink" /* 20356 */;
+import resolveStorefrontCodedLinkDefault from "resolveStorefrontCodedLink" /* 20359 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 20360 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 8461 */;
-import InviteStore from "InviteStore" /* 6042 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7882 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 8472 */;
+import InviteStore from "InviteStore" /* 6046 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7892 */;
 
 const require = fn;
 function resolveMessageCodedLinks(content) {
@@ -169,7 +169,7 @@ function resolveMessageCodedLinks(content) {
                                                         const obj3 = { value, done: true };
                                                         return obj3;
                                                       } else {
-                                                        const useGameOrganizationInviteFetch = tmp4(20310).useGameOrganizationInviteFetch;
+                                                        const useGameOrganizationInviteFetch = tmp4(20358).useGameOrganizationInviteFetch;
                                                         items = [code];
                                                         v1 = 1;
                                                         dependencyMap = 1;
@@ -184,7 +184,7 @@ function resolveMessageCodedLinks(content) {
                                                       const obj = { value, done: true };
                                                       return obj;
                                                     } else {
-                                                      v1(14101)(closure_128_0).catch(closure_1_6);
+                                                      v1(12937)(closure_128_0).catch(closure_1_6);
                                                       dependencyMap = 3;
                                                       return { value: "HermesInternal", done: null };
                                                     }
@@ -387,7 +387,7 @@ function resolveMessageCodedLinks(content) {
                                                             const obj3 = { value, done: true };
                                                             return obj3;
                                                           } else {
-                                                            const useGameOrganizationInviteFetch = tmp4(20310).useGameOrganizationInviteFetch;
+                                                            const useGameOrganizationInviteFetch = tmp4(20358).useGameOrganizationInviteFetch;
                                                             items = [code];
                                                             v1 = 1;
                                                             dependencyMap = 1;
@@ -402,7 +402,7 @@ function resolveMessageCodedLinks(content) {
                                                           const obj = { value, done: true };
                                                           return obj;
                                                         } else {
-                                                          v1(14101)(closure_128_0).catch(closure_1_6);
+                                                          v1(12937)(closure_128_0).catch(closure_1_6);
                                                           dependencyMap = 3;
                                                           return { value: "HermesInternal", done: null };
                                                         }

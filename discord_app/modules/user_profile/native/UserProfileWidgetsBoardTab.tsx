@@ -1,14 +1,14 @@
-// === Module 15804: UserProfileWidgetsBoardTab ===
+// === Module 15838: UserProfileWidgetsBoardTab ===
 
-// Module 15804 (UserProfileWidgetsBoardTab)
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8607 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 12131 */;
-import useDisplayableBoardWidgets from "useDisplayableBoardWidgets" /* 12279 */;
-import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 15805 */;
-import ConjureServerWidgetUpsellDefault from "ConjureServerWidgetUpsell" /* 15806 */;
-import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15818 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 15830 */;
-import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 15831 */;
+// Module 15838 (UserProfileWidgetsBoardTab)
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8618 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 10872 */;
+import useDisplayableBoardWidgets from "useDisplayableBoardWidgets" /* 11028 */;
+import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 15839 */;
+import ConjureServerWidgetUpsellDefault from "ConjureServerWidgetUpsell" /* 15840 */;
+import UserProfileWidgetsEmptyStateDefault from "UserProfileWidgetsEmptyState" /* 15852 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 15864 */;
+import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 15865 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

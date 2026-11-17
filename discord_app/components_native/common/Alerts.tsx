@@ -1,20 +1,20 @@
-// === Module 19790: Alerts ===
+// === Module 19835: Alerts ===
 
-// Module 19790 (Alerts)
+// Module 19835 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
-import native from "native" /* 5367 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
-import OverlayViewDefault from "OverlayView" /* 6265 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 6322 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7474 */;
-import ModalRegistryDefault from "ModalRegistry" /* 19791 */;
+import native from "native" /* 5371 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6267 */;
+import OverlayViewDefault from "OverlayView" /* 6273 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 6330 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 7484 */;
+import ModalRegistryDefault from "ModalRegistry" /* 19836 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5307 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 16255 */;
-import PermissionVADStore from "PermissionVADStore" /* 16847 */;
-import AlertStore from "AlertStore" /* 12461 */;
+import AccessibilityStore from "AccessibilityStore" /* 5311 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 16292 */;
+import PermissionVADStore from "PermissionVADStore" /* 16882 */;
+import AlertStore from "AlertStore" /* 11207 */;
 
 const require = globalThis.__r;
 
@@ -245,7 +245,7 @@ let items2 = [PermissionVADStore];
 obj2.stores = items2;
 items1[1] = obj2;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj3 = { alertWrapper: null, alertContentWrapper: null };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -261,7 +261,7 @@ let closure_18 = { code: "(function AlertsTsx3(){let[useReducedMotion,visible,wi
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return closure_1_11(AlertWrapper, { item, transitionState, cleanUp }, arg0);
 }
-let closure_23 = Object.freeze({ renderAlert: "a", renderKey: "isArray", props: "isArray" });
+let closure_23 = Object.freeze({ renderAlert: "ip", renderKey: "isArray", props: "isArray" });
 const tmp6 = new ModalRegistryDefault(items1);
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -293,7 +293,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "a", renderKey: "isArray", props: "isArray" };
+        return { renderAlert: "ip", renderKey: "isArray", props: "isArray" };
       }
     }
   });

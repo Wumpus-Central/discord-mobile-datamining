@@ -1,13 +1,13 @@
-// === Module 8805: AdDeliveryStore ===
+// === Module 8816: AdDeliveryStore ===
 
-// Module 8805 (AdDeliveryStore)
+// Module 8816 (AdDeliveryStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
-import AdPlacement from "AdPlacement" /* 6960 */;
-import AdCreativeType from "AdCreativeType" /* 6961 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 8806 */;
+import AdPlacement from "AdPlacement" /* 6968 */;
+import AdCreativeType from "AdCreativeType" /* 6969 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 8817 */;
 
 require = fn;
 let closure_9 = [];
@@ -31,20 +31,20 @@ Object.defineProperty(prototype, "lastFetchedQuestToDeliver", {
   },
   set: undefined
 });
-prototype["isFetchingAdToDeliverByPlacement"] = function isFetchingAdToDeliverByPlacement(current) {
+prototype["isFetchingAdToDeliverByPlacement"] = function isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP) {
   let flag;
   if (map != null) {
-    flag = map.get(current);
+    flag = map.get(QUEST_HOME_BANNER_DESKTOP);
   }
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
-prototype["canRefreshAd"] = function canRefreshAd(current) {
+prototype["canRefreshAd"] = function canRefreshAd(QUEST_HOME_BANNER_DESKTOP) {
   value = undefined;
   if (map4 != null) {
-    value = map4.get(current);
+    value = map4.get(QUEST_HOME_BANNER_DESKTOP);
   }
   let tmp3 = null == value;
   if (!tmp3) {
@@ -171,15 +171,17 @@ const adDeliveryStore = new AdDeliveryStore(DispatcherDefault, {
     const timestamp = Date.now();
     const result2 = map4.set(placement, timestamp + value.fail());
   },
-  QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER: function handleClearExpiredQuestToDeliver(placement) {
-    placement = placement.placement;
-    ({ responseTtlSeconds, fetchedAt } = placement);
-    map = new Map(map);
-    const result = map.set(placement, false);
-    const obj = { creative: null, fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(responseTtlSeconds) };
-    map1 = new Map(map1);
-    items = [obj];
-    const result1 = map1.set(placement, items);
+  QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER: function handleClearExpiredQuestToDeliver(arg0) {
+    ({ placement, responseTtlSeconds, fetchedAt, refetchOnFocus } = arg0);
+    map = new Map(map1);
+    if (refetchOnFocus) {
+      items = [];
+    } else {
+      const obj = { creative: null, fetchedAt, ttlMillis: AdDecisionUtils.resolveResponseTtl(responseTtlSeconds) };
+      items = [obj];
+    }
+    const result = map.set(placement, items);
+    map1 = map;
   },
   QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function handleFetchQuestHomeHeroBegin(placement) {
     c13 = true;

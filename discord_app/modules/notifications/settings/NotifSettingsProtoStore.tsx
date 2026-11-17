@@ -1,11 +1,11 @@
-// === Module 16163: NotifSettingsProtoStore ===
+// === Module 16200: NotifSettingsProtoStore ===
 
-// Module 16163 (NotifSettingsProtoStore)
+// Module 16200 (NotifSettingsProtoStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
-import notification_settings from "notification_settings" /* 16164 */;
-import EffectiveNotifSettings from "EffectiveNotifSettings" /* 16166 */;
+import notification_settings from "notification_settings" /* 16201 */;
+import EffectiveNotifSettings from "EffectiveNotifSettings" /* 16203 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -99,7 +99,7 @@ function acceptEffectiveSettings(effectiveSettings) {
   }
   return tmp;
 }
-let DeclarativeSettings = fn(16164).DeclarativeSettings;
+let DeclarativeSettings = fn(16201).DeclarativeSettings;
 let closure_9 = DeclarativeSettings.create();
 let c10;
 let c11;
@@ -107,7 +107,8 @@ let c12 = false;
 let c13 = 0;
 let c14 = false;
 let c15 = false;
-let closure_16 = 0;
+let c16 = false;
+let closure_17 = 0;
 let enabled = false;
 const PersistedStore = initializeDefault.PersistedStore;
 class NotifSettingsProtoStore extends PersistedStore {
@@ -231,6 +232,12 @@ Object.defineProperty(prototype, "isEffectiveSettingsStale", {
   },
   set: undefined
 });
+Object.defineProperty(prototype, "hasCompletedEffectiveSettingsFetch", {
+  get: function hasCompletedEffectiveSettingsFetch() {
+    return c16;
+  },
+  set: undefined
+});
 Object.defineProperty(prototype, "isEffectiveSettingsLoading", {
   get: function isEffectiveSettingsLoading() {
     return c15;
@@ -239,13 +246,13 @@ Object.defineProperty(prototype, "isEffectiveSettingsLoading", {
 });
 Object.defineProperty(prototype, "isEffectiveSettingsScreenOpen", {
   get: function isEffectiveSettingsScreenOpen() {
-    return closure_16 > 0;
+    return closure_17 > 0;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "effectiveSettingsScreenCount", {
   get: function effectiveSettingsScreenCount() {
-    return closure_16;
+    return closure_17;
   },
   set: undefined
 });
@@ -614,13 +621,15 @@ const notifSettingsProtoStore = new NotifSettingsProtoStore(DispatcherDefault, {
     c14 = false;
     c5 = undefined;
     c15 = false;
-    closure_16 = 0;
+    c16 = false;
+    closure_17 = 0;
     enabled = false;
     assignment = undefined;
   },
   USER_SETTINGS_PROTO_UPDATE() {
     if (null != c2) {
       if (c3 !== obj.legacySourceFingerprint(c2, UserSettingsProtoStore.settings)) {
+        c16 = false;
         c14 = true;
         c5 = undefined;
         c15 = false;
@@ -637,6 +646,7 @@ const notifSettingsProtoStore = new NotifSettingsProtoStore(DispatcherDefault, {
     if (requestId.requestId !== c5) {
       return false;
     } else {
+      c16 = true;
       c15 = false;
       c5 = undefined;
       acceptEffectiveSettings(tmp);
@@ -648,13 +658,14 @@ const notifSettingsProtoStore = new NotifSettingsProtoStore(DispatcherDefault, {
     } else {
       c5 = undefined;
       c15 = false;
+      c16 = true;
     }
   },
   EFFECTIVE_NOTIFICATION_SETTINGS_SCREEN_OPEN() {
-    closure_16 = closure_16 + 1;
+    closure_17 = closure_17 + 1;
   },
   EFFECTIVE_NOTIFICATION_SETTINGS_SCREEN_CLOSE() {
-    closure_16 = Math.max(0, closure_16 - 1);
+    closure_17 = Math.max(0, closure_17 - 1);
   },
   EFFECTIVE_NOTIFICATION_SETTINGS_ARM_CHANGE(arg0) {
     ({ enabled, assignment } = arg0);
@@ -681,6 +692,7 @@ const notifSettingsProtoStore = new NotifSettingsProtoStore(DispatcherDefault, {
       tmp = arm !== str;
     }
     if (tmp) {
+      c16 = false;
       c14 = true;
       c5 = undefined;
       c15 = false;

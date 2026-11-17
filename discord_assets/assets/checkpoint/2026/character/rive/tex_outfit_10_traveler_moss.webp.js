@@ -1,9 +1,9 @@
-// === Module 14415: ? ===
+// === Module 13280: ? ===
 
-// Module 14415
+// Module 13280
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_10_traveler_moss.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/d64d37450d7389fd3251911ac4c8e4ec073f023044cb38e8ca0811ed742c04b7.webp";
-export const metadata = { fileBytes: 29080 };
+export default "https://cdn.discordapp.com/assets/content/1ce8ee2ec7b93ee35b3af711c33eede3ce50f07172facf6717c88f1091f5e504.webp";
+export const metadata = { fileBytes: 73092 };

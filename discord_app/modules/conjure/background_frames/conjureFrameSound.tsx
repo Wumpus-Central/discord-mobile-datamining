@@ -1,6 +1,6 @@
-// === Module 15619: conjureFrameSound ===
+// === Module 15653: conjureFrameSound ===
 
-// Module 15619 (conjureFrameSound)
+// Module 15653 (conjureFrameSound)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/background_frames/conjureFrameSound.tsx");

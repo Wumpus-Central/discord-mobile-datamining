@@ -1,23 +1,23 @@
-// === Module 16913: ConjureVoiceSessionCoordinator ===
+// === Module 16948: ConjureVoiceSessionCoordinator ===
 
-// Module 16913 (ConjureVoiceSessionCoordinator)
+// Module 16948 (ConjureVoiceSessionCoordinator)
 import applyDefault from "apply" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 6215 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 6218 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 7022 */;
-import RPCErrorDefault from "RPCError" /* 7303 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16915 */;
-import FramesStore from "FramesStore" /* 7019 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 6223 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 6226 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 7030 */;
+import RPCErrorDefault from "RPCError" /* 7313 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 16950 */;
+import FramesStore from "FramesStore" /* 7027 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 6061 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 6068 */;
 import UserStore from "UserStore" /* 1388 */;
-import VoiceStateStore from "VoiceStateStore" /* 5971 */;
+import VoiceStateStore from "VoiceStateStore" /* 5975 */;
 
 let obj2 = fn;
 const RPCErrors = fn(1072).RPCErrors;
-const Constants = fn(6065);
+const Constants = fn(6072);
 ({ Features: closure_10, MediaEngineContextTypes: closure_11 } = Constants);
 let closure_12 = { x: 0, y: 0, z: -1 };
 let closure_13 = { isSpatial: true, distanceAttenuation: { enabled: true }, airAbsorption: { enabled: true } };
@@ -137,15 +137,15 @@ prototype["start"] = function start(id) {
               const tmp15 = new RPCErrorDefault(obj, "This app can only start a voice session in a voice channel in the server it is installed in");
               throw tmp15;
             }
-            tmp41Result2 = tmp41(16914);
+            tmp41Result2 = tmp41(16949);
           }
-          tmp41Result = tmp41(16914);
+          tmp41Result = tmp41(16949);
         } else {
           obj2 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
           const tmp8 = new RPCErrorDefault(obj2, "Only an app running in your voice channel can start a voice session");
           throw tmp8;
         }
-        obj13 = handleFrameLifecycleChange(16914);
+        obj13 = handleFrameLifecycleChange(16949);
       }
       const sessions = self.sessions;
       value = sessions.get(frameId);
@@ -216,16 +216,16 @@ prototype["enableSpatial"] = function enableSpatial(socket, session_id) {
 prototype["setAcoustics"] = function setAcoustics(socket, session_id, acoustics) {
   const self = this;
   if (this.getSpatialCapabilities().available) {
-    obj2 = obj2(16916);
+    obj2 = obj2(16951);
     const roomError = obj2.getRoomError(acoustics);
     if (null != roomError) {
       const obj3 = { errorCode: RPCErrors.INVALID_PAYLOAD };
       const tmp22 = new RPCErrorDefault(obj3, roomError);
       throw tmp22;
     } else {
-      validateSessionResult.acoustics = tmp11(16916).toSpatialAudioOverrides(acoustics);
+      validateSessionResult.acoustics = tmp11(16951).toSpatialAudioOverrides(acoustics);
       const result = self.syncSpatialAudioOverrides();
-      const tmp11Result = tmp11(16916);
+      const tmp11Result = tmp11(16951);
     }
     tmp11 = obj2;
   } else {
@@ -352,7 +352,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(16917).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(16952).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

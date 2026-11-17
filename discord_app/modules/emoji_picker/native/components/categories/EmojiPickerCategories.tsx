@@ -1,26 +1,26 @@
-// === Module 11315: EmojiPickerCategories ===
+// === Module 12011: EmojiPickerCategories ===
 
-// Module 11315 (EmojiPickerCategories)
+// Module 12011 (EmojiPickerCategories)
 import nativeDefault from "native" /* 575 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import HapticUtils from "HapticUtils" /* 5544 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5545 */;
-import FastestListDefault from "FastestList" /* 7830 */;
-import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 11316 */;
-import useExpressionPickerCategoriesPlaceholderConfigDefault from "useExpressionPickerCategoriesPlaceholderConfig" /* 11330 */;
-import ExpressionPickerCategoriesDefault from "ExpressionPickerCategories" /* 11331 */;
+import HapticUtils from "HapticUtils" /* 5548 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5549 */;
+import FastestListDefault from "FastestList" /* 7840 */;
+import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 12012 */;
+import useExpressionPickerCategoriesPlaceholderConfigDefault from "useExpressionPickerCategoriesPlaceholderConfig" /* 12024 */;
+import ExpressionPickerCategoriesDefault from "ExpressionPickerCategories" /* 12025 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const EmojiCategoryTypes = fn(6972).EmojiCategoryTypes;
+const EmojiCategoryTypes = fn(6980).EmojiCategoryTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: closure_6, CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
-const ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
+let ExpressionPickerViewType = fn(1228).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: closure_10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, listPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, item: { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" }, keyboardItem: { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE } };
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = { code: "(function EmojiPickerCategoriesTsx1(){let[categoryIndexActive]=this.__closure;return categoryIndexActive.get();})" };
@@ -35,12 +35,13 @@ let result = size.fileFinishedImporting("modules/emoji_picker/native/components/
 export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   bottomSheetRef = bottomSheetRef.bottomSheetRef;
   _require = bottomSheetRef;
+  const isSheetExpandedRef = bottomSheetRef.isSheetExpandedRef;
+  importDefault = isSheetExpandedRef;
   const categories = bottomSheetRef.categories;
-  importDefault = categories;
+  dependencyMap = categories;
   const categoryIndexActive = bottomSheetRef.categoryIndexActive;
-  dependencyMap = categoryIndexActive;
+  noop = categoryIndexActive;
   const emojiPickerListRef = bottomSheetRef.emojiPickerListRef;
-  noop = emojiPickerListRef;
   ({ onBackspace, portalHostName } = bottomSheetRef);
   ({ bottomSheetIndex, style } = bottomSheetRef);
   if (portalHostName === undefined) {
@@ -55,29 +56,30 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     isSearching = false;
   }
   const onClearSearch = bottomSheetRef.onClearSearch;
+  let callback;
   let derivedValue;
   let ref2;
   let ref3;
   let callback2;
   let callback3;
-  const tmp = derivedValue();
-  closure_7 = tmp;
+  const tmp = callback();
+  ExpressionPickerViewType = tmp;
   const sharedValue = require("module_1655").useSharedValue(undefined);
   noop.useRef(undefined);
   const ref = noop.useRef(null);
   items = [categories];
   const memo = noop.useMemo(() => {
-    let arr = _undefined2;
+    let arr = _undefined3;
     let num = 0;
-    if (0 < _undefined2.length) {
-      while (_undefined2[num].type !== EmojiCategoryTypes.UNICODE) {
+    if (0 < _undefined3.length) {
+      while (_undefined3[num].type !== EmojiCategoryTypes.UNICODE) {
         num = num + 1;
-        arr = _undefined2;
+        arr = _undefined3;
       }
       const obj2 = { sections: null, firstUnicodeCategory: null, firstUnicodeCategoryIndex: null };
-      items = [_undefined2.length];
+      items = [_undefined3.length];
       obj2.sections = items;
-      obj2.firstUnicodeCategory = _undefined2[num];
+      obj2.firstUnicodeCategory = _undefined3[num];
       obj2.firstUnicodeCategoryIndex = num;
       return obj2;
     }
@@ -87,7 +89,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     return obj;
   }, items);
   ({ firstUnicodeCategory, sections, firstUnicodeCategoryIndex } = memo);
-  const callback = noop.useCallback((item) => {
+  callback = noop.useCallback((item) => {
     if (null != ref.current) {
       const current = ref.current;
       if (current != null) {
@@ -97,7 +99,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     }
   }, []);
   let obj = require("module_1655");
-  let items1 = [ref2, categoryIndexActive];
+  let items1 = [derivedValue, categoryIndexActive];
   _require = undefined;
   [tmp8, tmp9] = items1;
   class EmojiPickerCategoriesTsx1 {
@@ -109,7 +111,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   EmojiPickerCategoriesTsx1.__closure = items2;
   EmojiPickerCategoriesTsx1.__workletHash = 726737127541;
   EmojiPickerCategoriesTsx1.__initData = tmp8;
-  const items3 = [ref3, sharedValue, closure_7, require("module_1708").scheduleOnRN, callback];
+  const items3 = [ref2, sharedValue, onClearSearch, require("module_1708").scheduleOnRN, callback];
   _require = undefined;
   importDefault = undefined;
   dependencyMap = undefined;
@@ -149,8 +151,8 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     }
   }, items5);
   let obj3 = require("module_1655");
-  const tmp10 = closure_7;
-  const items6 = [callback2, flag, bottomSheetIndex];
+  const tmp10 = onClearSearch;
+  const items6 = [ref3, flag, bottomSheetIndex];
   _require = undefined;
   importDefault = undefined;
   [tmp18, tmp19, tmp20] = items6;
@@ -174,44 +176,46 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   derivedValue = require("module_1655").useDerivedValue(EmojiPickerCategoriesTsx3);
   ref2 = obj2.useRef(undefined);
   ref3 = obj2.useRef(false);
-  const items8 = [derivedValue, bottomSheetRef, emojiPickerListRef, flag, isSearching, onClearSearch];
+  const items8 = [derivedValue, bottomSheetRef, emojiPickerListRef, flag, isSheetExpandedRef, isSearching, onClearSearch];
   callback2 = obj2.useCallback(() => {
     let current = arg0;
     if (arg0 === undefined) {
       current = ref2.current;
     }
     if (null != current) {
-      if (!derivedValue.get()) {
-        if (flag) {
-          if (_undefined != null) {
-            const current2 = _undefined.current;
-            if (current2 != null) {
-              current2.expandActionSheet();
-            }
-          }
-          ref2.current = current;
-          closure_14.current = false;
-        }
+      if (flag) {
+        let tmp3 = !derivedValue.get();
+      } else {
+        tmp3 = null != _undefined2 && !_undefined2.current;
       }
-      let tmp7 = isSearching;
-      if (!isSearching) {
-        if (null != _undefined3.current) {
-          ref2.current = undefined;
-          closure_14.current = false;
-          const current3 = tmp8.current;
-          const obj = { index: current };
-          current3.scrollToHeaderIndex(obj);
+      if (tmp3) {
+        ref2.current = current;
+        closure_15.current = false;
+        const current3 = _undefined.current;
+        if (current3 != null) {
+          current3.expandActionSheet();
         }
       } else {
-        tmp7 = onClearSearch;
+        if (isSearching) {
+          if (null != onClearSearch) {
+            ref2.current = current;
+            closure_15.current = true;
+            tmp6();
+          }
+        }
+        if (null != emojiPickerListRef.current) {
+          ref2.current = undefined;
+          closure_15.current = false;
+          const current2 = tmp7.current;
+          const obj = { index: current };
+          current2.scrollToHeaderIndex(obj);
+        }
       }
-      ref2.current = current;
-      closure_14.current = true;
-      tmp7 = tmp7();
+      return tmp11;
     }
   }, items8);
   const tmp2Result = require("module_1655");
-  const items9 = [callback3, derivedValue];
+  const items9 = [callback2, derivedValue];
   _require = undefined;
   [tmp23, tmp24] = items9;
   class EmojiPickerCategoriesTsx4 {
@@ -223,7 +227,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   EmojiPickerCategoriesTsx4.__closure = items10;
   EmojiPickerCategoriesTsx4.__workletHash = 4255098648304;
   EmojiPickerCategoriesTsx4.__initData = tmp23;
-  const items11 = [closure_17, require("module_1708").scheduleOnRN, callback2];
+  const items11 = [callback3, require("module_1708").scheduleOnRN, callback2];
   _require = undefined;
   importDefault = undefined;
   [tmp25, tmp26, tmp27] = items11;
@@ -251,7 +255,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
           ref2.current = undefined;
           tmp.current = false;
           const result = categoryIndexActive.set(current);
-          const current2 = _undefined3.current;
+          const current2 = emojiPickerListRef.current;
           if (current2 != null) {
             const obj = { index: current };
             current2.scrollToHeaderIndex(obj);
@@ -304,20 +308,20 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     obj.end = num2 + ref.current;
     const result = sharedValue.set(obj);
   }, items16);
-  const callback6 = obj2.useCallback((arg0, index) => React6(EmojiPickerCategoriesItemDefault, { category: _undefined2[index], categoryIndexActive, index, handlePressCategory: callback3, loadingStyle: closure_7.listPlaceholder, locked: _undefined2[index].isNitroLocked, style: closure_7.item }), items17);
+  const callback6 = obj2.useCallback((arg0, index) => React6(EmojiPickerCategoriesItemDefault, { category: _undefined3[index], categoryIndexActive, index, handlePressCategory: callback3, loadingStyle: closure_8.listPlaceholder, locked: _undefined3[index].isNitroLocked, style: closure_8.item }), items17);
   const tmp2Result2 = require("module_1655");
   const memo1 = obj2.useMemo(() => {
-    const Gesture = _undefined(categoryIndexActive[14]).Gesture;
+    const Gesture = _undefined(_undefined3[14]).Gesture;
     return Gesture.Native().disallowInterruption(true);
   }, []);
   let obj4 = { portalHostName, style, children: null };
   const tmp35 = useExpressionPickerCategoriesPlaceholderConfigDefault();
-  const obj5 = { gesture: memo1, children: ref(FastestListDefault, { estimatedListSize: "windowSize", horizontal: true, itemSize: tmp10, keyboardShouldPersistTaps: "always", listId: sharedValue.EMOJI, onLayout: callback5, onScroll: callback1, placeholderConfig: tmp35, ref, renderAhead, renderItem: callback6, scrollReporting: "callbacks", sections, showsHorizontalScrollIndicator: false, style: tmp.list }) };
-  const items18 = [ref(require("LegacyBaseButton").GestureDetector, obj5), , ];
+  const obj5 = { gesture: memo1, children: sharedValue(FastestListDefault, { estimatedListSize: "windowSize", horizontal: true, itemSize: tmp10, keyboardShouldPersistTaps: "always", listId: ExpressionPickerViewType.EMOJI, onLayout: callback5, onScroll: callback1, placeholderConfig: tmp35, ref, renderAhead, renderItem: callback6, scrollReporting: "callbacks", sections, showsHorizontalScrollIndicator: false, style: tmp.list }) };
+  const items18 = [sharedValue(require("LegacyBaseButton").GestureDetector, obj5), , ];
   let tmp37Result = null;
   if (null != firstUnicodeCategory) {
     const obj7 = { blockRef: sharedValue, category: firstUnicodeCategory, categoryIndex: firstUnicodeCategoryIndex, onPress: callback4, style: tmp.item };
-    tmp37Result = tmp37(tmp34(11332), obj7);
+    tmp37Result = tmp37(tmp34(12026), obj7);
   }
   items18[1] = tmp37Result;
   let tmp37Result2 = null;
@@ -325,9 +329,9 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     const obj8 = { style: null, iconStyle: null, onBackspace: null };
     ({ item: obj10.style, keyboardItem: obj10.iconStyle } = tmp);
     obj8.onBackspace = onBackspace;
-    tmp37Result2 = tmp37(tmp34(11334), obj8);
+    tmp37Result2 = tmp37(tmp34(12027), obj8);
   }
   items18[2] = tmp37Result2;
-  obj4.children = callback(ref, { children: items18 });
-  return ref(ExpressionPickerCategoriesDefault, obj4);
+  obj4.children = ref(ref, { children: items18 });
+  return sharedValue(ExpressionPickerCategoriesDefault, obj4);
 });

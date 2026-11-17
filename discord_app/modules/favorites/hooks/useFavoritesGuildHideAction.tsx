@@ -1,13 +1,13 @@
-// === Module 18858: useFavoritesGuildHideAction ===
+// === Module 18899: useFavoritesGuildHideAction ===
 
-// Module 18858 (useFavoritesGuildHideAction)
+// Module 18899 (useFavoritesGuildHideAction)
 import router_utils from "router_utils" /* 1099 */;
 import util from "util" /* 1113 */;
-import _modDef3679 from "module_3679" /* 3679 */;
-import FavoritesUtils from "FavoritesUtils" /* 5180 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10944 */;
+import _modDef3681 from "module_3681" /* 3681 */;
+import FavoritesUtils from "FavoritesUtils" /* 5184 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 11897 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5339 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5343 */;
 
 require = fn;
 const Routes = fn(1072).Routes;
@@ -25,9 +25,9 @@ export default function useFavoritesGuildHideAction() {
     obj2 = FavoritesUtils;
   }, []);
   const intl = util.intl;
-  obj.label = intl.string(_modDef3679["8FO0y9"]);
+  obj.label = intl.string(_modDef3681["8FO0y9"]);
   const intl2 = util.intl;
-  obj.subLabel = intl2.string(_modDef3679.FaHxWl);
+  obj.subLabel = intl2.string(_modDef3681.FaHxWl);
   obj.perform = callback;
   return obj;
 };

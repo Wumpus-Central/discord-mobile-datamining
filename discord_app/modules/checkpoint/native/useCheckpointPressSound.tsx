@@ -1,7 +1,7 @@
-// === Module 14487: useCheckpointPressSound ===
+// === Module 13352: useCheckpointPressSound ===
 
-// Module 14487 (useCheckpointPressSound)
-import useCheckpointSoundDefault from "useCheckpointSound" /* 14488 */;
+// Module 13352 (useCheckpointPressSound)
+import useCheckpointSoundDefault from "useCheckpointSound" /* 13353 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

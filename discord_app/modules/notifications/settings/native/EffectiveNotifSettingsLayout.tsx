@@ -1,14 +1,14 @@
-// === Module 18626: EffectiveNotifSettingsLayout ===
+// === Module 18667: EffectiveNotifSettingsLayout ===
 
-// Module 18626 (EffectiveNotifSettingsLayout)
+// Module 18667 (EffectiveNotifSettingsLayout)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import nativeDefault from "native" /* 575 */;
-import _modDef3029 from "module_3029" /* 3029 */;
-import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCreators" /* 18627 */;
+import _modDef3031 from "module_3031" /* 3031 */;
+import EffectiveNotifSettingsActionCreators from "EffectiveNotifSettingsActionCreators" /* 18668 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 16163 */;
+import NotifSettingsProtoStore from "NotifSettingsProtoStore" /* 16200 */;
 
 require = fn;
 function EffectiveSettingsHeader() {
@@ -24,41 +24,28 @@ function EffectiveSettingsHeader() {
   if (null != Header) {
     tmp6 = closure_7(Header, {});
   }
-  const items1 = [tmp6, ];
-  if (!context.unavailable) {
-    const obj2 = { children: null };
-    items1[1] = null;
-    obj2.children = items1;
-    return closure_9(closure_8, obj2);
-  } else {
-    let stringResult = dependencyMap;
+  const children = [tmp6, ];
+  let tmp8 = null;
+  if (context.unavailable) {
     let obj = { style: tmp.notice, children: null };
-    let str = "warning";
-    if (loading) {
-      str = "info";
-    }
-    let obj3 = { type: str, role: "status", message: null, action: null };
-    let intl = loading(1113).intl;
-    let string = intl.string;
-    const tmp12 = _modDef3029;
-    obj3.message = string(loading ? tmp12.Ns127F : tmp12.Nu2TMI);
-    const obj4 = { text: null, onPress: null, loading: null };
-    intl = loading(1113).intl;
-    string = intl.string;
-    stringResult = string(loading(1113).t["5911Lb"]);
-    obj4.text = stringResult;
-    obj4.onPress = callback;
-    obj4.loading = loading;
-    obj3.action = obj4;
-    obj3 = closure_7(loading(8159).InlineNotice, obj3);
-    obj.children = obj3;
-    closure_7(loading(6327).Stack, obj);
+    const obj2 = { type: "warning", role: "status", message: null, action: null };
+    const intl = loading(1113).intl;
+    obj2.message = intl.string(_modDef3031.Nu2TMI);
+    const obj3 = { text: null, onPress: null, loading: null };
+    const intl2 = loading(1113).intl;
+    obj3.text = intl2.string(loading(1113).t["5911Lb"]);
+    obj3.onPress = callback;
+    obj3.loading = loading;
+    obj2.action = obj3;
+    obj.children = closure_7(loading(8170).InlineNotice, obj2);
+    tmp8 = closure_7(loading(6335).Stack, obj);
   }
-  tmp = closure_10();
+  children[1] = tmp8;
+  return closure_9(closure_8, { children });
 }
 const jsxProd = fn(21);
 ({ jsx: metroImportDefault, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { notice: { paddingTop: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj);
 const redux = noop.createContext({ unavailable: false, loading: false });
@@ -71,13 +58,15 @@ export default function EffectiveNotifSettingsLayout(node) {
   let isDeclarativeNotificationSettingsRedesignEnabled;
   let stateFromStores1;
   let memo;
+  let tmp2 = isDeclarativeNotificationSettingsRedesignEnabled;
   isDeclarativeNotificationSettingsRedesignEnabled = node(isDeclarativeNotificationSettingsRedesignEnabled[12]).useIsDeclarativeNotificationSettingsRedesignEnabled("EffectiveNotifSettingsLayout");
   let obj = node(isDeclarativeNotificationSettingsRedesignEnabled[12]);
+  let tmp = node;
   items = [NotifSettingsProtoStore, memo, stateFromStores1];
   const stateFromStores = node(isDeclarativeNotificationSettingsRedesignEnabled[13]).useStateFromStores(items, () => NotifSettingsProtoStore.hasValidEffectiveSettings);
   const obj2 = node(isDeclarativeNotificationSettingsRedesignEnabled[13]);
   const items1 = [NotifSettingsProtoStore];
-  stateFromStores1 = node(isDeclarativeNotificationSettingsRedesignEnabled[13]).useStateFromStores(items1, () => NotifSettingsProtoStore.isEffectiveSettingsLoading);
+  stateFromStores1 = node(isDeclarativeNotificationSettingsRedesignEnabled[13]).useStateFromStores(items1, () => NotifSettingsProtoStore.isEffectiveSettingsLoading || !NotifSettingsProtoStore.hasCompletedEffectiveSettingsFetch);
   const items2 = [isDeclarativeNotificationSettingsRedesignEnabled];
   const effect = stateFromStores.useEffect(() => {
     if (isDeclarativeNotificationSettingsRedesignEnabled) {
@@ -111,13 +100,19 @@ export default function EffectiveNotifSettingsLayout(node) {
     return obj;
   }, items4);
   if (isDeclarativeNotificationSettingsRedesignEnabled) {
-    const obj4 = { value: tmp8, children: null };
+    if (!stateFromStores) {
+      if (stateFromStores1) {
+        let tmp13 = closure_7(tmp(tmp2[16]).SceneLoadingIndicator, {});
+      }
+    }
+    const obj4 = { value: tmp9, children: null };
     const obj5 = { node: memo1 };
-    obj4.children = closure_7(unavailableNode(tmp[15]), obj5);
-    let tmp9Result = closure_7(redux.Provider, obj4);
+    tmp2 = closure_7(unavailableNode(tmp2[15]), obj5);
+    obj4.children = tmp2;
+    tmp13 = closure_7(redux.Provider, obj4);
   } else {
     const obj6 = { node };
-    tmp9Result = closure_7(unavailableNode(tmp[15]), obj6);
+    return closure_7(unavailableNode(tmp2[15]), obj6);
   }
-  return tmp9Result;
+  const obj3 = node(isDeclarativeNotificationSettingsRedesignEnabled[13]);
 };

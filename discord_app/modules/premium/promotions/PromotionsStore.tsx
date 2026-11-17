@@ -1,19 +1,19 @@
-// === Module 9623: PromotionsStore ===
+// === Module 9635: PromotionsStore ===
 
-// Module 9623 (PromotionsStore)
+// Module 9635 (PromotionsStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import MarketingSurfaceTypeUtils from "MarketingSurfaceTypeUtils" /* 9626 */;
-import MarketingSurfaceType from "MarketingSurfaceType" /* 9627 */;
-import CampaignDevToolsUtils from "CampaignDevToolsUtils" /* 9670 */;
-import selectActiveMarketingComponentDefault from "selectActiveMarketingComponent" /* 9678 */;
+import MarketingSurfaceTypeUtils from "MarketingSurfaceTypeUtils" /* 9638 */;
+import MarketingSurfaceType from "MarketingSurfaceType" /* 9639 */;
+import CampaignDevToolsUtils from "CampaignDevToolsUtils" /* 9683 */;
+import selectActiveMarketingComponentDefault from "selectActiveMarketingComponent" /* 9691 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import PromotionRecord from "PromotionRecord" /* 9624 */;
+import PromotionRecord from "PromotionRecord" /* 9636 */;
 import UserStore from "UserStore" /* 1388 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1389 */;
-import MarketingComponentRecord from "MarketingComponentRecord" /* 9625 */;
+import MarketingComponentRecord from "MarketingComponentRecord" /* 9637 */;
 
 require = fn;
 function createEmptyPromotionsByType() {

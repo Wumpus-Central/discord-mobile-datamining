@@ -1,13 +1,13 @@
-// === Module 8541: ProfileCustomizationUtils ===
+// === Module 8552: ProfileCustomizationUtils ===
 
-// Module 8541 (ProfileCustomizationUtils)
+// Module 8552 (ProfileCustomizationUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import shared from "shared" /* 5313 */;
+import shared from "shared" /* 5317 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8542 */;
-import UserProfileStore from "UserProfileStore" /* 7352 */;
-import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8553 */;
+import UserProfileStore from "UserProfileStore" /* 7362 */;
+import GuildMemberStore from "GuildMemberStore" /* 5222 */;
 
 const require = globalThis.__r;
 

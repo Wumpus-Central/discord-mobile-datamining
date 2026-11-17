@@ -1,6 +1,6 @@
-// === Module 14563: PrivateChannelRecipientActionCreators ===
+// === Module 13436: PrivateChannelRecipientActionCreators ===
 
-// Module 14563 (PrivateChannelRecipientActionCreators)
+// Module 13436 (PrivateChannelRecipientActionCreators)
 import Constants from "Constants" /* 1072 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import size from "module_2" /* 2 */;

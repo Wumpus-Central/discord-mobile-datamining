@@ -1,6 +1,6 @@
-// === Module 7290: SpotifyStore ===
+// === Module 7300: SpotifyStore ===
 
-// Module 7290 (SpotifyStore)
+// Module 7300 (SpotifyStore)
 import LoggerDefault from "Logger" /* 3 */;
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -8,20 +8,20 @@ import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import Timers from "Timers" /* 5150 */;
-import useIsSpeaking from "useIsSpeaking" /* 7026 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 7292 */;
-import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 7312 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7313 */;
+import Timers from "Timers" /* 5154 */;
+import useIsSpeaking from "useIsSpeaking" /* 7034 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 7302 */;
+import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 7322 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7323 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2140 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7085 */;
-import IdleStore from "IdleStore" /* 7041 */;
-import PresenceStore from "PresenceStore" /* 6058 */;
-import SpeakingStore from "SpeakingStore" /* 6931 */;
-import VoiceStateStore from "VoiceStateStore" /* 5971 */;
-import Platforms from "Platforms" /* 7087 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 7093 */;
+import IdleStore from "IdleStore" /* 7049 */;
+import PresenceStore from "PresenceStore" /* 6065 */;
+import SpeakingStore from "SpeakingStore" /* 6939 */;
+import VoiceStateStore from "VoiceStateStore" /* 5975 */;
+import Platforms from "Platforms" /* 7095 */;
 
 require = fn;
 function upsertAccount(accountId, accessToken) {
@@ -57,7 +57,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_30);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(5150).Interval();
+    const interval = new obj(5154).Interval();
     obj.pingInterval = interval;
     const tmp14 = new BackoffDefault(undefined, MINUTE);
     obj.backoff = tmp14;
@@ -699,7 +699,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(7291);
+const SpotifyConstants = fn(7301);
 ({ getSpotifyResourceType: closure_14, isSpotifyParty: closure_15, SPOTIFY_PARTY_PREFIX: closure_16, SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = SpotifyConstants);
 const Constants = fn(1072);
 const PlatformTypes = Constants.PlatformTypes;
@@ -718,11 +718,11 @@ const message = "message";
 const ping = "ping";
 const single = "single";
 const logger = new LoggerDefault("Spotify");
-let timeout = new fn(5150).Timeout();
-const timeout1 = new fn(5150).Timeout();
-const timeout2 = new fn(5150).Timeout();
-const timeout3 = new fn(5150).Timeout();
-const timeout4 = new fn(5150).Timeout();
+let timeout = new fn(5154).Timeout();
+const timeout1 = new fn(5154).Timeout();
+const timeout2 = new fn(5154).Timeout();
+const timeout3 = new fn(5154).Timeout();
+const timeout4 = new fn(5154).Timeout();
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -789,7 +789,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(7292).SpotifyAPI;
+    const SpotifyAPI = self(7302).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1478,7 +1478,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_36.stop(), false);
-        obj9 = device(7026);
+        obj9 = device(7034);
       }
       if (null != tmp10) {
         if (!tmp43) {

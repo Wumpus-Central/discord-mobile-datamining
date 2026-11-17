@@ -1,19 +1,19 @@
-// === Module 19319: useSharedICYMILogic ===
+// === Module 19364: useSharedICYMILogic ===
 
-// Module 19319 (useSharedICYMILogic)
-import ICYMITypes from "ICYMITypes" /* 10210 */;
-import ICYMIUtils from "ICYMIUtils" /* 10216 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10217 */;
-import ICYMIAnalytics2 from "ICYMIAnalytics" /* 16851 */;
-import ICYMIStoreUtils from "ICYMIStoreUtils" /* 19317 */;
+// Module 19364 (useSharedICYMILogic)
+import ICYMITypes from "ICYMITypes" /* 10654 */;
+import ICYMIUtils from "ICYMIUtils" /* 10659 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 10660 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 16886 */;
+import ICYMIStoreUtils from "ICYMIStoreUtils" /* 19362 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ICYMIStore from "ICYMIStore" /* 10205 */;
+import ICYMIStore from "ICYMIStore" /* 10650 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SCROLL_EVENT_THROTTLE_MS = fn(19285).SCROLL_EVENT_THROTTLE_MS;
+const SCROLL_EVENT_THROTTLE_MS = fn(19330).SCROLL_EVENT_THROTTLE_MS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");
 
@@ -125,13 +125,13 @@ export function useSharedICYMILogic(notificationItem) {
       }
       const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
       const result = ICYMIAnalytics.trackItemShortImpression(viewableItems, viewableFeedItemsArray.flatMap((item) => {
-        const dehydratedAnalyticsItemId = notificationItem(10226).getDehydratedAnalyticsItemId(item);
+        const dehydratedAnalyticsItemId = notificationItem(10669).getDehydratedAnalyticsItemId(item);
         if (null == dehydratedAnalyticsItemId) {
           items = [];
         } else {
-          const obj2 = { id: dehydratedAnalyticsItemId, type: notificationItem(10210).typeToString(item) };
+          const obj2 = { id: dehydratedAnalyticsItemId, type: notificationItem(10654).typeToString(item) };
           items = [obj2];
-          const tmpResult = notificationItem(10210);
+          const tmpResult = notificationItem(10654);
         }
         return items;
       }), stateFromStores);
@@ -144,25 +144,25 @@ export function useSharedICYMILogic(notificationItem) {
       const viewableFeedItemsArray = ICYMIStoreUtils.getViewableFeedItemsArray(viewableItems);
       const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
       const result = ICYMIAnalytics.trackItemLongImpression(viewableItems, viewableFeedItemsArray.flatMap((item) => {
-        const dehydratedAnalyticsItemId = notificationItem(10226).getDehydratedAnalyticsItemId(item);
+        const dehydratedAnalyticsItemId = notificationItem(10669).getDehydratedAnalyticsItemId(item);
         if (null == dehydratedAnalyticsItemId) {
           items = [];
         } else {
-          const obj2 = { id: dehydratedAnalyticsItemId, type: notificationItem(10210).typeToString(item) };
+          const obj2 = { id: dehydratedAnalyticsItemId, type: notificationItem(10654).typeToString(item) };
           items = [obj2];
-          const tmpResult = notificationItem(10210);
+          const tmpResult = notificationItem(10654);
         }
         return items;
       }), stateFromStores);
       const found = viewableItems.filter((item) => {
-        const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(19318).NON_ELIGIBLE_SCROLL_ITEMS;
+        const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(19363).NON_ELIGIBLE_SCROLL_ITEMS;
         return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
       });
       const result1 = ICYMIActionCreatorsDefault.triggerItemsLongImpression(found.map((item) => {
         ({ item, index } = item);
-        const obj = { itemId: notificationItem(10226).getListAnalyticsItemId(item), itemType: null, triggerType: "list", itemFeedIndex: null, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
-        const obj2 = notificationItem(10226);
-        obj.itemType = notificationItem(10216).itemToType(item);
+        const obj = { itemId: notificationItem(10669).getListAnalyticsItemId(item), itemType: null, triggerType: "list", itemFeedIndex: null, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
+        const obj2 = notificationItem(10669);
+        obj.itemType = notificationItem(10659).itemToType(item);
         if ("waterwheelsItem" === item.data.kind) {
           index = item.data.brokerPosition;
         }
@@ -184,14 +184,14 @@ export function useSharedICYMILogic(notificationItem) {
   const callback2 = allUnreadItemsHydrated.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     const found = viewableItems.filter((item) => {
-      const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(19318).NON_ELIGIBLE_SCROLL_ITEMS;
+      const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(19363).NON_ELIGIBLE_SCROLL_ITEMS;
       return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
     });
     closure_1(unreadItems[11]).startItemsDwell(found.map((item) => {
       ({ item, index } = item);
-      const obj = { itemId: notificationItem(10226).getListAnalyticsItemId(item), itemType: null, triggerType: "list", itemFeedIndex: null, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
-      const obj2 = notificationItem(10226);
-      obj.itemType = notificationItem(10216).itemToType(item);
+      const obj = { itemId: notificationItem(10669).getListAnalyticsItemId(item), itemType: null, triggerType: "list", itemFeedIndex: null, itemScore: null, itemChannelType: null, isInitiallyVisible: false };
+      const obj2 = notificationItem(10669);
+      obj.itemType = notificationItem(10659).itemToType(item);
       if ("waterwheelsItem" === item.data.kind) {
         index = item.data.brokerPosition;
       }

@@ -1,21 +1,21 @@
-// === Module 20880: pendingRequestTimestamp ===
+// === Module 20927: pendingRequestTimestamp ===
 
-// Module 20880 (pendingRequestTimestamp)
+// Module 20927 (pendingRequestTimestamp)
 import util from "util" /* 1113 */;
-import _modDef2997 from "module_2997" /* 2997 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 9619 */;
+import _modDef2999 from "module_2999" /* 2999 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 9631 */;
 import size from "module_2" /* 2 */;
 
 function SENT_TIMESTAMP_FORMATTER() {
   const time = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
   const intl = util.intl;
-  time.seconds = intl.string(_modDef2997.M4NOO3);
-  time.minutes = _modDef2997["9nem85"];
-  time.hours = _modDef2997.sJjWRY;
+  time.seconds = intl.string(_modDef2999.M4NOO3);
+  time.minutes = _modDef2999["9nem85"];
+  time.hours = _modDef2999.sJjWRY;
   const intl2 = util.intl;
-  time.yesterday = intl2.string(_modDef2997["7SxW32"]);
-  time.days = _modDef2997.tVHevX;
-  time.date = _modDef2997.q6jzya;
+  time.yesterday = intl2.string(_modDef2999["7SxW32"]);
+  time.days = _modDef2999.tVHevX;
+  time.date = _modDef2999.q6jzya;
   return time;
 }
 const result = size.fileFinishedImporting("modules/safety_flows/pendingRequestTimestamp.tsx");

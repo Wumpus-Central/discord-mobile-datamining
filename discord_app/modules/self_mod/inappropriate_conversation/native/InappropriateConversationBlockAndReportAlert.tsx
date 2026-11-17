@@ -1,7 +1,7 @@
-// === Module 12060: InappropriateConversationBlockAndReportAlert ===
+// === Module 12496: InappropriateConversationBlockAndReportAlert ===
 
-// Module 12060 (InappropriateConversationBlockAndReportAlert)
-import SafetyWarningUtils from "SafetyWarningUtils" /* 12038 */;
+// Module 12496 (InappropriateConversationBlockAndReportAlert)
+import SafetyWarningUtils from "SafetyWarningUtils" /* 12474 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

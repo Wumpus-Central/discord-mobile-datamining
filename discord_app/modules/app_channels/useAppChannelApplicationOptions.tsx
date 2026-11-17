@@ -1,6 +1,6 @@
-// === Module 8149: useAppChannelApplicationOptions ===
+// === Module 8160: useAppChannelApplicationOptions ===
 
-// Module 8149 (useAppChannelApplicationOptions)
+// Module 8160 (useAppChannelApplicationOptions)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

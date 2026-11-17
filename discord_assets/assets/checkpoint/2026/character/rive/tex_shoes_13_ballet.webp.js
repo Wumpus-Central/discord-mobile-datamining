@@ -1,9 +1,9 @@
-// === Module 14449: ? ===
+// === Module 13314: ? ===
 
-// Module 14449
+// Module 13314
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_shoes_13_ballet.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/c28bad5caad1018cc4c21deba110fe8d76518c4f400101c9e76cc65377e618c2.webp";
-export const metadata = { fileBytes: 10070 };
+export default "https://cdn.discordapp.com/assets/content/26aa887cfdf872b6856dc23fc70d1525533c5693556cdfb6f0bee64a04099633.webp";
+export const metadata = { fileBytes: 26842 };

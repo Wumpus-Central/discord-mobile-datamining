@@ -1,9 +1,9 @@
-// === Module 14029: CloudDownloadIcon ===
+// === Module 15066: CloudDownloadIcon ===
 
-// Module 14029 (CloudDownloadIcon)
+// Module 15066 (CloudDownloadIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod14030 from "module_14030" /* 14030 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod15067 from "module_15067" /* 15067 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function CloudDownloadIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14030, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15067, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

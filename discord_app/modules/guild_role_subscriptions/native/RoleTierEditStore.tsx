@@ -1,9 +1,9 @@
-// === Module 20730: RoleTierEditStore ===
+// === Module 20777: RoleTierEditStore ===
 
-// Module 20730 (RoleTierEditStore)
+// Module 20777 (RoleTierEditStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1263 */;
-import _mod5221 from "module_5221" /* 5221 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17833 */;
+import _mod5225 from "module_5225" /* 5225 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 17874 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -14,11 +14,11 @@ function usePriceTiers(guildId) {
     items = [, , ];
     ({ priceTiers: arr[0], priceTierState: arr[1], loadPriceTiers: arr[2] } = arg0);
     return items;
-  }, require("module_5221").shallow), 3);
+  }, require("module_5225").shallow), 3);
   const tiers = tmp[0];
   closure_2 = tmp3;
   dependencyMap = tmp[2];
-  tiers(5889)(() => {
+  tiers(5893)(() => {
     let tmp2 = null == first;
     if (tmp2) {
       tmp2 = closure_2 !== obj.LOADING;
@@ -77,7 +77,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     return (async () => {
       closure_1 = tmp3;
       priceTiers(1263).batchUpdates(() => priceTiers({ priceTierState: constants.LOADING }));
-      await closure_2_2(7271).getPriceTiers(priceTiers);
+      await closure_2_2(7281).getPriceTiers(priceTiers);
       if (1 === tmp7) {
         c2 = 0;
         priceTiers(1263).batchUpdates(() => priceTiers({ priceTierState: constants.ERROR }));
@@ -138,19 +138,19 @@ export function useGroupCoverState() {
     items = [, ];
     ({ groupCover: arr[0], setGroupCover: arr[1] } = arg0);
     return items;
-  }, _mod5221.shallow);
+  }, _mod5225.shallow);
 }
 export function useGroupDescriptionState() {
   return withEqualityFn((arg0) => {
     items = [, ];
     ({ groupDescription: arr[0], setGroupDescription: arr[1] } = arg0);
     return items;
-  }, _mod5221.shallow);
+  }, _mod5225.shallow);
 }
 export function useGroupIsFullGateState() {
   return withEqualityFn((arg0) => {
     items = [, ];
     ({ groupIsFullGate: arr[0], setGroupIsFullGate: arr[1] } = arg0);
     return items;
-  }, _mod5221.shallow);
+  }, _mod5225.shallow);
 }

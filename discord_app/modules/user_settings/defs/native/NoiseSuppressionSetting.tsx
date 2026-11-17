@@ -1,19 +1,19 @@
-// === Module 17877: NoiseSuppressionSetting ===
+// === Module 17918: NoiseSuppressionSetting ===
 
-// Module 17877 (NoiseSuppressionSetting)
+// Module 17918 (NoiseSuppressionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 13032 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 11673 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
 
 require = fn;
-const SettingBuilders = fn(12406);
+const SettingBuilders = fn(12612);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(9202).MobileUserSettings.VOICE,
+  parent: fn(9213).MobileUserSettings.VOICE,
   useValue: function useNoiseSuppressionSettingValue() {
     items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());

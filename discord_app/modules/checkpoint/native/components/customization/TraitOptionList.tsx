@@ -1,14 +1,14 @@
-// === Module 14539: TraitOptionList ===
+// === Module 13410: TraitOptionList ===
 
-// Module 14539 (TraitOptionList)
+// Module 13410 (TraitOptionList)
 import nativeDefault from "native" /* 575 */;
-import HapticUtils from "HapticUtils" /* 5544 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6734 */;
-import inlineStyles from "inlineStyles" /* 8263 */;
-import TraitOptionItem from "TraitOptionItem" /* 14540 */;
+import HapticUtils from "HapticUtils" /* 5548 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6742 */;
+import inlineStyles from "inlineStyles" /* 8274 */;
+import TraitOptionItem from "TraitOptionItem" /* 13411 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5307 */;
+import AccessibilityStore from "AccessibilityStore" /* 5311 */;
 
 const inlineStylesDefault = inlineStyles;
 
@@ -24,12 +24,12 @@ function SelectedWindow(size) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const CHECKPOINT_PRIMARY = fn(6367).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6375).CHECKPOINT_PRIMARY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: closure_10 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_13 = createStyles.createStyles({ assetList: { paddingHorizontal: PX_16 }, radioGroup: { flexDirection: "row", gap: PX_12 }, selectorOverlay: { position: "absolute", left: PX_16, top: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/checkpoint/native/components/customization/TraitOptionList.tsx");
@@ -40,7 +40,6 @@ export default function TraitOptionList(size) {
   ({ selectedOptionId: dependencyMap, disabled } = size);
   ({ hideRarity: noop, onSelectOption: closure_5 } = size);
   closure_7 = undefined;
-  c12 = undefined;
   c13 = undefined;
   function handleScrollSettled(arg0) {
     if (!disabled) {
@@ -48,7 +47,7 @@ export default function TraitOptionList(size) {
         const _Math = Math;
         const _Math2 = Math;
         const _Math3 = Math;
-        const tmp6 = options[Math.max(Math, 0, Math.min(Math, Math.round(Math, arg0 / c13), options.length - 1))];
+        const tmp6 = options[Math.max(Math, 0, Math.min(Math, Math.round(Math, arg0 / c15), options.length - 1))];
         if (null != tmp6) {
           if (tmp6.optionId !== dependencyMap) {
             closure_1_5(tmp6.trait, tmp6.optionId);
@@ -59,11 +58,30 @@ export default function TraitOptionList(size) {
       }
     }
   }
-  function cancelScrollSettle() {
+  function handlePressOption(optionId, rounded) {
     if (null != closure_11.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_11.current);
       closure_11.current = null;
+    }
+    if (null != closure_18.current) {
+      const _clearTimeout2 = clearTimeout;
+      clearTimeout(closure_18.current);
+      closure_18.current = null;
+    }
+    closure_10.current = false;
+    closure_21.current = true;
+    if (optionId.optionId !== dependencyMap) {
+      closure_1_5(optionId.trait, optionId.optionId);
+      const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_LIGHT);
+      closure_7();
+    }
+    if (!isScreenReaderEnabled) {
+      const current = ref.current;
+      if (current != null) {
+        const obj2 = { x: rounded * c15, animated: !closure_6 };
+        current.scrollTo(obj2);
+      }
     }
   }
   const tmp = c13();
@@ -71,40 +89,65 @@ export default function TraitOptionList(size) {
   closure_6 = size(504).useStateFromStores(items, () => closure_7.useReducedMotion);
   let obj = size(504);
   let tmp2 = size;
-  closure_7 = options(14488)(options(14518));
-  const tmp4 = options(14488);
-  const isScreenReaderEnabled = size(5558).useIsScreenReaderEnabled();
+  closure_7 = options(13353)(options(13386));
+  const tmp4 = options(13353);
+  const isScreenReaderEnabled = size(5562).useIsScreenReaderEnabled();
   noop.useRef(null);
   const ref = noop.useRef(false);
   closure_11 = noop.useRef(null);
   const bound = Math.max(options.findIndex((optionId) => optionId.optionId === dependencyMap), 0);
-  let obj2 = size(5558);
-  const tmp8 = options(5907)(bound);
-  [tmp10, c12] = disabled(noop.useState(options(1496)().width), 2);
-  const width = size(14540).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
+  const tmp8 = options(5911)(bound);
+  let obj2 = size(5562);
+  [tmp10, c13] = disabled(noop.useState(options(1496)().width), 2);
+  const width = size(13411).TRAIT_OPTION_SIZE_TO_DIMENSIONS[size].width;
   const sum = width + closure_11;
-  c13 = sum;
+  c15 = sum;
+  const ref1 = noop.useRef(null);
+  noop.useRef(tmp8 * sum);
+  closure_18 = noop.useRef(null);
+  noop.useRef(0);
+  noop.useRef(0);
+  noop.useRef(false);
   const items1 = [disabled, isScreenReaderEnabled];
-  const bound1 = Math.max(c12, tmp10 - c12 - width);
-  const effect = noop.useEffect(() => cancelScrollSettle, items1);
-  const obj3 = { ref, horizontal: true, contentOffset: { x: tmp8 * sum, y: 0 }, scrollEnabled: !disabled, showsHorizontalScrollIndicator: false, decelerationRate: "fast", snapToInterval: null, onScrollBeginDrag: null, onScrollEndDrag: null, onMomentumScrollBegin: null, onMomentumScrollEnd: null, onLayout: null, contentContainerStyle: null, children: null };
-  let tmp18;
+  const bound1 = Math.max(bound, tmp10 - bound - width);
+  const effect = noop.useEffect(() => () => {
+    if (null != ref.current) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(ref.current);
+      ref.current = null;
+    }
+    if (null != ref2.current) {
+      const _clearTimeout2 = clearTimeout;
+      clearTimeout(ref2.current);
+      ref2.current = null;
+    }
+  }, items1);
+  const obj3 = { ref: ref1, children: null };
+  const obj4 = { ref, horizontal: true, contentOffset: { x: tmp8 * sum, y: 0 }, scrollEnabled: !disabled, showsHorizontalScrollIndicator: false, decelerationRate: "fast", snapToInterval: null, onScrollBeginDrag: null, onScrollEndDrag: null, onMomentumScrollBegin: null, onMomentumScrollEnd: null, onScroll: null, scrollEventThrottle: 16, onTouchStart: null, onTouchEnd: null, onLayout: null, contentContainerStyle: null, children: null };
+  let tmp19;
   if (!isScreenReaderEnabled) {
-    tmp18 = sum;
+    tmp19 = sum;
   }
-  obj3.snapToInterval = tmp18;
-  obj3.onScrollBeginDrag = function handleScrollBeginDrag() {
+  obj4.snapToInterval = tmp19;
+  obj4.onScrollBeginDrag = function handleScrollBeginDrag() {
     if (!isScreenReaderEnabled) {
       if (null != closure_11.current) {
         const _clearTimeout = clearTimeout;
         clearTimeout(closure_11.current);
         closure_11.current = null;
       }
+      if (null != closure_18.current) {
+        const _clearTimeout2 = clearTimeout;
+        clearTimeout(closure_18.current);
+        closure_18.current = null;
+      }
       closure_10.current = true;
     }
   };
-  obj3.onScrollEndDrag = function scheduleScrollSettle(nativeEvent) {
+  obj4.onScrollEndDrag = function scheduleScrollSettle(nativeEvent) {
     const x = nativeEvent.nativeEvent.contentOffset.x;
+    closure_0 = x;
+    closure_17.current = x;
     if (null != closure_11.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_11.current);
@@ -116,8 +159,15 @@ export default function TraitOptionList(size) {
       handleScrollSettled(closure_0);
     }, 100);
   };
-  obj3.onMomentumScrollBegin = cancelScrollSettle;
-  obj3.onMomentumScrollEnd = function handleMomentumScrollEnd(nativeEvent) {
+  obj4.onMomentumScrollBegin = function cancelScrollSettle() {
+    if (null != closure_11.current) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(closure_11.current);
+      closure_11.current = null;
+    }
+  };
+  obj4.onMomentumScrollEnd = function handleMomentumScrollEnd(nativeEvent) {
+    closure_17.current = nativeEvent.nativeEvent.contentOffset.x;
     if (null != closure_11.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_11.current);
@@ -128,22 +178,68 @@ export default function TraitOptionList(size) {
       handleScrollSettled(nativeEvent.nativeEvent.contentOffset.x);
     }
   };
-  obj3.onLayout = function handleLayout(nativeEvent) {
+  obj4.onScroll = function handleScroll(nativeEvent) {
+    closure_17.current = nativeEvent.nativeEvent.contentOffset.x;
+  };
+  obj4.onTouchStart = function handleTouchStart(nativeEvent) {
+    if (null != closure_18.current) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(closure_18.current);
+      closure_18.current = null;
+    }
+    closure_21.current = false;
+    closure_19.current = nativeEvent.nativeEvent.pageX;
+    closure_20.current = ref2.current;
+  };
+  obj4.onTouchEnd = function handleTouchEnd() {
+    if (!disabled) {
+      if (!isScreenReaderEnabled) {
+        if (!ref.current) {
+          if (!ref5.current) {
+            let current = ref4.current;
+            if (null != closure_18.current) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(closure_18.current);
+              closure_18.current = null;
+            }
+            const _setTimeout = setTimeout;
+            closure_18.current = setTimeout(() => {
+              closure_18.current = null;
+              current = ref1.current;
+              if (current != null) {
+                current.measureInWindow((arg0) => {
+                  const diff = closure_1_0 - arg0 + closure_1_1 - bound;
+                  let rounded = Math.floor(diff / closure_2_15);
+                  if (diff >= 0) {
+                    if (null != current[rounded]) {
+                      handlePressOption(tmp7, rounded);
+                    }
+                  }
+                  rounded = closure_2_12;
+                });
+              }
+            }, 100);
+          }
+        }
+      }
+    }
+  };
+  obj4.onLayout = function handleLayout(nativeEvent) {
     _undefined(nativeEvent.nativeEvent.layout.width);
   };
   const items2 = [tmp.assetList, { paddingRight: bound1 }];
-  obj3.contentContainerStyle = items2;
-  const obj4 = { style: tmp.radioGroup, accessibilityRole: "radiogroup", accessibilityLabel: null, children: null };
-  const tmp14 = ref;
+  obj4.contentContainerStyle = items2;
+  const obj5 = { style: tmp.radioGroup, accessibilityRole: "radiogroup", accessibilityLabel: null, children: null };
+  const tmp15 = ref;
   const tmp9 = disabled(noop.useState(options(1496)().width), 2);
-  obj4.accessibilityLabel = tmp2(6734).getCustomizationOptionName(size.customizationOption);
-  obj4.children = options.map((traitOption, index) => {
+  obj5.accessibilityLabel = tmp2(6742).getCustomizationOptionName(size.customizationOption);
+  obj5.children = options.map((traitOption, index) => {
     size = traitOption;
     closure_1 = index;
-    let obj = { size, traitOption, accessibilityLabel: null, isSelected: null, showSelectedBorder: null, hideCornerFlag: null, disabled: null, onPress: null };
-    const tmp2 = options(14540);
-    obj.accessibilityLabel = size(6734).getAssetAccessibilityLabel(traitOption, { skipRarity: skipDescription, skipDescription });
-    obj.isSelected = traitOption.optionId === dependencyMap;
+    const obj = { size, traitOption, accessibilityLabel: null, isSelected: null, showSelectedBorder: null, hideCornerFlag: null, disabled: null, onPress: null };
+    const tmp2 = options(13411);
+    obj.accessibilityLabel = size(6742).getAssetAccessibilityLabel(traitOption, { skipRarity: skipDescription, skipDescription });
+    obj.isSelected = traitOption.optionId === closure_2;
     let tmp5 = isScreenReaderEnabled;
     if (isScreenReaderEnabled) {
       tmp5 = traitOption.optionId === tmp4;
@@ -152,37 +248,20 @@ export default function TraitOptionList(size) {
     obj.hideCornerFlag = skipDescription;
     obj.disabled = disabled;
     obj.onPress = function onPress() {
-      if (null != ref.current) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(ref.current);
-        ref.current = null;
-      }
-      closure_10.current = false;
-      if (traitOption.optionId !== dependencyMap) {
-        closure_2_5(traitOption.trait, traitOption.optionId);
-        const result = traitOption(5544).triggerHapticFeedback(traitOption(5544).HapticFeedbackTypes.IMPACT_LIGHT);
-        closure_7();
-        const obj = traitOption(5544);
-      }
-      if (!isScreenReaderEnabled) {
-        const current = ref.current;
-        if (current != null) {
-          const obj2 = { x: closure_1 * c13, animated: !closure_6 };
-          current.scrollTo(obj2);
-        }
-      }
+      handlePressOption(closure_0, closure_1);
     };
     return ref(tmp2, obj, traitOption.optionId);
   });
-  obj3.children = ref(closure_6, obj4);
-  const children = [ref(closure_5, obj3), ];
-  let tmp16Result = !isScreenReaderEnabled;
+  obj4.children = ref(closure_6, obj5);
+  const items3 = [ref(closure_5, obj4), ];
+  let tmp17Result = !isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
-    const obj5 = { size };
-    tmp16Result = tmp16(handleScrollSettled, obj5);
+    const obj6 = { size };
+    tmp17Result = tmp17(width, obj6);
   }
-  children[1] = tmp16Result;
-  return tmp14(closure_6, { children });
+  items3[1] = tmp17Result;
+  obj3.children = items3;
+  return tmp15(closure_6, obj3);
 };
 export const TRAIT_OPTION_SPACING = PX_12;
 export const CONTENT_INSET = PX_16;

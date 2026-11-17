@@ -1,13 +1,13 @@
-// === Module 18545: SecureFramesPersistentCodesSetting ===
+// === Module 18586: SecureFramesPersistentCodesSetting ===
 
-// Module 18545 (SecureFramesPersistentCodesSetting)
+// Module 18586 (SecureFramesPersistentCodesSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import updatePersistentCodesEnabled from "updatePersistentCodesEnabled" /* 18546 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 6079 */;
+import updatePersistentCodesEnabled from "updatePersistentCodesEnabled" /* 18587 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 6086 */;
 
 require = fn;
-const SettingBuilders = fn(12406);
+const SettingBuilders = fn(12612);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -17,7 +17,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.opw5ls);
   },
-  parent: fn(9202).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(9213).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useSecureFramesPersistentCodesValue() {
     items = [SecureFramesPersistedStore];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());

@@ -1,7 +1,7 @@
-// === Module 10520: useConjureTitleBarStatus ===
+// === Module 15093: useConjureTitleBarStatus ===
 
-// Module 10520 (useConjureTitleBarStatus)
-import useConjureHomeOwnProjectsDefault from "useConjureHomeOwnProjects" /* 10522 */;
+// Module 15093 (useConjureTitleBarStatus)
+import useConjureHomeOwnProjectsDefault from "useConjureHomeOwnProjects" /* 15002 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

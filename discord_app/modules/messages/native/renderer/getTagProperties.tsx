@@ -1,12 +1,12 @@
-// === Module 9274: getTagProperties ===
+// === Module 9283: getTagProperties ===
 
-// Module 9274 (getTagProperties)
+// Module 9283 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1113 */;
-import MessageConstants from "MessageConstants" /* 5311 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 9275 */;
-import isCrosspostDefault from "isCrosspost" /* 9276 */;
-import _modDef9278 from "module_9278" /* 9278 */;
+import MessageConstants from "MessageConstants" /* 5315 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 9284 */;
+import isCrosspostDefault from "isCrosspost" /* 9285 */;
+import _modDef9287 from "module_9287" /* 9287 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef9278).uri;
+            uri = Image.resolveAssetSource(_modDef9287).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);

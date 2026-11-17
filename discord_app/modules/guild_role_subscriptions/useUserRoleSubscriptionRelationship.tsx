@@ -1,11 +1,11 @@
-// === Module 17827: useUserRoleSubscriptionRelationship ===
+// === Module 17868: useUserRoleSubscriptionRelationship ===
 
-// Module 17827 (useUserRoleSubscriptionRelationship)
+// Module 17868 (useUserRoleSubscriptionRelationship)
 import initialize from "initialize" /* 504 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5261 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5265 */;
 
 require = fn;
-const constants = fn(17826).UserGuildRoleSubscriptionRelationship;
+const constants = fn(17867).UserGuildRoleSubscriptionRelationship;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useUserRoleSubscriptionRelationship.tsx");
 

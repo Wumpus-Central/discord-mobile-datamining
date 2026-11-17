@@ -1,9 +1,9 @@
-// === Module 10045: useVirtualCurrencyBalanceAnimationData ===
+// === Module 10058: useVirtualCurrencyBalanceAnimationData ===
 
-// Module 10045 (useVirtualCurrencyBalanceAnimationData)
+// Module 10058 (useVirtualCurrencyBalanceAnimationData)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5307 */;
+import AccessibilityStore from "AccessibilityStore" /* 5311 */;
 
 const require = fn;
 const size = fn(2);

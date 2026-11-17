@@ -1,15 +1,15 @@
-// === Module 7394: ConjurePreviewActionCreators ===
+// === Module 7404: ConjurePreviewActionCreators ===
 
-// Module 7394 (ConjurePreviewActionCreators)
+// Module 7404 (ConjurePreviewActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 7018 */;
-import leaveFrame from "leaveFrame" /* 7349 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 7396 */;
-import conjurePausedPreviewViews from "conjurePausedPreviewViews" /* 15977 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 7026 */;
+import leaveFrame from "leaveFrame" /* 7359 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 7406 */;
+import conjurePausedPreviewViews from "conjurePausedPreviewViews" /* 16014 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
-import ConjurePreviewPauseStore from "ConjurePreviewPauseStore" /* 7395 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
+import ConjurePreviewPauseStore from "ConjurePreviewPauseStore" /* 7405 */;
 
 require = fn;
 let closure_8 = async function _loadConjurePreviewDm() {
@@ -22,7 +22,7 @@ let closure_8 = async function _loadConjurePreviewDm() {
   closure_130_1(closure_130_2[7]).dispatch({ type: "CHANNEL_CREATE", channel: closure_129_1 });
   return closure_129_1.id;
 };
-let closure_4 = fn(5159).createChannelRecordFromServer;
+let closure_4 = fn(5163).createChannelRecordFromServer;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewActionCreators.tsx");

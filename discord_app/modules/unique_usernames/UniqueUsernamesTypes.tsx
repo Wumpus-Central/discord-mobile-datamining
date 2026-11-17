@@ -1,6 +1,6 @@
-// === Module 17231: UniqueUsernamesTypes ===
+// === Module 17268: UniqueUsernamesTypes ===
 
-// Module 17231 (UniqueUsernamesTypes)
+// Module 17268 (UniqueUsernamesTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesTypes.tsx");

@@ -1,41 +1,41 @@
-// === Module 17979: TypingIndicatorSetting ===
+// === Module 18020: TypingIndicatorSetting ===
 
-// Module 17979 (TypingIndicatorSetting)
+// Module 18020 (TypingIndicatorSetting)
 import util from "util" /* 1113 */;
-import _modDef4133 from "module_4133" /* 4133 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5136 */;
-import dismissible_content from "dismissible_content" /* 5139 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 14577 */;
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 17248 */;
-import CustomTypingIndicatorNewPresetsExperiment from "CustomTypingIndicatorNewPresetsExperiment" /* 17980 */;
+import _modDef4135 from "module_4135" /* 4135 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 5140 */;
+import dismissible_content from "dismissible_content" /* 5143 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13452 */;
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 17285 */;
+import CustomTypingIndicatorNewPresetsExperiment from "CustomTypingIndicatorNewPresetsExperiment" /* 18021 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const TypingIndicatorSetting = "TypingIndicatorSetting";
-let DismissibleBadgeUtils = fn(17249);
-let closure_6 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(fn(5139).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE, function useCanShowLaunchBadge() {
+let DismissibleBadgeUtils = fn(17286);
+let closure_6 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(fn(5143).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE, function useCanShowLaunchBadge() {
   return !CustomTypingIndicatorNewPresetsExperiment.useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
 });
-DismissibleBadgeUtils = fn(17249);
-let closure_7 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(fn(5139).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_SETTINGS_BADGE, function useCanShowNewPresetsBadge() {
+DismissibleBadgeUtils = fn(17286);
+let closure_7 = DismissibleBadgeUtils.createDismissibleBadgePreNavigationAction(fn(5143).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_SETTINGS_BADGE, function useCanShowNewPresetsBadge() {
   return CustomTypingIndicatorNewPresetsExperiment.useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
 });
-const SettingBuilders = fn(12406);
+const SettingBuilders = fn(12612);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef4133["pT+BVM"]);
+    return intl.string(_modDef4135["pT+BVM"]);
   },
   parent: null,
-  IconComponent: fn(17981).ChatDotsIcon,
+  IconComponent: fn(18022).ChatDotsIcon,
   useTrailing() {
     const obj = CustomTypingIndicatorNewPresetsExperiment;
     const DismissibleContent = dismissible_content.DismissibleContent;
     return <tmp2 dismissibleContent={obj.useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled ? DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_PRESETS_SETTINGS_BADGE : DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE} newPremiumStyle />;
   },
   usePreNavigationAction() {
-    enabled = enabled(17980).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
+    enabled = enabled(18021).useCustomTypingIndicatorNewPresetsConfig(TypingIndicatorSetting).enabled;
     const tmp = closure_6();
     closure_1 = tmp;
     const tmp2 = closure_7();

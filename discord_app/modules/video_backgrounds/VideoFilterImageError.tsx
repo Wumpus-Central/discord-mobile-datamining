@@ -1,6 +1,6 @@
-// === Module 6229: VideoFilterImageError ===
+// === Module 6237: VideoFilterImageError ===
 
-// Module 6229 (VideoFilterImageError)
+// Module 6237 (VideoFilterImageError)
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import size from "module_2" /* 2 */;

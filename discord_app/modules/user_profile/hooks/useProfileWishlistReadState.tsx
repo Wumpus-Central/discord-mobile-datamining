@@ -1,12 +1,12 @@
-// === Module 15857: useProfileWishlistReadState ===
+// === Module 15895: useProfileWishlistReadState ===
 
-// Module 15857 (useProfileWishlistReadState)
-import ProfileReadStateSection from "ProfileReadStateSection" /* 7364 */;
-import ProfileReadStateActionCreators from "ProfileReadStateActionCreators" /* 15858 */;
+// Module 15895 (useProfileWishlistReadState)
+import ProfileReadStateSection from "ProfileReadStateSection" /* 7374 */;
+import ProfileReadStateActionCreators from "ProfileReadStateActionCreators" /* 15896 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import WishlistStore from "WishlistStore" /* 9465 */;
-import UserProfileStore from "UserProfileStore" /* 7352 */;
+import WishlistStore from "WishlistStore" /* 9475 */;
+import UserProfileStore from "UserProfileStore" /* 7362 */;
 
 require = fn;
 const size = fn(2);

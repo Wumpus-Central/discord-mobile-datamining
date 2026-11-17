@@ -1,10 +1,10 @@
-// === Module 10328: CirclePlayIcon ===
+// === Module 10438: CirclePlayIcon ===
 
-// Module 10328 (CirclePlayIcon)
+// Module 10438 (CirclePlayIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod10329 from "module_10329" /* 10329 */;
-import _mod10330 from "module_10330" /* 10330 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod10439 from "module_10439" /* 10439 */;
+import _mod10440 from "module_10440" /* 10440 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,8 +26,8 @@ export function CirclePlayIcon(color) {
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  items = [React4(BaseIconImage.BaseIconImage, { source: _mod10329, color: secondaryColor, style }), ];
-  const obj3 = { source: _mod10330, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  items = [React4(BaseIconImage.BaseIconImage, { source: _mod10439, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod10440, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

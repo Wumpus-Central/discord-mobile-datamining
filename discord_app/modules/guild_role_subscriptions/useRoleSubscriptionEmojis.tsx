@@ -1,8 +1,8 @@
-// === Module 20749: useRoleSubscriptionEmojis ===
+// === Module 20796: useRoleSubscriptionEmojis ===
 
-// Module 20749 (useRoleSubscriptionEmojis)
+// Module 20796 (useRoleSubscriptionEmojis)
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 6969 */;
+import EmojiStore from "EmojiStore" /* 6977 */;
 
 const require = globalThis.__r;
 

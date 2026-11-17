@@ -1,17 +1,17 @@
-// === Module 9651: shop_nagbar ===
+// === Module 9663: shop_nagbar ===
 
-// Module 9651 (shop_nagbar)
+// Module 9663 (shop_nagbar)
 import _mod1197 from "module_1197" /* 1197 */;
 import wrappers from "wrappers" /* 1227 */;
-import localized_string from "localized_string" /* 9630 */;
-import help_article from "help_article" /* 9631 */;
+import localized_string from "localized_string" /* 9642 */;
+import help_article from "help_article" /* 9643 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const MessageType = fn(1197).MessageType;
 class ShopNagbar$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , ];
+    items = [, , , , , , , , , ];
     items[0] = { no: 1, name: "body", kind: "scalar", T: 9 };
     items[1] = { no: 2, name: "cta_label", kind: "scalar", T: 9 };
     items[2] = {
@@ -48,20 +48,29 @@ class ShopNagbar$Type extends MessageType {
             return require("localized_string").LocalizedString;
           }
     };
-    obj = { no: 8, name: "navigable_storefront_application_id", kind: "message", T: null };
+    items[7] = {
+      no: 8,
+      name: "navigable_storefront_application_id",
+      kind: "message",
+      T() {
+            return require("wrappers").UInt64Value;
+          }
+    };
+    obj = { no: 9, name: "shop_collection_id", kind: "message", T: null };
     class T {
       constructor() {
         return closure_1_0(closure_1_1[5]).UInt64Value;
       }
     }
     obj.T = T;
-    items[7] = obj;
-    items[8] = {
-      no: 9,
-      name: "shop_collection_id",
-      kind: "message",
+    items[8] = obj;
+    items[9] = {
+      no: 10,
+      name: "gift_modal_destination",
+      kind: "enum",
       T() {
-            return require("wrappers").UInt64Value;
+            items = ["discord_protos.premium_marketing.v1.GiftModalDestination", require("cta_button").GiftModalDestination, "GIFT_MODAL_DESTINATION_"];
+            return items;
           }
     };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.ShopNagbar", items, T);
@@ -70,7 +79,7 @@ class ShopNagbar$Type extends MessageType {
 }
 const prototype = ShopNagbar$Type.prototype;
 prototype["create"] = function create(partialSettings) {
-  const obj = { body: "", ctaLabel: "", ctaAction: 0, deeplinkSection: "" };
+  const obj = { body: "", ctaLabel: "", ctaAction: 0, deeplinkSection: "", giftModalDestination: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1197.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -79,64 +88,15 @@ prototype["create"] = function create(partialSettings) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    do {
-      let tmp4 = _slicedToArray(pos.tag(), 2);
-      [tmp5, tmp6] = tmp4;
-      if (1 === tmp5) {
-        obj.body = pos.string();
-      } else if (2 === tmp5) {
-        obj.ctaLabel = pos.string();
-      } else if (3 === tmp5) {
-        obj.ctaAction = pos.int32();
-      } else if (4 === tmp5) {
-        obj.deeplinkSection = pos.string();
-      } else if (5 === tmp5) {
-        let HelpArticle = help_article.HelpArticle;
-        obj.helpArticle = HelpArticle.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.helpArticle);
-      } else if (6 === tmp5) {
-        let LocalizedString2 = localized_string.LocalizedString;
-        obj.bodyLocalized = LocalizedString2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.bodyLocalized);
-      } else if (7 === tmp5) {
-        let LocalizedString = localized_string.LocalizedString;
-        obj.ctaLabelLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.ctaLabelLocalized);
-      } else if (8 === tmp5) {
-        let UInt64Value2 = wrappers.UInt64Value;
-        obj.navigableStorefrontApplicationId = UInt64Value2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.navigableStorefrontApplicationId);
-      } else if (9 === tmp5) {
-        let UInt64Value = wrappers.UInt64Value;
-        obj.shopCollectionId = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.shopCollectionId);
-      } else {
-        let onRead = readUnknownField.readUnknownField;
-        if ("throw" === onRead) {
-          let tmp15 = globalThis;
-          let _globalThis = globalThis;
-          let _HermesInternal = HermesInternal;
-          let str = ") for ";
-          let str2 = " (wire type ";
-          let str3 = "Unknown field ";
-          let tmp18 = new.target;
-          let tmp19 = new.target;
-          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          throw error;
-        } else {
-          let skipResult = pos.skip(tmp6);
-          if (false !== onRead) {
-            if (true === onRead) {
-              onRead = _mod1197.UnknownFieldHandler.onRead;
-            }
-            let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
-          }
-        }
-      }
-    } while (pos.pos < sum);
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = pos.tag();
+    const tmp3 = _slicedToArray(pos.tag(), 2);
   }
   return obj;
 };
@@ -187,6 +147,10 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(body, tag, write
     const joined4 = UInt64Value2.internalBinaryWrite(body.shopCollectionId, tag.tag(9, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult4 = UInt64Value2.internalBinaryWrite(body.shopCollectionId, tag.tag(9, _mod1197.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
+  if (0 !== body.giftModalDestination) {
+    tag.tag(10, _mod1197.WireType.Varint).int32(body.giftModalDestination);
+    const tagResult9 = tag.tag(10, _mod1197.WireType.Varint);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -234,23 +198,32 @@ let items = [
       return require("localized_string").LocalizedString;
     }
   },
+  {
+    no: 8,
+    name: "navigable_storefront_application_id",
+    kind: "message",
+    T() {
+      return require("wrappers").UInt64Value;
+    }
+  },
 ,
 
 ];
-let obj = { no: 8, name: "navigable_storefront_application_id", kind: "message", T: null };
+let obj = { no: 9, name: "shop_collection_id", kind: "message", T: null };
 class T {
   constructor() {
     return closure_1_0(closure_1_1[5]).UInt64Value;
   }
 }
 obj.T = T;
-items[7] = obj;
-items[8] = {
-  no: 9,
-  name: "shop_collection_id",
-  kind: "message",
+items[8] = obj;
+items[9] = {
+  no: 10,
+  name: "gift_modal_destination",
+  kind: "enum",
   T() {
-    return require("wrappers").UInt64Value;
+    items = ["discord_protos.premium_marketing.v1.GiftModalDestination", require("cta_button").GiftModalDestination, "GIFT_MODAL_DESTINATION_"];
+    return items;
   }
 };
 const prototype1 = new prototype("discord_protos.premium_marketing.v1.ShopNagbar", items, tmp, T, ShopNagbar$Type, prototype, items);

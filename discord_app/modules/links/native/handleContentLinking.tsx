@@ -1,6 +1,6 @@
-// === Module 12505: handleContentLinking ===
+// === Module 11095: handleContentLinking ===
 
-// Module 12505 (handleContentLinking)
+// Module 11095 (handleContentLinking)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -154,7 +154,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
     }
   }
 };
-fn(7661).addPostConnectionCallback;
+fn(7671).addPostConnectionCallback;
 const Routes = fn(1072).Routes;
 let c6 = null;
 const size = fn(2);

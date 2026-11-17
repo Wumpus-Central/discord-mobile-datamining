@@ -1,11 +1,11 @@
-// === Module 10073: PromotionStringUtils ===
+// === Module 15252: PromotionStringUtils ===
 
-// Module 10073 (PromotionStringUtils)
+// Module 15252 (PromotionStringUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2174 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2188 */;
-import PriceUtils from "PriceUtils" /* 7253 */;
+import PriceUtils from "PriceUtils" /* 7262 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 2178 */;
 
 require = fn;

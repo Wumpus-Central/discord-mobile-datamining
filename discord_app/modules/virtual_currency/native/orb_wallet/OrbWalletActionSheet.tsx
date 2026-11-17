@@ -1,17 +1,17 @@
-// === Module 17529: OrbWalletActionSheet ===
+// === Module 17566: OrbWalletActionSheet ===
 
-// Module 17529 (OrbWalletActionSheet)
+// Module 17566 (OrbWalletActionSheet)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import _modDef2333 from "module_2333" /* 2333 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5542 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7937 */;
-import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 16244 */;
-import OrbWalletCards from "OrbWalletCards" /* 17535 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5546 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7947 */;
+import OrbChallengeActionCreators from "OrbChallengeActionCreators" /* 16281 */;
+import OrbWalletCards from "OrbWalletCards" /* 17572 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
-import OrbChallengesStore from "OrbChallengesStore" /* 16242 */;
+import OrbChallengesStore from "OrbChallengesStore" /* 16279 */;
 
 require = fn;
 function StatefulOrbChallengesCard(reopenWallet) {
@@ -160,13 +160,13 @@ function OrbWalletContent(reopenWallet) {
   return closure_12(challengesForOrbWallet, obj4);
 }
 const View = fn(17).View;
-let closure_7 = fn(16242).OrbChallengesDisplayErrorType;
-let closure_8 = fn(17527).ORB_WALLET_ACTION_SHEET_KEY;
+let closure_7 = fn(16279).OrbChallengesDisplayErrorType;
+let closure_8 = fn(17564).ORB_WALLET_ACTION_SHEET_KEY;
 const AnalyticEvents = fn(1072).AnalyticEvents;
 const PremiumTypes = fn(1390).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { container: { width: "100%", paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, section: null, tryAgainLink: null, divider: null };
 let obj3 = { width: "100%", paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj2.section = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };

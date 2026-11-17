@@ -1,6 +1,6 @@
-// === Module 14306: ? ===
+// === Module 13171: ? ===
 
-// Module 14306
+// Module 13171
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_aura_03_shock.webp.js");

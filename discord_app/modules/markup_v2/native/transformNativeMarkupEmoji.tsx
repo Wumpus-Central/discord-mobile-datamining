@@ -1,9 +1,9 @@
-// === Module 9372: transformNativeMarkupEmoji ===
+// === Module 9381: transformNativeMarkupEmoji ===
 
-// Module 9372 (transformNativeMarkupEmoji)
+// Module 9381 (transformNativeMarkupEmoji)
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 5252 */;
-import MarkupTypes from "MarkupTypes" /* 6332 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 5256 */;
+import MarkupTypes from "MarkupTypes" /* 6340 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupEmoji.tsx");

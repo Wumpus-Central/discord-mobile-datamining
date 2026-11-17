@@ -1,8 +1,8 @@
-// === Module 9503: ClipView ===
+// === Module 9515: ClipView ===
 
-// Module 9503 (ClipView)
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 9504 */;
-import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 9506 */;
+// Module 9515 (ClipView)
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 9516 */;
+import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 9518 */;
 import noop from "module_19" /* 19 */;
 import module_1655 from "module_1655" /* 1655 */;
 

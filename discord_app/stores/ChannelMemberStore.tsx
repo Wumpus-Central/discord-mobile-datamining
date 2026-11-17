@@ -1,22 +1,22 @@
-// === Module 7315: ChannelMemberStore ===
+// === Module 7325: ChannelMemberStore ===
 
-// Module 7315 (ChannelMemberStore)
+// Module 7325 (ChannelMemberStore)
 import applyDefault from "apply" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1084 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
-import PermissionUtilsAll from "PermissionUtils" /* 5243 */;
-import ExperimentStore from "ExperimentStore" /* 5522 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
+import PermissionUtilsAll from "PermissionUtils" /* 5247 */;
+import ExperimentStore from "ExperimentStore" /* 5526 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6804 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5526 */;
-import GuildMemberStore from "GuildMemberStore" /* 5218 */;
-import GuildRoleStore from "GuildRoleStore" /* 5212 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import PresenceStore from "PresenceStore" /* 6058 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 7316 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5530 */;
+import GuildMemberStore from "GuildMemberStore" /* 5222 */;
+import GuildRoleStore from "GuildRoleStore" /* 5216 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import PresenceStore from "PresenceStore" /* 6065 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 7326 */;
 import UserStore from "UserStore" /* 1388 */;
 
 let require = fn;
@@ -195,7 +195,7 @@ prototype["insert"] = function insert(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
           }
-          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "analyticsLocations" };
+          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "channel_id" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -290,7 +290,7 @@ prototype["update"] = function update(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id2);
           }
-          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "analyticsLocations" };
+          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "channel_id" };
           let str = "";
           if (null != role) {
             str = role.name;

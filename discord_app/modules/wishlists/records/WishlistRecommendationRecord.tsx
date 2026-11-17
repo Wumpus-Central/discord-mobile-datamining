@@ -1,6 +1,6 @@
-// === Module 7245: WishlistRecommendationRecord ===
+// === Module 7254: WishlistRecommendationRecord ===
 
-// Module 7245 (WishlistRecommendationRecord)
+// Module 7254 (WishlistRecommendationRecord)
 import Record from "Record" /* 1408 */;
 import SKURecord from "SKURecord" /* 2167 */;
 import ApplicationRecord from "ApplicationRecord" /* 2143 */;

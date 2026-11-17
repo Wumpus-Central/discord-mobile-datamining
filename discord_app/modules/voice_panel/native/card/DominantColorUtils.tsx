@@ -1,6 +1,6 @@
-// === Module 9516: DominantColorUtils ===
+// === Module 9528: DominantColorUtils ===
 
-// Module 9516 (DominantColorUtils)
+// Module 9528 (DominantColorUtils)
 import nativeDefault from "native" /* 575 */;
 import privDefault from "priv" /* 1456 */;
 import _slicedToArray from "module_32" /* 32 */;

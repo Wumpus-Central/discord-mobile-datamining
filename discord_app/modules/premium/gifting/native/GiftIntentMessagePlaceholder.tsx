@@ -1,6 +1,6 @@
-// === Module 14116: GiftIntentMessagePlaceholder ===
+// === Module 12973: GiftIntentMessagePlaceholder ===
 
-// Module 14116 (GiftIntentMessagePlaceholder)
+// Module 12973 (GiftIntentMessagePlaceholder)
 import util from "util" /* 1113 */;
 import size from "module_2" /* 2 */;
 

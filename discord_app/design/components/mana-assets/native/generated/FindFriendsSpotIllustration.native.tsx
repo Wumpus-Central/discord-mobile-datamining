@@ -1,19 +1,19 @@
-// === Module 15006: FindFriendsSpotIllustration ===
+// === Module 14218: FindFriendsSpotIllustration ===
 
-// Module 15006 (FindFriendsSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7755 */;
-import _modDef15007 from "module_15007" /* 15007 */;
-import _modDef15008 from "module_15008" /* 15008 */;
-import _modDef15009 from "module_15009" /* 15009 */;
+// Module 14218 (FindFriendsSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7765 */;
+import _modDef14219 from "module_14219" /* 14219 */;
+import _modDef14220 from "module_14220" /* 14220 */;
+import _modDef14221 from "module_14221" /* 14221 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15007 }, 3: null };
-let obj2 = { uri: _modDef15007 };
-obj[2] = { uri: _modDef15008 };
-const obj3 = { uri: _modDef15008 };
-obj[3] = { uri: _modDef15009 };
+let obj = { 1: null, 2: { uri: _modDef14219 }, 3: null };
+let obj2 = { uri: _modDef14219 };
+obj[2] = { uri: _modDef14220 };
+const obj3 = { uri: _modDef14220 };
+obj[3] = { uri: _modDef14221 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FindFriendsSpotIllustration.native.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 15223: MediaModalVideo ===
+// === Module 11261: MediaModalVideo ===
 
-// Module 15223 (MediaModalVideo)
-import common_Video from "common/Video" /* 9730 */;
-import MediaViewerVideoPerfExperiment from "MediaViewerVideoPerfExperiment" /* 15224 */;
-import useMediaLoadingDefault from "useMediaLoading" /* 15225 */;
-import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 15226 */;
-import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 15227 */;
+// Module 11261 (MediaModalVideo)
+import common_Video from "common/Video" /* 9743 */;
+import MediaViewerVideoPerfExperiment from "MediaViewerVideoPerfExperiment" /* 11262 */;
+import useMediaLoadingDefault from "useMediaLoading" /* 11263 */;
+import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 11264 */;
+import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 11265 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

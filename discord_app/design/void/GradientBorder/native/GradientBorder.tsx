@@ -1,9 +1,9 @@
-// === Module 16595: GradientBorder ===
+// === Module 16630: GradientBorder ===
 
-// Module 16595 (GradientBorder)
+// Module 16630 (GradientBorder)
 import nativeDefault from "native" /* 575 */;
-import LinearGradientDefault from "LinearGradient" /* 5883 */;
-import _mod6778 from "module_6778" /* 6778 */;
+import LinearGradientDefault from "LinearGradient" /* 5887 */;
+import _mod6786 from "module_6786" /* 6786 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

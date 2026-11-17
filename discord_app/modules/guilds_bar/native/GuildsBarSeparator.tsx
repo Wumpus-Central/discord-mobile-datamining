@@ -1,11 +1,11 @@
-// === Module 19120: GuildsBarSeparator ===
+// === Module 19165: GuildsBarSeparator ===
 
-// Module 19120 (GuildsBarSeparator)
+// Module 19165 (GuildsBarSeparator)
 import nativeDefault from "native" /* 575 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import useToken from "useToken" /* 5892 */;
-import NativeViewDefault from "NativeView" /* 7722 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18744 */;
+import useToken from "useToken" /* 5896 */;
+import NativeViewDefault from "NativeView" /* 7732 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 18785 */;
 import noop from "module_19" /* 19 */;
 
 const _modDef1655 = _mod1655;
@@ -42,7 +42,7 @@ function GuildsBarHomeDrawerSeparator(guildItemSize) {
   return jsx(_modDef1655.View, { style: null });
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_4 = createStyles.createStyles((width) => {
   const obj = { separator: null };
   const size = { height: 1, width, marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, transformOrigin: "0% 50%" };

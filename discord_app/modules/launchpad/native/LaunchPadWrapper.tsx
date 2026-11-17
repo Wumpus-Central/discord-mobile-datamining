@@ -1,23 +1,23 @@
-// === Module 19864: LaunchPadWrapper ===
+// === Module 19907: LaunchPadWrapper ===
 
-// Module 19864 (LaunchPadWrapper)
+// Module 19907 (LaunchPadWrapper)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import HapticUtils from "HapticUtils" /* 5544 */;
-import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 19862 */;
+import HapticUtils from "HapticUtils" /* 5548 */;
+import LaunchPadPullTabCache from "LaunchPadPullTabCache" /* 19909 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: closure_6, TouchableOpacity: metroImportDefault, StyleSheet: closure_8 } = get_ActivityIndicator);
-const LaunchPadTypes = fn(12402).LaunchPadTypes;
+const LaunchPadTypes = fn(12608).LaunchPadTypes;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_10, ComponentActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { modalWrapper: null, a11yDismiss: null };
 let size = { height: "100%", width: "100%", paddingTop: nativeDefault.space.PX_8 };
 obj2.modalWrapper = size;
@@ -125,11 +125,12 @@ export default function LaunchPadWrapper(launchPadType) {
   items6[1] = tmp20Result;
   const obj6 = { style: launchPadStyles, pointerEvents: "none", children: null };
   const obj7 = { nativeID: "launch-pad", style: tmp.modalWrapper, onAccessibilityEscape: onPress, accessibilityViewIsModal: tmp7, children: null };
+  const obj8 = { accessibilityElementsHidden: !tmp7, importantForAccessibility: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null };
   let str3 = "no";
   if (tmp7) {
     str3 = "yes";
   }
-  const obj8 = { importantForAccessibility: str3, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null };
+  obj8.importantForAccessibility = str3;
   const intl = tmp2(tmp3[21]).intl;
   obj8.accessibilityLabel = intl.string(launchPadType(isModalOpen[21]).t.WAI6xu);
   obj8.onPress = onPress;

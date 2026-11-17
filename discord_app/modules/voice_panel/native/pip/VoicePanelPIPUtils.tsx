@@ -1,24 +1,24 @@
-// === Module 19910: VoicePanelPIPUtils ===
+// === Module 19955: VoicePanelPIPUtils ===
 
-// Module 19910 (VoicePanelPIPUtils)
+// Module 19955 (VoicePanelPIPUtils)
 import nativeDefault from "native" /* 575 */;
-import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 5968 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6798 */;
-import participantHasVideo from "participantHasVideo" /* 11990 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 7016 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6810 */;
+import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 5972 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6805 */;
+import participantHasVideo from "participantHasVideo" /* 11417 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 7024 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6804 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const VoicePanelConstants = fn(11985);
+const VoicePanelConstants = fn(12428);
 const SECONDARY_PIP_TOP_MARGIN = VoicePanelConstants.SECONDARY_PIP_TOP_MARGIN;
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
-const VoicePanelPIPConstants = fn(19911);
+const VoicePanelPIPConstants = fn(19956);
 ({ VoicePanelPIPModes: metroImportDefault, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
-const ParticipantTypes = fn(5973).ParticipantTypes;
-const MorphablePanelConstants = fn(11986);
+const ParticipantTypes = fn(5977).ParticipantTypes;
+const MorphablePanelConstants = fn(12429);
 ({ MIN_PIP_TOSS_VELOCITY, PIP_WINDOW_OFFSET } = MorphablePanelConstants);
 let set = new Set();
 let items = [{ code: "(function clamp_VoicePanelPIPUtilsTsx1(value,min,max){return Math.min(Math.max(value,min),max);})" }];
@@ -216,23 +216,22 @@ const items12 = [tmp21, tmp22, tmp23];
 calculatePIPPositionFromVelocity.__closure = items12;
 calculatePIPPositionFromVelocity.__workletHash = 7286102854830;
 calculatePIPPositionFromVelocity.__initData = tmp20;
-const items13 = [{ code: "(function getVoicePanelPIPBorderRadius_VoicePanelPIPUtilsTsx8(width,height){let[SquareActivityPIPReferenceDimensions,lg,xl]=this.__closure;if(width<=SquareActivityPIPReferenceDimensions.width&&height<=SquareActivityPIPReferenceDimensions.height){return lg;}return xl;})" }, SquareActivityPIPReferenceDimensions, nativeDefault.radii.lg, nativeDefault.radii.xl];
+const items13 = [{ code: "(function getVoicePanelPIPBorderRadius_VoicePanelPIPUtilsTsx8(width,height,isDockEnabled){let[lg,SquareActivityPIPReferenceDimensions,xl]=this.__closure;if(isDockEnabled){return lg;}if(width<=SquareActivityPIPReferenceDimensions.width&&height<=SquareActivityPIPReferenceDimensions.height){return lg;}return xl;})" }, nativeDefault.radii.lg, SquareActivityPIPReferenceDimensions, nativeDefault.radii.xl];
 let closure_135_0;
 let closure_135_1;
 let closure_135_2;
 [tmp24, tmp25, tmp26, tmp27] = items13;
-function getVoicePanelPIPBorderRadius(width, height) {
-  if (width <= require.width) {
-    if (height <= tmp.height) {
-      let tmp3 = dependencyMap;
-    }
-    return tmp3;
+function getVoicePanelPIPBorderRadius(width, height, isDockEnabled) {
+  if (isDockEnabled) {
+    let tmp4 = require;
+  } else {
+    tmp4 = ChannelRTCStore;
   }
-  tmp3 = ChannelRTCStore;
+  return tmp4;
 }
 const items14 = [tmp25, tmp26, tmp27];
 getVoicePanelPIPBorderRadius.__closure = items14;
-getVoicePanelPIPBorderRadius.__workletHash = 5727386522170;
+getVoicePanelPIPBorderRadius.__workletHash = 6766928057092;
 getVoicePanelPIPBorderRadius.__initData = tmp24;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPUtils.tsx");

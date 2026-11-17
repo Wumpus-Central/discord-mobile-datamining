@@ -1,19 +1,19 @@
-// === Module 16080: ServerChannelsAbstractUI ===
+// === Module 16117: ServerChannelsAbstractUI ===
 
-// Module 16080 (ServerChannelsAbstractUI)
-import assetHelpers from "assetHelpers" /* 7755 */;
-import _modDef16081 from "module_16081" /* 16081 */;
-import _modDef16082 from "module_16082" /* 16082 */;
-import _modDef16083 from "module_16083" /* 16083 */;
+// Module 16117 (ServerChannelsAbstractUI)
+import assetHelpers from "assetHelpers" /* 7765 */;
+import _modDef16118 from "module_16118" /* 16118 */;
+import _modDef16119 from "module_16119" /* 16119 */;
+import _modDef16120 from "module_16120" /* 16120 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef16081 }, 3: null };
-let obj2 = { uri: _modDef16081 };
-obj[2] = { uri: _modDef16082 };
-const obj3 = { uri: _modDef16082 };
-obj[3] = { uri: _modDef16083 };
+let obj = { 1: null, 2: { uri: _modDef16118 }, 3: null };
+let obj2 = { uri: _modDef16118 };
+obj[2] = { uri: _modDef16119 };
+const obj3 = { uri: _modDef16119 };
+obj[3] = { uri: _modDef16120 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ServerChannelsAbstractUI.native.tsx");
 

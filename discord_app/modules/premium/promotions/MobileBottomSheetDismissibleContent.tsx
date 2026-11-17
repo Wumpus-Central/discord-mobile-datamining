@@ -1,7 +1,7 @@
-// === Module 9677: MobileBottomSheetDismissibleContent ===
+// === Module 9690: MobileBottomSheetDismissibleContent ===
 
-// Module 9677 (MobileBottomSheetDismissibleContent)
-import dismissible_content from "dismissible_content" /* 5139 */;
+// Module 9690 (MobileBottomSheetDismissibleContent)
+import dismissible_content from "dismissible_content" /* 5143 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/promotions/MobileBottomSheetDismissibleContent.tsx");

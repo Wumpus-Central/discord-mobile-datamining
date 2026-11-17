@@ -1,13 +1,13 @@
-// === Module 13717: conjurePlanWidget ===
+// === Module 14768: conjurePlanWidget ===
 
-// Module 13717 (conjurePlanWidget)
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12149 */;
-import ApplicationAssetType from "ApplicationAssetType" /* 13718 */;
-import ApplicationAssetVisibility from "ApplicationAssetVisibility" /* 13719 */;
+// Module 14768 (conjurePlanWidget)
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 10895 */;
+import ApplicationAssetType from "ApplicationAssetType" /* 14769 */;
+import ApplicationAssetVisibility from "ApplicationAssetVisibility" /* 14770 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 7017 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 7025 */;
 
 const require = globalThis.__r;
 
@@ -103,11 +103,11 @@ function sampleValues(surfaces, sample_data, arg2) {
     let tmp7 = first;
     if ("image" === obj.get(first)) {
       let _String = String;
-      let tmp13 = arg2[String(undefined, tmp8)];
-      if (null != tmp13) {
+      let tmp15 = arg2[String(undefined, tmp8)];
+      if (null != tmp15) {
         let obj3 = { type: resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA, media: null };
         let size = { url: null, width: null, height: null };
-        size.url = tmp14;
+        size.url = tmp16;
         size.width = v256;
         size.height = v256;
         obj3.media = size;

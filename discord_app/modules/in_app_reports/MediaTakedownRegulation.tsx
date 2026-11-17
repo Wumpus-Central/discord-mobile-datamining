@@ -1,6 +1,6 @@
-// === Module 5992: MediaTakedownRegulation ===
+// === Module 5996: MediaTakedownRegulation ===
 
-// Module 5992 (MediaTakedownRegulation)
+// Module 5996 (MediaTakedownRegulation)
 import size from "module_2" /* 2 */;
 
 const MediaTakedownRegulation = { TIDA: "tida", UK_STOPNCII: "uk_stopncii", BRAZIL_ONLINE_SAFETY_OF_WOMEN: "brazil_online_safety_of_women" };

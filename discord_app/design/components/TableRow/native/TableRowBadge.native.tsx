@@ -1,8 +1,8 @@
-// === Module 7461: TableRowBadge ===
+// === Module 7471: TableRowBadge ===
 
-// Module 7461 (TableRowBadge)
-import native from "native" /* 5471 */;
-import Badge from "Badge" /* 7459 */;
+// Module 7471 (TableRowBadge)
+import native from "native" /* 5475 */;
+import Badge from "Badge" /* 7469 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowBadge.native.tsx");

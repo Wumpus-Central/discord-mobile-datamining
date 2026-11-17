@@ -1,6 +1,6 @@
-// === Module 6180: DesktopGeneralPerfExperiment ===
+// === Module 6188: DesktopGeneralPerfExperiment ===
 
-// Module 6180 (DesktopGeneralPerfExperiment)
+// Module 6188 (DesktopGeneralPerfExperiment)
 import PlatformUtils from "PlatformUtils" /* 1380 */;
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;

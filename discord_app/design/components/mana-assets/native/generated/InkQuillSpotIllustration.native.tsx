@@ -1,19 +1,19 @@
-// === Module 15095: InkQuillSpotIllustration ===
+// === Module 14308: InkQuillSpotIllustration ===
 
-// Module 15095 (InkQuillSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7755 */;
-import _modDef15096 from "module_15096" /* 15096 */;
-import _modDef15097 from "module_15097" /* 15097 */;
-import _modDef15098 from "module_15098" /* 15098 */;
+// Module 14308 (InkQuillSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7765 */;
+import _modDef14309 from "module_14309" /* 14309 */;
+import _modDef14310 from "module_14310" /* 14310 */;
+import _modDef14311 from "module_14311" /* 14311 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef15096 }, 3: null };
-let obj2 = { uri: _modDef15096 };
-obj[2] = { uri: _modDef15097 };
-const obj3 = { uri: _modDef15097 };
-obj[3] = { uri: _modDef15098 };
+let obj = { 1: null, 2: { uri: _modDef14309 }, 3: null };
+let obj2 = { uri: _modDef14309 };
+obj[2] = { uri: _modDef14310 };
+const obj3 = { uri: _modDef14310 };
+obj[3] = { uri: _modDef14311 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/InkQuillSpotIllustration.native.tsx");
 

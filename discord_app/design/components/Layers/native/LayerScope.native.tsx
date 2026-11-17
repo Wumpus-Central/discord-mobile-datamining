@@ -1,8 +1,8 @@
-// === Module 5906: LayerScope ===
+// === Module 5910: LayerScope ===
 
-// Module 5906 (LayerScope)
-import useInitialValueDefault from "useInitialValue" /* 5907 */;
-import LayerContext from "LayerContext" /* 5908 */;
+// Module 5910 (LayerScope)
+import useInitialValueDefault from "useInitialValue" /* 5911 */;
+import LayerContext from "LayerContext" /* 5912 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = noop.useContext(zIndex(5908).LayerContext);
+  const context = noop.useContext(zIndex(5912).LayerContext);
   dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
   _slicedToArray = noop.useRef(null);
   items = [context];

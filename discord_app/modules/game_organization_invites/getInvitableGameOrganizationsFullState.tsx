@@ -1,10 +1,10 @@
-// === Module 12537: getInvitableGameOrganizationsFullState ===
+// === Module 12732: getInvitableGameOrganizationsFullState ===
 
-// Module 12537 (getInvitableGameOrganizationsFullState)
+// Module 12732 (getInvitableGameOrganizationsFullState)
 import util from "util" /* 1113 */;
 import _modDef2565 from "module_2565" /* 2565 */;
-import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 12538 */;
-import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12539 */;
+import isGameOrganizationFullDefault from "isGameOrganizationFull" /* 12733 */;
+import getGameOrganizationDisplayNounDefault from "getGameOrganizationDisplayNoun" /* 12734 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = { kind: "available" };

@@ -1,7 +1,7 @@
-// === Module 19022: selectDiscoverServerAction ===
+// === Module 19063: selectDiscoverServerAction ===
 
-// Module 19022 (selectDiscoverServerAction)
-import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10225 */;
+// Module 19063 (selectDiscoverServerAction)
+import WaterwheelsCardTypes from "WaterwheelsCardTypes" /* 10668 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/waterwheels/discover/selectDiscoverServerAction.tsx");

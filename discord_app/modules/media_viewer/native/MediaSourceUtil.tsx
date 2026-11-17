@@ -1,30 +1,30 @@
-// === Module 8633: MediaSourceUtil ===
+// === Module 8644: MediaSourceUtil ===
 
-// Module 8633 (MediaSourceUtil)
+// Module 8644 (MediaSourceUtil)
 import ConstantsIOS from "ConstantsIOS" /* 1092 */;
 import util from "util" /* 1113 */;
 import FlagUtils from "FlagUtils" /* 1406 */;
 import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1444 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1495 */;
 import Server from "Server" /* 2119 */;
-import ToastUtils from "ToastUtils" /* 6004 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6351 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6366 */;
-import EmbedUtils from "EmbedUtils" /* 6780 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6848 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8629 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8634 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8640 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8645 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8646 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8655 */;
-import transformMessageComponents from "transformMessageComponents" /* 8656 */;
-import MediaModalPortal from "MediaModalPortal" /* 10198 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 11069 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11253 */;
+import ToastUtils from "ToastUtils" /* 6008 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6267 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6359 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6374 */;
+import EmbedUtils from "EmbedUtils" /* 6788 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6843 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8640 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 8645 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 8651 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8656 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8657 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8666 */;
+import transformMessageComponents from "transformMessageComponents" /* 8667 */;
+import MediaModalPortal from "MediaModalPortal" /* 10643 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 10717 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 11276 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
 
 const require = globalThis.__r;
 
@@ -715,12 +715,12 @@ export function extractMediaFromMessageComponents(getContentMessage, contentMess
       let type = nextResult.type;
       if (Server.ComponentType.MEDIA_GALLERY === type) {
         items = tmp4.items;
-        for (const item10029 of items) {
-          let tmp16 = toMediaSourceFromUnfurledMedia(arg0, arg2, item10029.media, item10029.description, item10029.spoiler);
-          if (null != tmp16) {
+        for (const item10035 of items) {
+          let tmp18 = toMediaSourceFromUnfurledMedia(arg0, arg2, item10035.media, item10035.description, item10035.spoiler);
+          if (null != tmp18) {
             let obj = { sources: null, unfurledMediaItem: null };
-            obj.sources = tmp17;
-            obj.unfurledMediaItem = item10029.media;
+            obj.sources = tmp19;
+            obj.unfurledMediaItem = item10035.media;
             let arr = items1.push(obj);
           }
           continue;

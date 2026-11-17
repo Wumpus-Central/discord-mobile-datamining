@@ -1,6 +1,6 @@
-// === Module 6714: ? ===
+// === Module 6722: ? ===
 
-// Module 6714
+// Module 6722
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/aura/fated.png.js");

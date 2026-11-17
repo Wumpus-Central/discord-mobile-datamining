@@ -1,29 +1,29 @@
-// === Module 17545: BountiesModalContentScroll ===
+// === Module 17582: BountiesModalContentScroll ===
 
-// Module 17545 (BountiesModalContentScroll)
+// Module 17582 (BountiesModalContentScroll)
 import nativeDefault from "native" /* 575 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1108 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _mod1655 from "module_1655" /* 1655 */;
-import native from "native" /* 5367 */;
-import timing_timing from "timing/timing" /* 5538 */;
-import timingPresets from "timingPresets" /* 5541 */;
-import QuestContent from "QuestContent" /* 6959 */;
-import AdCreativeType from "AdCreativeType" /* 6961 */;
-import QuestDataUtils from "QuestDataUtils" /* 8804 */;
-import AnalyticsActions from "AnalyticsActions" /* 8825 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 8834 */;
-import QuestActionCreators from "QuestActionCreators" /* 10133 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10171 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 15249 */;
-import shared_ThemeTypes from "shared/ThemeTypes" /* 17101 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17542 */;
-import BountiesScrollVideoItem from "BountiesScrollVideoItem" /* 17553 */;
-import BountiesScrollRecapPage from "BountiesScrollRecapPage" /* 17592 */;
+import native from "native" /* 5371 */;
+import timing_timing from "timing/timing" /* 5542 */;
+import timingPresets from "timingPresets" /* 5545 */;
+import QuestContent from "QuestContent" /* 6967 */;
+import AdCreativeType from "AdCreativeType" /* 6969 */;
+import QuestDataUtils from "QuestDataUtils" /* 8815 */;
+import AnalyticsActions from "AnalyticsActions" /* 8836 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 8845 */;
+import QuestActionCreators from "QuestActionCreators" /* 10577 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10616 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11293 */;
+import shared_ThemeTypes from "shared/ThemeTypes" /* 17137 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 17579 */;
+import BountiesScrollVideoItem from "BountiesScrollVideoItem" /* 17590 */;
+import BountiesScrollRecapPage from "BountiesScrollRecapPage" /* 17630 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 8807 */;
+import BountyStore from "BountyStore" /* 8818 */;
 
 const _modDef1655 = _mod1655;
 
@@ -921,7 +921,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     let tmp178 = null;
     if (tmp41) {
       const obj13 = { orbAmount: stateFromStores };
-      tmp178 = callback2(tmp5(17591).BountiesScrollRecapFooter, obj13);
+      tmp178 = callback2(tmp5(17629).BountiesScrollRecapFooter, obj13);
     }
     const obj14 = { value: memo3, children: null };
     const obj15 = { style: tmp.root, children: null };
@@ -937,15 +937,15 @@ function BountiesModalContentScrollInner(initialBountyId) {
       obj16.pointerEvents = str;
       const obj17 = {
         adContentId,
-        adCreativeType: tmp5(6961).AdCreativeType.BOUNTY,
-        questContent: tmp5(6959).QuestContent.BOUNTIES_END_INTERSTITIAL,
+        adCreativeType: tmp5(6969).AdCreativeType.BOUNTY,
+        questContent: tmp5(6967).QuestContent.BOUNTIES_END_INTERSTITIAL,
         overrideVisibility: first2,
         sourceQuestContent,
         children() {
               return closure_2_17(BountiesScrollRecapPage.BountiesScrollRecapPage, { orbAmount, onClose, style: { flex: 1 } });
             }
       };
-      obj16.children = tmp179(tmp5(15264).QuestContentImpressionTrackerNative, obj17);
+      obj16.children = tmp179(tmp5(15083).QuestContentImpressionTrackerNative, obj17);
       tmp179Result = tmp179(tmp2(1655).View, obj16);
     }
     const items70 = [tmp179Result, , , , , ];
@@ -971,13 +971,13 @@ function BountiesModalContentScrollInner(initialBountyId) {
       scrollEnabled: !tmp17,
       contentContainerStyle: memo9
     };
-    obj18.children = callback2(tmp5(7888).AnimatedFlashList, obj19);
+    obj18.children = callback2(tmp5(7898).AnimatedFlashList, obj19);
     items70[1] = callback2(tmp2(1655).View, obj18);
     let tmp179Result4 = null;
     if (null != tmp16) {
       const obj20 = { metadata: tmp16.metadata, sheetHeight: memo2, revealProgress: sharedValue, onDismiss: callback2, onInstallPress: null, onOverlaySurfaceClick: null, onCarouselScroll: null };
       ({ onInstallPress: obj32.onInstallPress, onOverlaySurfaceClick: obj32.onOverlaySurfaceClick, onCarouselScroll: obj32.onCarouselScroll } = tmp16);
-      tmp179Result4 = tmp179(tmp2(17596), obj20);
+      tmp179Result4 = tmp179(tmp2(17634), obj20);
     }
     items70[2] = tmp179Result4;
     let tmp179Result5 = null;
@@ -988,7 +988,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
         const items71 = [memo13, animatedStyle4];
         obj21.style = items71;
         const obj22 = { colors: first1, style: absoluteFill.absoluteFill };
-        obj21.children = tmp179(tmp2(5883), obj22);
+        obj21.children = tmp179(tmp2(5887), obj22);
         tmp179Result5 = tmp179(tmp2(1655).View, obj21);
       }
     }
@@ -1004,27 +1004,27 @@ function BountiesModalContentScrollInner(initialBountyId) {
     let tmp179Result6 = null;
     if (tmp38) {
       const obj24 = { onPress: callback5 };
-      tmp179Result6 = tmp179(tmp2(17597), obj24);
+      tmp179Result6 = tmp179(tmp2(17635), obj24);
     }
     obj23.children = tmp179Result6;
     items70[4] = callback2(tmp2(1655).View, obj23);
     const obj25 = { visible: tmp41, onContentLayout: callback, zIndex: height3, opacityStyle: animatedStyle3, children: tmp178 };
-    items70[5] = callback2(tmp2(17547), obj25);
+    items70[5] = callback2(tmp2(17584), obj25);
     obj15.children = items70;
     obj14.children = hasRecurringSwipeUpNux(questHomeBounties, obj15);
-    return callback2(tmp5(17556).BountyVideoEndAppStoreProvider, obj14);
+    return callback2(tmp5(17593).BountyVideoEndAppStoreProvider, obj14);
   }
   const tmp5Result22 = require("module_1655");
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const QuestConstants = fn(6954);
+const QuestConstants = fn(6962);
 ({ BOUNTY_ORB_AMOUNT: closure_8, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(17546);
+const BountiesModalConstants = fn(17583);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_10, getBountyVideoEndPeekClipHeight: closure_11, getBountyVideoEndPeekScale: closure_12, getBountyVideoEndPeekTargetScale: map1 } = BountiesModalConstants);
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_14, ComponentActions: closure_15 } = Constants);
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 const PlatformUtils = fn(1360);
@@ -1043,7 +1043,7 @@ function isScrollEventInBounds(contentOffset) {
 }
 isScrollEventInBounds.__workletHash = 3579964422615;
 isScrollEventInBounds.__initData = tmp7;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_30 = createStyles.createStyles(() => {
   const obj = { root: { flex: 1 }, recapPage: { position: "absolute", zIndex }, listWrapper: { position: "absolute", zIndex: zIndex2, overflow: "hidden" }, closeButton: { position: "absolute", zIndex: zIndex4 }, peekGradient: { position: "absolute", zIndex: zIndex3 } };
   return obj;

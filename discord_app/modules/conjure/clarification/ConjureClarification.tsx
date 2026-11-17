@@ -1,11 +1,11 @@
-// === Module 13571: ConjureClarification ===
+// === Module 14621: ConjureClarification ===
 
-// Module 13571 (ConjureClarification)
+// Module 14621 (ConjureClarification)
 import util from "util" /* 1113 */;
-import _modDef4131 from "module_4131" /* 4131 */;
-import useChannelName from "useChannelName" /* 5944 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import RelationshipStore from "RelationshipStore" /* 5248 */;
+import _modDef4133 from "module_4133" /* 4133 */;
+import useChannelName from "useChannelName" /* 5948 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import RelationshipStore from "RelationshipStore" /* 5252 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const require = globalThis.__r;
@@ -48,15 +48,15 @@ const ChannelTypes = fn(1072).ChannelTypes;
 let closure_7 = { [ChannelTypes.GUILD_TEXT]: "text", [ChannelTypes.GUILD_VOICE]: "voice", [ChannelTypes.GUILD_ANNOUNCEMENT]: "announcement", [ChannelTypes.GUILD_STAGE_VOICE]: "stage", [ChannelTypes.GUILD_FORUM]: "forum", [ChannelTypes.GUILD_MEDIA]: "media" };
 let closure_8 = { channel: "#", role: "@", user: "@", project: "", server: "" };
 let obj = { channel: null, role: null, user: null, project: null, server: null };
-let items = [_modDef4131["9+dfPT"], _modDef4131.pGSJqE];
+let items = [_modDef4133["9+dfPT"], _modDef4133.pGSJqE];
 obj.channel = items;
-let items1 = [_modDef4131["2VkCoD"], _modDef4131.c8YlX8];
+let items1 = [_modDef4133["2VkCoD"], _modDef4133.c8YlX8];
 obj.role = items1;
-let items2 = [_modDef4131.GZIAxl, _modDef4131["4bptbQ"]];
+let items2 = [_modDef4133.GZIAxl, _modDef4133["4bptbQ"]];
 obj.user = items2;
-const items3 = [_modDef4131.twlOb6, _modDef4131.twlOb6];
+const items3 = [_modDef4133.twlOb6, _modDef4133.twlOb6];
 obj.project = items3;
-const items4 = [_modDef4131.ZWXDeI, _modDef4131.ZWXDeI];
+const items4 = [_modDef4133.ZWXDeI, _modDef4133.ZWXDeI];
 obj.server = items4;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");
@@ -119,7 +119,7 @@ export function clarificationDraftPlaceholder(options) {
   if (tmp2) {
     tmp2 = null == options.input;
   }
-  const tmp4 = _modDef4131;
+  const tmp4 = _modDef4133;
   return intl.string(tmp2 ? tmp4.yLN1x6 : tmp4["tOC+tn"]);
 }
 export function isClarificationComplete(questions, arg1) {
@@ -321,7 +321,7 @@ export function uploadNoteAnswer(upload, multi, str) {
               if (tmp != str.attachment) {
                 const obj2 = { kind: "image", attachment: str.attachment, text: null };
                 const intl = util.intl;
-                obj2.text = intl.string(_modDef4131.wTsP5l);
+                obj2.text = intl.string(_modDef4133.wTsP5l);
                 tmp2 = obj2;
               } else {
                 const options = upload.options;

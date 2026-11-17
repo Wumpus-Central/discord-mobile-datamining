@@ -1,23 +1,23 @@
-// === Module 19570: SearchAutocompleteStore ===
+// === Module 19615: SearchAutocompleteStore ===
 
-// Module 19570 (SearchAutocompleteStore)
+// Module 19615 (SearchAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import UserUtilsDefault from "UserUtils" /* 5362 */;
-import _modDef6151 from "module_6151" /* 6151 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 6952 */;
-import GuildUtilsDefault from "GuildUtils" /* 7075 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 10250 */;
-import SearchUtils from "SearchUtils" /* 14747 */;
-import SearchTokens from "SearchTokens" /* 14748 */;
-import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 14751 */;
-import ChannelStore from "ChannelStore" /* 5155 */;
-import GuildMemberStore from "GuildMemberStore" /* 5218 */;
-import GuildStore from "GuildStore" /* 5177 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 5209 */;
-import StreamerModeStore from "StreamerModeStore" /* 5363 */;
+import UserUtilsDefault from "UserUtils" /* 5366 */;
+import _modDef6158 from "module_6158" /* 6158 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 6960 */;
+import GuildUtilsDefault from "GuildUtils" /* 7083 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 10269 */;
+import SearchUtils from "SearchUtils" /* 13825 */;
+import SearchTokens from "SearchTokens" /* 13826 */;
+import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 13829 */;
+import ChannelStore from "ChannelStore" /* 5159 */;
+import GuildMemberStore from "GuildMemberStore" /* 5222 */;
+import GuildStore from "GuildStore" /* 5181 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 5213 */;
+import StreamerModeStore from "StreamerModeStore" /* 5367 */;
 import UserStore from "UserStore" /* 1388 */;
-import SelectedSearchContextStore from "SelectedSearchContextStore" /* 14750 */;
+import SelectedSearchContextStore from "SelectedSearchContextStore" /* 13828 */;
 
 const SearchTokensDefault = SearchTokens;
 
@@ -53,16 +53,16 @@ function handleUserSearchResults(searchContext, results) {
               break;
             } else {
               user = user.getUser(tmp2.id);
-              let obj3 = user;
+              let obj = user;
               if (null != user) {
-                if (!obj3.isNonUserBot()) {
-                  let obj = UserUtilsDefault;
-                  let userTag = obj.getUserTag(obj3);
+                if (!obj.isNonUserBot()) {
+                  let obj2 = UserUtilsDefault;
+                  let userTag = obj2.getUserTag(obj);
                   if (null != userTag) {
-                    let obj2 = { text: null, user: null };
-                    obj2.text = tmp8;
-                    obj2.user = obj3;
-                    let arr = items.push(obj2);
+                    let obj3 = { text: null, user: null };
+                    obj3.text = tmp11;
+                    obj3.user = obj;
+                    let arr = items.push(obj3);
                   }
                 }
               }
@@ -74,7 +74,7 @@ function handleUserSearchResults(searchContext, results) {
         })(results.results, num);
         ({ mode, tokens } = value3);
         ({ query, cursorScope } = value3);
-        let tmp10 = getAutocompleteList(searchContext, mode, tokens);
+        const tmp10 = getAutocompleteList(searchContext, mode, tokens);
         const searchContextId1 = SearchUtils.getSearchContextId(searchContext);
         let value4 = map1.get(searchContextId1);
         if (value4 == null) {
@@ -129,13 +129,13 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
             const results = value.results;
             let arr3 = results;
             if (null != results) {
-              let tmp20 = null != filter;
-              if (tmp20) {
-                tmp20 = filter === SearchTokenTypes.FILTER_FROM || filter === SearchTokenTypes.FILTER_MENTIONS;
-                const tmp19 = filter === SearchTokenTypes.FILTER_FROM || filter === SearchTokenTypes.FILTER_MENTIONS;
+              let tmp21 = null != filter;
+              if (tmp21) {
+                tmp21 = filter === SearchTokenTypes.FILTER_FROM || filter === SearchTokenTypes.FILTER_MENTIONS;
+                const tmp20 = filter === SearchTokenTypes.FILTER_FROM || filter === SearchTokenTypes.FILTER_MENTIONS;
               }
               arr3 = results;
-              if (tmp20) {
+              if (tmp21) {
                 arr3 = results;
                 if (tmp6Result2.isMeAutcompleteAnswer(str)) {
                   currentUser = UserStore.getCurrentUser();
@@ -157,27 +157,27 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
                 tmp6Result2 = SearchTokens;
               }
             }
-            let tmp25 = null;
+            let tmp26 = null;
             if (null != arr3) {
-              tmp25 = null;
+              tmp26 = null;
               if (0 !== arr3.length) {
-                const obj5 = { group: filter, results: arr3 };
-                tmp25 = obj5;
+                const obj6 = { group: filter, results: arr3 };
+                tmp26 = obj6;
               }
             }
-            tmp4 = tmp25;
+            tmp4 = tmp26;
             const tmp6Result = SearchUtils;
           }
         }
       }
-      const tmp15 = SearchTokensDefault[filter];
+      const tmp16 = SearchTokensDefault[filter];
       let getAutocompletions;
-      if (tmp15 != null) {
-        getAutocompletions = tmp15.getAutocompletions;
+      if (tmp16 != null) {
+        getAutocompletions = tmp16.getAutocompletions;
       }
       if (null != getAutocompletions) {
-        const obj6 = { query: str, searchContext, maxResults: num, tokens };
-        let autocompletions = getAutocompletions(obj6);
+        const obj7 = { query: str, searchContext, maxResults: num, tokens };
+        let autocompletions = getAutocompletions(obj7);
       } else {
         autocompletions = [];
       }
@@ -185,11 +185,11 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
     }
     if (null != tmp4) {
       items = [tmp4];
-      let tmp26 = items;
+      let tmp27 = items;
     } else {
-      tmp26 = closure_15;
+      tmp27 = closure_15;
     }
-    return tmp26;
+    return tmp27;
   } else {
     return closure_15;
   }
@@ -221,7 +221,7 @@ function rebuildAutocompleteResults(c14) {
 const Constants = fn(1072);
 ({ SearchPopoutModes: closure_10, SearchTokenTypes } = Constants);
 const ME = Constants.ME;
-fn(7071).AutocompleterResultTypes;
+fn(7079).AutocompleterResultTypes;
 let c14 = null;
 let closure_15 = [];
 const map = new Map();
@@ -253,7 +253,7 @@ SearchAutocompleteStoreClass.displayName = "SearchAutocompleteStore";
 const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(DispatcherDefault, {
   SEARCH_AUTOCOMPLETE_INITIALIZE: function handleSearchAutocompleteInitialize(searchContext) {
     searchContext = searchContext.searchContext;
-    if (!_modDef6151(c14, searchContext)) {
+    if (!_modDef6158(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -261,7 +261,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
   },
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function handleSearchAutocompleteQueryUpdate(arg0) {
     ({ searchContext, tokens, cursorScope } = arg0);
-    if (!_modDef6151(c14, searchContext)) {
+    if (!_modDef6158(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }

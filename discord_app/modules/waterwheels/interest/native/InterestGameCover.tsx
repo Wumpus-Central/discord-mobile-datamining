@@ -1,9 +1,9 @@
-// === Module 19035: InterestGameCover ===
+// === Module 19076: InterestGameCover ===
 
-// Module 19035 (InterestGameCover)
+// Module 19076 (InterestGameCover)
 import nativeDefault from "native" /* 575 */;
-import useInterestCoverColor from "useInterestCoverColor" /* 19036 */;
-import InterestPickerPerformance from "InterestPickerPerformance" /* 19038 */;
+import useInterestCoverColor from "useInterestCoverColor" /* 19077 */;
+import InterestPickerPerformance from "InterestPickerPerformance" /* 19079 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,7 +32,7 @@ function NoCover(imageWidth) {
   if (tmp10) {
     tmp10 = iconURL !== tmp9[0];
   }
-  const tmp11 = tmp4(19036)(game.id, iconURL1);
+  const tmp11 = tmp4(19077)(game.id, iconURL1);
   let tmp12 = !compact;
   if (!compact) {
     tmp12 = tmp10;
@@ -62,7 +62,7 @@ function NoCover(imageWidth) {
     const obj3 = { uri: iconURL };
     obj2.source = obj3;
     obj2.style = tmp6.texture;
-    tmp18 = React5(tmp4(6010), obj2);
+    tmp18 = React5(tmp4(6014), obj2);
   }
   const items1 = [tmp18, , , ];
   let tmp20 = tmp12;
@@ -77,7 +77,7 @@ function NoCover(imageWidth) {
     obj5.onError = function onError() {
       return closure_1(iconURL);
     };
-    obj4.children = React5(tmp4(6010), obj5);
+    obj4.children = React5(tmp4(6014), obj5);
     tmp20 = React5(timestampProducer, obj4);
   }
   items1[1] = tmp20;
@@ -93,7 +93,7 @@ function NoCover(imageWidth) {
     obj7.onError = function onError() {
       return closure_1(iconURL);
     };
-    tmp10 = React5(tmp4(6010), obj7);
+    tmp10 = React5(tmp4(6014), obj7);
   }
   items1[2] = tmp10;
   let tmp24Result = !compact;
@@ -116,9 +116,9 @@ function NoCover(imageWidth) {
       num = 2;
     }
     obj10.maxLines = num;
-    obj9.children = React5(tmp4(19037), obj10);
+    obj9.children = React5(tmp4(19078), obj10);
     tmp24Result = React5(timestampProducer, obj9);
-    const tmp4Result = tmp4(19037);
+    const tmp4Result = tmp4(19078);
   }
   items1[3] = tmp24Result;
   obj.children = items1;
@@ -126,12 +126,12 @@ function NoCover(imageWidth) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-const TILE_ASPECT_RATIO = fn(19027).TILE_ASPECT_RATIO;
+const TILE_ASPECT_RATIO = fn(19068).TILE_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_6 = nativeDefault.space.PX_6;
 const PX_8 = nativeDefault.space.PX_8;
-const TextVariantsFlat = fn(5920).TextVariantsFlat;
+const TextVariantsFlat = fn(5924).TextVariantsFlat;
 const found = TextVariantsFlat.find((name) => "body-xs/semibold" === name.name);
 let num;
 if (found != null) {
@@ -141,7 +141,7 @@ if (num == null) {
   num = 16;
 }
 const sum = 2 * num + PX_6 + PX_8;
-let createStyles = fn(5306);
+let createStyles = fn(5310);
 let obj2 = { cover: null, image: null, fallback: null, titleOnly: null, icon: null, texture: null, art: null, banner: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -155,14 +155,14 @@ let obj4 = { flex: 1, justifyContent: "center", alignItems: "center", gap: nativ
 obj2.icon = { borderRadius: nativeDefault.radii.xs };
 let obj6 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj6.opacity = fn(19036).COVER_TEXTURE_OPACITY;
+obj6.opacity = fn(19077).COVER_TEXTURE_OPACITY;
 obj2.texture = obj6;
 const rect = { position: "absolute", top: 0, left: 0, right: 0, overflow: "hidden", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.art = rect;
 const rect1 = { position: "absolute", left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, paddingTop: PX_6, paddingBottom: PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_ACCENT };
 obj2.banner = rect1;
 let closure_11 = createStyles.createStyles(obj2);
-createStyles = fn(5306);
+createStyles = fn(5310);
 let closure_12 = createStyles.createStyles((height, width, minHeight, backgroundColor) => {
   if (null == backgroundColor) {
     let obj = {};

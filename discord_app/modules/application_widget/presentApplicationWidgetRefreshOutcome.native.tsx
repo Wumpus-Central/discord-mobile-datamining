@@ -1,10 +1,10 @@
-// === Module 12275: presentApplicationWidgetRefreshOutcome ===
+// === Module 11021: presentApplicationWidgetRefreshOutcome ===
 
-// Module 12275 (presentApplicationWidgetRefreshOutcome)
-import ToastUtils from "ToastUtils" /* 6004 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 6005 */;
-import RetryIcon from "RetryIcon" /* 11095 */;
-import applicationWidgetRefreshOutcomeDefault from "applicationWidgetRefreshOutcome" /* 12276 */;
+// Module 11021 (presentApplicationWidgetRefreshOutcome)
+import ToastUtils from "ToastUtils" /* 6008 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 6009 */;
+import applicationWidgetRefreshOutcomeDefault from "applicationWidgetRefreshOutcome" /* 11022 */;
+import RetryIcon from "RetryIcon" /* 11023 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/application_widget/presentApplicationWidgetRefreshOutcome.native.tsx");

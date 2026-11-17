@@ -1,7 +1,7 @@
-// === Module 20154: HcaptchaModal ===
+// === Module 20202: HcaptchaModal ===
 
-// Module 20154 (HcaptchaModal)
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6759 */;
+// Module 20202 (HcaptchaModal)
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 6767 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
@@ -113,7 +113,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_6, View: metroImportDefault, StyleSheet: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 const state = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" }, title: { textAlign: "center" }, closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 }, closeButtonHitArea: { minWidth: 44, minHeight: 44, justifyContent: "center", alignItems: "center" } });
 HcaptchaModal.modalConfig = { animation: fn(1072).ModalAnimation.FADE };
 const size = fn(2);

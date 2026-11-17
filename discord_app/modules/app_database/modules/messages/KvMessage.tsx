@@ -1,8 +1,8 @@
-// === Module 8690: KvMessage ===
+// === Module 8701: KvMessage ===
 
-// Module 8690 (KvMessage)
+// Module 8701 (KvMessage)
 import _slicedToArray from "module_32" /* 32 */;
-import GuildMemberStore from "GuildMemberStore" /* 5218 */;
+import GuildMemberStore from "GuildMemberStore" /* 5222 */;
 import UserStore from "UserStore" /* 1388 */;
 
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1072).EMPTY_STRING_SNOWFLAKE_ID;

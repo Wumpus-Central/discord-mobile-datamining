@@ -1,6 +1,6 @@
-// === Module 15237: MediaViewerImprovementsExperiment ===
+// === Module 11278: MediaViewerImprovementsExperiment ===
 
-// Module 15237 (MediaViewerImprovementsExperiment)
+// Module 11278 (MediaViewerImprovementsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

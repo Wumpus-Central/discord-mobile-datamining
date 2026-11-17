@@ -1,9 +1,9 @@
-// === Module 14364: ? ===
+// === Module 13229: ? ===
 
-// Module 14364
+// Module 13229
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_headwear_13_teddyBeanie.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/2bc458cf90e244a2f272b41461945fde86846111276a505f56016ee058022c7d.webp";
-export const metadata = { fileBytes: 30388 };
+export default "https://cdn.discordapp.com/assets/content/43d66a791794137f8c58f316695969c80475667f166c8a5400a72bb9a42594bc.webp";
+export const metadata = { fileBytes: 83244 };

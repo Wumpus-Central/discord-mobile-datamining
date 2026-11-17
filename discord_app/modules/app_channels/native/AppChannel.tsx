@@ -1,22 +1,22 @@
-// === Module 19431: AppChannel ===
+// === Module 19476: AppChannel ===
 
-// Module 19431 (AppChannel)
+// Module 19476 (AppChannel)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import components_Button_Button from "components/Button/Button" /* 5926 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5967 */;
-import FastImageDefault from "FastImage" /* 6010 */;
-import transitionToChannel from "transitionToChannel" /* 6053 */;
-import conjureDMAppChannel from "conjureDMAppChannel" /* 7052 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 7055 */;
-import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 7394 */;
-import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9068 */;
-import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 10546 */;
-import useChannelContentGate from "useChannelContentGate" /* 11977 */;
-import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 13345 */;
-import FrameSurfaceState from "FrameSurfaceState" /* 19440 */;
-import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 19442 */;
+import components_Button_Button from "components/Button/Button" /* 5930 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5971 */;
+import FastImageDefault from "FastImage" /* 6014 */;
+import transitionToChannel from "transitionToChannel" /* 6060 */;
+import conjureDMAppChannel from "conjureDMAppChannel" /* 7060 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7063 */;
+import ConjurePreviewActionCreators from "ConjurePreviewActionCreators" /* 7404 */;
+import openChannelSecondaryViewChat from "openChannelSecondaryViewChat" /* 9079 */;
+import useChannelContentGate from "useChannelContentGate" /* 12420 */;
+import ConjureAppIconTileDefault from "ConjureAppIconTile" /* 12548 */;
+import getInlineFramePresentationDefault from "getInlineFramePresentation" /* 14585 */;
+import FrameSurfaceState from "FrameSurfaceState" /* 19485 */;
+import useChannelAppFrameTeardownDefault from "useChannelAppFrameTeardown" /* 19487 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -171,15 +171,15 @@ function AppChannel(arg0) {
   return tmp4Result;
 }
 const View = fn(17).View;
-let closure_5 = fn(19432).useConjureFrameUpdateAvailable;
+let closure_5 = fn(19477).useConjureFrameUpdateAvailable;
 const jsxProd = fn(21);
 ({ jsx: closure_6, jsxs: metroImportDefault } = jsxProd);
-let createStyles = fn(5306);
+let createStyles = fn(5310);
 let obj2 = { icon: null };
 let size = { width: 64, height: 64, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.icon = size;
 let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(5306);
+createStyles = fn(5310);
 let closure_9 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { flex: 1, paddingBottom } };
   return obj;

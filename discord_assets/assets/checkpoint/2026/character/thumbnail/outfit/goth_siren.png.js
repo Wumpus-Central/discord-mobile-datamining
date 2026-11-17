@@ -1,6 +1,6 @@
-// === Module 6552: ? ===
+// === Module 6560: ? ===
 
-// Module 6552
+// Module 6560
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/outfit/goth_siren.png.js");

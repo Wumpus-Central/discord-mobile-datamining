@@ -1,32 +1,52 @@
-// === Module 15122: VoicePanelDockScrim ===
+// === Module 14336: VoicePanelDockScrim ===
 
-// Module 15122 (VoicePanelDockScrim)
+// Module 14336 (VoicePanelDockScrim)
 import nativeDefault from "native" /* 575 */;
-import VoicePanelDockLayout from "VoicePanelDockLayout" /* 12008 */;
-import ChatInputScrimGradient from "ChatInputScrimGradient" /* 14668 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5480 */;
+import useToken from "useToken" /* 5896 */;
+import VoicePanelDockLayout from "VoicePanelDockLayout" /* 12445 */;
+import ChatInputScrimGradient from "ChatInputScrimGradient" /* 13746 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
-let closure_4 = fn(12009).getVoicePanelDockButtonsTop;
+let closure_4 = fn(12446).getVoicePanelDockButtonsTop;
 const jsx = fn(21).jsx;
 const scrim = StyleSheet.create({ scrim: { position: "absolute", left: 0, right: 0, bottom: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/dock/VoicePanelDockScrim.tsx");
 
-export default noop.memo(function VoicePanelDockScrim() {
-  const chatDockHeight = VoicePanelDockLayout.useChatDockHeight();
-  let tmp4 = null;
-  if (chatDockHeight > 0) {
-    const obj2 = { style: null, pointerEvents: "none", children: null };
-    items = [scrim.scrim, ];
-    const obj3 = { height: closure_4(chatDockHeight) };
-    items[1] = obj3;
-    obj2.style = items;
-    const obj4 = { inline: true, gradientHeight: nativeDefault.space.PX_64 };
-    obj2.children = jsx(ChatInputScrimGradient.ChatInputScrimGradient, { inline: true, gradientHeight: nativeDefault.space.PX_64 });
-    tmp4 = <React3 style={null} pointerEvents="none">{null}</React3>;
+export default noop.memo(function VoicePanelDockScrim(background) {
+  let BACKGROUND_BASE_LOWER = background.background;
+  if (BACKGROUND_BASE_LOWER === undefined) {
+    BACKGROUND_BASE_LOWER = nativeDefault.colors.BACKGROUND_BASE_LOWER;
   }
-  return tmp4;
+  let flag = background.ignoreTheme;
+  if (flag === undefined) {
+    flag = false;
+  }
+  const chatDockHeight = VoicePanelDockLayout.useChatDockHeight();
+  const token = useToken.useToken(BACKGROUND_BASE_LOWER);
+  let gradientValue = client_themes_ClientThemesUtils.useGradientValue(client_themes_ClientThemesUtils.GradientPercentage.END);
+  let tmp9Result = null;
+  if (chatDockHeight > 0) {
+    const obj4 = { style: null, pointerEvents: "none", children: null };
+    items = [scrim.scrim, ];
+    const obj5 = { height: closure_4(chatDockHeight) };
+    items[1] = obj5;
+    obj4.style = items;
+    const obj6 = { inline: true, gradientHeight: nativeDefault.space.PX_64, scrimBase: null };
+    let tmp14 = token;
+    if (!flag) {
+      if (gradientValue == null) {
+        gradientValue = token;
+      }
+      tmp14 = gradientValue;
+    }
+    obj6.scrimBase = tmp14;
+    obj4.children = jsx(ChatInputScrimGradient.ChatInputScrimGradient, { inline: true, gradientHeight: nativeDefault.space.PX_64, scrimBase: null });
+    tmp9Result = <React3 style={null} pointerEvents="none">{null}</React3>;
+  }
+  return tmp9Result;
 });

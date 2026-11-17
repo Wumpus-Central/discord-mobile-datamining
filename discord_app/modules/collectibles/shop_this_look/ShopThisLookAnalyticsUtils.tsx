@@ -1,6 +1,6 @@
-// === Module 15688: ShopThisLookAnalyticsUtils ===
+// === Module 15722: ShopThisLookAnalyticsUtils ===
 
-// Module 15688 (ShopThisLookAnalyticsUtils)
+// Module 15722 (ShopThisLookAnalyticsUtils)
 import Constants from "Constants" /* 1072 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 2114 */;

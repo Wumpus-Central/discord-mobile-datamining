@@ -1,6 +1,6 @@
-// === Module 15672: useConjureBotApplication ===
+// === Module 15706: useConjureBotApplication ===
 
-// Module 15672 (useConjureBotApplication)
+// Module 15706 (useConjureBotApplication)
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 
 const require = globalThis.__r;

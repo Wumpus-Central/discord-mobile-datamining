@@ -1,9 +1,9 @@
-// === Module 14409: ? ===
+// === Module 13274: ? ===
 
-// Module 14409
+// Module 13274
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_09_jester_confetti.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/e2d3ddef9dd87b3e3df01cf1c4d57e45cebdfbd93b2fba28f77b2b50612498d7.webp";
-export const metadata = { fileBytes: 48604 };
+export default "https://cdn.discordapp.com/assets/content/0f1ea523a6ffbbaff905cf55c1fd8cf53ec7bb0292edd8e25a23d2fad2a4a758.webp";
+export const metadata = { fileBytes: 122216 };

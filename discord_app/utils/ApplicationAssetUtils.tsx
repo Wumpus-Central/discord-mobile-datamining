@@ -1,13 +1,13 @@
-// === Module 7313: ApplicationAssetUtils ===
+// === Module 7323: ApplicationAssetUtils ===
 
-// Module 7313 (ApplicationAssetUtils)
+// Module 7323 (ApplicationAssetUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7314 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7324 */;
 
 require = fn;
 function updateAssets() {

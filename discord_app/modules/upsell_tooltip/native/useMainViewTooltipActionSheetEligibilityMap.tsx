@@ -1,42 +1,42 @@
-// === Module 19848: useMainViewTooltipActionSheetEligibilityMap ===
+// === Module 19893: useMainViewTooltipActionSheetEligibilityMap ===
 
-// Module 19848 (useMainViewTooltipActionSheetEligibilityMap)
+// Module 19893 (useMainViewTooltipActionSheetEligibilityMap)
 import initialize from "initialize" /* 504 */;
 import DurationsDefault from "Durations" /* 1089 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import dismissible_content from "dismissible_content" /* 5139 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5338 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7259 */;
-import useAuthorizedAppsToken from "useAuthorizedAppsToken" /* 7922 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 9307 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9310 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 9313 */;
-import MarketingSurfaceType from "MarketingSurfaceType" /* 9627 */;
-import usePromotionMarketingSurface from "usePromotionMarketingSurface" /* 10010 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 11672 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11678 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 14577 */;
-import CustomTypingIndicatorNewPresetsExperiment from "CustomTypingIndicatorNewPresetsExperiment" /* 17980 */;
-import MobileBottomSheetCopy from "MobileBottomSheetCopy" /* 18355 */;
-import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 19806 */;
-import bloonsTDBattlesUpsellExperiment2 from "bloonsTDBattlesUpsellExperiment" /* 19842 */;
-import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 19849 */;
-import RecurringReferralReminderExperiment2 from "RecurringReferralReminderExperiment" /* 19850 */;
-import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 19851 */;
-import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 19852 */;
-import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 19853 */;
-import useLaunchAccountLinkingCampaignDefault from "useLaunchAccountLinkingCampaign" /* 19854 */;
-import useHexagonCampaignExpirySheetEligibility from "useHexagonCampaignExpirySheetEligibility" /* 19855 */;
+import dismissible_content from "dismissible_content" /* 5143 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5342 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7269 */;
+import useAuthorizedAppsToken from "useAuthorizedAppsToken" /* 7932 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 9316 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 9319 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 9322 */;
+import MarketingSurfaceType from "MarketingSurfaceType" /* 9639 */;
+import usePromotionMarketingSurface from "usePromotionMarketingSurface" /* 10023 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10097 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10103 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 13452 */;
+import CustomTypingIndicatorNewPresetsExperiment from "CustomTypingIndicatorNewPresetsExperiment" /* 18021 */;
+import MobileBottomSheetCopy from "MobileBottomSheetCopy" /* 18396 */;
+import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 19851 */;
+import bloonsTDBattlesUpsellExperiment2 from "bloonsTDBattlesUpsellExperiment" /* 19887 */;
+import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 19894 */;
+import RecurringReferralReminderExperiment2 from "RecurringReferralReminderExperiment" /* 19895 */;
+import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 19896 */;
+import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 19897 */;
+import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 19898 */;
+import useLaunchAccountLinkingCampaignDefault from "useLaunchAccountLinkingCampaign" /* 19899 */;
+import useHexagonCampaignExpirySheetEligibility from "useHexagonCampaignExpirySheetEligibility" /* 19900 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 9293 */;
-import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 19808 */;
-import PromotionsStore from "PromotionsStore" /* 9623 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 9302 */;
+import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 19853 */;
+import PromotionsStore from "PromotionsStore" /* 9635 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 5149 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 5153 */;
 
 require = fn;
-let closure_10 = fn(7920).ApplicationAccountLinkingConstants;
+let closure_10 = fn(7930).ApplicationAccountLinkingConstants;
 const PremiumConstants = fn(1390);
 ({ PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID, PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID, PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID } = PremiumConstants);
 const UserSettingsTypes = fn(1082).UserSettingsTypes;

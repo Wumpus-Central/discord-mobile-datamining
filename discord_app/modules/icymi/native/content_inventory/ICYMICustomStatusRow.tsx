@@ -1,25 +1,25 @@
-// === Module 19343: ICYMICustomStatusRow ===
+// === Module 19388: ICYMICustomStatusRow ===
 
-// Module 19343 (ICYMICustomStatusRow)
+// Module 19388 (ICYMICustomStatusRow)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
-import Text_Text from "Text/Text" /* 5919 */;
-import TrashIcon from "TrashIcon" /* 6030 */;
-import Pressables from "Pressables" /* 7428 */;
-import ReactionIcon from "ReactionIcon" /* 10409 */;
-import PencilIcon from "PencilIcon" /* 10901 */;
-import _modDef11857 from "module_11857" /* 11857 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12672 */;
+import Text_Text from "Text/Text" /* 5923 */;
+import TrashIcon from "TrashIcon" /* 6034 */;
+import Pressables from "Pressables" /* 7438 */;
+import ReactionIcon from "ReactionIcon" /* 10110 */;
+import PencilIcon from "PencilIcon" /* 11920 */;
+import _modDef12338 from "module_12338" /* 12338 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 12827 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1388 */;
-import ICYMIStore from "ICYMIStore" /* 10205 */;
+import ICYMIStore from "ICYMIStore" /* 10650 */;
 
 require = fn;
 function UploadPlaceholder() {
   const obj = { style: closure_13(false).uploadContainer, children: null };
-  items = [React5(native.Icon, { source: _modDef11857, size: native.IconSizes.SMALL }), ];
+  items = [React5(native.Icon, { source: _modDef12338, size: native.IconSizes.SMALL }), ];
   const obj3 = { variant: "body-md/normal", color: "text-strong", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["3UB9ad"]);
@@ -31,12 +31,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: closure_10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { background: { backgroundColor, overflow: "hidden" } };
   return obj;
 });
-const createICYMIStyles = fn(19286);
+const createICYMIStyles = fn(19331);
 let closure_13 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
   let num = 56;
   if (!arg1) {

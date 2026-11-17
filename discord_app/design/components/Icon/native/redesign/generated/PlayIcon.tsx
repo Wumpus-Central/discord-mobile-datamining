@@ -1,9 +1,9 @@
-// === Module 7606: PlayIcon ===
+// === Module 7616: PlayIcon ===
 
-// Module 7606 (PlayIcon)
+// Module 7616 (PlayIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod7607 from "module_7607" /* 7607 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod7617 from "module_7617" /* 7617 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function PlayIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7607, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7617, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

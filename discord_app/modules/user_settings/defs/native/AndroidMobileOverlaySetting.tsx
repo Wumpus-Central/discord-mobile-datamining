@@ -1,19 +1,19 @@
-// === Module 17875: AndroidMobileOverlaySetting ===
+// === Module 17916: AndroidMobileOverlaySetting ===
 
-// Module 17875 (AndroidMobileOverlaySetting)
+// Module 17916 (AndroidMobileOverlaySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1113 */;
-import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 13030 */;
-import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 13000 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 11671 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 11641 */;
 
 require = fn;
-const SettingBuilders = fn(12406);
+const SettingBuilders = fn(12612);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["9CSZJm"]);
   },
-  parent: fn(9202).MobileUserSettings.VOICE,
+  parent: fn(9213).MobileUserSettings.VOICE,
   useValue: function useAndroidMobileOverlaySettingValue() {
     items = [MobileVoiceOverlayStore];
     return initialize.useStateFromStores(items, () => enabled.getEnabled());
@@ -23,7 +23,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.Wfoivk);
   },
-  usePredicate: fn(13000).isMobileOverlaySupported
+  usePredicate: fn(11641).isMobileOverlaySupported
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");

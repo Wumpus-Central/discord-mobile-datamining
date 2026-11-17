@@ -1,11 +1,11 @@
-// === Module 18870: FavoritesGuildHeaderActions ===
+// === Module 18911: FavoritesGuildHeaderActions ===
 
-// Module 18870 (FavoritesGuildHeaderActions)
+// Module 18911 (FavoritesGuildHeaderActions)
 import util from "util" /* 1113 */;
-import _modDef3679 from "module_3679" /* 3679 */;
-import IconButton from "IconButton" /* 7988 */;
-import _modDef13539 from "module_13539" /* 13539 */;
-import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet" /* 18871 */;
+import _modDef3681 from "module_3681" /* 3681 */;
+import IconButton from "IconButton" /* 7999 */;
+import _modDef13692 from "module_13692" /* 13692 */;
+import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet" /* 18912 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,8 +14,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildHeaderActions.tsx");
 
 export function FavoritesGuildHeaderActionButton() {
-  const obj = { variant: "secondary", size: "sm", icon: _modDef13539, onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet, accessibilityLabel: null, maxFontSizeMultiplier: 1 };
+  const obj = { variant: "secondary", size: "sm", icon: _modDef13692, onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet, accessibilityLabel: null, maxFontSizeMultiplier: 1 };
   const intl = util.intl;
-  obj.accessibilityLabel = intl.string(_modDef3679.G9fGlP);
-  return jsx(IconButton.IconButton, { variant: "secondary", size: "sm", icon: _modDef13539, onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet, accessibilityLabel: null, maxFontSizeMultiplier: 1 });
+  obj.accessibilityLabel = intl.string(_modDef3681.G9fGlP);
+  return jsx(IconButton.IconButton, { variant: "secondary", size: "sm", icon: _modDef13692, onPress: FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet, accessibilityLabel: null, maxFontSizeMultiplier: 1 });
 }

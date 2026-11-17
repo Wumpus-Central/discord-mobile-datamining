@@ -1,6 +1,6 @@
-// === Module 20388: RTCLatencyTestActionCreators ===
+// === Module 20436: RTCLatencyTestActionCreators ===
 
-// Module 20388 (RTCLatencyTestActionCreators)
+// Module 20436 (RTCLatencyTestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import size from "module_2" /* 2 */;

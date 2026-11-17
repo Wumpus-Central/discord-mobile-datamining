@@ -1,22 +1,22 @@
-// === Module 19051: FavoritesGuildChannels ===
+// === Module 19092: FavoritesGuildChannels ===
 
-// Module 19051 (FavoritesGuildChannels)
-import useFontScale from "useFontScale" /* 5934 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 7824 */;
-import RedesignChannelList from "RedesignChannelList" /* 18825 */;
-import FavoritesGuildSuggestedChannels from "FavoritesGuildSuggestedChannels" /* 18920 */;
-import useShouldRenderChannelList from "useShouldRenderChannelList" /* 18983 */;
-import FavoritesGuildChannelList from "FavoritesGuildChannelList" /* 19052 */;
-import useFavoritesPruneInactiveThreadsDefault from "useFavoritesPruneInactiveThreads" /* 19053 */;
+// Module 19092 (FavoritesGuildChannels)
+import useFontScale from "useFontScale" /* 5938 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 7834 */;
+import RedesignChannelList from "RedesignChannelList" /* 18866 */;
+import FavoritesGuildSuggestedChannels from "FavoritesGuildSuggestedChannels" /* 18961 */;
+import useShouldRenderChannelList from "useShouldRenderChannelList" /* 19024 */;
+import FavoritesGuildChannelList from "FavoritesGuildChannelList" /* 19093 */;
+import useFavoritesPruneInactiveThreadsDefault from "useFavoritesPruneInactiveThreads" /* 19094 */;
 import noop from "module_19" /* 19 */;
 
-const ChannelListPanelBackdropDefault = tmp2(18772);
-const ChannelListStickyHeaderDefault = tmp2(18855);
-const FavoritesGuildSuggestedChannelsDefault = tmp2(18920);
-const FavoritesGuildSuggestionsLoaderDefault = tmp2(19054);
-const FavoritesGuildSidebarHeaderDefault = tmp2(19059);
+const ChannelListPanelBackdropDefault = tmp2(18813);
+const ChannelListStickyHeaderDefault = tmp2(18896);
+const FavoritesGuildSuggestedChannelsDefault = tmp2(18961);
+const FavoritesGuildSuggestionsLoaderDefault = tmp2(19095);
+const FavoritesGuildSidebarHeaderDefault = tmp2(19100);
 require = fn;
-let closure_3 = fn(18921).useFavoritesGuildSuggestionCount;
+let closure_3 = fn(18962).useFavoritesGuildSuggestionCount;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: closure_6 } = jsxProd);
 const size = fn(2);

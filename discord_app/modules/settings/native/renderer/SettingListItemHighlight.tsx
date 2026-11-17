@@ -1,17 +1,17 @@
-// === Module 17220: SettingListItemHighlight ===
+// === Module 17257: SettingListItemHighlight ===
 
-// Module 17220 (SettingListItemHighlight)
+// Module 17257 (SettingListItemHighlight)
 import nativeDefault from "native" /* 575 */;
 import _modDef1655 from "module_1655" /* 1655 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 17215 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 17252 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 let StyleSheet = fn(17).StyleSheet;
 let jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { background: { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_HOVER } };
 let closure_7 = createStyles.createStyles(obj);
 let closure_8 = { code: "(function SettingListItemHighlightTsx1(finished){let[scheduleOnRN,clearSelectedSearchResult]=this.__closure;if(finished){scheduleOnRN(clearSelectedSearchResult);}})" };

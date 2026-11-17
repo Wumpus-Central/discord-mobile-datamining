@@ -1,9 +1,9 @@
-// === Module 10300: BattlenetNeutralIcon ===
+// === Module 10410: BattlenetNeutralIcon ===
 
-// Module 10300 (BattlenetNeutralIcon)
+// Module 10410 (BattlenetNeutralIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod10301 from "module_10301" /* 10301 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod10411 from "module_10411" /* 10411 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function BattlenetNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10301, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10411, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

@@ -1,9 +1,9 @@
-// === Module 19523: EnglishAnalyzer ===
+// === Module 19568: EnglishAnalyzer ===
 
-// Module 19523 (EnglishAnalyzer)
+// Module 19568 (EnglishAnalyzer)
 import applyDefault from "apply" /* 12 */;
-import snowballStemmer from "snowballStemmer" /* 19524 */;
-import Search from "Search" /* 19526 */;
+import snowballStemmer from "snowballStemmer" /* 19569 */;
+import Search from "Search" /* 19571 */;
 import size from "module_2" /* 2 */;
 
 function stripPossessive(item10009) {

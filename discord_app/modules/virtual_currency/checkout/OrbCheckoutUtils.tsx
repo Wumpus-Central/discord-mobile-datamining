@@ -1,11 +1,11 @@
-// === Module 7256: OrbCheckoutUtils ===
+// === Module 7265: OrbCheckoutUtils ===
 
-// Module 7256 (OrbCheckoutUtils)
+// Module 7265 (OrbCheckoutUtils)
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1074 */;
 import util from "util" /* 1113 */;
-import BillingError from "BillingError" /* 5126 */;
-import OrderConstants from "OrderConstants" /* 7257 */;
-import OrderActionCreators from "OrderActionCreators" /* 7258 */;
+import BillingError from "BillingError" /* 5130 */;
+import OrderConstants from "OrderConstants" /* 7266 */;
+import OrderActionCreators from "OrderActionCreators" /* 7267 */;
 import Constants from "Constants" /* 1072 */;
 import size from "module_2" /* 2 */;
 
@@ -60,41 +60,44 @@ export function resolveOrbCheckoutErrorMessage(orbRedemptionError, result) {
     return null;
   } else {
     let keFvXM = dependencyMap;
-    let OrderSigningFailedWithConstraintsError = OrderActionCreators.OrderSigningFailedWithConstraintsError;
-    if (!(orbRedemptionError instanceof OrderSigningFailedWithConstraintsError)) {
+    if (orbRedemptionError.code === BillingError.ErrorCodes.BILLING_PURCHASE_BLOCKED_BY_RESTRICTION) {
+      let message = orbRedemptionError.message;
+    } else {
+      if (orbRedemptionError instanceof OrderActionCreators.OrderSigningFailedWithConstraintsError) {
+        if (null != result) {
+          if (ConstraintReasonCode.INSUFFICIENT_ORB_BALANCE === result) {
+            const intl9 = util.intl;
+            keFvXM = util.t.keFvXM;
+            let stringResult = intl9.string(keFvXM);
+          } else {
+            if (ConstraintReasonCode.SKU_ALREADY_OWNED === result) {
+              const intl8 = util.intl;
+              stringResult = intl8.string(util.t.m371Mx);
+            } else if (ConstraintReasonCode.BUNDLE_PARTIALLY_OWNED !== result) {
+              const intl6 = util.intl;
+              stringResult = intl6.string(util.t.fqJZ11);
+            }
+            const intl7 = util.intl;
+            stringResult = intl7.string(util.t.v9oC0p);
+          }
+        }
+      }
       if (orbRedemptionError instanceof OrderActionCreators.OrderProcessingPendingError) {
         const intl5 = util.intl;
-        let stringResult = intl5.string(util.t["2BmwgV"]);
+        message = intl5.string(util.t["2BmwgV"]);
       } else if (orbRedemptionError.code === BillingError.ErrorCodes.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE) {
         const intl4 = util.intl;
-        stringResult = intl4.string(util.t.keFvXM);
+        message = intl4.string(util.t.keFvXM);
       } else if (orbRedemptionError.code === BillingError.ErrorCodes.ALREADY_PURCHASED) {
         const intl3 = util.intl;
-        stringResult = intl3.string(util.t.m371Mx);
+        message = intl3.string(util.t.m371Mx);
       } else if (orbRedemptionError.code === BillingError.ErrorCodes.BILLING_ORDER_NOT_SIGNABLE) {
         const intl2 = util.intl;
-        stringResult = intl2.string(util.t.ZHgEG7);
+        message = intl2.string(util.t.ZHgEG7);
       } else {
         const intl = util.intl;
-        stringResult = intl.string(util.t.fqJZ11);
+        message = intl.string(util.t.fqJZ11);
       }
-    } else {
-      OrderSigningFailedWithConstraintsError = result;
-    }
-    if (ConstraintReasonCode.INSUFFICIENT_ORB_BALANCE === OrderSigningFailedWithConstraintsError) {
-      const intl9 = util.intl;
-      keFvXM = util.t.keFvXM;
-      let stringResult1 = intl9.string(keFvXM);
-    } else {
-      if (ConstraintReasonCode.SKU_ALREADY_OWNED === OrderSigningFailedWithConstraintsError) {
-        const intl8 = util.intl;
-        stringResult1 = intl8.string(util.t.m371Mx);
-      } else if (ConstraintReasonCode.BUNDLE_PARTIALLY_OWNED !== OrderSigningFailedWithConstraintsError) {
-        const intl6 = util.intl;
-        stringResult1 = intl6.string(util.t.fqJZ11);
-      }
-      const intl7 = util.intl;
-      stringResult1 = intl7.string(util.t.v9oC0p);
     }
   }
 }

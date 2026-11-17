@@ -1,11 +1,11 @@
-// === Module 18174: AcknowledgementsSetting ===
+// === Module 18215: AcknowledgementsSetting ===
 
-// Module 18174 (AcknowledgementsSetting)
+// Module 18215 (AcknowledgementsSetting)
 import Constants from "Constants" /* 1072 */;
 import util from "util" /* 1113 */;
-import LinkingDefault from "Linking" /* 6002 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 6027 */;
-import SettingBuilders from "SettingBuilders" /* 12406 */;
+import LinkingDefault from "Linking" /* 6006 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 6031 */;
+import SettingBuilders from "SettingBuilders" /* 12612 */;
 import size from "module_2" /* 2 */;
 
 const MarketingURLs = Constants.MarketingURLs;

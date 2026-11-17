@@ -1,6 +1,6 @@
-// === Module 6772: StripePaymentSettings ===
+// === Module 6780: StripePaymentSettings ===
 
-// Module 6772 (StripePaymentSettings)
+// Module 6780 (StripePaymentSettings)
 import checkEnv from "checkEnv" /* 16 */;
 import size from "module_2" /* 2 */;
 

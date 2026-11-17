@@ -1,10 +1,10 @@
-// === Module 14867: useRequiredLinkedLobbyApplicationAuthorization ===
+// === Module 13948: useRequiredLinkedLobbyApplicationAuthorization ===
 
-// Module 14867 (useRequiredLinkedLobbyApplicationAuthorization)
+// Module 13948 (useRequiredLinkedLobbyApplicationAuthorization)
 import _mod19 from "module_19" /* 19 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7055 */;
-import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 7221 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7410 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7063 */;
+import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 7229 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7420 */;
 import ApplicationStore from "ApplicationStore" /* 2165 */;
 import size from "module_2" /* 2 */;
 

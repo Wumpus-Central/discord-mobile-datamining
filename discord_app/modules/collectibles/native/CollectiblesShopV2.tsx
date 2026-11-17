@@ -1,29 +1,29 @@
-// === Module 18476: CollectiblesShopV2 ===
+// === Module 18517: CollectiblesShopV2 ===
 
-// Module 18476 (CollectiblesShopV2)
+// Module 18517 (CollectiblesShopV2)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 2186 */;
-import dismissible_content from "dismissible_content" /* 5139 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5338 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8483 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 8534 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9723 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10433 */;
-import ImprovedMobileShopLoadingExperiment from "ImprovedMobileShopLoadingExperiment" /* 10446 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 10458 */;
-import takeWhileDefault from "takeWhile" /* 18483 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 18486 */;
-import ShopCategory from "ShopCategory" /* 18488 */;
-import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 18490 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 18491 */;
+import dismissible_content from "dismissible_content" /* 5143 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5342 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8494 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 8545 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9736 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 10183 */;
+import ImprovedMobileShopLoadingExperiment from "ImprovedMobileShopLoadingExperiment" /* 10195 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 10516 */;
+import takeWhileDefault from "takeWhile" /* 18524 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 18527 */;
+import ShopCategory from "ShopCategory" /* 18529 */;
+import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 18531 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 18532 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 5922 */;
+import DevSettingsStore from "DevSettingsStore" /* 5926 */;
 import ThemeStore from "ThemeStore" /* 1192 */;
 import UserStore from "UserStore" /* 1388 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8485 */;
-import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5980 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 8496 */;
+import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 5984 */;
 
 const MobileNitroUpsellInShopFeedExperimentDefault = MobileNitroUpsellInShopFeedExperiment;
 
@@ -125,16 +125,16 @@ class CollectiblesShopV2 {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: closure_6 } = get_ActivityIndicator);
-const FeedBlockRecord = fn(8519).FeedBlockRecord;
+const FeedBlockRecord = fn(8530).FeedBlockRecord;
 const CollectiblesShopConstants = fn(1074);
 ({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: map1, CollectiblesMobileShopScreen: closure_14, CollectibleShopTab: closure_15, SHOP_ALL_PAGE_SIZE } = CollectiblesShopConstants);
 let closure_17 = CollectiblesShopConstants.TWELVE_DAYS_COLLECTION_SKU_ID;
 const Constants = fn(1072);
 ({ AnalyticEvents: closure_18, COLLECTIBLES_APPLICATION_ID: closure_19, PaymentGateways: closure_20 } = Constants);
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 const dependencyMap3 = createStyles.createStyles({ rootContainer: { height: "100%", width: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 } });
 const constants3 = { CATEGORY: "category", NITRO_UPSELL: "nitro_upsell", SKELETON: "skeleton" };
 let closure_26 = 2 * SHOP_ALL_PAGE_SIZE;

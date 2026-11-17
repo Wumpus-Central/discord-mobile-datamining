@@ -1,19 +1,19 @@
-// === Module 11935: ReminderWatchSpotIllustration ===
+// === Module 12386: ReminderWatchSpotIllustration ===
 
-// Module 11935 (ReminderWatchSpotIllustration)
-import assetHelpers from "assetHelpers" /* 7755 */;
-import _modDef11936 from "module_11936" /* 11936 */;
-import _modDef11937 from "module_11937" /* 11937 */;
-import _modDef11938 from "module_11938" /* 11938 */;
+// Module 12386 (ReminderWatchSpotIllustration)
+import assetHelpers from "assetHelpers" /* 7765 */;
+import _modDef12387 from "module_12387" /* 12387 */;
+import _modDef12388 from "module_12388" /* 12388 */;
+import _modDef12389 from "module_12389" /* 12389 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef11936 }, 3: null };
-let obj2 = { uri: _modDef11936 };
-obj[2] = { uri: _modDef11937 };
-const obj3 = { uri: _modDef11937 };
-obj[3] = { uri: _modDef11938 };
+let obj = { 1: null, 2: { uri: _modDef12387 }, 3: null };
+let obj2 = { uri: _modDef12387 };
+obj[2] = { uri: _modDef12388 };
+const obj3 = { uri: _modDef12388 };
+obj[3] = { uri: _modDef12389 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ReminderWatchSpotIllustration.native.tsx");
 

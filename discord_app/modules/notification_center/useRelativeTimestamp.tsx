@@ -1,7 +1,7 @@
-// === Module 18758: useRelativeTimestamp ===
+// === Module 18799: useRelativeTimestamp ===
 
-// Module 18758 (useRelativeTimestamp)
-import NotificationCenterUtils from "NotificationCenterUtils" /* 7034 */;
+// Module 18799 (useRelativeTimestamp)
+import NotificationCenterUtils from "NotificationCenterUtils" /* 7042 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ export function useRelativeTimestamp(timestamp) {
   dependencyMap = tmp[1];
   items = [timestamp, flag];
   const effect = noop.useEffect(() => {
-    dependencyMap(timestamp(7034).getRelativeTimestamp(interval, flag));
+    dependencyMap(timestamp(7042).getRelativeTimestamp(interval, flag));
     const diff = Date.now() - interval;
     if (diff <= flag(1089).Millis.DAY) {
       if (diff >= flag(1089).Millis.HOUR) {
@@ -29,11 +29,11 @@ export function useRelativeTimestamp(timestamp) {
       }
       const _setInterval = setInterval;
       interval = setInterval(() => {
-        dependencyMap(timestamp(7034).getRelativeTimestamp(closure_0, flag));
+        dependencyMap(timestamp(7042).getRelativeTimestamp(closure_0, flag));
       }, MINUTE, MINUTE - diff % MINUTE);
       return () => clearInterval(closure_0);
     }
-    const obj = timestamp(7034);
+    const obj = timestamp(7042);
   }, items);
   return tmp[0];
 }

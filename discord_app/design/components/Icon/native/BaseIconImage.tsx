@@ -1,8 +1,8 @@
-// === Module 6009: BaseIconImage ===
+// === Module 6013: BaseIconImage ===
 
-// Module 6009 (BaseIconImage)
-import useToken from "useToken" /* 5892 */;
-import FastImageDefault from "FastImage" /* 6010 */;
+// Module 6013 (BaseIconImage)
+import useToken from "useToken" /* 5896 */;
+import FastImageDefault from "FastImage" /* 6014 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

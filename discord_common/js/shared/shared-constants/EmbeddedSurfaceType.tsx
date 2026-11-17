@@ -1,6 +1,6 @@
-// === Module 5967: EmbeddedSurfaceType ===
+// === Module 5971: EmbeddedSurfaceType ===
 
-// Module 5967 (EmbeddedSurfaceType)
+// Module 5971 (EmbeddedSurfaceType)
 import size from "module_2" /* 2 */;
 
 const obj = { SETTABLE: new Set([0, 1, 2]) };

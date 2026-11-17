@@ -1,6 +1,6 @@
-// === Module 9017: Queue ===
+// === Module 9028: Queue ===
 
-// Module 9017 (Queue)
+// Module 9028 (Queue)
 import LoggerDefault from "Logger" /* 3 */;
 import DequeDefault from "Deque" /* 8 */;
 

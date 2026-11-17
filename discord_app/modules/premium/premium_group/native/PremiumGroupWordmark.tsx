@@ -1,9 +1,9 @@
-// === Module 10962: PremiumGroupWordmark ===
+// === Module 11186: PremiumGroupWordmark ===
 
-// Module 10962 (PremiumGroupWordmark)
+// Module 11186 (PremiumGroupWordmark)
 import nativeDefault from "native" /* 575 */;
-import useToken from "useToken" /* 5892 */;
-import inlineStyles from "inlineStyles" /* 8263 */;
+import useToken from "useToken" /* 5896 */;
+import inlineStyles from "inlineStyles" /* 8274 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

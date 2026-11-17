@@ -1,6 +1,6 @@
-// === Module 7850: PhoneVerificationActionCreators ===
+// === Module 7860: PhoneVerificationActionCreators ===
 
-// Module 7850 (PhoneVerificationActionCreators)
+// Module 7860 (PhoneVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import size from "module_2" /* 2 */;
 

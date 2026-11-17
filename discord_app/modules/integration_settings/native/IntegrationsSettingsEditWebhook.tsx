@@ -1,32 +1,32 @@
-// === Module 19718: IntegrationsSettingsEditWebhook ===
+// === Module 19763: IntegrationsSettingsEditWebhook ===
 
-// Module 19718 (IntegrationsSettingsEditWebhook)
+// Module 19763 (IntegrationsSettingsEditWebhook)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
 import useNavigation from "useNavigation" /* 1502 */;
-import NavScrim from "NavScrim" /* 5902 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6259 */;
-import common_AlertDefault from "common/Alert" /* 6330 */;
-import ClipboardUtils from "ClipboardUtils" /* 7943 */;
-import HeaderShared from "HeaderShared" /* 9051 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9058 */;
-import openChannelPickerDefault from "openChannelPicker" /* 11963 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 19711 */;
-import IconLabelBlockDefault from "IconLabelBlock" /* 19719 */;
+import NavScrim from "NavScrim" /* 5906 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 6267 */;
+import common_AlertDefault from "common/Alert" /* 6338 */;
+import ClipboardUtils from "ClipboardUtils" /* 7953 */;
+import HeaderShared from "HeaderShared" /* 9062 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9069 */;
+import openChannelPickerDefault from "openChannelPicker" /* 12408 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 19756 */;
+import IconLabelBlockDefault from "IconLabelBlock" /* 19764 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 5238 */;
-import RelationshipStore from "RelationshipStore" /* 5248 */;
+import PermissionStore from "PermissionStore" /* 5242 */;
+import RelationshipStore from "RelationshipStore" /* 5252 */;
 import UserStore from "UserStore" /* 1388 */;
 
 require = fn;
-let closure_3 = fn(5236).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_3 = fn(5240).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1072);
 ({ Endpoints: metroImportDefault, NON_USER_BOT_DISCRIMINATOR: closure_8, Permissions: closure_9, WebhookTypes: closure_10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, row: null, channelIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.row = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -118,7 +118,7 @@ class EditWebhook extends PureComponent {
         obj2.title = intl.string(navigation(1113).t.N5riYn);
         const intl2 = navigation(1113).intl;
         obj2.body = intl2.string(navigation(1113).t["/4TwKf"]);
-        closure_1_1(6259).show(obj2);
+        closure_1_1(6267).show(obj2);
       });
     };
     applyArgumentsResult.handleDeleteWebhook = function handleDeleteWebhook() {
@@ -257,21 +257,21 @@ prototype["render"] = function render() {
     }
   }
   obj5.errorMessage = first;
-  items1[1] = closure_11(webhookId(7619).TextInput, obj5);
+  items1[1] = closure_11(webhookId(7629).TextInput, obj5);
   const obj6 = { title: null, hasIcons: true, children: null };
   const intl4 = tmp3(1113).intl;
   obj6.title = intl4.string(webhookId(1113).t.GK18KJ);
   const obj7 = { label: null, arrow: true, onPress: null, icon: null };
-  const tmp2Result = closure_11(webhookId(5919).Text, { variant: "body-sm/medium", color: "text-link", children: stringResult });
-  obj7.label = webhookId(5944).computeChannelName(channel, UserStore, RelationshipStore);
+  const tmp2Result = closure_11(webhookId(5923).Text, { variant: "body-sm/medium", color: "text-link", children: stringResult });
+  obj7.label = webhookId(5948).computeChannelName(channel, UserStore, RelationshipStore);
   obj7.onPress = self.handleChannelChange;
   const obj8 = { size: webhookId(1187).Icon.Sizes.CUSTOM, source: null, style: null };
-  const tmp3Result = webhookId(5944);
-  obj8.source = webhookId(8033).getChannelIcon(channel);
+  const tmp3Result = webhookId(5948);
+  obj8.source = webhookId(8044).getChannelIcon(channel);
   obj8.style = tmp.channelIcon;
   obj7.icon = closure_11(webhookId(1187).Icon, obj8);
-  obj6.children = closure_11(webhookId(7443).TableRow, obj7);
-  items1[2] = closure_11(webhookId(7746).TableRowGroup, obj6);
+  obj6.children = closure_11(webhookId(7453).TableRow, obj7);
+  items1[2] = closure_11(webhookId(7756).TableRowGroup, obj6);
   let tmp2Result4 = null;
   if (null != token) {
     const obj9 = { title: null, hasIcons: false, children: null };
@@ -283,8 +283,8 @@ prototype["render"] = function render() {
     obj10.label = "" + aPIBaseURL + closure_7.WEBHOOK_INTEGRATION(webhookId, token);
     obj10.onPress = self.handleCopyUrl;
     obj10.trailing = tmp2Result;
-    obj9.children = closure_11(tmp3(7443).TableRow, obj10);
-    tmp2Result4 = closure_11(tmp3(7746).TableRowGroup, obj9);
+    obj9.children = closure_11(tmp3(7453).TableRow, obj10);
+    tmp2Result4 = closure_11(tmp3(7756).TableRowGroup, obj9);
     const tmp3Result4 = tmp3(1285);
   }
   items1[3] = tmp2Result4;
@@ -292,13 +292,13 @@ prototype["render"] = function render() {
   const obj12 = { variant: "danger", onPress: self.handleDeleteWebhook, label: null };
   const intl6 = tmp3(1113).intl;
   obj12.label = intl6.string(webhookId(1113).t.oyYWHE);
-  obj11.children = closure_11(webhookId(7443).TableRow, obj12);
-  items1[4] = closure_11(webhookId(7746).TableRowGroup, obj11);
+  obj11.children = closure_11(webhookId(7453).TableRow, obj12);
+  items1[4] = closure_11(webhookId(7756).TableRowGroup, obj11);
   obj2.children = items1;
-  obj.children = closure_12(webhookId(6327).Stack, obj2);
-  return closure_11(webhookId(8106).Form, obj);
+  obj.children = closure_12(webhookId(6335).Stack, obj2);
+  return closure_11(webhookId(8117).Form, obj);
 };
-EditWebhook.contextType = fn(5367).ThemeContext;
+EditWebhook.contextType = fn(5371).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsEditWebhook.tsx");
 

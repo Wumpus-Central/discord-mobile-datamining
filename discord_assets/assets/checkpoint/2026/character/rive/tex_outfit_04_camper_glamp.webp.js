@@ -1,9 +1,9 @@
-// === Module 14384: ? ===
+// === Module 13249: ? ===
 
-// Module 14384
+// Module 13249
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/rive/tex_outfit_04_camper_glamp.webp.js");
 
-export default "https://cdn.discordapp.com/assets/content/1c63db3e687f68960444f30aa5c2bddd7a6ba467e197063e1b7506ba701ec0c7.webp";
-export const metadata = { fileBytes: 27906 };
+export default "https://cdn.discordapp.com/assets/content/df1d8b139641b52ace6730d6b7be75d328ee698c48e3103e5e07e49c26889f49.webp";
+export const metadata = { fileBytes: 71700 };

@@ -1,23 +1,23 @@
-// === Module 19626: YouScreen ===
+// === Module 19671: YouScreen ===
 
-// Module 19626 (YouScreen)
+// Module 19671 (YouScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 575 */;
 import _modDef671 from "module_671" /* 671 */;
 import util from "util" /* 1113 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1360 */;
-import RootNavigationRef from "RootNavigationRef" /* 5483 */;
-import Pressables from "Pressables" /* 7428 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8483 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8611 */;
-import YouBannerDecorations from "YouBannerDecorations" /* 10509 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 17199 */;
+import RootNavigationRef from "RootNavigationRef" /* 5487 */;
+import Pressables from "Pressables" /* 7438 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8494 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8622 */;
+import YouBannerDecorations from "YouBannerDecorations" /* 10563 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 17236 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7352 */;
+import UserProfileStore from "UserProfileStore" /* 7362 */;
 import LocaleStore from "LocaleStore" /* 2189 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 17215 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7060 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 17252 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7068 */;
 import UserStore from "UserStore" /* 1388 */;
 import module_1655_mod from "module_1655" /* 1655 */;
 
@@ -506,18 +506,18 @@ function UnconnectedYouScreen(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: closure_6, ScrollView } = get_ActivityIndicator);
-const YouConstants = fn(19148);
+const YouConstants = fn(19193);
 ({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YouConstants);
 const UserSettingsSections = fn(1072).UserSettingsSections;
 let closure_17 = fn(1074).CollectiblesMobileShopScreen;
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
-const Constants = fn(7962);
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
+const Constants = fn(7972);
 ({ BANNER_ASPECT_RATIO: closure_19, UserProfileThemeTypes: closure_20 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 let module_1655 = module_1655_mod;
 const VisualEffectViewThemed = module_1655.createAnimatedComponent(VisualEffectViewThemedDefault);
-let createStyles = fn(5306);
+let createStyles = fn(5310);
 let closure_24 = createStyles.createStyles(() => {
   let xl;
   if (obj.isIOS()) {
@@ -553,7 +553,7 @@ let closure_24 = createStyles.createStyles(() => {
   obj3.content = { flex: 1, flexGrow: 1 };
   return obj3;
 });
-createStyles = fn(5306);
+createStyles = fn(5310);
 let closure_25 = createStyles.createStyles(() => {
   const obj = { backButton: { position: "absolute", marginTop: nativeDefault.space.PX_4, left: nativeDefault.space.PX_16, zIndex: 99, alignItems: "center", justifyContent: "center" } };
   return obj;
@@ -620,9 +620,8 @@ export default function YouScreen(initialTab) {
     obj2.screen = constants2.FEATURED_PAGE;
     const result = stateFromStores(memo[71]).openCollectiblesShopMobile(obj2);
   }, []);
-  const callback3 = noop.useCallback((autoFocusElement) => {
-    const obj2 = { screen: constants.PROFILE_CUSTOMIZATION, params: { autoFocusElement } };
-    stateFromStores(memo[70]).openUserSettings(obj2);
+  const callback3 = noop.useCallback((params) => {
+    stateFromStores(memo[70]).openUserSettings({ screen: constants.PROFILE_CUSTOMIZATION, params });
   }, []);
   const callback4 = noop.useCallback(() => {
     const obj2 = { analyticsLocations: null };

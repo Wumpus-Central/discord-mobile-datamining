@@ -1,25 +1,25 @@
-// === Module 12145: UserProfileWidgetSuggestedGames ===
+// === Module 10889: UserProfileWidgetSuggestedGames ===
 
-// Module 12145 (UserProfileWidgetSuggestedGames)
+// Module 10889 (UserProfileWidgetSuggestedGames)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 6321 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 12110 */;
-import GameCoverImageDefault from "GameCoverImage" /* 12112 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 6329 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 10844 */;
+import GameCoverImageDefault from "GameCoverImage" /* 10846 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const AccessibilityAnnouncer2 = trackUserProfileEditAction(5315);
-const UserProfileAnalyticsUtils = trackUserProfileEditAction(8546);
-const WidgetUtils = trackUserProfileEditAction(12090);
+const AccessibilityAnnouncer2 = trackUserProfileEditAction(5319);
+const UserProfileAnalyticsUtils = trackUserProfileEditAction(8557);
+const WidgetUtils = trackUserProfileEditAction(10822);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(8479).TrackUserProfileEditActions;
+let closure_7 = fn(8490).TrackUserProfileEditActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { container: { marginTop: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_NORMAL, gap: nativeDefault.space.PX_16 }, header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, row: { flexDirection: "row", gap: PX_12 } };
 let closure_11 = createStyles.createStyles(obj);
 let closure_12 = noop.memo(function SuggestedGameCover(gameId) {

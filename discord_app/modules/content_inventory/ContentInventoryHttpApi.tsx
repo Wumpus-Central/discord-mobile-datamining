@@ -1,6 +1,6 @@
-// === Module 15835: ContentInventoryHttpApi ===
+// === Module 15869: ContentInventoryHttpApi ===
 
-// Module 15835 (ContentInventoryHttpApi)
+// Module 15869 (ContentInventoryHttpApi)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -307,7 +307,7 @@ let closure_9 = async function _postTrackToContentInventory() {
     }
   })();
 };
-const ContentInventoryFeedKey = fn(10213).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(10396).ContentInventoryFeedKey;
 const Endpoints = fn(1072).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryHttpApi.tsx");

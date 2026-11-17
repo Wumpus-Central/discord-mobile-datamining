@@ -1,9 +1,9 @@
-// === Module 13353: SparklesIcon ===
+// === Module 14593: SparklesIcon ===
 
-// Module 13353 (SparklesIcon)
+// Module 14593 (SparklesIcon)
 import nativeDefault from "native" /* 575 */;
-import BaseIconImage from "BaseIconImage" /* 6009 */;
-import _mod13354 from "module_13354" /* 13354 */;
+import BaseIconImage from "BaseIconImage" /* 6013 */;
+import _mod14594 from "module_14594" /* 14594 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export function SparklesIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13354, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14594, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 }

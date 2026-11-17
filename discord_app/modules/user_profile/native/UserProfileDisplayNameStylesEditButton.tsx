@@ -1,14 +1,14 @@
-// === Module 17092: UserProfileDisplayNameStylesEditButton ===
+// === Module 17128: UserProfileDisplayNameStylesEditButton ===
 
-// Module 17092 (UserProfileDisplayNameStylesEditButton)
+// Module 17128 (UserProfileDisplayNameStylesEditButton)
 import nativeDefault from "native" /* 575 */;
 import util from "util" /* 1113 */;
 import native from "native" /* 1187 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1256 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10064 */;
-import _modDef15528 from "module_15528" /* 15528 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 17096 */;
-import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 17097 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10077 */;
+import _modDef15562 from "module_15562" /* 15562 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 17132 */;
+import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 17133 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -17,9 +17,9 @@ const noop = fn(19);
 const View = fn(17).View;
 const Constants = fn(1072);
 ({ AnalyticEvents: metroImportDefault, UserSettingsSections: closure_8 } = Constants);
-const ContentDismissActionType = fn(5152).ContentDismissActionType;
+const ContentDismissActionType = fn(5156).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj2 = { ggContainer: null, noneIcon: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", paddingBottom: 4 };
 obj2.ggContainer = size;
@@ -87,8 +87,8 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   }, items1);
   const tmp16 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      const obj2 = { source: _modDef15528, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef15528, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef15562, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef15562, style: closure_3.noneIcon });
     } else {
       const obj = { style: closure_3.ggContainer, children: null };
       const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };

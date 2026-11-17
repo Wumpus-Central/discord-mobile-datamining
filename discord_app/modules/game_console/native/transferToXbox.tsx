@@ -1,7 +1,7 @@
-// === Module 10834: transferToXbox ===
+// === Module 11709: transferToXbox ===
 
-// Module 10834 (transferToXbox)
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 10825 */;
+// Module 11709 (transferToXbox)
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11700 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

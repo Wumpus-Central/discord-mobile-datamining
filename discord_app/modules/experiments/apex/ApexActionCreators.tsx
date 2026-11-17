@@ -1,10 +1,10 @@
-// === Module 12418: ApexActionCreators ===
+// === Module 12624: ApexActionCreators ===
 
-// Module 12418 (ApexActionCreators)
+// Module 12624 (ApexActionCreators)
 import DispatcherDefault from "Dispatcher" /* 572 */;
 import HTTPUtils from "HTTPUtils" /* 1285 */;
 import apex_ApexTypes from "apex/ApexTypes" /* 1455 */;
-import experiment from "experiment" /* 8652 */;
+import experiment from "experiment" /* 8663 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
@@ -75,9 +75,12 @@ let closure_9 = async function _fetchUserExperimentAssignments() {
             closure_1 = tmp7;
             closure_129_0 = unitId;
             closure_129_1 = undefined;
+            closure_129_2 = undefined;
             if (!fetching.isFetching(unitId)) {
               if (!fetching.hasLoaded(unitId)) {
-                const obj5 = { type: "APEX_EXPERIMENTS_FETCH_START", unitId };
+                const fetchRequest = fetching.createFetchRequest();
+                closure_129_1 = fetchRequest;
+                const obj5 = { type: "APEX_EXPERIMENTS_FETCH_START", unitId, request: fetchRequest };
                 DispatcherDefault.dispatch(obj5);
                 c4 = 1;
                 const HTTP = HTTPUtils.HTTP;
@@ -94,23 +97,23 @@ let closure_9 = async function _fetchUserExperimentAssignments() {
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            const obj10 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_129_0 };
+            const obj10 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_129_0, request: closure_129_1 };
             closure_130_1(closure_130_2[5]).dispatch(obj10);
             const obj6 = closure_130_1(closure_130_2[5]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
           } else if (arg0 !== 2) {
-            closure_129_1 = value;
-            if (null != closure_129_1) {
-              if (null != closure_129_1.body) {
-                const obj11 = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: closure_129_0, experiments: closure_129_1.body };
+            closure_129_2 = value;
+            if (null != closure_129_2) {
+              if (null != closure_129_2.body) {
+                const obj11 = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: closure_129_0, request: closure_129_1, experiments: closure_129_2.body };
                 closure_130_1(closure_130_2[5]).dispatch(obj11);
                 const obj = closure_130_1(closure_130_2[5]);
               }
               c4 = 0;
             }
-            const obj12 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_129_0 };
+            const obj12 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_129_0, request: closure_129_1 };
             closure_130_1(closure_130_2[5]).dispatch(obj12);
             const obj3 = closure_130_1(closure_130_2[5]);
           }
@@ -120,11 +123,11 @@ let closure_9 = async function _fetchUserExperimentAssignments() {
           return obj13;
         }
         c6 = 3;
-      } catch (tmp37) {
-        closure_3 = tmp37;
+      } catch (tmp41) {
+        closure_3 = tmp41;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp37;
+          throw tmp41;
         } else {
           c5 = tmp;
         }
@@ -157,20 +160,23 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          const installation = tmp3;
+          dependencyMap = tmp3;
           closure_1 = tmp7;
           closure_129_0 = undefined;
+          closure_129_1 = undefined;
           let body2;
           let installation2;
-          closure_129_3 = undefined;
-          if (null == closure_0) {
+          closure_129_4 = undefined;
+          if (null == request) {
             if (!ApexExperimentStore.isFetching(apex_ApexTypes.INSTALLATION_UNIT_ID)) {
               if (!ApexExperimentStore.hasLoaded(apex_ApexTypes.INSTALLATION_UNIT_ID)) {
-                const obj5 = { type: "APEX_EXPERIMENTS_FETCH_START", unitId: apex_ApexTypes.INSTALLATION_UNIT_ID };
+                const fetchRequest = ApexExperimentStore.createFetchRequest();
+                closure_129_0 = fetchRequest;
+                const obj5 = { type: "APEX_EXPERIMENTS_FETCH_START", unitId: apex_ApexTypes.INSTALLATION_UNIT_ID, request: fetchRequest };
                 DispatcherDefault.dispatch(obj5);
                 c4 = 1;
                 const HTTP = HTTPUtils.HTTP;
-                const request = { url: constants.APEX_EXPERIMENTS, query: null, rejectWithError: false };
+                request = { url: constants.APEX_EXPERIMENTS, query: null, rejectWithError: false };
                 const obj8 = { surface: experiment.Experiment_Surface.APP };
                 request.query = obj8;
                 c5 = 2;
@@ -184,35 +190,35 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
       } else {
         if (1 === tmp7) {
           c4 = 0;
-          const obj10 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_130_0(closure_130_2[7]).INSTALLATION_UNIT_ID };
+          const obj10 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_130_0(closure_130_2[7]).INSTALLATION_UNIT_ID, request: closure_129_0 };
           closure_130_1(closure_130_2[5]).dispatch(obj10);
           let obj4 = closure_130_1(closure_130_2[5]);
         } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          closure_129_0 = value;
+          closure_129_1 = value;
           let body;
-          if (closure_129_0 != null) {
-            body = closure_129_0.body;
+          if (closure_129_1 != null) {
+            body = closure_129_1.body;
           }
           if (null != body) {
-            body2 = closure_129_0.body;
+            body2 = closure_129_1.body;
             installation2 = body2.installation;
-            closure_129_3 = closure_130_4(body2, closure_130_3);
+            closure_129_4 = closure_130_4(body2, closure_130_3);
             const Emitter = closure_130_1(closure_130_2[8]).Emitter;
             Emitter.batched(() => {
               if (installation) {
                 const obj2 = { type: "INSTALLATION_ID", installation };
-                closure_1(installation[5]).dispatch(obj2);
-                const obj = closure_1(installation[5]);
+                closure_1(572).dispatch(obj2);
+                const obj = closure_1(572);
               }
-              const obj3 = closure_1(installation[5]);
-              obj3.dispatch({ type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: closure_0(installation[7]).INSTALLATION_UNIT_ID, experiments });
-              const obj4 = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: closure_0(installation[7]).INSTALLATION_UNIT_ID, experiments };
+              const obj3 = closure_1(572);
+              obj3.dispatch({ type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: request(1455).INSTALLATION_UNIT_ID, request, experiments });
+              const obj4 = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: request(1455).INSTALLATION_UNIT_ID, request, experiments };
             });
           } else {
-            const obj11 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_130_0(closure_130_2[7]).INSTALLATION_UNIT_ID };
+            const obj11 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_130_0(closure_130_2[7]).INSTALLATION_UNIT_ID, request: closure_129_0 };
             closure_130_1(closure_130_2[5]).dispatch(obj11);
             let obj = closure_130_1(closure_130_2[5]);
           }
@@ -224,11 +230,11 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
         return obj12;
       }
       c6 = 3;
-    } catch (tmp47) {
-      const experiments = tmp47;
+    } catch (tmp52) {
+      const installation = tmp52;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp47;
+        throw tmp52;
       } else {
         c5 = tmp;
       }

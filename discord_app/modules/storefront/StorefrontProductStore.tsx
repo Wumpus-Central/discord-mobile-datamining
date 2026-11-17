@@ -1,9 +1,9 @@
-// === Module 8578: StorefrontProductStore ===
+// === Module 8589: StorefrontProductStore ===
 
-// Module 8578 (StorefrontProductStore)
+// Module 8589 (StorefrontProductStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 572 */;
-import GenericIAPStore from "GenericIAPStore" /* 8579 */;
+import GenericIAPStore from "GenericIAPStore" /* 8590 */;
 
 require = fn;
 function handleNativeStorefront() {

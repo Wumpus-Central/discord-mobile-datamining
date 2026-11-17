@@ -1,6 +1,6 @@
-// === Module 6049: Spoiler ===
+// === Module 6055: Spoiler ===
 
-// Module 6049 (Spoiler)
+// Module 6055 (Spoiler)
 import _mod560 from "module_560" /* 560 */;
 import _mod561 from "module_561" /* 561 */;
 import nativeDefault from "native" /* 575 */;
@@ -50,13 +50,13 @@ if (PlatformUtils.isAndroid()) {
   str = "rgba(0,0,0,0.0019607844)";
 }
 let context = noop.createContext(false);
-const createStyles = fn(5306);
+const createStyles = fn(5310);
 let obj = { spoiler: { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND }, placeholder: null, spoilerRevealed: null, muted: null };
 let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj.placeholder = size;
 const obj4 = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj.spoilerRevealed = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
-obj.muted = { opacity: fn(6050).MUTED_OPACITY_CONTENT };
+obj.muted = { opacity: fn(6056).MUTED_OPACITY_CONTENT };
 let closure_8 = createStyles.createLegacyClassComponentStyles(obj);
 const redux = noop.createContext(null);
 const PureComponent = noop.PureComponent;
@@ -167,7 +167,7 @@ Spoiler.prototype["render"] = function render() {
                         }
                         const obj = { children: null, style: null, onPress: "Array" };
                         ({ Children, cloneElement } = validElement);
-                        obj.children = Children.map(props.props.children, /* F91901 */ function() { ... });
+                        obj.children = Children.map(props.props.children, /* F92053 */ function() { ... });
                         items = [flattenResult, spoiler.spoiler];
                         obj.style = items;
                         return cloneElement(props, obj);
@@ -211,7 +211,7 @@ Spoiler.prototype["render"] = function render() {
     return jsx(require("native").LegacyText, { accessibilityRole: "button", style: null, onPress: null, children: null });
   }
 };
-Spoiler.contextType = fn(5367).ThemeContext;
+Spoiler.contextType = fn(5371).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/native/Spoiler.tsx");
 

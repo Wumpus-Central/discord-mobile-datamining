@@ -1,10 +1,10 @@
-// === Module 10596: VoiceStateIconUtils ===
+// === Module 10296: VoiceStateIconUtils ===
 
-// Module 10596 (VoiceStateIconUtils)
+// Module 10296 (VoiceStateIconUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import useLocalSelfMuteDeaf from "useLocalSelfMuteDeaf" /* 10597 */;
+import useLocalSelfMuteDeaf from "useLocalSelfMuteDeaf" /* 10297 */;
 import MediaEngineStore from "MediaEngineStore" /* 2133 */;
-import VoiceStateStore from "VoiceStateStore" /* 5971 */;
+import VoiceStateStore from "VoiceStateStore" /* 5975 */;
 
 const require = globalThis.__r;
 
