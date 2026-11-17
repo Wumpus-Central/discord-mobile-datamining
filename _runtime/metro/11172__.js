@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 120,
-  height: 80,
+  httpServerLocation: "/assets/images/native/custom_app_icons/HexagonIcon",
+  width: 102,
+  height: 102,
   scales: [2, 3],
-  hash: "8c6e7658ce5157dd6c415ee437c71c87",
-  name: "img_nitro_animated_emoji",
+  hash: "6fc713ff4969740a35633ad9d71eaf93",
+  name: "HexagonIcon",
   type: "png",
 });

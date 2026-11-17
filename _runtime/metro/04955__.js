@@ -1,24 +1,24 @@
 // _runtime/metro/04955__.js
-import module_4766_mod from "04766__.js";
-import subDays_mod from "../04956_subDays.js";
-import requiredArgs_mod from "../04586_requiredArgs.js";
+import module_4737_mod from "04737__.js";
+import module_4770_mod from "04770__.js";
+import requiredArgs_mod from "../04590_requiredArgs.js";
 
-let module_4766 = module_4766_mod;
-if (!module_4766) {
-  const obj = { default: module_4766 };
+let module_4737 = module_4737_mod;
+if (!module_4737) {
+  const obj = { default: module_4737 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4766;
+  tmp3 = module_4737;
 }
-module_4766 = tmp3;
-let subDays = subDays_mod;
-if (!subDays) {
-  const obj2 = { default: subDays };
+module_4737 = tmp3;
+let module_4770 = module_4770_mod;
+if (!module_4770) {
+  const obj2 = { default: module_4770 };
   let tmp5 = obj2;
 } else {
-  tmp5 = subDays;
+  tmp5 = module_4770;
 }
-subDays = tmp5;
+module_4770 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -28,8 +28,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function isYesterday(arg0) {
+export default function isTomorrow(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4766.default(arg0, subDays.default(Date.now(), 1));
+  return module_4770.default(arg0, module_4737.default(Date.now(), 1));
 };
 export default exports.default;

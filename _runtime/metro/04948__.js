@@ -1,6 +1,6 @@
 // _runtime/metro/04948__.js
 import module_4940_mod from "04940__.js";
-import requiredArgs_mod from "../04586_requiredArgs.js";
+import requiredArgs_mod from "../04590_requiredArgs.js";
 
 let module_4940 = module_4940_mod;
 if (!module_4940) {
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisYear(arg0) {
+export default function isThisMonth(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4940.default(arg0, Date.now());
+  return module_4940.default(Date.now(), arg0);
 };
 export default exports.default;

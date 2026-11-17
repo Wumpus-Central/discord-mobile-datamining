@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 500,
   height: 500,
   scales: [1],
-  hash: "537a5a5a0fd47a14c531a6a53114ce50",
-  name: "img_account_sync_crunchyroll_white",
+  hash: "92530bd573dd795df92f429bb50bdfa5",
+  name: "img_account_sync_letterboxd_dark",
   type: "svg",
 });

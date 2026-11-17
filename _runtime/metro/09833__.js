@@ -1,120 +1,172 @@
 // _runtime/metro/09833__.js
-import spanTimeInputToSeconds from "../09802_spanTimeInputToSeconds.js";
-import _mod9803 from "09803__.js";
-import _mod9810 from "09810__.js";
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "../09812_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
+import _mod9816 from "09816__.js";
+import _mod9821 from "09821__.js";
 import _mod9824 from "09824__.js";
 import _mod9834 from "09834__.js";
+import __SENTRY_DEBUG__ from "09809__.js";
+import consoleSandbox from "09810__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function getDynamicSamplingContextFromSpan(spanContext) {
-  const client = _mod9824.getClient();
-  if (client) {
-    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
-    if (rootSpan[_frozenDsc]) {
-      return tmp5;
+function updateSession(ipAddress) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  if (obj.user) {
+    ipAddress = ipAddress.ipAddress;
+    let ip_address = !ipAddress;
+    if (!ipAddress) {
+      ip_address = obj.user.ip_address;
+    }
+    if (ip_address) {
+      ipAddress.ipAddress = obj.user.ip_address;
+    }
+    if (!tmp) {
+      ipAddress.did = obj.user.id || obj.user.email || obj.user.username;
+    }
+    tmp = ipAddress.did || obj.did;
+  }
+  let timestamp = obj.timestamp;
+  if (!timestamp) {
+    timestamp = _mod9824.timestampInSeconds();
+  }
+  ipAddress.timestamp = timestamp;
+  if (obj.abnormal_mechanism) {
+    ipAddress.abnormal_mechanism = obj.abnormal_mechanism;
+  }
+  if (obj.ignoreDuration) {
+    ipAddress.ignoreDuration = obj.ignoreDuration;
+  }
+  if (!obj.sid) {
+    if (undefined !== obj.init) {
+      ipAddress.init = obj.init;
+    }
+    const did = ipAddress.did;
+    let did2 = !did;
+    if (!did) {
+      did2 = obj.did;
+    }
+    if (did2) {
+      const _HermesInternal = HermesInternal;
+      ipAddress.did = "" + obj.did;
+    }
+    if (typeof obj.started === "number") {
+      ipAddress.started = obj.started;
+    }
+    if (ipAddress.ignoreDuration) {
+      ipAddress.duration = undefined;
+    } else if (typeof obj.duration === "number") {
+      ipAddress.duration = obj.duration;
     } else {
-      const traceState = rootSpan.spanContext().traceState;
-      value = traceState;
-      if (traceState) {
-        value = traceState.get("sentry.dsc");
+      const diff = ipAddress.timestamp - ipAddress.started;
+      let num2 = 0;
+      if (diff >= 0) {
+        num2 = diff;
       }
-      let result = value;
-      if (value) {
-        result = _mod9810.baggageHeaderToDynamicSamplingContext(value);
-        const tmpResult6 = _mod9810;
-      }
-      if (result) {
-        return result;
-      } else {
-        const options = client.getOptions();
-        const tmp9 = client.getDsn() || {};
-        let DEFAULT_ENVIRONMENT = options.environment;
-        if (!DEFAULT_ENVIRONMENT) {
-          DEFAULT_ENVIRONMENT = _mod9834.DEFAULT_ENVIRONMENT;
-        }
-        const obj2 = {
-          environment: DEFAULT_ENVIRONMENT,
-          release: options.release,
-          public_key: tmp9.publicKey,
-          trace_id: spanContext.spanContext().traceId,
-        };
-        const dropUndefinedKeysResult = _mod9803.dropUndefinedKeys(obj2);
-        client.emit("createDsc", dropUndefinedKeysResult);
-        const tmpResult7 = _mod9803;
-        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(rootSpan);
-        const tmp13 = spanToJSONResult.data || {};
-        const tmp14 = tmp13[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
-        if (null != tmp14) {
-          const _HermesInternal = HermesInternal;
-          dropUndefinedKeysResult.sample_rate = "" + tmp14;
-        }
-        const description = spanToJSONResult.description;
-        const tmpResult8 = spanTimeInputToSeconds;
-        if (tmp17) {
-          dropUndefinedKeysResult.transaction = description;
-        }
-        tmp17 = "url" !== tmp13[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
-        if (tmpResult9.hasTracingEnabled()) {
-          const _String = String;
-          dropUndefinedKeysResult.sampled = String(spanTimeInputToSeconds.spanIsSampled(rootSpan));
-          const tmpResult10 = spanTimeInputToSeconds;
-        }
-        client.emit("createDsc", dropUndefinedKeysResult, rootSpan);
-        return dropUndefinedKeysResult;
-      }
+      ipAddress.duration = num2;
     }
-    const tmpResult = spanTimeInputToSeconds;
+    if (obj.release) {
+      ipAddress.release = obj.release;
+    }
+    if (obj.environment) {
+      ipAddress.environment = obj.environment;
+    }
+    const ipAddress2 = ipAddress.ipAddress;
+    let ipAddress3 = !ipAddress2;
+    if (!ipAddress2) {
+      ipAddress3 = obj.ipAddress;
+    }
+    if (ipAddress3) {
+      ipAddress.ipAddress = obj.ipAddress;
+    }
+    const userAgent = ipAddress.userAgent;
+    let userAgent2 = !userAgent;
+    if (!userAgent) {
+      userAgent2 = obj.userAgent;
+    }
+    if (userAgent2) {
+      ipAddress.userAgent = obj.userAgent;
+    }
+    if (typeof obj.errors === "number") {
+      ipAddress.errors = obj.errors;
+    }
+    if (obj.status) {
+      ipAddress.status = obj.status;
+    }
   } else {
-    return {};
-  }
-}
-const _frozenDsc = "_frozenDsc";
-
-export function freezeDscOnSpan(arg0, dsc) {
-  const result = _mod9803.addNonEnumerableProperty(arg0, _frozenDsc, dsc);
-}
-export function getDynamicSamplingContextFromClient(trace_id, getOptions) {
-  const options = getOptions.getOptions();
-  const tmp2 = getOptions.getDsn() || {};
-  let DEFAULT_ENVIRONMENT = options.environment;
-  if (!DEFAULT_ENVIRONMENT) {
-    DEFAULT_ENVIRONMENT = _mod9834.DEFAULT_ENVIRONMENT;
-  }
-  const dropUndefinedKeysResult = _mod9803.dropUndefinedKeys({
-    environment: DEFAULT_ENVIRONMENT,
-    release: options.release,
-    public_key: tmp2.publicKey,
-    trace_id,
-  });
-  getOptions.emit("createDsc", dropUndefinedKeysResult);
-  return dropUndefinedKeysResult;
-}
-export function getDynamicSamplingContextFromScope(getOptions, getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  let dsc = propagationContext.dsc;
-  if (!dsc) {
-    const options = getOptions.getOptions();
-    const tmp4 = getOptions.getDsn() || {};
-    let DEFAULT_ENVIRONMENT = options.environment;
-    if (!DEFAULT_ENVIRONMENT) {
-      DEFAULT_ENVIRONMENT = _mod9834.DEFAULT_ENVIRONMENT;
+    if (32 === obj.sid.length) {
+      let sid = obj.sid;
+    } else {
+      sid = _mod9821.uuid4();
     }
-    const obj2 = {
-      environment: DEFAULT_ENVIRONMENT,
-      release: options.release,
-      public_key: tmp4.publicKey,
-      trace_id: propagationContext.traceId,
-    };
-    const dropUndefinedKeysResult = _mod9803.dropUndefinedKeys(obj2);
-    getOptions.emit("createDsc", dropUndefinedKeysResult);
-    dsc = dropUndefinedKeysResult;
+    ipAddress.sid = sid;
   }
-  return dsc;
 }
-export { getDynamicSamplingContextFromSpan };
-export function spanToBaggageHeader(arg0) {
-  const tmp = getDynamicSamplingContextFromSpan(arg0);
-  return _mod9810.dynamicSamplingContextToSentryBaggageHeader(tmp);
+_mod9834;
+
+export function closeSession(status, status2) {
+  if (status2) {
+    const obj2 = { status: status2 };
+    let obj = obj2;
+  } else {
+    obj = {};
+    if ("ok" === status.status) {
+      obj = { status: "exited" };
+    }
+  }
+  updateSession(status, obj);
 }
+export function makeSession(arg0) {
+  const timestampInSecondsResult = obj2(9824).timestampInSeconds();
+  obj2 = {
+    sid: null,
+    init: true,
+    timestamp: null,
+    started: null,
+    duration: 0,
+    status: "ok",
+    errors: 0,
+    ignoreDuration: false,
+    toJSON: null,
+  };
+  let obj = obj2(9824);
+  obj2.sid = obj2(9821).uuid4();
+  obj2.timestamp = timestampInSecondsResult;
+  obj2.started = timestampInSecondsResult;
+  obj2.toJSON = function toJSON() {
+    const obj3 = {
+      sid: "" + obj2.sid,
+      init: obj2.init,
+      started: null,
+      timestamp: null,
+      status: null,
+      errors: null,
+      did: null,
+      duration: null,
+      abnormal_mechanism: null,
+      attrs: null,
+    };
+    const obj = _mod9816;
+    obj3.started = new Date(1000 * obj2.started).toISOString();
+    const date = new Date(1000 * obj2.started);
+    obj3.timestamp = new Date(1000 * obj2.timestamp).toISOString();
+    ({ status: obj2.status, errors: obj2.errors } = obj2);
+    if (typeof obj2.did === "number") {
+      const _HermesInternal = HermesInternal;
+      const combined = "" + obj2.did;
+    }
+    obj3.did = combined;
+    ({ duration: obj2.duration, abnormal_mechanism: obj2.abnormal_mechanism } = obj2);
+    obj3.attrs = {
+      release: obj2.release,
+      environment: obj2.environment,
+      ip_address: obj2.ipAddress,
+      user_agent: obj2.userAgent,
+    };
+    return obj.dropUndefinedKeys(obj3);
+  };
+  if (arg0) {
+    updateSession(obj2, arg0);
+  }
+  return obj2;
+}
+export { updateSession };

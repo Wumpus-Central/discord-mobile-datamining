@@ -1,15 +1,15 @@
 // _runtime/metro/04946__.js
-import module_4938_mod from "04938__.js";
-import requiredArgs_mod from "../04586_requiredArgs.js";
+import module_4936_mod from "04936__.js";
+import requiredArgs_mod from "../04590_requiredArgs.js";
 
-let module_4938 = module_4938_mod;
-if (!module_4938) {
-  const obj = { default: module_4938 };
+let module_4936 = module_4936_mod;
+if (!module_4936) {
+  const obj = { default: module_4936 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4938;
+  tmp3 = module_4936;
 }
-module_4938 = tmp3;
+module_4936 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisSecond(arg0) {
+export default function isThisISOWeek(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4938.default(Date.now(), arg0);
+  return module_4936.default(arg0, Date.now());
 };
 export default exports.default;

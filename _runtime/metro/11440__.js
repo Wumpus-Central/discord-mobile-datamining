@@ -1,108 +1,204 @@
 // _runtime/metro/11440__.js
-import _mod11428 from "11428__.js";
-import repeatedTimeunitPattern from "../11429_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../11436_AbstractParserWithWordBoundaryChecking.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-
-const ENYearMonthDayParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-const regExp = new RegExp(
-  "([0-9]{4})[-\\.\\/\\s](?:(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod11428.MONTH_DICTIONARY) +
-    ")|([0-9]{1,2}))[-\\.\\/\\s]([0-9]{1,2})(?=\\W|$)",
-  "i",
-);
-class ENYearMonthDayParser {
-  constructor(arg0) {
-    self = this;
-    tmp = c2(this, ENYearMonthDayParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENYearMonthDayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMonthDateOrder = global;
-    return tmp3Result;
-  }
-}
-_inherits(ENYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
-  },
+const obj = {
+  v: "4.8.0",
+  meta: { g: "LottieFiles AE 3.0.0", a: "", k: "", d: "", tc: "" },
+  fr: 60,
+  ip: 11,
+  op: 87,
+  w: 1280,
+  h: 720,
+  nm: "FrameEffect_09-2_Out",
+  ddd: 0,
+  assets: null,
+  layers: null,
+  markers: [],
 };
-let items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(arg0, arg1) {
-      const parsed = parseInt(arg1[1]);
-      const parsed1 = parseInt(arg1[4]);
-      if (arg1[3]) {
-        const _parseInt = parseInt;
-        let parsed2 = parseInt(arg1[3]);
-      } else {
-        parsed2 = ENYearMonthDayParser(11428).MONTH_DICTIONARY[str.toLowerCase(str)];
-      }
-      if (parsed2 < 1) {
-        const self = this;
-        if (this.strictMonthDateOrder) {
-          return null;
-        } else {
-          tmp6 = parsed2;
-          tmp7 = parsed1;
-          if (parsed1 >= 1) {
-            tmp6 = parsed2;
-            tmp7 = parsed1;
-            if (parsed1 <= 12) {
-              items = [parsed1, parsed2];
-              [tmp6, tmp7] = items;
-            }
-          }
-        }
-      } else {
-        tmp6 = parsed2;
-        tmp7 = parsed1;
-      }
-      let tmp8 = null;
-      if (tmp7 >= 1) {
-        tmp8 = null;
-        if (tmp7 <= 31) {
-          const date = { day: tmp7, month: tmp6, year: parsed };
-          tmp8 = date;
-        }
-      }
-      return tmp8;
-    },
+const items = [{ id: "image_0", w: 35, h: 35, u: "", p: "", e: 1 }];
+const obj2 = { id: "comp_0", layers: null };
+const obj3 = {
+  ddd: 0,
+  ind: 3,
+  ty: 2,
+  nm: "smile",
+  refId: "image_0",
+  sr: 1,
+  ks: {
+    o: { a: 0, k: 100, ix: 11 },
+    r: { a: 0, k: 0, ix: 10 },
+    p: { a: 0, k: [19.875, 20.125, 0], ix: 2 },
+    a: { a: 0, k: [17.25, 17.25, 0], ix: 1 },
+    s: { a: 0, k: [108.7, 108.7, 100], ix: 6 },
   },
+  ao: 0,
+  ip: 0,
+  op: 914,
+  st: 0,
+  bm: 0,
+};
+const items1 = [obj3];
+obj2.layers = items1;
+items[1] = obj2;
+obj.assets = items;
+const obj5 = {
+  ddd: 0,
+  ind: 2,
+  ty: 0,
+  nm: "particle",
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 12,
+  op: 103,
+  st: 10,
+  bm: 0,
+};
+const obj6 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 20, 0], ix: 1 },
+  s: { a: 0, k: [651, 651, 100], ix: 6 },
+};
+const obj7 = { a: 1, k: null, ix: 2 };
+const items2 = [
+  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 24, s: [984.8, 956, 0], to: [0, 0, 0], ti: [0, 0, 0] },
+  { t: 62, s: [984.8, -240.8, 0] },
 ];
+obj7.k = items2;
+obj6.p = obj7;
+obj5.ks = obj6;
+const items3 = [obj5, , , ,];
+const obj8 = {
+  ddd: 0,
+  ind: 3,
+  ty: 0,
+  nm: "particle",
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 8,
+  op: 102,
+  st: 6,
+  bm: 0,
+};
+const obj9 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 20, 0], ix: 1 },
+  s: { a: 0, k: [512, 512, 100], ix: 6 },
+};
+const obj10 = { a: 1, k: null, ix: 2 };
+const items4 = [
+  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 8, s: [549.6, 960, 0], to: [0, 0, 0], ti: [0, 0, 0] },
+  { t: 53, s: [549.6, -236.8, 0] },
+];
+obj10.k = items4;
+obj9.p = obj10;
+obj8.ks = obj9;
+items3[1] = obj8;
+const obj11 = {
+  ddd: 0,
+  ind: 4,
+  ty: 0,
+  nm: "particle",
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 19,
+  op: 103,
+  st: 17,
+  bm: 0,
+};
+const obj12 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 20, 0], ix: 1 },
+  s: { a: 0, k: [552, 552, 100], ix: 6 },
+};
+const obj13 = { a: 1, k: null, ix: 2 };
+const items5 = [
+  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 19, s: [313.6, 960, 0], to: [0, 0, 0], ti: [0, 0, 0] },
+  { t: 73, s: [313.6, -236.8, 0] },
+];
+obj13.k = items5;
+obj12.p = obj13;
+obj11.ks = obj12;
+items3[2] = obj11;
+const obj14 = {
+  ddd: 0,
+  ind: 5,
+  ty: 0,
+  nm: "particle",
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 26,
+  op: 103,
+  st: 24,
+  bm: 0,
+};
+const obj15 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 20, 0], ix: 1 },
+  s: { a: 0, k: [472, 472, 100], ix: 6 },
+};
+const obj16 = { a: 1, k: null, ix: 2 };
+const items6 = [
+  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 45, s: [1065.6, 960, 0], to: [0, 0, 0], ti: [0, 0, 0] },
+  { t: 82, s: [1065.6, -236.8, 0] },
+];
+obj16.k = items6;
+obj15.p = obj16;
+obj14.ks = obj15;
+items3[3] = obj14;
+const obj17 = {
+  ddd: 0,
+  ind: 6,
+  ty: 0,
+  nm: "particle",
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 17,
+  op: 118,
+  st: 15,
+  bm: 0,
+};
+const obj18 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 20, 0], ix: 1 },
+  s: { a: 0, k: [352, 352, 100], ix: 6 },
+};
+const obj19 = { a: 1, k: null, ix: 2 };
+const items7 = [
+  { i: { x: 0.833, y: 0.833 }, o: { x: 0.167, y: 0.167 }, t: 17, s: [704, 960, 0], to: [0, 0, 0], ti: [0, 0, 0] },
+  { t: 85, s: [704, -236.8, 0] },
+];
+obj19.k = items7;
+obj18.p = obj19;
+obj17.ks = obj18;
+items3[4] = obj17;
+obj.layers = items3;
 
-export default _createClass(ENYearMonthDayParser, items);
+export default obj;

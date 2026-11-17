@@ -1,43 +1,51 @@
 // _runtime/metro/08925__.js
-import _mod8926 from "08926__.js";
+import _mod8921 from "08921__.js";
+import _mod8922 from "08922__.js";
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
+require = arg1;
+const dependencyMap = arg6;
+
+export function isAAC(fileChunk, excludeSimilarTypes) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  let checkByFileTypeResult1 = FileTypes.checkByFileType(fileChunk, "aac");
+  if (!checkByFileTypeResult1) {
+    excludeSimilarTypes = undefined;
+    if (null != excludeSimilarTypes) {
+      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
+    }
+    let checkByFileTypeResult = !excludeSimilarTypes;
+    if (!excludeSimilarTypes) {
+      const fileChunk1 = _mod8921.getFileChunk(fileChunk);
+      const FileTypes2 = _mod8922.FileTypes;
+      checkByFileTypeResult = FileTypes2.checkByFileType(fileChunk1, "m4a");
+    }
+    checkByFileTypeResult1 = checkByFileTypeResult;
+  }
+  return checkByFileTypeResult1;
 }
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
-  }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
-          }
-          continue;
-        } else {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
-          }
-        }
-      }
-    };
-  }
-  const _Object2 = Object;
-  fn(_mod8926, exports);
-} else {
-  let _Object = Object;
+export function isAMR(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "amr");
+}
+export function isFLAC(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "flac");
+}
+export function isM4A(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "m4a");
+}
+export function isMP3(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "mp3");
+}
+export function isWAV(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "wav");
 }

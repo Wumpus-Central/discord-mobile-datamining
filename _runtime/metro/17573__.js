@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "d4b8535e8fda48cfe70d5688d1051d12",
-  name: "ClosedCaptionsOutlineIcon",
-  type: "png",
+  httpServerLocation: "/assets/modules/virtual_currency/native/orb_wallet/svgs",
+  width: 56,
+  height: 37,
+  scales: [1],
+  hash: "377389c9144977b74c1cf1d53250b6ef",
+  name: "nitro_upsell_graphic",
+  type: "svg",
 });

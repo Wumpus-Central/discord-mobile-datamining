@@ -1,28 +1,20 @@
 // _runtime/metro/08963__.js
+import _mod8949 from "08949__.js";
 
-export function getStringValue(value) {
-  const mapped = value.map((item) => String.fromCharCode(item));
-  return mapped.join("");
-}
-export function getEncodedString(arr) {
-  if (arr.length >= 8) {
-    const substr = arr.slice(0, 8);
-    const mapped = substr.map((item) => String.fromCharCode(item));
-    const joined = mapped.join("");
-    if ("ASCII\0\0\0" === joined) {
-      const substr1 = arr.slice(8);
-      const mapped1 = substr1.map((item) => String.fromCharCode(item));
-      return mapped1.join("");
-    } else if ("JIS\0\0\0\0\0" === joined) {
-      return "[JIS encoded text]";
-    } else if ("UNICODE\0" === joined) {
-      return "[Unicode encoded text]";
-    } else if ("\0\0\0\0\0\0\0\0" === joined) {
-      return "[Undefined encoding]";
+require = arg1;
+const dependencyMap = arg6;
+let c2 = 6;
+let closure_3 = ["GIF87a", "GIF89a"];
+
+export default {
+  isGifFile(dataView) {
+    let hasItem = dataView;
+    if (hasItem) {
+      hasItem = closure_3.includes(_mod8949.getStringFromDataView(dataView, 0, c2));
     }
-  }
-  return "Undefined";
-}
-export function getCalculatedGpsValue(value) {
-  return value[0][0] / value[0][1] + value[1][0] / value[1][1] / 60 + value[2][0] / value[2][1] / 3600;
-}
+    return hasItem;
+  },
+  findOffsets() {
+    return { gifHeaderOffset: 0 };
+  },
+};

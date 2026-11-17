@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "70ec4d21f0658b5914c9170f9e0a91d6",
-  name: "TvIcon",
+  hash: "78e18d727d8c0a3ff78e647d73ffb0be",
+  name: "QuoteIcon",
   type: "png",
 });

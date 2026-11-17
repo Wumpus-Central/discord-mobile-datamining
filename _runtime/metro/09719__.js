@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/billing/native/images",
-  width: 223,
-  height: 128.5,
+  httpServerLocation: "/assets/images/native/premium/activated",
+  width: 302,
+  height: 42,
   scales: [2, 3],
-  hash: "f5aa8d22ffc464d3c9704d96fbbd1afa",
-  name: "blocked-purchases-dark",
+  hash: "180afb9edd1653ca63d752893222f1c8",
+  name: "img_plan_activated",
   type: "png",
 });

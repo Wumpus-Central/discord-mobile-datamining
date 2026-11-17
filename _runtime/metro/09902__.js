@@ -1,260 +1,306 @@
 // _runtime/metro/09902__.js
-import errorCallback from "../09793_errorCallback.js";
-import _mod9804 from "09804__.js";
-import _mod9821 from "09821__.js";
-import _mod9829 from "09829__.js";
-import _mod9868 from "09868__.js";
-import _toArray from "../00717__toArray.js";
-import "module_9796";
-import consoleSandbox from "09797__.js";
-import dateTimestampInSeconds from "09811__.js";
-import __SENTRY_DEBUG__ from "09825__.js";
-
-function _addTracingHeadersToFetchRequest(headers, headers2, span) {
-  const traceData = _mod9868.getTraceData({ span });
-  ({ sentry-trace: tmp4, baggage } = traceData);
-  if (tmp4) {
-    headers = headers2.headers;
-    if (!headers) {
-      const _Request = Request;
-      let isInstanceOfResult = typeof Request !== "undefined";
-      if (typeof Request !== "undefined") {
-        const _Request2 = Request;
-        isInstanceOfResult = _mod9804.isInstanceOf(headers, Request);
-        const tmpResult = _mod9804;
+function resolve() {
+  let tmp17;
+  items = [...arguments];
+  let diff = items.length - 1;
+  let flag = false;
+  let str = "";
+  let flag2 = false;
+  let str2 = "";
+  if (-1 <= diff) {
+    while (true) {
+      let tmp3 = flag;
+      let str3 = "/";
+      if (0 <= diff) {
+        str3 = items[diff];
       }
-      let headers1;
-      if (isInstanceOfResult) {
-        headers1 = headers.headers;
+      let combined = str;
+      if (str3) {
+        let _HermesInternal = HermesInternal;
+        combined = "" + str3 + "/" + str;
+        tmp3 = "/" === str3.charAt(0);
       }
-      headers = headers1;
-    }
-    if (headers) {
-      const _Headers = Headers;
-      let isInstanceOfResult1 = typeof Headers !== "undefined";
-      if (typeof Headers !== "undefined") {
-        const _Headers3 = Headers;
-        isInstanceOfResult1 = _mod9804.isInstanceOf(headers, Headers);
-        const tmpResult2 = _mod9804;
-      }
-      if (isInstanceOfResult1) {
-        const _Headers2 = Headers;
-        headers2 = new Headers(headers);
-        const result = headers2.set("sentry-trace", tmp4);
-        if (baggage) {
-          const str6 = headers2.get("baggage");
-          if (str6) {
-            let parts = str6.split(",");
-            let found = parts.filter((item) => {
-              const first = item.split("=")[0];
-              return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-            });
-            let joined = found.join(",");
-            let combined = baggage;
-            if (joined) {
-              const _HermesInternal = HermesInternal;
-              combined = "" + joined + "," + baggage;
-            }
-            const result1 = headers2.set("baggage", combined);
-          } else {
-            const result2 = headers2.set("baggage", baggage);
-          }
-        }
-        return headers2;
+      let diff1 = diff - 1;
+      flag2 = tmp3;
+      str2 = combined;
+      if (-1 > diff1) {
+        break;
       } else {
-        const _Array = Array;
-        if (Array.isArray(headers)) {
-          const found1 = headers.filter((item) => {
-            let isArray = Array.isArray(item);
-            if (isArray) {
-              isArray = "sentry-trace" === item[0];
-            }
-            return !isArray;
-          });
-          items = [];
-          const items1 = ["sentry-trace", tmp4];
-          items[HermesBuiltin.arraySpread(found1.map((item) => {
-            if (Array.isArray(item)) {
-              if ("baggage" === item[0]) {
-                if (typeof item[1] === "string") {
-                  const arr = _toArray(item);
-                  items = [arr[0], ];
-                  const substr = arr.slice(2);
-                  const parts = arr[1].split(",");
-                  const found = parts.filter((item) => {
-                    const first = item.split("=")[0];
-                    return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-                  });
-                  items[1] = found.join(",");
-                  HermesBuiltin.arraySpread(substr, 2);
-                  return items;
-                }
-              }
-            }
-            return item;
-          }), 0)] = items1;
-          if (baggage) {
-            const items2 = ["baggage", baggage];
-            items.push(items2);
-          }
-          return items;
-        } else {
-          let baggage1;
-          if ("baggage" in headers) {
-            baggage1 = headers.baggage;
-          }
-          const _Array2 = Array;
-          if (Array.isArray(baggage1)) {
-            const mapped = baggage1.map((item) => {
-              let joined = item;
-              if (typeof item === "string") {
-                const parts = item.split(",");
-                const found = parts.filter((item) => {
-                  const first = item.split("=")[0];
-                  return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-                });
-                joined = found.join(",");
-              }
-              return joined;
-            });
-            let found2 = mapped.filter((item) => "" === item);
-          } else {
-            const items3 = [];
-            found2 = items3;
-            if (baggage1) {
-              const parts1 = baggage1.split(",");
-              const found3 = parts1.filter((item) => {
-                const first = item.split("=")[0];
-                return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
-              });
-              items3.push(found3.join(","));
-              found2 = items3;
-            }
-          }
-          if (baggage) {
-            found2.push(baggage);
-          }
-          const obj3 = {};
-          const merged = Object.assign(headers);
-          obj3["sentry-trace"] = tmp4;
-          let joined1;
-          if (found2.length > 0) {
-            joined1 = found2.join(",");
-          }
-          obj3.baggage = joined1;
-          return obj3;
+        diff = diff1;
+        flag = tmp3;
+        str = combined;
+        str2 = combined;
+        flag2 = tmp3;
+        if (tmp3) {
+          break;
         }
       }
-    } else {
-      const obj4 = {};
-      const merged1 = Object.assign(traceData);
-      return obj4;
     }
   }
-  const obj2 = { span };
+  let str4 = "";
+  if (flag2) {
+    str4 = "/";
+  }
+  const parts = str2.split("/");
+  const found = parts.filter((item) => item);
+  let diff2 = found.length - 1;
+  let num = 0;
+  let num2 = 0;
+  if (0 <= diff2) {
+    do {
+      let tmp8 = found[diff2];
+      if ("." === tmp8) {
+        let spliceResult = found.splice(diff2, 1);
+        let sum = num;
+      } else if (".." === tmp8) {
+        let spliceResult1 = found.splice(diff2, 1);
+        sum = num + 1;
+      } else {
+        sum = num;
+        if (num) {
+          let spliceResult2 = found.splice(diff2, 1);
+          sum = num - 1;
+        }
+      }
+      diff2 = diff2 - 1;
+      num = sum;
+      num2 = sum;
+    } while (0 <= diff2);
+  }
+  if (!flag2) {
+    let diff3 = num2 - 1;
+    if (num2) {
+      do {
+        let arr = found.unshift("..");
+        tmp17 = diff3;
+        diff3 = diff3 - 1;
+      } while (tmp17);
+    }
+  }
+  return str4 + found.join("/") || ".";
 }
-errorCallback;
-_mod9821;
+function normalizePath(str) {
+  let tmp14;
+  const substr = str.slice(-1);
+  const parts = str.split("/");
+  const found = parts.filter((item) => item);
+  let diff = found.length - 1;
+  let num = 0;
+  let num2 = 0;
+  if (0 <= diff) {
+    do {
+      let tmp4 = found[diff];
+      if ("." === tmp4) {
+        let spliceResult = found.splice(diff, 1);
+        let sum = num;
+      } else if (".." === tmp4) {
+        let spliceResult1 = found.splice(diff, 1);
+        sum = num + 1;
+      } else {
+        sum = num;
+        if (num) {
+          let spliceResult2 = found.splice(diff, 1);
+          sum = num - 1;
+        }
+      }
+      diff = diff - 1;
+      num = sum;
+      num2 = sum;
+    } while (0 <= diff);
+  }
+  const tmp11 = "/" === str.charAt(0);
+  if (!tmp11) {
+    let diff1 = num2 - 1;
+    if (num2) {
+      do {
+        let arr = found.unshift("..");
+        tmp14 = diff1;
+        diff1 = diff1 - 1;
+      } while (tmp14);
+    }
+  }
+  str = found.join("/");
+  let tmp15 = str;
+  if (!str) {
+    tmp15 = tmp11;
+  }
+  if (!tmp15) {
+    str = ".";
+  }
+  let tmp16 = str;
+  if (str) {
+    tmp16 = "/" === substr;
+  }
+  let text = str;
+  if (tmp16) {
+    text = `${str}/`;
+  }
+  let str2 = "";
+  if (tmp11) {
+    str2 = "/";
+  }
+  return str2 + text;
+}
+const re0 = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
 
-export function addTracingHeadersToFetchRequest(arg0, arg1, arg2, arg3, arg4) {
-  return _addTracingHeadersToFetchRequest(arg0, arg3, arg4);
-}
-export function instrumentFetchRequest(fetchData, fn, fn2, arg3) {
-  let str = arg4;
-  if (arg4 === undefined) {
-    str = "auto.http.browser";
+export function basename(arr, arg1) {
+  let combined = arr;
+  if (arr.length > 1024) {
+    const _HermesInternal = HermesInternal;
+    combined = "<truncated>" + arr.slice(-1024);
   }
-  let endResult = fetchData;
-  if (fetchData.fetchData) {
-    let setHttpStatus = require;
-    let headers = dependencyMap;
-    let hasTracingEnabledResult = _mod9829.hasTracingEnabled();
-    if (hasTracingEnabledResult) {
-      hasTracingEnabledResult = fn(endResult.fetchData.url);
-    }
-    if (endResult.endTimestamp) {
-      if (hasTracingEnabledResult) {
-        const __span = endResult.fetchData.__span;
-        if (__span) {
-          if (arg3[__span]) {
-            if (endResult.response) {
-              setHttpStatus = setHttpStatus(9814).setHttpStatus;
-              setHttpStatus(obj10, endResult.response.status);
-              headers = endResult.response;
-              if (headers) {
-                headers = endResult.response.headers;
-              }
-              if (headers) {
-                const headers2 = endResult.response.headers;
-                headers = headers2.get("content-length");
-              }
-              if (headers) {
-                const _parseInt = parseInt;
-                setHttpStatus = parseInt(headers);
-                if (setHttpStatus > 0) {
-                  const attr = obj10.setAttribute("http.response_content_length", setHttpStatus);
-                }
-              }
-              const setHttpStatusResult = setHttpStatus(9814);
-            } else if (endResult.error) {
-              const obj2 = { code: setHttpStatus(9814).SPAN_STATUS_ERROR, message: "internal_error" };
-              obj10.setStatus(obj2);
-            }
-            endResult = obj10.end();
-            delete tmp2[tmp];
-          }
-        }
-      }
-    }
-    ({ method, url } = endResult.fetchData);
-    const tmp7 = (function getFullURL(url) {
-      try {
-        const _URL = URL;
-        const uRL = new URL(url);
-        return uRL.href;
-      } catch (err) {
-      }
-    })(url);
-    if (tmp7) {
-      const host = setHttpStatus(9879).parseUrl(tmp7).host;
-      const setHttpStatusResult2 = setHttpStatus(9879);
-    }
-    const activeSpan = setHttpStatus(9802).getActiveSpan();
-    if (hasTracingEnabledResult) {
-      if (activeSpan) {
-        const obj3 = { name: null, attributes: null };
-        const _HermesInternal = HermesInternal;
-        obj3.name = "" + method + " " + url;
-        const obj4 = { url, type: "fetch", "http.method": method, "http.url": tmp7, "server.address": host };
-        obj4[setHttpStatus(9812).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
-        obj4[setHttpStatus(9812).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
-        obj3.attributes = obj4;
-        let startInactiveSpanResult = setHttpStatus(9831).startInactiveSpan(obj3);
-        const setHttpStatusResult4 = setHttpStatus(9831);
-      }
-      endResult.fetchData.__span = startInactiveSpanResult.spanContext().spanId;
-      arg3[startInactiveSpanResult.spanContext().spanId] = startInactiveSpanResult;
-      if (fn2(endResult.fetchData.url)) {
-        let obj5 = endResult.args[1];
-        if (!obj5) {
-          obj5 = {};
-        }
-        let tmp14;
-        if (setHttpStatusResult5.hasTracingEnabled()) {
-          if (activeSpan) {
-            tmp14 = startInactiveSpanResult;
-          }
-        }
-        const tmp13Result = _addTracingHeadersToFetchRequest(endResult.args[0], obj5, tmp14);
-        if (tmp13Result) {
-          endResult.args[1] = obj5;
-          obj5.headers = tmp13Result;
-        }
-        setHttpStatusResult5 = setHttpStatus(9829);
-      }
-      return startInactiveSpanResult;
-    }
-    startInactiveSpanResult = new setHttpStatus(9830).SentryNonRecordingSpan();
-    const setHttpStatusResult3 = setHttpStatus(9802);
+  const match = re0.exec(combined);
+  if (match) {
+    let substr = match.slice(1);
+  } else {
+    substr = [];
   }
+  let tmp3 = arg1;
+  if (arg1) {
+    tmp3 = arr3.slice(-1 * arg1.length) === arg1;
+  }
+  let substr1 = arr3;
+  if (tmp3) {
+    substr1 = arr3.slice(0, arr3.length - arg1.length);
+  }
+  return substr1;
 }
+export function dirname(arr) {
+  let combined = arr;
+  if (arr.length > 1024) {
+    const _HermesInternal = HermesInternal;
+    combined = "<truncated>" + arr.slice(-1024);
+  }
+  const match = re0.exec(combined);
+  if (match) {
+    let substr = match.slice(1);
+  } else {
+    substr = [];
+  }
+  if (substr[0] || "") {
+    let substr1 = arr3;
+    if (arr3) {
+      substr1 = arr3.slice(0, arr3.length - 1);
+    }
+    let str2 = tmp3 + substr1;
+  } else {
+    str2 = ".";
+  }
+  return str2;
+}
+export function isAbsolute(str) {
+  return "/" === str.charAt(0);
+}
+export function join() {
+  items = [...arguments];
+  return normalizePath(items.join("/"));
+}
+export { normalizePath };
+export function relative(root, replaced) {
+  const arr = resolve(root);
+  const str = resolve(root).slice(1);
+  const arr2 = resolve(replaced);
+  const parts = str.split("/");
+  let num = 0;
+  if (0 < parts.length) {
+    let num2 = 0;
+    num = 0;
+    if ("" === parts[0]) {
+      const sum = num2 + 1;
+      num = sum;
+      while (sum < parts.length) {
+        num2 = sum;
+        num = sum;
+        if ("" !== parts[sum]) {
+          break;
+        }
+      }
+    }
+  }
+  const diff = parts.length - 1;
+  let tmp3 = diff;
+  if (0 <= diff) {
+    let tmp4 = diff;
+    tmp3 = diff;
+    if ("" === parts[diff]) {
+      const diff1 = tmp4 - 1;
+      tmp3 = diff1;
+      while (0 <= diff1) {
+        tmp4 = diff1;
+        tmp3 = diff1;
+        if ("" !== parts[diff1]) {
+          break;
+        }
+      }
+    }
+  }
+  if (tmp3 < num) {
+    items = [];
+  } else {
+    items = parts.slice(num, tmp3 - num + 1);
+  }
+  const parts1 = resolve(replaced).slice(1).split("/");
+  let num3 = 0;
+  if (0 < parts1.length) {
+    let num4 = 0;
+    num3 = 0;
+    if ("" === parts1[0]) {
+      const sum1 = num4 + 1;
+      num3 = sum1;
+      while (sum1 < parts1.length) {
+        num4 = sum1;
+        num3 = sum1;
+        if ("" !== parts1[sum1]) {
+          break;
+        }
+      }
+    }
+  }
+  const diff2 = parts1.length - 1;
+  let tmp8 = diff2;
+  if (0 <= diff2) {
+    let tmp9 = diff2;
+    tmp8 = diff2;
+    if ("" === parts1[diff2]) {
+      const diff3 = tmp9 - 1;
+      tmp8 = diff3;
+      while (0 <= diff3) {
+        tmp9 = diff3;
+        tmp8 = diff3;
+        if ("" !== parts1[diff3]) {
+          break;
+        }
+      }
+    }
+  }
+  if (tmp8 < num3) {
+    let items1 = [];
+  } else {
+    items1 = parts1.slice(num3, tmp8 - num3 + 1);
+  }
+  const bound = Math.min(items.length, items1.length);
+  let num5 = 0;
+  let tmp12 = bound;
+  if (0 < bound) {
+    tmp12 = num5;
+    while (items[num5] === items1[num5]) {
+      num5 = num5 + 1;
+      tmp12 = bound;
+      if (num5 >= bound) {
+        break;
+      }
+    }
+  }
+  const items2 = [];
+  let sum2 = tmp12;
+  if (tmp12 < items.length) {
+    do {
+      let arr3 = items2.push("..");
+      sum2 = sum2 + 1;
+      length = items.length;
+    } while (sum2 < length);
+  }
+  const combined = items2.concat(items1.slice(tmp12));
+  return combined.join("/");
+}
+export { resolve };

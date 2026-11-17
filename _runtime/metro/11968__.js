@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/channel_following/light",
-  width: 280,
-  height: 120,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "822095525bba6121eeb33373acfc6100",
-  name: "channel_following_success_1",
+  hash: "f5a4357d7c0b7e1db64214ae6f5682c3",
+  name: "ic_premium_channel_16px",
   type: "png",
 });

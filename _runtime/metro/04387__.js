@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9lbW9qaXMvZGVmYXVsdF9lbW9qaXM=",
+  httpServerLocation: "/assets/modules/intelligence_layer/search",
   scales: [1],
-  hash: "dde71803c769944dcb754b6fc05893c4",
-  name: "bg.messages.dde71803c769944dcb754b6fc05893c4.compiled.messages",
+  hash: "60af52011985d9b9d318df776245f864",
+  name: "SmartSearch.compiled.messages",
   type: "jsona",
 });

@@ -1,1345 +1,647 @@
 // _runtime/metro/14890__.js
 const obj = {
-  v: "5.5.8",
-  fr: 30,
-  ip: 0,
-  op: 150,
-  w: 310,
-  h: 300,
-  nm: "wave",
-  ddd: 0,
-  assets: [],
-  layers: null,
-  markers: [],
+  atrules: null,
+  properties: {
+    "-moz-background-clip": {
+      comment: "deprecated syntax in old Firefox, https://developer.mozilla.org/en/docs/Web/CSS/background-clip",
+      syntax: "padding | border",
+    },
+    "-moz-border-radius-bottomleft": {
+      comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-left-radius",
+      syntax: "<'border-bottom-left-radius'>",
+    },
+    "-moz-border-radius-bottomright": {
+      comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-right-radius",
+      syntax: "<'border-bottom-right-radius'>",
+    },
+    "-moz-border-radius-topleft": {
+      comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-left-radius",
+      syntax: "<'border-top-left-radius'>",
+    },
+    "-moz-border-radius-topright": {
+      comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-right-radius",
+      syntax: "<'border-bottom-right-radius'>",
+    },
+    "-moz-control-character-visibility": {
+      comment: "firefox specific keywords, https://bugzilla.mozilla.org/show_bug.cgi?id=947588",
+      syntax: "visible | hidden",
+    },
+    "-moz-osx-font-smoothing": {
+      comment: "misssed old syntax https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth",
+      syntax: "auto | grayscale",
+    },
+    "-moz-user-select": {
+      comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/user-select",
+      syntax: "none | text | all | -moz-none",
+    },
+    "-ms-flex-align": {
+      comment: "misssed old syntax implemented in IE, https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/#flex-align",
+      syntax: "start | end | center | baseline | stretch",
+    },
+    "-ms-flex-item-align": {
+      comment: "misssed old syntax implemented in IE, https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/#flex-align",
+      syntax: "auto | start | end | center | baseline | stretch",
+    },
+    "-ms-flex-line-pack": {
+      comment:
+        "misssed old syntax implemented in IE, https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/#flex-line-pack",
+      syntax: "start | end | center | justify | distribute | stretch",
+    },
+    "-ms-flex-negative": {
+      comment: "misssed old syntax implemented in IE; TODO: find references for comfirmation",
+      syntax: "<'flex-shrink'>",
+    },
+    "-ms-flex-pack": {
+      comment: "misssed old syntax implemented in IE, https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/#flex-pack",
+      syntax: "start | end | center | justify | distribute",
+    },
+    "-ms-flex-order": {
+      comment: "misssed old syntax implemented in IE; https://msdn.microsoft.com/en-us/library/jj127303(v=vs.85).aspx",
+      syntax: "<integer>",
+    },
+    "-ms-flex-positive": {
+      comment: "misssed old syntax implemented in IE; TODO: find references for comfirmation",
+      syntax: "<'flex-grow'>",
+    },
+    "-ms-flex-preferred-size": {
+      comment: "misssed old syntax implemented in IE; TODO: find references for comfirmation",
+      syntax: "<'flex-basis'>",
+    },
+    "-ms-interpolation-mode": {
+      comment: "https://msdn.microsoft.com/en-us/library/ff521095(v=vs.85).aspx",
+      syntax: "nearest-neighbor | bicubic",
+    },
+    "-ms-grid-column-align": {
+      comment:
+        "add this property first since it uses as fallback for flexbox, https://msdn.microsoft.com/en-us/library/windows/apps/hh466338.aspx",
+      syntax: "start | end | center | stretch",
+    },
+    "-ms-grid-row-align": {
+      comment:
+        "add this property first since it uses as fallback for flexbox, https://msdn.microsoft.com/en-us/library/windows/apps/hh466348.aspx",
+      syntax: "start | end | center | stretch",
+    },
+    "-ms-hyphenate-limit-last": {
+      comment: "misssed old syntax implemented in IE; https://www.w3.org/TR/css-text-4/#hyphenate-line-limits",
+      syntax: "none | always | column | page | spread",
+    },
+    "-webkit-appearance": {
+      comment: "webkit specific keywords",
+      references: ["http://css-infos.net/property/-webkit-appearance"],
+      syntax:
+        "none | button | button-bevel | caps-lock-indicator | caret | checkbox | default-button | inner-spin-button | listbox | listitem | media-controls-background | media-controls-fullscreen-background | media-current-time-display | media-enter-fullscreen-button | media-exit-fullscreen-button | media-fullscreen-button | media-mute-button | media-overlay-play-button | media-play-button | media-seek-back-button | media-seek-forward-button | media-slider | media-sliderthumb | media-time-remaining-display | media-toggle-closed-captions-button | media-volume-slider | media-volume-slider-container | media-volume-sliderthumb | menulist | menulist-button | menulist-text | menulist-textfield | meter | progress-bar | progress-bar-value | push-button | radio | scrollbarbutton-down | scrollbarbutton-left | scrollbarbutton-right | scrollbarbutton-up | scrollbargripper-horizontal | scrollbargripper-vertical | scrollbarthumb-horizontal | scrollbarthumb-vertical | scrollbartrack-horizontal | scrollbartrack-vertical | searchfield | searchfield-cancel-button | searchfield-decoration | searchfield-results-button | searchfield-results-decoration | slider-horizontal | slider-vertical | sliderthumb-horizontal | sliderthumb-vertical | square-button | textarea | textfield | -apple-pay-button",
+    },
+    "-webkit-background-clip": {
+      comment: "https://developer.mozilla.org/en/docs/Web/CSS/background-clip",
+      syntax: "[ <box> | border | padding | content | text ]#",
+    },
+    "-webkit-column-break-after": {
+      comment: "added, http://help.dottoro.com/lcrthhhv.php",
+      syntax: "always | auto | avoid",
+    },
+    "-webkit-column-break-before": {
+      comment: "added, http://help.dottoro.com/lcxquvkf.php",
+      syntax: "always | auto | avoid",
+    },
+    "-webkit-column-break-inside": {
+      comment: "added, http://help.dottoro.com/lclhnthl.php",
+      syntax: "always | auto | avoid",
+    },
+    "-webkit-font-smoothing": {
+      comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth",
+      syntax: "auto | none | antialiased | subpixel-antialiased",
+    },
+    "-webkit-mask-box-image": {
+      comment: "missed; https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-mask-box-image",
+      syntax: "[ <url> | <gradient> | none ] [ <length-percentage>{4} <-webkit-mask-box-repeat>{2} ]?",
+    },
+    "-webkit-print-color-adjust": {
+      comment: "missed",
+      references: ["https://developer.mozilla.org/en/docs/Web/CSS/-webkit-print-color-adjust"],
+      syntax: "economy | exact",
+    },
+    "-webkit-text-security": {
+      comment: "missed; http://help.dottoro.com/lcbkewgt.php",
+      syntax: "none | circle | disc | square",
+    },
+    "-webkit-user-drag": { comment: "missed; http://help.dottoro.com/lcbixvwm.php", syntax: "none | element | auto" },
+    "-webkit-user-select": {
+      comment: "auto is supported by old webkit, https://developer.mozilla.org/en-US/docs/Web/CSS/user-select",
+      syntax: "auto | none | text | all",
+    },
+    "alignment-baseline": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/text.html#AlignmentBaselineProperty"],
+      syntax:
+        "auto | baseline | before-edge | text-before-edge | middle | central | after-edge | text-after-edge | ideographic | alphabetic | hanging | mathematical",
+    },
+    "baseline-shift": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/text.html#BaselineShiftProperty"],
+      syntax: "baseline | sub | super | <svg-length>",
+    },
+    behavior: {
+      comment: "added old IE property https://msdn.microsoft.com/en-us/library/ms530723(v=vs.85).aspx",
+      syntax: "<url>+",
+    },
+    "clip-rule": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/masking.html#ClipRuleProperty"],
+      syntax: "nonzero | evenodd",
+    },
+    cue: { comment: "https://www.w3.org/TR/css3-speech/#property-index", syntax: "<'cue-before'> <'cue-after'>?" },
+    "cue-after": { comment: "https://www.w3.org/TR/css3-speech/#property-index", syntax: "<url> <decibel>? | none" },
+    "cue-before": { comment: "https://www.w3.org/TR/css3-speech/#property-index", syntax: "<url> <decibel>? | none" },
+    cursor: {
+      comment:
+        "added legacy keywords: hand, -webkit-grab. -webkit-grabbing, -webkit-zoom-in, -webkit-zoom-out, -moz-grab, -moz-grabbing, -moz-zoom-in, -moz-zoom-out",
+      references: ["https://www.sitepoint.com/css3-cursor-styles/"],
+      syntax:
+        "[ [ <url> [ <x> <y> ]? , ]* [ auto | default | none | context-menu | help | pointer | progress | wait | cell | crosshair | text | vertical-text | alias | copy | move | no-drop | not-allowed | e-resize | n-resize | ne-resize | nw-resize | s-resize | se-resize | sw-resize | w-resize | ew-resize | ns-resize | nesw-resize | nwse-resize | col-resize | row-resize | all-scroll | zoom-in | zoom-out | grab | grabbing | hand | -webkit-grab | -webkit-grabbing | -webkit-zoom-in | -webkit-zoom-out | -moz-grab | -moz-grabbing | -moz-zoom-in | -moz-zoom-out ] ]",
+    },
+    display: { comment: "extended with -ms-flexbox", syntax: "| <-non-standard-display>" },
+    position: { comment: "extended with -webkit-sticky", syntax: "| -webkit-sticky" },
+    "dominant-baseline": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/text.html#DominantBaselineProperty"],
+      syntax:
+        "auto | use-script | no-change | reset-size | ideographic | alphabetic | hanging | mathematical | central | middle | text-after-edge | text-before-edge",
+    },
+    "image-rendering": {
+      comment: "extended with <-non-standard-image-rendering>, added SVG keywords optimizeSpeed and optimizeQuality",
+      references: [
+        "https://developer.mozilla.org/en/docs/Web/CSS/image-rendering",
+        "https://www.w3.org/TR/SVG/painting.html#ImageRenderingProperty",
+      ],
+      syntax: "| optimizeSpeed | optimizeQuality | <-non-standard-image-rendering>",
+    },
+    fill: {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#FillProperty"],
+      syntax: "<paint>",
+    },
+    "fill-opacity": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#FillProperty"],
+      syntax: "<number-zero-one>",
+    },
+    "fill-rule": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#FillProperty"],
+      syntax: "nonzero | evenodd",
+    },
+    filter: { comment: "extend with IE legacy syntaxes", syntax: "| <-ms-filter-function-list>" },
+    "glyph-orientation-horizontal": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/text.html#GlyphOrientationHorizontalProperty"],
+      syntax: "<angle>",
+    },
+    "glyph-orientation-vertical": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/text.html#GlyphOrientationVerticalProperty"],
+      syntax: "<angle>",
+    },
+    kerning: {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/text.html#KerningProperty"],
+      syntax: "auto | <svg-length>",
+    },
+    "letter-spacing": {
+      comment: "fix syntax <length> -> <length-percentage>",
+      references: ["https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/letter-spacing"],
+      syntax: "normal | <length-percentage>",
+    },
+    marker: {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#MarkerProperties"],
+      syntax: "none | <url>",
+    },
+    "marker-end": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#MarkerProperties"],
+      syntax: "none | <url>",
+    },
+    "marker-mid": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#MarkerProperties"],
+      syntax: "none | <url>",
+    },
+    "marker-start": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#MarkerProperties"],
+      syntax: "none | <url>",
+    },
+    "max-width": {
+      comment:
+        "fix auto -> none (https://github.com/mdn/data/pull/431); extend by non-standard width keywords https://developer.mozilla.org/en-US/docs/Web/CSS/max-width",
+      syntax:
+        "none | <length-percentage> | min-content | max-content | fit-content(<length-percentage>) | <-non-standard-width>",
+    },
+    width: {
+      comment:
+        "per spec fit-content should be a function, however browsers are supporting it as a keyword (https://github.com/csstree/stylelint-validator/issues/29)",
+      syntax: "| fit-content | -moz-fit-content | -webkit-fit-content",
+    },
+    "min-width": {
+      comment: "extend by non-standard width keywords https://developer.mozilla.org/en-US/docs/Web/CSS/width",
+      syntax:
+        "auto | <length-percentage> | min-content | max-content | fit-content(<length-percentage>) | <-non-standard-width>",
+    },
+    overflow: {
+      comment: "extend by vendor keywords https://developer.mozilla.org/en-US/docs/Web/CSS/overflow",
+      syntax: "| <-non-standard-overflow>",
+    },
+    pause: {
+      comment: "https://www.w3.org/TR/css3-speech/#property-index",
+      syntax: "<'pause-before'> <'pause-after'>?",
+    },
+    "pause-after": {
+      comment: "https://www.w3.org/TR/css3-speech/#property-index",
+      syntax: "<time> | none | x-weak | weak | medium | strong | x-strong",
+    },
+    "pause-before": {
+      comment: "https://www.w3.org/TR/css3-speech/#property-index",
+      syntax: "<time> | none | x-weak | weak | medium | strong | x-strong",
+    },
+    rest: { comment: "https://www.w3.org/TR/css3-speech/#property-index", syntax: "<'rest-before'> <'rest-after'>?" },
+    "rest-after": {
+      comment: "https://www.w3.org/TR/css3-speech/#property-index",
+      syntax: "<time> | none | x-weak | weak | medium | strong | x-strong",
+    },
+    "rest-before": {
+      comment: "https://www.w3.org/TR/css3-speech/#property-index",
+      syntax: "<time> | none | x-weak | weak | medium | strong | x-strong",
+    },
+    "shape-rendering": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#ShapeRenderingPropert"],
+      syntax: "auto | optimizeSpeed | crispEdges | geometricPrecision",
+    },
+    src: {
+      comment: "added @font-face's src property https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src",
+      syntax: "[ <url> [ format( <string># ) ]? | local( <family-name> ) ]#",
+    },
+    speak: { comment: "https://www.w3.org/TR/css3-speech/#property-index", syntax: "auto | none | normal" },
+    "speak-as": {
+      comment: "https://www.w3.org/TR/css3-speech/#property-index",
+      syntax: "normal | spell-out || digits || [ literal-punctuation | no-punctuation ]",
+    },
+    stroke: {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
+      syntax: "<paint>",
+    },
+    "stroke-dasharray": {
+      comment: "added SVG property; a list of comma and/or white space separated <length>s and <percentage>s",
+      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
+      syntax: "none | [ <svg-length>+ ]#",
+    },
+    "stroke-dashoffset": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
+      syntax: "<svg-length>",
+    },
+    "stroke-linecap": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
+      syntax: "butt | round | square",
+    },
+    "stroke-linejoin": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
+      syntax: "miter | round | bevel",
+    },
+    "stroke-miterlimit": {
+      comment: "added SVG property (<miterlimit> = <number-one-or-greater>) ",
+      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
+      syntax: "<number-one-or-greater>",
+    },
+    "stroke-opacity": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
+      syntax: "<number-zero-one>",
+    },
+    "stroke-width": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/painting.html#StrokeProperties"],
+      syntax: "<svg-length>",
+    },
+    "text-anchor": {
+      comment: "added SVG property",
+      references: ["https://www.w3.org/TR/SVG/text.html#TextAlignmentProperties"],
+      syntax: "start | middle | end",
+    },
+    "unicode-bidi": {
+      comment: "added prefixed keywords https://developer.mozilla.org/en-US/docs/Web/CSS/unicode-bidi",
+      syntax:
+        "| -moz-isolate | -moz-isolate-override | -moz-plaintext | -webkit-isolate | -webkit-isolate-override | -webkit-plaintext",
+    },
+    "unicode-range": {
+      comment: "added missed property https://developer.mozilla.org/en-US/docs/Web/CSS/%40font-face/unicode-range",
+      syntax: "<urange>#",
+    },
+    "voice-balance": {
+      comment: "https://www.w3.org/TR/css3-speech/#property-index",
+      syntax: "<number> | left | center | right | leftwards | rightwards",
+    },
+    "voice-duration": { comment: "https://www.w3.org/TR/css3-speech/#property-index", syntax: "auto | <time>" },
+    "voice-family": {
+      comment: "<name> -> <family-name>, https://www.w3.org/TR/css3-speech/#property-index",
+      syntax: "[ [ <family-name> | <generic-voice> ] , ]* [ <family-name> | <generic-voice> ] | preserve",
+    },
+    "voice-pitch": {
+      comment: "https://www.w3.org/TR/css3-speech/#property-index",
+      syntax:
+        "<frequency> && absolute | [ [ x-low | low | medium | high | x-high ] || [ <frequency> | <semitones> | <percentage> ] ]",
+    },
+    "voice-range": {
+      comment: "https://www.w3.org/TR/css3-speech/#property-index",
+      syntax:
+        "<frequency> && absolute | [ [ x-low | low | medium | high | x-high ] || [ <frequency> | <semitones> | <percentage> ] ]",
+    },
+    "voice-rate": {
+      comment: "https://www.w3.org/TR/css3-speech/#property-index",
+      syntax: "[ normal | x-slow | slow | medium | fast | x-fast ] || <percentage>",
+    },
+    "voice-stress": {
+      comment: "https://www.w3.org/TR/css3-speech/#property-index",
+      syntax: "normal | strong | moderate | none | reduced",
+    },
+    "voice-volume": {
+      comment: "https://www.w3.org/TR/css3-speech/#property-index",
+      syntax: "silent | [ [ x-soft | soft | medium | loud | x-loud ] || <decibel> ]",
+    },
+    "writing-mode": { comment: "extend with SVG keywords", syntax: "| <svg-writing-mode>" },
+  },
+  syntaxes: null,
 };
 const obj2 = {
-  ddd: 0,
-  ind: 1,
-  ty: 3,
-  nm: "Null 9",
-  sr: 1,
-  ks: {
-    o: { a: 0, k: 0, ix: 11 },
-    r: { a: 0, k: 0, ix: 10 },
-    p: { a: 0, k: [128, 129, 0], ix: 2 },
-    a: { a: 0, k: [0, 0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100, 100], ix: 6 },
+  charset: { prelude: "<string>" },
+  "font-face": {
+    descriptors: {
+      "unicode-range": { comment: "replaces <unicode-range>, an old production name", syntax: "<urange>#" },
+    },
   },
-  ao: 0,
-  ip: 0,
-  op: 150,
-  st: 0,
-  bm: 0,
 };
-const items = [obj2, , , , , , , , , , ,];
-const obj4 = {
-  ddd: 0,
-  ind: 3,
-  ty: 4,
-  nm: "line_pinky",
-  parent: 7,
-  sr: 1,
-  ks: {
-    o: { a: 0, k: 100, ix: 11 },
-    r: { a: 0, k: 0, ix: 10 },
-    p: { a: 0, k: [17.821, -4.699, 0], ix: 2 },
-    a: { a: 0, k: [0, 0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100, 100], ix: 6 },
+obj.atrules = obj2;
+const point = {
+  "-legacy-gradient": {
+    comment: "added collection of legacy gradient syntaxes",
+    syntax:
+      "<-webkit-gradient()> | <-legacy-linear-gradient> | <-legacy-repeating-linear-gradient> | <-legacy-radial-gradient> | <-legacy-repeating-radial-gradient>",
   },
-  ao: 0,
-  shapes: null,
-  ip: 0,
-  op: 150,
-  st: 0,
-  bm: 0,
+  "-legacy-linear-gradient": {
+    comment:
+      "like standard syntax but w/o `to` keyword https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient",
+    syntax:
+      "-moz-linear-gradient( <-legacy-linear-gradient-arguments> ) | -webkit-linear-gradient( <-legacy-linear-gradient-arguments> ) | -o-linear-gradient( <-legacy-linear-gradient-arguments> )",
+  },
+  "-legacy-repeating-linear-gradient": {
+    comment:
+      "like standard syntax but w/o `to` keyword https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient",
+    syntax:
+      "-moz-repeating-linear-gradient( <-legacy-linear-gradient-arguments> ) | -webkit-repeating-linear-gradient( <-legacy-linear-gradient-arguments> ) | -o-repeating-linear-gradient( <-legacy-linear-gradient-arguments> )",
+  },
+  "-legacy-linear-gradient-arguments": {
+    comment:
+      "like standard syntax but w/o `to` keyword https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient",
+    syntax: "[ <angle> | <side-or-corner> ]? , <color-stop-list>",
+  },
+  "-legacy-radial-gradient": {
+    comment:
+      "deprecated syntax that implemented by some browsers https://www.w3.org/TR/2011/WD-css3-images-20110908/#radial-gradients",
+    syntax:
+      "-moz-radial-gradient( <-legacy-radial-gradient-arguments> ) | -webkit-radial-gradient( <-legacy-radial-gradient-arguments> ) | -o-radial-gradient( <-legacy-radial-gradient-arguments> )",
+  },
+  "-legacy-repeating-radial-gradient": {
+    comment:
+      "deprecated syntax that implemented by some browsers https://www.w3.org/TR/2011/WD-css3-images-20110908/#radial-gradients",
+    syntax:
+      "-moz-repeating-radial-gradient( <-legacy-radial-gradient-arguments> ) | -webkit-repeating-radial-gradient( <-legacy-radial-gradient-arguments> ) | -o-repeating-radial-gradient( <-legacy-radial-gradient-arguments> )",
+  },
+  "-legacy-radial-gradient-arguments": {
+    comment:
+      "deprecated syntax that implemented by some browsers https://www.w3.org/TR/2011/WD-css3-images-20110908/#radial-gradients",
+    syntax:
+      "[ <position> , ]? [ [ [ <-legacy-radial-gradient-shape> || <-legacy-radial-gradient-size> ] | [ <length> | <percentage> ]{2} ] , ]? <color-stop-list>",
+  },
+  "-legacy-radial-gradient-size": {
+    comment:
+      "before a standard it contains 2 extra keywords (`contain` and `cover`) https://www.w3.org/TR/2011/WD-css3-images-20110908/#ltsize",
+    syntax: "closest-side | closest-corner | farthest-side | farthest-corner | contain | cover",
+  },
+  "-legacy-radial-gradient-shape": {
+    comment:
+      "define to double sure it doesn't extends in future https://www.w3.org/TR/2011/WD-css3-images-20110908/#ltshape",
+    syntax: "circle | ellipse",
+  },
+  "-non-standard-font": {
+    comment: "non standard fonts",
+    references: ["https://webkit.org/blog/3709/using-the-system-font-in-web-content/"],
+    syntax:
+      "-apple-system-body | -apple-system-headline | -apple-system-subheadline | -apple-system-caption1 | -apple-system-caption2 | -apple-system-footnote | -apple-system-short-body | -apple-system-short-headline | -apple-system-short-subheadline | -apple-system-short-caption1 | -apple-system-short-footnote | -apple-system-tall-body",
+  },
+  "-non-standard-color": {
+    comment: "non standard colors",
+    references: [
+      "http://cssdot.ru/%D0%A1%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA_CSS/color-i305.html",
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Mozilla_Color_Preference_Extensions",
+    ],
+    syntax:
+      "-moz-ButtonDefault | -moz-ButtonHoverFace | -moz-ButtonHoverText | -moz-CellHighlight | -moz-CellHighlightText | -moz-Combobox | -moz-ComboboxText | -moz-Dialog | -moz-DialogText | -moz-dragtargetzone | -moz-EvenTreeRow | -moz-Field | -moz-FieldText | -moz-html-CellHighlight | -moz-html-CellHighlightText | -moz-mac-accentdarkestshadow | -moz-mac-accentdarkshadow | -moz-mac-accentface | -moz-mac-accentlightesthighlight | -moz-mac-accentlightshadow | -moz-mac-accentregularhighlight | -moz-mac-accentregularshadow | -moz-mac-chrome-active | -moz-mac-chrome-inactive | -moz-mac-focusring | -moz-mac-menuselect | -moz-mac-menushadow | -moz-mac-menutextselect | -moz-MenuHover | -moz-MenuHoverText | -moz-MenuBarText | -moz-MenuBarHoverText | -moz-nativehyperlinktext | -moz-OddTreeRow | -moz-win-communicationstext | -moz-win-mediatext | -moz-activehyperlinktext | -moz-default-background-color | -moz-default-color | -moz-hyperlinktext | -moz-visitedhyperlinktext | -webkit-activelink | -webkit-focus-ring-color | -webkit-link | -webkit-text",
+  },
+  "-non-standard-image-rendering": {
+    comment: "non-standard keywords http://phrogz.net/tmp/canvas_image_zoom.html",
+    syntax: "optimize-contrast | -moz-crisp-edges | -o-crisp-edges | -webkit-optimize-contrast",
+  },
+  "-non-standard-overflow": {
+    comment: "non-standard keywords https://developer.mozilla.org/en-US/docs/Web/CSS/overflow",
+    syntax: "-moz-scrollbars-none | -moz-scrollbars-horizontal | -moz-scrollbars-vertical | -moz-hidden-unscrollable",
+  },
+  "-non-standard-width": {
+    comment: "non-standard keywords https://developer.mozilla.org/en-US/docs/Web/CSS/width",
+    syntax:
+      "fill-available | min-intrinsic | intrinsic | -moz-available | -moz-fit-content | -moz-min-content | -moz-max-content | -webkit-min-content | -webkit-max-content",
+  },
+  "-webkit-gradient()": {
+    comment:
+      "first Apple proposal gradient syntax https://webkit.org/blog/175/introducing-css-gradients/ - TODO: simplify when after match algorithm improvement ( [, point, radius | , point] -> [, radius]? , point )",
+    syntax:
+      "-webkit-gradient( <-webkit-gradient-type>, <-webkit-gradient-point> [, <-webkit-gradient-point> | , <-webkit-gradient-radius>, <-webkit-gradient-point> ] [, <-webkit-gradient-radius>]? [, <-webkit-gradient-color-stop>]* )",
+  },
+  "-webkit-gradient-color-stop": {
+    comment: "first Apple proposal gradient syntax https://webkit.org/blog/175/introducing-css-gradients/",
+    syntax: "from( <color> ) | color-stop( [ <number-zero-one> | <percentage> ] , <color> ) | to( <color> )",
+  },
+  "-webkit-gradient-point": {
+    comment: "first Apple proposal gradient syntax https://webkit.org/blog/175/introducing-css-gradients/",
+    syntax: "[ left | center | right | <length-percentage> ] [ top | center | bottom | <length-percentage> ]",
+  },
+  "-webkit-gradient-radius": {
+    comment: "first Apple proposal gradient syntax https://webkit.org/blog/175/introducing-css-gradients/",
+    syntax: "<length> | <percentage>",
+  },
+  "-webkit-gradient-type": {
+    comment: "first Apple proposal gradient syntax https://webkit.org/blog/175/introducing-css-gradients/",
+    syntax: "linear | radial",
+  },
+  "-webkit-mask-box-repeat": {
+    comment: "missed; https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-mask-box-image",
+    syntax: "repeat | stretch | round",
+  },
+  "-webkit-mask-clip-style": {
+    comment:
+      "missed; there is no enough information about `-webkit-mask-clip` property, but looks like all those keywords are working",
+    syntax: "border | border-box | padding | padding-box | content | content-box | text",
+  },
+  "-ms-filter-function-list": {
+    comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-filter",
+    syntax: "<-ms-filter-function>+",
+  },
+  "-ms-filter-function": {
+    comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-filter",
+    syntax: "<-ms-filter-function-progid> | <-ms-filter-function-legacy>",
+  },
+  "-ms-filter-function-progid": {
+    comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-filter",
+    syntax: "'progid:' [ <ident-token> '.' ]* [ <ident-token> | <function-token> <any-value>? ) ]",
+  },
+  "-ms-filter-function-legacy": {
+    comment: "https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-filter",
+    syntax: "<ident-token> | <function-token> <any-value>? )",
+  },
+  "-ms-filter": { syntax: "<string>" },
+  age: { comment: "https://www.w3.org/TR/css3-speech/#voice-family", syntax: "child | young | old" },
+  "attr-name": { syntax: "<wq-name>" },
+  "attr-fallback": { syntax: "<any-value>" },
+  "border-radius": {
+    comment: "missed, https://drafts.csswg.org/css-backgrounds-3/#the-border-radius",
+    syntax: "<length-percentage>{1,2}",
+  },
+  bottom: {
+    comment:
+      "missed; not sure we should add it, but no others except `shape` is using it so it's ok for now; https://drafts.fxtf.org/css-masking-1/#funcdef-clip-rect",
+    syntax: "<length> | auto",
+  },
+  "content-list": {
+    comment:
+      "missed -> https://drafts.csswg.org/css-content/#typedef-content-list (document-url, <target> and leader() is omitted util stabilization)",
+    syntax:
+      "[ <string> | contents | <image> | <quote> | <target> | <leader()> | <attr()> | counter( <ident>, <'list-style-type'>? ) ]+",
+  },
+  "element()": {
+    comment:
+      "https://drafts.csswg.org/css-gcpm/#element-syntax & https://drafts.csswg.org/css-images-4/#element-notation",
+    syntax: "element( <custom-ident> , [ first | start | last | first-except ]? ) | element( <id-selector> )",
+  },
+  "generic-voice": {
+    comment: "https://www.w3.org/TR/css3-speech/#voice-family",
+    syntax: "[ <age>? <gender> <integer>? ]",
+  },
+  gender: { comment: "https://www.w3.org/TR/css3-speech/#voice-family", syntax: "male | female | neutral" },
+  "generic-family": {
+    comment: "added -apple-system",
+    references: ["https://webkit.org/blog/3709/using-the-system-font-in-web-content/"],
+    syntax: "| -apple-system",
+  },
+  gradient: { comment: "added legacy syntaxes support", syntax: "| <-legacy-gradient>" },
+  left: {
+    comment:
+      "missed; not sure we should add it, but no others except `shape` is using it so it's ok for now; https://drafts.fxtf.org/css-masking-1/#funcdef-clip-rect",
+    syntax: "<length> | auto",
+  },
+  "mask-image": {
+    comment: "missed; https://drafts.fxtf.org/css-masking-1/#the-mask-image",
+    syntax: "<mask-reference>#",
+  },
+  "name-repeat": {
+    comment:
+      "missed, and looks like obsolete, keep it as is since other property syntaxes should be changed too; https://www.w3.org/TR/2015/WD-css-grid-1-20150917/#typedef-name-repeat",
+    syntax: "repeat( [ <positive-integer> | auto-fill ], <line-names>+)",
+  },
+  "named-color": { comment: "added non standard color names", syntax: "| <-non-standard-color>" },
+  paint: {
+    comment: "used by SVG https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint",
+    syntax: "none | <color> | <url> [ none | <color> ]? | context-fill | context-stroke",
+  },
+  "page-size": {
+    comment: "https://www.w3.org/TR/css-page-3/#typedef-page-size-page-size",
+    syntax: "A5 | A4 | A3 | B5 | B4 | JIS-B5 | JIS-B4 | letter | legal | ledger",
+  },
+  ratio: { comment: "missed, https://drafts.csswg.org/mediaqueries-4/#typedef-ratio", syntax: "<integer> / <integer>" },
+  right: {
+    comment:
+      "missed; not sure we should add it, but no others except `shape` is using it so it's ok for now; https://drafts.fxtf.org/css-masking-1/#funcdef-clip-rect",
+    syntax: "<length> | auto",
+  },
+  shape: {
+    comment: "missed spaces in function body and add backwards compatible syntax",
+    syntax: "rect( <top>, <right>, <bottom>, <left> ) | rect( <top> <right> <bottom> <left> )",
+  },
+  "svg-length": {
+    comment: "All coordinates and lengths in SVG can be specified with or without a unit identifier",
+    references: ["https://www.w3.org/TR/SVG11/coords.html#Units"],
+    syntax: "<percentage> | <length> | <number>",
+  },
+  "svg-writing-mode": {
+    comment: "SVG specific keywords (deprecated for CSS)",
+    references: [
+      "https://developer.mozilla.org/en/docs/Web/CSS/writing-mode",
+      "https://www.w3.org/TR/SVG/text.html#WritingModeProperty",
+    ],
+    syntax: "lr-tb | rl-tb | tb-rl | lr | rl | tb",
+  },
+  top: {
+    comment:
+      "missed; not sure we should add it, but no others except `shape` is using it so it's ok for now; https://drafts.fxtf.org/css-masking-1/#funcdef-clip-rect",
+    syntax: "<length> | auto",
+  },
+  "track-group": {
+    comment: "used by old grid-columns and grid-rows syntax v0",
+    syntax: "'(' [ <string>* <track-minmax> <string>* ]+ ')' [ '[' <positive-integer> ']' ]? | <track-minmax>",
+  },
+  "track-list-v0": {
+    comment: "used by old grid-columns and grid-rows syntax v0",
+    syntax: "[ <string>* <track-group> <string>* ]+ | none",
+  },
+  "track-minmax": {
+    comment: "used by old grid-columns and grid-rows syntax v0",
+    syntax: "minmax( <track-breadth> , <track-breadth> ) | auto | <track-breadth> | fit-content",
+  },
+  x: {
+    comment:
+      "missed; not sure we should add it, but no others except `cursor` is using it so it's ok for now; https://drafts.csswg.org/css-ui-3/#cursor",
+    syntax: "<number>",
+  },
+  y: {
+    comment:
+      "missed; not sure we should add it, but no others except `cursor` is using so it's ok for now; https://drafts.csswg.org/css-ui-3/#cursor",
+    syntax: "<number>",
+  },
+  declaration: {
+    comment: "missed, restored by https://drafts.csswg.org/css-syntax",
+    syntax: "<ident-token> : <declaration-value>? [ '!' important ]?",
+  },
+  "declaration-list": {
+    comment: "missed, restored by https://drafts.csswg.org/css-syntax",
+    syntax: "[ <declaration>? ';' ]* <declaration>?",
+  },
+  url: {
+    comment: "https://drafts.csswg.org/css-values-4/#urls",
+    syntax: "url( <string> <url-modifier>* ) | <url-token>",
+  },
+  "url-modifier": {
+    comment: "https://drafts.csswg.org/css-values-4/#typedef-url-modifier",
+    syntax: "<ident> | <function-token> <any-value> )",
+  },
+  "number-zero-one": { syntax: "<number [0,1]>" },
+  "number-one-or-greater": { syntax: "<number [1,\u221E]>" },
+  "positive-integer": { syntax: "<integer [0,\u221E]>" },
+  "-non-standard-display": {
+    syntax:
+      "-ms-inline-flexbox | -ms-grid | -ms-inline-grid | -webkit-flex | -webkit-inline-flex | -webkit-box | -webkit-inline-box | -moz-inline-stack | -moz-box | -moz-inline-box",
+  },
 };
-const obj6 = { ty: "gr", it: null, nm: "line_pinky", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj7 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj8 = { a: 0, k: null, ix: 2 };
-const obj9 = { i: null, o: null, v: null, c: true };
-const items1 = [
-  [-0.898, 0.898],
-  [0, 0],
-  [-0.898, -0.898],
-  [0, 0],
-  [0.898, -0.898],
-  [0, 0],
-  [0.898, 0.898],
-  [0, 0],
-];
-obj9.i = items1;
-const items2 = [
-  [0, 0],
-  [0.898, -0.898],
-  [0, 0],
-  [0.898, 0.898],
-  [0, 0],
-  [-0.898, 0.898],
-  [0, 0],
-  [-0.898, -0.898],
-];
-obj9.o = items2;
-const items3 = [
-  [-13.241, -13.241],
-  [-13.241, -13.241],
-  [-9.988, -13.241],
-  [13.241, 9.988],
-  [13.241, 13.241],
-  [13.241, 13.241],
-  [9.988, 13.241],
-  [-13.241, -9.988],
-];
-obj9.v = items3;
-obj8.k = obj9;
-obj7.ks = obj8;
-const items4 = [
-  obj7,
-  {
-    ty: "fl",
-    c: { a: 0, k: [1, 0.717647075653, 0.074509806931, 1], ix: 4 },
-    o: { a: 0, k: 100, ix: 5 },
-    r: 1,
-    bm: 0,
-    nm: "Fill 1",
-    mn: "ADBE Vector Graphic - Fill",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [0, 0], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj6.it = items4;
-const items5 = [obj6];
-obj4.shapes = items5;
-items[1] = obj4;
-const obj12 = {
-  ddd: 0,
-  ind: 4,
-  ty: 4,
-  nm: "line_ring",
-  parent: 8,
-  sr: 1,
-  ks: {
-    o: { a: 0, k: 100, ix: 11 },
-    r: { a: 0, k: 0, ix: 10 },
-    p: { a: 0, k: [18.228, -4.137, 0], ix: 2 },
-    a: { a: 0, k: [0, 0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100, 100], ix: 6 },
-  },
-  ao: 0,
-  shapes: null,
-  ip: 0,
-  op: 150,
-  st: 0,
-  bm: 0,
-};
-const obj14 = {
-  ty: "gr",
-  it: null,
-  nm: "line_middle",
-  np: 2,
-  cix: 2,
-  bm: 0,
-  ix: 1,
-  mn: "ADBE Vector Group",
-  hd: false,
-};
-const obj15 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj16 = { a: 0, k: null, ix: 2 };
-const obj17 = { i: null, o: null, v: null, c: true };
-const items6 = [
-  [-0.898, 0.898],
-  [0, 0],
-  [-0.898, -0.898],
-  [0, 0],
-  [0.898, -0.898],
-  [0, 0],
-  [0.898, 0.898],
-  [0, 0],
-];
-obj17.i = items6;
-const items7 = [
-  [0, 0],
-  [0.898, -0.898],
-  [0, 0],
-  [0.898, 0.898],
-  [0, 0],
-  [-0.898, 0.898],
-  [0, 0],
-  [-0.898, -0.898],
-];
-obj17.o = items7;
-const items8 = [
-  [-23.434, -23.434],
-  [-23.434, -23.434],
-  [-20.181, -23.434],
-  [23.434, 20.181],
-  [23.434, 23.434],
-  [23.434, 23.434],
-  [20.181, 23.434],
-  [-23.434, -20.181],
-];
-obj17.v = items8;
-obj16.k = obj17;
-obj15.ks = obj16;
-const items9 = [
-  obj15,
-  {
-    ty: "fl",
-    c: { a: 0, k: [1, 0.717647075653, 0.074509806931, 1], ix: 4 },
-    o: { a: 0, k: 100, ix: 5 },
-    r: 1,
-    bm: 0,
-    nm: "Fill 1",
-    mn: "ADBE Vector Graphic - Fill",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [0, 0], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj14.it = items9;
-const items10 = [obj14];
-obj12.shapes = items10;
-items[2] = obj12;
-const obj20 = {
-  ddd: 0,
-  ind: 5,
-  ty: 4,
-  nm: "line_middle",
-  parent: 9,
-  sr: 1,
-  ks: {
-    o: { a: 0, k: 100, ix: 11 },
-    r: { a: 0, k: 0, ix: 10 },
-    p: { a: 0, k: [25.405, 2.891, 0], ix: 2 },
-    a: { a: 0, k: [0, 0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100, 100], ix: 6 },
-  },
-  ao: 0,
-  shapes: null,
-  ip: 0,
-  op: 150,
-  st: 0,
-  bm: 0,
-};
-const obj22 = { ty: "gr", it: null, nm: "line_index", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj23 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj24 = { a: 0, k: null, ix: 2 };
-const obj25 = { i: null, o: null, v: null, c: true };
-const items11 = [
-  [-0.898, 0.898],
-  [0, 0],
-  [-0.898, -0.898],
-  [0, 0],
-  [0.898, -0.898],
-  [0, 0],
-  [0.898, 0.898],
-  [0, 0],
-];
-obj25.i = items11;
-const items12 = [
-  [0, 0],
-  [0.898, -0.898],
-  [0, 0],
-  [0.898, 0.898],
-  [0, 0],
-  [-0.898, 0.898],
-  [0, 0],
-  [-0.898, -0.898],
-];
-obj25.o = items12;
-const items13 = [
-  [-18.855, -18.855],
-  [-18.855, -18.855],
-  [-15.602, -18.855],
-  [18.855, 15.602],
-  [18.855, 18.855],
-  [18.855, 18.855],
-  [15.602, 18.855],
-  [-18.855, -15.602],
-];
-obj25.v = items13;
-obj24.k = obj25;
-obj23.ks = obj24;
-const items14 = [
-  obj23,
-  {
-    ty: "fl",
-    c: { a: 0, k: [1, 0.717647075653, 0.074509806931, 1], ix: 4 },
-    o: { a: 0, k: 100, ix: 5 },
-    r: 1,
-    bm: 0,
-    nm: "Fill 1",
-    mn: "ADBE Vector Graphic - Fill",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [0, 0], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj22.it = items14;
-const items15 = [obj22];
-obj20.shapes = items15;
-items[3] = obj20;
-const obj28 = {
-  ddd: 0,
-  ind: 6,
-  ty: 4,
-  nm: "palm",
-  parent: 1,
-  sr: 1,
-  ks: null,
-  ao: 0,
-  shapes: null,
-  ip: 0,
-  op: 150,
-  st: 0,
-  bm: 0,
-};
-const obj29 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: null,
-  p: { a: 0, k: [55.75, 55.25, 0], ix: 2 },
-  a: { a: 0, k: [180.75, 180.25, 0], ix: 1 },
-  s: { a: 0, k: [100, 100, 100], ix: 6 },
-};
-const obj30 = { a: 1, k: null, ix: 10 };
-const items16 = [
-  { i: { x: [0], y: [1] }, o: { x: [0.333], y: [0] }, t: 0, s: [0] },
-  { i: { x: [0.443], y: [1] }, o: { x: [0.684], y: [0] }, t: 10, s: [-7] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 22, s: [35] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 32, s: [-23] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 41, s: [15] },
-  { i: { x: [0.218], y: [1] }, o: { x: [0.672], y: [0] }, t: 51, s: [-17] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.672], y: [0] }, t: 61, s: [10] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 71, s: [-3] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 78, s: [1] },
-  { t: 84, s: [0] },
-];
-obj30.k = items16;
-obj29.r = obj30;
-obj28.ks = obj29;
-const obj40 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj41 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj42 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj43 = { a: 0, k: null, ix: 2 };
-const obj44 = { i: null, o: null, v: null, c: true };
-const items17 = [
-  [0.006, -1.472],
-  [0, 0],
-  [8.522, 0],
-  [0, 0],
-  [0.093, 2.981],
-  [-1.107, 1.059],
-  [0, 0],
-  [-2.154, -2.142],
-];
-obj44.i = items17;
-const items18 = [
-  [0, 0],
-  [-0.055, 8.521],
-  [0, 0],
-  [-2.981, 0.093],
-  [-0.048, -1.532],
-  [0, 0],
-  [2.142, -2.154],
-  [1.044, 1.038],
-];
-obj44.o = items18;
-const items19 = [
-  [36.534, -31.14],
-  [36.534, 21.26],
-  [21.034, 36.66],
-  [-30.966, 36.66],
-  [-36.531, 31.43],
-  [-34.866, 27.36],
-  [27.134, -35.04],
-  [34.912, -35.062],
-];
-obj44.v = items19;
-obj43.k = obj44;
-obj42.ks = obj43;
-const items20 = [
-  obj42,
-  {
-    ty: "fl",
-    c: { a: 0, k: [1, 0.717647075653, 0.074509806931, 1], ix: 4 },
-    o: { a: 0, k: 100, ix: 5 },
-    r: 1,
-    bm: 0,
-    nm: "Fill 1",
-    mn: "ADBE Vector Graphic - Fill",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [169.266, 171.14], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj41.it = items20;
-const items21 = [obj41, ,];
-const obj47 = { ty: "gr", it: null, nm: "Group 2", np: 2, cix: 2, bm: 0, ix: 2, mn: "ADBE Vector Group", hd: false };
-const obj48 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj49 = { a: 0, k: null, ix: 2 };
-const obj50 = { i: null, o: null, v: null, c: true };
-const items22 = [
-  [0, 0],
-  [0, 0],
-  [6.228, -6.228],
-  [0, 0],
-  [-6.228, -6.228],
-  [0, 0],
-  [0, 0],
-  [0, 0],
-  [-0.031, -0.031],
-  [-25.436, 25.488],
-  [0.005, 17.312],
-  [0, 0],
-  [4.824, 4.637],
-];
-obj50.i = items22;
-const items23 = [
-  [0, 0],
-  [-6.228, -6.228],
-  [0, 0],
-  [-6.228, 6.228],
-  [0, 0],
-  [0, 0],
-  [0, 0],
-  [0.031, 0.031],
-  [25.488, 25.436],
-  [12.293, -12.191],
-  [0, 0],
-  [0, -6.691],
-  [0, 0],
-];
-obj50.o = items23;
-const items24 = [
-  [55.079, -33.158],
-  [23.344, -64.893],
-  [0.79, -64.893],
-  [-66.317, 2.214],
-  [-66.317, 24.768],
-  [-33.987, 57.098],
-  [-33.911, 57.022],
-  [-33.906, 57.027],
-  [-33.813, 57.12],
-  [58.394, 57.027],
-  [77.594, 10.927],
-  [77.594, -1.045],
-  [70.043, -18.775],
-];
-obj50.v = items24;
-obj49.k = obj50;
-obj48.ks = obj49;
-const items25 = [
-  obj48,
-  {
-    ty: "fl",
-    c: { a: 0, k: [1, 0.847058832645, 0.211764708161, 1], ix: 4 },
-    o: { a: 0, k: 100, ix: 5 },
-    r: 1,
-    bm: 0,
-    nm: "Fill 1",
-    mn: "ADBE Vector Graphic - Fill",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [167.706, 169.073], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj47.it = items25;
-items21[1] = obj47;
-items21[2] = {
-  ty: "tr",
-  p: { a: 0, k: [167.706, 169.073], ix: 2 },
-  a: { a: 0, k: [167.706, 169.073], ix: 1 },
-  s: { a: 0, k: [100, 100], ix: 3 },
-  r: { a: 0, k: 0, ix: 6 },
-  o: { a: 0, k: 100, ix: 7 },
-  sk: { a: 0, k: 0, ix: 4 },
-  sa: { a: 0, k: 0, ix: 5 },
-  nm: "Transform",
-};
-obj40.it = items21;
-const items26 = [obj40];
-obj28.shapes = items26;
-items[4] = obj28;
-const obj54 = {
-  ddd: 0,
-  ind: 7,
-  ty: 4,
-  nm: "pinky 2",
-  parent: 6,
-  sr: 1,
-  ks: null,
-  ao: 0,
-  shapes: null,
-  ip: 0,
-  op: 150,
-  st: 0,
-  bm: 0,
-};
-const obj55 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: null,
-  p: { a: 0, k: [108.276, 178.233, 0], ix: 2 },
-  a: { a: 0, k: [19, 19, 0], ix: 1 },
-  s: { a: 0, k: [100, 100, 100], ix: 6 },
-};
-const obj56 = { a: 1, k: null, ix: 10 };
-const items27 = [
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 0, s: [0] },
-  { i: { x: [0.443], y: [1] }, o: { x: [0.333], y: [0] }, t: 13, s: [-7] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 25, s: [4] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 35, s: [-5] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 44, s: [3] },
-  { i: { x: [0.218], y: [1] }, o: { x: [0.672], y: [0] }, t: 54, s: [-3] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.672], y: [0] }, t: 64, s: [2] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 74, s: [-2] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 81, s: [1] },
-  { t: 87, s: [0] },
-];
-obj56.k = items27;
-obj55.r = obj56;
-obj54.ks = obj55;
-const obj66 = { ty: "gr", it: null, nm: "pinky", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj67 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj68 = { a: 0, k: null, ix: 2 };
-const obj69 = { i: null, o: null, v: null, c: true };
-const items28 = [
-  [6.176, -6.176],
-  [0, 0],
-  [6.17, 6.17],
-  [0, 0],
-  [-6.17, 6.17],
-  [0, 0],
-  [0, 0],
-  [-6.17, -6.17],
-  [0, 0],
-  [0, 0],
-];
-obj69.i = items28;
-const items29 = [
-  [0, 0],
-  [-6.17, 6.17],
-  [0, 0],
-  [-6.17, -6.17],
-  [0, 0],
-  [0, 0],
-  [6.17, -6.17],
-  [0, 0],
-  [0, 0],
-  [6.185, 6.168],
-];
-obj69.o = items29;
-const items30 = [
-  [30.809, 30.726],
-  [30.754, 30.781],
-  [8.409, 30.781],
-  [-30.809, -8.437],
-  [-30.809, -30.781],
-  [-30.809, -30.781],
-  [-30.809, -30.781],
-  [-8.464, -30.781],
-  [-8.464, -30.781],
-  [30.793, 8.366],
-];
-obj69.v = items30;
-obj68.k = obj69;
-obj67.ks = obj68;
-const items31 = [
-  obj67,
-  {
-    ty: "fl",
-    c: { a: 0, k: [1, 0.847058832645, 0.211764708161, 1], ix: 4 },
-    o: { a: 0, k: 100, ix: 5 },
-    r: 1,
-    bm: 0,
-    nm: "Fill 1",
-    mn: "ADBE Vector Graphic - Fill",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [0, 0], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj66.it = items31;
-const items32 = [obj66];
-obj54.shapes = items32;
-items[5] = obj54;
-const obj72 = {
-  ddd: 0,
-  ind: 8,
-  ty: 4,
-  nm: "ring 2",
-  parent: 6,
-  sr: 1,
-  ks: null,
-  ao: 0,
-  shapes: null,
-  ip: 0,
-  op: 150,
-  st: 0,
-  bm: 0,
-};
-const obj73 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: null,
-  p: { a: 0, k: [130.054, 155.604, 0], ix: 2 },
-  a: { a: 0, k: [29, 29.5, 0], ix: 1 },
-  s: { a: 0, k: [100, 100, 100], ix: 6 },
-};
-const obj74 = { a: 1, k: null, ix: 10 };
-const items33 = [
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 0, s: [0] },
-  { i: { x: [0.443], y: [1] }, o: { x: [0.333], y: [0] }, t: 13, s: [-7] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 25, s: [4] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 35, s: [-5] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 44, s: [3] },
-  { i: { x: [0.218], y: [1] }, o: { x: [0.672], y: [0] }, t: 54, s: [-3] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.672], y: [0] }, t: 64, s: [2] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 74, s: [-2] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 81, s: [1] },
-  { t: 87, s: [0] },
-];
-obj74.k = items33;
-obj73.r = obj74;
-obj72.ks = obj73;
-const obj84 = { ty: "gr", it: null, nm: "ring", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj85 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj86 = { a: 0, k: null, ix: 2 };
-const obj87 = { i: null, o: null, v: null, c: true };
-const items34 = [
-  [6.175, -6.175],
-  [0, 0],
-  [6.17, 6.17],
-  [0, 0],
-  [-6.17, 6.17],
-  [0, 0],
-  [0, 0],
-  [-6.17, -6.17],
-  [0, 0],
-  [0, 0],
-];
-obj87.i = items34;
-const items35 = [
-  [0, 0],
-  [-6.17, 6.17],
-  [0, 0],
-  [-6.17, -6.17],
-  [0, 0],
-  [0, 0],
-  [6.17, -6.17],
-  [0, 0],
-  [0, 0],
-  [6.181, 6.168],
-];
-obj87.o = items35;
-const items36 = [
-  [40.073, 39.984],
-  [40.014, 40.044],
-  [17.669, 40.044],
-  [-40.073, -17.699],
-  [-40.073, -40.044],
-  [-40.073, -40.044],
-  [-40.073, -40.044],
-  [-17.729, -40.044],
-  [-17.729, -40.044],
-  [40.062, 17.628],
-];
-obj87.v = items36;
-obj86.k = obj87;
-obj85.ks = obj86;
-const items37 = [
-  obj85,
-  {
-    ty: "fl",
-    c: { a: 0, k: [1, 0.847058832645, 0.211764708161, 1], ix: 4 },
-    o: { a: 0, k: 100, ix: 5 },
-    r: 1,
-    bm: 0,
-    nm: "Fill 1",
-    mn: "ADBE Vector Graphic - Fill",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [0, 0], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj84.it = items37;
-const items38 = [obj84];
-obj72.shapes = items38;
-items[6] = obj72;
-const obj90 = {
-  ddd: 0,
-  ind: 9,
-  ty: 4,
-  nm: "middle 2",
-  parent: 6,
-  sr: 1,
-  ks: null,
-  ao: 0,
-  shapes: null,
-  ip: 0,
-  op: 150,
-  st: 0,
-  bm: 0,
-};
-const obj91 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: null,
-  p: { a: 0, k: [152.401, 132.715, 0], ix: 2 },
-  a: { a: 0, k: [31.5, 31.5, 0], ix: 1 },
-  s: { a: 0, k: [100, 100, 100], ix: 6 },
-};
-const obj92 = { a: 1, k: null, ix: 10 };
-const items39 = [
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 0, s: [0] },
-  { i: { x: [0.443], y: [1] }, o: { x: [0.333], y: [0] }, t: 13, s: [-7] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 25, s: [4] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 35, s: [-5] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 44, s: [3] },
-  { i: { x: [0.218], y: [1] }, o: { x: [0.672], y: [0] }, t: 54, s: [-3] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.672], y: [0] }, t: 64, s: [2] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 74, s: [-2] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 81, s: [1] },
-  { t: 87, s: [0] },
-];
-obj92.k = items39;
-obj91.r = obj92;
-obj90.ks = obj91;
-const obj102 = { ty: "gr", it: null, nm: "middle", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj103 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj104 = { a: 0, k: null, ix: 2 };
-const obj105 = { i: null, o: null, v: null, c: true };
-const items40 = [
-  [6.174, -6.174],
-  [0, 0],
-  [6.17, 6.17],
-  [0, 0],
-  [-6.17, 6.17],
-  [0, 0],
-  [0, 0],
-  [-6.17, -6.17],
-  [0, 0],
-  [0, 0],
-];
-obj105.i = items40;
-const items41 = [
-  [0, 0],
-  [-6.17, 6.17],
-  [0, 0],
-  [-6.17, -6.17],
-  [0, 0],
-  [0, 0],
-  [6.17, -6.17],
-  [0, 0],
-  [0, 0],
-  [6.18, 6.169],
-];
-obj105.o = items41;
-const items42 = [
-  [42.736, 42.646],
-  [42.676, 42.706],
-  [20.332, 42.706],
-  [-42.736, -20.362],
-  [-42.736, -42.706],
-  [-42.736, -42.706],
-  [-42.736, -42.706],
-  [-20.392, -42.706],
-  [-20.392, -42.706],
-  [42.726, 20.291],
-];
-obj105.v = items42;
-obj104.k = obj105;
-obj103.ks = obj104;
-const items43 = [
-  obj103,
-  {
-    ty: "fl",
-    c: { a: 0, k: [1, 0.847058832645, 0.211764708161, 1], ix: 4 },
-    o: { a: 0, k: 100, ix: 5 },
-    r: 1,
-    bm: 0,
-    nm: "Fill 1",
-    mn: "ADBE Vector Graphic - Fill",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [0, 0], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj102.it = items43;
-const items44 = [obj102];
-obj90.shapes = items44;
-items[7] = obj90;
-const obj108 = {
-  ddd: 0,
-  ind: 10,
-  ty: 4,
-  nm: "index 2",
-  parent: 6,
-  sr: 1,
-  ks: null,
-  ao: 0,
-  shapes: null,
-  ip: 0,
-  op: 150,
-  st: 0,
-  bm: 0,
-};
-const obj109 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: null,
-  p: { a: 0, k: [178.036, 113.579, 0], ix: 2 },
-  a: { a: 0, k: [26, 26, 0], ix: 1 },
-  s: { a: 0, k: [100, 100, 100], ix: 6 },
-};
-const obj110 = { a: 1, k: null, ix: 10 };
-const items45 = [
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 0, s: [0] },
-  { i: { x: [0.443], y: [1] }, o: { x: [0.333], y: [0] }, t: 13, s: [-7] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 25, s: [4] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 35, s: [-5] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 44, s: [3] },
-  { i: { x: [0.218], y: [1] }, o: { x: [0.672], y: [0] }, t: 54, s: [-3] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.672], y: [0] }, t: 64, s: [2] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 74, s: [-2] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 81, s: [1] },
-  { t: 87, s: [0] },
-];
-obj110.k = items45;
-obj109.r = obj110;
-obj108.ks = obj109;
-const obj120 = { ty: "gr", it: null, nm: "index", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj121 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj122 = { a: 0, k: null, ix: 2 };
-const obj123 = { i: null, o: null, v: null, c: true };
-const items46 = [
-  [0, 0],
-  [6.17, 6.17],
-  [0, 0],
-  [-6.17, 6.17],
-  [0, 0],
-  [0, 0],
-  [-6.17, -6.17],
-  [0, 0],
-  [0, 0],
-  [6.17, -6.17],
-];
-obj123.i = items46;
-const items47 = [
-  [-6.17, 6.17],
-  [0, 0],
-  [-6.17, -6.17],
-  [0, 0],
-  [0, 0],
-  [6.17, -6.17],
-  [0, 0],
-  [0, 0],
-  [6.17, 6.17],
-  [0, 0],
-];
-obj123.o = items47;
-const items48 = [
-  [35.992, 35.992],
-  [13.647, 35.992],
-  [-35.992, -13.647],
-  [-35.992, -35.992],
-  [-35.992, -35.992],
-  [-35.992, -35.992],
-  [-13.647, -35.992],
-  [-13.647, -35.992],
-  [35.992, 13.647],
-  [35.992, 35.992],
-];
-obj123.v = items48;
-obj122.k = obj123;
-obj121.ks = obj122;
-const items49 = [
-  obj121,
-  {
-    ty: "fl",
-    c: { a: 0, k: [1, 0.847058832645, 0.211764708161, 1], ix: 4 },
-    o: { a: 0, k: 100, ix: 5 },
-    r: 1,
-    bm: 0,
-    nm: "Fill 1",
-    mn: "ADBE Vector Graphic - Fill",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [0, 0], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj120.it = items49;
-const items50 = [obj120];
-obj108.shapes = items50;
-items[8] = obj108;
-const obj126 = {
-  ddd: 0,
-  ind: 11,
-  ty: 4,
-  nm: "thumb 2",
-  parent: 6,
-  sr: 1,
-  ks: null,
-  ao: 0,
-  shapes: null,
-  ip: 0,
-  op: 150,
-  st: 0,
-  bm: 0,
-};
-const obj127 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: null,
-  p: { a: 0, k: [225.7, 161.65, 0], ix: 2 },
-  a: { a: 0, k: [0, 40, 0], ix: 1 },
-  s: { a: 0, k: [100, 100, 100], ix: 6 },
-};
-const obj128 = { a: 1, k: null, ix: 10 };
-const items51 = [
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 0, s: [0] },
-  { i: { x: [0.443], y: [1] }, o: { x: [0.333], y: [0] }, t: 13, s: [-7] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 25, s: [8] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 35, s: [-5] },
-  { i: { x: [0.368], y: [1] }, o: { x: [0.559], y: [0] }, t: 44, s: [6] },
-  { i: { x: [0.218], y: [1] }, o: { x: [0.672], y: [0] }, t: 54, s: [-3] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.672], y: [0] }, t: 64, s: [4] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 74, s: [-2] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 81, s: [1] },
-  { t: 87, s: [0] },
-];
-obj128.k = items51;
-obj127.r = obj128;
-obj126.ks = obj127;
-const obj138 = { ty: "gr", it: null, nm: "thumb", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj139 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj140 = { a: 0, k: null, ix: 2 };
-const obj141 = { i: null, o: null, v: null, c: true };
-const items52 = [
-  [-10.77, 0],
-  [0, 0],
-  [0, -10.77],
-  [0, 0],
-  [5.523, 0],
-  [0, 0],
-  [0, 5.523],
-  [0, 0],
-];
-obj141.i = items52;
-const items53 = [
-  [0, 0],
-  [10.77, 0],
-  [0, 0],
-  [0, 5.523],
-  [0, 0],
-  [-5.523, 0],
-  [0, 0],
-  [0, -10.77],
-];
-obj141.o = items53;
-const items54 = [
-  [0, -53.45],
-  [0, -53.45],
-  [19.5, -33.95],
-  [19.5, 43.45],
-  [9.5, 53.45],
-  [-9.5, 53.45],
-  [-19.5, 43.45],
-  [-19.5, -33.95],
-];
-obj141.v = items54;
-obj140.k = obj141;
-obj139.ks = obj140;
-const items55 = [
-  obj139,
-  {
-    ty: "fl",
-    c: { a: 0, k: [1, 0.847058832645, 0.211764708161, 1], ix: 4 },
-    o: { a: 0, k: 100, ix: 5 },
-    r: 1,
-    bm: 0,
-    nm: "Fill 1",
-    mn: "ADBE Vector Graphic - Fill",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [0, 0], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj138.it = items55;
-const items56 = [obj138];
-obj126.shapes = items56;
-items[9] = obj126;
-const obj144 = {
-  ddd: 0,
-  ind: 12,
-  ty: 4,
-  nm: "pulse_top 2",
-  parent: 1,
-  sr: 1,
-  ks: null,
-  ao: 0,
-  shapes: null,
-  ip: 0,
-  op: 150,
-  st: 0,
-  bm: 0,
-};
-const obj145 = {
-  o: null,
-  r: { a: 0, k: 0, ix: 10 },
-  p: { s: true, x: { a: 0, k: -18.5, ix: 3 }, y: { a: 0, k: -15.5, ix: 4 } },
-  a: { a: 0, k: [106.5, 109.5, 0], ix: 1 },
-  s: { a: 0, k: [100, 100, 100], ix: 6 },
-};
-const obj146 = { a: 1, k: null, ix: 11 };
-const items57 = [
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 0, s: [100] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 12, s: [0] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 84, s: [0] },
-  { t: 95, s: [100] },
-];
-obj146.k = items57;
-obj145.o = obj146;
-obj144.ks = obj145;
-const obj150 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj151 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj152 = { a: 0, k: null, ix: 2 };
-const obj153 = { i: null, o: null, v: null, c: false };
-const items58 = [
-  [-9.822, 0],
-  [0, -9.822],
-];
-obj153.i = items58;
-const items59 = [
-  [9.822, 0],
-  [0, 9.822],
-];
-obj153.o = items59;
-const items60 = [
-  [-8.893, -8.893],
-  [8.893, 8.893],
-];
-obj153.v = items60;
-obj152.k = obj153;
-obj151.ks = obj152;
-const items61 = [
-  obj151,
-  {
-    ty: "st",
-    c: { a: 0, k: [0.482352942228, 0.635294139385, 1, 1], ix: 3 },
-    o: { a: 0, k: 100, ix: 4 },
-    w: { a: 0, k: 15, ix: 5 },
-    lc: 2,
-    lj: 2,
-    bm: 0,
-    nm: "Stroke 1",
-    mn: "ADBE Vector Graphic - Stroke",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [161.431, 47.969], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj150.it = items61;
-const items62 = [obj150, ,];
-const obj156 = { ty: "gr", it: null, nm: "Group 2", np: 2, cix: 2, bm: 0, ix: 2, mn: "ADBE Vector Group", hd: false };
-const obj157 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj158 = { a: 0, k: null, ix: 2 };
-const obj159 = { i: null, o: null, v: null, c: false };
-const items63 = [
-  [-24.312, 0],
-  [0, -24.312],
-];
-obj159.i = items63;
-const items64 = [
-  [24.312, 0],
-  [0, 24.312],
-];
-obj159.o = items64;
-const items65 = [
-  [-22.01, -22.01],
-  [22.01, 22.01],
-];
-obj159.v = items65;
-obj158.k = obj159;
-obj157.ks = obj158;
-const items66 = [
-  obj157,
-  {
-    ty: "st",
-    c: { a: 0, k: [0.482352942228, 0.635294139385, 1, 1], ix: 3 },
-    o: { a: 0, k: 100, ix: 4 },
-    w: { a: 0, k: 15, ix: 5 },
-    lc: 2,
-    lj: 2,
-    bm: 0,
-    nm: "Stroke 1",
-    mn: "ADBE Vector Graphic - Stroke",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [174.95, 34.45], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj156.it = items66;
-items62[1] = obj156;
-items62[2] = {
-  ty: "tm",
-  s: { a: 0, k: 0, ix: 1 },
-  e: { a: 0, k: 100, ix: 2 },
-  o: { a: 0, k: 0, ix: 3 },
-  m: 1,
-  ix: 3,
-  nm: "Trim Paths 1",
-  mn: "ADBE Vector Filter - Trim",
-  hd: false,
-};
-obj144.shapes = items62;
-items[10] = obj144;
-const obj162 = {
-  ddd: 0,
-  ind: 13,
-  ty: 4,
-  nm: "pulse_bot 2",
-  parent: 1,
-  sr: 1,
-  ks: null,
-  ao: 0,
-  shapes: null,
-  ip: 0,
-  op: 150,
-  st: 0,
-  bm: 0,
-};
-const obj163 = {
-  o: null,
-  r: { a: 0, k: 0, ix: 10 },
-  p: { a: 0, k: [-18.5, -15.5, 0], ix: 2 },
-  a: { a: 0, k: [106.5, 109.5, 0], ix: 1 },
-  s: { a: 0, k: [100, 100, 100], ix: 6 },
-};
-const obj164 = { a: 1, k: null, ix: 11 };
-const items67 = [
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 0, s: [100] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 12, s: [0] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 84, s: [0] },
-  { t: 95, s: [100] },
-];
-obj164.k = items67;
-obj163.o = obj164;
-obj162.ks = obj163;
-const obj168 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj169 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj170 = { a: 0, k: null, ix: 2 };
-const obj171 = { i: null, o: null, v: null, c: false };
-const items68 = [
-  [9.822, 0],
-  [0, 9.822],
-];
-obj171.i = items68;
-const items69 = [
-  [-9.822, 0],
-  [0, -9.822],
-];
-obj171.o = items69;
-const items70 = [
-  [8.893, 8.893],
-  [-8.893, -8.893],
-];
-obj171.v = items70;
-obj170.k = obj171;
-obj169.ks = obj170;
-const items71 = [
-  obj169,
-  {
-    ty: "st",
-    c: { a: 0, k: [0.482352942228, 0.635294139385, 1, 1], ix: 3 },
-    o: { a: 0, k: 100, ix: 4 },
-    w: { a: 0, k: 15, ix: 5 },
-    lc: 2,
-    lj: 2,
-    bm: 0,
-    nm: "Stroke 1",
-    mn: "ADBE Vector Graphic - Stroke",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [45.093, 164.307], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj168.it = items71;
-const items72 = [obj168, ,];
-const obj174 = { ty: "gr", it: null, nm: "Group 2", np: 2, cix: 2, bm: 0, ix: 2, mn: "ADBE Vector Group", hd: false };
-const obj175 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj176 = { a: 0, k: null, ix: 2 };
-const obj177 = { i: null, o: null, v: null, c: false };
-const items73 = [
-  [24.312, 0],
-  [0, 24.312],
-];
-obj177.i = items73;
-const items74 = [
-  [-24.312, 0],
-  [0, -24.312],
-];
-obj177.o = items74;
-const items75 = [
-  [22.01, 22.01],
-  [-22.01, -22.01],
-];
-obj177.v = items75;
-obj176.k = obj177;
-obj175.ks = obj176;
-const items76 = [
-  obj175,
-  {
-    ty: "st",
-    c: { a: 0, k: [0.482352942228, 0.635294139385, 1, 1], ix: 3 },
-    o: { a: 0, k: 100, ix: 4 },
-    w: { a: 0, k: 15, ix: 5 },
-    lc: 2,
-    lj: 2,
-    bm: 0,
-    nm: "Stroke 1",
-    mn: "ADBE Vector Graphic - Stroke",
-    hd: false,
-  },
-  {
-    ty: "tr",
-    p: { a: 0, k: [31.574, 177.826], ix: 2 },
-    a: { a: 0, k: [0, 0], ix: 1 },
-    s: { a: 0, k: [100, 100], ix: 3 },
-    r: { a: 0, k: 0, ix: 6 },
-    o: { a: 0, k: 100, ix: 7 },
-    sk: { a: 0, k: 0, ix: 4 },
-    sa: { a: 0, k: 0, ix: 5 },
-    nm: "Transform",
-  },
-];
-obj174.it = items76;
-items72[1] = obj174;
-items72[2] = {
-  ty: "tm",
-  s: { a: 0, k: 0, ix: 1 },
-  e: { a: 0, k: 100, ix: 2 },
-  o: { a: 0, k: 0, ix: 3 },
-  m: 1,
-  ix: 3,
-  nm: "Trim Paths 1",
-  mn: "ADBE Vector Filter - Trim",
-  hd: false,
-};
-obj162.shapes = items72;
-items[11] = obj162;
-obj.layers = items;
+obj.syntaxes = point;
 
 export default obj;

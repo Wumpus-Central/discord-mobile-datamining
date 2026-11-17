@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/guild_sidebar",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "ff39eeadf9f2f52f7094ca9f3833e97b",
-  name: "img_guild_folder",
+  hash: "31757ea45ee4fb60779fd700caf7d93e",
+  name: "ic_nitro_wheel_gradient_purple",
   type: "png",
 });

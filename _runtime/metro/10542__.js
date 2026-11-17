@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "cad1976e6067251c70a97ab450e89981",
-  name: "PinUprightSlashIcon",
+  hash: "1e2c63f1ee26f8c3880e4c0e137e58ab",
+  name: "FandomNeutralIcon",
   type: "png",
 });

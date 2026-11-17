@@ -1,13 +1,10 @@
 // _runtime/metro/11863__.js
-import registerAsset from "01119__.js";
+import _mod11862 from "11862__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "0b3282394dfcf9fe9a8a6e6a7e39fa15",
-  name: "TagsIcon",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export function keepLocalCopy(arg0) {
+  const NativeDocumentPicker = _mod11862.NativeDocumentPicker;
+  return NativeDocumentPicker.keepLocalCopy(arg0);
+}

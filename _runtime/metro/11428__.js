@@ -1,336 +1,438 @@
 // _runtime/metro/11428__.js
-import repeatedTimeunitPattern from "../11429_repeatedTimeunitPattern.js";
-import findMostLikelyADYear from "../11430_findMostLikelyADYear.js";
-
-const combined =
-  "(" +
-  exports.NUMBER_PATTERN +
-  ")\\s{0,3}(" +
-  repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) +
-  ")";
-const regExp = new RegExp(combined, "i");
-const combined1 =
-  "(" +
-  exports.NUMBER_PATTERN +
-  ")\\s{0,3}(" +
-  repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY_NO_ABBR) +
-  ")";
-
-export function parseNumberPattern(str) {
-  str = str.toLowerCase();
-  if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    let num5 = exports.INTEGER_WORD_DICTIONARY[str];
-  } else {
-    num5 = 1;
-    if ("a" !== str) {
-      num5 = 1;
-      if ("an" !== str) {
-        num5 = 1;
-        if ("the" != str) {
-          let num = 3;
-          if (!str.match(/few/)) {
-            let num2 = 0.5;
-            if (!str.match(/half/)) {
-              let num3 = 2;
-              if (!str.match(/couple/)) {
-                let num4 = 7;
-                if (!str.match(/several/)) {
-                  const _parseFloat = parseFloat;
-                  num4 = parseFloat(str);
-                }
-                num3 = num4;
-              }
-              num2 = num3;
-            }
-            num = num2;
-          }
-          num5 = num;
-        }
-      }
-    }
-  }
-  return num5;
-}
-export function parseOrdinalNumberPattern(str) {
-  str = str.toLowerCase();
-  if (undefined !== exports.ORDINAL_WORD_DICTIONARY[str]) {
-    return exports.ORDINAL_WORD_DICTIONARY[str];
-  } else {
-    const _parseInt = parseInt;
-    return parseInt(str.replace(/(?:st|nd|rd|th)$/i, ""));
-  }
-}
-export function parseYear(match) {
-  if (obj.test(match)) {
-    const _parseInt4 = parseInt;
-    return parseInt(match.replace(/BE/i, "")) - 543;
-  } else {
-    if (obj2.test(match)) {
-      const _parseInt3 = parseInt;
-      return -parseInt(match.replace(/BCE?/i, ""));
-    } else {
-      if (obj3.test(match)) {
-        const _parseInt2 = parseInt;
-        return parseInt(match.replace(/(AD|CE)/i, ""));
-      } else {
-        const _parseInt = parseInt;
-        const parsed = parseInt(match);
-        return findMostLikelyADYear.findMostLikelyADYear(parsed);
-      }
-      obj3 = /(AD|CE)/i;
-    }
-    obj2 = /BCE?/i;
-  }
-  obj = /BE/i;
-}
-export function parseDuration(arg0) {
-  let str = arg0;
-  const obj = {};
-  let match = regExp.exec(arg0);
-  if (match) {
-    while (str2.match(/^[a-zA-Z]+$/)) {
-      let str5 = str.substring(match[0].length);
-      let trimmed = str5.trim();
-      match = regExp.exec(trimmed);
-      str = trimmed;
-    }
-    let str4 = match[1].toLowerCase();
-    let tmp4 = exports;
-    if (undefined !== exports.INTEGER_WORD_DICTIONARY[str4]) {
-      let num5 = tmp4.INTEGER_WORD_DICTIONARY[str4];
-    } else {
-      num5 = 1;
-      if ("a" !== str4) {
-        num5 = 1;
-        if ("an" !== str4) {
-          num5 = 1;
-          if ("the" != str4) {
-            let num = 3;
-            if (!str4.match(/few/)) {
-              let num2 = 0.5;
-              if (!str4.match(/half/)) {
-                let num3 = 2;
-                if (!str4.match(/couple/)) {
-                  let num4 = 7;
-                  if (!str4.match(/several/)) {
-                    const _parseFloat = parseFloat;
-                    num4 = parseFloat(str4);
-                  }
-                  num3 = num4;
-                }
-                num2 = num3;
-              }
-              num = num2;
-            }
-            num5 = num;
-          }
-        }
-      }
-    }
-    str4 = match[2];
-    tmp4 = tmp4.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)];
-    obj[tmp4] = num5;
-    str2 = match[0];
-  }
-  if (0 == Object.keys(obj).length) {
-    return null;
-  } else {
-    return obj;
-  }
-}
-export const WEEKDAY_DICTIONARY = {
-  sunday: 0,
-  sun: 0,
-  "sun.": 0,
-  monday: 1,
-  mon: 1,
-  "mon.": 1,
-  tuesday: 2,
-  tue: 2,
-  "tue.": 2,
-  wednesday: 3,
-  wed: 3,
-  "wed.": 3,
-  thursday: 4,
-  thurs: 4,
-  "thurs.": 4,
-  thur: 4,
-  "thur.": 4,
-  thu: 4,
-  "thu.": 4,
-  friday: 5,
-  fri: 5,
-  "fri.": 5,
-  saturday: 6,
-  sat: 6,
-  "sat.": 6,
+const obj = {
+  v: "4.8.0",
+  meta: { g: "LottieFiles AE 3.0.0", a: "", k: "", d: "", tc: "" },
+  fr: 60,
+  ip: 3,
+  op: 102,
+  w: 1280,
+  h: 720,
+  nm: "FrameEffect_02-1_Out",
+  ddd: 0,
+  assets: null,
+  layers: null,
+  markers: [],
 };
-export const FULL_MONTH_NAME_DICTIONARY = {
-  january: 1,
-  february: 2,
-  march: 3,
-  april: 4,
-  may: 5,
-  june: 6,
-  july: 7,
-  august: 8,
-  september: 9,
-  october: 10,
-  november: 11,
-  december: 12,
-};
-export const MONTH_DICTIONARY = Object.assign(Object.assign({}, exports.FULL_MONTH_NAME_DICTIONARY), {
-  jan: 1,
-  "jan.": 1,
-  feb: 2,
-  "feb.": 2,
-  mar: 3,
-  "mar.": 3,
-  apr: 4,
-  "apr.": 4,
-  jun: 6,
-  "jun.": 6,
-  jul: 7,
-  "jul.": 7,
-  aug: 8,
-  "aug.": 8,
-  sep: 9,
-  "sep.": 9,
-  sept: 9,
-  "sept.": 9,
-  oct: 10,
-  "oct.": 10,
-  nov: 11,
-  "nov.": 11,
-  dec: 12,
-  "dec.": 12,
-});
-export const INTEGER_WORD_DICTIONARY = {
-  one: 1,
-  two: 2,
-  three: 3,
-  four: 4,
-  five: 5,
-  six: 6,
-  seven: 7,
-  eight: 8,
-  nine: 9,
-  ten: 10,
-  eleven: 11,
-  twelve: 12,
-};
-export const ORDINAL_WORD_DICTIONARY = {
-  first: 1,
-  second: 2,
-  third: 3,
-  fourth: 4,
-  fifth: 5,
-  sixth: 6,
-  seventh: 7,
-  eighth: 8,
-  ninth: 9,
-  tenth: 10,
-  eleventh: 11,
-  twelfth: 12,
-  thirteenth: 13,
-  fourteenth: 14,
-  fifteenth: 15,
-  sixteenth: 16,
-  seventeenth: 17,
-  eighteenth: 18,
-  nineteenth: 19,
-  twentieth: 20,
-  "twenty first": 21,
-  "twenty-first": 21,
-  "twenty second": 22,
-  "twenty-second": 22,
-  "twenty third": 23,
-  "twenty-third": 23,
-  "twenty fourth": 24,
-  "twenty-fourth": 24,
-  "twenty fifth": 25,
-  "twenty-fifth": 25,
-  "twenty sixth": 26,
-  "twenty-sixth": 26,
-  "twenty seventh": 27,
-  "twenty-seventh": 27,
-  "twenty eighth": 28,
-  "twenty-eighth": 28,
-  "twenty ninth": 29,
-  "twenty-ninth": 29,
-  thirtieth: 30,
-  "thirty first": 31,
-  "thirty-first": 31,
-};
-export const TIME_UNIT_DICTIONARY_NO_ABBR = {
-  second: "second",
-  seconds: "second",
-  minute: "minute",
-  minutes: "minute",
-  hour: "hour",
-  hours: "hour",
-  day: "day",
-  days: "day",
-  week: "week",
-  weeks: "week",
-  month: "month",
-  months: "month",
-  quarter: "quarter",
-  quarters: "quarter",
-  year: "year",
-  years: "year",
-};
-export const TIME_UNIT_DICTIONARY = Object.assign(
-  {
-    s: "second",
-    sec: "second",
-    second: "second",
-    seconds: "second",
-    m: "minute",
-    min: "minute",
-    mins: "minute",
-    minute: "minute",
-    minutes: "minute",
-    h: "hour",
-    hr: "hour",
-    hrs: "hour",
-    hour: "hour",
-    hours: "hour",
-    d: "day",
-    day: "day",
-    days: "day",
-    w: "week",
-    week: "week",
-    weeks: "week",
-    mo: "month",
-    mon: "month",
-    mos: "month",
-    month: "month",
-    months: "month",
-    qtr: "quarter",
-    quarter: "quarter",
-    quarters: "quarter",
-    y: "year",
-    yr: "year",
-    year: "year",
-    years: "year",
+const items = [{ id: "image_0", w: 35, h: 35, u: "", p: "", e: 1 }];
+const obj2 = { id: "comp_0", layers: null };
+const obj3 = {
+  ddd: 0,
+  ind: 3,
+  ty: 2,
+  nm: "smile",
+  refId: "image_0",
+  sr: 1,
+  ks: {
+    o: { a: 0, k: 100, ix: 11 },
+    r: { a: 0, k: 0, ix: 10 },
+    p: { a: 0, k: [19.875, 20.125, 0], ix: 2 },
+    a: { a: 0, k: [17.25, 17.25, 0], ix: 1 },
+    s: { a: 0, k: [108.7, 108.7, 100], ix: 6 },
   },
-  exports.TIME_UNIT_DICTIONARY_NO_ABBR,
-);
-export const NUMBER_PATTERN =
-  "(?:" +
-  repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) +
-  "|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}an?)?|an?\\b(?:\\s{0,2}few)?|few|several|the|a?\\s{0,2}couple\\s{0,2}(?:of)?)";
-export const ORDINAL_NUMBER_PATTERN =
-  "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.ORDINAL_WORD_DICTIONARY) + "|[0-9]{1,2}(?:st|nd|rd|th)?)";
-export const YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9]|2[0-5])";
-export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern(
-  "(?:(?:about|around)\\s{0,3})?",
-  combined,
-  "\\s{0,5},?(?:\\s*and)?\\s{0,5}",
-);
-export const TIME_UNITS_NO_ABBR_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern(
-  "(?:(?:about|around)\\s{0,3})?",
-  combined1,
-  "\\s{0,5},?(?:\\s*and)?\\s{0,5}",
-);
+  ao: 0,
+  ip: 0,
+  op: 914,
+  st: 0,
+  bm: 0,
+};
+const items1 = [obj3];
+obj2.layers = items1;
+items[1] = obj2;
+obj.assets = items;
+const obj5 = {
+  ddd: 0,
+  ind: 1,
+  ty: 4,
+  nm: "Shape Layer 2",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  shapes: [],
+  ip: 50,
+  op: 360,
+  st: 0,
+  bm: 0,
+};
+const obj6 = {
+  o: { a: 0, k: 0, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [0, 0, 0], ix: 1 },
+  s: { a: 0, k: [130.88, 130.88, 100], ix: 6 },
+};
+const obj7 = { a: 1, k: null, ix: 2 };
+const items2 = [
+  {
+    i: { x: 0.833, y: 0.833 },
+    o: { x: 0.167, y: 0.167 },
+    t: 50,
+    s: [784, 720, 0],
+    to: [-73.6, 0, 0],
+    ti: [73.6, 0, 0],
+  },
+  { t: 104, s: [342.4, 720, 0] },
+];
+obj7.k = items2;
+obj6.p = obj7;
+obj5.ks = obj6;
+const items3 = [obj5, , , , , , , , ,];
+const obj8 = {
+  ddd: 0,
+  ind: 2,
+  ty: 0,
+  nm: "particle",
+  parent: 1,
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 59,
+  op: 960,
+  st: 59,
+  bm: 0,
+};
+const obj9 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 40, 0], ix: 1 },
+  s: { a: 0, k: [341.7, 341.7, 100], ix: 6 },
+};
+const obj10 = { a: 1, k: null, ix: 2 };
+const items4 = [
+  {
+    i: { x: 0.575, y: 1 },
+    o: { x: 0.699, y: 0 },
+    t: 59,
+    s: [465.988, -410, 0],
+    to: [-138.328, 0, 0],
+    ti: [138.328, 0, 0],
+  },
+  { t: 104, s: [-363.982, -410, 0] },
+];
+obj10.k = items4;
+obj9.p = obj10;
+obj8.ks = obj9;
+items3[1] = obj8;
+const obj11 = {
+  ddd: 0,
+  ind: 3,
+  ty: 0,
+  nm: "particle",
+  parent: 1,
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 56,
+  op: 957,
+  st: 56,
+  bm: 0,
+};
+const obj12 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 40, 0], ix: 1 },
+  s: { a: 0, k: [341.7, 341.7, 100], ix: 6 },
+};
+const obj13 = { a: 1, k: null, ix: 2 };
+const items5 = [
+  {
+    i: { x: 0.575, y: 1 },
+    o: { x: 0.699, y: 0 },
+    t: 56,
+    s: [465.988, -272, 0],
+    to: [-138.328, 0, 0],
+    ti: [138.328, 0, 0],
+  },
+  { t: 101, s: [-363.982, -272, 0] },
+];
+obj13.k = items5;
+obj12.p = obj13;
+obj11.ks = obj12;
+items3[2] = obj11;
+const obj14 = {
+  ddd: 0,
+  ind: 4,
+  ty: 0,
+  nm: "particle",
+  parent: 1,
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 53,
+  op: 954,
+  st: 53,
+  bm: 0,
+};
+const obj15 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 40, 0], ix: 1 },
+  s: { a: 0, k: [341.7, 341.7, 100], ix: 6 },
+};
+const obj16 = { a: 1, k: null, ix: 2 };
+const items6 = [
+  {
+    i: { x: 0.575, y: 1 },
+    o: { x: 0.699, y: 0 },
+    t: 53,
+    s: [465.988, -136, 0],
+    to: [-138.328, 0, 0],
+    ti: [138.328, 0, 0],
+  },
+  { t: 98, s: [-363.982, -136, 0] },
+];
+obj16.k = items6;
+obj15.p = obj16;
+obj14.ks = obj15;
+items3[3] = obj14;
+const obj17 = {
+  ddd: 0,
+  ind: 5,
+  ty: 0,
+  nm: "particle",
+  parent: 1,
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 50,
+  op: 951,
+  st: 50,
+  bm: 0,
+};
+const obj18 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 40, 0], ix: 1 },
+  s: { a: 0, k: [341.7, 341.7, 100], ix: 6 },
+};
+const obj19 = { a: 1, k: null, ix: 2 };
+const items7 = [
+  {
+    i: { x: 0.575, y: 1 },
+    o: { x: 0.699, y: 0 },
+    t: 50,
+    s: [465.988, 0, 0],
+    to: [-138.328, 0, 0],
+    ti: [138.328, 0, 0],
+  },
+  { t: 95, s: [-363.982, 0, 0] },
+];
+obj19.k = items7;
+obj18.p = obj19;
+obj17.ks = obj18;
+items3[4] = obj17;
+const obj20 = {
+  ddd: 0,
+  ind: 6,
+  ty: 4,
+  nm: "Shape Layer 1",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  shapes: [],
+  ip: 0,
+  op: 360,
+  st: 0,
+  bm: 0,
+};
+const obj21 = {
+  o: { a: 0, k: 0, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [0, 0, 0], ix: 1 },
+  s: { a: 0, k: [130.88, 130.88, 100], ix: 6 },
+};
+const obj22 = { a: 1, k: null, ix: 2 };
+const items8 = [
+  {
+    i: { x: 0.833, y: 0.833 },
+    o: { x: 0.167, y: 0.167 },
+    t: 0,
+    s: [342.4, 720, 0],
+    to: [73.6, 0, 0],
+    ti: [-73.6, 0, 0],
+  },
+  { t: 54, s: [784, 720, 0] },
+];
+obj22.k = items8;
+obj21.p = obj22;
+obj20.ks = obj21;
+items3[5] = obj20;
+const obj23 = {
+  ddd: 0,
+  ind: 7,
+  ty: 0,
+  nm: "particle",
+  parent: 6,
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 9,
+  op: 910,
+  st: 9,
+  bm: 0,
+};
+const obj24 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 40, 0], ix: 1 },
+  s: { a: 0, k: [341.7, 341.7, 100], ix: 6 },
+};
+const obj25 = { a: 1, k: null, ix: 2 };
+const items9 = [
+  {
+    i: { x: 0.301, y: 1 },
+    o: { x: 0.425, y: 0 },
+    t: 9,
+    s: [-363.982, -410, 0],
+    to: [138.328, 0, 0],
+    ti: [-138.328, 0, 0],
+  },
+  { t: 54, s: [465.988, -410, 0] },
+];
+obj25.k = items9;
+obj24.p = obj25;
+obj23.ks = obj24;
+items3[6] = obj23;
+const obj26 = {
+  ddd: 0,
+  ind: 8,
+  ty: 0,
+  nm: "particle",
+  parent: 6,
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 6,
+  op: 907,
+  st: 6,
+  bm: 0,
+};
+const obj27 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 40, 0], ix: 1 },
+  s: { a: 0, k: [341.7, 341.7, 100], ix: 6 },
+};
+const obj28 = { a: 1, k: null, ix: 2 };
+const items10 = [
+  {
+    i: { x: 0.301, y: 1 },
+    o: { x: 0.425, y: 0 },
+    t: 6,
+    s: [-363.982, -272, 0],
+    to: [138.328, 0, 0],
+    ti: [-138.328, 0, 0],
+  },
+  { t: 51, s: [465.988, -272, 0] },
+];
+obj28.k = items10;
+obj27.p = obj28;
+obj26.ks = obj27;
+items3[7] = obj26;
+const obj29 = {
+  ddd: 0,
+  ind: 9,
+  ty: 0,
+  nm: "particle",
+  parent: 6,
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 3,
+  op: 904,
+  st: 3,
+  bm: 0,
+};
+const obj30 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 40, 0], ix: 1 },
+  s: { a: 0, k: [341.7, 341.7, 100], ix: 6 },
+};
+const obj31 = { a: 1, k: null, ix: 2 };
+const items11 = [
+  {
+    i: { x: 0.301, y: 1 },
+    o: { x: 0.425, y: 0 },
+    t: 3,
+    s: [-363.982, -136, 0],
+    to: [138.328, 0, 0],
+    ti: [-138.328, 0, 0],
+  },
+  { t: 48, s: [465.988, -136, 0] },
+];
+obj31.k = items11;
+obj30.p = obj31;
+obj29.ks = obj30;
+items3[8] = obj29;
+const obj32 = {
+  ddd: 0,
+  ind: 10,
+  ty: 0,
+  nm: "particle",
+  parent: 6,
+  refId: "comp_0",
+  sr: 1,
+  ks: null,
+  ao: 0,
+  w: 40,
+  h: 40,
+  ip: 0,
+  op: 901,
+  st: 0,
+  bm: 0,
+};
+const obj33 = {
+  o: { a: 0, k: 100, ix: 11 },
+  r: { a: 0, k: 0, ix: 10 },
+  p: null,
+  a: { a: 0, k: [20, 40, 0], ix: 1 },
+  s: { a: 0, k: [341.7, 341.7, 100], ix: 6 },
+};
+const obj34 = { a: 1, k: null, ix: 2 };
+const items12 = [
+  {
+    i: { x: 0.301, y: 1 },
+    o: { x: 0.425, y: 0 },
+    t: 0,
+    s: [-363.982, 0, 0],
+    to: [138.328, 0, 0],
+    ti: [-138.328, 0, 0],
+  },
+  { t: 45, s: [465.988, 0, 0] },
+];
+obj34.k = items12;
+obj33.p = obj34;
+obj32.ks = obj33;
+items3[9] = obj32;
+obj.layers = items3;
+
+export default obj;

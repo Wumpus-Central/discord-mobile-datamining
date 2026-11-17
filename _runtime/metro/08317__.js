@@ -1,7 +1,6 @@
 // _runtime/metro/08317__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8301 from "08301__.js";
-import _modDef8302 from "08302__.js";
+import _modDef8313 from "08313__.js";
 import _modDef8318 from "08318__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -9,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeFlood = fn;
+const FeComposite = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeFlood {
+class FeComposite {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeFlood);
+    tmp = closure_3(this, FeComposite);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeFlood);
+    obj = hasOwnProperty(FeComposite);
     tmp3 = closure_4;
     if (metroImportDefault()) {
       tmp7 = globalThis;
@@ -50,7 +49,7 @@ class FeFlood {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeFlood, _modDef8302);
+_inherits(FeComposite, _modDef8313);
 const entry = {
   key: "render",
   value: function render() {
@@ -60,8 +59,9 @@ const entry = {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(FeFlood(8301).extractFilter(this.props));
-    const merged1 = Object.assign(_modDef8301(this.props));
+    const merged = Object.assign(FeComposite(8312).extractFilter(this.props));
+    const obj2 = FeComposite(8312);
+    const merged1 = Object.assign(FeComposite(8312).extractFeComposite(this.props));
     return (
       <tmp
         ref={function ref(arg0) {
@@ -72,12 +72,14 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeFlood, items);
-importDefaultResultResult.displayName = "FeFlood";
+const importDefaultResultResult = _createClass(FeComposite, items);
+importDefaultResultResult.displayName = "FeComposite";
 let obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.floodColor = "black";
-obj.floodOpacity = 1;
+obj.k1 = 0;
+obj.k2 = 0;
+obj.k3 = 0;
+obj.k4 = 0;
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

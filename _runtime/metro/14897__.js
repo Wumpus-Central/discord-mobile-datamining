@@ -1,13 +1,54 @@
 // _runtime/metro/14897__.js
-import registerAsset from "01119__.js";
+import _mod14852 from "14852__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "cde816791540f65e5c599ecf6c251745",
-  name: "ChatXIcon",
-  type: "png",
-});
+const Semicolon = _mod14852.TYPE.Semicolon;
+const LeftCurlyBracket = _mod14852.TYPE.LeftCurlyBracket;
+const obj = {
+  name: "AtrulePrelude",
+  structure: null,
+  parse(key10009) {
+    let formatted = key10009;
+    if (null !== key10009) {
+      formatted = key10009.toLowerCase();
+    }
+    const self = this;
+    const scanner = this.scanner;
+    scanner.skipSC();
+    const atrule = this.atrule;
+    if (atrule.hasOwnProperty(formatted)) {
+      if (typeof self.atrule[formatted].prelude === "function") {
+        const prelude = self.atrule[formatted].prelude;
+        const call = prelude.call;
+        typeof call === "unknown" ? prelude() : call(self);
+      }
+    }
+    let sequence = self.readSequence(self.scope.AtrulePrelude);
+    const scanner2 = self.scanner;
+    scanner2.skipSC();
+    let tmp6 = true !== self.scanner.eof;
+    if (tmp6) {
+      tmp6 = self.scanner.tokenType !== LeftCurlyBracket;
+    }
+    if (tmp6) {
+      tmp6 = self.scanner.tokenType !== Semicolon;
+    }
+    if (tmp6) {
+      self.error("Semicolon or block is expected");
+    }
+    if (null === sequence) {
+      sequence = self.createList();
+    }
+    const element = { type: "AtrulePrelude", loc: self.getLocationFromList(sequence), children: sequence };
+    return element;
+  },
+  generate(arg0) {
+    this.children(arg0);
+  },
+  walkContext: "atrulePrelude",
+};
+const obj2 = { children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

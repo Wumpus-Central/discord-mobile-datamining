@@ -1,13 +1,30 @@
 // _runtime/metro/10912__.js
-import registerAsset from "01119__.js";
+const exports = arg5;
+(() => {
+  let tmp = exports;
+  const ownPropertyNames = Object.getOwnPropertyNames(exports);
+  let num = 0;
+  if (0 < ownPropertyNames.length) {
+    const _Object = Object;
+    const ownPropertyDescriptor = Object.getOwnPropertyDescriptor(exports, ownPropertyNames[num]);
+    if (ownPropertyDescriptor) {
+      if (ownPropertyDescriptor.get) {
+        if (ownPropertyDescriptor.configurable) {
+          try {
+            value = ownPropertyDescriptor.get();
+            if (undefined !== value) {
+              const _Object2 = Object;
+              const obj = { value, writable: false, enumerable: ownPropertyDescriptor.enumerable, configurable: false };
+              Object.defineProperty(exports, ownPropertyNames[num], obj);
+            }
+          } catch (err) {}
+        }
+      }
+    }
+    num = num + 1;
+    tmp = exports;
+  }
+  const frozen = Object.freeze(tmp);
+})();
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 40,
-  height: 40,
-  scales: [1, 2, 3],
-  hash: "55227139f1f67d25c138599e308898b1",
-  name: "ic_upload_image_40px",
-  type: "png",
-});
+export const version = { major: 4, minor: 6, patch: 7 };

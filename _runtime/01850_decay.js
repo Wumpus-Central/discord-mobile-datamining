@@ -105,10 +105,10 @@ function pnpm_decayTs3(arg0, arg1) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "ip",
+      current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "AttributeSelector",
-      reduceMotion: null,
+      startTimestamp: 27,
+      reduceMotion: "default_guilds_restricted_v2",
     };
     let num = obj.velocity;
     if (num == null) {

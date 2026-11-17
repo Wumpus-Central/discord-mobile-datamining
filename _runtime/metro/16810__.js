@@ -1,15 +1,20 @@
 // _runtime/metro/16810__.js
-import _mod16762 from "16762__.js";
-import _mod16769 from "16769__.js";
+import _mod16782 from "16782__.js";
+import _mod16808 from "16808__.js";
 
-let closure_2 = _mod16762("keys");
-
-export default (arg0) => {
-  let tmp2 = closure_2[arg0];
-  if (!tmp2) {
-    const tmp5 = _mod16769(arg0);
-    tmp[arg0] = tmp5;
-    tmp2 = tmp5;
+export default (arg0, arg1) => {
+  if (arguments.length < 2) {
+    const tmp7 = _mod16782[arg0];
+    let tmp8;
+    if (_mod16808(tmp7)) {
+      tmp8 = tmp7;
+    }
+    let tmp3 = tmp8;
+  } else {
+    tmp3 = _mod16782[arg0];
+    if (tmp3) {
+      tmp3 = _mod16782[arg0][arg1];
+    }
   }
-  return tmp2;
+  return tmp3;
 };

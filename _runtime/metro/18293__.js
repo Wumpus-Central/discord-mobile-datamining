@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "aa6654f8bc64e9c09fd740f0157dd47b",
-  name: "ClipboardCheckIcon",
+  hash: "4aac4b9e524273cde97c71cf7da9357a",
+  name: "DoubleCheckmarkIcon",
   type: "png",
 });

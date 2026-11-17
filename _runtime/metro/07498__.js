@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/consoles",
+  width: 254,
+  height: 127,
   scales: [2, 3],
-  hash: "24def842b7fc85d108b018aef0f23eb6",
-  name: "ArrowLargeLeftIcon",
+  hash: "4d6a15fbe9eb4d6c66e3d9151f9a0183",
+  name: "link_failure",
   type: "png",
 });

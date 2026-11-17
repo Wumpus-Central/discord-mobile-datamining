@@ -1,100 +1,72 @@
 // _runtime/metro/09862__.js
-import _slicedToArray from "00032__.js";
-
-function parseRetryAfterHeader(arg0) {
-  let timestamp = arg1;
-  if (arg1 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  const parsed = parseInt("" + arg0, 10);
-  if (isNaN(parsed)) {
-    const _Date2 = Date;
-    const _HermesInternal = HermesInternal;
-    const parsed1 = Date.parse("" + arg0);
-    const _isNaN = isNaN;
-    let num2 = 60000;
-    if (!isNaN(parsed1)) {
-      num2 = parsed1 - timestamp;
+const require = arg1;
+const dependencyMap = arg6;
+function getFilenameToDebugIdMap(arg0) {
+  _require = arg0;
+  _sentryDebugIds = require("09811__.js").GLOBAL_OBJ._sentryDebugIds;
+  if (_sentryDebugIds) {
+    const _Object = Object;
+    const keys = Object.keys(_sentryDebugIds);
+    if (reduced) {
+      return reduced;
     }
-    return num2;
+    reduced = keys.reduce((acc, item) => {
+      let filename;
+      let tmp = obj;
+      if (!obj) {
+        obj = {};
+        tmp = obj;
+      }
+      if (tmp[item]) {
+        acc[tmp2[0]] = tmp2[1];
+      } else {
+        const arr = closure_0(item);
+        let diff = arr.length - 1;
+        if (0 <= diff) {
+          while (true) {
+            let tmp5 = arr[diff];
+            filename = tmp5;
+            if (tmp5) {
+              filename = tmp5.filename;
+            }
+            if (filename) {
+              if (_sentryDebugIds[item]) {
+                break;
+              }
+            }
+            diff = diff - 1;
+          }
+          acc[filename] = tmp8;
+          items = [filename, tmp8];
+          obj[item] = items;
+        }
+      }
+      return acc;
+    }, {});
   } else {
-    return 1000 * parsed;
+    return {};
   }
 }
 
-export const DEFAULT_RETRY_AFTER = 60000;
-export function disabledUntil(all, arg1) {
-  return all[arg1] || all.all || 0;
-}
-export function isRateLimited(all, result) {
-  let timestamp = arg2;
-  if (arg2 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  return (all[result] || all.all || 0) > timestamp;
-}
-export { parseRetryAfterHeader };
-export function updateRateLimits(arg0, headers) {
-  headers = headers.headers;
-  let timestamp = arg2;
-  if (arg2 === undefined) {
-    const _Date = Date;
-    timestamp = Date.now();
-  }
-  const obj = {};
-  const merged = Object.assign(arg0);
-  let str = headers;
-  if (headers) {
-    str = headers["x-sentry-rate-limits"];
-  }
-  let prop = headers;
-  if (headers) {
-    prop = headers["retry-after"];
-  }
-  if (str) {
-    const parts = str.trim().split(",");
-    const iter = parts[Symbol.iterator]();
-    const str2 = str.trim();
+export function getDebugImagesForResources(arg0, arg1) {
+  const tmp = getFilenameToDebugIdMap(arg0);
+  items = [];
+  if (tmp) {
+    const iter = arg1[Symbol.iterator]();
+    const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp12 = _slicedToArray(str8.split(":", 5), 5);
-      let str9 = tmp12[1];
-      let str10 = tmp12[4];
-      let _parseInt = parseInt;
-      let parsed = parseInt(tmp12[0], 10);
-      let _isNaN = isNaN;
-      let num6 = 60;
-      if (!isNaN(parsed)) {
-        num6 = parsed;
-      }
-      let result = 1000 * num6;
-      if (str9) {
-        let parts1 = str9.split(";");
-        for (const item10065 of parts1) {
-          let tmp23 = "metric_bucket" === item10065;
-          if (tmp23) {
-            tmp23 = str10;
-          }
-          if (tmp23) {
-            let parts2 = str10.split(";");
-            tmp23 = !parts2.includes("custom");
-          }
-          if (!tmp23) {
-            obj[item10065] = timestamp + result;
-          }
-          continue;
-        }
-      } else {
-        obj.all = timestamp + result;
+      let tmp7 = nextResult;
+      if (nextResult) {
+        obj = { type: "sourcemap", code_file: null, debug_id: null };
+        obj.code_file = tmp7;
+        obj.debug_id = tmp[tmp7];
+        let arr = items.push(obj);
       }
       continue;
     }
-    str8 = iter.next();
-  } else if (prop) {
-    obj.all = timestamp + parseRetryAfterHeader(prop, timestamp);
-  } else if (429 === headers.statusCode) {
-    obj.all = timestamp + 60000;
+    return items;
+  } else {
+    return items;
   }
-  return obj;
 }
+export { getFilenameToDebugIdMap };

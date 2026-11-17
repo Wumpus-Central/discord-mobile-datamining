@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/directory_channels/native/images",
-  width: 375,
-  height: 300,
-  scales: [2],
-  hash: "ce796d5b5dedd403e327ddf7cc5530fc",
-  name: "hub_header",
-  type: "png",
+  httpServerLocation: "/assets/modules/conjure/home/images",
+  width: 640,
+  height: 360,
+  scales: [1],
+  hash: "4e5bae29363ccb3adb92755885f5263f",
+  name: "conjure-home-spoilers-automod",
+  type: "svg",
 });

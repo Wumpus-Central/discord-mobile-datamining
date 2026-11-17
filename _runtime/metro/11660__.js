@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/media_keyboard/native/images",
-  width: 200,
-  height: 80,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "e341a934511095337dabafab8c60034b",
-  name: "empty_photos",
+  hash: "b749a15e15191bd4c7ec2a36a9470ea1",
+  name: "VoiceXIcon",
   type: "png",
 });

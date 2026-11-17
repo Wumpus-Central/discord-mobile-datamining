@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "eaee56f86ca7905c61b8b9a3d1c990d4",
-  name: "MinecraftNeutralIcon-primary",
+  hash: "9c9eaf9e089e1e9ddafb13abb59b28d7",
+  name: "MicrophoneSlashIcon",
   type: "png",
 });

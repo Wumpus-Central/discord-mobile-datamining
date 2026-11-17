@@ -1,4 +1,6 @@
 // _runtime/metro/06111__.js
-import _mod547 from "00547__.js";
+import baseClone from "../06112_baseClone.js";
 
-export default _mod547(Object.getPrototypeOf, Object);
+export default function cloneDeep(arg0) {
+  return baseClone(arg0, 5);
+}

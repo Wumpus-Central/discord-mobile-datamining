@@ -1,7 +1,8 @@
 // _runtime/metro/04913__.js
-import _typeof_mod from "04585__.js";
-import requiredArgs_mod from "../04586_requiredArgs.js";
-import module_4589_mod from "04589__.js";
+import _mod4594 from "04594__.js";
+import _typeof_mod from "04589__.js";
+import requiredArgs_mod from "../04590_requiredArgs.js";
+import module_4593_mod from "04593__.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -19,30 +20,80 @@ if (!requiredArgs) {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-let module_4589 = module_4589_mod;
-if (!module_4589) {
-  const obj3 = { default: module_4589 };
+let module_4593 = module_4593_mod;
+if (!module_4593) {
+  const obj3 = { default: module_4593 };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4589;
+  tmp7 = module_4593;
 }
-module_4589 = tmp7;
+module_4593 = tmp7;
 
-export default function setUTCISODay(arg0, arg1) {
+export default function setUTCDay(arg0, arg1, weekStartsOn) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = module_4589.default(arg1);
-  let diff = defaultResult1;
-  if (defaultResult1 % 7 === 0) {
-    diff = defaultResult1 - 7;
+  const defaultOptions = _mod4594.getDefaultOptions();
+  weekStartsOn = undefined;
+  if (null != weekStartsOn) {
+    weekStartsOn = weekStartsOn.weekStartsOn;
   }
-  const defaultResult2 = _typeof.default(arg0);
+  if (null === weekStartsOn) {
+    let weekStartsOn1;
+    if (null != weekStartsOn) {
+      const locale = weekStartsOn.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              weekStartsOn1 = options.weekStartsOn;
+            }
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn1;
+  }
+  if (null === weekStartsOn) {
+    weekStartsOn = defaultOptions.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    const locale2 = defaultOptions.locale;
+    let weekStartsOn2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            weekStartsOn2 = options2.weekStartsOn;
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn2;
+  }
   let num = 0;
-  const uTCDay = defaultResult2.getUTCDay();
-  if ((diff % 7 + 7) % 7 < 1) {
-    num = 7;
+  if (null !== weekStartsOn) {
+    num = 0;
+    if (undefined !== weekStartsOn) {
+      num = weekStartsOn;
+    }
   }
-  const diff1 = num + diff - uTCDay;
-  defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff1);
-  return defaultResult2;
+  const defaultResult1 = module_4593.default(num);
+  if (defaultResult1 >= 0) {
+    if (defaultResult1 <= 6) {
+      const defaultResult2 = _typeof.default(arg0);
+      const defaultResult3 = module_4593.default(arg1);
+      let num4 = 0;
+      const uTCDay = defaultResult2.getUTCDay();
+      if ((defaultResult3 % 7 + 7) % 7 < defaultResult1) {
+        num4 = 7;
+      }
+      const diff = num4 + defaultResult3 - uTCDay;
+      defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff);
+      return defaultResult2;
+    }
+  }
+  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  throw rangeError;
 };
 export default exports.default;

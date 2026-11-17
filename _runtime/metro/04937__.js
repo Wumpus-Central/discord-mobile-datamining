@@ -1,15 +1,15 @@
 // _runtime/metro/04937__.js
-import startOfQuarter_mod from "../04797_startOfQuarter.js";
-import requiredArgs_mod from "../04586_requiredArgs.js";
+import startOfWeek_mod from "../04748_startOfWeek.js";
+import requiredArgs_mod from "../04590_requiredArgs.js";
 
-let startOfQuarter = startOfQuarter_mod;
-if (!startOfQuarter) {
-  const obj = { default: startOfQuarter };
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfQuarter;
+  tmp3 = startOfWeek;
 }
-startOfQuarter = tmp3;
+startOfWeek = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,10 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameQuarter(arg0, arg1) {
+export default function isSameWeek(arg0, arg1, arg2) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfQuarter.default(arg0);
+  const defaultResult1 = startOfWeek.default(arg0, arg2);
   const time = defaultResult1.getTime();
-  return time === startOfQuarter.default(arg1).getTime();
+  return time === startOfWeek.default(arg1, arg2).getTime();
 };
 export default exports.default;

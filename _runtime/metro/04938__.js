@@ -1,15 +1,15 @@
 // _runtime/metro/04938__.js
-import startOfSecond_mod from "../04939_startOfSecond.js";
-import requiredArgs_mod from "../04586_requiredArgs.js";
+import startOfISOWeekYear_mod from "../04750_startOfISOWeekYear.js";
+import requiredArgs_mod from "../04590_requiredArgs.js";
 
-let startOfSecond = startOfSecond_mod;
-if (!startOfSecond) {
-  const obj = { default: startOfSecond };
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj = { default: startOfISOWeekYear };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfSecond;
+  tmp3 = startOfISOWeekYear;
 }
-startOfSecond = tmp3;
+startOfISOWeekYear = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,10 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameSecond(arg0, arg1) {
+export default function isSameISOWeekYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfSecond.default(arg0);
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
   const time = defaultResult1.getTime();
-  return time === startOfSecond.default(arg1).getTime();
+  return time === startOfISOWeekYear.default(arg1).getTime();
 };
 export default exports.default;

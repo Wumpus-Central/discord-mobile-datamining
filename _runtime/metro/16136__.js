@@ -1,10 +1,13 @@
 // _runtime/metro/16136__.js
-import _mod16150 from "16150__.js";
-import assign from "16137__.js";
-import Deflate from "../16138_Deflate.js";
-import Inflate from "../16146_Inflate.js";
+import registerAsset from "01119__.js";
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod16150);
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "e75d6cb3291053e29f69fac93519aa0b",
+  name: "spectator",
+  type: "png",
+});

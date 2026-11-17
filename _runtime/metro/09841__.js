@@ -1,252 +1,329 @@
 // _runtime/metro/09841__.js
-import _mod9798 from "09798__.js";
-import _mod9803 from "09803__.js";
-import _mod9842 from "09842__.js";
-import _mod9844 from "09844__.js";
-import _slicedToArray from "00032__.js";
+import _mod9810 from "09810__.js";
+import spanTimeInputToSeconds from "../09815_spanTimeInputToSeconds.js";
+import _mod9824 from "09824__.js";
+import _mod9827 from "09827__.js";
+import _mod9838 from "09838__.js";
+import _toArray from "../00717__toArray.js";
 
-function forEachEnvelopeItem(arg0, fn) {
-  for (const item10007 of tmp) {
-    if (arg1(item10007, item10007[0].type)) {
-      obj.return();
-      let flag = true;
-      return true;
-    }
-  }
-  return false;
-}
-let closure_4 = {
-  session: "session",
-  sessions: "session",
-  attachment: "attachment",
-  transaction: "transaction",
-  event: "error",
-  client_report: "internal",
-  user_report: "default",
-  profile: "profile",
-  profile_chunk: "profile",
-  replay_event: "replay",
-  replay_recording: "replay",
-  check_in: "monitor",
-  feedback: "feedback",
-  span: "span",
-  statsd: "metric_bucket",
-  raw_security: "security",
-};
+const require = globalThis.__r;
 
-export function addItemToEnvelope(arg0, arg1) {
-  const tmp = _slicedToArray(arg0, 2);
-  items = [tmp[0]];
-  const items1 = [];
-  items1[HermesBuiltin.arraySpread(tmp[1], 0)] = arg1;
-  items[1] = items1;
-  return items;
-}
-export function createAttachmentEnvelopeItem(data) {
-  if (typeof data.data === "string") {
-    data = data.data;
-    let __SENTRY__ = require;
-    let encodePolyfill = dependencyMap;
-    if (!_mod9798.GLOBAL_OBJ.__SENTRY__) {
-      const _TextEncoder = TextEncoder;
-      const encoder = new TextEncoder();
-      let encodeResult = encoder.encode(data);
-    }
-    __SENTRY__ = __SENTRY__(9798).GLOBAL_OBJ.__SENTRY__;
-    encodePolyfill = __SENTRY__.encodePolyfill;
-    encodeResult = encodePolyfill(data);
-  } else {
-    const data1 = data.data;
-    const obj3 = {
-      type: "attachment",
-      length: data1.length,
-      filename: null,
-      content_type: null,
-      attachment_type: null,
-    };
-    ({ filename: obj2.filename, contentType: obj2.content_type, attachmentType: obj2.attachment_type } = data);
-    items = [_mod9803.dropUndefinedKeys(obj3), data1];
-    return items;
+const TRACING_DEFAULTS = { idleTimeout: 1000, finalTimeout: 30000, childSpanTimeout: 15000 };
+
+export { TRACING_DEFAULTS };
+export function startIdleSpan(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
-}
-export function createEnvelope(eventEnvelopeHeaders) {
-  items = items1;
-  if (items1 === undefined) {
-    items = [];
-  }
-  items1 = [eventEnvelopeHeaders, items];
-  return items1;
-}
-export function createEventEnvelopeHeaders(event_id, sdk, arg2, url) {
-  const obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
-  let tmp2 = sdk;
-  if (sdk) {
-    const obj2 = { sdk };
-    tmp2 = obj2;
-  }
-  const merged = Object.assign(tmp2);
-  let tmp4 = arg2 && url;
-  if (tmp4) {
-    const obj3 = { dsn: _mod9844.dsnToString(url) };
-    tmp4 = obj3;
-  }
-  const merged1 = Object.assign(tmp4);
-  let tmp8 = tmp;
-  if (event_id.sdkProcessingMetadata && event_id.sdkProcessingMetadata.dynamicSamplingContext) {
-    const obj4 = { trace: null };
-    const obj6 = {};
-    const merged2 = Object.assign(tmp);
-    obj4.trace = _mod9803.dropUndefinedKeys(obj6);
-    tmp8 = obj4;
-  }
-  const merged3 = Object.assign(tmp8);
-  return obj;
-}
-export function createSpanEnvelopeItem(arg0) {
-  items = [{ type: "span" }, arg0];
-  return items;
-}
-export function envelopeContainsItemType(arg0, arg1) {
-  closure_0 = arg1;
-  return forEachEnvelopeItem(arg0, (arg0, arg1) => closure_0.includes(arg1));
-}
-export function envelopeItemTypeToDataCategory(arg0) {
-  return closure_4[arg0];
-}
-export { forEachEnvelopeItem };
-export function getSdkMetadataForEnvelopeHeader(sdk) {
-  if (sdk) {
-    if (sdk.sdk) {
-      const obj = { name: null, version: null };
-      ({ name: obj.name, version: obj.version } = sdk.sdk);
-      return obj;
-    }
-  }
-}
-export function parseEnvelope(arr) {
-  if (typeof arr !== "string") {
-    function readJson() {
-      length = closure_0.indexOf(10);
-      if (length < 0) {
-        length = closure_0.length;
+  _require = undefined;
+  let finalTimeout;
+  let childSpanTimeout;
+  let beforeSpanEnd;
+  let currentScope;
+  let activeSpan;
+  c12 = undefined;
+  function onIdleSpanEnded(arg0) {
+    closure_0 = arg0;
+    c2 = true;
+    map.clear();
+    const item = items.forEach((fn) => fn());
+    closure_0(map[6])._setSpanForScope(closure_10, closure_11);
+    let obj = closure_0(map[6]);
+    let spanToJSONResult = closure_0(map[4]).spanToJSON(c12);
+    if (spanToJSONResult.start_timestamp) {
+      if (!tmp7[tmp3(undefined, tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON]) {
+        const attr = c12.setAttribute(tmp3(tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, heartbeatFailed);
       }
-      const subarrayResult = closure_0.subarray(0, length);
-      closure_0 = closure_0.subarray(length + 1);
-      if (_mod9798.GLOBAL_OBJ.__SENTRY__) {
-        if (_mod9798.GLOBAL_OBJ.__SENTRY__.decodePolyfill) {
-          const __SENTRY__ = _mod9798.GLOBAL_OBJ.__SENTRY__;
-          let decodePolyfillResult = __SENTRY__.decodePolyfill(subarrayResult);
-        }
-        return JSON.parse(decodePolyfillResult);
-      }
-      const decoder = new TextDecoder();
-      decodePolyfillResult = decoder.decode(subarrayResult);
-    }
-    _require = arr;
-    items = [];
-    const json = readJson();
-    while (_require.length) {
-      let json1 = readJson();
-      length = undefined;
-      if (typeof json1.length === "number") {
-        length = json1.length;
-      }
-      let items1 = [json1];
-      if (length) {
-        let subarrayResult = require("Discord");
-        _require = _require.subarray(length + 1);
-      } else {
-        subarrayResult = readJson();
-      }
-      items1[1] = subarrayResult;
-      arr = items.push(items1);
-    }
-    const items2 = [json, items];
-    return items2;
-  } else {
-    let __SENTRY__ = _require;
-    let encodePolyfill = dependencyMap;
-    if (!require("09798__.js").GLOBAL_OBJ.__SENTRY__) {
-      const _TextEncoder = TextEncoder;
-      const encoder = new TextEncoder();
-      let encodeResult = encoder.encode(arr);
-    }
-    __SENTRY__ = __SENTRY__(9798).GLOBAL_OBJ.__SENTRY__;
-    encodePolyfill = __SENTRY__.encodePolyfill;
-    encodeResult = encodePolyfill(arr);
-  }
-}
-export function serializeEnvelope(dependencyMap) {
-  function append(json) {
-    if (typeof sum === "string") {
-      if (typeof json === "string") {
-        sum = arr + json;
-      } else {
-        if (_mod9798.GLOBAL_OBJ.__SENTRY__) {
-          if (_mod9798.GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
-            const __SENTRY__2 = _mod9798.GLOBAL_OBJ.__SENTRY__;
-            let encodePolyfillResult = __SENTRY__2.encodePolyfill(arr);
+      let logger = tmp3(tmp4[8]).logger;
+      const _HermesInternal = HermesInternal;
+      logger.log('[Tracing] Idle span "' + spanToJSONResult.op + '" finished');
+      const spanDescendants = tmp3(tmp4[4]).getSpanDescendants(c12);
+      const found = spanDescendants.filter((item) => item !== _undefined);
+      const item1 = found.forEach((isRecording) => {
+        if (isRecording.isRecording()) {
+          const obj = { code: _mod9827.SPAN_STATUS_ERROR, message: "cancelled" };
+          isRecording.setStatus(obj);
+          isRecording.end(closure_0);
+          if (_mod9838.DEBUG_BUILD) {
+            const logger = _mod9810.logger;
+            const _JSON = JSON;
+            logger.log("[Tracing] Cancelling span since span ended early", JSON.stringify(isRecording, undefined, 2));
           }
-          sum = [encodePolyfillResult, json];
         }
-        const _TextEncoder2 = TextEncoder;
-        const encoder2 = new TextEncoder();
-        encodePolyfillResult = encoder2.encode(arr);
-      }
-    } else if (typeof json !== "string") {
-      arr.push(json);
-    } else {
-      let __SENTRY__ = require;
-      let encodePolyfill = dependencyMap;
-      if (!_mod9798.GLOBAL_OBJ.__SENTRY__) {
-        const _TextEncoder = TextEncoder;
-        const encoder = new TextEncoder();
-        let encodeResult = encoder.encode(json);
-      }
-      __SENTRY__ = __SENTRY__(9798).GLOBAL_OBJ.__SENTRY__;
-      encodePolyfill = __SENTRY__.encodePolyfill;
-      encodeResult = encodePolyfill(json);
-    }
-  }
-  const tmp4 = _slicedToArray(dependencyMap, 2);
-  const require = JSON.stringify(tmp4[0]);
-  if (tmp5 === undefined) {
-    let tmp22 = require;
-    if (typeof require !== "string") {
-      tmp22 = (function concatBuffers(arr) {
-        const uint8Array = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
-        let num = 0;
-        const iter = arr[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let result = uint8Array.set(nextResult, num);
-          num = num + nextResult.length;
-          continue;
+        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(isRecording);
+        const timestamp = spanToJSONResult.timestamp;
+        let num2 = 0;
+        if (undefined !== timestamp) {
+          num2 = timestamp;
         }
-        return uint8Array;
-      })(tmp21);
-    }
-    return tmp22;
-  } else {
-    const tmp8 = _slicedToArray(tmp6, 2);
-    const _JSON = JSON;
-    const _HermesInternal = HermesInternal;
-    append("\n" + JSON.stringify(tmp8[0]) + "\n");
-    if (typeof tmp8[1] !== "string") {
-      const _Uint8Array = Uint8Array;
-      if (!(tmp10 instanceof Uint8Array)) {
-        try {
+        const start_timestamp = spanToJSONResult.start_timestamp;
+        let num3 = 0;
+        if (undefined !== start_timestamp) {
+          num3 = start_timestamp;
+        }
+        let tmp14 = num2 - num3 <= (finalTimeout + idleTimeout) / 1000;
+        if (_mod9838.DEBUG_BUILD) {
           const _JSON2 = JSON;
-          let json = JSON.stringify(tmp10);
-          append(json);
-        } catch (err) {
-          const _JSON3 = tmp2.JSON;
-          const normalizer = _mod9842;
-          json = _JSON3.stringify(normalizer.normalize(tmp3));
+          const json = JSON.stringify(isRecording, undefined, 2);
+          if (tmp13) {
+            if (!tmp14) {
+              const logger3 = _mod9810.logger;
+              logger3.log("[Tracing] Discarding span since it finished after idle span final timeout", json);
+            }
+          } else {
+            const logger2 = _mod9810.logger;
+            logger2.log("[Tracing] Discarding span since it happened after idle span was finished", json);
+          }
         }
+        if (tmp14) {
+          tmp14 = tmp13;
+        }
+        if (!tmp14) {
+          const result = spanTimeInputToSeconds.removeChildSpanFromSpan(c12, isRecording);
+          closure_1 = closure_1 + 1;
+        }
+      });
+      if (0 > 0) {
+        const attr1 = c12.setAttribute("sentry.idle_span_discarded_spans", map);
       }
+      const tmp3Result = tmp3(tmp4[4]);
+      tmp7 = spanToJSONResult.data || {};
     }
-    append(tmp8[1]);
+    let obj2 = closure_0(map[4]);
   }
-  tmp5 = tmp4[1][Symbol.iterator]();
+  const map = new Map();
+  c2 = false;
+  let heartbeatFailed = "externalFinish";
+  closure_4 = !obj.disableAutoFinish;
+  items = [];
+  let idleTimeout = obj.idleTimeout;
+  if (undefined === idleTimeout) {
+    idleTimeout = heartbeatFailed.idleTimeout;
+  }
+  finalTimeout = obj.finalTimeout;
+  if (undefined === finalTimeout) {
+    finalTimeout = heartbeatFailed.finalTimeout;
+  }
+  childSpanTimeout = obj.childSpanTimeout;
+  if (undefined === childSpanTimeout) {
+    childSpanTimeout = heartbeatFailed.childSpanTimeout;
+  }
+  beforeSpanEnd = obj.beforeSpanEnd;
+  const client = require("09837__.js").getClient();
+  if (client) {
+    if (tmp5Result.hasTracingEnabled()) {
+      currentScope = tmp5(tmp6[1]).getCurrentScope();
+      const tmp5Result6 = tmp5(tmp6[1]);
+      activeSpan = tmp5(tmp6[4]).getActiveSpan();
+      const tmp5Result7 = tmp5(tmp6[4]);
+      const startInactiveSpanResult = tmp5(tmp6[11]).startInactiveSpan(arg0);
+      const tmp5Result8 = tmp5(tmp6[11]);
+      const tmp5Result9 = tmp5(tmp6[6]);
+      tmp5Result9._setSpanForScope(tmp5(tmp6[1]).getCurrentScope(), startInactiveSpanResult);
+      if (tmp5(tmp6[10]).DEBUG_BUILD) {
+        let logger = tmp5(tmp6[8]).logger;
+        logger.log("[Tracing] Started span is an idle span");
+      }
+      c12 = startInactiveSpanResult;
+      const _Proxy = Proxy;
+      let obj3 = {
+        apply(arg0, arg1, current) {
+          if (beforeSpanEnd) {
+            tmp(c12);
+          }
+          const arr = _toArray(current);
+          let first = arr[0];
+          const substr = arr.slice(1);
+          if (!first) {
+            first = _mod9824.timestampInSeconds();
+          }
+          const result = spanTimeInputToSeconds.spanTimeInputToSeconds(first);
+          const spanDescendants = spanTimeInputToSeconds.getSpanDescendants(c12);
+          const found = spanDescendants.filter((item) => item !== _undefined);
+          if (found.length) {
+            const mapped = found.map((item) => closure_1_0(map[4]).spanToJSON(item).timestamp);
+            const found1 = mapped.filter((item) => item);
+            let num2;
+            if (found1.length) {
+              const _Math = Math;
+              items = [];
+              HermesBuiltin.arraySpread(found1, 0);
+              const _Math2 = Math;
+              num2 = HermesBuiltin.apply(items, Math);
+            }
+            let num4 = spanTimeInputToSeconds.spanToJSON(c12).start_timestamp;
+            let num6 = Infinity;
+            if (num4) {
+              num6 = num4 + finalTimeout / 1000;
+            }
+            if (!num4) {
+              num4 = -Infinity;
+            }
+            if (!num2) {
+              num2 = Infinity;
+            }
+            const bound = Math.min(num6, Math.max(num4, Math.min(result, num2)));
+            onIdleSpanEnded(bound);
+            const _Reflect2 = Reflect;
+            const items1 = [bound];
+            HermesBuiltin.arraySpread(substr, 1);
+            return Reflect.apply(arg0, arg1, items1);
+          } else {
+            onIdleSpanEnded(result);
+            const _Reflect = Reflect;
+            const items2 = [result];
+            HermesBuiltin.arraySpread(substr, 1);
+            return Reflect.apply(arg0, arg1, items2);
+          }
+        },
+      };
+      const proxy = new Proxy(startInactiveSpanResult.end, obj3);
+      startInactiveSpanResult.end = proxy;
+      items.push(
+        client.on("spanStart", (spanContext) => {
+          let timestamp = c2;
+          if (!c2) {
+            timestamp = spanContext === c12;
+          }
+          if (!timestamp) {
+            timestamp = timeout(map[4]).spanToJSON(spanContext).timestamp;
+            const obj = timeout(map[4]);
+          }
+          if (!timestamp) {
+            const spanDescendants = timeout(map[4]).getSpanDescendants(c12);
+            if (spanDescendants.includes(spanContext)) {
+              if (timeout) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(timeout);
+                timeout = undefined;
+              }
+              const result = map.set(spanContext.spanContext().spanId, true);
+              timeout(map[5]).timestampInSeconds() + childSpanTimeout / 1000;
+              const _setTimeout = setTimeout;
+              timeout = setTimeout(() => {
+                let tmp = !c2;
+                if (!c2) {
+                  tmp = closure_4;
+                }
+                if (tmp) {
+                  heartbeatFailed = "heartbeatFailed";
+                  c12.end(closure_0);
+                }
+              }, childSpanTimeout);
+              const obj4 = timeout(map[5]);
+            }
+            const obj2 = timeout(map[4]);
+          }
+        }),
+      );
+      items.push(
+        client.on("spanEnd", (spanContext) => {
+          if (!c2) {
+            const spanId = spanContext.spanContext().spanId;
+            if (map.has(spanId)) {
+              map.delete(spanId);
+            }
+            if (0 === map.size) {
+              timeout = timeout(map[5]).timestampInSeconds() + idleTimeout / 1000;
+              if (timeout) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(timeout);
+                timeout = undefined;
+              }
+              const _setTimeout = setTimeout;
+              timeout = setTimeout(() => {
+                let tmp = !c2;
+                if (!c2) {
+                  tmp = 0 === map.size;
+                }
+                if (tmp) {
+                  tmp = closure_4;
+                }
+                if (tmp) {
+                  heartbeatFailed = "idleTimeout";
+                  c12.end(closure_0);
+                }
+              }, idleTimeout);
+              const obj2 = timeout(map[5]);
+            }
+          }
+        }),
+      );
+      items.push(
+        client.on("idleSpanEnableAutoFinish", (arg0) => {
+          if (arg0 === c12) {
+            c4 = true;
+            let timeout;
+            if (timeout) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(timeout);
+              timeout = undefined;
+            }
+            const _setTimeout = setTimeout;
+            timeout = setTimeout(() => {
+              let tmp = !c2;
+              if (!c2) {
+                tmp = 0 === map.size;
+              }
+              if (tmp) {
+                tmp = closure_4;
+              }
+              if (tmp) {
+                heartbeatFailed = "idleTimeout";
+                c12.end(closure_0);
+              }
+            }, idleTimeout);
+            if (map.size) {
+              const _setTimeout2 = setTimeout;
+              timeout = setTimeout(() => {
+                let tmp = !c2;
+                if (!c2) {
+                  tmp = closure_4;
+                }
+                if (tmp) {
+                  heartbeatFailed = "heartbeatFailed";
+                  c12.end(closure_0);
+                }
+              }, childSpanTimeout);
+            }
+          }
+        }),
+      );
+      if (!obj.disableAutoFinish) {
+        if (_require) {
+          let _clearTimeout = clearTimeout;
+          clearTimeout(_require);
+          _require = undefined;
+        }
+        let _setTimeout = setTimeout;
+        _require = setTimeout(() => {
+          let tmp = !c2;
+          if (!c2) {
+            tmp = 0 === map.size;
+          }
+          if (tmp) {
+            tmp = closure_4;
+          }
+          if (tmp) {
+            heartbeatFailed = "idleTimeout";
+            c12.end(closure_0);
+          }
+        }, idleTimeout);
+      }
+      let _setTimeout2 = setTimeout;
+      const timerId = setTimeout(() => {
+        if (!c2) {
+          const obj = { code: _mod9827.SPAN_STATUS_ERROR, message: "deadline_exceeded" };
+          _undefined.setStatus(obj);
+          heartbeatFailed = "finalTimeout";
+          _undefined.end();
+        }
+      }, finalTimeout);
+      return startInactiveSpanResult;
+    }
+    tmp5Result = tmp5(tmp6[2]);
+  }
+  const sentryNonRecordingSpan = new tmp5(tmp6[3]).SentryNonRecordingSpan();
+  return sentryNonRecordingSpan;
 }

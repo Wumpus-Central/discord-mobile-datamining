@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9uYXRpdmVfc3VydmV5cw==",
+  httpServerLocation: "/assets/modules/notifications_inbox",
   scales: [1],
-  hash: "5eb684b1be1cb0519a96fd477bdc5104",
-  name: "bg.messages.5eb684b1be1cb0519a96fd477bdc5104.compiled.messages",
+  hash: "979ffd23ac7c056952037af41549f09b",
+  name: "NotificationsInbox.compiled.messages",
   type: "jsona",
 });

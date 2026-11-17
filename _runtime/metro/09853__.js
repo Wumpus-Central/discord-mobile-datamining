@@ -1,128 +1,131 @@
 // _runtime/metro/09853__.js
-import _mod9797 from "09797__.js";
-import _mod9824 from "09824__.js";
-import _mod9825 from "09825__.js";
-import _slicedToArray from "00032__.js";
+import spanTimeInputToSeconds from "../09815_spanTimeInputToSeconds.js";
+import _mod9854 from "09854__.js";
+import _mod9857 from "09857__.js";
+import __SENTRY_DEBUG__ from "09809__.js";
+import consoleSandbox from "09810__.js";
 
-function setupIntegration(on, name, arg2) {
-  closure_0 = on;
-  if (arg2[name.name]) {
-    if (_mod9825.DEBUG_BUILD) {
-      const logger2 = _mod9797.logger;
-      const _HermesInternal2 = HermesInternal;
-      logger2.log("Integration skipped because it was already installed: " + name.name);
+export function createEventEnvelope(type, url, sdk, arg3) {
+  const sdkMetadataForEnvelopeHeader = _mod9854.getSdkMetadataForEnvelopeHeader(sdk);
+  let str = "event";
+  if (type.type) {
+    str = "event";
+    if ("replay_event" !== type.type) {
+      str = type.type;
     }
-  } else {
-    arg2[name.name] = name;
-    if (tmp) {
-      name.setupOnce();
-      items.push(name.name);
-    }
-    if (tmp4) {
-      name.setup(on);
-    }
-    if (typeof name.preprocessEvent === "function") {
-      const preprocessEvent = name.preprocessEvent;
-      closure_1 = preprocessEvent.bind(name);
-      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
-    }
-    if (typeof name.processEvent === "function") {
-      const processEvent = name.processEvent;
-      closure_2 = processEvent.bind(name);
-      const _Object = Object;
-      const obj = { id: name.name };
-      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
-    }
-    if (_mod9825.DEBUG_BUILD) {
-      const logger = _mod9797.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Integration installed: " + name.name);
-    }
-    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
-    tmp4 = name.setup && typeof name.setup === "function";
   }
-}
-let items = [];
-
-export function addIntegration(name) {
-  const client = _mod9824.getClient();
-  if (client) {
-    client.addIntegration(name);
-  } else if (_mod9825.DEBUG_BUILD) {
-    const logger = _mod9797.logger;
-    const _HermesInternal = HermesInternal;
-    logger.warn('Cannot add integration "' + name.name + '" because no SDK Client is available.');
+  if (sdk) {
+    sdk = sdk.sdk;
   }
-}
-export function afterSetupIntegrations(arg0, arg1) {
-  const iter = arg1[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let obj = nextResult;
-    if (nextResult) {
-      let afterAllSetup = obj.afterAllSetup;
+  if (sdk) {
+    type.sdk = type.sdk || {};
+    let name = type.sdk.name;
+    if (!name) {
+      name = sdk.name;
     }
-    if (nextResult) {
-      let afterAllSetupResult = obj.afterAllSetup(arg0);
+    type.sdk.name = name;
+    let version = type.sdk.version;
+    if (!version) {
+      version = sdk.version;
     }
-    continue;
-  }
-}
-export function defineIntegration(arg0) {
-  return arg0;
-}
-export function getIntegrationsToSetup(defaultIntegrations) {
-  const arr = defaultIntegrations.defaultIntegrations || [];
-  const integrations = defaultIntegrations.integrations;
-  const item = arr.forEach((item) => {
-    item.isDefaultInstance = true;
-  });
-  if (Array.isArray(integrations)) {
+    type.sdk.version = version;
+    let integrations = type.sdk.integrations;
+    if (!integrations) {
+      integrations = [];
+    }
     items = [];
-    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
-    let arr2 = items;
-  } else {
-    arr2 = arr;
-    if (typeof integrations === "function") {
-      const integrationsResult = integrations(arr);
-      const _Array = Array;
-      let tmp2 = integrationsResult;
-      if (!Array.isArray(integrationsResult)) {
-        const items1 = [integrationsResult];
-        tmp2 = items1;
-      }
-      arr2 = tmp2;
+    const arraySpreadResult = HermesBuiltin.arraySpread(integrations, 0);
+    const tmp9 = sdk.integrations || [];
+    HermesBuiltin.arraySpread(tmp9, arraySpreadResult);
+    type.sdk.integrations = items;
+    let packages = type.sdk.packages;
+    if (!packages) {
+      packages = [];
     }
+    const items1 = [];
+    const arraySpreadResult5 = HermesBuiltin.arraySpread(packages, 0);
+    const tmp17 = sdk.packages || [];
+    HermesBuiltin.arraySpread(tmp17, arraySpreadResult5);
+    type.sdk.packages = items1;
   }
-  const item1 = arr2.forEach((name) => {
-    name = name.name;
-    let isDefaultInstance = tmp2;
-    if (obj[name]) {
-      isDefaultInstance = !tmp2.isDefaultInstance;
-    }
-    if (isDefaultInstance) {
-      isDefaultInstance = name.isDefaultInstance;
-    }
-    if (!isDefaultInstance) {
-      obj[name] = name;
-    }
-  });
-  const values = Object.values({});
-  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
-  if (findIndexResult > -1) {
-    values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
-  }
-  return values;
+  const eventEnvelopeHeaders = _mod9854.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
+  delete tmp[tmp2];
+  const items2 = [{ type: str }, type];
+  const tmp3Result = _mod9854;
+  const items3 = [items2];
+  return _mod9854.createEnvelope(eventEnvelopeHeaders, items3);
 }
-export const installedIntegrations = items;
-export { setupIntegration };
-export function setupIntegrations(arg0, arr) {
-  closure_0 = arg0;
-  const obj = {};
-  const item = arr.forEach((item) => {
-    if (item) {
-      setupIntegration(closure_0, item, obj);
-    }
-  });
-  return obj;
+export function createSessionEnvelope(toJSON, url, sdk, arg3) {
+  const sdkMetadataForEnvelopeHeader = _mod9854.getSdkMetadataForEnvelopeHeader(sdk);
+  const obj2 = { sent_at: null };
+  obj2.sent_at = new Date().toISOString();
+  let tmp4 = sdkMetadataForEnvelopeHeader;
+  if (sdkMetadataForEnvelopeHeader) {
+    const obj3 = { sdk: sdkMetadataForEnvelopeHeader };
+    tmp4 = obj3;
+  }
+  const merged = Object.assign(tmp4);
+  let tmp6 = arg3 && url;
+  if (tmp6) {
+    const obj4 = { dsn: _mod9857.dsnToString(url) };
+    tmp6 = obj4;
+    const tmpResult = _mod9857;
+  }
+  const merged1 = Object.assign(tmp6);
+  if ("aggregates" in toJSON) {
+    items = [{ type: "sessions" }, toJSON];
+    let items1 = items;
+  } else {
+    items1 = [{ type: "session" }, toJSON.toJSON()];
+  }
+  const date = new Date();
+  const items2 = [items1];
+  return _mod9854.createEnvelope(obj2, items2);
+}
+export function createSpanEnvelope(arg0, getDsn) {
+  const dynamicSamplingContextFromSpan = beforeSendSpan(9846).getDynamicSamplingContextFromSpan(arg0[0]);
+  let dsn = getDsn;
+  if (getDsn) {
+    dsn = getDsn.getDsn();
+  }
+  let tunnel = getDsn;
+  if (getDsn) {
+    tunnel = getDsn.getOptions().tunnel;
+  }
+  const obj = beforeSendSpan(9846);
+  const obj2 = { sent_at: new Date().toISOString() };
+  const tmp2 = beforeSendSpan;
+  let tmp7 = (function dscHasRequiredProps(dynamicSamplingContextFromSpan) {
+    return dynamicSamplingContextFromSpan.trace_id && dynamicSamplingContextFromSpan.public_key;
+  })(dynamicSamplingContextFromSpan);
+  if (tmp7) {
+    const obj3 = { trace: dynamicSamplingContextFromSpan };
+    tmp7 = obj3;
+  }
+  const merged = Object.assign(tmp7);
+  let tmp9 = tunnel && dsn;
+  if (tmp9) {
+    const obj4 = { dsn: tmp2(9857).dsnToString(dsn) };
+    tmp9 = obj4;
+    const tmp2Result = tmp2(9857);
+  }
+  const merged1 = Object.assign(tmp9);
+  beforeSendSpan = getDsn;
+  if (getDsn) {
+    beforeSendSpan = getDsn.getOptions().beforeSendSpan;
+  }
+  if (beforeSendSpan) {
+    const fn2 = (arg0) => {
+      const tmp3 = beforeSendSpan(spanTimeInputToSeconds.spanToJSON(arg0));
+      if (!tmp3) {
+        spanTimeInputToSeconds.showSpanDropWarning();
+        const tmpResult = spanTimeInputToSeconds;
+      }
+      return tmp3;
+    };
+  } else {
+    const fn = (arg0) => beforeSendSpan(dependencyMap[5]).spanToJSON(arg0);
+  }
+  arg0[Symbol.iterator]();
+  const date = new Date();
 }

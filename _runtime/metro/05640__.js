@@ -1,77 +1,61 @@
 // _runtime/metro/05640__.js
-import handlerIDToTag from "../05591_handlerIDToTag.js";
-import convertToHandlerTag from "../05612_convertToHandlerTag.js";
-import RNGestureHandlerModuleDefault from "../05617_RNGestureHandlerModule.js";
-import transformIntoHandlerTags from "../05619_transformIntoHandlerTags.js";
 
-const require = globalThis.__r;
-
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export function updateHandlers(attachedGestures, prepare, gesturesToAttach) {
-  _require = attachedGestures;
-  prepare.prepare();
-  for (let num = 0; num < gesturesToAttach.length; num = num + 1) {
-    let tmp2 = attachedGestures.attachedGestures[num];
-    let obj = require("convertToHandlerTag");
-    let result = obj.checkGestureCallbacksForWorklets(tmp2);
-    if (gesturesToAttach[num].handlerTag !== tmp2.handlerTag) {
-      ({ handlerTag: gesturesToAttach[num].handlerTag, handlerTag: gesturesToAttach[num].handlers.handlerTag } = tmp2);
+export function assignRef(fn, current) {
+  if (typeof fn === "function") {
+    const tmp = fn(current);
+    let tmp2;
+    if (typeof tmp === "function") {
+      tmp2 = tmp;
+    }
+    return tmp2;
+  } else if (fn) {
+    fn.current = current;
+  }
+}
+export function isHostInstance(preferHostInstanceResult) {
+  let prop;
+  if (preferHostInstanceResult != null) {
+    prop = preferHostInstanceResult.__internalInstanceHandle;
+  }
+  return undefined !== prop;
+}
+export function preferHostInstance(__internalInstanceHandle) {
+  if (null != __internalInstanceHandle) {
+    let prop;
+    if (__internalInstanceHandle != null) {
+      prop = __internalInstanceHandle.__internalInstanceHandle;
+    }
+    if (undefined === prop) {
+      const getNativeScrollRef = __internalInstanceHandle.getNativeScrollRef;
+      let nativeScrollRef;
+      if (getNativeScrollRef != null) {
+        nativeScrollRef = getNativeScrollRef();
+      }
+      let prop1;
+      if (nativeScrollRef != null) {
+        prop1 = nativeScrollRef.__internalInstanceHandle;
+      }
+      let tmp4 = __internalInstanceHandle;
+      if (undefined !== prop1) {
+        tmp4 = nativeScrollRef;
+      }
+      return tmp4;
     }
   }
-  attachedGestures = attachedGestures.attachedGestures;
-  attachedGestures.hasExternalRelations = true;
-  require("ghQueueMicrotask").ghQueueMicrotask(() => {
-    if (attachedGestures.isMounted) {
-      let arr = attachedGestures;
-      if (attachedGestures === tmp.attachedGestures) {
-        let tmp23 = gesturesToAttach;
-        let tmp21 = arr.length !== gesturesToAttach.length;
-        let num = 0;
-        let tmp22 = tmp21;
-        if (0 < gesturesToAttach.length) {
-          do {
-            let tmp3 = attachedGestures[num];
-            let tmp4 = tmp3.handlers.gestureId !== gesturesToAttach[num].handlers.gestureId;
-            let flag = tmp21;
-            if (tmp4) {
-              let tmp6 = gesturesToAttach[num].shouldUseReanimated || tmp3.shouldUseReanimated;
-              tmp4 = tmp6;
-            }
-            if (tmp4) {
-              flag = true;
-            }
-            tmp3.config = gesturesToAttach[num].config;
-            tmp3.handlers = gesturesToAttach[num].handlers;
-            let obj = RNGestureHandlerModuleDefault;
-            let obj2 = transformIntoHandlerTags;
-            let result = obj.setGestureHandlerConfig(
-              tmp3.handlerTag,
-              obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS),
-            );
-            let obj3 = RNGestureHandlerModuleDefault;
-            let obj4 = convertToHandlerTag;
-            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
-            let obj5 = handlerIDToTag;
-            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
-            num = num + 1;
-            tmp21 = flag;
-            tmp22 = flag;
-            tmp23 = gesturesToAttach;
-            arr = attachedGestures;
-          } while (num < gesturesToAttach.length);
-        }
-        attachedGestures.hasExternalRelations = convertToHandlerTag.hasExternalRelations(tmp23);
-        if (attachedGestures.animatedHandlers) {
-          if (tmp22) {
-            const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
-            attachedGestures.animatedHandlers.value = found.map((handlers) => handlers.handlers);
-          }
-        }
-        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
-      }
+  return __internalInstanceHandle;
+}
+export function resolveHostInstance(viewRef) {
+  let getHostInstance;
+  if (viewRef != null) {
+    getHostInstance = viewRef.getHostInstance;
+  }
+  let tmp2 = viewRef;
+  if (typeof getHostInstance === "function") {
+    let hostInstance = viewRef.getHostInstance();
+    if (hostInstance == null) {
+      hostInstance = viewRef;
     }
-  });
+    tmp2 = hostInstance;
+  }
+  return tmp2;
 }

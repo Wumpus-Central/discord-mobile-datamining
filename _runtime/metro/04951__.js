@@ -1,35 +1,26 @@
 // _runtime/metro/04951__.js
-import module_4733_mod from "04733__.js";
-import module_4766_mod from "04766__.js";
-import requiredArgs_mod from "../04586_requiredArgs.js";
+import module_4937_mod from "04937__.js";
+import requiredArgs_mod from "../04590_requiredArgs.js";
 
-let module_4733 = module_4733_mod;
-if (!module_4733) {
-  const obj = { default: module_4733 };
+let module_4937 = module_4937_mod;
+if (!module_4937) {
+  const obj = { default: module_4937 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4733;
+  tmp3 = module_4937;
 }
-module_4733 = tmp3;
-let module_4766 = module_4766_mod;
-if (!module_4766) {
-  const obj2 = { default: module_4766 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4766;
-}
-module_4766 = tmp5;
+module_4937 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isTomorrow(arg0) {
+export default function isThisWeek(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  return module_4766.default(arg0, module_4733.default(Date.now(), 1));
+  return module_4937.default(arg0, Date.now(), arg1);
 };
 export default exports.default;

@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/badge",
-  width: 30,
-  height: 30,
-  scales: [2, 3],
-  hash: "581374036ac67fb316291b50b3effd2f",
-  name: "ic_badge_nitro",
+  httpServerLocation: "/assets/images/native/gifting/standard",
+  width: 144,
+  height: 150,
+  scales: [1],
+  hash: "e32285515cb51d557a374cd91c39dd3d",
+  name: "box_idle",
   type: "png",
 });

@@ -1,71 +1,82 @@
 // _runtime/metro/09905__.js
-import _mod9824 from "09824__.js";
-import _flush from "../09845__flush.js";
-import _mod9870 from "09870__.js";
+import stackParserFromStackParserOptions from "../09813_stackParserFromStackParserOptions.js";
+import setupIntegration from "09866__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function getCurrentHubShim() {
+let c2 = "_sentryBundlerPluginAppKey:";
+
+export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegration((arg0) => {
+  const behaviour = arg0;
   return {
-    bindClient(arg0) {
-      const currentScope = _mod9824.getCurrentScope();
-      currentScope.setClient(arg0);
-    },
-    withScope: _mod9824.withScope,
-    getClient() {
-      return _mod9824.getClient();
-    },
-    getScope: _mod9824.getCurrentScope,
-    getIsolationScope: _mod9824.getIsolationScope,
-    captureException(arg0, arg1) {
-      const currentScope = _mod9824.getCurrentScope();
-      return currentScope.captureException(arg0, arg1);
-    },
-    captureMessage(arg0, arg1, arg2) {
-      const currentScope = _mod9824.getCurrentScope();
-      return currentScope.captureMessage(arg0, arg1, arg2);
-    },
-    captureEvent: _flush.captureEvent,
-    addBreadcrumb: _mod9870.addBreadcrumb,
-    setUser: _flush.setUser,
-    setTags: _flush.setTags,
-    setTag: _flush.setTag,
-    setExtra: _flush.setExtra,
-    setExtras: _flush.setExtras,
-    setContext: _flush.setContext,
-    getIntegration(id) {
-      const client = _mod9824.getClient();
-      let integrationByName = client;
-      if (client) {
-        integrationByName = client.getIntegrationByName(id.id);
-      }
-      if (!integrationByName) {
-        integrationByName = null;
-      }
-      return integrationByName;
-    },
-    startSession: _flush.startSession,
-    endSession: _flush.endSession,
-    captureSession(arg0) {
-      if (arg0) {
-        return _flush.endSession();
-      } else {
-        const currentScope = _mod9824.getCurrentScope();
-        const tmpResult3 = _mod9824;
-        const client = _mod9824.getClient();
-        const session = currentScope.getSession();
-        let tmp4 = client;
-        if (client) {
-          tmp4 = session;
+    name: "ThirdPartyErrorsFilter",
+    setup(on) {
+      const options = on;
+      on.on("beforeEnvelope", (arg0) => {
+        options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+          if ("event" === arg1) {
+            const _Array = Array;
+            let tmp3;
+            if (Array.isArray(arg0)) {
+              tmp3 = arg0[1];
+            }
+            if (tmp3) {
+              const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+              arg0[1] = tmp3;
+              const obj = options(dependencyMap[2]);
+            }
+          }
+        });
+      });
+      on.on("applyFrameMetadata", (type) => {
+        if (!type.type) {
+          const result = options(dependencyMap[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
+          const obj = options(dependencyMap[2]);
         }
-        if (tmp4) {
-          client.captureSession(session);
-        }
-        const tmpResult4 = _mod9824;
+      });
+    },
+    processEvent(tags) {
+      const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(tags);
+      let mapped;
+      if (framesFromEvent) {
+        let found = framesFromEvent.filter((filename) => filename.filename);
+        mapped = found.map((module_metadata) => {
+          if (module_metadata.module_metadata) {
+            const _Object = Object;
+            const keys = Object.keys(module_metadata.module_metadata);
+            const found = keys.filter((item) => item.startsWith(length));
+            let mapped = found.map((arr) => arr.slice(length.length));
+          } else {
+            mapped = [];
+          }
+          return mapped;
+        });
       }
+      if (mapped) {
+        if ("drop-error-if-contains-third-party-frames" === behaviour.behaviour) {
+          let str2 = "some";
+        } else {
+          str2 = "every";
+        }
+        if (
+          mapped[str2](
+            (arr) =>
+              !arr.some((item) => {
+                filterKeys = filterKeys.filterKeys;
+                return filterKeys.includes(item);
+              }),
+          )
+        ) {
+          if ("drop-error-if-contains-third-party-frames" !== behaviour.behaviour) {
+            if ("drop-error-if-exclusively-contains-third-party-frames" !== behaviour.behaviour) {
+              const obj2 = {};
+              const merged = Object.assign(tags.tags);
+              obj2.third_party_code = true;
+              tags.tags = obj2;
+            }
+          }
+          return null;
+        }
+      }
+      return tags;
     },
   };
-}
-
-export const getCurrentHub = getCurrentHubShim;
-export { getCurrentHubShim };
+});

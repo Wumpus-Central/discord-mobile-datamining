@@ -1,6 +1,6 @@
 // _runtime/metro/04856__.js
-import _typeof_mod from "04585__.js";
-import requiredArgs_mod from "../04586_requiredArgs.js";
+import _typeof_mod from "04589__.js";
+import requiredArgs_mod from "../04590_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -19,12 +19,19 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getISODay(arg0) {
+export default function isLeapYear(arg0) {
   requiredArgs.default(1, arguments);
-  let num = _typeof.default(arg0).getDay();
-  if (0 === num) {
-    num = 7;
+  const fullYear = _typeof.default(arg0).getFullYear();
+  const result = fullYear % 400;
+  let tmp4 = result === 0;
+  if (result !== 0) {
+    const result1 = fullYear % 4;
+    let tmp6 = result1 === 0;
+    if (result1 === 0) {
+      tmp6 = fullYear % 100 !== 0;
+    }
+    tmp4 = tmp6;
   }
-  return num;
+  return tmp4;
 };
 export default exports.default;

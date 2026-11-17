@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX2ludml0ZV9jaGFubmVscw==",
+  httpServerLocation: "/assets/modules/spatial_audio",
   scales: [1],
-  hash: "4840ba3969e6a8dbbbae0e0fa5eb9ed4",
-  name: "bg.messages.4840ba3969e6a8dbbbae0e0fa5eb9ed4.compiled.messages",
+  hash: "f3a2ddb0cb8e5293ad55679523803863",
+  name: "SpatialAudio.compiled.messages",
   type: "jsona",
 });

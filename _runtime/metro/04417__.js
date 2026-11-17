@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/emojis/default_emojis",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9lbW9qaXMvZGVmYXVsdF9lbW9qaXM=",
   scales: [1],
-  hash: "42fa967858ccf5cd0fc49ce9badfefd4",
-  name: "DefaultEmojis.compiled.messages",
+  hash: "e255348f68dc67d89d7196ab1e22ee2c",
+  name: "zh-CN.messages.e255348f68dc67d89d7196ab1e22ee2c.compiled.messages",
   type: "jsona",
 });

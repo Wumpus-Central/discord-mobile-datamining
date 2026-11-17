@@ -1,24 +1,43 @@
 // _runtime/metro/09917__.js
-import _mod9798 from "09798__.js";
+import _mod9816 from "09816__.js";
+import _mod9837 from "09837__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function vercelWaitUntil(arg0) {
-  const obj = _mod9798.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
-  if (obj) {
-    if (obj.get) {
-      if (obj.get()) {
-        let obj1 = obj.get();
-      }
-      let waitUntil = obj1;
-      if (obj1) {
-        waitUntil = obj1.waitUntil;
-      }
-      if (waitUntil) {
-        obj1.waitUntil(arg0);
-      }
-    }
+export function captureFeedback(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
-  obj1 = {};
+  let currentScope = arg2;
+  if (arg2 === undefined) {
+    currentScope = _mod9837.getCurrentScope();
+  }
+  const obj2 = { contexts: null, type: "feedback", level: "info", tags: null };
+  const obj4 = {
+    feedback: _mod9816.dropUndefinedKeys({
+      contact_email: email,
+      name,
+      message,
+      url,
+      source,
+      associated_event_id: associatedEventId,
+    }),
+  };
+  ({ message, name, email, url, source, associatedEventId, tags } = arg0);
+  obj2.contexts = obj4;
+  obj2.tags = tags;
+  let client = currentScope;
+  if (currentScope) {
+    client = currentScope.getClient();
+  }
+  if (!client) {
+    client = _mod9837.getClient();
+    const tmp3Result = _mod9837;
+  }
+  if (client) {
+    client.emit("beforeSendFeedback", obj2, obj);
+  }
+  return currentScope.captureEvent(obj2, obj);
 }

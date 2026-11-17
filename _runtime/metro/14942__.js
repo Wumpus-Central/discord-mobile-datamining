@@ -1,13 +1,8 @@
 // _runtime/metro/14942__.js
-import registerAsset from "01119__.js";
+import _mod14943 from "14943__.js";
+import _mod14944 from "14944__.js";
+import _mod14945 from "14945__.js";
+import _mod14946 from "14946__.js";
+import _mod14947 from "14947__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 232,
-  height: 126,
-  scales: [2, 3],
-  hash: "4a0bc494eeca38c1cab5c56f66dbf1f3",
-  name: "no_mutual_friends_darker",
-  type: "png",
-});
+export default { "font-face": _mod14943, import: _mod14944, media: _mod14945, page: _mod14946, supports: _mod14947 };

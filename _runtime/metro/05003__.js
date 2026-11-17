@@ -1,16 +1,16 @@
 // _runtime/metro/05003__.js
-import module_4589_mod from "04589__.js";
-import _typeof_mod from "04585__.js";
-import requiredArgs_mod from "../04586_requiredArgs.js";
+import module_4593_mod from "04593__.js";
+import _typeof_mod from "04589__.js";
+import requiredArgs_mod from "../04590_requiredArgs.js";
 
-let module_4589 = module_4589_mod;
-if (!module_4589) {
-  const obj = { default: module_4589 };
+let module_4593 = module_4593_mod;
+if (!module_4593) {
+  const obj = { default: module_4593 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4589;
+  tmp3 = module_4593;
 }
-module_4589 = tmp3;
+module_4593 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -28,10 +28,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setHours(module_4589, uTCMinutes) {
+export default function setDate(module_4593, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_4589);
-  defaultResult1.setHours(module_4589.default(uTCMinutes));
+  const defaultResult1 = _typeof.default(module_4593);
+  defaultResult1.setDate(module_4593.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

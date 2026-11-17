@@ -1,30 +1,32 @@
 // _runtime/metro/09871__.js
-import setupIntegration from "09853__.js";
+import _mod9816 from "09816__.js";
+import _mod9854 from "09854__.js";
+import _mod9857 from "09857__.js";
 
-const weakMap = new WeakMap();
+require = arg1;
+const dependencyMap = arg6;
 
-export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
-  name: "FunctionToString",
-  setupOnce() {
-    toString = Function.prototype.toString;
-    try {
-      const _Function = Function;
-      Function.prototype.toString = function () {
-        items = [...arguments];
-        const originalFunction = closure_1_0(9803).getOriginalFunction(this);
-        const obj = closure_1_0(9803);
-        let self = this;
-        if (set.has(obj2.getClient())) {
-          self = this;
-          if (undefined !== originalFunction) {
-            self = originalFunction;
-          }
-        }
-        return toString.apply(self, items);
-      };
-    } catch (err) {}
-  },
-  setup(arg0) {
-    const result = weakMap.set(arg0, true);
-  },
-}));
+export function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
+  }
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
+  }
+  let tmp = arg3;
+  if (arg3) {
+    tmp = url;
+  }
+  if (tmp) {
+    obj.dsn = _mod9857.dsnToString(url);
+  }
+  if (contexts) {
+    obj.trace = _mod9816.dropUndefinedKeys(contexts);
+  }
+  items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return _mod9854.createEnvelope(obj, items1);
+}

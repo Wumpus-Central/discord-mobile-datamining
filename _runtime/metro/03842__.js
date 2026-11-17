@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2JmX2RlYWxz",
   scales: [1],
-  hash: "f6306e924e70495263b2e54a10266d6b",
-  name: "da.messages.f6306e924e70495263b2e54a10266d6b.compiled.messages",
+  hash: "06204d2f54fcddd3d0017d0d9a3502e5",
+  name: "bg.messages.06204d2f54fcddd3d0017d0d9a3502e5.compiled.messages",
   type: "jsona",
 });

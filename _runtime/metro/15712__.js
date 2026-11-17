@@ -3,11 +3,11 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/conjure/presence/native/images",
-  width: 80,
-  height: 80,
-  scales: [1, 2, 3],
-  hash: "d0ac2ff8bbd27dac2fa6efc885f4d1a1",
-  name: "conjure_activity_light",
+  httpServerLocation: "/assets/images/native/empties",
+  width: 120,
+  height: 96,
+  scales: [2, 3],
+  hash: "21dd2828907413d4c11bf84cb61743df",
+  name: "search_empty_state_light",
   type: "png",
 });

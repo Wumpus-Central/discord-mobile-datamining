@@ -1,19 +1,19 @@
 // _runtime/metro/16788__.js
-import _mod16754 from "16754__.js";
-import _mod16775 from "16775__.js";
-import f2 from "../16789_f.js";
-import _mod16799 from "16799__.js";
-import _mod16800 from "16800__.js";
+import _mod16786 from "16786__.js";
+import _mod16789 from "16789__.js";
+import _mod16791 from "16791__.js";
 
-let closure_2 = _mod16754([].concat);
-
-export default _mod16775("Reflect", "ownKeys") ||
-  function ownKeys(arg0) {
-    const fResult = f2.f(_mod16799(arg0));
-    const f = _mod16800.f;
-    let tmp2 = fResult;
-    if (f) {
-      tmp2 = closure_2(fResult, f(arg0));
+let fn = Object;
+let closure_3 = _mod16789("".split);
+if (_mod16786(() => !Object("z").propertyIsEnumerable(0))) {
+  fn = (arg0) => {
+    if ("String" === _mod16791(arg0)) {
+      let tmp2 = closure_3(arg0, "");
+    } else {
+      tmp2 = Object(arg0);
     }
     return tmp2;
   };
+}
+
+export default fn;

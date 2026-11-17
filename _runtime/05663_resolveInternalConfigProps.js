@@ -1,0 +1,35 @@
+// _runtime/05663_resolveInternalConfigProps.js
+import reanimatedUtils from "05652_reanimatedUtils.js";
+import allowedNativeProps from "05653_allowedNativeProps.js";
+import _mod5662 from "metro/05662__.js";
+import _mod5664 from "metro/05664__.js";
+import eventUtils from "05665_eventUtils.js";
+import _mod5666 from "metro/05666__.js";
+
+export const isGestureEnabled = _mod5664.isGestureEnabled;
+export const prepareConfigForNativeSide = _mod5664.prepareConfigForNativeSide;
+export const useClonedAndRemappedConfig = _mod5664.useClonedAndRemappedConfig;
+export const runCallback = _mod5666.runCallback;
+export const touchEventTypeToCallbackType = _mod5666.touchEventTypeToCallbackType;
+export const useMemoizedGestureCallbacks = _mod5666.useMemoizedGestureCallbacks;
+export const checkMappingForChangeProperties = eventUtils.checkMappingForChangeProperties;
+export const flattenAndFilterEvent = eventUtils.flattenAndFilterEvent;
+export const getChangeEventCalculator = eventUtils.getChangeEventCalculator;
+export const isEventForHandlerWithTag = eventUtils.isEventForHandlerWithTag;
+export const isNativeAnimatedEvent = eventUtils.isNativeAnimatedEvent;
+export const maybeExtractNativeEvent = eventUtils.maybeExtractNativeEvent;
+export const shouldHandleTouchEvents = eventUtils.shouldHandleTouchEvents;
+export const allowedNativeProps = allowedNativeProps.allowedNativeProps;
+export const EMPTY_WHITE_LIST = allowedNativeProps.EMPTY_WHITE_LIST;
+export const HandlerCallbacks = allowedNativeProps.HandlerCallbacks;
+export const NativeWrapperProps = allowedNativeProps.NativeWrapperProps;
+export const PropsToFilter = allowedNativeProps.PropsToFilter;
+export const PropsWhiteLists = allowedNativeProps.PropsWhiteLists;
+export const bindSharedValues = reanimatedUtils.bindSharedValues;
+export const hasWorkletEventHandlers = reanimatedUtils.hasWorkletEventHandlers;
+export const maybeUnpackValue = reanimatedUtils.maybeUnpackValue;
+export const splitSingleOffset = reanimatedUtils.splitSingleOffset;
+export const unbindSharedValues = reanimatedUtils.unbindSharedValues;
+export const containsDuplicates = _mod5662.containsDuplicates;
+export const isComposedGesture = _mod5662.isComposedGesture;
+export const prepareRelations = _mod5662.prepareRelations;

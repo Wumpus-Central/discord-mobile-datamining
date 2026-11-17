@@ -1,49 +1,82 @@
 // _runtime/metro/08927__.js
-import _mod8928 from "08928__.js";
-import _mod8929 from "08929__.js";
-import _mod8930 from "08930__.js";
-import _mod8931 from "08931__.js";
+import _mod8921 from "08921__.js";
+import _mod8922 from "08922__.js";
 
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
+require = arg1;
+const dependencyMap = arg6;
+
+export function isAVIF(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "avif") && _mod8921.isAvifStringIncluded(fileChunk);
 }
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
-  }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
-          }
-          continue;
-        } else {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
-          }
-        }
-      }
-    };
-  }
-  const _Object2 = Object;
-  fn(_mod8928, exports);
-  fn(_mod8929, exports);
-  fn(_mod8930, exports);
-  fn(_mod8931, exports);
-} else {
-  let _Object = Object;
+export function isBMP(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "bmp");
+}
+export function isBPG(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "bpg");
+}
+export function isCR2(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "cr2");
+}
+export function isEXR(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "exr");
+}
+export function isGIF(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "gif");
+}
+export function isHEIC(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "avif") && _mod8921.isHeicSignatureIncluded(fileChunk);
+}
+export function isICO(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ico");
+}
+export function isJPEG(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "jpeg");
+}
+export function isPBM(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pbm");
+}
+export function isPGM(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pgm");
+}
+export function isPNG(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "png");
+}
+export function isPPM(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ppm");
+}
+export function isPSD(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "psd");
+}
+export function isWEBP(fileChunk) {
+  fileChunk = _mod8921.getFileChunk(fileChunk);
+  const FileTypes = _mod8922.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "webp");
 }

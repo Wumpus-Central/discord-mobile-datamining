@@ -3,9 +3,9 @@ import registerAsset from "01119__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zbGF5ZXJfc3RvcmVmcm9udC9pbnRs",
+  httpServerLocation: "/assets/modules/video_player",
   scales: [1],
-  hash: "b1269ef2f4ab7701ad6957a357c407d8",
-  name: "bg.messages.b1269ef2f4ab7701ad6957a357c407d8.compiled.messages",
+  hash: "464dcf0f450d33faf13d82b8f2efc31e",
+  name: "VideoPlayer.compiled.messages",
   type: "jsona",
 });

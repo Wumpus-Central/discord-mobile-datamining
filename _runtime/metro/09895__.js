@@ -1,62 +1,68 @@
 // _runtime/metro/09895__.js
-import _mod9797 from "09797__.js";
-import _mod9824 from "09824__.js";
-import _mod9825 from "09825__.js";
+import _mod9837 from "09837__.js";
+import _mod9897 from "09897__.js";
+import setupIntegration from "09866__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const profiler = {
-  startProfiler() {
-    const client = _mod9824.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.start();
-        } else if (_mod9825.DEBUG_BUILD) {
-          const logger3 = _mod9797.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
-        }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod9825.DEBUG_BUILD) {
-        const logger2 = _mod9797.logger;
-        logger2.warn("ProfilingIntegration is not available");
+export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let handled;
+  let CONSOLE_LEVELS = obj.levels;
+  if (!CONSOLE_LEVELS) {
+    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
+  }
+  handled = obj.handled;
+  return {
+    name: "CaptureConsole",
+    setup(arg0) {
+      closure_0 = arg0;
+      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
+        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
+          ({ args, level } = arg0);
+          let hasItem = _mod9837.getClient() === args;
+          if (hasItem) {
+            hasItem = CONSOLE_LEVELS.includes(level);
+          }
+          if (hasItem) {
+            closure_2 = handled;
+            let obj2 = { level: _mod9897.severityLevelFromString(level), extra: null };
+            const obj3 = { arguments: args };
+            obj2.extra = obj3;
+            const tmpResult = _mod9897;
+            _mod9837.withScope((addEventProcessor) => {
+              addEventProcessor.addEventProcessor((arg0) => {
+                arg0.logger = "console";
+                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
+                return arg0;
+              });
+              if ("assert" !== level) {
+                const found = args.find((item) => item instanceof Error);
+                if (found) {
+                  args(9858).captureException(found, obj2);
+                  const tmp14Result = args(9858);
+                } else {
+                  const tmp14Result2 = args(9819);
+                  const safeJoinResult = args(9819).safeJoin(args, " ");
+                  args(9858).captureMessage(safeJoinResult, obj2);
+                  const obj4 = args(9858);
+                }
+              } else if (!args[0]) {
+                const obj = args(9819);
+                const _HermesInternal = HermesInternal;
+                const combined = "Assertion failed: " + args(9819).safeJoin(args.slice(1), " ") || "console.assert";
+                addEventProcessor.setExtra("arguments", args.slice(1));
+                obj2 = args(9858);
+                obj2.captureMessage(combined, obj2);
+                const tmp4 = args(9819).safeJoin(args.slice(1), " ") || "console.assert";
+              }
+            });
+            const tmpResult2 = _mod9837;
+          }
+        });
+        let tmpResult = CONSOLE_LEVELS(handled[2]);
       }
-    } else if (_mod9825.DEBUG_BUILD) {
-      const logger = _mod9797.logger;
-      logger.warn("No Sentry client available, profiling is not started");
-    }
-  },
-  stopProfiler() {
-    const client = _mod9824.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.stop();
-        } else if (_mod9825.DEBUG_BUILD) {
-          const logger3 = _mod9797.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
-        }
-        tmp6 =
-          integrationByName &&
-          undefined !== integrationByName._profiler &&
-          typeof integrationByName._profiler.start === "function" &&
-          typeof integrationByName._profiler.stop === "function";
-      } else if (_mod9825.DEBUG_BUILD) {
-        const logger2 = _mod9797.logger;
-        logger2.warn("ProfilingIntegration is not available");
-      }
-    } else if (_mod9825.DEBUG_BUILD) {
-      const logger = _mod9797.logger;
-      logger.warn("No Sentry client available, profiling is not started");
-    }
-  },
-};
+    },
+  };
+});

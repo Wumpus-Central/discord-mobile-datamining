@@ -1,38 +1,17 @@
 // _runtime/metro/04858__.js
-import startOfISOWeekYear_mod from "../04746_startOfISOWeekYear.js";
-import module_4753_mod from "04753__.js";
-import requiredArgs_mod from "../04586_requiredArgs.js";
+import _mod4594 from "04594__.js";
+import assign_mod from "../04839_assign.js";
 
-let startOfISOWeekYear = startOfISOWeekYear_mod;
-if (!startOfISOWeekYear) {
-  const obj = { default: startOfISOWeekYear };
+let assign = assign_mod;
+if (!assign) {
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfISOWeekYear;
+  tmp3 = assign;
 }
-startOfISOWeekYear = tmp3;
-let module_4753 = module_4753_mod;
-if (!module_4753) {
-  const obj2 = { default: module_4753 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4753;
-}
-module_4753 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-let c3 = 604800000;
+assign = tmp3;
 
-export default function getISOWeeksInYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = startOfISOWeekYear.default(arg0);
-  const defaultResult2 = startOfISOWeekYear.default(module_4753.default(defaultResult1, 60));
-  return Math.round((startOfISOWeekYear.default(module_4753.default(defaultResult1, 60)).valueOf() - defaultResult1.valueOf()) / c3);
+export default function getDefaultOptions() {
+  return assign.default({}, _mod4594.getDefaultOptions());
 };
 export default exports.default;

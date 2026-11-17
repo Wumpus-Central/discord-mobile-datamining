@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "14a4fdad987e2761599ba055042fdafa",
-  name: "EyeSlashIcon",
+  hash: "80a1b67e775ddb8de80fde27e63a5302",
+  name: "CircleErrorIcon-secondary",
   type: "png",
 });

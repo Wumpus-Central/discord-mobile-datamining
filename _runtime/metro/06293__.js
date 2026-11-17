@@ -1,63 +1,13 @@
 // _runtime/metro/06293__.js
-import get_synchronousScreenUpdatesEnabled from "../06273_get_synchronousScreenUpdatesEnabled.js";
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
+import _mod26 from "00026__.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-require = arg1;
-let context = noop.createContext({
-  topAlreadyApplied: false,
-  leftDisabled: false,
-  rightDisabled: false,
-  bottomDisabled: false,
-});
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSModalScreen", directEventTypes: { topAppear: { registrationName: "onAppear" }, topDisappear: { registrationName: "onDisappear" }, topDismissed: { registrationName: "onDismissed" }, topNativeDismissCancelled: { registrationName: "onNativeDismissCancelled" }, topWillAppear: { registrationName: "onWillAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topHeaderHeightChange: { registrationName: "onHeaderHeightChange" }, topTransitionProgress: { registrationName: "onTransitionProgress" }, topGestureCancel: { registrationName: "onGestureCancel" }, topHeaderBackButtonClicked: { registrationName: "onHeaderBackButtonClicked" }, topSheetDetentChanged: { registrationName: "onSheetDetentChanged" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onAppear: true, onDisappear: true, onDismissed: true, onNativeDismissCancelled: true, onWillAppear: true, onWillDisappear: true, onHeaderHeightChange: true, onTransitionProgress: true, onGestureCancel: true, onHeaderBackButtonClicked: true, onSheetDetentChanged: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { screenId: true, sheetAllowedDetents: true, sheetLargestUndimmedDetent: true, sheetGrabberVisible: true, sheetCornerRadius: true, sheetExpandsWhenScrolledToEdge: true, sheetInitialDetent: true, sheetElevation: true, sheetShouldOverflowTopInset: true, sheetDefaultResizeAnimationEnabled: true, customAnimationOnSwipe: true, fullScreenSwipeEnabled: true, fullScreenSwipeShadowEnabled: true, homeIndicatorHidden: true, preventNativeDismiss: true, gestureEnabled: true, statusBarColor: _mod26.colorAttribute, statusBarHidden: true, screenOrientation: true, statusBarAnimation: true, statusBarStyle: true, statusBarTranslucent: true, gestureResponseDistance: true, stackPresentation: true, stackAnimation: true, transitionDuration: true, replaceAnimation: true, swipeDirection: true, hideKeyboardOnSwipe: true, activityState: true, navigationBarColor: _mod26.colorAttribute, navigationBarTranslucent: true, navigationBarHidden: true, nativeBackButtonDismissalEnabled: true, bottomScrollEdgeEffect: true, leftScrollEdgeEffect: true, rightScrollEdgeEffect: true, topScrollEdgeEffect: true, synchronousShadowStateUpdatesEnabled: true, iosOrientationInheritanceFixEnabled: true };
 
-export const EdgeInsetApplicationContext = context;
-export function useEdgeInsetApplication(arg0, flag, flag2, flag3, flag4) {
-  context = noop.useContext(context);
-  const topAlreadyApplied = context.topAlreadyApplied;
-  ({ leftDisabled, rightDisabled, bottomDisabled } = context);
-  const experiment = get_synchronousScreenUpdatesEnabled.featureFlags.experiment;
-  flag = undefined;
-  if (experiment != null) {
-    flag = experiment.androidLegacyTopInsetBehavior;
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  let tmp2 = flag;
-  if (!flag) {
-    let tmp3 = !topAlreadyApplied;
-    if (!topAlreadyApplied) {
-      tmp3 = arg0;
-    }
-    tmp2 = tmp3;
-  }
-  closure_1 = tmp2;
-  let tmp4 = tmp2;
-  if (tmp2) {
-    tmp4 = !flag;
-  }
-  if (!leftDisabled) {
-    leftDisabled = flag2;
-  }
-  if (!rightDisabled) {
-    rightDisabled = flag3;
-  }
-  if (!bottomDisabled) {
-    bottomDisabled = flag4;
-  }
-  items = [topAlreadyApplied, tmp2, leftDisabled, rightDisabled, bottomDisabled];
-  return {
-    appliesTopInset: tmp4,
-    consumeLeftInset: !leftDisabled,
-    consumeRightInset: !rightDisabled,
-    consumeBottomInset: !bottomDisabled,
-    useLegacyBehavior: flag,
-    nextContextValue: noop.useMemo(() => {
-      let tmp = topAlreadyApplied;
-      if (!topAlreadyApplied) {
-        tmp = closure_1;
-      }
-      return { topAlreadyApplied: tmp, leftDisabled, rightDisabled, bottomDisabled };
-    }, items),
-  };
-}
+export default module_65.get("RNSModalScreen", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,13 +1,35 @@
 // _runtime/metro/08034__.js
-import registerAsset from "01119__.js";
+import _mod8035 from "08035__.js";
+import get_ActivityIndicator from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "e06e2e681624b5a052b477a4af8dc512",
-  name: "ThreadLockIcon",
-  type: "png",
-});
+({ NativeModules: c3, Platform, TurboModuleRegistry: closure_4, requireNativeComponent: hasOwnProperty } = get_ActivityIndicator);
+
+export () => {
+  try {
+    return hasOwnProperty("RNDatePicker");
+  } catch (err) {
+    if (global.ignoreDatePickerWarning) {
+      return null;
+    } else {
+      const _Error = Error;
+      throw Error(_mod8035.getInstallationErrorMessage());
+    }
+  }
+}
+export () => {
+  try {
+    if (React4) {
+      RNDatePicker = React4.get("RNDatePicker");
+    } else {
+      RNDatePicker = RNDatePicker.RNDatePicker;
+    }
+    return RNDatePicker;
+  } catch (err) {
+    if (global.ignoreDatePickerWarning) {
+      return null;
+    } else {
+      const _Error = Error;
+      throw Error(_mod8035.getInstallationErrorMessage());
+    }
+  }
+}
